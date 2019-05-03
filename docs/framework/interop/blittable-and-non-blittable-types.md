@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 726e82e3ce5f8d8924617ac7c7d38468ae279e71
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 37b226cad9a34f1629d2972dacf8019adad54d7a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093034"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59115375"
 ---
 # <a name="blittable-and-non-blittable-types"></a>tipi copiabili e non copiabili
 La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memoria gestita sia in quella non gestita e non richiede quindi una gestione particolare tramite il gestore di marshalling di interoperabilità. Questi tipi sono definiti *copiabili da BLT*, poiché non richiedono la conversione quando vengono passati tra codice gestito e codice non gestito.  
@@ -74,4 +74,5 @@ La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memor
  I tipi di classe e oggetto sono supportati solo dall'interoperabilità COM. Per i tipi corrispondenti in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# e C++, vedere [Cenni preliminari sulla libreria di classi](../../../docs/standard/class-library-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)

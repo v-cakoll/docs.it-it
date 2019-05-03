@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 62efb546-c898-408f-af21-36e7c6fed217
 ms.openlocfilehash: 7edc60c7ab8510aadd9ac273529a88adeb41352a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037531"
 ---
 # <a name="return-the-set-difference-between-two-sequences"></a>Restituire la differenza dei set tra due sequenze
 Per restituire la differenza dei set tra due sequenze, usare l'operatore <xref:System.Linq.Queryable.Except%2A>.  

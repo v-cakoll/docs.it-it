@@ -3,11 +3,11 @@ title: Protezione dei messaggi mediante protezione del trasporto
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990964"
 ---
 # <a name="securing-messages-using-transport-security"></a>Protezione dei messaggi mediante protezione del trasporto
 Contenuto della sezione viene descritta la protezione del trasporto di Accodamento messaggi (MSMQ), che è possibile utilizzare per proteggere messaggi inviati a una coda.  
@@ -25,11 +25,11 @@ Contenuto della sezione viene descritta la protezione del trasporto di Accodamen
   
  La protezione del trasporto che utilizza <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> influenza il modo in cui i messaggi MSMQ sono protetti in transito tra la coda di trasmissione e la coda di destinazione, dove per protezione si intende:  
   
--   Firma del messaggio per avere la certezza che non sia manomesso.  
+- Firma del messaggio per avere la certezza che non sia manomesso.  
   
--   Crittografia del messaggio per avere la certezza che non venga visto o manomesso. Operazione consigliata ma facoltativa.  
+- Crittografia del messaggio per avere la certezza che non venga visto o manomesso. Operazione consigliata ma facoltativa.  
   
--   Il gestore delle code di destinazione che identifica il mittente del messaggio per non-ripudio.  
+- Il gestore delle code di destinazione che identifica il mittente del messaggio per non-ripudio.  
   
  In MSMQ, indipendentemente dall'autenticazione, la coda di destinazione dispone di un elenco di controllo di accesso (ACL) per verificare se il client dispone delle autorizzazioni per inviare il messaggio alla coda di destinazione. Viene inoltre verificato se l'applicazione ricevente è autorizzata a ricevere il messaggio dalla coda di destinazione.  
   
@@ -99,5 +99,5 @@ Contenuto della sezione viene descritta la protezione del trasporto di Accodamen
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica delle code](queues-overview.md)
-- [Concetti sulla protezione](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

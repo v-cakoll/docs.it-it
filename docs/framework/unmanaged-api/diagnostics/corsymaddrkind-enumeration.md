@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: adef1010d08561c0a0fe38480fe0d2f519a80b49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993434"
 ---
 # <a name="corsymaddrkind-enumeration"></a>Enumerazione CorSymAddrKind
 Indica il tipo di indirizzo di memoria.  
@@ -64,4 +64,4 @@ typedef enum CorSymAddrKind
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dell'archivio dei simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [Enumerazioni dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

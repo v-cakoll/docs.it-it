@@ -16,11 +16,11 @@ helpviewer_keywords:
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
 ms.openlocfilehash: 0ddd7d0d2a57afc02aa7483ba5e83b65c48af534
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920756"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
 Specifica che una proprietà o routine non è implementato in questa classe e deve essere sottoposto a override in una classe derivata prima che possa essere utilizzato.  
@@ -30,13 +30,13 @@ Specifica che una proprietà o routine non è implementato in questa classe e de
   
 ## <a name="rules"></a>Regole  
   
--   **Dichiarazione di non completata.** Quando si specifica `MustOverride`, non si specifica una riga di codice per la proprietà o routine, non ancora il `End Function`, `End Property`, o `End Sub` istruzione.  
+- **Dichiarazione di non completata.** Quando si specifica `MustOverride`, non si specifica una riga di codice per la proprietà o routine, non ancora il `End Function`, `End Property`, o `End Sub` istruzione.  
   
--   **Modificatori combinati.** Non è possibile specificare `MustOverride` assieme `NotOverridable`, `Overridable`, o `Shared` nella stessa dichiarazione.  
+- **Modificatori combinati.** Non è possibile specificare `MustOverride` assieme `NotOverridable`, `Overridable`, o `Shared` nella stessa dichiarazione.  
   
--   **Shadowing e override.** Sebbene lo shadowing e l'override ridefiniscano entrambi un elemento ereditato, tra i due metodi esistono differenze sostanziali. Per altre informazioni, vedere [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+- **Shadowing e override.** Sebbene lo shadowing e l'override ridefiniscano entrambi un elemento ereditato, tra i due metodi esistono differenze sostanziali. Per altre informazioni, vedere [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
--   **Condizioni di alternative.** Un elemento che può essere utilizzato solo in un override viene chiamato talvolta un *pure virtuale* elemento.  
+- **Condizioni di alternative.** Un elemento che può essere utilizzato solo in un override viene chiamato talvolta un *pure virtuale* elemento.  
   
  Il modificatore `MustOverride` può essere usato nei contesti seguenti:  
   

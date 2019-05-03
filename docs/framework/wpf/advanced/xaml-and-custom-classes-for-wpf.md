@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
 ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759934"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Classi XAML e personalizzate per WPF
 Il linguaggio XAML implementato nei framework [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] supporta la possibilità di definire classi o strutture personalizzate in qualsiasi linguaggio [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e quindi di accedere a tali classi o strutture tramite markup XAML. All'interno dello stesso file di markup è possibile usare una combinazione di tipi definiti da [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e di tipi personalizzati, in genere tramite mapping dei tipi personalizzati al prefisso di uno spazio dei nomi XAML. Questo argomento descrive i requisiti che una classe personalizzata deve soddisfare perché sia utilizzabile come elemento XAML.  
@@ -20,19 +20,19 @@ Il linguaggio XAML implementato nei framework [!INCLUDE[TLA#tla_clr](../../../..
 ## <a name="custom-classes-in-applications-or-assemblies"></a>Classi personalizzate in applicazioni o assembly  
  È possibile definire classi personalizzate da usare in XAML in due modi distinti: all'interno del code-behind o di altro codice che generi l'applicazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] primaria o come classe di un assembly separato, ad esempio un eseguibile o una DLL usata come libreria di classi. Ognuno di questi approcci presenta vantaggi e svantaggi specifici.  
   
--   Il vantaggio della creazione di una libreria di classi consiste nella possibilità di condividere tutte queste classi personalizzate tra un gran numero di applicazioni diverse. Una libreria separata, poi, rende più semplice il controllo delle versioni delle applicazioni in caso di problemi e facilita la creazione di classi destinate a fungere da elementi radice di una pagina XAML.  
+- Il vantaggio della creazione di una libreria di classi consiste nella possibilità di condividere tutte queste classi personalizzate tra un gran numero di applicazioni diverse. Una libreria separata, poi, rende più semplice il controllo delle versioni delle applicazioni in caso di problemi e facilita la creazione di classi destinate a fungere da elementi radice di una pagina XAML.  
   
--   Il vantaggio di poter definire classi personalizzate all'interno dell'applicazione consiste nel fatto che si tratta di una tecnica relativamente leggera in grado di ridurre al minimo i problemi di distribuzione e test che si riscontrano quando, oltre al file eseguibile dell'applicazione principale, si introducono assembly separati.  
+- Il vantaggio di poter definire classi personalizzate all'interno dell'applicazione consiste nel fatto che si tratta di una tecnica relativamente leggera in grado di ridurre al minimo i problemi di distribuzione e test che si riscontrano quando, oltre al file eseguibile dell'applicazione principale, si introducono assembly separati.  
   
--   Che le classi personalizzate vengano definite all'interno dello stesso assembly o in un assembly diverso, perché siano utilizzabili come elementi in XAML è necessario effettuarne il mapping tra lo spazio dei nomi CLR e quello XML. Vedere [Spazi dei nomi XAML e mapping dello spazio dei nomi per XAML WPF](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+- Che le classi personalizzate vengano definite all'interno dello stesso assembly o in un assembly diverso, perché siano utilizzabili come elementi in XAML è necessario effettuarne il mapping tra lo spazio dei nomi CLR e quello XML. Vedere [Spazi dei nomi XAML e mapping dello spazio dei nomi per XAML WPF](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="Requirements_for_a_Custom_Class_as_a_XAML_Element"></a>   
 ## <a name="requirements-for-a-custom-class-as-a-xaml-element"></a>Requisiti per una classe personalizzata come elemento XAML  
  Perché sia possibile crearne un'istanza come elemento oggetto, la classe deve soddisfare i requisiti seguenti:  
   
--   Deve essere pubblica e supportare un costruttore pubblico senza parametri predefinito. Per alcune note riguardanti le strutture, vedere la sezione seguente.  
+- Deve essere pubblica e supportare un costruttore pubblico senza parametri predefinito. Per alcune note riguardanti le strutture, vedere la sezione seguente.  
   
--   La classe personalizzata non deve essere una classe annidata. Le classi annidate e il punto presente nella relativa sintassi di utilizzo CLR generale interferiscono con altre funzionalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e/o di XAML, ad esempio le proprietà collegate.  
+- La classe personalizzata non deve essere una classe annidata. Le classi annidate e il punto presente nella relativa sintassi di utilizzo CLR generale interferiscono con altre funzionalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e/o di XAML, ad esempio le proprietà collegate.  
   
  Oltre ad abilitare la sintassi degli elementi oggetto, la definizione dell'oggetto abilita la sintassi degli elementi proprietà per tutte le altre proprietà pubbliche che accettano tale oggetto come tipo valore. Ciò è dovuto al fatto che è ora possibile creare un'istanza dell'oggetto come elemento oggetto e inserirla come valore dell'elemento di tale proprietà.  
   
@@ -75,19 +75,19 @@ Il linguaggio XAML implementato nei framework [!INCLUDE[TLA#tla_clr](../../../..
 ## <a name="writing-collection-properties"></a>Scrittura delle proprietà delle raccolte  
  Le proprietà che accettano un tipo di raccolta hanno una sintassi XAML che consente di specificare gli oggetti da aggiungere alla raccolta. Questa sintassi presenta due funzionalità di rilievo.  
   
--   Nella sintassi dell'elemento oggetto non è necessario specificare l'oggetto che rappresenta l'oggetto Collection. Ogni volta che in XAML si specifica una proprietà che accetta un tipo di raccolta, tale tipo di raccolta è implicito.  
+- Nella sintassi dell'elemento oggetto non è necessario specificare l'oggetto che rappresenta l'oggetto Collection. Ogni volta che in XAML si specifica una proprietà che accetta un tipo di raccolta, tale tipo di raccolta è implicito.  
   
--   Gli elementi figlio della proprietà della raccolta nel markup vengono elaborati in modo che diventino membri della raccolta. In genere l'accesso del codice ai membri di una raccolta avviene tramite metodi di elenco o dizionario, ad esempio `Add`, oppure tramite un indicizzatore. Ma la sintassi XAML non supporta metodi o indicizzatori (eccezione: XAML 2009 può supportare i metodi, ma l'utilizzo di XAML 2009 limita i possibili utilizzi di WPF; visualizzare [funzionalità del linguaggio XAML 2009](../../xaml-services/xaml-2009-language-features.md)). Le raccolte sono ovviamente un requisito molto comune per la creazione di un albero di elementi. È quindi necessario individuare il modo più adatto per popolarle in XAML dichiarativo. Pertanto, gli elementi figlio di una proprietà della raccolta vengono elaborati aggiungendoli alla raccolta che rappresenta il valore del tipo della proprietà.  
+- Gli elementi figlio della proprietà della raccolta nel markup vengono elaborati in modo che diventino membri della raccolta. In genere l'accesso del codice ai membri di una raccolta avviene tramite metodi di elenco o dizionario, ad esempio `Add`, oppure tramite un indicizzatore. Ma la sintassi XAML non supporta metodi o indicizzatori (eccezione: XAML 2009 può supportare i metodi, ma l'utilizzo di XAML 2009 limita i possibili utilizzi di WPF; visualizzare [funzionalità del linguaggio XAML 2009](../../xaml-services/xaml-2009-language-features.md)). Le raccolte sono ovviamente un requisito molto comune per la creazione di un albero di elementi. È quindi necessario individuare il modo più adatto per popolarle in XAML dichiarativo. Pertanto, gli elementi figlio di una proprietà della raccolta vengono elaborati aggiungendoli alla raccolta che rappresenta il valore del tipo della proprietà.  
   
  La definizione di proprietà di raccolta per l'implementazione dei servizi XAML di .NET Framework e quindi anche per il processore XAML di WPF è la seguente. Il tipo della proprietà deve soddisfare una delle condizioni seguenti:  
   
--   Implementa <xref:System.Collections.IList>.  
+- Implementa <xref:System.Collections.IList>.  
   
--   Implements <xref:System.Collections.IDictionary> o l'interfaccia equivalente generica (<xref:System.Collections.Generic.IDictionary%602>).  
+- Implements <xref:System.Collections.IDictionary> o l'interfaccia equivalente generica (<xref:System.Collections.Generic.IDictionary%602>).  
   
--   Deriva da <xref:System.Array> (per altre informazioni sulle matrici in XAML, vedere [estensione di Markup X:Array](../../xaml-services/x-array-markup-extension.md).)  
+- Deriva da <xref:System.Array> (per altre informazioni sulle matrici in XAML, vedere [estensione di Markup X:Array](../../xaml-services/x-array-markup-extension.md).)  
   
--   Implements <xref:System.Windows.Markup.IAddChild> (un'interfaccia definita da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]).  
+- Implements <xref:System.Windows.Markup.IAddChild> (un'interfaccia definita da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]).  
   
  In CLR ognuno di questi tipi dispone di un metodo `Add`, usato dal processore XAML per aggiungere elementi alla raccolta sottostante durante la creazione dell'oggetto grafico.  
   
@@ -112,8 +112,8 @@ Il linguaggio XAML implementato nei framework [!INCLUDE[TLA#tla_clr](../../../..
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica di XAML (WPF)](xaml-overview-wpf.md)
+- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
 - [Proprietà di dipendenza personalizzate](custom-dependency-properties.md)
-- [Panoramica della creazione di controlli](../controls/control-authoring-overview.md)
+- [Cenni preliminari sulla modifica di controlli](../controls/control-authoring-overview.md)
 - [Cenni preliminari sugli elementi di base](base-elements-overview.md)
 - [Caricamento XAML e proprietà di dipendenza](xaml-loading-and-dependency-properties.md)

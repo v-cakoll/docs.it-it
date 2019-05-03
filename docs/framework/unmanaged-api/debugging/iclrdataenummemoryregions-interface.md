@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f37278ecf7d7b97a1a4b2b7bfeb0a645495e6eee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698226"
 ---
 # <a name="iclrdataenummemoryregions-interface"></a>Interfaccia ICLRDataEnumMemoryRegions
 Fornisce un metodo per l'enumerazione delle aree di memoria specificate dai chiamanti.  

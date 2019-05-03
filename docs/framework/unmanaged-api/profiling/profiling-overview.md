@@ -30,11 +30,11 @@ ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757559"
 ---
 # <a name="profiling-overview"></a>Cenni preliminari sulla profilatura
 <a name="top"></a> Un profiler è uno strumento che consente di monitorare l'esecuzione di un'altra applicazione. Un profiler CLR (Common Language Runtime) è una DLL costituita da funzioni che ricevono e inviano messaggi a CLR usando l'API di profilatura. La DLL del profiler viene caricata in fase di esecuzione da CLR.  
@@ -47,25 +47,25 @@ ms.locfileid: "58654094"
   
  Questa panoramica include le sezioni seguenti:  
   
--   [L'API di profilatura](#profiling_api)  
+- [L'API di profilatura](#profiling_api)  
   
--   [Funzionalità supportate](#support)  
+- [Funzionalità supportate](#support)  
   
--   [Thread di notifica](#notification_threads)  
+- [Thread di notifica](#notification_threads)  
   
--   [Sicurezza](#security)  
+- [Sicurezza](#security)  
   
--   [Combinazione di codice gestito e in un Code Profiler](#combining_managed_unmanaged)  
+- [Combinazione di codice gestito e in un Code Profiler](#combining_managed_unmanaged)  
   
--   [Profilatura del codice non gestito](#unmanaged)  
+- [Profilatura del codice non gestito](#unmanaged)  
   
--   [Uso di COM](#com)  
+- [Uso di COM](#com)  
   
--   [Stack di chiamate](#call_stacks)  
+- [Stack di chiamate](#call_stacks)  
   
--   [Callback e profondità dello Stack](#callbacks)  
+- [Callback e profondità dello Stack](#callbacks)  
   
--   [Argomenti correlati](#related_topics)  
+- [Argomenti correlati](#related_topics)  
   
 <a name="profiling_api"></a>   
 ## <a name="the-profiling-api"></a>API di profilatura  
@@ -96,33 +96,33 @@ ms.locfileid: "58654094"
   
  L'API di profilatura recupera le informazioni sulle azioni e sugli eventi che si verificano in CLR riportati di seguito:  
   
--   Eventi di avvio e arresto di CLR.  
+- Eventi di avvio e arresto di CLR.  
   
--   Eventi di creazione e arresto di domini applicazione.  
+- Eventi di creazione e arresto di domini applicazione.  
   
--   Eventi di caricamento e scaricamento di assembly.  
+- Eventi di caricamento e scaricamento di assembly.  
   
--   Eventi di caricamento e scaricamento di moduli.  
+- Eventi di caricamento e scaricamento di moduli.  
   
--   Eventi di creazione e distruzione di vtable COM.  
+- Eventi di creazione e distruzione di vtable COM.  
   
--   Eventi di compilazione JIT e di code pitching.  
+- Eventi di compilazione JIT e di code pitching.  
   
--   Eventi di caricamento e scaricamento di classi.  
+- Eventi di caricamento e scaricamento di classi.  
   
--   Eventi di creazione e distruzione di thread.  
+- Eventi di creazione e distruzione di thread.  
   
--   Eventi di entrata e uscita delle funzioni.  
+- Eventi di entrata e uscita delle funzioni.  
   
--   Eccezioni.  
+- Eccezioni.  
   
--   Transizioni tra l'esecuzione di codice gestito e non gestito.  
+- Transizioni tra l'esecuzione di codice gestito e non gestito.  
   
--   Transizioni tra contesti di runtime diversi.  
+- Transizioni tra contesti di runtime diversi.  
   
--   Informazioni sulle sospensioni del runtime.  
+- Informazioni sulle sospensioni del runtime.  
   
--   Informazioni sull'heap della memoria del runtime e sull'attività di Garbage Collection.  
+- Informazioni sull'heap della memoria del runtime e sull'attività di Garbage Collection.  
   
  L'API di profilatura può essere chiamata da qualsiasi linguaggio compatibile con COM (non gestito).  
   
@@ -133,19 +133,19 @@ ms.locfileid: "58654094"
 ### <a name="unsupported-functionality"></a>Funzionalità non supportata  
  L'API di profilatura non supporta le funzionalità descritte di seguito:  
   
--   Codice non gestito, che deve essere profilato usando i metodi Win32 convenzionali. Tuttavia, il profiler CLR include eventi di transizione che consentono di determinare i limiti fra codice gestito e non gestito.  
+- Codice non gestito, che deve essere profilato usando i metodi Win32 convenzionali. Tuttavia, il profiler CLR include eventi di transizione che consentono di determinare i limiti fra codice gestito e non gestito.  
   
--   Applicazioni automodificanti, che modificano il proprio codice per scopi quali la programmazione orientata agli aspetti.  
+- Applicazioni automodificanti, che modificano il proprio codice per scopi quali la programmazione orientata agli aspetti.  
   
--   Verifica dei limiti, in quanto l'API di profilatura non fornisce queste informazioni. CLR fornisce il supporto intrinseco per la verifica dei limiti di tutto il codice gestito.  
+- Verifica dei limiti, in quanto l'API di profilatura non fornisce queste informazioni. CLR fornisce il supporto intrinseco per la verifica dei limiti di tutto il codice gestito.  
   
--   Profilatura remota, non supportata per i motivi seguenti:  
+- Profilatura remota, non supportata per i motivi seguenti:  
   
-    -   La profilatura remota estende il tempo di esecuzione. Quando si usano le interfacce di profilatura, è necessario ridurre al minimo il tempo di esecuzione in modo da non influire eccessivamente sui risultati, soprattutto durante il monitoraggio delle prestazioni di esecuzione. Tuttavia, la profilatura remota non costituisce una limitazione quando le interfacce di profilatura vengono usate per monitorare l'utilizzo della memoria o per ottenere informazioni di runtime sugli stack frame, sugli oggetti e così via.  
+    - La profilatura remota estende il tempo di esecuzione. Quando si usano le interfacce di profilatura, è necessario ridurre al minimo il tempo di esecuzione in modo da non influire eccessivamente sui risultati, soprattutto durante il monitoraggio delle prestazioni di esecuzione. Tuttavia, la profilatura remota non costituisce una limitazione quando le interfacce di profilatura vengono usate per monitorare l'utilizzo della memoria o per ottenere informazioni di runtime sugli stack frame, sugli oggetti e così via.  
   
-    -   Il Code Profiler di CLR deve registrare una o più interfacce di callback con il runtime sul computer locale su cui è in esecuzione l'applicazione profilata. In tal modo la capacità di creare un Code Profiler remoto viene limitata.  
+    - Il Code Profiler di CLR deve registrare una o più interfacce di callback con il runtime sul computer locale su cui è in esecuzione l'applicazione profilata. In tal modo la capacità di creare un Code Profiler remoto viene limitata.  
   
--   Profilatura negli ambienti di produzione con requisiti di disponibilità elevata. L'API di profilatura è stata creata per supportare la diagnostica in fase di sviluppo. Non è stata sottoposta ai test accurati richiesti per il supporto degli ambienti di produzione.  
+- Profilatura negli ambienti di produzione con requisiti di disponibilità elevata. L'API di profilatura è stata creata per supportare la diagnostica in fase di sviluppo. Non è stata sottoposta ai test accurati richiesti per il supporto degli ambienti di produzione.  
   
  [Torna all'inizio](#top)  
   
@@ -185,9 +185,9 @@ ms.locfileid: "58654094"
 ## <a name="profiling-unmanaged-code"></a>Profilatura del codice non gestito  
  L'API di profilatura di Common Language Runtime fornisce il supporto minimo per la profilatura di codice non gestito. Sono disponibili le funzionalità seguenti:  
   
--   Enumerazione delle catene dello stack. Questa funzionalità consente a un Code Profiler di determinare il limite tra codice gestito e codice non gestito.  
+- Enumerazione delle catene dello stack. Questa funzionalità consente a un Code Profiler di determinare il limite tra codice gestito e codice non gestito.  
   
--   Determinazione della corrispondenza di una catena dello stack a un codice gestito o a un codice nativo.  
+- Determinazione della corrispondenza di una catena dello stack a un codice gestito o a un codice nativo.  
   
  In .NET Framework versioni 1.0 e 1.1, questi metodi sono disponibili tramite il subset in-process dell'API di debug di Common Language Runtime. Sono definiti nel file CorDebug.idl.  
   

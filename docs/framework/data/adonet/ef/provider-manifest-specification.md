@@ -3,11 +3,11 @@ title: Specifica del manifesto del provider
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034010"
 ---
 # <a name="provider-manifest-specification"></a>Specifica del manifesto del provider
 Questa sezione illustra come un provider dell'archivio dati può supportare i tipi e le funzioni di tale archivio.  
@@ -45,18 +45,18 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
   
  Scrivere un file XML con due sezioni:  
   
--   Un elenco di tipi di provider espresso in termini di "controparte EDM" di una funzione o di un tipo di archivio. I tipi di archivio presentano tipi EDM della controparte. Le funzioni di archivio presentano funzioni EDM corrispondenti. Ad esempio, varchar è un tipo SQL Server ma il tipo EDM corrispondente è stringa.  
+- Un elenco di tipi di provider espresso in termini di "controparte EDM" di una funzione o di un tipo di archivio. I tipi di archivio presentano tipi EDM della controparte. Le funzioni di archivio presentano funzioni EDM corrispondenti. Ad esempio, varchar è un tipo SQL Server ma il tipo EDM corrispondente è stringa.  
   
--   Un elenco di funzioni supportate dal provider in cui i tipi di parametri e i tipi restituiti sono espressi in termini EDM.  
+- Un elenco di funzioni supportate dal provider in cui i tipi di parametri e i tipi restituiti sono espressi in termini EDM.  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Scrittura di un provider con mapping dei tipi asimmetrico  
  Quando si scrive un provider dell'archivio dati per [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], è possibile che per alcuni tipi il mapping da EDM al tipo di provider sia diverso da quello dal provider al tipo EDM. Ad esempio, PrimitiveTypeKind.String EDM potrebbe essere mappato a nvarchar (4000) sul provider, mentre nvarchar (4000) viene mappato a PrimitiveTypeKind.String(MaxLength=4000) EDM.  
   
  Scrivere un file XML con due sezioni:  
   
--   Un elenco di tipi di provider espresso in termini EDM e definire il mapping per entrambe le direzioni: EDM a provider e i provider a EDM.  
+- Un elenco di tipi di provider espresso in termini EDM e definire il mapping per entrambe le direzioni: EDM a provider e i provider a EDM.  
   
--   Un elenco di funzioni supportate dal provider in cui i tipi di parametri e i tipi restituiti sono espressi in termini EDM.  
+- Un elenco di funzioni supportate dal provider in cui i tipi di parametri e i tipi restituiti sono espressi in termini EDM.  
   
 ## <a name="provider-manifest-discoverability"></a>Individuabilità del manifesto del provider  
  Il manifesto viene usato indirettamente da diversi tipi di componenti nei servizi di entità, ad esempio strumenti o query, ma più direttamente viene usato dai metadati tramite l'uso del caricatore di metadati dell'archivio dati.  
@@ -266,7 +266,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |NiladicFunction|Booleano|No|False|Restituisce True se la funzione non richiede parametri e viene chiamata senza parametri|  
 |ParameterType<br /><br /> Semantics|ParameterSemantics|No|AllowImplicit<br /><br /> Conversione|Scelta della modalità con cui la pipeline della query gestisce la sostituzione del tipo di parametro:<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
   
- **Nodo Parameters**  
+ **Nodo parametri**  
   
  Ogni funzione presenta una raccolta di uno o più nodi Parameter.  
   

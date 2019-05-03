@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
 ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764979"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Cenni preliminari sul rendering della grafica WPF
 Questo argomento offre una panoramica del livello visivo di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ed è incentrato sul ruolo del <xref:System.Windows.Media.Visual> classe per il rendering di supporto nel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modello.  
@@ -24,27 +24,27 @@ Questo argomento offre una panoramica del livello visivo di [!INCLUDE[TLA2#tla_w
   
  Il <xref:System.Windows.Media.Visual> oggetto è dei principali [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oggetto, il cui ruolo principale consiste nel fornire supporto per il rendering. Controlli dell'interfaccia utente, ad esempio <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.TextBox>, derivano dal <xref:System.Windows.Media.Visual> e come utilizzarla per rendere persistenti i dati di rendering. Il <xref:System.Windows.Media.Visual> oggetto fornisce il supporto per:  
   
--   Visualizzazione di output: Rendering per la classe resa persistente, serializzato il contenuto del disegno di un oggetto visivo.  
+- Visualizzazione di output: Rendering per la classe resa persistente, serializzato il contenuto del disegno di un oggetto visivo.  
   
--   Trasformazioni: Esecuzione di trasformazioni su un oggetto visivo.  
+- Trasformazioni: Esecuzione di trasformazioni su un oggetto visivo.  
   
--   Ritaglio: Fornire supporto di area di ritaglio per un oggetto visivo.  
+- Ritaglio: Fornire supporto di area di ritaglio per un oggetto visivo.  
   
--   L'hit testing: Determinare se una coordinata o una geometria è contenuta all'interno di un oggetto visivo.  
+- L'hit testing: Determinare se una coordinata o una geometria è contenuta all'interno di un oggetto visivo.  
   
--   Calcoli relativi al riquadro: Determinare il rettangolo di delimitazione di un oggetto visivo.  
+- Calcoli relativi al riquadro: Determinare il rettangolo di delimitazione di un oggetto visivo.  
   
  Tuttavia, il <xref:System.Windows.Media.Visual> oggetto non includono il supporto per le funzionalità non relative al rendering, ad esempio:  
   
--   Gestione di eventi  
+- Gestione di eventi  
   
--   Layout  
+- Layout  
   
--   Stili  
+- Stili  
   
--   Associazione dati  
+- Associazione dati  
   
--   Globalizzazione  
+- Globalizzazione  
   
  <xref:System.Windows.Media.Visual> viene esposto come una classe astratta pubblica da cui devono essere derivate le classi figlio. La figura seguente illustra la gerarchia degli oggetti visivi esposti in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
@@ -127,13 +127,13 @@ Ordine delle operazioni DrawingGroup
   
  Tenere in considerazione alcuni punti sulla gerarchia degli oggetti visivi e sugli elenchi di istruzioni di grafica vettoriale:  
   
--   L'ordinamento nella gerarchia rappresenta l'ordine di rendering delle informazioni di disegno. A partire dall'elemento visivo radice, gli elementi figlio vengono attraversati da sinistra a destra e dall'alto verso il basso. Se un elemento contiene elementi visivi figlio, essi vengono attraversati prima degli elementi di pari livello.  
+- L'ordinamento nella gerarchia rappresenta l'ordine di rendering delle informazioni di disegno. A partire dall'elemento visivo radice, gli elementi figlio vengono attraversati da sinistra a destra e dall'alto verso il basso. Se un elemento contiene elementi visivi figlio, essi vengono attraversati prima degli elementi di pari livello.  
   
--   Gli elementi dei nodi non foglia nella gerarchia, ad esempio <xref:System.Windows.Controls.ContentPresenter>, vengono usate per contenere gli elementi figlio, ovvero non contengono elenchi di istruzioni.  
+- Gli elementi dei nodi non foglia nella gerarchia, ad esempio <xref:System.Windows.Controls.ContentPresenter>, vengono usate per contenere gli elementi figlio, ovvero non contengono elenchi di istruzioni.  
   
--   Se un elemento visivo contiene sia un elenco di istruzioni di grafica vettoriale che oggetti visivi figlio, viene eseguito il rendering dell'elenco di istruzioni nell'elemento visivo padre prima dei disegni in uno qualsiasi degli oggetti visivi figlio.  
+- Se un elemento visivo contiene sia un elenco di istruzioni di grafica vettoriale che oggetti visivi figlio, viene eseguito il rendering dell'elenco di istruzioni nell'elemento visivo padre prima dei disegni in uno qualsiasi degli oggetti visivi figlio.  
   
--   Il rendering degli elementi nell'elenco di istruzioni di grafica vettoriale viene eseguito da sinistra a destra.  
+- Il rendering degli elementi nell'elenco di istruzioni di grafica vettoriale viene eseguito da sinistra a destra.  
   
 <a name="visual_tree"></a>   
 ## <a name="visual-tree"></a>Struttura ad albero visuale  

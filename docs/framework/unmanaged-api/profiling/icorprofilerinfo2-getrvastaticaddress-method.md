@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d3749c600d54671071efbec8322e050cde446c27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791625"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>Metodo ICorProfilerInfo2::GetRVAStaticAddress
 Ottiene l'indirizzo del campo statico specificato di indirizzo virtuale relativo (RVA).  
@@ -49,9 +49,9 @@ HRESULT GetRVAStaticAddress(
 ## <a name="remarks"></a>Note  
  Il `GetRVAStaticAddress` metodo può restituire uno dei seguenti:  
   
--   Un valore HRESULT CORPROF_E_DATAINCOMPLETE se il campo statico specificato non è stato assegnato un indirizzo nel contesto specificato.  
+- Un valore HRESULT CORPROF_E_DATAINCOMPLETE se il campo statico specificato non è stato assegnato un indirizzo nel contesto specificato.  
   
--   Gli indirizzi di oggetti che possono trovarsi nell'heap di garbage collection. Questi indirizzi potrebbero diventare non validi dopo l'operazione di garbage collection, in modo che dopo l'operazione di garbage collection, i profiler non devono presupporre che siano validi.  
+- Gli indirizzi di oggetti che possono trovarsi nell'heap di garbage collection. Questi indirizzi potrebbero diventare non validi dopo l'operazione di garbage collection, in modo che dopo l'operazione di garbage collection, i profiler non devono presupporre che siano validi.  
   
  Prima del completamento, il costruttore di classe della classe `GetRVAStaticAddress` restituirà CORPROF_E_DATAINCOMPLETE per tutti i relativi campi statici, anche se alcuni dei campi statici potrebbero essere già stato inizializzato e possono essere oggetti radice del garbage collection.  
   

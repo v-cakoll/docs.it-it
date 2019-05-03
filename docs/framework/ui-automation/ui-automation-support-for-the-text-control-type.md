@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
 ms.openlocfilehash: f98477117981504b9c4df43626c7bcb8c4088922
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996554"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>Supporto di automazione interfaccia utente per il tipo di controllo Text
 > [!NOTE]
@@ -33,11 +33,11 @@ ms.locfileid: "59103779"
   
  Un controllo testo può essere usato da solo come etichetta o come testo statico in un form. Può anche essere contenuto all'interno della struttura di un oggetto:  
   
--   ListItem  
+- ListItem  
   
--   TreeItem  
+- TreeItem  
   
--   DataItem  
+- DataItem  
   
  I controlli Text potrebbero non essere presenti nella visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] perché il testo viene spesso visualizzato con il valore `NameProperty` di un altro controllo. Ad esempio, il testo usato per assegnare un'etichetta a una casella combinata viene esposto con il valore `NameProperty` del controllo. Poiché la casella combinata si trova nella visualizzazione contenuto dell'albero di automazione interfaccia utente, non è necessario che il controllo di testo si trovi in tale visualizzazione. I controlli Text hanno sempre 0 elementi figlio nella visualizzazione contenuto.  
   

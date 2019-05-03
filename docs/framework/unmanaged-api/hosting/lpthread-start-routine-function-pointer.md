@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 27d1837f9f9f11ad34140f50ec41aa6fe8a62160
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765245"
 ---
 # <a name="lpthreadstartroutine-function-pointer"></a>Puntatore alla funzione LPTHREAD_START_ROUTINE
 Punta a una funzione che notifica all'host che ha avviato un thread da eseguire.  

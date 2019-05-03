@@ -8,11 +8,11 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59294925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025446"
 ---
 # <a name="white-space-processing-in-xaml"></a>Elaborazione degli spazi vuoti in XAML
 Le regole del linguaggio per XAML di stato che lo spazio vuoto significativo deve essere elaborato da un [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] l'implementazione del processore. In questo argomento vengono illustrate queste regole del linguaggio XAML, Illustra inoltre la gestione degli spazi vuoti aggiuntivi definita dal [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementazione del processore XAML e writer XAML per la serializzazione.  
@@ -41,13 +41,13 @@ Le regole del linguaggio per XAML di stato che lo spazio vuoto significativo dev
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>Spazi vuoti nel testo interno e primitive di stringa  
  Le regole di normalizzazione precedenti si applicano al testo interno presente negli elementi XAML. Dopo la normalizzazione, un processore XAML converte qualsiasi testo interno in un tipo appropriato come illustrato di seguito:  
   
--   Se il tipo della proprietà non è una raccolta, ma non è nemmeno un tipo <xref:System.Object> , il processore XAML tenta di eseguire la conversione a quel tipo usando il convertitore dei tipi. Una conversione non riuscita causa un errore in fase di compilazione.  
+- Se il tipo della proprietà non è una raccolta, ma non è nemmeno un tipo <xref:System.Object> , il processore XAML tenta di eseguire la conversione a quel tipo usando il convertitore dei tipi. Una conversione non riuscita causa un errore in fase di compilazione.  
   
--   Se il tipo della proprietà è una raccolta e il testo interno è contiguo, (non sono frapposti tag di elementi), il testo interno viene analizzato come singolo oggetto <xref:System.String>. Se il tipo di raccolta non accetta <xref:System.String>, anche in questo caso si verifica un errore in fase di compilazione.  
+- Se il tipo della proprietà è una raccolta e il testo interno è contiguo, (non sono frapposti tag di elementi), il testo interno viene analizzato come singolo oggetto <xref:System.String>. Se il tipo di raccolta non accetta <xref:System.String>, anche in questo caso si verifica un errore in fase di compilazione.  
   
--   Se il tipo della proprietà è <xref:System.Object>, il testo interno viene analizzato come un singolo oggetto <xref:System.String>. Se sono frapposti tag di elementi, viene generato un errore in fase di compilazione, in quanto il tipo <xref:System.Object> implica un solo oggetto (<xref:System.String> o diverso).  
+- Se il tipo della proprietà è <xref:System.Object>, il testo interno viene analizzato come un singolo oggetto <xref:System.String>. Se sono frapposti tag di elementi, viene generato un errore in fase di compilazione, in quanto il tipo <xref:System.Object> implica un solo oggetto (<xref:System.String> o diverso).  
   
--   Se il tipo della proprietà è una raccolta e il testo interno non è contiguo, la prima sottostringa viene convertita in un oggetto <xref:System.String> e aggiunta come elemento della raccolta. Quindi l'elemento frapposto sarà aggiunto come elemento della raccolta e infine la sottostringa finale (se presente) verrà aggiunta alla raccolta come terzo elemento <xref:System.String> .  
+- Se il tipo della proprietà è una raccolta e il testo interno non è contiguo, la prima sottostringa viene convertita in un oggetto <xref:System.String> e aggiunta come elemento della raccolta. Quindi l'elemento frapposto sarà aggiunto come elemento della raccolta e infine la sottostringa finale (se presente) verrà aggiunta alla raccolta come terzo elemento <xref:System.String> .  
   
 <a name="preserving_whitespace"></a>   
 ## <a name="preserving-white-space"></a>Conservare lo spazio vuoto  
@@ -76,6 +76,6 @@ Le regole del linguaggio per XAML di stato che lo spazio vuoto significativo dev
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari su XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Panoramica di XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [Entità carattere XML e XAML](xml-character-entities-and-xaml.md)
 - [XML: space in XAML gestisce](xml-space-handling-in-xaml.md)

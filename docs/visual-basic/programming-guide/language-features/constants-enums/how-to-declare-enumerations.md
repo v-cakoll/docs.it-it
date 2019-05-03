@@ -7,11 +7,11 @@ helpviewer_keywords:
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
 ms.openlocfilehash: f168d6d9cd6970353e75fa35a7e52cc7156fda72
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59343339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907647"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Procedura: Dichiarare enumerazioni (Visual Basic)
 Per creare un'enumerazione con i `Enum` istruzione nella sezione delle dichiarazioni di una classe o modulo. È possibile dichiarare un'enumerazione all'interno di un metodo. Per specificare il livello di accesso appropriato, usare `Private`, `Protected`, `Friend`, o `Public`.  
@@ -38,7 +38,7 @@ Per creare un'enumerazione con i `Enum` istruzione nella sezione delle dichiaraz
   
 ### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>Per dichiarare un'enumerazione come un tipo esplicito  
   
--   Specificare il tipo di enumerazione utilizzando il `As` clausola, come illustrato nell'esempio seguente.  
+- Specificare il tipo di enumerazione utilizzando il `As` clausola, come illustrato nell'esempio seguente.  
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
@@ -48,7 +48,7 @@ Per creare un'enumerazione con i `Enum` istruzione nella sezione delle dichiaraz
 - [Procedura: Fare riferimento a un membro di enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [Procedura: Scorrere un'enumerazione in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [Procedura: Determinare la stringa associata a un valore di enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
-- [Quando utilizzare un'enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
-- [Panoramica sulle costanti](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [Quando usare un'enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
+- [Cenni preliminari sulle costanti](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [Tipi di dati costanti e letterali](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
 - [Costanti ed enumerazioni](../../../../visual-basic/language-reference/constants-and-enumerations.md)

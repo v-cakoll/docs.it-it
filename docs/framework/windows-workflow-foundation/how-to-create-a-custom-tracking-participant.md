@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
 ms.openlocfilehash: 64320a8f4799e79f54348e5381ed2d8ed49d496b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59338176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945561"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Procedura: Creare un partecipante del rilevamento personalizzato
 Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'esecuzione del flusso di lavoro. Il runtime del flusso di lavoro genera i record di rilevamento che descrivono gli eventi del ciclo di vita di flusso del lavoro, gli eventi del ciclo di vita delle attività, le riprese dei segnalibri e gli errori. Tali record di rilevamento vengono usati dai partecipanti del rilevamento. Windows Workflow Foundation (WF) include un partecipante del rilevamento standard che scrive record di rilevamento come eventi di Event Tracing for Windows (ETW). Se tale partecipante non soddisfa i propri requisiti, è anche possibile scrivere un partecipante del rilevamento personalizzato. In questo passaggio dell'esercitazione viene illustrato come creare un profilo di rilevamento e un partecipante di rilevamento personalizzati che acquisiscono l'output delle attività di `WriteLine` per renderlo visibile all'utente.  

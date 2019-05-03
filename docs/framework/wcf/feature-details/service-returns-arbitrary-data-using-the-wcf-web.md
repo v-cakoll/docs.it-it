@@ -3,11 +3,11 @@ title: 'Procedura: Creare un servizio per restituire dati arbitrari usando il mo
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
 ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747849"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procedura: Creare un servizio per restituire dati arbitrari usando il modello di programmazione HTTP Web WCF
 Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità di restituzione dei dati da un'operazione del servizio, Ciò avviene quando un'operazione del servizio deve restituire i dati in un formato non supportato da WCF. In questo argomento viene illustrato l'utilizzo il modello di programmazione WCF WEB HTTP per creare un servizio di questo tipo. In questo servizio è presente un'operazione che restituisce un flusso.  
@@ -51,7 +51,7 @@ Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità
        }  
     ```  
   
-     Si noti che la seconda all'ultima riga di codice: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     Si noti il codice dalla seconda all'ultima riga: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
      Questo imposta l'intestazione content-type su `"image/jpeg"`. Sebbene in questo esempio venga illustrato come restituire un file jpg, è possibile modificarlo per restituire qualsiasi tipo di dati necessario, in qualsiasi formato. L'operazione deve recuperare o generare i dati e scriverli in un flusso.  
   
@@ -173,8 +173,8 @@ namespace RawImageService
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Durante la compilazione del codice di esempio, fare riferimento a System.ServiceModel.dll e a System.ServiceModel.Web.dll.  
+- Durante la compilazione del codice di esempio, fare riferimento a System.ServiceModel.dll e a System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

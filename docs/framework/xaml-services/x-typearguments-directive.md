@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
 ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982592"
 ---
 # <a name="xtypearguments-directive"></a>Direttiva x:TypeArguments
 Passa vincoli di tipo generico per il costruttore del tipo generico.  
@@ -62,13 +62,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>Utilizzi XAML generica di XAML 2006 e WPF  
  Per l'uso di XAML 2006 e XAML che viene usato per le applicazioni WPF, le limitazioni seguenti per `x:TypeArguments` e gli utilizzi di tipo generico da XAML in generale:  
   
--   Solo l'elemento radice di un file XAML può supportare un utilizzo generico di XAML che fa riferimento a un tipo generico.  
+- Solo l'elemento radice di un file XAML può supportare un utilizzo generico di XAML che fa riferimento a un tipo generico.  
   
--   L'elemento radice deve eseguire il mapping a un tipo generico con almeno un argomento di tipo. Un esempio è <xref:System.Windows.Navigation.PageFunction%601>. Le funzioni di pagina sono lo scenario principale per il supporto di utilizzo generico di XAML in WPF.  
+- L'elemento radice deve eseguire il mapping a un tipo generico con almeno un argomento di tipo. Un esempio è <xref:System.Windows.Navigation.PageFunction%601>. Le funzioni di pagina sono lo scenario principale per il supporto di utilizzo generico di XAML in WPF.  
   
--   L'elemento oggetto XAML elemento radice per il tipo generico debba anche dichiarare una classe parziale che usa `x:Class`. Questo vale anche se la definizione di un controllo WPF di azione di compilazione.  
+- L'elemento oggetto XAML elemento radice per il tipo generico debba anche dichiarare una classe parziale che usa `x:Class`. Questo vale anche se la definizione di un controllo WPF di azione di compilazione.  
   
--   `x:TypeArguments` non è possibile fare riferimento a vincoli generici annidati.  
+- `x:TypeArguments` non è possibile fare riferimento a vincoli generici annidati.  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 o XAML 2006 senza WPF 3.0 o 3.5 WPF delle dipendenze  
  Nei servizi XAML di .NET Framework per XAML 2006 o XAML 2009, sono flessibili le restrizioni sull'utilizzo XAML generico basate su WPF. È possibile creare un'istanza di un elemento oggetto generico in qualsiasi posizione nel markup XAML in grado di supportare il modello di sistema e l'oggetto di tipo sottostante.  

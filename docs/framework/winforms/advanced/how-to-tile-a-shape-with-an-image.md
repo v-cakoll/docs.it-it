@@ -11,11 +11,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
 ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954926"
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Procedura: Riempire una forma con immagini affiancate
 Proprio come i riquadri possono essere inseriti uno accanto a altro per coprire un piano, rettangolare immagini possono essere inserite uno accanto a altro su fill (riquadro) una forma. Per affiancare l'interno di una forma, usare un pennello di trama. Quando si costruisce una <xref:System.Drawing.TextureBrush> dell'oggetto, uno degli argomenti passati al costruttore è un <xref:System.Drawing.Image> oggetto. Quando si usa il pennello di trama per colorare l'interno di una forma, la forma viene riempita con le copie ripetute di questa immagine.  
@@ -24,11 +24,11 @@ Proprio come i riquadri possono essere inseriti uno accanto a altro per coprire 
   
 ### <a name="to-tile-an-image"></a>Per affiancare un'immagine  
   
--   Questo esempio Usa l'immagine di 75 × 75 seguente a un rettangolo con 200 × 200.  
+- Questo esempio Usa l'immagine di 75 × 75 seguente a un rettangolo con 200 × 200.  
   
  ![Riquadro 1](./media/tile1.gif "tile1")  
   
--   La figura seguente mostra come il rettangolo viene affiancato con l'immagine. Si noti che tutti i riquadri hanno lo stesso orientamento. non è disponibile alcun capovolgimento.  
+- La figura seguente mostra come il rettangolo viene affiancato con l'immagine. Si noti che tutti i riquadri hanno lo stesso orientamento. non è disponibile alcun capovolgimento.  
   
  ![Riquadro 2](./media/tile2.gif "tile2")  
   
@@ -37,7 +37,7 @@ Proprio come i riquadri possono essere inseriti uno accanto a altro per coprire 
   
 ### <a name="to-flip-an-image-horizontally-while-tiling"></a>Capovolgere un'immagine orizzontalmente durante la visualizzazione affiancata  
   
--   Questo esempio Usa la stessa immagine di 75 × 75 per riempire il rettangolo di 200 × 200. Capovolgere orizzontalmente l'immagine è impostata la modalità di disposizione. La figura seguente mostra come il rettangolo viene affiancato con l'immagine. Si noti che quando si sposta da un'immagine a quella successiva in una determinata riga, l'immagine viene capovolta orizzontalmente.  
+- Questo esempio Usa la stessa immagine di 75 × 75 per riempire il rettangolo di 200 × 200. Capovolgere orizzontalmente l'immagine è impostata la modalità di disposizione. La figura seguente mostra come il rettangolo viene affiancato con l'immagine. Si noti che quando si sposta da un'immagine a quella successiva in una determinata riga, l'immagine viene capovolta orizzontalmente.  
   
  ![Riquadro 3](./media/tile3.gif "tile3")  
   
@@ -46,14 +46,14 @@ Proprio come i riquadri possono essere inseriti uno accanto a altro per coprire 
   
 ### <a name="to-flip-an-image-vertically-while-tiling"></a>Capovolgere un'immagine verticalmente durante la visualizzazione affiancata  
   
--   Questo esempio Usa la stessa immagine di 75 × 75 per riempire il rettangolo di 200 × 200. Capovolgere verticalmente l'immagine è impostata la modalità di disposizione.  
+- Questo esempio Usa la stessa immagine di 75 × 75 per riempire il rettangolo di 200 × 200. Capovolgere verticalmente l'immagine è impostata la modalità di disposizione.  
   
      [!code-csharp[System.Drawing.UsingABrush#33](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#33)]
      [!code-vb[System.Drawing.UsingABrush#33](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#33)]  
   
 ### <a name="to-flip-an-image-horizontally-and-vertically-while-tiling"></a>Capovolgere orizzontalmente e verticalmente un'immagine durante la visualizzazione affiancata  
   
--   Questo esempio Usa la stessa immagine di 75 × 75 per un rettangolo con 200 × 200. La modalità a capo automatico è impostata per capovolgere l'immagine sia orizzontalmente che verticalmente. La figura seguente mostra come viene affiancato il rettangolo nell'immagine. Si noti che quando si sposta da un'immagine a quella successiva in una determinata riga, l'immagine viene capovolta orizzontalmente e sposta da un riquadro a quella successiva in una determinata colonna, l'immagine viene capovolta orizzontalmente.  
+- Questo esempio Usa la stessa immagine di 75 × 75 per un rettangolo con 200 × 200. La modalità a capo automatico è impostata per capovolgere l'immagine sia orizzontalmente che verticalmente. La figura seguente mostra come viene affiancato il rettangolo nell'immagine. Si noti che quando si sposta da un'immagine a quella successiva in una determinata riga, l'immagine viene capovolta orizzontalmente e sposta da un riquadro a quella successiva in una determinata colonna, l'immagine viene capovolta orizzontalmente.  
   
  ![Riquadro 5](./media/tile5.gif "tile5")  
   
@@ -62,4 +62,4 @@ Proprio come i riquadri possono essere inseriti uno accanto a altro per coprire 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Utilizzo di un oggetto Brush per il riempimento di forme](using-a-brush-to-fill-shapes.md)
+- [Uso di un oggetto Brush per il riempimento di forme](using-a-brush-to-fill-shapes.md)

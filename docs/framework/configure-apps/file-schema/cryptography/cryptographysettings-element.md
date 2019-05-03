@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 ms.openlocfilehash: ec3a5a73caa901a21e22dbec7500af9153e01ef4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705220"
 ---
 # <a name="cryptographysettings-element"></a>\<cryptographySettings > elemento
 Contiene le impostazioni di crittografia.  
@@ -80,4 +80,4 @@ Contiene le impostazioni di crittografia.
 
 - [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [servizi crittografici](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)

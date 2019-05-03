@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
 ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59322173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008954"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procedura: Creare un controllo con associazione semplice in un Windows Form
 Con *associazione semplice*, è possibile visualizzare un singolo elemento di dati, ad esempio un valore di colonna da una tabella di set di dati, in un controllo. È possibile un'associazione semplice di qualsiasi proprietà di un controllo a un valore di dati.  
@@ -48,5 +48,5 @@ Con *associazione semplice*, è possibile visualizzare un singolo elemento di da
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.Binding>
-- [Data binding di Windows Form](windows-forms-data-binding.md)
-- [Associazione dati e Windows Form](data-binding-and-windows-forms.md)
+- [Data binding in Windows Form](windows-forms-data-binding.md)
+- [Data binding e Windows Forms](data-binding-and-windows-forms.md)

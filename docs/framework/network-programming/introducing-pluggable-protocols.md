@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: ebc238f6739f7db23d570688ea3c6e2031f9699f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25d7b0e8b8b98d68a0fb4a3cadab3d9f3e8747bd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729132"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59146146"
 ---
 # <a name="introducing-pluggable-protocols"></a>Introduzione ai protocolli di collegamento
 Microsoft .NET Framework offre un'implementazione a livelli, estendibile e gestita di servizi Internet che possono essere integrati rapidamente e facilmente nelle applicazioni. Le classi di accesso a Internet negli spazi dei nomi <xref:System.Net> e <xref:System.Net.Sockets> possono essere usate per implementare applicazioni basate sul Web e basate su Internet.  
@@ -67,6 +67,7 @@ Microsoft .NET Framework offre un'implementazione a livelli, estendibile e gesti
  Gli sviluppatori che hanno familiarità con l'interfaccia Windows Sockets o che hanno bisogno del controllo fornito dalla programmazione a livello di socket troveranno le classi **System.Net.Sockets** appropriate a queste esigenze. Le classi **System.Net.Sockets** costituiscono un punto di transizione dal codice gestito al codice nativo all'interno delle classi **System.Net**. Nella maggior parte dei casi, le classi **System.Net.Sockets** eseguono il marshalling dei dati nelle rispettive controparti Windows a 32 bit e gestiscono tutti i controlli di sicurezza necessari.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Programmazione di protocolli di collegamento](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
 - [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)

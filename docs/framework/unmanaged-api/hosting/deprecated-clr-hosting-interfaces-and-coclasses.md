@@ -10,21 +10,21 @@ ms.assetid: 7b3d2755-cbab-4160-bc69-eb85791e38c7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f6c20a69894c95086dbd813601ac8811ab4f337
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985699"
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>Interfacce di hosting CLR deprecate e coclassi
-In questa sezione vengono descritte le interfacce non gestite host consente di integrare common language runtime (CLR) nelle versioni 1.0 e 1.1 di .NET Framework nelle applicazioni. Queste interfacce forniscono metodi per un host configurare e caricare il runtime in un processo.  
+In questa sezione vengono descritte le interfacce non gestite gli host possono usare per l'integrazione common language runtime (CLR) nelle versioni 1.0 e 1.1 di .NET Framework nelle proprie applicazioni. Queste interfacce forniscono metodi per un host configurare e caricare il runtime in un processo.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  IAppDomainSetup  
  Fornisce metodi per l'host configurare un <xref:System.AppDomain>.  
   
  [Classe ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)  
- (Obsoleto) Fornisce funzionalità per la creazione di un nativo file eseguibile portabile (PE).  
+ (Deprecato) Fornisce funzionalità per la creazione di un nativo file eseguibile portabile (PE).  
   
  [Interfaccia ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)  
  Fornisce metodi per l'host configurare le impostazioni di CLR.  

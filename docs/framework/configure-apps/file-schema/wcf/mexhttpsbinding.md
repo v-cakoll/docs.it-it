@@ -3,11 +3,11 @@ title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
 ms.openlocfilehash: 4e96c28ac9b372092d06538d24d165dde6c5fe48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772541"
 ---
 # <a name="mexhttpsbinding"></a>\<mexHttpsBinding>
 Specifica le impostazioni per un'associazione usata per lo scambio di messaggi WS-MetadataExchange (WS-MEX) tramite HTTPS.  
@@ -49,7 +49,7 @@ Specifica le impostazioni per un'associazione usata per lo scambio di messaggi W
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<le associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
  Questa associazione fondamentalmente un'associazione `WSHttpBinding` che supporta la sicurezza a livello di trasporto mediante certificati. Per altre informazioni sulla configurazione e l'utilizzo di tale endpoint di metadati, vedere [come: Configurare una versione personalizzata di WS-Metadata Exchange Binding](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md), [come: Recuperare metadati attraverso un'associazione non MEX](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)e il codice di esempio [Endpoint di metadati protetto personalizzato](../../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
@@ -58,9 +58,9 @@ Specifica le impostazioni per un'associazione usata per lo scambio di messaggi W
 
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpsBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexHttpsBindingElement>
-- [Procedura: Pubblicare metadati per un servizio usando un file di configurazione](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Procedura: Pubblicare i metadati per un servizio utilizzando un File di configurazione](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Pubblicazione e recupero di metadati su un'associazione personalizzata](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
-- [Procedura: Configurare un'associazione WS-Metadata Exchange personalizzata](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
+- [Procedura: Configurare una versione personalizzata di WS-Metadata Exchange associazione](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
 - [Procedura: Recuperare metadati attraverso un'associazione non MEX](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
 - [Endpoint di metadati protetto personalizzato](../../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)
 - [Metadati](../../../../../docs/framework/wcf/feature-details/metadata.md)

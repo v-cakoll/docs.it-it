@@ -3,11 +3,11 @@ title: "Procedura: Specificare un'associazione al client nella configurazione"
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
 ms.openlocfilehash: 633bb0feeb0f9354bd6ff8ee6637f123d3e3cbf4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928934"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>Procedura: Specificare un'associazione al client nella configurazione
 In questo esempio, viene creata un'applicazione console client per utilizzare un servizio calcolatrice e nella configurazione viene spiegata in modo dichiarativo l'associazione per quel client. Il client accede al servizio `CalculatorService` che implementa l'interfaccia `ICalculator`. Sia il servizio sia il client utilizzano la classe <xref:System.ServiceModel.BasicHttpBinding>.  

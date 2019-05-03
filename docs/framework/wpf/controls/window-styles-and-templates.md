@@ -10,11 +10,11 @@ helpviewer_keywords:
 - states [WPF], Window
 ms.assetid: 2dfdf025-347b-4342-bf28-95206c273f35
 ms.openlocfilehash: ebd21829591b8fefe87aeba0b86280f18eff4f06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023832"
 ---
 # <a name="window-styles-and-templates"></a>Stili e modelli di Window
 In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Window> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

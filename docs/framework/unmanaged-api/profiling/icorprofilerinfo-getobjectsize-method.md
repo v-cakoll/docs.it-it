@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d366a0093ca82d2e5b3c40729777a1b6c0766bda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049544"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>Metodo ICorProfilerInfo::GetObjectSize
 Ottiene le dimensioni di un oggetto specificato.  
@@ -51,9 +51,9 @@ HRESULT GetObjectSize(
   
  Le dimensioni restituite dal `GetObjectSize` (metodo) non include eventuali spaziature interne di allineamento che possono essere visualizzati dopo che l'oggetto è nell'heap di garbage collection. Se si usa il `GetObjectSize` metodo per passare da un oggetto a un oggetto nell'heap di garbage collection, aggiungere padding manualmente, in base alle esigenze di allineamento.  
   
--   In Windows a 32 bit, COR_PRF_GC_GEN_0 COR_PRF_GC_GEN_1 e COR_PRF_GC_GEN_2 usano l'allineamento a 4 byte e COR_PRF_GC_LARGE_OBJECT_HEAP Usa l'allineamento a 8 byte.  
+- In Windows a 32 bit, COR_PRF_GC_GEN_0 COR_PRF_GC_GEN_1 e COR_PRF_GC_GEN_2 usano l'allineamento a 4 byte e COR_PRF_GC_LARGE_OBJECT_HEAP Usa l'allineamento a 8 byte.  
   
--   In Windows a 64 bit, l'allineamento è sempre 8 byte.  
+- In Windows a 64 bit, l'allineamento è sempre 8 byte.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

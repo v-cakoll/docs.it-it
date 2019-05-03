@@ -12,28 +12,28 @@ ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: edd2b2e11b02d69b7bba7c3cc7d8a9a0814e0c51
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674818"
 ---
 # <a name="configuration-sections-schema"></a>Schema delle sezioni di configurazione
 
-Lo schema di sezioni di configurazione contiene elementi che definiscono le impostazioni personalizzate nei file di configurazione. Per informazioni generali sui file di configurazione e gli schemi, vedere [schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md).
+Lo schema di sezioni di configurazione contiene elementi che definiscono le impostazioni personalizzate nei file di configurazione. Per informazioni generali su schemi e i file di configurazione, vedere [schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md).
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-[**\<cancellare >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md)   
-[**\<rimuovere >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md)   
+[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+[**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md)   
+[**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md)   
 [**\<sezione >**](~/docs/framework/configure-apps/file-schema/section-element.md)   
-[**\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
+[**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
 
 |     | Descrizione |
 | --- | ----------- |
-| [**\<cancellare >** per  **\<configSections >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Cancella tutte le sezioni definite in precedenza e i gruppi di sezioni. |
-| [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Cancella tutte le sezioni definite in precedenza e i gruppi di sezioni. |
-| [**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene le dichiarazioni dello spazio dei nomi e di sezione di configurazione. |
-| [**\<rimuovere >** per  **\<configSections >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Rimuove una sezione predefinita o il gruppo di sezione. |
-| [**\<sezione >** per  **\<configSections >** e  **\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/section-element.md) | Contiene una dichiarazione di sezione di configurazione. |
+| [**\<Cancella >** per  **\<configSections >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Cancella tutte le sezioni definite in precedenza e i gruppi. |
+| [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Cancella tutte le sezioni definite in precedenza e i gruppi. |
+| [**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene le dichiarazioni dello spazio dei nomi e sezione di configurazione. |
+| [**\<rimuovere >** per  **\<configSections >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Rimuove una sezione predefiniti o un gruppo di sezioni. |
+| [**\<sezione >** per  **\<configSections >** e  **\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/section-element.md) | Contiene una dichiarazione della sezione di configurazione. |
 | [**\<sectionGroup >** per  **\<configSections >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |

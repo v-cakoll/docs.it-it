@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
 ms.openlocfilehash: 1ce5c793a09df34ac17e70e3253e98108bf76fb8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59321477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803321"
 ---
 # <a name="end-of-statement-expected"></a>Prevista fine dell'istruzione
 L'istruzione sia sintatticamente completa, ma un elemento di programmazione aggiuntivo segue l'elemento che si completa l'istruzione. Un terminatore di riga è necessario alla fine di ogni istruzione.

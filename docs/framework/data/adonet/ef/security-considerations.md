@@ -3,11 +3,11 @@ title: Considerazioni sulla sicurezza (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
 ms.openlocfilehash: 1e3c1f74c1bf30da47fb38b6799bff11090cf31a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033969"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerazioni sulla sicurezza (Entity Framework)
 In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che riguardano in modo particolare lo sviluppo, la distribuzione e l'esecuzione di applicazioni [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. È consigliabile inoltre seguire le raccomandazioni relative alla creazione di applicazioni [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] protette. Per altre informazioni, vedere [Cenni preliminari sulla sicurezza](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -18,11 +18,11 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
 #### <a name="use-only-trusted-data-source-providers"></a>Usare solo provider delle origini dati attendibili.  
  Per comunicare con l'origine dati, un provider deve eseguire le operazioni seguenti:  
   
--   Ricevere la stringa di connessione da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+- Ricevere la stringa di connessione da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
--   Convertire l'albero dei comandi nel linguaggio di query nativo dell'origine dati.  
+- Convertire l'albero dei comandi nel linguaggio di query nativo dell'origine dati.  
   
--   Assemblare e restituire i set di risultati.  
+- Assemblare e restituire i set di risultati.  
   
  Durante l'operazione di accesso, le informazioni basate sulla password dell'utente vengono passate al server tramite le librerie di rete dell'origine dati sottostante. Un provider malintenzionato può rubare le credenziali utente, generare query dannose o manomettere il set di risultati.  
   
@@ -32,19 +32,19 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
 #### <a name="secure-the-connection-string"></a>Proteggere la stringa di connessione.  
  La protezione dell'accesso all'origine dati è uno dei principali obiettivi da raggiungere quando si imposta la sicurezza di un'applicazione. Una stringa di connessione presenta una potenziale vulnerabilità se non è protetta o se viene costruita in modo improprio. Se le informazioni di connessione vengono archiviate in testo normale o mantenute in memoria, si rischia di compromettere l'intero sistema. Di seguito sono riportati i metodi di protezione delle stringhe di connessione consigliati.  
   
--   Usare l'autenticazione di Windows con un'origine dati SQL Server.  
+- Usare l'autenticazione di Windows con un'origine dati SQL Server.  
   
      Quando si usa l'autenticazione di Windows per connettersi a un'origine dati SQL Server, la stringa di connessione non contiene informazioni relative all'accesso e alla password.  
   
--   Crittografare le sezioni dei file di configurazione tramite la configurazione protetta.  
+- Crittografare le sezioni dei file di configurazione tramite la configurazione protetta.  
   
      In ASP.NET è disponibile una nuova funzionalità, la configurazione protetta, che consente di crittografare le informazioni riservate in un file di configurazione. Sebbene sia stata progettata principalmente per ASP.NET, può essere usata anche per crittografare sezioni dei file di configurazione delle applicazioni Windows. Per una descrizione dettagliata delle nuove funzionalità di configurazione protetta, vedere [Encrypting Configuration Information Using Protected Configuration](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
--   Archiviare le stringhe di connessione in file di configurazione protetti.  
+- Archiviare le stringhe di connessione in file di configurazione protetti.  
   
      Le stringhe di connessione non devono mai essere incorporate nel codice sorgente. La possibilità di archiviarle nei file di configurazione elimina la necessità di incorporarle nel codice. Per impostazione predefinita, la procedura guidata Entity Data Model archivia le stringhe di connessione nel file di configurazione dell'applicazione. Per impedire accessi non autorizzati, è necessario proteggere tale file.  
   
--   Usare i generatori di stringhe di connessione durante la creazione dinamica delle connessioni.  
+- Usare i generatori di stringhe di connessione durante la creazione dinamica delle connessioni.  
   
      Se è necessario costruire stringhe di connessione in fase di runtime, usare la classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Questa classe del generatore di stringhe consente di impedire attacchi injection delle stringhe di connessione attraverso la convalida e l'esecuzione dell'escape delle informazioni di input non valide. Per altre informazioni, vedere [Procedura: Compilare una stringa di connessione EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Usare anche la classe di generatori di stringhe adatta per costruire la stringa di connessione origine dati che fa parte di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] stringa di connessione. Per informazioni sui generatori di stringhe di connessione per i provider ADO.NET, vedere [generatori di stringhe di connessione](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
@@ -65,15 +65,15 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
 #### <a name="run-applications-with-the-minimum-permissions"></a>Eseguire le applicazioni con le autorizzazioni minime.  
  Quando si consente l'esecuzione di un'applicazione gestita con autorizzazione di attendibilità totale, [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] non limita l'accesso dell'applicazione al computer. Questo potrebbe rendere vulnerabile l'applicazione e compromettere l'intero sistema. Per usare la sicurezza dall'accesso di codice e gli altri meccanismi di sicurezza di [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], è necessario eseguire le applicazioni tramite autorizzazioni parzialmente attendibili e con il set minimo di autorizzazioni necessarie a consentirne il funzionamento. Le autorizzazioni di accesso al codice seguenti sono le autorizzazioni minime necessarie per l'applicazione [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]:  
   
--   <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> per aprire i file di metadati specificati o <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> per cercare una directory per i file di metadati.  
+- <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> per aprire i file di metadati specificati o <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> per cercare i file di metadati in una directory.  
   
--   <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> per supportare LINQ alle query di entità.  
+- <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> per supportare query di LINQ to Entities.  
   
--   <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> per l'inserimento in un <xref:System.Transactions><xref:System.Transactions.Transaction>.  
+- <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> da inserire in <xref:System.Transactions><xref:System.Transactions.Transaction>.  
   
--   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> per serializzare le eccezioni tramite il <xref:System.Runtime.Serialization.ISerializable> interfaccia.  
+- <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> per serializzare le eccezioni tramite l'interfaccia <xref:System.Runtime.Serialization.ISerializable>.  
   
--   L'autorizzazione per aprire una connessione al database ed eseguire comandi sul database, ad esempio <xref:System.Data.SqlClient.SqlClientPermission> per un database di SQL Server.  
+- L'autorizzazione per aprire una connessione al database ed eseguire comandi sul database, ad esempio <xref:System.Data.SqlClient.SqlClientPermission> per un database di SQL Server.  
   
  Per altre informazioni, vedere [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
   
@@ -94,31 +94,31 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
 #### <a name="prevent-sql-injection-attacks"></a>Impedire attacchi SQL injection.  
  Le applicazioni spesso accettano input esterno, ad esempio da un utente o da un altro agente esterno, ed eseguono azioni basate su tale input. L'eventuale input derivato in modo diretto o indiretto dall'utente o da un agente esterno può includere contenuto che sfrutta la sintassi del linguaggio di destinazione per eseguire azioni non autorizzate. Quando il linguaggio di destinazione è un linguaggio SQL (Structured Query Language), ad esempio [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], questa manipolazione è nota come attacco SQL injection. Un utente malintenzionato può inserire comandi direttamente nella query e rilasciare una tabella di database, determinare un attacco di tipo Denial of Service o alterare in altro modo la natura dell'operazione da eseguire.  
   
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)] attacchi intrusivi nel codice:  
+- Attacchi injection di [!INCLUDE[esql](../../../../../includes/esql-md.md)]:  
   
      Gli attacchi SQL injection possono essere eseguiti in [!INCLUDE[esql](../../../../../includes/esql-md.md)] attraverso l'inserimento di input dannoso nei valori usati in un predicato della query e nei nomi del parametro. Per evitare il rischio di SQL injection, è necessario non combinare mai l'input dell'utente con il testo dei comandi [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] le query accettano parametri ovunque che vengono accettati i valori letterali. È opportuno utilizzare query con parametri, anziché inserire valori letterali direttamente nella query tramite un agente esterno. È anche consigliabile usare [metodi del generatore di query](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) per costruire in modo sicuro Entity SQL.  
+     Le query [!INCLUDE[esql](../../../../../includes/esql-md.md)] accettano parametri ovunque vengano accettati i valori letterali. È opportuno utilizzare query con parametri, anziché inserire valori letterali direttamente nella query tramite un agente esterno. È anche consigliabile usare [metodi del generatore di query](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) per costruire in modo sicuro Entity SQL.  
   
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] attacchi intrusivi nel codice:  
+- Attacchi injection di [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]:  
   
      Sebbene la composizione di query sia possibile in [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)], essa viene eseguita attraverso l'API del modello a oggetti. A differenza delle query [!INCLUDE[esql](../../../../../includes/esql-md.md)], le query [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] non vengono composte mediante la manipolazione o la concatenazione di stringhe e non sono soggette agli attacchi SQL injection tradizionali.  
   
 #### <a name="prevent-very-large-result-sets"></a>Evitare la creazione di set di risultati molto grandi.  
  Un set di risultati molto grande può causare la chiusura del sistema client se il client sta eseguendo operazioni che usano una quantità di risorse proporzionale alla dimensione del set di risultati. Set di risultati insolitamente grandi possono essere prodotti in presenza delle condizioni seguenti:  
   
--   In query eseguite su un database molto ampio che non includono condizioni di filtro adatte.  
+- In query eseguite su un database molto ampio che non includono condizioni di filtro adatte.  
   
--   In query che creano join cartesiani sul server.  
+- In query che creano join cartesiani sul server.  
   
--   In query [!INCLUDE[esql](../../../../../includes/esql-md.md)] annidate.  
+- In query [!INCLUDE[esql](../../../../../includes/esql-md.md)] annidate.  
   
  Quando si accetta l'input dell'utente, è necessario assicurarsi che esso non causi l'aumento delle dimensioni del set di risultati oltre le capacità di gestione del sistema. È anche possibile usare la <xref:System.Linq.Queryable.Take%2A> metodo nella [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] o nella [limite](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) operatore in [!INCLUDE[esql](../../../../../includes/esql-md.md)] per limitare le dimensioni del set di risultati.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Evitare di restituire risultati IQueryable quando si espongono metodi a chiamanti potenzialmente non attendibili.  
  Evitare di restituire tipi <xref:System.Linq.IQueryable%601> dai metodi esposti a chiamanti potenzialmente non attendibili per i motivi seguenti:  
   
--   Un utente di una query che espone un tipo <xref:System.Linq.IQueryable%601> potrebbe chiamare metodi sul risultato che espongono dati sicuri o aumentano la dimensione del set di risultati. Si consideri ad esempio la firma del metodo riportata di seguito:  
+- Un utente di una query che espone un tipo <xref:System.Linq.IQueryable%601> potrebbe chiamare metodi sul risultato che espongono dati sicuri o aumentano la dimensione del set di risultati. Si consideri ad esempio la firma del metodo riportata di seguito:  
   
     ```  
     public IQueryable<Customer> GetCustomer(int customerId)  
@@ -126,7 +126,7 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
   
      Un utente di questa query potrebbe chiamare `.Include("Orders")` sul tipo `IQueryable<Customer>` restituito per recuperare dati che la query non dovrebbe esporre. È possibile evitare questa situazione impostando il tipo restituito del metodo su <xref:System.Collections.Generic.IEnumerable%601> e chiamando un metodo (quale `.ToList()`) che materializza i risultati.  
   
--   Poiché le query <xref:System.Linq.IQueryable%601> vengono eseguite quando viene eseguita un'iterazione dei risultati, un utente di una query che espone un tipo <xref:System.Linq.IQueryable%601> potrebbe intercettare le eccezioni generate. Le eccezioni potrebbero contenere informazioni non destinate all'utente.  
+- Poiché le query <xref:System.Linq.IQueryable%601> vengono eseguite quando viene eseguita un'iterazione dei risultati, un utente di una query che espone un tipo <xref:System.Linq.IQueryable%601> potrebbe intercettare le eccezioni generate. Le eccezioni potrebbero contenere informazioni non destinate all'utente.  
   
 ## <a name="security-considerations-for-entities"></a>Considerazioni sulla sicurezza relative alle entità  
  Le considerazioni sulla sicurezza illustrate di seguito sono valide in caso di generazione e utilizzo di tipi di entità.  
@@ -150,13 +150,13 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
  Anche se i valori in cui l'operatore radice (`~`) e la stringa di sostituzione `DataDirectory` si risolvono dovrebbero rimanere costanti durante il runtime dell'applicazione, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] non impedisce all'host di modificarli.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Verificare la lunghezza del percorso prima della distribuzione.  
- Prima di distribuire un'applicazione [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], occorre assicurarsi che i valori dell'operatore radice (~) e la stringa di sostituzione `DataDirectory` sono superino i limiti di lunghezza del percorso del sistema operativo. [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] provider di dati non assicurarsi che la lunghezza del percorso sia all'interno di limiti validi.  
+ Prima di distribuire un'applicazione [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], occorre assicurarsi che i valori dell'operatore radice (~) e la stringa di sostituzione `DataDirectory` sono superino i limiti di lunghezza del percorso del sistema operativo. I provider di dati [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] non si assicurano che la lunghezza del percorso sia all'interno di limiti validi.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Considerazioni sulla sicurezza relative ai metadati ADO.NET  
  Le considerazioni sulla sicurezza illustrate di seguito si applicano in caso di generazione e utilizzo di file di mapping e di modello.  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>Non esporre informazioni riservate tramite la registrazione.  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] componenti dei metadati del servizio non registrano informazioni private. In presenza di risultati che non è possibile restituire a causa di restrizioni di accesso, i sistemi di gestione dei database e i file system devono restituire zero risultati anziché generare un'eccezione che potrebbe contenere informazioni riservate.  
+ I componenti del servizio di metadati [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] non registrano informazioni private. In presenza di risultati che non è possibile restituire a causa di restrizioni di accesso, i sistemi di gestione dei database e i file system devono restituire zero risultati anziché generare un'eccezione che potrebbe contenere informazioni riservate.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Non accettare oggetti MetadataWorkspace da fonti non attendibili.  
  Le applicazioni non devono accettare istanze della classe <xref:System.Data.Metadata.Edm.MetadataWorkspace> da fonti non attendibili. Al contrario, è necessario costruire in modo esplicito un'area di lavoro e popolarla a partire da tale origine.  

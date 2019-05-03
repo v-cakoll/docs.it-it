@@ -16,11 +16,11 @@ helpviewer_keywords:
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
 ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59330454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982360"
 ---
 # <a name="routed-events-overview"></a>Cenni preliminari sugli eventi indirizzati
 Questo argomento descrive il concetto di eventi indirizzati in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. L'argomento definisce la terminologia correlata agli eventi indirizzati, descrive in che modo questi eventi sono indirizzati lungo un albero di elementi, riepiloga le modalità di gestione degli eventi indirizzati e spiega come creare eventi indirizzati personalizzati.
@@ -86,11 +86,11 @@ Questo argomento descrive il concetto di eventi indirizzati in [!INCLUDE[TLA#tla
 ## <a name="routing-strategies"></a>Strategie di routing  
  Gli eventi indirizzati usano una delle tre strategie di routing illustrate di seguito:  
   
--   **Bubbling:** Vengono richiamati i gestori eventi sull'origine dell'evento. L'evento indirizzato viene quindi indirizzato agli elementi padre successivi fino a raggiungere la radice dell'albero degli elementi. La maggior parte degli eventi indirizzati usa la strategia di bubbling. Gli eventi indirizzati di bubbling vengono in genere usati per segnalare l'input o le modifiche dello stato da controlli distinti o altri elementi dell'interfaccia utente.  
+- **Bubbling:** Vengono richiamati i gestori eventi sull'origine dell'evento. L'evento indirizzato viene quindi indirizzato agli elementi padre successivi fino a raggiungere la radice dell'albero degli elementi. La maggior parte degli eventi indirizzati usa la strategia di bubbling. Gli eventi indirizzati di bubbling vengono in genere usati per segnalare l'input o le modifiche dello stato da controlli distinti o altri elementi dell'interfaccia utente.  
   
--   **Diretto:** Solo l'elemento di origine ha la possibilità di richiamare i gestori in risposta. Questa strategia è analoga al "routing" usato da [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] per gli eventi. Tuttavia, a differenza di uno standard [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] evento, indirizzare gli eventi indirizzati supportano la gestione di classi (gestione delle classi è descritto in una sezione successiva) e può essere utilizzato da <xref:System.Windows.EventSetter> e <xref:System.Windows.EventTrigger>.  
+- **Diretto:** Solo l'elemento di origine ha la possibilità di richiamare i gestori in risposta. Questa strategia è analoga al "routing" usato da [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] per gli eventi. Tuttavia, a differenza di uno standard [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] evento, indirizzare gli eventi indirizzati supportano la gestione di classi (gestione delle classi è descritto in una sezione successiva) e può essere utilizzato da <xref:System.Windows.EventSetter> e <xref:System.Windows.EventTrigger>.  
   
--   **Il tunneling:** Inizialmente, vengono richiamati i gestori di eventi alla radice dell'albero dell'elemento. L'evento indirizzato percorre quindi una route attraverso elementi figlio successivi, verso l'elemento nodo che rappresenta l'origine dell'evento indirizzato (l'elemento che ha generato l'evento indirizzato). Gli eventi indirizzati di tunneling vengono spesso usati o gestiti come parte della composizione di un controllo, in modo che gli eventi di parti composite possano essere deliberatamente eliminati o sostituiti da eventi specifici del controllo completo. Gli eventi di input forniti in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vengono spesso implementati come coppia di tunneling/bubbling. Gli eventi di tunneling sono talvolta anche detti eventi di anteprima, per una convenzione di denominazione usata per le coppie.  
+- **Il tunneling:** Inizialmente, vengono richiamati i gestori di eventi alla radice dell'albero dell'elemento. L'evento indirizzato percorre quindi una route attraverso elementi figlio successivi, verso l'elemento nodo che rappresenta l'origine dell'evento indirizzato (l'elemento che ha generato l'evento indirizzato). Gli eventi indirizzati di tunneling vengono spesso usati o gestiti come parte della composizione di un controllo, in modo che gli eventi di parti composite possano essere deliberatamente eliminati o sostituiti da eventi specifici del controllo completo. Gli eventi di input forniti in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vengono spesso implementati come coppia di tunneling/bubbling. Gli eventi di tunneling sono talvolta anche detti eventi di anteprima, per una convenzione di denominazione usata per le coppie.  
   
 <a name="why_use"></a>   
 ## <a name="why-use-routed-events"></a>Vantaggi offerti dall'uso degli eventi indirizzati  
@@ -104,9 +104,9 @@ Questo argomento descrive il concetto di eventi indirizzati in [!INCLUDE[TLA#tla
   
  Oltre all'aspetto del routing, ci sono altri due motivi per cui qualsiasi evento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] può essere implementato come evento indirizzato invece che come evento [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] standard. Se si implementano eventi personalizzati, considerare anche questi principi:  
   
--   Determinati [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stili e modelli caratteristiche, ad esempio <xref:System.Windows.EventSetter> e <xref:System.Windows.EventTrigger> richiedono che l'evento di cui viene fatto riferimento da un evento indirizzato. Si tratta dello scenario di identificatore dell'evento citato in precedenza.  
+- Determinati [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stili e modelli caratteristiche, ad esempio <xref:System.Windows.EventSetter> e <xref:System.Windows.EventTrigger> richiedono che l'evento di cui viene fatto riferimento da un evento indirizzato. Si tratta dello scenario di identificatore dell'evento citato in precedenza.  
   
--   Gli eventi indirizzati supportano un meccanismo di gestione delle classi in base al quale la classe può specificare metodi statici che hanno la possibilità di gestire gli eventi indirizzati prima che qualsiasi gestore di istanze registrato possa accedervi. Questa funzionalità è molto utile nella progettazione di controlli, perché la classe può imporre comportamenti di classe basati su eventi che non possono essere eliminati accidentalmente mediante la gestione di un evento su un'istanza.  
+- Gli eventi indirizzati supportano un meccanismo di gestione delle classi in base al quale la classe può specificare metodi statici che hanno la possibilità di gestire gli eventi indirizzati prima che qualsiasi gestore di istanze registrato possa accedervi. Questa funzionalità è molto utile nella progettazione di controlli, perché la classe può imporre comportamenti di classe basati su eventi che non possono essere eliminati accidentalmente mediante la gestione di un evento su un'istanza.  
   
  Ognuna delle considerazioni precedenti viene discussa in una sezione separata di questo argomento.  
   
@@ -147,21 +147,21 @@ Questo argomento descrive il concetto di eventi indirizzati in [!INCLUDE[TLA#tla
   
  Tuttavia, c'è un meccanismo "handledEventsToo" in base al quale i listener possono comunque eseguire gestori in risposta a eventi indirizzati in cui <xref:System.Windows.RoutedEventArgs.Handled%2A> è `true` nei dati dell'evento. In altre parole, la route dell'evento non viene effettivamente interrotta contrassegnando i dati di evento come gestiti. È possibile usare il meccanismo handledEventsToo solo nel codice o in un <xref:System.Windows.EventSetter>:  
   
--   Nel codice, anziché usando una sintassi di evento specifica del linguaggio che funziona per uso generale [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] gli eventi, chiamare il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metodo <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> per aggiungere il gestore. Specificare il valore di `handledEventsToo` come `true`.  
+- Nel codice, anziché usando una sintassi di evento specifica del linguaggio che funziona per uso generale [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] gli eventi, chiamare il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metodo <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> per aggiungere il gestore. Specificare il valore di `handledEventsToo` come `true`.  
   
--   In un' <xref:System.Windows.EventSetter>, impostare il <xref:System.Windows.EventSetter.HandledEventsToo%2A> attributo `true`.  
+- In un' <xref:System.Windows.EventSetter>, impostare il <xref:System.Windows.EventSetter.HandledEventsToo%2A> attributo `true`.  
   
  Oltre al comportamento che <xref:System.Windows.RoutedEventArgs.Handled%2A> stato produce negli eventi indirizzati, il concetto di <xref:System.Windows.RoutedEventArgs.Handled%2A> ha implicazioni per la modalità di progettazione dell'applicazione e scrivere il codice del gestore eventi. È possibile definire il concetto <xref:System.Windows.RoutedEventArgs.Handled%2A> come un semplice protocollo esposto dagli eventi indirizzati. Esattamente come si usa questo protocollo è dallo sviluppatore, ma la progettazione concettuale relativa come il valore di <xref:System.Windows.RoutedEventArgs.Handled%2A> dovrà essere utilizzato sia come indicato di seguito:  
   
--   Se un evento indirizzato è contrassegnato come gestito, non è necessario che venga gestito nuovamente da altri elementi lungo la route.  
+- Se un evento indirizzato è contrassegnato come gestito, non è necessario che venga gestito nuovamente da altri elementi lungo la route.  
   
--   Se un evento indirizzato non è contrassegnato come gestito, quindi altri listener precedenti nella route hanno scelto di non registrare un gestore oppure i gestori registrati hanno scelto di non modificare i dati dell'evento e impostare <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true`. È anche possibile, ovviamente, che il listener corrente sia il primo punto nella route. I gestori sul listener corrente a questo punto hanno tre possibilità:  
+- Se un evento indirizzato non è contrassegnato come gestito, quindi altri listener precedenti nella route hanno scelto di non registrare un gestore oppure i gestori registrati hanno scelto di non modificare i dati dell'evento e impostare <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true`. È anche possibile, ovviamente, che il listener corrente sia il primo punto nella route. I gestori sul listener corrente a questo punto hanno tre possibilità:  
   
-    -   Non eseguire alcuna azione. L'evento rimane non gestito e viene indirizzato al listener successivo.  
+    - Non eseguire alcuna azione. L'evento rimane non gestito e viene indirizzato al listener successivo.  
   
-    -   Eseguire il codice in risposta all'evento, ma stabilire che l'azione eseguita non è sufficiente per contrassegnare l'evento come gestito. L'evento viene indirizzato al listener successivo.  
+    - Eseguire il codice in risposta all'evento, ma stabilire che l'azione eseguita non è sufficiente per contrassegnare l'evento come gestito. L'evento viene indirizzato al listener successivo.  
   
-    -   Eseguire il codice in risposta all'evento. Contrassegnare l'evento come gestito nei dati di evento passati al gestore, perché l'azione eseguita viene ritenuta sufficiente per contrassegnare l'evento come gestito. L'evento viene comunque indirizzato al listener successivo, ma con <xref:System.Windows.RoutedEventArgs.Handled%2A> = `true` nei dati dell'evento, in modo che solo `handledEventsToo` listener hanno la possibilità di richiamare altri gestori.  
+    - Eseguire il codice in risposta all'evento. Contrassegnare l'evento come gestito nei dati di evento passati al gestore, perché l'azione eseguita viene ritenuta sufficiente per contrassegnare l'evento come gestito. L'evento viene comunque indirizzato al listener successivo, ma con <xref:System.Windows.RoutedEventArgs.Handled%2A> = `true` nei dati dell'evento, in modo che solo `handledEventsToo` listener hanno la possibilità di richiamare altri gestori.  
   
  Questa progettazione concettuale è consolidata dal comportamento di routing descritto in precedenza: risulta più difficile (anche se è comunque possibile nel codice o stili) per collegare i gestori per gli eventi indirizzati richiamati anche se un gestore precedente lungo la route è già impostata <xref:System.Windows.RoutedEventArgs.Handled%2A>a `true`.  
   
@@ -195,7 +195,7 @@ Questo argomento descrive il concetto di eventi indirizzati in [!INCLUDE[TLA#tla
 ## <a name="wpf-input-events"></a>Eventi di input WPF  
  Un'applicazione frequente degli eventi indirizzati nella piattaforma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] riguarda gli eventi di input. In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i nomi degli eventi indirizzati di tunneling sono preceduti dalla parola "Preview" per convenzione. Gli eventi di input sono spesso in coppia, con un evento che rappresenta l'evento di bubbling e l'altro quello di tunneling. Ad esempio, il <xref:System.Windows.ContentElement.KeyDown> eventi e <xref:System.Windows.ContentElement.PreviewKeyDown> eventi hanno la stessa firma, ma il primo evento di input di bubbling e il secondo è il tunneling di eventi di input. In alcuni casi, gli eventi di input hanno solo una versione di bubbling o solo una versione indirizzata diretta. Nella documentazione, gli argomenti relativi agli eventi indirizzati contengono riferimenti incrociati a eventi indirizzati simili con strategie di routing alternative, se disponibili, e le sezioni nelle pagine di riferimenti gestiti chiariscono la strategia di routing per ogni evento indirizzato.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gli eventi di input in coppia vengono implementati in modo che un'azione utente singola da un input, ad esempio la pressione di un pulsante del mouse, generi entrambi gli eventi indirizzati della coppia in sequenza. Per prima cosa, viene generato l'evento di tunneling, che avanza nella route. Successivamente, viene generato l'evento di bubbling, che avanza nella route. I due eventi condividono letteralmente la stessa istanza di dati di evento, perché il <xref:System.Windows.UIElement.RaiseEvent%2A> chiamata al metodo nella classe di implementazione che genera l'evento di bubbling è in ascolto per i dati dell'evento dall'evento di tunneling e li riutilizza nel nuovo evento generato. I listener con gestori per l'evento di tunneling hanno l'opportunità di contrassegnare per primi l'evento indirizzato come gestito (prima i gestori di classi, quindi i gestori di istanze). Se un elemento nella route di tunneling ha contrassegnato l'evento indirizzato come gestito, i dati dell'evento già gestito vengono inviati per l'evento di bubbling e i gestori tipici associati per gli eventi di input di bubbling equivalenti non vengono richiamati. Dall'esterno, potrebbe sembrare che l'evento di bubbling gestito non sia mai stato generato. Questo comportamento di gestione è utile per la composizione di controlli in cui si vuole che tutti gli eventi di input basati su hit test o gli eventi di input basati su stato attivo vengano segnalati dal controllo finale, invece che dalle relative parti composite. L'elemento del controllo finale è più vicino alla radice nella composizione e quindi ha la possibilità di gestire tramite classi prima l'evento di tunneling ed eventualmente di "sostituire" tale evento indirizzato con un evento più specifico del controllo, come parte del codice sottostante la classe del controllo.  
+ Gli eventi di input [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in coppia vengono implementati in modo che una singola azione di input dell'utente, ad esempio la pressione di un pulsante del mouse, generi entrambi gli eventi indirizzati della coppia in sequenza. Per prima cosa, viene generato l'evento di tunneling, che avanza nella route. Successivamente, viene generato l'evento di bubbling, che avanza nella route. I due eventi condividono letteralmente la stessa istanza di dati di evento, perché il <xref:System.Windows.UIElement.RaiseEvent%2A> chiamata al metodo nella classe di implementazione che genera l'evento di bubbling è in ascolto per i dati dell'evento dall'evento di tunneling e li riutilizza nel nuovo evento generato. I listener con gestori per l'evento di tunneling hanno l'opportunità di contrassegnare per primi l'evento indirizzato come gestito (prima i gestori di classi, quindi i gestori di istanze). Se un elemento nella route di tunneling ha contrassegnato l'evento indirizzato come gestito, i dati dell'evento già gestito vengono inviati per l'evento di bubbling e i gestori tipici associati per gli eventi di input di bubbling equivalenti non vengono richiamati. Dall'esterno, potrebbe sembrare che l'evento di bubbling gestito non sia mai stato generato. Questo comportamento di gestione è utile per la composizione di controlli in cui si vuole che tutti gli eventi di input basati su hit test o gli eventi di input basati su stato attivo vengano segnalati dal controllo finale, invece che dalle relative parti composite. L'elemento del controllo finale è più vicino alla radice nella composizione e quindi ha la possibilità di gestire tramite classi prima l'evento di tunneling ed eventualmente di "sostituire" tale evento indirizzato con un evento più specifico del controllo, come parte del codice sottostante la classe del controllo.  
   
  Come dimostrazione del funzionamento dell'elaborazione degli eventi di input, considerare l'esempio di evento di input seguente. Nell'albero della figura seguente `leaf element #2` è l'origine di un evento `PreviewMouseDown` e quindi di un evento `MouseDown`.  
   
@@ -206,13 +206,13 @@ Bubbling e tunneling degli eventi di input
   
 1. `PreviewMouseDown` (tunneling) sull'elemento radice.  
   
-2. `PreviewMouseDown` (tunneling) sull'elemento intermedio 1 #.  
+2. `PreviewMouseDown` (tunneling) sull'elemento intermedio 1.  
   
-3. `PreviewMouseDown` (tunneling) sull'elemento di origine #2.  
+3. `PreviewMouseDown` (tunneling) sull'elemento di origine 2.  
   
-4. `MouseDown` (bubbling) sull'elemento di origine #2.  
+4. `MouseDown` (bubbling) sull'elemento di origine 2.  
   
-5. `MouseDown` (bubbling) sull'elemento intermedio 1 #.  
+5. `MouseDown` (bubbling) sull'elemento intermedio 1.  
   
 6. `MouseDown` (bubbling) sull'elemento radice.  
   
@@ -249,9 +249,9 @@ Bubbling e tunneling degli eventi di input
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>
-- [Impostazione degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md)
+- [Contrassegno degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md)
 - [Cenni preliminari sull'input](input-overview.md)
-- [Cenni preliminari sull'esecuzione di comandi](commanding-overview.md)
+- [Panoramica sull'esecuzione di comandi](commanding-overview.md)
 - [Proprietà di dipendenza personalizzate](custom-dependency-properties.md)
 - [Strutture ad albero in WPF](trees-in-wpf.md)
 - [Modelli di eventi deboli](weak-event-patterns.md)

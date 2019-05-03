@@ -1,5 +1,5 @@
 ---
-title: <defaultProxy> (Impostazioni di rete)
+title: Elemento <defaultProxy> (impostazioni di rete)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 ms.openlocfilehash: ce08dadb0fb7b986c0573b1514f9ecbbe2961c3a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674571"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > (impostazioni di rete)
 Configura il server proxy Hypertext Transfer Protocol (HTTP).  

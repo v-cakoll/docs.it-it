@@ -3,11 +3,11 @@ title: Panoramica di WCF Discovery
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
 ms.openlocfilehash: cb1eb52e0996a03709a755ff2f148152e2625c58
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784254"
 ---
 # <a name="wcf-discovery-overview"></a>Panoramica di WCF Discovery
 Le API di individuazione offrono un modello di programmazione unificato per la pubblicazione dinamica e l'individuazione di servizi Web utilizzando il protocollo WS-Discovery. Queste API consentono la pubblicazione dei servizi e l'individuazione di tali servizi da parte dei client. Una volta reso individuabile un servizio, quest'ultimo è in grado di inviare messaggi di annuncio nonché di essere in ascolto e di rispondere alle richieste di individuazione. I servizi individuabili possono inviare messaggi Hello per annunciare la propria presenza in rete e messaggi Bye per annunciare la propria uscita dalla rete. Per trovare un servizio, i client inviano una richiesta `Probe` contenente criteri specifici quali il tipo di contratto servizio, le parole chiave e l'ambito nella rete. I servizi ricevono la richiesta `Probe` e determinano se corrisponde ai criteri. Se un servizio corrisponde, risponde restituendo un messaggio `ProbeMatch` al client con le informazioni necessarie per contattare il servizio. I client possono inoltre inviare richieste `Resolve` che consentono loro di individuare i servizi che hanno modificato il relativo indirizzo endpoint. I servizi corrispondenti rispondono alle richieste `Resolve` restituendo al client un messaggio `ResolveMatch`.  
@@ -15,11 +15,11 @@ Le API di individuazione offrono un modello di programmazione unificato per la p
 ## <a name="ad-hoc-and-managed-modes"></a>Modalità ad hoc e gestita  
  L'API di individuazione supporta due modalità diverse: Gestito e Ad Hoc. Nella modalità gestita è presente un server centralizzato denominato proxy di individuazione che gestisce le informazioni relative ai servizi disponibili. Il proxy di individuazione può essere popolato con le informazioni sui servizi in diversi modi. I servizi possono ad esempio inviare al proxy di individuazione messaggi di annuncio in fase di avvio oppure il proxy può leggere i dati da un database o da un file di configurazione per determinare i servizi disponibili. La modalità di popolamento di un proxy di individuazione viene scelta dallo sviluppatore. I client utilizzano il proxy di individuazione per recuperare informazioni sui servizi disponibili. Quando un client cerca un servizio, invia un messaggio `Probe` al proxy di individuazione il quale determina se sono disponibili servizi noti corrispondenti a quello richiesto dal client. Se vengono individuate corrispondente il proxy di individuazione restituisce una risposta `ProbeMatch` al client. Il client può quindi contattare il servizio utilizzando direttamente le apposite informazioni restituite dal proxy. Il principio chiave per quanto concerne la modalità gestite consiste nel fatto che le richieste di individuazione vengono inviate in modo unicast a un'autorità, ovvero il proxy di individuazione. .NET Framework contiene componenti chiave che consentono di compilare un proxy personalizzato. I client e i servizi possono individuare il proxy in diversi modi:  
   
--   Il proxy può rispondere a messaggi ad hoc.  
+- Il proxy può rispondere a messaggi ad hoc.  
   
--   Il proxy può inviare un messaggio di annuncio in fase di avvio.  
+- Il proxy può inviare un messaggio di annuncio in fase di avvio.  
   
--   I client e i servizi possono essere progettati in modo da cercare un endpoint noto specifico.  
+- I client e i servizi possono essere progettati in modo da cercare un endpoint noto specifico.  
   
  Nella modalità ad hoc non è presente alcun server centralizzato. Tutti i messaggi di individuazione, quali gli annunci dei servizi e le richieste dei client, vengono inviati in modalità multicast. Per impostazione predefinita .NET Framework supporta l'individuazione ad hoc su protocollo UDP. Se ad esempio un servizio è configurato per inviare un annuncio Hello all'avvio, il messaggio viene inviato a un indirizzo multicast noto mediante il protocollo UDP. I client devono essere attivamente in ascolto degli annunci ed elaborarli in modo appropriato. I messaggi `Probe` inviati da un client per un servizio vengono inviati sulla rete mediante il protocollo multicast. Ogni servizio che riceve la richiesta determina se sussiste la corrispondenza con i criteri del messaggio `Probe` e risponde direttamente al client con un messaggio `ProbeMatch` in caso di effettiva corrispondenza con i criteri del messaggio `Probe`.  
   

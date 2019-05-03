@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
 ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971875"
 ---
 # <a name="xfieldmodifier-directive"></a>Direttiva x:FieldModifier
 È possibile modificare il comportamento di compilazione XAML in modo che i campi per i riferimenti agli oggetti denominati sono definiti con <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> accesso anziché il <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> il comportamento predefinito.  
@@ -36,11 +36,11 @@ ms.locfileid: "59144547"
   
  Il valore per il `x:FieldModifier` attributo varia in base al linguaggio di programmazione e framework specifici può variare il suo scopo. La stringa da usare dipende dal modo in cui ogni linguaggio implementa relativi <xref:System.CodeDom.Compiler.CodeDomProvider> e i convertitori di tipi restituiti per definire gli stessi significati per <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> e <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, e se tale lingua è distinzione maiuscole / minuscole.  
   
--   Per c#, la stringa da passare per designare <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> è `public`.  
+- Per c#, la stringa da passare per designare <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> è `public`.  
   
--   Per Microsoft Visual Basic .NET, la stringa da passare per designare <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> è `Public`.  
+- Per Microsoft Visual Basic .NET, la stringa da passare per designare <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> è `Public`.  
   
--   Per [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], non esistono attualmente alcuna destinazione per XAML, pertanto la stringa da passare è indefinita.  
+- Per [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], non esistono attualmente alcuna destinazione per XAML, pertanto la stringa da passare è indefinita.  
   
  È inoltre possibile specificare <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> (`internal` in C#, `Friend` in Visual Basic) ma la specifica <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> insolita perché `NotPublic` come il comportamento è già il valore predefinito.  
   

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
 ms.openlocfilehash: 9336be2aebb10e5c0bd0bf4648cae34a3b5fe7c3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013179"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Procedura: Impostare lo sfondo di un controllo Panel Windows Form
 Un controllo Windows Form <xref:System.Windows.Forms.Panel> controllo può visualizzare un colore di sfondo sia un'immagine di sfondo. Il <xref:System.Windows.Forms.Control.BackColor%2A> proprietà imposta il colore di sfondo per i controlli contenuti, ad esempio etichette e i pulsanti di opzione. Se il <xref:System.Windows.Forms.Control.BackgroundImage%2A> non è impostata, il <xref:System.Windows.Forms.Control.BackColor%2A> selezione riempirà l'intero pannello. Se il <xref:System.Windows.Forms.Control.BackgroundImage%2A> è impostata, verrà visualizzata l'immagine dietro i controlli contenuti.  
@@ -72,4 +72,4 @@ Un controllo Windows Form <xref:System.Windows.Forms.Panel> controllo può visua
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
 - [Controllo Panel](panel-control-windows-forms.md)
-- [Panoramica del controllo Panel](panel-control-overview-windows-forms.md)
+- [Panoramica sul controllo Panel](panel-control-overview-windows-forms.md)

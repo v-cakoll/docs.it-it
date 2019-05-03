@@ -3,11 +3,11 @@ title: Identificatori (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
 ms.openlocfilehash: 702a9c69c37b572fde18dd57c44608678174fb15
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774660"
 ---
 # <a name="identifiers-entity-sql"></a>Identificatori (Entity SQL)
 Gli identificatori vengono usati in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] per rappresentare alias di espressioni di query, riferimenti di variabili, proprietà di oggetti, funzioni e così via. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sono disponibili due tipi di identificatori: identificatori semplici e identificatori tra virgolette.  
@@ -20,15 +20,15 @@ Gli identificatori vengono usati in [!INCLUDE[esql](../../../../../../includes/e
   
  Un identificatore delimitato non può includere i caratteri seguenti:  
   
--   Carattere di nuova riga.  
+- Carattere di nuova riga.  
   
--   Ritorno a capo.  
+- Ritorno a capo.  
   
--   Tabulazione.  
+- Tabulazione.  
   
--   Backspace.  
+- Backspace.  
   
--   Parentesi quadre aggiuntive (ovvero, parentesi quadre all'interno delle parentesi quadre che delineano l'identificatore).  
+- Parentesi quadre aggiuntive (ovvero, parentesi quadre all'interno delle parentesi quadre che delineano l'identificatore).  
   
  Un identificatore delimitato può includere caratteri Unicode.  
   
@@ -53,13 +53,13 @@ Gli identificatori vengono usati in [!INCLUDE[esql](../../../../../../includes/e
 ## <a name="aliasing-rules"></a>Regole relative all'utilizzo degli alias  
  È consigliabile specificare gli alias nelle [!INCLUDE[esql](../../../../../../includes/esql-md.md)] esegue una query alle necessità, incluse le seguenti [!INCLUDE[esql](../../../../../../includes/esql-md.md)] costruisce:  
   
--   Campi di un costruttore ROW.  
+- Campi di un costruttore ROW.  
   
--   Elementi nella clausola FROM di un'espressione di query.  
+- Elementi nella clausola FROM di un'espressione di query.  
   
--   Elementi nella clausola SELECT di un'espressione di query.  
+- Elementi nella clausola SELECT di un'espressione di query.  
   
--   Elementi nella clausola GROUP BY di un'espressione di query.  
+- Elementi nella clausola GROUP BY di un'espressione di query.  
   
 ### <a name="valid-aliases"></a>Alias validi  
  Alias validi in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sono qualsiasi identificatore semplice o un identificatore tra virgolette.  
@@ -67,9 +67,9 @@ Gli identificatori vengono usati in [!INCLUDE[esql](../../../../../../includes/e
 ### <a name="alias-generation"></a>Generazione di alias  
  Se viene specificato alcun alias in un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] espressione di query, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta di generare un alias usando semplici regole seguenti:  
   
--   Se l'espressione di query (per la quale l'alias non è specificato) è un identificatore semplice o delimitato, tale identificatore viene usato come alias. `ROW(a, [b])`, ad esempio, diventa `ROW(a AS a, [b] AS [b])`.  
+- Se l'espressione di query (per la quale l'alias non è specificato) è un identificatore semplice o delimitato, tale identificatore viene usato come alias. `ROW(a, [b])`, ad esempio, diventa `ROW(a AS a, [b] AS [b])`.  
   
--   Se l'espressione di query è un'espressione più complessa, ma l'ultimo componente dell'espressione è un identificatore semplice, tale identificatore viene usato come alias. `ROW(a.a1, b.[b1])`, ad esempio, diventa `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
+- Se l'espressione di query è un'espressione più complessa, ma l'ultimo componente dell'espressione è un identificatore semplice, tale identificatore viene usato come alias. `ROW(a.a1, b.[b1])`, ad esempio, diventa `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
   
  Si consiglia di non usare alias impliciti se successivamente si desidera usare il nome dell'alias. Tutte le volte che gli alias (impliciti o espliciti) sono in conflitto o vengono ripetuti nello stesso ambito, si verifica un errore di compilazione. Un alias implicito può essere compilato anche se è presente un alias esplicito o implicito con lo stesso nome.  
   
@@ -107,11 +107,11 @@ SELECT 1 AS X, 2 AS X …
   
  Di seguito sono riportate alcune note aggiuntive relative agli ambiti:  
   
--   L'elenco SELECT può introdurre nuovi nomi nell'ambito, in ordine. Le espressioni di proiezione a destra possono riferirsi ai nomi proiettati a sinistra.  
+- L'elenco SELECT può introdurre nuovi nomi nell'ambito, in ordine. Le espressioni di proiezione a destra possono riferirsi ai nomi proiettati a sinistra.  
   
--   La clausola ORDER BY può fare riferimento a nomi (alias) specificati nell'elenco SELECT.  
+- La clausola ORDER BY può fare riferimento a nomi (alias) specificati nell'elenco SELECT.  
   
--   L'ordine di valutazione delle clausole nell'espressione SELECT determina l'ordine con cui i nomi vengono introdotti nell'ambito. La clausola FROM viene valutata per prima, seguita dalle clausole WHERE, GROUP BY, HAVING, SELECT e infine ORDER BY.  
+- L'ordine di valutazione delle clausole nell'espressione SELECT determina l'ordine con cui i nomi vengono introdotti nell'ambito. La clausola FROM viene valutata per prima, seguita dalle clausole WHERE, GROUP BY, HAVING, SELECT e infine ORDER BY.  
   
 ### <a name="aggregate-handling"></a>Gestione delle aggregazioni  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta due forme di aggregazione: aggregazioni basate sulle raccolte e aggregazioni basate su gruppo. Le aggregazioni basate sulle raccolte rappresentano il costrutto preferito in [!INCLUDE[esql](../../../../../../includes/esql-md.md)], mentre quelle basate sui gruppi sono supportate per offrire compatibilità con SQL.  
@@ -123,5 +123,5 @@ SELECT 1 AS X, 2 AS X …
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Cenni preliminari su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Set di caratteri di input](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)

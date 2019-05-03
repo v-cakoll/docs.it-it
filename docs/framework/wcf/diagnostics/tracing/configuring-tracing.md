@@ -5,11 +5,11 @@ helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
 ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912574"
 ---
 # <a name="configuring-tracing"></a>Configurazione delle funzionalità di traccia
 In questo argomento viene illustrato come attivare la funzionalità di traccia, configurare origini di traccia affinché vengano create tracce e impostati livelli di traccia, impostare traccia e propagazione di attività per supportare la correlazione tra tracce end-to-end e configurare i listener di traccia affinché accedano alle tracce.  
@@ -22,9 +22,9 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
 ## <a name="enabling-tracing"></a>Abilitazione della traccia  
  Windows Communication Foundation (WCF) restituisce i dati seguenti per l'analisi diagnostica:  
   
--   Tracce per le attività cardine dei processi in tutti i componenti delle applicazioni, ad esempio chiamate dell'operazione, eccezioni del codice, avvisi e altri eventi di elaborazione significativi.  
+- Tracce per le attività cardine dei processi in tutti i componenti delle applicazioni, ad esempio chiamate dell'operazione, eccezioni del codice, avvisi e altri eventi di elaborazione significativi.  
   
--   Eventi di errore di Windows quando la funzionalità di traccia non viene eseguita correttamente. Visualizzare [la registrazione degli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+- Eventi di errore di Windows quando la funzionalità di traccia non viene eseguita correttamente. Visualizzare [la registrazione degli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
  Traccia di WCF si basa su <xref:System.Diagnostics>. Per utilizzare la funzionalità di traccia, è necessario definire le origini di traccia nel file di configurazione o nel codice. WCF definisce un'origine di traccia per ogni assembly WCF. Il `System.ServiceModel` origine di traccia è l'origine di traccia WCF più generale e Registra attività cardine di elaborazione attraverso lo stack di comunicazione WCF, dall'immissione/abbandono del trasporto all'immissione/abbandono di codice utente. L'origine della traccia `System.ServiceModel.MessageLogging` registra tutti i messaggi che vengono propagati nel sistema.  
   
@@ -58,19 +58,19 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configurazione delle origini di traccia per la generazione di tracce  
  WCF definisce un'origine di traccia per ogni assembly. I listener definiti per tale origine accedono alle tracce generate all'interno di un assembly. Vengono definite le origini di traccia seguenti:  
   
--   System.ServiceModel: Registra tutte le fasi dell'elaborazione di WCF, ogni volta che la configurazione viene letta, viene elaborato un messaggio nel trasporto, sicurezza, l'elaborazione di un messaggio viene inviata nel codice utente e così via.  
+- System.ServiceModel: Registra tutte le fasi dell'elaborazione di WCF, ogni volta che la configurazione viene letta, viene elaborato un messaggio nel trasporto, sicurezza, l'elaborazione di un messaggio viene inviata nel codice utente e così via.  
   
--   System.ServiceModel.MessageLogging: Registra tutti i messaggi che passano attraverso il sistema.  
+- System.ServiceModel.MessageLogging: Registra tutti i messaggi che passano attraverso il sistema.  
   
--   System.IdentityModel.  
+- System.IdentityModel.  
   
--   System.ServiceModel.Activation.  
+- System.ServiceModel.Activation.  
   
--   System.IO.Log: Registrazione per l'interfaccia di .NET Framework per il Common Log File System (CLFS).  
+- System.IO.Log: Registrazione per l'interfaccia di .NET Framework per il Common Log File System (CLFS).  
   
--   System.Runtime.Serialization: Registra quando gli oggetti vengono letti o scritti.  
+- System.Runtime.Serialization: Registra quando gli oggetti vengono letti o scritti.  
   
--   CardSpace.  
+- CardSpace.  
   
  È possibile configurare ogni origine di traccia per l'utilizzo dello stesso listener (condiviso), come indicato nell'esempio di configurazione seguente.  
   

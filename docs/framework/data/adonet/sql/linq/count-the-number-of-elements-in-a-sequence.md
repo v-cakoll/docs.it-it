@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ccbe5d54-c9eb-4b14-b0ab-f628483c5f99
 ms.openlocfilehash: b39b0a1487c9f250e32b13330f2f70b7e3c7c877
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032924"
 ---
 # <a name="count-the-number-of-elements-in-a-sequence"></a>Contare il numero di elementi in una sequenza
 Usare l'operatore <xref:System.Linq.Enumerable.Count%2A> per conteggiare il numero di elementi in una sequenza.  

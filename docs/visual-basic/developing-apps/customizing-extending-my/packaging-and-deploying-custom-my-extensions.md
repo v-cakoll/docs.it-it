@@ -7,15 +7,15 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
 ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014206"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Il pacchetto e distribuire personalizzata delle estensioni My (Visual Basic)
 
-Visual Basic fornisce un modo semplice la distribuzione personalizzata `My` estensioni spazio dei nomi con i modelli di Visual Studio. Se si sta creando un modello di progetto per il quale il `My` le estensioni sono parte integrante del nuovo tipo di progetto, è possibile includere solo personalizzata `My` codice dell'estensione per il progetto quando si esporta il modello. Per altre informazioni sull'esportazione di modelli di progetto, vedere [procedura: creare modelli di progetto](/visualstudio/ide/how-to-create-project-templates).
+Visual Basic fornisce un modo semplice la distribuzione personalizzata `My` estensioni spazio dei nomi con i modelli di Visual Studio. Se si sta creando un modello di progetto per il quale il `My` le estensioni sono parte integrante del nuovo tipo di progetto, è possibile includere solo personalizzata `My` codice dell'estensione per il progetto quando si esporta il modello. Per altre informazioni sull'esportazione di modelli di progetto, vedere [come: Creare modelli di progetto](/visualstudio/ide/how-to-create-project-templates).
 
 Se personalizzata `My` estensione è in un singolo file di codice, è possibile esportare il file come modello di elemento che possono essere aggiunte a qualsiasi tipo di progetto Visual Basic. È quindi possibile personalizzare il modello di elemento per abilitare funzionalità aggiuntive e il comportamento per personalizzata `My` estensione in un progetto Visual Basic. Tali funzionalità includono quanto segue:
 
@@ -33,7 +33,7 @@ Il primo passaggio nella creazione di un pacchetto di distribuzione per un ogget
 
 ## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Esportare una My extension dello spazio dei nomi come un modello di elemento
 
-Dopo aver creato un file di codice che include il `My` estensione dello spazio dei nomi, è possibile esportare il file di codice come un modello di elemento di Visual Studio. Per istruzioni su come esportare un file come un modello di elemento di Visual Studio, vedere [procedura: creare modelli di elementi](/visualstudio/ide/how-to-create-item-templates).
+Dopo aver creato un file di codice che include il `My` estensione dello spazio dei nomi, è possibile esportare il file di codice come un modello di elemento di Visual Studio. Per istruzioni su come esportare un file come un modello di elemento di Visual Studio, vedere [come: Creare modelli di elementi](/visualstudio/ide/how-to-create-item-templates).
 
 > [!NOTE]
 > Se il `My` estensione dello spazio dei nomi presenta una dipendenza da un particolare assembly, è possibile personalizzare il modello di elemento per installare automaticamente il `My` estensione dello spazio dei nomi quando viene aggiunto un riferimento a tale assembly. Di conseguenza, è consigliabile escludere tale riferimento all'assembly quando si esporta il file di codice come un modello di elemento di Visual Studio.

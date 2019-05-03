@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
 ms.openlocfilehash: 58e65ee9d95329c3583515b99db47b87b3749c8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973784"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Tasti di scelta rapida per il controllo DataGrid Windows Form
 > [!NOTE]
@@ -52,5 +52,5 @@ ms.locfileid: "59145977"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica del controllo DataGrid](datagrid-control-overview-windows-forms.md)
+- [Cenni preliminari sul controllo DataGrid](datagrid-control-overview-windows-forms.md)
 - [Controllo DataGrid](datagrid-control-windows-forms.md)

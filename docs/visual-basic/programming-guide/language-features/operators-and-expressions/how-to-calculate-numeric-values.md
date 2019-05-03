@@ -12,11 +12,11 @@ helpviewer_keywords:
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
 ms.openlocfilehash: 33184d9be275f5e777ffd79c6dd4e3182d865de7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864682"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Procedura: Calcolare valori numerici (Visual Basic)
 È possibile calcolare valori numerici tramite l'utilizzo di espressioni numeriche. Oggetto *espressione numerica* è un'espressione che contiene i valori letterali, costanti e variabili che rappresentano valori numerici e operatori che agiscono su quei valori.  
@@ -25,7 +25,7 @@ ms.locfileid: "58825755"
   
 #### <a name="to-calculate-a-numeric-value"></a>Per calcolare un valore numerico  
   
--   Combinare uno o più valori letterali, costanti e variabili in un'espressione numerica. Nell'esempio seguente mostra alcune espressioni numerici validi.  
+- Combinare uno o più valori letterali, costanti e variabili in un'espressione numerica. Nell'esempio seguente mostra alcune espressioni numerici validi.  
   
      `93.217`  
   
@@ -41,7 +41,7 @@ ms.locfileid: "58825755"
   
 #### <a name="to-store-a-numeric-value"></a>Per archiviare un valore numerico  
   
--   È possibile usare un'istruzione di assegnazione per assegnare il valore rappresentato da un'espressione numerica per una variabile, come illustrato nell'esempio seguente.  
+- È possibile usare un'istruzione di assegnazione per assegnare il valore rappresentato da un'espressione numerica per una variabile, come illustrato nell'esempio seguente.  
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
@@ -54,7 +54,7 @@ ms.locfileid: "58825755"
   
 #### <a name="to-override-normal-operator-precedence"></a>Eseguire l'override di precedenza degli operatori normale  
   
--   Utilizzare le parentesi per racchiudere le operazioni che si desidera venga eseguita per prima. Nell'esempio seguente mostra due risultati diversi con gli stessi operandi e operatori.  
+- Utilizzare le parentesi per racchiudere le operazioni che si desidera venga eseguita per prima. Nell'esempio seguente mostra due risultati diversi con gli stessi operandi e operatori.  
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   

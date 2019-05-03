@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e89b76f7a246277737123e180c20874940437506
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61597504"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a>Metodo ICorProfilerCallback::ExceptionSearchFilterLeave
 Notifica al profiler che un filtro utente appena terminata l'esecuzione.  

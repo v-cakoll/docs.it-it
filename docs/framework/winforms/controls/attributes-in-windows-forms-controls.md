@@ -8,11 +8,11 @@ helpviewer_keywords:
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
 ms.openlocfilehash: 9dd4c2aabe1517b66d8e499de3cf2671bb94e0d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954375"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Attributi nei controlli Windows Form
 .NET Framework offre un'ampia gamma di attributi che è possibile applicare ai membri dei controlli e dei componenti personalizzati. Alcuni di questi attributi influiscono sul comportamento in fase di esecuzione di una classe, mentre altri influiscono sul comportamento in fase di progettazione.  
@@ -63,6 +63,6 @@ ms.locfileid: "59213609"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Attribute>
-- [Procedura: Applicare attributi nei controlli Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)
+- [Procedura: Applicare attributi nei controlli di Windows Form](how-to-apply-attributes-in-windows-forms-controls.md)
 - [Estensione del supporto in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)

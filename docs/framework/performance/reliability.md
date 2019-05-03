@@ -11,11 +11,11 @@ ms.assetid: 294aa306-0afe-4cbe-b397-86ba9f1860f8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b00ba0fdf732a864fb4fb757c6012a3d36740b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949292"
 ---
 # <a name="reliability"></a>Affidabilità
 È importante che il codice in esecuzione in ambienti server, ad esempio SQL Server, fornisca protezione contro le eccezioni asincrone. L'affidabilità, come descritto in questo argomento, non è specifica di SQL Server, ma della scrittura di codice affidabile per qualsiasi host in esecuzione in un ambiente .NET Framework versione 2.0. SQL Server è tuttavia il primo servizio che fa un uso completo delle nuove funzionalità di affidabilità della versione 2.0, quindi viene usato come esempio.  

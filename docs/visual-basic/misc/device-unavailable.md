@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID68
 ms.assetid: 9a89beda-140e-4b32-8d0a-2dc598ef279a
 ms.openlocfilehash: 2738ce692f5eb2df433cd5cb1a5e1ae4a5968cab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970079"
 ---
 # <a name="device-unavailable"></a>Dispositivo non disponibile
 La connessione di rete è stata persa o il dispositivo a cui si tenta di accedere è offline o non esiste.  

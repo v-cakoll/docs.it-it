@@ -3,11 +3,11 @@ title: Richiamo della convalida di attività
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
 ms.openlocfilehash: 19c2d4773cf15245ba20ff8523ebd7e67d5b9c1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791079"
 ---
 # <a name="invoking-activity-validation"></a>Richiamo della convalida di attività
 La convalida delle attività offre un metodo per identificare e segnalare errori nella configurazione di qualsiasi attività prima della relativa esecuzione. Viene eseguita quando un flusso di lavoro viene modificato nell'utilità di progettazione del flusso di lavoro e gli eventuali errori o avvisi di convalida vengono visualizzati in tale utilità. La convalida avviene anche in fase di esecuzione quando un flusso di lavoro viene richiamato e, se si verificano errori di convalida, viene generata un'eccezione <xref:System.Activities.InvalidWorkflowException> dalla logica di convalida predefinita. Windows Workflow Foundation (WF) fornisce il <xref:System.Activities.Validation.ActivityValidationServices> classe che può essere utilizzata dagli sviluppatori di strumenti e applicazioni del flusso di lavoro per convalidare in modo esplicito un'attività. In questo argomento viene descritto come usare l'oggetto <xref:System.Activities.Validation.ActivityValidationServices> per eseguire la convalida delle attività.  

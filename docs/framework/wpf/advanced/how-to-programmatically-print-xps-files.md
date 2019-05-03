@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
 ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052443"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Procedura: Stampare file XPS a livello di codice
 È possibile usare uno degli overload del <xref:System.Printing.PrintQueue.AddJob%2A> metodo stampare [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] file senza aprire un <xref:System.Windows.Controls.PrintDialog> o, in generale, qualsiasi [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] affatto.  
@@ -69,4 +69,4 @@ ms.locfileid: "59312072"
 - [Threading gestito e non gestito](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
 - [isXPS.exe (strumento di conformità isXPS)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
 - [Documenti in WPF](documents-in-wpf.md)
-- [Cenni preliminari sulla stampa](printing-overview.md)
+- [Panoramica della stampa](printing-overview.md)

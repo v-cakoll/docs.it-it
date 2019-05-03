@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fab5225225d4e4a4e07961b0f967cff2c1b07321
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599318"
 ---
 # <a name="cordebugregister-enumeration"></a>Enumerazione CorDebugRegister
 Specifica i registri associati a un'architettura di processore specifica.  
@@ -194,9 +194,9 @@ typedef enum CorDebugRegister {
 ## <a name="remarks"></a>Note  
  Esistono 128 registri dei dati per l'utilizzo generico e 128 registri dei dati a virgola mobile nel processore IA-64, ma vengono forniti solo i valori `REGISTER_IA64_R0` e `REGISTER_IA64_F0`. Gli altri valori possono essere determinati come descritto di seguito:  
   
--   Aggiungere il numero del registro a `REGISTER_IA64_R0` per i valori da `REGISTER_IA64_R1` a `REGISTER_IA64_R127`, che corrispondono al registro dei dati dal numero 1 al numero 127 nel processore IA-64.  
+- Aggiungere il numero del registro a `REGISTER_IA64_R0` per i valori da `REGISTER_IA64_R1` a `REGISTER_IA64_R127`, che corrispondono al registro dei dati dal numero 1 al numero 127 nel processore IA-64.  
   
--   Aggiungere il numero del registro a `REGISTER_IA64_F0` per i valori da `REGISTER_IA64_F1` a `REGISTER_IA64_F127`, che corrispondono al registro dei dati a virgola mobile dal numero 1 al numero 127 nel processore IA-64.  
+- Aggiungere il numero del registro a `REGISTER_IA64_F0` per i valori da `REGISTER_IA64_F1` a `REGISTER_IA64_F127`, che corrispondono al registro dei dati a virgola mobile dal numero 1 al numero 127 nel processore IA-64.  
   
  Ad esempio, se occorre specificare il registro dei dati 83 nel processore IA-64, usare `REGISTER_IA64_R0` + 83.  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
 ms.openlocfilehash: 335c85d5234df4dd00d0ee65b2077996411081b3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606615"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>Procedura: Compilare una stringa di connessione EntityConnection
 In questo argomento viene fornito un esempio di come compilare un oggetto <xref:System.Data.EntityClient.EntityConnection>.  

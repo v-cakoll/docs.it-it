@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
 ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756754"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Risoluzione dei problemi relativi alle variabili in Visual Basic
 Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si lavora con le variabili in Visual Basic.  
@@ -18,9 +18,9 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si la
 ## <a name="unable-to-access-members-of-an-object"></a>Impossibile accedere ai membri di un oggetto  
  Se il codice tenta di accedere a una proprietà o metodo su un oggetto, possono verificarsi due diversi errori:  
   
--   Il compilatore può generare un messaggio di errore se si dichiara la variabile oggetto con un tipo specifico e poi si fa riferimento a un membro che non è definito con quel tipo.  
+- Il compilatore può generare un messaggio di errore se si dichiara la variabile oggetto con un tipo specifico e poi si fa riferimento a un membro che non è definito con quel tipo.  
   
--   Un <xref:System.MemberAccessException> della fase di esecuzione si verifica quando l'oggetto assegnato a una variabile oggetto non espone il membro a cui il codice tenta di accedere. Nel caso di una variabile di [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md), è anche possibile ottenere questa eccezione se il membro non è `Public`. Questo perché l'associazione tardiva consente l'accesso solo ai membri `Public` .  
+- Un <xref:System.MemberAccessException> della fase di esecuzione si verifica quando l'oggetto assegnato a una variabile oggetto non espone il membro a cui il codice tenta di accedere. Nel caso di una variabile di [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md), è anche possibile ottenere questa eccezione se il membro non è `Public`. Questo perché l'associazione tardiva consente l'accesso solo ai membri `Public` .  
   
  Quando il [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) imposta `On`per il controllo del tipo, una variabile oggetto può accedere solo ai metodi e alle proprietà della classe con cui viene dichiarata. Questa condizione è illustrata nell'esempio seguente.  
 

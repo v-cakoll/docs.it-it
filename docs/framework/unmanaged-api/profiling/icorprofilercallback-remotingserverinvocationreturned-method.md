@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 00f5fd44d340a76200537871a9860f67601b66d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041920"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationreturned-method"></a>Metodo ICorProfilerCallback::RemotingServerInvocationReturned
 Notifica al profiler che il processo ha terminato la chiamata di un metodo in risposta a una richiesta di chiamata al metodo remoto.  

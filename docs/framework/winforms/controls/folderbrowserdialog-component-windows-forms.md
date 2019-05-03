@@ -8,11 +8,11 @@ helpviewer_keywords:
 - directories [Windows Forms], browsing
 ms.assetid: d71a0c5e-898a-4eea-be74-93bdf50d1852
 ms.openlocfilehash: 6359ea9683b9a418b7fe92dacc6140865dd01a11
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011333"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>Componente FolderBrowserDialog (Windows Form)
 I moduli di Windows `FolderBrowserDialog` componente consente di visualizzare un'interfaccia con cui gli utenti possono esplorare e selezionare una cartella o crearne uno nuovo. È un complemento per il [componente OpenFileDialog](openfiledialog-component-windows-forms.md) componente, che viene usato per l'esplorazione e selezione dei file.  

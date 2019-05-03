@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e8d871f2ecbd96d5bda781b2ae11b94efd409442
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049921"
 ---
 # <a name="imetadataimportenummembers-method"></a>Metodo IMetaDataImport::EnumMembers
 Enumera i token MemberDef che rappresentano i membri del tipo specificato.  

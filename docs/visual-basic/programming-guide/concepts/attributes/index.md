@@ -3,24 +3,24 @@ title: Panoramica degli attributi (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968051"
 ---
 # <a name="attributes-overview-visual-basic"></a>Panoramica degli attributi (Visual Basic)
 Gli attributi offrono un metodo efficace per l'associazione di metadati o informazioni dichiarative con il codice (assembly, tipi, metodi, proprietà e così via). Dopo aver associato un attributo a un'entità di programma, in fase di esecuzione è possibile eseguire una query su tale attributo usando una tecnica denominata *reflection*. Per altre informazioni, vedere [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
   
  Di seguito sono riportate le proprietà degli attributi:  
   
--   Gli attributi aggiungono metadati al programma. I *metadati* sono informazioni relative ai tipi definiti in un programma. Tutti gli assembly .NET contengono un set specificato di metadati che descrive i tipi e membri dei tipi definiti nell'assembly. È possibile aggiungere attributi personalizzati per specificare altre informazioni eventualmente necessarie. Per altre informazioni, vedere [Creazione di attributi personalizzati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).  
+- Gli attributi aggiungono metadati al programma. I *metadati* sono informazioni relative ai tipi definiti in un programma. Tutti gli assembly .NET contengono un set specificato di metadati che descrive i tipi e membri dei tipi definiti nell'assembly. È possibile aggiungere attributi personalizzati per specificare altre informazioni eventualmente necessarie. Per altre informazioni, vedere [Creazione di attributi personalizzati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).  
   
--   È possibile applicare uno o più attributi a interi assembly, moduli o elementi di programma di minori dimensioni, ad esempio classi e proprietà.  
+- È possibile applicare uno o più attributi a interi assembly, moduli o elementi di programma di minori dimensioni, ad esempio classi e proprietà.  
   
--   Gli attributi possono accettare argomenti nello stesso modo dei metodi e delle proprietà.  
+- Gli attributi possono accettare argomenti nello stesso modo dei metodi e delle proprietà.  
   
--   Il programma può esaminare i propri metadati oppure i metadati di un altro programma tramite reflection. Per altre informazioni, vedere [Accesso agli attributi tramite reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
+- Il programma può esaminare i propri metadati oppure i metadati di un altro programma tramite reflection. Per altre informazioni, vedere [Accesso agli attributi tramite reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
   
 ## <a name="using-attributes"></a>Uso degli attributi  
  È possibile usare attributi nella maggior parte delle dichiarazioni, anche se la validità di un attributo specifico può essere limitata ad alcuni tipi di dichiarazione. In Visual Basic un attributo è racchiuso tra parentesi angolari (\< >) e deve apparire immediatamente prima dell'elemento a cui viene applicato, sulla stessa riga.  
@@ -107,40 +107,40 @@ Module: CLSCompliant(True)>
 ## <a name="common-uses-for-attributes"></a>Usi comuni degli attributi  
  Di seguito vengono elencati alcuni degli usi comuni degli attributi nel codice:  
   
--   Contrassegno dei metodi mediante l'attributo `WebMethod` nei servizi Web per indicare che è possibile chiamare il metodo tramite il protocollo SOAP. Per altre informazioni, vedere <xref:System.Web.Services.WebMethodAttribute>.  
+- Contrassegno dei metodi mediante l'attributo `WebMethod` nei servizi Web per indicare che è possibile chiamare il metodo tramite il protocollo SOAP. Per altre informazioni, vedere <xref:System.Web.Services.WebMethodAttribute>.  
   
--   Descrizione della procedura di marshalling dei parametri del metodo durante l'interazione con il codice nativo. Per altre informazioni, vedere <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
+- Descrizione della procedura di marshalling dei parametri del metodo durante l'interazione con il codice nativo. Per altre informazioni, vedere <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
   
--   Descrizione delle proprietà COM per classi, metodi e interfacce.  
+- Descrizione delle proprietà COM per classi, metodi e interfacce.  
   
--   Chiamata al codice non gestito che usa la classe <xref:System.Runtime.InteropServices.DllImportAttribute>.  
+- Chiamata al codice non gestito che usa la classe <xref:System.Runtime.InteropServices.DllImportAttribute>.  
   
--   Descrizione dell'assembly con indicazione di titolo, versione, descrizione o marchio.  
+- Descrizione dell'assembly con indicazione di titolo, versione, descrizione o marchio.  
   
--   Descrizione dei membri della classe da serializzare per la persistenza.  
+- Descrizione dei membri della classe da serializzare per la persistenza.  
   
--   Descrizione della procedura di mapping tra membri di una classe e nodi XML per la serializzazione XML.  
+- Descrizione della procedura di mapping tra membri di una classe e nodi XML per la serializzazione XML.  
   
--   Descrizione dei requisiti di sicurezza per i metodi.  
+- Descrizione dei requisiti di sicurezza per i metodi.  
   
--   Definizione delle caratteristiche usate per garantire la sicurezza.  
+- Definizione delle caratteristiche usate per garantire la sicurezza.  
   
--   Controllo delle ottimizzazioni tramite il compilatore JIT (Just-In-Time), in modo da garantire un semplice debug del codice.  
+- Controllo delle ottimizzazioni tramite il compilatore JIT (Just-In-Time), in modo da garantire un semplice debug del codice.  
   
--   Recupero di informazioni relative al chiamante di un metodo.  
+- Recupero di informazioni relative al chiamante di un metodo.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  Per altre informazioni, vedere:  
   
--   [Creazione di attributi personalizzati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- [Creazione di attributi personalizzati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
   
--   [Accesso agli attributi tramite reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
+- [Accesso agli attributi tramite reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
   
--   [Procedura: Creare un'unione C/C++ tramite attributi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Procedura: Creare un'unione C/C++ tramite attributi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
--   [Attributi comuni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
+- [Attributi comuni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
   
--   [Informazioni sul chiamante (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
+- [Informazioni sul chiamante (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

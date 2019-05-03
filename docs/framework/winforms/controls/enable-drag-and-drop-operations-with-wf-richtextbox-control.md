@@ -12,11 +12,11 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
 ms.openlocfilehash: 5c60fe411fcbf6257c8aaacf1f7400c11c150ddc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972134"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Procedura: Abilitare operazioni di trascinamento con il controllo RichTextBox di Windows Forms
 Le operazioni di trascinamento della selezione del controllo <xref:System.Windows.Forms.RichTextBox> di Windows Form vengono eseguite gestendo gli eventi <xref:System.Windows.Forms.RichTextBox.DragEnter> e <xref:System.Windows.Forms.RichTextBox.DragDrop> . Quindi, le operazioni di trascinamento della selezione risultano molto semplici con il controllo <xref:System.Windows.Forms.RichTextBox> .  
@@ -167,6 +167,6 @@ Le operazioni di trascinamento della selezione del controllo <xref:System.Window
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.RichTextBox>
-- [Procedura: Eseguire operazioni di trascinamento della selezione tra applicazioni](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [Procedura: Eseguire operazioni di trascinamento e rilascio tra applicazioni](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [Controllo RichTextBox](richtextbox-control-windows-forms.md)
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

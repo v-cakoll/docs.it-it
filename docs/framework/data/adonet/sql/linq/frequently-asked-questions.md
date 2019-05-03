@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
 ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59323252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903357"
 ---
 # <a name="frequently-asked-questions"></a>Domande frequenti
 Nelle sezioni seguenti vengono fornite le risposte ad alcuni problemi comuni che possono verificarsi durante l'implementazione di [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -34,18 +34,18 @@ Nelle sezioni seguenti vengono fornite le risposte ad alcuni problemi comuni che
   
  I dettagli esatti di utilizzo della connessione dipendono dagli elementi seguenti:  
   
--   Stato della connessione se <xref:System.Data.Linq.DataContext> viene costruito con un oggetto connessione.  
+- Stato della connessione se <xref:System.Data.Linq.DataContext> viene costruito con un oggetto connessione.  
   
--   Impostazioni della stringa di connessione, ad esempio abilitando MARS (Multiple Active Result Sets). Per altre informazioni, vedere [MARS (Multiple Active Result Sets)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
+- Impostazioni della stringa di connessione, ad esempio abilitando MARS (Multiple Active Result Sets). Per altre informazioni, vedere [MARS (Multiple Active Result Sets)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
   
 ## <a name="updating-without-querying"></a>Aggiornamento senza query  
  D. È possibile aggiornare i dati della tabella senza prima eseguire una query sul database?  
   
  Un  Sebbene [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non disponga di comandi di aggiornamento basati su set, è possibile usare le tecniche seguenti per aggiornare senza prima eseguire una query:  
   
--   Usare <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> per inviare il codice SQL.  
+- Usare <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> per inviare il codice SQL.  
   
--   Creare una nuova istanza dell'oggetto e inizializzare tutti i valori (campi) correnti che influiscono sull'aggiornamento. Associare quindi l'oggetto a <xref:System.Data.Linq.DataContext> usando <xref:System.Data.Linq.Table%601.Attach%2A> e modificare il campo desiderato.  
+- Creare una nuova istanza dell'oggetto e inizializzare tutti i valori (campi) correnti che influiscono sull'aggiornamento. Associare quindi l'oggetto a <xref:System.Data.Linq.DataContext> usando <xref:System.Data.Linq.Table%601.Attach%2A> e modificare il campo desiderato.  
   
 ## <a name="unexpected-query-results"></a>Risultati imprevisti delle query  
  D. La query restituisce risultati imprevisti. Come è possibile controllare quello che si sta verificando?  
@@ -55,11 +55,11 @@ Nelle sezioni seguenti vengono fornite le risposte ad alcuni problemi comuni che
 ## <a name="unexpected-stored-procedure-results"></a>Risultati imprevisti delle stored procedure  
  D. Il valore restituito di una stored procedure viene calcolato da `MAX()`. Quando si trascina la stored procedure nell'area della [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)], il valore restituito non è corretto.  
   
- Un  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] offre due modi per restituire i valori generati dal database tramite le stored procedure:  
+ Un  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornisce due modalità per restituire i valori generati dal database tramite le stored procedure:  
   
--   Assegnando un nome al risultato di output.  
+- Assegnando un nome al risultato di output.  
   
--   Specificando in modo esplicito un parametro di output.  
+- Specificando in modo esplicito un parametro di output.  
   
  Di seguito viene riportato un esempio di output non corretto. Poiché in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non è possibile eseguire il mapping dei risultati, viene restituito sempre 0:  
   
@@ -112,7 +112,7 @@ Nelle sezioni seguenti vengono fornite le risposte ad alcuni problemi comuni che
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Come evitare l'impostazione esplicita dei valori generati dal database nelle operazioni di inserimento o aggiornamento  
  D. Quando in una tabella di database con una colonna `DateCreated` la cui impostazione predefinita è SQL `Getdate()` si tenta di inserire un nuovo record usando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], il valore viene impostato su `NULL` anziché sul valore predefinito del database.  
   
- Un  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gestisce automaticamente questa situazione per identity (incremento automatico) e rowguidcol (GUID generato dal database) e colonne di tipo timestamp. In altri casi, è necessario impostare manualmente <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` e <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> proprietà.  
+ Un  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gestisce automaticamente questa situazione per le colonne Identity (incremento automatico) e rowguidcol (GUID generato dal database) e timestamp. In altri casi, è necessario impostare manualmente <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` e <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> proprietà.  
   
 ## <a name="multiple-dataloadoptions"></a>Più valori DataLoadOptions  
  D. È possibile specificare opzioni di caricamento aggiuntive senza sovrascrivere la prima?  
@@ -190,7 +190,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="second-datacontext-is-not-updated"></a>Il secondo oggetto DataContext non viene aggiornato  
  D. Un'istanza di <xref:System.Data.Linq.DataContext> è stata usata per archiviare i valori nel database. Tuttavia, un secondo oggetto <xref:System.Data.Linq.DataContext> nello stesso database non riflette i valori aggiornati. La seconda istanza <xref:System.Data.Linq.DataContext> sembra restituire i valori memorizzati nella cache.  
   
- Un  Questo comportamento è previsto dalla progettazione. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] continua a restituire gli stessi istanze/valori che si è visto nella prima istanza. Quando si effettuano gli aggiornamenti, usare la concorrenza ottimistica. I dati originali vengono usati per controllare lo stato corrente del database in modo da asserire che risulta ancora invariato. Se è stato modificato, si verifica un conflitto e l'applicazione deve risolverlo. Un'opzione dell'applicazione è reimpostare lo stato originale allo stato corrente del database e provare nuovamente l'aggiornamento. Per altre informazioni, vedere [Procedura: Gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ Un  Questo comportamento è previsto dalla progettazione. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] continua a restituire gli stessi valori o le stesse istanze specificate nella prima istanza. Quando si effettuano gli aggiornamenti, usare la concorrenza ottimistica. I dati originali vengono usati per controllare lo stato corrente del database in modo da asserire che risulta ancora invariato. Se è stato modificato, si verifica un conflitto e l'applicazione deve risolverlo. Un'opzione dell'applicazione è reimpostare lo stato originale allo stato corrente del database e provare nuovamente l'aggiornamento. Per altre informazioni, vedere [Procedura: Gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
   
  È anche possibile impostare <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> su false, in modo da disattivare la memorizzazione nella cache e la ricerca delle modifiche. È quindi possibile recuperare gli ultimi valori ogni volta che si esegue una query.  
   
@@ -201,6 +201,6 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [Risoluzione dei problemi](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
 - [Sicurezza in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

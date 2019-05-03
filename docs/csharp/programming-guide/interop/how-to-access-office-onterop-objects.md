@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: b928be1c4e291918b0d75d6efc40bb11cff91088
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 382ecb17654377e8d37e1b3a572ed84442d76b1a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203535"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59302998"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C# (Guida per programmatori C#)
 Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Office. Le nuove funzionalità includono argomenti denominati e facoltativi, un nuovo tipo chiamato `dynamic` e la possibilità di passare argomenti a parametri di riferimento nei metodi COM come se fossero parametri di valore.  
@@ -30,65 +30,65 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
 ## <a name="to-create-a-new-console-application"></a>Per creare un nuovo progetto di applicazione console  
   
-1.  Avviare Visual Studio.  
+1. Avviare Visual Studio.  
   
-2.  Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
+2. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-3.  Nel riquadro **Modelli installati** espandere **Visual C#** e fare clic su **Windows**.  
+3. Nel riquadro **Modelli installati** espandere **Visual C#** e fare clic su **Windows**.  
   
-4.  Nella parte superiore della finestra di dialogo **Nuovo progetto** assicurarsi che **.NET Framework 4**, o versione successiva, sia selezionato come framework di destinazione.  
+4. Nella parte superiore della finestra di dialogo **Nuovo progetto** assicurarsi che **.NET Framework 4**, o versione successiva, sia selezionato come framework di destinazione.  
   
-5.  Nel riquadro **Modelli** fare clic su **Applicazione console**.  
+5. Nel riquadro **Modelli** fare clic su **Applicazione console**.  
   
-6.  Digitare un nome per il progetto nel campo **Nome**.  
+6. Digitare un nome per il progetto nel campo **Nome**.  
   
-7.  Fare clic su **OK**.  
+7. Fare clic su **OK**.  
   
      Il nuovo progetto verrà visualizzato in **Esplora soluzioni**.  
   
 ## <a name="to-add-references"></a>Per aggiungere riferimenti  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi riferimento**. Viene visualizzata la finestra di dialogo **Aggiungi riferimento**.  
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi riferimento**. Viene visualizzata la finestra di dialogo **Aggiungi riferimento**.  
   
-2.  Nella pagina **Assembly** selezionare **Microsoft.Office.Interop.Word** nell'elenco **Nome componente** e, tenendo premuto CTRL, selezionare **Microsoft.Office.Interop.Excel**.  Se gli assembly non sono visibili, può essere necessario assicurarsi che siano installati e visualizzati (vedere [Procedura: Installare assembly di interoperabilità primari di Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
+2. Nella pagina **Assembly** selezionare **Microsoft.Office.Interop.Word** nell'elenco **Nome componente** e, tenendo premuto CTRL, selezionare **Microsoft.Office.Interop.Excel**.  Se gli assembly non sono visibili, può essere necessario assicurarsi che siano installati e visualizzati (vedere [Procedura: Installare assembly di interoperabilità primari di Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
   
-3.  Fare clic su **OK**.  
+3. Fare clic su **OK**.  
   
 ## <a name="to-add-necessary-using-directives"></a>Per aggiungere le direttive using necessarie  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file **Program.cs** e quindi fare clic su **Visualizza codice**.  
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file **Program.cs** e quindi fare clic su **Visualizza codice**.  
   
-2.  Aggiungere le seguenti direttive `using` all'inizio del file di codice.  
+2. Aggiungere le seguenti direttive `using` all'inizio del file di codice.  
   
      [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]  
   
 ## <a name="to-create-a-list-of-bank-accounts"></a>Per creare un elenco di conti correnti bancari  
   
-1.  Incollare la seguente definizione di classe in **Program.cs**, sotto la classe `Program`.  
+1. Incollare la seguente definizione di classe in **Program.cs**, sotto la classe `Program`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#2)]  
   
-2.  Aggiungere il seguente codice al metodo `Main` per creare un elenco `bankAccounts` contenente due conti.  
+2. Aggiungere il seguente codice al metodo `Main` per creare un elenco `bankAccounts` contenente due conti.  
   
      [!code-csharp[csProgGuideOfficeHowTo#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#3)]  
   
 ## <a name="to-declare-a-method-that-exports-account-information-to-excel"></a>Per dichiarare un metodo che consente di esportare informazioni sul conto in Excel  
   
-1.  Aggiungere il seguente metodo alla classe `Program` per impostare un foglio di lavoro di Excel.  
+1. Aggiungere il seguente metodo alla classe `Program` per impostare un foglio di lavoro di Excel.  
   
      Il metodo <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> usa un parametro facoltativo per specificare un modello particolare. I parametri facoltativi, una novità di [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], consentono di omettere l'argomento per il parametro se si vuole usare il valore predefinito del parametro. Poiché nessun argomento viene inviato nel codice seguente, `Add` usa il modello predefinito e crea una nuova cartella di lavoro. L'istruzione equivalente nelle precedenti versioni di C# richiede un argomento segnaposto: `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#4)]  
   
-2.  Aggiungere il codice seguente alla fine di `DisplayInExcel`. Il codice consente di inserire valori nelle prime due colonne della prima riga del foglio di lavoro.  
+2. Aggiungere il codice seguente alla fine di `DisplayInExcel`. Il codice consente di inserire valori nelle prime due colonne della prima riga del foglio di lavoro.  
   
      [!code-csharp[csProgGuideOfficeHowTo#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#5)]  
   
-3.  Aggiungere il codice seguente alla fine di `DisplayInExcel`. Il ciclo `foreach` inserisce le informazioni dall'elenco dei conti nelle prime due colonne delle righe successive del foglio di lavoro.  
+3. Aggiungere il codice seguente alla fine di `DisplayInExcel`. Il ciclo `foreach` inserisce le informazioni dall'elenco dei conti nelle prime due colonne delle righe successive del foglio di lavoro.  
   
      [!code-csharp[csProgGuideOfficeHowTo#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#7)]  
   
-4.  Aggiungere il seguente codice alla fine di `DisplayInExcel` per regolare la larghezza delle colonne in modo da adattarle al contenuto.  
+4. Aggiungere il seguente codice alla fine di `DisplayInExcel` per regolare la larghezza delle colonne in modo da adattarle al contenuto.  
   
      [!code-csharp[csProgGuideOfficeHowTo#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#13)]  
   
@@ -100,17 +100,17 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
 ## <a name="to-run-the-project"></a>Per eseguire il progetto  
   
-1.  Aggiungere la riga seguente alla fine di `Main`.  
+1. Aggiungere la riga seguente alla fine di `Main`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#8)]  
   
-2.  Premere CTRL+F5.  
+2. Premere CTRL+F5.  
   
      Viene visualizzato un foglio di lavoro di Excel che contiene i dati dei due conti.  
   
 ## <a name="to-add-a-word-document"></a>Per aggiungere un documento di Word  
   
-1.  Per illustrare altri modi in cui [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], e versioni successive, consente di migliorare la programmazione di Office, il codice seguente apre un'applicazione Word e crea un'icona di collegamento al foglio di lavoro di Excel.  
+1. Per illustrare altri modi in cui [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], e versioni successive, consente di migliorare la programmazione di Office, il codice seguente apre un'applicazione Word e crea un'icona di collegamento al foglio di lavoro di Excel.  
   
      Incollare il metodo `CreateIconInWordDoc`, fornito più avanti in questo passaggio, nella classe `Program`. `CreateIconInWordDoc` usa argomenti denominati e facoltativi per ridurre la complessità delle chiamate ai metodi di <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> e <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Queste chiamate incorporano altre due nuove funzionalità introdotte in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] che semplificano le chiamate ai metodi COM con parametri di riferimento. In primo luogo, è possibile inviare argomenti ai parametri di riferimento come se fossero parametri di valore. In altre parole, è possibile inviare i valori direttamente, senza creare una variabile per ogni parametro referenziato. Il compilatore genera variabili temporanee per conservare i valori degli argomenti ed elimina le variabili restituite dalla chiamata. In secondo luogo, è possibile omettere la parola chiave `ref` nell'elenco di argomenti.  
   
@@ -124,21 +124,21 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
      [!code-csharp[csProgGuideOfficeHowTo#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#10)]  
   
-2.  Aggiungere la seguente istruzione dopo `Main`.  
+2. Aggiungere la seguente istruzione dopo `Main`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#11)]  
   
-3.  Aggiungere la seguente istruzione dopo `DisplayInExcel`. Il metodo `Copy` aggiunge il foglio di lavoro negli Appunti.  
+3. Aggiungere la seguente istruzione dopo `DisplayInExcel`. Il metodo `Copy` aggiunge il foglio di lavoro negli Appunti.  
   
      [!code-csharp[csProgGuideOfficeHowTo#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#12)]  
   
-4.  Premere CTRL+F5.  
+4. Premere CTRL+F5.  
   
      Verrà visualizzato un documento di Word contenente un'icona. Fare doppio clic sull'icona per visualizzare il foglio di lavoro in primo piano.  
   
 ## <a name="to-set-the-embed-interop-types-property"></a>Per impostare la proprietà Incorpora tipi di interoperabilità  
   
-1.  Quando si chiama un tipo COM che non richiede un assembly di interoperabilità primario (PIA) in fase di esecuzione, sono possibili altri miglioramenti. Eliminando la dipendenza dai risultati dei PIA produce l'indipendenza dalla versione e semplifica la distribuzione. Per altre informazioni sui vantaggi della programmazione senza PIA, vedere [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
+1. Quando si chiama un tipo COM che non richiede un assembly di interoperabilità primario (PIA) in fase di esecuzione, sono possibili altri miglioramenti. Eliminando la dipendenza dai risultati dei PIA produce l'indipendenza dalla versione e semplifica la distribuzione. Per altre informazioni sui vantaggi della programmazione senza PIA, vedere [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
   
      Inoltre, la programmazione è più semplice perché i tipi richiesti e restituiti dai metodi COM possono essere rappresentati usando il tipo `dynamic` anziché `Object`. Le variabili di tipo `dynamic` non saranno valutate fino al runtime, eliminando la necessità del cast esplicito. Per altre informazioni, vedere [Uso del tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
@@ -146,15 +146,15 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
-2.  Per modificare l'impostazione predefinita e usare i PIA anziché incorporare le informazioni sul tipo, espandere il nodo **Riferimenti** in **Esplora soluzioni** e selezionare **Microsoft.Office.Interop.Excel** o **Microsoft.Office.Interop.Word**.  
+2. Per modificare l'impostazione predefinita e usare i PIA anziché incorporare le informazioni sul tipo, espandere il nodo **Riferimenti** in **Esplora soluzioni** e selezionare **Microsoft.Office.Interop.Excel** o **Microsoft.Office.Interop.Word**.  
   
-3.  Se non è possibile visualizzare la finestra **Proprietà**, premere **F4**.  
+3. Se non è possibile visualizzare la finestra **Proprietà**, premere **F4**.  
   
-4.  Trovare **Incorpora tipi di interoperabilità** nell'elenco delle proprietà e modificarne il valore in **False**. Allo stesso modo, è possibile compilare usando l'opzione del compilatore [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) invece di [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) a un prompt dei comandi.  
+4. Trovare **Incorpora tipi di interoperabilità** nell'elenco delle proprietà e modificarne il valore in **False**. Allo stesso modo, è possibile compilare usando l'opzione del compilatore [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) invece di [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) a un prompt dei comandi.  
   
 ## <a name="to-add-additional-formatting-to-the-table"></a>Per aggiungere ulteriore formattazione alla tabella  
   
-1.  Sostituire le due chiamate a `AutoFit` in `DisplayInExcel` con la seguente istruzione.  
+1. Sostituire le due chiamate a `AutoFit` in `DisplayInExcel` con la seguente istruzione.  
   
      [!code-csharp[csProgGuideOfficeHowTo#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#15)]  
   
@@ -162,9 +162,9 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
      [!code-csharp[csProgGuideOfficeHowTo#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#16)]  
   
-2.  Premere CTRL + F5 per visualizzare il risultato. Altri formati sono elencati nell'enumerazione <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat>.  
+2. Premere CTRL + F5 per visualizzare il risultato. Altri formati sono elencati nell'enumerazione <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat>.  
   
-3.  Confrontare l'istruzione nel passaggio 1 con il codice seguente, che illustra gli argomenti necessari in [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] o versioni precedenti.  
+3. Confrontare l'istruzione nel passaggio 1 con il codice seguente, che illustra gli argomenti necessari in [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] o versioni precedenti.  
   
      [!code-csharp[csProgGuideOfficeHowTo#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#17)]  
   

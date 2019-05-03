@@ -17,11 +17,11 @@ helpviewer_keywords:
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
 ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967527"
 ---
 # <a name="matrix-representation-of-transformations"></a>Rappresentazione tramite matrici delle trasformazioni
 Una matrice di n × m è un set di numeri disposti in righe di m e n colonne. La figura seguente mostra le matrici di diverse.  
@@ -106,4 +106,4 @@ Una matrice di n × m è un set di numeri disposti in righe di m e n colonne. La
 ## <a name="see-also"></a>Vedere anche
 
 - [Sistemi di coordinate e trasformazioni](coordinate-systems-and-transformations.md)
-- [Utilizzo di trasformazioni nel codice gestito GDI+](using-transformations-in-managed-gdi.md)
+- [Uso di trasformazioni nel codice gestito GDI+](using-transformations-in-managed-gdi.md)

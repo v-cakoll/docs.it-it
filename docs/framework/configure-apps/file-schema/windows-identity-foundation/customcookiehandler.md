@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
 ms.openlocfilehash: 0129c63fe17b63889a77ea1a56c0d7e657def859
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791729"
 ---
 # <a name="customcookiehandler"></a>\<customCookieHandler>
 Imposta il tipo di gestore di cookie personalizzato. Questo elemento può essere presente solo se il `mode` attributo del `<cookieHandler>` elemento è "Custom". Il tipo personalizzato deve derivare dal <xref:System.IdentityModel.Services.CookieHandler> classe.  

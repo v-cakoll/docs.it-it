@@ -6,11 +6,11 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59340490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62030383"
 ---
 # <a name="multimedia-overview"></a>Panoramica delle funzionalità multimediali
 Le funzionalità multimediali in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] consentono di integrare audio e video nelle applicazioni per migliorare l'esperienza utente. Questo argomento introduce le funzionalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -37,11 +37,11 @@ Le funzionalità multimediali in [!INCLUDE[TLA#tla_winclient](../../../../includ
 ### <a name="independent-mode"></a>Modalità indipendente  
  In modalità indipendente la riproduzione dei contenuti multimediali dipende dai contenuti stessi. Questa modalità presenta le opzioni seguenti:  
   
--   Dell'elemento multimediale <xref:System.Uri> possono essere specificati direttamente.  
+- Dell'elemento multimediale <xref:System.Uri> possono essere specificati direttamente.  
   
--   È possibile controllare direttamente la riproduzione degli elementi multimediali.  
+- È possibile controllare direttamente la riproduzione degli elementi multimediali.  
   
--   Dell'elemento multimediale <xref:System.Windows.Controls.MediaElement.Position%2A> e <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> proprietà possono essere modificate.  
+- Dell'elemento multimediale <xref:System.Windows.Controls.MediaElement.Position%2A> e <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> proprietà possono essere modificate.  
   
  Contenuti multimediali vengono caricati impostando il <xref:System.Windows.Controls.MediaElement> dell'oggetto <xref:System.Windows.Controls.MediaElement.Source%2A> proprietà oppure chiamando il <xref:System.Windows.Media.MediaPlayer> dell'oggetto <xref:System.Windows.Media.MediaPlayer.Open%2A> (metodo).  
   
@@ -52,11 +52,11 @@ Le funzionalità multimediali in [!INCLUDE[TLA#tla_winclient](../../../../includ
 ### <a name="clock-mode"></a>Modalità orologio  
  In modalità orologio, un <xref:System.Windows.Media.MediaTimeline> avvia la riproduzione multimediale. La modalità orologio presenta le caratteristiche seguenti:  
   
--   Dell'elemento multimediale <xref:System.Uri> è impostata indirettamente tramite una <xref:System.Windows.Media.MediaTimeline>.  
+- Dell'elemento multimediale <xref:System.Uri> è impostata indirettamente tramite una <xref:System.Windows.Media.MediaTimeline>.  
   
--   La riproduzione degli elementi multimediali può essere controllata dall'orologio. Non è possibile usare i metodi di controllo dell'oggetto multimediale.  
+- La riproduzione degli elementi multimediali può essere controllata dall'orologio. Non è possibile usare i metodi di controllo dell'oggetto multimediale.  
   
--   Contenuti multimediali vengono caricati impostando un <xref:System.Windows.Media.MediaTimeline> dell'oggetto <xref:System.Windows.Media.MediaTimeline.Source%2A> proprietà, creando l'orologio dalla sequenza temporale e assegnandolo all'oggetto multimediale. Contenuti multimediali vengono caricati anche in questo modo quando una <xref:System.Windows.Media.MediaTimeline> all'interno di un <xref:System.Windows.Media.Animation.Storyboard> destinazioni un <xref:System.Windows.Controls.MediaElement>.  
+- Contenuti multimediali vengono caricati impostando un <xref:System.Windows.Media.MediaTimeline> dell'oggetto <xref:System.Windows.Media.MediaTimeline.Source%2A> proprietà, creando l'orologio dalla sequenza temporale e assegnandolo all'oggetto multimediale. Contenuti multimediali vengono caricati anche in questo modo quando una <xref:System.Windows.Media.MediaTimeline> all'interno di un <xref:System.Windows.Media.Animation.Storyboard> destinazioni un <xref:System.Windows.Controls.MediaElement>.  
   
  Per controllare la riproduzione multimediale in modalità orologio, il <xref:System.Windows.Media.Animation.ClockController> metodi di controllo devono essere utilizzati. Oggetto <xref:System.Windows.Media.Animation.ClockController> ottenuto dal <xref:System.Windows.Media.Animation.ClockController> proprietà del <xref:System.Windows.Media.MediaClock>. Se si prova a usare i metodi di controllo di un <xref:System.Windows.Controls.MediaElement> oppure <xref:System.Windows.Media.MediaPlayer> dell'oggetto mentre è in modalità orologio, un <xref:System.InvalidOperationException> verrà generata.  
   
@@ -99,7 +99,7 @@ Le funzionalità multimediali in [!INCLUDE[TLA#tla_winclient](../../../../includ
 ### <a name="controlling-mediaplayer"></a>Controllo di un oggetto MediaPlayer  
  Poiché <xref:System.Windows.Media.MediaPlayer> è senza stato, sono disponibili solo due modi per controllare la riproduzione multimediale.  
   
-1. Metodi di controllo interattivi. Disponibili nella modalità indipendente (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> proprietà).  
+1. Metodi di controllo interattivi. Disponibili nella modalità indipendente (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> proprietà).  
   
 2. <xref:System.Windows.Media.MediaClock>. Disponibile quando i supporti hanno un <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
   
@@ -114,4 +114,4 @@ Le funzionalità multimediali in [!INCLUDE[TLA#tla_winclient](../../../../includ
 
 - <xref:System.Windows.Media.DrawingGroup>
 - [Layout](../advanced/layout.md)
-- [Procedure relative](audio-and-video-how-to-topics.md)
+- [Procedure relative alle proprietà](audio-and-video-how-to-topics.md)

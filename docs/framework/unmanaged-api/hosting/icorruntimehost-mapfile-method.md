@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8a979e86dbe52577d0b58089015338e4a87750d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700176"
 ---
 # <a name="icorruntimehostmapfile-method"></a>Metodo ICorRuntimeHost::MapFile
 Il file specificato viene eseguito il mapping in memoria. Questo metodo è obsoleto.  

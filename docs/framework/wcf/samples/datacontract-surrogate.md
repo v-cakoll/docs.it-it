@@ -3,11 +3,11 @@ title: Surrogato di DataContract
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
 ms.openlocfilehash: a56fbcabfacf146142f7b0c0623325cc8e69c29a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990418"
 ---
 # <a name="datacontract-surrogate"></a>Surrogato di DataContract
 In questo esempio viene illustrato come la serializzazione, la deserializzazione, l'esportazione e l'importazione di schemi possano essere personalizzate utilizzando una classe surrogata del contratto dati. In questo esempio viene illustrato come utilizzare un surrogato in uno scenario di client e server in cui vengano serializzati e trasmessi tra un client Windows Communication Foundation (WCF) e un servizio dati.  

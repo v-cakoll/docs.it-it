@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
 ms.openlocfilehash: bb7d4c89e63982a3052857dcb50d04d36d9517dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59314392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967949"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Procedura: Eseguire il binding a una raccolta e visualizzare informazioni in base alla selezione
 In uno scenario master-dettagli semplice, è necessario con associazione a dati <xref:System.Windows.Controls.ItemsControl> , ad esempio un <xref:System.Windows.Controls.ListBox>. È basato sulla selezione dell'utente, visualizzare altre informazioni sull'elemento selezionato. In questo esempio viene illustrato come implementare questo scenario.  
@@ -50,5 +50,5 @@ In uno scenario master-dettagli semplice, è necessario con associazione a dati 
 - [Usare il modello Master-Details con dati gerarchici](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
 - [Usare il modello Master-Details con dati XML gerarchici](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Cenni preliminari sui modelli di dati](data-templating-overview.md)
-- [Procedure relative](data-binding-how-to-topics.md)
+- [Panoramica sui modelli di dati](data-templating-overview.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)

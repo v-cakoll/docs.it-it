@@ -5,11 +5,11 @@ f1_keywords:
 - vbrFileSystem_PathNotFound1
 ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
 ms.openlocfilehash: 8c9f326cc165955353dab6c33b65ed23e3f03d35
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59338631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944768"
 ---
 # <a name="path-pathname-not-found"></a>Percorso '\<nomepercorso >' non trovato
 Il sistema operativo non riesce a trovare il percorso specificato durante un'operazione di accesso a file o di accesso al disco. Il percorso di un file deve includere l'indicazione dell'unità e delle directory e sottodirectory che devono essere attraversate per individuare il file. Il percorso può essere relativo o assoluto.  

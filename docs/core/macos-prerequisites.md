@@ -3,21 +3,22 @@ title: Prerequisiti per .NET Core in Mac
 description: Versioni macOS supportate e dipendenze .NET Core necessarie per lo sviluppo, la distribuzione e l'esecuzione di applicazioni .NET Core su computer macOS.
 author: guardrex
 ms.author: adegeo
+ms.custom: updateeachvsrelease
 ms.date: 12/14/2018
-ms.openlocfilehash: e895306164b93cb94dab2161971f99eae3138be9
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
+ms.openlocfilehash: cee57856c75ce4424bee8d96fccfa5a6aee2dbf5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186176"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317870"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Prerequisiti per .NET Core in macOS
 
-Questo articolo illustra le versioni macOS supportate e le dipendenze .NET Core necessarie per lo sviluppo, la distribuzione e l'esecuzione di applicazioni .NET Core su computer macOS. Le versioni del sistema operativo e le dipendenze indicate di seguito sono valide per le tre modalità di sviluppo di app .NET Core in ambiente Mac: tramite la [riga di comando con l'editor preferito](tutorials/using-with-xplat-cli.md), con [Visual Studio Code](https://code.visualstudio.com/) e con [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/).
+Questo articolo illustra le versioni macOS supportate e le dipendenze .NET Core necessarie per lo sviluppo, la distribuzione e l'esecuzione di applicazioni .NET Core su computer macOS. Le versioni del sistema operativo e le dipendenze indicate di seguito sono valide per le tre modalità di sviluppo di app .NET Core in ambiente Mac: tramite la [riga di comando con l'editor preferito](tutorials/using-with-xplat-cli.md), con [Visual Studio Code](https://code.visualstudio.com/) e con [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link).
 
 ## <a name="supported-macos-versions"></a>Versioni macOS supportate
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
 
 .NET Core 2.x è supportato nelle versioni di macOS seguenti:
 
@@ -27,8 +28,7 @@ Per l'elenco completo dei sistemi operativi, delle versioni e delle distribuzion
 
 Per i collegamenti per il download e altre informazioni, vedere [.NET Core 2.2 downloads](https://www.microsoft.com/net/download/dotnet-core/2.2) (Download di .NET Core 2.2) o [.NET Core 2.1 downloads](https://www.microsoft.com/net/download/dotnet-core/2.1) (Download di .NET Core 2.1).
 
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
 
 .NET Core 1.x è supportato nelle versioni di macOS seguenti:
 
@@ -39,9 +39,9 @@ Per l'elenco completo dei sistemi operativi, delle versioni e delle distribuzion
 
 Per i collegamenti per il download e altre informazioni, vedere [.NET Core 1.1 downloads](https://www.microsoft.com/net/download/dotnet-core/1.1) (Download di .NET Core 1.1) o [.NET Core 1.0 downloads](https://www.microsoft.com/net/download/dotnet-core/1.0) (Download di .NET Core 1.0).
 
-# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3.0 Preview 1](#tab/netcore30)
+# [<a name="net-core-30"></a>.NET Core 3.0](#tab/netcore30)
 
-.NET Core 3.0 Preview 1 è supportato nelle versioni di macOS seguenti:
+.NET Core 3.0 Preview 3 è supportato nelle versioni di macOS seguenti:
 
 * macOS 10.12 "Sierra" e versioni successive
 
@@ -53,11 +53,11 @@ Per i collegamenti di download e altre informazioni, vedere [.NET Core 3.0 downl
 
 ## <a name="net-core-dependencies"></a>Dipendenze .NET Core
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
 
 Scaricare e installare .NET Core SDK da [.NET Downloads](https://www.microsoft.com/net/download/core) (Download di .NET). In caso di problemi con l'installazione in macOS, vedere l'argomento [Known issues](https://github.com/dotnet/core/tree/master/release-notes/2.1) (Problemi noti) per la versione installata.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
 
 Per l'esecuzione di .NET Core 1.x in macOS è necessario OpenSSL. È possibile ottenere facilmente OpenSSL tramite il sistema di gestione pacchetti [Homebrew ("brew")](https://brew.sh/) per macOS. Dopo aver installato *brew*, installare OpenSSL eseguendo i comandi seguenti da un prompt (dei comandi) Terminal:
 
@@ -71,7 +71,7 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 
 Scaricare e installare .NET Core SDK da [.NET Downloads](https://www.microsoft.com/net/download/core) (Download di .NET). In caso di problemi con l'installazione in macOS, vedere gli argomenti [1.0.0 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) (Problemi noti della versione 1.0.0) e [1.0.1 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) (Problemi noti della versione 1.0.1).
 
-# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3.0 Preview 1](#tab/netcore30)
+# [<a name="net-core-30"></a>.NET Core 3.0](#tab/netcore30)
 
 Scaricare e installare .NET Core SDK da [.NET Downloads](https://www.microsoft.com/net/download/core) (Download di .NET). In caso di problemi con l'installazione in macOS, vedere l'argomento [Release notes](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) (Note sulla versione) per la versione installata.
 
@@ -118,11 +118,11 @@ Nelle versioni precedenti di .NET Core (prima di .NET Core SDK 2.0.2) il limite 
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio per Mac
 
-È possibile usare qualsiasi editor per sviluppare applicazioni .NET Core con .NET Core SDK. Se si vuole tuttavia sviluppare applicazioni .NET Core in Mac in un ambiente di sviluppo integrato, è possibile usare [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/). 
+È possibile usare qualsiasi editor per sviluppare applicazioni .NET Core con .NET Core SDK. Se si vuole tuttavia sviluppare applicazioni .NET Core in Mac in un ambiente di sviluppo integrato, è possibile usare [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). 
 
 Per lo sviluppo di .NET Core in macOS con Visual Studio per Mac sono previsti i requisiti seguenti:
 
 * Versione supportata del sistema operativo macOS
 * OpenSSL (.NET Core 1.x solo ; .NET Core 2.x usa servizi di sicurezza disponibili in modo nativo in macOS)
 * .NET core SDK per Mac
-* [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)
+* [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)

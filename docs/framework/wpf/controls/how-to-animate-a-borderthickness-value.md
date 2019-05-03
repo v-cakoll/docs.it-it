@@ -9,11 +9,11 @@ helpviewer_keywords:
 - animation [WPF], changes to border thickness
 ms.assetid: fd021978-f74b-4e7b-a7f7-3987dcad9e0f
 ms.openlocfilehash: 10e177d1f6d6add4638ce14af900e75d7e363890
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911242"
 ---
 # <a name="how-to-animate-a-borderthickness-value"></a>Procedura: Animare un valore BorderThickness
 Questo esempio illustra come animare le modifiche apportate allo spessore del bordo di un'usando il <xref:System.Windows.Media.Animation.ThicknessAnimation> classe.  
@@ -32,5 +32,5 @@ Questo esempio illustra come animare le modifiche apportate allo spessore del bo
 - <xref:System.Windows.Controls.Border.BorderThickness%2A>
 - <xref:System.Windows.Controls.Border>
 - [Cenni preliminari sull'animazione](../graphics-multimedia/animation-overview.md)
-- [Procedure relative all'animazione e al sistema di temporizzazione](../graphics-multimedia/animation-and-timing-how-to-topics.md)
-- [Aggiungere un'animazione allo spessore di un bordo usando i fotogrammi chiave](../graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)
+- [Animazione e temporizzazione procedure](../graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [Animare lo spessore di un bordo usando i fotogrammi chiave](../graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)

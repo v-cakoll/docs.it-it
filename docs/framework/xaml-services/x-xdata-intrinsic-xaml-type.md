@@ -11,11 +11,11 @@ helpviewer_keywords:
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
 ms.openlocfilehash: c8044bc341ded6ef7b03bbdf701e724654460d54
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938827"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>Tipo XAML intrinseco x:XData
 Consente il posizionamento di isole di dati XML all'interno di una produzione XAML. Gli elementi XML presenti `x:XData` non devono essere considerati dai processori XAML come se facessero parte di spazio dei nomi XAML predefinito attivo o qualsiasi altro spazio dei nomi XAML. `x:XData` può contenere codice XML ben formato arbitrario.  
@@ -53,4 +53,4 @@ Consente il posizionamento di isole di dati XML all'interno di una produzione XA
 
 - <xref:System.Windows.Data.XmlDataProvider>
 - [Panoramica sul data binding](../wpf/data/data-binding-overview.md)
-- [Associazione dell'estensione di markup](../wpf/advanced/binding-markup-extension.md)
+- [Estensione di markup Binding](../wpf/advanced/binding-markup-extension.md)

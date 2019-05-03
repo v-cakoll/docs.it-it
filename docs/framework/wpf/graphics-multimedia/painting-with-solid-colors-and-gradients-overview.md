@@ -10,11 +10,11 @@ helpviewer_keywords:
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
 ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009431"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Cenni sul disegno con colori a tinta unita e sfumature
 In questo argomento viene descritto come utilizzare <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, e <xref:System.Windows.Media.RadialGradientBrush> oggetti da disegnare con colori a tinta unita, sfumature lineari e radiali.  
@@ -27,15 +27,15 @@ In questo argomento viene descritto come utilizzare <xref:System.Windows.Media.S
 ### <a name="using-a-solidcolorbrush-in-xaml"></a>Uso di una classe SolidColorBrush in "XAML"  
  Per disegnare un'area con un colore a tinta unita in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], usare una delle opzioni seguenti.  
   
--   Selezionare un pennello tinta unita predefinito in base al nome.  Ad esempio, è possibile impostare un pulsante <xref:System.Windows.Controls.Control.Background%2A> "Red" o "MediumBlue".  Per un elenco di altri predefinite pennelli a tinta unita, vedere le proprietà statiche del <xref:System.Windows.Media.Brushes> classe. Di seguito è riportato un esempio.  
+- Selezionare un pennello tinta unita predefinito in base al nome.  Ad esempio, è possibile impostare un pulsante <xref:System.Windows.Controls.Control.Background%2A> "Red" o "MediumBlue".  Per un elenco di altri predefinite pennelli a tinta unita, vedere le proprietà statiche del <xref:System.Windows.Media.Brushes> classe. Di seguito è riportato un esempio.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
--   Scegliere un colore dalla tavolozza dei colori a 32 bit specificando la quantità di rosso, verde e blu da combinare in un solo colore a tinta unita.  Il formato per specificare un colore dalla tavolozza a 32 bit è "*#rrggbb*", dove *rr* è un numero esadecimale a due cifre che specifica la quantità relativa di rosso, *gg* specifica la quantità di colore verde e *bb* specifica la quantità di blu.  Il colore può essere specificato anche come "#*aarrggbb*" in cui *aa* specifica il valore *alpha* o la trasparenza del colore. Questo approccio consente di creare colori parzialmente trasparenti.  Nell'esempio seguente, il <xref:System.Windows.Controls.Control.Background%2A> di un <xref:System.Windows.Controls.Button> è impostata su un rosso completamente opaco tramite notazione esadecimale.  
+- Scegliere un colore dalla tavolozza dei colori a 32 bit specificando la quantità di rosso, verde e blu da combinare in un solo colore a tinta unita.  Il formato per specificare un colore dalla tavolozza a 32 bit è "*#rrggbb*", dove *rr* è un numero esadecimale a due cifre che specifica la quantità relativa di rosso, *gg* specifica la quantità di colore verde e *bb* specifica la quantità di blu.  Il colore può essere specificato anche come "#*aarrggbb*" in cui *aa* specifica il valore *alpha* o la trasparenza del colore. Questo approccio consente di creare colori parzialmente trasparenti.  Nell'esempio seguente, il <xref:System.Windows.Controls.Control.Background%2A> di un <xref:System.Windows.Controls.Button> è impostata su un rosso completamente opaco tramite notazione esadecimale.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
--   Usare la sintassi di tag di proprietà per descrivere un <xref:System.Windows.Media.SolidColorBrush>. Questa sintassi è più dettagliata ma consente di specificare impostazioni aggiuntive, ad esempio l'opacità del pennello. Nell'esempio seguente, il <xref:System.Windows.Controls.Control.Background%2A> delle proprietà di due <xref:System.Windows.Controls.Button> elementi vengono impostati su un rosso completamente opaco. Il colore del primo pennello viene descritto usando un nome di colore predefinito. Il colore del secondo pennello viene descritto tramite notazione esadecimale.  
+- Usare la sintassi di tag di proprietà per descrivere un <xref:System.Windows.Media.SolidColorBrush>. Questa sintassi è più dettagliata ma consente di specificare impostazioni aggiuntive, ad esempio l'opacità del pennello. Nell'esempio seguente, il <xref:System.Windows.Controls.Control.Background%2A> delle proprietà di due <xref:System.Windows.Controls.Button> elementi vengono impostati su un rosso completamente opaco. Il colore del primo pennello viene descritto usando un nome di colore predefinito. Il colore del secondo pennello viene descritto tramite notazione esadecimale.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
@@ -43,11 +43,11 @@ In questo argomento viene descritto come utilizzare <xref:System.Windows.Media.S
 ### <a name="painting-with-a-solidcolorbrush-in-code"></a>Disegno con una classe SolidColorBrush nel codice  
  Per disegnare un'area con un colore a tinta unita nel codice, usare una delle opzioni seguenti.  
   
--   Usare uno dei pennelli predefiniti offerti dal <xref:System.Windows.Media.Brushes> classe. Nell'esempio seguente, il <xref:System.Windows.Controls.Control.Background%2A> di un <xref:System.Windows.Controls.Button> è impostata su <xref:System.Windows.Media.Brushes.Red%2A>.  
+- Usare uno dei pennelli predefiniti offerti dal <xref:System.Windows.Media.Brushes> classe. Nell'esempio seguente, il <xref:System.Windows.Controls.Control.Background%2A> di un <xref:System.Windows.Controls.Button> è impostata su <xref:System.Windows.Media.Brushes.Red%2A>.  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
--   Creare un <xref:System.Windows.Media.SolidColorBrush> e impostare relativi <xref:System.Windows.Media.SolidColorBrush.Color%2A> proprietà usando un <xref:System.Windows.Media.Color> struttura. È possibile usare un colore predefinito nella <xref:System.Windows.Media.Colors> classe oppure è possibile creare un <xref:System.Windows.Media.Color> usando il metodo statico <xref:System.Windows.Media.Color.FromArgb%2A> (metodo).  
+- Creare un <xref:System.Windows.Media.SolidColorBrush> e impostare relativi <xref:System.Windows.Media.SolidColorBrush.Color%2A> proprietà usando un <xref:System.Windows.Media.Color> struttura. È possibile usare un colore predefinito nella <xref:System.Windows.Media.Colors> classe oppure è possibile creare un <xref:System.Windows.Media.Color> usando il metodo statico <xref:System.Windows.Media.Color.FromArgb%2A> (metodo).  
   
      Nell'esempio seguente viene illustrato come impostare il <xref:System.Windows.Media.SolidColorBrush.Color%2A> proprietà di un <xref:System.Windows.Media.SolidColorBrush> usando un colore predefinito.  
   
@@ -81,9 +81,9 @@ In questo argomento viene descritto come utilizzare <xref:System.Windows.Media.S
   
  Il <xref:System.Windows.Media.GradientStop> è il blocco predefinito di base di un pennello sfumato.  Un cursore sfumatura specifica un <xref:System.Windows.Media.GradientStop.Color%2A> in un <xref:System.Windows.Media.GradientStop.Offset%2A> lungo l'asse delle sfumature.  
   
--   Lo sfumatura <xref:System.Windows.Media.GradientStop.Color%2A> proprietà specifica il colore del cursore sfumatura. È possibile impostare il colore usando un colore predefinito (fornito dal <xref:System.Windows.Media.Colors> classe) oppure specificando i valori ScRGB o ARGB. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], è anche possibile usare la notazione esadecimale per descrivere un colore. Per altre informazioni, vedere il <xref:System.Windows.Media.Color> struttura.  
+- Lo sfumatura <xref:System.Windows.Media.GradientStop.Color%2A> proprietà specifica il colore del cursore sfumatura. È possibile impostare il colore usando un colore predefinito (fornito dal <xref:System.Windows.Media.Colors> classe) oppure specificando i valori ScRGB o ARGB. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], è anche possibile usare la notazione esadecimale per descrivere un colore. Per altre informazioni, vedere il <xref:System.Windows.Media.Color> struttura.  
   
--   Lo sfumatura <xref:System.Windows.Media.GradientStop.Offset%2A> proprietà specifica la posizione del colore del cursore sfumatura sull'asse delle sfumature. L'offset è un <xref:System.Double> compreso nell'intervallo da 0 a 1. Più il valore offset del cursore sfumatura si avvicina a 0, più il colore è vicino all'inizio della sfumatura. Più il valore offset della sfumatura si avvicina a 1, più il colore è vicino alla fine della sfumatura.  
+- Lo sfumatura <xref:System.Windows.Media.GradientStop.Offset%2A> proprietà specifica la posizione del colore del cursore sfumatura sull'asse delle sfumature. L'offset è un <xref:System.Double> compreso nell'intervallo da 0 a 1. Più il valore offset del cursore sfumatura si avvicina a 0, più il colore è vicino all'inizio della sfumatura. Più il valore offset della sfumatura si avvicina a 1, più il colore è vicino alla fine della sfumatura.  
   
  Il colore di ogni punto tra i cursori sfumatura è interpolato linearmente come combinazione del colore specificato dai due cursori sfumatura di delimitazione. L'immagine seguente illustra i cursori sfumatura dell'esempio precedente. I cerchi indicano la posizione dei cursori sfumatura e la linea tratteggiata indica l'asse delle sfumature.  
   
@@ -146,7 +146,7 @@ Oggetto RadialGradientBrushes con impostazioni GradientOrigin, Center, RadiusX e
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Specifica dell'opacità di colore in "XAML"  
- In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] si usa la notazione esadecimale [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] per specificare l'opacità di colori singoli. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] la notazione esadecimale usa la sintassi seguente:  
+ In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] si usa la notazione esadecimale [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] per specificare l'opacità di colori singoli. La notazione esadecimale [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] usa la sintassi seguente:  
   
  `#` **aa** *rrggbb*  
   
@@ -173,5 +173,5 @@ Oggetto RadialGradientBrushes con impostazioni GradientOrigin, Center, RadiusX e
 - <xref:System.Windows.Media.LinearGradientBrush>
 - <xref:System.Windows.Media.RadialGradientBrush>
 - [Disegnare con oggetti Image, Drawing e Visual](painting-with-images-drawings-and-visuals.md)
-- [Cenni preliminari sulle proprietà di trasformazione Brush](brush-transformation-overview.md)
+- [Panoramica sulle proprietà di trasformazione Brush](brush-transformation-overview.md)
 - [Livelli di rendering della grafica](../advanced/graphics-rendering-tiers.md)

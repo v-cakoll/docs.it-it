@@ -8,11 +8,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
 ms.openlocfilehash: 6f45f01489ee84b6addb1f7c7c8dc584332f38dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864182"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Procedura: Chiamare una routine che restituisce un valore (Visual Basic)
 Oggetto `Function` routine restituisce un valore al codice chiamante. È chiamarlo includendo il nome e gli argomenti sul lato destro di un'istruzione di assegnazione o in un'espressione.  
@@ -50,5 +50,5 @@ Oggetto `Function` routine restituisce un valore al codice chiamante. È chiamar
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Istruzione Function](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Procedura: Creare una routine che restituisce un valore](./how-to-create-a-procedure-that-returns-a-value.md)
-- [Procedura: Restituire un valore da una routine](./how-to-return-a-value-from-a-procedure.md)
+- [Procedura: Restituisce il valore da una routine](./how-to-return-a-value-from-a-procedure.md)
 - [Procedura: Chiamare una routine che non restituisce un valore](./how-to-call-a-procedure-that-does-not-return-a-value.md)

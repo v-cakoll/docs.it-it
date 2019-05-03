@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7199fbc0c8760354269a50b647952729860c805b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697551"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>Metodo IAssemblyCache::InstallAssembly
 Installa l'assembly specificato nella global assembly cache.  
@@ -41,9 +41,9 @@ HRESULT InstallAssembly (
  `dwFlags`  
  [in] Flag definiti in Fusion. Sono supportati i valori seguenti:  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
+- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
+- IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pszManifestFilePath`  
  [in] Il percorso per il manifesto per l'assembly da installare.  

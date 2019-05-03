@@ -16,11 +16,11 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: c8b3f338659e2784db8deca3e1776e7926c30c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609698"
 ---
 # <a name="clrdatasourcetype-enumeration"></a>Enumerazione CLRDataSourceType
 
@@ -39,7 +39,7 @@ typedef enum
 
 ## <a name="members"></a>Membri
 
-| Membro                        | Descrizione                           |
+| Member                        | Descrizione                           |
 | ----------------------------- | ------------------------------------- |
 | `CLRDATA_SOURCE_TYPE_INVALID` | Per indicare che nessun altro elemento valida |
 

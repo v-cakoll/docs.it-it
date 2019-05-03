@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 82648714c375998e9daa1bb59cd9ebd9802b5794
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993941"
 ---
 # <a name="icordebugthread2-interface"></a>Interfaccia ICorDebugThread2
 Funge da un'estensione logica dell'interfaccia ICorDebugThread.  

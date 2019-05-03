@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
 ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756598"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Procedura: Spostare dati da e verso una variabile (Visual Basic)
 Archiviare un valore in una variabile, inserendo il nome della variabile sul lato sinistro di un'istruzione di assegnazione.  
@@ -19,7 +19,7 @@ Archiviare un valore in una variabile, inserendo il nome della variabile sul lat
   
 #### <a name="to-store-a-value-in-a-variable"></a>Per archiviare un valore in una variabile  
   
--   Usare il nome della variabile sul lato sinistro di un'istruzione di assegnazione.  
+- Usare il nome della variabile sul lato sinistro di un'istruzione di assegnazione.  
   
      Nell'esempio seguente imposta il valore della variabile `alpha`.  
   
@@ -34,11 +34,11 @@ Archiviare un valore in una variabile, inserendo il nome della variabile sul lat
   
 #### <a name="to-retrieve-a-value-from-a-variable"></a>Per recuperare un valore da una variabile  
   
--   Usare il nome della variabile in un'espressione. È possibile usare una variabile in un punto qualsiasi è possibile usare una costante o valore letterale, tranne in un'espressione che definisce il valore di una costante.  
+- Usare il nome della variabile in un'espressione. È possibile usare una variabile in un punto qualsiasi è possibile usare una costante o valore letterale, tranne in un'espressione che definisce il valore di una costante.  
   
      -oppure-  
   
--   Usare il nome della variabile seguendo uguali (`=`) Accedi a un'istruzione di assegnazione.  
+- Usare il nome della variabile seguendo uguali (`=`) Accedi a un'istruzione di assegnazione.  
   
      Nell'esempio seguente legge il valore della variabile `startValue` e quindi Usa il valore della variabile `counter` in un'espressione.  
   

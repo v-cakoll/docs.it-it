@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
 ms.openlocfilehash: 64ee75c93615f57b15fea29f06fff500a395ba0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803831"
 ---
 # <a name="declaration-expected"></a>Prevista dichiarazione
 Un'istruzione non dichiarativa, ad esempio un'assegnazione o un'istruzione di ciclo, si verifica all'esterno di qualsiasi routine. Solo le dichiarazioni sono consentite alle routine esterne.  

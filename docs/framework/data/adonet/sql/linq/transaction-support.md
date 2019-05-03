@@ -3,11 +3,11 @@ title: Supporto delle transazioni
 ms.date: 03/30/2017
 ms.assetid: 8cceb26e-8d36-4365-8967-58e2e89e0187
 ms.openlocfilehash: 519ddab069cf3c4ca1ccfa7b203769b8102db844
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876837"
 ---
 # <a name="transaction-support"></a>Supporto delle transazioni
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta tre modelli distinti. Di seguito sono elencati tali modelli nell'ordine di esecuzione dei controlli.  
@@ -26,4 +26,4 @@ ms.locfileid: "59196161"
 ## <a name="see-also"></a>Vedere anche
 
 - [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Procedura: Racchiudere tra parentesi quadre gli invii di dati usando transazioni](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)
+- [Procedura: Tra parentesi quadre gli invii di dati tramite transazioni](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)

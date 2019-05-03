@@ -10,11 +10,11 @@ helpviewer_keywords:
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
 ms.openlocfilehash: 568489d6034316e895cd999801241fa995aadefa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864403"
 ---
 # <a name="function-procedures-visual-basic"></a>Routine Function (Visual Basic)
 Oggetto `Function` routine è una serie di istruzioni di Visual Basic racchiuse tra il `Function` e `End Function` istruzioni. Il `Function` routine esegue un'attività e quindi restituisce il controllo al codice chiamante. Quando restituisce il controllo, restituisce anche un valore al codice chiamante.  
@@ -54,7 +54,7 @@ End Function
 ## <a name="returning-values"></a>Restituzione di valori  
  Il valore un `Function` procedure invia informazioni al codice chiamante viene chiamato il relativo valore restituito. La procedura restituisce questo valore in uno dei due modi:  
   
--   Usa il `Return` istruzione per specificare il valore restituito e restituisce il controllo immediatamente a nel programma chiamante. Questa condizione è illustrata nell'esempio seguente.  
+- Usa il `Return` istruzione per specificare il valore restituito e restituisce il controllo immediatamente a nel programma chiamante. Questa condizione è illustrata nell'esempio seguente.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
--   Assegna un valore per il proprio nome di funzione in una o più istruzioni della procedura. Il controllo viene restituito al programma chiamante fino a un `Exit Function` o `End Function` viene eseguita un'istruzione. Questa condizione è illustrata nell'esempio seguente.  
+- Assegna un valore per il proprio nome di funzione in una o più istruzioni della procedura. Il controllo viene restituito al programma chiamante fino a un `Exit Function` o `End Function` viene eseguita un'istruzione. Questa condizione è illustrata nell'esempio seguente.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  

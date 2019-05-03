@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
 ms.openlocfilehash: 3950df8b6f4b48a035c6ebf37d8d65c18cb82e1e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010332"
 ---
 # <a name="how-to-implement-binding-validation"></a>Procedura: Implementare la convalida del binding
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> e un trigger di stile per fornire indicazioni visive per informare l'utente quando viene immesso un valore non valido, in base una regola di convalida personalizzata.  
@@ -40,4 +40,4 @@ In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Contr
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative](data-binding-how-to-topics.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)

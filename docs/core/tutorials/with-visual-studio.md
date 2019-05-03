@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7a2a7b251f38a2f1add39e50e32a832adaedc965
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: df91d9da1f743e17072ad6106d0c4e06d751c2ea
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362800"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612813"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Compilare un'applicazione Hello World usando C# con .NET Core SDK in Visual Studio 2017
 
@@ -29,7 +29,7 @@ Di seguito viene descritta la creazione di una semplice applicazione console "He
 1. Avviare Visual Studio 2017. Selezionare **File** > **Nuovo** > **Progetto** dalla barra dei menu. Nella finestra di dialogo *Nuovo progetto** selezionare il nodo **Visual C#** seguito dal nodo **.NET Core**. Selezionare quindi il modello di progetto **App console (.NET Core)**. Nella casella di testo **Nome** digitare "HelloWorld". Selezionare il pulsante **OK** .
 
    ![Finestra di dialogo Nuovo progetto con App console selezionata](./media/with-visual-studio/visual-studio-new-project.png)
-   
+
 1. Visual Studio usa il modello per creare il progetto. Il modello C# Console Application per .NET Core definisce automaticamente una classe, `Program`, con un singolo metodo, `Main`, che accetta una matrice <xref:System.String> come argomento. `Main` è il punto di ingresso dell'applicazione, ovvero il metodo chiamato automaticamente dal runtime quando viene avviata l'applicazione. Gli argomenti della riga di comando forniti all'avvio dell'applicazione sono disponibili nella matrice *args*.
 
    ![Visual Studio e il nuovo progetto HelloWorld](./media/with-visual-studio/visual-studio-main-window.png)
@@ -42,6 +42,7 @@ Di seguito viene descritta la creazione di una semplice applicazione console "He
    Console.Write("Press any key to continue...");
    Console.ReadKey(true);
    ```
+
    Il codice chiede all'utente di premere un tasto qualsiasi e quindi sospende il programma fino a quando non viene premuto un tasto.
 
 1. Nella barra dei menu selezionare **Compila** > **Compila soluzione**. Il programma viene compilato in un linguaggio intermedio (IL) che viene successivamente convertito in codice binario da un compilatore JIT (Just-In-Time).

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7b6c19c87aceffd1e199975db6f16191bc3ddd9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782551"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>Metodo ICorProfilerInfo2::GetFunctionInfo2
 Ottiene la classe padre, il token di metadati e l'elemento `ClassID` di ciascun argomento di tipo, se presente, di una funzione.  

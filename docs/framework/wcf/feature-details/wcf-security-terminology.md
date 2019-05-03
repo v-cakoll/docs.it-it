@@ -7,11 +7,11 @@ helpviewer_keywords:
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 ms.openlocfilehash: f0d5ecccdd48da2799e3299406f219a10f47e84d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768615"
 ---
 # <a name="wcf-security-terminology"></a>Terminologia di sicurezza di WCF
 Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza possono risultare poco chiari. Questo argomento fornisce brevi spiegazioni di alcuni termini di sicurezza, senza tuttavia offrire una descrizione dettagliata per ognuno degli argomenti correlati.  
@@ -184,5 +184,5 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
 ## <a name="see-also"></a>Vedere anche
 
 - [Concetti fondamentali di Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
-- [Concetti sulla protezione](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Sicurezza e protezione](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

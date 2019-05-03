@@ -1,336 +1,329 @@
-items:
-- name: Parole chiave di C#
+- name: 'Parole chiave di C#'
   href: index.md
   items:
-  - name: Tipi
-    href: types.md
-    items:
-    - name: Tipi valore
-      href: value-types.md
+    - name: Tipi
+      href: types.md
       items:
-      - name: bool
-        href: bool.md
-      - name: byte
-        href: byte.md
-      - name: char
-        href: char.md
-      - name: decimal
-        href: decimal.md
-      - name: double
-        href: double.md
-      - name: enum
-        href: enum.md
-      - name: float
-        href: float.md
-      - name: int
-        href: int.md
-      - name: long
-        href: long.md
-      - name: sbyte
-        href: sbyte.md
-      - name: short
-        href: short.md
-      - name: struct
-        href: struct.md
-      - name: uint
-        href: uint.md
-      - name: ulong
-        href: ulong.md
-      - name: ushort
-        href: ushort.md
-    - name: Tipi riferimento
-      href: reference-types.md
+        - name: Tipi valore
+          href: value-types.md
+          items:
+            - name: bool
+              href: bool.md
+            - name: byte
+              href: byte.md
+            - name: char
+              href: char.md
+            - name: decimal
+              href: decimal.md
+            - name: double
+              href: double.md
+            - name: enum
+              href: enum.md
+            - name: float
+              href: float.md
+            - name: int
+              href: int.md
+            - name: long
+              href: long.md
+            - name: sbyte
+              href: sbyte.md
+            - name: short
+              href: short.md
+            - name: struct
+              href: struct.md
+            - name: uint
+              href: uint.md
+            - name: ulong
+              href: ulong.md
+            - name: ushort
+              href: ushort.md
+        - name: Tipi riferimento
+          href: reference-types.md
+          items:
+            - name: classe
+              href: class.md
+            - name: delegato
+              href: delegate.md
+            - name: dynamic
+              href: dynamic.md
+            - name: interfaccia
+              href: interface.md
+            - name: object
+              href: object.md
+            - name: string
+              href: string.md
+        - name: void
+          href: void.md
+        - name: var
+          href: var.md
+        - name: Tabelle di riferimento per i tipi
+          href: reference-tables-for-types.md
+          items:
+            - name: Tabella dei tipi incorporati
+              href: built-in-types-table.md
+            - name: Tabella dei tipi integrali
+              href: integral-types-table.md
+            - name: Tabella dei tipi a virgola mobile
+              href: floating-point-types-table.md
+            - name: Tabella dei tipi valore
+              href: value-types-table.md
+            - name: Tabella dei valori predefiniti
+              href: default-values-table.md
+            - name: Tabella delle conversioni numeriche implicite
+              href: implicit-numeric-conversions-table.md
+            - name: Tabella delle conversioni numeriche esplicite
+              href: explicit-numeric-conversions-table.md
+            - name: Tabella di formattazione dei risultati numerici
+              href: formatting-numeric-results-table.md
+    - name: Modificatori
+      href: modifiers.md
       items:
-      - name: classe
-        href: class.md
-      - name: delegato
-        href: delegate.md
-      - name: dynamic
-        href: dynamic.md
-      - name: interfaccia
-        href: interface.md
-      - name: object
-        href: object.md
-      - name: string
-        href: string.md
-    - name: void
-      href: void.md
-    - name: var
-      href: var.md
-    - name: Tabelle di riferimento per i tipi
-      href: reference-tables-for-types.md
+        - name: Modificatori di accesso
+          href: access-modifiers.md
+          items:
+            - name: Livelli di accessibilità
+              href: accessibility-levels.md
+            - name: Dominio di accessibilità
+              href: accessibility-domain.md
+            - name: Restrizioni relative all'uso dei livelli di accessibilità
+              href: restrictions-on-using-accessibility-levels.md
+            - name: internal
+              href: internal.md
+            - name: private
+              href: private.md
+            - name: protected
+              href: protected.md
+            - name: public
+              href: public.md
+            - name: protected internal
+              href: protected-internal.md
+            - name: protetto privato
+              href: private-protected.md
+        - name: abstract
+          href: abstract.md
+        - name: async
+          href: async.md
+        - name: const
+          href: const.md
+        - name: event
+          href: event.md
+        - name: extern
+          href: extern.md
+        - name: in (modificatore generico)
+          href: in-generic-modifier.md
+        - name: out (modificatore generico)
+          href: out-generic-modifier.md
+        - name: override
+          href: override.md
+        - name: readonly
+          href: readonly.md
+        - name: sealed
+          href: sealed.md
+        - name: statico
+          href: static.md
+        - name: unsafe
+          href: unsafe.md
+        - name: virtuale
+          href: virtual.md
+        - name: volatile
+          href: volatile.md
+    - name: Parole chiave per le istruzioni
+      href: statement-keywords.md
       items:
-      - name: Tabella dei tipi incorporati
-        href: built-in-types-table.md
-      - name: Tabella dei tipi integrali
-        href: integral-types-table.md
-      - name: Tabella dei tipi a virgola mobile
-        href: floating-point-types-table.md
-      - name: Tabella dei tipi valore
-        href: value-types-table.md
-      - name: Tabella dei valori predefiniti
-        href: default-values-table.md
-      - name: Tabella delle conversioni numeriche implicite
-        href: implicit-numeric-conversions-table.md
-      - name: Tabella delle conversioni numeriche esplicite
-        href: explicit-numeric-conversions-table.md
-      - name: Tabella di formattazione dei risultati numerici
-        href: formatting-numeric-results-table.md
-  - name: Modificatori
-    href: modifiers.md
-    items:
-    - name: Modificatori di accesso
-      href: access-modifiers.md
+        - name: Istruzioni di selezione
+          href: selection-statements.md
+          items:
+            - name: if-else
+              href: if-else.md
+            - name: switch
+              href: switch.md
+        - name: Istruzioni di iterazione
+          href: iteration-statements.md
+          items:
+            - name: do
+              href: do.md
+            - name: for
+              href: for.md
+            - name: 'foreach, in'
+              href: foreach-in.md
+            - name: while
+              href: while.md
+        - name: Istruzioni di salto
+          href: jump-statements.md
+          items:
+            - name: break
+              href: break.md
+            - name: continue
+              href: continue.md
+            - name: goto
+              href: goto.md
+            - name: return
+              href: return.md
+        - name: Istruzioni di gestione delle eccezioni
+          href: exception-handling-statements.md
+          items:
+            - name: throw
+              href: throw.md
+            - name: try-catch
+              href: try-catch.md
+            - name: try-finally
+              href: try-finally.md
+            - name: try-catch-finally
+              href: try-catch-finally.md
+        - name: Checked e Unchecked
+          href: checked-and-unchecked.md
+          items:
+            - name: checked
+              href: checked.md
+            - name: unchecked
+              href: unchecked.md
+        - name: Istruzione fixed
+          href: fixed-statement.md
+        - name: Istruzione lock
+          href: lock-statement.md
+    - name: Parametri dei metodi
+      href: method-parameters.md
       items:
-      - name: Livelli di accessibilità
-        href: accessibility-levels.md
-      - name: Dominio di accessibilità
-        href: accessibility-domain.md
-      - name: Restrizioni relative all'uso dei livelli di accessibilità
-        href: restrictions-on-using-accessibility-levels.md
-      - name: internal
-        href: internal.md
-      - name: private
-        href: private.md
-      - name: protected
-        href: protected.md
-      - name: public
-        href: public.md
-      - name: protected internal
-        href: protected-internal.md
-      - name: protetto privato
-        href: private-protected.md
-    - name: abstract
-      href: abstract.md
-    - name: async
-      href: async.md
-    - name: const
-      href: const.md
-    - name: event
-      href: event.md
-    - name: extern
-      href: extern.md
-    - name: in (modificatore generico)
-      href: in-generic-modifier.md
-    - name: out (modificatore generico)
-      href: out-generic-modifier.md
-    - name: override
-      href: override.md
-    - name: readonly
-      href: readonly.md
-    - name: sealed
-      href: sealed.md
-    - name: statico
-      href: static.md
-    - name: unsafe
-      href: unsafe.md
-    - name: virtuale
-      href: virtual.md
-    - name: volatile
-      href: volatile.md
-  - name: Parole chiave per le istruzioni
-    href: statement-keywords.md
-    items:
-    - name: Istruzioni di selezione
-      href: selection-statements.md
+        - name: params
+          href: params.md
+        - name: in (modificatore di parametro)
+          href: in-parameter-modifier.md
+        - name: ref
+          href: ref.md
+        - name: out (modificatore di parametro)
+          href: out-parameter-modifier.md
+    - name: Parole chiave per gli spazi dei nomi
+      href: namespace-keywords.md
       items:
-      - name: if-else
-        href: if-else.md
-      - name: switch
-        href: switch.md
-    - name: Istruzioni di iterazione
-      href: iteration-statements.md
+        - name: namespace
+          href: namespace.md
+        - name: utilizzo
+          href: using.md
+          items:
+            - name: Direttiva using
+              href: using-directive.md
+            - name: Direttiva using static
+              href: using-static.md
+            - name: Istruzione using
+              href: using-statement.md
+        - name: Alias extern
+          href: extern-alias.md
+    - name: Parole chiave per gli operatori
+      href: operator-keywords.md
       items:
-      - name: do
-        href: do.md
-      - name: for
-        href: for.md
-      - name: foreach, in
-        href: foreach-in.md
-      - name: while
-        href: while.md
-    - name: Istruzioni di salto
-      href: jump-statements.md
+        - name: as
+          href: as.md
+        - name: await
+          href: await.md
+        - name: is
+          href: is.md
+        - name: new
+          href: new.md
+          items:
+            - name: Operatore new
+              href: new-operator.md
+            - name: Modificatore new
+              href: new-modifier.md
+            - name: Vincolo nw
+              href: new-constraint.md
+        - name: sizeof
+          href: sizeof.md
+        - name: typeof
+          href: typeof.md
+        - name: 'true'
+          href: true.md
+          items:
+            - name: Operatore true
+              href: true-false-operators.md
+            - name: Valore letterale true
+              href: true-literal.md
+        - name: 'False'
+          href: false.md
+          items:
+            - name: Operatore false
+              href: true-false-operators.md
+            - name: Valore letterale false
+              href: false-literal.md
+        - name: stackalloc
+          href: stackalloc.md
+        - name: nameof
+          href: nameof.md
+    - name: Parole chiave di conversione
+      href: conversion-keywords.md
       items:
-      - name: break
-        href: break.md
-      - name: continue
-        href: continue.md
-      - name: goto
-        href: goto.md
-      - name: return
-        href: return.md
-    - name: Istruzioni di gestione delle eccezioni
-      href: exception-handling-statements.md
+        - name: explicit
+          href: explicit.md
+        - name: implicit
+          href: implicit.md
+        - name: operator
+          href: operator.md
+    - name: Parole chiave per l'accesso
+      href: access-keywords.md
       items:
-      - name: throw
-        href: throw.md
-      - name: try-catch
-        href: try-catch.md
-      - name: try-finally
-        href: try-finally.md
-      - name: try-catch-finally
-        href: try-catch-finally.md
-    - name: Checked e Unchecked
-      href: checked-and-unchecked.md
+        - name: base
+          href: base.md
+        - name: this
+          href: this.md
+    - name: Parole chiave letterali
+      href: literal-keywords.md
       items:
-      - name: checked
-        href: checked.md
-      - name: unchecked
-        href: unchecked.md
-    - name: Istruzione fixed
-      href: fixed-statement.md
-    - name: Istruzione lock
-      href: lock-statement.md
-  - name: Parametri dei metodi
-    href: method-parameters.md
-    items:
-    - name: params
-      href: params.md
-    - name: in (modificatore di parametro)
-      href: in-parameter-modifier.md
-    - name: ref
-      href: ref.md
-    - name: out (modificatore di parametro)
-      href: out-parameter-modifier.md
-  - name: Parole chiave per gli spazi dei nomi
-    href: namespace-keywords.md
-    items:
-    - name: namespace
-      href: namespace.md
-    - name: utilizzo
-      href: using.md
+        - name: 'Null'
+          href: null.md
+        - name: default
+          href: default.md
+    - name: Parole chiave contestuali
+      href: contextual-keywords.md
       items:
-      - name: Direttiva using
-        href: using-directive.md
-      - name: Direttiva using static
-        href: using-static.md
-      - name: Istruzione using
-        href: using-statement.md
-    - name: Alias extern
-      href: extern-alias.md
-  - name: Parole chiave per gli operatori
-    href: operator-keywords.md
-    items:
-    - name: as
-      href: as.md
-    - name: await
-      href: await.md
-    - name: is
-      href: is.md
-    - name: new
-      href: new.md
+        - name: aggiunta
+          href: add.md
+        - name: get
+          href: get.md
+        - name: global
+          href: global.md
+        - name: partial (tipo)
+          href: partial-type.md
+        - name: partial (metodo)
+          href: partial-method.md
+        - name: remove
+          href: remove.md
+        - name: imposta
+          href: set.md
+        - name: when (condizione di filtro)
+          href: when.md
+        - name: where (vincolo di tipo generico)
+          href: where-generic-type-constraint.md
+        - name: predefinito
+          href: value.md
+        - name: yield
+          href: yield.md
+    - name: Parole chiave per le query
+      href: query-keywords.md
       items:
-      - name: Operatore new
-        href: new-operator.md
-      - name: Modificatore new
-        href: new-modifier.md
-      - name: Vincolo nw
-        href: new-constraint.md
-    - name: sizeof
-      href: sizeof.md
-    - name: typeof
-      href: typeof.md
-    - name: "true"
-      href: true.md
-      items:
-      - name: Operatore true
-        href: true-false-operators.md
-      - name: Valore letterale true
-        href: true-literal.md
-    - name: "False"
-      href: false.md
-      items:
-      - name: Operatore false
-        href: true-false-operators.md
-      - name: Valore letterale false
-        href: false-literal.md
-    - name: stackalloc
-      href: stackalloc.md
-    - name: nameof
-      href: nameof.md
-  - name: Parole chiave di conversione
-    href: conversion-keywords.md
-    items:
-    - name: explicit
-      href: explicit.md
-    - name: implicit
-      href: implicit.md
-    - name: operator
-      href: operator.md
-  - name: Parole chiave per l'accesso
-    href: access-keywords.md
-    items:
-    - name: base
-      href: base.md
-    - name: this
-      href: this.md
-  - name: Parole chiave letterali
-    href: literal-keywords.md
-    items:
-    - name: "Null"
-      href: null.md
-    - name: default
-      href: default.md
-  - name: Parole chiave contestuali
-    href: contextual-keywords.md
-    items:
-    - name: aggiunta
-      href: add.md
-    - name: get
-      href: get.md
-    - name: global
-      href: global.md
-    - name: partial (tipo)
-      href: partial-type.md
-    - name: partial (metodo)
-      href: partial-method.md
-    - name: remove
-      href: remove.md
-    - name: imposta
-      href: set.md
-    - name: when (condizione di filtro)
-      href: when.md
-    - name: where (vincolo di tipo generico)
-      href: where-generic-type-constraint.md
-    - name: predefinito
-      href: value.md
-    - name: yield
-      href: yield.md
-  - name: Parole chiave per le query
-    href: query-keywords.md
-    items:
-    - name: Clausola from
-      href: from-clause.md
-    - name: Clausola where
-      href: where-clause.md
-    - name: Clausola select
-      href: select-clause.md
-    - name: Clausola group
-      href: group-clause.md
-    - name: into
-      href: into.md
-    - name: Clausola orderby
-      href: orderby-clause.md
-    - name: Clausola join
-      href: join-clause.md
-    - name: Clausola let
-      href: let-clause.md
-    - name: ascending
-      href: ascending.md
-    - name: descending
-      href: descending.md
-    - name: attivo
-      href: on.md
-    - name: equals
-      href: equals.md
-    - name: by
-      href: by.md
-    - name: in
-      href: in.md
-ms.openlocfilehash: a87c28c8c586d1169a98f3f71361d34eb8680d99
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469109"
+        - name: Clausola from
+          href: from-clause.md
+        - name: Clausola where
+          href: where-clause.md
+        - name: Clausola select
+          href: select-clause.md
+        - name: Clausola group
+          href: group-clause.md
+        - name: into
+          href: into.md
+        - name: Clausola orderby
+          href: orderby-clause.md
+        - name: Clausola join
+          href: join-clause.md
+        - name: Clausola let
+          href: let-clause.md
+        - name: ascending
+          href: ascending.md
+        - name: descending
+          href: descending.md
+        - name: attivo
+          href: on.md
+        - name: equals
+          href: equals.md
+        - name: by
+          href: by.md
+        - name: in
+          href: in.md

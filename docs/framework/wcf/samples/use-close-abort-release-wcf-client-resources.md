@@ -1,14 +1,14 @@
 ---
-title: Utilizzare Chiudi e Interrompi per rilasciare le risorse del client WCF
+title: Usare Chiudi e Interrompi per rilasciare risorse client WCF
 description: Dispose può avere esito negativo e generano eccezioni quando si verifica un errore di rete. Che può causare comportamenti indesiderati. Invece utilizzare Chiudi e Interrompi per rilasciare le risorse del client quando la rete non è riuscita.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
 ms.openlocfilehash: 58f828d9cd85806f5f04c349a7de18828ab5f6f2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007573"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Chiusura e interruzione rilasciare le risorse in modo sicuro quando le connessioni di rete sono stato eliminato
 

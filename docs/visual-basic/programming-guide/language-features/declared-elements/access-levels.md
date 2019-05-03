@@ -15,11 +15,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
 ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61828100"
 ---
 # <a name="access-levels-in-visual-basic"></a>Livelli di accesso in Visual Basic
 Il *livello di accesso* di un elemento dichiarato è l'extent della possibilità di accedervi, vale a dire, il tipo di codice dispone dell'autorizzazione di lettura o scrittura. Ciò è determinato non solo dal modo in cui si dichiara l'elemento stesso, ma anche dal livello di accesso del contenitore dell'elemento. Il codice che non è possibile accedere a un elemento contenitore non può accedere a uno qualsiasi dei relativi elementi contenuti, anche quelli dichiarati come `Public`. Ad esempio, un `Public` di una variabile in un `Private` struttura sono accessibili all'interno della classe che contiene la struttura, ma non all'esterno di tale classe.  

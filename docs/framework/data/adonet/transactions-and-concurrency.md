@@ -3,11 +3,11 @@ title: Transazioni e concorrenza
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
 ms.openlocfilehash: ba857031a54374ee295c2bfd724e7fb8651b7c1f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933705"
 ---
 # <a name="transactions-and-concurrency"></a>Transazioni e concorrenza
 Una transazione è costituita da un singolo comando o da un gruppo di comandi che vengono eseguiti come un pacchetto. Le transazioni consentono di combinare più operazioni in un'unica unità di lavoro. Se si verifica un problema in un determinato punto della transazione, sarà possibile annullare tutti gli aggiornamenti ripristinando la condizione antecedente all'inizio della transazione.  
@@ -40,5 +40,5 @@ Una transazione è costituita da un singolo comando o da un gruppo di comandi ch
 - [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Oggetti DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

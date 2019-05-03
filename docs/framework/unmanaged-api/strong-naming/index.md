@@ -9,11 +9,11 @@ ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32e74a76b6b1bedee4efc5715d0710c8efce2455
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049375"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Denominazione sicura (riferimenti alle API non gestite)
 L'API di denominazione sicura consente a un client di amministrare la firma con nome sicuro per gli assembly.  

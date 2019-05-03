@@ -3,11 +3,11 @@ title: Introduzione a F# in Visual Studio per Mac
 description: Informazioni su come usare F# con Visual Studio per Mac.
 ms.date: 07/03/2018
 ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59331871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949721"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Introduzione a F# in Visual Studio per Mac
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
 ms.openlocfilehash: 122c20e7c3e48eaa4b4986ce2cb45411dae00723
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011008"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Procedura: Disporre i controlli con le guide di allineamento e la griglia in Windows Forms
 Tramite le caratteristiche di layout di Visual Studio è possibile indicare precisamente in cui i controlli vengono posizionati in un form. I controlli aggiunti a un form o spostati in un form possono essere automaticamente allineati a righe e colonne della griglia di Windows Form della finestra di progettazione oppure è possibile allineare i controlli usando la funzionalità di guide di allineamento.  
@@ -23,7 +23,7 @@ Tramite le caratteristiche di layout di Visual Studio è possibile indicare prec
   
 ### <a name="to-snap-all-controls-to-the-grid"></a>Per tutti i controlli alla griglia di allineamento  
   
--   Selezionare il **SnapToGrid** modalità di layout in Progettazione Windows Form **opzioni** nella finestra di dialogo.  
+- Selezionare il **SnapToGrid** modalità di layout in Progettazione Windows Form **opzioni** nella finestra di dialogo.  
   
      Per altre informazioni, vedere [generale, finestra di progettazione Windows Form, finestra di dialogo Opzioni](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)). Tutti i controlli verranno allineano lungo i punti della griglia.  
   
@@ -31,7 +31,7 @@ Tramite le caratteristiche di layout di Visual Studio è possibile indicare prec
   
 ### <a name="to-align-controls-using-snaplines"></a>Per allineare i controlli usando le guide di allineamento  
   
--   Selezionare il **guide di allineamento** modalità di layout in Progettazione Windows Form **opzioni** nella finestra di dialogo.  
+- Selezionare il **guide di allineamento** modalità di layout in Progettazione Windows Form **opzioni** nella finestra di dialogo.  
   
      Per altre informazioni, vedere [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). È ora possibile usare le guide di allineamento per allineare e disporre i controlli sul form.  
   

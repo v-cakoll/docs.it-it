@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
 ms.openlocfilehash: f805840ea3b1a8aef6a289dba064c468a4da0cb0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59331481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004341"
 ---
 # <a name="how-to-display-pop-up-help"></a>Procedura: Visualizzare la Guida rapida
 Un modo per visualizzare la Guida sui moduli di Windows è usare il **aiutare** pulsante, che si trova sul lato destro della barra del titolo, accessibile tramite il <xref:System.Windows.Forms.Form.HelpButton%2A> proprietà. Questo tipo di visualizzazione della Guida è ideale con le finestre di dialogo. Con le finestre di dialogo visualizzate come modali (con il metodo <xref:System.Windows.Forms.Form.ShowDialog%2A>) risulta difficile accedere a sistemi di Guida esterni, perché le finestre di dialogo modali devono venire chiuse prima che lo stato attivo possa passare a un'altra finestra. Inoltre, tramite il **aiutare** pulsante richiede che sia presente alcun **Riduci a icona** pulsante o **Ingrandisci** pulsante visualizzato nella barra del titolo. Questa è una convenzione standard-finestra di dialogo, mentre i form dispongono in genere **Riduci a icona** e **Ingrandisci** pulsanti.  

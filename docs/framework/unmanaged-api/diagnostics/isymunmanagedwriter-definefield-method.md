@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5fd9798b3681d66e71d5703f4d16564b153da07b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789630"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>Metodo ISymUnmanagedWriter::DefineField
 Definisce una singola variabile che non è incluso un metodo. Questo metodo è utilizzato per alcuni campi nelle classi, campi di bit e così via.  

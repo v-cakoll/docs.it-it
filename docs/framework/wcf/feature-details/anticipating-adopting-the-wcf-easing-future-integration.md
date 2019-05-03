@@ -3,11 +3,11 @@ title: "Preparazione all'adozione di Windows Communication Foundation: facilitaz
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
 ms.openlocfilehash: c6e749c32947a4159d6bfd56c4d30a06f6ef0b7f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59316336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650557"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Preparazione all'adozione di Windows Communication Foundation: facilitazione dell'integrazione futura
 Se si utilizzano oggi ASP.NET e si prevede l'utilizzo di WCF in futuro, questo argomento fornisce indicazioni per garantire che i nuovi servizi Web ASP.NET funzionerà anche con le applicazioni WCF.  
@@ -45,4 +45,4 @@ public interface IEcho
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Preparazione all'adozione di Windows Communication Foundation: facilitazione della migrazione futura](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+- [Preparazione all'adozione di Windows Communication Foundation: Semplificazione della migrazione futura](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

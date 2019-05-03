@@ -5,11 +5,11 @@ ms.assetid: 72389860-7e37-4656-ba46-b6aeee1860f8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9baa3632b6ede9ce45f34302611710344ed33761
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782603"
 ---
 # <a name="icordebugstaticfieldsymbolgetsize-method"></a>Metodo ICorDebugStaticFieldSymbol::GetSize
 Ottiene le dimensioni in byte del campo statico  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
 ms.openlocfilehash: aaf2caff1e2684e08c7eb65125536f1070203d70
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020855"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Procedura: Implementare un oggetto PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funziona specificando un elenco di associazioni. L'elenco di associazioni viene ordinata dalla priorità più alta alla priorità più bassa. Se l'associazione con la priorità più alto restituisce un valore correttamente quando viene elaborato quindi non è mai necessario per elaborare le altre associazioni nell'elenco. Potrebbe essere il caso che l'associazione con la priorità più alta richiede molto tempo per essere valutata, verrà utilizzata la priorità più elevata successiva che restituisce un valore correttamente fino a quando un'associazione di una priorità più alta restituisce un valore correttamente.  
@@ -48,4 +48,4 @@ ms.locfileid: "59207565"
 
 - <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative](data-binding-how-to-topics.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)

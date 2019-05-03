@@ -5,11 +5,11 @@ ms.assetid: 5a6c9a5a-ec72-4c40-a9c3-cee7baa63687
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e233fe78f6b2c721114f0307a8ca414625a0087e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782642"
 ---
 # <a name="icordebugstaticfieldsymbolgetaddress-method"></a>Metodo ICorDebugStaticFieldSymbol::GetAddress
 Ottiene l'indirizzo di un campo statico.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
 ms.openlocfilehash: 9fae195247dea4cbd049f7157f04e87bb97d6f4d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767143"
 ---
 # <a name="how-to-create-a-custom-token"></a>Procedura: Creare un token personalizzato
 Questo argomento illustra come creare un token di sicurezza personalizzato utilizzando la classe <xref:System.IdentityModel.Tokens.SecurityToken> e come integrarlo in un provider e un autenticatore di token di sicurezza personalizzati. Per un esempio di codice completo, vedere la [Custom Token](../../../../docs/framework/wcf/samples/custom-token.md) esempio.  
@@ -161,6 +161,6 @@ Questo argomento illustra come creare un token di sicurezza personalizzato utili
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
-- [Procedura dettagliata: Creazione di credenziali client e del servizio personalizzate](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Procedura: Creare un autenticatore del token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Procedura: Creare un provider di token di sicurezza personalizzati](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Procedura dettagliata: Creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Procedura: Creare un autenticatore del Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Procedura: Creare un Provider di Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)

@@ -3,18 +3,18 @@ title: Funzioni di aggregazione (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
 ms.openlocfilehash: 113c19078feeca24a0817e52f8eb0d04537b0684
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607219"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Funzioni di aggregazione (Entity SQL)
 Un'aggregazione è un construct di linguaggio che condensa una raccolta in un scalare come parte di un'operazione di gruppo. Le aggregazioni [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sono disponibili in due formati:  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funzioni di raccolta possono essere usate ovunque in un'espressione. È incluso l'utilizzo di funzioni di aggregazione nelle proiezioni e di predicati che agiscono sulle raccolte. Le funzioni di raccolta sono la modalità preferibile di specificare aggregazioni in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funzioni di raccolta possono essere usate ovunque in un'espressione. È incluso l'utilizzo di funzioni di aggregazione nelle proiezioni e di predicati che agiscono sulle raccolte. Le funzioni di raccolta sono la modalità preferibile di specificare aggregazioni in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
--   Aggregazioni di gruppo in espressioni di query che dispongono di una clausola GROUP BY. Come in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], le aggregazioni di gruppo accettano DISTINCT e ALL come modificatori all'input di aggregazione.  
+- Aggregazioni di gruppo in espressioni di query che dispongono di una clausola GROUP BY. Come in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], le aggregazioni di gruppo accettano DISTINCT e ALL come modificatori all'input di aggregazione.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta innanzitutto di interpretare un'espressione come funzione di raccolta e se l'espressione è nel contesto di un'espressione SELECT, interpreta come aggregazione di gruppo.  
   

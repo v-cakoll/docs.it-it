@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare una classe WSFederationHttpBinding'
+title: 'Procedura: Creare una classe WSFederationHttpBinding'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
 ms.openlocfilehash: 16b93126157ff129d5e0b815bc951873e7fa760d
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778352"
 ---
-# <a name="how-to-create-a-wsfederationhttpbinding"></a>Procedura: creare una classe WSFederationHttpBinding
+# <a name="how-to-create-a-wsfederationhttpbinding"></a>Procedura: Creare una classe WSFederationHttpBinding
 
 In Windows Communication Foundation (WCF), il <xref:System.ServiceModel.WSFederationHttpBinding> classe ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) nella configurazione) fornisce un meccanismo per l'esposizione di un servizio federato. ovvero un servizio che richiede ai client di autenticarsi usando un token di sicurezza rilasciato da un servizio token di sicurezza. In questo argomento viene illustrato come impostare una classe <xref:System.ServiceModel.WSFederationHttpBinding> nel codice e nella configurazione. Una volta creata l'associazione, è possibile impostare un endpoint per usarla.
 
@@ -30,7 +30,7 @@ In Windows Communication Foundation (WCF), il <xref:System.ServiceModel.WSFedera
 
 2. Sui client federati, impostare la proprietà <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> sull'URL del servizio token di sicurezza. Impostare la proprietà <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> sull'associazione da usare per comunicare con il servizio token di sicurezza.
 
-3. Parametro facoltativo. Impostare la proprietà <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> sull'URI (Uniform Resource Identifier) di un tipo di token. Nei servizi federati, specificare il tipo di token previsto dal servizio. Sui client federati, specificare il tipo di token richiesto dal client al servizio token di sicurezza.
+3. Facoltativo. Impostare la proprietà <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> sull'URI (Uniform Resource Identifier) di un tipo di token. Nei servizi federati, specificare il tipo di token previsto dal servizio. Sui client federati, specificare il tipo di token richiesto dal client al servizio token di sicurezza.
 
      Se non viene specificato alcun tipo di token, i client generano token RST (Request Security Token) WS-Trust senza un URI del tipo di token e i servizi prevedono che l'autenticazione client venga eseguita, per impostazione predefinita, usando un token SAML (Security Assertions Markup Language) 1.1.
 
@@ -77,25 +77,25 @@ In Windows Communication Foundation (WCF), il <xref:System.ServiceModel.WSFedera
 
 5. Creare un elemento `<message>` come figlio dell'elemento `<security>`.
 
-6. Parametro facoltativo. Impostare l'attributo `algorithmSuite` sull'elemento `<message>` con un valore appropriato. Il valore predefinito è `Basic256`.
+6. Facoltativo. Impostare l'attributo `algorithmSuite` sull'elemento `<message>` con un valore appropriato. Il valore predefinito è `Basic256`.
 
-7. Parametro facoltativo. Se è necessaria una chiave di prova asimmetrica, impostare l'attributo `issuedKeyType` dell'elemento `<message>` su `AsymmetricKey`. Il valore predefinito è `SymmetricKey`.
+7. Facoltativo. Se è necessaria una chiave di prova asimmetrica, impostare l'attributo `issuedKeyType` dell'elemento `<message>`AsymmetricKey su`AsymmetricKey`. Il valore predefinito è `SymmetricKey`.
 
-8. Parametro facoltativo. Impostare l'attributo `issuedTokenType` sull'elemento `<message>`.
+8. Facoltativo. Impostare l'attributo `issuedTokenType` sull'elemento `<message>`.
 
 9. Obbligatorio sul client se non viene specificata alcuna emittente locale; facoltativo sul servizio. Creare un elemento `<issuer>` come figlio dell'elemento `<message>`.
 
 10. Impostare l'attributo `address` sull'elemento `<issuer>` e specificare l'indirizzo in cui il servizio token di sicurezza accetta richieste del token.
 
-11. Parametro facoltativo. Aggiungere un elemento `<identity>` figlio e specificare l'identità del servizio token di sicurezza
+11. Facoltativo. Aggiungere un elemento `<identity>` figlio e specificare l'identità del servizio token di sicurezza
 
 12. Per altre informazioni, vedere [identità del servizio e autenticazione](service-identity-and-authentication.md).
 
-13. Obbligatorio sul client se non viene specificata alcuna emittente locale; non usato sul servizio. Creare un [ \<associazione >](../../../../docs/framework/misc/binding.md) elemento nella sezione delle associazioni che può essere usata per comunicare con il servizio token di sicurezza. Per altre informazioni sulla creazione di un'associazione, vedere [procedura: specificare un'associazione al servizio nella configurazione](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).
+13. Obbligatorio sul client se non viene specificata alcuna emittente locale; non usato sul servizio. Creare un [ \<associazione >](../../../../docs/framework/misc/binding.md) elemento nella sezione delle associazioni che può essere usata per comunicare con il servizio token di sicurezza. Per altre informazioni sulla creazione di un'associazione, vedere [come: Specificare un'associazione al servizio nella configurazione](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).
 
 14. Specificare l'associazione creata nel passaggio precedente impostando gli attributi `binding` e `bindingConfiguration` dell'elemento `<issuer>`.
 
-15. Non usato sul client; facoltativo sul servizio. Creare un elemento `<issuerMetadata>` come figlio dell'elemento <`message`>. Quindi, in un attributo `address` sull'elemento `<issuerMetadata>`, specificare l'indirizzo in cui il servizio token di sicurezza deve pubblicare i propri metadati. Facoltativamente, aggiungere un elemento `<identity>` figlio e specificare l'identità del servizio token di sicurezza
+15. Non usato sul client; facoltativo sul servizio. Creare un `<issuerMetadata>` elemento come figlio di <`message`> elemento. Quindi, in un attributo `address` sull'elemento `<issuerMetadata>`, specificare l'indirizzo in cui il servizio token di sicurezza deve pubblicare i propri metadati. Facoltativamente, aggiungere un elemento `<identity>` figlio e specificare l'identità del servizio token di sicurezza
 
 16. Facoltativo sul client e sul servizio. Aggiungere un elemento `<claimTypeRequirements>` come figlio dell'elemento `<message>`. Specificare attestazioni obbligatorie e facoltative che il servizio si basa su aggiungendo [ \<aggiungere >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-claimtyperequirements.md) elementi per il `<claimTypeRequirements>` e specificando l'attestazione di tipo con il `claimType` attributo. Specificare se una determinata attestazione è obbligatoria o facoltativa impostando l'attributo `isOptional`.
 
@@ -110,4 +110,4 @@ Nell'esempio seguente viene illustrato il codice per l'impostazione di una class
 
 - [Federazione](federation.md)
 - [Esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Procedura: Disabilitare sessioni sicure in un'associazione WSFederationHttpBinding](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Procedura: Disabilitare le sessioni protette in un'associazione WSFederationHttpBinding](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

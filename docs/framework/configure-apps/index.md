@@ -25,11 +25,11 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775869"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurazione delle app tramite file di configurazione
 .NET Framework, tramite i file di configurazione, offre agli sviluppatori e agli amministratori controllo e flessibilità sulle modalità di esecuzione delle applicazioni. I file di configurazione sono file XML che è possibile modificare in base alle specifiche esigenze. Un amministratore è in grado di controllare le risorse protette alle quali può accedere un'applicazione, le versioni di assembly che verranno usate dall'applicazione e la posizione in cui risiedono applicazioni e oggetti remoti. Gli sviluppatori possono definire le impostazioni all'interno dei file di configurazione senza dover ricompilare un'applicazione dopo ogni modifica di un'impostazione. In questa sezione viene descritto cosa è possibile configurare e l'utilità della configurazione di un'applicazione.  
@@ -66,7 +66,7 @@ ms.locfileid: "59147108"
   
  Il nome e la posizione del file di configurazione dell'applicazione variano in funzione dell'host dell'applicazione, il quale può corrispondere a uno dei seguenti:  
   
--   Eseguibile: applicazione ospitata.  
+- Eseguibile: applicazione ospitata.  
   
      Per queste applicazioni sono disponibili due file di configurazione: un file di configurazione di origine, che viene modificato dallo sviluppatore durante lo sviluppo e un file di output distribuito con l'applicazione.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59147108"
   
      Il file di configurazione di origine viene copiato automaticamente nella directory in cui viene inserito l'assembly compilato per creare il file di configurazione di output distribuito con l'applicazione. In alcuni casi, è possibile che in Visual Studio venga modificato il file di configurazione di output. Per altre informazioni, vedere la sezione [Reindirizzamento delle versioni di assembly a livello di app](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) nell'articolo [Reindirizzamento delle versioni di assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md).  
   
--   Applicazione ospitata in ASP.NET.  
+- Applicazione ospitata in ASP.NET.  
   
      Per altre informazioni sui file di configurazione ASP.NET, vedere [impostazioni di configurazione ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
   
--   Applicazione ospitata in Internet Explorer.  
+- Applicazione ospitata in Internet Explorer.  
   
      Se un'applicazione ospitata in Internet Explorer ha un file di configurazione, il relativo percorso viene specificato in un tag `<link>` con la sintassi seguente:  
   
@@ -94,14 +94,14 @@ ms.locfileid: "59147108"
   
  I file di configurazione della sicurezza si trovano nelle posizioni seguenti:  
   
--   File di configurazione dei criteri aziendali: %*percorso-installazione-runtime*%\Config\Enterprisesec.config  
+- File di configurazione dei criteri aziendali: %*percorso-installazione-runtime*%\Config\Enterprisesec.config  
   
--   File di configurazione dei criteri del computer: %*percorso-installazione-runtime*%\Config\Security.config  
+- File di configurazione dei criteri del computer: %*percorso-installazione-runtime*%\Config\Security.config  
   
--   File di configurazione dei criteri utente: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
+- File di configurazione dei criteri utente: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura: Individuare assembly usando DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [Procedura: Individuare assembly mediante DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  Viene descritto come impostare il runtime in modo da usare la variabile di ambiente DEVPATH durante la ricerca degli assembly.  
   
  [Reindirizzamento delle versioni di assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
@@ -124,7 +124,7 @@ ms.locfileid: "59147108"
 - [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Specifica della posizione di un assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [Reindirizzamento delle versioni di assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
-- [Amministrazione del sito Web ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [Amministrazione di siti Web ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [Gestione di criteri di sicurezza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
 - [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

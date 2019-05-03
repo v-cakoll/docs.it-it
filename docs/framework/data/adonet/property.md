@@ -3,11 +3,11 @@ title: proprietà
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
 ms.openlocfilehash: 71a04f334ec465b0f11cc8f18f2680df651081eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879041"
 ---
 # <a name="property"></a>proprietà
 *Le proprietà* sono i blocchi predefiniti fondamentali dei [tipi di entità](../../../../docs/framework/data/adonet/entity-type.md) e [tipi complessi](../../../../docs/framework/data/adonet/complex-type.md). Le proprietà definiscono la forma e le caratteristiche dei dati che saranno contenuti in un'istanza di un tipo di entità o in un'istanza di un tipo complesso. Le proprietà in un modello concettuale sono analoghe alle proprietà definite su una classe. Nello stesso modo in cui le proprietà su una classe definiscono la forma della classe e forniscono informazioni su oggetti, le proprietà in un modello concettuale definiscono la forma di un tipo di entità e forniscono informazioni su istanze del tipo di entità.  
@@ -17,11 +17,11 @@ ms.locfileid: "59181649"
   
  Una definizione di proprietà contiene le informazioni seguenti:  
   
--   Un nome di proprietà (obbligatorio).  
+- Un nome di proprietà (obbligatorio).  
   
--   Un tipo di proprietà (obbligatorio).  
+- Un tipo di proprietà (obbligatorio).  
   
--   Un set di [facet](../../../../docs/framework/data/adonet/facet.md). (facoltativo)  
+- Un set di [facet](../../../../docs/framework/data/adonet/facet.md). (facoltativo)  
   
  Una proprietà può contenere dati primitivi (ad esempio una stringa, un Integer o un valore booleano) o dati strutturati (ad esempio un tipo complesso). Le proprietà di tipo primitivo sono dette anche proprietà scalari. Per altre informazioni, vedere [Entity Data Model: Tipi di dati primitivi](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
   

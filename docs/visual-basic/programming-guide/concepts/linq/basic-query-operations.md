@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
 ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925648"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Operazioni di query di base (Visual Basic)
 In questo argomento fornisce una breve introduzione alla [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] espressioni in Visual Basic e ad alcuni dei tipi di operazioni eseguite in una query tipici. Per altre informazioni, vedere i seguenti argomenti:  
@@ -81,7 +81,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Per selezionare più campi dall'origine dati, sono disponibili due opzioni:  
   
--   Nel `Select` clausola, specificare i campi da includere nel risultato. Il compilatore verrà definiti un tipo anonimo che include i campi come le relative proprietà. Per altre informazioni, vedere [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+- Nel `Select` clausola, specificare i campi da includere nel risultato. Il compilatore verrà definiti un tipo anonimo che include i campi come le relative proprietà. Per altre informazioni, vedere [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
      Poiché gli elementi restituiti nell'esempio seguente sono istanze di un tipo anonimo, è possibile fare riferimento al tipo di base al nome in un' posizione nel codice. Il nome definito dal compilatore per il tipo contiene caratteri non validi in normale codice di Visual Basic. Nell'esempio seguente, gli elementi nella raccolta restituita dalla query in `londonCusts4` sono istanze di un tipo anonimo  
   
@@ -89,7 +89,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      -oppure-  
   
--   Definire un tipo denominato che contiene i campi specifici che si desidera includere nel risultato e creare e inizializzare istanze del tipo nel `Select` clausola. Usare questa opzione solo se è necessario utilizzare esterne alla raccolta in cui vengono restituiti i singoli risultati o se è necessario passarli come parametri nelle chiamate al metodo. Il tipo di `londonCusts5` nell'esempio seguente è IEnumerable (Of NamePhone).  
+- Definire un tipo denominato che contiene i campi specifici che si desidera includere nel risultato e creare e inizializzare istanze del tipo nel `Select` clausola. Usare questa opzione solo se è necessario utilizzare esterne alla raccolta in cui vengono restituiti i singoli risultati o se è necessario passarli come parametri nelle chiamate al metodo. Il tipo di `londonCusts5` nell'esempio seguente è IEnumerable (Of NamePhone).  
   
      [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   

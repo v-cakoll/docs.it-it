@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
 ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59344871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005641"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Finestre di progettazione composite personalizzate - Relatore di elementi del flusso di lavoro
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> è un tipo chiave nel modello di programmazione della finestra di progettazione di WF che consente la modifica di una raccolta di elementi contenuti. In questo esempio viene illustrato come compilare un ActivityDesigner che espone una raccolta modificabile.
 
  In questo esempio viene illustrato quanto segue:
 
--   Creazione di un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
+- Creazione di un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
 
--   Creazione di un ActivityDesigner con una visualizzazione "compressa" ed "espansa".
+- Creazione di un ActivityDesigner con una visualizzazione "compressa" ed "espansa".
 
--   Esecuzione dell'override di una finestra di progettazione predefinita in un'applicazione riallocata.
+- Esecuzione dell'override di una finestra di progettazione predefinita in un'applicazione riallocata.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
 
@@ -32,15 +32,15 @@ ms.locfileid: "59344871"
 ## <a name="sample-highlights"></a>Evidenziazioni di esempio
  Nel codice di questo esempio viene illustrato quanto segue:
 
--   L'attività di una finestra di progettazione è pensato per:  `Parallel`
+- Compilazione di una finestra di progettazione dell'attività per: `Parallel`
 
--   La creazione di un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Alcune considerazioni:
+- La creazione di un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Alcune considerazioni:
 
-    -   Notare l'uso dell'associazione dati WPF per eseguire l'associazione a `ModelItem.Branches`. `ModelItem` è la proprietà su `WorkflowElementDesigner` che fa riferimento all'oggetto sottostante la finestra di progettazione viene utilizzato, in questo caso, nostro `Parallel`.
+    - Notare l'uso dell'associazione dati WPF per eseguire l'associazione a `ModelItem.Branches`. `ModelItem` è la proprietà su `WorkflowElementDesigner` che fa riferimento all'oggetto sottostante la finestra di progettazione per il quale è usata, in questo caso, `Parallel`.
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> può essere usato per inserire un elemento visivo per visualizzare i singoli elementi nella raccolta.
+    - <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> può essere usato per inserire un elemento visivo per visualizzare i singoli elementi nella raccolta.
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> è un modello che può essere fornito per determinare il layout degli elementi nella raccolta. In questo caso, viene usato un pannello Stack orizzontale.
+    - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> è un modello che può essere fornito per determinare il layout degli elementi nella raccolta. In questo caso, viene usato un pannello Stack orizzontale.
 
  Nel codice dell'esempio seguente viene illustrata questa operazione.
 
@@ -60,9 +60,9 @@ ms.locfileid: "59344871"
   </sad:WorkflowItemsPresenter>
 ```
 
--   Eseguire un'associazione di `DesignerAttribute` al tipo `Parallel`, quindi restituire gli attributi indicati.
+- Eseguire un'associazione di `DesignerAttribute` al tipo `Parallel`, quindi restituire gli attributi indicati.
 
-    -   Registrare innanzitutto tutte le finestre di progettazione predefinite.
+    - Registrare innanzitutto tutte le finestre di progettazione predefinite.
 
  Di seguito è riportato l'esempio di codice.
 
@@ -80,7 +80,7 @@ metadata.Register()
 RegisterCustomMetadata()
 ```
 
-    -   Eseguire quindi l'override dell'elemento parallelo nel metodo `RegisterCustomMetadata`.
+    - Eseguire quindi l'override dell'elemento parallelo nel metodo `RegisterCustomMetadata`.
 
  Nel codice seguente viene illustrato questa operazione in C# e Visual Basic.
 
@@ -101,7 +101,7 @@ Sub RegisterCustomMetadata()
 End Sub
 ```
 
--   Osservare infine notare l'uso di diversi modelli di dati e trigger per selezionare il modello appropriato in base alla proprietà `IsRootDesigner`.
+- Osservare infine notare l'uso di diversi modelli di dati e trigger per selezionare il modello appropriato in base alla proprietà `IsRootDesigner`.
 
  Di seguito è riportato l'esempio di codice.
 

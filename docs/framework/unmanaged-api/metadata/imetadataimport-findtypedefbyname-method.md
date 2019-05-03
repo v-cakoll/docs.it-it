@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5cd6b74ce2871cfafc0dc2260be3f758f6a28704
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777858"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>Metodo IMetaDataImport::FindTypeDefByName
 Ottiene un puntatore ai metadati TypeDef token per il <xref:System.Type> con il nome specificato.  

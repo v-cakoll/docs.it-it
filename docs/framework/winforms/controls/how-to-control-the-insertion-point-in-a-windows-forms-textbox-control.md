@@ -11,11 +11,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
 ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746628"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Forms
 Quando un controllo Windows Form <xref:System.Windows.Forms.TextBox> controllo riceve lo stato attivo, l'inserimento dell'impostazione predefinita all'interno della casella di testo è a sinistra del testo esistente. L'utente può spostare il punto di inserimento con il mouse o tastiera. Se la casella di testo perde e riacquisisce quindi lo stato attivo, il punto di inserimento sarà ovunque l'utente ultima posizione assegnata.  
@@ -59,15 +59,15 @@ Quando un controllo Windows Form <xref:System.Windows.Forms.TextBox> controllo r
   
 #### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>Per rendere visibile punto di inserimento della casella di testo per impostazione predefinita in un nuovo modulo  
   
--   Impostare il <xref:System.Windows.Forms.TextBox> del controllo <xref:System.Windows.Forms.Control.TabIndex%2A> proprietà `0`.  
+- Impostare il <xref:System.Windows.Forms.TextBox> del controllo <xref:System.Windows.Forms.Control.TabIndex%2A> proprietà `0`.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.TextBox>
-- [Panoramica del controllo TextBox](textbox-control-overview-windows-forms.md)
-- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Cenni preliminari sul controllo TextBox](textbox-control-overview-windows-forms.md)
+- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Form](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [Procedura: Creare una casella di testo di sola lettura](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Procedura: Inserire virgolette in una stringa](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Procedura: Selezionare testo nel controllo TextBox di Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Procedura: Visualizzare più righe nel controllo TextBox di Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Procedura: Selezionare il testo nel controllo TextBox Windows Form](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Procedura: Visualizzare più righe nel controllo TextBox Windows Form](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [Controllo TextBox](textbox-control-windows-forms.md)

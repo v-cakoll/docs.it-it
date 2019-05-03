@@ -11,11 +11,11 @@ ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754726"
 ---
 # <a name="failedqi-mda"></a>MDA failedQI
 L'assistente al debug gestito `failedQI` viene attivato quando il runtime chiama `QueryInterface` su un puntatore a interfaccia COM per conto di un Runtime Callable Wrapper (RWC) e la chiamata `QueryInterface` non riesce.  
@@ -25,11 +25,11 @@ L'assistente al debug gestito `failedQI` viene attivato quando il runtime chiama
   
 ## <a name="cause"></a>Causa  
   
--   La chiamata viene effettuata da un contesto errato.  
+- La chiamata viene effettuata da un contesto errato.  
   
--   Il proxy registrato non riesce a chiamare `QueryInterface` perché il tentativo di chiamata è stato effettuato nel contesto errato.  
+- Il proxy registrato non riesce a chiamare `QueryInterface` perché il tentativo di chiamata è stato effettuato nel contesto errato.  
   
--   Un proxy di proprietà di OLE ha restituito un HRESULT di errore.  
+- Un proxy di proprietà di OLE ha restituito un HRESULT di errore.  
   
 ## <a name="resolution"></a>Risoluzione  
  Vedere la documentazione MSDN relativa alle regole COM.  

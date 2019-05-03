@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
 ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053132"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Mapping di proprietà di Windows Form e WPF
 Il [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tecnologie hanno due proprietà simili ma diversi modelli. *Mapping di proprietà* supporta l'interazione tra le due architetture e offre le funzionalità seguenti:  
   
--   Semplifica mappare le modifiche alle proprietà rilevanti nell'ambiente host per il controllo ospitato o un elemento.  
+- Semplifica mappare le modifiche alle proprietà rilevanti nell'ambiente host per il controllo ospitato o un elemento.  
   
--   Offre gestione predefinita per il mapping di più comunemente usate le proprietà.  
+- Offre gestione predefinita per il mapping di più comunemente usate le proprietà.  
   
--   Consente di rimuovere facilmente, si esegue l'override o l'estensione di proprietà predefinite.  
+- Consente di rimuovere facilmente, si esegue l'override o l'estensione di proprietà predefinite.  
   
--   Assicura che modifiche dei valori di proprietà dell'host vengono automaticamente rilevate e convertite nel controllo ospitato elemento.  
+- Assicura che modifiche dei valori di proprietà dell'host vengono automaticamente rilevate e convertite nel controllo ospitato elemento.  
   
 > [!NOTE]
 >  Eventi di modifica delle proprietà non vengono propagati backup del controllo host o della gerarchia di elementi. La conversione delle proprietà non viene eseguita se il valore locale di una proprietà non cambia a causa di impostazione diretta, stili, ereditarietà, l'associazione dati o altri meccanismi che modificano il valore della proprietà.  
@@ -54,66 +54,66 @@ Il [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]
 ## <a name="updates-to-parent-properties"></a>Aggiornamenti alle proprietà padre  
  Le modifiche per la maggior parte delle proprietà padre determinano le notifiche per il controllo figlio ospitato. Nell'elenco seguente vengono descritte le proprietà che non provocano notifiche quando i loro valori cambiano.  
   
--   <xref:System.Windows.Controls.Control.Background%2A>  
+- <xref:System.Windows.Controls.Control.Background%2A>  
   
--   <xref:System.Windows.FrameworkElement.Cursor%2A>  
+- <xref:System.Windows.FrameworkElement.Cursor%2A>  
   
--   <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
+- <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
   
--   <xref:System.Windows.UIElement.Visibility%2A>  
+- <xref:System.Windows.UIElement.Visibility%2A>  
   
  Ad esempio, se si modifica il valore dei <xref:System.Windows.Controls.Control.Background%2A> proprietà del <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento, il <xref:System.Windows.Forms.Control.BackColor%2A> proprietà del controllo ospitato non viene modificata.  
   
 ## <a name="property-mapping-with-the-elementhost-control"></a>Mapping di proprietà con il controllo ElementHost  
  Le proprietà seguenti forniscono una notifica di modifica predefinito. Non chiamare il <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> metodo quando si esegue il mapping di queste proprietà:  
   
--   AutoSize  
+- AutoSize  
   
--   BackColor  
+- BackColor  
   
--   BackgroundImage  
+- BackgroundImage  
   
--   BackgroundImageLayout  
+- BackgroundImageLayout  
   
--   BindingContext  
+- BindingContext  
   
--   CausesValidation  
+- CausesValidation  
   
--   ContextMenu  
+- ContextMenu  
   
--   ContextMenuStrip  
+- ContextMenuStrip  
   
--   Cursore  
+- Cursore  
   
--   Dock  
+- Dock  
   
--   Enabled  
+- Enabled  
   
--   Carattere  
+- Carattere  
   
--   ForeColor  
+- ForeColor  
   
--   Percorso  
+- Percorso  
   
--   Margini  
+- Margini  
   
--   Spaziatura interna  
+- Spaziatura interna  
   
--   Padre  
+- Padre  
   
--   Region  
+- Region  
   
--   RightToLeft  
+- RightToLeft  
   
--   Dimensione  
+- Dimensione  
   
--   TabIndex  
+- TabIndex  
   
--   TabStop  
+- TabStop  
   
--   Testo  
+- Testo  
   
--   Visibile  
+- Visibile  
   
  Il <xref:System.Windows.Forms.Integration.ElementHost> controllo converte predefinito [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] le proprietà da loro [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] equivalenti utilizzando la seguente tabella di conversione.  
   

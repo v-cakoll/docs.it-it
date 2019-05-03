@@ -13,11 +13,11 @@ helpviewer_keywords:
 - highlighting text
 ms.assetid: b77693f5-87bb-4b29-a297-05ff882e2044
 ms.openlocfilehash: fafd3fc7345f94d3907163ff9dcf0ab293f85f3f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609953"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>Trovare ed evidenziare il testo utilizzando l'automazione interfaccia utente
 > [!NOTE]
@@ -37,4 +37,4 @@ ms.locfileid: "59157157"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Trovare ed evidenziare il testo utilizzando l'automazione interfaccia utente](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+- [Trovare ed evidenziare il testo usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)

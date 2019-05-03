@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 515d434e8d8f1c99cf5052ef9a2f1e098f6021b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915267"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a>Metodo ICorDebugManagedCallback2::FunctionRemapComplete
 Notifica al debugger che l'esecuzione di codice è passata a una nuova versione di una funzione modificata.  

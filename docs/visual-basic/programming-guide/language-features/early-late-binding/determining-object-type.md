@@ -10,11 +10,11 @@ helpviewer_keywords:
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
 ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59302712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050519"
 ---
 # <a name="determining-object-type-visual-basic"></a>Determinazione del tipo di un oggetto (Visual Basic)
 Variabili oggetto generico (ovvero, le variabili dichiarate come `Object`) possono contenere oggetti di qualsiasi classe. Quando si usano le variabili di tipo `Object`, potrebbe essere necessario eseguire azioni diverse in base alla classe dell'oggetto, ad esempio, alcuni oggetti potrebbero non supportare una determinata proprietà o metodo. Visual Basic offre due modi per determinare quale tipo di oggetto viene archiviato in una variabile oggetto: il `TypeName` funzione e `TypeOf...Is` operatore.  
@@ -48,7 +48,7 @@ Variabili oggetto generico (ovvero, le variabili dichiarate come `Object`) posso
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [Chiamata di una proprietà o di un metodo mediante un nome di stringa](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Istruzione If...Then...Else](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [Tipo di dati String](../../../../visual-basic/language-reference/data-types/string-data-type.md)
 - [Tipo di dati Integer](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

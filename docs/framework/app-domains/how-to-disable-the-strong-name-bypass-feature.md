@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4e5ea1907ec3de4536d09b3d76ca4956c8756d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86fc35ae20211bd32a21d60b7313074361aef671
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494302"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59296173"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Procedura: Disabilitare la funzionalità che consente di ignorare il nome sicuro
 A partire da .NET Framework versione 3.5 Service Pack 1 (SP1), le firme con nome sicuro non vengono convalidate quando un assembly viene caricato in un oggetto <xref:System.AppDomain> con attendibilità totale, ad esempio l'oggetto predefinito <xref:System.AppDomain> per la zona `MyComputer`. Questo comportamento è reso possibile dalla funzionalità che consente di ignorare la verifica del nome sicuro. In un ambiente ad attendibilità totale le richieste di <xref:System.Security.Permissions.StrongNameIdentityPermission> hanno sempre esito positivo per gli assembly ad attendibilità totale firmati, indipendentemente dalla firma. L'unica restrizione è che l'assembly deve essere ad attendibilità totale perché la relativa area è ad attendibilità totale. Poiché il nome sicuro non è un fattore determinante in queste condizioni, non esiste alcun motivo per cui venga validato. Se la convalida di firme con nome sicuro viene ignorata, si ottengono miglioramenti significativi delle prestazioni.  
@@ -34,11 +34,11 @@ A partire da .NET Framework versione 3.5 Service Pack 1 (SP1), le firme con nome
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>Per disabilitare la funzionalità che consente di ignorare il nome sicuro per una singola applicazione  
   
-1.  Aprire o creare il file di configurazione dell'applicazione.  
+1. Aprire o creare il file di configurazione dell'applicazione.  
   
      Per altre informazioni su questo file, vedere la sezione File di configurazione dell'applicazione in [Configurazione delle app](../../../docs/framework/configure-apps/index.md).  
   
-2.  Aggiungere quanto segue:  
+2. Aggiungere quanto segue:  
   
     ```xml  
     <configuration>  
@@ -54,6 +54,7 @@ A partire da .NET Framework versione 3.5 Service Pack 1 (SP1), le firme con nome
 >  È possibile attivare e disattivare la convalida dei nomi sicuri per un'applicazione solo se nel computer è attivata la funzionalità che consente di ignorare il nome sicuro. Se la funzionalità è stata disattivata per il computer, i nomi sicuri vengono convalidati per tutte le applicazioni e non è possibile ignorare la convalida per una singola applicazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Sn.exe (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Elemento \<bypassTrustedAppStrongNames>](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)
 - [Creazione e utilizzo degli assembly con nome sicuro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

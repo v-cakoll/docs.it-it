@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
 ms.openlocfilehash: a9f74f025af6dfc5737ea9f4971f68c5ad913e8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793450"
 ---
 # <a name="batching-operations-wcf-data-services"></a>Esecuzione di operazioni in batch (WCF Data Services)
 Il [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] supporta l'elaborazione delle richieste per batch un' [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-servizio basato su. Per altre informazioni, vedere [OData: Elaborazione batch](https://go.microsoft.com/fwlink/?LinkId=186075). Nelle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], ogni operazione che utilizza il <xref:System.Data.Services.Client.DataServiceContext>, ad esempio l'esecuzione di una query o salvataggio di modifiche, i risultati di una richiesta separata inviati al servizio dati. Per mantenere un ambito logico per i set di operazioni, è possibile definire in modo esplicito batch operativi. Ciò garantisce che tutte le operazioni nel batch vengono inviati al servizio dati in una singola richiesta HTTP, consente al server elaborare le operazioni in modo atomico e riduce il numero di round trip al servizio dati.  

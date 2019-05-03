@@ -3,11 +3,11 @@ title: 'Procedura: Usare le annotazioni per trasformare alberi LINQ to XML in un
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
 ms.openlocfilehash: a8db5f9dc29b4053321c81c9da58e12610ef63c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613442"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Procedura: Usare le annotazioni per trasformare alberi LINQ to XML in uno stile XSLT (Visual Basic)
 Le annotazioni possono essere usate per facilitare le trasformazioni di un albero XML.  
@@ -24,21 +24,21 @@ Le annotazioni possono essere usate per facilitare le trasformazioni di un alber
   
  Il riepilogo dell'approccio è il seguente:  
   
--   Annotare gli elementi dell'albero con un elemento sostitutivo.  
+- Annotare gli elementi dell'albero con un elemento sostitutivo.  
   
--   Scorrere l'intero albero, creando un nuovo albero in cui ogni elemento viene sostituito con la relativa annotazione. In questo esempio vengono implementate l'iterazione e la creazione del nuovo albero in una funzione denominato `XForm`.  
+- Scorrere l'intero albero, creando un nuovo albero in cui ogni elemento viene sostituito con la relativa annotazione. In questo esempio vengono implementate l'iterazione e la creazione del nuovo albero in una funzione denominato `XForm`.  
   
  In dettaglio, l'approccio è costituito dai seguenti passaggi:  
   
--   Eseguire una o più query LINQ to XML che restituiscono il set di elementi da trasformare da una forma a un'altra. Per ogni elemento della query, aggiungere un nuovo oggetto <xref:System.Xml.Linq.XElement> come annotazione all'elemento. Questo nuovo elemento sostituirà l'elemento annotato nel nuovo albero trasformato. Il codice da scrivere è semplice, come illustrato nell'esempio.  
+- Eseguire una o più query LINQ to XML che restituiscono il set di elementi da trasformare da una forma a un'altra. Per ogni elemento della query, aggiungere un nuovo oggetto <xref:System.Xml.Linq.XElement> come annotazione all'elemento. Questo nuovo elemento sostituirà l'elemento annotato nel nuovo albero trasformato. Il codice da scrivere è semplice, come illustrato nell'esempio.  
   
--   Il nuovo elemento aggiunto come annotazione può contenere nuovi nodi figlio e può formare un sottoalbero con la forma desiderata.  
+- Il nuovo elemento aggiunto come annotazione può contenere nuovi nodi figlio e può formare un sottoalbero con la forma desiderata.  
   
--   È necessario seguire una regola speciale: se un nodo figlio del nuovo elemento è incluso in uno spazio dei nomi diverso, ovvero uno spazio dei nomi creato appositamente (in questo esempio lo spazio dei nomi è `http://www.microsoft.com/LinqToXmlTransform/2007`), tale elemento figlio non viene copiato nel nuovo albero. Se invece lo spazio dei nomi è quello speciale citato in precedenza e il nome locale dell'elemento è `ApplyTransforms`, i nodi figlio dell'elemento nell'albero di origine vengono scorsi e quindi copiati nel nuovo albero, con l'eccezione che gli elementi figlio annotati vengono trasformati anch'essi in base a queste regole.  
+- È necessario seguire una regola speciale: se un nodo figlio del nuovo elemento è incluso in uno spazio dei nomi diverso, ovvero uno spazio dei nomi creato appositamente (in questo esempio lo spazio dei nomi è `http://www.microsoft.com/LinqToXmlTransform/2007`), tale elemento figlio non viene copiato nel nuovo albero. Se invece lo spazio dei nomi è quello speciale citato in precedenza e il nome locale dell'elemento è `ApplyTransforms`, i nodi figlio dell'elemento nell'albero di origine vengono scorsi e quindi copiati nel nuovo albero, con l'eccezione che gli elementi figlio annotati vengono trasformati anch'essi in base a queste regole.  
   
--   Questo comportamento è in una certa misura analogo alla specifica di trasformazioni in XSL. La query che seleziona un set di nodi è analoga all'espressione XPath per un modello. Il codice per creare il nuovo elemento <xref:System.Xml.Linq.XElement> salvato come annotazione è analogo al costruttore di sequenze in XSL e l'elemento `ApplyTransforms` ha una funzione analoga all'elemento `xsl:apply-templates` in XSL.  
+- Questo comportamento è in una certa misura analogo alla specifica di trasformazioni in XSL. La query che seleziona un set di nodi è analoga all'espressione XPath per un modello. Il codice per creare il nuovo elemento <xref:System.Xml.Linq.XElement> salvato come annotazione è analogo al costruttore di sequenze in XSL e l'elemento `ApplyTransforms` ha una funzione analoga all'elemento `xsl:apply-templates` in XSL.  
   
--   Uno dei vantaggi di questo approccio è che le query formulate vengono sempre scritte sull'albero di origine non modificata. Non è necessario preoccuparsi degli effetti delle modifiche apportate all'albero sulle query che vengono scritte.  
+- Uno dei vantaggi di questo approccio è che le query formulate vengono sempre scritte sull'albero di origine non modificata. Non è necessario preoccuparsi degli effetti delle modifiche apportate all'albero sulle query che vengono scritte.  
   
 ## <a name="transforming-a-tree"></a>Trasformazione di un albero  
  Nel primo esempio tutti i nodi `Paragraph` vengono rinominati in `para`.  
@@ -158,7 +158,7 @@ After Transform
 ## <a name="effecting-the-transform"></a>Esecuzione della trasformazione  
  Una piccola funzione, `XForm`, crea un nuovo albero trasformato dall'albero originale annotato.  
   
--   Lo pseudo-codice per la funzione è piuttosto semplice:  
+- Lo pseudo-codice per la funzione è piuttosto semplice:  
   
 ```  
 The function takes an XElement as an argument and returns an XElement.   

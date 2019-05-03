@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
 ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906737"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Procedura: Eliminare una risorsa di sistema (Visual Basic)
 È possibile usare un `Using` blocco per garantire che il sistema elimina una risorsa quando il codice esce dal blocco. Ciò è utile se si usa una risorsa di sistema che utilizza una grande quantità di memoria o che altri componenti inoltre desiderano utilizzare.  

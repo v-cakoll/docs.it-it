@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
 ms.openlocfilehash: 29dbdf74808fc98bb856483c3fd8e3a09a72113b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59318793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925580"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Spazio dello stack insufficiente (Visual Basic)
 Lo stack è un'area di lavoro di memoria aumenta e si ridotta dinamicamente con le esigenze del programma in esecuzione. Sono stati superati i limiti massimi.  

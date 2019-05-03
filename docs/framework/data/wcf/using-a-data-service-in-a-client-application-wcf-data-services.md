@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
 ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875310"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Utilizzo di un servizio dati in un'applicazione client (WCF Data Services)
 È possibile accedere a un servizio che espone un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed specificando un URI a un Web browser. L'URI fornisce l'indirizzo di una risorsa e i messaggi di richiesta vengono inviati a questi indirizzi per accedere ai dati sottostanti rappresentati dalla risorsa o per modificarli. Il browser invia un comando GET HTTP e restituisce la risorsa richiesta come feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Per altre informazioni, vedere [accesso al servizio da un Web Browser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -21,7 +21,7 @@ ms.locfileid: "59155935"
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] garantisce l'interoperabilità tra servizi che espongono [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] newsfeed e le applicazioni che utilizzano [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Applicazioni di accedere e modificare i dati in un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-servizio basato su inviando messaggi di richiesta di un'azione HTTP specifica e utilizzando un URI che indirizza una risorsa di entità sulla quale deve essere eseguita l'azione. I dati di entità necessari vengono forniti come payload codificato in modo appropriato nel corpo del messaggio.  
   
 ### <a name="http-actions"></a>Azioni HTTP  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] supporta le azioni HTTP seguenti da eseguire creano, lettura, aggiornamento ed eliminazione di operazioni sui dati di entità rappresentati dalla risorsa indirizzata:  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] supporta le azioni HTTP riportate di seguito per l'esecuzione di operazioni di creazione, lettura, aggiornamento ed eliminazione sui dati di entità rappresentati dalla risorsa indirizzata.  
   
 -   **HTTP GET** -si tratta dell'azione predefinita quando si accede a una risorsa da un browser. Nel messaggio di richiesta non viene fornito alcun payload e viene restituito un metodo di risposta con un payload contenente i dati richiesti.  
   
@@ -53,5 +53,5 @@ ms.locfileid: "59155935"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Accesso alle risorse dei servizi dati](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [Accesso alle risorse di un servizio dati](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
 - [Guida rapida](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

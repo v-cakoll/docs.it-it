@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
 ms.openlocfilehash: ad75c556748bf5c0f9cef55310c4ffa7b01fd458
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59318832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920835"
 ---
 # <a name="permission-denied-visual-basic"></a>Autorizzazione negata (Visual Basic)
 È stato effettuato un tentativo di scrivere in un disco protetto da scrittura o accedere a un file bloccato.  

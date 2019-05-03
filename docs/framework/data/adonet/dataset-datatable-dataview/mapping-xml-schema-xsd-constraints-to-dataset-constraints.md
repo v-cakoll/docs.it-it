@@ -3,22 +3,22 @@ title: Mapping tra vincoli XML Schema (XSD) e vincoli di dataset
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
 ms.openlocfilehash: a1690e99aeaeb7ed9c85fd28697ae22d34bb2018
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607897"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapping tra vincoli XML Schema (XSD) e vincoli di dataset
 Lo schema XSD (XML Schema Definition Language) consente di specificare vincoli sugli elementi e sugli attributi in esso definiti. Durante il mapping di un XML Schema allo schema relazionale in una <xref:System.Data.DataSet>, vengono eseguito il mapping di vincoli di XML Schema ai vincoli relazionali appropriati nelle tabelle e colonne all'interno di **set di dati**.  
   
  Contenuto della sezione viene illustrato il mapping dei seguenti vincoli di XML Schema:  
   
--   Il vincolo di univocità specificato mediante il **univoco** elemento.  
+- Il vincolo di univocità specificato mediante il **univoco** elemento.  
   
--   Il vincolo di chiave specificato utilizzando il **chiave** elemento.  
+- Il vincolo di chiave specificato utilizzando il **chiave** elemento.  
   
--   Il vincolo keyref specificato mediante il **keyref** elemento.  
+- Il vincolo keyref specificato mediante il **keyref** elemento.  
   
  Usando un vincolo su un elemento o su un attributo, si specificano determinate restrizioni relative ai valori dell'elemento in qualsiasi istanza del documento. Ad esempio, un vincolo di chiave in un **CustomerID** elemento figlio di un **Customer** elemento nello schema indica che i valori del **CustomerID** elemento figlio deve essere univoco in qualsiasi istanza del documento, e che non sono consentiti valori null.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - menus
 ms.assetid: b41cc5a3-cc59-4996-aa3c-8dd9c17d3c90
 ms.openlocfilehash: da1b76a7019f364e7463a8345aa80d9a9bd6089e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012784"
 ---
 # <a name="mainmenu-component-overview-windows-forms"></a>Cenni preliminari sul componente MainMenu (Windows Form)
 > [!IMPORTANT]
@@ -31,4 +31,4 @@ ms.locfileid: "59168480"
 - <xref:System.Windows.Forms.MenuItem>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>
-- [Panoramica del controllo MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Panoramica sul controllo MenuStrip](menustrip-control-overview-windows-forms.md)

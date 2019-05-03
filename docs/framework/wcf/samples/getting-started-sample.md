@@ -8,11 +8,11 @@ helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
 ms.openlocfilehash: b249137117f970a14284beb6439e501a3004eee1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051975"
 ---
 # <a name="getting-started-sample"></a>Esempio della guida introduttiva
 
@@ -286,4 +286,4 @@ Nell'esempio della guida introduttiva viene illustrata la modalità standard per
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura: Ospitare un servizio WCF in un'applicazione gestita](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [Procedura: Hosting di un servizio WCF in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Procedura: Ospitare un servizio WCF in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

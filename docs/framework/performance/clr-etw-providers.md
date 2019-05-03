@@ -8,11 +8,11 @@ ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59302621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787998"
 ---
 # <a name="clr-etw-providers"></a>Provider ETW di CLR
 Common Language Runtime (CLR) dispone di due provider, ovvero il provider di runtime e quello di rundown.  

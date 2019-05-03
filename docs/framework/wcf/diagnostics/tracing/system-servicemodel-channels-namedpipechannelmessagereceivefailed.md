@@ -3,11 +3,11 @@ title: System.ServiceModel.Channels.NamedPipeChannelMessageReceiveFailed
 ms.date: 03/30/2017
 ms.assetid: 20e65df6-4539-428d-bf61-92e05c405bef
 ms.openlocfilehash: 161ccfc42627a02a8017bdcf1cbe24dcc6d364ea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950956"
 ---
 # <a name="systemservicemodelchannelsnamedpipechannelmessagereceivefailed"></a>System.ServiceModel.Channels.NamedPipeChannelMessageReceiveFailed
 System.ServiceModel.Channels.NamedPipeChannelMessageReceiveFailed  
@@ -18,5 +18,5 @@ System.ServiceModel.Channels.NamedPipeChannelMessageReceiveFailed
 ## <a name="see-also"></a>Vedere anche
 
 - [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
 ms.openlocfilehash: 0c1526e32ddc64cb4124c6f8205d58deef911dd6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802474"
 ---
 # <a name="friend-assembly-reference-reference-is-invalid"></a>Riferimento all'assembly Friend \<riferimento > non è valido
 Riferimento all'assembly Friend \<riferimento > non è valido. Gli assembly firmati con nome sicuro devono specificare una chiave pubblica nelle relative dichiarazioni InternalsVisibleTo.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
 ms.openlocfilehash: f1dcc03a67880727893e55c13d65a804586b3f56
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788921"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 Consente di usare l'inferenza del tipo di variabile locale nelle dichiarazioni di variabile.  
@@ -56,9 +56,9 @@ vbc -optioninfer+ test.vb
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Infer (istruzione)](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Istruzione Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)
 - [Inferenza del tipo di variabile locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Impostazioni predefinite di Visual Basic, Progetti, finestra di dialogo Opzioni](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
-- [Compilazione (pagina), Creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [Pagina Compilazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [Compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)

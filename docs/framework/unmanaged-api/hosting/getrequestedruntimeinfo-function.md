@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1290aa864a3f65e549bc26173dcd23648b8dee90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627984"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>Funzione GetRequestedRuntimeInfo
 Ottiene informazioni di versione e la directory di common language runtime (CLR) richiesto da un'applicazione.  
@@ -94,25 +94,25 @@ HRESULT GetRequestedRuntimeInfo (
   
  In .NET Framework versione 2.0, è possibile ottenere informazioni sull'ultima versione installata tramite il `GetRequestedRuntimeInfo` metodo come indicato di seguito:  
   
--   Specificare il `pExe`, `pwszVersion`, e `pConfigurationFile` parametri come valori null.  
+- Specificare il `pExe`, `pwszVersion`, e `pConfigurationFile` parametri come valori null.  
   
--   Specificare il flag RUNTIME_INFO_UPGRADE_VERSION nel `RUNTIME_INFO_FLAGS` enumerazioni per il `runtimeInfoFlags` parametro.  
+- Specificare il flag RUNTIME_INFO_UPGRADE_VERSION nel `RUNTIME_INFO_FLAGS` enumerazioni per il `runtimeInfoFlags` parametro.  
   
  Il `GetRequestedRuntimeInfo` metodo non restituisce la versione più recente di Common Language Runtime nelle circostanze seguenti:  
   
--   Esiste un file di configurazione che specifica il caricamento di una particolare versione CLR. Si noti che .NET Framework utilizzerà il file di configurazione anche se si specifica null per il `pConfigurationFile` parametro.  
+- Esiste un file di configurazione che specifica il caricamento di una particolare versione CLR. Si noti che .NET Framework utilizzerà il file di configurazione anche se si specifica null per il `pConfigurationFile` parametro.  
   
--   Il [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) metodo è stato chiamato specificando una versione precedente di Common Language Runtime.  
+- Il [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) metodo è stato chiamato specificando una versione precedente di Common Language Runtime.  
   
--   Un'applicazione che è stata compilata per una versione precedente di Common Language Runtime è in esecuzione.  
+- Un'applicazione che è stata compilata per una versione precedente di Common Language Runtime è in esecuzione.  
   
  Per il `runtimeInfoFlags` parametro, è possibile specificare solo una delle costanti dell'architettura di `RUNTIME_INFO_FLAGS` enumerazione per volta:  
   
--   RUNTIME_INFO_REQUEST_IA64  
+- RUNTIME_INFO_REQUEST_IA64  
   
--   RUNTIME_INFO_REQUEST_AMD64  
+- RUNTIME_INFO_REQUEST_AMD64  
   
--   RUNTIME_INFO_REQUEST_X86  
+- RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

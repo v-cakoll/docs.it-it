@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c1261942865419762fa454eb8d4bc5e5d99e86d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995241"
 ---
 # <a name="icordebugmanagedcallbackevalcomplete-method"></a>Metodo ICorDebugManagedCallback::EvalComplete
 Notifica al debugger che è stata completata una valutazione.  

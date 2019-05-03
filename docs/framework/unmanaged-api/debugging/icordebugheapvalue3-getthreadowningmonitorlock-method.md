@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1678f1de7c23387f028348dadbc7b61e2cdc035c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701021"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>Metodo ICorDebugHeapValue3::GetThreadOwningMonitorLock
 Restituisce il thread gestito che possiede il blocco di monitoraggio per questo oggetto.  
@@ -56,9 +56,9 @@ HRESULT GetThreadOwningMonitorLock (
 ## <a name="remarks"></a>Note  
  Se un thread gestito è il proprietario del blocco di monitoraggio per questo oggetto:  
   
--   Il metodo restituisce S_OK.  
+- Il metodo restituisce S_OK.  
   
--   L'oggetto thread è valido fino a quando la chiusura del thread.  
+- L'oggetto thread è valido fino a quando la chiusura del thread.  
   
  Se nessun thread gestito possiede il blocco di monitoraggio tohoto objektu `ppThread` e `pAcquisitionCount` rimangono invariati, e il metodo restituisce S_FALSE.  
   

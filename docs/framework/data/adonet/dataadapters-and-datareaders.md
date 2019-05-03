@@ -3,10 +3,10 @@ title: DataAdapter e DataReader
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
 ms.openlocfilehash: af1d44b1e320557ab7906ce65dbeb5415b5c09dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189690"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter e DataReader
@@ -17,22 +17,22 @@ ms.locfileid: "59189690"
  Per ogni provider di dati .NET Framework incluso in .NET Framework sono disponibili un oggetto <xref:System.Data.Common.DbDataReader> e un oggetto <xref:System.Data.Common.DbDataAdapter>: nel provider di dati .NET Framework per OLE DB sono inclusi <xref:System.Data.OleDb.OleDbDataReader> e <xref:System.Data.OleDb.OleDbDataAdapter>, in quello per SQL Server sono inclusi <xref:System.Data.SqlClient.SqlDataReader> e <xref:System.Data.SqlClient.SqlDataAdapter>, in quello per ODBC sono inclusi <xref:System.Data.Odbc.OdbcDataReader> e <xref:System.Data.Odbc.OdbcDataAdapter> e in quello per Oracle sono inclusi <xref:System.Data.OracleClient.OracleDataReader> e <xref:System.Data.OracleClient.OracleDataAdapter>.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Recupero di dati tramite un oggetto DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
+ [Recupero di dati tramite DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
  Viene descritto il ADO.NET **DataReader** oggetto e come usarlo per restituire un flusso di risultati da un'origine dati.  
   
- [Popolamento di un dataset da un oggetto DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
+ [Popolamento di un set di dati da un oggetto DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  Viene descritto come compilare un `DataSet` con tabelle, colonne e righe usando un `DataAdapter`.  
   
  [Parametri DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  Viene descritto come usare i parametri con le proprietà dei comandi di un `DataAdapter` e vengono fornite informazioni su come eseguire il mapping del contenuto di una colonna in un `DataSet` sul parametro di un comando.  
   
- [Aggiunta di vincoli esistenti a un dataset](../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
+ [Aggiunta di vincoli esistenti a un set di dati](../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  Viene descritto come aggiungere i vincoli esistenti a un `DataSet`.  
   
  [Mapping di DataAdapter, DataTable e DataColumn](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)  
  Viene descritto come impostare `DataTableMappings` e `ColumnMappings` per un `DataAdapter`.  
   
- [Spostarsi tra il risultato delle query](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
+ [Paging del risultato di query](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
  Viene fornito un esempio di visualizzazione dei risultati di una query sotto forma di pagine di dati.  
   
  [Aggiornamento di origini dati con DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "59189690"
  [Gestione di eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
  Vengono descritti gli eventi del `DataAdapter` e il relativo uso.  
   
- [Esecuzione di operazioni batch tramite oggetti DataAdapter](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
+ [Esecuzione di operazioni batch tramite DataAdapter](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
  Viene descritto il miglioramento delle prestazioni delle applicazioni mediante la riduzione del numero dei round trip a SQL Server quando si applicano gli aggiornamenti dal `DataSet`.  
   
 ## <a name="see-also"></a>Vedere anche

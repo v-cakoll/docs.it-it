@@ -11,21 +11,21 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 4ac0d6449fea4980154eef8c88d03d13230a6a62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06d458828c77f61e03d18f635ec00f6a7267bab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514049"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59341868"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Procedura: Impostare criteri di cache basati sulla posizione per un'applicazione
 I criteri di cache basati sulla posizione consentono a un'applicazione di definire in modo esplicito il comportamento di memorizzazione nella cache in base alla posizione della risorsa richiesta. Questo argomento illustra l'impostazione dei criteri di cache a livello di codice. Per informazioni sull'impostazione dei criteri per un'applicazione che usa file di configurazione, vedere [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Per impostare criteri di cache basati sulla posizione per un'applicazione  
   
-1.  Creare un oggetto <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>.  
+1. Creare un oggetto <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>.  
   
-2.  Impostare l'oggetto criteri come predefinito per il dominio dell'applicazione.  
+2. Impostare l'oggetto criteri come predefinito per il dominio dell'applicazione.  
   
 ### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>Per impostare un criterio che prende le risorse richieste da una cache  
   
@@ -154,6 +154,7 @@ I criteri di cache basati sulla posizione consentono a un'applicazione di defini
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)
 - [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)

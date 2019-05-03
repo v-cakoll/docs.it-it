@@ -4,41 +4,41 @@ ms.date: 03/30/2017
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
 ms.openlocfilehash: 6af0336e19df4ba2a99a52f8726e78ed92f5a79e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59323304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940465"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Procedura: Abilitare WIF per un'applicazione del servizio Web WCF
 ## <a name="applies-to"></a>Si applica a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Microsoft® Windows® Communication Foundation (WCF)  
+- Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>Riepilogo  
  In questa guida procedurale vengono fornite le procedure dettagliate per abilitare WIF in un servizio Web WCF. Vengono inoltre fornite le istruzioni su come testare l'applicazione per verificare il corretto funzionamento del servizio Web presentando delle attestazioni quando l'applicazione viene eseguita. In questa guida procedurale non sono incluse le istruzioni dettagliate per la creazione di un servizio token di sicurezza (STS, Security Token Service); viene invece utilizzato il servizio token di sicurezza di sviluppo che viene fornito con lo strumento Identity and Access. Il servizio token di sicurezza di sviluppo non esegue una reale autenticazione ed è finalizzato unicamente ai test. Per completare questa guida procedurale sarà necessario installare Identity and Access Tool. Può essere scaricato dal seguente percorso: [Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Sommario  
   
--   Obiettivi  
+- Obiettivi  
   
--   Panoramica  
+- Panoramica  
   
--   Riepilogo dei passaggi  
+- Riepilogo dei passaggi  
   
--   Passaggio 1: creare un semplice servizio WCF  
+- Passaggio 1: creare un semplice servizio WCF  
   
--   Passaggio 2: creare un'applicazione client per il servizio WCF  
+- Passaggio 2: creare un'applicazione client per il servizio WCF  
   
--   Passaggio 3: eseguire i test sulla soluzione  
+- Passaggio 3: eseguire i test sulla soluzione  
   
 ## <a name="objectives"></a>Obiettivi  
   
--   Creare un servizio WCF che richiede token pubblicati  
+- Creare un servizio WCF che richiede token pubblicati  
   
--   Creare un client WCF che richiede un token da un servizio token di sicurezza e lo passa al servizio WCF  
+- Creare un client WCF che richiede un token da un servizio token di sicurezza e lo passa al servizio WCF  
   
 ## <a name="overview"></a>Panoramica  
  In questa guida procedurale viene illustrato in che modo uno sviluppatore può utilizzare l'autenticazione federata durante lo sviluppo di servizi WCF. Trai i vantaggi derivanti dall'utilizzo della federazione nei servizi WCF sono inclusi:  
@@ -55,11 +55,11 @@ ms.locfileid: "59323304"
   
 ## <a name="summary-of-steps"></a>Riepilogo dei passaggi  
   
--   Passaggio 1: creare un semplice servizio WCF  
+- Passaggio 1: creare un semplice servizio WCF  
   
--   Passaggio 2: creare un'applicazione client per il servizio WCF  
+- Passaggio 2: creare un'applicazione client per il servizio WCF  
   
--   Passaggio 3: eseguire i test sulla soluzione  
+- Passaggio 3: eseguire i test sulla soluzione  
   
 ## <a name="step-1--create-a-simple-wcf-service"></a>Passaggio 1: creare un semplice servizio WCF  
  In questo passaggio, verrà creato un nuovo servizio WCF che utilizza il servizio token di sicurezza di sviluppo incluso in Identity and Access Tool.  

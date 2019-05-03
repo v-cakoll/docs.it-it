@@ -9,11 +9,11 @@ helpviewer_keywords:
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
 ms.openlocfilehash: 53b4a3e3848c1aa92bfa9fbd80bb031125257fc2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922720"
 ---
 # <a name="how-to-deserialize-an-object"></a>Procedura: Deserializzare un oggetto
 Quando si deserializza un oggetto, il formato di trasporto determina se verrà creato un flusso o un oggetto file. Una volta determinato il formato di trasporto, è possibile chiamare i metodi <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> o <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>, in base alle necessità.  

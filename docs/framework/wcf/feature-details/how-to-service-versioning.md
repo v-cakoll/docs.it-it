@@ -3,11 +3,11 @@ title: 'Procedura: Controllo delle versioni dei servizi'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
 ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59346288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047477"
 ---
 # <a name="how-to-service-versioning"></a>Procedura: Controllo delle versioni dei servizi
 In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione del routing che indirizza messaggi a versioni diverse dello stesso servizio. In questo esempio i messaggi vengono indirizzati a due versioni diverse di un servizio di calcolo, `roundingCalc` (v1) e `regularCalc` (v2). Entrambe le implementazioni supportano le stesse operazioni; tuttavia il primo servizio, `roundingCalc`, arrotonda tutti i calcoli al valore intero più vicino prima della restituzione. Un'applicazione client deve essere in grado di indicare se utilizzare il secondo servizio, `regularCalc`.  
@@ -17,13 +17,13 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
   
  Le operazioni esposte da entrambi servizi sono:  
   
--   Aggiunta  
+- Aggiunta  
   
--   Sottrai  
+- Sottrai  
   
--   Multiply  
+- Multiply  
   
--   Dividi  
+- Dividi  
   
  Poiché entrambe le implementazioni del servizio gestiscono le stesse operazioni e sono essenzialmente identiche tranne che per i dati che restituiscono, i dati di base contenuti nei messaggi inviati dalle applicazioni client non sono sufficientemente univoci per consentire di determinare la modalità di routing della richiesta. Non è ad esempio possibile utilizzare i filtri Action, poiché le azioni predefinite per entrambi i servizi sono identiche.  
   

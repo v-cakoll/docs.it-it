@@ -8,11 +8,11 @@ helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
 ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053093"
 ---
 # <a name="wpf-brushes-overview"></a>Cenni preliminari sui pennelli di WPF
 Tutti gli elementi visibili sullo schermo è visibili perché sono stati disegnati con un pennello. Ad esempio, un pennello viene usato per descrivere lo sfondo di un pulsante, il primo piano del testo e il riempimento di una forma. In questo argomento introduce i concetti di disegno con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pennelli e vengono forniti esempi. I pennelli consentono di disegnare oggetti [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] con colori semplici a tinta unita, fino a set complessi di motivi e immagini.  
@@ -131,9 +131,9 @@ Rettangolo disegnato usando VisualBrush
 ## <a name="paint-using-predefined-and-system-brushes"></a>Disegnare con pennelli di sistema e predefiniti  
  Per praticità, Windows Presentation Foundation (WPF) fornisce un set di pennelli predefiniti e sistema che è possibile utilizzare per disegnare gli oggetti.  
   
--   Per un elenco dei pennelli predefiniti disponibili, vedere il <xref:System.Windows.Media.Brushes> classe. Per un esempio che illustra come usare un pennello predefinito, vedere [disegnare un'Area con colori a tinta unita](how-to-paint-an-area-with-a-solid-color.md).  
+- Per un elenco dei pennelli predefiniti disponibili, vedere il <xref:System.Windows.Media.Brushes> classe. Per un esempio che illustra come usare un pennello predefinito, vedere [disegnare un'Area con colori a tinta unita](how-to-paint-an-area-with-a-solid-color.md).  
   
--   Per un elenco dei pennelli di sistema disponibili, vedere il <xref:System.Windows.SystemColors> classe. Per un esempio, vedere [disegnare un'Area con un pennello di sistema](how-to-paint-an-area-with-a-system-brush.md).  
+- Per un elenco dei pennelli di sistema disponibili, vedere il <xref:System.Windows.SystemColors> classe. Per un esempio, vedere [disegnare un'Area con un pennello di sistema](how-to-paint-an-area-with-a-system-brush.md).  
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>Funzionalità comuni dei pennelli  
@@ -167,8 +167,8 @@ Rettangolo disegnato usando VisualBrush
 - [Cenni sul disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md)
 - [Disegnare con oggetti Image, Drawing e Visual](painting-with-images-drawings-and-visuals.md)
 - [Cenni preliminari sugli oggetti Freezable](../advanced/freezable-objects-overview.md)
-- [Esempio di pennelli](https://go.microsoft.com/fwlink/?LinkID=159973)
+- [Brushes Sample](https://go.microsoft.com/fwlink/?LinkID=159973) (Esempio di pennelli)
 - [Esempio ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Esempio VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Procedure relative](brushes-how-to-topics.md)
+- [Procedure relative alle proprietà](brushes-how-to-topics.md)
 - [Altri suggerimenti relativi alle prestazioni](../advanced/optimizing-performance-other-recommendations.md)

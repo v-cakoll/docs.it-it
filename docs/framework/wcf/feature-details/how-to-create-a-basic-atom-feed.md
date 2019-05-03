@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
 ms.openlocfilehash: 11aa71f82af5a1bd764a4cc9e3514a795d559fc2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000857"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>Procedura: Creare un feed atom di base
 Windows Communication Foundation (WCF) consente di creare un servizio che espone un feed di diffusione. In questo argomento viene illustrato come creare un servizio di diffusione che espone un feed di diffusione Atom.  

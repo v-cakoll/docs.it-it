@@ -3,11 +3,11 @@ title: + (String Concatenation) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 580130fa-6c7c-4f76-a47d-d22c27ccadf6
 ms.openlocfilehash: 5f2c031218a9e533889c696bc592e73a27b51d06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797670"
 ---
 # <a name="-string-concatenation-entity-sql"></a>+ (concatenazione di stringhe) (Entity SQL)
 Concatena due stringhe.  

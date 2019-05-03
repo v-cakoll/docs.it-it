@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
 ms.openlocfilehash: 4e5e6b77cdb13c17557f176a37fbb9e7d42ab667
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59346002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047789"
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Procedura: Creare un contratto dati di base per una classe o una struttura
 In questo argomento vengono illustrati i passaggi di base per creare un contratto dati usando una classe o una struttura. Per altre informazioni sui contratti dati e come usarle, vedere [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -40,6 +40,6 @@ In questo argomento vengono illustrati i passaggi di base per creare un contratt
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Uso di contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Esercitazione introduttiva](../../../../docs/framework/wcf/getting-started-tutorial.md)
 - [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md)

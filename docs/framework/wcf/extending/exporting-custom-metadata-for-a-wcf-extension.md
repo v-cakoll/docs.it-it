@@ -3,11 +3,11 @@ title: Esportazione di metadati personalizzati per un'estensione WCF
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
 ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857961"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Esportazione di metadati personalizzati per un'estensione WCF
 In Windows Communication Foundation (WCF), l'esportazione dei metadati è il processo di descrivere gli endpoint di servizio e quindi proiettarli in una rappresentazione parallela standardizzata che i client possono usare per comprendere come usare il servizio. I metadati personalizzati sono costituiti da elementi XML non esportabili mediante le unità di esportazione dei metadati forniti dal sistema. Questi metadati comprendono in genere elementi WSDL personalizzati di elementi di comportamenti e associazioni definiti dall'utente nonché asserzioni di criteri personalizzate relative alle funzionalità e ai requisiti di associazioni e contratti.  
@@ -44,5 +44,5 @@ In Windows Communication Foundation (WCF), l'esportazione dei metadati è il pro
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura: Esportare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Procedura: Esportare asserzioni di criteri personalizzate](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)
+- [Procedura: Esporta asserzioni di criteri personalizzate](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)
 - [Importazione di metadati personalizzati per un'estensione WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

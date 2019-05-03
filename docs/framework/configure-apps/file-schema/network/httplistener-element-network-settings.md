@@ -3,11 +3,11 @@ title: Elemento <httpListener> (impostazioni di rete)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705077"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > (impostazioni di rete)
 Consente di personalizzare i parametri usati dal <xref:System.Net.HttpListener> classe.  
@@ -52,9 +52,9 @@ Consente di personalizzare i parametri usati dal <xref:System.Net.HttpListener> 
   
  Il `http.sys` servizio espone due stringhe URI richiesta:  
   
--   URI non elaborato  
+- URI non elaborato  
   
--   URI convertito  
+- URI convertito  
   
  L'URI non elaborato è il <xref:System.Uri?displayProperty=nameWithType> fornito nella riga della richiesta di una richiesta HTTP:  
   
@@ -72,11 +72,11 @@ Consente di personalizzare i parametri usati dal <xref:System.Net.HttpListener> 
   
  Il `http.sys` service combina il <xref:System.Uri.Host%2A?displayProperty=nameWithType> valore della proprietà e la stringa nella riga della richiesta per creare un URI convertito. È inoltre `http.sys` e il <xref:System.Uri?displayProperty=nameWithType> classe esegue anche le operazioni seguenti:  
   
--   Escape di annullare la percentuale di tutti i valori codificati.  
+- Escape di annullare la percentuale di tutti i valori codificati.  
   
--   Caratteri non ASCII converte codificato in percentuale in una rappresentazione di caratteri UTF-16. Si noti che i caratteri DBCS/ANSI e UTF-8 sono supportati anche i caratteri Unicode (codifica Unicode utilizzando il formato uXXXX %).  
+- Caratteri non ASCII converte codificato in percentuale in una rappresentazione di caratteri UTF-16. Si noti che i caratteri DBCS/ANSI e UTF-8 sono supportati anche i caratteri Unicode (codifica Unicode utilizzando il formato uXXXX %).  
   
--   Esegue gli altri passaggi di normalizzazione, ad esempio la compressione del percorso.  
+- Esegue gli altri passaggi di normalizzazione, ad esempio la compressione del percorso.  
   
  Poiché la richiesta non contiene alcuna informazione sulla codifica usata per i valori codificati in percentuale, potrebbe non essere possibile determinare la codifica corretta appena analizzando i valori codificati in percentuale.  
   

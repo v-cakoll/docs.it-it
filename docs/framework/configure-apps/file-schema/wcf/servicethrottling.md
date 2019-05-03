@@ -3,11 +3,11 @@ title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
 ms.openlocfilehash: 995ff9979096757225c9241e977f86f755955945
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758106"
 ---
 # <a name="servicethrottling"></a>\<serviceThrottling>
 Specifica il meccanismo della limitazione di un servizio Windows Communication Foundation (WCF).  
@@ -72,4 +72,4 @@ Specifica il meccanismo della limitazione di un servizio Windows Communication F
 
 - <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
 - <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>
-- [Uso di ServiceThrottlingBehavior per controllare le prestazioni dei servizi WCF](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)
+- [Uso di ServiceThrottlingBehavior per controllare le prestazioni del servizio WCF](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], creating
 ms.assetid: f45516e5-bf01-4468-b851-d45f4c33c055
 ms.openlocfilehash: 7cd761697a09205294727043efc6cf73816803ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761368"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>Cenni preliminari sul controllo MenuStrip (Windows Form)
 I menu che contiene i comandi che vengono raggruppati in base a un tema comune espongono funzionalità agli utenti.  
@@ -26,11 +26,11 @@ I menu che contiene i comandi che vengono raggruppati in base a un tema comune e
 ## <a name="ways-to-use-the-menustrip-control"></a>Modi per usare il controllo MenuStrip  
  Usare il <xref:System.Windows.Forms.MenuStrip> controllo:  
   
--   Creare con facilità personalizzato, impiego frequente menu che supportano funzionalità avanzate di utente interfaccia e il layout, come testo e immagine di ordinamento e l'allineamento, operazioni di trascinamento e rilascio, MDI, overflow e modalità alternative di accedere ai comandi di menu.  
+- Creare con facilità personalizzato, impiego frequente menu che supportano funzionalità avanzate di utente interfaccia e il layout, come testo e immagine di ordinamento e l'allineamento, operazioni di trascinamento e rilascio, MDI, overflow e modalità alternative di accedere ai comandi di menu.  
   
--   Supporta l'aspetto tipico e il comportamento del sistema operativo.  
+- Supporta l'aspetto tipico e il comportamento del sistema operativo.  
   
--   Gestire gli eventi in modo coerente per tutti i contenitori e gli elementi contenuti, nello stesso modo è possibile gestire gli eventi per altri controlli.  
+- Gestire gli eventi in modo coerente per tutti i contenitori e gli elementi contenuti, nello stesso modo è possibile gestire gli eventi per altri controlli.  
   
  Nella tabella seguente mostra alcune proprietà particolarmente importante di <xref:System.Windows.Forms.MenuStrip> e classi associate.  
   

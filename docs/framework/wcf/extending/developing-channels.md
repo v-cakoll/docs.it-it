@@ -3,11 +3,11 @@ title: Sviluppo di canali
 ms.date: 03/30/2017
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
 ms.openlocfilehash: 44fb0da52c60b900c41b7b497861c12ed72d8ffc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858065"
 ---
 # <a name="developing-channels"></a>Sviluppo di canali
 Per lo sviluppo di un canale di trasporto o protocollo che può essere utilizzato con Windows Communication Foundation (WCF) livello applicazione richiede diversi passaggi. In questo argomento vengono illustrati tali passaggi con rimandi agli argomenti specifici per ulteriori informazioni. Per comprendere il modello dei canali e i vari tipi menzionati in questo argomento, vedere [Cenni preliminari sul modello di canale](../../../../docs/framework/wcf/extending/channel-model-overview.md). Per un esempio di canale di trasporto completo, vedere [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  

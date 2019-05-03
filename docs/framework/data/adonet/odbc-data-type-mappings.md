@@ -3,11 +3,11 @@ title: Mapping dei tipi di dati ODBC
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
 ms.openlocfilehash: 8165ab933352394e29cbe93a9e8ba64267f8ae60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772216"
 ---
 # <a name="odbc-data-type-mappings"></a>Mapping dei tipi di dati ODBC
 Nella tabella seguente sono illustrati i tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dedotti per i tipi di dati dal provider di dati .NET Framework per ODBC (<xref:System.Data.Odbc>). I metodi tipizzati della funzione di accesso per il <xref:System.Data.Odbc.OdbcDataReader> sono inoltre elencati.  

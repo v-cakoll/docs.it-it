@@ -4,11 +4,11 @@ description: Panoramica degli strumenti e delle funzionalità dell'interfaccia d
 ms.date: 08/14/2017
 ms.custom: seodec18
 ms.openlocfilehash: e174867ce06e573fc85579183df0196d8276fb37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61647424"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Strumenti dell'interfaccia della riga di comando di .NET Core
 

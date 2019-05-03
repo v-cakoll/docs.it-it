@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
 ms.openlocfilehash: 2c1c3d8529662c1e1f1a3d28e3853d31f5d940ed
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054276"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Procedura: Definire un'icona per un pulsante della barra degli strumenti
 > [!NOTE]
@@ -118,6 +118,6 @@ ms.locfileid: "59336506"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Procedura: Attivare eventi di menu per i pulsanti della barra degli strumenti](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Procedura: Attivare eventi di Menu per i pulsanti della barra degli strumenti](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [Controllo ToolBar](toolbar-control-windows-forms.md)
 - [Componente ImageList](imagelist-component-windows-forms.md)

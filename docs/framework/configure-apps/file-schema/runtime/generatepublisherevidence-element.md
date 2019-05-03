@@ -8,11 +8,11 @@ ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 09a12f062b2fe3ad6e5ac90f0d268bbbeab44876
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674142"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > elemento
 Specifica se il runtime crea <xref:System.Security.Policy.Publisher> evidenza per la sicurezza dall'accesso di codice (CAS).  

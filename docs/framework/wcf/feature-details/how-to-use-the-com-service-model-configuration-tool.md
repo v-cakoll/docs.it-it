@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
 ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59322589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972679"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Procedura: Usare lo strumento di configurazione del modello di servizi di COM+
 Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strumento della riga di comando per la configurazione del modello di servizi COM+ (ComSvcConfig.exe) per configurare le interfacce dell'applicazione da esporre come servizi Web.  
@@ -33,7 +33,7 @@ Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strume
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Per aggiungere un'interfaccia al set di interfacce da esporre come servizi Web mediante la modalità di hosting COM+  
   
--   Eseguire ComSvcConfig utilizzando le opzioni `/install` e `/hosting:complus`, come mostrato nell'esempio seguente.  
+- Eseguire ComSvcConfig utilizzando le opzioni `/install` e `/hosting:complus`, come mostrato nell'esempio seguente.  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
@@ -49,7 +49,7 @@ Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strume
   
 ### <a name="to-add-only-specific-methods-from-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Per aggiungere solo determinati metodi di un'interfaccia al set di interfacce da esporre come servizi Web mediante la modalità di hosting COM+  
   
--   Eseguire ComSvcConfig utilizzando le opzioni `/install` e `/hosting:complus` denominando in modo esplicito i metodi da aggiungere, come mostrato nell'esempio seguente.  
+- Eseguire ComSvcConfig utilizzando le opzioni `/install` e `/hosting:complus` denominando in modo esplicito i metodi da aggiungere, come mostrato nell'esempio seguente.  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{Credit,Debit} /hosting:complus /verbose  
@@ -59,7 +59,7 @@ Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strume
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-web-hosting-mode"></a>Per aggiungere un'interfaccia al set di interfacce da esporre come servizi Web mediante la modalità host Web  
   
--   Eseguire ComSvcConfig utilizzando le opzioni `/install` e `/hosting:was`, come mostrato nell'esempio seguente.  
+- Eseguire ComSvcConfig utilizzando le opzioni `/install` e `/hosting:was`, come mostrato nell'esempio seguente.  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse /mex /verbose  
@@ -73,7 +73,7 @@ Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strume
   
 ### <a name="to-remove-a-web-service-for-a-specified-interface"></a>Per rimuovere un servizio Web di un'interfaccia specificata  
   
--   Eseguire ComSvcConfig utilizzando l'opzione `/uninstall`, come mostrato nell'esempio seguente.  
+- Eseguire ComSvcConfig utilizzando l'opzione `/uninstall`, come mostrato nell'esempio seguente.  
   
     ```  
     ComSvcConfig.exe /uninstall /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus  
@@ -83,7 +83,7 @@ Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strume
   
 ### <a name="to-list-currently-exposed-interfaces"></a>Per elencare le interfacce attualmente esposte  
   
--   Eseguire ComSvcConfig utilizzando l'opzione `/list`, come mostrato nell'esempio seguente.  
+- Eseguire ComSvcConfig utilizzando l'opzione `/list`, come mostrato nell'esempio seguente.  
   
     ```  
     ComSvcConfig.exe /list  
@@ -93,7 +93,7 @@ Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strume
   
 ### <a name="to-list-specific-currently-exposed-interfaces"></a>Per elencare determinate interfacce attualmente esposte  
   
--   Eseguire ComSvcConfig utilizzando l'opzione `/list`, come mostrato nell'esempio seguente.  
+- Eseguire ComSvcConfig utilizzando l'opzione `/list`, come mostrato nell'esempio seguente.  
   
     ```  
     ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
@@ -103,7 +103,7 @@ Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strume
   
 ### <a name="to-display-help-on-the-options-that-can-be-used-with-the-utility"></a>Per visualizzare la Guida relativa alle opzioni disponibili nell'utilità  
   
--   Eseguire ComSvcConfig utilizzando l'opzione /? come mostrato nell'esempio seguente.  
+- Eseguire ComSvcConfig utilizzando l'opzione /? come mostrato nell'esempio seguente.  
   
     ```  
     ComSvcConfig.exe /?  
@@ -111,4 +111,4 @@ Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strume
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica sull'integrazione con applicazioni COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+- [Panoramica dell'integrazione con applicazioni COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

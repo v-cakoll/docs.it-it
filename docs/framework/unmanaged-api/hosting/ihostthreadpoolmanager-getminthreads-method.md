@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f1230a72d06677b4d36d10a8a31d63638c1fcd41
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796556"
 ---
 # <a name="ihostthreadpoolmanagergetminthreads-method"></a>Metodo IHostThreadPoolManager::GetMinThreads
 Ottiene il numero minimo di thread inattivi che gestisce l'host nel pool di thread in attesa delle richieste.  

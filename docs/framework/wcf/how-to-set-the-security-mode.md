@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 ms.openlocfilehash: 5a4550e4c914dcdbc9908e766c67a2efa53e6e9e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928895"
 ---
 # <a name="how-to-set-the-security-mode"></a>Procedura: Impostare la modalità di sicurezza
 Sicurezza di Windows Communication Foundation (WCF) dispone di tre modalità di sicurezza comuni che si trovano nelle associazioni predefinite più: il trasporto e messaggio "trasporto con credenziali del messaggio". Esistono inoltre due modalità aggiuntive disponibili soltanto in due associazioni specifiche: la modalità "Solo credenziale a livello di trasporto" ("TransportCredentialOnly") dell'associazione <xref:System.ServiceModel.BasicHttpBinding> e la modalità "Entrambi" ("Both") dell'associazione <xref:System.ServiceModel.NetMsmqBinding>. Tuttavia, questo argomento descrive solo le tre modalità di sicurezza generali, ovvero: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> e <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
@@ -116,10 +116,10 @@ Sicurezza di Windows Communication Foundation (WCF) dispone di tre modalità di 
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura: Configurare una porta con un certificato SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Procedura: Usare la sicurezza del trasporto e le credenziali per il messaggio](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
-- [Protezione del trasporto](../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Procedura: Usare la sicurezza trasporto e le credenziali del messaggio](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [Sicurezza del trasporto](../../../docs/framework/wcf/feature-details/transport-security.md)
 - [Sicurezza dei messaggi](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
-- [Cenni preliminari sulla sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Panoramica della sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md)
 - [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
 - [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)

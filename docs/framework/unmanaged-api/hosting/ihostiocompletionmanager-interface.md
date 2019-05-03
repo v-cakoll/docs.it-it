@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3c3bebe8eabd4d5fd5faec21e0b0efc408353bc2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796830"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>Interfaccia IHostIoCompletionManager
 Fornisce metodi che consentono di common language runtime (CLR) per interagire con le porte di completamento i/o fornite dall'host.  
@@ -30,7 +30,7 @@ Fornisce metodi che consentono di common language runtime (CLR) per interagire c
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)|Associa un handle a una porta di completamento i/o.|  
+|[Metodo bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)|Associa un handle a una porta di completamento i/o.|  
 |[Metodo CloseIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-closeiocompletionport-method.md)|Chiude una porta che è stata creata tramite una chiamata precedente a `CreateIoCompletionPort`.|  
 |[Metodo CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md)|Richieste all'host di creare una nuova porta di completamento i/o.|  
 |[Metodo GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-getavailablethreads-method.md)|Ottiene il numero di thread di completamento i/o che non stanno elaborando le richieste.|  

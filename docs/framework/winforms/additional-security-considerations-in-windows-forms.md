@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
 ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669316"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Considerazioni aggiuntive sulla sicurezza in Windows Form
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] le impostazioni di sicurezza potrebbero causare l'applicazione venga eseguita in modo diverso in un ambiente parzialmente attendibile nel computer locale. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] limita l'accesso a tali risorse locali critiche, ad esempio il file system, la rete e le API non gestite. Le impostazioni di sicurezza influiscono sulla possibilità di chiamare l'API di Windows Microsoft o altre API che non possono essere verificato dal sistema di sicurezza. La sicurezza influisce inoltre su altri aspetti dell'applicazione, inclusi l'accesso ai file e ai dati e la stampa. Per altre informazioni sull'accesso a file e dati in un ambiente ad attendibilità parziale, vedere [More Secure File and Data Access in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md) (Accesso più sicuro a file e dati in Windows Form). Per altre informazioni sulla stampa in un ambiente ad attendibilità parziale, vedere [More Secure Printing in Windows Forms](more-secure-printing-in-windows-forms.md) (Stampa più sicura in Windows Form).  
+Le impostazioni di sicurezza di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] potrebbero modificare l'esecuzione di un'applicazione in un ambiente ad attendibilità parziale rispetto al computer locale. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] limita l'accesso a tali risorse locali critiche, ad esempio il file system, la rete e le API non gestite. Le impostazioni di sicurezza influiscono sulla possibilità di chiamare l'API di Windows Microsoft o altre API che non possono essere verificato dal sistema di sicurezza. La sicurezza influisce inoltre su altri aspetti dell'applicazione, inclusi l'accesso ai file e ai dati e la stampa. Per altre informazioni sull'accesso a file e dati in un ambiente ad attendibilità parziale, vedere [More Secure File and Data Access in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md) (Accesso più sicuro a file e dati in Windows Form). Per altre informazioni sulla stampa in un ambiente ad attendibilità parziale, vedere [More Secure Printing in Windows Forms](more-secure-printing-in-windows-forms.md) (Stampa più sicura in Windows Form).  
   
  Le sezioni seguenti illustrano come usare gli Appunti, eseguire la modifica delle finestre e chiamare l'API di Windows da applicazioni in esecuzione in un ambiente parzialmente attendibile.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59139529"
 |<xref:System.Windows.Forms.Control>|-Recupero di <xref:System.Windows.Forms.Control.Parent%2A> proprietà.<br />-   Impostazione della proprietà `Region`.<br />-Chiamata di <xref:System.Windows.Forms.Control.FindForm%2A> , <xref:System.Windows.Forms.Control.Focus%2A>, <xref:System.Windows.Forms.Control.FromChildHandle%2A> e <xref:System.Windows.Forms.Control.FromHandle%2A>, <xref:System.Windows.Forms.Control.PreProcessMessage%2A>, <xref:System.Windows.Forms.Control.ReflectMessage%2A>, o <xref:System.Windows.Forms.Control.SetTopLevel%2A> (metodo).<br />-Chiamata di <xref:System.Windows.Forms.Control.GetChildAtPoint%2A> metodo se il controllo restituito non è un figlio del controllo chiama.<br />-   Modifica del focus del controllo all'interno di un controllo contenitore.|  
 |<xref:System.Windows.Forms.Cursor>|-   Impostazione della proprietà <xref:System.Windows.Forms.Cursor.Clip%2A>.<br />-Chiamata di <xref:System.Windows.Forms.Control.Hide%2A> (metodo).|  
 |<xref:System.Windows.Forms.DataGrid>|-Chiamata di <xref:System.Windows.Forms.ContainerControl.ProcessTabKey%2A> (metodo).|  
-|<xref:System.Windows.Forms.Form>|-Recupero il <xref:System.Windows.Forms.Form.ActiveForm%2A> o <xref:System.Windows.Forms.Form.MdiParent%2A> proprietà.<br />-Impostazione di <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, o <xref:System.Windows.Forms.Form.TopMost%2A> proprietà.<br />-Impostazione di <xref:System.Windows.Forms.Form.Opacity%2A> proprietà inferiore al 50%.<br />-Impostazione di <xref:System.Windows.Forms.Form.WindowState%2A> proprietà <xref:System.Windows.Forms.FormWindowState.Minimized> a livello di codice.<br />-Chiamata di <xref:System.Windows.Forms.Form.Activate%2A> (metodo).<br />-Uso di <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, e <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow><xref:System.Windows.Forms.FormBorderStyle> valori di enumerazione.|  
+|<xref:System.Windows.Forms.Form>|-Recupero il <xref:System.Windows.Forms.Form.ActiveForm%2A> o <xref:System.Windows.Forms.Form.MdiParent%2A> proprietà.<br />-Impostazione di <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, o <xref:System.Windows.Forms.Form.TopMost%2A> proprietà.<br />-Impostazione di <xref:System.Windows.Forms.Form.Opacity%2A> proprietà inferiore al 50%.<br />-Impostazione di <xref:System.Windows.Forms.Form.WindowState%2A> proprietà <xref:System.Windows.Forms.FormWindowState.Minimized> a livello di codice.<br />-Chiamata di <xref:System.Windows.Forms.Form.Activate%2A> (metodo).<br />-Uso di <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, e <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow> <xref:System.Windows.Forms.FormBorderStyle> valori di enumerazione.|  
 |<xref:System.Windows.Forms.NotifyIcon>|-Uso di <xref:System.Windows.Forms.NotifyIcon> componente è totalmente limitato.|  
   
  Il <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> valore limita le azioni elencate nella tabella seguente, anche per le restrizioni applicate per il <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> valore.  
@@ -90,8 +90,8 @@ ms.locfileid: "59139529"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [File e accesso ai dati più protetti in Windows Form](more-secure-file-and-data-access-in-windows-forms.md)
-- [Stampa più protetta in Windows Form](more-secure-printing-in-windows-forms.md)
-- [Cenni preliminari sulla sicurezza in Windows Form](security-in-windows-forms-overview.md)
+- [Accesso più sicuro a file e dati in Windows Form](more-secure-file-and-data-access-in-windows-forms.md)
+- [Stampa più sicura in Windows Forms](more-secure-printing-in-windows-forms.md)
+- [Panoramica della sicurezza in Windows Forms](security-in-windows-forms-overview.md)
 - [Sicurezza di Windows Form](windows-forms-security.md)
-- [Protezione di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications)
+- [Sicurezza di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications)

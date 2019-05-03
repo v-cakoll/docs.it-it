@@ -3,11 +3,11 @@ title: Protezione a livello di messaggio con il client token emessi
 ms.date: 03/30/2017
 ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
 ms.openlocfilehash: 3c2669a4f569d26be15fc7b338f7b01c3e94791c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950293"
 ---
 # <a name="message-security-with-issued-tokens"></a>Protezione a livello di messaggio con il client token emessi
 Il client token emessi consente lo scenario di sicurezza federata in Windows Communication Foundation (WCF).  
@@ -18,5 +18,5 @@ Il client token emessi consente lo scenario di sicurezza federata in Windows Com
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Sicurezza e protezione](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Federazione e token rilasciati](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

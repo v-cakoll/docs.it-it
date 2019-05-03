@@ -10,11 +10,11 @@ helpviewer_keywords:
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
 ms.openlocfilehash: ebee350f69b5c5e4f9d38c452b9c87bf003528ee
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59317909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002261"
 ---
 # <a name="property-animation-techniques-overview"></a>Cenni preliminari sulle tecniche di animazione delle proprietà
 Questo argomento descrive i diversi metodi di animazione delle proprietà: storyboard, animazioni locali, orologi e animazioni per fotogramma.  
@@ -31,7 +31,7 @@ Questo argomento descrive i diversi metodi di animazione delle proprietà: story
   
 |Tecnica di animazione|Scenari|Supporta XAML|Controllabile in modo interattivo|  
 |-------------------------|---------------|-------------------|--------------------------------|  
-|Animazione storyboard|Per ogni istanza <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.DataTemplate>|Yes|Yes|  
+|Animazione storyboard|Per-instance, <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.DataTemplate>|Yes|Yes|  
 |Animazione locale|Per istanza|No|No|  
 |Animazione orologio|Per istanza|No|Yes|  
 |Animazione per fotogramma|Per istanza|No|N/D|  
@@ -56,10 +56,10 @@ Questo argomento descrive i diversi metodi di animazione delle proprietà: story
   
 |Storyboard iniziato usando…|Per istanza|Stile|Modello di controllo|Modello di dati|Esempio|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> e un oggetto <xref:System.Windows.EventTrigger>|Yes|Yes|Yes|Yes|[Aggiungere un'animazione a una proprietà usando uno storyboard](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> e un oggetto <xref:System.Windows.EventTrigger>|Yes|Yes|Yes|Yes|[Animare una proprietà utilizzando uno storyboard](how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> e una proprietà <xref:System.Windows.Trigger>|No|Yes|Yes|Yes|[Attivare un'animazione quando il valore di una proprietà viene modificato](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> e un oggetto <xref:System.Windows.DataTrigger>|No|Yes|Yes|Yes|[Procedura: Attivare un'animazione alla modifica dei dati](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> metodo|Yes|No|No|No|[Aggiungere un'animazione a una proprietà usando uno storyboard](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|Metodo <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Yes|No|No|No|[Animare una proprietà utilizzando uno storyboard](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Per altre informazioni sulle <xref:System.Windows.Media.Animation.Storyboard> oggetti, vedere la [Cenni preliminari sugli storyboard](storyboards-overview.md).  
   

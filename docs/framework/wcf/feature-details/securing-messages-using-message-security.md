@@ -3,11 +3,11 @@ title: Protezione dei messaggi mediante protezione a livello di messaggio
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
 ms.openlocfilehash: cf014c8aa972c45140a523573b9806996062b40f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991029"
 ---
 # <a name="securing-messages-using-message-security"></a>Protezione dei messaggi mediante protezione a livello di messaggio
 Questa sezione illustra la protezione dei messaggi WCF quando si usa <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -65,7 +65,7 @@ Questa sezione illustra la protezione dei messaggi WCF quando si usa <xref:Syste
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione dei messaggi mediante protezione del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [Protezione dei messaggi mediante la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
-- [Concetti sulla protezione](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

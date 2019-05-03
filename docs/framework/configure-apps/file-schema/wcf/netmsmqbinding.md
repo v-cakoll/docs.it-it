@@ -3,11 +3,11 @@ title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
 ms.openlocfilehash: 7a4bae0def6599ab577656e970abbe20dd10692f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778027"
 ---
 # <a name="netmsmqbinding"></a>\<netMsmqBinding>
 Definisce un'associazione in coda adatta per la comunicazione fra computer.  
@@ -98,7 +98,7 @@ Definisce un'associazione in coda adatta per la comunicazione fra computer.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<le associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
  L'associazione `netMsmqBinding` fornisce il supporto per la gestione tramite coda basata sul sistema di accodamento dei messaggi MSMQ come trasporto. Tale associazione fornisce inoltre il supporto per le applicazioni a regime di controllo libero, per l'isolamento degli errori, per la distribuzione ottimale dei carichi e per le operazioni disconnesse. Per una descrizione di queste funzionalità, vedere [code in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  

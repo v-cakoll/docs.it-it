@@ -5,11 +5,11 @@ helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
 ms.openlocfilehash: 4e1529db6cc52b6b8cc8881d2b2a35a754b4b311
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856570"
 ---
 # <a name="federation-and-trust"></a>Federazione e attendibilità
 Questo argomento illustra vari aspetti relativi ad applicazioni federate, limiti di trust e configurazione e uso dei token rilasciati in Windows Communication Foundation (WCF).  
@@ -40,6 +40,6 @@ Questo argomento illustra vari aspetti relativi ad applicazioni federate, limiti
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>
-- [Procedura: Creare un client federato](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Procedura: Creare un Client federato](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Procedura: Configurare le credenziali in un servizio federativo](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Procedura: Creare una classe WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

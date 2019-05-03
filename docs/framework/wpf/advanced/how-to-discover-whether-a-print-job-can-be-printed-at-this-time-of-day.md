@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
 ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59326866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776220"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Procedura: Scoprire se è possibile eseguire un processo di stampa a quest'ora del giorno
 Code di stampa non sono sempre disponibili per 24 ore al giorno. Hanno proprietà ora di inizio e fine che è possibile impostare per renderli disponibili in determinati momenti del giorno. Questa funzionalità è utilizzabile, ad esempio, per riservare una stampante per l'utilizzo esclusivo di un determinato reparto dopo alle 17.00. Tale reparto avrebbe un'altra coda della stampante di altri reparti di manutenzione utilizzano. La coda per gli altri reparti verrebbe impostata sarà disponibile dopo alle 17.00, anche se coda di quella per il reparto può essere impostata per essere sempre disponibile.  
@@ -41,9 +41,9 @@ Code di stampa non sono sempre disponibili per 24 ore al giorno. Hanno propriet�
   
  Il **ReportQueueAndJobAvailability** metodo inizia con un controllo per verificare se la coda o il processo di stampa non è disponibile in questo momento. Se una di esse è disponibile, quindi controlla se la coda non disponibile. Se non è disponibile, il metodo segnala questo aspetto e il tempo quando la coda sarà nuovamente disponibile. Controlla quindi il processo e se non è disponibile, viene segnalata la volta successiva che estendono quando quando può essere stampato. Infine, il metodo segnala l'ora meno recente quando il processo può essere stampato. Si tratta della seconda dei seguenti due volte.  
   
--   Ora quando la coda di stampa è successivamente disponibile.  
+- Ora quando la coda di stampa è successivamente disponibile.  
   
--   Ora quando il processo di stampa è successivamente disponibile.  
+- Ora quando il processo di stampa è successivamente disponibile.  
   
  Quando si segnalano ore del giorno, il <xref:System.DateTime.ToShortTimeString%2A> metodo viene chiamato anche perché questo metodo evita di anni, mesi e giorni dall'output. Non è possibile limitare la disponibilità di una coda di stampa o un processo di stampa per determinati anni, mesi o giorni.  
   
@@ -80,4 +80,4 @@ Code di stampa non sono sempre disponibili per 24 ore al giorno. Hanno propriet�
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.Printing.PrintQueue>
 - [Documenti in WPF](documents-in-wpf.md)
-- [Cenni preliminari sulla stampa](printing-overview.md)
+- [Panoramica della stampa](printing-overview.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
 ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000805"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Procedura: Registrare e configurare un moniker del servizio
 Prima di usare il moniker del servizio Windows Communication Foundation (WCF) all'interno di un'applicazione COM con un contratto tipizzato, è necessario registrare i tipi con attributi necessari con COM e configurare l'applicazione COM e il moniker con il binding richiesto configurazione.  
@@ -36,7 +36,7 @@ Prima di usare il moniker del servizio Windows Communication Foundation (WCF) al
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>Per configurare l'applicazione COM e il moniker con la configurazione dell'associazione necessaria  
   
--   Posizionare le definizioni di associazione (generati dal [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) nel file di configurazione dell'applicazione client generato) nel file di configurazione dell'applicazione client. Ad esempio, per il file eseguibile di Visual Basic 6.0 denominato CallCenterClient.exe, la configurazione deve essere posizionata in un file denominato CallCenterConfig.exe.config all'interno della stessa directory del file eseguibile. L'applicazione client può ora usare il moniker. Si noti che la configurazione dell'associazione non è necessaria se si usa uno dei tipi forniti da WCF di associazione standard.  
+- Posizionare le definizioni di associazione (generati dal [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) nel file di configurazione dell'applicazione client generato) nel file di configurazione dell'applicazione client. Ad esempio, per il file eseguibile di Visual Basic 6.0 denominato CallCenterClient.exe, la configurazione deve essere posizionata in un file denominato CallCenterConfig.exe.config all'interno della stessa directory del file eseguibile. L'applicazione client può ora usare il moniker. Si noti che la configurazione dell'associazione non è necessaria se si usa uno dei tipi forniti da WCF di associazione standard.  
   
      Viene registrato il tipo seguente.  
   

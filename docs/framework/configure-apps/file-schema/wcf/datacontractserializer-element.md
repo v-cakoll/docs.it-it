@@ -8,11 +8,11 @@ helpviewer_keywords:
 - KnownTypes
 ms.assetid: f41fb4d5-24e7-4059-8010-286a30bfea93
 ms.openlocfilehash: b635f03d1e4a6628a76d678f7366482717276376
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704141"
 ---
 # <a name="datacontractserializer"></a>\<dataContractSerializer>
 Contiene dati di configurazione per <xref:System.Runtime.Serialization.DataContractSerializer>. Questo elemento è presente in due gerarchie diverse e viene elencato sia nella sezione Gerarchia dello schema seguente sia nella sezione Osservazioni.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a50a799c625c647aa275994bc92738b8a4267eec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782720"
 ---
 # <a name="icordebugremote-interface"></a>Interfaccia ICorDebugRemote
 Consente di avviare o allegare un debugger gestito a un processo di destinazione remoto.  

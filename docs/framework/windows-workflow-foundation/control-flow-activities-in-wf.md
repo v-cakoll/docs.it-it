@@ -3,14 +3,14 @@ title: Attività del flusso di controllo in WF
 ms.date: 03/30/2017
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
 ms.openlocfilehash: bcbb12210af2d0172977dca6f81355031baa043a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945912"
 ---
 # <a name="control-flow-activities-in-wf"></a>Attività del flusso di controllo in WF
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] offre diverse attività per il controllo del flusso di esecuzione all'interno di un flusso di lavoro. Alcune di queste attività (ad esempio `Switch` e `If`) implementano strutture di controllo del flusso simili a quelle degli ambienti, ad esempio Visual c#, mentre altri di programmazione (ad esempio `Pick`) modellano nuove strutture di programmazione.  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] offre diverse attività per il controllo del flusso di esecuzione all'interno di un flusso di lavoro. Alcune di queste attività (ad esempio `Switch` e `If`) implementano strutture di controllo di flusso simili a quelle in ambienti di programmazione come Visual C#, mentre altri (ad esempio `Pick`) modellano nuove strutture di programmazione.  
   
  Si noti che mentre attività quali `Parallel` e `ParallelForEach` pianificano l'esecuzione di più attività figlio contemporaneamente, per un flusso di lavoro viene usato un solo thread. Ogni attività figlio di queste attività viene eseguita in sequenza e le attività successive non vengono eseguite fino a quando le attività precedenti non vengono completate o non diventano inattive. Di conseguenza, queste attività sono molto utili per applicazioni nelle quali diverse attività potenzialmente di blocco devono essere eseguite in un modo caratterizzato da interfoliazione. Se nessuna delle attività figlio di queste attività diventa inattiva, un'attività `Parallel` viene eseguita come un'attività `Sequence` e un'attività `ParallelForEach` viene eseguita come un'attività `ForEach`. Se, tuttavia, vengono usate attività asincrone (come le attività che derivano da <xref:System.Activities.AsyncCodeActivity>) o attività di messaggistica, il controllo passa al branch successivo mentre l'attività figlio attende la ricezione del messaggio o il completamento del relativo lavoro asincrono.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - cursor (mouse pointer)
 ms.assetid: 08c945a7-8ab0-4320-acf3-0b4955a344c2
 ms.openlocfilehash: 5c9e6931f6addb62a51e44b06a159d4e7b1e5f8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776675"
 ---
 # <a name="how-to-change-the-cursor-type"></a>Procedura: Modificare il tipo di cursore
 In questo esempio viene illustrato come modificare il <xref:System.Windows.Input.Cursor> del puntatore del mouse per un elemento specifico e per l'applicazione.  

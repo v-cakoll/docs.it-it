@@ -3,11 +3,11 @@ title: UriTemplate e UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
 ms.openlocfilehash: b0dc3b2b747bc08da239490db7db3ba77d1e7ed8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918632"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate e UriTemplateTable
 Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il layout degli URI a cui rispondono i loro servizi. Windows Communication Foundation (WCF) aggiunto due nuove classi per consentire agli sviluppatori di controllare gli URI. <xref:System.UriTemplate> e <xref:System.UriTemplateTable> costituiscono la base del motore di invio basato su URI in WCF. Queste classi possono essere utilizzate anche nel meccanismo del mapping delle proprie, consentendo agli sviluppatori di sfruttare i vantaggi dei modelli e l'URI senza implementare un servizio WCF.  
@@ -25,22 +25,22 @@ Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il la
  Questa tabella descrive un insieme di URI simili fra loro dal punto di vista strutturale. Ogni voce è un modello URI. I segmenti nelle parentesi graffe descrivono variabili, mentre quelli non all'interno di parentesi graffe descrivono stringhe letterali. Le classi di modello WCF consentono agli sviluppatori di sfruttare un URI in ingresso, ad esempio, "/ meteo/wa/seattle/ed esegue il ciclo" e confrontarla a un modello che descrive, "{regione} / previsioni / {città} / {attività}".  
   
 ## <a name="uritemplate"></a>UriTemplate  
- <xref:System.UriTemplate> è una classe che incapsula un modello URI. Il costruttore accetta un parametro di stringa che definisce il modello. Questa stringa contiene il modello nel formato descritto nella sezione seguente. La classe <xref:System.UriTemplate> fornisce metodi che consentono di mettere in corrispondenza un URI in ingresso con un modello, generare un URI a partire da un modello, recuperare una raccolta di nomi variabili utilizzati nel modello, determinare se due modelli sono equivalenti e restituire la stringa del modello.  
+ L'elemento <xref:System.UriTemplate> è una classe che incapsula un modello URI. Il costruttore accetta un parametro di stringa che definisce il modello. Questa stringa contiene il modello nel formato descritto nella sezione seguente. La classe <xref:System.UriTemplate> fornisce metodi che consentono di mettere in corrispondenza un URI in ingresso con un modello, generare un URI a partire da un modello, recuperare una raccolta di nomi variabili utilizzati nel modello, determinare se due modelli sono equivalenti e restituire la stringa del modello.  
   
- <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> accetta un indirizzo di base e un candidato URI e tenta di abbinare l'URI per il modello. Se il tentativo ha esito positivo, viene restituita un'istanza della classe <xref:System.UriTemplateMatch>. L'oggetto <xref:System.UriTemplateMatch> contiene un URI di base, l'URI candidato, una raccolta nome/valore dei parametri di query, una matrice di segmenti di percorso relativo, una raccolta nome/valore di variabili di cui era stata creata una corrispondenza, l'istanza <xref:System.UriTemplate> utilizzata per creare la corrispondenza, una stringa contenente eventuali porzioni prive di corrispondenza dell'URI candidato (utilizzate se il modello contiene un carattere jolly) e un oggetto associato al modello.  
+ Il metodo <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> accetta un indirizzo di base e un URI candidato e tenta di creare una corrispondenza tra l'URI e il modello. Se il tentativo ha esito positivo, viene restituita un'istanza della classe <xref:System.UriTemplateMatch>. L'oggetto <xref:System.UriTemplateMatch> contiene un URI di base, l'URI candidato, una raccolta nome/valore dei parametri di query, una matrice di segmenti di percorso relativo, una raccolta nome/valore di variabili di cui era stata creata una corrispondenza, l'istanza <xref:System.UriTemplate> utilizzata per creare la corrispondenza, una stringa contenente eventuali porzioni prive di corrispondenza dell'URI candidato (utilizzate se il modello contiene un carattere jolly) e un oggetto associato al modello.  
   
 > [!NOTE]
 >  Quando viene creata una corrispondenza tra un URI candidato e un modello, la classe <xref:System.UriTemplate> ignora lo schema e il numero di porta.  
   
- Sono disponibili due metodi che consentono di generare un URI da un modello: <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> e <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> accetta un indirizzo di base e una raccolta nome/valore dei parametri. Questi parametri vengono sostituiti con le variabili quando il modello viene associato. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> accetta le coppie nome/valore e le sostituisce da sinistra a destra.  
+ Sono disponibili due metodi che consentono di generare un URI da un modello: <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> e <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. Il metodo <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> accetta un indirizzo di base e una raccolta nome/valore di parametri. Questi parametri vengono sostituiti con le variabili quando il modello viene associato. Il metodo <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> accetta invece le coppie nome/valore e le sostituisce da sinistra a destra.  
   
- <xref:System.UriTemplate.ToString> Restituisce la stringa di modello.  
+ Il metodo <xref:System.UriTemplate.ToString> restituisce la stringa di modello.  
   
  La proprietà <xref:System.UriTemplate.PathSegmentVariableNames%2A> contiene la raccolta dei nomi delle variabili utilizzate all'interno dei segmenti di percorso contenuti nella stringa di modello.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> accetta un <xref:System.UriTemplate> come parametro e restituisce un valore booleano che specifica se i due modelli sono equivalenti. Per altre informazioni, vedere la sezione equivalenza fra modelli più avanti in questo argomento.  
+ Il metodo <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> accetta un oggetto <xref:System.UriTemplate> come parametro e restituisce un valore booleano che specifica se i due modelli sono equivalenti. Per altre informazioni, vedere la sezione equivalenza fra modelli più avanti in questo argomento.  
   
- <xref:System.UriTemplate> è progettato per funzionare con qualsiasi schema URI conforme alla grammatica URI HTTP. Di seguito vengono riportati esempi di schemi URI supportati.  
+ <xref:System.UriTemplate> può essere utilizzato con qualsiasi schema URI conforme alla grammatica URI HTTP. Di seguito vengono riportati esempi di schemi URI supportati.  
   
 - http://  
   
@@ -330,8 +330,8 @@ Quando a una variabile viene assegnato il valore predefinito `null`, è necessar
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica sul modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Panoramica del modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
 - [Modello a oggetti per la programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
 - [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
-- [Tabella UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [UriTemplateTable](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
 - [Dispatcher della tabella UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

@@ -1,17 +1,17 @@
 ---
-title: Per quanto riguarda le applicazioni Native del Cloud?
+title: Informazioni sulle app cloud native
 description: Modernizzare le applicazioni .NET esistenti con contenitori Windows e il Cloud di Azure | Per quanto riguarda le applicazioni Native del Cloud?
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 10f7761b7c0d2ddd8cb9247b1a02aa49cdc4e5d4
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012100"
 ---
-# <a name="what-about-cloud-native-applications"></a>Per quanto riguarda le applicazioni Native del Cloud?
+# <a name="what-about-cloud-native-applications"></a>Informazioni sulle app cloud native
 
 Sebbene [nativa del Cloud](https://azure.microsoft.com/overview/cloudnative/) applicazioni non sono l'obiettivo principale di questa Guida, è utile per avere una conoscenza di questo livello di maturità della modernizzazione e per distinguerlo dalle applicazioni ottimizzato per il Cloud.
 

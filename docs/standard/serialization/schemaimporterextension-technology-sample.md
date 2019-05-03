@@ -3,14 +3,14 @@ title: Esempio di tecnologia SchemaImporterExtension
 ms.date: 03/30/2017
 ms.assetid: 3f5eb78f-0ef6-433a-b095-3a63b1ce0bc9
 ms.openlocfilehash: 5027897bcf62e52dae5aab6090c01518a92636dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028304"
 ---
 # <a name="schemaimporterextension-technology-sample"></a>Esempio di tecnologia SchemaImporterExtension
-[Scarica esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
+[Scaricare l'esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
   
  In questo esempio viene illustrato un oggetto <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> personalizzato che consente di eseguire un controllo accurato sulla generazione del codice durante l'importazione di uno schema XML. In particolare viene illustrato come compilare, registrare e richiamare tale estensione.  
   

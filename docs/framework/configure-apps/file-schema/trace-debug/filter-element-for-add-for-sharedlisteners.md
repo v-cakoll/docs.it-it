@@ -11,11 +11,11 @@ helpviewer_keywords:
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
 ms.openlocfilehash: 2bef729f179b41509d3c0381b26e38e364dbf86b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673719"
 ---
 # <a name="filter-element-for-add-for-sharedlisteners"></a>\<Filtro > (elemento) per \<Aggiungi > per \<sharedListeners >
 Aggiunge un filtro a un listener nella raccolta `sharedListeners`.  
@@ -40,7 +40,7 @@ Aggiunge un filtro a un listener nella raccolta `sharedListeners`.
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|**tipo**|Attributo obbligatorio.<br /><br /> Specifica il tipo del filtro. È possibile usare solo il nome completo del tipo (nel formato il <xref:System.Type.FullName%2A?displayProperty=nameWithType> proprietà), oppure è possibile usare il nome completo del tipo tra cui le informazioni sull'assembly (nel formato di <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> proprietà). Per informazioni sulla creazione di un nome completo del tipo, vedere [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**type**|Attributo obbligatorio.<br /><br /> Specifica il tipo del filtro. È possibile usare solo il nome completo del tipo (nel formato il <xref:System.Type.FullName%2A?displayProperty=nameWithType> proprietà), oppure è possibile usare il nome completo del tipo tra cui le informazioni sull'assembly (nel formato di <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> proprietà). Per informazioni sulla creazione di un nome completo del tipo, vedere [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Attributo facoltativo.<br /><br /> La stringa passata al costruttore per la classe specificata.|  
   
 ### <a name="child-elements"></a>Elementi figlio  

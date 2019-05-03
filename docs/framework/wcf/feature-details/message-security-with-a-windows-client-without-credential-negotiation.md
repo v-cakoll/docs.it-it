@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
 ms.openlocfilehash: 43bc222bb69aafa3fa3492d79d35fbc492055ead
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59344832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038598"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Sicurezza dei messaggi con un client Windows senza negoziazione delle credenziali
 Lo scenario seguente viene illustrato un client Windows Communication Foundation (WCF) e un servizio protetti dal protocollo Kerberos.  
@@ -36,9 +36,9 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
 ## <a name="service"></a>Service  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
--   Creare un servizio autonomo usando il codice senza alcuna configurazione.  
+- Creare un servizio autonomo usando il codice senza alcuna configurazione.  
   
--   Creare un servizio usando la configurazione fornita, ma non definire alcun endpoint.  
+- Creare un servizio usando la configurazione fornita, ma non definire alcun endpoint.  
   
 ### <a name="code"></a>Codice  
  Il codice seguente crea un endpoint del servizio che usa la sicurezza del messaggio. Il codice disabilita la negoziazione della credenziale del servizio e la definizione di un token del contesto di sicurezza (SCT, Security Context Token).  
@@ -95,9 +95,9 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
 ## <a name="client"></a>Client  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
--   Creare un client autonomo usando il codice (e il codice client).  
+- Creare un client autonomo usando il codice (e il codice client).  
   
--   Creare un client che non definisce alcun indirizzo di endpoint. Usare invece il costruttore client che accetta il nome della configurazione come argomento. Ad esempio:  
+- Creare un client che non definisce alcun indirizzo di endpoint. Usare invece il costruttore client che accetta il nome della configurazione come argomento. Ad esempio:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -148,6 +148,6 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Sicurezza e protezione](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

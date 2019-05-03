@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: c9631ed7ecc854fe6f355eb4bbc2bfb5097ea770
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540624"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59206421"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (strumento per la generazione del codice)
 Lo strumento da riga di comando SqlMetal genera codice e mapping per il componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Mediante l'applicazione delle opzioni riportate più avanti in questo argomento è possibile usare SqlMetal per eseguire diverse operazioni, fra cui:  
@@ -85,7 +85,7 @@ sqlmetal [options] [<input file>]
 |------------|-----------------|  
 |**\<file input>**|Specifica un file .mdf di SQL Server Express, un file .sdf di [!INCLUDE[ssEW](../../../includes/ssew-md.md)] oppure un file .dbml intermedio.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il funzionamento di SqlMetal prevede di fatto due passaggi:  
   
 -   Estrazione dei metadati del database in un file .dbml.  
@@ -133,6 +133,7 @@ sqlmetal [options] [<input file>]
 >  Quando si usa l'opzione **/pluralize** con il database di esempio Northwind, si verifica il comportamento seguente. Quando SqlMetal crea nomi di tipo riga per le tabelle, i relativi nomi sono al singolare. Quando crea proprietà <xref:System.Data.Linq.DataContext> per le tabelle, i relativi nomi sono invece al plurale. Per coincidenza, i nomi delle tabelle contenute nel database di esempio Northwind sono già al plurale. Pertanto, l'opzione di pluralizzazione di fatto non viene usata. Di norma le tabelle di database vengono denominate al singolare, mentre le raccolte di .NET vengono denominate al plurale.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Generare il modello a oggetti in Visual Basic o C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
 - [Generazione di codice in LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [External Mapping](../../../docs/framework/data/adonet/sql/linq/external-mapping.md) (Mapping esterno)

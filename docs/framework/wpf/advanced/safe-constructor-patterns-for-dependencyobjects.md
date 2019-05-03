@@ -7,11 +7,11 @@ helpviewer_keywords:
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
 ms.openlocfilehash: ba8b0a48b2b75a9191553392d5ec0a1f66575807
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053509"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Modelli di costruttore sicuri per DependencyObject
 In genere, i costruttori di classe non devono chiamare callback come metodi virtuali o delegati, in quanto possono essere chiamati come inizializzazione di base di costruttori per una classe derivata. L'uso di elementi virtuali può avvenire in un stato incompleto dell'inizializzazione di qualsiasi dato oggetto. Il sistema di proprietà stesso, tuttavia, chiama ed espone internamente i callback come parte del sistema di proprietà di dipendenza. Un'operazione semplice come impostazione di un valore di proprietà di dipendenza con <xref:System.Windows.DependencyObject.SetValue%2A> chiamata potrebbe include un callback in qualche punto del processo di determinazione. Per questa ragione, occorre prestare attenzione quando si impostano i valori delle proprietà di dipendenza all'interno del corpo di un costruttore, perché l'operazione può divenire problematica se il tipo viene usato come classe di base. Un modello particolare per l'implementazione <xref:System.Windows.DependencyObject> costruttori che evita problemi specifici con gli stati delle proprietà di dipendenza e i callback inerenti, come documentato all'indirizzo.  

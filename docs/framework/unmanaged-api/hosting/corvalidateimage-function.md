@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df9cc0cc86237b1ec439a4ec4fa6a75429c416d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985777"
 ---
 # <a name="corvalidateimage-function"></a>Funzione _CorValidateImage
 Convalida delle immagini dei moduli gestiti e notifica al caricatore del sistema operativo dopo che sono stati caricati.  
@@ -53,23 +53,23 @@ STDAPI _CorValidateImage (
 ## <a name="remarks"></a>Note  
  In Windows XP e versioni successive, il caricatore del sistema operativo cerca moduli gestiti esaminando il bit COM descrittore Directory nell'intestazione common object file formato COFF (). Un bit impostato indica un modulo gestito. Se il caricatore rileva un modulo gestito, carica Mscoree. dll e chiamate `_CorValidateImage`, che consente di eseguire le azioni seguenti:  
   
--   Conferma che l'immagine è un modulo gestito valido.  
+- Conferma che l'immagine è un modulo gestito valido.  
   
--   Modifica il punto di ingresso nell'immagine a un punto di ingresso in common language runtime (CLR).  
+- Modifica il punto di ingresso nell'immagine a un punto di ingresso in common language runtime (CLR).  
   
--   Per le versioni a 64 bit di Windows, consente di modificare l'immagine che si trova in memoria e trasformato dal formato PE32 al formato PE32 +.  
+- Per le versioni a 64 bit di Windows, consente di modificare l'immagine che si trova in memoria e trasformato dal formato PE32 al formato PE32 +.  
   
--   Notifica al caricatore quando vengono caricate le immagini dei moduli gestiti.  
+- Notifica al caricatore quando vengono caricate le immagini dei moduli gestiti.  
   
  Per le immagini eseguibili, il caricatore del sistema operativo chiama quindi il [CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) funzione, indipendentemente dal punto di ingresso specificato nel file eseguibile. Per le immagini di assembly DLL, il caricatore chiama il [CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) (funzione).  
   
  `_CorExeMain` o `_CorDllMain` esegue le azioni seguenti:  
   
--   Inizializza CLR.  
+- Inizializza CLR.  
   
--   Individua il punto di ingresso gestito da un'intestazione CLR dell'assembly.  
+- Individua il punto di ingresso gestito da un'intestazione CLR dell'assembly.  
   
--   Inizia l'esecuzione.  
+- Inizia l'esecuzione.  
   
  Le chiamate del caricatore il [CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) funzionino quando vengono gestiti vengono scaricate immagini dei moduli. Tuttavia, questa funzione non esegue alcuna operazione. Restituisce solo.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - flow content reference [WPF]
 ms.assetid: d32501af-0bac-4b80-8a20-61a6996753fe
 ms.openlocfilehash: 47bdc48eb6f2fcb0ffd73f06a58bd01d716e56fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789298"
 ---
 # <a name="flow-content"></a>Contenuto del flusso
 Elementi di contenuto dinamico forniscono i blocchi predefiniti per la creazione del contenuto del flusso appropriato per l'hosting in un <xref:System.Windows.Documents.FlowDocument>.  

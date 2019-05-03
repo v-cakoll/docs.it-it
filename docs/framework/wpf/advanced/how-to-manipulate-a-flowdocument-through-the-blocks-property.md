@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ', '
 ms.assetid: cbb7291e-3f1b-433e-9e16-f4d93ced14e8
 ms.openlocfilehash: c307d85bf24e2d8a20226856181e0758758d40c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051507"
 ---
 # <a name="how-to-manipulate-a-flowdocument-through-the-blocks-property"></a>Procedura: Modificare un oggetto FlowDocument tramite la proprietà Blocks
 Questi esempi illustrano alcune delle operazioni più comuni che possono essere eseguite in un <xref:System.Windows.Documents.FlowDocument> attraverso il <xref:System.Windows.Documents.FlowDocument.Blocks%2A> proprietà.  

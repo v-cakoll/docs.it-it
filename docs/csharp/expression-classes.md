@@ -3,12 +3,12 @@ title: Tipi di framework che supportano alberi delle espressioni
 description: Informazioni sui tipi di framework che supportano gli alberi delle espressioni, sulla creazione di alberi delle espressioni e sulle tecniche per l'uso delle API degli alberi delle espressioni.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972559"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59198465"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Tipi di framework che supportano alberi delle espressioni
 
@@ -65,4 +65,3 @@ Sono disponibili tipi di nodo Expression che eseguono il mapping a quasi tutti g
 Esaminando ognuna di queste aree, si otterranno maggiori informazioni. Si troverà quanto necessario iniziando con uno di questi tre passaggi.
  
  [Successivo -- Esecuzione di alberi delle espressioni](expression-trees-execution.md)
- 

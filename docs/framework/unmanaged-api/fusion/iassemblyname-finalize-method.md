@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4db24977d46277bc16a8800b0c4f7a550747cb9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697394"
 ---
 # <a name="iassemblynamefinalize-method"></a>Metodo IAssemblyName::Finalize
 Ciò consente [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) oggetto rilasciare risorse ed eseguire altre operazioni di pulizia prima che venga chiamato il relativo distruttore.  

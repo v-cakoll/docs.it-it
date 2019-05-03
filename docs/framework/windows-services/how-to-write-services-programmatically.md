@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: 70a2c184e7b39af7b4f0466ac9ac627cff98f0c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baa7655481c24ebe96b76a0accbff63b6965a021
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672912"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59328426"
 ---
 # <a name="how-to-write-services-programmatically"></a>Procedura: Scrivere servizi a livello di codice
 Se si sceglie di non usare il modello di progetto Servizio Windows, è possibile scrivere servizi personalizzati impostando manualmente l'ereditarietà e altri elementi di infrastruttura. Quando si crea un servizio a livello di codice, è necessario eseguire diversi passaggi che altrimenti vengono gestiti automaticamente dal modello:  
@@ -27,7 +27,7 @@ Se si sceglie di non usare il modello di progetto Servizio Windows, è possibile
   
 ### <a name="to-write-a-service-programmatically"></a>Per scrivere un servizio a livello di codice  
   
-1.  Creare un progetto vuoto e creare un riferimento agli spazi dei nomi necessari seguendo questa procedura:  
+1. Creare un progetto vuoto e creare un riferimento agli spazi dei nomi necessari seguendo questa procedura:  
   
     1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo **Riferimenti** e scegliere **Aggiungi riferimento**.  
   
@@ -37,31 +37,31 @@ Se si sceglie di non usare il modello di progetto Servizio Windows, è possibile
   
     4.  Fare clic su **OK**.  
   
-2.  Aggiungere una classe e configurarla in modo che erediti da <xref:System.ServiceProcess.ServiceBase>:  
+2. Aggiungere una classe e configurarla in modo che erediti da <xref:System.ServiceProcess.ServiceBase>:  
   
      [!code-csharp[VbRadconService#7](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#7)]
      [!code-vb[VbRadconService#7](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#7)]  
   
-3.  Aggiungere il codice seguente per configurare la classe di servizio:  
+3. Aggiungere il codice seguente per configurare la classe di servizio:  
   
      [!code-csharp[VbRadconService#8](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#8)]
      [!code-vb[VbRadconService#8](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#8)]  
   
-4.  Creare un metodo `Main` per la classe e usarlo per definire il servizio che verrà incluso nella classe. `userService1` è il nome della classe:  
+4. Creare un metodo `Main` per la classe e usarlo per definire il servizio che verrà incluso nella classe. `userService1` è il nome della classe:  
   
      [!code-csharp[VbRadconService#9](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#9)]
      [!code-vb[VbRadconService#9](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#9)]  
   
-5.  Eseguire l'override del metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e definire l'elaborazione da eseguire eventualmente all'avvio del servizio.  
+5. Eseguire l'override del metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e definire l'elaborazione da eseguire eventualmente all'avvio del servizio.  
   
      [!code-csharp[VbRadconService#10](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#10)]
      [!code-vb[VbRadconService#10](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#10)]  
   
-6.  Eseguire l'override di qualsiasi altro metodo per cui si vuole definire un'elaborazione personalizzata e scrivere il codice per determinare le azioni che il servizio deve eseguire in ogni caso.  
+6. Eseguire l'override di qualsiasi altro metodo per cui si vuole definire un'elaborazione personalizzata e scrivere il codice per determinare le azioni che il servizio deve eseguire in ogni caso.  
   
-7.  Aggiungere i programmi di installazione necessari per l'applicazione di servizio. Per altre informazioni, vedere [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+7. Aggiungere i programmi di installazione necessari per l'applicazione di servizio. Per altre informazioni, vedere [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-8.  Compilare il progetto scegliendo **Compila soluzione** dal menu **Compila**.  
+8. Compilare il progetto scegliendo **Compila soluzione** dal menu **Compila**.  
   
     > [!NOTE]
     >  Non è possibile eseguire un progetto di servizio premendo F5.  
@@ -71,6 +71,7 @@ Se si sceglie di non usare il modello di progetto Servizio Windows, è possibile
 10. Installare il servizio. Per altre informazioni, vedere [Procedura: Installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
 - [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
 ms.openlocfilehash: 80ede9b7bc5bf667e03dc0a745fbc0b5f6c2663a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59343285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640477"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: Aggiungere e rimuovere colonne nel controllo DataGridView di Windows Forms usando la finestra di progettazione
 I moduli di Windows <xref:System.Windows.Forms.DataGridView> controllo deve contenere colonne per poter visualizzare i dati. Se si prevede di inserire manualmente i dati del controllo, è necessario aggiungere le colonne. In alternativa, è possibile associare il controllo a un'origine dati, che genera e compila automaticamente le colonne. Se l'origine dati contiene più colonne di quelle che si desidera visualizzare, è possibile rimuovere le colonne non desiderate.  
@@ -44,5 +44,5 @@ I moduli di Windows <xref:System.Windows.Forms.DataGridView> controllo deve cont
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.DataGridView>
-- [Procedura: Creare un progetto Windows Forms application](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Procedura: Aggiungere controlli a Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Procedura: Creare un progetto di Windows Forms Application](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Procedura: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md)

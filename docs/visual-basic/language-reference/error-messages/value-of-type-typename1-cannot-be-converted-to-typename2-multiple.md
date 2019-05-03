@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
 ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766818"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>Valore di tipo '\<NomeTipo1 >' non può essere convertito in '\<in NomeTipo2 >' (più riferimenti di file)
 Valore di tipo '\<NomeTipo1 >' non può essere convertito in '\<in NomeTipo2 >'. Mancata corrispondenza del tipo potrebbe essere dovuto a un riferimento file a '\<filepath1 >' nel progetto '\<projectname1 >' con un riferimento file a '\<filepath2 >' nel progetto '\<projectname2 >'. Se gli assembly sono identici, provare a definire lo stesso percorso per entrambi i riferimenti.  
@@ -27,9 +27,9 @@ Valore di tipo '\<NomeTipo1 >' non può essere convertito in '\<in NomeTipo2 >'.
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Se gli assembly di riferimento hanno la stessa identità di assembly, quindi rimuovere o sostituire uno dei riferimenti ai file in modo che sia presente solo un riferimento a file singolo.  
+- Se gli assembly di riferimento hanno la stessa identità di assembly, quindi rimuovere o sostituire uno dei riferimenti ai file in modo che sia presente solo un riferimento a file singolo.  
   
--   Se gli assembly di riferimento non è la stessa identità di assembly, quindi modificare il codice in modo che non prova a convertire un tipo in uno a un tipo in altro.  
+- Se gli assembly di riferimento non è la stessa identità di assembly, quindi modificare il codice in modo che non prova a convertire un tipo in uno a un tipo in altro.  
   
 ## <a name="see-also"></a>Vedere anche
 

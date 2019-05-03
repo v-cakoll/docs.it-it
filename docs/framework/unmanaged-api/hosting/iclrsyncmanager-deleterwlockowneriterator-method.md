@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 82988d25926a4e61d91a98e7cd5995dacde4e5b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763698"
 ---
 # <a name="iclrsyncmanagerdeleterwlockowneriterator-method"></a>Metodo ICLRSyncManager::DeleteRWLockOwnerIterator
 Richiede che common language runtime (CLR) di eliminare un iteratore che è stato creato da una chiamata a [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).  

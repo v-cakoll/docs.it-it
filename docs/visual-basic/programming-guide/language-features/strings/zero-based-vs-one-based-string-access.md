@@ -5,11 +5,11 @@ helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
 ms.openlocfilehash: a6ceb10d4a3cb9463551d8c85375ddbbb607ffdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024456"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Accesso alle stringhe in base zero Accesso basato su una stringa in Visual Basic
 Questo argomento vengono confrontati come Visual Basic e [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] forniscono l'accesso ai caratteri in una stringa. Il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] fornisce sempre l'accesso in base zero per i caratteri in una stringa, mentre Visual Basic fornisce l'accesso in base zero e in base uno, a seconda della funzione.  

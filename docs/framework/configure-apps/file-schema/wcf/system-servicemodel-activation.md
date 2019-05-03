@@ -3,11 +3,11 @@ title: <system.serviceModel.activation>
 ms.date: 03/30/2017
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
 ms.openlocfilehash: b29f7173b4d75ec9adff37449d3d56266f01a03c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759161"
 ---
 # <a name="systemservicemodelactivation"></a>\<system.serviceModel.activation>
 Questa sezione di configurazione rappresenta le impostazioni di configurazione per lo strumento SMSvcHost.exe. Gli elementi di configurazione che possono essere configurati nel file SMSvcHost.exe.config. In particolare, include tutte le impostazioni che devono essere configurate a livello di computer.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
 ms.openlocfilehash: 911c13b2a24c1906fe3da787460209f12296c993
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59337123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928583"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Procedura: Specificare un'associazione al servizio nella configurazione
 In questo esempio viene definito un contratto `ICalculator` per un servizio calcolatrice di base, il servizio viene implementato nella classe `CalculatorService`, quindi l'endpoint relativo viene configurato nel file Web.config dove viene specificato che il servizio utilizza <xref:System.ServiceModel.BasicHttpBinding>. Per una descrizione di come configurare questo servizio utilizzando codice anziché una configurazione, vedere [come: Specificare un'associazione al servizio nel codice](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  
@@ -95,4 +95,4 @@ In questo esempio viene definito un contratto `ICalculator` per un servizio calc
 ## <a name="see-also"></a>Vedere anche
 
 - [Uso di associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Specifica di un indirizzo endpoint](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Specifica di un indirizzo dell'endpoint](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

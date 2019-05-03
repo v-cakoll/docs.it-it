@@ -6,10 +6,10 @@ helpviewer_keywords:
 - TreeNode [Windows Forms], attaching a shortcut menu using Designer
 ms.assetid: 8e45e184-1313-4f8f-90ff-2cd5789b2268
 ms.openlocfilehash: 9be633d14429bc2ceda1f0db2ff09252d55d5dd5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337448"
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>Procedura: Associare un menu di scelta rapida a un TreeNode usando la finestra di progettazione
@@ -33,5 +33,5 @@ I moduli di Windows <xref:System.Windows.Forms.TreeView> controllo Visualizza un
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllo TreeView](treeview-control-windows-forms.md)
-- [Panoramica del controllo TreeView](treeview-control-overview-windows-forms.md)
+- [Panoramica sul controllo TreeView](treeview-control-overview-windows-forms.md)
 - [Controllo ContextMenuStrip](contextmenustrip-control.md)

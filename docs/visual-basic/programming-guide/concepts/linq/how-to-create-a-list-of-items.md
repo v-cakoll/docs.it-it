@@ -6,11 +6,11 @@ helpviewer_keywords:
 - objects [Visual Basic], list of items
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
 ms.openlocfilehash: 97952c2240a5ec1d5e41bd9b2b59aeed3eb43ab6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855458"
 ---
 # <a name="how-to-create-a-list-of-items"></a>Procedura: Creare un elenco di elementi
 Il codice in questo argomento definisce una classe `Student` e crea un elenco di istanze nella classe. L'elenco è progettato per supportare l'argomento [procedura dettagliata: Scrittura di query in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md). Può inoltre essere usato per qualsiasi applicazione richieda un elenco di oggetti. Il codice definisce gli elementi nell'elenco di studenti usando gli inizializzatori di oggetto.  

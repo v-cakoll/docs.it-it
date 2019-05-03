@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f52f102102cb654035d49eea0f4b0a9061475a3a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050129"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>Metodo IMetaDataEmit::DefineModuleRef
 Crea la firma dei metadati per un modulo con il nome specificato.  

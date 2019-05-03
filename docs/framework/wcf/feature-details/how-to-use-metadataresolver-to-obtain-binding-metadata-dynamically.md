@@ -3,11 +3,11 @@ title: 'Procedura: Usare MetadataResolver per ottenere dinamicamente i metadati 
 ms.date: 03/30/2017
 ms.assetid: 56ffcb99-fff0-4479-aca0-e3909009f605
 ms.openlocfilehash: 3fe09699304de42ed00312f50f3b9e0edb20615d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047555"
 ---
 # <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>Procedura: Usare MetadataResolver per ottenere dinamicamente i metadati di associazione
 In questo argomento viene illustrato come utilizzare la classe <xref:System.ServiceModel.Description.MetadataResolver> per ottenere dinamicamente i metadati di associazione.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
 ms.openlocfilehash: 0ade908e92e552017acb9ba242ccba2c28c3c995
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051052"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>Procedura: Compilare una finestra di dialogo dell'interfaccia utente standard usando l'elemento Grid
 In questo esempio viene illustrato come creare uno standard [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] finestra di dialogo tramite il <xref:System.Windows.Controls.Grid> elemento.  
@@ -37,4 +37,4 @@ In questo esempio viene illustrato come creare uno standard [!INCLUDE[TLA#tla_ui
 - <xref:System.Windows.Controls.Grid>
 - <xref:System.Windows.GridUnitType>
 - [Cenni preliminari sugli elementi Panel](panels-overview.md)
-- [Procedure relative](grid-how-to-topics.md)
+- [Procedure relative alle proprietà](grid-how-to-topics.md)

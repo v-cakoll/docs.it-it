@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: qualificare nomi di attributi ed elementi XML'
+title: 'Procedura: Qualificare nomi di attributi ed elementi XML'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
-ms.translationtype: MT
+ms.openlocfilehash: 04e9dd3c135c516fa5554b9b547306337fb6a668
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176734"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807823"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Procedura: qualificare nomi di attributi ed elementi XML
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Procedura: Qualificare nomi di attributi ed elementi XML
 
 Spazi dei nomi XML contenuti nelle istanze del <xref:System.Xml.Serialization.XmlSerializerNamespaces> classe deve essere conforme alla specifica del World Wide Web Consortium (W3C) denominata [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).
 
@@ -32,7 +32,7 @@ Tramite la creazione di un'istanza di `XmlSerializerNamespaces` e l'aggiunta del
 
 3. Applicare l'attributo `System.Xml.Serialization` appropriato a ciascun membro o classe che <xref:System.Xml.Serialization.XmlSerializer> deve serializzare in un documento XML.
 
-  Gli attributi disponibili sono: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute> e <xref:System.Xml.Serialization.XmlTypeAttribute>.
+    Gli attributi disponibili sono: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute> e <xref:System.Xml.Serialization.XmlTypeAttribute>.
 
 4. Impostare la proprietà `Namespace` di ciascun attributo su uno dei valori dello spazio dei nomi da `XmlSerializerNamespaces`.
 
@@ -176,6 +176,6 @@ public class Book
 - [Introduzione alla serializzazione XML](introducing-xml-serialization.md)
 - [Classe XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
 - [Attributi per il controllo della serializzazione XML](attributes-that-control-xml-serialization.md)
-- [Procedura: specificare un nome di elemento alternativo per un flusso XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Procedura: Specificare un nome di elemento alternativo per un Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [Procedura: Serializzare un oggetto](how-to-serialize-an-object.md)
 - [Procedura: Deserializzare un oggetto](how-to-deserialize-an-object.md)

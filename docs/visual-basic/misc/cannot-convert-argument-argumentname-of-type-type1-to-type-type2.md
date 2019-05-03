@@ -5,11 +5,11 @@ f1_keywords:
 - vbrForLoop_ConvertToType3
 ms.assetid: fdf6c571-9c6c-4db2-8960-f394720b01e5
 ms.openlocfilehash: 33e732f529be2f4d200355e352bb8b7bc7e629f3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59322862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008124"
 ---
 # <a name="cannot-convert-argument-argumentname-of-type-type1-to-type-type2"></a>Impossibile convertire l'argomento '\<NomeArgomento >' di tipo '\<type1 >' nel tipo '\<type2 >'
 Un'operazione di conversione prova a convertire un argomento in un tipo incompatibile.  

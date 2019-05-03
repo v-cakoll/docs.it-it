@@ -9,11 +9,11 @@ helpviewer_keywords:
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
 ms.openlocfilehash: f969769725ae099ddf477fd11efb03277a555fa6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967102"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Creazione di gestori eventi in Windows Form
 Un gestore eventi è una procedura nel codice che determina le azioni da eseguire quando si verifica un evento, ad esempio quando l'utente fa clic su un pulsante o una coda di messaggi riceve un messaggio. Al momento della generazione di un evento, vengono eseguiti i gestori eventi che ricevono l'evento. Gli eventi possono essere assegnati a più gestori e i metodi che gestiscono determinati eventi possono essere modificati in modo dinamico. Per creare i gestori eventi è possibile anche usare Progettazione Windows Form.  

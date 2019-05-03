@@ -15,11 +15,11 @@ helpviewer_keywords:
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
 ms.openlocfilehash: 57abf3527af146f1ce918bcabbc6a5a34bfb9b34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011735"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>Suggerimenti per il controllo TableLayoutPanel
 Il <xref:System.Windows.Forms.TableLayoutPanel> controllo fornisce funzionalità di layout avanzate che è opportuno considerare con attenzione prima di utilizzare nei Windows Form.  
@@ -30,17 +30,17 @@ Il <xref:System.Windows.Forms.TableLayoutPanel> controllo fornisce funzionalità
 ### <a name="targeted-use"></a>Uso specifici  
  Usare il <xref:System.Windows.Forms.TableLayoutPanel> controllare in modo sporadico. Non è necessario usarlo in tutte le situazioni che richiedono un layout ridimensionabile. Nell'elenco seguente vengono descritti i layout che traggono vantaggio dall'utilizzo di più il <xref:System.Windows.Forms.TableLayoutPanel> controllo:  
   
--   Layout in cui sono presenti più parti nel formato che ridimensionano in modo proporzionale tra loro.  
+- Layout in cui sono presenti più parti nel formato che ridimensionano in modo proporzionale tra loro.  
   
--   Layout che verranno generate dinamicamente in fase di esecuzione, ad esempio form di immissione di dati con campi personalizzabili dall'utente aggiunte o sottratte o modificato in base alle preferenze.  
+- Layout che verranno generate dinamicamente in fase di esecuzione, ad esempio form di immissione di dati con campi personalizzabili dall'utente aggiunte o sottratte o modificato in base alle preferenze.  
   
--   Layout che deve rimanere in una dimensione fissa globale. Ad esempio, potrebbe essere una finestra di dialogo che deve rimanere inferiore a 800 x 600, ma è necessario supportare le stringhe localizzate.  
+- Layout che deve rimanere in una dimensione fissa globale. Ad esempio, potrebbe essere una finestra di dialogo che deve rimanere inferiore a 800 x 600, ma è necessario supportare le stringhe localizzate.  
   
  Nell'elenco seguente vengono descritti i layout che non traggono notevoli vantaggi dall'utilizzo di <xref:System.Windows.Forms.TableLayoutPanel> controllo:  
   
--   Semplice moduli di immissione dati con una sola colonna di etichette e una singola colonna delle aree di immissione di testo.  
+- Semplice moduli di immissione dati con una sola colonna di etichette e una singola colonna delle aree di immissione di testo.  
   
--   Form con un unico grande Visualizza area che deve occupare tutto lo spazio disponibile quando si verifica un ridimensionamento. Un esempio di questo oggetto è una forma che visualizza una singola <xref:System.Windows.Forms.PropertyGrid> controllo. In questo caso, utilizzare l'ancoraggio perché nessun altro elemento deve espandere quando il form viene ridimensionato.  
+- Form con un unico grande Visualizza area che deve occupare tutto lo spazio disponibile quando si verifica un ridimensionamento. Un esempio di questo oggetto è una forma che visualizza una singola <xref:System.Windows.Forms.PropertyGrid> controllo. In questo caso, utilizzare l'ancoraggio perché nessun altro elemento deve espandere quando il form viene ridimensionato.  
   
  Scegliere con attenzione i controlli che devono essere in un <xref:System.Windows.Forms.TableLayoutPanel> controllo. Se si dispone di spazio per la crescita del 30% usando l'ancoraggio del testo, è consigliabile usare il <xref:System.Windows.Forms.Control.Anchor%2A> solo la proprietà. Se è possibile stimare lo spazio richiesto per il layout, usare <xref:System.Windows.Forms.Control.Dock%2A> e <xref:System.Windows.Forms.Control.Anchor%2A> è più facile che stima i dettagli dello spazio rimanente e <xref:System.Windows.Forms.Control.AutoSize%2A> comportamento.  
   

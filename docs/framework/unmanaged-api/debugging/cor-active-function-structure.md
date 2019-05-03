@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c0400da0cd29d642a1be42be7e2b22213ae54b94
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59121771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609660"
 ---
 # <a name="coractivefunction-structure"></a>Struttura COR_ACTIVE_FUNCTION
 Contiene informazioni sulle funzioni attualmente attive nei frame di un thread. Questa struttura viene utilizzata per la [ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) (metodo).  

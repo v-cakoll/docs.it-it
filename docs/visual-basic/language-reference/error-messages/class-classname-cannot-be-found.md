@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
 ms.openlocfilehash: e1a33a56d196b2a8731f2ddb5c632b0de147db3e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59346314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649920"
 ---
 # <a name="class-classname-cannot-be-found"></a>Classe\<NomeClasse >' non è stata trovata
 Classe\<NomeClasse >' non è stata trovata. Questa condizione è in genere il risultato di un "Microsoft.VisualBasic.dll" non corrispondente.  
@@ -33,4 +33,4 @@ Classe\<NomeClasse >' non è stata trovata. Questa condizione è in genere il ri
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)

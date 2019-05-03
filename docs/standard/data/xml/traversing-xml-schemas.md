@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c587f4248205251824be851c135d93784e86c2f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646633"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59305039"
 ---
 # <a name="traversing-xml-schemas"></a>Attraversamento di schemi XML
 L'attraversamento di uno schema XML mediante l'API del modello SOM (Schema Object Model) consente di accedere a elementi, attributi e tipi archiviati nel modello SOM. Tale attraversamento rappresenta inoltre il primo passaggio per la modifica di uno schema XML tramite l'API del modello SOM.  
@@ -43,19 +43,19 @@ L'attraversamento di uno schema XML mediante l'API del modello SOM (Schema Objec
   
  L'esempio consente di attraversare lo schema del cliente eseguendo i passaggi seguenti.  
   
-1.  Aggiunge lo schema del cliente a un nuovo oggetto <xref:System.Xml.Schema.XmlSchemaSet>, quindi lo compila. Eventuali avvisi ed errori di convalida dello schema rilevati durante la lettura e la compilazione dello schema vengono gestiti dal delegato <xref:System.Xml.Schema.ValidationEventHandler>.  
+1. Aggiunge lo schema del cliente a un nuovo oggetto <xref:System.Xml.Schema.XmlSchemaSet>, quindi lo compila. Eventuali avvisi ed errori di convalida dello schema rilevati durante la lettura e la compilazione dello schema vengono gestiti dal delegato <xref:System.Xml.Schema.ValidationEventHandler>.  
   
-2.  Recupera l'oggetto <xref:System.Xml.Schema.XmlSchema> compilato dal tipo <xref:System.Xml.Schema.XmlSchemaSet> scorrendo la proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Dal momento che lo schema è stato compilato, è possibile accedere alle proprietà di PSCI (Post-Schema-Compilation-Infoset).  
+2. Recupera l'oggetto <xref:System.Xml.Schema.XmlSchema> compilato dal tipo <xref:System.Xml.Schema.XmlSchemaSet> scorrendo la proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Dal momento che lo schema è stato compilato, è possibile accedere alle proprietà di PSCI (Post-Schema-Compilation-Infoset).  
   
-3.  Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaElement> nella raccolta <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> della raccolta <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> successiva alla compilazione dello schema e scrive il nome di ciascun elemento nella console.  
+3. Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaElement> nella raccolta <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> della raccolta <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> successiva alla compilazione dello schema e scrive il nome di ciascun elemento nella console.  
   
-4.  Ottiene il tipo complesso dell'elemento `Customer` usando la classe <xref:System.Xml.Schema.XmlSchemaComplexType>.  
+4. Ottiene il tipo complesso dell'elemento `Customer` usando la classe <xref:System.Xml.Schema.XmlSchemaComplexType>.  
   
-5.  Se il tipo complesso dispone di attributi, ottiene un tipo <xref:System.Collections.IDictionaryEnumerator> per enumerare ciascun tipo <xref:System.Xml.Schema.XmlSchemaAttribute> e scrive il relativo nome nella console.  
+5. Se il tipo complesso dispone di attributi, ottiene un tipo <xref:System.Collections.IDictionaryEnumerator> per enumerare ciascun tipo <xref:System.Xml.Schema.XmlSchemaAttribute> e scrive il relativo nome nella console.  
   
-6.  Ottiene la particella di sequenza del tipo complesso usando la classe <xref:System.Xml.Schema.XmlSchemaSequence>.  
+6. Ottiene la particella di sequenza del tipo complesso usando la classe <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-7.  Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaElement> nella raccolta <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> e scrive il nome di ciascun elemento figlio nella console.  
+7. Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaElement> nella raccolta <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> e scrive il nome di ciascun elemento figlio nella console.  
   
  Di seguito è riportato l'esempio di codice completo.  
   

@@ -5,11 +5,11 @@ ms.assetid: 5a66d3f4-dd16-4d62-9dcc-0eab7041d894
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 52b5c63f35732655834768eb5b914406203d423c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61927361"
 ---
 # <a name="icordebugmutabledatatargetcontinuestatuschanged-method"></a>Metodo ICorDebugMutableDataTarget::ContinueStatusChanged
 Modifica lo stato di continuazione per l'evento di debug in sospeso sul thread specificato.  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4e78b8a2069671d0fe790956ca914225325a78bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916617"
 ---
 # <a name="icordebugmdagetxml-method"></a>Metodo ICorDebugMDA::GetXML
 Ottiene il flusso XML completo associato con l'assistente al debug gestito (MDA) rappresentato da [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
 ms.openlocfilehash: bbb3c413148bd2e2ab8de8a1a725f2d9a8acf2f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020799"
 ---
 # <a name="3-d-transformations-overview"></a>Cenni preliminari sulle trasformazioni tridimensionali
 Questo argomento descrive come applicare trasformazioni a modelli tridimensionali nel sistema grafico di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Le trasformazioni consentono allo sviluppatore di riposizionare, ridimensionare e orientare nuovamente i modelli senza modificare i valori di base che li definiscono.  
@@ -105,6 +105,6 @@ Esempio di rotazione
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sulla grafica tridimensionale](3-d-graphics-overview.md)
+- [Panoramica sulla grafica tridimensionale](3-d-graphics-overview.md)
 - [Cenni preliminari sulle trasformazioni](transforms-overview.md)
-- [Esempio di trasformazioni 2D](https://go.microsoft.com/fwlink/?LinkID=158252)
+- [2-D Transforms Sample (Esempio di trasformazioni 2D)](https://go.microsoft.com/fwlink/?LinkID=158252)

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
 ms.openlocfilehash: e9af529541a40a951d6defea180dbbef04c8f3be
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913705"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>Procedura: Rendere invisibile il controllo in fase di esecuzione
 Vi sono casi quando si potrebbe voler creare un controllo utente che non è visibile in fase di esecuzione. Ad esempio, potrebbe essere invisibile tranne quando l'allarme è stato suona un controllo che una sveglia. Questo avviene facilmente impostando il <xref:System.Windows.Forms.Control.Visible%2A> proprietà. Se il <xref:System.Windows.Forms.Control.Visible%2A> è di proprietà `true`, il controllo verrà visualizzato come di consueto. Se `false`, il controllo sarà nascosto. Anche se nel controllo del codice può comunque eseguire nonostante sia invisibile, non sarà in grado di interagire con il controllo tramite l'interfaccia utente. Se si desidera creare un controllo invisibile in grado di rispondere all'input (ad esempio, clic del mouse) dell'utente, è necessario creare un controllo trasparente. Per altre informazioni, vedere [assegnazione di uno sfondo trasparente al controllo](how-to-give-your-control-a-transparent-background.md).  
@@ -43,4 +43,4 @@ Vi sono casi quando si potrebbe voler creare un controllo utente che non è visi
 
 - <xref:System.Windows.Forms.Control.Visible%2A>
 - [Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)
-- [Procedura: Assegnare uno sfondo trasparente al controllo](how-to-give-your-control-a-transparent-background.md)
+- [Procedura: Assegnare al controllo uno sfondo trasparente](how-to-give-your-control-a-transparent-background.md)

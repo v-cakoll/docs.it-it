@@ -8,11 +8,11 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010540"
 ---
 # <a name="dependency-property-value-precedence"></a>Precedenza del valore della proprietà di dipendenza
 <a name="introduction"></a> Questo argomento illustra il modo in cui i meccanismi del sistema di proprietà [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] possono influire sul valore di una proprietà di dipendenza e descrive la precedenza in base alla quale gli aspetti del sistema di proprietà si applicano al valore effettivo di una proprietà.  
@@ -47,9 +47,9 @@ ms.locfileid: "59315686"
   
 4. **Proprietà del modello TemplatedParent.** L'elemento dispone di un <xref:System.Windows.FrameworkElement.TemplatedParent%2A> se è stato creato come parte di un modello (un <xref:System.Windows.Controls.ControlTemplate> o <xref:System.Windows.DataTemplate>). Per informazioni dettagliate sulle situazioni in cui viene applicato, vedere [TemplatedParent](#templatedparent) più avanti in questo argomento. All'interno del modello, viene applicata la seguente precedenza:  
   
-    1.  Attiva dal <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modello.  
+    1. Attiva dal <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modello.  
   
-    2.  Set di proprietà (in genere tramite [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] attributi) nel <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modello.  
+    2. Set di proprietà (in genere tramite [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] attributi) nel <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modello.  
   
 5. **Stile implicito.** Si applica solo alla proprietà `Style`. La proprietà `Style` viene riempita da qualsiasi risorsa di stile con una chiave che corrisponde al tipo di quell'elemento. Quella risorsa di stile deve essere presente nella pagina o nell'applicazione. La ricerca per una risorsa di stile implicita non viene eseguita nei temi.  
   
@@ -57,17 +57,17 @@ ms.locfileid: "59315686"
   
 7. **Trigger dei modelli.** Qualsiasi trigger da un modello all'interno di uno stile oppure un modello applicato direttamente.  
   
-8. **Setter di stile.** I valori da un <xref:System.Windows.Setter> all'interno di stili da pagine o applicazioni.  
+8. **Setter di stili.** I valori da un <xref:System.Windows.Setter> all'interno di stili da pagine o applicazioni.  
   
-9. **Stile (tema) predefiniti.** Per informazioni dettagliate sui casi in cui viene applicato e sul modo in cui gli stili del tema si riferiscono ai modelli all'interno degli stili del tema, vedere [Stili (tema) predefiniti](#themestyles) più avanti in questo argomento. All'interno di uno stile predefinito, viene applicato il seguente ordine di precedenza:  
+9. **Stile (tema) predefinito.** Per informazioni dettagliate sui casi in cui viene applicato e sul modo in cui gli stili del tema si riferiscono ai modelli all'interno degli stili del tema, vedere [Stili (tema) predefiniti](#themestyles) più avanti in questo argomento. All'interno di uno stile predefinito, viene applicato il seguente ordine di precedenza:  
   
-    1.  Trigger attivi nello stile del tema.  
+    1. Trigger attivi nello stile del tema.  
   
-    2.  Setter nello stile del tema.  
+    2. Setter nello stile del tema.  
   
 10. **Ereditarietà.** Alcune proprietà di dipendenza ereditano i propri valori dall'elemento padre agli elementi figlio, in modo che non sia necessario impostarli in modo specifico per ogni elemento in tutta l'applicazione. Per informazioni dettagliate, vedere [Ereditarietà del valore della proprietà](property-value-inheritance.md).  
   
-11. **Valore predefinito dai metadati di proprietà di dipendenza.** Qualsiasi proprietà di dipendenza specificata può avere un valore predefinito come stabilito dalla registrazione del sistema di proprietà di quella particolare proprietà. Inoltre, le classi derivate che ereditano una proprietà di dipendenza hanno la possibilità di eseguire l'override di tali metadati (incluso il valore predefinito) in base al tipo. Per altre informazioni, vedere [Metadati delle proprietà di dipendenza](dependency-property-metadata.md). Dato che l'ereditarietà viene controllata prima del valore predefinito, per una proprietà ereditata un valore predefinito dell'elemento padre ha la precedenza su un elemento figlio.  Di conseguenza, se una proprietà ereditabile non viene impostata ovunque, viene usato il valore predefinito come specificato nella radice o nell'elemento padre invece del valore predefinito dell'elemento figlio.  
+11. **Valore predefinito dai metadati delle proprietà di dipendenza.** Qualsiasi proprietà di dipendenza specificata può avere un valore predefinito come stabilito dalla registrazione del sistema di proprietà di quella particolare proprietà. Inoltre, le classi derivate che ereditano una proprietà di dipendenza hanno la possibilità di eseguire l'override di tali metadati (incluso il valore predefinito) in base al tipo. Per altre informazioni, vedere [Metadati delle proprietà di dipendenza](dependency-property-metadata.md). Dato che l'ereditarietà viene controllata prima del valore predefinito, per una proprietà ereditata un valore predefinito dell'elemento padre ha la precedenza su un elemento figlio.  Di conseguenza, se una proprietà ereditabile non viene impostata ovunque, viene usato il valore predefinito come specificato nella radice o nell'elemento padre invece del valore predefinito dell'elemento figlio.  
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  
@@ -77,11 +77,11 @@ ms.locfileid: "59315686"
 ## <a name="the-style-property"></a>Proprietà Style  
  L'ordine di ricerca descritto in precedenza si applica a tutte le possibili proprietà di dipendenza tranne una: il <xref:System.Windows.FrameworkElement.Style%2A> proprietà. Il <xref:System.Windows.FrameworkElement.Style%2A> proprietà è univoca in quanto non è possibile può essere applicato uno stile, in modo che non si applicano gli elementi di precedenza da 5 a 8. Inoltre, l'animazione o la coercizione <xref:System.Windows.FrameworkElement.Style%2A> non è consigliabile (e l'animazione <xref:System.Windows.FrameworkElement.Style%2A> richiederebbe una classe di animazione personalizzata). Rimangono così tre modalità che il <xref:System.Windows.FrameworkElement.Style%2A> proprietà può essere impostata:  
   
--   **Stile esplicito.** Il <xref:System.Windows.FrameworkElement.Style%2A> viene impostata direttamente. Nella maggior parte degli scenari, lo stile non viene definito inline, ma viene invece indicato come una risorsa, tramite una chiave esplicita. In questo caso la stessa proprietà Style agisce come se fosse un valore locale, elemento di precedenza 3.  
+- **Stile esplicito.** Il <xref:System.Windows.FrameworkElement.Style%2A> viene impostata direttamente. Nella maggior parte degli scenari, lo stile non viene definito inline, ma viene invece indicato come una risorsa, tramite una chiave esplicita. In questo caso la stessa proprietà Style agisce come se fosse un valore locale, elemento di precedenza 3.  
   
--   **Stile implicito.** Il <xref:System.Windows.FrameworkElement.Style%2A> proprietà non viene impostata direttamente. Tuttavia, il <xref:System.Windows.FrameworkElement.Style%2A> presente a qualche livello nella sequenza di ricerca di risorse (pagina, applicazione) e viene aggiunta usando una chiave di risorsa che corrisponde al tipo è lo stile da applicare a. In questo caso, il <xref:System.Windows.FrameworkElement.Style%2A> stessa proprietà agisce in base a una precedenza identificata nella sequenza come elemento 5. Questa condizione può essere rilevata tramite <xref:System.Windows.DependencyPropertyHelper> contro il <xref:System.Windows.FrameworkElement.Style%2A> proprietà e cercando <xref:System.Windows.BaseValueSource.ImplicitStyleReference> nei risultati.  
+- **Stile implicito.** Il <xref:System.Windows.FrameworkElement.Style%2A> proprietà non viene impostata direttamente. Tuttavia, il <xref:System.Windows.FrameworkElement.Style%2A> presente a qualche livello nella sequenza di ricerca di risorse (pagina, applicazione) e viene aggiunta usando una chiave di risorsa che corrisponde al tipo è lo stile da applicare a. In questo caso, il <xref:System.Windows.FrameworkElement.Style%2A> stessa proprietà agisce in base a una precedenza identificata nella sequenza come elemento 5. Questa condizione può essere rilevata tramite <xref:System.Windows.DependencyPropertyHelper> contro il <xref:System.Windows.FrameworkElement.Style%2A> proprietà e cercando <xref:System.Windows.BaseValueSource.ImplicitStyleReference> nei risultati.  
   
--   **Stile predefinito**, noto anche come **stile del tema.** Il <xref:System.Windows.FrameworkElement.Style%2A> proprietà non viene impostata direttamente e infatti verrà letta come `null` fino alla fase di esecuzione. In questo caso, lo stile deriva dalla valutazione del tema di runtime che fa parte del motore di presentazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+- **Stile predefinito**, noto anche come **stile del tema.** Il <xref:System.Windows.FrameworkElement.Style%2A> proprietà non viene impostata direttamente e infatti verrà letta come `null` fino alla fase di esecuzione. In questo caso, lo stile deriva dalla valutazione del tema di runtime che fa parte del motore di presentazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Per gli stili impliciti non inclusi nei temi, il tipo deve corrispondere esattamente: una `MyButton` `Button`-classe derivata non utilizzerà in modo implicito uno stile per `Button`.  
   

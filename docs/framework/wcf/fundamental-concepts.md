@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
 ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929597"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Concetti fondamentali di Windows Communication Foundation
 Questo documento fornisce una panoramica generale dell'architettura Windows Communication Foundation (WCF). Il documento è concepito per spiegare i concetti principali e le modalità di interazione. Per un'esercitazione sulla creazione della versione più semplice di un servizio WCF e un client, vedere [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md). Per altre informazioni sulla programmazione di WCF, vedere [programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -34,11 +34,11 @@ Questo documento fornisce una panoramica generale dell'architettura Windows Comm
   
  Un altro elemento obbligatorio nello stack di comunicazione è la codifica che specifica come ogni messaggio viene formattato. WCF fornisce le codifiche seguenti:  
   
--   Codifica testo, una codifica interoperativa.  
+- Codifica testo, una codifica interoperativa.  
   
--   Codifica Message Transmission Optimization Mechanism (MTOM), una modalità interoperativa per l'invio efficiente di dati binari non strutturati a e da un servizio.  
+- Codifica Message Transmission Optimization Mechanism (MTOM), una modalità interoperativa per l'invio efficiente di dati binari non strutturati a e da un servizio.  
   
--   Codifica binaria per trasferimenti efficienti.  
+- Codifica binaria per trasferimenti efficienti.  
   
  Ulteriori meccanismi di codifica (ad esempio, una codifica di compressione) possono essere aggiunti utilizzando i punti di estensione incorporati di WCF.  
   

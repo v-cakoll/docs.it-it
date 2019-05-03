@@ -11,18 +11,18 @@ ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6900bca2bd94f52ea5603c752681163cde52ce19
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867030"
 ---
 # <a name="compiling-apps-with-net-native"></a>Compilazione di app con .NET Native
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] è una tecnologia di precompilazione per la compilazione e distribuzione di App di Windows è inclusa con Visual Studio 2015 e versioni successive. che compila automaticamente la versione finale delle app scritte in codice gestito (C# o Visual Basic) e destina .NET Framework e Windows 10 al codice nativo.  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)] è una tecnologia di precompilazione per la compilazione e distribuzione di App di Windows che è inclusa in Visual Studio 2015 e versioni successive. che compila automaticamente la versione finale delle app scritte in codice gestito (C# o Visual Basic) e destina .NET Framework e Windows 10 al codice nativo.  
   
  In genere, le applicazioni che usano .NET Framework vengono compilate in Microsoft Intermediate Language (IL). In fase di esecuzione, il compilatore just-in-time (JIT) traduce IL in codice nativo. Al contrario, [!INCLUDE[net_native](../../../includes/net-native-md.md)] consente di compilare applicazioni Windows direttamente in codice nativo. Per gli sviluppatori, questo significa che:  
   
--   Le app offrono le prestazioni del codice nativo. In genere, le prestazioni sono superiori al codice che viene innanzitutto compilato a livello di integrità e quindi compilato in codice nativo dal compilatore JIT. 
+-   Le app offrono le prestazioni del codice nativo. In genere, le prestazioni risulteranno superiori al codice che viene innanzitutto compilato a livello di integrità e quindi compilato in codice nativo tramite il compilatore JIT. 
   
 -   È possibile continuare a programmare in c# o Visual Basic.  
   
@@ -30,16 +30,16 @@ ms.locfileid: "34457307"
   
  Per gli utenti delle applicazioni, [!INCLUDE[net_native](../../../includes/net-native-md.md)] offre i seguenti vantaggi:  
   
--   Tempi di esecuzione per la maggior parte delle applicazioni e degli scenari.
+-   Tempi di esecuzione per la maggior parte delle App e gli scenari.
   
--   Tempi di avvio per la maggior parte delle applicazioni e degli scenari. 
+-   Tempi di avvio più rapidi per la maggior parte delle App e gli scenari. 
   
--   Bassi costi di distribuzione e aggiornamento.  
+-   Basso costo di distribuzione e l'aggiornamento.  
   
--   Utilizzo della memoria app ottimizzato.  
+-   Utilizzo memoria applicazione ottimizzata.  
 
 > [!IMPORTANT]
-> Per la maggior parte delle applicazioni e degli scenari, .NET Native offre tempi di avvio molto più rapide e prestazioni superiori rispetto a un'app compilata a livello di integrità o a un'immagine NGEN. Tuttavia, i risultati possono variare. Per garantire che i miglioramenti delle prestazioni di .NET Native è stato oggetto di applicazione, è necessario confrontare le prestazioni con quello della versione dell'app non - .NET Native. Per ulteriori informazioni, vedere [Cenni preliminari sulle sessioni di prestazioni](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
+> Per la maggior parte delle App e gli scenari, .NET Native offre tempi di avvio significativamente più veloce e prestazioni superiori rispetto a un'app compilata in linguaggio intermedio o di un'immagine NGEN. Tuttavia, i risultati possono variare. Per assicurarsi che l'app ha tratto vantaggio dai miglioramenti delle prestazioni di .NET Native, è necessario confrontare le prestazioni con quello della versione non - .NET Native dell'app. Per altre informazioni, vedere [panoramica delle sessioni di prestazioni](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
  
 Ma [!INCLUDE[net_native](../../../includes/net-native-md.md)] prevede molto più di una semplice compilazione in codice nativo: trasforma il modo in cui le applicazioni di .NET Framework vengono compilate ed eseguite. In particolare:  
   
@@ -63,9 +63,9 @@ Ma [!INCLUDE[net_native](../../../includes/net-native-md.md)] prevede molto più
 ## <a name="in-this-section"></a>In questa sezione  
  Per altre informazioni sullo sviluppo di applicazioni con la compilazione con .NET Native, vedere i seguenti argomenti:  
   
--   [Introduzione alla compilazione con .NET Native: procedura dettagliata dell'esperienza di sviluppatore](../../../docs/framework/net-native/getting-started-with-net-native.md)  
+-   [Introduzione a compilazione codice .NET Native: La procedura dettagliata dell'esperienza per sviluppatori](../../../docs/framework/net-native/getting-started-with-net-native.md)  
   
--   [Compilazione e .NET Native:](../../../docs/framework/net-native/net-native-and-compilation.md) compilazione di un progetto in codice nativo con .NET Native.  
+-   [Compilazione e .NET native:](../../../docs/framework/net-native/net-native-and-compilation.md) Modo in cui .NET Native compila il progetto in codice nativo.  
   
 -   [Reflection e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
   

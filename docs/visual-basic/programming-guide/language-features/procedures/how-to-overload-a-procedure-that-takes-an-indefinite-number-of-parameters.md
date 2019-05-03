@@ -11,11 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
 ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59316453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955740"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Procedura: Eseguire l'overload di una routine che accetta un numero indefinito di parametri (Visual Basic)
 Se una routine ha un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametro, non è possibile definire una versione di overload che accetta una matrice unidimensionale per la matrice di parametri. Per altre informazioni, vedere "Overloads impliciti per un parametro ParamArray" nella [considerazioni sull'overload di routine](./considerations-in-overloading-procedures.md).  
@@ -55,13 +55,13 @@ Se una routine ha un [ParamArray](../../../../visual-basic/language-reference/mo
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedure](./index.md)
+- [Routine](./index.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Parametri facoltativi](./optional-parameters.md)
 - [Matrici di parametri](./parameter-arrays.md)
-- [Overload delle routine](./procedure-overloading.md)
+- [Overload della routine](./procedure-overloading.md)
 - [Risoluzione dei problemi relativi alle routine](./troubleshooting-procedures.md)
-- [Procedura: Definire più versioni di una routine](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Procedura: Definire più versioni di una stored Procedure](./how-to-define-multiple-versions-of-a-procedure.md)
 - [Procedura: Chiamare una routine di overload](./how-to-call-an-overloaded-procedure.md)
-- [Procedura: Eseguire l'overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Overload Resolution](./overload-resolution.md)
+- [Procedura: Overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Risoluzione dell'overload](./overload-resolution.md)

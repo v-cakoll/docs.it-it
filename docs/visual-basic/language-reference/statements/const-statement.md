@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
 ms.openlocfilehash: 089c2dca99373f379e1eff319cf8c41242e5f135
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638312"
 ---
 # <a name="const-statement-visual-basic"></a>Istruzione Const (Visual Basic)
 Dichiara e definisce una o più costanti.  
@@ -57,35 +57,35 @@ Const constantlist
   
 ## <a name="rules"></a>Regole  
   
--   **Contesto della dichiarazione.** Una costante dichiarata a livello di modulo, all'esterno di qualsiasi routine è una *costante membro*; è un membro della classe, struttura, o modulo che lo dichiara.  
+- **Contesto della dichiarazione.** Una costante dichiarata a livello di modulo, all'esterno di qualsiasi routine è una *costante membro*; è un membro della classe, struttura, o modulo che lo dichiara.  
   
      Una costante dichiarata a livello di routine è una *costante locale*; è locale per la routine o un blocco che lo dichiara.  
   
--   **Attributi.** È possibile applicare gli attributi solo per le costanti di membro, non per le costanti locali. Un attributo fornisce informazioni per i metadati dell'assembly, che non è significativo per l'archiviazione temporanea, ad esempio le costanti locali.  
+- **Attributi.** È possibile applicare gli attributi solo per le costanti di membro, non per le costanti locali. Un attributo fornisce informazioni per i metadati dell'assembly, che non è significativo per l'archiviazione temporanea, ad esempio le costanti locali.  
   
--   **Modificatori.** Per impostazione predefinita, tutte le costanti vengono `Shared`, `Static`, e `ReadOnly`. È possibile utilizzare queste parole chiave quando si dichiara una costante.  
+- **Modificatori.** Per impostazione predefinita, tutte le costanti vengono `Shared`, `Static`, e `ReadOnly`. È possibile utilizzare queste parole chiave quando si dichiara una costante.  
   
      A livello di routine, non è possibile usare `Shadows` o qualsiasi modificatori di accesso per dichiarare le costanti locali.  
   
--   **Più costanti.** È possibile dichiarare le costanti diversi nella stessa istruzione di dichiarazione, specificando il `constantname` parte per ognuno di essi. Più costanti sono separate da virgole.  
+- **Più costanti.** È possibile dichiarare le costanti diversi nella stessa istruzione di dichiarazione, specificando il `constantname` parte per ognuno di essi. Più costanti sono separate da virgole.  
   
 ## <a name="data-type-rules"></a>Regole di tipo di dati  
   
--   **Tipi di dati.** Il `Const` istruzione può dichiarare il tipo di dati di una variabile. È possibile specificare qualsiasi tipo di dati o il nome di un'enumerazione.  
+- **Tipi di dati.** Il `Const` istruzione può dichiarare il tipo di dati di una variabile. È possibile specificare qualsiasi tipo di dati o il nome di un'enumerazione.  
   
--   **Tipo predefinito.** Se non si specifica `datatype`, la costante accetta il tipo di dati di `initializer`. Se si specificano entrambe `datatype` e `initializer`, il tipo di dati `initializer` deve essere convertibile in `datatype`. Se nessuno di essi `datatype` né `initializer` è presente, il valore predefinito è di tipo di dati `Object`.  
+- **Tipo predefinito.** Se non si specifica `datatype`, la costante accetta il tipo di dati di `initializer`. Se si specificano entrambe `datatype` e `initializer`, il tipo di dati `initializer` deve essere convertibile in `datatype`. Se nessuno di essi `datatype` né `initializer` è presente, il valore predefinito è di tipo di dati `Object`.  
   
--   **Tipi diversi.** È possibile specificare tipi di dati diversi per le costanti diversi utilizzando un oggetto separato `As` clausola per ogni variabile è dichiarata. Tuttavia, non è possibile dichiarare più costanti dello stesso tipo tramite un comune `As` clausola.  
+- **Tipi diversi.** È possibile specificare tipi di dati diversi per le costanti diversi utilizzando un oggetto separato `As` clausola per ogni variabile è dichiarata. Tuttavia, non è possibile dichiarare più costanti dello stesso tipo tramite un comune `As` clausola.  
   
--   **Inizializzazione.** È necessario inizializzare il valore di ogni costante in `constantlist`. Si utilizza `initializer` per fornire un'espressione da assegnare alla costante. L'espressione può essere qualsiasi combinazione di valori letterali, altre costanti che sono già definite e membri di enumerazione che sono già definiti. È possibile utilizzare gli operatori logici e aritmetici per combinare tali elementi.  
+- **Inizializzazione.** È necessario inizializzare il valore di ogni costante in `constantlist`. Si utilizza `initializer` per fornire un'espressione da assegnare alla costante. L'espressione può essere qualsiasi combinazione di valori letterali, altre costanti che sono già definite e membri di enumerazione che sono già definiti. È possibile utilizzare gli operatori logici e aritmetici per combinare tali elementi.  
   
      È possibile usare le variabili o funzioni in `initializer`. Tuttavia, è possibile utilizzare parole chiave di conversione, ad esempio `CByte` e `CShort`. È anche possibile usare `AscW` se viene chiamata con una costante `String` o `Char` argomento, dal momento che possono essere valutati in fase di compilazione.  
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Ambito.** Costanti locali sono accessibili solo dall'interno della routine o un blocco. Costanti di membro sono accessibili da qualsiasi punto all'interno di loro classe, struttura o modulo.  
+- **Ambito.** Costanti locali sono accessibili solo dall'interno della routine o un blocco. Costanti di membro sono accessibili da qualsiasi punto all'interno di loro classe, struttura o modulo.  
   
--   **Qualification.** Codice esterno di una classe, struttura o un modulo necessario qualificare il nome di una costante membro con il nome di tale classe, struttura o modulo. All'esterno di che una routine o un blocco non può fare riferimento a costanti locali all'interno di tale routine o un blocco di codice.  
+- **Qualification.** Codice esterno di una classe, struttura o un modulo necessario qualificare il nome di una costante membro con il nome di tale classe, struttura o modulo. All'esterno di che una routine o un blocco non può fare riferimento a costanti locali all'interno di tale routine o un blocco di codice.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa il `Const` istruzione per dichiarare le costanti per l'uso al posto dei valori letterali.  

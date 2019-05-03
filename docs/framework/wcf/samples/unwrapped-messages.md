@@ -3,11 +3,11 @@ title: Messaggi non incapsulati
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
 ms.openlocfilehash: 161f38e474534d5a0e522817c4bd64925bb4cac6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007630"
 ---
 # <a name="unwrapped-messages"></a>Messaggi non incapsulati
 In questo esempio vengono illustrati i messaggi non incapsulati. Per impostazione predefinita, il corpo del messaggio è formattato in modo tale che i parametri di un'operazione del servizio sono incapsulati. Nell'esempio seguente viene illustrato un messaggio di richiesta `Add` al servizio `ICalculator` in modalità incapsulata.  

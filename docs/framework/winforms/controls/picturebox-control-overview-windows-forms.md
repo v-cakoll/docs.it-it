@@ -9,11 +9,11 @@ helpviewer_keywords:
 - image controls [Windows Forms], about image controls
 ms.assetid: e5befee7-dc29-4888-a7c4-3b177e394112
 ms.openlocfilehash: 54ae01789f972381304480c9faf28d084ac3f1db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012633"
 ---
 # <a name="picturebox-control-overview-windows-forms"></a>Cenni preliminari sul controllo PictureBox (Windows Form)
 I moduli di Windows <xref:System.Windows.Forms.PictureBox> controllo consente di visualizzare immagini in formato bitmap, GIF, JPEG, metafile o icona.  
@@ -24,7 +24,7 @@ I moduli di Windows <xref:System.Windows.Forms.PictureBox> controllo consente di
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.PictureBox>
-- [Procedura: Caricare un'immagine usando la finestra di progettazione](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Procedura: Caricare un'immagine utilizzando la finestra di progettazione](how-to-load-a-picture-using-the-designer-windows-forms.md)
 - [Procedura: Modificare le dimensioni o la posizione di un'immagine in fase di esecuzione](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [Procedura: Impostare le immagini in fase di esecuzione](how-to-set-pictures-at-run-time-windows-forms.md)
 - [Controllo PictureBox](picturebox-control-windows-forms.md)

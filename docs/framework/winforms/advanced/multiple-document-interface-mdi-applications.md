@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MDI
 ms.assetid: 599faf75-13cf-49cc-ad3c-255545e5cb97
 ms.openlocfilehash: 0ce7c66946d03d566b21473711cb6b3315885236
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61952048"
 ---
 # <a name="multiple-document-interface-mdi-applications"></a>Applicazioni MDI (Interfaccia a documenti multipli, Multiple-Document Interface)
 Le applicazioni di interfaccia a documenti multipli (MDI) consentono di visualizzare documenti multipli nello stesso momento, con ogni documento visualizzato in una finestra. Le applicazioni MDI hanno spesso una voce di menu finestra con sottomenu per lo spostamento tra finestre e documenti.  

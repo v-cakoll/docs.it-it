@@ -10,11 +10,11 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050220"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Ottimizzazione delle prestazioni: Layout e progettazione
 La progettazione dell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] può influire sulle relative prestazioni, poiché crea un sovraccarico non necessario durante il calcolo del layout e la convalida dei riferimenti agli oggetti. La costruzione di oggetti, soprattutto in fase di runtime, può influire sulle caratteristiche di prestazioni dell'applicazione.  
@@ -26,25 +26,25 @@ La progettazione dell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../inc
   
  Per ogni membro figlio di una raccolta vengono completati due passaggi: un passaggio di misurazione e uno di disposizione. Ogni oggetto figlio offre la propria implementazione sottoposta a override del <xref:System.Windows.UIElement.Measure%2A> e <xref:System.Windows.UIElement.Arrange%2A> metodi per fornire il proprio comportamento di layout specifico. Nella forma più semplice, il layout è un sistema ricorsivo che fa sì che un elemento venga ridimensionato, posizionato e disegnato sullo schermo.  
   
--   Un elemento figlio <xref:System.Windows.UIElement> oggetto inizia il processo di layout con la misurazione delle relative proprietà principali.  
+- Un elemento figlio <xref:System.Windows.UIElement> oggetto inizia il processo di layout con la misurazione delle relative proprietà principali.  
   
--   L'oggetto <xref:System.Windows.FrameworkElement> le proprietà correlate alle dimensioni, ad esempio <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, e <xref:System.Windows.FrameworkElement.Margin%2A>, vengono valutati.  
+- L'oggetto <xref:System.Windows.FrameworkElement> le proprietà correlate alle dimensioni, ad esempio <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, e <xref:System.Windows.FrameworkElement.Margin%2A>, vengono valutati.  
   
--   <xref:System.Windows.Controls.Panel>-viene applicata logica specifica, ad esempio la <xref:System.Windows.Controls.DockPanel.Dock%2A> proprietà del <xref:System.Windows.Controls.DockPanel>, o il <xref:System.Windows.Controls.StackPanel.Orientation%2A> proprietà del <xref:System.Windows.Controls.StackPanel>.  
+- <xref:System.Windows.Controls.Panel>-viene applicata logica specifica, ad esempio la <xref:System.Windows.Controls.DockPanel.Dock%2A> proprietà del <xref:System.Windows.Controls.DockPanel>, o il <xref:System.Windows.Controls.StackPanel.Orientation%2A> proprietà del <xref:System.Windows.Controls.StackPanel>.  
   
--   Il contenuto viene disposto, o posizionato, dopo la misurazione di tutti gli oggetti figlio.  
+- Il contenuto viene disposto, o posizionato, dopo la misurazione di tutti gli oggetti figlio.  
   
--   La raccolta di oggetti figlio viene disegnata sullo schermo.  
+- La raccolta di oggetti figlio viene disegnata sullo schermo.  
   
  Il passaggio di layout viene nuovamente richiamato qualora si verifichi una delle azioni seguenti:  
   
--   Un oggetto figlio viene aggiunto alla raccolta.  
+- Un oggetto figlio viene aggiunto alla raccolta.  
   
--   Oggetto <xref:System.Windows.FrameworkElement.LayoutTransform%2A> viene applicato all'oggetto figlio.  
+- Oggetto <xref:System.Windows.FrameworkElement.LayoutTransform%2A> viene applicato all'oggetto figlio.  
   
--   Il <xref:System.Windows.UIElement.UpdateLayout%2A> viene chiamato per l'oggetto figlio.  
+- Il <xref:System.Windows.UIElement.UpdateLayout%2A> viene chiamato per l'oggetto figlio.  
   
--   Se viene apportata una modifica al valore di una proprietà di dipendenza contrassegnata con metadati che incidono sul passaggio di misurazione o disposizione.  
+- Se viene apportata una modifica al valore di una proprietà di dipendenza contrassegnata con metadati che incidono sul passaggio di misurazione o disposizione.  
   
 ### <a name="use-the-most-efficient-panel-where-possible"></a>Usare il pannello più efficiente, se possibile  
  La complessità del processo di layout dipende direttamente dal comportamento di layout di <xref:System.Windows.Controls.Panel>-degli elementi è utilizzare derivati. Ad esempio, un <xref:System.Windows.Controls.Grid> oppure <xref:System.Windows.Controls.StackPanel> controllo offre molte più funzionalità rispetto a un <xref:System.Windows.Controls.Canvas> controllo. All'aumento delle funzionalità corrisponde, tuttavia, un maggiore dispendio in termini di prestazioni. Tuttavia, se la funzionalità non è necessario che un <xref:System.Windows.Controls.Grid> fornisce controllo, è necessario usare le alternative meno costose, ad esempio un <xref:System.Windows.Controls.Canvas> o un pannello personalizzato.  

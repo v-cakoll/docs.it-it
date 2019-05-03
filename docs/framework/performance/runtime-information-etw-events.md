@@ -8,11 +8,11 @@ ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: af27ddaa69d34976929f40055bc2cc668f877e87
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949214"
 ---
 # <a name="runtime-information-etw-events"></a>Eventi ETW di informazione di runtime
 Questi eventi ETW registrano informazioni sul runtime, inclusi lo SKU, il numero della versione, la modalità di attivazione del runtime, i parametri della riga di comando con cui è stato avviato il runtime, il GUID (se applicabile) e altre informazioni rilevanti. Se più runtime sono in esecuzione all'interno di un processo, le informazioni fornite da questi eventi (ClrInstanceID) consentono di distinguere tra i runtime.  

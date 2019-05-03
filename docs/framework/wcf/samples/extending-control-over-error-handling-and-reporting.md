@@ -3,11 +3,11 @@ title: Estensione del controllo sulla gestione e sulla segnalazione degli errori
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 ms.openlocfilehash: 4a12ab62a9ec25d207a88b041bcdf498eaff7228
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990158"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Estensione del controllo sulla gestione e sulla segnalazione degli errori
 In questo esempio viene illustrato come estendere il controllo sulla gestione degli errori e segnalazione errori in un servizio Windows Communication Foundation (WCF) utilizzando il <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfaccia. L'esempio è basato sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) con ulteriore codice aggiunto al servizio di gestione degli errori. Il client forza diverse condizioni di errore. Il servizio intercetta gli errori e li registra in un file.  
@@ -19,7 +19,7 @@ In questo esempio viene illustrato come estendere il controllo sulla gestione de
   
  In questo esempio, il tipo `CalculatorErrorHandler` implementa l'interfaccia <xref:System.ServiceModel.Dispatcher.IErrorHandler>. Nel campo  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> metodo, il `CalculatorErrorHandler` scrive un log di errore in un file di testo txt in c:\logs. Si noti che nell'esempio l'errore viene registrato e non soppresso, in modo da poter essere segnalato al client.  
+ metodo <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>, `CalculatorErrorHandler` scrive un registro dell'errore nel file di testo Error.txt in c:\logs. Si noti che nell'esempio l'errore viene registrato e non soppresso, in modo da poter essere segnalato al client.  
   
 ```  
 public class CalculatorErrorHandler : IErrorHandler  

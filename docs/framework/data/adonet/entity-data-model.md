@@ -3,11 +3,11 @@ title: Entity Data Model
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
 ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667145"
 ---
 # <a name="entity-data-model"></a>Entity Data Model
 EDM (Entity Data Model) è un set di concetti che descrivono la struttura dei dati, indipendentemente dal form archiviato. EDM è mutuato dal modello entità-relazione descritto da Peter Chen nel 1976, ma è anche basato su tale modello di cui estende gli utilizzi tradizionali.  
@@ -23,17 +23,17 @@ EDM (Entity Data Model) è un set di concetti che descrivono la struttura dei da
   
  [Entity Data Model: Spazi dei nomi](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [Entity Data Model: tipi di dati primitivi](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [Entity Data Model: Tipi di dati primitivi](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
- [Entity Data Model: Ereditarietà](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
+ [Entity Data Model: Inheritance](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
- [entità finale dell'associazione](../../../../docs/framework/data/adonet/association-end.md)  
+ [estremità dell'associazione](../../../../docs/framework/data/adonet/association-end.md)  
   
- [molteplicità di entità finale dell'associazione](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
+ [molteplicità di estremità dell'associazione](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
   
  [set di associazioni](../../../../docs/framework/data/adonet/association-set.md)  
   
- [entità finale del set di associazioni](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [estremità del set di associazioni](../../../../docs/framework/data/adonet/association-set-end.md)  
   
  [tipo di associazione](../../../../docs/framework/data/adonet/association-type.md)  
   
@@ -64,5 +64,5 @@ EDM (Entity Data Model) è un set di concetti che descrivono la struttura dei da
 ## <a name="see-also"></a>Vedere anche
 
 - [Strumenti di ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Panoramica sui file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Panoramica di file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Specifica CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
 ms.openlocfilehash: 63223a815e1c4ff8d4e0afbb6c732fff90aad465
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946549"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>Overflow (errore di run-time Visual Basic)
 Un overflow quando si tenta di un'assegnazione che superano i limiti del server di destinazione dell'assegnazione.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - states [WPF], Label
 ms.assetid: c1d5359a-8e4a-4925-ab3e-e92bf6694859
 ms.openlocfilehash: d2bb348fc9c0348fd8093452e022df7ab4e0b3f2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59137085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696249"
 ---
 # <a name="label-styles-and-templates"></a>Stili e modelli di Label
 In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.Label> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

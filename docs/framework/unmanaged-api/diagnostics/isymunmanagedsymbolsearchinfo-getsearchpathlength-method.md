@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 37e9926c8f9677e3b38202c5fb3c43f7b1159edf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953569"
 ---
 # <a name="isymunmanagedsymbolsearchinfogetsearchpathlength-method"></a>Metodo ISymUnmanagedSymbolSearchInfo::GetSearchPathLength
 Ottiene la lunghezza del percorso di ricerca.  

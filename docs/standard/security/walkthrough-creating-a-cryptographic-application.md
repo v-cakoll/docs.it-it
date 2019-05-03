@@ -13,20 +13,20 @@ ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795005"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Procedura dettagliata: Creazione di un'applicazione di crittografia
 Questa procedura dettagliata illustra come crittografare e decrittografare il contenuto. Gli esempi di codice sono progettati per un'applicazione Windows Forms. Questa applicazione non illustra situazioni del mondo reale, come l'utilizzo di smart card. Al contrario illustra gli aspetti fondamentali della crittografia e decrittografia.  
   
  Questa procedura dettagliata usa le linee guida seguenti per la crittografia:  
   
--   Usare la classe <xref:System.Security.Cryptography.RijndaelManaged>, un algoritmo simmetrico, per crittografare e decrittografare dati mediante le proprietà <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> e <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> generate automaticamente.  
+- Usare la classe <xref:System.Security.Cryptography.RijndaelManaged>, un algoritmo simmetrico, per crittografare e decrittografare dati mediante le proprietà <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> e <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> generate automaticamente.  
   
--   Usare <xref:System.Security.Cryptography.RSACryptoServiceProvider>, un algoritmo generato automaticamente, per crittografare e decrittografare la chiave di dati crittografati da <xref:System.Security.Cryptography.RijndaelManaged>. Gli algoritmi asimmetrici sono ideali per più piccole quantità di dati, come ad esempio una chiave.  
+- Usare <xref:System.Security.Cryptography.RSACryptoServiceProvider>, un algoritmo generato automaticamente, per crittografare e decrittografare la chiave di dati crittografati da <xref:System.Security.Cryptography.RijndaelManaged>. Gli algoritmi asimmetrici sono ideali per più piccole quantità di dati, come ad esempio una chiave.  
   
     > [!NOTE]
     >  Se si vogliono proteggere dati sul computer anziché scambiare contenuto crittografato con altri utenti, è possibile usare le classi <xref:System.Security.Cryptography.ProtectedData> o <xref:System.Security.Cryptography.ProtectedMemory>.  
@@ -48,7 +48,7 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
   
--   Riferimenti agli spazi dei nomi <xref:System.IO> e <xref:System.Security.Cryptography>.  
+- Riferimenti agli spazi dei nomi <xref:System.IO> e <xref:System.Security.Cryptography>.  
   
 ## <a name="creating-a-windows-forms-application"></a>Creazione di un'applicazione Windows Forms  
  La maggior parte degli esempi di codice in questa procedura dettagliata sono progettati per essere gestori di eventi per i controlli pulsante. Nella tabella seguente sono elencati i controlli necessari per l'applicazione di esempio e i relativi nomi richiesti per la corrispondenza con gli esempi di codice.  
@@ -100,15 +100,15 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
   
  Il pacchetto di crittografia usa il seguente formato:  
   
--   Lunghezza chiave, byte 0 - 3  
+- Lunghezza chiave, byte 0 - 3  
   
--   Lunghezza vettore di inizializzazione, byte 4 - 7  
+- Lunghezza vettore di inizializzazione, byte 4 - 7  
   
--   Chiave crittografata  
+- Chiave crittografata  
   
--   Vettore di inizializzazione (IV)  
+- Vettore di inizializzazione (IV)  
   
--   Testo crittografato  
+- Testo crittografato  
   
  È possibile usare le lunghezze della chiave e del vettore di inizializzazione (IV) per determinare i punti iniziali e lunghezze di tutte le parti del pacchetto di crittografia, che quindi può essere usato per decrittografare il file.  
   
@@ -212,4 +212,4 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
   
 ## <a name="see-also"></a>Vedere anche
 
-- [servizi crittografici](../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

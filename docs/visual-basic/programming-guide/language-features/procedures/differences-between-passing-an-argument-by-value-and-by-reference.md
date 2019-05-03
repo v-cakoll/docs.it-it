@@ -9,11 +9,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
 ms.openlocfilehash: 1b85941c14721280a5025db442c4793930244ec8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864546"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Differenze tra il passaggio di un argomento per valore e per riferimento (Visual Basic)
 Quando si passano a uno o più argomenti a una routine, ciascun argomento corrisponde a un elemento di programmazione sottostante nel codice chiamante. È possibile passare il valore di questo elemento sottostante o un riferimento a esso. Questo è noto come il *meccanismo di trasferimento*.  

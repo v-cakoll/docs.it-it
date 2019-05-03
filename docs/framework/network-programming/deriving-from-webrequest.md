@@ -11,10 +11,10 @@ helpviewer_keywords:
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
 ms.openlocfilehash: e8e7c1d2943dcbfa8d9faa0b2e53bae57c767101
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216484"
 ---
 # <a name="deriving-from-webrequest"></a>Derivazione da WebRequest
@@ -93,5 +93,5 @@ La classe <xref:System.Net.WebRequest> è una classe base astratta che fornisce 
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.FileWebRequest>
-- [programmazione di protocolli di collegamento](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Programmazione di protocolli di collegamento](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
 - [Derivazione da WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)

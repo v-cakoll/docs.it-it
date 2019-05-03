@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
 ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009170"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Utilizzo della riga per i nuovi record del controllo DataGridView di Windows Form
 Quando si usa un <xref:System.Windows.Forms.DataGridView> per la modifica dei dati nell'applicazione, spesso si desidera offrire agli utenti la possibilità di aggiungere nuove righe di dati nell'archivio dati. Il <xref:System.Windows.Forms.DataGridView> controllo supporta questa funzionalità, fornendo una riga per i nuovi record, che viene sempre visualizzata come ultima riga. È contrassegnato con un simbolo di asterisco (*) l'intestazione di riga. Le sezioni seguenti illustrano alcune delle attività che è necessario considerare quando si programma con la riga per i nuovi record abilitato.  
@@ -29,9 +29,9 @@ Quando si usa un <xref:System.Windows.Forms.DataGridView> per la modifica dei da
 ## <a name="the-rows-collection"></a>La raccolta di righe  
  La riga per i nuovi record è contenuta nel <xref:System.Windows.Forms.DataGridView> del controllo <xref:System.Windows.Forms.DataGridView.Rows%2A> raccolta ma si comporta in modo diverso per due aspetti:  
   
--   Impossibile rimuovere la riga per i nuovi record dal <xref:System.Windows.Forms.DataGridView.Rows%2A> insieme a livello di codice. Un <xref:System.InvalidOperationException> viene generata se questo tentativo. L'utente non è possibile anche eliminare la riga per i nuovi record. Il <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> metodo non rimuove questa riga dal <xref:System.Windows.Forms.DataGridView.Rows%2A> raccolta.  
+- Impossibile rimuovere la riga per i nuovi record dal <xref:System.Windows.Forms.DataGridView.Rows%2A> insieme a livello di codice. Un <xref:System.InvalidOperationException> viene generata se questo tentativo. L'utente non è possibile anche eliminare la riga per i nuovi record. Il <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> metodo non rimuove questa riga dal <xref:System.Windows.Forms.DataGridView.Rows%2A> raccolta.  
   
--   È possibile aggiungere alcuna riga dopo la riga per i nuovi record. Un <xref:System.InvalidOperationException> viene generato se si tenta. Di conseguenza, la riga per i nuovi record è sempre l'ultima riga il <xref:System.Windows.Forms.DataGridView> controllo. I metodi sul <xref:System.Windows.Forms.DataGridViewRowCollection> che aggiungono righe, ovvero<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, e <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>, ovvero tutti chiamano metodi di inserimento internamente quando è presente la riga per i nuovi record.  
+- È possibile aggiungere alcuna riga dopo la riga per i nuovi record. Un <xref:System.InvalidOperationException> viene generato se si tenta. Di conseguenza, la riga per i nuovi record è sempre l'ultima riga il <xref:System.Windows.Forms.DataGridView> controllo. I metodi sul <xref:System.Windows.Forms.DataGridViewRowCollection> che aggiungono righe, ovvero<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, e <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>, ovvero tutti chiamano metodi di inserimento internamente quando è presente la riga per i nuovi record.  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>Personalizzazione della visualizzazione della riga per i nuovi record  
  Quando viene creata la riga per i nuovi record, si basa sulla riga specificata per il <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> proprietà. Gli stili delle celle che non sono specificati per questa riga vengono ereditati da altre proprietà. Per altre informazioni sull'ereditarietà, vedere [stili della cella nel controllo DataGridView Windows Form](cell-styles-in-the-windows-forms-datagridview-control.md).  
@@ -61,5 +61,5 @@ Quando si usa un <xref:System.Windows.Forms.DataGridView> per la modifica dei da
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Immissione di dati nel controllo DataGridView Windows Form](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Procedura: Specificare i valori predefiniti per le nuove righe nel controllo DataGridView di Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Immissione di dati nel controllo DataGridView di Windows Form](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Specificare i valori predefiniti per le nuove righe nel controllo DataGridView Windows Form](specify-default-values-for-new-rows-in-the-datagrid.md)

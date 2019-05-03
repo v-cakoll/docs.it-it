@@ -3,11 +3,11 @@ title: LIMIT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
 ms.openlocfilehash: b267e97860a2cb071b857224455f01b73115c72d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760675"
 ---
 # <a name="limit-entity-sql"></a>LIMIT (Entity SQL)
 Il paging fisico può essere eseguito usando la sottoclausola LIMIT nella clausola ORDER BY. Non è possibile usare LIMIT separatamente dalla clausola ORDER BY.  

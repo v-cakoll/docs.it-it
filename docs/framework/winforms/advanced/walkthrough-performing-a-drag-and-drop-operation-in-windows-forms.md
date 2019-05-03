@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
 ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59340724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747394"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Procedura dettagliata: Esecuzione di un'operazione di trascinamento della selezione in Windows Form
 Per eseguire operazioni di trascinamento e rilascio all'interno di applicazioni basate su Windows è necessario gestire una serie di eventi, in particolare il <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, e <xref:System.Windows.Forms.Control.DragDrop> eventi. Usando le informazioni disponibili negli argomenti di questi eventi, è possibile facilitare le operazioni di trascinamento della selezione.  
@@ -109,5 +109,5 @@ Per eseguire operazioni di trascinamento e rilascio all'interno di applicazioni 
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura: Aggiungere dati agli Appunti](how-to-add-data-to-the-clipboard.md)
-- [Procedura: Recuperare dati dagli Appunti](how-to-retrieve-data-from-the-clipboard.md)
-- [Supporto delle operazioni di trascinamento della selezione e degli Appunti](drag-and-drop-operations-and-clipboard-support.md)
+- [Procedura: Recuperare i dati dagli Appunti](how-to-retrieve-data-from-the-clipboard.md)
+- [Drag-and-Drop Operations and Clipboard Support](drag-and-drop-operations-and-clipboard-support.md) (Supporto delle operazioni di trascinamento della selezione e degli Appunti)

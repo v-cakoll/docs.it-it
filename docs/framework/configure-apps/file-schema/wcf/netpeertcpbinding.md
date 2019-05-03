@@ -5,11 +5,11 @@ helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
 ms.openlocfilehash: b35e2f365e82291d3f8b827850fdebfe8fa2237d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59152841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780367"
 ---
 # <a name="netpeertcpbinding"></a>\<netPeerTcpBinding>
 Definisce un'associazione per la messaggistica TCP specifica del canale peer.  
@@ -67,7 +67,7 @@ Definisce un'associazione per la messaggistica TCP specifica del canale peer.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<le associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
  Questa associazione fornisce il supporto per la creazione di applicazioni peer-to-peer o a più parti usando il trasporto peer su TCP. Ogni nodo di peer può ospitare più canali del peer definiti con questo tipo di associazione.  
@@ -108,5 +108,5 @@ Definisce un'associazione per la messaggistica TCP specifica del canale peer.
 - [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [NetPeerTCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))
-- [Rete peer-to-peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [Netpeertcp](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))
+- [Reti peer-to-peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)

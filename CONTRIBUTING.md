@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1b12e614c59785a066ad34e5320a205961f7dd49
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610808"
+---
 # <a name="contributing"></a>Contributi al codice
 
 Grazie per l'interesse dimostrato nell'apporto di contributi alla documentazione di .NET.
@@ -24,10 +32,10 @@ Di seguito sono illustrati i problemi e le attività di tutti questi repository.
 
 Sono necessarie conoscenze di base di [Git e GitHub.com](https://guides.github.com/activities/hello-world/).
 
-**Passaggio 1:** Ignorare questo passaggio per le piccole modifiche. Se si è interessati a scrivere nuovo contenuto o a revisionare completamente un contenuto esistente, aprire un [problema](https://github.com/dotnet/docs/issues) descrivendo che cosa si intende fare.
+**Passaggio 1:** Ignorare questo passaggio per le modifiche di piccola entità (ad esempio, per correggere un errore di digitazione o aprire immediatamente una richiesta pull per risolvere un problema rilevato nella documentazione). Se si è interessati a scrivere nuovo contenuto o a revisionare completamente un contenuto esistente, aprire un [problema](https://github.com/dotnet/docs/issues) descrivendo che cosa si intende fare.
 Il contenuto all'interno della cartella **docs** è suddiviso in sezioni visibili nel sommario. Definire la posizione del sommario in cui verrà inserito l'argomento. Ottenere feedback sulla proposta.
 
-oppure
+-oppure-
 
 È anche possibile scegliere tra i problemi esistenti per cui sono previsti i contributi della community. In [Projects for .NET Community contributors](https://github.com/dotnet/docs/projects/35) (Progetti per i collaboratori della community di .NET) sono elencati molti elementi di lavoro disponibili per i collaboratori della community. In base ai propri interessi e livello di impegno, è possibile scegliere tra i problemi nelle categorie seguenti:
 

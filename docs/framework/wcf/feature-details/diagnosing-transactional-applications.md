@@ -3,11 +3,11 @@ title: Diagnostica di applicazioni transazionali
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856739"
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnostica di applicazioni transazionali
 Questo argomento descrive come usare la gestione di Windows Communication Foundation (WCF) e la funzionalità di diagnostica per risolvere i problemi di un'applicazione transazionale.  
@@ -87,15 +87,15 @@ Questo argomento descrive come usare la gestione di Windows Communication Founda
 ## <a name="tracing"></a>Traccia  
  Le tracce consentono di controllare e analizzare errori nelle applicazioni transazionali. È possibile attivare la traccia nei modi seguenti:  
   
--   Traccia di WCF standard  
+- Traccia di WCF standard  
   
      Questo tipo di traccia è equivalente alla traccia di tutte le applicazioni WCF. Per altre informazioni, vedere [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
--   Traccia WS-AtomicTransaction  
+- Traccia WS-AtomicTransaction  
   
      Analisi WS-AtomicTransaction può essere abilitata utilizzando la [utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Tale traccia consente di comprendere lo stato delle transazioni e di conoscere i partecipanti all'interno di un sistema. Per attivare anche la traccia del modello di servizi interna, è possibile impostare la chiave del Registro di sistema `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` su un valore valido dell'enumerazione <xref:System.Diagnostics.SourceLevels>. È possibile abilitare la registrazione nello stesso modo delle altre applicazioni WCF dei messaggi.  
   
--   Traccia `System.Transactions`  
+- Traccia `System.Transactions`  
   
      Quando si utilizza il protocollo OleTransactions, i messaggi di protocollo non possono essere tracciati. Il supporto di traccia fornito dall'infrastruttura <xref:System.Transactions>, che utilizza OleTransactions, consente agli utenti di visualizzare gli eventi che si sono verificati nelle transazioni. Per attivare la traccia per un'applicazione <xref:System.Transactions>, includere il codice seguente nel file di configurazione `App.config`.  
   

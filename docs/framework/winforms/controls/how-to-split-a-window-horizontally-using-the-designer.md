@@ -7,11 +7,11 @@ helpviewer_keywords:
 - windows [Windows Forms], splitting horizontally
 ms.assetid: 3872a176-891f-4c70-9779-b2ce85b0b102
 ms.openlocfilehash: a0dd42f62034ab78407b61e99e2c8940b1b511af
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59325280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912808"
 ---
 # <a name="how-to-split-a-window-horizontally-using-the-designer"></a>Procedura: Dividere una finestra orizzontalmente usando la finestra di progettazione
 Questo esempio permette il divisore che divide il <xref:System.Windows.Forms.SplitContainer> controllo orizzontale.  

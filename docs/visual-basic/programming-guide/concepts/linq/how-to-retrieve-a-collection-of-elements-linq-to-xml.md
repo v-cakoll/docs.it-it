@@ -3,11 +3,11 @@ title: 'Procedura: Recuperare una raccolta di elementi (LINQ to XML) (Visual Bas
 ms.date: 07/20/2015
 ms.assetid: 2269f9de-8fb9-4666-b8a1-a4e754fa6a81
 ms.openlocfilehash: 53572ac3c80e012b95527d32da28c8685cd8cfd3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021375"
 ---
 # <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>Procedura: Recuperare una raccolta di elementi (LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato il metodo <xref:System.Xml.Linq.XContainer.Elements%2A>, che consente di recuperare una raccolta degli elementi figlio di un elemento.  

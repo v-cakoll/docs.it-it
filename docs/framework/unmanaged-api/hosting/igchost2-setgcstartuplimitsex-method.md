@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da5e90055a08227ea7cb7fa1b459fe6f5f3a81fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763217"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>Metodo IGCHost2::SetGCStartupLimitsEx
 Imposta le dimensioni del segmento e le dimensioni massime per la generazione 0.  

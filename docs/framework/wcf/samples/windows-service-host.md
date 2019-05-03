@@ -6,11 +6,11 @@ helpviewer_keywords:
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
 ms.openlocfilehash: 85d089813a455784fde679e9200a9b29b956af8e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59338696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006403"
 ---
 # <a name="windows-service-host"></a>Host del servizio Windows
 Questo esempio viene illustrato un servizio Windows Communication Foundation (WCF) ospitato in un servizio Windows gestito. Servizi Windows sono controllati tramite l'applet Servizi nel **Pannello di controllo** e può essere configurato per l'avvio automatico dopo un riavvio del sistema. L'esempio è costituito da un programma client e da un programma di Servizio Windows. Il servizio viene implementato come programma con estensione exe e contiene il proprio codice di hosting. In altri ambienti host, quali ad esempio il servizio di attivazione dei processi di Windows (WAS, Windows Process Activation Service) o Internet Information Services (IIS), non è necessario scrivere codice di hosting.
@@ -65,4 +65,4 @@ Questo esempio viene illustrato un servizio Windows Communication Foundation (WC
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Hosting e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Hosting di AppFabric e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)

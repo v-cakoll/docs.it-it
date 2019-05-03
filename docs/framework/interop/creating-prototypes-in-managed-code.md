@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e642f6507016dd1d62b4889f8a8dbcf0470a2202
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412331"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59168168"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Creazione di prototipi nel codice gestito
 Questo argomento descrive come accedere alle funzioni non gestite e introduce diversi campi attributo che annotano la definizione di metodo nel codice gestito. Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md).  
@@ -235,6 +235,7 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Utilizzo di funzioni di DLL non gestite](consuming-unmanaged-dll-functions.md)
 - [Specifica di un punto di ingresso](specifying-an-entry-point.md)
 - [Specifica di un set di caratteri](specifying-a-character-set.md)

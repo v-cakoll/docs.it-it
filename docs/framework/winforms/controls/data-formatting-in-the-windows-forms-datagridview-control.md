@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
 ms.openlocfilehash: b5c055bdd12a4bede6e77233726c697de424a055
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011430"
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Formattazione di dati nel controllo DataGridView di Windows Form
 Il <xref:System.Windows.Forms.DataGridView> controllo fornisce la conversione automatica tra i tipi di dati che consentono di visualizzare le colonne padre e i valori delle celle. Le colonne di caselle di testo, ad esempio, visualizzare le rappresentazioni di stringa di data, ora, numero e i valori di enumerazione e convertire i valori stringa immessi dall'utente per i tipi richiesti dall'archivio dati.  
@@ -35,7 +35,7 @@ Il <xref:System.Windows.Forms.DataGridView> controllo fornisce la conversione au
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
-- [Visualizzazione di dati nel controllo DataGridView Windows Form](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Stili della cella nel controllo DataGridView Windows Form](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Procedura: Formattare i dati nel controllo DataGridView di Windows Forms](how-to-format-data-in-the-windows-forms-datagridview-control.md)
-- [Procedura: Personalizzare la formattazione dei dati nel controllo DataGridView di Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Visualizzazione di dati nel controllo DataGridView di Windows Form](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Stili delle celle nel controllo DataGridView di Windows Form](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Formattare i dati nella finestra di Windows Form controllo DataGridView](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Personalizzare la formattazione dei dati nel controllo DataGridView Windows Form](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

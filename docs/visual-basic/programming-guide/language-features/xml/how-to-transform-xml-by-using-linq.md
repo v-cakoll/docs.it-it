@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
 ms.openlocfilehash: c34d3988c89e0ce07676e9181200fc039010b50a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028434"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Procedura: Trasformare XML utilizzando LINQ (Visual Basic)
 [Valori letterali XML](../../../../visual-basic/language-reference/xml-literals/index.md) semplificano Leggi XML da un'origine e lo trasforma in un nuovo formato XML. È possibile sfruttare i vantaggi delle query LINQ per recuperare il contenuto per trasformare o modificare il contenuto in un documento esistente in un nuovo formato XML.  
@@ -160,6 +160,6 @@ ms.locfileid: "59324987"
 - [Valori letterali XML](../../../../visual-basic/language-reference/xml-literals/index.md)
 - [Modifica di XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [Procedura: Caricare XML da un file, da una stringa o da un flusso](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
+- [Procedura: Caricare il documento XML da un File, stringa o Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

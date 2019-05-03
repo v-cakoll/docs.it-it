@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 166583f690fc7ed80f80cf2cf5cd5b0348708cc3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970157"
 ---
 # <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a>Metodo ICLRAssemblyIdentityManager::IsStronglyNamed
 Ottiene un valore che indica se l'assembly specificato è un nome sicuro.  

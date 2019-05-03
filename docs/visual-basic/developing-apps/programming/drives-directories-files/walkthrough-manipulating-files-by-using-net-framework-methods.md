@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 2361a42ececbe12b5f61833e5a40607c8215a65d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f3fecf521ca4a9397bacffbb084c4107af97f5b2
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821062"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59345274"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Procedura dettagliata: Procedura dettagliata: Modifica di file con i metodi .NET Framework (Visual Basic)
 Questa procedura dettagliata spiega come aprire e leggere un file usando la classe <xref:System.IO.StreamReader>, verificare se un file è accessibile, cercare una stringa all'interno di un file letto con un'istanza della classe <xref:System.IO.StreamReader> e scrivere in un file usando la classe <xref:System.IO.StreamWriter>.  
@@ -32,15 +32,15 @@ Questa procedura dettagliata spiega come aprire e leggere un file usando la clas
   
 #### <a name="to-create-the-project"></a>Per creare il progetto  
   
-1.  Nel menu **File** selezionare **Nuovo progetto**.  
+1. Nel menu **File** selezionare **Nuovo progetto**.  
   
-2.  Nel riquadro **Nuovo progetto** fare clic su **Applicazione Windows**.  
+2. Nel riquadro **Nuovo progetto** fare clic su **Applicazione Windows**.  
   
-3.  Nella casella **Nome** digitare `MyDiary` e fare clic su **OK**.  
+3. Nella casella **Nome** digitare `MyDiary` e fare clic su **OK**.  
   
      Visual Studio aggiunge il progetto a **Esplora soluzioni** e viene aperto **Progettazione Windows Form**.  
   
-4.  Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.  
+4. Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.  
   
 |**Oggetto**|**Proprietà**|**Valore**|  
 |---|---|---|   
@@ -53,34 +53,34 @@ Questa procedura dettagliata spiega come aprire e leggere un file usando la clas
   
 #### <a name="to-add-writing-functionality"></a>Per aggiungere la funzionalità di scrittura  
   
-1.  Scegliere **Codice** dal menu **Visualizza** per aprire l'editor di codice.  
+1. Scegliere **Codice** dal menu **Visualizza** per aprire l'editor di codice.  
   
-2.  Poiché l'applicazione fa riferimento allo spazio dei nomi <xref:System.IO>, aggiungere le istruzioni seguenti all'inizio del codice, prima della dichiarazione di classe per il form, che inizia con `Public Class Form1`.  
+2. Poiché l'applicazione fa riferimento allo spazio dei nomi <xref:System.IO>, aggiungere le istruzioni seguenti all'inizio del codice, prima della dichiarazione di classe per il form, che inizia con `Public Class Form1`.  
   
      [!code-vb[VbVbcnMyFileSystem#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#35)]  
   
      Prima di scrivere nel file è necessario creare un'istanza di una classe <xref:System.IO.StreamWriter>.  
   
-3.  Scegliere **Finestra di progettazione** dal menu **Visualizza** per tornare a **Progettazione Windows Form**. Fare doppio clic sul pulsante `Submit` per creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante e quindi aggiungere il codice seguente.  
+3. Scegliere **Finestra di progettazione** dal menu **Visualizza** per tornare a **Progettazione Windows Form**. Fare doppio clic sul pulsante `Submit` per creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante e quindi aggiungere il codice seguente.  
   
      [!code-vb[VbVbcnMyFileSystem#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#36)]  
   
 > [!NOTE]
 >  L'ambiente di sviluppo integrato (IDE) di Visual Studio torna all'editor di codice e posiziona il punto di inserimento all'interno del gestore eventi in cui deve essere aggiunto il codice.  
   
-1.  Per scrivere nel file, usare il metodo <xref:System.IO.StreamWriter.Write%2A> della classe <xref:System.IO.StreamWriter>. Aggiungere il codice seguente direttamente dopo `Dim fw As StreamWriter`. Non è necessario preoccuparsi del fatto che venga generata un'eccezione se il file non viene trovato, poiché verrà creato se non esiste già.  
+1. Per scrivere nel file, usare il metodo <xref:System.IO.StreamWriter.Write%2A> della classe <xref:System.IO.StreamWriter>. Aggiungere il codice seguente direttamente dopo `Dim fw As StreamWriter`. Non è necessario preoccuparsi del fatto che venga generata un'eccezione se il file non viene trovato, poiché verrà creato se non esiste già.  
   
      [!code-vb[VbVbcnMyFileSystem#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#37)]  
   
-2.  Assicurarsi che l'utente non possa immettere uno spazio vuoto aggiungendo il codice seguente subito dopo `Dim ReadString As String`.  
+2. Assicurarsi che l'utente non possa immettere uno spazio vuoto aggiungendo il codice seguente subito dopo `Dim ReadString As String`.  
   
      [!code-vb[VbVbcnMyFileSystem#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#38)]  
   
-3.  Poiché si tratta di un diario, l'utente dovrà assegnare una data a ogni voce. Inserire il codice seguente dopo `fw = New StreamWriter("C:\MyDiary.txt", True)` per impostare la variabile `Today` sulla data corrente.  
+3. Poiché si tratta di un diario, l'utente dovrà assegnare una data a ogni voce. Inserire il codice seguente dopo `fw = New StreamWriter("C:\MyDiary.txt", True)` per impostare la variabile `Today` sulla data corrente.  
   
      [!code-vb[VbVbcnMyFileSystem#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#39)]  
   
-4.  Aggiungere infine il codice per cancellare <xref:System.Windows.Forms.TextBox>. Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Clear`.  
+4. Aggiungere infine il codice per cancellare <xref:System.Windows.Forms.TextBox>. Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Clear`.  
   
      [!code-vb[VbVbcnMyFileSystem#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#40)]  
   
@@ -98,19 +98,19 @@ Questa procedura dettagliata spiega come aprire e leggere un file usando la clas
   
 #### <a name="to-populate-the-combo-box"></a>Per popolare la casella combinata  
   
-1.  L'oggetto `PickEntries`<xref:System.Windows.Forms.ComboBox> viene usato per visualizzare le date in cui un utente immette le diverse voci, in modo che l'utente possa selezionare una voce da una data specifica. Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `GetEntries` e aggiungervi il codice seguente.  
+1. L'oggetto `PickEntries`<xref:System.Windows.Forms.ComboBox> viene usato per visualizzare le date in cui un utente immette le diverse voci, in modo che l'utente possa selezionare una voce da una data specifica. Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `GetEntries` e aggiungervi il codice seguente.  
   
      [!code-vb[VbVbcnMyFileSystem#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#41)]  
   
-2.  Per testare il codice, premere F5 per compilare l'applicazione e quindi fare clic su **Ottieni voci**. Fare clic sulla freccia giù nell'oggetto <xref:System.Windows.Forms.ComboBox> per visualizzare le date delle voci.  
+2. Per testare il codice, premere F5 per compilare l'applicazione e quindi fare clic su **Ottieni voci**. Fare clic sulla freccia giù nell'oggetto <xref:System.Windows.Forms.ComboBox> per visualizzare le date delle voci.  
   
 #### <a name="to-choose-and-display-individual-entries"></a>Per scegliere e visualizzare le singole voci  
   
-1.  Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `Display` e aggiungervi il codice seguente.  
+1. Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `Display` e aggiungervi il codice seguente.  
   
      [!code-vb[VbVbcnMyFileSystem#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#42)]  
   
-2.  Per testare il codice, premere F5 per compilare l'applicazione e quindi inviare una voce. Fare clic su **Ottieni voci**, selezionare una voce in <xref:System.Windows.Forms.ComboBox> e quindi fare clic su **Visualizza**. Il contenuto della voce selezionata viene visualizzato nell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>.  
+2. Per testare il codice, premere F5 per compilare l'applicazione e quindi inviare una voce. Fare clic su **Ottieni voci**, selezionare una voce in <xref:System.Windows.Forms.ComboBox> e quindi fare clic su **Visualizza**. Il contenuto della voce selezionata viene visualizzato nell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>.  
   
 ## <a name="enabling-users-to-delete-or-modify-entries"></a>Consentire agli utenti di eliminare o modificare le voci  
  Infine, è possibile includere funzionalità aggiuntive che consentono agli utenti di eliminare o modificare una voce usando i pulsanti `DeleteEntry` e `EditEntry`. Entrambi i pulsanti restano disabilitati a meno che non sia visualizzata una voce.  
@@ -125,23 +125,23 @@ Questa procedura dettagliata spiega come aprire e leggere un file usando la clas
   
 #### <a name="to-enable-deletion-and-modification-of-entries"></a>Per abilitare l'eliminazione e la modifica delle voci  
   
-1.  Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Display`, dopo `DisplayEntry.Text = ReadString`.  
+1. Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Display`, dopo `DisplayEntry.Text = ReadString`.  
   
      [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]  
   
-2.  Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `DeleteEntry` e aggiungervi il codice seguente.  
+2. Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `DeleteEntry` e aggiungervi il codice seguente.  
   
      [!code-vb[VbVbcnMyFileSystem#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#44)]  
   
-3.  Quando un utente visualizza una voce, il pulsante `EditEntry` viene abilitato. Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Display` dopo `DisplayEntry.Text = ReadString`.  
+3. Quando un utente visualizza una voce, il pulsante `EditEntry` viene abilitato. Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Display` dopo `DisplayEntry.Text = ReadString`.  
   
      [!code-vb[VbVbcnMyFileSystem#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#45)]  
   
-4.  Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `EditEntry` e aggiungervi il codice seguente.  
+4. Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `EditEntry` e aggiungervi il codice seguente.  
   
      [!code-vb[VbVbcnMyFileSystem#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#46)]  
   
-5.  Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `SubmitEdit` e aggiungervi il codice seguente  
+5. Creare un gestore eventi <xref:System.Windows.Forms.Control.Click> per il pulsante `SubmitEdit` e aggiungervi il codice seguente  
   
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]  
   

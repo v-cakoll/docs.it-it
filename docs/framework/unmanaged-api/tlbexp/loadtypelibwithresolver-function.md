@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049336"
 ---
 # <a name="loadtypelibwithresolver-function"></a>Funzione LoadTypeLibWithResolver
 Carica una libreria dei tipi e Usa il parametro fornito [interfaccia ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) per risolvere eventuali librerie dei tipi riferimento internamente.  
@@ -43,11 +43,11 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  [in] Oggetto [enumerazione REGKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) flag che controlla la modalità di registrazione della libreria dei tipi. I valori possibili sono:  
   
--   `REGKIND_DEFAULT`: Utilizzare il comportamento di registrazione predefinito.  
+- `REGKIND_DEFAULT`: Utilizzare il comportamento di registrazione predefinito.  
   
--   `REGKIND_REGISTER`: Registrare questa libreria dei tipi.  
+- `REGKIND_REGISTER`: Registrare questa libreria dei tipi.  
   
--   `REGKIND_NONE`: Non registrare questa libreria dei tipi.  
+- `REGKIND_NONE`: Non registrare questa libreria dei tipi.  
   
  `pTlbResolver`  
  [in] Un puntatore all'implementazione del [interfaccia ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).  

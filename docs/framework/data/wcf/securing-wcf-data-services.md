@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
 ms.openlocfilehash: 1e134d877c45af00e2a2fb7e7ef0882ffd7ddc48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875732"
 ---
 # <a name="securing-wcf-data-services"></a>Protezione di WCF Data Services
 In questo argomento vengono fornite considerazioni sulla sicurezza specifiche per lo sviluppo, distribuzione e l'esecuzione di WCF Data Services e applicazioni che servizi di accesso che supportano Open Data Protocol (OData). È consigliabile seguire anche le raccomandazioni per la creazione di applicazioni .NET Framework protette.  
@@ -82,15 +82,15 @@ OData è basato sul protocollo HTTP. In un messaggio HTTP, è possibile che l'in
 ### <a name="custom-hosting-requirements"></a>Requisiti dell'hosting personalizzato  
  Per impostazione predefinita, WCF Data Services viene creato come un'applicazione ASP.NET ospitata in IIS. In tal modo il servizio dati potrà usare i comportamenti sicuri della piattaforma. È possibile definire i servizi dati WCF ospitati da un host personalizzato. Per altre informazioni, vedere [che ospita il servizio dati](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md). I componenti e la piattaforma che ospitano un servizio dati devono assicurare i seguenti comportamenti di sicurezza per impedire attacchi sul servizio dati:  
   
--   Limitare la lunghezza dell'URI accettata in una richiesta del servizio dati per tutte le possibili operazioni.  
+- Limitare la lunghezza dell'URI accettata in una richiesta del servizio dati per tutte le possibili operazioni.  
   
--   Limitare la dimensione dei messaggi HTTP in ingresso e in uscita.  
+- Limitare la dimensione dei messaggi HTTP in ingresso e in uscita.  
   
--   Limitare il numero totale di richieste in sospeso in qualsiasi momento.  
+- Limitare il numero totale di richieste in sospeso in qualsiasi momento.  
   
--   Limitare le dimensioni delle intestazioni HTTP e i relativi valori e forniscono l'accesso a WCF Data Services per i dati di intestazione.  
+- Limitare le dimensioni delle intestazioni HTTP e i relativi valori e forniscono l'accesso a WCF Data Services per i dati di intestazione.  
   
--   Rilevare e contrastare gli attacchi noti, ad esempio attacchi di tipo riproduzione di messaggi e SYN TCP.  
+- Rilevare e contrastare gli attacchi noti, ad esempio attacchi di tipo riproduzione di messaggi e SYN TCP.  
   
 ### <a name="values-are-not-further-encoded"></a>Valori non ulteriormente codificati  
  I valori delle proprietà inviati al servizio dati non sono ulteriormente codificati dal runtime di WCF Data Services. Ad esempio, quando una proprietà di stringa di un'entità contiene contenuto HTML formattato, i tag non vengono codificati nel formato HTML dal servizio dati. Il servizio dati non codifica ulteriormente neanche i valori di proprietà nella risposta. La libreria client inoltre non esegue nessuna codifica aggiuntiva.  
@@ -98,17 +98,17 @@ OData è basato sul protocollo HTTP. In un messaggio HTTP, è possibile che l'in
 ### <a name="considerations-for-client-applications"></a>Considerazioni per le applicazioni client  
  Le considerazioni sulla sicurezza seguenti si applicano alle applicazioni che usano il client di WCF Data Services per accedere ai servizi OData:  
   
--   La libreria client presuppone che i protocolli usati per accedere al servizio dati forniscano un livello di sicurezza appropriato.  
+- La libreria client presuppone che i protocolli usati per accedere al servizio dati forniscano un livello di sicurezza appropriato.  
   
--   La libreria client usa tutti i valori predefiniti per i timeout e le opzioni di analisi degli stack di trasporto forniti dalla piattaforma sottostante.  
+- La libreria client usa tutti i valori predefiniti per i timeout e le opzioni di analisi degli stack di trasporto forniti dalla piattaforma sottostante.  
   
--   La libreria client non legge le impostazioni dai file di configurazione dell'applicazione.  
+- La libreria client non legge le impostazioni dai file di configurazione dell'applicazione.  
   
--   La libreria client non implementa alcun meccanismo di accesso tra domini. Al contrario, usa i meccanismi forniti dallo stack HTTP sottostante.  
+- La libreria client non implementa alcun meccanismo di accesso tra domini. Al contrario, usa i meccanismi forniti dallo stack HTTP sottostante.  
   
--   La libreria client non dispone di elementi dell'interfaccia utente e non visualizza i dati né esegue il rendering dei dati che riceve o invia.  
+- La libreria client non dispone di elementi dell'interfaccia utente e non visualizza i dati né esegue il rendering dei dati che riceve o invia.  
   
--   È opportuno che le applicazioni client convalidino sempre l'input dell'utente e i dati accettati da servizi non attendibili.  
+- È opportuno che le applicazioni client convalidino sempre l'input dell'utente e i dati accettati da servizi non attendibili.  
   
 ## <a name="see-also"></a>Vedere anche
 

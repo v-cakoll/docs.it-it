@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 62aa6b1d9be86a9b60abf894d67555f706e6a8ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760162"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>Metodo IHostMemoryManager::VirtualProtect
 Funge da wrapper logico per la funzione Win32 corrispondente. L'implementazione di Win32 di `VirtualProtect` cambia la protezione in un'area delle pagine eseguito il commit nello spazio degli indirizzi virtuali del processo chiamante.  

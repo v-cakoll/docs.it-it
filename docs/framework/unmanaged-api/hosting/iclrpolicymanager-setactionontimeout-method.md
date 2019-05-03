@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 30ab869ed6b06f5c9e53d819e20d3307ccc0e8f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638996"
 ---
 # <a name="iclrpolicymanagersetactionontimeout-method"></a>Metodo ICLRPolicyManager::SetActionOnTimeout
 Specifica l'azione di criteri che Common language runtime (CLR) deve intraprendere quando scade l'operazione specificata.  
@@ -40,13 +40,13 @@ HRESULT SetActionOnTimeout (
  `operation`  
  [in] Uno dei [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) valori, che indica l'operazione per cui si desidera specificare l'azione di timeout. Sono supportati i valori seguenti:  
   
--   OPR_AppDomainUnload  
+- OPR_AppDomainUnload  
   
--   OPR_ProcessExit  
+- OPR_ProcessExit  
   
--   OPR_ThreadRudeAbortInCriticalRegion  
+- OPR_ThreadRudeAbortInCriticalRegion  
   
--   OPR_ThreadRudeAbortInNonCriticalRegion  
+- OPR_ThreadRudeAbortInNonCriticalRegion  
   
  `action`  
  [in] Uno dei [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) valori, che indica l'azione di criteri da eseguire quando si verifica il timeout dell'operazione.  

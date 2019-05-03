@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f422e99a5f6a4153368304ff0b33bbc55381575a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61597856"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>Metodo ICorProfilerCallback::AppDomainShutdownStarted
 Notifica al profiler che un dominio dell'applicazione è in corso lo scaricamento da un processo.  

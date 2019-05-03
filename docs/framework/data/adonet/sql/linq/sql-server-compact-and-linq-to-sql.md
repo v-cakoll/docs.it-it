@@ -3,11 +3,11 @@ title: SQL Server Compact e LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
 ms.openlocfilehash: db3f7aef082d965dc27b69f5a966ff038c0ffac0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917852"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact e LINQ to SQL
 SQL Server Compact è il database predefinito installato con Visual Studio. Per altre informazioni, vedere [usando SQL Server Compact (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110)).  
@@ -19,29 +19,29 @@ SQL Server Compact è il database predefinito installato con Visual Studio. Per 
   
  Tenere presente le seguenti caratteristiche:  
   
--   SQL Server Compact viene fornito come una DLL che può essere usata direttamente sui file di database (con estensione sdf).  
+- SQL Server Compact viene fornito come una DLL che può essere usata direttamente sui file di database (con estensione sdf).  
   
--   SQL Server Compact viene eseguito nello stesso processo come l'applicazione client. L'efficienza della comunicazione con SQL Server Compact può quindi essere significativamente più elevata rispetto alla comunicazione con SQL Server. D'altra parte, SQL Server Compact richiede l'interoperabilità fra codice gestito e con i relativi costi associati.  
+- SQL Server Compact viene eseguito nello stesso processo come l'applicazione client. L'efficienza della comunicazione con SQL Server Compact può quindi essere significativamente più elevata rispetto alla comunicazione con SQL Server. D'altra parte, SQL Server Compact richiede l'interoperabilità fra codice gestito e con i relativi costi associati.  
   
--   Le dimensioni della DLL SQL Server Compact sono piccola. Questa funzionalità riduce le dimensioni complessive dell'applicazione.  
+- Le dimensioni della DLL SQL Server Compact sono piccola. Questa funzionalità riduce le dimensioni complessive dell'applicazione.  
   
--   Il runtime di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e lo strumento della riga di comando SQLMetal supportano SQL Server Compact.  
+- Il runtime di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e lo strumento della riga di comando SQLMetal supportano SQL Server Compact.  
   
--   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] non supporta SQL Server Compact.  
+- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] non supporta SQL Server Compact.  
   
 ## <a name="feature-set"></a>Set di funzionalità  
  Il set di funzionalità di SQL Server Compact è molto più semplice rispetto al set di funzionalità di SQL Server nei modi seguenti che possono influire sulla [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applicazioni:  
   
--   SQL Server Compact non supporta stored procedure o visualizzazioni.  
+- SQL Server Compact non supporta stored procedure o visualizzazioni.  
   
--   SQL Server Compact supporta solo un subset di tipi di dati e funzioni SQL.  
+- SQL Server Compact supporta solo un subset di tipi di dati e funzioni SQL.  
   
--   SQL Server Compact supporta solo un subset di costrutti SQL.  
+- SQL Server Compact supporta solo un subset di costrutti SQL.  
   
--   SQL Server Compact fornisce solo un'utilità di ottimizzazione con funzionalità minime. È possibile che alcune query potrebbero raggiungere il timeout.  
+- SQL Server Compact fornisce solo un'utilità di ottimizzazione con funzionalità minime. È possibile che alcune query potrebbero raggiungere il timeout.  
   
--   SQL Server Compact non supporta il trust parziale.  
+- SQL Server Compact non supporta il trust parziale.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

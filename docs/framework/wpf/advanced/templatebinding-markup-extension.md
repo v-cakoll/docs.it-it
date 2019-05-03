@@ -9,11 +9,11 @@ helpviewer_keywords:
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
 ms.openlocfilehash: c004560a0b7ab367fbf4fbb48b0e8d8b63f3d8f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053041"
 ---
 # <a name="templatebinding-markup-extension"></a>Estensione del markup TemplateBinding
 Collega il valore di una proprietà in un modello di controllo come valore di un'altra proprietà sul controllo basato su modelli.  
@@ -34,7 +34,7 @@ Collega il valore di una proprietà in un modello di controllo come valore di un
   
 |||  
 |-|-|  
-|`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> della proprietà viene impostata nella sintassi del setter.|  
+|`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> della proprietà impostata nella sintassi del setter.|  
 |`sourceProperty`|Altra proprietà di dipendenza esistente nel tipo basato su modelli, specificata da <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>.<br /><br /> -oppure-<br /><br /> Nome della proprietà puntato definito da un tipo diverso rispetto al tipo di destinazione basato su modelli. Si tratta in effetti di un oggetto <xref:System.Windows.PropertyPath>. Visualizzare [sintassi XAML di PropertyPath](propertypath-xaml-syntax.md).|  
   
 ## <a name="remarks"></a>Note  
@@ -46,9 +46,9 @@ Collega il valore di una proprietà in un modello di controllo come valore di un
   
  La sintassi per gli attributi è quella più comunemente utilizzata con questa estensione di markup. Il token di stringa fornito dopo la stringa dell'identificatore `TemplateBinding` viene assegnato come valore <xref:System.Windows.TemplateBindingExtension.Property%2A> della classe dell'estensione <xref:System.Windows.TemplateBindingExtension> sottostante.  
   
- La sintassi di elementi oggetto è possibile, ma non viene mostrata poiché non ha applicazioni realistiche. `TemplateBinding` utilizzato per riempire i valori all'interno dei Setter, tramite espressioni valutate e usando la sintassi degli elementi oggetto per `TemplateBinding` per riempire `<Setter.Property>` la sintassi degli elementi è inutilmente dettagliato.  
+ La sintassi di elementi oggetto è possibile, ma non viene mostrata poiché non ha applicazioni realistiche. `TemplateBinding` viene utilizzato per inserire valori all'interno dei setter, tramite espressioni valutate e l'utilizzo della sintassi dell'elemento oggetto per `TemplateBinding` per riempire la sintassi dell'elemento di proprietà `<Setter.Property>` è inutilmente dettagliata.  
   
- `TemplateBinding` è anche utilizzabile in un utilizzo dettagliato degli attributi che specifica il <xref:System.Windows.TemplateBindingExtension.Property%2A> proprietà come proprietà di = coppia valore:  
+ L'oggetto `TemplateBinding` può anche essere utilizzato per un utilizzo dettagliato degli attributi che consente di specificare la proprietà <xref:System.Windows.TemplateBindingExtension.Property%2A> come coppia proprietà=valore:  
   
 ```xml  
 <object property="{TemplateBinding Property=sourceProperty}" .../>  
@@ -65,7 +65,7 @@ Collega il valore di una proprietà in un modello di controllo come valore di un
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Applicazione di stili e modelli](../controls/styling-and-templating.md)
-- [Panoramica di XAML (WPF)](xaml-overview-wpf.md)
+- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
 - [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md)
-- [Estensione del markup RelativeSource](relativesource-markupextension.md)
-- [Associazione dell'estensione di markup](binding-markup-extension.md)
+- [Estensione di markup RelativeSource](relativesource-markupextension.md)
+- [Estensione di markup Binding](binding-markup-extension.md)

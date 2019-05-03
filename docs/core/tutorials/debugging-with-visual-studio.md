@@ -3,12 +3,12 @@ title: Eseguire il debug dell'applicazione .NET Core Hello World con Visual Stud
 description: Informazioni su come eseguire il debug di un'app Hello World scritta in C# o Visual Basic con Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463423"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610717"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Eseguire il debug dell'applicazione .NET Core Hello World C# o Visual Basic con Visual Studio 2017
 
@@ -154,6 +154,7 @@ Per impostare un punto di interruzione condizionale e verificare cosa succede qu
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
+
   ![Finestra di controllo immediato che restituisce un valore true dopo l'esecuzione dell'istruzione - Visual Basic](./media/debugging-with-visual-studio/vb-immediate-window-output.png)
 
 1. Selezionare il pulsante **Continua** sulla barra degli strumenti per continuare l'esecuzione del programma.

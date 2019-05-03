@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
 ms.openlocfilehash: 19ffe7e3fb0de9b377279d9cd274f998a104c6b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047815"
 ---
 # <a name="how-to-create-a-federated-client"></a>Procedura: Creare un client federato
 In Windows Communication Foundation (WCF), la creazione di un client per un *servizio federato* è costituito da tre passaggi principali:  
@@ -163,9 +163,9 @@ In Windows Communication Foundation (WCF), la creazione di un client per un *ser
 ## <a name="see-also"></a>Vedere anche
 
 - [Esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Procedura: Disabilitare sessioni protette in WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Procedura: Disabilitare le sessioni protette in un'associazione WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
 - [Procedura: Creare una classe WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
 - [Procedura: Configurare le credenziali in un servizio federativo](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Procedura: Configurare un emittente locale](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [Considerazioni sulla sicurezza con metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [Procedura: Proteggere endpoint di metadati](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [Considerazioni sulla sicurezza con i metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [Procedura: Proteggere gli endpoint dei metadati](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

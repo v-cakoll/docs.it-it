@@ -3,11 +3,11 @@ title: Metodi
 description: Informazioni su come un F# metodo è una funzione associata a un tipo che vengono usate per esporre e implementare le funzionalità e il comportamento degli oggetti e tipi.
 ms.date: 05/16/2016
 ms.openlocfilehash: 03150cc67f79bfde58cf27e4a9d4dfa9e9ff3f55
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666495"
 ---
 # <a name="methods"></a>Metodi
 

@@ -17,11 +17,11 @@ ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 19537fa3e3e27c3446d22f1f1a8cf2faf472158e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018567"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Procedura: Verificare le firme digitali dei documenti XML
 È possibile usare le classi nello spazio dei nomi <xref:System.Security.Cryptography.Xml> per verificare i dati XML firmati con una firma digitale. Le firme digitali XML (XMLDSIG) consentono di verificare che i dati non siano stati alterati dopo la firma. Per altre informazioni sullo standard XMLDSIG, vedere la specifica World Wide Web Consortium (W3C) al <https://www.w3.org/TR/xmldsig-core/>.
@@ -75,9 +75,9 @@ ms.locfileid: "59307769"
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Per compilare questo esempio, è necessario includere un riferimento a `System.Security.dll`.  
+- Per compilare questo esempio, è necessario includere un riferimento a `System.Security.dll`.  
   
--   Includere gli spazi dei nomi seguenti: <xref:System.Xml>, <xref:System.Security.Cryptography> e <xref:System.Security.Cryptography.Xml>.  
+- Includere gli spazi dei nomi seguenti: <xref:System.Xml>, <xref:System.Security.Cryptography> e <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Non archiviare né trasferire mai in testo non crittografato la chiave privata di una coppia di chiavi asimmetriche.  Per altre informazioni sulle chiavi crittografiche simmetriche e asimmetriche, vedere [generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  

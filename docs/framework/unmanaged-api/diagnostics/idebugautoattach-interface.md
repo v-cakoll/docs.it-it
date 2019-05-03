@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d13d8226d944b170bd84ce3d069ca79099c6417d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697824"
 ---
 # <a name="idebugautoattach-interface"></a>Interfaccia IDebugAutoAttach
 Definisce l'interfaccia per la connessione automatica al debugger server richiamato.  
@@ -37,4 +37,4 @@ Definisce l'interfaccia per la connessione automatica al debugger server richiam
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce dell'archivio dei simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interfacce dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

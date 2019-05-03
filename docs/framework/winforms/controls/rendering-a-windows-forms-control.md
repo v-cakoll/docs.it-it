@@ -11,24 +11,24 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
 ms.openlocfilehash: 8de87e17d1baedccfe18bfded3ccab7ab59f0a09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012477"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Rendering di un controllo Windows Form
 Per il rendering si riferisce al processo di creazione di una rappresentazione visiva sullo schermo dell'utente. Windows Form usa [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (la nuova libreria grafica di Windows) per il rendering. Le classi gestite che forniscono l'accesso al [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] sono nel <xref:System.Drawing?displayProperty=nameWithType> dello spazio dei nomi e relativi sottospazi dei nomi.  
   
  I seguenti elementi coinvolti nel rendering di controlli:  
   
--   Le funzionalità di disegno fornite dalla classe di base <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+- Le funzionalità di disegno fornite dalla classe di base <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
--   Gli elementi essenziali del [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] libreria grafica.  
+- Gli elementi essenziali del [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] libreria grafica.  
   
--   La geometria dell'area di disegno.  
+- La geometria dell'area di disegno.  
   
--   La procedura per liberare le risorse grafiche.  
+- La procedura per liberare le risorse grafiche.  
   
 ## <a name="drawing-functionality-provided-by-control"></a>Funzionalità di disegno fornite dal controllo  
  La classe di base <xref:System.Windows.Forms.Control> fornisce funzionalità di disegno tramite relativo <xref:System.Windows.Forms.Control.Paint> evento. Genera un controllo di <xref:System.Windows.Forms.Control.Paint> evento ogni volta che deve aggiornare la relativa visualizzazione. Per altre informazioni sugli eventi in .NET Framework, vedere [la gestione e generazione di eventi](../../../standard/events/index.md).  
@@ -119,4 +119,4 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Creare un controllo di Windows Forms che visualizzi lo stato di avanzamento](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Procedura: Creare un controllo di Windows Form che mostra lo stato di avanzamento](how-to-create-a-windows-forms-control-that-shows-progress.md)

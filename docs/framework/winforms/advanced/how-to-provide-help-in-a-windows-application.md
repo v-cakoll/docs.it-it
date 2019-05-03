@@ -9,11 +9,11 @@ helpviewer_keywords:
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
 ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756546"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Procedura: Visualizzare la Guida in un'applicazione Windows
 È possibile utilizzare il <xref:System.Windows.Forms.HelpProvider> componente collegare gli argomenti della Guida all'interno di un file della Guida a controlli specifici in un Windows Form. Il file della Guida può essere in formato HTML o HTMLHelp 1. x o versione successiva.  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7a651be40773607e0db215eadf884ed642e6e3b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59126932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775668"
 ---
 # <a name="addfile2-method"></a>Metodo AddFile2
 Aggiunge i file dell'assembly. È anche utilizzabile per creare moduli non associati.  
@@ -65,4 +65,4 @@ HRESULT AddFile2(
 
 - [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [API Alink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

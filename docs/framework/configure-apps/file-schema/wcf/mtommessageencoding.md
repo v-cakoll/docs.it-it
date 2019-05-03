@@ -3,11 +3,11 @@ title: <mtomMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 7865d171-cd1e-430a-8421-39cc13541d1b
 ms.openlocfilehash: 61b23957c56bad81598dd65b0dd68f7b44d329e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772385"
 ---
 # <a name="mtommessageencoding"></a>\<mtomMessageEncoding>
 Specifica le impostazioni di codifica e controllo di versione dei messaggi SOAP basati sul meccanismo Message Transmission Optimization Mechanism (MTOM).  

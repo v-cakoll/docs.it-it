@@ -10,11 +10,11 @@ ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8d5a5658fcb6bbba72938a16a9e5c82fd779e2e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868771"
 ---
 # <a name="code-access-security-basics"></a>Nozioni fondamentali sulla sicurezza per l’accesso al codice
 
@@ -150,7 +150,7 @@ public class MyClass {
 }
 ```
 
-## <a name="using-managed-wrapper-classes"></a>Uso di classi wrapper gestite
+## <a name="using-managed-wrapper-classes"></a>Utilizzo di classi wrapper gestite
 
 È necessario che la maggior parte delle applicazione e dei componenti, fatta eccezione per le librerie protette, non chiami direttamente codice non gestito. Le ragioni sono molteplici. Se il codice chiama direttamente codice non gestito, in molti casi non ne sarà autorizzata l'esecuzione, poiché per chiamare codice nativo è necessario che il codice disponga di un livello di attendibilità elevato. Se i criteri vengono modificati in modo da consentire l'esecuzione di tale applicazione, potrebbe risultarne seriamente indebolita la protezione del sistema e l'applicazione sarebbe libera di eseguire quasi ogni tipo di operazione.
 

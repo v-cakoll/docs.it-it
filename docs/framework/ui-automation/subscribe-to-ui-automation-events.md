@@ -11,11 +11,11 @@ helpviewer_keywords:
 - listening for events
 ms.assetid: b688effa-b3e8-4b05-944d-05ed89a245aa
 ms.openlocfilehash: 9c5308192ca122e9c25fa8e845f2b8f89345dda8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983008"
 ---
 # <a name="subscribe-to-ui-automation-events"></a>Sottoscrivere gli eventi di automazione interfaccia utente
 > [!NOTE]
@@ -40,4 +40,4 @@ ms.locfileid: "59168467"
 - <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>
 - <xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>
 - <xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>
-- [Cenni preliminari sugli eventi di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
+- [Panoramica degli eventi di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-events-overview.md)

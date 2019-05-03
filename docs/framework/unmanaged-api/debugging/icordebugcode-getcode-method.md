@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f396881ef16f63eaf198aec168e5e94ed887698b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750321"
 ---
 # <a name="icordebugcodegetcode-method"></a>Metodo ICorDebugCode::GetCode
 Ottiene tutto il codice per la funzione specificata, formattata per il disassembly. Questo metodo è stato deprecato in .NET Framework versione 2.0. Uso [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) invece.  

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
 ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761013"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>Procedura: Aggiungere un'animazione a una proprietà usando un oggetto AnimationClock
 In questo esempio viene illustrato come utilizzare <xref:System.Windows.Media.Animation.Clock> oggetti da animare una proprietà.  
   
  Esistono tre modi per animare una proprietà di dipendenza:  
   
--   Creare un <xref:System.Windows.Media.Animation.AnimationTimeline> e associarlo a tale proprietà utilizzando un <xref:System.Windows.Media.Animation.Storyboard>.  
+- Creare un <xref:System.Windows.Media.Animation.AnimationTimeline> e associarlo a tale proprietà utilizzando un <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Usare l'oggetto <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> per applicare un singolo metodo <xref:System.Windows.Media.Animation.AnimationTimeline> a una proprietà di destinazione.  
+- Usare l'oggetto <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> per applicare un singolo metodo <xref:System.Windows.Media.Animation.AnimationTimeline> a una proprietà di destinazione.  
   
--   Creare un <xref:System.Windows.Media.Animation.AnimationClock> da un <xref:System.Windows.Media.Animation.AnimationTimeline> e applicarlo a una proprietà.  
+- Creare un <xref:System.Windows.Media.Animation.AnimationClock> da un <xref:System.Windows.Media.Animation.AnimationTimeline> e applicarlo a una proprietà.  
   
  <xref:System.Windows.Media.Animation.Storyboard> gli oggetti e il <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> metodo consentono di animare le proprietà senza creare e distribuire orologi in modo direttamente (per alcuni esempi, vedere [animare una proprietà utilizzando uno Storyboard](how-to-animate-a-property-by-using-a-storyboard.md) e [animare una proprietà senza Utilizzare uno Storyboard](how-to-animate-a-property-without-using-a-storyboard.md)); gli orologi vengono creati e distribuiti automaticamente.  
   
@@ -38,6 +38,6 @@ In questo esempio viene illustrato come utilizzare <xref:System.Windows.Media.An
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Aggiungere un'animazione a una proprietà usando uno storyboard](how-to-animate-a-property-by-using-a-storyboard.md)
-- [Aggiungere un'animazione a una proprietà senza usare uno storyboard](how-to-animate-a-property-without-using-a-storyboard.md)
+- [Animare una proprietà utilizzando uno storyboard](how-to-animate-a-property-by-using-a-storyboard.md)
+- [Animare una proprietà senza usare uno storyboard](how-to-animate-a-property-without-using-a-storyboard.md)
 - [Cenni preliminari sulle tecniche di animazione delle proprietà](property-animation-techniques-overview.md)

@@ -10,11 +10,11 @@ ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 463c8e42e76a61eb0820c1af72c20d004161ad25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753972"
 ---
 # <a name="marshaling-mda"></a>MDA marshalling
 L'assistente al debug gestito `marshaling` viene attivato quando CLR configura le informazioni di marshalling per un parametro di un metodo o un campo di una struttura. Questo assistente al debug gestito non funziona per gli assembly con compilazione JIT.  

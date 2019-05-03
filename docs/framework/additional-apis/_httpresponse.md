@@ -13,11 +13,11 @@ ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: ef746d4a2e6782fa295b7c27f32ce5dc117350a7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675494"
 ---
 # <a name="httpwebrequesthttpresponse-field"></a>HttpWebRequest. \_HttpResponse campo
 
@@ -30,14 +30,14 @@ internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> Il `HttpWebRequest._HttpResponse` campo è interno e non ha significato essere utilizzato direttamente nel codice.
+> Il `HttpWebRequest._HttpResponse` campo è interno e non adatti a essere utilizzato direttamente nel codice.
 > 
-> Microsoft non supporta l'utilizzo di questo campo in un'applicazione di produzione in qualsiasi circostanza.
+> Microsoft non supporta l'uso di questo campo in un'applicazione di produzione in alcuna circostanza.
 
 ## <a name="requirements"></a>Requisiti
 
-**Namespace:** <xref:System.Net>
+**Spazio dei nomi:** <xref:System.Net>
 
-**Assembly:** System (System. dll)
+**Assembly:** Sistema (in System. dll)
 
-**Versioni di .NET framework:** disponibile dalla 2.0.
+**Versioni di .NET framework:** Disponibile dalla 2.0.

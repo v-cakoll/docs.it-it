@@ -23,11 +23,11 @@ helpviewer_keywords:
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638077"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Istruzione For Each...Next (Visual Basic)
 Ripete un gruppo di istruzioni per ogni elemento in una raccolta.  
@@ -92,11 +92,11 @@ Next [ element ]
   
  `Exit For` viene spesso utilizzata dopo una valutazione di una determinata condizione, ad esempio, in un `If`... `Then`... `Else` struttura. Si potrebbe voler usare `Exit For` per le condizioni seguenti:  
   
--   Continuando a eseguire l'iterazione è non necessari o impossibile. Ciò potrebbe dipendere da un valore errato o una richiesta di terminazione.  
+- Continuando a eseguire l'iterazione è non necessari o impossibile. Ciò potrebbe dipendere da un valore errato o una richiesta di terminazione.  
   
--   Viene generata un'eccezione un `Try`... `Catch`... `Finally`. È possibile usare `Exit For` alla fine del `Finally` blocco.  
+- Viene generata un'eccezione un `Try`... `Catch`... `Finally`. È possibile usare `Exit For` alla fine del `Finally` blocco.  
   
--   Esiste un ciclo infinito, ovvero un ciclo che è stato possibile eseguire un numero elevato o persino infinito di volte. Se si rileva questa condizione, è possibile usare `Exit For` per interrompere il ciclo. Per altre informazioni, vedere [è... Istruzione di ciclo](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+- Esiste un ciclo infinito, ovvero un ciclo che è stato possibile eseguire un numero elevato o persino infinito di volte. Se si rileva questa condizione, è possibile usare `Exit For` per interrompere il ciclo. Per altre informazioni, vedere [è... Istruzione di ciclo](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="iterators"></a>Iterators  
  Usa un' *iteratore* per eseguire un'iterazione personalizzata in una raccolta. Un iteratore può essere una funzione o un `Get` della funzione di accesso. Usa un `Yield` istruzione per restituire ogni elemento della raccolta uno alla volta.  

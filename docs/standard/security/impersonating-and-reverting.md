@@ -13,11 +13,11 @@ ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 97b15ea2202ca410dd517db63a7145d27f62bb48
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59338410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018593"
 ---
 # <a name="impersonating-and-reverting"></a>Rappresentazione e ripristino
 Talvolta può essere necessario ottenere un token di account Windows per rappresentare un account Windows. Può essere necessario, ad esempio, che l'applicazione basata su ASP.NET agisca per conto di più utenti in momenti diversi. L'applicazione potrebbe accettare un token che rappresenta un amministratore da Internet Information Services (IIS), rappresentare tale utente, eseguire un'operazione e ripristinare l'identità precedente. In seguito potrebbe accettare un token da IIS che rappresenta un utente con meno diritti, eseguire un'operazione e di nuovo il ripristino.  

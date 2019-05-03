@@ -9,12 +9,12 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 9d1eef073588f45e70170fcf46766b53f99bed8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4a35882d99a87ca5bf22fb386a87158e3c2d664
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505806"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59154570"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>Procedura: Personalizzare criteri di cache basati sul tempo
 Quando si creano criteri di cache basati sul tempo, è possibile personalizzare il comportamento di memorizzazione nella cache specificando i valori per durata massima, validità minima, obsolescenza massima o data di sincronizzazione della cache. L'oggetto <xref:System.Net.Cache.HttpRequestCachePolicy> fornisce più costruttori che consentono di specificare le combinazioni valide di questi valori.  
@@ -115,6 +115,7 @@ Level:Default MaxAge:36000 MinFresh:18000
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)
 - [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)

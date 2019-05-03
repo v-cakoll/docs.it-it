@@ -4,12 +4,12 @@ description: I microservizi sono progettati per resistere a errori temporanei di
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: ebf3a81718cd3423d3c80edb9c2f5b10f4ef47da
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: a63b0c67e00ec91c5a91e1c6b84d1a38ab50e394
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465815"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672355"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resilienza e disponibilità elevata nei microservizi
 
@@ -42,7 +42,7 @@ I log contengono informazioni sulla modalità di esecuzione di un'applicazione o
 
 Nelle applicazioni basate su server monolitiche, è possibile semplicemente scrivere log in un file su disco (un file di registro) e quindi analizzarlo con qualsiasi strumento. Visto che l'esecuzione dell'applicazione è limitata a un server fisso o a una macchina virtuale, in genere non è troppo complesso analizzare il flusso di eventi. Tuttavia, in un'applicazione distribuita in cui più servizi vengono eseguiti tra molti nodi nel cluster di un agente di orchestrazione, riuscire a correlare gli eventi distribuiti è una vera e propria sfida.
 
-Un'applicazione basata su microservizio non deve provare ad archiviare autonomamente il flusso di eventi di output o i file di registro né provare assolutamente a gestire il routing degli eventi in una posizione centrale. Dovrebbe essere trasparente, vale a dire che ogni processo deve solo scrivere il rispettivo flusso di eventi in un output standard che verrà raccolto dall'infrastruttura di ambiente di esecuzione sottostante in cui è in esecuzione. Un esempio di questi router del flusso di eventi è [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), che raccoglie i flussi di eventi da più origini e li pubblica nei sistemi di output. Questi possono includere semplice output standard per un ambiente di sviluppo o per sistemi cloud come [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (per applicazioni locali) e [Diagnostica di Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Ci sono anche ottimi strumenti e piattaforme di analisi dei log di terzi che possono cercare, avvisare, segnalare e monitorare i log, anche in tempo reale, come [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Un'applicazione basata su microservizio non deve provare ad archiviare autonomamente il flusso di eventi di output o i file di registro né provare assolutamente a gestire il routing degli eventi in una posizione centrale. Dovrebbe essere trasparente, vale a dire che ogni processo deve solo scrivere il rispettivo flusso di eventi in un output standard che verrà raccolto dall'infrastruttura di ambiente di esecuzione sottostante in cui è in esecuzione. Un esempio di questi router del flusso di eventi è [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), che raccoglie i flussi di eventi da più origini e li pubblica nei sistemi di output. Questi possono includere semplice output standard per un ambiente di sviluppo o per sistemi cloud come [Monitoraggio di Azure](https://azure.microsoft.com/services/monitor//) e [Diagnostica di Azure](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostics-extension-overview). Ci sono anche ottimi strumenti e piattaforme di analisi dei log di terzi che possono cercare, avvisare, segnalare e monitorare i log, anche in tempo reale, come [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Agenti di orchestrazione che gestiscono le informazioni di integrità e diagnostica
 
@@ -59,22 +59,22 @@ Diversi agenti di orchestrazione potrebbero sembrare simili, ma la diagnostica e
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 - **The Twelve-Factor App. XI. Logs: Treat logs as event streams** \ (Log: considerare i log come flussi di eventi)
-  [https://12factor.net/logs](https://12factor.net/logs)
+  <https://12factor.net/logs>
 
 - Repository GitHub **Libreria di flussi eventi di diagnostica Microsoft**. \
-  [https://github.com/Azure/diagnostics-eventflow](https://github.com/Azure/diagnostics-eventflow)
+  <https://github.com/Azure/diagnostics-eventflow>
 
 - **Cos'è Diagnostica di Azure** \
-  [https://docs.microsoft.com/azure/azure-diagnostics](https://docs.microsoft.com/azure/azure-diagnostics)
+  <https://docs.microsoft.com/azure/azure-diagnostics>
 
-- **Connect Windows computers to the Log Analytics service in Azure** \ (Connettere computer Windows al servizio Log Analytics in Azure)
-  [https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+- **Connettere computer Windows al servizio Monitoraggio di Azure** \
+  <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
 - **Logging What You Mean: Using the Semantic Logging Application Block** \ (Registrazione mirata: uso del blocco applicazione di registrazione semantica)
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - Sito ufficiale di **Splunk**. \
-  [https://www.splunk.com/](https://www.splunk.com/)
+  <https://www.splunk.com/>
 
 - **Classe EventSource Class**: API per traccia eventi per Windows (ETW)
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)

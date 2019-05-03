@@ -13,11 +13,11 @@ helpviewer_keywords:
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
 ms.openlocfilehash: eeaea4732855155bf711912644f2f5b3f5a4f8d0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651363"
 ---
 # <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>Procedura: Aggiungere un'animazione alla posizione o al colore di un cursore sfumatura
 In questo esempio illustra come animare la <xref:System.Windows.Media.GradientStop.Color%2A> e <xref:System.Windows.Media.GradientStop.Offset%2A> di <xref:System.Windows.Media.GradientStop> oggetti.  
@@ -25,11 +25,11 @@ In questo esempio illustra come animare la <xref:System.Windows.Media.GradientSt
 ## <a name="example"></a>Esempio  
  L'esempio seguente anima tre sfumatura all'interno di un <xref:System.Windows.Media.LinearGradientBrush>. L'esempio Usa tre animazioni, ognuna delle quali anima un cursore sfumatura diversi:  
   
--   La prima animazione, un <xref:System.Windows.Media.Animation.DoubleAnimation>, aggiunge un'animazione il prima del cursore sfumatura <xref:System.Windows.Media.GradientStop.Offset%2A> da 0,0 a 1,0 e quindi nuovamente su 0,0. Di conseguenza, il primo colore in sfumatura si sposta da sinistra al lato destro del rettangolo e quindi eseguire il backup sul lato sinistro.  
+- La prima animazione, un <xref:System.Windows.Media.Animation.DoubleAnimation>, aggiunge un'animazione il prima del cursore sfumatura <xref:System.Windows.Media.GradientStop.Offset%2A> da 0,0 a 1,0 e quindi nuovamente su 0,0. Di conseguenza, il primo colore in sfumatura si sposta da sinistra al lato destro del rettangolo e quindi eseguire il backup sul lato sinistro.  
   
--   La seconda animazione, un <xref:System.Windows.Media.Animation.ColorAnimation>, aggiunge un'animazione di secondo del cursore sfumatura <xref:System.Windows.Media.GradientStop.Color%2A> dal <xref:System.Windows.Media.Colors.Purple%2A> al <xref:System.Windows.Media.Colors.Yellow%2A> e quindi tornare alla <xref:System.Windows.Media.Colors.Purple%2A>. Di conseguenza, il colore intermedio della sfumatura cambia da viola in giallo e nuovamente in viola.  
+- La seconda animazione, un <xref:System.Windows.Media.Animation.ColorAnimation>, aggiunge un'animazione di secondo del cursore sfumatura <xref:System.Windows.Media.GradientStop.Color%2A> dal <xref:System.Windows.Media.Colors.Purple%2A> al <xref:System.Windows.Media.Colors.Yellow%2A> e quindi tornare alla <xref:System.Windows.Media.Colors.Purple%2A>. Di conseguenza, il colore intermedio della sfumatura cambia da viola in giallo e nuovamente in viola.  
   
--   La terza animazione, un'altra <xref:System.Windows.Media.Animation.ColorAnimation>, consente di animare l'opacità del terzo cursore sfumatura <xref:System.Windows.Media.GradientStop.Color%2A> da -1 e poi di nuovo. Di conseguenza, il terzo colore della sfumatura di dissolvenza e quindi diventa nuovamente opaco.  
+- La terza animazione, un'altra <xref:System.Windows.Media.Animation.ColorAnimation>, consente di animare l'opacità del terzo cursore sfumatura <xref:System.Windows.Media.GradientStop.Color%2A> da -1 e poi di nuovo. Di conseguenza, il terzo colore della sfumatura di dissolvenza e quindi diventa nuovamente opaco.  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/GradientStopAnimationExample.cs#graphicsmmgradientanimationexampleswholepage)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/gradientstopanimationexample.vb#graphicsmmgradientanimationexampleswholepage)]

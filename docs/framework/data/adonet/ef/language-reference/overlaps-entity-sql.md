@@ -3,11 +3,11 @@ title: OVERLAPS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
 ms.openlocfilehash: 9d909fb7efbb29619351cfc866b0f84381d0b80b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59319638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760272"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS (Entity SQL)
 Determina se due raccolte includono elementi comuni.  
@@ -23,7 +23,7 @@ expression OVERLAPS expression
  Qualsiasi espressione di query valida che restituisce una raccolta da confrontare con la raccolta restituita da un'altra espressione di query. Tutte le espressioni devono essere dello stesso tipo o di un tipo di base o derivato comune di `expression`.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` Se le due raccolte includono elementi comuni; in caso contrario, `false`.  
+ `true` se le due raccolte includono elementi comuni; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
  OVERLAPS fornisce funzionalmente equivalente alla seguente:  

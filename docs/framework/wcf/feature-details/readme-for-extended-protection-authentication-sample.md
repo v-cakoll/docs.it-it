@@ -3,11 +3,11 @@ title: File Leggimi sull'esempio relativo alla protezione estesa per l'autentica
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
 ms.openlocfilehash: 53592db03c88e673d529ef04f2fbc6e182897457
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59319352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946666"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>File Leggimi sull'esempio relativo alla protezione estesa per l'autenticazione
 La protezione estesa è un'iniziativa di sicurezza per impedire attacchi man-in-the-middle (MITM) in cui un utente malintenzionato (il "man-in-the-middle"), intercetta le credenziali del client e li utilizza per accedere alle risorse protette nel server di destinazione del client.  
@@ -27,9 +27,9 @@ La protezione estesa è un'iniziativa di sicurezza per impedire attacchi man-in-
   
 4. In questo esempio il client deve stabilire un canale protetto con il server ed è di conseguenza necessario che sia presente un certificato del server che può essere installato da Gestione Internet Information Services.  
   
-    1.  Aprire Gestione IIS -> certificati Server (dalla scheda delle funzionalità).  
+    1. Aprire Gestione IIS -> certificati Server (dalla scheda delle funzionalità).  
   
-    2.  Ai fini dimostrativi di questo esempio, è possibile creare un certificato autofirmato. Se non si desidera che venga visualizzato un messaggio relativo alla sicurezza del certificato, è possibile installare un certificato presente nell'archivio Autorità di certificazione radice attendibili.  
+    2. Ai fini dimostrativi di questo esempio, è possibile creare un certificato autofirmato. Se non si desidera che venga visualizzato un messaggio relativo alla sicurezza del certificato, è possibile installare un certificato presente nell'archivio Autorità di certificazione radice attendibili.  
   
 5. Spostarsi sul riquadro azioni per il sito Web predefinito. Fare clic su Modifica sito -> Binding. Aggiungere HTTPS come tipo, se non è già presente, con il numero di porta 443 e assegnare il certificato SSL creato nel passaggio precedente.  
   

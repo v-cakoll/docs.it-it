@@ -16,11 +16,11 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876148"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Traccia e strumentazione di applicazioni
 La traccia consente di monitorare l'esecuzione dell'applicazione mentre è in corso. È possibile aggiungere strumentazione di traccia e debug all'applicazione .NET Framework quando la si sviluppa e usare tale strumentazione sia mentre si sviluppa l'applicazione sia dopo la distribuzione. È possibile usare le classi <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> per registrare le informazioni sugli errori e sull'esecuzione dell'applicazione in log, file di testo o altri dispositivi per un'analisi successiva.  
@@ -123,7 +123,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 |Metodo|Output|  
 |------------|------------|  
 |**Assert**|Il testo specificato oppure, se non è specificato, lo stack di chiamate. L'output viene scritto solo se la condizione specificata come argomento nell'istruzione **Assert** è **false**.|  
-|**Test non superato**|Il testo specificato oppure, se non è specificato, lo stack di chiamate.|  
+|**Fail**|Il testo specificato oppure, se non è specificato, lo stack di chiamate.|  
 |**Write**|Il testo specificato.|  
 |**WriteIf**|Il testo specificato, se la condizione specificata come argomento nell'istruzione **WriteIf** viene soddisfatta.|  
 |**WriteLine**|Il testo specificato e un ritorno a capo.|  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
 ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008215"
 ---
 # <a name="path-animations-overview"></a>Panoramica sulle animazioni tracciato
 <a name="introduction"></a> Questo argomento presenta le animazioni tracciato, che consentono di usare un tracciato geometrico per generare valori di output. Le animazioni tracciato sono utili per lo spostamento e rotazione di oggetti lungo tracciati complessi.  
@@ -45,17 +45,17 @@ ms.locfileid: "59182468"
   
  Classi di animazione tracciato appartengono al <xref:System.Windows.Media.Animation> dello spazio dei nomi e usano la convenzione di denominazione seguente:  
   
- *\<tipo >* `AnimationUsingPath`  
+ *\<Tipo>* `AnimationUsingPath`  
   
  Dove *\<Tipo>* è il tipo di valore cui è stata aggiunta un'animazione dalla classe.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce il percorso seguente classi di animazione.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre le classi di animazione tracciato seguenti.  
   
 |Tipo di proprietà|Classe di animazione tracciato corrispondente|Esempio|  
 |-------------------|----------------------------------------|-------------|  
-|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[Aggiungere un'animazione a un oggetto lungo un tracciato (animazione Double)](how-to-animate-an-object-along-a-path-double-animation.md)|  
-|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[Aggiungere un'animazione a un oggetto lungo un tracciato (animazione Matrix)](how-to-animate-an-object-along-a-path-matrix-animation.md)|  
-|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[Aggiungere un'animazione a un oggetto lungo un tracciato (animazione Point)](how-to-animate-an-object-along-a-path-point-animation.md)|  
+|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[Animare un oggetto lungo un tracciato (animazione Double)](how-to-animate-an-object-along-a-path-double-animation.md)|  
+|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[Animare un oggetto lungo un tracciato (animazione Matrix)](how-to-animate-an-object-along-a-path-matrix-animation.md)|  
+|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[Animare un oggetto lungo un tracciato (animazione Point)](how-to-animate-an-object-along-a-path-point-animation.md)|  
   
  Oggetto <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> genera <xref:System.Windows.Media.Matrix> i valori dal relativo <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.PathGeometry%2A>. Se usato con un <xref:System.Windows.Media.MatrixTransform>, un <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> può spostare un oggetto lungo un tracciato. Se si imposta la <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> proprietà del <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> a `true`, viene anche ruotato lungo le curve del tracciato l'oggetto.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "59182468"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esempio di animazione tracciato](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Path Animation Sample (Esempio di animazione tracciato)](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [Sintassi di markup del percorso](path-markup-syntax.md)
 - [Procedure relative all'animazione percorso](path-animation-how-to-topics.md)
 - [Cenni preliminari sull'animazione](animation-overview.md)

@@ -3,11 +3,11 @@ title: <mexHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: e50b2e1f-9668-41a5-8077-dee7abff9f0f
 ms.openlocfilehash: 1aa9512c3d0d52f8cc3c7bd7b82bcfd37c418ce7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773451"
 ---
 # <a name="mexhttpbinding"></a>\<mexHttpBinding>
 Specifica le impostazioni per un'associazione usata per lo scambio di messaggi WS-MetadataExchange (WS-MEX) tramite HTTP.  
@@ -49,7 +49,7 @@ Specifica le impostazioni per un'associazione usata per lo scambio di messaggi W
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<le associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
  Questa associazione è fondamentalmente un'associazione `WSHttpBinding` con sicurezza disabilitata. Supporta la maggior parte delle richieste di metadati.  
@@ -58,7 +58,7 @@ Specifica le impostazioni per un'associazione usata per lo scambio di messaggi W
 
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexHttpBindingElement>
-- [Procedura: Pubblicare metadati per un servizio usando un file di configurazione](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Procedura: Pubblicare i metadati per un servizio utilizzando un File di configurazione](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Pubblicazione e recupero di metadati su un'associazione personalizzata](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
 - [Metadati](../../../../../docs/framework/wcf/feature-details/metadata.md)
 - [Associazioni](../../../../../docs/framework/wcf/bindings.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
 ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856713"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delega e rappresentazione con WCF
 La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l'accesso dei client alle risorse del dominio del servizio. Tali risorse possono essere risorse del computer, ad esempio file locali (rappresentazione), o risorse in un'altro computer, ad esempio una condivisione file (delega). Per un'applicazione di esempio, vedere [Rappresentazione di client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Per un esempio di come usare la rappresentazione, vedere [come: Rappresenta un Client in un servizio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -37,9 +37,9 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
 ### <a name="cached-token-impersonation"></a>Rappresentazione con un token memorizzato nella cache  
  È possibile eseguire la rappresentazione con un token memorizzato nella cache con gli elementi seguenti:  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, e <xref:System.ServiceModel.NetTcpBinding> con una credenziale client di Windows.  
+-   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>e <xref:System.ServiceModel.NetTcpBinding> con una credenziale client di Windows.  
   
--   <xref:System.ServiceModel.BasicHttpBinding> con un <xref:System.ServiceModel.BasicHttpSecurityMode> impostato sul <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> credential o qualsiasi altra associazione standard in cui il client presenta una credenziale UserName che il servizio può eseguire il mapping a un account Windows valido.  
+-   <xref:System.ServiceModel.BasicHttpBinding> con l'enumerazione <xref:System.ServiceModel.BasicHttpSecurityMode> impostata sulla credenziale <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> o qualsiasi altra associazione standard in cui il client presenta una credenziale basata sul nome utente di cui il servizio può eseguire il mapping a un account di Windows valido.  
   
 -   Qualsiasi <xref:System.ServiceModel.Channels.CustomBinding> che utilizza una credenziale client di Windows con la proprietà `requireCancellation` impostata su `true` (tale proprietà è disponibile per le classi seguenti: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> e <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>). Se si utilizza una conversazione protetta sull'associazione, è necessario che abbia la proprietà `requireCancellation` impostata su `true`.  
   
@@ -48,7 +48,7 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
 ### <a name="s4u-based-impersonation"></a>Rappresentazione basata su S4U.  
  È possibile eseguire la rappresentazione basata su S4U con gli elementi seguenti:  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, e <xref:System.ServiceModel.NetTcpBinding> con una credenziale client certificato che il servizio può eseguire il mapping a un account Windows valido.  
+-   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>e <xref:System.ServiceModel.NetTcpBinding> con una credenziale client basata su certificato di cui il servizio può eseguire il mapping a un account di Windows valido.  
   
 -   Qualsiasi <xref:System.ServiceModel.Channels.CustomBinding> che utilizza una credenziale client di Windows con la proprietà `requireCancellation` impostata su `false`  
   
@@ -111,7 +111,7 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
   
  Nella tabella seguente viene indicato il livello di rappresentazione ottenuto dal servizio in caso di rappresentazione da un token memorizzato nella cache.  
   
-|`AllowedImpersonationLevel` predefinito|Dispone di servizio `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega|Token memorizzato nella cache `ImpersonationLevel`|  
+|Valore di`AllowedImpersonationLevel` |Il servizio dispone di `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega| `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Anonymous|Yes|N/D|Rappresentazione|  
 |Anonymous|No|N/D|Identification|  
@@ -125,7 +125,7 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Livello di rappresentazione ottenuto dalla rappresentazione con credenziali basate sul nome utente e con un token memorizzato nella cache  
  Passando al servizio il nome utente e password, un client consente a WCF di accedere come tale utente, che equivale a impostare il `AllowedImpersonationLevel` proprietà <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. (la proprietà `AllowedImpersonationLevel` è disponibile sulle classi <xref:System.ServiceModel.Security.WindowsClientCredential> e <xref:System.ServiceModel.Security.HttpDigestClientCredential>). Nella tabella seguente viene indicato il livello di rappresentazione ottenuto quando il servizio riceve credenziali basate sul nome utente.  
   
-|`AllowedImpersonationLevel`|Dispone di servizio `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega|Token memorizzato nella cache `ImpersonationLevel`|  
+|`AllowedImpersonationLevel`|Il servizio dispone di `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega| `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |N/D|Yes|Yes|Delegation|  
 |N/D|Yes|No|Rappresentazione|  
@@ -133,7 +133,7 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>Livello di rappresentazione ottenuto dalla rappresentazione basata su S4U  
   
-|Dispone di servizio `SeTcbPrivilege`|Dispone di servizio `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega|Token memorizzato nella cache `ImpersonationLevel`|  
+|Il servizio dispone di `SeTcbPrivilege`|Il servizio dispone di `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega| `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Yes|Yes|N/D|Rappresentazione|  
 |Yes|No|N/D|Identification|  
@@ -220,7 +220,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.ChannelFactory%601>
 - <xref:System.Security.Principal.TokenImpersonationLevel.Identification>
-- [Utilizzo della rappresentazione con la protezione del trasporto](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
-- [Rappresentazione di client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
-- [Procedura: Rappresentare un client in un servizio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Uso della rappresentazione con la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+- [Rappresentazione del client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
+- [Procedura: Rappresenta un Client in un servizio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

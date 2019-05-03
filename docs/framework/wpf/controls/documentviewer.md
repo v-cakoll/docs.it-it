@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
 ms.openlocfilehash: cc9031a19cb49736cf039d53d02ff2bc571ff978
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911898"
 ---
 # <a name="documentviewer"></a>DocumentViewer
 Il <xref:System.Windows.Controls.DocumentViewer> controllo consente di visualizzare <xref:System.Windows.Documents.FixedDocument> contenuto (ad esempio [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documenti) in un formato impaginato.  
@@ -26,4 +26,4 @@ Il <xref:System.Windows.Controls.DocumentViewer> controllo consente di visualizz
 
 - [Documenti](../advanced/documents.md)
 - [Serializzazione e archiviazione di documenti](../advanced/document-serialization-and-storage.md)
-- [Cenni preliminari sulla stampa](../advanced/printing-overview.md)
+- [Panoramica della stampa](../advanced/printing-overview.md)

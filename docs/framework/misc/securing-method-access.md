@@ -13,11 +13,11 @@ ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2159199fc12ef83a6bf4a44841d71799e0dad4dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868966"
 ---
 # <a name="securing-method-access"></a>Protezione dell'accesso ai metodi
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  

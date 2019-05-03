@@ -3,11 +3,11 @@ title: <security> di <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
 ms.openlocfilehash: 75e3910473a353c2ef110106c34b4e92c018b51c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670417"
 ---
 # <a name="security-of-wsfederationhttpbinding"></a>\<security> of \<wsFederationHttpBinding>
 Definisce le impostazioni di sicurezza del [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  

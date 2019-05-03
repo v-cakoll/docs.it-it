@@ -2,12 +2,12 @@
 title: Annullare attività asincrone dopo un periodo di tempo (C#)
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: 48d3d41e8c4e2d696065c11245279e49142afa07
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 64a2a81e5de17594a84782f6474033d04662d8ea
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125769"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59318390"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>Annullare attività asincrone dopo un periodo di tempo (C#)
 
@@ -20,19 +20,19 @@ Questo esempio viene aggiunto al codice sviluppato in [Annullare un'attività as
 
 ## <a name="download-the-example"></a>Scaricare l'esempio
 
-È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.
+È possibile scaricare i progetti completi di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: ottimizzazione dell'applicazione) e quindi seguire questa procedura.
 
-1.  Decomprimere il file scaricato e quindi avviare Visual Studio.
+1. Decomprimere il file scaricato e quindi avviare Visual Studio.
 
-2.  Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.
+2. Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.
 
-3.  Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.
+3. Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.
 
-4.  In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelAfterTime** e scegliere **Imposta come progetto di avvio**.
+4. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelAfterTime** e scegliere **Imposta come progetto di avvio**.
 
-5.  Premere **F5** per eseguire il progetto. In alternativa, premere **CTRL**+**F5** per eseguire il progetto senza il debug.
+5. Premere **F5** per eseguire il progetto. In alternativa, premere **CTRL**+**F5** per eseguire il progetto senza il debug.
 
-6.  Eseguire il programma più volte per verificare che l'output visualizzi il contenuto per tutti i siti Web, per nessun sito Web o per alcuni siti Web.
+6. Eseguire il programma più volte per verificare che l'output visualizzi il contenuto per tutti i siti Web, per nessun sito Web o per alcuni siti Web.
 
 Se non si vuole scaricare il progetto, è possibile rivedere il file MainWindow.xaml.cs alla fine di questo argomento.
 
@@ -92,7 +92,7 @@ Il codice seguente è il testo completo del file MainWindow.xaml.cs per l'esempi
 
 Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.
 
-È possibile scaricare il progetto da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione).
+È possibile scaricare il progetto da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: ottimizzazione dell'applicazione).
 
 ```csharp
 using System;
@@ -221,4 +221,4 @@ namespace CancelAfterTime
 - [Procedura dettagliata: Accesso al Web con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Annullare un'attività asincrona o un elenco di attività (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
 - [Ottimizzazione dell'applicazione Async (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: Ottimizzazione dell'applicazione)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: Ottimizzazione dell'applicazione)

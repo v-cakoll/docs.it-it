@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
 ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947836"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Procedura: Creare un componente aggiuntivo che restituisca un'interfaccia utente
 In questo esempio viene illustrato come creare un componente aggiuntivo che restituisce un Windows Presentation Foundation (WPF) in un host applicazione WPF autonoma.  
@@ -25,9 +25,9 @@ In questo esempio viene illustrato come creare un componente aggiuntivo che rest
   
  Questo esempio illustra le estensioni WPF per il modello di componente aggiuntivo di .NET Framework che abilitare questo scenario e si presuppone quanto segue:  
   
--   Conoscenza del .NET Framework-in modello, tra cui sviluppo di pipeline, componenti aggiuntivi e host. Se non si ha familiarità con questi concetti, vedere [componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Per un'esercitazione che illustra l'implementazione di una pipeline, un componente aggiuntivo e un'applicazione host, vedere [procedura dettagliata: Creazione di un'applicazione estendibile](../../add-ins/walkthrough-create-extensible-app.md).  
+- Conoscenza del .NET Framework-in modello, tra cui sviluppo di pipeline, componenti aggiuntivi e host. Se non si ha familiarità con questi concetti, vedere [componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Per un'esercitazione che illustra l'implementazione di una pipeline, un componente aggiuntivo e un'applicazione host, vedere [procedura dettagliata: Creazione di un'applicazione estendibile](../../add-ins/walkthrough-create-extensible-app.md).  
   
--   Conoscenza delle estensioni di WPF per il modello .NET Framework con componente aggiuntivo che è disponibile qui: [Cenni preliminari sui componenti aggiuntivi WPF](wpf-add-ins-overview.md).  
+- Conoscenza delle estensioni di WPF per il modello .NET Framework con componente aggiuntivo che è disponibile qui: [Cenni preliminari sui componenti aggiuntivi WPF](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Esempio  
  Per creare un componente aggiuntivo che restituisce una UI WPF richiede codice specifico per ogni segmento di pipeline, il componente aggiuntivo e l'applicazione host.  

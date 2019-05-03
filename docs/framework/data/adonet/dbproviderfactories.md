@@ -3,11 +3,11 @@ title: Oggetti DbProviderFactory
 ms.date: 03/30/2017
 ms.assetid: 2a8e2640-3a49-42a1-a3a9-b43026907ae1
 ms.openlocfilehash: 2376cf39228cb5e8208112333ba06bb80070de84
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606996"
 ---
 # <a name="dbproviderfactories"></a>Oggetti DbProviderFactory
 Lo spazio dei nomi <xref:System.Data.Common> fornisce classi per la creazione di istanze di <xref:System.Data.Common.DbProviderFactory> per l'uso di origini dati specifiche. Quando si crea un'istanza di <xref:System.Data.Common.DbProviderFactory> e si passano le informazioni sul provider di dati, `DbProviderFactory` è in grado di determinare l'oggetto connessione corretto, fortemente tipizzato, da restituire in base alle informazioni fornite.  
@@ -15,10 +15,10 @@ Lo spazio dei nomi <xref:System.Data.Common> fornisce classi per la creazione di
  A partire dalla versione 4 di .NET Framework, i provider di dati come <xref:System.Data.Odbc>, <xref:System.Data.OleDb>, <xref:System.Data.SqlClient> e <xref:System.Data.OracleClient>, a differenza dei provider personalizzati, non vengono più elencati nel file machine.config.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Cenni preliminari sul modello di factory](../../../../docs/framework/data/adonet/factory-model-overview.md)  
+ [Panoramica del modello Factory](../../../../docs/framework/data/adonet/factory-model-overview.md)  
  Viene fornita una panoramica del modello di progettazione e dell'interfaccia di programmazione di factory.  
   
- [Recupero di un oggetto DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)  
+ [Recupero di una classe DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)  
  Viene illustrato come elencare i provider di dati installati e creare un oggetto <xref:System.Data.Common.DbConnection> da `DbProviderFactory`.  
   
  [DbConnection, DbCommand e DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  

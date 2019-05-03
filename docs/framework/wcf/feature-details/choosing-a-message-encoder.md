@@ -3,11 +3,11 @@ title: Scelta di un codificatore di messaggi
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
 ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608385"
 ---
 # <a name="choosing-a-message-encoder"></a>Scelta di un codificatore di messaggi
 In questo argomento vengono descritti i criteri per la scelta tra i codificatori di messaggi che sono inclusi in Windows Communication Foundation (WCF): file binario, testo e Message Transmission Optimization Mechanism (MTOM).  
@@ -21,11 +21,11 @@ In questo argomento vengono descritti i criteri per la scelta tra i codificatori
 ## <a name="system-provided-encoders"></a>Codificatori forniti dal sistema  
  WCF include tre codificatori di messaggi, che sono rappresentati dalle tre classi seguenti:  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>, il codificatore dei messaggi di testo, supporta codifica XML semplice e codifica SOAP. La modalità di codifica XML semplice del codificatore dei messaggi di testo è chiamata POX (Plain Old XML) per distinguerla dalla codifica SOAP basata su testo. Per abilitare POX, impostare la proprietà <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> su <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Usare il codificatore di messaggi di testo per interoperare con gli endpoint non WCF.  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>, il codificatore dei messaggi di testo, supporta codifica XML semplice e codifica SOAP. La modalità di codifica XML semplice del codificatore dei messaggi di testo è chiamata POX (Plain Old XML) per distinguerla dalla codifica SOAP basata su testo. Per abilitare POX, impostare la proprietà <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> su <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Usare il codificatore di messaggi di testo per interoperare con gli endpoint non WCF.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, il codificatore di messaggi binario, utilizza un formato binario compresso è ottimizzato per WCF alla comunicazione di WCF e pertanto non è interoperativo. Questo è anche il codificatore ad alte prestazioni la maggior parte di tutti i codificatori di WCF.  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, il codificatore di messaggi binario, utilizza un formato binario compresso è ottimizzato per WCF alla comunicazione di WCF e pertanto non è interoperativo. Questo è anche il codificatore ad alte prestazioni la maggior parte di tutti i codificatori di WCF.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, l'elemento di associazione, specifica la codifica dei caratteri e la versione dei messaggi che utilizzano MTOM. MTOM è una tecnologia efficiente per la trasmissione di dati binari nei messaggi di WCF. Il codificatore MTOM cerca di creare un equilibrio tra efficienza e interoperabilità. La codifica MTOM trasmette la maggior parte del codice XML in formato testo, ma ottimizza grandi blocchi di dati binari trasmettendoli senza introdurre modifiche e senza convertirli in formato testo. In termini di efficienza, tra i codificatori di WCF, MTOM è (il più lento) compresi tra testo e binari (il più veloce).  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, l'elemento di associazione, specifica la codifica dei caratteri e la versione dei messaggi che utilizzano MTOM. MTOM è una tecnologia efficiente per la trasmissione di dati binari nei messaggi di WCF. Il codificatore MTOM cerca di creare un equilibrio tra efficienza e interoperabilità. La codifica MTOM trasmette la maggior parte del codice XML in formato testo, ma ottimizza grandi blocchi di dati binari trasmettendoli senza introdurre modifiche e senza convertirli in formato testo. In termini di efficienza, tra i codificatori di WCF, MTOM è (il più lento) compresi tra testo e binari (il più veloce).  
   
 ## <a name="how-to-choose-a-message-encoder"></a>Come scegliere un codificatore di messaggi  
  Nella tabella seguente vengono descritti i fattori comuni utilizzati per scegliere un codificatore di messaggi. Dare la priorità ai fattori che sono importanti per l'applicazione, quindi scegliere i codificatori più efficienti per tali fattori. Tenere anche conto di eventuali fattori aggiuntivi non elencati in questa tabella e qualsiasi codificatore di messaggi personalizzato che può essere richiesto nell'applicazione.  

@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
 ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59121654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607826"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Creazione di un oggetto DataView (LINQ to DataSet)
 Per creare un oggetto <xref:System.Data.DataView> nel contesto [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], sono disponibili due modalità. È possibile creare un oggetto <xref:System.Data.DataView> da una query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] su <xref:System.Data.DataTable> oppure da un oggetto <xref:System.Data.DataTable> tipizzato o non tipizzato. In entrambi i casi, si crea il <xref:System.Data.DataView> usando uno del <xref:System.Data.DataTableExtensions.AsDataView%2A> i metodi di estensione; <xref:System.Data.DataView> non è direttamente costruibile nel [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] contesto.  
   
  Dopo aver creato <xref:System.Data.DataView>, è possibile associarlo a un controllo dell'interfaccia utente in un'applicazione Windows Forms o ASP.NET oppure modificare le impostazioni di filtro e ordinamento.  
   
- <xref:System.Data.DataView> Costruisce un indice, che aumenta in modo significativo le prestazioni delle operazioni che è possibile usare l'indice, ad esempio filtro e ordinamento. L'indice relativo a un oggetto <xref:System.Data.DataView> viene compilato sia quando si crea <xref:System.Data.DataView> che quando si modifica una qualsiasi delle informazioni relative all'ordinamento o al filtraggio. Se si crea un oggetto <xref:System.Data.DataView> e quindi si impostano le impostazioni sull'ordinamento o il filtraggio in un secondo momento, l'indice verrà compilato almeno due volte, ovvero una volta durante la creazione di <xref:System.Data.DataView> e una seconda volta quando viene modificata una qualsiasi delle proprietà di ordinamento o filtro.  
+ <xref:System.Data.DataView> costruisce un indice, offrendo un significativo incremento delle prestazioni nel caso di operazioni in cui è possibile usare l'indice, ad esempio ordinamento e filtro. L'indice relativo a un oggetto <xref:System.Data.DataView> viene compilato sia quando si crea <xref:System.Data.DataView> che quando si modifica una qualsiasi delle informazioni relative all'ordinamento o al filtraggio. Se si crea un oggetto <xref:System.Data.DataView> e quindi si impostano le impostazioni sull'ordinamento o il filtraggio in un secondo momento, l'indice verrà compilato almeno due volte, ovvero una volta durante la creazione di <xref:System.Data.DataView> e una seconda volta quando viene modificata una qualsiasi delle proprietà di ordinamento o filtro.  
   
  Per altre informazioni sul filtro e ordinamento con <xref:System.Data.DataView>, vedere [filtro con DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) e [ordinamento con DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
   
@@ -31,19 +31,19 @@ Per creare un oggetto <xref:System.Data.DataView> nel contesto [!INCLUDE[linq_da
   
  In una query usata per creare <xref:System.Data.DataView> sono supportati solo i seguenti operatori di query:  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Cast%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Cast%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.OrderByDescending%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.OrderByDescending%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.ThenBy%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.ThenBy%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.ThenByDescending%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.ThenByDescending%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
   
  Si noti che quando viene creato un oggetto <xref:System.Data.DataView> da una query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], il metodo <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A> deve essere il metodo finale chiamato nella query, Questa operazione è illustrata nell'esempio seguente, che crea un <xref:System.Data.DataView> di ordini online ordinati in base al totale dovuto:  
   

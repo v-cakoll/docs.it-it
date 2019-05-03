@@ -6,11 +6,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
 ms.openlocfilehash: d3ec2e16f06169790711c92c9d445ae93ee50c95
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59338657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937592"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>Procedura: Creare form padre MDI
 > [!IMPORTANT]
@@ -41,4 +41,4 @@ ms.locfileid: "59338657"
 - [Procedura: Creare form figlio MDI](how-to-create-mdi-child-forms.md)
 - [Procedura: Determinare il figlio MDI attivo](how-to-determine-the-active-mdi-child.md)
 - [Procedura: Inviare dati al figlio MDI attivo](how-to-send-data-to-the-active-mdi-child.md)
-- [Procedura: Disporre form figlio MDI](how-to-arrange-mdi-child-forms.md)
+- [Procedura: Disporre i form figlio MDI](how-to-arrange-mdi-child-forms.md)

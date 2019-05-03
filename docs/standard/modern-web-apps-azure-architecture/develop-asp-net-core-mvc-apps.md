@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Svil
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978332"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59128388"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare app ASP.NET Core MVC
 
@@ -425,7 +425,6 @@ La maggior parte delle API Web deve implementare un sistema di autenticazione ba
 #### <a name="custom-security"></a>Sicurezza personalizzata
 
 Prestare particolare attenzione alle implementazioni personalizzate della crittografia, dell'appartenenza degli utenti o del sistema di generazione di token. Esistono molte alternative commerciali e open source che nella maggior parte dei casi offrono una sicurezza migliore rispetto a quella di un'implementazione personalizzata.
-
 
 > ### <a name="references--security"></a>Riferimenti - Sicurezza
 >

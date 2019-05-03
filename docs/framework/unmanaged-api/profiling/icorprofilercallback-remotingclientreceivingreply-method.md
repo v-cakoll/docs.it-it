@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5865935af96260982d47b778d208f4235f6245e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775025"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>Metodo ICorProfilerCallback::RemotingClientReceivingReply
 Notifica al profiler che la parte del server di una chiamata remota è stata completata e il client sta ricevendo ora e sta per elaborare la risposta.  
@@ -39,11 +39,11 @@ HRESULT RemotingClientReceivingReply(
  `pCookie`  
  [in] Un valore che corrisponde al valore fornito [RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) in queste condizioni:  
   
--   I cookie GUID di .NET Remoting sono attivi.  
+- I cookie GUID di .NET Remoting sono attivi.  
   
--   Il canale ha esito positivo la trasmissione del messaggio.  
+- Il canale ha esito positivo la trasmissione del messaggio.  
   
--   I cookie GUID sono attivi nel processo del lato server.  
+- I cookie GUID sono attivi nel processo del lato server.  
   
  Ciò consente l'associazione semplice delle chiamate remote.  
   

@@ -6,19 +6,19 @@ dev_langs:
 - vb
 ms.assetid: 26a43a4f-83c9-4732-806d-bb23aad0ff6b
 ms.openlocfilehash: 6a25ea5fe80da1fed16f44fd3243ebea4d64069f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902889"
 ---
 # <a name="insert-update-and-delete-operations"></a>Operazioni di inserimento, aggiornamento ed eliminazione
 In `Insert` le operazioni `Update`, `Delete`e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vengono eseguite aggiungendo, modificando e rimuovendo oggetti nel modello a oggetti. Per impostazione predefinita, le azioni vengono convertite da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in SQL e le modifiche vengono inviate al database.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] offre la massima flessibilità per la modifica e rendere persistenti le modifiche apportate agli oggetti. Non appena gli oggetti entità sono disponibili (o recuperandoli tramite una query o costruendoli), è possibile modificarli nell'applicazione come oggetti normali. Vale a dire, è possibile modificarne i valori, è possibile aggiungerli alle raccolte ed è possibile rimuoverli dalle raccolte. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tiene traccia delle modifiche ed è pronto per trasmettere al database quando si chiama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] offre la massima flessibilità per la modifica e rendere persistenti le modifiche apportate agli oggetti. Non appena gli oggetti entità sono disponibili (o recuperandoli tramite una query o costruendoli), è possibile modificarli nell'applicazione come oggetti normali. Vale a dire, è possibile modificarne i valori, è possibile aggiungerli alle raccolte ed è possibile rimuoverli dalle raccolte. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene tenuta traccia delle modifiche, che verranno trasmesse di nuovo al database quando si chiama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta o riconosce operazioni di eliminazione a catena. Se si desidera eliminare una riga in una tabella contenente vincoli, è necessario impostare il `ON DELETE CASCADE` regola nel vincolo di chiave esterna nel database o usare il proprio codice per eliminare innanzitutto gli oggetti figlio che impediscono l'eliminazione oggetto padre. In caso contrario, viene generata un'eccezione. Per altre informazioni, vedere [Procedura: Eliminare le righe dal Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta o non riconosce operazioni di eliminazione a catena. Se si desidera eliminare una riga in una tabella contenente vincoli, è necessario impostare il `ON DELETE CASCADE` regola nel vincolo di chiave esterna nel database o usare il proprio codice per eliminare innanzitutto gli oggetti figlio che impediscono l'eliminazione oggetto padre. In caso contrario, viene generata un'eccezione. Per altre informazioni, vedere [Procedura: Eliminare le righe dal Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
   
  Nei frammenti di codice riportati di seguito vengono usate le classi `Customer`e `Order` del database di esempio Northwind. Le definizioni di classe non sono illustrate per brevità.  
   

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
 ms.openlocfilehash: fcb450b86066e24fba9c6a33f7abe0d4749d2c8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801049"
 ---
 # <a name="security-in-windows-forms-overview"></a>Cenni preliminari sulla sicurezza in Windows Form
 Prima del rilascio di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], qualsiasi codice in esecuzione sul computer di un utente aveva gli stessi diritti o le stesse autorizzazioni di accesso alle risorse che aveva un utente del computer. Se ad esempio all'utente era consentito l'accesso al file system o a un database, anche il codice aveva accesso al file system o al database. Anche se ciò può essere accettabile per il codice contenuto negli eseguibili installati esplicitamente dall'utente nel computer locale, non è altrettanto accettabile per quanto riguarda il codice potenzialmente dannoso proveniente da Internet o da una Intranet locale. A questo tipo di codice, infatti, non deve essere consentito l'accesso alle risorse del computer dell'utente senza autorizzazione esplicita.  
   
  In [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] è stata introdotta un'infrastruttura, denominata sicurezza dall'accesso di codice, che consente di differenziare le autorizzazioni, o i diritti, del codice rispetto a quelli dell'utente. Per impostazione predefinita, il codice proveniente da Internet e dalla Intranet può essere eseguito soltanto in un ambiente parzialmente attendibile. Le applicazioni parzialmente attendibili sono soggette a una serie di restrizioni, ad esempio non possono accedere al disco rigido locale né eseguire codice non gestito. Per controllare le risorse a cui il codice può accedere, in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] viene usata l'identità del codice, ovvero la provenienza, l'eventuale presenza di [Assembly con nome sicuro](../app-domains/strong-named-assemblies.md), la presenza di una firma con un certificato e così via.  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] la tecnologia, che consente di distribuire le applicazioni Windows Forms, risulta molto più semplice per lo sviluppo di applicazioni in esecuzione in attendibilità parziale, con attendibilità totale o in ambiente parzialmente attendibile con autorizzazioni elevate. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] fornisce funzionalità come l'elevazione delle autorizzazioni e distribuzione di applicazioni attendibili in modo che l'applicazione può richiedere autorizzazioni elevate o con attendibilità totale da parte dell'utente locale in modo responsabile.  
+ Grazie alla tecnologia [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], usata per la distribuzione delle applicazioni Windows Form, risulta molto più semplice sviluppare applicazioni da eseguire in un ambiente parzialmente attendibile, in un ambiente con attendibilità totale o in un ambiente parzialmente attendibile con autorizzazioni elevate. Usando alcune delle funzionalità offerte da [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], ad esempio l'elevazione delle autorizzazioni e la distribuzione di applicazioni attendibili, l'applicazione può richiedere automaticamente che l'utente disponga di autorizzazioni elevate o di attendibilità totale.  
   
 ## <a name="understanding-security-in-the-net-framework"></a>Informazioni sulla sicurezza in .NET Framework  
  La sicurezza dall'accesso di codice consente di assegnare al codice gradi di attendibilità diversi, in base all'origine e ad altri aspetti dell'identità del codice. Per altre informazioni sulle evidenze impiegate da Common Language Runtime per determinare i criteri di sicurezza, vedere [Evidenza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100)). Questo strumento consente di proteggere i computer dal codice dannoso e il codice attendibile dai tentativi, sia intenzionali che accidentali, di compromissione della sicurezza. La sicurezza dall'accesso di codice assicura inoltre un controllo maggiore sulle azioni che possono essere eseguite dall'applicazione, poiché consente di assegnare a quest'ultima soltanto le autorizzazioni effettivamente necessarie. Questo tipo di sicurezza ha effetto su tutto il codice gestito destinato a Common Language Runtime, anche se tale codice non effettua un'unica verifica delle autorizzazioni di sicurezza per l'accesso di codice. Per altre informazioni sulla sicurezza in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vedere [Concetti principali sulla sicurezza](../../standard/security/key-security-concepts.md) e [Nozioni fondamentali sulla sicurezza per l'accesso al codice](../misc/code-access-security-basics.md).  
@@ -62,9 +62,9 @@ Prima del rilascio di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md
 -  
   
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>Distribuzione di un'applicazione con le autorizzazioni appropriate  
- La distribuzione di un'applicazione Windows Form in un computer client viene in genere eseguita mediante [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], una tecnologia di distribuzione che consente di descrivere tutti i componenti che devono essere eseguiti dall'applicazione. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Usa file XML denominati manifesti per descrivere gli assembly e i file che costituiscono l'applicazione e le autorizzazioni richieste dall'applicazione.  
+ La distribuzione di un'applicazione Windows Form in un computer client viene in genere eseguita mediante [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], una tecnologia di distribuzione che consente di descrivere tutti i componenti che devono essere eseguiti dall'applicazione. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] usa file XML denominati manifesti per descrivere gli assembly e i file che formano l'applicazione nonché le autorizzazioni richieste da quest'ultima.  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dispone di due tecnologie per la richiesta di autorizzazioni elevate in un computer client. entrambe basate sull'uso di certificati Authenticode. L'uso dei certificati fornisce una discreta garanzia agli utenti che l'applicazione proviene da una fonte attendibile.  
+ In [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] vengono usate due tecnologie per la richiesta di autorizzazioni elevate in un computer client, entrambe basate sull'uso di certificati Authenticode. L'uso dei certificati fornisce una discreta garanzia agli utenti che l'applicazione proviene da una fonte attendibile.  
   
  Queste tecnologie sono descritte nella tabella seguente.  
   
@@ -87,6 +87,6 @@ Prima del rilascio di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md
 - [Sicurezza di Windows Form](windows-forms-security.md)
 - [Nozioni fondamentali sulla sicurezza per l’accesso al codice](../misc/code-access-security-basics.md)
 - [Sicurezza e distribuzione di ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
-- [Cenni preliminari sulla distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview)
+- [Panoramica della distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview)
 - [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
 - [MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

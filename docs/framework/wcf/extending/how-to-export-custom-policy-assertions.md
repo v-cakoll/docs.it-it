@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
 ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767169"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Procedura: Esportare asserzioni di criteri personalizzate
 Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoint del servizio. Le applicazioni del servizio possono utilizzare asserzioni di criteri personalizzate nei metadati del servizio per comunicare informazioni sulla personalizzazione di endpoint, associazione e contratto all'applicazione client. È possibile utilizzare Windows Communication Foundation (WCF) per esportare asserzioni in espressioni di criteri allegate alle associazioni WSDL nell'endpoint, l'operazione o soggetti di messaggio, a seconda di funzionalità o requisiti da comunicare.  
@@ -53,4 +53,4 @@ Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoin
 
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
-- [Procedura: Importare asserzioni di criteri personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Procedura: Importa asserzioni di criteri personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

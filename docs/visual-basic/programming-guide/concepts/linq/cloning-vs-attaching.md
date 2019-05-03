@@ -3,11 +3,11 @@ title: Clonazione e Collegamento (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
 ms.openlocfilehash: 59ffedfdbb2820683f1e6cc232154688f5c29fc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789103"
 ---
 # <a name="cloning-vs-attaching-visual-basic"></a>Clonazione e Collegamento (Visual Basic)
 Se quando si aggiungono oggetti <xref:System.Xml.Linq.XNode> (incluso <xref:System.Xml.Linq.XElement>) o <xref:System.Xml.Linq.XAttribute> a un nuovo albero XML, il nuovo contenuto non ha elementi padre, gli oggetti vengono semplicemente collegati all'albero. Se il nuovo contenuto include già elementi padre e fa parte di un altro albero XML viene duplicato. Il nuovo contesto duplicato viene quindi collegato all'albero XML.  

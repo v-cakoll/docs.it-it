@@ -3,11 +3,11 @@ title: Nessun metodo '<methodname>'può accettare un argomento di tipo'<typename
 ms.date: 07/20/2015
 ms.assetid: 175c01dc-279c-4996-8501-d19a6671fdeb
 ms.openlocfilehash: 4f782e612a66fd7e387166347e5c2478b7a816cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59294951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969195"
 ---
 # <a name="no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter-parametername"></a>Nessun metodo '\<NomeMetodo >' può accettare un argomento di tipo '\<nomeTipo >' per il parametro '\<nomeparametro >'
 Una chiamata al metodo contiene un argomento di un tipo che non è valido.  

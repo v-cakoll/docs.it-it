@@ -6,26 +6,26 @@ helpviewer_keywords:
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
 ms.openlocfilehash: 4a77060661cb0d71b0209cbcdeba23ffc2c6e5c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010670"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Code-behind e XAML in WPF
 <a name="introduction"></a> Code-behind è un termine usato per descrivere il codice che è unita in join con gli oggetti definiti da commenti quando una [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pagina viene compilato dal markup. In questo argomento vengono descritti i requisiti per il code-behind, nonché un meccanismo di codice inline alternativo per il codice in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
--   [Prerequisiti](#Prerequisites)  
+- [Prerequisiti](#Prerequisites)  
   
--   [Code-Behind e il linguaggio XAML](#codebehind_and_the_xaml_language)  
+- [Code-Behind e il linguaggio XAML](#codebehind_and_the_xaml_language)  
   
--   [Code-behind, gestore eventi e requisiti della classe parziale in WPF](#Code_behind__Event_Handler__and_Partial_Class)  
+- [Code-behind, gestore eventi e requisiti della classe parziale in WPF](#Code_behind__Event_Handler__and_Partial_Class)  
   
--   [X:code](#x_Code)  
+- [X:code](#x_Code)  
   
--   [Limitazioni del codice inline](#Inline_Code_Limitations)  
+- [Limitazioni del codice inline](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>Prerequisiti  
@@ -38,15 +38,15 @@ ms.locfileid: "59088575"
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
 ## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>Code-behind, gestore eventi e requisiti della classe parziale in WPF  
   
--   La classe parziale deve derivare dal tipo sottostante dell'elemento radice.  
+- La classe parziale deve derivare dal tipo sottostante dell'elemento radice.  
   
--   Si noti che in base al comportamento predefinito di azioni di compilazione di markup, è possibile lasciare vuota la derivazione nella definizione di classe parziale sul lato code-behind. Il risultato compilato presupporrà che il tipo sottostante della radice della pagina per essere usato come base per la classe parziale, anche se non specificato. Tuttavia, basarsi su questo comportamento non è consigliata.  
+- Si noti che in base al comportamento predefinito di azioni di compilazione di markup, è possibile lasciare vuota la derivazione nella definizione di classe parziale sul lato code-behind. Il risultato compilato presupporrà che il tipo sottostante della radice della pagina per essere usato come base per la classe parziale, anche se non specificato. Tuttavia, basarsi su questo comportamento non è consigliata.  
   
--   I gestori di eventi che si scrive nel code-behind devono essere metodi di istanza e non possono essere metodi statici. Questi metodi devono essere definiti dalla classe parziale nello spazio dei nomi CLR identificato da `x:Class`. Non è possibile qualificare il nome di un gestore eventi per indicare un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore per cercare un gestore eventi per il collegamento di eventi in un ambito di classe diversa.  
+- I gestori di eventi che si scrive nel code-behind devono essere metodi di istanza e non possono essere metodi statici. Questi metodi devono essere definiti dalla classe parziale nello spazio dei nomi CLR identificato da `x:Class`. Non è possibile qualificare il nome di un gestore eventi per indicare un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore per cercare un gestore eventi per il collegamento di eventi in un ambito di classe diversa.  
   
--   Il gestore deve corrispondere il delegato per l'evento appropriato nel sistema dei tipi sottostante.  
+- Il gestore deve corrispondere il delegato per l'evento appropriato nel sistema dei tipi sottostante.  
   
--   Per la lingua di Microsoft Visual Basic in particolare, è possibile usare le specifiche della lingua `Handles` parola chiave da associare gestori istanze ed eventi nella dichiarazione del gestore, invece di collegare i gestori con gli attributi in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Questa tecnica presenta tuttavia alcune limitazioni perché il `Handles` parola chiave in grado di supportare tutte le funzionalità specifiche del [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di eventi, ad esempio alcuni scenari di eventi indirizzati o gli eventi associati. Per informazioni dettagliate, vedere [Visual Basic e gestione degli eventi WPF](visual-basic-and-wpf-event-handling.md).  
+- Per la lingua di Microsoft Visual Basic in particolare, è possibile usare le specifiche della lingua `Handles` parola chiave da associare gestori istanze ed eventi nella dichiarazione del gestore, invece di collegare i gestori con gli attributi in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Questa tecnica presenta tuttavia alcune limitazioni perché il `Handles` parola chiave in grado di supportare tutte le funzionalità specifiche del [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di eventi, ad esempio alcuni scenari di eventi indirizzati o gli eventi associati. Per informazioni dettagliate, vedere [Visual Basic e gestione degli eventi WPF](visual-basic-and-wpf-event-handling.md).  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>X:code  

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
 ms.openlocfilehash: d586eef8d1308070da38a0a54c63c3ba64d30c8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776639"
 ---
 # <a name="how-to-create-a-text-decoration"></a>Procedura: Creare un effetto testo
 Oggetto <xref:System.Windows.TextDecoration> oggetto è un ornamento visivo è possibile aggiungere al testo. Esistono quattro tipi di effetti del testo: sottolineato, linea di base, quali il barrato e linea sopra. Nell'esempio seguente mostra la posizione delle decorazioni di testo rispetto al testo.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
 ms.openlocfilehash: c308805f5e73d740ff18a40d95b9cc2576ac95fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013595"
 ---
 # <a name="typename-is-a-delegate-type"></a>'\<nomeTipo >' è un tipo delegato
 '\<nomeTipo >' è un tipo delegato. Creazione di delegati consente solo una singola espressione AddressOf come un elenco di argomenti. Spesso un'espressione AddressOf può essere utilizzata invece una costruzione di delegato.  
@@ -27,7 +27,7 @@ ms.locfileid: "58841258"
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Usare una sola `AddressOf` espressione nell'elenco di argomenti per la classe delegata nel `New` clausola.  
+- Usare una sola `AddressOf` espressione nell'elenco di argomenti per la classe delegata nel `New` clausola.  
   
 ## <a name="see-also"></a>Vedere anche
 

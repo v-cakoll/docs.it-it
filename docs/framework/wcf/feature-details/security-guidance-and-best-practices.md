@@ -5,11 +5,11 @@ helpviewer_keywords:
 - secure applications [WCF]
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
 ms.openlocfilehash: dbe460888400735e0950e7a34372d8540e236303
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749540"
 ---
 # <a name="security-guidance-and-best-practices"></a>Indicazioni di sicurezza e procedure consigliate
 Negli argomenti di questa sezione presentano materiale sussidiario e gli elementi da considerare durante la creazione di proteggere le applicazioni di Windows Communication Foundation (WCF). Per altre informazioni su Windows Server AppFabric e sicurezza, vedere [sicurezza del modello per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
@@ -27,4 +27,4 @@ Negli argomenti di questa sezione presentano materiale sussidiario e gli element
 ## <a name="see-also"></a>Vedere anche
 
 - [Programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Sicurezza e protezione](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

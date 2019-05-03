@@ -11,11 +11,11 @@ helpviewer_keywords:
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
 ms.openlocfilehash: fbb6587dde53592a94887c1ea19562e06c15afe3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803266"
 ---
 # <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Procedura: Gestire l'input da tastiera a livello di modulo
 Windows Form consente di gestire i messaggi della tastiera a livello di form, prima che i messaggi raggiungano un controllo. Questo argomento illustra come completare questa attività.  
@@ -44,4 +44,4 @@ Windows Form consente di gestire i messaggi della tastiera a livello di form, pr
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Input da tastiera in un'applicazione Windows Form](keyboard-input-in-a-windows-forms-application.md)
+- [Input da tastiera in un'applicazione Windows Forms](keyboard-input-in-a-windows-forms-application.md)

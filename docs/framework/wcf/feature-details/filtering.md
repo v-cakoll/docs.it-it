@@ -3,11 +3,11 @@ title: Filtro
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
 ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856700"
 ---
 # <a name="filtering"></a>Filtro
 Sistema di filtraggio Windows Communication Foundation (WCF) è possibile utilizzare filtri dichiarativi per individuare i messaggi e prendere decisioni operative. È possibile utilizzare filtri per determinare come comportarsi con un messaggio, esaminando parte di esso. Un processo di accodamento, ad esempio, può utilizzare una query XPath 1.0 per controllare l'elemento prioritario di un'intestazione nota e determinare se spostare un messaggio all'inizio della coda.  
@@ -85,4 +85,4 @@ Sistema di filtraggio Windows Communication Foundation (WCF) è possibile utiliz
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Trasferimento dati e serializzazione](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+- [Trasferimento e serializzazione dei dati](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

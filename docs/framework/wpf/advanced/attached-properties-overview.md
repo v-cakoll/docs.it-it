@@ -8,11 +8,11 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
 ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032235"
 ---
 # <a name="attached-properties-overview"></a>Cenni preliminari sulle proprietà associate
 
@@ -46,11 +46,11 @@ In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md
 
 Anche se le proprietà associate possono essere impostate per qualsiasi oggetto, ciò non significa che l'impostazione della proprietà produce un risultato tangibile o che il valore verrà usato da un altro oggetto. In genere, le proprietà associate sono concepite in modo che gli oggetti provenienti da un'ampia varietà di possibili gerarchie di classi o di relazioni logiche possano ciascuno riportare informazioni comuni al tipo che definisce la proprietà associata. Il tipo che definisce la proprietà associata si attiene di regola a uno di questi modelli:
 
--   Il tipo che definisce la proprietà associata è progettato in modo da poter essere l'elemento padre degli elementi che imposteranno i valori per la proprietà associata. Il tipo scorre quindi gli oggetti figlio attraverso la logica interna in base a una struttura ad albero degli oggetti, ottiene i valori e agisce in qualche modo su tali valori.
+- Il tipo che definisce la proprietà associata è progettato in modo da poter essere l'elemento padre degli elementi che imposteranno i valori per la proprietà associata. Il tipo scorre quindi gli oggetti figlio attraverso la logica interna in base a una struttura ad albero degli oggetti, ottiene i valori e agisce in qualche modo su tali valori.
 
--   Il tipo che definisce la proprietà associata verrà usato come elemento figlio per un'ampia gamma di elementi padre e modelli di contenuto possibili.
+- Il tipo che definisce la proprietà associata verrà usato come elemento figlio per un'ampia gamma di elementi padre e modelli di contenuto possibili.
 
--   Il tipo che definisce la proprietà associata rappresenta un servizio. Gli altri tipi impostano i valori per la proprietà associata. Pertanto, quando l'elemento che imposta la proprietà viene valutato nel contesto del servizio, i valori della proprietà associata vengono ottenuti tramite la logica interna della classe del servizio.
+- Il tipo che definisce la proprietà associata rappresenta un servizio. Gli altri tipi impostano i valori per la proprietà associata. Pertanto, quando l'elemento che imposta la proprietà viene valutato nel contesto del servizio, i valori della proprietà associata vengono ottenuti tramite la logica interna della classe del servizio.
 
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>Esempio di proprietà associata definita dall'elemento padre
 
@@ -102,9 +102,9 @@ La firma per il **Get_PropertyName_** della funzione di accesso deve essere:
 
 `public static object GetPropertyName(object target)`
 
--   L'oggetto `target` può essere specificato come tipo più specifico nell'implementazione. Ad esempio, il <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> parametro, come i tipi di metodo <xref:System.Windows.UIElement>, perché la proprietà associata è destinata esclusivamente al nelze nastavit <xref:System.Windows.UIElement> istanze.
+- L'oggetto `target` può essere specificato come tipo più specifico nell'implementazione. Ad esempio, il <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> parametro, come i tipi di metodo <xref:System.Windows.UIElement>, perché la proprietà associata è destinata esclusivamente al nelze nastavit <xref:System.Windows.UIElement> istanze.
 
--   Il valore restituito può essere specificato come tipo più specifico nell'implementazione. Ad esempio, il <xref:System.Windows.Controls.DockPanel.GetDock%2A> come tipi di metodo <xref:System.Windows.Controls.Dock>, perché il valore può essere impostato solo su tale enumerazione.
+- Il valore restituito può essere specificato come tipo più specifico nell'implementazione. Ad esempio, il <xref:System.Windows.Controls.DockPanel.GetDock%2A> come tipi di metodo <xref:System.Windows.Controls.Dock>, perché il valore può essere impostato solo su tale enumerazione.
 
 #### <a name="the-set-accessor"></a>Funzione di accesso Set
 
@@ -112,9 +112,9 @@ La firma per il **Set_PropertyName_** della funzione di accesso deve essere:
 
 `public static void SetPropertyName(object target, object value)`
 
--   L'oggetto `target` può essere specificato come tipo più specifico nell'implementazione. Ad esempio, il <xref:System.Windows.Controls.DockPanel.SetDock%2A> come tipi di metodo <xref:System.Windows.UIElement>, perché la proprietà associata è destinata esclusivamente al nelze nastavit <xref:System.Windows.UIElement> istanze.
+- L'oggetto `target` può essere specificato come tipo più specifico nell'implementazione. Ad esempio, il <xref:System.Windows.Controls.DockPanel.SetDock%2A> come tipi di metodo <xref:System.Windows.UIElement>, perché la proprietà associata è destinata esclusivamente al nelze nastavit <xref:System.Windows.UIElement> istanze.
 
--   L'oggetto `value` può essere specificato come tipo più specifico nell'implementazione. Ad esempio, il <xref:System.Windows.Controls.DockPanel.SetDock%2A> come tipi di metodo <xref:System.Windows.Controls.Dock>, perché il valore può essere impostato solo su tale enumerazione. Tenere presente che il valore per questo metodo è l'input proveniente dal caricatore XAML quando rileva la proprietà associata in un utilizzo della proprietà associata nel markup. Tale input è il valore specificato come valore di attributo XAML nel markup. Pertanto, per il tipo usato devono essere disponibili la conversione di tipo, il serializzatore del valore o il supporto per l'estensione di markup, in modo da poter creare il tipo appropriato in base al valore dell'attributo, rappresentato in pratica semplicemente da una stringa.
+- L'oggetto `value` può essere specificato come tipo più specifico nell'implementazione. Ad esempio, il <xref:System.Windows.Controls.DockPanel.SetDock%2A> come tipi di metodo <xref:System.Windows.Controls.Dock>, perché il valore può essere impostato solo su tale enumerazione. Tenere presente che il valore per questo metodo è l'input proveniente dal caricatore XAML quando rileva la proprietà associata in un utilizzo della proprietà associata nel markup. Tale input è il valore specificato come valore di attributo XAML nel markup. Pertanto, per il tipo usato devono essere disponibili la conversione di tipo, il serializzatore del valore o il supporto per l'estensione di markup, in modo da poter creare il tipo appropriato in base al valore dell'attributo, rappresentato in pratica semplicemente da una stringa.
 
 L'esempio seguente illustra la registrazione di proprietà di dipendenza (usando il <xref:System.Windows.DependencyProperty.RegisterAttached%2A> metodo), nonché il **Get_PropertyName_** e **Set_PropertyName_** funzioni di accesso. Nell'esempio, la proprietà associata è denominata `IsBubbleSource`. Pertanto, le funzioni di accesso devono essere chiamate `GetIsBubbleSource` e `SetIsBubbleSource`.
 
@@ -125,21 +125,21 @@ L'esempio seguente illustra la registrazione di proprietà di dipendenza (usando
 
 WPF definisce vari [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] che sono destinate a fornire informazioni sulle proprietà associate ai processi di reflection e agli utenti tipici della reflection e sulle proprietà, ad esempio le finestre di progettazione. Dato che le proprietà associate hanno un tipo con ambito illimitato, le finestre di progettazione devono disporre di un modo per evitare di sopraffare gli utenti con un elenco globale di tutte le proprietà associate definite in una particolare implementazione della tecnologia che usa XAML. Il [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] da WPF definisce per le proprietà associate possono essere usate per definire l'ambito di situazioni in cui una proprietà associata di specificato deve essere visualizzata in una finestra delle proprietà. È possibile prendere in considerazione l'applicazione di questi attributi anche per le proprietà associate personalizzate. Lo scopo e la sintassi degli [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] vengono descritti nelle relative pagine di riferimento:
 
--   <xref:System.Windows.AttachedPropertyBrowsableAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
 
 ## Ulteriori informazioni sulle proprietà associate <a name="more"></a>
 
--   Per altre informazioni sulla creazione di una proprietà associata, vedere [Registrare una proprietà associata](how-to-register-an-attached-property.md).
+- Per altre informazioni sulla creazione di una proprietà associata, vedere [Registrare una proprietà associata](how-to-register-an-attached-property.md).
 
--   Per scenari di utilizzo più avanzati delle proprietà di dipendenza e delle proprietà associate, vedere [Proprietà di dipendenza personalizzate](custom-dependency-properties.md).
+- Per scenari di utilizzo più avanzati delle proprietà di dipendenza e delle proprietà associate, vedere [Proprietà di dipendenza personalizzate](custom-dependency-properties.md).
 
--   È anche possibile registrare una proprietà come proprietà associata e proprietà di dipendenza, ma continuare a esporre le implementazioni del "wrapper". In questo caso, la proprietà può essere impostata in tale elemento o in qualsiasi elemento tramite la sintassi per le proprietà associate XAML. Un esempio di una proprietà con uno scenario adatto per gli utilizzi sia standard sia collegati è <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
+- È anche possibile registrare una proprietà come proprietà associata e proprietà di dipendenza, ma continuare a esporre le implementazioni del "wrapper". In questo caso, la proprietà può essere impostata in tale elemento o in qualsiasi elemento tramite la sintassi per le proprietà associate XAML. Un esempio di una proprietà con uno scenario adatto per gli utilizzi sia standard sia collegati è <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -3,11 +3,11 @@ title: Uso della varianza per i delegati generici azione (Visual Basic) e Func
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
 ms.openlocfilehash: f2f45a9b6536859499f882b4cd585595176208f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787270"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Uso della varianza per i delegati generici azione (Visual Basic) e Func
 In questi esempi viene illustrato come usare la covarianza e la controvarianza nei delegati generici `Func` e `Action` per consentire il riutilizzo dei metodi e offrire maggiore flessibilità nel codice.  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: adc270be51988cba78c6e522b16b480baef725c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943512"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>Metodo IHostTaskManager::CallNeedsHostHook
 Consente all'host specificare se common language runtime (CLR) è possibile incorporare la chiamata a una funzione non gestita specificata.  

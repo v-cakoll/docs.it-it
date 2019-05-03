@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
 ms.openlocfilehash: c0967aa506b087120c776389c2891ec9e0b0b64d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761403"
 ---
 # <a name="treeview-overview"></a>Cenni preliminari sul controllo TreeView
 Il <xref:System.Windows.Controls.TreeView> controllo offre un modo per visualizzare le informazioni in una struttura gerarchica tramite nodi comprimibili. Questo argomento vengono presentate le <xref:System.Windows.Controls.TreeView> e <xref:System.Windows.Controls.TreeViewItem> controlla e fornisce alcuni semplici esempi del relativo utilizzo.  
@@ -76,5 +76,5 @@ Il <xref:System.Windows.Controls.TreeView> controllo offre un modo per visualizz
 
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [Procedure relative](treeview-how-to-topics.md)
+- [Procedure relative alle proprietà](treeview-how-to-topics.md)
 - [Modello di contenuto WPF](wpf-content-model.md)

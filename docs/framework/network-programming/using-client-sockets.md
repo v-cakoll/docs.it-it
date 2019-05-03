@@ -17,10 +17,10 @@ helpviewer_keywords:
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
 ms.openlocfilehash: b99720b9653b8454419acd35085bfe9a7ac4b5af
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171392"
 ---
 # <a name="using-client-sockets"></a>Uso di socket client
@@ -82,4 +82,4 @@ try {
 - [Uso di un socket client sincrono](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
 - [Uso di un socket client asincrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
 - [Procedura: Creare un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [socket](../../../docs/framework/network-programming/sockets.md)
+- [Socket](../../../docs/framework/network-programming/sockets.md)

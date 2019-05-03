@@ -7,11 +7,11 @@ helpviewer_keywords:
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
 ms.openlocfilehash: 6cdad46fd6d9ef3bc4ce1a13fedb6ff1d639d93e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967843"
 ---
 # <a name="how-to-bind-to-a-method"></a>Procedura: Eseguire il binding a un metodo
 Nell'esempio seguente viene illustrato come associare a un metodo usando <xref:System.Windows.Data.ObjectDataProvider>.  
@@ -33,5 +33,5 @@ Nell'esempio seguente viene illustrato come associare a un metodo usando <xref:S
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedure relative](data-binding-how-to-topics.md)
-- [Eseguire il binding a un'enumerazione](how-to-bind-to-an-enumeration.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Eseguire l'associazione a un'enumerazione](how-to-bind-to-an-enumeration.md)

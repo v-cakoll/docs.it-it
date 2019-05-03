@@ -3,11 +3,11 @@ title: Gestione degli errori HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
 ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935486"
 ---
 # <a name="wcf-web-http-error-handling"></a>Gestione degli errori HTTP Web WCF
 Gestione degli errori HTTP Web di Windows Communication Foundation (WCF) consente di restituire errori da servizi HTTP Web WCF che specificano un codice di stato HTTP e restituiscono i dettagli dell'errore utilizzando lo stesso formato dell'operazione (ad esempio, XML o JSON).  
@@ -39,11 +39,11 @@ Public string Operation2()
   
  Il codice precedente restituisce una risposta HTTP con il codice di stato proibito e un corpo che contiene un'istanza dell'oggetto `MyErrorDetails`. Il formato dell'oggetto `MyErrorDetails` viene determinato dagli elementi indicati di seguito.  
   
--   Valore del parametro `ResponseFormat` dell'attributo <xref:System.ServiceModel.Web.WebGetAttribute> o <xref:System.ServiceModel.Web.WebInvokeAttribute> specificato nell'operazione del servizio.  
+- Valore del parametro `ResponseFormat` dell'attributo <xref:System.ServiceModel.Web.WebGetAttribute> o <xref:System.ServiceModel.Web.WebInvokeAttribute> specificato nell'operazione del servizio.  
   
--   Valore di <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.  
+- Valore di <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.  
   
--   Valore della proprietà <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> accedendo a <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
+- Valore della proprietà <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> accedendo a <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
   
  Per altre informazioni sugli effetti la formattazione dell'operazione di questi valori, vedere [formattazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
   

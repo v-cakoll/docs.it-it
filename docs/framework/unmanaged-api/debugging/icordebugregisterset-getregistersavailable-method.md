@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f341098268f735a576bdbc5f0cea52f1a7e14f90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782891"
 ---
 # <a name="icordebugregistersetgetregistersavailable-method"></a>Metodo ICorDebugRegisterSet::GetRegistersAvailable
 Ottiene una maschera di bit che indica quali registri in questo [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) sono attualmente disponibili.  

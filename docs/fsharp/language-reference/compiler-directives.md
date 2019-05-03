@@ -3,11 +3,11 @@ title: Direttive per il compilatore
 description: Informazioni su F# le direttive del preprocessore del linguaggio, le direttive di compilazione condizionale, le direttive di riga e direttive del compilatore.
 ms.date: 12/10/2018
 ms.openlocfilehash: 3fade7407f84b00163bd5b3d7774104bce8a25af
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766103"
 ---
 # <a name="compiler-directives"></a>Direttive per il compilatore
 
@@ -24,7 +24,7 @@ Nella tabella riportata di seguito sono elencate le direttive per il preprocesso
 |`#if` *Simbolo*|Supporta la compilazione condizionale. Codice nella sezione dopo il `#if` è incluso se il *simbolo* è definito. Il simbolo può essere negato anche con `!`.|
 |`#else`|Supporta la compilazione condizionale. Contrassegna una sezione di codice da includere se il simbolo usato nella precedente direttiva `#if` non è definito.|
 |`#endif`|Supporta la compilazione condizionale. Contrassegna la fine di una sezione condizionale di codice.|
-|`#`[riga] *int*,<br/>`#`[riga] *int* *stringa*,<br/>`#`[riga] *int* *stringa verbatim*|Indica la riga e il nome di file del codice sorgente originale per il debug. Questa funzionalità viene fornita per gli strumenti che generano codice sorgente F#.|
+|`#`[line] *int*,<br/>`#`[riga] *int* *stringa*,<br/>`#`[line] *int* *verbatim-string*|Indica la riga e il nome di file del codice sorgente originale per il debug. Questa funzionalità viene fornita per gli strumenti che generano codice sorgente F#.|
 |`#nowarn` *warningcode*|Disabilita un avviso o più avvisi del compilatore. Per disabilitare un avviso, individuare il numero dall'output del compilatore e includerlo tra virgolette. Omettere il prefisso "FS". Per disabilitare più numeri di avviso sulla stessa riga, racchiudere ogni numero tra virgolette e separare ogni stringa con uno spazio. Ad esempio:
 
 `#nowarn "9" "40"`

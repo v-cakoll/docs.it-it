@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b5904083be66d4bd6dc69729bebc28db8a800e77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948681"
 ---
 # <a name="icordebugprocess5-interface"></a>Interfaccia ICorDebugProcess5
 Estende l'interfaccia ICorDebugProcess per supportare l'accesso nell'heap gestito, per fornire informazioni sull'operazione di garbage collection di oggetti gestiti, e per determinare se un debugger carica le immagini dalla cache di immagini native locali dell'applicazione.  

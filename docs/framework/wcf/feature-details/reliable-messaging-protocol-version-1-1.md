@@ -3,11 +3,11 @@ title: Protocollo Reliable Messaging versione 1,1
 ms.date: 03/30/2017
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
 ms.openlocfilehash: 6b8732e0b48797c219b53bb8bf70e1ba57e25c42
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55073226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933991"
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Protocollo Reliable Messaging versione 1,1
 In questo argomento vengono descritti i dettagli di implementazione Windows Communication Foundation (WCF) per il WS-ReliableMessaging protocollo febbraio 2007 (versione 1.1) necessario per l'interoperatività con il trasporto HTTP. WCF conforme alla specifica WS-ReliableMessaging con i vincoli e i chiarimenti illustrati in questo argomento. Si noti che il protocollo versione 1.1 WS-ReliableMessaging viene implementato a partire dal [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  

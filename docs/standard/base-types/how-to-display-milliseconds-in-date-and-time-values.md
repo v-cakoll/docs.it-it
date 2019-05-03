@@ -15,10 +15,10 @@ ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3950b7a8cf107fc06240f56e5f95eca4e6882251
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314932"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Procedura: Visualizzare i millisecondi nei valori di data e ora
@@ -57,4 +57,4 @@ I metodi di formattazione di data e ora predefiniti, ad esempio <xref:System.Dat
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

@@ -3,11 +3,11 @@ title: Richiesta-risposta non tipizzata
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
 ms.openlocfilehash: 6ff3a8c7f9f5c3d4731bb8946e290b265be61729
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59302725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007656"
 ---
 # <a name="untyped-requestreply"></a>Richiesta/risposta non tipizzata
 In questo esempio viene illustrato come definire i contratti dell'operazione che utilizzano la classe Message.  

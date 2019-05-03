@@ -3,11 +3,11 @@ title: Servizio router di individuazione
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
 ms.openlocfilehash: 166f6b9d1055e36f987e6b9a81fe69dc8bd548b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59318767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773035"
 ---
 # <a name="discovery-router-service"></a>Servizio router di individuazione
 In questo esempio viene descritto come inoltrare messaggi di individuazione a un altro endpoint.  

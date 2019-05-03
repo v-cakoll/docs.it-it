@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF [WCF], glossary
 ms.assetid: 39cd36f4-8a28-4d0b-a830-98d55c9d30ae
 ms.openlocfilehash: cbd5ce06698400152460af0706761d9855b43e12
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929534"
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>Glossario di Windows Communication Foundation per .NET Framework 4.5
 
@@ -20,7 +20,7 @@ Di seguito sono elencate le definizioni dei termini usati nella documentazione d
 
 |Termine|Definizione|
 |----------|----------------|
-|address|Specifica il percorso in cui vengono ricevuti i messaggi. Viene specificato come Uniform Resource Identifier (URI). La parte relativa allo schema URI denomina il meccanismo di trasporto da usare per raggiungere l'indirizzo, ad esempio HTTP e TCP. La parte gerarchica dell'URI contiene un percorso univoco il cui formato dipende dal meccanismo di trasporto.|
+|indirizzo|Specifica il percorso in cui vengono ricevuti i messaggi. Viene specificato come Uniform Resource Identifier (URI). La parte relativa allo schema URI denomina il meccanismo di trasporto da usare per raggiungere l'indirizzo, ad esempio HTTP e TCP. La parte gerarchica dell'URI contiene un percorso univoco il cui formato dipende dal meccanismo di trasporto.|
 |endpoint applicazione|Endpoint esposto dall'applicazione che corrisponde a un contratto di servizio implementato dall'applicazione.|
 |comportamento|Un comportamento è un componente che controlla vari aspetti in fase di esecuzione di un servizio, di un endpoint, di una particolare operazione o di un client. I comportamenti sono raggruppati in base allo scopo. I comportamenti comuni influiscono globalmente su tutti gli endpoint, i comportamenti del servizio influiscono solo sugli aspetti relativi al servizio, i comportamenti dell'endpoint influiscono solo sulle proprietà relative all'endpoint e i comportamenti a livello di operazione influiscono su particolari operazioni.|
 |binding|Definisce i protocolli di comunicazione usati per comunicare con i servizi WCF. È costituita da un set di componenti chiamati elementi di associazione posizionati uno sopra l'altro in uno stack per creare l'infrastruttura di comunicazione.  Vedere endpoint.|
@@ -45,7 +45,7 @@ Di seguito sono elencate le definizioni dei termini usati nella documentazione d
 |metadati|I metadati di un servizio descrivono le caratteristiche del servizio che devono essere comprese da un'entità esterna per comunicare con il servizio. I metadati possono essere usati dallo strumento ServiceModel Metadata Utility Tool (Svcutil.exe) per generare un client WCF e una configurazione abbinata, che possono essere usati da un'applicazione client per interagire con il servizio.  I metadati esposti dal servizio includono documenti di XML Schema che definiscono il contratto di dati del servizio e documenti WSDL che descrivono i metodi del servizio.  Se abilitati, i metadati del servizio vengono generati automaticamente da WCF tramite il controllo del servizio e dei relativi endpoint. Per pubblicare metadati da un servizio, è necessario abilitare esplicitamente il comportamento dei metadati.|
 |contratto dell'operazione|Un contratto dell'operazione definisce i parametri e il tipo restituito di un'operazione. Quando si crea un'interfaccia che definisce il contratto di servizio, si indica un contratto dell'operazione applicando l'attributo T:System.ServiceModel.OperationContractAttribute a ogni definizione del metodo che fa parte del contratto. Le operazioni possono essere modellate in modo da accettare un solo messaggio e restituire un solo messaggio o in modo da accettare un set di tipi e restituire un tipo. Nel secondo caso, il sistema determina il formato dei messaggi che vengono scambiati per quell'operazione.|
 |proiezione|Rappresentazione dei dati in transito. Ad esempio, una proiezione SOAP invia messaggi come buste SOAP e una proiezione Web invia messaggi in formato JSON.|
-|sicurezza|La sicurezza in WCF include riservatezza (crittografia dei messaggi per impedire l'intercettazione), integrità (mezzi per il rilevamento di manomissioni del messaggio), autenticazione (mezzi per la convalida di server e client) e autorizzazione (controllo di accesso alle risorse). Queste funzioni vengono fornite basandosi sui meccanismi di sicurezza esistenti, ad esempio TLS su HTTP (anche noto come HTTPS) o implementando una o più delle varie specifiche di sicurezza WS-*.|
+|sicurity|La sicurezza in WCF include riservatezza (crittografia dei messaggi per impedire l'intercettazione), integrità (mezzi per il rilevamento di manomissioni del messaggio), autenticazione (mezzi per la convalida di server e client) e autorizzazione (controllo di accesso alle risorse). Queste funzioni vengono fornite basandosi sui meccanismi di sicurezza esistenti, ad esempio TLS su HTTP (anche noto come HTTPS) o implementando una o più delle varie specifiche di sicurezza WS-*.|
 |servizio indipendente|Un servizio indipendente è un servizio in esecuzione all'interno di un'applicazione del processo creata dallo sviluppatore. Lo sviluppatore ne controlla la durata, imposta le proprietà del servizio, apre il servizio (impostandolo in modalità di ascolto) e chiude il servizio.|
 |servizio|Programma o processo che espone uno o più endpoint, che a loro volta espongono una o più operazioni.|
 |contratto di servizio|Il contratto di servizio unisce più operazioni correlate in una sola unità funzionale. Il contratto può definire impostazioni a livello di servizio, ad esempio lo spazio dei nomi del servizio, un contratto callback corrispondente e altre impostazioni simili. Nella maggior parte dei casi, il contratto viene definito creando un'interfaccia nel linguaggio di programmazione selezionato e applicando l'attributo T:System.ServiceModel.ServiceContractAttribute all'interfaccia. Il codice del servizio effettivo viene determinato implementando l'interfaccia.|
@@ -58,5 +58,5 @@ Di seguito sono elencate le definizioni dei termini usati nella documentazione d
 |client WCF|Un client WCF è un costrutto dell'applicazione client che espone le operazioni del servizio come metodi (nel linguaggio di programmazione .NET Framework scelto, ad esempio Visual Basic o Visual C#). Qualsiasi applicazione può ospitare un client WCF, inclusa un'applicazione che ospita un servizio. È pertanto possibile creare un servizio che include client WCF di altri servizi.  Un client WCF può essere generato automaticamente usando lo strumento ServiceModel Metadata Utility Tool (Svcutil.exe) e puntandolo a un servizio in esecuzione che pubblica metadati.|
 |servizi flusso di lavoro|Un servizio flusso di lavoro è un servizio WCF implementato come flusso di lavoro. Il flusso di lavoro contiene attività di messaggistica che consentono di inviare e/o ricevere messaggi WCF.|
 |WS-*|Abbreviazione per il set in continua crescita di specifiche Web Service (WS), ad esempio WS-Security, WS-ReliableMessaging e così via, che sono implementate in WCF.|
-|XAML|eXtensible Application Markup Language|
+|XAML|Extensible Application Markup Language|
 |schema XAML|Schema markup usato per definire tipi personalizzati in XAML.|

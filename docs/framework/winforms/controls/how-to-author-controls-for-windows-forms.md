@@ -7,10 +7,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
 ms.openlocfilehash: 844d165cef05e46d25960f113af3bf99dd35e14f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340334"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Procedura: Creare controlli per Windows Forms
@@ -53,10 +53,10 @@ Un controllo rappresenta un collegamento grafico tra l'utente e il programma. Un
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Creazione di un controllo composito con Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Procedura dettagliata: Ereditarietà da un controllo Windows Forms con Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Procedura dettagliata: Modifica di un controllo composito con Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Procedura dettagliata: Eredità da un controllo di Windows Forms con Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [Procedura: Ereditare dalla classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
 - [Procedura: Ereditare dalla classe Control](how-to-inherit-from-the-control-class.md)
-- [Procedura: Ereditare da controlli Windows Forms esistenti](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Procedura: Eseguire il test del comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Procedura: Ereditare da esistenti di Windows Form](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Procedura: Testare il comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [Tipi di controlli personalizzati](varieties-of-custom-controls.md)

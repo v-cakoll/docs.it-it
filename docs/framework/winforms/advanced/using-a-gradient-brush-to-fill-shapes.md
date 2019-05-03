@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Windows Forms], gradient brushes
 ms.assetid: 2c6037b9-05bd-44c0-a22a-19584b722524
 ms.openlocfilehash: 5771aaabd283d71f5fa6934f86a1c24a57f38dca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954468"
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>Utilizzo di un pennello a sfumatura per il riempimento di forme
 È possibile usare un pennello a sfumatura per riempire una forma con un colore gradualmente. Ad esempio, è possibile utilizzare una sfumatura orizzontale per riempire una forma con il colore che cambia gradualmente quando si spostano tra il bordo sinistro della forma per il bordo destro. Si immagini un rettangolo con un bordo nero (rappresentato da componenti rosso, verde e blu 0, 0, 0) e un diritto ovvero bordo rosso (rappresentato da 255, 0, 0). Se il rettangolo è 256 pixel in larghezza, il componente rosso di un pixel specifico sarà una maggiore del componente rosso del pixel alla sua sinistra. Il pixel più a sinistra in una riga ha componenti di colore (0, 0, 0), il secondo pixel ha (1, 0, 0), il terzo pixel (2, 0, 0) e così via, fino ad arrivare al pixel più a destra, che include componenti di colore (255, 0, 0). Questi valori di colore interpolata costituiscono la sfumatura di colore.  

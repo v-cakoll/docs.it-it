@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
 ms.openlocfilehash: 662343af42f72816a5a673d2cd6d839a5dca9190
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971301"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Procedura: Raggruppare i controlli con il controllo Panel di Windows Forms usando la finestra di progettazione
 Windows Form <xref:System.Windows.Forms.Panel> controlli vengono utilizzati per raggruppare altri controlli. Esistono tre motivi per i controlli di gruppo. Uno è visual raggruppamento di elementi di form per un'interfaccia utente non crittografato. un vantaggio è a livello di codice di raggruppamento, dei pulsanti di opzione, ad esempio; l'ultimo è per spostare i controlli in un'unità in fase di progettazione.  
@@ -32,5 +32,5 @@ Windows Form <xref:System.Windows.Forms.Panel> controlli vengono utilizzati per 
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllo Panel](panel-control-windows-forms.md)
-- [Panoramica del controllo Panel](panel-control-overview-windows-forms.md)
+- [Panoramica sul controllo Panel](panel-control-overview-windows-forms.md)
 - [Procedura: Impostare lo sfondo di un controllo Panel](how-to-set-the-background-of-a-windows-forms-panel.md)

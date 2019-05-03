@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
 ms.openlocfilehash: a0b77a7356b09a5cc95ec165a62c45852f542b8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59187427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941349"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Procedura: Bloccare le colonne nel controllo DataGridView di Windows Forms
 Quando gli utenti visualizzano i dati contenuti in un controllo <xref:System.Windows.Forms.DataGridView> Windows Form, a volte devono fare spesso riferimento a una sola colonna o a un set di colonne. Ad esempio, quando si visualizza una tabella di informazioni sui clienti che contiene molte colonne, è utile visualizzare il nome del cliente in qualsiasi momento, anche mentre le altre colonne scorrono all'esterno dell'area visibile.  
@@ -30,7 +30,7 @@ Quando gli utenti visualizzano i dati contenuti in un controllo <xref:System.Win
   
 ### <a name="to-freeze-a-column-programmatically"></a>Per bloccare una colonna a livello di codice  
   
--   Impostare la proprietà <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType> su `true`.  
+- Impostare la proprietà <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType> su `true`.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#061](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#061)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#061](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#061)]  
@@ -38,13 +38,13 @@ Quando gli utenti visualizzano i dati contenuti in un controllo <xref:System.Win
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Un controllo <xref:System.Windows.Forms.DataGridView> denominato `dataGridView1` contenente una colonna denominata `AddToCartButton`.  
+- Un controllo <xref:System.Windows.Forms.DataGridView> denominato `dataGridView1` contenente una colonna denominata `AddToCartButton`.  
   
--   Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
 - [Funzionalità di base per colonna, riga e cella nel controllo DataGridView di Windows Form](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Procedura: Abilitare il riordinamento delle colonne nel controllo DataGridView di Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Abilitare il riordinamento delle colonne nel controllo DataGridView Windows Form](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)

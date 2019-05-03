@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Protected Friend keyword [Visual Basic]
 - Protected Friend keyword [Visual Basic], syntax
 ms.openlocfilehash: 331c63dc290d4096e8158f265ee869b47743a273
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053886"
 ---
 # <a name="protected-friend-visual-basic"></a>Protected Friend (Visual Basic)
 
@@ -25,11 +25,11 @@ La combinazione delle parole chiave `Protected Friend` è un modificatore di acc
 ## <a name="see-also"></a>Vedere anche
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Protetta](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](./private-protected.md)
 - [Livelli di accesso in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Procedure](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Routine](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Strutture](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

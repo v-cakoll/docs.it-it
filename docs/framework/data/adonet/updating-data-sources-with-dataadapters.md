@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756273"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Aggiornamento di origini dati con DataAdapter
 Il metodo `Update` di <xref:System.Data.Common.DataAdapter> viene chiamato per applicare le modifiche apportate a un oggetto <xref:System.Data.DataSet> nell'origine dati. Il metodo `Update`, analogamente al metodo `Fill`, accetta come argomenti un'istanza di un oggetto `DataSet` e un oggetto <xref:System.Data.DataTable> o nome di `DataTable` facoltativi. L'istanza di `DataSet` rappresenta l'oggetto `DataSet` contenente le modifiche che sono state apportate e l'oggetto `DataTable` identifica la tabella da cui recuperare le modifiche. Se non viene specificato nessun oggetto `DataTable`, verrà usato il primo oggetto `DataTable` di `DataSet`.  
@@ -46,7 +46,7 @@ Il metodo `Update` di <xref:System.Data.Common.DataAdapter> viene chiamato per a
   
  Per gestire le eccezioni che possono verificarsi quando si chiama il `Update` metodo, è possibile usare il `RowUpdated` eventi per rispondere agli errori di aggiornamento di riga appena si verificano (vedere [gestione degli eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)), oppure è possibile impostare `DataAdapter.ContinueUpdateOnError` a `true` prima di chiamare `Update`e rispondere alle informazioni di errore archiviate nella `RowError` proprietà di una determinata riga al termine dell'aggiornamento (vedere [informazioni sugli errori di riga](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)).  
   
- **Nota** chiamata `AcceptChanges` nel `DataSet`, `DataTable`, o `DataRow` tutti `Original` valori per un `DataRow` verranno sovrascritti con il `Current` valori per il `DataRow`. Se i valori di campo che identificano la riga come univoca sono stati modificati, dopo la chiamata a `AcceptChanges` i valori `Original` non corrisponderanno più ai valori dell'origine dati. `AcceptChanges` viene chiamato automaticamente per ogni riga durante una chiamata al metodo Update di un `DataAdapter`. Per mantenere i valori originali durante una chiamata al metodo Update, impostare prima la proprietà `AcceptChangesDuringUpdate` di `DataAdapter` su false oppure creare un gestore eventi per l'evento `RowUpdated` e impostare <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> su <xref:System.Data.UpdateStatus.SkipCurrentRow>. Per altre informazioni, vedere [unione di contenuti di DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) e [gestione degli eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ **Nota** chiamata `AcceptChanges` nel `DataSet`, `DataTable`, o `DataRow` tutti `Original` valori per un `DataRow` verranno sovrascritti con il `Current` valori per il `DataRow`. Se i valori di campo che identificano la riga come univoca sono stati modificati, dopo la chiamata a `AcceptChanges` i valori `Original` non corrisponderanno più ai valori dell'origine dati. `AcceptChanges` viene chiamato automaticamente per ogni riga durante una chiamata al metodo Update di un oggetto `DataAdapter`. Per mantenere i valori originali durante una chiamata al metodo Update, impostare prima la proprietà `AcceptChangesDuringUpdate` di `DataAdapter` su false oppure creare un gestore eventi per l'evento `RowUpdated` e impostare <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> su <xref:System.Data.UpdateStatus.SkipCurrentRow>. Per altre informazioni, vedere [unione di contenuti di DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) e [gestione degli eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="example"></a>Esempio  
  Gli esempi seguenti illustrano come eseguire gli aggiornamenti alle righe modificate impostando in modo esplicito il `UpdateCommand` di un `DataAdapter` e la chiamata relativo `Update` (metodo). Notare che il parametro specificato nella clausola WHERE dell'istruzione UPDATE viene impostato in modo da usare il valore `Original` di `SourceColumn`. Questo è importante in quanto è possibile che il valore `Current` sia stato modificato e che non corrisponda più al valore nell'origine dati. Il valore `Original` è il valore che è stato usato per compilare `DataTable` dall'origine dati.  
@@ -98,13 +98,13 @@ adapter.Update(table.Select(null, null, DataViewRowState.Added));
 ## <a name="use-a-dataadapter-to-retrieve-and-update-data"></a>Uso di un oggetto DataAdapter per recuperare e aggiornare dati  
  È possibile usare un oggetto DataAdapter per recuperare e aggiornare i dati.  
   
--   Nell'esempio viene usato DataAdapter.AcceptChangesDuringFill per clonare i dati nel database. Se la proprietà è impostata su false, AcceptChanges non viene chiamato quando viene compilata la tabella e le righe appena aggiunte sono considerate righe inserite. Di conseguenza, nell'esempio queste righe vengono usate per inserire nuove righe nel database.  
+- Nell'esempio viene usato DataAdapter.AcceptChangesDuringFill per clonare i dati nel database. Se la proprietà è impostata su false, AcceptChanges non viene chiamato quando viene compilata la tabella e le righe appena aggiunte sono considerate righe inserite. Di conseguenza, nell'esempio queste righe vengono usate per inserire nuove righe nel database.  
   
--   Negli esempi viene usato DataAdapter.TableMappings per definire il mapping tra la tabella di origine e DataTable.  
+- Negli esempi viene usato DataAdapter.TableMappings per definire il mapping tra la tabella di origine e DataTable.  
   
--   Nell'esempio viene usato DataAdapter.FillLoadOption per determinare come l'adattatore riempie l'elemento DataTable dall'elemento DbDataReader. Quando si crea un oggetto DataTable, è possibile scrivere i dati solo da un database alla versione corrente o alla versione originale impostando la proprietà come LoadOption.Upsert o LoadOption.PreserveChanges.  
+- Nell'esempio viene usato DataAdapter.FillLoadOption per determinare come l'adattatore riempie l'elemento DataTable dall'elemento DbDataReader. Quando si crea un oggetto DataTable, è possibile scrivere i dati solo da un database alla versione corrente o alla versione originale impostando la proprietà come LoadOption.Upsert o LoadOption.PreserveChanges.  
   
--   Viene inoltre aggiornata la tabella usando DbDataAdapter.UpdateBatchSize per eseguire operazioni batch.  
+- Viene inoltre aggiornata la tabella usando DbDataAdapter.UpdateBatchSize per eseguire operazioni batch.  
   
  Prima di compilare ed eseguire l'esempio, è necessario creare il database di esempio:  
   
@@ -372,7 +372,7 @@ class Program {
 
 - [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Stati e versioni delle righe](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [AcceptChanges e RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
-- [Unione di contenuti di dataset](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
+- [Oggetti AcceptChange e RejectChange](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
+- [Unione di contenuti di set di dati](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
 - [Recupero di identità o di valori numerati automaticamente](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

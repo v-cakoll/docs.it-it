@@ -9,11 +9,11 @@ helpviewer_keywords:
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
 ms.openlocfilehash: 8e176cb437055787da86d56770dd71323134fa33
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59126230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910182"
 ---
 # <a name="how-to-create-a-3-d-scene"></a>Procedura: Creare una scena tridimensionale
 In questo esempio viene illustrato come creare un oggetto 3D che è simile a un foglio di carta cui è stata ruotata. Oggetto <xref:System.Windows.Controls.Viewport3D> insieme ai componenti seguenti vengono usati per creare questa scena 3D semplice:  
@@ -39,4 +39,4 @@ In questo esempio viene illustrato come creare un oggetto 3D che è simile a un 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sulla grafica tridimensionale](3-d-graphics-overview.md)
+- [Panoramica sulla grafica tridimensionale](3-d-graphics-overview.md)

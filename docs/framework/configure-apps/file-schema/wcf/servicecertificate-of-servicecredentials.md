@@ -3,11 +3,11 @@ title: <serviceCertificate> di <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
 ms.openlocfilehash: 086b700b94198aa36e61289178ebbed75d33da98
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670313"
 ---
 # <a name="servicecertificate-of-servicecredentials"></a>\<serviceCertificate > di \<serviceCredentials >
 Specifica un certificato X.509 che verrà usato dai client per autenticare il servizio tramite la modalità di sicurezza dei messaggi.  
@@ -60,5 +60,5 @@ Specifica un certificato X.509 che verrà usato dai client per autenticare il se
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>
-- [Procedura: Specificare valori di credenziali client](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Procedura: Specificare i valori di credenziale Client](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

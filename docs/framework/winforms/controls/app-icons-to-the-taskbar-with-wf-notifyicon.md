@@ -14,11 +14,11 @@ helpviewer_keywords:
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
 ms.openlocfilehash: 52c18b959361079aac6b95dc5d4584bf464a306a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640317"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Procedura: Aggiungere icone delle applicazioni alla barra delle applicazioni con il componente NotifyIcon di Windows Forms
 I moduli di Windows <xref:System.Windows.Forms.NotifyIcon> componente consente di visualizzare una singola icona nell'area di notifica dello stato della barra delle applicazioni. Per visualizzare le icone più nell'area di stato, è necessario disporre di più <xref:System.Windows.Forms.NotifyIcon> componenti nel form. Per impostare l'icona visualizzata per un controllo, usare il <xref:System.Windows.Forms.NotifyIcon.Icon%2A> proprietà. È anche possibile scrivere codice <xref:System.Windows.Forms.NotifyIcon.DoubleClick> gestore dell'evento in modo che si verifica un evento quando l'utente fa doppio clic sull'icona. Ad esempio, si è stato possibile visualizzare una finestra di dialogo per l'utente debba configurare il processo in background rappresentato dall'icona.  
@@ -75,6 +75,6 @@ I moduli di Windows <xref:System.Windows.Forms.NotifyIcon> componente consente d
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Procedura: Associare un menu di scelta rapida a un componente NotifyIcon di Windows Forms](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [Procedura: Associare un Menu di scelta rapida a un componente NotifyIcon di Windows Form](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
 - [Componente NotifyIcon](notifyicon-component-windows-forms.md)
-- [Panoramica del componente NotifyIcon](notifyicon-component-overview-windows-forms.md)
+- [Panoramica sul componente NotifyIcon](notifyicon-component-overview-windows-forms.md)

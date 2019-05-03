@@ -5,11 +5,11 @@ ms.assetid: 7e470150-2b92-4425-989c-315f48964fd2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e8ea777755aebb59f3e865df26c38c74ef68ae31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946397"
 ---
 # <a name="icordebuginstancefieldsymbolgetoffset-method"></a>Metodo ICorDebugInstanceFieldSymbol::GetOffset
 Ottiene l'offset, in byte, di questo campo di istanza nella relativa classe padre.  

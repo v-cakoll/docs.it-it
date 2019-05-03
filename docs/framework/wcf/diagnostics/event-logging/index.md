@@ -5,11 +5,11 @@ helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
 ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999258"
 ---
 # <a name="event-logging-in-wcf"></a>Registrazione eventi in WCF
 Windows Communication Foundation (WCF) tiene traccia degli eventi interni nel registro eventi di Windows.  
@@ -20,19 +20,19 @@ Windows Communication Foundation (WCF) tiene traccia degli eventi interni nel re
 ### <a name="application-event-log"></a>Registro eventi dell'applicazione  
  Il **registro eventi dell'applicazione** contiene la maggior parte degli eventi generati da WCF. La maggior parte delle voci riguardano errori nell'avvio di una particolare funzionalità per un'applicazione. Alcuni esempi:  
   
--   Registrazione/traccia dei messaggi: WCF scrive un evento nel registro eventi quando si verifica un errore di traccia e registrazione dei messaggi. Tuttavia, non tutti gli errori di traccia generano un evento. Per evitare che il registro eventi venga riempito completamente errori di traccia, WCF implementa un periodo di blackout di 10 minuti per tale evento. Ciò significa che se WCF scrive un errore di traccia nel log eventi, non ripeterà questa ancora una volta per almeno 10 minuti.  
+- Registrazione/traccia dei messaggi: WCF scrive un evento nel registro eventi quando si verifica un errore di traccia e registrazione dei messaggi. Tuttavia, non tutti gli errori di traccia generano un evento. Per evitare che il registro eventi venga riempito completamente errori di traccia, WCF implementa un periodo di blackout di 10 minuti per tale evento. Ciò significa che se WCF scrive un errore di traccia nel log eventi, non ripeterà questa ancora una volta per almeno 10 minuti.  
   
--   Listener condiviso: Il servizio di condivisione porta WCF TCP registra un evento quando non viene avviato.  
+- Listener condiviso: Il servizio di condivisione porta WCF TCP registra un evento quando non viene avviato.  
   
--   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: Registra gli eventi quando il servizio non viene avviato.  
+- [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: Registra gli eventi quando il servizio non viene avviato.  
   
--   Eventi critici e di errore, quali errori di avvio o arresti anomali del sistema  
+- Eventi critici e di errore, quali errori di avvio o arresti anomali del sistema  
   
--   Registrazione messaggi attivata: Registra gli eventi quando è attivata la registrazione dei messaggi. Questa funzionalità consente di notificare all'amministratore che informazioni riservate specifiche dell'applicazione possono essere registrate nelle intestazioni e nel corpo del messaggio.  
+- Registrazione messaggi attivata: Registra gli eventi quando è attivata la registrazione dei messaggi. Questa funzionalità consente di notificare all'amministratore che informazioni riservate specifiche dell'applicazione possono essere registrate nelle intestazioni e nel corpo del messaggio.  
   
--   Viene registrato un evento quando è impostato l'attributo `enableLoggingKnownPII` dell'elemento `machineSettings` nel file `machine.config`. Questo attributo specifica se un'applicazione in esecuzione sul computer può registrare informazioni che consentono l'identificazione personale (PII).  
+- Viene registrato un evento quando è impostato l'attributo `enableLoggingKnownPII` dell'elemento `machineSettings` nel file `machine.config`. Questo attributo specifica se un'applicazione in esecuzione sul computer può registrare informazioni che consentono l'identificazione personale (PII).  
   
--   Se l'attributo `logKnownPii` nel file `app.config` o `web.config` è impostato su `true` affinché un'applicazione specifica attivi la registrazione delle informazioni che consentono l'identificazione personale, ma l'attributo `enableLoggingKnownPII` nell'elemento `machineSettings` del file `machine.config` è impostato su `false`, viene registrato un evento. In aggiunta, se `logKnownPii` e `enableLoggingKnownPII` sono impostati su `true` viene registrato un evento. Per altre informazioni su queste impostazioni di configurazione, vedere la sezione sicurezza del [configurazione della registrazione dei messaggi](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) argomento.  
+- Se l'attributo `logKnownPii` nel file `app.config` o `web.config` è impostato su `true` affinché un'applicazione specifica attivi la registrazione delle informazioni che consentono l'identificazione personale, ma l'attributo `enableLoggingKnownPII` nell'elemento `machineSettings` del file `machine.config` è impostato su `false`, viene registrato un evento. In aggiunta, se `logKnownPii` e `enableLoggingKnownPII` sono impostati su `true` viene registrato un evento. Per altre informazioni su queste impostazioni di configurazione, vedere la sezione sicurezza del [configurazione della registrazione dei messaggi](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) argomento.  
   
 ### <a name="security-event-log"></a>Registro eventi di sicurezza  
  Il **registro eventi di sicurezza** contiene eventi di controllo di sicurezza che sono registrati da WCF.  

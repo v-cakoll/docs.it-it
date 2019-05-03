@@ -12,11 +12,11 @@ helpviewer_keywords:
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
 ms.openlocfilehash: ee147ecd00b88b538ace32844c42ac9c5022b2ef
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59331702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794693"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Procedura: Nascondere una variabile ereditata (Visual Basic)
 Una classe derivata eredita tutte le definizioni della relativa classe base. Se si desidera definire una variabile utilizzando lo stesso nome di un elemento della classe di base, è possibile nascondere, oppure *shadow*, tale elemento di classe di base quando si definisce la variabile nella classe derivata. In questo caso, il codice nella classe derivata accede la variabile a meno che non venga esplicitamente ignorato il meccanismo di shadowing.  
@@ -57,10 +57,10 @@ Una classe derivata eredita tutte le definizioni della relativa classe base. Se 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Differenze tra shadowing e override](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [Procedura: Nascondere una variabile con lo stesso nome di un'altra variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [Procedura: Nascondere una variabile con lo stesso nome di variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [Procedura: Accedere a una variabile nascosta da una classe derivata](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me, My, MyBase e MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d51fcbdeeaa1fe30bbdeff5eb85a1c15fa9b4847
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: dc02178223e48c7c578d10ba92123d9436d4f439
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221082"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59097265"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Preparazione di un assembly per COM
 Gli sviluppatori COM possono trarre vantaggio dalle informazioni seguenti sui tipi gestiti che prevedono di incorporare nella propria applicazione:  
@@ -81,6 +81,7 @@ Gli sviluppatori COM possono trarre vantaggio dalle informazioni seguenti sui ti
  Lo [strumento di installazione dei servizi .NET (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) aggiunge classi gestite ai servizi componenti di Windows 2000 e combina diverse attività in un unico strumento. Oltre a caricamento e registrazione di un assembly, Regsvcs.exe può generare, registrare e installare la libreria dei tipi in un'applicazione COM+ 1.0 esistente.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [Esposizione di componenti .NET Framework a COM](exposing-dotnet-components-to-com.md)

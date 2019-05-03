@@ -3,11 +3,11 @@ title: Architettura di attivazione WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
 ms.openlocfilehash: 9c1af21782b377a9fb01cbd05e4fe61f6a69f3ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932711"
 ---
 # <a name="was-activation-architecture"></a>Architettura di attivazione WAS
 In questo argomento vengono definiti e illustrati i componenti del servizio di attivazione dei processi di Windows (noto anche come WAS).  
@@ -15,15 +15,15 @@ In questo argomento vengono definiti e illustrati i componenti del servizio di a
 ## <a name="activation-components"></a>Componenti di attivazione  
  WAS è costituito da numerosi componenti architettonici:  
   
--   Adattatori listener. Servizi di Windows che ricevono messaggi su specifici protocolli di rete e comunicano con WAS per indirizzare i messaggi in arrivo al processo di lavoro corretto.  
+- Adattatori listener. Servizi di Windows che ricevono messaggi su specifici protocolli di rete e comunicano con WAS per indirizzare i messaggi in arrivo al processo di lavoro corretto.  
   
--   WAS. Servizio di Windows che gestisce la creazione e la durata dei processi di lavoro.  
+- WAS. Servizio di Windows che gestisce la creazione e la durata dei processi di lavoro.  
   
--   File eseguibile del processo di lavoro generico (w3wp.exe).  
+- File eseguibile del processo di lavoro generico (w3wp.exe).  
   
--   Gestore applicazioni. Gestisce la creazione e la durata dei domini applicazione che ospitano applicazioni all'interno del processo di lavoro.  
+- Gestore applicazioni. Gestisce la creazione e la durata dei domini applicazione che ospitano applicazioni all'interno del processo di lavoro.  
   
--   Gestori del protocollo. Componenti specifici del protocollo che vengono eseguiti nel processo di lavoro e gestiscono le comunicazioni tra il processo di lavoro e i singoli adattatori listener. Esistono due tipi di gestori del protocollo: del processo e AppDomain.  
+- Gestori del protocollo. Componenti specifici del protocollo che vengono eseguiti nel processo di lavoro e gestiscono le comunicazioni tra il processo di lavoro e i singoli adattatori listener. Esistono due tipi di gestori del protocollo: del processo e AppDomain.  
   
  Quando WAS attiva un'istanza del processo di lavoro, carica i gestori del protocollo del processo necessari nel processo di lavoro e utilizza il gestore applicazioni per creare un dominio applicazione per ospitare l'applicazione. Il dominio applicazione carica il codice dell'applicazione e i gestori del protocollo AppDomain richiesti dai protocolli di rete utilizzati dall'applicazione.  
   

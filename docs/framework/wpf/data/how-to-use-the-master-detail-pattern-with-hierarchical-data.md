@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
 ms.openlocfilehash: e0bbb24b07fdc1c362e2be43d69d189defbc27a4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59346184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931892"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Procedura: Usare il modello Master-Details con dati gerarchici
 In questo esempio viene illustrato come implementare lo scenario master-dettagli.  
@@ -36,7 +36,7 @@ In questo esempio viene illustrato come implementare lo scenario master-dettagli
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.HierarchicalDataTemplate>
-- [Eseguire il binding a una raccolta e visualizzare informazioni in base alla selezione](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
+- [Eseguire l'associazione a una raccolta e visualizzare informazioni in base alla selezione](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Cenni preliminari sui modelli di dati](data-templating-overview.md)
-- [Procedure relative](data-binding-how-to-topics.md)
+- [Panoramica sui modelli di dati](data-templating-overview.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)

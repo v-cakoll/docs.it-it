@@ -3,11 +3,11 @@ title: Client
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
 ms.openlocfilehash: e3a4852ba467f9c334157555ed9c2ffc2ff33f0e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943962"
 ---
 # <a name="client"></a>Client
 In questa sezione è inclusi esempi che illustrano le applicazioni client Windows Communication Foundation (WCF).  

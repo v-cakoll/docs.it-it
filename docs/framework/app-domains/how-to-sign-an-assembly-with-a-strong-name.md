@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826902"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59303432"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedura: Firmare un assembly con un nome sicuro
 Sono disponibili diversi modi per firmare un assembly con un nome sicuro:  
@@ -35,13 +35,13 @@ Sono disponibili diversi modi per firmare un assembly con un nome sicuro:
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Per creare e firmare un assembly con un nome sicuro utilizzando Visual Studio  
   
-1.  In **Esplora soluzioni**aprire il menu di scelta rapida per il progetto, quindi scegliere **Proprietà**.  
+1. In **Esplora soluzioni**aprire il menu di scelta rapida per il progetto, quindi scegliere **Proprietà**.  
   
-2.  Scegliere la scheda **Firma** .  
+2. Scegliere la scheda **Firma** .  
   
-3.  Selezionare la casella **Firma assembly** .  
+3. Selezionare la casella **Firma assembly** .  
   
-4.  Nella casella **Scegli un file chiave con nome sicuro** scegliere **\<Sfoglia>**, quindi passare al file di chiave. Per creare un nuovo file di chiave, scegliere **\<Nuovo>** e immettere il nome nella finestra di dialogo **Crea chiave con nome sicuro**.  
+4. Nella casella **Scegli un file chiave con nome sicuro** scegliere **\<Sfoglia>**, quindi passare al file di chiave. Per creare un nuovo file di chiave, scegliere **\<Nuovo>** e immettere il nome nella finestra di dialogo **Crea chiave con nome sicuro**.  
   
 > [!NOTE]
 >  Per [ritardare la firma di un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md), scegliere un file di chiave pubblica.  
@@ -73,9 +73,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 #### <a name="to-sign-an-assembly-with-a-strong-name-by-using-attributes"></a>Per firmare un assembly con un nome sicuro utilizzando attributi  
   
-1.  Aggiungere l'attributo <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> o <xref:System.Reflection.AssemblyKeyNameAttribute> al file del codice sorgente, specificando il nome del file o del contenitore contenente la coppia di chiavi da utilizzare per la firma dell'assembly con un nome sicuro.  
+1. Aggiungere l'attributo <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> o <xref:System.Reflection.AssemblyKeyNameAttribute> al file del codice sorgente, specificando il nome del file o del contenitore contenente la coppia di chiavi da utilizzare per la firma dell'assembly con un nome sicuro.  
   
-2.  Compilare normalmente il file del codice sorgente.  
+2. Compilare normalmente il file del codice sorgente.  
   
 > [!NOTE]
 >  Nei compilatori C# e Visual Basic vengono pubblicati avvisi del compilatore (rispettivamente CS1699 e BC41008) quando viene rilevato l'attributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute> nel codice sorgente. È possibile ignorare gli avvisi.  
@@ -101,6 +101,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creazione e utilizzo degli assembly con nome sicuro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [Procedura: Creare una coppia di chiavi pubblica/privata](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)

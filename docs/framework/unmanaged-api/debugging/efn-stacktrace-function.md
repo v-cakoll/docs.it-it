@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dfbdbb389f9945ffeea649bcddd45bee8caf2496
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698317"
 ---
 # <a name="efnstacktrace-function"></a>Funzione _EFN_StackTrace
 Fornisce una rappresentazione testuale di una traccia dello stack gestito e una matrice di record `CONTEXT`, uno per ogni transizione tra codice non gestito e gestito.  
@@ -65,17 +65,17 @@ HRESULT CALLBACK _EFN_StackTrace(
 ## <a name="remarks"></a>Note  
  Il `_EFN_StackTrace` struttura può essere chiamata da un'interfaccia programmatica di WinDbg. I parametri vengono usati come indicato di seguito:  
   
--   Se `wszTextOut` è null e `puiTextLength` è diverso da null, la funzione restituisce la lunghezza della stringa in `puiTextLength`.  
+- Se `wszTextOut` è null e `puiTextLength` è diverso da null, la funzione restituisce la lunghezza della stringa in `puiTextLength`.  
   
--   Se `wszTextOut` è diverso da null, la funzione Archivia testo nel `wszTextOut` fino alla posizione indicata da `puiTextLength`. Restituita correttamente se si è verificato un spazio sufficiente nel buffer, o restituisce E_OUTOFMEMORY se il buffer non è sufficiente.  
+- Se `wszTextOut` è diverso da null, la funzione Archivia testo nel `wszTextOut` fino alla posizione indicata da `puiTextLength`. Restituita correttamente se si è verificato un spazio sufficiente nel buffer, o restituisce E_OUTOFMEMORY se il buffer non è sufficiente.  
   
--   La parte relativa alla transizione della funzione viene ignorato se `pTransitionContexts` e `puiTransitionContextCount` sono entrambi null. In questo caso, la funzione fornisce i chiamanti con output di testo dei soli nomi di funzione.  
+- La parte relativa alla transizione della funzione viene ignorato se `pTransitionContexts` e `puiTransitionContextCount` sono entrambi null. In questo caso, la funzione fornisce i chiamanti con output di testo dei soli nomi di funzione.  
   
--   Se `pTransitionContexts` è null e `puiTransitionContextCount` è non null, la funzione restituisce il numero necessario di voci di contesto nella `puiTransitionContextCount`.  
+- Se `pTransitionContexts` è null e `puiTransitionContextCount` è non null, la funzione restituisce il numero necessario di voci di contesto nella `puiTransitionContextCount`.  
   
--   Se `pTransitionContexts` è non null, la funzione considera come una matrice di strutture di lunghezza `puiTransitionContextCount`. La dimensione della struttura viene specificata dalla `uiSizeOfContext`, e deve essere il valore pari [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) o `CONTEXT` per l'architettura.  
+- Se `pTransitionContexts` è non null, la funzione considera come una matrice di strutture di lunghezza `puiTransitionContextCount`. La dimensione della struttura viene specificata dalla `uiSizeOfContext`, e deve essere il valore pari [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) o `CONTEXT` per l'architettura.  
   
--   `wszTextOut` viene scritto nel formato seguente:  
+- `wszTextOut` viene scritto nel formato seguente:  
   
     ```  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -84,11 +84,11 @@ HRESULT CALLBACK _EFN_StackTrace(
     ..."  
     ```  
   
--   Se l'offset in esadecimale 0x0, non viene scritto alcun offset.  
+- Se l'offset in esadecimale 0x0, non viene scritto alcun offset.  
   
--   Se non vi è nessun codice gestito sul thread attualmente nel contesto, la funzione restituisce SOS_E_NOMANAGEDCODE.  
+- Se non vi è nessun codice gestito sul thread attualmente nel contesto, la funzione restituisce SOS_E_NOMANAGEDCODE.  
   
--   Il `Flags` parametro è 0 o SOS_STACKTRACE_SHOWADDRESSES visualizzare EBP ed ESP davanti a ogni `module!functionname` riga. Per impostazione predefinita è 0.  
+- Il `Flags` parametro è 0 o SOS_STACKTRACE_SHOWADDRESSES visualizzare EBP ed ESP davanti a ogni `module!functionname` riga. Per impostazione predefinita è 0.  
   
     ```  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  

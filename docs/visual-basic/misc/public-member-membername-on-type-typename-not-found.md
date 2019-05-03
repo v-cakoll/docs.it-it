@@ -5,11 +5,11 @@ f1_keywords:
 - vbrMissingMember_MemberNotFoundOnType2
 ms.assetid: 6300feb8-78ac-4dd0-9653-1d03e1f5bc20
 ms.openlocfilehash: fdaea9d7f0aee92852430ae3ad676bf13a3d9396
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023143"
 ---
 # <a name="public-member-membername-on-type-typename-not-found"></a>Membro pubblico '\<nomeMembro >' nel tipo '\<nomeTipo >' non trovato
 Il membro a cui si sta tentando di accedere non è stato trovato. Questo errore può verificarsi quando si accede a membri non pubblici di oggetti ad associazione tardiva.  
@@ -21,4 +21,4 @@ Il membro a cui si sta tentando di accedere non è stato trovato. Questo errore 
 ## <a name="see-also"></a>Vedere anche
 
 - [Public](../../visual-basic/language-reference/modifiers/public.md)
-- [Binding anticipato e tardivo](../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [Associazione anticipata e tardiva](../../visual-basic/programming-guide/language-features/early-late-binding/index.md)

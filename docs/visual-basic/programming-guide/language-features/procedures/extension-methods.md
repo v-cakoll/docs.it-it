@@ -8,11 +8,11 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
 ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864339"
 ---
 # <a name="extension-methods-visual-basic"></a>Metodi di estensione (Visual Basic)
 I metodi di estensione consentono agli sviluppatori di aggiungere funzionalità personalizzate ai tipi di dati che sono già definiti senza creare un nuovo tipo derivato. I metodi di estensione consentono di scrivere un metodo che può essere chiamato come se fosse un metodo di istanza del tipo esistente.  
@@ -93,19 +93,19 @@ End Module
 ## <a name="types-that-can-be-extended"></a>Tipi che possono essere estese  
  È possibile definire un metodo di estensione nella maggior parte dei tipi che possono essere rappresentati in un elenco di parametri di Visual Basic, inclusi i seguenti:  
   
--   Classi (tipi riferimento)  
+- Classi (tipi riferimento)  
   
--   Strutture (tipi di valore)  
+- Strutture (tipi di valore)  
   
--   Interfacce  
+- Interfacce  
   
--   Delegati  
+- Delegati  
   
--   Argomenti ByRef e ByVal  
+- Argomenti ByRef e ByVal  
   
--   Parametri di metodo generico  
+- Parametri di metodo generico  
   
--   Matrici  
+- Matrici  
   
  Poiché il primo parametro specifica il tipo di dati esteso dal metodo di estensione, è obbligatorio e non può essere facoltativo. Per questo motivo `Optional` parametri e `ParamArray` parametri non possono essere il primo parametro nell'elenco dei parametri.  
   
@@ -118,15 +118,15 @@ End Module
   
  In generale, i metodi di estensione aggiunti ai tipi che non si possiede sono più vulnerabili dei metodi di estensione aggiunti ai tipi di cui si controllano. Può verificarsi una serie di operazioni nelle classi non si è proprietari che possono interferire con i metodi di estensione.  
   
--   Se è presente alcun membro di istanza accessibile ha una firma compatibile con gli argomenti dell'istruzione chiamante, con nessuna conversione narrowing richiesto dall'argomento al parametro, verrà utilizzato il metodo di istanza preferenza rispetto a qualsiasi metodo di estensione. Pertanto, se un metodo di istanza appropriato viene aggiunto a una classe a un certo punto, un membro di estensione esistente che affidano potrebbe diventare inaccessibile.  
+- Se è presente alcun membro di istanza accessibile ha una firma compatibile con gli argomenti dell'istruzione chiamante, con nessuna conversione narrowing richiesto dall'argomento al parametro, verrà utilizzato il metodo di istanza preferenza rispetto a qualsiasi metodo di estensione. Pertanto, se un metodo di istanza appropriato viene aggiunto a una classe a un certo punto, un membro di estensione esistente che affidano potrebbe diventare inaccessibile.  
   
--   L'autore di un metodo di estensione non è possibile impedire agli altri programmatori di scrivere metodi di estensione in conflitto che possono avere la precedenza sull'estensione originale.  
+- L'autore di un metodo di estensione non è possibile impedire agli altri programmatori di scrivere metodi di estensione in conflitto che possono avere la precedenza sull'estensione originale.  
   
--   È possibile migliorare la robustezza inserendo i metodi di estensione nel rispettivo spazio dei nomi. La libreria può quindi includere uno spazio dei nomi o escluderlo oppure effettuare una selezione tra gli spazi dei nomi, separatamente dal resto della libreria.  
+- È possibile migliorare la robustezza inserendo i metodi di estensione nel rispettivo spazio dei nomi. La libreria può quindi includere uno spazio dei nomi o escluderlo oppure effettuare una selezione tra gli spazi dei nomi, separatamente dal resto della libreria.  
   
--   Potrebbe essere più sicuro estendere le interfacce di cui è possibile estendere le classi, soprattutto se non si possiede l'interfaccia o classe. Una modifica in un'interfaccia influisce su ogni classe che lo implementa. Pertanto, l'autore potrebbe essere meno probabile che aggiungere o modificare i metodi in un'interfaccia. Tuttavia, se una classe implementa due interfacce con metodi di estensione con la stessa firma, nessuno dei due metodi di estensione sono visibili.  
+- Potrebbe essere più sicuro estendere le interfacce di cui è possibile estendere le classi, soprattutto se non si possiede l'interfaccia o classe. Una modifica in un'interfaccia influisce su ogni classe che lo implementa. Pertanto, l'autore potrebbe essere meno probabile che aggiungere o modificare i metodi in un'interfaccia. Tuttavia, se una classe implementa due interfacce con metodi di estensione con la stessa firma, nessuno dei due metodi di estensione sono visibili.  
   
--   Estendere il tipo più specifico, che è possibile. In una gerarchia di tipi, se si seleziona un tipo dal quale sono derivati molti altri tipi, sono presenti livelli di possibilità per l'introduzione di metodi di istanza o altri metodi di estensione che potrebbero interferire con i propri.  
+- Estendere il tipo più specifico, che è possibile. In una gerarchia di tipi, se si seleziona un tipo dal quale sono derivati molti altri tipi, sono presenti livelli di possibilità per l'introduzione di metodi di istanza o altri metodi di estensione che potrebbero interferire con i propri.  
   
 ## <a name="extension-methods-instance-methods-and-properties"></a>I metodi di estensione, metodi di istanza e proprietà  
  Quando un metodo di istanza inclusi nell'ambito ha una firma compatibile con gli argomenti di un'istruzione di chiamata, il metodo di istanza viene preferito a qualsiasi metodo di estensione. Il metodo di istanza ha la precedenza anche se il metodo di estensione è una corrispondenza migliore. Nell'esempio riportato di seguito `ExampleClass` contiene un metodo di istanza denominato `ExampleMethod` che ha un parametro di tipo `Integer`. Metodo di estensione `ExampleMethod` estende `ExampleClass`, e ha un parametro di tipo `Long`.  
@@ -183,5 +183,5 @@ End Module
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Parametri facoltativi](./optional-parameters.md)
 - [Matrici di parametri](./parameter-arrays.md)
-- [Cenni preliminari sugli attributi](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
-- [Ambito in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Panoramica degli attributi](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

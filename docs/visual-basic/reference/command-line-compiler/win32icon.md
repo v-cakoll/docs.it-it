@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
 ms.openlocfilehash: e36e9187ab8c9c2b4950a66ff8ff3fc93adbd9c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774829"
 ---
 # <a name="-win32icon"></a>-win32icon
 Inserisce un file con estensione ICO nel file di output. Il file ICO rappresenta il file di output in **Esplora File**.  

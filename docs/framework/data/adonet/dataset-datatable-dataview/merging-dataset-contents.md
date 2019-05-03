@@ -6,19 +6,19 @@ dev_langs:
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
 ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607930"
 ---
 # <a name="merging-dataset-contents"></a>Unione di contenuti di dataset
 
-È possibile usare il metodo <xref:System.Data.DataSet.Merge%2A> per unire il contenuto di un oggetto <xref:System.Data.DataSet>, <xref:System.Data.DataTable> o una matrice <xref:System.Data.DataRow> in un `DataSet` esistente. L'unione di nuovi dati in un `DataSet` esistente è influenzata da diversi fattori e opzioni.
+È possibile usare il metodo <xref:System.Data.DataSet.Merge%2A> per unire il contenuto di un oggetto <xref:System.Data.DataSet>, <xref:System.Data.DataTable> o una matrice <xref:System.Data.DataRow> in un `DataSet` esistente. Il merge di nuovi dati in un `DataSet` esistente è influenzato da diversi fattori e opzioni.
 
 ## <a name="primary-keys"></a>Chiavi primarie
 
-Se la tabella che riceve i nuovi dati e lo schema da un'operazione di unione dispone di una chiave primaria, le nuove righe dei dati in arrivo verranno associate alle righe esistenti i cui valori di chiave primaria <xref:System.Data.DataRowVersion.Original> corrispondono a quelli presenti nei dati in arrivo. Se le colonne dello schema in arrivo corrispondono alle colonne dello schema esistente, i dati delle righe esistenti verranno modificati. Le colonne che non corrispondono allo schema esistente verranno ignorate o aggiunte in base al parametro <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>. Le nuove righe contenenti valori di chiave primaria non corrispondenti a nessuna delle righe esistenti verranno aggiunte alla tabella esistente.
+Se la tabella che riceve i nuovi dati e lo schema da un'operazione di merge dispone di una chiave primaria, le nuove righe dei dati in arrivo verranno associate alle righe esistenti i cui valori di chiave primaria <xref:System.Data.DataRowVersion.Original> corrispondono a quelli presenti nei dati in arrivo. Se le colonne dello schema in arrivo corrispondono alle colonne dello schema esistente, i dati delle righe esistenti verranno modificati. Le colonne che non corrispondono allo schema esistente verranno ignorate o aggiunte in base al parametro <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>. Le nuove righe contenenti valori di chiave primaria non corrispondenti a nessuna delle righe esistenti verranno aggiunte alla tabella esistente.
 
 Se alle righe in arrivo o esistenti è associato uno stato di riga <xref:System.Data.DataRowState.Added>, i relativi valori di chiave primaria verranno associati tramite il valore di chiave primaria <xref:System.Data.DataRowVersion.Current> della riga `Added`, poiché non è presente nessuna versione di riga `Original`.
 
@@ -28,10 +28,10 @@ Se la tabella che riceve i nuovi dati da un'operazione di unione non dispone di 
 
 ## <a name="table-names-and-namespaces"></a>Nomi di tabella e spazi dei nomi
 
-Se necessario, agli oggetti <xref:System.Data.DataTable> è possibile assegnare un valore della proprietà <xref:System.Data.DataTable.Namespace%2A>. Quando vengono assegnati i valori di <xref:System.Data.DataTable.Namespace%2A>, un oggetto <xref:System.Data.DataSet> può contenere più oggetti <xref:System.Data.DataTable> con lo stesso valore <xref:System.Data.DataTable.TableName%2A>. Durante le operazioni di unione vengono usati <xref:System.Data.DataTable.TableName%2A> e <xref:System.Data.DataTable.Namespace%2A> per identificare la destinazione di un'unione. Se è stato assegnato <xref:System.Data.DataTable.Namespace%2A>, per identificare la destinazione di un'unione viene usato <xref:System.Data.DataTable.TableName%2A>.
+Se necessario, agli oggetti <xref:System.Data.DataTable> è possibile assegnare un valore della proprietà <xref:System.Data.DataTable.Namespace%2A>. Quando vengono assegnati i valori di <xref:System.Data.DataTable.Namespace%2A>, un oggetto <xref:System.Data.DataSet> può contenere più oggetti <xref:System.Data.DataTable> con lo stesso valore <xref:System.Data.DataTable.TableName%2A>. Durante le operazioni di merge vengono usati <xref:System.Data.DataTable.TableName%2A> e <xref:System.Data.DataTable.Namespace%2A> per identificare la destinazione di un merge. Se è stato assegnato <xref:System.Data.DataTable.Namespace%2A>, per identificare la destinazione di un'unione viene usato <xref:System.Data.DataTable.TableName%2A>.
 
 > [!NOTE]
-> Questo comportamento è stato modificato in .NET Framework versione 2.0. Nella versione 1.1 gli spazi dei nomi sono supportati ma vengono ignorati durante le operazioni di unione. Per questo motivo il comportamento di un oggetto <xref:System.Data.DataSet> che usa i valori della proprietà <xref:System.Data.DataTable.Namespace%2A> a seconda della versione di .NET Framework in esecuzione. Ad esempio, si supponga di disporre di due `DataSets` contenenti `DataTables` con lo stesso valore della proprietà <xref:System.Data.DataTable.TableName%2A> ma valori diversi della proprietà <xref:System.Data.DataTable.Namespace%2A>. Nella versione 1.1 di .NET Framework, i diversi nomi di <xref:System.Data.DataTable.Namespace%2A> verranno ignorati durante l'unione dei due oggetti <xref:System.Data.DataSet>. A partire dalla versione 2.0, invece, in seguito all'unione vengono creati due nuovi oggetti `DataTables` nell'oggetto <xref:System.Data.DataSet> di destinazione. I `DataTables` originali non verranno interessati dall'unione.
+> Questo comportamento è stato modificato in .NET Framework versione 2.0. Nella versione 1.1 gli spazi dei nomi sono supportati ma vengono ignorati durante le operazioni di merge. Per questo motivo il comportamento di un oggetto <xref:System.Data.DataSet> che usa i valori della proprietà <xref:System.Data.DataTable.Namespace%2A> a seconda della versione di .NET Framework in esecuzione. Ad esempio, si supponga di disporre di due `DataSets` contenenti `DataTables` con lo stesso valore della proprietà <xref:System.Data.DataTable.TableName%2A> ma valori diversi della proprietà <xref:System.Data.DataTable.Namespace%2A>. Nella versione 1.1 di .NET Framework, i diversi nomi di <xref:System.Data.DataTable.Namespace%2A> verranno ignorati durante l'unione dei due oggetti <xref:System.Data.DataSet>. A partire dalla versione 2.0, invece, in seguito all'unione vengono creati due nuovi oggetti `DataTables` nell'oggetto <xref:System.Data.DataSet> di destinazione. I `DataTables` originali non verranno interessati dall'unione.
 
 ## <a name="preservechanges"></a>PreserveChanges
 

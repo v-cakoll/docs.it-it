@@ -4,12 +4,6 @@ description: Conoscere le offerte di Microsoft per il supporto del ciclo di vita
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 8536703a520434c0e393c5f46005c2ac02d5d849
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672264"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introduzione alla piattaforma Microsoft e strumenti per le App in contenitori
 

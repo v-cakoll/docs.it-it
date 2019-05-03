@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
 ms.openlocfilehash: 7463f9cfc37c2bf4f271f6e59896a7d77f3f65cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772944"
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Procedura: Scambiare messaggi con endpoint WCF e con applicazioni di accodamento dei messaggi
 È possibile integrare le applicazioni di Accodamento messaggi (MSMQ) esistenti con le applicazioni di Windows Communication Foundation (WCF) utilizzando l'associazione di integrazione MSMQ per convertire i messaggi MSMQ in e da messaggi WCF. In questo modo è possibile chiamare applicazioni MSMQ riceventi dai client WCF, nonché chiamare servizi WCF da applicazioni MSMQ mittenti.  
@@ -61,7 +61,7 @@ ms.locfileid: "59310304"
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica delle code](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Procedura: Scambiare messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Procedura: Lo scambio di messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [Da Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [Installazione accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [Accodamento messaggi in Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)

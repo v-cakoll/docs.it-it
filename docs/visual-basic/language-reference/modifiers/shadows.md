@@ -12,11 +12,11 @@ helpviewer_keywords:
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
 ms.openlocfilehash: c314db90a1a0f89613e20897387bdec8ec534837
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778729"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 Specifica che un elemento di programmazione dichiarato ridichiara e nasconde un elemento con nome identico, o un set di elementi in overload, una classe di base.  
@@ -28,19 +28,19 @@ Specifica che un elemento di programmazione dichiarato ridichiara e nasconde un 
   
 ## <a name="rules"></a>Regole  
   
--   **Contesto della dichiarazione.** È possibile usare `Shadows` solo a livello di classe. Ciò significa che il contesto della dichiarazione per un `Shadows` elemento deve essere una classe e non può essere un file di origine, lo spazio dei nomi, interfaccia, modulo, struttura o procedure.  
+- **Contesto della dichiarazione.** È possibile usare `Shadows` solo a livello di classe. Ciò significa che il contesto della dichiarazione per un `Shadows` elemento deve essere una classe e non può essere un file di origine, lo spazio dei nomi, interfaccia, modulo, struttura o procedure.  
   
      È possibile dichiarare un solo elemento di shadowing in una singola istruzione di dichiarazione.  
   
--   **Modificatori combinati.** Non è possibile specificare `Shadows` assieme `Overloads`, `Overrides`, o `Static` nella stessa dichiarazione.  
+- **Modificatori combinati.** Non è possibile specificare `Shadows` assieme `Overloads`, `Overrides`, o `Static` nella stessa dichiarazione.  
   
--   **Tipi di elemento.** È possibile nascondere qualsiasi tipo di elemento dichiarato con qualsiasi altro tipo. Se si nasconde una proprietà o routine con un'altra proprietà o una routine, i parametri e il tipo restituito non è necessario affinché corrispondano a quelle nella proprietà di classe di base o della routine.  
+- **Tipi di elemento.** È possibile nascondere qualsiasi tipo di elemento dichiarato con qualsiasi altro tipo. Se si nasconde una proprietà o routine con un'altra proprietà o una routine, i parametri e il tipo restituito non è necessario affinché corrispondano a quelle nella proprietà di classe di base o della routine.  
   
--   **Accessing.** È generalmente disponibile all'interno della classe derivata che lo nasconde l'elemento nascosto nella classe di base. Tuttavia, si applicano le considerazioni seguenti.  
+- **Accessing.** È generalmente disponibile all'interno della classe derivata che lo nasconde l'elemento nascosto nella classe di base. Tuttavia, si applicano le considerazioni seguenti.  
   
-    -   Se l'elemento di shadowing non è accessibile dal codice che fa riferimento a esso, il riferimento viene risolto l'elemento nascosto. Ad esempio, se un `Private` elemento nasconde un elemento di classe di base, il codice che non dispone dell'autorizzazione per accedere la `Private` elemento accede invece all'elemento di classe di base.  
+    - Se l'elemento di shadowing non è accessibile dal codice che fa riferimento a esso, il riferimento viene risolto l'elemento nascosto. Ad esempio, se un `Private` elemento nasconde un elemento di classe di base, il codice che non dispone dell'autorizzazione per accedere la `Private` elemento accede invece all'elemento di classe di base.  
   
-    -   Se si nasconde un elemento, è comunque possibile accedere all'elemento nascosto tramite un oggetto dichiarato con il tipo della classe di base. È anche possibile accedervi tramite `MyBase`.  
+    - Se si nasconde un elemento, è comunque possibile accedere all'elemento nascosto tramite un oggetto dichiarato con il tipo della classe di base. È anche possibile accedervi tramite `MyBase`.  
   
  Il modificatore `Shadows` può essere usato nei contesti seguenti:  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
 ms.openlocfilehash: 4bcfe96361de9e196cb684ac4ba734f82442e25c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940894"
 ---
 # <a name="param-visual-basic"></a>\<param> (Visual Basic)
 Definisce un nome di parametro e una descrizione.  
@@ -33,9 +33,9 @@ Definisce un nome di parametro e una descrizione.
   
  Il testo per il `<param>` tag verrà visualizzato nelle posizioni seguenti:  
   
--   Informazioni sul parametro di IntelliSense. Per altre informazioni, vedere [Using IntelliSense](/visualstudio/ide/using-intellisense) (Uso di IntelliSense).  
+- Informazioni sul parametro di IntelliSense. Per altre informazioni, vedere [Using IntelliSense](/visualstudio/ide/using-intellisense) (Uso di IntelliSense).  
   
--   Visualizzatore oggetti. Per altre informazioni, vedere [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code) (Visualizzazione della struttura del codice).  
+- Visualizzatore oggetti. Per altre informazioni, vedere [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code) (Visualizzazione della struttura del codice).  
   
  Compilare con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
   

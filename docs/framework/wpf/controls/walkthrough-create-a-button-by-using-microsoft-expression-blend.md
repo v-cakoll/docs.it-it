@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
 ms.openlocfilehash: 3cf9d133aee5a2c3d93c1a464c96fdaebcf230f3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018260"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Procedura dettagliata: Creare un pulsante usando Microsoft Expression Blend
 Questa procedura dettagliata viene illustrato il processo di creazione di un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] pulsante personalizzato usando Microsoft Expression Blend.  
@@ -117,17 +117,17 @@ Questa procedura dettagliata viene illustrato il processo di creazione di un [!I
   
 10. **Rendere glassCube simile glass:** Impostare il <xref:System.Windows.Shapes.Shape.Fill%2A> su un aspetto utilizzando una sfumatura lineare che è opaca al 75% e alterna tra il colore nero e trasparente oltre 6 approssimativamente in modo uniforme, separate da uno spazio intervalli. Si tratta di quale valore impostare i cursori sfumatura:  
   
-    -   Cursore sfumatura 1: Bianco, con valore alfa pari al 75%  
+    - Cursore sfumatura 1: Bianco, con valore alfa pari al 75%  
   
-    -   Cursore sfumatura 2: Trasparente  
+    - Cursore sfumatura 2: Trasparente  
   
-    -   Cursore sfumatura 3: Bianco, con valore alfa pari al 75%  
+    - Cursore sfumatura 3: Bianco, con valore alfa pari al 75%  
   
-    -   Cursore sfumatura 4: Trasparente  
+    - Cursore sfumatura 4: Trasparente  
   
-    -   Cursore sfumatura 5: Bianco, con valore alfa pari al 75%  
+    - Cursore sfumatura 5: Bianco, con valore alfa pari al 75%  
   
-    -   Cursore sfumatura 6: Trasparente  
+    - Cursore sfumatura 6: Trasparente  
   
      Ciò crea un effetto cristallo "ondulata".  
   
@@ -173,9 +173,9 @@ Questa procedura dettagliata viene illustrato il processo di creazione di un [!I
   
 6. **Creare trigger di proprietà per IsFocused:** Con la stessa procedura utilizzata per <xref:System.Windows.UIElement.IsMouseOver%2A> (vedere il primo passaggio di questa sezione), creare un altro trigger di proprietà per il <xref:System.Windows.UIElement.IsFocused%2A> proprietà. Sebbene **Trigger la registrazione è attivata**, aggiungere le seguenti azioni per il trigger:  
   
-    -   **glassCube** Ottiene un <xref:System.Windows.UIElement.Opacity%2A> pari al 100%.  
+    - **glassCube** Ottiene un <xref:System.Windows.UIElement.Opacity%2A> pari al 100%.  
   
-    -   **Rettangolo esterno** Ottiene un <xref:System.Windows.Shapes.Shape.Stroke%2A> valore dell'espressione personalizzati di "{DynamicResource {X:Static SystemColors. HighlightBrushKey}}".  
+    - **Rettangolo esterno** Ottiene un <xref:System.Windows.Shapes.Shape.Stroke%2A> valore dell'espressione personalizzati di "{DynamicResource {X:Static SystemColors. HighlightBrushKey}}".  
   
  Come passaggio finale in questa procedura dettagliata, si aggiungerà le animazioni al pulsante. Queste animazioni verranno attivate da eventi, in particolare, il <xref:System.Windows.UIElement.MouseEnter> e <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventi.  
   
@@ -208,19 +208,19 @@ Questa procedura dettagliata viene illustrato il processo di creazione di un [!I
   
 5. **Creare un altro Trigger di evento e associare un'animazione di diversi:** È possibile aggiungere un'altra animazione. Usare una procedura simile a quello utilizzato per creare l'animazione di trigger di evento precedente:  
   
-    1.  Creare un nuovo trigger evento usando il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
+    1. Creare un nuovo trigger evento usando il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
   
-    2.  Associare una nuova sequenza temporale con la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
+    2. Associare una nuova sequenza temporale con la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
   
      ![Come creare una nuova sequenza temporale](./media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")  
   
-    1.  Per questa sequenza temporale, creare due fotogrammi chiave, in secondi compreso tra 0,0 e il secondo 0,3 secondi.  
+    1. Per questa sequenza temporale, creare due fotogrammi chiave, in secondi compreso tra 0,0 e il secondo 0,3 secondi.  
   
-    2.  Con il fotogramma chiave 0,3 secondi evidenziato, impostare il **Ruota l'angolo di trasformare** a 360 gradi.  
+    2. Con il fotogramma chiave 0,3 secondi evidenziato, impostare il **Ruota l'angolo di trasformare** a 360 gradi.  
   
      ![Come creare una trasformazione rotativa](./media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")  
   
-    1.  Premere F5 per eseguire l'applicazione. Fare clic sul pulsante. Si noti che l'effetto cristallo intorno.  
+    1. Premere F5 per eseguire l'applicazione. Fare clic sul pulsante. Si noti che l'effetto cristallo intorno.  
   
 ## <a name="conclusion"></a>Conclusione  
  È stato completato un pulsante personalizzato. È stato eseguito questa operazione utilizzando un modello di pulsante che è stato applicato a tutti i pulsanti nell'applicazione. Se si esce dalla modalità di modifica di modelli (vedere la figura seguente) e creare più pulsanti, si noterà che l'aspetto e si comportano come il pulsante personalizzato anziché, ad esempio il pulsante predefinito.  
@@ -237,15 +237,15 @@ Questa procedura dettagliata viene illustrato il processo di creazione di un [!I
   
  In conclusione, nel processo di personalizzazione di un modello di pulsante si è appreso come eseguire le operazioni seguenti in Microsoft Expression Blend:  
   
--   Personalizzare l'aspetto di un controllo.  
+- Personalizzare l'aspetto di un controllo.  
   
--   Impostare i trigger di proprietà. I trigger di proprietà sono molto utili perché possono essere usati nella maggior parte degli oggetti, non solo i controlli.  
+- Impostare i trigger di proprietà. I trigger di proprietà sono molto utili perché possono essere usati nella maggior parte degli oggetti, non solo i controlli.  
   
--   Impostare i trigger di evento. I trigger di evento sono molto utili perché possono essere usati nella maggior parte degli oggetti, non solo i controlli.  
+- Impostare i trigger di evento. I trigger di evento sono molto utili perché possono essere usati nella maggior parte degli oggetti, non solo i controlli.  
   
--   Creare animazioni.  
+- Creare animazioni.  
   
--   Varie: creare sfumature, aggiungere BitmapEffects, usare le trasformazioni e impostare le proprietà di base di oggetti.  
+- Varie: creare sfumature, aggiungere BitmapEffects, usare le trasformazioni e impostare le proprietà di base di oggetti.  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -253,4 +253,4 @@ Questa procedura dettagliata viene illustrato il processo di creazione di un [!I
 - [Applicazione di stili e modelli](styling-and-templating.md)
 - [Cenni preliminari sull'animazione](../graphics-multimedia/animation-overview.md)
 - [Cenni sul disegno con colori a tinta unita e sfumature](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Cenni preliminari sugli effetti bitmap](../graphics-multimedia/bitmap-effects-overview.md)
+- [Panoramica sugli effetti bitmap](../graphics-multimedia/bitmap-effects-overview.md)

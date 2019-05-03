@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
 ms.openlocfilehash: 34643d10ef1ed2e87152e5013634e62859e0594e
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791768"
 ---
 # <a name="add"></a>\<add>
 Aggiunge il gestore di token di sicurezza specificato nella raccolta di gestori di token.  

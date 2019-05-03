@@ -14,11 +14,11 @@ helpviewer_keywords:
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
 ms.openlocfilehash: 65e332d229da8fe51ad9c3e9850603471b1dfb12
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018099"
 ---
 # <a name="how-to-chunk-serialized-data"></a>Procedura: Suddividere in blocchi i dati serializzati
 
@@ -56,7 +56,7 @@ Nell'esempio di codice riportato di seguito viene mostrato il metodo Web sul cli
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Nel codice riportato di seguito vengono utilizzati i seguenti spazi dei nomi: <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization> e <xref:System.Xml.Schema>.  
+- Nel codice riportato di seguito vengono utilizzati i seguenti spazi dei nomi: <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization> e <xref:System.Xml.Schema>.  
   
 ## <a name="see-also"></a>Vedere anche
 

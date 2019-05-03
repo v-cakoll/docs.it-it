@@ -9,11 +9,11 @@ helpviewer_keywords:
 - regions [Windows Forms], restricting drawing surface
 ms.assetid: 43d121b4-e14c-4901-b25c-2d6c25ba4e29
 ms.openlocfilehash: cf60b32df805a49f8da2760332dc32e34209f6dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954520"
 ---
 # <a name="how-to-use-clipping-with-a-region"></a>Procedura: Usare il ritaglio per definire una regione
 Una delle proprietà del <xref:System.Drawing.Graphics> classe è l'area di ritaglio. Tutti i disegni effettuati un determinato <xref:System.Drawing.Graphics> è limitato per l'area di ritaglio di tale oggetto <xref:System.Drawing.Graphics> oggetto. È possibile impostare l'area di ritaglio chiamando il <xref:System.Drawing.Graphics.SetClip%2A> (metodo).  
@@ -34,4 +34,4 @@ Una delle proprietà del <xref:System.Drawing.Graphics> classe è l'area di rita
 ## <a name="see-also"></a>Vedere anche
 
 - [Regioni in GDI+](regions-in-gdi.md)
-- [Utilizzo delle regioni](using-regions.md)
+- [Uso delle regioni](using-regions.md)

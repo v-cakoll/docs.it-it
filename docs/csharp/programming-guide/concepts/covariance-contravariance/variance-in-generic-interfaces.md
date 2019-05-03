@@ -1,17 +1,19 @@
 ---
 title: Varianza nelle interfacce generiche (C#)
-ms.date: 07/20/2015
+ms.date: 04/10/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: ffe437fc88722b9f38aa2fde6cdd87ed2e2060be
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5874a39a57f85695bedc3d1ffa61adf19fcdbe37
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469548"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59480781"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Varianza nelle interfacce generiche (C#)
 
-In .NET framework 4 è stato introdotto il supporto della varianza per diverse interfacce generiche esistenti. Il supporto della varianza consente la conversione implicita delle classi che implementano tali interfacce. Le interfacce seguenti sono ora varianti:
+In .NET framework 4 è stato introdotto il supporto della varianza per diverse interfacce generiche esistenti. Il supporto della varianza consente la conversione implicita delle classi che implementano tali interfacce. 
+
+A partire da .NET Framework 4, le interfacce seguenti sono varianti:
 
 - <xref:System.Collections.Generic.IEnumerable%601> (T è covariante)
 
@@ -27,6 +29,12 @@ In .NET framework 4 è stato introdotto il supporto della varianza per diverse i
 
 - <xref:System.IComparable%601> (T è controvariante)
 
+A partire da .NET Framework 4.5, le interfacce seguenti sono varianti:
+
+- <xref:System.Collections.Generic.IReadOnlyList%601> (T è controvariante)
+
+- <xref:System.Collections.Generic.IReadOnlyCollection%601> (T è controvariante)
+
 La covarianza consente a un metodo di avere un tipo restituito più derivato rispetto a quello definito dal parametro di tipo generico dell'interfaccia. Per illustrare la funzionalità di covarianza, considerare le seguenti interfacce generiche: `IEnumerable<Object>` e `IEnumerable<String>`. L'interfaccia `IEnumerable<String>` non eredita l'interfaccia`IEnumerable<Object>`. Tuttavia, il tipo `String` eredita il tipo `Object` e in alcuni casi è opportuno assegnare gli oggetti di ogni interfaccia all'altra. Queste operazioni sono illustrate nell'esempio di codice riportato di seguito.
 
 ```csharp
@@ -34,7 +42,7 @@ IEnumerable<String> strings = new List<String>();
 IEnumerable<Object> objects = strings;
 ```
 
-Nelle versioni precedenti di .NET Framework, questo codice causa un errore di compilazione in C# con `Option Strict On`. Ora è invece possibile usare `strings` anziché `objects`, come illustrato nell'esempio precedente, poiché l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> è covariante.
+Nelle versioni precedenti di .NET Framework, questo codice causa un errore di compilazione in C# e, con `Option Strict`, in Visual Basic. Ora è invece possibile usare `strings` anziché `objects`, come illustrato nell'esempio precedente, poiché l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> è covariante.
 
 La controvarianza consente a un metodo di avere tipi di argomenti meno derivati rispetto a quelli specificati dal parametro generico dell'interfaccia. Per illustrare la controvarianza, si supponga di aver creato una classe `BaseComparer` per confrontare le istanze della classe `BaseClass`. La classe `BaseComparer` implementa l'interfaccia `IEqualityComparer<BaseClass>`. Poiché l'interfaccia `BaseClass` è ora controvariante, è possibile usare <xref:System.Collections.Generic.IEqualityComparer%601> per confrontare le istanze delle classi che ereditano la classe `BaseComparer`. Queste operazioni sono illustrate nell'esempio di codice riportato di seguito.
 

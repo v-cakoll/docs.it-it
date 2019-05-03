@@ -13,11 +13,11 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
 ms.openlocfilehash: 1a857aade86d2366bb68ce14d716b3ce532ecb05
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59328413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013257"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Procedura: Impostare icone per il controllo TreeView di Windows Forms
 I moduli di Windows <xref:System.Windows.Forms.TreeView> controllo può visualizzare le icone accanto a ogni nodo. Le icone vengono posizionate a sinistra del testo del nodo. Per visualizzare queste icone, è necessario associare la visualizzazione struttura ad albero con un <xref:System.Windows.Forms.ImageList> controllo. Per altre informazioni sugli elenchi di immagini, vedere [componente ImageList](imagelist-component-windows-forms.md) e [come: Aggiungere o rimuovere immagini tramite il Windows Form componente ImageList](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
@@ -70,8 +70,8 @@ I moduli di Windows <xref:System.Windows.Forms.TreeView> controllo può visualiz
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica del controllo TreeView](treeview-control-overview-windows-forms.md)
-- [Procedura: Aggiungere e rimuovere nodi tramite il controllo TreeView di Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [Procedura: Scorrere tutti i nodi di un controllo TreeView di Windows Forms](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [Panoramica sul controllo TreeView](treeview-control-overview-windows-forms.md)
+- [Procedura: Aggiungere e rimuovere nodi con il controllo TreeView di Windows Form](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Procedura: Scorrere tutti i nodi di un controllo TreeView di Windows Form](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
 - [Procedura: Individuare il nodo di TreeView scelto](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

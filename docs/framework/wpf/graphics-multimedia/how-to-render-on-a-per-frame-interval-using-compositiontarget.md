@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
 ms.openlocfilehash: 00b416d423a4bdc8bab576add2d77fd305ea6e0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008928"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Procedura: Eseguire il rendering in un intervallo per frame usando l'oggetto CompositionTarget
 Il motore delle animazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre molte funzionalità per la creazione di animazioni basate su fotogrammi. Esistono tuttavia scenari di applicazione in cui è necessario un controllo con granularità più fine sul rendering per fotogramma. Il <xref:System.Windows.Media.CompositionTarget> oggetto offre la possibilità di creare animazioni personalizzate basate su un callback per frame.  

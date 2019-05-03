@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b136e1fa480e53bcacfd9ea832d1dc4d1bd69f74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000298"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>Funzione StrongNameGetBlobFromImage
 Ottiene una rappresentazione binaria dell'immagine dell'assembly in corrispondenza dell'indirizzo di memoria specificato.  

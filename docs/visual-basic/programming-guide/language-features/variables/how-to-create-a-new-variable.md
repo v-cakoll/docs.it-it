@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
 ms.openlocfilehash: ee1e93b4e9819992f17738eb024004a4d66210d1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938242"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>Procedura: Creare una nuova variabile (Visual Basic)
 Creare una variabile con un [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).  
@@ -58,10 +58,10 @@ Creare una variabile con un [istruzione Dim](../../../../visual-basic/language-r
 ## <a name="see-also"></a>Vedere anche
 
 - [Variabili](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Dichiarazione di variabili](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Nomi di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Caratteristiche di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Istruzioni](../../../../visual-basic/language-reference/statements/index.md)
 - [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Option Infer (istruzione)](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Istruzione Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

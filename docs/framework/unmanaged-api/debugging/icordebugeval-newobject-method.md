@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9c2d6a66eca080b480b508afea36c33b3e0aeec0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989040"
 ---
 # <a name="icordebugevalnewobject-method"></a>Metodo ICorDebugEval::NewObject
 Consente di allocare una nuova istanza dell'oggetto e chiama il metodo costruttore specificato.  

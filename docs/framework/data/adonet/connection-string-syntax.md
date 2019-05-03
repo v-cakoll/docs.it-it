@@ -3,11 +3,11 @@ title: Sintassi delle stringhe di connessione
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
 ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608021"
 ---
 # <a name="connection-string-syntax"></a>Sintassi delle stringhe di connessione
 Ogni provider di dati .NET Framework include un oggetto `Connection` che eredita da <xref:System.Data.Common.DbConnection> oltre a una proprietà <xref:System.Data.Common.DbConnection.ConnectionString%2A> specifica del provider. La sintassi della stringa di connessione specifica per ogni provider è documentata in questa proprietà `ConnectionString`. Nella tabella seguente sono elencati i quattro provider di dati inclusi in .NET Framework.  
@@ -22,13 +22,13 @@ Ogni provider di dati .NET Framework include un oggetto `Connection` che eredita
 ## <a name="connection-string-builders"></a>Generatori di stringhe di connessione  
  In ADO.NET 2.0 sono stati introdotti i generatori di stringhe di connessione seguenti per i provider di dati .NET Framework.  
   
--   <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
+- <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
   
--   <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
+- <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
   
--   <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
+- <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
   
--   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
+- <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
  I generatori di stringhe di connessione consentono di costruire stringhe di connessione sintatticamente valide in fase di esecuzione, pertanto non è necessario concatenare manualmente i valori delle stringhe di connessione nel codice. Per altre informazioni, vedere [Compilatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md).  
 

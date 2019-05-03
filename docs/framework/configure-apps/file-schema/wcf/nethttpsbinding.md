@@ -3,11 +3,11 @@ title: <netHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
 ms.openlocfilehash: 400444c0346b47d86ad799d4f8f2e7531b74a94c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775895"
 ---
 # <a name="nethttpsbinding"></a>\<netHttpsBinding>
 Rappresenta un'associazione che un servizio Windows Communication Foundation (WCF) è possibile usare per configurare ed esporre endpoint che sono in grado di comunicare tramite HTTPS. Nel caso di un contratto duplex, verrà usato Web Sockets. In caso contrario, verrà usato HTTPS.  
@@ -91,7 +91,7 @@ Elemento successivo
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<le associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
  NetHttpsBinding usa HTTPS come trasporto per l'invio di messaggi. Nel caso di un contratto duplex, verrà usato Web Sockets.  Se si usa un contratto richiesta-risposta, NetHttpsBinding si comporta come BasicHttpsBinding con un codificatore binario.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59316739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785802"
 ---
 # <a name="key-frame-animations-overview"></a>Cenni preliminari sulle animazioni con fotogrammi chiave
 Questo argomento presenta le animazioni con fotogrammi chiave. Le animazioni con fotogrammi chiave consentono di usare più di due valori di destinazione e di controllare il metodo di interpolazione di un'animazione.  
@@ -28,11 +28,11 @@ Questo argomento presenta le animazioni con fotogrammi chiave. Le animazioni con
   
  Per aggiungere un'animazione con fotogrammi chiave, completare la procedura seguente.  
   
--   Dichiarare l'animazione e specificare la relativa <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, come si farebbe per un'animazione from/to/by.  
+- Dichiarare l'animazione e specificare la relativa <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, come si farebbe per un'animazione from/to/by.  
   
--   Per ogni valore di destinazione, creare un fotogramma chiave del tipo appropriato, impostarne il valore e <xref:System.Windows.Media.Animation.KeyTime>e aggiungerlo all'animazione <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> raccolta.  
+- Per ogni valore di destinazione, creare un fotogramma chiave del tipo appropriato, impostarne il valore e <xref:System.Windows.Media.Animation.KeyTime>e aggiungerlo all'animazione <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> raccolta.  
   
--   Associare l'animazione a una proprietà, come si farebbe con un'animazione From/To/By. Per altre informazioni sull'applicazione di un'animazione a una proprietà usando uno storyboard, vedere [Cenni preliminari sugli storyboard](storyboards-overview.md).  
+- Associare l'animazione a una proprietà, come si farebbe con un'animazione From/To/By. Per altre informazioni sull'applicazione di un'animazione a una proprietà usando uno storyboard, vedere [Cenni preliminari sugli storyboard](storyboards-overview.md).  
   
  L'esempio seguente usa un' <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> animare una <xref:System.Windows.Shapes.Rectangle> elemento in quattro posizioni diverse.  
   
@@ -46,11 +46,11 @@ Questo argomento presenta le animazioni con fotogrammi chiave. Le animazioni con
   
  Le classi di animazione con fotogrammi chiave appartengono al <xref:System.Windows.Media.Animation> dello spazio dei nomi e sono conformi alla convenzione di denominazione seguente:  
   
- *\<tipo >* `AnimationUsingKeyFrames`  
+ *\<Tipo>* `AnimationUsingKeyFrames`  
   
  Dove *\<Tipo>* è il tipo di valore cui è stata aggiunta un'animazione dalla classe.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce le classi di animazione con fotogrammi chiave seguenti.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre le classi di animazione con fotogrammi chiave seguenti.  
   
 |Tipo di proprietà|Classe di animazione From/To/By corrispondente|Metodi di interpolazione supportati|  
 |-------------------|------------------------------------------------|-------------------------------------|  
@@ -79,39 +79,39 @@ Questo argomento presenta le animazioni con fotogrammi chiave. Le animazioni con
 ## <a name="target-values-key-frames-and-key-times"></a>Valori di destinazione (fotogrammi chiave) e chiavi temporali  
  Così come esistono diversi tipi di animazioni con fotogrammi chiave per l'animazione di diversi tipi di proprietà, esistono anche diversi tipi di oggetti fotogrammi chiave: uno per ogni tipo di valore animato e metodo di interpolazione supportato. I tipi di fotogrammi chiave sono conformi alle convenzione di denominazione seguente:  
   
- *\<InterpolationMethod >\<tipo >* `KeyFrame`  
+ *\<Metodo di interpolazione>\<Tipo>* `KeyFrame`  
   
  Dove *\<Metodo di interpolazione>* è il metodo di interpolazione usato dal fotogramma chiave e *\<Tipo>* è il tipo di valore cui è stata aggiunta un'animazione dalla classe. Un'animazione con fotogrammi chiave che supporta tutti e tre i metodi di interpolazione disporrà di tre tipi di fotogrammi chiave che è possibile usare. Ad esempio, è possibile usare tre tipi di fotogrammi chiave con una <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, e <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>. I metodi di interpolazione sono descritti in dettaglio in una sezione successiva.  
   
  Lo scopo principale di un fotogramma chiave consiste nello specificare un <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> e un <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>. Ogni tipo di fotogramma chiave offre queste due proprietà.  
   
--   Il <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> proprietà specifica il valore di destinazione per quel fotogramma chiave.  
+- Il <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> proprietà specifica il valore di destinazione per quel fotogramma chiave.  
   
--   Il <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> proprietà specifica quando (all'interno dell'animazione <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) di un fotogramma chiave <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> viene raggiunto.  
+- Il <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> proprietà specifica quando (all'interno dell'animazione <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) di un fotogramma chiave <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> viene raggiunto.  
   
  Quando viene avviata un'animazione con fotogrammi chiave, esegue l'iterazione attraverso i relativi fotogrammi chiave nell'ordine definito dalla loro <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> proprietà.  
   
--   Se non è presente alcun fotogramma chiave all'ora 0, l'animazione crea una transizione tra il valore corrente della proprietà di destinazione e il <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> del primo fotogramma chiave; in caso contrario, l'output dell'animazione valore diventa il valore del primo fotogramma chiave.  
+- Se non è presente alcun fotogramma chiave all'ora 0, l'animazione crea una transizione tra il valore corrente della proprietà di destinazione e il <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> del primo fotogramma chiave; in caso contrario, l'output dell'animazione valore diventa il valore del primo fotogramma chiave.  
   
--   L'animazione crea una transizione tra il <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> dei fotogrammi chiave primi e secondo usando il metodo di interpolazione specificato dal secondo fotogramma chiave. La transizione inizia in corrispondenza del primo fotogramma chiave <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> e termina quando il secondo fotogramma chiave <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> viene raggiunto.  
+- L'animazione crea una transizione tra il <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> dei fotogrammi chiave primi e secondo usando il metodo di interpolazione specificato dal secondo fotogramma chiave. La transizione inizia in corrispondenza del primo fotogramma chiave <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> e termina quando il secondo fotogramma chiave <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> viene raggiunto.  
   
--   L'animazione continua, creando transizioni tra ogni fotogramma chiave successivo e quello precedente.  
+- L'animazione continua, creando transizioni tra ogni fotogramma chiave successivo e quello precedente.  
   
--   Infine, le transizioni di animazione al valore del fotogramma chiave con la maggiore chiave temporale che è uguale a o minore dell'animazione <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
+- Infine, le transizioni di animazione al valore del fotogramma chiave con la maggiore chiave temporale che è uguale a o minore dell'animazione <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
   
  Se l'animazione <xref:System.Windows.Media.Animation.Timeline.Duration%2A> viene <xref:System.Windows.Duration.Automatic%2A> o dai relativi <xref:System.Windows.Media.Animation.Timeline.Duration%2A> è uguale all'ora dell'ultimo fotogramma chiave, l'animazione viene terminata. In caso contrario, se l'animazione <xref:System.Windows.Duration> è maggiore della chiave temporale dell'ultimo fotogramma chiave, l'animazione mantiene il valore del fotogramma chiave fino a quando non raggiunge la fine del relativo <xref:System.Windows.Duration>. Come tutte le animazioni, un'animazione con fotogrammi chiave Usa relativo <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> proprietà per determinare se mantiene il valore finale quando raggiunge la fine del periodo attivo. Per altre informazioni, vedere [Cenni preliminari sui comportamenti temporali](timing-behaviors-overview.md).  
   
  L'esempio seguente usa il <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> oggetto definito nell'esempio precedente per illustrare come il <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> e <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> funzionamento delle proprietà.  
   
--   Il primo fotogramma chiave imposta immediatamente il valore di output dell'animazione su 0.  
+- Il primo fotogramma chiave imposta immediatamente il valore di output dell'animazione su 0.  
   
--   Il secondo fotogramma chiave aggiunge un'animazione da 0 a 350. Viene avviato dopo la fine del primo fotogramma chiave (0 secondi), viene riprodotto per 2 secondi e viene terminato alle 0:0:2.  
+- Il secondo fotogramma chiave aggiunge un'animazione da 0 a 350. Viene avviato dopo la fine del primo fotogramma chiave (0 secondi), viene riprodotto per 2 secondi e viene terminato alle 0:0:2.  
   
--   Il terzo fotogramma chiave aggiunge un'animazione da 350 a 50. Viene avviato dopo la fine del secondo fotogramma chiave (2 secondi), viene riprodotto per 5 secondi e viene terminato alle 0:0:7.  
+- Il terzo fotogramma chiave aggiunge un'animazione da 350 a 50. Viene avviato dopo la fine del secondo fotogramma chiave (2 secondi), viene riprodotto per 5 secondi e viene terminato alle 0:0:7.  
   
--   Il quarto fotogramma chiave aggiunge un'animazione da 50 a 200. Viene avviato dopo la fine del terzo fotogramma chiave (7 secondi), viene riprodotto per 1 secondo e viene terminato alle 0:0:8.  
+- Il quarto fotogramma chiave aggiunge un'animazione da 50 a 200. Viene avviato dopo la fine del terzo fotogramma chiave (7 secondi), viene riprodotto per 1 secondo e viene terminato alle 0:0:8.  
   
--   Poiché il <xref:System.Windows.Media.Animation.Timeline.Duration%2A> dell'animazione è stata impostata su 10 secondi, l'animazione mantiene il relativo valore finale per due secondi prima di terminare in fase di = 0:0:10.  
+- Poiché il <xref:System.Windows.Media.Animation.Timeline.Duration%2A> dell'animazione è stata impostata su 10 secondi, l'animazione mantiene il relativo valore finale per due secondi prima di terminare in fase di = 0:0:10.  
   
  [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
@@ -204,26 +204,26 @@ Un key spline con punti di controllo (0.25, 0.5) e (0.75, 1.0)
 ### <a name="timespan-values"></a>Valori TimeSpan  
  È possibile usare <xref:System.TimeSpan> i valori per specificare un <xref:System.Windows.Media.Animation.KeyTime>. Il valore deve essere maggiore o uguale a 0 e minore o uguale alla durata dell'animazione. L'esempio seguente illustra un'animazione con una durata di 10 secondi e quattro fotogrammi chiave le cui chiavi temporali sono specificate come valori.  
   
--   Il primo fotogramma chiave aggiunge un'animazione dal valore di base a 100 per i primi 3 secondi e viene terminato alle 0:0:03.  
+- Il primo fotogramma chiave aggiunge un'animazione dal valore di base a 100 per i primi 3 secondi e viene terminato alle 0:0:03.  
   
--   Il secondo fotogramma chiave aggiunge un'animazione da 100 a 200. Viene avviato dopo la fine del primo fotogramma chiave (3 secondi), viene riprodotto per 5 secondi e viene terminato alle 0:0:8.  
+- Il secondo fotogramma chiave aggiunge un'animazione da 100 a 200. Viene avviato dopo la fine del primo fotogramma chiave (3 secondi), viene riprodotto per 5 secondi e viene terminato alle 0:0:8.  
   
--   Il terzo fotogramma chiave aggiunge un'animazione da 200 a 500. Viene avviato dopo la fine del secondo fotogramma chiave (8 secondi), viene riprodotto per 1 secondo e viene terminato alle 0:0:9.  
+- Il terzo fotogramma chiave aggiunge un'animazione da 200 a 500. Viene avviato dopo la fine del secondo fotogramma chiave (8 secondi), viene riprodotto per 1 secondo e viene terminato alle 0:0:9.  
   
--   Il quarto fotogramma chiave aggiunge un'animazione da 500 a 600. Viene avviato dopo la fine del terzo fotogramma chiave (9 secondi), viene riprodotto per 1 secondo e viene terminato alle 0:0:10.  
+- Il quarto fotogramma chiave aggiunge un'animazione da 500 a 600. Viene avviato dopo la fine del terzo fotogramma chiave (9 secondi), viene riprodotto per 1 secondo e viene terminato alle 0:0:10.  
   
  [!code-xaml[keyframes_ovw_snippet#TimeSpanKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#timespankeytimeexample)]  
   
 ### <a name="percentage-values"></a>Valori percentuali  
  Un valore percentuale specifica che il fotogramma chiave termina in una determinata percentuale dell'animazione <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] specificare la percentuale come numero seguito dal simbolo `%`. Nel codice, si utilizza il <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> metodo e passare un <xref:System.Double> che indica la percentuale. Il valore deve essere maggiore o uguale a 0 e minore o uguale a 100%. L'esempio seguente illustra un'animazione con una durata di 10 secondi e quattro fotogrammi chiave le cui chiavi temporali sono specificate come percentuali.  
   
--   Il primo fotogramma chiave aggiunge un'animazione dal valore di base a 100 per i primi 3 secondi e viene terminato alle 0:0:3.  
+- Il primo fotogramma chiave aggiunge un'animazione dal valore di base a 100 per i primi 3 secondi e viene terminato alle 0:0:3.  
   
--   Il secondo fotogramma chiave aggiunge un'animazione da 100 a 200. Viene avviato dopo la fine del primo fotogramma chiave (3 secondi), viene riprodotto per 5 secondi e viene terminato alle 0:0:8 (0,8 * 10 = 8).  
+- Il secondo fotogramma chiave aggiunge un'animazione da 100 a 200. Viene avviato dopo la fine del primo fotogramma chiave (3 secondi), viene riprodotto per 5 secondi e viene terminato alle 0:0:8 (0,8 * 10 = 8).  
   
--   Il terzo fotogramma chiave aggiunge un'animazione da 200 a 500. Viene avviato dopo la fine del secondo fotogramma chiave (8 secondi), viene riprodotto per 1 secondo e viene terminato alle 0:0:9 (0,9 * 10 = 9).  
+- Il terzo fotogramma chiave aggiunge un'animazione da 200 a 500. Viene avviato dopo la fine del secondo fotogramma chiave (8 secondi), viene riprodotto per 1 secondo e viene terminato alle 0:0:9 (0,9 * 10 = 9).  
   
--   Il quarto fotogramma chiave aggiunge un'animazione da 500 a 600. Viene avviato dopo la fine del terzo fotogramma chiave (9 secondi), viene riprodotto per 1 secondo e viene terminato alle 0:0:10 (1 * 10 = 10).  
+- Il quarto fotogramma chiave aggiunge un'animazione da 500 a 600. Viene avviato dopo la fine del terzo fotogramma chiave (9 secondi), viene riprodotto per 1 secondo e viene terminato alle 0:0:10 (1 * 10 = 10).  
   
  [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
   
@@ -232,13 +232,13 @@ Un key spline con punti di controllo (0.25, 0.5) e (0.75, 1.0)
   
  Oggetto <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> chiave temporale divide equamente il tempo disponibile per il numero di fotogrammi chiave per determinare l'ora di fine di ogni fotogramma chiave. Nell'esempio seguente illustra un'animazione con una durata di 10 secondi e quattro fotogrammi chiave le cui chiavi temporali sono specificati come <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>.  
   
--   Il primo fotogramma chiave aggiunge un'animazione dal valore di base a 100 per i primi 2,5 secondi e viene terminato alle 0:0:2.5.  
+- Il primo fotogramma chiave aggiunge un'animazione dal valore di base a 100 per i primi 2,5 secondi e viene terminato alle 0:0:2.5.  
   
--   Il secondo fotogramma chiave aggiunge un'animazione da 100 a 200. Viene avviato dopo la fine del primo fotogramma chiave (2,5 secondi), viene riprodotto per circa 2,5 secondi e viene terminato alle 0:0:5.  
+- Il secondo fotogramma chiave aggiunge un'animazione da 100 a 200. Viene avviato dopo la fine del primo fotogramma chiave (2,5 secondi), viene riprodotto per circa 2,5 secondi e viene terminato alle 0:0:5.  
   
--   Il terzo fotogramma chiave aggiunge un'animazione da 200 a 500. Viene avviato dopo la fine del secondo fotogramma chiave (5 secondi), viene riprodotto per 2,5 secondi e viene terminato alle 0:0:7.5.  
+- Il terzo fotogramma chiave aggiunge un'animazione da 200 a 500. Viene avviato dopo la fine del secondo fotogramma chiave (5 secondi), viene riprodotto per 2,5 secondi e viene terminato alle 0:0:7.5.  
   
--   Il quarto fotogramma chiave aggiunge un'animazione da 500 a 600. Viene avviato dopo la fine del secondo fotogramma chiave (7,5 secondi), viene riprodotto per 2,5 secondi e viene terminato alle 0:0:1.  
+- Il quarto fotogramma chiave aggiunge un'animazione da 500 a 600. Viene avviato dopo la fine del secondo fotogramma chiave (7,5 secondi), viene riprodotto per 2,5 secondi e viene terminato alle 0:0:1.  
   
  [!code-xaml[keyframes_ovw_snippet#UniformKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  
   
@@ -263,11 +263,11 @@ Un key spline con punti di controllo (0.25, 0.5) e (0.75, 1.0)
   
 2. Determinare il *tempo di interpolazione totale* dell'animazione, il tempo totale che impiega l'animazione con fotogrammi chiave per completare un'iterazione in avanti.  
   
-    1.  Se l'animazione <xref:System.Windows.Media.Animation.Timeline.Duration%2A> non è <xref:System.Windows.Duration.Automatic%2A> oppure <xref:System.Windows.Duration.Forever%2A>, il tempo di interpolazione totale è il valore dell'animazione <xref:System.Windows.Media.Animation.Timeline.Duration%2A> proprietà.  
+    1. Se l'animazione <xref:System.Windows.Media.Animation.Timeline.Duration%2A> non è <xref:System.Windows.Duration.Automatic%2A> oppure <xref:System.Windows.Duration.Forever%2A>, il tempo di interpolazione totale è il valore dell'animazione <xref:System.Windows.Media.Animation.Timeline.Duration%2A> proprietà.  
   
-    2.  In caso contrario, il tempo di interpolazione totale è il più grande <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> specificato tra i relativi fotogrammi chiave, se presente.  
+    2. In caso contrario, il tempo di interpolazione totale è il più grande <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> specificato tra i relativi fotogrammi chiave, se presente.  
   
-    3.  In caso contrario, il tempo di interpolazione totale è pari a 1 secondo.  
+    3. In caso contrario, il tempo di interpolazione totale è pari a 1 secondo.  
   
 3. Usare il valore di tempo di interpolazione totale per risolvere <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> valori.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
 ms.openlocfilehash: 0ab343da821e8994ac3a652bfc55db261d5e48f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857649"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Differenze di convalida del certificato tra HTTPS, SSL su TCP e protezione SOAP
 Utilizzare i certificati in Windows Communication Foundation (WCF) con sicurezza a livello di messaggio (SOAP) oltre alla sicurezza di livello di trasporto (TLS) su HTTP (HTTPS) o TCP. In questo argomento vengono descritte le differenze nella modalità di convalida dei certificati.  

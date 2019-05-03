@@ -6,11 +6,11 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
 ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863675"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Procedura: Chiamare un metodo di estensione (Visual Basic)
 I metodi di estensione consentono di aggiungere metodi a una classe esistente. Dopo che un metodo di estensione è dichiarato e inserito nell'ambito, è possibile chiamarlo come metodo di istanza del tipo che estende. Per altre informazioni su come scrivere un metodo di estensione, vedere [come: Scrivere un metodo di estensione](./how-to-write-an-extension-method.md).  
@@ -98,4 +98,4 @@ End Module
 
 - [Procedura: Scrivere un metodo di estensione](./how-to-write-an-extension-method.md)
 - [Metodi di estensione](./extension-methods.md)
-- [Ambito in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

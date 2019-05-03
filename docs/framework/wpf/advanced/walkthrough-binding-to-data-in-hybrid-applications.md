@@ -9,30 +9,30 @@ helpviewer_keywords:
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
 ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981812"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Procedura dettagliata: Data binding in applicazioni ibride
 Associazione di un'origine dati a un controllo è essenziale per fornire agli utenti l'accesso ai dati sottostanti, se si usa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Questa procedura dettagliata illustra come usare l'associazione dati in applicazioni ibride che includono entrambe [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controlli.  
   
  Le attività illustrate nella procedura dettagliata sono le seguenti:  
   
--   Creazione del progetto.  
+- Creazione del progetto.  
   
--   Definizione del modello dati.  
+- Definizione del modello dati.  
   
--   Specifica del layout del form.  
+- Specifica del layout del form.  
   
--   Specifica delle associazioni dati.  
+- Specifica delle associazioni dati.  
   
--   Visualizzazione dei dati usando l'interoperabilità.  
+- Visualizzazione dei dati usando l'interoperabilità.  
   
--   Aggiunta dell'origine dati al progetto.  
+- Aggiunta dell'origine dati al progetto.  
   
--   Associazione all'origine dati.  
+- Associazione all'origine dati.  
   
  Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [Data Binding nell'esempio di applicazioni ibride](https://go.microsoft.com/fwlink/?LinkID=159983).  
   
@@ -41,9 +41,9 @@ Associazione di un'origine dati a un controllo è essenziale per fornire agli ut
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   Accesso al database Northwind di esempio in esecuzione su Microsoft SQL Server.  
+- Accesso al database Northwind di esempio in esecuzione su Microsoft SQL Server.  
   
 ## <a name="creating-the-project"></a>Creazione del progetto  
   
@@ -53,9 +53,9 @@ Associazione di un'origine dati a un controllo è essenziale per fornire agli ut
   
 2. In Esplora soluzioni aggiungere riferimenti agli assembly seguenti.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
 3. Aprire MainWindow. XAML nel [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
@@ -74,7 +74,7 @@ Associazione di un'origine dati a un controllo è essenziale per fornire agli ut
   
 #### <a name="to-define-the-data-template"></a>Per definire il modello di dati  
   
--   Copiare il seguente XAML nel <xref:System.Windows.Controls.Grid> dichiarazione dell'elemento.  
+- Copiare il seguente XAML nel <xref:System.Windows.Controls.Grid> dichiarazione dell'elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
@@ -83,13 +83,13 @@ Associazione di un'origine dati a un controllo è essenziale per fornire agli ut
   
 #### <a name="to-set-up-the-grid-layout"></a>Per impostare il layout Grid  
   
--   Copiare il seguente XAML nel <xref:System.Windows.Controls.Grid> dichiarazione dell'elemento.  
+- Copiare il seguente XAML nel <xref:System.Windows.Controls.Grid> dichiarazione dell'elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>Per impostare i controlli Label  
   
--   Copiare il seguente XAML nel <xref:System.Windows.Controls.Grid> dichiarazione dell'elemento.  
+- Copiare il seguente XAML nel <xref:System.Windows.Controls.Grid> dichiarazione dell'elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
@@ -100,7 +100,7 @@ Associazione di un'origine dati a un controllo è essenziale per fornire agli ut
   
 #### <a name="to-specify-data-bindings"></a>Per specificare le associazioni dati  
   
--   Copiare il seguente XAML nel <xref:System.Windows.Controls.Grid> dichiarazione dell'elemento.  
+- Copiare il seguente XAML nel <xref:System.Windows.Controls.Grid> dichiarazione dell'elemento.  
   
      Il <xref:System.Windows.Data.Binding> classe associa il <xref:System.Windows.Controls.TextBox> controlli ai campi appropriati nel database.  
   
@@ -111,7 +111,7 @@ Associazione di un'origine dati a un controllo è essenziale per fornire agli ut
   
 #### <a name="to-display-data-in-the-datagridview-control"></a>Per visualizzare i dati nel controllo DataGridView  
   
--   Copiare il seguente XAML nel <xref:System.Windows.Controls.Grid> dichiarazione dell'elemento.  
+- Copiare il seguente XAML nel <xref:System.Windows.Controls.Grid> dichiarazione dell'elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
@@ -179,5 +179,5 @@ Associazione di un'origine dati a un controllo è essenziale per fornire agli ut
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Progettare XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [Data Binding nell'esempio di applicazioni ibride](https://go.microsoft.com/fwlink/?LinkID=159983)
-- [Procedura dettagliata: Hosting di un controllo composito Windows Form in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [Procedura dettagliata: Hosting di un controllo composito WPF in Windows Form](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

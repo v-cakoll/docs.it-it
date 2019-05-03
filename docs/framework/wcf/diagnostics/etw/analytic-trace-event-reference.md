@@ -5,14 +5,14 @@ helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
 ms.openlocfilehash: 0f8b4c15f2afefbc62b98dca66dcf3ccc31b1dc0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753036"
 ---
 # <a name="analytic-trace-event-reference"></a>Riferimento dell'evento di traccia analitica
-Nella tabella seguente definisce i livelli degli eventi, identificatori e i messaggi associati con la traccia analitica del WCF.  
+Nella tabella seguente definisce i livelli dell'evento, identificatori e i messaggi associati con la traccia analitica di WCF.  
   
 ## <a name="event-reference"></a>Riferimento dell'evento  
   
@@ -126,7 +126,7 @@ Nella tabella seguente definisce i livelli degli eventi, identificatori e i mess
 |[3305 - ClientBaseCachedChannelFactoryCount](../../../../../docs/framework/wcf/diagnostics/etw/3305-clientbasecachedchannelfactorycount.md)|Informazioni|Il numero di channel factory memorizzato nella cache è: '%1'.  È possibile memorizzare nella cache al massimo '%2' channel factory.|ServiceModel|  
 |[3306 - ClientBaseChannelFactoryAgedOutofCache](../../../../../docs/framework/wcf/diagnostics/etw/3306-clientbasechannelfactoryagedoutofcache.md)|Informazioni|Una channel factory è stata rimossa dalla cache perché è stato raggiunto il limite di '%1' della cache.|ServiceModel|  
 |[3307 - ClientBaseChannelFactoryCacheHit](../../../../../docs/framework/wcf/diagnostics/etw/3307-clientbasechannelfactorycachehit.md)|Informazioni|Channel factory corrispondente usata trovata nella cache.|ServiceModel|  
-|[3308 - ClientBaseUsingLocalChannelFactory](../../../../../docs/framework/wcf/diagnostics/etw/3308-clientbaseusinglocalchannelfactory.md)|Informazioni|Channel factory non utilizzata dalla cache, ad esempio la memorizzazione nella cache disattivata.|ServiceModel|  
+|[3308 - ClientBaseUsingLocalChannelFactory](../../../../../docs/framework/wcf/diagnostics/etw/3308-clientbaseusinglocalchannelfactory.md)|Informazioni|Non utilizza channel factory dalla cache, ad esempio la memorizzazione nella cache disabilitata, ad esempio.|ServiceModel|  
 |[3309 - QueryCompositionExecuted](../../../../../docs/framework/wcf/diagnostics/etw/3309-querycompositionexecuted.md)|Informazioni|Composizione query mediante '%1' eseguita sull'URI di richiesta: '%2'.|ServiceModel|  
 |[3310 - DispatchFailed](../../../../../docs/framework/wcf/diagnostics/etw/3310-dispatchfailed.md)|Error|L'operazione '%1' è stata inviata con errori.|ServiceModel|  
 |[3311 - DispatchSuccessful](../../../../../docs/framework/wcf/diagnostics/etw/3311-dispatchsuccessful.md)|Informazioni|L'operazione '%1' è stata inviata correttamente.|ServiceModel|  

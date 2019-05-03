@@ -16,11 +16,11 @@ ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aff2dd26db4abb892b2fc775052b6e833aa25267
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754700"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Miglioramento del debug tramite gli attributi di visualizzazione del debugger
 
@@ -45,11 +45,11 @@ Se ad esempio un oggetto C# ha un metodo `ToString()` sottoposto a override, il 
 ## <a name="using-the-debuggerbrowsableattribute"></a>Uso di DebuggerBrowsableAttribute
  Applicare <xref:System.Diagnostics.DebuggerBrowsableAttribute> a un campo o una proprietà per specificare come il campo o la proprietà deve essere visualizzata nella finestra del debugger. Il costruttore di questo attributo accetta uno dei valori di enumerazione <xref:System.Diagnostics.DebuggerBrowsableState>, che specifica uno degli stati seguenti:
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Never> indica che il membro non viene visualizzato nella finestra dei dati.  Ad esempio, usando questo valore per <xref:System.Diagnostics.DebuggerBrowsableAttribute> in un campo, il campo viene rimosso dalla gerarchia. Il campo non viene visualizzato quando si espande il tipo di inclusione facendo clic sul segno più (+) per l'istanza del tipo.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Never> indica che il membro non viene visualizzato nella finestra dei dati.  Ad esempio, usando questo valore per <xref:System.Diagnostics.DebuggerBrowsableAttribute> in un campo, il campo viene rimosso dalla gerarchia. Il campo non viene visualizzato quando si espande il tipo di inclusione facendo clic sul segno più (+) per l'istanza del tipo.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> indica che il membro viene visualizzato, ma non espanso per impostazione predefinita.  Comportamento predefinito.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> indica che il membro viene visualizzato, ma non espanso per impostazione predefinita.  Comportamento predefinito.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> indica che non viene visualizzato il membro in sé, ma gli oggetti costituenti se è presente una matrice o una raccolta.
+- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> indica che non viene visualizzato il membro in sé, ma gli oggetti costituenti se è presente una matrice o una raccolta.
 
 > [!NOTE]
 >  <xref:System.Diagnostics.DebuggerBrowsableAttribute> non è supportato da Visual Basic in .NET Framework versione 2.0.

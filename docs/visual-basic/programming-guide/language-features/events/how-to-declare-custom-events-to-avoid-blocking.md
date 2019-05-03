@@ -7,11 +7,11 @@ helpviewer_keywords:
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
 ms.openlocfilehash: 6eea47ea2c8aee697eb34ca904dad22ca88e6ce4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051897"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>Procedura: Dichiarare eventi personalizzati per evitare il blocco (Visual Basic)
 Esistono diversi casi quando è importante che un gestore eventi non bloccano i gestori eventi successivi. Eventi personalizzati consentono di chiamare i relativi gestori eventi in modo asincrono l'evento.  

@@ -3,11 +3,11 @@ title: Gestione della concorrenza con DependentTransaction
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
 ms.openlocfilehash: b06470ed76c15208f019874db8573d0ed4778d33
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793640"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Gestione della concorrenza con DependentTransaction
 Il metodo <xref:System.Transactions.Transaction> consente di clonare un oggetto <xref:System.Transactions.Transaction.DependentClone%2A>. L'unico scopo di questo metodo è impedire il commit della transazione mentre altri blocchi di codice (ad esempio un thread di lavoro) stanno agendo su di essa. Quando le operazioni eseguite all'interno della transazione clonata sono state completate e il sistema è pronto ad eseguirne il commit, la transazione clonata può utilizzare il metodo <xref:System.Transactions.DependentTransaction.Complete%2A> per informare il creatore della transazione originale in merito. In questo modo è possibile preservare la coerenza e la correttezza dei dati.  
@@ -17,9 +17,9 @@ Il metodo <xref:System.Transactions.Transaction> consente di clonare un oggetto 
 ## <a name="creating-a-dependent-clone"></a>Creazione di un clone dipendente  
  Per creare una transazione dipendente, chiamare il metodo <xref:System.Transactions.Transaction.DependentClone%2A> e passare l'enumerazione <xref:System.Transactions.DependentCloneOption> come parametro. Questo parametro definisce il comportamento della transazione nel caso in cui il metodo `Commit` venga chiamato nella transazione padre prima che il clone dipendente chiami il metodo <xref:System.Transactions.DependentTransaction.Complete%2A> per indicare che è pronto per il commit. Di seguito sono elencati i valori validi di questo parametro e le relative descrizioni.  
   
--   <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> Crea una transazione dipendente che blocca il processo di commit della transazione padre finché i tempi di transazione padre indietro o fino a <xref:System.Transactions.DependentTransaction.Complete%2A> viene chiamato su tutti i dipendenti a indicarne il completamento. Ciò è utile quando il client desidera che la transazione padre esegua il commit solo dopo il completamento delle transazioni dipendenti. Se la transazione padre termina la propria esecuzione prima delle transazioni dipendenti e chiama il metodo <xref:System.Transactions.CommittableTransaction.Commit%2A> sulla transazione, il processo di commit viene bloccato in un stato che consente l'esecuzione di operazioni aggiuntive relative alla transazione e la creazione di nuove integrazioni finché tutte le transazioni dipendenti non chiamano il metodo <xref:System.Transactions.DependentTransaction.Complete%2A>. Il processo di commit della transazione inizia non appena tutte le transazioni dipendenti terminano la propria esecuzione e chiamano il metodo <xref:System.Transactions.DependentTransaction.Complete%2A>.  
+- Il valore <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> consente di creare una transazione dipendente che blocca il processo di commit della transazione padre finché non scade il timeout di quest'ultima o finché il metodo <xref:System.Transactions.DependentTransaction.Complete%2A> non viene chiamato in tutte le transazioni dipendenti a indicarne il completamento. Ciò è utile quando il client desidera che la transazione padre esegua il commit solo dopo il completamento delle transazioni dipendenti. Se la transazione padre termina la propria esecuzione prima delle transazioni dipendenti e chiama il metodo <xref:System.Transactions.CommittableTransaction.Commit%2A> sulla transazione, il processo di commit viene bloccato in un stato che consente l'esecuzione di operazioni aggiuntive relative alla transazione e la creazione di nuove integrazioni finché tutte le transazioni dipendenti non chiamano il metodo <xref:System.Transactions.DependentTransaction.Complete%2A>. Il processo di commit della transazione inizia non appena tutte le transazioni dipendenti terminano la propria esecuzione e chiamano il metodo <xref:System.Transactions.DependentTransaction.Complete%2A>.  
   
--   <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>, d'altra parte, crea una transazione dipendente interrompe automaticamente se <xref:System.Transactions.CommittableTransaction.Commit%2A> viene chiamato sulla transazione padre prima <xref:System.Transactions.DependentTransaction.Complete%2A> viene chiamato. In questo caso, il sistema esegue il rollback di qualsiasi operazione svolta nella transazione dipendente nell'intervallo di durata di un'unica transazione e nessuna entità ha la possibilità di eseguire il commit parziale della transazione dipendente.  
+- Il valore <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>, invece, crea una transazione dipendente che viene interrotta automaticamente se il metodo <xref:System.Transactions.CommittableTransaction.Commit%2A> viene chiamato sulla transazione padre prima che il metodo <xref:System.Transactions.DependentTransaction.Complete%2A> venga chiamato sulla transazione dipendente. In questo caso, il sistema esegue il rollback di qualsiasi operazione svolta nella transazione dipendente nell'intervallo di durata di un'unica transazione e nessuna entità ha la possibilità di eseguire il commit parziale della transazione dipendente.  
   
  Quando l'applicazione termina le proprie operazioni relative alla transazione dipendente, è necessario chiamare il metodo <xref:System.Transactions.DependentTransaction.Complete%2A> una sola volta. In caso contrario, viene generata un'eccezione <xref:System.InvalidOperationException>. Dopo l'esecuzione di questa chiamata, evitare l'esecuzione di altre operazioni sulla transazione o verrà generata un'eccezione.  
   
@@ -75,11 +75,11 @@ using(TransactionScope scope = new TransactionScope())
 ## <a name="concurrency-issues"></a>Problemi di concorrenza  
  Quando si utilizza la classe <xref:System.Transactions.DependentTransaction> occorre prendere in considerazione alcuni problemi di concorrenza aggiuntivi:  
   
--   Se il thread di lavoro esegue il rollback della transazione ma la transazione padre tenta di eseguirne il commit, viene generata un'eccezione <xref:System.Transactions.TransactionAbortedException>.  
+- Se il thread di lavoro esegue il rollback della transazione ma la transazione padre tenta di eseguirne il commit, viene generata un'eccezione <xref:System.Transactions.TransactionAbortedException>.  
   
--   È necessario creare un nuovo clone dipendente per ogni thread di lavoro della transazione. Evitare di passare lo stesso clone dipendente a più thread, in quando solo uno di essi è in grado di chiamare il metodo <xref:System.Transactions.DependentTransaction.Complete%2A> sul clone.  
+- È necessario creare un nuovo clone dipendente per ogni thread di lavoro della transazione. Evitare di passare lo stesso clone dipendente a più thread, in quando solo uno di essi è in grado di chiamare il metodo <xref:System.Transactions.DependentTransaction.Complete%2A> sul clone.  
   
--   Se il thread di lavoro genera un nuovo thread di lavoro, assicurarsi di creare un clone dipendente a partire dal clone dipendente e di passarlo al nuovo thread.  
+- Se il thread di lavoro genera un nuovo thread di lavoro, assicurarsi di creare un clone dipendente a partire dal clone dipendente e di passarlo al nuovo thread.  
   
 ## <a name="see-also"></a>Vedere anche
 

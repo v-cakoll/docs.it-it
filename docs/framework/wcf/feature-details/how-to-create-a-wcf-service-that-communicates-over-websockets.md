@@ -3,11 +3,11 @@ title: 'Procedura: Creare un servizio WCF per comunicare tramite WebSockets'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
 ms.openlocfilehash: 7125914e64ac3c7643f7338b1343654794cf45da
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59346366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787530"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Procedura: Creare un servizio WCF per comunicare tramite WebSockets
 I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.NetHttpBinding> per comunicare tramite WebSockets.  La tecnologia WebSockets viene usata quando <xref:System.ServiceModel.NetHttpBinding> determina che il contratto di servizio definisce un contratto di callback. In questo argomento viene descritto come implementare un servizio e un client WCF in cui viene usato l'oggetto <xref:System.ServiceModel.NetHttpBinding> per comunicare tramite WebSockets.  
@@ -108,7 +108,7 @@ I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.
   
      L'operazione del contratto di callback viene implementata come metodo asincrono.  
   
-    1.  Implementare il codice del client.  
+    1. Implementare il codice del client.  
   
         ```csharp  
         class Program  
@@ -133,7 +133,7 @@ I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.
   
          L'oggetto CallbackHandler viene ripetuto di seguito per maggiore chiarezza. L'applicazione client crea un nuovo oggetto InstanceContext e specifica l'implementazione dell'interfaccia di callback. Successivamente, crea un'istanza della classe proxy che invia un riferimento all'oggetto InstanceContext appena creato. Quando il client chiama il servizio, quest'ultimo chiamerà il client mediante il contratto di callback specificato.  
   
-    2.  Configurare il client  
+    2. Configurare il client  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  

@@ -9,44 +9,44 @@ ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61722939"
 ---
 # <a name="garbage-collection-etw-events"></a>Eventi ETW di Garbage Collection
 <a name="top"></a> Questi eventi raccolgono informazioni relative alla Garbage Collection ai fini della diagnostica e del debug, tra cui stabilire quante volte è stato eseguito il processo di Garbage Collection, la quantità di memoria liberata durante la procedura di Garbage Collection e così via.  
   
  Questa categoria include i seguenti eventi:  
   
--   [GCStart_V1 Event](#gcstart_v1_event)  
+- [GCStart_V1 Event](#gcstart_v1_event)  
   
--   [GCEnd_V1 Event](#gcend_v1_event)  
+- [GCEnd_V1 Event](#gcend_v1_event)  
   
--   [GCHeapStats_V1 Event](#gcheapstats_v1_event)  
+- [GCHeapStats_V1 Event](#gcheapstats_v1_event)  
   
--   [GCCreateSegment_V1 Event](#gccreatesegment_v1_event)  
+- [GCCreateSegment_V1 Event](#gccreatesegment_v1_event)  
   
--   [GCFreeSegment_V1 Event](#gcfreesegment_v1_event)  
+- [GCFreeSegment_V1 Event](#gcfreesegment_v1_event)  
   
--   [GCRestartEEBegin_V1 Event](#gcrestarteebegin_v1_event)  
+- [GCRestartEEBegin_V1 Event](#gcrestarteebegin_v1_event)  
   
--   [GCRestartEEEnd_V1 Event](#gcrestarteeend_v1_event)  
+- [GCRestartEEEnd_V1 Event](#gcrestarteeend_v1_event)  
   
--   [GCSuspendEE_V1 Event](#gcsuspendee_v1_event)  
+- [GCSuspendEE_V1 Event](#gcsuspendee_v1_event)  
   
--   [GCSuspendEEEnd_V1 Event](#gcsuspendeeend_v1_event)  
+- [GCSuspendEEEnd_V1 Event](#gcsuspendeeend_v1_event)  
   
--   [GCAllocationTick_V2 Event](#gcallocationtick_v2_event)  
+- [GCAllocationTick_V2 Event](#gcallocationtick_v2_event)  
   
--   [GCFinalizersBegin_V1 Event](#gcfinalizersbegin_v1_event)  
+- [GCFinalizersBegin_V1 Event](#gcfinalizersbegin_v1_event)  
   
--   [GCFinalizersEnd_V1 Event](#gcfinalizersend_v1_event)  
+- [GCFinalizersEnd_V1 Event](#gcfinalizersend_v1_event)  
   
--   [GCCreateConcurrentThread_V1 Event](#gccreateconcurrentthread_v1_event)  
+- [GCCreateConcurrentThread_V1 Event](#gccreateconcurrentthread_v1_event)  
   
--   [GCTerminateConcurrentThread_V1 Event](#gcterminateconcurrentthread_v1_event)  
+- [GCTerminateConcurrentThread_V1 Event](#gcterminateconcurrentthread_v1_event)  
   
 <a name="gcstart_v1_event"></a>   
 ## <a name="gcstartv1-event"></a>GCStart_V1 Event  

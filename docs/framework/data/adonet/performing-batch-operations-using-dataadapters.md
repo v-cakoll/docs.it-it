@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
 ms.openlocfilehash: bb3f35f17b2dd451b41035c8e34f7b3a886a26e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878292"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Esecuzione di operazioni batch tramite oggetti DataAdapter
 Il supporto batch in ADO.NET consente a un tipo <xref:System.Data.Common.DataAdapter> di raggruppare le operazioni INSERT, UPDATE e DELETE da un tipo <xref:System.Data.DataSet> o <xref:System.Data.DataTable> e di inviarle al server in batch, anziché inviare una singola operazione alla volta. La riduzione nel numero di percorsi di andata e ritorno al server determina in genere un notevole miglioramento delle prestazioni. Gli aggiornamenti batch sono supportati per i provider di dati .NET di SQL Server (<xref:System.Data.SqlClient>) e Oracle (<xref:System.Data.OracleClient>).  
@@ -134,7 +134,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ### <a name="accessing-updated-rows"></a>Accesso alle righe aggiornate  
  Quando l'elaborazione batch è disabilitata, è possibile accedere alla riga aggiornata mediante la proprietà <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> della classe <xref:System.Data.Common.RowUpdatedEventArgs>.  
   
- Quando l'elaborazione batch è abilitata, viene generato un unico evento `RowUpdated` per più righe. Pertanto, il valore della proprietà `Row` per ciascuna riga è null. `RowUpdating` gli eventi vengono comunque generati per ogni riga. Il metodo <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> della classe <xref:System.Data.Common.RowUpdatedEventArgs> consente di accedere alle righe elaborate mediante la copia dei riferimenti alle righe in una matrice. Se non viene elaborata nessuna riga, `CopyToRows` genera un'eccezione <xref:System.ArgumentNullException>. Usare la proprietà <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> per restituire il numero di righe elaborate prima di chiamare il metodo <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>.  
+ Quando l'elaborazione batch è abilitata, viene generato un unico evento `RowUpdated` per più righe. Pertanto, il valore della proprietà `Row` per ciascuna riga è null. Gli eventi `RowUpdating` vengono comunque generati per ogni riga. Il metodo <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> della classe <xref:System.Data.Common.RowUpdatedEventArgs> consente di accedere alle righe elaborate mediante la copia dei riferimenti alle righe in una matrice. Se non viene elaborata nessuna riga, `CopyToRows` genera un'eccezione <xref:System.ArgumentNullException>. Usare la proprietà <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> per restituire il numero di righe elaborate prima di chiamare il metodo <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>.  
   
 ### <a name="handling-data-errors"></a>Gestione degli errori di dati  
  I risultati dell'esecuzione batch sono identici a quelli ottenuti eseguendo le singole istruzioni una alla volta. Le istruzioni vengono eseguite nell'ordine in base al quale sono state aggiunte al batch. La gestione degli errori è la stessa sia in modalità batch sia quando la modalità batch è disabilitata. Ogni riga viene elaborata separatamente. Solo le righe che sono state elaborate correttamente nel database verranno aggiornate nell'oggetto <xref:System.Data.DataRow> corrispondente all'interno di <xref:System.Data.DataTable>.  

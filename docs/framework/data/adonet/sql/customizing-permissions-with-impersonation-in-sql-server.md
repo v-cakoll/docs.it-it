@@ -3,11 +3,11 @@ title: Personalizzazione delle autorizzazioni con rappresentazione in SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
 ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59326970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877904"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Personalizzazione delle autorizzazioni con rappresentazione in SQL Server
 In molte applicazioni vengono usate le stored procedure per accedere ai dati, basandosi sul concatenamento delle proprietà per restringere l'accesso alle tabelle di base. È possibile concedere autorizzazioni EXECUTE sulle stored procedure, revocando o negando le autorizzazioni sulle tabelle di base. SQL Server non verifica le autorizzazioni del chiamante se il proprietario della stored procedure coincide con quello delle tabelle. Il concatenamento delle proprietà non funziona se i proprietari degli oggetti sono diversi oppure se si usano istruzioni SQL dinamiche.  
@@ -59,11 +59,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="specifying-the-execution-context"></a>Specifica del contesto di esecuzione  
  Oltre a specificare un utente, è inoltre possibile usare EXECUTE AS con le parole chiave seguenti.  
   
--   CALLER. L'esecuzione come CALLER corrisponde all'impostazione predefinita. Se non vengono specificate altre opzioni, la stored procedure viene eseguita nel contesto di sicurezza del chiamante.  
+- CALLER. L'esecuzione come CALLER corrisponde all'impostazione predefinita. Se non vengono specificate altre opzioni, la stored procedure viene eseguita nel contesto di sicurezza del chiamante.  
   
--   OWNER. Con questa parola chiave la stored procedure viene eseguita nel contesto del proprietario. Se la stored procedure viene creata in uno schema di cui è proprietario `dbo` o il proprietario del database, verrà eseguita con autorizzazioni senza restrizioni.  
+- OWNER. Con questa parola chiave la stored procedure viene eseguita nel contesto del proprietario. Se la stored procedure viene creata in uno schema di cui è proprietario `dbo` o il proprietario del database, verrà eseguita con autorizzazioni senza restrizioni.  
   
--   SELF. Con questa parola chiave la stored procedure viene eseguita nel contesto di sicurezza del creatore. Questa opzione equivale all'esecuzione come utente specificato, dove l'utente specificato è la persona che crea o modifica la stored procedure.  
+- SELF. Con questa parola chiave la stored procedure viene eseguita nel contesto di sicurezza del creatore. Questa opzione equivale all'esecuzione come utente specificato, dove l'utente specificato è la persona che crea o modifica la stored procedure.  
   
 ## <a name="see-also"></a>Vedere anche
 

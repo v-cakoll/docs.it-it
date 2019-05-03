@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
 ms.openlocfilehash: 2aed766e6b2da7ebaf7b5b863375ee95b99eb159
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59330337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748467"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Modalità di autenticazione di SecurityBindingElement
 Windows Communication Foundation (WCF) sono disponibili varie modalità con cui i client e servizi l'autenticazione reciproca. È possibile creare elementi di associazione di sicurezza per tali modalità di autenticazione utilizzando metodi statici sulla classe <xref:System.ServiceModel.Channels.SecurityBindingElement> o tramite configurazione. In questo argomento vengono brevemente descritte le 18 modalità di autenticazione.  

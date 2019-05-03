@@ -10,11 +10,11 @@ helpviewer_keywords:
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
 ms.openlocfilehash: adcfff0196bd0430ec1ae563fbd5489062de11f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776064"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>Procedura: Enumerare un sottoinsieme di code di stampa
 Una situazione comune affrontata dai professionisti informatici (IT) gestisce un set a livello aziendale delle stampanti consiste nel generare un elenco delle stampanti con determinate caratteristiche. Questa funzionalità viene fornita per il <xref:System.Printing.PrintServer.GetPrintQueues%2A> metodo di un <xref:System.Printing.PrintServer> oggetto e il <xref:System.Printing.EnumeratedPrintQueueTypes> enumerazione.  
@@ -43,5 +43,5 @@ Una situazione comune affrontata dai professionisti informatici (IT) gestisce un
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
 - [Documenti in WPF](documents-in-wpf.md)
-- [Cenni preliminari sulla stampa](printing-overview.md)
+- [Panoramica della stampa](printing-overview.md)
 - [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)

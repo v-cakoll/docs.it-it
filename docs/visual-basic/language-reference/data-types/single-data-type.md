@@ -21,11 +21,11 @@ helpviewer_keywords:
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
 ms.openlocfilehash: b90fdb562f9d65858ac477321a18067cc6e621a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971704"
 ---
 # <a name="single-data-type-visual-basic"></a>Tipo di dati Single (Visual Basic)
 Contiene con segno a 32 bit IEEE (4 byte) e con precisione singola numeri a virgola mobile con valore compreso tra - 3,4028235E + 38 e - 1,401298E-45 per valori negativi e tra 1,401298E-45 e 3,4028235E + 38 per i valori positivi. Numeri a precisione singola contengono un'approssimazione di un numero reale.  
@@ -37,15 +37,15 @@ Contiene con segno a 32 bit IEEE (4 byte) e con precisione singola numeri a virg
   
 ## <a name="programming-tips"></a>Suggerimenti per la programmazione  
   
--   **Precisione.** Quando si lavora con numeri a virgola mobile, tenere presente che non sempre hanno una rappresentazione esatta in memoria. Ciò potrebbe provocare risultati imprevisti da determinate operazioni, ad esempio il confronto dei valori e `Mod` operatore. Per altre informazioni, vedere [tipi di dati di risoluzione dei problemi](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Precisione.** Quando si lavora con numeri a virgola mobile, tenere presente che non sempre hanno una rappresentazione esatta in memoria. Ciò potrebbe provocare risultati imprevisti da determinate operazioni, ad esempio il confronto dei valori e `Mod` operatore. Per altre informazioni, vedere [tipi di dati di risoluzione dei problemi](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
--   **Widening.** Il `Single` può ampliarsi nel tipo di dati `Double`. Ciò significa che è possibile convertire `Single` al `Double` senza che si verifichi un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
+- **Widening.** Il `Single` può ampliarsi nel tipo di dati `Double`. Ciò significa che è possibile convertire `Single` al `Double` senza che si verifichi un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
   
--   **Zeri finali.** I tipi di dati a virgola mobile non è qualsiasi rappresentazione interna di 0 caratteri finali. Ad esempio, essi non viene fatta distinzione tra 4,2000 e 4.2. Di conseguenza, i caratteri 0 finali non vengono visualizzati quando si visualizzano o stampare valori a virgola mobile.  
+- **Zeri finali.** I tipi di dati a virgola mobile non è qualsiasi rappresentazione interna di 0 caratteri finali. Ad esempio, essi non viene fatta distinzione tra 4,2000 e 4.2. Di conseguenza, i caratteri 0 finali non vengono visualizzati quando si visualizzano o stampare valori a virgola mobile.  
   
--   **Caratteri tipo.** Aggiungendo il carattere di tipo letterale `F` a un valore letterale, se ne determina la conversione nel tipo di dati `Single`. Aggiungendo il carattere identificatore di tipo `!` a qualsiasi identificatore, se ne determina la conversione al tipo di dati `Single`.  
+- **Caratteri tipo.** Aggiungendo il carattere di tipo letterale `F` a un valore letterale, se ne determina la conversione nel tipo di dati `Single`. Aggiungendo il carattere identificatore di tipo `!` a qualsiasi identificatore, se ne determina la conversione al tipo di dati `Single`.  
   
--   **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Single?displayProperty=nameWithType>.  
+- **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Single?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
 

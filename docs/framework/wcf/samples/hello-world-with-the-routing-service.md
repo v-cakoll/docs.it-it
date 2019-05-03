@@ -3,11 +3,11 @@ title: Hello World con il servizio di routing
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
 ms.openlocfilehash: 37d2eaffa1ca5a4cce27c4950d00987828a61196
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006603"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Hello World con il servizio di routing
 Questo esempio viene illustrato il servizio di Routing di Windows Communication Foundation (WCF). Il servizio di Routing è un componente WCF che rende più semplice includere un router basato sul contenuto nell'applicazione. In questo esempio si adatta l'esempio di calcolatrice standard di WCF per comunicare con il servizio di Routing. In questo esempio, il client calcolatrice è configurato per inviare messaggi a un endpoint esposto dal router. Il servizio di routing è configurato per accettare tutti i messaggi ad esso inviati e per inoltrarli a un endpoint che corrisponde al servizio di calcolatrice. I messaggi inviati dal client vengono pertanto ricevuti dal router e reindirizzati al servizio di calcolatrice effettivo. I messaggi provenienti dal servizio di calcolatrice di backup vengono inviati nuovamente al router del servizio, che a sua volta li inoltra al client calcolatrice.
@@ -21,9 +21,9 @@ Questo esempio viene illustrato il servizio di Routing di Windows Communication 
     > [!NOTE]
     >  Se si preme F5, il client calcolatrice viene avviato automaticamente. Se si preme CTRL+MAIUSC+B (compilazione), è necessario avviare le applicazioni seguenti.
     >
-    > 1.  Client calcolatrice (./CalculatorClient/bin/client.exe
-    > 2.  Servizio di calcolatrice (./CalculatorService/bin/service.exe)
-    > 3.  Servizio di routing (./RoutingService/bin/RoutingService.exe)
+    > 1. Client calcolatrice (./CalculatorClient/bin/client.exe
+    > 2. Servizio di calcolatrice (./CalculatorService/bin/service.exe)
+    > 3. Servizio di routing (./RoutingService/bin/RoutingService.exe)
 
 3. Premere INVIO per avviare il client.
 
@@ -59,4 +59,4 @@ Questo esempio viene illustrato il servizio di Routing di Windows Communication 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Hosting e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Hosting di AppFabric e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)

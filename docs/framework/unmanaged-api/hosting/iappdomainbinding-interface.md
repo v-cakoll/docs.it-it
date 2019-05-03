@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2c3a3057003d0035bfcb096a94c84d610e3056f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985511"
 ---
 # <a name="iappdomainbinding-interface"></a>Interfaccia IAppDomainBinding
 Fornisce un metodo che viene chiamato da common language runtime (CLR) di notificare all'applicazione host che è stato creato un dominio dell'applicazione.  

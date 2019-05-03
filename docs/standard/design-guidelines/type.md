@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
 author: KrzysztofCwalina
 ms.openlocfilehash: 16f2a095f461a406eedbd2b34b0c91d3ac43bbe5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650102"
 ---
 # <a name="type-design-guidelines"></a>Linee guida di progettazione dei tipi
 Dalla prospettiva del CLR, sono disponibili solo due categorie di tipi, tipi di riferimento e tipi di valore, ma ai fini di una discussione sulla progettazione di framework, si esegue la divisione tipi in gruppi logici, ciascuno con il proprio regole specifiche di progettazione.  

@@ -16,11 +16,11 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: a51c709b0b331127b74d98c4dc42e2772fd7f2db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775466"
 ---
 # <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>Metodo IXCLRDataProcess::EnumMethodInstanceByAddress
 
@@ -60,4 +60,4 @@ Il metodo specificato fa parte di `IXCLRDataProcess` interfaccia e corrisponde a
 
 - [Enumerazione CLRDataSourceType](clrdatasourcetype-enumeration.md)
 - [Debug](index.md)
-- [Interfaccia IXCLRDataProcess](ixclrdataprocess-interface.md)
+- [IXCLRDataProcess Interface](ixclrdataprocess-interface.md)

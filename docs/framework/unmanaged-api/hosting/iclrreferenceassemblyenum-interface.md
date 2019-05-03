@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32f27d6c15a99282eee20d2563a4ca741238d846
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59187401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638515"
 ---
 # <a name="iclrreferenceassemblyenum-interface"></a>Interfaccia ICLRReferenceAssemblyEnum
 Fornisce metodi che consentono all'host modificare il set di assembly a cui fa riferimento un file o un flusso usando dati di identità di assembly che sono interni di common language runtime (CLR), senza dover creare o comprendere tali identità.  

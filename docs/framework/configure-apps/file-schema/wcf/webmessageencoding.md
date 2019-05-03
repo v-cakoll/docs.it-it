@@ -3,11 +3,11 @@ title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
 ms.openlocfilehash: 7221f19dd131dbd60ef1a61625633d54dfdbe85a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769759"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
 Consente alle codifiche di messaggi XML di testo normale e JSON (JavaScript Object Notation) e al contenuto binario "non elaborato" di essere letti e scritti quando vengono usati in un'associazione Windows Communication Foundation (WCF).  
@@ -58,7 +58,7 @@ Consente alle codifiche di messaggi XML di testo normale e JSON (JavaScript Obje
   
  L'elemento di associazione può essere configurato con una codifica dei caratteri di scrittura mediante l'attributo `writeEncoding`. Il valore <xref:System.Text.Encoding> fornito specifica il comportamento in scrittura per le codifiche JSON e XML di testo. In lettura viene interpretata qualsiasi codifica di messaggi e codifica di testo valida.  
   
- `maxReadPoolSize` e `maxWritePoolSize` consente inoltre di impostare il numero massimo di lettori e writer da allocare rispettivamente. Per impostazione predefinita vengono allocati 64 lettori e 16 writer.  
+ Le proprietà `maxReadPoolSize` e `maxWritePoolSize` possono inoltre essere usate per impostare rispettivamente il numero massimo di lettori e il numero massimo di writer da allocare. Per impostazione predefinita vengono allocati 64 lettori e 16 writer.  
   
  Vincoli di complessità predefiniti vengono inoltre impostati usando il [ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) elemento per la protezione da una classe di tipo denial of service (DOS) attacchi che tentano di utilizzare la complessità dei messaggi per bloccare l'elaborazione di endpoint risorse.  
   

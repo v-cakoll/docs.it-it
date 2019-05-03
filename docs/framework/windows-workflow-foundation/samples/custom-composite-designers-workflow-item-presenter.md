@@ -3,11 +3,11 @@ title: Finestre di progettazione composte personalizzate - relatore dell'element
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
 ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005233"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Finestre di progettazione composte personalizzate - relatore dell'elemento del flusso di lavoro
 Il <xref:System.Activities.Presentation.WorkflowItemPresenter> è un tipo di chiave nel modello di programmazione della finestra di progettazione di WF che consente la creazione di un' "area di rilascio" in cui è possibile posizionare un'attività arbitraria. In questo esempio viene illustrato come compilare un ActivityDesigner che espone tale "area di rilascio."
@@ -16,18 +16,18 @@ Il <xref:System.Activities.Presentation.WorkflowItemPresenter> è un tipo di chi
 
 ## <a name="demonstrates"></a>Dimostrazione
 
--   Creazione di un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemPresenter>.
+- Creazione di un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemPresenter>.
 
--   Registrazione della finestra di progettazione personalizzata usando l'archivio di metadati.
+- Registrazione della finestra di progettazione personalizzata usando l'archivio di metadati.
 
--   Programmazione della casella degli strumenti riallocata in modo dichiarativo e imperativo.
+- Programmazione della casella degli strumenti riallocata in modo dichiarativo e imperativo.
 
 ## <a name="sample-details"></a>Dettagli dell'esempio
  Il codice per questo esempio illustra:
 
--   L'ActivityDesigner personalizzato compilato per la classe `SimpleNativeActivity`.
+- L'ActivityDesigner personalizzato compilato per la classe `SimpleNativeActivity`.
 
--   La creazione di un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemPresenter>.
+- La creazione di un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemPresenter>.
 
 ```xaml
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"

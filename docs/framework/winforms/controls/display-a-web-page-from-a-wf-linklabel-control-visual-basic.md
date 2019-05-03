@@ -13,11 +13,11 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
 ms.openlocfilehash: 1be9ff06e749d14b46946e899c6ffb6c3a950d65
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972166"
 ---
 # <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Procedura: Visualizzare una pagina Web da un controllo LinkLabel di Windows Forms (Visual Basic)
 In questo esempio viene visualizzata una pagina Web nel browser predefinito quando un utente fa clic su un form Windows <xref:System.Windows.Forms.LinkLabel> controllo.  
@@ -40,11 +40,11 @@ End Sub
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Un modulo di Windows denominato `Form1`.  
+- Un modulo di Windows denominato `Form1`.  
   
--   Un controllo <xref:System.Windows.Forms.LinkLabel> denominato `LinkLabel1`.  
+- Un controllo <xref:System.Windows.Forms.LinkLabel> denominato `LinkLabel1`.  
   
--   Una connessione Internet attiva.  
+- Una connessione Internet attiva.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  La chiamata al <xref:System.Diagnostics.Process.Start%2A> metodo richiede attendibilità totale. Per altre informazioni, vedere <xref:System.Security.SecurityException>.  

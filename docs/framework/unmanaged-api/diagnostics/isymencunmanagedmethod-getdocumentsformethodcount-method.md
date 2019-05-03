@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef1b8dce5c84382a9039787d2205f1ac8ccbc5bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940283"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a>Metodo ISymENCUnmanagedMethod::GetDocumentsForMethodCount
 Ottiene il numero di documenti che questo metodo è incluse righe.  

@@ -5,11 +5,11 @@ ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c8befed8bc810344b2a3344212a6a4a854300e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763822"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>Metodo ICorDebugDataTarget2::CreateVirtualUnwinder
 Crea un nuovo agente di rimozione dello stack che avvia la rimozione da un contesto iniziale (non necessariamente la foglia di un thread).  
@@ -43,7 +43,7 @@ HRESULT CreateVirtualUnwinder(
  [out] Un puntatore all'indirizzo di un oggetto di interfaccia ICorDebugVirtualUnwinder.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK` Se ha esito positivo. Qualsiasi altro `HRESULT` indica un errore. Qualsiasi errore `HRESULT` ricevuto da mscordbi viene considerato irreversibile e causa [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) metodi di restituire `CORDBG_E_DATA_TARGET_ERROR`.  
+ `S_OK` se l'operazione riesce. Qualsiasi altro `HRESULT` indica un errore. Qualsiasi errore `HRESULT` ricevuto da mscordbi viene considerato irreversibile e causa [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) metodi di restituire `CORDBG_E_DATA_TARGET_ERROR`.  
   
 ## <a name="remarks"></a>Note  
   

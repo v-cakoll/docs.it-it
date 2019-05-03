@@ -3,11 +3,11 @@ title: Flusso di controllo in programmi asincroni (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
 ms.openlocfilehash: ed993943bcf7341f900c575744a1faa53a4a8a2e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923669"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Flusso di controllo in programmi asincroni (Visual Basic)
 Le parole chiave `Async` e `Await` consentono di scrivere e gestire più facilmente i programmi asincroni. Tuttavia, i risultati potrebbero creare perplessità se non si conosce il funzionamento del programma. Questo argomento descrive il flusso di controllo attraverso un programma asincrono semplice per indicare quando il controllo si sposta da un metodo a un altro e quali informazioni vengono trasferite ogni volta.  
@@ -19,9 +19,9 @@ Le parole chiave `Async` e `Await` consentono di scrivere e gestire più facilme
   
  L'esempio seguente usa i metodi asincroni per scaricare come stringa il contenuto di un sito Web specificato e per visualizzare la lunghezza della stringa. L'esempio contiene i due metodi seguenti.  
   
--   `startButton_Click`, che chiama `AccessTheWebAsync` e visualizza il risultato.  
+- `startButton_Click`, che chiama `AccessTheWebAsync` e visualizza il risultato.  
   
--   `AccessTheWebAsync`, che scarica il contenuto di un sito Web sotto forma di stringa e restituisce la lunghezza della stringa. `AccessTheWebAsync` Usa asincrono <xref:System.Net.Http.HttpClient> metodo <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, per scaricare il contenuto.  
+- `AccessTheWebAsync`, che scarica il contenuto di un sito Web come stringa e restituisce la lunghezza della stringa. `AccessTheWebAsync` usa un metodo <xref:System.Net.Http.HttpClient> asincrono, ovvero <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, per scaricare il contenuto.  
   
  In corrispondenza dei punti strategici del programma sono visualizzate righe numerate che consentono di comprendere come viene eseguito il programma e spiegano che cosa accade in ogni punto contrassegnato. Le righe sono evidenziate con etichette numerate da "ONE" a "SIX." Le etichette rappresentano l'ordine in cui il programma raggiunge queste righe di codice.  
   
@@ -98,7 +98,7 @@ Length of the downloaded string: 33946.
 >  Per eseguire l'esempio, è necessario disporre di Visual Studio 2012 o versioni successiva e .NET Framework 4.5 o versioni successive installato nel computer.  
   
 ### <a name="download-the-program"></a>Scaricare il programma  
- È possibile scaricare l'applicazione di questo argomento da [esempio asincrono: Flusso di controllo in programmi asincroni](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). I passaggi seguenti consentono di aprire ed eseguire il programma.  
+ È possibile scaricare l'applicazione di questo argomento da [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Esempio di codice asincrono: flusso di controllo in programmi asincroni). I passaggi seguenti consentono di aprire ed eseguire il programma.  
   
 1. Decomprimere il file scaricato e quindi avviare Visual Studio.  
   
@@ -287,7 +287,7 @@ Dim urlContents As String = Await getStringTask
  L'espressione await sospende `AccessTheWebAsync` finché non viene restituito `client.GetStringAsync`. Nel frattempo il controllo viene restituito al chiamante di `AccessTheWebAsync`, `startButton_Click`.  
   
 > [!NOTE]
->  In genere, la chiamata a un metodo asincrono si attende immediatamente. Ad esempio, l'assegnazione seguente potrebbe sostituire il codice precedente che crea e quindi attende `getStringTask`: `Dim urlContents As String = Await client.GetStringAsync("https://msdn.microsoft.com")`  
+>  In genere, la chiamata a un metodo asincrono si attende immediatamente. Ad esempio, l'assegnazione seguente potrebbe sostituire il codice precedente che crea e quindi attende `getStringTask`:`Dim urlContents As String = Await client.GetStringAsync("https://msdn.microsoft.com")`  
 >   
 >  In questo argomento l'operatore await viene applicato in un secondo tempo per contenere le righe di output che indicano il flusso di controllo attraverso il programma.  
   
@@ -334,7 +334,7 @@ FIVE:  Back in AccessTheWebAsync.
   
  ![Passaggio CINQUE](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")  
   
- `AccessTheWebAsync` viene eseguito al completamento e il controllo restituisce a `startButton_Click`, cui è in attesa del completamento.  
+ `AccessTheWebAsync` viene eseguita fino al completamento e il controllo viene restituito a `startButton_Click`, che è in attesa del completamento.  
   
 ### <a name="step-six"></a>Passaggio SEI  
  Quando l'attività `AccessTheWebAsync` segnala il proprio completamento, l'elaborazione può continuare oltre l'istruzione await in `startButton_Async`. Di fatto il programma non ha altre operazioni da eseguire.  
@@ -363,4 +363,4 @@ Dim contentLength As Integer = Await getLengthTask
 - [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Tipi restituiti asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
 - [Procedura dettagliata: Accesso al Web tramite Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Esempio asincrono: Flusso di controllo in programmi asincroni (C# e Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Esempio di codice asincrono: Flusso di controllo in programmi asincroni - C# e Visual Basic)

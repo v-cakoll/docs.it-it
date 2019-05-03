@@ -13,11 +13,11 @@ helpviewer_keywords:
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
 ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794732"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Procedura: Controllare l'ambito di una variabile (Visual Basic)
 In genere, una variabile si trova nel *ambito*, o visibile per riferimento, l'area in cui è stato dichiarato. In dell'alcuni casi, la variabile *livello di accesso* possono influenzare il relativo ambito.  
@@ -28,13 +28,13 @@ In genere, una variabile si trova nel *ambito*, o visibile per riferimento, l'ar
   
 #### <a name="to-make-a-variable-visible-only-within-a-block"></a>Per rendere visibili solo all'interno di un blocco di una variabile  
   
--   Sul posto il [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) per la variabile tra l'avvio e terminazione istruzioni di dichiarazione di tale blocco, ad esempio tra il `For` e `Next` istruzioni di un `For` ciclo.  
+- Sul posto il [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) per la variabile tra l'avvio e terminazione istruzioni di dichiarazione di tale blocco, ad esempio tra il `For` e `Next` istruzioni di un `For` ciclo.  
   
      È possibile fare riferimento alla variabile solo dall'interno del blocco.  
   
 #### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>Per rendere visibili solo all'interno di una routine di una variabile  
   
--   Sul posto di `Dim` istruzione per la variabile all'interno della routine, ma all'esterno di qualsiasi blocco (ad esempio un `With`... `End With` blocco).  
+- Sul posto di `Dim` istruzione per la variabile all'interno della routine, ma all'esterno di qualsiasi blocco (ad esempio un `With`... `End With` blocco).  
   
      È possibile fare riferimento alla variabile solo dall'interno della routine, inclusi gli eventuali blocchi contenute nella procedura.  
   
@@ -88,9 +88,9 @@ Public strMsg As String
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Ambito in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Durata in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Livelli di accesso in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Variabili](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Dichiarazione di variabili](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)

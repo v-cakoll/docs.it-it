@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053782"
 ---
 # <a name="visual-basic-language-features"></a>Funzionalità del linguaggio Visual Basic
 Gli argomenti seguenti introducono e illustrano i componenti essenziali di Visual Basic, un linguaggio di programmazione orientata agli oggetti. Dopo aver creato l'interfaccia utente per l'applicazione usando form e controlli, è necessario scrivere il codice per la definizione del comportamento dell'applicazione. Come con qualsiasi linguaggio di programmazione moderno, Visual Basic supporta numerosi costrutti di programmazione comuni e gli elementi del linguaggio.  
@@ -20,7 +20,7 @@ Gli argomenti seguenti introducono e illustrano i componenti essenziali di Visua
  Se non si ha esperienza di programmazione, le informazioni in questa sezione possono fungere da introduzione ai concetti fondamentali per la scrittura di codice. Dopo aver appreso le nozioni di base, è possibile creare potenti applicazioni mediante Visual Basic.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Array](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [Matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  Informazioni su come rendere il codice più compatto e potente tramite la dichiarazione e l'uso delle matrici, che contengono più valori correlati.  
   
  [Inizializzatori di raccolta](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  

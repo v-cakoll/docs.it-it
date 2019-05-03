@@ -9,11 +9,11 @@ ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3ef3741ef5cec720c2fb285c9aa60d610acc0be9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59321653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909389"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Creazione di uno schema di crittografia
 I componenti di crittografia di .NET Framework possono essere combinati per creare diversi schemi per la crittografia e la decrittografia dei dati.  
@@ -34,4 +34,4 @@ I componenti di crittografia di .NET Framework possono essere combinati per crea
   
 ## <a name="see-also"></a>Vedere anche
 
-- [servizi crittografici](../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

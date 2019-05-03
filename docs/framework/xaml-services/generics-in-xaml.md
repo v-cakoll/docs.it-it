@@ -5,11 +5,11 @@ helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
 ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954102"
 ---
 # <a name="generics-in-xaml"></a>Generics in XAML
 Servizi di .NET Framework XAML come implementato in XAML fornisce il supporto per l'utilizzo di tipi generici di CLR. Questo supporto include la specifica dei vincoli di generics come argomento di tipo e applicazione dei vincoli chiamando appropriato `Add` metodo per i casi di raccolte generiche. Questo argomento descrive gli aspetti dell'utilizzo e che fanno riferimento a tipi generici in XAML.  

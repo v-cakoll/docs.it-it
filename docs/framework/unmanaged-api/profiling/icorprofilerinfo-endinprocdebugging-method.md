@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bcae66fd30c29a0a3c9bd0b5ffc2047efdf3788d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049661"
 ---
 # <a name="icorprofilerinfoendinprocdebugging-method"></a>Metodo ICorProfilerInfo::EndInprocDebugging
 Arresta una sessione di debug in-process. Questo metodo è obsoleto in .NET Framework versione 2.0.  

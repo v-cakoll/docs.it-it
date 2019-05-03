@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
 ms.openlocfilehash: 015ce896e49b3a6a932c36db867271b4ac4c64c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033865"
 ---
 # <a name="large-udts"></a>Tipi di grandi dimensioni definiti dall'utente
 I tipi definiti dall'utente (UDT) consentono agli sviluppatori di estendere il sistema di tipi scalari del server archiviando oggetti CLR (Common Language Runtime) in un database di SQL Server. I tipi UDT possono contenere più elementi e presentare comportamenti diversi dai tipi di dati alias tradizionali, costituiti da un singolo tipo di dati di sistema SQL Server.  
@@ -49,21 +49,21 @@ I tipi definiti dall'utente (UDT) consentono agli sviluppatori di estendere il s
   
  I seguenti metodi di <xref:System.Data.SqlClient.SqlDataReader> restituiranno <xref:System.Data.SqlTypes.SqlBinary> anziché un tipo definito dall'utente quando `Type System Version` è impostato su SQL Server 2005:  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
  I seguenti metodi restituiranno una matrice di `Byte[]` anziché un tipo definito dall'utente quando `Type System Version` è impostato su SQL Server 2005:  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
   
  Si noti che per la versione corrente di ADO.NET non vengono eseguite conversioni.  
   
@@ -133,8 +133,8 @@ End Using
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Configurazione dei parametri e tipi di dati dei parametri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Recupero di informazioni dello schema del database](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [Configurazione di parametri e tipi di dati dei parametri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Recupero di informazioni sullo schema del database](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [Mapping dei tipi di dati SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [Dati binari e con valori elevati SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

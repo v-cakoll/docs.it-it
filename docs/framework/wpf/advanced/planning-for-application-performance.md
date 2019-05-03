@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
 ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032864"
 ---
 # <a name="planning-for-application-performance"></a>Pianificazione delle prestazioni dell'applicazione
 La possibilità di raggiungere gli obiettivi di prestazioni dipende dalla capacità di sviluppare una strategia di prestazioni. La pianificazione è la prima fase nello sviluppo di qualsiasi prodotto. Questo argomento descrive alcune regole molto semplice per sviluppare una strategia di prestazioni ottimali.  
@@ -36,10 +36,10 @@ La possibilità di raggiungere gli obiettivi di prestazioni dipende dalla capaci
 
 - [Ottimizzazione delle prestazioni di applicazioni WPF](optimizing-wpf-application-performance.md)
 - [Sfruttare appieno l'hardware](optimizing-performance-taking-advantage-of-hardware.md)
-- [Layout e progettazione](optimizing-performance-layout-and-design.md)
-- [Grafica 2D e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamento degli oggetti](optimizing-performance-object-behavior.md)
-- [Risorse dell'applicazione](optimizing-performance-application-resources.md)
-- [Testo](optimizing-performance-text.md)
+- [Ottimizzazione delle prestazioni: layout e progettazione](optimizing-performance-layout-and-design.md)
+- [Grafica bidimensionale e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamento dell'oggetto](optimizing-performance-object-behavior.md)
+- [Risorse di applicazioni](optimizing-performance-application-resources.md)
+- [per](optimizing-performance-text.md)
 - [Data binding](optimizing-performance-data-binding.md)
 - [Altri suggerimenti relativi alle prestazioni](optimizing-performance-other-recommendations.md)

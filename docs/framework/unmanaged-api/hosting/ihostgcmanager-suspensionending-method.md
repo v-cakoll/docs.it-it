@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 527607d5c39e7f698ab44baf4af0e7600ae2f473
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599390"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>Metodo IHostGCManager::SuspensionEnding
 Notifica all'host che common language runtime (CLR) viene ripresa l'esecuzione delle attività nei thread che erano stati sospesi per una garbage collection.  

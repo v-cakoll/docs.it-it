@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
 ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033607"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Procedura: Usare stored procedure che accettano parametri
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] esegue il mapping di parametri di output ai parametri di riferimento e per i tipi di valore dichiara il parametro come nullable.  
+In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene eseguito il mapping dei parametri di output ai parametri di riferimento, mentre per i tipi di valori il parametro viene dichiarato come nullable.  
   
  Per un esempio di come usare un parametro di input in una query che restituisce un set di righe, vedere [come: Restituire rowset](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).  
   
@@ -41,7 +41,7 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Utilizzo dei tipi nullable](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Uso dei tipi nullable](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Tipi di valori nullable](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

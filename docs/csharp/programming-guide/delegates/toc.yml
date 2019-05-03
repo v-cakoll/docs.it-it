@@ -1,18 +1,11 @@
-items:
 - name: Delegati
   href: index.md
   items:
-  - name: Uso dei delegati
-    href: using-delegates.md
-  - name: Delegati con metodi denominati Metodi anonimi
-    href: delegates-with-named-vs-anonymous-methods.md
-  - name: 'Procedura: Combinare delegati multicast (Guida per programmatori C#)'
-    href: how-to-combine-delegates-multicast-delegates.md
-  - name: "Procedura: Dichiarare un delegato, crearne un'istanza e usarlo"
-    href: how-to-declare-instantiate-and-use-a-delegate.md
-ms.openlocfilehash: f9857a805966b3b3c9d1c6776027c77c6183235b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469470"
+    - name: Uso dei delegati
+      href: using-delegates.md
+    - name: Delegati con metodi denominati Metodi anonimi
+      href: delegates-with-named-vs-anonymous-methods.md
+    - name: 'Procedura: Combinare delegati multicast (Guida per programmatori C#)'
+      href: how-to-combine-delegates-multicast-delegates.md
+    - name: 'Procedura: Dichiarare un delegato, crearne un''istanza e usarlo'
+      href: how-to-declare-instantiate-and-use-a-delegate.md

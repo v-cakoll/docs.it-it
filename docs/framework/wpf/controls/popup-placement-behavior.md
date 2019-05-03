@@ -8,11 +8,11 @@ helpviewer_keywords:
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
 ms.openlocfilehash: 911c2064e34ed8d0a341ffd9a52f852eab677e0a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771319"
 ---
 # <a name="popup-placement-behavior"></a>Comportamento del controllo Popup in relazione al posizionamento
 Oggetto <xref:System.Windows.Controls.Primitives.Popup> controllo Visualizza il contenuto in una finestra separata mobile rispetto a un'applicazione. È possibile specificare la posizione di un <xref:System.Windows.Controls.Primitives.Popup> rispetto a un controllo, il puntatore del mouse o la schermata usando la <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> proprietà.  Queste proprietà interagiscono per offrire flessibilità nello specificare la posizione del <xref:System.Windows.Controls.Primitives.Popup>.  
@@ -36,13 +36,13 @@ Oggetto <xref:System.Windows.Controls.Primitives.Popup> controllo Visualizza il 
 ## <a name="definitions-of-terms-the-anatomy-of-a-popup"></a>Definizioni dei termini: Anatomia di un controllo Popup  
  I termini seguenti sono utili per informazioni su come la <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> proprietà sono correlate tra loro e <xref:System.Windows.Controls.Primitives.Popup>:  
   
--   Oggetto destinazione  
+- Oggetto destinazione  
   
--   Area di destinazione  
+- Area di destinazione  
   
--   Origine di destinazione  
+- Origine di destinazione  
   
--   Punto di allineamento del controllo Popup  
+- Punto di allineamento del controllo Popup  
   
  Questi termini rappresentano un modo pratico per fare riferimento a vari aspetti del <xref:System.Windows.Controls.Primitives.Popup> e il controllo che è associato.  
   
@@ -135,11 +135,11 @@ Oggetto <xref:System.Windows.Controls.Primitives.Popup> controllo Visualizza il 
 ## <a name="when-the-popup-encounters-the-edge-of-the-screen"></a>Rilevamento dei bordi dello schermo da parte del controllo Popup  
  Per motivi di sicurezza, un <xref:System.Windows.Controls.Primitives.Popup> non può essere nascosto dal bordo di una schermata. Si verifica una delle tre situazioni seguenti quando il <xref:System.Windows.Controls.Primitives.Popup> incontra un bordo dello schermo:  
   
--   La finestra popup viene riposizionato lungo il bordo dello schermo che nasconde il <xref:System.Windows.Controls.Primitives.Popup>.  
+- La finestra popup viene riposizionato lungo il bordo dello schermo che nasconde il <xref:System.Windows.Controls.Primitives.Popup>.  
   
--   Il popup usa un punto di allineamento diverso.  
+- Il popup usa un punto di allineamento diverso.  
   
--   Il popup usa un'origine di destinazione e un punto di allineamento diversi.  
+- Il popup usa un'origine di destinazione e un punto di allineamento diversi.  
   
  Tali opzioni vengono descritte più avanti in questa sezione.  
   
@@ -205,4 +205,4 @@ Oggetto <xref:System.Windows.Controls.Primitives.Popup> controllo Visualizza il 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Popup Placement Sample](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)
+- [Popup Placement Sample](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS) (Esempio di posizionamento di un controllo Popup)

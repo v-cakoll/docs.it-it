@@ -1,13 +1,13 @@
 ---
 title: Aggiunte al formato csproj per .NET Core
 description: Informazioni sulle differenze tra i file csproj esistenti e .NET Core
-ms.date: 09/22/2017
-ms.openlocfilehash: e196be28f622873359153f32c5dd9b0b5a514c0f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.date: 04/08/2019
+ms.openlocfilehash: 89f0bbab1f9887295a68ffc6434340f1c6f10d5d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654653"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611094"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Aggiunte al formato csproj per .NET Core
 
@@ -15,7 +15,7 @@ Questo documento descrive le modifiche aggiunte ai file di progetto nell'ambito 
 
 ## <a name="implicit-package-references"></a>Riferimenti impliciti al pacchetto
 
-È possibile fare riferimento ai metapacchetti in modo implicito in base ai framework di destinazione specificati nella proprietà `<TargetFramework>` o `<TargetFrameworks>` del file di progetto. `<TargetFrameworks>` viene ignorato se è specificato `<TargetFramework>`, indipendentemente dall'ordine.
+È possibile fare riferimento ai metapacchetti in modo implicito in base ai framework di destinazione specificati nella proprietà `<TargetFramework>` o `<TargetFrameworks>` del file di progetto. `<TargetFrameworks>` viene ignorato se è specificato `<TargetFramework>`, indipendentemente dall'ordine. Per altre informazioni, vedere [Pacchetti, metapacchetti e framework](../packages.md). 
 
 ```xml
  <PropertyGroup>
@@ -31,15 +31,39 @@ Questo documento descrive le modifiche aggiunte ai file di progetto nell'ambito 
 
 ### <a name="recommendations"></a>Suggerimenti
 
-Poiché si fa riferimento ai metapacchetti `Microsoft.NETCore.App` o `NetStandard.Library` in modo implicito, ecco le procedure consigliate:
+Poiché si fa riferimento ai metapacchetti `Microsoft.NETCore.App` o `NETStandard.Library` in modo implicito, ecco le procedure consigliate:
 
-* Quando la destinazione è .NET Core o .NET Standard, non fare mai riferimento in modo esplicito ai metapacchetti `Microsoft.NETCore.App` o `NetStandard.Library` tramite l'elemento `<PackageReference>` nel file di progetto.
+* Quando la destinazione è .NET Core o .NET Standard, non fare mai riferimento in modo esplicito ai metapacchetti `Microsoft.NETCore.App` o `NETStandard.Library` tramite l'elemento `<PackageReference>` nel file di progetto.
 * Se occorre una versione specifica del runtime quando la destinazione è .NET Core, è necessario usare la proprietà `<RuntimeFrameworkVersion>` del progetto, ad esempio, `1.0.4`, anziché fare riferimento al metapacchetto.
-    * Ciò può avvenire se si usano [distribuzioni autosufficienti](../deploying/index.md#self-contained-deployments-scd) e occorre una versione specifica, ad esempio, della patch del runtime 1.0.0 LTS.
-* Se occorre una versione specifica del metapacchetto `NetStandard.Library` quando la destinazione è .NET Standard, è possibile usare la proprietà `<NetStandardImplicitPackageVersion>` e impostare la versione necessaria.
-* Non aggiungere o aggiornare in modo esplicito i riferimenti al metapacchetto `Microsoft.NETCore.App` o `NetStandard.Library` nei progetti .NET Framework. Se è necessaria qualsiasi versione di `NetStandard.Library` durante l'uso di un pacchetto NuGet basato su .NET Standard, NuGet installa automaticamente tale versione.
+  * Ciò può avvenire se si usano [distribuzioni autosufficienti](../deploying/index.md#self-contained-deployments-scd) e occorre una versione specifica, ad esempio, della patch del runtime 1.0.0 LTS.
+* Se occorre una versione specifica del metapacchetto `NETStandard.Library` quando la destinazione è .NET Standard, è possibile usare la proprietà `<NetStandardImplicitPackageVersion>` e impostare la versione necessaria.
+* Non aggiungere o aggiornare in modo esplicito i riferimenti al metapacchetto `Microsoft.NETCore.App` o `NETStandard.Library` nei progetti .NET Framework. Se è necessaria qualsiasi versione di `NETStandard.Library` durante l'uso di un pacchetto NuGet basato su .NET Standard, NuGet installa automaticamente tale versione.
+
+## <a name="implicit-version-for-some-package-references"></a>Versione implicita per alcuni riferimenti al pacchetto
+
+La maggior parte degli utilizzi di [`<PackageReference>`](#packagereference) richiede l'impostazione dell'attributo `Version` per specificare la versione del pacchetto NuGet da usare. Se però si usa .NET Core 2.1 o 2.2 e si fa riferimento a [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) o [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage), l'attributo non è necessario. .NET Core SDK può selezionare automaticamente la versione dei pacchetti che deve essere usata.
+
+### <a name="recommendation"></a>Consiglio
+
+Quando si fa riferimento ai pacchetti `Microsoft.AspNetCore.App` o `Microsoft.AspNetCore.All`, non specificarne la versione. Se si specifica una versione, l'SDK potrebbe visualizzare l'avviso NETSDK1071. Per non visualizzare più questo avviso, rimuovere la versione del pacchetto come nell'esempio seguente:
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Microsoft.AspNetCore.App" />
+</ItemGroup>
+```
+
+> Problema noto: .NET Core 2.1 SDK supportava questa sintassi solo quando il progetto usa anche Microsoft.NET.Sdk.Web. Questo problema è stato risolto in .NET Core SDK 2.2.
+
+Questi riferimenti ai metapacchetti ASP.NET Core hanno un comportamento leggermente diverso dalla maggior parte dei normali pacchetti NuGet. Le [distribuzioni dipendenti dal framework](../deploying/index.md#framework-dependent-deployments-fdd) delle applicazioni che usano questi metapacchetti sfruttano automaticamente il framework condiviso di ASP.NET Core. Quando si usano i metapacchetti, con l'applicazione **non** vengono distribuiti asset dai pacchetti NuGet di riferimento di ASP.NET Core. Questi asset sono infatti inclusi nel framework condiviso di ASP.NET Core. Gli asset contenuti nel framework condiviso sono ottimizzati per la piattaforma di destinazione per migliorare i tempi di avvio dell'applicazione. Per altre informazioni sul framework condiviso, vedere [Creazione di pacchetti di distribuzione di .NET Core](../build/distribution-packaging.md).
+
+Se *è* specificata una versione, questa viene considerata come la versione *minima* del framework condiviso ASP.NET Core per le distribuzioni dipendenti dal framework e come una versione *esatta* per le distribuzioni autonome. Questo comportamento può avere le conseguenze seguenti:
+
+* Se la versione di ASP.NET Core installata nel server è inferiore alla versione specificata in PackageReference, l'avvio del processo .NET Core non riesce. Gli aggiornamenti per il metapacchetto sono spesso disponibili su NuGet.org prima che vengano resi disponibili in ambienti di hosting come Azure. L'aggiornamento ad ASP.NET Core della versione in PackageReference potrebbe causare un errore in un'applicazione distribuita.
+* Se l'applicazione è stata distribuita come [distribuzione autonoma](../deploying/index.md#self-contained-deployments-scd), potrebbe non contenere gli ultimi aggiornamenti della sicurezza a .NET Core. Quando non è specificata una versione, l'SDK può includere automaticamente la versione più recente di ASP.NET Core nella distribuzione autonoma.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>Dichiarazioni Include di compilazione predefinite nei progetti .NET Core
+
 Con il passaggio al formato *csproj* nelle ultime versioni dell'SDK, per gli elementi di compilazione e le risorse incorporate le dichiarazioni Include ed Exclude predefinite sono state spostate nei file delle proprietà dell'SDK. Ciò significa che non è più necessario specificare queste dichiarazioni nel file di progetto.
 
 Il motivo principale di questo cambiamento è la riduzione del disordine nel file di progetto. Le dichiarazioni predefinite presenti nell'SDK coprono i casi di utilizzo più comuni, pertanto non c'è alcuna necessità di ripeterle per ogni progetto creato. Di conseguenza, i file di progetto sono più piccoli e molto più semplici da comprendere e, se necessario, da modificare manualmente.
@@ -100,6 +124,7 @@ Se il progetto contiene più framework di destinazione, i risultati del comando 
 ## <a name="additions"></a>Aggiornamenti
 
 ### <a name="sdk-attribute"></a>Attributo Sdk
+
 L'elemento radice `<Project>` del file con estensione *csproj* ha un nuovo attributo, denominato `Sdk`. `Sdk` specifica l'SDK che viene usato dal progetto. l'SDK, come descritto dal [documento sui livelli](cli-msbuild-architecture.md), è un set di [attività](/visualstudio/msbuild/msbuild-tasks) e [destinazioni](/visualstudio/msbuild/msbuild-targets) di MSBuild che consente di compilare codice .NET Core. Con gli strumenti di .NET Core vengono forniti tre SDK principali:
 
 1. .NET Core SDK con l'ID di `Microsoft.NET.Sdk`
@@ -283,7 +308,6 @@ Sarà necessario assicurarsi che il file di licenza venga incluso nel pacchetto 
 
 URL della licenza applicabile al pacchetto. (_deprecato da Visual Studio 15.9.4, .NET SDK 2.1.502 e 2.2.101_)
 
-
 ### <a name="packageiconurl"></a>PackageIconUrl
 
 URL di un'immagine 64 x 64 con sfondo trasparente da usare come icona per il pacchetto nella visualizzazione dell'interfaccia utente.
@@ -301,8 +325,10 @@ Elenco di tag con valori delimitati da punto e virgola che designa il pacchetto.
 Determina il percorso di output in cui verrà rilasciato il pacchetto creato. Il valore predefinito è `$(OutputPath)`.
 
 ### <a name="includesymbols"></a>IncludeSymbols
+Valore booleano che indica se al momento della creazione del pacchetto deve essere creato un pacchetto aggiuntivo di simboli. Il formato del pacchetto di simboli è controllato dalla proprietà `SymbolPackageFormat`.
 
-Valore booleano che indica se al momento della creazione del pacchetto deve essere creato un pacchetto aggiuntivo di simboli. Questo pacchetto, con estensione *.symbols.nupkg*, copierà i file PDB insieme ai file DLL e ad altri file di output.
+### <a name="symbolpackageformat"></a>SymbolPackageFormat
+Specifica il formato del pacchetto di simboli. Se il valore è "symbols.nupkg", verrà creato un pacchetto di simboli legacy con estensione *symbols.nupkg* che contiene i file PDB, DLL e altri file di output. Se il valore è "snupkg", verrà creato un pacchetto di simboli snupkg che contiene i file PDB portatili. Il valore predefinito è "symbols.nupkg".
 
 ### <a name="includesource"></a>IncludeSource
 

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f88c22f88aa9e1aaa777f12d8b230e7ba92dffeb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774582"
 ---
 # <a name="corbindtoruntimehost-function"></a>Funzione CorBindToRuntimeHost
 Consente di caricare una versione specificata di common language runtime (CLR) in un processo host.  

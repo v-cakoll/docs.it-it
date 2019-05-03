@@ -10,11 +10,11 @@ ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920302"
 ---
 # <a name="net-framework-tools"></a>Strumenti di .NET Framework
 Gli strumenti di .NET Framework facilitano la creazione, la distribuzione e la gestione di applicazioni e componenti destinati a .NET Framework.  
@@ -50,7 +50,7 @@ La maggior parte degli strumenti di .NET Framework descritti in questa sezione v
  [CorFlags.exe (strumento di conversione CorFlags)](../../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)  
  Consente di configurare la sezione CorFlags dell'intestazione di un'immagine PE.  
   
- [Fuslogvw.exe (Visualizzatore log associazioni assembly)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)  
+ [Fuslogvw.exe (Visualizzatore log binding assembly)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)  
  Visualizza informazioni sulle associazioni di assembly per consentire di diagnosticare per quale motivo non sia possibile individuare un assembly in fase di esecuzione.  
   
  [Gacutil.exe (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
@@ -77,7 +77,7 @@ La maggior parte degli strumenti di .NET Framework descritti in questa sezione v
  [MDbg.exe (Debugger della riga di comando di .NET Framework)](../../../docs/framework/tools/mdbg-exe.md)  
  Consente ai fornitori di strumenti e agli sviluppatori di applicazioni di individuare e correggere i bug dei programmi basati sul Common Language Runtime di .NET Framework. Questo strumento usa l'API di debug del runtime per offrire servizi di debug.  
   
- [Mgmtclassgen.exe (Management Strongly Typed Class Generator)](../../../docs/framework/tools/mgmtclassgen-exe.md)  
+ [Mgmtclassgen.exe (Generatore di classi di gestione fortemente tipizzate)](../../../docs/framework/tools/mgmtclassgen-exe.md)  
  Consente di generare una classe gestita con associazione anticipata per una classe Windows Management Instrumentation (WMI) specificata.  
   
  [Mpgo.exe (strumento per l'ottimizzazione guidata da profilo gestito)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md)  
@@ -122,15 +122,15 @@ La maggior parte degli strumenti di .NET Framework descritti in questa sezione v
  [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  Converte le definizioni dei tipi presenti in una libreria dei tipi COM nelle definizioni equivalenti di un assembly di Common Language Runtime.  
   
- [Winmdexp.exe (Windows Runtime Metadata Export Tool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
+ [Winmdexp.exe (strumento di esportazione di metadati di Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
  Esporta un assembly .NET Framework che viene compilato come file .winmdobj in un componente Windows Runtime, il quale viene assemblato come file .winmd contenente sia i metadati Windows Runtime che le informazioni di implementazione.  
   
  [Winres.exe (editor di risorse di Windows Form)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
  Consente di localizzare risorse dell'interfaccia utente (file con estensione resx o resources) usate da Windows Form. È possibile tradurre stringhe e quindi ridimensionare, spostare e nascondere i controlli per adattarli alle stringhe localizzate.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Strumenti WPF](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
+ [strumenti WPF](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
  Include strumenti quali lo strumento di conformità isXPS (isXPS.exe) e gli strumenti di profilatura delle prestazioni.  
   
- [Windows Communication Foundation Tools](../../../docs/framework/wcf/tools.md)  
+ [Strumenti Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
  Include strumenti che semplificano la creazione, la distribuzione e la gestione di applicazioni Windows Communication Foundation (WCF).

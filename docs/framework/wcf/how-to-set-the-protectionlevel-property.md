@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
 ms.openlocfilehash: 77596d682af6f2579ca512b0a6de1694452e025b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59317779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928960"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Procedura: Impostare la proprietà ProtectionLevel
 È possibile impostare il livello di protezione applicando un attributo appropriato e impostando la proprietà. È possibile impostare la protezione a livello di servizio su tutte le parti di ogni messaggio. In alternativa è possibile impostare la protezione a livelli granulari in modo crescente, dai metodi alle parti del messaggio. Per altre informazioni sul `ProtectionLevel` proprietà, vedere [livello di protezione delle informazioni sulle](../../../docs/framework/wcf/understanding-protection-level.md).  

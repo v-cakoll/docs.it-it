@@ -1,5 +1,5 @@
 ---
-title: <defaultFtpCachePolicy> (Impostazioni di rete)
+title: Elemento <defaultFtpCachePolicy> (impostazioni di rete)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultFtpCachePolicy
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
 ms.openlocfilehash: 36d174beea58ff96674bd873bfbcb8be89591669
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674558"
 ---
 # <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy > (impostazioni di rete)
 Indica se la memorizzazione nella cache FTP è attivo e ne descrive l'impostazione predefinita dei criteri di memorizzazione nella cache.  

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Disegnare una forma chiusa utilizzando l'elemento poligono"
+title: "Procedura: Disegnare una forma chiusa usando l'elemento poligono"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], Polygon elements
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - drawing [WPF], closed shapes with Polygon elements
 ms.assetid: 4b0ca008-29ce-48dd-8bc3-f3a20ffca6a6
 ms.openlocfilehash: 533c341e2fae528ec896bf38bafa13974af1d127
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003236"
 ---
-# <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>Procedura: Disegnare una forma chiusa utilizzando l'elemento poligono
+# <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>Procedura: Disegnare una forma chiusa usando l'elemento poligono
 Questo esempio illustra come disegnare una forma chiusa utilizzando il <xref:System.Windows.Shapes.Polygon> elemento. Per disegnare una forma chiusa, creare un <xref:System.Windows.Shapes.Polygon> elemento e utilizzo relativi <xref:System.Windows.Shapes.Polygon.Points%2A> proprietà per specificare i vertici di una forma. Viene automaticamente tracciata una linea che connette il primo e ultimo punto. Infine, specificare una <xref:System.Windows.Shapes.Shape.Fill%2A>, un <xref:System.Windows.Shapes.Shape.Stroke%2A>, o entrambi.  
   
 ## <a name="example"></a>Esempio  

@@ -3,36 +3,36 @@ title: Novità di C# 7.0 - Guida a C#
 description: Panoramica delle nuove funzionalità nella versione 7.0 del linguaggio C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 81d06d2e2079e04948ad5e93eefadb1bc11d855a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654185"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59481301"
 ---
 # <a name="whats-new-in-c-70"></a>Novità di C# 7.0
 
 C# 7.0 aggiunge diverse nuove funzionalità al linguaggio C#:
 * [Variabili `out`](#out-variables)
-    - È possibile dichiarare valori `out` inline come argomenti per il metodo in cui vengono usati.
+  - È possibile dichiarare valori `out` inline come argomenti per il metodo in cui vengono usati.
 * [Tuple](#tuples)
-    - È possibile creare tipi leggeri e senza nome che contengono più campi pubblici. I compilatori e gli strumenti dell'IDE comprendono la semantica di questi tipi.
+  - È possibile creare tipi leggeri e senza nome che contengono più campi pubblici. I compilatori e gli strumenti dell'IDE comprendono la semantica di questi tipi.
 * [Variabili discard](#discards)
-    - Le variabili discard sono variabili temporanee di sola scrittura usate nelle assegnazioni quando non si è interessati al valore assegnato. Sono utili soprattutto per la decostruzione di tuple e tipi definiti dall'utente, nonché per la chiamata di metodi con i parametri `out`.
+  - Le variabili discard sono variabili temporanee di sola scrittura usate nelle assegnazioni quando non si è interessati al valore assegnato. Sono utili soprattutto per la decostruzione di tuple e tipi definiti dall'utente, nonché per la chiamata di metodi con i parametri `out`.
 * [Criteri di ricerca](#pattern-matching)
-    - È possibile creare una logica di salto condizionato basata su tipi e valori arbitrari dei membri di tali tipi.
+  - È possibile creare una logica di salto condizionato basata su tipi e valori arbitrari dei membri di tali tipi.
 * [Variabili locali e valori restituiti `ref`](#ref-locals-and-returns)
-    - Le variabili locali del metodo e i valori restituiti possono essere riferimenti ad altre opzioni di memorizzazione.
+  - Le variabili locali del metodo e i valori restituiti possono essere riferimenti ad altre opzioni di memorizzazione.
 * [Funzioni locali](#local-functions)
-    - È possibile annidare funzioni all'interno di altre funzioni per limitarne l'ambito e visibilità.
+  - È possibile annidare funzioni all'interno di altre funzioni per limitarne l'ambito e visibilità.
 * [Più membri con corpo di espressione](#more-expression-bodied-members)
-    - L'elenco dei membri che possono essere creati con le espressioni è cresciuto.
+  - L'elenco dei membri che possono essere creati con le espressioni è cresciuto.
 * [Espressioni `throw`](#throw-expressions)
-    - È possibile generare eccezioni in costrutti di codice che in precedenza non erano consentiti, perché `throw` era un'istruzione. 
+  - È possibile generare eccezioni in costrutti di codice che in precedenza non erano consentiti, perché `throw` era un'istruzione.
 * [Tipi restituiti asincroni generalizzati](#generalized-async-return-types)
-    - I metodi dichiarati con il modificatore `async` possono restituire altri tipi oltre a `Task` e `Task<T>`.
+  - I metodi dichiarati con il modificatore `async` possono restituire altri tipi oltre a `Task` e `Task<T>`.
 * [Miglioramenti della sintassi dei valori letterali numerici](#numeric-literal-syntax-improvements)
-    - Nuovi token migliorano la leggibilità delle costanti numeriche.
+  - Nuovi token migliorano la leggibilità delle costanti numeriche.
 
 La parte restante di questo articolo illustra una panoramica di ogni funzionalità. Per ogni funzionalità verranno illustrati i concetti di base e si apprenderà la sintassi. È possibile esplorare queste funzionalità nell'[esplorazione interattiva](../tutorials/exploration/csharp-7.yml).
 
@@ -46,10 +46,10 @@ Si consiglia di specificare il tipo della variabile `out` per maggiore chiarezza
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* Il codice è più facile da leggere. 
-    - Si dichiara la variabile out nel punto in cui viene usata, non in una riga precedente.
+* Il codice è più facile da leggere.
+  - Si dichiara la variabile out nel punto in cui viene usata, non in una riga precedente.
 * Non è necessario assegnare un valore iniziale.
-    - Se si dichiara la variabile `out` nel punto in cui viene usata in una chiamata al metodo, non è possibile usarla accidentalmente prima che venga assegnata.
+  - Se si dichiara la variabile `out` nel punto in cui viene usata in una chiamata al metodo, non è possibile usarla accidentalmente prima che venga assegnata.
 
 ## <a name="tuples"></a>Tuple
 
@@ -77,7 +77,7 @@ Può rendersi necessario decomprimere i membri di una tupla che sono stati resti
 È anche possibile specificare una decostruzione simile per qualsiasi tipo in .NET. Si scrive un metodo `Deconstruct` come membro della classe. Tale metodo `Deconstruct` specifica un set di argomenti `out` per ognuna delle proprietà da estrarre. Considerare questa classe `Point` che specifica un metodo di decostruzione che estrae le coordinate `X` e `Y`:
 
 [!code-csharp[PointWithDeconstruction](~/samples/snippets/csharp/new-in-7/point.cs#PointWithDeconstruction "Point with deconstruction method")]
- 
+
 È possibile estrarre i singoli campi assegnando un oggetto `Point` a una tupla:
 
 [!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
@@ -103,7 +103,8 @@ Per altre informazioni, vedere [Variabili discard](../discards.md).
 
 ## <a name="pattern-matching"></a>Criteri di ricerca
 
-L'uso dei *criteri di ricerca* consente di implementare l'invio dei metodi per le proprietà diverse dal tipo di un oggetto. Probabilmente si ha già familiarità con l'invio dei metodi basato sul tipo di un oggetto. Nella programmazione orientata agli oggetti i metodi virtuali e di override offrono la sintassi del linguaggio necessaria per implementare l'invio dei metodi basato sul tipo di un oggetto. Le classi di base e derivate consentono diverse implementazioni. Le espressioni di criteri di ricerca estendono questo concetto in modo che sia possibile implementare facilmente modelli di invio simili per i tipi e gli elementi di dati che non sono correlati attraverso una gerarchia di ereditarietà. 
+L'uso dei *criteri di ricerca* consente di implementare l'invio dei metodi per le proprietà diverse dal tipo di un oggetto. Probabilmente si ha già familiarità con l'invio dei metodi basato sul tipo di un oggetto. Nella programmazione orientata agli oggetti i metodi virtuali e di override offrono la sintassi del linguaggio necessaria per implementare l'invio dei metodi basato sul tipo di un oggetto. Le classi di base e derivate consentono diverse implementazioni.
+Le espressioni di criteri di ricerca estendono questo concetto in modo che sia possibile implementare facilmente modelli di invio simili per i tipi e gli elementi di dati che non sono correlati attraverso una gerarchia di ereditarietà.
 
 I criteri di ricerca supportano le espressioni `is` e le espressioni `switch`. Ognuno consente di esaminare un oggetto e le relative proprietà per determinare se l'oggetto soddisfa il criterio ricercato. Usare la parola chiave `when` per specificare regole aggiuntive per il modello.
 
@@ -133,7 +134,7 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
     {
         switch (i)
         {
-            case 0: 
+            case 0:
                 break;
             case IEnumerable<int> childSequence:
             {
@@ -141,10 +142,10 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
                     sum += (item > 0) ? item : 0;
                 break;
             }
-            case int n when n > 0: 
-                sum += n; 
+            case int n when n > 0:
+                sum += n;
                 break;
-            null:
+            case null:
                 throw new NullReferenceException("Null found in sequence");
             default:
                 throw new InvalidOperationException("Unrecognized type");
@@ -154,7 +155,7 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 }
 ```
 
-- `case 0:` è il criterio costante familiare. 
+- `case 0:` è il criterio costante familiare.
 - `case IEnumerable<int> childSequence:` è un criterio del tipo.
 - `case int n when n > 0:` è un criterio del tipo con una condizione `when` aggiuntiva.
 - `case null:` è il criterio null.
@@ -170,20 +171,20 @@ Questa funzionalità abilita algoritmi che usano e restituiscono riferimenti a v
 
 È possibile dichiarare il valore restituito come `ref` e modificare tale valore nella matrice, come illustrato nel codice seguente:
 
-[!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/program.cs#AssignRefReturn "Assign ref return")]
+[!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/Program.cs#AssignRefReturn "Assign ref return")]
 
 Il linguaggio C# usa diverse regole per evitare l'uso improprio delle variabili locali `ref` e dei valori restituiti:
 
 * È necessario aggiungere la parola chiave `ref` alla firma del metodo e a tutte le istruzioni `return` in un metodo.
-    - In questo modo appare chiaro che le restituzioni avvengono in base al riferimento nell'intero metodo.
+  - In questo modo appare chiaro che le restituzioni avvengono in base al riferimento nell'intero metodo.
 * Un elemento `ref return` può essere assegnato a una variabile value o a una variabile `ref`.
-    - Il chiamante determina se il valore restituito viene copiato oppure no. L'omissione del modificatore `ref` quando si assegna il valore restituito indica che il chiamante desidera una copia del valore e non un riferimento alla risorsa di archiviazione.
+  - Il chiamante determina se il valore restituito viene copiato oppure no. L'omissione del modificatore `ref` quando si assegna il valore restituito indica che il chiamante desidera una copia del valore e non un riferimento alla risorsa di archiviazione.
 * Non è possibile assegnare un valore restituito del metodo standard a una variabile locale `ref`.
-    - Questo non consente istruzioni come `ref int i = sequence.Count();`
+  - Questo non consente istruzioni come `ref int i = sequence.Count();`
 * Non è possibile restituire un elemento `ref` a una variabile la cui durata è limitata alla durata di esecuzione del metodo.
-    - Ciò significa che non è possibile restituire un riferimento a una variabile locale o a una variabile con ambito simile.
+  - Ciò significa che non è possibile restituire un riferimento a una variabile locale o a una variabile con ambito simile.
 * Non è possibile usare variabili locali e valori restituiti `ref` con i metodi asincroni.
-    - Il compilatore non può stabilire se la variabile a cui si fa riferimento è stata impostata sul valore finale quando il metodo asincrono restituisce il controllo.
+  - Il compilatore non può stabilire se la variabile a cui si fa riferimento è stata impostata sul valore finale quando il metodo asincrono restituisce il controllo.
 
 L'aggiunta di variabili locali e valori restituiti ref abilita algoritmi più efficienti, evitando la copia dei valori o l'esecuzione ripetuta di operazioni di dereferenziazione.
 
@@ -221,7 +222,7 @@ La modifica di un metodo in un membro con corpo di espressione è una [modifica 
 
 ## <a name="throw-expressions"></a>Espressioni throw
 
-In C# `throw` è sempre stata un'istruzione. Poiché `throw` è un'istruzione, non un'espressione, non può essere usata in determinati costrutti di C#. Sono incluse le espressioni condizionali, le espressioni Null ridondanti e alcune espressioni lambda. L'aggiunta di membri con corpo di espressione consente di aggiungere più posizioni in cui le espressioni `throw` possono risultare utili. Per fare in modo che sia possibile scrivere uno di questi costrutti, C# 7.0 introduce le *espressioni throw*. 
+In C# `throw` è sempre stata un'istruzione. Poiché `throw` è un'istruzione, non un'espressione, non può essere usata in determinati costrutti di C#. Sono incluse le espressioni condizionali, le espressioni Null ridondanti e alcune espressioni lambda. L'aggiunta di membri con corpo di espressione consente di aggiungere più posizioni in cui le espressioni `throw` possono risultare utili. Per fare in modo che sia possibile scrivere uno di questi costrutti, C# 7.0 introduce le *espressioni throw*.
 
 Questa aggiunta facilita la scrittura di codice basato sulle espressioni. Non sono necessarie istruzioni aggiuntive per il controllo degli errori.
 
@@ -229,7 +230,7 @@ Questa aggiunta facilita la scrittura di codice basato sulle espressioni. Non so
 
 La restituzione di un oggetto `Task` dai metodi asincroni può introdurre colli di bottiglia delle prestazioni in determinati percorsi. `Task` è un tipo di riferimento, quindi usarlo significa allocare un oggetto. Nei casi in cui un metodo dichiarato con il modificatore `async` restituisce un risultato memorizzato nella cache o viene completato in modo sincrono, le allocazioni aggiuntive possono diventare impegnative in termini di tempo nelle sezioni di codice critiche per le prestazioni. Possono diventare onerose se si verificano in cicli ridotti.
 
-La nuova funzionalità del linguaggio significa che i tipi restituiti dal metodo asincrono non sono limitati a `Task`, `Task<T>` e `void`. Il tipo restituito deve comunque essere conforme al modello asincrono ovvero deve essere accessibile un metodo `GetAwaiter`. Per fare un esempio concreto, il tipo `ValueTask` è stato aggiunto a .NET Framework per consentire l'uso di questa nuova funzionalità del linguaggio: 
+La nuova funzionalità del linguaggio significa che i tipi restituiti dal metodo asincrono non sono limitati a `Task`, `Task<T>` e `void`. Il tipo restituito deve comunque essere conforme al modello asincrono ovvero deve essere accessibile un metodo `GetAwaiter`. Per fare un esempio concreto, il tipo `ValueTask` è stato aggiunto a .NET Framework per consentire l'uso di questa nuova funzionalità del linguaggio:
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 

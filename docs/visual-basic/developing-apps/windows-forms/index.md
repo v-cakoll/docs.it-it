@@ -2,15 +2,9 @@
 title: Nozioni fondamentali relative alle applicazioni Windows Forms (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Windows applications
-- Windows Forms, Visual Basic
+  - Windows applications
+  - 'Windows Forms, Visual Basic'
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 99aa61d921217ab5638172a54697054e8421fd5c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972677"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Nozioni fondamentali relative alle applicazioni Windows Forms (Visual Basic)
 Una parte importante di Visual Basic è la possibilità di creare applicazioni Windows Forms che vengono eseguite localmente sui computer degli utenti. È possibile usare Visual Studio per creare l'applicazione e interfaccia utente mediante Windows Forms. Un'applicazione Windows Forms è basata sulle classi dal <xref:System.Windows.Forms> dello spazio dei nomi.  
@@ -18,11 +12,11 @@ Una parte importante di Visual Basic è la possibilità di creare applicazioni W
 ## <a name="designing-windows-forms-applications"></a>Progettazione di Windows Forms Application  
  È possibile creare applicazioni di servizio di Windows e Windows Forms con Visual Studio. Per altre informazioni, vedere i seguenti argomenti:  
   
--   [Introduzione a Windows Form](../../../framework/winforms/getting-started-with-windows-forms.md). Fornisce informazioni su come creare e programmare i Windows Form.  
+- [Introduzione a Windows Form](../../../framework/winforms/getting-started-with-windows-forms.md). Fornisce informazioni su come creare e programmare i Windows Form.  
    
--   [Controlli di Windows Form](../../../framework/winforms/controls/index.md). Raccolta di argomenti che riporta in dettaglio l'uso di controlli Windows Form.  
+- [Controlli di Windows Form](../../../framework/winforms/controls/index.md). Raccolta di argomenti che riporta in dettaglio l'uso di controlli Windows Form.  
   
--   [Le applicazioni di servizio Windows](../../../framework/windows-services/index.md). Elenca argomenti che illustrano come creare servizi Windows.  
+- [Le applicazioni di servizio Windows](../../../framework/windows-services/index.md). Elenca argomenti che illustrano come creare servizi Windows.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>Compilazione di interfacce utente complete e interattive  
  Windows Forms è il componente smart client del [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], un set di librerie gestite che semplificano attività comuni dell'applicazione, ad esempio la lettura e scrittura nel file System. Usa un ambiente di sviluppo come Visual Studio, è possibile creare applicazioni Windows Forms che visualizzano informazioni, richiedono l'input dagli utenti e comunicano con i computer remoti tramite una rete.  

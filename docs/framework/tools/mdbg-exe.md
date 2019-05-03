@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3daf0a1cf2d1ae55780a16612aa33a0fdb70a52b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e5320bc6c5105c95d63b1888e1adbc2ecf1bc5fb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282035"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59199999"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (Debugger della riga di comando di .NET Framework)
 Il debugger della riga di comando di .NET Framework consente ai fornitori di strumenti e agli sviluppatori di applicazioni di individuare e correggere i bug nei programmi destinati a Common Language Runtime di .NET Framework. Questo strumento usa l'API di debug del runtime per offrire servizi di debug. È possibile usare MDbg.exe solo per eseguire il debug di codice gestito in quanto non esiste alcun supporto per il debug di codice non gestito.  
@@ -34,7 +34,7 @@ MDbg [ProgramName[arguments]] [options]
   
  I comandi di MDbg.exe sono soggetti alla distinzione tra maiuscole e minuscole.  
   
-|Comando|Descrizione|  
+|Comando|Description|  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*numero*]|Passa a un altro processo di cui viene eseguito il debug o visualizza i processi disponibili. I numeri non corrispondono a ID di processo (PID) effettivi ma a un elenco a indice zero.|  
 |**a**[**ttach**] [*pid*]|Esegue la connessione a un processo o visualizza i processi disponibili.|  
@@ -85,7 +85,7 @@ MDbg [ProgramName[arguments]] [options]
 |**w**[**here**] [`-v`] [`-c` *profondità*] [*IDthread*]|Visualizza informazioni di debug relative agli stack frame.<br /><br /> -   L'opzione `-v` offre informazioni dettagliate su ogni stack frame visualizzato.<br />-   Specificando un numero per `depth`, limita il numero di frame visualizzati. Usare il comando **all** per visualizzare tutti i frame. Il valore predefinito è 100.<br />Se si specifica il parametro *IDthread*, è possibile determinare quale thread è associato allo stack. Il valore predefinito è il solo thread corrente. Usare il comando **all** per ottenere tutti i thread.|  
 |**x** [`-c`*numeroSimboli*] [*modulo*[`!`*modello*]]|Visualizza le funzioni che corrispondono al parametro `pattern` per un modulo.<br /><br /> Se viene specificato il parametro *numeroSimboli*, l'output viene limitato al numero indicato. Se non viene specificato `!` (che indica un'espressione regolare) per il parametro *modello*, vengono visualizzate tutte le funzioni. Se non viene specificato un valore per il parametro *modulo*, vengono visualizzati tutti i moduli caricati. È possibile usare simboli (*~#*) per impostare punti di interruzione tramite il comando **break**.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Compilare l'applicazione di cui eseguire il debug usando flag specifici del compilatore che determinano la generazione di simboli di debug da parte del compilatore. Per altre informazioni su questi flag, vedere la documentazione fornita con il compilatore. È possibile eseguire il debug delle applicazioni ottimizzate, tuttavia alcune informazioni di debug risulteranno mancanti. Molte variabili locali, ad esempio, non risulteranno visibili e le righe del codice sorgente non saranno accurate.  
   
  Dopo aver compilato l'applicazione, digitare **mdbg** al prompt dei comandi per avviare una sessione di debug, come illustrato nell'esempio seguente.  
@@ -105,5 +105,6 @@ mdbg>
  Una volta nel debugger, usare i comandi e gli argomenti descritti nella sezione precedente.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strumenti](../../../docs/framework/tools/index.md)
 - [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a2f71a277484adbbfe3628222c635528cdab03e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045747"
 ---
 # <a name="corimportoptions-enumeration"></a>Enumerazione CorImportOptions
 Contiene valori di flag che controllano il comportamento durante l'importazione di un assembly esterno all'ambito corrente.  

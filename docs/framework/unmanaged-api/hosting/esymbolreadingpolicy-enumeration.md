@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ba29952fe4a6edfc6e9e80ec02f82de65ef0064
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628600"
 ---
 # <a name="esymbolreadingpolicy-enumeration"></a>Enumerazione ESymbolReadingPolicy
 Contiene valori che impostano i criteri per la lettura dei file di programma (PDB) del database.  

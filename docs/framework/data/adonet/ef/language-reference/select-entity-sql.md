@@ -3,11 +3,11 @@ title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
 ms.openlocfilehash: d6250871b8e22b73b49a94ee7ae7835f53a7c7cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797813"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 Specifica gli elementi restituiti da una query.  
@@ -39,7 +39,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `aliasedExpr`  
  Espressione nel formato seguente:  
   
- `expr` as `identifier` &#124; `expr`  
+ `expr` come `identifier`&#124; `expr`  
   
  `expr`  
  Valore letterale o espressione.  

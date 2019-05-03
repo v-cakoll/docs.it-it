@@ -10,11 +10,11 @@ helpviewer_keywords:
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
 ms.openlocfilehash: 73f2004470d5d1da04199af75832cefd6348ce18
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937670"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Procedura: Creare form figlio MDI
 Form figlio MDI sono un elemento essenziale [le applicazioni di interfaccia a documenti multipli (MDI)](multiple-document-interface-mdi-applications.md), come il centro di interazione dell'utente sono elencati i moduli.  
@@ -112,4 +112,4 @@ Form figlio MDI sono un elemento essenziale [le applicazioni di interfaccia a do
 - [Procedura: Creare form padre MDI](how-to-create-mdi-parent-forms.md)
 - [Procedura: Determinare il figlio MDI attivo](how-to-determine-the-active-mdi-child.md)
 - [Procedura: Inviare dati al figlio MDI attivo](how-to-send-data-to-the-active-mdi-child.md)
-- [Procedura: Disporre form figlio MDI](how-to-arrange-mdi-child-forms.md)
+- [Procedura: Disporre i form figlio MDI](how-to-arrange-mdi-child-forms.md)

@@ -3,22 +3,22 @@ title: Channel factory e memorizzazione nella cache
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784306"
 ---
 # <a name="channel-factory-and-caching"></a>Channel factory e memorizzazione nella cache
 Le applicazioni client WCF utilizzano la classe <xref:System.ServiceModel.ChannelFactory%601> per creare un canale di comunicazione con un servizio WCF.  La creazione di istanze dell'oggetto <xref:System.ServiceModel.ChannelFactory%601> comporta un sovraccarico perché include le seguenti operazioni:  
   
--   Costruzione dell'albero <xref:System.ServiceModel.Description.ContractDescription>  
+- Costruzione dell'albero <xref:System.ServiceModel.Description.ContractDescription>  
   
--   Reflection di tutti i tipi CLR obbligatori  
+- Reflection di tutti i tipi CLR obbligatori  
   
--   Costruzione dello stack dei canali  
+- Costruzione dello stack dei canali  
   
--   Eliminazione di risorse  
+- Eliminazione di risorse  
   
  Per ridurre il sovraccarico, WCF può memorizzare le channel factory nella cache quando si utilizza un proxy client WCF.  
   

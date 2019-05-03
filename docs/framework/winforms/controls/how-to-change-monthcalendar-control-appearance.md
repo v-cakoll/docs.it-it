@@ -10,18 +10,18 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
 ms.openlocfilehash: 233143099996759cc006b3f28b984938554a0d18
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666516"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Procedura: Modificare l'aspetto del controllo MonthCalendar di Windows Forms
 I moduli di Windows <xref:System.Windows.Forms.MonthCalendar> controllo consente di personalizzare l'aspetto del calendario in molti modi. Ad esempio, è possibile impostare la combinazione di colori e scegliere di visualizzare o nascondere i numeri di settimana e la data corrente.  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>Per modificare lo schema di colori del calendario mensile  
   
--   Impostare proprietà quali <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>. Il <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> proprietà determina anche il colore del carattere per i giorni della settimana. Il <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> proprietà determina il colore delle date che precedono e seguono il mese visualizzato o mesi.  
+- Impostare proprietà quali <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>. Il <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> proprietà determina anche il colore del carattere per i giorni della settimana. Il <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> proprietà determina il colore delle date che precedono e seguono il mese visualizzato o mesi.  
   
     ```vb  
     MonthCalendar1.TitleBackColor = System.Drawing.Color.Blue  
@@ -46,7 +46,7 @@ I moduli di Windows <xref:System.Windows.Forms.MonthCalendar> controllo consente
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Per visualizzare la data corrente nella parte inferiore del controllo  
   
--   Impostare la proprietà <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> su `true`. L'esempio seguente attiva o disattiva la visualizzazione della data odierna quando fa doppio clic sul form.  
+- Impostare la proprietà <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> su `true`. L'esempio seguente attiva o disattiva la visualizzazione della data odierna quando fa doppio clic sul form.  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -87,7 +87,7 @@ I moduli di Windows <xref:System.Windows.Forms.MonthCalendar> controllo consente
   
 ### <a name="to-display-week-numbers"></a>Per visualizzare i numeri di settimana  
   
--   Impostare la proprietà <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> su `true`. È possibile impostare questa proprietà nel codice o nella finestra Proprietà.  
+- Impostare la proprietà <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> su `true`. È possibile impostare questa proprietà nel codice o nella finestra Proprietà.  
   
      I numeri di settimana vengono visualizzati in un'altra colonna a sinistra del primo giorno della settimana.  
   
@@ -106,6 +106,6 @@ I moduli di Windows <xref:System.Windows.Forms.MonthCalendar> controllo consente
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllo MonthCalendar](monthcalendar-control-windows-forms.md)
-- [Procedura: Selezionare un intervallo di date nel controllo MonthCalendar di Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Procedura: Visualizzare giorni specifici in grassetto con il controllo MonthCalendar di Windows Forms](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [Procedura: Visualizzare più mesi nel controllo MonthCalendar di Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Procedura: Selezionare un intervallo di date nel controllo MonthCalendar Windows Form](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Procedura: Visualizzare giorni specifici in grassetto con il Windows Form controllo MonthCalendar](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [Procedura: Visualizzare più mesi nel controllo MonthCalendar Windows Form](display-more-than-one-month-wf-monthcalendar-control.md)

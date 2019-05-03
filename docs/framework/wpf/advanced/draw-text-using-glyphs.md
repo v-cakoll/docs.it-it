@@ -7,11 +7,11 @@ helpviewer_keywords:
 - typography [WPF], Glyphs objects
 ms.assetid: 587ab17e-a419-4ad5-b6da-8933a8e83d97
 ms.openlocfilehash: 55bbc50de519d6607a843fcd633f2c07db53109f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010371"
 ---
 # <a name="draw-text-using-glyphs"></a>Creare testo utilizzando i glifi
 In questo argomento illustra come usare il livello basso <xref:System.Windows.Documents.Glyphs> oggetto per la visualizzazione testo [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

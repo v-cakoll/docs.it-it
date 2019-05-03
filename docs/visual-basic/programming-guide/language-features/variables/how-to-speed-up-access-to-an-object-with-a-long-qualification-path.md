@@ -9,11 +9,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
 ms.openlocfilehash: 94c838a69aab9fcae9dc0c79b6038ee90e2369e7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769044"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Procedura: Velocizzare l'accesso a un oggetto con un percorso di qualificazione lungo (Visual Basic)
 Se si accede di frequente un oggetto che richiede un percorso di qualificazione dei diversi metodi e proprietà, è possibile velocizzare il codice non ripetendo il percorso di qualificazione.  

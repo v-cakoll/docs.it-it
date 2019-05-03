@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0aabff090634f1ecdeec5636336ad1fb77b8b81c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988923"
 ---
 # <a name="icordebugeval2rudeabort-method"></a>Metodo ICorDebugEval2::RudeAbort
 Interrompe il calcolo da questo `ICorDebugEval2` attualmente in esecuzione.  
@@ -34,13 +34,13 @@ HRESULT RudeAbort ();
 ```  
   
 ## <a name="remarks"></a>Note  
- `RudeAbort` non rilascia eventuali blocchi che contiene l'analizzatore, pertanto lascia la sessione di debug in uno stato non sicuro. Chiamare questo metodo con estrema cautela.  
+ `RudeAbort` non rilascia i blocchi che contiene l'analizzatore, in modo che lascia la sessione di debug in uno stato non sicuro. Chiamare questo metodo con estrema cautela.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

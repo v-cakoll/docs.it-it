@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c54b2af6e7a200db89bfd7335868a629d7a886fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61724109"
 ---
 # <a name="cordebuguserstate-enumeration"></a>Enumerazione CorDebugUserState
 Indica lo stato utente di un thread.  

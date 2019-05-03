@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 193abe173b259ff2679642e229fce96151e37872
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992303"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>Metodo IMetaDataImport::EnumSignatures
 Enumera i token Signature che rappresentano le firme autonome nell'ambito corrente.  

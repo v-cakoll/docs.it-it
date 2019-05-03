@@ -2,45 +2,39 @@
 title: Elementi dichiarati in Visual Basic
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-ms.openlocfilehash: cafc280bb4dbee388717ead4f748d66ea5d3ce72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647696"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Elementi dichiarati in Visual Basic
 Un *elemento dichiarato* è un elemento di programmazione definito in un'istruzione di dichiarazione. Gli elementi dichiarati includono variabili, costanti, enumerazioni, classi, strutture, moduli, interfacce, procedure, parametri di procedura, risultati di funzioni, riferimenti a routine esterne, operatori, proprietà, eventi e delegati.  
   
  Le istruzioni di dichiarazione includono quanto segue:  
   
--   [Istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+- [Istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)  
   
--   [Istruzione Const](../../../../visual-basic/language-reference/statements/const-statement.md)  
+- [Istruzione Const](../../../../visual-basic/language-reference/statements/const-statement.md)  
   
--   [Istruzione Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)  
+- [Istruzione Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)  
   
--   [Istruzione Class](../../../../visual-basic/language-reference/statements/class-statement.md)  
+- [Istruzione Class](../../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+- [Istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Istruzione Module](../../../../visual-basic/language-reference/statements/module-statement.md)  
+- [Istruzione Module](../../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Istruzione Interface](../../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [Istruzione Interface](../../../../visual-basic/language-reference/statements/interface-statement.md)  
   
--   [Istruzione Function](../../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Istruzione Function](../../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Istruzione Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Istruzione Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Istruzione Declare](../../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Istruzione Declare](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Istruzione Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Istruzione Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Istruzione Event](../../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Istruzione Event](../../../../visual-basic/language-reference/statements/event-statement.md)  
   
--   [Istruzione Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+- [Istruzione Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Nomi di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

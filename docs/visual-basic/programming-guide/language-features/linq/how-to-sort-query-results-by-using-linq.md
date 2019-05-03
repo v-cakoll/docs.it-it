@@ -12,11 +12,11 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
 ms.openlocfilehash: d2114e908077ec947164a28f48841282abefda2e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59301217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053743"
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Procedura: Ordina i risultati di Query utilizzando LINQ (Visual Basic)
 Language-Integrated Query (LINQ) semplifica accedere alle informazioni sul database ed eseguire query.  

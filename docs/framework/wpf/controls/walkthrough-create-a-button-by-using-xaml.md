@@ -5,11 +5,11 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 908a38485c879e3f28399bb7dbc8303afd4505da
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023996"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Procedura dettagliata: Creare un pulsante usando XAML
 L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare un pulsante animato per l'uso in un'applicazione Windows Presentation Foundation (WPF). Questa procedura dettagliata Usa stili e un modello per creare una risorsa pulsante personalizzato che consente il riutilizzo del codice e la separazione della logica di pulsante dalla dichiarazione del pulsante. Questa procedura dettagliata viene scritta interamente in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -421,15 +421,15 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
 ## <a name="summary"></a>Riepilogo  
  In questa procedura dettagliata, sono stati eseguiti gli esercizi seguenti:  
   
--   Destinazione un <xref:System.Windows.Style> a un tipo di oggetto (<xref:System.Windows.Controls.Button>).  
+- Destinazione un <xref:System.Windows.Style> a un tipo di oggetto (<xref:System.Windows.Controls.Button>).  
   
--   Controllare le proprietà di base dei pulsanti nell'intera applicazione usando il <xref:System.Windows.Style>.  
+- Controllare le proprietà di base dei pulsanti nell'intera applicazione usando il <xref:System.Windows.Style>.  
   
--   Creazione di risorse, ad esempio sfumature da usare per i valori della proprietà di <xref:System.Windows.Style> Setter.  
+- Creazione di risorse, ad esempio sfumature da usare per i valori della proprietà di <xref:System.Windows.Style> Setter.  
   
--   Personalizzare l'aspetto dei pulsanti dell'intera applicazione applicando un modello per i pulsanti.  
+- Personalizzare l'aspetto dei pulsanti dell'intera applicazione applicando un modello per i pulsanti.  
   
--   Personalizzare il comportamento dei pulsanti in risposta alle azioni dell'utente (ad esempio <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, e <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) che è includere gli effetti di animazione.  
+- Personalizzare il comportamento dei pulsanti in risposta alle azioni dell'utente (ad esempio <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, e <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) che è includere gli effetti di animazione.  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -437,4 +437,4 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
 - [Applicazione di stili e modelli](styling-and-templating.md)
 - [Cenni preliminari sull'animazione](../graphics-multimedia/animation-overview.md)
 - [Cenni sul disegno con colori a tinta unita e sfumature](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Cenni preliminari sugli effetti bitmap](../graphics-multimedia/bitmap-effects-overview.md)
+- [Panoramica sugli effetti bitmap](../graphics-multimedia/bitmap-effects-overview.md)

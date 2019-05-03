@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938853"
 ---
 # <a name="xtype-markup-extension"></a>Estensione del markup x:Type
 Fornisce Common Language Runtime <xref:System.Type> oggetto che rappresenta il tipo sottostante per un tipo XAML specificato.  
@@ -71,11 +71,11 @@ Fornisce Common Language Runtime <xref:System.Type> oggetto che rappresenta il t
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 fornisce ulteriore supporto per tipi generici e il comportamento della funzionalità di modifica `x:TypeArguments` e `x:Type` per fornire questo supporto.  
   
--   `x:TypeArguments` e può essere l'elemento oggetto associato per la creazione di un'istanza di oggetto generico negli elementi diversa dalla quella radice. Per altre informazioni, vedere la sezione "XAML 2009" di [X:TypeArguments Directive](x-typearguments-directive.md).  
+- `x:TypeArguments` e può essere l'elemento oggetto associato per la creazione di un'istanza di oggetto generico negli elementi diversa dalla quella radice. Per altre informazioni, vedere la sezione "XAML 2009" di [X:TypeArguments Directive](x-typearguments-directive.md).  
   
--   XAML 2009 supporta una sintassi per la specifica di vincolo di un tipo generico nel markup. Questo può essere usato da `x:TypeArguments`, da `x:Type`, oppure le due funzionalità nella combinazione.  
+- XAML 2009 supporta una sintassi per la specifica di vincolo di un tipo generico nel markup. Questo può essere usato da `x:TypeArguments`, da `x:Type`, oppure le due funzionalità nella combinazione.  
   
--   Implementazione WPF XAML durante l'elaborazione di XAML 2009 per carico aggiunge anche questa funzionalità per il comportamento di conversione implicita del tipo per determinate proprietà del framework che usano il tipo <xref:System.Type>.  
+- Implementazione WPF XAML durante l'elaborazione di XAML 2009 per carico aggiunge anche questa funzionalità per il comportamento di conversione implicita del tipo per determinate proprietà del framework che usano il tipo <xref:System.Type>.  
   
  In WPF, è possibile usare le funzionalità di XAML 2009, ma solo per XAML loose (XAML non è compilato dal markup). Il codice XAML compilato dal markup per WPF e il modulo BAML di XAML non supportano attualmente le parole chiave e le funzionalità di XAML 2009.  
   
@@ -83,5 +83,5 @@ Fornisce Common Language Runtime <xref:System.Type> oggetto che rappresenta il t
 
 - <xref:System.Windows.Style>
 - [Applicazione di stili e modelli](../wpf/controls/styling-and-templating.md)
-- [Panoramica di XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Cenni preliminari su XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [Estensioni di markup e XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

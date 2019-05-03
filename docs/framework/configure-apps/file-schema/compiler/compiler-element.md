@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
 ms.openlocfilehash: 34753d538ff37ac4ae621f653d47ac92ac6749a0
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705376"
 ---
 # <a name="compiler-element"></a>\<compilatore > elemento
 
@@ -45,7 +45,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 |---------------|-----------------|
 |`compilerOptions`|Attributo facoltativo.<br /><br /> Specifica ulteriori argomenti specifici del compilatore per la compilazione. I valori per il `compilerOptions` attributo vengono elencati in genere in un argomento relativo alle opzioni del compilatore per consentire al compilatore.|
 |`extension`|Attributo obbligatorio.<br /><br /> Fornisce un elenco delimitato da punto e virgola di estensioni di file usato dai file di origine per il provider del linguaggio. Ad esempio, "cs".|
-|`language`|Attributo obbligatorio.<br /><br /> Fornisce un elenco delimitato da punto e virgola di nomi di linguaggio supportati dal provider del linguaggio. Ad esempio "C#; cs; csharp".|
+|`language`|Attributo obbligatorio.<br /><br /> Fornisce un elenco delimitato da punto e virgola di nomi di linguaggio supportati dal provider del linguaggio. Ad esempio "c#; cs; csharp".|
 |`type`|Attributo obbligatorio.<br /><br /> Specifica il nome del tipo di provider del linguaggio, inclusi il nome dell'assembly contenente l'implementazione del provider. Il nome del tipo deve soddisfare i requisiti definiti nella [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|
 |`warningLevel`|Attributo facoltativo.<br /><br /> Specifica il livello di avviso del compilatore predefinito; Determina il livello in corrispondenza del quale il provider del linguaggio avvisi di compilazione vengono considerati come errori.|
 

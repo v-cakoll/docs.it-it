@@ -16,11 +16,11 @@ helpviewer_keywords:
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
 ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917839"
 ---
 # <a name="scope-in-visual-basic"></a>Ambito in Visual Basic
 Il *ambito* di un elemento dichiarato è il set di tutto il codice che può fare riferimento ad esso senza il nome completo o renderlo disponibile tramite un [istruzione Imports (tipo e .NET Namespace)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Un elemento ambito può essere uno dei livelli seguenti:  
@@ -37,11 +37,11 @@ Il *ambito* di un elemento dichiarato è il set di tutto il codice che può fare
 ## <a name="specifying-scope-and-defining-variables"></a>Che specifica l'ambito e definire le variabili  
  Specificare l'ambito di un elemento quando viene dichiarato. L'ambito può dipendere da fattori seguenti:  
   
--   L'area in cui si dichiara l'elemento (blocco, procedure, modulo, classe o struttura)  
+- L'area in cui si dichiara l'elemento (blocco, procedure, modulo, classe o struttura)  
   
--   Lo spazio dei nomi che contiene la dichiarazione dell'elemento  
+- Lo spazio dei nomi che contiene la dichiarazione dell'elemento  
   
--   Il livello di accesso che è dichiarare per l'elemento  
+- Il livello di accesso che è dichiarare per l'elemento  
   
  Prestare attenzione quando si definiscono le variabili con lo stesso nome ma con un ambito diverso, perché questa operazione può comportare risultati imprevisti. Per altre informazioni, vedere [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
@@ -51,21 +51,21 @@ Il *ambito* di un elemento dichiarato è il set di tutto il codice che può fare
 ### <a name="block-scope"></a>Ambito del blocco  
  Un blocco è un set di istruzioni racchiuse tra parentesi iniziale e finale di istruzioni di dichiarazione, come il seguente:  
   
--   `Do` e `Loop`  
+- `Do` e `Loop`  
   
--   `For` [`Each`] e `Next`  
+- `For` [`Each`] e `Next`  
   
--   `If` e `End If`  
+- `If` e `End If`  
   
--   `Select` e `End Select`  
+- `Select` e `End Select`  
   
--   `SyncLock` e `End SyncLock`  
+- `SyncLock` e `End SyncLock`  
   
--   `Try` e `End Try`  
+- `Try` e `End Try`  
   
--   `While` e `End While`  
+- `While` e `End While`  
   
--   `With` e `End With`  
+- `With` e `End With`  
   
  Se si dichiara una variabile all'interno di un blocco, è possibile usarlo solo all'interno del blocco. Nell'esempio seguente, l'ambito della variabile integer `cube` è il blocco tra `If` e `End If`, e non è possibile fare riferimento a `cube` quando esecuzione passa all'esterno del blocco.  
   
@@ -127,9 +127,9 @@ Public strMsg As String
 ### <a name="advantages-of-local-variables"></a>Vantaggi delle variabili locali  
  Le variabili locali sono un'ottima scelta per qualsiasi tipo di calcolo temporaneo per i motivi seguenti:  
   
--   **Prevenzione dei conflitti di nome.** I nomi delle variabili locali non sono soggetti a conflitti. Ad esempio, è possibile creare varie procedure diverse che contiene una variabile denominata `intTemp`. Fino a quando le `intTemp` viene dichiarato come una variabile locale, ogni routine riconosce solo la propria versione di `intTemp`. Qualsiasi singola routine può modificare il valore nella propria locale `intTemp` senza influire sulla `intTemp` variabili in altre procedure.  
+- **Prevenzione dei conflitti di nome.** I nomi delle variabili locali non sono soggetti a conflitti. Ad esempio, è possibile creare varie procedure diverse che contiene una variabile denominata `intTemp`. Fino a quando le `intTemp` viene dichiarato come una variabile locale, ogni routine riconosce solo la propria versione di `intTemp`. Qualsiasi singola routine può modificare il valore nella propria locale `intTemp` senza influire sulla `intTemp` variabili in altre procedure.  
   
--   **Utilizzo di memoria.** Le variabili locali utilizzano memoria solo mentre è in esecuzione di procedure. Questa memoria viene rilasciata quando viene restituito al codice chiamante. Al contrario, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) e [statico](../../../../visual-basic/language-reference/modifiers/static.md) variabili occupano risorse di memoria fino a quando non si arresta l'applicazione in esecuzione, quindi utilizzarle solo se necessario. *Le variabili di istanze* occupano memoria finché l'istanza continua a esistere, pertanto sono meno efficienti rispetto alle variabili locali, ma potenzialmente più efficienti `Shared` o `Static` variabili.  
+- **Utilizzo di memoria.** Le variabili locali utilizzano memoria solo mentre è in esecuzione di procedure. Questa memoria viene rilasciata quando viene restituito al codice chiamante. Al contrario, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) e [statico](../../../../visual-basic/language-reference/modifiers/static.md) variabili occupano risorse di memoria fino a quando non si arresta l'applicazione in esecuzione, quindi utilizzarle solo se necessario. *Le variabili di istanze* occupano memoria finché l'istanza continua a esistere, pertanto sono meno efficienti rispetto alle variabili locali, ma potenzialmente più efficienti `Shared` o `Static` variabili.  
   
 ### <a name="minimizing-scope"></a>Riduzione dell'ambito  
  In generale, quando si dichiara una variabile o costante, è buona norma apportare più brevi possibile l'ambito (ambito del blocco è il più ristretto). Ciò consente di risparmiare memoria e riduce al minimo le probabilità di codice erroneamente che fa riferimento alla variabile non corretta. Analogamente, è necessario dichiarare una variabile [statici](../../../../visual-basic/language-reference/modifiers/static.md) solo quando è necessario mantenere il valore tra le chiamate di procedura.  

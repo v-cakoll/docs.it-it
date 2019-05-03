@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
 ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966967"
 ---
 # <a name="how-keyboard-input-works"></a>Funzionamento dell'input da tastiera
 Windows Forms elabora gli input della tastiera generando eventi di tastiera in risposta ai messaggi di Windows. La maggioranza delle applicazioni Windows Forms elabora gli input della tastiera tramite la gestione dei relativi eventi. Tuttavia è necessario conoscere il funzionano dei messaggi della tastiera per poter implementare scenari più avanzati di input dalla tastiera, ad esempio l'intercettazione dei tasti prima che raggiungano un controllo. Questo argomento descrive i tipi di dati di tasti che Windows Forms riconosce e fornisce una panoramica del modo in cui vengono instradati i messaggi della tastiera. Per informazioni sugli eventi della tastiera, vedere [Utilizzo degli eventi di tastiera](using-keyboard-events.md).  
@@ -63,9 +63,9 @@ Windows Forms elabora gli input della tastiera generando eventi di tastiera in r
 |Attività|Metodo|  
 |----------|------------|  
 |Intercettare un tasto di spostamento e generare un <xref:System.Windows.Forms.Control.KeyDown> evento. Ad esempio si desidera che TAB e INVIO siano gestiti in una casella di testo.|Eseguire l'override di <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Nota:**  In alternativa, è possibile gestire il <xref:System.Windows.Forms.Control.PreviewKeyDown> evento e impostare <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> delle <xref:System.Windows.Forms.PreviewKeyDownEventArgs> a `true` per uno o più tasti desiderati.|  
-|Eseguire la gestione di input speciali o dello spostamento su un controllo. Ad esempio si desidera che l'uso dei tasti di direzione nel controllo elenco cambi la voce selezionata.|Sostituisci <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|Eseguire la gestione di input speciali o dello spostamento su un controllo. Ad esempio si desidera che l'uso dei tasti di direzione nel controllo elenco cambi la voce selezionata.|Eseguire l'override di <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>.|  
 |Intercettare un tasto di spostamento e generare un <xref:System.Windows.Forms.Control.KeyPress> evento. Ad esempio in un controllo casella di selezione si desidera che più pressioni di un tasto di direzione accelerino lo spostamento tra le voci.|Eseguire l'override di <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
-|Eseguire la gestione di input o di navigazione speciali durante un <xref:System.Windows.Forms.Control.KeyPress> evento. Ad esempio, in un controllo elenco, tenendo premuto il tasto "r" si passa fra le voci che iniziano con la lettera r.|Sostituisci <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|Eseguire la gestione di input o di navigazione speciali durante un <xref:System.Windows.Forms.Control.KeyPress> evento. Ad esempio, in un controllo elenco, tenendo premuto il tasto "r" si passa fra le voci che iniziano con la lettera r.|Eseguire l'override di <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>.|  
 |Eseguire una gestione personalizzata dei tasti di scelta; ad esempio, si desidera gestire i tasti di scelta sui pulsanti disegnati dal proprietario contenuti in una barra degli strumenti.|Eseguire l'override di <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
   
 ## <a name="see-also"></a>Vedere anche

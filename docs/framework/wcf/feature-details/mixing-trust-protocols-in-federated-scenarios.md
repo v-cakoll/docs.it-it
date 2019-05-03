@@ -3,11 +3,11 @@ title: Combinazione di protocolli trust in scenari federati
 ms.date: 03/30/2017
 ms.assetid: d7b5fee9-2246-4b09-b8d7-9e63cb817279
 ms.openlocfilehash: ce5c3a1875d84d98068dcc78d8346a88bc0b28f3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046685"
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Combinazione di protocolli trust in scenari federati
 In alcuni scenari i client federati comunicano con un servizio e con un servizio token di sicurezza che non hanno la stessa versione Trust. Il WSDL del servizio può contenere un'asserzione `RequestSecurityTokenTemplate` con elementi WS-Trust di versioni diverse rispetto al servizio token di sicurezza. In questi casi, un client Windows Communication Foundation (WCF) converte gli elementi WS-Trust ricevuti dal `RequestSecurityTokenTemplate` in modo che corrisponda il servizio token di versione trust. WCF gestisce le versioni trust non corrispondenti solo per le associazioni standard. Tutti i parametri dell'algoritmo standard riconosciuti da WCF fanno parte dell'associazione standard. In questo argomento viene descritto il comportamento WCF con varie impostazioni di trust tra il servizio e il servizio token di sicurezza.  
@@ -15,17 +15,17 @@ In alcuni scenari i client federati comunicano con un servizio e con un servizio
 ## <a name="rp-feb-2005-and-sts-feb-2005"></a>Componente febbraio 2005 e servizio token di sicurezza febbraio 2005  
  Il WSDL per il componente contiene gli elementi seguenti all'interno della sezione `RequestSecurityTokenTemplate`:  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
  Il file di configurazione client contiene un elenco di parametri.  
   
@@ -34,19 +34,19 @@ In alcuni scenari i client federati comunicano con un servizio e con un servizio
 ## <a name="rp-trust-13-and-sts-trust-13"></a>Componente Trust 1.3 e servizio token di sicurezza Trust 1.3  
  Il WSDL per il componente contiene gli elementi seguenti all'interno della sezione `RequestSecurityTokenTemplate`:  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
--   `KeyWrapAlgorithm`  
+- `KeyWrapAlgorithm`  
   
  Il file di configurazione client contiene un elemento `secondaryParameters` che esegue il wrapping dei parametri specificati dal componente.  
   
@@ -55,17 +55,17 @@ In alcuni scenari i client federati comunicano con un servizio e con un servizio
 ## <a name="rp-trust-feb-2005-and-sts-trust-13"></a>Componente Trust febbraio 2005 e servizio token di sicurezza Trust 1.3  
  Il WSDL per il componente contiene i seguenti elementi nella sezione `RequestSecurityTokenTemplate`:  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
  Il file di configurazione client contiene un elenco di parametri.  
   
@@ -73,28 +73,28 @@ In alcuni scenari i client federati comunicano con un servizio e con un servizio
   
  WCF gestisce il `KeyType`, `KeySize`, e `TokenType` elementi come indicato di seguito:  
   
--   Scaricare il WSDL, creare l'assegnazione e assegnare `KeyType`, `KeySize` e `TokenType` dai parametri del componente. Viene quindi generato il file di configurazione client.  
+- Scaricare il WSDL, creare l'assegnazione e assegnare `KeyType`, `KeySize` e `TokenType` dai parametri del componente. Viene quindi generato il file di configurazione client.  
   
--   Il client è ora in grado di modificare qualsiasi parametro nel file di configurazione.  
+- Il client è ora in grado di modificare qualsiasi parametro nel file di configurazione.  
   
--   Durante la fase di esecuzione, WCF consente di copiare tutti i parametri specificati nel `AdditionalTokenParameters` sezione del file di configurazione client eccetto `KeyType`, `KeySize` e `TokenType`, perché questi parametri vengono presi in considerazione durante il file di configurazione generazione.  
+- Durante la fase di esecuzione, WCF consente di copiare tutti i parametri specificati nel `AdditionalTokenParameters` sezione del file di configurazione client eccetto `KeyType`, `KeySize` e `TokenType`, perché questi parametri vengono presi in considerazione durante il file di configurazione generazione.  
   
 ## <a name="rp-trust-13-and-sts-trust-feb-2005"></a>Componente Trust 1.3 e servizio token di sicurezza Trust febbraio 2005  
  Il WSDL per il componente contiene i seguenti elementi nella sezione `RequestSecurityTokenTemplate`:  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
--   `KeyWrapAlgorithm`  
+- `KeyWrapAlgorithm`  
   
  Il file di configurazione client contiene un elemento `secondaryParamters` che esegue il wrapping dei parametri specificati dal componente.  
   

@@ -3,11 +3,11 @@ title: 'Procedura: Ospitare un servizio di flusso di lavoro con Windows Server A
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
 ms.openlocfilehash: d1042aca7e4127c39e59bf0bf400974f0cecb1e8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59314737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039509"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Procedura: Ospitare un servizio di flusso di lavoro con Windows Server AppFabric
 L'hosting di servizi di flusso di lavoro in AppFabric è simile all'hosting in IIS/WAS. L'unica differenza consiste nel fatto che tramite gli strumenti di AppFabric sono garantiti la distribuzione, il monitoraggio e la gestione dei servizi di flusso di lavoro. Questo argomento viene utilizzato il servizio del flusso di lavoro creato nel [creazione di un servizio del flusso di lavoro a esecuzione prolungata](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). in cui viene presentata la procedura dettagliata per la creazione di un servizio di flusso di lavoro. In questo argomento verrà invece illustrato come ospitare il servizio di flusso di lavoro mediante AppFabric. Per altre informazioni su Windows Server AppFabric, vedere [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Prima di completare i passaggi seguenti, assicurarsi di aver installato Windows Server AppFabric.  Per questo scopo, aprire Internet Information Services (inetmgr.exe), fare clic sul nome del server nella **connessioni** consente di visualizzare, fare clic su siti e fare clic su **sito Web predefinito**. Nel lato destro dello schermo viene visualizzato una sezione intitolata **AppFabric**. Se tale sezione non viene visualizzata (controllare nella parte superiore del riquadro di destra), AppFabric non è installato. Per altre informazioni sull'installazione di Windows Server AppFabric, vedere [installazione di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193136).  

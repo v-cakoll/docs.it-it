@@ -3,11 +3,11 @@ title: 'Procedura: Creare un partecipante di persistenza personalizzato'
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
 ms.openlocfilehash: 1de2abb8ababd794cd644733b6e4ab0ed42b1810
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773357"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Procedura: Creare un partecipante di persistenza personalizzato
 Nella procedura riportata di seguito sono illustrati i passaggi per creare un partecipante di persistenza. Vedere le [che fanno parte di persistenza](https://go.microsoft.com/fwlink/?LinkID=177735) campione e [Store estendibilità](store-extensibility.md) argomento per le implementazioni di esempio dei partecipanti di persistenza.  

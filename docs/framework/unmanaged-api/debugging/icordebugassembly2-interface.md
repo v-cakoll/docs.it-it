@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 70eac63855f16205c3d5dbcb28305481b986484c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645552"
 ---
 # <a name="icordebugassembly2-interface"></a>Interfaccia ICorDebugAssembly2
 

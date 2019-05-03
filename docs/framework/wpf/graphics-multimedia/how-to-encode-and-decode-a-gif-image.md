@@ -14,11 +14,11 @@ helpviewer_keywords:
 - GIF encoding [WPF]
 ms.assetid: 9cdd9ec7-71eb-444b-b9e3-991958461163
 ms.openlocfilehash: 35bd08f0d5e4d2ee9b8731706c9f1d770d67f633
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947615"
 ---
 # <a name="how-to-encode-and-decode-a-gif-image"></a>Procedura: Codificare e decodificare un'immagine GIF
 Gli esempi seguenti illustrano come decodificare e codificare un' [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] immagine usando le specifiche <xref:System.Windows.Media.Imaging.GifBitmapDecoder> e <xref:System.Windows.Media.Imaging.GifBitmapEncoder> oggetti.  

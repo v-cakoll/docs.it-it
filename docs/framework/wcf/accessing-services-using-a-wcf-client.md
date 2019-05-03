@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
 ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59297252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782434"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Accesso ai servizi tramite client WCF
 
@@ -178,22 +178,22 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 Molte eccezioni generate da un client WCF sono causate da un'eccezione nel servizio. Di seguito ne vengono riportati alcuni esempi:
 
--   <xref:System.Net.Sockets.SocketException>: Una connessione esistente chiusa forzatamente dall'host remoto.
+- <xref:System.Net.Sockets.SocketException>: Una connessione esistente chiusa forzatamente dall'host remoto.
 
--   <xref:System.ServiceModel.CommunicationException>: La connessione sottostante chiusa in modo imprevisto.
+- <xref:System.ServiceModel.CommunicationException>: La connessione sottostante chiusa in modo imprevisto.
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>: La connessione socket è stata interrotta. Questo problema può essere causato da un errore durante l'elaborazione del messaggio, da un timeout di ricezione superato dall'host remoto o da un problema della risorsa di rete sottostante.
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>: La connessione socket è stata interrotta. Questo problema può essere causato da un errore durante l'elaborazione del messaggio, da un timeout di ricezione superato dall'host remoto o da un problema della risorsa di rete sottostante.
 
 Quando si verificano questi tipi di eccezioni, il modo migliore per risolvere il problema è attivare la traccia sul lato servizio e individuare l'eccezione che si è verificata. Per ulteriori informazioni sulla traccia, vedere [Tracing](../../../docs/framework/wcf/diagnostics/tracing/index.md) e [tramite la traccia per risolvere i problemi dell'applicazione](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Creare un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Procedura: Accedere ai servizi con un contratto duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Procedura: Creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Procedura: Servizi di accesso con un contratto Duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [Procedura: Chiamare operazioni del servizio in modo asincrono](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Procedura: Accedere ai servizi con contratti unidirezionali e Request/Reply](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Procedura: Accedere a un servizio WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Procedura: Accedere ai servizi con un contratto unidirezionale e i contratti Request / Reply](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Procedura: Accedere a WSE 3.0 Service](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [Informazioni sul codice client generato](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [Procedura: Migliorare il tempo di avvio di applicazioni client WCF usando XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Procedura: Migliorare l'avvio tempo di applicazioni Client WCF usando XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
 - [Specifica del comportamento in fase di esecuzione dei client](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [Configurazione dei comportamenti client](../../../docs/framework/wcf/configuring-client-behaviors.md)

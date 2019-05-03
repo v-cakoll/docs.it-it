@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 313dbd11f1d033f0e15de651b9c130cc98c217e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049934"
 ---
 # <a name="imetadataimportenumfields-method"></a>Metodo IMetaDataImport::EnumFields
 Enumera i token FieldDef per il tipo a cui fa riferimento il token TypeDef specificato.  

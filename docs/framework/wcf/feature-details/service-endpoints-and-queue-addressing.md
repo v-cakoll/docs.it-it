@@ -3,11 +3,11 @@ title: Mapping fra gli endpoint di servizio e l'indirizzamento delle code
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
 ms.openlocfilehash: 4064b13b00d44f90a372df5364406fb16c1da9fd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050389"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Mapping fra gli endpoint di servizio e l'indirizzamento delle code
 Questo argomento descrive come i client indirizzano i servizi che leggono da code e il mapping fra gli endpoint di servizio e le code. Come promemoria, la figura seguente illustra il modello di distribuzione classica di Windows Communication Foundation (WCF) in coda la distribuzione di applicazioni.  
@@ -34,11 +34,11 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
  dove:  
   
--   \<*nome host*> è il nome del computer che ospita la coda di destinazione.  
+- \<*nome host*> è il nome del computer che ospita la coda di destinazione.  
   
--   L'elemento facoltativo [private] viene utilizzato quando si indirizza una coda di destinazione privata. Per indirizzare una coda pubblica è necessario non specificare [private]. Si noti che, a differenza dei percorsi MSMQ, non vi è alcun "$" nel formato URI WCF.  
+- L'elemento facoltativo [private] viene utilizzato quando si indirizza una coda di destinazione privata. Per indirizzare una coda pubblica è necessario non specificare [private]. Si noti che, a differenza dei percorsi MSMQ, non vi è alcun "$" nel formato URI WCF.  
   
--   \<*Nome-coda*> è il nome della coda. Il nome della coda può riferirsi anche a una coda secondaria. Pertanto \< *nome-coda*> = \< *name-of-queue*> [; *secondari nome-coda-*].  
+- \<*Nome-coda*> è il nome della coda. Il nome della coda può riferirsi anche a una coda secondaria. Pertanto \< *nome-coda*> = \< *name-of-queue*> [; *secondari nome-coda-*].  
   
  Esempio 1: Per indirizzare una coda privata PurchaseOrders ospitata nel computer abc presso adatum.com, l'URI da MSMQ: //ABC.adatum.com/private/PurchaseOrders.  
   
@@ -51,9 +51,9 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
 ### <a name="multiple-contracts-in-a-queue"></a>Contratti multipli in una coda  
  I messaggi di una coda possono implementare più contratti. In questo caso, per leggere ed elaborare tutti i messaggi, è essenziale applicare uno degli approcci seguenti:  
   
--   Specificare un endpoint per un servizio che implementa tutti i contratti. Si tratta dell'approccio consigliato.  
+- Specificare un endpoint per un servizio che implementa tutti i contratti. Si tratta dell'approccio consigliato.  
   
--   Specificare più endpoint con contratti diversi, garantendo tuttavia che tutti gli endpoint utilizzino lo stesso oggetto `NetMsmqBinding`. La logica di distribuzione di ServiceModel utilizza una message pump che legge i messaggi dal canale di trasporto e quindi li distribuisce. Questa procedura, una volta completata, consente di ottenere il demultiplexing dei messaggi verso vari endpoint in base al contratto. Una message pump viene creata per una coppia URI di ascolto/associazione. L'indirizzo della coda viene utilizzato dal listener in coda come URI di ascolto. Se si configurano tutti gli endpoint in modo da utilizzare lo stesso oggetto di associazione è possibile garantire che il sistema utilizzi un'unica message pump per leggere il messaggio e quindi eseguirne il demultiplexing verso gli endpoint appropriati in base al contratto.  
+- Specificare più endpoint con contratti diversi, garantendo tuttavia che tutti gli endpoint utilizzino lo stesso oggetto `NetMsmqBinding`. La logica di distribuzione di ServiceModel utilizza una message pump che legge i messaggi dal canale di trasporto e quindi li distribuisce. Questa procedura, una volta completata, consente di ottenere il demultiplexing dei messaggi verso vari endpoint in base al contratto. Una message pump viene creata per una coppia URI di ascolto/associazione. L'indirizzo della coda viene utilizzato dal listener in coda come URI di ascolto. Se si configurano tutti gli endpoint in modo da utilizzare lo stesso oggetto di associazione è possibile garantire che il sistema utilizzi un'unica message pump per leggere il messaggio e quindi eseguirne il demultiplexing verso gli endpoint appropriati in base al contratto.  
   
 ### <a name="srmp-messaging"></a>Messaggistica SRMP  
  Come già indicato, è possibile utilizzare il protocollo SRMP per i trasferimenti fra code. Questo approccio in genere viene utilizzato quando un trasporto HTTP trasmette i messaggi fra la coda di trasmissione e la coda di destinazione.  
@@ -106,4 +106,4 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Sito Web che ospita un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+- [Hosting Web di un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

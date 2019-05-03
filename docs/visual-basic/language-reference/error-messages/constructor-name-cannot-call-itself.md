@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
 ms.openlocfilehash: 8459ee7fec6d761161a721c88ccdc88e513fc95f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936695"
 ---
 # <a name="constructor-name-cannot-call-itself"></a>Costruttore '\<nome >' non può chiamare se stesso
 Oggetto `Sub New` routine in una classe o struttura chiama se stessa.  
@@ -29,4 +29,4 @@ Oggetto `Sub New` routine in una classe o struttura chiama se stessa.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Durata degli oggetti: come creare e distruggere oggetti](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Durata degli oggetti: Come gli oggetti vengono creati ed eliminati](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

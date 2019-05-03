@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
 ms.openlocfilehash: b7bfcb0f2034145822922126fe61efea8d8ef269
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59344208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793926"
 ---
 # <a name="-libpath"></a>-libpath
 Specifica la posizione degli assembly cui viene fatto riferimento.  

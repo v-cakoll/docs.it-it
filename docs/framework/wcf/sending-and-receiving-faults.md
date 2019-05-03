@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949604"
 ---
 # <a name="sending-and-receiving-faults"></a>Invio e ricezione degli errori
 Gli errori SOAP trasportano informazioni sulla condizione di errore da un servizio a un client e, nel caso duplex, da un client a un servizio in modo interoperativo. In genere, un servizio definisce un contenuto di errore personalizzato e specifica quali operazioni possono restituirlo. (Per altre informazioni, vedere [definizione e specifica gli errori](../../../docs/framework/wcf/defining-and-specifying-faults.md).) In questo argomento vengono descritti il modo in cui un servizio o un client duplex può inviare tali errori quando si verifica la condizione di errore corrispondente e la modalità con cui un'applicazione client o server gestisce tali errori. Per una panoramica di gestione degli errori nelle applicazioni Windows Communication Foundation (WCF), vedere [se si specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -47,19 +47,19 @@ Gli errori SOAP trasportano informazioni sulla condizione di errore da un serviz
 ## <a name="handling-faults"></a>Gestione degli errori  
  Nei client WCF, gli errori SOAP che si verificano durante la comunicazione di interesse per le applicazioni client vengono generati come eccezioni gestite. Sebbene esistano molte eccezioni che possono verificarsi durante l'esecuzione di qualsiasi programma, le applicazioni usando il modello di programmazione client WCF possono prevedere di gestire le eccezioni dei due tipi seguente come risultato di comunicazione.  
   
--   <xref:System.TimeoutException>  
+- <xref:System.TimeoutException>  
   
--   <xref:System.ServiceModel.CommunicationException>  
+- <xref:System.ServiceModel.CommunicationException>  
   
- <xref:System.TimeoutException> gli oggetti vengono generati quando un'operazione supera il periodo di timeout specificato.  
+ Gli oggetti <xref:System.TimeoutException> vengono generati quando un'operazione supera il periodo di timeout specificato.  
   
- <xref:System.ServiceModel.CommunicationException> gli oggetti vengono generati quando è presente una condizione di errore di comunicazione risolvibile sul servizio o client.  
+ Gli oggetti <xref:System.ServiceModel.CommunicationException> vengono generati quando nel servizio o nel client si verifica una condizione di errore di comunicazione risolvibile.  
   
  La classe <xref:System.ServiceModel.CommunicationException> dispone di due tipi derivati importanti: <xref:System.ServiceModel.FaultException> e il tipo <xref:System.ServiceModel.FaultException%601> generico.  
   
- <xref:System.ServiceModel.FaultException> vengono generate eccezioni quando un listener riceve un errore che non è previsto o specificato nel contratto dell'operazione; in genere ciò si verifica quando viene eseguito il debug dell'applicazione e il servizio ha il <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> impostata su `true`.  
+ Le eccezioni <xref:System.ServiceModel.FaultException> vengono generate quando un listener riceve un errore che non è previsto o non è specificato nel contratto dell'operazione. Ciò in genere si verifica quando durante il debug dell'applicazione la proprietà <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> del servizio è impostata su `true`.  
   
- <xref:System.ServiceModel.FaultException%601> vengono generate eccezioni nel client quando viene ricevuto un errore specificato nel contratto dell'operazione in risposta a un'operazione bidirezionale (vale a dire, un metodo con un <xref:System.ServiceModel.OperationContractAttribute> dell'attributo con <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> impostato su `false`).  
+ Le eccezioni <xref:System.ServiceModel.FaultException%601> vengono generate nel client quando un errore specificato nel contratto dell'operazione viene ricevuto in risposta a un'operazione bidirezionale, ovvero a un metodo avente un attributo <xref:System.ServiceModel.OperationContractAttribute> in cui la proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> è impostata su `false`.  
   
 > [!NOTE]
 >  Quando un servizio WCF presenta la <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oppure <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> proprietà impostata su `true` il client considera ciò come un identificatore non dichiarato <xref:System.ServiceModel.FaultException%601> di tipo <xref:System.ServiceModel.ExceptionDetail>. I client possono intercettare questo errore specifico oppure gestire l'errore in un blocco catch per l'eccezione <xref:System.ServiceModel.FaultException>.  
@@ -81,13 +81,13 @@ Gli errori SOAP trasportano informazioni sulla condizione di errore da un serviz
   
  In genere i canali dell'oggetto client vengono chiusi in uno dei casi seguenti:  
   
--   Quando l'oggetto client WCF viene riciclato.  
+- Quando l'oggetto client WCF viene riciclato.  
   
--   Quando l'applicazione client chiama il metodo <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
+- Quando l'applicazione client chiama il metodo <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
   
--   Quando l'applicazione client chiama il metodo <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.  
+- Quando l'applicazione client chiama il metodo <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.  
   
--   Quando l'applicazione client chiama un'operazione di chiusura di una sessione.  
+- Quando l'applicazione client chiama un'operazione di chiusura di una sessione.  
   
  In tutti i casi, quando viene chiuso, il canale inizia a chiudere qualsiasi canale sottostante in grado di inviare messaggi allo scopo di supportare funzionalità complesse al livello applicazione. Ad esempio, quando un contratto richiede le sessioni, un'associazione tenta di stabilire una sessione scambiando messaggi con il canale del servizio fino a stabilire una sessione. Quando il canale viene chiuso, il canale della sessione sottostante comunica al servizio che la sessione è terminata. In questo caso, se il canale risulta interrotto, chiuso o comunque inutilizzabile (ad esempio quando si scollega un cavo di rete), il canale client non può comunicare al canale del servizio che la sessione è terminata e pertanto è possibile che venga generata un'eccezione.  
   
@@ -110,4 +110,4 @@ Gli errori SOAP trasportano informazioni sulla condizione di errore da un serviz
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [Eccezioni previste](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [Usare Chiudi e Interrompi per rilasciare risorse client WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [Utilizzare Chiudi e Interrompi per rilasciare le risorse del client WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

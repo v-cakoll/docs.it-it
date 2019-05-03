@@ -3,14 +3,14 @@ title: Esempio di tecnologia di serializzazione di base
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795018"
 ---
 # <a name="basic-serialization-technology-sample"></a>Esempio di tecnologia di serializzazione di base
-[Scarica esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
+[Scaricare l'esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
   
  In questo esempio viene illustrata la capacità di Common Language Runtime di serializzare in un flusso il grafico di un oggetto contenuto in memoria. Per la serializzazione, è possibile utilizzare l'oggetto <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Un elenco collegato, contenente dati, viene serializzato in un flusso di file o deserializzato da tale flusso. In entrambi i casi l'elenco viene visualizzato per consentire di esaminare i risultati. L'elenco collegato è di tipo `LinkedList`, un tipo definito in questo esempio.  
   
@@ -62,21 +62,21 @@ ms.locfileid: "59315010"
   
  Nell'elenco riportato di seguito vengono descritte in modo sintetico le classi e le tecnologie utilizzate nell'esempio.  
   
--   Serializzazione in fase di esecuzione  
+- Serializzazione in fase di esecuzione  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> Utilizzato per fare riferimento a un <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> o un <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> oggetto.  
+    - <xref:System.Runtime.Serialization.IFormatter> - Consente di fare riferimento a un oggetto <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> o <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Utilizzato per serializzare un elenco collegato a un flusso in un formato binario. Il formattatore binario utilizza un formato riconosciuto solo dal tipo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Tuttavia, i dati sono concisi.  
+    - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> - Consente di serializzare un elenco collegato in un flusso in formato binario. Il formattatore binario utilizza un formato riconosciuto solo dal tipo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Tuttavia, i dati sono concisi.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Utilizzato per serializzare un elenco collegato a un flusso in formato SOAP. che è un formato standard.  
+    - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> - Consente di serializzare un elenco collegato in un flusso in formato SOAP, che è un formato standard.  
   
--   I/O di flusso  
+- I/O di flusso  
   
-    -   <xref:System.IO.Stream> Utilizzato per serializzare e deserializzare. Il tipo di flusso specifico utilizzato in questo esempio è <xref:System.IO.FileStream>. È tuttavia possibile utilizzare la serializzazione con qualsiasi tipo derivato da <xref:System.IO.Stream>.  
+    - <xref:System.IO.Stream> - Consente di eseguire la serializzazione e la deserializzazione. Il tipo di flusso specifico utilizzato in questo esempio è <xref:System.IO.FileStream>. È tuttavia possibile utilizzare la serializzazione con qualsiasi tipo derivato da <xref:System.IO.Stream>.  
   
-    -   <xref:System.IO.File> Consente di creare <xref:System.IO.FileStream> oggetti per la lettura e la creazione di file su disco.  
+    - <xref:System.IO.File> - Consente di creare oggetti <xref:System.IO.FileStream> per la lettura e la creazione di file su disco.  
   
-    -   <xref:System.IO.FileStream> Utilizzato per serializzare e deserializzare gli elenchi collegati.  
+    - <xref:System.IO.FileStream> - Consente di eseguire la serializzazione e la deserializzazione di elenchi collegati.  
   
 ## <a name="see-also"></a>Vedere anche
 

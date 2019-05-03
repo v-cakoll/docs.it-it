@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b8f2b08662e719a3308a62ab5b60f5dc490f2a6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985673"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>Enumerazione EBindPolicyLevels
 Fornisce flag per specificare il livello in cui applicare o modificare i criteri di assembly.  

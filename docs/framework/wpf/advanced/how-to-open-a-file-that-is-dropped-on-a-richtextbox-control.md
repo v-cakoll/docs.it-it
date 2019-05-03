@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], open a dropped file
 ms.assetid: 6bb8bb54-f576-41db-a9a7-24102ddeb490
 ms.openlocfilehash: 8ffa4c9919788060dc4524e127c181ee8282e6f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768602"
 ---
 # <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Procedura: Aprire un file rilasciato in un controllo RichTextBox
 Nelle [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], il <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, e <xref:System.Windows.Documents.FlowDocument> tutti i controlli dispongono di funzionalità di trascinamento e rilascio incorporate. La funzionalità incorporata consente di trascinamento e rilascio del testo all'interno e tra i controlli. Tuttavia, non abilita l'apertura di un file eliminando il file nel controllo. Questi controlli inoltre contrassegnano gli eventi di trascinamento e rilascio come gestito. Di conseguenza, per impostazione predefinita, è possibile aggiungere i propri gestori eventi per fornire la funzionalità di apertura file rilasciati.  

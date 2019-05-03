@@ -3,11 +3,11 @@ title: La serializzazione per il file, TextWriter e XmlWriters3
 ms.date: 07/20/2015
 ms.assetid: 7a0c24df-79ef-41a0-87f5-e6cf79382da9
 ms.openlocfilehash: 63577d955da89fde0a2320b4cf84414ccbb69c84
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786789"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Serializzazione in base a File, TextWriter e XmlWriter
 
@@ -17,7 +17,7 @@ ms.locfileid: "57675303"
 
 Per eliminare la formattazione quando si esegue la serializzazione in una stringa, usare il metodo <xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType>.
 
-Il comportamento predefinito quando si esegue la serializzazione in un file implica la formattazione, ovvero l'impostazione di rientri, nel documento XML. Quando si impostano i rientri, lo spazio vuoto non significativo nell'albero XML non viene conservato. Per serializzare e formattare al contempo il documento, usare uno degli overload dei metodi seguenti che non accettano <xref:System.Xml.Linq.SaveOptions> come argomento:
+Il comportamento predefinito quando si esegue la serializzazione in un file implica la formattazione, ovvero l'impostazione di rientri, nel documento XML risultante. Quando si impostano i rientri, lo spazio vuoto non significativo nell'albero XML non viene conservato. Per serializzare e formattare al contempo il documento, usare uno degli overload dei metodi seguenti che non accettano <xref:System.Xml.Linq.SaveOptions> come argomento:
 
 - <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>
 

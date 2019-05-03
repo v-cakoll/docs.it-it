@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
 ms.openlocfilehash: bc4d05e52434cf62fa90671d29b407c83114b5d2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801946"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>Valutazione della funzione disabilitata a causa del timeout di una valutazione di funzione precedente
 Valutazione della funzione disabilitata a causa del timeout di una valutazione della funzione precedente. Per riabilitare la valutazione della funzione, ripetere l'operazione o riavviare il debug.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
 ms.openlocfilehash: 57e32d3e56c3f319f7ee8aa58020d37e46a6454d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762266"
 ---
 # <a name="geometries"></a>Geometrie
 <xref:System.Windows.Media.Geometry> è una classe versatile, utilizzata per il rendering [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] hit test gli oggetti grafici e definire aree di visualizzazione  
@@ -22,12 +22,12 @@ ms.locfileid: "59140218"
 ## <a name="in-this-section"></a>In questa sezione  
  [Sintassi di markup del percorso](path-markup-syntax.md)  
  [Cenni preliminari sulle classi Geometry](geometry-overview.md)  
- [Procedure relative](geometries-how-to-topics.md)  
+ [Procedure relative alle proprietà](geometries-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [Grafica 2D e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafica bidimensionale e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Grafica e funzionalità multimediali](index.md)

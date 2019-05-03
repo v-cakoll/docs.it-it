@@ -3,11 +3,11 @@ title: Data binding in un client ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
 ms.openlocfilehash: 07e03a4580795b3424f63cec8f93fea2039b6733
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990626"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Data binding in un client ASP.NET
 In questo esempio viene illustrato come associare dati restituiti da un servizio tipico di Windows Communication Foundation (WCF) in un'applicazione Web Form.  

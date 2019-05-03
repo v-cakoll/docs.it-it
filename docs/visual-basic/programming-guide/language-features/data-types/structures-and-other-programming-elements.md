@@ -9,11 +9,11 @@ helpviewer_keywords:
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
 ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906451"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Strutture e altri elementi di programmazione (Visual Basic)
 È possibile usare le strutture in combinazione con le matrici, oggetti e le procedure, nonché tra loro. Le interazioni di utilizzano la stessa sintassi come questi elementi singolarmente.  

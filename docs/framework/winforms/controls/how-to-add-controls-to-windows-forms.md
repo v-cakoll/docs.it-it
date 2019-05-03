@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
 ms.openlocfilehash: 04597283a8ff2e21a0f227268671d3605eac6356
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343588"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Procedura: Aggiungere controlli a Windows Forms
@@ -91,8 +91,8 @@ La maggior parte dei moduli sono progettati con l'aggiunta di controlli alla sup
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Controlli per Windows Form](index.md)
+- [Controlli Windows Form](index.md)
 - [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
-- [Procedura: Ridimensionare i controlli in Windows Forms](how-to-resize-controls-on-windows-forms.md)
-- [Procedura: Impostare il testo visualizzato da un controllo di Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Procedura: Ridimensionare i controlli Windows Form](how-to-resize-controls-on-windows-forms.md)
+- [Procedura: Impostare il testo visualizzato dal controllo di un Windows Form](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
 ms.openlocfilehash: e1f7a7da1ab2ce0ad7d7908ecd1f896d229b8e1a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037908"
 ---
 # <a name="formulate-projections"></a>Formulare proiezioni
 Gli esempi seguenti illustrano come il `select` istruzione C# e `Select` istruzione in Visual Basic può essere combinata con altre funzionalità per formare proiezioni della query.  
@@ -66,11 +66,11 @@ Gli esempi seguenti illustrano come il `select` istruzione C# e `Select` istruzi
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono usate query annidate per restituire i risultati riportati di seguito:  
   
--   Una sequenza di tutti gli ordini e dei corrispondenti `OrderID`.  
+- Una sequenza di tutti gli ordini e dei corrispondenti `OrderID`.  
   
--   Una sottosequenza degli elementi nell'ordine per cui è presente uno sconto.  
+- Una sottosequenza degli elementi nell'ordine per cui è presente uno sconto.  
   
--   L'importo risparmiato se il costo di spedizione non è incluso.  
+- L'importo risparmiato se il costo di spedizione non è incluso.  
   
  [!code-csharp[DLinqQueryExamples#65](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#65)]
  [!code-vb[DLinqQueryExamples#65](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#65)]  

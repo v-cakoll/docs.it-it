@@ -12,11 +12,11 @@ helpviewer_keywords:
 - searching [Windows Forms], adding search capabilities to ListView control
 ms.assetid: 557782d9-b705-4bab-b496-9938afddac82
 ms.openlocfilehash: d5d4dae55fc9f0613ab6535b2fe57e262d0ef141
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59314022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011022"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Procedura: Aggiungere funzionalità di ricerca a un controllo ListView
 Spesso quando si lavora con un lungo elenco di elementi in un <xref:System.Windows.Forms.ListView> (controllo), si desidera offrire funzionalità di ricerca per l'utente. Il <xref:System.Windows.Forms.ListView> controllo offre questa funzionalità in due modi diversi: i criteri di testo e la ricerca di posizione.  
@@ -54,4 +54,4 @@ Spesso quando si lavora con un lungo elenco di elementi in un <xref:System.Windo
 - <xref:System.Windows.Forms.ListView.FindNearestItem%2A>
 - [Controllo ListView](listview-control-windows-forms.md)
 - [Panoramica del controllo ListView](listview-control-overview-windows-forms.md)
-- [Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Form](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

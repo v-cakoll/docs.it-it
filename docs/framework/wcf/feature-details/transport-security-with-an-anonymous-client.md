@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
 ms.openlocfilehash: 20d7e59ba2b4b9dedc0b0daff1c1aa9c5210e61b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932952"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Sicurezza del trasporto con un client anonimo
 
@@ -20,19 +20,19 @@ Per un'applicazione di esempio, vedere [la sicurezza del trasporto WS](../sample
 
 Per altre informazioni sull'uso di un certificato con un servizio, vedere [Working with Certificates](working-with-certificates.md) e [come: Configurare una porta con un certificato SSL](how-to-configure-a-port-with-an-ssl-certificate.md).
 
-![Uso della sicurezza del trasporto con un client anonimo](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
+![Utilizzo della sicurezza del trasporto con un client anonimo](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
 
 |Caratteristica|Descrizione|
 |--------------------|-----------------|
 |Modalità di sicurezza|Trasporto|
 |Interoperabilità|Con i servizi Web e i client esistenti|
 |Autenticazione (server)<br /><br /> Autenticazione (client)|Yes<br /><br /> Livello di applicazione (Nessun supporto WCF)|
-|Integrità|Sì|
-|Riservatezza|Sì|
+|Integrità|Yes|
+|Riservatezza|Yes|
 |Trasporto|HTTPS|
 |Binding|<xref:System.ServiceModel.WSHttpBinding>|
 
-## <a name="service"></a>Servizio
+## <a name="service"></a>Service
 
 Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:
 

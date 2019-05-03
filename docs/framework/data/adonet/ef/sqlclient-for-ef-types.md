@@ -3,11 +3,11 @@ title: SqlClient per tipi Entity Framework
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
 ms.openlocfilehash: eb12bde1e319fde5adf20ad6cd54f8776aeda31d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879164"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>SqlClient per tipi Entity Framework
 Il file manifesto del provider di dati .NET Framework per SQL Server (SqlClient) include l'elenco dei tipi primitivi del provider, facet per ogni tipo, mapping tra i tipi primitivi del modello concettuale e del modello di archiviazione e regole di promozione e conversione tra i tipi primitivi del modello concettuale e del modello di archiviazione.  

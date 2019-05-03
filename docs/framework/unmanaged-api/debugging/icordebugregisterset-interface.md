@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7b0a5d80d984a3c696b178c4d8c936bd47354945
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782876"
 ---
 # <a name="icordebugregisterset-interface"></a>Interfaccia ICorDebugRegisterSet
 Rappresenta il set di registri disponibili sul computer che esegue codice.  

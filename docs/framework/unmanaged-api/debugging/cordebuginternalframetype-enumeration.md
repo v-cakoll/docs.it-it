@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05184ceb3b32eb003951fff5cfdfbfb813992552
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792860"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>Enumerazione CorDebugInternalFrameType
 Identifica il tipo di stack frame. Questa enumerazione viene utilizzata per la [ICorDebugInternalFrame](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) (metodo).  

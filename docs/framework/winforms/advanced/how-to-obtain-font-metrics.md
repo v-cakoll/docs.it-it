@@ -9,22 +9,22 @@ helpviewer_keywords:
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
 ms.openlocfilehash: 24cada3962339cae0608bbe01e070a0b8e256e73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948221"
 ---
 # <a name="how-to-obtain-font-metrics"></a>Procedura: Ottenere le misure dei tipi di carattere
 Il <xref:System.Drawing.FontFamily> classe fornisce i metodi seguenti che recuperano diverse metriche per una particolare famiglia/combinazione stile:  
   
--   <xref:System.Drawing.FontFamily.GetEmHeight%2A>(FontStyle)  
+- <xref:System.Drawing.FontFamily.GetEmHeight%2A>(FontStyle)  
   
--   <xref:System.Drawing.FontFamily.GetCellAscent%2A>(FontStyle)  
+- <xref:System.Drawing.FontFamily.GetCellAscent%2A>(FontStyle)  
   
--   <xref:System.Drawing.FontFamily.GetCellDescent%2A>(FontStyle)  
+- <xref:System.Drawing.FontFamily.GetCellDescent%2A>(FontStyle)  
   
--   <xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)  
+- <xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)  
   
  I numeri restituiti da questi metodi sono in unità di progettazione del tipo di carattere, in modo che siano indipendenti dalla dimensione e le unità di un determinato <xref:System.Drawing.Font> oggetto.  
   
@@ -58,4 +58,4 @@ Il <xref:System.Drawing.FontFamily> classe fornisce i metodi seguenti che recupe
 ## <a name="see-also"></a>Vedere anche
 
 - [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)
-- [Utilizzo di tipi di carattere e testo](using-fonts-and-text.md)
+- [Uso di tipi di carattere e testo](using-fonts-and-text.md)

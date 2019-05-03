@@ -3,14 +3,14 @@ title: Configurazione semplificata
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
 ms.openlocfilehash: 13cf8bd46ef3aabb011cb2ddd207963235468662
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967895"
 ---
 # <a name="simplified-configuration"></a>Configurazione semplificata
-Configurazione dei servizi Windows Communication Foundation (WCF) può essere un'attività complessa. Esistono diverse opzioni e non è sempre semplice determinare quali impostazioni sono necessarie. Mentre i file di configurazione aumentano la flessibilità dei servizi WCF, sono anche l'origine di molti problemi difficili da individuare. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Consente di risolvere questi problemi e offre un modo per ridurre le dimensioni e complessità della configurazione del servizio.  
+Configurazione dei servizi Windows Communication Foundation (WCF) può essere un'attività complessa. Esistono diverse opzioni e non è sempre semplice determinare quali impostazioni sono necessarie. Mentre i file di configurazione aumentano la flessibilità dei servizi WCF, sono anche l'origine di molti problemi difficili da individuare. In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] questi problemi vengono risolti e viene offerto un modo per ridurre la dimensione e la complessità della configurazione dei servizi.  
   
 ## <a name="simplified-configuration"></a>Configurazione semplificata  
  Nei file di configurazione del servizio WCF, la <`system.serviceModel`> della sezione sono un <`service`> (elemento) per ogni servizio ospitato. Il <`service`> elemento contiene una raccolta di <`endpoint`> gli elementi che specificano gli endpoint esposti per ogni servizio e facoltativamente un set di comportamenti del servizio. Il <`endpoint`> elementi specificano l'indirizzo, associazione e contratto esposti dall'endpoint e facoltativamente la configurazione di associazione e i comportamenti dell'endpoint. Il <`system.serviceModel`> sezione contiene inoltre un <`behaviors`> elemento che consente di specificare i comportamenti del servizio o dell'endpoint. L'esempio seguente mostra il <`system.serviceModel`> sezione di un file di configurazione.  

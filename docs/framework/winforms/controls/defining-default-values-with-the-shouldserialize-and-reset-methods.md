@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
 ms.openlocfilehash: f1f5a668c5d4f52ef7dd9f60a31c04f2173165f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972367"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definizione dei valori predefiniti utilizzando i metodi ShouldSerialize e Reset
 `ShouldSerialize` e `Reset` sono metodi facoltativi che è possibile specificare per una proprietà, se la proprietà non presenta un valore predefinito semplice. Se la proprietà ha un valore predefinito semplice, è consigliabile applicare il <xref:System.ComponentModel.DefaultValueAttribute> e fornire invece il valore predefinito per il costruttore di classe di attributo. Uno di questi meccanismi Abilita le funzionalità seguenti nella finestra di progettazione:  
   
--   La proprietà fornisce un'indicazione visiva nel Visualizzatore proprietà se è stato modificato rispetto al valore predefinito.  
+- La proprietà fornisce un'indicazione visiva nel Visualizzatore proprietà se è stato modificato rispetto al valore predefinito.  
   
--   L'utente può fare doppio clic sulla proprietà e scegliere **reimpostare** per ripristinare la proprietà sul valore predefinito.  
+- L'utente può fare doppio clic sulla proprietà e scegliere **reimpostare** per ripristinare la proprietà sul valore predefinito.  
   
--   La finestra di progettazione genera codice più efficiente.  
+- La finestra di progettazione genera codice più efficiente.  
   
     > [!NOTE]
     >  Entrambi si applicano i <xref:System.ComponentModel.DefaultValueAttribute> o fornire `Reset` *PropertyName* e `ShouldSerialize` *PropertyName* metodi. Non utilizzare entrambi.  

@@ -3,11 +3,11 @@ title: Uso di Strumentazione gestione Windows (WMI) per la diagnostica
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048284"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Uso di Strumentazione gestione Windows (WMI) per la diagnostica
 Windows Communication Foundation (WCF) espone dati di ispezione di un servizio in fase di esecuzione tramite un provider di Strumentazione gestione Windows (WMI) di WCF.  
@@ -112,13 +112,13 @@ Windows Communication Foundation (WCF) espone dati di ispezione di un servizio i
   
      Questo script di PowerShell Usa Security Descriptor Definition Language (SDDL) per concedere al gruppo Users predefinito l'accesso allo spazio dei nomi WMI "root/servicemodel". Lo script specifica gli ACL seguenti:  
   
-    -   Account Administrator predefinito: dispone già di accesso.  
+    - Account Administrator predefinito: dispone già di accesso.  
   
-    -   Servizio di rete: dispone già di accesso.  
+    - Servizio di rete: dispone già di accesso.  
   
-    -   Sistema locale: dispone già di accesso.  
+    - Sistema locale: dispone già di accesso.  
   
-    -   Gruppo Users predefinito: gruppo a cui concedere l'accesso.  
+    - Gruppo Users predefinito: gruppo a cui concedere l'accesso.  
   
 #### <a name="to-grant-provider-registration-access"></a>Per concedere accesso alla registrazione del provider  
   

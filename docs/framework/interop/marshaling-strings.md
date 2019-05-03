@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4640d37ad6c30746e203c26c2c1cd71eb70e7579
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 0db33d59d1fc1c19e07567108970db77059cebb7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218567"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59223030"
 ---
 # <a name="marshaling-strings"></a>Marshalling di stringhe
 Platform invoke copia parametri stringa, convertendoli dal formato .NET Framework (Unicode) al formato non gestito (ANSI) all'occorrenza. Dato che le stringhe gestite non sono modificabili, platform invoke non le copia di nuovo dalla memoria non gestita alla memoria gestita quando la funzione restituisce il controllo.  
   
  La tabella seguente elenca le opzioni di marshalling per le stringhe con la descrizione dell'utilizzo e un collegamento all'esempio .NET Framework corrispondente.  
   
-|Stringa|Descrizione|Esempio|  
+|Stringa|Description|Esempio|  
 |------------|-----------------|------------|  
 |Per valore.|Passa le stringhe come parametri in.|[MsgBox](msgbox-sample.md)|  
 |Come risultato.|Restituisce le stringhe da codice non gestito.|[Stringhe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
@@ -39,6 +39,7 @@ Platform invoke copia parametri stringa, convertendoli dal formato .NET Framewor
 |Come matrice di strutture che contengono le stringhe per valore.|Crea una matrice di strutture che contengono le stringhe e la matrice viene passata per valore.|[Matrici](marshaling-different-types-of-arrays.md)|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md)
 - [Marshalling di classi, strutture e unioni](marshaling-classes-structures-and-unions.md)
 - [Marshalling di diversi tipi di matrici](marshaling-different-types-of-arrays.md)

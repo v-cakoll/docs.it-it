@@ -14,14 +14,14 @@ helpviewer_keywords:
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
 ms.openlocfilehash: b6f625f76e230b7d6bf0488bfa75c227de31a5d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62030303"
 ---
 # <a name="property-change-events"></a>Eventi di modifica delle proprietà
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] definisce diversi eventi che vengono generati in risposta a una modifica del valore di una proprietà. Spesso la proprietà è una proprietà di dipendenza. L'evento stesso è in alcuni casi un evento indirizzato, in altri casi un evento [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] standard. La definizione dell'evento varia in base allo scenario, poiché alcune modifiche delle proprietà sono inviate in modo più appropriato tramite un albero di elementi, mentre altre in genere sono di interesse solo per l'oggetto in cui la proprietà è stata modificata.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] definisce diversi eventi generati in risposta a una modifica nel valore di una proprietà. Spesso la proprietà è una proprietà di dipendenza. L'evento stesso è in alcuni casi un evento indirizzato, in altri casi un evento [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] standard. La definizione dell'evento varia in base allo scenario, poiché alcune modifiche delle proprietà sono inviate in modo più appropriato tramite un albero di elementi, mentre altre in genere sono di interesse solo per l'oggetto in cui la proprietà è stata modificata.  
   
 ## <a name="identifying-a-property-change-event"></a>Identificazione di un evento di modifica delle proprietà  
  Non tutti gli eventi che segnalano una modifica delle proprietà sono identificati in modo esplicito come eventi di modifica delle proprietà, per mezzo di un pattern di firma o di nome. In genere, la descrizione dell'evento nella documentazione [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] indica se l'evento è direttamente collegato alla modifica del valore di una proprietà e fornisce riferimenti incrociati tra la proprietà e l'evento.  

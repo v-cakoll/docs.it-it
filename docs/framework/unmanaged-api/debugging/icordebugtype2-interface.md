@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 878941f7af71fa5e3de8e38c4a68a66cb964983d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993785"
 ---
 # <a name="icordebugtype2-interface"></a>Interfaccia ICorDebugType2
 Estende l'interfaccia ICorDebugType per recuperare l'identificatore del tipo di un tipo di base o complesso (tipo definito dall'utente).  

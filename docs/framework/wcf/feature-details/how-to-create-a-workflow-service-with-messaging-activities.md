@@ -3,11 +3,11 @@ title: 'Procedura: Creare un servizio di flusso di lavoro con attività di messa
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
 ms.openlocfilehash: f5bb8df5936be1890bf744300daa7ccb68e341e3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59337773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787795"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procedura: Creare un servizio di flusso di lavoro con attività di messaggistica
 In questo argomento viene illustrato come creare un semplice servizio flusso di lavoro utilizzando le attività di messaggistica. L'argomento è incentrato sui meccanismi di creazione di un servizio flusso di lavoro in cui il servizio è costituito esclusivamente da attività di messaggistica. In servizi reali i flussi di lavoro contengono molte altre attività. Il servizio implementa un'operazione denominata Echo che acquisisce una stringa e la restituisce al chiamante. Questo è il primo di una serie di due argomenti. Argomento successivo [How To: Accedere a un servizio da un flusso di lavoro applicazione](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) viene illustrato come creare un'applicazione flusso di lavoro che possa chiamare il servizio creato in questo argomento.  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e01f94e9574ebc032bc45490fd88ff92e9104aa3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994045"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>Metodo ICorDebugThread::EnumerateChains
 Ottiene un puntatore a interfaccia per un enumeratore ICorDebugChainEnum che contiene tutte le catene dello stack in questo oggetto ICorDebugThread.  
@@ -42,11 +42,11 @@ HRESULT EnumerateChains (
 ## <a name="remarks"></a>Note  
  La catena dello stack rappresenta lo stack di chiamate fisico per il thread. Le circostanze seguenti creare un limite di catena dello stack:  
   
--   Una transizione da gestito o non gestito a gestito.  
+- Una transizione da gestito o non gestito a gestito.  
   
--   Un cambio di contesto.  
+- Un cambio di contesto.  
   
--   Un Hijack di un thread di utente del debugger.  
+- Un Hijack di un thread di utente del debugger.  
   
  Nel caso più semplice per un thread che esegue codice gestito esclusivamente in un singolo contesto, sarà presente una corrispondenza uno a uno tra thread e catene dello stack.  
   

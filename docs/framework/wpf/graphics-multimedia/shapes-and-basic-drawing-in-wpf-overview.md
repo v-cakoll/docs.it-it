@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
 ms.openlocfilehash: 1ce0e661d88b7c4d5719c4f11ef0912c5bacb587
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008328"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF
 Questo argomento offre una panoramica di come disegnare con <xref:System.Windows.Shapes.Shape> oggetti. Oggetto <xref:System.Windows.Shapes.Shape> è un tipo di <xref:System.Windows.UIElement> che consente di disegnare una forma sullo schermo. Poiché si tratta di elementi dell'interfaccia utente <xref:System.Windows.Shapes.Shape> oggetti possono essere utilizzati all'interno di <xref:System.Windows.Controls.Panel> elementi e la maggior parte dei controlli.  
@@ -28,13 +28,13 @@ Questo argomento offre una panoramica di come disegnare con <xref:System.Windows
 ## <a name="shape-objects"></a>Oggetti Shape  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce una serie di pronto utilizzo <xref:System.Windows.Shapes.Shape> oggetti.  Tutti gli oggetti shape ereditano dal <xref:System.Windows.Shapes.Shape> classe. Gli oggetti shape disponibili includono <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, e <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape> gli oggetti condividono le proprietà comuni seguenti.  
   
--   <xref:System.Windows.Shapes.Shape.Stroke%2A>: Descrive come viene disegnata la struttura della forma.  
+- <xref:System.Windows.Shapes.Shape.Stroke%2A>: Descrive come viene disegnata la struttura della forma.  
   
--   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: Descrive lo spessore del contorno della forma.  
+- <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: Descrive lo spessore del contorno della forma.  
   
--   <xref:System.Windows.Shapes.Shape.Fill%2A>: Descrive come viene disegnato l'interno della forma.  
+- <xref:System.Windows.Shapes.Shape.Fill%2A>: Descrive come viene disegnato l'interno della forma.  
   
--   Proprietà dei dati per specificare coordinate e vertici, misurati in pixel indipendenti dal dispositivo.  
+- Proprietà dei dati per specificare coordinate e vertici, misurati in pixel indipendenti dal dispositivo.  
   
  Dal momento che derivano da <xref:System.Windows.UIElement>, gli oggetti shape possono essere usati nei pannelli e nella maggior parte dei controlli. Il <xref:System.Windows.Controls.Canvas> pannello è particolarmente indicato per la creazione di disegni complessi poiché supporta il posizionamento assoluto dei relativi oggetti figlio.  
   
@@ -154,13 +154,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  La proprietà Stretch accetta uno dei valori seguenti:  
   
--   <xref:System.Windows.Media.Stretch.None>: Il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto non viene allungato.  
+- <xref:System.Windows.Media.Stretch.None>: Il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto non viene allungato.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: Il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto viene allungato per riempire lo spazio del layout.  Le proporzioni non vengono mantenute.  
+- <xref:System.Windows.Media.Stretch.Fill>: Il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto viene allungato per riempire lo spazio del layout.  Le proporzioni non vengono mantenute.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: Il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto viene allungato il più possibile per riempire lo spazio del layout mantenendo le proporzioni originali.  
+- <xref:System.Windows.Media.Stretch.Uniform>: Il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto viene allungato il più possibile per riempire lo spazio del layout mantenendo le proporzioni originali.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: Il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto viene allungato per riempire completamente lo spazio del layout mantenendo le proporzioni originali.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: Il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto viene allungato per riempire completamente lo spazio del layout mantenendo le proporzioni originali.  
   
  Si noti che, quando un <xref:System.Windows.Shapes.Shape> contenuto di un oggetto viene allungato, la <xref:System.Windows.Shapes.Shape> struttura dell'oggetto viene disegnata dopo l'allungamento.  
   
@@ -215,8 +215,8 @@ myPolygon.StrokeThickness = 2;
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Grafica 2D e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafica bidimensionale e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Cenni sul disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md)
 - [Cenni preliminari sulle classi Geometry](geometry-overview.md)
-- [Procedura dettagliata: Compilare una prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [Cenni preliminari sull'animazione](animation-overview.md)

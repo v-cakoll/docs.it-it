@@ -6,11 +6,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
 ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966985"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Input del mouse in Windows Form
 Ricevere e gestire l'input del mouse è una parte importante di tutte le applicazioni Windows. È possibile gestire gli eventi del mouse per eseguire un'azione nell'applicazione o usare informazioni sulla posizione del mouse per eseguire l'hit testing o altre azioni. Inoltre, è possibile modificare il modo in cui i controlli nell'applicazione gestiscono l'input del mouse. Questo argomento descrive questi eventi mouse in modo dettagliato e su come ottenere e modificare le impostazioni di sistema per il puntatore del mouse. Per altre informazioni sui dati forniti con il mouse vengono generati gli eventi e l'ordine in cui il puntatore del mouse, fare clic su eventi, vedere [eventi Mouse in Windows Form](mouse-events-in-windows-forms.md).  
@@ -55,5 +55,5 @@ Ricevere e gestire l'input del mouse è una parte importante di tutte le applica
 ## <a name="see-also"></a>Vedere anche
 
 - [Input del mouse in un'applicazione Windows Forms](mouse-input-in-a-windows-forms-application.md)
-- [Mouse capture in Windows Form](mouse-capture-in-windows-forms.md)
+- [Mouse Capture in Windows Form](mouse-capture-in-windows-forms.md)
 - [Puntatori del mouse in Windows Form](mouse-pointers-in-windows-forms.md)

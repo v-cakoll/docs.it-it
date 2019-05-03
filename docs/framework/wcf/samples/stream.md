@@ -3,11 +3,11 @@ title: Flusso
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
 ms.openlocfilehash: f6ca887240ec4f6a304f0d5972790837c0121721
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59330220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007799"
 ---
 # <a name="stream"></a>Flusso
 L'esempio flusso illustra l'utilizzo della modalità di trasferimento con flusso. Il servizio espone molte operazioni che inviano e ricevono flussi. Questo esempio è indipendente. Sia il client che il servizio sono programmi console.  
@@ -36,7 +36,7 @@ public interface IStreamingSample
 }  
 ```  
   
- L'operazione `GetStream` riceve alcuni dati di input come stringa, memorizzata nel buffer e restituisce un `Stream`, trasmesso. Viceversa, `UploadStream` accetta uno `Stream` (trasmesso) e restituisce un `bool` (memorizzato nel buffer). `EchoStream` accetta e restituisce `Stream` ed è riportato un esempio di un'operazione il cui input e i messaggi di output vengono entrambi trasmessi. Infine, `GetReversedStream` non prende input e restituisce un `Stream` (trasmesso).  
+ L'operazione `GetStream` riceve alcuni dati di input come stringa, memorizzata nel buffer e restituisce un `Stream`, trasmesso. Viceversa, `UploadStream` accetta uno `Stream` (trasmesso) e restituisce un `bool` (memorizzato nel buffer). `EchoStream` accetta e restituisce uno `Stream` ed è un esempio di un'operazione i cui messaggi di input e output vengono entrambi trasmessi. Infine, `GetReversedStream` non prende input e restituisce un `Stream` (trasmesso).  
   
 ## <a name="enabling-streamed-transfers"></a>Attivazione dei trasferimenti con flusso  
  La definizione di contratti dell'operazione, come descritto precedentemente, fornisce la trasmissione a livello del modello di programmazione. Se ci si ferma a questo punto, il trasporto memorizza ancora nel buffer l'intero contenuto del messaggio. Per abilitare il flusso di trasmissione, selezionare la modalità di trasferimento dall'elemento di associazione del trasporto. L'elemento di associazione presenta una proprietà `TransferMode` che può essere impostata su `Buffered`, `Streamed`, `StreamedRequest` o `StreamedResponse`. L'impostazione della modalità di trasferimento su `Streamed` consente di attivare la comunicazione con flusso bidirezionale. L'impostazione della modalità di trasferimento su `StreamedRequest` o `StreamedResponse` consente di attivare la comunicazione con flusso soltanto come richiesta o come risposta.  
@@ -66,7 +66,7 @@ public interface IStreamingSample
 ## <a name="processing-data-as-it-is-streamed"></a>Elaborazione dei dati durante la trasmissione  
  Le operazioni `GetStream`, `UploadStream` e `EchoStream` riguardano entrambe l'invio diretto di dati da un file o il salvataggio diretto dei dati ricevuti in un file. C'è tuttavia, in alcuni casi, un requisito per inviare o ricevere grandi quantità di dati ed eseguire alcune elaborazioni su blocchi di dati appena essi vengono ricevuti. Una modalità per indirizzare tali scenari è scrivere un flusso personalizzato (una classe che deriva da <xref:System.IO.Stream>) che elabora i dati mentre vengono letti o scritti. Ne sono un esempio l'operazione `GetReversedStream` e la classe `ReverseStream`.  
   
- `GetReversedStream` Crea e restituisce una nuova istanza della `ReverseStream`. L'elaborazione effettiva si verifica quando il sistema legge da quell'oggetto `ReverseStream`. L'implementazione `ReverseStream.Read` legge un blocco di byte dal file sottostante, li inverte, quindi restituisce i byte invertiti. Non inverte il contenuto del file intero; inverte uno blocco di byte alla volta. Questo è un esempio per mostrare come è possibile eseguire elaborazione del flusso mentre il contenuto viene letto o scritto da e verso il flusso.  
+ `GetReversedStream` crea e restituisce una nuova istanza di `ReverseStream`. L'elaborazione effettiva si verifica quando il sistema legge da quell'oggetto `ReverseStream`. L'implementazione `ReverseStream.Read` legge un blocco di byte dal file sottostante, li inverte, quindi restituisce i byte invertiti. Non inverte il contenuto del file intero; inverte uno blocco di byte alla volta. Questo è un esempio per mostrare come è possibile eseguire elaborazione del flusso mentre il contenuto viene letto o scritto da e verso il flusso.  
   
 ```csharp
 class ReverseStream : Stream  

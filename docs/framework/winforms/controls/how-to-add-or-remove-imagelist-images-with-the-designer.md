@@ -7,10 +7,10 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
 ms.openlocfilehash: 732267b431c5058fa7039f0fb132e6161c37d4a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303128"
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Procedura: Aggiungere o rimuovere immagini ImageList con la finestra di progettazione
@@ -40,5 +40,5 @@ ms.locfileid: "59303128"
 ## <a name="see-also"></a>Vedere anche
 
 - [Immagini, bitmap e metafile](../advanced/images-bitmaps-and-metafiles.md)
-- [Procedura dettagliata: Esecuzione di attività comuni usando gli smart tag nei controlli Windows Form](performing-common-tasks-using-smart-tags-on-wf-controls.md)
+- [Procedura dettagliata: Esecuzione di attività comuni usando gli Smart tag nei Windows Form controlli](performing-common-tasks-using-smart-tags-on-wf-controls.md)
 - [Componente ImageList](imagelist-component-windows-forms.md)

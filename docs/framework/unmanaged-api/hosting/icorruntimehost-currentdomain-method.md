@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1cb5ff5300a7fd2577e602b3077dd816cf7dfbe2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936916"
 ---
 # <a name="icorruntimehostcurrentdomain-method"></a>Metodo ICorRuntimeHost::CurrentDomain
 Ottiene un puntatore di interfaccia di tipo <xref:System.AppDomain?displayProperty=nameWithType> che rappresenta il dominio caricato sul thread corrente.  

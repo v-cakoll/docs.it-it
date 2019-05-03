@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
 ms.openlocfilehash: 5de918f71f4361af3409c8382781844824747c83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002456"
 ---
 # <a name="concurrency"></a>Concorrenza
 L'esempio Concorrenza dimostra l'uso di <xref:System.ServiceModel.ServiceBehaviorAttribute> con l'enumerazione <xref:System.ServiceModel.ConcurrencyMode> che controlla se un'istanza di un servizio elabora i messaggi in sequenza o contemporaneamente. L'esempio è basato sul [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md), che implementa il `ICalculator` contratto di servizio. In questo esempio viene definito un nuovo contratto, `ICalculatorConcurrency`, che eredita da `ICalculator`, fornendo due operazioni aggiuntive per ispezionare lo stato della concorrenza del servizio. Modificando l'impostazione della concorrenza, è possibile osservare come viene modificato il comportamento quando si esegue il client.  
@@ -22,11 +22,11 @@ L'esempio Concorrenza dimostra l'uso di <xref:System.ServiceModel.ServiceBehavio
   
  Sono disponibili tre modalità di concorrenza:  
   
--   `Single`: Ogni istanza del servizio elabora un messaggio alla volta. Si tratta della modalità di concorrenza predefinita.  
+- `Single`: Ogni istanza del servizio elabora un messaggio alla volta. Si tratta della modalità di concorrenza predefinita.  
   
--   `Multiple`: Ogni istanza del servizio elabora più messaggi contemporaneamente. Per essere in grado di usare questa modalità di concorrenza, l'implementazione del servizio deve essere thread-safe.  
+- `Multiple`: Ogni istanza del servizio elabora più messaggi contemporaneamente. Per essere in grado di usare questa modalità di concorrenza, l'implementazione del servizio deve essere thread-safe.  
   
--   `Reentrant`: Ogni istanza del servizio elabora uno messaggio alla volta ma accetta chiamate rientranti. Il servizio accetta queste chiamate solo quando esegue chiamate in uscita. Modalità rientrante è dimostrata nel [ConcurrencyMode. Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) esempio.  
+- `Reentrant`: Ogni istanza del servizio elabora uno messaggio alla volta ma accetta chiamate rientranti. Il servizio accetta queste chiamate solo quando esegue chiamate in uscita. Modalità rientrante è dimostrata nel [ConcurrencyMode. Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) esempio.  
   
  L'uso della concorrenza è correlato alla modalità di istanza. Nelle istanze di <xref:System.ServiceModel.InstanceContextMode.PerCall>, la concorrenza non è rilevante perché ogni messaggio viene elaborato da una nuova istanza del servizio. Nelle istanze di <xref:System.ServiceModel.InstanceContextMode.Single>, la concorrenza <xref:System.ServiceModel.ConcurrencyMode.Single> o <xref:System.ServiceModel.ConcurrencyMode.Multiple> è rilevante a seconda che la singola istanza elabori i messaggi in modo sequenziale o concorrente. Nelle istanze di <xref:System.ServiceModel.InstanceContextMode.PerSession>, può essere rilevante qualsiasi modalità di concorrenza.  
   

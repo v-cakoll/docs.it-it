@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
 ms.openlocfilehash: d304a411a92272315506a08a714ae1a5f9b6a000
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973680"
 ---
 # <a name="shapes-how-to-topics"></a>Procedure relative agli oggetti Shape
 Gli argomenti in questa sezione illustrano come usare <xref:System.Windows.Shapes.Shape> oggetti da disegnare forme sullo schermo.  

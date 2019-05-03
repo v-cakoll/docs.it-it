@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3691d8015f514cc20e63ad62f45e7317f56f72fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996008"
 ---
 # <a name="icordebugeditandcontinuesnapshotsetpesymbolbytes-method"></a>Metodo ICorDebugEditAndContinueSnapshot::SetPESymbolBytes
 `SetPESymbolBytes` è obsoleto. Non chiamare questo metodo.  

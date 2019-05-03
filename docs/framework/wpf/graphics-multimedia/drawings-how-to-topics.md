@@ -12,11 +12,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
 ms.openlocfilehash: 6be388292ce2c73b9ef555ea6b00c986c99dc11a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010137"
 ---
 # <a name="drawings-how-to-topics"></a>Procedure relative agli oggetti Drawing
 Negli argomenti di questa sezione viene descritto come utilizzare <xref:System.Windows.Media.Drawing> oggetti per disegnare forme, immagini o testo.  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bc82c506cf7e223e672a62ca74b215cac870e50
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989542"
 ---
 # <a name="icordebugenumerateprocesses-method"></a>Metodo ICorDebug::EnumerateProcesses
 Ottiene un enumeratore per i processi sottoposti a debug.  

@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811838"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Creare servizi resilienti pronti per il cloud: Gestire gli errori temporanei nel cloud
 
@@ -43,19 +43,19 @@ Per informazioni su come implementare strategie di gestione degli errori parzial
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Implementazione della comunicazione resiliente per gestire errori parziali**
+- **Implementazione della comunicazione resiliente per gestire errori parziali**
 
     [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
--   **Entity Framework connessione tentativi e la resilienza per la logica (versione 6 e versioni successive)**
+- **Entity Framework connessione tentativi e la resilienza per la logica (versione 6 e versioni successive)**
 
     [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
--   **Il blocco applicazione per la gestione degli errori temporanei**
+- **Il blocco applicazione per la gestione degli errori temporanei**
 
--   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
+- <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
--   **Libreria Polly per la comunicazione HTTP resiliente**
+- **Libreria Polly per la comunicazione HTTP resiliente**
 
     https://github.com/App-vNext/Polly
 

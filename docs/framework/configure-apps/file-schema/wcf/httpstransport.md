@@ -3,11 +3,11 @@ title: <httpsTransport>
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
 ms.openlocfilehash: c7e4dc540458bbfb69318d2f14cfa9776f444c55
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755116"
 ---
 # <a name="httpstransport"></a>\<httpsTransport>
 Specifica un trasporto HTTP per la trasmissione di messaggi SOAP per un'associazione personalizzata.  

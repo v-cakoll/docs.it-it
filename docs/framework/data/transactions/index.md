@@ -2,12 +2,6 @@
 title: Elaborazione delle transazioni
 ms.date: 03/30/2017
 ms.assetid: effdc8e6-accf-41eb-98a5-431603ba218b
-ms.openlocfilehash: dc032746b265a3e781898beb823be0d1bcf1abea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355217"
 ---
 # <a name="transaction-processing"></a>Elaborazione delle transazioni
 Quando si acquista un libro da una libreria online si offre denaro (tramite carta di credito) in cambio di un libro. Se la carta di credito è valida, una serie di operazioni correlate garantisce che l'acquirente riceva il libro e che la libreria riceva il denaro. Se tuttavia durante lo scambio si verifica un errore in una delle operazioni della serie, l'intero scambio ha esito negativo. L'acquirente non riceve il libro e la libreria non riceve il denaro.  

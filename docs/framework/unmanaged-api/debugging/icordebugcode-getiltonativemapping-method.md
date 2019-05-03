@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c30623e53b57a78287b26d4a362793cfb32baede
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750210"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>Metodo ICorDebugCode::GetILToNativeMapping
 Ottiene una matrice di istanze di "COR_DEBUG_IL_TO_NATIVE_MAP" che rappresentano i mapping da Microsoft intermediate language (MSIL) agli offset nativi.  
@@ -64,4 +64,4 @@ HRESULT GetILToNativeMapping (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)
+- [ICorDebugCode (interfaccia)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
 ms.openlocfilehash: 4f4e26eb3e5ccaf66b2173c7fc9952375c5f2a58
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025405"
 ---
 # <a name="xarray-markup-extension"></a>Estensione del markup x:Array
 Fornisce il supporto generale per le matrici di oggetti in XAML tramite un'estensione di markup. Corrisponde al `x:ArrayExtension` tipo XAML in [MS-XAML].  

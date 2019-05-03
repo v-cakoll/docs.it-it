@@ -13,11 +13,11 @@ ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4893adaf528f1a9ef8fc8eab8027406fd8520cc2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704791"
 ---
 # <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > elemento
 Specifica se disabilitare la memorizzazione nella cache degli errori che si verificano perché l'assembly non è stato trovato il sondaggio di associazione.  
@@ -63,11 +63,11 @@ Specifica se disabilitare la memorizzazione nella cache degli errori che si veri
   
  Associazione di alcuni errori di caricamento non sono interessati da questo elemento e vengono sempre memorizzati nella cache. Questi errori si verificano perché l'assembly è stato trovato ma non può essere caricato. Generano <xref:System.BadImageFormatException> o <xref:System.IO.FileLoadException>. Nell'elenco seguente sono riportati alcuni esempi di tali errori.  
   
--   Se si tenta di caricare un file non è un assembly valido, i tentativi successivi per caricare l'assembly avrà esito negativo anche se il file non valido viene sostituito con l'assembly corretto.  
+- Se si tenta di caricare un file non è un assembly valido, i tentativi successivi per caricare l'assembly avrà esito negativo anche se il file non valido viene sostituito con l'assembly corretto.  
   
--   Se si tenta di caricare un assembly che è stato bloccato dal file system, i tentativi successivi per caricare l'assembly avrà esito negativo anche dopo che l'assembly viene rilasciata dal file system.  
+- Se si tenta di caricare un assembly che è stato bloccato dal file system, i tentativi successivi per caricare l'assembly avrà esito negativo anche dopo che l'assembly viene rilasciata dal file system.  
   
--   Se uno o più versioni dell'assembly che si sta tentando di caricare è nel percorso di sondaggio, ma la versione specifica di che richiesta non è tra di essi, i tentativi successivi di caricare tale versione avrà esito negativo anche se la versione corretta verrà spostata nel percorso di sondaggio.  
+- Se uno o più versioni dell'assembly che si sta tentando di caricare è nel percorso di sondaggio, ma la versione specifica di che richiesta non è tra di essi, i tentativi successivi di caricare tale versione avrà esito negativo anche se la versione corretta verrà spostata nel percorso di sondaggio.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come disabilitare la memorizzazione nella cache di errori di associazione di assembly che si verificano perché l'assembly non è stato trovato il sondaggio.  

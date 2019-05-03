@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
 ms.openlocfilehash: 6d0967355e64640e0fd5c81f04a5bf4f33c7b3f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608840"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>Strumento per la configurazione del modello di servizio di COM+ (ComSvcConfig.exe)
 Lo strumento da riga di comando per la configurazione del modello del servizio di COM+ (ComSvcConfig.exe) consente di configurare le interfacce COM+ che si desidera siano esposte come servizi Web.  
@@ -96,4 +96,4 @@ ComSvcConfig.exe /list /application:OnlineStore /hosting:complus
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Usare lo strumento di configurazione del modello di servizi di COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+- [Procedura: Usare lo strumento di configurazione modello di servizio COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857090"
 ---
 # <a name="denial-of-service"></a>Denial of Service (Negazione del servizio)
 Si verifica un attacco Denial of Service quando un sistema viene sommerso da una quantità di messaggi tale da non poter essere elaborata o da poter essere elaborata solo molto lentamente.  
@@ -28,13 +28,13 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
   
  Mitigazione: Usare le proprietà seguenti del <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> classe:  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: controlla il numero massimo di token `SecurityContextToken`che il server memorizza nella cache dopo `SPNego` o `SSL` negoziazione.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: controlla il numero massimo di classi `SecurityContextToken` temporali memorizzate nella cache dal server dopo la negoziazione `SPNego` o `SSL`.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: controlla la durata del `SecurityContextTokens` che i problemi di server seguendo `SPNego` o `SSL` negoziazione. Il server memorizza nella cache la classe `SecurityContextToken` per questo periodo di tempo.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: controlla la durata della classe `SecurityContextTokens` rilasciata dal server in seguito alla negoziazione `SPNego` o `SSL`. Il server memorizza nella cache la classe `SecurityContextToken` per questo periodo di tempo.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: controlla il numero massimo di conversazioni protette stabilite nel server, ma per cui non è stati elaborati alcun messaggio dell'applicazione. Questa quota impedisce ai client di stabilire conversazioni protette nel servizio, facendo così in modo che il servizio mantenga lo stato per client, senza mai usare i client.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: controlla il numero massimo di conversazioni protette stabilite nel server, per cui però non sono stati elaborati messaggi dell'applicazione. Questa quota impedisce ai client di stabilire conversazioni protette nel servizio, facendo così in modo che il servizio mantenga lo stato per client, senza mai usare i client.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: controlla il tempo massimo, il servizio mantiene attiva una conversazione protetta senza ricevere un messaggio dell'applicazione dal client per la conversazione. Questa quota impedisce ai client di stabilire conversazioni protette nel servizio, facendo così in modo che il servizio mantenga lo stato per client, senza mai usare i client.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: controlla il tempo massimo in cui il servizio mantiene attiva una conversazione protetta senza ricevere un messaggio dell'applicazione dal client per la conversazione. Questa quota impedisce ai client di stabilire conversazioni protette nel servizio, facendo così in modo che il servizio mantenga lo stato per client, senza mai usare i client.  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>Necessità dell'autenticazione client per WSDualHttpBinding o per le doppie associazioni personalizzate  
  Per impostazione predefinita, <xref:System.ServiceModel.WSDualHttpBinding> ha la sicurezza abilitata. È tuttavia possibile che, se l'autenticazione client viene disattivata impostando la proprietà <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> su <xref:System.ServiceModel.MessageCredentialType.None>, un utente malintenzionato provochi un attacco Denial of Service in un terzo servizio. Ciò può verificarsi perché un client dannoso può indicare al servizio di inviare un flusso di messaggi a un terzo servizio.  
@@ -82,9 +82,9 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
 ## <a name="see-also"></a>Vedere anche
 
 - [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Diffusione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Divulgazione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Elevazione dei privilegi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Denial of Service (Negazione del servizio)](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Negazione del servizio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Attacchi di tipo replay](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
 - [Manomissioni](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

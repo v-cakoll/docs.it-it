@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 ms.openlocfilehash: 5fb175bdd255af1b506dacb973a778b1f6f515f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928947"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Procedura: Proteggere un servizio con credenziali di Windows
 Questo argomento illustra come abilitare la sicurezza del trasporto in un servizio Windows Communication Foundation (WCF) che risiede in un dominio di Windows e viene chiamato dai client nello stesso dominio. Per altre informazioni su questo scenario, vedere [protezione del trasporto con autenticazione di Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Per un'applicazione di esempio, vedere la [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) esempio.  
@@ -151,6 +151,6 @@ Questo argomento illustra come abilitare la sicurezza del trasporto in un serviz
 
 - <xref:System.ServiceModel.WSHttpBinding>
 - [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Procedura: Creare un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Procedura: Creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [Protezione dei servizi](../../../docs/framework/wcf/securing-services.md)
-- [Cenni preliminari sulla sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Panoramica della sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)

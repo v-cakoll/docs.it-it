@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
 ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59297707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935512"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operazioni sincrone e asincrone
 In questo argomento vengono illustrate l'implementazione e la chiamata delle operazioni del servizio asincrone.  
@@ -27,24 +27,24 @@ In questo argomento vengono illustrate l'implementazione e la chiamata delle ope
   
  L'indipendenza del contratto di servizio dall'implementazione del client o del servizio consente le forme seguenti di esecuzione asincrona nelle applicazioni WCF:  
   
--   I client possono richiamare operazioni di richiesta/risposta in modo asincrono usando uno scambio di messaggi sincrono.  
+- I client possono richiamare operazioni di richiesta/risposta in modo asincrono usando uno scambio di messaggi sincrono.  
   
--   I servizi possono implementare operazioni di richiesta/risposta in modo asincrono usando uno scambio di messaggi sincrono.  
+- I servizi possono implementare operazioni di richiesta/risposta in modo asincrono usando uno scambio di messaggi sincrono.  
   
--   Gli scambi di messaggi possono essere unidirezionali, indipendentemente dall'implementazione del client o del servizio.  
+- Gli scambi di messaggi possono essere unidirezionali, indipendentemente dall'implementazione del client o del servizio.  
   
 ### <a name="suggested-asynchronous-scenarios"></a>Scenari asincroni suggeriti  
  Usare un approccio asincrono nell'implementazione di un'operazione di servizio se tale implementazione effettua una chiamata di blocco, ad esempio effettuando le operazioni di I/O. Quando si effettua l'implementazione di un'operazione asincrona, provare a chiamare i metodi e le operazioni asincrone per estendere il più possibile il percorso della chiamata asincrona. Ad esempio chiamare l'opzione`BeginOperationTwo()` dall'interno di `BeginOperationOne()`.  
   
--   Usare un approccio asincrono in un'applicazione client o in un'applicazione chiamante nei seguenti casi:  
+- Usare un approccio asincrono in un'applicazione client o in un'applicazione chiamante nei seguenti casi:  
   
--   Se si richiamano operazioni da un'applicazione di livello intermedio. Per altre informazioni su questi scenari, vedere [Applicazioni client di livello intermedio](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
+- Se si richiamano operazioni da un'applicazione di livello intermedio. Per altre informazioni su questi scenari, vedere [Applicazioni client di livello intermedio](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
   
--   Se si richiamano operazioni all'interno di una pagina ASP.NET, usare pagine asincrone.  
+- Se si richiamano operazioni all'interno di una pagina ASP.NET, usare pagine asincrone.  
   
--   Se si richiamano operazioni da applicazioni a thread singolo, ad esempio Windows Forms o Windows Presentation Foundation (WPF). Se si usa il modello di chiamata asincrono basato su eventi, l'evento risultante viene generato sul thread UI, aggiungendo velocità di risposta all'applicazione senza che vi sia necessità di gestire più thread.  
+- Se si richiamano operazioni da applicazioni a thread singolo, ad esempio Windows Forms o Windows Presentation Foundation (WPF). Se si usa il modello di chiamata asincrono basato su eventi, l'evento risultante viene generato sul thread UI, aggiungendo velocità di risposta all'applicazione senza che vi sia necessità di gestire più thread.  
   
--   Generalmente, se è possibile scegliere tra una chiamata sincrona e una asincrona, scegliere la seconda.  
+- Generalmente, se è possibile scegliere tra una chiamata sincrona e una asincrona, scegliere la seconda.  
   
 ### <a name="implementing-an-asynchronous-service-operation"></a>Implementazione di un'operazione del servizio asincrona  
  Le operazioni asincrone possono essere implementate tramite uno dei tre metodi seguenti:  
@@ -118,11 +118,11 @@ public class AsyncExample
   
  Per definire un'operazione di contratto `X` eseguita in modo asincrono indipendentemente dalla modalità con cui viene chiamata nell'applicazione client:  
   
--   Definire due metodi usando il modello `BeginOperation` e `EndOperation`.  
+- Definire due metodi usando il modello `BeginOperation` e `EndOperation`.  
   
--   Il metodo `BeginOperation` include i parametri `in` e `ref` per l'operazione e restituisce un tipo <xref:System.IAsyncResult>.  
+- Il metodo `BeginOperation` include i parametri `in` e `ref` per l'operazione e restituisce un tipo <xref:System.IAsyncResult>.  
   
--   Il metodo `EndOperation` include un parametro <xref:System.IAsyncResult>, nonché i parametri `out` e `ref`, e restituisce il tipo restituito dall'operazione.  
+- Il metodo `EndOperation` include un parametro <xref:System.IAsyncResult>, nonché i parametri `out` e `ref`, e restituisce il tipo restituito dall'operazione.  
   
  Vedere, ad esempio, il metodo seguente.  
   

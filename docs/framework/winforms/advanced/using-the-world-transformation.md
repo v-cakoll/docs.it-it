@@ -9,11 +9,11 @@ helpviewer_keywords:
 - world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
 ms.openlocfilehash: f40d7e8cb814344365e8b88c2659751903b79d77
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969143"
 ---
 # <a name="using-the-world-transformation"></a>Utilizzo della trasformazione di tipo World
 La trasformazione globale è una proprietà del <xref:System.Drawing.Graphics> classe. I numeri che specificano la trasformazione globale vengono archiviati un <xref:System.Drawing.Drawing2D.Matrix> oggetto che rappresenta una matrice 3x3. Il <xref:System.Drawing.Drawing2D.Matrix> e <xref:System.Drawing.Graphics> classi dispongono di diversi metodi per impostare i numeri in matrice di trasformazione globale.  
@@ -45,4 +45,4 @@ La trasformazione globale è una proprietà del <xref:System.Drawing.Graphics> c
 
 - <xref:System.Drawing.Drawing2D.Matrix>
 - [Sistemi di coordinate e trasformazioni](coordinate-systems-and-transformations.md)
-- [Utilizzo di trasformazioni nel codice gestito GDI+](using-transformations-in-managed-gdi.md)
+- [Uso di trasformazioni nel codice gestito GDI+](using-transformations-in-managed-gdi.md)

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
 ms.openlocfilehash: e05d358452a247b0d071f78d19c0bf721502899a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018034"
 ---
 # <a name="serialization-in-net"></a>Serializzazione in .NET
 La serializzazione è il processo di conversione dello stato di un oggetto in un form che può essere mantenuto o trasportato. Il complemento della serializzazione è la deserializzazione, che converte un flusso in un oggetto. Insieme, questi processi consentono di archiviare e trasferire i dati in modo semplice.  
   
 .NET offre due tecnologie di serializzazione:  
   
--   La serializzazione binaria mantiene la fedeltà dei tipi, utile per il mantenimento dello stato di un oggetto tra chiamate diverse di un'applicazione. È possibile, ad esempio, condividere un oggetto tra diverse applicazioni serializzandolo negli Appunti. La serializzazione di un oggetto può essere effettuata in un flusso, in un disco, in memoria, in rete e così via. .NET Remoting utilizza la serializzazione per passare oggetti "per valore" da un computer o dominio dell'applicazione a un altro.  
+- La serializzazione binaria mantiene la fedeltà dei tipi, utile per il mantenimento dello stato di un oggetto tra chiamate diverse di un'applicazione. È possibile, ad esempio, condividere un oggetto tra diverse applicazioni serializzandolo negli Appunti. La serializzazione di un oggetto può essere effettuata in un flusso, in un disco, in memoria, in rete e così via. .NET Remoting utilizza la serializzazione per passare oggetti "per valore" da un computer o dominio dell'applicazione a un altro.  
   
--   La serializzazione XML serializza solo i campi e le proprietà pubbliche e non mantiene la fedeltà dei tipi. Ciò risulta utile se si vuole fornire o utilizzare dati senza limitare l'applicazione che utilizza i dati. Poiché XML è uno standard aperto, questa rappresenta una scelta interessante ai fini della condivisione di dati attraverso il Web. Analogamente, SOAP è uno standard aperto che rappresenta una scelta altrettanto interessante.  
+- La serializzazione XML serializza solo i campi e le proprietà pubbliche e non mantiene la fedeltà dei tipi. Ciò risulta utile se si vuole fornire o utilizzare dati senza limitare l'applicazione che utilizza i dati. Poiché XML è uno standard aperto, questa rappresenta una scelta interessante ai fini della condivisione di dati attraverso il Web. Analogamente, SOAP è uno standard aperto che rappresenta una scelta altrettanto interessante.  
   
 ## <a name="in-this-section"></a>In questa sezione  
 [Argomenti sulle procedure relative alla serializzazione](../../../docs/standard/serialization/serialization-how-to-topics.md)  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
 ms.openlocfilehash: 90b8c3cb49ff7b246b6bf7799d6b76f8549b23e5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755961"
 ---
 # <a name="multiple-endpoints"></a>Più endpoint
 L'esempio Più endpoint mostra come configurare più endpoint in un servizio e come comunicare con ogni endpoint a partire da un client. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md). La configurazione del servizio è stata modificata per definire due endpoint che supportano il contratto `ICalculator`, ma ognuno con un indirizzo diverso e una diversa associazione. La configurazione client e il codice sono stati modificati per comunicare con entrambi gli endpoint del servizio.  

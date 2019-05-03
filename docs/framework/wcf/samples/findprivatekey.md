@@ -1,30 +1,30 @@
 ---
-title: Esempio FindPrivateKey - WCF
+title: Esempio di FindPrivateKey - WCF
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
 ms.openlocfilehash: 72e2f49ae7c39b4a0486ec053ff1164c2d833cbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990093"
 ---
 # <a name="findprivatekey-sample"></a>Esempio FindPrivateKey
 
 Può essere difficile individuare il percorso e il nome del file di chiave privata associati a un certificato X.509 specifico nell'archivio certificati. Lo strumento FindPrivateKey.exe facilita questo processo.
 
 > [!IMPORTANT]
-> FindPrivateKey è un esempio che deve essere compilato prima dell'utilizzo. Vedere il [per compilare il progetto FindPrivateKey](#to-build-the-findprivatekey-project) per istruzioni su come compilare lo strumento FindPrivateKey.
+> FindPrivateKey è un esempio che deve essere compilato prima dell'utilizzo. Vedere le [per compilare il progetto FindPrivateKey](#to-build-the-findprivatekey-project) per istruzioni su come compilare lo strumento FindPrivateKey.
 
 I certificati X.509 vengono installati da un amministratore o da qualsiasi utente nel computer. Tuttavia, il certificato sono accessibili da un servizio in esecuzione con un account diverso. Ad esempio, l'account del servizio di rete.
 
 Questo account può non avere accesso al file di chiave privata se il certificato non è stato originariamente installato. Lo strumento FindPrivateKey fornisce il percorso del file di chiave privata di un determinato certificato X.509. È possibile aggiungere o rimuovere autorizzazioni quando si conosce il percorso del file di chiave privata degli specifici certificati X.509.
 
-Gli esempi che utilizzano i certificati per la sicurezza usano lo strumento FindPrivateKey nel *Setup.bat* file. Dopo aver individuato il file di chiave privato, è possibile utilizzare altri strumenti, ad esempio *Cacls.exe* per impostare i diritti di accesso appropriati sul file.
+Gli esempi che usano certificati per la sicurezza utilizzano lo strumento FindPrivateKey nel *Setup. bat* file. Una volta individuato il file di chiave privata, è possibile usare altri strumenti, ad esempio *Cacls.exe* per impostare i diritti di accesso appropriati sul file.
 
-Quando si esegue un servizio Windows Communication Foundation (WCF) con un account utente, ad esempio un file eseguibile indipendente, verificare che l'account utente disponga dell'accesso di sola lettura del file. Quando si esegue un servizio WCF in Internet Information Services (IIS) gli account predefiniti che l'esecuzione del servizio sono il servizio di rete in IIS 7 e versioni precedenti, o identità di Pool di applicazioni in IIS 7.5 e versioni successive. Per ulteriori informazioni, vedere [le identità del Pool di applicazioni](/iis/manage/configuring-security/application-pool-identities).
+Quando si esegue un servizio Windows Communication Foundation (WCF) con un account utente, ad esempio un file eseguibile indipendente, assicurarsi che l'account utente disponga di accesso in lettura al file. Quando si esegue un servizio WCF in Internet Information Services (IIS) gli account predefiniti quali viene eseguito il servizio sono il servizio di rete in IIS 7 e versioni precedenti, o identità Pool di applicazioni in IIS 7.5 e versioni successive. Per altre informazioni, vedere [Application Pool Identities](/iis/manage/configuring-security/application-pool-identities).
 
 ## <a name="examples"></a>Esempi
 
@@ -36,7 +36,7 @@ Message="The certificate 'CN=localhost' must have a private key that is capable 
 Source="System.ServiceModel"
 ```
 
-In questo caso, utilizzare lo strumento FindPrivateKey per trovare il file di chiave privato e quindi impostare il diritto di accesso per il processo di cui è in esecuzione il servizio. Ad esempio, questa operazione può essere eseguita con lo strumento Cacls.exe come illustrato nell'esempio seguente:
+In questo caso, utilizzare lo strumento FindPrivateKey per trovare il file di chiave privata e quindi impostare il diritto di accesso per il processo di cui è in esecuzione il servizio. Ad esempio, questa operazione può essere eseguita con lo strumento Cacls.exe come illustrato nell'esempio seguente:
 
 ```
 cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /E /G "NETWORK SERVICE":R
@@ -46,23 +46,23 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 Per scaricare il progetto, visitare [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459).
 
-1. Aprire [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] e passare il *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* cartella nel percorso di directory in cui è installato l'esempio.
+1. Aprire [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] e passare al *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* cartella nel percorso della directory in cui è installato l'esempio.
 
 2. Fare doppio clic sull'icona del file con estensione sln per aprirlo in Visual Studio.
 
 3. Nel **compilare** dal menu **Ricompila soluzione**.
 
-4. La compilazione della soluzione genera il file FindPrivateKey.exe.
+4. La compilazione della soluzione genera il file: FindPrivateKey.exe.
 
 ## <a name="conventionscommand-line-entries"></a>Convenzioni: voci della riga di comando
 
- "[*opzione*]" rappresenta un insieme facoltativo di parametri.
+ "[*opzione*]" rappresenta un set facoltativo di parametri.
 
  "{*opzione*}" rappresenta un set di parametri obbligatorio.
 
  "*opzione1* &#124; *opzione2*" rappresenta una scelta tra set di opzioni.
 
- "\<*valore*>" rappresenta un valore di parametro da immettere.
+ "\<*valore*>" rappresenta un valore del parametro da immettere.
 
 ## <a name="usage"></a>Utilizzo
 
@@ -80,7 +80,7 @@ Dove:
        -a            output absolute file name
 ```
 
-Se viene specificato alcun parametro nel prompt dei comandi, viene visualizzato il testo della Guida.
+Se viene specificato alcun parametro al prompt dei comandi, viene visualizzato il testo della Guida.
 
 ## <a name="examples"></a>Esempi
 
@@ -90,7 +90,7 @@ In questo esempio viene ricercato il nome file del certificato con un nome sogge
 FindPrivateKey My CurrentUser -n "CN=localhost"
 ```
 
-In questo esempio viene ricercato il nome file del certificato con un nome soggetto "CN = localhost", nel personale dell'utente archivio dell'utente corrente e il percorso completo della directory di output.
+In questo esempio viene ricercato il nome file del certificato con un nome soggetto "CN = localhost", nel profilo personale archivio dell'utente corrente e il percorso completo della directory di output.
 
 ```
 FindPrivateKey My CurrentUser -n "CN=localhost" -a

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
 ms.openlocfilehash: db137eb84108c6adbbf04a380934bb6da6936d61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59343051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771423"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Procedura dettagliata: Creazione di credenziali client e del servizio personalizzate
 In questo argomento viene illustrato come implementare credenziali client e del servizio personalizzate e come utilizzare credenziali personalizzate dal codice dell'applicazione.  
@@ -18,9 +18,9 @@ In questo argomento viene illustrato come implementare credenziali client e del 
 ## <a name="credentials-extensibility-classes"></a>Classi di estensibilità delle credenziali  
  Il <xref:System.ServiceModel.Description.ClientCredentials> e <xref:System.ServiceModel.Description.ServiceCredentials> classi sono i punti di ingresso principale per l'estensibilità della sicurezza Windows Communication Foundation (WCF). Queste classi delle credenziali forniscono le API che consentono al codice dell'applicazione di impostare le informazioni sulle credenziali e convertire i tipi di credenziali in token di sicurezza. (*Token di sicurezza* sono la forma utilizzata per trasmettere le informazioni sulle credenziali all'interno di messaggi SOAP.) Le responsabilità di queste classi di credenziali possono essere divise in due aree:  
   
--   Fornire le API affinché le applicazioni impostino le informazioni sulle credenziali.  
+- Fornire le API affinché le applicazioni impostino le informazioni sulle credenziali.  
   
--   Fungere da factory per le implementazioni <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
+- Fungere da factory per le implementazioni <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
  Entrambe le classi <xref:System.ServiceModel.Description.ClientCredentials> e <xref:System.ServiceModel.Description.ServiceCredentials> ereditano dalla classe astratta <xref:System.ServiceModel.Security.SecurityCredentialsManager> che definisce il contratto per la restituzione di <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
@@ -29,22 +29,22 @@ In questo argomento viene illustrato come implementare credenziali client e del 
 ## <a name="reasons-to-customize"></a>Motivi di personalizzazione  
  Esistono più motivi per personalizzare classi di credenziali client o del servizio. Tutto è il requisito per modificare il comportamento della protezione WCF predefinita per quanto riguarda la gestione di tipi di credenziali forniti dal sistema, in particolare per i motivi seguenti:  
   
--   Necessità di modifiche che non sono possibili utilizzando altri punti di estensibilità.  
+- Necessità di modifiche che non sono possibili utilizzando altri punti di estensibilità.  
   
--   Aggiunta di nuovi tipi di credenziali.  
+- Aggiunta di nuovi tipi di credenziali.  
   
--   Aggiunta di nuovi tipi di token di sicurezza personalizzati.  
+- Aggiunta di nuovi tipi di token di sicurezza personalizzati.  
   
  In questo argomento viene illustrato come implementare credenziali client e del servizio personalizzate e come utilizzarle dal codice dell'applicazione.  
   
 ## <a name="first-in-a-series"></a>Primo passaggio  
  Creazione di una classe di credenziali personalizzate è solo il primo passaggio, perché la ragione della personalizzazione consiste nella modifica di comportamento WCF per quanto riguarda provisioning delle credenziali, la serializzazione del token di sicurezza o l'autenticazione. Negli altri argomenti di questa sezione viene descritto come creare serializzatori e autenticatori personalizzati. In questo caso, la creazione di una classe di credenziali personalizzate è il primo tema dei passaggi. Le azioni successive (creazione di serializzatori e autenticatori personalizzati) possono essere eseguite solo dopo avere creato credenziali personalizzate. Gli argomenti aggiuntivi basati su questo argomento includono:  
   
--   [Procedura: Creare un provider di token di sicurezza personalizzati](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+- [Procedura: Creare un Provider di Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
--   [Procedura: Creare un autenticatore del token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+- [Procedura: Creare un autenticatore del Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
--   [Procedura: Creare un Token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+- [Procedura: Creare un Token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
 ## <a name="procedures"></a>Procedure  
   
@@ -186,6 +186,6 @@ In questo argomento viene illustrato come implementare credenziali client e del 
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
-- [Procedura: Creare un provider di token di sicurezza personalizzati](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Procedura: Creare un autenticatore del token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Procedura: Creare un token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [Procedura: Creare un Provider di Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Procedura: Creare un autenticatore del Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Procedura: Creare un Token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)

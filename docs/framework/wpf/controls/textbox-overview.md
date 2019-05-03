@@ -6,11 +6,11 @@ helpviewer_keywords:
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
 ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790989"
 ---
 # <a name="textbox-overview"></a>Cenni preliminari sulla classe TextBox
 Il <xref:System.Windows.Controls.TextBox> classe consente di visualizzare o modificare testo non formattato. Un uso comune di un <xref:System.Windows.Controls.TextBox> consiste nel modificare testo non formattato in un form. Ad esempio, un modulo che richiede il nome dell'utente, numero di telefono e così via utilizzerebbe <xref:System.Windows.Controls.TextBox> controlli per input di testo. Questo argomento vengono presentate le <xref:System.Windows.Controls.TextBox> classe e vengono forniti esempi su come usarlo in entrambe [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e C#.  
@@ -67,5 +67,5 @@ Il <xref:System.Windows.Controls.TextBox> classe consente di visualizzare o modi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedure relative](textbox-how-to-topics.md)
-- [Cenni generali sul controllo RichTextBox](richtextbox-overview.md)
+- [Procedure relative alle proprietà](textbox-how-to-topics.md)
+- [Cenni preliminari sul controllo RichTextBox](richtextbox-overview.md)

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4b0e78e10f092bce1c8f7762362f02b7a403c86a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61597251"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a>Metodo ICorProfilerCallback::JITCachedFunctionSearchFinished
 Notifica al profiler di completamento di una ricerca per una funzione che è stata compilata in precedenza usando il generatore di immagini Native (NGen.exe).  

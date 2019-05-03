@@ -3,11 +3,11 @@ title: Record
 description: Informazioni su come F# i record rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri.
 ms.date: 05/16/2016
 ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795421"
 ---
 # <a name="records"></a>Record
 
@@ -150,5 +150,5 @@ Se è necessario fare riferimento l'uguaglianza dei record, aggiungere l'attribu
 - [Tipi F#](fsharp-types.md)
 - [Classi](classes.md)
 - [Riferimenti per il linguaggio F#](index.md)
-- [Uguaglianza di riferimenti](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+- [Reference-Equality](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
 - [Criteri di ricerca](pattern-matching.md)

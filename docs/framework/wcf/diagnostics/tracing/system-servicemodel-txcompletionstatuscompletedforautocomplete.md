@@ -3,11 +3,11 @@ title: System.ServiceModel.TxCompletionStatusCompletedForAutocomplete
 ms.date: 03/30/2017
 ms.assetid: 79ec2a3f-8407-4c4c-a1bc-2b0e6e21c543
 ms.openlocfilehash: d84daadfed21e20a5dc2e0fc2947c1c5f02df209
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991757"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforautocomplete"></a>System.ServiceModel.TxCompletionStatusCompletedForAutocomplete
 La transazione specificata per l'operazione indicata è stata completata a causa dell'impostazione del membro `OperationBehaviorAttribute.TransactionAutoComplete` su `true`.  

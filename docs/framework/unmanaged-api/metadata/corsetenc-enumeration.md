@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1fd903cb4a9ce664b7a1c958a3fef0c639d6845d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045318"
 ---
 # <a name="corsetenc-enumeration"></a>Enumerazione CorSetENC
 Contiene valori usati per influenzare il comportamento durante la generazione di metadati.  

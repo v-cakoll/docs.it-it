@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
 ms.openlocfilehash: a4f87303954494e8e32d32e68fb3f1244f25680a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011715"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Procedura: Associare i controlli di Windows Forms al componente BindingSource usando la finestra di progettazione
 Dopo aver aggiunto i controlli al form e determinare l'interfaccia utente per l'applicazione, è possibile associare i controlli a un'origine dati, in modo che, in fase di esecuzione, gli utenti possono modificare e salvare i dati correlati all'applicazione.  
@@ -31,9 +31,9 @@ Dopo aver aggiunto i controlli al form e determinare l'interfaccia utente per l'
   
 2. Nel **proprietà** finestra:  
   
-    1.  Espandere la **(DataBindings)** nodo.  
+    1. Espandere la **(DataBindings)** nodo.  
   
-    2.  Fare clic sulla freccia accanto al <xref:System.Windows.Forms.TextBox.Text%2A> proprietà.  
+    2. Fare clic sulla freccia accanto al <xref:System.Windows.Forms.TextBox.Text%2A> proprietà.  
   
          Il **DataSource** verrà aperto l'editor di tipo dell'interfaccia utente.  
   
@@ -63,5 +63,5 @@ Dopo aver aggiunto i controlli al form e determinare l'interfaccia utente per l'
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
-- [Aggiungere nuove origini dati](/visualstudio/data-tools/add-new-data-sources)
+- [Aggiungi nuova origine dati](/visualstudio/data-tools/add-new-data-sources)
 - [Finestra Origini dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))

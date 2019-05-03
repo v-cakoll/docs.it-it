@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa1f6852544dddcdf514b14710ade3949818c93e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948869"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>Metodo ICorDebugProcess2::GetThreadForTaskID
 Ottiene il thread su cui è in esecuzione l'attività con l'identificatore specificato.  

@@ -3,11 +3,11 @@ title: AJAX
 ms.date: 03/30/2017
 ms.assetid: 9e0eb40a-69ef-4821-bdc3-45a9b71a58c3
 ms.openlocfilehash: ae4a39d48d9c688d14fa8cf131e8010188c2fe10
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944196"
 ---
 # <a name="ajax"></a>AJAX
 Contenuto della sezione sono inclusi esempi che illustrano le funzionalità la funzionalità AJAX (Asynchronous JavaScript and XML).  

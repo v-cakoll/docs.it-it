@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
 ms.openlocfilehash: 0f1b6cf27101c2a7f55757b72b56b2291198404d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767540"
 ---
 # <a name="object-identity"></a>Identità dell'oggetto
 Gli oggetti in runtime hanno identità univoche. Se due variabili fanno riferimento allo stesso oggetto, si riferiscono in effetti alla stessa istanza dell'oggetto. Per questo motivo le modifiche apportate per mezzo di un percorso tramite una variabile sono immediatamente visibili tramite l'altra.  

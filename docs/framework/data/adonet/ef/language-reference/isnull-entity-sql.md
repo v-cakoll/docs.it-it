@@ -3,11 +3,11 @@ title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
 ms.openlocfilehash: aaecce3ff74d64b8e07b31329ced5b5e581fca5b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780406"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 Consente di determinare se un'espressione di query è null.  
@@ -26,7 +26,7 @@ expression IS [ NOT ] NULL
  Nega il risultato EDM.Boolean di IS NULL.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` Se `expression` restituisce null; in caso contrario, `false`.  
+ `true` se `expression` restituisce null; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
  Usare `IS NULL` per determinare se l'elemento di un outer join è null:  

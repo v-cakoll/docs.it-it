@@ -3,11 +3,11 @@ title: 'Procedura dettagliata: Accesso al Web tramite Async e Await (Visual Basi
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
 ms.openlocfilehash: 7f9b71bc76e8d17cf2fb6714070b4439265d1fda
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765921"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Procedura dettagliata: Accesso al Web tramite Async e Await (Visual Basic)
 È possibile scrivere programmi asincroni in modo più semplice e intuitivo usando le funzionalità async/await. È possibile scrivere codice asincrono simile al codice sincrono e consentire al compilatore di gestire le complesse funzioni di callback e continuazione tipiche del codice asincrono.  
@@ -20,29 +20,29 @@ ms.locfileid: "59335901"
   
  Questa procedura dettagliata prevede l'esecuzione delle attività seguenti:  
   
--   [Per creare un'applicazione WPF](#CreateWPFApp)  
+- [Per creare un'applicazione WPF](#CreateWPFApp)  
   
--   [Per progettare una finestra WPF MainWindow semplice](#MainWindow)  
+- [Per progettare una finestra WPF MainWindow semplice](#MainWindow)  
   
--   [Per aggiungere un riferimento](#AddRef)  
+- [Per aggiungere un riferimento](#AddRef)  
   
--   [Per aggiungere istruzioni Imports necessarie](#ImportsState)  
+- [Per aggiungere istruzioni Imports necessarie](#ImportsState)  
   
--   [Per creare un'applicazione sincrona](#synchronous)  
+- [Per creare un'applicazione sincrona](#synchronous)  
   
--   [Per eseguire il test della soluzione sincrona](#testSynch)  
+- [Per eseguire il test della soluzione sincrona](#testSynch)  
   
--   [Per convertire GetURLContents in un metodo asincrono](#GetURLContents)  
+- [Per convertire GetURLContents in un metodo asincrono](#GetURLContents)  
   
--   [Per Convertire SumPageSizes in un metodo asincrono](#SumPageSizes)  
+- [Per Convertire SumPageSizes in un metodo asincrono](#SumPageSizes)  
   
--   [Per convertire startButton_Click in un metodo asincrono](#startButton)  
+- [Per convertire startButton_Click in un metodo asincrono](#startButton)  
   
--   [Per eseguire il test della soluzione asincrona](#testAsynch)  
+- [Per eseguire il test della soluzione asincrona](#testAsynch)  
   
--   [Per sostituire GetURLContentsAsync con un metodo .NET Framework](#GetURLContentsAsync)  
+- [Per sostituire GetURLContentsAsync con un metodo .NET Framework](#GetURLContentsAsync)  
   
--   [Esempio](#BKMK_CompleteCodeExamples)  
+- [Esempio](#BKMK_CompleteCodeExamples)  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  È necessario che sia installato nel computer Visual Studio 2012 o versione successiva. Per altre informazioni, vedere il [sito Web di Microsoft](https://go.microsoft.com/fwlink/?LinkId=235233).  
@@ -72,19 +72,19 @@ ms.locfileid: "59335901"
   
 4. Evidenziare il controllo **TextBox** e nella finestra **Proprietà** impostare i valori seguenti:  
   
-    -   Impostare la proprietà **Nome** su `resultsTextBox`.  
+    - Impostare la proprietà **Nome** su `resultsTextBox`.  
   
-    -   Impostare la proprietà **Height** su 250.  
+    - Impostare la proprietà **Height** su 250.  
   
-    -   Impostare la proprietà **Width** su 500.  
+    - Impostare la proprietà **Width** su 500.  
   
-    -   Nel scheda **Testo** specificare un tipo di carattere a spaziatura fissa, ad esempio Lucida Console o Global Monospace.  
+    - Nel scheda **Testo** specificare un tipo di carattere a spaziatura fissa, ad esempio Lucida Console o Global Monospace.  
   
 5. Evidenziare il controllo **Button** e nella finestra **Proprietà** impostare i valori seguenti:  
   
-    -   Impostare la proprietà **Nome** su `startButton`.  
+    - Impostare la proprietà **Nome** su `startButton`.  
   
-    -   Modificare il valore della proprietà **Content** da **Button** in **Start**.  
+    - Modificare il valore della proprietà **Content** da **Button** in **Start**.  
   
 6. Posizionare la casella di testo e il pulsante in modo che entrambi siano visualizzati nella finestra **MainWindow**.  
   
@@ -137,13 +137,13 @@ ms.locfileid: "59335901"
   
 3. Il codice per la soluzione sincrona contiene i quattro metodi seguenti:  
   
-    -   `SumPageSizes`, che ottiene un elenco di URL delle pagine Web dalla `SetUpURLList` e quindi chiama `GetURLContents` e `DisplayResults` per elaborare ogni URL.  
+    - `SumPageSizes`, che ottiene un elenco di URL delle pagine Web da `SetUpURLList` e quindi chiama `GetURLContents` e `DisplayResults` per elaborare ogni URL.  
   
-    -   `SetUpURLList`, che crea e restituisce un elenco di indirizzi web.  
+    - `SetUpURLList`, che crea e restituisce un elenco di indirizzi web.  
   
-    -   `GetURLContents`, che scarica il contenuto di ogni sito Web e restituisce il contenuto come matrice di byte.  
+    - `GetURLContents`, che scarica il contenuto di ogni sito Web e restituisce il contenuto come matrice di byte.  
   
-    -   `DisplayResults`, che visualizza il numero di byte nella matrice di byte per ogni URL.  
+    - `DisplayResults`, che visualizza il numero di byte nella matrice di byte per ogni URL.  
   
      Copiare i quattro metodi seguenti e incollarli nel `startButton_Click` gestore dell'evento in XAML. vb:  
   
@@ -263,7 +263,7 @@ ms.locfileid: "59335901"
     Using response As WebResponse = webReq.GetResponseAsync()  
     ```  
   
-2. `GetResponseAsync` Restituisce un <xref:System.Threading.Tasks.Task%601>. In questo caso, la *variabile di restituzione dell'attività*, `TResult`, è di tipo <xref:System.Net.WebResponse>. L'attività rappresenta una promessa di creazione di un oggetto `WebResponse` effettivo dopo il download dei dati richiesti e il completamento dell'esecuzione dell'attività.  
+2. `GetResponseAsync` restituisce <xref:System.Threading.Tasks.Task%601>. In questo caso, la *variabile di restituzione dell'attività*, `TResult`, è di tipo <xref:System.Net.WebResponse>. L'attività rappresenta una promessa di creazione di un oggetto `WebResponse` effettivo dopo il download dei dati richiesti e il completamento dell'esecuzione dell'attività.  
   
      Per recuperare il `WebResponse` valore dall'attività, applicare un' [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operatore per la chiamata a `GetResponseAsync`, come illustrato nel codice seguente.  
   
@@ -286,9 +286,9 @@ ms.locfileid: "59335901"
   
 3. Poiché è stato aggiunto l'operatore `Await` nel passaggio precedente, verrà generato un errore del compilatore. L'operatore può essere usato solo nei metodi contrassegnati con il [Async](../../../../visual-basic/language-reference/modifiers/async.md) modificatore. Ignorare l'errore mentre vengono ripetuti i passaggi di conversione per sostituire la chiamata a `CopyTo` con una chiamata a `CopyToAsync`.  
   
-    -   Modificare il nome del metodo chiamato in <xref:System.IO.Stream.CopyToAsync%2A>.  
+    - Modificare il nome del metodo chiamato in <xref:System.IO.Stream.CopyToAsync%2A>.  
   
-    -   Il metodo `CopyTo` o `CopyToAsync` copia i byte nel relativo argomento `content` e non restituisce un valore significativo. Nella versione sincrona, la chiamata a `CopyTo` è un'istruzione semplice che non restituisce un valore. La versione asincrona `CopyToAsync` restituisce <xref:System.Threading.Tasks.Task>. L'attività è analoga a "Task(void)" e consente l'attesa del metodo. Applicare `Await` o `await` alla chiamata a `CopyToAsync`, come mostrato nel codice riportato di seguito.  
+    - Il metodo `CopyTo` o `CopyToAsync` copia i byte nel relativo argomento `content` e non restituisce un valore significativo. Nella versione sincrona, la chiamata a `CopyTo` è un'istruzione semplice che non restituisce un valore. La versione asincrona `CopyToAsync` restituisce <xref:System.Threading.Tasks.Task>. L'attività è analoga a "Task(void)" e consente l'attesa del metodo. Applicare `Await` o `await` alla chiamata a `CopyToAsync`, come mostrato nel codice riportato di seguito.  
   
         ```vb  
         Await responseStream.CopyToAsync(content)  
@@ -317,9 +317,9 @@ ms.locfileid: "59335901"
   
      Il metodo `GetURLContents` dispone di un'istruzione return che restituisce una matrice di byte. Pertanto, il tipo restituito della versione asincrona è Task(T), dove T è una matrice di byte. Apportare le modifiche seguenti nella firma del metodo:  
   
-    -   Cambiare il tipo restituito in `Task(Of Byte())`.  
+    - Cambiare il tipo restituito in `Task(Of Byte())`.  
   
-    -   Per convenzione, i metodi asincroni presentano nomi che terminano in "Async". Rinominare pertanto il metodo `GetURLContentsAsync`.  
+    - Per convenzione, i metodi asincroni presentano nomi che terminano in "Async". Rinominare pertanto il metodo `GetURLContentsAsync`.  
   
      Nel codice seguente sono illustrate queste modifiche.  
   
@@ -334,9 +334,9 @@ ms.locfileid: "59335901"
   
 1. Ripetere i passaggi della procedura precedente per `SumPageSizes`. In primo luogo, modificare la chiamata a `GetURLContents` in una chiamata asincrona.  
   
-    -   Modificare il nome del metodo chiamato da `GetURLContents` in `GetURLContentsAsync`, se non è ancora stato fatto.  
+    - Modificare il nome del metodo chiamato da `GetURLContents` in `GetURLContentsAsync`, se non è ancora stato fatto.  
   
-    -   Applicare `Await` all'attività restituita da `GetURLContentsAsync` per ottenere il valore della matrice di byte.  
+    - Applicare `Await` all'attività restituita da `GetURLContentsAsync` per ottenere il valore della matrice di byte.  
   
      Nel codice seguente sono illustrate queste modifiche.  
   
@@ -355,11 +355,11 @@ ms.locfileid: "59335901"
   
 2. Apportare le modifiche seguenti nella firma del metodo:  
   
-    -   Contrassegnare il metodo con il modificatore `Async`.  
+    - Contrassegnare il metodo con il modificatore `Async`.  
   
-    -   Aggiungere "Async" al nome del metodo.  
+    - Aggiungere "Async" al nome del metodo.  
   
-    -   In questo caso non esiste alcuna variabile di restituzione dell'attività, T, perché `SumPageSizesAsync` non restituisce un valore per T. Il metodo non ha alcuna istruzione `Return`. Tuttavia, il metodo deve restituire `Task` per poter essere un metodo di tipo awaitable. Pertanto, modificare il tipo di metodo dalla `Sub` a `Function`. Il tipo restituito della funzione è `Task`.  
+    - In questo caso non esiste alcuna variabile di restituzione dell'attività, T, perché `SumPageSizesAsync` non restituisce un valore per T. Il metodo non ha alcuna istruzione `Return`. Tuttavia, il metodo deve restituire `Task` per poter essere un metodo di tipo awaitable. Pertanto, modificare il tipo di metodo dalla `Sub` a `Function`. Il tipo restituito della funzione è `Task`.  
   
      Nel codice seguente sono illustrate queste modifiche.  
   
@@ -422,9 +422,9 @@ ms.locfileid: "59335901"
   
 2. Viene visualizzato un output simile all'output della soluzione sincrona. Esistono tuttavia le differenze seguenti:  
   
-    -   I risultati non vengono restituiti contemporaneamente, al termine dell'elaborazione. Ad esempio, entrambi i programmi contengono una riga in `startButton_Click` che consente di cancellare la casella di testo. Lo scopo è quello di cancellare il contenuto della casella di testo tra le esecuzioni se si sceglie il pulsante **Start** per la seconda volta, dopo la visualizzazione di un set di risultati. Nella versione sincrona la casella di testo viene cancellata prima della seconda visualizzazione dei conteggi, ovvero quando vengono completati i download e il thread dell'interfaccia utente è libero di eseguire altre operazioni. Nella versione asincrona, la casella di testo viene cancellata subito dopo aver scelto il pulsante **Start**.  
+    - I risultati non vengono restituiti contemporaneamente, al termine dell'elaborazione. Ad esempio, entrambi i programmi contengono una riga in `startButton_Click` che consente di cancellare la casella di testo. Lo scopo è quello di cancellare il contenuto della casella di testo tra le esecuzioni se si sceglie il pulsante **Start** per la seconda volta, dopo la visualizzazione di un set di risultati. Nella versione sincrona la casella di testo viene cancellata prima della seconda visualizzazione dei conteggi, ovvero quando vengono completati i download e il thread dell'interfaccia utente è libero di eseguire altre operazioni. Nella versione asincrona, la casella di testo viene cancellata subito dopo aver scelto il pulsante **Start**.  
   
-    -   È importante notare che il thread dell'interfaccia utente non è bloccato durante il download. È possibile spostare o ridimensionare la finestra durante il download, il conteggio e la visualizzazione delle risorse Web. Se uno dei siti Web è lento o non risponde, è possibile annullare l'operazione scegliendo il pulsante **Chiudi** (il simbolo x su sfondo rosso nell'angolo superiore destro).  
+    - È importante notare che il thread dell'interfaccia utente non è bloccato durante il download. È possibile spostare o ridimensionare la finestra durante il download, il conteggio e la visualizzazione delle risorse Web. Se uno dei siti Web è lento o non risponde, è possibile annullare l'operazione scegliendo il pulsante **Chiudi** (il simbolo x su sfondo rosso nell'angolo superiore destro).  
   
 ## <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
 ### <a name="GetURLContentsAsync"></a> Per sostituire GetURLContentsAsync con un metodo .NET Framework  
@@ -675,11 +675,11 @@ End Class
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esempio asincrono: Accesso alla procedura dettagliata Web (C# e Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Esempio di codice asincrono: accesso alla procedura dettagliata Web - C# e Visual Basic)
 - [Operatore Await](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Tipi restituiti asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [Programmazione asincrona basata su attività (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)
+- [Programmazione asincrona basata su attività](https://go.microsoft.com/fwlink/?LinkId=204847)
 - [Procedura: Estendere la procedura dettagliata asincrona tramite Task. whenall (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
 - [Procedura: Eseguire più richieste Web in parallelo tramite Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

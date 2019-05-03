@@ -3,11 +3,11 @@ title: 'Procedura: Filtrare un elemento facoltativo (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
 ms.openlocfilehash: f2a1c7d4091af80e79a6758bcede8f4ccc753f03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855387"
 ---
 # <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Procedura: Filtrare un elemento facoltativo (Visual Basic)
 Talvolta si desidera filtrare in base a un elemento anche se non si è certi che esista nel documento XML. La ricerca deve essere eseguita in modo che se l'elemento specifico non include l'elemento figlio, non viene generata un'eccezione di riferimento null quando si applica un filtro sull'elemento. Nell'esempio seguente l'elemento `Child5` non contiene un elemento figlio `Type`, tuttavia la query viene comunque eseguita correttamente.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
 ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772879"
 ---
 # <a name="preview-events"></a>Eventi di anteprima
 Eventi di anteprima, noti anche come eventi di tunneling, sono eventi indirizzati in cui la direzione della route viene trasferito dalla radice dell'applicazione verso l'elemento che ha generato l'evento e viene indicato come origine di dati dell'evento. Non tutti gli scenari di evento supportano o richiedono eventi di anteprima. questo argomento descrive le situazioni in cui gli eventi di anteprima sono presenti, come le applicazioni o componenti devono essere gestiti, e i casi in cui la creazione di eventi di anteprima in componenti personalizzati o classi potrebbe essere appropriata.  
@@ -31,5 +31,5 @@ Eventi di anteprima, noti anche come eventi di tunneling, sono eventi indirizzat
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Impostazione degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md)
+- [Contrassegno degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md)
 - [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)

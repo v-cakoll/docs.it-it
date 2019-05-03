@@ -9,11 +9,11 @@ helpviewer_keywords:
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
 ms.openlocfilehash: 026805ffb9b89aa55e84cf9a5c4afb8ed63cec09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673693"
 ---
 # <a name="systemdiagnostics-element"></a>\<System. Diagnostics > elemento
 Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.  

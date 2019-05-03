@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
 ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768472"
 ---
 # <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>Procedura: Modificare i gruppi di righe di una tabella tramite la proprietà RowGroups
 In questo esempio vengono illustrate alcune delle operazioni più comuni che possono essere eseguite su gruppi di righe di una tabella tramite il <xref:System.Windows.Documents.Table.RowGroups%2A> proprietà.  
@@ -85,6 +85,6 @@ In questo esempio vengono illustrate alcune delle operazioni più comuni che pos
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Modificare elementi di contenuto di flusso tramite la proprietà Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [Procedura: Modificare elementi di contenuto dinamico tramite la proprietà Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
 - [Modificare un oggetto FlowDocument tramite la proprietà Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Modificare le colonne di una tabella tramite la proprietà Columns](how-to-manipulate-table-columns-through-the-columns-property.md)

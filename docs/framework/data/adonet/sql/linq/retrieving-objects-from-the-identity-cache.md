@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
 ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033475"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Recupero di oggetti dalla cache di identità
 In questo argomento vengono descritti i tipi di query LINQ to SQL che restituiscono un oggetto dalla cache delle identità gestita dall'oggetto <xref:System.Data.Linq.DataContext>.  
@@ -24,39 +24,39 @@ In questo argomento vengono descritti i tipi di query LINQ to SQL che restituisc
   
  Il formato di una query deve essere uno dei formati generali riportati di seguito per poter recuperare un oggetto dalla cache delle identità:  
   
--   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
+- <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
   
--   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
+- <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
   
  In questi formati generali, `Function1`, `Function2` e `predicate` vengono definiti nel modo seguente.  
   
- `Function1` può essere uno dei seguenti:  
+ `Function1` può essere uno degli elementi seguenti:  
   
--   <xref:System.Linq.Queryable.Where%2A>  
+- <xref:System.Linq.Queryable.Where%2A>  
   
--   <xref:System.Linq.Queryable.First%2A>  
+- <xref:System.Linq.Queryable.First%2A>  
   
--   <xref:System.Linq.Queryable.FirstOrDefault%2A>  
+- <xref:System.Linq.Queryable.FirstOrDefault%2A>  
   
--   <xref:System.Linq.Queryable.Single%2A>  
+- <xref:System.Linq.Queryable.Single%2A>  
   
--   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
+- <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `Function2` può essere uno dei seguenti:  
+ `Function2` può essere uno degli elementi seguenti:  
   
--   <xref:System.Linq.Queryable.First%2A>  
+- <xref:System.Linq.Queryable.First%2A>  
   
--   <xref:System.Linq.Queryable.FirstOrDefault%2A>  
+- <xref:System.Linq.Queryable.FirstOrDefault%2A>  
   
--   <xref:System.Linq.Queryable.Single%2A>  
+- <xref:System.Linq.Queryable.Single%2A>  
   
--   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
+- <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `predicate` deve essere un'espressione in cui proprietà di chiave primaria dell'oggetto è impostata su un valore costante. Se un oggetto dispone di una chiave primaria definita da più proprietà, ogni proprietà della chiave primaria deve essere impostata su un valore costante. Di seguito sono riportati esempi del formato che deve essere adottato da `predicate`:  
+ `predicate` deve essere un'espressione in cui la proprietà della chiave primaria dell'oggetto è impostata su un valore costante. Se un oggetto dispone di una chiave primaria definita da più proprietà, ogni proprietà della chiave primaria deve essere impostata su un valore costante. Di seguito sono riportati esempi del formato che deve essere adottato da `predicate`:  
   
--   `c => c.PK == constant_value`  
+- `c => c.PK == constant_value`  
   
--   `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
+- `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
   
 ## <a name="example"></a>Esempio  
  Nel codice seguente vengono forniti esempi di tipi di query LINQ to SQL che recuperano un oggetto dalla cache delle identità.  
@@ -66,7 +66,7 @@ In questo argomento vengono descritti i tipi di query LINQ to SQL che restituisc
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Concetti relatici alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Identità dell'oggetto](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Identità degli oggetti](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
 - [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Identità dell'oggetto](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [Identità degli oggetti](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

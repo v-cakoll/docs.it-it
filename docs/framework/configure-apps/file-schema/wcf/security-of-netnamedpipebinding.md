@@ -3,11 +3,11 @@ title: <security> di <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
 ms.openlocfilehash: fa31dda3274c9768694bdf5232f31554899e1d82
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670521"
 ---
 # <a name="security-of-netnamedpipebinding"></a>\<sicurezza > di \<netNamedPipeBinding >
 Definisce le impostazioni di sicurezza per un'associazione.  

@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9cac00ff96d0c7007bdd6135282c3f767217385e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935616"
 ---
-# <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi (funzione)
+# <a name="execnotificationquerywmi-function"></a>Funzione ExecNotificationQueryWmi
 
 Esegue una query per la ricezione di eventi. La chiamata termina immediatamente e il chiamante può eseguire il polling dell'enumeratore restituito per gli eventi appena arrivano. Rilasciare l'enumeratore restituito Annulla la query.
 
@@ -58,7 +58,7 @@ HRESULT ExecNotificationQueryWmi (
 `lFlags`\
 [in] Una combinazione dei flag di due seguenti che influiscono sul comportamento di questa funzione. Questi valori sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice.
 
-| Costante | Valore  | Descrizione  |
+| Costante | Value  | Descrizione  |
 |---------|---------|---------|
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Il flag determina una chiamata semisincrona. Se questo flag non è impostato, la chiamata ha esito negativo. Questo avviene perché gli eventi vengono ricevuti in modo continuo, ovvero che l'utente deve eseguire il polling dell'enumeratore restituito. Questa chiamata di blocco a tempo indeterminato che rende impossibili. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | La funzione restituisce un enumeratore di tipo forward-only. In genere, gli enumeratori di tipo forward-only sono più veloci e usano meno memoria rispetto a enumeratori convenzionali, ma non consentono chiamate a [Clone](clone.md). |

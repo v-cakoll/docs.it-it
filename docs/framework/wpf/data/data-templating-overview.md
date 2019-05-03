@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
 ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021540"
 ---
 # <a name="data-templating-overview"></a>Cenni preliminari sui modelli di dati
 Il modello di applicazione di modelli di dati WPF offre una notevole flessibilità per definire la presentazione dei dati. I controlli WPF dispongono di funzionalità incorporate per supportare la personalizzazione della presentazione dei dati. In questo argomento viene innanzitutto illustrato come definire un <xref:System.Windows.DataTemplate> e successivamente presenta altre funzionalità di creazione di modelli dati, ad esempio la selezione di modelli basato su logica personalizzata e il supporto per la visualizzazione di dati gerarchici.  

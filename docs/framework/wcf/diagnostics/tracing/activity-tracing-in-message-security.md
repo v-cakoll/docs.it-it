@@ -3,23 +3,23 @@ title: Traccia attività relative alla protezione dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 ms.openlocfilehash: c3bd36598fd903dc016959149e563174624d084b
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912652"
 ---
 # <a name="activity-tracing-in-message-security"></a>Traccia attività relative alla protezione dei messaggi
 Questo argomento descrive la traccia attività per l'elaborazione delle operazioni di sicurezza, che si articola nelle tre fasi seguenti.  
   
--   Scambio negoziazione/SCT: questa fase può verificarsi a livello di trasporto (tramite lo scambio di dati binari) o a livello di messaggio (tramite lo scambio di messaggi SOAP).  
+- Scambio negoziazione/SCT: questa fase può verificarsi a livello di trasporto (tramite lo scambio di dati binari) o a livello di messaggio (tramite lo scambio di messaggi SOAP).  
   
--   Crittografia/decrittografia dei messaggi (con verifica della firma e autenticazione): le tracce vengono riportate nell'attività di ambiente, che in genere è l'attività ProcessAction.  
+- Crittografia/decrittografia dei messaggi (con verifica della firma e autenticazione): le tracce vengono riportate nell'attività di ambiente, che in genere è l'attività ProcessAction.  
   
--   Autorizzazione e verifica: questa fase può verificarsi localmente oppure durante la comunicazione tra endpoint.  
+- Autorizzazione e verifica: questa fase può verificarsi localmente oppure durante la comunicazione tra endpoint.  
   
 ## <a name="negotiationsct-exchange"></a>Scambio negoziazione/SCT  
- La fase di scambio negoziazione/SCT prevede la creazione di due tipi di attività nel client: l'impostazione della sessione di sicurezza e la chiusura della sessione protetta. La prima attività contiene le tracce relative agli scambi di messaggi RST/RSTR/SCT mentre la seconda contiene le tracce relative al messaggio di annullamento.  
+ In fase di scambio negoziazione/SCT vengono creati due tipi di attività sul client: "Configurata della sessione di sicurezza" e "chiude" della sessione protetta. La prima attività contiene le tracce relative agli scambi di messaggi RST/RSTR/SCT mentre la seconda contiene le tracce relative al messaggio di annullamento.  
   
  Nel server, ogni request/reply degli scambi RST/RSTR/SCT viene visualizzato nella propria attività. Se `propagateActivity` = `true` nel server sia client, hanno lo stesso ID attività nel server e abbinati nella "Configurazione sessione di sicurezza" quando viene visualizzato in Service Trace Viewer.  
   
@@ -50,7 +50,7 @@ Questo argomento descrive la traccia attività per l'elaborazione delle operazio
 ## <a name="authorization-and-verification"></a>Autorizzazione e verifica  
  Nella tabella seguente sono elencate le attività e le tracce relative all'autorizzazione.  
   
-||Momento in cui si verifica l'autorizzazione|Activities|Tracce|  
+||Momento in cui si verifica l'autorizzazione|Attività|Tracce|  
 |-|-------------------------------------|----------------|------------|  
 |Locale (impostazione predefinita)|Dopo che il messaggio è stato decrittografato nel server|Le tracce vengono generate nell'attività ProcessAction nel server.|Autorizzazione dell'utente.|  
 |Remote|Dopo che il messaggio è stato decrittografato nel server|Le tracce vengono generate in una nuova attività richiamata dall'attività ProcessAction.|Autorizzazione dell'utente.|

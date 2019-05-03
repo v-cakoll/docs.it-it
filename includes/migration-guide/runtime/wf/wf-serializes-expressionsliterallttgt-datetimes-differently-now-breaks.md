@@ -1,4 +1,12 @@
-### <a name="wf-serializes-expressionsliterallttgt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>WF serializza ora gli oggetti DateTimes Expressions.Literal&lt;T&gt; in modo diverso (interrompe i parser XAML personalizzati)
+---
+ms.openlocfilehash: 335647f899c79eff22e313fa40b2e2a73e7cfff0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804190"
+---
+### <a name="wf-serializes-expressionsliteralt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>WF serializza ora gli oggetti DateTimes Expressions.Literal\<T> in modo diverso (interrompe i parser XAML personalizzati)
 
 |   |   |
 |---|---|
@@ -7,4 +15,3 @@
 |Ambito|Microsoft Edge|
 |Versione|4.5|
 |Tipo|Runtime|
-

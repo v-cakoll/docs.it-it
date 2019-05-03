@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
 ms.openlocfilehash: d015dce7307bec092f6da1dc5ee31691a6baf1f0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59317259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941498"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Procedura: Ancorare i controlli in Windows Forms
 È possibile ancorare i controlli ai bordi dei form o chiedere di riempire il contenitore del controllo (un form o un controllo contenitore). Ad esempio, Windows Explorer ancora relativi <xref:System.Windows.Forms.TreeView> controllo sul lato sinistro della finestra e la relativa <xref:System.Windows.Forms.ListView> controllo sul lato destro della finestra. Usare il <xref:System.Windows.Forms.Control.Dock%2A> proprietà per tutti i controlli Windows Form visibili definire la modalità di ancoraggio.  
@@ -38,12 +38,12 @@ ms.locfileid: "59317259"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Controlli per Windows Form](index.md)
+- [Controlli Windows Form](index.md)
 - [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
 - [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)
 - [Procedura: Ancorare e agganciare controlli figlio in un controllo FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
 - [Procedura: Ancorare e agganciare controlli figlio in un controllo TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Cenni preliminari sulla proprietà AutoSize](autosize-property-overview.md)
-- [Procedura: Agganciare i controlli in Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Panoramica sulla proprietà AutoSize](autosize-property-overview.md)
+- [Procedura: Ancoraggio dei controlli in Windows Form](how-to-anchor-controls-on-windows-forms.md)

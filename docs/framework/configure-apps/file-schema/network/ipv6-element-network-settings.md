@@ -9,13 +9,13 @@ helpviewer_keywords:
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
 ms.openlocfilehash: b8969cecf8ffb2ef23522f193bb322b1170e6111
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705064"
 ---
-# <a name="ipv6-element-network-settings"></a>\<IPv6 > (impostazioni di rete)
+# <a name="ipv6-element-network-settings"></a>Elemento \<ipv6> (impostazioni di rete)
 Abilita protocollo Internet versione 6 (IPv6) delle risposte dai membri obsoleti del <xref:System.Net.Dns> classe.  
   
  \<configuration>  

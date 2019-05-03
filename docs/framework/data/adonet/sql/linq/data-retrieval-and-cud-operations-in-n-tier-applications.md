@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
 ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59318429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037921"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Recupero di dati e operazioni CUD in applicazioni a più livelli (LINQ to SQL)
 Quando si serializzano oggetti entità, ad esempio Customers o Orders, in un client di una rete, tali entità vengono disconnesse dal relativo contesto dati. Il contesto dati non rileva più le modifiche o le associazioni con gli altri oggetti, il che non rappresenta un problema se i client leggono solo i dati. È inoltre relativamente semplice consentire ai client di aggiungere nuove righe in un database. Tuttavia, se l'applicazione richiede che i client siano in grado di aggiornare o eliminare i dati, sarà necessario associare le entità a un nuovo contesto dati prima di chiamare <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Inoltre, se si usa un controllo della concorrenza ottimistica con i valori originali, sarà necessario anche un modo per fornire al database l'entità originale e l'entità come modificata. I metodi `Attach` vengono forniti per consentire l'inserimento delle entità in un nuovo contesto dati dopo essere stati disconnessi.  
@@ -85,9 +85,9 @@ private void GetProdsByCat_Click(object sender, EventArgs e)
 ### <a name="middle-tier-implementation"></a>Implementazione del livello intermedio  
  Nell'esempio seguente viene illustrata un'implementazione del metodo di interfaccia nel livello intermedio. Di seguito sono riportati i due punti principali da tenere presente:  
   
--   L'oggetto <xref:System.Data.Linq.DataContext> viene dichiarato nell'ambito del metodo.  
+- L'oggetto <xref:System.Data.Linq.DataContext> viene dichiarato nell'ambito del metodo.  
   
--   Il metodo restituisce una raccolta <xref:System.Collections.IEnumerable> dei risultati effettivi. Il serializzatore eseguirà la query per restituire i risultati a livello di client/presentazione. Per accedere localmente ai risultati della query nel livello intermedio, è possibile forzare l'esecuzione chiamando `ToList` o `ToArray` sulla variabile della query. È quindi possibile restituire tale elenco o matrice come oggetto `IEnumerable`.  
+- Il metodo restituisce una raccolta <xref:System.Collections.IEnumerable> dei risultati effettivi. Il serializzatore eseguirà la query per restituire i risultati a livello di client/presentazione. Per accedere localmente ai risultati della query nel livello intermedio, è possibile forzare l'esecuzione chiamando `ToList` o `ToArray` sulla variabile della query. È quindi possibile restituire tale elenco o matrice come oggetto `IEnumerable`.  
   
 ```vb  
 Public Function GetProductsByCategory(ByVal categoryID As Integer) _  
@@ -208,13 +208,13 @@ public void DeleteOrder(Order order)
 ```  
   
 ## <a name="updating-data"></a>Aggiornamento di dati  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta gli aggiornamenti in questi scenari relativi alla concorrenza ottimistica:  
+ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sono supportati gli aggiornamenti di questi scenari relativi alla concorrenza ottimistica:  
   
--   Concorrenza ottimistica basata sui timestamp o i numeri RowVersion.  
+- Concorrenza ottimistica basata sui timestamp o i numeri RowVersion.  
   
--   Concorrenza ottimistica basata sui valori originali di un subset di proprietà dell'entità.  
+- Concorrenza ottimistica basata sui valori originali di un subset di proprietà dell'entità.  
   
--   Concorrenza ottimistica basata sulle entità complete originali o modificate.  
+- Concorrenza ottimistica basata sulle entità complete originali o modificate.  
   
  È inoltre possibile eseguire aggiornamenti o eliminazioni su un'entità con le relative relazioni, ad esempio un oggetto Customer e una raccolta degli oggetti Order associati. Quando nel client si effettuano modifiche a un grafico di oggetti entità e alle relative raccolte figlio (`EntitySet`) e i controlli di concorrenza ottimistica richiedono i valori originali, il client deve fornire tali valori originali per ogni entità e oggetto <xref:System.Data.Linq.EntitySet%601>. Per consentire ai client di effettuare un set di aggiornamenti, eliminazioni e inserimenti correlati in una sola chiamata al metodo, è necessario fornire al client un modo per indicare il tipo di operazione da eseguire su ogni entità. Nel livello intermedio chiamare quindi il metodo <xref:System.Data.Linq.ITable.Attach%2A> adatto e quindi <xref:System.Data.Linq.ITable.InsertOnSubmit%2A>, <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A> o <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> (senza `Attach` per gli inserimenti) per ogni entità prima di chiamare <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Non recuperare i dati dal database per ottenere i valori originali prima dell'esecuzione degli aggiornamenti.  
   
@@ -379,11 +379,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="expected-entity-members"></a>Membri dell'entità previsti  
  Come indicato in precedenza, è necessario impostare solo alcuni membri dell'oggetto entità prima di chiamare i metodi `Attach`. I membri dell'entità da impostare devono soddisfare i criteri seguenti:  
   
--   Devono essere parte dell'identità dell'entità.  
+- Devono essere parte dell'identità dell'entità.  
   
--   Devono poter essere modificati.  
+- Devono poter essere modificati.  
   
--   Devono essere un timestamp o avere l'attributo <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> impostato su un valore diverso da `Never`.  
+- Devono essere un timestamp o avere l'attributo <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> impostato su un valore diverso da `Never`.  
   
  Se una tabella usa un timestamp o un numero di versione per un controllo della concorrenza ottimistica, è necessario impostare tali membri prima di chiamare <xref:System.Data.Linq.ITable.Attach%2A>. Un membro è dedicato al controllo della concorrenza ottimistica quando la proprietà <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> è impostata su true nell'attributo Column. Tutti gli aggiornamenti necessari vengono inviati solo se i valori del numero di versione o del timestamp sono gli stessi di quelli presenti nel database.  
   

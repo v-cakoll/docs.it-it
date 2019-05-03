@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: creare un endpoint di servizio nella configurazione'
+title: 'Procedura: Creare un endpoint di servizio nella configurazione'
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
 ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787647"
 ---
-# <a name="how-to-create-a-service-endpoint-in-configuration"></a>Procedura: creare un endpoint di servizio nella configurazione
+# <a name="how-to-create-a-service-endpoint-in-configuration"></a>Procedura: Creare un endpoint di servizio nella configurazione
 Gli endpoint forniscono ai client l'accesso alla funzionalità che offre un servizio Windows Communication Foundation (WCF). È possibile definire uno o più endpoint per un servizio usando una combinazione di indirizzi di endpoint assoluti e relativi. In alternativa, se non si definisce alcun endpoint per il servizio, il runtime ne fornirà automaticamente alcuni per impostazione predefinita. In questo argomento viene illustrato come aggiungere endpoint usando un file di configurazione che contiene indirizzi sia relativi che assoluti.  
   
 ## <a name="example"></a>Esempio  

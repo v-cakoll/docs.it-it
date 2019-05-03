@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a482c7a06efe888408206f2de569e0a8739b85b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59121511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777501"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>Metodo IMetaDataImport::GetTypeDefProps
 Restituisce informazioni sui metadati per il <xref:System.Type> rappresentato dal token TypeDef specificato.  

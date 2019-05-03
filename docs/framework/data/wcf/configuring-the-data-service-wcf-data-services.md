@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
 ms.openlocfilehash: dec42a19f3e265f440ec03164ebc1ece9b6d5ce3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793484"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configurazione del servizio dati (WCF Data Services)
 Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], è possibile creare servizi dati che espongono [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. I dati di questi feed possono provenire da una varietà di origini dati. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Usa i provider di dati per esporre questi dati come un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Tra tali provider sono inclusi un provider di [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], un provider di reflection e un set di interfacce del provider di servizio dati personalizzate. L'implementazione del provider definisce il modello di dati per il servizio. Per altre informazioni, vedere [provider di servizi dati](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -77,9 +77,9 @@ Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], è possibile cr
 ## <a name="versioning-requirements"></a>Requisiti di versione  
  Per i seguenti comportamenti di configurazione del servizio dati è richiesta la versione 2 del protocollo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] o versioni successive:  
   
--   Supporto per le richieste del conteggio.  
+- Supporto per le richieste del conteggio.  
   
--   Supporto per l'opzione di query $select per proiezione.  
+- Supporto per l'opzione di query $select per proiezione.  
   
  Per altre informazioni, vedere [controllo delle versioni del servizio dati](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   

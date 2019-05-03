@@ -12,11 +12,11 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
 ms.openlocfilehash: c73200eb1c373f1d723ba82f2e6be5b625496b59
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902226"
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Procedura: Impostare e restituire valori numerici con il controllo NumericUpDown di Windows Forms
 Il valore numerico di moduli di Windows <xref:System.Windows.Forms.NumericUpDown> controllo è determinato dal relativo <xref:System.Windows.Forms.NumericUpDown.Value%2A> proprietà. È possibile scrivere test condizionali per il valore del controllo come avviene con qualsiasi altra proprietà. Una volta il <xref:System.Windows.Forms.NumericUpDown.Value%2A> è impostata, è possibile modificarlo direttamente scrivendo codice per eseguire operazioni su di esso o è possibile chiamare il <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> e <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> metodi.  
@@ -55,7 +55,7 @@ Il valore numerico di moduli di Windows <xref:System.Windows.Forms.NumericUpDown
   
 ### <a name="to-return-the-numeric-value"></a>Per restituire il valore numerico  
   
--   Accesso di <xref:System.Windows.Forms.NumericUpDown.Value%2A> proprietà nel codice.  
+- Accesso di <xref:System.Windows.Forms.NumericUpDown.Value%2A> proprietà nel codice.  
   
     ```vb  
     If NumericUpDown1.Value >= 65 Then  
@@ -97,4 +97,4 @@ Il valore numerico di moduli di Windows <xref:System.Windows.Forms.NumericUpDown
 - <xref:System.Windows.Forms.NumericUpDown.UpButton%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.DownButton%2A?displayProperty=nameWithType>
 - [Controllo NumericUpDown](numericupdown-control-windows-forms.md)
-- [Panoramica del controllo NumericUpDown](numericupdown-control-overview-windows-forms.md)
+- [Cenni preliminari sul controllo NumericUpDown](numericupdown-control-overview-windows-forms.md)

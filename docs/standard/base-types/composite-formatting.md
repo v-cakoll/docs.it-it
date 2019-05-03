@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517682"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59314009"
 ---
 # <a name="composite-formatting"></a>Formattazione composita
 
@@ -100,15 +100,15 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
   
  Il tipo di interpretazione delle parentesi graffe in sequenza di escape può produrre risultati imprevisti. Si consideri, ad esempio, l'elemento di formato "{{{0:D}}}", destinato alla visualizzazione di una parentesi graffa di apertura, un valore numerico formattato come numero decimale e una parentesi graffa di chiusura. L'elemento di formato viene tuttavia interpretato nel modo seguente:  
   
-1.  Le prime due parentesi apertura ("{{") presentano una sequenza di escape e producono una parentesi graffa di apertura.  
+1. Le prime due parentesi apertura ("{{") presentano una sequenza di escape e producono una parentesi graffa di apertura.  
   
-2.  I tre caratteri successivi ("{0:") sono interpretati come l'inizio di un elemento di formato.  
+2. I tre caratteri successivi ("{0:") sono interpretati come l'inizio di un elemento di formato.  
   
-3.  Il carattere successivo ("D") verrebbe interpretato come identificatore del formato numerico standard Decimal, ma le due parentesi graffe successive con sequenza di escape ("}}") producono una parentesi graffa singola. Poiché la stringa risultante ("D}") non è un identificatore di un formato numerico standard, viene interpretata come una stringa di formato personalizzata che indica la visualizzazione della stringa letterale "D}".  
+3. Il carattere successivo ("D") verrebbe interpretato come identificatore del formato numerico standard Decimal, ma le due parentesi graffe successive con sequenza di escape ("}}") producono una parentesi graffa singola. Poiché la stringa risultante ("D}") non è un identificatore di un formato numerico standard, viene interpretata come una stringa di formato personalizzata che indica la visualizzazione della stringa letterale "D}".  
   
-4.  L'ultima parentesi graffa ("}") viene interpretata come la fine dell'elemento di formato.  
+4. L'ultima parentesi graffa ("}") viene interpretata come la fine dell'elemento di formato.  
   
-5.  Il risultato finale visualizzato è la stringa letterale "{D}". Il valore numerico da formattare non viene visualizzato.  
+5. Il risultato finale visualizzato è la stringa letterale "{D}". Il valore numerico da formattare non viene visualizzato.  
   
  Per evitare di interpretare in modo errato gli elementi di formato e le parentesi graffe con sequenza di escape, è preferibile formattarli separatamente, ovvero nella prima operazione di formattazione visualizzare una parentesi graffa di apertura letterale, nella successiva operazione visualizzare il risultato dell'elemento di formato, quindi nell'ultima operazione visualizzare una parentesi graffa di chiusura letterale. Questo approccio viene illustrato nell'esempio seguente:  
   
@@ -120,11 +120,11 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
   
  Ogni valore nell'elenco di parametri che corrisponde a un elemento di formato viene convertito in una stringa, nel modo seguente:  
   
-1.  Se il valore da formattare è `null`, viene restituita una stringa vuota <xref:System.String.Empty?displayProperty=nameWithType>.  
+1. Se il valore da formattare è `null`, viene restituita una stringa vuota <xref:System.String.Empty?displayProperty=nameWithType>.  
   
-2.  Se l'implementazione di <xref:System.ICustomFormatter> è disponibile, il runtime chiama il metodo <xref:System.ICustomFormatter.Format%2A>. Passa al metodo il valore *formatString* dell'elemento di formato, se disponibile, o `null` in caso contrario, con l'implementazione di <xref:System.IFormatProvider>. Se la chiamata al metodo <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> restituisce `null`, l'esecuzione procede al passaggio successivo; in caso contrario, viene restituito il risultato della chiamata <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>.
+2. Se l'implementazione di <xref:System.ICustomFormatter> è disponibile, il runtime chiama il metodo <xref:System.ICustomFormatter.Format%2A>. Passa al metodo il valore *formatString* dell'elemento di formato, se disponibile, o `null` in caso contrario, con l'implementazione di <xref:System.IFormatProvider>. Se la chiamata al metodo <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> restituisce `null`, l'esecuzione procede al passaggio successivo; in caso contrario, viene restituito il risultato della chiamata <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>.
   
-3.  Se il valore implementa l'interfaccia <xref:System.IFormattable>, verrà chiamato il relativo metodo <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29>. Al metodo viene passato il valore *formatString*, se disponibile nell'elemento di formato, o `null` in caso contrario. L'argomento <xref:System.IFormatProvider> è determinato come segue:  
+3. Se il valore implementa l'interfaccia <xref:System.IFormattable>, verrà chiamato il relativo metodo <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29>. Al metodo viene passato il valore *formatString*, se disponibile nell'elemento di formato, o `null` in caso contrario. L'argomento <xref:System.IFormatProvider> è determinato come segue:  
   
     -   Per un valore numerico, se viene chiamato un metodo di formattazione composita con un argomento non Null <xref:System.IFormatProvider>, il runtime richiede un oggetto <xref:System.Globalization.NumberFormatInfo> dal relativo metodo <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Se non è in grado di fornirne uno, se il valore dell'argomento è `null` o se il metodo di formattazione composita non dispone di un parametro di <xref:System.IFormatProvider>, viene usato l'oggetto <xref:System.Globalization.NumberFormatInfo> per le impostazioni cultura del thread corrente.  
   
@@ -132,7 +132,7 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
   
     -   Per gli oggetti di altri tipi, se un metodo di formattazione composita viene chiamato con un argomento <xref:System.IFormatProvider>, il relativo valore viene passato direttamente all'implementazione di <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. In caso contrario, `null` viene passato all'implementazione di <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
   
-4.  Viene chiamato il metodo senza parametri `ToString` del tipo, che esegue l'override di <xref:System.Object.ToString?displayProperty=nameWithType> o eredita il comportamento della relativa classe di base. In questo caso la stringa di formato specificata dal componente *formatString* nell'elemento di formato, se presente, viene ignorata.  
+4. Viene chiamato il metodo senza parametri `ToString` del tipo, che esegue l'override di <xref:System.Object.ToString?displayProperty=nameWithType> o eredita il comportamento della relativa classe di base. In questo caso la stringa di formato specificata dal componente *formatString* nell'elemento di formato, se presente, viene ignorata.  
   
  L'allineamento viene applicato al termine dei precedenti passaggi.  
   
@@ -144,7 +144,7 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
   
  Presupponendo che il giorno corrente sia un giovedì di maggio, il valore di entrambe le stringhe dell'esempio precedente sarà `Thursday May` se sono specificate le impostazioni cultura inglesi.  
   
- <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> espone la stessa funzionalità di <xref:System.String.Format%2A?displayProperty=nameWithType>. L'unica differenza tra i due metodi è che <xref:System.String.Format%2A?displayProperty=nameWithType> restituisce il risultato come stringa, mentre <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> scrive il risultato nel flusso di output associato all'oggetto <xref:System.Console>. Nell'esempio seguente viene usato il metodo <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> per formattare il valore di `MyInt` come valore di valuta.  
+ <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> espone la stessa funzionalità di <xref:System.String.Format%2A?displayProperty=nameWithType>. L'unica differenza tra i due metodi è che <xref:System.String.Format%2A?displayProperty=nameWithType> restituisce il risultato come stringa, mentre <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> scrive il risultato nel flusso di output associato all'oggetto <xref:System.Console>. Nell'esempio seguente viene utilizzato il metodo <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> per formattare il valore di `MyInt` come valore di valuta.  
   
  [!code-csharp[Formatting.Composite#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#4)]
  [!code-vb[Formatting.Composite#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#4)]  

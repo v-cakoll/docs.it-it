@@ -12,11 +12,11 @@ helpviewer_keywords:
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
 ms.openlocfilehash: 14f17e89e2a4143580b4a2ca7f9d30013ded58f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053184"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relazioni tra i tipi nelle operazioni di query (Visual Basic)
 Le variabili usate nella [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query operazioni sono fortemente tipizzate e devono essere compatibili tra loro. Tipizzazione forte viene usata nell'origine dati, nella query stessa e nell'esecuzione della query. Nella figura seguente identifica i termini usati per descrivere un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. Per altre informazioni sulle parti di una query, vedere [operazioni di Query (Visual Basic) base](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  

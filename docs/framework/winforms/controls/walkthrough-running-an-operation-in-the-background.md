@@ -14,11 +14,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
 ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792171"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Procedura dettagliata: Esecuzione di un'operazione in background
 Se l'esecuzione di un'operazione richiede molto tempo e si vogliono evitare ritardi nella risposta dell'interfaccia utente, è possibile usare la classe <xref:System.ComponentModel.BackgroundWorker> per eseguire l'operazione in un altro thread.  
@@ -34,7 +34,7 @@ Se l'esecuzione di un'operazione richiede molto tempo e si vogliono evitare rita
   
     |Button|Nome|Testo|  
     |------------|----------|----------|  
-    |`button1`|`startBtn`|**Inizia**|  
+    |`button1`|`startBtn`|**Start**|  
     |`button2`|`cancelBtn`|**Annulla**|  
   
 2. Aprire il **casella degli strumenti**, fare clic sul **componenti** scheda e quindi trascinare il <xref:System.ComponentModel.BackgroundWorker> componente al form.  
@@ -96,9 +96,9 @@ Se l'esecuzione di un'operazione richiede molto tempo e si vogliono evitare rita
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
--   Implementare un form che segnala lo stato del processo di un'operazione asincrona. Per altre informazioni, vedere [Procedura: Implementare un Form che usa un'operazione in Background](how-to-implement-a-form-that-uses-a-background-operation.md).  
+- Implementare un form che segnala lo stato del processo di un'operazione asincrona. Per altre informazioni, vedere [Procedura: Implementare un Form che usa un'operazione in Background](how-to-implement-a-form-that-uses-a-background-operation.md).  
   
--   Implementare una classe che supporta il modello asincrono per i componenti. Per altre informazioni, vedere [implementazione del modello asincrono basato su eventi](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
+- Implementare una classe che supporta il modello asincrono per i componenti. Per altre informazioni, vedere [implementazione del modello asincrono basato su eventi](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -106,4 +106,4 @@ Se l'esecuzione di un'operazione richiede molto tempo e si vogliono evitare rita
 - <xref:System.ComponentModel.DoWorkEventArgs>
 - [Procedura: Implementare un modulo che usa un'operazione in background](how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Procedura: Eseguire un'operazione in background](how-to-run-an-operation-in-the-background.md)
-- [Componente BackgroundWorker](backgroundworker-component.md)
+- [BackgroundWorker (componente)](backgroundworker-component.md)

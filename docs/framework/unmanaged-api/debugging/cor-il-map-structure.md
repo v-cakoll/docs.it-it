@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e6d8023c7ac6d917c9df40fb18316ddc12df5ec1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609420"
 ---
 # <a name="corilmap-structure"></a>Struttura COR_IL_MAP
 Specifica le modifiche nell'offset relativo di una funzione.  
@@ -49,37 +49,37 @@ typedef struct _COR_IL_MAP {
   
  Per l'esecuzione di istruzioni per il corretto funzionamento, è necessario soddisfare i requisiti seguenti:  
   
--   La mappa deve essere disposti in ordine crescente.  
+- La mappa deve essere disposti in ordine crescente.  
   
--   Il codice instrumentato MSIL non deve essere riordinato.  
+- Il codice instrumentato MSIL non deve essere riordinato.  
   
--   Il codice MSIL originale non deve essere rimossi.  
+- Il codice MSIL originale non deve essere rimossi.  
   
--   La mappa deve includere le voci per eseguire il mapping di tutti i punti di sequenza dei file di database (PDB) di programma.  
+- La mappa deve includere le voci per eseguire il mapping di tutti i punti di sequenza dei file di database (PDB) di programma.  
   
  La mappa non esegue l'interpolazione voci mancanti. Nell'esempio seguente viene illustrata una mappa e i relativi risultati.  
   
  Eseguire il mapping:  
   
--   vecchio offset 0, 0 nuovo offset  
+- vecchio offset 0, 0 nuovo offset  
   
--   offset precedente 5, 10 nuovo offset  
+- offset precedente 5, 10 nuovo offset  
   
--   offset precedente 9, 20 nuovo offset  
+- offset precedente 9, 20 nuovo offset  
   
  Risultati:  
   
--   Un offset 0, 1, 2, 3 o 4 precedente verrà mappato a un nuovo offset pari a 0.  
+- Un offset 0, 1, 2, 3 o 4 precedente verrà mappato a un nuovo offset pari a 0.  
   
--   Verrà eseguito il mapping di un offset precedente del 5, 6, 7 o 8 al nuovo offset 10.  
+- Verrà eseguito il mapping di un offset precedente del 5, 6, 7 o 8 al nuovo offset 10.  
   
--   Verrà eseguito il mapping di un offset precedente del 9 o versione successiva al nuovo offset 20.  
+- Verrà eseguito il mapping di un offset precedente del 9 o versione successiva al nuovo offset 20.  
   
--   Verrà eseguito il mapping di un nuovo offset 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 al vecchio offset 0.  
+- Verrà eseguito il mapping di un nuovo offset 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 al vecchio offset 0.  
   
--   Verrà eseguito il mapping di un nuovo offset di 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 al vecchio offset 5.  
+- Verrà eseguito il mapping di un nuovo offset di 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 al vecchio offset 5.  
   
--   Verrà eseguito il mapping di un nuovo offset pari a 20 o superiore al vecchio offset 9.  
+- Verrà eseguito il mapping di un nuovo offset pari a 20 o superiore al vecchio offset 9.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID453
 ms.assetid: c0a308ee-5876-40af-be4b-1979397835df
 ms.openlocfilehash: 4c058d9ee5b673de431aadd7f4304fe0271838b0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594986"
 ---
 # <a name="specified-dll-function-not-found"></a>Impossibile trovare nella DLL la funzione specificata
 La libreria di collegamento dinamico (DLL) in un riferimento alla libreria utente è stata trovata, ma la funzione DLL specificata non è stata trovata al suo interno.  

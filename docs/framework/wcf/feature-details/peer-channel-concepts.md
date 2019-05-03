@@ -3,11 +3,11 @@ title: Concetti relativi al canale peer
 ms.date: 03/30/2017
 ms.assetid: 379c2c0b-a44f-4423-9480-4739e7f18614
 ms.openlocfilehash: 8955f6ab18e7fddac2f99b30be38532781c7ae21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769434"
 ---
 # <a name="peer-channel-concepts"></a>Concetti relativi al canale peer
 In questa sezione illustra brevemente i concetti che costituiscono il canale Peer di Windows Communication Foundation (WCF).  

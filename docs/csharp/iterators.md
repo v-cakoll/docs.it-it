@@ -3,16 +3,16 @@ title: Iterators
 description: Informazioni su come usare gli iteratori C# predefiniti e come creare metodi iteratori personalizzati.
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: f1be4e9a8b67f0e71615c730af4316253224b888
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e816af698a39a4b44aefa92017efdbc9e3c8cc1d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155220"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613434"
 ---
 # <a name="iterators"></a>Iterators
 
-Quasi tutti i programmi che vengono scritti avranno la necessità di eseguire un'iterazione in una raccolta. Si scriverà il codice che esamina ogni elemento in una raccolta. 
+Quasi tutti i programmi che vengono scritti avranno la necessità di eseguire un'iterazione in una raccolta. Si scriverà il codice che esamina ogni elemento in una raccolta.
 
 Si creeranno anche metodi iteratori, cioè metodi che producono un iteratore per gli elementi di quella classe. Essi possono essere usati per le azioni seguenti:
 
@@ -28,7 +28,7 @@ Questa esercitazione prevede diversi passaggi. Dopo ogni passaggio, è possibile
 ## <a name="iterating-with-foreach"></a>Iterazione con foreach
 
 L'enumerazione di una raccolta è semplice: la parola chiave `foreach` enumera una raccolta eseguendo l'istruzione incorporata una volta per ogni elemento nella raccolta:
- 
+
 ```csharp
 foreach (var item in collection)
 {
@@ -42,7 +42,7 @@ Queste due interfacce dispongono anche di controparti non generiche: `IEnumerabl
 
 ## <a name="enumeration-sources-with-iterator-methods"></a>Origini di enumerazione con metodi iteratori
 
-Un'altra eccezionale funzionalità del linguaggio C# consente di creare metodi che creano un'origine per un'enumerazione. Essi sono denominati *metodi iteratori*. Un metodo iteratore definisce come generare gli oggetti in una sequenza quando richiesto. Usare le parole chiave contestuali `yield return` per definire un metodo iteratore. 
+Un'altra eccezionale funzionalità del linguaggio C# consente di creare metodi che creano un'origine per un'enumerazione. Essi sono denominati *metodi iteratori*. Un metodo iteratore definisce come generare gli oggetti in una sequenza quando richiesto. Usare le parole chiave contestuali `yield return` per definire un metodo iteratore.
 
 È possibile scrivere questo metodo per produrre la sequenza di numeri interi da 0 a 9:
 
@@ -82,9 +82,9 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-    
+
     index = 100;
     while (index++ < 110)
         yield return index;
@@ -113,12 +113,12 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-   
-    // generates a compile time error: 
+
+    // generates a compile time error:
     var items = new int[] {100, 101, 102, 103, 104, 105, 106, 107, 108, 109 };
-    return items;  
+    return items;
 }
 ```
 
@@ -132,15 +132,15 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-   
+
     var items = new int[] {100, 101, 102, 103, 104, 105, 106, 107, 108, 109 };
     foreach (var item in items)
         yield return item;
 }
 ```
- 
+
 In alcuni casi, la risposta giusta è la suddivisione di un metodo iteratore in due metodi diversi: uno che usa `return` e un altro che usa `yield return`. Si consideri una situazione in cui si vuole restituire una raccolta vuota o i primi 5 numeri dispari, in base a un argomento booleano. Ciò può essere scritto con i due metodi seguenti:
 
 ```csharp
@@ -160,12 +160,12 @@ private IEnumerable<int> IteratorMethod()
             yield return index;
 }
 ```
- 
+
 Esaminare i metodi descritti precedentemente. Il primo usa l'istruzione `return` standard per restituire una raccolta vuota o l'iteratore creato dal secondo metodo. Il secondo metodo usa l'istruzione `yield return` per creare la sequenza richiesta.
 
 ## <a name="deeper-dive-into-foreach"></a>Approfondimento di `foreach`
 
-L'istruzione `foreach` si espande in un termine standard che usa le interfacce `IEnumerable<T>` e `IEnumerator<T>` per eseguire l'iterazione tra tutti gli elementi di una raccolta. Riduce al minimo gli errori commessi dagli sviluppatori a causa di una gestione non corretta delle risorse. 
+L'istruzione `foreach` si espande in un termine standard che usa le interfacce `IEnumerable<T>` e `IEnumerator<T>` per eseguire l'iterazione tra tutti gli elementi di una raccolta. Riduce al minimo gli errori commessi dagli sviluppatori a causa di una gestione non corretta delle risorse.
 
 Il compilatore traduce il ciclo `foreach` illustrato nel primo esempio in un risultato simile a questo costrutto:
 
@@ -198,14 +198,14 @@ Il codice esatto generato dal compilatore è leggermente più complesso e gestis
 ```csharp
 {
     var enumerator = collection.GetEnumerator();
-    try 
+    try
     {
         while (enumerator.MoveNext())
         {
             var item = enumerator.Current;
             Console.WriteLine(item.ToString());
         }
-    } finally 
+    } finally
     {
         // dispose of enumerator.
     }
@@ -215,26 +215,27 @@ Il codice esatto generato dal compilatore è leggermente più complesso e gestis
 Il modo in cui l'enumeratore viene eliminato dipende dalle caratteristiche del tipo di `enumerator`. Nel caso generale, la clausola `finally` si espande a:
 
 ```csharp
-finally 
+finally
 {
    (enumerator as IDisposable)?.Dispose();
-} 
+}
 ```
 
 Tuttavia, se il tipo di `enumerator` è un tipo sealed e non esiste alcuna conversione implicita dal tipo di `enumerator` a `IDisposable`, la clausola `finally` si espande in un blocco vuoto:
+
 ```csharp
-finally 
+finally
 {
-} 
+}
 ```
 
 Se esiste una conversione implicita dal tipo di `enumerator` a `IDisposable` e `enumerator` è un tipo di valore non nullable, la `finally` si clausola espande a:
 
 ```csharp
-finally 
+finally
 {
    ((IDisposable)enumerator).Dispose();
-} 
+}
 ```
 
-Fortunatamente, non è necessario ricordare tutti questi dettagli. L'istruzione `foreach` gestisce tutte queste sfumature. Il compilatore genererà il codice corretto per tutti questi costrutti. 
+Fortunatamente, non è necessario ricordare tutti questi dettagli. L'istruzione `foreach` gestisce tutte queste sfumature. Il compilatore genererà il codice corretto per tutti questi costrutti.

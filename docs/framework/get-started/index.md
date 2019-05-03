@@ -1,19 +1,19 @@
 ---
 title: Introduzione a .NET Framework
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/02/2019
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: c4c9e85b2a884f6f348d801a27b7f362bd0236b0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59314971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644045"
 ---
 # <a name="get-started-with-the-net-framework"></a>Introduzione a .NET Framework
 
@@ -22,8 +22,7 @@ ms.locfileid: "59314971"
 > [!NOTE] 
 > .NET Framework è disponibile solo nei sistemi Windows. È possibile usare [.NET Core](../../core/index.md) per eseguire app in Windows, MacOS e Linux. 
 
-<a name="Introducing"></a>
-## <a name="what-is-the-net-framework"></a>Cos'è .NET Framework?
+## <a name="Introducing"></a> Cos'è .NET Framework?
 
 .NET Framework è un ambiente di esecuzione gestita per Windows che fornisce un'ampia gamma di servizi alle app in esecuzione. È costituito da due componenti principali: Common Language Runtime (CLR), vale a dire il motore di esecuzione mediante il quale vengono gestite le app in esecuzione, e la libreria di classi .NET Framework, che fornisce una raccolta di codice testato e riutilizzabile che gli sviluppatori possono chiamare dalle rispettive app. Tra i servizi forniti da .NET Framework per le app in esecuzione sono inclusi:
 
@@ -39,7 +38,7 @@ ms.locfileid: "59314971"
 
 - Compatibilità tra versioni. In rare eccezioni, le app sviluppate usando una particolare versione di .NET Framework vengono eseguite senza modifiche in una versione successiva.
 
-- Esecuzione affiancata. .NET Framework consente di risolvere conflitti tra versioni permettendo la coesistenza di più versioni di Common Language Runtime nello stesso computer. Ciò significa che possono coesistere più versioni di app e che un'app può essere eseguita nella versione di .NET Framework con cui è stata creata. L'esecuzione side-by-side è possibile per i gruppi di versioni di .NET Framework 1.0/1.1, 2.0/3.0/3.5 e 4/4.5.x/4.6.x/4.7.x.
+- Esecuzione affiancata. .NET Framework consente di risolvere conflitti tra versioni permettendo la coesistenza di più versioni di Common Language Runtime nello stesso computer. Ciò significa che possono coesistere più versioni di app e che un'app può essere eseguita nella versione di .NET Framework con cui è stata creata. L'esecuzione side-by-side è possibile per i gruppi di versioni di .NET Framework 1.0/1.1, 2.0/3.0/3.5 e 4/4.5.x/4.6.x/4.7.x/4.8.
 
 - Multitargeting. Usando [.NET Standard](../../standard/net-standard.md) come destinazione, gli sviluppatori possono creare librerie di classi che funzionano su più piattaforme .NET Framework supportate da tale versione dello standard. Ad esempio, le librerie basate su .NET Standard 2.0 possono essere usate dalle app sviluppate per .NET Framework 4.6.1, .NET Core 2.0 e UWP 10.0.16299. 
 
@@ -54,20 +53,19 @@ In generale, le versioni di .NET Framework installate nel computer non devono es
 
 - Se un'app in uso dipende da una specifica versione di .NET Framework che viene rimossa, l'app potrebbe smettere di funzionare.
 
-- Alcune versioni di .NET Framework sono aggiornamenti sul posto di versioni precedenti. Ad esempio, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] è un aggiornamento sul posto alla versione 2.0 e .NET Framework 4.7.2 è un aggiornamento sul posto alle versioni da 4 a 4.7.1. Per altre informazioni, vedere [Versioni e dipendenze di .NET Framework](../migration-guide/versions-and-dependencies.md).
+- Alcune versioni di .NET Framework sono aggiornamenti sul posto di versioni precedenti. Ad esempio, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] è un aggiornamento sul posto alla versione 2.0 e .NET Framework 4.8 è un aggiornamento sul posto alle versioni da 4 a 4.7.2. Per altre informazioni, vedere [Versioni e dipendenze di .NET Framework](../migration-guide/versions-and-dependencies.md).
 
 Nelle versioni di Windows precedenti a Windows 8, se si sceglie di rimuovere .NET Framework, per la disinstallazione usare sempre **Programmi e funzionalità** dal Pannello di controllo. Non rimuovere mai manualmente una versione di .NET Framework. In Windows 8 e versioni successive, .NET Framework è un componente del sistema operativo e non può essere disinstallato in modo indipendente.
 
 Si noti che più versioni di .NET Framework possono coesistere contemporaneamente in un computer. Ciò significa che non è necessario disinstallare le versioni precedenti per installare una versione più recente.
 
-<a name="ForDevelopers"></a> 
-## <a name="the-net-framework-for-developers"></a>.NET Framework per sviluppatori
+## <a name="ForDevelopers"></a> .NET Framework per sviluppatori
 
 Uno sviluppatore può scegliere qualsiasi linguaggio di programmazione che supporta .NET Framework per creare le app. Poiché .NET Framework fornisce interoperabilità e indipendenza dal linguaggio, è possibile interagire con altri componenti e app .NET Framework indipendentemente dal linguaggio con cui sono stati sviluppati.
 
 Per sviluppare app o componenti .NET Framework, eseguire le operazioni seguenti:
 
-1. Se non è già preinstallata nel sistema operativo, installare la versione di .NET Framework che verrà usata dall'app. La versione di produzione più recente è .NET Framework 4.7.2. Questa versione è preinstallata nell'aggiornamento del 10 aprile 2018 di Windows 10 e nell'aggiornamento di ottobre 2018 di Windows 10 ed è disponibile per il download nelle versioni precedenti del sistema operativo Windows. Per i requisiti di sistema di .NET Framework, vedere [Requisiti di sistema](system-requirements.md). Per informazioni sull'installazione di .NET Framework, vedere [Guida all'installazione](../install/guide-for-developers.md). Pacchetti aggiuntivi di .NET Framework vengono rilasciati fuori programma, ovvero all'occorrenza al di fuori di qualsiasi ciclo di rilascio regolare o pianificato. Per informazioni su questi pacchetti, vedere [.NET Framework e rilascio fuori programma](the-net-framework-and-out-of-band-releases.md).
+1. Se non è già preinstallata nel sistema operativo, installare la versione di .NET Framework che verrà usata dall'app. La versione di produzione più recente è .NET Framework 4.8, preinstallata nell'aggiornamento di maggio 2019 di Windows 10 e disponibile per il download nelle versioni precedenti del sistema operativo Windows. Per i requisiti di sistema di .NET Framework, vedere [Requisiti di sistema](system-requirements.md). Per informazioni sull'installazione di .NET Framework, vedere [Guida all'installazione](../install/guide-for-developers.md). Pacchetti aggiuntivi di .NET Framework vengono rilasciati fuori programma, ovvero all'occorrenza al di fuori di qualsiasi ciclo di rilascio regolare o pianificato. Per informazioni su questi pacchetti, vedere [.NET Framework e rilascio fuori programma](the-net-framework-and-out-of-band-releases.md).
 
 2. Selezionare uno o più linguaggi supportati da .NET Framework che si intende usare per lo sviluppo delle app. Sono disponibili numerosi linguaggi, tra cui [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) e [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) di Microsoft. Un linguaggio di programmazione che consente di sviluppare app per .NET Framework è conforme alla [specifica CLI (Common Language Infrastructure)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).
 
@@ -75,7 +73,7 @@ Per sviluppare app o componenti .NET Framework, eseguire le operazioni seguenti:
 
 Per altre informazioni sullo sviluppo di app destinate a .NET Framework, vedere la [Guida di sviluppo](../development-guide.md).
 
-## <a name="related-topics"></a>Argomenti correlati
+## <a name="related-articles"></a>Articoli correlati
 
 | Titolo | Description |
 | ----- |------------ |

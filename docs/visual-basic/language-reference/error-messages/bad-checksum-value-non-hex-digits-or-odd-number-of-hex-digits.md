@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
 ms.openlocfilehash: 81156fd7b1c9957486bcdd898c90a2bad2945829
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59340308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935265"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>Valore checksum non valido. Cifre esadecimali non presenti o in numero dispari
 Un valore di checksum include cifre esadecimali non valide o un numero di cifre dispari.  
@@ -34,4 +34,4 @@ Un valore di checksum include cifre esadecimali non valide o un numero di cifre 
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica di ASP.NET](/aspnet/overview)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)

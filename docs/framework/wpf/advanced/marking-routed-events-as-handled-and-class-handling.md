@@ -18,11 +18,11 @@ helpviewer_keywords:
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
 ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053873"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Impostazione degli eventi indirizzati come gestiti e gestione delle classi
 I gestori per un evento indirizzato possono contrassegnare l'evento come gestito all'interno dei dati dell'evento. La gestione dell'evento abbrevia efficacemente la route. La gestione delle classi è un concetto di programmazione supportato dagli eventi indirizzati. Un gestore classi ha l'opportunità di gestire un evento indirizzato specifico a livello di classe con un gestore richiamato prima di qualsiasi gestore istanze in qualsiasi istanza di classe.  
@@ -57,9 +57,9 @@ I gestori per un evento indirizzato possono contrassegnare l'evento come gestito
   
  A un livello più profondo rispetto a quello della route degli eventi esistono potenzialmente anche più gestori classi che agiscono su qualsiasi istanza specifica di una classe. Questo avviene perché il modello di gestione delle classi per eventi indirizzati permette a tutte le possibili classi in una gerarchia di classi di registrare ciascuna il proprio gestore classi per ogni evento indirizzato. Ogni gestore classi viene aggiunto a un archivio interno e quando viene creata la route degli eventi per un'applicazione, i gestori classi vengono tutti aggiunti alla route. I gestori classi vengono aggiunti alla route in modo che venga richiamato per primo il gestore della classe più derivata, richiamando quindi i gestori classi da ogni classe base successiva. In genere i gestori classi non sono registrati in modo da rispondere anche a eventi indirizzati già contrassegnati come gestiti. Di conseguenza, questo meccanismo di gestione delle classi permette di scegliere tra due opzioni:  
   
--   Le classi derivate possono completare la gestione delle classi ereditata dalla classe base aggiungendo un gestore che non contrassegna l'evento indirizzato come gestito, perché il gestore della classe base verrà richiamato in un momento successivo al gestore delle classi derivate.  
+- Le classi derivate possono completare la gestione delle classi ereditata dalla classe base aggiungendo un gestore che non contrassegna l'evento indirizzato come gestito, perché il gestore della classe base verrà richiamato in un momento successivo al gestore delle classi derivate.  
   
--   Le classi derivate possono sostituire la gestione delle classi dalla classe base tramite l'aggiunta di un gestore classi che contrassegna l'evento indirizzato come gestito. È necessario usare questo approccio con cautela, perché potrebbe modificare la progettazione dei controlli di base desiderata, ad esempio in aree come l'aspetto visivo, la logica di stato, la gestione degli input e la gestione dei comandi.  
+- Le classi derivate possono sostituire la gestione delle classi dalla classe base tramite l'aggiunta di un gestore classi che contrassegna l'evento indirizzato come gestito. È necessario usare questo approccio con cautela, perché potrebbe modificare la progettazione dei controlli di base desiderata, ad esempio in aree come l'aspetto visivo, la logica di stato, la gestione degli input e la gestione dei comandi.  
   
 <a name="Class_Handling_of_Routed_Events"></a>   
 ## <a name="class-handling-of-routed-events-by-control-base-classes"></a>Gestione delle classi degli eventi indirizzati tramite classi di base dei controlli  

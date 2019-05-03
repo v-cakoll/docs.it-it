@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
 ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909273"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Riepilogo della tecnologia del controllo DataGridView (Windows Form)
 Questo argomento riepiloga le informazioni relative al controllo `DataGridView` e alle classi che ne supportano l'uso.  
@@ -62,6 +62,6 @@ Questo argomento riepiloga le informazioni relative al controllo `DataGridView` 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica del controllo DataGridView](datagridview-control-overview-windows-forms.md)
+- [Panoramica sul controllo DataGridView](datagridview-control-overview-windows-forms.md)
 - [Architettura del controllo DataGridView](datagridview-control-architecture-windows-forms.md)
 - [Protezione delle informazioni di connessione](../../data/adonet/protecting-connection-information.md)

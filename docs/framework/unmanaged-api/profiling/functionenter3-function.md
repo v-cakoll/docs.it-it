@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a731df84af0991f80c560db417df0ffe053a5e2b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598935"
 ---
 # <a name="functionenter3-function"></a>Funzione FunctionEnter3
 Notifica al profiler di controllo viene passato a una funzione.  
@@ -43,9 +43,9 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
  Il motore di esecuzione non viene salvato alcun registro prima di chiamare questa funzione.  
   
--   In ingresso, è necessario salvare tutti i registri che usi, tra cui quelle in unità a virgola mobile (FPU).  
+- In ingresso, è necessario salvare tutti i registri che usi, tra cui quelle in unità a virgola mobile (FPU).  
   
--   In uscita, è necessario ripristinare lo stack recuperando tutti i parametri che sono stati inseriti dal relativo chiamante.  
+- In uscita, è necessario ripristinare lo stack recuperando tutti i parametri che sono stati inseriti dal relativo chiamante.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

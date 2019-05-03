@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
 ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934121"
 ---
 # <a name="updating-data-in-a-data-source"></a>Aggiornamento di dati in un'origine dati
 Le istruzioni SQL che modificano i dati, ad esempio INSERT, UPDATE o DELETE, non restituiscono righe. Analogamente, molte stored procedure eseguono un'operazione ma non restituiscono righe. Per eseguire i comandi che non restituiscono righe, creare un **comando** oggetto con il comando SQL appropriato e un **connessione**, inclusi eventuali obbligatorio **parametri**. Eseguire il comando con il **ExecuteNonQuery** metodo per il **comando** oggetto.  
@@ -93,7 +93,7 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Utilizzo di comandi per modificare i dati](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
+- [Uso di comandi per modificare i dati](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
 - [Aggiornamento di origini dati con DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID424
 ms.assetid: afdc660b-81a5-4c92-ac7e-9c3a3105fc16
 ms.openlocfilehash: 8fdb702a03d4cfe17954d48215c4a16a3bdbcc82
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925671"
 ---
 # <a name="object-required-visual-basic"></a>Oggetto necessario (Visual Basic)
 Riferimenti a proprietà e metodi richiedono spesso un qualificatore di oggetto esplicito. Questo è un caso di questo tipo.  

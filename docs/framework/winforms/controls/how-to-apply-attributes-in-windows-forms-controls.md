@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
 ms.openlocfilehash: e86277c06e515b28bada3331cf4fd63e536319a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053002"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Procedura: Applicare attributi nei controlli Windows Forms
 Per lo sviluppo di componenti e controlli che interagiscano correttamente con l'ambiente di progettazione ed eseguito correttamente in fase di esecuzione, è necessario applicare correttamente gli attributi alle classi e membri.  
@@ -75,7 +75,7 @@ Per lo sviluppo di componenti e controlli che interagiscano correttamente con l'
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Il form che contiene il `AttributesDemoControl` richiede un riferimento al `AttributesDemoControl` per compilare assembly.  
+- Il form che contiene il `AttributesDemoControl` richiede un riferimento al `AttributesDemoControl` per compilare assembly.  
   
 ## <a name="see-also"></a>Vedere anche
 

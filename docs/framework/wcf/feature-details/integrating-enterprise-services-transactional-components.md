@@ -3,11 +3,11 @@ title: Integrazione di componenti transazionali di Enterprise Services
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
 ms.openlocfilehash: 33e09eab1d7ad24dc234cfff21e352611e0b2ef9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047035"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Integrazione di componenti transazionali di Enterprise Services
 Windows Communication Foundation (WCF) offre un meccanismo automatico per l'integrazione con Enterprise Services (vedere [l'integrazione con applicazioni COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Può tuttavia essere necessario disporre della flessibilità di sviluppare servizi che utilizzano internamente componenti transazionali ospitati all'interno di Enterprise Services. Poiché la funzionalità delle transazioni WCF si basa sul <xref:System.Transactions> infrastruttura, il processo per l'integrazione di Enterprise Services con WCF è identico a quello per la specifica dell'interoperabilità tra <xref:System.Transactions> ed Enterprise Services, come descritto in [Interoperabilità con transazioni COM+ ed Enterprise Services](https://go.microsoft.com/fwlink/?LinkId=94949).  
@@ -17,9 +17,9 @@ Windows Communication Foundation (WCF) offre un meccanismo automatico per l'inte
 ## <a name="integrating-enterprise-services-with-a-service-operation"></a>Integrazione di Enterprise Services con un'operazione del servizio  
  Nel codice seguente viene illustrata un'operazione, con propagazione transazionale Allowed, che crea una classe <xref:System.Transactions.TransactionScope> con l'opzione <xref:System.Transactions.EnterpriseServicesInteropOption.Full>. In questo scenario vengono applicate le condizioni seguenti:  
   
--   Se il client propaga una transazione, l'operazione, inclusa la chiamata al componente Enterprise Services, viene eseguita all'interno dell'ambito di tale transazione. L'utilizzo di <xref:System.Transactions.EnterpriseServicesInteropOption.Full> garantisce la sincronizzazione della transazione con il contesto <xref:System.EnterpriseServices>, il che significa che la transazione di ambiente per <xref:System.Transactions> e <xref:System.EnterpriseServices> è la stessa.  
+- Se il client propaga una transazione, l'operazione, inclusa la chiamata al componente Enterprise Services, viene eseguita all'interno dell'ambito di tale transazione. L'utilizzo di <xref:System.Transactions.EnterpriseServicesInteropOption.Full> garantisce la sincronizzazione della transazione con il contesto <xref:System.EnterpriseServices>, il che significa che la transazione di ambiente per <xref:System.Transactions> e <xref:System.EnterpriseServices> è la stessa.  
   
--   Se il client non propaga una transazione, l'impostazione di <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> su `true` crea un nuovo ambito di transazione per l'operazione. Analogamente, l'utilizzo di <xref:System.Transactions.EnterpriseServicesInteropOption.Full> garantisce che la transazione dell'operazione sia la stessa transazione utilizzata all'interno del contesto del componente <xref:System.EnterpriseServices>.  
+- Se il client non propaga una transazione, l'impostazione di <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> su `true` crea un nuovo ambito di transazione per l'operazione. Analogamente, l'utilizzo di <xref:System.Transactions.EnterpriseServicesInteropOption.Full> garantisce che la transazione dell'operazione sia la stessa transazione utilizzata all'interno del contesto del componente <xref:System.EnterpriseServices>.  
   
  Eventuali chiamate aggiuntive al metodo avvengono anch'esse nell'ambito della stessa transazione dell'operazione.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2c6f28a88c709c27df82250fcbdc22de210e93a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b47af2955d0ad8e618d0143d7eedff7c74278fbd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663297"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59150995"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF per .NET per app Windows Store
 <xref:System.Composition?displayProperty=nameWithType> e i relativi spazi dei nomi figlio contengono i tipi per sviluppare app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] estendibili mediante Managed Extensibility Framework (MEF). Questi spazi dei nomi fanno parte del subset [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] per il sistema operativo [!INCLUDE[win8](../../../includes/win8-md.md)].  
@@ -27,6 +27,7 @@ ms.locfileid: "54663297"
  Per altre informazioni su [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] e un elenco degli spazi dei nomi e dei tipi contenuti, vedere [Panoramica di .NET per le app di Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=238312) nel Centro sviluppatori Windows.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica di .NET per le app di Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=238312)
 - [.NET per app di Windows Store – API supportate](https://go.microsoft.com/fwlink/p/?LinkID=247912)
 - [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md)

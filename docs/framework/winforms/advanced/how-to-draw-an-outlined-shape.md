@@ -20,11 +20,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
 ms.openlocfilehash: 019bbc19cc4b26c42f8539eccd93ec4ff87fab12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004146"
 ---
 # <a name="how-to-draw-an-outlined-shape"></a>Procedura: Disegnare una forma con contorno
 In questo esempio disegna ellissi e rettangoli in un form.  
@@ -45,6 +45,6 @@ In questo esempio disegna ellissi e rettangoli in un form.
 - <xref:System.Drawing.Graphics.DrawEllipse%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Graphics.DrawRectangle%2A>
-- [Guida introduttiva alla programmazione grafica](getting-started-with-graphics-programming.md)
-- [Utilizzo di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)
+- [Introduzione alla programmazione grafica](getting-started-with-graphics-programming.md)
+- [Uso di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)
 - [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)

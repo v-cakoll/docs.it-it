@@ -9,11 +9,11 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
 ms.openlocfilehash: 6bdf7c3df0ffd97dd88a4c442a8a73593a0447ee
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941063"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Procedura: Caricare un'immagine utilizzando la finestra di progettazione (Windows Form)
 Con i moduli di Windows <xref:System.Windows.Forms.PictureBox> (controllo), è possibile caricare e visualizzare un'immagine in un form in fase di progettazione, impostando il <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà su un'immagine valida. La tabella seguente illustra i tipi di file consentiti.  
@@ -46,7 +46,7 @@ Con i moduli di Windows <xref:System.Windows.Forms.PictureBox> (controllo), è p
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.PictureBox>
-- [Panoramica del controllo PictureBox](picturebox-control-overview-windows-forms.md)
+- [Panoramica sul controllo PictureBox](picturebox-control-overview-windows-forms.md)
 - [Procedura: Modificare le dimensioni o la posizione di un'immagine in fase di esecuzione](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [Procedura: Impostare le immagini in fase di esecuzione](how-to-set-pictures-at-run-time-windows-forms.md)
 - [Controllo PictureBox](picturebox-control-windows-forms.md)

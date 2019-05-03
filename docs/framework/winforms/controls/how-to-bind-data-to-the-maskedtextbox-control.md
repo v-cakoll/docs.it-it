@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
 ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761371"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Procedura: Associare dati al controllo MaskedTextBox
 È possibile associare dati a un <xref:System.Windows.Forms.MaskedTextBox> controllare esattamente come per qualsiasi altro controllo Windows Form. Tuttavia, se il formato dei dati nel database non corrisponde al formato previsto dalla definizione della maschera, è necessario riformattare i dati. La procedura seguente viene illustrato come eseguire questa operazione usando il <xref:System.Windows.Forms.Binding.Format> e <xref:System.Windows.Forms.Binding.Parse> eventi del <xref:System.Windows.Forms.Binding> classe per visualizzare il numero di telefono separati e phone campi di estensione database in un solo campo modificabile.  
@@ -239,16 +239,16 @@ ms.locfileid: "59342232"
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Creare un oggetto visivo C# o un progetto di Visual Basic.  
+- Creare un oggetto visivo C# o un progetto di Visual Basic.  
   
--   Aggiungere il <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.MaskedTextBox> controlli al form, come descritto nella procedura precedente.  
+- Aggiungere il <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.MaskedTextBox> controlli al form, come descritto nella procedura precedente.  
   
--   Aprire il file di codice sorgente per il form del progetto predefinito.  
+- Aprire il file di codice sorgente per il form del progetto predefinito.  
   
--   Sostituire il codice sorgente in questo file con il codice riportato nella sezione precedente "Code".  
+- Sostituire il codice sorgente in questo file con il codice riportato nella sezione precedente "Code".  
   
--   Compilare l'applicazione.  
+- Compilare l'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Uso del controllo MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)
+- [Procedura dettagliata: Utilizzo del controllo MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)

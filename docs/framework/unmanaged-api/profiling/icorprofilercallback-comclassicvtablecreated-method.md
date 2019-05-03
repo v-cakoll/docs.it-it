@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4aa11b036c64ff6ffeec583c4cdd818d26067a74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598246"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>Metodo ICorProfilerCallback::COMClassicVTableCreated
 Notifica al profiler che è stato creato un oggetto vtable interoperabilità COM per l'IID e la classe specificata.  

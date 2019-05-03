@@ -10,11 +10,11 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
 ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755948"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>Cenni preliminari sul controllo RadioButton (Windows Form)
 Windows Form <xref:System.Windows.Forms.RadioButton> controlli presentano un insieme di due o più opzioni si escludono a vicenda all'utente. Anche se i pulsanti di opzione e caselle di controllo sembra funzionare allo stesso modo, è un'importante differenza: quando un utente seleziona un pulsante di opzione, non è possibile selezionare anche gli altri pulsanti di opzione nello stesso gruppo. Al contrario, è possibile selezionare un numero qualsiasi delle caselle di controllo. La definizione di un gruppo di pulsanti di opzione indica all'utente, "Di seguito è un set di opzioni da cui è possibile scegliere solo uno".  
@@ -27,10 +27,10 @@ Windows Form <xref:System.Windows.Forms.RadioButton> controlli presentano un ins
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.RadioButton>
-- [Panoramica del controllo Panel](panel-control-overview-windows-forms.md)
-- [Panoramica del controllo GroupBox](groupbox-control-overview-windows-forms.md)
-- [Panoramica del controllo CheckBox](checkbox-control-overview-windows-forms.md)
-- [Procedura: Creare tasti di scelta per i controlli Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Procedura: Impostare il testo visualizzato da un controllo di Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Procedura: Raggruppare i controlli RadioButton di Windows Forms in modo che funzionino come set](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [Panoramica sul controllo Panel](panel-control-overview-windows-forms.md)
+- [Panoramica sul controllo GroupBox](groupbox-control-overview-windows-forms.md)
+- [Panoramica sul controllo CheckBox](checkbox-control-overview-windows-forms.md)
+- [Procedura: Creare le chiavi di accesso per i controlli Windows Form](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Procedura: Impostare il testo visualizzato dal controllo di un Windows Form](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Procedura: Gruppo Windows Form controlli RadioButton funzionino come Set](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [Controllo RadioButton](radiobutton-control-windows-forms.md)

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
 ms.openlocfilehash: a2227b33c7caacdd04c7bf50082bb0cfab7f3302
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877617"
 ---
 # <a name="enabling-query-notifications"></a>Abilitazione di notifiche di query
 Le applicazioni che usano le notifiche di query dispongono di un set comune di requisiti. L'origine dati dell'utente deve essere configurata correttamente per supportare le notifiche di query SQL e l'utente deve disporre delle autorizzazioni corrette sia sul lato client che sul lato server.  

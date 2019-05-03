@@ -3,11 +3,11 @@ title: Debug di query di LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
 ms.openlocfilehash: 0e015cc6042a21bf6d35915c3e19bfeb9b0dbb2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607696"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Debug di query di LINQ to DataSet
 
@@ -29,5 +29,5 @@ Visual Studio supporta il debug di [!INCLUDE[linq_dataset](../../../../includes/
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Debug del codice gestito](/visualstudio/debugger/debugging-managed-code)
+- [Debug di codice gestito](/visualstudio/debugger/debugging-managed-code)
 - [Guida per programmatori](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

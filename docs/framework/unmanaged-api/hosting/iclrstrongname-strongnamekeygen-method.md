@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: abeb731ecd66e4412f904b085abcfc7b5b3a3c4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665039"
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>Metodo ICLRStrongName::StrongNameKeyGen
 Crea una nuova coppia di chiavi pubblica/privata per l'uso come nome sicuro.  
@@ -45,9 +45,9 @@ HRESULT StrongNameKeyGen (
  `dwFlags`  
  [in] Un valore che specifica se lasciare la chiave di registrazione. Sono supportati i valori seguenti:  
   
--   0x00000000 - utilizzato quando `wszKeyContainer` è null per generare un nome di contenitore di chiavi temporanee.  
+- 0x00000000 - utilizzato quando `wszKeyContainer` è null per generare un nome di contenitore di chiavi temporanee.  
   
--   0x00000001 (`SN_LEAVE_KEY`): Specifica che la chiave deve essere registrata a sinistra.  
+- 0x00000001 (`SN_LEAVE_KEY`): Specifica che la chiave deve essere registrata a sinistra.  
   
  `ppbKeyBlob`  
  [out] La coppia di chiavi pubblica/privata restituita.  

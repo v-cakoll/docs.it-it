@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: definire e utilizzare provider di formati numerici personalizzati'
+title: 'Procedura: Definire e usare provider di formati numerici personalizzati'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18a784db1ff02f459fbc2265c3ca1a2abfaff9b4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879036"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59318377"
 ---
-# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Procedura: definire e utilizzare provider di formati numerici personalizzati
+# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Procedura: Definire e usare provider di formati numerici personalizzati
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]offre ampio controllo sulla rappresentazione di stringa dei valori numerici. e supporta le funzionalità seguenti per la personalizzazione del formato di tali valori:  
   
 -   Stringhe in formato numerico standard, che forniscono un insieme predefinito di formati per la conversione dei numeri nella rispettiva rappresentazione di stringa. È possibile usarle con qualsiasi metodo di formattazione numerica, ad esempio <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, che include un parametro `format`. Per informazioni dettagliate, vedere [Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
@@ -37,9 +37,9 @@ ms.locfileid: "43879036"
   
 ### <a name="to-define-a-custom-format-provider"></a>Per definire un provider di formato personalizzato  
   
-1.  Definire una classe che implementa le interfacce <xref:System.IFormatProvider> e <xref:System.ICustomFormatter>.  
+1. Definire una classe che implementa le interfacce <xref:System.IFormatProvider> e <xref:System.ICustomFormatter>.  
   
-2.  Implementare il metodo <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A> è un metodo di callback richiamato dal metodo di formattazione, ad esempio il metodo <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, per recuperare l'oggetto effettivamente responsabile della formattazione personalizzata. Una tipica implementazione di <xref:System.IFormatProvider.GetFormat%2A> esegue le operazioni seguenti:  
+2. Implementare il metodo <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A> è un metodo di callback richiamato dal metodo di formattazione, ad esempio il metodo <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, per recuperare l'oggetto effettivamente responsabile della formattazione personalizzata. Una tipica implementazione di <xref:System.IFormatProvider.GetFormat%2A> esegue le operazioni seguenti:  
   
     1.  Determina se l'oggetto <xref:System.Type> passato come parametro del metodo rappresenta un'interfaccia <xref:System.ICustomFormatter>.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "43879036"
   
     3.  Se il parametro non rappresenta l'interfaccia <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> restituisce `null`.  
   
-3.  Implementare il metodo <xref:System.ICustomFormatter.Format%2A>. Questo metodo viene chiamato dal metodo <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> ed è responsabile della restituzione della rappresentazione di stringa di un numero. L'implementazione del metodo in genere implica le attività seguenti:  
+3. Implementare il metodo <xref:System.ICustomFormatter.Format%2A>. Questo metodo viene chiamato dal metodo <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> ed è responsabile della restituzione della rappresentazione di stringa di un numero. L'implementazione del metodo in genere implica le attività seguenti:  
   
     1.  Facoltativamente, è possibile verificare che il metodo sia legittimamente responsabile di fornire servizi di formattazione esaminando il parametro `provider`. Per la formattazione di oggetti che implementano sia <xref:System.IFormatProvider> sia <xref:System.ICustomFormatter>, questa operazione comporta l'esecuzione di test sul parametro `provider` per verificarne l'uguaglianza all'oggetto di formattazione corrente.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "43879036"
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>Per usare un oggetto di formattazione numerica personalizzata  
   
-1.  Creare una nuova istanza della classe di formattazione personalizzata.  
+1. Creare una nuova istanza della classe di formattazione personalizzata.  
   
-2.  Chiamare il metodo di formattazione <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, passandovi l'oggetto di formattazione personalizzato, l'identificatore di formattazione (o <xref:System.String.Empty?displayProperty=nameWithType> se non è specificato alcun identificatore) e il valore numerico da formattare.  
+2. Chiamare il metodo di formattazione <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, passandovi l'oggetto di formattazione personalizzato, l'identificatore di formattazione (o <xref:System.String.Empty?displayProperty=nameWithType> se non è specificato alcun identificatore) e il valore numerico da formattare.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene definito un provider di formato numerico personalizzato denominato `TelephoneFormatter` che converte un numero che rappresenta un numero telefonico degli Stati Uniti nel suo formato NANP oppure E.123. Il metodo gestisce due identificatori di formato, "N" (che restituisce il formato NANP) e "I" (che restituisce il formato E.123 internazionale).  

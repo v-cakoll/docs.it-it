@@ -13,22 +13,22 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
 ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967037"
 ---
 # <a name="data-binding-and-windows-forms"></a>Associazione dati e Windows Form
 Nei Windows Form è possibile effettuare associazioni non solo alle origini dati tradizionali, ma anche a quasi ogni struttura che contiene dati. È possibile effettuare associazioni a una matrice di valori che verranno calcolati in fase di esecuzione, letti da un file o derivati dai valori di altri controlli.  
   
  Inoltre, è possibile associare all'origine dati qualsiasi proprietà di qualunque controllo. Nelil data binding tradizionale viene in genere associata all'origine dati la proprietà relativa alla visualizzazione, ad esempio la proprietà <xref:System.Windows.Forms.Control.Text%2A> di un controllo <xref:System.Windows.Forms.TextBox>. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] consente anche di impostare anche altre proprietà tramite associazione. È possibile usare l'associazione per eseguire le attività seguenti:  
   
--   Impostazione della grafica di un controllo immagine.  
+- Impostazione della grafica di un controllo immagine.  
   
--   Impostazione del colore di sfondo di uno o più controlli.  
+- Impostazione del colore di sfondo di uno o più controlli.  
   
--   Impostazione delle dimensioni dei controlli.  
+- Impostazione delle dimensioni dei controlli.  
   
  In pratica, il data binding rappresenta un sistema automatico per l'impostazione di qualsiasi proprietà accessibile in fase di esecuzione di qualsiasi controllo del form.  
   

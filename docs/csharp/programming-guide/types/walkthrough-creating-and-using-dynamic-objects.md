@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Creazione e utilizzo di oggetti dinamici (C# e Visual Basic)'
+title: 'Procedura dettagliata: Creazione e uso di oggetti dinamici (C# e Visual Basic)'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: f02e2de2ce8e2d4d6c8032e826764fd0383b3b3d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 71330714658729ed82ba111e9384e6cd9d5ae116
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092644"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59339424"
 ---
-# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Procedura dettagliata: Creazione e utilizzo di oggetti dinamici (C# e Visual Basic)
+# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Procedura dettagliata: Creazione e uso di oggetti dinamici (C# e Visual Basic)
 
 Gli oggetti dinamici espongono i membri, ad esempio proprietà e metodi, in fase di esecuzione anziché in fase di compilazione. In questo modo è possibile creare oggetti da usare con le strutture che non corrispondono a un tipo o formato statico. Ad esempio, è possibile usare un oggetto dinamico per fare riferimento al modello a oggetti documenti (DOM, Document Object Model) HTML, che può contenere qualsiasi combinazione di attributi ed elementi di markup HTML validi. Poiché ogni documento HTML è univoco, i membri per un particolare documento HTML vengono determinati in fase di esecuzione. Un metodo comune per fare riferimento a un attributo di un elemento HTML consiste nel passare il nome dell'attributo al metodo `GetProperty` dell'elemento. Per fare riferimento all'attributo `id` dell'elemento HTML `<div id="Div1">`, per prima cosa è necessario ottenere un riferimento all'elemento `<div>` e quindi usare `divElement.GetProperty("id")`. Se si usa un oggetto dinamico, è possibile fare riferimento all'attributo `id` come `divElement.id`.  
   
@@ -44,30 +44,30 @@ Il primo progetto creato in questa procedura dettagliata definisce un oggetto di
   
 ### <a name="to-create-a-custom-dynamic-class"></a>Per creare una classe dinamica personalizzata  
   
-1.  Avviare Visual Studio.  
+1. Avviare Visual Studio.  
   
-2.  Scegliere **Nuovo** dal menu **File** , quindi scegliere **Progetto**.  
+2. Scegliere **Nuovo** dal menu **File** , quindi scegliere **Progetto**.  
   
-3.  Nel riquadro **Tipi di progetto** della finestra di dialogo **Nuovo progetto** verificare che sia selezionata l'opzione **Windows**. Selezionare **Applicazione console** nel riquadro **Modelli**. Nella casella **Nome** digitare `DynamicSample` e quindi fare clic su **OK**. Il nuovo progetto viene creato.  
+3. Nel riquadro **Tipi di progetto** della finestra di dialogo **Nuovo progetto** verificare che sia selezionata l'opzione **Windows**. Selezionare **Applicazione console** nel riquadro **Modelli**. Nella casella **Nome** digitare `DynamicSample` e quindi fare clic su **OK**. Il nuovo progetto viene creato.  
   
-4.  Fare clic con il pulsante destro del mouse sul progetto DynamicSample e scegliere **Aggiungi**, quindi fare clic su **Classe**. Nella casella **Nome** digitare `ReadOnlyFile`, quindi fare clic su **OK**. Viene aggiunto un nuovo file che contiene la classe ReadOnlyFile.  
+4. Fare clic con il pulsante destro del mouse sul progetto DynamicSample e scegliere **Aggiungi**, quindi fare clic su **Classe**. Nella casella **Nome** digitare `ReadOnlyFile`, quindi fare clic su **OK**. Viene aggiunto un nuovo file che contiene la classe ReadOnlyFile.  
   
-5.  Nella parte superiore del file ReadOnlyFile.cs o ReadOnlyFile.vb aggiungere il codice seguente per importare gli spazi dei nomi <xref:System.IO?displayProperty=nameWithType> e <xref:System.Dynamic?displayProperty=nameWithType>.  
+5. Nella parte superiore del file ReadOnlyFile.cs o ReadOnlyFile.vb aggiungere il codice seguente per importare gli spazi dei nomi <xref:System.IO?displayProperty=nameWithType> e <xref:System.Dynamic?displayProperty=nameWithType>.  
 
     [!code-csharp[VbDynamicWalkthrough#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#1)]
     [!code-vb[VbDynamicWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#1)]  
 
-6.  L'oggetto dinamico personalizzato usa un'enumerazione per determinare i criteri di ricerca. Prima dell'istruzione di classe, aggiungere la seguente definizione di enumerazione.  
+6. L'oggetto dinamico personalizzato usa un'enumerazione per determinare i criteri di ricerca. Prima dell'istruzione di classe, aggiungere la seguente definizione di enumerazione.  
   
     [!code-csharp[VbDynamicWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#2)]
     [!code-vb[VbDynamicWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#2)]
   
-7.  Aggiornare la dichiarazione di classe per ereditare la classe `DynamicObject`, come illustrato nell'esempio di codice seguente.  
+7. Aggiornare la dichiarazione di classe per ereditare la classe `DynamicObject`, come illustrato nell'esempio di codice seguente.  
   
     [!code-csharp[VbDynamicWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#3)]
     [!code-vb[VbDynamicWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#3)]
 
-8.  Aggiungere il codice seguente alla classe `ReadOnlyFile` per definire un campo privato per il percorso del file e un costruttore per la classe `ReadOnlyFile`.  
+8. Aggiungere il codice seguente alla classe `ReadOnlyFile` per definire un campo privato per il percorso del file e un costruttore per la classe `ReadOnlyFile`.  
   
     [!code-csharp[VbDynamicWalkthrough#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#4)]
     [!code-vb[VbDynamicWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#4)]
@@ -93,9 +93,9 @@ Il primo progetto creato in questa procedura dettagliata definisce un oggetto di
   
 #### <a name="to-create-a-sample-text-file"></a>Per creare un file di testo di esempio  
   
-1.  Fare clic con il pulsante destro del mouse sul progetto DynamicSample e scegliere **Aggiungi**, quindi fare clic su **Nuovo elemento**. Nel riquadro **Modelli installati** selezionare **Generale**, quindi il modello **File di testo**. Lasciare il nome predefinito TextFile1.txt nella casella **Nome** e quindi fare clic su **Aggiungi**. Un nuovo file di testo viene aggiunto al progetto.  
+1. Fare clic con il pulsante destro del mouse sul progetto DynamicSample e scegliere **Aggiungi**, quindi fare clic su **Nuovo elemento**. Nel riquadro **Modelli installati** selezionare **Generale**, quindi il modello **File di testo**. Lasciare il nome predefinito TextFile1.txt nella casella **Nome** e quindi fare clic su **Aggiungi**. Un nuovo file di testo viene aggiunto al progetto.  
   
-2.  Copiare il testo seguente nel file TextFile1.txt.  
+2. Copiare il testo seguente nel file TextFile1.txt.  
   
     ```  
     List of customers and suppliers  
@@ -112,18 +112,18 @@ Il primo progetto creato in questa procedura dettagliata definisce un oggetto di
     Customer: Koch, Paul  
     ```  
   
-3.  Salvare e chiudere il file.  
+3. Salvare e chiudere il file.  
   
 #### <a name="to-create-a-sample-application-that-uses-the-custom-dynamic-object"></a>Per creare un'applicazione di esempio che usa l'oggetto dinamico personalizzato  
   
-1.  In **Esplora Soluzioni** fare doppio clic sul file Module1.vb se si usa Visual Basic o sul file Program.cs se si usa Visual C#.  
+1. In **Esplora Soluzioni** fare doppio clic sul file Module1.vb se si usa Visual Basic o sul file Program.cs se si usa Visual C#.  
   
-2.  Aggiungere il seguente codice alla routine Main per creare un'istanza della classe `ReadOnlyFile` per il file TextFile1.txt. Il codice usa l'associazione tardiva per chiamare i membri dinamici e recuperare le righe di testo che contengono la stringa "Customer".  
+2. Aggiungere il seguente codice alla routine Main per creare un'istanza della classe `ReadOnlyFile` per il file TextFile1.txt. Il codice usa l'associazione tardiva per chiamare i membri dinamici e recuperare le righe di testo che contengono la stringa "Customer".  
   
      [!code-csharp[VbDynamicWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/program.cs#8)]
      [!code-vb[VbDynamicWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/module1.vb#8)]
   
-3.  Salvare il file e premere CTRL+F5 per compilare ed eseguire l'applicazione.  
+3. Salvare il file e premere CTRL+F5 per compilare ed eseguire l'applicazione.  
   
 ## <a name="calling-a-dynamic-language-library"></a>Chiamare una libreria di linguaggio dinamico  
 
@@ -131,27 +131,27 @@ Il progetto successivo di questa procedura dettagliata accede a una libreria scr
   
 ### <a name="to-create-a-custom-dynamic-class"></a>Per creare una classe dinamica personalizzata
   
-1.  In Visual Studio scegliere **Nuovo** dal menu **File** e quindi fare clic su **Progetto**.  
+1. In Visual Studio scegliere **Nuovo** dal menu **File** e quindi fare clic su **Progetto**.  
   
-2.  Nel riquadro **Tipi di progetto** della finestra di dialogo **Nuovo progetto** verificare che sia selezionata l'opzione **Windows**. Selezionare **Applicazione console** nel riquadro **Modelli**. Nella casella **Nome** digitare `DynamicIronPythonSample` e quindi fare clic su **OK**. Il nuovo progetto viene creato.  
+2. Nel riquadro **Tipi di progetto** della finestra di dialogo **Nuovo progetto** verificare che sia selezionata l'opzione **Windows**. Selezionare **Applicazione console** nel riquadro **Modelli**. Nella casella **Nome** digitare `DynamicIronPythonSample` e quindi fare clic su **OK**. Il nuovo progetto viene creato.  
   
-3.  Se si usa Visual Basic, fare clic con il pulsante destro del mouse sul progetto DynamicIronPythonSample e quindi fare clic su **Proprietà**. Fare clic sulla scheda **Riferimenti**. Fare clic sul pulsante **Aggiungi**. Se si usa Visual C#, in **Esplora soluzioni** fare clic con il pulsante destro del mouse sulla cartella **Riferimenti** e quindi fare clic su **Aggiungi riferimento**.  
+3. Se si usa Visual Basic, fare clic con il pulsante destro del mouse sul progetto DynamicIronPythonSample e quindi fare clic su **Proprietà**. Fare clic sulla scheda **Riferimenti**. Fare clic sul pulsante **Aggiungi**. Se si usa Visual C#, in **Esplora soluzioni** fare clic con il pulsante destro del mouse sulla cartella **Riferimenti** e quindi fare clic su **Aggiungi riferimento**.  
   
-4.  Nella scheda **Sfoglia** passare alla cartella in cui sono installate le librerie di IronPython. Ad esempio, C:\Programmi\IronPython 2.6 for .NET 4.0. Selezionare le librerie **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll** e **Microsoft.Dynamic.dll**. Fare clic su **OK**.  
+4. Nella scheda **Sfoglia** passare alla cartella in cui sono installate le librerie di IronPython. Ad esempio, C:\Programmi\IronPython 2.6 for .NET 4.0. Selezionare le librerie **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll** e **Microsoft.Dynamic.dll**. Fare clic su **OK**.  
   
-5.  Se si usa Visual Basic, modificare il file Module1.vb. Se si usa Visual C#, modificare il file Program.cs.  
+5. Se si usa Visual Basic, modificare il file Module1.vb. Se si usa Visual C#, modificare il file Program.cs.  
   
-6.  Nella parte superiore del file aggiungere il codice seguente per importare gli spazi dei nomi `Microsoft.Scripting.Hosting` e `IronPython.Hosting` dalle librerie di IronPython.  
+6. Nella parte superiore del file aggiungere il codice seguente per importare gli spazi dei nomi `Microsoft.Scripting.Hosting` e `IronPython.Hosting` dalle librerie di IronPython.  
   
     [!code-csharp[VbDynamicWalkthroughIronPython#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#1)]
     [!code-vb[VbDynamicWalkthroughIronPython#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#1)]
   
-7.  Nel metodo Main aggiungere il codice seguente per creare un nuovo oggetto `Microsoft.Scripting.Hosting.ScriptRuntime` per ospitare le librerie di IronPython. L'oggetto `ScriptRuntime` carica il modulo di libreria random.py di IronPython.  
+7. Nel metodo Main aggiungere il codice seguente per creare un nuovo oggetto `Microsoft.Scripting.Hosting.ScriptRuntime` per ospitare le librerie di IronPython. L'oggetto `ScriptRuntime` carica il modulo di libreria random.py di IronPython.  
   
      [!code-csharp[VbDynamicWalkthroughIronPython#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#2)]
      [!code-vb[VbDynamicWalkthroughIronPython#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#2)]
   
-8.  Dopo il codice che carica il modulo random.py, aggiungere il codice seguente per creare una matrice di numeri interi. La matrice viene passata al metodo `shuffle` del modulo random.py, che ordina i valori nella matrice in modo casuale.  
+8. Dopo il codice che carica il modulo random.py, aggiungere il codice seguente per creare una matrice di numeri interi. La matrice viene passata al metodo `shuffle` del modulo random.py, che ordina i valori nella matrice in modo casuale.  
   
      [!code-csharp[VbDynamicWalkthroughIronPython#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#3)]
      [!code-vb[VbDynamicWalkthroughIronPython#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#3)]

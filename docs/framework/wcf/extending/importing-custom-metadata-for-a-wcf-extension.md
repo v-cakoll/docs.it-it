@@ -3,11 +3,11 @@ title: Importazione di metadati personalizzati per un'estensione WCF
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
 ms.openlocfilehash: 830829be98202c97a9fc2b34e31da25967292efb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766766"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importazione di metadati personalizzati per un'estensione WCF
 In Windows Communication Foundation (WCF), l'importazione dei metadati è il processo di generazione di una rappresentazione astratta di un servizio o sue parti componenti dai relativi metadati. Ad esempio, è possibile importare WCF <xref:System.ServiceModel.Description.ServiceEndpoint> istanze <xref:System.ServiceModel.Channels.Binding> istanze o <xref:System.ServiceModel.Description.ContractDescription> istanze da un file WSDL di documento per un servizio. Per importare i metadati del servizio in WCF, usare un'implementazione del <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> classe astratta. Tipi che derivano dal <xref:System.ServiceModel.Description.MetadataImporter> classi implementano il supporto per l'importazione formati dei metadati che sfruttano il WS-Policy Importa per la logica in WCF.  
@@ -51,5 +51,5 @@ In Windows Communication Foundation (WCF), l'importazione dei metadati è il pro
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura: Importare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
-- [Procedura: Importare asserzioni di criteri personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Procedura: Importa asserzioni di criteri personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
 - [Procedura: Scrivere un'estensione per ServiceContractGenerator](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)

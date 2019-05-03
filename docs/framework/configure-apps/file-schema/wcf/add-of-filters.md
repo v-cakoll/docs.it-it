@@ -3,11 +3,11 @@ title: <add> di <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
 ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704544"
 ---
 # <a name="add-of-filters"></a>\<aggiungere > di \<filtri >
 Filtro XPath che specifica il tipo di messaggio da registrare.  

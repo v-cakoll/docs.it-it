@@ -1,5 +1,5 @@
 ---
-title: 'Modello a oggetti Ink: Windows Form e COM e WPF'
+title: 'Modello a oggetti input penna: confronto di Windows Form e COM con WPF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
 ms.openlocfilehash: 68003943041fe0ba405eff1236c43a8e7e9c2b71
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051676"
 ---
-# <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Modello a oggetti Ink: Windows Form e COM e WPF
+# <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Modello a oggetti input penna: confronto di Windows Form e COM con WPF
 
 Esistono essenzialmente e tre le piattaforme che supportano l'input penna digitale: la piattaforma Tablet PC Windows Form, la piattaforma Tablet PC COM e la piattaforma Windows Presentation Foundation (WPF).  La condivisione di piattaforme di Windows Form e COM un modello a oggetti simili, ma l'oggetto del modello per il [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] piattaforma è sostanzialmente diversa.  In questo argomento vengono illustrate le differenze a livello generale in modo che gli sviluppatori che hanno lavorato con un modello a oggetti possono comprendere meglio l'altro.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
 ms.openlocfilehash: 38863cbfe457afd923c3c8238d8c12b4d451c67f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773087"
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Procedura: Disabilitare sessioni protette in WSFederationHttpBinding
 Alcuni servizi possono richiedere credenziali federate senza tuttavia supportare le sessioni protette. In questo caso occorre disattivare la funzionalità di sessione protetta. A differenza della classe <xref:System.ServiceModel.WSHttpBinding>, la classe <xref:System.ServiceModel.WSFederationHttpBinding> non fornisce alcuna modalità di disattivazione delle sessioni protette quando si comunica con un servizio. È invece necessario creare un'associazione personalizzata che sostituisce le impostazioni della sessione protetta con un bootstrap.  
@@ -40,8 +40,8 @@ Alcuni servizi possono richiedere credenziali federate senza tuttavia supportare
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Per compilare l'esempio di codice, creare un progetto che fa riferimento all'assembly System.ServiceModel.dll.  
+- Per compilare l'esempio di codice, creare un progetto che fa riferimento all'assembly System.ServiceModel.dll.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Associazioni e protezione](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Associazioni e sicurezza](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

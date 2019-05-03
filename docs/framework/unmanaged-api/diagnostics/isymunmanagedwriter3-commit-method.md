@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f531b96211a1dd6072d62937b9f93fc17f105d4d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777982"
 ---
 # <a name="isymunmanagedwriter3commit-method"></a>Metodo ISymUnmanagedWriter3::Commit
 Conferma le modifiche apportate finora scritte nel flusso.  

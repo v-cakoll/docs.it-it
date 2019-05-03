@@ -5,11 +5,11 @@ f1_keywords:
 - vbrArgument_InvalidValue
 ms.assetid: dc0be8ab-b2b7-40b7-8c94-7ac9eadb5e94
 ms.openlocfilehash: 9b8a24e4ddb480704fbed77e7252cef040748018
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59318013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977132"
 ---
 # <a name="arguments-are-not-valid"></a>Argomenti non validi
 Argomenti non validi sono stati passati a una funzione o subroutine.  

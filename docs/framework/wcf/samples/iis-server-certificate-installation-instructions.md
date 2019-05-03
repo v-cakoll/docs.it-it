@@ -3,11 +3,11 @@ title: Istruzioni di installazione certificato server IIS (Internet Information 
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
 ms.openlocfilehash: 8d0b80930424f0d8529f2b035a8e1167f361f99a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752489"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Istruzioni di installazione certificato server IIS (Internet Information Services)
 Per eseguire gli esempi che comunicano in modo sicuro con IIS (Internet Information Services) è necessario creare e installare un certificato server.  
@@ -72,9 +72,9 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 ## <a name="removing-certificates"></a>Rimozione dei certificati  
   
--   Utilizzare Gestione Internet Information Services come illustrato in precedenza, ma rimuovere il certificato o l'associazione anziché aggiungerlo.  
+- Utilizzare Gestione Internet Information Services come illustrato in precedenza, ma rimuovere il certificato o l'associazione anziché aggiungerlo.  
   
--   Rimuovere il certificato del computer utilizzando il comando seguente.  
+- Rimuovere il certificato del computer utilizzando il comando seguente.  
   
     ```  
     httpcfg delete ssl -i 0.0.0.0:443  

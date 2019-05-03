@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1e96a12bbf9c4fdc8a0bc79661070eb7fec1a593
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973082"
 ---
 # <a name="ihostiocompletionmanagergetavailablethreads-method"></a>Metodo IHostIoCompletionManager::GetAvailableThreads
 Ottiene il numero di thread di completamento i/o, del numero totale di thread gestiti dall'host, che non stanno elaborando le richieste.  

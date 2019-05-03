@@ -3,11 +3,11 @@ title: Microsoft.Transactions.TransactionBridge.EnlistTransactionFailure
 ms.date: 03/30/2017
 ms.assetid: 1b9f5139-e122-4716-9ef7-2f38e1813993
 ms.openlocfilehash: 93c96d94aaeddeb7e7b04ea80645b8de95b0343e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666794"
 ---
 # <a name="microsofttransactionstransactionbridgeenlisttransactionfailure"></a>Microsoft.Transactions.TransactionBridge.EnlistTransactionFailure
 Impossibile inserire il servizio del protocollo WS-AT in una transazione utilizzando il contesto di coordinamento fornito.  
@@ -21,5 +21,5 @@ Impossibile inserire il servizio del protocollo WS-AT in una transazione utilizz
 ## <a name="see-also"></a>Vedere anche
 
 - [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

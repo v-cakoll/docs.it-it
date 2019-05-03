@@ -19,11 +19,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
 ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791910"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Parametri e argomenti delle routine (Visual Basic)
 Nella maggior parte dei casi, una procedura richiede alcune informazioni sulle circostanze in cui è stato chiamato. Una routine che esegue attività ripetute o condivise Usa informazioni diverse per ogni chiamata. Queste informazioni è costituito da variabili, costanti ed espressioni che viene passato alla procedura quando si chiama.  
@@ -49,11 +49,11 @@ Nella maggior parte dei casi, una procedura richiede alcune informazioni sulle c
   
  Se il codice chiamante si aspetta di fornire un argomento con un tipo di dati diverso da quello del parametro corrispondente, ad esempio `Byte` a un `String` parametro, è necessario eseguire una delle operazioni seguenti:  
   
--   Specificare solo argomenti con i tipi di dati che vengono ampliati al tipo di dati di parametro.  
+- Specificare solo argomenti con i tipi di dati che vengono ampliati al tipo di dati di parametro.  
   
--   Impostare `Option Strict Off` per consentire le conversioni di narrowing implicite; o  
+- Impostare `Option Strict Off` per consentire le conversioni di narrowing implicite; o  
   
--   Usare una parola chiave di conversione per convertire in modo esplicito il tipo di dati.  
+- Usare una parola chiave di conversione per convertire in modo esplicito il tipo di dati.  
   
 ### <a name="type-parameters"></a>Parametri di tipo  
  Oggetto *routine generica* definisce anche uno o più *parametri di tipo* oltre i relativi parametri normali. Una routine generica consente di passare diversi tipi di dati ogni volta che viene chiamata la routine, in modo che è possibile personalizzare i tipi di dati per i requisiti di ogni singola chiamata al codice chiamante. Vedere [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  

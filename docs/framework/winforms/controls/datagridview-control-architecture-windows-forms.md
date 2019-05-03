@@ -5,11 +5,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
 ms.openlocfilehash: 892168ec282fbf168c43515e0718fe5486a345a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011640"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>Architettura del controllo DataGridView (Windows Form)
 Il <xref:System.Windows.Forms.DataGridView> controllo e le classi correlate sono progettate per essere un sistema flessibile ed estendibile per la visualizzazione e modifica di dati tabulari. Tutte queste classi sono contenute nel <xref:System.Windows.Forms?displayProperty=nameWithType> dello spazio dei nomi essi sono denominati con il prefisso "DataGridView".  
@@ -26,19 +26,19 @@ Il <xref:System.Windows.Forms.DataGridView> controllo e le classi correlate sono
 ### <a name="datagridviewelementstates"></a>DataGridViewElementStates  
  Il <xref:System.Windows.Forms.DataGridViewElementStates> enumerazione contiene i valori seguenti:  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.None>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.None>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.ReadOnly>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.ReadOnly>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Resizable>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Resizable>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Selected>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Selected>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Visible>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Visible>  
   
  I valori di questa enumerazione possono essere combinati con gli operatori logici bit per bit, pertanto il <xref:System.Windows.Forms.DataGridViewElement.State%2A> proprietà possibile esprimere in una sola volta più di uno stato. Ad esempio, un <xref:System.Windows.Forms.DataGridViewElement> può essere contemporaneamente <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>, <xref:System.Windows.Forms.DataGridViewElementStates.Selected>, e <xref:System.Windows.Forms.DataGridViewElementStates.Visible>.  
   
@@ -58,27 +58,27 @@ Il <xref:System.Windows.Forms.DataGridView> controllo e le classi correlate sono
   
  Nell'elenco seguente vengono illustrate le classi derivate da <xref:System.Windows.Forms.DataGridViewCell>:  
   
--   <xref:System.Windows.Forms.DataGridViewTextBoxCell>  
+- <xref:System.Windows.Forms.DataGridViewTextBoxCell>  
   
--   <xref:System.Windows.Forms.DataGridViewButtonCell>  
+- <xref:System.Windows.Forms.DataGridViewButtonCell>  
   
--   <xref:System.Windows.Forms.DataGridViewLinkCell>  
+- <xref:System.Windows.Forms.DataGridViewLinkCell>  
   
--   <xref:System.Windows.Forms.DataGridViewCheckBoxCell>  
+- <xref:System.Windows.Forms.DataGridViewCheckBoxCell>  
   
--   <xref:System.Windows.Forms.DataGridViewComboBoxCell>  
+- <xref:System.Windows.Forms.DataGridViewComboBoxCell>  
   
--   <xref:System.Windows.Forms.DataGridViewImageCell>  
+- <xref:System.Windows.Forms.DataGridViewImageCell>  
   
--   <xref:System.Windows.Forms.DataGridViewHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewHeaderCell>  
   
--   <xref:System.Windows.Forms.DataGridViewRowHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewRowHeaderCell>  
   
--   <xref:System.Windows.Forms.DataGridViewColumnHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewColumnHeaderCell>  
   
--   <xref:System.Windows.Forms.DataGridViewTopLeftHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewTopLeftHeaderCell>  
   
--   I tipi di cella personalizzato  
+- I tipi di cella personalizzato  
   
 ### <a name="datagridviewcolumn"></a>DataGridViewColumn  
  Lo schema del <xref:System.Windows.Forms.DataGridView> archivio di dati collegati del controllo è espressa nel <xref:System.Windows.Forms.DataGridView> colonne del controllo. È possibile accedere la <xref:System.Windows.Forms.DataGridView> colonne del controllo utilizzando il <xref:System.Windows.Forms.DataGridView.Columns%2A> raccolta. È possibile accedere alle colonne selezionate tramite il <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> raccolta. Il modello a oggetti seguente ne illustra l'utilizzo e viene illustrato il <xref:System.Windows.Forms.DataGridViewColumn> gerarchia di ereditarietà.  
@@ -89,19 +89,19 @@ Il <xref:System.Windows.Forms.DataGridView> controllo e le classi correlate sono
   
  Nell'elenco seguente vengono illustrate le classi derivate da <xref:System.Windows.Forms.DataGridViewColumn>:  
   
--   <xref:System.Windows.Forms.DataGridViewButtonColumn>  
+- <xref:System.Windows.Forms.DataGridViewButtonColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>  
+- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
+- <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewImageColumn>  
+- <xref:System.Windows.Forms.DataGridViewImageColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewTextBoxColumn>  
+- <xref:System.Windows.Forms.DataGridViewTextBoxColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewLinkColumn>  
+- <xref:System.Windows.Forms.DataGridViewLinkColumn>  
   
--   I tipi di colonna personalizzata  
+- I tipi di colonna personalizzata  
   
 ### <a name="datagridview-editing-controls"></a>Controlli di modifica DataGridView  
  Le celle che supportano le funzionalità avanzate di modifica in genere usano un controllo ospitato che deriva da un controllo Windows Form. Questi controlli implementano anche il <xref:System.Windows.Forms.IDataGridViewEditingControl> interfaccia. Il modello a oggetti seguente viene illustrato l'utilizzo di questi controlli.  
@@ -110,9 +110,9 @@ Il <xref:System.Windows.Forms.DataGridView> controllo e le classi correlate sono
   
  I seguenti controlli di modifica forniti con il <xref:System.Windows.Forms.DataGridView> controllo:  
   
--   <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>  
+- <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>  
   
--   <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
+- <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
   
  Per informazioni sulla creazione di controlli personalizzati di modifica, vedere [come: Inserire controlli in Windows Form celle DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
@@ -138,6 +138,6 @@ Il <xref:System.Windows.Forms.DataGridView> controllo e le classi correlate sono
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica del controllo DataGridView](datagridview-control-overview-windows-forms.md)
-- [Personalizzazione del controllo DataGridView Windows Form](customizing-the-windows-forms-datagridview-control.md)
-- [Utilizzo della riga per i nuovi record del controllo DataGridView di Windows Form](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+- [Panoramica sul controllo DataGridView](datagridview-control-overview-windows-forms.md)
+- [Personalizzazione del controllo DataGridView di Windows Form](customizing-the-windows-forms-datagridview-control.md)
+- [Uso della riga per i nuovi record del controllo DataGridView di Windows Form](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

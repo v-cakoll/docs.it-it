@@ -10,11 +10,11 @@ helpviewer_keywords:
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 ms.openlocfilehash: 1f487e9d686ab82adb40cdc31aad68390fbdff3f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775751"
 ---
 # <a name="use-the-automationid-property"></a>Utilizzare la proprietà AutomationID
 > [!NOTE]
@@ -22,20 +22,20 @@ ms.locfileid: "59173095"
   
  Questo argomento contiene gli scenari e il codice di esempio che illustrano come e quando sia possibile usare <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> per individuare un elemento nell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> Identifica un elemento di automazione interfaccia utente dagli elementi di pari livello. Per altre informazioni sugli identificatori di proprietà correlati all'identificazione dei controlli, vedere [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> identifica in modo univoco un elemento di automazione interfaccia utente dagli elementi di pari livello. Per altre informazioni sugli identificatori di proprietà correlati all'identificazione dei controlli, vedere [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> non garantisce un'identità univoca in tutto l'albero. in genere deve contenitore e informazioni sull'ambito per essere utile. Ad esempio, un'applicazione può contenere un controllo menu con più voci di menu di livello superiore che, a loro volta, contengono più voci di menu figlio. Queste voci di menu secondarie possono essere identificate da uno schema generico, ad esempio "Item1", "Item 2" e così via, consentendo la presenza di identificatori duplicati per gli elementi figlio nelle voci di menu di primo livello.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> non garantisce un'identità univoca in tutto l'albero. Per essere utile, richiede in genere informazioni sui contenitori e sull'ambito. Ad esempio, un'applicazione può contenere un controllo menu con più voci di menu di livello superiore che, a loro volta, contengono più voci di menu figlio. Queste voci di menu secondarie possono essere identificate da uno schema generico, ad esempio "Item1", "Item 2" e così via, consentendo la presenza di identificatori duplicati per gli elementi figlio nelle voci di menu di primo livello.  
   
 ## <a name="scenarios"></a>Scenari  
  Sono stati identificati tre scenari principali dell'applicazione client di automazione interfaccia utente, che richiedono l'uso di <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> per ottenere risultati accurati e coerenti quando si cercano elementi.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> è supportato da tutti gli elementi di automazione interfaccia utente nella visualizzazione controlli tranne finestre dell'applicazione di livello superiore, gli elementi di automazione interfaccia utente derivati da [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] controlli privi di un ID o X:UID e gli elementi di automazione interfaccia utente derivati da [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] controlla che non è un ID del controllo.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> è supportato da tutti gli elementi di automazione interfaccia utente nella visualizzazione controlli tranne che dalle finestre dell'applicazione di primo livello, dagli elementi di automazione interfaccia utente derivati da controlli [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] senza ID o x:Uid e dagli elementi di automazione interfaccia utente derivati da controlli [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] senza ID controllo.  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Usare un oggetto AutomationID univoco e individuabile per trovare un elemento specifico nell'albero di automazione interfaccia utente  
   
--   Usare uno strumento come [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] per segnalare l'oggetto <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> di un elemento [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] di interesse. Questo valore può quindi essere copiato e incollato in un'applicazione client, ad esempio uno script di test, per il successivo test automatizzato. Questo approccio riduce e semplifica il codice necessario per identificare e individuare un elemento in fase di esecuzione.  
+- Usare uno strumento come [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] per segnalare l'oggetto <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> di un elemento [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] di interesse. Questo valore può quindi essere copiato e incollato in un'applicazione client, ad esempio uno script di test, per il successivo test automatizzato. Questo approccio riduce e semplifica il codice necessario per identificare e individuare un elemento in fase di esecuzione.  
   
 > [!CAUTION]
 >  In generale, è consigliabile cercare di ottenere solo elementi figlio diretti di <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Una ricerca dei discendenti può scorrere centinaia o anche migliaia di elementi, con la possibilità che venga generato un overflow dello stack. Per ottenere un elemento specifico a un livello inferiore, è consigliabile avviare la ricerca dalla finestra dell'applicazione o da un contenitore a un livello inferiore.  
@@ -45,7 +45,7 @@ ms.locfileid: "59173095"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Usare un percorso persistente per tornare a un oggetto AutomationElement identificato in precedenza  
   
--   Le applicazioni client, dai semplici script di test alle solide utilità di registrazione e riproduzione, potrebbero richiedere l'accesso a elementi di cui non è ancora stata creata un'istanza, ad esempio una finestra di dialogo di apertura file o una voce di menu, e che quindi non esistono nell'albero di automazione interfaccia utente. Questi elementi è possibile creare solo istanze da riprodurre, o "riproduzione", una sequenza specifica di azioni dell'interfaccia utente tramite l'utilizzo di proprietà di automazione interfaccia utente, ad esempio AutomationID, i pattern di controllo e i listener di eventi.
+- Le applicazioni client, dai semplici script di test alle solide utilità di registrazione e riproduzione, potrebbero richiedere l'accesso a elementi di cui non è ancora stata creata un'istanza, ad esempio una finestra di dialogo di apertura file o una voce di menu, e che quindi non esistono nell'albero di automazione interfaccia utente. Questi elementi è possibile creare solo istanze da riprodurre, o "riproduzione", una sequenza specifica di azioni dell'interfaccia utente tramite l'utilizzo di proprietà di automazione interfaccia utente, ad esempio AutomationID, i pattern di controllo e i listener di eventi.
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  
@@ -54,10 +54,10 @@ ms.locfileid: "59173095"
   
 #### <a name="use-a-relative-path-to-return-to-a-previously-identified-automationelement"></a>Usare un percorso relativo per tornare a un oggetto AutomationElement identificato in precedenza  
   
--   In alcune circostanze, poiché è garantito che AutomationID sia univoco solo tra gli elementi di pari livello, più elementi dell'albero di automazione interfaccia utente possono avere valori identici per la proprietà AutomationID. In questi casi, gli elementi possono essere identificati in modo univoco in base a un elemento padre e, se necessario, a un elemento padre del padre. Uno sviluppatore, ad esempio, potrebbe fornire una barra dei menu con più voci di menu, tutte con più voci di menu figlio, dove gli elementi figlio vengono identificati con AutomationID sequenziali, ad esempio "Item1", "Item2" e così via. Ogni voce di menu può quindi essere identificata in modo univoco dal rispettivo AutomationID insieme all'AutomationID del padre e, se necessario, del padre del padre.  
+- In alcune circostanze, poiché è garantito che AutomationID sia univoco solo tra gli elementi di pari livello, più elementi dell'albero di automazione interfaccia utente possono avere valori identici per la proprietà AutomationID. In questi casi, gli elementi possono essere identificati in modo univoco in base a un elemento padre e, se necessario, a un elemento padre del padre. Uno sviluppatore, ad esempio, potrebbe fornire una barra dei menu con più voci di menu, tutte con più voci di menu figlio, dove gli elementi figlio vengono identificati con AutomationID sequenziali, ad esempio "Item1", "Item2" e così via. Ogni voce di menu può quindi essere identificata in modo univoco dal rispettivo AutomationID insieme all'AutomationID del padre e, se necessario, del padre del padre.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
-- [Panoramica dell'albero di automazione dell'interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Trovare un elemento di automazione interfaccia utente in base a una proprietà](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Trovare un elemento di automazione interfaccia utente in base a una condizione proprietà](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)

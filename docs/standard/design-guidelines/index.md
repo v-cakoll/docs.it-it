@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
 ms.openlocfilehash: c20430f9cdcd71cc2e178d38aeed48f9fa4e75c5
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56834898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026380"
 ---
 # <a name="framework-design-guidelines"></a>Linee guida per la progettazione di Framework
 In questa sezione vengono fornite linee guida per la progettazione di librerie che ne estendono e interagiscono con .NET Framework. L'obiettivo è garantire agli sviluppatori di librerie API uniformità e semplicità d'uso, fornendo un modello di programmazione unificato che è indipendente dal linguaggio di programmazione usato per lo sviluppo. È consigliabile seguire queste linee guida di progettazione durante lo sviluppo di classi e componenti in grado di estendere .NET Framework. Progettazione di librerie incoerente influisce negativamente sulla produttività degli sviluppatori e, scoraggia l'adozione.  

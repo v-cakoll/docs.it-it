@@ -10,11 +10,11 @@ helpviewer_keywords:
 - styles [WPF], CheckBox
 ms.assetid: bfdaec96-d101-4d3d-864d-c27e6b621d03
 ms.openlocfilehash: b3f417a676b141a4a6dbccfe51bf5b7abe669198
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912418"
 ---
 # <a name="checkbox-styles-and-templates"></a>Stili e modelli di CheckBox
 In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.CheckBox> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

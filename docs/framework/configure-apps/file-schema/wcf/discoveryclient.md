@@ -3,11 +3,11 @@ title: <discoveryClient>
 ms.date: 03/30/2017
 ms.assetid: a78f74c3-1152-4149-ab29-3f12d316caeb
 ms.openlocfilehash: a5ea10601732021af578c17d4f5c5ab69c98f17a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704024"
 ---
 # <a name="discoveryclient"></a>\<discoveryClient>
 Elemento di configurazione per la creazione di un'associazione personalizzata che consente a un'applicazione client di cercare automaticamente un servizio individuabile e di trovarne l'indirizzo in fase di esecuzione.  

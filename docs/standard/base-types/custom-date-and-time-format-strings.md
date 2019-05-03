@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 409cea924b8a775621c3073e27009d1f556e4f42
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c8c9fe05049feff6e15c765212b72e35265fd844
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838573"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345430"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Stringhe di formato di data e ora personalizzato
 
@@ -632,7 +632,7 @@ I caratteri seguenti in una stringa di formato di data e ora sono riservati e ve
 |F|H|K|M|d|
 |f|V|h|m|s|
 |u|y|l|%|:|
-|/|"|'|\||
+|/|"|'|&#92;||
 
 Tutti gli altri caratteri vengono sempre interpretati come valori letterali carattere e in un'operazione di formattazione vengono inclusi senza modifiche nella stringa di risultato.  In un'operazione di analisi questi caratteri devono corrispondere esattamente ai caratteri nella stringa di input. Il confronto tiene conto di maiuscole e minuscole.
 

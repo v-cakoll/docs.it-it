@@ -11,11 +11,11 @@ helpviewer_keywords:
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
 ms.openlocfilehash: 0d68846938aba809a7a3a6f7d27f185bb90a39cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920679"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 Specifica che una proprietà o una routine ridichiara una o più proprietà o routine esistenti con lo stesso nome.  
@@ -25,41 +25,41 @@ Specifica che una proprietà o una routine ridichiara una o più proprietà o ro
   
 ## <a name="rules"></a>Regole  
   
--   **Contesto della dichiarazione.** È possibile usare `Overloads` solo in un'istruzione per la dichiarazione di proprietà o routine.  
+- **Contesto della dichiarazione.** È possibile usare `Overloads` solo in un'istruzione per la dichiarazione di proprietà o routine.  
   
--   **Modificatori combinati.** Non è possibile specificare `Overloads` assieme [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) nella stessa dichiarazione di routine.  
+- **Modificatori combinati.** Non è possibile specificare `Overloads` assieme [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) nella stessa dichiarazione di routine.  
   
--   **Differenze necessarie.** Il *firma* in questa dichiarazione deve essere diverso dalla firma di tutte le proprietà o routine che esegue l'overload. La firma comprende il nome della proprietà o della routine e gli elementi seguenti:  
+- **Differenze necessarie.** Il *firma* in questa dichiarazione deve essere diverso dalla firma di tutte le proprietà o routine che esegue l'overload. La firma comprende il nome della proprietà o della routine e gli elementi seguenti:  
   
-    -   numero dei parametri  
+    - numero dei parametri  
   
-    -   ordine dei parametri  
+    - ordine dei parametri  
   
-    -   tipi di dati dei parametri  
+    - tipi di dati dei parametri  
   
-    -   numero dei parametri di tipo (per una routine generica)  
+    - numero dei parametri di tipo (per una routine generica)  
   
-    -   tipo restituito (solo per una routine di operatore di conversione)  
+    - tipo restituito (solo per una routine di operatore di conversione)  
   
      Tutti gli overload devono avere lo stesso nome, ma ognuno deve essere diverso da tutti gli altri per uno o più elementi tra quelli elencati in precedenza. Questo consente al compilatore di distinguere la versione da usare quando il codice chiama la proprietà o la routine.  
   
--   **Differenze non consentite.** Poiché gli elementi riportati di seguito non fanno parte della firma, la relativa modifica non è valida per l'overload di una proprietà o di una routine:  
+- **Differenze non consentite.** Poiché gli elementi riportati di seguito non fanno parte della firma, la relativa modifica non è valida per l'overload di una proprietà o di una routine:  
   
-    -   la capacità di restituire un valore (per una routine)  
+    - la capacità di restituire un valore (per una routine)  
   
-    -   il tipo di dati del valore restituito (ad eccezione di un operatore di conversione)  
+    - il tipo di dati del valore restituito (ad eccezione di un operatore di conversione)  
   
-    -   i nomi dei parametri o dei parametri di tipo  
+    - i nomi dei parametri o dei parametri di tipo  
   
-    -   i vincoli definiti sui parametri di tipo (per una routine generica)  
+    - i vincoli definiti sui parametri di tipo (per una routine generica)  
   
-    -   le parole chiave di modificatori di parametro (ad esempio `ByRef` o `Optional`)  
+    - le parole chiave di modificatori di parametro (ad esempio `ByRef` o `Optional`)  
   
-    -   e parole chiave di modificatori di proprietà o di routine (ad esempio `Public` o `Shared`)  
+    - e parole chiave di modificatori di proprietà o di routine (ad esempio `Public` o `Shared`)  
   
--   **Modificatore facoltativo.** Non è necessario usare il modificatore `Overloads` quando si definiscono più proprietà o routine in overload nella medesima classe. Se tuttavia si usa `Overloads` in una dichiarazione, è necessario usarlo in tutte.  
+- **Modificatore facoltativo.** Non è necessario usare il modificatore `Overloads` quando si definiscono più proprietà o routine in overload nella medesima classe. Se tuttavia si usa `Overloads` in una dichiarazione, è necessario usarlo in tutte.  
   
--   **Shadowing e overload.** `Overloads` è anche utilizzabile per nascondere un membro esistente o un set di membri in overload, in una classe base. Quando si usa `Overloads` a questo scopo, è necessario dichiarare la proprietà o il metodo con lo stesso nome e lo stesso elenco di parametri del membro della classe base, senza specificare la parola chiave `Shadows`.  
+- **Shadowing e overload.** `Overloads` è anche utilizzabile per nascondere un membro esistente o un set di membri in overload, in una classe base. Quando si usa `Overloads` a questo scopo, è necessario dichiarare la proprietà o il metodo con lo stesso nome e lo stesso elenco di parametri del membro della classe base, senza specificare la parola chiave `Shadows`.  
   
  Se si usa `Overrides`, il compilatore aggiunge implicitamente `Overloads` in modo che le API della libreria funzionino più facilmente con C#.  
   

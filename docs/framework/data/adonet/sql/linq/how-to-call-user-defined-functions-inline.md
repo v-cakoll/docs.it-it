@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
 ms.openlocfilehash: ed8071352902b8f97445cbfa5ff0ebe8fead9bb9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903253"
 ---
 # <a name="how-to-call-user-defined-functions-inline"></a>Procedura: Chiamare funzioni inline definite dall'utente
 Anche se è possibile chiamare le funzioni inline definite dall'utente, le funzioni incluse in una query la cui esecuzione è rinviata non vengono eseguite finche non verrà eseguita la query. Per altre informazioni, vedere [Introduzione alle query LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
@@ -21,7 +21,7 @@ Anche se è possibile chiamare le funzioni inline definite dall'utente, le funzi
 SELECT dbo.ReverseCustName(@p0)  
 ```  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Crea gli elementi seguenti:  
+ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene creato quanto segue:  
   
  [!code-csharp[DLinqUDFS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#4)]
  [!code-vb[DLinqUDFS#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#4)]  

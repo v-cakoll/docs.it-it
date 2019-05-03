@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
 ms.openlocfilehash: 2203511e91254c270c59b5d298dd87a5b3737109
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913627"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>Procedura: Spostare ToolStripMenuItems
 In fase di progettazione, è possibile passare interi menu di primo livello e i relativi elementi in un'altra posizione di <xref:System.Windows.Forms.MenuStrip>. È anche possibile spostare singole voci di menu tra menu di primo livello o modificare la posizione delle voci di menu all'interno di un menu.  
@@ -74,4 +74,4 @@ In fase di progettazione, è possibile passare interi menu di primo livello e i 
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Panoramica del controllo MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Panoramica sul controllo MenuStrip](menustrip-control-overview-windows-forms.md)

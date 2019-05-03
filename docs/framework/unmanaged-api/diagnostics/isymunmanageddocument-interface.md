@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33213aced635549dd439cf679d89367a71baa7c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939776"
 ---
 # <a name="isymunmanageddocument-interface"></a>Interfaccia ISymUnmanagedDocument
 Rappresenta un documento al quale fa riferimento un archivio di simboli. Un documento è definito da un uniform resource locator (URL) e un GUID del tipo di documento. È possibile individuare il documento indipendentemente dal modo in cui viene archiviato usando l'URL e GUID del tipo di documento. È possibile archiviare l'origine del documento nell'archivio simboli e recuperarlo tramite questa interfaccia.  
@@ -43,4 +43,4 @@ Rappresenta un documento al quale fa riferimento un archivio di simboli. Un docu
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce dell'archivio dei simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interfacce dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

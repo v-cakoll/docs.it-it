@@ -2,12 +2,12 @@
 title: Flusso di controllo in programmi asincroni (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 45d349fa131daf3fdf39d29d53d8ec236c79f81f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150602"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59326203"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Flusso di controllo in programmi asincroni (C#)
 
@@ -97,13 +97,13 @@ Length of the downloaded string: 33946.
 
 ### <a name="download-the-program"></a>Scaricare il programma
 
-È possibile scaricare l'applicazione di questo argomento da [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Esempio di attività asincrona: flusso di controllo in programmi asincroni). I passaggi seguenti consentono di aprire ed eseguire il programma.
+È possibile scaricare l'applicazione di questo argomento da [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Esempio di codice asincrono: flusso di controllo in programmi asincroni). I passaggi seguenti consentono di aprire ed eseguire il programma.
 
-1.  Decomprimere il file scaricato e quindi avviare Visual Studio.
+1. Decomprimere il file scaricato e quindi avviare Visual Studio.
 
-2.  Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.
+2. Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.
 
-3.  Passare alla cartella che contiene il codice di esempio decompresso, aprire il file della soluzione (SLN) e quindi premere **F5** per compilare ed eseguire il progetto.
+3. Passare alla cartella che contiene il codice di esempio decompresso, aprire il file della soluzione (SLN) e quindi premere **F5** per compilare ed eseguire il progetto.
 
 ### <a name="create-the-program-yourself"></a>Creare il programma autonomamente
 
@@ -111,23 +111,23 @@ Il seguente progetto Windows Presentation Foundation (WPF) contiene gli esempi d
 
 Per eseguire il progetto, effettuare i passaggi seguenti:
 
-1.  Avviare Visual Studio.
+1. Avviare Visual Studio.
 
-2.  Nella barra dei menu scegliere **File** > **Nuovo** > **Progetto**.
+2. Nella barra dei menu scegliere **File** > **Nuovo** > **Progetto**.
 
      Verrà visualizzata la finestra di dialogo **Nuovo progetto** .
 
-3.  Scegliere la categoria **Installato** > **Visual C#** > **Desktop di Windows**, quindi scegliere **App WPF** dall'elenco dei modelli di progetto.
+3. Scegliere la categoria **Installato** > **Visual C#** > **Desktop di Windows**, quindi scegliere **App WPF** dall'elenco dei modelli di progetto.
 
-4.  Immettere `AsyncTracer` come nome del progetto, quindi scegliere il pulsante **OK**.
+4. Immettere `AsyncTracer` come nome del progetto, quindi scegliere il pulsante **OK**.
 
      Il nuovo progetto verrà visualizzato in **Esplora soluzioni**.
 
-5.  Nell'Editor di codice di Visual Studio scegliere la scheda **MainWindow.xaml** .
+5. Nell'Editor di codice di Visual Studio scegliere la scheda **MainWindow.xaml** .
 
      Se la scheda non è visibile, aprire il menu di scelta rapida per MainWindow.xaml in **Esplora soluzioni** e scegliere **Visualizza codice**.
 
-6.  Nella visualizzazione **XAML** di MainWindow.xaml sostituire il codice con quello riportato di seguito.
+6. Nella visualizzazione **XAML** di MainWindow.xaml sostituire il codice con quello riportato di seguito.
 
     ```csharp
     <Window
@@ -145,9 +145,9 @@ Per eseguire il progetto, effettuare i passaggi seguenti:
 
      Nella visualizzazione **Progettazione** di MainWindow.xaml viene visualizzata una finestra semplice contenente una casella di testo e un pulsante.
 
-7.  Aggiunge un riferimento a <xref:System.Net.Http>.
+7. Aggiunge un riferimento a <xref:System.Net.Http>.
 
-8.  In **Esplora soluzioni** aprire il menu di scelta rapida per MainWindow.xaml.cs e quindi scegliere **Visualizza codice**.
+8. In **Esplora soluzioni** aprire il menu di scelta rapida per MainWindow.xaml.cs e quindi scegliere **Visualizza codice**.
 
 9. Sostituire il codice in MainWindow.xaml.cs con quello riportato di seguito.
 
@@ -390,4 +390,4 @@ int contentLength = await getLengthTask;
 - [Programmazione asincrona con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Tipi restituiti asincroni (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
 - [Procedura dettagliata: Accesso al Web con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Esempio di attività asincrona: Flusso di controllo in programmi asincroni (C# e Visual Basic))
+- [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Esempio di codice asincrono: Flusso di controllo in programmi asincroni - C# e Visual Basic)

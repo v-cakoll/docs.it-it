@@ -3,12 +3,12 @@ title: Migrazione da DNX all'interfaccia della riga di comando .NET Core
 description: Eseguire la migrazione dagli strumenti DNX agli strumenti dell'interfaccia della riga di comando di .NET Core.
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 006e909be03ec3d090135f32f7ba13311201f81e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 0f00ee6c05a47d976028c3cd4eade2b2b399260b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "57845722"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160836"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrazione da DNX all'interfaccia della riga di comando di .NET Core (project.json)
 
@@ -46,7 +46,6 @@ Si fa riferimento a un runtime in `project.json` aggiungendo alle dipendenze un 
 Se si usa DNX, sono disponibili i comandi di uno dei tre componenti (DNX, DNU o DNVM). Con l'interfaccia della riga di comando, alcuni di questi comandi risultano diversi, alcuni non sono disponibili e altri infine sono uguali ma con una semantica leggermente differente.
 
 La tabella seguente mostra il mapping tra i comandi DNX/DNU e i corrispondenti comandi dell'interfaccia della riga di comando.
-
 
 | Comando DNX                    | Comando dell'interfaccia della riga di comando    | Description                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
@@ -118,8 +117,8 @@ Al termine di queste operazioni, è necessario decidere il tipo di portabilità 
 
 Una volta deciso il tipo di portabilità, è necessario modificare i framework di destinazione. Se si stanno creando applicazioni per .NET Core, è probabile che come framework di destinazione venga usato `dnxcore50`. Con l'interfaccia della riga di comando e le modifiche apportate dal nuovo [.NET Standard](../../standard/net-standard.md), è necessario che il framework sia uno dei seguenti:
 
-1. `netcoreapp1.0`: se si stanno creando applicazioni in .NET Core (incluse applicazioni ASP.NET Core)
-2. `netstandard1.6`: se si stanno creando librerie di classi per .NET Core
+1. `netcoreapp1.0` - se si stanno creando applicazioni in .NET Core (incluse applicazioni ASP.NET Core)
+2. `netstandard1.6` - se si stanno creando librerie di classi per .NET Core
 
 Se si usano altre destinazioni `dnx`, ad esempio `dnx451`, sarà necessario modificare anche tali destinazioni. `dnx451` deve essere modificato in `net451`.
 Per altre informazioni, vedere l'argomento [.NET Standard](../../standard/net-standard.md).

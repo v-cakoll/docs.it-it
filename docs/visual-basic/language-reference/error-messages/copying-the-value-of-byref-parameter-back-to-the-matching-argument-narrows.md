@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
 ms.openlocfilehash: fa8607bf72dfb344048ec82514182dcb6810274d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803857"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>Quando il valore del parametro 'ByRef' '\<nomeparametro >' nell'argomento corrispondente viene convertito dal tipo '\<NomeTipo1 >' nel tipo '\<in NomeTipo2 >'
 Una routine viene chiamata con un argomento che può ampliarsi nel tipo di parametro corrispondente e la conversione dal parametro per l'argomento è di restrizione.  
@@ -27,11 +27,11 @@ Una routine viene chiamata con un argomento che può ampliarsi nel tipo di param
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Se possibile, usare un argomento chiamante dello stesso tipo del parametro di routine, in modo che Visual Basic non è necessario eseguire alcuna conversione.  
+- Se possibile, usare un argomento chiamante dello stesso tipo del parametro di routine, in modo che Visual Basic non è necessario eseguire alcuna conversione.  
   
--   Se è necessario chiamare la routine con un tipo di argomento diverso dal tipo del parametro, ma non è necessario restituire un valore nell'argomento chiamante, definire il parametro in modo che sia [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) invece che `ByRef`.  
+- Se è necessario chiamare la routine con un tipo di argomento diverso dal tipo del parametro, ma non è necessario restituire un valore nell'argomento chiamante, definire il parametro in modo che sia [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) invece che `ByRef`.  
   
--   Se è necessario restituire un valore nell'argomento chiamante, definire l'operatore di conversione inverso come [Widening](../../../visual-basic/language-reference/modifiers/widening.md), se possibile.  
+- Se è necessario restituire un valore nell'argomento chiamante, definire l'operatore di conversione inverso come [Widening](../../../visual-basic/language-reference/modifiers/widening.md), se possibile.  
   
 ## <a name="see-also"></a>Vedere anche
 

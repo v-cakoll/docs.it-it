@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
 ms.openlocfilehash: 6bf2eb3d295f9cbf6a7e13a612d5846ceaa75ab4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778300"
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>Procedura: Esportare metadati da endpoint del servizio
 In questo argomento viene illustrato come esportare metadati da endpoint del servizio.  
@@ -59,4 +59,4 @@ In questo argomento viene illustrato come esportare metadati da endpoint del ser
 
 - [Panoramica dell'architettura dei metadati](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Uso di metadati](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Endpoint: indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Endpoint: Gli indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

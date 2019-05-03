@@ -12,11 +12,11 @@ ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6fca7359888b8b73b2e1cf709ab708d71abf0db6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787894"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>Interfacce dell'archivio dei simboli di diagnostica
 Questo argomento descrive le interfacce non gestite che consentono a un compilatore di generare informazioni sui simboli per l'uso da un debugger.  
@@ -26,13 +26,13 @@ Questo argomento descrive le interfacce non gestite che consentono a un compilat
  Fornisce metodi che consentono di visualizzare informazioni correnti di associazione dell'applicazione in esecuzione.  
   
  [Interfaccia IDebugAutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)  
- Definisce l'interfaccia per la connessione automatico di un debugger richiamato al server.  
+ Definisce l'interfaccia per la connessione automatico di un debugger viene richiamato server.  
   
  [Interfaccia INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
  Dichiara i metodi per la registrazione e annullamento della registrazione di un'origine di notifica di connessione.  
   
  [Interfaccia INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- Dichiara i metodi per la notifica di sink.  
+ Dichiara i metodi per la notifica ai sink.  
   
  [Interfaccia INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
  Dichiara un metodo per impostare i filtri di notifica.  
@@ -41,10 +41,10 @@ Questo argomento descrive le interfacce non gestite che consentono a un compilat
  Vengono fornite informazioni per la funzionalità Modifica e continuazione.  
   
  [Interfaccia ISymUnmanagedAsyncMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)  
- Questa interfaccia rappresenta il complemento di lettura per [interfaccia ISymUnmanagedAsyncMethodPropertiesWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  
+ Questa interfaccia è il complemento di lettura per il [interfaccia ISymUnmanagedAsyncMethodPropertiesWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  
   
  [Interfaccia ISymUnmanagedAsyncMethodPropertiesWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)  
- Consente la definizione delle informazioni sul metodo async facoltativo per ogni simbolo del metodo. Deve utilizzare con un metodo di aperto (vale a dire, tra le chiamate al [OpenMethod (metodo)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)e [CloseMethod (metodo)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
+ Consente la definizione delle informazioni sul metodo async facoltativo per ogni simbolo del metodo. Deve utilizzare con un metodo aperto (vale a dire, tra le chiamate al [OpenMethod (metodo)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)e il [CloseMethod (metodo)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
   
  [Interfaccia ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
  Rappresenta un raccoglitore di simboli per codice non gestito.  
@@ -77,10 +77,10 @@ Questo argomento descrive le interfacce non gestite che consentono a un compilat
  Rappresenta uno spazio dei nomi.  
   
  [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)  
- Rappresenta un lettore di simboli che fornisce l'accesso a documenti, metodi e variabili all'interno di un archivio dei simboli.  
+ Rappresenta un lettore di simboli che fornisce accesso ai documenti, metodi e le variabili all'interno di un archivio simboli.  
   
  [Interfaccia ISymUnmanagedReader2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)  
- Ottiene un metodo del lettore di simboli specificato un token di metodo e un numero di versione di modifica e copia.  
+ Ottiene un metodo del lettore di simboli dato un token di metodo e un numero di versione di modifica e copia.  
   
  [Interfaccia ISymUnmanagedReaderSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)  
  Fornisce metodi per ottenere informazioni sui simboli di ricerca.  
@@ -89,13 +89,13 @@ Questo argomento descrive le interfacce non gestite che consentono a un compilat
  Rappresenta un ambito lessicale in un metodo.  
   
  [Interfaccia ISymUnmanagedScope2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)  
- Rappresenta un ambito lessicale in un metodo ed estende il `ISymUnmanagedScope` interfaccia con metodi che ottengono informazioni sulle costanti definite all'interno dell'ambito...  
+ Rappresenta un ambito lessicale in un metodo ed estende il `ISymUnmanagedScope` interfacciarsi con i metodi che ottengono informazioni sulle costanti definite all'interno dell'ambito...  
   
  [Interfaccia ISymUnmanagedSourceServerModule](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)  
  Fornisce i dati di server di origine per un modulo.  
   
  [Interfaccia ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)  
- Fornisce metodi per ottenere informazioni sul percorso di ricerca.  
+ Fornisce metodi che ottengono informazioni sul percorso di ricerca.  
   
  [Interfaccia ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
  Rappresenta una variabile, ad esempio un parametro, una variabile locale o un campo.  

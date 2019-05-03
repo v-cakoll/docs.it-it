@@ -3,12 +3,12 @@ title: Creare un client REST usando .NET Core
 description: Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: a375215f2d31845333290c85f7701c1a7dfbe780
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 332e47d9a02f48c53bbad272477768fa4c0367f2
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412305"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612066"
 ---
 # <a name="rest-client"></a>Client REST
 
@@ -66,7 +66,7 @@ Dopo aver apportato queste modifiche, eseguire nuovamente `dotnet restore` ([ved
 
 ## <a name="making-web-requests"></a>Esecuzione di richieste Web
 
-Si è ora pronti per iniziare a recuperare dati dal Web. In questa applicazione si leggeranno informazioni dall'[API GitHub](https://developer.github.com/v3/). In particolare, si leggeranno informazioni sui progetti nell'ambito di [.NET Foundation](https://www.dotnetfoundation.org/). Si inizierà inviando all'API GitHub la richiesta di recuperare informazioni sui progetti. L'endpoint che verrà usato è: [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos). Poiché si vuole recuperare tutte le informazioni su questi progetti, si userà una richiesta HTTP GET.
+Si è ora pronti per iniziare a recuperare dati dal Web. In questa applicazione si leggeranno informazioni dall'[API GitHub](https://developer.github.com/v3/). In particolare, si leggeranno informazioni sui progetti nell'ambito di [.NET Foundation](https://www.dotnetfoundation.org/). Si inizierà inviando all'API GitHub la richiesta di recuperare informazioni sui progetti. L'endpoint che verrà usato è: <https://api.github.com/orgs/dotnet/repos>. Poiché si vuole recuperare tutte le informazioni su questi progetti, si userà una richiesta HTTP GET.
 Anche il browser usa richieste HTTP GET ed è quindi possibile incollare l'URL nel browser per visualizzare le informazioni che si riceveranno ed elaboreranno.
 
 Per eseguire richieste Web, usare la classe <xref:System.Net.Http.HttpClient>. Come tutte le API .NET moderne, <xref:System.Net.Http.HttpClient> supporta solo metodi asincroni per le API a esecuzione prolungata.

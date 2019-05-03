@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
 ms.openlocfilehash: 3c0763f21940831f401194356dc25b0d99c8d6f2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765635"
 ---
 # <a name="expose-your-data-as-a-service-wcf-data-services"></a>Esporre i dati come servizio (WCF Data Services)
 

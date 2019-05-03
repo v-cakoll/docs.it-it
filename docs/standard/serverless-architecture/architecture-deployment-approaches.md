@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 5477b8c4531780fdebf194e4f798564e59cd2953
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640250"
 ---
-# <a name="architecture-deployment-approaches"></a>Approcci alla distribuzione di architettura
+# <a name="architecture-deployment-approaches"></a>Approcci alla distribuzione dell'architettura
 
 Indipendentemente dall'architettura di approccio utilizzato per progettare un'applicazione aziendale, l'implementazione o la distribuzione di tali applicazioni può variare. Le aziende ospitano applicazioni su tutti gli elementi dall'hardware fisico per le funzioni senza server.
 
@@ -109,7 +109,7 @@ Per altre informazioni sull'orchestrazione, vedere [Kubernetes in Azure](https:/
 
 Funzioni come servizio (FaaS) è un servizio contenitore specializzato che è simile a senza server. Un'implementazione specifica di FaaS, chiamato [OpenFaaS](https://github.com/openfaas/faas), si sovrappone a contenitori per fornire funzionalità senza server. OpenFaaS fornisce modelli di tale pacchetto tutte le dipendenze di contenitore necessarie per l'esecuzione di un frammento di codice. Usando i modelli semplifica il processo di distribuzione del codice come un'unità funzionale. OpenFaaS ha come destinazione le architetture che includono già i contenitori e gli agenti di orchestrazione perché può usare l'infrastruttura esistente. Anche se fornisce la funzionalità senza server, in particolare richiede di usare Docker e un agente di orchestrazione.
 
-## <a name="serverless"></a>Senza server
+## <a name="serverless"></a>Serverless
 
 Un'architettura senza server garantisce una netta separazione tra il codice e il relativo ambiente host. Implementare il codice in un *funzione* che viene richiamato da un *trigger*. Dopo tale funzione viene chiusa, tutte le risorse necessarie potrebbero essere liberate. Il trigger può essere manuale, un processo programmato, una richiesta HTTP o caricare un file. Il risultato del trigger è l'esecuzione del codice. Sebbene le piattaforme senza server variano, più forniscono l'accesso alle API e le associazioni predefinite per semplificare attività quali la scrittura in un database o accodamento dei risultati.
 
@@ -136,11 +136,11 @@ Un'infrastruttura senza server è in genere descritti nel contesto di calcolo, m
 
 È disponibile un'ampia gamma di scelte disponibili per l'architettura, tra cui un approccio ibrido. Serverless semplifica l'approccio, la gestione e dei costi delle funzionalità dell'applicazione a scapito di controllo e la portabilità. Tuttavia, molte piattaforme senza server espone configurazione in modo da ottimizzarne la soluzione. Le procedure di programmazione possono causare al codice più portabile e meno blocco aggiuntivo piattaforma senza server. La tabella seguente illustra gli approcci di architettura fianco a fianco. Scegliere senza server base di scalabilità di esigenze, se si desidera gestire il runtime e come è possibile suddividere i carichi di lavoro in piccoli componenti. Si apprenderà sulle potenziali sfide da affrontare con senza server e altri punti di decisione nel capitolo successivo.
 
-|         |IaaS     |PaaS     |Contenitore|Senza server|
+|         |IaaS     |PaaS     |Contenitore|Serverless|
 |---------|---------|---------|---------|----------|
-|**Scala**|MACCHINA VIRTUALE       |Istanza |App      |Funzione  |
+|**Scala**|VM       |Istanza |App      |Funzione  |
 |**Consente di astrarre**|Hardware|Piattaforma|Sistema operativo Host|Runtime   |
-|**Unità** |MACCHINA VIRTUALE       |Progetto  |Image    |Codice      |
+|**Unit** |VM       |Progetto  |Image    |Codice      |
 |**Durata**|Mesi|Giorni o mesi|Minuti a giorni|Millisecondi a pochi minuti|
 |**responsabilità**|Le applicazioni, le dipendenze, runtime e del sistema operativo|Le applicazioni e dipendenze|Le applicazioni, le dipendenze e runtime|Funzione
 
@@ -156,10 +156,10 @@ Il capitolo successivo verrà concentrati sull'architettura senza server, casi d
 
 * [Guida all'architettura delle applicazione Azure](https://docs.microsoft.com/azure/architecture/guide/)
 * [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
-* [SQL di Azure](https://docs.microsoft.com/azure/sql-database)
+* [Azure SQL](https://docs.microsoft.com/azure/sql-database)
 * [Modello di architettura a più livelli](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
 * [Kubernetes in Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-* [Microservizi](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
+* [Microservices](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
 * [Architettura di riferimento a più livelli di macchine virtuali](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
 * [Macchine virtuali](https://docs.microsoft.com/azure/virtual-machines/)
 * [Che cos'è Docker?](../microservices-architecture/container-docker-introduction/docker-defined.md)

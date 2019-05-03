@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
 ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010150"
 ---
 # <a name="custom-animations-overview"></a>Cenni preliminari sulle animazioni personalizzate
 Questo argomento descrive come e quando estendere il sistema di animazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] creando fotogrammi chiave e classi di animazione personalizzati o usando il callback per frame come alternativa al sistema.  
@@ -28,11 +28,11 @@ Questo argomento descrive come e quando estendere il sistema di animazione [!INC
 ## <a name="extending-the-animation-system"></a>Estensione del sistema di animazione  
  Esistono diversi modi per estendere il sistema di animazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], a seconda del livello di funzionalità incorporate che si desidera usare.  Esistono tre punti di estendibilità principali nel motore di animazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   Creare un oggetto fotogramma chiave personalizzato ereditando da una delle  *\<tipo >* classi fotogramma chiave, ad esempio <xref:System.Windows.Media.Animation.DoubleKeyFrame>. Questo approccio usa la maggior parte delle funzionalità incorporate del motore di animazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+- Creare un oggetto fotogramma chiave personalizzato ereditando da una delle  *\<tipo >* classi fotogramma chiave, ad esempio <xref:System.Windows.Media.Animation.DoubleKeyFrame>. Questo approccio usa la maggior parte delle funzionalità incorporate del motore di animazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
--   Creare una classe di animazione personalizzato ereditando da <xref:System.Windows.Media.Animation.AnimationTimeline> o uno dei  *\<tipo >* classi AnimationBase.  
+- Creare una classe di animazione personalizzato ereditando da <xref:System.Windows.Media.Animation.AnimationTimeline> o uno dei  *\<tipo >* classi AnimationBase.  
   
--   Usare il callback per frame per generare animazioni per frame. Questo approccio ignora completamente il sistema di animazione e di intervalli.  
+- Usare il callback per frame per generare animazioni per frame. Questo approccio ignora completamente il sistema di animazione e di intervalli.  
   
  La tabella seguente descrive alcuni scenari per l'estensione del sistema di animazione.  
   
@@ -47,13 +47,13 @@ Questo argomento descrive come e quando estendere il sistema di animazione [!INC
 ## <a name="create-a-custom-key-frame"></a>Creare un fotogramma chiave personalizzato  
  La creazione di una classe di fotogramma chiave personalizzata rappresenta il modo più semplice per estendere il sistema di animazione. È consigliabile usare questo approccio quando si desidera usare un metodo di interpolazione diverso per un'animazione con fotogrammi chiave.  Come descritto in [Cenni preliminari sulle animazioni con fotogrammi chiave](key-frame-animations-overview.md), un'animazione con fotogrammi chiave usa oggetti fotogramma chiave per generare i valori di output. Ogni oggetto fotogramma chiave esegue tre funzioni:  
   
--   Specifica un valore di destinazione utilizzando il <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> proprietà.  
+- Specifica un valore di destinazione utilizzando il <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> proprietà.  
   
--   Specifica l'ora in cui tale valore deve essere raggiunto utilizzando relativo <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> proprietà.  
+- Specifica l'ora in cui tale valore deve essere raggiunto utilizzando relativo <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> proprietà.  
   
--   Crea un'interpolazione tra il valore del fotogramma chiave precedente e il proprio valore implementando il metodo InterpolateValueCore.  
+- Crea un'interpolazione tra il valore del fotogramma chiave precedente e il proprio valore implementando il metodo InterpolateValueCore.  
   
- **Per istruzioni sull'implementazione**  
+ **Istruzioni per l'implementazione**  
   
  Eseguire la derivazione dalla classe astratta *\<Tipo>* KeyFrame e implementare il metodo InterpolateValueCore. Il metodo InterpolateValueCore restituisce il valore corrente del fotogramma chiave. Accetta due parametri: il valore del fotogramma chiave precedente e un valore di avanzamento compreso tra 0 e 1. Un avanzamento pari a 0 indica che il fotogramma chiave è appena stata avviata e un valore pari a 1 indica che il fotogramma chiave è appena stato completato e deve restituire il valore specificato dal relativo <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> proprietà.  
   
@@ -68,7 +68,7 @@ Questo argomento descrive come e quando estendere il sistema di animazione [!INC
 ### <a name="derive-from-typeanimationbase"></a>Derivazione dalla classe \<Tipo>AnimationBase  
  La derivazione da una classe *\<Tipo>* AnimationBase è il modo più semplice per creare un nuovo tipo di animazione. Usare questo approccio quando si desidera creare una nuova animazione per il tipo che dispone già di una classe *\<Tipo>* AnimationBase.  
   
- **Per istruzioni sull'implementazione**  
+ **Istruzioni per l'implementazione**  
   
  Eseguire la derivazione di una classe *\<Tipo>* Animation e implementare il metodo GetCurrentValueCore. Il metodo GetCurrentValueCore restituisce il valore corrente dell'animazione. Accetta tre parametri: un valore iniziale suggerito, un valore finale suggerito e un <xref:System.Windows.Media.Animation.AnimationClock>, utilizzabile per determinare lo stato di avanzamento dell'animazione.  
   
@@ -83,17 +83,17 @@ Questo argomento descrive come e quando estendere il sistema di animazione [!INC
 ### <a name="derive-from-animationtimeline"></a>Derivazione dalla classe AnimationTimeline  
  Derivare dal <xref:System.Windows.Media.Animation.AnimationTimeline> classe quando si desidera creare un'animazione per un tipo che non dispone già di un oggetto corrispondente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] l'animazione o si vuole creare un'animazione che non sia fortemente tipizzata.  
   
- **Per istruzioni sull'implementazione**  
+ **Istruzioni per l'implementazione**  
   
  Derivativo di <xref:System.Windows.Media.Animation.AnimationTimeline> classe ed eseguire l'override dei membri seguenti:  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A> : Se la nuova classe è concreta, è necessario eseguire l'override <xref:System.Windows.Freezable.CreateInstanceCore%2A> per restituire una nuova istanza della classe.  
+- <xref:System.Windows.Freezable.CreateInstanceCore%2A> : Se la nuova classe è concreta, è necessario eseguire l'override <xref:System.Windows.Freezable.CreateInstanceCore%2A> per restituire una nuova istanza della classe.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> : Eseguire l'override di questo metodo per restituire il valore corrente dell'animazione. Accetta tre parametri: un valore di origine predefinito, un valore di destinazione predefinito e un <xref:System.Windows.Media.Animation.AnimationClock>. Usare il <xref:System.Windows.Media.Animation.AnimationClock> per ottenere l'ora corrente o avanzamento dell'animazione. L'uso dei valori predefiniti di origine e destinazione è facoltativo.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> : Eseguire l'override di questo metodo per restituire il valore corrente dell'animazione. Accetta tre parametri: un valore di origine predefinito, un valore di destinazione predefinito e un <xref:System.Windows.Media.Animation.AnimationClock>. Usare il <xref:System.Windows.Media.Animation.AnimationClock> per ottenere l'ora corrente o avanzamento dell'animazione. L'uso dei valori predefiniti di origine e destinazione è facoltativo.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> : Eseguire l'override di questa proprietà per indicare se l'animazione Usa il valore di destinazione predefinito specificato per il <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> (metodo).  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> : Eseguire l'override di questa proprietà per indicare se l'animazione Usa il valore di destinazione predefinito specificato per il <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> (metodo).  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> : Eseguire l'override di questa proprietà per indicare il <xref:System.Type> di output prodotto dall'animazione.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> : Eseguire l'override di questa proprietà per indicare il <xref:System.Type> di output prodotto dall'animazione.  
   
  Se la classe non usa le proprietà di dipendenza per archiviare i dati o richiede un'altra inizializzazione dopo la creazione, potrebbe essere necessario eseguire l'override di altri metodi. Per altre informazioni, vedere [Cenni preliminari sugli oggetti Freezable](../advanced/freezable-objects-overview.md).  
   
@@ -111,7 +111,7 @@ Questo argomento descrive come e quando estendere il sistema di animazione [!INC
 ## <a name="use-per-frame-callback"></a>Usare il callback per frame  
  Usare questo approccio quando è necessario ignorare completamente il sistema di animazione di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Uno scenario di questo approccio è rappresentato dalle animazioni fisiche, dove a ciascun passaggio dell'animazione è necessario ricalcolare una nuova direzione o posizione degli oggetti animati in base all'ultima serie di interazioni dell'oggetto.  
   
- **Per istruzioni sull'implementazione**  
+ **Istruzioni per l'implementazione**  
   
  A differenza degli altri approcci descritti in questa panoramica, per usare un callback per frame non è necessario creare un'animazione personalizzata o una classe con fotogrammi chiave.  
   

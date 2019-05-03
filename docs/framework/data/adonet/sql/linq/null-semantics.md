@@ -3,11 +3,11 @@ title: Semantica Null
 ms.date: 03/30/2017
 ms.assetid: a97017ae-d634-4cf3-bbaf-054a528fd683
 ms.openlocfilehash: eb1e96ba44c5d64e8366a654c2d06d89c9b46c9a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767539"
 ---
 # <a name="null-semantics"></a>Semantica Null
 Nella tabella seguente vengono forniti collegamenti alle varie parti della [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentazione in cui `null` (`Nothing` in Visual Basic) vengono descritti i problemi.  

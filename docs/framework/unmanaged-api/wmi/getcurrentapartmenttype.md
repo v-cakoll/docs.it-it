@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ead1c1a91b910e7cfbb09f17ba823fc7a77ce0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609009"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType (funzione)
 Recupera il tipo di apartment in cui il chiamante è in esecuzione.   

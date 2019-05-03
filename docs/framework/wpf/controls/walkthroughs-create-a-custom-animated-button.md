@@ -1,5 +1,5 @@
 ---
-title: 'Procedure dettagliate: Creare un pulsante animato personalizzato'
+title: "Procedure dettagliate: Creare un pulsante personalizzato a cui è stata aggiunta un'animazione"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom animated buttons [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
 ms.openlocfilehash: 3c601641a0eb1024722b4f449f0ab23e54fe93dd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024469"
 ---
-# <a name="walkthroughs-create-a-custom-animated-button"></a>Procedure dettagliate: Creare un pulsante animato personalizzato
+# <a name="walkthroughs-create-a-custom-animated-button"></a>Procedure dettagliate: Creare un pulsante personalizzato a cui è stata aggiunta un'animazione
 Come suggerisce il nome, Windows Presentation Foundation (WPF) è molto utile per offrire ai clienti esperienze avanzato di presentazione. Queste procedure dettagliate illustrano come personalizzare l'aspetto e il comportamento di un pulsante (compresi le animazioni). Questa personalizzazione viene eseguita usando un stile di visualizzazione e un modello in modo che sia possibile applicare facilmente questo pulsante personalizzato a tutti i pulsanti nell'applicazione. La figura seguente mostra il pulsante personalizzato che verrà creato.  
   
  ![Pulsante personalizzato che si creeranno](./media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  

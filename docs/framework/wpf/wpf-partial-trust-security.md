@@ -16,11 +16,11 @@ helpviewer_keywords:
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
 ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696535"
 ---
 # <a name="wpf-partial-trust-security"></a>Sicurezza con attendibilità parziale in WPF
 <a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] e linguaggi di scripting lato client non sono in grado di accedere alle risorse di sistema critiche. Poiché le applicazioni ospitate da browser di Windows Presentation Foundation (WPF) possono essere avviate dal browser, devono essere conformi a una serie di restrizioni. Per applicare queste restrizioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] si basa su entrambe [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] e [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (vedere [strategia di sicurezza WPF - sicurezza della piattaforma](wpf-security-strategy-platform-security.md)). Per impostazione predefinita, le applicazioni ospitate da browser richiedono l'area Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] set di autorizzazioni, indipendentemente dal fatto che vengano avviate da Internet, intranet locale o nel computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  
@@ -29,11 +29,11 @@ ms.locfileid: "59218381"
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
--   [Supporto con attendibilità parziale della funzionalità WPF](#WPF_Feature_Partial_Trust_Support)  
+- [Supporto con attendibilità parziale della funzionalità WPF](#WPF_Feature_Partial_Trust_Support)  
   
--   [Programmazione con attendibilità parziale](#Partial_Trust_Programming)  
+- [Programmazione con attendibilità parziale](#Partial_Trust_Programming)  
   
--   [Gestione delle autorizzazioni](#Managing_Permissions)  
+- [Gestione delle autorizzazioni](#Managing_Permissions)  
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>Supporto con attendibilità parziale della funzionalità WPF  
@@ -52,19 +52,19 @@ ms.locfileid: "59218381"
   
  Questa tabella descrive le [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] funzionalità a livello generale. Per altre informazioni, il [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] documenta le autorizzazioni necessarie per ogni membro nel [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Inoltre, per le funzionalità seguenti sono disponibili informazioni più dettagliate sull'esecuzione in situazioni di attendibilità parziale, con alcune considerazioni speciali.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (vedere [Cenni preliminari su XAML (WPF)](./advanced/xaml-overview-wpf.md)).  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (vedere [Cenni preliminari su XAML (WPF)](./advanced/xaml-overview-wpf.md)).  
   
--   I popup (vedere <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
+- I popup (vedere <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
--   Trascinamento della selezione (vedere [Drag and Drop Overview](./advanced/drag-and-drop-overview.md)).  
+- Trascinamento della selezione (vedere [Drag and Drop Overview](./advanced/drag-and-drop-overview.md)).  
   
--   Appunti (vedere <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
+- Appunti (vedere <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
   
--   Creazione di immagini (vedere <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
+- Creazione di immagini (vedere <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
   
--   Serializzazione (vedere <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
+- Serializzazione (vedere <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
   
--   Aprire la finestra di dialogo File (vedere <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
+- Aprire la finestra di dialogo File (vedere <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
   
  La tabella seguente descrive il [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autorizzazione set di zone di funzionalità che non sono sicura per l'esecuzione entro i limiti di Internet.  
   
@@ -153,11 +153,11 @@ ms.locfileid: "59218381"
   
  Per aumentare il numero di autorizzazioni, è necessario modificare le impostazioni del progetto e il manifesto dell'applicazione ClickOnce. Per altre informazioni, vedere [Panoramica delle applicazioni browser XAML di WPF](./app-development/wpf-xaml-browser-applications-overview.md). Anche i seguenti documenti possono rivelarsi utili.  
   
--   [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
+- [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
--   [MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
+- [MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
   
--   [Sicurezza di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
+- [Sicurezza di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
  Se il [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] richiede attendibilità totale, è possibile usare gli stessi strumenti per aumentare le autorizzazioni necessarie. Sebbene un [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] con attendibilità totale verrà ottenuta solo se è installata e avviata dal computer locale, la rete intranet o da un URL elencato nella finestra del browser attendibili o consentiti siti. Se l'applicazione viene installata dalla Intranet o da un sito attendibile, verrà visualizzato all'utente il prompt standard di ClickOnce con la notifica relativa alle autorizzazioni elevate. L'utente potrà scegliere se continuare o annullare l'installazione.  
   

@@ -5,11 +5,11 @@ ms.assetid: aaa0e5c0-be9d-4fe1-8418-5295b9b184d6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e4601261971cce32b6d6d9ee7377f725a85103a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946250"
 ---
 # <a name="icordebugloadedmodulegetsize-method"></a>Metodo ICorDebugLoadedModule::GetSize
 Ottiene le dimensioni, in byte, del modulo caricato.  

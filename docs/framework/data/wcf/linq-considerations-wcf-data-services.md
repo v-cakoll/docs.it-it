@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
 ms.openlocfilehash: bac3ff5f08d6dc31b87191934eb5547289fb606d
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59517747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037154"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Considerazioni su LINQ (WCF Data Services)
 In questo argomento vengono fornite informazioni sulla modalità con cui le query LINQ vengono composte ed eseguite quando si usa il client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e sulle limitazioni dell'utilizzo di LINQ per eseguire una query su un servizio dati che implementa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Per altre informazioni sulla composizione e l'esecuzione di query su un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basato su servizio dati, vedere [query sul servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
@@ -61,17 +61,17 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  Negli esempi seguenti vengono illustrate query equivalenti che filtrano le entità `Orders` restituite in modo che vengano restituiti solo gli ordini con un costo di spedizione maggiore di $30:  
   
--   Utilizzo della sintassi di query LINQ:  
+- Utilizzo della sintassi di query LINQ:  
   
 [!code-csharp[Astoria Northwind Client#LinqWhereClauseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqwhereclausespecific)]      
 [!code-vb[Astoria Northwind Client#LinqWhereClauseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqwhereclausespecific)]     
   
--   Utilizzo dei metodi di query LINQ:  
+- Utilizzo dei metodi di query LINQ:  
   
 [!code-csharp[Astoria Northwind Client#LinqWhereMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqwheremethodspecific)]      
 [!code-vb[Astoria Northwind Client#LinqWhereMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqwheremethodspecific)]       
   
--   Opzione `$filter` della stringa di query:  
+- Opzione `$filter` della stringa di query:  
   
 [!code-csharp[Astoria Northwind Client#ExplicitQueryWhereMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#explicitquerywheremethodspecific)]      
 [!code-vb[Astoria Northwind Client#ExplicitQueryWhereMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#explicitquerywheremethodspecific)]       
@@ -82,17 +82,17 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 ### <a name="sorting"></a>Ordinamento  
  Negli esempi seguenti vengono illustrate query equivalenti che ordinano i dati restituiti in base al nome dell'azienda e al codice postale, in ordine decrescente:  
   
--   Utilizzo della sintassi di query LINQ:  
+- Utilizzo della sintassi di query LINQ:  
   
 [!code-csharp[Astoria Northwind Client#LinqOrderByClauseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqorderbyclausespecific)]      
 [!code-vb[Astoria Northwind Client#LinqOrderByClauseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqorderbyclausespecific)]        
   
--   Utilizzo dei metodi di query LINQ:  
+- Utilizzo dei metodi di query LINQ:  
   
 [!code-csharp[Astoria Northwind Client#LinqOrderByMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqorderbymethodspecific)]      
 [!code-vb[Astoria Northwind Client#LinqOrderByMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqorderbymethodspecific)]        
   
--   Opzione `$orderby` della stringa di query:  
+- Opzione `$orderby` della stringa di query:  
   
 [!code-csharp[Astoria Northwind Client#ExplicitQueryOrderByMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#explicitqueryorderbymethodspecific)]      
 [!code-vb[Astoria Northwind Client#ExplicitQueryOrderByMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#explicitqueryorderbymethodspecific)]         
@@ -103,12 +103,12 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 ### <a name="projection"></a>Proiezione  
  Negli esempi seguenti vengono illustrate query equivalenti che ordinano i dati restituiti dal progetto nel tipo `CustomerAddress` più ristretto:  
   
--   Utilizzo della sintassi di query LINQ:  
+- Utilizzo della sintassi di query LINQ:  
   
 [!code-csharp[Astoria Northwind Client#LinqSelectClauseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqselectclausespecific)]      
 [!code-vb[Astoria Northwind Client#LinqSelectClauseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqselectclausespecific)]         
   
--   Utilizzo dei metodi di query LINQ:  
+- Utilizzo dei metodi di query LINQ:  
   
 [!code-csharp[Astoria Northwind Client#LinqSelectMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqselectmethodspecific)]      
 [!code-vb[Astoria Northwind Client#LinqSelectMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqselectmethodspecific)]         
@@ -122,12 +122,12 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 ### <a name="client-paging"></a>Paging del client  
  Negli esempi seguenti vengono illustrate query equivalenti che richiedono una pagina delle entità ordinate che include 25 ordini, ignorando i primi 50 ordini:  
   
--   Applicazione di metodi di query a una query LINQ:  
+- Applicazione di metodi di query a una query LINQ:  
   
 [!code-csharp[Astoria Northwind Client#LinqSkipTakeMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqskiptakemethodspecific)]      
 [!code-vb[Astoria Northwind Client#LinqSkipTakeMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqskiptakemethodspecific)]     
   
--   Opzioni `$skip` e `$top` della stringa di query dell'URI:  
+- Opzioni `$skip` e `$top` della stringa di query dell'URI:  
   
 [!code-csharp[Astoria Northwind Client#ExplicitQuerySkipTakeMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#explicitqueryskiptakemethodspecific)]      
 [!code-vb[Astoria Northwind Client#ExplicitQuerySkipTakeMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#explicitqueryskiptakemethodspecific)]     
@@ -140,12 +140,12 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  Negli esempi seguenti vengono mostrate modalità equivalenti per usare il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> in una query:  
   
--   Nella sintassi della query LINQ:  
+- Nella sintassi della query LINQ:  
   
 [!code-csharp[Astoria Northwind Client#LinqQueryExpandSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqqueryexpandspecific)]      
 [!code-vb[Astoria Northwind Client#LinqQueryExpandSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqqueryexpandspecific)]  
   
--   Con i metodi di query LINQ:  
+- Con i metodi di query LINQ:  
 
 [!code-csharp[Astoria Northwind Client#LinqQueryExpandMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqqueryexpandmethodspecific)]       
 [!code-vb[Astoria Northwind Client#LinqQueryExpandMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqqueryexpandmethodspecific)]       

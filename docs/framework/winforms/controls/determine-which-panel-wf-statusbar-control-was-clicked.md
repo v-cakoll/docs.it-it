@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
 ms.openlocfilehash: 1c28f8eaba5c35f762d6fc57ebbddbbb71769c81
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972315"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Procedura: Individuare il pannello selezionato nel controllo StatusBar di Windows Forms
 > [!IMPORTANT]
@@ -99,4 +99,4 @@ ms.locfileid: "59304285"
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [Procedura: Impostare la dimensione dei pannelli della barra di stato](how-to-set-the-size-of-status-bar-panels.md)
 - [Procedura dettagliata: Aggiornamento delle informazioni sulla barra di stato in fase di esecuzione](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Panoramica del controllo StatusBar](statusbar-control-overview-windows-forms.md)
+- [Cenni preliminari sul controllo StatusBar](statusbar-control-overview-windows-forms.md)

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 343e8dda-70b2-409d-9334-ce9a880c3cea
 ms.openlocfilehash: da583ed207a8c4fc9e061d517895ca0f2fea2f5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613536"
 ---
 # <a name="query-expression-syntax-examples-join-operators"></a>Esempi di sintassi delle espressioni di query: Operatori di join
 La creazione di un join è un'operazione importante in query destinate a origini dati che non presentano relazioni esplorabili tra loro, ad esempio le tabelle di database relazionali. Per join di due origini dati si intende l'associazione degli oggetti di un'origine dati con oggetti che condividono un attributo comune nell'altra origine dati. Per altre informazioni, vedere [panoramica degli operatori Query Standard](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  

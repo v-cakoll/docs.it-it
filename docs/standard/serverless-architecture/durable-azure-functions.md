@@ -5,13 +5,13 @@ author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 8ad354e1708eb88f016130f8235f534b967eb122
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776012"
 ---
-# <a name="durable-azure-functions"></a>Funzioni di Azure durevole
+# <a name="durable-azure-functions"></a>Funzioni Durable di Azure
 
 Quando si creano applicazioni senza server con funzioni di Azure, le operazioni saranno in genere progettate per l'esecuzione in modalità senza stata. Il motivo di tale scelta di progettazione è perché come aggiornare la piattaforma, diventa difficile sapere quali server in cui viene eseguito il codice. Inoltre, diventa difficile sapere quante istanze sono attive in qualsiasi momento. Tuttavia, esistono classi di applicazioni che richiedono lo stato corrente di un processo deve essere noto. Prendere in considerazione il processo di invio di un ordine a uno store online. L'operazione di checkpoint può essere un flusso di lavoro costituito da più operazioni che è necessario conoscere lo stato del processo. Tali informazioni possono includere nell'inventario dei prodotti, se il cliente ha eventuali crediti nel proprio account, nonché i risultati dell'elaborazione della carta di credito. Queste operazioni può essere facilmente i propri flussi di lavoro interni o persino servizi dai sistemi di terze parti.
 

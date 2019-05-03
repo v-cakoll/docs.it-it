@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
 ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961101"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Anti-aliasing con linee e curve
 Quando si usa [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per disegnare una linea, si forniscono i punti iniziale e finale della linea, ma non è necessario fornire informazioni sui singoli pixel nella riga. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funziona in combinazione con il software dei driver di visualizzazione per determinare i pixel che verranno attivati per visualizzare la linea in un dispositivo di visualizzazione particolare.  

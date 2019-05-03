@@ -3,11 +3,11 @@ title: <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
 ms.openlocfilehash: 71b8255b9feda9854b0257528dcad85f6cf08d6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769785"
 ---
 # <a name="webhttpbinding"></a>\<webHttpBinding>
 Definisce un elemento di associazione che viene usato per configurare endpoint per servizi Web Windows Communication Foundation (WCF) che rispondono alle richieste HTTP anziché a messaggi SOAP.  

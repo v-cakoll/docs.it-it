@@ -6,70 +6,70 @@ helpviewer_keywords:
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
 ms.openlocfilehash: c524e30943a21426e2e5e8fe6ae009999924fead
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777052"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>Procedura: Aggiungere dati personalizzati ai dati dell'input penna
 È possibile aggiungere dati personalizzati all'input penna che verrà salvato quando l'input penna viene salvata come formato di input penna serializzato (Serialized Format).  È possibile salvare i dati personalizzati per il <xref:System.Windows.Ink.DrawingAttributes>, il <xref:System.Windows.Ink.StrokeCollection>, o <xref:System.Windows.Ink.Stroke>.  La possibilità di salvare i dati personalizzati nelle tre oggetti ti offre la possibilità di decidere il modo migliore per salvare i dati.  Tutte le tre classi usano metodi simili per archiviare e accedere ai dati personalizzati.  
   
  Solo i tipi seguenti possono essere salvati come dati personalizzati:  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.Boolean>[]  
+- <xref:System.Boolean>[]  
   
--   <xref:System.Byte>  
+- <xref:System.Byte>  
   
--   <xref:System.Byte>[]  
+- <xref:System.Byte>[]  
   
--   <xref:System.Char>  
+- <xref:System.Char>  
   
--   <xref:System.Char>[]  
+- <xref:System.Char>[]  
   
--   <xref:System.DateTime>  
+- <xref:System.DateTime>  
   
--   <xref:System.DateTime>[]  
+- <xref:System.DateTime>[]  
   
--   <xref:System.Decimal>  
+- <xref:System.Decimal>  
   
--   <xref:System.Decimal>[]  
+- <xref:System.Decimal>[]  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Double>[]  
+- <xref:System.Double>[]  
   
--   <xref:System.Int16>  
+- <xref:System.Int16>  
   
--   <xref:System.Int16>[]  
+- <xref:System.Int16>[]  
   
--   <xref:System.Int32>  
+- <xref:System.Int32>  
   
--   <xref:System.Int32>[]  
+- <xref:System.Int32>[]  
   
--   <xref:System.Int64>  
+- <xref:System.Int64>  
   
--   <xref:System.Int64>[]  
+- <xref:System.Int64>[]  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.Single>[]  
+- <xref:System.Single>[]  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.UInt16>  
+- <xref:System.UInt16>  
   
--   <xref:System.UInt16>[]  
+- <xref:System.UInt16>[]  
   
--   <xref:System.UInt32>  
+- <xref:System.UInt32>  
   
--   <xref:System.UInt32>[]  
+- <xref:System.UInt32>[]  
   
--   <xref:System.UInt64>  
+- <xref:System.UInt64>  
   
--   <xref:System.UInt64>[]  
+- <xref:System.UInt64>[]  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come aggiungere e recuperare i dati personalizzati da un <xref:System.Windows.Ink.StrokeCollection>.  

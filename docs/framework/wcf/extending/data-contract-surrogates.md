@@ -5,11 +5,11 @@ helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
 ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858026"
 ---
 # <a name="data-contract-surrogates"></a>Surrogati del contratto dati
 Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello del contratto dati. È progettata per la personalizzazione e la sostituzione dei tipi nelle situazioni in cui gli utenti desiderano modificare il modo in cui un tipo viene serializzato, deserializzato o proiettato nei metadati. Un surrogato può essere utilizzato, ad esempio, quando un contratto dati non è stato specificato per il tipo, i campi e le proprietà non sono contrassegnati con l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> o gli utenti desiderano creare dinamicamente variazioni dello schema.  
@@ -37,13 +37,13 @@ Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello d
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
--   Nel caso della serializzazione, il mapping restituito da questo metodo viene successivamente utilizzato per trasformare l'istanza originale in un'istanza surrogata chiamando il metodo <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>.  
+- Nel caso della serializzazione, il mapping restituito da questo metodo viene successivamente utilizzato per trasformare l'istanza originale in un'istanza surrogata chiamando il metodo <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>.  
   
--   Nel caso della deserializzazione, il mapping restituito da questo metodo viene utilizzato dal serializzatore per deserializzare in un'istanza del tipo surrogato. Viene quindi chiamato il metodo <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> per trasformare l'istanza surrogata in un'istanza del tipo originale.  
+- Nel caso della deserializzazione, il mapping restituito da questo metodo viene utilizzato dal serializzatore per deserializzare in un'istanza del tipo surrogato. Viene quindi chiamato il metodo <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> per trasformare l'istanza surrogata in un'istanza del tipo originale.  
   
--   Nel caso dell'esportazione, viene eseguita la riflessione del tipo surrogato restituito da questo metodo per ottenere il contratto dati da utilizzare per la generazione dei metadati.  
+- Nel caso dell'esportazione, viene eseguita la riflessione del tipo surrogato restituito da questo metodo per ottenere il contratto dati da utilizzare per la generazione dei metadati.  
   
--   Nel caso dell'importazione, il tipo iniziale viene modificato in un tipo surrogato di cui viene eseguita la riflessione per ottenere il contratto dati da utilizzare per scopi come il supporto di riferimento.  
+- Nel caso dell'importazione, il tipo iniziale viene modificato in un tipo surrogato di cui viene eseguita la riflessione per ottenere il contratto dati da utilizzare per scopi come il supporto di riferimento.  
   
  Il parametro <xref:System.Type> è il tipo dell'oggetto in fase di serializzazione, deserializzazione, importazione o esportazione. Il metodo <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> deve restituire il tipo di input se il surrogato non gestisce il tipo. In caso contrario restituisce il tipo surrogato appropriato. Se esistono vari tipi surrogati, è possibile definire vari mapping in questo metodo.  
   
@@ -198,4 +198,4 @@ Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello d
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.Runtime.Serialization.ImportOptions>
 - <xref:System.Runtime.Serialization.ExportOptions>
-- [Uso di contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

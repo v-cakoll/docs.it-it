@@ -8,11 +8,11 @@ ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cc26f9721e911e05c5b5d4092be21a4e1191c84
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704752"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > elemento
 Specifica che un'applicazione può fare riferimento allo stesso assembly in due implementazioni diverse di .NET Framework, disabilitando il comportamento predefinito che tratta gli assembly come equivalenti per scopi di portabilità dell'applicazione.  
@@ -80,5 +80,5 @@ Specifica che un'applicazione può fare riferimento allo stesso assembly in due 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [/appconfig (opzioni del compilatore C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [Cenni preliminari sull'unificazione degli assembly .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
+- [/appconfig (opzioni del compilatore c#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [Cenni preliminari sull'unificazione degli Assembly di .NET framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

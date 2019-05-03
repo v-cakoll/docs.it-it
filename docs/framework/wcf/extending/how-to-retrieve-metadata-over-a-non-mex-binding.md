@@ -3,11 +3,11 @@ title: "Procedura: Recuperare metadati attraverso un'associazione non MEX"
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
 ms.openlocfilehash: 4a127e3e2283050018705c85606bd7c03c36de8b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766779"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procedura: Recuperare metadati attraverso un'associazione non MEX
 In questo argomento viene illustrato come recuperare metadati da un endpoint MEX attraverso un'associazione non MEX. Il codice in questo esempio si basa sul [Endpoint di metadati protetto personalizzato](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) esempio.  

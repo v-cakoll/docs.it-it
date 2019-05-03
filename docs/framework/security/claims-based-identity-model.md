@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792820"
 ---
 # <a name="claims-based-identity-model"></a>Modello di identità basata sulle attestazioni
 Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identità dell'utente è rappresentata come un set di attestazioni nell'applicazione. Un'attestazione può essere il nome dell'utente, un altro potrebbe essere un indirizzo di posta elettronica. L'idea è che viene configurato un sistema di identità esterno per fornire all'applicazione tutti gli elementi necessari per ottenere informazioni sull'utente con ogni richiesta effettuata, con la garanzia crittografica che i dati di identità ricevuti provengono da un'origine attendibile.  
   
  In questo modello, un punto di accesso singolo è molto più semplice da ottenere e l'applicazione non viene più utilizzata per le operazioni seguenti:  
   
--   Autenticazione degli utenti.  
+- Autenticazione degli utenti.  
   
--   Archiviazione di account utente e password.  
+- Archiviazione di account utente e password.  
   
--   Chiamata alle directory dell'organizzazione per trovare i dettagli dell'identità utente.  
+- Chiamata alle directory dell'organizzazione per trovare i dettagli dell'identità utente.  
   
--   Integrazione con sistemi di identità da altre piattaforme o società.  
+- Integrazione con sistemi di identità da altre piattaforme o società.  
   
  In questo modello, le decisioni correlate all'identità basate sulle attestazioni fornite dal sistema tramite cui è stato autenticato l'utente vengono prese dall'applicazione. Può trattarsi di un elemento che va da una semplice personalizzazione dell'applicazione con il nome dell'utente, fino all'autorizzazione dell'utente per l'accesso a funzionalità e risorse di valore più elevato nell'applicazione.  
   
  In questo argomento vengono fornite le seguenti informazioni:  
   
--   [Introduzione all'identità basata sulle attestazioni](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+- [Introduzione all'identità basata sulle attestazioni](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [Scenario di base per un modello di identità basato sulle attestazioni](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+- [Scenario di base per un modello di identità basato sulle attestazioni](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>Introduzione all'identità basata sulle attestazioni  

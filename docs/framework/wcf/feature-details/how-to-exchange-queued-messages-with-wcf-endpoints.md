@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
 ms.openlocfilehash: dd59e7689fbca68d3e7b0b0008973e471d092fe0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778339"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Procedura: Scambiare messaggi in coda con endpoint WCF
 Le code garantiscono che la messaggistica affidabile può verificarsi tra un client e un servizio Windows Communication Foundation (WCF), anche se il servizio non è disponibile al momento della comunicazione. Le procedure seguenti illustrano come assicurare una comunicazione durevole tra un client e un servizio utilizzando lo standard di associazione in coda quando si implementa il servizio WCF.  
@@ -80,7 +80,7 @@ Le code garantiscono che la messaggistica affidabile può verificarsi tra un cli
 - <xref:System.ServiceModel.NetMsmqBinding>
 - [Associazioni MSMQ transazionali](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)
 - [Accodamento in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Procedura: Scambiare messaggi con endpoint WCF e con applicazioni di accodamento dei messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Procedura: Scambiare messaggi con endpoint WCF e le applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Da Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [Installazione accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [Accodamento messaggi in Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)

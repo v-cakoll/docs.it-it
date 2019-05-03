@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5760287e01257e3f0fc99a18ba20f2f2a1b2b3af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988156"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a>Metodo ICorDebugManagedCallback::LoadAssembly
 Notifica al debugger che un assembly di common language runtime (CLR) è stato caricato correttamente.  

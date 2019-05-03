@@ -3,12 +3,12 @@ title: Progettare con tipi riferimento nullable
 description: Questa esercitazione avanzata fornisce un'introduzione ai tipi riferimento nullable. Si imparerà a esprimere le finalità della progettazione in merito a quando i valori di riferimento possono essere Null e a configurare il compilatore in modo che stabilisca quando non possono essere Null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 7f071dedd2e7a611b08a3fd37a7c0b3182be049b
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846584"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59296147"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Esercitazione: Esprimere più chiaramente le finalità di progettazione con tipi riferimento nullable e non nullable
 
@@ -24,7 +24,7 @@ In questa esercitazione si imparerà a:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Sarà necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore della versione beta di C# 8.0. Il compilatore della versione beta di C# 8 è disponibile con [Visual Studio 2019 Preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) o [.NET Core 3.0 Preview 3](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Sarà necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore della versione beta di C# 8.0. Il compilatore della versione beta di C# 8 è disponibile con [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o la versione più recente di [.NET Core 3.0 Preview](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 Per questa esercitazione si presuppone che l'utente abbia familiarità con C# e .NET, inclusa l'interfaccia della riga di comando di .NET Core o Visual Studio.
 
@@ -45,7 +45,6 @@ Creare una nuova applicazione console in Visual Studio oppure dalla riga di coma
 
 > [!NOTE]
 > Quando C# 8 verrà rilasciato (non più in modalità di anteprima), l'elemento `NullableContextOptions` verrà aggiunto dai nuovi modelli di progetto. Fino ad allora, è necessario aggiungerlo manualmente.
-
 
 ### <a name="design-the-types-for-the-application"></a>Progettare i tipi per l'applicazione
 

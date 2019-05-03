@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
 ms.openlocfilehash: 09f090c6267093e3ad59266d8c77ea13b13b63d3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59343265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801579"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Procedura: Creare gestori eventi in fase di esecuzione per Windows Forms
 Oltre a creare gli eventi usando Progettazione Windows Form, è anche possibile creare un gestore eventi in fase di esecuzione. Questa azione consente di connettere i gestori eventi in base alle condizioni nel codice in fase di esecuzione invece di connetterli all'avvio iniziale del programma.  
@@ -75,5 +75,5 @@ Oltre a creare gli eventi usando Progettazione Windows Form, è anche possibile 
 ## <a name="see-also"></a>Vedere anche
 
 - [Creazione di gestori eventi in Windows Form](creating-event-handlers-in-windows-forms.md)
-- [Panoramica sui gestori eventi](event-handlers-overview-windows-forms.md)
+- [Informazioni generali sui gestori eventi](event-handlers-overview-windows-forms.md)
 - [Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

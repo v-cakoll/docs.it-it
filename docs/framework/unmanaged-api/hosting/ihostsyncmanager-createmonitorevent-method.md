@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 12b0e32ab46b3e8ba5120da4b16a10db85f105a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696301"
 ---
 # <a name="ihostsyncmanagercreatemonitorevent-method"></a>Metodo IHostSyncManager::CreateMonitorEvent
 Crea un oggetto monitorato evento auto-reset.  

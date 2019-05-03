@@ -3,11 +3,11 @@ title: Codificatori personalizzati
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996905"
 ---
 # <a name="custom-encoders"></a>Codificatori personalizzati
 In questo argomento verranno illustrate le procedure per creare codificatori personalizzati.  
@@ -30,11 +30,11 @@ In questo argomento verranno illustrate le procedure per creare codificatori per
   
  WCF fornisce i seguenti tipi di elemento di associazione derivato dal <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> classe che può fornire per il testo, binaria e MTOM codifica Message Transmission Optimization Mechanism (MTOM):  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: Il codificatore più interoperativo, ma il meno efficiente per i messaggi XML. In genere un servizio Web o un client di servizio Web è in grado di comprendere codice XML in formato testo. La trasmissione di grandi blocchi di dati binari in formato testo non è tuttavia efficiente.  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: Il codificatore più interoperativo, ma il meno efficiente per i messaggi XML. In genere un servizio Web o un client di servizio Web è in grado di comprendere codice XML in formato testo. La trasmissione di grandi blocchi di dati binari in formato testo non è tuttavia efficiente.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Rappresenta l'elemento di associazione che specifica la codifica dei caratteri e la versione dei messaggi utilizzate per messaggi XML basati su file binario. Questo approccio è più efficiente delle opzioni di codifica, ma la meno interoperativa in quanto è supportata solo per gli endpoint WCF.  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Rappresenta l'elemento di associazione che specifica la codifica dei caratteri e la versione dei messaggi utilizzate per messaggi XML basati su file binario. Questo approccio è più efficiente delle opzioni di codifica, ma la meno interoperativa in quanto è supportata solo per gli endpoint WCF.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Rappresenta l'elemento di associazione che specifica la codifica dei caratteri e la versione dei messaggi utilizzate per un codifica dei messaggi tramite Message Transmission Optimization Mechanism (MTOM). MTOM è una tecnologia efficiente per la trasmissione di dati binari nei messaggi di WCF. Il codificatore MTOM cerca un equilibrio tra efficienza e interoperabilità. La codifica MTOM trasmette la maggior parte del codice XML in formato testo, ma ottimizza grandi blocchi di dati binari trasmettendoli senza introdurre modifiche e senza convertirli in formato testo.  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Rappresenta l'elemento di associazione che specifica la codifica dei caratteri e la versione dei messaggi utilizzate per un codifica dei messaggi tramite Message Transmission Optimization Mechanism (MTOM). MTOM è una tecnologia efficiente per la trasmissione di dati binari nei messaggi di WCF. Il codificatore MTOM cerca un equilibrio tra efficienza e interoperabilità. La codifica MTOM trasmette la maggior parte del codice XML in formato testo, ma ottimizza grandi blocchi di dati binari trasmettendoli senza introdurre modifiche e senza convertirli in formato testo.  
   
  L'elemento di associazione crea una classe <xref:System.ServiceModel.Channels.MessageEncoderFactory>di tipo Text, Binary o MTOM. La factory crea un'istanza <xref:System.ServiceModel.Channels.MessageEncoderFactory> di tipo Text, Binary o MTOM. In genere è presente una sola istanza. Se tuttavia vengono usate le sessioni, a ogni sessione può essere fornito un codificatore diverso. In questo modo il codificatore dei messaggi in formato binario è in grado di coordinare dizionari dinamici (vedere Infrastruttura XML).  
   
@@ -50,7 +50,7 @@ In questo argomento verranno illustrate le procedure per creare codificatori per
 ### <a name="pooling"></a>Pooling  
  Ognuna delle implementazioni del codificatore tenta di eseguire il massimo numero possibile di operazioni pooling. La riduzione delle allocazioni è la misura più comunemente adottata per migliorare le prestazioni del codice gestito. Per eseguire queste operazioni di pooling le implementazioni usano la classe `SynchronizedPool`. Il file C# contiene una descrizione delle ottimizzazioni aggiuntive usate da questa classe.  
   
- <xref:System.Xml.XmlDictionaryReader> e <xref:System.Xml.XmlDictionaryWriter> istanze sono in pool e reinizializzate per impedire l'allocazione di nuove per ogni messaggio. Per i lettori, un callback `OnClose` richiede il lettore quando viene chiamato `Close()`. Il codificatore ricicla inoltre alcuni oggetti di stato dei messaggi usati durante la costruzione dei messaggi. Le dimensioni di questi pool sono configurabili mediante le proprietà `MaxReadPoolSize` e `MaxWritePoolSize` in ognuna delle tre classi derivata da <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
+ Le istanze <xref:System.Xml.XmlDictionaryReader> e <xref:System.Xml.XmlDictionaryWriter> vengono inserite nel pool e reinizializzate per impedire l'allocazione di nuove istanze per ogni messaggio. Per i lettori, un callback `OnClose` richiede il lettore quando viene chiamato `Close()`. Il codificatore ricicla inoltre alcuni oggetti di stato dei messaggi usati durante la costruzione dei messaggi. Le dimensioni di questi pool sono configurabili mediante le proprietà `MaxReadPoolSize` e `MaxWritePoolSize` in ognuna delle tre classi derivata da <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
 ### <a name="binary-encoding"></a>Codifica binaria  
  Quando la codifica binaria usa sessioni, la stringa del dizionario dinamica deve essere comunicata al destinatario del messaggio. Questa operazione viene eseguita anteponendo al messaggio le stringhe del dizionario dinamiche. Il destinatario rimuove le stringhe, le aggiunge alla sessione ed elabora il messaggio. Perché le stringhe del dizionario vengano passate correttamente è necessario che il trasporto venga memorizzato nel buffer.  
@@ -69,19 +69,19 @@ In questo argomento verranno illustrate le procedure per creare codificatori per
 ## <a name="writing-your-own-encoder"></a>Creazione di un codificatore personalizzato  
  Per implementare un codificatore di messaggi personalizzato, è necessario fornire implementazioni personalizzate delle classi base astratte seguenti:  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder>  
+- <xref:System.ServiceModel.Channels.MessageEncoder>  
   
--   <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
   
  La conversione dalla rappresentazione in memoria di un messaggio a una rappresentazione che può essere scritta in un flusso viene incapsulata all'interno della classe <xref:System.ServiceModel.Channels.MessageEncoder> che funziona come una factory per i lettori e i writer XML che supportano tipi specifici di codifiche XML.  
   
--   I metodi principali di questa classe di cui è necessario eseguire l'override sono:  
+- I metodi principali di questa classe di cui è necessario eseguire l'override sono:  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> che accetta un <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> dell'oggetto e lo scrive in un <xref:System.IO.Stream> oggetto.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> che accetta un oggetto <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> e lo scrive in un oggetto <xref:System.IO.Stream>.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> che accetta un <xref:System.IO.Stream> oggetto e una dimensione di intestazione massima e restituisce un <xref:System.ServiceModel.Channels.Message> oggetto.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> che accetta un oggetto <xref:System.IO.Stream> e una dimensione di intestazione massima e restituisce un oggetto <xref:System.ServiceModel.Channels.Message>.  
   
  È il codice scritto in questi metodi che gestisce la conversione tra il protocollo di trasporto standard e la codifica personalizzata.  
   
@@ -96,6 +96,6 @@ In questo argomento verranno illustrate le procedure per creare codificatori per
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.MessageEncoderFactory>
 - <xref:System.ServiceModel.Channels.MessageEncoder>
-- [Panoramica dell'architettura di trasferimento dei dati](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
+- [Panoramica dell'architettura di trasferimento dati](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
 - [Scelta di un codificatore di messaggi](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
 - [Scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)

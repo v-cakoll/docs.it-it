@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
 ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863935"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Procedura: Chiamare una routine di operatore (Visual Basic)
 Si chiama una routine di operatore usando il simbolo di operatore in un'espressione. Nel caso di un operatore di conversione, si chiama il [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) per convertire un valore da un tipo a altro.  
@@ -58,10 +58,10 @@ Si chiama una routine di operatore usando il simbolo di operatore in un'espressi
 - [Routine di operatore](./operator-procedures.md)
 - [Procedura: Definire un operatore](./how-to-define-an-operator.md)
 - [Procedura: Definire un operatore di conversione](./how-to-define-a-conversion-operator.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Istruzione Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [Istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Procedura: Dichiarare una struttura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Conversioni implicite ed esplicite](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Conversioni di ampliamento e restrizione](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

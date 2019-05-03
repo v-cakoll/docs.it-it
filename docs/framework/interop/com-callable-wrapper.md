@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8e2cab36c1dd990a1bf848067e7ae81baeb9ed8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355051"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613252"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 
@@ -27,7 +27,7 @@ Quando un client COM chiama un oggetto .NET, Common Language Runtime crea l'ogge
 
 Il runtime crea esattamente un CCW per ciascun oggetto gestito, indipendentemente dal numero di client COM che ne richiedono i servizi. Come mostrato nella figura seguente, più client COM possono mantenere un riferimento allo stesso CCW che espone l'interfaccia INew. Il CCW mantiene a sua volta un solo riferimento all'oggetto gestito che implementa l'interfaccia ed è sottoposto alla procedura di Garbage Collection. Sia i client COM che i client .NET possono effettuare contemporaneamente richieste sullo stesso oggetto gestito.
 
-![Oggetto COM Callable Wrapper](./media/ccw.gif "ccw")Accesso agli oggetti .NET tramite COM Callable Wrapper
+![Più client COM contenenti un riferimento al CCW che espone INew.](./media/com-callable-wrapper/com-callable-wrapper-clients.gif)
 
 I COM Callable Wrapper sono invisibili alle altre classi in esecuzione in .NET Framework. Il loro scopo principale è effettuare il marshalling delle chiamate tra il codice gestito e quello non gestito. Tuttavia, i CCW gestiscono anche l'identità e la durata degli oggetti gestiti di cui eseguono il wrapping.
 
@@ -45,7 +45,7 @@ CCW espone ai client COM tutti i tipi di dati, i valori restituiti e le interfac
 
 Per assicurare questo approccio naturale, il CCW crea interfacce COM tradizionali quali **IUnknown** e **IDispatch**. Come mostrato nella figura seguente, il CCW mantiene un solo riferimento all'oggetto .NET di cui esegue il wrapping. Il client COM e l'oggetto .NET interagiscono tramite il proxy e lo stub del CCW.
 
-![Interfacce COM](./media/ccwwithinterfaces.gif "ccwwithinterfaces") Interfacce COM e COM Callable Wrapper
+![Diagramma che mostra come CCW crea interfacce COM.](./media/com-callable-wrapper/com-callable-wrapper-interfaces.gif)
 
 Oltre a esporre le interfacce che sono esplicitamente implementate da una classe dell'ambiente gestito, .NET Framework fornisce per l'oggetto un'implementazione delle interfacce COM elencate nella tabella che segue. Una classe .NET può eseguire l'override del comportamento predefinito fornendo la propria implementazione di queste interfacce. Il runtime, tuttavia, fornisce sempre l'implementazione delle interfacce **IUnknown** e **IDispatch**.
 
@@ -182,7 +182,7 @@ Per ottenere il DispId di un membro di interfaccia in fase di esecuzione, i clie
 
 Le interfacce duali permettono ai client COM di effettuare sia l'associazione anticipata che l'associazione tardiva ai membri di interfaccia. In fase di progettazione e durante il test, può risultare utile impostare l'interfaccia della classe su duale. Per una classe gestita (e le relative classi base) che non verrà mai modificata, questa opzione è accettabile. In tutti gli altri casi è preferibile evitare di impostare l'interfaccia della classe su duale.
 
-Un'interfaccia duale generata automaticamente può essere appropriata in alcuni casi meno comuni. Nella maggior parte dei casi creerà invece complicazioni in relazione alla gestione delle versioni. Ad esempio, il funzionamento dei client COM che usano l'interfaccia della classe di una classe derivata verrà facilmente compromesso in conseguenza di modifiche della classe base. Quando la classe base è fornita da terzi, il layout dell'interfaccia della classe sarà fuori dal proprio controllo. Diversamente da un'interfaccia solo dispatch, un'interfaccia duale (**ClassInterfaceType.AutoDual**) fornisce anche una descrizione dell'interfaccia della classe nella libreria dei tipi esportata. Tale descrizione invita i client ad associazione tardiva a inserire nella cache i DispId in fase di esecuzione.
+Un'interfaccia duale generata automaticamente può essere appropriata in alcuni casi meno comuni. Nella maggior parte dei casi creerà invece complicazioni in relazione alla gestione delle versioni. Ad esempio, il funzionamento dei client COM che usano l'interfaccia della classe di una classe derivata verrà facilmente compromesso in conseguenza di modifiche della classe base. Quando la classe base è fornita da terzi, il layout dell'interfaccia della classe sarà fuori dal proprio controllo. Diversamente da un'interfaccia solo dispatch, un'interfaccia duale (**ClassInterfaceType.AutoDual**) fornisce anche una descrizione dell'interfaccia della classe nella libreria dei tipi esportata. Tale descrizione invita i client ad associazione tardiva a memorizzare nella cache i DispId in fase di compilazione.
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Verificare che tutte le notifiche degli eventi COM siano ad associazione tardiva.
 

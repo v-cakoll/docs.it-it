@@ -3,11 +3,11 @@ title: Token personalizzato
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
 ms.openlocfilehash: fbde7d1006cabddafa7e03fdee0e3493416001da
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855049"
 ---
 # <a name="custom-token"></a>Token personalizzato
 Questo esempio viene illustrato come aggiungere un'implementazione del token personalizzata in un'applicazione Windows Communication Foundation (WCF). Nell'esempio viene usato un `CreditCardToken` per passare in modo protetto le informazioni sulle carte di credito del client al servizio. Il token viene passato nell'intestazione del messaggio WS-Security e viene firmato e crittografato usando l'elemento di associazione di sicurezza simmetrica, il corpo del messaggio e altre intestazioni del messaggio. Questa operazione è utile nei casi in cui i token incorporati non sono sufficienti In questo esempio viene illustrato come fornire un token di sicurezza personalizzato a un servizio, invece di usare uno dei token incorporati. Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.
@@ -17,13 +17,13 @@ Questo esempio viene illustrato come aggiungere un'implementazione del token per
 
  Per riassumere, questo esempio dimostra quanto segue.
 
--   In che modo un client può passare un token di sicurezza personalizzato a un servizio.
+- In che modo un client può passare un token di sicurezza personalizzato a un servizio.
 
--   In che modo il servizio può usare e convalidare un token di sicurezza personalizzato.
+- In che modo il servizio può usare e convalidare un token di sicurezza personalizzato.
 
--   Modo in cui il codice del servizio WCF è possibile ottenere le informazioni sui token di sicurezza ricevuto includendo il token di sicurezza personalizzato.
+- Modo in cui il codice del servizio WCF è possibile ottenere le informazioni sui token di sicurezza ricevuto includendo il token di sicurezza personalizzato.
 
--   Come viene usato il certificato X.509 del server per proteggere la chiave simmetrica usata per crittografare il messaggio e la firma.
+- Come viene usato il certificato X.509 del server per proteggere la chiave simmetrica usata per crittografare il messaggio e la firma.
 
 ## <a name="client-authentication-using-a-custom-security-token"></a>Autenticazione client tramite un token di sicurezza personalizzato
  Il servizio espone un solo endpoint che viene creato a livello di programmazione usando le classi `BindingHelper` e `EchoServiceHost`. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione è configurata con un'associazione personalizzata usando `SymmetricSecurityBindingElement` e `HttpTransportBindingElement`. Questo esempio imposta `SymmetricSecurityBindingElement` per usare un certificato X.509 del servizio per proteggere la chiave simmetrica durante la trasmissione e per passare un `CreditCardToken` personalizzato in un'intestazione del messaggio WS-Security come token di sicurezza firmato e crittografato. Il comportamento specifica le credenziali del servizio che devono essere usate per l'autenticazione del client e anche informazioni sul certificato X.509 del servizio.
@@ -543,7 +543,7 @@ string GetCallerCreditCardNumber()
 
  Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.
 
--   Creazione del certificato server:
+- Creazione del certificato server:
 
      Le righe seguenti del file batch `Setup.bat` creano il certificato server da usare. La variabile `%SERVER_NAME%` specifica il nome del server. Modificare questa variabile per specificare nome del server. Il valore predefinito in questo file batch è localhost. Se si modifica la variabile `%SERVER_NAME%`, è necessario sostituire tutte le istanze di localhost nei file Client.cs e Service.cs con il nome del server che si usa nello script Setup.bat.
 
@@ -559,7 +559,7 @@ string GetCallerCreditCardNumber()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installazione del certificato server nell'archivio certificati attendibili del client:
+- Installazione del certificato server nell'archivio certificati attendibili del client:
 
      Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.
 
@@ -570,7 +570,7 @@ string GetCallerCreditCardNumber()
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   Per abilitare l'accesso alla chiave privata del certificato dal servizio ospitato su IIS, è necessario concedere le autorizzazioni alla chiave privata appropriate all'account utente con cui viene eseguito il processo ospitato da IIS. Questa operazione viene eseguita negli ultimi passaggi dello script Setup.bat.
+- Per abilitare l'accesso alla chiave privata del certificato dal servizio ospitato su IIS, è necessario concedere le autorizzazioni alla chiave privata appropriate all'account utente con cui viene eseguito il processo ospitato da IIS. Questa operazione viene eseguita negli ultimi passaggi dello script Setup.bat.
 
     ```
     echo ************

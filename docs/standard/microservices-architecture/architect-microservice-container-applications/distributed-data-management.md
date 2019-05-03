@@ -4,12 +4,12 @@ description: Informazioni sulle problematiche e le soluzioni per la gestione dei
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: f92410f2742ec1cbcb08d13614700eab348aa646
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3e683044ea6a31116f1e7da6d690fc32ad87bd76
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463371"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613702"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemi e soluzioni per la gestione dei dati distribuiti
 
@@ -86,28 +86,28 @@ Per altre informazioni sull'uso della comunicazione asincrona, vedere le sezioni
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 - **Teorema CAP** \
-  [https://en.wikipedia.org/wiki/CAP_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+  <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **Coerenza finale** \
-  [https://en.wikipedia.org/wiki/Eventual_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+  <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Data Consistency Primer** \ (Introduzione alla coerenza dei dati)
-  [https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10))
+  <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Martin Fowler. CQRS (Command and Query Responsibility Segregation)** \
-  [https://martinfowler.com/bliki/CQRS.html](https://martinfowler.com/bliki/CQRS.html)
+  <https://martinfowler.com/bliki/CQRS.html>
 
 - **Materialized View** \ (Vista materializzata)
-  [https://docs.microsoft.com/azure/architecture/patterns/materialized-view](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
+  <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
 - **Charles Row. ACID vs. BASE: The Shifting pH of Database Transaction Processing** \ (ACID e BASE: il pH mutevole dell'elaborazione delle transazioni del database)
-  [https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/](https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
+  <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
 - **Transazione di compensazione** \
-  [https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+  <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
 - **Udi Dahan. Service Oriented Composition (Composizione orientata ai servizi)** \
-  [http://udidahan.com/2014/07/30/service-oriented-composition-with-video/](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]
 >[Precedente](logical-versus-physical-architecture.md)

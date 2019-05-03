@@ -3,11 +3,11 @@ title: Gestione errori WCF
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
 ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791222"
 ---
 # <a name="wcf-error-handling"></a>Gestione errori WCF
 Gli errori rilevati da un'applicazione WCF appartengono a uno dei seguenti tre gruppi:  
@@ -26,13 +26,13 @@ Gli errori rilevati da un'applicazione WCF appartengono a uno dei seguenti tre g
   
  La gestione degli errori in WCF viene eseguita secondo uno o più dei modi indicati di seguito.  
   
--   Gestione diretta dell'eccezione generata. Viene eseguita solo per gli errori di comunicazione di proxy/canale.  
+- Gestione diretta dell'eccezione generata. Viene eseguita solo per gli errori di comunicazione di proxy/canale.  
   
--   Utilizzo dei contratti di errore.  
+- Utilizzo dei contratti di errore.  
   
--   Implementazione dell'interfaccia <xref:System.ServiceModel.Dispatcher.IErrorHandler>  
+- Implementazione dell'interfaccia <xref:System.ServiceModel.Dispatcher.IErrorHandler>  
   
--   Gestione degli eventi <xref:System.ServiceModel.ServiceHost>  
+- Gestione degli eventi <xref:System.ServiceModel.ServiceHost>  
   
 ## <a name="fault-contracts"></a>Contratti di errore  
  I contratti di errore consentono all'utente di definire gli errori che si possono verificare durante l'operazione del servizio in una modalità indipendente dalla piattaforma. Per impostazione predefinita tutte le eccezioni generate da un'operazione del servizio saranno restituite al client come oggetto <xref:System.ServiceModel.FaultException>. L'oggetto <xref:System.ServiceModel.FaultException> conterrà un numero molto contenuto di informazioni. È possibile controllare le informazioni inviate al client definendo un contratto di errori e restituendo l'errore come <xref:System.ServiceModel.FaultException%601>. Per altre informazioni, vedere [se si specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -47,4 +47,4 @@ Gli errori rilevati da un'applicazione WCF appartengono a uno dei seguenti tre g
   
 2. <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived>
   
- Per altre informazioni, vedere <xref:System.ServiceModel.ServiceHost>
+ Per altre informazioni, vedere <xref:System.ServiceModel.ServiceHost>.

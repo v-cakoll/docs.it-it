@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
 ms.openlocfilehash: e18fe451ea4a80ac959ed61b66394920f8bf177f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788934"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 Applica una semantica dei tipi rigorosa per limitare le conversioni implicite.  
@@ -47,7 +47,7 @@ Applica una semantica dei tipi rigorosa per limitare le conversioni implicite.
   
 ### <a name="to-set--optionstrict-programmatically"></a>Per impostare a livello di codice - optionstrict  
   
--   Visualizzare [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+- Visualizzare [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente Compila `Test.vb` mediante la semantica di tipo strict.  
@@ -65,5 +65,5 @@ vbc -optionstrict+ test.vb
 - [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)
 - [-warnaserror (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Impostazioni predefinite di Visual Basic, Progetti, finestra di dialogo Opzioni](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

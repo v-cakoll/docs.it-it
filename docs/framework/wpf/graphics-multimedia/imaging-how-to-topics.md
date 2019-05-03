@@ -8,11 +8,11 @@ helpviewer_keywords:
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
 ms.openlocfilehash: 70294aff4c40bd5ae14b61e6a847155a10d675a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785710"
 ---
 # <a name="imaging-how-to-topics"></a>Procedure relative alla gestione delle immagini
 Gli argomenti in questa sezione illustrano come usare [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] per visualizzare o modificare le immagini bitmap.  
@@ -26,7 +26,7 @@ Gli argomenti in questa sezione illustrano come usare [!INCLUDE[TLA#tla_winclien
  [Creare un nuovo oggetto BitmapSource](how-to-create-a-new-bitmapsource.md)  
  [Concatenare gli oggetti BitmapSource](how-to-chain-bitmapsource-objects-together.md)  
  [Convertire un oggetto BitmapSource in un altro PixelFormat](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
- [Convertire un oggetto BitmapSource in un formato a pixel indicizzato](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
+ [Convertire un BitmapSource in un formato a pixel indicizzato](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
  [Codificare e decodificare un'immagine JPEG](how-to-encode-and-decode-a-jpeg-image.md)  
  [Codificare e decodificare un'immagine BMP](how-to-encode-and-decode-a-bmp-image.md)  
  [Codificare e decodificare un'immagine PNG](how-to-encode-and-decode-a-png-image.md)  

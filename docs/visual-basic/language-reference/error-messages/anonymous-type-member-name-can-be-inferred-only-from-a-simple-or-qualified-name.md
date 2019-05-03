@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36556
 ms.assetid: e3ba1f33-3a71-4f03-9b04-ed5ec17de17c
 ms.openlocfilehash: b798f296b62b51de34a7ec5ce5a8b608273f5748
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751527"
 ---
 # <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>Il nome di membro di tipo anonimo può essere dedotto solo da un nome semplice o completo senza argomenti
 Non è possibile dedurre il nome di un membro di tipo anonimo da un'espressione complessa.  
@@ -29,7 +29,7 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Assegnare l'espressione con un nome di membro, come illustrato nel codice seguente:  
+- Assegnare l'espressione con un nome di membro, come illustrato nel codice seguente:  
   
     ```  
     Dim instanceName2 = New With {.number = numbers(3)}  

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
 ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937748"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Procedura: Copiare i pixel per ridurre lo sfarfallio nei Windows Form
 Quando si anima una semplice immagine, gli utenti possono a volte si verificano lo sfarfallio o altri effetti visivi indesiderati. Uno per limitare questo problema consiste nell'usare un processo di "bitblt" sull'oggetto grafico. BitBlt è il "blocchi di bit trasferimento" di dati relativi al colore da un'origine a un rettangolo di pixel a un rettangolo di destinazione del pixel.  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 99aea385cf5e3c8bcf7cf39b7cc5618f99f8a631
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59121706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777585"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>Metodo IMetaDataImport::GetPinvokeMap
 Ottiene un token ModuleRef per rappresentare l'assembly di destinazione di una chiamata PInvoke.  

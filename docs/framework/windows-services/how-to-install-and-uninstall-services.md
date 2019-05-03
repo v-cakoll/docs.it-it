@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 43b5ad2f346406897e8bcbcce5660a6c9524f9af
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0119fee443aafd1d4215260d2cf42cec9f7eba74
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826263"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59308471"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>Procedura: Installare e disinstallare i servizi Windows
 Se si sta sviluppando un servizio Windows con .NET Framework, è possibile installare rapidamente l'app del servizio usando l'utilità della riga di comando [*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md). Gli sviluppatori che vogliono rilasciare un servizio Windows che gli utenti possono installare e disinstallare devono usare InstallShield. Per altre informazioni, vedere [Creare un pacchetto di installazione (client Windows)](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client).
@@ -34,13 +34,13 @@ Se si sta sviluppando un servizio Windows con .NET Framework, è possibile insta
   
 ### <a name="install-your-service-manually"></a>Installare il servizio manualmente  
   
-1.  Dal menu **Start** selezionare la directory **Visual Studio \<*versione*>**, quindi selezionare **Prompt dei comandi per gli sviluppatori per VS \<*versione*>**.
+1. Dal menu **Start** selezionare la directory **Visual Studio \<*versione*>**, quindi selezionare **Prompt dei comandi per gli sviluppatori per VS \<*versione*>**.
   
      Viene visualizzato il prompt dei comandi per gli sviluppatori per Visual Studio. 
   
-2.  Accedere alla directory in cui si trova il file eseguibile compilato del progetto.  
+2. Accedere alla directory in cui si trova il file eseguibile compilato del progetto.  
   
-3.  Eseguire *InstallUtil.exe* dal prompt dei comandi con l'eseguibile del progetto come parametro:  
+3. Eseguire *InstallUtil.exe* dal prompt dei comandi con l'eseguibile del progetto come parametro:  
   
     ```console
     installutil <yourproject>.exe  
@@ -58,7 +58,7 @@ Se si sta sviluppando un servizio Windows con .NET Framework, è possibile insta
   
      Viene visualizzato il prompt dei comandi per gli sviluppatori per Visual Studio.  
   
-2.  Eseguire *InstallUtil.exe* dal prompt dei comandi con l'output del progetto come parametro:  
+2. Eseguire *InstallUtil.exe* dal prompt dei comandi con l'output del progetto come parametro:  
   
     ```console  
     installutil /u <yourproject>.exe  
@@ -67,6 +67,7 @@ Se si sta sviluppando un servizio Windows con .NET Framework, è possibile insta
 3. Dopo avere eliminato il file eseguibile di un servizio, è possibile che il servizio sia ancora presente nel Registro di sistema. In questo caso usare il comando [sc delete](/windows-server/administration/windows-commands/sc-delete) per rimuovere la voce per il servizio dal Registro di sistema.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Introduzione alle applicazioni di servizio di Windows](../windows-services/introduction-to-windows-service-applications.md)
 - [Procedura: Creare servizi Windows](../windows-services/how-to-create-windows-services.md)
 - [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](../windows-services/how-to-add-installers-to-your-service-application.md)

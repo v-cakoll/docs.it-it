@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 64774fb5-7447-4296-ad3b-8a94346f99a1
 ms.openlocfilehash: d75c9b9123b52b3e241bea1bbd1d302c406715e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032708"
 ---
 # <a name="convert-a-type-to-a-generic-ienumerable"></a>Convertire un tipo in un IEnumerable generico
 Usare <xref:System.Linq.Enumerable.AsEnumerable%2A> per restituire l'argomento tipizzato come `IEnumerable` generico.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
 ms.openlocfilehash: cc777da65ce1c0d425404b1cc8d47e8189684a7f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59337006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039403"
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Procedura: Creare un contratto unidirezionale
 In questo argomento vengono illustrati i passaggi di base per creare metodi che utilizzano un contratto unidirezionale. Tali metodi richiamano operazioni in un servizio Windows Communication Foundation (WCF) da un client, ma non prevede una risposta. Questo tipo di contratto può essere utilizzato, ad esempio, per pubblicare notifiche a numerosi sottoscrittori. È anche possibile utilizzare contratti unidirezionali durante la creazione di un contratto duplex (bidirezionale) che consente ai client e ai server di comunicare fra loro indipendentemente in modo che uno sia in grado di avviare chiamate all'altro. In particolare, questo può consentire al server di eseguire chiamate unidirezionali al client che vengono trattate da quest'ultimo come eventi. Per informazioni dettagliate sulla specifica di metodi bidirezionali, vedere la proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> e la classe <xref:System.ServiceModel.OperationContractAttribute>.  
@@ -38,4 +38,4 @@ In questo argomento vengono illustrati i passaggi di base per creare metodi che 
 - [Progettazione e implementazione di servizi](../../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [Procedura: Definire un contratto di servizio](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
 - [Sessione](../../../../docs/framework/wcf/samples/session.md)
-- [Procedura: Creare un contratto duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Procedura: Creare un contratto Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

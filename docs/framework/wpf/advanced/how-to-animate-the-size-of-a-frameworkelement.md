@@ -6,11 +6,11 @@ helpviewer_keywords:
 - FrameworkElement [WPF], animating size of
 ms.assetid: d4cd5a13-c20d-4a6f-a2ba-14f2c9ce4cef
 ms.openlocfilehash: d1995deec5ab2c9bf405911af43b4d242d599119
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776909"
 ---
 # <a name="how-to-animate-the-size-of-a-frameworkelement"></a>Procedura: Aggiungere un'animazione alle dimensioni di un oggetto FrameworkElement
 Per animare la proprietà size di un <xref:System.Windows.FrameworkElement>, è possibile aggiungere un'animazione relativa <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> delle proprietà o utilizzare un oggetto animato <xref:System.Windows.Media.ScaleTransform>.  

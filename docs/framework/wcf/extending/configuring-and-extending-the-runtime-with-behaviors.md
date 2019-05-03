@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59344247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923279"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Configurazione ed estensione del runtime con i comportamenti
 I comportamenti consentono di modificare il comportamento predefinito e aggiungere estensioni personalizzate che esaminano e convalidare la configurazione del servizio o modificano il comportamento di runtime nelle applicazioni client e il servizio Windows Communication Foundation (WCF). In questo argomento vengono descritte le interfacce di comportamento e viene illustrato come implementarle e aggiungerle alla descrizione del servizio (in un'applicazione di servizio) o all'endpoint (in un'applicazione client) a livello di codice o in un file di configurazione. Per altre informazioni sull'utilizzo dei comportamenti forniti dal sistema, vedere [che specifica il comportamento di Run-Time Service](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) e [specifica del comportamento in fase di esecuzione Client](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
@@ -20,11 +20,11 @@ I comportamenti consentono di modificare il comportamento predefinito e aggiunge
 ### <a name="behavior-methods"></a>Metodi di comportamento  
  Tutti i comportamenti dispongono un' `AddBindingParameters` metodo, un' `ApplyDispatchBehavior` metodo, una `Validate` metodo e un `ApplyClientBehavior` metodo con una sola eccezione: In quanto <xref:System.ServiceModel.Description.IServiceBehavior> non può essere eseguito in un client, non implementa `ApplyClientBehavior`.  
   
--   Utilizzare il metodo `AddBindingParameters` per modificare o aggiungere oggetti personalizzati in una raccolta a cui le associazioni personalizzate potranno accedere per utilizzarli quando viene costruito il runtime. Ad esempio, è in questo modo che vengono specificati i requisiti di protezione che influiscono sulla modalità di costruzione del canale, ma che non sono noti allo sviluppatore del canale.  
+- Utilizzare il metodo `AddBindingParameters` per modificare o aggiungere oggetti personalizzati in una raccolta a cui le associazioni personalizzate potranno accedere per utilizzarli quando viene costruito il runtime. Ad esempio, è in questo modo che vengono specificati i requisiti di protezione che influiscono sulla modalità di costruzione del canale, ma che non sono noti allo sviluppatore del canale.  
   
--   Utilizzare il metodo `Validate` per esaminare la struttura di descrizione e l'oggetto runtime corrispondente al fine di garantirne la conformità a un set di criteri.  
+- Utilizzare il metodo `Validate` per esaminare la struttura di descrizione e l'oggetto runtime corrispondente al fine di garantirne la conformità a un set di criteri.  
   
--   Utilizzare i metodi `ApplyDispatchBehavior` e `ApplyClientBehavior` per esaminare la struttura di descrizione e modificare il runtime per un particolare ambito sul servizio o sul client. È inoltre possibile inserire oggetti di estensione.  
+- Utilizzare i metodi `ApplyDispatchBehavior` e `ApplyClientBehavior` per esaminare la struttura di descrizione e modificare il runtime per un particolare ambito sul servizio o sul client. È inoltre possibile inserire oggetti di estensione.  
   
     > [!NOTE]
     >  Anche se in questi tre metodi viene fornita una struttura di descrizione, essa è utilizzabile solo per attività di esame. Se un albero di descrizione viene modificato, il comportamento è indefinito.  
@@ -38,13 +38,13 @@ I comportamenti consentono di modificare il comportamento predefinito e aggiunge
   
  Esistono quattro tipi di comportamenti di WCF:  
   
--   I comportamenti del servizio (tipi <xref:System.ServiceModel.Description.IServiceBehavior>) consentono la personalizzazione del runtime dell'intero servizio, incluso <xref:System.ServiceModel.ServiceHostBase>.  
+- I comportamenti del servizio (tipi <xref:System.ServiceModel.Description.IServiceBehavior>) consentono la personalizzazione del runtime dell'intero servizio, incluso <xref:System.ServiceModel.ServiceHostBase>.  
   
--   I comportamenti dell'endpoint (tipi <xref:System.ServiceModel.Description.IEndpointBehavior>) consentono la personalizzazione degli endpoint del servizio e dei relativi oggetti <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> associati.  
+- I comportamenti dell'endpoint (tipi <xref:System.ServiceModel.Description.IEndpointBehavior>) consentono la personalizzazione degli endpoint del servizio e dei relativi oggetti <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> associati.  
   
--   I comportamenti del contratto (tipi <xref:System.ServiceModel.Description.IContractBehavior>) consentono la personalizzazione di entrambe le classi <xref:System.ServiceModel.Dispatcher.ClientRuntime> e <xref:System.ServiceModel.Dispatcher.DispatchRuntime> rispettivamente nelle applicazioni client e di servizi.  
+- I comportamenti del contratto (tipi <xref:System.ServiceModel.Description.IContractBehavior>) consentono la personalizzazione di entrambe le classi <xref:System.ServiceModel.Dispatcher.ClientRuntime> e <xref:System.ServiceModel.Dispatcher.DispatchRuntime> rispettivamente nelle applicazioni client e di servizi.  
   
--   I comportamenti dell'operazione (tipi <xref:System.ServiceModel.Description.IOperationBehavior>) consentono la personalizzazione delle classi <xref:System.ServiceModel.Dispatcher.ClientOperation> e <xref:System.ServiceModel.Dispatcher.DispatchOperation> nel client e nel servizio.  
+- I comportamenti dell'operazione (tipi <xref:System.ServiceModel.Description.IOperationBehavior>) consentono la personalizzazione delle classi <xref:System.ServiceModel.Dispatcher.ClientOperation> e <xref:System.ServiceModel.Dispatcher.DispatchOperation> nel client e nel servizio.  
   
  È possibile aggiungere questi comportamenti ai vari oggetti di descrizione implementando attributi personalizzati, utilizzando file di configurazione dell'applicazione, oppure è possibile aggiungerli direttamente alla raccolta di comportamenti sull'oggetto di descrizione appropriato. Essi devono tuttavia essere aggiunti a un oggetto di descrizione del servizio o dell'endpoint del servizio prima della chiamata a <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> su <xref:System.ServiceModel.ServiceHost> o <xref:System.ServiceModel.ChannelFactory%601>.  
   

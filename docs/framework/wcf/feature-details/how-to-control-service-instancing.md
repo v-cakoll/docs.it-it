@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e0b12b34-8004-443a-a46d-83a5c00f2601
 ms.openlocfilehash: e8efbc5a3dec5f60dbefc8f6dc377d97b29b7653
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59330181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699617"
 ---
 # <a name="how-to-control-service-instancing"></a>Procedura: Controllare l'istanza del servizio
 L'impostazione della modalità di istanza di un servizio consente di specificare quando vengono creati una classe <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> e il relativo oggetto servizio definito dall'utente associato. Per un elenco delle modalità possibili, vedere l'enumerazione <xref:System.ServiceModel.InstanceContextMode>. Per altre informazioni sui comportamenti, vedere [configurazione ed estensione del Runtime dei comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md). Per alcuni esempi funzionanti, vedere [comportamenti](../../../../docs/framework/wcf/samples/behaviors.md).  

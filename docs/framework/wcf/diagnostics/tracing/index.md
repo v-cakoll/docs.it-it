@@ -3,20 +3,20 @@ title: Traccia
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
 ms.openlocfilehash: 2379b290494e72b65db5ddc6a7bc5df376d4373f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997984"
 ---
 # <a name="tracing"></a>Traccia
 Windows Communication Foundation (WCF) fornisce strumenti applicativi e dati di diagnostica per l'analisi e monitoraggio degli errori. Al posto di un debugger, è possibile utilizzare la traccia per capire il comportamento o le cause di errori di un'applicazione. È anche possibile correlare errori e processi attraverso i componenti per fornire un'esperienza end-to-end.  
   
  WCF restituisce i dati seguenti per l'analisi diagnostica:  
   
--   Tracce delle attività cardine di processo in tutti i componenti delle applicazioni, ad esempio chiamate dell'operazione, eccezioni del codice, avvisi e altri eventi di elaborazione significativi.  
+- Tracce delle attività cardine di processo in tutti i componenti delle applicazioni, ad esempio chiamate dell'operazione, eccezioni del codice, avvisi e altri eventi di elaborazione significativi.  
   
--   Eventi di errore di Windows quando la funzionalità di traccia non viene eseguita correttamente.  
+- Eventi di errore di Windows quando la funzionalità di traccia non viene eseguita correttamente.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Configurazione delle funzionalità di traccia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - namespaces [WPF], XML
 ms.assetid: a47c832f-dc84-48f2-96d5-cde18fc4284b
 ms.openlocfilehash: 38bf6e8f88b0325193d49148cd6c33031f7b0a6d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931911"
 ---
 # <a name="how-to-use-xml-namespaces-in-data-binding"></a>Procedura: Usare gli spazi dei nomi XML nel data binding
 ## <a name="example"></a>Esempio  
@@ -31,6 +31,6 @@ ms.locfileid: "59149994"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Eseguire il binding ai dati XML usando un oggetto XMLDataProvider e le query XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
+- [Eseguire l'associazione ai dati XML usando un oggetto XMLDataProvider e le query XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative](data-binding-how-to-topics.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)

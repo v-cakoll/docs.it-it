@@ -24,11 +24,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: 5fe12d18c7f403c1a50ed548a260ba39e83280eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746749"
 ---
 # <a name="user-defined-data-type"></a>Tipo di dati definito dall'utente
 Contiene i dati in un formato definito. Il `Structure` istruzione definisce il formato.  
@@ -50,15 +50,15 @@ Contiene i dati in un formato definito. Il `Structure` istruzione definisce il f
   
 ## <a name="programming-tips"></a>Suggerimenti per la programmazione  
   
--   **Utilizzo di memoria.** Come con tutti i tipi di dati compositi, è possibile calcolare in modo sicuro il consumo di memoria totale di una struttura sommando le allocazioni di archiviazione nominale dei relativi membri. Inoltre, non è possibile tranquillamente presupporre che l'ordine di archiviazione in memoria è lo stesso l'ordine di dichiarazione. Se è necessario controllare il layout di archiviazione di una struttura, è possibile applicare il <xref:System.Runtime.InteropServices.StructLayoutAttribute> dell'attributo di `Structure` istruzione.  
+- **Utilizzo di memoria.** Come con tutti i tipi di dati compositi, è possibile calcolare in modo sicuro il consumo di memoria totale di una struttura sommando le allocazioni di archiviazione nominale dei relativi membri. Inoltre, non è possibile tranquillamente presupporre che l'ordine di archiviazione in memoria è lo stesso l'ordine di dichiarazione. Se è necessario controllare il layout di archiviazione di una struttura, è possibile applicare il <xref:System.Runtime.InteropServices.StructLayoutAttribute> dell'attributo di `Structure` istruzione.  
   
--   **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi definiti dall'utente in altri ambienti non sono compatibili con Visual Basic i tipi di struttura.  
+- **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi definiti dall'utente in altri ambienti non sono compatibili con Visual Basic i tipi di struttura.  
   
--   **Widening.** Non vi è alcuna conversione automatica a o da qualsiasi tipo di dati della struttura. È possibile definire operatori di conversione per la struttura tramite il [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md), è possibile dichiarare ogni operatore di conversione sia `Widening` o `Narrowing`.  
+- **Widening.** Non vi è alcuna conversione automatica a o da qualsiasi tipo di dati della struttura. È possibile definire operatori di conversione per la struttura tramite il [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md), è possibile dichiarare ogni operatore di conversione sia `Widening` o `Narrowing`.  
   
--   **Caratteri tipo.** Tipi di dati di struttura non dispongono di alcun carattere di tipo letterale o un carattere di tipo identificatore.  
+- **Caratteri tipo.** Tipi di dati di struttura non dispongono di alcun carattere di tipo letterale o un carattere di tipo identificatore.  
   
--   **Tipo di Framework.** È disponibile alcun tipo corrispondente in .NET Framework. Tutte le strutture ereditano dalla classe di .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, ma nessun singole strutture corrisponde a <xref:System.ValueType?displayProperty=nameWithType>.  
+- **Tipo di Framework.** È disponibile alcun tipo corrispondente in .NET Framework. Tutte le strutture ereditano dalla classe di .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, ma nessun singole strutture corrisponde a <xref:System.ValueType?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Esempio  
  Il paradigma comune della seguente viene illustrata la struttura della dichiarazione di una struttura.  

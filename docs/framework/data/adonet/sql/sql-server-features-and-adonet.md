@@ -3,11 +3,11 @@ title: Funzionalità SQL Server e ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
 ms.openlocfilehash: 4f2d93ca2abc15e4c7af8489d5b875c0a46d7185
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59294899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037181"
 ---
 # <a name="sql-server-features-and-adonet"></a>Funzionalità SQL Server e ADO.NET
 Negli argomenti di questa sezione vengono illustrate le funzionalità di SQL Server indirizzate allo sviluppo di applicazioni di database mediante ADO.NET.  
@@ -16,7 +16,7 @@ Negli argomenti di questa sezione vengono illustrate le funzionalità di SQL Ser
   
  **Documentazione online di SQL Server**  
   
-1. [Sviluppo (Motore di database)](https://go.microsoft.com/fwlink/?LinkId=115245)  
+1. [Sviluppo (motore di Database)](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Enumerazione di istanze di SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
@@ -43,7 +43,7 @@ Negli argomenti di questa sezione vengono illustrate le funzionalità di SQL Ser
  [Supporto SqlClient per disponibilità elevata, ripristino di emergenza](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
  Viene descritto il supporto di SqlClient per i gruppi di disponibilità (AlwaysOn) con disponibilità elevata e ripristino di emergenza.  
   
- [Supporto SqlClient per LocalDB](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
+ [Supporto SqlClient per Local DB](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
  Viene descritto il supporto di SqlClient per database LocalDB.  
   
 ## <a name="see-also"></a>Vedere anche

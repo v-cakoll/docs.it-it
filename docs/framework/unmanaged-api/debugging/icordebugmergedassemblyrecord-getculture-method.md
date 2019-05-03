@@ -5,11 +5,11 @@ ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 093b21a439b96c9fe2f971300f314d1b75527f1f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796000"
 ---
 # <a name="icordebugmergedassemblyrecordgetculture-method"></a>Metodo icordebugmergedassemblyrecord:: Getculture
 Ottiene la stringa del nome delle impostazioni cultura dell'assembly.  

@@ -3,11 +3,11 @@ title: 'Esercitazione: Creare un Provider di tipi'
 description: Informazioni su come creare il proprio F# tipo di provider in F# 3.0 esaminando i diversi provider di tipo semplice per illustrare i concetti di base.
 ms.date: 02/02/2019
 ms.openlocfilehash: 14e3035d03438aaaa2f6e64210f99e1f149db274
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982618"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Esercitazione: Creare un Provider di tipi
 

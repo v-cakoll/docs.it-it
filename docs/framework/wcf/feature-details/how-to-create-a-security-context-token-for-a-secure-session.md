@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
 ms.openlocfilehash: 0b0da7e60cb54a1c3d6eb6d2d557f7312da1e9ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950306"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Procedura: Creare un token di contesto di sicurezza per una sessione sicura
 Per evitare la perdita di una determinata sessione protetta quando il servizio viene riciclato, è possibile utilizzare in tale sessione un token di contesto di sicurezza (SCT, Security Context Token) con stato. Ad esempio, quando in una sessione protetta si utilizza un token SCT senza stato e si reimposta Internet Information Services (IIS), i dati di sessione associati al servizio vengono persi. Questi dati di sessione comprendono una cache del token SCT. Pertanto, quando un client invia al servizio un token SCT senza stato, viene restituito un errore, in quanto risulta impossibile recuperare la chiave associata al token SCT. Se tuttavia si utilizza un token SCT con stato, la relativa chiave associata è contenuta nel token SCT e quindi nel messaggio. Ne consegue che in questo caso il riciclo del servizio non influisce sulla sessione protetta. Per impostazione predefinita, Windows Communication Foundation (WCF) utilizza token SCT senza stato in una sessione protetta. In questo argomento viene descritto in modo dettagliato come utilizzare token SCT con stato in una sessione protetta.  
@@ -26,15 +26,15 @@ Per evitare la perdita di una determinata sessione protetta quando il servizio v
   
 ### <a name="to-use-stateful-scts-in-a-secure-session"></a>Per utilizzare token SCT con stato in una sessione protetta  
   
--   Creare un'associazione personalizzata che prevede la protezione dei messaggi SOAP mediante una sessione protetta che utilizza un token SCT con stato.  
+- Creare un'associazione personalizzata che prevede la protezione dei messaggi SOAP mediante una sessione protetta che utilizza un token SCT con stato.  
   
-    1.  Definire un'associazione personalizzata, aggiungendo un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) al file di configurazione per il servizio.  
+    1. Definire un'associazione personalizzata, aggiungendo un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) al file di configurazione per il servizio.  
   
         ```xml  
         <customBinding>  
         ```  
   
-    2.  Aggiungere un [ \<associazione >](../../../../docs/framework/misc/binding.md) elemento figlio per il [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+    2. Aggiungere un [ \<associazione >](../../../../docs/framework/misc/binding.md) elemento figlio per il [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
          Specificare il nome dell'associazione impostando l'attributo `name` su un nome univoco all'interno del file di configurazione.  
   
@@ -42,7 +42,7 @@ Per evitare la perdita di una determinata sessione protetta quando il servizio v
         <binding name="StatefulSCTSecureSession">  
         ```  
   
-    3.  Specificare la modalità di autenticazione per i messaggi inviati da e verso il servizio mediante l'aggiunta di un [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elemento figlio per il [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+    3. Specificare la modalità di autenticazione per i messaggi inviati da e verso il servizio mediante l'aggiunta di un [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elemento figlio per il [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
          Specificare l'utilizzo di una sessione protetta impostando l'attributo `authenticationMode` su `SecureConversation`. Specificare l'utilizzo di token SCT con stato impostando l'attributo `requireSecurityContextCancellation` su `false`.  
   
@@ -51,7 +51,7 @@ Per evitare la perdita di una determinata sessione protetta quando il servizio v
                   requireSecurityContextCancellation="false">  
         ```  
   
-    4.  Specificare come viene autenticato il client mentre viene stabilita la sessione protetta aggiungendo un [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento figlio per il [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).  
+    4. Specificare come viene autenticato il client mentre viene stabilita la sessione protetta aggiungendo un [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento figlio per il [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).  
   
          Specificare la modalità di autenticazione del client impostando l'attributo `authenticationMode`.  
   
@@ -59,13 +59,13 @@ Per evitare la perdita di una determinata sessione protetta quando il servizio v
         <secureConversationBootstrap authenticationMode="UserNameForCertificate" />  
         ```  
   
-    5.  Specificare la codifica dei messaggi aggiungendo un elemento di codifica, ad esempio [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
+    5. Specificare la codifica dei messaggi aggiungendo un elemento di codifica, ad esempio [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
   
         ```xml  
         <textMessageEncoding />  
         ```  
   
-    6.  Specificare il trasporto aggiungendo un elemento di trasporto, ad esempio la [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
+    6. Specificare il trasporto aggiungendo un elemento di trasporto, ad esempio la [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
   
         ```xml  
         <httpTransport />  

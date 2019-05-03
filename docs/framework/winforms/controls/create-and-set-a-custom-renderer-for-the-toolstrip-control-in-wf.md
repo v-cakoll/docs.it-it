@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
 ms.openlocfilehash: ca1a7444c029632f83b1600e5855a13c83777594
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772905"
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>Procedura: Creare e impostare un renderer personalizzato per il controllo ToolStrip in Windows Forms
 <xref:System.Windows.Forms.ToolStrip> i controlli forniscono un semplice supporto per temi e stili. È possibile ottenere un aspetto completamente personalizzato e comportamento (aspetto) impostando il <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> proprietà o il <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> proprietà a un renderer personalizzato.  
@@ -86,6 +86,6 @@ ms.locfileid: "59296381"
 - <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>
-- [Panoramica del controllo ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Panoramica sul controllo ToolStrip](toolstrip-control-overview-windows-forms.md)
 - [Architettura del controllo ToolStrip](toolstrip-control-architecture.md)
 - [Riepilogo della tecnologia ToolStrip](toolstrip-technology-summary.md)

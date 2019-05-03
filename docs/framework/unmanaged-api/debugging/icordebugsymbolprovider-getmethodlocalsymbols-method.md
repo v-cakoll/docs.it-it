@@ -5,11 +5,11 @@ ms.assetid: 8b989e38-e779-49d1-9e90-f1f920484b08
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 99f76bd19ef274c3d4207fdd071914b736314a3a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953322"
 ---
 # <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a>Metodo ICorDebugSymbolProvider::GetMethodLocalSymbols
 Ottiene i simboli locali del metodo da un indirizzo RVA (Relative Virtual Address) di tale metodo.  

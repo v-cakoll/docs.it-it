@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e08b78b49cab88d4435d75b04bd446b413a61340
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59234916"
+---
 ### <a name="operationcontextcurrent-may-return-null-when-called-in-a-using-clause"></a>OperationContext.Current può restituire Null in caso di chiamata in una clausola using
 
 |   |   |
@@ -8,4 +16,3 @@
 |Versione|4.6.2|
 |Tipo|Ridestinazione|
 |API interessate|<ul><li><xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType></li></ul>|
-

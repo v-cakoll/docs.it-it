@@ -3,10 +3,11 @@ title: Eccezioni IdentityModel
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
 ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998517"
 ---
 # <a name="identitymodel-exceptions"></a>Eccezioni IdentityModel
 In questo argomento vengono elencate tutte le eccezioni generate da IdentityModel.  
@@ -87,7 +88,7 @@ In questo argomento vengono elencate tutte le eccezioni generate da IdentityMode
 |TraceCodeSecurityIdentityDeterminationSuccess|Identità determinata per un EndpointAddress.|  
 |UndefinedUseOfPrefixAtElement|Nessuno spazio dei nomi definito per il prefisso specifico utilizzato nell'elemento.|  
 |TraceCodeSecuritySessionResponderOperationFailure|Operazione sessione di sicurezza non riuscita nel server.|  
-|CannotFindCert|Impossibile trovare il certificato X.509 utilizzando i criteri di ricerca specifici: StoreName, StoreLocation, FindType, FindValue.|  
+|CannotFindCert|Impossibile trovare il certificato X.509 utilizzando i criteri di ricerca specifici: StoreName , StoreLocation, FindType, FindValue.|  
 |X509InvalidUsageTime|L'ora di utilizzo del certificato X.509 specifica non è valida. L'ora di utilizzo non è compresa tra NotBefore e NotAfter.|  
 |TraceCodeSecurityIdentityDeterminationFailure|Impossibile determinare l'identità per un EndpointAddress.|  
 |AsyncObjectAlreadyEnded|Il metodo End è già stato chiamato su questo oggetto del risultato asincrono.|  
@@ -139,7 +140,7 @@ In questo argomento vengono elencate tutte le eccezioni generate da IdentityMode
 |CannotValidateSecurityTokenType|L'autenticatore del token di sicurezza specificato non può convalidare un token del tipo specificato.|  
 |X509FindValueMismatch|Il tipo dell'argomento findValue di X509FindType specificato deve avere il valore specificato. L'argomento findValue è di un altro tipo.|  
 |TraceCodeSecurityClientSessionCloseSent|Un messaggio di chiusura è stato inviato dalla sessione di sicurezza client.|  
-|SuiteDoesNotAcceptAlgorithm|L'algoritmo specificato non è accettato per l'operazione specificata dalla suite di algoritmi specificata|  
+|SuiteDoesNotAcceptAlgorithm|L'algoritmo specificato non è accettato per l'operazione specificata dal gruppo di algoritmi specificato|  
 |TraceCodeSecuritySessionRequestorOperationFailure|Operazione sessione di sicurezza client non riuscita.|  
 |SAMLUnableToLoadStatement|Impossibile caricare un SamlStatement.|  
 |InnerReaderMustBeAtElement|Il lettore interno deve essere sull'elemento.|  
@@ -163,7 +164,7 @@ In questo argomento vengono elencate tutte le eccezioni generate da IdentityMode
 |LengthOfArrayToConvertMustGreaterThanZero|La lunghezza della matrice per la conversione in un intero deve essere maggiore di 0.|  
 |InvalidAsyncResult|AsyncResult non valido.|  
 |TraceCodeIssuanceTokenProviderRemovedCachedToken|L'IssuanceTokenProvider ha rimosso il token di servizio scaduto.|  
-|IncorrectUserNameFormat|Formato del nome utente non valido. Il formato di nome utente deve essere nel formato "nome utente ' o ' dominio\\\username. '.|  
+|IncorrectUserNameFormat|Formato del nome utente non valido. Il formato del nome utente deve essere nel formato "nome utente ' o ' dominio\\\username'.|  
 |TraceCodeExportSecurityChannelBindingEntry|Avvio ExportChannelBinding di sicurezza.|  
 |UnsupportedInputTypeForTransform|Tipo di input specificato non supportato per la trasformazione.|  
 |CannotFindDocumentRoot|Impossibile trovare la radice del documento.|  
@@ -226,7 +227,7 @@ In questo argomento vengono elencate tutte le eccezioni generate da IdentityMode
 |UnableToCreateSignatureDeformatterFromAsymmetricCrypto|Impossibile creare un deformattatore della firma per l'algoritmo specificato dalla crittografia asimmetrica specificata.|  
 |TraceCodeIdentityModelAsyncCallbackThrewException|Eccezione generata da un callback asincrono.|  
 |LengthMustBeGreaterThanZero|La lunghezza di questo argomento deve essere maggiore di 0.|  
-|FoundMultipleCerts|Trovati più certificati X.509 utilizzando i criteri di ricerca specificati: StoreName, StoreLocation, FindType, FindValue. Fornire un valore di ricerca più specifico.|  
+|FoundMultipleCerts|Trovati più certificati X.509 usando i criteri di ricerca specificati: StoreName, StoreLocation, FindType, FindValue. Fornire un valore di ricerca più specifico.|  
 |AtLeastOneTransformRequired|L'elemento Transforms deve contenere almeno una trasformazione.|  
 |SAMLTokenNotSerialized|Impossibile serializzare SamlAssertion in XML. Per ulteriori dettagli, vedere l'eccezione interna.|  
 |TraceCodeSecurityBindingOutgoingMessageSecured|Il protocollo di sicurezza ha protetto il messaggio in uscita.|  

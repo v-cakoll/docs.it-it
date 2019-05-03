@@ -1,19 +1,19 @@
 ---
-title: <idn> Elemento (impostazioni Uri)
+title: Elemento <idn> (impostazioni URI)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59321757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705116"
 ---
 # <a name="idn-element-uri-settings"></a>\<IDN > (impostazioni Uri)
 Specifica se l'analisi IDN (Internationalized Domain Name) viene applicato a un nome di dominio.  
   
 ## <a name="schema-hierarchy"></a>Gerarchia dello schema  
- [\<configurazione > elemento](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<URI > (impostazioni Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -60,15 +60,15 @@ Specifica se l'analisi IDN (Internationalized Domain Name) viene applicato a un 
   
  Esistono tre possibili valori per IDN a seconda del server DNS che vengono usati:  
   
--   IDN abilitato = All  
+- IDN abilitato = All  
   
      Questo valore convertirà qualsiasi nome di dominio Unicode negli equivalenti Punycode (nomi IDN).  
   
--   IDN abilitato = AllExceptIntranet  
+- IDN abilitato = AllExceptIntranet  
   
      Questo valore convertirà tutti i nomi di dominio Unicode non nella Intranet locale per l'utilizzo degli equivalenti Punycode (nomi IDN). In questo caso, per gestire nomi internazionali sulla rete Intranet locale, i server DNS utilizzati per la rete Intranet devono supportare la risoluzione dei nomi Unicode.  
   
--   IDN abilitato = nessuno  
+- IDN abilitato = nessuno  
   
      Questo valore non convertirà qualsiasi nome di dominio Unicode per l'utilizzo di Punycode. Questo è il valore predefinito che è coerenza con il comportamento di .NET Framework 2.0.  
   

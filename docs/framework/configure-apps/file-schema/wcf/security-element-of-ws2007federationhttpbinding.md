@@ -1,13 +1,13 @@
 ---
-title: <security> di <ws2007FederationHttpBinding>
+title: <security> elemento di <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
 ms.openlocfilehash: 15740144b0aad7eb2798db4712e4769d08d893a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670547"
 ---
 # <a name="security-element-of-ws2007federationhttpbinding"></a>\<sicurezza > elemento del \<ws2007FederationHttpBinding >
 Definisce le impostazioni di sicurezza del [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elemento.  

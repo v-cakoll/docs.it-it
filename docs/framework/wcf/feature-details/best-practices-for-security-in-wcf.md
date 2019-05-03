@@ -8,11 +8,11 @@ helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
 ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048244"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Procedure consigliate per la protezione in WCF
 Nelle sezioni seguenti vengono elencate le procedure consigliate da prendere in considerazione quando si creano applicazioni protette tramite Windows Communication Foundation (WCF). Per altre informazioni sulla sicurezza, vedere [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Considerazioni sulla protezione per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) e [Considerazioni sulla sicurezza con metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -26,11 +26,11 @@ Nelle sezioni seguenti vengono elencate le procedure consigliate da prendere in 
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>Utilizzare certificati X509 anziché NTLM  
  WCF offre due meccanismi per l'autenticazione peer-to-peer: X509 i certificati (utilizzati dal canale peer) e l'autenticazione di Windows in cui una negoziazione SSPI effettua un downgrade da Kerberos a NTLM.  L'autenticazione basata sui certificati che utilizza dimensioni della chiave pari a 1024 bit o superiori è preferibile a NTLM per diversi motivi:  
   
--   disponibilità di autenticazione reciproca  
+- disponibilità di autenticazione reciproca  
   
--   utilizzo di algoritmi crittografici più avanzati  
+- utilizzo di algoritmi crittografici più avanzati  
   
--   maggiore difficoltà nell'utilizzo di credenziali X509 inoltrate.  
+- maggiore difficoltà nell'utilizzo di credenziali X509 inoltrate.  
    
 ## <a name="always-revert-after-impersonation"></a>Eseguire sempre il ripristino dopo la rappresentazione  
  Quando si utilizzano API che consentono la rappresentazione di un client, assicurarsi di ripristinare sempre l'identità originale. Quando si usano, ad esempio, <xref:System.Security.Principal.WindowsIdentity> e <xref:System.Security.Principal.WindowsImpersonationContext>, usare l'istruzione C# `using` o l'istruzione Visual Basic `Using`, come illustrato nel codice seguente. La classe <xref:System.Security.Principal.WindowsImpersonationContext> implementa l'interfaccia <xref:System.IDisposable> e pertanto, il Common Language Runtime (CLR) torna automaticamente alla propria l'identità originale quando il codice lascia il blocco `using`.  
@@ -59,5 +59,5 @@ Nelle sezioni seguenti vengono elencate le procedure consigliate da prendere in 
 ## <a name="see-also"></a>Vedere anche
 
 - [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Considerazioni sulla protezione per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
-- [Considerazioni sulla sicurezza con metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [Considerazioni sulla sicurezza per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
+- [Considerazioni sulla sicurezza con i metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

@@ -1,17 +1,17 @@
 ---
-title: Vulnerabilità di temporizzazione con decrittografia simmetrica modalità CBC con spaziatura interna
+title: Vulnerabilità di temporizzazione con decrittografia simmetrica modalità CBC usando il riempimento
 description: Informazioni su come rilevare e attenuare le vulnerabilità di temporizzazione con decrittografia simmetrica modalità Cipher Block Chaining (CBC) usando il riempimento.
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
 ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933900"
 ---
-# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilità di temporizzazione con decrittografia simmetrica modalità CBC con spaziatura interna
+# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilità di temporizzazione con decrittografia simmetrica modalità CBC usando il riempimento
 
 Microsoft ritiene che non è più sicuro decrittografare i dati crittografati con la modalità Cipher Block Chaining (CBC) dalla crittografia simmetrica quando verificabile riempimento viene applicato senza prima verificare l'integrità del testo crittografato, ad eccezione di molto specifico circostanze. Questa decisione si basa nella ricerca crittografica attualmente nota. 
 

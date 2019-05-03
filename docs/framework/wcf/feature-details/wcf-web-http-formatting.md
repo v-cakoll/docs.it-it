@@ -3,11 +3,11 @@ title: Formattazione HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
 ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59331039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935473"
 ---
 # <a name="wcf-web-http-formatting"></a>Formattazione HTTP Web WCF
 Il modello di programmazione HTTP Web WCF consente di determinare in modo dinamico il formato migliore in cui un'operazione di servizio debba restituire la risposta. Vengono supportati due metodi per determinare un formato appropriato: automatico ed esplicito.  
@@ -125,15 +125,15 @@ public class Service : IService
   
  Se è necessario supportare formati diversi da XML o JSON, definire l'operazione per ottenere un tipo restituito di <xref:System.ServiceModel.Channels.Message>. All'interno del codice operativo, determinare il formato appropriato da usare e creare quindi un oggetto <xref:System.ServiceModel.Channels.Message> usando uno dei metodi seguenti:  
   
--   `WebOperationContext.CreateAtom10Response`  
+- `WebOperationContext.CreateAtom10Response`  
   
--   `WebOperationContext.CreateJsonResponse`  
+- `WebOperationContext.CreateJsonResponse`  
   
--   `WebOperationContext.CreateStreamResponse`  
+- `WebOperationContext.CreateStreamResponse`  
   
--   `WebOperationContext.CreateTextResponse`  
+- `WebOperationContext.CreateTextResponse`  
   
--   `WebOperationContext.CreateXmlResponse`  
+- `WebOperationContext.CreateXmlResponse`  
   
  Ognuno di questi metodi usa il contenuto e crea un messaggio con il formato appropriato. Il metodo `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` può essere usato per ottenere un elenco di formati preferiti dal client in ordine di preferenza decrescente. Nell'esempio seguente viene indicato come usare `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` per determinare il formato da usare e viene quindi impiegato il metodo di risposta di creazione appropriato per creare il messaggio di risposta.  
   
@@ -167,7 +167,7 @@ public class Service : IService
 
 - <xref:System.UriTemplate>
 - <xref:System.UriTemplateMatch>
-- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [UriTemplate e UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
-- [Panoramica sul modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Panoramica del modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
 - [Modello a oggetti per la programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

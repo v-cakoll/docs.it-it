@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
 ms.openlocfilehash: 27b19e47d108b9af43a6d8882264d62c726ffe56
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59343266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972081"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Procedura: Visualizzare giorni specifici in grassetto con il controllo MonthCalendar di Windows Forms
 I moduli di Windows <xref:System.Windows.Forms.MonthCalendar> controllo può visualizzare i giorni in grassetto, come le date singolare o ripetute. È possibile eseguire questa operazione per attirare l'attenzione su date speciali, ad esempio i fine settimana e festivi.  
@@ -130,6 +130,6 @@ I moduli di Windows <xref:System.Windows.Forms.MonthCalendar> controllo può vis
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllo MonthCalendar](monthcalendar-control-windows-forms.md)
-- [Procedura: Selezionare un intervallo di date nel controllo MonthCalendar di Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Procedura: Modificare l'aspetto del controllo MonthCalendar di Windows Forms](how-to-change-monthcalendar-control-appearance.md)
-- [Procedura: Visualizzare più mesi nel controllo MonthCalendar di Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Procedura: Selezionare un intervallo di date nel controllo MonthCalendar Windows Form](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Procedura: Modificare l'aspetto del controllo MonthCalendar di Windows Form](how-to-change-monthcalendar-control-appearance.md)
+- [Procedura: Visualizzare più mesi nel controllo MonthCalendar Windows Form](display-more-than-one-month-wf-monthcalendar-control.md)

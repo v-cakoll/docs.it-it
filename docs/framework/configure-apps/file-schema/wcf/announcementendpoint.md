@@ -3,11 +3,11 @@ title: <announcementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
 ms.openlocfilehash: 4f3cf2748acc75b0ec83732664c5f97114f3663a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701255"
 ---
 # <a name="announcementendpoint"></a>\<announcementEndpoint>
 Questo elemento di configurazione definisce un endpoint standard con un contratto di annuncio fisso. Un servizio può annunciare la propria disponibilità inviando un messaggio di annuncio online oppure offline rispettivamente quando viene aperto o chiuso. Un servizio Windows Communication Foundation (WCF) consente di specificare gli endpoint di annuncio nel [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) elemento e Usa AnnouncementClient per eseguire gli annunci. Un client che desidera stare in ascolto per l'annuncio da altro servizio in realtà funge da un servizio WCF; pertanto è necessario configurare l'endpoint annunci per tale client nella [ \<services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) sezione.  

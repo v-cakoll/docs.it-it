@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d2af1b41f47a3906c0e573c104847aa3ff36cf8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62040586"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom (funzione)
 Determina se la classe o l'istanza corrente deriva da una classe padre specificata.

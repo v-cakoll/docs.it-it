@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b02f70f22a7d35bf0fe7816a52c490f88b31217
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61597128"
 ---
 # <a name="icorprofilerthreadenumgetcount-method"></a>Metodo ICorProfilerThreadEnum::GetCount
 Ottiene il numero di thread usati dall'applicazione.  

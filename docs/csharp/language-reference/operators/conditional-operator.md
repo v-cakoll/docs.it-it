@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 210b7cabb658c6f068d9ab34c83050ad6267e426
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 82ada5e4d1f56ea93bbd7f41b04cda9f98d678c9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704908"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672394"
 ---
 # <a name="-operator-c-reference"></a>?: Operatore (Riferimenti per C#)
 
@@ -24,12 +24,12 @@ L'operatore condizionale `?:`, comunemente noto come operatore condizionale tern
 La sintassi dell'operatore condizionale è la seguente:
 
 ```csharp
-condition ? consequence : alternative
+condition ? consequent : alternative
 ```
 
-L'espressione `condition` deve restituire `true` o `false`. Se `condition` restituisce `true`, viene valutata l'espressione `consequence` e il suo risultato diventa il risultato dell'operazione. Se `condition` restituisce `false`, viene valutata l'espressione `alternative` e il suo risultato diventa il risultato dell'operazione. Viene valutata solo `consequence` o solo `alternative`.
+L'espressione `condition` deve restituire `true` o `false`. Se `condition` restituisce `true`, viene valutata l'espressione `consequent` e il suo risultato diventa il risultato dell'operazione. Se `condition` restituisce `false`, viene valutata l'espressione `alternative` e il suo risultato diventa il risultato dell'operazione. Viene valutata solo `consequent` o solo `alternative`.
 
-Il tipo di `consequence` e `alternative` deve corrispondere oppure deve essere presente una conversione implicita da un tipo all'altro.
+Il tipo di `consequent` e `alternative` deve corrispondere oppure deve essere presente una conversione implicita da un tipo all'altro.
 
 L'operatore condizionale si associa all'operando a destra, che significa che un'espressione nel formato
 
@@ -43,6 +43,12 @@ viene valutata come
 a ? b : (c ? d : e)
 ```
 
+Un modo per ricordarsi come funziona questo operatore consiste nel porsi questa domanda: 
+```
+is this condition true ? yes : no
+```
+dove la parte ? dell'operatore funge da punto interrogativo per l'affermazione precedente e la parte successiva da risposta logica alla domanda.
+
 L'esempio seguente illustra l'uso dell'operatore condizionale:
 
 [!code-csharp[non ref conditional](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
@@ -54,12 +60,12 @@ A partire da C# 7.2, è possibile usare l'espressione condizionale ref per resti
 La sintassi dell'espressione condizionale ref è la seguente:
 
 ```csharp
-condition ? ref consequence : ref alternative
+condition ? ref consequent : ref alternative
 ```
 
-Come l'operatore condizionale originale, l'espressione condizionale ref valuta solo una delle due espressioni: `consequence` o `alternative`.
+Come l'operatore condizionale originale, l'espressione condizionale ref valuta solo una delle due espressioni: `consequent` o `alternative`.
 
-Nel caso dell'espressione condizionale ref, il tipo di `consequence` e `alternative` deve coincidere.
+Nel caso dell'espressione condizionale ref, il tipo di `consequent` e `alternative` deve coincidere.
 
 L'esempio seguente illustra l'uso dell'espressione condizionale ref:
 

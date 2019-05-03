@@ -5,11 +5,11 @@ ms.assetid: f2de5224-fd91-45de-9e58-bc600c6d22f1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cd524446cd9fd5cf9c067ab5778a654ed000ffb3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940179"
 ---
 # <a name="isymunmanagedasyncmethod-interface"></a>Interfaccia ISymUnmanagedAsyncMethod
 Questa interfaccia è il complemento di lettura per il [interfaccia ISymUnmanagedAsyncMethodPropertiesWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  
@@ -37,4 +37,4 @@ Questa interfaccia è il complemento di lettura per il [interfaccia ISymUnmanage
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce dell'archivio dei simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interfacce dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

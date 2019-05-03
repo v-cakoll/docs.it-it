@@ -3,11 +3,11 @@ title: 'Entity Data Model: tipi di dati primitivi'
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
 ms.openlocfilehash: 044a0ed981bb9cda3550fb3a3a9f1cb9bff96f25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667132"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Entity Data Model: tipi di dati primitivi
 Entity Data Model (EDM) supporta un set di tipi di dati primitivi astratti (ad esempio String, Boolean, Int32 e così via) che vengono usate per definire [proprietà](../../../../docs/framework/data/adonet/property.md) in un modello concettuale. Questi tipi di dati primitivi sono proxy per i tipi di dati primitivi effettivi supportati nell'ambiente di archiviazione o host, ad esempio un database SQL Server o Common Language Runtime (CLR). EDM non definisce la semantica di operazioni o conversioni su tipi di dati primitivi. Questa semantica viene definita dall'ambiente di archiviazione o host. I tipi di dati primitivi in EDM sono in genere associati ai corrispondenti tipi di dati primitivi nell'ambiente di archiviazione o host. Per informazioni su come Entity Framework esegue il mapping di tipi primitivi in EDM ai tipi di dati di SQL Server, vedere [SqlClient per tipi Entity FrameworkTypes](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  

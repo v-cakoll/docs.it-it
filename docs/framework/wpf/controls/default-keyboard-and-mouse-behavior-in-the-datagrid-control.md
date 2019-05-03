@@ -8,11 +8,11 @@ helpviewer_keywords:
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
 ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911846"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Comportamento predefinito di tastiera e mouse nel controllo DataGrid
 In questo argomento descrive come gli utenti possono interagire con il <xref:System.Windows.Controls.DataGrid> controllo usando la tastiera e mouse.  

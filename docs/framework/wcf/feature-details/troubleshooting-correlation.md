@@ -3,11 +3,11 @@ title: Risoluzione dei problemi relativi alla correlazione
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
 ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932821"
 ---
 # <a name="troubleshooting-correlation"></a>Risoluzione dei problemi relativi alla correlazione
 La correlazione viene utilizzata per correlare i messaggi del servizio flusso di lavoro l'uno all'altro e all'istanza del flusso di lavoro corretta, ma se non viene configurata correttamente, i messaggi non verranno ricevuti e le applicazioni non funzioneranno in modo appropriato. In questo argomento viene fornita una panoramica dei metodi che consentono di risolvere i problemi relativi alla correlazione e vengono inoltre descritti alcuni dei problemi comuni che possono verificarsi durante l'utilizzo della correlazione.
@@ -161,7 +161,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- La persistenza non è consentita tra un <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> coppia o un' <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> coppia. Viene creata un'area di non persistenza che dura fino a quando non vengono completate entrambe le attività. Se un'attività, ad esempio un'attività di ritardo si trova in quest'area di non persistenza e determina che il flusso di lavoro diventi inattivo, tale flusso di lavoro non verrà conservato anche se l'host è configurato per rendere persistenti i flussi di lavoro quando diventano inattivi. Se un'attività, ad esempio un'attività Persist tenta di eseguire la persistenza in modo esplicito nell'area di non persistenza, viene generata un'eccezione irreversibile, il flusso di lavoro viene interrotto e al chiamante viene restituita un'eccezione <xref:System.ServiceModel.FaultException>. Il messaggio di eccezione irreversibile è "System.InvalidOperationException: blocchi di non persistenza non in grado di contenere le attività Persist". Questa eccezione non viene restituita al chiamante ma può essere osservata se il rilevamento è abilitato. Il messaggio dell'eccezione <xref:System.ServiceModel.FaultException> restituita al chiamante è "WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6' è stata completata. Impossibile eseguire l'operazione".
+ La persistenza non è consentita tra un <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> coppia o un' <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> coppia. Viene creata un'area di non persistenza che dura fino a quando non vengono completate entrambe le attività. Se un'attività, ad esempio un'attività di ritardo si trova in quest'area di non persistenza e determina che il flusso di lavoro diventi inattivo, tale flusso di lavoro non verrà conservato anche se l'host è configurato per rendere persistenti i flussi di lavoro quando diventano inattivi. Se un'attività, ad esempio un'attività Persist tenta di eseguire la persistenza in modo esplicito nell'area di non persistenza, viene generata un'eccezione irreversibile, il flusso di lavoro viene interrotto e al chiamante viene restituita un'eccezione <xref:System.ServiceModel.FaultException>. Il messaggio di eccezione irreversibile è "System. InvalidOperationException: Rendere persistenti le attività non possono essere contenute blocchi di non persistenza. ". Questa eccezione non viene restituita al chiamante ma può essere osservata se il rilevamento è abilitato. Il messaggio dell'eccezione <xref:System.ServiceModel.FaultException> restituita al chiamante è "WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6' è stata completata. Impossibile eseguire l'operazione".
 
  Per altre informazioni sulla correlazione request / reply, vedere [Request / Reply](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).
 
@@ -188,7 +188,7 @@ MessageQuerySet = new MessageQuerySet
 }
 ```
 
- Se una query XPath non è configurata correttamente in modo tale che non viene recuperato alcun dato di correlazione, viene restituito un errore con il messaggio seguente: "Una query di correlazione ha restituito un set di risultati vuoto. Assicurarsi che le query di correlazione dell'endpoint siano configurate correttamente". Un metodo rapido per risolvere questo problema consiste nel sostituire la query XPath con un valore letterale come descritto nella sezione precedente. Questo problema può verificarsi se si usa il generatore delle query XPath nel **Aggiungi inizializzatori di correlazione** oppure **definizione di CorrelatesOn** finestre di dialogo e il servizio del flusso di lavoro utilizza contratti di messaggio. Nell'esempio seguente viene definita una classe dei contratto di messaggio.
+ Se una query XPath è configurata in modo non corretto in modo che nessun dato di correlazione viene recuperato, viene restituito un errore con messaggio analogo al seguente: "Una query di correlazione ha restituito un set di risultati vuoto. Assicurarsi che le query di correlazione dell'endpoint siano configurate correttamente". Un metodo rapido per risolvere questo problema consiste nel sostituire la query XPath con un valore letterale come descritto nella sezione precedente. Questo problema può verificarsi se si usa il generatore delle query XPath nel **Aggiungi inizializzatori di correlazione** oppure **definizione di CorrelatesOn** finestre di dialogo e il servizio del flusso di lavoro utilizza contratti di messaggio. Nell'esempio seguente viene definita una classe dei contratto di messaggio.
 
 ```csharp
 [MessageContract]

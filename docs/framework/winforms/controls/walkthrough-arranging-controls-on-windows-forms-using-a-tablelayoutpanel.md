@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
 ms.openlocfilehash: 392d548a5f89c31d94af9134b8cc3a37b28d8c6c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009110"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Procedura dettagliata: Disposizione dei controlli in Windows Forms usando TableLayoutPanel
 Alcune applicazioni richiedono che il form abbia un layout che possa adattarsi automaticamente alle eventuali modifiche alle dimensioni del form o del contenuto del form. Per usare un layout dinamico senza gestire gli eventi <xref:System.Windows.Forms.Control.Layout> in modo esplicito nel codice è possibile usare un pannello di layout.  
@@ -28,21 +28,21 @@ Alcune applicazioni richiedono che il form abbia un layout che possa adattarsi a
   
  Le attività illustrate nella procedura dettagliata sono le seguenti:  
   
--   Creazione di un progetto Windows Form  
+- Creazione di un progetto Windows Form  
   
--   Disposizione dei controlli in righe e colonne  
+- Disposizione dei controlli in righe e colonne  
   
--   Riga di impostazione e le proprietà delle colonne  
+- Riga di impostazione e le proprietà delle colonne  
   
--   Spanning righe e colonne con un controllo  
+- Spanning righe e colonne con un controllo  
   
--   Gestione automatica degli overflow  
+- Gestione automatica degli overflow  
   
--   Inserimento di controlli con doppio clic nella casella degli strumenti  
+- Inserimento di controlli con doppio clic nella casella degli strumenti  
   
--   Inserimento di un controllo disegnandone il contorno  
+- Inserimento di un controllo disegnandone il contorno  
   
--   Riassegnazione dei controlli esistenti a un padre diverso  
+- Riassegnazione dei controlli esistenti a un padre diverso  
   
  Al termine, si avrà una migliore comprensione del ruolo svolto da queste importanti funzionalità di layout.  
   
@@ -158,37 +158,37 @@ Alcune applicazioni richiedono che il form abbia un layout che possa adattarsi a
   
 #### <a name="to-demonstrate-that-multiple-controls-within-cells-are-not-permitted"></a>Per dimostrare che non sono consentiti più controlli all'interno delle celle  
   
--   Trascinare un <xref:System.Windows.Forms.Button> controllare dal **casella degli strumenti** nel <xref:System.Windows.Forms.TableLayoutPanel> controllano e rilasciarlo in una delle celle occupate. Si noti che il <xref:System.Windows.Forms.TableLayoutPanel> controllo non consente di eliminare il <xref:System.Windows.Forms.Button> controllo nella cella occupata.  
+- Trascinare un <xref:System.Windows.Forms.Button> controllare dal **casella degli strumenti** nel <xref:System.Windows.Forms.TableLayoutPanel> controllano e rilasciarlo in una delle celle occupate. Si noti che il <xref:System.Windows.Forms.TableLayoutPanel> controllo non consente di eliminare il <xref:System.Windows.Forms.Button> controllo nella cella occupata.  
   
 ## <a name="swapping-controls"></a>Scambio di controlli  
  Il <xref:System.Windows.Forms.TableLayoutPanel> controllo consente lo scambio dei controlli tra due diverse celle.  
   
 #### <a name="to-swap-controls"></a>Per spostarsi tra controlli  
   
--   Trascinare uno del <xref:System.Windows.Forms.Button> controlli da una cella occupata e rilasciarlo in un'altra cella occupata. Si noti che i due controlli vengono spostati da una cella in altra.  
+- Trascinare uno del <xref:System.Windows.Forms.Button> controlli da una cella occupata e rilasciarlo in un'altra cella occupata. Si noti che i due controlli vengono spostati da una cella in altra.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  È possibile ottenere un layout complesso usando i pannelli e i controlli di layout in combinazione. Per approfondire l'argomento, si consiglia di effettuare le seguenti operazioni:  
   
--   Provare a ridimensionare uno del <xref:System.Windows.Forms.Button> controlli a una dimensione più grande e notare l'effetto sul layout.  
+- Provare a ridimensionare uno del <xref:System.Windows.Forms.Button> controlli a una dimensione più grande e notare l'effetto sul layout.  
   
--   Incollare una selezione di più controlli nel <xref:System.Windows.Forms.TableLayoutPanel> controllare e prendere nota l'inserimento di controlli.  
+- Incollare una selezione di più controlli nel <xref:System.Windows.Forms.TableLayoutPanel> controllare e prendere nota l'inserimento di controlli.  
   
--   I pannelli layout possono contenere altri pannelli layout. Provare a rilasciare un controllo <xref:System.Windows.Forms.TableLayoutPanel> nel controllo esistente.  
+- I pannelli layout possono contenere altri pannelli layout. Provare a rilasciare un controllo <xref:System.Windows.Forms.TableLayoutPanel> nel controllo esistente.  
   
--   Ancorare il controllo <xref:System.Windows.Forms.TableLayoutPanel> al form padre. Ridimensionare il form e notare l'effetto sul layout.  
+- Ancorare il controllo <xref:System.Windows.Forms.TableLayoutPanel> al form padre. Ridimensionare il form e notare l'effetto sul layout.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando le guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers (Esperienza utente di Microsoft Windows, Linee guida ufficiali per analisti e sviluppatori dell'interfaccia utente). Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
 - [Procedura dettagliata: Creazione di un Form Windows ridimensionabile per immissione dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
 - [Procedura dettagliata: Creazione di un Form Windows localizzabili](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
-- [Suggerimenti per il controllo TableLayoutPanel](best-practices-for-the-tablelayoutpanel-control.md)
-- [Cenni preliminari sulla proprietà AutoSize](autosize-property-overview.md)
-- [Procedura: Ancorare i controlli in Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Procedura: Agganciare i controlli in Windows Forms](how-to-anchor-controls-on-windows-forms.md)
-- [Procedura dettagliata: Disposizione dei controlli Windows Forms con spaziatura interna, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)
+- [Procedure consigliate per il controllo TableLayoutPanel](best-practices-for-the-tablelayoutpanel-control.md)
+- [Panoramica sulla proprietà AutoSize](autosize-property-overview.md)
+- [Procedura: Ancorare i controlli in Windows Form](how-to-dock-controls-on-windows-forms.md)
+- [Procedura: Ancoraggio dei controlli in Windows Form](how-to-anchor-controls-on-windows-forms.md)
+- [Procedura dettagliata: Definire il layout dei Windows Form usando spaziatura, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rotating objects by geometric paths [WPF]
 ms.assetid: cb31ca4d-f05a-4c6b-9a18-4b6faaf38d45
 ms.openlocfilehash: 3e35169da7297ec62e0114ab21f4ba81c0a656ea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651246"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Procedura: Ruotare un oggetto usando un tracciato geometrico
 Questo esempio viene illustrato come ruotare un oggetto lungo un tracciato geometrico definito da un <xref:System.Windows.Media.PathGeometry> oggetto.  
@@ -21,9 +21,9 @@ Questo esempio viene illustrato come ruotare un oggetto lungo un tracciato geome
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente usa tre <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> oggetti per spostare un rettangolo lungo un tracciato geometrico.  
   
--   Il primo <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> anima un <xref:System.Windows.Media.RotateTransform> applicato al rettangolo. L'animazione genera valori angolari. Il rettangolo ruota lungo i contorni del tracciato.  
+- Il primo <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> anima un <xref:System.Windows.Media.RotateTransform> applicato al rettangolo. L'animazione genera valori angolari. Il rettangolo ruota lungo i contorni del tracciato.  
   
--   Gli altri due oggetti animano i <xref:System.Windows.Media.TranslateTransform.X%2A> e <xref:System.Windows.Media.TranslateTransform.Y%2A> i valori di un <xref:System.Windows.Media.TranslateTransform> applicato al rettangolo. Fanno in modo che il rettangolo si sposti orizzontalmente e verticalmente lungo il tracciato.  
+- Gli altri due oggetti animano i <xref:System.Windows.Media.TranslateTransform.X%2A> e <xref:System.Windows.Media.TranslateTransform.Y%2A> i valori di un <xref:System.Windows.Media.TranslateTransform> applicato al rettangolo. Fanno in modo che il rettangolo si sposti orizzontalmente e verticalmente lungo il tracciato.  
   
  [!code-xaml[PathAnimationGallery_snippet#RotateAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/rotateanimationusingpathexample.xaml#rotateanimationusingpathwholepage)]  
   
@@ -37,5 +37,5 @@ Questo esempio viene illustrato come ruotare un oggetto lungo un tracciato geome
 ## <a name="see-also"></a>Vedere anche
 
 - [Cenni preliminari sull'animazione](animation-overview.md)
-- [Esempio di animazione tracciato](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Path Animation Sample (Esempio di animazione tracciato)](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [Procedure relative all'animazione percorso](path-animation-how-to-topics.md)

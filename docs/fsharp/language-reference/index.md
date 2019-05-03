@@ -3,11 +3,11 @@ title: Riferimenti per il linguaggio F#
 description: Trovare F# informazioni sulle funzionalità di linguaggio da questo riferimento al token delle lingue, i concetti, tipi, le espressioni e gli argomenti supportati dal compilatore costrutto.
 ms.date: 05/16/2016
 ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666443"
 ---
 # <a name="f-language-reference"></a>Riferimenti per il linguaggio F#
 
@@ -95,7 +95,7 @@ La tabella seguente elenca gli argomenti che descrivono le espressioni F#.
 |[Cicli: `for...in` Expression](loops-for-in-expression.md)|Descrive l'espressione `for...in`, un costrutto di ciclo usato per eseguire l'iterazione sopra le corrispondenze di un modello in una raccolta enumerabile, ad esempio un'espressione di intervallo, una sequenza, un elenco, una matrice o un altro costrutto che supporta l'enumerazione.|
 |[Cicli: `while...do` Expression](loops-while-do-expression.md)|Descrive l'espressione `while...do`, usata per l'esecuzione iterativa (ciclo) quando una specifica condizione di verifica è true.|
 |[Espressioni di oggetto](object-expressions.md)|Descrive le espressioni di oggetto, ovvero le espressioni che creano nuove istanze di un tipo di oggetto creato dinamicamente, di un tipo di oggetto anonimo basato su un tipo di base, un'interfaccia o un set di interfacce esistenti.|
-|[Espressioni Lazy](lazy-expressions.md)|Descrive le espressioni lazy, ovvero calcoli che non vengono eseguiti immediatamente, ma solo quando il risultato è effettivamente necessario.|
+|[Espressioni lazy](lazy-expressions.md)|Descrive le espressioni lazy, ovvero calcoli che non vengono eseguiti immediatamente, ma solo quando il risultato è effettivamente necessario.|
 |[Espressioni di calcolo](computation-expressions.md)|Descrive le espressioni di calcolo in F#, che specificano una sintassi efficiente per la scrittura di calcoli che possono essere ordinati in sequenza e combinati tramite costrutti di flusso di controllo e associazioni. Possono essere usati per specificare una sintassi efficiente per *monads*, ovvero una funzionalità di programmazione funzionale che può essere usata per gestire i dati, il controllo e gli effetti collaterali nei programmi funzionali. Un solo tipo di espressione di calcolo, ovvero il flusso di lavoro asincrono, offre supporto per i calcoli paralleli e asincroni. Per altre informazioni, vedere [Flussi di lavoro asincroni](asynchronous-workflows.md).|
 |[Flussi di lavoro asincroni](asynchronous-workflows.md)|Descrive i flussi di lavoro asincroni, una funzionalità del linguaggio che consente di scrivere codice asincrono in modo molto simile a quello normale in cui si scrive codice sincrono.|
 |[Citazioni di codice](code-quotations.md)|Descrive le citazioni di codice, una funzionalità del linguaggio che consente di generare e usare espressioni di codice F# a livello di codice.|

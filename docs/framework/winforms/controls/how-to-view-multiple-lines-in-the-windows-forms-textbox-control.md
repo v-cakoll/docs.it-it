@@ -12,18 +12,18 @@ helpviewer_keywords:
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
 ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012919"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Procedura: Visualizzare più righe nel controllo TextBox di Windows Forms
 Per impostazione predefinita, i moduli di Windows <xref:System.Windows.Forms.TextBox> controllo Visualizza una singola riga di testo e non sono visualizzate le barre di scorrimento. Se il testo è maggiore dello spazio disponibile, è visibile solo una parte del testo. È possibile modificare questo comportamento predefinito impostando la <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, e <xref:System.Windows.Forms.TextBox.ScrollBars%2A> proprietà sui valori appropriati.  
   
 ### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>Per visualizzare un ritorno a capo nel controllo TextBox  
   
--   Per visualizzare un ritorno a capo in un multilinea <xref:System.Windows.Forms.TextBox>, usare il <xref:System.Environment.NewLine%2A> proprietà.  
+- Per visualizzare un ritorno a capo in un multilinea <xref:System.Windows.Forms.TextBox>, usare il <xref:System.Environment.NewLine%2A> proprietà.  
   
      Tenere presente che l'interpretazione dei caratteri di escape (\\) è specifico del linguaggio. Visual Basic Usa `Chr$(13) & Chr$(10)` per la combinazione di caratteri ritorno a capo return e avanzamento riga.  
   
@@ -44,15 +44,15 @@ Per impostazione predefinita, i moduli di Windows <xref:System.Windows.Forms.Tex
     |Value|Descrizione|  
     |-----------|-----------------|  
     |`false`|Testo nel controllo non verrà automaticamente racchiusi, in modo che scorre verso destra fino a quando non viene raggiunta un'interruzione di riga. Utilizzare questo valore se si è scelto <xref:System.Windows.Forms.ScrollBars.Horizontal> barre di scorrimento o <xref:System.Windows.Forms.ScrollBars.Both>sopra.|  
-    |`true` (predefinito)|Non verrà visualizzata la barra di scorrimento orizzontale. Utilizzare questo valore se si è scelto <xref:System.Windows.Forms.ScrollBars.Vertical> barre di scorrimento o <xref:System.Windows.Forms.ScrollBars.None>precedente, per visualizzare uno o più paragrafi.|  
+    |`true` (impostazione predefinita)|Non verrà visualizzata la barra di scorrimento orizzontale. Utilizzare questo valore se si è scelto <xref:System.Windows.Forms.ScrollBars.Vertical> barre di scorrimento o <xref:System.Windows.Forms.ScrollBars.None>precedente, per visualizzare uno o più paragrafi.|  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.TextBox>
-- [Panoramica del controllo TextBox](textbox-control-overview-windows-forms.md)
-- [Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Cenni preliminari sul controllo TextBox](textbox-control-overview-windows-forms.md)
+- [Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Form](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Form](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [Procedura: Creare una casella di testo di sola lettura](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Procedura: Inserire virgolette in una stringa](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Procedura: Selezionare testo nel controllo TextBox di Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Procedura: Selezionare il testo nel controllo TextBox Windows Form](how-to-select-text-in-the-windows-forms-textbox-control.md)
 - [Controllo TextBox](textbox-control-windows-forms.md)

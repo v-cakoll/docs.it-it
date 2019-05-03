@@ -3,11 +3,11 @@ title: set di entità
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
 ms.openlocfilehash: 7fcaa2cb9bac02271940a712d4d044df25d7d4cf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59126620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033956"
 ---
 # <a name="entity-set"></a>set di entità
 Un' *set di entità* è un contenitore logico per istanze di un [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) e le istanze di qualsiasi tipo derivato da tale tipo di entità. (Per informazioni sui tipi derivati, vedere [Entity Data Model: Ereditarietà](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) La relazione tra un tipo di entità e un set di entità è analoga alla relazione tra una riga e una tabella in un database relazionale: Analogamente a una riga, un tipo di entità descrive la struttura dei dati e, analogamente a una tabella, un set di entità contiene istanze di una determinata struttura. Un set di entità non è un costrutto di modellazione dati e non descrive la struttura di dati. Un set di entità, invece, fornisce un costrutto per un ambiente host o di archiviazione (ad esempio Common Language Runtime o un database SQL Server) per raggruppare le istanze del tipo di entità in modo che se ne possa eseguire il mapping a un archivio dati.  
@@ -16,11 +16,11 @@ Un' *set di entità* è un contenitore logico per istanze di un [tipo di entità
   
  Perché un'istanza di un tipo di entità esista in un set di entità, devono essere osservate le seguenti condizioni:  
   
--   Il tipo dell'istanza è lo stesso del tipo di entità su cui si basa il set di entità oppure il tipo dell'istanza è un sottotipo del tipo di entità.  
+- Il tipo dell'istanza è lo stesso del tipo di entità su cui si basa il set di entità oppure il tipo dell'istanza è un sottotipo del tipo di entità.  
   
--   Il [chiave di entità](../../../../docs/framework/data/adonet/entity-key.md) per l'istanza è univoco all'interno del set di entità.  
+- Il [chiave di entità](../../../../docs/framework/data/adonet/entity-key.md) per l'istanza è univoco all'interno del set di entità.  
   
--   L'istanza non esiste in nessun altro set di entità.  
+- L'istanza non esiste in nessun altro set di entità.  
   
     > [!NOTE]
     >  È possibile definire più set di entità tramite lo stesso tipo di entità, ma un'istanza di un determinato tipo di entità può esistere in un solo set di entità.  

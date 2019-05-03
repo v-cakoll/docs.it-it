@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
 ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037752"
 ---
 # <a name="componentresourcekey-markup-extension"></a>Estensione del markup ComponentResourceKey
 Definisce e fa riferimento a chiavi per le risorse che vengono caricate da assembly esterni. In questo modo una ricerca delle risorse specificare un tipo di destinazione in un assembly, anziché un dizionario risorse esplicita in un assembly o in una classe.  
@@ -52,9 +52,9 @@ Definisce e fa riferimento a chiavi per le risorse che vengono caricate da assem
 ## <a name="remarks"></a>Note  
  Come illustrato nel precedenti, gli utilizzi un {`ComponentResourceKey`} utilizzo dell'estensione di markup viene trovato in due posizioni:  
   
--   La definizione di una chiave all'interno di un dizionario risorse, come fornito da un autore di controlli.  
+- La definizione di una chiave all'interno di un dizionario risorse, come fornito da un autore di controlli.  
   
--   Accede a una risorsa di tema dell'assembly, quando si è applicare nuovamente i modelli del controllo, ma desidera utilizzare i valori delle proprietà che provengono da risorse fornite da temi del controllo.  
+- Accede a una risorsa di tema dell'assembly, quando si è applicare nuovamente i modelli del controllo, ma desidera utilizzare i valori delle proprietà che provengono da risorse fornite da temi del controllo.  
   
  Per fare riferimento a risorse del componente che provengono dai temi, è consigliabile usare `{DynamicResource}` anziché `{StaticResource}`. Come illustrato negli utilizzi. `{DynamicResource}` è consigliato perché il tema stesso può essere modificato dall'utente. Se si desidera che la risorsa del componente che corrisponde maggiormente alla finalità dell'autore per supportare un tema, è consigliabile abilitare il riferimento di risorsa componente anche essere dinamico.  
   
@@ -78,6 +78,6 @@ Definisce e fa riferimento a chiavi per le risorse che vengono caricate da assem
 
 - <xref:System.Windows.ComponentResourceKey>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Panoramica della creazione di controlli](../controls/control-authoring-overview.md)
-- [Panoramica di XAML (WPF)](xaml-overview-wpf.md)
+- [Cenni preliminari sulla modifica di controlli](../controls/control-authoring-overview.md)
+- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
 - [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md)

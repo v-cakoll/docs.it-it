@@ -3,11 +3,11 @@ title: Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
 ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051769"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
 Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation (WCF) consente di analizzare le tracce di diagnostica vengono generate da WCF. Service Trace Viewer offre un modo per unire, visualizzare e filtrare i messaggi di traccia nel log in modo che è possibile diagnosticare, riparare e verificare i problemi del servizio WCF.  
@@ -457,6 +457,6 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Configurazione delle funzionalità di traccia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Analisi end-to-end](./diagnostics/tracing/end-to-end-tracing.md)
+- [Traccia end-to-end](./diagnostics/tracing/end-to-end-tracing.md)

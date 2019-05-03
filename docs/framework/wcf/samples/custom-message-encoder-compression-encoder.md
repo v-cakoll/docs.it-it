@@ -3,11 +3,11 @@ title: 'Codificatore di messaggi personalizzati: Codificatore di compressione'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
 ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003093"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Codificatore di messaggi personalizzati: Codificatore di compressione
 In questo esempio viene illustrato come implementare un codificatore personalizzato utilizzando la piattaforma di Windows Communication Foundation (WCF).  
@@ -29,13 +29,13 @@ In questo esempio viene illustrato come implementare un codificatore personalizz
   
  L'esempio illustra come creare e integrare un codificatore di messaggi personalizzato in un'applicazione WCF. La libreria GZipEncoder.dll viene distribuita con il client e il servizio. In questo esempio viene inoltre illustrato l'impatto della compressione dei messaggi. Il codice in GZipEncoder.dll dimostra le operazioni seguenti:  
   
--   Compilazione di un codificatore personalizzato e di una factory del codificatore.  
+- Compilazione di un codificatore personalizzato e di una factory del codificatore.  
   
--   Sviluppo di un elemento di associazione per un codificatore personalizzato.  
+- Sviluppo di un elemento di associazione per un codificatore personalizzato.  
   
--   Utilizzo della configurazione dell'associazione personalizzata per l'integrazione di elementi di associazione personalizzati.  
+- Utilizzo della configurazione dell'associazione personalizzata per l'integrazione di elementi di associazione personalizzati.  
   
--   Sviluppo di un gestore di configurazione personalizzato per consentire la configurazione del file di un elemento di associazione personalizzato.  
+- Sviluppo di un gestore di configurazione personalizzato per consentire la configurazione del file di un elemento di associazione personalizzato.  
   
  Come indicato in precedenza, in un codificatore personalizzato vengono implementati molti livelli. Per illustrare meglio la relazione tra i singoli livelli, nell'elenco seguente è fornito un ordine semplificato di eventi per l'avvio del servizio:  
   
@@ -43,13 +43,13 @@ In questo esempio viene illustrato come implementare un codificatore personalizz
   
 2. Le informazioni di configurazione vengono lette.  
   
-    1.  La configurazione del servizio registra il gestore di configurazione personalizzato.  
+    1. La configurazione del servizio registra il gestore di configurazione personalizzato.  
   
-    2.  L'host del servizio viene creato e aperto.  
+    2. L'host del servizio viene creato e aperto.  
   
-    3.  L'elemento di configurazione personalizzato crea e restituisce l'elemento di associazione personalizzato.  
+    3. L'elemento di configurazione personalizzato crea e restituisce l'elemento di associazione personalizzato.  
   
-    4.  L'elemento di associazione personalizzato crea e restituisce una factory del codificatore di messaggi.  
+    4. L'elemento di associazione personalizzato crea e restituisce una factory del codificatore di messaggi.  
   
 3. Un messaggio viene ricevuto.  
   

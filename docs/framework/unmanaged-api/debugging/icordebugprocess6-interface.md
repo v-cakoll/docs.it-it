@@ -5,11 +5,11 @@ ms.assetid: 34a10ac2-882c-4797-8369-f120e8e640c7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 518c6ec99e4062bf8432809d3472baa395017da3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948622"
 ---
 # <a name="icordebugprocess6-interface"></a>Interfaccia ICorDebugProcess6
 Estende logicamente l'interfaccia ICorDebugProcess per abilitare funzionalità come la decodifica degli eventi di debug gestito sono codificati in eventi di debug di eccezioni native e suddivisione dei moduli virtuali.  

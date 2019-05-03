@@ -15,11 +15,11 @@ ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1049187dabbea64599617bb4372ed50515a51e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949188"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>programmazione per SQL Server e attributi di protezione host
 Per poter caricare ed eseguire codice gestito in un host di SQL Server, è necessario soddisfare i requisiti dell'host sia per la sicurezza dall'accesso di codice che per la protezione delle risorse dell'host.  I requisiti di sicurezza di accesso di codice sono specificati da uno dei tre set di autorizzazioni di SQL Server: -SAFE, EXTERNAL-ACCESS o UNSAFE. L'esecuzione del codice nell'ambito del set di autorizzazioni SAFE o EXTERNAL-ACCESS deve evitare alcuni tipi o membri con l'attributo <xref:System.Security.Permissions.HostProtectionAttribute> applicato. <xref:System.Security.Permissions.HostProtectionAttribute> non è un'autorizzazione di sicurezza, ma piuttosto una garanzia di affidabilità perché identifica specifici costrutti del codice, tipi o metodi, che l'host potrebbe non consentire.  L'uso di <xref:System.Security.Permissions.HostProtectionAttribute> impone un modello di programmazione che contribuisce alla protezione della stabilità dell'host.  
@@ -27,11 +27,11 @@ Per poter caricare ed eseguire codice gestito in un host di SQL Server, è neces
 ## <a name="host-protection-attributes"></a>Attributi di protezione dell'host  
  Gli attributi di protezione dell'host identificano i tipi o membri non idonei per il modello di programmazione dell'host e che rappresentano i seguenti livelli crescenti di minaccia per l'affidabilità:  
   
--   Sono altrimenti innocui.  
+- Sono altrimenti innocui.  
   
--   Potrebbero portare alla destabilizzazione del codice utente gestito dal server.  
+- Potrebbero portare alla destabilizzazione del codice utente gestito dal server.  
   
--   Potrebbero portare alla destabilizzazione del processo del server stesso.  
+- Potrebbero portare alla destabilizzazione del processo del server stesso.  
   
  SQL Server non consente l'uso di un tipo o membro con <xref:System.Security.Permissions.HostProtectionAttribute> che specifica un valore <xref:System.Security.Permissions.HostProtectionResource> uguale a <xref:System.Security.Permissions.HostProtectionResource.SharedState>, <xref:System.Security.Permissions.HostProtectionResource.Synchronization>, <xref:System.Security.Permissions.HostProtectionResource.MayLeakOnAbort> o <xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt>. In questo modo si impedisce agli assembly di chiamare membri che consentono la condivisione dello stato, eseguono sincronizzazioni, possono causare perdite di risorse al momento della terminazione o compromettono l'integrità del processo di SQL Server.  
   

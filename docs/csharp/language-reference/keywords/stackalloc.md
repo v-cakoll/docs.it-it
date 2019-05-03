@@ -7,22 +7,24 @@ f1_keywords:
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 31fdbacb01d1f6052c86d40c0bffc903130f216c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 61a27e777a1919a2a6fc5140a311835a8f3daba9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245509"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59480807"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Riferimenti per C#)
 
-La parola chiave `stackalloc` viene usata in un contesto di codice unsafe per allocare un blocco di memoria nello stack.
+La parola chiave `stackalloc` viene usata per allocare un blocco di memoria nello stack.
 
 ```csharp
-int* block = stackalloc int[100];
+Span<int> block = stackalloc int[100];
 ```
 
-## <a name="remarks"></a>Note
+L'assegnazione del blocco allocato a un <xref:System.Span%601?displayName=nameWithType> invece che a un `int*` consente le allocazioni di stack in un blocco sicuro. Il contesto `unsafe` non è obbligatorio.
+
+## <a name="remarks"></a>Osservazioni
 
 La parola chiave è valida solo per gli inizializzatori di variabili locali. Il codice seguente causa errori di compilazione.
 
@@ -32,24 +34,29 @@ int* block;
 // can use stackalloc only when declaring and initializing a local
 // variable.
 block = stackalloc int[100];
+Span<int> span;
+// The following assignment statement causes compiler errors. You
+// can use stackalloc only when declaring and initializing a local
+// variable.
+span = stackalloc int[100];
 ```
 
-A partire da C# 7.3, è possibile usare la sintassi dell'inizializzatore di matrice per le matrici `stackalloc`. Tutte le dichiarazioni seguenti dichiarano una matrice con tre elementi i cui valori sono i numeri interi `1`, `2` e `3`:
+A partire da C# 7.3, è possibile usare la sintassi dell'inizializzatore di matrice per le matrici `stackalloc`. Tutte le dichiarazioni seguenti dichiarano una matrice con tre elementi i cui valori sono i numeri interi `1`, `2` e `3`. La seconda inizializzazione assegna la memoria a un <xref:System.ReadOnlySpan%601>, a indicare che la memoria non può essere modificata.
 
 ```csharp
 // Valid starting with C# 7.3
-int* first = stackalloc int[3] { 1, 2, 3 };
-int* second = stackalloc int[] { 1, 2, 3 };
-int* third = stackalloc[] { 1, 2, 3 };
+Span<int> first = stackalloc int[3] { 1, 2, 3 };
+ReadOnlySpan<int> second = stackalloc int[] { 1, 2, 3 };
+Span<int> third = stackalloc[] { 1, 2, 3 };
 ```
 
-Poiché vengono usati tipi puntatore, `stackalloc` richiede un contesto [unsafe](unsafe.md). Per altre informazioni, vedere [Codice unsafe e puntatori](../../programming-guide/unsafe-code-pointers/index.md).
+Quando vengono usati tipi puntatore, `stackalloc` richiede un contesto [unsafe](unsafe.md). Per altre informazioni, vedere [Codice unsafe e puntatori](../../programming-guide/unsafe-code-pointers/index.md).
 
 La parola chiave `stackalloc` è come [_alloca](/cpp/c-runtime-library/reference/alloca) nella libreria di runtime del linguaggio C.
 
 ## <a name="examples"></a>Esempi
 
-Nell'esempio seguente vengono calcolati e visualizzati i primi 20 numeri della sequenza di Fibonacci. Ogni numero corrisponde alla somma dei due numeri precedenti. Nel codice, un blocco di memoria di dimensioni sufficienti a contenere 20 elementi di tipo `int` viene allocato nello stack, non nell'heap. L'indirizzo del blocco è archiviato nel puntatore `fib`. Questa memoria non viene sottoposta alla procedura di Garbage Collection e non deve quindi essere bloccata con [fixed](fixed-statement.md). La durata del blocco di memoria è limitata alla durata del metodo che lo definisce. Non è possibile liberare la memoria prima della restituzione del metodo.
+Nell'esempio seguente vengono calcolati e visualizzati i primi 20 numeri della sequenza di Fibonacci. Ogni numero corrisponde alla somma dei due numeri precedenti. Nel codice, un blocco di memoria di dimensioni sufficienti a contenere 20 elementi di tipo `int` viene allocato nello stack, non nell'heap. L'indirizzo del blocco è archiviato nel `fib` `Span`. Questa memoria non viene sottoposta alla procedura di Garbage Collection e non deve quindi essere bloccata con [fixed](fixed-statement.md). La durata del blocco di memoria è limitata alla durata del metodo che lo definisce. Non è possibile liberare la memoria prima della restituzione del metodo.
 
 [!code-csharp[csrefKeywordsOperator#15](~/samples/snippets/csharp/keywords/StackAllocExamples.cs#1)]
 
@@ -59,7 +66,7 @@ L'esempio seguente inizializza una matrice `stackalloc` di interi su una mascher
 
 ## <a name="security"></a>Sicurezza
 
-Il codice di tipo unsafe è meno sicuro delle alternative di tipo safe. Tuttavia, l'uso di `stackalloc` attiva automaticamente le funzionalità di rilevazione del sovraccarico del buffer in Common Language Runtime (CLR). Se viene rilevato un sovraccarico del buffer, il processo viene terminato il più rapidamente possibile per ridurre al minimo la possibilità che venga eseguito codice dannoso.
+È consigliabile usare <xref:System.Span%601> o <xref:System.ReadOnlySpan%601> quando possibile perché il codice di tipo unsafe è meno sicuro delle alternative di tipo safe. Anche in presenza di puntatori, l'uso di `stackalloc` attiva automaticamente le funzionalità di rilevazione del sovraccarico del buffer in Common Language Runtime (CLR). Se viene rilevato un sovraccarico del buffer, il processo viene terminato il più rapidamente possibile per ridurre al minimo la possibilità che venga eseguito codice dannoso.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -67,8 +74,8 @@ Il codice di tipo unsafe è meno sicuro delle alternative di tipo safe. Tuttavia
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
-- [Parole chiave per gli operatori](../../../csharp/language-reference/keywords/operator-keywords.md)
-- [Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Parole chiave di C#](index.md)
+- [Parole chiave per gli operatori](operator-keywords.md)
+- [Codice unsafe e puntatori](../../programming-guide/unsafe-code-pointers/index.md)

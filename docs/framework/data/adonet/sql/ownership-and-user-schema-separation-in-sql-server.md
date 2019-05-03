@@ -3,11 +3,11 @@ title: Proprietà e separazione tra schemi e utenti in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
 ms.openlocfilehash: b56a2c6f1211a11d2aa55de0cc101f6b90f7f83d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646059"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Proprietà e separazione tra schemi e utenti in SQL Server
 Uno dei concetti principali in merito alla sicurezza di SQL Server è che i proprietari di oggetti dispongono di autorizzazioni irrevocabili per amministrarli. Non è possibile rimuovere privilegi dal proprietario di un oggetto, né rilasciare utenti da un database che contiene oggetti di cui sono proprietari.  
@@ -29,13 +29,13 @@ Server.Database.DatabaseSchema.DatabaseObject
 ### <a name="built-in-schemas"></a>Schemi predefiniti  
  In SQL Server sono disponibili dieci schemi predefiniti con gli stessi nomi degli utenti e dei ruoli incorporati del database. Vengono forniti principalmente per la compatibilità con le versioni precedenti. È possibile rilasciare gli schemi con gli stessi nomi dei ruoli predefiniti del database, se non sono necessari. Non è possibile eliminare i seguenti schemi:  
   
--   `dbo`  
+- `dbo`  
   
--   `guest`  
+- `guest`  
   
--   `sys`  
+- `sys`  
   
--   `INFORMATION_SCHEMA`  
+- `INFORMATION_SCHEMA`  
   
  Se questi schemi vengono eliminati dal database modello, non saranno presenti nei nuovi database.  
   
@@ -55,7 +55,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Distinzione tra utente e schema](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Vengono descritte le modifiche introdotte dalla distinzione tra utente e schema, tra cui il nuovo comportamento, l'impatto sulla proprietà, le visualizzazioni del catalogo e le autorizzazioni.|  
+|[Separazione Schema-utente](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Vengono descritte le modifiche introdotte dalla distinzione tra utente e schema, tra cui il nuovo comportamento, l'impatto sulla proprietà, le visualizzazioni del catalogo e le autorizzazioni.|  
   
 ## <a name="see-also"></a>Vedere anche
 

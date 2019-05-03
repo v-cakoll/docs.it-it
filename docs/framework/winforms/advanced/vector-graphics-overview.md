@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
 ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748450"
 ---
 # <a name="vector-graphics-overview"></a>Cenni preliminari sulla grafica vettoriale
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Consente di disegnare linee, rettangoli e le altre forme in un sistema di coordinate. È possibile scegliere tra un'ampia gamma di sistemi di coordinate, ma il sistema di coordinate predefinito è l'origine nell'angolo superiore sinistro con l'asse x che punta a destra e l'asse y rivolta verso il basso. L'unità di misura nel sistema di coordinate predefinito è il pixel.  
@@ -32,19 +32,19 @@ ms.locfileid: "59087963"
   
  Nel corso del tempo, determinati componenti di base sono rivelati a essere più utili per la creazione di immagini bidimensionale. Questi blocchi predefiniti, che sono tutti supportati da [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], vengono forniti nell'elenco seguente:  
   
--   Linee  
+- Linee  
   
--   Rettangoli  
+- Rettangoli  
   
--   Puntini di sospensione  
+- Puntini di sospensione  
   
--   Archi  
+- Archi  
   
--   Poligoni  
+- Poligoni  
   
--   Spline cardinali  
+- Spline cardinali  
   
--   spline di Bézier  
+- spline di Bézier  
   
 ## <a name="methods-for-drawing-with-a-graphics-object"></a>Metodi per il disegno con un oggetto Graphics  
  Il <xref:System.Drawing.Graphics> classe [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce i seguenti metodi di disegno degli elementi nell'elenco precedente: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>, <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> (per cardinali), e <xref:System.Drawing.Graphics.DrawBezier%2A>. Ognuno di questi metodi è in overload; ogni metodo, ovvero supporta diversi elenchi di parametri diversi. Ad esempio, una variazione del <xref:System.Drawing.Graphics.DrawLine%2A> metodo riceve un <xref:System.Drawing.Pen> oggetto e quattro interi, mentre un'altra variazione del <xref:System.Drawing.Graphics.DrawLine%2A> metodo riceve un <xref:System.Drawing.Pen> oggetto e due <xref:System.Drawing.Point> oggetti.  

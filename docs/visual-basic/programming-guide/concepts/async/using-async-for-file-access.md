@@ -3,11 +3,11 @@ title: Uso della funzionalità Async per l'accesso ai file (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
 ms.openlocfilehash: 0b2b95f1e4f9bc120acdad606b0f15503285057a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61829530"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>Uso della funzionalità Async per l'accesso ai file (Visual Basic)
 È possibile usare la funzionalità Async per accedere ai file. Tramite la funzionalità Async, è possibile chiamare i metodi asincroni senza utilizzare callback o suddividere il codice in più metodi o espressioni lambda. Per rendere asincrono il codice sincrono, è sufficiente chiamare un metodo asincrono anziché un metodo sincrono e aggiungere alcune parole chiave al codice.  

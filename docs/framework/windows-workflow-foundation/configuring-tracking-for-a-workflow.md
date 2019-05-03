@@ -3,11 +3,11 @@ title: Configurazione del rilevamento per un flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
 ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052768"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configurazione del rilevamento per un flusso di lavoro
 
@@ -52,7 +52,7 @@ instance.Extensions.Add(trackingParticipant);
 
 Un flusso di lavoro può essere esposti come un servizio WCF quando ospitati nel <xref:System.ServiceModel.Activities.WorkflowServiceHost> host del servizio. <xref:System.ServiceModel.Activities.WorkflowServiceHost> è un'implementazione specifica di .NET ServiceHost per un servizio basato sul flusso di lavoro. Contenuto della sezione viene illustrato come configurare il rilevamento per un servizio flusso di lavoro di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] in esecuzione nell'oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Viene configurato tramite un file Web.config (per un servizio ospitato sul Web) o un file App.config (per un servizio ospitato in un'applicazione autonoma, ad esempio un'applicazione console) specificando un comportamento del servizio oppure, tramite codice, aggiungendo un comportamento specifico del rilevamento alla raccolta <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> per l'host del servizio.
 
-Per un servizio del flusso di lavoro ospitato nell'oggetto <xref:System.ServiceModel.WorkflowServiceHost>, è possibile aggiungere l'oggetto <xref:System.Activities.Tracking.EtwTrackingParticipant> usando l'elemento <`behavior`> in un file di configurazione, come mostrato nell'esempio seguente.
+Per un servizio del flusso di lavoro ospitato nel <xref:System.ServiceModel.WorkflowServiceHost>, è possibile aggiungere i <xref:System.Activities.Tracking.EtwTrackingParticipant> usando il <`behavior`> elemento in un file di configurazione, come illustrato nell'esempio seguente.
 
 ```xml
 <behaviors>

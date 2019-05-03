@@ -1,24 +1,17 @@
-items:
 - name: Covarianza e controvarianza
   href: index.md
   items:
-  - name: Varianza nelle interfacce generiche
-    href: variance-in-generic-interfaces.md
-    items:
-    - name: Creazione di interfacce generiche variant
-      href: creating-variant-generic-interfaces.md
-    - name: Uso della varianza nelle interfacce per le raccolte generiche
-      href: using-variance-in-interfaces-for-generic-collections.md
-  - name: Varianza nei delegati
-    href: variance-in-delegates.md
-    items:
-    - name: Uso della varianza nei delegati
-      href: using-variance-in-delegates.md
-    - name: Uso della varianza per i delegati generici Func e Action
-      href: using-variance-for-func-and-action-generic-delegates.md
-ms.openlocfilehash: 9cc69c37946ca16f911dcf0b58bd947c37a7bf07
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468845"
+    - name: Varianza nelle interfacce generiche
+      href: variance-in-generic-interfaces.md
+      items:
+        - name: Creazione di interfacce generiche variant
+          href: creating-variant-generic-interfaces.md
+        - name: Uso della varianza nelle interfacce per le raccolte generiche
+          href: using-variance-in-interfaces-for-generic-collections.md
+    - name: Varianza nei delegati
+      href: variance-in-delegates.md
+      items:
+        - name: Uso della varianza nei delegati
+          href: using-variance-in-delegates.md
+        - name: Uso della varianza per i delegati generici Func e Action
+          href: using-variance-for-func-and-action-generic-delegates.md

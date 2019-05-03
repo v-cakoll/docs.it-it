@@ -3,11 +3,11 @@ title: Apprendimento tramite procedure dettagliate
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
 ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033529"
 ---
 # <a name="learning-by-walkthroughs"></a>Apprendimento tramite procedure dettagliate
 Il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentazione vengono fornite diverse procedure dettagliate. In questo argomento vengono discussi alcuni problemi generali relativi alle procedure, inclusa la risoluzione dei problemi, e vengono forniti i collegamenti a diverse procedure dettagliate di base per acquisire familiarità con [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -22,28 +22,28 @@ Il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 |Obiettivo|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|Creare una classe di entità ed eseguire una semplice query.|[Procedura dettagliata: Modello a oggetti e query semplici (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Procedura dettagliata: Modello a oggetti e query semplici (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|Aggiungere una seconda classe ed eseguire una query più complessa.<br /><br /> Richiede il completamento della procedura dettagliata precedente.|[Procedura dettagliata: Eseguire query tra relazioni (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Procedura dettagliata: Esecuzione di query tra relazioni (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|Aggiungere, modificare ed eliminare elementi nel database.|[Procedura dettagliata: Modifica dei dati (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Procedura dettagliata: Modifica dei dati (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Usare stored procedure.|[Procedura dettagliata: Usare solo stored procedure (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Procedura dettagliata: Usare solo stored procedure (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|Creare una classe di entità ed eseguire una semplice query.|[Procedura dettagliata: Modello a oggetti semplice ed eseguire una Query (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Procedura dettagliata: Modello a oggetti semplice ed eseguire una Query (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
+|Aggiungere una seconda classe ed eseguire una query più complessa.<br /><br /> Richiede il completamento della procedura dettagliata precedente.|[Procedura dettagliata: Eseguire query tra relazioni (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Procedura dettagliata: Eseguire query tra relazioni (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
+|Aggiungere, modificare ed eliminare elementi nel database.|[Procedura dettagliata: La modifica dei dati (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Procedura dettagliata: La modifica dei dati (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
+|Usare stored procedure.|[Procedura dettagliata: Utilizzo solo di Stored procedure (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Procedura dettagliata: Utilizzo solo di Stored procedure (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>Generale  
  Le informazioni seguenti riguardano queste procedure dettagliate in generale:  
   
--   Ambiente: Ogni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procedura dettagliata Usa Visual Studio come ambiente di sviluppo integrato (IDE).  
+- Ambiente: Ogni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procedura dettagliata Usa Visual Studio come ambiente di sviluppo integrato (IDE).  
   
--   Motori SQL: Queste procedure dettagliate sono scritte per essere implementate tramite SQL Server Express. Se non si dispone di SQL Server Express, è possibile scaricarlo gratuitamente. Per altre informazioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- Motori SQL: Queste procedure dettagliate sono scritte per essere implementate tramite SQL Server Express. Se non si dispone di SQL Server Express, è possibile scaricarlo gratuitamente. Per altre informazioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
-    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procedure dettagliate usano un nome di file come stringa di connessione. La possibilità di specificare semplicemente un nome file è un aspetto pratico di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per gli utenti di SQL Server Express. Prestare sempre attenzione ai problemi di sicurezza. Per altre informazioni, vedere [sicurezza in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+    >  Nelle procedure dettagliate di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene usato un nome file come stringa di connessione. La possibilità di specificare semplicemente un nome file è un aspetto pratico di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per gli utenti di SQL Server Express. Prestare sempre attenzione ai problemi di sicurezza. Per altre informazioni, vedere [sicurezza in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procedure dettagliate in genere richiedono il database di esempio Northwind. Per altre informazioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procedure dettagliate in genere richiedono il database di esempio Northwind. Per altre informazioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   Finestre di dialogo e i comandi di menu visualizzati nelle procedure dettagliate potrebbero essere diversi da quelli descritti nella Guida, a seconda delle impostazioni attive o l'edizione di Visual Studio. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+- Finestre di dialogo e i comandi di menu visualizzati nelle procedure dettagliate potrebbero essere diversi da quelli descritti nella Guida, a seconda delle impostazioni attive o l'edizione di Visual Studio. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
--   Per le procedure dettagliate che riguardano scenari a più livelli è necessario che il computer configurato come server sia diverso dal computer di sviluppo. Inoltre è necessario disporre delle autorizzazioni appropriate per accedere al server.  
+- Per le procedure dettagliate che riguardano scenari a più livelli è necessario che il computer configurato come server sia diverso dal computer di sviluppo. Inoltre è necessario disporre delle autorizzazioni appropriate per accedere al server.  
   
--   Il nome della classe che in genere rappresenta la tabella Orders nel database di esempio Northwind è `[Order]`. L'escape è obbligatorio perché `Order` è una parola chiave in Visual Basic.  
+- Il nome della classe che in genere rappresenta la tabella Orders nel database di esempio Northwind è `[Order]`. L'escape è obbligatorio perché `Order` è una parola chiave in Visual Basic.  
   
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
  Possono verificarsi errori di runtime in quanto non si dispone di sufficienti autorizzazioni per accedere ai database usati in queste procedure dettagliate. Vedere i passaggi seguenti per risolvere il più comune di questi problemi.  

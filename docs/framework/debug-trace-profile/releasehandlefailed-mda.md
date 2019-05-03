@@ -13,11 +13,11 @@ ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b149a9b8ee41f5e196fd69258044f9b6563cb99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874003"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed (MDA)
 L'assistente al debug gestito `releaseHandleFailed` viene attivato per notificare agli sviluppatori quando il metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> di una classe derivata da <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle> restituisce `false`.  
@@ -28,7 +28,7 @@ L'assistente al debug gestito `releaseHandleFailed` viene attivato per notificar
 ## <a name="cause"></a>Causa  
  Se si creano classi che derivano da  <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle>, è necessario fornire l'implementazione del metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>. Di conseguenza, le problematiche sono specifiche della singola risorsa. È necessario, tuttavia, che siano rispettati i seguenti requisiti:  
   
--   <xref:System.Runtime.InteropServices.SafeHandle> e <xref:System.Runtime.InteropServices.CriticalHandle> tipi rappresentano wrapper per risorse vitali di un processo. Una perdita di memoria può rendere il processo inusabile.  
+-   I tipi <xref:System.Runtime.InteropServices.SafeHandle> e <xref:System.Runtime.InteropServices.CriticalHandle> rappresentano wrapper per risorse vitali di un processo. Una perdita di memoria può rendere il processo inusabile.  
   
 -   È necessario che non si verifichi un errore durante l'esecuzione del metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>. Una volta che il processo acquisisce una risorsa di questo tipo, per rilasciarla è necessario usare il metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>. Un errore del metodo implica quindi una perdita di risorse.  
   

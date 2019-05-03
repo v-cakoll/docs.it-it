@@ -3,11 +3,11 @@ title: Problemi di sicurezza e suggerimenti utili per la traccia
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 ms.openlocfilehash: 72d35230820e8466cd9c63a76b26c7a23bdfe024
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663713"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Problemi di sicurezza e suggerimenti utili per la traccia
 In questo argomento viene descritto come proteggere informazioni riservate e vengono elencati suggerimenti utili durante l'utilizzo di WebHost.  
@@ -22,11 +22,11 @@ In questo argomento viene descritto come proteggere informazioni riservate e ven
   
  I suggerimenti seguenti consentono di impedire che il contenuto di un file di traccia venga esposto per errore:  
   
--   Accertarsi che i file di log siano protetti da elenchi di controllo di accesso (ACL, Access Control Lists) in scenari sia WebHost che indipendenti.  
+- Accertarsi che i file di log siano protetti da elenchi di controllo di accesso (ACL, Access Control Lists) in scenari sia WebHost che indipendenti.  
   
--   Scegliere un'estensione di file che non sia troppo facilmente disponibile quando si utilizza una richiesta Web. L'estensione xml, ad esempio, non è una scelta sicura. Per un elenco di estensioni disponibili, consultare il manuale dell'amministratore di IIS.  
+- Scegliere un'estensione di file che non sia troppo facilmente disponibile quando si utilizza una richiesta Web. L'estensione xml, ad esempio, non è una scelta sicura. Per un elenco di estensioni disponibili, consultare il manuale dell'amministratore di IIS.  
   
--   Specificare un percorso assoluto per il file di log, che non deve essere contenuto nella directory pubblica della radice virtuale di WebHost, per evitare che venga consultato da un interessato esterno mediante un browser Web.  
+- Specificare un percorso assoluto per il file di log, che non deve essere contenuto nella directory pubblica della radice virtuale di WebHost, per evitare che venga consultato da un interessato esterno mediante un browser Web.  
   
  Per impostazione predefinita, le chiavi e le informazioni personali, ad esempio nome utente e password, non sono registrate in tracce e messaggi registrati. Un amministratore del computer, tuttavia, può utilizzare l'attributo `enableLoggingKnownPII` nell'elemento `machineSettings` del file Machine.config per consentire alle applicazioni in esecuzione sul computer di registrare informazioni personali note come segue:  
   

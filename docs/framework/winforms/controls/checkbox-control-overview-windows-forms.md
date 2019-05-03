@@ -9,11 +9,11 @@ helpviewer_keywords:
 - check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
 ms.openlocfilehash: 2a18327d9836d1dbbcd5d5d6e73f217637736d20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59121792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938970"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a>Cenni preliminari sul controllo CheckBox (Windows Form)
 Il controllo di Windows Form <xref:System.Windows.Forms.CheckBox> indica se una determinata condizione è attiva o disattivata. Viene usato comunemente per presentare all'utente la selezione di valori Sì/No o True/False. È possibile usare i controlli della casella di controllo in gruppi, per visualizzare e consentire all'utente la selezione di una o più opzioni.  
@@ -27,6 +27,6 @@ Il controllo di Windows Form <xref:System.Windows.Forms.CheckBox> indica se una 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.CheckBox>
-- [Procedura: Impostare opzioni con i controlli CheckBox di Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [Procedura: Rispondere alla selezione dei controlli CheckBox di Windows Forms](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [Procedura: Impostare le opzioni con i controlli CheckBox di Windows Form](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [Procedura: Rispondere a un Windows Form controlli CheckBox](how-to-respond-to-windows-forms-checkbox-clicks.md)
 - [Controllo CheckBox](checkbox-control-windows-forms.md)

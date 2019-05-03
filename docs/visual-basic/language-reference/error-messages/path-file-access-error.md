@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
 ms.openlocfilehash: 4f18c9216aa24840bc205534a97124d12698cb98
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799178"
 ---
 # <a name="pathfile-access-error"></a>Errore di accesso al percorso/file
 Durante un'operazione di accesso ai file o di accesso al disco del sistema operativo non è stato possibile stabilire una connessione tra il percorso e il nome del file.  

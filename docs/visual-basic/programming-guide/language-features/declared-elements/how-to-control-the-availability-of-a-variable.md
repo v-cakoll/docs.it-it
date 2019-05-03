@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
 ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943351"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Procedura: Controllare la disponibilità di una variabile (Visual Basic)
 È possibile controllare la disponibilità di una variabile specificando relativi *livello di accesso*. Il livello di accesso determina il tipo di codice dispone dell'autorizzazione per leggere o scrivere nella variabile.  
   
--   *Le variabili membro* (definito a livello di modulo e all'esterno di qualsiasi routine) predefinito per l'accesso pubblico, che significa che qualsiasi codice che possa visualizzarli può accedervi. È possibile modificare questo specificando un modificatore di accesso.  
+- *Le variabili membro* (definito a livello di modulo e all'esterno di qualsiasi routine) predefinito per l'accesso pubblico, che significa che qualsiasi codice che possa visualizzarli può accedervi. È possibile modificare questo specificando un modificatore di accesso.  
   
--   *Le variabili locali* (definito all'interno di una routine) nominalmente hanno accesso pubblico, anche se solo il codice all'interno della routine può accedervi. Non è possibile modificare il livello di accesso di una variabile locale, ma è possibile modificare il livello di accesso della routine che lo contiene.  
+- *Le variabili locali* (definito all'interno di una routine) nominalmente hanno accesso pubblico, anche se solo il codice all'interno della routine può accedervi. Non è possibile modificare il livello di accesso di una variabile locale, ma è possibile modificare il livello di accesso della routine che lo contiene.  
   
  Per altre informazioni, vedere [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -91,6 +91,6 @@ Private numberForMeOnly As Integer
 - [Livelli di accesso in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Public](../../../../visual-basic/language-reference/modifiers/public.md)
-- [Protetta](../../../../visual-basic/language-reference/modifiers/protected.md)
+- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private](../../../../visual-basic/language-reference/modifiers/private.md)

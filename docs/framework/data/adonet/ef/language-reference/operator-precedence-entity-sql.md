@@ -3,11 +3,11 @@ title: Precedenza tra gli operatori (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
 ms.openlocfilehash: 722ebe5f0ec530f8c7f86e9f9901451b060903f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760350"
 ---
 # <a name="operator-precedence-entity-sql"></a>Precedenza tra gli operatori (Entity SQL)
 Quando un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query include più operatori, precedenza degli operatori determina la sequenza in cui le operazioni vengono eseguite. L'ordine di esecuzione può modificare in modo significativo il risultato della query.  
@@ -31,4 +31,4 @@ Quando un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query include 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

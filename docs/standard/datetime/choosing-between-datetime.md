@@ -16,11 +16,11 @@ ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026562"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Scelta tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo
 
@@ -68,7 +68,7 @@ La struttura <xref:System.DateTime> è adatta per le applicazioni che hanno le c
 A meno che un determinato valore <xref:System.DateTime> non rappresenti un'ora UTC, il valore di data e ora è spesso ambiguo e limitato in fatto di portabilità. Ad esempio, se un valore <xref:System.DateTime> rappresenta l'ora locale, è portabile solo all'interno del fuso orario locale. Di conseguenza, se il valore viene deserializzato in un altro sistema con lo stesso fuso orario, identifica comunque un singolo momento senza ambiguità. Al di fuori del fuso orario locale, tale valore <xref:System.DateTime> è soggetto a più interpretazioni. Se la proprietà <xref:System.DateTime.Kind%2A> del valore è <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, il valore è ancora meno portabile, in quanto è ora ambiguo all'interno dello stesso fuso orario e probabilmente anche nello stesso sistema in cui è stato inizialmente serializzato. Solo se un valore <xref:System.DateTime> rappresenta un'ora UTC, identifica senza ambiguità un singolo momento, indipendentemente dal sistema o dal fuso orario in cui viene usato.
 
 > [!IMPORTANT]
-> Quando si salvano o condividono dati <xref:System.DateTime>, è consigliabile usare UTC e la proprietà <xref:System.DateTime.Kind%2A> del valore <xref:System.DateTime> deve essere impostata su <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.
+> Quando si salvano o condividono dati <xref:System.DateTime> , è consigliabile usare UTC e la proprietà <xref:System.DateTime> del valore <xref:System.DateTime.Kind%2A> deve essere impostata su <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.
 
 ## <a name="the-datetimeoffset-structure"></a>Struttura DateTimeOffset
 

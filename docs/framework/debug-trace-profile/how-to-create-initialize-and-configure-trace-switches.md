@@ -14,11 +14,11 @@ ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59325709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754349"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procedura: Creare, inizializzare e configurare opzioni di traccia
 Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output di traccia.  
@@ -75,11 +75,11 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
   
 2. Se il progetto non contiene un file di configurazione (app.config o Web.config), scegliere **Aggiungi nuovo elemento** dal menu **Progetto**.  
   
-    -   **Visual Basic:** Nel **Aggiungi nuovo elemento** finestra di dialogo, scegliere **File di configurazione dell'applicazione**.  
+    - **Visual Basic:** Nel **Aggiungi nuovo elemento** finestra di dialogo, scegliere **File di configurazione dell'applicazione**.  
   
          Verrà creato e aperto il file di configurazione dell'applicazione. Si tratta di un documento XML il cui elemento radice è `<configuration>.`  
   
-    -   **Visual C#:** Nel **Aggiungi nuovo elemento** finestra di dialogo, scegliere **File XML**. Denominare il file **app.config**. Nell'editor XML, dopo la dichiarazione XML, aggiungere il codice XML seguente:  
+    - **Visual C#:** Nel **Aggiungi nuovo elemento** finestra di dialogo, scegliere **File XML**. Denominare il file **app.config**. Nell'editor XML, dopo la dichiarazione XML, aggiungere il codice XML seguente:  
   
         ```xml  
         <configuration>  

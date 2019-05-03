@@ -3,18 +3,18 @@ title: 39456 - TrackingRecordDropped
 ms.date: 03/30/2017
 ms.assetid: da13d5bc-1736-47a4-b3fd-064ca8040326
 ms.openlocfilehash: f117c7759bab1759a7d614db275de88f8b37c331
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774426"
 ---
 # <a name="39456---trackingrecorddropped"></a>39456 - TrackingRecordDropped
 ## <a name="properties"></a>Proprietà  
   
 |||  
 |-|-|  
-|ID|39456|  
+|Id|39456|  
 |Parole chiave|WFTracking|  
 |Livello|Avviso|  
 |Canale|Microsoft-Windows-Application Server-Applications/Debug|  

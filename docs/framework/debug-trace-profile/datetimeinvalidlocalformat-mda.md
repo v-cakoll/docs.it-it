@@ -15,11 +15,11 @@ ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 380334dbe9b91ea369de6cbe58686a9a74254c2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874666"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat (MDA)
 L'assistente al debug gestito `dateTimeInvalidLocalFormat` viene attivato quando per la formattazione di un'istanza di <xref:System.DateTime> archiviata in formato UTC (Universal Coordinated Time) viene usato un formato riservato alle istanze locali di <xref:System.DateTime>. Questo assistente non viene attivato per le istanze di <xref:System.DateTime> non specificate o predefinite.  

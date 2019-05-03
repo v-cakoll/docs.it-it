@@ -3,16 +3,16 @@ title: ForEach non generica
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
 ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004913"
 ---
 # <a name="non-generic-foreach"></a>ForEach non generica
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] viene fornito nella casella degli strumenti un set di attività flusso di controllo, inclusa <xref:System.Activities.Statements.ForEach%601>, che consente di scorrere <xref:System.Collections.Generic.IEnumerable%601> raccolte.  
+Nella casella degli strumenti di [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] è disponibile un set di attività del flusso di controllo, inclusa <xref:System.Activities.Statements.ForEach%601> che consente di scorrere le raccolte <xref:System.Collections.Generic.IEnumerable%601>.  
   
- <xref:System.Activities.Statements.ForEach%601> richiede la relativa <xref:System.Activities.Statements.ForEach%601.Values%2A> proprietà sia di tipo <xref:System.Collections.Generic.IEnumerable%601>. In questo modo, gli utenti non possono scorrere le strutture di dati che implementano l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> (ad esempio l'oggetto <xref:System.Collections.ArrayList>). La versione non generica dell'oggetto <xref:System.Activities.Statements.ForEach%601> supera questo requisito, a discapito di una maggiore complessità della fase di esecuzione per assicurare la compatibilità dei tipi dei valori nella raccolta.  
+ L'oggetto <xref:System.Activities.Statements.ForEach%601> richiede che la relativa proprietà <xref:System.Activities.Statements.ForEach%601.Values%2A> sia di tipo <xref:System.Collections.Generic.IEnumerable%601>. In questo modo, gli utenti non possono scorrere le strutture di dati che implementano l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> (ad esempio l'oggetto <xref:System.Collections.ArrayList>). La versione non generica dell'oggetto <xref:System.Activities.Statements.ForEach%601> supera questo requisito, a discapito di una maggiore complessità della fase di esecuzione per assicurare la compatibilità dei tipi dei valori nella raccolta.  
   
  In questo esempio viene illustrato come implementare un'attività <xref:System.Activities.Statements.ForEach%601> non generica e la relativa finestra di progettazione. Questa attività può essere usata per scorrere l'oggetto <xref:System.Collections.ArrayList>.  
   
@@ -69,7 +69,7 @@ Activity sampleUsage =
   
 |Condizione|Messaggio|Gravità|Tipo di eccezione|  
 |---------------|-------------|--------------|--------------------|  
-|I valori è `null`|Valore non specificato per un argomento di attività 'Values' obbligatorio.|Error|<xref:System.InvalidOperationException>|  
+|I valori sono `null`|Valore non specificato per un argomento di attività 'Values' obbligatorio.|Error|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>Finestra di progettazione ForEach  
  L'aspetto dell'ActivityDesigner per l'esempio è simile a quello della finestra di progettazione fornita per l'attività <xref:System.Activities.Statements.ForEach%601> incorporata. La finestra di progettazione viene visualizzata nella casella degli strumenti nel **Samples**, **attività Non generiche** categoria. La finestra di progettazione viene denominata **ForEachWithBodyFactory** nella casella degli strumenti, poiché l'attività espone un <xref:System.Activities.Presentation.IActivityTemplateFactory> nella casella degli strumenti, che crea l'attività con un correttamente configurato <xref:System.Activities.ActivityAction>.  
@@ -97,9 +97,9 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 1. Impostare il progetto scelto come progetto di avvio della soluzione:  
   
-    1.  **CodeTestClient** viene illustrato come usare l'attività usando il codice.  
+    1. **CodeTestClient** viene illustrato come usare l'attività usando il codice.  
   
-    2.  **DesignerTestClient** viene illustrato come utilizzare l'attività all'interno della finestra di progettazione.  
+    2. **DesignerTestClient** viene illustrato come utilizzare l'attività all'interno della finestra di progettazione.  
   
 2. Compilare ed eseguire il progetto.  
   

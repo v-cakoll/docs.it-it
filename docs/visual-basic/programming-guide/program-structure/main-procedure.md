@@ -9,11 +9,11 @@ helpviewer_keywords:
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
 ms.openlocfilehash: 641edd2d0e0dde5f509c8fa77ccf65358fa76a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920114"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Routine Main in Visual Basic
 Tutte le applicazioni Visual Basic devono contenere una routine denominata `Main`. Questa procedura viene usata come punto di partenza e controllo generale per l'applicazione. Le chiamate di .NET Framework di `Main` procedure quando è stata caricata l'applicazione ed è pronto per passare il controllo ad esso. A meno che non si sta creando un'applicazione Windows Forms, è necessario scrivere il `Main` procedure per le applicazioni eseguite nel proprio.  
@@ -23,11 +23,11 @@ Tutte le applicazioni Visual Basic devono contenere una routine denominata `Main
 ## <a name="requirements-for-the-main-procedure"></a>Requisiti per la procedura principale  
  Un file che viene eseguito in un proprio (in genere con estensione .exe) deve contenere un `Main` procedure. Una libreria (ad esempio con estensione dll) non viene eseguito in una proprio e non richiede un `Main` procedure. I requisiti per i diversi tipi di progetti che è possibile creare sono come segue:  
   
--   Applicazioni console eseguire propri, quindi è necessario specificare almeno uno `Main` procedure. .  
+- Applicazioni console eseguire propri, quindi è necessario specificare almeno uno `Main` procedure. .  
   
--   Applicazioni di Windows Form eseguire propri. Tuttavia, il compilatore Visual Basic genera automaticamente un `Main` procedura ad un'applicazione e non si è necessario scrivere uno.  
+- Applicazioni di Windows Form eseguire propri. Tuttavia, il compilatore Visual Basic genera automaticamente un `Main` procedura ad un'applicazione e non si è necessario scrivere uno.  
   
--   Librerie di classi non richiedono un `Main` procedure. Ad esempio librerie di controlli di Windows e le librerie di controlli Web. Le applicazioni Web vengono distribuite come librerie di classi.  
+- Librerie di classi non richiedono un `Main` procedure. Ad esempio librerie di controlli di Windows e le librerie di controlli Web. Le applicazioni Web vengono distribuite come librerie di classi.  
   
 ## <a name="declaring-the-main-procedure"></a>Dichiarazione della routine Main  
  Sono disponibili quattro modi per dichiarare il `Main` procedure. O non può accettare argomenti e può restituire un valore o non.  
@@ -35,7 +35,7 @@ Tutte le applicazioni Visual Basic devono contenere una routine denominata `Main
 > [!NOTE]
 >  Se si dichiara `Main` in una classe, è necessario usare il `Shared` (parola chiave). In un modulo `Main` non dovrà essere `Shared`.  
   
--   Il modo più semplice consiste nel dichiarare una `Sub` routine che non accetta argomenti e restituiscono un valore.  
+- Il modo più semplice consiste nel dichiarare una `Sub` routine che non accetta argomenti e restituiscono un valore.  
   
     ```  
     Module mainModule  
@@ -47,7 +47,7 @@ Tutte le applicazioni Visual Basic devono contenere una routine denominata `Main
     End Module  
     ```  
   
--   `Main` può inoltre restituire un `Integer` valore, che usa il sistema operativo come il codice di uscita per il programma. Altri programmi è possono testare questo codice esaminando il valore di ERRORLEVEL di Windows. Per restituire un codice di uscita, è necessario dichiarare `Main` come un `Function` procedure anziché un `Sub` procedure.  
+- `Main` può inoltre restituire un `Integer` valore, che usa il sistema operativo come il codice di uscita per il programma. Altri programmi è possono testare questo codice esaminando il valore di ERRORLEVEL di Windows. Per restituire un codice di uscita, è necessario dichiarare `Main` come un `Function` procedure anziché un `Sub` procedure.  
   
     ```  
     Module mainModule  
@@ -64,7 +64,7 @@ Tutte le applicazioni Visual Basic devono contenere una routine denominata `Main
     End Module  
     ```  
   
--   `Main` può inoltre assumere un `String` matrice come argomento. Ogni stringa nella matrice contiene uno degli argomenti della riga di comando usati per richiamare il programma. È possibile eseguire azioni diverse a seconda della loro valori.  
+- `Main` può inoltre assumere un `String` matrice come argomento. Ogni stringa nella matrice contiene uno degli argomenti della riga di comando usati per richiamare il programma. È possibile eseguire azioni diverse a seconda della loro valori.  
   
     ```  
     Module mainModule  
@@ -88,7 +88,7 @@ Tutte le applicazioni Visual Basic devono contenere una routine denominata `Main
     End Module  
     ```  
   
--   È possibile dichiarare `Main` per esaminare gli argomenti della riga di comando, ma non restituisce un codice di uscita, come indicato di seguito.  
+- È possibile dichiarare `Main` per esaminare gli argomenti della riga di comando, ma non restituisce un codice di uscita, come indicato di seguito.  
   
     ```  
     Module mainModule  

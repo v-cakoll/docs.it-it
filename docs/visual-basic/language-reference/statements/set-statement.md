@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
 ms.openlocfilehash: 0a8d95ffbabf03a0e6c9d88edb28c248b60f3252
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783877"
 ---
 # <a name="set-statement-visual-basic"></a>Istruzione Set (Visual Basic)
 Dichiara un `Set` routine della proprietà utilizzata per assegnare un valore a una proprietà.  
@@ -35,13 +35,13 @@ End Set
  `accessmodifier`  
  Facoltativo in al massimo uno tra i `Get` e `Set` istruzioni in questa proprietà. Può essere uno dei seguenti:  
   
--   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
--   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
--   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
--   `Protected Friend`  
+- `Protected Friend`  
   
  Vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -70,13 +70,13 @@ End Set
   
 ## <a name="rules"></a>Regole  
   
--   **Livelli di accesso misti.** Se si sta definendo una proprietà di lettura / scrittura, è possibile specificare facoltativamente un livello di accesso diversi per il `Get` o il `Set` procedure, ma non entrambi. In questo caso, il livello di accesso di routine deve essere più restrittivo rispetto a livello di accesso della proprietà. Ad esempio, se la proprietà è dichiarata `Friend`, è possibile dichiarare il `Set` routine `Private`, ma non `Public`.  
+- **Livelli di accesso misti.** Se si sta definendo una proprietà di lettura / scrittura, è possibile specificare facoltativamente un livello di accesso diversi per il `Get` o il `Set` procedure, ma non entrambi. In questo caso, il livello di accesso di routine deve essere più restrittivo rispetto a livello di accesso della proprietà. Ad esempio, se la proprietà è dichiarata `Friend`, è possibile dichiarare il `Set` routine `Private`, ma non `Public`.  
   
      Se si sta definendo un `WriteOnly` proprietà, il `Set` procedure rappresenta l'intera proprietà. Non è possibile dichiarare un accesso diverso a livello di `Set`, poiché verrebbero specificati due livelli di accesso per la proprietà.  
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Restituzione da una routine di proprietà.** Quando il `Set` routine restituisce al codice chiamante, l'esecuzione continua subito dopo l'istruzione che ha fornito il valore da archiviare.  
+- **Restituzione da una routine di proprietà.** Quando il `Set` routine restituisce al codice chiamante, l'esecuzione continua subito dopo l'istruzione che ha fornito il valore da archiviare.  
   
      `Set` le routine della proprietà possono restituire utilizzando il [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md) o il [Esci da istruzione](../../../visual-basic/language-reference/statements/exit-statement.md).  
   

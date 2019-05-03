@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
 ms.openlocfilehash: 08b30d8be83ef9d814d17c5d4ec0c95a26bacdad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790728"
 ---
 # <a name="tooltip-overview"></a>Panoramica sul controllo ToolTip
 Una descrizione comando è una piccola finestra popup che viene visualizzato quando l'utente posiziona il puntatore del mouse su un elemento, ad esempio su un <xref:System.Windows.Controls.Button>. L'argomento introduce la descrizione comando e illustra come creare e personalizzare il relativo contenuto.  
@@ -24,9 +24,9 @@ Una descrizione comando è una piccola finestra popup che viene visualizzato qua
   
  Il contenuto di una descrizione comando può essere costituito da una o più righe di testo, immagini, forme o altro contenuto visivo. Per definire una descrizione comando per un controllo, impostare una delle proprietà seguenti sul contenuto della descrizione comando.  
   
--   <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
   
  La proprietà da usare dipende dal fatto che il controllo che definisce la descrizione comando erediti dal <xref:System.Windows.FrameworkContentElement> o <xref:System.Windows.FrameworkElement> classe.  
   
@@ -79,4 +79,4 @@ Una descrizione comando è una piccola finestra popup che viene visualizzato qua
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipEventArgs>
 - <xref:System.Windows.Controls.ToolTipEventHandler>
-- [Procedure relative](tooltip-how-to-topics.md)
+- [Procedure relative alle proprietà](tooltip-how-to-topics.md)

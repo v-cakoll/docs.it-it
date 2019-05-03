@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: de8cb03e6205a83d2cc93ee300eb3fcac1ac5b74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0820ad6a6d5000ef7ea575e856d883ba5325b1b0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497170"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59230980"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 Lo spazio dei nomi <xref:System.Net.NetworkInformation> consente di raccogliere informazioni sugli eventi, le modifiche, le statistiche e le proprietà della rete. È anche possibile determinare se un host remoto è raggiungibile tramite la classe <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>.  
@@ -24,6 +24,7 @@ Lo spazio dei nomi <xref:System.Net.NetworkInformation> consente di raccogliere 
  È possibile usare la classe <xref:System.Net.NetworkInformation.Ping> per determinare se un host remoto è attivo, in rete e raggiungibile. Per altre informazioni, vedere [Procedura: Eseguire il ping di un host](../../../docs/framework/network-programming/how-to-ping-a-host.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Network Information Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179564) (Esempio di tecnologia per informazioni di rete)
 - [NetStat Tool Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179562) (Esempio di tecnologia dello strumento NetStat)

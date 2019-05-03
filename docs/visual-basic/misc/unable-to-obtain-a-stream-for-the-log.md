@@ -5,11 +5,11 @@ f1_keywords:
 - vbrApplicationLog_ExhaustedPossibleStreamNames
 ms.assetid: 33994f52-8efb-4790-a459-033e5c1db632
 ms.openlocfilehash: 540ff3fbba72d33b2efaa58ad7a8019628f5e83f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59344754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922538"
 ---
 # <a name="unable-to-obtain-a-stream-for-the-log"></a>Impossibile ottenere un flusso per il log
 Impossibile ottenere un flusso per il log. I possibili nome file basati \<nome > sono già in uso.  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
 ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801712"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Procedura: Esplorare dati in Windows Forms
 In un'applicazione di Windows, è il modo più semplice per spostarsi tra i record in un'origine dati per associare un <xref:System.Windows.Forms.BindingSource> componente per l'origine dati e quindi associare i controlli per il <xref:System.Windows.Forms.BindingSource>. È quindi possibile utilizzare il metodo di navigazione predefiniti in di <xref:System.Windows.Forms.BindingSource> tali una <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> e <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Usando questi metodi regolerà la <xref:System.Windows.Forms.BindingSource.Position%2A> e <xref:System.Windows.Forms.BindingSource.Current%2A> delle proprietà del <xref:System.Windows.Forms.BindingSource> in modo appropriato. È anche possibile trovare un elemento e impostarlo come elemento corrente, impostando il <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà.  
@@ -53,6 +53,6 @@ In un'applicazione di Windows, è il modo più semplice per spostarsi tra i reco
 ## <a name="see-also"></a>Vedere anche
 
 - [Origini dati supportate da Windows Form](data-sources-supported-by-windows-forms.md)
-- [Notifica delle modifiche nell'associazione dati dei Windows Form](change-notification-in-windows-forms-data-binding.md)
-- [Associazione dati e Windows Form](data-binding-and-windows-forms.md)
-- [Data binding di Windows Form](windows-forms-data-binding.md)
+- [Notifica delle modifiche nel data binding dei Windows Form](change-notification-in-windows-forms-data-binding.md)
+- [Data binding e Windows Forms](data-binding-and-windows-forms.md)
+- [Data binding in Windows Form](windows-forms-data-binding.md)

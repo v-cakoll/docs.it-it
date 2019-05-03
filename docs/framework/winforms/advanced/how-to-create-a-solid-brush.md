@@ -11,11 +11,11 @@ helpviewer_keywords:
 - brushes [Windows Forms], creating solid
 ms.assetid: 85c3fe7d-fb1d-4591-8a9f-d75b556b90af
 ms.openlocfilehash: ed9ec1f52b41c83b3cc6e36dedf97f1c00db42e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937709"
 ---
 # <a name="how-to-create-a-solid-brush"></a>Procedura: Creare un oggetto Solid Brush
 Questo esempio viene creato un <xref:System.Drawing.SolidBrush> oggetto che può essere usato da un <xref:System.Drawing.Graphics> oggetto per il riempimento di forme.  
@@ -32,6 +32,6 @@ Questo esempio viene creato un <xref:System.Drawing.SolidBrush> oggetto che può
 
 - <xref:System.Drawing.SolidBrush>
 - <xref:System.Drawing.Brush>
-- [Guida introduttiva alla programmazione grafica](getting-started-with-graphics-programming.md)
+- [Introduzione alla programmazione grafica](getting-started-with-graphics-programming.md)
 - [Pennelli e forme con riempimento in GDI+](brushes-and-filled-shapes-in-gdi.md)
-- [Utilizzo di un oggetto Brush per il riempimento di forme](using-a-brush-to-fill-shapes.md)
+- [Uso di un oggetto Brush per il riempimento di forme](using-a-brush-to-fill-shapes.md)

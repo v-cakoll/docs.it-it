@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c6edee34c8560c989040475fee4a35c6bd2ddb3e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697992"
 ---
 # <a name="iclrdebugging-interface"></a>Interfaccia ICLRDebugging
 Fornisce metodi che gestiscono il caricamento e lo scaricamento di moduli per il debug.  

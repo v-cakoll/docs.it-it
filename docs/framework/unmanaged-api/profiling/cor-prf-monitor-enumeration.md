@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbb39eb768069a737f3f89c771bf02fd6bc0c3b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599052"
 ---
 # <a name="corprfmonitor-enumeration"></a>Enumerazione COR_PRF_MONITOR
 Contiene i valori usati per specificare il comportamento, le funzionalità o gli eventi ai quali il profiler intende effettuare la sottoscrizione.  
@@ -102,15 +102,15 @@ typedef enum {
 ## <a name="members"></a>Membri  
  Le sezioni seguenti `COR_PRF_MONITOR` membri dell'enumerazione in base alla categoria. Le categorie sono:  
   
--   [Nessun set di flag](#None)  
+- [Nessun set di flag](#None)  
   
--   [Flag di callback](#Callback)  
+- [Flag di callback](#Callback)  
   
--   [Flag di abilitazione delle funzionalità](#Feature)  
+- [Flag di abilitazione delle funzionalità](#Feature)  
   
--   [Flag di configurazione](#Config)  
+- [Flag di configurazione](#Config)  
   
--   [Flag composti](#Composite)  
+- [Flag composti](#Composite)  
   
 <a name="None"></a>   
 ### <a name="no-flags-set"></a>Nessun set di flag  

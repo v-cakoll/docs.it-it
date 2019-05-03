@@ -3,11 +3,11 @@ title: Attributi ServiceModel e riferimento a ServiceDescription
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
 ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747736"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Attributi ServiceModel e riferimento a ServiceDescription
 Il *albero di descrizione* è la gerarchia dei tipi (a partire dal <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> classe) che descrivono ogni aspetto di un servizio. Windows Communication Foundation (WCF) viene utilizzato un albero di descrizione per compilare un runtime di servizio valido, per pubblicare Web Services Description Language (WSDL), il linguaggio XML Schema definition (XSD) e asserzioni di criteri (metadati) sul servizio che i client possono usare per connettersi e usare il servizio e per generare rappresentazioni diverse di file di codice e la configurazione dei valori di struttura ad albero di descrizione.  
@@ -31,9 +31,9 @@ Il *albero di descrizione* è la gerarchia dei tipi (a partire dal <xref:System.
   
 |Proprietà ServiceContractAttribute|Valore della struttura di descrizione interessato|  
 |---------------------------------------|-------------------------------------|  
-|CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription> aggiunto a tutte le operazioni <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>.|  
+|CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription> aggiunti a tutte le operazioni <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>.|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> e possibilmente i livelli di protezione figlio. Per altre informazioni sulla gerarchia del livello di protezione, vedere [Understanding Protection Level](../../../../docs/framework/wcf/understanding-protection-level.md).|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> ed eventuali livelli di protezione figlio. Per altre informazioni sulla gerarchia del livello di protezione, vedere [Understanding Protection Level](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
   
 |Valore ServiceKnownTypesAttribute|Valore della struttura di descrizione interessato|  
@@ -42,14 +42,14 @@ Il *albero di descrizione* è la gerarchia dei tipi (a partire dal <xref:System.
   
 |Valore OperationContractAttribute|Valore della struttura di descrizione interessato|  
 |--------------------------------------|-------------------------------------|  
-|Operazione|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> per il messaggio di output o un messaggio di input, a seconda del contratto o del contratto callback.|  
+|Operazione|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> per il messaggio di output o di input, a seconda del contratto o del contratto callback.|  
 |AsyncPattern|Se true, <xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> e <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>|  
-|IsOneWay|Esegue il mapping a un singolo <xref:System.ServiceModel.Description.MessageDescription> in <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
+|IsOneWay|Esegue il mapping a un solo <xref:System.ServiceModel.Description.MessageDescription> in <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
 |Nome|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> e possibilmente i livelli di protezione figlio. Per altre informazioni sulla gerarchia del livello di protezione, vedere [Understanding Protection Level](../../../../docs/framework/wcf/understanding-protection-level.md).|  
-|ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> per il messaggio di output o un messaggio di input, a seconda del contratto o del contratto callback.|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> ed eventuali livelli di protezione figlio. Per altre informazioni sulla gerarchia del livello di protezione, vedere [Understanding Protection Level](../../../../docs/framework/wcf/understanding-protection-level.md).|  
+|ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> per il messaggio di output o di input, a seconda del contratto o del contratto callback.|  
   
 |Valore FaultContractAttribute|Valore della struttura di descrizione interessato|  
 |----------------------------------|-------------------------------------|  
@@ -115,4 +115,4 @@ Il *albero di descrizione* è la gerarchia dei tipi (a partire dal <xref:System.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [ServiceDescription e riferimento a WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)
+- [Informazioni di riferimento su ServiceDescription e WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

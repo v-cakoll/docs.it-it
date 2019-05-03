@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
 ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053418"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Condivisione dei cicli di messaggi tra Win32 e WPF
 In questo argomento descrive come implementare un ciclo di messaggi per essere interoperabile con i [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], tramite l'utilizzo esistente del messaggio l'esposizione di ciclo in <xref:System.Windows.Threading.Dispatcher> o tramite la creazione di un ciclo di messaggi separate nel [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] lato del codice di interoperabilità.  
@@ -29,26 +29,26 @@ In questo argomento descrive come implementare un ciclo di messaggi per essere i
 ## <a name="writing-message-loops"></a>Cicli di messaggi di scrittura  
  Di seguito è riportato un elenco di controllo <xref:System.Windows.Interop.ComponentDispatcher> membri che è necessario utilizzare per scrivere il proprio ciclo di messaggi:  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>: il ciclo di messaggi deve chiamare questo metodo per indicare che il thread è modale.  
+- <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>: il ciclo di messaggi deve chiamare questo metodo per indicare che il thread è modale.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>: il ciclo di messaggi deve chiamare questo metodo per indicare che il thread è stato ripristinato allo stato non modale.  
+- <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>: il ciclo di messaggi deve chiamare questo metodo per indicare che il thread è stato ripristinato allo stato non modale.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>: deve chiamare questo metodo per indicare che il ciclo di messaggi <xref:System.Windows.Interop.ComponentDispatcher> deve generare il <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> evento. <xref:System.Windows.Interop.ComponentDispatcher> non genererà <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> se <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A> viene `true`, ma i cicli di messaggi possono scegliere di chiamare <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A> anche se <xref:System.Windows.Interop.ComponentDispatcher> non può rispondere se si trova nello stato modale.  
+- <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>: deve chiamare questo metodo per indicare che il ciclo di messaggi <xref:System.Windows.Interop.ComponentDispatcher> deve generare il <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> evento. <xref:System.Windows.Interop.ComponentDispatcher> non genererà <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> se <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A> viene `true`, ma i cicli di messaggi possono scegliere di chiamare <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A> anche se <xref:System.Windows.Interop.ComponentDispatcher> non può rispondere se si trova nello stato modale.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>: il ciclo di messaggi deve chiamare questo metodo per indicare che è disponibile un nuovo messaggio. Il valore restituito indica se un listener per un <xref:System.Windows.Interop.ComponentDispatcher> il messaggio di evento gestito. Se <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A> restituisce `true` (gestito), il dispatcher deve eseguire altre operazioni con il messaggio. Se il valore restituito sarà `false`, il dispatcher per chiamare il [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funzione `TranslateMessage`, quindi chiamare `DispatchMessage`.  
+- <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>: il ciclo di messaggi deve chiamare questo metodo per indicare che è disponibile un nuovo messaggio. Il valore restituito indica se un listener per un <xref:System.Windows.Interop.ComponentDispatcher> il messaggio di evento gestito. Se <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A> restituisce `true` (gestito), il dispatcher deve eseguire altre operazioni con il messaggio. Se il valore restituito sarà `false`, il dispatcher per chiamare il [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funzione `TranslateMessage`, quindi chiamare `DispatchMessage`.  
   
 ## <a name="using-componentdispatcher-and-existing-message-handling"></a>Usando ComponentDispatcher e con la gestione dei messaggi  
  Di seguito è riportato un elenco di controllo <xref:System.Windows.Interop.ComponentDispatcher> membri utilizzerà se ci si affida l'intrinseca [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] loop di messaggi.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>: restituisce se l'applicazione è diventato modale (ad esempio, un ciclo modale di messaggio è stato eseguito il push). <xref:System.Windows.Interop.ComponentDispatcher> può rilevare questo stato perché la classe gestisce un conteggio dei <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A> e <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A> chiamate dal ciclo di messaggi.  
+- <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>: restituisce se l'applicazione è diventato modale (ad esempio, un ciclo modale di messaggio è stato eseguito il push). <xref:System.Windows.Interop.ComponentDispatcher> può rilevare questo stato perché la classe gestisce un conteggio dei <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A> e <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A> chiamate dal ciclo di messaggi.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> e <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> eventi conformi alle regole standard per le chiamate del delegato. I delegati vengono richiamati in un ordine non specificato e tutti i delegati vengono richiamati anche se il primo contrassegna il messaggio come gestito.  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> e <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> eventi conformi alle regole standard per le chiamate del delegato. I delegati vengono richiamati in un ordine non specificato e tutti i delegati vengono richiamati anche se il primo contrassegna il messaggio come gestito.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>: indica un tempo appropriato ed efficiente per l'elaborazione inattiva (non sono presenti altri messaggi in sospeso per il thread). <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> non essere generato se il thread è modale.  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>: indica un tempo appropriato ed efficiente per l'elaborazione inattiva (non sono presenti altri messaggi in sospeso per il thread). <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> non essere generato se il thread è modale.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>: generati per tutti i messaggi che elabora il message pump.  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>: generati per tutti i messaggi che elabora il message pump.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>: generati per tutti i messaggi che non sono stati gestiti durante <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>.  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>: generati per tutti i messaggi che non sono stati gestiti durante <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>.  
   
  Un messaggio viene considerato gestito se dopo il <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> evento o <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> evento, il `handled` parametro passato per riferimento nei dati dell'evento è `true`. I gestori eventi devono ignorare il messaggio se `handled` è `true`, perché ciò significa che il messaggio è stato gestito prima di tutto il gestore diverso. I gestori di eventi sia per gli eventi possono modificare il messaggio. Il dispatcher deve inviare il messaggio modificato e non il messaggio non modificato originale. <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> viene recapitato a tutti i listener, ma l'intenzione dell'architettura solo la finestra di primo livello che contiene l'oggetto HWND in corrispondenza del quale i messaggi di destinazione devono richiamare il codice in risposta al messaggio.  
   

@@ -3,11 +3,11 @@ title: Manomissioni
 ms.date: 03/30/2017
 ms.assetid: 3bad93be-60bb-4f89-96ab-a1c3dc7c0fad
 ms.openlocfilehash: 7a4265c30a6713f9557de2b3d1e99c87b7dd3e58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703387"
 ---
 # <a name="tampering"></a>Manomissioni
 *Manomissione* è l'operazione di modifica di un messaggio o il recapito di un messaggio e utilizza il messaggio modificato per uno scopo diverso da ciò che si era destinato.  

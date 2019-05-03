@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f32a71ec04d791c83f711beee1086bcba283401c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625614"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59345404"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Procedura: Eseguire una trasformazione XSLT con un assembly
 Il compilatore XSLT (xsltc.exe) consente di compilare fogli di stile XSLT e di generare un assembly. L'assembly può essere passato direttamente nel metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
@@ -132,7 +132,7 @@ Il compilatore XSLT (xsltc.exe) consente di compilare fogli di stile XSLT e di g
   
 ### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>Per compilare il foglio di stile con lo script abilitato.  
   
-1.  Quando si esegue il comando seguente dalla riga di comando, vengono creati due assembly denominati `Transform.dll` e `Transform_Script1.dll`. Questo è il comportamento predefinito. Se non viene specificato diversamente, il nome della classe e il nome dell'assieme vengono impostati sul nome del foglio di stile principale.  
+1. Quando si esegue il comando seguente dalla riga di comando, vengono creati due assembly denominati `Transform.dll` e `Transform_Script1.dll`. Questo è il comportamento predefinito. Se non viene specificato diversamente, il nome della classe e il nome dell'assieme vengono impostati sul nome del foglio di stile principale.  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
@@ -146,15 +146,15 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>Per includere l'assembly compilato come riferimento quando si compila il codice  
   
-1.  È possibile includere un assembly in Visual Studio aggiungendo un riferimento in Esplora soluzioni o dalla riga di comando.  
+1. È possibile includere un assembly in Visual Studio aggiungendo un riferimento in Esplora soluzioni o dalla riga di comando.  
   
-2.  Per la riga di comando con C#, usare il comando seguente:  
+2. Per la riga di comando con C#, usare il comando seguente:  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-3.  Per la riga di comando con Visual Basic, usare il comando seguente:  
+3. Per la riga di comando con Visual Basic, usare il comando seguente:  
   
     ```  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
@@ -162,7 +162,7 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>Per usare l'assembly compilato nel codice  
   
-1.  Nell'esempio seguente viene illustrato come eseguire la trasformazione XSLT usando il foglio di stile compilato.  
+1. Nell'esempio seguente viene illustrato come eseguire la trasformazione XSLT usando il foglio di stile compilato.  
   
  [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
  [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  

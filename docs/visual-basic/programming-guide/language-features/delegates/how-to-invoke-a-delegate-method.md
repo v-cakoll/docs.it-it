@@ -3,11 +3,11 @@ title: 'Procedura: Richiamare un metodo delegato (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
 ms.openlocfilehash: ac3e32010e7c20ba76e39915d694b11ab3a65d40
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59319612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973329"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Procedura: Richiamare un metodo delegato (Visual Basic)
 In questo esempio viene illustrato come associare un metodo con un delegato e quindi richiamare tale metodo tramite il delegato.  

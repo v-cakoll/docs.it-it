@@ -5,11 +5,11 @@ ms.assetid: bf94f090-5265-4112-8e57-5b4e20e070d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15e2e94ac4e30fbdb375175148a5b448c51821f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948603"
 ---
 # <a name="icordebugprocess6markdebuggerattached-method"></a>Metodo ICorDebugProcess6::MarkDebuggerAttached
 Modifica lo stato interno dell'oggetto del debug in modo che il metodo <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> nella libreria di classi .NET Framework restituisca `true`.  
@@ -24,7 +24,7 @@ HRESULT MarkDebuggerAttached(
   
 ## <a name="parameters"></a>Parametri  
  `fIsAttached`  
- `true` Se il <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> metodo deve indicare che è collegato un debugger; `false` in caso contrario.  
+ `true` se il metodo <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> deve indicare che è collegato un debugger, altrimenti `false`.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il metodo può restituire i valori elencati nella seguente tabella.  

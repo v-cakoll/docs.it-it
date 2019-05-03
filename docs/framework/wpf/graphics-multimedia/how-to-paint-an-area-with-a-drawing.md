@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drawings [WPF], painting with
 ms.assetid: c10dc4b1-09b1-41e8-ad14-456b5fb377df
 ms.openlocfilehash: 6b204ae631912181333e2559ebadcdc37e7693b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010074"
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a>Procedura: Inserire un disegno in un'area
 Questo esempio spiega come inserire un disegno in un'area. Per disegnare un'area con un disegno, si utilizza un <xref:System.Windows.Media.DrawingBrush> e uno o più <xref:System.Windows.Media.Drawing> oggetti.   L'esempio seguente usa un <xref:System.Windows.Media.DrawingBrush> per disegnare un oggetto con un disegno di due ellissi.  

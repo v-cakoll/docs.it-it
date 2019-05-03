@@ -5,11 +5,11 @@ ms.assetid: cf37c462-73c5-412a-a7f8-bb26ca746313
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d8586031c5bcb0303a64b67ee601fe41b81ee3f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786243"
 ---
 # <a name="icorprofilerinfo7-interface"></a>Interfaccia ICorProfilerInfo7
 [Supportato in [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] e versioni successive]  

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
 ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771020"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>Procedura: Impostare la proprietà di sola lettura per un oggetto Freezable
 In questo esempio viene illustrato come effettuare una <xref:System.Windows.Freezable> sola lettura chiamando relativo <xref:System.Windows.Freezable.Freeze%2A> (metodo).  
   
  Non è possibile bloccare una <xref:System.Windows.Freezable> dell'oggetto se una delle condizioni seguenti è `true` sull'oggetto:  
   
--   È stata eseguita l'animazione o le proprietà con associazione a dati.  
+- È stata eseguita l'animazione o le proprietà con associazione a dati.  
   
--   Include proprietà impostate da una risorsa dinamica. Per altre informazioni sulle risorse dinamiche, vedere la [risorse XAML](xaml-resources.md).  
+- Include proprietà impostate da una risorsa dinamica. Per altre informazioni sulle risorse dinamiche, vedere la [risorse XAML](xaml-resources.md).  
   
--   Contiene <xref:System.Windows.Freezable> oggetti secondari che non possono essere bloccati.  
+- Contiene <xref:System.Windows.Freezable> oggetti secondari che non possono essere bloccati.  
   
  Se si verificano queste condizioni `false` per il <xref:System.Windows.Freezable> oggetto e non si intende modificarlo, prendere in considerazione il blocco in modo da migliorare le prestazioni.  
   
@@ -41,4 +41,4 @@ In questo esempio viene illustrato come effettuare una <xref:System.Windows.Free
 - <xref:System.Windows.Freezable.CanFreeze%2A>
 - <xref:System.Windows.Freezable.Freeze%2A>
 - [Cenni preliminari sugli oggetti Freezable](freezable-objects-overview.md)
-- [Procedure relative](base-elements-how-to-topics.md)
+- [Procedure relative alle proprietà](base-elements-how-to-topics.md)

@@ -11,11 +11,11 @@ ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 38adde3cd51a96f0e15ed5a0c539e088f2d3b480
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701632"
 ---
 # <a name="timespanlegacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > elemento
 Determina se il runtime deve mantenere il comportamento legacy in operazioni di formattazione con <xref:System.TimeSpan?displayProperty=nameWithType> valori.  

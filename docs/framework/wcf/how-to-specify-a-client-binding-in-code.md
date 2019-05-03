@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
 ms.openlocfilehash: c95e30c65c6096140fca0c1241e76fbc7af4df3d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929129"
 ---
 # <a name="how-to-specify-a-client-binding-in-code"></a>Procedura: Specificare un'associazione al client in codice
 Questo esempio illustra un client creato in modo da utilizzare un servizio di calcolatrice. Inoltre, l'associazione a tale client viene specificata in modo imperativo in codice. Il client accede al servizio `CalculatorService` che implementa l'interfaccia `ICalculator`. Sia il servizio sia il client utilizzano la classe <xref:System.ServiceModel.BasicHttpBinding>.  

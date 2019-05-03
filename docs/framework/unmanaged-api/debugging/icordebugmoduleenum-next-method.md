@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa341c726ba84dc1d12b6c5628253a100d65a719
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942480"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>Metodo ICorDebugModuleEnum::Next
 Ottiene il numero di istanze di "ICorDebugModule" specificate da `celt` dall'enumerazione, iniziando in corrispondenza della posizione corrente.  

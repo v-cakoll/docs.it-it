@@ -2,12 +2,12 @@
 title: Esercitazioni su C#
 description: Esplorare queste esercitazioni di C# per apprendere come si compilano i programmi in C# e conoscere le funzionalità del linguaggio C#.
 ms.date: 10/25/2018
-ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214442"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773907"
 ---
 # <a name="c-tutorials"></a>Esercitazioni su C#
 
@@ -17,29 +17,29 @@ Queste sono le esercitazioni su C#. iniziano con lezioni interattive che è poss
 
 Nella prima lezione vengono spiegati i concetti di C# usando piccoli frammenti di codice. Si apprenderanno le nozioni di base della sintassi di C# e si scoprirà come usare i tipi di dati come stringhe, numeri e valori booleani. Tutte le istruzioni sono interattive e si imparerà a scrivere e a eseguire codice in pochi minuti. Per queste prime lezioni non è richiesta alcuna conoscenza pregressa di programmazione o del linguaggio C#.
 
-## [<a name="hello-world"></a>Hello world](intro-to-csharp/hello-world.yml)
+## <a name="hello-worldintro-to-csharphello-worldyml"></a>[Hello world](intro-to-csharp/hello-world.yml)
 
 Nell'esercitazione [Hello World](intro-to-csharp/hello-world.yml) verrà creato il programma C# più semplice. Si esaminerà il tipo `string` e verranno illustrate le procedure per lavorare con il testo.
 
-## [<a name="numbers-in-c"></a>Numeri in C#](intro-to-csharp/numbers-in-csharp.yml)
+## <a name="numbers-in-cintro-to-csharpnumbers-in-csharpyml"></a>[Numeri in C#](intro-to-csharp/numbers-in-csharp.yml)
 
 Nell'esercitazione [Numeri in C#](intro-to-csharp/numbers-in-csharp.yml) viene descritto il modo in cui i computer archiviano numeri per eseguire calcoli con tipi numerici diversi. Verranno illustrati i concetti di base degli arrotondamenti e le procedure per eseguire calcoli matematici con C#. Questa esercitazione è disponibile anche per l'[esecuzione in locale nel computer](intro-to-csharp/numbers-in-csharp-local.md).
 
 Questa esercitazione presuppone che sia stata già completata la lezione [Hello World](intro-to-csharp/hello-world.yml).
 
-## [<a name="branches-and-loops"></a>Rami e cicli](intro-to-csharp/branches-and-loops.yml)
+## <a name="branches-and-loopsintro-to-csharpbranches-and-loopsyml"></a>[Rami e cicli](intro-to-csharp/branches-and-loops.yml)
 
 L'esercitazione [Rami e cicli](intro-to-csharp/branches-and-loops.yml) presenta i concetti di base della selezione di percorsi diversi di esecuzione del codice in base ai valori archiviati in variabili. Si apprenderanno i concetti fondamentali del flusso di controllo, ovvero i meccanismi in base ai quali i programmi prendono decisioni e scelgono azioni diverse. Questa esercitazione è disponibile anche per l'[esecuzione in locale nel computer](intro-to-csharp/branches-and-loops-local.md).
 
 Questa esercitazione presuppone che siano state già completate le lezioni [Hello World](intro-to-csharp/hello-world.yml) e [Numeri in C#](intro-to-csharp/numbers-in-csharp.yml).
 
-## [<a name="list-collection"></a>Raccolte di elenchi](intro-to-csharp/list-collection.yml)
+## <a name="list-collectionintro-to-csharplist-collectionyml"></a>[Raccolte di elenchi](intro-to-csharp/list-collection.yml)
 
 La lezione [Raccolte di elenchi](intro-to-csharp/list-collection.yml) offre una panoramica delle raccolte di tipo List che consentono di archiviare sequenze di dati. Si apprenderà come aggiungere e rimuovere elementi, eseguire la ricerca di elementi e ordinare gli elenchi. Verranno esaminati diversi tipi di elenchi. Questa esercitazione è disponibile anche per l'[esecuzione in locale nel computer](intro-to-csharp/arrays-and-collections.md).
 
-Questa esercitazione presuppone che siano state già completate le lezioni elencate sopra.
+Questa esercitazione presuppone che siano state completate le lezioni elencate in precedenza.
 
-## [<a name="introduction-to-c----work-locally"></a>Introduzione a C# - Lavorare in locale](intro-to-csharp/local-environment.md)
+## <a name="introduction-to-c----work-locallyintro-to-csharplocal-environmentmd"></a>[Introduzione a C# - Lavorare in locale](intro-to-csharp/local-environment.md)
 
 Tutte le esercitazioni introduttive successive alla lezione relativa a Hello World sono disponibili nell'ambiente di sviluppo locale. Alla fine di ogni esercitazione, è possibile scegliere se continuare con la successiva lezione online o nel proprio computer. Sono disponibili collegamenti che aiutano a configurare l'ambiente e continuare con l'esercitazione successiva nel computer.
 
@@ -50,6 +50,7 @@ Tutte le esercitazioni introduttive successive alla lezione relativa a Hello Wor
 * [Tipi riferimento nullable](nullable-reference-types.md): viene illustrato come usare i tipi riferimento nullable per esprimere le proprie intenzioni per i riferimenti Null.
 * [Aggiornare un progetto per usare i tipi riferimento nullable](upgrade-to-nullable-references.md): illustra le tecniche per aggiornare un progetto esistente per poter usare i tipi riferimento nullable.
 * [Estendere le funzionalità per i dati usando i criteri di ricerca](pattern-matching.md): illustra come usare i criteri di ricerca per estendere i tipi oltre le funzionalità di base.
+* [Lavorare con sequenze di dati usando indici e intervalli](ranges-indexes.md): illustra la nuova sintassi efficiente per l'accesso ai singoli elementi o intervalli di un contenitore di dati sequenziali.
 
 ## <a name="general-tutorials"></a>Esercitazioni generali
 

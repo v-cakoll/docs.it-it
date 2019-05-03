@@ -1,28 +1,21 @@
-items:
 - name: Eccezioni
   href: index.md
   items:
-  - name: Classe e proprietà dell'eccezione
-    href: exception-class-and-properties.md
-  - name: 'Procedura: Usare il blocco try/catch per intercettare le eccezioni'
-    href: how-to-use-the-try-catch-block-to-catch-exceptions.md
-  - name: 'Procedura: Usare eccezioni specifiche in un blocco catch'
-    href: how-to-use-specific-exceptions-in-a-catch-block.md
-  - name: 'Procedura: Generare in modo esplicito le eccezioni'
-    href: how-to-explicitly-throw-exceptions.md
-  - name: "Procedura: Creare eccezioni definite dall'utente"
-    href: how-to-create-user-defined-exceptions.md
-  - name: Utilizzo di gestori eccezioni filtrati dall'utente
-    href: using-user-filtered-exception-handlers.md
-  - name: 'Procedura: Usare blocchi finally'
-    href: how-to-use-finally-blocks.md
-  - name: Gestione di eccezioni per interoperabilità COM
-    href: handling-com-interop-exceptions.md
-  - name: Suggerimenti per le eccezioni
-    href: best-practices-for-exceptions.md
-ms.openlocfilehash: 30a6abc9671ff2728792e74345be12fff7cfefbc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469379"
+    - name: Classe e proprietà dell'eccezione
+      href: exception-class-and-properties.md
+    - name: 'Procedura: Usare il blocco try/catch per intercettare le eccezioni'
+      href: how-to-use-the-try-catch-block-to-catch-exceptions.md
+    - name: 'Procedura: Usare eccezioni specifiche in un blocco catch'
+      href: how-to-use-specific-exceptions-in-a-catch-block.md
+    - name: 'Procedura: Generare in modo esplicito le eccezioni'
+      href: how-to-explicitly-throw-exceptions.md
+    - name: 'Procedura: Creare eccezioni definite dall''utente'
+      href: how-to-create-user-defined-exceptions.md
+    - name: Utilizzo di gestori eccezioni filtrati dall'utente
+      href: using-user-filtered-exception-handlers.md
+    - name: 'Procedura: Usare blocchi finally'
+      href: how-to-use-finally-blocks.md
+    - name: Gestione di eccezioni per interoperabilità COM
+      href: handling-com-interop-exceptions.md
+    - name: Suggerimenti per le eccezioni
+      href: best-practices-for-exceptions.md

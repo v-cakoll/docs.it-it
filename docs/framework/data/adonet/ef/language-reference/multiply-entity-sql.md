@@ -3,11 +3,11 @@ title: '* (Moltiplicazione) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 508ce246-4e86-47dd-a605-4af4bebb9891
 ms.openlocfilehash: 308df758d59a7e12a8b5a19ae72fcbee2f168490
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760467"
 ---
 # <a name="-multiply-entity-sql"></a>* (moltiplicazione) (Entity SQL)
 Moltiplica due espressioni.  

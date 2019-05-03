@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 622e57aedf6c49e95dc2d7e40ba598361b3e6a26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753453"
 ---
 # <a name="importtypes-method"></a>Metodo ImportTypes
 Avvia l'importazione di tipi da ogni ambito importato attraverso [metodo ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
@@ -68,4 +68,4 @@ HRESULT ImportTypes(
 
 - [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API Alink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

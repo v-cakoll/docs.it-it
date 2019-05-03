@@ -3,11 +3,11 @@ title: 'Procedura: Importare informazioni WSDL personalizzate'
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
 ms.openlocfilehash: d9a4609f08a95bbecca81aa6667102a0e4a73c67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767078"
 ---
 # <a name="how-to-import-custom-wsdl"></a>Procedura: Importare informazioni WSDL personalizzate
 In questo argomento viene descritto come importare informazioni WSDL personalizzate. Per gestire le informazioni WSDL personalizzate, è necessario implementare l'interfaccia <xref:System.ServiceModel.Description.IWsdlImportExtension>.  

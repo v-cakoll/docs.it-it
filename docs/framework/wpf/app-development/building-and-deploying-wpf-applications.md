@@ -9,20 +9,20 @@ helpviewer_keywords:
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
 ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756975"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>Compilazione e distribuzione di applicazioni WPF
 Il modello di compilazione e distribuzione offre la possibilità di creare e distribuire applicazioni in locale e in modalità remota, inclusi i seguenti:  
   
--   MSBuild: .NET che si trova nello spazio dei nomi posizionato di sistema di compilazione.  
+- MSBuild: .NET che si trova nello spazio dei nomi posizionato di sistema di compilazione.  
   
--   Risorse: utilizzo delle risorse dell'interfaccia utente.  
+- Risorse: utilizzo delle risorse dell'interfaccia utente.  
   
--   Distribuzione ClickOnce: la pubblicazione e distribuzione sistema .NET.  
+- Distribuzione ClickOnce: la pubblicazione e distribuzione sistema .NET.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md)  

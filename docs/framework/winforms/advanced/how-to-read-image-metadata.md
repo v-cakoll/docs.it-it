@@ -9,11 +9,11 @@ helpviewer_keywords:
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
 ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672601"
 ---
 # <a name="how-to-read-image-metadata"></a>Procedura: Leggere i metadati delle immagini
 Alcuni file di immagine contengono metadati che è possibile leggere per determinare le caratteristiche dell'immagine. Scatta una foto digitale, ad esempio, potrebbe contenere i metadati che possono leggere per determinare la marca e modello di fotocamera usata per acquisire l'immagine. Con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile leggere i metadati esistenti ed è anche possibile scrivere i nuovi metadati al file di immagine.  
@@ -40,7 +40,7 @@ Alcuni file di immagine contengono metadati che è possibile leggere per determi
   
 |Valore numerico|Descrizione|  
 |-------------------|-----------------|  
-|1|A `Byte`|  
+|1|Elemento `Byte`|  
 |2|Matrice di `Byte` oggetti codificati in ASCII|  
 |3|Un intero a 16 bit|  
 |4|Un intero a 32 bit|  

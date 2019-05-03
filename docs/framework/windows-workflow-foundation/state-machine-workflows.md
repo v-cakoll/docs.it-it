@@ -3,11 +3,11 @@ title: Flussi di lavoro macchina a stati
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004681"
 ---
 # <a name="state-machine-workflows"></a>Flussi di lavoro macchina a stati
 Una macchina a stati è un paradigma noto per lo sviluppo di programmi. L'attività <xref:System.Activities.Statements.StateMachine> può essere usata insieme all'oggetto <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition> e ad altre attività per compilare programmi del flusso di lavoro macchina a stati. In questo argomento viene fornita una panoramica sulla creazione dei flussi di lavoro macchina a stati.  
@@ -15,11 +15,11 @@ Una macchina a stati è un paradigma noto per lo sviluppo di programmi. L'attivi
 ## <a name="state-machine-workflow-overview"></a>Panoramica sul flusso di lavoro macchina a stati  
  I flussi di lavoro macchina a stati forniscono uno stile di modellazione con cui è possibile modellare il flusso di lavoro come se fosse basato sugli eventi. Un'attività <xref:System.Activities.Statements.StateMachine> contiene gli stati e le transizioni che costituiscono la logica della macchina a stati e può essere usata ovunque ne sia possibile l'applicazione. Sono disponibili diverse classi nel runtime della macchina a stati:  
   
--   <xref:System.Activities.Statements.StateMachine>  
+- <xref:System.Activities.Statements.StateMachine>  
   
--   <xref:System.Activities.Statements.State>  
+- <xref:System.Activities.Statements.State>  
   
--   <xref:System.Activities.Statements.Transition>  
+- <xref:System.Activities.Statements.Transition>  
   
  Per creare un flusso di lavoro macchina a stati, gli stati vengono aggiunti a un'attività <xref:System.Activities.Statements.StateMachine> e le transizioni vengono usate per controllare il flusso tra gli stati. Lo screenshot seguente, dal [esercitazione introduttiva](getting-started-tutorial.md) passaggio [come: Creare un flusso di lavoro macchina](how-to-create-a-state-machine-workflow.md), Mostra un lavoro macchina a stati con tre stati e tre transizioni. **Initialize Target** è lo stato iniziale e rappresenta il primo stato nel flusso di lavoro. È designato dalla linea che porta a dal di **avviare** nodo. Lo stato finale nel flusso di lavoro viene denominato **FinalState**e rappresenta il punto in corrispondenza del quale il flusso di lavoro è stata completata.  
   
@@ -102,8 +102,8 @@ Una macchina a stati è un paradigma noto per lo sviluppo di programmi. L'attivi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Creare un flusso di lavoro della macchina a stati](how-to-create-a-state-machine-workflow.md)
-- [ActivityDesigner StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
-- [ActivityDesigner State](/visualstudio/workflow-designer/state-activity-designer)
-- [ActivityDesigner FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)
-- [ActivityDesigner Transition](/visualstudio/workflow-designer/transition-activity-designer)
+- [Procedura: Creare un flusso di lavoro macchina a stati](how-to-create-a-state-machine-workflow.md)
+- [Activity Designer StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
+- [Activity Designer State](/visualstudio/workflow-designer/state-activity-designer)
+- [Activity Designer FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)
+- [Activity Designer Transition](/visualstudio/workflow-designer/transition-activity-designer)

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
 ms.openlocfilehash: be8b299c99515394bc676cfd7a715cb82ac4d58c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59301152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051108"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Procedura: Convalidare e unire PrintTicket
 Il [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [printschema](https://go.microsoft.com/fwlink/?LinkId=186397) include flessibili ed estensibili <xref:System.Printing.PrintCapabilities> e <xref:System.Printing.PrintTicket> elementi. Il primo indica in modo dettagliato le funzionalità di un dispositivo di stampa e specifica il secondo modo in cui il dispositivo deve usare tali funzionalità rispetto a una determinata sequenza di documenti, singoli documenti o singola pagina.  
@@ -66,5 +66,5 @@ Il [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [printsch
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
 - [Documenti in WPF](documents-in-wpf.md)
-- [Cenni preliminari sulla stampa](printing-overview.md)
+- [Panoramica della stampa](printing-overview.md)
 - [Schema di stampa](https://go.microsoft.com/fwlink/?LinkId=186397)

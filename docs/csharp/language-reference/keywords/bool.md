@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 958b58b31193dbf4c03709e4ab7ba38f7f30e0ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d87da29872582e9c0d47a6c999312ce88252a5cc
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590481"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59334172"
 ---
 # <a name="bool-c-reference"></a>bool (Riferimenti per C#)
 
 La parola chiave `bool` è un alias per <xref:System.Boolean?displayProperty=nameWithType>. Viene usata per dichiarare le variabili che archiviano i valori booleani, [true](true-literal.md) e [false](false-literal.md).
 
 > [!NOTE]
-> Se è necessaria una variabile booleana che può anche avere un valore di `null`, usare `bool?`. Per altre informazioni, vedere la sezione [Tipo bool?](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) dell'articolo [Uso dei tipi nullable](../../programming-guide/nullable-types/using-nullable-types.md).
+> Usare il tipo `bool?` se occorre supportare la logica a tre valori, ad esempio quando si lavora con database che supportano un tipo booleano a tre valori. Per gli operandi `bool?`, gli operatori `&` e `|` predefiniti supportano la logica a tre valori. Per altre informazioni, vedere la sezione [Operatori logici booleani nullable](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) dell'articolo [Operatori logici booleani](../operators/boolean-logical-operators.md).
 
 ## <a name="literals"></a>Valori letterali
 

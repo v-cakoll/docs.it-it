@@ -10,11 +10,11 @@ helpviewer_keywords:
 - getting, control patterns
 ms.assetid: 006c54c9-50bf-48d9-a855-9d62eb95603a
 ms.openlocfilehash: 64c5bae738cee5249e6c2406a2f94667ecb2931f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59337019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609906"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>Ottenere pattern di controllo supportati per automazione interfaccia utente
 > [!NOTE]

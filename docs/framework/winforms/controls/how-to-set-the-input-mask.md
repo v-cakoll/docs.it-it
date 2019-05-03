@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
 ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59331468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912873"
 ---
 # <a name="how-to-set-the-input-mask"></a>Procedura: Impostare la maschera di input
 Il controllo casella di testo mascherata è un controllo casella di testo avanzato che supporta una sintassi dichiarativa per accettare o rifiutare l'input dell'utente. Impostando la proprietà Mask, è possibile specificare l'input dell'utente consentita senza scrivere una logica di convalida personalizzato nell'applicazione. Per altre informazioni, vedere la sezione Osservazioni del <xref:System.Windows.Forms.MaskedTextBox> classe.  
@@ -34,15 +34,15 @@ Il controllo casella di testo mascherata è un controllo casella di testo avanza
   
 1. Nelle **Design** visualizzazione, selezionare un <xref:System.Windows.Forms.MaskedTextBox>.  
   
-    1.  Clic sullo smart tag per aprire la **MaskedTextBox attività** pannello.  
+    1. Clic sullo smart tag per aprire la **MaskedTextBox attività** pannello.  
   
-    2.  Fare clic su **Imposta maschera**.  
+    2. Fare clic su **Imposta maschera**.  
   
      \- oppure -  
   
-    1.  Nel **delle proprietà** finestra, seleziona il <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> proprietà.  
+    1. Nel **delle proprietà** finestra, seleziona il <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> proprietà.  
   
-    2.  Fare clic sui puntini di sospensione nella colonna valore della proprietà.  
+    2. Fare clic sui puntini di sospensione nella colonna valore della proprietà.  
   
      Il **maschera di Input** verrà visualizzata la finestra di dialogo.  
   
@@ -65,4 +65,4 @@ Il controllo casella di testo mascherata è un controllo casella di testo avanza
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Uso del controllo MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)
+- [Procedura dettagliata: Utilizzo del controllo MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)

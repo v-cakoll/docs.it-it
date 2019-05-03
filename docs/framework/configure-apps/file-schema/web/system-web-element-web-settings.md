@@ -9,11 +9,11 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
 ms.openlocfilehash: 50566422c5e28585e93171c991144cf12a6866eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698499"
 ---
 # <a name="systemweb-element-web-settings"></a>\<System. Web > (impostazioni Web)
 Contiene informazioni su come il livello di hosting ASP.NET gestisce il comportamento a livello di processo.  
@@ -74,4 +74,4 @@ Contiene informazioni su come il livello di hosting ASP.NET gestisce il comporta
   
 ## <a name="see-also"></a>Vedere anche
 
-- [\<applicationPool > (impostazioni Web)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+- [Elemento \<applicationPool> (impostazioni Web)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)

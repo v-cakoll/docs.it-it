@@ -10,11 +10,11 @@ helpviewer_keywords:
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
 ms.openlocfilehash: bed943466348447e30947c170e27027f324342c6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59323174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746858"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Procedura: Modificare la spaziatura e l'allineamento degli elementi ToolStrip in Windows Forms
 Il <xref:System.Windows.Forms.ToolStrip> controllo supporta pienamente le funzionalità di layout, ad esempio il ridimensionamento, la spaziatura dei <xref:System.Windows.Forms.ToolStripItem> ai controlli di uno rispetto a altro, la disposizione dei controlli il <xref:System.Windows.Forms.ToolStrip>e la spaziatura dei controlli relativa al <xref:System.Windows.Forms.ToolStrip>.  
@@ -67,7 +67,7 @@ Il <xref:System.Windows.Forms.ToolStrip> controllo supporta pienamente le funzio
   
 ### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a>Per disporre gli elementi di ToolStrip nell'oggetto ToolStrip  
   
--   Impostare il <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> il valore della proprietà <xref:System.Windows.Forms.ToolStripLayoutStyle> desiderato.  
+- Impostare il <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> il valore della proprietà <xref:System.Windows.Forms.ToolStripLayoutStyle> desiderato.  
   
     ```vb  
     ToolStripDropDown1.LayoutStyle = _  
@@ -88,6 +88,6 @@ Il <xref:System.Windows.Forms.ToolStrip> controllo supporta pienamente le funzio
 - <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>
 - <xref:System.Windows.Forms.ToolStripItem.Placement%2A>
 - <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>
-- [Panoramica del controllo ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Panoramica sul controllo ToolStrip](toolstrip-control-overview-windows-forms.md)
 - [Architettura del controllo ToolStrip](toolstrip-control-architecture.md)
 - [Riepilogo della tecnologia ToolStrip](toolstrip-technology-summary.md)

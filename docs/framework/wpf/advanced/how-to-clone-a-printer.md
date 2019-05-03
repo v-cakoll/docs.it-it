@@ -12,11 +12,11 @@ helpviewer_keywords:
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
 ms.openlocfilehash: 09a445da068f0141b9526e0228df8be0105498c6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776545"
 ---
 # <a name="how-to-clone-a-printer"></a>Procedura: Clonare una stampante
 La maggior parte delle aziende, a un certo punto acquisti più stampanti dello stesso modello. In genere, queste vengono installate con le impostazioni di configurazione praticamente identici. L'installazione di ogni stampante può richiedere molto tempo e tendente all'errore. Il <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> dello spazio dei nomi e il <xref:System.Printing.PrintServer.InstallPrintQueue%2A> classe esposte con Microsoft .NET Framework consente di installare immediatamente un numero qualsiasi di code di stampa aggiuntive che sono stati clonati da una coda di stampa esistente.  
@@ -28,9 +28,9 @@ La maggior parte delle aziende, a un certo punto acquisti più stampanti dello s
   
 2. Creare un <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> dal <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> del <xref:System.Printing.PrintQueue>. Il <xref:System.Collections.DictionaryEntry.Value%2A> proprietà di ogni voce in questo dizionario è un oggetto di uno dei tipi derivati da <xref:System.Printing.IndexedProperties.PrintProperty>. Esistono due modi per impostare il valore di una voce in questo dizionario.  
   
-    -   Usare il dizionario **rimuovere** e <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> metodi per rimuovere la voce e quindi aggiungerlo nuovamente con il valore desiderato.  
+    - Usare il dizionario **rimuovere** e <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> metodi per rimuovere la voce e quindi aggiungerlo nuovamente con il valore desiderato.  
   
-    -   Usare il dizionario <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> (metodo).  
+    - Usare il dizionario <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> (metodo).  
   
      L'esempio seguente illustra entrambe le direzioni.  
   
@@ -63,4 +63,4 @@ La maggior parte delle aziende, a un certo punto acquisti più stampanti dello s
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Collections.DictionaryEntry>
 - [Documenti in WPF](documents-in-wpf.md)
-- [Cenni preliminari sulla stampa](printing-overview.md)
+- [Panoramica della stampa](printing-overview.md)

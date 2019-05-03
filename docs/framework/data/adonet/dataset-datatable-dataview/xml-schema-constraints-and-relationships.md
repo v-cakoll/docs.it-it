@@ -3,11 +3,11 @@ title: Vincoli e relazioni di XML Schema
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
 ms.openlocfilehash: 990ae2eef8d9fbd28472494c989ae9ecca34251d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606983"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Vincoli e relazioni di XML Schema
 In uno schema di XML Schema definition language (XSD), è possibile specificare vincoli (univoci, vincoli key e keyref) e le relazioni (mediante la **msdata: Relationship** annotazione). In questo argomento viene spiegato come vengono interpretati i vincoli e le relazioni specificati in XML Schema per generare il tipo <xref:System.Data.DataSet>.  
@@ -188,5 +188,5 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Derivazione della struttura relazionale di dataset da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [Derivazione della struttura relazionale di DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

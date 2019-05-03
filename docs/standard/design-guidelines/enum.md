@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: KrzysztofCwalina
 ms.openlocfilehash: c0645ba1179c4c6fd961b871b3061cd51174f427
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669095"
 ---
 # <a name="enum-design"></a>Progettazione di enum
 Le enumerazioni sono un tipo speciale di tipo di valore. Esistono due tipi di enumerazioni: semplice enumerazioni di flag e le enumerazioni.  
@@ -48,17 +48,17 @@ Le enumerazioni sono un tipo speciale di tipo di valore. Esistono due tipi di en
   
  **✓ CONSIDER** utilizzando <xref:System.Int32> (impostazione predefinita nella maggior parte dei linguaggi di programmazione) con il tipo sottostante di un'enumerazione, a meno che una delle seguenti è true:  
   
--   L'enumerazione è un enum di flag e si dispone di più di 32 flag o si aspettano di avere più in futuro.  
+- L'enumerazione è un enum di flag e si dispone di più di 32 flag o si aspettano di avere più in futuro.  
   
--   Il tipo sottostante deve essere diverso da quello <xref:System.Int32> per semplificare l'interoperabilità con codice non gestito è previsto delle enumerazioni di dimensioni diverse.  
+- Il tipo sottostante deve essere diverso da quello <xref:System.Int32> per semplificare l'interoperabilità con codice non gestito è previsto delle enumerazioni di dimensioni diverse.  
   
--   Un tipo sottostante di dimensioni minori comporta risparmi notevoli in uno spazio. Se si prevede che l'enumerazione da utilizzare principalmente come argomento per il flusso di controllo, le dimensioni poco rilevante. Il risparmio di dimensioni potrebbe essere significativo se:  
+- Un tipo sottostante di dimensioni minori comporta risparmi notevoli in uno spazio. Se si prevede che l'enumerazione da utilizzare principalmente come argomento per il flusso di controllo, le dimensioni poco rilevante. Il risparmio di dimensioni potrebbe essere significativo se:  
   
-    -   Si prevede che l'enumerazione da utilizzare come un campo in una struttura molto spesso un'istanza o una classe.  
+    - Si prevede che l'enumerazione da utilizzare come un campo in una struttura molto spesso un'istanza o una classe.  
   
-    -   Si prevede che agli utenti di creare matrici di grandi dimensioni o raccolte di istanze di enumerazione.  
+    - Si prevede che agli utenti di creare matrici di grandi dimensioni o raccolte di istanze di enumerazione.  
   
-    -   Previsto un numero elevato di istanze dell'enumerazione da serializzare.  
+    - Previsto un numero elevato di istanze dell'enumerazione da serializzare.  
   
  Per informazioni sull'utilizzo in memoria, tenere presente che gli oggetti gestiti siano sempre `DWORD`-allineati, pertanto è necessario in modo efficace più enumerazioni o altre strutture di piccole dimensioni in un'istanza per comprimere un'enumerazione con più piccola per fare la differenza, poiché la dimensione totale dell'istanza è sempre continua a essere arrotondato per eccesso una `DWORD`.  
   

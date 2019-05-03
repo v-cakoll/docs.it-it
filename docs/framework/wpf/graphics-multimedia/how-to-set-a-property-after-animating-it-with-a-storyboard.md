@@ -8,11 +8,11 @@ helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
 ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651103"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Procedura: Impostare una proprietà dopo averla animata con uno storyboard
 In alcuni casi, potrebbe sembrare che è possibile modificare il valore di una proprietà dopo che è stato animato.  
@@ -30,11 +30,11 @@ In alcuni casi, potrebbe sembrare che è possibile modificare il valore di una p
   
  Il codice precedente non viene visualizzata eseguire alcuna operazione: il pennello rimane giallo, che corrisponde al valore fornito dal <xref:System.Windows.Media.Animation.ColorAnimation> che animato il pennello. Il valore della proprietà sottostante (il valore di base) in realtà è cambiato in blu. Il valore effettivo o corrente, rimane tuttavia giallo in quanto il <xref:System.Windows.Media.Animation.ColorAnimation> ancora esegue l'override del valore di base. Se si desidera che il valore di base per diventare di nuovo il valore effettivo, è necessario interrompere l'animazione dall'influenzare la proprietà. Esistono tre modi per eseguire questa operazione con le animazioni storyboard:  
   
--   Impostare l'animazione <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> proprietà <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+- Impostare l'animazione <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> proprietà <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
--   Rimuovere l'intero Storyboard.  
+- Rimuovere l'intero Storyboard.  
   
--   Rimuovere l'animazione della proprietà singole.  
+- Rimuovere l'animazione della proprietà singole.  
   
 ## <a name="set-the-animations-fillbehavior-property-to-stop"></a>Impostare proprietà FillBehavior dell'animazione su Stop  
  Impostando <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> a <xref:System.Windows.Media.Animation.FillBehavior.Stop>, si indica l'arresto effetto sulla proprietà di destinazione dopo aver raggiunto la fine del periodo attivo.  

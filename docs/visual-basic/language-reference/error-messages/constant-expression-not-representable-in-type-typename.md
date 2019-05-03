@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
 ms.openlocfilehash: 4f801337c07d6b3829aa6e0c535c434d8bd672b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649855"
 ---
 # <a name="constant-expression-not-representable-in-type-typename"></a>Espressione costante non rappresentabile nel tipo '\<nomeTipo >'
 Si sta tentando di valutare una costante che non rientrano nel tipo di destinazione, in genere perché supera l'intervallo.  
@@ -25,5 +25,5 @@ Si sta tentando di valutare una costante che non rientrano nel tipo di destinazi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica sulle costanti](../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [Cenni preliminari sulle costanti](../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [Costanti ed enumerazioni](../../../visual-basic/language-reference/constants-and-enumerations.md)

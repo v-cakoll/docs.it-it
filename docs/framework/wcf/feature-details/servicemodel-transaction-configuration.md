@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
 ms.openlocfilehash: d5bb81c618e3b27df32763948dbe56c9b37995e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747706"
 ---
 # <a name="servicemodel-transaction-configuration"></a>Configurazione delle transazioni ServiceModel
 Windows Communication Foundation (WCF) fornisce tre attributi per configurare le transazioni per un servizio: `transactionFlow`, `transactionProtocol`, e `transactionTimeout`.  

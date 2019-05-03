@@ -4,12 +4,12 @@ description: Informazioni su come chiamare funzioni native tramite P/Invoke in .
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1a5f2f9d13429f84d5b5bb58d36f015004fb746b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409237"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59517863"
 ---
 # <a name="platform-invoke-pinvoke"></a>Platform Invoke (P/Invoke)
 
@@ -24,7 +24,7 @@ public class Program {
 
     // Import user32.dll (containing the function we need) and define
     // the method corresponding to the native function.
-    [DllImport("user32.dll")]
+    [DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern int MessageBox(IntPtr hWnd, String text, String caption, int options);
 
     public static void Main(string[] args) {
@@ -37,7 +37,7 @@ public class Program {
 L'esempio precedente è semplice, ma mostra chiaramente gli elementi necessari per richiamare funzioni non gestite da codice gestito. Di seguito l'esempio viene descritto in modo dettagliato:
 
 *   La riga 1 mostra l'istruzione using per lo spazio dei nomi `System.Runtime.InteropServices` contenente tutti gli elementi necessari.
-*   La riga 7 introduce l'attributo `DllImport`. Questo attributo è fondamentale, in quanto comunica al runtime che deve caricare la DLL non gestita. La stringa passata è la DLL che contiene la funzione di destinazione.
+*   La riga 7 introduce l'attributo `DllImport`. Questo attributo è fondamentale, in quanto comunica al runtime che deve caricare la DLL non gestita. La stringa passata è la DLL che contiene la funzione di destinazione. Specifica anche quale [set di caratteri](./charset.md) usare per il marshalling delle stringhe. Indica infine che questa funzione chiama [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) e che il runtime deve acquisire il codice di errore in modo che l'utente possa recuperarlo tramite <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>.
 *   La riga 8 è il punto cruciale dell'attività di P/Invoke. Definisce un metodo gestito che ha **esattamente la stessa firma** del metodo non gestito. Come è possibile notare, la dichiarazione dispone di una nuova parola chiave, `extern`, che indica al runtime che si tratta di un metodo esterno. Quando si richiama tale metodo, il runtime dovrebbe individuarlo nella DLL specificata nell'attributo `DllImport`.
 
 La restante parte dell'esempio è semplicemente la chiamata del metodo, analoga alla chiamata di qualsiasi altro metodo gestito.
@@ -237,7 +237,6 @@ namespace PInvokeSamples {
 ```
 
 Entrambi gli esempi precedenti dipendono da parametri e in entrambi i casi i parametri vengono forniti come tipi gestiti. Il runtime esegue le operazioni necessarie ed elabora i parametri ottenendo i relativi equivalenti sull'altro lato. Informazioni su come i tipi sono sottoposti a marshalling in codice nativo sono disponibili nella pagina sul [marshalling dei tipi](type-marshalling.md).
-
 
 ## <a name="more-resources"></a>Altre risorse
 

@@ -3,11 +3,11 @@ title: Accesso a OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
 ms.openlocfilehash: c104ceb22117d7cc53050a6513a4aea58fdff8c1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005602"
 ---
 # <a name="accessing-operationcontext"></a>Accesso a OperationContext
 Questo esempio viene illustrato come l'attività di messaggistica (<xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.Send>) può essere utilizzato con un'attività di ambiti personalizzata per accedere <xref:System.ServiceModel.OperationContext.Current%2A> e allegare o recuperare un'intestazione di messaggio personalizzata all'interno di un messaggio in ingresso o in uscita.  
@@ -28,13 +28,13 @@ Questo esempio viene illustrato come l'attività di messaggistica (<xref:System.
   
 2. Una volta aggiunti gli elenchi ACL URL, usare i passaggi seguenti.  
   
-    1.  Compilare la soluzione.  
+    1. Compilare la soluzione.  
   
-    2.  Impostare più progetti di avvio facendo clic sulla soluzione e selezionando **Imposta progetti di avvio**.  
+    2. Impostare più progetti di avvio facendo clic sulla soluzione e selezionando **Imposta progetti di avvio**.  
   
-    3.  Aggiungere **assistenza** e **Client** (in questo ordine) come più progetti di avvio.  
+    3. Aggiungere **assistenza** e **Client** (in questo ordine) come più progetti di avvio.  
   
-    4.  Eseguire l'applicazione. Nella console client viene visualizzato un flusso di lavoro che viene eseguito due volte e nella finestra Servizio è visualizzato l'ID istanza di tali flussi di lavoro.  
+    4. Eseguire l'applicazione. Nella console client viene visualizzato un flusso di lavoro che viene eseguito due volte e nella finestra Servizio è visualizzato l'ID istanza di tali flussi di lavoro.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

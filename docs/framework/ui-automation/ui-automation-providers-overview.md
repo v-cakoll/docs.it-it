@@ -6,11 +6,11 @@ helpviewer_keywords:
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
 ms.openlocfilehash: 9312f386198459d0d2dac110827cc6c0029eb247
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033033"
 ---
 # <a name="ui-automation-providers-overview"></a>Cenni preliminari sui provider di automazione interfaccia utente
 > [!NOTE]
@@ -41,10 +41,10 @@ ms.locfileid: "59222744"
  In questa sezione viene presentata una breve spiegazione di alcuni concetti chiave fondamentali per l'implementazione di provider di automazione interfaccia utente.  
   
 ### <a name="elements"></a>Elementi  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gli elementi sono parti di [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] che sono visibili ai client di automazione interfaccia utente. ad esempio finestre delle applicazioni, riquadri, pulsanti, descrizioni comandi, caselle di riepilogo e voci di elenco.  
+ Gli elementi di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sono parti dell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] visibili ai client di automazione interfaccia utente, ad esempio finestre delle applicazioni, riquadri, pulsanti, descrizioni comandi, caselle di riepilogo e voci di elenco.  
   
 ### <a name="navigation"></a>Navigazione  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gli elementi vengono esposti ai client come un [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struttura ad albero. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Costruisce la struttura ad albero passando da un elemento a un altro. Lo spostamento è abilitato per i provider per ogni elemento, ciascuno dei quali può puntare a un elemento padre, di pari livello e figlio.  
+ Gli elementi di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] vengono esposti ai client sotto forma di albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] genera l'albero passando da un elemento a un altro. Lo spostamento è abilitato per i provider per ogni elemento, ciascuno dei quali può puntare a un elemento padre, di pari livello e figlio.  
   
  Per altre informazioni sulla visualizzazione client dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vedere [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "59222744"
 ### <a name="frameworks"></a>Framework  
  Un framework è un componente che gestisce controlli figlio, hit testing e rendering in un'area dello schermo. Ad esempio, una finestra [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] , spesso definita anche come HWND, può essere usata come un framework contenente più elementi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] quali una barra dei menu, una barra di stato e dei pulsanti.  
   
- [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controlli contenitore, ad esempio le caselle di riepilogo e visualizzazioni dell'albero sono considerate Framework, in quanto contengono il proprio codice per il rendering di elementi figlio ed eseguire hit testing su di essi. Per contro, una casella di testo [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] non è un framework perché i processi di rendering  e hit testing sono gestiti dalla finestra [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] che la contiene.  
+ I controlli contenitore[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] , ad esempio caselle di riepilogo e visualizzazioni albero, sono considerate framework in quanto contengono il proprio codice per il rendering di elementi figlio e l'esecuzione di hit testing su di essi. Per contro, una casella di testo [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] non è un framework perché i processi di rendering  e hit testing sono gestiti dalla finestra [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] che la contiene.  
   
  L' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] in un'applicazione può essere costituita da diversi framework. Ad esempio, una finestra di applicazione HWND può contenere [!INCLUDE[TLA#tla_dhtml](../../../includes/tlasharptla-dhtml-md.md)] , che a sua volta contiene un componente, ad esempio una casella combinata, in un elemento HWND.  
   

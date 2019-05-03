@@ -4,12 +4,12 @@ description: Informazioni sulle procedure consigliate per interfacciarsi con i c
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412058"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59196658"
 ---
 # <a name="native-interoperability-best-practices"></a>Procedure consigliate di interoperabilità nativa
 
@@ -187,7 +187,6 @@ I tipi seguenti hanno le stesse dimensioni in Windows a 32 e 64 bit, nonostante 
 | 64    | `ULARGE_INTEGER` | `unsigned long long` | `ulong`  |                                      |
 | 32    | `HRESULT`        | `long`               | `int`    |                                      |
 | 32    | `NTSTATUS`       | `long`               | `int`    |                                      |
-
 
 I tipi seguenti, essendo puntatori, seguono la larghezza della piattaforma. Usare `IntPtr`/`UIntPtr` per questi tipi.
 

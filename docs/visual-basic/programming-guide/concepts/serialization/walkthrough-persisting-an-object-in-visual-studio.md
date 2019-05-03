@@ -3,11 +3,11 @@ title: Persistenza di un oggetto in Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783474"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Procedura dettagliata: Persistenza di un oggetto in Visual Studio (Visual Basic)
 Sebbene sia possibile impostare le proprietà di un oggetto sui valori predefiniti in fase di progettazione, tutti i valori immessi in fase di esecuzione vengono persi quando l'oggetto viene eliminato. È possibile usare la serializzazione per rendere persistenti i dati di un oggetto tra le istanze, consentendo di archiviare i valori e di recuperarli alla successiva creazione di un'istanza dell'oggetto.  
@@ -127,7 +127,7 @@ Sebbene sia possibile impostare le proprietà di un oggetto sui valori predefini
   
 ### <a name="to-mark-a-class-as-serializable"></a>Per contrassegnare una classe come serializzabile  
   
--   Modificare la dichiarazione della classe per la classe Loan come segue:  
+- Modificare la dichiarazione della classe per la classe Loan come segue:  
   
     ```vb  
     <Serializable()>  
@@ -138,7 +138,7 @@ Sebbene sia possibile impostare le proprietà di un oggetto sui valori predefini
   
 ### <a name="to-prevent-a-member-from-being-serialized"></a>Per impedire la serializzazione di un membro  
   
--   Modificare la dichiarazione per l'evento `PropertyChanged` come indicato di seguito:  
+- Modificare la dichiarazione per l'evento `PropertyChanged` come indicato di seguito:  
   
     ```vb  
     <NonSerialized()>  
@@ -150,7 +150,7 @@ Sebbene sia possibile impostare le proprietà di un oggetto sui valori predefini
   
 ### <a name="to-add-references-to-namespaces"></a>Per aggiungere riferimenti agli spazi dei nomi  
   
--   Aggiungere le seguenti istruzioni all'inizio della classe `Form1`:  
+- Aggiungere le seguenti istruzioni all'inizio della classe `Form1`:  
   
     ```vb  
     Imports System.IO  
@@ -197,7 +197,7 @@ Sebbene sia possibile impostare le proprietà di un oggetto sui valori predefini
   
 ### <a name="to-save-the-data-and-serialize-the-class"></a>Per salvare i dati e serializzare la classe  
   
--   Aggiungere il codice seguente alla routine evento `Form1_FormClosing`:  
+- Aggiungere il codice seguente alla routine evento `Form1_FormClosing`:  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1746527a2667676dfeab89e72874204460bcd33c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59126672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984724"
 ---
 # <a name="iclrgcmanagercollect-method"></a>Metodo ICLRGCManager::Collect
 Forza un'operazione di garbage collection per la generazione specificata.  
@@ -64,7 +64,7 @@ HRESULT Collect (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
+- [Gestione automatica della memoria](../../../../docs/standard/automatic-memory-management.md)
 - [Garbage Collection](../../../../docs/standard/garbage-collection/index.md)
 - [Interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Interfaccia ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)

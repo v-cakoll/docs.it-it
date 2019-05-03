@@ -11,18 +11,18 @@ helpviewer_keywords:
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
 ms.openlocfilehash: a887e83babd6126d298170c6aead45c5370c1916
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010254"
 ---
 # <a name="glyphs"></a>Glifi
 Glifi sono una rappresentazione di basso livello di un carattere da disegnare sullo schermo. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce accesso diretto alle icone per i clienti che vogliono intercettare e salvare in modo permanente il testo dopo la formattazione.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Introduzione all'oggetto GlyphRun e all'elemento Glyphs](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [Procedura: Creare testo utilizzando i glifi](draw-text-using-glyphs.md)  
+  [Procedura: Creare testo utilizzando glifi](draw-text-using-glyphs.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

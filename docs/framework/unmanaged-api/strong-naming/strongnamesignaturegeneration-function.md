@@ -16,11 +16,11 @@ ms.assetid: 839b765c-3e41-44ce-bf1b-dc10453db18e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e7df65c28fad6fa79ec7a18d8511955330b2817
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049349"
 ---
 # <a name="strongnamesignaturegeneration-function"></a>Funzione StrongNameSignatureGeneration
 Genera una firma con nome sicuro per l'assembly specificato.  

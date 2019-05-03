@@ -3,11 +3,11 @@ title: 'Eccezioni: Espressione try...with'
 description: Informazioni su come usare il F# 'try... con' espressione per la gestione delle eccezioni.
 ms.date: 05/16/2016
 ms.openlocfilehash: 742e0b595525c69b83a55682c3c8b9b650326ac7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945535"
 ---
 # <a name="exceptions-the-trywith-expression"></a>Eccezioni: Espressione try...with
 
@@ -38,9 +38,9 @@ Le eccezioni possono essere le eccezioni .NET, o possono essere F# le eccezioni.
 
 |Modello|Descrizione|
 |-------|-----------|
-|:? *tipo di eccezione*|Corrisponde al tipo di eccezione .NET specificato.|
+|:? *exception-type*|Corrisponde al tipo di eccezione .NET specificato.|
 |:? *tipo di eccezione* come *identificatore*|Corrisponde al tipo di eccezione .NET specificato, ma offre un valore denominato l'eccezione.|
-|*nome dell'eccezione*(*argomenti*)|Corrisponde a un F# tipo di eccezione e associa gli argomenti.|
+|*exception-name*(*arguments*)|Corrisponde a un F# tipo di eccezione e associa gli argomenti.|
 |*identifier*|Corrisponde a tutte le eccezioni e associa il nome dell'oggetto eccezione. Equivalente a **:? System. Exception come**_identificatore_|
 |*Identificatore* quando *condizione*|Corrisponde a tutte le eccezioni se la condizione è true.|
 

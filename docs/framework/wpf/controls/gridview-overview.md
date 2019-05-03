@@ -7,11 +7,11 @@ helpviewer_keywords:
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
 ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008761"
 ---
 # <a name="gridview-overview"></a>Cenni preliminari su GridView
 <xref:System.Windows.Controls.GridView> modalità di visualizzazione è una delle modalità di visualizzazione di un <xref:System.Windows.Controls.ListView> controllo. Il <xref:System.Windows.Controls.GridView> classe e delle relative classi di supporto consentono agli utenti di visualizzare raccolte di elementi in una tabella che utilizza in genere i pulsanti come intestazioni di colonna interattive. Questo argomento vengono presentate le <xref:System.Windows.Controls.GridView> classe e relativo uso.  
@@ -73,30 +73,30 @@ ms.locfileid: "59201299"
   
  Nell'elenco seguente vengono illustrati in dettaglio le funzionalità dell'uso <xref:System.Windows.Controls.GridView> per l'interazione dell'utente:  
   
--   **Riordinare le colonne usando il metodo di trascinamento e rilascio.**  
+- **Riordinare le colonne con il metodo di trascinamento della selezione.**  
   
      Gli utenti possono riordinare le colonne in un <xref:System.Windows.Controls.GridView> premendo il pulsante sinistro del mouse mentre si trova su un'intestazione di colonna e quindi trascinando la colonna in una nuova posizione. Mentre l'utente trascina l'intestazione di colonna, viene visualizzata una versione a virgola mobile dell'intestazione e una linea nera continua che indica dove inserire la colonna.  
   
      Se si desidera modificare lo stile predefinito per la versione mobile di un'intestazione, specificare una <xref:System.Windows.Controls.ControlTemplate> per un <xref:System.Windows.Controls.GridViewColumnHeader> tipo che è attivata quando il <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> è impostata su <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Per altre informazioni vedere [Creare uno stile per un'intestazione di colonna GridView trascinata](how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
   
--   **Ridimensionare una colonna in base al contenuto.**  
+- **Ridimensionare una colonna in base al contenuto.**  
   
      Gli utenti possono fare doppio clic sulla barra gripper a destra di un'intestazione di colonna per adattare le dimensioni di una colonna al contenuto.  
   
     > [!NOTE]
     >  È possibile impostare il <xref:System.Windows.Controls.GridViewColumn.Width%2A> proprietà `Double.NaN` per produrre lo stesso effetto.  
   
--   **Selezionare gli elementi di riga.**  
+- **Selezionare gli elementi di una riga.**  
   
      Gli utenti possono selezionare uno o più elementi in un <xref:System.Windows.Controls.GridView>.  
   
      Se si desidera modificare il <xref:System.Windows.Style> di un elemento selezionato, vedere [usare i trigger per gli elementi selezionati in un ListView](how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
   
--   **Scorrere per visualizzare il contenuto che non è inizialmente visibile sullo schermo.**  
+- **Scorrere per visualizzare il contenuto che non è inizialmente visibile sullo schermo.**  
   
      Se le dimensioni dei <xref:System.Windows.Controls.GridView> è non sufficientemente grande per visualizzare tutti gli elementi, gli utenti possono scorrere orizzontalmente o verticalmente usando le barre di scorrimento, che sono fornite da un <xref:System.Windows.Controls.ScrollViewer> controllo. Oggetto <xref:System.Windows.Controls.Primitives.ScrollBar> viene nascosto se tutto il contenuto è visibile in una direzione specifica. Le intestazioni di colonna non scorrono mediante una barra di scorrimento verticale, ma scorrono in senso orizzontale.  
   
--   **Interagire con le colonne facendo clic sui pulsanti di intestazione di colonna.**  
+- **Interagire con le colonne facendo clic sui pulsanti di intestazione di colonna.**  
   
      Quando si fa clic su un pulsante di intestazione di colonna, è possibile ordinare i dati visualizzati nella colonna se è stato specificato un algoritmo di ordinamento.  
   
@@ -110,17 +110,17 @@ ms.locfileid: "59201299"
 ## <a name="gridview-supporting-classes"></a>Classi che supportano GridView  
  Le classi seguenti supportano il <xref:System.Windows.Controls.GridView> modalità di visualizzazione.  
   
--   <xref:System.Windows.Controls.GridViewColumn>  
+- <xref:System.Windows.Controls.GridViewColumn>  
   
--   <xref:System.Windows.Controls.GridViewColumnHeader>  
+- <xref:System.Windows.Controls.GridViewColumnHeader>  
   
--   <xref:System.Windows.Controls.GridViewRowPresenter>  
+- <xref:System.Windows.Controls.GridViewRowPresenter>  
   
--   <xref:System.Windows.Controls.GridViewHeaderRowPresenter>  
+- <xref:System.Windows.Controls.GridViewHeaderRowPresenter>  
   
--   <xref:System.Windows.Controls.GridViewColumnCollection>  
+- <xref:System.Windows.Controls.GridViewColumnCollection>  
   
--   <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
+- <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -133,4 +133,4 @@ ms.locfileid: "59201299"
 - <xref:System.Windows.Controls.ViewBase>
 - [Panoramica sul controllo ListView](listview-overview.md)
 - [Ordinare una colonna GridView quando si fa clic su un'intestazione](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [Procedure relative](listview-how-to-topics.md)
+- [Procedure relative alle proprietà](listview-how-to-topics.md)

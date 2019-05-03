@@ -8,11 +8,11 @@ helpviewer_keywords:
 - RadioButton control [Windows Forms], grouping
 ms.assetid: 58f8fe34-50b7-49d8-a2be-c271be3c6b32
 ms.openlocfilehash: 857e61bc89e072aebcf34793d7e8504ece3318c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941310"
 ---
 # <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>Procedura: Raggruppare i controlli RadioButton di Windows Forms in modo che funzionino come set
 Windows Form <xref:System.Windows.Forms.RadioButton> controlli sono progettati per consentire agli utenti una scelta tra due o più impostazioni, di cui solo uno può essere assegnato a una routine o un oggetto. Ad esempio, un gruppo di <xref:System.Windows.Forms.RadioButton> controlli che visualizzano dei vettori di pacchetto per un ordine, ma solo uno dei vettori verrà usato. Pertanto un solo <xref:System.Windows.Forms.RadioButton> alla volta può essere selezionato, anche se è una parte di un gruppo funzionale.  
@@ -28,8 +28,8 @@ Windows Form <xref:System.Windows.Forms.RadioButton> controlli sono progettati p
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.RadioButton>
-- [Panoramica del controllo RadioButton](radiobutton-control-overview-windows-forms.md)
-- [Panoramica del controllo Panel](panel-control-overview-windows-forms.md)
-- [Panoramica del controllo GroupBox](groupbox-control-overview-windows-forms.md)
-- [Panoramica del controllo CheckBox](checkbox-control-overview-windows-forms.md)
+- [Panoramica sul controllo RadioButton](radiobutton-control-overview-windows-forms.md)
+- [Panoramica sul controllo Panel](panel-control-overview-windows-forms.md)
+- [Panoramica sul controllo GroupBox](groupbox-control-overview-windows-forms.md)
+- [Panoramica sul controllo CheckBox](checkbox-control-overview-windows-forms.md)
 - [Controllo RadioButton](radiobutton-control-windows-forms.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
 ms.openlocfilehash: ad2248c791fadc5363d90ff496d5e040f6036ab3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054224"
 ---
 # <a name="themedictionary-markup-extension"></a>Estensione di markup ThemeDictionary
 Offre agli autori di controlli personalizzati o alle applicazioni che integrano controlli di terze parti un modo per caricare dizionari di risorse specifici del tema da usare per l'applicazione di stili al controllo.  
@@ -49,9 +49,9 @@ Offre agli autori di controlli personalizzati o alle applicazioni che integrano 
   
  La sintassi per gli attributi è quella più comunemente utilizzata con questa estensione di markup. Il token di stringa fornito dopo la stringa dell'identificatore `ThemeDictionary` viene assegnato come valore <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> della classe dell'estensione <xref:System.Windows.ThemeDictionaryExtension> sottostante.  
   
- `ThemeDictionary` può essere utilizzato anche nella sintassi degli elementi oggetto. In questo caso, specificando il valore di <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> proprietà è obbligatoria.  
+ `ThemeDictionary` può essere usato anche nella sintassi degli elementi oggetto. In questo caso, specificando il valore di <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> proprietà è obbligatoria.  
   
- `ThemeDictionary` è anche utilizzabile in un utilizzo dettagliato degli attributi che specifica il <xref:System.Windows.Markup.StaticExtension.Member%2A> proprietà come proprietà di = coppia valore:  
+ L'oggetto `ThemeDictionary` può anche essere utilizzato per un utilizzo dettagliato degli attributi che consente di specificare la proprietà <xref:System.Windows.Markup.StaticExtension.Member%2A> come coppia proprietà=valore:  
   
 ```xml  
 <object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  
@@ -66,6 +66,6 @@ Offre agli autori di controlli personalizzati o alle applicazioni che integrano 
 ## <a name="see-also"></a>Vedere anche
 
 - [Applicazione di stili e modelli](../controls/styling-and-templating.md)
-- [Panoramica di XAML (WPF)](xaml-overview-wpf.md)
+- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
 - [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md)
-- [File di dati e di risorse dell'applicazione WPF.](../app-development/wpf-application-resource-content-and-data-files.md)
+- [File di dati e di risorse dell'applicazione WPF](../app-development/wpf-application-resource-content-and-data-files.md)

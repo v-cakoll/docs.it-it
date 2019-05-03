@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
 ms.openlocfilehash: d58f25f279bf2baa1caa7744cea94b909f48866f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002066"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Procedura: Rappresentare un client in un servizio
 Rappresentazione di un client in un servizio Windows Communication Foundation (WCF) consente al servizio eseguire azioni per conto del client. Per le azioni soggette ai controlli dell'elenco di controllo di accesso (ACL), ad esempio l'accesso a directory e file in un computer o l'accesso a un database SQL Server, il controllo ACL si basa sull'account utente del client. In questo argomento vengono illustrati i passaggi di base necessari che consentono a un client in un dominio Windows di impostare un livello di rappresentazione di client. Per un esempio pratico, vedere [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md). Per altre informazioni sulla rappresentazione di client, vedere [delega e rappresentazione](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -49,5 +49,5 @@ Rappresentazione di un client in un servizio Windows Communication Foundation (W
 
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.Security.Principal.TokenImpersonationLevel>
-- [Rappresentazione di client](../../../docs/framework/wcf/samples/impersonating-the-client.md)
+- [Rappresentazione del client](../../../docs/framework/wcf/samples/impersonating-the-client.md)
 - [Delega e rappresentazione](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

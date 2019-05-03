@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
 ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747095"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Procedura: Creare un'interfaccia utente a più riquadri con Windows Forms
 Nella procedura seguente, si creerà un'interfaccia utente a più riquadri simile a quello usato in Microsoft Outlook, con un **cartella** elenco, un **messaggi** riquadro e un **anteprima** riquadro. Questa disposizione avviene principalmente tramite l'ancoraggio dei controlli con il modulo.  
@@ -180,4 +180,4 @@ Nella procedura seguente, si creerà un'interfaccia utente a più riquadri simil
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [Controllo SplitContainer](splitcontainer-control-windows-forms.md)
-- [Procedura: Creare un'interfaccia utente a più riquadri con Windows Forms usando la finestra di progettazione](create-a-multipane-user-interface-with-wf-using-the-designer.md)
+- [Procedura: Creare un'interfaccia utente a più riquadri con Windows Form usando la finestra di progettazione](create-a-multipane-user-interface-with-wf-using-the-designer.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
 ms.openlocfilehash: be4798663d0b39301ec496df45a4a7a5bf9c88e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918587"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Procedura: Usare il moniker del servizio di Windows Communication Foundation senza registrazione
 Per connettersi e comunicare con un servizio Windows Communication Foundation (WCF), un'applicazione client WCF deve avere i dettagli dell'indirizzo del servizio, la configurazione dell'associazione e contratto di servizio.  
@@ -59,4 +59,4 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Registrare e configurare un moniker del servizio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+- [Procedura: Registrare e configurare un Moniker servizio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

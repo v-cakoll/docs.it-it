@@ -12,11 +12,11 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
 ms.openlocfilehash: 9487d4f82878ffefe17c576b16f654293ef01106
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59316505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972185"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Procedura: Visualizzare le icone di errore per la convalida dei moduli con il componente ErrorProvider di Windows Forms
 È possibile usare un controllo Windows Form <xref:System.Windows.Forms.ErrorProvider> componente per visualizzare un'icona di errore quando l'utente immette i dati non validi. È necessario disporre almeno due controlli sul form per scheda tra di essi e quindi richiamare il codice di convalida.  
@@ -95,5 +95,5 @@ ms.locfileid: "59316505"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
-- [Panoramica del componente ErrorProvider](errorprovider-component-overview-windows-forms.md)
-- [Procedura: Visualizzare gli errori all'interno di un set di dati con il componente ErrorProvider di Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [Panoramica sul componente ErrorProvider](errorprovider-component-overview-windows-forms.md)
+- [Procedura: Visualizzare gli errori all'interno di un set di dati con il componente ErrorProvider di Windows Form](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

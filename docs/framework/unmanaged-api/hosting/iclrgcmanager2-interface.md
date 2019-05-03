@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a89a7ef34418163d790fd055de681c1cdf989e57
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59226924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700425"
 ---
 # <a name="iclrgcmanager2-interface"></a>Interfaccia ICLRGCManager2
 Fornisce metodi che consentono a un host interagire con il sistema di common language runtime garbage collection.  
@@ -48,7 +48,7 @@ Fornisce metodi che consentono a un host interagire con il sistema di common lan
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
+- [Gestione automatica della memoria](../../../../docs/standard/automatic-memory-management.md)
 - [Struttura COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [Interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Interfacce di hosting CLR aggiunte in .NET Framework 4 e 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)

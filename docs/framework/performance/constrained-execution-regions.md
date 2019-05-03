@@ -8,11 +8,11 @@ ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4c1d07e2469a36c4b8e1ef7b8d90a80a3530ae3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787972"
 ---
 # <a name="constrained-execution-regions"></a>aree di esecuzione vincolate
 Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di codice gestito affidabile. Un'area a esecuzione vincolata è un'area in cui Common Language Runtime (CLR) non può generare eccezioni fuori banda che impedirebbero l'esecuzione completa del codice nell'area. All'interno di tale area il codice non può eseguire codice che comporterebbe la generazione di eccezioni fuori banda. Il metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> deve precedere immediatamente un blocco `try` e contrassegna i blocchi `catch`, `finally` e `fault` come aree a esecuzione vincolata. Dopo che è stato contrassegnato come area a esecuzione vincolata, il codice può chiamare solo altro codice con contratto di affidabilità efficace e può allocare o effettuare chiamate virtuali a metodi non preparati o non affidabili solo se è in grado di gestire eventuali errori. Per il codice in esecuzione in un'area a esecuzione vincolata, CLR ritarda le interruzioni di thread.  
@@ -24,22 +24,22 @@ Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di co
   
  Lo sviluppatore deve indicare che un'area di codice è un'area a esecuzione vincolata:  
   
--   L'area a esecuzione vincolata e i metodi di livello superiore nel grafico chiamate completo che presentano l'attributo <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> vengono preparati in anticipo. L'attributo <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> può solo dichiarare garanzie <xref:System.Runtime.ConstrainedExecution.Cer.Success> o <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>.  
+- L'area a esecuzione vincolata e i metodi di livello superiore nel grafico chiamate completo che presentano l'attributo <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> vengono preparati in anticipo. L'attributo <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> può solo dichiarare garanzie <xref:System.Runtime.ConstrainedExecution.Cer.Success> o <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>.  
   
--   La preparazione anticipata non può essere eseguita per le chiamate che non è possibile determinare in modo statico, ad esempio le chiamate virtuali. In questi casi usare il metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>. Se si usa il metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>, deve essere applicato l'attributo <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute> al codice di pulizia.  
+- La preparazione anticipata non può essere eseguita per le chiamate che non è possibile determinare in modo statico, ad esempio le chiamate virtuali. In questi casi usare il metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>. Se si usa il metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>, deve essere applicato l'attributo <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute> al codice di pulizia.  
   
 ## <a name="constraints"></a>Vincoli  
  Gli utenti subiscono alcuni vincoli per il tipo di codice che possono scrivere in un'area a esecuzione vincolata. Il codice non può causare eccezioni fuori banda quali quelle che potrebbero risultare dalle operazioni seguenti:  
   
--   Allocazione esplicita.  
+- Allocazione esplicita.  
   
--   Boxing.  
+- Boxing.  
   
--   Acquisizione di un blocco.  
+- Acquisizione di un blocco.  
   
--   Chiamata virtuale a metodi non preparati.  
+- Chiamata virtuale a metodi non preparati.  
   
--   Chiamata a metodi con un contratto di affidabilità debole o inesistente.  
+- Chiamata a metodi con un contratto di affidabilità debole o inesistente.  
   
  In .NET Framework versione 2.0 questi vincoli sono linee guida. La diagnostica viene eseguita tramite strumenti di analisi codice.  
   
@@ -49,30 +49,30 @@ Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di co
 ### <a name="reliability-guarantees"></a>Garanzie di affidabilità  
  Le garanzie di affidabilità, rappresentate da valori di enumerazione <xref:System.Runtime.ConstrainedExecution.Cer>, indicano il grado di affidabilità di un metodo specifico:  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>. In condizioni eccezionali il metodo potrebbe avere esito negativo. In questo caso, il metodo segnala al metodo di chiamata se l'esito è stato positivo o negativo. Perché possa segnalare il valore restituito, il metodo deve trovarsi all'interno di un'area a esecuzione vincolata.  
+- <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>. In condizioni eccezionali il metodo potrebbe avere esito negativo. In questo caso, il metodo segnala al metodo di chiamata se l'esito è stato positivo o negativo. Perché possa segnalare il valore restituito, il metodo deve trovarsi all'interno di un'area a esecuzione vincolata.  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.None>. Il metodo, il tipo o l'assembly non include alcun concetto di area a esecuzione vincolata. Molto probabilmente non è sicuro chiamarlo all'interno di un'area a esecuzione vincolata senza una mitigazione sostanziale dei rischi di danneggiamento dello stato. Non usufruisce dei vantaggi delle garanzie di un'area a esecuzione vincolata. Questo implica quanto segue:  
+- <xref:System.Runtime.ConstrainedExecution.Cer.None>. Il metodo, il tipo o l'assembly non include alcun concetto di area a esecuzione vincolata. Molto probabilmente non è sicuro chiamarlo all'interno di un'area a esecuzione vincolata senza una mitigazione sostanziale dei rischi di danneggiamento dello stato. Non usufruisce dei vantaggi delle garanzie di un'area a esecuzione vincolata. Questo implica quanto segue:  
   
-    1.  In condizioni eccezionali il metodo potrebbe avere esito negativo.  
+    1. In condizioni eccezionali il metodo potrebbe avere esito negativo.  
   
-    2.  Il metodo può segnalare o meno l'esito negativo.  
+    2. Il metodo può segnalare o meno l'esito negativo.  
   
-    3.  Il metodo non è stato scritto per l'uso di un'area a esecuzione vincolata, lo scenario più probabile.  
+    3. Il metodo non è stato scritto per l'uso di un'area a esecuzione vincolata, lo scenario più probabile.  
   
-    4.  Se un metodo, un tipo o un assembly non è contrassegnato in modo esplicito come Success, viene identificato in modo implicito come <xref:System.Runtime.ConstrainedExecution.Cer.None>.  
+    4. Se un metodo, un tipo o un assembly non è contrassegnato in modo esplicito come Success, viene identificato in modo implicito come <xref:System.Runtime.ConstrainedExecution.Cer.None>.  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.Success>. In condizioni eccezionali è garantito l'esito positivo del metodo. Per ottenere questo livello di affidabilità è sempre necessario costruire un'area a esecuzione vincolata intorno al metodo chiamato, anche se viene chiamato dall'interno di un'area non a esecuzione vincolata. Un metodo ha esito positivo se esegue le azioni previste, anche se l'esito può essere interpretato come positivo in modo soggettivo. Ad esempio, contrassegnare Count con `ReliabilityContractAttribute(Cer.Success)` implica che se Count viene eseguito in un'area a esecuzione vincolata, restituisce sempre il conteggio del numero di elementi in <xref:System.Collections.ArrayList> e non può mai lasciare i campi interni in uno stato indeterminato.  Anche il metodo <xref:System.Threading.Interlocked.CompareExchange%2A>, tuttavia, è contrassegnato con Success, implicando che può essere considerato esito positivo anche il fatto che il valore non possa essere sostituito con un nuovo valore a causa di una race condition.  Il punto chiave è che il metodo si comporta in modo conforme a quanto documentato e che non è necessario scrivere codice di area a esecuzione vincolata per prevedere un comportamento più inusuale di quello prevedibile per codice corretto ma non affidabile.  
+- <xref:System.Runtime.ConstrainedExecution.Cer.Success>. In condizioni eccezionali è garantito l'esito positivo del metodo. Per ottenere questo livello di affidabilità è sempre necessario costruire un'area a esecuzione vincolata intorno al metodo chiamato, anche se viene chiamato dall'interno di un'area non a esecuzione vincolata. Un metodo ha esito positivo se esegue le azioni previste, anche se l'esito può essere interpretato come positivo in modo soggettivo. Ad esempio, contrassegnare Count con `ReliabilityContractAttribute(Cer.Success)` implica che se Count viene eseguito in un'area a esecuzione vincolata, restituisce sempre il conteggio del numero di elementi in <xref:System.Collections.ArrayList> e non può mai lasciare i campi interni in uno stato indeterminato.  Anche il metodo <xref:System.Threading.Interlocked.CompareExchange%2A>, tuttavia, è contrassegnato con Success, implicando che può essere considerato esito positivo anche il fatto che il valore non possa essere sostituito con un nuovo valore a causa di una race condition.  Il punto chiave è che il metodo si comporta in modo conforme a quanto documentato e che non è necessario scrivere codice di area a esecuzione vincolata per prevedere un comportamento più inusuale di quello prevedibile per codice corretto ma non affidabile.  
   
 ### <a name="corruption-levels"></a>Livelli di danneggiamento  
  I livelli di danneggiamento, rappresentati da valori di enumerazione <xref:System.Runtime.ConstrainedExecution.Consistency>, indicano il livello di danneggiamento dello stato in un determinato ambiente:  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>. In condizioni eccezionali, Common Language Runtime (CLR) non garantisce la coerenza dello stato nel dominio dell'applicazione corrente.  
+- <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>. In condizioni eccezionali, Common Language Runtime (CLR) non garantisce la coerenza dello stato nel dominio dell'applicazione corrente.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. In condizioni eccezionali, il metodo garantisce la limitazione del danneggiamento dello stato dell'istanza corrente.  
+- <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. In condizioni eccezionali, il metodo garantisce la limitazione del danneggiamento dello stato dell'istanza corrente.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>. In condizioni eccezionali, CLR non garantisce la coerenza dello stato. In altre parole, la condizione potrebbe danneggiare il processo.  
+- <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>. In condizioni eccezionali, CLR non garantisce la coerenza dello stato. In altre parole, la condizione potrebbe danneggiare il processo.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. In condizioni eccezionali è garantito che il metodo non danneggia lo stato.  
+- <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. In condizioni eccezionali è garantito che il metodo non danneggia lo stato.  
   
 ## <a name="reliability-trycatchfinally"></a>Blocco Try/catch/finally di affidabilità  
  Il blocco `try/catch/finally` di affidabilità è un meccanismo di gestione delle eccezioni con lo stesso livello di garanzie di prevedibilità della versione non gestita. Il blocco `catch/finally` costituisce l'area a esecuzione vincolata. I metodi nel blocco richiedono la preparazione anticipata e non devono poter essere interrotti.  
@@ -92,27 +92,27 @@ Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di co
 ## <a name="code-not-permitted-in-cers"></a>Codice non consentito nelle aree a esecuzione vincolata  
  Nelle aree a esecuzione vincolata non sono consentite le operazioni seguenti:  
   
--   Allocazioni esplicite.  
+- Allocazioni esplicite.  
   
--   Acquisizione di un blocco.  
+- Acquisizione di un blocco.  
   
--   Boxing.  
+- Boxing.  
   
--   Accesso a matrici multidimensionali.  
+- Accesso a matrici multidimensionali.  
   
--   Chiamate a metodi tramite reflection.  
+- Chiamate a metodi tramite reflection.  
   
--   <xref:System.Threading.Monitor.Enter%2A> o <xref:System.IO.FileStream.Lock%2A>.  
+- <xref:System.Threading.Monitor.Enter%2A> o <xref:System.IO.FileStream.Lock%2A>.  
   
--   Controlli di sicurezza. Non eseguire le richieste, limitarsi a collegarle.  
+- Controlli di sicurezza. Non eseguire le richieste, limitarsi a collegarle.  
   
--   <xref:System.Reflection.Emit.OpCodes.Isinst> e <xref:System.Reflection.Emit.OpCodes.Castclass> per oggetti COM e proxy  
+- <xref:System.Reflection.Emit.OpCodes.Isinst> e <xref:System.Reflection.Emit.OpCodes.Castclass> per oggetti COM e proxy  
   
--   Ottenere o impostare campi in un proxy trasparente.  
+- Ottenere o impostare campi in un proxy trasparente.  
   
--   Serializzazione.  
+- Serializzazione.  
   
--   Puntatori a funzione e delegati.  
+- Puntatori a funzione e delegati.  
   
 ## <a name="see-also"></a>Vedere anche
 

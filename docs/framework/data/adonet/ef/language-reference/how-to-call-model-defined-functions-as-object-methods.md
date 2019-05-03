@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
 ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774608"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Procedura: Chiamare funzioni definite dal modello come metodi di oggetto
 In questo argomento viene descritto come chiamare una funzione definita dal modello come metodo in un oggetto <xref:System.Data.Objects.ObjectContext> oppure come metodo statico di una classe personalizzata. Oggetto *funzione definita dal modello* è una funzione definita nel modello concettuale. Le procedure descritte in questo argomento mostrano come chiamare queste funzioni direttamente anziché chiamarle da query LINQ to Entities. Per informazioni sulla chiamata di funzioni definite dal modello in LINQ alle query di entità, vedere [come: Chiamare funzioni definite dal modello in query](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
@@ -25,9 +25,9 @@ In questo argomento viene descritto come chiamare una funzione definita dal mode
   
 2. Aggiungere un metodo Common Language Runtime (CLR) alla classe <xref:System.Data.Objects.ObjectContext> che:  
   
-    -   Esegue il mapping alla funzione definita nel modello concettuale. Per eseguire il mapping del metodo, è necessario applicare un oggetto <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> al metodo. Si noti che i parametri <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> dell'attributo sono rispettivamente il nome dello spazio dei nomi del modello concettuale e il nome della funzione nel modello concettuale. La risoluzione del nome della funzione per LINQ rileva la distinzione tra maiuscole e minuscole.  
+    - Esegue il mapping alla funzione definita nel modello concettuale. Per eseguire il mapping del metodo, è necessario applicare un oggetto <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> al metodo. Si noti che i parametri <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> dell'attributo sono rispettivamente il nome dello spazio dei nomi del modello concettuale e il nome della funzione nel modello concettuale. La risoluzione del nome della funzione per LINQ rileva la distinzione tra maiuscole e minuscole.  
   
-    -   Restituisce i risultati del metodo <xref:System.Linq.IQueryProvider.Execute%2A> che viene restituito dalla proprietà <xref:System.Data.Objects.ObjectContext.QueryProvider%2A>.  
+    - Restituisce i risultati del metodo <xref:System.Linq.IQueryProvider.Execute%2A> che viene restituito dalla proprietà <xref:System.Data.Objects.ObjectContext.QueryProvider%2A>.  
   
 3. Chiamare il metodo come membro di un'istanza della classe <xref:System.Data.Objects.ObjectContext>.  
   
@@ -35,11 +35,11 @@ In questo argomento viene descritto come chiamare una funzione definita dal mode
   
 1. Aggiungere una classe all'applicazione con un metodo statico che:  
   
-    -   Esegue il mapping alla funzione definita nel modello concettuale. Per eseguire il mapping del metodo, è necessario applicare un oggetto <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> al metodo. Si noti che i parametri <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> dell'attributo sono rispettivamente il nome dello spazio dei nomi del modello concettuale e il nome della funzione nel modello concettuale.  
+    - Esegue il mapping alla funzione definita nel modello concettuale. Per eseguire il mapping del metodo, è necessario applicare un oggetto <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> al metodo. Si noti che i parametri <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> dell'attributo sono rispettivamente il nome dello spazio dei nomi del modello concettuale e il nome della funzione nel modello concettuale.  
   
-    -   Accetta un argomento <xref:System.Linq.IQueryable>.  
+    - Accetta un argomento <xref:System.Linq.IQueryable>.  
   
-    -   Restituisce i risultati del metodo <xref:System.Linq.IQueryProvider.Execute%2A> che viene restituito dalla proprietà <xref:System.Linq.IQueryable.Provider%2A>.  
+    - Restituisce i risultati del metodo <xref:System.Linq.IQueryProvider.Execute%2A> che viene restituito dalla proprietà <xref:System.Linq.IQueryable.Provider%2A>.  
   
 2. Chiamare il metodo come membro di un metodo statico nella classe personalizzata  
   
@@ -82,7 +82,7 @@ In questo argomento viene descritto come chiamare una funzione definita dal mode
  [!code-vb[DP L2E Methods on ObjectContext#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#9)]  
   
 ## <a name="example"></a>Esempio  
- **Chiamata di una funzione definita dal modello come metodo statico in una classe personalizzata**  
+ **Chiamata a una funzione definita dal modello come metodo statico in una classe personalizzata**  
   
  Nell'esempio seguente viene dimostrato come chiamare una funzione definita dal modello come metodo statico in una classe personalizzata. L'esempio Usa la [modello Sales di AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
@@ -107,6 +107,6 @@ In questo argomento viene descritto come chiamare una funzione definita dal mode
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica sui file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Panoramica di file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
 - [Chiamata di funzioni in query di LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

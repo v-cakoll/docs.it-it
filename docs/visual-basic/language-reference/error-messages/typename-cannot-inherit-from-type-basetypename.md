@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
 ms.openlocfilehash: dc979a66c73fdf15a4349a003680156e0ce27ed3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764361"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<nomeTipo >' non può ereditare \<tipo > '\<nomeTipoBase >' perché espande l'accesso della base \<tipo > all'esterno dell'assembly
 Una classe o interfaccia eredita da una classe di base o interfaccia ma ha un livello di accesso meno restrittivo.  
@@ -23,11 +23,11 @@ Una classe o interfaccia eredita da una classe di base o interfaccia ma ha un li
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Modificare il livello di accesso della classe derivata o dell'interfaccia sia restrittiva almeno quanto quella della classe di base o dell'interfaccia.  
+- Modificare il livello di accesso della classe derivata o dell'interfaccia sia restrittiva almeno quanto quella della classe di base o dell'interfaccia.  
   
      -oppure-  
   
--   Se è necessario il livello di accesso meno restrittivo, rimuovere il `Inherits` istruzione. È possibile ereditare da una classe di base con maggiori restrizioni o un'interfaccia.  
+- Se è necessario il livello di accesso meno restrittivo, rimuovere il `Inherits` istruzione. È possibile ereditare da una classe di base con maggiori restrizioni o un'interfaccia.  
   
 ## <a name="see-also"></a>Vedere anche
 

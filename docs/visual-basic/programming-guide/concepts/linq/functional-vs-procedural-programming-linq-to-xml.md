@@ -3,30 +3,30 @@ title: Programmazione Funzionale e programmazione procedurale (LINQ to XML) (Vis
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
 ms.openlocfilehash: 892c6b7113fe1efdb8e855749c86ac5f9da8cbe4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028395"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>Programmazione Funzionale e programmazione procedurale (LINQ to XML) (Visual Basic)
 Sono disponibili diversi tipi di applicazioni XML:  
   
--   In alcune applicazioni da documenti XML di origine vengono prodotti nuovi documenti XML con una forma diversa.  
+- In alcune applicazioni da documenti XML di origine vengono prodotti nuovi documenti XML con una forma diversa.  
   
--   In alcune applicazioni da documenti XML di origine vengono prodotti documenti risultanti in un formato completamente diverso, ad esempio file di testo CSV o HTML.  
+- In alcune applicazioni da documenti XML di origine vengono prodotti documenti risultanti in un formato completamente diverso, ad esempio file di testo CSV o HTML.  
   
--   In alcune applicazioni da documenti XML di origine vengono inseriti record in un database.  
+- In alcune applicazioni da documenti XML di origine vengono inseriti record in un database.  
   
--   In alcune applicazioni dai dati di un'altra origine, ad esempio un database, vengono creati documenti XML.  
+- In alcune applicazioni dai dati di un'altra origine, ad esempio un database, vengono creati documenti XML.  
   
  Quelli elencati non sono tutti i tipi di applicazioni XML disponibili, ma sono rappresentativi dei tipi di funzionalità che i programmatori XML devono implementare.  
   
  Con tutti questi tipi di applicazioni, gli sviluppatori possono adottare due approcci completamente diversi:  
   
--   Costruzione funzionale usando un approccio dichiarativo.  
+- Costruzione funzionale usando un approccio dichiarativo.  
   
--   Modifica dell'albero XML in memoria usando codice procedurale.  
+- Modifica dell'albero XML in memoria usando codice procedurale.  
   
  In LINQ to XML sono supportati entrambi gli approcci.  
   

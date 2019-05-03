@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6987dea6f122819b9f1c0d334440d87545368942
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 2b7aa028afeaf4230ee079f0d4071a5cd6a21c65
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220108"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59320912"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Esposizione di componenti COM a .NET Framework
 Questa sezione riepiloga il processo necessario per esporre un componente COM esistente al codice gestito. Per informazioni dettagliate sulla scrittura di server COM strettamente integrati con .NET Framework, vedere [Considerazioni di progettazione per l'interoperabilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).
@@ -22,23 +22,24 @@ Questa sezione riepiloga il processo necessario per esporre un componente COM es
   
 #### <a name="to-expose-com-components-to-the-net-framework"></a>Per esporre i componenti COM a .NET Framework  
   
-1.  [Importare una libreria dei tipi come assembly](importing-a-type-library-as-an-assembly.md).  
+1. [Importare una libreria dei tipi come assembly](importing-a-type-library-as-an-assembly.md).  
   
      Common Language Runtime richiede metadati per tutti i tipi, inclusi i tipi COM. Un assembly contenente tipi COM importati come metadati può essere ottenuto in diversi modi.  
   
-2.  [Usare i tipi COM nel codice gestito](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).  
+2. [Usare i tipi COM nel codice gestito](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).  
   
      È possibile esaminare i tipi COM, attivare istanze e richiamare i metodi sull'oggetto COM esattamente come per gli altri tipi gestiti.  
   
-3.  [Compilare un progetto di interoperabilità](compiling-an-interop-project.md).  
+3. [Compilare un progetto di interoperabilità](compiling-an-interop-project.md).  
   
      [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] fornisce i compilatori per diversi linguaggi conformi alle specifiche CLS, inclusi [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# e C++.  
   
-4.  [Distribuire un'applicazione di interoperabilità](deploying-an-interop-application.md).  
+4. [Distribuire un'applicazione di interoperabilità](deploying-an-interop-application.md).  
   
      Per una distribuzione ottimale delle applicazioni di interoperabilità, distribuirle come assembly firmati [con nome sicuro](../app-domains/strong-named-assemblies.md) nella Global Assembly Cache.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interoperabilità con codice non gestito](index.md)
 - [Considerazioni di progettazione per l'interoperabilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
 - [Esempio di interoperabilità COM: client .NET e server COM](com-interop-sample-net-client-and-com-server.md)

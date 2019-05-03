@@ -13,11 +13,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d73da04242bfe5a4958a62d2a48b609b474309
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987675"
 ---
 # <a name="icordebugprocess7-interface"></a>Interfaccia ICorDebugProcess7
 [Supportato in .NET Framework 4.5.2 e versioni successive]  

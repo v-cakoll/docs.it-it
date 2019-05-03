@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
 ms.openlocfilehash: a7bdfc244b0ff1c2ed625235df7e74ced026c542
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59343610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773074"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Procedura: Abilitare il rilevamento riproduzione messaggi
 Un attacco di tipo replay si verifica quando l'autore dell'attacco copia un flusso di messaggi tra due interessati e lo riproduce nei confronti di uno o più degli interessati. Se l'attacco non viene contrastato, i computer colpiti elaboreranno il flusso come se i messaggi fossero legittimi, determinando una serie di conseguenze negative, ad esempio ordini ridondanti di un elemento.  
@@ -30,13 +30,13 @@ Un attacco di tipo replay si verifica quando l'autore dell'attacco copia un flus
   
 2. Utilizzare la proprietà <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> per restituire un riferimento alla classe <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> e impostare le proprietà seguenti, in base alle esigenze:  
   
-    1.  `DetectReplay`. Valore booleano. Determina se il client deve rilevare attacchi di tipo replay dal server. Il valore predefinito è `true`.  
+    1. `DetectReplay`. Valore booleano. Determina se il client deve rilevare attacchi di tipo replay dal server. Il valore predefinito è `true`.  
   
-    2.  `MaxClockSkew`. Valore <xref:System.TimeSpan>. Determina lo sfasamento temporale tollerato dal meccanismo di replay tra client e server. Il meccanismo di sicurezza esamina il timestamp inviato e stabilisce se è troppo vecchio. Il valore predefinito è 5 minuti.  
+    2. `MaxClockSkew`. Valore <xref:System.TimeSpan>. Determina lo sfasamento temporale tollerato dal meccanismo di replay tra client e server. Il meccanismo di sicurezza esamina il timestamp inviato e stabilisce se è troppo vecchio. Il valore predefinito è 5 minuti.  
   
-    3.  `ReplayWindow`. Valore `TimeSpan`. Determina quanto tempo un messaggio può permanere nella rete dopo l'invio dal server (tramite intermediari) prima di raggiungere il client. Il client tiene traccia delle firme dei messaggi inviati all'interno dell'ultimo `ReplayWindow` a scopo di rilevamento di attacchi di tipo replay.  
+    3. `ReplayWindow`. Valore `TimeSpan`. Determina quanto tempo un messaggio può permanere nella rete dopo l'invio dal server (tramite intermediari) prima di raggiungere il client. Il client tiene traccia delle firme dei messaggi inviati all'interno dell'ultimo `ReplayWindow` a scopo di rilevamento di attacchi di tipo replay.  
   
-    4.  `ReplayCacheSize`. Valore intero. Il client archivia le firme del messaggio in una cache. Questa impostazione specifica quante firme che possono essere archiviate nella cache. Se il numero dei messaggi inviati all'interno dell'ultima finestra di replay raggiunge il limite della cache, i messaggi nuovi vengono respinti finché le firme più vecchie contenute nella cache non raggiungono il limite di tempo. Il valore predefinito è 500000.  
+    4. `ReplayCacheSize`. Valore intero. Il client archivia le firme del messaggio in una cache. Questa impostazione specifica quante firme che possono essere archiviate nella cache. Se il numero dei messaggi inviati all'interno dell'ultima finestra di replay raggiunge il limite della cache, i messaggi nuovi vengono respinti finché le firme più vecchie contenute nella cache non raggiungono il limite di tempo. Il valore predefinito è 500000.  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>Per controllare il rilevamento di attacchi di tipo replay nel servizio mediante il codice  
   
@@ -88,24 +88,24 @@ Un attacco di tipo replay si verifica quando l'autore dell'attacco copia un flus
   
  Se non si utilizzano sessioni di conversazione protetta, il rilevamento di attacchi di tipo replay non garantisce il rilevamento di attacchi in scenari di server farm e quando il processo viene riciclato. Ciò vale per le associazioni fornite dal sistema seguenti:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>.  
+- <xref:System.ServiceModel.BasicHttpBinding>.  
   
--   <xref:System.ServiceModel.WSHttpBinding> con il <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> impostata su `false`.  
+- <xref:System.ServiceModel.WSHttpBinding> con la proprietà <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> impostata su `false`.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Per compilare il codice sono necessari gli spazi dei nomi seguenti:  
+- Per compilare il codice sono necessari gli spazi dei nomi seguenti:  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.ServiceModel.Channels>  
+- <xref:System.ServiceModel.Channels>  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
-- [Conversazioni e sessioni protette](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
+- [Conversazioni e sessioni sicure](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
 - [\<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
 - [Procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
 ms.openlocfilehash: 40679136ea62a437009b308a8b206cf251b46222
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012984"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Procedura: Visualizzare un elenco di tipi di carattere con il componente FontDialog
 Il [FontDialog](fontdialog-component-windows-forms.md) componente consente agli utenti di selezionare un tipo di carattere, nonché modificarne la visualizzazione, ad esempio il peso e dimensioni.  

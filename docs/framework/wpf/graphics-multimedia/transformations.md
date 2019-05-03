@@ -17,18 +17,18 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
 ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925996"
 ---
 # <a name="transformations"></a>Trasformazioni
 Le trasformazioni vengono utilizzate per ruotare, ridimensionare, convertire o inclinare <xref:System.Windows.FrameworkElement> oggetti.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sulle trasformazioni](transforms-overview.md)  
- [Procedure relative](transformations-how-to-topics.md)  
+ [Procedure relative alle proprietà](transformations-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

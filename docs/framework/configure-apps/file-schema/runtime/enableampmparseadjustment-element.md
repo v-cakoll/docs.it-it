@@ -5,11 +5,11 @@ ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 57d1a14199debbb90827c1ea95347d485a636329
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704843"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment > elemento
 Determina se analisi dell'ora e i metodi utilizzano un set di regole adattato per analizzare le stringhe di data che contengono un giorno, mese, ora e indicazione AM/PM.  
@@ -53,15 +53,15 @@ Determina se analisi dell'ora e i metodi utilizzano un set di regole adattato pe
 ## <a name="remarks"></a>Note  
  Il `<EnableAmPmParseAdjustment>` elemento controlla come i metodi seguenti analizzano una stringa di data che contiene un valore numerico del giorno e mese seguita da un'ora e un indicatore AM/PM (ad esempio "4/10 6 AM"):  
   
--   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.DateTime.TryParse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTime.TryParse%2A?displayProperty=nameWithType>  
   
--   <xref:System.DateTimeOffset.TryParse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset.TryParse%2A?displayProperty=nameWithType>  
   
--   <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType>  
+- <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType>  
   
  Altri modelli non sono interessate.  
   
@@ -84,4 +84,4 @@ Determina se analisi dell'ora e i metodi utilizzano un set di regole adattato pe
 ## <a name="see-also"></a>Vedere anche
 
 - [\<runtime > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
-- [\<configurazione > elemento](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
+- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

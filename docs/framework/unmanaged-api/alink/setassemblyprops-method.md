@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 589bd7b2132693c89dc10ae1a5c8d0bf52ed481e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949084"
 ---
 # <a name="setassemblyprops-method"></a>Metodo SetAssemblyProps
 Assegna la proprietà a livello di assembly.  
@@ -60,4 +60,4 @@ HRESULT SetAssemblyProps(
 
 - [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API Alink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -3,11 +3,11 @@ title: Valori letterali (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
 ms.openlocfilehash: bff9b1907d3424dc2e3df80480b6ab12f5ab9261
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760662"
 ---
 # <a name="literals-entity-sql"></a>Valori letterali (Entity SQL)
 In questo argomento viene descritto il supporto [!INCLUDE[esql](../../../../../../includes/esql-md.md)] per i valori letterali.  
@@ -103,4 +103,4 @@ GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

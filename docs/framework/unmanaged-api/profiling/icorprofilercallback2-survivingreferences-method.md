@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: da06ce49415317393b3489c2b8f97afc58f7c83b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650851"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>Metodo ICorProfilerCallback2::SurvivingReferences
 Indica il layout degli oggetti nell'heap in seguito a un'operazione di Garbage Collection senza compattazione.  

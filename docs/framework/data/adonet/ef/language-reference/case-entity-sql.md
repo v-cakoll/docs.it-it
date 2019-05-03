@@ -3,11 +3,11 @@ title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
 ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607193"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 Valuta un set di espressioni `Boolean` per determinare il risultato.  
@@ -29,13 +29,13 @@ END
  Segnaposto che indica la possibilità di usare più clausole WHEN `Boolean_expression` THEN `result_expression` .  
   
  THEN `result_expression`  
- È l'espressione restituita quando `Boolean_expression` restituisce `true`. `result expression` È qualsiasi espressione valida.  
+ È l'espressione restituita quando `Boolean_expression` restituisce `true`. `result expression` è qualsiasi espressione valida.  
   
  ELSE `else_result_expression`  
- Espressione restituita se nessuna operazione di confronto restituisce `true`. Se questo argomento viene omesso e nessuna operazione di confronto restituisce `true`, CASE restituisce null. `else_result_expression` È qualsiasi espressione valida. A `else_result_expression` e a ogni occorrenza di `result_expression` deve essere associato lo stesso tipo di dati o un tipo di dati convertibile in modo implicito.  
+ Espressione restituita se nessuna operazione di confronto restituisce `true`. Se questo argomento viene omesso e nessuna operazione di confronto restituisce `true`, CASE restituisce null. `else_result_expression` è qualsiasi espressione valida. A `else_result_expression` e a ogni occorrenza di `result_expression` deve essere associato lo stesso tipo di dati o un tipo di dati convertibile in modo implicito.  
   
  WHEN `Boolean_expression`  
- È l'espressione `Boolean` valutata quando viene usato il formato CASE cercato. `Boolean_expression` valida `Boolean` espressione.  
+ È l'espressione `Boolean` valutata quando viene usato il formato CASE cercato. `Boolean_expression` è una qualsiasi espressione `Boolean` valida.  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce il tipo con precedenza maggiore dal set di tipi in `result_expression` e nell'oggetto facoltativo `else_result_expression`.  
@@ -59,5 +59,5 @@ END
 ## <a name="see-also"></a>Vedere anche
 
 - [THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)
-- [SELEZIONE](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
+- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
 - [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

@@ -3,11 +3,11 @@ title: Informazioni sull'autenticazione HTTP
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
 ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918905"
 ---
 # <a name="understanding-http-authentication"></a>Informazioni sull'autenticazione HTTP
 L'autenticazione è il processo che consente di stabilire se un client è idoneo per accedere a una risorsa. Il protocollo HTTP supporta l'autenticazione come mezzo per negoziare l'accesso a una risorsa protetta.  
@@ -29,14 +29,14 @@ L'autenticazione è il processo che consente di stabilire se un client è idoneo
 ## <a name="choosing-an-authentication-scheme"></a>Scelta di uno schema di autenticazione  
  Quando si scelgono i potenziali schemi di autenticazione per un server HTTP, è necessario prendere in considerazione alcuni elementi:  
   
--   Decidere se è necessario proteggere la risorsa. L'utilizzo dell'autenticazione HTTP implica la trasmissione di più dati e può limitare l'interoperabilità con i client. Consentire l'accesso anonimo alle risorse per le quali la protezione non è necessaria.  
+- Decidere se è necessario proteggere la risorsa. L'utilizzo dell'autenticazione HTTP implica la trasmissione di più dati e può limitare l'interoperabilità con i client. Consentire l'accesso anonimo alle risorse per le quali la protezione non è necessaria.  
   
--   Se la protezione è necessaria per la risorsa, individuare lo schema di autenticazione che fornisce il livello di sicurezza opportuno. Lo schema di autenticazione standard più debole descritto in questo argomento è l'autenticazione di base, che non protegge le credenziali dell'utente. Lo schema di autenticazione standard più forte è Negotiate, che comporta il protocollo Kerberos.  
+- Se la protezione è necessaria per la risorsa, individuare lo schema di autenticazione che fornisce il livello di sicurezza opportuno. Lo schema di autenticazione standard più debole descritto in questo argomento è l'autenticazione di base, che non protegge le credenziali dell'utente. Lo schema di autenticazione standard più forte è Negotiate, che comporta il protocollo Kerberos.  
   
--   Un server non deve presentare (nelle intestazioni WWW-Authenticate) schemi che non sono in grado di accettare o che non proteggono adeguatamente la risorsa in questione. I client hanno la possibilità di scegliere uno qualsiasi degli schemi di autenticazione presentati dal server. Alcuni client scelgono per impostazione predefinita uno schema di autenticazione debole o il primo schema di autenticazione nell'elenco del server.  
+- Un server non deve presentare (nelle intestazioni WWW-Authenticate) schemi che non sono in grado di accettare o che non proteggono adeguatamente la risorsa in questione. I client hanno la possibilità di scegliere uno qualsiasi degli schemi di autenticazione presentati dal server. Alcuni client scelgono per impostazione predefinita uno schema di autenticazione debole o il primo schema di autenticazione nell'elenco del server.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica sulla sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
-- [Utilizzo della rappresentazione con la protezione del trasporto](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+- [Panoramica della sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
+- [Uso della rappresentazione con la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [Delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
 ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053522"
 ---
 # <a name="read-only-dependency-properties"></a>Proprietà di dipendenza di sola lettura
 Questo argomento descrive le proprietà di dipendenza di sola lettura, incluse le proprietà di dipendenza di sola lettura esistenti e gli scenari e le tecniche per la creazione di una proprietà di dipendenza di sola lettura personalizzata.  
@@ -31,11 +31,11 @@ Questo argomento descrive le proprietà di dipendenza di sola lettura, incluse l
   
  Gran parte del processo di creazione di una proprietà di dipendenza di sola lettura è identico a quello descritto negli argomenti [Proprietà di dipendenza personalizzate](custom-dependency-properties.md) e [Implementare una proprietà di dipendenza](how-to-implement-a-dependency-property.md). Vi sono tre differenze importanti:  
   
--   Quando si registra la proprietà, chiamare il <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> metodo anziché la normale <xref:System.Windows.DependencyProperty.Register%2A> metodo per la registrazione della proprietà.  
+- Quando si registra la proprietà, chiamare il <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> metodo anziché la normale <xref:System.Windows.DependencyProperty.Register%2A> metodo per la registrazione della proprietà.  
   
--   Quando si implementa la proprietà del "wrapper" [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], verificare che nemmeno il wrapper abbia un'implementazione impostata, in modo che non esista alcuna incongruenza nello stato di sola lettura per il wrapper pubblico che si espone.  
+- Quando si implementa la proprietà del "wrapper" [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], verificare che nemmeno il wrapper abbia un'implementazione impostata, in modo che non esista alcuna incongruenza nello stato di sola lettura per il wrapper pubblico che si espone.  
   
--   L'oggetto restituito dalla registrazione di sola lettura <xref:System.Windows.DependencyPropertyKey> anziché <xref:System.Windows.DependencyProperty>. Anche se è necessario archiviare il campo come membro, questo in genere non viene reso un membro pubblico del tipo.  
+- L'oggetto restituito dalla registrazione di sola lettura <xref:System.Windows.DependencyPropertyKey> anziché <xref:System.Windows.DependencyProperty>. Anche se è necessario archiviare il campo come membro, questo in genere non viene reso un membro pubblico del tipo.  
   
  Naturalmente, il valore o campo privato sottostante della proprietà di dipendenza di sola lettura può essere scritto usando qualsiasi logica. Il modo più semplice per impostare la proprietà inizialmente o come parte della logica di runtime consiste nell'usare le [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] del sistema di proprietà anziché aggirare il sistema di proprietà e impostare direttamente il campo sottostante privato. In particolare, è disponibile una firma di <xref:System.Windows.DependencyObject.SetValue%2A> che accetta un parametro di tipo <xref:System.Windows.DependencyPropertyKey>. Come e dove questo valore è impostato a livello di codice all'interno della logica dell'applicazione influirà sulle opzioni disponibili per impostare l'accesso per il <xref:System.Windows.DependencyPropertyKey> creata durante la registrazione prima di tutto la proprietà di dipendenza. Se si gestisce tutta questa logica all'interno della classe è possibile renderla privata o, se è necessario impostarla da un'altra porzione dell'assembly, è possibile impostarla come interna. Un approccio consiste nel chiamare <xref:System.Windows.DependencyObject.SetValue%2A> all'interno di un gestore di eventi di classe di evento pertinente che informa un'istanza della classe che il valore della proprietà archiviato deve essere modificato. Un altro approccio consiste nel collegare tra loro le proprietà di dipendenza utilizzando abbinate <xref:System.Windows.PropertyChangedCallback> e <xref:System.Windows.CoerceValueCallback> callback come parte dei metadati di quelle proprietà durante la registrazione.  
   

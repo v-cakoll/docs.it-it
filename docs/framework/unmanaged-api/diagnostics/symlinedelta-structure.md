@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fabc8f77b12865d0d971b5934d7de27b52f3e813
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914641"
 ---
 # <a name="symlinedelta-structure"></a>Struttura SYMLINEDELTA
 Fornisce informazioni sul gestore di simboli sui metodi che sono state spostate in seguito a modifiche.  
@@ -48,4 +48,4 @@ typedef struct _SYMLINEDELTA
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strutture dell'archivio dei simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [Strutture dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

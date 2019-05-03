@@ -3,11 +3,11 @@ title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
 ms.openlocfilehash: b24933cfd89e0c8bfe6a3994fedafd4e323ebead
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002599"
 ---
 # <a name="basicbinding"></a>BasicBinding
 Nell'esempio seguente viene illustrato l'utilizzo di `basicHttpBinding`, che fornisce la comunicazione HTTP e la massima interoperabilità con servizi Web di prima e seconda generazione.  

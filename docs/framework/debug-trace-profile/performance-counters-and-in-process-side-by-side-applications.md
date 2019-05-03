@@ -13,11 +13,11 @@ ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf8a5a7c97969fb0018bb1dba4ea027fe7afd2c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775856"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Contatori delle prestazioni e applicazioni affiancate in-process
 Con Performance Monitor (Perfmon.exe) è possibile distinguere i contatori delle prestazioni in base al runtime. Questo argomento descrive la modifica del Registro di sistema necessaria per abilitare questa funzionalità.  
@@ -25,9 +25,9 @@ Con Performance Monitor (Perfmon.exe) è possibile distinguere i contatori delle
 ## <a name="the-default-behavior"></a>Comportamento predefinito  
  Per impostazione predefinita, Performance Monitor visualizza i contatori delle prestazioni in base all'applicazione. In due scenari, tuttavia, ciò può rappresentare un problema:  
   
--   Quando viene eseguito il monitoraggio di due applicazioni con lo stesso nome. Ad esempio, se entrambe le applicazioni sono denominate app.exe, una verrà visualizzata come **app** e l'altra come **app#1** nella colonna **Istanza**. In questo caso, è difficile associare un contatore delle prestazioni a un'applicazione specifica. Non è chiaro se i dati raccolti per **app #1** fanno riferimento alla prima o alla seconda app.exe.  
+- Quando viene eseguito il monitoraggio di due applicazioni con lo stesso nome. Ad esempio, se entrambe le applicazioni sono denominate app.exe, una verrà visualizzata come **app** e l'altra come **app#1** nella colonna **Istanza**. In questo caso, è difficile associare un contatore delle prestazioni a un'applicazione specifica. Non è chiaro se i dati raccolti per **app #1** fanno riferimento alla prima o alla seconda app.exe.  
   
--   Quando un'applicazione usa più istanze di Common Language Runtime. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] supporta scenari di hosting side-by-side, ovvero un singolo processo o una singola applicazione può caricare più istanze di Common Language Runtime. Se una singola applicazione denominata app.exe carica due istanze di runtime, per impostazione predefinita verranno designate come **app** e **app#1** nella colonna **Istanza**. In questo caso, non è chiaro se **app** e **app#1** fanno riferimento a due applicazioni con lo stesso nome o alla stessa applicazione con due runtime. Se più applicazioni con lo stesso nome caricano più runtime, l'ambiguità è ancora maggiore.  
+- Quando un'applicazione usa più istanze di Common Language Runtime. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] supporta scenari di hosting side-by-side, ovvero un singolo processo o una singola applicazione può caricare più istanze di Common Language Runtime. Se una singola applicazione denominata app.exe carica due istanze di runtime, per impostazione predefinita verranno designate come **app** e **app#1** nella colonna **Istanza**. In questo caso, non è chiaro se **app** e **app#1** fanno riferimento a due applicazioni con lo stesso nome o alla stessa applicazione con due runtime. Se più applicazioni con lo stesso nome caricano più runtime, l'ambiguità è ancora maggiore.  
   
  È possibile impostare una chiave del Registro di sistema per evitare questa ambiguità. Per le applicazioni sviluppate con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], questa modifica del Registro di sistema aggiunge un identificatore di processo seguito da un identificatore dell'istanza di runtime al nome dell'applicazione nella colonna **Istanza**. Anziché come *applicazione* o *applicazione*#1, l'applicazione è ora identificata come *applicazione*_`p`*IDprocesso*\_`r`*IDruntime* nella colonna **Istanza**. Se un'applicazione è stata sviluppata con una versione precedente di Common Language Runtime, questa istanza viene rappresentata come *applicazione\_*`p`*IDprocesso*, purché sia stato installato [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
@@ -39,7 +39,7 @@ Con Performance Monitor (Perfmon.exe) è possibile distinguere i contatori delle
 |Nome della chiave|HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\.NETFramework\Performance|  
 |Nome valore|ProcessNameFormat|  
 |Tipo valore|REG_DWORD|  
-|Valore|1 (0x00000001)|  
+|Value|1 (0x00000001)|  
   
  Il valore 0 per `ProcessNameFormat` indica che è abilitato il comportamento predefinito, ovvero Perfmon.exe visualizza i contatori delle prestazioni in base alle singole applicazioni. Quando si imposta questo valore su 1, Perfmon.exe risolve l'ambiguità per più versioni di un'applicazione e fornisce i contatori delle prestazioni in base al runtime. Qualsiasi altro valore per l'impostazione della chiave del Registro di sistema `ProcessNameFormat` non è supportato ed è riservato per usi futuri.  
   

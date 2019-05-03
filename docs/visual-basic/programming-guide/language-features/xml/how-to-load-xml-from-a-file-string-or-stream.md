@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], loading XML from files
 ms.assetid: 2b02dcec-4cca-4575-b4ad-89ceb87b984c
 ms.openlocfilehash: 2b9da2062068ef25c5df97ef19b1502999ea78ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052534"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Procedura: Caricare il documento XML da un File, stringa o Stream (Visual Basic)
 È possibile creare [valori letterali XML](../../../../visual-basic/language-reference/xml-literals/index.md) e popolarli con i contenuti da un'origine esterna, ad esempio un file, una stringa o un flusso usando diversi metodi. Questi metodi sono illustrati negli esempi seguenti.  
@@ -19,7 +19,7 @@ ms.locfileid: "58832138"
   
 ### <a name="to-load-xml-from-a-file"></a>Caricare il documento XML da un file  
   
--   Per popolare un valore letterale, ad esempio XML un' <xref:System.Xml.Linq.XElement> oppure <xref:System.Xml.Linq.XDocument> oggetto da un file, usare il `Load` (metodo). Questo metodo può accettare un percorso del file, flusso di testo o flusso XML come input.  
+- Per popolare un valore letterale, ad esempio XML un' <xref:System.Xml.Linq.XElement> oppure <xref:System.Xml.Linq.XDocument> oggetto da un file, usare il `Load` (metodo). Questo metodo può accettare un percorso del file, flusso di testo o flusso XML come input.  
   
      Esempio di codice seguente viene illustrato l'utilizzo dei <xref:System.Xml.Linq.XDocument.Load%28System.String%29> metodo per popolare un <xref:System.Xml.Linq.XDocument> oggetto con il codice XML da un file di testo.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "58832138"
   
 ### <a name="to-load-xml-from-a-string"></a>Caricare il documento XML da una stringa  
   
--   Per popolare un valore letterale, ad esempio XML un' <xref:System.Xml.Linq.XElement> oppure <xref:System.Xml.Linq.XDocument> dell'oggetto da una stringa, è possibile usare il `Parse` (metodo).  
+- Per popolare un valore letterale, ad esempio XML un' <xref:System.Xml.Linq.XElement> oppure <xref:System.Xml.Linq.XDocument> dell'oggetto da una stringa, è possibile usare il `Parse` (metodo).  
   
      Esempio di codice seguente viene illustrato l'utilizzo dei <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> metodo per popolare un <xref:System.Xml.Linq.XDocument> oggetto con il codice XML da una stringa.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "58832138"
   
 ### <a name="to-load-xml-from-a-stream"></a>Caricare il documento XML da un flusso  
   
--   Per popolare un valore letterale, ad esempio XML un' <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> dell'oggetto da un flusso, è possibile utilizzare il `Load` metodo o il <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType> (metodo).  
+- Per popolare un valore letterale, ad esempio XML un' <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> dell'oggetto da un flusso, è possibile utilizzare il `Load` metodo o il <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType> (metodo).  
   
  Esempio di codice seguente viene illustrato l'utilizzo dei <xref:System.Xml.Linq.XNode.ReadFrom%2A> metodo per popolare un <xref:System.Xml.Linq.XDocument> oggetto con il codice XML da un flusso XML.  
   

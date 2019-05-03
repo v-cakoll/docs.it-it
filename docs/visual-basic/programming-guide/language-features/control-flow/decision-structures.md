@@ -10,11 +10,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
 ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59318936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907004"
 ---
 # <a name="decision-structures-visual-basic"></a>Strutture decisionali (Visual Basic)
 Visual Basic consente di testare condizioni ed eseguire operazioni diverse a seconda del risultato di un test. È possibile testare una condizione sia true o false, per diversi valori di un'espressione o di diverse eccezioni generate quando si esegue una serie di istruzioni.  

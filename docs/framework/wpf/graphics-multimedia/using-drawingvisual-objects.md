@@ -9,11 +9,11 @@ helpviewer_keywords:
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
 ms.openlocfilehash: 01e10a4b0f0bf4959850caf3951ad4ea915edb4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59121719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762111"
 ---
 # <a name="using-drawingvisual-objects"></a>Utilizzo degli oggetti DrawingVisual
 In questo argomento viene fornita una panoramica di come usare <xref:System.Windows.Media.DrawingVisual> oggetti nel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] livello visivo.  
@@ -51,9 +51,9 @@ In questo argomento viene fornita una panoramica di come usare <xref:System.Wind
   
  L'elenco seguente descrive due membri per i quali è necessario eseguire l'override:  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Restituisce un elemento figlio in corrispondenza dell'indice specificato dalla raccolta di elementi figlio.  
+- <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Restituisce un elemento figlio in corrispondenza dell'indice specificato dalla raccolta di elementi figlio.  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Ottiene il numero di elementi figlio visivi in questo elemento.  
+- <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Ottiene il numero di elementi figlio visivi in questo elemento.  
   
  Nell'esempio seguente, le sostituzioni per i due <xref:System.Windows.FrameworkElement> membri vengono implementati.  
   

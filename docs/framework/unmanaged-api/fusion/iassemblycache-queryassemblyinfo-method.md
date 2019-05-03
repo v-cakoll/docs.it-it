@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 81b647032b2e9474e3b4472552ed884cec92ffc3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697524"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>Metodo IAssemblyCache::QueryAssemblyInfo
 Ottiene i dati richiesti sull'assembly specificato.  
@@ -41,9 +41,9 @@ HRESULT QueryAssemblyInfo (
  `dwFlags`  
  [in] Flag definiti in Fusion. Sono supportati i valori seguenti:  
   
--   QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
+- QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
   
--   QUERYASMINFO_FLAG_GETSIZE (0x00000002)  
+- QUERYASMINFO_FLAG_GETSIZE (0x00000002)  
   
  `pszAssemblyName`  
  [in] Il nome dell'assembly per cui verranno recuperati i dati.  

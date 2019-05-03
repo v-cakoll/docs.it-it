@@ -2,12 +2,12 @@
 title: Selezione e convalida dei certificati
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 6d2c5470856f09d3da3bcae890717757c598a4c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79cc46d91f6b1818154bac6f62df2acbac36fe20
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666666"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59318351"
 ---
 # <a name="certificate-selection-and-validation"></a>Selezione e convalida dei certificati
 Le classi <xref:System.Net> supportano diversi modi per selezionare e convalidare <xref:System.Security.Cryptography.X509Certificates> per le connessioni SSL (Secure Socket Layer). Un client può selezionare uno o più certificati per autenticarsi a un server, mentre un server può richiedere che un certificato client abbia uno o più attributi specifici per l'autenticazione.  
@@ -29,11 +29,11 @@ Le classi <xref:System.Net> supportano diversi modi per selezionare e convalidar
 ## <a name="client-certificate-selection"></a>Selezione del certificato client  
  In .NET Framework viene usata la procedura seguente per selezionare il certificato client da presentare al server:  
   
-1.  Un certificato già presentato al server viene memorizzato nella cache alla prima presentazione e quindi riusato per le successive richieste di certificato client.  
+1. Un certificato già presentato al server viene memorizzato nella cache alla prima presentazione e quindi riusato per le successive richieste di certificato client.  
   
-2.  Se è presente un delegato, usare sempre il risultato restituito dal delegato come certificato client da selezionare. Provare a usare un certificato memorizzato nella cache, quando possibile, ma non usare credenziali anonime memorizzate nella cache se il delegato ha restituito null e la raccolta di certificati non è vuota.  
+2. Se è presente un delegato, usare sempre il risultato restituito dal delegato come certificato client da selezionare. Provare a usare un certificato memorizzato nella cache, quando possibile, ma non usare credenziali anonime memorizzate nella cache se il delegato ha restituito null e la raccolta di certificati non è vuota.  
   
-3.  Se si tratta della prima verifica di un certificato client, .NET Framework enumera i certificati negli oggetti della classe <xref:System.Security.Cryptography.X509Certificates.X509Certificate> o <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> associati alla connessione, cercando una corrispondenza tra l'elenco di autorità di certificazione fornito dal server e il nome dell'autorità emittente del certificato client. Il primo certificato corrispondente viene inviato al server. Se non viene trovata alcuna corrispondenza o la raccolta di certificati è vuota, al server vengono inviate credenziali anonime.  
+3. Se si tratta della prima verifica di un certificato client, .NET Framework enumera i certificati negli oggetti della classe <xref:System.Security.Cryptography.X509Certificates.X509Certificate> o <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> associati alla connessione, cercando una corrispondenza tra l'elenco di autorità di certificazione fornito dal server e il nome dell'autorità emittente del certificato client. Il primo certificato corrispondente viene inviato al server. Se non viene trovata alcuna corrispondenza o la raccolta di certificati è vuota, al server vengono inviate credenziali anonime.  
   
 ## <a name="tools-for-certificate-configuration"></a>Strumenti per la configurazione dei certificati  
  Per la configurazione dei certificati client e server è disponibile una serie di strumenti.  
@@ -53,5 +53,6 @@ Per configurare i certificati server per la classe <xref:System.Net.HttpListener
  Oltre a questi strumenti, le classi <xref:System.Security.Cryptography.X509Certificates.X509Certificate> e <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> offrono metodi per caricare un certificato dal file system.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Sicurezza nella programmazione di rete](../../../docs/framework/network-programming/security-in-network-programming.md)
 - [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)

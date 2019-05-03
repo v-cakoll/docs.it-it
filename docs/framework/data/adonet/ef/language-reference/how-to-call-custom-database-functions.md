@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
 ms.openlocfilehash: cc2e25183649f6a95e7862520ccc5719f201277a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774647"
 ---
 # <a name="how-to-call-custom-database-functions"></a>Procedura: Chiamare funzioni di database personalizzate
 In questo argomento viene descritto come chiamare funzioni personalizzate definite nel database dall'interno di query LINQ to Entities.  
@@ -62,5 +62,5 @@ In questo argomento viene descritto come chiamare funzioni personalizzate defini
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica sui file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Panoramica di file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

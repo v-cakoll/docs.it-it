@@ -8,11 +8,11 @@ helpviewer_keywords:
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
 ms.openlocfilehash: 81a19d063f31b3c28fc15a061b5173495e83f6fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59321887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009123"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Procedura dettagliata: Disposizione dei controlli in Windows Forms usando FlowLayoutPanel
 Alcune applicazioni richiedono che il form abbia un layout che possa adattarsi automaticamente alle eventuali modifiche alle dimensioni del form o del contenuto del form. Per usare un layout dinamico senza gestire gli eventi <xref:System.Windows.Forms.Control.Layout> in modo esplicito nel codice è possibile usare un pannello di layout.  
@@ -23,23 +23,23 @@ Alcune applicazioni richiedono che il form abbia un layout che possa adattarsi a
   
  <xref:System.Windows.Forms.FlowLayoutPanel> dispone i contenuti in una direzione di flusso specifica: orizzontale o verticale. Il contenuto può andare a capo da una riga a quella successiva o da una colonna a quella successiva. In alternativa, è possibile troncare il contenuto invece di usare il ritorno a capo. Le attività illustrate nella procedura dettagliata sono le seguenti:  
   
--   Creazione di un progetto Windows Form  
+- Creazione di un progetto Windows Form  
   
--   Disposizione dei controlli in orizzontale e in verticale  
+- Disposizione dei controlli in orizzontale e in verticale  
   
--   Modifica della direzione del flusso  
+- Modifica della direzione del flusso  
   
--   Inserimento di interruzioni di flusso  
+- Inserimento di interruzioni di flusso  
   
--   Disposizione dei controlli con spaziatura e margini  
+- Disposizione dei controlli con spaziatura e margini  
   
--   Inserimento di controlli con doppio clic nella casella degli strumenti  
+- Inserimento di controlli con doppio clic nella casella degli strumenti  
   
--   Inserimento di un controllo disegnandone il contorno  
+- Inserimento di un controllo disegnandone il contorno  
   
--   Inserimento di controlli con il cursore  
+- Inserimento di controlli con il cursore  
   
--   Riassegnazione dei controlli esistenti a un padre diverso  
+- Riassegnazione dei controlli esistenti a un padre diverso  
   
  Al termine, si avrà una migliore comprensione del ruolo svolto da queste importanti funzionalità di layout.  
   
@@ -179,22 +179,22 @@ Alcune applicazioni richiedono che il form abbia un layout che possa adattarsi a
 ## <a name="next-steps"></a>Passaggi successivi  
  È possibile ottenere un layout complesso usando i pannelli e i controlli di layout in combinazione. Per approfondire l'argomento, si consiglia di effettuare le seguenti operazioni:  
   
--   Ridimensionare un controllo <xref:System.Windows.Forms.Button> per una dimensione più grande e notare l'effetto sul layout.  
+- Ridimensionare un controllo <xref:System.Windows.Forms.Button> per una dimensione più grande e notare l'effetto sul layout.  
   
--   I pannelli layout possono contenere altri pannelli layout. Provare a rilasciare un controllo <xref:System.Windows.Forms.TableLayoutPanel> nel controllo esistente.  
+- I pannelli layout possono contenere altri pannelli layout. Provare a rilasciare un controllo <xref:System.Windows.Forms.TableLayoutPanel> nel controllo esistente.  
   
--   Ancorare il controllo <xref:System.Windows.Forms.FlowLayoutPanel> al form padre. Ridimensionare il form e notare l'effetto sul layout.  
+- Ancorare il controllo <xref:System.Windows.Forms.FlowLayoutPanel> al form padre. Ridimensionare il form e notare l'effetto sul layout.  
   
--   Impostare la proprietà <xref:System.Windows.Forms.Control.Visible%2A> di un controllo su `false` e notare come <xref:System.Windows.Forms.FlowLayoutPanel> adatta il flusso in risposta.  
+- Impostare la proprietà <xref:System.Windows.Forms.Control.Visible%2A> di un controllo su `false` e notare come <xref:System.Windows.Forms.FlowLayoutPanel> adatta il flusso in risposta.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando le guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
-- [Cenni preliminari sulla proprietà AutoSize](autosize-property-overview.md)
-- [Procedura: Ancorare i controlli in Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Procedura: Agganciare i controlli in Windows Forms](how-to-anchor-controls-on-windows-forms.md)
-- [Procedura dettagliata: Disposizione dei controlli Windows Forms con spaziatura interna, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers (Esperienza utente di Microsoft Windows, Linee guida ufficiali per analisti e sviluppatori dell'interfaccia utente). Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [Panoramica sulla proprietà AutoSize](autosize-property-overview.md)
+- [Procedura: Ancorare i controlli in Windows Form](how-to-dock-controls-on-windows-forms.md)
+- [Procedura: Ancoraggio dei controlli in Windows Form](how-to-anchor-controls-on-windows-forms.md)
+- [Procedura dettagliata: Definire il layout dei Windows Form usando spaziatura, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)

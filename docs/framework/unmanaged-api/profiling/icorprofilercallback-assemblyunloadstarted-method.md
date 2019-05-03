@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7c95bed520e0a4687541f127c8b39ef7916ef104
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598623"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>Metodo ICorProfilerCallback::AssemblyUnloadStarted
 Notifica al profiler che un assembly è stato scaricato.  

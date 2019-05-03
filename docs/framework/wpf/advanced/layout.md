@@ -10,30 +10,30 @@ helpviewer_keywords:
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
 ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59330493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054369"
 ---
 # <a name="layout"></a>Layout
 Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. La capacità di identificare correttamente i casi in cui vengono eseguiti calcoli del layout è essenziale per la creazione di interfacce utente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
--   [Rettangoli di selezione degli elementi](#LayoutSystem_BoundingBox)  
+- [Rettangoli di selezione degli elementi](#LayoutSystem_BoundingBox)  
   
--   [Sistema di layout](#LayoutSystem_Overview)  
+- [Sistema di layout](#LayoutSystem_Overview)  
   
--   [Misurazione e disposizione degli elementi figlio](#LayoutSystem_Measure_Arrange)  
+- [Misurazione e disposizione degli elementi figlio](#LayoutSystem_Measure_Arrange)  
   
--   [Elementi Panel e comportamenti di layout personalizzati](#LayoutSystem_PanelsCustom)  
+- [Elementi Panel e comportamenti di layout personalizzati](#LayoutSystem_PanelsCustom)  
   
--   [Considerazioni sulle prestazioni del layout](#LayoutSystem_Performance)  
+- [Considerazioni sulle prestazioni del layout](#LayoutSystem_Performance)  
   
--   [Rendering dei sub-pixel e arrotondamento del layout](#LayoutSystem_LayoutRounding)  
+- [Rendering dei sub-pixel e arrotondamento del layout](#LayoutSystem_LayoutRounding)  
   
--   [Argomenti successivi](#LayoutSystem_whatsnext)  
+- [Argomenti successivi](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>Rettangoli di selezione degli elementi  
@@ -120,19 +120,19 @@ Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](.
 ## <a name="layout-performance-considerations"></a>Considerazioni sulle prestazioni del layout  
  Il layout è un processo ricorsivo. Ogni elemento figlio di un <xref:System.Windows.Controls.Panel.Children%2A> collection viene elaborato durante ogni chiamata del sistema di layout. Di conseguenza, è consigliabile evitare l'attivazione del sistema di layout quando non è necessaria. Le considerazioni seguenti possono essere utili per ottenere prestazioni migliori.  
   
--   Identificare le modifiche dei valori di proprietà che forzeranno un aggiornamento ricorsivo da parte del sistema di layout.  
+- Identificare le modifiche dei valori di proprietà che forzeranno un aggiornamento ricorsivo da parte del sistema di layout.  
   
      Le proprietà di dipendenza i cui valori possono provocare l'inizializzazione del sistema di layout sono contrassegnate con flag pubblici. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> e <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> forniscono indizi utili proprietà che le modifiche dei valori forzeranno una ricorsiva aggiornare il sistema di layout. In generale, qualsiasi proprietà che possono influire sulle dimensioni del rettangolo di selezione di un elemento deve avere un <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> flag impostato su true. Per altre informazioni, vedere [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md).  
   
--   Quando possibile, usare una <xref:System.Windows.UIElement.RenderTransform%2A> anziché un <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
+- Quando possibile, usare una <xref:System.Windows.UIElement.RenderTransform%2A> anziché un <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
      Oggetto <xref:System.Windows.FrameworkElement.LayoutTransform%2A> può essere molto utile per influire sul contenuto di un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Tuttavia, se l'effetto della trasformazione non ha alcun impatto sulla posizione di altri elementi, è consigliabile usare un <xref:System.Windows.UIElement.RenderTransform%2A> , invece, poiché <xref:System.Windows.UIElement.RenderTransform%2A> non richiama il sistema di layout. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> Applica la trasformazione e forza un aggiornamento ricorsivo del layout per tenere conto per la nuova posizione dell'elemento interessato.  
   
--   Evitare le chiamate a <xref:System.Windows.UIElement.UpdateLayout%2A>.  
+- Evitare le chiamate a <xref:System.Windows.UIElement.UpdateLayout%2A>.  
   
      Il <xref:System.Windows.UIElement.UpdateLayout%2A> metodo forza un aggiornamento ricorsivo del layout e spesso non è necessario. Se non si ha la certezza della necessità di un aggiornamento completo, lasciare che sia il sistema di layout a chiamare automaticamente questo metodo.  
   
--   Quando si lavora con una grande <xref:System.Windows.Controls.Panel.Children%2A> raccolta, è consigliabile usare una <xref:System.Windows.Controls.VirtualizingStackPanel> anziché una normale <xref:System.Windows.Controls.StackPanel>.  
+- Quando si lavora con una grande <xref:System.Windows.Controls.Panel.Children%2A> raccolta, è consigliabile usare una <xref:System.Windows.Controls.VirtualizingStackPanel> anziché una normale <xref:System.Windows.Controls.StackPanel>.  
   
      Per la raccolta figlio, il <xref:System.Windows.Controls.VirtualizingStackPanel> mantiene solo gli oggetti in memoria che si trovano attualmente nel ViewPort dell'elemento padre. Come conseguenza, le prestazioni risultano notevolmente migliorate nella maggior parte degli scenari.  
   
@@ -154,4 +154,4 @@ Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](.
 - <xref:System.Windows.UIElement>
 - [Cenni preliminari sugli elementi Panel](../controls/panels-overview.md)
 - [Panoramica su allineamento, margini e spaziatura interna](alignment-margins-and-padding-overview.md)
-- [Layout e progettazione](optimizing-performance-layout-and-design.md)
+- [Ottimizzazione delle prestazioni: layout e progettazione](optimizing-performance-layout-and-design.md)

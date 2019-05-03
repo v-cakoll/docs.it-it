@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_DelimiterNothing
 ms.assetid: 8885fcd1-c201-409d-9a32-6ff2b13c0c13
 ms.openlocfilehash: ff21545bfe12fb8f6eccd50fd00c138bbab92b97
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58032103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940712"
 ---
 # <a name="a-delimiter-cannot-be-nothing-or-an-empty-string"></a>Un delimitatore non può essere Nothing o una stringa vuota
 `TextFieldParser` non riesce a leggere i contenuti dal file perché la proprietà `Delimiters` è impostata su `Nothing` o corrisponde a un oggetto `String` vuoto ("").  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Specificare un valore valido per `Delimiters`.  
+- Specificare un valore valido per `Delimiters`.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
 ms.openlocfilehash: ac2f89619c3e87ebfe5e568bbf27274834b0866d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59325020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012451"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Procedura: Eseguire routine a intervalli definiti con il componente Timer di Windows Forms
 A volte può essere necessario creare una routine che venga eseguita a intervalli di tempo specificati fino alla conclusione di un ciclo oppure al termine di un intervallo di tempo predefinito. Il componente <xref:System.Windows.Forms.Timer> rende possibile una procedura di questo tipo.  
@@ -246,4 +246,4 @@ private:
 
 - <xref:System.Windows.Forms.Timer>
 - [Componente Timer](timer-component-windows-forms.md)
-- [Panoramica del componente Timer](timer-component-overview-windows-forms.md)
+- [Panoramica sul componente Timer](timer-component-overview-windows-forms.md)

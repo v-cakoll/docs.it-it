@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 ms.openlocfilehash: 1d4964cf0379b35c4955bf45d8a7c0fd40477c9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787673"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Procedura: Creare un servizio token di sicurezza
 Un servizio token di sicurezza implementa il protocollo definito nella specifica WS-Trust. Questo protocollo definisce i formati e i modelli di scambio dei messaggi per il rilascio, il rinnovo, l'annullamento e la convalida di token di sicurezza. Un determinato servizio token di sicurezza fornisce una o più di queste funzionalità. In questo argomento viene descritto lo scenario più comune: l'implementazione del rilascio di token.  
@@ -24,61 +24,61 @@ Un servizio token di sicurezza implementa il protocollo definito nella specifica
 ### <a name="request-message-structure"></a>Struttura del messaggio di richiesta  
  In genere la struttura del messaggio di richiesta consiste negli elementi seguenti:  
   
--   Una richiesta di digitare l'URI con un valore di `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
+- Una richiesta di digitare l'URI con un valore di `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
   
--   Un URI di tipo token. Per i token Security Assertions Markup Language (SAML) 1.1, il valore di questo URI è `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
+- Un URI di tipo token. Per i token Security Assertions Markup Language (SAML) 1.1, il valore di questo URI è `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
   
--   Un valore della dimensione della chiave che indica il numero di bit nella chiave da associare al token rilasciato.  
+- Un valore della dimensione della chiave che indica il numero di bit nella chiave da associare al token rilasciato.  
   
--   Un URI di tipo chiave. Per le chiavi simmetriche, il valore di questo URI è `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
+- Un URI di tipo chiave. Per le chiavi simmetriche, il valore di questo URI è `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
   
  Potrebbero inoltre essere presenti altri elementi:  
   
--   Materiale della chiave fornito dal client.  
+- Materiale della chiave fornito dal client.  
   
--   Informazioni di ambito che indicano il servizio di destinazione con il quale verrà utilizzato il token rilasciato.  
+- Informazioni di ambito che indicano il servizio di destinazione con il quale verrà utilizzato il token rilasciato.  
   
  Il servizio token di sicurezza utilizza le informazioni contenute nel messaggio di richiesta di rilascio quando costruisce il messaggio di risposta del rilascio.  
   
 ## <a name="response-message-structure"></a>Struttura del messaggio di risposta  
  In genere la struttura del messaggio di risposta consiste negli elementi seguenti:  
   
--   Token di sicurezza rilasciato, ad esempio un'asserzione SAML 1.1.  
+- Token di sicurezza rilasciato, ad esempio un'asserzione SAML 1.1.  
   
--   Token di prova associato al token di sicurezza. Per le chiavi simmetriche spesso si tratta della forma crittografata del materiale della chiave.  
+- Token di prova associato al token di sicurezza. Per le chiavi simmetriche spesso si tratta della forma crittografata del materiale della chiave.  
   
--   Riferimenti al token di sicurezza rilasciato. In genere, il servizio token di sicurezza restituisce un riferimento che può essere utilizzato quando il token rilasciato ricorre in un messaggio successivo inviato dal client e un altro riferimento che può essere utilizzato quando il token non è presente nei messaggi successivi.  
+- Riferimenti al token di sicurezza rilasciato. In genere, il servizio token di sicurezza restituisce un riferimento che può essere utilizzato quando il token rilasciato ricorre in un messaggio successivo inviato dal client e un altro riferimento che può essere utilizzato quando il token non è presente nei messaggi successivi.  
   
  Potrebbero inoltre essere presenti altri elementi:  
   
--   Materiale della chiave fornito dal servizio token di sicurezza.  
+- Materiale della chiave fornito dal servizio token di sicurezza.  
   
--   Algoritmo necessario per calcolare la chiave condivisa.  
+- Algoritmo necessario per calcolare la chiave condivisa.  
   
--   Informazioni sulla durata per il token rilasciato.  
+- Informazioni sulla durata per il token rilasciato.  
   
 ## <a name="processing-request-messages"></a>Elaborazione dei messaggi di richiesta  
  Il servizio token di sicurezza elabora la richiesta di rilascio esaminando i vari elementi del messaggio di richiesta e valutando la possibilità di rilasciare un token che soddisfi la richiesta. Il servizio token di sicurezza deve determinare quanto segue prima di costruire il token da rilasciare:  
   
--   La richiesta riguarda effettivamente il rilascio di un token.  
+- La richiesta riguarda effettivamente il rilascio di un token.  
   
--   Il servizio token di sicurezza supporta il tipo di token richiesto.  
+- Il servizio token di sicurezza supporta il tipo di token richiesto.  
   
--   Il richiedente è autorizzato a eseguire la richiesta.  
+- Il richiedente è autorizzato a eseguire la richiesta.  
   
--   Il servizio token di sicurezza può soddisfare le aspettative del richiedente in merito al materiale della chiave.  
+- Il servizio token di sicurezza può soddisfare le aspettative del richiedente in merito al materiale della chiave.  
   
  Due punti fondamentali nella costruzione di un token consistono nello stabilire la chiave con la quale firmare il token e la chiave con la quale crittografare la chiave condivisa. È necessario che il token venga firmato affinché, quando il client presenta il token al servizio di destinazione, quest'ultimo sia in grado di appurare che il token è stato rilasciato da un servizio token di sicurezza affidabile. Il materiale della chiave deve essere crittografato in modo tale da consentire al servizio di destinazione di decrittografarlo.  
   
  La firma di un'asserzione SAML implica la creazione di un'istanza <xref:System.IdentityModel.Tokens.SigningCredentials>. Il costruttore di questa classe accetta quanto segue:  
   
--   Un elemento <xref:System.IdentityModel.Tokens.SecurityKey> che la chiave utilizza per firmare l'asserzione SAML.  
+- Un elemento <xref:System.IdentityModel.Tokens.SecurityKey> che la chiave utilizza per firmare l'asserzione SAML.  
   
--   Una stringa che identifica l'algoritmo della firma da utilizzare.  
+- Una stringa che identifica l'algoritmo della firma da utilizzare.  
   
--   Una stringa che identifica l'algoritmo di digest da utilizzare.  
+- Una stringa che identifica l'algoritmo di digest da utilizzare.  
   
--   Facoltativamente un elemento <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> che identifica la chiave da utilizzare per firmare l'asserzione.  
+- Facoltativamente un elemento <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> che identifica la chiave da utilizzare per firmare l'asserzione.  
   
  [!code-csharp[c_CreateSTS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#1)]
  [!code-vb[c_CreateSTS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#1)]  

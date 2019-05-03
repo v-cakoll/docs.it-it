@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bde7ebcc73c5e9e2d87074b78d78bb63cd441ad
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 599432af178031a85dea4155a8fd2923f879a600
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583641"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427357"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Procedura: Scrivere un ciclo Parallel.ForEach semplice
 
@@ -51,7 +51,7 @@ In Visual Studio esistono modelli di applicazione console Visual Basic e C# per 
 
 Dalla riga di comando è possibile usare .NET Core e gli strumenti CLI corrispondenti (ad esempio `dotnet new console` o `dotnet new console -lang vb`) oppure creare il file e usare il compilatore della riga di comando per un'applicazione .NET Framework.
 
-Per un progetto .NET Core è necessario fare riferimento al pacchetto NuGet **System.Drawing.Common**. In Visual Studio usare Gestione pacchetti NuGet per installare il pacchetto. In alternativa è possibile aggiungere un riferimento al pacchetto nel file con estensione *.* csproj* o *.* vbproj*:
+Per un progetto .NET Core è necessario fare riferimento al pacchetto NuGet **System.Drawing.Common**. In Visual Studio usare Gestione pacchetti NuGet per installare il pacchetto. In alternativa, è possibile aggiungere un riferimento al pacchetto nel file con estensione \*.csproj o \*.vbproj:
  
 ```xml
 <ItemGroup>

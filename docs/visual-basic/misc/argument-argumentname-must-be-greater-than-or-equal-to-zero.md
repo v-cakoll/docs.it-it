@@ -5,11 +5,11 @@ f1_keywords:
 - vbrFinancial_ArgGEZero1
 ms.assetid: 7b901c2a-3447-4afc-91f8-8fa5f6f961d7
 ms.openlocfilehash: 25872e8cd2ca18d12a6d2f07a9a97c0d2bcb4f7e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024599"
 ---
 # <a name="argument-argumentname-must-be-greater-than-or-equal-to-zero"></a>Argomento '\<NomeArgomento >' deve essere maggiore o uguale a zero
 Un argomento non è valido perché è minore di zero.  

@@ -3,11 +3,11 @@ title: Processo di assunzione
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005056"
 ---
 # <a name="hiring-process"></a>Processo di assunzione
 In questo esempio viene illustrato come implementare un processo aziendale tramite attività di messaggistica e due flussi di lavoro ospitati come servizi flusso di lavoro e appartenenti all'infrastruttura IT di una società fittizia denominata Contoso, Inc.  
@@ -18,35 +18,35 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
  In questo esempio vengono illustrate le funzionalità [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] seguenti:  
   
--   <xref:System.Activities.Statements.Flowchart> e <xref:System.Activities.Statements.Sequence> flussi di lavoro per modellare processi aziendali.  
+- Flussi di lavoro <xref:System.Activities.Statements.Flowchart> e <xref:System.Activities.Statements.Sequence> per modellare processi aziendali  
   
--   Servizi flusso di lavoro  
+- Servizi flusso di lavoro  
   
--   Attività di messaggistica  
+- Attività di messaggistica  
   
--   Correlazione basata sul contenuto  
+- Correlazione basata sul contenuto  
   
--   Attività personalizzate (dichiarative e basate sul codice)  
+- Attività personalizzate (dichiarative e basate sul codice)  
   
--   Persistenza di SQL Server fornita dal sistema  
+- Persistenza di SQL Server fornita dal sistema  
   
--   Oggetto <xref:System.Activities.Persistence.PersistenceParticipant> personalizzato  
+- Oggetto <xref:System.Activities.Persistence.PersistenceParticipant> personalizzato  
   
--   Rilevamento personalizzato  
+- Rilevamento personalizzato  
   
--   Rilevamento ETW (Event Tracking for Windows)  
+- Rilevamento ETW (Event Tracking for Windows)  
   
--   Composizione di attività  
+- Composizione di attività  
   
--   <xref:System.Activities.Statements.Parallel> attività.  
+- Attività <xref:System.Activities.Statements.Parallel>  
   
--   <xref:System.Activities.Statements.CancellationScope> attività.  
+- Attività <xref:System.Activities.Statements.CancellationScope>  
   
--   Timer durevoli (attività <xref:System.Activities.Statements.Delay>)  
+- Timer durevoli (attività <xref:System.Activities.Statements.Delay>)  
   
--   Transazioni  
+- Transazioni  
   
--   Uso di più di un flusso di lavoro nella stessa soluzione  
+- Uso di più di un flusso di lavoro nella stessa soluzione  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
@@ -64,25 +64,25 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
 2. Il responsabile del richiedente deve approvare la richiesta:  
   
-    1.  Il responsabile può rifiutare la richiesta.  
+    1. Il responsabile può rifiutare la richiesta.  
   
-    2.  Il responsabile può restituire la richiesta al richiedente per ottenere informazioni aggiuntive.  
+    2. Il responsabile può restituire la richiesta al richiedente per ottenere informazioni aggiuntive.  
   
-        1.  Il richiedente rivede la richiesta e la invia nuovamente al responsabile.  
+        1. Il richiedente rivede la richiesta e la invia nuovamente al responsabile.  
   
-    3.  Il responsabile può approvare la richiesta.  
+    3. Il responsabile può approvare la richiesta.  
   
 3. Dopo che il responsabile del richiedente ha concesso l'approvazione, la richiesta deve essere approvata dal responsabile del reparto:  
   
-    1.  Il responsabile del reparto può rifiutare la richiesta.  
+    1. Il responsabile del reparto può rifiutare la richiesta.  
   
-    2.  Il responsabile del reparto può approvare la richiesta.  
+    2. Il responsabile del reparto può approvare la richiesta.  
   
 4. Dopo che il responsabile del reparto ha concesso l'approvazione, è necessaria l'approvazione di 2 responsabili delle risorse umane o del CEO.  
   
-    1.  Il processo può passare allo stato accettato o rifiutato.  
+    1. Il processo può passare allo stato accettato o rifiutato.  
   
-    2.  Se il processo viene accettato, verrà avviata una nuova istanza del flusso di lavoro `ResumeRequest` (`ResumeRequest` è collegato a HiringRequest.csproj tramite un riferimento al servizio.)  
+    2. Se il processo viene accettato, verrà avviata una nuova istanza del flusso di lavoro `ResumeRequest` (`ResumeRequest` è collegato a HiringRequest.csproj tramite un riferimento al servizio.)  
   
  Dopo che i responsabili hanno approvato l'assunzione di un nuovo dipendente, il reparto risorse umane deve individuare il candidato adatto. Questo processo viene eseguito dal secondo flusso di lavoro (`ResumeRequest`, definito in ResumeRequestService.csproj). Tale flusso di lavoro definisce il processo per l'invio di un elenco di offerte di lavoro con un'opportunità di carriera al sito Web esterno delle carriere di Contoso, riceve i curriculum dei candidati ed esamina lo stato dell'elenco. Le posizioni sono disponibili per un periodo fisso di tempo, ovvero fino a una scadenza predeterminata, o fino a quando un dipendente di Contoso non decide di rimuoverle. Il flusso di lavoro `ResumeRequest` è costituito dai passaggi seguenti.  
   
@@ -121,10 +121,10 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
 |Composizione di attività|La definizione del processo usa la composizione libera di <xref:System.Activities.Activity>. Il diagramma di flusso contiene diverse attività Sequence e Parallel che a loro volta ne contengono altre e così via.|HiringRequestService|  
 |Attività parallele|-   <xref:System.Activities.Statements.ParallelForEach%601> Consente di registrare nella posta in arrivo del CEO e dei responsabili delle risorse Umane in parallelo (in attesa di passaggio di approvazione dei responsabili delle risorse Umane due).<br />-   <xref:System.Activities.Statements.Parallel> Consente di eseguire alcune attività di pulizia nei passaggi di completamento e rifiuto.|HiringRequestService|  
 |Annullamento del modello|Nel diagramma di flusso viene usato <xref:System.Activities.Statements.CancellationScope> per applicare l'annullamento (in questo caso eseguendo attività di pulizia).|HiringRequestService|  
-|Partecipante di persistenza personalizzato|`HiringRequestPersistenceParticipant` Salva i dati da una variabile del flusso di lavoro in una tabella archiviata nel database delle risorse Umane di Contoso.|HiringRequestService|  
+|Partecipante di persistenza personalizzato|`HiringRequestPersistenceParticipant` salva i dati da una variabile del flusso di lavoro in una tabella archiviata nel database delle risorse umane di Contoso.|HiringRequestService|  
 |Servizi flusso di lavoro|`ResumeRequestService` viene implementato usando servizi flusso di lavoro. La definizione del flusso di lavoro e le informazioni sul servizio sono contenute nel file ResumeRequestService.xamlx. Il servizio è configurato per usare la persistenza e il rilevamento.|ResumeRequestService|  
-|Timer durevoli|`ResumeRequestService` vengono usati timer durevoli per definire la durata di un processo di registrazione (dopo un periodo di timeout scade, le offerte vengono chiuse).|ResumeRequestService|  
-|Transazioni|<xref:System.Activities.Statements.TransactionScope> viene usato per garantire la coerenza dei dati all'interno dell'esecuzione di diverse attività (quando viene ricevuto un nuovo curriculum).|ResumeRequestService|  
+|Timer durevoli|In `ResumeRequestService` vengono usati timer durevoli per definire la durata di un elenco di offerte di lavoro (quando un timeout scade, le offerte vengono chiuse).|ResumeRequestService|  
+|Transazioni|<xref:System.Activities.Statements.TransactionScope> viene usato per garantire la coerenza dei dati durante l'esecuzione di diverse attività (quando viene ricevuto un nuovo curriculum).|ResumeRequestService|  
 |Transazioni|Il partecipante di persistenza (`HiringRequestPersistenceParticipant`) e il partecipante del rilevamento personalizzati (`HistoryFileTrackingParticipant`) usano la stessa transazione.|HiringRequestService|  
 |Uso di [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in applicazioni [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].|L'accesso ai flussi di lavoro viene eseguito da due applicazioni [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].|InternalClient / CareersWebSite|  
   
@@ -215,19 +215,19 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
 2. Se non è possibile compilare la soluzione, verificare l'elemento seguente:  
   
-    -   Il riferimento al `ContosoHR` non deve mancare il `InternalClient` o `CareersWebSite` progetti.  
+    - Il riferimento al `ContosoHR` non deve mancare il `InternalClient` o `CareersWebSite` progetti.  
   
 3. Se non è possibile eseguire la soluzione, verificare gli elementi seguenti:  
   
-    1.  Tutti i servizi sono in esecuzione.  
+    1. Tutti i servizi sono in esecuzione.  
   
-    2.  I riferimenti al servizio sono aggiornati.  
+    2. I riferimenti al servizio sono aggiornati.  
   
-        1.  Aprire la cartella App_WebReferences.  
+        1. Aprire la cartella App_WebReferences.  
   
-        2.  Fare doppio clic su **Contoso** e selezionare **Aggiorna riferimenti Web/servizio**.  
+        2. Fare doppio clic su **Contoso** e selezionare **Aggiorna riferimenti Web/servizio**.  
   
-        3.  Ricompilare la soluzione premendo CTRL + MAIUSC + B in Visual Studio.  
+        3. Ricompilare la soluzione premendo CTRL + MAIUSC + B in Visual Studio.  
   
 ## <a name="uninstalling"></a>Disinstallazione  
   

@@ -1,5 +1,5 @@
 ---
-title: <performanceCounter> (Impostazioni di rete)
+title: Elemento <performanceCounter> (impostazioni di rete)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
 ms.openlocfilehash: 30c5cd07c92a8fc3c340cab0ff9ae74e940c0c12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705239"
 ---
 # <a name="performancecounter-element-network-settings"></a>\<performanceCounter > (impostazioni di rete)
 Abilita o disabilita i contatori delle prestazioni di rete.  
@@ -47,7 +47,7 @@ Abilita o disabilita i contatori delle prestazioni di rete.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[impostazioni](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Note  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
@@ -78,4 +78,4 @@ Abilita o disabilita i contatori delle prestazioni di rete.
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
 - [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [Contatori di prestazioni per la comunicazione di rete](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)
+- [I contatori delle prestazioni di rete](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

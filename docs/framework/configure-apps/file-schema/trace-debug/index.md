@@ -12,11 +12,11 @@ helpviewer_keywords:
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
 ms.openlocfilehash: 79054ba450dcab1a18562aaadd71b9171896c1e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701398"
 ---
 # <a name="trace-and-debug-settings-schema"></a>Schema delle impostazioni di traccia e debug
 Le impostazioni di traccia e debug specificano i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.  
@@ -42,7 +42,7 @@ Le impostazioni di traccia e debug specificano i listener di traccia per raccogl
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Rimuove un listener dalla raccolta `Listeners` per un'origine di traccia.|  
 |[\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di traccia.|  
 |[\<sources>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|Contiene le origini di traccia che avviano i messaggi di traccia.|  
-|[\<origine >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Specifica un'origine di traccia che avvia i messaggi di traccia.|  
+|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Specifica un'origine di traccia che avvia i messaggi di traccia.|  
 |[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|Contiene le opzioni di traccia e il livello in cui vengono impostate le opzioni di traccia.|  
 |[\<system.diagnostics>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
 |[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.|  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
 ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006398"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Specifica e gestione di errori in contratti e servizi
 Le applicazioni Windows Communication Foundation (WCF) gestire situazioni di errore eseguendo il mapping di oggetti eccezione gestiti a oggetti errore SOAP e oggetti errore SOAP a oggetti eccezione gestiti. Negli argomenti di questa sezione viene illustrato come progettare contratti per esporre condizioni di errore come errori SOAP personalizzati, come restituire tali errori come parte dell'implementazione del servizio e come tali errori vengono rilevati dai client.  
@@ -25,9 +25,9 @@ Le applicazioni Windows Communication Foundation (WCF) gestire situazioni di err
   
  In genere, i servizi (e i client duplex) prevedono i passaggi seguenti per integrare correttamente la gestione degli errori nelle applicazioni:  
   
--   Eseguire il mapping delle condizioni di eccezione a errori SOAP personalizzati.  
+- Eseguire il mapping delle condizioni di eccezione a errori SOAP personalizzati.  
   
--   I client e i servizi inviano e ricevono errori SOAP come eccezioni.  
+- I client e i servizi inviano e ricevono errori SOAP come eccezioni.  
   
  Inoltre, client e servizi WCF possono utilizzare errori soap non dichiarati a scopo di debug e possono estendere il comportamento predefinito degli errori. Nelle sezioni seguenti vengono esaminati questi concetti e attività.  
   

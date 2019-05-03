@@ -3,11 +3,11 @@ title: Esempio di base
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
 ms.openlocfilehash: 1ceee6dd11b59ab9b43797ca8b1fd80c232fc8ea
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002638"
 ---
 # <a name="basic-sample"></a>Esempio di base
 In questo esempio viene illustrato come rendere individuabile un servizio e come cercare e chiamare un servizio individuabile. Questo esempio è costituito da due progetti, ovvero il servizio e il client.

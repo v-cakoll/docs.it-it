@@ -13,11 +13,11 @@ ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bfa11083fad7a3ccc6a208f5f0e4b68e9e1bc18c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000428"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Configurazione di un ambiente di profilatura
 > [!NOTE]
@@ -25,9 +25,9 @@ ms.locfileid: "59098182"
   
  Quando viene avviato un processo gestito (applicazione o servizio), viene caricato Common Language Runtime (CLR). Quando CLR viene inizializzato, valuta le due variabili di ambiente seguenti per decidere se è necessario connettere il processo a un profiler:  
   
--   COR_ENABLE_PROFILING: CLR si connette a un profiler solo se questa variabile di ambiente esiste ed è impostata su 1.  
+- COR_ENABLE_PROFILING: CLR si connette a un profiler solo se questa variabile di ambiente esiste ed è impostata su 1.  
   
--   COR_PROFILER: Se passa il controllo di COR_ENABLE_PROFILING, CLR si connette al profiler che con questo CLSID o ProgID, che deve essere stato archiviato in precedenza nel Registro di sistema. La variabile di ambiente COR_PROFILER viene definita come stringa, come mostrato nei due esempi seguenti.  
+- COR_PROFILER: Se passa il controllo di COR_ENABLE_PROFILING, CLR si connette al profiler che con questo CLSID o ProgID, che deve essere stato archiviato in precedenza nel Registro di sistema. La variabile di ambiente COR_PROFILER viene definita come stringa, come mostrato nei due esempi seguenti.  
   
     ```  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
@@ -45,23 +45,23 @@ ms.locfileid: "59098182"
 ## <a name="environment-variable-scope"></a>Ambito della variabile di ambiente  
  La modalità di impostazione delle variabili di ambiente COR_ENABLE_PROFILING e COR_PROFILER ne determina l'ambito di influenza. È possibile impostare queste variabili in uno dei modi seguenti:  
   
--   Se si impostano le variabili un' [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) chiamata, verranno applicate solo all'applicazione in esecuzione al momento. Si applicheranno anche ad altre applicazioni avviate dall'applicazione che eredita l'ambiente.  
+- Se si impostano le variabili un' [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) chiamata, verranno applicate solo all'applicazione in esecuzione al momento. Si applicheranno anche ad altre applicazioni avviate dall'applicazione che eredita l'ambiente.  
   
--   Se si impostano le variabili in una finestra del prompt dei comandi, verranno applicate a tutte le applicazioni avviate da questa finestra.  
+- Se si impostano le variabili in una finestra del prompt dei comandi, verranno applicate a tutte le applicazioni avviate da questa finestra.  
   
--   Se le variabili vengono impostate a livello di utente, verranno applicate a tutte le applicazioni avviate con Esplora file. Una finestra del prompt dei comandi aperta dopo aver impostato le variabili avrà queste impostazioni di ambiente, così come tutte le applicazioni avviate da tale finestra. Per impostare le variabili di ambiente a livello di utente, fare doppio clic su **risorse del Computer**, fare clic su **delle proprietà**, fare clic sui **avanzate** scheda, fare clic su **ambiente Le variabili**e aggiungere le variabili per il **variabili utente** elenco.  
+- Se le variabili vengono impostate a livello di utente, verranno applicate a tutte le applicazioni avviate con Esplora file. Una finestra del prompt dei comandi aperta dopo aver impostato le variabili avrà queste impostazioni di ambiente, così come tutte le applicazioni avviate da tale finestra. Per impostare le variabili di ambiente a livello di utente, fare doppio clic su **risorse del Computer**, fare clic su **delle proprietà**, fare clic sui **avanzate** scheda, fare clic su **ambiente Le variabili**e aggiungere le variabili per il **variabili utente** elenco.  
   
--   Se si impostano le variabili a livello di computer, verranno applicate a tutte le applicazioni avviate su tale computer. Una finestra del prompt dei comandi aperta nel computer avrà le impostazioni di ambiente specificate, così come tutte le applicazioni avviate da tale finestra. Ciò significa che ogni processo gestito nel computer verrà avviato con il profiler. Per impostare le variabili di ambiente a livello di computer, fare doppio clic su **risorse del Computer**, fare clic su **delle proprietà**, fare clic sui **avanzate** scheda, fare clic su **ambiente Le variabili**, aggiungere le variabili per il **variabili di sistema** elenco e quindi riavviare il computer. Dopo il riavvio le variabili saranno disponibili in tutto il sistema.  
+- Se si impostano le variabili a livello di computer, verranno applicate a tutte le applicazioni avviate su tale computer. Una finestra del prompt dei comandi aperta nel computer avrà le impostazioni di ambiente specificate, così come tutte le applicazioni avviate da tale finestra. Ciò significa che ogni processo gestito nel computer verrà avviato con il profiler. Per impostare le variabili di ambiente a livello di computer, fare doppio clic su **risorse del Computer**, fare clic su **delle proprietà**, fare clic sui **avanzate** scheda, fare clic su **ambiente Le variabili**, aggiungere le variabili per il **variabili di sistema** elenco e quindi riavviare il computer. Dopo il riavvio le variabili saranno disponibili in tutto il sistema.  
   
  Se si esegue la profilatura di un servizio di Windows è necessario riavviare il computer dopo aver impostato le variabili di ambiente e registrare la DLL del profiler. Per altre informazioni su queste considerazioni, vedere la sezione [profilatura di un servizio Windows](#windows_service).  
   
 ## <a name="additional-considerations"></a>Considerazioni aggiuntive  
   
--   La classe del profiler implementa il [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) e [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) interfacce. In .NET Framework versione 2.0, un profiler deve implementare `ICorProfilerCallback2`. In caso contrario, `ICorProfilerCallback2` non verrà caricato.  
+- La classe del profiler implementa il [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) e [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) interfacce. In .NET Framework versione 2.0, un profiler deve implementare `ICorProfilerCallback2`. In caso contrario, `ICorProfilerCallback2` non verrà caricato.  
   
--   Un processo può essere profilato da un solo profiler in momento e in un ambiente specifici. È possibile registrare due profiler diversi in ambienti diversi, ma ognuno deve profilare processi separati. Il profiler deve essere implementato come file DLL del server COM in-process, mappato allo stesso spazio degli indirizzi del processo che si sta profilando. Ciò significa che il profiler viene eseguito in-process. .NET Framework non supporta altri tipi di server COM. Ad esempio, per monitorare le applicazioni da un computer remoto, il profiler deve implementare agenti di raccolta in ogni computer. Questi agenti raccolgono i risultati e li comunicano al computer di raccolta dati centrale.  
+- Un processo può essere profilato da un solo profiler in momento e in un ambiente specifici. È possibile registrare due profiler diversi in ambienti diversi, ma ognuno deve profilare processi separati. Il profiler deve essere implementato come file DLL del server COM in-process, mappato allo stesso spazio degli indirizzi del processo che si sta profilando. Ciò significa che il profiler viene eseguito in-process. .NET Framework non supporta altri tipi di server COM. Ad esempio, per monitorare le applicazioni da un computer remoto, il profiler deve implementare agenti di raccolta in ogni computer. Questi agenti raccolgono i risultati e li comunicano al computer di raccolta dati centrale.  
   
--   Poiché il profiler è un oggetto COM di cui viene creata un'istanza in-process, ogni applicazione profilata disporrà della propria copia del profiler. Pertanto, una singola istanza del profiler non deve gestire i dati da più applicazioni. Tuttavia, sarà necessario aggiungere una logica al codice di registrazione del profiler per impedire che il file di log sia sovrascritto da altre applicazioni profilate.  
+- Poiché il profiler è un oggetto COM di cui viene creata un'istanza in-process, ogni applicazione profilata disporrà della propria copia del profiler. Pertanto, una singola istanza del profiler non deve gestire i dati da più applicazioni. Tuttavia, sarà necessario aggiungere una logica al codice di registrazione del profiler per impedire che il file di log sia sovrascritto da altre applicazioni profilate.  
   
 ## <a name="initializing-the-profiler"></a>Inizializzazione del profiler  
  Quando vengono superati entrambi i controlli delle variabili di ambiente, CLR crea un'istanza del profiler in modo simile alla funzione COM `CoCreateInstance`. Il profiler non viene caricato tramite una chiamata diretta a `CoCreateInstance`. Di conseguenza si evita la chiamata a `CoInitialize`, che richiede l'impostazione del modello di threading. CLR chiama quindi il [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) metodo nel profiler. La firma di questo metodo è la seguente.  

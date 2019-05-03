@@ -11,11 +11,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
 ms.openlocfilehash: 8ea4c77056701b8f61c1ed5a53cf20d98ae913bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791950"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Matrici di parametri (Visual Basic)
 In genere, non è possibile chiamare una routine con più argomenti di dichiarazione di routine specifica. Quando è necessario un numero indefinito di argomenti, è possibile dichiarare un *matrice di parametri*, che consente a una routine accettare una matrice di valori per un parametro. Non è necessario conoscere il numero di elementi nella matrice del parametro quando si definisce la procedura. La dimensione della matrice viene determinata singolarmente per ogni chiamata alla procedura.  
@@ -23,22 +23,22 @@ In genere, non è possibile chiamare una routine con più argomenti di dichiaraz
 ## <a name="declaring-a-paramarray"></a>La dichiarazione di un parametro ParamArray  
  Si utilizza il [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) (parola chiave) per indicare una matrice di parametri nell'elenco dei parametri. È necessario attenersi alle regole che seguono:  
   
--   Una routine può definire solo una matrice di parametri e deve essere l'ultimo parametro nella definizione della procedura.  
+- Una routine può definire solo una matrice di parametri e deve essere l'ultimo parametro nella definizione della procedura.  
   
--   La matrice di parametri deve essere passata per valore. È buona norma includere in modo esplicito il [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) parola chiave nella definizione della procedura.  
+- La matrice di parametri deve essere passata per valore. È buona norma includere in modo esplicito il [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) parola chiave nella definizione della procedura.  
   
--   La matrice di parametri è automaticamente facoltativa. Il valore predefinito è una matrice unidimensionale vuota del tipo di elemento della matrice di parametri.  
+- La matrice di parametri è automaticamente facoltativa. Il valore predefinito è una matrice unidimensionale vuota del tipo di elemento della matrice di parametri.  
   
--   Tutti i parametri che precedono la matrice di parametri devono essere obbligatori. La matrice di parametri deve essere l'unico parametro facoltativo.  
+- Tutti i parametri che precedono la matrice di parametri devono essere obbligatori. La matrice di parametri deve essere l'unico parametro facoltativo.  
   
 ## <a name="calling-a-paramarray"></a>La chiamata a un parametro ParamArray  
  Quando si chiama una routine che definisce una matrice di parametri, è possibile fornire l'argomento in uno dei modi seguenti:  
   
--   Nothing, vale a dire, è possibile omettere il [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argomento. In questo caso, una matrice vuota viene passata alla routine. È anche possibile passare il [Nothing](../../../../visual-basic/language-reference/nothing.md) (parola chiave), con lo stesso effetto.  
+- Nothing, vale a dire, è possibile omettere il [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argomento. In questo caso, una matrice vuota viene passata alla routine. È anche possibile passare il [Nothing](../../../../visual-basic/language-reference/nothing.md) (parola chiave), con lo stesso effetto.  
   
--   Elenco di un numero arbitrario di argomenti, separati da virgole. Il tipo di dati di ogni argomento deve essere convertibile in modo implicito per il `ParamArray` tipo di elemento.  
+- Elenco di un numero arbitrario di argomenti, separati da virgole. Il tipo di dati di ogni argomento deve essere convertibile in modo implicito per il `ParamArray` tipo di elemento.  
   
--   Una matrice con lo stesso tipo di elemento come tipo di elemento della matrice di parametri.  
+- Una matrice con lo stesso tipo di elemento come tipo di elemento della matrice di parametri.  
   
  In tutti i casi, il codice all'interno della routine considera la matrice di parametri come una matrice unidimensionale con gli elementi dello stesso tipo di dati come il `ParamArray` tipo di dati.  
   

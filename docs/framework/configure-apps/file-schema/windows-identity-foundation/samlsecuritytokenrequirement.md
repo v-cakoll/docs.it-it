@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 09202d12-88d3-49cc-953b-703bcc1690eb
 author: BrucePerlerMS
 ms.openlocfilehash: e1b8acd48ee185b3c6c50f70321bb9ca66e8e02b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793861"
 ---
 # <a name="samlsecuritytokenrequirement"></a>\<samlSecurityTokenRequirement>
 Fornisce la configurazione per il <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> (classe), il <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe o una classe derivata di una di queste classi. Rappresentato dal <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> classe.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
 ms.openlocfilehash: 9fa6e4114e9579079705700708840f2814b03b99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935499"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Specifica del comportamento in fase di esecuzione del servizio
 Dopo aver definito un contratto di servizio ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) e implementato tale contratto ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)), è possibile configurare il comportamento operativo del runtime del servizio. In questo argomento vengono illustrati i comportamenti dell'operazione e del servizio forniti dal sistema e viene descritto dove trovare ulteriori informazioni per creare nuovi comportamenti. Mentre alcuni comportamenti vengono applicati come attributi, molti vengono applicati utilizzando un file di configurazione dell'applicazione o a livello di codice. Per altre informazioni sulla configurazione dell'applicazione di servizio, vedere [configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md).  
@@ -27,25 +27,25 @@ Dopo aver definito un contratto di servizio ([Designing Service Contracts](../..
 ## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a>ServiceBehaviorAttribute e OperationBehaviorAttribute  
  I comportamenti più importanti sono gli attributi <xref:System.ServiceModel.ServiceBehaviorAttribute> e <xref:System.ServiceModel.OperationBehaviorAttribute> che è possibile utilizzare per controllare:  
   
--   Durate delle istanze  
+- Durate delle istanze  
   
--   Supporto di sincronizzazione e concorrenza  
+- Supporto di sincronizzazione e concorrenza  
   
--   Comportamento di configurazione  
+- Comportamento di configurazione  
   
--   Comportamento della transazione  
+- Comportamento della transazione  
   
--   Comportamento della serializzazione  
+- Comportamento della serializzazione  
   
--   Trasformazione dei metadati  
+- Trasformazione dei metadati  
   
--   Durata della sessione  
+- Durata della sessione  
   
--   Filtraggio dell'indirizzo ed elaborazione dell'intestazione  
+- Filtraggio dell'indirizzo ed elaborazione dell'intestazione  
   
--   Rappresentazione  
+- Rappresentazione  
   
--   Per utilizzare questi attributi, contrassegnare l'implementazione del servizio o dell'operazione con l'attributo appropriato per quell'ambito e impostare le proprietà. Nell'esempio di codice seguente, ad esempio, viene illustrata un'implementazione dell'operazione che utilizza la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A?displayProperty=nameWithType> per richiedere che i chiamanti di questa operazione supportino la rappresentazione.  
+- Per utilizzare questi attributi, contrassegnare l'implementazione del servizio o dell'operazione con l'attributo appropriato per quell'ambito e impostare le proprietà. Nell'esempio di codice seguente, ad esempio, viene illustrata un'implementazione dell'operazione che utilizza la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A?displayProperty=nameWithType> per richiedere che i chiamanti di questa operazione supportino la rappresentazione.  
   
  [!code-csharp[OperationBehaviorAttribute_Impersonation#1](../../../samples/snippets/csharp/VS_Snippets_CFX/operationbehaviorattribute_impersonation/cs/services.cs#1)]
  [!code-vb[OperationBehaviorAttribute_Impersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/operationbehaviorattribute_impersonation/vb/services.vb#1)]  
@@ -77,36 +77,36 @@ Dopo aver definito un contratto di servizio ([Designing Service Contracts](../..
 ### <a name="service-behaviors"></a>Comportamenti del servizio  
  I comportamenti seguenti operano sui servizi.  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Applicato a un servizio WCF per indicare se tale servizio può essere eseguito in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] modalità di compatibilità.  
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Applicato a un servizio WCF per indicare se tale servizio può essere eseguito in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] modalità di compatibilità.  
   
--   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Controlla come il servizio autorizza le richieste del client.  
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Controlla come il servizio autorizza le richieste del client.  
   
--   <xref:System.ServiceModel.Description.ServiceCredentials>. Configura una credenziale del servizio. Utilizzare questa classe per specificare la credenziale per il servizio, ad esempio un certificato X.509.  
+- <xref:System.ServiceModel.Description.ServiceCredentials>. Configura una credenziale del servizio. Utilizzare questa classe per specificare la credenziale per il servizio, ad esempio un certificato X.509.  
   
--   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Abilita il debug e utili funzionalità di informazioni per un servizio WCF.  
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Abilita il debug e utili funzionalità di informazioni per un servizio WCF.  
   
--   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Controlla la pubblicazione dei metadati del servizio e delle informazioni associate.  
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Controlla la pubblicazione dei metadati del servizio e delle informazioni associate.  
   
--   <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>. Specifica il comportamento di controllo degli eventi di sicurezza.  
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>. Specifica il comportamento di controllo degli eventi di sicurezza.  
   
--   <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>. Configura le impostazioni di velocità runtime che consentono di ottimizzare le prestazioni del servizio.  
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>. Configura le impostazioni di velocità runtime che consentono di ottimizzare le prestazioni del servizio.  
   
 ### <a name="endpoint-behaviors"></a>Comportamenti dell'endpoint  
  I comportamenti seguenti operano sugli endpoint. Molti di questi comportamenti sono utilizzati in applicazioni client.  
   
--   <xref:System.ServiceModel.CallbackBehaviorAttribute>. Configura l'implementazione di un servizio di callback in un'applicazione client duplex.  
+- <xref:System.ServiceModel.CallbackBehaviorAttribute>. Configura l'implementazione di un servizio di callback in un'applicazione client duplex.  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior>. Abilita debug del servizio per un oggetto di callback WCF.  
+- <xref:System.ServiceModel.Description.CallbackDebugBehavior>. Abilita debug del servizio per un oggetto di callback WCF.  
   
--   <xref:System.ServiceModel.Description.ClientCredentials>. Consente all'utente di configurare le credenziali client e del servizio, nonché le impostazioni di autenticazione delle credenziali del servizio da utilizzare nel client.  
+- <xref:System.ServiceModel.Description.ClientCredentials>. Consente all'utente di configurare le credenziali client e del servizio, nonché le impostazioni di autenticazione delle credenziali del servizio da utilizzare nel client.  
   
--   <xref:System.ServiceModel.Description.ClientViaBehavior>. Utilizzato dai client per specificare l'URI (Uniform Resource Identifier) per il quale deve essere creato il canale di trasporto.  
+- <xref:System.ServiceModel.Description.ClientViaBehavior>. Utilizzato dai client per specificare l'URI (Uniform Resource Identifier) per il quale deve essere creato il canale di trasporto.  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Indica a WCF di disabilitare il `MustUnderstand` l'elaborazione.  
+- <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Indica a WCF di disabilitare il `MustUnderstand` l'elaborazione.  
   
--   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. Indica al runtime di utilizzare un processo di ricezione sincrono per i canali.  
+- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. Indica al runtime di utilizzare un processo di ricezione sincrono per i canali.  
   
--   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. Ottimizza le operazioni di ricezione per i trasporti che supportano ricezioni transazionali.  
+- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. Ottimizza le operazioni di ricezione per i trasporti che supportano ricezioni transazionali.  
   
 ### <a name="contract-behaviors"></a>Comportamenti del contratto  
  <xref:System.ServiceModel.DeliveryRequirementsAttribute>. Specifica i requisiti della funzionalità che le associazioni devono fornire all'implementazione del servizio o del client.  
@@ -114,13 +114,13 @@ Dopo aver definito un contratto di servizio ([Designing Service Contracts](../..
 ### <a name="operation-behaviors"></a>Comportamenti dell'operazione  
  I comportamenti dell'operazione seguenti specificano i controlli di serializzazione e di transazione per le operazioni.  
   
--   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Rappresenta il comportamento runtime di <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
+- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Rappresenta il comportamento runtime di <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
   
--   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. Controlla il comportamento runtime di `XmlSerializer` e lo associa a un'operazione.  
+- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. Controlla il comportamento runtime di `XmlSerializer` e lo associa a un'operazione.  
   
--   <xref:System.ServiceModel.TransactionFlowAttribute>. Specifica il livello al quale un'operazione del servizio accetta un'intestazione di transazione.  
+- <xref:System.ServiceModel.TransactionFlowAttribute>. Specifica il livello al quale un'operazione del servizio accetta un'intestazione di transazione.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md)
-- [Procedura: Controllare l'istanza del servizio](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [Procedura: Controllare le istanze del servizio](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

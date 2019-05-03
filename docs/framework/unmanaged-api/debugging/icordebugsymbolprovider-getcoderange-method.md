@@ -5,11 +5,11 @@ ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 52fd0e9dac1d255197909d153099d9c6f2bd8ff7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953296"
 ---
 # <a name="icordebugsymbolprovidergetcoderange-method"></a>Metodo ICorDebugSymbolProvider::GetCodeRange
 Ottiene l'indirizzo iniziale del metodo e la dimensione sulla base di un indirizzo RVA (Relative Virtual Address) in un metodo.  

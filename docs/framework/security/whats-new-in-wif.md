@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
 ms.openlocfilehash: 07e1aee85e22f6dd5257cdd49e8af99b423cb17f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645881"
 ---
 # <a name="whats-new-in-windows-identity-foundation-45"></a>Novità di Windows Identity Foundation 4.5
 La prima versione di Windows Identity Foundation (WIF) è stata rilasciata come download autonomo ed è nota come WIF 3.5 perché è stata introdotta nello stesso periodo di .NET 3.5 SP1. Con .NET 4.5 WIF è diventato parte di .NET Framework. La disponibilità delle classi WIF direttamente nel framework consente una maggiore integrazione dell'identità basata sulle attestazioni in .NET, semplificando l'uso delle attestazioni. Le applicazioni scritte per WIF 3.5 devono essere modificate per sfruttare il nuovo modello. Per informazioni, vedere [Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
@@ -23,29 +23,29 @@ La prima versione di Windows Identity Foundation (WIF) è stata rilasciata come 
   
 ## <a name="changes-to-the-wif-45-visual-studio-experience"></a>Modifiche all'esperienza di WIF 4.5 con Visual Studio  
   
--   Funzionalità **Aggiungi riferimento STS** Questa funzionalità di Visual Studio (utilità della riga di comando FedUtil) non è più disponibile. Al suo posto è possibile usare la nuova estensione di Visual Studio **Identity and Access Tool per Visual Studio 2012**. Ciò consente di attuare una federazione con un STS esistente o di utilizzare LocalSTS per eseguire i test delle soluzioni. Una volta installata l'estensione, è possibile fare clic con il pulsante destro del mouse sul progetto e cercare **Identity and Access** nel menu di scelta rapida.  
+- Funzionalità **Aggiungi riferimento STS** Questa funzionalità di Visual Studio (utilità della riga di comando FedUtil) non è più disponibile. Al suo posto è possibile usare la nuova estensione di Visual Studio **Identity and Access Tool per Visual Studio 2012**. Ciò consente di attuare una federazione con un STS esistente o di utilizzare LocalSTS per eseguire i test delle soluzioni. Una volta installata l'estensione, è possibile fare clic con il pulsante destro del mouse sul progetto e cercare **Identity and Access** nel menu di scelta rapida.  
   
--   I modelli ASP.NET e STS non sono più disponibili in quanto le attestazioni possono essere utilizzate direttamente nei modelli di progetto esistenti per ASP.NET, siti Web e WCF.  
+- I modelli ASP.NET e STS non sono più disponibili in quanto le attestazioni possono essere utilizzate direttamente nei modelli di progetto esistenti per ASP.NET, siti Web e WCF.  
   
--   I controlli nello spazio dei nomi `Microsoft.IdentityModel.Web.Controls` (`SignInControl`, `FederatedPassiveSignInControl` e `FederatedPassiveSignInStatus`) non sono disponibili in WIF 4.5.  
+- I controlli nello spazio dei nomi `Microsoft.IdentityModel.Web.Controls` (`SignInControl`, `FederatedPassiveSignInControl` e `FederatedPassiveSignInStatus`) non sono disponibili in WIF 4.5.  
   
 ## <a name="changes-to-the-wif-45-api"></a>Modifiche all'API di WIF 4.5  
   
--   In generale, le classi correlate alle attestazioni si trovano nello spazio dei nomi <xref:System.Security.Claims?displayProperty=nameWithType>, le classi correlate a WCF, ovvero i contratti di servizio, i canali, le factory canale e gli host servizio usati per scenari WS-Trust, si trovano in <xref:System.ServiceModel.Security?displayProperty=nameWithType>, tutte le altre classi WIF sono distribuite tra diversi spazi dei nomi [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004), inclusi, ad esempio, le classi che rappresentano artefatti WS-* e SAML, i gestori di token e le classi correlate, oltre che le classi usate negli scenari WS-Federation. Per informazioni, vedere [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md) e [WIF API Reference](../../../docs/framework/security/wif-api-reference.md) (Informazioni di riferimento sulle API WIF).  
+- In generale, le classi correlate alle attestazioni si trovano nello spazio dei nomi <xref:System.Security.Claims?displayProperty=nameWithType>, le classi correlate a WCF, ovvero i contratti di servizio, i canali, le factory canale e gli host servizio usati per scenari WS-Trust, si trovano in <xref:System.ServiceModel.Security?displayProperty=nameWithType>, tutte le altre classi WIF sono distribuite tra diversi spazi dei nomi [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004), inclusi, ad esempio, le classi che rappresentano artefatti WS-* e SAML, i gestori di token e le classi correlate, oltre che le classi usate negli scenari WS-Federation. Per informazioni, vedere [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md) e [WIF API Reference](../../../docs/framework/security/wif-api-reference.md) (Informazioni di riferimento sulle API WIF).  
   
--   La chiave del computer è stata abilitata per l'utilizzo nei cookie di sessione per gli scenari di web farm. Per altre informazioni, vedere [WIF e Web farm](../../../docs/framework/security/wif-and-web-farms.md).  
+- La chiave del computer è stata abilitata per l'utilizzo nei cookie di sessione per gli scenari di web farm. Per altre informazioni, vedere [WIF e Web farm](../../../docs/framework/security/wif-and-web-farms.md).  
   
--   È ora possibile configurare WIF in modo dichiarativo negli elementi [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) e [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md). Per altre informazioni sulla configurazione di WIF, vedere [Guida di riferimento per la configurazione di WIF](../../../docs/framework/security/wif-configuration-reference.md).  
+- È ora possibile configurare WIF in modo dichiarativo negli elementi [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) e [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md). Per altre informazioni sulla configurazione di WIF, vedere [Guida di riferimento per la configurazione di WIF](../../../docs/framework/security/wif-configuration-reference.md).  
   
 ## <a name="other-notable-net-changes-or-features-that-are-caused-by-the-integration-of-wif-into-net"></a>Altre modifiche o funzionalità significative di .NET determinate dall'integrazione di WIF in .NET  
   
--   In .NET Framework è stata integrata la possibilità di eseguire autorizzazioni basate su attestazioni (CBAC). È possibile configurare un oggetto <xref:System.Security.Claims.ClaimsAuthorizationManager> e utilizzare le classi <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> e <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> per eseguire controlli di accesso imperativi e dichiarativi nel codice. CBAC fornisce maggiore flessibilità e maggiore granularità rispetto ai tradizionali controlli dell'accesso basato su ruoli (RBAC). Consente inoltre una maggiore separazione dei criteri di autorizzazione dalla logica di business poiché la logica di business può basare il controllo dell'accesso su un'attestazione o su un set di attestazioni specifico e i criteri di autorizzazione per tali attestazioni possono essere configurati in modo dichiarativo nell'elemento [\<claimsAuthorizationManager>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md).  
+- In .NET Framework è stata integrata la possibilità di eseguire autorizzazioni basate su attestazioni (CBAC). È possibile configurare un oggetto <xref:System.Security.Claims.ClaimsAuthorizationManager> e utilizzare le classi <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> e <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> per eseguire controlli di accesso imperativi e dichiarativi nel codice. CBAC fornisce maggiore flessibilità e maggiore granularità rispetto ai tradizionali controlli dell'accesso basato su ruoli (RBAC). Consente inoltre una maggiore separazione dei criteri di autorizzazione dalla logica di business poiché la logica di business può basare il controllo dell'accesso su un'attestazione o su un set di attestazioni specifico e i criteri di autorizzazione per tali attestazioni possono essere configurati in modo dichiarativo nell'elemento [\<claimsAuthorizationManager>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md).  
   
 ## <a name="wcf-changes-as-a-result-of-wif-integration"></a>Modifiche a WCF come conseguenza dell'integrazione di WIF:  
   
--   Il modello di identità basato sulle attestazioni di WCF è stato sostituito da WIF. Ciò significa che le classi negli spazi dei nomi <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType> e <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> devono essere rilasciate a favore dell'utilizzo delle classi di WIF.  
+- Il modello di identità basato sulle attestazioni di WCF è stato sostituito da WIF. Ciò significa che le classi negli spazi dei nomi <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType> e <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> devono essere rilasciate a favore dell'utilizzo delle classi di WIF.  
   
--   WIF viene ora abilitato in un servizio WCF specificando l'attributo `useIdentityConfiguration` nell'elemento `<system.serviceModel>`/`<behaviors>`/`<serviceBehaviors>`/`<serviceCredentials>` come nel codice XML seguente:  
+- WIF viene ora abilitato in un servizio WCF specificando l'attributo `useIdentityConfiguration` nell'elemento `<system.serviceModel>`/`<behaviors>`/`<serviceBehaviors>`/`<serviceCredentials>` come nel codice XML seguente:  
   
     ```xml  
     <serviceCredentials useIdentityConfiguration="true">  
@@ -60,5 +60,5 @@ La prima versione di Windows Identity Foundation (WIF) è stata rilasciata come 
 
 - [Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
 - [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
-- [Riferimento per le API di WPF](../../../docs/framework/security/wif-api-reference.md)
+- [Riferimento per le API di WIF](../../../docs/framework/security/wif-api-reference.md)
 - [Guida di riferimento per la configurazione di WIF](../../../docs/framework/security/wif-configuration-reference.md)

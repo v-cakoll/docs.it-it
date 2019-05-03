@@ -17,11 +17,11 @@ helpviewer_keywords:
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
 ms.openlocfilehash: cf70a5cc426b6c6075d1deb11aa2685c39a065c0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640335"
 ---
 # <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Procedura: Aggiungere e rimuovere voci di menu con il componente ContextMenu di Windows Forms
 Viene illustrato come aggiungere e rimuovere voci di menu di scelta rapida in Windows Form.  
@@ -78,4 +78,4 @@ Viene illustrato come aggiungere e rimuovere voci di menu di scelta rapida in Wi
 
 - <xref:System.Windows.Forms.ContextMenu>
 - [Componente ContextMenu](contextmenu-component-windows-forms.md)
-- [Panoramica del componente ContextMenu](contextmenu-component-overview-windows-forms.md)
+- [Panoramica sul componente ContextMenu](contextmenu-component-overview-windows-forms.md)

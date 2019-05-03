@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8062ab151efc6175aa68cb0563cd2ad042ee9cd8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628016"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>Puntatore alla funzione FLockClrVersionCallback
 Punta a una funzione che il common language runtime (CLR) chiama per indicare che l'inizializzazione è avviato o completato.  

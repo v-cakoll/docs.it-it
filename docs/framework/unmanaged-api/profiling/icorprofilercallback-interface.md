@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e2f474317493b3aac421ca1270ff461b97cfe027
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598072"
 ---
 # <a name="icorprofilercallback-interface"></a>Interfaccia ICorProfilerCallback
 Fornisce metodi che vengono usati da common language runtime (CLR) per notificare un code profiler quando si verificano gli eventi a cui il profiler ha effettuato la sottoscrizione.  

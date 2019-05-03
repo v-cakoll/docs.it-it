@@ -3,11 +3,11 @@ title: Utilizzo del rilevamento per la risoluzione dei problemi relativi alle ap
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
 ms.openlocfilehash: 62c46ca36c89c023bfc775eb76ba454c9a4162c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004588"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Utilizzo del rilevamento per la risoluzione dei problemi relativi alle applicazioni
 Windows Workflow Foundation (WF) consente di rilevare informazioni correlate al flusso di lavoro per fornire dettagli nell'esecuzione di un servizio o applicazione Windows Workflow Foundation. Gli host di Windows Workflow Foundation sono in grado di acquisire gli eventi del flusso di lavoro durante l'esecuzione di un'istanza del flusso di lavoro. Se il flusso di lavoro genera errori o eccezioni, è possibile utilizzare Windows Workflow Foundation i dettagli di rilevamento per la risoluzione dei problemi relativa elaborazione.  

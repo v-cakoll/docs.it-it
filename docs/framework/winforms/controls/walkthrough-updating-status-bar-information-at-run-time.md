@@ -12,11 +12,11 @@ helpviewer_keywords:
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
 ms.openlocfilehash: 7beae9bb886c7c79d4d97375887bfecb0c2a40c1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792158"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>Procedura dettagliata: Aggiornamento delle informazioni sulla barra di stato in fase di esecuzione
 > [!IMPORTANT]
@@ -89,5 +89,5 @@ ms.locfileid: "59333314"
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [Procedura: Aggiungere pannelli a un controllo StatusBar](how-to-add-panels-to-a-statusbar-control.md)
-- [Procedura: Individuare il pannello selezionato nel controllo StatusBar di Windows Forms](determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [Panoramica del controllo StatusBar](statusbar-control-overview-windows-forms.md)
+- [Procedura: Individuare il pannello nel controllo StatusBar Windows Form è stato selezionato](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Cenni preliminari sul controllo StatusBar](statusbar-control-overview-windows-forms.md)

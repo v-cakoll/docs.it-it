@@ -5,11 +5,11 @@ f1_keywords:
 - vbrArgument_InvalidNullValue1
 ms.assetid: abbde904-c191-4911-8822-c9dd2f81d616
 ms.openlocfilehash: 2a0be0a10bc8b2a19c1c4b7ab3517ac6a32401e4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666053"
 ---
 # <a name="argument-argumentname-is-nothing"></a>Argomento '\<NomeArgomento >' è Nothing
 Un'espressione contiene un argomento Null.  

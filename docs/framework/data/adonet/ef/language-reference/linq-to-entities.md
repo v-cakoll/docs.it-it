@@ -3,11 +3,11 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760714"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che consente agli sviluppatori di scrivere query sul modello concettuale di Entity Framework usando Visual Basic o Visual C#. Le query su Entity Framework sono rappresentate da query ad albero dei comandi, eseguite sul contesto dell'oggetto. LINQ to Entities consente di convertire query LINQ (Language Integrated Query) in query ad albero dei comandi, eseguire le query su Entity Framework e restituire oggetti che possono essere usati sia da Entity Framework sia da LINQ. Di seguito viene descritto il processo di creazione ed esecuzione di una query LINQ to Entities:  
@@ -57,13 +57,13 @@ LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che conse
   
  I risultati della query vengono in genere restituiti come uno degli elementi seguenti:  
   
--   Raccolta di zero o più oggetti entità tipizzate o proiezione di tipi complessi definiti nel modello concettuale.  
+- Raccolta di zero o più oggetti entità tipizzate o proiezione di tipi complessi definiti nel modello concettuale.  
   
--   Tipi CLR supportati da [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
+- Tipi CLR supportati da [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
   
--   Raccolte inline.  
+- Raccolte inline.  
   
--   Tipi anonimi.  
+- Tipi anonimi.  
   
  Per altre informazioni, vedere [risultati della Query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md).  
   
@@ -78,7 +78,7 @@ LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che conse
   
  [Esecuzione di query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)  
   
- [Risultati delle query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)  
+ [Risultati query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)  
   
  [Operatori di query standard in query di LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)  
   
@@ -91,7 +91,7 @@ LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che conse
 ## <a name="see-also"></a>Vedere anche
 
 - [Problemi noti e considerazioni in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
-- [Language-Integrated Query (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
-- [Language-Integrated Query (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [LINQ (Language-Integrated Query) - C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ (Language-Integrated Query) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ e ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

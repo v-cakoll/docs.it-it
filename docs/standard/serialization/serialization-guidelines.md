@@ -9,11 +9,11 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: 05cbe8b18a0d9635091b373d0acddb2ba665cc37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59317337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794307"
 ---
 # <a name="serialization-guidelines"></a>Linee guida relative alla serializzazione
 In questo documento vengono elencate le linee guida da tenere presenti quando si progetta un'API da serializzare.  
@@ -32,22 +32,22 @@ In questo documento vengono elencate le linee guida da tenere presenti quando si
   
 ## <a name="guidelines"></a>Indicazioni  
   
--   Prendere in seria considerazione la serializzazione quando si progettano nuovi tipi.  
+- Prendere in seria considerazione la serializzazione quando si progettano nuovi tipi.  
   
      La serializzazione è un aspetto importante della progettazione per qualsiasi tipo poiché è possibile che i programmi debbano rendere persistenti o trasmettere istanze del tipo.  
   
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>Scelta della tecnologia di serializzazione corretta da supportare  
  Un tipo specifico può supportare nessuna, una o più tecnologie di serializzazione.  
   
--   Considerare il supporto della *serializzazione dei contratti di dati* se è necessario rendere persistenti o usare in servizi Web istanze del tipo.  
+- Considerare il supporto della *serializzazione dei contratti di dati* se è necessario rendere persistenti o usare in servizi Web istanze del tipo.  
   
--   Considerare il supporto della *serializzazione XML* al posto di o in aggiunta alla serializzazione del contratto dati se è necessario disporre di maggiore controllo sul formato XML creato quando il tipo viene serializzato.  
+- Considerare il supporto della *serializzazione XML* al posto di o in aggiunta alla serializzazione del contratto dati se è necessario disporre di maggiore controllo sul formato XML creato quando il tipo viene serializzato.  
   
      Questo aspetto può essere necessario in alcuni scenari di interoperabilità in cui è necessario utilizzare un costrutto XML non supportato dalla serializzazione dei contratti dati, ad esempio per creare attributi XML.  
   
--   Considerare il supporto della *serializzazione di runtime* se è necessario usare istanze del tipo all'esterno dei servizi remoti .NET.  
+- Considerare il supporto della *serializzazione di runtime* se è necessario usare istanze del tipo all'esterno dei servizi remoti .NET.  
   
--   Evitare il supporto della serializzazione runtime o XML per motivi di persistenza generale e dare la preferenza alla serializzazione dei contratti dati.  
+- Evitare il supporto della serializzazione runtime o XML per motivi di persistenza generale e dare la preferenza alla serializzazione dei contratti dati.  
   
 #### <a name="supporting-data-contract-serialization"></a>Supporto della serializzazione dei contratti di dati  
  Affinché i tipi supportino la serializzazione dei contratti dati, è necessario applicare <xref:System.Runtime.Serialization.DataContractAttribute> al tipo e <xref:System.Runtime.Serialization.DataMemberAttribute> ai membri (campi e proprietà) del tipo.  
@@ -140,9 +140,9 @@ In questo documento vengono elencate le linee guida da tenere presenti quando si
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso di contratti dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Serializzatore dei contratti dati](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [Tipi supportati dal serializzatore dei contratti dati](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Uso di contratti di dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Serializzatore dei contratti di dati](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
+- [Tipi supportati dal serializzatore dei contratti di dati](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [Serializzazione binaria](binary-serialization.md)
 - [Servizi remoti .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [Serializzazione SOAP e XML](xml-and-soap-serialization.md)

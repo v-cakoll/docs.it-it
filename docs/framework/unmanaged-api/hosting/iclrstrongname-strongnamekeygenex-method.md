@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f97e6f16029b9a273a68d52b830939819bfa5380
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993031"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>Metodo ICLRStrongName::StrongNameKeyGenEx
 Genera una nuova coppia di chiavi pubblica/privata con la dimensione della chiave specificata per l'uso di nome sicuro.  
@@ -46,9 +46,9 @@ HRESULT StrongNameKeyGenEx (
  `dwFlags`  
  [in] Un valore che specifica se lasciare la chiave di registrazione. Sono supportati i valori seguenti:  
   
--   0x00000000 - utilizzato quando `wszKeyContainer` è null per generare un nome di contenitore di chiavi temporanee.  
+- 0x00000000 - utilizzato quando `wszKeyContainer` è null per generare un nome di contenitore di chiavi temporanee.  
   
--   0x00000001 (`SN_LEAVE_KEY`): Specifica che la chiave deve essere registrata a sinistra.  
+- 0x00000001 (`SN_LEAVE_KEY`): Specifica che la chiave deve essere registrata a sinistra.  
   
  `dwKeySize`  
  [in] Dimensione richiesta della chiave, espressa in bit.  

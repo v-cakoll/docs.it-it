@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e3a4a2208f669dc4fc0589f08b32aeb2c5e4423
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c238f0aebd7c81443eb55fe0ee84844f0c9aee8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509310"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59207513"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerazioni sulla sicurezza in relazione alla reflection
 La reflection consente di ottenere informazioni su tipi e membri e di accedere ai membri, vale a dire chiamare metodi e costruttori, ottenere e impostare valori di proprietà, aggiungere e rimuovere gestori eventi e così via. L'uso della reflection per ottenere informazioni su tipi e membri non presenta limitazioni. L'intero codice può usare la reflection per eseguire le attività seguenti:  
@@ -105,6 +105,7 @@ La reflection consente di ottenere informazioni su tipi e membri e di accedere a
 -   A partire da [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], l'uso della reflection per ottenere informazioni su tipi e membri non pubblici non richiede alcuna autorizzazione. Nelle versioni precedenti è necessario usare <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
 ms.openlocfilehash: 04517e5089f55c2d2b08a492439026d33ed9069d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991069"
 ---
 # <a name="saml-tokens-and-claims"></a>Attestazioni e token SAML
 Security Assertions Markup Language (SAML) *token* sono rappresentazioni XML di attestazioni. Per impostazione predefinita, i token SAML Windows Communication Foundation (WCF) viene utilizzato in scenari di sicurezza federati sono *token emessi*.  
@@ -48,9 +48,9 @@ Security Assertions Markup Language (SAML) *token* sono rappresentazioni XML di 
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - [Federazione](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Procedura: Creare un client federato](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Procedura: Creare un Client federato](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Procedura: Configurare le credenziali in un servizio federativo](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Gestione di attestazioni e autorizzazioni con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Gestione delle attestazioni e dell'autorizzazione con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [Attestazioni e token](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
 - [Creazione di attestazioni e valori delle risorse](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
 - [Procedura: Creare un'attestazione personalizzata](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

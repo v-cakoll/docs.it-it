@@ -3,11 +3,11 @@ title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
 ms.openlocfilehash: 7b7526dbcbd1948d3d8a27d146efd0462fefaca5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788440"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
 Specifica le funzionalità di informazioni di debug e della Guida per un servizio Windows Communication Foundation (WCF).  
@@ -74,6 +74,6 @@ Specifica le funzionalità di informazioni di debug e della Guida per un servizi
 
 - <xref:System.ServiceModel.Configuration.ServiceDebugElement>
 - <xref:System.ServiceModel.Description.ServiceDebugBehavior>
-- [Specifica e gestione di errori in contratti e servizi](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Specifica e gestione degli errori in contratti e servizi](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Gestione di eccezioni ed errori](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
 - [Comportamento di debug del servizio](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)

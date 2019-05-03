@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654601"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59341075"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Esecuzione side-by-side in .NET Framework
 L'esecuzione side-by-side consente di eseguire più versioni di un'applicazione o di un componente sullo stesso computer. È possibile disporre contemporaneamente sullo stesso computer di più versioni di Common Language Runtime e di più versioni di applicazioni e componenti che usano una versione runtime.  
@@ -75,11 +75,11 @@ L'esecuzione side-by-side consente di eseguire più versioni di un'applicazione 
   
  Se è presente un file di configurazione dell'applicazione, il runtime determina la versione runtime appropriata per eseguire il caricamento in base ai risultati del processo riportato di seguito:  
   
-1.  Il runtime esamina l'[\<elemento supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) nel file di configurazione dell'applicazione. Se sono presenti una o più versioni runtime supportate specificate nell'elemento **\<supportedRuntime>**, il runtime carica la versione runtime specificata dal primo elemento **\<supportedRuntime>**. Se questa versione non è disponibile, il runtime esamina l'elemento **\<supportedRuntime>** successivo e prova a caricare la versione runtime specificata. Se tale versione runtime non è disponibile, vengono esaminati gli elementi **\<supportedRuntime>** successivi. Se non è disponibile alcuna versione runtime supportata, il runtime non riesce a caricare una versione runtime e viene visualizzato un messaggio per l'utente (vedere il passaggio 3).  
+1. Il runtime esamina l'[\<elemento supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) nel file di configurazione dell'applicazione. Se sono presenti una o più versioni runtime supportate specificate nell'elemento **\<supportedRuntime>**, il runtime carica la versione runtime specificata dal primo elemento **\<supportedRuntime>**. Se questa versione non è disponibile, il runtime esamina l'elemento **\<supportedRuntime>** successivo e prova a caricare la versione runtime specificata. Se tale versione runtime non è disponibile, vengono esaminati gli elementi **\<supportedRuntime>** successivi. Se non è disponibile alcuna versione runtime supportata, il runtime non riesce a caricare una versione runtime e viene visualizzato un messaggio per l'utente (vedere il passaggio 3).  
   
-2.  Il runtime legge l'intestazione del file PE del file eseguibile dell'applicazione. Se la versione runtime specificata dall'intestazione del file PE è disponibile, il runtime carica tale versione. Se la versione runtime specificata non è disponibile, il runtime cerca una versione runtime indicata da Microsoft come compatibile con la versione runtime nell'intestazione del file PE. Se tale versione non viene trovata, il processo procede al passaggio 3.  
+2. Il runtime legge l'intestazione del file PE del file eseguibile dell'applicazione. Se la versione runtime specificata dall'intestazione del file PE è disponibile, il runtime carica tale versione. Se la versione runtime specificata non è disponibile, il runtime cerca una versione runtime indicata da Microsoft come compatibile con la versione runtime nell'intestazione del file PE. Se tale versione non viene trovata, il processo procede al passaggio 3.  
   
-3.  Il runtime visualizza un messaggio che informa che non è disponibile la versione runtime supportata dall'applicazione. Il runtime non viene caricato.  
+3. Il runtime visualizza un messaggio che informa che non è disponibile la versione runtime supportata dall'applicazione. Il runtime non viene caricato.  
   
     > [!NOTE]
     >  È possibile evitare la visualizzazione del messaggio usando il valore NoGuiFromShim nella chiave del Registro di sistema HKLM\Software\Microsoft\\.NETFramework o nella variabile di ambiente COMPLUS_NoGuiFromShim. Ad esempio, è possibile eliminare il messaggio per le applicazioni che in genere non interagiscono con l'utente, ad esempio le installazioni automatiche o i servizi di Windows. Quando si sceglie di non visualizzare il messaggio, il runtime scrive un messaggio nel log eventi.  Impostare il valore del Registro di sistema NoGuiFromShim su 1 per impedire la visualizzazione di questo messaggio in tutte le applicazioni di un computer. In alternativa, impostare la variabile di ambiente COMPLUS_NoGuiFromShim su 1 per eliminare il messaggio nelle applicazioni in esecuzione in uno specifico contesto utente.  

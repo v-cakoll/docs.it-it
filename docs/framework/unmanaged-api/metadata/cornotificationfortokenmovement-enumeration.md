@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 15c5e8b34f2748868611bd7dc47ef73c491b1338
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045435"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>Enumerazione CorNotificationForTokenMovement
 Specifica le notifiche che verranno inviate al client API dei metadati quando si verifica una modifica del mapping dei token.  

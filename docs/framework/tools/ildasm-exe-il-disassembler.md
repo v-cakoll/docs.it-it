@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e96f86e516e7b741aa9fbf67efd1683d0845101
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488513"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59517538"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Disassembler IL)
 
@@ -69,7 +69,7 @@ Le opzioni che seguono sono valide per i file *.exe*, *.dll* e *.winmd* solo per
 |**/classlist**|Include un elenco di classi definite nel modulo.|
 |**/forward**|Utilizza la dichiarazione con prototipo della classe.|
 |**/headers**|Include nell'output le informazioni sull'intestazione del file.|
-|**/item:** `class`[**::** `member`[`(sig`]]|Disassembla quanto segue a seconda dell'argomento fornito:<br /><br /> -   Disassembla l'oggetto `class` specificato.<br />-   Disassembla l'oggetto `member` di `class` specificato.<br />-   Disassembla l'oggetto `member` di `class` con la firma `sig` specificata. Il formato di `sig` è il seguente:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Nota** Nelle versioni 1.0 e 1.1 di .NET Framework `sig` deve essere seguito da una parentesi di chiusura: `(sig)`. A partire da .NET Framework 2.0 la parentesi di chiusura deve essere omessa: (`sig`.|
+|**/item:** `class`[**::** `member`[`(sig`]]|Disassembla quanto segue a seconda dell'argomento fornito:<br /><br /> -   Disassembla l'oggetto `class` specificato.<br />-   Disassembla l'oggetto `member` di `class` specificato.<br />-   Disassembla l'oggetto `member` di `class` con la firma `sig` specificata. Il formato di `sig` è il seguente:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Nota** Nelle versioni 1.0 e 1.1 di .NET Framework `sig` deve essere seguito da una parentesi di chiusura: `(sig)`. A partire da .NET Framework 2.0 la parentesi di chiusura deve essere omessa: `(sig`.|
 |**/noil**|Evita l'output del codice dell'assembly IL.|
 |**/stats**|Include le statistiche relative all'immagine.|
 |**/typelist**|Genera l'elenco completo dei tipi per mantenere l'ordinamento dei tipi in un round trip.|

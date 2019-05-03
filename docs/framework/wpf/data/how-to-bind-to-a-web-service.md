@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
 ms.openlocfilehash: 2c3bc1f2142f07aba3df2da6c46117d3907443a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954284"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Procedura: Eseguire il binding a un servizio Web
 In questo esempio viene illustrato come eseguire l'associazione agli oggetti restituiti dalle chiamate al metodo del servizio Web.  
@@ -48,5 +48,5 @@ In questo esempio viene illustrato come eseguire l'associazione agli oggetti res
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Cenni preliminari sulle origini del binding](binding-sources-overview.md)
-- [Rendere i dati disponibili per il binding in XAML](how-to-make-data-available-for-binding-in-xaml.md)
+- [Panoramica delle origini di associazione](binding-sources-overview.md)
+- [Rendere i dati disponibili per l'associazione in XAML](how-to-make-data-available-for-binding-in-xaml.md)

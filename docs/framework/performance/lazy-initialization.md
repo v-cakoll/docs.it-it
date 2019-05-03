@@ -10,20 +10,20 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949942"
 ---
 # <a name="lazy-initialization"></a>Inizializzazione differita
 L'*inizializzazione differita* di un oggetto significa che la creazione dell'oggetto viene posticipata finché l'oggetto non viene usato per la prima volta. In questo argomento i termini *inizializzazione differita* e *creazione di istanze differita* sono sinonimi. L'inizializzazione differita viene usata in particolare per migliorare le prestazioni, evitare calcoli superflui e ridurre i requisiti di memoria del programma. Ecco gli scenari più comuni:  
   
--   La creazione di un oggetto è dispendiosa e il programma potrebbe non usarlo. Si supponga, ad esempio, di avere un oggetto `Customer` in memoria che include una proprietà `Orders` contenente una matrice di grandi dimensioni di oggetti `Order`, per la cui inizializzazione è necessaria una connessione di database. Se l'utente non chiede mai di visualizzare gli ordini o di usare i dati in un calcolo, non vi è motivo di usare la memoria di sistema o cicli di calcolo per creare l'oggetto. Usando `Lazy<Orders>` per dichiarare l'oggetto `Orders` per l'inizializzazione differita, è possibile evitare di sprecare risorse di sistema quando l'oggetto non viene usato.  
+- La creazione di un oggetto è dispendiosa e il programma potrebbe non usarlo. Si supponga, ad esempio, di avere un oggetto `Customer` in memoria che include una proprietà `Orders` contenente una matrice di grandi dimensioni di oggetti `Order`, per la cui inizializzazione è necessaria una connessione di database. Se l'utente non chiede mai di visualizzare gli ordini o di usare i dati in un calcolo, non vi è motivo di usare la memoria di sistema o cicli di calcolo per creare l'oggetto. Usando `Lazy<Orders>` per dichiarare l'oggetto `Orders` per l'inizializzazione differita, è possibile evitare di sprecare risorse di sistema quando l'oggetto non viene usato.  
   
--   La creazione di un oggetto è dispendiosa e si vuole posticiparla fino al completamento di altre operazioni dispendiose. Si supponga, ad esempio, che il programma carichi diverse istanze dell'oggetto all'avvio, ma che solo alcune siano necessarie immediatamente. È possibile migliorare le prestazioni di avvio del programma posticipando l'inizializzazione degli oggetti non necessari finché non vengono creati quelli necessari.  
+- La creazione di un oggetto è dispendiosa e si vuole posticiparla fino al completamento di altre operazioni dispendiose. Si supponga, ad esempio, che il programma carichi diverse istanze dell'oggetto all'avvio, ma che solo alcune siano necessarie immediatamente. È possibile migliorare le prestazioni di avvio del programma posticipando l'inizializzazione degli oggetti non necessari finché non vengono creati quelli necessari.  
   
- Benché sia possibile scrivere codice personalizzato per eseguire l'inizializzazione differita, è consigliabile usare <xref:System.Lazy%601>. <xref:System.Lazy%601> e anche i tipi correlati supportano la thread safety e forniscono criteri di propagazione delle eccezioni coerente.  
+ Benché sia possibile scrivere codice personalizzato per eseguire l'inizializzazione differita, è consigliabile usare <xref:System.Lazy%601>. <xref:System.Lazy%601> e i tipi correlati supportano anche la thread safety e forniscono criteri uniformi di propagazione delle eccezioni.  
   
  La tabella seguente elenca i tipi forniti da .NET Framework versione 4 per consentire l'inizializzazione differita in diversi scenari.  
   
@@ -75,7 +75,7 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
   
  Alcuni costruttori <xref:System.Lazy%601> includono un parametro <xref:System.Threading.LazyThreadSafetyMode> chiamato `mode`. Questi costruttori forniscono una modalità di thread safety aggiuntiva. La tabella seguente mostra in che modo i parametri del costruttore che specificano la thread safety influiscono sulla thread safety di un oggetto <xref:System.Lazy%601>. Ogni costruttore include al massimo uno di questi parametri.  
   
-|Thread safety dell'oggetto|`LazyThreadSafetyMode` `mode` parametro|Parametro `isThreadSafe` booleano|Nessun parametro di thread safety|  
+|Thread safety dell'oggetto|Parametro `LazyThreadSafetyMode` `mode`|Parametro `isThreadSafe` booleano|Nessun parametro di thread safety|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Completamente thread-safe. Un solo thread per volta tenta di inizializzare il valore.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Sì.|  
 |Non thread-safe.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Non applicabile.|  
@@ -126,13 +126,13 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601> esegue il wrapping relativo oggetto in modo analogo a come <xref:System.Lazy%601>, con queste importanti differenze:  
+ <xref:System.Threading.ThreadLocal%601> esegue il wrapping del proprio oggetto quasi allo stesso modo di <xref:System.Lazy%601>, con queste importanti differenze:  
   
--   Ogni thread inizializza la variabile di thread locale usando i propri dati privati, che non sono accessibili da altri thread.  
+- Ogni thread inizializza la variabile di thread locale usando i propri dati privati, che non sono accessibili da altri thread.  
   
--   La proprietà <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> è di lettura/scrittura e può essere modificata tutte le volte che è necessario. Questo può influire sulla propagazione delle eccezioni. Ad esempio, un'operazione `get` può generare un'eccezione, ma la successiva può inizializzare correttamente il valore.  
+- La proprietà <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> è di lettura/scrittura e può essere modificata tutte le volte che è necessario. Questo può influire sulla propagazione delle eccezioni. Ad esempio, un'operazione `get` può generare un'eccezione, ma la successiva può inizializzare correttamente il valore.  
   
--   Se non si specifica alcun delegato di inizializzazione, <xref:System.Threading.ThreadLocal%601> inizializza il tipo con wrapping usando il valore predefinito del tipo. In questo senso, <xref:System.Threading.ThreadLocal%601> è coerente con l'attributo <xref:System.ThreadStaticAttribute>.  
+- Se non si specifica alcun delegato di inizializzazione, <xref:System.Threading.ThreadLocal%601> inizializza il tipo con wrapping usando il valore predefinito del tipo. In questo senso, <xref:System.Threading.ThreadLocal%601> è coerente con l'attributo <xref:System.ThreadStaticAttribute>.  
   
  L'esempio seguente mostra che ogni thread che accede all'istanza `ThreadLocal<int>` ottiene una copia univoca dei dati.  
   
@@ -155,6 +155,6 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
 ## <a name="see-also"></a>Vedere anche
 
 - [Nozioni di base sul threading gestito](../../../docs/standard/threading/managed-threading-basics.md)
-- [Thread e threading](../../../docs/standard/threading/threads-and-threading.md)
+- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)
 - [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Procedura: Eseguire l'inizializzazione lazy di oggetti](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Procedura: Eseguire l'inizializzazione differita di oggetti](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

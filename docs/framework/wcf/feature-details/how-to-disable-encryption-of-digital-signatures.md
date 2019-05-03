@@ -3,11 +3,11 @@ title: 'Procedura: Disabilitare la crittografia delle firme digitali'
 ms.date: 03/30/2017
 ms.assetid: fd174313-ad81-4dca-898a-016ccaff8187
 ms.openlocfilehash: e2fd2a058e636ebf398f9d0c71a93788ccd7dfa0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59325267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773191"
 ---
 # <a name="how-to-disable-encryption-of-digital-signatures"></a>Procedura: Disabilitare la crittografia delle firme digitali
 Per impostazione predefinita, un messaggio viene firmato e la firma viene crittografata digitalmente. Per controllare questo comportamento è necessario creare un'associazione personalizzata con un'istanza della classe <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> e impostare la proprietà `MessageProtectionOrder` della classe su un valore dell'enumerazione <xref:System.ServiceModel.Security.MessageProtectionOrder>. Il valore predefinito è <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Questo processo può richiedere fino al 30 percento in più del tempo necessario per eseguire la firma e la crittografia in base alla dimensione globale del messaggio (minore è la dimensione del messaggio, maggiore sarà l'impatto sulle prestazioni). La disattivazione della crittografia della firma può tuttavia consentire a un utente malintenzionato di intuire il contenuto del messaggio poiché l'elemento di firma contiene il codice hash del testo normale di ogni parte firmata del messaggio. Ad esempio, anche se il corpo del messaggio viene crittografato per impostazione predefinita, la firma non crittografata contiene il codice hash del corpo del messaggio prima della crittografia. Se il set di valori possibili per la parte firmata e crittografata è limitato, un utente malintenzionato può essere in grado di dedurre il contenuto analizzando il valore hash. La crittografia della firma consente di ridurre il rischio di attacchi.  

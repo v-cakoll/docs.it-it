@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Label control [Windows Forms], sizing to fit contents
 ms.assetid: 99648964-63b2-438c-980e-d24103ad602b
 ms.openlocfilehash: 110aab0c0826bb4b06e22158afd6af37b5406be4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971197"
 ---
 # <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>Procedura: Ridimensionare un controllo Label di Windows Forms in base al contenuto
 I moduli di Windows <xref:System.Windows.Forms.Label> controllo può essere a riga singola o multilinea e dimensioni fisse o può ridimensionare automaticamente in base alla lunghezza della didascalia. Il <xref:System.Windows.Forms.Label.AutoSize%2A> proprietà consente di ridimensionare i controlli per adattarli didascalie ingrandire o ridurre, che risulta particolarmente utile se la didascalia verrà modificato in fase di esecuzione.  
@@ -26,6 +26,6 @@ I moduli di Windows <xref:System.Windows.Forms.Label> controllo può essere a ri
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Creare tasti di scelta con i controlli Label di Windows Forms](how-to-create-access-keys-with-windows-forms-label-controls.md)
-- [Panoramica del controllo Label](label-control-overview-windows-forms.md)
+- [Procedura: Creare le chiavi di accesso con i controlli Label di Windows Form](how-to-create-access-keys-with-windows-forms-label-controls.md)
+- [Panoramica sul controllo Label](label-control-overview-windows-forms.md)
 - [Controllo Label](label-control-windows-forms.md)

@@ -3,13 +3,13 @@ title: <transport> di <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
 ms.openlocfilehash: 97139b6bea21e4d908c06f5210e54756865d3c46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788310"
 ---
-# <a name="transport-of-nettcpbinding"></a>\<Transport > di \<netTcpBinding >
+# <a name="transport-of-nettcpbinding"></a>\<transport> di \<netTcpBinding>
 Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoint configurato con il [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
  \<system.ServiceModel>  

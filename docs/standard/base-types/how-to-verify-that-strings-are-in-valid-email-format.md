@@ -21,10 +21,10 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58890501"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procedura: Verificare che le stringhe siano nel formato di posta elettronica valido
@@ -56,7 +56,7 @@ L'esempio seguente usa un'espressione regolare per verificare la validità del f
 |-------------|-----------------|  
 |`^`|Iniziare la ricerca della corrispondenza all'inizio della stringa.|  
 |`(?(")`|Determinare se il primo carattere corrisponde a una virgoletta. `(?(")` è l'inizio di un costrutto di alternanza.|  
-|`(?("")("".+?(?<!\\)""@)`|Se il primo carattere è una virgoletta, cercare la corrispondenza con una virgoletta iniziale seguita da almeno un'occorrenza di qualsiasi carattere, seguita da una virgoletta finale. La virgoletta finale non deve essere preceduta da un carattere di barra rovesciata (\\). `(?<!` è l'inizio di un'asserzione lookbehind negativa di larghezza zero. La stringa dovrebbe terminare con il simbolo @.|  
+|`(?("")("".+?(?<!\\)""@)`|Se il primo carattere è una virgoletta, cercare la corrispondenza con una virgoletta iniziale seguita da almeno un'occorrenza di qualsiasi carattere, seguita da una virgoletta finale. La virgoletta finale non deve essere preceduta da un carattere di barra rovesciata (\\). `(?<!` è l'inizio dell'asserzione lookbehind negativa di larghezza zero. La stringa dovrebbe terminare con il simbolo @.|  
 |<code>&#124;(([0-9a-z]</code>|Se il primo carattere non è una virgoletta, cercare la corrispondenza di qualsiasi carattere alfabetico da a a z o da A a Z (nel confronto è applicata la distinzione tra maiuscole e minuscole) oppure di qualsiasi carattere numerico da 0 a 9.|  
 |`(\.(?!\.))`|Se il carattere successivo è un punto, cercare la corrispondenza del punto. Se non è un punto, eseguire il look ahead del carattere successivo e continuare la ricerca della corrispondenza. `(?!\.)` è un'asserzione lookahead negativa di larghezza zero che impedisce la comparsa di due punti consecutivi nella parte locale di un indirizzo di posta elettronica.|  
 |<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|Se il carattere successivo non è un punto, cercare la corrispondenza con qualsiasi carattere alfanumerico o con uno dei caratteri seguenti: -!#$%'*+=?^\`{}&#124;~.|  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 ms.openlocfilehash: 230c7cb80ce6b8a29f7334ed0f8d297fd829faf9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59302465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009084"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Procedura dettagliata: Disposizione dei controlli Windows Forms con spaziatura interna, margini e la proprietà AutoSize
 Per molte applicazioni è estremamente importante la sistemazione precisa dei controlli nel form. Il **finestra di progettazione Windows Form** ti offre molti strumenti di layout per eseguire questa operazione. Tre dei più importanti sono le <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, e <xref:System.Windows.Forms.Control.AutoSize%2A> proprietà, che sono presenti in tutti i controlli Windows Form.  
@@ -37,13 +37,13 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
   
  Le attività illustrate nella procedura dettagliata sono le seguenti:  
   
--   Creazione di un progetto Windows Form  
+- Creazione di un progetto Windows Form  
   
--   Impostazione dei margini per i controlli  
+- Impostazione dei margini per i controlli  
   
--   Impostazione della spaziatura interna per i controlli  
+- Impostazione della spaziatura interna per i controlli  
   
--   Ridimensionamento automatico dei controlli  
+- Ridimensionamento automatico dei controlli  
   
  Al termine, si avrà una migliore comprensione del ruolo svolto da queste importanti funzionalità di layout.  
   
@@ -53,7 +53,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare questa procedura dettagliata, è necessario:  
   
--   Autorizzazioni sufficienti per essere in grado di creare ed eseguire progetti di applicazione Windows Form nel computer in cui è installato Visual Studio.  
+- Autorizzazioni sufficienti per essere in grado di creare ed eseguire progetti di applicazione Windows Form nel computer in cui è installato Visual Studio.  
   
 ## <a name="creating-the-project"></a>Creazione del progetto  
  Il primo passaggio consiste nella creazione del progetto e nella configurazione del form.  
@@ -178,11 +178,11 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
 ## <a name="next-steps"></a>Passaggi successivi  
  Esistono molte altre funzionalità di layout per la disposizione dei controlli nelle applicazioni Windows Form. Ecco alcune combinazioni di cui è possibile provare a:  
   
--   Compilazione di un form utilizzando un <xref:System.Windows.Forms.TableLayoutPanel> controllo. Per informazioni dettagliate, vedere [procedura dettagliata: Disposizione dei controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Provare a modificare i valori del <xref:System.Windows.Forms.TableLayoutPanel> del controllo <xref:System.Windows.Forms.Control.Padding%2A> proprietà, così come il <xref:System.Windows.Forms.Control.Margin%2A> proprietà per i controlli figlio.  
+- Compilazione di un form utilizzando un <xref:System.Windows.Forms.TableLayoutPanel> controllo. Per informazioni dettagliate, vedere [procedura dettagliata: Disposizione dei controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Provare a modificare i valori del <xref:System.Windows.Forms.TableLayoutPanel> del controllo <xref:System.Windows.Forms.Control.Padding%2A> proprietà, così come il <xref:System.Windows.Forms.Control.Margin%2A> proprietà per i controlli figlio.  
   
--   Provare a stesso esperimento usando un <xref:System.Windows.Forms.FlowLayoutPanel> controllo. Per informazioni dettagliate, vedere [procedura dettagliata: Disposizione dei controlli in Windows Form usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
+- Provare a stesso esperimento usando un <xref:System.Windows.Forms.FlowLayoutPanel> controllo. Per informazioni dettagliate, vedere [procedura dettagliata: Disposizione dei controlli in Windows Form usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
--   Esperimento con ancorare i controlli figlio in un <xref:System.Windows.Forms.Panel> controllo. Il <xref:System.Windows.Forms.Control.Padding%2A> proprietà è una realizzazione più generale del <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> proprietà ed è possibile provarlo che ciò avviene inserendo un controllo figlio in un <xref:System.Windows.Forms.Panel> controllo e l'impostazione del controllo figlio <xref:System.Windows.Forms.Control.Dock%2A> proprietà <xref:System.Windows.Forms.DockStyle.Fill>. Impostare il <xref:System.Windows.Forms.Panel> del controllo <xref:System.Windows.Forms.Control.Padding%2A> proprietà per diversi valori e notare l'effetto.  
+- Esperimento con ancorare i controlli figlio in un <xref:System.Windows.Forms.Panel> controllo. Il <xref:System.Windows.Forms.Control.Padding%2A> proprietà è una realizzazione più generale del <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> proprietà ed è possibile provarlo che ciò avviene inserendo un controllo figlio in un <xref:System.Windows.Forms.Panel> controllo e l'impostazione del controllo figlio <xref:System.Windows.Forms.Control.Dock%2A> proprietà <xref:System.Windows.Forms.DockStyle.Fill>. Impostare il <xref:System.Windows.Forms.Panel> del controllo <xref:System.Windows.Forms.Control.Padding%2A> proprietà per diversi valori e notare l'effetto.  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -190,7 +190,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>
 - <xref:System.Windows.Forms.Control.Padding%2A>
-- [Cenni preliminari sulla proprietà AutoSize](autosize-property-overview.md)
-- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando le guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Panoramica sulla proprietà AutoSize](autosize-property-overview.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 83b5498ac6f585a8d2554377748836d88ce592d1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970883"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59335017"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -113,7 +113,7 @@ Per altre informazioni, vedere [Modalità di compatibilità di .NET Framework](.
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>Librerie .NET Standard e Visual Studio
 
-Per compilare librerie .NET Standard in Visual Studio, verificare di avere [Visual Studio 2017 versione 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) o successiva installato in Windows oppure [Visual Studio per Mac versione 7.1](https://visualstudio.microsoft.com/vs/visual-studio-mac/) o successiva installato in macOS.
+Per compilare librerie .NET Standard in Visual Studio, verificare di avere [Visual Studio 2017 versione 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) o successiva installato in Windows oppure [Visual Studio per Mac versione 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o successiva installato in macOS.
 
 Se si devono usare le librerie .NET Standard 2.0 solo nei propri progetti, è anche possibile usare Visual Studio 2015. Tuttavia, deve essere installato il client NuGet versione 3.6 o successiva. È possibile scaricare il client NuGet per Visual Studio 2015 dalla pagina di [download di NuGet](https://www.nuget.org/downloads).
 

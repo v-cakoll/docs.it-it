@@ -5,11 +5,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], capture
 ms.assetid: 8911d4b0-a4f8-4f93-8246-371aebd27d0c
 ms.openlocfilehash: 30432c6978f60cc9ad47d5df5dafc7aa45229f3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800958"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Mouse capture in Windows Form
 *Passare il mouse capture* fa riferimento a quando un controllo accetta comandi del tutto l'input del mouse. Quando un controllo ha acquisito il mouse, riceve l'input del mouse se il puntatore si trova all'interno dei bordi.  

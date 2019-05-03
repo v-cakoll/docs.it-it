@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
 ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032344"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Procedura dettagliata: Hosting di un controllo Win32 in WPF
 Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, quando si dispone di un investimento sostanziale nel codice Win32, potrebbe essere più efficace riutilizzare almeno parte di tale codice nell'applicazione WPF anziché riscriverlo completamente. WPF fornisce un meccanismo semplice per l'hosting di una finestra Win32, in una pagina WPF.  
@@ -47,9 +47,9 @@ Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creaz
   
 6. Gestire i messaggi selezionati inviati alla finestra host, ad esempio notifiche dai controlli figlio. È possibile ottenere questo risultato in due modi.  
   
-    -   Se si preferisce gestire i messaggi nella classe di hosting, eseguire l'override di <xref:System.Windows.Interop.HwndHost.WndProc%2A> metodo di <xref:System.Windows.Interop.HwndHost> classe.  
+    - Se si preferisce gestire i messaggi nella classe di hosting, eseguire l'override di <xref:System.Windows.Interop.HwndHost.WndProc%2A> metodo di <xref:System.Windows.Interop.HwndHost> classe.  
   
-    -   Se si preferisce che l'applicazione WPF che gestiscono i messaggi, gestire le <xref:System.Windows.Interop.HwndHost> classe <xref:System.Windows.Interop.HwndHost.MessageHook> eventi nel code-behind. Questo evento si verifica per ogni messaggio ricevuto dalla finestra ospitata. Se si sceglie questa opzione, è necessario comunque eseguire l'override <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ma è necessario solo un'implementazione minima.  
+    - Se si preferisce che l'applicazione WPF che gestiscono i messaggi, gestire le <xref:System.Windows.Interop.HwndHost> classe <xref:System.Windows.Interop.HwndHost.MessageHook> eventi nel code-behind. Questo evento si verifica per ogni messaggio ricevuto dalla finestra ospitata. Se si sceglie questa opzione, è necessario comunque eseguire l'override <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ma è necessario solo un'implementazione minima.  
   
 7. Eseguire l'override di <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> e <xref:System.Windows.Interop.HwndHost.WndProc%2A> metodi <xref:System.Windows.Interop.HwndHost>. È necessario eseguire l'override di questi metodi per soddisfare il <xref:System.Windows.Interop.HwndHost> contratto, ma si potrebbe essere necessario solo fornire un'implementazione minima.  
   
@@ -129,13 +129,13 @@ Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creaz
 ## <a name="implement-communication-between-the-control-and-the-page"></a>Implementare la comunicazione tra il controllo e la pagina  
  Modificare il controllo tramite l'invio di messaggi di Windows. Il controllo comunica quando l'utente interagisce con esso inviando notifiche alla propria finestra host. Il [che ospita un controllo Win32 ListBox in WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control) esempio include un'interfaccia utente che fornisce alcuni esempi del relativo funzionamento:  
   
--   Accodare un elemento all'elenco.  
+- Accodare un elemento all'elenco.  
   
--   Eliminare l'elemento selezionato dall'elenco.  
+- Eliminare l'elemento selezionato dall'elenco.  
   
--   Visualizzare il testo dell'elemento attualmente selezionato.  
+- Visualizzare il testo dell'elemento attualmente selezionato.  
   
--   Visualizzare il numero di elementi nell'elenco.  
+- Visualizzare il numero di elementi nell'elenco.  
   
  L'utente può anche selezionare un elemento nella casella di riepilogo facendo clic su di esso, esattamente come accade per un'applicazione Win32 convenzionale. I dati visualizzati vengono aggiornati ogni vota che l'utente modifica lo stato della casella di riepilogo, selezionando, aggiungendo o accodando un elemento.  
   
@@ -156,4 +156,4 @@ Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creaz
 
 - <xref:System.Windows.Interop.HwndHost>
 - [Interoperatività di WPF e Win32](wpf-and-win32-interoperation.md)
-- [Procedura dettagliata: Compilare una prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

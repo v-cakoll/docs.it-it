@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
 ms.openlocfilehash: f821088375bf1df01e75de5e0c226334baca113f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607553"
 ---
 # <a name="net-framework-data-providers"></a>Provider di dati .NET Framework
 Un provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] consente di effettuare una connessione a un database, eseguire comandi e recuperare risultati. Tali risultati vengono elaborati direttamente, inseriti in un oggetto <xref:System.Data.DataSet> in modo da consentirne l'esposizione all'utente se necessario, combinati con dati provenienti da più origini o elaborati in modalità remota tra livelli. I provider di dati[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] presentano una struttura semplice e creano un livello minimo tra l'origine dati e il codice, migliorando quindi le prestazioni senza compromettere le funzionalità.  

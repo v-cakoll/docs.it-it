@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
 ms.openlocfilehash: d7c3bcba8e62d62904ed778a48d0e8ae6738ce00
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793998"
 ---
 # <a name="-netcf"></a>-netcf
 

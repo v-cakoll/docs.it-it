@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
 ms.openlocfilehash: b5044d39d1dc5d2fa7d2ce691cdda7075fa0e32a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878410"
 ---
 # <a name="schema-restrictions"></a>Restrizione dello schema
 Il secondo parametro facoltativo del **GetSchema** è il metodo le restrizioni che vengono usate per limitare la quantità di informazioni sullo schema restituite e viene passata al **GetSchema** metodo come una matrice di stringhe . La posizione nella matrice determina i valori che è possibile passare ed equivale al numero della restrizione.  

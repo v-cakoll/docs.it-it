@@ -6,11 +6,11 @@ helpviewer_keywords:
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
 ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936357"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Unione delle voci di menu nel controllo MenuStrip Windows Form
 Se si dispone di un'applicazione di interfaccia a documenti multipli (MDI), è possibile unire le voci di menu o i form figlio interi menu nei menu del form padre.  
@@ -20,9 +20,9 @@ Se si dispone di un'applicazione di interfaccia a documenti multipli (MDI), è p
 ## <a name="general-concepts"></a>Concetti generali  
  Le procedure di unione coinvolgono una destinazione e un controllo del codice sorgente:  
   
--   La destinazione è il <xref:System.Windows.Forms.MenuStrip> controllo sul principale o form padre MDI in cui si uniscono le voci di menu.  
+- La destinazione è il <xref:System.Windows.Forms.MenuStrip> controllo sul principale o form padre MDI in cui si uniscono le voci di menu.  
   
--   L'origine è il <xref:System.Windows.Forms.MenuStrip> controllo sul form figlio MDI che contiene le voci di menu da unire nel menu di destinazione.  
+- L'origine è il <xref:System.Windows.Forms.MenuStrip> controllo sul form figlio MDI che contiene le voci di menu da unire nel menu di destinazione.  
   
  Il <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> proprietà identifica la voce di menu con elenco a discesa verrà popolato con i titoli di MDI corrente padre figlio MDI del form. Ad esempio, in genere vengono elencati gli elementi figlio MDI attualmente aperte nel **finestra** menu.  
   
@@ -58,5 +58,5 @@ Se si dispone di un'applicazione di interfaccia a documenti multipli (MDI), è p
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>
 - [Controllo MenuStrip](menustrip-control-windows-forms.md)
-- [Procedura: Creare un elenco di finestre di interfaccia a documenti multipli con MenuStrip](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
-- [Procedura: Configurare l'unione automatica dei menu per applicazioni con interfaccia a documenti multipli](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+- [Procedura: Creare un elenco di finestre MDI con MenuStrip](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
+- [Procedura: Impostare l'unione automatica dei Menu per applicazioni MDI](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

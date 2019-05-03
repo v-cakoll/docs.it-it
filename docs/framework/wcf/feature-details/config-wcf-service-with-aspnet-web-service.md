@@ -6,16 +6,16 @@ dev_langs:
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
 ms.openlocfilehash: 84762d8917609b84a049ea665b575acfa6e5fecf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59325189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857532"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Procedura: Configurare un servizio WCF per interagire con client di servizi Web ASP.NET
 Per configurare un endpoint del servizio Windows Communication Foundation (WCF) per essere interoperabile con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] client del servizio Web, usare il <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> tipo come tipo di associazione per l'endpoint di servizio.  
   
- È possibile, se lo si desidera, attivare nell'associazione il supporto per HTTPS e l'autenticazione del client a livello di trasporto. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] I client del servizio Web non supportano codifica MTOM, pertanto <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> proprietà deve essere lasciata come relativo valore predefinito, ovvero <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. I client di servizi Web ASP.NET non supportano WS-Security, pertanto <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> deve essere impostato su <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
+ È possibile, se lo si desidera, attivare nell'associazione il supporto per HTTPS e l'autenticazione del client a livello di trasporto. I client di servizi Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] non supportano la codifica messaggi MTOM, pertanto la proprietà <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> deve essere lasciata con il suo valore predefinito <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. I client di servizi Web ASP.NET non supportano WS-Security, pertanto <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> deve essere impostato su <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
   
  Per rendere disponibili per i metadati per un servizio WCF [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] strumenti di generazione proxy del servizio Web (vale a dire [Web Services Description Language Tool (Wsdl.exe)](https://go.microsoft.com/fwlink/?LinkId=73833), [strumento di individuazione Servizi Web (Disco.exe)](https://go.microsoft.com/fwlink/?LinkId=73834)e la funzionalità Aggiungi riferimento Web in Visual Studio), è consigliabile esporre un endpoint di metadati HTTP/GET.  
   
@@ -48,10 +48,10 @@ Per configurare un endpoint del servizio Windows Communication Foundation (WCF) 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Creare un endpoint del servizio nel codice](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)
-- [Procedura: Pubblicare metadati per un servizio usando codice](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [Procedura: Creare un Endpoint del servizio nel codice](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)
+- [Procedura: Pubblicare metadati per un servizio tramite codice](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
 - [Procedura: Specificare un'associazione al servizio nella configurazione](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Procedura: Creare un endpoint di servizio nella configurazione](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [Procedura: Pubblicare metadati per un servizio usando un file di configurazione](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [Protezione del trasporto](../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Procedura: Creare un Endpoint del servizio nella configurazione](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Procedura: Pubblicare i metadati per un servizio utilizzando un File di configurazione](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [Uso di metadati](../../../../docs/framework/wcf/feature-details/using-metadata.md)

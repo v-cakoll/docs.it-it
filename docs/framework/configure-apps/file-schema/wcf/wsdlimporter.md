@@ -3,11 +3,11 @@ title: <wsdlImporter>
 ms.date: 03/30/2017
 ms.assetid: 986b2165-8430-4dba-b1b8-00396841bb96
 ms.openlocfilehash: 1f34486296465b3ea0b5b05bd9492062c85ad8c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670248"
 ---
 # <a name="wsdlimporter"></a>\<wsdlImporter>
 Specifica tutte le unità di importazione WSDL per l'importazione di metadati Web Services Description Language (WSDL) 1.1 con allegati WS-Policy.  

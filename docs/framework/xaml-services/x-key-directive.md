@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
 ms.openlocfilehash: 6ac878f24de594f8557ded8b0c3356217021b035
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971821"
 ---
 # <a name="xkey-directive"></a>Direttiva x:Key
 Identifica in modo univoco gli elementi che vengono creati e a cui fa riferimento un dizionario definito XAML. Aggiunta di un `x:Key` valore da un elemento oggetto XAML è il modo più comune per identificare una risorsa in un dizionario risorse, ad esempio in un controllo WPF <xref:System.Windows.ResourceDictionary>.  
@@ -61,9 +61,9 @@ Identifica in modo univoco gli elementi che vengono creati e a cui fa riferiment
 ## <a name="wpf-usage-notes"></a>Note sull'utilizzo WPF  
  Gli oggetti figlio di un elemento padre dell'oggetto che rappresenta un' <xref:System.Collections.IDictionary> implementazione, ad esempio l'applicazione WPF <xref:System.Windows.ResourceDictionary>, in genere necessario includere un `x:Key` attributo e il valore della chiave deve essere univoco in tale dizionario. Esistono due importanti eccezioni:  
   
--   Alcuni tipi WPF dichiarano una chiave implicita per l'utilizzo del dizionario. Ad esempio, un <xref:System.Windows.Style> con un <xref:System.Windows.Style.TargetType%2A>, o una <xref:System.Windows.DataTemplate> con un <xref:System.Windows.DataTemplate.DataType%2A>, possono trovarsi in un <xref:System.Windows.ResourceDictionary> e usare la chiave implicita.  
+- Alcuni tipi WPF dichiarano una chiave implicita per l'utilizzo del dizionario. Ad esempio, un <xref:System.Windows.Style> con un <xref:System.Windows.Style.TargetType%2A>, o una <xref:System.Windows.DataTemplate> con un <xref:System.Windows.DataTemplate.DataType%2A>, possono trovarsi in un <xref:System.Windows.ResourceDictionary> e usare la chiave implicita.  
   
--   WPF supporta un concetto di dizionario risorse unito. Le chiavi possono essere condivisi tra i dizionari uniti e il comportamento principale condiviso è possibile accedere tramite <xref:System.Windows.FrameworkContentElement.FindResource%2A>. Per altre informazioni, vedere [Dizionari risorse uniti](../wpf/advanced/merged-resource-dictionaries.md).  
+- WPF supporta un concetto di dizionario risorse unito. Le chiavi possono essere condivisi tra i dizionari uniti e il comportamento principale condiviso è possibile accedere tramite <xref:System.Windows.FrameworkContentElement.FindResource%2A>. Per altre informazioni, vedere [Dizionari risorse uniti](../wpf/advanced/merged-resource-dictionaries.md).  
   
  Nel WPF XAML implementazione e l'applicazione modello generale, l'univocità delle chiavi non viene controllata dal compilatore di markup XAML. Al contrario, mancanti o non univoci `x:Key` valori causano errori del parser XAML in fase di caricamento. Tuttavia, la gestione di Visual Studio di dizionari per WPF può spesso riscontrare tali errori in fase di progettazione.  
   
@@ -101,11 +101,11 @@ keyObject
 |-|-|  
 |`keyObject`|Elemento dell'oggetto per l'oggetto che viene usato come chiave per un determinato `object` in un dizionario specializzato.|  
   
--   Il contenitore/elemento padre per questo tipo di utilizzo non è illustrato qui. `object` è previsto un elemento figlio di un elemento oggetto che rappresenta un'implementazione di dizionario specializzato. `keyObject` è previsto che sia un'istanza dell'oggetto (o un valore di un tipo valore) appropriata come chiave per quell'implementazione particolare del dizionario specializzato.  
+- Il contenitore/elemento padre per questo tipo di utilizzo non è illustrato qui. `object` è previsto un elemento figlio di un elemento oggetto che rappresenta un'implementazione di dizionario specializzato. `keyObject` è previsto che sia un'istanza dell'oggetto (o un valore di un tipo valore) appropriata come chiave per quell'implementazione particolare del dizionario specializzato.  
   
--   WPF non implementa dizionari che richiedono questo utilizzo. Chiavi dell'oggetto è una funzionalità generale del linguaggio XAML, utile per determinati scenari di dizionario personalizzato in cui è consigliabile creare il dizionario in XAML. Per le funzionalità WPF quali stili impliciti che utilizzano chiavi non di tipo stringa per le risorse, altre tecniche per stabilire o specificare che le chiavi esistono, quindi usando una chiave dell'oggetto non è necessaria.  
+- WPF non implementa dizionari che richiedono questo utilizzo. Chiavi dell'oggetto è una funzionalità generale del linguaggio XAML, utile per determinati scenari di dizionario personalizzato in cui è consigliabile creare il dizionario in XAML. Per le funzionalità WPF quali stili impliciti che utilizzano chiavi non di tipo stringa per le risorse, altre tecniche per stabilire o specificare che le chiavi esistono, quindi usando una chiave dell'oggetto non è necessaria.  
   
--   *keyObject* potrebbe essere anche un utilizzo dell'estensione di markup in forma di elemento oggetto, anziché un'istanza dell'oggetto diretta.  
+- *keyObject* potrebbe essere anche un utilizzo dell'estensione di markup in forma di elemento oggetto, anziché un'istanza dell'oggetto diretta.  
   
 ## <a name="silverlight-usage-notes"></a>Note sull'utilizzo di Silverlight  
  `x:Key` per Silverlight è documentato separatamente. Per altre informazioni, vedere [XAML Namespace (x) Funzionalità del linguaggio (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
@@ -114,4 +114,4 @@ keyObject
 
 - [Risorse XAML](../wpf/advanced/xaml-resources.md)
 - [Risorse e codice](../wpf/advanced/resources-and-code.md)
-- [Estensione del markup StaticResource](../wpf/advanced/staticresource-markup-extension.md)
+- [Estensione di markup StaticResource](../wpf/advanced/staticresource-markup-extension.md)

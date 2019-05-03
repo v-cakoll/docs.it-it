@@ -15,11 +15,11 @@ helpviewer_keywords:
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
 ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59343012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050555"
 ---
 # <a name="comments-in-code-visual-basic"></a>Commenti nel codice (Visual Basic)
 Negli esempi di codice viene spesso utilizzato il simbolo di commento (`'`). Questo simbolo indica al compilatore di Visual Basic per ignorare il testo seguente, o la *commento*. I commenti sono brevi annotazioni descrittive che vengono aggiunte al codice per agevolarne la lettura.  
@@ -48,11 +48,11 @@ Negli esempi di codice viene spesso utilizzato il simbolo di commento (`'`). Que
   
  È importante tenere presente i seguenti punti:  
   
--   Le dichiarazioni di variabili importanti devono essere precedute da un commento in cui viene descritto l'utilizzo della variabile dichiarata.  
+- Le dichiarazioni di variabili importanti devono essere precedute da un commento in cui viene descritto l'utilizzo della variabile dichiarata.  
   
--   I nomi di variabili, controlli e routine devono essere descrittivi in modo da rendere necessaria l'aggiunta di commenti solo per la descrizione di implementazioni complesse.  
+- I nomi di variabili, controlli e routine devono essere descrittivi in modo da rendere necessaria l'aggiunta di commenti solo per la descrizione di implementazioni complesse.  
   
--   Non è possibile inserire sulla stessa riga una sequenza di continuazione di riga seguita da un commento.  
+- Non è possibile inserire sulla stessa riga una sequenza di continuazione di riga seguita da un commento.  
   
  È possibile aggiungere o rimuovere i simboli di commento per un blocco di codice, selezionare uno o più righe di codice e scegliere il **commento** (![pulsante il commento di Visual Basic in Visual Studio.](./media/comments-in-code/visual-basic-comment-button.gif)) e **Rimuovi commento**  (![Pulsante di rimuovere il commento da Visual Basic in Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) i pulsanti sul **modifica** sulla barra degli strumenti.  
   

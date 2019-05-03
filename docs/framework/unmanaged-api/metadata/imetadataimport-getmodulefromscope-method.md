@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f40e6bfdbebdadc41da52564348c6070c18372c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777689"
 ---
 # <a name="imetadataimportgetmodulefromscope-method"></a>Metodo IMetaDataImport::GetModuleFromScope
 Ottiene i metadati di un token per il modulo di cui viene fatto riferimento nell'ambito dei metadati corrente.  

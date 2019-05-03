@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 12ef215253ca02048a5a3fc2c7c682823233929f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779821"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>Metodo ICorProfilerInfo2::DoStackSnapshot
 Descrive i frame gestiti nello stack per il thread specificato e invia informazioni al profiler tramite un callback.  
@@ -91,11 +91,11 @@ HRESULT DoStackSnapshot(
   
  Analisi dello stack asincrona può facilmente causare deadlock o violazioni di accesso, a meno che non si seguono queste linee guida:  
   
--   Quando si sospendono direttamente thread, tenere presente che solo un thread che non ha mai eseguito il codice gestito può sospendere un altro thread.  
+- Quando si sospendono direttamente thread, tenere presente che solo un thread che non ha mai eseguito il codice gestito può sospendere un altro thread.  
   
--   Blocca sempre [ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) callback fino al completamento dello stack del thread.  
+- Blocca sempre [ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) callback fino al completamento dello stack del thread.  
   
--   Non mantenere un blocco mentre il profiler chiama una funzione CLR che possono attivare una garbage collection. Vale a dire, non mantenere un blocco se il thread proprietario può effettuare una chiamata che attiva un'operazione di garbage collection.  
+- Non mantenere un blocco mentre il profiler chiama una funzione CLR che possono attivare una garbage collection. Vale a dire, non mantenere un blocco se il thread proprietario può effettuare una chiamata che attiva un'operazione di garbage collection.  
   
  È inoltre disponibile un rischio di deadlock se si chiama `DoStackSnapshot` da un thread che ha creato il profiler in modo che è possibile analizzare lo stack di un thread di destinazione distinto. La prima volta che il thread è stato creato viene inserito determinati `ICorProfilerInfo*` metodi (inclusi `DoStackSnapshot`), CLR dovrà eseguire per ogni thread, l'inizializzazione di CLR specifici su tale thread. Se il profiler ha sospeso il thread di destinazione cui stack desiderata per esaminare e se il thread di destinazione è successo a un blocco di proprietà necessario per eseguire tale inizializzazione per ogni thread, si verificherà un deadlock. Per evitare il deadlock, effettuare una chiamata iniziale in `DoStackSnapshot` dal thread profiler creato per verificare il thread di destinazione un oggetto separato, ma non sospendere il thread di destinazione prima di tutto. Questa chiamata iniziale assicura che l'inizializzazione di singoli thread può essere completato senza deadlock. Se `DoStackSnapshot` ha esito positivo e i report almeno un frame, da quel punto, sarà sicuro per il thread profiler-creazione di sospendere qualsiasi thread di destinazione e chiamare `DoStackSnapshot` per analizzare lo stack di thread di destinazione.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
 ms.openlocfilehash: 54782c4e0460ba1ba9b8a870b8f60f08a76340b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012841"
 ---
 # <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Limitazioni della proprietà Interval del componente Timer di Windows Form
 I moduli di Windows <xref:System.Windows.Forms.Timer> componente dispone di un <xref:System.Windows.Forms.Timer.Interval%2A> proprietà che specifica il numero di millisecondi che intercorre tra un evento timer e quella successiva. A meno che il componente è disabilitato, un timer continua a ricevere il <xref:System.Windows.Forms.Timer.Tick> evento quasi uguale a intervalli di tempo.  
@@ -22,14 +22,14 @@ I moduli di Windows <xref:System.Windows.Forms.Timer> componente dispone di un <
 ## <a name="the-interval-property"></a>La proprietà di Interval  
  Il <xref:System.Windows.Forms.Timer.Interval%2A> proprietà presenta alcune limitazioni da prendere in considerazione quando si programma un <xref:System.Windows.Forms.Timer> componente:  
   
--   Se l'applicazione o un'altra applicazione in esecuzione nel sistema, ad esempio cicli lungo, i calcoli con utilizzo intensivo, unità, rete o l'accesso alla porta, ovvero l'applicazione potrebbe non ricevere eventi timer con la frequenza come il <xref:System.Windows.Forms.Timer.Interval%2A> proprietà specifica.  
+- Se l'applicazione o un'altra applicazione in esecuzione nel sistema, ad esempio cicli lungo, i calcoli con utilizzo intensivo, unità, rete o l'accesso alla porta, ovvero l'applicazione potrebbe non ricevere eventi timer con la frequenza come il <xref:System.Windows.Forms.Timer.Interval%2A> proprietà specifica.  
   
--   L'intervallo non è garantito l'esattezza ora. Per garantire l'accuratezza, il timer deve controllare l'orologio di sistema in base alle esigenze, anziché tentare di tenere traccia del tempo cumulato internamente.  
+- L'intervallo non è garantito l'esattezza ora. Per garantire l'accuratezza, il timer deve controllare l'orologio di sistema in base alle esigenze, anziché tentare di tenere traccia del tempo cumulato internamente.  
   
--   La precisione del <xref:System.Windows.Forms.Timer.Interval%2A> proprietà è espresso in millisecondi. Alcuni computer forniscono un contatore ad alta risoluzione che ha una risoluzione superiore a millisecondi. La disponibilità di questo tipo di contatore dipende da hardware del processore del computer in uso.
+- La precisione del <xref:System.Windows.Forms.Timer.Interval%2A> proprietà è espresso in millisecondi. Alcuni computer forniscono un contatore ad alta risoluzione che ha una risoluzione superiore a millisecondi. La disponibilità di questo tipo di contatore dipende da hardware del processore del computer in uso.
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.Timer>
 - [Componente Timer](timer-component-windows-forms.md)
-- [Panoramica del componente Timer](timer-component-overview-windows-forms.md)
+- [Panoramica sul componente Timer](timer-component-overview-windows-forms.md)

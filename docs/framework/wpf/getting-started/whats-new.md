@@ -6,44 +6,44 @@ helpviewer_keywords:
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
 ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59325826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020309"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Novità di WPF versione 4.5
 <a name="introduction"></a> In questo argomento contiene informazioni sulle funzionalità nuove e migliorate in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] versione 4.5.  
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
--   [Controllo della barra multifunzione](#ribbon_control)  
+- [Controllo della barra multifunzione](#ribbon_control)  
   
--   [Miglioramento delle prestazioni durante la visualizzazione di grandi set di dati raggruppati](#grouped_virtualization)  
+- [Miglioramento delle prestazioni durante la visualizzazione di grandi set di dati raggruppati](#grouped_virtualization)  
   
--   [Nuove funzionalità per il VirtualizingPanel](#VirtualizingPanel)  
+- [Nuove funzionalità per il VirtualizingPanel](#VirtualizingPanel)  
   
--   [Associazione alle proprietà statiche](#static_properties)  
+- [Associazione alle proprietà statiche](#static_properties)  
   
--   [Accesso alle raccolte su thread non di interfaccia utente](#xthread_access)  
+- [Accesso alle raccolte su thread non di interfaccia utente](#xthread_access)  
   
--   [Convalida dei dati in modo sincrono e asincrono](#INotifyDataErrorInfo)  
+- [Convalida dei dati in modo sincrono e asincrono](#INotifyDataErrorInfo)  
   
--   [Aggiornamento automatico dell'origine di un data binding](#delay)  
+- [Aggiornamento automatico dell'origine di un data binding](#delay)  
   
--   [Associazione a tipi che implementano ICustomTypeProvider](#ICustomTypeProvider)  
+- [Associazione a tipi che implementano ICustomTypeProvider](#ICustomTypeProvider)  
   
--   [Recupero delle informazioni di data binding da un'espressione di associazione](#binding_state)  
+- [Recupero delle informazioni del data binding da un'espressione di associazione](#binding_state)  
   
--   [Verifica di un oggetto DataContext valido](#DisconnectedSource)  
+- [Verifica di un oggetto DataContext valido](#DisconnectedSource)  
   
--   [Riposizionamento di dati contestuale alla modifica dei valori (shaping attivo)](#live_shaping)  
+- [Riposizionamento di dati contestuale alla modifica dei valori (shaping attivo)](#live_shaping)  
   
--   [Supporto migliorato per stabilire un riferimento debole a un evento](#weak_event_pattern)  
+- [Supporto migliorato per stabilire un riferimento debole a un evento](#weak_event_pattern)  
   
--   [Nuovi metodi per la classe Dispatcher](#async)  
+- [Nuovi metodi per la classe Dispatcher](#async)  
   
--   [Estensioni di markup per gli eventi](#events_markup_extenions)  
+- [Estensioni di markup per gli eventi](#events_markup_extenions)  
   
 <a name="ribbon_control"></a>   
 ## <a name="ribbon-control"></a>Controllo della barra multifunzione  
@@ -64,9 +64,9 @@ ms.locfileid: "59325826"
 ## <a name="binding-to-static-properties"></a>Associazione alle proprietà statiche  
  È possibile utilizzare proprietà statiche come origine di un data binding. Il motore di data binding riconosce quando cambia il valore della proprietà, se viene generato un evento statico.  Ad esempio, se la classe `SomeClass` definisce una proprietà statica denominata `MyProperty`, `SomeClass` può definire un evento statico generato quando cambia il valore di `MyProperty`.  L'evento statico può utilizzare una delle firme seguenti.  
   
--   `public static event EventHandler MyPropertyChanged;`  
+- `public static event EventHandler MyPropertyChanged;`  
   
--   `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
+- `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
   
  Si noti che nel primo caso, la classe espone un evento statico denominato *PropertyName* `Changed` che passa <xref:System.EventArgs> al gestore dell'evento.  Nel secondo caso, la classe espone un evento statico denominato `StaticPropertyChanged` che passa <xref:System.ComponentModel.PropertyChangedEventArgs> al gestore dell'evento. Una classe che implementa la proprietà statica può scegliere di generare notifiche delle modifiche delle proprietà utilizzando uno dei metodi.  
   

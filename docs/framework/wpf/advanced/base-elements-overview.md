@@ -5,11 +5,11 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
 ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032058"
 ---
 # <a name="base-elements-overview"></a>Cenni preliminari sugli elementi di base
 Una percentuale elevata di classi in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] deriva da quattro classi alle quali viene comunemente fatto riferimento nella documentazione [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] come classi degli elementi di base. Queste classi sono <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, e <xref:System.Windows.FrameworkContentElement>. Il <xref:System.Windows.DependencyObject> classe è correlata, perché è una classe di base comune di entrambi <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement>  
@@ -31,49 +31,49 @@ Una percentuale elevata di classi in [!INCLUDE[TLA#tla_winclient](../../../../in
   
  Se si crea una classe che deriva da <xref:System.Windows.DependencyObject>, si ereditano le funzionalità seguenti:  
   
--   <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> supporto e il supporto di sistema di proprietà generale.  
+- <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> supporto e il supporto di sistema di proprietà generale.  
   
--   Possibilità di utilizzare le proprietà di dipendenza e le proprietà associate implementate come proprietà di dipendenza.  
+- Possibilità di utilizzare le proprietà di dipendenza e le proprietà associate implementate come proprietà di dipendenza.  
   
  Se si crea una classe che deriva da <xref:System.Windows.UIElement>, si ereditano le funzionalità seguenti oltre a quelle fornite da <xref:System.Windows.DependencyObject>:  
   
--   Supporto di base per i valori delle proprietà animate. Per altre informazioni, vedere [Panoramica dell'animazione](../graphics-multimedia/animation-overview.md).  
+- Supporto di base per i valori delle proprietà animate. Per altre informazioni, vedere [Panoramica dell'animazione](../graphics-multimedia/animation-overview.md).  
   
--   Supporto di eventi di input di base e supporto dei comandi. Per altre informazioni, vedere [Cenni preliminari sull’input](input-overview.md) e [Cenni preliminari sull'esecuzione di comandi](commanding-overview.md).  
+- Supporto di eventi di input di base e supporto dei comandi. Per altre informazioni, vedere [Cenni preliminari sull’input](input-overview.md) e [Cenni preliminari sull'esecuzione di comandi](commanding-overview.md).  
   
--   Metodi virtuali di cui è possibile eseguire l'override per fornire informazioni a un sistema di layout.  
+- Metodi virtuali di cui è possibile eseguire l'override per fornire informazioni a un sistema di layout.  
   
  Se si crea una classe che deriva da <xref:System.Windows.FrameworkElement>, si ereditano le funzionalità seguenti oltre a quelle fornite da <xref:System.Windows.UIElement>:  
   
--   Supporto per l'uso di stili e storyboard. Per altre informazioni, vedere <xref:System.Windows.Style> e [Cenni preliminari sugli storyboard](../graphics-multimedia/storyboards-overview.md).  
+- Supporto per l'uso di stili e storyboard. Per altre informazioni, vedere <xref:System.Windows.Style> e [Cenni preliminari sugli storyboard](../graphics-multimedia/storyboards-overview.md).  
   
--   Supporto del data binding. Per altre informazioni, vedere la [panoramica del data binding](../data/data-binding-overview.md).  
+- Supporto del data binding. Per altre informazioni, vedere la [panoramica del data binding](../data/data-binding-overview.md).  
   
--   Supporto per i riferimenti di risorse dinamiche. Per altre informazioni, vedere [Risorse XAML](xaml-resources.md).  
+- Supporto per i riferimenti di risorse dinamiche. Per altre informazioni, vedere [Risorse XAML](xaml-resources.md).  
   
--   Supporto dell'ereditarietà dei valori di proprietà e altri flag nei metadati che agevolano la segnalazione di condizioni relative alle proprietà ai servizi del framework, ad esempio data binding, stili o implementazione del layout del framework. Per altre informazioni, vedere [Metadati delle proprietà del framework](framework-property-metadata.md).  
+- Supporto dell'ereditarietà dei valori di proprietà e altri flag nei metadati che agevolano la segnalazione di condizioni relative alle proprietà ai servizi del framework, ad esempio data binding, stili o implementazione del layout del framework. Per altre informazioni, vedere [Metadati delle proprietà del framework](framework-property-metadata.md).  
   
--   Concetto di albero logico. Per altre informazioni, vedere [Strutture ad albero in WPF](trees-in-wpf.md).  
+- Concetto di albero logico. Per altre informazioni, vedere [Strutture ad albero in WPF](trees-in-wpf.md).  
   
--   Supporto per l'implementazione pratica a livello di framework WPF del sistema di layout, inclusi un <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> override che consentono di rilevare le modifiche alle proprietà che hanno effetto sul layout.  
+- Supporto per l'implementazione pratica a livello di framework WPF del sistema di layout, inclusi un <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> override che consentono di rilevare le modifiche alle proprietà che hanno effetto sul layout.  
   
  Se si crea una classe che deriva da <xref:System.Windows.ContentElement>, si ereditano le funzionalità seguenti oltre a quelle fornite da <xref:System.Windows.DependencyObject>:  
   
--   Supporto per le animazioni. Per altre informazioni, vedere [Panoramica dell'animazione](../graphics-multimedia/animation-overview.md).  
+- Supporto per le animazioni. Per altre informazioni, vedere [Panoramica dell'animazione](../graphics-multimedia/animation-overview.md).  
   
--   Supporto di eventi di input di base e supporto dei comandi. Per altre informazioni, vedere [Cenni preliminari sull’input](input-overview.md) e [Cenni preliminari sull'esecuzione di comandi](commanding-overview.md).  
+- Supporto di eventi di input di base e supporto dei comandi. Per altre informazioni, vedere [Cenni preliminari sull’input](input-overview.md) e [Cenni preliminari sull'esecuzione di comandi](commanding-overview.md).  
   
  Se si crea una classe che deriva da <xref:System.Windows.FrameworkContentElement>, si ottengono le funzionalità seguenti oltre a quelle fornite da <xref:System.Windows.ContentElement>:  
   
--   Supporto per l'uso di stili e storyboard. Per altre informazioni, vedere <xref:System.Windows.Style> e [Cenni preliminari sull'animazione](../graphics-multimedia/animation-overview.md).  
+- Supporto per l'uso di stili e storyboard. Per altre informazioni, vedere <xref:System.Windows.Style> e [Cenni preliminari sull'animazione](../graphics-multimedia/animation-overview.md).  
   
--   Supporto del data binding. Per altre informazioni, vedere la [panoramica del data binding](../data/data-binding-overview.md).  
+- Supporto del data binding. Per altre informazioni, vedere la [panoramica del data binding](../data/data-binding-overview.md).  
   
--   Supporto per i riferimenti di risorse dinamiche. Per altre informazioni, vedere [Risorse XAML](xaml-resources.md).  
+- Supporto per i riferimenti di risorse dinamiche. Per altre informazioni, vedere [Risorse XAML](xaml-resources.md).  
   
--   Supporto dell'ereditarietà dei valori di proprietà e altri flag nei metadati che agevolano la segnalazione di condizioni relative alle proprietà ai servizi del framework, ad esempio data binding, stili o implementazione del layout del framework. Per altre informazioni, vedere [Metadati delle proprietà del framework](framework-property-metadata.md).  
+- Supporto dell'ereditarietà dei valori di proprietà e altri flag nei metadati che agevolano la segnalazione di condizioni relative alle proprietà ai servizi del framework, ad esempio data binding, stili o implementazione del layout del framework. Per altre informazioni, vedere [Metadati delle proprietà del framework](framework-property-metadata.md).  
   
--   Non si eredita l'accesso alle modifiche del sistema di layout (ad esempio <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). Le implementazioni del sistema di layout sono disponibili solo in <xref:System.Windows.FrameworkElement>. Tuttavia, ereditano un' <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> override per rilevare le modifiche alle proprietà che hanno effetto sul layout e segnalarle a qualsiasi host del contenuto.  
+- Non si eredita l'accesso alle modifiche del sistema di layout (ad esempio <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). Le implementazioni del sistema di layout sono disponibili solo in <xref:System.Windows.FrameworkElement>. Tuttavia, ereditano un' <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> override per rilevare le modifiche alle proprietà che hanno effetto sul layout e segnalarle a qualsiasi host del contenuto.  
   
  I modelli di contenuto sono documentati per una varietà di classi. Il modello di contenuto per una classe è un fattore possibile da considerare per trovare una classe adatta da cui derivare. Per altre informazioni, vedere [Modello di contenuto WPF](../controls/wpf-content-model.md).  
   

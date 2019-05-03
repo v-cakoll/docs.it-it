@@ -1,15 +1,15 @@
 ---
-title: Confronto tra proprietà e. Argomenti
+title: Proprietà e Argomenti
 ms.date: 03/30/2017
 ms.assetid: 14651389-4a49-4cbb-9ddf-c83fdc155df1
 ms.openlocfilehash: a6ea4755599f18e8bbaa8187941623578d2168ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962630"
 ---
-# <a name="properties-vs-arguments"></a>Confronto tra proprietà e. Argomenti
+# <a name="properties-vs-arguments"></a>Proprietà e Argomenti
 Sono disponibili diverse opzioni per passare dati in un'attività. Oltre a usare <xref:System.Activities.InArgument>, è possibile sviluppare attività che ricevono dati usando le proprietà CLR standard o le proprietà <xref:System.Activities.ActivityAction> pubbliche. In questo argomento viene illustrato come selezionare il tipo di metodo appropriato.  
   
 ## <a name="using-clr-properties"></a>Utilizzo delle proprietà CLR  

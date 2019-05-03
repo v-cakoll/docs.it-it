@@ -2,15 +2,9 @@
 title: Windows Communication Foundation
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Windows Communication Foundation [WCF]
-- WCF [WCF]
+  - 'Windows Communication Foundation [WCF]'
+  - 'WCF [WCF]'
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-ms.openlocfilehash: 56054216dc6e90e789c230acb3d56565a9ba3d69
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804271"
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>Sviluppo di applicazioni orientate ai servizi con WCF
 In questa sezione della documentazione vengono fornite informazioni su Windows Communication Foundation (WCF), un modello di programmazione unificato per la compilazione di applicazioni orientate ai servizi. Consente agli sviluppatori di compilare soluzioni transazionali protette e affidabili in grado di integrarsi a piattaforme diverse e interagire con investimenti esistenti.
@@ -35,7 +29,7 @@ In questa sezione della documentazione vengono fornite informazioni su Windows C
  Vengono descritti i concetti fondamentali per la creazione di applicazioni Windows Communication Foundation.  
   
  [Dettagli delle funzionalità di WCF](../../../docs/framework/wcf/feature-details/index.md)  
- Mostra gli argomenti che consentono di scegliere quale WCF le funzionalità è necessario utilizzare.  
+ Illustra gli argomenti che consentono di scegliere quali le funzionalità WCF è necessario utilizzare.  
   
  [Estensione di WCF](../../../docs/framework/wcf/extending/index.md)  
  Viene descritto come modificare ed estendere i componenti di runtime WCF.  
@@ -53,7 +47,7 @@ In questa sezione della documentazione vengono fornite informazioni su Windows C
  Vengono descritte le risorse del sistema operativo richieste da WCF.  
   
  [Risoluzione dei problemi di installazione](../../../docs/framework/wcf/troubleshooting-setup-issues.md)  
- Viene fornito il materiale sussidiario per risolvere i problemi relativi all'installazione di WCF.  
+ Vengono fornite le istruzioni per risolvere i problemi relativi all'installazione di WCF.  
   
  [Migrazione da .NET Remoting a WCF](../../../docs/framework/wcf/migrating-from-net-remoting-to-wcf.md)  
  Vengono confrontati .NET Remoting e WCF e viene fornito materiale sussidiario per gli scenari comuni.  
@@ -71,7 +65,7 @@ In questa sezione della documentazione vengono fornite informazioni su Windows C
  Mostra un elenco di termini specifici a WCF  
   
  [Riferimenti generali](../../../docs/framework/wcf/general-reference.md)  
- Nella sezione vengono illustrati gli elementi usati per configurare client e servizi di Windows Communication Foundation.  
+ Nella sezione vengono illustrati gli elementi utilizzati per configurare client e servizi di Windows Communication Foundation.  
   
  [Feedback e community](../../../docs/framework/wcf/feedback-and-community.md)  
  Informazioni su come fornire commenti e suggerimenti su Windows Communication Foundation.  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - forms [Windows Forms], drawing ellipses
 ms.assetid: 781db806-950d-4c5b-b022-493f7fd0c4a8
 ms.openlocfilehash: 2e7be3f2c4c710bb24568dd2e70f6f5cc4706c63
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004315"
 ---
 # <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>Procedura: Disegnare un'ellisse piena in un Windows Form
 In questo esempio disegna un'ellisse piena in un form.  
@@ -39,6 +39,6 @@ In questo esempio disegna un'ellisse piena in un form.
 ## <a name="see-also"></a>Vedere anche
 
 - [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)
-- [Guida introduttiva alla programmazione grafica](getting-started-with-graphics-programming.md)
+- [Introduzione alla programmazione grafica](getting-started-with-graphics-programming.md)
 - [Linee e riempimenti con fusione alfa](alpha-blending-lines-and-fills.md)
-- [Utilizzo di un oggetto Brush per il riempimento di forme](using-a-brush-to-fill-shapes.md)
+- [Uso di un oggetto Brush per il riempimento di forme](using-a-brush-to-fill-shapes.md)

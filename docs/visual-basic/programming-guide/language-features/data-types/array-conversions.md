@@ -13,20 +13,20 @@ helpviewer_keywords:
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
 ms.openlocfilehash: 88002e2c099ed9503beddb190d243aadcc1087fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908024"
 ---
 # <a name="array-conversions-visual-basic"></a>Conversioni di matrici (Visual Basic)
 È possibile convertire un tipo di matrice a un tipo di matrice diversa purché si soddisfino le condizioni seguenti:  
   
--   **Numero di dimensioni uguale.** Le classificazioni delle due matrici devono essere lo stesso, vale a dire deve avere lo stesso numero di dimensioni. Tuttavia, le lunghezze delle rispettive dimensioni non sono necessario essere lo stesso.  
+- **Numero di dimensioni uguale.** Le classificazioni delle due matrici devono essere lo stesso, vale a dire deve avere lo stesso numero di dimensioni. Tuttavia, le lunghezze delle rispettive dimensioni non sono necessario essere lo stesso.  
   
--   **Tipo di dati elemento.** I tipi di dati degli elementi di entrambe le matrici devono essere tipi di riferimento. Non è possibile convertire un' `Integer` matrice per un `Long` della matrice, o anche a un `Object` della matrice, in quanto è coinvolta in almeno un tipo valore. Per altre informazioni, vedere [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+- **Tipo di dati elemento.** I tipi di dati degli elementi di entrambe le matrici devono essere tipi di riferimento. Non è possibile convertire un' `Integer` matrice per un `Long` della matrice, o anche a un `Object` della matrice, in quanto è coinvolta in almeno un tipo valore. Per altre informazioni, vedere [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
--   **Convertibilità della varianza.** Una conversione widening o narrowing, deve essere possibile tra i tipi di elementi delle due matrici. Un esempio che questo requisito non è un tentativo di conversione tra una `String` matrice e una matrice di una classe derivata da <xref:System.Attribute?displayProperty=nameWithType>. Questi due tipi presentano nulla in comune e non esiste alcuna conversione di qualsiasi tipo tra di essi.  
+- **Convertibilità della varianza.** Una conversione widening o narrowing, deve essere possibile tra i tipi di elementi delle due matrici. Un esempio che questo requisito non è un tentativo di conversione tra una `String` matrice e una matrice di una classe derivata da <xref:System.Attribute?displayProperty=nameWithType>. Questi due tipi presentano nulla in comune e non esiste alcuna conversione di qualsiasi tipo tra di essi.  
   
  Una conversione del tipo di una matrice a un altro è widening o narrowing a seconda se la conversione degli elementi rispettivi widening o narrowing. Per altre informazioni, vedere [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   

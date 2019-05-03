@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
 ms.openlocfilehash: 121c0a95a3a6bb695d9c73347c733cba215a0de4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801621"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>Espressione di tipo \<tipo > non è disponibile per query
 Espressione di tipo \<tipo > non è disponibile per query. Assicurarsi che sia presente un'importazione di riferimento e/o lo spazio dei nomi di assembly per il provider LINQ.  
@@ -43,4 +43,4 @@ Espressione di tipo \<tipo > non è disponibile per query. Assicurarsi che sia p
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [Riferimenti e istruzione Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
 - [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Riferimenti (pagina), Creazione progetti (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
+- [Pagina Riferimenti, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)

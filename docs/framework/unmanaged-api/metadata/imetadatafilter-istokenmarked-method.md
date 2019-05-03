@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6969f2c1df9b5b04122ed6aef550697171123cf5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992498"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>Metodo IMetaDataFilter::IsTokenMarked
 Ottiene un valore che indica se il token di metadati specificato è stato contrassegnato come elaborato.  

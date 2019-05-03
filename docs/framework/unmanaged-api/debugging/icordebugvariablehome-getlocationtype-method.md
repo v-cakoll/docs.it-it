@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: af879cbbf8edfd05e79d9b77b0c1fb71b2c835c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993655"
 ---
 # <a name="icordebugvariablehomegetlocationtype-method"></a>Metodo ICorDebugVariableHome::GetLocationType
 Ottiene il tipo di percorso nativo della variabile.  

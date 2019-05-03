@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
 ms.openlocfilehash: 32ee58833b83e2a3356b6c1598abd207364e6ec1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609927"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implementazione del pattern di controllo Dock di automazione interfaccia utente
 > [!NOTE]
@@ -28,13 +28,13 @@ Esempio di ancoraggio da Visual Studio dove la finestra "Visualizzazione classi"
 ## <a name="implementation-guidelines-and-conventions"></a>Linee guida e convenzioni di implementazione  
  Quando si implementa il pattern di controllo Dock, tenere presenti le linee guida e le convenzioni seguenti:  
   
--   <xref:System.Windows.Automation.Provider.IDockProvider> non espone le proprietà del contenitore di ancoraggio o le proprietà dei controlli ancorati vicino al controllo corrente all'interno del contenitore di ancoraggio.  
+- <xref:System.Windows.Automation.Provider.IDockProvider> non espone le proprietà del contenitore di ancoraggio o le proprietà dei controlli ancorati vicino al controllo corrente all'interno del contenitore di ancoraggio.  
   
--   I controlli vengono ancorati reciprocamente in base al relativo ordine z corrente, ovvero più elevata è la posizione nell'ordine z, più lontano verrà inserito il controllo rispetto al bordo specificato del contenitore di ancoraggio.  
+- I controlli vengono ancorati reciprocamente in base al relativo ordine z corrente, ovvero più elevata è la posizione nell'ordine z, più lontano verrà inserito il controllo rispetto al bordo specificato del contenitore di ancoraggio.  
   
--   Se il contenitore di ancoraggio viene ridimensionato, i controlli ancorati all'interno del contenitore verranno riposizionati e allineati allo stesso bordo a cui sono stati originariamente ancorati. I controlli ancorati verranno inoltre ridimensionati per riempire lo spazio all'interno del contenitore in base al comportamento di ancoraggio della relativa proprietà <xref:System.Windows.Automation.DockPosition>. Ad esempio, se viene specificata la proprietà <xref:System.Windows.Automation.DockPosition.Top> , i lati destro e sinistro del controllo verranno espansi in modo da riempire lo spazio disponibile. Se viene specificata la proprietà <xref:System.Windows.Automation.DockPosition.Fill> , tutti e quattro i lati del controllo verranno espansi in modo da riempire lo spazio disponibile.  
+- Se il contenitore di ancoraggio viene ridimensionato, i controlli ancorati all'interno del contenitore verranno riposizionati e allineati allo stesso bordo a cui sono stati originariamente ancorati. I controlli ancorati verranno inoltre ridimensionati per riempire lo spazio all'interno del contenitore in base al comportamento di ancoraggio della relativa proprietà <xref:System.Windows.Automation.DockPosition>. Ad esempio, se viene specificata la proprietà <xref:System.Windows.Automation.DockPosition.Top> , i lati destro e sinistro del controllo verranno espansi in modo da riempire lo spazio disponibile. Se viene specificata la proprietà <xref:System.Windows.Automation.DockPosition.Fill> , tutti e quattro i lati del controllo verranno espansi in modo da riempire lo spazio disponibile.  
   
--   In un sistema con più monitor i controlli devono essere ancorati al lato sinistro o destro del monitor corrente. Se ciò non è possibile, devono essere ancorati al lato sinistro del monitor all'estrema sinistra o al lato destro del monitor all'estrema destra.  
+- In un sistema con più monitor i controlli devono essere ancorati al lato sinistro o destro del monitor corrente. Se ciò non è possibile, devono essere ancorati al lato sinistro del monitor all'estrema sinistra o al lato destro del monitor all'estrema destra.  
   
 <a name="Required_Members_for_IDockProvider"></a>   
 ## <a name="required-members-for-idockprovider"></a>Membri obbligatori per IDockProvider  
@@ -57,8 +57,8 @@ Esempio di ancoraggio da Visual Studio dove la finestra "Visualizzazione classi"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Panoramica dell'albero di automazione dell'interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Usare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

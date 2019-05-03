@@ -11,11 +11,11 @@ helpviewer_keywords:
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
 ms.openlocfilehash: 49ec491308cc6a9fd81e74bff213029389137b88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61724065"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Procedura: Migliorare le prestazioni evitando il ridimensionamento automatico
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] durante il disegno, che ridurrebbe le prestazioni, può ridimensionare automaticamente un'immagine. In alternativa, è possibile controllare il ridimensionamento dell'immagine, passando le dimensioni del rettangolo di destinazione per il <xref:System.Drawing.Graphics.DrawImage%2A> (metodo).  

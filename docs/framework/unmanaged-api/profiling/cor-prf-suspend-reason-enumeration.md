@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 21533b5173bcd91d0c944fbde4eafc9817de8315
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598987"
 ---
 # <a name="corprfsuspendreason-enumeration"></a>Enumerazione COR_PRF_SUSPEND_REASON
 Indica il motivo per cui il runtime è sospeso.  

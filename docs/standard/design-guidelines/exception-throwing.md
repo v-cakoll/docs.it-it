@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: KrzysztofCwalina
 ms.openlocfilehash: 74eee418a3c87b335cdf96557c4e17b95aff7b58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669069"
 ---
 # <a name="exception-throwing"></a>Generazione di eccezioni
 Linee guida che generano eccezioni descritte in questa sezione richiedono una buona definizione del significato dell'errore di esecuzione. Errore di esecuzione si verifica ogni volta che un membro non è possibile fare ciò che è stato progettato per eseguire operazioni (quali il nome del membro implica). Ad esempio, se il `OpenFile` metodo non può restituire un handle di file aperto al chiamante, possa essere considerato un errore di esecuzione.  

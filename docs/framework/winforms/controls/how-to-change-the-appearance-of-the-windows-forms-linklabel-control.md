@@ -13,10 +13,10 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
 ms.openlocfilehash: f0a5805561509501ca38a7fec6b4731af190e3c3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322017"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Procedura: Modificare l'aspetto del controllo LinkLabel di Windows Forms
@@ -127,6 +127,6 @@ ms.locfileid: "59322017"
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
-- [Panoramica del controllo LinkLabel](linklabel-control-overview-windows-forms.md)
-- [Procedura: Eseguire il collegamento a un oggetto o a una pagina Web con il controllo LinkLabel di Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Panoramica sul controllo LinkLabel](linklabel-control-overview-windows-forms.md)
+- [Procedura: Collegarsi a un oggetto o Web Page con il controllo LinkLabel di Windows Form](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
 - [Controllo LinkLabel](linklabel-control-windows-forms.md)

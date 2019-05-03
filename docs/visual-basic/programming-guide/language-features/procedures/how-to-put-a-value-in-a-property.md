@@ -9,11 +9,11 @@ helpviewer_keywords:
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
 ms.openlocfilehash: e6aee5ea36c0315d5b01ae2734d17c9e7dab8e93
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863896"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Procedura: Inserire un valore in una proprietà (Visual Basic)
 Archiviare un valore in una proprietà inserendo il nome della proprietà sul lato sinistro di un'istruzione di assegnazione.  
@@ -37,12 +37,12 @@ Archiviare un valore in una proprietà inserendo il nome della proprietà sul la
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
-- [Routine di proprietà](./property-procedures.md)
+- [Routine Property](./property-procedures.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
-- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [Differenze tra proprietà e variabili in Visual Basic](./differences-between-properties-and-variables.md)
 - [Procedura: Creare una proprietà](./how-to-create-a-property.md)
 - [Procedura: Dichiarare una proprietà con livelli di accesso misti](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Procedura: Chiamare una routine di proprietà](./how-to-call-a-property-procedure.md)
+- [Procedura: Chiamare una routine Property](./how-to-call-a-property-procedure.md)
 - [Procedura: Dichiarare e chiamare una proprietà predefinita in Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Procedura: Ottenere un valore da una proprietà](./how-to-get-a-value-from-a-property.md)

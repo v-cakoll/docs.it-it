@@ -3,18 +3,18 @@ title: 119 - WorkflowInstanceUpdatedRecord
 ms.date: 03/30/2017
 ms.assetid: 32485d0a-dcdb-45bc-b1e3-79fa9ad9439b
 ms.openlocfilehash: 5bbda72208dd9cf38e7b8765d324129beaf3fa0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924072"
 ---
 # <a name="119---workflowinstanceupdatedrecord"></a>119 - WorkflowInstanceUpdatedRecord
 ## <a name="properties"></a>Proprietà  
   
 |||  
 |-|-|  
-|ID|119|  
+|Id|119|  
 |Parole chiave|HealthMonitoring, WFTracking|  
 |Livello|Informazioni|  
 |Canale|Microsoft-Windows-Application Server-Applications/Analytic|  
@@ -36,7 +36,7 @@ ms.locfileid: "33514236"
 |Stato|xs:string|Stato corrente del flusso di lavoro.|  
 |OriginalDefinitionIdentity|xs:string|ID definizione originale del flusso di lavoro|  
 |UpdatedDefinitionIdentity|xs:string|ID definizione aggiornata del flusso di lavoro|  
-|Annotazioni|xs:string|Annotazioni aggiunte a questo evento. I valori vengono archiviati in un elemento xml nel formato \<elementi >\< nome elemento = "Nomeannotazione" Type = "> Valoreannotazione\</item > \< /items >. Se viene specificata alcuna annotazione, la stringa contiene \<elementi / >. La dimensione dell'evento ETW è limitata da quella del buffer ETW o dal payload massimo per un evento ETW. Se la dimensione dell'evento supera i limiti ETW, l'evento viene troncato eliminando le annotazioni e sostituendo il valore di annotazione con \<elementi >...  \< /items >.|  
+|Annotazioni|xs:string|Annotazioni aggiunte a questo evento. I valori vengono archiviati in un elemento xml nel formato \<gli elementi >\< nome elemento = "Nomeannotazione" Type = "> Valoreannotazione\</item > \< /items >. Se viene specificata alcuna annotazione, la stringa contiene \<elementi / >. La dimensione dell'evento ETW è limitata da quella del buffer ETW o dal payload massimo per un evento ETW. Se la dimensione dell'evento supera i limiti ETW, quindi l'evento viene troncato eliminando le annotazioni e sostituendo il valore dell'annotazione con \<elementi >...  \< /items >.|  
 |ProfileName|xs:string|Nome o profilo di rilevamento che ha determinato la creazione di questo evento.|  
 |WorkflowDefinitionIdentity|xs:string|ID della definizione del flusso di lavoro|  
 |AppDomain|xs:string|Stringa restituita da AppDomain.CurrentDomain.FriendlyName.|

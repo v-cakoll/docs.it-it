@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d3fb1bf3f61c78f4eb157b93363b1c06b25bee04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987948"
 ---
 # <a name="icordebugmodule2-interface"></a>Interfaccia ICorDebugModule2
 

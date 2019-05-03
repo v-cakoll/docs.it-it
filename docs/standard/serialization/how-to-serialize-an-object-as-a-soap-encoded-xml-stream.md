@@ -10,11 +10,11 @@ helpviewer_keywords:
 - serialization, SOAP
 ms.assetid: af406e0a-fa3a-46dd-a7ba-c80731eba3a0
 ms.openlocfilehash: bfbdda0861a6f2867a2e7003dd7054129fd343b8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018021"
 ---
 # <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>Procedura: Serializzare un oggetto come flusso XML con codifica SOAP
   

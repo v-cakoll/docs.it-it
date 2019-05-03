@@ -7,11 +7,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
 ms.openlocfilehash: 6499dfce880cc9ce16e5d77887afc0598692f48e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938203"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Procedura: Determinare a quale tipo fa riferimento una variabile oggetto (Visual Basic)
 Una variabile oggetto contiene un puntatore ai dati archiviati in un' posizione. Il tipo di dati può modificare durante la fase di esecuzione. In qualsiasi momento, è possibile usare la <xref:System.Type.GetTypeCode%2A> metodo per determinare il tipo di runtime corrente, o il [operatore TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) per determinare se il tipo in fase di esecuzione è compatibile con un tipo specificato.  
@@ -37,7 +37,7 @@ Una variabile oggetto contiene un puntatore ai dati archiviati in un' posizione.
   
 ### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>Per determinare se un oggetto tipo di variabile è compatibile con un tipo specificato  
   
--   Usare la `TypeOf` operatore in combinazione con il [operatore Is](../../../../visual-basic/language-reference/operators/is-operator.md) per testare l'oggetto con un `TypeOf`... `Is` espressione.  
+- Usare la `TypeOf` operatore in combinazione con il [operatore Is](../../../../visual-basic/language-reference/operators/is-operator.md) per testare l'oggetto con un `TypeOf`... `Is` espressione.  
   
     ```  
     If TypeOf objA Is System.Windows.Forms.Control Then  
@@ -60,4 +60,4 @@ Una variabile oggetto contiene un puntatore ai dati archiviati in un' posizione.
 - <xref:System.TypeCode>
 - [Variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Valori di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)

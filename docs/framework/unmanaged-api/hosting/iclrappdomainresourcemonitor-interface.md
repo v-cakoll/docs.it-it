@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15bdbc001838e3d13a9789c8f54daa80f3b6ef9a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985205"
 ---
 # <a name="iclrappdomainresourcemonitor-interface"></a>Interfaccia ICLRAppDomainResourceMonitor
 Fornisce metodi per controllare memoria e utilizzo della CPU di un dominio dell'applicazione.  
@@ -37,15 +37,15 @@ Fornisce metodi per controllare memoria e utilizzo della CPU di un dominio dell'
 ## <a name="remarks"></a>Note  
  Il `ICLRAppDomainResourceMonitor` interfaccia fornisce funzionalità simili alle seguenti proprietà gestite:  
   
--   <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -59,6 +59,6 @@ Fornisce metodi per controllare memoria e utilizzo della CPU di un dominio dell'
 ## <a name="see-also"></a>Vedere anche
 
 - [\<appDomainResourceMonitoring > elemento](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
-- [Monitoraggio delle risorse del dominio applicazione](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [Monitoraggio delle risorse del dominio dell'applicazione](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
 - [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

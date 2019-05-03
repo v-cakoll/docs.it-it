@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8541ea7b614ff4a6ca666f0e2549a7f50e190192
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777962"
 ---
 # <a name="stackoverflowtype-enumeration"></a>Enumerazione StackOverflowType
 Contiene valori che indicano la causa principale di un evento di stack overflow.  

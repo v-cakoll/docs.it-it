@@ -3,11 +3,11 @@ title: <faultPropagationQueries> di WCF
 ms.date: 03/30/2017
 ms.assetid: d85f66a7-e7b0-4dbb-83cc-89fa06fc9161
 ms.openlocfilehash: bc016827c5bb243bc83dbb53c1eda7eec1bfd8c4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704011"
 ---
 # <a name="faultpropagationqueries-of-wcf"></a>\<faultPropagationQueries> of WCF
 
@@ -51,7 +51,7 @@ Nessuno.
 
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery>](faultpropagationquery-of-wcf.md)|Query usata per rilevare la gestione degli errori che si verificano all'interno di un'attività.  Questo evento si verifica ogni volta che un FaultHandler elabora un errore.|  
+|[\<faultPropagationQuery>](faultpropagationquery-of-wcf.md)|Query utilizzata per rilevare la gestione degli errori che si verificano all'interno di un'attività.  Questo evento si verifica ogni volta che un FaultHandler elabora un errore.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 ms.openlocfilehash: 63d3bb272fcdbee2c59b0569c85f8183cdac8666
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673785"
 ---
 # <a name="clear-element-for-listeners-for-source"></a>\<Cancella > (elemento) per \<listeners > per \<origine >
 Cancella la raccolta `Listeners` per un'origine di traccia.  

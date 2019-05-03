@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Canvas control [WPF], attached properties
 ms.assetid: 48f1d25d-3820-4107-a4cc-d6c1e5664a44
 ms.openlocfilehash: 347c8502bd4c5fafcde7a142327f85bfb75b9954
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699071"
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>Procedura: Usare le proprietà associate di un'area di disegno per posizionare gli elementi figlio
 In questo esempio viene illustrato come utilizzare le proprietà associate di <xref:System.Windows.Controls.Canvas> per posizionare elementi figlio.  
@@ -36,5 +36,5 @@ Ciascuna <xref:System.Windows.Controls.Button> viene posizionata in relazione pa
 - <xref:System.Windows.Controls.Canvas.Top%2A>
 - <xref:System.Windows.Controls.Button>
 - [Cenni preliminari sugli elementi Panel](panels-overview.md)
-- [Procedure relative](canvas-how-to-topics.md)
+- [Procedure relative alle proprietà](canvas-how-to-topics.md)
 - [Cenni preliminari sulle proprietà associate](../advanced/attached-properties-overview.md)

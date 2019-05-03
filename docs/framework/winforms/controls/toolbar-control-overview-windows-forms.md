@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
 ms.openlocfilehash: 7b39c8e3dca88e968b43ba5ff14794e2e77247d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009542"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>Cenni preliminari sul controllo ToolBar (Windows Form)
 > [!NOTE]
@@ -36,4 +36,4 @@ ms.locfileid: "59174811"
 - [Controllo ToolBar](toolbar-control-windows-forms.md)
 - [Procedura: Aggiungere pulsanti a un controllo ToolBar](how-to-add-buttons-to-a-toolbar-control.md)
 - [Procedura: Definire un'icona per un pulsante della barra degli strumenti](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Procedura: Attivare eventi di menu per i pulsanti della barra degli strumenti](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Procedura: Attivare eventi di Menu per i pulsanti della barra degli strumenti](how-to-trigger-menu-events-for-toolbar-buttons.md)

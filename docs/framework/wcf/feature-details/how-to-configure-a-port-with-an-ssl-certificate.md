@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
 ms.openlocfilehash: d709123895f361c1d2268a218b4163c8d195e1b4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047962"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procedura: Configurare una porta con un certificato SSL
 Quando si crea un servizio Windows Communication Foundation (WCF) self-hosted con la <xref:System.ServiceModel.WSHttpBinding> che usa la protezione del trasporto di classi, è anche necessario configurare una porta con un certificato X.509. Se non si intende creare un servizio indipendente, è possibile ospitare il servizio in Internet Information Services (IIS). Per altre informazioni, vedere [protezione del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -27,15 +27,15 @@ Quando si crea un servizio Windows Communication Foundation (WCF) self-hosted co
   
  In questo argomento viene descritto come eseguire diverse procedure:  
   
--   Determinazione della configurazione corrente delle porte di un computer  
+- Determinazione della configurazione corrente delle porte di un computer  
   
--   Acquisizione dell'identificazione personale (necessaria per le due procedure seguenti) di un certificato  
+- Acquisizione dell'identificazione personale (necessaria per le due procedure seguenti) di un certificato  
   
--   Binding di un certificato SSL alla configurazione di una porta  
+- Binding di un certificato SSL alla configurazione di una porta  
   
--   Binding di un certificato SSL alla configurazione di una porta e supporto di certificati client  
+- Binding di un certificato SSL alla configurazione di una porta e supporto di certificati client  
   
--   Eliminazione di un certificato SSL da un numero di porta  
+- Eliminazione di un certificato SSL da un numero di porta  
   
  Si noti che la modifica dei certificati archiviati nel computer richiede privilegi di amministrazione.  
   
@@ -71,9 +71,9 @@ Quando si crea un servizio Windows Communication Foundation (WCF) self-hosted co
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   Il **-i** commutatore presenta la sintassi `IP`:`port` e indica allo strumento di impostare il certificato sulla porta 8012 del computer. I quattro zero che precedono il numero possono essere anche sostituiti dall'indirizzo IP effettivo del computer.  
+    - Il **-i** commutatore presenta la sintassi `IP`:`port` e indica allo strumento di impostare il certificato sulla porta 8012 del computer. I quattro zero che precedono il numero possono essere anche sostituiti dall'indirizzo IP effettivo del computer.  
   
-    -   Il **-h** consente di specificare l'identificazione personale del certificato.  
+    - Il **-h** consente di specificare l'identificazione personale del certificato.  
   
 2. In [!INCLUDE[wv](../../../../includes/wv-md.md)] usare lo strumento Netsh.exe come illustrato nell'esempio seguente.  
   
@@ -81,11 +81,11 @@ Quando si crea un servizio Windows Communication Foundation (WCF) self-hosted co
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
     ```  
   
-    -   Il **certhash** parametro specifica l'identificazione personale del certificato.  
+    - Il **certhash** parametro specifica l'identificazione personale del certificato.  
   
-    -   Il **ipport** parametro specifica l'indirizzo IP e la porta e funziona come il **-i** dello strumento Httpcfg.exe descritto.  
+    - Il **ipport** parametro specifica l'indirizzo IP e la porta e funziona come il **-i** dello strumento Httpcfg.exe descritto.  
   
-    -   Il **appid** parametro è un GUID che può essere utilizzato per identificare l'applicazione proprietaria.  
+    - Il **appid** parametro è un GUID che può essere utilizzato per identificare l'applicazione proprietaria.  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Per associare un certificato SSL a un numero di porta e ai certificati client supportati  
   
@@ -131,4 +131,4 @@ Quando si crea un servizio Windows Communication Foundation (WCF) self-hosted co
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+- [Sicurezza del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

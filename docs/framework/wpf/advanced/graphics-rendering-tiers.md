@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
 ms.openlocfilehash: d5924ff9336bc6e93022caf1b85d5fd98f7a617d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051585"
 ---
 # <a name="graphics-rendering-tiers"></a>Livelli di rendering della grafica
 Un livello di rendering definisce un livello di prestazioni e funzionalità hardware grafiche per un dispositivo che esegue un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -22,23 +22,23 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
 ## <a name="graphics-hardware"></a>Hardware grafico  
  Le funzionalità dell'hardware grafico che hanno effetto sui livelli di rendering sono:  
   
--   **RAM video** La quantità di memoria video sull'hardware grafico determina le dimensioni e il numero di buffer che possono essere usati per la composizione della grafica.  
+- **RAM video** La quantità di memoria video sull'hardware grafico determina le dimensioni e il numero di buffer che possono essere usati per la composizione della grafica.  
   
--   **Pixel shader** Un pixel shader è una funzione di elaborazione grafica che calcola gli effetti sui singoli pixel. A seconda della risoluzione della grafica visualizzata, potrebbe essere necessario elaborare diversi milioni di pixel per ogni fotogramma visualizzato.  
+- **Pixel shader** Un pixel shader è una funzione di elaborazione grafica che calcola gli effetti sui singoli pixel. A seconda della risoluzione della grafica visualizzata, potrebbe essere necessario elaborare diversi milioni di pixel per ogni fotogramma visualizzato.  
   
--   **Vertex shader** Un vertex shader è una funzione di elaborazione grafica che esegue operazioni matematiche sui dati dei vertici dell'oggetto.  
+- **Vertex shader** Un vertex shader è una funzione di elaborazione grafica che esegue operazioni matematiche sui dati dei vertici dell'oggetto.  
   
--   **Supporto per più trame** Il supporto per più trame è la possibilità di applicare due o più trame distinte durante un'operazione di fusione su un oggetto grafico 3D. Il grado di supporto per più trame è determinato dal numero di unità a più trame nell'hardware grafico.  
+- **Supporto per più trame** Il supporto per più trame è la possibilità di applicare due o più trame distinte durante un'operazione di fusione su un oggetto grafico 3D. Il grado di supporto per più trame è determinato dal numero di unità a più trame nell'hardware grafico.  
   
 <a name="rendering_tier_definitions"></a>   
 ## <a name="rendering-tier-definitions"></a>Definizioni dei livelli di rendering  
  Le funzionalità dell'hardware grafico determinano la capacità di rendering di un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Il sistema [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] definisce tre livelli di rendering:  
   
--   **Livello di rendering 0** Nessuna accelerazione hardware grafico. Tutte le funzionalità grafiche usano l'accelerazione software. Il livello della versione di [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] è inferiore alla versione 9.0.  
+- **Livello di rendering 0** Nessuna accelerazione hardware grafico. Tutte le funzionalità grafiche usano l'accelerazione software. Il livello della versione di [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] è inferiore alla versione 9.0.  
   
--   **Livello di rendering 1** Alcune funzionalità grafiche usano l'accelerazione hardware grafico. Il livello della versione di [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] è superiore o uguale alla versione 9.0.  
+- **Livello di rendering 1** Alcune funzionalità grafiche usano l'accelerazione hardware grafico. Il livello della versione di [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] è superiore o uguale alla versione 9.0.  
   
--   **Livello di rendering 2** La maggior parte delle funzionalità grafiche usa l'accelerazione hardware grafico. Il livello della versione di [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] è superiore o uguale alla versione 9.0.  
+- **Livello di rendering 2** La maggior parte delle funzionalità grafiche usa l'accelerazione hardware grafico. Il livello della versione di [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] è superiore o uguale alla versione 9.0.  
   
  Il <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> proprietà consente di recuperare il livello di rendering in fase di esecuzione dell'applicazione. Il livello di rendering consente di determinare se il dispositivo supporta determinate funzionalità grafiche con accelerazione hardware. L'applicazione può quindi usare percorsi di codice diversi in fase di esecuzione a seconda del livello di rendering supportato dal dispositivo.  
   
@@ -56,7 +56,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
   
 |Funzionalità|Livello 1|Livello 2|  
 |-------------|------------|------------|  
-|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version|Deve essere superiore o uguale alla 9.0.|Deve essere superiore o uguale alla 9.0.|  
+|Versione di [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]|Deve essere superiore o uguale alla 9.0.|Deve essere superiore o uguale alla 9.0.|  
 |RAM video|Deve essere superiore o uguale a 60 MB.|Deve essere superiore o uguale a 120 MB.|  
 |Pixel shader|Il livello della versione deve essere superiore o uguale alla 2.0.|Il livello della versione deve essere superiore o uguale alla 2.0.|  
 |Vertex shader|Nessun requisito.|Il livello della versione deve essere superiore o uguale alla 2.0.|  
@@ -68,10 +68,10 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
 |-------------|-----------|  
 |Rendering 2D|È supportata la maggior parte del rendering 2D.|  
 |Rasterizzazione 3D|È supportata la maggior parte delle rasterizzazioni 3D.|  
-|Filtro anisotropico 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tenta di utilizzare i filtro anisotropico quando viene eseguito il rendering del contenuto 3D. Il filtro anisotropico consente di migliorare la qualità delle trame di un'immagine su superfici lontane e molto inclinate rispetto alla fotocamera.|  
-|Mapping MIP 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prova a usare il mapping MIP durante il rendering del contenuto 3D. Mapping MIP migliora la qualità del rendering della trama quando una trama occupa un campo di vista più piccola in un <xref:System.Windows.Controls.Viewport3D>.|  
+|Filtro anisotropico 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prova a usare il filtro anisotropico quando viene eseguito il rendering del contenuto 3D. Il filtro anisotropico consente di migliorare la qualità delle trame di un'immagine su superfici lontane e molto inclinate rispetto alla fotocamera.|  
+|Mapping MIP 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prova a usare il mapping MIP quando viene eseguito il rendering del contenuto 3D. Mapping MIP migliora la qualità del rendering della trama quando una trama occupa un campo di vista più piccola in un <xref:System.Windows.Controls.Viewport3D>.|  
 |Sfumature radiali|Anche se supportato, evitare l'uso di <xref:System.Windows.Media.RadialGradientBrush> su oggetti di grandi dimensioni.|  
-|Calcoli per l'illuminazione 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] l'illuminazione per vertice, che indica che l'intensità della luce deve essere calcolata in ogni vertice per ogni materiale applicato a una rete mesh.|  
+|Calcoli per l'illuminazione 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] esegue l'illuminazione per vertice, in cui l'intensità della luce deve essere calcolata in ogni vertice per ogni materiale applicato a un mesh.|  
 |Rendering del testo|Il rendering dei tipi di carattere a livello di sub-pixel usa i pixel shader disponibili nell'hardware grafico.|  
   
  Le funzionalità e capacità seguenti sono con accelerazione hardware solo per il livello di rendering 2:  
@@ -96,11 +96,11 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
  Le risorse seguenti consentono di analizzare le caratteristiche delle prestazioni dell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ### <a name="graphics-rendering-registry-settings"></a>Impostazioni del Registro di sistema per il rendering della grafica  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce quattro impostazioni del Registro di sistema per il controllo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rendering:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce quattro impostazioni del Registro di sistema per controllare il rendering [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
 |Impostazione|Descrizione|  
 |-------------|-----------------|  
-|**Opzione per la disabilitazione dell'accelerazione hardware**|Specifica se l'accelerazione hardware deve essere abilitata.|  
+|**Opzione di disabilitazione dell'accelerazione hardware**|Specifica se l'accelerazione hardware deve essere abilitata.|  
 |**Valore massimo di multicampionamento**|Specifica il grado di multicampionamento del contenuto anti-aliasing [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)].|  
 |**Impostazione Data driver video necessaria**|Specifica se il sistema disabilita l'accelerazione hardware per i driver rilasciati prima di novembre 2004.|  
 |**Opzione per l'uso di unità di rasterizzazione dei riferimenti**|Specifica se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deve usare l'unità di rasterizzazione dei riferimenti.|  
@@ -108,7 +108,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
  A queste impostazioni è possibile accedere tramite qualsiasi utilità di configurazione esterna che possa fare riferimento alle impostazioni del Registro di sistema di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Per creare o modificare queste impostazioni, è possibile accedere ai valori direttamente usando l'editor del Registro di sistema di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Per altre informazioni, vedere [Impostazioni del Registro di sistema per il rendering della grafica](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>Strumenti per la profilatura delle prestazioni WPF  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce una suite di strumenti che consentono di analizzare il comportamento in fase di esecuzione dell'applicazione e determinare i tipi di ottimizzazioni delle prestazioni che è possibile applicare per la profilatura delle prestazioni. La tabella seguente elenca gli strumenti di profilatura delle prestazioni inclusi nello strumento [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)], WPF Performance Suite:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include una suite di strumenti per la profilatura delle prestazioni che consentono di analizzare il comportamento dell'applicazione in fase di esecuzione e di determinare i tipi di ottimizzazioni delle prestazioni che è possibile applicare. La tabella seguente elenca gli strumenti di profilatura delle prestazioni inclusi nello strumento [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)], WPF Performance Suite:  
   
 |Strumento|Descrizione|  
 |----------|-----------------|  
@@ -132,6 +132,6 @@ Finestra principale dello strumento di diagnostica DirectX
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [Ottimizzazione delle prestazioni di applicazioni WPF](optimizing-wpf-application-performance.md)
-- [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
+- [Famiglia di prodotti per l'analisi delle prestazioni WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
 - [Impostazioni del Registro di sistema per il rendering della grafica](../graphics-multimedia/graphics-rendering-registry-settings.md)
 - [Suggerimenti sulle animazioni](../graphics-multimedia/animation-tips-and-tricks.md)

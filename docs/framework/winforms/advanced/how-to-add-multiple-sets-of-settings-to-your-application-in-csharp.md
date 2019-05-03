@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
 ms.openlocfilehash: 9a4913f635204aac2214d97225c7b8147c6fe9ab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59326606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768550"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Procedura: Aggiungere più set di impostazioni dell'applicazione in C\#
 In alcuni casi, è consigliabile avere più set di impostazioni in un'applicazione. Ad esempio, se si sviluppa un'applicazione posto di un determinato gruppo di impostazioni di cambiare frequentemente, è possibile raggrupparle tutto in un singolo file in modo che il file può essere sostituito a livello globale, lasciando inalterate le altre impostazioni. Visual Studio consente di aggiungere più set di impostazioni al progetto. Altri set di impostazioni sono accessibili tramite l'oggetto Properties. Settings.  
@@ -27,5 +27,5 @@ In alcuni casi, è consigliabile avere più set di impostazioni in un'applicazio
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Utilizzo delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)
+- [Uso delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)
 - [Cenni preliminari sulle impostazioni delle applicazioni](application-settings-overview.md)

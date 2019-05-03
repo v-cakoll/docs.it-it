@@ -3,11 +3,11 @@ title: Costruttore di tipo denominato (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
 ms.openlocfilehash: f95f0dcb92068675b2efff0af7e97b349976bf42
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760454"
 ---
 # <a name="named-type-constructor-entity-sql"></a>Costruttore di tipo denominato (Entity SQL)
 Utilizzato per creare istanze di tipi nominali del modello concettuale, ad esempio i tipi di entità o i tipi complessi.  
@@ -47,7 +47,7 @@ Utilizzato per creare istanze di tipi nominali del modello concettuale, ad esemp
   
  `MyModel.Person("Bill", MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567')))`  
   
- Nell'esempio seguente viene illustrato come inizializzare una proprietà di un tipo complesso su null:`MyModel.ZipCode(‘98118’, null)`  
+ Nell'esempio seguente viene illustrato come inizializzare una proprietà di un tipo complesso impostandola su Null:`MyModel.ZipCode(‘98118’, null)`.  
   
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato il costruttore di tipi denominati per creare un'istanza di un tipo di modello concettuale. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  

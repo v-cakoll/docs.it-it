@@ -8,11 +8,11 @@ helpviewer_keywords:
 - AutoSizeMode property
 ms.assetid: 62fd82a2-9565-4f65-925b-9d1e66dc4e7d
 ms.openlocfilehash: 6d5c4a22f186ddc5811c4a4d5e79776decea9e50
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954297"
 ---
 # <a name="autosize-property-overview"></a>Cenni preliminari sulla proprietà AutoSize
 Il <xref:System.Windows.Forms.Control.AutoSize%2A> proprietà consente di modificarne le dimensioni, se necessario, in modo da riflettere il valore specificato da un controllo di <xref:System.Windows.Forms.Control.PreferredSize%2A> proprietà. Modificare il comportamento di ridimensionamento di controlli specifici impostando il `AutoSizeMode` proprietà.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
 ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703530"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Procedure consigliate: Controllo delle versioni dei contratti dati
 In questo argomento vengono elencate le procedure consigliate per la creazione di contratti dati che possono evolvere facilmente nel tempo. Per altre informazioni sui contratti dati, vedere gli argomenti in [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -39,9 +39,9 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
   
  In alcuni casi è necessario garantire la rigorosa conformità allo schema per i messaggi inviati dall'applicazione, ma non è possibile basarsi sui messaggi in ingresso per essere rigorosamente conformi allo schema. In questo caso, vi è il rischio che un messaggio in ingresso contenga dati estranei. I valori estranei vengono archiviati e restituiti da WCF e determinano quindi l'invio di messaggi di schema non valido. Per evitare questo problema, è necessario disattivare la funzionalità di creazione di sequenze di andata e ritorno. È possibile ottenere questo risultato in due modi.  
   
--   Non implementare l'interfaccia <xref:System.Runtime.Serialization.IExtensibleDataObject> sui tipi usati.  
+- Non implementare l'interfaccia <xref:System.Runtime.Serialization.IExtensibleDataObject> sui tipi usati.  
   
--   Applicare un attributo <xref:System.ServiceModel.ServiceBehaviorAttribute> al contratto di servizio con la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> impostata su `true`.  
+- Applicare un attributo <xref:System.ServiceModel.ServiceBehaviorAttribute> al contratto di servizio con la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> impostata su `true`.  
   
  Per altre informazioni sulle sequenze andata e ritorno, vedere [contratti di dati Forward-Compatible](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
@@ -66,11 +66,11 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
   
 8. Nelle versioni più recenti, possono essere aggiunti nuovi membri dati. Questa operazione deve essere eseguita osservando le regole seguenti:  
   
-    1.  La proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> deve essere sempre impostata sul valore predefinito `false`.  
+    1. La proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> deve essere sempre impostata sul valore predefinito `false`.  
   
-    2.  Se un valore predefinito pari a `null` o a zero per il membro non è accettabile, è necessario fornire un metodo di callback mediante <xref:System.Runtime.Serialization.OnDeserializingAttribute> per garantire un'impostazione predefinita adeguata qualora il membro non sia presente nel flusso in ingresso. Per altre informazioni sui callback, vedere [callback di serializzazione a tolleranza di versione](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+    2. Se un valore predefinito pari a `null` o a zero per il membro non è accettabile, è necessario fornire un metodo di callback mediante <xref:System.Runtime.Serialization.OnDeserializingAttribute> per garantire un'impostazione predefinita adeguata qualora il membro non sia presente nel flusso in ingresso. Per altre informazioni sui callback, vedere [callback di serializzazione a tolleranza di versione](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3.  Il <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> proprietà deve essere usata per assicurarsi che tutti i membri dati appena aggiunti vengono visualizzati dopo i membri dati esistenti. È consigliabile eseguire questa operazione come segue: Nessuno dei membri dei dati nella prima versione del contratto dati deve avere i `Order` set di proprietà. La proprietà `Order` di tutti i membri dati aggiunti nella versione 2 del contratto dati deve essere impostata su 2. La proprietà `Order` di tutti i membri dati aggiunti nella versione 3 del contratto dati deve essere impostata su 3 e così via. È consentito avere più membri dati impostati sullo stesso numero di `Order`.  
+    3. Il <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> proprietà deve essere usata per assicurarsi che tutti i membri dati appena aggiunti vengono visualizzati dopo i membri dati esistenti. È consigliabile eseguire questa operazione come segue: Nessuno dei membri dei dati nella prima versione del contratto dati deve avere i `Order` set di proprietà. La proprietà `Order` di tutti i membri dati aggiunti nella versione 2 del contratto dati deve essere impostata su 2. La proprietà `Order` di tutti i membri dati aggiunti nella versione 3 del contratto dati deve essere impostata su 3 e così via. È consentito avere più membri dati impostati sullo stesso numero di `Order`.  
   
 9. Non rimuovere i membri dati nelle versioni più recenti, anche se per la proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> è stato lasciato il valore predefinito `false` nelle versioni precedenti.  
   
@@ -101,8 +101,8 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
 - <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
-- [Uso di contratti dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Controllo delle versioni dei contratti dati](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
-- [Nomi di contratto dati](../../../docs/framework/wcf/feature-details/data-contract-names.md)
-- [Contratti dati compatibili con versioni successive](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [Uso di contratti di dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Controllo delle versioni dei contratti di dati](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Nomi di contratto di dati](../../../docs/framework/wcf/feature-details/data-contract-names.md)
+- [Contratti di dati compatibili con versioni successive](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
 - [Callback di serializzazione a tolleranza di versione](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

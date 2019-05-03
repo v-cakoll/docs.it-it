@@ -3,11 +3,11 @@ title: 'Attività 1: Creare una nuova applicazione Windows Presentation Foundati
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
 ms.openlocfilehash: 63b84e4fd2c88d98fbf417ee1f55ec203d295116
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59320379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641640"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Attività 1: Creare una nuova applicazione Windows Presentation Foundation
 In questa attività verranno creare un'applicazione Windows Presentation Foundation (WPF) vuota usando il modello di Visual Studio dell'applicazione WPF e aggiungere i riferimenti appropriati [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] gli assembly del flusso di lavoro.  
@@ -32,11 +32,11 @@ In questa attività verranno creare un'applicazione Windows Presentation Foundat
   
 9. Nel **Aggiungi riferimento** finestra di dialogo, fare clic sulla **.NET** scheda, tenere premuto il tasto CTRL, selezionare gli assembly seguenti e quindi fare clic su **OK**:  
   
-    -   System.Activities  
+    - System.Activities  
   
-    -   System.Activities.Presentation  
+    - System.Activities.Presentation  
   
-    -   System.Activities.Core.Presentation  
+    - System.Activities.Core.Presentation  
   
 10. Fare clic su **OK**.  
   
@@ -44,5 +44,5 @@ In questa attività verranno creare un'applicazione Windows Presentation Foundat
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riallocazione dell'utilità di progettazione del flusso di lavoro](rehosting-the-workflow-designer.md)
-- [Attività 2: Ospitare Progettazione flussi di lavoro](task-2-host-the-workflow-designer.md)
+- [Riallocazione di Progettazione flussi di lavoro](rehosting-the-workflow-designer.md)
+- [Attività 2: Host di progettazione del flusso di lavoro](task-2-host-the-workflow-designer.md)

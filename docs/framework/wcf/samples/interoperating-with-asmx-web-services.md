@@ -3,11 +3,11 @@ title: Interoperabilità con servizi Web ASMX
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
 ms.openlocfilehash: 327cb3f376ef37278d8ea58f32fdb8eeb7b67c51
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989872"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>Interoperabilità con servizi Web ASMX
 Questo esempio viene illustrato come integrare un'applicazione client Windows Communication Foundation (WCF) con un servizio Web ASMX esistente.  

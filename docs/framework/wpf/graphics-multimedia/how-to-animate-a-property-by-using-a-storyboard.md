@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Animare una proprietà utilizzando uno storyboard'
+title: "Procedura: Aggiungere un'animazione a una proprietà usando uno storyboard"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Storyboards [WPF], animation
 ms.assetid: f4a314e9-1da2-4367-85fc-1232487efa7a
 ms.openlocfilehash: f6064368b4f5e4fa8324b4039d734d4430cd9174
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761208"
 ---
-# <a name="how-to-animate-a-property-by-using-a-storyboard"></a>Procedura: Animare una proprietà utilizzando uno storyboard
+# <a name="how-to-animate-a-property-by-using-a-storyboard"></a>Procedura: Aggiungere un'animazione a una proprietà usando uno storyboard
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media.Animation.Storyboard> per animare le proprietà. Animare una proprietà usando un <xref:System.Windows.Media.Animation.Storyboard>, creare un'animazione per ogni proprietà che si desidera animare e creare inoltre un <xref:System.Windows.Media.Animation.Storyboard> per contenere le animazioni.  
   
  Il tipo di proprietà determina il tipo di animazione da usare. Ad esempio, per animare una proprietà che accetta <xref:System.Double> valori, usare un <xref:System.Windows.Media.Animation.DoubleAnimation>. Il <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> e <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> specificano l'oggetto e proprietà a cui viene applicata l'animazione.  

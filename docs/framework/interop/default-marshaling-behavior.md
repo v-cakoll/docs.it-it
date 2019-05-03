@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409445"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59315764"
 ---
 # <a name="default-marshaling-behavior"></a>comportamento predefinito del marshalling
 Il marshalling di interoperabilità opera sulle regole che stabiliscono il comportamento dei dati associati a parametri del metodo durante il passaggio tra memoria gestita e non gestita. Queste regole predefinite controllano tali attività di marshalling come le trasformazioni dei tipi di dati, il fatto che un oggetto chiamato possa modificare i dati passati e restituire tali modifiche al chiamante e le circostanze in cui il gestore di marshalling fornisce ottimizzazioni delle prestazioni.  
@@ -64,11 +64,11 @@ BSTR MethodOne (BSTR b) {
   
  Se un'interfaccia non proviene da un oggetto noto, il gestore di marshalling esegue le operazioni seguenti:  
   
-1.  Il gestore di marshalling invia una query all'oggetto per l'interfaccia **IProvideClassInfo2**. Se specificato, il gestore di marshalling usa il CLSID restituito da **IProvideClassInfo2.GetGUID** per identificare la coclasse che fornisce l'interfaccia. Con il CLSID, il gestore di marshalling può individuare il wrapper dal Registro di sistema se l'assembly è stato registrato in precedenza.  
+1. Il gestore di marshalling invia una query all'oggetto per l'interfaccia **IProvideClassInfo2**. Se specificato, il gestore di marshalling usa il CLSID restituito da **IProvideClassInfo2.GetGUID** per identificare la coclasse che fornisce l'interfaccia. Con il CLSID, il gestore di marshalling può individuare il wrapper dal Registro di sistema se l'assembly è stato registrato in precedenza.  
   
-2.  Il gestore di marshalling invia una query all'interfaccia per l'interfaccia **IProvideClassInfo**. Se specificato, il gestore di marshalling usa l'oggetto **ITypeInfo** restituito da **IProvideClassInfo.GetClassinfo** per determinare il CLSID della classe che espone l'interfaccia. Il gestore di marshalling può usare il CLSID per individuare i metadati per il wrapper.  
+2. Il gestore di marshalling invia una query all'interfaccia per l'interfaccia **IProvideClassInfo**. Se specificato, il gestore di marshalling usa l'oggetto **ITypeInfo** restituito da **IProvideClassInfo.GetClassinfo** per determinare il CLSID della classe che espone l'interfaccia. Il gestore di marshalling può usare il CLSID per individuare i metadati per il wrapper.  
   
-3.  Se il gestore di marshalling non riesce ancora a identificare la classe, esegue il wrapping dell'interfaccia con una classe wrapper generica denominata **System.__ComObject**.  
+3. Se il gestore di marshalling non riesce ancora a identificare la classe, esegue il wrapping dell'interfaccia con una classe wrapper generica denominata **System.__ComObject**.  
   
 ## <a name="default-marshaling-for-delegates"></a>Marshalling predefinito per i delegati  
  Un delegato gestito viene sottoposto a marshalling come un'interfaccia COM o come un puntatore a funzione, in base al meccanismo di chiamata:  
@@ -440,6 +440,7 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
 - [Copia e blocco](copying-and-pinning.md)
 - [Marshalling predefinito per le matrici](default-marshaling-for-arrays.md)

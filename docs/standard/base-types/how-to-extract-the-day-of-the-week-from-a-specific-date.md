@@ -24,23 +24,23 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2c422a75244302ae6433af933995b00bdfaa061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c665cb590a090c546d50f780477c254344914a2f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537972"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59327763"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Procedura: Estrarre il giorno della settimana da una data specifica
 .NET Framework consente di determinare in modo semplice il giorno ordinale della settimana e di visualizzare il nome del giorno della settimana localizzato per una data specifica. Un valore enumerato che indica il giorno della settimana corrispondente a una determinata data è specificato dalla proprietà <xref:System.DateTime.DayOfWeek%2A> o <xref:System.DateTimeOffset.DayOfWeek%2A>. Al contrario, il recupero del nome del giorno della settimana è un'operazione di formattazione che può essere eseguita effettuando la chiamata a un metodo di formattazione, ad esempio il metodo `ToString` del valore di data e ora o il metodo <xref:System.String.Format%2A?displayProperty=nameWithType>. In questo argomento viene illustrato come eseguire queste operazioni di formattazione.  
   
 ### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>Per estrarre un numero che indica il giorno della settimana da una data specifica  
   
-1.  Se si usa la rappresentazione di stringa di una data, convertirla in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> tramite il metodo statico <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> o <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
+1. Se si usa la rappresentazione di stringa di una data, convertirla in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> tramite il metodo statico <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> o <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
   
-2.  Usare la proprietà <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> o <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> per recuperare un valore <xref:System.DayOfWeek> che indica il giorno della settimana.  
+2. Usare la proprietà <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> o <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> per recuperare un valore <xref:System.DayOfWeek> che indica il giorno della settimana.  
   
-3.  Se necessario, eseguire il cast (in C#) o convertire (in Visual Basic) il valore <xref:System.DayOfWeek> in un valore integer.  
+3. Se necessario, eseguire il cast (in C#) o convertire (in Visual Basic) il valore <xref:System.DayOfWeek> in un valore integer.  
   
  Nell'esempio seguente è visualizzato un valore integer che rappresenta il giorno della settimana di una data specifica.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "54537972"
   
 ### <a name="to-extract-the-abbreviated-weekday-name-from-a-specific-date"></a>Per estrarre il nome del giorno della settimana abbreviato da una data specifica  
   
-1.  Se si usa la rappresentazione di stringa di una data, convertirla in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> tramite il metodo statico <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> o <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
+1. Se si usa la rappresentazione di stringa di una data, convertirla in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> tramite il metodo statico <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> o <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
   
-2.  È possibile estrarre il nome del giorno della settimana abbreviato delle impostazioni di cultura correnti o di impostazioni di cultura specifiche:  
+2. È possibile estrarre il nome del giorno della settimana abbreviato delle impostazioni di cultura correnti o di impostazioni di cultura specifiche:  
   
     1.  Per estrarre il nome del giorno della settimana abbreviato per le impostazioni di cultura correnti, chiamare il metodo di istanza <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> del valore di data e ora e passare la stringa "ddd" come parametro `format`. Nell'esempio seguente viene illustrata la chiamata al metodo <xref:System.DateTime.ToString%28System.String%29>.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "54537972"
   
 ### <a name="to-extract-the-full-weekday-name-from-a-specific-date"></a>Per estrarre il nome del giorno della settimana esteso da una data specifica  
   
-1.  Se si usa la rappresentazione di stringa di una data, convertirla in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> tramite il metodo statico <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> o <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
+1. Se si usa la rappresentazione di stringa di una data, convertirla in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> tramite il metodo statico <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> o <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
   
-2.  È possibile estrarre il nome del giorno della settimana esteso delle impostazioni di cultura correnti o di impostazioni di cultura specifiche:  
+2. È possibile estrarre il nome del giorno della settimana esteso delle impostazioni di cultura correnti o di impostazioni di cultura specifiche:  
   
     1.  Per estrarre il nome del giorno della settimana esteso per le impostazioni di cultura correnti, chiamare il metodo di istanza <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> del valore di data e ora e passare la stringa "dddd" come parametro `format`. Nell'esempio seguente viene illustrata la chiamata al metodo <xref:System.DateTime.ToString%28System.String%29>.  
   

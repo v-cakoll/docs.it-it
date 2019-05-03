@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
 ms.openlocfilehash: ed988547e0be3ef934c46d725c41646c3a75e626
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918346"
 ---
 # <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>«\<name1 >' è ambiguo ed è importato dagli spazi dei nomi o tipi\<nome2 >»
 È stato specificato un nome che è ambiguo ed è quindi in conflitto con un altro nome. Il compilatore Visual Basic non dispone di regole di risoluzione dei conflitti. è necessario evitare ambiguità tra nomi manualmente.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
 ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945340"
 ---
 # <a name="from-clause-visual-basic"></a>Clausola From (Visual Basic)
 Specifica uno o più variabili di intervallo e una raccolta di query.  
@@ -48,21 +48,21 @@ From element [ As type ] In collection [ _ ]
   
  Ogni `From` clausola può essere seguita da una qualsiasi combinazione di clausole di query aggiuntive per perfezionare la query. È possibile affinare la query nei modi seguenti:  
   
--   Combinare più raccolte in modo implicito usando la `From` e `Select` clausole, o in modo esplicito tramite il `Join` o `Group Join` clausole.  
+- Combinare più raccolte in modo implicito usando la `From` e `Select` clausole, o in modo esplicito tramite il `Join` o `Group Join` clausole.  
   
--   Usare il `Where` clausola per filtrare i risultati della query.  
+- Usare il `Where` clausola per filtrare i risultati della query.  
   
--   Ordinare il risultato utilizzando il `Order By` clausola.  
+- Ordinare il risultato utilizzando il `Order By` clausola.  
   
--   Raggruppare i risultati simili tramite la `Group By` clausola.  
+- Raggruppare i risultati simili tramite la `Group By` clausola.  
   
--   Usare il `Aggregate` clausola per identificare le funzioni di aggregazione da valutare per l'intero risultato della query.  
+- Usare il `Aggregate` clausola per identificare le funzioni di aggregazione da valutare per l'intero risultato della query.  
   
--   Usare il `Let` clausola per introdurre una variabile di iterazione il cui valore è determinato da un'espressione anziché una raccolta.  
+- Usare il `Let` clausola per introdurre una variabile di iterazione il cui valore è determinato da un'espressione anziché una raccolta.  
   
--   Usare il `Distinct` clausola per ignorare i risultati della query duplicata.  
+- Usare il `Distinct` clausola per ignorare i risultati della query duplicata.  
   
--   Identificare le parti del risultato da restituire con il `Skip`, `Take`, `Skip While`, e `Take While` clausole.  
+- Identificare le parti del risultato da restituire con il `Skip`, `Take`, `Skip While`, e `Take While` clausole.  
   
 ## <a name="example"></a>Esempio  
  La query seguente espressione Usa un `From` clausola per dichiarare una variabile di intervallo `cust` per ogni `Customer` dell'oggetto nel `customers` raccolta. Il `Where` clausola utilizza la variabile di intervallo per limitare l'output per i clienti dall'area specificata. Il `For Each` ciclo Visualizza il nome della società per ogni cliente nel risultato della query.  

@@ -3,11 +3,11 @@ title: EXISTS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
 ms.openlocfilehash: 72d96c5f24fcedf870370de3792680831145a454
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034203"
 ---
 # <a name="exists-entity-sql"></a>EXISTS (Entity SQL)
 Determina se una raccolta è vuota.  
@@ -26,7 +26,7 @@ Determina se una raccolta è vuota.
  Specifica la negazione del risultato di EXISTS.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` Se la raccolta non è vuota. in caso contrario, `false`.  
+ `true` se la raccolta non è vuota; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
  EXISTS è uno degli operatori sui set di [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Tutti gli operatori sui set di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vengono valutati da sinistra a destra. Per informazioni sulla priorità per la [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatori sui set, vedere [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  

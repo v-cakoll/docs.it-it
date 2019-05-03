@@ -9,11 +9,11 @@ helpviewer_keywords:
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
 ms.openlocfilehash: 7a03729f075645a230c660ff4c6469e0f5f3a51e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674779"
 ---
 # <a name="cryptoclasses-element"></a>\<cryptoClasses > elemento
 Contiene un elenco delle classi di crittografia per le quali è stato eseguito il mapping a un nome descrittivo nell'elemento [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).  
@@ -81,6 +81,6 @@ Contiene un elenco delle classi di crittografia per le quali è stato eseguito i
 - <xref:System.Security.Cryptography>
 - [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [servizi crittografici](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
 - [Configurazione di classi di crittografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

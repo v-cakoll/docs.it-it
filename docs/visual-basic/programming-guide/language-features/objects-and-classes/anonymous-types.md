@@ -9,11 +9,11 @@ helpviewer_keywords:
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
 ms.openlocfilehash: 3dc2083e5b4fd06250a1387c32f0eba28e879b30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758496"
 ---
 # <a name="anonymous-types-visual-basic"></a>Tipi anonimi (Visual Basic)
 Visual Basic supporta i tipi anonimi, che consentono di creare oggetti senza scrivere una definizione di classe per il tipo di dati. La classe viene generata direttamente dal compilatore. La classe non ha alcun nome utilizzabile, eredita direttamente da <xref:System.Object>e contiene le proprietà specificate nella dichiarazione dell'oggetto. Poiché il nome del tipo di dati non è specificato, viene considerato un *tipo anonimo*.  
@@ -53,22 +53,22 @@ Visual Basic supporta i tipi anonimi, che consentono di creare oggetti senza scr
 ## <a name="key-properties"></a>Proprietà chiave  
  Le proprietà di chiave sono diversi dalle proprietà non chiave in diversi modi fondamentali:  
   
--   Solo i valori delle proprietà chiave vengono confrontati per determinare se due istanze sono uguali.  
+- Solo i valori delle proprietà chiave vengono confrontati per determinare se due istanze sono uguali.  
   
--   I valori delle proprietà chiave sono di sola lettura e non possono essere modificati.  
+- I valori delle proprietà chiave sono di sola lettura e non possono essere modificati.  
   
--   Solo i valori delle proprietà di chiave sono inclusi nell'algoritmo di codice hash generato dal compilatore per un tipo anonimo.  
+- Solo i valori delle proprietà di chiave sono inclusi nell'algoritmo di codice hash generato dal compilatore per un tipo anonimo.  
   
 ### <a name="equality"></a>Uguaglianza  
  Istanze di tipi anonimi possono essere uguali solo se sono istanze dello stesso tipo anonimo. Il compilatore considera due istanze come istanze dello stesso tipo se soddisfano le condizioni seguenti:  
   
--   Vengono dichiarati nello stesso assembly.  
+- Vengono dichiarati nello stesso assembly.  
   
--   Le relative proprietà hanno lo stesso nome, gli stessi tipi derivati e vengono dichiarate nello stesso ordine. I confronti tra nomi non sono tra maiuscole e minuscole.  
+- Le relative proprietà hanno lo stesso nome, gli stessi tipi derivati e vengono dichiarate nello stesso ordine. I confronti tra nomi non sono tra maiuscole e minuscole.  
   
--   Le stesse proprietà in ogni sono contrassegnate come proprietà chiave.  
+- Le stesse proprietà in ogni sono contrassegnate come proprietà chiave.  
   
--   Almeno una proprietà in ogni dichiarazione è una proprietà chiave.  
+- Almeno una proprietà in ogni dichiarazione è una proprietà chiave.  
   
  Un'istanza di tipi anonimi che non ha proprietà chiave è uguale solo a se stesso.  
   
@@ -86,11 +86,11 @@ Visual Basic supporta i tipi anonimi, che consentono di creare oggetti senza scr
 ## <a name="anonymous-types-from-query-expressions"></a>Tipi anonimi da espressioni di Query  
  Le espressioni di query non richiedono sempre la creazione di tipi anonimi. Quando possibile, usano un tipo esistente per contenere i dati della colonna. Ciò si verifica quando la query restituisce l'intero record dall'origine dei dati, o un solo campo di ogni record. Negli esempi di codice seguente, `customers` è una raccolta di oggetti di un `Customer` classe. La classe dispone di molte proprietà e si può includere uno o più di esse nel risultato della query, in qualsiasi ordine. Nei primi due esempi, non i tipi anonimi sono necessari perché la query Seleziona gli elementi di tipi denominati:  
   
--   `custs1` contiene una raccolta di stringhe, in quanto `cust.Name` è una stringa.  
+- `custs1` contiene una raccolta di stringhe, in quanto `cust.Name` è una stringa.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
--   `custs2` contiene una raccolta di `Customer` oggetti, perché ogni elemento della `customers` è un `Customer` oggetto e l'intero elemento è selezionato dalla query.  
+- `custs2` contiene una raccolta di `Customer` oggetti, perché ogni elemento della `customers` è un `Customer` oggetto e l'intero elemento è selezionato dalla query.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   

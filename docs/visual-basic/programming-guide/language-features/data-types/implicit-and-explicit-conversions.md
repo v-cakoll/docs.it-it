@@ -21,11 +21,11 @@ helpviewer_keywords:
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
 ms.openlocfilehash: 82ff710629089cd14c7e982b4afa4301d0790811
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008254"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Conversioni implicite ed esplicite (Visual Basic)
 Un' *conversione implicita* non richiede alcuna sintassi speciale nel codice sorgente. Nell'esempio seguente, Visual Basic converte in modo implicito il valore del `k` su un valore a virgola mobile a precisione singola prima di assegnarlo a `q`.  

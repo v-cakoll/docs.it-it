@@ -3,11 +3,11 @@ title: 'Procedura: Serializzare e deserializzare dati JSON'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
 ms.openlocfilehash: 7edce66a23021fa03a6f98b3b847a5b671c17124
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972991"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>Procedura: Serializzare e deserializzare dati JSON
 JSON (JavaScript Object Notation) è un efficiente formato di codifica dati che consente scambi rapidi di piccole quantità di dati tra browser client e servizi Web compatibili con AJAX.  

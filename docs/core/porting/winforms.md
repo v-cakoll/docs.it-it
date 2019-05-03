@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 3a50b5f085aee4afc2f388aeac8a4f68823b92c7
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: aebfaa85338e014ca47256b85a1bd6529ad803bb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675861"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327165"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Procedura: Convertire un'app desktop Windows Forms in .NET Core
 
@@ -27,7 +27,7 @@ In questo articolo vengono usati vari nomi per identificare i tipi di file usati
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=winforms+core) per tutte le operazioni di progettazione che si vogliono eseguire.
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) per tutte le operazioni di progettazione che si vogliono eseguire.
 
   Installare i carichi di lavoro di Visual Studio seguenti:
   - Sviluppo per desktop .NET
@@ -37,9 +37,8 @@ In questo articolo vengono usati vari nomi per identificare i tipi di file usati
 - Il progetto deve essere codificato in C#. 
 - Installare l'anteprima più recente di [.NET Core 3.0](https://aka.ms/netcore3download).
 
-
 >[!NOTE]
->**Visual Studio 2017** non supporta progetti .NET Core 3.0. **Visual Studio 2019 Preview/RC** supporta i progetti .NET Core 3.0, ma non supporta ancora la finestra di progettazione visiva per i progetti Windows Forms .NET Core 3.0. Per usare la finestra di progettazione visiva, è necessario avere un progetto Windows Forms .NET nella soluzione che condivide i file di modulo con il progetto .NET Core.
+>**Visual Studio 2017** non supporta progetti .NET Core 3.0. **Visual Studio 2019** supporta i progetti .NET Core 3.0, ma non supporta ancora la finestra di progettazione grafica per i progetti Windows Forms .NET Core 3.0. Per usare la finestra di progettazione visiva, è necessario avere un progetto Windows Forms .NET nella soluzione che condivide i file di modulo con il progetto .NET Core.
 
 ### <a name="consider"></a>Consider
 
@@ -61,7 +60,7 @@ Per la conversione di un'applicazione Windows Forms di .NET Framework, esistono 
 
     È sempre consigliabile usare le versioni più recenti dei pacchetti NuGet prima di qualsiasi migrazione. Se l'applicazione fa riferimento a pacchetti NuGet, aggiornarli alla versione più recente. Verificare che l'applicazione venga compilata correttamente. Dopo l'aggiornamento, se sono presenti errori di pacchetto, effettuare il downgrade del pacchetto alla versione più recente che non causa problemi al codice.
 
-01. Visual Studio 2019 Preview/RC non supporta ancora la finestra di progettazione dei moduli per .NET Core 3.0
+01. Visual Studio 2019 non supporta ancora Progettazione Windows Forms per .NET Core 3.0
 
     Attualmente, è necessario mantenere il file di progetto .NET Framework Windows Forms esistente se si vuole usare la finestra di progettazione dei moduli da Visual Studio.
 
@@ -295,7 +294,7 @@ Il comando precedente consente di aggiungere il codice seguente al progetto **My
 
 ## <a name="windows-forms-designer"></a>Progettazione Windows Form
 
-Come descritto in dettaglio in questo articolo, Visual Studio 2019 Preview/RC supporta solo la finestra di progettazione dei moduli nei progetti .NET Framework. È possibile creare un progetto .NET Core affiancato per testare il progetto .NET Core mentre si usa progetto .NET Framework per la progettazione dei moduli. Il file di soluzione include sia i progetti .NET Framework che .NET Core. Aggiungere e progettare i moduli e i controlli nel progetto .NET Framework e, in base ai criteri GLOB per i file aggiunti ai progetti .NET Core, qualsiasi file nuovo o modificato verrà incluso automaticamente nei progetti .NET Core.
+Come descritto in dettaglio in questo articolo, Visual Studio 2019 supporta solo Progettazione Windows Form nei progetti .NET Framework. È possibile creare un progetto .NET Core affiancato per testare il progetto .NET Core mentre si usa progetto .NET Framework per la progettazione dei moduli. Il file di soluzione include sia i progetti .NET Framework che .NET Core. Aggiungere e progettare i moduli e i controlli nel progetto .NET Framework e, in base ai criteri GLOB per i file aggiunti ai progetti .NET Core, qualsiasi file nuovo o modificato verrà incluso automaticamente nei progetti .NET Core.
 
 Quando Visual Studio 2019 supporterà la finestra di progettazione per Windows Forms, sarà possibile copiare e incollare il contenuto del file di progetto .NET Core nel file di progetto .NET Framework. Eliminare quindi i criteri GLOB per i file aggiunti con gli elementi `<Source>` e `<EmbeddedResource>`. Correggere i percorsi per qualsiasi riferimento del progetto usato dall'app. In questo modo il progetto .NET Framework viene effettivamente aggiornato a .NET Core.
  

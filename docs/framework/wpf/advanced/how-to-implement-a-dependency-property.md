@@ -9,11 +9,11 @@ helpviewer_keywords:
 - properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
 ms.openlocfilehash: e2f18cb3941be2ebf4315a844c05b91ff49c6aa2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757456"
 ---
 # <a name="how-to-implement-a-dependency-property"></a>Procedura: Implementare una proprietà di dipendenza
 Questo esempio illustra come eseguire una [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] proprietà con un <xref:System.Windows.DependencyProperty> campo, definendo una proprietà di dipendenza. Quando si definiscono proprietà personalizzate e si vuole che supportino molti aspetti della funzionalità [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], inclusi stili, data binding, ereditarietà, animazione e valori predefiniti, è necessario implementarle come proprietà di dipendenza.  
@@ -35,4 +35,4 @@ Questo esempio illustra come eseguire una [!INCLUDE[TLA#tla_clr](../../../../inc
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)
-- [Procedure relative](properties-how-to-topics.md)
+- [Procedure relative alle proprietà](properties-how-to-topics.md)

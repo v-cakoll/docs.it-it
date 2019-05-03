@@ -3,11 +3,11 @@ title: Esecuzione side-by-side in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
 ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664142"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Esecuzione side-by-side in ADO.NET
 In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] il supporto dell'esecuzione side-by-side indica la possibilità di eseguire un'applicazione in un computer in cui sono installate più versioni di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] usando esclusivamente la versione per la quale è stata compilata l'applicazione stessa. Per informazioni dettagliate sulla configurazione di esecuzione side-by-side, vedere [esecuzione Side-by-Side](../../../../docs/framework/deployment/side-by-side-execution.md).  
@@ -15,7 +15,7 @@ In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] il supporto d
  Un'applicazione compilata usando una singola versione di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] può essere eseguita in una versione diversa di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Si consiglia tuttavia di compilare versioni dell'applicazione diverse per ciascuna versione di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] installata e di eseguirle separatamente. Indipendentemente dallo scenario è necessario conoscere le modifiche apportate ad [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] tra una versione e l'altra per valutarne le possibili conseguenze sulla compatibilità dell'applicazione con le versioni successive o precedenti.  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>Compatibilità con le versioni successive e precedenti  
- Per compatibilità con le versioni successive si intende la possibilità di compilare un'applicazione per una versione precedente di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], potendola comunque eseguire correttamente anche in versioni più recenti di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] il codice scritto per il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versione 1.1 è ad esempio compatibile con le versioni successive.  
+ Per compatibilità con le versioni successive si intende la possibilità di compilare un'applicazione per una versione precedente di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], potendola comunque eseguire correttamente anche in versioni più recenti di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Il codice [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] scritto per la versione 1.1 di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] è ad esempio compatibile con le versioni successive.  
   
  Per compatibilità con le versioni precedenti si intende la possibilità di compilare un'applicazione per una versione successiva di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ma di poterla eseguire correttamente anche in versioni precedenti di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] senza alcuna perdita di funzionalità. Tuttavia, ciò non vale per le funzionalità introdotte nella nuove versioni di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
@@ -66,6 +66,6 @@ SET NOCOUNT OFF;
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari su ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Panoramica di ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

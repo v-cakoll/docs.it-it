@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
 ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792769"
 ---
 # <a name="custom-token-handlers"></a>Gestori di token personalizzati
 Questo argomento illustra i gestori di token in WIF e ne descrive l'uso per l'elaborazione dei token. L'argomento spiega anche cosa serve per creare gestori di token personalizzati per i tipi di token non supportati per impostazione predefinita in WIF.  
@@ -19,23 +19,23 @@ Questo argomento illustra i gestori di token in WIF e ne descrive l'uso per l'el
 ## <a name="built-in-security-token-handlers-in-wif"></a>Gestori di token di sicurezza predefiniti in WIF  
  WIF 4.5 include nove classi di gestori di token di sicurezza che derivano dalla classe di base astratta <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:  
   
--   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.UserNameSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.UserNameSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
 ## <a name="adding-a-custom-token-handler"></a>Aggiunta di un gestore di token personalizzato  
  Per alcuni tipi di token, ad esempio i token SWT (Simple Web Token) e JWT (JSON Web Token) non esistono gestori di token predefiniti forniti da WIF. Per creare gestori di token personalizzati per questi e per altri tipi di token che non dispongono di un gestore predefinito, è necessario eseguire la procedura seguente.  
@@ -46,17 +46,17 @@ Questo argomento illustra i gestori di token in WIF e ne descrive l'uso per l'el
   
 2. Eseguire l'override dei metodi seguenti fornendo un'implementazione personalizzata:  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
 3. Aggiungere un riferimento al nuovo gestore di token personalizzato nella sezione  **\<system.identityModel>** relativa a WIF del file *Web.config* o *App.config*. Il markup di configurazione seguente, ad esempio, specifica un nuovo gestore di token denominato **MyCustomTokenHandler** che risiede nello spazio dei nomi **CustomToken**.  
   

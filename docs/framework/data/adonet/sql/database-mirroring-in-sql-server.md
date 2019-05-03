@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
 ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59325696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877812"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Mirroring del database in SQL Server
 Il mirroring del database in SQL Server consente di mantenere una copia, o mirror, di un database di SQL Server in un server di standby. Il mirroring assicura che siano sempre disponibili due copie separate dei dati per assicurare un'elevata disponibilità e una ridondanza completa dei dati. Il provider di dati .NET per SQL Server fornisce il supporto implicito per il mirroring del database. Pertanto, una volta configurato il provider per un database SQL Server, lo sviluppatore non dovrà eseguire alcuna operazione né scrivere codice. L'oggetto <xref:System.Data.SqlClient.SqlConnection> supporta inoltre una modalità di connessione esplicita che consente di specificare il nome di un server partner di failover in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -61,7 +61,7 @@ string activeServer = connection.DataSource;
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Mirroring del database](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Viene descritto come impostare e configurare il mirroring in SQL Server.|  
+|[Il mirroring del database](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Viene descritto come impostare e configurare il mirroring in SQL Server.|  
   
 ## <a name="see-also"></a>Vedere anche
 

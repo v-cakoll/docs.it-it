@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
 ms.openlocfilehash: f20ffcf356aa0493b1e2356746d9ad7b27d9a1aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876200"
 ---
 # <a name="quickstart-wcf-data-services"></a>Guida rapida (WCF Data Services)
 
@@ -28,7 +28,7 @@ Per completare le attività incluse nella guida rapida, è necessario installare
 
 - Un'istanza di SQL Server. Ciò include SQL Server Express, incluso in un'installazione predefinita di Visual Studio 2015 o come parte del **elaborazione ed archiviazione dati** carico di lavoro in Visual Studio 2017.
 
-- Il database di esempio Northwind. Per scaricare questo database di esempio, vedere la pagina di download [Sample Databases for SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
+- Il database di esempio Northwind. Per scaricare questo database di esempio, vedere la pagina di download dei [database di esempio per SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
 
 ## <a name="wcf-data-services-quickstart-tasks"></a>Attività della Guida rapida di WCF data services
 
@@ -45,7 +45,7 @@ Per completare le attività incluse nella guida rapida, è necessario installare
  Creare un'app WPF per usare il feed OData, associare dati a controlli Windows, modificare i dati nei controlli associati e restituire quindi le modifiche al servizio dati.
 
 > [!NOTE]
-> File di progetto da una versione completa della Guida rapida possono essere scaricati dal [esempi di documentazione di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=179994) pagina.
+> I file di progetto di una versione completa della guida rapida possono essere scaricati dalla pagina degli [esempi di documentazione di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=179994) .
 
 ## <a name="next-steps"></a>Passaggi successivi
 

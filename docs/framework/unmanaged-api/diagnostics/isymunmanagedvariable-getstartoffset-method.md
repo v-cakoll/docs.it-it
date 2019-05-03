@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6a30dff869075a201a669d1e703bc003b011fc3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797515"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>Metodo ISymUnmanagedVariable::GetStartOffset
 Ottiene l'offset di inizio di questa variabile all'interno di relativo elemento padre. Se si tratta di una variabile locale all'interno di un ambito, l'offset iniziale rientrerà negli offset definiti per l'ambito.  

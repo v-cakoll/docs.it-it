@@ -3,11 +3,11 @@ title: Compatibilità con ASP.NET
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
 ms.openlocfilehash: 01381dc579f5ae3eadd2f913a0e09d7d259794a1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002664"
 ---
 # <a name="aspnet-compatibility"></a>Compatibilità con ASP.NET
 In questo esempio viene illustrato come abilitare la modalità di compatibilità ASP.NET in Windows Communication Foundation (WCF). Servizi in esecuzione nella compatibilità ASP.NET partecipano completamente la pipeline dell'applicazione ASP.NET di modalità e può rendere usano le funzionalità ASP.NET, ad esempio l'autorizzazione file/URL, lo stato della sessione e <xref:System.Web.HttpContext> classe. Il <xref:System.Web.HttpContext> classe consente l'accesso ai cookie, le sessioni e altre funzionalità ASP.NET. Questa modalità richiede che le associazioni usino il trasporto HTTP e che il servizio stesso debba essere ospitato in IIS.  
@@ -129,4 +129,4 @@ Press <ENTER> to terminate client.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Hosting e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Hosting di AppFabric e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)

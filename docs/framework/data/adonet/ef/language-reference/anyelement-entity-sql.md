@@ -3,11 +3,11 @@ title: ANYELEMENT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 475a9ad6-8c8d-4f49-9970-af273e5360f1
 ms.openlocfilehash: ff79417008b7807fbf206d4bcb65b4e5ea1cc576
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606036"
 ---
 # <a name="anyelement-entity-sql"></a>ANYELEMENT (Entity SQL)
 Estrae un elemento da una raccolta multivalore.  

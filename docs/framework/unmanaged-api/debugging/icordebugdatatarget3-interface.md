@@ -5,11 +5,11 @@ ms.assetid: f477af85-994f-4df0-ae78-404ed252bf49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3b0d67d390931cc92c0b6a1320f66545517cde3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965204"
 ---
 # <a name="icordebugdatatarget3-interface"></a>Interfaccia ICorDebugDataTarget3
 Estende logicamente il [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) interfaccia per fornire informazioni sui moduli caricati.  

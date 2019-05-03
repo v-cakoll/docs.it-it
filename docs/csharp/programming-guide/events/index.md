@@ -1,12 +1,18 @@
 ---
-title: 'Eventi - Guida per programmatori C#'
+title: Eventi - Guida per programmatori C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'classes [C#], events'
-  - 'C# language, events'
-  - 'events [C#]'
+- classes [C#], events
+- C# language, events
+- events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
+ms.openlocfilehash: df16b74d7d3ad34850ae9a0e3b7be282e4dfc003
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61681338"
 ---
 # <a name="events-c-programming-guide"></a>Eventi (Guida per programmatori C#)
 Tramite gli eventi, una [classe](../../../csharp/language-reference/keywords/class.md) o un oggetto è in grado di segnalare ad altre classi o oggetti una situazione di interesse. La classe che invia (o *genera*) l'evento è chiamata *autore* e le classi che ricevono (o *gestiscono*) l'evento sono chiamate *sottoscrittori*.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7edf103e397c6e3e1577b5ed4bc8fc0df264b843
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59137995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993850"
 ---
 # <a name="icordebugthreadenum-interface"></a>Interfaccia ICorDebugThreadEnum
 Implementa i metodi ICorDebugEnum ed enumera le matrici ICorDebugThread.  

@@ -3,11 +3,11 @@ title: 'Procedura: Scambiare messaggi in una sessione affidabile'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
 ms.openlocfilehash: aad4eae870e3ba603c56a28a620fe8bc0e31ceb6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778365"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Procedura: Scambiare messaggi in una sessione affidabile
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773876"
 ---
 # <a name="opentype-font-features"></a>Funzionalità dei tipi di carattere OpenType
 
@@ -26,15 +26,15 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
   
  Il formato [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] permette di affrontare le sfide di sviluppo seguenti:  
   
--   Supporto multipiattaforma più esteso.  
+- Supporto multipiattaforma più esteso.  
   
--   Supporto migliore per set di caratteri internazionali.  
+- Supporto migliore per set di caratteri internazionali.  
   
--   Migliore protezione per i dati dei tipi di carattere.  
+- Migliore protezione per i dati dei tipi di carattere.  
   
--   Dimensioni di file minori per rendere più efficiente la distribuzione dei tipi di carattere.  
+- Dimensioni di file minori per rendere più efficiente la distribuzione dei tipi di carattere.  
   
--   Supporto più ampio per il controllo tipografico avanzato.  
+- Supporto più ampio per il controllo tipografico avanzato.  
   
 > [!NOTE]
 >  Windows SDK contiene un set di tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] di esempio, che è possibile usare con applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Questi tipi di carattere offrono la maggior parte delle funzionalità descritte nelle altre sezioni di questo argomento. Per altre informazioni, vedere [Esempio di pacchetto di tipi di carattere OpenType](sample-opentype-font-pack.md).  
@@ -44,11 +44,11 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
 ### <a name="advanced-typographic-extensions"></a>Estensioni tipografiche avanzate  
  Le tabelle tipografiche avanzate (tabelle dei layout [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]) estendono le funzionalità dei tipi di carattere con strutture [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] o CFF. I tipi di carattere con layout [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] contengono informazioni aggiuntive che estendono le funzionalità dei tipi di carattere per supportare la tipografia internazionale di alta qualità. La maggior parte dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] espone solo un subset delle funzionalità [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] totali disponibili. I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] offrono le funzionalità seguenti.  
   
--   Mapping avanzato tra caratteri e glifi che supportano legature, formati posizionali, glifi alternativi e altre sostituzioni di tipi di carattere.  
+- Mapping avanzato tra caratteri e glifi che supportano legature, formati posizionali, glifi alternativi e altre sostituzioni di tipi di carattere.  
   
--   Supporto per posizionamento bidimensionale e collegamento di glifi.  
+- Supporto per posizionamento bidimensionale e collegamento di glifi.  
   
--   Informazioni esplicite su script e lingua contenute in un carattere, per permettere a un'applicazione di elaborazione del testo di modificare il proprio comportamento di conseguenza.  
+- Informazioni esplicite su script e lingua contenute in un carattere, per permettere a un'applicazione di elaborazione del testo di modificare il proprio comportamento di conseguenza.  
   
  Le tabelle dei layout [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] vengono descritte più dettagliatamente nella sezione relativa alle [tabelle dei file dei tipi di carattere](https://www.microsoft.com/typography/otspec/otff.htm) della specifica [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
   
@@ -120,13 +120,13 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
 ## <a name="ligatures"></a>Legature  
  Le legature sono due o più glifi uniti a formare un singolo glifo per creare un testo più leggibile o gradevole. I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supportano quattro tipi di legature:  
   
--   **Legature standard**. Progettate per migliorare la leggibilità. Le legature standard includono "fi", "fl" e "ff".  
+- **Legature standard**. Progettate per migliorare la leggibilità. Le legature standard includono "fi", "fl" e "ff".  
   
--   **Legature contestuali**. Progettate per migliorare la leggibilità applicando un accostamento migliore tra i caratteri che costituiscono la legatura.  
+- **Legature contestuali**. Progettate per migliorare la leggibilità applicando un accostamento migliore tra i caratteri che costituiscono la legatura.  
   
--   **Legature discrezionali**. Progettate per scopi ornamentali e non appositamente ideate per favorire la leggibilità.  
+- **Legature discrezionali**. Progettate per scopi ornamentali e non appositamente ideate per favorire la leggibilità.  
   
--   **Legature storiche**. Progettate per testi di tipo storico e non appositamente ideate per favorire la leggibilità.  
+- **Legature storiche**. Progettate per testi di tipo storico e non appositamente ideate per favorire la leggibilità.  
   
  Il testo seguente mostra glifi con legature standard per il tipo di carattere Pericles.  
   

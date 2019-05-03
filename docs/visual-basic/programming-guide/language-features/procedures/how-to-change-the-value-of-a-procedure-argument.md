@@ -14,11 +14,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
 ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59316622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665832"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Procedura: Modificare il valore di un argomento di routine (Visual Basic)
 Quando si chiama una routine, ogni argomento che è fornire corrisponde a uno dei parametri definiti nella procedura. In alcuni casi, il codice della routine può modificare il valore sottostante a un argomento nel codice chiamante. In altri casi, la routine può modificare solo la copia locale di un argomento.  
@@ -79,13 +79,13 @@ Quando si chiama una routine, ogni argomento che è fornire corrisponde a uno de
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedure](./index.md)
+- [Routine](./index.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Procedura: Passare argomenti a una routine](./how-to-pass-arguments-to-a-procedure.md)
 - [Passaggio di argomenti per valore e per riferimento](./passing-arguments-by-value-and-by-reference.md)
 - [Differenze tra argomenti modificabili e non modificabili](./differences-between-modifiable-and-nonmodifiable-arguments.md)
 - [Differenze tra il passaggio di un argomento per valore e per riferimento](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [Procedura: Impedire la modifica del valore di un argomento di routine](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Procedura: Forzare il passaggio di un argomento per valore](./how-to-force-an-argument-to-be-passed-by-value.md)
-- [Passaggio di argomenti per posizione e nome](./passing-arguments-by-position-and-by-name.md)
+- [Procedura: Proteggere un argomento di routine modifica del valore](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Procedura: Forzare un argomento da passare per valore](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Passaggio di argomenti in base alla posizione e al nome](./passing-arguments-by-position-and-by-name.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

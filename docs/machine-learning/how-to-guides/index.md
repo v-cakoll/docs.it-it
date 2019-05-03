@@ -4,11 +4,11 @@ description: Informazioni su come eseguire attività specifiche per agevolare la
 ms.custom: seodec18
 ms.date: 03/01/2019
 ms.openlocfilehash: c8d1258629f777cd8bced47e4b956c9cf100a682
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650401"
 ---
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>Guide pratiche di Machine Learning per .NET - ML.NET
 

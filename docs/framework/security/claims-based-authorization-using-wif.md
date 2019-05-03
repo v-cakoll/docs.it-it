@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792834"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorizzazione basata su attestazioni con WIF
 Tramite l'autorizzazione di un'applicazione relying party vengono determinate le risorse di un'identità autenticata a cui è consentito l'accesso e le operazioni eseguibili in queste risorse. Un'autorizzazione non corretta o debole comporta la diffusione di informazioni e l'alterazione dei dati. In questo argomento vengono descritti gli approcci disponibili per implementare l'autorizzazione per i servizi e le applicazioni Web ASP.NET in grado di riconoscere attestazioni mediante WIF (Windows Identity Foundation) e un servizio token di sicurezza (STS), ad esempio il Servizio di controllo di accesso (ACS) di Microsoft Azure.  
@@ -25,13 +25,13 @@ Tramite l'autorizzazione di un'applicazione relying party vengono determinate le
 ### <a name="iprincipalisinrole-method"></a>Metodo IPrincipal.IsInRole  
  Per implementare il controllo degli accessi in base al ruolo nelle applicazioni in grado di riconoscere attestazioni, usare il metodo **IsInRole()** nell'interfaccia **IPrincipal**, proprio come nelle applicazioni che non sono in grado di riconoscere attestazioni. Il metodo **IsInRole()** può essere usato in diversi modi:  
   
--   Eseguendo una chiamata esplicita su **IPrincipal.IsInRole("Administrator")**. In questo approccio, il risultato è un valore booleano. Utilizzarlo nelle istruzioni condizionali. Può essere utilizzato in modo arbitrario in qualsiasi punto nel codice.  
+- Eseguendo una chiamata esplicita su **IPrincipal.IsInRole("Administrator")**. In questo approccio, il risultato è un valore booleano. Utilizzarlo nelle istruzioni condizionali. Può essere utilizzato in modo arbitrario in qualsiasi punto nel codice.  
   
--   Usando la richiesta di sicurezza **PrincipalPermission.Demand()**. In questo approccio, il risultato è un'eccezione in caso di richiesta non soddisfatta. Deve rientrare nella strategia di gestione delle eccezioni. La generazione di eccezioni è molto più costosa dal punto di vista delle prestazioni rispetto alla restituzione di un valore booleano. Può essere utilizzata in qualsiasi punto nel codice.  
+- Usando la richiesta di sicurezza **PrincipalPermission.Demand()**. In questo approccio, il risultato è un'eccezione in caso di richiesta non soddisfatta. Deve rientrare nella strategia di gestione delle eccezioni. La generazione di eccezioni è molto più costosa dal punto di vista delle prestazioni rispetto alla restituzione di un valore booleano. Può essere utilizzata in qualsiasi punto nel codice.  
   
--   Usando gli attributi dichiarativi **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]**. Questo approccio viene chiamato dichiarativo, in quanto viene utilizzato per decorare i metodi. Non può essere utilizzato in blocchi di codice nelle implementazioni del metodo. Il risultato è un'eccezione in caso di richiesta non soddisfatta. È necessario assicurarsi che rientri nella strategia di gestione delle eccezioni.  
+- Usando gli attributi dichiarativi **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]**. Questo approccio viene chiamato dichiarativo, in quanto viene utilizzato per decorare i metodi. Non può essere utilizzato in blocchi di codice nelle implementazioni del metodo. Il risultato è un'eccezione in caso di richiesta non soddisfatta. È necessario assicurarsi che rientri nella strategia di gestione delle eccezioni.  
   
--   Usando l'autorizzazione basata su URL tramite la sezione **\<authorization>** in **web.config**. Questo approccio è utile quando si gestisce l'autorizzazione in un livello URL. Si tratta del livello più grezzo tra quelli indicati in precedenza. Il vantaggio di questo approccio è che le modifiche vengono apportate nel file di configurazione, pertanto il codice non deve essere compilato per sfruttare la modifica.  
+- Usando l'autorizzazione basata su URL tramite la sezione **\<authorization>** in **web.config**. Questo approccio è utile quando si gestisce l'autorizzazione in un livello URL. Si tratta del livello più grezzo tra quelli indicati in precedenza. Il vantaggio di questo approccio è che le modifiche vengono apportate nel file di configurazione, pertanto il codice non deve essere compilato per sfruttare la modifica.  
   
 ### <a name="expressing-roles-as-claims"></a>Espressione dei ruoli come attestazioni  
  Quando viene chiamato il metodo **IsInRole()**, viene eseguito un controllo per determinare se l'utente corrente dispone del ruolo in questione. Nelle applicazioni in grado di riconoscere attestazioni il ruolo è espresso da un tipo di attestazione del ruolo che deve essere disponibile nel token. Il tipo di attestazione del ruolo viene espresso tramite l'URI seguente:  
@@ -40,11 +40,11 @@ Tramite l'autorizzazione di un'applicazione relying party vengono determinate le
   
  Vi sono diversi modi per arricchire un token con un tipo di attestazione del ruolo:  
   
--   **Durante il rilascio del token**. Quando un utente viene autenticato, l'attestazione del ruolo può essere emessa dal servizio token di sicurezza del provider di identità o da un provider di federazioni, ad esempio il Servizio di controllo di accesso di Microsoft Azure.  
+- **Durante il rilascio del token**. Quando un utente viene autenticato, l'attestazione del ruolo può essere emessa dal servizio token di sicurezza del provider di identità o da un provider di federazioni, ad esempio il Servizio di controllo di accesso di Microsoft Azure.  
   
--   **Trasformando le attestazioni arbitrarie in tipi di attestazioni del ruolo tramite ClaimsAuthenticationManager**. ClaimsAuthenticationManager è un componente fornito come parte di WIF. Consente l'intercettazione delle richieste quando tramite esse viene avviata un'applicazione, esaminando i token e trasformandoli con l'aggiunta, la modifica o la rimozione di attestazioni. Per altre informazioni su come usare ClaimsAuthenticationManager per trasformare le attestazioni, vedere [How To: In base al ruolo di implementare il controllo di accesso (RBAC) in un'applicazione ASP.NET compatibili con le attestazioni mediante WIF e ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
+- **Trasformando le attestazioni arbitrarie in tipi di attestazioni del ruolo tramite ClaimsAuthenticationManager**. ClaimsAuthenticationManager è un componente fornito come parte di WIF. Consente l'intercettazione delle richieste quando tramite esse viene avviata un'applicazione, esaminando i token e trasformandoli con l'aggiunta, la modifica o la rimozione di attestazioni. Per altre informazioni su come usare ClaimsAuthenticationManager per trasformare le attestazioni, vedere [How To: In base al ruolo di implementare il controllo di accesso (RBAC) in un'applicazione ASP.NET compatibili con le attestazioni mediante WIF e ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
   
--   **Eseguendo il mapping di attestazioni arbitrarie a un tipo di ruolo tramite la sezione di configurazione samlSecurityTokenRequirement**. Si tratta di un approccio dichiarativo in cui la trasformazione delle attestazioni viene eseguita usando solo la configurazione, senza intervenire sul codice.  
+- **Eseguendo il mapping di attestazioni arbitrarie a un tipo di ruolo tramite la sezione di configurazione samlSecurityTokenRequirement**. Si tratta di un approccio dichiarativo in cui la trasformazione delle attestazioni viene eseguita usando solo la configurazione, senza intervenire sul codice.  
   
 <a name="BKMK_2"></a>   
 ## <a name="claims-based-authorization"></a>Autorizzazione basata sulle attestazioni  
@@ -60,4 +60,4 @@ Tramite l'autorizzazione di un'applicazione relying party vengono determinate le
   
 5. L'accesso viene consentito se il risultato è true e viene negato se è false. Ad esempio, la regola potrebbe essere che l'utente ha 21 anni, o anche di più, e vive nello stato di Washington.  
   
- <xref:System.Security.Claims.ClaimsAuthorizationManager> è utile per esternalizzare la logica delle decisioni per l'autorizzazione basata sulle attestazioni nelle applicazioni. ClaimsAuthorizationManager è un componente di WIF fornito come parte di .NET 4.5. Con ClaimsAuthorizationManager è possibile intercettare le richieste in ingresso e implementare qualsiasi logica di scelta per prendere decisioni di autorizzazioni basate sulle attestazioni in ingresso. Questo aspetto diventa importante quando è necessario modificare la logica dell'autorizzazione. In tal caso, l'utilizzo di ClaimsAuthorizationManager non influirà sull'integrità dell'applicazione, quindi riducendo la probabilità di un errore di applicazione come risultato della modifica. Per altre informazioni su come usare ClaimsAuthorizationManager per implementare il controllo di accesso basato sulle attestazioni, vedere [How To: Implementare autorizzazione delle attestazioni in un'applicazione ASP.NET compatibili con le attestazioni mediante WIF e ACS](https://go.microsoft.com/fwlink/?LinkID=247446).
+ L'oggetto <xref:System.Security.Claims.ClaimsAuthorizationManager> è utile per esternalizzare la logica delle decisioni per l'autorizzazione basata su attestazioni nelle applicazioni. ClaimsAuthorizationManager è un componente di WIF fornito come parte di .NET 4.5. Con ClaimsAuthorizationManager è possibile intercettare le richieste in ingresso e implementare qualsiasi logica di scelta per prendere decisioni di autorizzazioni basate sulle attestazioni in ingresso. Questo aspetto diventa importante quando è necessario modificare la logica dell'autorizzazione. In tal caso, l'utilizzo di ClaimsAuthorizationManager non influirà sull'integrità dell'applicazione, quindi riducendo la probabilità di un errore di applicazione come risultato della modifica. Per altre informazioni su come usare ClaimsAuthorizationManager per implementare il controllo di accesso basato sulle attestazioni, vedere [How To: Implementare autorizzazione delle attestazioni in un'applicazione ASP.NET compatibili con le attestazioni mediante WIF e ACS](https://go.microsoft.com/fwlink/?LinkID=247446).

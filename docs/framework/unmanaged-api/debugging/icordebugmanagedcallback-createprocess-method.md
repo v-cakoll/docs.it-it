@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eda214200ca4c3837ad89ed14887ef6b09af7d30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995280"
 ---
 # <a name="icordebugmanagedcallbackcreateprocess-method"></a>Metodo ICorDebugManagedCallback::CreateProcess
 Quando un processo è stato collegato o avviato per la prima volta, invia una notifica del debugger.  

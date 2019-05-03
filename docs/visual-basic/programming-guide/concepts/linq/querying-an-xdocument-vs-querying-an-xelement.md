@@ -3,11 +3,11 @@ title: Esecuzione di query su XDocument e su Esecuzione di query su XElement (Vi
 ms.date: 07/20/2015
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
 ms.openlocfilehash: 500b1e58663ef6aca052850ad7994687e2cc36f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766493"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Esecuzione di query su XDocument e su Esecuzione di query su XElement (Visual Basic)
 Quando si carica un documento tramite <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, si noterà che è necessario scrivere le query in modo leggermente diverso rispetto a quando si carica un documento tramite <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  

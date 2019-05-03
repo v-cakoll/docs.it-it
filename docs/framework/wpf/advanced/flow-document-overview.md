@@ -10,11 +10,11 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703927"
 ---
 # <a name="flow-document-overview"></a>Cenni preliminari sui documenti dinamici
 I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leggibilità. Anziché essere impostati su un layout predefinito, questi documenti consentono di adattare e ridisporre il contenuto in modo dinamico in base alle variabili in fase di esecuzione, ad esempio, le dimensioni della finestra, la risoluzione del dispositivo e le preferenze facoltative dell'utente. Questi documenti offrono anche funzionalità avanzate del documento, quali paginazione e colonne. Questo argomento offre una panoramica dei documenti dinamici e di come crearli.  
@@ -42,13 +42,13 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
   
  Come evidenziato nella figura sopra riportata, esistono numerose funzionalità incorporate nei documenti dinamici:
   
--   Ricerca: Consente all'utente di eseguire una ricerca full-text di un intero documento.  
+- Ricerca: Consente all'utente di eseguire una ricerca full-text di un intero documento.  
   
--   Modalità di visualizzazione: L'utente può selezionare le modalità di visualizzazione preferita, inclusa una modalità di visualizzazione a singola pagina (una pagina per volta), un due-pagina-in-a-time (formato lettura libro) visualizzazione modalità e una modalità di visualizzazione (infinito) scorrimento continuo.  Per altre informazioni sulle modalità di visualizzazione, vedere <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  
+- Modalità di visualizzazione: L'utente può selezionare le modalità di visualizzazione preferita, inclusa una modalità di visualizzazione a singola pagina (una pagina per volta), un due-pagina-in-a-time (formato lettura libro) visualizzazione modalità e una modalità di visualizzazione (infinito) scorrimento continuo.  Per altre informazioni sulle modalità di visualizzazione, vedere <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  
   
--   Controlli di spostamento: Se la modalità di visualizzazione del documento usa le pagine, i controlli di spostamento della pagina includono un pulsante per passare alla pagina successiva (freccia in giù) o la pagina precedente (freccia verso l'alto), così come indicatori per il numero di pagina corrente e il numero totale di pagine. È anche possibile scorrere le pagine usando i tasti di direzione della tastiera.  
+- Controlli di spostamento: Se la modalità di visualizzazione del documento usa le pagine, i controlli di spostamento della pagina includono un pulsante per passare alla pagina successiva (freccia in giù) o la pagina precedente (freccia verso l'alto), così come indicatori per il numero di pagina corrente e il numero totale di pagine. È anche possibile scorrere le pagine usando i tasti di direzione della tastiera.  
   
--   Zoom: I controlli zoom consentono all'utente di aumentare o diminuire il livello di zoom facendo clic sul segno più o meno, rispettivamente. I controlli dello zoom includono anche un dispositivo di scorrimento per regolare il livello dello zoom. Per altre informazioni, vedere <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>.  
+- Zoom: I controlli zoom consentono all'utente di aumentare o diminuire il livello di zoom facendo clic sul segno più o meno, rispettivamente. I controlli dello zoom includono anche un dispositivo di scorrimento per regolare il livello dello zoom. Per altre informazioni, vedere <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>.  
   
  Queste funzionalità possono essere modificate in base al controllo usato per ospitare il contenuto del flusso. I vari controlli vengono descritti nella sezione seguente.  
   
@@ -75,9 +75,9 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
 ## <a name="creating-flow-content"></a>Creazione di contenuto dinamico  
  Il contenuto di flusso può essere complesso, composto da vari elementi, tra cui testo, immagini, tabelle e persino <xref:System.Windows.UIElement> classi derivate come controlli. Per comprendere la modalità di creazione di contenuto dinamico complesso, i punti riportati di seguito sono fondamentali:  
   
--   **Classi correlate al flusso**: Ogni classe usata nel contenuto del flusso ha uno scopo specifico. Inoltre, la relazione gerarchica tra le classi di flusso facilita la comprensione della modalità d'uso. Ad esempio, le classi derivate dal <xref:System.Windows.Documents.Block> usati per contenere altri oggetti mentre le classi derivate dalla classe <xref:System.Windows.Documents.Inline> contengono gli oggetti visualizzati.  
+- **Classi correlate al flusso**: Ogni classe usata nel contenuto del flusso ha uno scopo specifico. Inoltre, la relazione gerarchica tra le classi di flusso facilita la comprensione della modalità d'uso. Ad esempio, le classi derivate dal <xref:System.Windows.Documents.Block> usati per contenere altri oggetti mentre le classi derivate dalla classe <xref:System.Windows.Documents.Inline> contengono gli oggetti visualizzati.  
   
--   **Schema del contenuto**: Un documento dinamico può richiedere un numero considerevole di elementi annidati. Nello schema del contenuto vengono specificate le possibili relazioni padre/figlio tra elementi.  
+- **Schema del contenuto**: Un documento dinamico può richiedere un numero considerevole di elementi annidati. Nello schema del contenuto vengono specificate le possibili relazioni padre/figlio tra elementi.  
   
  Ognuna di queste aree verrà esaminata in maniera dettagliata nella sezioni seguenti.  
   
@@ -96,7 +96,7 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
  Ogni classe di queste due categorie è descritta brevemente di seguito.  
   
 ### <a name="block-derived-classes"></a>Classi derivate da Block  
- **Paragrafo**  
+ **Paragraph**  
   
  <xref:System.Windows.Documents.Paragraph> è in genere usato per raggruppare il contenuto in un paragrafo. L'uso più semplice e più comune di Paragraph è creare un paragrafo di testo.  
   
@@ -146,7 +146,7 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
  <xref:System.Windows.Documents.Table> Consente di creare una tabella. <xref:System.Windows.Documents.Table> è simile al <xref:System.Windows.Controls.Grid> elemento ma offre maggiori funzionalità e, pertanto, comporta un sovraccarico di risorse superiore. In quanto <xref:System.Windows.Controls.Grid> è un <xref:System.Windows.UIElement>, non può essere usato nel contenuto dinamico a meno che non è inclusa in un <xref:System.Windows.Documents.BlockUIContainer> o <xref:System.Windows.Documents.InlineUIContainer>. Per ulteriori informazioni sul <xref:System.Windows.Documents.Table>, vedere [Cenni preliminari su tabella](table-overview.md).  
   
 ### <a name="inline-derived-classes"></a>Classi derivate da Inline  
- **Esegui**  
+ **Run**  
   
  <xref:System.Windows.Documents.Run> viene utilizzato per contenere testo non formattato. Ci si aspetterebbe <xref:System.Windows.Documents.Run> oggetti possano essere utilizzati ampiamente nel contenuto del flusso. Tuttavia, nel markup, <xref:System.Windows.Documents.Run> elementi non sono necessari per essere usato in modo esplicito. <xref:System.Windows.Documents.Run> è necessario usare quando si creano o modificano documenti dinamici mediante il codice. Ad esempio, nel markup seguente, il primo <xref:System.Windows.Documents.Paragraph> specifica il <xref:System.Windows.Documents.Run> non lo fa in modo esplicito mentre il secondo elemento. Entrambi i paragrafi generano output identici.  
   
@@ -154,7 +154,7 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
   
  **Nota:**  A partire dal [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], il <xref:System.Windows.Documents.Run.Text%2A> proprietà del <xref:System.Windows.Documents.Run> oggetto è una proprietà di dipendenza. È possibile associare il <xref:System.Windows.Documents.Run.Text%2A> origine proprietà per una data, ad esempio un <xref:System.Windows.Controls.TextBlock>. Il <xref:System.Windows.Documents.Run.Text%2A> proprietà supporta completamente l'associazione unidirezionale. Il <xref:System.Windows.Documents.Run.Text%2A> proprietà supporta anche l'associazione bidirezionale, ad eccezione di <xref:System.Windows.Controls.RichTextBox>. Per un esempio, vedere <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
   
- **intervallo**  
+ **Span**  
   
  <xref:System.Windows.Documents.Span> Raggruppa altri elementi di contenuto inline. Nessun rendering inerente viene applicato al contenuto all'interno di un <xref:System.Windows.Documents.Span> elemento. Tuttavia, gli elementi che ereditano da <xref:System.Windows.Documents.Span> inclusi <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> e <xref:System.Windows.Documents.Underline> applicare la formattazione al testo.  
   
@@ -194,21 +194,21 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
   
  <xref:System.Windows.Documents.Figure> e <xref:System.Windows.Documents.Floater> differiscono in diversi modi e vengono usati per scenari diversi.  
   
- **Figura:**  
+ **Figure:**  
   
--   Può essere posizionata: È possibile impostare gli ancoraggi orizzontali e verticali per ancorarla in relazione la pagina, contenuto, colonna o del paragrafo. È anche possibile usare la <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> e <xref:System.Windows.Documents.Figure.VerticalOffset%2A> le proprietà per specificare offset arbitrari.  
+- Può essere posizionata: È possibile impostare gli ancoraggi orizzontali e verticali per ancorarla in relazione la pagina, contenuto, colonna o del paragrafo. È anche possibile usare la <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> e <xref:System.Windows.Documents.Figure.VerticalOffset%2A> le proprietà per specificare offset arbitrari.  
   
--   È ridimensionabile su più colonne: È possibile impostare <xref:System.Windows.Documents.Figure> height e width per multipli di pagina, contenuto o della colonna altezza o larghezza. Nel caso della pagina e del contenuto, i multipli superiori a 1 non sono consentiti. Ad esempio, è possibile impostare la larghezza di un <xref:System.Windows.Documents.Figure> "0,5 page" o "0,25 content" o "2 Column". È anche possibile impostare l'altezza e la larghezza su valori di pixel assoluti.  
+- È ridimensionabile su più colonne: È possibile impostare <xref:System.Windows.Documents.Figure> height e width per multipli di pagina, contenuto o della colonna altezza o larghezza. Nel caso della pagina e del contenuto, i multipli superiori a 1 non sono consentiti. Ad esempio, è possibile impostare la larghezza di un <xref:System.Windows.Documents.Figure> "0,5 page" o "0,25 content" o "2 Column". È anche possibile impostare l'altezza e la larghezza su valori di pixel assoluti.  
   
--   Non esegue alcuna impaginazione: Se il contenuto all'interno di un <xref:System.Windows.Documents.Figure> non rientra perfettamente il <xref:System.Windows.Documents.Figure>, esegue il rendering di contenuto rientrante e il contenuto rimanente viene perso  
+- Non esegue alcuna impaginazione: Se il contenuto all'interno di un <xref:System.Windows.Documents.Figure> non rientra perfettamente il <xref:System.Windows.Documents.Figure>, esegue il rendering di contenuto rientrante e il contenuto rimanente viene perso  
   
  **Floater:**  
   
--   Non può essere posizionato ed esegue il rendering ovunque vi sia uno spazio a disposizione. Non è possibile impostare l'offset o ancoraggio un <xref:System.Windows.Documents.Floater>.  
+- Non può essere posizionato ed esegue il rendering ovunque vi sia uno spazio a disposizione. Non è possibile impostare l'offset o ancoraggio un <xref:System.Windows.Documents.Floater>.  
   
--   Non possono essere ridimensionati per più di una colonna: Per impostazione predefinita, <xref:System.Windows.Documents.Floater> dimensioni di almeno una colonna. Ha un <xref:System.Windows.Documents.Floater.Width%2A> proprietà che può essere impostata su un valore assoluto in pixel, ma se questo valore è maggiore di larghezza di una colonna viene ignorato e il floater viene dimensionato su una colonna. È possibile ridimensionarlo a meno di una colonna impostando la larghezza corretta in pixel, ma il ridimensionamento non è relativo alla colonna, in modo "0,5 Column" non è un'espressione valida per <xref:System.Windows.Documents.Floater> larghezza. <xref:System.Windows.Documents.Floater> non dispone di alcuna proprietà di altezza ed è Impossibile impostare l'altezza, relativa altezza dipende dal contenuto  
+- Non possono essere ridimensionati per più di una colonna: Per impostazione predefinita, <xref:System.Windows.Documents.Floater> dimensioni di almeno una colonna. Ha un <xref:System.Windows.Documents.Floater.Width%2A> proprietà che può essere impostata su un valore assoluto in pixel, ma se questo valore è maggiore di larghezza di una colonna viene ignorato e il floater viene dimensionato su una colonna. È possibile ridimensionarlo a meno di una colonna impostando la larghezza corretta in pixel, ma il ridimensionamento non è relativo alla colonna, in modo "0,5 Column" non è un'espressione valida per <xref:System.Windows.Documents.Floater> larghezza. <xref:System.Windows.Documents.Floater> non dispone di alcuna proprietà di altezza ed è Impossibile impostare l'altezza, relativa altezza dipende dal contenuto  
   
--   <xref:System.Windows.Documents.Floater> Impagina: Se il relativo contenuto nella larghezza specificata si estende a più di 1 colonna l'altezza, il floater interrompe e lo impagina nella colonna successiva, la pagina successiva e così via.  
+- <xref:System.Windows.Documents.Floater> Impagina: Se il relativo contenuto nella larghezza specificata si estende a più di 1 colonna l'altezza, il floater interrompe e lo impagina nella colonna successiva, la pagina successiva e così via.  
   
  <xref:System.Windows.Documents.Figure> è un buon punto di inserire un contenuto autonomo in cui si desidera controllare le dimensioni e il posizionamento e ha la certezza che tale contenuto rientrerà nelle dimensioni specificate. <xref:System.Windows.Documents.Floater> è un buon punto di inserirvi più contenuti gratuito con un flusso che scorre in modo analogo al contenuto della pagina principale, ma sono separato da quest'ultimo.  
   
@@ -348,11 +348,11 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Testo](optimizing-performance-text.md)
+- [per](optimizing-performance-text.md)
 - [Funzionalità tipografiche di WPF](typography-in-wpf.md)
-- [Procedure relative](flow-content-elements-how-to-topics.md)
-- [Cenni preliminari sul modello di contenuto TextElement](textelement-content-model-overview.md)
-- [Cenni generali sul controllo RichTextBox](../controls/richtextbox-overview.md)
+- [Procedure relative alle proprietà](flow-content-elements-how-to-topics.md)
+- [Panoramica sul modello di contenuto TextElement](textelement-content-model-overview.md)
+- [Cenni preliminari sul controllo RichTextBox](../controls/richtextbox-overview.md)
 - [Documenti in WPF](documents-in-wpf.md)
 - [Cenni preliminari sull'elemento Table](table-overview.md)
 - [Cenni preliminari sulle annotazioni](annotations-overview.md)

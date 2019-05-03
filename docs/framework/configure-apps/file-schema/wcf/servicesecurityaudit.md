@@ -3,11 +3,11 @@ title: <serviceSecurityAudit>
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
 ms.openlocfilehash: 384a1cdb6d39f4d6ecd2353a15c0da7c6d2e82bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758119"
 ---
 # <a name="servicesecurityaudit"></a>\<serviceSecurityAudit>
 Specifica impostazioni che abilitano controllo di eventi di sicurezza durante le operazioni del servizio.  

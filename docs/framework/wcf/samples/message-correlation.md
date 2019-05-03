@@ -3,11 +3,11 @@ title: Correlazione dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
 ms.openlocfilehash: ed6fc8f5d16ae2d604cdbdf4659ecfaaa83bfa02
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989768"
 ---
 # <a name="message-correlation"></a>Correlazione dei messaggi
 Questo esempio viene illustrato come un'applicazione di Accodamento messaggi (MSMQ) può inviare un messaggio MSMQ a un servizio Windows Communication Foundation (WCF) e come i messaggi possono essere correlati tra applicazioni mittenti e riceventi in uno scenario di richiesta/risposta. In questo esempio viene utilizzata l'associazione msmqIntegrationBinding. Il servizio in questo caso è un'applicazione console self-hosted che consente di osservare il servizio che riceve i messaggi in coda. k  
@@ -275,15 +275,15 @@ static void DisplayOrderStatus()
 
 2. Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.
 
-    1.  Aprire Server Manager in Visual Studio 2012.
+    1. Aprire Server Manager in Visual Studio 2012.
 
-    2.  Espandere la **funzionalità** scheda.
+    2. Espandere la **funzionalità** scheda.
 
-    3.  Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.
+    3. Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.
 
-    4.  Verificare i **transazionale** casella.
+    4. Verificare i **transazionale** casella.
 
-    5.  Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.
+    5. Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.
 
 3. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

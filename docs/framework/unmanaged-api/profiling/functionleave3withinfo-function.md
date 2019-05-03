@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4304c933b9802ef565b8d18f1e04591e7fa83cb8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598818"
 ---
 # <a name="functionleave3withinfo-function"></a>Funzione FunctionLeave3WithInfo
 Notifica al profiler che controllo viene restituito da una funzione e fornisce un handle che può essere passato al [metodo ICorProfilerInfo3::GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) per recuperare lo stack frame e il valore restituito.  
@@ -48,9 +48,9 @@ void __stdcall FunctionLeave3WithInfo(
   
  Il motore di esecuzione non viene salvato alcun registro prima di chiamare questa funzione.  
   
--   In ingresso, è necessario salvare tutti i registri che usi, tra cui quelle in unità a virgola mobile (FPU).  
+- In ingresso, è necessario salvare tutti i registri che usi, tra cui quelle in unità a virgola mobile (FPU).  
   
--   In uscita, è necessario ripristinare lo stack recuperando tutti i parametri che sono stati inseriti dal relativo chiamante.  
+- In uscita, è necessario ripristinare lo stack recuperando tutti i parametri che sono stati inseriti dal relativo chiamante.  
   
  L'implementazione di `FunctionLeave3WithInfo` non devono bloccare, perché ritarderà l'operazione di garbage collection. L'implementazione non deve tentare una garbage collection, poiché lo stack potrebbe non essere in uno stato di garbage collection adatto. Se si tenta un'operazione di garbage collection, il runtime si bloccherà fino a `FunctionLeave3WithInfo` restituisce.  
   

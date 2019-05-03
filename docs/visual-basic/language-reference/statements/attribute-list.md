@@ -6,11 +6,11 @@ helpviewer_keywords:
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
 ms.openlocfilehash: 2399ec1342280df101e2818399e0f41f10d9606d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945080"
 ---
 # <a name="attribute-list-visual-basic"></a>Elenco degli attributi (Visual Basic)
 Specifica gli attributi da applicare a un elemento di programmazione dichiarato. Gli attributi sono separati da una virgola. Di seguito è la sintassi per un attributo.  
@@ -36,15 +36,15 @@ Specifica gli attributi da applicare a un elemento di programmazione dichiarato.
   
 ## <a name="rules"></a>Regole  
   
--   **Selezione host.** È possibile applicare attributi agli elementi di programmazione dichiarati più. Per applicare uno o più attributi, si inserisce un' *blocco di attributi* all'inizio della dichiarazione dell'elemento. Ogni voce nell'elenco degli attributi specifica un attributo che si desidera applicare, e il modificatore e gli argomenti utilizzati per la chiamata dell'attributo.  
+- **Selezione host.** È possibile applicare attributi agli elementi di programmazione dichiarati più. Per applicare uno o più attributi, si inserisce un' *blocco di attributi* all'inizio della dichiarazione dell'elemento. Ogni voce nell'elenco degli attributi specifica un attributo che si desidera applicare, e il modificatore e gli argomenti utilizzati per la chiamata dell'attributo.  
   
--   **Parentesi quadre.** Se si fornisce un elenco di attributi, è necessario racchiuderlo tra parentesi angolari ("`<`"e"`>`").  
+- **Parentesi quadre.** Se si fornisce un elenco di attributi, è necessario racchiuderlo tra parentesi angolari ("`<`"e"`>`").  
   
--   **Parte della dichiarazione.** L'attributo deve essere parte della dichiarazione di elemento, non un'istruzione separata. È possibile usare la sequenza di continuazione di riga (" `_`") per estendere l'istruzione di dichiarazione su più righe di codice sorgente.  
+- **Parte della dichiarazione.** L'attributo deve essere parte della dichiarazione di elemento, non un'istruzione separata. È possibile usare la sequenza di continuazione di riga (" `_`") per estendere l'istruzione di dichiarazione su più righe di codice sorgente.  
   
--   **Modificatori.** Un modificatore di attributo (`Assembly` o `Module`) è obbligatorio in tutti gli attributi applicati a un elemento di programmazione all'inizio di un file di origine. Attributo modificatori non consentiti per gli attributi applicati agli elementi che non sono all'inizio di un file di origine.  
+- **Modificatori.** Un modificatore di attributo (`Assembly` o `Module`) è obbligatorio in tutti gli attributi applicati a un elemento di programmazione all'inizio di un file di origine. Attributo modificatori non consentiti per gli attributi applicati agli elementi che non sono all'inizio di un file di origine.  
   
--   **Argomenti.** Tutti gli argomenti posizionali per un attributo devono precedere tutti gli inizializzatori di proprietà o variabile.  
+- **Argomenti.** Tutti gli argomenti posizionali per un attributo devono precedere tutti gli inizializzatori di proprietà o variabile.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente applica il <xref:System.Runtime.InteropServices.DllImportAttribute> dell'attributo a una struttura di definizione di un `Function` procedure.  

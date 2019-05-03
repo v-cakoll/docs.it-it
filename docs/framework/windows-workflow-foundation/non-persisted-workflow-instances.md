@@ -3,27 +3,27 @@ title: Istanze del flusso di lavoro non persistenti
 ms.date: 03/30/2017
 ms.assetid: 5e01af77-6b14-4964-91a5-7dfd143449c0
 ms.openlocfilehash: 410451f0dfeb91111e77634245aa786c4afc5b04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644265"
 ---
 # <a name="non-persisted-workflow-instances"></a>Istanze del flusso di lavoro non persistenti
 Quando viene creata una nuova istanza di un flusso di lavoro che mantiene persistente lo stato in <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, nell'host del servizio viene creata una voce per il servizio specifico nell'archivio di istanze. Successivamente, quando l'istanza del flusso di lavoro viene resa persistente per la prima volta, in <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> viene archiviato lo stato dell'istanza corrente. Se il flusso di lavoro è ospitato nel servizio Attivazione processo Windows, anche i dati della distribuzione del servizio vengono scritti nell'archivio di istanze quando l'istanza è stata resa persistente per la prima volta.  
   
- Fino a quando non è stata resa persistente l'istanza del flusso di lavoro, è in un **non persistente** stato. In questo stato non è possibile recuperare l'istanza del flusso di lavoro dopo un riciclo del dominio applicazione oppure un errore dell'host o del computer.  
+ Fino a quando non è stata resa persistente l'istanza del flusso di lavoro, è in un **non persistenti** dello stato. In questo stato non è possibile recuperare l'istanza del flusso di lavoro dopo un riciclo del dominio applicazione oppure un errore dell'host o del computer.  
   
 ## <a name="the-non-persisted-state"></a>Stato non persistente  
  Le istanze del flusso di lavoro durevoli che non sono ancora state rese persistenti rimangono in uno stato non persistente nei casi seguenti:  
   
--   L'host del servizio si arresta in modo anomalo prima che l'istanza del flusso di lavoro venga resa persistente per la prima volta. L'istanza rimane nell'archivio di istanze e non viene recuperata. In caso di arrivo di un messaggio correlato, l'istanza del flusso di lavoro diventa nuovamente attiva.  
+- L'host del servizio si arresta in modo anomalo prima che l'istanza del flusso di lavoro venga resa persistente per la prima volta. L'istanza rimane nell'archivio di istanze e non viene recuperata. In caso di arrivo di un messaggio correlato, l'istanza del flusso di lavoro diventa nuovamente attiva.  
   
--   Si verifica un'eccezione dell'istanza del flusso di lavoro prima che questa venga resa persistente per la prima volta. A seconda dell'elemento <xref:System.Activities.UnhandledExceptionAction> restituito, possono verificarsi gli scenari seguenti.  
+- Si verifica un'eccezione dell'istanza del flusso di lavoro prima che questa venga resa persistente per la prima volta. A seconda dell'elemento <xref:System.Activities.UnhandledExceptionAction> restituito, possono verificarsi gli scenari seguenti.  
   
-    -   <xref:System.Activities.UnhandledExceptionAction> viene impostato su <xref:System.Activities.UnhandledExceptionAction.Abort>: le informazioni sulla distribuzione del servizio vengono scritte nell'archivio di istanze e l'istanza del flusso di lavoro viene scaricata dalla memoria. L'istanza del flusso di lavoro rimane in uno stato non persistente e non può essere ricaricata.  
+    - <xref:System.Activities.UnhandledExceptionAction> è impostato su <xref:System.Activities.UnhandledExceptionAction.Abort>: Quando si verifica un'eccezione, informazioni sulla distribuzione di servizio viene scritto nell'archivio di istanze e l'istanza del flusso di lavoro viene scaricata dalla memoria. L'istanza del flusso di lavoro rimane in uno stato non persistente e non può essere ricaricata.  
   
-    -   <xref:System.Activities.UnhandledExceptionAction> viene impostato su <xref:System.Activities.UnhandledExceptionAction.Cancel> o su <xref:System.Activities.UnhandledExceptionAction.Terminate>: le informazioni sulla distribuzione del servizio vengono scritte nell'archivio di istanze e lo stato dell'istanza dell'attività viene impostato su <xref:System.Activities.ActivityInstanceState.Closed>.  
+    - <xref:System.Activities.UnhandledExceptionAction> è impostato su <xref:System.Activities.UnhandledExceptionAction.Cancel> o <xref:System.Activities.UnhandledExceptionAction.Terminate>: Quando si verifica un'eccezione, informazioni sulla distribuzione di servizio vengono scritte nell'archivio di istanze e lo stato dell'istanza attività è impostato su <xref:System.Activities.ActivityInstanceState.Closed>.  
   
  Per ridurre il rischio di incontrare istanze del flusso di lavoro scaricate e non persistenti, si consiglia di rendere persistente il flusso di lavoro nelle fasi iniziali del ciclo di vita.  
   
@@ -34,7 +34,7 @@ Quando viene creata una nuova istanza di un flusso di lavoro che mantiene persis
   
  Per trovare istanze non persistenti nell'archivio di istanze del flusso di lavoro di SQL, è possibile usare le query SQL seguenti:  
   
--   Questa query trova tutte le istanze che non sono state rese persistenti e restituisce l'ID e l'ora di creazione (ora UTC) relativi.  
+- Questa query trova tutte le istanze che non sono state rese persistenti e restituisce l'ID e l'ora di creazione (ora UTC) relativi.  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -42,7 +42,7 @@ Quando viene creata una nuova istanza di un flusso di lavoro che mantiene persis
         where IsInitialized = 0  
     ```  
   
--   Questa query trova tutte le istanze che non sono state rese persistenti e che non sono caricate e restituisce l'ID e l'ora di creazione (ora UTC) relativi.  
+- Questa query trova tutte le istanze che non sono state rese persistenti e che non sono caricate e restituisce l'ID e l'ora di creazione (ora UTC) relativi.  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -51,7 +51,7 @@ Quando viene creata una nuova istanza di un flusso di lavoro che mantiene persis
             and CurrentMachine is NULL  
     ```  
   
--   Questa query trova tutte le istanze sospese che non sono state rese persistenti e restituisce l'ID, l'ora di creazione (ora UTC), il motivo della sospensione e il nome dell'eccezione relativi.  
+- Questa query trova tutte le istanze sospese che non sono state rese persistenti e restituisce l'ID, l'ora di creazione (ora UTC), il motivo della sospensione e il nome dell'eccezione relativi.  
   
     ```sql  
     select InstanceId, CreationTime, SuspensionReason, SuspensionExceptionName   

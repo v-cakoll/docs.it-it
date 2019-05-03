@@ -11,11 +11,11 @@ api_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c4b8bffeb71497a7dd8e2ed25b833f9216d8017e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049739"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>Metodo ICorProfilerCallback8::DynamicMethodJITCompilationStarted
 [Supportato in .NET Framework 4.7 e versioni successive]  

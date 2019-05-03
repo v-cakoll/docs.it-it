@@ -3,14 +3,14 @@ title: Generazione di classi di tipo dati da XML
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
 ms.openlocfilehash: c1b5dfda8aa5370dbc202ab90c75ab5677970467
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929571"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>Generazione di classi di tipo dati da XML
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] include una nuova funzionalità per generare classi del tipo di dati da XML. In questo argomento viene descritto come generare automaticamente i tipi di dati per feed RSS del Blog .NET.  
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] include una nuova funzionalità per generare classi di tipi di dati da XML. In questo argomento viene descritto come generare automaticamente i tipi di dati per feed RSS del Blog .NET.  
   
 ### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>Acquisizione del codice XML dal RSS del Blog .NET feed  
   

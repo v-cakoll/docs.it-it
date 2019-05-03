@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
 ms.openlocfilehash: a79e779d8fcf549daeabc494e0a55deee30b5d22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608437"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= Operatore (Visual Basic)
 Concatena una `String` espressione da un `String` proprietà o variabile e assegna il risultato alla variabile o proprietà.  

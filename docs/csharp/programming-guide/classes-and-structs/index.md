@@ -1,16 +1,22 @@
 ---
-title: 'Classi e struct - Guida per programmatori C#'
+title: Classi e struct - Guida per programmatori C#
 ms.custom: seodec18
-description: 'Descrive le modalità d''uso di classi e strutture (struct) in C#.'
+description: Descrive le modalità d'uso di classi e strutture (struct) in C#.
 ms.date: 01/17/2016
 helpviewer_keywords:
-  - 'structs [C#], about structs'
-  - 'classes [C#], overview'
-  - 'C# language, structs'
-  - 'C# language, objects'
-  - 'objects [C#]'
-  - 'C# language, classes'
+- structs [C#], about structs
+- classes [C#], overview
+- C# language, structs
+- C# language, objects
+- objects [C#]
+- C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
+ms.openlocfilehash: 7b85940f8ce64139d056497a8007379f1658010d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646332"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Classi e struct (Guida per programmatori C#)
 Classi e struct sono due dei costrutti di base del Common Type System in .NET Framework. Ognuno di essi è costituito essenzialmente da una struttura di dati che incapsula un set di dati e comportamenti che formano insieme un'unità logica. I dati e i comportamenti sono i *membri* della classe o del tipo struct e ne includono i metodi, le proprietà, gli eventi e così via, come illustrato più avanti in questo argomento.  

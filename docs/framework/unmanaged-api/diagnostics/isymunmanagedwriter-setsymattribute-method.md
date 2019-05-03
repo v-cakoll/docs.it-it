@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8ffcc3a079e7e9a9d69622dc6666bb0e7641d4e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650775"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>Metodo ISymUnmanagedWriter::SetSymAttribute
 Definisce un attributo personalizzato in base al relativo nome. Questi attributi sono contenuti nell'archivio simboli, a differenza degli attributi personalizzati di metadati.  

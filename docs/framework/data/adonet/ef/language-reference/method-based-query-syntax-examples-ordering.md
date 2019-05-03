@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5d21b178-d731-471a-8534-1f8184a2ef06
 ms.openlocfilehash: e213046955c2c4e720c56adb96da29078ea3c48d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59226859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760571"
 ---
 # <a name="method-based-query-syntax-examples-ordering"></a>Esempi di sintassi delle query basate su metodo: Ordering
 Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumerable.ThenBy%2A> metodo di query il [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando la sintassi di query basate su metodo. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  

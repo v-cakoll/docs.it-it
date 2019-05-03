@@ -3,11 +3,11 @@ title: Scrittura di un provider di dati Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
 ms.openlocfilehash: 2aa27475c28bed521c636139b19454b0720960ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667296"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Scrittura di un provider di dati Entity Framework
 In questa sezione viene illustrato come scrivere un [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] provider per supportare un'origine dati diversa da SQL Server. Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] include un provider che supporta SQL Server.  
@@ -17,17 +17,17 @@ In questa sezione viene illustrato come scrivere un [!INCLUDE[adonet_ef](../../.
   
  Il provider di dati Entity Framework, compilato usando il modello di provider di dati ADO.NET, consente di eseguire le funzioni seguenti:  
   
--   Mapping dei tipi primitivi EDM (Entity Data Model) ai tipi di provider.  
+- Mapping dei tipi primitivi EDM (Entity Data Model) ai tipi di provider.  
   
--   Esposizione delle funzioni specifiche del provider.  
+- Esposizione delle funzioni specifiche del provider.  
   
--   Generazione di comandi specifici del provider per un determinato DbQueryCommandTree per supportare le query [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+- Generazione di comandi specifici del provider per un determinato DbQueryCommandTree per supportare le query [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
--   Generazione di comandi di aggiornamento specifici del provider per un determinato DbModificationCommandTree per supportare gli aggiornamenti mediante [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+- Generazione di comandi di aggiornamento specifici del provider per un determinato DbModificationCommandTree per supportare gli aggiornamenti mediante [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
--   Esposizione di file di mapping per la definizione dello schema di archiviazione per supportare la generazione di un modello basato su un database.  
+- Esposizione di file di mapping per la definizione dello schema di archiviazione per supportare la generazione di un modello basato su un database.  
   
--   Esposizione di metadati, ad esempio tabelle e visualizzazioni, mediante un modello concettuale.  
+- Esposizione di metadati, ad esempio tabelle e visualizzazioni, mediante un modello concettuale.  
   
  ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
   
@@ -43,4 +43,4 @@ In questa sezione viene illustrato come scrivere un [!INCLUDE[adonet_ef](../../.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Utilizzo di provider di dati](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+- [Uso di provider di dati](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

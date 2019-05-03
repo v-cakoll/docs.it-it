@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 571612796d4e66be9dd8469d748c2380c839ddfa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789818"
 ---
 # <a name="getscope-method"></a>Metodo GetScope
 Ottiene un ambito di importazione.  
@@ -60,4 +60,4 @@ HRESULT GetScope(
 
 - [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API Alink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

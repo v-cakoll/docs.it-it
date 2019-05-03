@@ -7,10 +7,10 @@ helpviewer_keywords:
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
 ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336837"
 ---
 # <a name="how-to-start-services"></a>Procedura: Avviare servizi
@@ -36,7 +36,7 @@ Dopo l'installazione di un servizio, è necessario avviarlo. Con l'avvio viene c
     |Per installare il servizio|Impostare questo valore|  
     |----------------------------------|--------------------|  
     |Al riavvio del computer|**Automatico**|  
-    |Quando un'azione esplicita dell'utente avvia il servizio|**Manuale**|  
+    |Quando un'azione esplicita dell'utente avvia il servizio|**Manual**|  
   
     > [!TIP]
     >  Per impedire del tutto l'avvio del servizio, è possibile impostare la proprietà <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> su **Disabled**. Ciò può essere utile se si prevede di dover riavviare un server più volte e si vuole risparmiare tempo evitando l'avvio dei servizi che verrebbero normalmente avviati.  
@@ -80,5 +80,5 @@ Dopo l'installazione di un servizio, è necessario avviarlo. Con l'avvio viene c
 ## <a name="see-also"></a>Vedere anche
 
 - [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Procedura: Creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

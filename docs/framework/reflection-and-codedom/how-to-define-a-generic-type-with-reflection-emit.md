@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74ddda813d756fb5cb54cb600e3cbf1cf68b3f38
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: b129da00fcd841566a4a823d8929348441d0a0f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221147"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59315543"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procedura: Definire un tipo generico tramite reflection emit
 Questo argomento illustra come creare un tipo generico semplice con due parametri di tipo, come applicare vincoli speciali, di classe e di interfaccia ai parametri di tipo e come creare membri che usano i parametri di tipo della classe come tipi di parametro o tipi restituiti.  
@@ -27,25 +27,25 @@ Questo argomento illustra come creare un tipo generico semplice con due parametr
   
 ### <a name="to-define-a-generic-type"></a>Per definire un tipo generico  
   
-1.  Definire un assembly dinamico denominato `GenericEmitExample1`. In questo esempio poiché l'assembly viene eseguito e salvato su disco, viene specificato <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>.  
+1. Definire un assembly dinamico denominato `GenericEmitExample1`. In questo esempio poiché l'assembly viene eseguito e salvato su disco, viene specificato <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>.  
   
      [!code-cpp[EmitGenericType#2](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#2)]
      [!code-csharp[EmitGenericType#2](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#2)]
      [!code-vb[EmitGenericType#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#2)]  
   
-2.  Definire un modulo dinamico. Un assembly è composto da moduli eseguibili. Per un assembly a modulo singolo, il nome del modulo è lo stesso dell'assembly e il nome del file corrisponde a quello del modulo seguito da un'estensione.  
+2. Definire un modulo dinamico. Un assembly è composto da moduli eseguibili. Per un assembly a modulo singolo, il nome del modulo è lo stesso dell'assembly e il nome del file corrisponde a quello del modulo seguito da un'estensione.  
   
      [!code-cpp[EmitGenericType#3](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#3)]
      [!code-csharp[EmitGenericType#3](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#3)]
      [!code-vb[EmitGenericType#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#3)]  
   
-3.  Definire una classe. In questo esempio la classe è denominata `Sample`.  
+3. Definire una classe. In questo esempio la classe è denominata `Sample`.  
   
      [!code-cpp[EmitGenericType#4](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#4)]
      [!code-csharp[EmitGenericType#4](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#4)]
      [!code-vb[EmitGenericType#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#4)]  
   
-4.  Definire i parametri di tipo generico di `Sample` passando una matrice di stringhe contenenti i nomi dei parametri al metodo <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType>. In questo modo la classe diventa un tipo generico. Il valore restituito è una matrice di oggetti <xref:System.Reflection.Emit.GenericTypeParameterBuilder> che rappresentano i parametri di tipo e che possono essere usati nel codice creato.  
+4. Definire i parametri di tipo generico di `Sample` passando una matrice di stringhe contenenti i nomi dei parametri al metodo <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType>. In questo modo la classe diventa un tipo generico. Il valore restituito è una matrice di oggetti <xref:System.Reflection.Emit.GenericTypeParameterBuilder> che rappresentano i parametri di tipo e che possono essere usati nel codice creato.  
   
      Nel codice seguente `Sample` diventa un tipo generico con parametri di tipo `TFirst` e `TSecond`. Per migliorare la leggibilità del codice, ogni oggetto <xref:System.Reflection.Emit.GenericTypeParameterBuilder> viene inserito in una variabile che ha lo stesso nome del parametro di tipo.  
   
@@ -53,25 +53,25 @@ Questo argomento illustra come creare un tipo generico semplice con due parametr
      [!code-csharp[EmitGenericType#5](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#5)]
      [!code-vb[EmitGenericType#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#5)]  
   
-5.  Aggiungere vincoli speciali ai parametri di tipo. In questo esempio il parametro di tipo `TFirst` è vincolato a tipi con costruttori senza parametri e a tipi di riferimento.  
+5. Aggiungere vincoli speciali ai parametri di tipo. In questo esempio il parametro di tipo `TFirst` è vincolato a tipi con costruttori senza parametri e a tipi di riferimento.  
   
      [!code-cpp[EmitGenericType#6](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#6)]
      [!code-csharp[EmitGenericType#6](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#6)]
      [!code-vb[EmitGenericType#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#6)]  
   
-6.  Facoltativamente, aggiungere vincoli di interfaccia e di classe ai parametri di tipo. In questo esempio il parametro di tipo `TFirst` è vincolato a tipi che derivano dalla classe di base rappresentata dall'oggetto <xref:System.Type> contenuto nella variabile `baseType` e che implementano le interfacce i cui tipi sono contenuti nelle variabili `interfaceA` e `interfaceB`. Per la dichiarazione e l'assegnazione di queste variabili, vedere l'esempio di codice.  
+6. Facoltativamente, aggiungere vincoli di interfaccia e di classe ai parametri di tipo. In questo esempio il parametro di tipo `TFirst` è vincolato a tipi che derivano dalla classe di base rappresentata dall'oggetto <xref:System.Type> contenuto nella variabile `baseType` e che implementano le interfacce i cui tipi sono contenuti nelle variabili `interfaceA` e `interfaceB`. Per la dichiarazione e l'assegnazione di queste variabili, vedere l'esempio di codice.  
   
      [!code-cpp[EmitGenericType#7](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#7)]
      [!code-csharp[EmitGenericType#7](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#7)]
      [!code-vb[EmitGenericType#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#7)]  
   
-7.  Definire un campo. In questo esempio il tipo del campo è specificato dal parametro di tipo `TFirst`. Poiché <xref:System.Reflection.Emit.GenericTypeParameterBuilder> deriva da <xref:System.Type>, è possibile usare parametri di tipo generico ovunque sia consentito l'uso di un tipo.  
+7. Definire un campo. In questo esempio il tipo del campo è specificato dal parametro di tipo `TFirst`. Poiché <xref:System.Reflection.Emit.GenericTypeParameterBuilder> deriva da <xref:System.Type>, è possibile usare parametri di tipo generico ovunque sia consentito l'uso di un tipo.  
   
      [!code-cpp[EmitGenericType#21](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#21)]
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
      [!code-vb[EmitGenericType#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#21)]  
   
-8.  Definire un metodo che usa i parametri di tipo del tipo generico. Si noti che questi tipi di metodi non sono generici, a meno che non abbiano specifici elenchi di parametri di tipo. Il codice seguente definisce un metodo `static` (`Shared` in Visual Basic) che accetta una matrice di `TFirst` e restituisce `List<TFirst>` (`List(Of TFirst)` in Visual Basic) contenente tutti gli elementi della matrice. Per definire questo metodo, è necessario creare il tipo `List<TFirst>` chiamando <xref:System.Type.MakeGenericType%2A> nella definizione di tipo generico `List<T>`. Quando si usa l'operatore `typeof` (`GetType` in Visual Basic), `T` viene omesso in modo da ottenere la definizione di tipo generico. Il tipo di parametro viene creato usando il metodo <xref:System.Type.MakeArrayType%2A>.  
+8. Definire un metodo che usa i parametri di tipo del tipo generico. Si noti che questi tipi di metodi non sono generici, a meno che non abbiano specifici elenchi di parametri di tipo. Il codice seguente definisce un metodo `static` (`Shared` in Visual Basic) che accetta una matrice di `TFirst` e restituisce `List<TFirst>` (`List(Of TFirst)` in Visual Basic) contenente tutti gli elementi della matrice. Per definire questo metodo, è necessario creare il tipo `List<TFirst>` chiamando <xref:System.Type.MakeGenericType%2A> nella definizione di tipo generico `List<T>`. Quando si usa l'operatore `typeof` (`GetType` in Visual Basic), `T` viene omesso in modo da ottenere la definizione di tipo generico. Il tipo di parametro viene creato usando il metodo <xref:System.Type.MakeArrayType%2A>.  
   
      [!code-cpp[EmitGenericType#22](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#22)]
      [!code-csharp[EmitGenericType#22](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#22)]
@@ -136,6 +136,7 @@ Questo argomento illustra come creare un tipo generico semplice con due parametr
 -   Compilare il codice dalla riga di comando usando csc.exe, vbc.exe o cl.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
 - [Uso della reflection emit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
 - [Scenari relativi ad assembly dinamici della reflection emit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

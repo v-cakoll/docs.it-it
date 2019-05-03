@@ -3,11 +3,11 @@ title: 'Procedura: Creare un modello di attività personalizzato'
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
 ms.openlocfilehash: ee6f249092c5cf8643e3c9bfd15d32e77791d8bb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773619"
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Procedura: Creare un modello di attività personalizzato
 

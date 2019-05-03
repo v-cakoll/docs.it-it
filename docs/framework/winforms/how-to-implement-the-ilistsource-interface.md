@@ -9,11 +9,11 @@ helpviewer_keywords:
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
 ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801764"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>Procedura: Implementare l'interfaccia IListSource
 Implementare il <xref:System.ComponentModel.IListSource> per creare una classe associabile che non implementa l'interfaccia <xref:System.Collections.IList> ma fornisce un elenco da un altro percorso.  
@@ -44,4 +44,4 @@ Implementare il <xref:System.ComponentModel.IListSource> per creare una classe a
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>
 - <xref:System.ComponentModel.IBindingList>
-- [Associazione dati e Windows Form](data-binding-and-windows-forms.md)
+- [Data binding e Windows Forms](data-binding-and-windows-forms.md)

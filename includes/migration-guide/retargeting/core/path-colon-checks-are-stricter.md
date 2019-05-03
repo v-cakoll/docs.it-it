@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a51738fa75ba2dd4574549fce2570df8231c4cae
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59234924"
+---
 ### <a name="path-colon-checks-are-stricter"></a>I controlli della presenza di due punti nel percorso sono più severi
 
 |   |   |
@@ -8,4 +16,3 @@
 |Versione|4.6.2|
 |Tipo|Ridestinazione|
 |API interessate|<ul><li><xref:System.IO.Path.GetDirectoryName(System.String)?displayProperty=nameWithType></li><li><xref:System.IO.Path.GetPathRoot(System.String)?displayProperty=nameWithType></li></ul>|
-

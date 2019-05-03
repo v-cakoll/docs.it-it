@@ -5,11 +5,11 @@ helpviewer_keywords:
 - metadata [WCF], retrieving
 ms.assetid: 18d8ba4c-af0f-4827-a50b-4202d767bacc
 ms.openlocfilehash: bb415d88c2bae75cb16aa137bdf867eb463afa63
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59152399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748304"
 ---
 # <a name="retrieving-metadata"></a>Recupero dei metadati
 Il recupero dei metadati è il processo di richiesta e di recupero dei metadati da un endpoint di metadati, ad esempio un endpoint di metadati WS-MetadataExchange (MEX) o un endpoint di metadati HTTP/GET.  
@@ -26,7 +26,7 @@ Il recupero dei metadati è il processo di richiesta e di recupero dei metadati 
  [Procedura: Usare Svcutil.exe per scaricare documenti di metadati](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
  Viene illustrato come utilizzare Svcutil.exe per scaricare documenti di metadati  
   
- [Procedura: Usare MetadataResolver per ottenere dinamicamente i metadati di associazione](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
+ [Procedura: Usare la classe MetadataResolver per ottenere dinamicamente i metadati di associazione](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
  Viene illustrato come utilizzare <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> per ottenere dinamicamente i metadati di associazione a runtime.  
   
  [Procedura: Usare MetadataExchangeClient per recuperare i metadati](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  

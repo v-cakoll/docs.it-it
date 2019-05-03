@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ce2f14fd-1038-458a-91e3-a078c61f0d10
 ms.openlocfilehash: 2621ab4db207d1b868fbe3778c30c744201b0506
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033813"
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>Procedura: Gestire le chiavi composite nelle query
 Alcuni operatori possono accettare un solo argomento. Se l'argomento deve includere più di una colonna del database, è necessario creare un tipo anonimo per rappresentare la combinazione.  
@@ -29,4 +29,4 @@ Alcuni operatori possono accettare un solo argomento. Se l'argomento deve includ
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Concetti relatici alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

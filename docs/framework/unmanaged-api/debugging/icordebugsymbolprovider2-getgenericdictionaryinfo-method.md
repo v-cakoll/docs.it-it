@@ -5,11 +5,11 @@ ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f171af8dbfa4e812711e95e5587b314753cd9350
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944649"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Metodo ICorDebugSymbolProvider2::GetGenericDictionaryInfo
 Recupera una mappa di dizionari generici.  
@@ -33,9 +33,9 @@ HRESULT GetGenericDictionaryInfo(
   
  La mappa è costituita da due sezioni di primo livello:  
   
--   Oggetto [directory](#Directory) contenente gli indirizzi virtuali relativi (RVA) di tutti i dizionari inclusi nella mappa.  
+- Oggetto [directory](#Directory) contenente gli indirizzi virtuali relativi (RVA) di tutti i dizionari inclusi nella mappa.  
   
--   Un byte allineato [heap](#Heap) che contiene informazioni sulle creazione di istanze di oggetti. Viene avviato immediatamente dopo l'ultima voce di directory.  
+- Un byte allineato [heap](#Heap) che contiene informazioni sulle creazione di istanze di oggetti. Viene avviato immediatamente dopo l'ultima voce di directory.  
   
 <a name="Directory"></a>   
 ## <a name="the-directory"></a>Directory  
@@ -43,13 +43,13 @@ HRESULT GetGenericDictionaryInfo(
   
  La parte directory della mappa di dizionari generici presenta la struttura seguente:  
   
--   I primi 4 byte contengono il numero di voci del dizionario, cioè il numero di indirizzi RVA (Relative Virtual Address) presenti nel dizionario. Si farà riferimento a questo valore come *N*. Se viene impostato il bit significativo, le voci vengono organizzate in base all'indirizzo RVA (Relative Virtual Address) in ordine crescente.  
+- I primi 4 byte contengono il numero di voci del dizionario, cioè il numero di indirizzi RVA (Relative Virtual Address) presenti nel dizionario. Si farà riferimento a questo valore come *N*. Se viene impostato il bit significativo, le voci vengono organizzate in base all'indirizzo RVA (Relative Virtual Address) in ordine crescente.  
   
--   Il *N* seguono le voci di directory. Ogni voce è costituita da 8 byte in due segmenti di 4 byte:  
+- Il *N* seguono le voci di directory. Ogni voce è costituita da 8 byte in due segmenti di 4 byte:  
   
-    -   Byte 0 a 3: RVA; indirizzo virtuale relativo del dizionario.  
+    - Byte 0 a 3: RVA; indirizzo virtuale relativo del dizionario.  
   
-    -   Byte 4-7: Offset; un offset rispetto all'inizio dell'heap.  
+    - Byte 4-7: Offset; un offset rispetto all'inizio dell'heap.  
   
 <a name="Heap"></a>   
 ## <a name="the-heap"></a>Heap  
@@ -63,11 +63,11 @@ Heap Size = Stream.Length – (Directory Size + 4)
   
  Il formato di ogni elemento delle informazioni sull'heap è il seguente:  
   
--   Lunghezza in byte di questo elemento di informazioni sulla creazione di un'istanza, nel formato di metadati ECMA compresso. Il valore esclude le informazioni sulla lunghezza.  
+- Lunghezza in byte di questo elemento di informazioni sulla creazione di un'istanza, nel formato di metadati ECMA compresso. Il valore esclude le informazioni sulla lunghezza.  
   
--   Il numero di tipi di istanza generica, oppure *T*, nel formato di metadati ECMA compresso.  
+- Il numero di tipi di istanza generica, oppure *T*, nel formato di metadati ECMA compresso.  
   
--   *T* tipi, ognuno rappresentato nel formato di firma di tipo ECMA.  
+- *T* tipi, ognuno rappresentato nel formato di firma di tipo ECMA.  
   
  L'inclusione della lunghezza per ogni elemento dell'heap consente un ordinamento semplice della sezione della directory senza influire sull'heap.  
   

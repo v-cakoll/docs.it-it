@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
 ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59319924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779158"
 ---
 # <a name="how-to-run-a-workflow"></a>Procedura: Eseguire un flusso di lavoro
 In questo argomento è una continuazione di Windows Workflow Foundation esercitazione introduttiva e illustra come creare un host del flusso di lavoro ed eseguire il flusso di lavoro definita nella precedente [come: Creare un flusso di lavoro](how-to-create-a-workflow.md) argomento.
@@ -62,7 +62,7 @@ In questo argomento è una continuazione di Windows Workflow Foundation esercita
     WorkflowInvoker.Invoke(workflow1);
     ```
 
-     Questo codice host generato usa <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> fornisce un modo semplice per richiamare un flusso di lavoro come se fosse una chiamata al metodo e può essere usato solo per i flussi di lavoro che non usano la persistenza. <xref:System.Activities.WorkflowApplication> fornisce un modello più dettagliato per l'esecuzione di flussi di lavoro che include la notifica di eventi del ciclo di vita, il controllo dell'esecuzione, riassunzione del segnalibro e la persistenza. In questo esempio vengono usati i segnalibri e l'oggetto <xref:System.Activities.WorkflowApplication> viene usato per ospitare il flusso di lavoro. Aggiungere la seguente istruzione `using` o **Imports** all'inizio del file **Program.cs** o **Module1.vb** dopo le istruzioni **using** o **Imports** esistenti.
+     Questo codice host generato usa <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> offre un modo semplice per richiamare un flusso di lavoro come se fosse una chiamata a un metodo e può essere usato solo per i flussi di lavoro che non usano la persistenza. <xref:System.Activities.WorkflowApplication> fornisce un modello più dettagliato per l'esecuzione di flussi di lavoro che include la notifica degli eventi del ciclo di vita, il controllo di esecuzione, la ripresa del segnalibro e la persistenza. In questo esempio vengono usati i segnalibri e l'oggetto <xref:System.Activities.WorkflowApplication> viene usato per ospitare il flusso di lavoro. Aggiungere la seguente istruzione `using` o **Imports** all'inizio del file **Program.cs** o **Module1.vb** dopo le istruzioni **using** o **Imports** esistenti.
 
     ```vb
     Imports NumberGuessWorkflowActivities
@@ -166,6 +166,6 @@ In questo argomento è una continuazione di Windows Workflow Foundation esercita
 - [Programmazione di Windows Workflow Foundation](programming.md)
 - [Esercitazione introduttiva](getting-started-tutorial.md)
 - [Procedura: Creare un flusso di lavoro](how-to-create-a-workflow.md)
-- [Procedura: Creare ed eseguire un flusso di lavoro con esecuzione prolungata](how-to-create-and-run-a-long-running-workflow.md)
+- [Procedura: Creare ed eseguire una lunga esecuzione flusso di lavoro](how-to-create-and-run-a-long-running-workflow.md)
 - [Attesa per l'input in un flusso di lavoro](waiting-for-input-in-a-workflow.md)
 - [Hosting dei flussi di lavoro](hosting-workflows.md)

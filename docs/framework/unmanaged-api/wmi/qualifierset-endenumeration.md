@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: be2dfd6bb521dee14afd3728bdd9c446cb779e85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598844"
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration (funzione)
 Termina l'enumerazione iniziato con una chiamata per il [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) (funzione).  

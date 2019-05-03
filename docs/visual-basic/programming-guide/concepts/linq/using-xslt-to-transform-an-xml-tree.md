@@ -3,11 +3,11 @@ title: Uso di XSLT per trasformare un albero XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
 ms.openlocfilehash: a013e042bcaab321d8a5596368c349f296240d0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908154"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>Uso di XSLT per trasformare un albero XML (Visual Basic)
 È possibile creare un albero XML, creare un oggetto <xref:System.Xml.XmlReader> dall'albero XML, creare un nuovo documento e infine creare un oggetto <xref:System.Xml.XmlWriter> che scriverà nel documento nuovo. Quindi, è possibile richiamare la trasformazione XSLT, passando <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> alla trasformazione. Dopo il completamento della trasformazione, il nuovo albero XML viene popolato con i relativi risultati.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
 ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981877"
 ---
 # <a name="textelement-content-model-overview"></a>Cenni preliminari sul modello di contenuto TextElement
 Questo argomento descrive il contenuto supportato per un <xref:System.Windows.Documents.TextElement>. Il <xref:System.Windows.Documents.Paragraph> classe è un tipo di <xref:System.Windows.Documents.TextElement>. Un modello di contenuto descrive gli oggetti o gli elementi che possono essere contenuti in altri oggetti o elementi. Questa panoramica riepiloga il modello di contenuto usato per gli oggetti derivati da <xref:System.Windows.Documents.TextElement>. Per altre informazioni, vedere [Cenni preliminari sui documenti dinamici](flow-document-overview.md).  
@@ -57,11 +57,11 @@ Questo argomento descrive il contenuto supportato per un <xref:System.Windows.Do
 ## <a name="working-with-textelement-content-programmatically"></a>Uso del contenuto TextElement a livello di codice  
  Il contenuto di un <xref:System.Windows.Documents.TextElement> è costituito da raccolte e pertanto la modifica a livello di codice il contenuto di <xref:System.Windows.Documents.TextElement> oggetti avviene tramite queste raccolte. Esistono tre diverse raccolte usate da <xref:System.Windows.Documents.TextElement> -le classi derivate:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Rappresenta una raccolta di elementi <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> definisce il contenuto figlio consentito del <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, e <xref:System.Windows.Controls.TextBlock> elementi.  
+- <xref:System.Windows.Documents.InlineCollection>: Rappresenta una raccolta di elementi <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> definisce il contenuto figlio consentito degli elementi <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> e <xref:System.Windows.Controls.TextBlock>.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Rappresenta una raccolta di elementi <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> definisce il contenuto figlio consentito del <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, e <xref:System.Windows.Documents.Figure> elementi.  
+- <xref:System.Windows.Documents.BlockCollection>: Rappresenta una raccolta di elementi <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> definisce il contenuto figlio consentito degli elementi <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> e <xref:System.Windows.Documents.Figure>.  
   
--   <xref:System.Windows.Documents.ListItemCollection>: Elemento di contenuto dinamico che rappresenta un particolare elemento di contenuto in un oggetto ordinato o non ordinati <xref:System.Windows.Documents.List>.  
+- <xref:System.Windows.Documents.ListItemCollection>: Elemento di contenuto dinamico che rappresenta un particolare elemento di contenuto in un oggetto ordinato o non ordinati <xref:System.Windows.Documents.List>.  
   
  È possibile modificare (aggiungere o rimuovere elementi) da queste raccolte usando le proprietà dei rispettive **Inlines**, **blocchi**, e **ListItems**. Gli esempi seguenti illustrano come modificare il contenuto di un oggetto Span tramite il **Inlines** proprietà.  
   
@@ -103,7 +103,7 @@ Questo argomento descrive il contenuto supportato per un <xref:System.Windows.Do
 ## <a name="see-also"></a>Vedere anche
 
 - [Modificare un oggetto FlowDocument tramite la proprietà Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
-- [Modificare elementi di contenuto di flusso tramite la proprietà Blocks](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)
+- [Modificare elementi di contenuto dinamico tramite la proprietà Blocks](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)
 - [Modificare un oggetto FlowDocument tramite la proprietà Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Modificare le colonne di una tabella tramite la proprietà Columns](how-to-manipulate-table-columns-through-the-columns-property.md)
 - [Modificare i gruppi di righe di una tabella tramite la proprietà RowGroups](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

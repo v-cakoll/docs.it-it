@@ -7,11 +7,11 @@ helpviewer_keywords:
 - geometries [WPF], combining
 ms.assetid: 54c3277c-6b6e-4b25-91be-fda0bbc706b4
 ms.openlocfilehash: c5ebe87abd4c2cf70f8fa17f1fcc773293f3ad27
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910092"
 ---
 # <a name="how-to-create-a-combined-geometry"></a>Procedura: Creare una geometria combinata
 In questo esempio viene illustrato come combinare le geometrie. Per combinare due geometrie, usare un <xref:System.Windows.Media.CombinedGeometry> oggetto. Impostare relativi <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> e <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> con le due geometrie per combinare e impostare il <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A> proprietà, che determina come le geometrie vengono combinate insieme, alla `Union`, `Intersect`, `Exclude`, o `Xor`.  

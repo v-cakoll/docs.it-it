@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
 ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758275"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Procedura: Comprimere e nascondere sezioni di codice (Visual Basic)
 Il `#Region` direttiva consente di comprimere e nascondere sezioni di codice nel file di Visual Basic. Il `#Region` direttiva consente di specificare un blocco di codice che è possibile espandere o comprimere quando si usa l'editor di Visual Studio code. La possibilità di nascondere in modo selettivo il codice rende i file più gestibile e più facile da leggere. Per altre informazioni, vedere [Struttura](/visualstudio/ide/outlining).  
@@ -20,7 +20,7 @@ Il `#Region` direttiva consente di comprimere e nascondere sezioni di codice nel
   
 ### <a name="to-collapse-and-hide-a-section-of-code"></a>Per comprimere e nascondere una sezione di codice  
   
--   Inserire la sezione di codice tra il `#Region` e `#End Region` (istruzioni), come nell'esempio seguente:  
+- Inserire la sezione di codice tra il `#Region` e `#End Region` (istruzioni), come nell'esempio seguente:  
   
      [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]  
   

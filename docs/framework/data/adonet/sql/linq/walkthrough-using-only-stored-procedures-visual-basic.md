@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
 ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59314828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876733"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Procedura dettagliata: Usare solo stored procedure (Visual Basic)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'accesso ai dati usando solo stored procedure. Questo approccio viene spesso è usato dagli amministratori di database per limitare l'accesso all'archivio dati.  
@@ -105,7 +105,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 1. Nelle **Esplora soluzioni**, fare doppio clic su **Form1.vb**, quindi fare clic su **Visualizza codice**.  
   
-     `Class Form1` viene visualizzata nell'editor del codice.  
+     `Class Form1` verrà visualizzato nell'editor di codice.  
   
 2. Digitare il codice riportato di seguito nel blocco di codice `Form1`.  
   
@@ -194,4 +194,4 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 ## <a name="see-also"></a>Vedere anche
 
 - [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
-- [Stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

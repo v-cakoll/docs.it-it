@@ -5,11 +5,11 @@ f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
 ms.openlocfilehash: 9084e885ba98211623781b036e9f7407a44368ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970144"
 ---
 # <a name="drive-drivename-not-found"></a>Unità '\<NomeUnità >' non trovato
 Non è possibile trovare l'unità. La connessione di rete è stata persa o l'unità a cui si tenta di accedere è offline o non esiste.  

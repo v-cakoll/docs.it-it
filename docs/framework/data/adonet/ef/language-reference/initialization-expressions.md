@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
 ms.openlocfilehash: 6f6f27eaecd760e565eeb98a286252981d6df0bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61615025"
 ---
 # <a name="initialization-expressions"></a>Espressioni di inizializzazione
 Un'espressione di inizializzazione consente di inizializzare un nuovo oggetto. La maggior parte delle espressioni di inizializzazione è supportata, incluse le più recenti espressioni di inizializzazione di C# 3.0 e Visual Basic 9.0. I tipi seguenti possono essere inizializzati e restituiti da una query LINQ to Entities:  
   
--   Raccolta di zero o più oggetti entità tipizzate o proiezione di tipi complessi definiti nel modello concettuale.  
+- Raccolta di zero o più oggetti entità tipizzate o proiezione di tipi complessi definiti nel modello concettuale.  
   
--   Tipi CLR supportati da [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
+- Tipi CLR supportati da [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
   
--   Raccolte inline.  
+- Raccolte inline.  
   
--   Tipi anonimi.  
+- Tipi anonimi.  
   
  L'inizializzazione dei tipi anonimi è illustrata nell'esempio seguente nella sintassi delle espressioni di query:  
   

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
 ms.openlocfilehash: 6404e5933f886578b4ad8afd0d3da324541fc3f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792249"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Procedura dettagliata: Creazione di un controllo composito con Visual Basic
 I controlli compositi consentono di creare e riutilizzare interfacce grafiche personalizzate. Un controllo composito è sostanzialmente un componente con rappresentazione visiva. Può essere composto da uno o più controlli per Windows Forms, componenti o blocchi di codice in grado di estenderne le funzionalità convalidando l'input dell'utente, modificando le proprietà della visualizzazione o effettuando altre attività richieste dall'autore. I controlli compositi possono essere inseriti in Windows Forms al pari degli altri controlli. Nella prima parte di questa procedura verrà creato un controllo composito semplice denominato `ctlClock`. Nella seconda parte, le funzionalità di `ctlClock` verranno estese mediante ereditarietà.  
@@ -35,7 +35,7 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
 2. Nell'elenco dei progetti Visual Basic, selezionare la **libreria di controlli Windows** modello di progetto, digitare `ctlClockLib` nel **Name** casella e quindi fare clic su **OK**.  
   
-     Per impostazione predefinita il nome del progetto, `ctlClockLib`, verrà assegnato anche allo spazio dei nomi radice. Lo spazio dei nomi radice viene utilizzato per qualificare i nomi dei componenti dell'assembly. Se, ad esempio, due assembly forniscono componenti denominati `ctlClock`, è possibile specificare il `ctlClock` componente usando `ctlClockLib.ctlClock.`  
+     Per impostazione predefinita il nome del progetto, `ctlClockLib`, verrà assegnato anche allo spazio dei nomi radice. Lo spazio dei nomi radice viene utilizzato per qualificare i nomi dei componenti dell'assembly. Se ad esempio due assembly forniscono componenti denominati `ctlClock`, sarà possibile specificare il componente `ctlClock` usando`ctlClockLib.ctlClock.`  
   
 3. In Esplora soluzioni fare clic con il pulsante destro del mouse su **UserControl1.vb**, quindi fare clic su **Rinomina**. Modificare il nome file in `ctlClock.vb`. Scegliere il pulsante **Sì** quando richiesto per rinominare tutti i riferimenti all'elemento di codice "UserControl1".  
   
@@ -59,8 +59,8 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
     |Proprietà|Modificare in|  
     |--------------|---------------|  
-    |**Nome**|`lblDisplay`|  
-    |**Testo**|`(blank space)`|  
+    |**Name**|`lblDisplay`|  
+    |**per**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -244,10 +244,10 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
     |Proprietà|Impostazione|  
     |--------------|-------------|  
-    |**Nome**|`lblAlarm`|  
-    |**Testo**|**Allarme!**|  
+    |**Name**|`lblAlarm`|  
+    |**per**|**Allarme!**|  
     |**TextAlign**|`MiddleCenter`|  
-    |**Visibile**|`False`|  
+    |**Visible**|`False`|  
   
 ### <a name="adding-the-alarm-functionality"></a>Aggiunta della funzionalità di allarme  
  Nelle procedure precedenti sono state aggiunte proprietà e un controllo in grado di abilitare la funzionalità di allarme nel controllo composito. In questa procedura verrà aggiunto un codice che consente di confrontare l'ora corrente con l'ora dell'allarme e, se le ore risultano identiche, attivare un allarme sonoro e lampeggiante. Eseguendo l'override del metodo `Timer1_Tick` di `ctlClock` e aggiungendovi ulteriore codice sarà possibile estendere le capacità di `ctlAlarmClock` e conservare allo stesso le funzionalità intrinseche di `ctlClock`.  
@@ -358,10 +358,10 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
     |Control|Proprietà|Value|  
     |-------------|--------------|-----------|  
-    |`label1`|**Testo**|`(blank space)`|  
-    ||**Nome**|`lblTest`|  
-    |`dateTimePicker1`|**Nome**|`dtpTest`|  
-    ||**Formato**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
+    |`label1`|**per**|`(blank space)`|  
+    ||**Name**|`lblTest`|  
+    |`dateTimePicker1`|**Name**|`dtpTest`|  
+    ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 12. Nella finestra di progettazione fare doppio clic su **dtpTest**.  
   
@@ -398,5 +398,5 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
 ## <a name="see-also"></a>Vedere anche
 
 - [Tipi di controlli personalizzati](varieties-of-custom-controls.md)
-- [Procedura: Creare controlli compositi](how-to-author-composite-controls.md)
-- [Procedura: Visualizzare un controllo nella finestra di dialogo Scegli elementi della Casella degli strumenti](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Procedura: Modificare controlli compositi](how-to-author-composite-controls.md)
+- [Procedura: Visualizzare un controllo nella finestra di dialogo elementi della casella degli strumenti scegliere](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)

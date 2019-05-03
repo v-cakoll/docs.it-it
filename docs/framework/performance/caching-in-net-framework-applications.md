@@ -7,11 +7,11 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 ms.openlocfilehash: a57489af2f2af59f128f5d86be844b43c9c49840
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788141"
 ---
 # <a name="caching-in-net-framework-applications"></a>Memorizzazione nella cache in applicazioni .NET Framework
 La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido. Quando accedono nuovamente ai dati, le applicazioni possono recuperarli dalla cache anziché dall'origine. In questo modo si possono ottenere migliori prestazioni e scalabilità. Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.  
@@ -24,17 +24,17 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 ## <a name="caching-data"></a>Memorizzazione di dati nella cache  
  È possibile memorizzare nella cache le informazioni usando le classi dello spazio dei nomi <xref:System.Runtime.Caching>. Le classi di memorizzazione nella cache in questo spazio dei nomi offrono le funzionalità seguenti:  
   
--   Tipi astratti che forniscono gli elementi fondamentali per creare implementazioni della cache personalizzate.  
+- Tipi astratti che forniscono gli elementi fondamentali per creare implementazioni della cache personalizzate.  
   
--   Un'implementazione concreta della cache oggetti in memoria.  
+- Un'implementazione concreta della cache oggetti in memoria.  
   
  La classe di base astratta di memorizzazione nella cache (<xref:System.Runtime.Caching.ObjectCache>) definisce le attività di memorizzazione nella cache seguenti:  
   
--   Creazione e gestione di voci della cache.  
+- Creazione e gestione di voci della cache.  
   
--   Definizione delle informazioni relative alla scadenza e alla rimozione.  
+- Definizione delle informazioni relative alla scadenza e alla rimozione.  
   
--   Attivazione degli eventi generati in risposta a modifiche apportate alle voci della cache.  
+- Attivazione degli eventi generati in risposta a modifiche apportate alle voci della cache.  
   
  La classe <xref:System.Runtime.Caching.MemoryCache> è un'implementazione della cache oggetti in memoria della classe <xref:System.Runtime.Caching.ObjectCache>. È possibile usare la classe <xref:System.Runtime.Caching.MemoryCache> per la maggior parte delle attività di memorizzazione nella cache.  
   
@@ -67,11 +67,11 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
   
  Per estendere la memorizzazione nella cache è possibile eseguire queste operazioni:  
   
--   Creare una classe personalizzata che deriva dalla classe <xref:System.Runtime.Caching.ObjectCache> e quindi fornire un'implementazione personalizzata della cache nella classe derivata.  
+- Creare una classe personalizzata che deriva dalla classe <xref:System.Runtime.Caching.ObjectCache> e quindi fornire un'implementazione personalizzata della cache nella classe derivata.  
   
--   Creare una classe che deriva dalla classe <xref:System.Runtime.Caching.MemoryCache> e personalizzare o estendere la classe derivata. Per un esempio di come eseguire questa operazione, vedere [Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx) (Memorizzazione nella cache dei dati dell'applicazione mediante più oggetti cache in un'applicazione ASP.NET).  
+- Creare una classe che deriva dalla classe <xref:System.Runtime.Caching.MemoryCache> e personalizzare o estendere la classe derivata. Per un esempio di come eseguire questa operazione, vedere [Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx) (Memorizzazione nella cache dei dati dell'applicazione mediante più oggetti cache in un'applicazione ASP.NET).  
   
--   Creare una classe che deriva dalla classe <xref:System.Web.Caching.OutputCacheProvider> e configurare l'applicazione per l'utilizzo del provider di cache di output personalizzato.  
+- Creare una classe che deriva dalla classe <xref:System.Web.Caching.OutputCacheProvider> e configurare l'applicazione per l'utilizzo del provider di cache di output personalizzato.  
   
  Per altre informazioni, vedere l'articolo [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://go.microsoft.com/fwlink/?LinkId=185772) (Memorizzazione nella cache di output estendibile con ASP.NET 4 - VS 2010 e .NET 4.0) nel blog di Scott Guthrie.  
   

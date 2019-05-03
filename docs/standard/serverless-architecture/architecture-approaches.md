@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 04ad383586f974bb2dccc4623a9a254f5668dab4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640200"
 ---
-# <a name="architecture-approaches"></a>Approcci di architettura
+# <a name="architecture-approaches"></a>Approcci all'architettura
 
 La comprensione di approcci esistenti per la progettazione di App aziendali consente di chiarire il ruolo svolto da senza server. Esistono molti approcci e i modelli che si è evoluta negli decenni dello sviluppo software e tutti i propri vantaggi e svantaggi. In molti casi, la soluzione definitiva non può riguardare scelta di un unico approccio ma può essere integrato diversi approcci. Gli scenari di migrazione includono spesso shifting dall'approccio di uno architettura a altro tramite un approccio ibrido.
 

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e4cd4fa8f4ba2bea5a2a853544eae6239bfaaeba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917580"
 ---
 # <a name="itypenamegettypearguments-method"></a>Metodo ITypeName::GetTypeArguments
 Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.  

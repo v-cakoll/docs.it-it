@@ -1,5 +1,5 @@
 ---
-title: <socket> (Impostazioni di rete)
+title: Elemento <socket> (impostazioni di rete)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674389"
 ---
 # <a name="socket-element-network-settings"></a>\<socket > (impostazioni di rete)
 Specifica se le operazioni socket usano le porte di completamento.  
@@ -51,7 +51,7 @@ Specifica se le operazioni socket usano le porte di completamento.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[impostazioni](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Note  
  Gli attributi `alwaysUseCompletionPortsForAccept` e `alwaysUseCompletionPortsForConnect` vengono utilizzati per specificare il comportamento predefinito riguardante l'utilizzo di porte di completamento da parte delle classi nello spazio dei nomi <xref:System.Net.Sockets?displayProperty=nameWithType>. Le porte di completamento sono consigliate per le applicazioni server ad alte prestazioni.  
@@ -64,15 +64,15 @@ Specifica se le operazioni socket usano le porte di completamento.
   
  Ciò `ipProtectionLevel` impostazione dell'attributo interessa solo il traffico in ingresso iniziale:  
   
--   Un server TCP in ascolto delle connessioni in ingresso su un socket.  
+- Un server TCP in ascolto delle connessioni in ingresso su un socket.  
   
--   Un'applicazione di UDP ricezione di un pacchetto su un socket.  
+- Un'applicazione di UDP ricezione di un pacchetto su un socket.  
   
  Questa impostazione di configurazione non influisce sulle già stabilite le connessioni TCP (il traffico è senza restrizioni in entrambe le direzioni) e non un'applicazione che invia i pacchetti UDP.  
   
  I valori possibili per il `ipProtectionLevel` impostazione dell'attributo corrispondono ai livelli di protezione definiti specificati nella <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> enumerazione come illustrato di seguito:  
   
-|**Valore attributo**|**Descrizione**|  
+|**Valore dell'attributo**|**Descrizione**|  
 |-|-|  
 |EdgeRestricted|Il livello di protezione IP è limitato dal perimetro. Questo valore verrebbe utilizzato dalle applicazioni progettate per operare in Internet. Questa impostazione non consente l'attraversamento Network Address Translation (NAT) usando l'implementazione di Windows Teredo. Tali applicazioni possono aggirare i firewall IPv4 e pertanto le applicazioni devono essere protette contro gli attacchi Internet indirizzati alla porta aperta. In Windows Server 2003 e Windows XP, il valore predefinito per il livello di protezione IP in un socket è limitato dal perimetro.|  
 |con restrizioni|Il livello di protezione IP è limitato. Questo valore verrebbe utilizzato dalle applicazioni intranet che non implementano scenari Internet. Queste applicazioni non sono in genere testate o protette contro gli attacchi di tipo Internet. Questa impostazione limiterà il traffico ricevuto solo link-local.|  

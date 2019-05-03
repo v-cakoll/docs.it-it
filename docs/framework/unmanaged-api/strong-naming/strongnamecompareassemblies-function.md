@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a49252d00f75b4d0b6325aeae0aab22f8ada5e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000324"
 ---
 # <a name="strongnamecompareassemblies-function"></a>Funzione StrongNameCompareAssemblies
 Determina se due assembly differiscono solo per le firme con nome sicuro.  
@@ -48,11 +48,11 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Uno dei valori seguenti:  
   
--   `SN_CMP_DIFFERENT` (0): Specifica che gli assembly contengono dati diversi.  
+- `SN_CMP_DIFFERENT` (0): Specifica che gli assembly contengono dati diversi.  
   
--   `SN_CMP_IDENTICAL` (1): Specifica che gli assembly sono esattamente uguali, comprese le firme e checksum.  
+- `SN_CMP_IDENTICAL` (1): Specifica che gli assembly sono esattamente uguali, comprese le firme e checksum.  
   
--   `SN_CMP_SIGONLY` (2): Specifica che gli assembly si differenziano solo per la firma e checksum.  
+- `SN_CMP_SIGONLY` (2): Specifica che gli assembly si differenziano solo per la firma e checksum.  
   
 ## <a name="return-value"></a>Valore restituito  
  `true` al termine dell'esecuzione; in caso contrario, `false`.  

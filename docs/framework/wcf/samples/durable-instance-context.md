@@ -3,11 +3,11 @@ title: Contesto dell'istanza durevole
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
 ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59316934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990263"
 ---
 # <a name="durable-instance-context"></a>Contesto dell'istanza durevole
 In questo esempio viene illustrato come personalizzare il runtime di Windows Communication Foundation (WCF) per abilitare contesti dell'istanza durevoli. SQL Server 2005 viene utilizzato come archivio di backup (in questo caso SQL Server 2005 Express). Tuttavia, viene fornito anche un modo di accedere ai meccanismi di archiviazione personalizzati.  
@@ -233,11 +233,11 @@ else
   
  WCF consente di estendere il componente del runtime InstanceContext aggiungendo un nuovo stato e il comportamento usando il modello di oggetti estensibili. Questo modello viene utilizzato in WCF per estendere le classi runtime esistenti con nuove funzionalità oppure per aggiungere nuove funzionalità di stato a un oggetto. Sono disponibili tre interfacce nel modello di oggetti estensibili: IExtensibleObject\<T >, IExtension\<T > e IExtensionCollection\<T >:  
   
--   Modello IExtensibleObject\<T > viene implementata dagli oggetti che consentono le estensioni che consentono di personalizzare le relative funzionalità.  
+- Modello IExtensibleObject\<T > viene implementata dagli oggetti che consentono le estensioni che consentono di personalizzare le relative funzionalità.  
   
--   IExtension\<T > viene implementata dagli oggetti che sono estensioni di classi di tipo T.  
+- IExtension\<T > viene implementata dagli oggetti che sono estensioni di classi di tipo T.  
   
--   Il IExtensionCollection\<T > interfaccia è una raccolta di IExtensions che consente di recuperare IExtensions in base al rispettivo tipo.  
+- Il IExtensionCollection\<T > interfaccia è una raccolta di IExtensions che consente di recuperare IExtensions in base al rispettivo tipo.  
   
  È pertanto necessario creare una classe InstanceContextExtension che implementi l'interfaccia IExtension e definisca lo stato necessario per salvare l'ID del contesto. Questa classe fornisce inoltre lo stato per memorizzare la gestione archivi utilizzata. Una volta salvato il nuovo stato, non sarà possibile modificarlo. Lo stato viene pertanto fornito e salvato nell'istanza che viene generata in quel momento e vi si potrà accedere soltanto utilizzando le proprietà di sola lettura.  
   

@@ -3,11 +3,11 @@ title: Gestione dei messaggi non elaborabili in MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59316466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052092"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Gestione dei messaggi non elaborabili in MSMQ 4,0
 Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili in un servizio. In questo esempio si basa sul [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) esempio. In questo esempio viene usato l'oggetto `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
@@ -23,19 +23,19 @@ Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili i
 ## <a name="msmq-v40-poison-handling-sample"></a>Esempio di gestione dei messaggi non elaborabili di MSMQ v4.0
  In [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ fornisce una funzionalità di coda secondaria non elaborabile che può essere usata per archiviare i messaggi non elaborabili. Questo esempio dimostra la procedura consigliata per gestire i messaggi non elaborabili usando [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
- Il rilevamento dei messaggi non elaborabili in [!INCLUDE[wv](../../../../includes/wv-md.md)] è piuttosto sofisticato. Il rilevamento è agevolato da 3 proprietà. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> è il numero di volte che un determinato messaggio viene riletto dalla coda e inviato all'applicazione per l'elaborazione. Un messaggio viene riletto dalla coda quando è inserito di nuovo nella coda perché non può essere inviato all'applicazione o l'applicazione esegue il rollback della transazione nell'operazione del servizio. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> è il numero di volte in cui che il messaggio viene spostato nella coda di tentativi. Quando viene raggiunto <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>, il messaggio viene spostato nella coda di tentativi. La proprietà <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> è l'intervallo di tempo dopo il quale il messaggio viene spostato dalla coda di tentativi alla coda principale. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> viene reimpostato su 0. Viene eseguito un nuovo tentativo per il messaggio. Se tutti i tentativi di leggere il messaggio non sono riusciti, il messaggio è contrassegnato come non elaborabile.
+ Il rilevamento dei messaggi non elaborabili in [!INCLUDE[wv](../../../../includes/wv-md.md)] è piuttosto sofisticato. Il rilevamento è agevolato da 3 proprietà. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> è il numero di volte che un determinato messaggio viene riletto dalla coda e inviato all'applicazione per l'elaborazione. Un messaggio viene riletto dalla coda quando è inserito di nuovo nella coda perché non può essere inviato all'applicazione o l'applicazione esegue il rollback della transazione nell'operazione del servizio. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> è il numero di volte che il messaggio viene spostato nella coda di tentativi. Quando viene raggiunto <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>, il messaggio viene spostato nella coda di tentativi. La proprietà <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> è l'intervallo di tempo dopo il quale il messaggio viene spostato dalla coda di tentativi alla coda principale. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> viene reimpostato su 0. Viene eseguito un nuovo tentativo per il messaggio. Se tutti i tentativi di leggere il messaggio non sono riusciti, il messaggio è contrassegnato come non elaborabile.
 
  Una volta il messaggio è contrassegnato come non elaborabile, viene gestito in base alle impostazioni nell'enumerazione <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>. Per reiterare i valori possibili:
 
--   Errore (impostazione predefinita): Errore del listener e anche l'host del servizio.
+- Errore (impostazione predefinita): Errore del listener e anche l'host del servizio.
 
--   Rilascio: Per eliminare il messaggio.
+- Rilascio: Per eliminare il messaggio.
 
--   Sposta: Per spostare il messaggio nella coda secondaria dei messaggi non elaborabili. Questo valore è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Sposta: Per spostare il messaggio nella coda secondaria dei messaggi non elaborabili. Questo valore è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
--   Reject: Per rifiutare il messaggio, l'invio del messaggio alla coda del mittente. Questo valore è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Reject: Per rifiutare il messaggio, l'invio del messaggio alla coda del mittente. Questo valore è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
- Nell'esempio viene mostrato l'uso della disposizione `Move` per il messaggio non elaborabile. `Move` fa sì che il messaggio da spostare nella coda secondaria dei messaggi non elaborabili.
+ Nell'esempio viene mostrato l'uso della disposizione `Move` per il messaggio non elaborabile. `Move` determina lo spostamento del messaggio nella coda secondaria non elaborabile.
 
  Il contratto di servizio è `IOrderProcessor`che definisce un servizio unidirezionale adatto per l'uso con le code.
 
@@ -277,15 +277,15 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 2. Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.
 
-    1.  Aprire Server Manager in Visual Studio 2012.
+    1. Aprire Server Manager in Visual Studio 2012.
 
-    2.  Espandere la **funzionalità** scheda.
+    2. Espandere la **funzionalità** scheda.
 
-    3.  Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.
+    3. Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.
 
-    4.  Verificare i **transazionale** casella.
+    4. Verificare i **transazionale** casella.
 
-    5.  Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.
+    5. Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.
 
 3. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

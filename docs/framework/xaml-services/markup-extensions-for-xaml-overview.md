@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971912"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Panoramica delle estensioni di markup per XAML
 Le estensioni di markup sono una tecnica XAML per ottenere un valore che non è una primitiva né un tipo XAML specifico. Per utilizzo dell'attributo, le estensioni di markup usano la sequenza di caratteri nota costituita da una parentesi graffa aperta `{` per l'immissione dell'ambito dell'estensione di markup e da una parentesi graffa chiusa `}` . Quando si usano i servizi XAML di .NET Framework, si possono usare alcune delle estensioni di markup predefinite del linguaggio XAML contenute nell'assembly System.Xaml. inoltre possibile creare una sottoclasse dalla classe <xref:System.Windows.Markup.MarkupExtension> , definita in System.Xaml, e definire estensioni di markup personalizzate. In alternativa, è possibile usare le estensioni di markup definite da un particolare framework se già si fa riferimento a tale framework.  
@@ -25,19 +25,19 @@ Le estensioni di markup sono una tecnica XAML per ottenere un valore che non è 
 >  Il prefisso `x:` viene usato per il mapping dello spazio dei nomi XAML tipico dello spazio dei nomi del linguaggio XAML, nell'elemento radice di una produzione XAML. Ad esempio, modelli di progetto e pagina di Visual Studio per diversi framework specifici avviare un file XAML usando il `x:` mapping. Nel mapping dello spazio dei nomi XAML personalizzato è possibile scegliere un token di prefisso diverso. Tuttavia, per identificare le entità che rappresentano una parte definita dello spazio dei nomi XAML del linguaggio XAML, in questa documentazione viene usato il mapping `x:` predefinito anziché lo spazio dei nomi XAML predefinito di un framework specifico o altri spazi dei nomi CLR o XML arbitrari.  
   
 ### <a name="xtype"></a>x:Type  
- `x:Type` fornisce il <xref:System.Type> oggetto per il tipo denominato. Questa funzionalità viene il più delle volte usata nei meccanismi di rinvio che usano il tipo CLR sottostante e la derivazione del tipo come moniker o identificatore di raggruppamento. Gli stili e i modelli WPF, nonché il loro utilizzo delle proprietà `TargetType` , sono un esempio specifico. Per altre informazioni, vedere [x:Type Markup Extension](x-type-markup-extension.md).  
+ `x:Type` fornisce l'oggetto <xref:System.Type> per il tipo denominato. Questa funzionalità viene il più delle volte usata nei meccanismi di rinvio che usano il tipo CLR sottostante e la derivazione del tipo come moniker o identificatore di raggruppamento. Gli stili e i modelli WPF, nonché il loro utilizzo delle proprietà `TargetType` , sono un esempio specifico. Per altre informazioni, vedere [x:Type Markup Extension](x-type-markup-extension.md).  
   
 ### <a name="xstatic"></a>x:Static  
- `x:Static` produce valori statici da entità di codice del tipo di valore che non sono direttamente il tipo di valore della proprietà, ma può essere valutata per quel tipo. Questo è utile per specificare valori già esistenti come costanti note in una definizione del tipo. Per altre informazioni, vedere [x:Static Markup Extension](x-static-markup-extension.md).  
+ `x:Static` produce valori statici da entità di codice di tipo di valore che non sono direttamente il tipo del valore di una proprietà, ma possono essere valutate in base a tale tipo. Questo è utile per specificare valori già esistenti come costanti note in una definizione del tipo. Per altre informazioni, vedere [x:Static Markup Extension](x-static-markup-extension.md).  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` Specifica `null` come valore per un membro XAML. In base alla progettazione di tipi specifici o a concetti di framework più ampi, non sempre `null` è un valore predefinito di una proprietà o il valore implicito dell'attributo di una stringa vuota. Per altre informazioni, vedere [x:Null Markup Extension](x-null-markup-extension.md).  
+ `x:Null` specifica `null` come valore per un membro XAML. In base alla progettazione di tipi specifici o a concetti di framework più ampi, non sempre `null` è un valore predefinito di una proprietà o il valore implicito dell'attributo di una stringa vuota. Per altre informazioni, vedere [x:Null Markup Extension](x-null-markup-extension.md).  
   
 ### <a name="xarray"></a>x:Array  
- `x:Array` supporta la creazione di matrici generali nella sintassi XAML nei casi in cui il supporto delle raccolte fornito dagli elementi di base e dai modelli di controllo viene deliberatamente non utilizzato. Per altre informazioni, vedere [x:Array Markup Extension](x-array-markup-extension.md). Nel caso specifico di XAML 2009, l'accesso alle matrici avviene come primitive di linguaggio anziché come un'estensione. Per altre informazioni, vedere [XAML 2009 Language Features](xaml-2009-language-features.md).  
+ `x:Array` supporta la creazione di matrici generali nella sintassi XAML nei casi in cui si sceglie intenzionalmente di non usare il supporto delle raccolte fornito dagli elementi di base e dai modelli di controllo. Per altre informazioni, vedere [x:Array Markup Extension](x-array-markup-extension.md). Nel caso specifico di XAML 2009, l'accesso alle matrici avviene come primitive di linguaggio anziché come un'estensione. Per altre informazioni, vedere [XAML 2009 Language Features](xaml-2009-language-features.md).  
   
 ### <a name="xreference"></a>x:Reference  
- `x:Reference` fa parte di XAML 2009, un'estensione del set del linguaggio (2006) originale. `x:Reference` rappresenta un riferimento a un altro oggetto esistente in un oggetto grafico. Questo oggetto viene definito dal relativo attributo `x:Name`. Per altre informazioni, vedere [x:Reference Markup Extension](x-reference-markup-extension.md).  
+ `x:Reference` fa parte di XAML 2009, un'estensione del set del linguaggio originale (2006). `x:Reference` rappresenta un riferimento a un altro oggetto esistente in un oggetto grafico. Questo oggetto viene definito dal relativo attributo `x:Name`. Per altre informazioni, vedere [x:Reference Markup Extension](x-reference-markup-extension.md).  
   
 ### <a name="other-x-constructs"></a>Altri x: Costrutti di  
  Esistono altri costrutti `x:` che supportano le funzionalità del linguaggio XAML, che però non sono implementati come estensioni di markup. Per altre informazioni, vedere [XAML Namespace (x) Funzionalità del linguaggio](xaml-namespace-x-language-features.md).  
@@ -54,9 +54,9 @@ Le estensioni di markup sono una tecnica XAML per ottenere un valore che non è 
 ## <a name="defining-the-support-type-for-a-custom-markup-extension"></a>Definizione del tipo di supporto per un'estensione di markup personalizzata  
  Quando si usano i servizi XAML di .NET Framework o framework basati sui servizi XAML di .NET Framework, esistono due possibilità per denominare il tipo di supporto dell'estensione di markup. Il nome del tipo è rilevante per la modalità con cui i writer dell'oggetto XAML tentano di accedere e richiamare un tipo di supporto dell'estensione di markup quando rilevano un utilizzo dell'estensione di markup in XAML. Usare una delle strategie di denominazione seguenti:  
   
--   Denominare il tipo in modo che corrisponda esattamente al token di utilizzo del markup XAML. Ad esempio, per supportare l'utilizzo di un'estensione `{Collate ...}` , denominare il tipo di supporto `Collate`.  
+- Denominare il tipo in modo che corrisponda esattamente al token di utilizzo del markup XAML. Ad esempio, per supportare l'utilizzo di un'estensione `{Collate ...}` , denominare il tipo di supporto `Collate`.  
   
--   Denominare il tipo in modo che corrisponda al token della stringa dell'utilizzo seguito dal suffisso `Extension`. Ad esempio, per supportare l'utilizzo di un'estensione `{Collate ...}` , denominare il tipo di supporto `CollateExtension`.  
+- Denominare il tipo in modo che corrisponda al token della stringa dell'utilizzo seguito dal suffisso `Extension`. Ad esempio, per supportare l'utilizzo di un'estensione `{Collate ...}` , denominare il tipo di supporto `CollateExtension`.  
   
  L'ordine di ricerca prevede che venga cercato per primo il nome della classe con il suffisso `Extension`, quindi il nome della classe senza il suffisso `Extension` .  
   
@@ -81,9 +81,9 @@ public Collate(CollationMode collationMode) {...}
   
  L'elaborazione viene eseguita a livello concettuale come se l'estensione di markup fosse un oggetto da creare, quindi vengono impostati i valori di membro. Ogni proprietà specificata da impostare viene valutata nello stesso modo in cui un membro specificato può essere impostato su un oggetto creato durante l'analisi del codice XAML. Vi sono due differenze importanti:  
   
--   Come osservato in precedenza, non è necessario che un'estensione di markup disponga di un costruttore predefinito perché sia possibile crearne un'istanza in XAML. La costruzione di oggetti viene rinviata fino a quando gli argomenti possibili corrispondenti nella sintassi del testo non vengono convertiti in formato token e valutati come argomenti posizionali o denominati e il costruttore appropriato non viene a quel punto chiamato.  
+- Come osservato in precedenza, non è necessario che un'estensione di markup disponga di un costruttore predefinito perché sia possibile crearne un'istanza in XAML. La costruzione di oggetti viene rinviata fino a quando gli argomenti possibili corrispondenti nella sintassi del testo non vengono convertiti in formato token e valutati come argomenti posizionali o denominati e il costruttore appropriato non viene a quel punto chiamato.  
   
--   Gli utilizzi delle estensioni di markup possono essere annidati. L'estensione di markup più interna viene valutata per prima. È dunque possibile presupporre tale utilizzo e dichiarare uno dei parametri della costruzione come tipo che richiede un convertitore di valori, ad esempio un'estensione di markup, da produrre.  
+- Gli utilizzi delle estensioni di markup possono essere annidati. L'estensione di markup più interna viene valutata per prima. È dunque possibile presupporre tale utilizzo e dichiarare uno dei parametri della costruzione come tipo che richiede un convertitore di valori, ad esempio un'estensione di markup, da produrre.  
   
  Nell'esempio precedente viene illustrato l'affidamento su tale elaborazione. Il writer di oggetti XAML dei servizi XAML di .NET Framework elabora i nomi delle costanti di enumerazione in valori enumerati a livello nativo.  
   
@@ -122,11 +122,11 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="attributing-for-a-custom-markup-extension"></a>Associazione di attributi per un'estensione di markup personalizzata  
  Per supportare sia gli ambienti di progettazione sia determinati scenari dei writer di oggetti XAML, è necessario associare al tipo di supporto dell'estensione di markup diversi attributi CLR. Questi attributi indicano l'utilizzo dell'estensione di markup desiderato.  
   
- <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> i report di <xref:System.Type> tipo di informazioni per l'oggetto che <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> restituisce. In base alla semplice firma, <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> restituisce <xref:System.Object>. Diversi consumer potrebbero però richiedere informazioni più precise sul tipo restituito, vale a dire:  
+ <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> specifica le informazioni <xref:System.Type> per il tipo di oggetto restituito da <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> . In base alla semplice firma, <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> restituisce <xref:System.Object>. Diversi consumer potrebbero però richiedere informazioni più precise sul tipo restituito, vale a dire:  
   
--   Finestre di progettazione e IDE, potenzialmente in grado di fornire supporto dipendente dal tipo per gli utilizzi delle estensioni di markup.  
+- Finestre di progettazione e IDE, potenzialmente in grado di fornire supporto dipendente dal tipo per gli utilizzi delle estensioni di markup.  
   
--   Implementazioni avanzate di gestori `SetMarkupExtension` in classi di destinazione, che possono basarsi sulla reflection per determinare il tipo restituito di un'estensione di markup anziché creare un ramo in implementazioni di <xref:System.Windows.Markup.MarkupExtension> specifiche note in base al nome.  
+- Implementazioni avanzate di gestori `SetMarkupExtension` in classi di destinazione, che possono basarsi sulla reflection per determinare il tipo restituito di un'estensione di markup anziché creare un ramo in implementazioni di <xref:System.Windows.Markup.MarkupExtension> specifiche note in base al nome.  
   
 <a name="serialization_of_markup_extension_usages"></a>   
 ## <a name="serialization-of-markup-extension-usages"></a>Serializzazione degli utilizzi di estensioni di markup  
@@ -138,11 +138,11 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  Se l'utilizzo dell'estensione di markup usa argomenti posizionali, viene rappresentato come oggetto iniziale con un valore di inizializzazione. Come rappresentazione di testo approssimativa, il flusso del nodo sarà simile a quanto segue:  
   
- `StartObject` (<xref:System.Xaml.XamlType> è tipo di definizione dell'estensione di markup, non il tipo restituito)  
+ `StartObject` (<xref:System.Xaml.XamlType> è il tipo di definizione dell'estensione di markup, non il tipo restituito)  
   
- `StartMember` (nome del <xref:System.Xaml.XamlMember> è `_InitializationText`)  
+ `StartMember` (il nome di <xref:System.Xaml.XamlMember> è `_InitializationText`)  
   
- `Value` (valore rappresenta gli argomenti posizionali sotto forma di stringa tra i delimitatori frapposti)  
+ `Value` (rappresenta gli argomenti posizionali sotto forma di stringa, inclusi i delimitatori frapposti)  
   
  `EndMember`  
   

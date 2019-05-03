@@ -3,11 +3,11 @@ title: 'Procedura dettagliata: Esecuzione di query tra relazioni (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
 ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59325371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033397"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Procedura dettagliata: Esecuzione di query tra relazioni (C#)
 Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associazioni* per rappresentare le relazioni di chiave esterna nel database.  
@@ -22,18 +22,18 @@ Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdli
 ## <a name="overview"></a>Panoramica  
  La procedura dettagliata è costituita da tre attività principali:  
   
--   Aggiunta di una classe di entità per rappresentare la tabella Orders nel database di esempio Northwind.  
+- Aggiunta di una classe di entità per rappresentare la tabella Orders nel database di esempio Northwind.  
   
--   Completamento delle annotazioni alla classe `Customer` per migliorare la relazione tra le classi `Customer` e `Order`.  
+- Completamento delle annotazioni alla classe `Customer` per migliorare la relazione tra le classi `Customer` e `Order`.  
   
--   Creazione ed esecuzione di una query per testare la capacità di ottenere informazioni su `Order` usando la classe `Customer`.  
+- Creazione ed esecuzione di una query per testare la capacità di ottenere informazioni su `Order` usando la classe `Customer`.  
   
 ## <a name="mapping-relationships-across-tables"></a>Esecuzione del mapping delle relazioni tra tabelle  
  Dopo la definizione della classe `Customer`, creare la definizione della classe di entità `Order` includendo il codice seguente per indicare che `Order.Customer` è correlata come chiave esterna a `Customer.CustomerID`.  
   
 #### <a name="to-add-the-order-entity-class"></a>Per aggiungere la classe di entità Order  
   
--   Digitare o incollare il codice seguente dopo la classe `Customer`:  
+- Digitare o incollare il codice seguente dopo la classe `Customer`:  
   
      [!code-csharp[DLinqWalk2CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#1)]  
   
@@ -42,7 +42,7 @@ Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdli
   
 #### <a name="to-annotate-the-customer-class"></a>Per annotare la classe Customer  
   
--   Digitare o incollare il codice seguente nella classe `Customer`:  
+- Digitare o incollare il codice seguente nella classe `Customer`:  
   
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   

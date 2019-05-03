@@ -4,47 +4,47 @@ ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
 ms.openlocfilehash: 74f15c3ac6e5192ce3565579d515198d3b7e39f5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59302270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940530"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Procedura: Compilare un'applicazione Web Form ASP.NET che può riconoscere attestazioni con WIF
 ## <a name="applies-to"></a>Si applica a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Web Form ASP.NET®  
+- Web Form ASP.NET®  
   
 ## <a name="summary"></a>Riepilogo  
  Questo argomento include le procedure dettagliate per creare una semplice applicazione Web Form ASP.NET in grado di riconoscere attestazioni. Sono inoltre disponibili istruzioni su come testare la semplice applicazione Web Form ASP.NET in grado di riconoscere attestazioni per la corretta implementazione dell'autenticazione federata. La procedura decritta in questo argomento non include istruzioni dettagliate per la creazione di un servizio token di sicurezza e presuppone che il servizio sia già stato configurato.  
   
 ## <a name="contents"></a>Sommario  
   
--   Obiettivi  
+- Obiettivi  
   
--   Riepilogo dei passaggi  
+- Riepilogo dei passaggi  
   
--   Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
+- Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
   
--   Passaggio 2: configurare l'applicazione Web Form ASP.NET per l'autenticazione basata su attestazioni  
+- Passaggio 2: configurare l'applicazione Web Form ASP.NET per l'autenticazione basata su attestazioni  
   
--   Passaggio 3: eseguire i test sulla soluzione  
+- Passaggio 3: eseguire i test sulla soluzione  
   
 ## <a name="objectives"></a>Obiettivi  
   
--   Configurare l'applicazione Web Form ASP.NET per l'autenticazione basata su attestazioni  
+- Configurare l'applicazione Web Form ASP.NET per l'autenticazione basata su attestazioni  
   
--   Testare l'applicazione Web Form ASP.NET in grado di riconoscere attestazioni  
+- Testare l'applicazione Web Form ASP.NET in grado di riconoscere attestazioni  
   
 ## <a name="summary-of-steps"></a>Riepilogo dei passaggi  
   
--   Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
+- Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
   
--   Passaggio 2: configurare l'applicazione Web Form ASP.NET per l'autenticazione federata  
+- Passaggio 2: configurare l'applicazione Web Form ASP.NET per l'autenticazione federata  
   
--   Passaggio 3: eseguire i test sulla soluzione  
+- Passaggio 3: eseguire i test sulla soluzione  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
  In questo passaggio si creerà una nuova applicazione Web Form ASP.NET.  

@@ -16,11 +16,11 @@ ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c569407bac247e60075834e67fde9327ce6bc4a0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795135"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Procedura: Decrittografare gli elementi XML con chiavi simmetriche
 È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per crittografare un elemento all'interno di un documento XML.  La crittografia XML consente di archiviare o trasportare contenuti XML sensibili, senza preoccuparsi che i dati vengano letti con facilità.  Questo esempio di codice consente di decrittografare un elemento XML usando l'algoritmo Advanced Encryption Standard (AES), noto anche come Rijndael.  
@@ -72,9 +72,9 @@ ms.locfileid: "59334627"
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Per compilare questo esempio, è necessario includere un riferimento a `System.Security.dll`.  
+- Per compilare questo esempio, è necessario includere un riferimento a `System.Security.dll`.  
   
--   Includere gli spazi dei nomi seguenti: <xref:System.Xml>, <xref:System.Security.Cryptography> e <xref:System.Security.Cryptography.Xml>.  
+- Includere gli spazi dei nomi seguenti: <xref:System.Xml>, <xref:System.Security.Cryptography> e <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Non archiviare mai una chiave crittografica in testo non crittografato e non trasferire mai in testo non crittografato una chiave tra computer.  

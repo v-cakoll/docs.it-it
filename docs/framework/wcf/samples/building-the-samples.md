@@ -3,11 +3,11 @@ title: Generazione degli esempi Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
 ms.openlocfilehash: b1f1005e32687d2683f757d847d9fa19e098f290
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59317857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944066"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Generazione degli esempi Windows Communication Foundation
 

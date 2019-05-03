@@ -3,11 +3,11 @@ title: 'Procedura: Pubblicare metadati per un servizio usando un file di configu
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761455"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Procedura: Pubblicare metadati per un servizio usando un file di configurazione
 Questo è uno dei due argomenti che illustrano la pubblicazione di metadati per un servizio Windows Communication Foundation (WCF). Esistono due modi per specificare come un servizio dovrebbe pubblicare metadati: usando un file di configurazione o il codice. In questo argomento viene illustrato come pubblicare metadati per un servizio usando un file di configurazione.  
@@ -98,7 +98,7 @@ namespace Metadata.Samples
 
 3. Aggiungere un elemento `<behavior>` all'elemento `<serviceBehaviors>` e specificare un valore per l'attributo `name` dell'elemento `<behavior>`.  
 
-4. Aggiungere un elemento `<serviceMetadata>` all'elemento `<behavior>`. Impostare l'attributo `httpGetEnabled` su `true` e l'attributo `policyVersion` su Policy15. `httpGetEnabled` consente al servizio di rispondere alle richieste di metadati eseguite da una richiesta HTTP GET. `policyVersion` indica al servizio di conformarsi a WS-Policy 1.5 per la generazione di metadati.  
+4. Aggiungere un elemento `<serviceMetadata>` all'elemento `<behavior>`. Impostare l'attributo `httpGetEnabled` su `true` e l'attributo `policyVersion` su Policy15. `httpGetEnabled` consente al servizio di rispondere a richieste di metadati eseguite da una richiesta HTTP GET. `policyVersion` indica al servizio di conformarsi a WS-Policy 1.5 per la generazione di metadati.  
 
 5. Aggiungere un attributo `behaviorConfiguration` all'elemento `<service>` e specificare l'attributo `name` dell'elemento `<behavior>` aggiunto al passaggio 1, come illustrato nell'esempio di codice seguente.  
   
@@ -140,21 +140,21 @@ namespace Metadata.Samples
   
 7. Per gli endpoint dei metadati aggiunti nel passaggio precedente, impostare l'attributo `binding` su uno dei valori seguenti:  
   
-    -   `mexHttpBinding` per la pubblicazione HTTP.  
+    - `mexHttpBinding` per la pubblicazione HTTP.  
   
-    -   `mexHttpsBinding` per la pubblicazione HTTPS.  
+    - `mexHttpsBinding` per la pubblicazione HTTPS.  
   
-    -   `mexNamedPipeBinding` per la pubblicazione named pipe.  
+    - `mexNamedPipeBinding` per la pubblicazione named pipe.  
   
-    -   `mexTcpBinding` per la pubblicazione TCP.  
+    - `mexTcpBinding` per la pubblicazione TCP.  
   
 8. Per gli endpoint dei metadati aggiunti in un passaggio precedente, impostare l'indirizzo su:  
   
-    -   Una stringa vuota, per usare l'indirizzo di base dell'applicazione host come punto di pubblicazione, se l'indirizzo di base corrisponde all'associazione di metadati.  
+    - Una stringa vuota, per usare l'indirizzo di base dell'applicazione host come punto di pubblicazione, se l'indirizzo di base corrisponde all'associazione di metadati.  
   
-    -   Un indirizzo relativo, se l'applicazione host ha un indirizzo di base.  
+    - Un indirizzo relativo, se l'applicazione host ha un indirizzo di base.  
   
-    -   Un indirizzo assoluto.  
+    - Un indirizzo assoluto.  
   
 9. Compilare ed eseguire l'applicazione console.  
   
@@ -260,4 +260,4 @@ namespace Metadata.Samples
 - [Servizio indipendente](../../../../docs/framework/wcf/samples/self-host.md)
 - [Panoramica dell'architettura dei metadati](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Uso di metadati](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Procedura: Pubblicare metadati per un servizio usando codice](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [Procedura: Pubblicare metadati per un servizio tramite codice](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

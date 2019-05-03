@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009799"
 ---
 # <a name="how-to-create-an-activity"></a>Procedura: Creare un'attività
 
@@ -46,7 +46,7 @@ Le attività sono l'unità principale del comportamento in [!INCLUDE[wf1](../../
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
-    > L'attività `ReadInt` deriva da <xref:System.Activities.NativeActivity%601> anziché <xref:System.Activities.CodeActivity>, che è l'attività predefinita per il modello di attività codice. <xref:System.Activities.CodeActivity%601> può essere utilizzato se l'attività fornisce un singolo risultato, che viene esposta tramite il <xref:System.Activities.Activity%601.Result%2A> argomento, ma <xref:System.Activities.CodeActivity%601> non supporta l'uso dei segnalibri, pertanto <xref:System.Activities.NativeActivity%601> viene usato.
+    > L'attività `ReadInt` deriva da <xref:System.Activities.NativeActivity%601> anziché <xref:System.Activities.CodeActivity>, che è l'attività predefinita per il modello di attività codice. L'oggetto <xref:System.Activities.CodeActivity%601> può essere usato se l'attività fornisce un singolo risultato, che viene esposto tramite l'argomento <xref:System.Activities.Activity%601.Result%2A>, ma <xref:System.Activities.CodeActivity%601> non supporta l'uso dei segnalibri, quindi viene usato l'oggetto <xref:System.Activities.NativeActivity%601>.
 
 ## <a name="create-the-prompt-activity"></a>Creare l'attività Prompt
 
@@ -109,4 +109,4 @@ Per istruzioni su come creare un flusso di lavoro tramite queste attività, vede
 - [Progettazione e implementazione di attività personalizzate](designing-and-implementing-custom-activities.md)
 - [Esercitazione introduttiva](getting-started-tutorial.md)
 - [Procedura: Creare un flusso di lavoro](how-to-create-a-workflow.md)
-- [Utilizzo di ExpressionTextBox in un ActivityDesigner personalizzato](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [Uso di ExpressionTextBox in un ActivityDesigner personalizzato](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

@@ -3,11 +3,11 @@ title: 'Procedura: Unire contenuto da file non analoghi (LINQ) (Visual Basic)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
 ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59301113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778066"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Procedura: Unire contenuto da file non analoghi (LINQ) (Visual Basic)
 
@@ -131,4 +131,4 @@ Creare e compilare un progetto destinato a una delle opzioni seguenti:
 ## <a name="see-also"></a>Vedere anche
 
 - [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ e le directory dei File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))

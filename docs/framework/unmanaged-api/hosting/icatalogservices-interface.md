@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 07356dcf81df41a1dd419c3b68829dcbfec5a073
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985387"
 ---
 # <a name="icatalogservices-interface"></a>Interfaccia ICatalogServices
 Fornisce metodi per servizi di catalogazione.  
@@ -33,7 +33,7 @@ Fornisce metodi per servizi di catalogazione.
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo Autodone](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-autodone-method.md)|Riservato esclusivamente per uso interno.|  
-|[Metodo NotAutodone](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|Riservato esclusivamente per uso interno.|  
+|[Metodo NoAutodone](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|Riservato esclusivamente per uso interno.|  
   
 ## <a name="see-also"></a>Vedere anche
 

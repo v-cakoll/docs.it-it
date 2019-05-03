@@ -3,11 +3,11 @@ title: Sicurezza dei messaggi nell'accodamento messaggi
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
 ms.openlocfilehash: 9e9067c38d86bb74c569b6d648d84c7c9ff6fac6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989811"
 ---
 # <a name="message-security-over-message-queuing"></a>Sicurezza dei messaggi nell'accodamento messaggi
 In questo esempio viene illustrato come implementare un'applicazione che utilizza WS-Security con l'autenticazione del certificato X.509v3 per il client e che richiede l'autenticazione del server utilizzando il certificato X.509v3 del server su MSMQ. La sicurezza dei messaggi a volte è più efficace per garantire che i messaggi nell'archivio MSMQ siano crittografati e l'applicazione può eseguire direttamente l'autenticazione del messaggio.
@@ -20,15 +20,15 @@ In questo esempio viene illustrato come implementare un'applicazione che utilizz
 
 2. Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.
 
-    1.  Aprire Server Manager in Visual Studio 2012.
+    1. Aprire Server Manager in Visual Studio 2012.
 
-    2.  Espandere la **funzionalità** scheda.
+    2. Espandere la **funzionalità** scheda.
 
-    3.  Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.
+    3. Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.
 
-    4.  Verificare i **transazionale** casella.
+    4. Verificare i **transazionale** casella.
 
-    5.  Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.
+    5. Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.
 
 3. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
@@ -77,7 +77,7 @@ In questo esempio viene illustrato come implementare un'applicazione che utilizz
   
 ### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   
--   Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
+- Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
   
     > [!NOTE]
     >  Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer. Se è stato eseguito gli esempi di Windows Communication Foundation (WCF) che utilizzano certificati in più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. A tale scopo, usare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
@@ -287,7 +287,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
 ## <a name="comments"></a>Commenti
 
--   Creazione del certificato del client.
+- Creazione del certificato del client.
 
      La riga seguente nel file batch crea il certificato client. Il nome client specificato viene utilizzato nel nome del soggetto del certificato creato. Il certificato viene inserito nell'archivio `My` nel percorso `CurrentUser`.
 
@@ -298,7 +298,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   Installazione del certificato client nell'archivio certificati attendibili del server.
+- Installazione del certificato client nell'archivio certificati attendibili del server.
 
      La riga seguente nel file batch copia il certificato client nell'archivio TrustedPeople del server in modo che il server possa prendere le decisioni pertinenti in tema di attendibilità. Per un certificato installato nell'archivio TrustedPeople sia considerato attendibile da un servizio Windows Communication Foundation (WCF), la modalità di convalida del certificato client deve essere impostata su `PeerOrChainTrust` o `PeerTrust` valore. Per informazioni sull'esecuzione di questa operazione mediante un file di configurazione, vedere l'esempio di configurazione del servizio precedente.
 
@@ -309,7 +309,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   Creazione del certificato server.
+- Creazione del certificato server.
 
      Le righe seguenti del file batch Setup.bat creano il certificato server da utilizzare:
 
@@ -325,7 +325,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
      La variabile %SERVER_NAME% specifica il nome del server. Il certificato viene archiviato nell'archivio LocalMachine. Se il file batch di installazione viene eseguito con un argomento di servizio (ad esempio, `setup.bat service`) il % nome_server % contiene il nome di dominio completo del computer. In caso contrario, per impostazione predefinita localhost
 
--   Installazione del certificato server nell'archivio certificati attendibili del client
+- Installazione del certificato server nell'archivio certificati attendibili del client
 
      La riga seguente copia il certificato server nell'archivio Persone attendibili del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato impostato come radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il popolamento dell'archivio certificati client con il certificato server non è necessario.
 

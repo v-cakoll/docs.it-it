@@ -5,11 +5,11 @@ ms.assetid: 34be6369-2e75-4a95-a538-3b29ac97cf6d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6e91dda9cbc5957768e98db2b2a9e1026d94c03e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946288"
 ---
 # <a name="icordebugloadedmodule-interface"></a>Interfaccia ICorDebugLoadedModule
 Vengono fornite informazioni su un modulo caricato.  

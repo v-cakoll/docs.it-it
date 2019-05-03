@@ -5,11 +5,11 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
 ms.openlocfilehash: 9aac3a0efd6359c25a6972f0e0b52dd489ec31db
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003951"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Procedura: Eseguire operazioni di trascinamento della selezione tra applicazioni
 Eseguire operazioni di trascinamento e rilascio tra applicazioni non è diverso dal consentire quest'azione nell'ambito di un'applicazione, purché entrambe le applicazioni implicate si comportino in base al "contratto" stabilito tra le proprietà <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> e <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
@@ -41,5 +41,5 @@ Eseguire operazioni di trascinamento e rilascio tra applicazioni non è diverso 
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura: Aggiungere dati agli Appunti](how-to-add-data-to-the-clipboard.md)
-- [Procedura: Recuperare dati dagli Appunti](how-to-retrieve-data-from-the-clipboard.md)
-- [Supporto delle operazioni di trascinamento della selezione e degli Appunti](drag-and-drop-operations-and-clipboard-support.md)
+- [Procedura: Recuperare i dati dagli Appunti](how-to-retrieve-data-from-the-clipboard.md)
+- [Drag-and-Drop Operations and Clipboard Support](drag-and-drop-operations-and-clipboard-support.md) (Supporto delle operazioni di trascinamento della selezione e degli Appunti)

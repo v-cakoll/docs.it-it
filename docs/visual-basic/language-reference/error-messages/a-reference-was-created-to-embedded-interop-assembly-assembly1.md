@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
 ms.openlocfilehash: c0b4f56e3d1613486dd1198976557831ce657e1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774862"
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>È stato creato un riferimento all'assembly di interoperabilità incorporato '\<assembly1 >' a causa di un riferimento indiretto a tale assembly dall'assembly '\<assembly2 >'
 È stato creato un riferimento all'assembly di interoperabilità incorporato '\<assembly1>' a causa di un riferimento indiretto a tale assembly creato dall'assembly '\<assembly2>'. Provare a modificare la proprietà 'Incorpora tipi di interoperabilità' in un assembly.  
@@ -27,9 +27,9 @@ ms.locfileid: "58837546"
   
 ### <a name="to-address-this-warning"></a>Per risolvere questo avviso  
   
--   Per incorporare le informazioni sui tipi di interoperabilità per entrambi gli assembly, impostare la proprietà `Embed Interop Types` per tutti i riferimenti a assembly1 su `True`.  
+- Per incorporare le informazioni sui tipi di interoperabilità per entrambi gli assembly, impostare la proprietà `Embed Interop Types` per tutti i riferimenti a assembly1 su `True`.  
   
--   Per rimuovere l'avviso, è possibile impostare la proprietà `Embed Interop Types` di assembly1 su `False`. In questo caso, le informazioni sul tipo di interoperabilità viene forniti da un assembly di interoperabilità primario (PIA).  
+- Per rimuovere l'avviso, è possibile impostare la proprietà `Embed Interop Types` di assembly1 su `False`. In questo caso, le informazioni sul tipo di interoperabilità viene forniti da un assembly di interoperabilità primario (PIA).  
   
 ## <a name="see-also"></a>Vedere anche
 

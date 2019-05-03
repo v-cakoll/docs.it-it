@@ -6,11 +6,11 @@ helpviewer_keywords:
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 ms.openlocfilehash: 95c9add0521208ef04ff47c071a2e04abc968f27
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61648737"
 ---
 # <a name="-deterministic"></a>-deterministic
 

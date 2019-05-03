@@ -7,11 +7,11 @@ helpviewer_keywords:
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
 ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961360"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Procedura: Creare elenchi Master-Details con il controllo DataGrid di Windows Forms usando la finestra di progettazione
 
@@ -42,19 +42,19 @@ ms.locfileid: "59332079"
   
 6. Configurare il <xref:System.Windows.Forms.DataGrid> controllo che si desidera designare come griglia principale, come indicato di seguito:  
   
-    1.  Selezionare il <xref:System.Data.DataSet> dall'elenco nell'elenco a discesa di <xref:System.Windows.Forms.DataGrid.DataSource%2A> proprietà.  
+    1. Selezionare il <xref:System.Data.DataSet> dall'elenco nell'elenco a discesa di <xref:System.Windows.Forms.DataGrid.DataSource%2A> proprietà.  
   
-    2.  Selezionare la tabella principale (ad esempio, "Customers") dall'elenco nell'elenco a discesa di <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà.  
+    2. Selezionare la tabella principale (ad esempio, "Customers") dall'elenco nell'elenco a discesa di <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà.  
   
 7. Configurare il <xref:System.Windows.Forms.DataGrid> controllo che si vuole designare nella griglia dei dettagli, come indicato di seguito:  
   
-    1.  Selezionare il <xref:System.Data.DataSet> dall'elenco nell'elenco a discesa di <xref:System.Windows.Forms.DataGrid.DataSource%2A> proprietà.  
+    1. Selezionare il <xref:System.Data.DataSet> dall'elenco nell'elenco a discesa di <xref:System.Windows.Forms.DataGrid.DataSource%2A> proprietà.  
   
-    2.  Selezionare la relazione (ad esempio, "CustOrd") tra le tabelle master e i dettagli nell'elenco a discesa nel <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà. Per visualizzare la relazione, espandere il nodo, fare clic sul segno più (**+**) segno più accanto alla tabella master nell'elenco a discesa.  
+    2. Selezionare la relazione (ad esempio, "CustOrd") tra le tabelle master e i dettagli nell'elenco a discesa nel <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà. Per visualizzare la relazione, espandere il nodo, fare clic sul segno più (**+**) segno più accanto alla tabella master nell'elenco a discesa.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllo DataGrid](datagrid-control-windows-forms.md)
-- [Panoramica del controllo DataGrid](datagrid-control-overview-windows-forms.md)
-- [Procedura: Associare il controllo DataGrid di Windows Forms a un'origine dati](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Cenni preliminari sul controllo DataGrid](datagrid-control-overview-windows-forms.md)
+- [Procedura: Associare il controllo DataGrid di Windows Form a un'origine dati](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Associare controlli ai dati in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

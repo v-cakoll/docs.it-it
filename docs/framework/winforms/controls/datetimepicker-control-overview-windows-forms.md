@@ -8,11 +8,11 @@ helpviewer_keywords:
 - date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
 ms.openlocfilehash: 451172b51427e4932470c53737c7bc276920271c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909168"
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>Cenni preliminari sul controllo DateTimePicker (Windows Form)
 I moduli di Windows <xref:System.Windows.Forms.DateTimePicker> controllo consente all'utente di selezionare un singolo elemento da un elenco di date o ore. Quando usato per rappresentare una data, viene visualizzata in due parti: un elenco di riepilogo a discesa con una data nel testo e una griglia in cui viene visualizzata quando si fa clic sulla freccia giù accanto all'elenco. La griglia è simile al <xref:System.Windows.Forms.MonthCalendar> controllo, che può essere usato per la selezione di date più. Per altre informazioni sul <xref:System.Windows.Forms.MonthCalendar> controllano, vedere [Cenni preliminari sul controllo MonthCalendar](monthcalendar-control-overview-windows-forms.md).  
@@ -26,5 +26,5 @@ I moduli di Windows <xref:System.Windows.Forms.DateTimePicker> controllo consent
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Visualizzare una data in un formato personalizzato con il controllo DateTimePicker di Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
-- [Procedura: Impostare e restituire date con il controllo DateTimePicker di Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+- [Procedura: Visualizzare una data in un formato personalizzato con il controllo DateTimePicker di Windows Form](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [Procedura: Impostare e restituire date con il controllo DateTimePicker di Windows Form](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
 ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784059"
 ---
 # <a name="operator-statement"></a>Operator Statement
 Dichiara il simbolo dell'operatore, gli operandi e il codice che definiscono una routine di operatore in una classe o struttura.  
@@ -114,28 +114,28 @@ End Operator
 ## <a name="matched-pairs"></a>Coppie appaiate  
  È necessario definire determinati operatori come coppie associate. Se si definisce l'operatore di una coppia di questo tipo, è necessario definire anche a altro. Le coppie appaiate sono i seguenti:  
   
--   `=` e `<>`  
+- `=` e `<>`  
   
--   `>` e `<`  
+- `>` e `<`  
   
--   `>=` e `<=`  
+- `>=` e `<=`  
   
--   `IsTrue` e `IsFalse`  
+- `IsTrue` e `IsFalse`  
   
 ## <a name="data-type-restrictions"></a>Restrizioni sul tipo di dati  
  Ogni operatore definito deve comportare la classe o struttura in cui si definiscono. Ciò significa che la classe o struttura deve essere visualizzato come il tipo di dati delle operazioni seguenti:  
   
--   L'operando dell'operatore unario.  
+- L'operando dell'operatore unario.  
   
--   Almeno uno degli operandi di un operatore binario.  
+- Almeno uno degli operandi di un operatore binario.  
   
--   L'operando o il tipo restituito di un operatore di conversione.  
+- L'operando o il tipo restituito di un operatore di conversione.  
   
  Alcuni operatori hanno dati aggiuntivi digitare restrizioni, come indicato di seguito:  
   
--   Se si definiscono i `IsTrue` e `IsFalse` operatori, devono entrambe restituire il `Boolean` tipo.  
+- Se si definiscono i `IsTrue` e `IsFalse` operatori, devono entrambe restituire il `Boolean` tipo.  
   
--   Se si definisce la `<<` e `>>` operatori, devono entrambe specificare il `Integer` tipo per il `operandtype` di `operand2`.  
+- Se si definisce la `<<` e `>>` operatori, devono entrambe specificare il `Integer` tipo per il `operandtype` di `operand2`.  
   
  Il tipo restituito non devono corrispondere al tipo degli operandi. Ad esempio, un operatore di confronto, ad esempio `=` oppure `<>` può restituire `Boolean` anche se nessuno dei due operandi `Boolean`.  
   
@@ -144,11 +144,11 @@ End Operator
   
  Non è possibile definire le `AndAlso` operatore direttamente con un `Operator` istruzione. Tuttavia, è possibile usare `AndAlso` se si sono soddisfatte le condizioni seguenti:  
   
--   Sono stati definiti `And` sugli stessi tipi di operando da usare per `AndAlso`.  
+- Sono stati definiti `And` sugli stessi tipi di operando da usare per `AndAlso`.  
   
--   La definizione di `And` restituisce lo stesso tipo della classe o struttura in cui si è definita.  
+- La definizione di `And` restituisce lo stesso tipo della classe o struttura in cui si è definita.  
   
--   Sono stati definiti i `IsFalse` operatore nella classe o struttura in cui hanno definito `And`.  
+- Sono stati definiti i `IsFalse` operatore nella classe o struttura in cui hanno definito `And`.  
   
  Analogamente, è possibile usare `OrElse` se è stata definita `Or` sugli operandi stesso, sono definiti con il tipo restituito della classe o struttura e si `IsTrue` nella classe o struttura.  
   
@@ -157,11 +157,11 @@ End Operator
   
  Se si dichiara una routine di conversione sia `Widening`, il codice di procedure non deve generare gli eventuali errori. Ciò significa che:  
   
--   App deve sempre restituire un valore valido di tipo `type`.  
+- App deve sempre restituire un valore valido di tipo `type`.  
   
--   È necessario gestire tutte le eccezioni e altre condizioni di errore.  
+- È necessario gestire tutte le eccezioni e altre condizioni di errore.  
   
--   L'applicazione deve gestire qualsiasi errore restituito da qualsiasi routine che chiama.  
+- L'applicazione deve gestire qualsiasi errore restituito da qualsiasi routine che chiama.  
   
  Se vi è una possibilità che una routine di conversione potrebbe avere esito negativo o che potrebbe causare un'eccezione non gestita, è necessario dichiararla come `Narrowing`.  
   

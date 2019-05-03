@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
 ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047009"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Panoramica sull'integrazione con applicazioni COM
 Windows Communication Foundation (WCF) offre allo sviluppatore di codice gestito con un ambiente completo per la creazione di applicazioni connesse. Tuttavia, se presente una grande quantità di codice basato su COM non gestito e non si desidera eseguire la migrazione, è comunque possibile integrare servizi Web WCF direttamente nel codice esistente usando il moniker del servizio WCF. Il moniker servizio può essere usato da un'ampia gamma di ambienti di sviluppo basati su COM, ad esempio Office VBA, Visual Basic 6.0 o Visual C++ 6.0.  
@@ -21,11 +21,11 @@ Windows Communication Foundation (WCF) offre allo sviluppatore di codice gestito
   
  In comune con altri client WCF, quando si utilizza il moniker, applicazioni di specificare l'indirizzo, associazione e contratto per comunicare con un servizio. Il contratto può essere specificato in uno dei modi seguenti:  
   
--   Contratto tipizzato: il contratto viene registrato come tipo visibile a COM sul computer client.  
+- Contratto tipizzato: il contratto viene registrato come tipo visibile a COM sul computer client.  
   
--   Contratto WSDL: il contratto viene fornito sotto forma di documento WSDL.  
+- Contratto WSDL: il contratto viene fornito sotto forma di documento WSDL.  
   
--   Contratto MEX: il contratto viene recuperato in fase di esecuzione da un endpoint MEX (Metadata Exchange).  
+- Contratto MEX: il contratto viene recuperato in fase di esecuzione da un endpoint MEX (Metadata Exchange).  
   
 ## <a name="parameters-supported-by-the-service-moniker"></a>Parametri supportati dal moniker del servizio  
  Nella tabella seguente vengono illustrati i parametri supportati dal moniker del servizio.  

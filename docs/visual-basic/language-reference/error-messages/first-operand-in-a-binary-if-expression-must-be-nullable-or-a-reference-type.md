@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
 ms.openlocfilehash: 32ff0adca9d35e6b5439ae06be85414924dac2e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801296"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>Il primo operando in un'espressione 'If' binaria deve essere nullable o un tipo riferimento
 Un `If` espressione può avere due o tre argomenti. Quando si inviano solo due argomenti, il primo argomento deve essere un tipo riferimento o un tipo nullable. Se il primo argomento restituisce un valore diverso da `Nothing`, viene restituito il relativo valore. Se il primo argomento restituisce `Nothing`, il secondo argomento viene valutato e restituito.  

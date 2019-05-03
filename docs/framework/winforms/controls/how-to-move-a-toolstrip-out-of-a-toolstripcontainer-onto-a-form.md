@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
 ms.openlocfilehash: 9106a69ea9f28442da6e3270f7cf5abb9374b62d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913657"
 ---
 # <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>Procedura: Spostare ToolStrip da ToolStripContainer a un modulo
 Usare la procedura seguente per spostare un <xref:System.Windows.Forms.ToolStrip> fuori un <xref:System.Windows.Forms.ToolStripContainer> in un form.  
@@ -34,4 +34,4 @@ Usare la procedura seguente per spostare un <xref:System.Windows.Forms.ToolStrip
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripContainer>
-- [Panoramica del controllo ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Panoramica sul controllo ToolStrip](toolstrip-control-overview-windows-forms.md)

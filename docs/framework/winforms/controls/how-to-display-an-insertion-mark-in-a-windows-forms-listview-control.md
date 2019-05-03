@@ -12,11 +12,11 @@ helpviewer_keywords:
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
 ms.openlocfilehash: 60b775408f5c43ff08fc5c7de72a8302b20b2264
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969730"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Procedura: Visualizzare un segno di inserimento in un controllo ListView di Windows Forms
 Il segno di inserimento nel controllo <xref:System.Windows.Forms.ListView> indica agli utenti il punto in cui verranno inseriti gli elementi trascinati. Quando un utente trascina un elemento in un punto intermedio tra due elementi, il segno di inserimento indica la nuova posizione prevista dell'elemento.  
@@ -38,7 +38,7 @@ Il segno di inserimento nel controllo <xref:System.Windows.Forms.ListView> indic
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti agli assembly System e System.Windows.Forms.  
+- Riferimenti agli assembly System e System.Windows.Forms.  
   
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
@@ -49,4 +49,4 @@ Il segno di inserimento nel controllo <xref:System.Windows.Forms.ListView> indic
 - <xref:System.Windows.Forms.ListViewInsertionMark>
 - [Controllo ListView](listview-control-windows-forms.md)
 - [Panoramica del controllo ListView](listview-control-overview-windows-forms.md)
-- [Procedura dettagliata: Esecuzione di un'operazione di trascinamento della selezione in Windows Form](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+- [Procedura dettagliata: Esecuzione di un'operazione di trascinamento e rilascio in Windows Form](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
 ms.openlocfilehash: 798baa90308c83e42b335635fb23a9983f5180fb
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839384"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Compilazione dalla riga di comando (Visual Basic)
 Un progetto Visual Basic è costituito da uno o più file di origine separato. Durante il processo è noto come la compilazione, questi file vengono riuniti in un pacchetto, ovvero un singolo file eseguibile che può essere eseguito come un'applicazione.  

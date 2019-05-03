@@ -10,11 +10,11 @@ helpviewer_keywords:
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
 ms.openlocfilehash: 7f20708722660aa4f86462efd50939935f840613
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768628"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Procedura: Eseguire l'override dei metadati per una proprietà di dipendenza
 Questo esempio illustra come eseguire l'override di metadati di proprietà di dipendenza predefinito che derivano da una classe ereditata, chiamando il <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> (metodo) e fornendo i metadati specifici del tipo.  
@@ -36,4 +36,4 @@ Questo esempio illustra come eseguire l'override di metadati di proprietà di di
 - <xref:System.Windows.DependencyProperty>
 - [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)
 - [Proprietà di dipendenza personalizzate](custom-dependency-properties.md)
-- [Procedure relative](properties-how-to-topics.md)
+- [Procedure relative alle proprietà](properties-how-to-topics.md)

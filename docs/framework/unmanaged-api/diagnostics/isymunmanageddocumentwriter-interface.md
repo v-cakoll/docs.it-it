@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 70828b8d4ebcc17fa178a53806ef7f55f7ba33e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939789"
 ---
 # <a name="isymunmanageddocumentwriter-interface"></a>Interfaccia ISymUnmanagedDocumentWriter
 Fornisce i metodi per la scrittura di un documento cui viene fatto riferimento in un archivio di simboli.  
@@ -38,4 +38,4 @@ Fornisce i metodi per la scrittura di un documento cui viene fatto riferimento i
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce dell'archivio dei simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interfacce dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

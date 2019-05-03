@@ -10,11 +10,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with images
 ms.assetid: 508da5a6-2433-4d2b-9680-eaeae4e96e3b
 ms.openlocfilehash: 099bc9f5359f19439f308f28a6766d470956daea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781277"
 ---
 # <a name="how-to-fill-a-shape-with-an-image-texture"></a>Procedura: Riempire una forma con una trama basata su un'immagine
 È possibile riempire una forma chiusa con una trama utilizzando la <xref:System.Drawing.Image> classe e il <xref:System.Drawing.TextureBrush> classe.  
@@ -35,4 +35,4 @@ ms.locfileid: "59177320"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Utilizzo di un oggetto Brush per il riempimento di forme](using-a-brush-to-fill-shapes.md)
+- [Uso di un oggetto Brush per il riempimento di forme](using-a-brush-to-fill-shapes.md)

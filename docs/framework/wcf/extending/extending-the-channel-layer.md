@@ -5,11 +5,11 @@ helpviewer_keywords:
 - extending channels [WCF]
 ms.assetid: 4238db74-2fb6-4dc8-a326-f58527230810
 ms.openlocfilehash: e60d8ef1a5191c6407b01eb1a2456a06aeeb1914
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857909"
 ---
 # <a name="extending-the-channel-layer"></a>Estensione del livello del canale
 Il livello del canale è responsabile dello scambio dei messaggi tra client e servizi. Le estensioni del canale possono implementare nuove funzionalità del protocollo, ad esempio di sicurezza o di trasporto. Possono, ad esempio, implementare un nuovo trasporto di rete per il trasporto di messaggi SOAP.  

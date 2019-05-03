@@ -14,11 +14,11 @@ helpviewer_keywords:
 - encoding WDP images [WPF]
 ms.assetid: 911777d1-516b-49db-a87b-b54e31b18532
 ms.openlocfilehash: b143106092235b42044d264189c135d2cd65426c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947524"
 ---
 # <a name="how-to-encode-and-decode-a-wdp-image"></a>Procedura: Codificare e decodificare un'immagine WDP
 Gli esempi seguenti illustrano come decodificare e codificare un' [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] immagine usando le specifiche <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> e <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> oggetti.  

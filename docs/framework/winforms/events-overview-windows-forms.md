@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
 ms.openlocfilehash: 57802cad0a75ed21bba02a11fec39f821835c5ea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967217"
 ---
 # <a name="events-overview-windows-forms"></a>Cenni preliminari sugli eventi (Windows Form)
 Un evento è un'azione a cui si può rispondere o che può essere "gestita" nel codice. Gli eventi possono essere generati da un'azione utente, ad esempio un clic del mouse o la pressione di un tasto, oppure da codice programma o dal sistema.  
@@ -46,4 +46,4 @@ Un evento è un'azione a cui si può rispondere o che può essere "gestita" nel 
 ## <a name="see-also"></a>Vedere anche
 
 - [Creazione di gestori eventi in Windows Form](creating-event-handlers-in-windows-forms.md)
-- [Panoramica sui gestori eventi](event-handlers-overview-windows-forms.md)
+- [Informazioni generali sui gestori eventi](event-handlers-overview-windows-forms.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
 ms.openlocfilehash: 24c05bf41152fba2f54636cd0c15dde6fa71aa2b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785047"
 ---
 # <a name="defining-and-specifying-faults"></a>Definizione e specifica degli errori
 Gli errori SOAP forniscono informazioni sulla condizione di errore da un servizio a un client e, nel caso duplex, da un client a un servizio in modo interoperativo. In questo argomento viene illustrato quando e come definire il contenuto di un errore personalizzato e specificare quali operazioni possono restituire tale contenuto. Per altre informazioni sul modo in cui un servizio o un client duplex può inviare tali errori e il modo in cui un'applicazione client o servizio gestisce questi errori, vedere [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md). Per una panoramica di gestione degli errori nelle applicazioni Windows Communication Foundation (WCF), vedere [se si specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -92,9 +92,9 @@ End Class
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Specifica e gestione di errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Invio e ricezione degli errori](../../../docs/framework/wcf/sending-and-receiving-faults.md)
 - [Procedura: Dichiarare errori nei contratti di servizio](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
 - [Informazioni sul livello di protezione](../../../docs/framework/wcf/understanding-protection-level.md)
 - [Procedura: Impostare la proprietà ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [Specifica del trasferimento di dati nei contratti di servizio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Definizione del trasferimento dati nei contratti di servizio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

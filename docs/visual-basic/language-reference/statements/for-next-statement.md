@@ -24,11 +24,11 @@ helpviewer_keywords:
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638058"
 ---
 # <a name="fornext-statement-visual-basic"></a>Istruzione For...Next (Visual Basic)
 Ripete un gruppo di istruzioni un numero di volte specificato.  
@@ -98,11 +98,11 @@ Next [ counter ]
   
  `Exit For` viene spesso usato dopo aver valutato determinate condizioni (ad esempio, in un `If`... `Then`... `Else` struttura). Si potrebbe voler usare `Exit For` per le condizioni seguenti:  
   
--   Continuando a eseguire l'iterazione è non necessari o impossibile. Un valore errato o una richiesta di terminazione potrebbe creare questa condizione.  
+- Continuando a eseguire l'iterazione è non necessari o impossibile. Un valore errato o una richiesta di terminazione potrebbe creare questa condizione.  
   
--   Oggetto `Try`... `Catch`... `Finally` istruzione rileva un'eccezione. È possibile usare `Exit For` alla fine del `Finally` blocco.  
+- Oggetto `Try`... `Catch`... `Finally` istruzione rileva un'eccezione. È possibile usare `Exit For` alla fine del `Finally` blocco.  
   
--   È necessario un ciclo infinito, ovvero un ciclo che è stato possibile eseguire un numero elevato o persino infinito di volte. Se si rileva questa condizione, è possibile usare `Exit For` per interrompere il ciclo. Per altre informazioni, vedere [è... Istruzione di ciclo](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+- È necessario un ciclo infinito, ovvero un ciclo che è stato possibile eseguire un numero elevato o persino infinito di volte. Se si rileva questa condizione, è possibile usare `Exit For` per interrompere il ciclo. Per altre informazioni, vedere [è... Istruzione di ciclo](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="technical-implementation"></a>Implementazione tecnica  
  Quando un `For`... `Next` ciclo viene avviato, in Visual Basic `start`, `end`, e `step`. Visual Basic restituisce questi valori solo in questo momento e quindi assegna `start` a `counter`. Prima dell'istruzione di blocco viene eseguito, Visual Basic Confronta `counter` a `end`. Se `counter` è già maggiore di `end` valore (o più piccolo se `step` è negativo), il `For` fine del ciclo e il controllo passa all'istruzione che segue il `Next` istruzione. In caso contrario, viene eseguito il blocco di istruzioni.  
@@ -137,13 +137,13 @@ Next [ counter ]
   
  Tipo di dati di `counter` determina il tipo dell'iterazione, che deve essere uno dei tipi seguenti:  
   
--   Oggetto `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, o `Double`.  
+- Oggetto `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, o `Double`.  
   
--   Un'enumerazione dichiarata tramite un' [istruzione Enum](../../../visual-basic/language-reference/statements/enum-statement.md).  
+- Un'enumerazione dichiarata tramite un' [istruzione Enum](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
--   Oggetto `Object`.  
+- Oggetto `Object`.  
   
--   Un tipo `T` con gli operatori seguenti, dove `B` è un tipo che può essere usato in un `Boolean` espressione.  
+- Un tipo `T` con gli operatori seguenti, dove `B` è un tipo che può essere usato in un `Boolean` espressione.  
   
      `Public Shared Operator >= (op1 As T, op2 As T) As B`  
   

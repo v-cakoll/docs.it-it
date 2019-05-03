@@ -3,11 +3,11 @@ title: <activityStateQueries> di WCF
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
 ms.openlocfilehash: c9c78b6929b4550204a22fe2e2786891b516a818
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701086"
 ---
 # <a name="activitystatequeries-of-wcf"></a>\<activityStateQueries > di WCF
 
@@ -60,7 +60,7 @@ Nessuno.
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|[\<activityStateQuery>](activitystatequery-of-wcf.md)|Query usata per rilevare la gestione degli errori che si verificano all'interno di un'attività.  Questo evento si verifica ogni volta che un FaultHandler elabora un errore.|
+|[\<activityStateQuery>](activitystatequery-of-wcf.md)|Query utilizzata per rilevare la gestione degli errori che si verificano all'interno di un'attività.  Questo evento si verifica ogni volta che un FaultHandler elabora un errore.|
 
 ### <a name="parent-elements"></a>Elementi padre
 

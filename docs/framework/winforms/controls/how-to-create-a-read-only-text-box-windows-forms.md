@@ -7,11 +7,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], read-only
 ms.assetid: 60baa9ab-fa57-44ad-bb7c-61b05aa64296
 ms.openlocfilehash: 72dc188993474ad4b39f0cfa74cadffdb99ff46f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746862"
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a>Procedura: Creare una casella di testo di sola lettura (Windows Form)
 È possibile trasformare una casella di testo modificabile di Windows Form in un controllo di sola lettura. Ad esempio, la casella di testo venga visualizzato un valore che in genere viene modificato, ma potrebbe non essere al momento, a causa dello stato dell'applicazione.  
@@ -26,10 +26,10 @@ ms.locfileid: "59308575"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.TextBox>
-- [Panoramica del controllo TextBox](textbox-control-overview-windows-forms.md)
-- [Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Cenni preliminari sul controllo TextBox](textbox-control-overview-windows-forms.md)
+- [Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Form](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Form](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [Procedura: Inserire virgolette in una stringa](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Procedura: Selezionare testo nel controllo TextBox di Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Procedura: Visualizzare più righe nel controllo TextBox di Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Procedura: Selezionare il testo nel controllo TextBox Windows Form](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Procedura: Visualizzare più righe nel controllo TextBox Windows Form](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [Controllo TextBox](textbox-control-windows-forms.md)

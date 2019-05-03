@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
 author: KrzysztofCwalina
 ms.openlocfilehash: 3ab8fe279605c4795bb3a26557d0241b186b273a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026406"
 ---
 # <a name="field-design"></a>Progettazione di campi
 Il principio di incapsulamento è uno dei concetti più importanti nella progettazione orientata agli oggetti. Questo principio specifica che i dati archiviati all'interno di un oggetto devono essere accessibili solo a tale oggetto.  

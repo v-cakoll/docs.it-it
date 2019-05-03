@@ -14,18 +14,18 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
 ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013231"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Procedura: Impostare le immagini in fase di esecuzione (Windows Form)
 È possibile impostare a livello di codice l'immagine visualizzata da un controllo Windows Form <xref:System.Windows.Forms.PictureBox> controllo.  
   
 ### <a name="to-set-a-picture-programmatically"></a>Per impostare un'immagine a livello di codice  
   
--   Impostare il <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà utilizzando il <xref:System.Drawing.Image.FromFile%2A> metodo il <xref:System.Drawing.Image> classe.  
+- Impostare il <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà utilizzando il <xref:System.Drawing.Image.FromFile%2A> metodo il <xref:System.Drawing.Image> classe.  
   
      Nell'esempio seguente, il percorso impostato per la posizione dell'immagine è la cartella documenti. Questa operazione viene eseguita, perché si presume che la maggior parte dei computer che eseguono il sistema operativo Windows sarà inclusa questa directory. Ciò consente inoltre agli utenti del sistema con livelli di accesso minimo di eseguire l'applicazione senza problemi. L'esempio seguente si presuppone un form con un <xref:System.Windows.Forms.PictureBox> controllo già aggiunto.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "59073598"
   
 ### <a name="to-clear-a-graphic"></a>Per cancellare un'immagine  
   
--   In primo luogo, rilasciare la memoria utilizzata dall'immagine e quindi deselezionare l'icona. Operazione di Garbage collection consente di liberare la memoria in un secondo momento se la gestione della memoria diventa un problema.  
+- In primo luogo, rilasciare la memoria utilizzata dall'immagine e quindi deselezionare l'icona. Operazione di Garbage collection consente di liberare la memoria in un secondo momento se la gestione della memoria diventa un problema.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  

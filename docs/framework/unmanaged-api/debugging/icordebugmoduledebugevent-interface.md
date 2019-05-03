@@ -5,11 +5,11 @@ ms.assetid: 41950c52-1ac8-4212-b814-c77e20879f91
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bf1fa21872c710ebc69c45e9980aeaa577a45fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942467"
 ---
 # <a name="icordebugmoduledebugevent-interface"></a>Interfaccia ICorDebugModuleDebugEvent
 Estende la [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) interfaccia per supportare gli eventi a livello di modulo.  

@@ -3,11 +3,11 @@ title: Traccia del flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
 ms.openlocfilehash: cd53ed834fdacb639b38346dca831ef4c3e26337
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59321666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669225"
 ---
 # <a name="workflow-tracing"></a>Traccia del flusso di lavoro
 La traccia del flusso di lavoro consente di acquisire informazioni diagnostiche usando i listener di traccia di .NET Framework. La traccia può essere abilitata in seguito al rilevamento di un problema con l'applicazione, quindi nuovamente disabilitata quando il problema viene risolto. Sono disponibili due modi per abilitare la traccia di debug per i flussi di lavoro: è possibile configurarla usando il visualizzatore di Traccia eventi oppure usare l'oggetto <xref:System.Diagnostics> per inviare eventi di traccia a un file.  
@@ -23,9 +23,9 @@ La traccia del flusso di lavoro consente di acquisire informazioni diagnostiche 
   
 4. La dimensione del buffer di traccia analitica predefinita è solo 4 kilobyte (KB). Si consiglia di aumentare la dimensione a 32 KB. A tale scopo, eseguire i passaggi seguenti.  
   
-    1.  Eseguire il comando seguente nella directory del framework corrente (ad esempio, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1. Eseguire il comando seguente nella directory del framework corrente (ad esempio, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
-    2.  Modifica il \<bufferSize > valore nel file ApplicationServer a 32.  
+    2. Modifica il \<bufferSize > valore nel file ApplicationServer a 32.  
   
         ```xml  
         <channel name="Microsoft-Windows-Application Server-Applications/Analytic" chid="ANALYTIC_CHANNEL" symbol="ANALYTIC_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ANALYTIC_CHANNEL.message)" >  
@@ -35,7 +35,7 @@ La traccia del flusso di lavoro consente di acquisire informazioni diagnostiche 
                   </channel>  
         ```  
   
-    3.  Eseguire il comando seguente nella directory del framework corrente (ad esempio, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3. Eseguire il comando seguente nella directory del framework corrente (ad esempio, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
 >  Se si usa .NET Framework 4 Client Profile, è innanzitutto necessario registrare il manifesto ETW eseguendo il comando seguente dalla directory di .NET Framework 4: `ServiceModelReg.exe –i –c:etw`  

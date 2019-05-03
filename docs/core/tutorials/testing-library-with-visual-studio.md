@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: c099bde5a90e7e95eb5d9da6aacf763054a865ae
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 352599d60a42a034b3d6647b1fe8f1cbf2f4572d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201326"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612004"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Eseguire il test di una libreria .NET Standard con .NET Core in Visual Studio 2017
 
@@ -150,11 +150,13 @@ L'esecuzione dei test non ha generato errori ma è opportuno apportare qualche m
    string[] words = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
                       "1234", ".", ";", " " };
    ```
+
    ```vb
    Dim words() As String = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
                       "1234", ".", ";", " " }
 
    ```
+
 1. Eseguire il test selezionando **Test** > **Esegui** > **Tutti i test** dalla barra dei menu. La finestra **Esplora test** indica che due test hanno avuto esito positivo e uno esito negativo.
 
    ![Finestra di Esplora test con i test non riusciti](./media/testing-library-with-visual-studio/failed-test-window.png)

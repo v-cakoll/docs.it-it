@@ -3,11 +3,11 @@ title: Visualizzazione dei log dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
 ms.openlocfilehash: 2322d2a6e0c5a6f26ad103be72230666f6bca191
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964398"
 ---
 # <a name="viewing-message-logs"></a>Visualizzazione dei log dei messaggi
 In questo argomento viene illustrato come visualizzare i log dei messaggi.  
@@ -29,9 +29,9 @@ In questo argomento viene illustrato come visualizzare i log dei messaggi.
   
  Per risolvere il problema, utilizzare uno dei metodi seguenti:  
   
--   Visualizzare solo due dei tre log messaggi nel [strumento Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) in qualsiasi momento.  
+- Visualizzare solo due dei tre log messaggi nel [strumento Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) in qualsiasi momento.  
   
--   Se è necessario visualizzare tutti i tre log nel [strumento Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) allo stesso tempo, è possibile modificare il servizio di inoltro creando un nuovo <xref:System.ServiceModel.Channels.Message> istanza. Tale istanza deve essere una copia del corpo del messaggio in arrivo, più tutte le intestazioni tranne quelle per le intestazioni `ActivityId` e `Action`. Nell'esempio di codice seguente viene illustrato come procedere.  
+- Se è necessario visualizzare tutti i tre log nel [strumento Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) allo stesso tempo, è possibile modificare il servizio di inoltro creando un nuovo <xref:System.ServiceModel.Channels.Message> istanza. Tale istanza deve essere una copia del corpo del messaggio in arrivo, più tutte le intestazioni tranne quelle per le intestazioni `ActivityId` e `Action`. Nell'esempio di codice seguente viene illustrato come procedere.  
   
 ```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -50,18 +50,18 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 ## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>Situazioni particolari di contenuto della registrazione del messaggio inaccurata  
  Nelle condizioni seguenti, i messaggi registrati potrebbero non rappresentare in modo esatto il flusso di ottetti in transito.  
   
--   Per BasicHttpBinding, le intestazioni di envelope vengono registrate per i messaggi in arrivo nello spazio dei nomi /addressing/none.  
+- Per BasicHttpBinding, le intestazioni di envelope vengono registrate per i messaggi in arrivo nello spazio dei nomi /addressing/none.  
   
--   Gli spazi vuoti possono essere interpretati erroneamente.  
+- Gli spazi vuoti possono essere interpretati erroneamente.  
   
--   Per i messaggi in arrivo, gli elementi vuoti possono essere rappresentati in modo diverso. Ad esempio, \<tag >\</tag > invece di \<tag / >  
+- Per i messaggi in arrivo, gli elementi vuoti possono essere rappresentati in modo diverso. Ad esempio, \<tag >\</tag > invece di \<tag / >  
   
--   Quando la registrazione di PII note è disattivata per impostazione predefinita o esplicita, enableLoggingKnownPii="true".  
+- Quando la registrazione di PII note è disattivata per impostazione predefinita o esplicita, enableLoggingKnownPii="true".  
   
--   È attivata la codifica per la trasformazione a UTF-8.  
+- È attivata la codifica per la trasformazione a UTF-8.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
-- [Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Registrazione messaggi](../../../../docs/framework/wcf/diagnostics/message-logging.md)

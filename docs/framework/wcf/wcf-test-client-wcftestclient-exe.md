@@ -3,11 +3,11 @@ title: Client di test WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: cd6f0d7a98ca5bc5f6bee45ad296341a5b91b2a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791196"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Client di test WCF (WcfTestClient.exe)
 Il Client di prova di Windows Communication Foundation (WCF) (WcfTestClient.exe) è un strumento GUI che consente agli utenti di immettere parametri di test, inviare tale input al servizio e Visualizza la risposta restituita dal servizio. Fornisce un servizio facile test combinazione con Host servizio WCF.  
@@ -136,34 +136,34 @@ Il Client di prova di Windows Communication Foundation (WCF) (WcfTestClient.exe)
 ## <a name="features-supported-by-wcf-test-client"></a>Funzioni supportate da Client di prova WCF  
  Di seguito è riportato un elenco delle funzionalità supportate da Client di prova WCF:  
   
--   Chiamata al servizio: Richiesta/risposta e unidirezionale.  
+- Chiamata al servizio: Richiesta/risposta e unidirezionale.  
   
--   Associazioni: tutte le associazioni supportate da Svcutil.exe.  
+- Associazioni: tutte le associazioni supportate da Svcutil.exe.  
   
--   Controllo della sessione.  
+- Controllo della sessione.  
   
--   Contratto di messaggio.  
+- Contratto di messaggio.  
   
--   Serializzazione XML.  
+- Serializzazione XML.  
   
  Di seguito è riportato un elenco di funzionalità non supportate dal Client di prova WCF:  
   
--   Tipi: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, tipi che implementano l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable>, tra cui l'attributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> correlato, i tipi <xref:System.Xml.Linq.XDocument> e <xref:System.Xml.Linq.XElement> e il tipo <xref:System.Data.DataTable> di ADO.NET.  
+- Tipi: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, tipi che implementano l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable>, tra cui l'attributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> correlato, i tipi <xref:System.Xml.Linq.XDocument> e <xref:System.Xml.Linq.XElement> e il tipo <xref:System.Data.DataTable> di ADO.NET.  
   
--   Contratto duplex.  
+- Contratto duplex.  
   
--   Transazione.  
+- Transazione.  
   
--   Sicurezza: [!INCLUDE[infocard](../../../includes/infocard-md.md)], certificato e nome utente/password.  
+- Sicurezza: [!INCLUDE[infocard](../../../includes/infocard-md.md)], certificato e nome utente/password.  
   
--   Binding: WSFederationbinding, qualsiasi associazione Context e associazione Https, WebHttpbinding (supporto di messaggi di risposta Json).  
+- Binding: WSFederationbinding, qualsiasi associazione Context e associazione Https, WebHttpbinding (supporto di messaggi di risposta Json).  
   
 ## <a name="closing-wcf-test-client"></a>Chiusura di Client di test WCF  
  È possibile chiudere Client di prova WCF nei modi seguenti:  
   
--   Nel **File** menu, fare clic su **uscita**. In alternativa, nella finestra principale di Client di prova WCF fare clic su **Chiudi**. Entrambe queste azioni anche arrestare Host automatico servizio di WCF e arrestare il processo di debug di Visual Studio, se il Client di prova WCF è stato avviato da Visual Studio.  
+- Nel **File** menu, fare clic su **uscita**. In alternativa, nella finestra principale di Client di prova WCF fare clic su **Chiudi**. Entrambe queste azioni anche arrestare Host automatico servizio di WCF e arrestare il processo di debug di Visual Studio, se il Client di prova WCF è stato avviato da Visual Studio.  
   
--   Fare doppio clic il **Host servizio WCF** icona nell'area di notifica e quindi fare clic su **Exit.** Questo chiude sia Host automatico servizio WCF che Client di prova WCF e si arresta il processo di debug di Visual Studio.  
+- Fare doppio clic il **Host servizio WCF** icona nell'area di notifica e quindi fare clic su **Exit.** Questo chiude sia Host automatico servizio WCF che Client di prova WCF e si arresta il processo di debug di Visual Studio.  
   
 ## <a name="see-also"></a>Vedere anche
 

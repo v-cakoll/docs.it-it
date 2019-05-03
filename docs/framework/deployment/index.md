@@ -12,11 +12,11 @@ ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b7380556e13e17e26ffb2f8c5fbbc7136a1fb5e9
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771859"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Distribuzione di .NET Framework e delle applicazioni
 
@@ -32,9 +32,9 @@ Usare i seguenti collegamenti ad altri argomenti di MSDN per informazioni specif
 
   - Opzioni del programma di installazione:
 
-    - [programma di installazione Web](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Programma di installazione Web](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [programma di installazione offline](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Programma di installazione offline](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
   - Modalità di installazione:
 
@@ -44,7 +44,7 @@ Usare i seguenti collegamenti ad altri argomenti di MSDN per informazioni specif
 
   - [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)
 
-  - [Risolvere i problemi relativi alle installazioni e disinstallazioni bloccate di .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+  - [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
 
 - Distribuzione di .NET Framework in un'applicazione client (per gli sviluppatori): 
 

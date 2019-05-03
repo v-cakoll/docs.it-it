@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
 ms.openlocfilehash: b7e8e4a750aadd8a84a57cdf22c01f6b91e6256c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767156"
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Procedura: Creare un servizio che usa un validator del certificato personalizzato
 In questo argomento viene illustrato come implementare un validator del certificato personalizzato e come configurare le credenziali del client o del servizio per sostituire la logica di convalida del certificato predefinita con il validator del certificato personalizzato.  

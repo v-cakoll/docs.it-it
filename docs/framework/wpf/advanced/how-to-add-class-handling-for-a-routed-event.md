@@ -10,11 +10,11 @@ helpviewer_keywords:
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
 ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777039"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Procedura: Aggiungere la gestione di classi per un evento indirizzato
 Gli eventi indirizzati possono essere gestiti mediante i gestori classi o gestori dell'istanza in qualsiasi nodo specificato nella route. I gestori classi vengono richiamati per primi e utilizzabile da implementazioni della classe per eliminare gli eventi dalla gestione di istanze o introdurre altri comportamenti specifici di evento degli eventi che appartengono a classi di base. Questo esempio illustra due tecniche strettamente correlate per l'implementazione di gestori di classi.  
@@ -35,6 +35,6 @@ Gli eventi indirizzati possono essere gestiti mediante i gestori classi o gestor
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.EventManager>
-- [Impostazione degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md)
+- [Contrassegno degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md)
 - [Gestire un evento indirizzato](how-to-handle-a-routed-event.md)
 - [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)

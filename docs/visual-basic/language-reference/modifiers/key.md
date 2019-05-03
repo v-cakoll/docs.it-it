@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
 ms.openlocfilehash: e13a773f0b585a5c8803a77c7aaad441d90dfe75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053951"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 Il `Key` (parola chiave) consente di specificare il comportamento per le proprietà di tipi anonimi. Solo le proprietà designate come proprietà chiave fanno parte di test di uguaglianza tra le istanze di tipo anonimo o un calcolo dei valori di codice hash. I valori delle proprietà chiave non possono essere modificati.  

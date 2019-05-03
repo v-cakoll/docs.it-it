@@ -3,11 +3,11 @@ title: Associazione dati in un client Windows Form
 ms.date: 03/30/2017
 ms.assetid: a2a30b37-d6e2-4552-820e-e60b2bbe8829
 ms.openlocfilehash: 6ad71555148ed4f907483b677097e1f673373d87
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990639"
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Associazione dati in un client Windows Form
 In questo esempio viene illustrato come associare ai dati restituiti da un servizio Windows Communication Foundation (WCF) in un'applicazione Windows Form.  

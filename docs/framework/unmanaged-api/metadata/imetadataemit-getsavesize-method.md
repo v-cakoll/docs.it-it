@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d9279808e4ad15b693d06ac8a99dd33a609e5a8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992511"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>Metodo IMetaDataEmit::GetSaveSize
 Ottiene la dimensione stimata binaria dell'assembly e i relativi metadati nell'ambito corrente.  
@@ -40,11 +40,11 @@ HRESULT GetSaveSize (
  `fSave`  
  [in] Valore di [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) enumerazione che specifica se si desidera ottenere le dimensioni accurate o approssimative. Solo tre valori sono validi: cssAccurate, cssQuick cssDiscardTransientCAs e:  
   
--   cssAccurate restituisce l'esatta dimensione di salvataggio, ma richiede più tempo per il calcolo.  
+- cssAccurate restituisce l'esatta dimensione di salvataggio, ma richiede più tempo per il calcolo.  
   
--   cssQuick restituisce una dimensione, vengono aggiunti per sicurezza, ma richiede meno tempo per il calcolo.  
+- cssQuick restituisce una dimensione, vengono aggiunti per sicurezza, ma richiede meno tempo per il calcolo.  
   
--   indica a cssDiscardTransientCAs `GetSaveSize` che possono essere generate da subito gli attributi personalizzati annullabile.  
+- indica a cssDiscardTransientCAs `GetSaveSize` che possono essere generate da subito gli attributi personalizzati annullabile.  
   
  `pdwSaveSize`  
  [out] Un puntatore alla dimensione necessaria per salvare il file.  

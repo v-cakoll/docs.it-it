@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6cba7b4a34835eb2f394aa71be8b907973cb1cd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700189"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>Metodo ICLRGCManager2::SetGCStartupLimitsEx
 Imposta le dimensioni di un segmento di garbage collection e le dimensioni massime della generazione del sistema di garbage collection 0.  
@@ -74,7 +74,7 @@ HRESULT SetGCStartupLimitsEx (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
+- [Gestione automatica della memoria](../../../../docs/standard/automatic-memory-management.md)
 - [Garbage Collection](../../../../docs/standard/garbage-collection/index.md)
 - [Interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Interfaccia ICLRGCManager2](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)

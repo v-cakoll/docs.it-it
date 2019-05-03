@@ -5,10 +5,10 @@ ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e25f044247064db26e4e1e74590d6f4970fe4477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318780"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Esercitazione: Usare ML.NET in uno scenario di classificazione multiclasse per classificare i problemi di GitHub
@@ -54,9 +54,9 @@ Le fasi del flusso di lavoro sono le seguenti:
 2. **Preparare i dati**
    * **Caricare i dati**
    * **Estrarre le caratteristiche (trasformare i dati)**
-3. **Creare il modello ed eseguirne il training** 
+3. **Compilare ed eseguire il training** 
    * **Eseguire il training del modello**
-   * **Valutare il modello**
+   * **Valutazione del modello**
 4. **Distribuire il modello**
    * **Usare il modello per le stime**
 
@@ -170,7 +170,7 @@ Rimuovere la definizione di classe esistente e aggiungere il codice seguente, ch
 
 [!code-csharp[DeclareGlobalVariables](~/samples/machine-learning/tutorials/GitHubIssueClassification/GitHubIssueData.cs#DeclareTypes)]
 
-`GitHubIssue` è la classe del set di dati di input e ha i campi <xref:System.String> seguenti:
+`GitHubIssue` è la classe del set di dati input e ha i seguenti campi <xref:System.String>:
 
 * `ID` contiene un valore per l'ID del problema GitHub
 * `Area` contiene un valore per l'etichetta `Area`
@@ -179,7 +179,7 @@ Rimuovere la definizione di classe esistente e aggiungere il codice seguente, ch
 
 `IssuePrediction` è la classe usata per la stima dopo il training del modello. Dispone di un `string` singolo (`Area`) e di un attributo `PredictedLabel` `ColumnName`. `Label` viene usato per creare il modello ed eseguirne il training, nonché con un secondo set di dati per valutare il modello. `PredictedLabel` viene usato durante la valutazione e la stima. Per la valutazione vengono usati un input con dati di training, i valori stimati e il modello.
 
-Quando si crea un modello con ML.NET, si inizia creando un <xref:Microsoft.ML.MLContext>. `MLContext` è paragonabile a livello concettuale all'uso di `DbContext` in Entity Framework. L'ambiente offre un contesto per il processo di apprendimento automatico che può essere usato per il rilevamento e la registrazione di eccezioni.
+Quando si crea un modello con ML.NET, si inizia creando un <xref:Microsoft.ML.MLContext>. A livello concettuale `MLContext` è paragonabile all'uso di `DbContext` in Entity Framework. L'ambiente offre un contesto per il processo di apprendimento automatico che può essere usato per il rilevamento e la registrazione di eccezioni.
 
 ### <a name="initialize-variables-in-main"></a>Inizializzare le variabili in Main
 
@@ -203,8 +203,8 @@ Lo schema di dati è stato definito in precedenza quando è stata creata la clas
 
 * La prima colonna `ID` (ID problema di GitHub)
 * La seconda colonna `Area` (stima per il training)
-* La terza colonna `Title` (titolo del problema GitHub) è la prima [caratteristica](../resources/glossary.md##feature) usata per la stima di `Area`
-* La quarta colonna `Description` è la seconda caratteristica usata per la stima di `Area`
+* La terza colonna `Title` (titolo del problema GitHub) è la prima [funzionalità](../resources/glossary.md##feature) usata per la stima di `Area`
+* La quarta colonna `Description` è la seconda funzionalità usata per la stima di `Area`
 
 Per inizializzare e caricare la variabile globale `_trainingDataView` in modo da riusarla per la pipeline, aggiungere il codice seguente dopo l'inizializzazione di `mlContext`:
 

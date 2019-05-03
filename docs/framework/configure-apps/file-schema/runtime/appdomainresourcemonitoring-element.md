@@ -8,11 +8,11 @@ ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 71cc69eba17de8465cc7999f334c724e4ec14e7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704999"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > elemento
 Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel processo per la durata del processo.  

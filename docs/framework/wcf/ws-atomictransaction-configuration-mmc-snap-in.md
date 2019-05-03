@@ -3,11 +3,11 @@ title: Snap-in MMC di configurazione di WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
 ms.openlocfilehash: b1d86fa57b31d1f9be12f76c28f9d042e7e28e24
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052560"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Snap-in MMC di configurazione di WS-AtomicTransaction
 Lo Snap-in MMC di Configurazione di WS-AtomicTransaction è utilizzato per configurare una parte delle impostazioni WS-AtomicTransaction su computer locali e remoti.  
@@ -21,7 +21,7 @@ Lo Snap-in MMC di Configurazione di WS-AtomicTransaction è utilizzato per confi
   
  Per usare l'interfaccia fornita dallo strumento è necessario registrare il file WsatUI.dll, disponibile nel percorso seguente:  
   
- **%PROGRAMFILES%\Microsoft SDKs\Windows\v6.0\Bin\WsatUI.dll**  
+ **%ProgramFiles%\Microsoft SDKs\Windows\v6.0\Bin\WsatUI.dll**  
   
  La registrazione può essere effettuata con il comando seguente:  
   
@@ -88,6 +88,6 @@ regasm.exe /codebase WsatUI.dll
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Configurazione del supporto transazioni WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+- [Configurazione del supporto di transazioni WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
 - [Utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
 - [Amministrazione e diagnostica](../../../docs/framework/wcf/diagnostics/index.md)

@@ -3,11 +3,11 @@ title: Alberi delle espressioni (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
 ms.openlocfilehash: 7744954d3a3f552d5765e6e7085950f08a5adf55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702737"
 ---
 # <a name="expression-trees-c"></a>Alberi delle espressioni (C#)
 Gli alberi delle espressioni rappresentano codice in una struttura dei dati simile a un albero, dove ogni nodo è un'espressione, ad esempio una chiamata al metodo o un'operazione binaria come `x < y`.  

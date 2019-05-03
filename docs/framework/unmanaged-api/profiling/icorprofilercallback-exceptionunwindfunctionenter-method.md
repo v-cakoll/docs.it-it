@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0451ceac3018a3bab697a8ac82f5ef84f1026c6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61597180"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a>Metodo ICorProfilerCallback::ExceptionUnwindFunctionEnter
 Notifica al profiler che ha iniziato la fase di rimozione della gestione delle eccezioni per la rimozione di una funzione.  

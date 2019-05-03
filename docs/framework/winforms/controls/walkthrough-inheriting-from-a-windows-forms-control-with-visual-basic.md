@@ -11,11 +11,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
 ms.openlocfilehash: b606de4b7cf4648fdc7ada3c1f6faec81342d02c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59320639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792184"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Procedura dettagliata: Ereditarietà da un controllo Windows Forms con Visual Basic
 Con Visual Basic, è possibile creare controlli personalizzati avanzati sfruttando *ereditarietà*. L'ereditarietà consente di creare nuovi controlli che non solo conservano tutte le funzionalità proprie dei controlli Windows Forms standard, ma includono anche funzionalità personalizzate. In questa procedura verrà creato un controllo ereditato semplice denominato `ValueButton`. Questo pulsante eredita la funzionalità di standard di Windows Form <xref:System.Windows.Forms.Button> controllare ed espone una proprietà personalizzata denominata `ButtonValue`.  
@@ -140,7 +140,7 @@ Con Visual Basic, è possibile creare controlli personalizzati avanzati sfruttan
   
 11. Scegliere **Avvia debug** dal menu **Debug**.  
   
-     `Form1` viene visualizzata.  
+     Viene visualizzato `Form1`.  
   
 12. Fare clic su `Valuebutton1`.  
   
@@ -148,7 +148,7 @@ Con Visual Basic, è possibile creare controlli personalizzati avanzati sfruttan
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Creazione di un controllo composito con Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Procedura: Visualizzare un controllo nella finestra di dialogo Scegli elementi della Casella degli strumenti](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Procedura dettagliata: Modifica di un controllo composito con Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Procedura: Visualizzare un controllo nella finestra di dialogo elementi della casella degli strumenti scegliere](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)
 - [Nozioni fondamentali sull'ereditarietà (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

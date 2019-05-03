@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 28aa8313e7ba0c071187d0f1f6d78431b16fc005
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777871"
 ---
 # <a name="imetadataimportfindmethod-method"></a>Metodo IMetaDataImport::FindMethod
 Ottiene un puntatore al MethodDef token per il metodo che è racchiuso da specificato <xref:System.Type> e avente il nome e i metadati della firma specificata.  

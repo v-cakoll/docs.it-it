@@ -6,11 +6,11 @@ helpviewer_keywords:
 - examples [Windows Forms], transformations
 ms.assetid: 1f8e18d3-d2f5-460e-a8e3-2da891c301de
 ms.openlocfilehash: 22984ca8b12b1b71cfc5df78f8ac4005e1ad55f2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791092"
 ---
 # <a name="using-transformations-in-managed-gdi"></a>Utilizzo di trasformazioni nel codice gestito GDI+
 Trasformazioni affini includono la rotazione, ridimensionamento, che riflette, inclinare e la conversione. Nelle [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], il <xref:System.Drawing.Drawing2D.Matrix> classe fornisce le basi per l'esecuzione di trasformazioni affini grafica vettoriale, immagini e testo.  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: de166a22350e49197ff6a5b5d6dc956cdcc2d1ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985140"
 ---
 # <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a>Metodo ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList
 Ottiene un puntatore a interfaccia a un [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) istanza dall'elenco fornito di identità di assembly parziali.  

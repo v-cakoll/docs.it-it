@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32499e74e8af9a865347bd800d3db4c303a7344c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59126386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796734"
 ---
 # <a name="ihostmallocalloc-method"></a>Metodo IHostMAlloc::Alloc
 Richieste all'host di allocare la quantità specificata di memoria dall'heap.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397985"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59310564"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection e prestazioni
 <a name="top"></a>Questo argomento descrive i problemi relativi a Garbage Collection e all'uso della memoria. Sono incluse informazioni per risolvere i problemi che riguardano l'heap gestito e che descrivono come ridurre al minimo l'effetto di Garbage Collection sulle applicazioni. Per ogni problema sono disponibili collegamenti alle procedure che è possibile usare per approfondimenti aggiuntivi.  
@@ -84,7 +84,7 @@ ms.locfileid: "47397985"
 -   [L'utilizzo della CPU durante un'operazione di Garbage Collection è eccessivo](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
-### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problema: viene generata un'eccezione di memoria esaurita  
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problema: Viene generata un'eccezione di memoria esaurita  
  Esistono due casi legittimi per la generazione di un'eccezione <xref:System.OutOfMemoryException> gestita:  
   
 -   Esaurimento della memoria virtuale.  
@@ -106,7 +106,7 @@ ms.locfileid: "47397985"
 -   Dati che dimostrano che non si tratta di un'eccezione di memoria esaurita legittima, inclusi quelli che indicano che la memoria fisica o virtuale non è la causa del problema.  
   
 <a name="Issue_TooMuchMemory"></a>   
-### <a name="issue-the-process-uses-too-much-memory"></a>Problema: il processo usa una quantità eccessiva di memoria  
+### <a name="issue-the-process-uses-too-much-memory"></a>Problema: Il processo usa una quantità eccessiva di memoria  
  Un presupposto comune è che l'uso della memoria visualizzato nella scheda **Prestazioni** di Gestione attività di Windows può indicare quando viene usata una quantità eccessiva di memoria. Tuttavia, queste informazioni visualizzate riguardano il set di lavoro e non l'utilizzo della memoria virtuale.  
   
  Se si determina che il problema è causato dall'heap gestito, è necessario misurare l'heap gestito nel tempo per stabilire gli eventuali modelli.  
@@ -128,7 +128,7 @@ ms.locfileid: "47397985"
 |[Controllare i riferimenti agli oggetti.](#ObjRef)<br /><br /> [Determinare se è stato eseguito un finalizzatore.](#Induce)<br /><br /> [Determinare se sono presenti oggetti in attesa di essere finalizzati.](#Finalize)|  
   
 <a name="Issue_Fragmentation"></a>   
-### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problema: l'heap gestito è troppo frammentato  
+### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problema: L'heap gestito è troppo frammentato  
  Il livello di frammentazione viene calcolato come percentuale di spazio libero rispetto alla memoria totale allocata per la generazione. Per la generazione 2, un livello accettabile di frammentazione non è maggiore del 20%. Poiché la generazione 2 può assumere dimensioni molto grandi, il rapporto di frammentazione è più importante del valore assoluto.  
   
  La disponibilità di una quantità elevata di spazio libero nella generazione 0 non costituisce un problema, perché si tratta della generazione in cui vengono allocati nuovi oggetti.  
@@ -156,7 +156,7 @@ ms.locfileid: "47397985"
  Se si ritiene che non sussista una causa legittima per la frammentazione, contattare il Supporto tecnico Microsoft.  
   
 <a name="Issue_LongPauses"></a>   
-### <a name="issue-garbage-collection-pauses-are-too-long"></a>Problema: le pause di Garbage Collection sono troppo prolungate  
+### <a name="issue-garbage-collection-pauses-are-too-long"></a>Problema: Le pause di Garbage Collection sono troppo prolungate  
  Poiché le operazioni di Garbage Collection avvengono in tempo reale "soft", un'applicazione deve essere in grado di tollerare alcune pause. Un criterio che determina l'esecuzione in tempo reale "soft" è che il 95% delle operazioni deve terminare in tempo.  
   
  Nelle operazioni di Garbage Collection simultanee, i thread gestiti possono essere eseguiti durante una raccolta, che significa che le pause sono minime.  
@@ -172,11 +172,11 @@ ms.locfileid: "47397985"
 |[Determinare la durata di un'operazione di Garbage Collection.](#TimeInGC)<br /><br /> [Determinare la causa di un'operazione di Garbage Collection.](#Triggered)|  
   
 <a name="Issue_Gen0"></a>   
-### <a name="issue-generation-0-is-too-big"></a>Problema: la generazione 0 ha dimensioni eccessive  
+### <a name="issue-generation-0-is-too-big"></a>Problema: La generazione 0 è troppo grande  
  È probabile che la generazione 0 abbia un numero maggiore di oggetti in un sistema a 64 bit, in particolare se si usa un'operazione di Garbage Collection per server invece che per workstation. Ciò è dovuto al fatto che la soglia per attivare un'operazione di Garbage Collection di generazione 0 è maggiore in questi ambienti e le raccolte di generazione 0 possono essere molto più grandi. Le prestazioni sono migliori quando un'applicazione alloca molta memoria prima dell'attivazione di un'operazione di Garbage Collection.  
   
 <a name="Issue_HighCPU"></a>   
-### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Problema: l'utilizzo della CPU durante un'operazione di Garbage Collection è eccessivo  
+### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Problema: L'utilizzo della CPU durante un'operazione di Garbage Collection è eccessivo  
  L'utilizzo della CPU durante un'operazione di Garbage Collection è elevato. Se il periodo di tempo del processo è significativo in un'operazione di Garbage Collection, il numero di raccolte è troppo frequente oppure la raccolta dura troppo a lungo. Una frequenza di allocazione di oggetti maggiore nell'heap gestito fa sì che le operazioni di Garbage Collection avvengano più spesso. La riduzione della frequenza di allocazione riduce anche la frequenza delle operazioni di Garbage Collection.  
   
  È possibile monitorare le frequenze di allocazione usando il contatore delle prestazioni `Allocated Bytes/second`. Per altre informazioni, vedere [Contatori delle prestazioni in .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).  
@@ -278,7 +278,7 @@ ms.locfileid: "47397985"
 <a name="OOMIsManaged"></a>   
 ##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Per determinare se l'eccezione di memoria esaurita è gestita  
   
-1.  Nel debugger WinDbg o di Visual Studio con l'estensione del debugger SOS caricata, digitare il comando di stampa dell'eccezione (**pe**):  
+1. Nel debugger WinDbg o di Visual Studio con l'estensione del debugger SOS caricata, digitare il comando di stampa dell'eccezione (**pe**):  
   
      **!pe**  
   
@@ -292,7 +292,7 @@ ms.locfileid: "47397985"
     StackTrace (generated):  
     ```  
   
-2.  Se l'output non specifica un'eccezione, è necessario determinare il thread da cui proviene l'eccezione di memoria esaurita. Digitare il comando seguente nel debugger per mostrare tutti i thread con i rispettivi stack di chiamate:  
+2. Se l'output non specifica un'eccezione, è necessario determinare il thread da cui proviene l'eccezione di memoria esaurita. Digitare il comando seguente nel debugger per mostrare tutti i thread con i rispettivi stack di chiamate:  
   
      **~\*kb**  
   
@@ -302,7 +302,7 @@ ms.locfileid: "47397985"
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0   
     ```  
   
-3.  È possibile usare il comando seguente per eseguire il dump delle eccezioni annidate:  
+3. È possibile usare il comando seguente per eseguire il dump delle eccezioni annidate:  
   
      **!pe -nested**  
   
@@ -323,7 +323,7 @@ ms.locfileid: "47397985"
   
      In questo esempio la dimensione dell'area libera più grande è circa 24000 KB (3A980 in formato esadecimale). Questa area è molto minore rispetto alle dimensioni richieste da Garbage Collector per un segmento.  
   
-     oppure  
+     -oppure-  
   
 -   Utilizzare il comando **vmstat**:  
   
@@ -344,9 +344,9 @@ ms.locfileid: "47397985"
 <a name="Physical"></a>   
 ##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>Per determinare se è disponibile memoria fisica sufficiente  
   
-1.  Avviare Gestione risorse di Windows.  
+1. Avviare Gestione risorse di Windows.  
   
-2.  Nella scheda **Prestazioni** osservare il valore di cui è stato eseguito il commit. In Windows 7 osservare il valore di **Commit (KB)** nel **gruppo Sistema**.  
+2. Nella scheda **Prestazioni** osservare il valore di cui è stato eseguito il commit. In Windows 7 osservare il valore di **Commit (KB)** nel **gruppo Sistema**.  
   
      Se il valore specificato in **Totale** si avvicina al valore di **Limite**, la memoria fisica è insufficiente.  
   
@@ -494,13 +494,13 @@ ms.locfileid: "47397985"
 <a name="Finalize"></a>   
 ##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Per determinare se sono presenti oggetti in attesa di essere finalizzati  
   
-1.  Nel debugger WinDbg o di Visual Studio con l'estensione del debugger SOS caricata, digitare il comando seguente:  
+1. Nel debugger WinDbg o di Visual Studio con l'estensione del debugger SOS caricata, digitare il comando seguente:  
   
      **!finalizequeue**  
   
      Osservare il numero di oggetti pronti per la finalizzazione. Se il numero è elevato, è necessario esaminare il motivo per cui i finalizzatori non possono continuare del tutto o in modo abbastanza veloce.  
   
-2.  Per ottenere un output dei thread, digitare il comando seguente:  
+2. Per ottenere un output dei thread, digitare il comando seguente:  
   
      **threads -special**  
   

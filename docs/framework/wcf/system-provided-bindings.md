@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
 ms.openlocfilehash: 3c6c6b628d208aede8c547dcfa66fc189a26ae01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791508"
 ---
 # <a name="system-provided-bindings"></a>Associazioni fornite dal sistema
 
@@ -53,7 +53,7 @@ Con WCF sono in dotazione le associazioni seguenti:
 |<xref:System.ServiceModel.WSHttpContextBinding>|[\<wsHttpContextBinding>](../configure-apps/file-schema/wcf/wshttpcontextbinding.md)|Associazione protetta e interoperativa adatta per contratti di servizio non duplex che consente l'uso delle intestazioni SOAP per lo scambio del contesto.|
 |<xref:System.ServiceModel.UdpBinding>|[\<udpBinding>](../configure-apps/file-schema/wcf/udpbinding.md)|Associazione da utilizzare quando si invia un burst di messaggi semplici a numerosi client contemporaneamente.|
 
- Nella tabella seguente sono riportate le funzionalità di ogni associazione fornita dal sistema: Le associazioni sono riportate nelle colonne della tabella, mentre le funzionalità sono elencate nelle righe e descritte in una seconda tabella. Nella tabella seguente viene fornita una chiave per le abbreviazioni delle associazioni utilizzate. Per selezionare un'associazione, stabilire qual è la colonna che soddisfa tutte le funzioni della riga necessarie.
+ Nella tabella seguente sono riportate le funzionalità di ogni associazione fornita dal sistema: Le associazioni sono riportate nelle colonne della tabella, mentre le funzionalità sono elencate nelle righe e descritte in una seconda tabella. Nella tabella seguente viene fornita una chiave per le abbreviazioni delle associazioni utilizzate. Per selezionare un'associazione, stabilire qual è la colonna che soddisfa tutte le funzionalità della riga necessarie.
 
 |Binding|Interoperabilità|Sicurezza (predefinita)|Sessione<br />(Predefinito)|Transazioni|Duplex|Codifica (predefinita)|Flusso<br />(Predefinito)|
 |-------------|----------------------|--------------------------|-----------------------------|------------------|------------|--------------------------|-------------------------------|

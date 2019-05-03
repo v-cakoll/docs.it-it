@@ -9,11 +9,11 @@ ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
 ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668952"
 ---
 # <a name="get-started-with-c"></a>Introduzione a C\#
 
@@ -21,7 +21,7 @@ Questa sezione include brevi esercitazioni semplici che illustrano come creare v
 
 Sono disponibili gli argomenti seguenti:
 
-* [Introduzione al linguaggio C# e a .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
+* [Introduzione al linguaggio C# e .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
 
      Viene fornita una panoramica del linguaggio C# e di .NET.
 
@@ -31,7 +31,7 @@ Sono disponibili gli argomenti seguenti:
 
    Le informazioni in questo argomento consentono di creare ed eseguire una semplice applicazione Hello World e quindi modificarla per ottenere un'applicazione Hello World leggermente più interattiva. Dopo aver completato la creazione e l'esecuzione dell'applicazione, verranno presentate anche le procedure per [eseguirne il debug](../../core/tutorials/debugging-with-visual-studio.md) e [pubblicarla](../../core/tutorials/publishing-with-visual-studio.md) in modo che possa essere eseguita su qualsiasi piattaforma supportata da .NET Core.
 
-* [Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md)
+* [Building a class library with C# and .NET Core in Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md) (Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017)
 
    Una libreria di classi consente di definire i tipi e i membri dei tipi che possono essere chiamati da un'altra applicazione. Questo argomento illustra come creare una libreria di classi con un solo metodo che determina se una stringa inizia con un carattere maiuscolo. Dopo aver completato la compilazione della libreria, è possibile sviluppare un [unit test](../../core/tutorials/testing-library-with-visual-studio.md) per assicurarsi che funzioni come previsto, quindi è possibile renderla disponibile per [applicazioni che vogliono usarla](../../core/tutorials/consuming-library-with-visual-studio.md).
 

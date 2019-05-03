@@ -3,11 +3,11 @@ title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
 ms.openlocfilehash: 4cf65637603fd6c20a33b1ae6ecd8b6ded36a246
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59328478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760298"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 Specifica il tipo di ordinamento usato per gli oggetti restituiti in un'istruzione SELECT.  
@@ -79,23 +79,23 @@ ORDER BY ...
 ## <a name="restricted-keywords"></a>Parole chiave con restrizioni  
  Le parole chiave seguenti devono essere racchiuse tra virgolette quando usate in una clausola `ORDER BY` :  
   
--   CROSS  
+- CROSS  
   
--   FULL  
+- FULL  
   
--   KEY  
+- KEY  
   
--   LEFT  
+- LEFT  
   
--   ORDER  
+- ORDER  
   
--   OUTER  
+- OUTER  
   
--   RIGHT  
+- RIGHT  
   
--   ROW  
+- ROW  
   
--   VALUE  
+- VALUE  
   
 ## <a name="ordering-nested-queries"></a>Ordinamento di query annidate  
  In Entity Framework un'espressione annidata può essere inserita in una posizione qualsiasi nella query. L'ordine di una query annidata non viene mantenuto.  

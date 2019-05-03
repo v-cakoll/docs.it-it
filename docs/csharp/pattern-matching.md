@@ -1,28 +1,28 @@
 ---
 title: Criteri di ricerca - Guida a C#
 description: Informazioni sulle espressioni di criteri di ricerca in C#
-ms.date: 01/24/2017
+ms.date: 04/10/2019
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: eccc982c94a1f124d7250e1795a44d696e43a53c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5ace3c4552184b848b90dee3516d549ca8fd5806
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969978"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481366"
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca
 
 I criteri verificano che un valore abbia una determinata *forma* e possono *estrarre* informazioni dal valore quando ha la forma corrispondente. I criteri di ricerca offrono una sintassi più concisa per gli algoritmi già in uso. Usando la sintassi esistente vengono già creati algoritmi di criteri di ricerca. Vengono scritte istruzioni `if` o `switch` che testano i valori. Quindi, quando le istruzioni corrispondono, si estraggono e si usano le informazioni del valore. I nuovi elementi di sintassi sono estensioni di istruzioni già note: `is` e `switch`. Queste nuove estensioni associano il test di un valore all'estrazione delle informazioni.
 
-In questo argomento viene descritta la nuova sintassi per illustrare come creare codice leggibile e conciso. I criteri di ricerca consentono di usare termini in cui dati e codice sono separati, a differenza delle progettazioni orientate a oggetti in cui i dati e i metodi che li modificano sono strettamente associati.
+In questo articolo viene descritta la nuova sintassi per illustrare come creare codice leggibile e conciso. I criteri di ricerca consentono di usare termini in cui dati e codice sono separati, a differenza delle progettazioni orientate a oggetti in cui i dati e i metodi che li modificano sono strettamente associati.
 
 Per descrivere questi nuovi termini, verranno usate strutture che rappresentano forme geometriche usando istruzioni di criteri di ricerca. È probabile che si abbia già acquisito dimestichezza con la compilazione delle gerarchie di classi e la creazione di [metodi virtuali e metodi sottoposti a override](methods.md#inherited) per personalizzare il comportamento degli oggetti in base al tipo di runtime dell'oggetto.
 
 Queste tecniche non sono possibili con dati che non sono strutturati in una gerarchia di classi. Quando dati e metodi sono separati, è necessario usare altri strumenti. I costrutti dei nuovi *criteri di ricerca* offrono una sintassi più chiara per esaminare i dati e modificare il flusso di controllo in base a qualsiasi condizione dei dati. Si scrivono già istruzioni `if` e `switch` che testano il valore di una variabile. Si scrivono istruzioni `is` che testano il tipo di una variabile. I *criteri di ricerca* aggiungono nuove funzionalità alle istruzioni.
 
-In questo argomento verrà creato un metodo che calcola l'area di diverse forme geometriche. L'operazione verrà tuttavia eseguita senza ricorrere a tecniche orientate a oggetti compilare una gerarchia di classi per le diverse forme.
+In questo articolo verrà creato un metodo che calcola l'area di diverse forme geometriche. L'operazione verrà tuttavia eseguita senza ricorrere a tecniche orientate a oggetti e compilare una gerarchia di classi per le diverse forme.
 Verranno usati invece i *criteri di ricerca*.
-Procedendo nell'esempio, confrontare il codice a un eventuale codice strutturato come gerarchia di oggetti. Quando i dati in cui è necessario eseguire le query e che devono essere modificati non sono costituiti da una gerarchia di classi, i criteri di ricerca offrono progettazioni molto eleganti.
+Procedendo nell'esempio, confrontare il codice a un eventuale codice strutturato come gerarchia di oggetti. Quando i dati in cui è necessario eseguire le query e che devono essere modificati non sono costituiti da una gerarchia di classi, i criteri di ricerca offrono progettazioni chiare.
 
 Anziché iniziare con una definizione della forma astratta e l'aggiunta di diverse classi di forme specifiche, iniziare con definizioni di soli dati semplici per ogni forma geometrica:
 
@@ -80,7 +80,7 @@ L'istruzione `switch` è governata da nuove regole importanti. Le limitazioni al
 
 Quando sono limitate ai valori costanti, solo un'etichetta `case` può corrispondere al valore dell'espressione `switch`. Se a questo si aggiungeva la regola per la quale ogni sezione `switch` non doveva passare alla sezione successiva ne conseguiva che le sezioni `switch` potevano essere ridisposte in qualsiasi ordine senza effetti sul comportamento.
 Ora, con espressioni `switch` più generalizzate, l'ordine di ogni sezione è rilevante. Le espressioni `switch` vengono valutate in ordine testuale. L'esecuzione si trasferisce alla prima etichetta `switch` che corrisponde all'espressione `switch`.  
-Si noti che il caso `default` verrà eseguito solo se non corrispondano altre etichette case. Il caso `default` viene valutato per ultimo, indipendentemente dall'ordine testuale. Se non è presente alcun caso `default` e nessuna delle altre istruzioni `case` corrisponde, l'esecuzione continua con l'istruzione che segue l'istruzione `switch`. Non viene eseguito il codice di alcuna etichetta `case`.
+Il case `default` verrà eseguito solo se non corrispondono altre etichette case. Il caso `default` viene valutato per ultimo, indipendentemente dall'ordine testuale. Se non è presente alcun case `default` e nessuna delle altre istruzioni `case` corrisponde, l'esecuzione continua con l'istruzione che segue l'istruzione `switch`. Non viene eseguito il codice di alcuna etichetta `case`.
 
 ## <a name="when-clauses-in-case-expressions"></a>Clausole `when` nelle espressioni `case`
 
@@ -93,7 +93,7 @@ Questa modifica illustra alcune considerazioni importanti sulla nuova sintassi. 
 Questo esempio illustra due variabili diverse in due etichette `case` per il primo blocco `switch`. Si noti che le istruzioni in questo blocco `switch` non usano la variabile `c` per il cerchio o `s` per il quadrato.
 Nessuna delle variabili è assegnata in modo definitivo in questo blocco `switch`.
 Se uno di questi casi corrisponde, significa che una delle variabili è stata assegnata.
-Tuttavia, non è possibile sapere *quale* variabile è stata assegnata in fase di compilazione poiché entrambi i casi possono corrispondere in fase di esecuzione. Per questo motivo, nella maggior parte dei casi in cui vengono usate più etichette `case` per lo stesso blocco, non verrà introdotta una nuova variabile nell'istruzione `case` o verrà usata solo la variabile nella clausola `when`.
+Tuttavia, non è possibile sapere *quale* variabile è stata assegnata in fase di compilazione poiché entrambi i case possono corrispondere in fase di esecuzione. Per questo motivo, nella maggior parte dei casi in cui vengono usate più etichette `case` per lo stesso blocco, non verrà introdotta una nuova variabile nell'istruzione `case` o verrà usata solo la variabile nella clausola `when`.
 
 Dopo aver aggiunto le forme con area 0, si aggiungono due tipi di forme aggiuntivi, un rettangolo e un triangolo:
 
@@ -101,11 +101,11 @@ Dopo aver aggiunto le forme con area 0, si aggiungono due tipi di forme aggiunti
 
  Questo set di modifiche aggiunge etichette `case` per il caso degenere ed etichette e blocchi per ogni nuova forma. 
 
-È possibile infine aggiungere un caso `null` per assicurarsi che l'argomento non sia `null`:
+È possibile infine aggiungere un case `null` per assicurarsi che l'argomento non sia `null`:
 
 [!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
-Lo speciale comportamento del criterio `null` è interessante perché la costante `null` nel criterio non ha un tipo, ma può essere convertita in qualsiasi tipo di riferimento o nullable. Anziché convertire una costante `null` in un tipo, il linguaggio definisce che un valore `null` non corrisponderà ad alcun criterio del tipo, indipendentemente dal tipo in fase di compilazione della variabile. Questo comportamento rende il nuovo criterio del tipo basato su `switch` coerente con l'istruzione `is`: le istruzioni `is` restituiscono sempre `false` quando il valore controllato è `null`. È anche più semplice: dopo aver controllato il tipo, non è necessario un controllo null aggiuntivo. Questo è dimostrato dal fatto che non è presente alcun controllo null in nessuno dei blocchi di casi degli esempi precedenti: i controlli non sono necessari poiché la corrispondenza del criterio del tipo garantisce già un valore non null.
+Lo speciale comportamento del criterio `null` è interessante perché la costante `null` nel criterio non ha un tipo, ma può essere convertita in qualsiasi tipo di riferimento o nullable. Anziché convertire una costante `null` in un tipo, il linguaggio definisce che un valore `null` non corrisponderà ad alcun criterio del tipo, indipendentemente dal tipo in fase di compilazione della variabile. Questo comportamento rende il nuovo criterio del tipo basato su `switch` coerente con l'istruzione `is`: le istruzioni `is` restituiscono sempre `false` quando il valore controllato è `null`. È anche più semplice: dopo aver controllato il tipo, non è necessario un controllo null aggiuntivo. Questo è dimostrato dal fatto che non è presente alcun controllo null in nessuno dei blocchi di case degli esempi precedenti: i controlli non sono necessari poiché la corrispondenza del criterio del tipo garantisce già un valore non null.
 
 ## <a name="var-declarations-in-case-expressions"></a>Dichiarazioni `var` nelle espressioni `case`
 
@@ -135,4 +135,3 @@ I *costrutti dei criteri di ricerca* consentono di gestire in modo semplice il f
 I criteri di ricerca possono essere usati con qualsiasi tipo di dati. Vengono scritte espressioni che esaminano l'oggetto ed eseguono decisioni per il flusso di controllo in base alle condizioni.
 
 Confrontare il codice dell'esempio con la progettazione che deriverebbe dalla creazione di una gerarchia di classi per una `Shape` astratta e le forme derivate specifiche ognuna con la propria implementazione di un metodo virtuale per il calcolo dell'area. Spesso sarà possibile osservare che le espressioni di criteri di ricerca possono essere uno strumento utile quando si usano dati e si vogliono separare le esigenze di archiviazione di dati da quelle di comportamento.
-

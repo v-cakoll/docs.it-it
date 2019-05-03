@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0e306067-5720-4782-9719-2286570a7e47
 ms.openlocfilehash: 06609ce14edeb7e9306816b8a8d58d2212b61751
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760610"
 ---
 # <a name="method-based-query-syntax-examples-aggregate-operators"></a>Esempi di sintassi delle query basate su metodo: Operatori di aggregazione
 Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumerable.Aggregate%2A>, <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.LongCount%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, e <xref:System.Linq.Enumerable.Sum%2A> metodi per eseguire una query di [modelloSalesdiAdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando la sintassi di query basate su metodo. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  

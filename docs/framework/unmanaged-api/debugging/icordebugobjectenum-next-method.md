@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6998be3daf0ab6a6290a3400b96c32227df3e022
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942376"
 ---
 # <a name="icordebugobjectenumnext-method"></a>Metodo ICorDebugObjectEnum::Next
 Ottiene gli indirizzi virtuali relativi (RVA) del numero specificato di oggetti dall'enumerazione, iniziando in corrispondenza della posizione corrente.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
 ms.openlocfilehash: 42463249a6636e625729f90fc31fa7589ef7ef74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878787"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Generazione di comandi tramite CommandBuilders
 Se la proprietà `SelectCommand` viene specificata in modo dinamico in fase di esecuzione, ad esempio mediante uno strumento per query che accetta un comando testuale dell'utente, potrebbe non essere possibile specificare l'appropriato `InsertCommand`, `UpdateCommand` o `DeleteCommand` in fase di progettazione. Se <xref:System.Data.DataTable> esegue il mapping o viene generato da una singola tabella di database, è possibile usare l'oggetto <xref:System.Data.Common.DbCommandBuilder> per generare automaticamente gli oggetti `DeleteCommand`, `InsertCommand` e `UpdateCommand` di <xref:System.Data.Common.DbDataAdapter>.  

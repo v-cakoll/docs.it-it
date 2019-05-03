@@ -3,11 +3,11 @@ title: Considerazioni sulla migrazione (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
 ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034034"
 ---
 # <a name="migration-considerations-entity-framework"></a>Considerazioni sulla migrazione (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework offre diversi vantaggi alle applicazioni esistenti. Uno dei principali vantaggi consiste nella possibilità di usare un modello concettuale per separare le strutture di dati impiegate dall'applicazione dallo schema presente nell'origine dati in modo da apportare facilmente modifiche future al modello di archiviazione o all'origine dati stessa senza effettuare modifiche di compensazione nell'applicazione. Per altre informazioni sui vantaggi dell'uso di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], vedere [Panoramica di Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) e [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -17,13 +17,13 @@ ms.locfileid: "59310421"
 ## <a name="general-migration-considerations"></a>Considerazioni generali sulla migrazione  
  Le considerazioni seguenti riguardano l'esecuzione della migrazione di un'applicazione ad [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]:  
   
--   Qualsiasi applicazione che utilizza il [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] a partire dalla versione 3.5 SP1 possono essere migrati a Entity Framework, purché il provider di dati per l'origine dati utilizzata dall'applicazione supporta Entity Framework.  
+- Qualsiasi applicazione che utilizza il [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] a partire dalla versione 3.5 SP1 possono essere migrati a Entity Framework, purché il provider di dati per l'origine dati utilizzata dall'applicazione supporta Entity Framework.  
   
--   Entity Framework potrebbe non supportare tutte le funzionalità di un provider dell'origine dati, anche se supportato da tale provider.  
+- Entity Framework potrebbe non supportare tutte le funzionalità di un provider dell'origine dati, anche se supportato da tale provider.  
   
--   Nel caso di applicazioni complesse o di grandi dimensioni non è necessario eseguire la migrazione dell'intera applicazione a Entity Framework in una sola volta. È comunque necessario sostituire le parti dell'applicazione che non usano Entity Framework quando si cambia l'origine dati.  
+- Nel caso di applicazioni complesse o di grandi dimensioni non è necessario eseguire la migrazione dell'intera applicazione a Entity Framework in una sola volta. È comunque necessario sostituire le parti dell'applicazione che non usano Entity Framework quando si cambia l'origine dati.  
   
--   La connessione al provider di dati usata da Entity Framework può essere condivisa con altre parti dell'applicazione in quanto [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] usa provider di dati [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] per accedere all'origine dati. Il provider SqlClient viene ad esempio usato da Entity Framework per accedere a un database di SQL Server. Per altre informazioni, vedere [EntityClient Provider per Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
+- La connessione al provider di dati usata da Entity Framework può essere condivisa con altre parti dell'applicazione in quanto [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] usa provider di dati [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] per accedere all'origine dati. Il provider SqlClient viene ad esempio usato da Entity Framework per accedere a un database di SQL Server. Per altre informazioni, vedere [EntityClient Provider per Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="common-migration-tasks"></a>Attività comuni di migrazione  
  Il percorso per eseguire la migrazione di un'applicazione esistente a [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dipende dal tipo di applicazione e dalla strategia di accesso ai dati esistente. È invece necessario effettuare sempre le attività seguenti quando si esegue la migrazione di un'applicazione esistente a [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
@@ -79,7 +79,7 @@ ms.locfileid: "59310421"
   
   Per altre informazioni, vedere [associazione di oggetti ai controlli](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100)).  
   
-- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] controlli origine dati.  
+- Controlli origine dati [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
 
   Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] include un controllo origine dati progettato per semplificare il data binding in [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] applicazioni Web. Per altre informazioni, vedere [Cenni preliminari sul controllo Server Web EntityDataSource](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
   

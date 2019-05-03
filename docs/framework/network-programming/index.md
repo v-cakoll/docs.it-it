@@ -2,11 +2,17 @@
 title: Programmazione di rete in .NET Framework
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Networking
-  - Internet
-  - 'Internet, .NET Framework Internet services'
-  - Network Resources
+- Networking
+- Internet
+- Internet, .NET Framework Internet services
+- Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
+ms.openlocfilehash: 74084b8eef46f700733ad44e04cf8b3811456b85
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642412"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programmazione di rete in .NET Framework
 Con Microsoft .NET Framework viene fornita un'implementazione a più livelli, estendibile e gestita, di servizi Internet che possono essere integrati nelle applicazioni in modo rapido e semplice. Le applicazioni di rete possono essere compilate su protocolli modulari per usufruire automaticamente di nuovi protocolli Internet oppure possono utilizzare un'implementazione gestita dell'interfaccia Windows Sockets per utilizzare la rete a livello di socket.  

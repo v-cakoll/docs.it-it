@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df57cd5a2121c216fc23b9c608de091b002147e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792912"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>Enumerazione CorDebugInterfaceVersion
 Specifica un'interfaccia, una versione di .NET Framework o una versione di .NET Framework in cui è stata introdotta un'interfaccia.  
@@ -227,15 +227,15 @@ typedef enum CorDebugInterfaceVersion {
 ## <a name="interface-names"></a>Nomi delle interfacce  
  Il numero visualizzato nella parte finale del nome di interfaccia nell'API di debug (ad esempio, "3" in `ICorDebugThread3`) specifica la versione dell'interfaccia, non la versione di .NET Framework. Tutti i nomi delle interfacce nell'API di debug includono i numeri di versione, ad eccezione delle interfacce introdotte in .NET Framework versione 1. L'eventuale corrispondenza tra numeri di versione dell'interfaccia e numeri di versione di .NET Framework è casuale.  
   
--   Le interfacce introdotte in .NET Framework versione 1.0 non includono numeri, perché sono implicitamente tutte versioni 1.  
+- Le interfacce introdotte in .NET Framework versione 1.0 non includono numeri, perché sono implicitamente tutte versioni 1.  
   
--   In .NET Framework versione 1.1 vengono usate interfacce 1.0 e non vengono introdotte nuove interfacce di debug.  
+- In .NET Framework versione 1.1 vengono usate interfacce 1.0 e non vengono introdotte nuove interfacce di debug.  
   
--   Le 14 interfacce di debug introdotte in .NET Framework versione 2.0 sono estensioni logiche dei corrispettivi della versione 1 e includono il numero "2" nei nomi.  
+- Le 14 interfacce di debug introdotte in .NET Framework versione 2.0 sono estensioni logiche dei corrispettivi della versione 1 e includono il numero "2" nei nomi.  
   
--   In .NET Framework versioni 3.0 e 3.5 vengono usate le interfacce .NET Framework 2.0 esistenti e non vengono introdotte nuove interfacce.  
+- In .NET Framework versioni 3.0 e 3.5 vengono usate le interfacce .NET Framework 2.0 esistenti e non vengono introdotte nuove interfacce.  
   
--   Il [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] introduce una combinazione delle versioni dell'interfaccia. Ad esempio, sia `ICorDebugThread3` che `ICorDebugThread4` vengono visualizzate come terza e quarta versione dell'interfaccia `ICorDebugThread`. Il [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] introduce anche la prima versione del `ICorDebugStackWalk` interfaccia e la seconda versione del `ICorDebugNativeFrame` interfaccia (`ICorDebugNativeFrame2`).  
+- Il [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] introduce una combinazione delle versioni dell'interfaccia. Ad esempio, sia `ICorDebugThread3` che `ICorDebugThread4` vengono visualizzate come terza e quarta versione dell'interfaccia `ICorDebugThread`. Il [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] introduce anche la prima versione del `ICorDebugStackWalk` interfaccia e la seconda versione del `ICorDebugNativeFrame` interfaccia (`ICorDebugNativeFrame2`).  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

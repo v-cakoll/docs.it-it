@@ -12,20 +12,20 @@ helpviewer_keywords:
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
 ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59126438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698993"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Procedura: Applicare una trasformazione a un elemento quando si verifica un evento
 In questo esempio viene illustrato come applicare un <xref:System.Windows.Media.ScaleTransform> quando si verifica un evento. Il concetto illustrato è identico a quello usato per applicare altri tipi di trasformazioni. Per altre informazioni sui tipi di trasformazioni disponibili, vedere la <xref:System.Windows.Media.Transform> classe oppure [Cenni preliminari sulle trasformazioni](transforms-overview.md).  
   
  È possibile applicare una trasformazione a un elemento in uno dei due modi seguenti:  
   
--   Se decidi *non* desidera che la trasformazione influisca sul layout, usare il <xref:System.Windows.UIElement.RenderTransform%2A> proprietà dell'elemento.  
+- Se decidi *non* desidera che la trasformazione influisca sul layout, usare il <xref:System.Windows.UIElement.RenderTransform%2A> proprietà dell'elemento.  
   
--   Se si desidera la trasformazione influisca sul layout, usare il <xref:System.Windows.FrameworkElement.LayoutTransform%2A> proprietà dell'elemento.  
+- Se si desidera la trasformazione influisca sul layout, usare il <xref:System.Windows.FrameworkElement.LayoutTransform%2A> proprietà dell'elemento.  
   
  L'esempio seguente applica un' <xref:System.Windows.Media.ScaleTransform> per il <xref:System.Windows.UIElement.RenderTransform%2A> proprietà di un pulsante. Quando il mouse viene spostato su esso, il <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> e <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> proprietà delle <xref:System.Windows.Media.ScaleTransform> sono impostate su `2`, in modo che il pulsante diventerà più grandi. Quando il mouse viene spostato dal pulsante <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> e <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> sono impostati su `1`, in modo che il pulsante per tornare alle dimensioni originali.  
   
@@ -40,5 +40,5 @@ In questo esempio viene illustrato come applicare un <xref:System.Windows.Media.
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
 - [Cenni preliminari sulle trasformazioni](transforms-overview.md)
-- [Procedure relative](transformations-how-to-topics.md)
+- [Procedure relative alle proprietà](transformations-how-to-topics.md)
 - [Cenni preliminari sugli eventi indirizzati](../advanced/routed-events-overview.md)

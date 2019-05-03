@@ -3,11 +3,11 @@ title: Supporto per il debug
 ms.date: 03/30/2017
 ms.assetid: 262d8e60-8e71-42d7-8340-1b5276a0ad35
 ms.openlocfilehash: eab6370614bab12955c18523c8accca4089a6bc5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59126828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032617"
 ---
 # <a name="debugging-support"></a>Supporto per il debug
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornisce supporto per il debug generale per [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetti.  Vedere anche [debug LINQ](/visualstudio/debugger/debugging-linq) oppure [debug LINQ](/visualstudio/debugger/debugging-linq).  
@@ -21,7 +21,7 @@ ms.locfileid: "59126828"
  [Procedura: Visualizzare un insieme di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-display-a-changeset.md)  
  Viene descritto come visualizzare le modifiche inviate al database.  
   
- [Procedura: Visualizzare comandi LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-display-linq-to-sql-commands.md)  
+ [Procedura: Visualizzazione LINQ in comandi SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-display-linq-to-sql-commands.md)  
  Viene descritto come visualizzare comandi SQL e altre informazioni.  
   
  [Risoluzione dei problemi](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)  

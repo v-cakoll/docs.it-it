@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
 ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007323"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter e XAML
 Questo argomento illustra lo scopo della conversione del tipo string come funzionalità generale del linguaggio XAML. In .NET Framework, il <xref:System.ComponentModel.TypeConverter> classe svolge un ruolo particolare come parte dell'implementazione per una classe gestita personalizzata che può essere utilizzata come valore della proprietà utilizzo degli attributi XAML. Se si scrive una classe personalizzata e si desidera che le istanze della classe perché sia utilizzabile come valori di attributo impostabili XAML, si potrebbe essere necessario applicare una <xref:System.ComponentModel.TypeConverterAttribute> alla classe, scrivere una classe personalizzata <xref:System.ComponentModel.TypeConverter> classe o a entrambe.  
@@ -59,19 +59,19 @@ Questo argomento illustra lo scopo della conversione del tipo string come funzio
   
  <xref:System.ComponentModel.TypeConverter> definisce quattro membri rilevanti per la conversione da e verso le stringhe per l'elaborazione XAML:  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
   
  Tra questi, il metodo più importante è <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>. Questo metodo converte la stringa di input nel tipo di oggetto richiesto. In teoria, il <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> metodo potrebbe essere implementato per convertire una più vasta gamma di tipi nel tipo di destinazione previsto dal convertitore, servendo così a scopi che vanno oltre XAML, ad esempio il supporto delle conversioni in fase di esecuzione, ma per scopi di XAML si tratta solo del percorso di codice in grado di elaborare un <xref:System.String> input che è importante.  
   
  Il metodo più importante successivo è <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>. Se un'applicazione viene convertita in una rappresentazione del markup (ad esempio, se viene salvata in XAML come file), <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> è responsabile della creazione di una rappresentazione di markup. In questo caso, il percorso del codice importante per XAML è quando si passa un' `destinationType` di <xref:System.String> .  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> e <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> sono metodi di supporto usati quando un servizio esegue le funzionalità di una query di <xref:System.ComponentModel.TypeConverter> implementazione. È necessario implementare questi metodi per restituire `true` per i casi specifici del tipo supportati dai metodi di conversione equivalenti del convertitore. Per XAML, si tratta in genere del tipo <xref:System.String> .  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> e <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> sono metodi di supporto usati quando un servizio esegue una query sulle funzionalità dell'implementazione di <xref:System.ComponentModel.TypeConverter> . È necessario implementare questi metodi per restituire `true` per i casi specifici del tipo supportati dai metodi di conversione equivalenti del convertitore. Per XAML, si tratta in genere del tipo <xref:System.String> .  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Informazioni relative alle impostazioni cultura e convertitori di tipi per XAML  
  Ogni <xref:System.ComponentModel.TypeConverter> implementazione può avere un'interpretazione di cosa costituisce una stringa valida per una conversione e può anche usare o ignorare la descrizione del tipo passata come parametri. C'è un'importante considerazione per quanto riguarda le impostazioni cultura e la conversione di tipi in XAML. L'uso di stringhe localizzabili come valori di attributo è completamente supportato in XAML. L'uso di una stringa localizzabile come input del convertitore di tipi con requisiti di impostazioni cultura specifici non è però supportato, perché i convertitori di tipi per i valori di attributi XAML implicano un comportamento di analisi basato su un'unica lingua e sulle impostazioni cultura `en-US`. Per altre informazioni sui motivi legati alla progettazione alla base di questa limitazione, vedere la specifica del linguaggio XAML ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)).  
@@ -110,6 +110,6 @@ Questo argomento illustra lo scopo della conversione del tipo string come funzio
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ComponentModel.TypeConverter>
-- [Panoramica di XAML (WPF)](xaml-overview-wpf.md)
+- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
 - [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [Descrizione dettagliata della sintassi XAML](xaml-syntax-in-detail.md)

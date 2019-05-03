@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 44a4b5903cec2249eb1e176381fe3d8e600dd5e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046111"
 ---
 # <a name="corcallingconvention-enumeration"></a>Enumerazione CorCallingConvention
 Contiene valori che descrivono i tipi di convenzioni per le chiamate effettuate in codice gestito.  

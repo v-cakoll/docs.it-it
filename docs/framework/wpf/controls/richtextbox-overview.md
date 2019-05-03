@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
 ms.openlocfilehash: 9aa0d33b3cb2c15ba9c1cb7e7d7be9a3125f66d3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052911"
 ---
 # <a name="richtextbox-overview"></a>Cenni generali sul controllo RichTextBox
 Il <xref:System.Windows.Controls.RichTextBox> controllo consente di visualizzare o modificare il contenuto di flusso, tra cui paragrafi, immagini, tabelle e altro ancora. Questo argomento vengono presentate le <xref:System.Windows.Controls.TextBox> classe e vengono forniti esempi su come usarlo in entrambe [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e C#.  
@@ -95,5 +95,5 @@ Il <xref:System.Windows.Controls.RichTextBox> controllo consente di visualizzare
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedure relative](richtextbox-how-to-topics.md)
+- [Procedure relative alle proprietà](richtextbox-how-to-topics.md)
 - [Cenni preliminari sulla classe TextBox](textbox-overview.md)

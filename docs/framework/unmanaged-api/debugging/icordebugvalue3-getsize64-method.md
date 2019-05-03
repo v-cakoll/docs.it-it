@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7c0b45e08f7b88d9374023f95c6e3e22139c8949
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768927"
 ---
 # <a name="icordebugvalue3getsize64-method"></a>Metodo ICorDebugValue3::GetSize64
 Ottiene la dimensione, espressa in byte, di questo [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) oggetto.  

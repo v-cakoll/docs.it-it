@@ -3,11 +3,11 @@ title: <authentication> di <clientCertificate> elemento
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
 ms.openlocfilehash: e232cde8f6838de734e37aeee3f52cd7f7e7502d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701333"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<autenticazione > di \<clientCertificate > elemento
 Specifica i comportamenti di autenticazione per i certificati client utilizzati da un servizio.  
@@ -112,5 +112,5 @@ Specifica i comportamenti di autenticazione per i certificati client utilizzati 
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>
 - <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>
 - [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Procedura: Creare un servizio che usa un validator del certificato personalizzato](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
-- [Utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Procedura: Creare un servizio che usa un Validator del certificato personalizzato](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

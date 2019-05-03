@@ -5,11 +5,11 @@ f1_keywords:
 - vbrArgument_LCIDNotSupported1
 ms.assetid: 62701434-0ac2-45b8-8b40-a9adc09ae6df
 ms.openlocfilehash: 8c0b09e9002c5ac340b63a973f478bbfc8fdae0f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969676"
 ---
 # <a name="locale-id-name-is-not-supported-on-this-system"></a>ID delle impostazioni locali '\<nome >' non è supportata nel sistema in uso
 Si sta tentando di usare `VbStrConv`, ma il sistema non supporta le impostazioni locali specificate.  

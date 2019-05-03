@@ -3,20 +3,20 @@ title: Strumenti
 ms.date: 03/30/2017
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
 ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780744"
 ---
 # <a name="tools"></a>Strumenti
-In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti di Windows Communication Foundation (WCF).  
+Questo argomento elenca tutte le eccezioni generate dagli strumenti di Windows Communication Foundation (WCF).  
   
 ## <a name="exception-list"></a>Elenco delle eccezioni  
   
 |Codice risorsa|Stringa di risorsa|  
 |-------------------|---------------------|  
-|ParametersTarget|\<enumerazione >|  
+|ParametersTarget|\<enum>|  
 |ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|Il percorso specificato non è valido. Controllare l'argomento specificato.|  
 |ParametersReference|\<percorso del file >|  
@@ -68,7 +68,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti
 |HelpCodeGenerationCategory|-= GENERAZIONE DI CODICE =-|  
 |RetreivingMetadataWithMexAndDisco|Tentativo di download dei metadati dalla posizione specificata utilizzando WS-Metadati Exchange o DISCO.|  
 |ErrGeneralSchemaValidation|Si è verificato un errore durante la verifica di schemi XML generati durante l'esportazione.|  
-|ParametersDirectory|\<directory >|  
+|ParametersDirectory|\<directory>|  
 |ErrCannotLoadSpecifiedType|Nessun tipo può essere caricato per il valore specificato passato all'opzione indicata. Assicurarsi che l'assembly al quale appartiene questo tipo venga specificato utilizzando l'opzione indicata.|  
 |ErrOptionModeConflict|L'opzione specificata non può essere utilizzata con l'altra opzione perché implicano tipi di output diversi.|  
 |ErrIsNotAnAssembly|È stato impossibile caricare l'elemento specificato come assembly. Verificare che il file sia un assembly .NET.|  
@@ -102,7 +102,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti
 |HelpNoconfig|Non generare la configurazione.|  
 |HelpCodeGenerationDescription|L'elemento specificato è in grado di generare contratti di servizio, client e tipi di dati dai documenti dei metadati.|  
 |HelpTargetMetadata|Metadati di output. Se l'input è un URL, Svcutil.exe salva i metadati su disco e non genera codice. Se l'input è uno o più assembly, Svcutil.exe genera metadati dai tipi negli assembly.|  
-|ErrAmbiguousOptionModeConflict|L'opzione specificata è in conflitto con altre opzioni. Rivedere l'utilizzo dello strumento.|  
+|ErrAmbiguousOptionModeConflict|L'opzione specificata è in conflitto con altre opzioni. Rivedere l'uso dello strumento.|  
 |ErrNotLanguageOrCodeDomType|Il valore specificato passato all'argomento indicato non rappresenta un linguaggio definito e non può essere caricato come tipo CLR completo.|  
 |ErrUnableToUniquifyFilename|È impossibile creare il nome del file di output. Vengono creati troppi file con il prefisso specificato.|  
 |ErrCannotCreateFile|È impossibile creare il file di output specificato.|  
@@ -114,7 +114,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti
 |HelpCommonOptionsCategory|- = OPZIONI COMUNI = -|  
 |ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|Non è stato specificato alcun file di input valido. Specificare documenti di metadati o file di assembly.|  
-|ParametersLanguage|\<lingua >|  
+|ParametersLanguage|\<Lingua >|  
 |ErrUnableToLoadMetadataDocument|Si è verificato un errore durante la lettura dei metadati da uno dei documenti caricati. L'identificatore del documento è specificato.|  
 |ErrConflictingInputs|L'argomento di input specificato è in conflitto con l'elemento indicato perché implica modalità diverse di funzionamento dello strumento.|  
 |WrnUnableToLoadContractForValidation|Si è verificato un errore durante il caricamento di un tipo di contratto. Il tipo e i dettagli sono specificati.|  
@@ -142,7 +142,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti
 |ErrCodegenError|Si è verificato un errore durante la generazione di codice nel linguaggio specificato.<br /><br /> Il linguaggio non supporta tutti gli elementi di codice generati. È necessario utilizzare un altro linguaggio.|  
 |ErrInputWsdlParseError|Si è verificato un errore di analisi WSDL durante la lettura dell'elemento specificato. Verificare che il formato del file XML sia corretto e valido.|  
 |ErrCouldNotCreateInstance|È impossibile creare un'istanza del tipo specificato passato all'argomento indicato.|  
-|ParametersNamespace|\<String, string >|  
+|ParametersNamespace|\<string,string>|  
 |HelpNostdlib|Non fare riferimento a librerie standard (per impostazione predefinita viene fatto riferimento a mscorlib.dll e system.servicemodel.dll).|  
 |WrnCannotLoadConfigFileForExport|Si è verificato un errore durante l'elaborazione del file di configurazione caricato dal percorso indicato. È impossibile caricare servizi definiti in questo file di configurazione.|  
 |WrnUnableToLoadContractForExport|Si è verificato un errore durante il caricamento di un tipo di contratto. È impossibile esportare il tipo specificato.|

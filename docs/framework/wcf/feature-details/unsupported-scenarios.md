@@ -3,11 +3,11 @@ title: Scenari non supportati
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050753"
 ---
 # <a name="unsupported-scenarios"></a>Scenari non supportati
 Per vari motivi, Windows Communication Foundation (WCF) non supporta alcuni scenari di sicurezza specifico. Ad esempio, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition può neimplementuje metodu i protocolli di autenticazione SSPI o Kerberos, e pertanto WCF non supporta l'esecuzione di un servizio con l'autenticazione di Windows che utilizzano tale piattaforma. Durante l'esecuzione di WCF in Windows XP Home Edition, sono supportati altri meccanismi di autenticazione, ad esempio nome utente/password e l'autenticazione integrata di HTTP/HTTPS.  
@@ -20,13 +20,13 @@ Per vari motivi, Windows Communication Foundation (WCF) non supporta alcuni scen
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP con cookie di token del contesto di sicurezza attivo  
  WCF non supporta la rappresentazione e un <xref:System.InvalidOperationException> viene generata quando si verificano le condizioni seguenti:  
   
--   Il sistema operativo è [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- Il sistema operativo è [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   La modalità di autenticazione genera un'identità Windows.  
+- La modalità di autenticazione genera un'identità Windows.  
   
--   La proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> di <xref:System.ServiceModel.OperationBehaviorAttribute> è impostata su <xref:System.ServiceModel.ImpersonationOption.Required>.  
+- La proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> di <xref:System.ServiceModel.OperationBehaviorAttribute> è impostata su <xref:System.ServiceModel.ImpersonationOption.Required>.  
   
--   Viene creato un token del contesto di sicurezza SCT (Security Context Token) basato sullo stato. Per impostazione predefinita, la creazione è disattivata.  
+- Viene creato un token del contesto di sicurezza SCT (Security Context Token) basato sullo stato. Per impostazione predefinita, la creazione è disattivata.  
   
  Il token SCT basato sullo stato può essere creato solo tramite un'associazione personalizzata. Per altre informazioni, vedere [Procedura: Creare un contesto di sicurezza Token per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) In codice, per attivare il token occorre creare un elemento di associazione di sicurezza (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) utilizzando il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> o il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> e impostando il parametro `requireCancellation` su `false`. Il parametro fa riferimento alla memorizzazione nella cache del token SCT. L'impostazione del valore su `false` comporta l'attivazione della funzionalità del token SCT basato sullo stato.  
   
@@ -68,18 +68,18 @@ Per vari motivi, Windows Communication Foundation (WCF) non supporta alcuni scen
   
  Esistono due modi possibili per stabilire se un certificato utilizza KSP:  
   
--   Eseguire `p/invoke` di `CertGetCertificateContextProperty` e controllare `dwProvType` sulla proprietà `CertGetCertificateContextProperty` restituita.  
+- Eseguire `p/invoke` di `CertGetCertificateContextProperty` e controllare `dwProvType` sulla proprietà `CertGetCertificateContextProperty` restituita.  
   
--   Usare il `certutil` comando dalla riga di comando per eseguire query sui certificati. Per altre informazioni, vedere [attività di Certutil per la risoluzione dei problemi dei certificati](https://go.microsoft.com/fwlink/?LinkId=120056).  
+- Usare il `certutil` comando dalla riga di comando per eseguire query sui certificati. Per altre informazioni, vedere [attività di Certutil per la risoluzione dei problemi dei certificati](https://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Errore di sicurezza a livello di messaggio quando si utilizza la rappresentazione ASP.NET e la compatibilità con ASP.NET è obbligatoria  
  WCF non supporta la combinazione di impostazioni seguente perché possono impedire l'autenticazione di client che si verifichi:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] La rappresentazione è abilitata. Questa operazione viene eseguita nel file Web. config impostando il `impersonate` attributo del <`identity`> elemento `true`.  
+- È stata attivata la rappresentazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Questa operazione viene eseguita nel file Web. config impostando il `impersonate` attributo del <`identity`> elemento `true`.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modalità di compatibilità viene abilitata impostando il `aspNetCompatibilityEnabled` attributo del [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) a `true`.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modalità di compatibilità viene abilitata impostando il `aspNetCompatibilityEnabled` attributo del [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) a `true`.  
   
--   Viene utilizzata la protezione a livello di messaggio.  
+- Viene utilizzata la protezione a livello di messaggio.  
   
  Per risolvere questo problema è sufficiente disattivare la modalità di compatibilità con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Oppure, se il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] è necessaria la modalità di compatibilità, disabilitare il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] la rappresentazione delle funzionalità e usare invece la rappresentazione fornita da WCF. Per altre informazioni, vedere [delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
@@ -111,8 +111,8 @@ Per vari motivi, Windows Communication Foundation (WCF) non supporta alcuni scen
 ## <a name="see-also"></a>Vedere anche
 
 - [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Diffusione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Divulgazione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Elevazione dei privilegi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Denial of Service (Negazione del servizio)](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Negazione del servizio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Manomissioni](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Attacchi di tipo replay](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrDIR_IllegalCall
 ms.assetid: 7b5d149f-be91-4ac3-8262-86a360894e7d
 ms.openlocfilehash: d255b8dddd098835764f72b8a166eaa08b0353df
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59323642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803454"
 ---
 # <a name="dir-function-must-first-be-called-with-a-pathname-argument"></a>La funzione 'Dir' deve essere anzitutto chiamata con un argomento 'PathName'
 Una chiamata iniziale per il `Dir` funzione non include il `PathName` argomento. La prima chiamata a `Dir` deve includere una `PathName`, ma le chiamate successive a `Dir` non è necessario includere i parametri per recuperare l'elemento successivo.  

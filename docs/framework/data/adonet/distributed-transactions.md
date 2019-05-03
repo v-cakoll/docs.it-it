@@ -3,11 +3,11 @@ title: Transazioni distribuite
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
 ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606806"
 ---
 # <a name="distributed-transactions"></a>Transazioni distribuite
 Una transazione consiste in una set di attività correlate che costituiscono una singola unità, la quale può riuscire (ovvero viene eseguito il commit della transazione) o non riuscire (il processo viene interrotto). Oggetto *transazione distribuita* è una transazione che influenza varie risorse. Per eseguire il commit di una transazione distribuita è necessario che tutti i partecipanti garantiscano che le eventuali modifiche apportate ai dati siano permanenti. Le modifiche devono essere definitive anche in caso di arresti anomali del sistema o altri eventi imprevisti. Se anche un unico partecipante non è in grado di garantire tale requisito, l'intera transazione verrà annullata e verrà effettuato il rollback di tutte le modifiche apportate ai dati nell'ambito della transazione.  

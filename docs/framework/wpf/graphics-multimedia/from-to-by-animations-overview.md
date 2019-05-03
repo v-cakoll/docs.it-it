@@ -9,11 +9,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762397"
 ---
 # <a name="fromtoby-animations-overview"></a>Cenni preliminari sulle animazioni From/To/By
 Questo argomento descrive come usare le animazioni From/To/By per animare le proprietà di dipendenza. Un'animazione From/To/By crea una transizione tra due valori.  
@@ -36,11 +36,11 @@ Questo argomento descrive come usare le animazioni From/To/By per animare le pro
   
  Le classi di animazione From/To/By appartengono al <xref:System.Windows.Media.Animation> dello spazio dei nomi e usano la convenzione di denominazione seguente:  
   
- *\<tipo >* `Animation`  
+ *\<Tipo>* `Animation`  
   
  Dove *\<Tipo>* è il tipo di valore cui è stata aggiunta un'animazione dalla classe.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce le classi di animazione From/To/By seguenti.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre le classi di animazioni From/To/By seguenti.  
   
 |Tipo di proprietà|Classe di animazione From/To/By corrispondente|  
 |-------------------|------------------------------------------------|  
@@ -65,15 +65,15 @@ Questo argomento descrive come usare le animazioni From/To/By per animare le pro
 ## <a name="target-values"></a>Valori di destinazione  
  Un'animazione From/To/By crea una transizione tra due valori di destinazione. È pratica comune specificare un valore iniziale (impostarlo tramite il <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> proprietà) e un valore finale (impostarlo tramite la <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> proprietà). È anche possibile tuttavia specificare solo un valore iniziale, un valore di destinazione o un valore di scostamento. In questi casi, l'animazione ottiene il valore di destinazione mancante dalla proprietà che viene animata. L'elenco seguente descrive le diverse modalità per specificare i valori di destinazione di un'animazione.  
   
--   **Valore iniziale**  
+- **Valore iniziale**  
   
      Usare il <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> proprietà quando si desidera specificare in modo esplicito il valore iniziale di un'animazione. È possibile usare la <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> proprietà da solo o con il <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> o <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> proprietà. Se si specifica solo il <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> proprietà, le transizioni di animazione da tale valore al valore di base della proprietà animata.  
   
--   **Valore finale**  
+- **Valore finale**  
   
      Per specificare un valore finale di un'animazione, usare il <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> proprietà. Se si usa il <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> proprietà autonomamente, l'animazione ottiene il valore iniziale dalla proprietà animata o dall'output di un'altra animazione applicata alla stessa proprietà. È possibile usare la <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> proprietà con il <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> proprietà per specificare in modo esplicito i valori dell'animazione iniziale e finale.  
   
--   **Valore di offset**  
+- **Valore di scostamento**  
   
      Il <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> proprietà consente di specificare uno scostamento anziché un esplicita valore iniziale o finale dell'animazione. Il <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> proprietà di un'animazione specifica di quanto l'animazione viene modificato un valore per la relativa durata. È possibile usare la <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> proprietà da solo o con il <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> proprietà. Se si specifica solo il <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> proprietà, l'animazione aggiunge il valore di offset al valore di base della proprietà o all'output di un'altra animazione.  
   
@@ -134,11 +134,11 @@ Questo argomento descrive come usare le animazioni From/To/By per animare le pro
 ## <a name="other-animation-types"></a>Altri tipi di animazione  
  Le animazioni From/To/By non sono l'unico tipo di animazioni che [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce: fornisce inoltre le animazioni con fotogrammi chiave e animazioni tracciato.  
   
--   Un'animazione con fotogrammi chiave è applicabile a un numero qualsiasi di valori di destinazione, descritti mediante i fotogrammi chiave. Per altre informazioni, vedere la [Cenni preliminari sulle animazioni con fotogrammi chiave](key-frame-animations-overview.md).  
+- Un'animazione con fotogrammi chiave è applicabile a un numero qualsiasi di valori di destinazione, descritti mediante i fotogrammi chiave. Per altre informazioni, vedere la [Cenni preliminari sulle animazioni con fotogrammi chiave](key-frame-animations-overview.md).  
   
--   Un'animazione tracciato genera valori di output da un <xref:System.Windows.Media.PathGeometry>. Per altre informazioni, vedere la [panoramica sulle animazioni tracciato](path-animations-overview.md).  
+- Un'animazione tracciato genera valori di output da un <xref:System.Windows.Media.PathGeometry>. Per altre informazioni, vedere la [panoramica sulle animazioni tracciato](path-animations-overview.md).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è inoltre possibile creare tipi di animazione personalizzata. Per altre informazioni, vedere la [Cenni preliminari sulle animazioni personalizzate](custom-animations-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente inoltre di creare i tipi di animazione personalizzata. Per altre informazioni, vedere la [Cenni preliminari sulle animazioni personalizzate](custom-animations-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -149,4 +149,4 @@ Questo argomento descrive come usare le animazioni From/To/By per animare le pro
 - [Cenni preliminari sulle animazioni con fotogrammi chiave](key-frame-animations-overview.md)
 - [Panoramica sulle animazioni tracciato](path-animations-overview.md)
 - [Cenni preliminari sulle animazioni personalizzate](custom-animations-overview.md)
-- [FROM, To e dall'esempio di valori di destinazione dell'animazione](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Esempio di valori di destinazione dell'animazione From/To/By](https://go.microsoft.com/fwlink/?LinkID=159988)

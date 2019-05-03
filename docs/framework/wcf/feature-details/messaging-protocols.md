@@ -3,11 +3,11 @@ title: Protocolli di messaggistica
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 ms.openlocfilehash: a5292914cfebc79bf8a9af1c852dd8feec99eba4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948122"
 ---
 # <a name="messaging-protocols"></a>Protocolli di messaggistica
 
@@ -58,7 +58,7 @@ In questo argomento vengono utilizzati i seguenti spazi dei nomi XML e i relativ
 | wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl` |
 | xop |`http://www.w3.org/2004/08/xop/include` |
 | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` |
-| punto di distribuzione |`http://schemas.microsoft.com/net/2006/06/duplex` |
+| dp |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 e SOAP 1.2
 
@@ -163,7 +163,7 @@ B3211: Per tutte le versioni di WS-Addressing, WCF rispetta, ma non viene genera
 
 Le applicazioni che interagiscono con le applicazioni WCF possono aggiungere che queste intestazioni del messaggio e WCF verranno elaborate di conseguenza.
 
-#### <a name="reference-parameters-and-properties"></a>Parametri per riferimento e proprietà dei riferimenti
+#### <a name="reference-parameters-and-properties"></a>Parametri e proprietà dei riferimenti
 
 WCF implementa l'elaborazione dei parametri di riferimento dell'endpoint e le proprietà di riferimento in base alle rispettive specifiche.
 
@@ -460,7 +460,7 @@ Anche la necessità di utilizzare le virgolette doppie non è esplicita in RFC 2
 
 - R4135: Un'intestazione Content-Type HTTP di un messaggio con codifica SOAP 1.2 MTOM deve includere il parametro start-info con il valore di `application/soap+xml`, racchiuso tra virgolette doppie.
 
-- R4136: UN' Intestazione Content-Type HTTP per un messaggio con codifica MTOM SOAP 1.x deve contenere il parametro limite con il valore (racchiuso tra virgolette doppie) che corrisponde al limite MIME che BNF definito in RFC 2046, sezione 5.1.1
+- R4136: Intestazione Content-Type HTTP per un messaggio con codifica MTOM SOAP 1.x deve contenere il parametro limite con il valore (racchiuso tra virgolette doppie) che corrisponde al limite MIME che BNF definito in RFC 2046, sezione 5.1.1
 
     ```
     boundary := 0*69<bchars> bcharsnospace 

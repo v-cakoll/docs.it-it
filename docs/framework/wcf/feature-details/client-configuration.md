@@ -3,11 +3,11 @@ title: Configurazione del client
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
 ms.openlocfilehash: b9975c6caeedc94bf4a7773e71a95eb0d8c7aed2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781511"
 ---
 # <a name="client-configuration"></a>Configurazione del client
 È possibile usare la configurazione del client Windows Communication Foundation (WCF) per specificare l'indirizzo, associazione, comportamento e contratto, le proprietà di "ABC" dell'endpoint client, quali i client usano per connettersi agli endpoint del servizio. Il [ \<client >](../../configure-apps/file-schema/wcf/client.md) elemento dispone di un [ \<endpoint >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) cui attributi consentono di configurare l'endpoint di base sull'elemento. Questi attributi vengono discussi nel [configurazione degli endpoint](#configuring-endpoints) sezione.  
@@ -95,5 +95,5 @@ ms.locfileid: "59144690"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Endpoint: indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Endpoint: Gli indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [Configurazione dei comportamenti client](../../../../docs/framework/wcf/configuring-client-behaviors.md)

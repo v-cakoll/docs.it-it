@@ -11,11 +11,11 @@ helpviewer_keywords:
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
 ms.openlocfilehash: 3bb1245cd47084935d632ff345a32058db6074e1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59321712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013296"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Procedura: Selezionare testo nel controllo TextBox di Windows Forms
 È possibile selezionare il testo a livello di codice nei moduli di Windows <xref:System.Windows.Forms.TextBox> controllo. Ad esempio, se si crea una funzione che cerca il testo per una determinata stringa, è possibile selezionare il testo da mostrare all'utente il lettore della posizione della stringa trovata.  
@@ -70,10 +70,10 @@ ms.locfileid: "59321712"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.TextBox>
-- [Panoramica del controllo TextBox](textbox-control-overview-windows-forms.md)
-- [Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Cenni preliminari sul controllo TextBox](textbox-control-overview-windows-forms.md)
+- [Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Form](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Form](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [Procedura: Creare una casella di testo di sola lettura](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Procedura: Inserire virgolette in una stringa](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Procedura: Visualizzare più righe nel controllo TextBox di Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Procedura: Visualizzare più righe nel controllo TextBox Windows Form](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [Controllo TextBox](textbox-control-windows-forms.md)

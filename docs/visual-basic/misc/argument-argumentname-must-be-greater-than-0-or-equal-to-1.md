@@ -5,11 +5,11 @@ f1_keywords:
 - vbrArgument_MinusOneOrGTZero1
 ms.assetid: 22c6bf5f-5194-43ec-8a8c-88f781801927
 ms.openlocfilehash: 789bed10022d38eb9b88cadfdffeb78be444e0fa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59337201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025184"
 ---
 # <a name="argument-argumentname-must-be-greater-than-0-or-equal-to--1"></a>Argomento '\<NomeArgomento >' deve essere maggiore di 0 o uguale a -1
 Il valore di un argomento è minore di 0 ma non uguale a -1.  

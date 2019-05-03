@@ -6,11 +6,11 @@ helpviewer_keywords:
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
 ms.openlocfilehash: 312c0e0f100e85256ad4ca856ccf7f35dbaa36dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59305247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973283"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Procedura: Passare una routine a un'altra routine in Visual Basic
 In questo esempio viene illustrato come usare i delegati per passare una routine a un'altra routine.  
@@ -50,4 +50,4 @@ In questo esempio viene illustrato come usare i delegati per passare una routine
 - [Delegati](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Operatore AddressOf](../../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Istruzione Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Procedura: Chiamare un metodo delegato](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [Procedura: Richiamare un metodo delegato](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

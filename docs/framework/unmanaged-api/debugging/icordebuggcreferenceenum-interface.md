@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651623"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>Interfaccia ICorDebugGCReferenceEnum
 Fornisce un enumeratore per gli oggetti che verranno sottoposti a operazioni di Garbage Collection.  
@@ -39,11 +39,11 @@ Fornisce un enumeratore per gli oggetti che verranno sottoposti a operazioni di 
   
  Il [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) gli oggetti nella raccolta popolata da questo metodo rappresentano tre tipi di oggetti:  
   
--   Oggetti da tutte le chiamate negli stack gestiti. Ciò include i riferimenti in tempo reale nel codice gestito, nonché gli oggetti creati da common language runtime.  
+- Oggetti da tutte le chiamate negli stack gestiti. Ciò include i riferimenti in tempo reale nel codice gestito, nonché gli oggetti creati da common language runtime.  
   
--   Oggetti dalla tabella di handle. Ciò include riferimenti sicuri (`HNDTYPE_STRONG` e `HNDTYPE_REFCOUNT`) e le variabili statiche in un modulo.  
+- Oggetti dalla tabella di handle. Ciò include riferimenti sicuri (`HNDTYPE_STRONG` e `HNDTYPE_REFCOUNT`) e le variabili statiche in un modulo.  
   
--   Oggetti dalla coda del finalizzatore. Coda del finalizzatore radici oggetti fino a quando non è eseguito il finalizzatore.  
+- Oggetti dalla coda del finalizzatore. Coda del finalizzatore radici oggetti fino a quando non è eseguito il finalizzatore.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

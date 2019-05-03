@@ -8,10 +8,10 @@ helpviewer_keywords:
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
 ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307468"
 ---
 # <a name="operators-c-programming-guide"></a>Operatori (Guida per programmatori C#)
@@ -69,7 +69,7 @@ Nel linguaggio C# un *operatore* è un elemento del programma che si applica a u
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Pre-decremento|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|Convertire in modo esplicito x nel tipo T|  
   
- **Operatori moltiplicativi**  
+ **Operatori di moltiplicazione**  
   
 |Espressione|Description|  
 |----------------|-----------------|  
@@ -77,7 +77,7 @@ Nel linguaggio C# un *operatore* è un elemento del programma che si applica a u
 |[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|Divisione|  
 |[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|Resto|  
   
- **Operatori additivi**  
+ **Operatori di addizione**  
   
 |Espressione|Description|  
 |----------------|-----------------|  
@@ -107,7 +107,7 @@ Nel linguaggio C# un *operatore* è un elemento del programma che si applica a u
 |Espressione|Description|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Uguale|  
-|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Diverso|  
+|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Non uguaglianza|  
   
  **Operatori logici, condizionali e Null**  
   

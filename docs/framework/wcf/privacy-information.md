@@ -7,11 +7,11 @@ helpviewer_keywords:
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
 ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032996"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informazioni sulla privacy di Windows Communication Foundation
 Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si compila un'applicazione che usa Windows Communication Foundation (WCF), versione 3.0, l'applicazione può incidere sulla privacy degli utenti finali. L'applicazione potrebbe, ad esempio, raccogliere in modo esplicito informazioni di contatto sugli utenti o richiedere o inviare informazioni in Internet al sito Web. Se si incorpora la tecnologia Microsoft nell'applicazione, è possibile che tale tecnologia abbia un proprio comportamento che potrebbe influire sulla privacy. WCF non invia informazioni a Microsoft dall'applicazione, a meno che l'utente finale sceglie di inviarlo a Microsoft.  
@@ -38,16 +38,16 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  L'autenticazione viene eseguita passando credenziali tra i client e i servizi. L'autenticazione può avvenire tramite la sicurezza a livello di trasporto o tramite la sicurezza a livello di messaggio SOAP, come riportato di seguito:  
   
--   Nella sicurezza dei messaggi SOAP, l'autenticazione viene eseguita tramite credenziali quali nome utente/password, certificati X.509, ticket Kerberos e token SAML, tutti elementi che potrebbero contenere informazioni personali, a seconda dell'autorità emittente.  
+- Nella sicurezza dei messaggi SOAP, l'autenticazione viene eseguita tramite credenziali quali nome utente/password, certificati X.509, ticket Kerberos e token SAML, tutti elementi che potrebbero contenere informazioni personali, a seconda dell'autorità emittente.  
   
--   Con la sicurezza del trasporto, l'autenticazione viene eseguita tramite tradizionali meccanismi di autenticazione del trasporto quali gli schemi di autenticazione HTTP (di base, digest, Negotiate, autenticazione integrata di Windows, NTLM, Nessuno e accesso anonimo) e l'autenticazione dei moduli.  
+- Con la sicurezza del trasporto, l'autenticazione viene eseguita tramite tradizionali meccanismi di autenticazione del trasporto quali gli schemi di autenticazione HTTP (di base, digest, Negotiate, autenticazione integrata di Windows, NTLM, Nessuno e accesso anonimo) e l'autenticazione dei moduli.  
   
  Il risultato dell'autenticazione può essere una sessione protetta stabilita tra gli endpoint di comunicazione. La sessione viene identificata da un GUID che ha la durata della sessione di sicurezza. Nella tabella seguente viene mostrato cosa viene mantenuto e dove.  
   
 |Dati|Archiviazione|  
 |----------|-------------|  
 |Credenziali di presentazione, ad esempio nome utente, certificati X.509, token Kerberos e riferimenti alle credenziali.|Meccanismi di gestione delle credenziali standard di Windows, ad esempio l'archivio certificati di Windows.|  
-|Informazioni relative all'appartenenza degli utenti, ad esempio nomi utente e password.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] provider di appartenenza.|  
+|Informazioni relative all'appartenenza degli utenti, ad esempio nomi utente e password.|Provider di appartenenza [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].|  
 |Informazioni di identità sul servizio usato per autenticare il servizio sui client.|Indirizzo dell'endpoint del servizio.|  
 |Informazioni sul chiamante.|Registri di controllo.|  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
 ms.openlocfilehash: da4a766e2617308cb33b9673a88db9e7a954152a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935317"
 ---
 # <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>Attributo '\<NomeAttributo >' non può essere applicato più volte
 L'attributo può essere applicato una sola volta. Il `AttributeUsage` attributo determina se un attributo può essere applicato più volte.  

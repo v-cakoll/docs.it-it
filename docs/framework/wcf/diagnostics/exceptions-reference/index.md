@@ -3,11 +3,11 @@ title: Riferimenti per le eccezioni
 ms.date: 03/30/2017
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
 ms.openlocfilehash: 7034c3bbc25ab7ae6fea1d03c42ecde2e0130ee0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777390"
 ---
 # <a name="exceptions-reference"></a>Riferimenti per le eccezioni
 In questa sezione vengono elencate tutte le eccezioni nelle aree seguenti generate da Windows Communication Foundation (WCF):  
@@ -18,23 +18,23 @@ In questa sezione vengono elencate tutte le eccezioni nelle aree seguenti genera
   
  [Configurazione](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
   
- [Comunicazioni principali: framework dei canali](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
+ [Comunicazioni principali: Framework dei canali](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
   
- [Comunicazioni principali: framework di connessione](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
+ [Comunicazioni principali: Framework di connessione](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
   
- Comunicazioni principali: canali di trasporto HTTP/HTTPS  
+ Comunicazioni di base: canali di trasporto HTTP/HTTPS  
   
- [Comunicazioni principali: canali di trasporto duplex interni](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
+ [Comunicazioni principali: Canali di trasporto Duplex interni](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
   
- [Comunicazioni principali: canali di trasporto delle named pipe](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
+ [Comunicazioni principali: I canali di trasporto di Named Pipe](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
   
- [Comunicazioni principali: canali di trasporto TCP](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
+ [Comunicazioni principali: Canali di trasporto TCP](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
   
- [Comunicazioni principali: framework di trasporto](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
+ [Comunicazioni principali: Framework di trasporto](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
   
- [Comunicazioni principali: utilità](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
+ [Comunicazioni principali: Utilità](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
   
- [Comunicazioni principali: supporto Webhost](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
+ [Comunicazioni principali: Supporto Webhost](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
   
  [Transazione](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-exceptions.md)  
   

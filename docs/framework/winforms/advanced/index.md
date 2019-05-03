@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
 ms.openlocfilehash: 82847add5b35fe767d42ee88d7754f789174e434
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942909"
 ---
 # <a name="enhancing-windows-forms-applications"></a>Miglioramento delle applicazioni Windows Form
 In Windows Form sono disponibili molte funzionalità che possono essere usate per migliorare le proprie applicazioni basate su Windows in modo da soddisfare le specifiche esigenze degli utenti. Gli argomenti riportati di seguito illustrano queste funzionalità e le relative modalità di uso.  

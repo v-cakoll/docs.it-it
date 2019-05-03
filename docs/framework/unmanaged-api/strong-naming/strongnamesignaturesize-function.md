@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 01c0f9ca0299e817618d93133c0eaca9fc63788e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767507"
 ---
 # <a name="strongnamesignaturesize-function"></a>Funzione StrongNameSignatureSize
 Restituisce le dimensioni della firma con nome sicuro. `StrongNameSignatureSize` è in genere utilizzata dai compilatori per determinare la quantità di spazio da riservare nel file durante la creazione di un assembly con firma ritardata.  

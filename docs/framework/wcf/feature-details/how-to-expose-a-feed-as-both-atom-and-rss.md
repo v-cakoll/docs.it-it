@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
 ms.openlocfilehash: 824d2a08ddd36317fcdb8caa1690decb2f9c432a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039561"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Procedura: Esporre un feed come Atom e RSS
 Windows Communication Foundation (WCF) consente di creare un servizio che espone un feed di diffusione. In questo argomento viene illustrato come creare un servizio di diffusione che espone un feed di diffusione usando sia Atom 1.0 sia RSS 2.0. Questo servizio espone un endpoint che può restituire uno dei due formati di diffusione. Per motivi di semplicità, il servizio usato in questo esempio è indipendente. In un ambiente di produzione un servizio di questo tipo verrebbe ospitato da IIS o WAS. Per altre informazioni su WCF diverse opzioni di hosting, vedere [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Per creare un servizio di diffusione di base  
   
-1. Definire un contratto di servizio usando un'interfaccia contrassegnata con l'attributo <xref:System.ServiceModel.Web.WebGetAttribute>. Ogni operazione esposta come feed di diffusione restituisce un oggetto <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Si notino i parametri per <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` Specifica l'URL utilizzato per richiamare questa operazione del servizio. La stringa di questo parametro contiene valori letterali e una variabile in parentesi graffe ({*formato*}). Questa variabile corrisponde al parametro `format` dell'operazione del servizio. Per altre informazioni, vedere <xref:System.UriTemplate>. `BodyStyle` influisce sul modo in cui vengono scritti i messaggi che questa operazione del servizio invia e riceve. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> Specifica che i dati inviati da e verso questa operazione del servizio non sono incapsulati in elementi XML definiti dall'infrastruttura. Per altre informazioni, vedere <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
+1. Definire un contratto di servizio usando un'interfaccia contrassegnata con l'attributo <xref:System.ServiceModel.Web.WebGetAttribute>. Ogni operazione esposta come feed di diffusione restituisce un oggetto <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Si notino i parametri per <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` specifica l'URL usato per richiamare questa operazione del servizio. La stringa di questo parametro contiene valori letterali e una variabile in parentesi graffe ({*formato*}). Questa variabile corrisponde al parametro `format` dell'operazione del servizio. Per altre informazioni, vedere <xref:System.UriTemplate>. `BodyStyle` incide sul modo in cui vengono scritti i messaggi inviati e ricevuti da e verso questa operazione del servizio. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> specifica che i dati inviati da e verso questa operazione del servizio non vengono incapsulati in elementi XML definiti dall'infrastruttura. Per altre informazioni, vedere <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  

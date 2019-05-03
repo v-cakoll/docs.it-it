@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
 author: KrzysztofCwalina
 ms.openlocfilehash: f9fe3045d8bd8b4d625c5cd49bc18574ebb740de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026432"
 ---
 # <a name="exceptions-and-performance"></a>Eccezioni e prestazioni
 Un problema comune correlato alle eccezioni è che se le eccezioni vengono usate per il codice che normalmente ha esito negativo, le prestazioni dell'implementazione saranno inaccettabili. Si tratta di un problema valido. Quando un membro genera un'eccezione, le prestazioni possono essere notevolmente più lenti. Tuttavia, è possibile ottenere buone prestazioni rimanendo rigorosamente le linee guida di eccezione che impedisce l'utilizzo di codici di errore. Due modelli descritti in questa sezione suggeriscono metodi per eseguire questa operazione.  

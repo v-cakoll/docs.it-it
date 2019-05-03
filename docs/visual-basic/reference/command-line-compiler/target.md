@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 ms.openlocfilehash: c91e69e3d9f17f758990b8385f6b8d0a1c03bef6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59344741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796253"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 Specifica il formato di output del compilatore.  
@@ -25,7 +25,7 @@ Specifica il formato di output del compilatore.
 ## <a name="remarks"></a>Note  
  Nella tabella seguente sono riepilogati gli effetti del `-target` opzione.  
   
-|**Opzione**|**Comportamento**|  
+|**Opzione**|**Classe Behavior**|  
 |----------------|------------------|  
 |`-target:exe`|Indica al compilatore di creare un'applicazione console eseguibile.<br /><br /> Si tratta dell'opzione predefinita se non si specifica `-target` opzione specificata. Il file eseguibile viene creato con un'estensione .exe.<br /><br /> Se non diversamente specificato con il `/out` opzione, il nome del file di output accetta il nome del file di input che contiene il `Sub Main` procedure.<br /><br /> Un solo `Sub Main` procedura è necessaria nei file di codice sorgente compilati in un file .exe. Usare la `-main` opzione del compilatore per specificare la classe che contiene il `Sub Main` procedure.|  
 |`-target:library`|Indica al compilatore di creare una libreria di collegamento dinamico (DLL).<br /><br /> Il file di libreria a collegamento dinamico viene creato con l'estensione dll.<br /><br /> Se non diversamente specificato con il `-out` opzione, il nome del file di output richiede il nome del primo file di input.<br /><br /> Quando si compila una DLL, un `Sub Main` procedura non è necessaria.|  

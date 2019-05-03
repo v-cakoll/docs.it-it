@@ -11,11 +11,11 @@ helpviewer_keywords:
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
 ms.openlocfilehash: c4a78569f6c0b14c32154611412d6b3ccd8a84ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004202"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>Procedura: Disegnare una linea con estremità
 È possibile disegnare inizio o alla fine di una riga in una delle diverse forme chiamate estremità. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] supporta diversi limiti di riga, come round, quadrato, a forma di rombo e punta della freccia.  
@@ -32,11 +32,11 @@ ms.locfileid: "59146211"
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Creare un modulo di Windows e la gestione del modulo <xref:System.Windows.Forms.Control.Paint> evento. Incollare il codice di esempio nel <xref:System.Windows.Forms.Control.Paint> gestore dell'evento passando `e` come <xref:System.Windows.Forms.PaintEventArgs>.  
+- Creare un modulo di Windows e la gestione del modulo <xref:System.Windows.Forms.Control.Paint> evento. Incollare il codice di esempio nel <xref:System.Windows.Forms.Control.Paint> gestore dell'evento passando `e` come <xref:System.Windows.Forms.PaintEventArgs>.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>
 - [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)
-- [Utilizzo di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)
+- [Uso di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)

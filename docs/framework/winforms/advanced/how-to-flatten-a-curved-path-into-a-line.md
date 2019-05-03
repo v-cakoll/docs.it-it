@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drawing [Windows Forms], flattening curves
 ms.assetid: e654b8de-25f4-4735-9208-42e4514a589c
 ms.openlocfilehash: a151b4244e14d3704fd5fa1c55de92211981232f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781367"
 ---
 # <a name="how-to-flatten-a-curved-path-into-a-line"></a>Procedura: Appiattire un percorso curvo in una linea
 Oggetto <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto archivia una sequenza di spline di Bézier e righe. È possibile aggiungere diversi tipi di curve (puntini di sospensione, archi e spline cardinali) in un percorso, ma ogni curva viene convertito in una spline di Bézier prima di essere archiviato nel percorso. Rendere flat un percorso è costituito ogni spline di Bézier nel percorso di conversione in una sequenza di linee rette. Nella figura seguente mostra un percorso di prima e dopo l'appiattimento.  
@@ -22,7 +22,7 @@ Oggetto <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto archivia una sequen
   
 ### <a name="to-flatten-a-path"></a>Per trasformare un percorso  
   
--   chiamare il <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> metodo di un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto. Il <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> metodo riceve un argomento di appiattimento che specifica la distanza massima tra il percorso appiattito e il percorso originale.  
+- chiamare il <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> metodo di un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto. Il <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> metodo riceve un argomento di appiattimento che specifica la distanza massima tra il percorso appiattito e il percorso originale.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -3,10 +3,10 @@ title: Comandi e parametri
 ms.date: 03/30/2017
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
 ms.openlocfilehash: a769e8cbd5138e78136df018abe058ac6c568951
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59198127"
 ---
 # <a name="commands-and-parameters"></a>Comandi e parametri
@@ -18,7 +18,7 @@ Una volta stabilita una connessione a un'origine dati, è possibile eseguire i c
  [Esecuzione di un comando](../../../../docs/framework/data/adonet/executing-a-command.md)  
  Viene descritto l'oggetto `Command` di ADO.NET e viene illustrato come usarlo per eseguire query e comandi su un'origine dati.  
   
- [Configurazione dei parametri e tipi di dati dei parametri](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [Configurazione di parametri e tipi di dati dei parametri](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  Viene descritto l'uso dei parametri di `Command`, inclusa la direzione, i tipi di dati e la sintassi.  
   
  [Generazione di comandi tramite CommandBuilders](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md)  
@@ -27,7 +27,7 @@ Una volta stabilita una connessione a un'origine dati, è possibile eseguire i c
  [Recupero di un valore singolo da un database](../../../../docs/framework/data/adonet/obtaining-a-single-value-from-a-database.md)  
  Viene descritto come usare il metodo `ExecuteScalar` di un oggetto `Command` per restituire un singolo valore in una query sul database.  
   
- [Utilizzo di comandi per modificare i dati](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [Uso di comandi per modificare i dati](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  Viene descritto come usare un provider di dati per eseguire stored procedure o istruzioni DDL (Data Definition Language).  
   
 ## <a name="see-also"></a>Vedere anche

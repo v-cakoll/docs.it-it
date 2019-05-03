@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 15b790f4a4d3348e2bef3e7e929d72c09da8690c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 1abb64f7d76b772168ed97024f5f1381670c6882
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441879"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59321445"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Procedura: Eseguire il debug di applicazioni di servizio di Windows
 Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione controllo servizi e non dall'interno di Visual Studio, il debug di un servizio non è semplice come quello di altri tipi di applicazioni di Visual Studio. Per eseguire il debug di un servizio, è necessario avviare il servizio e connettere un debugger al processo in cui viene eseguito. È quindi possibile eseguire il debug dell'applicazione tramite tutte le funzionalità di debug standard di Visual Studio.  
@@ -36,23 +36,23 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
   
 ### <a name="to-debug-a-service"></a>Per eseguire il debug di un servizio  
   
-1.  Compilare il servizio nella configurazione di debug.  
+1. Compilare il servizio nella configurazione di debug.  
   
-2.  Installare il servizio. Per altre informazioni, vedere [Procedura: Installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+2. Installare il servizio. Per altre informazioni, vedere [Procedura: Installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
-3.  Avviare il servizio da **Gestione controllo servizi**, da **Esplora server** o dal codice. Per altre informazioni, vedere [Procedura: Avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md).  
+3. Avviare il servizio da **Gestione controllo servizi**, da **Esplora server** o dal codice. Per altre informazioni, vedere [Procedura: Avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md).  
   
-4.  Avviare Visual Studio con credenziali amministrative, in modo che sia possibile connettersi a processi di sistema.  
+4. Avviare Visual Studio con credenziali amministrative, in modo che sia possibile connettersi a processi di sistema.  
   
-5.  (Facoltativo) Nella barra dei menu di Visual Studio scegliere **Strumenti**, **Opzioni**. Nella finestra di dialogo **Opzioni** scegliere **Debug**, **Simboli**, selezionare la casella di controllo **Server dei simboli Microsoft** e quindi scegliere il pulsante **OK**.  
+5. (Facoltativo) Nella barra dei menu di Visual Studio scegliere **Strumenti**, **Opzioni**. Nella finestra di dialogo **Opzioni** scegliere **Debug**, **Simboli**, selezionare la casella di controllo **Server dei simboli Microsoft** e quindi scegliere il pulsante **OK**.  
   
-6.  Nella barra dei menu scegliere **Connetti a processo** dal menu **Debug** o **Strumenti**. (Tastiera: CTRL+ALT+P)  
+6. Nella barra dei menu scegliere **Connetti a processo** dal menu **Debug** o **Strumenti**. (Tastiera: CTRL+ALT+P)  
   
      Verrà visualizzata la finestra di dialogo **Processi**.  
   
-7.  Selezionare la casella di controllo **Mostra processi di tutti gli utenti**.  
+7. Selezionare la casella di controllo **Mostra processi di tutti gli utenti**.  
   
-8.  Nella sezione **Processi disponibili** scegliere il processo per il servizio e quindi scegliere **Connetti**.  
+8. Nella sezione **Processi disponibili** scegliere il processo per il servizio e quindi scegliere **Connetti**.  
   
     > [!TIP]
     >  Il processo avrà lo stesso nome del file eseguibile del servizio.  
@@ -77,7 +77,7 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
   
 #### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Procedura: Eseguire un servizio Windows come applicazione console  
   
-1.  Aggiungere un metodo al servizio che esegue i metodi <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A>:  
+1. Aggiungere un metodo al servizio che esegue i metodi <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A>:  
   
     ```csharp  
     internal void TestStartupAndStop(string[] args)  
@@ -88,7 +88,7 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
     }  
     ```  
   
-2.  Riscrivere il metodo `Main` come segue:  
+2. Riscrivere il metodo `Main` come segue:  
   
     ```csharp  
     static void Main(string[] args)  
@@ -105,15 +105,16 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
     }
     ```  
   
-3.  Nella scheda **Applicazione** delle proprietà del progetto impostare il **Tipo di output** su **Applicazione console**.  
+3. Nella scheda **Applicazione** delle proprietà del progetto impostare il **Tipo di output** su **Applicazione console**.  
   
-4.  Scegliere **Avvia debug** (F5).  
+4. Scegliere **Avvia debug** (F5).  
   
-5.  Per eseguire nuovamente il programma come servizio Windows, installarlo e avviarlo come di consueto per un servizio Windows. Non è necessario annullare queste modifiche.  
+5. Per eseguire nuovamente il programma come servizio Windows, installarlo e avviarlo come di consueto per un servizio Windows. Non è necessario annullare queste modifiche.  
   
  In alcuni casi, ad esempio quando si vuole eseguire il debug di un problema che si verifica solo all'avvio del sistema, è necessario usare il debugger di Windows. [Scaricare Windows Driver Kit (WDK)](/windows-hardware/drivers/download-the-wdk) e vedere [Esecuzione del debug dei servizi Windows](https://support.microsoft.com/kb/824344).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Procedura: Installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [Procedura: Avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md)

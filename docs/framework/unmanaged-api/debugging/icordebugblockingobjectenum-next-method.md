@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 889c3bb2d5e0cd1feb9e592e667d47dedd4ede36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645422"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>Metodo ICorDebugBlockingObjectEnum::Next
 Ottiene il numero specificato di [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) oggetti dall'enumerazione, iniziando in corrispondenza della posizione corrente.  
@@ -52,7 +52,7 @@ HRESULT Next([in] ULONG  celt,
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
-|S_FALSE|`pceltFetched` Non è uguale `celt`.|  
+|S_FALSE|`pceltFetched` non è uguale a `celt`.|  
   
 ## <a name="remarks"></a>Note  
  Questo metodo funziona come un tipico enumeratore COM.  

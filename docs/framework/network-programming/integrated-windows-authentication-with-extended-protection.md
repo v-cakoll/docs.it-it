@@ -2,12 +2,12 @@
 title: Autenticazione di Windows integrata con Protezione estesa
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 93156ab346d97259030b001d3a4d8ca4612f48c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591617"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59325722"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticazione di Windows integrata con Protezione estesa
 Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'autenticazione integrata di Windows viene gestita da <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> e dalle classi correlate in <xref:System.Net> e negli spazi dei nomi correlati. È stato aggiunto il supporto per la protezione estesa per migliorare la sicurezza.  
@@ -25,17 +25,17 @@ Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'aute
   
  Gli obiettivi complessivi sono i seguenti:  
   
-1.  Se il client viene aggiornato per supportare la protezione estesa, le applicazioni devono fornire informazioni sull'associazione di canali e sull'associazione di servizi a tutti i protocolli di autenticazione supportati. Le informazioni sull'associazione di canali possono essere fornite solo quando è presente un canale (TLS) a cui eseguire l'associazione. Le informazioni sull'associazione di servizi devono essere fornite sempre.  
+1. Se il client viene aggiornato per supportare la protezione estesa, le applicazioni devono fornire informazioni sull'associazione di canali e sull'associazione di servizi a tutti i protocolli di autenticazione supportati. Le informazioni sull'associazione di canali possono essere fornite solo quando è presente un canale (TLS) a cui eseguire l'associazione. Le informazioni sull'associazione di servizi devono essere fornite sempre.  
   
-2.  I server aggiornati configurati correttamente possono verificare le informazioni sull'associazione di canali e servizi quando queste sono presenti nel token di autenticazione client e rifiutare il tentativo di autenticazione se le associazioni di canali non corrispondono. A seconda dello scenario di distribuzione, i server possono verificare l'associazione di canali, l'associazione di servizi o entrambe.  
+2. I server aggiornati configurati correttamente possono verificare le informazioni sull'associazione di canali e servizi quando queste sono presenti nel token di autenticazione client e rifiutare il tentativo di autenticazione se le associazioni di canali non corrispondono. A seconda dello scenario di distribuzione, i server possono verificare l'associazione di canali, l'associazione di servizi o entrambe.  
   
-3.  I server aggiornati possono accettare o rifiutare richieste client di livello inferiore che non contengono le informazioni sull'associazione di canali basate sui criteri.  
+3. I server aggiornati possono accettare o rifiutare richieste client di livello inferiore che non contengono le informazioni sull'associazione di canali basate sui criteri.  
   
  Le informazioni usate dalla protezione estesa sono costituite da uno o entrambi gli elementi seguenti:  
   
-1.  Token di associazione del canale.  
+1. Token di associazione del canale.  
   
-2.  Informazioni sull'associazione di servizi sotto forma di nome dell'entità servizio o SPN.  
+2. Informazioni sull'associazione di servizi sotto forma di nome dell'entità servizio o SPN.  
   
  Le informazioni sull'associazione di servizi indicano l'intenzione di un client di eseguire l'autenticazione in un endpoint servizio specifico. Queste informazioni vengono comunicate dal client al server con le proprietà seguenti:  
   
@@ -122,11 +122,11 @@ Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'aute
   
  Quando in questa configurazione viene effettuata una richiesta al server tramite un canale sicuro esterno, viene eseguita una query sul canale esterno per ottenere un'associazione di canali. Questa associazione di canali viene passata alle chiamate SSPI di autenticazione, che convalidano la corrispondenza dell'associazione di canali nel BLOB di autenticazione. I risultati possono essere tre:  
   
-1.  Il sistema operativo sottostante del server non supporta la protezione estesa. La richiesta non viene esposta all'applicazione e viene restituita una risposta di mancata autorizzazione (401) al client. Viene registrato un messaggio nell'origine di traccia <xref:System.Net.HttpListener> che specifica il motivo dell'errore.  
+1. Il sistema operativo sottostante del server non supporta la protezione estesa. La richiesta non viene esposta all'applicazione e viene restituita una risposta di mancata autorizzazione (401) al client. Viene registrato un messaggio nell'origine di traccia <xref:System.Net.HttpListener> che specifica il motivo dell'errore.  
   
-2.  La chiamata SSPI non riesce, indicando che il client ha specificato un'associazione di canali che non corrisponde al valore previsto recuperato dal canale esterno oppure che il client non è riuscito a fornire l'associazione di canali quando sono stati configurati i criteri di protezione estesa nel server per <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>. In entrambi i casi, la richiesta non viene esposta all'applicazione e viene restituita una risposta di mancata autorizzazione (401) al client. Viene registrato un messaggio nell'origine di traccia <xref:System.Net.HttpListener> che specifica il motivo dell'errore.  
+2. La chiamata SSPI non riesce, indicando che il client ha specificato un'associazione di canali che non corrisponde al valore previsto recuperato dal canale esterno oppure che il client non è riuscito a fornire l'associazione di canali quando sono stati configurati i criteri di protezione estesa nel server per <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>. In entrambi i casi, la richiesta non viene esposta all'applicazione e viene restituita una risposta di mancata autorizzazione (401) al client. Viene registrato un messaggio nell'origine di traccia <xref:System.Net.HttpListener> che specifica il motivo dell'errore.  
   
-3.  Il client specifica l'associazione di canali corretta o viene autorizzato a connettersi senza specificare alcuna associazione, in quanto i criteri di protezione estesa nel server sono configurati con <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>. La richiesta viene restituita all'applicazione per l'elaborazione. Non viene eseguito automaticamente alcun controllo del nome di servizio. Un'applicazione può scegliere di eseguire la propria convalida del nome di servizio usando la proprietà <xref:System.Net.HttpListenerRequest.ServiceName%2A>, ma in questo caso il controllo è superfluo.  
+3. Il client specifica l'associazione di canali corretta o viene autorizzato a connettersi senza specificare alcuna associazione, in quanto i criteri di protezione estesa nel server sono configurati con <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>. La richiesta viene restituita all'applicazione per l'elaborazione. Non viene eseguito automaticamente alcun controllo del nome di servizio. Un'applicazione può scegliere di eseguire la propria convalida del nome di servizio usando la proprietà <xref:System.Net.HttpListenerRequest.ServiceName%2A>, ma in questo caso il controllo è superfluo.  
   
  Se un'applicazione effettua le proprie chiamate SSPI per eseguire l'autenticazione in base a BLOB scambiati all'interno del corpo di una richiesta HTTP e vuole supportare l'associazione di canali, deve recuperare l'associazione di canali prevista dal canale sicuro esterno usando <xref:System.Net.HttpListener> per passarla alla funzione [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) Win32 nativa. A questo scopo, usare la proprietà <xref:System.Net.HttpListenerRequest.TransportContext%2A> e chiamare il metodo <xref:System.Net.TransportContext.GetChannelBinding%2A> per recuperare il token di associazione del canale. Sono supportate solo le associazioni di endpoint. Se si specifica altro rispetto a <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint>, viene generata un'eccezione <xref:System.NotSupportedException>. Se il sistema operativo sottostante supporta l'associazione di canali, il metodo <xref:System.Net.TransportContext.GetChannelBinding%2A> restituisce un oggetto <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> che esegue il wrapping di un puntatore a un'associazione di canali adatta per il passaggio alla funzione [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) come membro pvBuffer di una struttura SecBuffer passata nel parametro `pInput`. La proprietà <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> contiene la lunghezza in byte dell'associazione di canali. Se il sistema operativo sottostante non supporta le associazioni di canali, la funzione restituisce `null`.  
   
@@ -136,18 +136,19 @@ Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'aute
   
  Quando in questa configurazione viene effettuata una richiesta al server tramite un canale sicuro esterno, l'autenticazione procede normalmente senza alcun controllo dell'associazione di canali. Se l'autenticazione riesce, viene eseguita una query sul contesto per ottenere il nome di servizio fornito dal client e convalidato rispetto all'elenco dei nomi di servizio accettabili. I risultati possono essere quattro:  
   
-1.  Il sistema operativo sottostante del server non supporta la protezione estesa. La richiesta non viene esposta all'applicazione e viene restituita una risposta di mancata autorizzazione (401) al client. Viene registrato un messaggio nell'origine di traccia <xref:System.Net.HttpListener> che specifica il motivo dell'errore.  
+1. Il sistema operativo sottostante del server non supporta la protezione estesa. La richiesta non viene esposta all'applicazione e viene restituita una risposta di mancata autorizzazione (401) al client. Viene registrato un messaggio nell'origine di traccia <xref:System.Net.HttpListener> che specifica il motivo dell'errore.  
   
-2.  Il sistema operativo sottostante del client non supporta la protezione estesa. Nella configurazione <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> il tentativo di autenticazione riesce e la richiesta viene restituita all'applicazione. Nella configurazione <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> il tentativo di autenticazione non riesce. La richiesta non viene esposta all'applicazione e viene restituita una risposta di mancata autorizzazione (401) al client. Viene registrato un messaggio nell'origine di traccia <xref:System.Net.HttpListener> che specifica il motivo dell'errore.  
+2. Il sistema operativo sottostante del client non supporta la protezione estesa. Nella configurazione <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> il tentativo di autenticazione riesce e la richiesta viene restituita all'applicazione. Nella configurazione <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> il tentativo di autenticazione non riesce. La richiesta non viene esposta all'applicazione e viene restituita una risposta di mancata autorizzazione (401) al client. Viene registrato un messaggio nell'origine di traccia <xref:System.Net.HttpListener> che specifica il motivo dell'errore.  
   
-3.  Il sistema operativo sottostante del client supporta la protezione estesa, ma l'applicazione non ha specificato un'associazione di servizi. La richiesta non viene esposta all'applicazione e viene restituita una risposta di mancata autorizzazione (401) al client. Viene registrato un messaggio nell'origine di traccia <xref:System.Net.HttpListener> che specifica il motivo dell'errore.  
+3. Il sistema operativo sottostante del client supporta la protezione estesa, ma l'applicazione non ha specificato un'associazione di servizi. La richiesta non viene esposta all'applicazione e viene restituita una risposta di mancata autorizzazione (401) al client. Viene registrato un messaggio nell'origine di traccia <xref:System.Net.HttpListener> che specifica il motivo dell'errore.  
   
-4.  Il client ha specificato un'associazione di servizi. L'associazione di servizi viene confrontata con l'elenco delle associazioni consentite. Se corrisponde, la richiesta viene restituita all'applicazione. In caso contrario, la richiesta non viene esposta all'applicazione e viene automaticamente restituita una risposta di mancata autorizzazione (401) al client. Viene registrato un messaggio nell'origine di traccia <xref:System.Net.HttpListener> che specifica il motivo dell'errore.  
+4. Il client ha specificato un'associazione di servizi. L'associazione di servizi viene confrontata con l'elenco delle associazioni consentite. Se corrisponde, la richiesta viene restituita all'applicazione. In caso contrario, la richiesta non viene esposta all'applicazione e viene automaticamente restituita una risposta di mancata autorizzazione (401) al client. Viene registrato un messaggio nell'origine di traccia <xref:System.Net.HttpListener> che specifica il motivo dell'errore.  
   
  Se questo semplice approccio tramite un elenco di nomi di servizio accettabili è insufficiente, un'applicazione può fornire la propria convalida del nome di servizio eseguendo una query sulla proprietà <xref:System.Net.HttpListenerRequest.ServiceName%2A>. Nei casi 1 e 2 descritti sopra la proprietà restituisce `null`. Nel caso 3 la proprietà restituisce una stringa vuota. Nel caso 4 viene restituito il nome di servizio specificato dal client.  
   
  Queste funzionalità di protezione estesa possono essere usate dalle applicazioni server anche per l'autenticazione con altri tipi di richieste e quando si usano proxy attendibili.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Security.Authentication.ExtendedProtection>
 - <xref:System.Security.Authentication.ExtendedProtection.Configuration>

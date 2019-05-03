@@ -13,11 +13,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b46c74ec0bfc1fc44bcaca07439c472b0fd8393f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946445"
 ---
 # <a name="icordebugilframe3-interface"></a>Interfaccia ICorDebugILFrame3
 Fornisce un metodo che incapsula il valore restituito di una funzione. `ICorDebugILFrame3` è un'estensione logica delle interfacce ICorDebugILFrame e ICorDebugILFrame2.  

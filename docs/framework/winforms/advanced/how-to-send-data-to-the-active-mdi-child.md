@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
 ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59343714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966914"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Procedura: Inviare dati al figlio MDI attivo
 Spesso, all'interno del contesto di [le applicazioni di interfaccia a documenti multipli (MDI)](multiple-document-interface-mdi-applications.md), si dovrà inviare dati alla finestra figlio attivi, ad esempio quando l'utente Incolla i dati dagli Appunti in un'applicazione MDI.  
@@ -97,4 +97,4 @@ Spesso, all'interno del contesto di [le applicazioni di interfaccia a documenti 
 - [Procedura: Creare form padre MDI](how-to-create-mdi-parent-forms.md)
 - [Procedura: Creare form figlio MDI](how-to-create-mdi-child-forms.md)
 - [Procedura: Determinare il figlio MDI attivo](how-to-determine-the-active-mdi-child.md)
-- [Procedura: Disporre form figlio MDI](how-to-arrange-mdi-child-forms.md)
+- [Procedura: Disporre i form figlio MDI](how-to-arrange-mdi-child-forms.md)

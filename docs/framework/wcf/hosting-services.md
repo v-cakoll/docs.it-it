@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
 ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051156"
 ---
 # <a name="hosting-services"></a>Servizi host
 Per diventare attivo, un servizio deve essere ospitato all'interno di un ambiente di runtime che lo crea e ne controlla il contesto e la durata. Servizi Windows Communication Foundation (WCF) sono progettati per l'esecuzione in qualsiasi processo Windows che supporta codice gestito.  
@@ -66,7 +66,7 @@ Per diventare attivo, un servizio deve essere ospitato all'interno di un ambient
 - [Requisiti di sistema](../../../docs/framework/wcf/wcf-system-requirements.md)
 - [Ciclo di vita della programmazione di base](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [Implementazione dei contratti di servizio](../../../docs/framework/wcf/implementing-service-contracts.md)
-- [Procedura: Hosting di un servizio WCF in WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [Procedura: hosting di un servizio WCF in WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
-- [Procedura: Hosting di un servizio WCF in un servizio Windows gestito](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Procedura: Ospitare un servizio WCF in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Procedura: Ospitare un servizio WCF in WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Procedura: Ospitare un servizio WCF in un servizio Windows gestito](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
 - [Procedura: Ospitare un servizio WCF in un'applicazione gestita](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

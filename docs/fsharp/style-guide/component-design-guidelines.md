@@ -3,11 +3,11 @@ title: F#linee guida di progettazione componenti
 description: Le linee guida per la scrittura di informazioni su F# componenti destinati all'utilizzo da altri chiamanti.
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55066025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902161"
 ---
 # <a name="f-component-design-guidelines"></a>F#linee guida di progettazione componenti
 
@@ -428,7 +428,7 @@ Di conseguenza, si consiglia di pubblicare la funzionalità come funzioni denomi
 
 #### <a name="carefully-use-units-of-measure-for-added-type-safety-in-f-code"></a>Usare con attenzione le unità di misura per motivi di sicurezza di tipo aggiunto in F# codice
 
-Informazioni di tipizzazione aggiuntive per le unità di misura viene cancellate quando viene visualizzato da altri linguaggi .NET. Tenere presente che la reflection, strumenti e componenti .NET verranno visualizzati i tipi-sans-unità. Ad esempio, verranno visualizzato C# consumatori `float` anziché `float<kg>`.
+Informazioni di tipizzazione aggiuntive per le unità di misura viene cancellate quando viene visualizzato da altri linguaggi .NET. Tenere presente che la reflection, strumenti e componenti .NET verranno visualizzati i tipi-sans-unità. Ad esempio, verranno visualizzato c# consumatori `float` anziché `float<kg>`.
 
 ### <a name="type-abbreviations"></a>Abbreviazioni dei tipi
 
@@ -704,7 +704,7 @@ let checkNonNull` argName (arg: obj) =
 
 #### <a name="avoid-using-tuples-as-return-values"></a>Evitare di usare le tuple come valori restituiti
 
-Preferire invece la restituzione di un tipo denominato che contiene i dati aggregati o tramite i parametri out per restituire più valori. Anche se esistono le tuple e le tuple struct in .NET, incluso supporto del linguaggio C# per le tuple struct, vengono in genere non fornirà l'API ideale e previsto per gli sviluppatori .NET.
+Preferire invece la restituzione di un tipo denominato che contiene i dati aggregati o tramite i parametri out per restituire più valori. Anche se esistono le tuple e le tuple struct in .NET, incluso supporto del linguaggio c# per le tuple struct, vengono in genere non fornirà l'API ideale e previsto per gli sviluppatori .NET.
 
 #### <a name="avoid-the-use-of-currying-of-parameters"></a>Evitare l'uso di currying dei parametri
 
@@ -748,7 +748,7 @@ type Point1 =
     member Radius : double
 ```
 
-Diamo un'occhiata a come questo F# tipo viene visualizzato a un programmatore che utilizza un altro linguaggio .NET. Ad esempio, approssimativo C# "firma" è come segue:
+Diamo un'occhiata a come questo F# tipo viene visualizzato a un programmatore che utilizza un altro linguaggio .NET. Ad esempio, approssimativo c# "firma" è come segue:
 
 ```csharp
 // C# signature for the unadjusted Point1 class
@@ -822,7 +822,7 @@ type RadialPoint =
     member Radius : double
 ```
 
-La firma C# è ora come indicato di seguito:
+La firma c# è ora come indicato di seguito:
 
 ```csharp
 public class RadialPoint
@@ -851,4 +851,4 @@ Le correzioni apportate per preparare questo tipo per l'uso come parte di una li
 
 * Il tipo di delegato di .NET usata `System.Func` anziché un F# tipo di funzione.
 
-Questo rende molto accattivante utilizzare nel codice C#.
+Questo rende molto accattivante utilizzare nel codice c#.

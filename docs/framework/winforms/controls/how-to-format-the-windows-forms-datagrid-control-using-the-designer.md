@@ -10,11 +10,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013374"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Procedura: Formattare il controllo DataGrid di Windows Forms usando la finestra di progettazione
 
@@ -25,11 +25,11 @@ ms.locfileid: "59333574"
   
  Esistono tre aspetti di base della formattazione di <xref:System.Windows.Forms.DataGrid> controllo:  
   
--   È possibile impostare proprietà per definire uno stile predefinito in cui vengono visualizzati dati.  
+- È possibile impostare proprietà per definire uno stile predefinito in cui vengono visualizzati dati.  
   
--   Da quella base, è quindi possibile personalizzare il modo che in fase di esecuzione vengono visualizzate determinate tabelle.  
+- Da quella base, è quindi possibile personalizzare il modo che in fase di esecuzione vengono visualizzate determinate tabelle.  
   
--   Infine, è possibile modificare le colonne da visualizzare nella griglia dei dati, nonché i colori e altro di formattazione che viene visualizzato.  
+- Infine, è possibile modificare le colonne da visualizzare nella griglia dei dati, nonché i colori e altro di formattazione che viene visualizzato.  
   
  Come passaggio iniziale in una griglia dei dati di formattazione, è possibile impostare le proprietà del <xref:System.Windows.Forms.DataGrid> stesso. Queste scelte di colori e il formato formano una base da cui è quindi possibile apportare modifiche a seconda delle tabelle di dati e le colonne visualizzate.  
   
@@ -103,5 +103,5 @@ ms.locfileid: "59333574"
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [Procedura: Eliminare o nascondere colonne nel controllo DataGrid di Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Procedura: Eliminare o nascondere colonne nel controllo DataGrid Windows Form](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [Controllo DataGrid](datagrid-control-windows-forms.md)

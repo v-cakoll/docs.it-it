@@ -9,11 +9,11 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972354"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Errori in fase di progettazione in Progettazione Windows Form
 In questo argomento viene illustrato il significato e l'uso dell'elenco errori della fase di progettazione visualizzato in Microsoft Visual Studio quando il caricamento di Progettazione Windows Form non riesce. Se viene visualizzato questo elenco di errori non si deve interpretarlo come un bug della progettazione, ma come ausilio per la correzione degli errori nel codice.  
@@ -25,11 +25,11 @@ In questo argomento viene illustrato il significato e l'uso dell'elenco errori d
   
  È possibile espandere o comprimere una categoria di errore facendo clic sull'intestazione della categoria di errori oppure facendo clic sulla freccia di espansione di espansione/compressione. Quando si espande una categoria di errori, vengono visualizzate le seguenti informazioni aggiuntive:  
   
--   Istanze dell'errore.  
+- Istanze dell'errore.  
   
--   Informazioni sull'errore.  
+- Informazioni sull'errore.  
   
--   Post dei forum sull'errore.  
+- Post dei forum sull'errore.  
   
 ### <a name="instances-of-this-error"></a>Istanze dell'errore  
  Nelle informazioni sono elencate tutte le istanze dell'errore nel progetto corrente. Molti errori evidenziano un percorso esatto nel formato seguente: *[nome progetto]* *[nome modulo]* riga:*[numero riga]* colonna:*[numero colonna]*. Il collegamento **Vai al codice** consente di visualizzare il percorso nel codice in cui si verifica l'errore.  
@@ -45,9 +45,9 @@ In questo argomento viene illustrato il significato e l'uso dell'elenco errori d
 ### <a name="forum-posts-about-this-error"></a>Post dei forum sull'errore  
  Nelle informazioni aggiuntive verrà incluso un collegamento ai post del forum MSDN relativi all'errore. La ricerca viene effettuata nei forum sulla base della stringa del messaggio di errore. È anche possibile provare a effettuare una ricerca nei seguenti forum:  
   
--   [Forum di progettazione Windows Form](https://go.microsoft.com/fwlink/?LinkId=203524)  
+- [Forum di Progettazione Windows Form](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Forum di Windows Form](https://go.microsoft.com/fwlink/?LinkId=203523)  
+- [Forum di Windows Form](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>Ignora e continua  
  È possibile ignorare la condizione di errore e continuare a caricare la finestra di progettazione. La scelta di questa azione può produrre risultati imprevisti. Ad esempio, nell'area di progettazione potrebbero non venire visualizzati alcuni controlli.  

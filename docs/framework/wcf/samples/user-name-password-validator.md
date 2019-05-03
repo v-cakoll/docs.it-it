@@ -3,11 +3,11 @@ title: Validator del nome utente e password
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
 ms.openlocfilehash: 52c22660e56d63121181bdcb618e0bed598ca585
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006434"
 ---
 # <a name="user-name-password-validator"></a>Validator del nome utente e password
 In questo esempio viene illustrato come implementare un validator di UserNamePassword personalizzato. Questo processo è utile nei casi in cui nessuna delle modalità di convalida UserNamePassword incorporate è appropriata per i requisiti dell'applicazione; ad esempio, quando le coppie di nome utente/password sono archiviate in un archivio esterno, ad esempio un database. In questo esempio viene illustrato un servizio con un validator personalizzato che verifica due particolari coppie di nome utente/password. Il cliente utilizza tale coppia di nome utente/password per l'autenticazione nel servizio.
@@ -26,11 +26,11 @@ In questo esempio viene illustrato come implementare un validator di UserNamePas
 
  In sintesi, nell'esempio viene illustrato in che modo eseguire le operazioni seguenti:
 
--   Il client può essere autenticato utilizzando un token Username.
+- Il client può essere autenticato utilizzando un token Username.
 
--   Il server convalida le credenziali client in relazione a un UserNamePasswordValidator personalizzato e il modo in cui vengono propagati gli errori personalizzati dipende dalla logica di convalida del nome utente e della password nel client.
+- Il server convalida le credenziali client in relazione a un UserNamePasswordValidator personalizzato e il modo in cui vengono propagati gli errori personalizzati dipende dalla logica di convalida del nome utente e della password nel client.
 
--   Il server viene autenticato tramite il certificato X.509 del server.
+- Il server viene autenticato tramite il certificato X.509 del server.
 
  Il servizio espone un solo endpoint per comunicare con il servizio che viene definito mediante il file di configurazione App.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione è configurata con una classe standard `wsHttpBinding` che usa per impostazione predefinita l'autenticazione di nome utente WS-Securityand. Il comportamento del servizio specifica la modalità `Custom` per la convalida delle coppie nome utente/password client insieme al tipo di classe del validator. Il comportamento specifica inoltre il certificato server mediante l'elemento `serviceCertificate`. Il certificato del server deve contenere lo stesso valore per il `SubjectName` come il `findValue` nel [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
@@ -254,7 +254,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
  Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.
 
--   Creazione del certificato server:
+- Creazione del certificato server:
 
      Le righe seguenti del file batch Setup.bat creano il certificato server da usare. La variabile %SERVER_NAME% specifica il nome del server. Modificare questa variabile per specificare nome del server. Il valore predefinito è localhost.
 
@@ -268,7 +268,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installazione del certificato server nell'archivio certificati attendibili del client:
+- Installazione del certificato server nell'archivio certificati attendibili del client:
 
      Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.
 

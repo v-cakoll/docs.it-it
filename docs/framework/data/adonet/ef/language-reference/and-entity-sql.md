@@ -3,11 +3,11 @@ title: '&amp;&amp; (AND) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
 ms.openlocfilehash: eab05f7454f8ebc88ed29030503bfa96d0c70756
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605749"
 ---
 # <a name="ampamp-and-entity-sql"></a>&amp;&amp; (AND) (Entity SQL)
 Restituisce `true` se entrambe le espressioni sono `true`; in caso contrario, restituisce `false` o `NULL`.  

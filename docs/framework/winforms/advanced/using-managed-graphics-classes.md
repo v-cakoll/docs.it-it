@@ -7,11 +7,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
 ms.openlocfilehash: 86f6b3fff1937694f4b7890249e36d5e12b769dc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766168"
 ---
 # <a name="using-managed-graphics-classes"></a>Utilizzo di classi grafiche gestite
 Gli argomenti seguenti descrivono come usare il [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API nel framework di classi gestite.  

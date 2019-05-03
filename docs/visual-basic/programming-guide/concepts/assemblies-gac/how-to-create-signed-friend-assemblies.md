@@ -3,11 +3,11 @@ title: 'Procedura: Creare assembly Friend firmati (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
 ms.openlocfilehash: 4ff32015647a565f7f68e944ae028deb7f738e28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022272"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Procedura: Creare assembly Friend firmati (Visual Basic)
 In questo esempio viene illustrato come usare assembly Friend e assembly con nomi sicuri. È necessario che entrambi i tipi di assembly abbiano un nome sicuro. Gli assembly in questo esempio usano le stesse chiavi. È comunque possibile usare chiavi diverse per i due assembly.  
@@ -18,15 +18,15 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
   
 2. Eseguire la sequenza di comandi seguente con lo strumento Nome sicuro per generare un keyfile e per visualizzare la relativa chiave pubblica. Per altre informazioni, vedere [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
-    1.  Generare una chiave con nome sicuro per questo esempio e archiviarla nel file FriendAssemblies.snk:  
+    1. Generare una chiave con nome sicuro per questo esempio e archiviarla nel file FriendAssemblies.snk:  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  Estrarre la chiave pubblica da FriendAssemblies.snk e inserirla in FriendAssemblies.publickey:  
+    2. Estrarre la chiave pubblica da FriendAssemblies.snk e inserirla in FriendAssemblies.publickey:  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  Visualizzare la chiave pubblica archiviata nel file FriendAssemblies.publickey:  
+    3. Visualizzare la chiave pubblica archiviata nel file FriendAssemblies.publickey:  
   
          `sn -tp FriendAssemblies.publickey`  
   
@@ -93,4 +93,4 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
 - [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe (strumento nome sicuro)](../../../../framework/tools/sn-exe-strong-name-tool.md))
 - [Creazione e utilizzo degli assembly con nome sicuro](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [Concetti di programmazione](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Nozioni di base sulla programmazione](../../../../visual-basic/programming-guide/concepts/index.md)

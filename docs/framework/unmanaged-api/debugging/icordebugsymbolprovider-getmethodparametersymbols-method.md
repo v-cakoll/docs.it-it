@@ -5,11 +5,11 @@ ms.assetid: 58b7c0b9-f6ad-4b49-b92d-0e421cfd0ec6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 98efd1446c88c3a6c004b5a3254c9db835a43804
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953374"
 ---
 # <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>Metodo ICorDebugSymbolProvider::GetMethodParameterSymbols
 Ottiene i parametri del metodo da un indirizzo RVA (Relative Virtual Address) di tale metodo.  

@@ -5,18 +5,18 @@ f1_keywords:
 - vbrPPMT_PerGT0AndLTNPer
 ms.assetid: 5f3fadba-d32c-4e52-b949-85a907e6c12f
 ms.openlocfilehash: bb6ec0e94f5467dd70c4d747f6daf6ec812c6187
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977084"
 ---
 # <a name="argument-per-is-not-valid"></a>Argomento 'Per' non valido
 Un argomento fornito per `Per`, che deve essere un oggetto `Double` che specifica il periodo di pagamento compreso tra 1 e `NPer`, non è valido.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Verificare che l'argomento sia compreso nell'intervallo valido.  
+- Verificare che l'argomento sia compreso nell'intervallo valido.  
   
 ## <a name="see-also"></a>Vedere anche
 

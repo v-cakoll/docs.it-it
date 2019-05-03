@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
 ms.openlocfilehash: 7bb78b05be7b3edc4471bc276010eabd92a07a14
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971847"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>Tipo XAML intrinseco x:Code
 Consente il posizionamento del codice all'interno di una produzione XAML. Tale codice può essere compilato da qualsiasi implementazione di processore XAML che consente la compilazione XAML o a sinistra in produzione XAML per utilizzi successivi, ad esempio interpretazione da un runtime.  
@@ -38,18 +38,18 @@ Consente il posizionamento del codice all'interno di una produzione XAML. Tale c
 ## <a name="wpf-usage-notes"></a>Note sull'utilizzo WPF  
  Codice dichiarati all'interno di `x:Code` per WPF ha alcune limitazioni rilevanti:  
   
--   Il `x:Code` elemento della direttiva deve essere un elemento figlio immediato dell'elemento radice della produzione XAML.  
+- Il `x:Code` elemento della direttiva deve essere un elemento figlio immediato dell'elemento radice della produzione XAML.  
   
--   [Direttiva X:Class](x-class-directive.md) deve essere fornita per l'elemento radice padre.  
+- [Direttiva X:Class](x-class-directive.md) deve essere fornita per l'elemento radice padre.  
   
--   Il codice inserito all'interno di `x:Code` verrà considerato dalla compilazione per rientrare nell'ambito della classe parziale che è già creata per la pagina XAML. Di conseguenza deve essere tutto il codice che è definire membri o le variabili di tale classe parziale.  
+- Il codice inserito all'interno di `x:Code` verrà considerato dalla compilazione per rientrare nell'ambito della classe parziale che è già creata per la pagina XAML. Di conseguenza deve essere tutto il codice che è definire membri o le variabili di tale classe parziale.  
   
--   Non è possibile definire altre classi, diverso da una classe all'interno della classe parziale di annidamento (è consentito l'annidamento, ma non accade in genere perché le classi annidate non possono essere fatto riferimento in XAML). Spazi dei nomi CLR nomi diverso da quello utilizzato per la classe parziale esistente non può essere definita o aggiungere.  
+- Non è possibile definire altre classi, diverso da una classe all'interno della classe parziale di annidamento (è consentito l'annidamento, ma non accade in genere perché le classi annidate non possono essere fatto riferimento in XAML). Spazi dei nomi CLR nomi diverso da quello utilizzato per la classe parziale esistente non può essere definita o aggiungere.  
   
--   I riferimenti alle entità di codice all'esterno dello spazio dei nomi CLR classe parziale devono essere completi. Se i membri dichiarati sono gli override per i membri di classe parziale sottoponibile a override, questo deve essere specificato con la parola chiave override specifico del linguaggio. Se i membri dichiarati `x:Code` ambito sono in conflitto con i membri della classe parziale creato di fuori di XAML, in modo che il compilatore segnala il conflitto, il file XAML non è possibile compilare o caricare.  
+- I riferimenti alle entità di codice all'esterno dello spazio dei nomi CLR classe parziale devono essere completi. Se i membri dichiarati sono gli override per i membri di classe parziale sottoponibile a override, questo deve essere specificato con la parola chiave override specifico del linguaggio. Se i membri dichiarati `x:Code` ambito sono in conflitto con i membri della classe parziale creato di fuori di XAML, in modo che il compilatore segnala il conflitto, il file XAML non è possibile compilare o caricare.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Direttiva x:Class](x-class-directive.md)
 - [Code-behind e XAML in WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [Panoramica di XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Cenni preliminari su XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

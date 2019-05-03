@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
 ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788947"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 Indica al compilatore di segnalare errori se le variabili non vengono dichiarate prima che vengano utilizzate.  

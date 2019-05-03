@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab4a31195a202929c8485349cbf43235faea8e2d
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 20dd6f9ab601277161079230effdaeeabd1bb13a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221238"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59101575"
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflection in .NET Framework
 Le classi nello spazio dei nomi <xref:System.Reflection>, insieme a <xref:System.Type?displayProperty=nameWithType>, consentono di ottenere informazioni sugli [assembly](../app-domains/assemblies-in-the-common-language-runtime.md) caricati e sui tipi in essi definiti, ad esempio [classi](../../standard/base-types/common-type-system.md#classes), [interfacce](../../standard/base-types/common-type-system.md#interfaces) e [tipi di valori](../../csharp/language-reference/keywords/value-types.md). È anche possibile usare la reflection per creare istanze di tipi in fase di esecuzione, richiamarle e accedervi. Per argomenti su aspetti specifici di reflection, vedere [Argomenti correlati](#related_topics) al termine di questa panoramica.
@@ -71,7 +71,7 @@ Le classi nello spazio dei nomi <xref:System.Reflection>, insieme a <xref:System
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Descrizione|  
+|Titolo|Description|  
 |-----------|-----------------|  
 |[Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Viene illustrata la classe <xref:System.Type> e vengono forniti esempi di codice in cui viene descritto l'uso di <xref:System.Type> con diverse classi di reflection per ottenere informazioni su costruttori, metodi, campi, proprietà ed eventi.|  
 |[Reflection e tipi generici](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|Vengono illustrate le modalità con cui la reflection gestisce i parametri e gli argomenti tipo di metodi e tipi generici.|  
@@ -89,4 +89,3 @@ Le classi nello spazio dei nomi <xref:System.Reflection>, insieme a <xref:System
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  
-  

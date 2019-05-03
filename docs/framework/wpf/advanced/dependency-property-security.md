@@ -11,11 +11,11 @@ helpviewer_keywords:
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
 ms.openlocfilehash: 85806ee9fb01cd2ca07697230c46a8847fdf8c6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053548"
 ---
 # <a name="dependency-property-security"></a>Sicurezza delle proprietà di dipendenza
 Le proprietà di dipendenza in genere devono essere considerate come proprietà pubbliche. A causa della natura stessa del sistema di proprietà di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], è impossibile avere delle garanzie di sicurezza sul valore di una proprietà di dipendenza.  

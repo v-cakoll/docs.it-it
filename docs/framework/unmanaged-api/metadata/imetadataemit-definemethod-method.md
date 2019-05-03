@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a67e8ce19a2acf5b4ee1d114858e00d93cb183b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044135"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>Metodo IMetaDataEmit::DefineMethod
 Crea una definizione per un metodo o una funzione globale con la firma specificata e restituisce un token per tale definizione.  
@@ -90,9 +90,9 @@ HRESULT DefineMethod (
 ## <a name="defining-a-method-for-pinvoke"></a>Definizione di un metodo per PInvoke  
  Per ogni funzione non gestita essere chiamate tramite PInvoke, è necessario definire un metodo gestito che rappresenta la funzione non gestita di destinazione. Per definire il metodo gestito, usare `DefineMethod` con alcuni dei parametri impostati su determinati valori, a seconda del modo in cui viene usato PInvoke:  
   
--   True PInvoke: comporta la chiamata di un metodo non gestito esterno che si trova in una DLL non gestita.  
+- True PInvoke: comporta la chiamata di un metodo non gestito esterno che si trova in una DLL non gestita.  
   
--   PInvoke locale - comporta una chiamata di un metodo non gestito nativo incorporato nel modulo gestito corrente.  
+- PInvoke locale - comporta una chiamata di un metodo non gestito nativo incorporato nel modulo gestito corrente.  
   
  Le impostazioni dei parametri sono fornite nella tabella seguente.  
   

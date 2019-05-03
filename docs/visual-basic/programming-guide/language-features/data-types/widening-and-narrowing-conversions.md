@@ -20,11 +20,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
 ms.openlocfilehash: 9f1a71e8e2e3e4ebb9b412be74b5ea8702eb164f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827157"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Conversioni di ampliamento e restrizione (Visual Basic)
 Una considerazione importante con una conversione del tipo è se il risultato della conversione è compreso nell'intervallo del tipo di dati di destinazione.  

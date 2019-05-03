@@ -2,12 +2,12 @@
 title: Forma degli alberi dei comandi
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: aba5511b8baa395714bde315d9542932e854c98b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763984"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Forma degli alberi dei comandi
 
@@ -85,9 +85,9 @@ DbNewInstanceExpression può essere specificato solo nei due casi seguenti:
 
 - Come proprietà Projection di DbProjectExpression.  In questo caso, vengono applicate le restrizioni seguenti:
 
-    - Il risultato deve essere un tipo di riga.
+  - Il risultato deve essere un tipo di riga.
 
-    - I relativi argomenti devono essere espressioni che producono un risultato con un tipo primitivo. In genere, ogni argomento è un'espressione scalare, ad esempio un oggetto PropertyExpression su un oggetto DbVariableReferenceExpression, una chiamata a una funzione o un calcolo aritmetico di DbPropertyExpression su un oggetto DbVariableReferenceExpression o una chiamata a una funzione. È tuttavia possibile specificare un'espressione che rappresenta una subquery scalare anche nell'elenco di argomenti di un oggetto DbNewInstanceExpression. Un'espressione che rappresenta una subquery scalare è un albero delle espressioni che rappresenta una subquery che restituisce esattamente una riga e una colonna di tipo primitivo con una radice dell'oggetto DbElementExpression
+  - I relativi argomenti devono essere espressioni che producono un risultato con un tipo primitivo. In genere, ogni argomento è un'espressione scalare, ad esempio un oggetto PropertyExpression su un oggetto DbVariableReferenceExpression, una chiamata a una funzione o un calcolo aritmetico di DbPropertyExpression su un oggetto DbVariableReferenceExpression o una chiamata a una funzione. È tuttavia possibile specificare un'espressione che rappresenta una subquery scalare anche nell'elenco di argomenti di un oggetto DbNewInstanceExpression. Un'espressione che rappresenta una subquery scalare è un albero delle espressioni che rappresenta una subquery che restituisce esattamente una riga e una colonna di tipo primitivo con una radice dell'oggetto DbElementExpression
 
 - Con un tipo restituito di raccolta, nel qual caso definisce una nuova raccolta delle espressioni specificate come argomenti.
 

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c196bcc159b18b9dc04329d817ebe16e07bb8bb7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790013"
 ---
 # <a name="emitinternalexportedtypes-method"></a>Metodo EmitInternalExportedTypes
 Genera tipi aggiunti all'assembly. Chiamare questo metodo una volta noto sono stati aggiunti i tipi interni.  
@@ -49,4 +49,4 @@ HRESULT EmitInternalExportedTypes(
 
 - [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [API Alink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

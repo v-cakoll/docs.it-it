@@ -3,11 +3,11 @@ title: Raccolte di schemi SQL Server
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
 ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878462"
 ---
 # <a name="sql-server-schema-collections"></a>Raccolte di schemi SQL Server
 Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolte di schemi comuni, supporta raccolte di schemi aggiuntivi. Le raccolte di schemi variano leggermente in base alla versione di SQL Server usata. Per determinare l'elenco di raccolte di schemi supportati, chiamare il **GetSchema** metodo senza argomenti oppure con il nome di raccolta di schemi "MetaDataCollections". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco delle raccolte di schemi supportati, il numero delle restrizioni supportate da ciascuna raccolta e il numero di parti identificatore usate.  
@@ -257,5 +257,5 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolte
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Recupero di informazioni dello schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [Recupero di informazioni sullo schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

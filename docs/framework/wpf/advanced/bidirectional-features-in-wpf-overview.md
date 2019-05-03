@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
 ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032019"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Cenni preliminari sulle funzionalità bidirezionali di WPF
 A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] presenta molte funzionalità che supportano lo sviluppo rapido di contenuto bidirezionale, ad esempio, misto dati da sinistra a destra e a destra per sinistra nello stesso documento. Allo stesso tempo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre un'esperienza eccellente per gli utenti che richiedono funzionalità bidirezionali, ad esempio gli utenti di lingua araba o ebraica.  
@@ -166,11 +166,11 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  Questa proprietà specifica come vengono determinate le impostazioni cultura per i numeri. Accetta uno dei tre <xref:System.Windows.Media.NumberCultureSource> valori di enumerazione.  
   
--   prevalere: Sono costituito dalle impostazioni cultura del numero <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> proprietà.  
+- prevalere: Sono costituito dalle impostazioni cultura del numero <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> proprietà.  
   
--   Testo: Impostazioni cultura del numero sono quelle della sequenza di testo. Nel markup, il risultato sarà `xml:lang`, o il relativo alias `Language` proprietà (<xref:System.Windows.FrameworkElement.Language%2A> o <xref:System.Windows.FrameworkContentElement.Language%2A>). Inoltre, è il valore predefinito per le classi che derivano da <xref:System.Windows.FrameworkContentElement>. Tali classi includono <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>, <xref:System.Windows.Documents.Table?displayProperty=nameWithType>, <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> e così via.  
+- Testo: Impostazioni cultura del numero sono quelle della sequenza di testo. Nel markup, il risultato sarà `xml:lang`, o il relativo alias `Language` proprietà (<xref:System.Windows.FrameworkElement.Language%2A> o <xref:System.Windows.FrameworkContentElement.Language%2A>). Inoltre, è il valore predefinito per le classi che derivano da <xref:System.Windows.FrameworkContentElement>. Tali classi includono <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>, <xref:System.Windows.Documents.Table?displayProperty=nameWithType>, <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> e così via.  
   
--   Utente: Impostazioni cultura del numero sono quelle del thread corrente. Questa proprietà è il valore predefinito per tutte le sottoclassi della <xref:System.Windows.FrameworkElement> , ad esempio <xref:System.Windows.Controls.Page>, <xref:System.Windows.Window> e <xref:System.Windows.Controls.TextBlock>.  
+- Utente: Impostazioni cultura del numero sono quelle del thread corrente. Questa proprietà è il valore predefinito per tutte le sottoclassi della <xref:System.Windows.FrameworkElement> , ad esempio <xref:System.Windows.Controls.Page>, <xref:System.Windows.Window> e <xref:System.Windows.Controls.TextBlock>.  
   
  **CultureOverride**:  
   
@@ -180,15 +180,15 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  Questa proprietà specifica il tipo di sostituzione numerica da eseguire. Accetta uno dei seguenti <xref:System.Windows.Media.NumberSubstitutionMethod> valori di enumerazione.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Il metodo di sostituzione viene determinato in base a impostazioni cultura del numero <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> proprietà. Questa è l'impostazione predefinita.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Il metodo di sostituzione viene determinato in base a impostazioni cultura del numero <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> proprietà. Questa è l'impostazione predefinita.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Se le impostazioni cultura del numero sono in arabo o in Farsi, specifica che le cifre dipendono dal contesto.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Se le impostazioni cultura del numero sono in arabo o in Farsi, specifica che le cifre dipendono dal contesto.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.European>: I numeri sono sempre sottoposti a rendering come cifre europee.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.European>: I numeri sono sempre sottoposti a rendering come cifre europee.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: I numeri vengono sottoposti a rendering utilizzando le cifre nazionali per le impostazioni cultura dei numeri, come specificato dalle impostazioni cultura <xref:System.Globalization.CultureInfo.NumberFormat%2A>.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: I numeri vengono sottoposti a rendering utilizzando le cifre nazionali per le impostazioni cultura dei numeri, come specificato dalle impostazioni cultura <xref:System.Globalization.CultureInfo.NumberFormat%2A>.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: Numeri vengono sottoposti a rendering utilizzando le cifre tradizionali per le impostazioni cultura dei numeri. Per la maggior parte delle impostazioni cultura, questo è lo stesso come <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>. Tuttavia, <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> comporta cifre latine per alcune impostazioni cultura arabe, mentre questo valore in cifre arabe per tutte le impostazioni cultura arabe.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: Numeri vengono sottoposti a rendering utilizzando le cifre tradizionali per le impostazioni cultura dei numeri. Per la maggior parte delle impostazioni cultura, questo è lo stesso come <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>. Tuttavia, <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> comporta cifre latine per alcune impostazioni cultura arabe, mentre questo valore in cifre arabe per tutte le impostazioni cultura arabe.  
   
  Cosa significano questi valori per uno sviluppatore di contenuti bidirezionali? Nella maggior parte dei casi, lo sviluppatore deve solo definire <xref:System.Windows.FlowDirection> e la lingua della ognuno testuale [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elemento, ad esempio `Language="ar-SA"` e il <xref:System.Windows.Media.NumberSubstitution> per la logica esegue automaticamente la visualizzazione dei numeri in base alla corretta [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Nell'esempio seguente viene illustrato come utilizzare numeri arabi e inglesi in un' [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dell'applicazione in esecuzione in una versione araba di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
   

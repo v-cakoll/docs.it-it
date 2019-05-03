@@ -3,11 +3,11 @@ title: SET (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 28b4deac-c7e4-4f09-b428-4d352ef2dc94
 ms.openlocfilehash: 4e2a387cf400a881dfd91c61b36ee3ce0f5a4431
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797774"
 ---
 # <a name="set-entity-sql"></a>SET (Entity SQL)
 L'espressione SET viene usata per convertire una raccolta di oggetti in un set restituendo una nuova raccolta da cui sono stati rimossi tutti i duplicati.  
@@ -29,7 +29,7 @@ SET ( expression )
 SELECT VALUE DISTINCT c FROM c  
 ```  
   
- `SET` è uno del [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatori sui set. Tutti gli operatori sui set di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vengono valutati da sinistra a destra. Visualizzare [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) per informazioni sulla priorità di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatori sui set.  
+ `SET` è uno degli operatori sui set di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . Tutti gli operatori sui set di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vengono valutati da sinistra a destra. Visualizzare [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) per informazioni sulla priorità di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatori sui set.  
   
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usata l'espressione SET per convertire una raccolta di oggetti in un set. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  

@@ -3,11 +3,11 @@ title: Sicurezza dei provider di tipi
 description: Informazioni sulla sicurezza del provider di tipo in F#, incluse le procedure modificare le impostazioni del trust per un provider di tipi.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9ccb33d7298736c3d6b54980b6fe09bc9f2e0259
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968233"
 ---
 # <a name="type-provider-security"></a>Sicurezza dei provider di tipi
 

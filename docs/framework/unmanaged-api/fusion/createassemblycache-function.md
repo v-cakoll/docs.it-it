@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf78ded62f11b336d9f5fe0f3a205275ae37189b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669988"
 ---
 # <a name="createassemblycache-function"></a>Funzione CreateAssemblyCache
 Ottiene un puntatore a una nuova [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) istanza che rappresenta la global assembly cache.  

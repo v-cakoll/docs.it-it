@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
 ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010618"
 ---
 # <a name="data-and-data-objects"></a>Dati e oggetti dati
 I dati che vengono trasferiti come parte di un'operazione di trascinamento e rilascio viene archiviati in un oggetto dati.  Concettualmente, un oggetto dati è costituito da uno o più delle seguenti coppie di:  
   
--   Un <xref:System.Object> che contiene i dati effettivi.  
+- Un <xref:System.Object> che contiene i dati effettivi.  
   
--   Un identificatore di formato di dati corrispondente.  
+- Un identificatore di formato di dati corrispondente.  
   
  I dati stessi possono contenere qualsiasi elemento che può essere rappresentato come una base <xref:System.Object>.  Il formato di dati corrispondente è una stringa o <xref:System.Type> che fornisce un hint sul formato dei dati è.  Gli oggetti dati supportano l'hosting di più coppie di formato data/dati; In questo modo un singolo oggetto dati fornire i dati in più formati.  
   

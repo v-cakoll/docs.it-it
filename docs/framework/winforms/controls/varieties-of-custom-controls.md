@@ -12,11 +12,11 @@ helpviewer_keywords:
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
 ms.openlocfilehash: 765befcf88247e4b2101b13c4937352ba4b070fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009149"
 ---
 # <a name="varieties-of-custom-controls"></a>Tipi di controlli personalizzati
 Con .NET Framework è possibile sviluppare e implementare nuovi controlli. Si possono estendere le funzionalità del controllo utente con cui si ha dimestichezza nonché dei controlli esistenti attraverso l'ereditarietà. È anche possibile scrivere controlli personalizzati che eseguono il proprio disegno.  
@@ -31,17 +31,17 @@ Con .NET Framework è possibile sviluppare e implementare nuovi controlli. Si po
   
  Il <xref:System.Windows.Forms.Control> classe esegue le attività seguenti per consentire la visualizzazione nelle applicazioni Windows Forms:  
   
--   Espone un handle di finestra.  
+- Espone un handle di finestra.  
   
--   Gestisce il routing dei messaggi.  
+- Gestisce il routing dei messaggi.  
   
--   Genera gli eventi di mouse e tastiera e molti altri eventi dell'interfaccia utente.  
+- Genera gli eventi di mouse e tastiera e molti altri eventi dell'interfaccia utente.  
   
--   Genera le funzionalità di layout avanzate.  
+- Genera le funzionalità di layout avanzate.  
   
--   Contiene numerose proprietà specifiche per la visualizzazione, ad esempio <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, e <xref:System.Windows.Forms.Control.Width%2A>.  
+- Contiene numerose proprietà specifiche per la visualizzazione, ad esempio <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, e <xref:System.Windows.Forms.Control.Width%2A>.  
   
--   Offre la protezione e il supporto del threading necessari affinché un controllo Windows Form funzioni come un controllo Microsoft® ActiveX®.  
+- Offre la protezione e il supporto del threading necessari affinché un controllo Windows Form funzioni come un controllo Microsoft® ActiveX®.  
   
  Poiché gran parte dell'infrastruttura viene definita dalla classe di base, è relativamente semplice sviluppare i propri controlli Windows Form.  
   
@@ -57,11 +57,11 @@ Con .NET Framework è possibile sviluppare e implementare nuovi controlli. Si po
   
  Per modificare un controllo composito, derivarlo dal <xref:System.Windows.Forms.UserControl> classe. Il <xref:System.Windows.Forms.UserControl> classe di base fornisce il routing della tastiera per controlli figlio e consente ai controlli figlio di funzionare come gruppo. Per altre informazioni, vedere [Sviluppo di un controllo Windows Form composito](developing-a-composite-windows-forms-control.md).  
   
- **Consiglio**  
+ **Consigli**  
   
  Ereditare dalla classe <xref:System.Windows.Forms.UserControl> per:  
   
--   Combinare le funzionalità di vari controlli di Windows Form in una singola unità riusabile.  
+- Combinare le funzionalità di vari controlli di Windows Form in una singola unità riusabile.  
   
 ### <a name="extended-controls"></a>Controlli estesi  
  È possibile derivare un controllo ereditato da un controllo di Windows Form esistente. Questo approccio consente di mantenere tutte le funzionalità intrinseche di un controllo Windows Form e di estenderle aggiungendo proprietà personalizzate, metodi o altre funzionalità. Con questa opzione è possibile eseguire l'override della logica di disegno del controllo di base e quindi estendere la relativa interfaccia utente modificandone l'aspetto.  
@@ -70,13 +70,13 @@ Con .NET Framework è possibile sviluppare e implementare nuovi controlli. Si po
   
  In alcuni controlli, è possibile aggiungere anche un aspetto personalizzato per l'interfaccia utente grafica del controllo eseguendo l'override di <xref:System.Windows.Forms.Control.OnPaint%2A> metodo della classe di base. Per un pulsante esteso che tiene traccia dei clic, è possibile eseguire l'override di <xref:System.Windows.Forms.Control.OnPaint%2A> metodo da chiamare l'implementazione di base del <xref:System.Windows.Forms.Control.OnPaint%2A>, quindi disegnare il numero di clic in un angolo del <xref:System.Windows.Forms.Button> area client del controllo.  
   
- **Consiglio**  
+ **Consigli**  
   
  Ereditare da un controllo di Windows Form se:  
   
--   Molte delle funzionalità necessarie sono identiche a quelle incluse in un controllo di Windows Form esistente.  
+- Molte delle funzionalità necessarie sono identiche a quelle incluse in un controllo di Windows Form esistente.  
   
--   Non è necessaria un'interfaccia utente grafica personalizzata oppure si vuole progettare una nuova interfaccia utente grafica per un controllo esistente.  
+- Non è necessaria un'interfaccia utente grafica personalizzata oppure si vuole progettare una nuova interfaccia utente grafica per un controllo esistente.  
   
 ### <a name="custom-controls"></a>Controlli personalizzati  
  Un altro modo per creare un controllo è crearne uno praticamente dal nulla mediante eredità da <xref:System.Windows.Forms.Control>. Il <xref:System.Windows.Forms.Control> classe offre tutte le funzionalità di base richieste dai controlli, inclusi mouse e tastiera la gestione degli eventi, ma nessuna funzionalità specifica del controllo o interfaccia grafica.  
@@ -87,13 +87,13 @@ Con .NET Framework è possibile sviluppare e implementare nuovi controlli. Si po
   
  Un esempio di controllo personalizzato è un controllo clock che duplica l'aspetto e il funzionamento di un orologio analogico. Viene richiamato un disegno personalizzato causa il movimento delle lancette dell'orologio in risposta a <xref:System.Windows.Forms.Timer.Tick> gli eventi da interna <xref:System.Windows.Forms.Timer> componente. Per altre informazioni, vedere [Procedura: Sviluppare un controllo Form Windows semplice](how-to-develop-a-simple-windows-forms-control.md).  
   
- **Consiglio**  
+ **Consigli**  
   
  Ereditare dalla classe <xref:System.Windows.Forms.Control> per:  
   
--   Fornire una rappresentazione grafica personalizzata del controllo.  
+- Fornire una rappresentazione grafica personalizzata del controllo.  
   
--   È necessario implementare una funzionalità personalizzata non disponibile tramite i controlli standard.  
+- È necessario implementare una funzionalità personalizzata non disponibile tramite i controlli standard.  
   
 ### <a name="activex-controls"></a>Controlli ActiveX  
  Anche se l'infrastruttura di Windows Form è stata ottimizzata per ospitare i controlli Windows Form, è comunque possibile usare i controlli ActiveX. Questa attività è supportata in Visual Studio. Per altre informazioni, vedere [Procedura: Aggiungere i controlli ActiveX a Windows Forms](how-to-add-activex-controls-to-windows-forms.md).  
@@ -109,7 +109,7 @@ Con .NET Framework è possibile sviluppare e implementare nuovi controlli. Si po
 ## <a name="see-also"></a>Vedere anche
 
 - [Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)
-- [Procedura: Sviluppare un controllo di Windows Forms semplice](how-to-develop-a-simple-windows-forms-control.md)
-- [Sviluppo di un controllo Windows Form composto](developing-a-composite-windows-forms-control.md)
+- [Procedura: Sviluppare un controllo di semplice Windows Form](how-to-develop-a-simple-windows-forms-control.md)
+- [Sviluppo di un controllo di Windows Form composto](developing-a-composite-windows-forms-control.md)
 - [Estensione del supporto in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Procedura: Creare un controllo di Windows Form che sfrutta i vantaggi della funzionalità Design-Time](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

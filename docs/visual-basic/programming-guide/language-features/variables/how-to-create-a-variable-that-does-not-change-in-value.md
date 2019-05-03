@@ -6,22 +6,22 @@ helpviewer_keywords:
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
 ms.openlocfilehash: 7180e5141572d219ed02c57103e9d4b80cde536e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938229"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Procedura: Creare una variabile che non cambia di valore (Visual Basic)
 Il concetto di una variabile che non cambia il relativo valore potrebbe sembrare contraddittorio. Ma esistono situazioni in cui una costante non è fattibile e risulta utile avere una variabile con un valore fisso. In tal caso è possibile definire una variabile membro con il [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) (parola chiave).  
   
  Non è possibile usare la [istruzione Const](../../../../visual-basic/language-reference/statements/const-statement.md) dichiarare e assegnare un valore costante nelle circostanze seguenti:  
   
--   Il `Const` istruzione non accetta il tipo di dati da usare  
+- Il `Const` istruzione non accetta il tipo di dati da usare  
   
--   Non si conosce il valore in fase di compilazione  
+- Non si conosce il valore in fase di compilazione  
   
--   È in grado di calcolare il valore costante in fase di compilazione  
+- È in grado di calcolare il valore costante in fase di compilazione  
   
 ### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Per creare una variabile che non cambia di valore  
   

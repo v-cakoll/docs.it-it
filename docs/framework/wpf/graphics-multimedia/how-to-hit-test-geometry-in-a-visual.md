@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
 ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947342"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>Procedura: Eseguire un hit test della geometria in un oggetto visivo
 In questo esempio illustra come eseguire un hit test su un oggetto visivo costituito da uno o più <xref:System.Windows.Media.Geometry> oggetti.  
@@ -38,4 +38,4 @@ In questo esempio illustra come eseguire un hit test su un oggetto visivo costit
 ## <a name="see-also"></a>Vedere anche
 
 - [Hit testing a livello visivo](hit-testing-in-the-visual-layer.md)
-- [Eseguire un hit test usando la geometria come parametro](how-to-hit-test-using-geometry-as-a-parameter.md)
+- [Eseguire un hit test utilizzando la geometria come parametro](how-to-hit-test-using-geometry-as-a-parameter.md)

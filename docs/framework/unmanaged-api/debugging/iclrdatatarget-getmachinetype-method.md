@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ff9c88d534e0bfe51075a76581af37aba791a3da
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698252"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a>Metodo ICLRDataTarget::GetMachineType
 Ottiene l'identificatore per il tipo di set di istruzioni che utilizza il processo di destinazione.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
 ms.openlocfilehash: 31c597a0e2cbf41484f19c8d4179823e9fb929ba
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59317675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941206"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>Procedura: Nascondere ToolStripMenuItems usando la finestra di progettazione
 Se si nasconde le voci di menu è un modo per controllare l'interfaccia utente (UI) dell'applicazione e limitare i comandi dell'utente. Spesso, è consigliabile nascondere un intero menu quando tutte le voci di menu su di esso non sono disponibili. Evitare distrazioni per l'utente. Inoltre, si potrebbe voler nascondere e disabilitare il menu o la voce di menu, come nascondere da solo non impedisce all'utente di accesso a un comando di menu tramite un tasto di scelta rapida. Per altre informazioni sulla disabilitazione delle voci di menu, vedere [come: Disabilitare i ToolStripMenuItems con la finestra di progettazione](how-to-disable-toolstripmenuitems-using-the-designer.md).  
@@ -41,5 +41,5 @@ Se si nasconde le voci di menu è un modo per controllare l'interfaccia utente (
 - <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>
 - <xref:System.Windows.Forms.ToolStripItem.Available%2A>
 - <xref:System.Windows.Forms.ToolStripMenuItem.Overflow%2A>
-- [Panoramica del controllo MenuStrip](menustrip-control-overview-windows-forms.md)
-- [Procedura: Disabilitare ToolStripMenuItems usando la finestra di progettazione](how-to-disable-toolstripmenuitems-using-the-designer.md)
+- [Panoramica sul controllo MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Procedura: Disabilitare i ToolStripMenuItems con la finestra di progettazione](how-to-disable-toolstripmenuitems-using-the-designer.md)

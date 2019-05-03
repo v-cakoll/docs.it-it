@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
 ms.openlocfilehash: 23fe9fa2b8405a6ebe66e8f0cee1d81d45f2395b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640371"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Procedura: Aggiungere e rimuovere schede con TabControl di Windows Forms usando la finestra di progettazione
 Quando si inserisce un <xref:System.Windows.Forms.TabControl> controllo sul form, contiene due schede per impostazione predefinita. È possibile aggiungere o rimuovere schede tramite la finestra di progettazione.  
@@ -25,7 +25,7 @@ Quando si inserisce un <xref:System.Windows.Forms.TabControl> controllo sul form
   
 ### <a name="to-add-or-remove-a-tab-using-the-designer"></a>Per aggiungere o rimuovere una scheda usando la finestra di progettazione  
   
--   Nello smart tag del controllo, fare clic su **Aggiungi scheda** o **Rimuovi scheda**  
+- Nello smart tag del controllo, fare clic su **Aggiungi scheda** o **Rimuovi scheda**  
   
      -oppure-  
   
@@ -35,6 +35,6 @@ Quando si inserisce un <xref:System.Windows.Forms.TabControl> controllo sul form
 
 - [Controllo TabControl](tabcontrol-control-windows-forms.md)
 - [Panoramica del controllo TabControl](tabcontrol-control-overview-windows-forms.md)
-- [Procedura: Aggiungere un controllo a una scheda](how-to-add-a-control-to-a-tab-page.md)
+- [Procedura: Aggiungere un controllo a un oggetto TabPage](how-to-add-a-control-to-a-tab-page.md)
 - [Procedura: Disabilitare le schede](how-to-disable-tab-pages.md)
-- [Procedura: Modificare l'aspetto di TabControl di Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Procedura: Modificare l'aspetto del controllo TabControl Windows Form](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

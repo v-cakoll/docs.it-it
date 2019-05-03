@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 648b641cbd2ec97305674451df06ce5be6a93a49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697641"
 ---
 # <a name="iassemblycachecreateassemblycacheitem-method"></a>Metodo IAssemblyCache::CreateAssemblyCacheItem
 Ottiene un riferimento a una nuova [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) oggetto.  
@@ -42,9 +42,9 @@ HRESULT CreateAssemblyCacheItem (
  `dwFlags`  
  [in] Flag definiti in Fusion. Sono supportati i valori seguenti:  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
+- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
+- IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pvReserved`  
  [in] Riservato per un'estendibilità futura. `pvReserved` deve essere un riferimento null.  

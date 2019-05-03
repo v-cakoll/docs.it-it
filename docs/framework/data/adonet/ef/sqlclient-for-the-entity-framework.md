@@ -3,22 +3,22 @@ title: SqlClient per Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
 ms.openlocfilehash: d81499961e7e47bba3b2594ddddd192c87a4a936
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879118"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient per Entity Framework
 Contenuto della sezione viene descritto il provider di dati .NET Framework per SQL Server (SqlClient), che consente a Entity Framework di funzionare su Microsoft SQL Server.  
   
 ## <a name="provider-schema-attribute"></a>Attributo Provider dell'elemento Schema  
- `Provider` è un attributo di `Schema` elemento schema store schema definition language (SSDL).  
+ `Provider` è un attributo dell'elemento `Schema` in SSDL (Store Schema Definition Language).  
   
  Per usare SqlClient, assegnare la stringa "System.Data.SqlClient" all'attributo `Provider` dell'elemento `Schema`.  
   
 ## <a name="providermanifesttoken-schema-attribute"></a>Attributo ProviderManifestToken dell'elemento Schema  
- `ProviderManifestToken` è un attributo obbligatorio del `Schema` elemento SSDL. Questo token è usato per caricare il manifesto del provider per gli scenari non in linea. Per altre informazioni sulle `ProviderManifestToken` dell'attributo, vedere [elemento Schema (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl).  
+ `ProviderManifestToken` è un attributo obbligatorio dell'elemento `Schema` in SSDL. Questo token è usato per caricare il manifesto del provider per gli scenari non in linea. Per altre informazioni sulle `ProviderManifestToken` dell'attributo, vedere [elemento Schema (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl).  
   
  SqlClient può essere usato come provider di dati per versioni diverse di SQL Server. Queste versioni dispongono di funzionalità diverse. Ad esempio, [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] non supporta i tipi `varchar(max)` e `nvarchar(max)` introdotti con [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)].  
   
@@ -43,7 +43,7 @@ Contenuto della sezione viene descritto il provider di dati .NET Framework per S
 ## <a name="in-this-section"></a>In questa sezione  
  [SqlClient per funzioni Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
   
- [SqlClient per tipi Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)  
+ [SqlClient per tipi Entity FrameworkTypes](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)  
   
  [Problemi noti in SqlClient per Entity Framework](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)  
   

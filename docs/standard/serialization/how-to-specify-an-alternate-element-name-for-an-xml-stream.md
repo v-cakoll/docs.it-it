@@ -13,11 +13,11 @@ helpviewer_keywords:
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
 ms.openlocfilehash: 577b96517632ca1ae06891540f22c2c3c3886cd1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59317792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018008"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Procedura: Specificare un nome di elemento alternativo per un flusso XML
   

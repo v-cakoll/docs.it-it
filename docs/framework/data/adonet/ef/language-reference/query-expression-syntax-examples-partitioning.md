@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e41aed0-3be9-4f75-98de-860a85552a3c
 ms.openlocfilehash: e205a50b70a29d056af23ba64eb630b50e304ecb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613305"
 ---
 # <a name="query-expression-syntax-examples-partitioning"></a>Esempi di sintassi delle espressioni di query: Partizionamento
 Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A> metodi per eseguire una query il [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando la sintassi di espressione di query. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  

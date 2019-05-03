@@ -1,5 +1,5 @@
 ---
-title: <assemblyBinding> (elemento) per <runtime>
+title: Elemento <assemblyBinding> per <runtime>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding
@@ -11,11 +11,11 @@ ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eec77d4dd42a7b95d1e2cd0e353e2e54746676b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704882"
 ---
 # <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding > (elemento) per \<runtime >
 Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.  

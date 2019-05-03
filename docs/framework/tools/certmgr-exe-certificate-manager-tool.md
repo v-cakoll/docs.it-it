@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eceff4380fa5965ef38fb98f4ead81b052da3460
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 14dc09ff8ceaa5e754c2a8ee64846fbcac55e37f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496924"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59221101"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (strumento di gestione certificati)
 Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi di scopi consentiti ai certificati ed elenchi di revoche di certificati (CRL, Certificate Revocation List).  
@@ -138,6 +138,7 @@ certmgr /put /c /s my newFile
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strumenti](../../../docs/framework/tools/index.md)
 - [Makecert.exe (Certificate Creation Tool)](/windows/desktop/SecCrypto/makecert) (Makecert.exe, strumento di creazione certificati)
 - [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

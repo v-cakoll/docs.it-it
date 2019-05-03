@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59338566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784099"
 ---
 # <a name="option-infer-statement"></a>Option Infer (istruzione)
 Abilita l'uso dell'inferenza del tipo di variabile locale nelle variabili dichiaranti.  
@@ -73,7 +73,7 @@ Option Infer { On | Off }
   
 #### <a name="to-set-option-infer-on-the-command-line"></a>Per impostare Option Infer nella riga di comando  
   
--   Includere il [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) opzione del compilatore nella **vbc** comando.  
+- Includere il [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) opzione del compilatore nella **vbc** comando.  
   
 ## <a name="default-data-types-and-values"></a>Tipi di dati e valori predefiniti  
  Nella tabella seguente vengono descritti i risultati di varie combinazioni della specifica del tipo di dati e dell'inizializzatore in un'istruzione `Dim`.  
@@ -101,7 +101,7 @@ Option Infer { On | Off }
 - [Inferenza del tipo di variabile locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Istruzione Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Istruzione Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Impostazioni predefinite di Visual Basic, Progetti, finestra di dialogo Opzioni](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Boxing e unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

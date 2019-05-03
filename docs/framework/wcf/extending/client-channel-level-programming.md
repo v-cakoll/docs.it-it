@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
 ms.openlocfilehash: ea56c99d7d122dd20fc217f8ecb2937bcf81bec3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923266"
 ---
 # <a name="client-channel-level-programming"></a>Programmazione a livello di canale client
 In questo argomento viene descritto come scrivere un'applicazione client Windows Communication Foundation (WCF) senza usare il <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> classe e il modello a oggetti associato.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5a23d21d0ed8c6a6a226d5e58eafb7bde65a4896
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645435"
 ---
 # <a name="icordebugblockingobjectenum-interface"></a>Interfaccia ICorDebugBlockingObjectEnum
 Fornisce un enumeratore per un elenco degli [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) strutture. Questa interfaccia è una sottoclasse di interfaccia ICorDebugEnum.  

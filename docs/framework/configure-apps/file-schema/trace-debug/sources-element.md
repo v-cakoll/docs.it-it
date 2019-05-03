@@ -10,11 +10,11 @@ helpviewer_keywords:
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 ms.openlocfilehash: 9104a4a302aa9c6094adbc13396074fdd4db4bbc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701268"
 ---
 # <a name="sources-element"></a>\<origini > elemento
 Specifica le origini di traccia che avviano i messaggi di traccia.  
@@ -41,7 +41,7 @@ Specifica le origini di traccia che avviano i messaggi di traccia.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<origine >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Elemento obbligatorio.<br /><br /> Specifica un'origine di traccia che avvia i messaggi di traccia.|  
+|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Elemento obbligatorio.<br /><br /> Specifica un'origine di traccia che avvia i messaggi di traccia.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -88,4 +88,4 @@ Specifica le origini di traccia che avviano i messaggi di traccia.
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<origine >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)

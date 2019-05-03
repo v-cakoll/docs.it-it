@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
 ms.openlocfilehash: 2cc3c54563b261d49264314f7306193accbe4040
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596799"
 ---
 # <a name="instancing"></a>creazione di istanze
 Nell'esempio relativo alle istanze viene descritta l'impostazione del comportamento delle istanze che controlla come vengono create le istanze di una classe del servizio in risposta alle richieste del client. L'esempio è basato sul [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md), che implementa il `ICalculator` contratto di servizio. Questo esempio definisce un contratto nuovo, `ICalculatorInstance`, che eredita da `ICalculator`. Il contratto specificato da `ICalculatorInstance` fornisce tre operazioni aggiuntive per il controllo dello stato dell'istanza del servizio. Modificando l'impostazione delle istanze, è possibile osservare come viene modificato il comportamento quando si esegue il client.  
@@ -22,11 +22,11 @@ Nell'esempio relativo alle istanze viene descritta l'impostazione del comportame
   
  Sono disponibili le modalità di istanza seguenti:  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Viene creata una nuova istanza di servizio per ogni richiesta del client.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Viene creata una nuova istanza di servizio per ogni richiesta del client.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Una nuova istanza viene creata per ogni sessione client nuova e mantenuta per la durata della sessione (richiede un'associazione che supporta la sessione).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Una nuova istanza viene creata per ogni sessione client nuova e mantenuta per la durata della sessione (richiede un'associazione che supporta la sessione).  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: Una singola istanza della classe del servizio gestisce tutte le richieste client per la durata dell'applicazione.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: Una singola istanza della classe del servizio gestisce tutte le richieste client per la durata dell'applicazione.  
   
  La classe del servizio specifica il comportamento di istanza con l'attributo `[ServiceBehavior(InstanceContextMode=<setting>)]`, come illustrato nell'esempio di codice seguente. Modificando quali righe vengono impostate come commento, è possibile osservare il comportamento di ognuna delle modalità dell'istanza. Ricordarsi di ricompilare il servizio dopo avere modificato la modalità dell'istanza. Non è necessario specificare impostazioni correlate all'istanza sul client.  
   

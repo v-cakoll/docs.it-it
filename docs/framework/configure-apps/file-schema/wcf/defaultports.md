@@ -3,11 +3,11 @@ title: <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: 725d4ee5-bd46-4f0e-9c20-30ba75d6eb2c
 ms.openlocfilehash: 4d7fdfb1cccb14f03d11864f1939cb578c79880a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704115"
 ---
 # <a name="defaultports"></a>\<defaultPorts>
 Raccolta di porte predefinite in cui sono elencati gli endpoint di comunicazione predefiniti sui quali l'applicazione client è in ascolto.  

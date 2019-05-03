@@ -3,11 +3,11 @@ title: Costruzione di tipi (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
 ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605829"
 ---
 # <a name="constructing-types-entity-sql"></a>Costruzione di tipi (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce tre tipi di costruttori: costruttori di riga, costruttori di tipi denominati e costruttori di raccolte.  
@@ -21,9 +21,9 @@ ms.locfileid: "59073780"
   
  Le regole seguenti riguardano l'uso di alias nelle espressioni in un costruttore di riga:  
   
--   Le espressioni in un costruttore ROW non possono fare riferimento ad altri alias nello stesso costruttore.  
+- Le espressioni in un costruttore ROW non possono fare riferimento ad altri alias nello stesso costruttore.  
   
--   Due espressioni nello stesso costruttore di riga non possono avere lo stesso alias.  
+- Due espressioni nello stesso costruttore di riga non possono avere lo stesso alias.  
   
  Per altre informazioni sui costruttori di riga, vedere [riga](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
   

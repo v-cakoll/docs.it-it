@@ -10,11 +10,11 @@ helpviewer_keywords:
 - rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
 ms.openlocfilehash: a83f3b1c046e94faa8816e8c310f438b4711048a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769381"
 ---
 # <a name="how-to-transform-a-brush"></a>Procedura: Trasformare un pennello
 In questo esempio viene illustrato come trasformare <xref:System.Windows.Media.Brush> gli oggetti utilizzando le due proprietà di trasformazione: <xref:System.Windows.Media.Brush.RelativeTransform%2A> e <xref:System.Windows.Media.Brush.Transform%2A>.  
@@ -46,6 +46,6 @@ In questo esempio viene illustrato come trasformare <xref:System.Windows.Media.B
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sulle proprietà di trasformazione Brush](brush-transformation-overview.md)
+- [Panoramica sulle proprietà di trasformazione Brush](brush-transformation-overview.md)
 - [Cenni sul disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md)
 - [Cenni preliminari sulle trasformazioni](transforms-overview.md)

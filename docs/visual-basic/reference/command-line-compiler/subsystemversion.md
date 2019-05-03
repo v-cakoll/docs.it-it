@@ -7,11 +7,11 @@ helpviewer_keywords:
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
 ms.openlocfilehash: 0eca7918e5e4b8702858f972003faef1274e56e3
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796239"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 
@@ -54,9 +54,9 @@ Il valore predefinito dell'opzione del compilatore **-subsystemversion** dipende
 
 - Il valore predefinito è 6.02 se è impostata un'opzione del compilatore nell'elenco seguente:
 
-  - [-target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)
+  - [/target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)
 
-  - [-target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)
+  - [/target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)
 
   - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31194
 ms.assetid: 03d50c31-addd-4c90-9c53-725b84f9782e
 ms.openlocfilehash: c8480c6fab2bff931950ebc21d0a8affe3c41c66
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774816"
 ---
 # <a name="value-of-type-type1-cannot-be-converted-to-type2"></a>Impossibile convertire il valore di tipo 'type1' in 'type2'
 Valore di tipo 'type1' non può essere convertito in 'type2'. È possibile usare la proprietà 'Value' per ottenere il valore di stringa del primo elemento di '\<ElementoPadre >'.  
@@ -23,7 +23,7 @@ Valore di tipo 'type1' non può essere convertito in 'type2'. È possibile usare
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Usare la proprietà `Value` del valore letterale XML per fare riferimento al relativo valore come `String`. Usare la funzione `CType` , un'altra funzione di conversione del tipo oppure la classe <xref:System.Convert> per eseguire il cast del valore come tipo specificato.  
+- Usare la proprietà `Value` del valore letterale XML per fare riferimento al relativo valore come `String`. Usare la funzione `CType` , un'altra funzione di conversione del tipo oppure la classe <xref:System.Convert> per eseguire il cast del valore come tipo specificato.  
   
 ## <a name="see-also"></a>Vedere anche
 

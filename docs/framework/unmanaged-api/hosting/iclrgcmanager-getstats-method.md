@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9300f67e75d40f041a4fba52f6742741ec9f91de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59187335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700202"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>Metodo ICLRGCManager::GetStats
 Ottiene un set di statistiche correnti sul sistema di garbage collection di common language runtime.  
@@ -74,7 +74,7 @@ pCLRGCManager->GetStats(&GCStats);
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
+- [Gestione automatica della memoria](../../../../docs/standard/automatic-memory-management.md)
 - [Struttura COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [Enumerazione COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
 - [Garbage Collection](../../../../docs/standard/garbage-collection/index.md)

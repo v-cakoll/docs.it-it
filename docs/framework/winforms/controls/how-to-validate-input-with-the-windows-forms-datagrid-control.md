@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Convalidare l'Input con il controllo DataGrid di Windows Form"
+title: "Procedura: Convalidare l'input con il controllo DataGrid di Windows Forms"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
 ms.openlocfilehash: dc8c8f157e6673c1bddc68bfb511683e6d2b99be
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796474"
 ---
-# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Procedura: Convalidare l'Input con il controllo DataGrid di Windows Form
+# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Procedura: Convalidare l'input con il controllo DataGrid di Windows Forms
 
 > [!NOTE]
 > Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).

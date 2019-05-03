@@ -16,24 +16,24 @@ helpviewer_keywords:
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
 ms.openlocfilehash: 4784ddd563ccec0f7e6271700781ee1b5d3ac105
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59318416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013322"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Procedura: Salvare file con il controllo RichTextBox di Windows Forms
 I moduli di Windows <xref:System.Windows.Forms.RichTextBox> controllo consente di scrivere le informazioni da visualizzare in uno dei seguenti formati:  
   
--   Testo normale  
+- Testo normale  
   
--   Testo normale Unicode  
+- Testo normale Unicode  
   
--   Rich-Text Format (RTF)  
+- Rich-Text Format (RTF)  
   
--   RTF con spazi al posto degli oggetti OLE  
+- RTF con spazi al posto degli oggetti OLE  
   
--   Testo normale con una rappresentazione testuale di oggetti OLE  
+- Testo normale con una rappresentazione testuale di oggetti OLE  
   
  Per salvare un file, chiamare il <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> (metodo). È anche possibile usare la **SaveFile** metodo per salvare i dati in un flusso. Per altre informazioni, vedere <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
   

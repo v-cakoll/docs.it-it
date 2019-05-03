@@ -13,11 +13,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002289"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Disegnare con oggetti Image, Drawing e Visual
 In questo argomento viene descritto come utilizzare <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, e <xref:System.Windows.Media.VisualBrush> oggetti da disegnare un'area con un'immagine, una <xref:System.Windows.Media.Drawing>, o un <xref:System.Windows.Media.Visual>.  
@@ -57,15 +57,15 @@ Oggetti disegnati con un oggetto DrawingBrush
   
  Oggetto <xref:System.Windows.Media.DrawingBrush> disegna un'area con un <xref:System.Windows.Media.Drawing> oggetto. Oggetto <xref:System.Windows.Media.Drawing> oggetto descrive il contenuto visibile, ad esempio una forma, bitmap, video o una riga di testo. Tipi diversi di disegni descrivono tipi diversi di contenuto. L'elenco seguente contiene i vari tipi di oggetti Drawing.  
   
--   <xref:System.Windows.Media.GeometryDrawing> – Consente di disegnare una forma.  
+- <xref:System.Windows.Media.GeometryDrawing> – Consente di disegnare una forma.  
   
--   <xref:System.Windows.Media.ImageDrawing> – Consente di disegnare un'immagine.  
+- <xref:System.Windows.Media.ImageDrawing> – Consente di disegnare un'immagine.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> : Crea testo.  
+- <xref:System.Windows.Media.GlyphRunDrawing> : Crea testo.  
   
--   <xref:System.Windows.Media.VideoDrawing> : Riproduce un file audio o video.  
+- <xref:System.Windows.Media.VideoDrawing> : Riproduce un file audio o video.  
   
--   <xref:System.Windows.Media.DrawingGroup> : Esegue altri disegni. Usare un gruppo di disegni per combinare altri disegni in un unico disegno composto.  
+- <xref:System.Windows.Media.DrawingGroup> : Esegue altri disegni. Usare un gruppo di disegni per combinare altri disegni in un unico disegno composto.  
   
  Per altre informazioni sulle <xref:System.Windows.Media.Drawing> oggetti, vedere la [Cenni preliminari sugli oggetti Drawing](drawing-objects-overview.md).  
   
@@ -89,9 +89,9 @@ Oggetti disegnati con un oggetto DrawingBrush
   
  Esistono due modi per specificare il <xref:System.Windows.Media.VisualBrush.Visual%2A> contenuto di un <xref:System.Windows.Media.VisualBrush>.  
   
--   Creare una nuova <xref:System.Windows.Media.Visual> e usarlo per impostare il <xref:System.Windows.Media.VisualBrush.Visual%2A> proprietà del <xref:System.Windows.Media.VisualBrush>. Per un esempio, vedere il [esempio: Disegnare un oggetto con un oggetto visivo](#examplevisualbrush1) sezione che segue.  
+- Creare una nuova <xref:System.Windows.Media.Visual> e usarlo per impostare il <xref:System.Windows.Media.VisualBrush.Visual%2A> proprietà del <xref:System.Windows.Media.VisualBrush>. Per un esempio, vedere il [esempio: Disegnare un oggetto con un oggetto visivo](#examplevisualbrush1) sezione che segue.  
   
--   Usare un oggetto esistente <xref:System.Windows.Media.Visual>, che consente di creare un'immagine duplicata della destinazione <xref:System.Windows.Media.Visual>. È quindi possibile usare il <xref:System.Windows.Media.VisualBrush> per creare effetti interessanti, ad esempio reflection e ingrandimento. Per un esempio, vedere il [esempio: Creare una Reflection](#examplevisualbrush2) sezione.  
+- Usare un oggetto esistente <xref:System.Windows.Media.Visual>, che consente di creare un'immagine duplicata della destinazione <xref:System.Windows.Media.Visual>. È quindi possibile usare il <xref:System.Windows.Media.VisualBrush> per creare effetti interessanti, ad esempio reflection e ingrandimento. Per un esempio, vedere il [esempio: Creare una Reflection](#examplevisualbrush2) sezione.  
   
  Quando si definisce una nuova <xref:System.Windows.Media.VisualBrush.Visual%2A> per un <xref:System.Windows.Media.VisualBrush> e che <xref:System.Windows.Media.Visual> è un <xref:System.Windows.UIElement> (ad esempio un pannello o un controllo), viene eseguito il sistema di layout nel <xref:System.Windows.UIElement> e i relativi elementi figlio quando il <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> è impostata su `true`. Tuttavia, la radice <xref:System.Windows.UIElement> viene essenzialmente isolato dal resto del sistema: gli stili e layout esterno non può superare questo limite. Pertanto, è necessario specificare in modo esplicito le dimensioni della radice <xref:System.Windows.UIElement>, in quanto il suo unico elemento padre è il <xref:System.Windows.Media.VisualBrush> e pertanto non può essere ridimensionato automaticamente se stesso per l'area da disegnare. Per altre informazioni sul layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], vedere [Layout](../advanced/layout.md).  
   
@@ -139,11 +139,11 @@ Componenti di un oggetto TileBrush con più tessere
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
-- [Cenni preliminari sugli oggetti TileBrush](tilebrush-overview.md)
-- [Cenni preliminari sui pennelli di WPF](wpf-brushes-overview.md)
+- [Panoramica sugli oggetti TileBrush](tilebrush-overview.md)
+- [Panoramica sui pennelli di WPF](wpf-brushes-overview.md)
 - [Cenni preliminari sulla creazione dell'immagine](imaging-overview.md)
 - [Cenni preliminari sugli oggetti Drawing](drawing-objects-overview.md)
-- [Cenni preliminari sulle maschere di opacità](opacity-masks-overview.md)
+- [Panoramica sulle maschere di opacità](opacity-masks-overview.md)
 - [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md)
 - [Esempio ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Esempio VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)

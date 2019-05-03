@@ -1,13 +1,19 @@
 ---
-title: 'Tipi nullable - Guida per programmatori C#'
+title: Tipi nullable - Guida per programmatori C#
 ms.custom: seodec18
-description: 'Informazioni sui tipi nullable C# e su come usarli'
+description: Informazioni sui tipi nullable C# e su come usarli
 ms.date: 07/30/2018
 helpviewer_keywords:
-  - 'nullable types [C#]'
-  - 'C# language, nullable types'
-  - 'types [C#], nullable'
+- nullable types [C#]
+- C# language, nullable types
+- types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
+ms.openlocfilehash: 740b39c9c729f0768e75b0465eb8ca98eb5b318f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710147"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Tipi nullable (Guida per programmatori C#)
 

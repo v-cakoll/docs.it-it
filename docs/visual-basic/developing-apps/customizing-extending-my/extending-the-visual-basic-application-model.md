@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
 ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59320145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014290"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Estensione del modello di applicazione Visual Basic
 È possibile aggiungere funzionalità al modello dell'applicazione eseguendo l'override di `Overridable` i membri del <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Questa tecnica consente di personalizzare il comportamento del modello dell'applicazione e aggiungere chiamate a metodi personalizzati come l'applicazione si avvia e arresta.  
@@ -38,11 +38,11 @@ ms.locfileid: "59320145"
   
      Il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> metodo chiama i metodi seguenti:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Determina se l'applicazione dispone di una schermata iniziale e in caso affermativo, viene visualizzata la schermata iniziale in un thread separato.  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Determina se l'applicazione dispone di una schermata iniziale e in caso affermativo, viene visualizzata la schermata iniziale in un thread separato.  
   
          Il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> metodo contiene il codice che consente di visualizzare la schermata iniziale di schermata per almeno il numero di millisecondi specificato da di <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> proprietà. Per usare questa funzionalità, è necessario aggiungere la schermata all'applicazione usando il **creazione progetti** (che imposta la `My.Application.MinimumSplashScreenDisplayTime` proprietà su due secondi), o impostare il `My.Application.MinimumSplashScreenDisplayTime` proprietà in un metodo che esegue l'override di <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> (metodo). Per altre informazioni, vedere <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Consente a una finestra di progettazione generare il codice che inizializza la schermata iniziale.  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Consente a una finestra di progettazione generare il codice che inizializza la schermata iniziale.  
   
          Per impostazione predefinita, questo metodo non effettua alcuna operazione. Se si seleziona una schermata iniziale per l'applicazione in Visual Basic **creazione progetti**, la finestra di progettazione esegue l'override di <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> metodo con un metodo che imposta il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> proprietà in una nuova istanza del modulo a schermata iniziale .  
   
@@ -54,11 +54,11 @@ ms.locfileid: "59320145"
   
      Per impostazione predefinita, prima che venga attivata il ciclo di messaggi Windows Form, questo metodo chiama il `OnCreateMainForm` (per creare form principale dell'applicazione) e `HideSplashScreen` (per chiudere la schermata iniziale) metodi:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Fornisce un modo per una finestra di progettazione generare il codice che inizializza il modulo principale.  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Fornisce un modo per una finestra di progettazione generare il codice che inizializza il modulo principale.  
   
          Per impostazione predefinita, questo metodo non effettua alcuna operazione. Tuttavia, quando si seleziona un modulo principale per l'applicazione in Visual Basic **creazione progetti**, esegue l'override della finestra di progettazione il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> metodo con un metodo che imposta il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> proprietà in una nuova istanza del form principale.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Se l'applicazione dispone di una schermata iniziale ed è aperto, questo metodo chiude la schermata iniziale.  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Se l'applicazione dispone di una schermata iniziale ed è aperto, questo metodo chiude la schermata iniziale.  
   
          Per impostazione predefinita, questo metodo chiude la schermata iniziale.  
   
@@ -98,6 +98,5 @@ ms.locfileid: "59320145"
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - [Cenni preliminari sul modello di applicazione Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
-- [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Pagina Applicazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

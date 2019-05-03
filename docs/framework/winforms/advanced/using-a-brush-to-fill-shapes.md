@@ -7,11 +7,11 @@ helpviewer_keywords:
 - brushes
 ms.assetid: bf8f7fff-5a90-41e8-9051-494449fb2844
 ms.openlocfilehash: 95112321794359dc282749b94fd9061305b42c23
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926945"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Utilizzo di un oggetto Brush per il riempimento di forme
 Oggetto [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> oggetto viene usato per riempire l'area interna di una forma chiusa. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] definisce diversi stili di riempimento: colore a tinta unita, motivo a tratteggio, immagine trama e sfumatura di colore.  

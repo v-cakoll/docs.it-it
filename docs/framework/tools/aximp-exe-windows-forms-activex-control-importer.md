@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b7a2725b340c4ecb43861e1b8855fcae425a4b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b7e9401cbd26c62f88ccb4a4b8c2caeb78768d9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521881"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59119197"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (utilità di importazione di controlli ActiveX di Windows Form)
 L'utilità di importazione di controlli ActiveX converte in un controllo Windows Form le definizioni dei tipi in una libreria di tipi COM per un controllo ActiveX.  
@@ -34,7 +34,7 @@ L'utilità di importazione di controlli ActiveX converte in un controllo Windows
 aximp [options]{file.dll | file.ocx}  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 |Argomento|Description|  
 |--------------|-----------------|  
@@ -80,5 +80,6 @@ aximp c:\systemroot\system32\msdxm.ocx
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strumenti](../../../docs/framework/tools/index.md)
 - [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

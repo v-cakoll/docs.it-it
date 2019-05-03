@@ -3,14 +3,14 @@ title: Configurazione della traccia del flusso di messaggi
 ms.date: 03/30/2017
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
 ms.openlocfilehash: 02c43b152cb1aef1684185e56eb7f172036ac46b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999518"
 ---
 # <a name="configuring-message-flow-tracing"></a>Configurazione della traccia del flusso di messaggi
-Quando è abilitata la traccia di attività di Windows Communication Foundation (WCF), ID attività End-To-End vengono assegnate alle attività logiche in tutto lo stack WCF. In [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] è ora disponibile una versione con prestazioni superiori di questa funzionalità utilizzabile con Event Tracing for Windows (ETW) denominata traccia del flusso di messaggi. Se abilitati, gli ID di attività end-to-end vengono raccolti dai messaggi in ingresso o assegnati a tali messaggi se vuoti e vengono propagati in tutti gli eventi di traccia generati successivamente alla decodifica del messaggio da parte del canale. I clienti possono utilizzare questa funzionalità per ricostruire flussi di messaggi con i log di traccia dai vari servizi dopo la decodifica.  
+Quando è abilitata l'analisi delle attività di Windows Communication Foundation (WCF), ID attività End-To-End vengono assegnate alle attività logiche in tutto lo stack WCF. In [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] è ora disponibile una versione con prestazioni superiori di questa funzionalità utilizzabile con Event Tracing for Windows (ETW) denominata traccia del flusso di messaggi. Se abilitati, gli ID di attività end-to-end vengono raccolti dai messaggi in ingresso o assegnati a tali messaggi se vuoti e vengono propagati in tutti gli eventi di traccia generati successivamente alla decodifica del messaggio da parte del canale. I clienti possono utilizzare questa funzionalità per ricostruire flussi di messaggi con i log di traccia dai vari servizi dopo la decodifica.  
   
  La traccia può essere abilitata in seguito al rilevamento di un problema con l'applicazione, quindi disabilitata una volta che il problema viene risolto.  
   

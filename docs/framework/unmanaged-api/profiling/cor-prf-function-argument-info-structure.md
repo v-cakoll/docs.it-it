@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 293ad30ebf47ca8684d158b1ae1772ab245d7981
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775089"
 ---
 # <a name="corprffunctionargumentinfo-structure"></a>Struttura COR_PRF_FUNCTION_ARGUMENT_INFO
 Rappresenta gli argomenti di una funzione, in ordine da sinistra a destra.  

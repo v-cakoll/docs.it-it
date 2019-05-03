@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: KrzysztofCwalina
 ms.openlocfilehash: c0790cd20daf859ec81e2252dc9bce46673daf90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945509"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Nomi di classi, struct e interfacce
 Convenzioni di denominazione che seguono si applicano per la denominazione di tipo generale.  
@@ -76,7 +76,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 |`System.Attribute`|**✓ DO** aggiungere il suffisso "Attribute" ai nomi delle classi di attributi personalizzati.|  
 |`System.Delegate`|**✓ DO** aggiungere il suffisso "EventHandler" ai nomi dei delegati vengono utilizzati negli eventi.<br /><br /> **✓ DO** aggiungere il suffisso "Callback" ai nomi dei delegati diversi da quelli usati come gestori eventi.<br /><br /> **X DO NOT** aggiungere il suffisso "Delegato" a un delegato.|  
 |`System.EventArgs`|**✓ DO** aggiungere il suffisso "EventArgs."|  
-|`System.Enum`|**X DO NOT** derivano da questa classe; usare la parola chiave supportata dal linguaggio di invece; ad esempio, in c#, usare il `enum` (parola chiave).<br /><br /> **X DO NOT** aggiungere il suffisso "Enum" o "Flag".|  
+|`System.Enum`|**X DO NOT** derivano da questa classe; usare la parola chiave supportata dal linguaggio di invece; ad esempio, in C#, usare il `enum` (parola chiave).<br /><br /> **X DO NOT** aggiungere il suffisso "Enum" o "Flag".|  
 |`System.Exception`|**✓ DO** aggiungere il suffisso "Exception".|  
 |`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** aggiungere il suffisso "Dizionario". Si noti che `IDictionary` è un tipo specifico della raccolta, ma questa linea guida ha la precedenza su più generale delle linee guida di raccolte che segue.|  
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ DO** aggiungere il suffisso "Collection".|  

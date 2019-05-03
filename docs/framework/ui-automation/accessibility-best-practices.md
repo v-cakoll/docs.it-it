@@ -6,11 +6,11 @@ helpviewer_keywords:
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033228"
 ---
 # <a name="accessibility-best-practices"></a>Procedure consigliate per l'accesso facilitato
 > [!NOTE]
@@ -78,9 +78,9 @@ ms.locfileid: "59074235"
   
  Le applicazioni devono fornire le interfacce di tastiera seguenti:  
   
--   tabulazioni per tutti i controlli con cui l'utente può interagire, ad esempio pulsanti, collegamenti o caselle di riepilogo  
+- tabulazioni per tutti i controlli con cui l'utente può interagire, ad esempio pulsanti, collegamenti o caselle di riepilogo  
   
--   ordine di tabulazione logico  
+- ordine di tabulazione logico  
   
 <a name="Show_the_Keyboard_Focus"></a>   
 ### <a name="show-the-keyboard-focus"></a>Mostrare lo stato attivo della tastiera  
@@ -90,11 +90,11 @@ ms.locfileid: "59074235"
   
  Le applicazioni devono eseguire le operazioni seguenti con lo stato attivo:  
   
--   un elemento deve avere sempre lo stato attivo  
+- un elemento deve avere sempre lo stato attivo  
   
--   lo stato attivo deve essere visibile e ovvio  
+- lo stato attivo deve essere visibile e ovvio  
   
--   le selezioni e/o gli elementi specifici devono essere evidenziati visivamente  
+- le selezioni e/o gli elementi specifici devono essere evidenziati visivamente  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Supportare gli standard di esplorazione e schemi di navigazione potenti  
@@ -102,11 +102,11 @@ ms.locfileid: "59074235"
   
  Le applicazioni devono fornire le interfacce di tastiera seguenti:  
   
--   tasti di scelta rapida e tasti di scelta sottolineati per tutti i comandi, menu e controlli  
+- tasti di scelta rapida e tasti di scelta sottolineati per tutti i comandi, menu e controlli  
   
--   tasti di scelta rapida per collegamenti importanti  
+- tasti di scelta rapida per collegamenti importanti  
   
--   tutte le voci di menu hanno un tasto di scelta; tutti i pulsanti hanno tasti di scelta rapida, tutti i comandi hanno un tasto di scelta rapida.  
+- tutte le voci di menu hanno un tasto di scelta; tutti i pulsanti hanno tasti di scelta rapida, tutti i comandi hanno un tasto di scelta rapida.  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>   
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>Non consentire alla posizione del mouse di interferire con la navigazione da tastiera  

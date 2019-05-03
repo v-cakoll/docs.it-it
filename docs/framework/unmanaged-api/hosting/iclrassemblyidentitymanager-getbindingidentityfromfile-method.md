@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a3d5e53dd0845fbd01dbd9d20ce8feef12748c04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985179"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a>Metodo ICLRAssemblyIdentityManager::GetBindingIdentityFromFile
 Ottiene l'identità dell'assembly data binding per l'assembly nel percorso del file specificato.  

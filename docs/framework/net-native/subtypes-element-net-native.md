@@ -5,11 +5,11 @@ ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e0ec1ed73148b319217a70cc3be99b486be2f8e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866852"
 ---
 # <a name="subtypes-element-net-native"></a>\<Subtypes > elemento (.NET Native)
 Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore.  
@@ -60,7 +60,7 @@ Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
   
 ## <a name="remarks"></a>Note  
  L'elemento `<Subtypes>` applica i criteri a tutti i sottotipi del tipo contenitore. Viene usato per applicare criteri diversi ai tipi derivati e alle classi base.  
@@ -92,6 +92,6 @@ Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore
 ## <a name="see-also"></a>Vedere anche
 
 - [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
-- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Impostazioni dei criteri della direttiva di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

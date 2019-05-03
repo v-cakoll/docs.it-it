@@ -6,11 +6,11 @@ helpviewer_keywords:
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
 ms.openlocfilehash: 607b3a11085f746503c1b82552f1740b49d9ef5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942071"
 ---
 # <a name="how-to-scale-an-element"></a>Procedura: Ridimensionare un elemento
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media.ScaleTransform> per ridimensionare un elemento.  
@@ -42,4 +42,4 @@ Due operazioni ScaleTransform con valori di ScaleX e ScaleY identici, ma con cen
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
 - [Cenni preliminari sulle trasformazioni](transforms-overview.md)
-- [Procedure relative](transformations-how-to-topics.md)
+- [Procedure relative alle proprietà](transformations-how-to-topics.md)

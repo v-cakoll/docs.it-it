@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], examples [Visual Basic]
 ms.assetid: 737bae30-e599-4e1d-bf30-bab8280b32be
 ms.openlocfilehash: 3acaf18afa621a182c26f00c0594516ac573e281
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937735"
 ---
 # <a name="how-to-create-a-bitmap-at-run-time"></a>Procedura: Creare una bitmap in fase di esecuzione
 Questo esempio viene creata e disegna un <xref:System.Drawing.Bitmap> dell'oggetto e lo visualizza in un form Windows esistenti <xref:System.Windows.Forms.PictureBox> controllo.  
@@ -25,7 +25,7 @@ Questo esempio viene creata e disegna un <xref:System.Drawing.Bitmap> dell'ogget
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Un modulo di Windows che importa l'assembly System, System. Drawing e System.  
+- Un modulo di Windows che importa l'assembly System, System. Drawing e System.  
   
 ## <a name="see-also"></a>Vedere anche
 

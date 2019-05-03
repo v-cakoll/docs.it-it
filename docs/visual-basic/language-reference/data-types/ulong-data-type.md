@@ -17,11 +17,11 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
 ms.openlocfilehash: 82a2badc1bb22a55f753c9075562db3a5ee0d234
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747082"
 ---
 # <a name="ulong-data-type-visual-basic"></a>Tipo di dati ULong (Visual Basic)
 
@@ -64,19 +64,19 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 ## <a name="programming-tips"></a>Suggerimenti sulla programmazione
   
--   **Numeri negativi.** Poiché `ULong` è un tipo unsigned, non può rappresentare un numero negativo. Se si usa l'operatore meno unario (`-`) gli operatori di un'espressione che restituisce il tipo `ULong`, Visual Basic consente di convertire l'espressione da `Decimal` prima.  
+- **Numeri negativi.** Poiché `ULong` è un tipo unsigned, non può rappresentare un numero negativo. Se si usa l'operatore meno unario (`-`) gli operatori di un'espressione che restituisce il tipo `ULong`, Visual Basic consente di convertire l'espressione da `Decimal` prima.  
   
--   **Conformità a CLS.** Il `ULong` tipo di dati non è in parte il [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), in modo che il codice conforme a CLS non è possibile utilizzare un componente che lo usa.  
+- **Conformità a CLS.** Il `ULong` tipo di dati non è in parte il [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), in modo che il codice conforme a CLS non è possibile utilizzare un componente che lo usa.  
   
--   **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi, ad esempio `ulong` può avere una larghezza diversa dei dati (32 bit) in altri ambienti. Se si passa un argomento a 32 bit a tale componente, dichiararlo come `UInteger` invece di `ULong` nel codice gestito di Visual Basic.  
+- **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi, ad esempio `ulong` può avere una larghezza diversa dei dati (32 bit) in altri ambienti. Se si passa un argomento a 32 bit a tale componente, dichiararlo come `UInteger` invece di `ULong` nel codice gestito di Visual Basic.  
   
      Inoltre, automazione non supporta valori interi a 64 bit in Windows 95, Windows 98, Windows ME o Windows 2000. Non è possibile passare un oggetto visivo di base `ULong` argomento a un componente di automazione in queste piattaforme.  
   
--   **Widening.** Il `ULong` può ampliarsi nel tipo di dati `Decimal`, `Single`, e `Double`. Ciò significa che è possibile convertire `ULong` a uno di questi tipi senza generare un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
+- **Widening.** Il `ULong` può ampliarsi nel tipo di dati `Decimal`, `Single`, e `Double`. Ciò significa che è possibile convertire `ULong` a uno di questi tipi senza generare un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
   
--   **Caratteri tipo.** Aggiungendo i caratteri di tipo di valore letterale `UL` a un valore letterale, se ne determina la `ULong` tipo di dati. `ULong` possiede alcun carattere di tipo identificatore.
+- **Caratteri tipo.** Aggiungendo i caratteri di tipo di valore letterale `UL` a un valore letterale, se ne determina la `ULong` tipo di dati. `ULong` possiede alcun carattere di tipo identificatore.
   
--   **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.UInt64?displayProperty=nameWithType>.  
+- **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.UInt64?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
 

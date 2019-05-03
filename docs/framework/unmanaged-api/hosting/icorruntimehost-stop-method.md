@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3c59a0c5ef1e89c2853a566bd3b587d15a1ed80c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700735"
 ---
 # <a name="icorruntimehoststop-method"></a>Metodo ICorRuntimeHost::Stop
 Arresta l'esecuzione di codice in fase di esecuzione per il processo corrente.  

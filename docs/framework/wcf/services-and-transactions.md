@@ -5,11 +5,11 @@ helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
 ms.openlocfilehash: 9dfe34406bfda2c16bd2f0cd53796b2fcef07b57
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967921"
 ---
 # <a name="services-and-transactions"></a>Servizi e transazioni
 Le applicazioni di Windows Communication Foundation (WCF) è possono avviare una transazione dall'interno di un client e coordinarla all'interno dell'operazione di servizio. I client possono avviare una transazione e richiamare varie operazioni di servizio nonché fare in modo che per queste ultime venga eseguito il commit o il rollback come unità singola.  

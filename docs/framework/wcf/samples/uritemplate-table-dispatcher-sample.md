@@ -3,22 +3,22 @@ title: Dispatcher di esempio nella tabella UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
 ms.openlocfilehash: 800765c6b01e49b730414132ac64ab8eed3e9e5f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59330831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007566"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>Dispatcher di esempio nella tabella UriTemplate
 La classe <xref:System.UriTemplateTable> fornisce una struttura con tabella associativa simile a un dizionario per lavorare con un set di istanze <xref:System.UriTemplate>. In questo esempio viene illustrato un motore di distribuzione di base compilato utilizzando `UriTemplateTable`, uno scenario di utilizzo comune per la classe `UriTemplateTable`.  
   
  In questo esempio vengono illustrati i seguenti concetti principali relativi alla classe `UriTemplateTable`:  
   
--   Associazione di delegati a `UriTemplates` in un `UriTemplateTable`.  
+- Associazione di delegati a `UriTemplates` in un `UriTemplateTable`.  
   
--   Utilizzo di <xref:System.UriTemplateTable.MatchSingle%2A> per ottenere il delegato del gestore corretto per un particolare URI.  
+- Utilizzo di <xref:System.UriTemplateTable.MatchSingle%2A> per ottenere il delegato del gestore corretto per un particolare URI.  
   
--   Chiamata al delegato del gestore per elaborare la richiesta.  
+- Chiamata al delegato del gestore per elaborare la richiesta.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
@@ -37,5 +37,5 @@ La classe <xref:System.UriTemplateTable> fornisce una struttura con tabella asso
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Tabella UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [UriTemplateTable](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
 - [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)

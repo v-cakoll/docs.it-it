@@ -15,11 +15,11 @@ helpviewer_keywords:
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
 ms.openlocfilehash: 0cba3a995fb1ab774c8a5308e58f0b6905fc23f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781173"
 ---
 # <a name="xor-operator-visual-basic"></a>Operatore Xor (Visual Basic)
 Esegue un'esclusione logica su due `Boolean` espressioni, oppure un'esclusione bit per bit su due espressioni numeriche.  

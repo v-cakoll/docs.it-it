@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f38217a5385b9d736eaa744a73024f210eb8f553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829383"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59298396"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Procedura dettagliata: Filtro dell'output di My.Application.Log (Visual Basic)
 Questa procedura dettagliata illustra come modificare il filtro di log predefinito per l'oggetto `My.Application.Log` per stabilire quali informazioni vengono passate dall'oggetto `Log` ai listener e quali informazioni vengono scritte dai listener. È possibile modificare il comportamento di registrazione anche dopo la compilazione dell'applicazione, poiché le informazioni di configurazione vengono archiviate nel file di configurazione dell'applicazione.  
@@ -21,17 +21,17 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
   
 #### <a name="to-build-the-sample-application"></a>Per compilare l'applicazione di esempio  
   
-1.  Aprire un nuovo progetto Applicazione Windows in Visual Basic.  
+1. Aprire un nuovo progetto Applicazione Windows in Visual Basic.  
   
-2.  Aggiungere un pulsante denominato Button1 a Form1.  
+2. Aggiungere un pulsante denominato Button1 a Form1.  
   
-3.  Aggiungere il codice seguente al gestore eventi <xref:System.Windows.Forms.Control.Click> per Button1:  
+3. Aggiungere il codice seguente al gestore eventi <xref:System.Windows.Forms.Control.Click> per Button1:  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]  
   
-4.  Eseguire l'applicazione nel debugger.  
+4. Eseguire l'applicazione nel debugger.  
   
-5.  Premere **Button1**.  
+5. Premere **Button1**.  
   
      L'applicazione scrive le informazioni seguenti nel file di log e di output di debug dell'applicazione.  
   
@@ -39,7 +39,7 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
   
      `DefaultSource Error: 2 : Error in the application.`  
   
-6.  Chiudere l'applicazione.  
+6. Chiudere l'applicazione.  
   
      Per informazioni su come visualizzare la finestra di output di debug dell'applicazione, vedere [Finestra di output](/visualstudio/ide/reference/output-window). Per informazioni sulla posizione del file di log dell'applicazione, vedere [Procedura dettagliata: Individuazione della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
@@ -71,7 +71,7 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
   
 #### <a name="to-log-only-activity-tracing-events"></a>Per registrare solo gli eventi di traccia attività  
   
-1.  Fare clic con il pulsante destro del mouse su app.config **Esplora soluzioni** e selezionare **Apri**.  
+1. Fare clic con il pulsante destro del mouse su app.config **Esplora soluzioni** e selezionare **Apri**.  
   
      -oppure-  
   
@@ -83,15 +83,15 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
   
     3.  Fare clic su **Aggiungi**.  
   
-2.  Individuare la sezione `<switches>` nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
+2. Individuare la sezione `<switches>` nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
   
-3.  Trovare l'elemento che consente di aggiungere `DefaultSwitch` alla raccolta di opzioni. Deve essere simile all'elemento seguente:  
+3. Trovare l'elemento che consente di aggiungere `DefaultSwitch` alla raccolta di opzioni. Deve essere simile all'elemento seguente:  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  Modificare il valore dell'attributo `value` impostandolo su "ActivityTracing".  
+4. Modificare il valore dell'attributo `value` impostandolo su "ActivityTracing".  
   
-5.  Il contenuto del file app.config dovrebbe essere simile al codice XML seguente.  
+5. Il contenuto del file app.config dovrebbe essere simile al codice XML seguente.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -120,9 +120,9 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
     </configuration>  
     ```  
   
-6.  Eseguire l'applicazione nel debugger.  
+6. Eseguire l'applicazione nel debugger.  
   
-7.  Premere **Button1**.  
+7. Premere **Button1**.  
   
      L'applicazione scrive le informazioni seguenti nel file di log e di output di debug dell'applicazione:  
   
@@ -130,7 +130,7 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
   
      `DefaultSource Stop: 5 : Leaving Button1_Click`  
   
-8.  Chiudere l'applicazione.  
+8. Chiudere l'applicazione.  
   
 9. Impostare di nuovo il valore dell'attributo `value` su "Information".  
   
@@ -146,7 +146,7 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
   
 #### <a name="to-log-only-activity-tracing-events"></a>Per registrare solo gli eventi di traccia attività  
   
-1.  Fare clic con il pulsante destro del mouse su app.config in **Esplora soluzioni** e scegliere **Apri**.  
+1. Fare clic con il pulsante destro del mouse su app.config in **Esplora soluzioni** e scegliere **Apri**.  
   
      -oppure-  
   
@@ -158,11 +158,11 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
   
     3.  Fare clic su **Aggiungi**.  
   
-2.  Fare clic con il pulsante destro del mouse su app.config in **Esplora soluzioni**. Scegliere **Apri**.  
+2. Fare clic con il pulsante destro del mouse su app.config in **Esplora soluzioni**. Scegliere **Apri**.  
   
-3.  Individuare la sezione `<listeners>` all'interno della sezione `<source>` con l'attributo `name` "DefaultSource" che si trova nella sezione `<sources>` . La sezione `<sources>` si trova nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
+3. Individuare la sezione `<listeners>` all'interno della sezione `<source>` con l'attributo `name` "DefaultSource" che si trova nella sezione `<sources>` . La sezione `<sources>` si trova nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
   
-4.  Aggiungere l'elemento seguente alla sezione `<listeners>`:  
+4. Aggiungere l'elemento seguente alla sezione `<listeners>`:  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -171,9 +171,9 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
     <add name="NewDefault"/>  
     ```  
   
-5.  Individuare la sezione `<sharedListeners>` nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
+5. Individuare la sezione `<sharedListeners>` nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
   
-6.  Aggiungere l'elemento seguente alla sezione `<sharedListeners>` :  
+6. Aggiungere l'elemento seguente alla sezione `<sharedListeners>` :  
   
     ```xml  
     <add name="NewDefault"   
@@ -188,7 +188,7 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
   
      Il filtro <xref:System.Diagnostics.EventTypeFilter> accetta uno dei valori di enumerazione di <xref:System.Diagnostics.SourceLevels> come proprio attributo `initializeData`.  
   
-7.  Il contenuto del file app.config dovrebbe essere simile al codice XML seguente.  
+7. Il contenuto del file app.config dovrebbe essere simile al codice XML seguente.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -229,7 +229,7 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
     </configuration>  
     ```  
   
-8.  Eseguire l'applicazione nel debugger.  
+8. Eseguire l'applicazione nel debugger.  
   
 9. Premere **Button1**.  
   

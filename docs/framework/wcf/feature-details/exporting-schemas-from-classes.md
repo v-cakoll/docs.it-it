@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
 ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856676"
 ---
 # <a name="exporting-schemas-from-classes"></a>Esportazione di schemi dalle classi
 Per generare schemi XSD (XML Schema Definition Language) dalle classi usate nel modello del contratto dati, usare la classe <xref:System.Runtime.Serialization.XsdDataContractExporter> . In questo argomento viene illustrato il processo di creazione degli schemi.  
@@ -48,13 +48,13 @@ Per generare schemi XSD (XML Schema Definition Language) dalle classi usate nel 
 -   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. Un'interfaccia <xref:System.Runtime.Serialization.IDataContractSurrogate> può essere fornita tramite questa proprietà per personalizzare il processo di esportazione. Per altre informazioni, vedere [surrogati del contratto dati](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Per impostazione predefinita, non viene usato alcun surrogato.  
   
 ## <a name="helper-methods"></a>Metodi helper  
- Oltre al ruolo principale di esportare gli schemi, `XsdDataContractExporter` fornisce molti utili metodi helper che forniscono informazioni sui tipi. Sono inclusi:  
+ Oltre al ruolo principale di esportare gli schemi, `XsdDataContractExporter` fornisce molti utili metodi helper che forniscono informazioni sui tipi. tra cui:  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> ProcessOnStatus. Questo metodo accetta un `Type` e restituisce un <xref:System.Xml.XmlQualifiedName> che rappresenta il nome e lo spazio dei nomi dell'elemento principale che verrebbero usati se questo tipo venisse serializzato come oggetto principale.  
+-   Metodo<xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> . Questo metodo accetta un `Type` e restituisce un <xref:System.Xml.XmlQualifiedName> che rappresenta il nome e lo spazio dei nomi dell'elemento principale che verrebbero usati se questo tipo venisse serializzato come oggetto principale.  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> ProcessOnStatus. Questo metodo accetta un `Type` e restituisce un <xref:System.Xml.XmlQualifiedName> che rappresenta il nome dello schema XSD che verrebbe usato se questo tipo venisse esportato nello schema. Per i tipi <xref:System.Xml.Serialization.IXmlSerializable> rappresentati come tipi anonimi nello schema, questo metodo restituisce `null`.  
+-   Metodo<xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> . Questo metodo accetta un `Type` e restituisce un <xref:System.Xml.XmlQualifiedName> che rappresenta il nome dello schema XSD che verrebbe usato se questo tipo venisse esportato nello schema. Per i tipi <xref:System.Xml.Serialization.IXmlSerializable> rappresentati come tipi anonimi nello schema, questo metodo restituisce `null`.  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> ProcessOnStatus. Questo metodo funziona solo con i tipi <xref:System.Xml.Serialization.IXmlSerializable> rappresentati come tipi anonimi nello schema e restituisce `null` per tutti gli altri tipi. Per i tipi anonimi, questo metodo restituisce un <xref:System.Xml.Schema.XmlSchemaType> che rappresenta un determinato `Type`.  
+-   Metodo<xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> . Questo metodo funziona solo con i tipi <xref:System.Xml.Serialization.IXmlSerializable> rappresentati come tipi anonimi nello schema e restituisce `null` per tutti gli altri tipi. Per i tipi anonimi, questo metodo restituisce un <xref:System.Xml.Schema.XmlSchemaType> che rappresenta un determinato `Type`.  
   
  Le opzioni di esportazione influiscono su tutti questi metodi.  
   
@@ -63,5 +63,5 @@ Per generare schemi XSD (XML Schema Definition Language) dalle classi usate nel 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>
-- [Importazione ed esportazione degli schemi](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
+- [Importazione ed esportazione di schemi](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
 - [Importazione dello schema per generare classi](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)

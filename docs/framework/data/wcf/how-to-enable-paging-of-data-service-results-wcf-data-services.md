@@ -8,11 +8,11 @@ helpviewer_keywords:
 - paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
 ms.openlocfilehash: edc150d118153849dd84eb40f1443d842c7d346d
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59517824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875888"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>Procedura: Abilitare il Paging dei risultati del servizio dati (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di limitare il numero di entità restituite da una query del servizio dati. I limiti di paging vengono definiti nel metodo chiamato all'avvio del servizio e possono essere impostati separatamente per ogni set di entità.  

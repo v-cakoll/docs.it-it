@@ -3,11 +3,11 @@ title: tipo complesso
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
 ms.openlocfilehash: 9d63660c441192bbc9ecb48bb3a86030b46461cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880012"
 ---
 # <a name="complex-type"></a>tipo complesso
 Oggetto *tipo complesso* è un modello per la definizione di proprietà dettagliate e strutturate sul [tipi di entità](../../../../docs/framework/data/adonet/entity-type.md) o su altri tipi complessi. Ogni modello contiene quanto segue:  

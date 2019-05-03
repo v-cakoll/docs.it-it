@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 79d4c5b2b2bbe821ff546324fd3af04cb3472e4c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796667"
 ---
 # <a name="ihosttaskmanagersetlocale-method"></a>Metodo IHostTaskManager::SetLocale
 Notifica all'host che common language runtime (CLR) è stato modificato le impostazioni locali o impostazioni cultura, l'attività attualmente in esecuzione.  

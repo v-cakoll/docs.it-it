@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59121979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932795"
 ---
 # <a name="using-message-contracts"></a>Utilizzo dei contratti di messaggio
 In genere durante la compilazione di applicazioni Windows Communication Foundation (WCF), gli sviluppatori prestare particolare attenzione alle strutture dei dati e alle problematiche di serializzazione e non sono necessario occuparsi della struttura dei messaggi in cui sono trasportati i dati. Per queste applicazioni, la creazione dei contratti dati per i parametri o dei valori restituiti è semplice. (Per altre informazioni, vedere [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -105,7 +105,7 @@ public class BankingTransaction
  <xref:System.ServiceModel.MessageContractAttribute> consente di specificare gli attributi WrapperName e WrapperNamespace che determinano il nome dell'elemento wrapper nel corpo del messaggio SOAP. Per impostazione predefinita, il nome del tipo di contratto di messaggio viene utilizzato per il wrapper e lo spazio dei nomi in cui il contratto di messaggio viene definito. `http://tempuri.org/` viene utilizzato come spazio dei nomi predefinito.  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute> gli attributi vengono ignorati nei contratti di messaggio. Se è richiesto un <xref:System.Runtime.Serialization.KnownTypeAttribute>, inserirlo nell'operazione in cui è utilizzato il contratto di messaggio interessato.  
+>  Gli attributi <xref:System.Runtime.Serialization.KnownTypeAttribute> vengono ignorati nei contratti di messaggio. Se è richiesto un <xref:System.Runtime.Serialization.KnownTypeAttribute>, inserirlo nell'operazione in cui è utilizzato il contratto di messaggio interessato.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Controllo di intestazione, nomi di parti del corpo e spazi dei nomi  
  Nella rappresentazione SOAP di un contratto di messaggio, ogni intestazione e parte del corpo esegue il mapping a un elemento XML che ha un nome e uno spazio dei nomi.  
@@ -244,11 +244,11 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>Attributi di intestazione SOAP  
  Lo standard SOAP definisce gli attributi che possono esistere in un'intestazione. Tali attributi sono:  
   
--   `Actor/Role` (`Actor` in SOAP 1.1, `Role` in SOAP 1.2)  
+- `Actor/Role` (`Actor` in SOAP 1.1, `Role` in SOAP 1.2)  
   
--   `MustUnderstand`  
+- `MustUnderstand`  
   
--   `Relay`  
+- `Relay`  
   
  L'attributo `Actor` o `Role` specifica l'URI (Uniform Resource Identifier) del nodo al quale è destinata una determinata intestazione. L'attributo `MustUnderstand` specifica se il nodo che elabora l'intestazione deve comprenderla. L'attributo `Relay` specifica se l'intestazione deve essere inoltrata ai nodi downstream. WCF non esegue alcuna elaborazione di questi attributi nei messaggi in arrivo, ad eccezione di `MustUnderstand` attributo, come specificato nella sezione "Versioni di DataContract messaggio" più avanti in questo argomento. Consente tuttavia di leggerli e scriverli come appropriato, come nella descrizione seguente.  
   
@@ -323,9 +323,9 @@ public class BankingTransaction
   
  Per il controllo delle versioni delle intestazioni, si applicano le regole seguenti:  
   
--   WCF non oggetto alle intestazioni mancanti, ovvero i membri corrispondenti vengono lasciati sui rispettivi valori predefiniti.  
+- WCF non oggetto alle intestazioni mancanti, ovvero i membri corrispondenti vengono lasciati sui rispettivi valori predefiniti.  
   
--   WCF ignora anche intestazioni aggiuntive impreviste. Fa eccezione a questa regola il caso di un'intestazione aggiuntiva il cui attributo `MustUnderstand` sia impostato su `true` nel messaggio SOAP in ingresso. Non essendo possibile elaborare un'intestazione che deve essere compresa, viene generata un'eccezione.  
+- WCF ignora anche intestazioni aggiuntive impreviste. Fa eccezione a questa regola il caso di un'intestazione aggiuntiva il cui attributo `MustUnderstand` sia impostato su `true` nel messaggio SOAP in ingresso. Non essendo possibile elaborare un'intestazione che deve essere compresa, viene generata un'eccezione.  
   
  Per i corpi dei messaggi si applicano regole simili di controllo delle versioni, sia le parti di corpi dei messaggi mancanti che quelle aggiuntive vengono ignorate.  
   
@@ -334,9 +334,9 @@ public class BankingTransaction
   
  Quando si crea o si accede a un messaggio utilizzando un tipo di contratto di messaggio che eredita da altri tipi di contratto di messaggio, si applicano le regole seguenti:  
   
--   Tutte le intestazioni del messaggio nella gerarchia di ereditarietà sono raccolte insieme per formare il set completo di intestazioni per il messaggio.  
+- Tutte le intestazioni del messaggio nella gerarchia di ereditarietà sono raccolte insieme per formare il set completo di intestazioni per il messaggio.  
   
--   Tutte le parti del corpo del messaggio nella gerarchia di ereditarietà sono raccolte insieme per formare l'intero corpo del messaggio. Le parti del corpo sono ordinate in base alle normali regole di ordinamento (in base alla proprietà <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> e quindi alfabeticamente), senza considerare affatto la loro posizione nella gerarchia di ereditarietà. È assolutamente sconsigliato usare l'ereditarietà del contratto di messaggio nel caso in cui le parti del corpo del messaggio si trovino a più livelli della struttura di ereditarietà. Se una classe di base e una classe derivata definiscono un'intestazione o una parte del corpo con lo stesso nome, per archiviare il valore di quell'intestazione o di quella parte del corpo viene utilizzato il membro della classe più di base.  
+- Tutte le parti del corpo del messaggio nella gerarchia di ereditarietà sono raccolte insieme per formare l'intero corpo del messaggio. Le parti del corpo sono ordinate in base alle normali regole di ordinamento (in base alla proprietà <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> e quindi alfabeticamente), senza considerare affatto la loro posizione nella gerarchia di ereditarietà. È assolutamente sconsigliato usare l'ereditarietà del contratto di messaggio nel caso in cui le parti del corpo del messaggio si trovino a più livelli della struttura di ereditarietà. Se una classe di base e una classe derivata definiscono un'intestazione o una parte del corpo con lo stesso nome, per archiviare il valore di quell'intestazione o di quella parte del corpo viene utilizzato il membro della classe più di base.  
   
  Si considerino le classi nell'esempio di codice seguente.  
   
@@ -361,26 +361,26 @@ public class PatientRecord : PersonRecord
 ## <a name="wsdl-considerations"></a>Considerazioni su WSDL  
  Quando si genera un contratto Web Services Description Language (WSDL) da un servizio che utilizza contratti di messaggio, è importante ricordare che non tutte le funzionalità del contratto di messaggio vengono riflesse nel WSDL risultante. Si considerino i punti seguenti:  
   
--   WSDL non è in grado di esprimere il concetto di una matrice di intestazioni. Quando si creano messaggi con una matrice di intestazioni utilizzando <xref:System.ServiceModel.MessageHeaderArrayAttribute>, il WSDL risultante riflette solo un'intestazione anziché la matrice.  
+- WSDL non è in grado di esprimere il concetto di una matrice di intestazioni. Quando si creano messaggi con una matrice di intestazioni utilizzando <xref:System.ServiceModel.MessageHeaderArrayAttribute>, il WSDL risultante riflette solo un'intestazione anziché la matrice.  
   
--   Il documento WSDL risultante non può riflettere alcune informazioni del livello di protezione.  
+- Il documento WSDL risultante non può riflettere alcune informazioni del livello di protezione.  
   
--   Il tipo di messaggio generato in WSDL ha lo stesso nome della classe del tipo del contratto di messaggio.  
+- Il tipo di messaggio generato in WSDL ha lo stesso nome della classe del tipo del contratto di messaggio.  
   
--   Quando si utilizza lo stesso contratto di messaggio in più operazioni, nel documento WSDL vengono generati più tipi di messaggio. I nomi sono resi univoci aggiungendo i numeri "2", "3" e così via, per gli utilizzi successivi. Al momento della reimportazione in WSDL, vengono creati più tipi di contratto di messaggio, che sono identici tranne che per il nome.  
+- Quando si utilizza lo stesso contratto di messaggio in più operazioni, nel documento WSDL vengono generati più tipi di messaggio. I nomi sono resi univoci aggiungendo i numeri "2", "3" e così via, per gli utilizzi successivi. Al momento della reimportazione in WSDL, vengono creati più tipi di contratto di messaggio, che sono identici tranne che per il nome.  
   
 ## <a name="soap-encoding-considerations"></a>Considerazioni sulla codifica SOAP  
  WCF consente di utilizzare lo stile del codice XML, di codifica SOAP legacy, tuttavia, l'uso non è consigliabile. Quando si utilizza questo stile, impostando la proprietà `Use` su `Encoded` nel <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> applicato al contratto di servizio, si applicano le considerazioni aggiuntive seguenti:  
   
--   Le intestazioni del messaggio non sono supportate. Ciò significa che l'attributo <xref:System.ServiceModel.MessageHeaderAttribute> e l'attributo della matrice <xref:System.ServiceModel.MessageHeaderArrayAttribute> sono incompatibili con la codifica SOAP.  
+- Le intestazioni del messaggio non sono supportate. Ciò significa che l'attributo <xref:System.ServiceModel.MessageHeaderAttribute> e l'attributo della matrice <xref:System.ServiceModel.MessageHeaderArrayAttribute> sono incompatibili con la codifica SOAP.  
   
--   Se il contratto di messaggio non viene incapsulato, ovvero se la proprietà <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> è impostata su `false`, può avere solo una parte del corpo.  
+- Se il contratto di messaggio non viene incapsulato, ovvero se la proprietà <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> è impostata su `false`, può avere solo una parte del corpo.  
   
--   Il nome dell'elemento wrapper per il contratto di messaggio di richiesta deve corrispondere al nome dell'operazione. A tale scopo, utilizzare la proprietà `WrapperName` del contratto di messaggio.  
+- Il nome dell'elemento wrapper per il contratto di messaggio di richiesta deve corrispondere al nome dell'operazione. A tale scopo, utilizzare la proprietà `WrapperName` del contratto di messaggio.  
   
--   Il nome dell'elemento wrapper per il contratto di messaggio di risposta deve essere identico a quello del nome dell'operazione con il suffisso "Response". A tale scopo, utilizzare la proprietà <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> del contratto di messaggio.  
+- Il nome dell'elemento wrapper per il contratto di messaggio di risposta deve essere identico a quello del nome dell'operazione con il suffisso "Response". A tale scopo, utilizzare la proprietà <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> del contratto di messaggio.  
   
--   La codifica SOAP mantiene i riferimenti all'oggetto. Si consideri il codice di esempio seguente.  
+- La codifica SOAP mantiene i riferimenti all'oggetto. Si consideri il codice di esempio seguente.  
   
     ```csharp  
     [MessageContract(WrapperName="updateChangeRecord")]  
@@ -449,5 +449,5 @@ public class OperationDetails
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso di contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Progettazione e implementazione di servizi](../../../../docs/framework/wcf/designing-and-implementing-services.md)

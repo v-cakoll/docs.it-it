@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 2c1416566ca59a44b36457c710955de863013417
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 05978c5604e7aa359b016bd6e3f3196178f706ec
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980722"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59332209"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argomenti della riga di comando (Guida per programmatori C#)
 È possibile inviare argomenti al metodo `Main` definendo il metodo in uno dei modi seguenti:  
@@ -51,23 +51,23 @@ long num = Convert.ToInt64(s);
   
  Per compilare ed eseguire l'applicazione al prompt dei comandi, seguire questa procedura:  
   
-1.  Incollare il codice seguente in un editor di testo, quindi salvare il file come file di testo con il nome `Factorial.cs`.  
+1. Incollare il codice seguente in un editor di testo, quindi salvare il file come file di testo con il nome `Factorial.cs`.  
   
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
-2.  Dalla schermata **Start** o dal menu **Start**, aprire una finestra **Prompt dei comandi per gli sviluppatori** di Visual Studio e selezionare la cartella contenente il file appena creato.  
+2. Dalla schermata **Start** o dal menu **Start**, aprire una finestra **Prompt dei comandi per gli sviluppatori** di Visual Studio e selezionare la cartella contenente il file appena creato.  
   
-3.  Immettere il seguente comando per compilare l'applicazione.  
+3. Immettere il seguente comando per compilare l'applicazione.  
   
      `csc Factorial.cs`  
   
      Se l'applicazione non presenta errori di compilazione, viene creato un file eseguibile denominato `Factorial.exe`.  
   
-4.  Immettere il comando seguente per calcolare il fattoriale di 3:  
+4. Immettere il comando seguente per calcolare il fattoriale di 3:  
   
      `Factorial 3`  
   
-5.  Il comando produce il seguente output: `The factorial of 3 is 6.`  
+5. Il comando produce il seguente output: `The factorial of 3 is 6.`  
   
 > [!NOTE]
 >  Quando si esegue un'applicazione in Visual Studio, è possibile specificare argomenti della riga di comando nella [Pagina Debug, Progettazione progetti](/visualstudio/ide/reference/debug-page-project-designer).  

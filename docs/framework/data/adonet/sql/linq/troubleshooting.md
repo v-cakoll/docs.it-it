@@ -3,11 +3,11 @@ title: Risoluzione dei problemi
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
 ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917635"
 ---
 # <a name="troubleshooting"></a>Risoluzione dei problemi
 Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile incontrare nelle applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e vengono forniti suggerimenti per evitare o altrimenti ridurre l'effetto di questi problemi.  
@@ -31,9 +31,9 @@ Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile 
 ## <a name="cascade-delete"></a>Eliminazione a catena  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta o non riconosce operazioni di eliminazione a catena. Se si desidera eliminare una riga in una tabella contenente vincoli, è necessario effettuare una delle operazioni seguenti:  
   
--   Impostare la regola `ON DELETE CASCADE` nel vincolo di chiave esterna del database.  
+- Impostare la regola `ON DELETE CASCADE` nel vincolo di chiave esterna del database.  
   
--   Usare il codice personalizzato per eliminare prima gli oggetti figlio che impediscono l'eliminazione dell'oggetto padre.  
+- Usare il codice personalizzato per eliminare prima gli oggetti figlio che impediscono l'eliminazione dell'oggetto padre.  
   
  In caso contrario, viene generata un'eccezione <xref:System.Data.SqlClient.SqlException>.  
   
@@ -42,11 +42,11 @@ Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile 
 ## <a name="expression-not-queryable"></a>Espressione che non può essere sottoposta a query  
  Se viene visualizzato il "espressione [espressione] non è disponibile per query; Probabilmente manca un riferimento all'assembly" errore, verificare quanto segue:  
   
--   L'applicazione possa essere usata con [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
+- L'applicazione possa essere usata con [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
   
--   È presente un riferimento a `System.Core.dll` e `System.Data.Linq.dll`.  
+- È presente un riferimento a `System.Core.dll` e `System.Data.Linq.dll`.  
   
--   È necessario un `Imports` (Visual Basic) o `using` direttiva (c#) per <xref:System.Linq> e <xref:System.Data.Linq>.  
+- È necessario un `Imports` (Visual Basic) o `using` direttiva (c#) per <xref:System.Linq> e <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  Nel corso del debug un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetto, è possibile attraversare le relazioni di un'entità. In questo modo offre questi elementi nella cache e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene a conoscenza della loro presenza. Se si tenta quindi di eseguire <xref:System.Data.Linq.Table%601.Attach%2A> o <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> oppure un metodo simile che crea più righe con la stessa chiave, viene generata un'eccezione <xref:System.Data.Linq.DuplicateKeyException>.  

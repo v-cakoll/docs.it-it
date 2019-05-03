@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
 ms.openlocfilehash: 4d2952e29b09fcf9f81624317e30caf301a61a51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701489"
 ---
 # <a name="add-element-for-listeners-for-source"></a>\<aggiungere > (elemento) per \<listeners > per \<origine >
 Aggiunge un listener alla raccolta `Listeners` per un'origine di traccia.  

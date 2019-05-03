@@ -8,11 +8,11 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
 ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800126"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Convalida dell'input utente in Windows Form
 Quando gli utenti immettono dati nell'applicazione, è possibile verificare che i dati siano validi prima che vengano utilizzati dall'applicazione. Potrebbe essere necessario che alcuni campi di testo non essere a lunghezza zero, che un campo formattato come un numero di telefono o altro tipo di dati in formato corretto o che una stringa non contenga caratteri non sicuri che può essere usati per compromettere la protezione di un database. Windows Form fornisce diversi metodi per convalidare l'input nell'applicazione.  
@@ -27,11 +27,11 @@ Quando gli utenti immettono dati nell'applicazione, è possibile verificare che 
 ## <a name="event-driven-validation"></a>Convalida basata su eventi  
  Se si vuole il controllo completo a livello di codice sulla convalida, o necessario eseguire controlli di convalida complessi, si devono usare gli eventi di convalida incorporati in maggior parte dei controlli Windows Form. Ogni controllo che accetta l'input dell'utente in formato libero ha un <xref:System.Windows.Forms.Control.Validating> evento che si verifica ogni volta che il controllo richiede la convalida dei dati. Nel <xref:System.Windows.Forms.Control.Validating> metodo di gestione degli eventi, è possibile convalidare l'input dell'utente in diversi modi. Ad esempio, se si dispone di una casella di testo che deve contenere un codice postale, è possibile eseguire la convalida nei modi seguenti:  
   
--   Se il codice postale deve appartenere a un gruppo specifico di codici postali, è possibile eseguire un confronto tra stringhe di input per convalidare i dati immessi dall'utente. Ad esempio, se nel set di {10001 e 10002 10003} deve essere il codice postale, quindi è possibile utilizzare un confronto tra stringhe per convalidare i dati.  
+- Se il codice postale deve appartenere a un gruppo specifico di codici postali, è possibile eseguire un confronto tra stringhe di input per convalidare i dati immessi dall'utente. Ad esempio, se nel set di {10001 e 10002 10003} deve essere il codice postale, quindi è possibile utilizzare un confronto tra stringhe per convalidare i dati.  
   
--   Se il codice postale deve avere un formato specifico è possibile usare espressioni regolari per convalidare i dati immessi dall'utente. Ad esempio, per convalidare il modulo `#####` oppure `#####-####`, è possibile usare l'espressione regolare `^(\d{5})(-\d{4})?$`. Per convalidare il modulo `A#A #A#`, è possibile usare l'espressione regolare `[A-Z]\d[A-Z] \d[A-Z]\d`. Per altre informazioni sulle espressioni regolari, vedere [espressioni regolari di .NET Framework](../../standard/base-types/regular-expressions.md) e [esempi di espressioni regolari](../../standard/base-types/regular-expression-examples.md).  
+- Se il codice postale deve avere un formato specifico è possibile usare espressioni regolari per convalidare i dati immessi dall'utente. Ad esempio, per convalidare il modulo `#####` oppure `#####-####`, è possibile usare l'espressione regolare `^(\d{5})(-\d{4})?$`. Per convalidare il modulo `A#A #A#`, è possibile usare l'espressione regolare `[A-Z]\d[A-Z] \d[A-Z]\d`. Per altre informazioni sulle espressioni regolari, vedere [espressioni regolari di .NET Framework](../../standard/base-types/regular-expressions.md) e [esempi di espressioni regolari](../../standard/base-types/regular-expression-examples.md).  
   
--   Se il codice postale deve essere un codice postale degli Stati Uniti valido, è possibile chiamare un servizio Web di CAP per convalidare i dati immessi dall'utente.  
+- Se il codice postale deve essere un codice postale degli Stati Uniti valido, è possibile chiamare un servizio Web di CAP per convalidare i dati immessi dall'utente.  
   
  Il <xref:System.Windows.Forms.Control.Validating> evento viene fornito un oggetto di tipo <xref:System.ComponentModel.CancelEventArgs>. Se si determina che i dati del controllo non sono validi, è possibile annullare il <xref:System.Windows.Forms.Control.Validating> evento mediante l'impostazione dell'oggetto <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà `true`. Se non si impostano i <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà, Windows Form verrà presuppongono che la convalida ha avuto esito positivo per il controllo e generare il <xref:System.Windows.Forms.Control.Validated> evento.  
   
@@ -58,11 +58,11 @@ Quando gli utenti immettono dati nell'applicazione, è possibile verificare che 
 #### <a name="explicit-validation"></a>Convalida esplicita  
  L'approccio esplicito convalida convalida dei dati in una sola volta. È possibile convalidare i dati in risposta a un'azione dell'utente, ad esempio la selezione di un pulsante di salvataggio o un collegamento successivo. Quando si verifica l'azione dell'utente, è possibile attivare la convalida esplicita in uno dei modi seguenti:  
   
--   Chiamare <xref:System.Windows.Forms.ContainerControl.Validate%2A> per convalidare l'ultimo controllo nello stato di attivazione.  
+- Chiamare <xref:System.Windows.Forms.ContainerControl.Validate%2A> per convalidare l'ultimo controllo nello stato di attivazione.  
   
--   Chiamare <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> per convalidare tutti i controlli figlio in un form o un controllo contenitore.  
+- Chiamare <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> per convalidare tutti i controlli figlio in un form o un controllo contenitore.  
   
--   Chiamare un metodo personalizzato per convalidare i dati nei controlli manualmente.  
+- Chiamare un metodo personalizzato per convalidare i dati nei controlli manualmente.  
   
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Controlli di convalida implicita predefinita per Windows Form  
  I diversi controlli Windows Form hanno diverse impostazioni predefinite per loro <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> proprietà. La tabella seguente illustra i controlli più comuni e sui valori predefiniti.  
@@ -79,11 +79,11 @@ Quando gli utenti immettono dati nell'applicazione, è possibile verificare che 
 ## <a name="closing-the-form-and-overriding-validation"></a>Chiusura del Form e si esegue l'override di convalida  
  Quando un controllo mantiene lo stato attivo perché i dati che contiene non sono validi, non è possibile chiudere il form padre in uno dei modi consueto:  
   
--   Facendo clic la **Chiudi** pulsante.  
+- Facendo clic la **Chiudi** pulsante.  
   
--   Selezionando **Close** nel **sistema** menu.  
+- Selezionando **Close** nel **sistema** menu.  
   
--   Chiamando il <xref:System.Windows.Forms.Form.Close%2A> metodo a livello di codice.  
+- Chiamando il <xref:System.Windows.Forms.Form.Close%2A> metodo a livello di codice.  
   
  Tuttavia, in alcuni casi, potrebbe voler consentire all'utente di chiudere il modulo indipendentemente dal fatto che i valori nei controlli sono validi. È possibile eseguire l'override di convalida e chiudere un modulo che contiene ancora dati non valido tramite la creazione di un gestore per il form <xref:System.Windows.Forms.Form.Closing> evento. Nell'evento, impostare il <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà `false`. Forza la chiusura del form. Per altre informazioni e un esempio, vedere <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
   

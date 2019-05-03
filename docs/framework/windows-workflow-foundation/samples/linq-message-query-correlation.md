@@ -3,11 +3,11 @@ title: Correlazione di query del messaggio LINQ
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
 ms.openlocfilehash: cc13696cfd8eb2dcdf22fdc067518c8bd55ca32d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004926"
 ---
 # <a name="linq-message-query-correlation"></a>Correlazione di query del messaggio LINQ
 In questo esempio viene illustrato come eseguire una correlazione basata sul contenuto usando un'implementazione <xref:System.ServiceModel.Dispatcher.MessageQuery> personalizzata anziché l'oggetto <xref:System.ServiceModel.XPathMessageQuery> fornito dal sistema.  
@@ -28,11 +28,11 @@ In questo esempio viene illustrato come eseguire una correlazione basata sul con
   
 2. Una volta aggiunti gli elenchi ACL URL, usare i passaggi seguenti.  
   
-    1.  Compilare la soluzione.  
+    1. Compilare la soluzione.  
   
-    2.  Impostare più progetti di avvio facendo clic sulla soluzione e selezionando **Imposta progetti di avvio**. Aggiungere **assistenza** e **Client** (in questo ordine) come più progetti di avvio.  
+    2. Impostare più progetti di avvio facendo clic sulla soluzione e selezionando **Imposta progetti di avvio**. Aggiungere **assistenza** e **Client** (in questo ordine) come più progetti di avvio.  
   
-    3.  Eseguire l'applicazione. Nella console client viene illustrato un flusso di lavoro che invia un ordine, riceve l'ID dell'ordine di acquisto e conferma quindi successivamente l'ordine. Nella finestra Servizio verranno visualizzate le richieste elaborate.  
+    3. Eseguire l'applicazione. Nella console client viene illustrato un flusso di lavoro che invia un ordine, riceve l'ID dell'ordine di acquisto e conferma quindi successivamente l'ordine. Nella finestra Servizio verranno visualizzate le richieste elaborate.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

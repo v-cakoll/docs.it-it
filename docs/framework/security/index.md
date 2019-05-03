@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 7eb50bcb-38d8-4afb-86aa-2573586697c2
 author: BrucePerlerMS
 ms.openlocfilehash: 36f7687f42c6e0d6f865a025f09c4ead6f79960c
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983697"
 ---
 # <a name="windows-identity-foundation"></a>Windows Identity Foundation
 
@@ -24,7 +24,7 @@ ms.locfileid: "59481405"
 
 - [Guida introduttiva a WIF](../../../docs/framework/security/getting-started-with-wif.md)
 
-  - [Creazione della prima applicazione Web ASP.NET in grado di riconoscere attestazioni](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)
+  - [Creazione della prima applicazione Web ASP.NET che può riconoscere attestazioni](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)
 
   - [Creazione del primo servizio WCF che può riconoscere attestazioni](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)
 
@@ -42,23 +42,23 @@ ms.locfileid: "59481405"
 
 - [Indice delle procedure relative a WIF](../../../docs/framework/security/wif-how-tos-index.md)
 
-  - [Procedura: Compilare un'applicazione Web ASP.NET MVC che può riconoscere attestazioni con WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)
+  - [Procedura: Creare applicazione Web MVC ASP.NET in grado di riconoscere attestazioni con WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)
 
-  - [Procedura: Compilare un'applicazione Web Form ASP.NET che può riconoscere attestazioni con WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+  - [Procedura: Compilazione in grado di riconoscere attestazioni applicazione Web Form ASP.NET con WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
 
-  - [Procedura: Compilare un'applicazione ASP.NET che può riconoscere attestazioni con l'autenticazione basata su moduli](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)
+  - [Procedura: Compilare un'applicazione ASP.NET in grado di riconoscere attestazioni mediante l'autenticazione basata su form](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)
 
-  - [Procedura: Compilare un'applicazione ASP.NET che può riconoscere attestazioni con l'autenticazione di Windows](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)
+  - [Procedura: Compilare un'applicazione ASP.NET in grado di riconoscere attestazioni con l'autenticazione di Windows](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)
 
-  - [Procedura: Eseguire il debug di servizi e applicazioni in grado di riconoscere attestazioni con le funzionalità di traccia WIF](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)
+  - [Procedura: Eseguire il debug di servizi e applicazioni in grado di riconoscere attestazioni con la traccia WIF](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)
 
-  - [Procedura: Visualizzare lo stato di accesso effettuato con WIF](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)
+  - [Procedura: Visualizzazione firmato In stato con WIF](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)
 
-  - [Procedura: Abilitare il rilevamento della riproduzione del token](../../../docs/framework/security/how-to-enable-token-replay-detection.md)
+  - [Procedura: Abilitare il rilevamento riproduzione Token](../../../docs/framework/security/how-to-enable-token-replay-detection.md)
 
   - [Procedura: Abilitare la traccia WIF](../../../docs/framework/security/how-to-enable-wif-tracing.md)
 
-  - [Procedura: Abilitare WIF per un'applicazione del servizio Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)
+  - [Procedura: Abilitare WIF per un'applicazione di servizio Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)
 
   - [Procedura: Trasformare le attestazioni in ingresso](../../../docs/framework/security/how-to-transform-incoming-claims.md)
 
@@ -70,9 +70,9 @@ ms.locfileid: "59481405"
 
 - [Indice degli esempi di codice di WIF](../../../docs/framework/security/wif-code-sample-index.md)
 
-- [estensioni WIF](../../../docs/framework/security/wif-extensions.md)
+- [Estensioni WIF](../../../docs/framework/security/wif-extensions.md)
 
-- [Riferimento per le API di WPF](../../../docs/framework/security/wif-api-reference.md)
+- [Riferimento per le API di WIF](../../../docs/framework/security/wif-api-reference.md)
 
 - [Guida di riferimento per la configurazione di WIF](../../../docs/framework/security/wif-configuration-reference.md)
 

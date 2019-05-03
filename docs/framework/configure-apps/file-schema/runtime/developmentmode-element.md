@@ -12,11 +12,11 @@ ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704765"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode > elemento
 Specifica se il runtime cerca gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.  
@@ -45,7 +45,7 @@ Specifica se il runtime cerca gli assembly nelle directory specificate dalla var
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**true**|Cerca gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.|  
-|**False**|Non esegue la ricerca per gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH. Questo è il valore predefinito|  
+|**false**|Non esegue la ricerca per gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH. Questo è il valore predefinito|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -75,4 +75,4 @@ Specifica se il runtime cerca gli assembly nelle directory specificate dalla var
 
 - [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Procedura: Individuare assembly usando DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [Procedura: Individuare assembly mediante DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

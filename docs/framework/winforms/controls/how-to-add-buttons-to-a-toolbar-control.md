@@ -13,10 +13,10 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
 ms.openlocfilehash: ad4384f8cc2a1d0c15f8c7681e6e5d8bf75e4451
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343688"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>Procedura: Aggiungere pulsanti a un controllo ToolBar
@@ -152,6 +152,6 @@ ms.locfileid: "59343688"
 
 - <xref:System.Windows.Forms.ToolBar>
 - [Procedura: Definire un'icona per un pulsante della barra degli strumenti](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Procedura: Attivare eventi di menu per i pulsanti della barra degli strumenti](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [Panoramica del controllo ToolBar](toolbar-control-overview-windows-forms.md)
+- [Procedura: Attivare eventi di Menu per i pulsanti della barra degli strumenti](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Panoramica sul controllo ToolBar](toolbar-control-overview-windows-forms.md)
 - [Controllo ToolBar](toolbar-control-windows-forms.md)

@@ -3,11 +3,11 @@ title: Processo di acquisto aziendale
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
 ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005394"
 ---
 # <a name="corporate-purchase-process"></a>Processo di acquisto aziendale
 In questo esempio viene illustrato come creare un semplice processo di acquisto basato su richieste di proposte (RDP) con la selezione automatica della proposta migliore. Vengono combinati gli oggetti <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> e <xref:System.Activities.Statements.ForEach%601>, nonché un'attività personalizzata per creare un flusso di lavoro che rappresenta il processo.
@@ -16,27 +16,27 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 
 ## <a name="requirements"></a>Requisiti
 
--   Visual Studio 2012.
+- Visual Studio 2012.
 
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
 ## <a name="demonstrates"></a>Dimostrazione
 
--   Attività personalizzate.
+- Attività personalizzate.
 
--   Composizione di attività
+- Composizione di attività
 
--   Segnalibri.
+- Segnalibri.
 
--   Persistenza.
+- Persistenza.
 
--   Persistenza schematizzata.
+- Persistenza schematizzata.
 
--   Traccia.
+- Traccia.
 
--   Rilevamento.
+- Rilevamento.
 
--   Hosting di [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in client diversi (applicazioni Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e applicazioni WinForms).
+- Hosting di [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in client diversi (applicazioni Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e applicazioni WinForms).
 
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
@@ -52,21 +52,21 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
   
 1. Un dipendente della società X crea una richiesta di proposta (RDP).  
   
-    1.  Il dipendente digita il titolo e la descrizione della RDP.  
+    1. Il dipendente digita il titolo e la descrizione della RDP.  
   
-    2.  Il dipendente seleziona i fornitori a cui desidera richiedere di inviare proposte.  
+    2. Il dipendente seleziona i fornitori a cui desidera richiedere di inviare proposte.  
   
 2. Il dipendente invia la proposta.  
   
-    1.  Viene creata un'istanza del flusso di lavoro.  
+    1. Viene creata un'istanza del flusso di lavoro.  
   
-    2.  Il flusso di lavoro attende che tutti i fornitori inviino le proposte.  
+    2. Il flusso di lavoro attende che tutti i fornitori inviino le proposte.  
   
 3. Una volta ricevute tutte le proposte, il flusso di lavoro scorre tutte le proposte ricevute e seleziona la migliore.  
   
-    1.  A ogni fornitore è assegnata una valutazione (in questo esempio l'elenco di valutazioni viene archiviato in VendorRepository.cs).  
+    1. A ogni fornitore è assegnata una valutazione (in questo esempio l'elenco di valutazioni viene archiviato in VendorRepository.cs).  
   
-    2.  Il valore totale della proposta è determinato da (valore digitato dal fornitore) * (valutazione registrata del fornitore) / 100.  
+    2. Il valore totale della proposta è determinato da (valore digitato dal fornitore) * (valutazione registrata del fornitore) / 100.  
   
 4. Il richiedente originale può vedere tutte le proposte inviate. La proposta migliore viene presentata in una sezione speciale del rapporto.  
   
@@ -155,20 +155,20 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
   
 ### <a name="web-client-options"></a>Opzioni del progetto WebClient  
   
--   **Crea nuova RDP**: Crea una nuova richiesta di proposte (RDP) e avvia un flusso di lavoro del processo di acquisto.  
+- **Crea nuova RDP**: Crea una nuova richiesta di proposte (RDP) e avvia un flusso di lavoro del processo di acquisto.  
   
--   **Aggiorna**: Aggiorna l'elenco di RDP attive e completate nella finestra principale.  
+- **Aggiorna**: Aggiorna l'elenco di RDP attive e completate nella finestra principale.  
   
--   **Visualizza**: Mostra il contenuto di una RDP esistente. I fornitori possono inviare le proposte (se invitati o se la RDP non è completata).  
+- **Visualizza**: Mostra il contenuto di una RDP esistente. I fornitori possono inviare le proposte (se invitati o se la RDP non è completata).  
   
--   Visualizza come: L'utente può accedere alla RDP tramite diverse identità selezionando il partecipante desiderato nella **Visualizza come** casella combinata in griglia di RDP attive.  
+- Visualizza come: L'utente può accedere alla RDP tramite diverse identità selezionando il partecipante desiderato nella **Visualizza come** casella combinata in griglia di RDP attive.  
   
 ### <a name="winforms-client-options"></a>Opzioni del progetto WinFormsClient  
   
--   **Crea RDP**: Crea una nuova richiesta di proposte (RDP) e avvia un flusso di lavoro del processo di acquisto.  
+- **Crea RDP**: Crea una nuova richiesta di proposte (RDP) e avvia un flusso di lavoro del processo di acquisto.  
   
--   **Aggiorna**: Aggiorna l'elenco di RDP attive e completate nella finestra principale.  
+- **Aggiorna**: Aggiorna l'elenco di RDP attive e completate nella finestra principale.  
   
--   **Visualizza RDP**: Mostra il contenuto di una RDP esistente. I fornitori possono inviare le proposte (se invitati o se la RDP non è completata)  
+- **Visualizza RDP**: Mostra il contenuto di una RDP esistente. I fornitori possono inviare le proposte (se invitati o se la RDP non è completata)  
   
--   **Connettersi come**: L'utente può accedere alla RDP tramite diverse identità selezionando il partecipante desiderato nella **Visualizza come** casella combinata in griglia di RDP attive.
+- **Connettersi come**: L'utente può accedere alla RDP tramite diverse identità selezionando il partecipante desiderato nella **Visualizza come** casella combinata in griglia di RDP attive.

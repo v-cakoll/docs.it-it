@@ -3,11 +3,11 @@ title: Trasporto WS con credenziali del messaggio
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
 ms.openlocfilehash: 54bd025db4da8ed1d1484b11666a37c2c14a6023
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59317714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949630"
 ---
 # <a name="ws-transport-with-message-credential"></a>Trasporto WS con credenziali del messaggio
 In questo esempio viene illustrato l'utilizzo della sicurezza del trasporto SSL in combinazione con l'inclusione delle credenziali client nel messaggio. In questo esempio viene usata l'associazione `wsHttpBinding`.  

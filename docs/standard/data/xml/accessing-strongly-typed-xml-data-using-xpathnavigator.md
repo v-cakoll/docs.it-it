@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd0719fbc84159fdf751b136c2a65b0ce40b42ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1905e9f1d80931bd15cff5f3d0a92ceee29435ef
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665188"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59319885"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Accesso a dati XML fortemente tipizzati con XPathNavigator
 Analogamente a un'istanza del modello di dati XPath versione 2.0, la classe <xref:System.Xml.XPath.XPathNavigator> può contenere dati tipizzati in modo sicuro associati a tipi CLR (Common Language Runtime). In base al modello di dati XPath versione 2.0, solo gli elementi e gli attributi possono contenere dati tipizzati in modo sicuro. La classe <xref:System.Xml.XPath.XPathNavigator> fornisce meccanismi di accesso ai dati di un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> come dati tipizzati in modo sicuro e meccanismi di conversione da un tipo di dati a un altro.  
@@ -52,11 +52,11 @@ Analogamente a un'istanza del modello di dati XPath versione 2.0, la classe <xre
 ## <a name="the-post-schema-validation-infoset-psvi"></a>Infoset sulla convalida post-schema (PSVI, Post Schema Validation Infoset)  
  In un processore di XML Schema, un infoset XML viene accettato come input e viene convertito in un infoset sulla convalida post-schema. Un PSVI rappresenta l'infoset XML di input originale con nuovi elementi informazioni e nuove proprietà aggiunti agli elementi informazioni esistenti. Le informazioni aggiunte all'infoset XML nel PVSI possono essere suddivise in tre grandi classi che vengono esposte dal tipo <xref:System.Xml.XPath.XPathNavigator>.  
   
-1.  Risultati della convalida: informazioni relative all'esito della convalida di un elemento o attributo. Tali informazioni vengono esposte dalla proprietà <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> della proprietà <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> della classe <xref:System.Xml.XPath.XPathNavigator>.  
+1. Risultati della convalida: informazioni relative all'esito della convalida di un elemento o di un attributo. Tali informazioni vengono esposte dalla proprietà <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> della proprietà <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> della classe <xref:System.Xml.XPath.XPathNavigator>.  
   
-2.  Informazioni predefinite: viene indicato se il valore dell'elemento o attributo sia stato ottenuto o meno mediante i valori predefiniti nello schema. Tali informazioni vengono esposte dalla proprietà <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> della proprietà <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> della classe <xref:System.Xml.XPath.XPathNavigator>.  
+2. Informazioni predefinite: viene indicato se il valore dell'elemento o dell'attributo sia stato ottenuto o meno mediante i valori predefiniti specificati nello schema. Tali informazioni vengono esposte dalla proprietà <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> della proprietà <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> della classe <xref:System.Xml.XPath.XPathNavigator>.  
   
-3.  Annotazioni di tipi: riferimenti a componenti dello schema che potrebbero essere definizioni di tipi o dichiarazioni di attributo. La proprietà <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> del tipo <xref:System.Xml.XPath.XPathNavigator> contiene le informazioni sul tipo specifiche del nodo se questo è valido. Se la validità di un nodo è sconosciuta, ad esempio nel caso in cui il nodo sia stato convalidato e modificato successivamente, la proprietà <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> sarà impostata su `null` ma le informazioni sul tipo saranno ancora disponibili mediante diverse proprietà della proprietà <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> della classe <xref:System.Xml.XPath.XPathNavigator>.  
+3. Annotazioni di tipi: riferimenti a componenti dello schema che potrebbero essere definizioni di tipi o dichiarazioni di attributo o elemento. La proprietà <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> del tipo <xref:System.Xml.XPath.XPathNavigator> contiene le informazioni sul tipo specifiche del nodo se questo è valido. Se la validità di un nodo è sconosciuta, ad esempio nel caso in cui il nodo sia stato convalidato e modificato successivamente, la proprietà <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> sarà impostata su `null` ma le informazioni sul tipo saranno ancora disponibili mediante diverse proprietà della proprietà <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> della classe <xref:System.Xml.XPath.XPathNavigator>.  
   
  Nell'esempio seguente viene illustrato l'uso delle informazioni nell'infoset sulla convalida post-schema esposto dal tipo <xref:System.Xml.XPath.XPathNavigator>.  
   

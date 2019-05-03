@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb8919e8760616676ea5ff99069e2d2ceb5f7451
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608918"
 ---
-# <a name="getmethod-function"></a>GetMethod (funzione)
+# <a name="getmethod-function"></a>Funzione GetMethod
 
 Recupera le informazioni relative al metodo specificato.
 
@@ -66,7 +66,7 @@ HRESULT GetMethod (
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | La proprietà specificata non è stata trovata. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per completare l'operazione. |

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03a4f7ecc227679e6b0afa29b20de1aefeae3b76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987870"
 ---
 # <a name="icordebugnativeframegetregisterset-method"></a>Metodo ICorDebugNativeFrame::GetRegisterSet
 Ottiene il set di registri di stack frame corrente.  

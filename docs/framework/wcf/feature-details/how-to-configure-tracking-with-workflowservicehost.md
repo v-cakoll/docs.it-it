@@ -3,11 +3,11 @@ title: 'Procedura: Configurare il rilevamento con WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
 ms.openlocfilehash: e0631cdb47bc88f7f588f4dfe6c44ea3d44f4e60
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039364"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>Procedura: Configurare il rilevamento con WorkflowServiceHost
 In questo argomento viene illustrato come configurare il rilevamento di un flusso di lavoro [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] ospitato in <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Viene configurato tramite un file Web.config specificando un comportamento del servizio.  

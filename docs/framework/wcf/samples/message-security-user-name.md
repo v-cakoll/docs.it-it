@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
 ms.openlocfilehash: 947ef3c2120377fe33e0062d1ed508ddda432314
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972458"
 ---
 # <a name="message-security-user-name"></a>Sicurezza dei messaggi tramite nome utente
 In questo esempio viene illustrato come implementare un'applicazione che usa WS-Security con l'autenticazione del nome utente per il client e richiede l'autenticazione del server tramite il certificato X.509v3 del server. Tutti i messaggi dell'applicazione tra il client e il server vengono firmati e crittografati. Per impostazione predefinita, il nome utente e la password forniti dal client vengono usati per accedere a un account Windows valido. In questo esempio si basa sul [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md). Questo esempio è costituito da un programma di console client (Client.exe) e da una libreria di servizi (Service.dll) ospitati da Internet Information Services (IIS). Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.  
@@ -19,9 +19,9 @@ In questo esempio viene illustrato come implementare un'applicazione che usa WS-
   
  In questo esempio viene inoltre illustrato:  
   
--   Il mapping predefinito agli account di Windows per approvare autorizzazioni aggiuntive.  
+- Il mapping predefinito agli account di Windows per approvare autorizzazioni aggiuntive.  
   
--   Come accedere alle informazioni di identità del chiamante dal codice del servizio.  
+- Come accedere alle informazioni di identità del chiamante dal codice del servizio.  
   
  Il servizio espone un solo endpoint per la comunicazione con il servizio, che viene definito mediante il file di configurazione Web.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione è configurata con una classe standard [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), che usa per impostazione predefinita la sicurezza dei messaggi. In questo esempio imposta standard [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) per usare l'autenticazione nome utente del client. Il comportamento specifica che le credenziali utente devono essere usate per l'autenticazione del servizio. Il certificato del server deve contenere lo stesso valore per il nome del soggetto come le `findValue` attributo la [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
@@ -147,7 +147,7 @@ Press <ENTER> to terminate client.
   
  Di seguito viene presentata una breve panoramica delle diverse sezioni dei file batch.  
   
--   Creazione del certificato server  
+- Creazione del certificato server  
   
      Le righe seguenti del file batch Setup.bat creano il certificato server da usare.  
   
@@ -163,7 +163,7 @@ Press <ENTER> to terminate client.
   
      La variabile %SERVER_NAME% specifica il nome del server. Il certificato viene archiviato nell'archivio LocalMachine. Se il file batch Setup.bat viene eseguito con un argomento di servizio (ad esempio `setup.bat service`) il %NOME_SERVER% contiene il nome di dominio completo del computer.  In caso contrario, viene usata l'impostazione predefinita localhost.  
   
--   Installazione del certificato server nell'archivio certificati attendibili del client  
+- Installazione del certificato server nell'archivio certificati attendibili del client  
   
      La riga seguente copia il certificato server nell'archivio Persone attendibili del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato impostato come radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il popolamento dell'archivio certificati client con il certificato server non è necessario.  
   
@@ -171,7 +171,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   Concessione delle autorizzazioni sulla chiave privata del certificato  
+- Concessione delle autorizzazioni sulla chiave privata del certificato  
   
      Le righe seguenti de file batch Setup.bat rendono il certificato server archiviato nell'archivio LocalMachine accessibile all'account del processo di lavoro [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
@@ -222,7 +222,7 @@ Press <ENTER> to terminate client.
   
 5. Nel server, eseguire `setup.bat service` in un prompt dei comandi sviluppatori per Visual Studio aperto con privilegi di amministratore. In esecuzione `setup.bat` con il `service` argomento consente di creare un certificato di servizio con il nome di dominio completo del computer ed esportare il certificato di servizio in un file denominato CER.  
   
-6. Modificare Web. config per riflettere il nuovo nome del certificato (nell'attributo findValue dell'elemento serviceCertificate) che è lo stesso nome di dominio completo del computer`.`  
+6. Modificare Web.config per riflettere il nuovo nome del certificato (nell'attributo findValue dell'elemento serviceCertificate) che corrisponde al nome di dominio completo del computer`.`  
   
 7. Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   
--   Eseguire Cleanup.bat nella cartella degli esempi dopo che l'esempio è stato completato.  
+- Eseguire Cleanup.bat nella cartella degli esempi dopo che l'esempio è stato completato.  
   
     > [!NOTE]
     >  Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer. Se è stato eseguito gli esempi di Windows Communication Foundation (WCF) che utilizzano certificati in più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. A tale scopo, usare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  

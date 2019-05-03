@@ -5,11 +5,11 @@ f1_keywords:
 - vbrNoValidOperator_TwoOperands
 ms.assetid: b2b1e6ce-d262-4644-8085-e48a2e2f06a6
 ms.openlocfilehash: c13638d7be3081ceaddd6ff7096ba670b39d173a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944794"
 ---
 # <a name="operator-is-not-valid-for-name1-and-name2"></a>Operatore non è valido per '\<name1 >' e '\<nome2 >'
 Un operatore non è appropriato per i tipi usati.  

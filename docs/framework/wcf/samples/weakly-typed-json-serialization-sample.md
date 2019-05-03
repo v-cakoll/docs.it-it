@@ -3,11 +3,11 @@ title: Esempio di serializzazione JSON con tipizzazione debole
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
 ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006356"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Esempio di serializzazione JSON con tipizzazione debole
 Quando si serializza un tipo definito dall'utente in un formato di trasmissione specificato o si deserializza un formato di trasmissione in un tipo definito dall'utente, il tipo definito dall'utente specificato deve essere disponibile sia nel servizio che nel client. Per eseguire questa operazione, in genere l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> viene applicato ai tipi definiti dall'utente e l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> viene applicato ai relativi membri. Questo meccanismo viene applicato anche quando si lavora con gli oggetti JavaScript Object Notation (JSON), come descritto nell'argomento [come: Serializzare e deserializzare dati JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
@@ -58,7 +58,7 @@ Quando si serializza un tipo definito dall'utente in un formato di trasmissione 
   
  Questa operazione può risultare ardua, specialmente se il client deve gestire più di un tipo di oggetto JSON.  
   
- Il tipo `JsonObject` fornito in questo esempio introduce una rappresentazione con tipizzazione debole dell'oggetto JSON deserializzato. `JsonObject` si basa sul mapping naturale tra oggetti JSON e [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dizionari e il mapping tra matrici JSON e [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] matrici. Nel codice seguente viene illustrato il tipo `JsonObject` .  
+ Il tipo `JsonObject` fornito in questo esempio introduce una rappresentazione con tipizzazione debole dell'oggetto JSON deserializzato. `JsonObject` si basa sul mapping naturale tra oggetti JSON e dizionari [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e sul mapping tra matrici JSON e matrici [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Nel codice seguente viene illustrato il tipo `JsonObject` .  
   
 ```  
 // Instantiation of JsonObject json omitted  

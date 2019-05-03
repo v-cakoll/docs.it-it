@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
 ms.openlocfilehash: 4334ed178e7f2ed90928db6b434eb8c9fee77bf7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931481"
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>Procedura: Specificare la direzione del binding
 Questo esempio spiega come specificare se il binding aggiorna solo la proprietà della destinazione del binding (destinazione), dell'origine del binding (origine) o entrambe.  
@@ -19,15 +19,15 @@ Questo esempio spiega come specificare se il binding aggiorna solo la proprietà
 ## <a name="example"></a>Esempio  
  Si utilizza il <xref:System.Windows.Data.Binding.Mode%2A> proprietà per specificare la direzione dell'associazione. L'elenco di enumerazione seguente mostra le opzioni disponibili per gli aggiornamenti di binding:  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay> Aggiorna la proprietà di destinazione o la proprietà ogni volta che cambia la proprietà di destinazione o la proprietà di origine.  
+- <xref:System.Windows.Data.BindingMode.TwoWay> Aggiorna la proprietà di destinazione o la proprietà ogni volta che cambia la proprietà di destinazione o la proprietà di origine.  
   
--   <xref:System.Windows.Data.BindingMode.OneWay> Aggiorna la proprietà di destinazione solo quando la proprietà di origine viene modificata.  
+- <xref:System.Windows.Data.BindingMode.OneWay> Aggiorna la proprietà di destinazione solo quando la proprietà di origine viene modificata.  
   
--   <xref:System.Windows.Data.BindingMode.OneTime> Aggiorna la proprietà di destinazione solo all'avvio dell'applicazione o quando il <xref:System.Windows.FrameworkElement.DataContext%2A> subisce una modifica.  
+- <xref:System.Windows.Data.BindingMode.OneTime> Aggiorna la proprietà di destinazione solo all'avvio dell'applicazione o quando il <xref:System.Windows.FrameworkElement.DataContext%2A> subisce una modifica.  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource> Aggiorna la proprietà di origine quando cambia la proprietà di destinazione.  
+- <xref:System.Windows.Data.BindingMode.OneWayToSource> Aggiorna la proprietà di origine quando cambia la proprietà di destinazione.  
   
--   <xref:System.Windows.Data.BindingMode.Default> fa sì che il valore predefinito <xref:System.Windows.Data.Binding.Mode%2A> valore della proprietà di destinazione da usare.  
+- <xref:System.Windows.Data.BindingMode.Default> fa sì che il valore predefinito <xref:System.Windows.Data.Binding.Mode%2A> valore della proprietà di destinazione da usare.  
   
  Per altre informazioni, vedere l'enumerazione <xref:System.Windows.Data.BindingMode>.  
   
@@ -43,4 +43,4 @@ Questo esempio spiega come specificare se il binding aggiorna solo la proprietà
 
 - <xref:System.Windows.Data.Binding>
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative](data-binding-how-to-topics.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)

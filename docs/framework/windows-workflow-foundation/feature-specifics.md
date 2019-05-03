@@ -3,11 +3,11 @@ title: Specifiche delle funzionalità di Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773682"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Specifiche delle funzionalità di Windows Workflow Foundation
 
@@ -43,9 +43,9 @@ Il <xref:System.ServiceModel.WorkflowServiceHost> è l'host del flusso di lavoro
 
 - Esempi di <xref:System.ServiceModel.WorkflowServiceHost> sono disponibili nelle sezioni seguenti:
 
-    - [Esecuzione](./samples/execution.md)
+  - [Esecuzione](./samples/execution.md)
 
-    - Applicazione: [Gestione dell'istanza sospesa](./samples/suspended-instance-management.md)
+  - Applicazione: [Gestione dell'istanza sospesa](./samples/suspended-instance-management.md)
 
 - [Cenni preliminari sui servizi di hosting del flusso di lavoro](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -67,13 +67,13 @@ Una correlazione è una delle modalità seguenti:
 
 - Un esempio di correlazione usata per raggruppare i messaggi è una correlazione Request-Reply che raggruppa i messaggi.
 
-    - In un <xref:System.ServiceModel.Activities.Receive> attività, fare clic sui <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> proprietà e aggiungere un <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> usando il CorrelationHandle creato nel primo passaggio precedente.
+  - In un <xref:System.ServiceModel.Activities.Receive> attività, fare clic sui <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> proprietà e aggiungere un <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> usando il CorrelationHandle creato nel primo passaggio precedente.
 
-    - Crea una <xref:System.ServiceModel.Activities.SendReply> attività facendo clic su di <xref:System.ServiceModel.Activities.Receive> e facendo clic su "Crea SendReply". Incollarla nel flusso di lavoro dopo l'attività <xref:System.ServiceModel.Activities.Receive>.
+  - Crea una <xref:System.ServiceModel.Activities.SendReply> attività facendo clic su di <xref:System.ServiceModel.Activities.Receive> e facendo clic su "Crea SendReply". Incollarla nel flusso di lavoro dopo l'attività <xref:System.ServiceModel.Activities.Receive>.
 
 - Un esempio di mapping di un dato a un'istanza del servizio è una correlazione basata sul contenuto che associa un dato (ad esempio un ID ordine) a una determinata istanza del flusso di lavoro.
 
-    - In un'attività di messaggistica qualsiasi, fare clic sulla proprietà `CorrelationInitializers` e aggiungere un <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> usando la variabile <xref:System.ServiceModel.Activities.CorrelationHandle> creata in precedenza. Nel messaggio fare doppio clic sulla proprietà desiderata (ad es. OrderID) dal menu a discesa. Impostare la proprietà `CorrelatesWith` sulla variabile <xref:System.ServiceModel.Activities.CorrelationHandle> usata in precedenza.
+  - In un'attività di messaggistica qualsiasi, fare clic sulla proprietà `CorrelationInitializers` e aggiungere un <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> usando la variabile <xref:System.ServiceModel.Activities.CorrelationHandle> creata in precedenza. Nel messaggio fare doppio clic sulla proprietà desiderata (ad es. OrderID) dal menu a discesa. Impostare la proprietà `CorrelatesWith` sulla variabile <xref:System.ServiceModel.Activities.CorrelationHandle> usata in precedenza.
 
 - [Documentazione concettuale sulla correlazione](../wcf/feature-details/correlation.md)
 
@@ -131,9 +131,9 @@ Il [DataContractResolver](../wcf/samples/datacontractresolver.md) risolve questi
 
 - Esempi:
 
-    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
+  - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
+  - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>Scenari relativi al resolver del contratto dati
 
@@ -151,25 +151,25 @@ Il diagramma di flusso è uno noto paradigma per rappresentare visivamente i pro
 
 - La funzionalità diagramma di flusso usa le classi seguenti:
 
-    - <xref:System.Activities.Statements.Flowchart>
+  - <xref:System.Activities.Statements.Flowchart>
 
-    - <xref:System.Activities.Statements.FlowNode>
+  - <xref:System.Activities.Statements.FlowNode>
 
-    - <xref:System.Activities.Statements.FlowDecision>
+  - <xref:System.Activities.Statements.FlowDecision>
 
-    - <xref:System.Activities.Statements.FlowStep>
+  - <xref:System.Activities.Statements.FlowStep>
 
-    - <xref:System.Activities.Statements.FlowSwitch%601>
+  - <xref:System.Activities.Statements.FlowSwitch%601>
 
 - Esempi:
 
-    - [Gestione errori in un'attività Flowchart usando TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+  - [Gestione errori in un'attività Flowchart usando TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [Processo di assunzione](./samples/hiring-process.md)
+  - [Processo di assunzione](./samples/hiring-process.md)
 
 - Documentazione della finestra di progettazione:
 
-    - [Activity Designer Flowchart](/visualstudio/workflow-designer/flowchart-activity-designers)
+  - [Activity Designer Flowchart](/visualstudio/workflow-designer/flowchart-activity-designers)
 
 ### <a name="flowchart-scenarios"></a>Scenari relativi al diagramma di flusso
 
@@ -197,15 +197,15 @@ Le attività procedurali forniscono un meccanismo per modellare il flusso di con
 
 - Esempi:
 
-    - [Processo di assunzione](./samples/hiring-process.md)
+  - [Processo di assunzione](./samples/hiring-process.md)
 
-    - [Processo di acquisto aziendale](./samples/corporate-purchase-process.md)
+  - [Processo di acquisto aziendale](./samples/corporate-purchase-process.md)
 
 - Documentazione della finestra di progettazione:
 
-    - [Activity Designer Parallel](/visualstudio/workflow-designer/parallel-activity-designer)
+  - [Activity Designer Parallel](/visualstudio/workflow-designer/parallel-activity-designer)
 
-    - [Attività ParallelForEach\<T > ActivityDesigner](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [Attività ParallelForEach\<T > ActivityDesigner](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>Scenari relativi alle attività procedurali
 
@@ -275,7 +275,7 @@ Il servizio di routing in .NET 4 è progettato per rendere più semplice risolve
 
 1. Routing basato sul contenuto (gli oggetti<xref:System.ServiceModel.Dispatcher.MessageFilter> esaminano un messaggio per stabilire dove deve essere inviato).
 
-2. Bridging del protocollo (trasporto e messaggio)
+2. Protocollo bridging (trasporto e messaggio)
 
 3. Gestione degli errori (il router intercetta le eccezioni di comunicazione ed esegue il failover sugli endpoint di backup)
 

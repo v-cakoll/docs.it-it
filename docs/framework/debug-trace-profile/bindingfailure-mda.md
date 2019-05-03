@@ -12,11 +12,11 @@ ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875082"
 ---
 # <a name="bindingfailure-mda"></a>MDA bindingFailure
 
@@ -52,7 +52,7 @@ La prima cosa da fare è determinare il motivo per cui CLR non è stato in grado
 
 - Risolvere la causa in base ai risultati del passaggio precedente. Di seguito sono elencate le possibili opzioni di risoluzione:
 
-  - Installare l'assembly richiesto nella Global Assembly Cache e chiamare il metodo <xref:System.Reflection.Assembly.Load%2A> metodo per caricare l'assembly dall'identità.
+  - Installare l'assembly richiesto nella Global Assembly Cache e chiamare il metodo <xref:System.Reflection.Assembly.Load%2A> per caricare l'assembly in base all'identità.
 
   - Copiare l'assembly richiesto nella directory dell'applicazione e chiamare il metodo <xref:System.Reflection.Assembly.Load%2A> per caricare l'assembly in base all'identità.
 

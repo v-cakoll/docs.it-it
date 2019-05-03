@@ -19,11 +19,11 @@ helpviewer_keywords:
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
 ms.openlocfilehash: e7c1e8e4431b7a653bb3a086589c35921f8001b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024742"
 ---
 # <a name="option-compare-statement"></a>Istruzione Option Compare
 Dichiara il metodo di confronto predefinito da usare durante il confronto dei dati di tipo stringa.  
@@ -75,7 +75,7 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>Per impostare Option Compare sulla riga di comando  
   
--   Includere il [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) opzione del compilatore nella **vbc** comando.  
+- Includere il [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) opzione del compilatore nella **vbc** comando.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene usata l'istruzione `Option Compare` per impostare il confronto binario come metodo predefinito per il confronto tra stringhe. Per usare questo codice, rimuovere il commento dall'istruzione `Option Compare Binary` e inserirlo all'inizio del file di origine.  
@@ -100,4 +100,4 @@ Option Compare { Binary | Text }
 - [Operatore Like](../../../visual-basic/language-reference/operators/like-operator.md)
 - [Funzioni stringa](../../../visual-basic/language-reference/functions/string-functions.md)
 - [Istruzione Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
 ms.openlocfilehash: 888b1910902819b847d7d622f7b086fec82d669d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013166"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Procedura: Impostare lo sfondo di un controllo Panel di Windows Forms usando la finestra di progettazione
 Un controllo Windows Form <xref:System.Windows.Forms.Panel> controllo può visualizzare un colore di sfondo sia un'immagine di sfondo. Il <xref:System.Windows.Forms.Control.BackColor%2A> proprietà imposta il colore di sfondo per i controlli che sono contenuti nel pannello, ad esempio le etichette e i pulsanti di opzione. Se il <xref:System.Windows.Forms.Control.BackgroundImage%2A> non è impostata, il <xref:System.Windows.Forms.Control.BackColor%2A> compilerà tutte del Pannello di selezione. Se il <xref:System.Windows.Forms.Control.BackgroundImage%2A> è impostata, verrà visualizzata l'immagine dietro i controlli contenuti nel pannello.  
@@ -41,5 +41,5 @@ Un controllo Windows Form <xref:System.Windows.Forms.Panel> controllo può visua
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
 - [Controllo Panel](panel-control-windows-forms.md)
-- [Panoramica del controllo Panel](panel-control-overview-windows-forms.md)
-- [Procedura: Raggruppare i controlli con il controllo Panel di Windows Forms usando la finestra di progettazione](group-controls-with-wf-panel-control-using-the-designer.md)
+- [Panoramica sul controllo Panel](panel-control-overview-windows-forms.md)
+- [Procedura: Controlli di gruppo con il controllo Panel di Windows Form usando la finestra di progettazione](group-controls-with-wf-panel-control-using-the-designer.md)

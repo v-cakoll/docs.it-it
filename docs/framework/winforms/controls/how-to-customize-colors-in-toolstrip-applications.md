@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], custom colors
 ms.assetid: e2752fe2-1afb-489e-ab96-b7805acd96bc
 ms.openlocfilehash: 4d051085bdba41b9784d3dd7f921189c1300daf0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052976"
 ---
 # <a name="how-to-customize-colors-in-toolstrip-applications"></a>Procedura: Personalizzare i colori nelle applicazioni ToolStrip
 È possibile personalizzare l'aspetto di <xref:System.Windows.Forms.ToolStrip> tramite la classe <xref:System.Windows.Forms.ToolStripProfessionalRenderer> per usare colori personalizzati.  
@@ -28,7 +28,7 @@ ms.locfileid: "59074911"
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti agli assembly System.Design, System.Drawing e System.Windows.Forms.  
+- Riferimenti agli assembly System.Design, System.Drawing e System.Windows.Forms.  
   
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   

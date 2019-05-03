@@ -3,11 +3,11 @@ title: Nomi di peer e ID PNRP
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
 ms.openlocfilehash: e7e92519bede478a5e26a88a56236f987c93c441
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173108"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772908"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nomi di peer e ID PNRP
 Il nome di peer rappresenta un endpoint per la comunicazione e può identificarsi in un computer, un utente, un gruppo, un servizio o qualsiasi altro elemento associato a un peer che può essere risolto in un indirizzo IPv6. Il protocollo PNRP (Peer Name Resolution Protocol) accetta il nome di peer statisticamente univoco per la creazione di un ID PNRP, usato per identificare i membri del cloud.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
 ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778560"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Tipi di dati dei risultati degli operatori (Visual Basic)
 Visual Basic determina il tipo di dati del risultato di un'operazione in base ai tipi di dati degli operandi. In alcuni casi potrebbe trattarsi di un tipo di dati con un intervallo maggiore rispetto a quello degli operandi.  
@@ -22,21 +22,21 @@ Visual Basic determina il tipo di dati del risultato di un'operazione in base ai
 ## <a name="data-type-ranges"></a>Intervalli dei tipi di dati  
  Gli intervalli dei tipi di dati rilevanti, in ordine dal più piccolo al più grande, sono i seguenti:  
   
--   [Booleano](../../../visual-basic/language-reference/data-types/boolean-data-type.md) , ovvero due valori possibili  
+- [Booleano](../../../visual-basic/language-reference/data-types/boolean-data-type.md) , ovvero due valori possibili  
   
--   [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) : 256 valori integrali possibili  
+- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) : 256 valori integrali possibili  
   
--   [Brevi](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) , ovvero 65.536 (6.5... E + 4) possibili valori integrali  
+- [Brevi](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) , ovvero 65.536 (6.5... E + 4) possibili valori integrali  
   
--   [Numero intero](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) : 4.294.967.296 (4.2... E + 9) possibili valori integrali  
+- [Numero intero](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) : 4.294.967.296 (4.2... E + 9) possibili valori integrali  
   
--   [Lungo](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) : 18.446.744.073.709.551.615 (1.8... E + 19) possibili valori integrali  
+- [Lungo](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) : 18.446.744.073.709.551.615 (1.8... E + 19) possibili valori integrali  
   
--   [Decimale](../../../visual-basic/language-reference/data-types/decimal-data-type.md) -1,5... E + 29 possibili valori integrali, massimi intervallo 7.9... E + 28 (valore assoluto)  
+- [Decimale](../../../visual-basic/language-reference/data-types/decimal-data-type.md) -1,5... E + 29 possibili valori integrali, massimi intervallo 7.9... E + 28 (valore assoluto)  
   
--   [Singolo](../../../visual-basic/language-reference/data-types/single-data-type.md) : intervallo massimo 3.4... E + 38 (valore assoluto)  
+- [Singolo](../../../visual-basic/language-reference/data-types/single-data-type.md) : intervallo massimo 3.4... E + 38 (valore assoluto)  
   
--   [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) : intervallo massimo 1.7... E + 308 (valore assoluto)  
+- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) : intervallo massimo 1.7... E + 308 (valore assoluto)  
   
  Per altre informazioni sui tipi di dati di Visual Basic, vedere [tipi di dati](../../../visual-basic/language-reference/data-types/index.md).  
   
@@ -68,11 +68,11 @@ Visual Basic determina il tipo di dati del risultato di un'operazione in base ai
 ## <a name="integer-arithmetic"></a>Calcoli di interi  
  Il tipo di dati del risultato di un'operazione di integer dipende dai tipi dei dati degli operandi. In generale, Visual Basic utilizza i criteri seguenti per determinare il tipo di dati di risultati:  
   
--   Se entrambi gli operandi dell'operatore binario con lo stesso tipo di dati, il risultato contiene tale tipo di dati. È un'eccezione `Boolean`, che è obbligato a `Short`.  
+- Se entrambi gli operandi dell'operatore binario con lo stesso tipo di dati, il risultato contiene tale tipo di dati. È un'eccezione `Boolean`, che è obbligato a `Short`.  
   
--   Se fa parte di un operando non firmato con un operando con segno, il risultato ha un tipo con segno con almeno un più ampio un intervallo come degli operandi.  
+- Se fa parte di un operando non firmato con un operando con segno, il risultato ha un tipo con segno con almeno un più ampio un intervallo come degli operandi.  
   
--   In caso contrario, il risultato ha in genere il più elevato tra i due tipi di dati di operando.  
+- In caso contrario, il risultato ha in genere il più elevato tra i due tipi di dati di operando.  
   
  Si noti che il tipo di dati di risultati potrebbe non essere quello utilizzato per qualsiasi tipo di dati di operando.  
   

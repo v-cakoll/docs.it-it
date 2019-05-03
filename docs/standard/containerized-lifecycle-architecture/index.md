@@ -4,12 +4,6 @@ description: Ottenere una panoramica generale dei vantaggi principali dell'uso d
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: aa3ead1cb184e23dd091822368e62f580ed73ee5
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332637"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introduzione ai contenitori e a Docker
 

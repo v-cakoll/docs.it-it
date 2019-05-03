@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 ms.openlocfilehash: 13005eb55b430f6ff9b3a6408582a02e53838742
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969208"
 ---
 # <a name="-doc"></a>-doc
 Elabora commenti sulla documentazione in un file XML.  
@@ -36,9 +36,9 @@ Elabora commenti sulla documentazione in un file XML.
   
  Nei file di codice sorgente, i commenti della documentazione possono precedere le definizioni seguenti:  
   
--   Tipi definiti dall'utente, ad esempio una [classe](../../../visual-basic/language-reference/statements/class-statement.md) o [interfaccia](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- Tipi definiti dall'utente, ad esempio una [classe](../../../visual-basic/language-reference/statements/class-statement.md) o [interfaccia](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
--   Membri, ad esempio un campo, un [evento](../../../visual-basic/language-reference/statements/event-statement.md), una [proprietà](../../../visual-basic/language-reference/statements/property-statement.md), una [funzione](../../../visual-basic/language-reference/statements/function-statement.md) oppure una [subroutine](../../../visual-basic/language-reference/statements/sub-statement.md).  
+- Membri, ad esempio un campo, un [evento](../../../visual-basic/language-reference/statements/event-statement.md), una [proprietà](../../../visual-basic/language-reference/statements/property-statement.md), una [funzione](../../../visual-basic/language-reference/statements/function-statement.md) oppure una [subroutine](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
  Per usare il file XML generato con la funzionalità [IntelliSense](/visualstudio/ide/using-intellisense) di Visual Studio, usare un nome per il file XML uguale al nome dell'assembly che si vuole supportare. Assicurarsi che il file XML sia nella stessa directory dell'assembly, in modo che quando si fa riferimento all'assembly nel progetto di Visual Studio, venga trovato anche il file XML. I file di documentazione XML non sono necessari per il funzionamento di IntelliSense per il codice all'interno di un progetto o all'interno di progetti a cui viene fatto riferimento da un progetto.  
   

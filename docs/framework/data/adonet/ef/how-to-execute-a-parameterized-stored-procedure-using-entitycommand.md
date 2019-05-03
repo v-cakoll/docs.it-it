@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4f5639bf-bb7f-4982-bb1d-c7caa4348888
 ms.openlocfilehash: deb1877397053ceab8c284a537a861ba56ffb729
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59326658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606156"
 ---
 # <a name="how-to-execute-a-parameterized-stored-procedure-using-entitycommand"></a>Procedura: Eseguire una stored procedure con parametri tramite EntityCommand
 In questo argomento viene mostrato come eseguire una stored procedure con parametri usando la classe <xref:System.Data.EntityClient.EntityCommand>.  

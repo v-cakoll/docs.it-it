@@ -3,11 +3,11 @@ title: HAVING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
 ms.openlocfilehash: 7b147a84a43677afa53f7872f8042f1cf44137cf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59316180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774712"
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
 Specifica una condizione di ricerca per un gruppo o un'aggregazione.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Control class [WPF], TreeView [WPF], creating
 ms.assetid: 1defbb78-b8e7-4c0e-b650-576453ac828d
 ms.openlocfilehash: 7edb4933ebcc0f0d2cb02754238c2342ee9dd4a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59205147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031915"
 ---
 # <a name="how-to-create-simple-or-complex-treeviews"></a>Procedura: Creare controlli TreeView semplici o complessi
 In questo esempio viene illustrato come creare semplici o complesse <xref:System.Windows.Controls.TreeView> controlli.  
@@ -44,5 +44,5 @@ In questo esempio viene illustrato come creare semplici o complesse <xref:System
 
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [Cenni preliminari sul controllo TreeView](treeview-overview.md)
-- [Procedure relative](treeview-how-to-topics.md)
+- [Panoramica sul controllo TreeView](treeview-overview.md)
+- [Procedure relative alle proprietà](treeview-how-to-topics.md)

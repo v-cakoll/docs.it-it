@@ -21,11 +21,11 @@ helpviewer_keywords:
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
 ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938710"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Entità carattere XML e XAML
 XAML usa entità carattere definite in XML per i caratteri speciali. Questo argomento descrive alcune entità carattere specifiche e fornisce considerazioni generali sugli altri concetti XML in XAML.  
@@ -64,7 +64,7 @@ XAML usa entità carattere definite in XML per i caratteri speciali. Questo argo
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica di XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Cenni preliminari su XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [Estensioni di markup e XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [Grammatica XamlName](xamlname-grammar.md)
-- [Elaborazione degli spazi vuoti in XAML](whitespace-processing-in-xaml.md)
+- [L'elaborazione in XAML gli spazi vuoti](whitespace-processing-in-xaml.md)

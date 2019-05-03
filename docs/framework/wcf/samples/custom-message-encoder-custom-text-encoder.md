@@ -3,11 +3,11 @@ title: 'Codificatore di messaggi personalizzati: Codificatore di testi personali
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
 ms.openlocfilehash: a1523c854bbae09b2ac5cb0565962b394ec9b70e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59320704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003080"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Codificatore di messaggi personalizzati: Codificatore di testo personalizzato
 

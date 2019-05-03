@@ -8,17 +8,17 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59316804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787855"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Procedura: Creare un'associazione personalizzata usando SecurityBindingElement
 Windows Communication Foundation (WCF) include diverse associazioni fornite dal sistema che possono essere configurate ma non forniscono totale flessibilità durante la configurazione di tutte le opzioni di protezione supportati da WCF. In questo argomento viene illustrato come creare direttamente un'associazione personalizzata di singoli elementi di associazione e vengono evidenziate alcune impostazioni di sicurezza che è possibile specificare durante la creazione di tale associazione. Per altre informazioni sulla creazione di associazioni personalizzate, vedere [estensione delle associazioni](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> non supporta il <xref:System.ServiceModel.Channels.IDuplexSessionChannel> shape, che è l'uso di forma del canale predefinito per il protocollo TCP del canale di trasporto quando <xref:System.ServiceModel.TransferMode> è impostata su <xref:System.ServiceModel.TransferMode.Buffered>. È necessario impostare <xref:System.ServiceModel.TransferMode> su <xref:System.ServiceModel.TransferMode.Streamed> per utilizzare <xref:System.ServiceModel.Channels.SecurityBindingElement> in questo scenario.  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement> non supporta la forma di <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, vale a dire la forma di canale predefinita utilizzata dal trasporto TCP quando l'oggetto <xref:System.ServiceModel.TransferMode> è impostato su <xref:System.ServiceModel.TransferMode.Buffered>. È necessario impostare <xref:System.ServiceModel.TransferMode> su <xref:System.ServiceModel.TransferMode.Streamed> per utilizzare <xref:System.ServiceModel.Channels.SecurityBindingElement> in questo scenario.  
   
 ## <a name="creating-a-custom-binding"></a>Creazione di un'associazione personalizzata  
  In WCF tutte le associazioni sono costituite da *elementi di associazione*. Ogni elemento di associazione deriva dalla classe <xref:System.ServiceModel.Channels.BindingElement>. Per le associazioni standard fornite dal sistema, vengono creati e configurati gli elementi di associazione, sebbene sia possibile personalizzare alcune delle impostazioni delle proprietà.  
@@ -32,22 +32,22 @@ Windows Communication Foundation (WCF) include diverse associazioni fornite dal 
   
  Le classi aggiuntive vengono utilizzate quando viene fornita la protezione a livello di trasporto:  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
 ## <a name="required-binding-elements"></a>Elementi di associazione obbligatori  
  Esiste un ampio numero di possibili elementi di associazione che si possono combinare in un'associazione. Non tutte queste combinazioni sono valide. Contenuto della sezione vengono descritti gli elementi obbligatori che devono essere presenti in un'associazione di sicurezza.  
   
  Le associazioni di sicurezza valide dipendono da molti fattori, tra cui:  
   
--   Modalità di sicurezza.  
+- Modalità di sicurezza.  
   
--   Protocollo di trasporto.  
+- Protocollo di trasporto.  
   
--   Modello di scambio dei messaggi (MEP, Message Exchange Pattern) specificato nel contratto.  
+- Modello di scambio dei messaggi (MEP, Message Exchange Pattern) specificato nel contratto.  
   
  Nella tabella seguente vengono illustrate le configurazioni dello stack dell'elemento di associazione valide per ogni combinazione dei fattori precedenti. Si noti che si tratta di requisiti minimi. È possibile aggiungere ulteriori elementi all'associazione, ad esempio elementi di associazione di codifica dei messaggi, di transazione e di altro tipo.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - grouping controls [Windows Forms], Windows Forms
 ms.assetid: 03bd8ff9-c905-4f01-9bc6-8438b11d0881
 ms.openlocfilehash: ba3361c8477cf72031296651af022bac3ac90281
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971288"
 ---
 # <a name="groupbox-control-overview-windows-forms"></a>Cenni preliminari sul controllo GroupBox (Windows Form)
 Windows Form <xref:System.Windows.Forms.GroupBox> controlli vengono usati per fornire un raggruppamento identificabile per gli altri controlli. In genere, si usano caselle di gruppo per suddividere un modulo dalla funzione. Ad esempio, potrebbe essere un modulo d'ordine che specifica le opzioni di mailing diretto, ad esempio quali immediato del vettore da usare. Raggruppamento di tutte le opzioni in una casella di gruppo offre all'utente un'indicazione visiva logica e in fase di progettazione tutti i controlli possono essere spostati facilmente, ovvero quando si sposta il singolo <xref:System.Windows.Forms.GroupBox> controllare, tutti i controlli muovendo troppo.  

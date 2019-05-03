@@ -3,11 +3,11 @@ title: (Modulo) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
 ms.openlocfilehash: e2d2c4cd6fd62cf5785d6b69aa399a74f8d04d30
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59326736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760480"
 ---
 # <a name="modulo-entity-sql"></a>(Modulo) (Entity SQL)
 Restituisce il resto di un'espressione divisa per un'altra.  
@@ -20,10 +20,10 @@ dividend % divisor
   
 ## <a name="arguments"></a>Argomenti  
  `dividend`  
- Espressione numerica da dividere. `dividend` è qualsiasi espressione valida di uno dei tipi di dati numerici.  
+ Espressione numerica da dividere. `dividend` è qualsiasi espressione valida con qualsiasi tipo di dati numerici.  
   
  `divisor`  
- Espressione numerica per la quale dividere il dividendo. `divisor` è qualsiasi espressione valida di uno dei tipi di dati numerici.  
+ Espressione numerica per la quale dividere il dividendo. `divisor` è qualsiasi espressione valida con qualsiasi tipo di dati numerici.  
   
 ## <a name="result-types"></a>Tipi di risultati  
  Edm.Int32  

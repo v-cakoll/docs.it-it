@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3be6f2b9454ed2f74d2cc6792cd9aaa2c25215db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765206"
 ---
 # <a name="mdainfo-structure"></a>Struttura MDAInfo
 Vengono forniti dettagli sul `Event_MDAFired` evento che attiva la creazione di un assistente al debug gestito (MDA).  
@@ -47,9 +47,9 @@ typedef struct _MDAInfo {
   
  Quando viene generato un evento che attiva la creazione di un assistente al debug gestito, il runtime esegue le operazioni seguenti:  
   
--   Se l'host non è registrato un [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) istanza chiamando [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) per ricevere una notifica di un `Event_MDAFired` evento, il runtime continua con relativo Per impostazione predefinita, il comportamento non ospitato.  
+- Se l'host non è registrato un [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) istanza chiamando [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) per ricevere una notifica di un `Event_MDAFired` evento, il runtime continua con relativo Per impostazione predefinita, il comportamento non ospitato.  
   
--   Se l'host ha registrato un gestore per questo evento, il runtime controlla per verificare se un debugger è collegato al processo. Se si tratta, il runtime passa al debugger. Quando il debugger continua, viene chiamato nell'host. Se nessun debugger è collegato, il runtime chiama `IActionOnCLREvent::OnEvent` e passa un puntatore a un `MDAInfo` l'istanza come il `data` parametro.  
+- Se l'host ha registrato un gestore per questo evento, il runtime controlla per verificare se un debugger è collegato al processo. Se si tratta, il runtime passa al debugger. Quando il debugger continua, viene chiamato nell'host. Se nessun debugger è collegato, il runtime chiama `IActionOnCLREvent::OnEvent` e passa un puntatore a un `MDAInfo` l'istanza come il `data` parametro.  
   
  L'host è possibile scegliere di attivare assistenti al debug gestito e di ricevere una notifica quando viene attivato un assistente al debug gestito. Ciò consente all'host di un'opportunità per ignorare il comportamento predefinito e per interrompere il thread gestito che ha generato l'evento, per impedire che danneggiare lo stato del processo. Per altre informazioni sull'uso di assistenti al debug gestito, vedere [diagnostica degli errori con assistenti al debug gestito](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   

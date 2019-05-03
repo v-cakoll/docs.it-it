@@ -3,11 +3,11 @@ title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
 ms.openlocfilehash: 125baba917a49135aaa426df2cfa1a4dbe8ac1e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700910"
 ---
 # <a name="endpointdiscovery"></a>\<endpointDiscovery>
 Specifica le varie impostazioni di individuazione per un endpoint, quali l'individuazione, gli ambiti e le eventuali estensioni personalizzate ai relativi metadati.  

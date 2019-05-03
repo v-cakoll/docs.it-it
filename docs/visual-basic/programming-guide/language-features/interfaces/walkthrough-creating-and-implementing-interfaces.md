@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
 ms.openlocfilehash: faed4d3c9498938e022daf821dd0aefbcbcf2e8d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59322030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053769"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>Procedura dettagliata: Creazione e implementazione di interfacce (Visual Basic)
 

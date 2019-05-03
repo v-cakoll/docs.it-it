@@ -7,11 +7,11 @@ helpviewer_keywords:
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
 ms.openlocfilehash: 0629b6600444bd172af451fd7e970bff894d8047
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789259"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>Procedura: Aggiungere un'animazione alle modifiche di dimensione usando fotogrammi chiave
 Questo esempio mostra come animare le modifiche di dimensione usando fotogrammi chiave.  

@@ -5,11 +5,11 @@ ms.assetid: 1c9c3d92-f0de-4d4d-87f1-0c702a4808af
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b787302902779695c48df6e02e2ee00b28f44cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994110"
 ---
 # <a name="icordebugsymbolprovider2-interface"></a>Interfaccia ICorDebugSymbolProvider2
 Estende logicamente il [ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md) interfaccia da cui recuperare le informazioni sui simboli di debug aggiuntive.  

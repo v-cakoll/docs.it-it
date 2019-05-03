@@ -10,11 +10,11 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms]
 ms.assetid: 32b0c20d-4f37-4aea-873d-faded741d2db
 ms.openlocfilehash: 47aff0ae4d75ef83fd72bc0dc381963a7b496ec6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61806561"
 ---
 # <a name="numericupdown-control-windows-forms"></a>Controllo NumericUpDown (Windows Form)
 Il controllo `NumericUpDown` di Windows Form ha l'aspetto di una casella di testo abbinata a una coppia di frecce su cui l'utente può fare clic per modificare un valore. Nel controllo viene visualizzato e impostato un singolo valore numerico da un elenco di scelte. L'utente può aumentare e diminuire il valore del numero facendo clic sui pulsanti su e giù, premendo i tasti FRECCIA SU e FRECCIA GIÙ oppure digitando un numero. I tasti FRECCIA SU e FRECCIA GIÙ consentono rispettivamente di spostare il valore verso il valore massimo o minimo. Un esempio di uso di questo controllo è il controllo del volume di un riproduttore musicale. I controlli numerici di scorrimento sono usati in alcune applicazioni del Pannello di controllo di Windows.  

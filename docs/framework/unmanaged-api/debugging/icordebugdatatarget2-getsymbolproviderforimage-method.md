@@ -5,11 +5,11 @@ ms.assetid: b7c0a2f0-e904-43b3-98e1-d669e8a589e8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cda49084c9453f79727f7f57ef152577cb4d7c5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792678"
 ---
 # <a name="icordebugdatatarget2getsymbolproviderforimage-method"></a>Metodo ICorDebugDataTarget2::GetSymbolProviderForImage
 Restituisce il provider di simboli per un modulo dall'indirizzo di base del modulo.  

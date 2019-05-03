@@ -3,11 +3,11 @@ title: 'Procedura: Usare Svcutil.exe per convalidare il codice del servizio comp
 ms.date: 03/30/2017
 ms.assetid: d0d820fb-41c2-45b8-8f22-0fa5aeebbbaa
 ms.openlocfilehash: 599f5624b7eb0c32cbcc0a78e6c7f989ce470b58
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038753"
 ---
 # <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>Procedura: Usare Svcutil.exe per convalidare il codice del servizio compilato
 È possibile usare la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per rilevare errori in configurazioni e le implementazioni del servizio senza ospitare il servizio.  

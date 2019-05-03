@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 author: BrucePerlerMS
 ms.openlocfilehash: 39ed32bb7e926f275e996b09e746c879c6d3fe9e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909324"
 ---
 # <a name="wif-configuration-schema-conventions"></a>Convenzioni dello schema di configurazione di WIF
 Questo argomento illustra le convenzioni usate negli argomenti relativi alla configurazione di Windows Identity Foundation (WIF) e descrive alcuni attributi e funzionalità comuni usati nelle sezioni [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) e [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md).  

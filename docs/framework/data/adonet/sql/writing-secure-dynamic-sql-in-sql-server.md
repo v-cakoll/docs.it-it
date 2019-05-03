@@ -3,11 +3,11 @@ title: Scrittura dinamica sicura in SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
 ms.openlocfilehash: 236fd925740d37c2cccabfcebfb7fcb46361489d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757716"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Scrittura dinamica sicura in SQL Server
 Per SQL injection si intende il processo mediante il quale un utente malintenzionato immette istruzioni Transact-SQL anziché input valido. Se l'input viene passato direttamente al server senza essere convalidato e se l'applicazione esegue inavvertitamente il codice inserito, è possibile che l'attacco danneggi o elimini definitivamente i dati.  
@@ -21,34 +21,34 @@ Per SQL injection si intende il processo mediante il quale un utente malintenzio
   
  Di seguito sono riportate alcune linee guida utili.  
   
--   Non compilare mai istruzioni Transact-SQL direttamente dall'input utente. Usare stored procedure per la convalida dell'input utente.  
+- Non compilare mai istruzioni Transact-SQL direttamente dall'input utente. Usare stored procedure per la convalida dell'input utente.  
   
--   Convalidare l'input utente testando tipo, lunghezza, formato e intervallo. Usare la funzione QUOTENAME() Transact-SQL per usare caratteri di escape per i nomi di sistema oppure la funzione REPLACE() per usare caratteri di escape per qualsiasi carattere di una stringa.  
+- Convalidare l'input utente testando tipo, lunghezza, formato e intervallo. Usare la funzione QUOTENAME() Transact-SQL per usare caratteri di escape per i nomi di sistema oppure la funzione REPLACE() per usare caratteri di escape per qualsiasi carattere di una stringa.  
   
--   Implementare più livelli di convalida per ciascun livello dell'applicazione.  
+- Implementare più livelli di convalida per ciascun livello dell'applicazione.  
   
--   Testare le dimensioni e il tipo di dati dell'input e imporre limiti appropriati. In questo modo è possibile impedire intenzionali sovraccarichi del buffer.  
+- Testare le dimensioni e il tipo di dati dell'input e imporre limiti appropriati. In questo modo è possibile impedire intenzionali sovraccarichi del buffer.  
   
--   Testare il contenuto delle variabili stringa e accettare solo i valori previsti. Rifiutare voci contenenti dati binari, sequenze di escape e caratteri di commento.  
+- Testare il contenuto delle variabili stringa e accettare solo i valori previsti. Rifiutare voci contenenti dati binari, sequenze di escape e caratteri di commento.  
   
--   Quando si usano documenti XML, convalidare tutti i dati in base al relativo schema man mano che vengono immessi.  
+- Quando si usano documenti XML, convalidare tutti i dati in base al relativo schema man mano che vengono immessi.  
   
--   In ambienti multilivello è necessario convalidare tutti i dati prima di consentirne l'inserimento nell'area attendibile.  
+- In ambienti multilivello è necessario convalidare tutti i dati prima di consentirne l'inserimento nell'area attendibile.  
   
--   Non accettare le stringhe seguenti nei campi da cui è possibile costruire i nomi di file: AUX, CLOCK$, da COM1 a COM8, CON, CONFIG$, da LPT1 a LPT8, NUL e PRN.  
+- Non accettare le stringhe seguenti nei campi da cui è possibile costruire i nomi di file: AUX, CLOCK$, da COM1 a COM8, CON, CONFIG$, da LPT1 a LPT8, NUL e PRN.  
   
--   Usare oggetti <xref:System.Data.SqlClient.SqlParameter> con stored procedure e comandi per fornire la verifica dei tipi e la convalida della lunghezza.  
+- Usare oggetti <xref:System.Data.SqlClient.SqlParameter> con stored procedure e comandi per fornire la verifica dei tipi e la convalida della lunghezza.  
   
--   Usare espressioni <xref:System.Text.RegularExpressions.Regex> nel codice client per filtrare i caratteri non validi.  
+- Usare espressioni <xref:System.Text.RegularExpressions.Regex> nel codice client per filtrare i caratteri non validi.  
   
 ## <a name="dynamic-sql-strategies"></a>Strategie per le istruzioni SQL dinamiche  
  L'esecuzione di istruzioni SQL create in modo dinamico nel codice procedurale interrompe la catena di proprietà, facendo in modo che SQL Server controlli le autorizzazioni del chiamante sugli oggetti cui hanno accesso le istruzioni SQL dinamiche.  
   
  In SQL Server sono disponibili nuove tecniche per concedere agli utenti l'accesso ai dati usando stored procedure e funzioni definite dall'utente che eseguono istruzioni SQL dinamiche.  
   
--   Uso della rappresentazione con la clausola Transact-SQL EXECUTE AS, come descritto in [Personalizzazione delle autorizzazioni con rappresentazione in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Uso della rappresentazione con la clausola Transact-SQL EXECUTE AS, come descritto in [Personalizzazione delle autorizzazioni con rappresentazione in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
--   Firma di stored procedure con certificati, come descritto in [Firma di stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Firma di stored procedure con certificati, come descritto in [Firma di stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  La clausola EXECUTE AS sostituisce le autorizzazioni del chiamante con quelle dell'utente specificato nella clausola stessa. Le stored procedure o i trigger annidati vengono eseguiti nel contesto di sicurezza dell'utente proxy. Tale comportamento può causare l'interruzione di applicazioni che si basano sulla sicurezza a livello di riga o che richiedono controlli. Alcune funzioni che restituiscono l'identità dell'utente restituiscono in realtà l'utente associato alla clausola EXECUTE AS e non il chiamante originale. Viene ripristinato il contesto di esecuzione del chiamante originale solo dopo l'esecuzione della stored procedure o quando viene eseguita un'istruzione REVERT.  

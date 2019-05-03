@@ -3,32 +3,32 @@ title: Provider di token
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965659"
 ---
 # <a name="token-provider"></a>Provider di token
 Questo esempio dimostra come implementare un provider di token personalizzato. Un provider di token in Windows Communication Foundation (WCF) viene usato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con il Provider di Token di gestione credenziali predefinito. WCF viene inoltre fornito con un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provider di token. I provider di token personalizzati sono utili nei casi seguenti:
 
--   Se è disponibile un archivio di credenziali con cui questi provider di token non sono in grado di operare.
+- Se è disponibile un archivio di credenziali con cui questi provider di token non sono in grado di operare.
 
--   Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto di cui l'utente fornisce i dettagli a quando il framework del client WCF utilizza le credenziali.
+- Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto di cui l'utente fornisce i dettagli a quando il framework del client WCF utilizza le credenziali.
 
--   Se si sta compilando un token personalizzato.
+- Se si sta compilando un token personalizzato.
 
  Questo esempio illustra come compilare un provider di token personalizzato che trasforma l'input dell'utente in un formato diverso.
 
  Per riassumere, questo esempio dimostra quanto segue.
 
--   Come un client può eseguire l'autenticazione utilizzando un nome utente e una password.
+- Come un client può eseguire l'autenticazione utilizzando un nome utente e una password.
 
--   Come è possibile configurare un client con un provider personalizzato.
+- Come è possibile configurare un client con un provider personalizzato.
 
--   Come il server può convalidare le credenziali client utilizzando una password con una classe personalizzato <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> personalizzata che convalida la corrispondenza tra nome utente e password.
+- Come il server può convalidare le credenziali client utilizzando una password con una classe personalizzato <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> personalizzata che convalida la corrispondenza tra nome utente e password.
 
--   Come viene autenticato il servizio dal client mediante il certificato X.509 del server.
+- Come viene autenticato il servizio dal client mediante il certificato X.509 del server.
 
  Questo esempio mostra anche come l'identità del chiamante sia accessibile dopo il processo di autenticazione del token personalizzato.
 
@@ -219,7 +219,7 @@ static void DisplayIdentityInformation()
 
  Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.
 
--   Creazione del certificato server.
+- Creazione del certificato server.
 
      Le righe seguenti del file batch Setup.bat creano il certificato server da usare. La variabile `%SERVER_NAME%` specifica il nome del server. Modificare questa variabile per specificare nome del server. Il valore predefinito in questo file batch è localhost.
 
@@ -233,7 +233,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installazione del certificato server nell'archivio certificati attendibile del client:
+- Installazione del certificato server nell'archivio certificati attendibile del client:
 
      Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.
 

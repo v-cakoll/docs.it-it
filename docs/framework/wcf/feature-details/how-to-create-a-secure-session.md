@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
 ms.openlocfilehash: 4464100012fe9b3e1f0e8743707b1dc9a477c3d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59205888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787868"
 ---
 # <a name="how-to-create-a-secure-session"></a>Procedura: Creare una sessione protetta
 Fatta eccezione per il [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) associazione, le associazioni fornite dal sistema in Windows Communication Foundation (WCF) usano automaticamente sessioni protette quando è abilitata la sicurezza dei messaggi.  
@@ -21,7 +21,7 @@ Fatta eccezione per il [ \<basicHttpBinding >](../../../../docs/framework/config
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>Per specificare che un servizio usa sessioni protette mediante una delle associazioni fornite dal sistema  
   
--   Configurare un servizio per l'uso di un'associazione fornita dal sistema che supporta la protezione dei messaggi.  
+- Configurare un servizio per l'uso di un'associazione fornita dal sistema che supporta la protezione dei messaggi.  
   
      Fatta eccezione per il [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) binding, quando le associazioni fornite dal sistema sono configurate per usare automaticamente la protezione dei messaggi WCF Usa sessioni protette. Nella tabella seguente vengono elencate le associazioni fornite dal sistema che supportano la protezione dei messaggi e viene indicato se la protezione del messaggio è il meccanismo di sicurezza predefinito.  
   
@@ -58,7 +58,7 @@ Fatta eccezione per il [ \<basicHttpBinding >](../../../../docs/framework/config
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>Per specificare che un servizio usa sessioni protette mediante un'associazione personalizzata  
   
--   Creare un'associazione personalizzata che specifica che i messaggi SOAP sono protetti mediante una sessione protetta.  
+- Creare un'associazione personalizzata che specifica che i messaggi SOAP sono protetti mediante una sessione protetta.  
   
      Per altre informazioni sulla creazione di un'associazione personalizzata, vedere [come: Personalizzare un'associazione fornita dal sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   

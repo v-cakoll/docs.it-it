@@ -10,11 +10,11 @@ helpviewer_keywords:
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
 ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010027"
 ---
 # <a name="metafiles-in-gdi"></a>Metafile in GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce il <xref:System.Drawing.Imaging.Metafile> classe in modo che è possibile registrare e visualizzare metafile. Un metafile, denominato anche immagine vettoriale, è un'immagine che viene archiviata come una sequenza di comandi e le impostazioni di disegno. I comandi e le impostazioni registrate un <xref:System.Drawing.Imaging.Metafile> oggetto può essere archiviato in memoria o salvato in un file o flusso.  
@@ -22,11 +22,11 @@ ms.locfileid: "59119860"
 ## <a name="metafile-formats"></a>Formati di metafile  
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è possibile visualizzare metafile che sono stati archiviati nei formati seguenti:  
   
--   Windows Metafile (WMF)  
+- Windows Metafile (WMF)  
   
--   Enhanced Metafile (EMF)  
+- Enhanced Metafile (EMF)  
   
--   EMF+  
+- EMF+  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è in grado di registrare i metafile in formato EMF e EMF +, ma non nel formato di WMF.  
   

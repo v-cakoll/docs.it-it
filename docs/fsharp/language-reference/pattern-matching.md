@@ -3,11 +3,11 @@ title: Criteri di ricerca
 description: Informazioni su come vengono usati i modelli F# per confrontare i dati con strutture logiche, scomporre i dati in parti costituenti o estrarre informazioni dai dati.
 ms.date: 05/16/2016
 ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795460"
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca
 
@@ -29,7 +29,7 @@ Ogni modello funge da una regola per trasformare l'input in qualche modo. Nel `m
 
 Nella tabella seguente sono illustrati i modelli supportati. In fase di esecuzione, l'input viene verificato rispetto a ognuno dei modelli seguenti nell'ordine elencato nella tabella, e modelli applicate in modo ricorsivo, dalla prima all'ultimo così come appaiono nel codice e da sinistra a destra per i modelli per ogni riga.
 
-|nome|Descrizione|Esempio|
+|Nome|Descrizione|Esempio|
 |----|-----------|-------|
 |Criterio costante|Qualsiasi numerica, carattere, o valore letterale stringa, una costante di enumerazione o identificatore letterale definito|`1.0`, `"test"`, `30`, `Color.Red`|
 |Modello identificatore|Valore case di unione discriminata, etichetta di eccezione o case di modello attivo|`Some(x)`<br /><br />`Failure(msg)`|
@@ -37,11 +37,11 @@ Nella tabella seguente sono illustrati i modelli supportati. In fase di esecuzio
 |`as` Modello|*pattern* come *identificatore*|`(a, b) as tuple1`|
 |O un modello|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |E criterio|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
-|Modello costruttore|*Identificatore* :: *-identificatore dell'elenco*|`h :: t`|
-|Modello elenco|[ *pattern_1*;.... *pattern_n* ]|`[ a; b; c ]`|
-|Modello matrice|[&#124; *pattern_1*;..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|Modello costruttore|*identifier* :: *list-identifier*|`h :: t`|
+|Modello elenco|[ *pattern_1*; ... ; *pattern_n* ]|`[ a; b; c ]`|
+|Modello matrice|[&#124; *pattern_1*; ..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
 |Modello con parentesi|( *pattern* )|`( a )`|
-|Modello tupla|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
+|Modello tupla|( *pattern_1*, ... , *pattern_n* )|`( a, b )`|
 |Modello record|{ *identifier1* = *pattern_1*;.... *identifier_n* = *pattern_n* }|`{ Name = name; }`|
 |Modello carattere jolly|_|`_`|
 |Modello con annotazione del tipo|*pattern* : *tipo*|`a : int`|
@@ -161,7 +161,7 @@ Il modello matrice assomiglia al modello elenco e può essere utilizzato per sco
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4812.fs)]
 
-## <a name="tuple-pattern"></a>Modello tupla
+## <a name="tuple-pattern"></a>Tuple Pattern
 
 Il modello tupla corrisponde all'input in formato di tupla e consente la tupla scomporre nei relativi elementi costituenti utilizzando criteri di ricerca di variabili per ogni posizione nella tupla.
 

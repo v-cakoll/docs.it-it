@@ -5,11 +5,11 @@ ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861231"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Scrittura di app grandi e reattive in .NET Framework
 Questo articolo include suggerimenti per il miglioramento delle prestazioni delle app .NET Framework di grandi dimensioni o di app che elaborano una quantità elevata di dati, ad esempio file o database. Questi suggerimenti derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e l'articolo include diversi esempi concreti tratti dal compilatore C#. 
@@ -34,7 +34,7 @@ Questo articolo include suggerimenti per il miglioramento delle prestazioni dell
 ### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Considerazione 2: Se non si desidera misurare, assicurano  
  I profili e le misurazioni sono attendibili. I profili indicano se la CPU è caricata completamente o se si è verificato un blocco di I/O del disco. Specificano inoltre il tipo e la quantità di memoria allocata e se la CPU dedica molto tempo a operazioni di [Garbage Collection](../../../docs/standard/garbage-collection/index.md) (GC). 
   
- È consigliabile definire obiettivi per le prestazioni relative a esperienze utente o scenari chiave dell'app e scrivere test per la misurazione delle prestazioni. Esaminare i test che rilevano errori applicando un metodo scientifico: usare i profili come indicazione, definire ipotesi sulla natura del problema e testare le ipotesi tramite un esperimento o una modifica del codice. Stabilire misure di base per le prestazioni nel tempo grazie a testing regolare, in modo da potere isolare le modifiche che provocano una regressione nelle prestazioni. Un approccio rigoroso alle operazioni relative alle prestazioni permette di evitare di perdere tempo con aggiornamenti di codice superflui. 
+ È consigliabile definire obiettivi per le prestazioni relative a esperienze utente o scenari chiave dell'app e scrivere test per la misurazione delle prestazioni. Esaminare i test che rilevano errori applicando un metodo scientifico: usare i profili come indicazione, definire ipotesi sulla natura del problema e testare le ipotesi tramite un esperimento o una modifica del codice. Stabilire misure iniziali per le prestazioni nel tempo grazie a testing regolare, in modo da potere isolare le modifiche che provocano una regressione nelle prestazioni. Un approccio rigoroso alle operazioni relative alle prestazioni permette di evitare di perdere tempo con aggiornamenti di codice superflui. 
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Considerazione 3: Strumenti utili la vera differenza  
  Gli strumenti efficaci permettono di individuare rapidamente i problemi principali a livello di prestazioni (CPU, memoria o disco) e semplificano l'individuazione del codice che provoca tali colli di bottiglia. Microsoft offre un'ampia gamma di strumenti per le prestazioni, ad esempio [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) e [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
@@ -408,7 +408,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- Il nuovo codice con memorizzazione nella cache include un campo `SyntaxTree` con nome `cachedResult`. Quando questo campo è Null, `GetSyntaxTreeAsync()` esegue le operazioni e salva il risultato nella cache. `GetSyntaxTreeAsync()` restituisce l'oggetto `SyntaxTree`. Se però è disponibile una funzione di tipo `async` `Task<SyntaxTree>` e si restituisce un valore di tipo `SyntaxTree`, il compilatore emette codice per allocare un oggetto Task in cui includere il risultato, usando `Task<SyntaxTree>.FromResult()`. L'oggetto Task è contrassegnato come completato e il risultato è immediatamente disponibile. Nel codice per i nuovi compilatori gli oggetti <xref:System.Threading.Tasks.Task> già completati erano così frequenti che la correzione di queste allocazioni ha permesso un notevole miglioramento della reattività. 
+ Il nuovo codice con memorizzazione nella cache include un campo `SyntaxTree` con nome `cachedResult`. Quando questo campo è Null, `GetSyntaxTreeAsync()` esegue le operazioni e salva il risultato nella cache. `GetSyntaxTreeAsync()` Restituisce il `SyntaxTree` oggetto. Se però è disponibile una funzione di tipo `async``Task<SyntaxTree>` e si restituisce un valore di tipo `SyntaxTree`, il compilatore emette codice per allocare un oggetto Task in cui includere il risultato, usando `Task<SyntaxTree>.FromResult()`. L'oggetto Task è contrassegnato come completato e il risultato è immediatamente disponibile. Nel codice per i nuovi compilatori gli oggetti <xref:System.Threading.Tasks.Task> già completati erano così frequenti che la correzione di queste allocazioni ha permesso un notevole miglioramento della reattività. 
   
  **Correzione per l'esempio 6**  
   
@@ -436,7 +436,7 @@ class Compilation { /*...*/
   
  Questo codice modifica il tipo di `cachedResult` in `Task<SyntaxTree>` e usa una funzione `async` dell'helper che include il codice originale da `GetSyntaxTreeAsync()`. `GetSyntaxTreeAsync()` usa ora l'[operatore Null-coalescing](../../csharp/language-reference/operators/null-coalescing-operator.md) per restituire `cachedResult` nel caso in cui non sia Null. Se `cachedResult` è Null, `GetSyntaxTreeAsync()` chiama `GetSyntaxTreeUncachedAsync()` e memorizza il risultato nella cache. Si noti che `GetSyntaxTreeAsync()` non attende la chiamata a `GetSyntaxTreeUncachedAsync()`, come farebbe normalmente il codice. Se non si attende, quando `GetSyntaxTreeUncachedAsync()` restituisce l'oggetto <xref:System.Threading.Tasks.Task> corrispondente, `GetSyntaxTreeAsync()` restituisce immediatamente l'oggetto <xref:System.Threading.Tasks.Task>. Il risultato memorizzato nella cache è ora un oggetto <xref:System.Threading.Tasks.Task> e non sono quindi presenti allocazioni per la restituzione del risultato memorizzato nella cache. 
   
-### <a name="additional-considerations"></a>Considerazioni aggiuntive  
+### <a name="additional-considerations"></a>Ulteriori considerazioni  
  Di seguito sono riportate altre considerazioni sui potenziali problemi relativi ad app di grandi dimensioni o app che elaborano quantità elevate di dati. 
   
  **Dizionari**  

@@ -1,16 +1,16 @@
 ---
-title: Messaggi di messaggistica affidabile rilasciati
+title: Messaggi di messaggistica affidabile ignorati
 ms.date: 03/30/2017
 ms.assetid: 9933abaa-33ec-4245-b083-bf94415929b5
 ms.openlocfilehash: 889c860fe8c1f119992d516e7ecfd8cb847ec938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33470555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916058"
 ---
-# <a name="reliable-messaging-messages-dropped"></a>Messaggi di messaggistica affidabile rilasciati
-Nome contatore: sessioni di messaggistica affidabile eliminate.  
+# <a name="reliable-messaging-messages-dropped"></a>Messaggi di messaggistica affidabile ignorati
+Nome contatore: Sessioni di messaggistica affidabile eliminati.  
   
 ## <a name="description"></a>Descrizione  
- Numero complessivo di messaggi di messaggistica affidabile rilasciati in questo servizio.
+ Numero complessivo di messaggi di messaggistica affidabile ignorati in questo servizio.

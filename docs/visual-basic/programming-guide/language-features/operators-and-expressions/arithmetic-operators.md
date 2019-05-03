@@ -14,11 +14,11 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
 ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61830362"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Operatori aritmetici in Visual Basic
 Operatori aritmetici consentono di eseguire molte delle comuni operazioni aritmetiche che coinvolgono il calcolo dei valori numerici rappresentati da valori letterali, variabili, altre espressioni, (funzione) e le chiamate di proprietà e costanti. Anche classificati con operatori aritmetici sono elencati gli operatori di spostamento di bit, che operano a livello dei singoli bit di operandi- and -shift degli schemi di bit verso sinistra o destra.  

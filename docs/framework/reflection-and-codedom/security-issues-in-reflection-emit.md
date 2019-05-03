@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40db78b8b09b90ab5e11dcc61dc042af1981e827
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701404"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59074521"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemi di sicurezza nella reflection emit
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornisce tre modalità per creare codice Microsoft Intermediate Language (MSIL), ciascuna con specifici problemi di sicurezza:  
@@ -154,5 +154,6 @@ ms.locfileid: "54701404"
  A partire da [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] non sono necessarie autorizzazioni per ottenere informazioni sui tipi e i membri non pubblici. Per ottenere le informazioni necessarie a generare metodi dinamici viene usato Reflection. Ad esempio, gli oggetti <xref:System.Reflection.MethodInfo> vengono usati per generare le chiamate al metodo. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] richiedono <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Per altre informazioni, vedere [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerazioni sulla sicurezza per reflection).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerazioni sulla sicurezza per reflection)
 - [Creazione di assembly e metodi dinamici](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

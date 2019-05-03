@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661867"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59342345"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Come il runtime individua gli assembly
 Per distribuire correttamente l'applicazione .NET Framework, è necessario comprendere in che modo Common Language Runtime individua e associa gli assembly che costituiscono l'applicazione. Per impostazione predefinita, il runtime tenta di eseguire l'associazione con la versione esatta di un assembly con cui è stata compilata l'applicazione. Questo comportamento predefinito può essere sottoposto a override dalle impostazioni del file di configurazione.  
@@ -40,16 +40,16 @@ Per distribuire correttamente l'applicazione .NET Framework, è necessario compr
   
  Il runtime usa la procedura seguente per risolvere un riferimento ad assembly:  
   
-1.  [Determina la versione corretta dell'assembly](#step1) esaminando i file di configurazione applicabili, tra cui il file di configurazione dell'applicazione, il file dei criteri editore e il file di configurazione del computer. Se il file di configurazione si trova in un computer remoto, il runtime deve prima individuare e scaricare il file di configurazione dell'applicazione.  
+1. [Determina la versione corretta dell'assembly](#step1) esaminando i file di configurazione applicabili, tra cui il file di configurazione dell'applicazione, il file dei criteri editore e il file di configurazione del computer. Se il file di configurazione si trova in un computer remoto, il runtime deve prima individuare e scaricare il file di configurazione dell'applicazione.  
   
-2.  [Controlla se il nome dell'assembly è stato associato in precedenza](#step2) e, in questo caso, usa l'assembly caricato in precedenza. Se una richiesta precedente di caricamento dell'assembly non è riuscita, la richiesta viene interrotta immediatamente senza effettuare alcun tentativo di caricamento dell'assembly.  
+2. [Controlla se il nome dell'assembly è stato associato in precedenza](#step2) e, in questo caso, usa l'assembly caricato in precedenza. Se una richiesta precedente di caricamento dell'assembly non è riuscita, la richiesta viene interrotta immediatamente senza effettuare alcun tentativo di caricamento dell'assembly.  
   
     > [!NOTE]
     >  La memorizzazione nella cache di errori relativi all'associazione di assembly è stata introdotta in .NET Framework versione 2.0.  
   
-3.  [Controlla la Global Assembly Cache](#step3). Se viene trovato nella Global Assembly Cache, il runtime usa questo assembly.  
+3. [Controlla la Global Assembly Cache](#step3). Se viene trovato nella Global Assembly Cache, il runtime usa questo assembly.  
   
-4.  [Individua tramite probe l'assembly](#step4) usando la procedura seguente:  
+4. [Individua tramite probe l'assembly](#step4) usando la procedura seguente:  
   
     1.  Se i criteri dell'editore e della configurazione non hanno effetto sul riferimento originale e se la richiesta di associazione è stata creata usando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, il runtime cerca suggerimenti per la posizione.  
   
@@ -154,9 +154,9 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>Passaggio 4: Individuazione dell'assembly mediante codebase o probe  
  Dopo aver determinato la versione corretta dell'assembly usando le informazioni nel riferimento dell'assembly chiamante e nei file di configurazione e dopo aver archiviato tale versione nella Global Assembly Cache (solo per assembly con nome sicuro), Common Language Runtime tenta di trovare l'assembly. Il processo di individuazione di un assembly prevede i seguenti passaggi:  
   
-1.  Se nel file di configurazione dell'applicazione viene rilevato un elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md), il percorso specificato viene verificato dal runtime. Se viene rilevata una corrispondenza, viene usato l'assembly trovato e non vengono eseguite individuazioni tramite probe. Se l'assembly non viene trovato, la richiesta di associazione non riesce.  
+1. Se nel file di configurazione dell'applicazione viene rilevato un elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md), il percorso specificato viene verificato dal runtime. Se viene rilevata una corrispondenza, viene usato l'assembly trovato e non vengono eseguite individuazioni tramite probe. Se l'assembly non viene trovato, la richiesta di associazione non riesce.  
   
-2.  Il runtime esegue quindi l'individuazione tramite probe per l'assembly di riferimento usando le regole specificate più avanti in questa sezione.  
+2. Il runtime esegue quindi l'individuazione tramite probe per l'assembly di riferimento usando le regole specificate più avanti in questa sezione.  
   
 > [!NOTE]
 >  Se sono presenti più versioni di un assembly in una directory e si vuole fare riferimento a una versione specifica, è necessario usare l'elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) invece dell'attributo `privatePath` dell'elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md). Se si usa l'elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), il runtime arresta l'individuazione tramite probe non appena viene trovato un assembly che corrisponde al nome semplice dell'assembly a cui viene fatto riferimento, indipendentemente dalla correttezza della corrispondenza. Se la corrispondenza è corretta, viene usato questo assembly. Se la corrispondenza non è corretta, l'individuazione tramite probe si arresta e l'associazione non riesce.  
@@ -248,5 +248,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Se ad esempio Assembly1 fa riferimento ad Assembly2 e Assembly1 è stato scaricato da `http://www.code.microsoft.com/utils`, il percorso viene considerato come un suggerimento su dove trovare Assembly2.dll. Il runtime quindi verifica la presenza dell'assembly in `http://www.code.microsoft.com/utils/Assembly2.dll` e `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`. Se Assembly2 non viene trovato nei percorsi indicati, il runtime esegue una query in Windows Installer.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedure consigliate per il caricamento di assembly](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [Distribuzione](../../../docs/framework/deployment/index.md)

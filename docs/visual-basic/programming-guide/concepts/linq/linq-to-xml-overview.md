@@ -3,11 +3,11 @@ title: Panoramica LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
 ms.openlocfilehash: 987409aab9d3d12cc3cbbebaa64da0bffcee1c8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021258"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>Panoramica LINQ to XML (Visual Basic)
 XML è stato ampiamente adottato per la formattazione dei dati in una vasta gamma di contesti. Viene ad esempio usato in applicazioni Web, file di configurazione, file di Microsoft Office Word e in database.  
@@ -22,13 +22,13 @@ XML è stato ampiamente adottato per la formattazione dei dati in una vasta gamm
 ## <a name="what-is-linq-to-xml"></a>Informazioni su LINQ to XML  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è un'interfaccia di programmazione XML in memoria con supporto LINQ che consente di usare codice XML dall'interno dei linguaggi di programmazione di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è simile al modello DOM (Document Object Model) in quanto porta in memoria il documento XML. È quindi possibile eseguire query e modificare il documento e dopo averlo modificato salvarlo in un file o serializzarlo e inviarlo tramite Internet. Tuttavia, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è diverso da DOM: Fornisce un nuovo modello a oggetti più leggero e facile da usare, che sfrutta le funzionalità del linguaggio in Visual Basic.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è simile al modello DOM (Document Object Model) in quanto porta in memoria il documento XML. È quindi possibile eseguire query e modificare il documento e dopo averlo modificato salvarlo in un file o serializzarlo e inviarlo tramite Internet. Tuttavia [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è diverso da DOM: Fornisce un nuovo modello a oggetti più leggero e facile da usare, che sfrutta le funzionalità del linguaggio in Visual Basic.  
   
  Il principale vantaggio di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è costituito dall'integrazione con [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Grazie a tale integrazione è possibile scrivere query sul documento XML in memoria per recuperare raccolte di elementi e di attributi. La funzionalità di query di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è paragonabile a XPath e XQuery, dal punto di vista funzionale ma non sintattico. L'integrazione di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] in Visual Basic fornisce più forte tipizzazione, in fase di compilazione, controllo e supporto migliorato del debugger.  
   
  Un altre vantaggio di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], costituito dalla possibilità di usare risultati di query come parametri di costruttori di oggetti <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XAttribute>, consente di disporre di un approccio potente per la creazione di alberi XML. Questo approccio, chiamato *costruzione funzionale* consente agli sviluppatori di trasformare facilmente gli alberi XML da una forma all'altra.  
   
- Ad esempio, potrebbe essere un file XML tipico come descritto in ordine di acquisto [File XML di esempio: Ordine di acquisto tipico (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md). Usando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], è possibile eseguire la query seguente per ottenere il valore dell'attributo relativo al numero di parte di ciascun articolo incluso dell'ordine di acquisto:  
+ Si supponga ad esempio di avere un tipico ordine di acquisto in formato XML come descritto in [File XML di esempio: tipico ordine di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md). Usando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], è possibile eseguire la query seguente per ottenere il valore dell'attributo relativo al numero di parte di ciascun articolo incluso dell'ordine di acquisto:  
   
 ```vb  
 Dim partNos = _  
@@ -49,19 +49,19 @@ Select item
   
  Oltre alle funzionalità [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] include un'interfaccia di programmazione XML migliorata. Usando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è possibile:  
   
--   Caricare codice XML da file o flussi.  
+- Caricare codice XML da file o flussi.  
   
--   Serializzare codice XML in file o flussi.  
+- Serializzare codice XML in file o flussi.  
   
--   Creare codice XML nuovo usando la costruzione funzionale.  
+- Creare codice XML nuovo usando la costruzione funzionale.  
   
--   Eseguire una query su codice XML usando assi simili a XPath.  
+- Eseguire una query su codice XML usando assi simili a XPath.  
   
--   Modificare l'albero XML in memoria usando metodi quali esempio <xref:System.Xml.Linq.XContainer.Add%2A>, <xref:System.Xml.Linq.XNode.Remove%2A>, <xref:System.Xml.Linq.XNode.ReplaceWith%2A>e <xref:System.Xml.Linq.XElement.SetValue%2A>.  
+- Modificare l'albero XML in memoria usando metodi quali esempio <xref:System.Xml.Linq.XContainer.Add%2A>, <xref:System.Xml.Linq.XNode.Remove%2A>, <xref:System.Xml.Linq.XNode.ReplaceWith%2A>e <xref:System.Xml.Linq.XElement.SetValue%2A>.  
   
--   Convalidare alberi XML usando lo schema XSD.  
+- Convalidare alberi XML usando lo schema XSD.  
   
--   Usare una combinazione di queste funzionalità per trasformare strutture ad albero XML da una forma in un altra.  
+- Usare una combinazione di queste funzionalità per trasformare strutture ad albero XML da una forma in un altra.  
   
 ## <a name="creating-xml-trees"></a>Creazione di strutture ad albero XML  
  Uno dei vantaggi più significativi della programmazione con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è rappresentato dalla facilità con cui è possibile creare alberi XML. Ad esempio, per creare un piccolo albero XML, è possibile scrivere codice come indicato di seguito:  

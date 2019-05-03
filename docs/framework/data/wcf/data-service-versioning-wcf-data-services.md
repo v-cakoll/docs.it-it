@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
 ms.openlocfilehash: 818495cd2f7100f416280ce019321fed3f26aee8
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765731"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Controllo delle versioni del servizio dati (WCF Data Services)
 Il [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] consente di creare servizi dati in modo che i client possono accedere ai dati come risorse usando URI basati su un modello di dati. OData supporta anche la definizione di operazioni del servizio. Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro ciclo di vita, potrebbe essere necessario cambiare questi servizi dati per molteplici ragioni, ad esempio perché cambiano le esigenze aziendali, i requisiti IT o per risolvere altri problemi. Quando si apportano modifiche a un servizio dati esistente, è necessario valutare se definire una nuova versione del servizio dati e il modo migliore per ridurre l'impatto sulle applicazioni client esistenti. In questo argomento vengono fornite informazioni su quando e come creare una nuova versione di un servizio dati. Viene inoltre descritto il modo in cui WCF Data Services gestisce uno scambio tra client e servizi dati che supportano versioni diverse del protocollo OData.
@@ -22,9 +22,9 @@ Il [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] consente di c
 ### <a name="data-model-changes-that-recommend-a-new-data-service-version"></a>Modifiche al modello di dati per cui è consigliabile usare una nuova versione del servizio dati
  Quando si valuta se pubblicare una nuova versione di un servizio dati, è importante capire come i tipi diversi di modifiche possano influire sulle applicazioni client. Le modifiche a un servizio dati che potrebbero richiedere la creazione di una nuova versione di un servizio dati possono essere divise nelle due categorie seguenti:
 
--   Modifiche al contratto del servizio, ossia aggiornamenti alle operazioni del servizio e all'accessibilità di set di entità (feed), modifiche alle versioni e altre modifiche ai comportamenti del servizio.
+- Modifiche al contratto del servizio, ossia aggiornamenti alle operazioni del servizio e all'accessibilità di set di entità (feed), modifiche alle versioni e altre modifiche ai comportamenti del servizio.
 
--   Modifiche al contratto dati, ossia modifiche al modello di dati o ai formati o alle personalizzazioni di feed.
+- Modifiche al contratto dati, ossia modifiche al modello di dati o ai formati o alle personalizzazioni di feed.
 
  Nella tabella seguente sono contenute informazioni dettagliate sui tipi di modifiche che è necessario valutare per pubblicare una nuova versione del servizio dati:
 
@@ -44,9 +44,9 @@ Il [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] consente di c
 ### <a name="how-to-version-a-data-service"></a>Come controllare le versioni di un servizio dati
  Se necessario, una nuova versione del servizio dati viene definita creando una nuova istanza del servizio con un contratto di servizio o un modello di dati aggiornato. Questo nuovo servizio viene quindi esposto tramite un nuovo endpoint dell'URI che lo differenzia dalla versione precedente. Ad esempio:
 
--   Versione obsoleta: `http://services.odata.org/Northwind/v1/Northwind.svc/`
+- Versione obsoleta: `http://services.odata.org/Northwind/v1/Northwind.svc/`
 
--   Nuova versione: `http://services.odata.org/Northwind/v2/Northwind.svc/`
+- Nuova versione: `http://services.odata.org/Northwind/v2/Northwind.svc/`
 
  Quando si aggiorna un servizio dati, sarà necessario inoltre aggiornare i client in base ai nuovi metadati del servizio dati e usare il nuovo URI radice. Quando possibile, è necessario gestire la versione precedente del servizio dati per supportare i client non ancora aggiornati per usare la nuova versione. Quando non sono più necessarie, le versioni precedenti di un servizio dati possono essere rimosse. È opportuno valutare la gestione dell'URI dell'endpoint del servizio dati in file di configurazione esterno.
 

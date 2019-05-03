@@ -13,11 +13,11 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
 ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913094"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Procedura: Rispondere alla selezione nel controllo DataGrid di Windows Forms
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "59191900"
   
 ### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Per rilevare quando l'utente della griglia dati consente di selezionare una cella diversa  
   
--   Nel <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> gestore eventi, scrivere il codice per rispondere in modo appropriato.  
+- Nel <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> gestore eventi, scrivere il codice per rispondere in modo appropriato.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -56,7 +56,7 @@ ms.locfileid: "59191900"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Per determinare quale parte della griglia dati scelto dall'utente  
   
--   Chiamare il <xref:System.Windows.Forms.DataGrid.HitTest%2A> metodo in un gestore eventi appropriato, ad esempio per il <xref:System.Windows.Forms.Control.MouseDown> o <xref:System.Windows.Forms.Control.Click> evento.  
+- Chiamare il <xref:System.Windows.Forms.DataGrid.HitTest%2A> metodo in un gestore eventi appropriato, ad esempio per il <xref:System.Windows.Forms.Control.MouseDown> o <xref:System.Windows.Forms.Control.Click> evento.  
   
      Il <xref:System.Windows.Forms.DataGrid.HitTest%2A> metodo restituisce un <xref:System.Windows.Forms.DataGrid.HitTestInfo> oggetto che contiene la riga e colonna dell'area selezionata.  
   
@@ -143,4 +143,4 @@ ms.locfileid: "59191900"
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllo DataGrid](datagrid-control-windows-forms.md)
-- [Procedura: Modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid di Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Procedura: Modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid Windows Form](change-displayed-data-at-run-time-wf-datagrid-control.md)

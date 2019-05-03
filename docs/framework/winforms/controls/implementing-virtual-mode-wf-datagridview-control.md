@@ -13,11 +13,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
 ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59344325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973771"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Procedura dettagliata: Implementazione della modalità virtuale nel controllo DataGridView di Windows Forms
 Quando si desidera visualizzare quantità molto elevate di dati tabulari in un' <xref:System.Windows.Forms.DataGridView> (controllo), è possibile impostare il <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> proprietà `true` e gestire in modo esplicito l'interazione del controllo con il relativo archivio dati. Ciò consente di ottimizzare le prestazioni del controllo in questa situazione.  
@@ -112,16 +112,16 @@ Quando si desidera visualizzare quantità molto elevate di dati tabulari in un' 
   
 #### <a name="to-test-the-form"></a>Per testare il form  
   
--   Compilare l'applicazione ed eseguirla.  
+- Compilare l'applicazione ed eseguirla.  
   
      Verrà visualizzato un <xref:System.Windows.Forms.DataGridView> controllo popolato con tre record cliente. È possibile modificare i valori delle celle più in una riga e premere ESC due volte nella modalità di modifica e una volta di fuori di modalità di modifica per ripristinare l'intera riga per i relativi valori originali. Quando si modifica, aggiungere o eliminare righe nel controllo `Customer` oggetti nell'archivio dati vengono modificati, aggiunti o eliminati anche.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Questa applicazione fornisce una conoscenza di base degli eventi è necessario gestire per implementare la modalità virtuale nel <xref:System.Windows.Forms.DataGridView> controllo. È possibile migliorare questa applicazione di base in diversi modi:  
   
--   Implementare un archivio dati che vengono memorizzati nella cache i valori da un database esterno. La cache deve recuperare e rimuovere i valori in base alle esigenze in modo che contenga solo ciò che serve per la visualizzazione durante l'uso di una piccola quantità di memoria nel computer client.  
+- Implementare un archivio dati che vengono memorizzati nella cache i valori da un database esterno. La cache deve recuperare e rimuovere i valori in base alle esigenze in modo che contenga solo ciò che serve per la visualizzazione durante l'uso di una piccola quantità di memoria nel computer client.  
   
--   Ottimizzare le prestazioni dell'archivio dati in base alle esigenze. È possibile, ad esempio compensare le connessioni di rete lento anziché a limiti di memoria dei computer client usando una cache di dimensioni superiori e riducendo al minimo il numero di query di database.  
+- Ottimizzare le prestazioni dell'archivio dati in base alle esigenze. È possibile, ad esempio compensare le connessioni di rete lento anziché a limiti di memoria dei computer client usando una cache di dimensioni superiori e riducendo al minimo il numero di query di database.  
   
  Per altre informazioni sulla memorizzazione nella cache i valori da un database esterno, vedere [come: Implementare il modo virtuale con il caricamento dei dati Just-In-Time in di Windows Forms DataGridView Control](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   
@@ -136,7 +136,7 @@ Quando si desidera visualizzare quantità molto elevate di dati tabulari in un' 
 - <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>
 - <xref:System.Windows.Forms.DataGridView.CancelRowEdit>
 - <xref:System.Windows.Forms.DataGridView.UserDeletingRow>
-- [Ottimizzazione delle prestazioni nel controllo DataGridView Windows Form](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Procedure consigliate per ridimensionare il controllo DataGridView Windows Form](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Ottimizzazione delle prestazioni nel controllo DataGridView di Windows Form](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Procedure consigliate per ridimensionare il controllo DataGridView di Windows Form](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
 - [Implementazione del modo virtuale con caricamento dati JIT nel controllo DataGridView di Windows Form](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
-- [Procedura: Implementare la modalità virtuale nel controllo DataGridView di Windows Forms](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Implementare la modalità virtuale nel controllo DataGridView Windows Form](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)

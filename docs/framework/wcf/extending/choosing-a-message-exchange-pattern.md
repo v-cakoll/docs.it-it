@@ -3,11 +3,11 @@ title: Scelta di un modello di scambio dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
 ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922851"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Scelta di un modello di scambio dei messaggi
 Il primo passaggio nella scrittura di un trasporto personalizzato deve decidere quale *modelli di scambio dei messaggi* (o MEP, Message) sono necessari per il canale si sta sviluppando. In questo argomento vengono descritte le opzioni disponibili e vengono illustrati i vari requisiti. Si tratta della prima attività nell'elenco attività di sviluppo channel descritto nella [emergenti canali](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -15,15 +15,15 @@ Il primo passaggio nella scrittura di un trasporto personalizzato deve decidere 
 ## <a name="six-message-exchange-patterns"></a>Sei modelli di scambio dei messaggi  
  Sono disponibili tre modelli di scambio dei messaggi:  
   
--   Datagramma (<xref:System.ServiceModel.Channels.IInputChannel> e <xref:System.ServiceModel.Channels.IOutputChannel>)  
+- Datagramma (<xref:System.ServiceModel.Channels.IInputChannel> e <xref:System.ServiceModel.Channels.IOutputChannel>)  
   
      Quando si usa un modello di scambio di datagramma, un client invia un messaggio utilizzando un *generato automaticamente* exchange. Tale scambio richiede una conferma fuori banda di recapito con esito positivo. Il messaggio potrebbe infatti andare perso durante il transito e non raggiungere mai il servizio. Se l'operazione di invio viene completata correttamente sul lato client, non c'è garanzia che l'endpoint remoto abbia ricevuto il messaggio. Il datagramma è un componente fondamentale per i messaggi, poiché sulla sua base è possibile compilare protocolli propri, tra cui protocolli affidabili e protocolli sicuri. I canali del datagramma del client implementano l'interfaccia <xref:System.ServiceModel.Channels.IOutputChannel>, mentre i canali del datagramma del servizio implementano l'interfaccia <xref:System.ServiceModel.Channels.IInputChannel>.  
   
--   Richiesta-risposta (<xref:System.ServiceModel.Channels.IRequestChannel> e <xref:System.ServiceModel.Channels.IReplyChannel>)  
+- Richiesta-risposta (<xref:System.ServiceModel.Channels.IRequestChannel> e <xref:System.ServiceModel.Channels.IReplyChannel>)  
   
      In questo modello di scambio, viene inviato un messaggio e viene ricevuta una risposta. Il modello è costituito da coppie richiesta-risposta. Esempi di chiamate richiesta-risposta sono le chiamate RPC (Remote Procedure Call) e le richieste GET del browser. Questo modello è anche noto come half-duplex. In tale modello, i canali client implementano l'interfaccia <xref:System.ServiceModel.Channels.IRequestChannel>, mentre i canali del servizio implementano l'interfaccia <xref:System.ServiceModel.Channels.IReplyChannel>.  
   
--   Duplex (<xref:System.ServiceModel.Channels.IDuplexChannel>)  
+- Duplex (<xref:System.ServiceModel.Channels.IDuplexChannel>)  
   
      Il modello di scambio duplex consente l'invio di un numero arbitrario di messaggi da parte di un client e la ricezione in qualsiasi ordine. Tale modello è simile a una conversazione telefonica, in cui ogni parola pronunciata è un messaggio. Poiché in questo modello i due lati possono entrambi inviare e ricevere messaggi, l'interfaccia implementata dai canali client e del servizio è <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
@@ -32,17 +32,17 @@ I tre modelli di scambio dei messaggi di base. Dall'alto verso il basso: datagra
   
  Ognuno di questi modelli può inoltre supportare *sessioni*. Una sessione (e un'implementazione di <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> di tipo <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) mette in correlazione tutti i messaggi inviati e ricevuti su un canale. Il modello richiesta-risposta è una sessione autonoma a due messaggi, poiché la richiesta e la risposta sono correlate. Il modello richiesta-risposta che supporta sessioni implica invece che tutte le coppie richiesta/risposta sul canale siano correlate le une con le altre. È quindi possibile scegliere fra un totale di sei modelli di scambio dei messaggi:  
   
--   Datagram  
+- Datagram  
   
--   Richiesta-risposta  
+- Richiesta-risposta  
   
--   Duplex  
+- Duplex  
   
--   Datagramma con sessioni  
+- Datagramma con sessioni  
   
--   Richiesta-risposta con sessioni  
+- Richiesta-risposta con sessioni  
   
--   Duplex con sessioni  
+- Duplex con sessioni  
   
 > [!NOTE]
 >  Per il trasporto UDP, l'unico modello di scambio dei messaggi supportato è il datagramma, poiché il protocollo UPD è di tipo fire and forget.  
@@ -72,25 +72,25 @@ I tre modelli di scambio dei messaggi di base. Dall'alto verso il basso: datagra
 ## <a name="writing-sessionful-channels"></a>Scrittura di canali con sessione  
  Quando si crea un canale con sessione, è necessario che il canale esegua alcune operazioni per fornire le sessioni. Sul lato di invio, il canale deve:  
   
--   Per ogni nuovo canale, creare una nuova sessione e associarlo all'ID della nuova sessione rappresentato da una stringa univoca oppure ottenere una nuova sessione dal canale con sessione sottostante nello stack.  
+- Per ogni nuovo canale, creare una nuova sessione e associarlo all'ID della nuova sessione rappresentato da una stringa univoca oppure ottenere una nuova sessione dal canale con sessione sottostante nello stack.  
   
--   Per ogni messaggio inviato utilizzando il canale, se il canale ha creato la sessione (anziché ottenerla dal livello sottostante), è necessario associare il messaggio alla sessione. Per i canali di protocollo, questa operazione viene in genere eseguita aggiungendo un'intestazione SOAP. Per i canali di trasporto, viene in genere eseguita creando una nuova connessione di trasporto o aggiungendo informazioni sulla sessione al protocollo di frame.  
+- Per ogni messaggio inviato utilizzando il canale, se il canale ha creato la sessione (anziché ottenerla dal livello sottostante), è necessario associare il messaggio alla sessione. Per i canali di protocollo, questa operazione viene in genere eseguita aggiungendo un'intestazione SOAP. Per i canali di trasporto, viene in genere eseguita creando una nuova connessione di trasporto o aggiungendo informazioni sulla sessione al protocollo di frame.  
   
--   Per ogni messaggio inviato utilizzando il canale, è necessario fornire le garanzie di recapito sopra indicate. Se ci si basa sul canale sottostante per fornire la sessione, tale canale fornirà anche le garanzie di recapito. Se si sta creando la sessione, è necessario implementare tali garanzie all'interno del protocollo. In generale, se si scrive un canale di protocollo che presuppone WCF su entrambi i lati, potrebbe essere necessario il canale di trasporto TCP o di messaggistica affidabile e basarsi su uno di essi per fornire una sessione.  
+- Per ogni messaggio inviato utilizzando il canale, è necessario fornire le garanzie di recapito sopra indicate. Se ci si basa sul canale sottostante per fornire la sessione, tale canale fornirà anche le garanzie di recapito. Se si sta creando la sessione, è necessario implementare tali garanzie all'interno del protocollo. In generale, se si scrive un canale di protocollo che presuppone WCF su entrambi i lati, potrebbe essere necessario il canale di trasporto TCP o di messaggistica affidabile e basarsi su uno di essi per fornire una sessione.  
   
--   Quando sul canale viene chiamato il metodo<xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>, eseguire le operazioni necessarie per chiudere la sessione utilizzando il timeout specificato o quello predefinito. A tale scopo è sufficiente chiamare il metodo <xref:System.ServiceModel.ICommunicationObject.Close%2A> sul canale sottostante (se la sessione è stata ottenuta da tale canale), inviare un messaggio SOAP speciale o chiudere una connessione di trasporto.  
+- Quando sul canale viene chiamato il metodo<xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>, eseguire le operazioni necessarie per chiudere la sessione utilizzando il timeout specificato o quello predefinito. A tale scopo è sufficiente chiamare il metodo <xref:System.ServiceModel.ICommunicationObject.Close%2A> sul canale sottostante (se la sessione è stata ottenuta da tale canale), inviare un messaggio SOAP speciale o chiudere una connessione di trasporto.  
   
--   Quando sul canale viene chiamato il metodo <xref:System.ServiceModel.ICommunicationObject.Abort%2A>, terminare immediatamente la sessione senza eseguire l'I/O. Questa operazione può non comportare nulla o implicare l'interruzione di una connessione di rete o di un'altra risorsa.  
+- Quando sul canale viene chiamato il metodo <xref:System.ServiceModel.ICommunicationObject.Abort%2A>, terminare immediatamente la sessione senza eseguire l'I/O. Questa operazione può non comportare nulla o implicare l'interruzione di una connessione di rete o di un'altra risorsa.  
   
  Sul lato di ricezione, il canale deve:  
   
--   Per ogni messaggio in ingresso, il listener del canale deve rilevare a quale sessione appartiene. Se si tratta del primo messaggio della sessione, il listener del canale deve creare un nuovo canale e restituirlo dalla chiamata al metodo <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType>. In caso contrario, il listener del canale deve cercare il canale esistente che corrisponde alla sessione e recapitare il messaggio tramite tale canale.  
+- Per ogni messaggio in ingresso, il listener del canale deve rilevare a quale sessione appartiene. Se si tratta del primo messaggio della sessione, il listener del canale deve creare un nuovo canale e restituirlo dalla chiamata al metodo <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType>. In caso contrario, il listener del canale deve cercare il canale esistente che corrisponde alla sessione e recapitare il messaggio tramite tale canale.  
   
--   Se il canale sta creando la sessione (unitamente alle garanzie di recapito necessarie), potrebbe essere necessario che il lato ricevente esegua alcune azioni, ad esempio il riordinamento dei messaggi o l'invio di conferme.  
+- Se il canale sta creando la sessione (unitamente alle garanzie di recapito necessarie), potrebbe essere necessario che il lato ricevente esegua alcune azioni, ad esempio il riordinamento dei messaggi o l'invio di conferme.  
   
--   Quando sul canale viene chiamato il metodo <xref:System.ServiceModel.ICommunicationObject.Close%2A>, eseguire le operazioni necessarie per chiudere la sessione utilizzando il timeout specificato o quello predefinito. Se il canale riceve un messaggio mentre è in attesa della scadenza del timeout di chiusura, è possibile che vengano generate delle eccezioni. Questo perché il canale sarà nello stato di chiusura in corso al momento della ricezione di un messaggio.  
+- Quando sul canale viene chiamato il metodo <xref:System.ServiceModel.ICommunicationObject.Close%2A>, eseguire le operazioni necessarie per chiudere la sessione utilizzando il timeout specificato o quello predefinito. Se il canale riceve un messaggio mentre è in attesa della scadenza del timeout di chiusura, è possibile che vengano generate delle eccezioni. Questo perché il canale sarà nello stato di chiusura in corso al momento della ricezione di un messaggio.  
   
--   Quando sul canale viene chiamato il metodo <xref:System.ServiceModel.ICommunicationObject.Abort%2A>, terminare immediatamente la sessione senza eseguire l'I/O. Anche in questo caso, tale operazione può non comportare nulla o implicare l'interruzione di una connessione di rete o di un'altra risorsa.  
+- Quando sul canale viene chiamato il metodo <xref:System.ServiceModel.ICommunicationObject.Abort%2A>, terminare immediatamente la sessione senza eseguire l'I/O. Anche in questo caso, tale operazione può non comportare nulla o implicare l'interruzione di una connessione di rete o di un'altra risorsa.  
   
 ## <a name="see-also"></a>Vedere anche
 

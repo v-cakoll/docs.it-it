@@ -7,18 +7,18 @@ ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723667"
 ---
 # <a name="controlling-net-framework-logging"></a>Controllo della registrazione di .NET Framework
 È possibile utilizzare Traccia eventi per Windows (ETW) per registrare eventi CLR (Common Language Runtime). Tramite i seguenti strumenti si possono creare e visualizzare tracce:  
   
--   Gli strumenti da riga di comando [Logman](/windows-server/administration/windows-commands/logman) e [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1), inclusi nel sistema operativo Windows.  
+- Gli strumenti da riga di comando [Logman](/windows-server/administration/windows-commands/logman) e [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1), inclusi nel sistema operativo Windows.  
   
--   Gli strumenti [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) in [Windows Performance Toolkit](/windows-hardware/test/wpt/). Per altre informazioni su Xperf, vedere il [blog sulle prestazioni di Windows](https://go.microsoft.com/fwlink/?LinkId=179509).  
+- Gli strumenti [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) in [Windows Performance Toolkit](/windows-hardware/test/wpt/). Per altre informazioni su Xperf, vedere il [blog sulle prestazioni di Windows](https://go.microsoft.com/fwlink/?LinkId=179509).  
   
  Per acquisire informazioni sugli eventi CLR, è necessario installare il provider CLR nel computer in uso. Per confermare la corretta installazione del provider, digitare `logman query providers` al prompt dei comandi. Verrà visualizzato un elenco di provider. L'elenco deve contenere una voce relativa al provider CLR, come riportato di seguito.  
   
@@ -37,11 +37,11 @@ Provider                                 GUID
   
  Per attivare la registrazione, un utente deve specificare tre impostazioni:  
   
--   Il provider a cui comunicare.  
+- Il provider a cui comunicare.  
   
--   Un numero a 64 bit che rappresenta un set di parole chiave. Ogni parola chiave rappresenta un set di eventi che il provider può attivare. Il numero rappresenta un set combinato di parole chiave da attivare.  
+- Un numero a 64 bit che rappresenta un set di parole chiave. Ogni parola chiave rappresenta un set di eventi che il provider può attivare. Il numero rappresenta un set combinato di parole chiave da attivare.  
   
--   Un numero piccolo che rappresenta il livello (livello di dettaglio) a cui registrare. Il livello 1 è il livello di dettaglio minore e il livello 5 è il livello dettaglio maggiore. Il livello 0 è un'impostazione predefinita il cui significato è specifico del provider.  
+- Un numero piccolo che rappresenta il livello (livello di dettaglio) a cui registrare. Il livello 1 è il livello di dettaglio minore e il livello 5 è il livello dettaglio maggiore. Il livello 0 è un'impostazione predefinita il cui significato è specifico del provider.  
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>Per acquisire eventi ETW CLR tramite Logman  
   
@@ -51,15 +51,15 @@ Provider                                 GUID
   
      dove:  
   
-    -   Il parametro `-p` identifica il GUID del provider.  
+    - Il parametro `-p` identifica il GUID del provider.  
   
-    -   `0x1CCBD` Specifica le categorie di eventi che verranno generati.  
+    - `0x1CCBD` specifica le categorie degli eventi che saranno generati.  
   
-    -   `0x5` Imposta il livello di registrazione (in questo caso verbose (5)).  
+    - `0x5` imposta il livello di registrazione, in questo caso Verbose (5).  
   
-    -   Il parametro `-ets` indica a Logman di inviare comandi alle sessioni di traccia degli eventi.  
+    - Il parametro `-ets` indica a Logman di inviare comandi alle sessioni di traccia degli eventi.  
   
-    -   Il parametro `-ct perf` specifica che la funzione `QueryPerformanceCounter` verrà utilizzata per registrare il timestamp per ogni evento.  
+    - Il parametro `-ct perf` specifica che la funzione `QueryPerformanceCounter` verrà utilizzata per registrare il timestamp per ogni evento.  
   
 2. Per interrompere la registrazione degli eventi, digitare:  
   
@@ -86,7 +86,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-tracerpt"></a>Per visualizzare gli eventi ETW CLR tramite Tracerpt  
   
--   Al prompt dei comandi, digitare:  
+- Al prompt dei comandi, digitare:  
   
      `tracerpt clrevents.etl`  
   
@@ -94,7 +94,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-xperf"></a>Per visualizzare gli eventi ETW CLR tramite Xperf  
   
--   Al prompt dei comandi, digitare:  
+- Al prompt dei comandi, digitare:  
   
      `xperf clrevents.etl`  
   
@@ -102,7 +102,7 @@ Provider                                 GUID
   
 #### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>Per convertire il file con estensione etl in un file con valori delimitati da virgole  
   
--   Al prompt dei comandi, digitare:  
+- Al prompt dei comandi, digitare:  
   
      `xperf -i clrevents.etl -f clrevents.csv`  
   

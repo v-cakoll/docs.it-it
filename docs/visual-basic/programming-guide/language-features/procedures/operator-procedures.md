@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791976"
 ---
 # <a name="operator-procedures-visual-basic"></a>Routine di operatore (Visual Basic)
 Una routine di operatore è una serie di istruzioni di Visual Basic che definiscono il comportamento di un operatore standard (ad esempio `*`, `<>`, o `And`) in una classe o struttura definita. Questo è l'acronimo *overload degli operatori*.  
@@ -31,20 +31,20 @@ Una routine di operatore è una serie di istruzioni di Visual Basic che definisc
 ## <a name="types-of-operator-procedure"></a>Tipi di routine di operatore  
  Una routine di operatore può essere uno dei tipi seguenti:  
   
--   Una definizione di un operatore unario dove l'argomento è del tipo di classe o struttura.  
+- Una definizione di un operatore unario dove l'argomento è del tipo di classe o struttura.  
   
--   Una definizione di un operatore binario in cui almeno uno degli argomenti è del tipo di classe o struttura.  
+- Una definizione di un operatore binario in cui almeno uno degli argomenti è del tipo di classe o struttura.  
   
--   Una definizione di un operatore di conversione in cui l'argomento è del tipo di classe o struttura.  
+- Una definizione di un operatore di conversione in cui l'argomento è del tipo di classe o struttura.  
   
--   Una definizione di un operatore di conversione che restituisce il tipo di classe o struttura.  
+- Una definizione di un operatore di conversione che restituisce il tipo di classe o struttura.  
   
  Gli operatori di conversione sono sempre unario e utilizzare sempre `CType` dell'operatore a cui si sta definendo.  
   
 ## <a name="declaration-syntax"></a>Sintassi di dichiarazione  
  La sintassi per dichiarare una routine di operatore è come segue:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *simbolooperatore* `(` *operand1*`[,`*operand2* `]) As` *datatype*   
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *simbolooperatore* `(` *operand1*`[,`*operand2* `]) As` *datatype*  
   
  `' Statements of the operator procedure.`  
   
@@ -68,7 +68,7 @@ Una routine di operatore è una serie di istruzioni di Visual Basic che definisc
   
  `Dim testStruct As`  *nomestruttura*  
   
- `Dim testNewStruct As`  *nomestruttura*`= testStruct`*simbolooperatore*   `10`  
+ `Dim testNewStruct As`  *nomestruttura*`= testStruct`*simbolooperatore*  `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Illustrazione di dichiarazione e di chiamata  
  La struttura seguente archivia un valore intero con segno a 128 bit come le parti costituenti alto e basso. Definisce i `+` operaa a add due `veryLong` i valori e generare una risultante `veryLong` valore.  
@@ -81,12 +81,12 @@ Una routine di operatore è una serie di istruzioni di Visual Basic che definisc
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedure](./index.md)
+- [Routine](./index.md)
 - [Routine Sub](./sub-procedures.md)
 - [Routine Function](./function-procedures.md)
-- [Routine di proprietà](./property-procedures.md)
+- [Routine Property](./property-procedures.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Istruzione Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Procedura: Definire un operatore](./how-to-define-an-operator.md)
 - [Procedura: Definire un operatore di conversione](./how-to-define-a-conversion-operator.md)
 - [Procedura: Chiamare una routine di operatore](./how-to-call-an-operator-procedure.md)

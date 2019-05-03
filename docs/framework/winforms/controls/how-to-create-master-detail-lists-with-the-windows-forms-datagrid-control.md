@@ -11,11 +11,11 @@ helpviewer_keywords:
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
 ms.openlocfilehash: 92b4a7d9513ce0ec9b7c02f57c23fa4267fb26ad
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59302413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052170"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Procedura: Creare elenchi Master-Details con il controllo DataGrid di Windows Forms
 > [!NOTE]
@@ -73,5 +73,5 @@ ms.locfileid: "59302413"
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllo DataGrid](datagrid-control-windows-forms.md)
-- [Panoramica del controllo DataGrid](datagrid-control-overview-windows-forms.md)
-- [Procedura: Associare il controllo DataGrid di Windows Forms a un'origine dati](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Cenni preliminari sul controllo DataGrid](datagrid-control-overview-windows-forms.md)
+- [Procedura: Associare il controllo DataGrid di Windows Form a un'origine dati](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

@@ -3,20 +3,20 @@ title: contenitore di entità
 ms.date: 03/30/2017
 ms.assetid: 16e80405-2c75-42fc-b0e4-b1df53b1c584
 ms.openlocfilehash: 4a629a800df63c67dc17d3fc1531a9862861e9c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667244"
 ---
 # <a name="entity-container"></a>contenitore di entità
 Un' *contenitore di entità* è un raggruppamento logico delle [i set di entità](../../../../docs/framework/data/adonet/entity-set.md), [set di associazioni](../../../../docs/framework/data/adonet/association-set.md), e [funzione importazioni](../../../../docs/framework/data/adonet/model-declared-function.md).  
   
  Le affermazioni seguenti relative a un contenitore di entità definito in un modello concettuale devono essere vere:  
   
--   In ogni modello concettuale deve essere definito almeno un contenitore di entità.  
+- In ogni modello concettuale deve essere definito almeno un contenitore di entità.  
   
--   Il contenitore di entità deve disporre di un nome univoco all'interno di ogni modello concettuale.  
+- Il contenitore di entità deve disporre di un nome univoco all'interno di ogni modello concettuale.  
   
  Un contenitore di entità può definire set di entità o set di associazioni che usano i tipi o le associazioni di entità definite in uno o più spazi dei nomi. Per altre informazioni, vedere [Entity Data Model: Gli spazi dei nomi](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md).  
   

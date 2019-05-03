@@ -3,11 +3,11 @@ title: Interpretazione dei codici errore restituiti da wsatConfig.exe
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
 ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928817"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretazione dei codici errore restituiti da wsatConfig.exe
 Questo argomento elenca tutti i codici errore generati dall'utilità di configurazione WS-AtomicTransaction (wsatConfig.exe) e azioni consigliate da intraprendere.  
@@ -21,7 +21,7 @@ Questo argomento elenca tutti i codici errore generati dall'utilità di configur
 |2|Si è verificato un errore imprevisto durante il tentativo di contattare MSDTC per recuperare le impostazioni di sicurezza.|Assicurarsi che il servizio MSDTC non sia disabilitato e risolvere tutti i problemi elencati nell’Eccezione restituita.|  
 |3|L'account nel quale è stato eseguito WsatConfig.exe non dispone delle autorizzazioni necessarie per leggere le impostazioni di sicurezza di rete.|Eseguire WsatConfig.exe in un account utente dell'Amministratore.|  
 |4|Abilitare “Accesso rete DTC” per MSDTC prima di tentare di abilitare il supporto WS-AT.|Abilitare “Accesso rete DTC” per MSDTC ed eseguire nuovamente l'utilità.|  
-|5|Porta di accesso esterna all'intervallo. Il valore deve essere compreso nell'intervallo 1-65535.|Correggere il `-port:<portNum>`<br /><br /> opzione della riga di comando come indicato nel messaggio di errore.|  
+|5|Porta di accesso esterna all'intervallo. Il valore deve essere compreso nell'intervallo 1-65535.|Correggere l'opzione della riga di comando `-port:<portNum>`<br /><br /> opzione della riga di comando come indicato nel messaggio di errore.|  
 |6|Un certificato dell'endpoint non valido è stato specificato sulla riga di comando.  Non è stato possibile individuare un certificato o non ha superato la verifica.|Correggere l'opzione della riga di comando `-endpointCert`. Assicurarsi che il certificato abbia una chiave privata, sia destinato a ClientAuthentication e ServerAuthentication, sia installato nell'archivio certificati LocalMachine\MY e sia completamente attendibile.|  
 |7|Un certificato account non valido è stato specificato sulla riga di comando.|Correggere l'opzione della riga di comando `-accountsCerts`. Il certificato specificato non è stato correttamente specificato o non è stato possibile trovarlo.|  
 |8|Un timeout predefinito è stato specificato al di fuori dell'intervallo di 1 a 3600 secondi.|Immettere un valore di timeout predefinito corretto come indicato.|  
@@ -35,9 +35,9 @@ Questo argomento elenca tutti i codici errore generati dall'utilità di configur
 |17|La configurazione di http.sys non è riuscita. Impossibile separare il certificato SSL dalla porta precedente.|Utilizzare il codice errore restituito nel messaggio di errore per eseguire il mapping all'errore di sistema adatto. Se necessario, utilizzare httpcfg.exe o netsh.exe per rimuovere la prenotazione della porta errata.|  
 |18|La configurazione di http.sys non è riuscita. Impossibile associare il certificato specificato alla porta in quanto esiste già un'associazione SSL precedente.|Un'altra applicazione è già diventata proprietaria della porta specifica. Cambiare porta o disinstallare o riconfigurare l'applicazione corrente.|  
 |19|Il riavvio di MSDTC non è riuscito|Riavviare manualmente MSDTC se necessario. Se il problema persiste, contattare Microsoft.|  
-|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] non è installato nel computer remoto oppure non è installato correttamente.|Installare [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] sul computer.|  
+|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] non è installato nel computer remoto o non è installato correttamente.|Installare [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] sul computer.|  
 |21|La configurazione remota non è riuscita in quanto l'operazione è scaduta.|La chiamata per configurare WS-AT sul computer remoto richiede più di 90 secondi.|  
-|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] non è installato nel computer remoto oppure non è installato correttamente.|Installare [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] sul computer.|  
+|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] non è installato nel computer remoto o non è installato correttamente.|Installare [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] sul computer.|  
 |23|La configurazione remota non è riuscita a causa di un'eccezione sul computer remoto.|Verificare il messaggio di errore per gli elementi eseguibili|  
 |26|È stato passato un argomento non valido a WsatConfig.exe.|Verificare eventuali errori nella riga di comando.|  
 |27|Opzione della riga di comando `-accounts` non valida.|Correggere l'opzione della riga di comando -`accounts` per specificare correttamente un account utente.|  

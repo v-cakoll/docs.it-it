@@ -1,19 +1,19 @@
 ---
 title: is - Riferimenti per C#
 ms.custom: seodec18
-ms.date: 02/17/2017
+ms.date: 04/09/2019
 f1_keywords:
 - is_CSharpKeyword
 - is
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9fb57caeafde9db5759300d938a85f4abf4d05f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977053"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672459"
 ---
 # <a name="is-c-reference"></a>is (Riferimenti per C#)
 
@@ -47,11 +47,11 @@ Nell'esempio seguente viene illustrato che l'espressione `is` restituisce `true`
 
 [!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
 
-La parola chiave `is` genera un avviso in fase di compilazione se è noto che l'espressione sarà sempre `true` o `false`. Considera solo le conversioni dei riferimenti, le conversioni boxing e unboxing; non considera le conversioni definite dall'utente o le conversioni definite dagli operatori [implicit](implicit.md) ed [explicit](explicit.md) di un tipo. Nell'esempio seguente vengono generati gli avvisi, poiché il risultato della conversione è noto in fase di compilazione. Si noti che l'espressione `is` per le conversioni da `int` a `long` e `double` restituisce false, poiché queste conversioni vengono gestite dall'operatore [implicit](implicit.md).
+La parola chiave `is` genera un avviso in fase di compilazione se è noto che l'espressione sarà sempre `true` o `false`. Considera solo le conversioni dei riferimenti, le conversioni boxing e unboxing; non considera le conversioni definite dall'utente o le conversioni definite dagli operatori [implicit](implicit.md) ed [explicit](explicit.md) di un tipo. Nell'esempio seguente vengono generati gli avvisi, poiché il risultato della conversione è noto in fase di compilazione. L'espressione `is` per le conversioni da `int` a `long` e `double` restituisce false, poiché queste conversioni vengono gestite dall'operatore [implicit](implicit.md).
 
 [!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-`expr` può essere qualsiasi espressione che restituisce un valore, ad eccezione di metodi anonimi ed espressioni lambda. Nell'esempio seguente viene usato `is` per valutare il valore restituito di una chiamata al metodo.   
+`expr` non può essere un metodo anonimo o un'espressione lambda. Può essere una qualsiasi altra espressione che restituisce un valore. Nell'esempio seguente viene usato `is` per valutare il valore restituito di una chiamata al metodo.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
 A partire da C# 7.0, è possibile usare criteri di ricerca con il [criterio del tipo](#type) per scrivere codice più conciso che usa l'istruzione `is`.
@@ -66,7 +66,7 @@ A partire da C# 7.0, le istruzioni `is` e [switch](../../../csharp/language-refe
 
 - [Criterio var](#var), una corrispondenza che ha sempre esito positivo e associa il valore di un'espressione a una nuova variabile locale. 
 
-### <a name="type" /> Criterio del tipo </a>
+### <a name="a-nametype-type-pattern"></a><a name="type" />Criterio del tipo
 
 Quando si usa il criterio del tipo per eseguire i criteri di ricerca, `is` verifica se un'espressione può essere convertita in un tipo specificato e, in tal caso, esegue il cast a una variabile di quel tipo. È una semplice estensione dell'istruzione `is` che consente la valutazione e la conversione concisa del tipo. Il formato generale del criterio del tipo è `is`:
 
@@ -85,6 +85,8 @@ L'espressione `is` è `true` se *expr* non è `null` e una delle condizioni segu
 - *expr* ha un tipo in fase di compilazione che è una classe di base di *type* e *expr* ha un tipo di runtime che è *type* o è derivato da *type*. Il *tipo in fase di compilazione* di una variabile è il tipo della variabile come definito nella relativa dichiarazione. Il *tipo di runtime* di una variabile è il tipo dell'istanza che viene assegnato alla variabile.
 
 - *expr* è un'istanza di un tipo che implementa l'interfaccia *type*.
+
+A partire da C# 7.1, *expr* può avere un tipo in fase di compilazione definito da un parametro di tipo generico e dai relativi vincoli. 
 
 Se *expr* è `true` e `is` viene usato con un'istruzione `if`, *varname* viene assegnato e ha un ambito locale solo all'interno dell'istruzione `if`.
 
@@ -106,7 +108,7 @@ Il codice equivalente senza criteri di ricerca richiede un'assegnazione separata
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Criterio costante
 
-Quando si eseguono criteri di ricerca con il criterio costante, `is` verifica se un'espressione è uguale a una costante specificata. In C# 6 e versioni precedenti, il criterio costante è supportato per l'istruzione [switch](switch.md). A partire da C# 7.0, è supportato anche dall'istruzione `is`. La sintassi è la seguente:
+Quando si eseguono criteri di ricerca con il criterio costante, `is` verifica se un'espressione è uguale a una costante specificata. In C# 6 e versioni precedenti, il criterio costante è supportato per l'istruzione [switch](switch.md). A partire da C# 7.0 è supportato anche dall'istruzione `is`. La sintassi è la seguente:
 
 ```csharp
    expr is constant
@@ -142,17 +144,15 @@ L'esempio seguente illustra un confronto di controlli `null`:
  
 ### <a name="var" /> Criterio var </a>
 
-Un criterio di ricerca con il criterio var ha sempre esito positivo. Presenta la sintassi
+Il criterio `var` è applicabile a qualsiasi tipo o valore. Il valore di *expr* viene sempre assegnato a una variabile locale dello stesso tipo del tipo della fase di compilazione di *expr*. Il risultato dell'espressione `is` è sempre `true`. La sintassi è la seguente:
 
 ```csharp 
    expr is var varname
 ```
 
-dove il valore di *expr* viene sempre assegnato a una variabile locale denominata *varname*. *varname* è una variabile statica dello stesso tipo di *expr*. Nell'esempio seguente viene usato il criterio var per assegnare un'espressione a una variabile denominata `obj`. Viene quindi visualizzato il valore e il tipo di `obj`.
+Nell'esempio seguente viene usato il criterio var per assegnare un'espressione a una variabile denominata `obj`. Viene quindi visualizzato il valore e il tipo di `obj`.
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
-
-Si noti che se *expr* è `null`, l'espressione `is` è ancora true e assegna `null` a *varname*. 
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
   

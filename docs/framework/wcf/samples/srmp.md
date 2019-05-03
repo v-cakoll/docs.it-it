@@ -3,11 +3,11 @@ title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
 ms.openlocfilehash: 92a0bac3cf6ac6b57792419c913ec481ff0ee6c0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007838"
 ---
 # <a name="srmp"></a>SRMP
 In questo esempio viene illustrato come eseguire comunicazioni transazionali in coda usando Accodamento messaggi (MSMQ) su HTTP.  

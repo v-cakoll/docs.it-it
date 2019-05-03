@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8254d3de7dc282edb8ebe8bf0dd71ce1c943322d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51e34d8eed40481de47dfd217392e95a11a412d1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689208"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59145119"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Caricamento e utilizzo dinamico dei tipi
 La reflection fornisce un'infrastruttura usata dai compilatori di linguaggi, ad esempio [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] e JScript, per implementare l'associazione tardiva implicita. L'associazione è il processo di individuazione della dichiarazione (ovvero l'implementazione) che corrisponde a un tipo specificato in modo univoco. Quando questo processo avviene in fase di esecuzione piuttosto che in fase di compilazione, esso viene chiamato associazione tardiva. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] consente di usare l'associazione tardiva implicita nel codice. Il compilatore Visual Basic chiama un metodo helper che usa la reflection per ottenere il tipo di oggetto. Gli argomenti passati al metodo helper determinano la chiamata, in fase di esecuzione, del metodo appropriato. Questi argomenti sono l'istanza (un oggetto) su cui richiamare il metodo, il nome del metodo richiamato (una stringa) e gli argomenti passati al metodo richiamato (una matrice di oggetti).  
@@ -100,6 +100,7 @@ End Module
  La classe <xref:System.Type> include metodi **Get** che usano i parametri di tipo **Binder** per risolvere i riferimenti su un membro specifico. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> e <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> cercano un membro specifico del tipo corrente fornendo informazioni sulla relativa firma. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> e <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> vengono chiamati per selezionare le informazioni sulla firma dei metodi appropriati.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - [Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
 ms.openlocfilehash: 599ad6f722251003ab56547ce050cbd0e8da831d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903981"
 ---
 # <a name="how-to-return-rowsets"></a>Procedura: Restituire set di righe
 In questo esempio viene restituito un rowset dal database e viene incluso un parametro di input per filtrare il risultato.  
@@ -38,5 +38,5 @@ END
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

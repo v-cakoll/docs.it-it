@@ -3,11 +3,11 @@ title: Aggiornamenti flusso personalizzati
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
 ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967908"
 ---
 # <a name="custom-stream-upgrades"></a>Aggiornamenti flusso personalizzati
 I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso continuo di byte tra il client e il server. Questo flusso viene realizzato da un oggetto <xref:System.IO.Stream>. In un aggiornamento flusso, il client desidera aggiungere un livello di protocollo facoltativo allo stack di canali e chiede all'altra estremità del canale di comunicazione di farlo. L'aggiornamento flusso consiste nel sostituire l'oggetto <xref:System.IO.Stream> originale con un oggetto aggiornato.  
@@ -32,35 +32,35 @@ I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso co
 ## <a name="how-to-implement-a-stream-upgrade"></a>Come implementare un aggiornamento flusso  
  Windows Communication Foundation (WCF) offre quattro `abstract` classi che è possibile implementare:  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
   
  Per implementare un aggiornamento flusso personalizzato, eseguire le operazioni seguenti. In questa procedura viene implementato un processo di aggiornamento flusso minimo sui computer client e server.  
   
 1. Creare una classe che implementi <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.  
   
-    1.  Eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> per accettare il flusso da aggiornare e restituire il flusso aggiornato. Questo metodo funziona in modo sincrono; sono disponibili metodi analoghi per avviare l'aggiornamento in modo asincrono.  
+    1. Eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> per accettare il flusso da aggiornare e restituire il flusso aggiornato. Questo metodo funziona in modo sincrono; sono disponibili metodi analoghi per avviare l'aggiornamento in modo asincrono.  
   
-    2.  Eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> per ricercare aggiornamenti aggiuntivi.  
+    2. Eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> per ricercare aggiornamenti aggiuntivi.  
   
 2. Creare una classe che implementi <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.  
   
-    1.  Eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> per accettare il flusso da aggiornare e restituire il flusso aggiornato. Questo metodo funziona in modo sincrono; sono disponibili metodi analoghi per accettare l'aggiornamento in modo asincrono.  
+    1. Eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> per accettare il flusso da aggiornare e restituire il flusso aggiornato. Questo metodo funziona in modo sincrono; sono disponibili metodi analoghi per accettare l'aggiornamento in modo asincrono.  
   
-    2.  Eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> per determinare se l'aggiornamento richiesto è supportato da questo acceptor di aggiornamento in questo punto del processo di aggiornamento.  
+    2. Eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> per determinare se l'aggiornamento richiesto è supportato da questo acceptor di aggiornamento in questo punto del processo di aggiornamento.  
   
 3. Creare una classe che implementi <xref:System.ServiceModel.Channels.StreamUpgradeProvider>. Eseguire l'override dei metodi <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> e <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> per restituire istanze dell'acceptor e dell'iniziatore definiti ai passaggi 2 e 1.  
   
 4. Creare una classe che implementi <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.  
   
-    1.  Eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> sul client e del metodo <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> sul servizio.  
+    1. Eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> sul client e del metodo <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> sul servizio.  
   
-    2.  Eseguire l'override del metodo <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> sul client e il metodo <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> sul servizio, per aggiungere l'elemento di associazione di aggiornamento a <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>.  
+    2. Eseguire l'override del metodo <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> sul client e il metodo <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> sul servizio, per aggiungere l'elemento di associazione di aggiornamento a <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>.  
   
 5. Aggiungere il nuovo elemento di associazione di aggiornamento flusso alle associazioni sui computer server e client.  
   

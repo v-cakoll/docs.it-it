@@ -16,11 +16,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d734f35b5878ec39e4f2159c326283d168e3be2b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62040846"
 ---
 # <a name="resolvetypelib-method"></a>Metodo ResolveTypeLib
 Risolve il nome semplice di una libreria dei tipi, restituendo il relativo percorso completo.  

@@ -3,11 +3,11 @@ title: 'Attività 2: Ospitare Progettazione flussi di lavoro'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
 ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641579"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Attività 2: Ospitare Progettazione flussi di lavoro
 In questo argomento viene descritta la procedura per l'hosting di un'istanza di [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in un'applicazione Windows Presentation Foundation (WPF).  
@@ -42,7 +42,7 @@ In questo argomento viene descritta la procedura per l'hosting di un'istanza di 
   
 8. Nelle **Esplora soluzioni**, fare doppio clic su MainWindow. XAML e selezionare **Visualizza codice**. Modificare il codice attenendosi ai passaggi seguenti:  
   
-    1.  Aggiungere gli spazi dei nomi seguenti:  
+    1. Aggiungere gli spazi dei nomi seguenti:  
   
         ```csharp  
         using System.Activities;  
@@ -54,7 +54,7 @@ In questo argomento viene descritta la procedura per l'hosting di un'istanza di 
         using System.ComponentModel;  
         ```  
   
-    2.  Per dichiarare un campo membro privato per contenere un'istanza di <xref:System.Activities.Presentation.WorkflowDesigner>, aggiungere il codice seguente alla classe `MainWindow`.  
+    2. Per dichiarare un campo membro privato per contenere un'istanza di <xref:System.Activities.Presentation.WorkflowDesigner>, aggiungere il codice seguente alla classe `MainWindow`.  
   
         ```csharp  
         public partial class MainWindow : Window  
@@ -68,7 +68,7 @@ In questo argomento viene descritta la procedura per l'hosting di un'istanza di 
         }  
         ```  
   
-    3.  Aggiungere il metodo `AddDesigner` seguente alla classe `MainWindow`. L'implementazione crea un'istanza di <xref:System.Activities.Presentation.WorkflowDesigner>, aggiunge un <xref:System.Activities.Statements.Sequence> attività e lo inserisce nella colonna centrale della grid1 **griglia**.  
+    3. Aggiungere il metodo `AddDesigner` seguente alla classe `MainWindow`. L'implementazione crea un'istanza di <xref:System.Activities.Presentation.WorkflowDesigner>, aggiunge un <xref:System.Activities.Statements.Sequence> attività e lo inserisce nella colonna centrale della grid1 **griglia**.  
   
         ```csharp  
         private void AddDesigner()  
@@ -87,7 +87,7 @@ In questo argomento viene descritta la procedura per l'hosting di un'istanza di 
         }  
         ```  
   
-    4.  Registrare i metadati della finestra di progettazione per aggiungere il supporto della finestra di progettazione per tutte le attività incorporate. In questo modo sarà possibile spostare le attività dalla casella degli strumenti all'attività <xref:System.Activities.Statements.Sequence> originale in [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. A tal fine, aggiungere il metodo `RegisterMetadata` alla classe `MainWindow`.  
+    4. Registrare i metadati della finestra di progettazione per aggiungere il supporto della finestra di progettazione per tutte le attività incorporate. In questo modo sarà possibile spostare le attività dalla casella degli strumenti all'attività <xref:System.Activities.Statements.Sequence> originale in [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. A tal fine, aggiungere il metodo `RegisterMetadata` alla classe `MainWindow`.  
   
         ```csharp  
         private void RegisterMetadata()  
@@ -99,7 +99,7 @@ In questo argomento viene descritta la procedura per l'hosting di un'istanza di 
   
          Per altre informazioni sulla registrazione di ActivityDesigner, vedere [come: Creare un ActivityDesigner personalizzato](how-to-create-a-custom-activity-designer.md).  
   
-    5.  Nel costruttore della classe `MainWindow`, aggiungere chiamate ai metodi dichiarati precedentemente per registrare i metadati per il supporto della finestra di progettazione e per creare l'oggetto <xref:System.Activities.Presentation.WorkflowDesigner>.  
+    5. Nel costruttore della classe `MainWindow`, aggiungere chiamate ai metodi dichiarati precedentemente per registrare i metadati per il supporto della finestra di progettazione e per creare l'oggetto <xref:System.Activities.Presentation.WorkflowDesigner>.  
   
         ```csharp  
         public MainWindow()  
@@ -123,6 +123,6 @@ In questo argomento viene descritta la procedura per l'hosting di un'istanza di 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riallocazione dell'utilità di progettazione del flusso di lavoro](rehosting-the-workflow-designer.md)
+- [Riallocazione di Progettazione flussi di lavoro](rehosting-the-workflow-designer.md)
 - [Attività 1: Creare una nuova applicazione Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
-- [Attività 3: Creare i riquadri Casella degli strumenti e PropertyGrid](task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [Attività 3: Creare la casella degli strumenti e PropertyGrid riquadri](task-3-create-the-toolbox-and-propertygrid-panes.md)

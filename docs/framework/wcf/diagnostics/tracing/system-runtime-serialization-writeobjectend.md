@@ -3,11 +3,11 @@ title: System.Runtime.Serialization.WriteObjectEnd
 ms.date: 03/30/2017
 ms.assetid: 586d2b65-d8eb-4186-9400-40ae4e163161
 ms.openlocfilehash: 80f13b4bff6897292c4f245a9243a77fffa2c749
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784618"
 ---
 # <a name="systemruntimeserializationwriteobjectend"></a>System.Runtime.Serialization.WriteObjectEnd
 System.Runtime.Serialization.WriteObjectEnd  
@@ -18,5 +18,5 @@ System.Runtime.Serialization.WriteObjectEnd
 ## <a name="see-also"></a>Vedere anche
 
 - [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

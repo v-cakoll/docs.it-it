@@ -15,11 +15,11 @@ ms.assetid: 7417f837-805e-4fed-a430-ca919c8421dc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7bb4779e300df71a5d075a322bcac8398ce42f34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754440"
 ---
 # <a name="gcmanagedtounmanaged-mda"></a>MDA gcManagedToUnmanaged
 L'assistente al debug gestito `gcManagedToUnmanaged` determina un'operazione di Garbage Collection ogni volta che un thread passa dal codice gestito al codice non gestito.  

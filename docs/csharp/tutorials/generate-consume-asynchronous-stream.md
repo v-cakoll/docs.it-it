@@ -3,12 +3,12 @@ title: Generare e usare flussi asincroni
 description: Questa esercitazione avanzata illustra gli scenari in cui la generazione e l'uso di flussi asincroni rappresenta un modo più naturale di lavorare con sequenze di dati che potrebbero essere generate in modo asincrono.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: c8be9cf4b83e3dd72232279e7c15dcba639c2058
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 0fa7c778ca9ce0f0124fcc520dd4de65f2f92ea8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56306002"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59308549"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Esercitazione: Generare e usare flussi asincroni con C# 8.0 e .NET Core 3.0
 
@@ -23,7 +23,7 @@ In questa esercitazione si imparerà a:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-È necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore della versione beta di C# 8.0. Il compilatore della versione beta di C# 8 è disponibile a partire da [Visual Studio 2019 Preview 1](https://visualstudio.microsoft.com/vs/preview/) o [.NET Core 3.0 Preview 1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0). I flussi asincroni sono stati introdotti in .NET Core 3.0 Preview 1.
+È necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore della versione beta di C# 8.0. Il compilatore della versione beta di C# 8 è disponibile a partire da [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o dalla versione più recente di [.NET Core 3.0 Preview SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0). I flussi asincroni sono stati introdotti in .NET Core 3.0 Preview 1.
 
 È necessario creare un [token di accesso di GitHub](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token) per poter accedere all'endpoint GraphQL di GitHub. Selezionare le autorizzazioni seguenti per il token di accesso di GitHub:
 

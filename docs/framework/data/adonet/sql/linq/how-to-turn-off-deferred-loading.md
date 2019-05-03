@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1b84b852-3cad-41a7-8077-149a70d50c8b
 ms.openlocfilehash: f82e347ecdb3c69cee3749855d1e4cb457a460f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033613"
 ---
 # <a name="how-to-turn-off-deferred-loading"></a>Procedura: Disattivare il caricamento posticipato
 È possibile disattivare il caricamento posticipato impostando <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> su `false`. Per altre informazioni, vedere [posticipato e immediato caricamento](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  

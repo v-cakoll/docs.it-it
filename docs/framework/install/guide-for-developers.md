@@ -11,10 +11,10 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ff1bc6f0aa29742f61129ff9acb9980658f118a4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327867"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installare .NET Framework per sviluppatori
@@ -37,7 +37,7 @@ Usare la tabella indicata di seguito per i collegamenti rapidi o continuare a le
 
 |Versione di .NET Framework|Installazione sviluppatore|Installazione ridistribuibile|Supporto per piattaforme|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.7.2**|[.NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[Programma di installazione Web 4.7.2 Area download](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Programma di installazione offline 4.7.2 Area download](https://go.microsoft.com/fwlink/?LinkId=863265)|**Incluso in:** <br/><br/>Aggiornamento di Windows 10 (ottobre 2018)<br/>Aggiornamento di Windows 10 (aprile 2018)<br/>Windows Server 2019<br/>Windows Server, versione 1809<br/>Windows Server, versione 1803<br /><br /> **Installabile in:**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Aggiornamento dell'anniversario di Windows 10<br /> Windows 8.1 e versioni precedenti<br /> Windows Server, 1709 e versioni precedenti<br /><br/> (per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))||
+|**4.7.2**|[NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[Programma di installazione Web 4.7.2 Area download](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Programma di installazione offline 4.7.2 Area download](https://go.microsoft.com/fwlink/?LinkId=863265)|**Incluso in:** <br/><br/>Aggiornamento di Windows 10 (ottobre 2018)<br/>Aggiornamento di Windows 10 (aprile 2018)<br/>Windows Server 2019<br/>Windows Server, versione 1809<br/>Windows Server, versione 1803<br /><br /> **Installabile in:**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Aggiornamento dell'anniversario di Windows 10<br /> Windows 8.1 e versioni precedenti<br /> Windows Server, 1709 e versioni precedenti<br /><br/> (per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))||
 |**4.7.1**|[NET Framework 4.7.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=852105)|[Pagina di download per il programma di installazione Web 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Pagina di download per il programma di installazione offline 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852107)|**Incluso in:** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server, versione 1709<br /><br /> **Installabile in:**<br/><br/> Windows 10 Creators Update <br /> Aggiornamento dell'anniversario di Windows 10<br /> Windows 8.1 e versioni precedenti<br /> Windows Server 2016 e versioni precedenti<br /> (per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))||
 |**4.7**|[NET Framework 4.7 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=825319)|[Pagina di download per il programma di installazione Web 4.7](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Pagina di download per il programma di installazione offline 4.7](https://go.microsoft.com/fwlink/?LinkId=825303)|**Incluso in:** <br/><br/>Windows 10 Creators Update<br /><br /> **Installabile in:**<br /><br/> Aggiornamento dell'anniversario di Windows 10<br /> Windows 8.1 e versioni precedenti<br /> Windows Server 2016 e versioni precedenti<br /> (per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))||
 |**4.6.2**|[NET Framework 4.6.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=780617)|[Pagina di download per il programma di installazione Web 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [Pagina di download per il programma di installazione offline 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780601)|**Incluso in:** <br/><br /> Aggiornamento dell'anniversario di Windows 10<br /><br /> **Installabile in:**<br /><br/> Aggiornamento di novembre di Windows 10 <br/> Windows 10 <br /> Windows 8.1 e versioni precedenti<br /> Windows Server 2012 R2 e versioni precedenti<br /> (per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))|
@@ -171,7 +171,7 @@ I Language Pack sono file eseguibili in cui sono contenute risorse localizzate (
 
     - [Language Pack di.NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkID=825306)
 
-    - [Language Pack di.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkID=780604)
+    - [Language Pack di .NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkID=780604)
 
     - [Language Pack di.NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkID=671747)
 

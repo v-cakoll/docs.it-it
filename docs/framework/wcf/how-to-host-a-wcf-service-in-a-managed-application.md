@@ -1,18 +1,18 @@
 ---
-title: "Procedura: ospitare un servizio WCF in un'applicazione gestita"
+title: "Procedura: Ospitare un servizio WCF in un'applicazione gestita"
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
 ms.openlocfilehash: 131d99457427e0818f78076d987f550a99ad7cf0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929311"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Procedura: ospitare un servizio WCF in un'app gestita
+# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Procedura: Ospitare un servizio WCF in un'app gestita
 
 Per ospitare un servizio all'interno di un'applicazione gestita, incorporare il codice per il servizio nel codice dell'applicazione, definire un endpoint per il servizio in modo imperativo nel codice, in modo dichiarativo tramite la configurazione o tramite endpoint predefiniti, quindi creare un'istanza di <xref:System.ServiceModel.ServiceHost>.
 
@@ -50,7 +50,7 @@ Nella procedura seguente viene illustrato come implementare un servizio indipend
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > Per altre informazioni su come definire e implementare un'interfaccia del servizio, vedere [procedura: definire un contratto di servizio](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) e [procedura: implementare un contratto di servizio](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).
+    > Per altre informazioni su come definire e implementare un'interfaccia del servizio, vedere [come: Definire un contratto di servizio](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) e [come: Implementare un contratto di servizio](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).
 
 5. All'inizio del metodo `Main`, creare un'istanza della classe <xref:System.Uri> con l'indirizzo di base del servizio.
 
@@ -67,7 +67,7 @@ Nella procedura seguente viene illustrato come implementare un servizio indipend
 
 7. Premere **Ctrl**+**MAIUSC**+**B** per compilare la soluzione.
 
-## <a name="test-the-service"></a>Testare il servizio
+## <a name="test-the-service"></a>Eseguire il test del servizio
 
 1. Premere **Ctrl**+**F5** per eseguire il servizio.
 
@@ -99,7 +99,7 @@ Nell'esempio seguente viene creato un oggetto <xref:System.ServiceModel.ServiceH
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [Procedura: ospitare un servizio WCF in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Procedura: Ospitare un servizio WCF in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [Servizio indipendente](../../../docs/framework/wcf/samples/self-host.md)
 - [Servizi di hosting](../../../docs/framework/wcf/hosting-services.md)
 - [Procedura: Definire un contratto di servizio](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)

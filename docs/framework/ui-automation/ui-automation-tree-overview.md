@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
 ms.openlocfilehash: a88822d6aed5af04ecf7deffe6936cfc4ebe296e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033020"
 ---
 # <a name="ui-automation-tree-overview"></a>Panoramica dell'albero di automazione dell'interfaccia utente
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "59225950"
   
  I provider di automazione interfaccia utente supportano i filtri mediante la definizione di proprietà sugli elementi, incluse le proprietà <xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty> e <xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fornisce tre visualizzazioni predefinite. che sono definite dal tipo di filtro eseguito. L'ambito di qualsiasi visualizzazione è definito dall'applicazione. L'applicazione può inoltre applicare altri filtri sulle proprietà, ad esempio per includere solo i controlli abilitati in una visualizzazione controlli.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] offre tre visualizzazioni predefinite, che sono definite dal tipo di filtro eseguito. L'ambito di qualsiasi visualizzazione è definito dall'applicazione. L'applicazione può inoltre applicare altri filtri sulle proprietà, ad esempio per includere solo i controlli abilitati in una visualizzazione controlli.  
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>Visualizzazione non elaborata  
@@ -57,4 +57,4 @@ ms.locfileid: "59225950"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Automation.AutomationElement>
-- [Cenni preliminari su automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Panoramica di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)

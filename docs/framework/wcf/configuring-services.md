@@ -5,11 +5,11 @@ helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
 ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608536"
 ---
 # <a name="configuring-wcf-services"></a>Configurazione dei servizi WCF
 
@@ -48,7 +48,7 @@ Dopo aver progettato e implementato il contratto di servizio, è possibile confi
   
  [Progettazione e implementazione di servizi](../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
- [Servizi host](../../../docs/framework/wcf/hosting-services.md)  
+ [Servizi di hosting](../../../docs/framework/wcf/hosting-services.md)  
   
  [Creazione di client](../../../docs/framework/wcf/building-clients.md)  
   

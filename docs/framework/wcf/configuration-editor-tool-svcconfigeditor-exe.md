@@ -8,11 +8,11 @@ helpviewer_keywords:
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
 ms.openlocfilehash: e4b54026c71e18e4011661c5cad2ca95dfcb733e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608853"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Strumento Editor di configurazione (SvcConfigEditor.exe)
 L'Editor di configurazione dei servizi di Windows Communication Foundation (WCF), ovvero il file SvcConfigEditor.exe, consente ad amministratori e sviluppatori di creare e modificare le impostazioni di configurazione dei servizi WCF tramite un'interfaccia utente grafica (GUI). Con questo strumento è possibile gestire le impostazioni di associazioni, comportamenti, servizi e diagnostica WCF senza la necessità di modificare direttamente i file di configurazione XML.  
@@ -50,11 +50,11 @@ L'Editor di configurazione dei servizi di Windows Communication Foundation (WCF)
   
  L'interfaccia utente dell'Editor di configurazione dei servizi è suddivisa nelle aree seguenti:  
   
--   Il riquadro di visualizzazione albero, in cui gli elementi di configurazione sono visualizzati in una struttura ad albero a sinistra. Per eseguire operazioni sulla struttura è possibile fare clic con il pulsante destro del mouse sui nodi.  
+- Il riquadro di visualizzazione albero, in cui gli elementi di configurazione sono visualizzati in una struttura ad albero a sinistra. Per eseguire operazioni sulla struttura è possibile fare clic con il pulsante destro del mouse sui nodi.  
   
--   Il riquadro attività, in cui le attività comuni degli elementi correnti sono visualizzate nell'angolo inferiore sinistro della finestra.  
+- Il riquadro attività, in cui le attività comuni degli elementi correnti sono visualizzate nell'angolo inferiore sinistro della finestra.  
   
--   Il riquadro dettagli, in cui vengono visualizzate le impostazioni dettagliate del nodo di configurazione selezionato nella visualizzazione albero a destra.  
+- Il riquadro dettagli, in cui vengono visualizzate le impostazioni dettagliate del nodo di configurazione selezionato nella visualizzazione albero a destra.  
   
 ### <a name="opening-a-configuration-file"></a>Apertura di un file di configurazione  
   
@@ -77,16 +77,16 @@ L'Editor di configurazione dei servizi di Windows Communication Foundation (WCF)
 #### <a name="creating-a-new-service-configuration"></a>Creazione di una nuova configurazione di un servizio  
  Per creare una nuova configurazione di un servizio, è possibile procedere nei modi seguenti:  
   
--   Utilizzo di una procedura guidata: Fare clic sul collegamento **crea un nuovo servizio...** nel riquadro attività o nella pagina di riepilogo per avviare la procedura guidata. È anche possibile eseguire questa operazione nel **File** -> menu **Aggiungi nuovo elemento**.  
+- Utilizzo di una procedura guidata: Fare clic sul collegamento **crea un nuovo servizio...** nel riquadro attività o nella pagina di riepilogo per avviare la procedura guidata. È anche possibile eseguire questa operazione nel **File** -> menu **Aggiungi nuovo elemento**.  
   
--   Creare manualmente: È possibile fare doppio clic il **Services** nodo, quindi scegliere **nuovo servizio**.  
+- Creare manualmente: È possibile fare doppio clic il **Services** nodo, quindi scegliere **nuovo servizio**.  
   
 #### <a name="creating-a-new-service-endpoint-configuration"></a>Creazione di una nuova configurazione di endpoint di servizio  
  Per creare una nuova configurazione di endpoint di servizio, è possibile procedere nei modi seguenti:  
   
--   Creare usando una procedura guidata: fare clic sul collegamento **creare un nuovo Endpoint di servizio...** nel riquadro attività o nella pagina di riepilogo per avviare la procedura guidata. È anche possibile eseguire questa operazione nel **File** -> menu **Aggiungi nuovo elemento**.  
+- Creare usando una procedura guidata: fare clic sul collegamento **creare un nuovo Endpoint di servizio...** nel riquadro attività o nella pagina di riepilogo per avviare la procedura guidata. È anche possibile eseguire questa operazione nel **File** -> menu **Aggiungi nuovo elemento**.  
   
--   Creare manualmente: Dopo aver creato un servizio, è possibile fare doppio clic il **endpoint** nodo e scegliere "**nuovo Endpoint del servizio**".  
+- Creare manualmente: Dopo aver creato un servizio, è possibile fare doppio clic il **endpoint** nodo e scegliere "**nuovo Endpoint del servizio**".  
   
 #### <a name="editing-a-service-configuration"></a>Modifica della configurazione di un servizio  
   
@@ -121,9 +121,9 @@ L'Editor di configurazione dei servizi di Windows Communication Foundation (WCF)
 #### <a name="creating-a-new-client-endpoint-configuration"></a>Creazione di una nuova configurazione di endpoint client  
  Per creare una nuova configurazione di endpoint client, è possibile procedere nei modi seguenti:  
   
--   Create dalla procedura guidata: Fare clic sul collegamento **creare un nuovo Client...** nel **riquadro attività** in basso a sinistra della finestra, oppure **pagina di riepilogo** per avviare la procedura guidata. È anche possibile eseguire questa operazione nel **File** -> menu **Aggiungi nuovo elemento**. Verrà richiesto di individuare la posizione della configurazione del servizio, da cui viene generata la configurazione client. A questo punto è possibile specificare l'endpoint del servizio a cui connettersi.  
+- Create dalla procedura guidata: Fare clic sul collegamento **creare un nuovo Client...** nel **riquadro attività** in basso a sinistra della finestra, oppure **pagina di riepilogo** per avviare la procedura guidata. È anche possibile eseguire questa operazione nel **File** -> menu **Aggiungi nuovo elemento**. Verrà richiesto di individuare la posizione della configurazione del servizio, da cui viene generata la configurazione client. A questo punto è possibile specificare l'endpoint del servizio a cui connettersi.  
   
--   Creare manualmente: Fare doppio clic il **endpoint** nodo **Client**e scegliere **nuovo Endpoint Client**.  
+- Creare manualmente: Fare doppio clic il **endpoint** nodo **Client**e scegliere **nuovo Endpoint Client**.  
   
 #### <a name="editing-a-client-endpoint-configuration"></a>Modifica di una configurazione di endpoint client  
   
@@ -141,27 +141,27 @@ L'Editor di configurazione dei servizi di Windows Communication Foundation (WCF)
 #### <a name="creating-a-new-standard-endpoint-configuration"></a>Creazione di una nuova configurazione di endpoint standard  
  Per creare una nuova configurazione di endpoint standard, è possibile procedere nei modi seguenti:  
   
--   Fare doppio clic il **Endpoint Standard** nodo e selezionare **configurazione nuovo Endpoint Standard...** Selezionare il tipo di associazione nella finestra di dialogo e fare clic su **OK**.  
+- Fare doppio clic il **Endpoint Standard** nodo e selezionare **configurazione nuovo Endpoint Standard...** Selezionare il tipo di associazione nella finestra di dialogo e fare clic su **OK**.  
   
--   Selezionare il **Endpoint Standard** nodo e fare clic su **configurazione nuovo Endpoint Standard...** nel **riquadro attività** in basso a sinistra della finestra.  
+- Selezionare il **Endpoint Standard** nodo e fare clic su **configurazione nuovo Endpoint Standard...** nel **riquadro attività** in basso a sinistra della finestra.  
   
  Il **crea un nuovo Endpoint Standard** nella finestra di dialogo vengono visualizzati ed elencati registrati tutti i tipi di endpoint standard.  
   
 #### <a name="viewing-and-editing-a-standard-endpoint-configuration"></a>Visualizzazione e modifica di una configurazione di endpoint standard  
  Per aprire una configurazione di endpoint standard per la visualizzazione e la modifica, è possibile procedere nei modi seguenti:  
   
--   Fare clic per espandere la **Endpoint Standard** nodo e fare clic sul sottonodo dell'endpoint corrispondente.  
+- Fare clic per espandere la **Endpoint Standard** nodo e fare clic sul sottonodo dell'endpoint corrispondente.  
   
--   Scegliere il **Endpoint Standard** nodo e fare clic sul rispettivo endpoint nel riquadro dei dettagli.  
+- Scegliere il **Endpoint Standard** nodo e fare clic sul rispettivo endpoint nel riquadro dei dettagli.  
   
  Gli attributi dell'endpoint vengono visualizzati nel riquadro di destra per la modifica.  
   
 #### <a name="deleting-a-standard-endpoint-configuration"></a>Eliminazione di una configurazione di endpoint standard  
  Per eliminare una configurazione di endpoint standard, è possibile procedere nei modi seguenti:  
   
--   Fare clic per espandere la **Endpoint Standard** nodo e pulsante destro del mouse il sottonodo dell'endpoint corrispondente. Usare il comando di contesto **Elimina configurazione Endpoint Standard** eliminare l'endpoint.  
+- Fare clic per espandere la **Endpoint Standard** nodo e pulsante destro del mouse il sottonodo dell'endpoint corrispondente. Usare il comando di contesto **Elimina configurazione Endpoint Standard** eliminare l'endpoint.  
   
--   Scegliere il **Endpoint Standard** nodo. Nel **Task** riquadro, fare clic su **Elimina configurazione Endpoint Standard**.  
+- Scegliere il **Endpoint Standard** nodo. Nel **Task** riquadro, fare clic su **Elimina configurazione Endpoint Standard**.  
   
  Se l'endpoint standard in, viene visualizzato un messaggio di avviso quando si tenta di eliminarlo: **L'endpoint standard è in uso. Se lo si elimina ora, assicurarsi di eliminare tutti i relativi riferimenti presenti in altre parti della configurazione (ad esempio, nell'endpoint del servizio). In caso contrario la configurazione non sarà valida e non potrà essere aperta in seguito. Si sicuri di che voler eliminare l'endpoint standard?"**  
   
@@ -175,11 +175,11 @@ L'Editor di configurazione dei servizi di Windows Communication Foundation (WCF)
 #### <a name="creating-a-new-binding-configuration"></a>Creazione di una nuova configurazione di associazione  
  Per creare una nuova configurazione dell’associazione, è possibile procedere nei modi seguenti.  
   
--   Fare doppio clic il **associazioni** nodo e selezionare **nuova configurazione dell'associazione**... Selezionare il tipo di associazione nella finestra di dialogo e fare clic su **OK**.  
+- Fare doppio clic il **associazioni** nodo e selezionare **nuova configurazione dell'associazione**... Selezionare il tipo di associazione nella finestra di dialogo e fare clic su **OK**.  
   
--   Selezionare il **associazioni** nodo e fare clic su **nuova configurazione dell'associazione**... nel **riquadro attività** in basso a sinistra della finestra.  
+- Selezionare il **associazioni** nodo e fare clic su **nuova configurazione dell'associazione**... nel **riquadro attività** in basso a sinistra della finestra.  
   
--   Nella pagina di riepilogo servizio o client, fare clic su **fare clic per creare** nel **configurazione di associazione** campi per creare una configurazione di associazione per l'endpoint corrispondente.  
+- Nella pagina di riepilogo servizio o client, fare clic su **fare clic per creare** nel **configurazione di associazione** campi per creare una configurazione di associazione per l'endpoint corrispondente.  
   
 #### <a name="adding-binding-element-extensions-to-a-custom-binding"></a>Aggiunta di estensioni degli elementi di associazione a un'associazione personalizzata  
   
@@ -278,9 +278,9 @@ L'Editor di configurazione dei servizi di Windows Communication Foundation (WCF)
 ##### <a name="creating-a-new-behavior-configuration"></a>Creazione di una nuova configurazione di un comportamento  
  Per creare una nuova configurazione di un comportamento, è possibile procedere nei due modi seguenti:  
   
--   Fare doppio clic su uno dei nodi dei comportamenti e selezionare "**nuova configurazione del comportamento...**  
+- Fare doppio clic su uno dei nodi dei comportamenti e selezionare "**nuova configurazione del comportamento...**  
   
--   Selezionare uno dei nodi dei comportamenti e scegliere il **nuova configurazione del comportamento**... nel **riquadro attività** in basso a sinistra della finestra.  
+- Selezionare uno dei nodi dei comportamenti e scegliere il **nuova configurazione del comportamento**... nel **riquadro attività** in basso a sinistra della finestra.  
   
 ##### <a name="adding-behavior-element-extensions-to-a-behavior"></a>Aggiunta di estensioni degli elementi del comportamento a un comportamento  
   
@@ -319,13 +319,13 @@ L'Editor di configurazione dei servizi di Windows Communication Foundation (WCF)
 #### <a name="extensions"></a>Estensioni  
  Nuove estensioni di associazione, le estensioni degli elementi di associazione, le estensioni di endpoint standard e le estensioni di comportamento possono essere registrate per l'uso nella configurazione di WCF. Ogni estensione è costituita da una coppia nome/tipo. Il primo elemento della coppia definisce il nome dell'estensione nella configurazione, mentre il secondo implementa l'estensione. Esistono quattro tipi di estensione:  
   
--   Le estensioni di associazione definiscono un intero tipo di associazione. Esempio: `basicHttpBinding`.  
+- Le estensioni di associazione definiscono un intero tipo di associazione. Esempio: `basicHttpBinding`.  
   
--   Le estensioni degli elementi di associazione definiscono un elemento di un'associazione. Esempio: `textMessageEncoding`.  
+- Le estensioni degli elementi di associazione definiscono un elemento di un'associazione. Esempio: `textMessageEncoding`.  
   
--   Le estensioni degli endpoint standard definiscono un endpoint standard intero. Esempio: `discoveryEndpoint`.  
+- Le estensioni degli endpoint standard definiscono un endpoint standard intero. Esempio: `discoveryEndpoint`.  
   
--   Le estensioni degli elementi di un comportamento definiscono un elemento di un comportamento. Esempio: `clientVia`.  
+- Le estensioni degli elementi di un comportamento definiscono un elemento di un comportamento. Esempio: `clientVia`.  
   
  Le estensioni registrate nella configurazione possono essere utilizzate come qualsiasi altro componente WCF dello stesso tipo.  
   

@@ -5,11 +5,11 @@ ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d8b3fd9940bd11c3d026b46247e0657c82b18099
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942402"
 ---
 # <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>Metodo ICorDebugMutableDataTarget::SetThreadContext
 Imposta il contesto (valori del registro) per un thread.  

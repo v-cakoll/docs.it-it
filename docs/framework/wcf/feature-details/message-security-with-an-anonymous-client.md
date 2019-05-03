@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 ms.openlocfilehash: 613b85e18109faa2a4386090e91aaddcfd8e0b68
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038584"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Protezione dei messaggi con un client anonimo
 
@@ -25,12 +25,12 @@ Per un'applicazione di esempio, vedere [sicurezza dei messaggi anonima](../../..
 |Modalità di sicurezza|Messaggio|
 |Interoperabilità|Solo WCF|
 |Autenticazione (server)|La negoziazione iniziale richiede l'autenticazione server, ma non l'autenticazione client|
-|Autenticazione (client)|None|
+|Autenticazione (client)|nessuno|
 |Integrità|Sì, usando un contesto di sicurezza condiviso|
 |Riservatezza|Sì, usando un contesto di sicurezza condiviso|
 |Trasporto|HTTP|
 
-## <a name="service"></a>Servizio
+## <a name="service"></a>Service
 
 Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:
 

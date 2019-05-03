@@ -1,5 +1,5 @@
 ---
-title: <add> Elemento per connectionManagement (impostazioni di rete)
+title: Elemento <add> per connectionManagement (impostazioni di rete)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -11,11 +11,11 @@ helpviewer_keywords:
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 ms.openlocfilehash: 3a046fd386536b29ea2dcad5660c65c08b7e4478
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705272"
 ---
 # <a name="add-element-for-connectionmanagement-network-settings"></a>\<aggiungere > (elemento) per connectionManagement (impostazioni di rete)
 Aggiunge un indirizzo IP o nome DNS all'elenco di gestione delle connessioni.  

@@ -3,22 +3,22 @@ title: 'Procedura: Usare i filtri'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
 ms.openlocfilehash: 5d3ed4a1d64edee274e60f5bf156b4294902df8c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972861"
 ---
 # <a name="how-to-use-filters"></a>Procedura: Usare i filtri
 In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione di routing che usa più filtri. In questo esempio, i messaggi vengono indirizzati a due implementazioni di un servizio di calcolo, regularCalc e roundingCalc. Entrambe le implementazioni supportano le stesse operazioni; tuttavia uno dei servizi arrotonda tutti i calcoli all'integer più vicino prima della restituzione. Un'applicazione client deve essere in grado di indicare se usare la versione del servizio che esegue l'arrotondamento. Se non viene espressa alcuna preferenza in merito al servizio da usare, il carico viene bilanciato tra i due servizi. Le operazioni esposte da entrambi servizi sono:  
   
--   Aggiunta  
+- Aggiunta  
   
--   Sottrai  
+- Sottrai  
   
--   Multiply  
+- Multiply  
   
--   Dividi  
+- Dividi  
   
  Poiché entrambi i servizi implementano le stesse operazioni, non è possibile usare il filtro Action, perché l'azione specificata nel messaggio non risulterebbe univoca. È invece necessario eseguire ulteriori attività per accertarsi che i messaggi vengano indirizzati agli endpoint appropriati.  
   
@@ -137,10 +137,10 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
     > [!NOTE]
     >  Il filtro PrefixEndpointAddress non valuta il nome host in caso di corrispondenza poiché è possibile fare riferimento a un singolo host usando diversi nomi host che potrebbero essere tutti riferimenti validi all'host da parte dell'applicazione client. Ad esempio, tutti i valori seguenti possono fare riferimento allo stesso host:  
     >   
-    > -   localhost  
-    > -   127.0.0.1  
-    > -   `www.contoso.com`  
-    > -   ContosoWeb01  
+    > - localhost  
+    > - 127.0.0.1  
+    > - `www.contoso.com`  
+    > - ContosoWeb01  
   
 4. Il filtro finale deve supportare il routing di messaggi che arrivano all'endpoint generale senza l'intestazione personalizzata. Per questo scenario, i messaggi devono alternarsi tra i servizi regularCalc e roundingCalc. Per supportare il routing "round robin" di questi messaggi, usare un filtro personalizzato che consente a un'istanza del filtro per la corrispondenza per ogni messaggio elaborato.  Il codice seguente definisce due istanze di un filtro RoundRobinMessageFilter, le quali vengono raggruppate per indicare che devono alternarsi tra loro.  
   

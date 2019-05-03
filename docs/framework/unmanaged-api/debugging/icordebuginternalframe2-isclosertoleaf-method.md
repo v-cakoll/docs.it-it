@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 30a9d26283d4f544bdd865e40cfc1c1c625ae462
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995501"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>Metodo ICorDebugInternalFrame2::IsCloserToLeaf
 Controlla se il `this` frame interno è più simile alla foglia a oggetto ICorDebugFrame specificato.  

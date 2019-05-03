@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
 ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856440"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Tipi di enumerazioni nei contratti dati
 Le enumerazioni possono essere espresse nel modello del contratto dati. In questo argomento vengono esaminati molti esempi che spiegano il modello di programmazione.  
@@ -99,5 +99,5 @@ Le enumerazioni possono essere espresse nel modello del contratto dati. In quest
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Uso di contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Specifica del trasferimento di dati nei contratti di servizio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Definizione del trasferimento dati nei contratti di servizio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 567e6533a9a9ac718f8b5acac769295c104f7f3c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628099"
 ---
 # <a name="getcorsystemdirectory-function"></a>Funzione GetCORSystemDirectory
 Restituisce la directory di installazione di common language runtime (CLR) che viene caricato nel processo. La directory di installazione è completo, ad esempio, "c:\windows\microsoft.net\framework\v1.0.3705".  

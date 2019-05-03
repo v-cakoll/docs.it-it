@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
 ms.openlocfilehash: 56099d334a03e85b816cf48983cbbead0784ef5b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59320392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665806"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>Procedura: Creare una routine (Visual Basic)
 Una routine racchiusa tra un'istruzione di dichiarazione iniziale (`Sub` oppure `Function`) e un'istruzione di dichiarazione finale (`End Sub` o `End Function`). Tutto il codice della routine è compresa tra queste istruzioni.  
@@ -55,13 +55,13 @@ Una routine racchiusa tra un'istruzione di dichiarazione iniziale (`Sub` oppure 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedure](./index.md)
+- [Routine](./index.md)
 - [Routine Sub](./sub-procedures.md)
 - [Routine Function](./function-procedures.md)
-- [Routine di proprietà](./property-procedures.md)
+- [Routine Property](./property-procedures.md)
 - [Routine di operatore](./operator-procedures.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Routine ricorsive](./recursive-procedures.md)
-- [Overload delle routine](./procedure-overloading.md)
+- [Overload della routine](./procedure-overloading.md)
 - [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Programmazione orientata agli oggetti (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [Programmazione orientata a oggetti (Visual Basic)](../../concepts/object-oriented-programming.md)

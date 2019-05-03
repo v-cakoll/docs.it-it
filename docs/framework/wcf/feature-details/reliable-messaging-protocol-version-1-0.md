@@ -3,11 +3,11 @@ title: Protocollo Reliable Messaging versione 1.0
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
 ms.openlocfilehash: 02a0815f62999c27507ed5e1610f090e944c135a
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55073213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946705"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Protocollo Reliable Messaging versione 1.0
 In questo argomento vengono descritti i dettagli di implementazione Windows Communication Foundation (WCF) per WS-Reliable Messaging protocol di febbraio 2005 (versione 1.0) necessario per l'interoperatività con il trasporto HTTP. WCF è conforme alla specifica WS-Reliable Messaging con i vincoli e i chiarimenti illustrati in questo argomento. Si noti che il protocollo WS-Reliable Messaging versione 1.0 viene implementato a partire da [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
@@ -16,9 +16,9 @@ In questo argomento vengono descritti i dettagli di implementazione Windows Comm
   
  Per comodità, nell'argomento vengono utilizzati i ruoli seguenti:  
   
--   Iniziatore: il client che avvia la creazione della sequenza di WS-Reliable Message.  
+- Iniziatore: il client che avvia la creazione della sequenza di WS-Reliable Message.  
   
--   Risponditore: il servizio che riceve le richieste dell'iniziatore.  
+- Risponditore: il servizio che riceve le richieste dell'iniziatore.  
   
  In questo documento vengono utilizzati i prefissi e gli spazi dei nomi riportati nella tabella seguente.  
   
@@ -35,29 +35,29 @@ In questo argomento vengono descritti i dettagli di implementazione Windows Comm
 ### <a name="sequence-establishment-messages"></a>Messaggi di definizione sequenza  
  WCF implementa `CreateSequence` e `CreateSequenceResponse` messaggi per stabilire una sequenza di messaggi affidabili. Si applicano i vincoli seguenti:  
   
--   B1101: L'iniziatore di WCF non genera l'elemento Expires facoltativo nel `CreateSequence` messaggio o, nei casi quando il `CreateSequence` messaggio contiene un `Offer` elemento, l'opzione facoltativa `Expires` elemento nel `Offer` elemento.  
+- B1101: L'iniziatore di WCF non genera l'elemento Expires facoltativo nel `CreateSequence` messaggio o, nei casi quando il `CreateSequence` messaggio contiene un `Offer` elemento, l'opzione facoltativa `Expires` elemento nel `Offer` elemento.  
   
--   B1102: Quando si accede al `CreateSequence` dei messaggi, WCF`Responder` Invia e riceve entrambi `Expires` elementi se esiste, ma non usa i relativi valori.  
+- B1102: Quando si accede al `CreateSequence` dei messaggi, WCF`Responder` Invia e riceve entrambi `Expires` elementi se esiste, ma non usa i relativi valori.  
   
  Con il protocollo WS-ReliableMessaging viene introdotto il meccanismo `Offer` che consente di stabilire le due sequenze correlate opposte che formano una sessione.  
   
--   R1103: Se `CreateSequence` contiene un `Offer` elemento, il risponditore Reliable Messaging necessario accettare la sequenza e rispondere con `CreateSequenceResponse` che contiene un `wsrm:Accept` elemento, formando due correlato sequenze opposte o rifiutare il `CreateSequence`richiesta.  
+- R1103: Se `CreateSequence` contiene un `Offer` elemento, il risponditore Reliable Messaging necessario accettare la sequenza e rispondere con `CreateSequenceResponse` che contiene un `wsrm:Accept` elemento, formando due correlato sequenze opposte o rifiutare il `CreateSequence`richiesta.  
   
--   R1104: i messaggi `SequenceAcknowledgement` e dell'applicazione in transito sulla sequenza opposta devono essere inviati al riferimento endpoint `ReplyTo` di `CreateSequence`.  
+- R1104: i messaggi `SequenceAcknowledgement` e dell'applicazione in transito sulla sequenza opposta devono essere inviati al riferimento endpoint `ReplyTo` di `CreateSequence`.  
   
--   R1105: i riferimenti endpoint `AcksTo` e `ReplyTo` in `CreateSequence` devono presentare valori indirizzo che corrispondano all'ottetto.  
+- R1105: i riferimenti endpoint `AcksTo` e `ReplyTo` in `CreateSequence` devono presentare valori indirizzo che corrispondano all'ottetto.  
   
      Il risponditore WCF verifica che la parte URI del `AcksTo` e `ReplyTo` EPR sono identici prima di creare una sequenza.  
   
--   R1106: i riferimenti endpoint `AcksTo`e `ReplyTo` in `CreateSequence` devono avere lo stesso set di parametri per riferimento.  
+- R1106: i riferimenti endpoint `AcksTo`e `ReplyTo` in `CreateSequence` devono avere lo stesso set di parametri per riferimento.  
   
      WCF non impone, ma presuppone che i parametri di riferimento] di `AcksTo` e `ReplyTo` sul `CreateSequence` siano identici e utilizza i parametri di riferimento] da `ReplyTo` riferimento dell'endpoint per acknowledgement e messaggi in sequenza opposta.  
   
--   R1107: Quando vengono stabilite due sequenze opposte utilizzando il `Offer` meccanismo, `SequenceAcknowledgement` e i messaggi dell'applicazione sulle sequenze opposte devono essere inviati al `ReplyTo` riferimento all'endpoint del `CreateSequence`.  
+- R1107: Quando vengono stabilite due sequenze opposte utilizzando il `Offer` meccanismo, `SequenceAcknowledgement` e i messaggi dell'applicazione sulle sequenze opposte devono essere inviati al `ReplyTo` riferimento all'endpoint del `CreateSequence`.  
   
--   R1108: Quando vengono stabilite due sequenze opposte utilizzando il meccanismo Offer, la `[address]` proprietà del `wsrm:AcksTo` elemento figlio di riferimento dell'Endpoint del `wsrm:Accept` elemento del `CreateSequenceResponse` deve corrispondere numero di byte all'URI di destinazione del `CreateSequence`.  
+- R1108: Quando vengono stabilite due sequenze opposte utilizzando il meccanismo Offer, la `[address]` proprietà del `wsrm:AcksTo` elemento figlio di riferimento dell'Endpoint del `wsrm:Accept` elemento del `CreateSequenceResponse` deve corrispondere numero di byte all'URI di destinazione del `CreateSequence`.  
   
--   R1109: Quando vengono stabilite due sequenze opposte utilizzando il `Offer` meccanismo, i messaggi inviati dall'iniziatore e riconoscimenti per i messaggi dal risponditore devono essere inviati allo stesso riferimento dell'Endpoint.  
+- R1109: Quando vengono stabilite due sequenze opposte utilizzando il `Offer` meccanismo, i messaggi inviati dall'iniziatore e riconoscimenti per i messaggi dal risponditore devono essere inviati allo stesso riferimento dell'Endpoint.  
   
      WCF utilizza WS-Reliable Messaging per stabilire sessioni affidabili tra l'iniziatore e risponditore. Implementazione di WS-Reliable Messaging di WCF offre una sessione affidabile per unidirezionali, request / reply e full duplex modelli di messaggistica. WS-Reliable Messaging `Offer` meccanismo `CreateSequence` / `CreateSequenceResponse` ti permette di stabilire due sequenze opposte correlate e fornisce un protocollo della sessione è adatto per tutti gli endpoint del messaggio. Poiché WCF fornisce una garanzia di sicurezza per tale sessione, inclusa la protezione end-to-end per l'integrità della sessione, è consigliabile assicurarsi che i messaggi destinati alla stessa entità sono in arrivo alla stessa destinazione. Ciò consente anche il "piggy-backing" degli acknowledgement della sequenza sui messaggi dell'applicazione. Di conseguenza, i vincoli R1104, R1105 e R1108 si applicano a WCF.  
   
@@ -133,11 +133,11 @@ In questo argomento vengono descritti i dettagli di implementazione Windows Comm
 ### <a name="sequence"></a>Sequence  
  Di seguito è riportato un elenco di vincoli che si applicano alle sequenze:  
   
--   Genera l'errore B1201:WCF e gli accessi alla sequenza di numeri non superiori al `xs:long`del valore massimo, 9223372036854775807.  
+- Genera l'errore B1201:WCF e gli accessi alla sequenza di numeri non superiori al `xs:long`del valore massimo, 9223372036854775807.  
   
--   B1202:WCF genera sempre un messaggio ultimo con corpo vuoto con l'URI dell'azione di `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`.  
+- B1202:WCF genera sempre un messaggio ultimo con corpo vuoto con l'URI dell'azione di `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`.  
   
--   B1203: WCF riceve e recapita un messaggio con un'intestazione di sequenza che contiene un `LastMessage` elemento fino a quando non è l'URI dell'azione `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`.  
+- B1203: WCF riceve e recapita un messaggio con un'intestazione di sequenza che contiene un `LastMessage` elemento fino a quando non è l'URI dell'azione `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`.  
   
  Esempio di intestazione di sequenza.  
   
@@ -167,9 +167,9 @@ In questo argomento vengono descritti i dettagli di implementazione Windows Comm
 ### <a name="sequenceacknowledgement-header"></a>Intestazione SequenceAcknowledgement  
  WCF Usa meccanismo piggy-back per gli acknowledgement di sequenza forniti in WS-Reliable Messaging.  
   
--   R1401: Quando vengono stabilite due sequenze opposte utilizzando il `Offer` meccanismo, il `SequenceAcknowledgement` intestazione può essere incluso nei messaggi dell'applicazione trasmesso al destinatario desiderato.  
+- R1401: Quando vengono stabilite due sequenze opposte utilizzando il `Offer` meccanismo, il `SequenceAcknowledgement` intestazione può essere incluso nei messaggi dell'applicazione trasmesso al destinatario desiderato.  
   
--   B1402: Quando WCF deve generare un acknowledgement prima di ricevere qualsiasi messaggio di sequenza (ad esempio, per soddisfare un' `AckRequested` messaggio), WCF genera un `SequenceAcknowledgement` intestazione che contiene l'intervallo 0-0, come illustrato nell'esempio seguente.  
+- B1402: Quando WCF deve generare un acknowledgement prima di ricevere qualsiasi messaggio di sequenza (ad esempio, per soddisfare un' `AckRequested` messaggio), WCF genera un `SequenceAcknowledgement` intestazione che contiene l'intervallo 0-0, come illustrato nell'esempio seguente.  
   
     ```xml  
     <wsrm:SequenceAcknowledgement>  
@@ -180,16 +180,16 @@ In questo argomento vengono descritti i dettagli di implementazione Windows Comm
     </wsrm:SequenceAcknowledgement>  
     ```  
   
--   B1403: WCF non genera `SequenceAcknowledgement` intestazioni contenenti un' `Nack` elemento, ma supporta `Nack` elementi.  
+- B1403: WCF non genera `SequenceAcknowledgement` intestazioni contenenti un' `Nack` elemento, ma supporta `Nack` elementi.  
   
 ### <a name="ws-reliablemessaging-faults"></a>Errori WS-ReliableMessaging  
  Di seguito è riportato un elenco di vincoli che si applicano all'implementazione WCF di errori WS-Reliable Messaging:  
   
--   B1501: WCF non genera `MessageNumberRollover` errori.  
+- B1501: WCF non genera `MessageNumberRollover` errori.  
   
--   Endpoint B1502:WCF può generare `CreateSequenceRefused` genera un errore come descritto nella specifica.  
+- Endpoint B1502:WCF può generare `CreateSequenceRefused` genera un errore come descritto nella specifica.  
   
--   B1503:when l'endpoint del servizio raggiunge il limite di connessione e non è in grado di elaborare nuove connessioni, WCF genera un'ulteriore `CreateSequenceRefused` codice secondario, di errore `netrm:ConnectionLimitReached`, come illustrato nell'esempio seguente.  
+- B1503:when l'endpoint del servizio raggiunge il limite di connessione e non è in grado di elaborare nuove connessioni, WCF genera un'ulteriore `CreateSequenceRefused` codice secondario, di errore `netrm:ConnectionLimitReached`, come illustrato nell'esempio seguente.  
   
     ```xml  
     <s:Envelope>  
@@ -228,17 +228,17 @@ In questo argomento vengono descritti i dettagli di implementazione Windows Comm
 ### <a name="ws-addressing-faults"></a>Errori WS-Addressing  
  Poiché WS-Reliable Messaging utilizza WS-Addressing, l'implementazione WCF WS-Reliable Messaging potrebbe generare errori WS-Addressing. In questa sezione vengono trattati gli errori WS-Addressing che WCF genera in modo esplicito a livello di WS-Reliable Messaging:  
   
--   B1601:WCF genera l'errore Message Addressing Header Required quando viene soddisfatta una delle operazioni seguenti:  
+- B1601:WCF genera l'errore Message Addressing Header Required quando viene soddisfatta una delle operazioni seguenti:  
   
-    -   In un messaggio mancano un'intestazione `Sequence` e un'intestazione `Action`.  
+    - In un messaggio mancano un'intestazione `Sequence` e un'intestazione `Action`.  
   
-    -   In un messaggio `CreateSequence` manca un'intestazione `MessageId`.  
+    - In un messaggio `CreateSequence` manca un'intestazione `MessageId`.  
   
-    -   In un messaggio `CreateSequence` manca un'intestazione `ReplyTo`.  
+    - In un messaggio `CreateSequence` manca un'intestazione `ReplyTo`.  
   
--   B1602:WCF genera l'errore non sono supportate azioni in risposta a un messaggio che non è presente una `Sequence` intestazione e ha un `Action` intestazione che non riconosciuta nella specifica WS-Reliable Messaging.  
+- B1602:WCF genera l'errore non sono supportate azioni in risposta a un messaggio che non è presente una `Sequence` intestazione e ha un `Action` intestazione che non riconosciuta nella specifica WS-Reliable Messaging.  
   
--   B1603:WCF genera l'errore dell'Endpoint non disponibile per indicare che l'endpoint non elabora la sequenza in base all'esame del `CreateSequence` messaggio, intestazioni di indirizzamento.  
+- B1603:WCF genera l'errore dell'Endpoint non disponibile per indicare che l'endpoint non elabora la sequenza in base all'esame del `CreateSequence` messaggio, intestazioni di indirizzamento.  
   
 ## <a name="protocol-composition"></a>Composizione del protocollo  
   
@@ -247,9 +247,9 @@ In questo argomento vengono descritti i dettagli di implementazione Windows Comm
   
  Anche se la specifica WS-Reliable Messaging menziona solo WS-Addressing 2004/08, non limita la versione WS-Addressing da utilizzare. Di seguito è riportato un elenco di vincoli che si applicano a WCF:  
   
--   R2101: sia WS-Addressing 2004/08 che WS-Addressing 1.0 possono essere utilizzati con WS-Reliable Messaging.  
+- R2101: sia WS-Addressing 2004/08 che WS-Addressing 1.0 possono essere utilizzati con WS-Reliable Messaging.  
   
--   R2102:A singola versione di WS-Addressing deve essere usato in una data sequenza di WS-Reliable Messaging o una coppia di sequenze opposte correlate tramite il `wsrm:Offer` meccanismo.  
+- R2102:A singola versione di WS-Addressing deve essere usato in una data sequenza di WS-Reliable Messaging o una coppia di sequenze opposte correlate tramite il `wsrm:Offer` meccanismo.  
   
 ### <a name="composition-with-soap"></a>Composizione con SOAP  
  WCF supporta l'utilizzo di SOAP 1.1 e SOAP 1.2 con WS-Reliable Messaging.  
@@ -257,28 +257,28 @@ In questo argomento vengono descritti i dettagli di implementazione Windows Comm
 ### <a name="composition-with-ws-security-and-ws-secureconversation"></a>Composizione con WS-Security e WS-SecureConversation  
  WCF fornisce protezione per le sequenze di WS-Reliable Messaging utilizzando sicuro trasporto (HTTPS), composizione con WS-Security e composizione con WS-SecureConversation. Di seguito è riportato un elenco di vincoli che si applicano a WCF:  
   
--   R2301: per proteggere l'integrità di una sequenza di WS-Reliable Messaging oltre all'integrità e riservatezza dei singoli messaggi, WCF, è necessario che deve essere utilizzato WS-SecureConversation.  
+- R2301: per proteggere l'integrità di una sequenza di WS-Reliable Messaging oltre all'integrità e riservatezza dei singoli messaggi, WCF, è necessario che deve essere utilizzato WS-SecureConversation.  
   
--   R2302:AWS-Secure Conversation deve essere stabilita prima di stabilire sequence(s) WS-Reliable Messaging.  
+- R2302:AWS-Secure Conversation deve essere stabilita prima di stabilire sequence(s) WS-Reliable Messaging.  
   
--   R2303: Se la durata della sequenza di WS-Reliable Messaging supera il WS-Secure Conversation durata della sessione, il `SecurityContextToken` stabilito tramite WS-Secure Conversation deve essere rinnovato tramite l'associazione WS-Secure Conversation Renewal corrispondente.  
+- R2303: Se la durata della sequenza di WS-Reliable Messaging supera il WS-Secure Conversation durata della sessione, il `SecurityContextToken` stabilito tramite WS-Secure Conversation deve essere rinnovato tramite l'associazione WS-Secure Conversation Renewal corrispondente.  
   
--   B2304:ws-sequenza di messaggistica affidabile o una coppia di sequenze opposte è sempre associata a una singola sessione WS-SecureConversation.  
+- B2304:ws-sequenza di messaggistica affidabile o una coppia di sequenze opposte è sempre associata a una singola sessione WS-SecureConversation.  
   
      L'origine WCF genera il `wsse:SecurityTokenReference` elemento nella sezione dell'elemento di estensibilità del `CreateSequence` messaggio.  
   
--   R2305:when composizione con WS-SecureConversation, un `CreateSequence` messaggio deve contenere il `wsse:SecurityTokenReference` elemento.  
+- R2305:when composizione con WS-SecureConversation, un `CreateSequence` messaggio deve contenere il `wsse:SecurityTokenReference` elemento.  
   
 ## <a name="ws-reliable-messaging-ws-policy-assertion"></a>Asserzione di WS-Policy relativa a WS-Reliable Messaging  
  WCF utilizza l'asserzione di WS-Policy WS-Reliable Messaging `wsrm:RMAssertion` per descrivere le funzionalità degli endpoint. Di seguito è riportato un elenco di vincoli che si applicano a WCF:  
   
--   B3001: WCF Allega `wsrm:RMAssertion` asserzione WS-Policy relativa a `wsdl:binding` elementi. WCF supporta i collegamenti agli `wsdl:binding` e `wsdl:port` elementi.  
+- B3001: WCF Allega `wsrm:RMAssertion` asserzione WS-Policy relativa a `wsdl:binding` elementi. WCF supporta i collegamenti agli `wsdl:binding` e `wsdl:port` elementi.  
   
--   B3002: WCF supporta le proprietà facoltative seguenti dell'asserzione di WS-Reliable Messaging e fornisce controllo su di essi in WCF`ReliableMessagingBindingElement`:  
+- B3002: WCF supporta le proprietà facoltative seguenti dell'asserzione di WS-Reliable Messaging e fornisce controllo su di essi in WCF`ReliableMessagingBindingElement`:  
   
-    -   `wsrm:InactivityTimeout`  
+    - `wsrm:InactivityTimeout`  
   
-    -   `wsrm:AcknowledgementInterval`  
+    - `wsrm:AcknowledgementInterval`  
   
      Di seguito è riportato un esempio.  
   
@@ -294,9 +294,9 @@ In questo argomento vengono descritti i dettagli di implementazione Windows Comm
   
  Controllo di flusso viene abilitato impostando il <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled?displayProperty=nameWithType> proprietà `true`. Di seguito è riportato un elenco di vincoli che si applicano a WCF:  
   
--   B4001: Quando è abilitata la messaggistica affidabile flusso di controllo, WCF genera un `netrm:BufferRemaining` nell'estendibilità dell'elemento dell'elemento di `SequenceAcknowledgement` intestazione.  
+- B4001: Quando è abilitata la messaggistica affidabile flusso di controllo, WCF genera un `netrm:BufferRemaining` nell'estendibilità dell'elemento dell'elemento di `SequenceAcknowledgement` intestazione.  
   
--   B4002: Quando è abilitata la messaggistica affidabile flusso di controllo, WCF non richiede un `netrm:BufferRemaining` elemento sia presente in `SequenceAcknowledgement` intestazione, come illustrato nell'esempio seguente.  
+- B4002: Quando è abilitata la messaggistica affidabile flusso di controllo, WCF non richiede un `netrm:BufferRemaining` elemento sia presente in `SequenceAcknowledgement` intestazione, come illustrato nell'esempio seguente.  
   
     ```xml  
     <wsrm:SequenceAcknowledgement>  
@@ -310,18 +310,18 @@ In questo argomento vengono descritti i dettagli di implementazione Windows Comm
     </wsrm:SequenceAcknowledgement>  
     ```  
   
--   B4003: WCF Usa `netrm:BufferRemaining` per indicare quanti nuovi messaggi la destinazione di Reliable Messaging può memorizzare nel buffer.  
+- B4003: WCF Usa `netrm:BufferRemaining` per indicare quanti nuovi messaggi la destinazione di Reliable Messaging può memorizzare nel buffer.  
   
--   B4004: il servizio WCF Reliable Messaging limita il numero di messaggi trasmessi quando l'applicazione di destinazione Reliable Messaging non può ricevere messaggi rapidamente. La destinazione Reliable Messaging memorizza nel buffer messaggi e il valore dell'elemento scende a 0.  
+- B4004: il servizio WCF Reliable Messaging limita il numero di messaggi trasmessi quando l'applicazione di destinazione Reliable Messaging non può ricevere messaggi rapidamente. La destinazione Reliable Messaging memorizza nel buffer messaggi e il valore dell'elemento scende a 0.  
   
--   B4005: WCF genera `netrm:BufferRemaining` integer i valori compresi tra 0 e 4096 incluso e legge valori integer compresi tra 0 e `xs:int`del `maxInclusive` valore 214748364 incluso.  
+- B4005: WCF genera `netrm:BufferRemaining` integer i valori compresi tra 0 e 4096 incluso e legge valori integer compresi tra 0 e `xs:int`del `maxInclusive` valore 214748364 incluso.  
   
 ## <a name="message-exchange-patterns"></a>Modelli di scambio dei messaggi  
  In questa sezione viene descritto il comportamento di WCF quando WS-Reliable Messaging viene usato per modelli di scambio di messaggi diversi. Per ogni modello di scambio di messaggi, vengono presi in considerazione i due scenari di distribuzione seguenti:  
   
--   Iniziatore non indirizzabile: L'iniziatore è protetto da firewall; Risponditore può recapitare messaggi all'iniziatore solo su risposte HTTP.  
+- Iniziatore non indirizzabile: L'iniziatore è protetto da firewall; Risponditore può recapitare messaggi all'iniziatore solo su risposte HTTP.  
   
--   Iniziatore indirizzabile: Iniziatore e risponditore sia possibile inviare richieste HTTP. in altre parole, è possano stabilire due connessioni HTTP opposte.  
+- Iniziatore indirizzabile: Iniziatore e risponditore sia possibile inviare richieste HTTP. in altre parole, è possano stabilire due connessioni HTTP opposte.  
   
 ### <a name="one-way-non-addressable-initiator"></a>Iniziatore unidirezionale, non indirizzabile  
   

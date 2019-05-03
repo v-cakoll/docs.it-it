@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
 ms.openlocfilehash: 0c5474a65bee7d3d290372e79f8423ea9986235f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59301178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767117"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Procedura: Personalizzare un'associazione basata sul sistema
 Windows Communication Foundation (WCF) include diverse associazioni fornite dal sistema che consentono di configurare alcune delle proprietà degli elementi di associazione sottostante, ma non tutte le proprietà. In questo argomento viene illustrato come impostare proprietà sugli elementi di associazione per creare un'associazione personalizzata.  

@@ -3,11 +3,11 @@ title: 'Eccezioni: Funzione failwith'
 description: Informazioni su come la funzione 'failwith' genera un F# eccezione.
 ms.date: 05/16/2016
 ms.openlocfilehash: 05d385ddfc98a910779a6f59949a7187c38f0812
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772684"
 ---
 # <a name="exceptions-the-failwith-function"></a>Eccezioni: Funzione failwith
 

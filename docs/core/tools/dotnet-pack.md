@@ -2,12 +2,12 @@
 title: Comando dotnet pack
 description: Il comando dotnet pack consente di creare pacchetti NuGet per il progetto .NET Core.
 ms.date: 12/04/2018
-ms.openlocfilehash: 4b665140f7c660c5851fb68b07ecec2d9391b925
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 8faa99bf35d9802b16f951082b20644d45a939c7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464476"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672126"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -20,17 +20,21 @@ ms.locfileid: "58464476"
 ## <a name="synopsis"></a>Riepilogo
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
     [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>Description
@@ -109,6 +113,7 @@ Per impostazione predefinita, `dotnet pack` compila prima il progetto. Se si vuo
 
 > [!NOTE]
 > Per impostazione predefinita, non è possibile creare un pacchetto dei progetti Web. Per eseguire l'override del comportamento predefinito, aggiungere la proprietà seguente al file con estensione *csproj*:
+>
 > ```xml
 > <PropertyGroup>
 >    <IsPackable>true</IsPackable>
@@ -208,5 +213,5 @@ Per impostazione predefinita, `dotnet pack` compila prima il progetto. Se si vuo
 * Comprimere il progetto usando un [file con estensione nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
 
   ```console
-  dotnet pack  ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
+  dotnet pack ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
   ```

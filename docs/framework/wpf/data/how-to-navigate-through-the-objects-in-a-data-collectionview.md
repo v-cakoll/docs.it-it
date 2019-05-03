@@ -10,11 +10,11 @@ helpviewer_keywords:
 - navigating through objects in data CollectionView [WPF]
 ms.assetid: fcd37590-bce1-4ac9-8b74-3b96c7458b8a
 ms.openlocfilehash: 1507ab4db0c91b670d8bca754f6fd67d887c7041
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931501"
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>Procedura: Spostarsi tra gli oggetti nella visualizzazione di una raccolta dati
 Le viste consentono la stessa raccolta di dati da visualizzare in modi diversi, a seconda di ordinamento, filtro o di raggruppamento. Viste anche forniscono un concetto di puntatore al record corrente e consentono di spostare il puntatore del mouse. Questo esempio viene illustrato come ottenere l'oggetto corrente, nonché navigare tra gli oggetti in una raccolta di dati utilizzando la funzionalità fornita nel <xref:System.Windows.Data.CollectionView> classe.  
@@ -33,6 +33,6 @@ Le viste consentono la stessa raccolta di dati da visualizzare in modi diversi, 
 
 - [Panoramica sul data binding](data-binding-overview.md)
 - [Ordinare i dati in una visualizzazione](how-to-sort-data-in-a-view.md)
-- [Filtrare i dati in una visualizzazione](how-to-filter-data-in-a-view.md)
-- [Ordinare e raggruppare dati tramite una visualizzazione in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Procedure relative](data-binding-how-to-topics.md)
+- [Filtrare i dati di una visualizzazione](how-to-filter-data-in-a-view.md)
+- [Ordinare e raggruppare dati con una visualizzazione in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)

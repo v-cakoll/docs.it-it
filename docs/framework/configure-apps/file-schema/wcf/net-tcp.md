@@ -3,11 +3,11 @@ title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
 ms.openlocfilehash: 589bae5d1f91e0424eb19cee62fe758aa7846191
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772333"
 ---
 # <a name="nettcp"></a>\<net.tcp>
 Specifica le impostazioni di configurazione per il servizio di condivisione porte NET.TCP, che consente a più processi di condividere la stessa porta TCP.  

@@ -10,11 +10,11 @@ ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951710"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Linee guida per la creazione di codice sicuro applicabili al codice non gestito
 Alcuni codici di libreria devono chiamare codice non gestito (ad esempio, le API del codice nativo, come Win32). Poiché questo comporta il superamento del perimetro di sicurezza per il codice gestito, è necessaria la dovuta attenzione. Se il codice è indipendente dalla sicurezza, sia il proprio codice sia il codice da cui viene chiamato devono avere l'autorizzazione per codice non gestito (<xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> specificato).  
@@ -25,9 +25,9 @@ Alcuni codici di libreria devono chiamare codice non gestito (ad esempio, le API
   
  Poiché il codice gestito in cui viene fornito un percorso di codice all'interno del codice nativo rappresenta un obiettivo potenziale del codice dannoso, è necessaria estrema attenzione per determinare quale parte di codice non gestito può essere usata con sicurezza e come usarla. In genere, il codice non gestito non deve essere mai esposto direttamente a chiamanti parzialmente attendibili. Nella valutazione della sicurezza del codice non gestito nelle librerie che è possibile chiamare da codice parzialmente attendibile, sono necessarie due considerazioni principali:  
   
--   **Funzionalità** Considerare se nel codice API non gestito sia fornita una funzionalità che non consenta ai chiamanti di eseguire operazioni potenzialmente dannose La sicurezza dall'accesso di codice impiega le autorizzazioni per applicare l'accesso alle risorse; considerare quindi se l'API consente di usare file, un'interfaccia utente o il threading oppure di esporre informazioni protette. In questo caso, dal codice gestito che funge da wrapper devono essere pretese le autorizzazioni necessarie prima di consentirne l'accesso. Inoltre, quando non è protetta da un'autorizzazione, è necessario che l'accesso alla memoria sia limitato alla rigida indipendenza dei tipi.  
+- **Funzionalità** Considerare se nel codice API non gestito sia fornita una funzionalità che non consenta ai chiamanti di eseguire operazioni potenzialmente dannose La sicurezza dall'accesso di codice impiega le autorizzazioni per applicare l'accesso alle risorse; considerare quindi se l'API consente di usare file, un'interfaccia utente o il threading oppure di esporre informazioni protette. In questo caso, dal codice gestito che funge da wrapper devono essere pretese le autorizzazioni necessarie prima di consentirne l'accesso. Inoltre, quando non è protetta da un'autorizzazione, è necessario che l'accesso alla memoria sia limitato alla rigida indipendenza dei tipi.  
   
--   **Controllo dei caratteri** In un attacco di tipo comune vengono passati parametri imprevisti a metodi API di codice non gestito esposto nel tentativo di determinarne il funzionamento al di fuori delle specifiche. I sovraccarichi del buffer tramite indici non compresi nell'intervallo o valori di offset costituiscono un esempio comune di questo tipo di attacco, allo stesso modo di altri parametri che possono sfruttare bug nel codice sottostante. Di conseguenza, anche se l'API del codice non gestito è protetta dal punto di vista funzionale, implementando cioè le esigenze di autorizzazioni che si reputano necessarie, per i chiamanti parzialmente attendibili deve essere eseguito anche il controllo completo della validità dei parametri, per evitare l'esecuzione di chiamate impreviste da parte di codice dannoso tramite il livello del wrapper del codice gestito.  
+- **Controllo dei caratteri** In un attacco di tipo comune vengono passati parametri imprevisti a metodi API di codice non gestito esposto nel tentativo di determinarne il funzionamento al di fuori delle specifiche. I sovraccarichi del buffer tramite indici non compresi nell'intervallo o valori di offset costituiscono un esempio comune di questo tipo di attacco, allo stesso modo di altri parametri che possono sfruttare bug nel codice sottostante. Di conseguenza, anche se l'API del codice non gestito è protetta dal punto di vista funzionale, implementando cioè le esigenze di autorizzazioni che si reputano necessarie, per i chiamanti parzialmente attendibili deve essere eseguito anche il controllo completo della validità dei parametri, per evitare l'esecuzione di chiamate impreviste da parte di codice dannoso tramite il livello del wrapper del codice gestito.  
   
 ## <a name="using-suppressunmanagedcodesecurityattribute"></a>Uso di SuppressUnmanagedCodeSecurityAttribute  
  Un aspetto delle prestazioni è quello relativo all'asserzione e alla chiamata di codice non gestito. Per ciascuna chiamata di questo tipo, il sistema di sicurezza esige automaticamente l'autorizzazione per codice non gestito, provocando di conseguenza un percorso stack per ciascuna occorrenza. Se viene eseguita l'asserzione e viene chiamato immediatamente codice non gestito, il percorso stack può essere inutile, in quanto consiste nell'asserzione e nella chiamata al codice non gestito.  
@@ -36,11 +36,11 @@ Alcuni codici di libreria devono chiamare codice non gestito (ad esempio, le API
   
  Se si usa l'attributo **SuppressUnmanagedCodeSecurityAttribute**, verificare i seguenti punti:  
   
--   Rendere interno il punto di ingresso del codice non gestito o, in alternativa, renderlo inaccessibile dall'esterno del codice.  
+- Rendere interno il punto di ingresso del codice non gestito o, in alternativa, renderlo inaccessibile dall'esterno del codice.  
   
--   Ogni chiamata nel codice non gestito rappresenta una potenziale vulnerabilità nella sicurezza. Accertarsi che il codice non rappresenti un punto di ingresso per le chiamate indirette da parte di codice dannoso al codice non gestito e non consenta di aggirare il controllo di sicurezza. Esigere autorizzazioni, se necessario.  
+- Ogni chiamata nel codice non gestito rappresenta una potenziale vulnerabilità nella sicurezza. Accertarsi che il codice non rappresenti un punto di ingresso per le chiamate indirette da parte di codice dannoso al codice non gestito e non consenta di aggirare il controllo di sicurezza. Esigere autorizzazioni, se necessario.  
   
--   Usare una convenzione di denominazione per identificare in modo esplicito la creazione di un percorso pericoloso nel codice non gestito, come descritto nella sezione seguente.  
+- Usare una convenzione di denominazione per identificare in modo esplicito la creazione di un percorso pericoloso nel codice non gestito, come descritto nella sezione seguente.  
   
 ## <a name="naming-convention-for-unmanaged-code-methods"></a>Convenzione di denominazione per i metodi di codice non gestito  
  Per denominare metodi di codice non gestito è stata stabilita una convenzione utile, di cui si consiglia l'impiego. I metodi di codice non gestito sono suddivisi in tre categorie: **safe**, **native**e **unsafe**. Queste parole chiave possono essere usate come nomi di classi all'interno delle quali sono definiti i vari tipi di punti di ingresso del codice non gestito. Nel codice sorgente, le parole chiave devono essere aggiunte al nome della classe, come in `Safe.GetTimeOfDay`, `Native.Xyz`o `Unsafe.DangerousAPI`. Ognuna delle seguenti parole chiave fornisce informazioni sulla sicurezza utili per gli sviluppatori che usano la classe relativa, come descritto nella seguente tabella.  
@@ -48,7 +48,7 @@ Alcuni codici di libreria devono chiamare codice non gestito (ad esempio, le API
 |Parola chiave|Considerazioni sulla sicurezza|  
 |-------------|-----------------------------|  
 |**safe**|Sicurezza completa dalle chiamate da parte del codice, anche di quello dannoso. L'uso è analogo a quello del normale codice gestito. Una funzione che ottiene l'ora del giorno, ad esempio, è in genere sicura.|  
-|**nativi**|Indipendente dalla sicurezza; in altre parole, codice non gestito per cui è richiesta l'autorizzazione alla chiamata di codice non gestito. Viene eseguito il controllo di sicurezza, che blocca le chiamate non autorizzate.|  
+|**native**|Indipendente dalla sicurezza; in altre parole, codice non gestito per cui è richiesta l'autorizzazione alla chiamata di codice non gestito. Viene eseguito il controllo di sicurezza, che blocca le chiamate non autorizzate.|  
 |**unsafe**|Presenza di un punto di ingresso per codice non gestito pericoloso con annullamento della sicurezza. Gli sviluppatori dovranno usare la massima attenzione nell'uso di codice non gestito di questo tipo, accertandosi che siano attivi altri tipi di sicurezza per evitare vulnerabilità di sicurezza. Questa parola chiave consente l'override del sistema di sicurezza.|  
   
 ## <a name="see-also"></a>Vedere anche

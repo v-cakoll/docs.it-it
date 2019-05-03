@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
 ms.openlocfilehash: 337fc1fb4dfc83c9b4814d3e45eb0cbe0758f7ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803281"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>Errori durante la compilazione di XML schema nel progetto
 Si sono verificati errori durante la compilazione di XML schema nel progetto. Per questo motivo, IntelliSense XML non è disponibile.  
@@ -23,13 +23,13 @@ Si sono verificati errori durante la compilazione di XML schema nel progetto. Pe
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Fare doppio clic su avviso nella **elenco errori** finestra. Visual Basic verrà visualizzata la posizione nel file XSD che rappresenta l'origine dell'avviso. Correggere l'errore nello schema XSD.  
+- Fare doppio clic su avviso nella **elenco errori** finestra. Visual Basic verrà visualizzata la posizione nel file XSD che rappresenta l'origine dell'avviso. Correggere l'errore nello schema XSD.  
   
--   Assicurarsi che tutti i necessari file di schema (XSD) XSD sono inclusi nel progetto. Potrebbe essere necessario fare clic su **Mostra tutti i file** nel **Project** file menu per visualizzare il XSD **Esplora soluzioni**. Fare doppio clic su un file XSD e quindi fare clic su **Includi nel progetto** per includere il file nel progetto.  
+- Assicurarsi che tutti i necessari file di schema (XSD) XSD sono inclusi nel progetto. Potrebbe essere necessario fare clic su **Mostra tutti i file** nel **Project** file menu per visualizzare il XSD **Esplora soluzioni**. Fare doppio clic su un file XSD e quindi fare clic su **Includi nel progetto** per includere il file nel progetto.  
   
--   Se si usa il codice XML alla procedura guidata Schema, questo errore può verificarsi se in grado di dedurre schemi più di una volta dalla stessa origine. In questo caso, è possibile rimuovere i file di schema XSD esistenti dal progetto, aggiungere un nuovo file XML al modello di elemento di Schema e quindi indicare il codice XML alla procedura guidata Schema con tutte le origini XML applicabile per il progetto.  
+- Se si usa il codice XML alla procedura guidata Schema, questo errore può verificarsi se in grado di dedurre schemi più di una volta dalla stessa origine. In questo caso, è possibile rimuovere i file di schema XSD esistenti dal progetto, aggiungere un nuovo file XML al modello di elemento di Schema e quindi indicare il codice XML alla procedura guidata Schema con tutte le origini XML applicabile per il progetto.  
   
--   Se nessun errore è identificato nello schema XSD, il compilatore XML non dispone di informazioni sufficienti per fornire un messaggio di errore dettagliato. È possibile ottenere informazioni più dettagliate sugli errori, facendo in modo che gli spazi dei nomi XML per i file con estensione XSD incluso nel progetto corrispondano gli spazi dei nomi XML identificate per lo Schema XML, impostare in Visual Studio.  
+- Se nessun errore è identificato nello schema XSD, il compilatore XML non dispone di informazioni sufficienti per fornire un messaggio di errore dettagliato. È possibile ottenere informazioni più dettagliate sugli errori, facendo in modo che gli spazi dei nomi XML per i file con estensione XSD incluso nel progetto corrispondano gli spazi dei nomi XML identificate per lo Schema XML, impostare in Visual Studio.  
   
 ## <a name="see-also"></a>Vedere anche
 

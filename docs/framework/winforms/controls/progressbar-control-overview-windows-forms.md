@@ -8,11 +8,11 @@ helpviewer_keywords:
 - progress controls [Windows Forms], about progress controls
 ms.assetid: a05d9cba-3a6a-4f8f-94b8-8ec12799fb80
 ms.openlocfilehash: 24b47669cdf8ed0a8f0f936b0b3b9c354e62445f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666350"
 ---
 # <a name="progressbar-control-overview-windows-forms"></a>Cenni preliminari sul controllo ProgressBar (Windows Form)
 > [!IMPORTANT]

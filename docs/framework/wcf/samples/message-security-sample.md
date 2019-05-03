@@ -3,11 +3,11 @@ title: Esempio sulla sicurezza dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
 ms.openlocfilehash: ad579705fa30e9b5179f2de4b829bd7f4a5817c2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59302959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756052"
 ---
 # <a name="message-security-sample"></a>Esempio sulla sicurezza dei messaggi
 In questo esempio viene illustrato come implementare un'applicazione che utilizza `basicHttpBinding` e la sicurezza del messaggio. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice.  
@@ -143,7 +143,7 @@ Press <ENTER> to terminate client.
   
 5. Eseguire `setup.bat service` sul server. In esecuzione `setup.bat` con il `service` argomento crea un certificato di servizio con il nome di dominio completo del computer e consente di esportare il certificato del servizio in un file denominato CER.  
   
-6. Modifica Service.exe.config per riflettere il nuovo nome del certificato (nel `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento) che corrisponde al nome di dominio completo del computer. Modificare anche il valore dell'indirizzo di base per specificare un nome di computer completo anziché localhost`.`  
+6. Modifica Service.exe.config per riflettere il nuovo nome del certificato (nel `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento) che corrisponde al nome di dominio completo del computer. Modificare anche il valore dell'indirizzo di base e specificare un nome di computer completo anziché localhost`.`  
   
 7. Copiare il file Service.cer dalla directory del servizio alla directory del client sul computer client.  
   
@@ -161,14 +161,14 @@ Press <ENTER> to terminate client.
   
 14. Sul computer client, avviare Client.exe da una finestra del prompt dei comandi.  
   
-    1.  Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+    1. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   
--   Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
+- Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
   
     > [!NOTE]
-    >  Questo script non rimuove i certificati del servizio su un client quando si esegue questo esempio tra più computer. Se è stato eseguito gli esempi di Windows Communication Foundation (WCF) che usano certificati tra più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. A tale scopo, usare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Per esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
+    >  Questo script non rimuove i certificati del servizio su un client quando si esegue questo esempio tra più computer. Se è stato eseguito gli esempi di Windows Communication Foundation (WCF) che usano certificati tra più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. A tale scopo, usare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

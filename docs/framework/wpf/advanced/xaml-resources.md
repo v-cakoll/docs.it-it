@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59344923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757079"
 ---
 # <a name="xaml-resources"></a>Risorse XAML
 Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'interno dell'applicazione. Sono esempi di risorse pennelli e stili. Questa panoramica viene descritto come usare le risorse di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. È anche possibile creare e accedere alle risorse tramite il codice o in modo intercambiabile tra codice e [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Per altre informazioni, vedere [risorse e codice](resources-and-code.md).  
@@ -44,28 +44,28 @@ Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'inte
   
  Quando si fa riferimento a una risorsa, la decisione di usare un riferimento di risorsa statica o un riferimento di risorsa dinamica può essere influenzata dalle considerazioni seguenti:  
   
--   La progettazione complessiva del modo in cui si creano le risorse per l'applicazione (per pagina, nell'applicazione, in file separati [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], in un assembly di sole risorse).  
+- La progettazione complessiva del modo in cui si creano le risorse per l'applicazione (per pagina, nell'applicazione, in file separati [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], in un assembly di sole risorse).  
   
--   La funzionalità dell'applicazione: l'aggiornamento delle risorse in tempo reale fa parte dei requisiti dell'applicazione?  
+- La funzionalità dell'applicazione: l'aggiornamento delle risorse in tempo reale fa parte dei requisiti dell'applicazione?  
   
--   Il comportamento di ricerca specifico del tipo di riferimento di risorsa.  
+- Il comportamento di ricerca specifico del tipo di riferimento di risorsa.  
   
--   La proprietà o il tipo di risorsa specifico e il comportamento nativo di tale tipo.  
+- La proprietà o il tipo di risorsa specifico e il comportamento nativo di tale tipo.  
   
 ### <a name="static-resources"></a>Risorse statiche  
  I riferimenti di risorse statiche sono ideali nelle circostanze seguenti:  
   
--   In base alla progettazione dell'applicazione, la maggior parte delle risorse è concentrata all'interno di dizionari risorse a livello di pagina o di applicazione. I riferimenti di risorse statiche non vengono rivalutati in base al comportamento in runtime, ad esempio quando viene ricaricata una pagina. È quindi possibile ottenere un miglioramento delle prestazioni, dato che si può evitare di creare riferimenti di risorse dinamiche non effettivamente necessari alla progettazione delle risorse e dell'applicazione.  
+- In base alla progettazione dell'applicazione, la maggior parte delle risorse è concentrata all'interno di dizionari risorse a livello di pagina o di applicazione. I riferimenti di risorse statiche non vengono rivalutati in base al comportamento in runtime, ad esempio quando viene ricaricata una pagina. È quindi possibile ottenere un miglioramento delle prestazioni, dato che si può evitare di creare riferimenti di risorse dinamiche non effettivamente necessari alla progettazione delle risorse e dell'applicazione.  
   
--   Si sta impostando il valore di una proprietà che non si trova in una <xref:System.Windows.DependencyObject> o un <xref:System.Windows.Freezable>.  
+- Si sta impostando il valore di una proprietà che non si trova in una <xref:System.Windows.DependencyObject> o un <xref:System.Windows.Freezable>.  
   
--   Si sta creando un dizionario risorse che verrà compilato in una DLL e incluso nel pacchetto dell'applicazione o condiviso da applicazioni diverse.  
+- Si sta creando un dizionario risorse che verrà compilato in una DLL e incluso nel pacchetto dell'applicazione o condiviso da applicazioni diverse.  
   
--   Si sta creando un tema per un controllo personalizzato e si stanno definendo le risorse da usare all'interno dei temi. In questo caso, è in genere consigliabile evitare il comportamento di ricerca dei riferimenti di risorse dinamiche. Il comportamento dei riferimenti di risorse statiche è preferibile, perché è prevedibile e autonomo all'interno del tema. Con i riferimenti di risorse dinamiche, anche un riferimento all'interno di un tema non viene valutato fino al runtime. C'è quindi la possibilità che, quando il tema viene applicato, un elemento locale ridefinisca una chiave a cui il tema tenta di fare riferimento e che l'elemento locale intervenga nella ricerca prima del tema stesso. Se ciò avviene, il tema non si comporterà nel modo previsto.  
+- Si sta creando un tema per un controllo personalizzato e si stanno definendo le risorse da usare all'interno dei temi. In questo caso, è in genere consigliabile evitare il comportamento di ricerca dei riferimenti di risorse dinamiche. Il comportamento dei riferimenti di risorse statiche è preferibile, perché è prevedibile e autonomo all'interno del tema. Con i riferimenti di risorse dinamiche, anche un riferimento all'interno di un tema non viene valutato fino al runtime. C'è quindi la possibilità che, quando il tema viene applicato, un elemento locale ridefinisca una chiave a cui il tema tenta di fare riferimento e che l'elemento locale intervenga nella ricerca prima del tema stesso. Se ciò avviene, il tema non si comporterà nel modo previsto.  
   
--   Si usano risorse per impostare un numero elevato di proprietà di dipendenza. Per le proprietà di dipendenza la memorizzazione nella cache del valore effettivo viene abilitata dal sistema di proprietà. Pertanto, se si specifica un valore per una proprietà di dipendenza che può essere valutata in fase di caricamento, la proprietà di dipendenza non deve verificare la presenza di un'espressione rivalutata e può restituire l'ultimo valore effettivo. Questa tecnica può garantire un miglioramento delle prestazioni.  
+- Si usano risorse per impostare un numero elevato di proprietà di dipendenza. Per le proprietà di dipendenza la memorizzazione nella cache del valore effettivo viene abilitata dal sistema di proprietà. Pertanto, se si specifica un valore per una proprietà di dipendenza che può essere valutata in fase di caricamento, la proprietà di dipendenza non deve verificare la presenza di un'espressione rivalutata e può restituire l'ultimo valore effettivo. Questa tecnica può garantire un miglioramento delle prestazioni.  
   
--   Si vuole modificare la risorsa sottostante per tutti i consumer o si vuole mantenere istanze scrivibili separate per ogni consumer tramite la [x: Shared Attribute](../../xaml-services/x-shared-attribute.md).  
+- Si vuole modificare la risorsa sottostante per tutti i consumer o si vuole mantenere istanze scrivibili separate per ogni consumer tramite la [x: Shared Attribute](../../xaml-services/x-shared-attribute.md).  
   
 #### <a name="static-resource-lookup-behavior"></a>Comportamento di ricerca delle risorse statiche  
   
@@ -84,28 +84,28 @@ Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'inte
 ### <a name="dynamic-resources"></a>Risorse dinamiche  
  Le risorse dinamiche sono ideali nelle circostanze seguenti:  
   
--   Il valore della risorsa dipende da condizioni non note fino al runtime, ad esempio risorse di sistema o risorse che possono essere impostate dall'utente in altro modo. Ad esempio, è possibile creare valori setter che fanno riferimento a proprietà di sistema, come esposto da <xref:System.Windows.SystemColors>, <xref:System.Windows.SystemFonts>, o <xref:System.Windows.SystemParameters>. Questi valori sono realmente dinamici perché in ultima analisi derivano dall'ambiente di runtime dell'utente e dal sistema operativo. È anche possibile che eventuali temi a livello di applicazione siano soggetti a modifica e che l'accesso alle risorse a livello di pagina debba anche acquisire la modifica.  
+- Il valore della risorsa dipende da condizioni non note fino al runtime, ad esempio risorse di sistema o risorse che possono essere impostate dall'utente in altro modo. Ad esempio, è possibile creare valori setter che fanno riferimento a proprietà di sistema, come esposto da <xref:System.Windows.SystemColors>, <xref:System.Windows.SystemFonts>, o <xref:System.Windows.SystemParameters>. Questi valori sono realmente dinamici perché in ultima analisi derivano dall'ambiente di runtime dell'utente e dal sistema operativo. È anche possibile che eventuali temi a livello di applicazione siano soggetti a modifica e che l'accesso alle risorse a livello di pagina debba anche acquisire la modifica.  
   
--   Si stanno creando stili di tema per un controllo personalizzato o si sta facendo riferimento a stili di questo tipo.  
+- Si stanno creando stili di tema per un controllo personalizzato o si sta facendo riferimento a stili di questo tipo.  
   
--   Si intende modificare il contenuto di un <xref:System.Windows.ResourceDictionary> durante un ciclo di vita dell'applicazione.  
+- Si intende modificare il contenuto di un <xref:System.Windows.ResourceDictionary> durante un ciclo di vita dell'applicazione.  
   
--   La struttura delle risorse è complessa e con interdipendenze e potrebbe richiedere riferimenti in avanti. Riferimenti di risorse statiche non supportano i riferimenti in avanti, ma i riferimenti di risorsa dinamica li supportano, perché la risorsa non dovrà essere valutata solo in fase di esecuzione e i riferimenti in avanti non sono pertanto un concetto rilevante.  
+- La struttura delle risorse è complessa e con interdipendenze e potrebbe richiedere riferimenti in avanti. Riferimenti di risorse statiche non supportano i riferimenti in avanti, ma i riferimenti di risorsa dinamica li supportano, perché la risorsa non dovrà essere valutata solo in fase di esecuzione e i riferimenti in avanti non sono pertanto un concetto rilevante.  
   
--   Si sta facendo riferimento a una risorsa di dimensioni particolarmente grandi dal punto di vista del compile set o del working set e quando la pagina viene caricata non è possibile usare la risorsa immediatamente. Riferimenti di risorse statiche vengono sempre caricati da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] quando la pagina viene caricata; tuttavia, un riferimento di risorsa dinamica non viene caricato finché non viene effettivamente usato.  
+- Si sta facendo riferimento a una risorsa di dimensioni particolarmente grandi dal punto di vista del compile set o del working set e quando la pagina viene caricata non è possibile usare la risorsa immediatamente. Riferimenti di risorse statiche vengono sempre caricati da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] quando la pagina viene caricata; tuttavia, un riferimento di risorsa dinamica non viene caricato finché non viene effettivamente usato.  
   
--   Si sta creando uno stile in cui i valori setter possono derivare da altri valori su cui influiscono temi o altre impostazioni utente.  
+- Si sta creando uno stile in cui i valori setter possono derivare da altri valori su cui influiscono temi o altre impostazioni utente.  
   
--   Si stanno applicando risorse a elementi che nel corso della durata dell'applicazione potrebbero essere associati a un nuovo elemento padre nell'albero logico. La modifica dell'elemento padre cambia potenzialmente anche l'ambito di ricerca. Se quindi si vuole che la risorsa per un elemento associato a un nuovo elemento padre sia rivalutata in base al nuovo ambito, usare sempre un riferimento di risorsa dinamica.  
+- Si stanno applicando risorse a elementi che nel corso della durata dell'applicazione potrebbero essere associati a un nuovo elemento padre nell'albero logico. La modifica dell'elemento padre cambia potenzialmente anche l'ambito di ricerca. Se quindi si vuole che la risorsa per un elemento associato a un nuovo elemento padre sia rivalutata in base al nuovo ambito, usare sempre un riferimento di risorsa dinamica.  
   
 #### <a name="dynamic-resource-lookup-behavior"></a>Comportamento di ricerca delle risorse dinamiche  
  Comportamento di ricerca delle risorse per un riferimento di risorsa dinamica è parallelo al comportamento di ricerca nel codice se si chiama <xref:System.Windows.FrameworkElement.FindResource%2A> o <xref:System.Windows.FrameworkElement.SetResourceReference%2A>.  
   
 1. Il processo di ricerca controlla la presenza della chiave richiesta all'interno del dizionario risorse definito dall'elemento che imposta la proprietà.  
   
-    -   Se l'elemento definisce un <xref:System.Windows.FrameworkElement.Style%2A> proprietà, il <xref:System.Windows.Style.Resources%2A> dizionario interno la <xref:System.Windows.Style> sia selezionata.  
+    - Se l'elemento definisce un <xref:System.Windows.FrameworkElement.Style%2A> proprietà, il <xref:System.Windows.Style.Resources%2A> dizionario interno la <xref:System.Windows.Style> sia selezionata.  
   
-    -   Se l'elemento definisce un <xref:System.Windows.Controls.Control.Template%2A> proprietà, il <xref:System.Windows.FrameworkTemplate.Resources%2A> dizionario interno la <xref:System.Windows.FrameworkTemplate> sia selezionata.  
+    - Se l'elemento definisce un <xref:System.Windows.Controls.Control.Template%2A> proprietà, il <xref:System.Windows.FrameworkTemplate.Resources%2A> dizionario interno la <xref:System.Windows.FrameworkTemplate> sia selezionata.  
   
 2. Il processo di ricerca attraversa quindi l'albero logico verso l'alto, verso l'elemento padre e il dizionario risorse di questo. Il processo continua fino al raggiungimento dell'elemento radice.  
   
@@ -117,20 +117,20 @@ Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'inte
   
  Il comportamento di eventuali eccezioni varia:  
   
--   Se una risorsa è stata richiesta da un <xref:System.Windows.FrameworkElement.FindResource%2A> chiamare e non è stato trovato, viene generata un'eccezione.  
+- Se una risorsa è stata richiesta da un <xref:System.Windows.FrameworkElement.FindResource%2A> chiamare e non è stato trovato, viene generata un'eccezione.  
   
--   Se una risorsa è stata richiesta da un <xref:System.Windows.FrameworkElement.TryFindResource%2A> chiamare e non è stato trovato, viene generata alcuna eccezione, ma il valore restituito è `null`. Se la proprietà impostata non accetta `null`, è comunque possibile che venga generata un'eccezione più grave (questo dipende dalla proprietà specifica impostata).  
+- Se una risorsa è stata richiesta da un <xref:System.Windows.FrameworkElement.TryFindResource%2A> chiamare e non è stato trovato, viene generata alcuna eccezione, ma il valore restituito è `null`. Se la proprietà impostata non accetta `null`, è comunque possibile che venga generata un'eccezione più grave (questo dipende dalla proprietà specifica impostata).  
   
--   Se una risorsa è stata richiesta da un riferimento di risorsa dinamica in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]e non è stato trovato, quindi il comportamento dipende dal sistema di proprietà generale, ma il comportamento generale è come se si è verificata alcuna operazione di impostazione di proprietà a livello in cui risiede la risorsa. Se ad esempio si tenta di impostare lo sfondo di un elemento pulsante singolo usando una risorsa che non può essere valutata, risulta che non è stato impostato alcun valore, ma il valore effettivo può comunque derivare da altri elementi che fanno parte del sistema di proprietà e di precedenza dei valori. Il valore dello sfondo, ad esempio, può comunque derivare dallo stile di un pulsante definito localmente o dallo stile del tema. Per le proprietà non definite tramite stili di tema, il valore effettivo dopo una valutazione non riuscita di una risorsa può derivare dal valore predefinito dei metadati delle proprietà.  
+- Se una risorsa è stata richiesta da un riferimento di risorsa dinamica in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]e non è stato trovato, quindi il comportamento dipende dal sistema di proprietà generale, ma il comportamento generale è come se si è verificata alcuna operazione di impostazione di proprietà a livello in cui risiede la risorsa. Se ad esempio si tenta di impostare lo sfondo di un elemento pulsante singolo usando una risorsa che non può essere valutata, risulta che non è stato impostato alcun valore, ma il valore effettivo può comunque derivare da altri elementi che fanno parte del sistema di proprietà e di precedenza dei valori. Il valore dello sfondo, ad esempio, può comunque derivare dallo stile di un pulsante definito localmente o dallo stile del tema. Per le proprietà non definite tramite stili di tema, il valore effettivo dopo una valutazione non riuscita di una risorsa può derivare dal valore predefinito dei metadati delle proprietà.  
   
 #### <a name="restrictions"></a>Restrizioni  
  I riferimenti di risorse dinamiche presentano alcune restrizioni rilevanti. Almeno una delle affermazioni seguenti deve essere vera:  
   
--   La proprietà impostata deve essere una proprietà in un <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>. Tale proprietà deve essere supportata da un <xref:System.Windows.DependencyProperty>.  
+- La proprietà impostata deve essere una proprietà in un <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>. Tale proprietà deve essere supportata da un <xref:System.Windows.DependencyProperty>.  
   
--   Il riferimento è relativo a un valore all'interno di un <xref:System.Windows.Style><xref:System.Windows.Setter>.  
+- Il riferimento è relativo a un valore all'interno di un <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
   
--   La proprietà impostata deve essere una proprietà di un <xref:System.Windows.Freezable> che viene fornito come un valore di un <xref:System.Windows.FrameworkElement> oppure <xref:System.Windows.FrameworkContentElement> proprietà, o un <xref:System.Windows.Setter> valore.  
+- La proprietà impostata deve essere una proprietà di un <xref:System.Windows.Freezable> che viene fornito come un valore di un <xref:System.Windows.FrameworkElement> oppure <xref:System.Windows.FrameworkContentElement> proprietà, o un <xref:System.Windows.Setter> valore.  
   
  Poiché la proprietà impostata deve essere un <xref:System.Windows.DependencyProperty> o <xref:System.Windows.Freezable> proprietà, la maggior parte delle modifiche delle proprietà possono propagarsi all'interfaccia utente perché una modifica della proprietà (il valore di risorsa dinamica modificata) viene riconosciuta dal sistema di proprietà. La maggior parte dei controlli includono la logica che forzerà un altro layout di un controllo se una <xref:System.Windows.DependencyProperty> le modifiche e proprietà può influire sul layout. Tuttavia, non tutte le proprietà che hanno una [estensione di Markup DynamicResource](dynamicresource-markup-extension.md) come relativo valore vengono garantiti per fornire il valore in modo che aggiorni in tempo reale nell'interfaccia utente. Tale funzionalità può comunque variare a seconda della proprietà, nonché a seconda del tipo proprietario della proprietà o anche della struttura logica dell'applicazione.  
   
@@ -144,7 +144,7 @@ Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'inte
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- Che stile dispone effettivamente di una chiave: la chiave implicita `typeof(`<xref:System.Windows.Controls.Button>`)`. Nel markup, è possibile specificare una <xref:System.Windows.Style.TargetType%2A> direttamente come tipo di nome (o è possibile usare facoltativamente [{... x: Type}](../../xaml-services/x-type-markup-extension.md) per restituire un <xref:System.Type>.  
+ Che stile dispone effettivamente di una chiave: la chiave implicita `typeof(` <xref:System.Windows.Controls.Button> `)`. Nel markup, è possibile specificare una <xref:System.Windows.Style.TargetType%2A> direttamente come tipo di nome (o è possibile usare facoltativamente [{... x: Type}](../../xaml-services/x-type-markup-extension.md) per restituire un <xref:System.Type>.  
   
  Tramite i meccanismi di stile del tema predefinito utilizzati da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], che lo stile viene applicato come stile di runtime di un <xref:System.Windows.Controls.Button> nella pagina, anche se il <xref:System.Windows.Controls.Button> stesso non tenta di specificare relativo <xref:System.Windows.FrameworkElement.Style%2A> proprietà o una risorsa specifica Fare riferimento allo stile. Lo stile definito nella pagina è stato trovato in precedenza nella sequenza di ricerca più lo stile del tema dizionario, usando la stessa chiave con lo stile del dizionario temi. È possibile specificare semplicemente `<Button>Hello</Button>` in un punto qualsiasi nella pagina e lo stile definito con <xref:System.Windows.Style.TargetType%2A> di `Button` verrà applicata a tale pulsante. Se si desidera, è possibile usare in modo esplicito una chiave lo stile con lo stesso valore di tipo come <xref:System.Windows.Style.TargetType%2A>per maggiore chiarezza nel markup, ma che è facoltativo.  
   
@@ -155,10 +155,10 @@ Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'inte
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.ResourceDictionary>
-- [Risorse dell'applicazione](optimizing-performance-application-resources.md)
+- [Risorse di applicazioni](optimizing-performance-application-resources.md)
 - [Risorse e codice](resources-and-code.md)
 - [Definire e fare riferimento a una risorsa](how-to-define-and-reference-a-resource.md)
 - [Cenni preliminari sulla gestione di applicazioni](../app-development/application-management-overview.md)
-- [Estensione del markup x:Type](../../xaml-services/x-type-markup-extension.md)
-- [Estensione del markup StaticResource](staticresource-markup-extension.md)
+- [Estensione di markup x:Type](../../xaml-services/x-type-markup-extension.md)
+- [Estensione di markup StaticResource](staticresource-markup-extension.md)
 - [Estensione del markup DynamicResource](dynamicresource-markup-extension.md)

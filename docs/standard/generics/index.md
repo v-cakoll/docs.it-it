@@ -29,11 +29,11 @@ ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683301"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -83,7 +83,7 @@ ms.locfileid: "48584143"
   
 -   La *covarianza* e la *controvarianza* dei parametri di tipo generico consentono di usare tipi generici costruiti i cui argomenti di tipo sono più derivati (covarianza) o meno derivati (controvarianza) rispetto a quelle di tipo costruito. La covarianza e la controvarianza sono definite collettivamente *varianza*. Per altre informazioni, vedere [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
--   I*vincoli* sono limiti imposti su parametri di tipo generico. Ad esempio, è possibile limitare un parametro di tipo a tipi che implementano l'interfaccia generica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>, per garantire la possibilità di ordinare le istanze del tipo. È anche possibile vincolare i parametri di tipo a tipi che dispongono di una determinata classe di base, con un costruttore predefinito, o che siano tipi riferimento o tipi di valore. Gli utenti di tipo generico non possono sostituire gli argomenti di tipo che non soddisfano i vincoli.  
+-   I*vincoli* sono limiti imposti su parametri di tipo generico. Ad esempio, è possibile limitare un parametro di tipo a tipi che implementano l'interfaccia generica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> , per garantire la possibilità di ordinare le istanze del tipo. È anche possibile vincolare i parametri di tipo a tipi che dispongono di una determinata classe di base, con un costruttore predefinito, o che siano tipi riferimento o tipi di valore. Gli utenti di tipo generico non possono sostituire gli argomenti di tipo che non soddisfano i vincoli.  
   
 -   Una *definizione di metodo generico* è un metodo con due elenchi di parametri: un elenco di parametri di tipo generico e un elenco di parametri formali. I parametri di tipo possono apparire come tipo restituito o come tipi dei parametri formali, come illustrato nel codice seguente.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48584143"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Descrizione|  
+|Titolo|Description|  
 |-----------|-----------------|  
 |[Raccolte generiche in .NET](../../../docs/standard/generics/collections.md)|Vengono descritte le classi di raccolte generiche e altri tipi generici in .NET.|  
 |[Delegati generici per la modifica di matrici ed elenchi](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Vengono descritti i delegati generici per conversioni, predicati di ricerca e azioni da eseguire sugli elementi di una matrice o raccolta.|  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 425c606b1f340bbd49cfe3497d394d5ad0dd37a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763802"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>Metodo ICorDebugManagedCallback2::MDANotification
 Fornisce la notifica che l'esecuzione di codice ha rilevato un assistente al debug gestito (MDA) nell'applicazione in fase di debug.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
 ms.openlocfilehash: 5ab90e44e2809c1e71d7f100970b7be73af4a732
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784202"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 Fa sì che la classe corrente o l'interfaccia in modo che erediti da un'altra classe o un set di interfacce di attributi, le variabili, proprietà, procedure ed eventi.  
@@ -37,11 +37,11 @@ Inherits basetypenames
   
 ## <a name="rules"></a>Regole  
   
--   **Ereditarietà della classe.** Se una classe Usa il `Inherits` istruzione, è possibile specificare una sola classe base.  
+- **Ereditarietà della classe.** Se una classe Usa il `Inherits` istruzione, è possibile specificare una sola classe base.  
   
      Una classe non può ereditare da una classe annidata al suo interno.  
   
--   **Ereditarietà dell'interfaccia.** Se un'interfaccia viene utilizzata la `Inherits` istruzione, è possibile specificare uno o più interfacce di base. È possibile ereditare da due interfacce, anche se ognuno definisce un membro con lo stesso nome. Se in questo caso, il codice di implementazione deve usare la qualificazione di nomi per specificare quale membro che sta implementando.  
+- **Ereditarietà dell'interfaccia.** Se un'interfaccia viene utilizzata la `Inherits` istruzione, è possibile specificare uno o più interfacce di base. È possibile ereditare da due interfacce, anche se ognuno definisce un membro con lo stesso nome. Se in questo caso, il codice di implementazione deve usare la qualificazione di nomi per specificare quale membro che sta implementando.  
   
      Un'interfaccia non può ereditare da un'altra interfaccia con un livello di accesso più restrittivo. Ad esempio, un `Public` interfaccia non può ereditare da un `Friend` interfaccia.  
   

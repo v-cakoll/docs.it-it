@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b9d4b27ca0bf454b42f15b849008e5a3019bb09a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864078"
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>Struttura CoreClrDebugProcInfo
 Rappresenta un processo in esecuzione in un computer remoto.  
@@ -40,17 +40,17 @@ struct  CoreClrDebugProcInfo {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`m_dwPID`|Identificatore di processo assegnato dal sistema operativo.|  
 |`m_dwInternalID`|Identificatore di processo assegnato dal proxy di debug remoto in esecuzione sul computer di destinazione. Questo identificatore esegue il riciclo meno frequentemente rispetto all'identificatore del sistema operativo.|  
 |`m_wszName`|Riga di comando del processo. Questo membro può essere troncato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** coreclrremotedebugginginterfaces. H  
+ **Intestazione:** CoreClrRemoteDebuggingInterfaces.h  
   
- **Libreria:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86.dll  
   
  **Versioni di .NET framework:** 3.5 SP1

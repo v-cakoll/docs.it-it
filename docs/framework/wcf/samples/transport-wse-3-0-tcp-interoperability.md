@@ -3,11 +3,11 @@ title: 'Trasporto: interoperabilità WSE 3.0 TCP'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032736"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Trasporto: interoperabilità WSE 3.0 TCP
 L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una sessione duplex TCP come trasporto personalizzato Windows Communication Foundation (WCF). Illustra anche come utilizzare l'estendibilità del livello del canale per connettersi via cavo con sistemi distribuiti esistenti. La procedura seguente illustra come compilare questo trasporto personalizzato WCF:  
@@ -23,7 +23,7 @@ L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una
 5. Inserire un elemento di associazione che aggiunge il trasporto personalizzato a uno stack di canali. Per altre informazioni, vedere [aggiunta di un elemento di associazione].  
   
 ## <a name="creating-iduplexsessionchannel"></a>Creazione di IDuplexSessionChannel  
- Il primo passaggio per scrivere il trasporto interoperabilità WSE 3.0 TCP consiste nel creare un'implementazione di <xref:System.ServiceModel.Channels.IDuplexSessionChannel> su <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` Deriva da <xref:System.ServiceModel.Channels.ChannelBase>. La logica di inviare un messaggio è costituito da due parti principali: (1) codifica del messaggio in byte e (2) framing dei byte e invio via cavo.  
+ Il primo passaggio per scrivere il trasporto interoperabilità WSE 3.0 TCP consiste nel creare un'implementazione di <xref:System.ServiceModel.Channels.IDuplexSessionChannel> su <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` deriva da <xref:System.ServiceModel.Channels.ChannelBase>. La logica di inviare un messaggio è costituito da due parti principali: (1) codifica del messaggio in byte e (2) framing dei byte e invio via cavo.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -31,28 +31,28 @@ L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una
   
  Inoltre, viene utilizzato un blocco in modo che le chiamate Send() mantengano la garanzia di ordine di IDuplexSessionChannel e per fare sì che le chiamate al socket sottostante siano sincronizzate correttamente.  
   
- `WseTcpDuplexSessionChannel` Usa un' <xref:System.ServiceModel.Channels.MessageEncoder> per la conversione di un <xref:System.ServiceModel.Channels.Message> da e verso byte []. Poiché si tratta di un trasporto, `WseTcpDuplexSessionChannel` è inoltre responsabile dell'applicazione dell'indirizzo remoto con cui il canale è stato configurato. `EncodeMessage` incapsula la logica per la conversione.  
+ `WseTcpDuplexSessionChannel` utilizza una classe <xref:System.ServiceModel.Channels.MessageEncoder> per tradurre classi <xref:System.ServiceModel.Channels.Message> da e verso byte[]. Poiché si tratta di un trasporto, `WseTcpDuplexSessionChannel` è inoltre responsabile dell'applicazione dell'indirizzo remoto con cui il canale è stato configurato. `EncodeMessage` contiene la logica per la conversione.  
   
  `this.RemoteAddress.ApplyTo(message);`  
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- Dopo essere stata codificata in byte, la classe <xref:System.ServiceModel.Channels.Message> deve essere trasmessa via cavo. Ciò richiede un sistema per la definizione dei limiti del messaggio. WSE 3.0 utilizza una versione di [DIME](https://go.microsoft.com/fwlink/?LinkId=94999) come protocollo di framing. `WriteData` incapsula la logica di framing per eseguire il wrapping di una matrice di byte in un set di record DIME.  
+ Dopo essere stata codificata in byte, la classe <xref:System.ServiceModel.Channels.Message> deve essere trasmessa via cavo. Ciò richiede un sistema per la definizione dei limiti del messaggio. WSE 3.0 utilizza una versione di [DIME](https://go.microsoft.com/fwlink/?LinkId=94999) come protocollo di framing. `WriteData` contiene la logica di framing per eseguire il wrapping di un byte[] in un set di record DIME.  
   
  La logica alla base della ricezione dei messaggi è molto simile. Il problema più complesso sta nel gestite il fatto che la lettura di un socket può restituire meno byte di quanto richiesto. Per ricevere un messaggio, `WseTcpDuplexSessionChannel` legge i byte via cavo, decodifica il framing DIME e utilizza <xref:System.ServiceModel.Channels.MessageEncoder> per tradurre i byte [] in una classe <xref:System.ServiceModel.Channels.Message>.  
   
  `WseTcpDuplexSessionChannel` di base presuppone di ricevere un socket collegato. La classe di base gestisce l'arresto del socket. Ci sono tre posizioni che interfacciano con la chiusura del socket:  
   
--   OnAbort -- chiude il socket in modo forzato (chiusura forzata).  
+- OnAbort -- chiude il socket in modo forzato (chiusura forzata).  
   
--   On[Begin]Close -- chiude il socket normalmente (chiusura normale).  
+- On[Begin]Close -- chiude il socket normalmente (chiusura normale).  
   
--   session.CloseOutputSession -- arresta il flusso di dati in uscita (chiusura parziale).  
+- session.CloseOutputSession -- arresta il flusso di dati in uscita (chiusura parziale).  
   
 ## <a name="channel-factory"></a>Channel Factory  
  Il passaggio successivo per scrivere un trasporto TCP consiste nel creare un'implementazione di <xref:System.ServiceModel.Channels.IChannelFactory> per i canali client.  
   
--   `WseTcpChannelFactory` deriva da <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. È una factory che esegue l'override di `OnCreateChannel` per produrre canali client.  
+- `WseTcpChannelFactory` deriva da <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. È una factory che esegue l'override di `OnCreateChannel` per produrre canali client.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -62,11 +62,11 @@ L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel` Aggiunge la logica alla base `WseTcpDuplexSessionChannel` per connettersi a un server TCP al `channel.Open` ora. Il nome host viene innanzitutto risolto in un indirizzo IP, come illustrato nel codice seguente.  
+- `ClientWseTcpDuplexSessionChannel` Aggiunge la logica alla base `WseTcpDuplexSessionChannel` per connettersi a un server TCP al `channel.Open` ora. Il nome host viene innanzitutto risolto in un indirizzo IP, come illustrato nel codice seguente.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
--   Il nome host viene quindi connesso al primo indirizzo IP disponibile in un ciclo, come illustrato nel codice seguente.  
+- Il nome host viene quindi connesso al primo indirizzo IP disponibile in un ciclo, come illustrato nel codice seguente.  
   
  `IPAddress address = hostEntry.AddressList[i];`  
   
@@ -74,12 +74,12 @@ L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una
   
  `socket.Connect(new IPEndPoint(address, port));`  
   
--   Come parte del contratto del canale, viene eseguito l'incapsulamento delle eccezioni specifiche del dominio, ad esempio `SocketException` in <xref:System.ServiceModel.CommunicationException>.  
+- Come parte del contratto del canale, viene eseguito l'incapsulamento delle eccezioni specifiche del dominio, ad esempio `SocketException` in <xref:System.ServiceModel.CommunicationException>.  
   
 ## <a name="channel-listener"></a>Channel Listener  
  Il passaggio successivo per scrivere un trasporto TCP consiste nel creare un'implementazione di <xref:System.ServiceModel.Channels.IChannelListener> per accettare canali server.  
   
--   `WseTcpChannelListener` deriva da <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > e sostituzioni [Begin] Open e On [Begin] Close per controllano la durata del socket di ascolto. In OnOpen, un socket viene creato per ascoltare su IP_ANY. Implementazioni più avanzate possono creare un secondo socket per ascoltare anche su IPv6. Possono consentire anche che l'indirizzo IP sia specificato nel nome host.  
+- `WseTcpChannelListener` deriva da <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > e sostituzioni [Begin] Open e On [Begin] Close per controllano la durata del socket di ascolto. In OnOpen, un socket viene creato per ascoltare su IP_ANY. Implementazioni più avanzate possono creare un secondo socket per ascoltare anche su IPv6. Possono consentire anche che l'indirizzo IP sia specificato nel nome host.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -179,18 +179,18 @@ Symbols:
   
 1. Dopo aver installato l'esempio `TcpSyncStockService`, eseguire le operazioni seguenti:  
   
-    1.  Aprire `TcpSyncStockService` in Visual Studio (si noti che l'esempio TcpSyncStockService viene installato con WSE 3.0 e non fa parte del codice di questo esempio).  
+    1. Aprire `TcpSyncStockService` in Visual Studio (si noti che l'esempio TcpSyncStockService viene installato con WSE 3.0 e non fa parte del codice di questo esempio).  
   
-    2.  Impostare StockService come progetto di avvio.  
+    2. Impostare StockService come progetto di avvio.  
   
-    3.  Aprire StockService.cs nel progetto StockService e impostare come commento l'attributo [Policy] sulla classe `StockService`. Ciò disabilita la sicurezza dell'esempio. Sebbene WCF possono interoperare con endpoint sicuri di WSE 3.0, sicurezza è disabilitata per mantenere l'esempio sia focalizzato sul trasporto TCP personalizzato.  
+    3. Aprire StockService.cs nel progetto StockService e impostare come commento l'attributo [Policy] sulla classe `StockService`. Ciò disabilita la sicurezza dell'esempio. Sebbene WCF possono interoperare con endpoint sicuri di WSE 3.0, sicurezza è disabilitata per mantenere l'esempio sia focalizzato sul trasporto TCP personalizzato.  
   
-    4.  Premere F5 per avviare `TcpSyncStockService`. Il servizio si avvia in una nuova finestra della console.  
+    4. Premere F5 per avviare `TcpSyncStockService`. Il servizio si avvia in una nuova finestra della console.  
   
-    5.  Aprire questo esempio di trasporto TCP in Visual Studio.  
+    5. Aprire questo esempio di trasporto TCP in Visual Studio.  
   
-    6.  Aggiornare la variabile "nome host" in TestCode.cs e farla corrispondere al nome del computer che esegue `TcpSyncStockService`.  
+    6. Aggiornare la variabile "nome host" in TestCode.cs e farla corrispondere al nome del computer che esegue `TcpSyncStockService`.  
   
-    7.  Premere F5 per avviare l'esempio Trasporto TCP.  
+    7. Premere F5 per avviare l'esempio Trasporto TCP.  
   
-    8.  Il client di prova del trasporto TCP viene inizializzato in una nuova console. Il client richiede quotazioni al servizio e quindi visualizza i risultati nella finestra della console.  
+    8. Il client di prova del trasporto TCP viene inizializzato in una nuova console. Il client richiede quotazioni al servizio e quindi visualizza i risultati nella finestra della console.  

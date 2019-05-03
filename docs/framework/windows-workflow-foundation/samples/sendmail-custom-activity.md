@@ -3,11 +3,11 @@ title: Attività personalizzata SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59321861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785944"
 ---
 # <a name="sendmail-custom-activity"></a>Attività personalizzata SendMail
 In questo esempio viene illustrato come creare un'attività personalizzata che deriva da <xref:System.Activities.AsyncCodeActivity> per inviare messaggi di posta elettronica tramite il protocollo SMTP da usare in un'applicazione flusso di lavoro. L'attività personalizzata Usa le funzionalità di <xref:System.Net.Mail.SmtpClient> per inviare posta elettronica in modo asincrono e per inviare posta elettronica con l'autenticazione. Nell'attività sono inoltre disponibili funzionalità per l'utente finale, ad esempio la modalità test, la sostituzione dei token, i modelli di file e il percorso di rilascio di prova.  
@@ -28,7 +28,7 @@ In questo esempio viene illustrato come creare un'attività personalizzata che d
 |A|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Raccolta di indirizzi contenente i destinatari del messaggio di posta elettronica.|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Raccolta contenente i destinatari della copia per conoscenza (CC) per questo messaggio di posta elettronica di indirizzi.|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Raccolta di indirizzi contenente i destinatari della copia per conoscenza nascosta (Ccn) per questo messaggio di posta elettronica.|  
-|token|<xref:System.Activities.InArgument%601>< IDictionary\<stringa, stringa >>|Token da sostituire nel corpo del messaggio. Questa funzionalità consente agli utenti di specificare alcuni valori nel corpo del messaggio che possono essere sostituiti in un secondo momento dai token specificati usando questa proprietà.|  
+|token|<xref:System.Activities.InArgument%601><IDictionary\<string, string>>|Token da sostituire nel corpo del messaggio. Questa funzionalità consente agli utenti di specificare alcuni valori nel corpo del messaggio che possono essere sostituiti in un secondo momento dai token specificati usando questa proprietà.|  
 |BodyTemplateFilePath|Stringa|Percorso di un modello per il corpo del messaggio. L'attività `SendMail` copia il contenuto di questo file nella relativa proprietà del corpo.<br /><br /> Il modello può contenere token sostituiti dal contenuto della proprietà Token.|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|Quando questa proprietà è impostata, tutti i messaggi di posta elettronica vengono inviati all'indirizzo specificato in esso.<br /><br /> Questa proprietà deve essere usata quando si esegue il test di flussi di lavoro, Ad esempio, quando si desidera assicurarsi che tutti i messaggi di posta elettronica vengono inviati senza inviarli ai destinatari effettivi.|  
 |TestDropPath|Stringa|Quando questa proprietà è impostata, tutti i messaggi di posta elettronica vengono salvati nel file specificato.<br /><br /> Questa proprietà dovrà essere utilizzato quando si esegue il test o il debug dei flussi di lavoro, assicurarsi che il formato e il contenuto dei messaggi di posta elettronica in uscita sia appropriato.|  
@@ -107,13 +107,13 @@ new SendMail
   
  Per altre informazioni sulla configurazione di un server SMTP, vedere i collegamenti seguenti.  
   
--   [Microsoft TechNet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [Configurazione del servizio SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [Configurazione del servizio SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0: Configurare la posta elettronica SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
+- [IIS 7.0: Configurare la posta elettronica SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [Installazione del servizio SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [Come installare il servizio SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  Per eseguire il download, sono disponibili emulatori SMTP forniti da terze parti.  
   

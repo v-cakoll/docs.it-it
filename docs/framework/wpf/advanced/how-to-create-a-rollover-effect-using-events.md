@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare un effetto di attivazione utilizzando gli eventi'
+title: 'Procedura: Creare un effetto di attivazione usando gli eventi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - element colors [WPF], changing
 ms.assetid: 3b20d028-6f1c-4b25-95d2-fa68cefbdb4c
 ms.openlocfilehash: 87740a215136863199d962a2704cf691f27fc3bc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776649"
 ---
-# <a name="how-to-create-a-rollover-effect-using-events"></a>Procedura: Creare un effetto di attivazione utilizzando gli eventi
+# <a name="how-to-create-a-rollover-effect-using-events"></a>Procedura: Creare un effetto di attivazione usando gli eventi
 In questo esempio viene illustrato come modificare il colore di un elemento quando il puntatore del mouse entra o esce dall'area occupata dall'elemento.  
   
  In questo esempio è costituito un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file e un file code-behind.  

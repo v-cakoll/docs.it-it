@@ -3,14 +3,14 @@ title: -- (commento) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5d9de735-2099-47f1-b7e7-60856f494924
 ms.openlocfilehash: c10b17931c6024e2a9e947083747435d8aa54fa2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605997"
 ---
 # <a name="---comment-entity-sql"></a>-- (commento) (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] le query possono contenere commenti. Due trattini (`--`) indicano l'inizio di una riga di commento.  
+Le query[!INCLUDE[esql](../../../../../../includes/esql-md.md)] possono contenere commenti. Due trattini (`--`) indicano l'inizio di una riga di commento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,5 +33,5 @@ ms.locfileid: "59339515"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

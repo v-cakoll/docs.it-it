@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
 ms.openlocfilehash: 634489ced9b437d7b273eb5fa1092165cc6a935f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047966"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Procedura: Controllare gli eventi di sicurezza di Windows Communication Foundation
 Windows Communication Foundation (WCF) consente di registrare gli eventi di sicurezza nel registro eventi di Windows, che possono essere visualizzati utilizzando il Visualizzatore eventi di Windows. In questo argomento viene illustrato come configurare un'applicazione in modo che registri eventi di sicurezza. Per ulteriori informazioni sul controllo WCF, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  

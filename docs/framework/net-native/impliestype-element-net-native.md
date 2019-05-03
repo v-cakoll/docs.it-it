@@ -5,11 +5,11 @@ ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2ef238a2cb852ecd7fa3f0e2dbe4048ff03a4139
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868628"
 ---
 # <a name="impliestype-element-net-native"></a>\<ImpliesType > elemento (.NET Native)
 Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al tipo contenitore.  

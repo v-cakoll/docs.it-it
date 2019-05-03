@@ -15,11 +15,11 @@ ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 43404ba24f6308d8da17b03df9997e893799c8d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875004"
 ---
 # <a name="contextswitchdeadlock-mda"></a>MDA contextSwitchDeadlock
 
@@ -39,11 +39,11 @@ Per impostazione predefinita, il modello di threading per il thread principale d
 
 È possibile che l'assistente al debug gestito venga attivato quando vengono soddisfatte tutte le condizioni seguenti:
 
--   Un'applicazione crea componenti COM da thread dell'apartment a thread singolo direttamente o indirettamente tramite le librerie.
+- Un'applicazione crea componenti COM da thread dell'apartment a thread singolo direttamente o indirettamente tramite le librerie.
 
--   L'applicazione è stata interrotta nel debugger e l'utente ha continuato l'applicazione o eseguito un'operazione del passaggio.
+- L'applicazione è stata interrotta nel debugger e l'utente ha continuato l'applicazione o eseguito un'operazione del passaggio.
 
--   Il debug non gestito non è abilitato.
+- Il debug non gestito non è abilitato.
 
 Per stabilire se l'assistente al debug gestito è stato falsamente abilitato, disabilitare tutti i punti di interruzione, riavviare l'applicazione e consentirne l'esecuzione senza interruzioni. Se l'assistente al debug gestito non è attivata, è probabile che l'attivazione iniziale fosse falsa. In questo caso, disabilitare l'assistente al debug gestito per evitare interferenze con la sessione di debug.
 

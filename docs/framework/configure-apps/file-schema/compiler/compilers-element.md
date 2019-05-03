@@ -10,11 +10,11 @@ helpviewer_keywords:
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
 ms.openlocfilehash: 744ef0d9bc58e6a0152dce53c40c24eb5283dc0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705337"
 ---
 # <a name="compilers-element"></a>\<i compilatori > elemento
 Contenitore per gli elementi di configurazione del compilatore. Contiene zero o più [elementi \<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md).  
@@ -41,13 +41,13 @@ Contenitore per gli elementi di configurazione del compilatore. Contiene zero o 
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<compilatore > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Specifica gli attributi di configurazione del compilatore per un provider del linguaggio.|  
+|[\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) (Elemento <compiler>)|Specifica gli attributi di configurazione del compilatore per un provider del linguaggio.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<configurazione > elemento](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|[Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |[\<System. CodeDom > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Specifica le impostazioni di configurazione del compilatore per i provider di linguaggi disponibili.|  
   
 ## <a name="remarks"></a>Note  
@@ -83,4 +83,4 @@ Contenitore per gli elementi di configurazione del compilatore. Contiene zero o 
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Schema di impostazioni del compilatore e del provider di linguaggi](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
-- [\<compilatore > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) (Elemento <compiler>)

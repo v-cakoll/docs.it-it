@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
 ms.openlocfilehash: c74d9524ff64101ba6002e133b93c9b80e8f50a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59337968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982449"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>La matrice è fissa o temporaneamente bloccata (Visual Basic)
 Questo errore sono le seguenti cause possibili:  
   
--   Usando `ReDim` per modificare il numero di elementi di una matrice di dimensioni fisse.  
+- Usando `ReDim` per modificare il numero di elementi di una matrice di dimensioni fisse.  
   
--   Ridimensionamento di una matrice dinamica a livello di modulo, in cui un elemento è stato passato come argomento a una routine. Se viene passato un elemento, la matrice è bloccata per evitare la deallocazione di memoria per il parametro di riferimento all'interno della routine.  
+- Ridimensionamento di una matrice dinamica a livello di modulo, in cui un elemento è stato passato come argomento a una routine. Se viene passato un elemento, la matrice è bloccata per evitare la deallocazione di memoria per il parametro di riferimento all'interno della routine.  
   
--   Tentativo di assegnare un valore a un `Variant` variabile che contiene una matrice, ma il `Variant` è attualmente bloccato.  
+- Tentativo di assegnare un valore a un `Variant` variabile che contiene una matrice, ma il `Variant` è attualmente bloccato.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   

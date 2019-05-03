@@ -3,11 +3,11 @@ title: InstallareF#
 description: Informazioni su come installare F# nel proprio ambiente.
 ms.date: 08/28/2018
 ms.openlocfilehash: 792c61c0522cd4d0c68a64572f2892ce33f71ea6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59331975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017020"
 ---
 # <a name="install-f"></a>Installare F\#
 
@@ -31,7 +31,7 @@ Al termine dell'installazione, scegliere "Avvia Visual Studio". È anche possibi
 
 È necessario disporre [git installato](https://git-scm.com/download) ed è disponibile nel percorso desiderato per rendere utilizzare modelli di progetto. È possibile verificare che sia installato correttamente, digitando `git --version` in un prompt dei comandi e premendo **invio**.
 
-### [<a name="macos"></a>macOS](#tab/macos)
+### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 [Mono](https://www.mono-project.com) serve [ F# Interactive](../tutorials/fsharp-interactive/index.md) supportano. Il modo più semplice per installare Mono in macOS è tramite Homebrew. È sufficiente digitare quanto segue nel terminale:
 
@@ -41,7 +41,7 @@ brew install mono
 
 Installare anche il [.NET Core SDK](https://www.microsoft.com/net/download).
 
-### [<a name="linux"></a>Linux](#tab/linux)
+### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 [Mono](https://www.mono-project.com) serve [ F# Interactive](../tutorials/fsharp-interactive/index.md) supportano. Se si usa Ubuntu o Debian, è possibile usare quanto segue:
 
@@ -52,7 +52,7 @@ sudo apt-get install mono-complete fsharp
 
 Installare anche il [.NET Core SDK](https://www.microsoft.com/net/download).
 
-### [<a name="windows"></a>WINDOWS](#tab/windows)
+### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 Installare [di Visual Studio con F# supportano](#install-f-with-visual-studio). Ciò consente di installare tutti i componenti necessari per scrivere, compilare ed eseguire F# codice.
 

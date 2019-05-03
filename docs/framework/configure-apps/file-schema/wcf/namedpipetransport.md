@@ -3,11 +3,11 @@ title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
 ms.openlocfilehash: fd7dc38e229b6135f91fc159596ed1669d43701a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772359"
 ---
 # <a name="namedpipetransport"></a>\<namedPipeTransport>
 Definisce un trasporto che induce un canale a trasferire messaggi usando named pipe quando è incluso in un'associazione personalizzata.  

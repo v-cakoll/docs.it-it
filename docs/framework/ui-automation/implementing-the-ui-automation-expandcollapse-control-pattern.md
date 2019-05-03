@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61610010"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Implementazione del pattern di controllo ExpandCollapse di automazione interfaccia utente
 > [!NOTE]
@@ -25,24 +25,24 @@ ms.locfileid: "59211660"
 ## <a name="implementation-guidelines-and-conventions"></a>Linee guida e convenzioni di implementazione  
  Quando si implementa il pattern di controllo ExpandCollapse, tenere presenti le linee guida e le convenzioni seguenti:  
   
--   I controlli di aggregazione, compilati con oggetti figlio che forniscono all'interfaccia utente funzionalità di espansione/compressione, devono supportare il pattern di controllo <xref:System.Windows.Automation.ExpandCollapsePattern> , contrariamente ai relativi elementi figlio. Ad esempio, un controllo casella combinata viene compilato con una combinazione di controlli casella di riepilogo, pulsante e casella di modifica, ma solo la casella combinata padre deve supportare il pattern di controllo <xref:System.Windows.Automation.ExpandCollapsePattern>.  
+- I controlli di aggregazione, compilati con oggetti figlio che forniscono all'interfaccia utente funzionalità di espansione/compressione, devono supportare il pattern di controllo <xref:System.Windows.Automation.ExpandCollapsePattern> , contrariamente ai relativi elementi figlio. Ad esempio, un controllo casella combinata viene compilato con una combinazione di controlli casella di riepilogo, pulsante e casella di modifica, ma solo la casella combinata padre deve supportare il pattern di controllo <xref:System.Windows.Automation.ExpandCollapsePattern>.  
   
     > [!NOTE]
     >  Un'eccezione è costituita dal controllo menu, che è un'aggregazione di singoli oggetti MenuItem. Gli oggetti MenuItem possono supportare il pattern di controllo <xref:System.Windows.Automation.ExpandCollapsePattern> , contrariamente al controllo menu padre. Un'eccezione analoga si applica ai controlli Tree e TreeItem.  
   
--   Quando <xref:System.Windows.Automation.ExpandCollapseState> di un controllo è impostato su <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, le funzionalità <xref:System.Windows.Automation.ExpandCollapsePattern> per il controllo non sono attive e l'unica informazione che è possibile ottenere mediante questo pattern di controllo è <xref:System.Windows.Automation.ExpandCollapseState>. Se successivamente vengono aggiunti oggetti figlio, <xref:System.Windows.Automation.ExpandCollapseState> cambia e la funzionalità <xref:System.Windows.Automation.ExpandCollapsePattern> viene attivata.  
+- Quando <xref:System.Windows.Automation.ExpandCollapseState> di un controllo è impostato su <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, le funzionalità <xref:System.Windows.Automation.ExpandCollapsePattern> per il controllo non sono attive e l'unica informazione che è possibile ottenere mediante questo pattern di controllo è <xref:System.Windows.Automation.ExpandCollapseState>. Se successivamente vengono aggiunti oggetti figlio, <xref:System.Windows.Automation.ExpandCollapseState> cambia e la funzionalità <xref:System.Windows.Automation.ExpandCollapsePattern> viene attivata.  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> si intende la visibilità degli oggetti figlio diretti di sola lettura. non fa riferimento alla visibilità di tutti i discendenti.  
+- <xref:System.Windows.Automation.ExpandCollapseState> si riferisce solo alla visibilità di oggetti figlio diretti, non alla visibilità di tutti gli oggetti discendenti.  
   
--   La funzionalità di espansione e compressione è specifica del controllo. Di seguito sono riportati alcuni esempi di questo comportamento.  
+- La funzionalità di espansione e compressione è specifica del controllo. Di seguito sono riportati alcuni esempi di questo comportamento.  
   
-    -   Il menu personale di Office può essere un MenuItem a tre stati (<xref:System.Windows.Automation.ExpandCollapseState.Expanded>, <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> e <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>) dove il controllo specifica lo stato da adottare quando si verifica una chiamata a <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o a <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> .  
+    - Il menu personale di Office può essere un MenuItem a tre stati (<xref:System.Windows.Automation.ExpandCollapseState.Expanded>, <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> e <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>) dove il controllo specifica lo stato da adottare quando si verifica una chiamata a <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o a <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> .  
   
-    -   Una chiamata a <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> per un controllo TreeItem può visualizzare tutti i discendenti o solo elementi figlio diretti.  
+    - Una chiamata a <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> per un controllo TreeItem può visualizzare tutti i discendenti o solo elementi figlio diretti.  
   
-    -   Se la chiamata a <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o a <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> per un controllo mantiene lo stato dei relativi discendenti, deve essere inviato un evento di modifica della visibilità, non un evento di modifica stato. Se il controllo padre non mantiene lo stato dei relativi discendenti quando viene compresso, il controllo può eliminare tutti i discendenti non più visibili e generare un evento di eliminazione permanente oppure può modificare <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> per ogni discendente e generare un evento di modifica della visibilità.  
+    - Se la chiamata a <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o a <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> per un controllo mantiene lo stato dei relativi discendenti, deve essere inviato un evento di modifica della visibilità, non un evento di modifica stato. Se il controllo padre non mantiene lo stato dei relativi discendenti quando viene compresso, il controllo può eliminare tutti i discendenti non più visibili e generare un evento di eliminazione permanente oppure può modificare <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> per ogni discendente e generare un evento di modifica della visibilità.  
   
--   Per garantire lo spostamento, è consigliabile che un oggetto si trovi nell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (con stato di visibilità appropriato) indipendentemente dallo stato <xref:System.Windows.Automation.ExpandCollapseState>dell'elemento padre. Se i discendenti vengono generati su richiesta, possono essere visualizzati nell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] solo dopo essere stati visualizzati per la prima volta o solo quando sono visibili.  
+- Per garantire lo spostamento, è consigliabile che un oggetto si trovi nell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (con stato di visibilità appropriato) indipendentemente dallo stato <xref:System.Windows.Automation.ExpandCollapseState>dell'elemento padre. Se i discendenti vengono generati su richiesta, possono essere visualizzati nell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] solo dopo essere stati visualizzati per la prima volta o solo quando sono visibili.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iexpandcollapseprovider"></a>Membri obbligatori per IExpandCollapseProvider  
@@ -65,9 +65,9 @@ ms.locfileid: "59211660"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Navigare tra gli elementi di automazione interfaccia utente utilizzando TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [Panoramica dell'albero di automazione dell'interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Navigare tra gli elementi di automazione interfaccia utente con TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
+- [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Usare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

@@ -3,14 +3,14 @@ title: Partecipanti del rilevamento
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
 ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59340178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699807"
 ---
 # <a name="tracking-participants"></a>Partecipanti del rilevamento
-I partecipanti del rilevamento sono punti di estensibilità che consentono a uno sviluppatore di flussi di lavoro di accedere a oggetti <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> e di elaborarli. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] include un partecipante del rilevamento standard che scrive record di rilevamento come eventi di Event Tracing for Windows (ETW). Se tale partecipante non soddisfa i propri requisiti, è anche possibile scrivere un partecipante del rilevamento personalizzato.  
+I partecipanti del rilevamento sono punti di estensibilità che consentono a uno sviluppatore di flussi di lavoro di accedere a oggetti <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> e di elaborarli. In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] viene fornito un partecipante del rilevamento standard che scrive record di rilevamento come eventi ETW (Event Tracing for Windows). Se tale partecipante non soddisfa i propri requisiti, è anche possibile scrivere un partecipante del rilevamento personalizzato.  
   
 ## <a name="tracking-participants"></a>Partecipanti del rilevamento  
  L'infrastruttura di rilevamento consente l'applicazione di un filtro ai record di rilevamento in uscita in modo che un partecipante possa sottoscrivere un subset dei record. Il meccanismo di applicazione di un filtro avviene tramite un profilo di rilevamento.  
@@ -18,7 +18,7 @@ I partecipanti del rilevamento sono punti di estensibilità che consentono a uno
  Windows Workflow Foundation (WF) in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] fornisce un partecipante del rilevamento che scrive record di rilevamento in una sessione ETW. Il partecipante viene configurato su un servizio flusso di lavoro aggiungendo un comportamento specifico del rilevamento in un file di configurazione. L'abilitazione di un partecipante del rilevamento ETW consente la visualizzazione dei record di rilevamento nel Visualizzatore eventi. L'esempio SDK per il rilevamento basato su ETW rappresenta un buon metodo per acquisire familiarità con il rilevamento WF tramite il partecipante del rilevamento basato su ETW.  
   
 ## <a name="etw-tracking-participant"></a>Partecipante del rilevamento ETW  
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] include un partecipante del rilevamento ETW che scrive record di rilevamento in una sessione ETW. Questa operazione viene eseguita in modo molto efficiente con un impatto minimo sulle prestazioni dell'applicazione o sulla velocità effettiva del server. Un vantaggio associato all'utilizzo del partecipante del rilevamento ETW standard è la possibilità di visualizzare i record di rilevamento ricevuti con altri registri applicazioni e di sistema nel Visualizzatore eventi di Windows.  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] include un partecipante del rilevamento ETW mediante il quale vengono scritti i record di rilevamento in una sessione ETW. Questa operazione viene eseguita in modo molto efficiente con un impatto minimo sulle prestazioni dell'applicazione o sulla velocità effettiva del server. Un vantaggio associato all'utilizzo del partecipante del rilevamento ETW standard è la possibilità di visualizzare i record di rilevamento ricevuti con altri registri applicazioni e di sistema nel Visualizzatore eventi di Windows.  
   
  Il partecipante del rilevamento ETW standard viene configurato nel file Web.config come illustrato nell'esempio seguente.  
   
@@ -92,7 +92,7 @@ I partecipanti del rilevamento sono punti di estensibilità che consentono a uno
 ## <a name="custom-tracking-participant"></a>Partecipante di rilevamento personalizzato  
  L'API del partecipante del rilevamento consente l'estensione del runtime di rilevamento con un partecipante del rilevamento fornito dall'utente che può includere la logica personalizzata per gestire i record di rilevamento creati dall'esecuzione del flusso di lavoro. Per scrivere un partecipante del rilevamento personalizzato, lo sviluppatore deve implementare il metodo `Track` sulla classe <xref:System.Activities.Tracking.TrackingParticipant>. Questo metodo viene chiamato quando un record di rilevamento viene creato dall'esecuzione del flusso di lavoro.  
   
- I partecipanti del rilevamento derivano dalla classe <xref:System.Activities.Tracking.TrackingParticipant>. L'oggetto <xref:System.Activities.Tracking.EtwTrackingParticipant> fornito dal sistema crea una registrazione degli eventi per Windows (ETW, Event Tracking for Windows) per ogni record di rilevamento ricevuto. Per creare un partecipante del rilevamento personalizzato, viene creata una classe derivata dall'oggetto <xref:System.Activities.Tracking.TrackingParticipant>. Per fornire una funzionalità di rilevamento di base, eseguire l'override di <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>. <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> viene chiamato quando un record di rilevamento viene inviato dal runtime e può essere elaborato nel modo desiderato. Nell'esempio seguente viene definita una classe del partecipante del rilevamento personalizzata che crea tutti i record di rilevamento nella finestra della console. È possibile implementare anche un oggetto <xref:System.Activities.Tracking.TrackingParticipant> che elabora i record di rilevamento in modo asincrono usando i relativi metodi `BeginTrack` e `EndTrack`  
+ I partecipanti del rilevamento derivano dalla classe <xref:System.Activities.Tracking.TrackingParticipant>. L'oggetto <xref:System.Activities.Tracking.EtwTrackingParticipant> fornito dal sistema crea una registrazione degli eventi per Windows (ETW, Event Tracking for Windows) per ogni record di rilevamento ricevuto. Per creare un partecipante del rilevamento personalizzato, viene creata una classe derivata dall'oggetto <xref:System.Activities.Tracking.TrackingParticipant>. Per fornire una funzionalità di rilevamento di base, eseguire l'override di <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>. Il metodo <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> viene chiamato quando un record di rilevamento viene inviato dal runtime e può essere elaborato nel modo desiderato. Nell'esempio seguente viene definita una classe del partecipante del rilevamento personalizzata che crea tutti i record di rilevamento nella finestra della console. È possibile implementare anche un oggetto <xref:System.Activities.Tracking.TrackingParticipant> che elabora i record di rilevamento in modo asincrono usando i relativi metodi `BeginTrack` e `EndTrack`  
   
 ```csharp  
 class ConsoleTrackingParticipant : TrackingParticipant  

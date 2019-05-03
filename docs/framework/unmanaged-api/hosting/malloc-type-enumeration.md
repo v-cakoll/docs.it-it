@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 695f69c8d9c3a295a705971743733339cf8aab13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765219"
 ---
 # <a name="malloctype-enumeration"></a>Enumerazione MALLOC_TYPE
 Contiene valori che specificano le caratteristiche della memoria viene allocata.  

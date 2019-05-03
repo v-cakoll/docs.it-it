@@ -7,11 +7,11 @@ helpviewer_keywords:
 - GridView controls [WPF], grouping items
 ms.assetid: eebef25b-ddc6-424e-a66d-ea228d1bf33d
 ms.openlocfilehash: b3dd6891976a942b299c87fca25e430e9ee59a51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910273"
 ---
 # <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a>Procedura: Raggruppare gli elementi di un controllo ListView che implementa un oggetto GridView
 In questo esempio viene illustrato come visualizzare i gruppi di voci di <xref:System.Windows.Controls.GridView> modalità di visualizzazione di un <xref:System.Windows.Controls.ListView> controllo.  
@@ -30,6 +30,6 @@ In questo esempio viene illustrato come visualizzare i gruppi di voci di <xref:S
 
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Procedure relative](listview-how-to-topics.md)
+- [Procedure relative alle proprietà](listview-how-to-topics.md)
 - [Panoramica sul controllo ListView](listview-overview.md)
 - [Cenni preliminari su GridView](gridview-overview.md)

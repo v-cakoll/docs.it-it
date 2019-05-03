@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
 ms.openlocfilehash: 1371fa901bebc503a0091f3229a8fd7e6ccc2c86
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772853"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Considerazioni sulle prestazioni per l'interoperabilità fra Direct3D9 e WPF
 È possibile ospitare contenuto Direct3D9 usando il <xref:System.Windows.Interop.D3DImage> classe. Hosting di contenuto Direct3D9 può influire sulle prestazioni dell'applicazione. In questo argomento descrive le procedure consigliate per ottimizzare le prestazioni durante l'hosting di contenuto Direct3D9 in un'applicazione Windows Presentation Foundation (WPF). Queste procedure consigliate includono come usare <xref:System.Windows.Interop.D3DImage> e procedure consigliate quando si utilizza Windows Vista, Windows XP, e viene visualizzato con più monitor.  
@@ -63,5 +63,5 @@ ms.locfileid: "59162633"
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Interoperatività di WPF e Direct3D9](wpf-and-direct3d9-interoperation.md)
-- [Procedura dettagliata: Creazione di contenuto Direct3D9 per l'hosting in WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Procedura dettagliata: Creazione di contenuto Direct3D9 per l'Hosting in WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
 - [Procedura dettagliata: Hosting di contenuto Direct3D9 in WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

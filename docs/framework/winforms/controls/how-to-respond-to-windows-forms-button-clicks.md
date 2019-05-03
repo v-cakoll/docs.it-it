@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
 ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913081"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>Procedura: Rispondere alla selezione dei pulsanti Windows Forms
 L'utilizzo di base di un form Windows <xref:System.Windows.Forms.Button> controllo consiste nell'eseguire codice quando si fa clic sul pulsante.  
@@ -31,7 +31,7 @@ L'utilizzo di base di un form Windows <xref:System.Windows.Forms.Button> control
   
 ### <a name="to-respond-to-a-button-click"></a>Per rispondere a un clic del pulsante  
   
--   Nel pulsante `Click` <xref:System.EventHandler> scrivere il codice da eseguire. `Button1_Click` deve essere associato al controllo. Per altre informazioni, vedere [Procedura: Creare i gestori eventi in fase di esecuzione per Windows Form](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+- Nel pulsante `Click` <xref:System.EventHandler> scrivere il codice da eseguire. `Button1_Click` deve essere associato al controllo. Per altre informazioni, vedere [Procedura: Creare i gestori eventi in fase di esecuzione per Windows Form](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

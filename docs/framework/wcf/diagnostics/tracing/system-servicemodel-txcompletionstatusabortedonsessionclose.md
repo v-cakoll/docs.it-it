@@ -3,11 +3,11 @@ title: System.ServiceModel.TxCompletionStatusAbortedOnSessionClose
 ms.date: 03/30/2017
 ms.assetid: 7e142e9d-e81b-4309-974a-02e9cc064ea0
 ms.openlocfilehash: 7b1f6a2f4a344b566c76d0095942b84a8a4e76f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991627"
 ---
 # <a name="systemservicemodeltxcompletionstatusabortedonsessionclose"></a>System.ServiceModel.TxCompletionStatusAbortedOnSessionClose
 La transazione specificata è stata interrotta perché non era stata completata alla chiusura della sessione e TransactionAutoCompleteOnSessionClose OperationBehaviorAttribute era impostato su False.  
@@ -21,5 +21,5 @@ La transazione specificata è stata interrotta perché non era stata completata 
 ## <a name="see-also"></a>Vedere anche
 
 - [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

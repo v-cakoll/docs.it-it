@@ -1,16 +1,16 @@
 ---
-title: <clear> (elemento) per <namedCaches>
+title: Elemento <clear> per <namedCaches>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <clear> element for <namedCaches>
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
 ms.openlocfilehash: eb0a50919e163a795abc70d132bd45f1d05192ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674168"
 ---
 # <a name="clear-element-for-namedcaches"></a>\<Cancella > (elemento) per \<namedCaches >
 Cancella tutto `namedCache` voci il `namedCaches` raccolta per una cache in memoria.  

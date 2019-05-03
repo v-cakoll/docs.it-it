@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609893"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapping dei pattern di controllo per i client di automazione interfaccia utente
 > [!NOTE]
@@ -20,11 +20,11 @@ ms.locfileid: "59101133"
   
  Nella tabella seguente i pattern di controllo sono organizzati nelle categorie seguenti:  
   
--   Supportato. Il controllo deve supportare questo il pattern di controllo.  
+- Supportato. Il controllo deve supportare questo il pattern di controllo.  
   
--   Supporto condizionale. Il controllo può supportare questo pattern di controllo a seconda dello stato del controllo.  
+- Supporto condizionale. Il controllo può supportare questo pattern di controllo a seconda dello stato del controllo.  
   
--   Non supportato. Il controllo non supporta questo pattern di controllo. I controlli personalizzati possono supportare questo pattern di controllo.  
+- Non supportato. Il controllo non supporta questo pattern di controllo. I controlli personalizzati possono supportare questo pattern di controllo.  
   
 > [!NOTE]
 >  Alcuni controlli sono caratterizzati dal supporto condizionale per diversi pattern di controllo a seconda della funzionalità del controllo. Ad esempio, il controllo voce di menu prevede il supporto condizionale per il pattern di controllo <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>o <xref:System.Windows.Automation.SelectionItemPattern> a seconda della relativa funzione nel controllo menu.  

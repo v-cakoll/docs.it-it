@@ -3,11 +3,11 @@ title: System.ServiceModel.Channels.PeerNodeAuthenticationTimeout
 ms.date: 03/30/2017
 ms.assetid: f294ee94-be83-426c-b40d-6e8a4e5e987c
 ms.openlocfilehash: 7c5f859deb2d9156b819f1fb92164a4c05437192
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917098"
 ---
 # <a name="systemservicemodelchannelspeernodeauthenticationtimeout"></a>System.ServiceModel.Channels.PeerNodeAuthenticationTimeout
 Handshake di sicurezza non eseguito entro il limite di tempo specificato.  
@@ -21,5 +21,5 @@ Handshake di sicurezza non eseguito entro il limite di tempo specificato.
 ## <a name="see-also"></a>Vedere anche
 
 - [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

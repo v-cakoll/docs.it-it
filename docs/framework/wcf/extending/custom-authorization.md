@@ -3,17 +3,17 @@ title: Autorizzazione personalizzata
 ms.date: 03/30/2017
 ms.assetid: 4f90311a-2593-462e-9174-2f7ac78217b9
 ms.openlocfilehash: f89fb3c14735417f2688890eb335e9700fb99d6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858338"
 ---
 # <a name="custom-authorization"></a>Autorizzazione personalizzata
 L'autorizzazione è il processo di controllo dell'accesso a risorse e attività. Negli argomenti di questa sezione viene illustrato come creare e implementare diversi tipi di attestazione o criteri.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura: Creare criteri di autorizzazione personalizzati](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
+ [Procedura: Creare un criterio di autorizzazione personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
  Descrive come creare un criterio personalizzato.  
   
  [Procedura: Creare un gestore autorizzazioni personalizzato per un servizio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
@@ -25,7 +25,7 @@ L'autorizzazione è il processo di controllo dell'accesso a risorse e attività.
  [Procedura: Confrontare le attestazioni](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
  Descrive come confrontare le attestazioni.  
   
- [Procedura: Creare l'identità di un'entità di sicurezza personalizzata](../../../../docs/framework/wcf/extending/how-to-create-a-custom-principal-identity.md)  
+ [Procedura: Creare un'identità di entità di sicurezza personalizzata](../../../../docs/framework/wcf/extending/how-to-create-a-custom-principal-identity.md)  
  Illustra lo scenario quando <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> viene utilizzato in combinazione con un criterio di autorizzazione personalizzato e con un'entità personalizzata.  
   
 ## <a name="reference"></a>Riferimenti  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0cf0065f1ed12ad3a37819b0a15d734a2b51ff5b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697777"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>Metodo ICorDebug::CanLaunchOrAttach
 Restituisce un HRESULT che indica se avviare un nuovo processo o connettersi al processo esistente specificato è possibile all'interno del contesto della configurazione del computer e di runtime corrente.  
@@ -46,13 +46,13 @@ HRESULT CanLaunchOrAttach (
 ## <a name="return-value"></a>Valore restituito  
  S_OK se i servizi di debug determinano che avviare un nuovo processo o connettersi al processo specificato è possibile, in base alle informazioni sulla configurazione di computer e di runtime corrente. I valori HRESULT possibili sono:  
   
--   S_OK  
+- S_OK  
   
--   CORDBG_E_DEBUGGING_NOT_POSSIBLE  
+- CORDBG_E_DEBUGGING_NOT_POSSIBLE  
   
--   CORDBG_E_KERNEL_DEBUGGER_PRESENT  
+- CORDBG_E_KERNEL_DEBUGGER_PRESENT  
   
--   CORDBG_E_KERNEL_DEBUGGER_ENABLED  
+- CORDBG_E_KERNEL_DEBUGGER_ENABLED  
   
 ## <a name="remarks"></a>Note  
  Questo metodo è puramente informativo. L'interfaccia non verrà interrotta è l'avvio o la connessione a un processo, indipendentemente dal valore restituito da `CanLaunchOrAttach`.  

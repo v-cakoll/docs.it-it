@@ -7,11 +7,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
 ms.openlocfilehash: 8b53df1634d2b9971bc44c968a17db81cac3924f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665754"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Procedura: Restituire un valore da una routine (Visual Basic)
 Oggetto `Function` routine restituisce un valore al codice chiamante tramite l'esecuzione di un `Return` istruzione o l'individuazione un' `Exit Function` o `End Function` istruzione.  
@@ -46,12 +46,12 @@ Oggetto `Function` routine restituisce un valore al codice chiamante tramite l'e
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedure](./index.md)
+- [Routine](./index.md)
 - [Routine Sub](./sub-procedures.md)
-- [Routine di proprietà](./property-procedures.md)
+- [Routine Property](./property-procedures.md)
 - [Routine di operatore](./operator-procedures.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Istruzione Function](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Istruzione Return](../../../../visual-basic/language-reference/statements/return-statement.md)
 - [Procedura: Creare una routine che restituisce un valore](./how-to-create-a-procedure-that-returns-a-value.md)
-- [Procedura: Creare una routine che restituisce un valore](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Procedura: Chiamare una routine che restituisce un valore](./how-to-call-a-procedure-that-returns-a-value.md)

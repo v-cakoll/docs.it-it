@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 9b8f5e210c21bc516e7965f1a092cc6ff1371b8c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235775"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804267"
 ---
 ### <a name="xmlserializer-fails-while-serializing-a-type-that-hides-an-accessible-member-with-an-inaccessible-one"></a>XmlSerializer ha esito negativo durante la serializzazione di un tipo che nasconde un membro accessibile con un altro non accessibile
 

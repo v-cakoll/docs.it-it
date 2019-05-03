@@ -12,11 +12,11 @@ helpviewer_keywords:
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
 ms.openlocfilehash: b70594e002bbf08f0890586e78df901ccb26c7ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791820"
 ---
 # <a name="sub-procedures-visual-basic"></a>Routine Sub (Visual Basic)
 Oggetto `Sub` routine è una serie di istruzioni di Visual Basic racchiuse tra il `Sub` e `End Sub` istruzioni. Il `Sub` routine esegue un'attività e quindi restituisce il controllo al codice chiamante, ma non viene restituito un valore al codice chiamante.  

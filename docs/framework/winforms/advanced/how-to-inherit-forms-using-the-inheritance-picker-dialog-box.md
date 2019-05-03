@@ -7,11 +7,11 @@ helpviewer_keywords:
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
 ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723129"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Procedura: Ereditare form mediante la finestra di dialogo Selezione ereditarietà
 Il modo più semplice di ereditare un modulo o un altro oggetto consiste nell'usare la finestra di dialogo **Selezione ereditarietà**. In questo modo è possibile recuperare e riutilizzare il codice o un'interfaccia utente precedentemente creata in altre soluzioni.  
@@ -58,7 +58,7 @@ Il modo più semplice di ereditare un modulo o un altro oggetto consiste nell'us
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
-- [utilizzo](~/docs/csharp/language-reference/keywords/using.md)
-- [Effetti della modifica dell'aspetto di un form di base](effects-of-modifying-base-form-appearance.md)
+- [Istruzione Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [Effetti della modifica dell'aspetto di un modulo di base](effects-of-modifying-base-form-appearance.md)
 - [Ereditarietà visiva di Windows Form](windows-forms-visual-inheritance.md)

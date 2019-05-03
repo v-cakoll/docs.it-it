@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <source> element
 - source element
 ms.openlocfilehash: 8860f5d3ed7ee0c04d1e8afd7614f3f73b470808
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673706"
 ---
 # <a name="source-element"></a>\<origine > elemento
 Specifica un'origine di traccia che avvia i messaggi di traccia.  

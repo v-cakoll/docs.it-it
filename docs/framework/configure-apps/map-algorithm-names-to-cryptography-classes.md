@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
 ms.openlocfilehash: 6ec98aabd92a7a0fed11482bdf6e5e8ddc045a7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700808"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Mapping di nomi di algoritmi a classi di crittografia
 Sono disponibili quattro modi, uno sviluppatore può creare un oggetto di crittografia usando il [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
   
--   Creare un oggetto usando il **nuovo** operatore.  
+- Creare un oggetto usando il **nuovo** operatore.  
   
--   Creare un oggetto che implementa un algoritmo di crittografia specifico chiamando il **Create** metodo sulla classe astratta per l'algoritmo di.  
+- Creare un oggetto che implementa un algoritmo di crittografia specifico chiamando il **Create** metodo sulla classe astratta per l'algoritmo di.  
   
--   Creare un oggetto che implementa un algoritmo di crittografia specifico chiamando il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> (metodo).  
+- Creare un oggetto che implementa un algoritmo di crittografia specifico chiamando il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> (metodo).  
   
--   Crea un oggetto che implementa una classe di algoritmi di crittografia (ad esempio, una crittografia a blocchi simmetriche) chiamando il **Create** metodo sulla classe astratta per il tipo di algoritmo (ad esempio <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
+- Crea un oggetto che implementa una classe di algoritmi di crittografia (ad esempio, una crittografia a blocchi simmetriche) chiamando il **Create** metodo sulla classe astratta per il tipo di algoritmo (ad esempio <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
   
  Si supponga, ad esempio, che uno sviluppatore desidera calcolare l'hash SHA1 di un set di byte. Il <xref:System.Security.Cryptography> dello spazio dei nomi contiene due implementazioni dell'algoritmo SHA1, un'implementazione completamente gestita e quello che esegue il wrapping di CryptoAPI. Lo sviluppatore può scegliere di creare un'istanza di una particolare implementazione di SHA1 (ad esempio il <xref:System.Security.Cryptography.SHA1Managed>) chiamando il **nuovo** operatore. Tuttavia, se non è rilevante la classe a cui viene caricato common language runtime, purché la classe implementa l'algoritmo hash SHA1, lo sviluppatore può creare un oggetto chiamando il <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> (metodo). Questo metodo chiama **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**, che deve restituire un'implementazione dell'algoritmo hash SHA1.  
   

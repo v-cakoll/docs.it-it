@@ -8,11 +8,11 @@ helpviewer_keywords:
 - 3-D models [WPF], applying multiple transformations to
 ms.assetid: cb72245a-5560-4c96-9f58-593c66296992
 ms.openlocfilehash: 7a6a0dd4942eb2430ff79ab5df4a171a4064ac1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698941"
 ---
 # <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>Procedura: Applicare più trasformazioni a un modello tridimensionale
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media.Media3D.RotateTransform3D> e un <xref:System.Windows.Media.Media3D.ScaleTransform3D> ruotare e modificare la scala di un modello 3D. Il codice seguente illustra come applicare le trasformazioni per il <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> proprietà di un <xref:System.Windows.Media.Media3D.GeometryModel3D> in XAML.  

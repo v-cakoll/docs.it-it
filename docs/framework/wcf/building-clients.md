@@ -6,24 +6,24 @@ helpviewer_keywords:
 - clients [WCF]
 ms.assetid: 28dfff47-d95b-4cc2-9d5c-b3b9ba71fd50
 ms.openlocfilehash: b5661c5aaa08d91c3944c4c108b23b03b012439a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608866"
 ---
 # <a name="building-clients"></a>Creazione di client
-Negli argomenti di questa sezione viene illustrato come creare e usare un client Windows Communication Foundation (WCF).  
+Gli argomenti in questa sezione illustrano come creare e usare un client Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica dei client WCF](../../../docs/framework/wcf/wcf-client-overview.md)  
- Viene fornita una panoramica di client WCF e sul relativo funzionamento.  
+ Viene fornita una panoramica di WCF client e sul relativo funzionamento.  
   
  [Accesso ai servizi tramite client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- Descrive il metodo di base della creazione di un oggetto client WCF per l'utilizzo in un'applicazione client.  
+ Descrive il metodo di base della creazione di un oggetto client WCF per l'uso in un'applicazione client.  
   
  [Protezione di client](../../../docs/framework/wcf/securing-clients.md)  
- Viene descritto come configurare la protezione per i client WCF.  
+ Viene descritto come configurare la sicurezza per i client WCF.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel.ClientBase%601>  

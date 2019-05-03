@@ -17,11 +17,11 @@ ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d5f807481468b61365c8b4d8412f12a4741ebb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912756"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>Esecuzione di operazioni aritmetiche con date e ore
 
@@ -78,7 +78,7 @@ Il <xref:System.TimeZoneInfo> classe include una serie di metodi di conversione 
 
 Per informazioni dettagliate, vedere [conversione degli orari tra fusi orari](../../../docs/standard/datetime/converting-between-time-zones.md).
 
-Il <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> classe non fornisce metodi che applicano automaticamente regole di regolazione quando si esegue Data e ora aritmetico. Tuttavia, è possibile convertire l'ora in un fuso orario in ora UTC, eseguendo l'operazione aritmetica, e quindi convertirla di nuovo da ora UTC a ora nel fuso orario. Per informazioni dettagliate, vedere [come: Usare fusi orari nella data e ora aritmetico](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).
+Il <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> classe non fornisce metodi che applicano automaticamente regole di regolazione quando si esegue Data e ora aritmetico. Tuttavia, è possibile convertire l'ora in un fuso orario in ora UTC, eseguendo l'operazione aritmetica, e quindi convertirla di nuovo da ora UTC a ora nel fuso orario. Per informazioni dettagliate, vedere [Procedura: Usare fusi orari nella data e ora aritmetico](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).
 
 Ad esempio, il codice seguente è simile al codice precedente che ha aggiunto due ore e mezzo alle 2.00 del 9 marzo 2008. Tuttavia, perché il codice converte un'ora solare nel fuso orario centrale in ora UTC prima di eseguire un'operazione aritmetica con data e ora e quindi converte di nuovo il risultato da ora UTC in ora solare nel fuso orario centrale, l'ora risultante riflette la transizione dell'ora solare nel fuso orario centrale all'ora legale.
 

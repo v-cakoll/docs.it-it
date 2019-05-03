@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 9b66a7d372c76ac1675e55713bd5655e213e68fe
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: d2d4b191ed4cb8f2f8b9b0a34fe99e65d4596a72
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633621"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613564"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Usare le classi di enumerazione anziché i tipi enum
 
@@ -85,25 +85,25 @@ public abstract class CardType : Enumeration
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 - **Enum's are evil—update** \ (Gli enum sono il male: aggiornamento)
-  [https://www.planetgeek.ch/2009/07/01/enums-are-evil/](https://www.planetgeek.ch/2009/07/01/enums-are-evil/)
+  <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
 
 - **Daniel Hardman. How Enums Spread Disease — And How To Cure It** \ (In che modo gli enum diffondono malattie e come curarle)
-  [https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
+  <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
 - **Jimmy Bogard. Enumeration classes** \ (Classi di enumerazione)
-  [https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
+  <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
 - **Steve Smith. Enum Alternatives in C#** \ (Alternative agli enum in C#)
-  [https://ardalis.com/enum-alternatives-in-c](https://ardalis.com/enum-alternatives-in-c)
+  <https://ardalis.com/enum-alternatives-in-c>
 
 - **Enumeration.cs.** Base Enumeration class in eShopOnContainers \ (Classe di enumerazione di base in eShopOnContainers)
-  [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
+  <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs>
 
 - **CardType.cs**. Classe di enumerazione di esempio in eShopOnContainers. \
-  [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
+  <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs>
     
 - **SmartEnum**. Ardalis - Classi che consentono di produrre enum fortemente tipizzati e più intelligenti in .NET. \
-  [https://www.nuget.org/packages/Ardalis.SmartEnum/](https://www.nuget.org/packages/Ardalis.SmartEnum/)
+  <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 
 >[!div class="step-by-step"]
 >[Precedente](implement-value-objects.md)

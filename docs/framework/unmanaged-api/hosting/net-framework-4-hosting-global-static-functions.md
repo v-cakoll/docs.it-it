@@ -9,11 +9,11 @@ ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a372a9072d2ee18df1efd060d3fd024a92e0bc6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765141"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>Funzioni statiche globali di hosting di .NET Framework 4
 Il [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] introduce un nuovo metodo esportato in Mscoree. dll: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
 ms.openlocfilehash: bc0c822659ee57ac8dd87a2adddcd32e934ea4fb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59302399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699714"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Procedura: Configurare un servizio Windows Communication Foundation per la condivisione delle porte di utilizzo
 Il modo più semplice da utilizzare nell'applicazione Windows Communication Foundation (WCF) di condivisione delle porte net.tcp:// consiste nell'esporre un servizio usando il <xref:System.ServiceModel.NetTcpBinding>.  
@@ -63,4 +63,4 @@ Il modo più semplice da utilizzare nell'applicazione Windows Communication Foun
 ## <a name="see-also"></a>Vedere anche
 
 - [Condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [Procedura: Abilitare il servizio di condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [Procedura: Abilitare il servizio di condivisione delle porte Net. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

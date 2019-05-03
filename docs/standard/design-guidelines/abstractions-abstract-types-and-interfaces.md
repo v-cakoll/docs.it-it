@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
 author: KrzysztofCwalina
 ms.openlocfilehash: fcf566c24677630fdbb1fcd0eb7628f830b3be2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789220"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Astrazioni (interfacce e tipi astratti)
 Un'astrazione è un tipo che descrive un contratto, ma non fornisce un'implementazione completa del contratto. Astrazioni sono in genere implementate come classi astratte o interfacce e diventano un set ben definito di documentazione di riferimento che descrive la semantica dei tipi che implementa il contratto richiesta. Alcune delle astrazioni più importanti in .NET Framework includono <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, e <xref:System.Object>.  

@@ -3,11 +3,11 @@ title: Modelli di Visual Studio WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
 ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780666"
 ---
 # <a name="wcf-visual-studio-templates"></a>Modelli di Visual Studio WCF
 Modelli di Visual Studio di Windows Communication Foundation (WCF) sono progetto predefiniti e modelli di elementi che è possibile usare in Visual Studio per compilare rapidamente i servizi WCF e le relative applicazioni.  
@@ -20,11 +20,11 @@ Modelli di Visual Studio di Windows Communication Foundation (WCF) sono progetto
   
  Quando si crea un nuovo progetto usando il **servizio WCF** modello, il nuovo progetto include automaticamente i tre file seguenti:  
   
--   File di contratto del servizio (IService1.cs o IService1.vb). Il file di contratto di servizio è un'interfaccia che ha gli attributi del servizio WCF applicati. Questo file fornisce una definizione di un semplice servizio per indicare come definire i servizi e include operazioni basate su parametri e un semplice esempio di contratto dati. Questo è il file predefinito visualizzato nell'editor del codice dopo la creazione di un progetto di servizio WCF.  
+- File di contratto del servizio (IService1.cs o IService1.vb). Il file di contratto di servizio è un'interfaccia che ha gli attributi del servizio WCF applicati. Questo file fornisce una definizione di un semplice servizio per indicare come definire i servizi e include operazioni basate su parametri e un semplice esempio di contratto dati. Questo è il file predefinito visualizzato nell'editor del codice dopo la creazione di un progetto di servizio WCF.  
   
--   File di implementazione del servizio (Service1.cs o Service1.vb). Il file di implementazione del servizio implementa il contratto definito nel file del contratto di servizio.  
+- File di implementazione del servizio (Service1.cs o Service1.vb). Il file di implementazione del servizio implementa il contratto definito nel file del contratto di servizio.  
   
--   File di configurazione dell'applicazione (App.config). Il file di configurazione fornisce gli elementi di base di un modello di servizio WCF con un'associazione HTTP protetta. Include anche un endpoint per il servizio e abilita scambio di metadati.  
+- File di configurazione dell'applicazione (App.config). Il file di configurazione fornisce gli elementi di base di un modello di servizio WCF con un'associazione HTTP protetta. Include anche un endpoint per il servizio e abilita scambio di metadati.  
   
 > [!NOTE]
 >  Visual Studio è configurato per riconoscere il file app. config come file di configurazione per il progetto quando viene eseguita usando il [Host del servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), ovvero la configurazione predefinita. Se la libreria di servizi viene inserita in un eseguibile, è necessario spostare il codice di configurazione nel file di configurazione dell'eseguibile, in quanto i file di configurazione per le DLL non sono validi.  
@@ -34,13 +34,13 @@ Modelli di Visual Studio di Windows Communication Foundation (WCF) sono progetto
   
  Quando si crea un nuovo progetto usando il **servizio applicazione Web WCF** modello, il progetto include i quattro file seguenti:  
   
--   File host del servizio (service1.svc).  
+- File host del servizio (service1.svc).  
   
--   File di contratto del servizio (IService1.cs o IService1.vb).  
+- File di contratto del servizio (IService1.cs o IService1.vb).  
   
--   File di implementazione del servizio (Service1.svc.cs o Service1.svc.vb).  
+- File di implementazione del servizio (Service1.svc.cs o Service1.svc.vb).  
   
--   File di configurazione Web (Web.config).  
+- File di configurazione Web (Web.config).  
   
  Il modello crea automaticamente un sito Web (da distribuire in una directory virtuale) e funge da host di un servizio.  
   
@@ -84,5 +84,5 @@ Modelli di Visual Studio di Windows Communication Foundation (WCF) sono progetto
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Host servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
-- [Client di test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+- [Host del servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [Client di prova WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

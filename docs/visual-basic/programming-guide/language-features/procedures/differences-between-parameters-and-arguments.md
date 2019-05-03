@@ -12,11 +12,11 @@ helpviewer_keywords:
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
 ms.openlocfilehash: a69b956c7cffcc2a26916d6fc92f23dd4e2322d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864247"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Differenze tra parametri e argomenti (Visual Basic)
 Nella maggior parte dei casi, una routine deve avere alcune informazioni sulle circostanze in cui è stato chiamato. Una routine che esegue attività ripetute o condivise Usa informazioni diverse per ogni chiamata. Queste informazioni è costituito da variabili, costanti ed espressioni che viene passato alla procedura quando si chiama.  

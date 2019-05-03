@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
 ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59121966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003977"
 ---
 # <a name="how-to-print-a-windows-form"></a>Procedura: Stampare un Windows Form
 Come parte del processo di sviluppo, è in genere opportuno stampare una copia di Windows Form. Esempio di codice seguente viene illustrato come stampare una copia del modulo corrente usando il <xref:System.Drawing.Graphics.CopyFromScreen%2A> (metodo).  
@@ -30,9 +30,9 @@ Come parte del processo di sviluppo, è in genere opportuno stampare una copia d
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   Non hai le autorizzazioni per accedere alla stampante.  
+- Non hai le autorizzazioni per accedere alla stampante.  
   
--   Non è installata alcuna stampante.  
+- Non è installata alcuna stampante.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Per eseguire questo esempio di codice, è necessario disporre dell'autorizzazione per accedere alla stampante utilizzata con il computer.  

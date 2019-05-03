@@ -3,11 +3,11 @@ title: Argomenti obbligatori e gruppi di overload
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
 ms.openlocfilehash: b5006a201ce5db68e925bd5764fadde308bbccb4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937787"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Argomenti obbligatori e gruppi di overload
 Le attività possono essere configurate in modo che venga richiesta l'associazione di determinati argomenti affinché l'attività risulti valida per l'esecuzione. L'attributo `RequiredArgument` viene usato per indicare che determinati argomenti di un'attività sono obbligatori mentre l'attributo `OverloadGroup` viene usato per raggruppare insieme categorie di argomenti obbligatori. Tramite gli attributi, gli autori dell'attività possono fornire configurazioni di convalida di attività semplici o complesse.  
@@ -144,19 +144,19 @@ Public class DbUpdate: AsyncCodeActivity
   
  Quando si definisce un gruppo di overload:  
   
--   Un gruppo di overload non può essere un subset o un set equivalente di un altro gruppo di overload.  
+- Un gruppo di overload non può essere un subset o un set equivalente di un altro gruppo di overload.  
   
     > [!NOTE]
     >  Esiste un'eccezione a questa regola. Se un gruppo di overload è un subset di un altro gruppo di overload e il subset contiene solo argomenti in cui `RequiredArgument` è `false`, il gruppo di overload è valido.  
   
--   I gruppi di overload possono sovrapporsi ma è un errore se l'intersezione dei gruppi contiene tutti gli argomenti obbligatori di uno o entrambi i gruppi di overload. Nell'esempio precedente i gruppi di overload `G2` e `G3` si sovrapponevano, ma poiché l'intersezione non conteneva tutti gli argomenti di uno o entrambi i gruppi, questa situazione era valida.  
+- I gruppi di overload possono sovrapporsi ma è un errore se l'intersezione dei gruppi contiene tutti gli argomenti obbligatori di uno o entrambi i gruppi di overload. Nell'esempio precedente i gruppi di overload `G2` e `G3` si sovrapponevano, ma poiché l'intersezione non conteneva tutti gli argomenti di uno o entrambi i gruppi, questa situazione era valida.  
   
  Quando si associano gli argomenti in un gruppo di overload:  
   
--   Un gruppo di overload è considerato associato se vengono associati tutti gli argomenti `RequiredArgument` nel gruppo.  
+- Un gruppo di overload è considerato associato se vengono associati tutti gli argomenti `RequiredArgument` nel gruppo.  
   
--   Se un gruppo dispone di zero argomenti `RequiredArgument` e almeno un argomento associato, tale gruppo è considerato associato.  
+- Se un gruppo dispone di zero argomenti `RequiredArgument` e almeno un argomento associato, tale gruppo è considerato associato.  
   
--   Si verifica un errore di convalida se nessun gruppo di overload è associato, a meno che un gruppo di overload non presenti all'interno alcun argomento `RequiredArgument`.  
+- Si verifica un errore di convalida se nessun gruppo di overload è associato, a meno che un gruppo di overload non presenti all'interno alcun argomento `RequiredArgument`.  
   
--   È un errore disporre di più gruppi di overload associati, ovvero, vengono associati tutti gli argomenti obbligatori in un gruppo di overload e viene associato anche qualsiasi argomento in un altro gruppo di overload.
+- È un errore disporre di più gruppi di overload associati, ovvero, vengono associati tutti gli argomenti obbligatori in un gruppo di overload e viene associato anche qualsiasi argomento in un altro gruppo di overload.

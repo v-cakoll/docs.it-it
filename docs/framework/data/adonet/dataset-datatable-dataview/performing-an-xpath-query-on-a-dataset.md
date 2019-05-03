@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
 ms.openlocfilehash: 29d1e5ae494b2fff4e13886159bb937041152382
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607898"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Esecuzione di una query XPath in un dataset
 La relazione tra un oggetto sincronizzato <xref:System.Data.DataSet> e <xref:System.Xml.XmlDataDocument> consente di utilizzare XML servizi che accedono, ad esempio la query XML Path Language (XPath), il **XmlDataDocument** e possono eseguire determinate funzionalità in modo più semplice rispetto all'accesso ai **set di dati** direttamente. Ad esempio, invece di usare la **selezionare** metodo di un <xref:System.Data.DataTable> spostarsi nelle relazioni ad altre tabelle in una **set di dati**, è possibile eseguire una query XPath in un **XmlDataDocument**  sincronizzato con il **set di dati**, per ottenere un elenco di elementi XML sotto forma di un <xref:System.Xml.XmlNodeList>. I nodi il **XmlNodeList**, eseguire il cast come <xref:System.Xml.XmlElement> nodi, può quindi essere passato al **GetRowFromElement** metodo del **XmlDataDocument**, per restituire una corrispondenza <xref:System.Data.DataRow> riferimenti alle righe della tabella in sincronizzato **set di dati**.  

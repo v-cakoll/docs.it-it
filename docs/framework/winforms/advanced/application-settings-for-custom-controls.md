@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
 ms.openlocfilehash: 69a5caef8bab45503b9f34422de8c2ba2e7f01ff
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59317298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960901"
 ---
 # <a name="application-settings-for-custom-controls"></a>Impostazioni delle applicazioni per i controlli personalizzati
 È necessario completare alcune attività per consentire ai controlli personalizzati la possibilità di mantenere le impostazioni dell'applicazione quando i controlli sono ospitati nelle applicazioni di terze parti.  
@@ -49,4 +49,4 @@ ms.locfileid: "59317298"
 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Architettura Impostazioni applicazione](application-settings-architecture.md)
+- [Application Settings Architecture](application-settings-architecture.md)

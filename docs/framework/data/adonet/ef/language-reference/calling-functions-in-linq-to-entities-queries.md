@@ -3,11 +3,11 @@ title: Chiamata di funzioni in query di LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
 ms.openlocfilehash: 6fa1a7204a91a62c30e8683c449cc2be44132b4f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605782"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Chiamata di funzioni in query di LINQ to Entities
 Negli argomenti di questa sezione viene illustrato come chiamare le funzioni nelle LINQ to Entities.  
@@ -27,9 +27,9 @@ Negli argomenti di questa sezione viene illustrato come chiamare le funzioni nel
 ## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Chiamare funzioni canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-canonical-functions.md)  
   
- [Procedura: Chiamare funzioni di database](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-database-functions.md)  
+ [Procedura: Chiamare funzioni di Database](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-database-functions.md)  
   
- [Procedura: Chiamare funzioni di database personalizzate](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-custom-database-functions.md)  
+ [Procedura: Chiamare le funzioni di Database personalizzata](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-custom-database-functions.md)  
   
  [Procedura: Chiamare funzioni definite dal modello in query](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)  
   
@@ -39,5 +39,5 @@ Negli argomenti di questa sezione viene illustrato come chiamare le funzioni nel
 
 - [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
 - [Funzioni canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
-- [Panoramica sui file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Panoramica di file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Procedura: Definire funzioni personalizzate nel modello concettuale](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))

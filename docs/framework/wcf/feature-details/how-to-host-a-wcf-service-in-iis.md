@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
 ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000831"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Procedura: Hosting di un servizio WCF in WAS
 Questo argomento descrive i passaggi di base necessari per creare un servizio Windows Communication Foundation (WCF) ospitato in Internet Information Services (IIS). Questo argomento presuppone la conoscenza di IIS e la comprensione dello strumento di gestione IIS per creare e gestire applicazioni IIS. Per altre informazioni su IIS vedere [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Un servizio WCF che viene eseguito nell'ambiente IIS sfrutta appieno le funzionalità IIS, quali il riciclo dei processi, interruzione dell'inattività, il monitoraggio dello stato di processo e attivazione basata su messaggi. Questa opzione di hosting richiede che IIS sia configurato correttamente, ma non richiede la scrittura di codice di hosting come parte dell'applicazione. È possibile utilizzare l'hosting IIS solo con un trasporto HTTP.  
@@ -66,7 +66,7 @@ Questo argomento descrive i passaggi di base necessari per creare un servizio Wi
   
      In questo esempio vengono specificati in modo esplicito gli endpoint del file di configurazione. Se non vengono aggiunti endpoint al servizio, il runtime aggiunge gli endpoint predefiniti. Per altre informazioni sull'endpoint, associazioni e comportamenti vedere [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) e [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-11. Per assicurarsi che il servizio è ospitato in modo corretto, aprire un'istanza di Internet Explorer e passare all'URL del servizio: `http://localhost/IISHostedCalc/Service.svc`  
+11. Per assicurarsi che il servizio sia ospitato correttamente, aprire un'istanza di Internet Explorer e passare all'URL del servizio: `http://localhost/IISHostedCalc/Service.svc`  
   
 ## <a name="example"></a>Esempio  
  Di seguito è riportato un elenco completo del codice per il servizio calcolatrice ospitato da IIS.  
@@ -77,8 +77,8 @@ Questo argomento descrive i passaggi di base necessari per creare un servizio Wi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Host in Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
-- [Servizi host](../../../../docs/framework/wcf/hosting-services.md)
+- [Hosting in Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [Servizi di hosting](../../../../docs/framework/wcf/hosting-services.md)
 - [Servizi WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
 - [Sicurezza](../../../../docs/framework/wcf/feature-details/security.md)
 - [Funzionalità di hosting di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

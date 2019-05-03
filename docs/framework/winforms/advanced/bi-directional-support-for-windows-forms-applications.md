@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f494d3176d72563a82b50fd5e077917e46045b91
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779184"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Supporto bidirezionale per le applicazioni Windows Forms
 È possibile usare Visual Studio per creare applicazioni basate su Windows che supportano lingue (right-to-left) bidirezionali, ad esempio arabo ed ebraico. Sono inclusi form standard, finestre di dialogo, form MDI e tutti i controlli che è possibile usare in questi form, ovvero tutti gli oggetti nello spazio dei nomi <xref:System.Windows.Forms.Control>.  
@@ -37,11 +37,11 @@ ms.locfileid: "57712284"
 |<xref:System.Windows.Forms.ContextMenu>|Viene visualizzato allineato a destra con ordine di lettura da destra a sinistra|Nessun effetto|No|  
 |<xref:System.Windows.Forms.DataGrid>|Viene visualizzato allineato a destra con ordine di lettura da destra a sinistra|Nessun effetto|No|  
 |<xref:System.Windows.Forms.DataGridView>|Influisce sul layout di controllo e sull'ordine di lettura da destra a sinistra|Nessun effetto|No|  
-|<xref:System.Windows.Forms.DateTimePicker>|Non interessato. Dipende dal linguaggio del sistema operativo|Esegue il mirroring del controllo|Sì|  
+|<xref:System.Windows.Forms.DateTimePicker>|Non interessato. Dipende dal linguaggio del sistema operativo|Esegue il mirroring del controllo|Yes|  
 |<xref:System.Windows.Forms.DomainUpDown>|Allinea a sinistra i pulsanti SU e GIÙ|Nessun effetto|No|  
 |<xref:System.Windows.Forms.ErrorProvider>|Non supportato|Nessun effetto|No|  
 |<xref:System.Windows.Forms.FontDialog>|Dipende dalla lingua del sistema operativo|Nessun effetto|No|  
-|<xref:System.Windows.Forms.Form>|Imposta l'ordine di lettura da destra a sinistra e inverte le barre di scorrimento|Esegue il mirroring del form|Sì|  
+|<xref:System.Windows.Forms.Form>|Imposta l'ordine di lettura da destra a sinistra e inverte le barre di scorrimento|Esegue il mirroring del form|Yes|  
 |<xref:System.Windows.Forms.GroupBox>|La barra del titolo viene visualizzata allineata a destra. I controlli figlio possono ereditare questa proprietà.|Usare <xref:System.Windows.Forms.TableLayoutPanel> all'interno del controllo per il supporto al mirroring da destra a sinistra|No|  
 |<xref:System.Windows.Forms.HScrollBar>|Inizia con la casella di scorrimento (pulsante di scorrimento) allineata a destra|Nessun effetto|No|  
 |<xref:System.Windows.Forms.ImageList>|Non richiesto|Nessun effetto|No|  
@@ -51,7 +51,7 @@ ms.locfileid: "57712284"
 |<xref:System.Windows.Forms.ListView>|Imposta l'ordine di lettura da destra a sinistra; gli elementi rimangono allineati a sinistra|Esegue il mirroring del controllo|Yes|  
 |<xref:System.Windows.Forms.MainMenu>|Visualizzato allineato a destra con ordine di lettura da destra a sinistra in fase di esecuzione (non in fase di progettazione)|Nessun effetto|No|  
 |<xref:System.Windows.Forms.MaskedTextBox>|Visualizza il testo da destra a sinistra.|Nessun effetto|No|  
-|<xref:System.Windows.Forms.MonthCalendar>|Non interessato. Dipende dal linguaggio del sistema operativo|Esegue il mirroring del controllo|Sì|  
+|<xref:System.Windows.Forms.MonthCalendar>|Non interessato. Dipende dal linguaggio del sistema operativo|Esegue il mirroring del controllo|Yes|  
 |<xref:System.Windows.Forms.NotifyIcon>|Non supportato|Non supportato|No|  
 |<xref:System.Windows.Forms.NumericUpDown>|I pulsanti SU e GIÙ sono allineati a sinistra|Nessun effetto|No|  
 |<xref:System.Windows.Forms.OpenFileDialog>|Nei sistemi operativi di destra a sinistra, l'impostazione del modulo che lo contiene <xref:System.Windows.Forms.Control.RightToLeft> proprietà <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> localizza la finestra di dialogo |Nessun effetto|No|  
@@ -61,7 +61,7 @@ ms.locfileid: "57712284"
 |<xref:System.Windows.Forms.PrintDialog>|Non interessato. Dipende dal linguaggio del sistema operativo|Nessun effetto|No|  
 |<xref:System.Drawing.Printing.PrintDocument>|La barra di scorrimento verticale diventa allineata a sinistra e la barra di scorrimento orizzontale inizia da sinistra|Nessun effetto|No|  
 |<xref:System.Windows.Forms.PrintPreviewDialog>|Non supportato|Non supportato|No|  
-|<xref:System.Windows.Forms.ProgressBar>|Non interessato da questa proprietà|Esegue il mirroring del controllo|Sì|  
+|<xref:System.Windows.Forms.ProgressBar>|Non interessato da questa proprietà|Esegue il mirroring del controllo|Yes|  
 |<xref:System.Windows.Forms.RadioButton>|Il pulsante di opzione viene visualizzato a destra del testo|Nessun effetto|No|  
 |<xref:System.Windows.Forms.RichTextBox>|Gli elementi del controllo che includono testo vengono visualizzati da destra a sinistra con ordine di lettura da destra a sinistra|Nessun effetto|No|  
 |<xref:System.Windows.Forms.SaveFileDialog>|Non interessato. Dipende dal linguaggio del sistema operativo|Nessun effetto|No|  
@@ -71,7 +71,7 @@ ms.locfileid: "57712284"
 |<xref:System.Windows.Forms.TabControl>|Non interessato da questa proprietà|Esegue il mirroring del controllo|Yes|  
 |<xref:System.Windows.Forms.TextBox>|Visualizza il testo da destra a sinistra con ordine di lettura da destra a sinistra|Nessun effetto|No|  
 |<xref:System.Windows.Forms.Timer>|Non richiesto|Non richiesto|No|  
-|<xref:System.Windows.Forms.ToolBar>|Non interessato da questa proprietà. In alternativa, usare <xref:System.Windows.Forms.ToolStrip>|Nessun effetto. In alternativa, usare <xref:System.Windows.Forms.ToolStrip>|Sì|  
+|<xref:System.Windows.Forms.ToolBar>|Non interessato da questa proprietà. In alternativa, usare <xref:System.Windows.Forms.ToolStrip>|Nessun effetto. In alternativa, usare <xref:System.Windows.Forms.ToolStrip>|Yes|  
 |<xref:System.Windows.Forms.ToolTip>|Imposta l'ordine di lettura da destra a sinistra|Nessun effetto|No|  
 |<xref:System.Windows.Forms.TrackBar>|Lo scorrimento o l'avanzamento inizia da destra. Quando <xref:System.Windows.Forms.TrackBar.Orientation%2A> è verticale, i segni di graduazione iniziano da destra|Nessun effetto|No|  
 |<xref:System.Windows.Forms.TreeView>|Imposta solo l'ordine di lettura da destra a sinistra|Esegue il mirroring del controllo|Yes|  
@@ -101,19 +101,19 @@ ms.locfileid: "57712284"
   
  È possibile creare versioni con mirroring dei controlli seguenti:  
   
--   <xref:System.Windows.Forms.ColumnHeader.ListView%2A>  
+- <xref:System.Windows.Forms.ColumnHeader.ListView%2A>  
   
--   <xref:System.Windows.Forms.Panel>  
+- <xref:System.Windows.Forms.Panel>  
   
--   <xref:System.Windows.Forms.StatusBar>  
+- <xref:System.Windows.Forms.StatusBar>  
   
--   <xref:System.Windows.Forms.TabControl>  
+- <xref:System.Windows.Forms.TabControl>  
   
--   <xref:System.Windows.Forms.TabPage>  
+- <xref:System.Windows.Forms.TabPage>  
   
--   <xref:System.Windows.Forms.ToolBar>  
+- <xref:System.Windows.Forms.ToolBar>  
   
--   <xref:System.Windows.Forms.TreeView>  
+- <xref:System.Windows.Forms.TreeView>  
   
  Alcuni controlli sono sealed, quindi non è possibile derivare un nuovo controllo da essi. Questi controlli includono <xref:System.Windows.Forms.ImageList> e <xref:System.Windows.Forms.ProgressBar>.  
   
