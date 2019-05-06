@@ -28,7 +28,7 @@ Esistono due generi di tipo in C#: tipi di riferimento e tipi di valore. Le vari
 
 - [delegate](delegate.md)
 
- In c# sono disponibili i seguenti tipi di riferimento predefiniti:
+ In C# sono disponibili i seguenti tipi di riferimento predefiniti:
 
 - [dynamic](dynamic.md)
 

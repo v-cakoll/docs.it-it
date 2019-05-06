@@ -28,7 +28,7 @@ Questo comando apre il visualizzatore di sintassi sotto forma di finestra degli 
 
 Ancorare questa finestra degli strumenti in una posizione appropriata all'interno di Visual Studio, ad esempio sul lato sinistro. Il visualizzatore offre le informazioni sul file di codice corrente.
 
-Creare un nuovo progetto usando il comando **File** > **Nuovo progetto**. È possibile creare sia progetti Visual Studio sia C#. Quando Visual Studio apre il file di codice principale di questo progetto, il visualizzatore ne visualizza l'albero della sintassi. È possibile aprire qualsiasi esistente c# / VB file in questa istanza di Visual Studio e il Visualizzatore Visualizza albero della sintassi del file. Se in Visual Studio sono aperti più file di codice, viene visualizzato l'albero della sintassi del file di codice attualmente attivo, vale a dire il file di codice con lo stato attivo.
+Creare un nuovo progetto usando il comando **File** > **Nuovo progetto**. È possibile creare sia progetti Visual Studio sia C#. Quando Visual Studio apre il file di codice principale di questo progetto, il visualizzatore ne visualizza l'albero della sintassi. È possibile aprire qualsiasi esistente C# / VB file in questa istanza di Visual Studio e il Visualizzatore Visualizza albero della sintassi del file. Se in Visual Studio sono aperti più file di codice, viene visualizzato l'albero della sintassi del file di codice attualmente attivo, vale a dire il file di codice con lo stato attivo.
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Visualizzazione di un albero della sintassi di C#](media/syntax-visualizer/visualize-csharp.png)

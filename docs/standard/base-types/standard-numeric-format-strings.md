@@ -46,7 +46,7 @@ Le stringhe di formato numerico standard sono supportate:
  
 - Dalla [funzionalità di formattazione composita](../../../docs/standard/base-types/composite-formatting.md) di .NET usata da alcuni metodi `Write` e `WriteLine` delle classi <xref:System.Console> e <xref:System.IO.StreamWriter>, dal metodo <xref:System.String.Format%2A?displayProperty=nameWithType> e dal metodo <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La funzionalità di formattazione composta consente di includere la rappresentazione di stringa di più elementi dati in un'unica stringa per specificare la larghezza di un campo e per allinearvi i numeri all'interno. Per altre informazioni, vedere [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md).  
 
-- Dalle [stringhe interpolate](../../csharp/language-reference/tokens/interpolated.md) in c# e Visual Basic, che forniscono una sintassi semplificata rispetto alle stringhe di formato composito.
+- Dalle [stringhe interpolate](../../csharp/language-reference/tokens/interpolated.md) in C# e Visual Basic, che forniscono una sintassi semplificata rispetto alle stringhe di formato composito.
  
 > [!TIP]
 >  È possibile scaricare l' [utilità di formattazione](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), un'applicazione che consente di applicare stringhe di formato a valori numerici o di data e ora e di visualizzare la stringa di risultato.  
