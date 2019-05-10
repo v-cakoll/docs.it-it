@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f86636cd244ce53ed00f80b38777e78a3278d6f
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856713"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912498"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delega e rappresentazione con WCF
 La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l'accesso dei client alle risorse del dominio del servizio. Tali risorse possono essere risorse del computer, ad esempio file locali (rappresentazione), o risorse in un'altro computer, ad esempio una condivisione file (delega). Per un'applicazione di esempio, vedere [Rappresentazione di client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Per un esempio di come usare la rappresentazione, vedere [come: Rappresenta un Client in un servizio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -37,22 +37,22 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
 ### <a name="cached-token-impersonation"></a>Rappresentazione con un token memorizzato nella cache  
  È possibile eseguire la rappresentazione con un token memorizzato nella cache con gli elementi seguenti:  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>e <xref:System.ServiceModel.NetTcpBinding> con una credenziale client di Windows.  
+- <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>e <xref:System.ServiceModel.NetTcpBinding> con una credenziale client di Windows.  
   
--   <xref:System.ServiceModel.BasicHttpBinding> con l'enumerazione <xref:System.ServiceModel.BasicHttpSecurityMode> impostata sulla credenziale <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> o qualsiasi altra associazione standard in cui il client presenta una credenziale basata sul nome utente di cui il servizio può eseguire il mapping a un account di Windows valido.  
+- <xref:System.ServiceModel.BasicHttpBinding> con l'enumerazione <xref:System.ServiceModel.BasicHttpSecurityMode> impostata sulla credenziale <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> o qualsiasi altra associazione standard in cui il client presenta una credenziale basata sul nome utente di cui il servizio può eseguire il mapping a un account di Windows valido.  
   
--   Qualsiasi <xref:System.ServiceModel.Channels.CustomBinding> che utilizza una credenziale client di Windows con la proprietà `requireCancellation` impostata su `true` (tale proprietà è disponibile per le classi seguenti: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> e <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>). Se si utilizza una conversazione protetta sull'associazione, è necessario che abbia la proprietà `requireCancellation` impostata su `true`.  
+- Qualsiasi <xref:System.ServiceModel.Channels.CustomBinding> che utilizza una credenziale client di Windows con la proprietà `requireCancellation` impostata su `true` (tale proprietà è disponibile per le classi seguenti: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> e <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>). Se si utilizza una conversazione protetta sull'associazione, è necessario che abbia la proprietà `requireCancellation` impostata su `true`.  
   
--   Qualsiasi <xref:System.ServiceModel.Channels.CustomBinding> in cui il client presenta una credenziale basata sul nome utente. Se si utilizza una conversazione protetta sull'associazione, è necessario che abbia la proprietà `requireCancellation` impostata su `true`.  
+- Qualsiasi <xref:System.ServiceModel.Channels.CustomBinding> in cui il client presenta una credenziale basata sul nome utente. Se si utilizza una conversazione protetta sull'associazione, è necessario che abbia la proprietà `requireCancellation` impostata su `true`.  
   
 ### <a name="s4u-based-impersonation"></a>Rappresentazione basata su S4U.  
  È possibile eseguire la rappresentazione basata su S4U con gli elementi seguenti:  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>e <xref:System.ServiceModel.NetTcpBinding> con una credenziale client basata su certificato di cui il servizio può eseguire il mapping a un account di Windows valido.  
+- <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>e <xref:System.ServiceModel.NetTcpBinding> con una credenziale client basata su certificato di cui il servizio può eseguire il mapping a un account di Windows valido.  
   
--   Qualsiasi <xref:System.ServiceModel.Channels.CustomBinding> che utilizza una credenziale client di Windows con la proprietà `requireCancellation` impostata su `false`  
+- Qualsiasi <xref:System.ServiceModel.Channels.CustomBinding> che utilizza una credenziale client di Windows con la proprietà `requireCancellation` impostata su `false`  
   
--   Qualsiasi <xref:System.ServiceModel.Channels.CustomBinding> che utilizza una credenziale client di Windows o basata sul nome utente e una conversazione protetta con la proprietà `requireCancellation` impostata su `false`.  
+- Qualsiasi <xref:System.ServiceModel.Channels.CustomBinding> che utilizza una credenziale client di Windows o basata sul nome utente e una conversazione protetta con la proprietà `requireCancellation` impostata su `false`.  
   
  La misura in cui il servizio può eseguire la rappresentazione del client dipende dai privilegi di cui dispone l'account del servizio quando tenta la rappresentazione, dal tipo di rappresentazione utilizzato ed eventualmente dall'ambito di rappresentazione consentito dal client.  
   
@@ -201,9 +201,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
  Per ulteriori dettagli sulla configurazione della delega vincolata, vedere gli argomenti seguenti su MSDN:  
   
--   [Risoluzione dei problemi relativi alla delega Kerberos](https://go.microsoft.com/fwlink/?LinkId=36724)  
+- [Risoluzione dei problemi relativi alla delega Kerberos](https://go.microsoft.com/fwlink/?LinkId=36724)  
   
--   [Transizione del protocollo Kerberos e delega vincolata](https://go.microsoft.com/fwlink/?LinkId=36725)  
+- [Transizione del protocollo Kerberos e delega vincolata](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>Vedere anche
 

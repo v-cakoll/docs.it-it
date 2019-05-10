@@ -2,12 +2,12 @@
 title: Introduzione al routing
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 41545d0340ae222e427d1e6d428ed1e3f7b4fa76
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991094"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912484"
 ---
 # <a name="routing-introduction"></a>Introduzione al routing
 Il servizio di routing fornisce un intermediario SOAP di collegamento generico in grado di indirizzare i messaggi in base al relativo contenuto. Il servizio di routing consente di creare logica di routing complessa per l'implementazione di scenari quali l'aggregazione dei servizi, il controllo delle versioni dei servizi, il routing prioritario e il routing multicast. Il servizio di routing offre inoltre funzionalità di gestione degli errori che consentono di configurare elenchi di endpoint di backup ai quali vengono inviati i messaggi se si verifica un errore di invio all'endpoint di destinazione primario.  
@@ -354,7 +354,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 ### <a name="supported-error-patterns"></a>Modelli di errore supportati  
  Nella tabella seguente vengono descritti i modelli compatibili con l'uso di elenchi di endpoint di backup, insieme a note che descrivono dettagli specifici di gestione degli errori.  
   
-|Modello|Sessione|Transazione|Contesto di ricezione|Elenco di backup supportato|Note|  
+|Modello|Sessione|Transaction|Contesto di ricezione|Elenco di backup supportato|Note|  
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
 |Unidirezionale||||Yes|Tenta di inviare di nuovo il messaggio a un endpoint di backup. Se per il messaggio viene usata la trasmissione multicast, solo il messaggio nel canale con errori viene spostato alla relativa destinazione di backup.|  
 |Unidirezionale||✓||No|Viene generata un'eccezione e viene eseguito il rollback della transazione.|  

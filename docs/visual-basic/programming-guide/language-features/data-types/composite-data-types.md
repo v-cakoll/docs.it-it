@@ -11,12 +11,12 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65ee23c59958eefb94c7ab0c6bef4a7e992a121c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907387"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601172"
 ---
 # <a name="composite-data-types-visual-basic"></a>Tipi di dati compositi (Visual Basic)
 Oltre a disponibili in Visual Basic di tipi di dati elementari è anche possibile assemblare gli elementi di tipi diversi per creare *tipi di dati compositi* , ad esempio classi, matrici e strutture. È possibile compilare i tipi di dati composti da tipi elementari e da altri tipi composti. Ad esempio, è possibile definire una matrice di elementi di struttura o una struttura con i membri della matrice.  
@@ -36,11 +36,11 @@ Una tupla è una struttura semplice contenente due o più campi i cui tipi sono 
 ## <a name="array-types"></a>Tipi di matrice  
  È disponibile alcun tipo di dati unica che comprende tutte le matrici. Il tipo di dati di una determinata istanza di una matrice viene determinato nel modo seguente:  
   
--   Il fatto di essere una matrice  
+- Il fatto di essere una matrice  
   
--   La classificazione (numero di dimensioni) della matrice  
+- La classificazione (numero di dimensioni) della matrice  
   
--   Il tipo di elemento della matrice  
+- Il tipo di elemento della matrice  
   
  In particolare, la lunghezza di una determinata dimensione non fa parte dell'istanza tipo di dati. Questa condizione è illustrata nell'esempio seguente.  
   

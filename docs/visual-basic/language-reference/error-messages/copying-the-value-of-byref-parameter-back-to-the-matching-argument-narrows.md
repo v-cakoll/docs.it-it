@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: fa8607bf72dfb344048ec82514182dcb6810274d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6d238e9c426b5ae7df0cde745b51eace1cae5d87
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803857"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913198"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>Quando il valore del parametro 'ByRef' '\<nomeparametro >' nell'argomento corrispondente viene convertito dal tipo '\<NomeTipo1 >' nel tipo '\<in NomeTipo2 >'
 Una routine viene chiamata con un argomento che può ampliarsi nel tipo di parametro corrispondente e la conversione dal parametro per l'argomento è di restrizione.  

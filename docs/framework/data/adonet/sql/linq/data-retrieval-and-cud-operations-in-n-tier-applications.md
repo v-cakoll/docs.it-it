@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8ce30d60b05e600e4f6906221d4c360c7ad8c396
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037921"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586668"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Recupero di dati e operazioni CUD in applicazioni a più livelli (LINQ to SQL)
 Quando si serializzano oggetti entità, ad esempio Customers o Orders, in un client di una rete, tali entità vengono disconnesse dal relativo contesto dati. Il contesto dati non rileva più le modifiche o le associazioni con gli altri oggetti, il che non rappresenta un problema se i client leggono solo i dati. È inoltre relativamente semplice consentire ai client di aggiungere nuove righe in un database. Tuttavia, se l'applicazione richiede che i client siano in grado di aggiornare o eliminare i dati, sarà necessario associare le entità a un nuovo contesto dati prima di chiamare <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Inoltre, se si usa un controllo della concorrenza ottimistica con i valori originali, sarà necessario anche un modo per fornire al database l'entità originale e l'entità come modificata. I metodi `Attach` vengono forniti per consentire l'inserimento delle entità in un nuovo contesto dati dopo essere stati disconnessi.  

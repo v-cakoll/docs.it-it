@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Keys.Alt enumeration member
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
-ms.openlocfilehash: 571af49cdf82b876cfb72a7c7636874c8d155fb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 947f3d3172744764feb0045459151c7769f07336
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803142"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591592"
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>Procedura: Determinare quale tasto di modifica è stato premuto
 Quando si crea un'applicazione che accetta le sequenze di tasti dell'utente, è anche possibile monitorare i tasti di modifica, ad esempio i tasti MAIUSC, ALT e CTRL. Quando viene premuto un tasto modificatore in combinazione con altre chiavi, o con clic del mouse, l'applicazione può rispondere in modo appropriato. Ad esempio, se si preme la lettera S, ciò può comportare semplicemente una "s" venga visualizzato sullo schermo, ma se vengono premuti i tasti CTRL + S, può essere salvato nel documento corrente. Se si gestisce il <xref:System.Windows.Forms.Control.KeyDown> evento, il <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> proprietà del <xref:System.Windows.Forms.KeyEventArgs> ricevuto dall'evento gestore specifica vengono premuti i tasti di modifica. In alternativa, il <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> proprietà di <xref:System.Windows.Forms.KeyEventArgs> specifica il carattere che è stato premuto anche come tasti di modifica combinati con un OR bit per bit. Tuttavia, se si sta gestendo il <xref:System.Windows.Forms.Control.KeyPress> un evento o un mouse, il gestore dell'evento non riceve queste informazioni. In questo caso, è necessario usare il <xref:System.Windows.Forms.Control.ModifierKeys%2A> proprietà del <xref:System.Windows.Forms.Control> classe. In entrambi i casi, è necessario eseguire un'operazione con AND bit per bit di appropriato <xref:System.Windows.Forms.Keys> valore e il valore si sta testando. Il <xref:System.Windows.Forms.Keys> enumerazione offre varianti di ogni chiave di modificatore, pertanto è importante eseguire bit per bit e con il valore corretto. Ad esempio, il tasto MAIUSC è rappresentato da <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> e <xref:System.Windows.Forms.Keys.LShiftKey> il valore corretto per eseguire il test MAIUSC come chiave di modificatore <xref:System.Windows.Forms.Keys.Shift>. Analogamente, per verificare di tasti CTRL e ALT come modificatori è necessario utilizzare il <xref:System.Windows.Forms.Keys.Control> e <xref:System.Windows.Forms.Keys.Alt> rispettivamente i valori.  
@@ -39,7 +39,7 @@ Quando si crea un'applicazione che accetta le sequenze di tasti dell'utente, è 
   
 ### <a name="to-determine-which-modifier-key-was-pressed"></a>Per determinare quale tasto di modifica premuto  
   
--   Usare bit per bit `AND` operatore con il <xref:System.Windows.Forms.Control.ModifierKeys%2A> proprietà e il valore di <xref:System.Windows.Forms.Keys> enumerazione per determinare se viene premuto un tasto di modifica specifico. Esempio di codice seguente viene illustrato come determinare se il tasto MAIUSC è premuto all'interno di un <xref:System.Windows.Forms.Control.KeyPress> gestore dell'evento.  
+- Usare bit per bit `AND` operatore con il <xref:System.Windows.Forms.Control.ModifierKeys%2A> proprietà e il valore di <xref:System.Windows.Forms.Keys> enumerazione per determinare se viene premuto un tasto di modifica specifico. Esempio di codice seguente viene illustrato come determinare se il tasto MAIUSC è premuto all'interno di un <xref:System.Windows.Forms.Control.KeyPress> gestore dell'evento.  
   
      [!code-cpp[System.Windows.Forms.DetermineModifierKey#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/cpp/form1.cpp#5)]
      [!code-csharp[System.Windows.Forms.DetermineModifierKey#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/CS/form1.cs#5)]

@@ -2,12 +2,12 @@
 title: Aggiornamenti flusso personalizzati
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bfb20a38d5d603a7f538235ee88045c92fc8cc85
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967908"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587314"
 ---
 # <a name="custom-stream-upgrades"></a>Aggiornamenti flusso personalizzati
 I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso continuo di byte tra il client e il server. Questo flusso viene realizzato da un oggetto <xref:System.IO.Stream>. In un aggiornamento flusso, il client desidera aggiungere un livello di protocollo facoltativo allo stack di canali e chiede all'altra estremità del canale di comunicazione di farlo. L'aggiornamento flusso consiste nel sostituire l'oggetto <xref:System.IO.Stream> originale con un oggetto aggiornato.  

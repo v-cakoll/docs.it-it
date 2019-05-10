@@ -2,12 +2,12 @@
 title: Ricerca di individuazione e FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 097027026afa6099f85dee1485fa3a451bb8fefd
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856518"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912691"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Ricerca di individuazione e FindCriteria
 Un'operazione di ricerca dell'individuazione viene inizializzata da un client per individuare uno o più servizi ed è una delle azioni principali nell'ambito dell'individuazione. L'esecuzione di una ricerca invia un messaggio WS-Discovery Probe sulla rete. I servizi che corrispondono ai criteri specificati inviano una risposta con i messaggi WS-Discovery ProbeMatch. Per altre informazioni sui messaggi di individuazione, vedere la [specifica WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
