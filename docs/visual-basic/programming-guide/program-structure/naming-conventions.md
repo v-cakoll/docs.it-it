@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: 46f59403feced4baafef4662065cb7daedbeaa7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ce8d4c5ede0d722d2c1768b9c2cd7929f296114e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050376"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651240"
 ---
 # <a name="visual-basic-naming-conventions"></a>Convenzioni di denominazione di Visual Basic
 Quando si assegna un elemento in un'applicazione Visual Basic, il primo carattere del nome deve essere un carattere alfabetico o un carattere di sottolineatura. Si noti tuttavia che i nomi che iniziano con un carattere di sottolineatura non sono conformi con la [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS).  

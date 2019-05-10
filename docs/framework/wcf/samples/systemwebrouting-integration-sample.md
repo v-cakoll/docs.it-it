@@ -2,12 +2,12 @@
 title: Esempio di integrazione di SystemWebRouting
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: f4f9772583bbd66d19cc59f453489965aabf74b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a9f9dc871b92b8cd689234c79b09c98e38a2848d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007760"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650996"
 ---
 # <a name="systemwebrouting-integration-sample"></a>Esempio di integrazione di SystemWebRouting
 In questo esempio viene descritta l'integrazione del livello di hosting con le classi nello spazio dei nomi <xref:System.Web.Routing>. Le classi nello spazio dei nomi <xref:System.Web.Routing> consentono a un'applicazione di usare URL che non corrispondono direttamente a una risorsa fisica. Uso del routing Web consente allo sviluppatore di creare indirizzi virtuali per il protocollo HTTP che vengono quindi rimappata alla effettivi dei servizi WCF. Ciò si rivela utile quando un servizio WCF deve essere ospitato senza richiedere una risorsa o un file fisico oppure quando l'accesso ai servizi deve essere eseguito con URL che non contengono file con estensioni quali html o aspx. In questo esempio viene descritto come usare la classe <xref:System.Web.Routing.RouteTable> per creare URI virtuali mappati a servizi in esecuzione definiti in global.asax. 
@@ -64,7 +64,7 @@ In questo esempio potrebbe essere già installato nel computer. Verificare la di
   
     3. Per il **percorso fisico**, selezionare la cartella Service all'interno del progetto.  
   
-    4. Fare clic su **OK**.  
+    4. Premere **OK**.  
   
 4. Avviare l'applicazione, facendo clic all'applicazione Web e selezionando **Gestione applicazioni** e quindi **Sfoglia**.  
   

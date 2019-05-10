@@ -2,12 +2,12 @@
 title: Applicazioni a più livelli e remote con LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-ms.openlocfilehash: 7741368896b0bf5a2508d9b727fad386cce6177d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 31f06fd5e840c51c0133d22078d79cd4f945c369
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794498"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660926"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>Applicazioni a più livelli e remote con LINQ to SQL
 È possibile creare applicazioni a più livelli che usano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. In genere, il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] contesto dei dati, le classi di entità e logica di costruzione delle query si trovano nel livello intermedio come livello di accesso ai dati (DAL). La regola business e i dati non persistenti possono essere implementati completamente in classi e metodi parziali di entità e nel contesto dati oppure possono essere implementati in classi separate.

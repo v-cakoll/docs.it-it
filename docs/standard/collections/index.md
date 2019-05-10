@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba780692d59157438da1e04f3bdc3577a3eaef65
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909136"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664568"
 ---
 # <a name="collections-and-data-structures"></a>Raccolte e strutture di dati
 Dati simili possono spesso essere gestiti in modo più efficiente quando memorizzati e modificati come una raccolta. È possibile usare la classe <xref:System.Array?displayProperty=nameWithType> o le classi negli spazi dei nomi <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> e System.Collections.Immutable per aggiungere, rimuovere e modificare singoli elementi o un intervallo di elementi nella raccolta.  
@@ -30,17 +30,17 @@ Dati simili possono spesso essere gestiti in modo più efficiente quando memoriz
 ## <a name="common-collection-features"></a>Funzionalità comuni delle raccolte  
  Tutte le raccolte forniscono metodi per l'aggiunta, la rimozione o la ricerca di elementi nella raccolta. In aggiunta, tutte le raccolte che implementano direttamente o indirettamente l'interfaccia <xref:System.Collections.ICollection> o l'interfaccia <xref:System.Collections.Generic.ICollection%601> condividono le funzionalità seguenti:  
   
--   **La possibilità di enumerare la raccolta**  
+- **La possibilità di enumerare la raccolta**  
   
      Le raccolte di .NET Framework implementano <xref:System.Collections.IEnumerable?displayProperty=nameWithType> oppure <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> per consentire l'iterazione della raccolta. Un enumeratore può essere considerato come un puntatore che si sposta a qualsiasi elemento nella raccolta. Le istruzioni [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) e [For Each...Next](../../visual-basic/language-reference/statements/for-each-next-statement.md) usano l'enumeratore esposto dal metodo <xref:System.Collections.IEnumerable.GetEnumerator%2A> e nascondono la complessità di gestione dell'enumeratore. Inoltre, qualsiasi raccolta che implementi <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> viene considerata un *tipo queryable* e può essere sottoposta a query con LINQ. Le query LINQ forniscono un modello comune per l'accesso ai dati. In genere sono più concise e leggibili dei cicli `foreach` standard e forniscono funzionalità di filtro, ordinamento e raggruppamento. Le query LINQ possono inoltre migliorare le prestazioni. Per altre informazioni, vedere [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), [Introduzione alle query LINQ (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) e [Operazioni di Query di base (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
   
--   **La possibilità di copiare il contenuto della raccolta in una matrice**  
+- **La possibilità di copiare il contenuto della raccolta in una matrice**  
   
      Tutti le raccolte possono essere copiate in una matrice usando il metodo **CopyTo**. Tuttavia, l'ordine degli elementi nella nuova matrice si basa sulla sequenza in cui vengono restituiti dall'enumeratore. La matrice risultante è sempre unidimensionale con limite inferiore pari a zero.  
   
  Inoltre, molte classi di raccolte contengono le seguenti funzionalità:  
   
--   **Proprietà capacità e conteggio**  
+- **Proprietà capacità e conteggio**  
   
      La capacità di una raccolta è il numero di elementi che può contenere. Il conteggio di una raccolta è il numero di elementi che contiene effettivamente. Alcune raccolte nascondono la capacità o il conteggio oppure entrambi.  
   
@@ -48,11 +48,11 @@ Dati simili possono spesso essere gestiti in modo più efficiente quando memoriz
   
      Un <xref:System.Collections.BitArray> è un caso speciale: la sua capacità corrisponde alla sua lunghezza, che corrisponde al relativo conteggio.  
   
--   **Un limite inferiore coerente**  
+- **Un limite inferiore coerente**  
   
      Il limite inferiore di una raccolta è l'indice del primo elemento. Tutte le raccolte indicizzate negli spazi dei nomi <xref:System.Collections> hanno un limite inferiore pari a zero, ossia possono essere indicizzate da 0. <xref:System.Array> ha un limite inferiore pari a zero per impostazione predefinita, ma è possibile definire un limite inferiore differente durante la creazione di un'istanza della classe **Array** con <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>.  
   
--   **Sincronizzazione per l'accesso da più thread** (solo classi <xref:System.Collections>).  
+- **Sincronizzazione per l'accesso da più thread** (solo classi <xref:System.Collections>).  
   
      I tipi di raccolta non generica nello spazio dei nomi <xref:System.Collections> forniscono una determinata thread safety con la sincronizzazione, in genere esposte attraverso i membri <xref:System.Collections.ICollection.SyncRoot%2A> e <xref:System.Collections.ICollection.IsSynchronized%2A>. Queste raccolte non sono thread-safe per impostazione predefinita. Se si richiede un accesso multithreading scalabile ed efficiente a una raccolta, usare una delle classi nello spazio dei nomi <xref:System.Collections.Concurrent> o considerare l'uso di una raccolta non modificabile. Per altre informazioni, vedere [Raccolte thread-safe](../../../docs/standard/collections/thread-safe/index.md).  
   

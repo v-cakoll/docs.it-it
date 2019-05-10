@@ -20,12 +20,12 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: b90fdb562f9d65858ac477321a18067cc6e621a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: af75f5eb5a4281f6efae8ec3c9442ce2b28f595e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971704"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64646990"
 ---
 # <a name="single-data-type-visual-basic"></a>Tipo di dati Single (Visual Basic)
 Contiene con segno a 32 bit IEEE (4 byte) e con precisione singola numeri a virgola mobile con valore compreso tra - 3,4028235E + 38 e - 1,401298E-45 per valori negativi e tra 1,401298E-45 e 3,4028235E + 38 per i valori positivi. Numeri a precisione singola contengono un'approssimazione di un numero reale.  

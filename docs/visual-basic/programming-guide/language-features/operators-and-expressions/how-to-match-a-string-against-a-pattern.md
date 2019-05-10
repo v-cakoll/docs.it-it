@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5eb6bd5b5e7b2f0c3692c0fa2431a0b8f295299
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864702"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649720"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Procedura: Confrontare una stringa con un modello (Visual Basic)
 Se si desidera determinare se un'espressione del [tipo di dati String](../../../../visual-basic/language-reference/data-types/string-data-type.md) soddisfa un modello, è possibile utilizzare il [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
@@ -29,7 +29,7 @@ Se si desidera determinare se un'espressione del [tipo di dati String](../../../
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>Per confrontare un carattere incluso nell'espressione di stringa con un carattere specifico  
   
--   Inserire il carattere specifico direttamente nella stringa di modello. Alcuni caratteri speciali devono essere racchiusi tra parentesi quadre (`[ ]`). Per altre informazioni, vedere [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
+- Inserire il carattere specifico direttamente nella stringa di modello. Alcuni caratteri speciali devono essere racchiusi tra parentesi quadre (`[ ]`). Per altre informazioni, vedere [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
      Nell'esempio seguente viene verificato se `myString` è costituito da esattamente il carattere singolo `H`.  
   
@@ -37,7 +37,7 @@ Se si desidera determinare se un'espressione del [tipo di dati String](../../../
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Per confrontare un carattere incluso nell'espressione di stringa con un carattere jolly  
   
--   Inserire un punto interrogativo (`?`) nella stringa di modello. Qualsiasi carattere valido in questa posizione determina una corrispondenza corretta.  
+- Inserire un punto interrogativo (`?`) nella stringa di modello. Qualsiasi carattere valido in questa posizione determina una corrispondenza corretta.  
   
      Nell'esempio seguente viene verificato se `myString` costituita dal carattere singolo `W` seguita da due caratteri di tutti i valori.  
   
@@ -45,7 +45,7 @@ Se si desidera determinare se un'espressione del [tipo di dati String](../../../
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Per confrontare un carattere nell'espressione stringa rispetto a un elenco di caratteri  
   
--   Inserire le parentesi (`[ ]`) nella stringa di modello e all'interno delle parentesi inserire l'elenco dei caratteri. Non separare i caratteri con virgole o qualsiasi altro separatore. Qualsiasi carattere singolo nell'elenco determina una corrispondenza corretta.  
+- Inserire le parentesi (`[ ]`) nella stringa di modello e all'interno delle parentesi inserire l'elenco dei caratteri. Non separare i caratteri con virgole o qualsiasi altro separatore. Qualsiasi carattere singolo nell'elenco determina una corrispondenza corretta.  
   
      Nell'esempio seguente viene verificato se `myString` è costituito da qualsiasi carattere valido seguiti da un solo i caratteri `A`, `C`, o `E`.  
   
@@ -55,7 +55,7 @@ Se si desidera determinare se un'espressione del [tipo di dati String](../../../
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>Per confrontare un carattere incluso nell'espressione di stringa con un intervallo di caratteri  
   
--   Inserire le parentesi (`[ ]`) nella stringa di modello e racchiudere tra parentesi i minimo e massimo di caratteri nell'intervallo, separati da un trattino (`–`). Qualsiasi carattere singolo compreso nell'intervallo determina una corrispondenza corretta.  
+- Inserire le parentesi (`[ ]`) nella stringa di modello e racchiudere tra parentesi i minimo e massimo di caratteri nell'intervallo, separati da un trattino (`–`). Qualsiasi carattere singolo compreso nell'intervallo determina una corrispondenza corretta.  
   
      Nell'esempio seguente viene verificato se `myString` è costituito da caratteri `num` seguita da esattamente uno dei caratteri `i`, `j`, `k`, `l`, `m`, o `n`.  
   

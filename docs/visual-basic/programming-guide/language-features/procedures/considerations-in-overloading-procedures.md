@@ -25,12 +25,12 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5a26a8b68a2f786213aa49f30247d692b3de2f7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864351"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649652"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Considerazioni sull'overload di routine (Visual Basic)
 Quando si esegue l'overload di una procedura, è necessario utilizzare un diverso *firma* per ogni versione di overload. Ciò significa in genere che ogni versione è necessario specificare un elenco di parametri diverso. Per altre informazioni, vedere "Firma diversa" nella [overload della routine](./procedure-overloading.md).  
@@ -50,14 +50,14 @@ Quando si esegue l'overload di una procedura, è necessario utilizzare un divers
 #### <a name="when-to-use-overloaded-versions"></a>Quando usare le versioni di overload  
  È possibile definire una serie di versioni di overload nei casi seguenti:  
   
--   La logica nel codice della procedura è significativamente diversa a seconda del fatto che il codice chiamante fornisce un argomento facoltativo o No.  
+- La logica nel codice della procedura è significativamente diversa a seconda del fatto che il codice chiamante fornisce un argomento facoltativo o No.  
   
--   Il codice della routine in modo affidabile non è possibile verificare se il codice chiamante ha fornito un argomento facoltativo. Ciò avviene, ad esempio, se non è disponibile alcun possibile candidato per un valore predefinito che il codice chiamante non prevedibili per fornire.  
+- Il codice della routine in modo affidabile non è possibile verificare se il codice chiamante ha fornito un argomento facoltativo. Ciò avviene, ad esempio, se non è disponibile alcun possibile candidato per un valore predefinito che il codice chiamante non prevedibili per fornire.  
   
 #### <a name="when-to-use-optional-parameters"></a>Quando usare i parametri facoltativi  
  Potrebbe essere preferibile una o più parametri facoltativi nei casi seguenti:  
   
--   L'azione necessaria solo quando il codice chiamante non fornisce un argomento facoltativo consiste nell'impostare il parametro su un valore predefinito. In tal caso, il codice della routine può essere meno complesso se si definisce una singola versione con uno o più `Optional` parametri.  
+- L'azione necessaria solo quando il codice chiamante non fornisce un argomento facoltativo consiste nell'impostare il parametro su un valore predefinito. In tal caso, il codice della routine può essere meno complesso se si definisce una singola versione con uno o più `Optional` parametri.  
   
  Per altre informazioni, vedere [parametri facoltativi](./optional-parameters.md).  
   
@@ -67,18 +67,18 @@ Quando si esegue l'overload di una procedura, è necessario utilizzare un divers
 #### <a name="when-to-use-overloaded-versions"></a>Quando usare le versioni di overload  
  È possibile definire una serie di versioni di overload nei casi seguenti:  
   
--   Sai che il codice chiamante non passa mai più di un numero ridotto di valori nella matrice di parametri.  
+- Sai che il codice chiamante non passa mai più di un numero ridotto di valori nella matrice di parametri.  
   
--   La logica nel codice della procedura è significativamente diversa a seconda di quanti valori passa al codice chiamante.  
+- La logica nel codice della procedura è significativamente diversa a seconda di quanti valori passa al codice chiamante.  
   
--   Il codice chiamante può passare i valori dei tipi di dati diversi.  
+- Il codice chiamante può passare i valori dei tipi di dati diversi.  
   
 #### <a name="when-to-use-a-parameter-array"></a>Quando usare una matrice di parametri  
  Meglio vengono gestite da un `ParamArray` parametro nei casi seguenti:  
   
--   Non si è in grado di stimare quanti valori il codice chiamante può passare alla matrice di parametri e potrebbe essere un numero elevato.  
+- Non si è in grado di stimare quanti valori il codice chiamante può passare alla matrice di parametri e potrebbe essere un numero elevato.  
   
--   La logica della routine si presta a scorrere tutti i valori passati al codice chiamante, esegue essenzialmente le stesse operazioni in ogni valore.  
+- La logica della routine si presta a scorrere tutti i valori passati al codice chiamante, esegue essenzialmente le stesse operazioni in ogni valore.  
   
  Per altre informazioni, vedere [matrici di parametri](./parameter-arrays.md).  
   
@@ -96,11 +96,11 @@ Quando si esegue l'overload di una procedura, è necessario utilizzare un divers
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Overload impliciti per un parametro ParamArray  
  Il compilatore prende in considerazione una procedura con un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametro in modo che un numero infinito di overload, che si differenziano tra loro in ciò che il codice chiamante passa alla matrice di parametri, come indicato di seguito:  
   
--   Uno degli overload quando il codice chiamante non fornisce un argomento per il `ParamArray`  
+- Uno degli overload quando il codice chiamante non fornisce un argomento per il `ParamArray`  
   
--   Uno degli overload quando il codice chiamante fornisce una matrice unidimensionale del `ParamArray` tipo di elemento  
+- Uno degli overload quando il codice chiamante fornisce una matrice unidimensionale del `ParamArray` tipo di elemento  
   
--   Per ogni numero intero positivo, un overload quando il codice chiamante fornisce tale numero di argomenti, ognuno del `ParamArray` tipo di elemento  
+- Per ogni numero intero positivo, un overload quando il codice chiamante fornisce tale numero di argomenti, ognuno del `ParamArray` tipo di elemento  
   
  Le dichiarazioni seguenti illustrano questi overload impliciti.  
   
@@ -115,11 +115,11 @@ Quando si esegue l'overload di una procedura, è necessario utilizzare un divers
 ## <a name="typeless-programming-as-an-alternative-to-overloading"></a>La programmazione alternativa per l'overload  
  Se si desidera il codice chiamante può passare diversi tipi di dati a un parametro, un approccio alternativo è costituito dalla programmazione. È possibile impostare il tipo di opzione di controllo `Off` con il [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) o il [/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) opzione del compilatore. Non è quindi necessario dichiarare il tipo di dati del parametro. Tuttavia, questo approccio presenta i seguenti svantaggi rispetto all'overload:  
   
--   La programmazione produce codice di esecuzione meno efficiente.  
+- La programmazione produce codice di esecuzione meno efficiente.  
   
--   La procedura è necessario testare ogni tipo di dati che anticipa il passaggio.  
+- La procedura è necessario testare ogni tipo di dati che anticipa il passaggio.  
   
--   Il compilatore non è possibile segnalare un errore se il codice chiamante passa un tipo di dati che non supporta la routine.  
+- Il compilatore non è possibile segnalare un errore se il codice chiamante passa un tipo di dati che non supporta la routine.  
   
 ## <a name="see-also"></a>Vedere anche
 

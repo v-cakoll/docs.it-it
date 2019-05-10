@@ -2,12 +2,12 @@
 title: Panoramica degli attributi (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2ecc3fb0a3bf7365b6eec39e1c5086d99f2c5a19
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968051"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642446"
 ---
 # <a name="attributes-overview-visual-basic"></a>Panoramica degli attributi (Visual Basic)
 Gli attributi offrono un metodo efficace per l'associazione di metadati o informazioni dichiarative con il codice (assembly, tipi, metodi, proprietà e così via). Dopo aver associato un attributo a un'entità di programma, in fase di esecuzione è possibile eseguire una query su tale attributo usando una tecnica denominata *reflection*. Per altre informazioni, vedere [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  

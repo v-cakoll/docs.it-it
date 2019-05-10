@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f92519ca1f960961f95722bce5c8e1f3b4419292
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757079"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662188"
 ---
 # <a name="xaml-resources"></a>Risorse XAML
 Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'interno dell'applicazione. Sono esempi di risorse pennelli e stili. Questa panoramica viene descritto come usare le risorse di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. È anche possibile creare e accedere alle risorse tramite il codice o in modo intercambiabile tra codice e [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Per altre informazioni, vedere [risorse e codice](resources-and-code.md).  

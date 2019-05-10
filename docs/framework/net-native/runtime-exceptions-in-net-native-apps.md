@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06e07c41d398c0792094b4481a38c69b2ba73004
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3b682d4b43ece406ee320d6d4f96ed5cda5f17c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866782"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650358"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Eccezioni di runtime in app .NET
 È importante testare le build di versione dell'app della piattaforma UWP (Universal Windows Platform) nelle rispettive piattaforme di destinazione, perché le configurazioni di tipo Debug e di tipo Versione sono completamente diverse. Per impostazione predefinita, la configurazione di tipo Debug usa il runtime di .NET Core per compilare l'app, mentre quella di tipo Versione usa .NET Native per compilare l'app nel codice nativo.  

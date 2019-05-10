@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99d5dc2e0f8389f8c9e90786c4d9d0fa037eb828
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803730"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651424"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Accesso alla proprietà predefinita è ambiguo tra i membri di interfaccia ereditati\<defaultpropertyname >' dell'interfaccia '\<interfacename1 >' e '\<defaultpropertyname >' dell'interfaccia '\< interfacename2 >'
 Un'interfaccia eredita da due interfacce, ognuno dei quali dichiara una proprietà predefinita con lo stesso nome. Il compilatore non è possibile risolvere un accesso a questa proprietà predefinito senza qualifica. Questa condizione è illustrata nell'esempio seguente.  
@@ -41,7 +41,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Evitare di ereditare tutti i membri con lo stesso nome. Nell'esempio precedente, se `testObj` non è necessario uno qualsiasi dei membri di, ad esempio, `Iface2`, dichiararla come indicato di seguito:  
+- Evitare di ereditare tutti i membri con lo stesso nome. Nell'esempio precedente, se `testObj` non è necessario uno qualsiasi dei membri di, ad esempio, `Iface2`, dichiararla come indicato di seguito:  
   
     ```  
     Dim testObj As Iface1  
@@ -49,7 +49,7 @@ End Class
   
      -oppure-  
   
--   Implementare l'interfaccia che eredita in una classe. È quindi possibile implementare ognuna delle proprietà ereditate con nomi diversi. Tuttavia, solo uno di essi può essere la proprietà predefinita della classe di implementazione. Questa condizione è illustrata nell'esempio seguente.  
+- Implementare l'interfaccia che eredita in una classe. È quindi possibile implementare ognuna delle proprietà ereditate con nomi diversi. Tuttavia, solo uno di essi può essere la proprietà predefinita della classe di implementazione. Questa condizione è illustrata nell'esempio seguente.  
   
     ```  
     Public Class useIface3  

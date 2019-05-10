@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: c23ca51322f57dc13a85c3ea94e0d335dc50ca13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: eb2260c6547d4f1cd7d9c23445ac38ac600e3535
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791924"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638860"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Passaggio di argomenti per valore e per riferimento (Visual Basic)
 In Visual Basic, è possibile passare un argomento a una routine *dal valore* oppure *per riferimento*. Questo è noto come il *meccanismo di trasferimento*, e determina se la routine può modificare l'elemento di programmazione sottostante all'argomento nel codice chiamante. La dichiarazione di routine determina il meccanismo di passaggio per ogni parametro specificando il [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oppure [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) (parola chiave).  

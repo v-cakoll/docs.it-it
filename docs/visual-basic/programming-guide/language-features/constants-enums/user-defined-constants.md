@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d4fe5d1b9048f4a8ae22a84e14456318ca38f0f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906984"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645852"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Costanti definite dall'utente (Visual Basic)
 Una costante è un nome significativo che prende il posto di un numero o una stringa che non cambia. Archiviano i valori che, come suggerisce il nome, rimangono costanti durante l'esecuzione di un'applicazione. È possibile usare le costanti che vengono definite tramite i controlli o si lavora con i componenti oppure è possibile crearne uno. Vengono descritte le costanti personalizzate come *definite dall'utente*.  
@@ -37,13 +37,13 @@ Una costante è un nome significativo che prende il posto di un numero o una str
 ## <a name="scope-of-user-defined-constants"></a>Ambito delle costanti definite dall'utente  
  Oggetto `Const` ambito dell'istruzione è uguale a quello di una variabile dichiarata nello stesso percorso. È possibile specificare l'ambito in uno dei modi seguenti:  
   
--   Per creare una costante che esiste solo all'interno di una routine, dichiararlo all'interno di tale procedura.  
+- Per creare una costante che esiste solo all'interno di una routine, dichiararlo all'interno di tale procedura.  
   
--   Per creare una costante che sia disponibile per tutte le routine all'interno di una classe, ma non a qualsiasi codice all'esterno di tale modulo, dichiararlo nella sezione delle dichiarazioni della classe.  
+- Per creare una costante che sia disponibile per tutte le routine all'interno di una classe, ma non a qualsiasi codice all'esterno di tale modulo, dichiararlo nella sezione delle dichiarazioni della classe.  
   
--   Per creare una costante che sia disponibile per tutti i membri di un assembly, ma non ai client all'esterno dell'assembly, dichiarare usando il `Friend` parola chiave nella sezione delle dichiarazioni della classe.  
+- Per creare una costante che sia disponibile per tutti i membri di un assembly, ma non ai client all'esterno dell'assembly, dichiarare usando il `Friend` parola chiave nella sezione delle dichiarazioni della classe.  
   
--   Per creare una costante disponibile in tutta l'applicazione, dichiarare usando il `Public` parola chiave nelle dichiarazioni di sezione la classe.  
+- Per creare una costante disponibile in tutta l'applicazione, dichiarare usando il `Public` parola chiave nelle dichiarazioni di sezione la classe.  
   
  Per altre informazioni, vedere [Procedura: Dichiarare una costante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
   

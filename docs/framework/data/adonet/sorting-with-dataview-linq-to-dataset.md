@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 01fb70a7b37d6c9c119fff16a9d680d4139421cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dda7d4c376fd2cf447c676d77eae824d62144887
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664129"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649584"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Ordinamento con DataView (LINQ to DataSet)
 La possibilità di ordinare i dati in base a criteri specifici e quindi di presentarli a un client tramite un controllo dell'interfaccia utente rappresenta un aspetto importante dell'associazione dati. Con <xref:System.Data.DataView> è possibile ordinare i dati e restituire righe di dati ordinate in base a criteri specifici in diversi modi. Oltre a basate su stringa, funzionalità di ordinamento <xref:System.Data.DataView> consente inoltre di usare [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] espressioni per i criteri di ordinamento. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] le espressioni consentono le operazioni di ordinamento più complesse e potenti rispetto a ordinamento basato su stringa. In questo argomento vengono descritti entrambi gli approcci all'ordinamento tramite <xref:System.Data.DataView>.  

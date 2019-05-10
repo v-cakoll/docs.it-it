@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-ms.openlocfilehash: 13fe07d1521832ed12ba5770e0bd069ff9b917d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c29b3e3d5eff426ac573ddf5224259f0a6c28e53
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043581"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664920"
 ---
 # <a name="channel-model-overview"></a>Panoramica sul modello dei canali
 Lo stack di canale Windows Communication Foundation (WCF) è uno stack di comunicazione a più livelli con uno o più canali che elaborano i messaggi. Nella parte inferiore dello stack è presente un canale di trasporto che è responsabile dell'adattamento dello stack dei canali al trasporto sottostante (ad esempio TCP, HTTP, SMTP e altri tipi di trasporto.). I canali forniscono un modello di programmazione di basso livello per l'invio e la ricezione di messaggi. Questo modello di programmazione si basa su varie interfacce e altri tipi noti collettivamente come modello di canale WCF. In questo argomento vengono illustrate le forme del canale, la costruzione di un listener del canale di base (sul servizio) e di una channel factory (sul client).  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: ee7b0b40d74d908dc4f25372273f852662370df0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: db0127712ab0cb4586b364abf899bcf4765632d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037128"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645596"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Caricamento di contenuto posticipato (WCF Data Services)
 Per impostazione predefinita, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita la quantità di dati restituiti da una query. Se necessario, dal servizio dati è tuttavia possibile caricare in modo esplicito dati aggiuntivi, tra cui entità correlate, dati di risposta di paging e flussi di dati binari. In questo argomento viene descritto come caricare questo tipo di contenuto posticipato nell'applicazione.  

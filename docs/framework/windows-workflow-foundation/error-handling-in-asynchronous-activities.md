@@ -2,12 +2,12 @@
 title: Errore durante la gestione delle attività asincrone
 ms.date: 03/30/2017
 ms.assetid: e8f8ce2b-50c9-4e44-b187-030e0cf30a5d
-ms.openlocfilehash: 4a7cbecef596eec6eaa128b8ffc7bc5c6e4b79bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7a1db144e4738870d3ff5fe68df11b2fb06ef3d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773997"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640954"
 ---
 # <a name="error-handling-in-asynchronous-activities"></a>Errore durante la gestione delle attività asincrone
 Fornire la gestione degli errori in <xref:System.Activities.AsyncCodeActivity> implica risolvere gli errori tramite il sistema di callback dell'attività. In questo argomento viene descritto come restituire un errore generato in un'unica operazione asincrona all'host, usando come esempio l'attività SendMail.  

@@ -2,12 +2,12 @@
 title: Considerazioni sulle prestazioni (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6cd12948d16eea66efb6ee4b427a2c979e0aab3d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879398"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641276"
 ---
 # <a name="performance-considerations-entity-framework"></a>Considerazioni sulle prestazioni (Entity Framework)
 In questo argomento vengono descritte le caratteristiche relative alle prestazioni di ADO.NET Entity Framework e vengono illustrate alcune considerazioni per migliorare le prestazioni di applicazioni Entity Framework.  

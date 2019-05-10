@@ -2,12 +2,12 @@
 title: Specifica del manifesto del provider
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0f3eaa73a26c3f8519e1c168ab2e2968ed4ab28d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034010"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641171"
 ---
 # <a name="provider-manifest-specification"></a>Specifica del manifesto del provider
 Questa sezione illustra come un provider dell'archivio dati può supportare i tipi e le funzioni di tale archivio.  
@@ -274,7 +274,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Nome|Stringa|Yes|N/D|Nome/identificatore del parametro.|  
 |Tipo|Stringa|Yes|N/D|Tipo EDM del parametro.|  
-|Modalità|Parametro<br /><br /> Direzione|Yes|N/D|Direzione del parametro:<br /><br /> -   in<br />-out<br />-inout|  
+|Modalità|Parametro<br /><br /> Direction|Yes|N/D|Direzione del parametro:<br /><br /> -   in<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Attributo namespace  
  Ogni provider dell'archivio dati deve definire uno spazio dei nomi o un gruppo di spazi dei nomi per le informazioni definite nel manifesto. Tale spazio dei nomi può essere usato nelle query Entity SQL per risolvere nomi di funzioni e tipi. Ad esempio: SqlServer. Lo spazio dei nomi deve essere diverso dallo spazio dei nomi canonico, ovvero EDM, definito dai servizi di entità per funzioni standard che devono essere supportate dalle query Entity SQL.  

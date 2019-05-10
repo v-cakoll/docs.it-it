@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ace4b1c32ac30c54b56e2adbbbbf6af0450a4740
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009170"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651544"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Utilizzo della riga per i nuovi record del controllo DataGridView di Windows Form
 Quando si usa un <xref:System.Windows.Forms.DataGridView> per la modifica dei dati nell'applicazione, spesso si desidera offrire agli utenti la possibilità di aggiungere nuove righe di dati nell'archivio dati. Il <xref:System.Windows.Forms.DataGridView> controllo supporta questa funzionalità, fornendo una riga per i nuovi record, che viene sempre visualizzata come ultima riga. È contrassegnato con un simbolo di asterisco (*) l'intestazione di riga. Le sezioni seguenti illustrano alcune delle attività che è necessario considerare quando si programma con la riga per i nuovi record abilitato.  
