@@ -2,25 +2,25 @@
 title: Mapping di relazioni implicite tra elementi di schemi annidati
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 076e3ec6e5a00fd294fa3c6d7998cfab3a136240
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fcb0b9bb7c947359c2334d3d116f5317f84af83
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879593"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586810"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapping di relazioni implicite tra elementi di schemi annidati
 È possibile che in uno schema XSD (XML Schema Definition Language) siano presenti tipi complessi annidati uno all'interno dell'altro. In questo caso, le impostazioni di mapping predefinite vengono applicate dal processo di mapping e nel tipo <xref:System.Data.DataSet> vengono creati i seguenti elementi:  
   
--   Una tabella per ogni tipo complesso (padre e figlio).  
+- Una tabella per ogni tipo complesso (padre e figlio).  
   
--   Se è presente alcun vincolo univoco dell'elemento padre, una primaria chiave colonna aggiuntiva per ogni definizione di tabella denominata *NomeTabella*ID dove *NomeTabella* è il nome della tabella padre.  
+- Se è presente alcun vincolo univoco dell'elemento padre, una primaria chiave colonna aggiuntiva per ogni definizione di tabella denominata *NomeTabella*ID dove *NomeTabella* è il nome della tabella padre.  
   
--   Un vincolo di chiave primaria nella tabella padre che identifica la colonna aggiuntiva come chiave primaria (impostando il **IsPrimaryKey** proprietà **True**). Il vincolo viene denominato Constraint\#, dove \# rappresenta 1, 2, 3 e così via. Il nome predefinito del primo vincolo, ad esempio, è Constraint1.  
+- Un vincolo di chiave primaria nella tabella padre che identifica la colonna aggiuntiva come chiave primaria (impostando il **IsPrimaryKey** proprietà **True**). Il vincolo viene denominato Constraint\#, dove \# rappresenta 1, 2, 3 e così via. Il nome predefinito del primo vincolo, ad esempio, è Constraint1.  
   
--   Un vincolo di chiave esterna nella tabella figlio che consenta di identificare la colonna aggiuntiva come chiave esterna contenente riferimenti alla chiave primaria della tabella padre. Il vincolo viene denominato *ParentTable_ChildTable* in cui *ParentTable* è il nome della tabella padre e *ChildTable* è il nome della tabella figlio.  
+- Un vincolo di chiave esterna nella tabella figlio che consenta di identificare la colonna aggiuntiva come chiave esterna contenente riferimenti alla chiave primaria della tabella padre. Il vincolo viene denominato *ParentTable_ChildTable* in cui *ParentTable* è il nome della tabella padre e *ChildTable* è il nome della tabella figlio.  
   
--   Una relazione di dati tra le tabelle padre e figlio.  
+- Una relazione di dati tra le tabelle padre e figlio.  
   
  L'esempio seguente mostra uno schema in cui **OrderDetail** è un elemento figlio del **ordine**.  
   
@@ -56,14 +56,14 @@ ms.locfileid: "61879593"
   
  Il processo di mapping di XML Schema consente di creare il codice seguente nel **set di dati**:  
   
--   Un' **ordine** e un **OrderDetail** tabella.  
+- Un' **ordine** e un **OrderDetail** tabella.  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   Un vincolo unique per la **ordine** tabella. Si noti che il **IsPrimaryKey** è impostata su **True**.  
+- Un vincolo unique per la **ordine** tabella. Si noti che il **IsPrimaryKey** è impostata su **True**.  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ ms.locfileid: "61879593"
     IsPrimaryKey: True  
     ```  
   
--   Un vincolo di chiave esterna nella **OrderDetail** tabella.  
+- Un vincolo di chiave esterna nella **OrderDetail** tabella.  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ ms.locfileid: "61879593"
     RelatedColumns: Order_Id   
     ```  
   
--   Una relazione tra il **ordine** e **OrderDetail** tabelle. Il **Nested** per questa relazione è impostata su **True** perché i **Order** e **OrderDetail** elementi sono annidati nello schema .  
+- Una relazione tra il **ordine** e **OrderDetail** tabelle. Il **Nested** per questa relazione è impostata su **True** perché i **Order** e **OrderDetail** elementi sono annidati nello schema .  
   
     ```  
     ParentTable: Order  

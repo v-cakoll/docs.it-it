@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 43296fad9519a08db5facdd220492ac70dffeca2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 664d0e1a3f59ce391bb055dcded5cfc1b8fff115
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747641"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586161"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Procedura: Specificare la catena di certificati dell'autorità utilizzata per verificare le firme (WCF)
 Quando Windows Communication Foundation (WCF) riceve un messaggio SOAP firmato mediante un certificato X.509, per impostazione predefinita verifica che il certificato X.509 emesso da un'autorità di certificazione attendibile. A tale scopo viene eseguita una ricerca in un archivio certificati per determinare se il certificato di tale autorità di certificazione è stato riconosciuto come attendibile. Affinché WCF a tal fine, la catena di certificati di autorità di certificazione deve essere installata nell'archivio certificati corretto.  
