@@ -2,12 +2,12 @@
 title: Abilitazione dinamica della traccia analitica
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fc157e6612a59640aef557b57e5e2dd9e91cb529
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999465"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584337"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Abilitazione dinamica della traccia analitica
 Utilizzando gli strumenti forniti con il sistema operativo Windows, è possibile abilitare o disabilitare la traccia in modo dinamico utilizzando Traccia eventi per Windows (ETW). Per tutti i [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] servizi Windows Communication Foundation (WCF), traccia analitica può essere abilitata e disabilitata in modo dinamico senza modificare file Web. config dell'applicazione o il riavvio del servizio. In questo modo l'applicazione che genera gli eventi di traccia non subisce variazioni.  

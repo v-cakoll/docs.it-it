@@ -7,27 +7,25 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a184312b1df7c0736fa9c6b6ef787451add0465e
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010969"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211812"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Procedura: Allineare più controlli in Windows Forms
-Per standardizzare il layout dell'interfaccia utente (UI) dell'applicazione basata su Windows, è possibile posizionare i gruppi di controlli con un unico comando.  
-  
-> [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-align-multiple-controls-on-a-form"></a>Per allineare più controlli in un form  
-  
-1. Aprire il modulo che contiene i controlli nella posizione desiderata per il **finestra di progettazione Windows Form**.  
-  
-2. Selezionare i controlli che si desidera allineare in modo che il primo controllo selezionato è il controllo principale in cui gli altri devono essere allineati.  
-  
-3. Nel **formato** dal menu **Align**, quindi fare clic su una delle sette opzioni disponibili.  
-  
+
+Per standardizzare il layout dell'interfaccia utente (UI) dell'applicazione basata su Windows, è possibile posizionare i gruppi di controlli con un unico comando.
+
+### <a name="to-align-multiple-controls-on-a-form"></a>Per allineare più controlli in un form
+
+1. In Visual Studio, aprire il form che contiene i controlli nella posizione desiderata per il **finestra di progettazione Windows Form**.
+
+2. Selezionare i controlli che si desidera allineare in modo che il primo controllo selezionato è il controllo principale in cui gli altri devono essere allineati.
+
+3. Nel **formato** dal menu **Align**, quindi fare clic su una delle sette opzioni disponibili.
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Controlli Windows Form](index.md)

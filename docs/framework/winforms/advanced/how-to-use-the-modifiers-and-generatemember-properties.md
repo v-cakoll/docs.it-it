@@ -15,50 +15,48 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 6194ef288bd43267c2b00fa6d7c6250e90b37c75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fbaaae53aa60f6356c3a8daa0513de86ef2dacb
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778859"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211287"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Procedura: Usare modificatori e proprietà GenerateMember
-Quando si posiziona un componente in un Windows Form, dall'ambiente di progettazione vengono fornite due proprietà: `GenerateMember` e `Modifiers`. Il `GenerateMember` proprietà consente di specificare quando la finestra di progettazione Windows Form genera una variabile membro per un componente. Il `Modifiers` proprietà è il modificatore di accesso assegnato alla variabile membro. Se il valore della `GenerateMember` proprietà è `false`, il valore della `Modifiers` proprietà non ha alcun effetto.  
-  
-> [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>Per specificare se un componente è un membro del form  
-  
-1. Nella finestra di progettazione Windows Form, aprire il form.  
-  
-2. Aprire il **casella degli strumenti**e nel form, inserire tre <xref:System.Windows.Forms.Button> controlli.  
-  
-3. Impostare il `GenerateMember` e `Modifiers` delle proprietà per ogni <xref:System.Windows.Forms.Button> controllo in base alla tabella riportata di seguito.  
-  
-    |Nome del pulsante|Valore GenerateMember|Valore di modificatori|  
-    |-----------------|--------------------------|---------------------|  
-    |`button1`|`true`|`private`|  
-    |`button2`|`true`|`protected`|  
-    |`button3`|`false`|Nessuna modifica|  
-  
-4. Compilare la soluzione.  
-  
-5. In **Esplora soluzioni** fare clic sul pulsante **Mostra tutti i file**.  
-  
-6. Aprire il **Form1** nodo e nel **Editor di codice**, aprire il **Form1** o **Form1.Designer.cs** file. Questo file contiene il codice generato da Progettazione Windows Form.  
-  
-7. Trova le dichiarazioni dei tre pulsanti. Esempio di codice seguente illustra le differenze specificate dal `GenerateMember` e `Modifiers` proprietà.  
-  
+
+Quando si posiziona un componente in un Windows Form, dall'ambiente di progettazione vengono fornite due proprietà: `GenerateMember` e `Modifiers`. Il `GenerateMember` proprietà consente di specificare quando la finestra di progettazione Windows Form genera una variabile membro per un componente. Il `Modifiers` proprietà è il modificatore di accesso assegnato alla variabile membro. Se il valore della `GenerateMember` proprietà è `false`, il valore della `Modifiers` proprietà non ha alcun effetto.
+
+## <a name="specify-whether-a-component-is-a-member-of-the-form"></a>Specificare se un componente è un membro del form
+
+1. In Visual Studio, nella finestra di progettazione Windows Form, aprire il form.
+
+2. Aprire il **casella degli strumenti**e nel form, inserire tre <xref:System.Windows.Forms.Button> controlli.
+
+3. Impostare il `GenerateMember` e `Modifiers` delle proprietà per ogni <xref:System.Windows.Forms.Button> controllo in base alla tabella riportata di seguito.
+
+    |Nome del pulsante|Valore GenerateMember|Valore di modificatori|
+    |-----------------|--------------------------|---------------------|
+    |`button1`|`true`|`private`|
+    |`button2`|`true`|`protected`|
+    |`button3`|`false`|Nessuna modifica|
+
+4. Compilare la soluzione.
+
+5. In **Esplora soluzioni** fare clic sul pulsante **Mostra tutti i file**.
+
+6. Aprire il **Form1** nodo e nel **Editor di codice**, aprire il **Form1** o **Form1.Designer.cs** file. Questo file contiene il codice generato da Progettazione Windows Form.
+
+7. Trova le dichiarazioni dei tre pulsanti. Esempio di codice seguente illustra le differenze specificate dal `GenerateMember` e `Modifiers` proprietà.
+
      [!code-csharp[System.Windows.Forms.GenerateMember#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.GenerateMember#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  
-  
+     [!code-vb[System.Windows.Forms.GenerateMember#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]
+
      [!code-csharp[System.Windows.Forms.GenerateMember#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.GenerateMember#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]  
-  
+     [!code-vb[System.Windows.Forms.GenerateMember#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]
+
 > [!NOTE]
->  Per impostazione predefinita, la finestra di progettazione Windows Form assegna il `private` (`Friend` in Visual Basic) modifica ai controlli contenitore, ad esempio <xref:System.Windows.Forms.Panel>. Se la base <xref:System.Windows.Forms.UserControl> o <xref:System.Windows.Forms.Form> dispone di un controllo contenitore, non accetterà nuovi elementi figlio nei form e controlli ereditati. La soluzione consiste nel modificare il modificatore del controllo contenitore di base `protected` o `public`.  
-  
+> Per impostazione predefinita, la finestra di progettazione Windows Form assegna il `private` (`Friend` in Visual Basic) modifica ai controlli contenitore, ad esempio <xref:System.Windows.Forms.Panel>. Se la base <xref:System.Windows.Forms.UserControl> o <xref:System.Windows.Forms.Form> dispone di un controllo contenitore, non accetterà nuovi elementi figlio nei form e controlli ereditati. La soluzione consiste nel modificare il modificatore del controllo contenitore di base `protected` o `public`.
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.Button>

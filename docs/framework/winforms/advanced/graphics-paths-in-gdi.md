@@ -10,12 +10,12 @@ helpviewer_keywords:
 - paths [Windows Forms], drawing
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
-ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8e06032d145eb8c1aaf9bfcd1f205f8c6583634a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938166"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64581387"
 ---
 # <a name="graphics-paths-in-gdi"></a>Percorsi di oggetti Graphics in GDI+
 I percorsi sono costituiti dalla combinazione di linee, rettangoli e le curve semplice. Si ricorderà dal [Cenni preliminari sulla grafica vettoriale](vector-graphics-overview.md) che i blocchi predefiniti seguenti hanno dimostrato di essere particolarmente utile per il disegno di immagini:  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d93c55cec3d35fd4208a4a8a7c9b235dd10fb9ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 82d81be7a9e0843dfe382767de582f93371acb4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59156169"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584494"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>Metodo IMetaDataEmit::DefineTypeRefByName
 Ottiene i metadati di un token per un tipo definito nell'ambito specificato, che non rientrano nell'ambito corrente.  
@@ -41,15 +41,15 @@ HRESULT DefineTypeRefByName (
  `tkResolutionScope`  
  [in] Il token che specifica l'ambito di risoluzione. I tipi di token seguenti sono validi:  
   
--   `mdModuleRef`, se il tipo è definito nello stesso assembly in cui è definito il chiamante.  
+- `mdModuleRef`, se il tipo è definito nello stesso assembly in cui è definito il chiamante.  
   
--   `mdAssemblyRef`, se il tipo è definito in un assembly diverso da quello in cui è definito il chiamante.  
+- `mdAssemblyRef`, se il tipo è definito in un assembly diverso da quello in cui è definito il chiamante.  
   
--   `mdTypeRef`, se il tipo è un tipo annidato.  
+- `mdTypeRef`, se il tipo è un tipo annidato.  
   
--   `mdModule`, se il tipo è definito nello stesso modulo in cui è definito il chiamante.  
+- `mdModule`, se il tipo è definito nello stesso modulo in cui è definito il chiamante.  
   
--   Null se il tipo è definito a livello globale.  
+- Null se il tipo è definito a livello globale.  
   
  `szName`  
  [in] Il nome del tipo di destinazione in formato Unicode.  

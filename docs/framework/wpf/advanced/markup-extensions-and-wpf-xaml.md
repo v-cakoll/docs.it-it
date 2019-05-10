@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4acb7bd60c6087b5d0052dd15540e700fa2e46cd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61804585"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598676"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Estensioni di markup e XAML WPF
 Questo argomento introduce le estensioni di markup per XAML, con informazioni sulle regole della sintassi, le finalità e il modello a oggetti di classe sottostante. Le estensioni di markup sono una funzionalità generale del linguaggio XAML e dell'implementazione .NET di servizi XAML. Questo argomento descrive in particolare le estensioni di markup per l'uso in XAML WPF.  
@@ -41,13 +41,13 @@ Questo argomento introduce le estensioni di markup per XAML, con informazioni su
 ## <a name="xaml-defined-markup-extensions"></a>Estensioni di markup definite da XAML  
  Esistono diverse estensioni di markup non specifiche dell'implementazione WPF di XAML, ma che sono invece implementazioni di intrinseci o funzionalità di XAML come linguaggio. Queste estensioni di markup vengono implementate nell'assembly System.Xaml come parte dei servizi XAML generali di .NET Framework e sono incluse nello spazio dei nomi XAML del linguaggio XAML. In termini di utilizzo comune del markup, queste estensioni di markup sono in genere identificabili dal prefisso `x:` nella sintassi. Il <xref:System.Windows.Markup.MarkupExtension> classe di base (anche definito in XAML) fornisce il modello che tutte le estensioni di markup devono usare affinché sia supportato in XAML reader e writer XAML, incluso in XAML WPF.  
   
--   `x:Type` fornisce l'oggetto <xref:System.Type> per il tipo denominato. Questa funzionalità viene usata più comunemente in stili e modelli. Per informazioni dettagliate, vedere [Estensione di markup x:Type](../../xaml-services/x-type-markup-extension.md).  
+- `x:Type` fornisce l'oggetto <xref:System.Type> per il tipo denominato. Questa funzionalità viene usata più comunemente in stili e modelli. Per informazioni dettagliate, vedere [Estensione di markup x:Type](../../xaml-services/x-type-markup-extension.md).  
   
--   `x:Static` produce valori statici. I valori provengono da entità di codice di tipo di valore che non sono direttamente il tipo del valore di una proprietà di destinazione, ma possono restituire tale tipo. Per informazioni dettagliate, vedere [Estensione di markup x:Static](../../xaml-services/x-static-markup-extension.md).  
+- `x:Static` produce valori statici. I valori provengono da entità di codice di tipo di valore che non sono direttamente il tipo del valore di una proprietà di destinazione, ma possono restituire tale tipo. Per informazioni dettagliate, vedere [Estensione di markup x:Static](../../xaml-services/x-static-markup-extension.md).  
   
--   `x:Null` specifica `null` come valore per una proprietà e può essere usata per attributi o valori di elementi proprietà. Per informazioni dettagliate, vedere [Estensione di markup x:Null](../../xaml-services/x-null-markup-extension.md).  
+- `x:Null` specifica `null` come valore per una proprietà e può essere usata per attributi o valori di elementi proprietà. Per informazioni dettagliate, vedere [Estensione di markup x:Null](../../xaml-services/x-null-markup-extension.md).  
   
--   `x:Array` supporta la creazione di matrici generali nella sintassi XAML nei casi in cui si sceglie intenzionalmente di non usare il supporto delle raccolte fornito dagli elementi di base e dai modelli di controllo di WPF. Per informazioni dettagliate, vedere [Estensione di markup x:Array](../../xaml-services/x-array-markup-extension.md).  
+- `x:Array` supporta la creazione di matrici generali nella sintassi XAML nei casi in cui si sceglie intenzionalmente di non usare il supporto delle raccolte fornito dagli elementi di base e dai modelli di controllo di WPF. Per informazioni dettagliate, vedere [Estensione di markup x:Array](../../xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
 >  Il prefisso `x:` viene usato per il mapping dello spazio dei nomi XAML tipico degli intrinseci del linguaggio XAML, nell'elemento radice di un file o una produzione XAML. Ad esempio, i modelli di Visual Studio per le applicazioni WPF avviare un file XAML usando il `x:` mapping. Nel mapping dello spazio dei nomi XAML personalizzato è possibile scegliere un token di prefisso diverso. Tuttavia, per identificare le entità che rappresentano una parte definita dello spazio dei nomi XAML per il linguaggio XAML, questa documentazione usa il mapping `x:` predefinito anziché lo spazio dei nomi WPF predefinito o altri spazi dei nomi XAML non correlati a un framework specifico.  
@@ -56,19 +56,19 @@ Questo argomento introduce le estensioni di markup per XAML, con informazioni su
 ## <a name="wpf-specific-markup-extensions"></a>Estensioni di markup specifiche di WPF  
  Le estensioni di markup più comuni usate nella programmazione WPF sono quelle che supportano i riferimenti a risorse (`StaticResource` e `DynamicResource`) e quelli che supportano il data binding (`Binding`).  
   
--   `StaticResource` fornisce un valore per una proprietà sostituendo il valore di una risorsa già definita. Una valutazione di `StaticResource` viene infine eseguita in fase di caricamento XAML e non ha accesso all'oggetto grafico in fase di esecuzione. Per informazioni dettagliate, vedere [Estensione di markup StaticResource](staticresource-markup-extension.md).  
+- `StaticResource` fornisce un valore per una proprietà sostituendo il valore di una risorsa già definita. Una valutazione di `StaticResource` viene infine eseguita in fase di caricamento XAML e non ha accesso all'oggetto grafico in fase di esecuzione. Per informazioni dettagliate, vedere [Estensione di markup StaticResource](staticresource-markup-extension.md).  
   
--   `DynamicResource` fornisce un valore per una proprietà rinviando il valore come riferimento in fase di esecuzione a una risorsa. Il riferimento a una risorsa dinamica forza una nuova ricerca ogni volta che si accede a tale risorsa e che la risorsa ha accesso all'oggetto grafico in fase di esecuzione. Per ottenere questo accesso, il concetto di `DynamicResource` è supportato da proprietà di dipendenza nel sistema di proprietà WPF e da espressioni valutate. Di conseguenza, è possibile usare `DynamicResource` solo per la destinazione di una proprietà di dipendenza. Per informazioni dettagliate, vedere [Estensione di markup DynamicResource](dynamicresource-markup-extension.md).  
+- `DynamicResource` fornisce un valore per una proprietà rinviando il valore come riferimento in fase di esecuzione a una risorsa. Il riferimento a una risorsa dinamica forza una nuova ricerca ogni volta che si accede a tale risorsa e che la risorsa ha accesso all'oggetto grafico in fase di esecuzione. Per ottenere questo accesso, il concetto di `DynamicResource` è supportato da proprietà di dipendenza nel sistema di proprietà WPF e da espressioni valutate. Di conseguenza, è possibile usare `DynamicResource` solo per la destinazione di una proprietà di dipendenza. Per informazioni dettagliate, vedere [Estensione di markup DynamicResource](dynamicresource-markup-extension.md).  
   
--   `Binding` fornisce un valore di data binding per una proprietà, usando il contesto dei dati valido per l'oggetto padre in fase di esecuzione. Questa estensione di markup è relativamente complessa, perché permette una sintassi inline sostanziale per specificare un data binding. Per informazioni dettagliate, vedere [Estensione di markup Binding](binding-markup-extension.md).  
+- `Binding` fornisce un valore di data binding per una proprietà, usando il contesto dei dati valido per l'oggetto padre in fase di esecuzione. Questa estensione di markup è relativamente complessa, perché permette una sintassi inline sostanziale per specificare un data binding. Per informazioni dettagliate, vedere [Estensione di markup Binding](binding-markup-extension.md).  
   
--   `RelativeSource` fornisce informazioni sull'origine per un <xref:System.Windows.Data.Binding> che può passare tra diverse relazioni nell'albero degli oggetti in fase di esecuzione. In questo modo, si ottengono origini specializzate per i binding creati in modelli multiuso o creati nel codice senza una completa conoscenza dell'albero di oggetti circostante. Per informazioni dettagliate, vedere [Estensione di markup RelativeSource](relativesource-markupextension.md).  
+- `RelativeSource` fornisce informazioni sull'origine per un <xref:System.Windows.Data.Binding> che può passare tra diverse relazioni nell'albero degli oggetti in fase di esecuzione. In questo modo, si ottengono origini specializzate per i binding creati in modelli multiuso o creati nel codice senza una completa conoscenza dell'albero di oggetti circostante. Per informazioni dettagliate, vedere [Estensione di markup RelativeSource](relativesource-markupextension.md).  
   
--   `TemplateBinding` permette a un modello di controllo di usare valori per proprietà basate su modelli provenienti da proprietà definite da modelli a oggetti della classe che userà il modello. In altri termini, la proprietà all'interno della definizione del modello può accedere a un contesto che esiste solo dopo l'applicazione del modello. Per informazioni dettagliate, vedere [Estensione di markup TemplateBinding](templatebinding-markup-extension.md). Per altre informazioni sull'uso pratico di `TemplateBinding`, vedere [Applicazione di stili con l'esempio di ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+- `TemplateBinding` permette a un modello di controllo di usare valori per proprietà basate su modelli provenienti da proprietà definite da modelli a oggetti della classe che userà il modello. In altri termini, la proprietà all'interno della definizione del modello può accedere a un contesto che esiste solo dopo l'applicazione del modello. Per informazioni dettagliate, vedere [Estensione di markup TemplateBinding](templatebinding-markup-extension.md). Per altre informazioni sull'uso pratico di `TemplateBinding`, vedere [Applicazione di stili con l'esempio di ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
--   `ColorConvertedBitmap` supporta uno scenario di creazione di immagini relativamente avanzato. Per informazioni dettagliate, vedere [Estensione di markup ColorConvertedBitmap](colorconvertedbitmap-markup-extension.md).  
+- `ColorConvertedBitmap` supporta uno scenario di creazione di immagini relativamente avanzato. Per informazioni dettagliate, vedere [Estensione di markup ColorConvertedBitmap](colorconvertedbitmap-markup-extension.md).  
   
--   `ComponentResourceKey` e `ThemeDictionary` supportano alcuni aspetti della ricerca di risorse, in particolare per risorse e temi che contengono controlli personalizzati. Per altre informazioni, vedere [Estensione di markup ComponentResourceKey](componentresourcekey-markup-extension.md), [Estensione di markup ThemeDictionary](themedictionary-markup-extension.md) o [Panoramica della creazione di controlli](../controls/control-authoring-overview.md).  
+- `ComponentResourceKey` e `ThemeDictionary` supportano alcuni aspetti della ricerca di risorse, in particolare per risorse e temi che contengono controlli personalizzati. Per altre informazioni, vedere [Estensione di markup ComponentResourceKey](componentresourcekey-markup-extension.md), [Estensione di markup ThemeDictionary](themedictionary-markup-extension.md) o [Panoramica della creazione di controlli](../controls/control-authoring-overview.md).  
   
 <a name="StarExtension"></a>   
 ## <a name="extension-classes"></a>*Classi di estensione  
@@ -83,18 +83,18 @@ Questo argomento introduce le estensioni di markup per XAML, con informazioni su
 ### <a name="extension-class-interpretation-of-initialization-text"></a>Interpretazione del testo di inizializzazione da parte delle classi delle estensioni  
  I token di stringa che seguono il nome dell'estensione di markup e ancora racchiuse tra parentesi graffe vengono interpretati da un processore XAML in uno dei modi seguenti:  
   
--   Una virgola rappresenta sempre il separatore o il delimitatore di singoli token.  
+- Una virgola rappresenta sempre il separatore o il delimitatore di singoli token.  
   
--   Se i singoli token separati non contengono segni di uguale, ogni token viene considerato un argomento del costruttore. Ogni parametro del costruttore deve essere specificato come tipo previsto dalla firma e nell'ordine corretto previsto dalla firma.  
+- Se i singoli token separati non contengono segni di uguale, ogni token viene considerato un argomento del costruttore. Ogni parametro del costruttore deve essere specificato come tipo previsto dalla firma e nell'ordine corretto previsto dalla firma.  
   
     > [!NOTE]
     >  Un processore XAML deve chiamare il costruttore corrispondente al conteggio di argomenti del numero di coppie. Per questo motivo, se si implementa un'estensione di markup personalizzata, non forniscono più costruttori con lo stesso numero di argomenti. Il comportamento di un processore XAML se sono presenti più percorsi del costruttore dell'espressione di markup con lo stesso parametro è indefinito, ma è bene aspettarsi che a un processore XAML è consentito generare un'eccezione sull'utilizzo in presenza di questa situazione nelle definizioni dei tipi di estensione di markup.  
   
--   Se i singoli token separati contengono segni di uguale, un processore XAML chiama prima di tutto il costruttore predefinito per l'estensione di markup. Quindi, ogni coppia nome=valore viene interpretata come nome di una proprietà presente nell'estensione di markup e come valore da assegnare alla proprietà.  
+- Se i singoli token separati contengono segni di uguale, un processore XAML chiama prima di tutto il costruttore predefinito per l'estensione di markup. Quindi, ogni coppia nome=valore viene interpretata come nome di una proprietà presente nell'estensione di markup e come valore da assegnare alla proprietà.  
   
--   In presenza di un risultato parallelo tra il comportamento del costruttore e il comportamento di impostazione delle proprietà in un'estensione di markup, il comportamento usato non è importante. È prassi più comune usare le coppie *proprietà*`=`*valore* per le estensioni di markup che includono più di una proprietà impostabile, anche solo perché questo comportamento rende il markup più intenzionale e riduce la probabilità di trasporre accidentalmente i parametri del costruttore. Quando si specificano coppie proprietà=valore, queste proprietà possono essere in qualsiasi ordine. Inoltre, non vi è alcuna garanzia che un'estensione di markup fornisca un parametro del costruttore che imposta ognuna delle proprietà impostabili. Ad esempio, <xref:System.Windows.Data.Binding> è un'estensione di markup con molte proprietà che possono essere impostate tramite l'estensione nella *proprietà*`=`*valore* form, ma <xref:System.Windows.Data.Binding> supporta solo due costruttori: un costruttore predefinito e uno che imposta un percorso iniziale.  
+- In presenza di un risultato parallelo tra il comportamento del costruttore e il comportamento di impostazione delle proprietà in un'estensione di markup, il comportamento usato non è importante. È prassi più comune usare le coppie *proprietà*`=`*valore* per le estensioni di markup che includono più di una proprietà impostabile, anche solo perché questo comportamento rende il markup più intenzionale e riduce la probabilità di trasporre accidentalmente i parametri del costruttore. Quando si specificano coppie proprietà=valore, queste proprietà possono essere in qualsiasi ordine. Inoltre, non vi è alcuna garanzia che un'estensione di markup fornisca un parametro del costruttore che imposta ognuna delle proprietà impostabili. Ad esempio, <xref:System.Windows.Data.Binding> è un'estensione di markup con molte proprietà che possono essere impostate tramite l'estensione nella *proprietà*`=`*valore* form, ma <xref:System.Windows.Data.Binding> supporta solo due costruttori: un costruttore predefinito e uno che imposta un percorso iniziale.  
   
--   Una virgola letterale non può essere passata a un'estensione di markup senza sequenza di escape.  
+- Una virgola letterale non può essere passata a un'estensione di markup senza sequenza di escape.  
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>Sequenze di escape ed estensioni di markup  

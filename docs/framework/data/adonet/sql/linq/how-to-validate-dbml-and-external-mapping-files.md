@@ -2,12 +2,12 @@
 title: 'Procedura: Convalidare file di mapping esterni e DBML'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 83a26f22495c849aa00143ca36b63fa147120c28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 9e80f41e05fb78b7a6c1ef9ce47ef611cfe3e57d
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310239"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910653"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Procedura: Convalidare file di mapping esterni e DBML
 I file di mapping esterno e i file con estensione dbml modificati devono essere convalidati in base alle rispettive definizioni dello schema. In questo argomento offre agli utenti di Visual Studio con i passaggi per implementare il processo di convalida.  
@@ -30,9 +30,9 @@ I file di mapping esterno e i file con estensione dbml modificati devono essere 
   
 5. Notare la definizione dello schema adatta allo scopo.  
   
-    -   DbmlSchema.xsd è la definizione dello schema per la convalida di un file dbml. Per altre informazioni, vedere [generazione di codice in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+    - DbmlSchema.xsd è la definizione dello schema per la convalida di un file dbml. Per altre informazioni, vedere [generazione di codice in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-    -   LinqToSqlMapping.xsd è la definizione dello schema per la convalida di un file di mapping XML esterno. Per altre informazioni, vedere [Mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+    - LinqToSqlMapping.xsd è la definizione dello schema per la convalida di un file di mapping XML esterno. Per altre informazioni, vedere [Mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 6. Nel **utilizzo** colonna della riga di definizione dello schema desiderata, fare clic per aprire la casella di riepilogo a discesa e quindi fare clic su **utilizzano questo schema**.  
   
@@ -51,9 +51,9 @@ I file di mapping esterno e i file con estensione dbml modificati devono essere 
   
 1. Individuare l'argomento della Guida che contiene la definizione dello schema descritta in questo argomento.  
   
-    -   Per i file con estensione dbml, vedere [generazione di codice in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+    - Per i file con estensione dbml, vedere [generazione di codice in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-    -   Per i file di mapping esterno, vedere [Mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+    - Per i file di mapping esterno, vedere [Mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 2. Fare clic su **Copia codice** per copiare il file di codice negli Appunti.  
   

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: f7d09e315f2ccc7ecdcf22719ca6dce1ee1411b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 1bfa0ddbeba7546044a0d1ed15f4c2ff303b1491
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186290"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583624"
 ---
 # <a name="specifying-an-assemblys-location"></a>Specifica della posizione di un assembly
 Esistono due modi per specificare la posizione dell'assembly:  
   
--   Usando il [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elemento.  
+- Usando il [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elemento.  
   
--   Usando il [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento.  
+- Usando il [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento.  
   
  È anche possibile usare la [strumento di .NET Framework Configuration (Mscorcfg. msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) per specificare i percorsi degli assembly o specificare i percorsi per common language runtime verificare la presenza di assembly.  
   

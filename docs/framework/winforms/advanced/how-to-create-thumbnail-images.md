@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 275041372bd5e7da5dd0b32dc0a3d70a38bd0dcd
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937638"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063759"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Procedura: Creare miniature
 Un'immagine di anteprima è una versione ridotta dell'immagine. È possibile creare un'immagine di anteprima chiamando il <xref:System.Drawing.Image.GetThumbnailImage%2A> metodo di un <xref:System.Drawing.Image> oggetto.  
@@ -21,9 +21,9 @@ Un'immagine di anteprima è una versione ridotta dell'immagine. È possibile cre
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente si costruisce un <xref:System.Drawing.Image> oggetto da un file JPG. L'immagine originale ha una larghezza pari a 640 pixel e un'altezza pari a 479 pixel. Il codice crea un'immagine di anteprima con una larghezza pari a 100 pixel e un'altezza pari a 100 pixel.  
   
- La figura seguente mostra l'immagine di anteprima.  
+ La figura seguente mostra l'immagine di anteprima:  
   
- ![Immagine di anteprima](./media/thumbnail1.png "Thumbnail1")  
+ ![Screenshot che mostra l'anteprima di output.](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
   
 > [!NOTE]
 >  In questo esempio, un metodo di callback viene dichiarato, ma mai usato. Supporta tutte le versioni di GDI+.  

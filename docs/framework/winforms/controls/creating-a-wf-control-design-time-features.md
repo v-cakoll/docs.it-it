@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 70cd08a9d7d03cec4e946d2acb806dbecfe774f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011569"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211209"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Procedura dettagliata: Creazione di un controllo di Windows Forms che usufruisca delle funzionalità offerte da Visual Studio in fase di progettazione
 
@@ -68,17 +68,13 @@ Per il listato di codice completo, vedere [come: Creare un controllo di Windows 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per completare questa procedura dettagliata, è necessario:
-
-- Autorizzazioni sufficienti per essere in grado di creare ed eseguire progetti di applicazione Windows Form nel computer in cui è installato Visual Studio.
+Per completare questa procedura dettagliata, è necessario Visual Studio.
 
 ## <a name="creating-the-project"></a>Creazione del progetto
 
 Il primo passaggio consiste nel creare il progetto di applicazione. Si userà questo progetto per compilare l'applicazione che ospita il controllo personalizzato.
 
-### <a name="to-create-the-project"></a>Per creare il progetto
-
-- Creare un progetto Windows Forms Application denominato "MarqueeControlTest" (**File** > **New** > **progetto**  >   **Visual c#** oppure **Visual Basic** > **Desktop classico** > **Windows Forms Application**).
+Aprire Visual Studio e creare un progetto Windows Forms Application denominato "MarqueeControlTest" (**File** > **New** > **progetto**  >  **Visual C#**  oppure **Visual Basic** > **Desktop classico** > **Windows Forms Application**).
 
 ## <a name="creating-a-control-library-project"></a>Creazione di un progetto di libreria di controlli
 

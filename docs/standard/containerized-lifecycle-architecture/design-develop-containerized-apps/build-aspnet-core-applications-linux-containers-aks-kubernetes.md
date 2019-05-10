@@ -1,17 +1,17 @@
 ---
-title: Creazione di applicazioni ASP.NET Core 2.1 distribuite come contenitori Linux nel cluster AKS/Kubernetes
+title: Creazione di applicazioni ASP.NET Core 2.2 distribuite come contenitori Linux nel cluster AKS/Kubernetes
 description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: c6d778d345466b1b852d06bc01ce40ccfdebf964
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 28d2f557e4434ef7e5c2c3f8d17d6d3d6a80ce2a
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052757"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452780"
 ---
-# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Creazione di applicazioni ASP.NET Core 2.1 distribuite come contenitori Linux in un servizio contenitore di AZURE/Kubernetes orchestrator
+# <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Creazione di applicazioni ASP.NET Core 2.2 distribuite come contenitori Linux in un servizio contenitore di AZURE/Kubernetes orchestrator
 
 Servizi di Kubernetes Azure (AKS) è managed Kubernetes orchestrazioni i servizi di Azure che semplificano la gestione e distribuzione di contenitori.
 
@@ -23,13 +23,13 @@ Funzionalità principali di servizio contenitore di AZURE sono:
 - Ridimensionamento configurabile utente
 - Un'esperienza utente più semplice per gli sviluppatori e operatori di cluster.
 
-Negli esempi seguenti esplorare la creazione di un'applicazione ASP.NET Core 2.1 che viene eseguito in Linux e distribuisce a un Cluster servizio contenitore di AZURE in Azure, mentre avviene lo sviluppo con Visual Studio 2017.
+Negli esempi seguenti esplorare la creazione di un'applicazione ASP.NET Core 2.2 che viene eseguito in Linux e distribuisce a un Cluster servizio contenitore di AZURE in Azure, mentre avviene lo sviluppo con Visual Studio 2017.
 
-## <a name="creating-the-aspnet-core-21-project-using-visual-studio-2017"></a>Creazione progetto ASP.NET Core 2.1 con Visual Studio 2017
+## <a name="creating-the-aspnet-core-22-project-using-visual-studio-2017"></a>Creazione del progetto di 2.2 ASP.NET Core usando Visual Studio 2017
 
 ASP.NET Core è una piattaforma di sviluppo generale gestita da Microsoft e dalla community .NET su GitHub. È multipiattaforma, supporta Windows, macOS e Linux e può essere usato in scenari IoT/incorporati, cloud e dispositivo.
 
-Questo esempio Usa un semplice progetto che si basa su un modello API Web di Visual Studio, in modo non occorre alcuna conoscenza aggiuntiva per creare il codice di esempio. È sufficiente creare il progetto usando un modello standard che include tutti gli elementi per eseguire un progetto di piccole dimensioni con un'API REST, mediante la tecnologia di ASP.NET Core 2.1.
+Questo esempio Usa un semplice progetto che si basa su un modello API Web di Visual Studio, in modo non occorre alcuna conoscenza aggiuntiva per creare il codice di esempio. È sufficiente creare il progetto usando un modello standard che include tutti gli elementi per eseguire un progetto di piccole dimensioni con un'API REST, mediante la tecnologia di ASP.NET Core 2.2.
 
 ![Aggiungi finestra Nuovo progetto in Visual Studio, selezionare l'applicazione Web ASP.NET Core.](media/create-aspnet-core-application.png)
 
@@ -39,13 +39,13 @@ Per creare il progetto di esempio in Visual Studio, selezionare **File** > **New
 
 Visual Studio vengono elencati i modelli per progetti web. Per questo esempio, selezionare **API** per creare un'applicazione API Web ASP.NET.
 
-Verificare di avere selezionato come framework di ASP.NET Core 2.1. .NET core 2.1 è incluso nell'ultima versione di Visual Studio 2017 e viene automaticamente installato e configurato automaticamente quando si installa Visual Studio 2017.
+Verificare di avere selezionato come framework di ASP.NET Core 2.2. .NET core 2.2 è incluso nell'ultima versione di Visual Studio 2017 e viene automaticamente installato e configurato automaticamente quando si installa Visual Studio 2017.
 
 ![Finestra di Studio Visual per la selezione del tipo di un'applicazione Web ASP.NET Core con l'opzione API selezionata.](media/create-web-api-application.png)
 
-**Figura 4-37**. Tipo di progetto API Web e selezionando ASP.NET CORE 2.1
+**Figura 4-37**. Tipo di progetto API Web e selezionando ASP.NET CORE 2.2
 
-Se si dispone di qualsiasi versione precedente di .NET Core, è possibile scaricare e installare la versione 2.1 dal <https://www.microsoft.com/net/download/core#/sdk>.
+Se si dispone di qualsiasi versione precedente di .NET Core, è possibile scaricare e installare la versione 2.2 da <https://www.microsoft.com/net/download/core#/sdk>.
 
 È possibile aggiungere il supporto Docker quando si crea il progetto o in un secondo momento, pertanto, è possibile "inserirla" il progetto in qualsiasi momento. Per aggiungere supporto per Docker dopo la creazione del progetto, fare doppio clic sul nodo del progetto in Esplora soluzioni e selezionare **Add** > **supporto Docker** nel menu di scelta rapida.
 
@@ -59,7 +59,7 @@ Per completare l'aggiunta del supporto Docker, è possibile scegliere Windows o 
 
 **Figura 4-39**. Se si seleziona contenitori Linux.
 
-Con questi semplici passaggi, è necessario l'applicazione ASP.NET Core 2.1 in esecuzione in un contenitore Linux.
+Con questi semplici passaggi, è necessario l'applicazione ASP.NET Core 2.2 in esecuzione in un contenitore Linux.
 
 Come può notare, l'integrazione tra Visual Studio 2017 e Docker è totalmente orientato alla produttività dello sviluppatore.
 
@@ -125,6 +125,12 @@ Dopo aver eseguito il `docker tag` comando, elencare le immagini con il `docker 
 
 ### <a name="push-the-image-into-the-azure-acr"></a>Eseguire il push dell'immagine in Registro contenitori di AZURE di Azure
 
+Accedere al registro contenitori di Azure
+
+```console
+az acr login --name mssampleacr
+```
+
 Eseguire il push dell'immagine in Registro contenitori di AZURE Azure, usando il comando seguente:
 
 ```console
@@ -158,7 +164,7 @@ spec:
         app: mssample-kub-app
     spec:
       containers:
-        - mane: mssample-services-app
+        - name: mssample-services-app
           image: mssampleacr.azurecr.io/mssampleaksapplication:v1
           ports:
             - containerPort: 80
