@@ -2,56 +2,62 @@
 title: Elementi dichiarati in Visual Basic
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
+ms.openlocfilehash: 3430517aea32eeb79aeb586d3a1eb0df1524998b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639180"
 ---
-# <a name="declared-elements-in-visual-basic"></a><span data-ttu-id="01ff8-102">Elementi dichiarati in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="01ff8-102">Declared Elements in Visual Basic</span></span>
-<span data-ttu-id="01ff8-103">Un *elemento dichiarato* è un elemento di programmazione definito in un'istruzione di dichiarazione.</span><span class="sxs-lookup"><span data-stu-id="01ff8-103">A *declared element* is a programming element that is defined in a declaration statement.</span></span> <span data-ttu-id="01ff8-104">Gli elementi dichiarati includono variabili, costanti, enumerazioni, classi, strutture, moduli, interfacce, procedure, parametri di procedura, risultati di funzioni, riferimenti a routine esterne, operatori, proprietà, eventi e delegati.</span><span class="sxs-lookup"><span data-stu-id="01ff8-104">Declared elements include variables, constants, enumerations, classes, structures, modules, interfaces, procedures, procedure parameters, function returns, external procedure references, operators, properties, events, and delegates.</span></span>  
+# <a name="declared-elements-in-visual-basic"></a><span data-ttu-id="b69df-102">Elementi dichiarati in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b69df-102">Declared Elements in Visual Basic</span></span>
+<span data-ttu-id="b69df-103">Un *elemento dichiarato* è un elemento di programmazione definito in un'istruzione di dichiarazione.</span><span class="sxs-lookup"><span data-stu-id="b69df-103">A *declared element* is a programming element that is defined in a declaration statement.</span></span> <span data-ttu-id="b69df-104">Gli elementi dichiarati includono variabili, costanti, enumerazioni, classi, strutture, moduli, interfacce, procedure, parametri di procedura, risultati di funzioni, riferimenti a routine esterne, operatori, proprietà, eventi e delegati.</span><span class="sxs-lookup"><span data-stu-id="b69df-104">Declared elements include variables, constants, enumerations, classes, structures, modules, interfaces, procedures, procedure parameters, function returns, external procedure references, operators, properties, events, and delegates.</span></span>  
   
- <span data-ttu-id="01ff8-105">Le istruzioni di dichiarazione includono quanto segue:</span><span class="sxs-lookup"><span data-stu-id="01ff8-105">Declaration statements include the following:</span></span>  
+ <span data-ttu-id="b69df-105">Le istruzioni di dichiarazione includono quanto segue:</span><span class="sxs-lookup"><span data-stu-id="b69df-105">Declaration statements include the following:</span></span>  
   
-- [<span data-ttu-id="01ff8-106">Istruzione Dim</span><span class="sxs-lookup"><span data-stu-id="01ff8-106">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+- [<span data-ttu-id="b69df-106">Istruzione Dim</span><span class="sxs-lookup"><span data-stu-id="b69df-106">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)  
   
-- [<span data-ttu-id="01ff8-107">Istruzione Const</span><span class="sxs-lookup"><span data-stu-id="01ff8-107">Const Statement</span></span>](../../../../visual-basic/language-reference/statements/const-statement.md)  
+- [<span data-ttu-id="b69df-107">Istruzione Const</span><span class="sxs-lookup"><span data-stu-id="b69df-107">Const Statement</span></span>](../../../../visual-basic/language-reference/statements/const-statement.md)  
   
-- [<span data-ttu-id="01ff8-108">Istruzione Enum</span><span class="sxs-lookup"><span data-stu-id="01ff8-108">Enum Statement</span></span>](../../../../visual-basic/language-reference/statements/enum-statement.md)  
+- [<span data-ttu-id="b69df-108">Istruzione Enum</span><span class="sxs-lookup"><span data-stu-id="b69df-108">Enum Statement</span></span>](../../../../visual-basic/language-reference/statements/enum-statement.md)  
   
-- [<span data-ttu-id="01ff8-109">Istruzione Class</span><span class="sxs-lookup"><span data-stu-id="01ff8-109">Class Statement</span></span>](../../../../visual-basic/language-reference/statements/class-statement.md)  
+- [<span data-ttu-id="b69df-109">Istruzione Class</span><span class="sxs-lookup"><span data-stu-id="b69df-109">Class Statement</span></span>](../../../../visual-basic/language-reference/statements/class-statement.md)  
   
-- [<span data-ttu-id="01ff8-110">Istruzione Structure</span><span class="sxs-lookup"><span data-stu-id="01ff8-110">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+- [<span data-ttu-id="b69df-110">Istruzione Structure</span><span class="sxs-lookup"><span data-stu-id="b69df-110">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)  
   
-- [<span data-ttu-id="01ff8-111">Istruzione Module</span><span class="sxs-lookup"><span data-stu-id="01ff8-111">Module Statement</span></span>](../../../../visual-basic/language-reference/statements/module-statement.md)  
+- [<span data-ttu-id="b69df-111">Istruzione Module</span><span class="sxs-lookup"><span data-stu-id="b69df-111">Module Statement</span></span>](../../../../visual-basic/language-reference/statements/module-statement.md)  
   
-- [<span data-ttu-id="01ff8-112">Istruzione Interface</span><span class="sxs-lookup"><span data-stu-id="01ff8-112">Interface Statement</span></span>](../../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [<span data-ttu-id="b69df-112">Istruzione Interface</span><span class="sxs-lookup"><span data-stu-id="b69df-112">Interface Statement</span></span>](../../../../visual-basic/language-reference/statements/interface-statement.md)  
   
-- [<span data-ttu-id="01ff8-113">Istruzione Function</span><span class="sxs-lookup"><span data-stu-id="01ff8-113">Function Statement</span></span>](../../../../visual-basic/language-reference/statements/function-statement.md)  
+- [<span data-ttu-id="b69df-113">Istruzione Function</span><span class="sxs-lookup"><span data-stu-id="b69df-113">Function Statement</span></span>](../../../../visual-basic/language-reference/statements/function-statement.md)  
   
-- [<span data-ttu-id="01ff8-114">Istruzione Sub</span><span class="sxs-lookup"><span data-stu-id="01ff8-114">Sub Statement</span></span>](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [<span data-ttu-id="b69df-114">Istruzione Sub</span><span class="sxs-lookup"><span data-stu-id="b69df-114">Sub Statement</span></span>](../../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-- [<span data-ttu-id="01ff8-115">Istruzione Declare</span><span class="sxs-lookup"><span data-stu-id="01ff8-115">Declare Statement</span></span>](../../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [<span data-ttu-id="b69df-115">Istruzione Declare</span><span class="sxs-lookup"><span data-stu-id="b69df-115">Declare Statement</span></span>](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-- [<span data-ttu-id="01ff8-116">Istruzione Operator</span><span class="sxs-lookup"><span data-stu-id="01ff8-116">Operator Statement</span></span>](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [<span data-ttu-id="b69df-116">Istruzione Operator</span><span class="sxs-lookup"><span data-stu-id="b69df-116">Operator Statement</span></span>](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
-- [<span data-ttu-id="01ff8-117">Istruzione Property</span><span class="sxs-lookup"><span data-stu-id="01ff8-117">Property Statement</span></span>](../../../../visual-basic/language-reference/statements/property-statement.md)  
+- [<span data-ttu-id="b69df-117">Istruzione Property</span><span class="sxs-lookup"><span data-stu-id="b69df-117">Property Statement</span></span>](../../../../visual-basic/language-reference/statements/property-statement.md)  
   
-- [<span data-ttu-id="01ff8-118">Istruzione Event</span><span class="sxs-lookup"><span data-stu-id="01ff8-118">Event Statement</span></span>](../../../../visual-basic/language-reference/statements/event-statement.md)  
+- [<span data-ttu-id="b69df-118">Istruzione Event</span><span class="sxs-lookup"><span data-stu-id="b69df-118">Event Statement</span></span>](../../../../visual-basic/language-reference/statements/event-statement.md)  
   
-- [<span data-ttu-id="01ff8-119">Istruzione Delegate</span><span class="sxs-lookup"><span data-stu-id="01ff8-119">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+- [<span data-ttu-id="b69df-119">Istruzione Delegate</span><span class="sxs-lookup"><span data-stu-id="b69df-119">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
-## <a name="in-this-section"></a><span data-ttu-id="01ff8-120">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="01ff8-120">In This Section</span></span>  
- [<span data-ttu-id="01ff8-121">Nomi di elementi dichiarati</span><span class="sxs-lookup"><span data-stu-id="01ff8-121">Declared Element Names</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- <span data-ttu-id="01ff8-122">Viene descritto come denominare gli elementi e usare le maiuscole.</span><span class="sxs-lookup"><span data-stu-id="01ff8-122">Describes how to name elements and use alphabetic case.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="b69df-120">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="b69df-120">In This Section</span></span>  
+ [<span data-ttu-id="b69df-121">Nomi di elementi dichiarati</span><span class="sxs-lookup"><span data-stu-id="b69df-121">Declared Element Names</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ <span data-ttu-id="b69df-122">Viene descritto come denominare gli elementi e usare le maiuscole.</span><span class="sxs-lookup"><span data-stu-id="b69df-122">Describes how to name elements and use alphabetic case.</span></span>  
   
- [<span data-ttu-id="01ff8-123">Caratteristiche di elementi dichiarati</span><span class="sxs-lookup"><span data-stu-id="01ff8-123">Declared Element Characteristics</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- <span data-ttu-id="01ff8-124">Vengono descritte le caratteristiche, ad esempio l'ambito, proprie degli elementi dichiarati.</span><span class="sxs-lookup"><span data-stu-id="01ff8-124">Covers characteristics, such as scope, possessed by declared elements.</span></span>  
+ [<span data-ttu-id="b69df-123">Caratteristiche di elementi dichiarati</span><span class="sxs-lookup"><span data-stu-id="b69df-123">Declared Element Characteristics</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ <span data-ttu-id="b69df-124">Vengono descritte le caratteristiche, ad esempio l'ambito, proprie degli elementi dichiarati.</span><span class="sxs-lookup"><span data-stu-id="b69df-124">Covers characteristics, such as scope, possessed by declared elements.</span></span>  
   
- [<span data-ttu-id="01ff8-125">Riferimenti a elementi dichiarati</span><span class="sxs-lookup"><span data-stu-id="01ff8-125">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- <span data-ttu-id="01ff8-126">Viene descritto il modo in cui il compilatore fa corrispondere un riferimento a una dichiarazione e come si qualifica un nome.</span><span class="sxs-lookup"><span data-stu-id="01ff8-126">Describes how the compiler matches a reference to a declaration and how to qualify a name.</span></span>  
+ [<span data-ttu-id="b69df-125">Riferimenti a elementi dichiarati</span><span class="sxs-lookup"><span data-stu-id="b69df-125">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ <span data-ttu-id="b69df-126">Viene descritto il modo in cui il compilatore fa corrispondere un riferimento a una dichiarazione e come si qualifica un nome.</span><span class="sxs-lookup"><span data-stu-id="b69df-126">Describes how the compiler matches a reference to a declaration and how to qualify a name.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="01ff8-127">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="01ff8-127">Related Sections</span></span>  
- [<span data-ttu-id="01ff8-128">Struttura del programma e convenzioni di scrittura del codice</span><span class="sxs-lookup"><span data-stu-id="01ff8-128">Program Structure and Code Conventions</span></span>](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- <span data-ttu-id="01ff8-129">Indicazioni per rendere il codice più facile da leggere, comprendere e gestire.</span><span class="sxs-lookup"><span data-stu-id="01ff8-129">Presents guidelines for making your code easier to read, understand, and maintain.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="b69df-127">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="b69df-127">Related Sections</span></span>  
+ [<span data-ttu-id="b69df-128">Struttura del programma e convenzioni di scrittura del codice</span><span class="sxs-lookup"><span data-stu-id="b69df-128">Program Structure and Code Conventions</span></span>](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+ <span data-ttu-id="b69df-129">Indicazioni per rendere il codice più facile da leggere, comprendere e gestire.</span><span class="sxs-lookup"><span data-stu-id="b69df-129">Presents guidelines for making your code easier to read, understand, and maintain.</span></span>  
   
- [<span data-ttu-id="01ff8-130">Istruzioni</span><span class="sxs-lookup"><span data-stu-id="01ff8-130">Statements</span></span>](../../../../visual-basic/language-reference/statements/index.md)  
- <span data-ttu-id="01ff8-131">Vengono descritte le istruzioni che consentono di denominare e definire procedure, variabili, matrici e costanti.</span><span class="sxs-lookup"><span data-stu-id="01ff8-131">Describes statements that name and define procedures, variables, arrays, and constants.</span></span>  
+ [<span data-ttu-id="b69df-130">Istruzioni</span><span class="sxs-lookup"><span data-stu-id="b69df-130">Statements</span></span>](../../../../visual-basic/language-reference/statements/index.md)  
+ <span data-ttu-id="b69df-131">Vengono descritte le istruzioni che consentono di denominare e definire procedure, variabili, matrici e costanti.</span><span class="sxs-lookup"><span data-stu-id="b69df-131">Describes statements that name and define procedures, variables, arrays, and constants.</span></span>  
   
- [<span data-ttu-id="01ff8-132">Contesti delle dichiarazioni e livelli di accesso predefiniti</span><span class="sxs-lookup"><span data-stu-id="01ff8-132">Declaration Contexts and Default Access Levels</span></span>](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
- <span data-ttu-id="01ff8-133">Sono indicati i tipi di elementi dichiarati, ognuno con la relativa istruzione di dichiarazione, il contesto in cui si può effettuare la dichiarazione e il livello di accesso predefinito.</span><span class="sxs-lookup"><span data-stu-id="01ff8-133">Lists the types of declared elements and shows for each one its declaration statement, in what context you can declare it, and its default access level.</span></span>
+ [<span data-ttu-id="b69df-132">Contesti delle dichiarazioni e livelli di accesso predefiniti</span><span class="sxs-lookup"><span data-stu-id="b69df-132">Declaration Contexts and Default Access Levels</span></span>](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
+ <span data-ttu-id="b69df-133">Sono indicati i tipi di elementi dichiarati, ognuno con la relativa istruzione di dichiarazione, il contesto in cui si può effettuare la dichiarazione e il livello di accesso predefinito.</span><span class="sxs-lookup"><span data-stu-id="b69df-133">Lists the types of declared elements and shows for each one its declaration statement, in what context you can declare it, and its default access level.</span></span>
