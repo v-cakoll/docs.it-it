@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 738aadf93b726569eb59fc281cca2e482bace0bc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935460"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645177"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Specifica del comportamento in fase di esecuzione dei client
 I client Windows Communication Foundation (WCF), come servizi Windows Communication Foundation (WCF), possono essere configurati per modificare il comportamento in fase di esecuzione per adattarlo all'applicazione client. Sono disponibili tre attributi per la specifica del comportamento in fase di esecuzione dei client. Gli oggetti callback dei client duplex possono usare gli attributi <xref:System.ServiceModel.CallbackBehaviorAttribute> e <xref:System.ServiceModel.Description.CallbackDebugBehavior> per modificare il proprio comportamento in fase di esecuzione. L'altro attributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, può essere usato per separare la destinazione logica dalla destinazione di rete immediata. Inoltre, i tipi di callback dei client duplex possono usare alcuni dei comportamenti del lato servizi. Per altre informazioni, vedere [che specifica il comportamento di Run-Time Service](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  

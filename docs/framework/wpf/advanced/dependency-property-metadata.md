@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a4b2edce76bc5ab97e644ec8dbdf045931e87786
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010559"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663424"
 ---
 # <a name="dependency-property-metadata"></a>Metadati delle proprietà di dipendenza
 Il sistema di proprietà di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] include un sistema di segnalazione dei metadati che va al di là di ciò che è possibile segnalare riguardo una proprietà tramite la reflection o le caratteristiche generali di [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. I metadati di una proprietà di dipendenza possono anche essere assegnati in modo univoco dalla classe che definisce una proprietà di dipendenza, possono essere modificati quando la proprietà di dipendenza viene aggiunta a una classe diversa ed è possibile eseguirne specificatamente l'override tramite tutte le classi derivate che ereditano la proprietà di dipendenza dalla classe di base in fase di definizione.  

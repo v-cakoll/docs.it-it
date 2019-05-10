@@ -2,12 +2,12 @@
 title: Operazioni di copia di massa in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: 086b3b997cf0915be7cfa603a651eb412d52e985
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e538e48400d955a0013a12dbf2d10f1f96c3ddfe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878644"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649553"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Operazioni di copia di massa in SQL Server
 Microsoft SQL Server include una popolare utilità della riga di comando denominata **bcp** per rapidamente la copia di massa file di grandi dimensioni in tabelle o viste nei database di SQL Server. La classe <xref:System.Data.SqlClient.SqlBulkCopy> consente di scrivere soluzioni di codice gestito che offrono funzionalità simili. Esistono altri metodi per caricare dati in una tabella SQL Server (ad esempio con l'istruzione INSERT) ma <xref:System.Data.SqlClient.SqlBulkCopy> offre prestazioni molto più vantaggiose.  
@@ -16,11 +16,11 @@ Microsoft SQL Server include una popolare utilità della riga di comando denomin
   
  Con la classe <xref:System.Data.SqlClient.SqlBulkCopy> è possibile eseguire le seguenti operazioni:  
   
--   Copia di massa singola  
+- Copia di massa singola  
   
--   Più copie di massa  
+- Più copie di massa  
   
--   Copia bulk all'interno di una transazione  
+- Copia bulk all'interno di una transazione  
   
 > [!NOTE]
 >  Quando si usa .NET Framework versione 1.1 o precedente (che non supporta il <xref:System.Data.SqlClient.SqlBulkCopy> classe), è possibile eseguire SQL Server Transact-SQL **BULK INSERT** istruzione che usa il <xref:System.Data.SqlClient.SqlCommand> oggetto.  

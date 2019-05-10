@@ -2,12 +2,12 @@
 title: Varianza nelle interfacce generiche (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-ms.openlocfilehash: 50a1aeb5c17a0f193b9e90ca2167ef298f7ed237
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 93e169f658a855e3b271e3e3affeadac5d7e5032
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787218"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642391"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Varianza nelle interfacce generiche (Visual Basic)
 In .NET framework 4 è stato introdotto il supporto della varianza per diverse interfacce generiche esistenti. Il supporto della varianza consente la conversione implicita delle classi che implementano tali interfacce. Le interfacce seguenti sono ora varianti:  

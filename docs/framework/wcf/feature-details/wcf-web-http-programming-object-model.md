@@ -2,41 +2,41 @@
 title: Modello a oggetti per la programmazione HTTP Web di WCF
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: f1772220ed5f425ec603fd8927f4617446d106eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f8bda6292506b64057dee006fa59b7723fa406b2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096010"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648401"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Modello a oggetti per la programmazione HTTP Web di WCF
 Il modello di programmazione HTTP di WCF WEB consente agli sviluppatori di esporre servizi Web Windows Communication Foundation (WCF) tramite richieste HTTP di base senza SOAP. Il modello di programmazione WCF WEB HTTP si basa il modello di estendibilità WCF esistente. Definisce le classi seguenti:  
   
  **Modello di programmazione:**  
   
--   <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>  
+- <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>  
   
--   <xref:System.ServiceModel.Web.WebGetAttribute>  
+- <xref:System.ServiceModel.Web.WebGetAttribute>  
   
--   <xref:System.ServiceModel.Web.WebInvokeAttribute>  
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
   
--   <xref:System.ServiceModel.Web.WebServiceHost>  
+- <xref:System.ServiceModel.Web.WebServiceHost>  
   
  **Infrastruttura del Dispatcher di canali e:**  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
--   <xref:System.ServiceModel.Description.WebHttpBehavior>  
+- <xref:System.ServiceModel.Description.WebHttpBehavior>  
   
  **Classi di utilità e punti di estendibilità:**  
   
--   <xref:System.UriTemplate>  
+- <xref:System.UriTemplate>  
   
--   <xref:System.UriTemplateTable>  
+- <xref:System.UriTemplateTable>  
   
--   <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+- <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
--   <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
+- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
   
 ## <a name="aspnetcacheprofileattribute"></a>AspNetCacheProfileAttribute  
  L'attributo <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, quando applicato a un'operazione di servizio, indica il profilo della cache di output ASP.NET nel file di configurazione che deve essere usato per memorizzare nella cache le risposte dall'operazione nella cache di output ASP .NET. Questa proprietà accetta solo un parametro, il nome di profilo cache che specifica le impostazioni della cache nel file di configurazione.  
@@ -94,7 +94,7 @@ Il modello di programmazione HTTP di WCF WEB consente agli sviluppatori di espor
  La classe <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> usa le classi <xref:System.UriTemplate> e <xref:System.UriTemplateTable> per inviare chiamate alle operazioni del servizio.  
   
 ## <a name="compatibility"></a>Compatibilità  
- Il modello di programmazione HTTP di WCF WEB non utilizza messaggi basati su SOAP e pertanto non supporta WS-* protocolli. È tuttavia possibile esporre lo stesso contratto tramite due endpoint diversi, di cui uno usa SOAP e l'altro no. Vedere [How to: Esporre un contratto a client SOAP e Web](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) per un esempio.  
+ Il modello di programmazione HTTP di WCF WEB non utilizza messaggi basati su SOAP e pertanto non supporta WS-* protocolli. È tuttavia possibile esporre lo stesso contratto tramite due endpoint diversi, di cui uno usa SOAP e l'altro no. Vedere [Procedura: Esporre un contratto a client SOAP e Web](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) per un esempio.  
   
 ## <a name="security"></a>Sicurezza  
  Poiché il modello di programmazione HTTP di WCF WEB non supporta WS-* protocolli l'unico modo per proteggere un servizio Web basato sul modello di programmazione HTTP di WCF WEB consiste nell'esporre il servizio tramite SSL. Per altre informazioni sull'impostazione di configurazione di SSL con [!INCLUDE[iisver](../../../../includes/iisver-md.md)] vedere [come implementare SSL in IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  

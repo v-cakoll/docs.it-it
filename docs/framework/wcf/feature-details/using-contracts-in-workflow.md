@@ -2,12 +2,12 @@
 title: Uso di contratti nel flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
-ms.openlocfilehash: dd35766011c412acc937eed75d523a0574f6b9cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dc2d631d8a9e588645dd60495c54799b2a2dd8a0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918541"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637750"
 ---
 # <a name="using-contracts-in-workflow"></a>Uso di contratti nel flusso di lavoro
 In caso di implementazione di un servizio, viene definito un numero di contratti che descrivono il servizio e i dati inviati e ricevuti. I dati vengono rappresentati come contratti dati e contratti di messaggio; servizi di WCF e del flusso di lavoro utilizzano definizioni del contratto dati del contratto e il messaggio nell'ambito delle descrizioni del servizio. Il servizio stesso espone metadati (nel formato WSDL) per descrivere le operazioni del servizio. In WCF i contratti di servizio e i contratti di operazione definiscono il servizio e le operazioni supportate. Tuttavia, in un servizio flusso di lavoro, questi contratti costituiscono parte del processo aziendale stesso e vengono esposti nei metadati da un processo denominato inferenza del contratto.  

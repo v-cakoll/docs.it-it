@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], font styles
 - data grids [Windows Forms], color styles
 ms.assetid: 588f2c57-d963-41b1-9c1d-d02d71818113
-ms.openlocfilehash: 737a4b943125245a2916bbf6b24b8abdffa8e371
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ad2426ed9643fd46927c4f8b6373fedbec372d38
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912899"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638099"
 ---
 # <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>Procedura: Impostare gli stili di carattere e colore nel controllo DataGridView di Windows Forms
 È possibile specificare l'aspetto delle celle all'interno di un controllo <xref:System.Windows.Forms.DataGridView> impostando le proprietà della classe <xref:System.Windows.Forms.DataGridViewCellStyle>. È possibile recuperare istanze di questa classe da diverse proprietà della classe <xref:System.Windows.Forms.DataGridView> e delle classi correlate o, in alternativa, creare istanze di oggetti <xref:System.Windows.Forms.DataGridViewCellStyle> da assegnare a tali proprietà.  

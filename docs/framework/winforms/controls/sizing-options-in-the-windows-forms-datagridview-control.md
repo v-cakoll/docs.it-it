@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1da98dfa58651eca2052f7d180912d1aa2898385
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903162"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651970"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Opzioni di ridimensionamento nel controllo DataGridView Windows Form
 <xref:System.Windows.Forms.DataGridView> le intestazioni, colonne e righe è possono modificare le dimensioni in seguito a diverse occorrenze. La tabella seguente illustra queste occorrenze.  
@@ -46,13 +46,13 @@ ms.locfileid: "61903162"
 ## <a name="resizing-with-the-mouse"></a>Il ridimensionamento con il Mouse  
  Per impostazione predefinita, gli utenti possono ridimensionare le righe, colonne e le intestazioni che non usano una modalità di ridimensionamento automatico basata sui valori di cella. Per impedire agli utenti di ridimensionare con altre modalità, ad esempio la modalità di riempimento di colonna, impostare uno o più dei seguenti <xref:System.Windows.Forms.DataGridView> proprietà:  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
  È anche possibile impedire agli utenti di ridimensionare le singole righe o colonne impostando i <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> proprietà. Per impostazione predefinita, il <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> valore della proprietà è basato sul <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A> valore della proprietà per le colonne e <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A> valore della proprietà per le righe. Se si imposta in modo esplicito <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> al <xref:System.Windows.Forms.DataGridViewTriState.True> o <xref:System.Windows.Forms.DataGridViewTriState.False>, tuttavia, le sostituzioni di valore specificato è il valore di controllo per tale riga o colonna. Impostare <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> a <xref:System.Windows.Forms.DataGridViewTriState.NotSet> per ripristinare l'ereditarietà.  
   
@@ -74,13 +74,13 @@ ms.locfileid: "61903162"
   
  Per configurare la modalità di ridimensionamento per le intestazioni e le righe e per le colonne che non superano il valore del controllo, impostare uno o più dei seguenti <xref:System.Windows.Forms.DataGridView> proprietà:  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
   
  Per eseguire l'override di modalità di ridimensionamento di colonne del controllo per una singola colonna, impostare relativi <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> proprietà su un valore diverso da <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>. La modalità di ridimensionamento per una colonna è determinata dal relativo <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> proprietà. Il valore di questa proprietà è basato della colonna <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> valore della proprietà, a meno che tale valore è <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>, nel qual caso il controllo <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> valore viene ereditato.  
   
@@ -93,27 +93,27 @@ ms.locfileid: "61903162"
 ## <a name="programmatic-resizing"></a>Il ridimensionamento a livello di codice  
  Quando il ridimensionamento automatico è disabilitato, è possibile impostare a livello di codice la larghezza esatta o l'altezza delle righe, colonne o delle intestazioni tramite le proprietà seguenti:  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
   
  È possibile ridimensionare anche a livello di programmazione le righe, colonne e le intestazioni per adattarla al relativo contenuto usando i metodi seguenti:  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
   
  Questi metodi verranno ridimensionate le righe, colonne, o le intestazioni una sola volta anziché sulla relativa configurazione per il ridimensionamento continuo. Le nuove dimensioni vengono calcolate automaticamente per visualizzare tutto il contenuto senza troncamenti. Quando si ridimensionano a livello di programmazione le colonne contenenti <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> i valori della proprietà <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>, tuttavia, la larghezza calcolata basato sul contenuto viene usata per modificare in modo proporzionale alla colonna <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> i valori delle proprietà e la colonna effettivamente larghezze sono quindi calcolato in base a queste nuove proporzioni in modo che tutte le colonne è riempire l'area di visualizzazione disponibili del controllo.  
   

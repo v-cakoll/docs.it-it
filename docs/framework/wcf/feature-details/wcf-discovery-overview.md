@@ -2,12 +2,12 @@
 title: Panoramica di WCF Discovery
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: cb1eb52e0996a03709a755ff2f148152e2625c58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 80cecec2143d78d9dee13e9071b6ebb5a4b1bdb0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784254"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662500"
 ---
 # <a name="wcf-discovery-overview"></a>Panoramica di WCF Discovery
 Le API di individuazione offrono un modello di programmazione unificato per la pubblicazione dinamica e l'individuazione di servizi Web utilizzando il protocollo WS-Discovery. Queste API consentono la pubblicazione dei servizi e l'individuazione di tali servizi da parte dei client. Una volta reso individuabile un servizio, quest'ultimo è in grado di inviare messaggi di annuncio nonché di essere in ascolto e di rispondere alle richieste di individuazione. I servizi individuabili possono inviare messaggi Hello per annunciare la propria presenza in rete e messaggi Bye per annunciare la propria uscita dalla rete. Per trovare un servizio, i client inviano una richiesta `Probe` contenente criteri specifici quali il tipo di contratto servizio, le parole chiave e l'ambito nella rete. I servizi ricevono la richiesta `Probe` e determinano se corrisponde ai criteri. Se un servizio corrisponde, risponde restituendo un messaggio `ProbeMatch` al client con le informazioni necessarie per contattare il servizio. I client possono inoltre inviare richieste `Resolve` che consentono loro di individuare i servizi che hanno modificato il relativo indirizzo endpoint. I servizi corrispondenti rispondono alle richieste `Resolve` restituendo al client un messaggio `ResolveMatch`.  

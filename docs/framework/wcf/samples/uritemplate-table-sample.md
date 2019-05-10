@@ -2,12 +2,12 @@
 title: Tabella di esempio UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
-ms.openlocfilehash: 4543d4676344d10c3e380c3522a7ca5a6a8d6294
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 004f02ac1399af093d541bc81fb74f51516fe91e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006447"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662456"
 ---
 # <a name="uritemplate-table-sample"></a>Tabella di esempio UriTemplate
 La classe <xref:System.UriTemplateTable> fornisce una struttura con tabella associativa simile a un dizionario per lavorare con un set di istanze `UriTemplate`. URI (Uniform Resource Identifier) specifici possono essere associati in modo efficace con tutti i modelli della tabella e i dati associati al modello corrispondente possono essere recuperati.  
