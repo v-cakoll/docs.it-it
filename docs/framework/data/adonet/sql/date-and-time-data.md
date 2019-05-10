@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f93f215f7be27196217fd506796fd58c4e11d796
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877747"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619176"
 ---
 # <a name="date-and-time-data"></a>Dati relativi a data e ora
 In SQL Server 2008 vengono introdotti nuovi tipi di dati per la gestione di informazioni relative a data e ora. I nuovi tipi di dati includono tipi separati per data e ora e tipi di dati espansi che offrono miglioramenti in termini di intervallo, precisione e gestione del fuso orario. A partire da .NET Framework versione 3.5 Service Pack 1 (SP1), il provider di dati .NET Framework per SQL Server (<xref:System.Data.SqlClient>) fornisce supporto completo per tutte le nuove funzionalità del Motore di database di SQL Server 2008. Per usare queste nuove funzionalità con SqlClient, è necessario installare .NET Framework 3.5 SP1 (o versione successiva).  
@@ -51,13 +51,13 @@ In SQL Server 2008 vengono introdotti nuovi tipi di dati per la gestione di info
 ## <a name="datetime-data-types-and-parameters"></a>Tipi di dati e parametri relativi a data e ora  
  Le enumerazioni seguenti sono state aggiunte a <xref:System.Data.SqlDbType> per supportare i nuovi tipi di dati relativi a data e ora.  
   
--   `SqlDbType.Date`  
+- `SqlDbType.Date`  
   
--   `SqlDbType.Time`  
+- `SqlDbType.Time`  
   
--   `SqlDbType.DateTime2`  
+- `SqlDbType.DateTime2`  
   
--   `SqlDbType.DateTimeOffSet`  
+- `SqlDbType.DateTimeOffSet`  
 
 È possibile specificare il tipo di dati di un <xref:System.Data.SqlClient.SqlParameter> usando uno dei precedenti <xref:System.Data.SqlDbType> enumerazioni. 
 
@@ -66,9 +66,9 @@ In SQL Server 2008 vengono introdotti nuovi tipi di dati per la gestione di info
 
  È inoltre possibile specificare il tipo di un oggetto <xref:System.Data.SqlClient.SqlParameter> in modo generico impostando la proprietà <xref:System.Data.SqlClient.SqlParameter.DbType%2A> di un oggetto `SqlParameter` su un particolare valore dell'enumerazione <xref:System.Data.DbType>. I seguenti valori di enumerazione sono stati aggiunti a <xref:System.Data.DbType> per supportare i tipi di dati `datetime2` e `datetimeoffset`:  
   
--   DbType.DateTime2  
+- DbType.DateTime2  
   
--   DbType.DateTimeOffset  
+- DbType.DateTimeOffset  
   
  Queste nuove enumerazioni integrano le enumerazioni `Date`, `Time` e `DateTime`, che erano presenti nelle versioni precedenti di .NET Framework.  
   
@@ -77,7 +77,7 @@ In SQL Server 2008 vengono introdotti nuovi tipi di dati per la gestione di info
 |Tipo di dati SQL Server|Tipo .NET Framework|System.Data.SqlDbType|System.Data.DbType|  
 |--------------------------|-------------------------|---------------------------|------------------------|  
 |date|System.DateTime|Data|Data|  
-|time|System.TimeSpan|Ora|Ora|  
+|time|System.TimeSpan|Time|Time|  
 |datetime2|System.DateTime|DateTime2|DateTime2|  
 |datetimeoffset|System.DateTimeOffset|DateTimeOffset|DateTimeOffset|  
 |datetime|System.DateTime|DateTime|DateTime|  
@@ -219,11 +219,11 @@ command.Parameters.AddWithValue( _
 ## <a name="specifying-date-and-time-values-as-literals"></a>Impostazione di valori di data e ora come valori letterali  
  È possibile specificare i tipi di dati relativi a data e ora usando formati di stringhe letterali diversi, che vengono quindi valutati da SQL Server in fase di esecuzione e convertiti in strutture di data e ora interne. In SQL Server vengono riconosciuti i dati relativi a data e ora racchiusi tra virgolette singole ('). Negli esempi seguenti vengono illustrati alcuni formati:  
   
--   Formati di data alfabetici, ad esempio `'October 15, 2006'`.  
+- Formati di data alfabetici, ad esempio `'October 15, 2006'`.  
   
--   Formati di data numerici, ad esempio `'10/15/2006'`.  
+- Formati di data numerici, ad esempio `'10/15/2006'`.  
   
--   Formati di stringa non separati, ad esempio `'20061015'`, che verrebbe interpretato come 15 ottobre 2006 se si usa il formato di data standard ISO.  
+- Formati di stringa non separati, ad esempio `'20061015'`, che verrebbe interpretato come 15 ottobre 2006 se si usa il formato di data standard ISO.  
   
 > [!NOTE]
 >  Nella documentazione online di SQL Server sono disponibili informazioni complete su tutti i formati di stringhe letterali e le altre funzionalità dei tipi di dati relativi a data e ora.  

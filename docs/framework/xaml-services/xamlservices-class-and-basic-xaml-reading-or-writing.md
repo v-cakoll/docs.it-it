@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a47436d9f7df099f54d450f6f8176b8cba6d7f5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938736"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622903"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>Classe XAMLServices e lettura o scrittura di XAML di base
 <xref:System.Xaml.XamlServices> è una classe fornita dai servizi XAML di .NET Framework che può essere usata per rispondere alle esigenze di scenari XAML in cui non è richiesto l'accesso specifico al flusso del nodo XAML o alle informazioni sul sistema di tipi XAML ottenute da tali nodi. L'API<xref:System.Xaml.XamlServices> può essere riepilogata nel modo seguente: `Load` o `Parse` to suppot a XAML load path, `Save` to suppot a XAML save path, and `Transform` per fornire una tecnica che unisce un percorso di caricamento e un percorso di salvataggio. `Transform` può essere usato per passare da uno schema XAML a un altro. In questo argomento vengono riepilogate le classificazioni di ognuna di queste API e vengono descritte le differenze tra determinati overload dei metodi.  

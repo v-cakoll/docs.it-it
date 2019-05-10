@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7763e7065e74d99ee5521ea1e4f48fa0108f235a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879814"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623391"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Sincronizzazione di DataSet e XmlDataDocument
 Il tipo <xref:System.Data.DataSet> di ADO.NET fornisce una rappresentazione relazionale dei dati. Per un accesso gerarchico ai dati, è possibile usare le classi XML disponibili in .NET Framework. Questi due tipi di rappresentazione dei dati sono sempre stati usati separatamente. Tuttavia, .NET Framework consente l'accesso sincrono, in tempo reale alle rappresentazioni sia relazionali e gerarchiche di dati tramite il **set di dati** oggetto e il <xref:System.Xml.XmlDataDocument> dell'oggetto, rispettivamente.  
@@ -19,7 +19,7 @@ Il tipo <xref:System.Data.DataSet> di ADO.NET fornisce una rappresentazione rela
   
  Esistono vari modi in cui è possibile sincronizzare un **set di dati** con un **XmlDataDocument**. È possibile:  
   
--   Popolare una **set di dati** con lo schema (vale a dire una struttura relazionale) e i dati, quindi sincronizzarlo con un nuovo oggetto **XmlDataDocument**. In questo modo si otterrà una visualizzazione gerarchica dei dati relazionali esistenti. Ad esempio:  
+- Popolare una **set di dati** con lo schema (vale a dire una struttura relazionale) e i dati, quindi sincronizzarlo con un nuovo oggetto **XmlDataDocument**. In questo modo si otterrà una visualizzazione gerarchica dei dati relazionali esistenti. Ad esempio:  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -37,7 +37,7 @@ Il tipo <xref:System.Data.DataSet> di ADO.NET fornisce una rappresentazione rela
     XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);  
     ```  
   
--   Popolare una **set di dati** con solo schema (ad esempio una classe fortemente tipizzata **set di dati**), sincronizzarlo con un **XmlDataDocument**e quindi caricare il  **XmlDataDocument** da un documento XML. In questo modo si otterrà una visualizzazione relazionale dei dati gerarchici esistenti. I nomi di tabella e i nomi di colonna il **set di dati** dello schema deve corrispondere ai nomi degli elementi XML desiderati siano sincronizzati. Questo tipo di associazione rileva la differenza tra maiuscole e minuscole.  
+- Popolare una **set di dati** con solo schema (ad esempio una classe fortemente tipizzata **set di dati**), sincronizzarlo con un **XmlDataDocument**e quindi caricare il  **XmlDataDocument** da un documento XML. In questo modo si otterrà una visualizzazione relazionale dei dati gerarchici esistenti. I nomi di tabella e i nomi di colonna il **set di dati** dello schema deve corrispondere ai nomi degli elementi XML desiderati siano sincronizzati. Questo tipo di associazione rileva la differenza tra maiuscole e minuscole.  
   
      Si noti che lo schema del **set di dati** solo deve corrispondere gli elementi XML che si desidera esporre nella visualizzazione relazionale. È quindi possibile disporre di un documento XML di grandi dimensioni e di una "finestra" relazionale molto piccola su tale documento. Il **XmlDataDocument** mantiene anche se l'intero documento XML le **DataSet** espone solo una piccola parte di esso. (Per un esempio dettagliato, vedere [sincronizza un set di dati con un XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md).)  
   
@@ -63,7 +63,7 @@ Il tipo <xref:System.Data.DataSet> di ADO.NET fornisce una rappresentazione rela
   
      Non è possibile caricare un' **XmlDataDocument** se è stata sincronizzata con un **DataSet** che contiene i dati. Se si tenta di eseguire tale operazione, verrà generata un'eccezione.  
   
--   Creare una nuova **XmlDataDocument** e caricarlo da un documento XML e quindi accedere alla visualizzazione relazionale dei dati tramite il **set di dati** proprietà del **XmlDataDocument**. È necessario impostare lo schema del **set di dati** prima di poter visualizzare i dati nel **XmlDataDocument** utilizzando il **set di dati**. Anche in questo caso, i nomi di nomi di tabella e colonna nel **set di dati** dello schema deve corrispondere ai nomi degli elementi XML desiderati siano sincronizzati. Questo tipo di associazione rileva la differenza tra maiuscole e minuscole.  
+- Creare una nuova **XmlDataDocument** e caricarlo da un documento XML e quindi accedere alla visualizzazione relazionale dei dati tramite il **set di dati** proprietà del **XmlDataDocument**. È necessario impostare lo schema del **set di dati** prima di poter visualizzare i dati nel **XmlDataDocument** utilizzando il **set di dati**. Anche in questo caso, i nomi di nomi di tabella e colonna nel **set di dati** dello schema deve corrispondere ai nomi degli elementi XML desiderati siano sincronizzati. Questo tipo di associazione rileva la differenza tra maiuscole e minuscole.  
   
      Esempio di codice seguente viene illustrato come accedere alla visualizzazione relazionale dei dati in un' **XmlDataDocument**.  
   

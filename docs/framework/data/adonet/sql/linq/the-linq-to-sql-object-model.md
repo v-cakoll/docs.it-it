@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: beb76f18a55d6e197c1c6bcfc91e3a8ef0f8119b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917602"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063105"
 ---
 # <a name="the-linq-to-sql-object-model"></a>Modello a oggetti LINQ to SQL
 In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], viene eseguito il mapping di un modello a oggetti espresso nel linguaggio di programmazione dello sviluppatore al modello di dati di un database relazionale. Le operazioni sui dati vengono quindi eseguite in base al modello a oggetti.  
   
  In questo scenario non vengono eseguiti comandi di database, ad esempio `INSERT`, sul database, bensì vengono modificati valori ed eseguiti metodi all'interno del modello a oggetti. Quando si desidera eseguire una query sul database o inviare modifiche al database, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte le richieste in comandi SQL corretti che vengono quindi inviati al database.  
   
- ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
+ ![Screenshot che mostra il modello a oggetti Linq.](./media/the-linq-to-sql-object-model/linq-object-model-two-tier.png)  
   
  Gli elementi più importanti nel [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modello a oggetti e la loro relazione con gli elementi del modello di dati relazionali sono riepilogati nella tabella riportata di seguito:  
   

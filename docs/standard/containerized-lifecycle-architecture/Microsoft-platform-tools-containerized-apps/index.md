@@ -4,6 +4,12 @@ description: Conoscere le offerte di Microsoft per il supporto del ciclo di vita
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: cdaac06ffd907783c7ebe9b62ecd726158a02484
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664387"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introduzione alla piattaforma Microsoft e strumenti per le App in contenitori
 
@@ -25,7 +31,7 @@ La tabella 3-1 mostra che l'obiettivo di Microsoft DevOps per applicazioni Docke
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Piattaforma per app Docker   | • Microsoft Visual Studio e Visual Studio Code<br /> • .NET<br /> • Servizio Azure Container di Microsoft Azure<br /> • Azure Service Fabric<br /> • Registro Azure Container<br /> | • Qualsiasi editor di codice (ad esempio, Sublime)<br /> • Qualsiasi linguaggio (Node.js, Java, Go e così via)<br /> • Qualsiasi agente di orchestrazione e utilità di pianificazione<br /> • Qualsiasi registro Docker<br /> |
 | DevOps per app Docker     | • Servizi di azure DevOps<br /> • Microsoft Team Foundation Server<br /> • Servizio Azure Container<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion e così via<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI e così via<br /> • Docker Datacenter, Docker Swarm, Mesos DC/OS, Kubernetes e così via in locale<br /> |
-| Gestione e monitoraggio  | • Operations Management Suite<br /> • Applications Insights<br /> | • Marathon, Chronos e così via<br />
+| Gestione e monitoraggio  | Monitorare azure • | • Marathon, Chronos e così via<br />|
 
 La piattaforma e gli strumenti Microsoft per app Docker in contenitori, come definito nella tabella 3-1, includono i componenti seguenti:
 
