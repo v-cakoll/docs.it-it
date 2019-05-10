@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 805e1cc7d1def74a2a3e7b28afd052be1c4836c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754518"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596831"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Procedura: Creare e inizializzare origini di traccia
 La classe <xref:System.Diagnostics.TraceSource> viene utilizzata dalle applicazioni per produrre tracce associabili all'applicazione. <xref:System.Diagnostics.TraceSource> fornisce metodi di traccia che consentono di tracciare con facilità eventi e dati e di generare tracce informative. L'output di traccia da <xref:System.Diagnostics.TraceSource> può essere creato e inizializzato con o senza l'utilizzo di file di configurazione. In questo argomento vengono fornite istruzioni per entrambe le opzioni. È tuttavia consigliabile utilizzare file di configurazione per semplificare la riconfigurazione delle tracce prodotte dalle origini di traccia in fase di esecuzione.  
