@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 540271c414ac295c419533a4622657d60d123796
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863623"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665386"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Procedura: Forzare un argomento può essere passato per valore (Visual Basic)
 La dichiarazione di routine determina il meccanismo di passaggio. Se un parametro dichiarato [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic prevede di passare l'argomento corrispondente per riferimento. In questo modo la procedura modificare il valore dell'elemento di programmazione sottostante all'argomento nel codice chiamante. Se si vuole proteggere l'elemento sottostante da tali modifiche, è possibile eseguire l'override di `ByRef` meccanismo di passaggio della procedura chiamata racchiudendo il nome dell'argomento racchiuso tra parentesi. Tali parentesi vengono aggiunte le parentesi che racchiudono l'elenco di argomenti nella chiamata.  

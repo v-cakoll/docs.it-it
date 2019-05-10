@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: caacee591c4df8389cea241916618f50da56b22b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 50ecb2aad84bd5b6c32f655b1dbbd34cf03a5b29
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949162"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624286"
 ---
 # <a name="thread-pool-etw-events"></a>Eventi ETW del pool di thread
 <a name="top"></a> Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.  
@@ -93,7 +93,7 @@ ms.locfileid: "61949162"
 |----------------|---------------|-----------------|  
 |AverageThroughput|win:Double|Velocità effettiva Media di un campione di misurazioni.|  
 |NewWorkerThreadCount|win:UInt32|Nuovo numero di thread di lavoro attivi.|  
-|Motivo|win:UInt32|Motivo della modifica.<br /><br /> 0x00 - Riscaldamento.<br /><br /> 0x01 - Inizializzazione test in corso.<br /><br /> 0x02 - Spostamento casuale.<br /><br /> 0x03 - Spostamento verso l’alto.<br /><br /> 0x04 - Modificare il punto.<br /><br /> 0x05 - Stabilizzazione.<br /><br /> 0x06 - Esaurimento delle risorse.<br /><br /> 0x07 - Timeout del thread.|  
+|`Reason`|win:UInt32|Motivo della modifica.<br /><br /> 0x00 - Riscaldamento.<br /><br /> 0x01 - Inizializzazione test in corso.<br /><br /> 0x02 - Spostamento casuale.<br /><br /> 0x03 - Spostamento verso l’alto.<br /><br /> 0x04 - Modificare il punto.<br /><br /> 0x05 - Stabilizzazione.<br /><br /> 0x06 - Esaurimento delle risorse.<br /><br /> 0x07 - Timeout del thread.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
@@ -148,7 +148,7 @@ ms.locfileid: "61949162"
   
 |Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
-|Conteggio|win:UInt64|Numero di thread di I/O, tra cui il thread appena creato.|  
+|Count|win:UInt64|Numero di thread di I/O, tra cui il thread appena creato.|  
 |NumRetired|win:UInt64|Numero di thread di lavoro ritirato.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
@@ -169,7 +169,7 @@ ms.locfileid: "61949162"
   
 |Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
-|Conteggio|win:UInt64|Numero di thread di I/O rimanenti nel pool di thread.|  
+|Count|win:UInt64|Numero di thread di I/O rimanenti nel pool di thread.|  
 |NumRetired|win:UInt64|Numero di thread di I/O ritirato.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
@@ -190,7 +190,7 @@ ms.locfileid: "61949162"
   
 |Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
-|Conteggio|win:UInt64|Numero di thread di I/O nel pool di thread, incluso il presente.|  
+|Count|win:UInt64|Numero di thread di I/O nel pool di thread, incluso il presente.|  
 |NumRetired|win:UInt64|Numero di thread di I/O ritirato.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
@@ -211,7 +211,7 @@ ms.locfileid: "61949162"
   
 |Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
-|Conteggio|win:UInt64|Numero di thread di I/O rimanenti nel pool di thread.|  
+|Count|win:UInt64|Numero di thread di I/O rimanenti nel pool di thread.|  
 |NumRetired|win:UInt64|Numero di thread di I/O ritirato.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   

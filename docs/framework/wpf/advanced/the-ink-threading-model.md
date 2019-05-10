@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b753fcffbdaa1cc9ba960a774077457dd0263e0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007388"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621369"
 ---
 # <a name="the-ink-threading-model"></a>Modello di threading dell'input penna
 Uno dei vantaggi dell'input penna su un Tablet PC è che presenta notevoli analogie con la scrittura con una carta e penna regolare.  A tale scopo, la penna del tablet PC raccoglie i dati di input con una frequenza molto più elevato rispetto a un mouse ed esegue il rendering dell'input penna mentre l'utente scrive.  Thread dell'interfaccia utente dell'applicazione non è sufficiente per la raccolta dei dati della penna e rendering di input penna, perché può essere bloccato.  Per risolvere il problema, un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione utilizza due thread aggiuntivi quando l'utente scrive tramite input penna.  

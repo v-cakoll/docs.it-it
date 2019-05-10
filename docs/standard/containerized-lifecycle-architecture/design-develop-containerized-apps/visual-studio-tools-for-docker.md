@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d361b0c471402c097dfac799eb58ef08209d4343
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795564"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664364"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Usare gli strumenti di Docker in Visual Studio 2017 in Windows
 
@@ -79,7 +79,7 @@ Nella tabella seguente consente di decidere come impostare queste opzioni.
 | Automaticamente il pull delle immagini Docker richiesto nel caricamento del progetto | Attivato | Docker Compose | Per ottenere migliori prestazioni durante il caricamento dei progetti, Visual Studio verrà avviato un'operazione di pull di Docker in background in modo che quando si è pronti per eseguire il codice, l'immagine è già stato scaricato o in fase di download. Se si sta semplicemente il caricamento di progetti e codice di esplorazione, è possibile disattivare questa funzionalità per evitare il download delle immagini del contenitore che non è necessario. |
 | Avvia automaticamente i contenitori in background | Attivato | Docker Compose | Anche in questo caso per ottenere migliori prestazioni, Visual Studio crea un contenitore con punti di montaggio di volume pronti per quando viene compilato ed eseguito nel contenitore. Se si desidera controllare quando viene creato il contenitore, è possibile disattivare questa funzionalità. |
 | Chiudono automaticamente i contenitori kill sulla soluzione | Attivato | Docker Compose | Disattivare questa funzionalità se si vuole contenitori per la soluzione continuare a eseguire dopo la chiusura della soluzione o chiusura di Visual Studio. |
-| Non chiedere conferma per considerare attendibile il certificato SSL localhost | Disattivato | Progetti ASP.NET Core 2.1 | Se il certificato SSL localhost non è attendibile, Visual Studio richiederà ogni volta che si esegue il progetto, a meno che non è selezionata questa casella di controllo. |
+| Non chiedere conferma per considerare attendibile il certificato SSL localhost | Disattivato | Progetti ASP.NET Core 2.2 | Se il certificato SSL localhost non è attendibile, Visual Studio richiederà ogni volta che si esegue il progetto, a meno che non è selezionata questa casella di controllo. |
 
 > [!WARNING]
 > Se non è attendibile il certificato SSL localhost e si seleziona la casella per eliminare la richiesta, richieste web HTTPS potrebbero non riuscire in fase di esecuzione nell'app o nel servizio. In tal caso, deselezionare il **non chiedere conferma** casella di controllo, eseguire il progetto e indicare attendibilità al prompt.

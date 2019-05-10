@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc14b6a2b3782ae7ed3d26f9878646f004504d1c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875310"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660553"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Utilizzo di un servizio dati in un'applicazione client (WCF Data Services)
 È possibile accedere a un servizio che espone un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed specificando un URI a un Web browser. L'URI fornisce l'indirizzo di una risorsa e i messaggi di richiesta vengono inviati a questi indirizzi per accedere ai dati sottostanti rappresentati dalla risorsa o per modificarli. Il browser invia un comando GET HTTP e restituisce la risorsa richiesta come feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Per altre informazioni, vedere [accesso al servizio da un Web Browser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -23,24 +23,24 @@ ms.locfileid: "61875310"
 ### <a name="http-actions"></a>Azioni HTTP  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] supporta le azioni HTTP riportate di seguito per l'esecuzione di operazioni di creazione, lettura, aggiornamento ed eliminazione sui dati di entità rappresentati dalla risorsa indirizzata.  
   
--   **HTTP GET** -si tratta dell'azione predefinita quando si accede a una risorsa da un browser. Nel messaggio di richiesta non viene fornito alcun payload e viene restituito un metodo di risposta con un payload contenente i dati richiesti.  
+- **HTTP GET** -si tratta dell'azione predefinita quando si accede a una risorsa da un browser. Nel messaggio di richiesta non viene fornito alcun payload e viene restituito un metodo di risposta con un payload contenente i dati richiesti.  
   
--   **Richiesta HTTP POST** -inserisce nuovi dati di entità nella risorsa fornita. I dati da inserire vengono forniti nel payload del messaggio di richiesta. Il payload del messaggio di risposta contiene i dati per l'entità appena creata, inclusi i valori della chiave generati automaticamente. L'intestazione contiene inoltre l'URI che indirizza la nuova risorsa di entità.  
+- **Richiesta HTTP POST** -inserisce nuovi dati di entità nella risorsa fornita. I dati da inserire vengono forniti nel payload del messaggio di richiesta. Il payload del messaggio di risposta contiene i dati per l'entità appena creata, inclusi i valori della chiave generati automaticamente. L'intestazione contiene inoltre l'URI che indirizza la nuova risorsa di entità.  
   
--   **HTTP DELETE** -Elimina i dati di entità rappresentati dalla risorsa specificata. Nei messaggi di richiesta o di risposta non è presente un payload.  
+- **HTTP DELETE** -Elimina i dati di entità rappresentati dalla risorsa specificata. Nei messaggi di richiesta o di risposta non è presente un payload.  
   
--   **PUT HTTP** : sostituisce i dati di entità in corrispondenza della risorsa richiesta con i nuovi dati forniti nel payload del messaggio di richiesta esistenti.  
+- **PUT HTTP** : sostituisce i dati di entità in corrispondenza della risorsa richiesta con i nuovi dati forniti nel payload del messaggio di richiesta esistenti.  
   
--   **MERGE HTTP** : a causa delle inefficienze durante l'esecuzione di un'eliminazione seguita da un'operazione di inserimento nell'origine dati allo scopo di modificare i dati di entità, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] introduce una nuova azione MERGE HTTP. Il payload del messaggio di richiesta contiene le proprietà che devono essere modificate nella risorsa di entità indirizzata. Poiché l'azione MERGE HTTP non è definita nella specifica HTTP, è possibile che sia necessaria elaborazione aggiuntiva per indirizzare una richiesta MERGE HTTP tramite server non dotati di supporto per [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
+- **MERGE HTTP** : a causa delle inefficienze durante l'esecuzione di un'eliminazione seguita da un'operazione di inserimento nell'origine dati allo scopo di modificare i dati di entità, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] introduce una nuova azione MERGE HTTP. Il payload del messaggio di richiesta contiene le proprietà che devono essere modificate nella risorsa di entità indirizzata. Poiché l'azione MERGE HTTP non è definita nella specifica HTTP, è possibile che sia necessaria elaborazione aggiuntiva per indirizzare una richiesta MERGE HTTP tramite server non dotati di supporto per [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
   
  Per altre informazioni, vedere [OData: Operazioni](https://go.microsoft.com/fwlink/?LinkId=185792).  
   
 ### <a name="payload-formats"></a>Formati payload  
  Per una richiesta PUT HTTP, POST HTTP o MERGE HTTP, il payload di un messaggio di richiesta contiene i dati di entità da inviare al servizio dati. Il contenuto del payload dipende dal formato dei dati del messaggio. Tale payload è inoltre incluso nelle risposte HTTP a tutte le azioni, tranne DELETE. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] supporta i formati di payload seguenti per l'accesso e modifica dei dati con il servizio:  
   
--   **Atom** -codifica di messaggi basati su XML definita da [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] come estensione al protocollo di pubblicazione Atom (AtomPub) per scambio di dati su HTTP per feed Web, podcast, Wiki e funzionalità Internet basate su XML. Per altre informazioni, vedere [OData: Formato Atom](https://go.microsoft.com/fwlink/?LinkId=185794).  
+- **Atom** -codifica di messaggi basati su XML definita da [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] come estensione al protocollo di pubblicazione Atom (AtomPub) per scambio di dati su HTTP per feed Web, podcast, Wiki e funzionalità Internet basate su XML. Per altre informazioni, vedere [OData: Formato Atom](https://go.microsoft.com/fwlink/?LinkId=185794).  
   
--   **JSON** -JavaScript Object Notation (JSON) è un formato di interscambio dei dati leggero basato su un subset del linguaggio di programmazione JavaScript. Per altre informazioni, vedere [OData: Formato JSON](https://go.microsoft.com/fwlink/?LinkId=185795).  
+- **JSON** -JavaScript Object Notation (JSON) è un formato di interscambio dei dati leggero basato su un subset del linguaggio di programmazione JavaScript. Per altre informazioni, vedere [OData: Formato JSON](https://go.microsoft.com/fwlink/?LinkId=185795).  
   
  Il formato del messaggio per il payload deve essere incluso nell'intestazione del messaggio di richiesta HTTP. Per altre informazioni, vedere [OData: Operazioni](https://go.microsoft.com/fwlink/?LinkID=185792).  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: 64ee75c93615f57b15fea29f06fff500a395ba0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e6f8bf2b4ce9789a1715971b8262bdd162ba8035
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803831"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619537"
 ---
 # <a name="declaration-expected"></a>Prevista dichiarazione
 Un'istruzione non dichiarativa, ad esempio un'assegnazione o un'istruzione di ciclo, si verifica all'esterno di qualsiasi routine. Solo le dichiarazioni sono consentite alle routine esterne.  
@@ -23,11 +23,11 @@ Un'istruzione non dichiarativa, ad esempio un'assegnazione o un'istruzione di ci
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Spostare l'istruzione non dichiarativa per il corpo di una stored procedure.  
+- Spostare l'istruzione non dichiarativa per il corpo di una stored procedure.  
   
--   Iniziare la dichiarazione con una parola chiave di dichiarazione appropriata.  
+- Iniziare la dichiarazione con una parola chiave di dichiarazione appropriata.  
   
--   Assicurarsi che una parola chiave di dichiarazione non è errata.  
+- Assicurarsi che una parola chiave di dichiarazione non è errata.  
   
 ## <a name="see-also"></a>Vedere anche
 

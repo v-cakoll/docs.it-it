@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 11790e14ed1fde9a42e642400161cfb92bf33293
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011758"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469519"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Controlli da usare in Windows Form
 Il seguente è un elenco alfabetico di controlli e componenti che possono essere usati in Windows Form. Oltre ai controlli Windows Form illustrati in questa sezione, è possibile aggiungere controlli ActiveX e personalizzati a Windows Form. Se il controllo necessario non è elencato qui, è possibile crearlo. Per informazioni dettagliate, vedere [Sviluppo di controlli Windows Form in fase di progettazione](developing-windows-forms-controls-at-design-time.md). Per altre informazioni sulla scelta del controllo necessario, vedere [Controlli Windows Form per funzione](windows-forms-controls-by-function.md).  
@@ -229,7 +229,7 @@ Il seguente è un elenco alfabetico di controlli e componenti che possono essere
  Fornisce collegamenti ad argomenti dettagliati, suggerimenti sul tipo di controllo da creare e altre informazioni sulla creazione dei controlli.  
   
  [Confronto tra controlli e oggetti programmabili in diversi linguaggi e librerie](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
- Fornisce una tabella che associa i controlli di Visual Basic 6.0 ai controlli corrispondenti di [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]. Si noti che i controlli ora sono classi in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Fornisce una tabella che associa i controlli in Visual Basic 6.0 ai controlli corrispondenti in Visual Basic. Si noti che i controlli ora sono classi in .NET Framework.  
   
  [Procedura: Aggiungere i controlli ActiveX a Windows Form](how-to-add-activex-controls-to-windows-forms.md)  
  Descrive come usare i controlli ActiveX in Windows Form.

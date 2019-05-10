@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 430041f5f4315c5ad20cd2495f01a6f776f239c7
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867139"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469700"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Durata degli oggetti: Come gli oggetti vengono creati e distrutti (Visual Basic)
 È stata creata un'istanza di una classe, un oggetto, mediante la parola chiave `New`. Prima di usare i nuovi oggetti per la prima volta, è spesso necessario eseguire attività di inizializzazione. Tra le attività di inizializzazione più comuni vi sono l'apertura dei file, la connessione a un database e la lettura dei valori delle chiavi del Registro di sistema. Visual Basic l'inizializzazione di nuovi oggetti mediante routine denominate *costruttori* (metodi speciali che consentono il controllo dell'inizializzazione).  
@@ -38,7 +38,7 @@ ms.locfileid: "61867139"
  È possibile usare costruttori e distruttori per controllare la creazione e l'eliminazione di oggetti. Il `Sub New` e `Sub Finalize` routine in Visual Basic inizializzare ed eliminare definitivamente oggetti; viene sostituito il `Class_Initialize` e `Class_Terminate` metodi usati in Visual Basic 6.0 e versioni precedenti.  
   
 ### <a name="sub-new"></a>Sub New  
- Il costruttore `Sub New` può essere eseguito solo una volta dopo la creazione di una classe. Non può essere chiamato in modo esplicito in alcun punto che non sia la prima riga di codice di un altro costruttore, dalla stessa classe o da una classe derivata. Inoltre, il codice nel metodo `Sub New` viene sempre eseguito prima di qualsiasi altro codice in una classe. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] e versioni successive creano in modo implicito una `Sub New` costruttore in fase di esecuzione se non si definisce in modo esplicito un `Sub New` procedure per una classe.  
+ Il costruttore `Sub New` può essere eseguito solo una volta dopo la creazione di una classe. Non può essere chiamato in modo esplicito in alcun punto che non sia la prima riga di codice di un altro costruttore, dalla stessa classe o da una classe derivata. Inoltre, il codice nel metodo `Sub New` viene sempre eseguito prima di qualsiasi altro codice in una classe. Visual Basic e versioni successive creano in modo implicito una `Sub New` costruttore in fase di esecuzione se non si definisce in modo esplicito un `Sub New` procedure per una classe.  
   
  Per creare un costruttore per una classe, creare una routine denominata `Sub New` in qualsiasi punto della definizione della classe. Per creare un costruttore con parametri, specificare i nomi e i tipi di dati degli argomenti su `Sub New` analogamente a come si specificano argomenti per qualsiasi altra routine, come illustrato nel codice seguente:  
   
@@ -60,7 +60,7 @@ ms.locfileid: "61867139"
   
  Il distruttore `Finalize` è un metodo protetto che può essere chiamato solo dalla classe a cui appartiene o dalle classi derivate. Poiché `Finalize` viene chiamato automaticamente dal sistema quando viene eliminato definitivamente un oggetto, si consiglia di non chiamare `Finalize` in modo esplicito dall'esterno dell'implementazione `Finalize` di una classe derivata.  
   
- A differenza del metodo `Class_Terminate` che viene eseguito subito dopo aver impostato un oggetto su Nothing, tra l'abbandono dell'ambito da parte di un oggetto e la chiamata del distruttore `Finalize` da parte di Visual Basic si verifica generalmente un ritardo. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] e versioni successive supporta un altro tipo di distruttore, <xref:System.IDisposable.Dispose%2A>, che può essere chiamato in modo esplicito in qualsiasi momento per rilasciare subito le risorse.  
+ A differenza del metodo `Class_Terminate` che viene eseguito subito dopo aver impostato un oggetto su Nothing, tra l'abbandono dell'ambito da parte di un oggetto e la chiamata del distruttore `Finalize` da parte di Visual Basic si verifica generalmente un ritardo. Visual Basic e versioni successive consentono un altro tipo di distruttore, <xref:System.IDisposable.Dispose%2A>, che può essere chiamato in modo esplicito in qualsiasi momento per rilasciare subito le risorse.  
   
 > [!NOTE]
 >  Un distruttore `Finalize` non deve generare eccezioni, perché queste non possono essere gestite dall'applicazione e possono provocarne l'interruzione.  
@@ -84,13 +84,13 @@ ms.locfileid: "61867139"
 ### <a name="implementing-idisposable"></a>Implementazione di IDisposable  
  Una classe che implementa l'interfaccia <xref:System.IDisposable> deve includere il codice seguente:  
   
--   Campo che consente di controllare se l'oggetto è stato eliminato in modo permanente:  
+- Campo che consente di controllare se l'oggetto è stato eliminato in modo permanente:  
   
     ```  
     Protected disposed As Boolean = False  
     ```  
   
--   Overload del metodo <xref:System.IDisposable.Dispose%2A> che consente di liberare le risorse della classe. Questo metodo deve essere chiamato dai metodi <xref:System.IDisposable.Dispose%2A> e `Finalize` della classe base:  
+- Overload del metodo <xref:System.IDisposable.Dispose%2A> che consente di liberare le risorse della classe. Questo metodo deve essere chiamato dai metodi <xref:System.IDisposable.Dispose%2A> e `Finalize` della classe base:  
   
     ```  
     Protected Overridable Sub Dispose(ByVal disposing As Boolean)  
@@ -104,7 +104,7 @@ ms.locfileid: "61867139"
     End Sub  
     ```  
   
--   Implementazione di <xref:System.IDisposable.Dispose%2A> che contiene solo il codice seguente:  
+- Implementazione di <xref:System.IDisposable.Dispose%2A> che contiene solo il codice seguente:  
   
     ```  
     Public Sub Dispose() Implements IDisposable.Dispose  
@@ -113,7 +113,7 @@ ms.locfileid: "61867139"
     End Sub  
     ```  
   
--   Override del metodo `Finalize` che contiene solo il codice seguente:  
+- Override del metodo `Finalize` che contiene solo il codice seguente:  
   
     ```  
     Protected Overrides Sub Finalize()  

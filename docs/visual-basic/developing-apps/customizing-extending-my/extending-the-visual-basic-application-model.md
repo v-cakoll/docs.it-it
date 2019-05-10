@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: bb87879fdf584a439e09839bf4321b85e7dd6a43
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f4857d410b16c3bbcb2129cec0d753a1c3d7a726
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602454"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469488"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Estensione del modello di applicazione Visual Basic
 È possibile aggiungere funzionalità al modello dell'applicazione eseguendo l'override di `Overridable` i membri del <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Questa tecnica consente di personalizzare il comportamento del modello dell'applicazione e aggiungere chiamate a metodi personalizzati come l'applicazione si avvia e arresta.  
@@ -76,10 +76,10 @@ ms.locfileid: "64602454"
   
  Se l'applicazione è un'applicazione a istanza singola e l'applicazione è già in esecuzione, l'istanza successiva dell'applicazione chiama il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> metodo nell'istanza originale dell'applicazione e quindi viene chiusa.  
  
- Il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> chiamate al costruttore il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> proprietà per determinare quali motore di rendering di testo da utilizzare per i form dell'applicazione. Per impostazione predefinita, il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> proprietà restituisce `False`, che indica che il motore di rendering del testo GDI utilizzabile, ovvero l'impostazione predefinita in [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. È possibile eseguire l'override di <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> proprietà da restituire `True`, che indica che verrà utilizzato il motore di rendering di testo GDI+, ovvero l'impostazione predefinita in Visual Basic .NET 2002 e Visual Basic .NET 2003.  
+ Il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> chiamate al costruttore il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> proprietà per determinare quali motore di rendering di testo da utilizzare per i form dell'applicazione. Per impostazione predefinita, il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> restituisce proprietà `False`, che indica che il motore di rendering del testo GDI utilizzabile, ovvero l'impostazione predefinita in Visual Basic 2005 e versioni successive. È possibile eseguire l'override di <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> proprietà da restituire `True`, che indica che verrà utilizzato il motore di rendering di testo GDI+, ovvero l'impostazione predefinita in Visual Basic .NET 2002 e Visual Basic .NET 2003.  
   
 ## <a name="configuring-the-application"></a>Configurazione dell'applicazione  
- Come parte del modello di applicazione Visual Basic il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> classe fornisce proprietà protette che consentono di configurare l'applicazione. Queste proprietà devono essere impostate nel costruttore della classe di implementazione.  
+ Come parte del modello di applicazione Visual Basic il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe fornisce proprietà protette che consentono di configurare l'applicazione. Queste proprietà devono essere impostate nel costruttore della classe di implementazione.  
   
  In un progetto Windows Forms predefinita, il **Progettazione progetti** crea codice per impostare le proprietà con le impostazioni della finestra di progettazione. Le proprietà vengono usate solo all'avvio dell'applicazione; la loro impostazione dopo l'avvio dell'applicazione non ha alcun effetto.  
   

@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c324e4956d6db29e4de12bd7639a69daaf65d872
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747549"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665921"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Procedura dettagliata: Creazione di un'applicazione Windows ad accesso facilitato
 La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda. Molti governi hanno norme relative all'accessibilità per l'acquisto del software. Il logo Certified for Windows include requisiti di accessibilità. È stato stimato che solo negli Stati Uniti risiedono 30 milioni di persone, molte delle quali potenziali clienti, interessate all'accessibilità del software.  
   
  Questa procedura dettagliata illustra i cinque requisiti di accessibilità per il logo Certified for Windows. In base a questi requisiti, un'applicazione accessibile deve:  
   
--   Supportare le impostazioni di dimensioni, tipi di caratteri, colori e input del Pannello di controllo. La barra dei menu, la barra del titolo, i bordi e la barra di stato verranno ridimensionati automaticamente quando l'utente modifica le impostazioni del Pannello di controllo. In questa applicazione non sono necessarie altre modifiche ai controlli o al codice.  
+- Supportare le impostazioni di dimensioni, tipi di caratteri, colori e input del Pannello di controllo. La barra dei menu, la barra del titolo, i bordi e la barra di stato verranno ridimensionati automaticamente quando l'utente modifica le impostazioni del Pannello di controllo. In questa applicazione non sono necessarie altre modifiche ai controlli o al codice.  
   
--   Supportare la modalità contrasto elevato.  
+- Supportare la modalità contrasto elevato.  
   
--   Fornire l'accesso da tastiera documentato a tutte le funzionalità.  
+- Fornire l'accesso da tastiera documentato a tutte le funzionalità.  
   
--   Esporre la posizione dello stato attivo della tastiera a livello visivo o di programmazione.  
+- Esporre la posizione dello stato attivo della tastiera a livello visivo o di programmazione.  
   
--   Evitare di comunicare informazioni importanti solo tramite segnali acustici.  
+- Evitare di comunicare informazioni importanti solo tramite segnali acustici.  
   
  Per altre informazioni, vedere [Risorse per la progettazione di applicazioni accessibili](/visualstudio/ide/reference/resources-for-designing-accessible-applications).  
   
@@ -41,29 +41,29 @@ La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda
   
 #### <a name="to-begin-making-the-application"></a>Per iniziare a creare l'applicazione  
   
--   Creare una nuova applicazione Windows in Visual Basic o l'oggetto visivo C#. Assegnare il nome **PizzaOrder** al progetto. Per i dettagli, vedere [Creazione di nuove soluzioni e progetti](/visualstudio/ide/creating-solutions-and-projects).  
+- Creare una nuova applicazione Windows in Visual Basic o l'oggetto visivo C#. Assegnare il nome **PizzaOrder** al progetto. Per i dettagli, vedere [Creazione di nuove soluzioni e progetti](/visualstudio/ide/creating-solutions-and-projects).  
   
 ## <a name="adding-the-controls-to-the-form"></a>Aggiunta dei controlli al form  
  Quando si aggiungono i controlli a un form, tenere presenti le linee guida seguenti per creare un'applicazione accessibile:  
   
--   Impostare le proprietà <xref:System.Windows.Forms.Control.AccessibleDescription%2A> e <xref:System.Windows.Forms.Control.AccessibleName%2A>. In questo esempio, l'impostazione predefinita per <xref:System.Windows.Forms.Control.AccessibleRole%2A> è sufficiente. Per altre informazioni sulle proprietà di accessibilità, vedere [Providing Accessibility Information for Controls on a Windows Form](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md) (Specifica di informazioni di accessibilità per i controlli in un Windows Form).  
+- Impostare le proprietà <xref:System.Windows.Forms.Control.AccessibleDescription%2A> e <xref:System.Windows.Forms.Control.AccessibleName%2A>. In questo esempio, l'impostazione predefinita per <xref:System.Windows.Forms.Control.AccessibleRole%2A> è sufficiente. Per altre informazioni sulle proprietà di accessibilità, vedere [Providing Accessibility Information for Controls on a Windows Form](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md) (Specifica di informazioni di accessibilità per i controlli in un Windows Form).  
   
--   Impostare le dimensioni del carattere su 10 o più punti.  
+- Impostare le dimensioni del carattere su 10 o più punti.  
   
     > [!NOTE]
     >  Se all'inizio si impostano le dimensioni del carattere del form su 10, tutti i controlli aggiunti successivamente al form avranno dimensioni del carattere pari a 10.  
   
--   Assicurarsi che tutti i controlli etichetta che descrivono un controllo TextBox precedano immediatamente il controllo TextBox nell'ordine di tabulazione.  
+- Assicurarsi che tutti i controlli etichetta che descrivono un controllo TextBox precedano immediatamente il controllo TextBox nell'ordine di tabulazione.  
   
--   Aggiungere una chiave di accesso, usando il carattere "&", al <xref:System.Windows.Forms.Control.Text%2A> proprietà di qualsiasi controllo potrebbe essere necessario l'utente a cui passare.  
+- Aggiungere una chiave di accesso, usando il carattere "&", al <xref:System.Windows.Forms.Control.Text%2A> proprietà di qualsiasi controllo potrebbe essere necessario l'utente a cui passare.  
   
--   Aggiungere una chiave di accesso, usando il carattere "&", al <xref:System.Windows.Forms.Control.Text%2A> proprietà dell'etichetta che precede un controllo che l'utente desidera spostarsi. Impostare la proprietà <xref:System.Windows.Forms.Label.UseMnemonic%2A> delle etichette su `true`, in modo che lo stato attivo venga impostato sul controllo successivo nell'ordine di tabulazione quando l'utente preme il tasto di scelta.  
+- Aggiungere una chiave di accesso, usando il carattere "&", al <xref:System.Windows.Forms.Control.Text%2A> proprietà dell'etichetta che precede un controllo che l'utente desidera spostarsi. Impostare la proprietà <xref:System.Windows.Forms.Label.UseMnemonic%2A> delle etichette su `true`, in modo che lo stato attivo venga impostato sul controllo successivo nell'ordine di tabulazione quando l'utente preme il tasto di scelta.  
   
--   Aggiungere tasti di scelta a tutte le voci di menu.  
+- Aggiungere tasti di scelta a tutte le voci di menu.  
   
 #### <a name="to-make-your-windows-application-accessible"></a>Per rendere accessibile l'applicazione Windows  
   
--   Aggiungere i controlli al form e impostare le proprietà come descritto di seguito. Vedere l'immagine alla fine della tabella per un modello di come disporre i controlli nel form.  
+- Aggiungere i controlli al form e impostare le proprietà come descritto di seguito. Vedere l'immagine alla fine della tabella per un modello di come disporre i controlli nel form.  
   
     |Object|Proprietà|Value|  
     |------------|--------------|-----------|  
@@ -137,20 +137,20 @@ La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda
     |MenuItem|Nome|exitApp|  
     ||Testo|&Esci|
     
-      Il modulo avrà un aspetto simile al seguente:
+      Your form will look something like the following image:
     
-      ![Il modulo d'ordine pizza con una selezione nella casella di testo, dimensioni e condimenti nome.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+      ![The pizza order form with a name textbox, and size and toppings selection.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
 ## <a name="supporting-high-contrast-mode"></a>Supporto della modalità contrasto elevato  
  La modalità contrasto elevato è un'impostazione di sistema di Windows che migliora la leggibilità usando colori a contrasto e dimensioni del carattere che agevolano gli utenti con problemi di vista. Il <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> proprietà viene fornita per determinare se è impostata la modalità contrasto elevato.  
   
  Se SystemInformation.HighContrast è `true`, l'applicazione dovrebbe:  
   
--   Visualizzare tutti gli elementi dell'interfaccia utente con la combinazione colori di sistema.  
+- Visualizzare tutti gli elementi dell'interfaccia utente con la combinazione colori di sistema.  
   
--   Comunicare tramite segnali visivi o acustici tutte le informazioni comunicate mediante il colore. Ad esempio, se determinati elementi elenco vengono evidenziati usando un tipo di carattere rosso, è possibile aggiungere al tipo di carattere anche il grassetto, in modo che l'utente veda un segnale non basato sul colore, indicante che gli elementi sono evidenziati.  
+- Comunicare tramite segnali visivi o acustici tutte le informazioni comunicate mediante il colore. Ad esempio, se determinati elementi elenco vengono evidenziati usando un tipo di carattere rosso, è possibile aggiungere al tipo di carattere anche il grassetto, in modo che l'utente veda un segnale non basato sul colore, indicante che gli elementi sono evidenziati.  
   
--   Evitare di inserire immagini o motivi dietro il testo.  
+- Evitare di inserire immagini o motivi dietro il testo.  
   
  All'avvio l'applicazione dovrebbe controllare l'impostazione di <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> e rispondere all'evento di sistema <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>. L'evento <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> viene generato ogni volta che il valore di <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> cambia.  
   

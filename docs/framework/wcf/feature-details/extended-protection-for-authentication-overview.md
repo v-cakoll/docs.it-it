@@ -2,12 +2,12 @@
 title: Panoramica sulla protezione estesa per l'autenticazione
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: b171644c3869df119f09ee4815a06563c4f2c160
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c166ae4795a64983c0df81629669c9cbf5b0d97
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856726"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665957"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Panoramica sulla protezione estesa per l'autenticazione
 La protezione estesa per l'autenticazione consente di impedire attacchi man-in-the-middle (MITM) in cui l'autore di un attacco intercetta le credenziali del client e le inoltra a un server.  
@@ -24,11 +24,11 @@ La protezione estesa per l'autenticazione consente di impedire attacchi man-in-t
   
  Nel server possono essere implementati i livelli di protezione seguenti:  
   
--   Nessuno. Non viene eseguita alcuna convalida dell'associazione di canale. Questo comportamento è tipico di tutti i server che non sono stati aggiornati.  
+- Nessuno. Non viene eseguita alcuna convalida dell'associazione di canale. Questo comportamento è tipico di tutti i server che non sono stati aggiornati.  
   
--   Parziale. Tutti i client che sono stati aggiornati devono inviare informazioni di associazione del canale al server, a differenza di quelli che non sono stati aggiornati. Questa è un'opzione di protezione intermedia che consente la compatibilità tra le applicazioni.  
+- Parziale. Tutti i client che sono stati aggiornati devono inviare informazioni di associazione del canale al server, a differenza di quelli che non sono stati aggiornati. Questa è un'opzione di protezione intermedia che consente la compatibilità tra le applicazioni.  
   
--   Completa. Tutti i client devono inviare informazioni di associazione del canale al server, Il server rifiuterà le richiese di autenticazione ai client che non eseguono questa operazione.  
+- Completa. Tutti i client devono inviare informazioni di associazione del canale al server, Il server rifiuterà le richiese di autenticazione ai client che non eseguono questa operazione.  
   
  Per ulteriori informazioni, vedere l'esempio Win7 CBT/Extended Protection.  
   

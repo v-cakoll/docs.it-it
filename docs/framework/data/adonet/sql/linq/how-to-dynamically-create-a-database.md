@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5d66b49782d5f26b6d487e655aca6fbd6bdfb1a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877266"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623856"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Procedura: Creare un database in modo dinamico
 In LINQ to SQL viene eseguito il mapping di un modello a oggetti a un database relazionale. Per descrivere la struttura del database relazionale è possibile eseguire il mapping basato sull'attributo o usare un file di mapping esterno. Entrambi gli scenari dispongono di informazioni sul database relazionale sufficienti per creare una nuova istanza del database mediante il metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>.  
@@ -19,9 +19,9 @@ In LINQ to SQL viene eseguito il mapping di un modello a oggetti a un database r
   
  È possibile usare il metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> in un numero illimitato di scenari, specialmente se è nota la disponibilità di un provider di dati come Microsoft SQL Server 2008. Gli scenari tipici includono i seguenti:  
   
--   Si compila un'applicazione che viene installata automaticamente in un sistema del cliente.  
+- Si compila un'applicazione che viene installata automaticamente in un sistema del cliente.  
   
--   Si compila un'applicazione client che richiede un database locale per salvare il proprio stato offline.  
+- Si compila un'applicazione client che richiede un database locale per salvare il proprio stato offline.  
   
  È inoltre possibile usare il metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> con SQL Server mediante un file con estensione mdf o con un nome di catalogo, a seconda della stringa di connessione. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa la stringa di connessione per definire il database da creare e il server su cui dovrà essere creato il database.  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca21911f3d16b79887b9d6d8185f8fab17651321
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 550b85474c1ccd7e125549e86df906439caf410e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672991"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621492"
 ---
 # <a name="icordebugfunction-interface"></a>Interfaccia ICorDebugFunction
 
@@ -45,9 +45,9 @@ Rappresenta una funzione o un metodo gestito.
   
  La relazione tra i token di metadati del metodo `mdMethodDef`e un metodo `ICorDebugFunction` oggetto è dipende dal fatto che modifica e continuazione è consentita nella funzione:  
   
--   Se Modifica e continuazione non è consentito nella funzione, esiste una relazione uno a uno tra i `ICorDebugFunction` oggetto e il `mdMethodDef` token. Vale a dire, la funzione di disponibile `ICorDebugFunction` oggetto e l'altra `mdMethodDef` token.  
+- Se Modifica e continuazione non è consentito nella funzione, esiste una relazione uno a uno tra i `ICorDebugFunction` oggetto e il `mdMethodDef` token. Vale a dire, la funzione di disponibile `ICorDebugFunction` oggetto e l'altra `mdMethodDef` token.  
   
--   Se Modifica e continuazione è consentito nella funzione, esiste una relazione molti-a-uno tra i `ICorDebugFunction` oggetto e il `mdMethodDef` token. Vale a dire, la funzione può avere molte istanze di `ICorDebugFunction`, uno per ogni versione della funzione, ma una sola `mdMethodDef` token.  
+- Se Modifica e continuazione è consentito nella funzione, esiste una relazione molti-a-uno tra i `ICorDebugFunction` oggetto e il `mdMethodDef` token. Vale a dire, la funzione può avere molte istanze di `ICorDebugFunction`, uno per ogni versione della funzione, ma una sola `mdMethodDef` token.  
   
 > [!NOTE]
 >  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
