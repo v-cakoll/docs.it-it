@@ -2,12 +2,12 @@
 title: La cartella di origine non esiste
 ms.date: 07/20/2015
 ms.assetid: c891d006-b721-4d93-b57d-ce51d91fca00
-ms.openlocfilehash: 6194e6e92a69ce3b81fe554ae49934dde075fb99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 17d4575a59e795a901732efb8970ac8b2e902f2a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942703"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620344"
 ---
 # <a name="the-source-folder-does-not-exist"></a>La cartella di origine non esiste
 Si è provato a eseguire un'operazione che fa riferimento a una cartella di origine che non esiste. Potrebbe essere stato specificato un percorso del file errato.  
