@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec5d42bd003f6fb6a79bbd71beb8c88efa4e84c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4fc959ee2e29224d6d2598291141e6c922223529
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795109"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645357"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Procedura: Crittografare gli elementi XML con chiavi asimmetriche
 È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per crittografare un elemento all'interno di un documento XML.  La crittografia XML consente di scambiare o archiviare dati XML crittografati in modo standard, garantendo un'adeguata protezione dei dati da letture non autorizzate.  Per altre informazioni sullo standard della crittografia XML, vedere la specifica World Wide Web Consortium (W3C) per la crittografia XML disponibile all'indirizzo <https://www.w3.org/TR/xmldsig-core/>.  

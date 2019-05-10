@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c9b60cdef2af25ce712fcb2401b7f776d3add5b5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754557"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660404"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Procedura: Compilare in modo condizionale con traccia e debug
 Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'output di tracciatura che l'output di debug vengono inviati alla finestra di output in Visual Studio. Tuttavia, per includere funzionalità di tracciatura in un'applicazione distribuita, è necessario compilare le applicazioni instrumentate con la direttiva del compilatore **TRACE** abilitata. In questo modo è possibile tracciare il codice da compilare nella versione di rilascio dell'applicazione. Se non si abilita la direttiva **TRACE**, tutto il codice di tracciatura verrà ignorato durante la compilazione e non sarà incluso nel codice eseguibile da distribuire.  

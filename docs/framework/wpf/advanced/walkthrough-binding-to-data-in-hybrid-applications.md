@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 57d679715749b271a9fd3e692462b6b0df00c348
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981812"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634889"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Procedura dettagliata: Data binding in applicazioni ibride
 Associazione di un'origine dati a un controllo è essenziale per fornire agli utenti l'accesso ai dati sottostanti, se si usa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Questa procedura dettagliata illustra come usare l'associazione dati in applicazioni ibride che includono entrambe [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controlli.  

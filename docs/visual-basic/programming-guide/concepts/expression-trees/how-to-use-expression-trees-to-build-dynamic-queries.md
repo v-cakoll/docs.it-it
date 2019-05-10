@@ -2,12 +2,12 @@
 title: 'Procedura: Usare gli alberi delle espressioni per compilare query dinamiche (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: 2f91d95f888ab98902cc300afb61c41b62e64050
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d9b1f97fd8bf3dfb15f3e1ab65b02a81b5607792
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966218"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642328"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Procedura: Usare gli alberi delle espressioni per compilare query dinamiche (Visual Basic)
 In LINQ gli alberi delle espressioni vengono usati per rappresentare query strutturate destinate alle origini dati che implementano <xref:System.Linq.IQueryable%601>. Il provider LINQ, ad esempio, implementa l'interfaccia <xref:System.Linq.IQueryable%601> per l'esecuzione di query su archivi dati relazionali. Il compilatore Visual Basic consente di compilare query destinate a tali origini dati nel codice che compila un albero delle espressioni in fase di esecuzione. Il provider di query può quindi percorrere la struttura dei dati dell'albero delle espressioni e convertirla in un linguaggio di query adatto all'origine dati.  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
-ms.openlocfilehash: edc150d118153849dd84eb40f1443d842c7d346d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ffd21505c92a3a9402b0d5225f34412a12288ab8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875888"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645619"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>Procedura: Abilitare il Paging dei risultati del servizio dati (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di limitare il numero di entità restituite da una query del servizio dati. I limiti di paging vengono definiti nel metodo chiamato all'avvio del servizio e possono essere impostati separatamente per ogni set di entità.  
@@ -23,7 +23,7 @@ ms.locfileid: "61875888"
   
 ### <a name="how-to-enable-paging-of-returned-customers-and-orders-entity-sets"></a>Modalità di abilitazione del paging dei set di entità Customers e Orders restituiti  
   
--   Nel codice per il servizio dati sostituire il codice segnaposto nella funzione `InitializeService` con il codice seguente:  
+- Nel codice per il servizio dati sostituire il codice segnaposto nella funzione `InitializeService` con il codice seguente:  
   
      [!code-csharp[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind.svc.cs#dataserviceconfigpaging)]
      [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind.svc.vb#dataserviceconfigpaging)]  

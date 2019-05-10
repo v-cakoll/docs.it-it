@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: baf65340e390c7439e8639e334819fb0bf60f952
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856821"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662619"
 ---
 # <a name="federation"></a>Federazione
 In questo argomento viene illustrato brevemente il concetto di sicurezza federata. Viene inoltre descritto il supporto di Windows Communication Foundation (WCF) per la distribuzione di architetture di sicurezza federata. Per un'applicazione di esempio che illustra la federazione, vedere [esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -44,17 +44,17 @@ In questo argomento viene illustrato brevemente il concetto di sicurezza federat
   
  L'organizzazione B richiede in genere che un utente dell'organizzazione A fornisca un tipo valido di autenticazione prima di accedere al servizio. Potrebbe inoltre richiedere che l'utente venga autorizzato ad accedere alla risorsa specifica in questione. Un modo per risolvere questo problema e consentire agli utenti dell'organizzazione A di accedere alla risorsa nell'organizzazione B è il seguente:  
   
--   Gli utenti dell'organizzazione A registrano le proprie credenziali (un nome utente e una password) presso l'organizzazione B.  
+- Gli utenti dell'organizzazione A registrano le proprie credenziali (un nome utente e una password) presso l'organizzazione B.  
   
--   Durante l'accesso alla risorsa, gli utenti dell'organizzazione A presentano le proprie credenziali all'organizzazione B e vengono autenticati prima di accedere alla risorsa.  
+- Durante l'accesso alla risorsa, gli utenti dell'organizzazione A presentano le proprie credenziali all'organizzazione B e vengono autenticati prima di accedere alla risorsa.  
   
  Questo approccio ha tre grandi inconvenienti:  
   
--   L'organizzazione B deve gestire le credenziali degli utenti dell'organizzazione A, oltre a quelle dei propri utenti locali.  
+- L'organizzazione B deve gestire le credenziali degli utenti dell'organizzazione A, oltre a quelle dei propri utenti locali.  
   
--   Gli utenti dell'organizzazione A devono mantenere un set aggiuntivo di credenziali (ovvero, ricordare un nome utente e una password in più), oltre a quelle normalmente utilizzate per accedere alle risorse all'interno dell'organizzazione A. Ciò incoraggia la pratica dell'utilizzo dello stesso nome utente e della stessa password in più siti del servizio, il che non è una misura efficace di sicurezza.  
+- Gli utenti dell'organizzazione A devono mantenere un set aggiuntivo di credenziali (ovvero, ricordare un nome utente e una password in più), oltre a quelle normalmente utilizzate per accedere alle risorse all'interno dell'organizzazione A. Ciò incoraggia la pratica dell'utilizzo dello stesso nome utente e della stessa password in più siti del servizio, il che non è una misura efficace di sicurezza.  
   
--   L'architettura non si adatta, in quanto più organizzazioni percepiscono la risorsa dell'organizzazione B come di un qualche valore.  
+- L'architettura non si adatta, in quanto più organizzazioni percepiscono la risorsa dell'organizzazione B come di un qualche valore.  
   
  Un approccio alternativo, che risolve gli inconvenienti menzionati in precedenza, consiste nell'utilizzare la protezione federata. In questo approccio, le organizzazioni A e B stabiliscono una relazione di trust e utilizzano il servizio token di sicurezza (STS, Security Token Service) per consentire la negoziazione della relazione di trust stabilita.  
   
@@ -76,13 +76,13 @@ In questo argomento viene illustrato brevemente il concetto di sicurezza federat
 ### <a name="phase-1-design-phase"></a>Fase 1: Fase di progettazione  
  Durante la fase di progettazione, il client usa la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per leggere i criteri espone l'endpoint del servizio e raccogliere i requisiti di autenticazione e autorizzazione del servizio. Vengono costruiti proxy adatti per creare il modello di comunicazione di sicurezza federata seguente nel client:  
   
--   Ottenere un token di sicurezza da STS nell'area di attendibilità del client.  
+- Ottenere un token di sicurezza da STS nell'area di attendibilità del client.  
   
--   Presentare il token a STS nell'area di attendibilità del servizio.  
+- Presentare il token a STS nell'area di attendibilità del servizio.  
   
--   Ottenere un token di sicurezza da STS nell'area di attendibilità del servizio.  
+- Ottenere un token di sicurezza da STS nell'area di attendibilità del servizio.  
   
--   Presentare il token al servizio per accedere ad esso.  
+- Presentare il token al servizio per accedere ad esso.  
   
 ### <a name="phase-2-run-time-phase"></a>Fase 2: Fase di Run-Time  
  Durante la fase di runtime, il client crea un'istanza di un oggetto della classe client WCF ed effettua una chiamata tramite il client WCF. Il framework sottostante di WCF gestisce i passaggi indicati in precedenza nel modello di comunicazione di sicurezza federata e consente al client di usare facilmente il servizio.  

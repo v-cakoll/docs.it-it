@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: 5e4b8511145e758bf3d6328141be0e526965dccf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a31f69459465368dc7519b5126c6c4eb72e25d29
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758470"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663001"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Nozioni fondamentali sull'ereditarietà (Visual Basic)
 Il `Inherits` istruzione viene usata per dichiarare una nuova classe, denominata un *classe derivata*, in base a una classe esistente, nota come un *classe di base*. Le classi derivate ereditano e possono estendere, proprietà, metodi, eventi, campi e le costanti definite nella classe di base. La sezione seguente descrive alcune delle regole per l'ereditarietà e i modificatori che è possibile usare per modificare le classi modo ereditano o vengono ereditati:  

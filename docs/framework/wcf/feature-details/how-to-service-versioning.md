@@ -2,12 +2,12 @@
 title: 'Procedura: Controllo delle versioni dei servizi'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4e2f5cb01ac2c7f49bf93538b3c4b1f0fb4fab2b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047477"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654532"
 ---
 # <a name="how-to-service-versioning"></a>Procedura: Controllo delle versioni dei servizi
 In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione del routing che indirizza messaggi a versioni diverse dello stesso servizio. In questo esempio i messaggi vengono indirizzati a due versioni diverse di un servizio di calcolo, `roundingCalc` (v1) e `regularCalc` (v2). Entrambe le implementazioni supportano le stesse operazioni; tuttavia il primo servizio, `roundingCalc`, arrotonda tutti i calcoli al valore intero più vicino prima della restituzione. Un'applicazione client deve essere in grado di indicare se utilizzare il secondo servizio, `regularCalc`.  

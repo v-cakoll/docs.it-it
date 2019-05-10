@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f1f2b462ef0412b0f11a9ba5074f7546e6ee84f2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000805"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643759"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Procedura: Registrare e configurare un moniker del servizio
 Prima di usare il moniker del servizio Windows Communication Foundation (WCF) all'interno di un'applicazione COM con un contratto tipizzato, è necessario registrare i tipi con attributi necessari con COM e configurare l'applicazione COM e il moniker con il binding richiesto configurazione.  

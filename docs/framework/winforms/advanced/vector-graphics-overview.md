@@ -9,12 +9,12 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9c854d8742e50a7136455da72a239623fb0c0d91
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748450"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639751"
 ---
 # <a name="vector-graphics-overview"></a>Cenni preliminari sulla grafica vettoriale
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Consente di disegnare linee, rettangoli e le altre forme in un sistema di coordinate. È possibile scegliere tra un'ampia gamma di sistemi di coordinate, ma il sistema di coordinate predefinito è l'origine nell'angolo superiore sinistro con l'asse x che punta a destra e l'asse y rivolta verso il basso. L'unità di misura nel sistema di coordinate predefinito è il pixel.  

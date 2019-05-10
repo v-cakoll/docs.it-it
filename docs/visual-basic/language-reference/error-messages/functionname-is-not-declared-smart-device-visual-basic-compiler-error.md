@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30766
 ms.assetid: 13918600-6087-40d7-8134-32aa9d3bfda4
-ms.openlocfilehash: 2561995e6b03efb2b6c10b7ded7cd76805ec481c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 421cc098956150526345c34c053a1df46fd08285
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801608"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662077"
 ---
 # <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>'\<nomefunzione >' non è dichiarato (Smart Device e Visual Basic errore del compilatore)
 <`functionname`> non è dichiarato. La funzionalità di I/O dei file è in genere disponibile nello spazio dei nomi `Microsoft.VisualBasic` , ma non è supportata dalla versione di destinazione di .NET Compact Framework.  
@@ -21,7 +21,7 @@ ms.locfileid: "61801608"
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Eseguire operazioni su file con funzioni definite nello spazio dei nomi `System.IO` .  
+- Eseguire operazioni su file con funzioni definite nello spazio dei nomi `System.IO` .  
   
 ## <a name="see-also"></a>Vedere anche
 

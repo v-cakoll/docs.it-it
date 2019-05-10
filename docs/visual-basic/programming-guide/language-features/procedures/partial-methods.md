@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: 765a667f18340c53909c3ff1e9fcc5f2ffc0f9bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 50d7f24fd9f854d36bb2ed48c2e41a996c29dfe8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791937"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638878"
 ---
 # <a name="partial-methods-visual-basic"></a>Metodi parziali (Visual Basic)
 I metodi parziali consentono agli sviluppatori di inserire la logica personalizzata nel codice. In genere, il codice è parte di una classe generato da progettazione. I metodi parziali sono definiti in una classe parziale che viene creata da un generatore di codice e vengono utilizzati frequentemente alla invierà una notifica che un elemento è stato modificato. Consentono allo sviluppatore di specificare un comportamento personalizzato in risposta alla modifica.  
