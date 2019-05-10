@@ -2,12 +2,12 @@
 title: Filtro
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46716d1a96da6ddc729992b546be56c2aec0bf5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856700"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593495"
 ---
 # <a name="filtering"></a>Filtro
 Sistema di filtraggio Windows Communication Foundation (WCF) è possibile utilizzare filtri dichiarativi per individuare i messaggi e prendere decisioni operative. È possibile utilizzare filtri per determinare come comportarsi con un messaggio, esaminando parte di esso. Un processo di accodamento, ad esempio, può utilizzare una query XPath 1.0 per controllare l'elemento prioritario di un'intestazione nota e determinare se spostare un messaggio all'inizio della coda.  
@@ -36,9 +36,9 @@ Sistema di filtraggio Windows Communication Foundation (WCF) è possibile utiliz
 ### <a name="endpoint-address-filters"></a>Filtri per indirizzi endpoint  
  <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtra messaggi e buffer dei messaggi in base a un indirizzo endpoint, come rappresentato nella raccolta delle intestazioni. Affinché un messaggio superi tale filtro, devono essere soddisfatte le condizioni seguenti:  
   
--   L'URI (Uniform Resource Identifier) dell'indirizzo del filtro deve essere lo stesso di quello presente nell'intestazione To del messaggio.  
+- L'URI (Uniform Resource Identifier) dell'indirizzo del filtro deve essere lo stesso di quello presente nell'intestazione To del messaggio.  
   
--   Ogni parametro dell'endpoint nell'indirizzo del filtro (raccolta `address.Headers`) deve trovare un'intestazione nel messaggio sulla quale eseguire il mapping. La corrispondenza rimane impostata su `true` anche in presenza di intestazioni aggiuntive nel messaggio o nel buffer dei messaggi.  
+- Ogni parametro dell'endpoint nell'indirizzo del filtro (raccolta `address.Headers`) deve trovare un'intestazione nel messaggio sulla quale eseguire il mapping. La corrispondenza rimane impostata su `true` anche in presenza di intestazioni aggiuntive nel messaggio o nel buffer dei messaggi.  
   
 ### <a name="prefix-endpoint-address-filters"></a>Filtri per indirizzi endpoint di prefisso  
   
@@ -79,9 +79,9 @@ Sistema di filtraggio Windows Communication Foundation (WCF) è possibile utiliz
 ### <a name="de-multiplexing"></a>Demultiplexing  
  Quando più endpoint eseguono il fan-out dallo stesso `ServiceListener` dalla rete, l'unico modo per eseguire demultiplexing sui messaggi e per sapere se appartengono a un certo indirizzo endpoint è utilizzare <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>. In questo modo vengono selezionati i messaggi prossimi agli endpoint registrati eseguendo una ricerca sulle informazioni archiviate nelle intestazioni. In questi filtri, solo i messaggi che passano dispongono di tutte le intestazioni necessarie che corrispondono a entrambi:  
   
--   L'URI in `EndpointAddress`.  
+- L'URI in `EndpointAddress`.  
   
--   Il resto dei parametri dell'endpoint in `EndpointAddress` come specificato in <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
+- Il resto dei parametri dell'endpoint in `EndpointAddress` come specificato in <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: 0b517bca3a9e296eb891e30df91c1d32eb357432
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f85acfe7592d7b90423107e0d45bb007fce5f4a8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907218"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601150"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Utilizzo efficiente dei tipi di dati (Visual Basic)
 Le variabili non dichiarate e le variabili dichiarate senza un tipo di dati vengono assegnate i `Object` tipo di dati. Ciò semplifica la scrittura di programmi rapidamente, ma è possibile che vengano eseguite più lentamente.  
@@ -26,11 +26,11 @@ Le variabili non dichiarate e le variabili dichiarate senza un tipo di dati veng
 ## <a name="strong-typing"></a>Tipizzazione forte  
  Specifica dei tipi di dati per tutte le variabili è detta *tipizzazione forte*. Usando la tipizzazione forte presenta diversi vantaggi:  
   
--   Consente il supporto IntelliSense per le variabili. In questo modo è possibile visualizzare le relative proprietà e gli altri membri durante la digitazione nel codice.  
+- Consente il supporto IntelliSense per le variabili. In questo modo è possibile visualizzare le relative proprietà e gli altri membri durante la digitazione nel codice.  
   
--   Sfrutta il controllo del tipo del compilatore. Questo viene intercettato istruzioni possono avere esito negativo in fase di esecuzione a causa di errori, ad esempio overflow. Anche intercetta le chiamate ai metodi su oggetti che non li supportano.  
+- Sfrutta il controllo del tipo del compilatore. Questo viene intercettato istruzioni possono avere esito negativo in fase di esecuzione a causa di errori, ad esempio overflow. Anche intercetta le chiamate ai metodi su oggetti che non li supportano.  
   
--   Restituisce un'esecuzione più rapida del codice.  
+- Restituisce un'esecuzione più rapida del codice.  
   
 ## <a name="most-efficient-data-types"></a>Tipi di dati più efficienti  
  Per le variabili che non contengono mai frazioni, i tipi di dati integrali sono più efficienti rispetto ai tipi non integrali. In Visual Basic `Integer` e `UInteger` sono i tipi numerici più efficienti.  
