@@ -8,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 5ab0a5e524979110c355391cf800cc82e6d6244f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43cc051eda8c3458d3dc5c529b52104bcd9b807a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680161"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596116"
 ---
 # <a name="indexers-c-programming-guide"></a>Indicizzatori (Guida per programmatori C#)
 
@@ -40,29 +40,29 @@ A partire da C# 7.0, le funzioni di accesso get e set possono essere implementat
   
 ## <a name="indexers-overview"></a>Panoramica sugli indicizzatori  
   
--   Gli indicizzatori consentono di indicizzare gli oggetti in modo simile alle matrici.  
+- Gli indicizzatori consentono di indicizzare gli oggetti in modo simile alle matrici.  
   
--   Una funzione di accesso `get` restituisce un valore. Una funzione di accesso `set` assegna un valore.  
+- Una funzione di accesso `get` restituisce un valore. Una funzione di accesso `set` assegna un valore.  
   
--   La parola chiave [this](../../../csharp/language-reference/keywords/this.md) viene usata per definire gli indicizzatori.  
+- La parola chiave [this](../../../csharp/language-reference/keywords/this.md) viene usata per definire gli indicizzatori.  
   
--   La parola chiave [value](../../../csharp/language-reference/keywords/value.md) viene usata per definire il valore assegnato dall'indicizzatore `set`.  
+- La parola chiave [value](../../../csharp/language-reference/keywords/value.md) viene usata per definire il valore assegnato dall'indicizzatore `set`.  
   
--   Non è necessario che gli indicizzatori vengano indicizzati da un valore Integer, perché la definizione del meccanismo di ricerca specifico dipende dall'utente.  
+- Non è necessario che gli indicizzatori vengano indicizzati da un valore Integer, perché la definizione del meccanismo di ricerca specifico dipende dall'utente.  
   
--   Gli indicizzatori possono essere sottoposti a overload.  
+- Gli indicizzatori possono essere sottoposti a overload.  
   
--   Gli indicizzatori possono avere più di un parametro formale, ad esempio quando si accede a una matrice bidimensionale.  
+- Gli indicizzatori possono avere più di un parametro formale, ad esempio quando si accede a una matrice bidimensionale.  
   
 ## <a name="BKMK_RelatedSections"></a> Sezioni correlate  
   
--   [Uso degli indicizzatori](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [Uso degli indicizzatori](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
--   [Indicizzatori nelle interfacce](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [Indicizzatori nelle interfacce](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
   
--   [Confronto tra proprietà e indicizzatori](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Confronto tra proprietà e indicizzatori](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Limitazione dell'accessibilità delle funzioni di accesso](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Limitazione dell'accessibilità delle funzioni di accesso](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 

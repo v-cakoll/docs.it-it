@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 9121041f936c091cda0e2af41b4f5be8d826d582
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 829ff08fe3805f37bc6189a66a6675b3518da138
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906633"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601004"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Procedura: Definire una classe che può fornire funzionalità identiche con tipi di dati diversi (Visual Basic)
 È possibile definire una classe dalla quale creare oggetti in grado di fornire funzionalità identiche su tipi di dati diversi. A questo scopo, specificare uno o più *parametri di tipo* nella definizione. La classe potrà quindi servire come modello per gli oggetti che usano tipi di dati diversi. Una classe definita in questo modo viene denominata *classe generica*.  
@@ -50,11 +50,11 @@ ms.locfileid: "61906633"
   
 4. Se le operazioni eseguite dal codice su un parametro di tipo sono diverse da una semplice assegnazione, far seguire il parametro di tipo da una clausola `As` per l'aggiunta di uno o più *vincoli*. Un vincolo garantisce che il tipo fornito per tale parametro di tipo soddisfi un requisito, ad esempio:  
   
-    -   Supporta un'operazione, quale `>`, eseguita dal codice  
+    - Supporta un'operazione, quale `>`, eseguita dal codice  
   
-    -   Supporta un membro, quale un metodo, a cui accede il codice  
+    - Supporta un membro, quale un metodo, a cui accede il codice  
   
-    -   Espone un costruttore senza parametri  
+    - Espone un costruttore senza parametri  
   
      Se non si specifica alcun vincolo, le uniche operazioni e gli unici membri usati dal codice sono quelli supportati dal [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). Per altre informazioni, vedere [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
   
