@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f62dadf4f21022f8f425596cf5957891ed39effe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 536e3323f68c6ea0f1cd8c0aec9b48b952349387
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049505"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586928"
 ---
-# <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a><span data-ttu-id="ab5e4-102">Metodo ICorProfilerInfo3::GetThreadStaticAddress2</span><span class="sxs-lookup"><span data-stu-id="ab5e4-102">ICorProfilerInfo3::GetThreadStaticAddress2 Method</span></span>
-<span data-ttu-id="ab5e4-103">Ottiene l'indirizzo del campo statico a livello di thread specificato che è nell'ambito del dominio dell'applicazione e del thread specificati.</span><span class="sxs-lookup"><span data-stu-id="ab5e4-103">Gets the address of the specified thread-static field that is in the scope of the specified thread and application domain.</span></span>  
+# <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a><span data-ttu-id="7e5f7-102">Metodo ICorProfilerInfo3::GetThreadStaticAddress2</span><span class="sxs-lookup"><span data-stu-id="7e5f7-102">ICorProfilerInfo3::GetThreadStaticAddress2 Method</span></span>
+<span data-ttu-id="7e5f7-103">Ottiene l'indirizzo del campo statico a livello di thread specificato che è nell'ambito del dominio dell'applicazione e del thread specificati.</span><span class="sxs-lookup"><span data-stu-id="7e5f7-103">Gets the address of the specified thread-static field that is in the scope of the specified thread and application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab5e4-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ab5e4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e5f7-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="7e5f7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadStaticAddress2(  
@@ -38,44 +38,44 @@ HRESULT GetThreadStaticAddress2(
                 [out] void **ppAddress);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ab5e4-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="ab5e4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7e5f7-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="7e5f7-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="ab5e4-106">[in] L'ID della classe che contiene il campo statico thread richiesto.</span><span class="sxs-lookup"><span data-stu-id="ab5e4-106">[in] The ID of the class that contains the requested thread-static field.</span></span>  
+ <span data-ttu-id="7e5f7-106">[in] L'ID della classe che contiene il campo statico thread richiesto.</span><span class="sxs-lookup"><span data-stu-id="7e5f7-106">[in] The ID of the class that contains the requested thread-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="ab5e4-107">[in] Il token di metadati per il campo statico thread richiesto.</span><span class="sxs-lookup"><span data-stu-id="ab5e4-107">[in] The metadata token for the requested thread-static field.</span></span>  
+ <span data-ttu-id="7e5f7-107">[in] Il token di metadati per il campo statico thread richiesto.</span><span class="sxs-lookup"><span data-stu-id="7e5f7-107">[in] The metadata token for the requested thread-static field.</span></span>  
   
  `appDomainId`  
- <span data-ttu-id="ab5e4-108">[in] ID del dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="ab5e4-108">[in] The ID of the application domain.</span></span>  
+ <span data-ttu-id="7e5f7-108">[in] ID del dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="7e5f7-108">[in] The ID of the application domain.</span></span>  
   
  `threadId`  
- <span data-ttu-id="ab5e4-109">[in] L'ID del thread che è l'ambito per i campi statici richiesti.</span><span class="sxs-lookup"><span data-stu-id="ab5e4-109">[in] The ID of the thread that is the scope for the requested static field.</span></span>  
+ <span data-ttu-id="7e5f7-109">[in] L'ID del thread che è l'ambito per i campi statici richiesti.</span><span class="sxs-lookup"><span data-stu-id="7e5f7-109">[in] The ID of the thread that is the scope for the requested static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="ab5e4-110">[out] Un puntatore all'indirizzo del campo statico che si trova all'interno del thread specificato.</span><span class="sxs-lookup"><span data-stu-id="ab5e4-110">[out] A pointer to the address of the static field that is within the specified thread.</span></span>  
+ <span data-ttu-id="7e5f7-110">[out] Un puntatore all'indirizzo del campo statico che si trova all'interno del thread specificato.</span><span class="sxs-lookup"><span data-stu-id="7e5f7-110">[out] A pointer to the address of the static field that is within the specified thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ab5e4-111">Note</span><span class="sxs-lookup"><span data-stu-id="ab5e4-111">Remarks</span></span>  
- <span data-ttu-id="ab5e4-112">Il `GetThreadStaticAddress2` metodo può restituire uno dei seguenti:</span><span class="sxs-lookup"><span data-stu-id="ab5e4-112">The `GetThreadStaticAddress2` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7e5f7-111">Note</span><span class="sxs-lookup"><span data-stu-id="7e5f7-111">Remarks</span></span>  
+ <span data-ttu-id="7e5f7-112">Il `GetThreadStaticAddress2` metodo può restituire uno dei seguenti:</span><span class="sxs-lookup"><span data-stu-id="7e5f7-112">The `GetThreadStaticAddress2` method may return one of the following:</span></span>  
   
-- <span data-ttu-id="ab5e4-113">Un valore HRESULT CORPROF_E_DATAINCOMPLETE se il campo statico specificato non è stato assegnato un indirizzo nel contesto specificato.</span><span class="sxs-lookup"><span data-stu-id="ab5e4-113">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+- <span data-ttu-id="7e5f7-113">Un valore HRESULT CORPROF_E_DATAINCOMPLETE se il campo statico specificato non è stato assegnato un indirizzo nel contesto specificato.</span><span class="sxs-lookup"><span data-stu-id="7e5f7-113">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
-- <span data-ttu-id="ab5e4-114">Gli indirizzi di oggetti che possono trovarsi nell'heap di garbage collection.</span><span class="sxs-lookup"><span data-stu-id="ab5e4-114">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="ab5e4-115">Questi indirizzi potrebbero diventare non validi dopo l'operazione di garbage collection, in modo che dopo l'operazione di garbage collection, i profiler non devono presupporre che siano validi.</span><span class="sxs-lookup"><span data-stu-id="ab5e4-115">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
+- <span data-ttu-id="7e5f7-114">Gli indirizzi di oggetti che possono trovarsi nell'heap di garbage collection.</span><span class="sxs-lookup"><span data-stu-id="7e5f7-114">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="7e5f7-115">Questi indirizzi potrebbero diventare non validi dopo l'operazione di garbage collection, in modo che dopo l'operazione di garbage collection, i profiler non devono presupporre che siano validi.</span><span class="sxs-lookup"><span data-stu-id="7e5f7-115">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="ab5e4-116">Prima del completamento, il costruttore di classe della classe `GetThreadStaticAddress2` restituirà CORPROF_E_DATAINCOMPLETE per tutti i relativi campi statici, anche se alcuni dei campi statici potrebbero essere già stato inizializzato e oggetti radice del garbage collection.</span><span class="sxs-lookup"><span data-stu-id="ab5e4-116">Before a class’s class constructor is completed, `GetThreadStaticAddress2` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="7e5f7-116">Prima del completamento, il costruttore di classe della classe `GetThreadStaticAddress2` restituirà CORPROF_E_DATAINCOMPLETE per tutti i relativi campi statici, anche se alcuni dei campi statici potrebbero essere già stato inizializzato e oggetti radice del garbage collection.</span><span class="sxs-lookup"><span data-stu-id="7e5f7-116">Before a class’s class constructor is completed, `GetThreadStaticAddress2` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
   
- <span data-ttu-id="ab5e4-117">Il [ICorProfilerInfo2::GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) metodo è simile al `GetThreadStaticAddress2` (metodo), ma non accetta un argomento di dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="ab5e4-117">The [ICorProfilerInfo2::GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) method is similar to the `GetThreadStaticAddress2` method, but does not accept an application domain argument.</span></span>  
+ <span data-ttu-id="7e5f7-117">Il [ICorProfilerInfo2::GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) metodo è simile al `GetThreadStaticAddress2` (metodo), ma non accetta un argomento di dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="7e5f7-117">The [ICorProfilerInfo2::GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) method is similar to the `GetThreadStaticAddress2` method, but does not accept an application domain argument.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ab5e4-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ab5e4-118">Requirements</span></span>  
- <span data-ttu-id="ab5e4-119">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab5e4-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7e5f7-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="7e5f7-118">Requirements</span></span>  
+ <span data-ttu-id="7e5f7-119">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e5f7-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ab5e4-120">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ab5e4-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="7e5f7-120">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7e5f7-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ab5e4-121">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ab5e4-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7e5f7-121">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7e5f7-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ab5e4-122">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab5e4-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="7e5f7-122">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e5f7-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab5e4-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ab5e4-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7e5f7-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7e5f7-123">See also</span></span>
 
-- [<span data-ttu-id="ab5e4-124">Interfaccia ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="ab5e4-124">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="ab5e4-125">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="ab5e4-125">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="ab5e4-126">Profilatura</span><span class="sxs-lookup"><span data-stu-id="ab5e4-126">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="7e5f7-124">Interfaccia ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="7e5f7-124">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="7e5f7-125">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="7e5f7-125">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="7e5f7-126">Profilatura</span><span class="sxs-lookup"><span data-stu-id="7e5f7-126">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

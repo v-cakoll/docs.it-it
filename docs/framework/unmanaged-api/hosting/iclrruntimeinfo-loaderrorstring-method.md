@@ -17,23 +17,23 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b485811b0e7d2f657ff2d2c1d7a2aa135e48a335
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dd7bdcf891146a15953b7466e0f6dc680495bd5a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771670"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585066"
 ---
-# <a name="iclrruntimeinfoloaderrorstring-method"></a><span data-ttu-id="67609-102">Metodo ICLRRuntimeInfo::LoadErrorString</span><span class="sxs-lookup"><span data-stu-id="67609-102">ICLRRuntimeInfo::LoadErrorString Method</span></span>
-<span data-ttu-id="67609-103">Converte un valore HRESULT in un messaggio di errore appropriato per le impostazioni cultura specificate.</span><span class="sxs-lookup"><span data-stu-id="67609-103">Translates an HRESULT value into an appropriate error message for the specified culture.</span></span>  
+# <a name="iclrruntimeinfoloaderrorstring-method"></a><span data-ttu-id="03b12-102">Metodo ICLRRuntimeInfo::LoadErrorString</span><span class="sxs-lookup"><span data-stu-id="03b12-102">ICLRRuntimeInfo::LoadErrorString Method</span></span>
+<span data-ttu-id="03b12-103">Converte un valore HRESULT in un messaggio di errore appropriato per le impostazioni cultura specificate.</span><span class="sxs-lookup"><span data-stu-id="03b12-103">Translates an HRESULT value into an appropriate error message for the specified culture.</span></span>  
   
- <span data-ttu-id="67609-104">Questo metodo sostituisce le funzioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="67609-104">This method supersedes the following functions:</span></span>  
+ <span data-ttu-id="03b12-104">Questo metodo sostituisce le funzioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="03b12-104">This method supersedes the following functions:</span></span>  
   
-- [<span data-ttu-id="67609-105">LoadStringRC</span><span class="sxs-lookup"><span data-stu-id="67609-105">LoadStringRC</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
+- [<span data-ttu-id="03b12-105">LoadStringRC</span><span class="sxs-lookup"><span data-stu-id="03b12-105">LoadStringRC</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
   
-- [<span data-ttu-id="67609-106">LoadStringRCEx</span><span class="sxs-lookup"><span data-stu-id="67609-106">LoadStringRCEx</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
+- [<span data-ttu-id="03b12-106">LoadStringRCEx</span><span class="sxs-lookup"><span data-stu-id="03b12-106">LoadStringRCEx</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
   
-## <a name="syntax"></a><span data-ttu-id="67609-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="67609-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03b12-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="03b12-107">Syntax</span></span>  
   
 ```  
 HRESULT LoadErrorString(  
@@ -43,39 +43,39 @@ HRESULT LoadErrorString(
      [in, lcid] LONG iLocaleID);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="67609-108">Parametri</span><span class="sxs-lookup"><span data-stu-id="67609-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="03b12-108">Parametri</span><span class="sxs-lookup"><span data-stu-id="03b12-108">Parameters</span></span>  
  `iResourceID`  
- <span data-ttu-id="67609-109">[in] Il valore HRESULT da convertire.</span><span class="sxs-lookup"><span data-stu-id="67609-109">[in] The HRESULT to translate.</span></span>  
+ <span data-ttu-id="03b12-109">[in] Il valore HRESULT da convertire.</span><span class="sxs-lookup"><span data-stu-id="03b12-109">[in] The HRESULT to translate.</span></span>  
   
  `pwzBuffer`  
- <span data-ttu-id="67609-110">[out] La stringa di messaggio associata all'HRESULT specificato.</span><span class="sxs-lookup"><span data-stu-id="67609-110">[out] The message string associated with the given HRESULT.</span></span>  
+ <span data-ttu-id="03b12-110">[out] La stringa di messaggio associata all'HRESULT specificato.</span><span class="sxs-lookup"><span data-stu-id="03b12-110">[out] The message string associated with the given HRESULT.</span></span>  
   
  `pcchBuffer`  
- <span data-ttu-id="67609-111">[in, out] Le dimensioni di `pwzbuffer` per evitare i sovraccarichi del buffer.</span><span class="sxs-lookup"><span data-stu-id="67609-111">[in, out] The size of `pwzbuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="67609-112">Se `pwzbuffer` è null, `pcchBuffer` fornisce le dimensioni previste del `pwzbuffer` per consentire la preallocazione.</span><span class="sxs-lookup"><span data-stu-id="67609-112">If `pwzbuffer` is null, `pcchBuffer` provides the expected size of `pwzbuffer` to allow preallocation.</span></span>  
+ <span data-ttu-id="03b12-111">[in, out] Le dimensioni di `pwzbuffer` per evitare i sovraccarichi del buffer.</span><span class="sxs-lookup"><span data-stu-id="03b12-111">[in, out] The size of `pwzbuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="03b12-112">Se `pwzbuffer` è null, `pcchBuffer` fornisce le dimensioni previste del `pwzbuffer` per consentire la preallocazione.</span><span class="sxs-lookup"><span data-stu-id="03b12-112">If `pwzbuffer` is null, `pcchBuffer` provides the expected size of `pwzbuffer` to allow preallocation.</span></span>  
   
  `iLocaleID`  
- <span data-ttu-id="67609-113">[in] Identificatore delle impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="67609-113">[in] The culture identifier.</span></span> <span data-ttu-id="67609-114">Per usare le impostazioni cultura predefinite, è necessario specificare -1.</span><span class="sxs-lookup"><span data-stu-id="67609-114">To use the default culture, you must specify -1.</span></span>  
+ <span data-ttu-id="03b12-113">[in] Identificatore delle impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="03b12-113">[in] The culture identifier.</span></span> <span data-ttu-id="03b12-114">Per usare le impostazioni cultura predefinite, è necessario specificare -1.</span><span class="sxs-lookup"><span data-stu-id="03b12-114">To use the default culture, you must specify -1.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="67609-115">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="67609-115">Return Value</span></span>  
- <span data-ttu-id="67609-116">Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.</span><span class="sxs-lookup"><span data-stu-id="67609-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="03b12-115">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="03b12-115">Return Value</span></span>  
+ <span data-ttu-id="03b12-116">Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.</span><span class="sxs-lookup"><span data-stu-id="03b12-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="67609-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="67609-117">HRESULT</span></span>|<span data-ttu-id="67609-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="67609-118">Description</span></span>|  
+|<span data-ttu-id="03b12-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="03b12-117">HRESULT</span></span>|<span data-ttu-id="03b12-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="03b12-118">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="67609-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="67609-119">S_OK</span></span>|<span data-ttu-id="67609-120">Metodo completato correttamente.</span><span class="sxs-lookup"><span data-stu-id="67609-120">The method completed successfully.</span></span>|  
-|<span data-ttu-id="67609-121">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="67609-121">E_POINTER</span></span>|<span data-ttu-id="67609-122">`pcchBuffer` è null.</span><span class="sxs-lookup"><span data-stu-id="67609-122">`pcchBuffer` is null.</span></span>|  
-|<span data-ttu-id="67609-123">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="67609-123">E_INVALIDARG</span></span>|<span data-ttu-id="67609-124">`pwzBuffer` è null.</span><span class="sxs-lookup"><span data-stu-id="67609-124">`pwzBuffer` is null.</span></span>|  
+|<span data-ttu-id="03b12-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="03b12-119">S_OK</span></span>|<span data-ttu-id="03b12-120">Metodo completato correttamente.</span><span class="sxs-lookup"><span data-stu-id="03b12-120">The method completed successfully.</span></span>|  
+|<span data-ttu-id="03b12-121">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="03b12-121">E_POINTER</span></span>|<span data-ttu-id="03b12-122">`pcchBuffer` è null.</span><span class="sxs-lookup"><span data-stu-id="03b12-122">`pcchBuffer` is null.</span></span>|  
+|<span data-ttu-id="03b12-123">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="03b12-123">E_INVALIDARG</span></span>|<span data-ttu-id="03b12-124">`pwzBuffer` è null.</span><span class="sxs-lookup"><span data-stu-id="03b12-124">`pwzBuffer` is null.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="67609-125">Requisiti</span><span class="sxs-lookup"><span data-stu-id="67609-125">Requirements</span></span>  
- <span data-ttu-id="67609-126">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="67609-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03b12-125">Requisiti</span><span class="sxs-lookup"><span data-stu-id="03b12-125">Requirements</span></span>  
+ <span data-ttu-id="03b12-126">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03b12-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="67609-127">**Intestazione:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="67609-127">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="03b12-127">**Intestazione:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="03b12-127">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="67609-128">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="67609-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="03b12-128">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="03b12-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="67609-129">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="67609-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="03b12-129">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03b12-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="67609-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="67609-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03b12-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="03b12-130">See also</span></span>
 
-- [<span data-ttu-id="67609-131">Interfaccia ICLRRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="67609-131">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="67609-132">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="67609-132">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="67609-133">Hosting</span><span class="sxs-lookup"><span data-stu-id="67609-133">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="03b12-131">Interfaccia ICLRRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="03b12-131">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="03b12-132">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="03b12-132">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="03b12-133">Hosting</span><span class="sxs-lookup"><span data-stu-id="03b12-133">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
