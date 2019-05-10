@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: 4ae2366552426af0107c8d7a35bb5368fe30c8a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9236080d50638bc38bbdd3ddaf8aabf9e675e43f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791963"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639134"
 ---
 # <a name="optional-parameters-visual-basic"></a>Parametri facoltativi (Visual Basic)
 È possibile specificare che un parametro di routine è facoltativo e non è necessario fornire alcun argomento quando la routine viene chiamata. *I parametri facoltativi* sono indicate dal `Optional` parola chiave nella definizione della procedura. È necessario attenersi alle regole che seguono:  
@@ -43,7 +43,7 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 Sub name(argument 1, , , argument 4)  
 ```  
   
- Nell'esempio riportato di seguito vengono effettuate diverse chiamate alla funzione `MsgBox` `MsgBox` include un parametro obbligatorio e due parametri facoltativi.  
+ Nell'esempio riportato di seguito vengono effettuate diverse chiamate alla funzione `MsgBox`. `MsgBox` include un parametro obbligatorio e due parametri facoltativi.  
   
  Nella prima chiamata a `MsgBox` vengono forniti tutti e tre gli argomenti nell'ordine in cui sono definiti da `MsgBox`. Nella seconda chiamata viene fornito solo l'argomento obbligatorio. Nella terza e quarta chiamata vengono forniti il primo e il terzo argomento. Nella terza chiamata gli argomenti vengono forniti in base alla posizione, nella quarta in base al nome.  
   

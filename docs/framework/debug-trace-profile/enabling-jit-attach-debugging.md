@@ -7,31 +7,31 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1696f9054d44a5f80a1f67cc38e315a8627d295
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7af34cf4bd3a2367eaf320990dbbc24f4e7a8bbf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874276"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660143"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Attivazione dell'esecuzione del debug ad associazione JIT
 Il termine debug ad associazione JIT indica l'associazione di un debugger a un processo in caso di errori. Può anche essere attivato da specifici metodi o funzioni.  
   
  Il debug ad associazione JIT viene usato con le condizioni di errore seguenti:  
   
--   Eccezioni non gestite (sia nel codice gestito che in quello nativo).  
+- Eccezioni non gestite (sia nel codice gestito che in quello nativo).  
   
--   Metodo <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> o funzione [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) (famiglia Windows 7).  
+- Metodo <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> o funzione [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) (famiglia Windows 7).  
   
--   Errori irreversibili di runtime.  
+- Errori irreversibili di runtime.  
   
  Il debug ad associazione JIT viene attivato anche dalle chiamate ai metodi e alle funzioni seguenti:  
   
--   Metodo<xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> .  
+- Metodo<xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> .  
   
--   Metodo<xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> .  
+- Metodo<xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> .  
   
--   Funzione [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) (Win32).  
+- Funzione [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) (Win32).  
   
  Prima di [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework forniva chiavi del Registro di sistema separate per controllare il comportamento dei debugger nativi e gestiti. A partire dal [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], controllo viene consolidato in una chiave del Registro di sistema singolo: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. I valori che è possibile impostare per tale chiave determinano se un debugger viene richiamato e, in tal caso, se viene richiamato con una finestra di dialogo che richiede l'intervento dell'utente. Per informazioni sull'impostazione di questa chiave del Registro di sistema, vedere [configurazione del debug automatico](https://go.microsoft.com/fwlink/?LinkId=181767).  
   

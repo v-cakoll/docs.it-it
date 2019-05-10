@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31f975b45ee854c73e6d502ece69bee24a7fcc3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 501e23656b3a31dc14e0b2213252ef52c598140f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683132"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622635"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalizzazione e localizzazione di applicazioni .NET
 
@@ -38,9 +38,9 @@ Questo passaggio prevede la personalizzazione di un'applicazione per impostazion
 
 Se si ci attiene ai seguenti tre passaggi verranno offerti due vantaggi:
 
--   In questo modo, non è necessario adattare un'applicazione progettata per supportare singole lingue, ad esempio Inglese US (Stati Uniti), per supportare le lingue aggiuntive.
+- In questo modo, non è necessario adattare un'applicazione progettata per supportare singole lingue, ad esempio Inglese US (Stati Uniti), per supportare le lingue aggiuntive.
 
--   Restituisce applicazioni localizzate che sono più stabile e con meno bug.
+- Restituisce applicazioni localizzate che sono più stabile e con meno bug.
 
 In .NET viene fornito ampio supporto per lo sviluppo di applicazioni internazionali e localizzate. In particolare, molti membri del tipo nella libreria di classi .NET facilitano la globalizzazione restituendo valori che riflettono le convenzioni delle impostazioni cultura dell'utente o di impostazioni cultura specifiche. .NET supporta inoltre gli assembly satellite che semplificano il processo di localizzazione di un'applicazione.
 

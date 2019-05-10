@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b351b2a69d2829b67c80839f3257fa8e218b55d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876109"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660629"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Aggiornamento del servizio dati (WCF Data Services)
 Quando si usa la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria client di utilizzare un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed, la libreria traduce le voci del feed in istanze di classi del servizio dati client. Queste classi del servizio dati vengono rilevate utilizzando la classe <xref:System.Data.Services.Client.DataServiceContext> a cui appartiene <xref:System.Data.Services.Client.DataServiceQuery%601>. Il client rileva le modifiche alle entità segnalate utilizzando i metodi su <xref:System.Data.Services.Client.DataServiceContext>. Questi metodi consentono al client di rilevare le entità aggiunte ed eliminate, nonché le modifiche apportate ai valori delle proprietà o alle relazioni tra le istanze di entità. Le modifiche rilevate vengono restituite al servizio dati sotto forma di operazioni basate su REST quando si chiama il metodo <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
@@ -54,13 +54,13 @@ Quando si usa la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] lib
   
  Le considerazioni seguenti riguardano la connessione di oggetti:  
   
--   Un oggetto viene collegato nello stato <xref:System.Data.Services.Client.EntityStates.Unchanged>.  
+- Un oggetto viene collegato nello stato <xref:System.Data.Services.Client.EntityStates.Unchanged>.  
   
--   Il collegamento di un oggetto non determina il collegamento degli oggetti correlati all'oggetto collegato.  
+- Il collegamento di un oggetto non determina il collegamento degli oggetti correlati all'oggetto collegato.  
   
--   Non è possibile collegare un oggetto se l'entità è già in fase di rilevamento da parte del contesto.  
+- Non è possibile collegare un oggetto se l'entità è già in fase di rilevamento da parte del contesto.  
   
--   L'overload del metodo <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> che accetta un parametro `etag` viene usato quando si collega un oggetto entità ricevuto insieme a un valore eTag. Questo valore eTag verrà quindi usato per il controllo della concorrenza durante il salvataggio delle modifiche nell'oggetto collegato.  
+- L'overload del metodo <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> che accetta un parametro `etag` viene usato quando si collega un oggetto entità ricevuto insieme a un valore eTag. Questo valore eTag verrà quindi usato per il controllo della concorrenza durante il salvataggio delle modifiche nell'oggetto collegato.  
   
  Per altre informazioni, vedere [Procedura: Connettere un'entità esistente a DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md).  
   

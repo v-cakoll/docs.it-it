@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 286b56cddc18589b936a7f053a12ed44c81a32b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 31ae91958dbc02a2f64945af896b4a2408224d05
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072974"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624028"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Procedura: Aggiungere o rimuovere immagini con il componente ImageList di Windows Forms
 I moduli di Windows <xref:System.Windows.Forms.ImageList> componente è in genere popolato con le immagini prima che venga associato al controllo. Tuttavia, è possibile aggiungere e rimuovere immagini dopo aver associato l'elenco di immagini a un controllo.  
@@ -28,7 +28,7 @@ I moduli di Windows <xref:System.Windows.Forms.ImageList> componente è in gener
   
 ### <a name="to-add-images-programmatically"></a>Aggiungere immagini a livello di codice  
   
--   Usare la <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> metodo per l'elenco di immagini <xref:System.Windows.Forms.ImageList.Images%2A> proprietà.  
+- Usare la <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> metodo per l'elenco di immagini <xref:System.Windows.Forms.ImageList.Images%2A> proprietà.  
   
      Nell'esempio di codice seguente, il percorso impostato per il percorso dell'immagine è il **documenti** cartella. Poiché si può presupporre che la maggior parte dei computer che eseguono il sistema operativo Windows sarà inclusa in questa cartella, viene usato questo percorso. Questa scelta consente anche agli utenti che dispongono di livelli minimi di sistema accesso più sicuro eseguiti l'applicazione. Esempio di codice seguente si suppone un form con un <xref:System.Windows.Forms.ImageList> controllo già aggiunto.  
   
@@ -76,7 +76,7 @@ I moduli di Windows <xref:System.Windows.Forms.ImageList> componente è in gener
   
 ### <a name="to-add-images-with-a-key-value"></a>Per aggiungere le immagini con un valore di chiave.  
   
--   Usare uno dei <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> metodi dell'elenco immagini <xref:System.Windows.Forms.ImageList.Images%2A> proprietà che accetta un valore di chiave.  
+- Usare uno dei <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> metodi dell'elenco immagini <xref:System.Windows.Forms.ImageList.Images%2A> proprietà che accetta un valore di chiave.  
   
      Nell'esempio di codice seguente, il percorso impostato per il percorso dell'immagine è il **documenti** cartella. Poiché si può presupporre che la maggior parte dei computer che eseguono il sistema operativo Windows sarà inclusa in questa cartella, viene usato questo percorso. Questa scelta consente anche agli utenti che dispongono di livelli minimi di sistema accesso più sicuro eseguiti l'applicazione. Esempio di codice seguente si suppone un form con un <xref:System.Windows.Forms.ImageList> controllo già aggiunto.  
   
@@ -107,7 +107,7 @@ public void addImage()
   
 ### <a name="to-remove-all-images-programmatically"></a>Per rimuovere tutte le immagini a livello di codice  
   
--   Usare il <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> metodo per rimuovere una singola immagine  
+- Usare il <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> metodo per rimuovere una singola immagine  
   
      , - o -  
   
@@ -129,7 +129,7 @@ imageList1.Images.Clear();
   
 ### <a name="to-remove-images-by-key"></a>Per rimuovere immagini dalla chiave  
   
--   Usare il <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> metodo per rimuovere una singola immagine in base alla chiave.  
+- Usare il <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> metodo per rimuovere una singola immagine in base alla chiave.  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  

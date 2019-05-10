@@ -7,12 +7,12 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: e7b76495b83cb9a1dfe7629a1d82695d2046eac2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3769da28e1c9a27c8363b0d6ec639cedaf0f03be
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61818716"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624846"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Procedura: Chiamare le API di Windows (Visual Basic)
 In questo esempio definisce e chiama il `MessageBox` funzione in User32. dll e quindi passa una stringa a esso.  
@@ -23,16 +23,16 @@ In questo esempio definisce e chiama il `MessageBox` funzione in User32. dll e q
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Un riferimento allo spazio dei nomi <xref:System>.  
+- Un riferimento allo spazio dei nomi <xref:System>.  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   Il metodo non è statico, è astratto o è stato definito in precedenza. Il tipo padre è un'interfaccia o la lunghezza di *name* oppure *dllName* è uguale a zero. (<xref:System.ArgumentException>)  
+- Il metodo non è statico, è astratto o è stato definito in precedenza. Il tipo padre è un'interfaccia o la lunghezza di *name* oppure *dllName* è uguale a zero. (<xref:System.ArgumentException>)  
   
--   Il *name* oppure *dllName* è `Nothing`. (<xref:System.ArgumentNullException>)  
+- Il *name* oppure *dllName* è `Nothing`. (<xref:System.ArgumentNullException>)  
   
--   Il tipo contenitore è stato creato in precedenza con `CreateType`. (<xref:System.InvalidOperationException>)  
+- Il tipo contenitore è stato creato in precedenza con `CreateType`. (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>Vedere anche
 

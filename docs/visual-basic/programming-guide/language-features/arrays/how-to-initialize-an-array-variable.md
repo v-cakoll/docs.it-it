@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 4aa783d6179c72760a12d0259d587b5b38bb9140
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0e450a370c27de4690105231847de25ce5a90553
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053653"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627444"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Procedura: Inizializzare una variabile di matrice in Visual Basic
 Inizializzare una variabile di matrice includendo un valore letterale nell'array un `New` clausola e specificando i valori iniziali della matrice. È possibile specificare il tipo o consentire che possa essere dedotto dai valori nel valore letterale di matrice. Per ulteriori informazioni su come viene dedotto il tipo, vedere "Popolamento di una matrice con valori iniziali" nella [matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  

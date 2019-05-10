@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683301"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622804"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -41,17 +41,17 @@ ms.locfileid: "61683301"
   
  In questo argomento vengono forniti una panoramica dei generics in .NET e un riepilogo dei tipi o metodi generici. Include le sezioni seguenti:  
   
--   [Definizione e utilizzo dei generics](#defining_and_using_generics)  
+- [Definizione e utilizzo dei generics](#defining_and_using_generics)  
   
--   [Terminologia dei generics](#generics_terminology)  
+- [Terminologia dei generics](#generics_terminology)  
   
--   [Libreria di classi e supporto del linguaggio](#class_library_and_language_support)  
+- [Libreria di classi e supporto del linguaggio](#class_library_and_language_support)  
   
--   [Generics e tipi annidati](#nested_types_and_generics)  
+- [Generics e tipi annidati](#nested_types_and_generics)  
   
--   [Argomenti correlati](#related_topics)  
+- [Argomenti correlati](#related_topics)  
   
--   [Riferimento](#reference)  
+- [Riferimento](#reference)  
   
 <a name="defining_and_using_generics"></a>   
 ## <a name="defining-and-using-generics"></a>Definizione e utilizzo dei generics  
@@ -71,21 +71,21 @@ ms.locfileid: "61683301"
 ### <a name="generics-terminology"></a>Terminologia dei generics  
  I termini seguenti vengono usati per discutere dei generics in .NET:  
   
--   Una *definizione di tipo generico* è una classe, una struttura o una dichiarazione di interfaccia che funge da modello, con segnaposto per i tipi che può contenere o usare. Ad esempio, la classe <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> può contenere due tipi: chiavi e valori. Poiché una definizione di tipo generico è solo un modello, non è possibile creare istanze di una classe, una struttura o un'interfaccia che sia una definizione di tipo generico.  
+- Una *definizione di tipo generico* è una classe, una struttura o una dichiarazione di interfaccia che funge da modello, con segnaposto per i tipi che può contenere o usare. Ad esempio, la classe <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> può contenere due tipi: chiavi e valori. Poiché una definizione di tipo generico è solo un modello, non è possibile creare istanze di una classe, una struttura o un'interfaccia che sia una definizione di tipo generico.  
   
--   I*parametri di tipo generico*, o *parametri di tipo*, sono i segnaposto in una definizione di tipo o metodo generico. Il tipo generico <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> ha due parametri di tipo, `TKey` e `TValue`, che rappresentano i tipi delle chiavi e dei valori relativi.  
+- I*parametri di tipo generico*, o *parametri di tipo*, sono i segnaposto in una definizione di tipo o metodo generico. Il tipo generico <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> ha due parametri di tipo, `TKey` e `TValue`, che rappresentano i tipi delle chiavi e dei valori relativi.  
   
--   Un *tipo generico costruito*, o *tipo costruito*, è il risultato della specifica di tipi per i parametri di tipo generico di una definizione di tipo generico.  
+- Un *tipo generico costruito*, o *tipo costruito*, è il risultato della specifica di tipi per i parametri di tipo generico di una definizione di tipo generico.  
   
--   Un *argomento di tipo generico* è qualsiasi tipo che verrà sostituito con un parametro di tipo generico.  
+- Un *argomento di tipo generico* è qualsiasi tipo che verrà sostituito con un parametro di tipo generico.  
   
--   Il termine generale *tipo generico* include sia tipi costruiti sia definizioni di tipo generico.  
+- Il termine generale *tipo generico* include sia tipi costruiti sia definizioni di tipo generico.  
   
--   La *covarianza* e la *controvarianza* dei parametri di tipo generico consentono di usare tipi generici costruiti i cui argomenti di tipo sono più derivati (covarianza) o meno derivati (controvarianza) rispetto a quelle di tipo costruito. La covarianza e la controvarianza sono definite collettivamente *varianza*. Per altre informazioni, vedere [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
+- La *covarianza* e la *controvarianza* dei parametri di tipo generico consentono di usare tipi generici costruiti i cui argomenti di tipo sono più derivati (covarianza) o meno derivati (controvarianza) rispetto a quelle di tipo costruito. La covarianza e la controvarianza sono definite collettivamente *varianza*. Per altre informazioni, vedere [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
--   I*vincoli* sono limiti imposti su parametri di tipo generico. Ad esempio, è possibile limitare un parametro di tipo a tipi che implementano l'interfaccia generica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> , per garantire la possibilità di ordinare le istanze del tipo. È anche possibile vincolare i parametri di tipo a tipi che dispongono di una determinata classe di base, con un costruttore predefinito, o che siano tipi riferimento o tipi di valore. Gli utenti di tipo generico non possono sostituire gli argomenti di tipo che non soddisfano i vincoli.  
+- I*vincoli* sono limiti imposti su parametri di tipo generico. Ad esempio, è possibile limitare un parametro di tipo a tipi che implementano l'interfaccia generica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> , per garantire la possibilità di ordinare le istanze del tipo. È anche possibile vincolare i parametri di tipo a tipi che dispongono di una determinata classe di base, con un costruttore predefinito, o che siano tipi riferimento o tipi di valore. Gli utenti di tipo generico non possono sostituire gli argomenti di tipo che non soddisfano i vincoli.  
   
--   Una *definizione di metodo generico* è un metodo con due elenchi di parametri: un elenco di parametri di tipo generico e un elenco di parametri formali. I parametri di tipo possono apparire come tipo restituito o come tipi dei parametri formali, come illustrato nel codice seguente.  
+- Una *definizione di metodo generico* è un metodo con due elenchi di parametri: un elenco di parametri di tipo generico e un elenco di parametri formali. I parametri di tipo possono apparire come tipo restituito o come tipi dei parametri formali, come illustrato nel codice seguente.  
   
  [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)]
  [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)]
@@ -103,29 +103,29 @@ ms.locfileid: "61683301"
 ## <a name="advantages-and-disadvantages-of-generics"></a>Vantaggi e svantaggi dei generics  
  Esistono numerosi vantaggi nell'utilizzo di delegati e raccolte di tipi generici:  
   
--   Indipendenza dai tipi. I generics spostano il carico dell'indipendenza dai tipi al compilatore. Non è necessario scrivere codice per verificare il tipo di dati corretto perché viene applicato in fase di compilazione. La necessità del cast di tipo e la possibilità di errori di run-time sono ridotte.  
+- Indipendenza dai tipi. I generics spostano il carico dell'indipendenza dai tipi al compilatore. Non è necessario scrivere codice per verificare il tipo di dati corretto perché viene applicato in fase di compilazione. La necessità del cast di tipo e la possibilità di errori di run-time sono ridotte.  
   
--   Meno codice e il codice è più facilmente riutilizzato. Non è necessario ereditare da un tipo di base ed eseguire l'override di membri. Ad esempio, <xref:System.Collections.Generic.LinkedList%601> è pronto per l'uso immediato. Ad esempio, è possibile creare un elenco collegato di stringhe con la seguente dichiarazione di variabile:  
+- Meno codice e il codice è più facilmente riutilizzato. Non è necessario ereditare da un tipo di base ed eseguire l'override di membri. Ad esempio, <xref:System.Collections.Generic.LinkedList%601> è pronto per l'uso immediato. Ad esempio, è possibile creare un elenco collegato di stringhe con la seguente dichiarazione di variabile:  
   
      [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]
      [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]
      [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
   
--   Prestazioni migliori. I tipi di raccolte generiche offrono in genere prestazioni migliori per l'archiviazione e la modifica dei tipi di valore, perché non è necessario eseguirne il boxing.  
+- Prestazioni migliori. I tipi di raccolte generiche offrono in genere prestazioni migliori per l'archiviazione e la modifica dei tipi di valore, perché non è necessario eseguirne il boxing.  
   
--   I delegati generici consentono di eseguire il callback indipendente dai tipi senza la necessità di creare più classi delegate. Ad esempio, il delegato generico <xref:System.Predicate%601> consente di creare un metodo per implementare i propri criteri di ricerca di un tipo particolare e di usare il proprio metodo con metodi di tipo <xref:System.Array> , ad esempio <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>e <xref:System.Array.FindAll%2A>.  
+- I delegati generici consentono di eseguire il callback indipendente dai tipi senza la necessità di creare più classi delegate. Ad esempio, il delegato generico <xref:System.Predicate%601> consente di creare un metodo per implementare i propri criteri di ricerca di un tipo particolare e di usare il proprio metodo con metodi di tipo <xref:System.Array> , ad esempio <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>e <xref:System.Array.FindAll%2A>.  
   
--   I generics ottimizzano il codice generato dinamicamente. Quando si usano i generics con il codice generato in modo dinamico non è necessario generare il tipo. In questo modo aumenta il numero di scenari in cui è possibile usare i metodi dinamici leggeri invece di generare interi assembly. Per altre informazioni, vedere [Procedura: Definire ed eseguire metodi dinamici](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) e <xref:System.Reflection.Emit.DynamicMethod>.  
+- I generics ottimizzano il codice generato dinamicamente. Quando si usano i generics con il codice generato in modo dinamico non è necessario generare il tipo. In questo modo aumenta il numero di scenari in cui è possibile usare i metodi dinamici leggeri invece di generare interi assembly. Per altre informazioni, vedere [Procedura: Definire ed eseguire metodi dinamici](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) e <xref:System.Reflection.Emit.DynamicMethod>.  
   
  Di seguito sono elencate alcune limitazioni di generics:  
   
--   I tipi generici possono derivare dalla maggior parte delle classi base, ad esempio <xref:System.MarshalByRefObject> (e i vincoli possono essere usati per richiedere che i parametri di tipo generico derivino da classi base quali <xref:System.MarshalByRefObject>). Tuttavia, il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] non supporta tipi generici associati al contesto. Un tipo generico può derivare da <xref:System.ContextBoundObject>, ma provare a creare un'istanza di quel tipo causa un <xref:System.TypeLoadException>.  
+- I tipi generici possono derivare dalla maggior parte delle classi base, ad esempio <xref:System.MarshalByRefObject> (e i vincoli possono essere usati per richiedere che i parametri di tipo generico derivino da classi base quali <xref:System.MarshalByRefObject>). Tuttavia, il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] non supporta tipi generici associati al contesto. Un tipo generico può derivare da <xref:System.ContextBoundObject>, ma provare a creare un'istanza di quel tipo causa un <xref:System.TypeLoadException>.  
   
--   L'enumerazione non può avere parametri di tipo generico. Un'enumerazione può essere generica solo incidentalmente (ad esempio, perché è annidata in un tipo generico che viene definito con Visual Basic, C# o C++). Per altre informazioni, vedere "Enumerazioni" in [Common Type System](../../../docs/standard/base-types/common-type-system.md).  
+- L'enumerazione non può avere parametri di tipo generico. Un'enumerazione può essere generica solo incidentalmente (ad esempio, perché è annidata in un tipo generico che viene definito con Visual Basic, C# o C++). Per altre informazioni, vedere "Enumerazioni" in [Common Type System](../../../docs/standard/base-types/common-type-system.md).  
   
--   I metodi dinamici leggeri non possono essere generici.  
+- I metodi dinamici leggeri non possono essere generici.  
   
--   In Visual Basic, C# e C++ non è possibile creare un'istanza di un tipo annidato in un tipo generico a meno che non siano stati assegnati i tipi ai parametri di tipo di tutti i tipi di inclusione. In altre parole, in una reflection un tipo annidato che viene definito con questi linguaggi contiene i parametri di tutti i relativi tipi di inclusione. Ciò consente di usare i parametri di tipo dei tipi in inclusione nelle definizioni di membro di un tipo annidato. Per altre informazioni, vedere "Tipi annidati" in <xref:System.Type.MakeGenericType%2A>.  
+- In Visual Basic, C# e C++ non è possibile creare un'istanza di un tipo annidato in un tipo generico a meno che non siano stati assegnati i tipi ai parametri di tipo di tutti i tipi di inclusione. In altre parole, in una reflection un tipo annidato che viene definito con questi linguaggi contiene i parametri di tutti i relativi tipi di inclusione. Ciò consente di usare i parametri di tipo dei tipi in inclusione nelle definizioni di membro di un tipo annidato. Per altre informazioni, vedere "Tipi annidati" in <xref:System.Type.MakeGenericType%2A>.  
   
     > [!NOTE]
     >  Un tipo annidato definito con la creazione di codice in un assembly dinamico o usando [Ilasm.exe (Assembler IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) non deve includere i parametri di tipo dei relativi tipi di inclusione. Tuttavia, se non li include, i parametri di tipo non saranno nell'ambito della classe annidata.  
@@ -138,9 +138,9 @@ ms.locfileid: "61683301"
 ## <a name="class-library-and-language-support"></a>Libreria di classi e supporto del linguaggio  
  .NET offre una serie di classi di raccolte generiche negli spazi dei nomi seguenti:  
   
--   Lo spazio dei nomi <xref:System.Collections.Generic> contiene la maggior parte dei tipi di raccolte generiche forniti da .NET, come le classi generiche <xref:System.Collections.Generic.List%601> e <xref:System.Collections.Generic.Dictionary%602> .  
+- Lo spazio dei nomi <xref:System.Collections.Generic> contiene la maggior parte dei tipi di raccolte generiche forniti da .NET, come le classi generiche <xref:System.Collections.Generic.List%601> e <xref:System.Collections.Generic.Dictionary%602> .  
   
--   Lo spazio dei nomi <xref:System.Collections.ObjectModel> contiene tipi di raccolte generiche aggiuntive, come la classe generica <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, utili per esporre i modelli di oggetto agli utenti delle classi.  
+- Lo spazio dei nomi <xref:System.Collections.ObjectModel> contiene tipi di raccolte generiche aggiuntive, come la classe generica <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, utili per esporre i modelli di oggetto agli utenti delle classi.  
   
  Nello spazio dei nomi <xref:System> sono disponibili interfacce generiche per l'implementazione di confronti di uguaglianza e ordinamento, oltre ai tipi delegati generici per gestori eventi, conversioni e predicati di ricerca.  
   

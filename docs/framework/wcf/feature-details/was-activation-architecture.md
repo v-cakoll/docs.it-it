@@ -2,12 +2,12 @@
 title: Architettura di attivazione WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 9c1af21782b377a9fb01cbd05e4fe61f6a69f3ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 063c5e43abf4ddda3edb1de1d9d983bfe8e05706
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932711"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637390"
 ---
 # <a name="was-activation-architecture"></a>Architettura di attivazione WAS
 In questo argomento vengono definiti e illustrati i componenti del servizio di attivazione dei processi di Windows (noto anche come WAS).  
@@ -32,7 +32,7 @@ In questo argomento vengono definiti e illustrati i componenti del servizio di a
 ### <a name="listener-adapters"></a>Adattatori listener  
  Gli adattatori listener sono servizi di Windows singoli che implementano la logica di comunicazione di rete utilizzata per ricevere i messaggi tramite il protocollo di rete sul quale ascoltano. La tabella seguente elenca gli adattatori listener per i protocolli di Windows Communication Foundation (WCF).  
   
-|Nome del servizio dell’adattatore listener|Protocollo|Note|  
+|Nome del servizio dell’adattatore listener|Protocol|Note|  
 |-----------------------------------|--------------|-----------|  
 |W3SVC|http|Componente comune che fornisce l'attivazione HTTP per IIS 7.0 e WCF.|  
 |NetTcpActivator|net.tcp|Dipende dal servizio NetTcpPortSharing.|  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e40f52a6b6b8ea7a77f4e38a291621dab486cc72
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61872846"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648501"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -475,11 +475,11 @@ public class Mod : SimpleCalculator.IOperation
 ## <a name="conclusion"></a>Conclusione
  In questo argomento sono stati trattati i concetti di base di MEF.
 
--   Parti, cataloghi e contenitore di composizione
+- Parti, cataloghi e contenitore di composizione
 
      Le parti e il contenitore di composizione sono i blocchi predefiniti di base di un'applicazione MEF. Una parte è qualsiasi oggetto che importa o esporta un valore, fino al proprio valore (incluso). Un catalogo fornisce un insieme di parti ottenute da una determinata origine. Il contenitore di composizione usa le parti fornite da un catalogo per eseguire la composizione, ovvero l'associazione tra le importazioni e le esportazioni.
 
--   Importazioni ed esportazioni
+- Importazioni ed esportazioni
 
      Le importazioni e le esportazioni rappresentano il canale di comunicazione fra i componenti. Con un'importazione il componente specifica la necessità di un determinato valore o oggetto, mentre con un'esportazione specifica la disponibilità di un valore. Ogni importazione viene associata a un elenco di esportazioni mediante il relativo contratto.
 
