@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ce626d9b75f2061ff024fa25ce005f952301603e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971912"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617252"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Panoramica delle estensioni di markup per XAML
 Le estensioni di markup sono una tecnica XAML per ottenere un valore che non è una primitiva né un tipo XAML specifico. Per utilizzo dell'attributo, le estensioni di markup usano la sequenza di caratteri nota costituita da una parentesi graffa aperta `{` per l'immissione dell'ambito dell'estensione di markup e da una parentesi graffa chiusa `}` . Quando si usano i servizi XAML di .NET Framework, si possono usare alcune delle estensioni di markup predefinite del linguaggio XAML contenute nell'assembly System.Xaml. inoltre possibile creare una sottoclasse dalla classe <xref:System.Windows.Markup.MarkupExtension> , definita in System.Xaml, e definire estensioni di markup personalizzate. In alternativa, è possibile usare le estensioni di markup definite da un particolare framework se già si fa riferimento a tale framework.  

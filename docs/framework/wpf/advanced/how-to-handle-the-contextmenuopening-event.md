@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 65a1e34d5b078c49bf59c2d9787812940c9a7494
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b3d0f5c77ebf8527e4854d4edf12d6fa8a4b5f0c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340399"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614635"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Procedura: Gestire l'evento ContextMenuOpening
 Il <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento può essere gestito in un'applicazione per modificare un esistente prima di menu di scelta rapida per visualizzare o eliminare il menu che verrà altrimenti visualizzato impostando il <xref:System.Windows.RoutedEventArgs.Handled%2A> proprietà `true` nei dati dell'evento. La ragione più comune per l'impostazione <xref:System.Windows.RoutedEventArgs.Handled%2A> al `true` dei dati nell'evento consiste nella sostituzione menu interamente con un nuovo <xref:System.Windows.Controls.ContextMenu> dell'oggetto, che a volte richiede l'annullamento dell'operazione e l'avvio di un nuovo open. Se si scrivono i gestori per il <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento, è necessario essere consapevoli dei problemi di temporizzazione tra un <xref:System.Windows.Controls.ContextMenu> controllo e il servizio che è responsabile dell'apertura e il posizionamento di menu di scelta rapida per i controlli in generale. In questo argomento vengono illustrate alcune delle tecniche di codice per scenari di apertura dei vari menu di scelta rapida e viene illustrato un caso in cui il problema di temporizzazione entra in gioco.  
   
  Esistono diversi scenari per la gestione di <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento:  
   
--   Modificare le voci di menu prima della visualizzazione.  
+- Modificare le voci di menu prima della visualizzazione.  
   
--   Sostituire l'intero menu prima della visualizzazione.  
+- Sostituire l'intero menu prima della visualizzazione.  
   
--   Completamente l'eliminazione di qualsiasi menu di scelta rapida esistente e non visualizzare alcun menu di scelta rapida.  
+- Completamente l'eliminazione di qualsiasi menu di scelta rapida esistente e non visualizzare alcun menu di scelta rapida.  
   
 ## <a name="example"></a>Esempio  
   

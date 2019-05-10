@@ -2,12 +2,12 @@
 title: Controllo delle versioni dei servizi
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6b72558be4a367505ff18f10406785bc21fddd2c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949786"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605996"
 ---
 # <a name="service-versioning"></a>Controllo delle versioni dei servizi
 Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro ciclo di vita, potrebbe essere necessario cambiare i servizi (e gli endpoint che espongono) per molteplici ragioni, ad esempio perché cambiano le esigenze aziendali, i requisiti IT o per risolvere altri problemi. Ogni modifica introduce una nuova versione del servizio. Questo argomento illustra come controllare la versione di Windows Communication Foundation (WCF).  

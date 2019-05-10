@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7b19fbeb0144698c5091a9bbe6bce45c21c4f0d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949942"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616378"
 ---
 # <a name="lazy-initialization"></a>Inizializzazione differita
 L'*inizializzazione differita* di un oggetto significa che la creazione dell'oggetto viene posticipata finché l'oggetto non viene usato per la prima volta. In questo argomento i termini *inizializzazione differita* e *creazione di istanze differita* sono sinonimi. L'inizializzazione differita viene usata in particolare per migliorare le prestazioni, evitare calcoli superflui e ridurre i requisiti di memoria del programma. Ecco gli scenari più comuni:  

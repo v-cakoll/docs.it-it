@@ -2,21 +2,21 @@
 title: Panoramica sul modello di programmazione HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: a6f267232085a46d481199eac83e464f5f774273
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a5438857114fba890aac78565ef128bfc5ea95f0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199583"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613056"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Panoramica sul modello di programmazione HTTP Web WCF
 Il modello di programmazione HTTP WEB di Windows Communication Foundation (WCF) fornisce gli elementi di base necessari per compilare servizi HTTP WEB con WCF. Servizi HTTP WEB WCF sono progettati per l'accesso alla tipologia più ampia di possibili client, inclusi i browser Web e hanno requisiti univoci seguenti:  
   
--   **URI ed elaborazione di URI** gli URI svolgono un ruolo centrale nella progettazione di servizi HTTP WEB. L'HTTP WEB WCF Usa modelli di programmazione le <xref:System.UriTemplate> e <xref:System.UriTemplateTable> classi per fornire funzionalità di elaborazione di URI.  
+- **URI ed elaborazione di URI** gli URI svolgono un ruolo centrale nella progettazione di servizi HTTP WEB. L'HTTP WEB WCF Usa modelli di programmazione le <xref:System.UriTemplate> e <xref:System.UriTemplateTable> classi per fornire funzionalità di elaborazione di URI.  
   
--   **Supporto per le operazioni GET e POST** servizi HTTP WEB utilizzo del verbo GET per recuperare i dati, oltre a numerosi verbi di chiamata per la modifica dei dati e per chiamate remote. L'HTTP WEB WCF Usa modelli di programmazione le <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute> per associare operazioni del servizio a GET e altri verbi HTTP, ad esempio PUT, POST e DELETE.  
+- **Supporto per le operazioni GET e POST** servizi HTTP WEB utilizzo del verbo GET per recuperare i dati, oltre a numerosi verbi di chiamata per la modifica dei dati e per chiamate remote. L'HTTP WEB WCF Usa modelli di programmazione le <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute> per associare operazioni del servizio a GET e altri verbi HTTP, ad esempio PUT, POST e DELETE.  
   
--   **Più formati di dati** i servizi Web elaborano numerosi tipi di dati oltre ai messaggi SOAP. L'HTTP WEB WCF Usa modelli di programmazione le <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebHttpBehavior> per supportare numerosi formati di dati diversi, inclusi i documenti XML, oggetti dati JSON e flussi di contenuto binario quali immagini, file video o testo normale.  
+- **Più formati di dati** i servizi Web elaborano numerosi tipi di dati oltre ai messaggi SOAP. L'HTTP WEB WCF Usa modelli di programmazione le <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebHttpBehavior> per supportare numerosi formati di dati diversi, inclusi i documenti XML, oggetti dati JSON e flussi di contenuto binario quali immagini, file video o testo normale.  
   
  Il modello di programmazione HTTP WEB WCF estende la portata di WCF per coprire gli scenari di tipo Web che includono servizi HTTP WEB, servizi AJAX e JSON e feed di diffusione (ATOM/RSS). Per altre informazioni sui servizi AJAX e JSON, vedere [integrazione AJAX e supporto JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). Per altre informazioni sulla diffusione su diversi canali, vedere [Panoramica sulla diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
@@ -33,23 +33,23 @@ Il modello di programmazione HTTP WEB di Windows Communication Foundation (WCF) 
   
  In questo modello vengono descritti URI come il seguente:  
   
--   a/x/c  
+- a/x/c  
   
--   a/y/c  
+- a/y/c  
   
--   a/z/c  
+- a/z/c  
   
--   e così via.  
+- e così via.  
   
  In questo modello, la notazione tra parentesi graffe ("{segment}") indica un segmento variabile anziché un valore letterale.  
   
  In .NET Framework è disponibile un'API da utilizzare con i modelli URI denominata <xref:System.UriTemplate>. Con `UriTemplates` è possibile effettuare le seguenti operazioni:  
   
--   È possibile chiamare uno dei `Bind` metodi con un set di parametri per produrre una *URI completamente chiuso* che corrisponde al modello. Ciò significa che tutte le variabili all'interno del modello URI vengono sostituite con i valori effettivi.  
+- È possibile chiamare uno dei `Bind` metodi con un set di parametri per produrre una *URI completamente chiuso* che corrisponde al modello. Ciò significa che tutte le variabili all'interno del modello URI vengono sostituite con i valori effettivi.  
   
--   È possibile chiamare `Match`() con un URI candidato che utilizza un modello per suddividere un URI candidato nelle sue parti costitutive e restituisce un dizionario che contiene le varie parti dell'URI etichettate in base alle variabili nel modello.  
+- È possibile chiamare `Match`() con un URI candidato che utilizza un modello per suddividere un URI candidato nelle sue parti costitutive e restituisce un dizionario che contiene le varie parti dell'URI etichettate in base alle variabili nel modello.  
   
--   `Bind`() e `Match`() sono inverse, pertanto è possibile chiamare `Match`( `Bind`( x ) ) e ottenere lo stesso ambiente dal quale si è partiti.  
+- `Bind`() e `Match`() sono inverse, pertanto è possibile chiamare `Match`( `Bind`( x ) ) e ottenere lo stesso ambiente dal quale si è partiti.  
   
  Spesso si desidera tenere traccia (specialmente sul server, dove è necessario inviare una richiesta a un'operazione del servizio basata sull'URI) di un set di oggetti <xref:System.UriTemplate> in una struttura dati che possa fare riferimento in modo indipendente a ciascuno dei modelli contenuti. <xref:System.UriTemplateTable> rappresenta un set di modelli URI e seleziona la migliore corrispondenza in base a un set di modelli e a un URI candidato. Ciò non è associato alcun stack di rete particolare (incluso di WCF) in modo che è possibile usarlo ovunque sia necessario.  
   
@@ -127,11 +127,11 @@ interface ICustomer
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>Formati e modello di programmazione HTTP Web WCF  
  Il modello di programmazione HTTP WEB WCF include nuove funzionalità per lavorare con numerosi formati dati diversi. A livello di associazione, <xref:System.ServiceModel.WebHttpBinding> è in grado di leggere e scrivere i diversi tipi di dati seguenti:  
   
--   XML  
+- XML  
   
--   JSON  
+- JSON  
   
--   Flussi binari opachi  
+- Flussi binari opachi  
   
  Ciò significa che il modello di programmazione HTTP WEB WCF può gestire qualsiasi tipo di dati ma, è possibile programmare <xref:System.IO.Stream>.  
   

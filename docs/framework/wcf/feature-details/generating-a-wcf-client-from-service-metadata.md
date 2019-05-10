@@ -2,23 +2,23 @@
 title: Generazione di un client WCF dai metadati del servizio
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 5cfbfc1e4be0003b3699f818212fbcd959f3ad91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9a72228ddb32786f39585083d62e1f3f028763c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855998"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613374"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generazione di un client WCF dai metadati del servizio
 In questo argomento viene illustrato come utilizzare le varie opzioni in Svcutil.exe per generare client da documenti dei metadati.  
   
  Questi documenti dei metadati possono essere salvati in modo permanente o recuperati in linea. Il recupero in linea segue il protocollo WS-MetadataExchange o il protocollo Microsoft Discovery (DISCO). Per recuperare metadati, Svcutil.exe genera contemporaneamente le richieste di metadati seguenti:  
   
--   Richiesta WS-MetadataExchange (MEX) all'indirizzo fornito.  
+- Richiesta WS-MetadataExchange (MEX) all'indirizzo fornito.  
   
--   Richiesta MEX all'indirizzo fornito con `/mex` accodato.  
+- Richiesta MEX all'indirizzo fornito con `/mex` accodato.  
   
--   Richiesta DISCO (utilizzando la [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) dai servizi Web ASP.NET) all'indirizzo fornito.  
+- Richiesta DISCO (utilizzando la [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) dai servizi Web ASP.NET) all'indirizzo fornito.  
   
  Lo strumento Svcutil.exe consente di generare il client in base al WSDL (Web Services Description Language) o al file dei criteri ricevuto dal servizio. Il nome dell'entità utente (UPN) è generato concatenando il nome utente con "\@" e l'aggiunta di un nome di dominio completo (FQDN). Tuttavia, per gli utenti registrati su Active Directory, questo formato non valido e l'UPN generato dallo strumento provoca un errore nell'autenticazione Kerberos con il messaggio di errore seguente: **Non è riuscito il tentativo di accesso.** Per risolvere questo problema, è necessario correggere manualmente il file client generato da questo strumento.  
   

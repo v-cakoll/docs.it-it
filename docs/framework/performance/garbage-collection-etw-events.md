@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e5e10a1dc1ad3230213a20b850741a6ec0468294
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61722939"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616428"
 ---
 # <a name="garbage-collection-etw-events"></a>Eventi ETW di Garbage Collection
 <a name="top"></a> Questi eventi raccolgono informazioni relative alla Garbage Collection ai fini della diagnostica e del debug, tra cui stabilire quante volte è stato eseguito il processo di Garbage Collection, la quantità di memoria liberata durante la procedura di Garbage Collection e così via.  
@@ -66,9 +66,9 @@ ms.locfileid: "61722939"
   
 |Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
-|Conteggio|win:UInt32|L' *ennesima*Garbage Collection.|  
+|Count|win:UInt32|L' *ennesima*Garbage Collection.|  
 |Profondità|win:UInt32|La generazione che viene raccolta.|  
-|Motivo|win:UInt32|Motivo per cui è stata attivata la Garbage Collection:<br /><br /> 0x0 - Allocazione heap oggetto piccolo.<br /><br /> 0x1 - Indotto.<br /><br /> 0x2 - Memoria insufficiente.<br /><br /> 0x3 - Vuoto.<br /><br /> 0x4 - Allocazione heap oggetto grande.<br /><br /> 0x5 - Spazio esaurito (per heap oggetto piccolo).<br /><br /> 0x6 - Spazio esaurito (per heap oggetto grande).<br /><br /> 0x7 - Indotto ma non forzato come blocco.|  
+|`Reason`|win:UInt32|Motivo per cui è stata attivata la Garbage Collection:<br /><br /> 0x0 - Allocazione heap oggetto piccolo.<br /><br /> 0x1 - Indotto.<br /><br /> 0x2 - Memoria insufficiente.<br /><br /> 0x3 - Vuoto.<br /><br /> 0x4 - Allocazione heap oggetto grande.<br /><br /> 0x5 - Spazio esaurito (per heap oggetto piccolo).<br /><br /> 0x6 - Spazio esaurito (per heap oggetto grande).<br /><br /> 0x7 - Indotto ma non forzato come blocco.|  
 |Tipo|win:UInt32|0x0 - Un'operazione di Garbage Collection bloccante è stata eseguita all'esterno della procedura di Garbage Collection in background.<br /><br /> 0x1 - Garbage Collection in background.<br /><br /> 0x2 - Un'operazione di Garbage Collection bloccante è stata eseguita durante la procedura di Garbage Collection in background.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
@@ -92,7 +92,7 @@ ms.locfileid: "61722939"
   
 |Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
-|Conteggio|win:UInt32|L' *ennesima*Garbage Collection.|  
+|Count|win:UInt32|L' *ennesima*Garbage Collection.|  
 |Profondità|win:UInt32|La generazione che è stata raccolta.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
@@ -325,7 +325,7 @@ ms.locfileid: "61722939"
   
 |Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
-|Conteggio|win:UInt32|Numero di finalizzatori eseguiti.|  
+|Count|win:UInt32|Numero di finalizzatori eseguiti.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
  [Torna all'inizio](#top)  

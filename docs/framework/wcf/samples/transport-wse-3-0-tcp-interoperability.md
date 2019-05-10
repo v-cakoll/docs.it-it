@@ -2,12 +2,12 @@
 title: 'Trasporto: interoperabilità WSE 3.0 TCP'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5ad1f2e55bf0dab2736bbc95933d12be43dddd76
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032736"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617335"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Trasporto: interoperabilità WSE 3.0 TCP
 L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una sessione duplex TCP come trasporto personalizzato Windows Communication Foundation (WCF). Illustra anche come utilizzare l'estendibilità del livello del canale per connettersi via cavo con sistemi distribuiti esistenti. La procedura seguente illustra come compilare questo trasporto personalizzato WCF:  

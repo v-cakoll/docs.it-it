@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Modello a oggetti e query semplici (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: dd4ba42247a8305b14d859a5b49da4c11cfc18bc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309459"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617975"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Procedura dettagliata: Modello a oggetti e query semplici (C#)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base con minime complessità. Verranno create una classe di entità per la modellazione della tabella Customers nel database Northwind di esempio, quindi una semplice query per elencare i clienti residenti nell'area londinese.  
@@ -20,24 +20,24 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 ## <a name="prerequisites"></a>Prerequisiti  
   
--   Per i file usati nella procedura dettagliata viene usata una cartella dedicata ("c:\linqtest5"). Creare la cartella prima di avviare la procedura.  
+- Per i file usati nella procedura dettagliata viene usata una cartella dedicata ("c:\linqtest5"). Creare la cartella prima di avviare la procedura.  
   
--   Per questa procedura dettagliata è richiesto il database di esempio Northwind. Se questo database non è disponibile nel computer di sviluppo, è possibile scaricarlo dal sito di download Microsoft. Per istruzioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Dopo avere scaricato il database, copiare il file nella cartella c:\linqtest5.  
+- Per questa procedura dettagliata è richiesto il database di esempio Northwind. Se questo database non è disponibile nel computer di sviluppo, è possibile scaricarlo dal sito di download Microsoft. Per istruzioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Dopo avere scaricato il database, copiare il file nella cartella c:\linqtest5.  
   
 ## <a name="overview"></a>Panoramica  
  La procedura dettagliata è costituita da sei attività principali:  
   
--   Creazione di un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] soluzione in Visual Studio.  
+- Creazione di un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] soluzione in Visual Studio.  
   
--   Mapping di una classe a una tabella del database.  
+- Mapping di una classe a una tabella del database.  
   
--   Definizione di proprietà nella classe per rappresentare colonne del database.  
+- Definizione di proprietà nella classe per rappresentare colonne del database.  
   
--   Definizione della connessione al database Northwind.  
+- Definizione della connessione al database Northwind.  
   
--   Creazione di una semplice query da eseguire sul database.  
+- Creazione di una semplice query da eseguire sul database.  
   
--   Esecuzione della query e analisi dei risultati.  
+- Esecuzione della query e analisi dei risultati.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Creazione di una soluzione LINQ to SQL  
  In questa prima attività, si crea una soluzione di Visual Studio che contiene i riferimenti necessari per compilare ed eseguire un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetto.  
@@ -76,22 +76,22 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>Per creare una classe di entità ed eseguire il mapping della classe a una tabella di database  
   
--   Digitare o incollare il codice seguente in Program.cs immediatamente sopra la dichiarazione della classe `Program`:  
+- Digitare o incollare il codice seguente in Program.cs immediatamente sopra la dichiarazione della classe `Program`:  
   
      [!code-csharp[DLinqWalk1CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#2)]  
   
 ## <a name="designating-properties-on-the-class-to-represent-database-columns"></a>Definizione di proprietà nella classe per rappresentare colonne del database  
  In questo passaggio si completeranno diverse attività.  
   
--   Usare l'attributo <xref:System.Data.Linq.Mapping.ColumnAttribute> per definire le proprietà `CustomerID` e `City` nella classe di entità in modo che rappresentino colonne nella tabella del database.  
+- Usare l'attributo <xref:System.Data.Linq.Mapping.ColumnAttribute> per definire le proprietà `CustomerID` e `City` nella classe di entità in modo che rappresentino colonne nella tabella del database.  
   
--   Definire la proprietà `CustomerID` in modo che rappresenti una colonna di chiave primaria nel database.  
+- Definire la proprietà `CustomerID` in modo che rappresenti una colonna di chiave primaria nel database.  
   
--   Definire i campi `_CustomerID` e `_City` per l'archiviazione privata. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sarà quindi in grado di archiviare e recuperare direttamente i valori, anziché usare funzioni di accesso pubbliche che potrebbero includere la logica di business.  
+- Definire i campi `_CustomerID` e `_City` per l'archiviazione privata. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sarà quindi in grado di archiviare e recuperare direttamente i valori, anziché usare funzioni di accesso pubbliche che potrebbero includere la logica di business.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>Per rappresentare caratteristiche di due colonne del database  
   
--   Digitare o incollare il codice seguente in Program.cs all'interno delle parentesi graffe della classe `Customer`:  
+- Digitare o incollare il codice seguente in Program.cs all'interno delle parentesi graffe della classe `Customer`:  
   
      [!code-csharp[DLinqWalk1CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#3)]  
   
@@ -102,7 +102,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-specify-the-database-connection"></a>Per specificare la connessione al database  
   
--   Digitare o incollare il codice seguente nel metodo `Main`:  
+- Digitare o incollare il codice seguente nel metodo `Main`:  
   
      Si presuppone che il file `northwnd.mdf` si trovi nella cartella linqtest5. Per altre informazioni, vedere la sezione precedente relativa ai prerequisiti.  
   
@@ -115,7 +115,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-create-a-simple-query"></a>Per creare una query semplice  
   
--   Digitare o incollare il codice seguente nel metodo `Main` dopo la dichiarazione `Table<Customer>`.  
+- Digitare o incollare il codice seguente nel metodo `Main` dopo la dichiarazione `Table<Customer>`.  
   
      [!code-csharp[DLinqWalk1ACS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#5)]  
   

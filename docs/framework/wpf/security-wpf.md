@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c284e37ce32848ab22ca9ff6cc2ca2a8e6df9cb6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696918"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614503"
 ---
 # <a name="security-wpf"></a>Sicurezza (WPF)
 <a name="introduction"></a> Durante lo sviluppo di Windows Presentation Foundation (WPF) applicazioni autonome e ospitate da browser, è necessario considerare il modello di sicurezza. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] applicazioni autonome vengono eseguite con autorizzazioni senza restrizioni ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** set di autorizzazioni), se distribuite mediante Windows Installer (MSI), XCopy, o [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Non è supportata la distribuzione di applicazioni WPF autonome e parzialmente attendibili con ClickOnce. Tuttavia, un'applicazione host di attendibilità totale può creare una relazione di trust parziale <xref:System.AppDomain> usando il modello di componente aggiuntivo di .NET Framework. Per altre informazioni, vedere [Cenni preliminari sui componenti aggiuntivi di WPF](./app-development/wpf-add-ins-overview.md).  

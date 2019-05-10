@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Modifica dei dati (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 5418bdbdeee162bbc8c0abcb11fd39f2cc82ce73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 7bac370ae8dc260ca4b665fd51680a80fd9846fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330779"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618044"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Procedura dettagliata: Modifica dei dati (C#)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'aggiunta, la modifica e l'eliminazione dei dati in un database. Si utilizzerà una copia del database di esempio Northwind per aggiungere un cliente, modificare il nome di un cliente ed eliminare un ordine.  
@@ -19,13 +19,13 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 ## <a name="prerequisites"></a>Prerequisiti  
  Per l'esecuzione di questa procedura sono richiesti i seguenti elementi:  
   
--   Una cartella dedicata ("c:\linqtest6") in cui inserire i file usati nella procedura dettagliata. Creare la cartella prima di avviare la procedura.  
+- Una cartella dedicata ("c:\linqtest6") in cui inserire i file usati nella procedura dettagliata. Creare la cartella prima di avviare la procedura.  
   
--   Il database di esempio Northwind.  
+- Il database di esempio Northwind.  
   
      Se questo database non è disponibile nel computer di sviluppo, è possibile scaricarlo dal sito di download Microsoft. Per istruzioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Dopo avere scaricato il database, copiare il file northwnd.mdf nella cartella c:\linqtest6.  
   
--   Un file di codice C# generato dal database Northwind.  
+- Un file di codice C# generato dal database Northwind.  
   
      È possibile generare questo file usando [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o lo strumento SQLMetal. Questa procedura dettagliata è stata scritta usando lo strumento SQLMetal con la riga di comando seguente:  
   
@@ -36,17 +36,17 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 ## <a name="overview"></a>Panoramica  
  La procedura dettagliata è costituita da sei attività principali:  
   
--   Creazione di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] soluzione in Visual Studio.  
+- Creazione di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] soluzione in Visual Studio.  
   
--   Aggiunta del file di codice del database al progetto.  
+- Aggiunta del file di codice del database al progetto.  
   
--   Creazione di un nuovo oggetto Customer  
+- Creazione di un nuovo oggetto Customer  
   
--   Modifica del nome di contatto di un cliente.  
+- Modifica del nome di contatto di un cliente.  
   
--   Eliminazione di un ordine.  
+- Eliminazione di un ordine.  
   
--   Invio delle modifiche al database Northwind.  
+- Invio delle modifiche al database Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Creazione di una soluzione LINQ to SQL  
  In questa prima attività, si crea una soluzione di Visual Studio che contiene i riferimenti necessari per compilare ed eseguire un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetto.  
@@ -126,7 +126,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-change-the-name-of-a-customer"></a>Per modificare il nome di un oggetto Customer  
   
--   Aggiungere il codice seguente sopra `Console.ReadLine();`:  
+- Aggiungere il codice seguente sopra `Console.ReadLine();`:  
   
      [!code-csharp[DLinqWalk3CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#4)]  
   
@@ -137,7 +137,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-delete-a-row"></a>Per eliminare una riga  
   
--   Aggiungere il codice seguente sopra `Console.ReadLine();`:  
+- Aggiungere il codice seguente sopra `Console.ReadLine();`:  
   
      [!code-csharp[DLinqWalk3CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#5)]  
   

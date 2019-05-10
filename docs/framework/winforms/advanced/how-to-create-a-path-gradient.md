@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c37a42a5905e34a995efbd73d332b7ef8f90e51d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938067"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603246"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Procedura: Creare una sfumatura percorso
 Il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe consente di personalizzare il modo in cui riempire una forma con gradualmente la modifica dei colori. Ad esempio, è possibile specificare un colore per il centro di un percorso e un altro per il limite di un percorso. È anche possibile specificare colori separati per ognuno dei vari punti lungo il bordo di un percorso.  
