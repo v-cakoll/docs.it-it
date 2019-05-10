@@ -2,12 +2,12 @@
 title: Creazione di una classe BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 600bf9b394078ffc1b1bc97390bd0de406d64338
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c08494315f43f35f60d70abf643f596a013c302
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858351"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587323"
 ---
 # <a name="creating-a-bindingelement"></a>Creazione di una classe BindingElement
 Associazioni ed elementi di associazione (oggetti che estendono <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>rispettivamente) sono il luogo in cui il modello di applicazione Windows Communication Foundation (WCF) è associato con le channel factory e listener del canale. Senza associazioni, tramite i canali personalizzati richiede programmazione a livello di canale come descritto in [canale del servizio a livello di programmazione](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) e [programmazione a livello di canale Client](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Questo argomento vengono illustrati il requisito minimo per consentirne l'utilizzo del canale in WCF, lo sviluppo di un <xref:System.ServiceModel.Channels.BindingElement> per il canale e abilita l'uso dell'applicazione come descritto nel passaggio 4 della [canali emergenti](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -59,11 +59,11 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 #### <a name="encoding-binding-elements"></a>Elementi di associazione di codifica  
  Per creare un nuovo elemento di associazione di codifica, iniziare estendendo la classe <xref:System.ServiceModel.Channels.BindingElement> e implementando la classe <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType>. È necessario quindi implementare almeno i metodi <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> e <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType> e la proprietà <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType>.  
   
--   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>. Restituisce una copia aggiornata dell'elemento di associazione. È consigliabile che gli autori dell'elemento di associazione implementino il metodo <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> utilizzando un costruttore di copia che chiami il costruttore di copia di base e che quindi duplichi i campi aggiuntivi in questa classe.  
+- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>. Restituisce una copia aggiornata dell'elemento di associazione. È consigliabile che gli autori dell'elemento di associazione implementino il metodo <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> utilizzando un costruttore di copia che chiami il costruttore di copia di base e che quindi duplichi i campi aggiuntivi in questa classe.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>. Restituisce una classe <xref:System.ServiceModel.Channels.MessageEncoderFactory> che fornisce un handle alla classe effettiva che implementa il nuovo codificatore e che deve estendere la classe <xref:System.ServiceModel.Channels.MessageEncoder>. Per altre informazioni, vedere <xref:System.ServiceModel.Channels.MessageEncoderFactory> e <xref:System.ServiceModel.Channels.MessageEncoder>.  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>. Restituisce una classe <xref:System.ServiceModel.Channels.MessageEncoderFactory> che fornisce un handle alla classe effettiva che implementa il nuovo codificatore e che deve estendere la classe <xref:System.ServiceModel.Channels.MessageEncoder>. Per altre informazioni, vedere <xref:System.ServiceModel.Channels.MessageEncoderFactory> e <xref:System.ServiceModel.Channels.MessageEncoder>.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>. Restituisce la classe <xref:System.ServiceModel.Channels.MessageVersion> utilizzata in questa codifica, che rappresenta le versioni di SOAP e WS-Addressing utilizzate.  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>. Restituisce la classe <xref:System.ServiceModel.Channels.MessageVersion> utilizzata in questa codifica, che rappresenta le versioni di SOAP e WS-Addressing utilizzate.  
   
  Per un elenco completo dei metodi e delle proprietà facoltative per gli elementi di associazione di codifica definiti dall'utente, vedere <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   

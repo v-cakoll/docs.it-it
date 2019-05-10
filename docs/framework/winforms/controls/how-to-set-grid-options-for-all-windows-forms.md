@@ -8,27 +8,25 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: acc329c8e61b4638b2f373860f5f13b8a98dece9
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912860"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211621"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Procedura: Impostare le opzioni della griglia per tutti i Windows Form
-Come si diventa abituati a usare nell'ambiente di sviluppo Visual Studio, è possibile impostare le preferenze per tutti i form e i progetti utilizzati in Progettazione Windows Form.  
-  
-> [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-set-global-windows-forms-options"></a>Per impostare le opzioni di Windows Form globali  
-  
-1. Dal **degli strumenti** dal menu **opzioni**.  
-  
-2. Nel riquadro sinistro della finestra di **opzioni** nella finestra di dialogo fare clic su **Windows Form Designer**.  
-  
-     Nel riquadro di destra, sotto il **le impostazioni di Layout** intestazione, è possibile impostare il valore predefinito delle impostazioni della griglia per tutti i nuovi form si crea. Queste impostazioni includono le dimensioni della griglia, eventuale blocco dei controlli ad esso e indica se è attiva per impostazione predefinita. Inoltre, è possibile scegliere tra **SnapToGrid** e **guide di allineamento** le modalità di layout. Per altre informazioni sulle guide di allineamento, vedere [procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
-  
+
+Come si diventa abituati a usare nell'ambiente di sviluppo Visual Studio, è possibile impostare le preferenze per tutti i form e i progetti utilizzati in Progettazione Windows Form.
+
+## <a name="set-global-windows-forms-options"></a>Impostare le opzioni di Windows Form globali
+
+1. In Visual Studio dal **degli strumenti** dal menu **opzioni**.
+
+2. Nel riquadro sinistro della finestra di **opzioni** nella finestra di dialogo fare clic su **Windows Form Designer**.
+
+   Nel riquadro di destra, sotto il **le impostazioni di Layout** intestazione, è possibile impostare il valore predefinito delle impostazioni della griglia per tutti i nuovi form si crea. Queste impostazioni includono le dimensioni della griglia, eventuale blocco dei controlli ad esso e indica se è attiva per impostazione predefinita. Inoltre, è possibile scegliere tra **SnapToGrid** e **guide di allineamento** le modalità di layout. Per altre informazioni sulle guide di allineamento, vedere [procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

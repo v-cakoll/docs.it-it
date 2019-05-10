@@ -2,13 +2,19 @@
 title: Amministrazione e diagnostica
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'Windows Communication Foundation, diagnostics'
-  - 'Windows Communication Foundation, administration'
-  - 'diagnostics [WCF]'
-  - 'WCF, diagnostics'
-  - 'administration [WCF]'
-  - 'WCF, administration'
+- Windows Communication Foundation, diagnostics
+- Windows Communication Foundation, administration
+- diagnostics [WCF]
+- WCF, diagnostics
+- administration [WCF]
+- WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
+ms.openlocfilehash: 5df95c6b5f91cd4f36bd03c1bd291f7a44025ee9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600079"
 ---
 # <a name="administration-and-diagnostics"></a>Amministrazione e diagnostica
 Windows Communication Foundation (WCF) offre un'ampia gamma di funzionalità che consentono di monitorare le varie fasi del ciclo di vita di un'applicazione. È ad esempio possibile utilizzare la configurazione per impostare servizi e client in fase di distribuzione. WCF include un vasto set di contatori delle prestazioni che consentono di misurare le prestazioni dell'applicazione. WCF espone inoltre dati di ispezione di un servizio in fase di esecuzione tramite un provider di Strumentazione gestione Windows (WMI) di WCF. In caso di errore dell'applicazione o di comportamento non corretto, è possibile utilizzare il Registro eventi per controllare se si è verificato qualcosa di grave. È inoltre possibile utilizzare la registrazione messaggi e le tracce per controllare gli eventi end-to-end in corso nell'applicazione. Queste funzionalità aiutano gli sviluppatori e professionisti IT a risolvere i problemi di un'applicazione WCF quando non funzioni correttamente.  

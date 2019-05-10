@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e42e2726b54464d479398c023c3e7caecf9b054
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856402"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753049"
 ---
 # <a name="elevation-of-privilege"></a>Elevazione dei privilegi
 *L'elevazione dei privilegi* risultante dalla concessione dell'autorizzazione un utente malintenzionato autorizzazioni maggiori rispetto a tali concessa inizialmente. L'autore di un attacco con, ad esempio, un set di privilegi di autorizzazioni "di sola lettura" eleva il set per includere "lettura e scrittura".  
@@ -25,13 +25,13 @@ ms.locfileid: "61856402"
   
  Quando viene stabilita una connessione tra un client e server, l'identità del client non cambia, tranne che in una situazione: dopo che viene aperto il client di WCF, se vengono soddisfatte tutte le condizioni seguenti:  
   
--   Le procedure per stabilire un contesto di sicurezza (con protezione del trasporto della sessione o sessione di sicurezza messaggio) è disattivata (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> è impostata su `false` in caso di protezione del messaggio o non in grado di stabilire sicurezza trasporto le sessioni viene utilizzato nel caso della protezione del trasporto. HTTPS è un esempio di questo tipo di trasporto.  
+- Le procedure per stabilire un contesto di sicurezza (con protezione del trasporto della sessione o sessione di sicurezza messaggio) è disattivata (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> è impostata su `false` in caso di protezione del messaggio o non in grado di stabilire sicurezza trasporto le sessioni viene utilizzato nel caso della protezione del trasporto. HTTPS è un esempio di questo tipo di trasporto.  
   
--   Viene utilizzata l'autenticazione di Windows.  
+- Viene utilizzata l'autenticazione di Windows.  
   
--   La credenziale non è impostata in modo esplicito.  
+- La credenziale non è impostata in modo esplicito.  
   
--   Il servizio viene chiamato nel contesto di sicurezza rappresentato.  
+- Il servizio viene chiamato nel contesto di sicurezza rappresentato.  
   
  Se queste condizioni sono true, l'identità usata per autenticare il client presso il servizio potrebbe cambiare (potrebbe non essere l'identità rappresentata ma l'identità del processo invece) dopo aver aperto il client di WCF. Ciò accade perché la credenziale di Windows utilizzata per autenticare il client al servizio viene trasmessa con ogni messaggio e la credenziale utilizzata per l'autenticazione viene ottenuta dall'identità di Windows del thread corrente. Se l'identità di Windows del thread corrente cambia (ad esempio, rappresentando un chiamante diverso), potrebbe cambiare anche la credenziale allegata al messaggio e utilizzata per autenticare il client al servizio.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "61856402"
   
  Lo stesso accade anche quando si creano associazioni personalizzate utilizzando uno dei metodi seguenti:  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
   
  Per limitare questo problema, i criteri di autorizzazione devono controllare l'azione e la data di scadenza dei singoli criteri di autorizzazione.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "61856402"
   
  Ciò può verificarsi nelle circostanze seguenti:  
   
--   Il client firma digitalmente un messaggio utilizzando un certificato X.509 e non allega il certificato X.509 al messaggio, ma fa semplicemente riferimento al certificato utilizzando il suo identificatore chiave del soggetto.  
+- Il client firma digitalmente un messaggio utilizzando un certificato X.509 e non allega il certificato X.509 al messaggio, ma fa semplicemente riferimento al certificato utilizzando il suo identificatore chiave del soggetto.  
   
--   Il computer del servizio contiene due o più certificati con la stessa chiave pubblica, ma tali certificati contengono informazioni diverse.  
+- Il computer del servizio contiene due o più certificati con la stessa chiave pubblica, ma tali certificati contengono informazioni diverse.  
   
--   Il servizio recupera un certificato che corrisponde all'identificatore chiave del soggetto, ma non è quello che il client doveva utilizzare. Quando WCF riceve il messaggio e verifica la firma, le informazioni del certificato X.509 non intenzionali WCF associa a un set di attestazioni che sono potenzialmente con privilegi elevati e diversi da quelli previsti del client.  
+- Il servizio recupera un certificato che corrisponde all'identificatore chiave del soggetto, ma non è quello che il client doveva utilizzare. Quando WCF riceve il messaggio e verifica la firma, le informazioni del certificato X.509 non intenzionali WCF associa a un set di attestazioni che sono potenzialmente con privilegi elevati e diversi da quelli previsti del client.  
   
  Per limitare questo problema, fare riferimento al certificato X.509 in un altro modo, ad esempio utilizzando <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   

@@ -2,12 +2,12 @@
 title: Mapping di relazioni specificate per elementi annidati
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: 9772f077991c758be65bbb44b9474f1ad341371f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cd0fd66fe70be4b8dea14ac7420e95c4b8bb1158
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785385"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604009"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>Mapping di relazioni specificate per elementi annidati
 Uno schema può includere un' **msdata: Relationship** annotazione specificare in modo esplicito il mapping tra due elementi qualsiasi dello schema. I due elementi specificati **msdata: Relationship** possono essere annidati nello schema, ma non è necessario essere. Il processo di mapping viene utilizzato **msdata: Relationship** nello schema per generare la relazione chiave primaria/esterna chiave tra le due colonne.  

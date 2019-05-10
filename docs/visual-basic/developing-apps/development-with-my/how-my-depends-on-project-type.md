@@ -5,11 +5,11 @@ helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
 ms.openlocfilehash: 72b9799d1f5ba7efa37d5f8f2a633e6806a58607
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808076"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755719"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>Dipendenza di My dal tipo di progetto (Visual Basic)
 `My` espone solo gli oggetti richiesti da un particolare tipo di progetto. Ad esempio, il `My.Forms` oggetto è disponibile in un'applicazione Windows Forms, ma non è disponibile in un'applicazione console. Questo argomento viene illustrato che `My` gli oggetti sono disponibili in diversi tipi di progetto.  

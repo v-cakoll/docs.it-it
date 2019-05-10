@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cde26250db0b3d11c51a18b7ebd378953ae0958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f89f0558c11e229fef2ca3cd619e3c033f12c858
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704830"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754670"
 ---
 # <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait > elemento
 
-Specifica se disabilitare la selezione e in attesa di una sezione critica quando conflitti. \ 
+Specifica se disabilitare la selezione e in attesa di una sezione critica quando conflitti.  
   
  \<configuration>  
 \<runtime>  
@@ -36,14 +36,14 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|**enabled**|Specifica se è abilitata in attesa di selezione per le sezioni critiche quando essi sono conflitti.|  
+|**enabled**|Specifica se l'attesa di rotazione per sezioni critiche quando essi sono conflitti è disabilitato.|  
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|1|In attesa di selezione è abilitata.|  
-|0|Rotazione-attesa è disabilitata. Questo è il valore predefinito|  
+|1|Disabilitare la rotazione-attesa quando non è possibile acquisire una sezione critica.|  
+|0|Non disabilitare la rotazione-attesa quando non è possibile acquisire una sezione critica. Rappresenta il valore predefinito.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  

@@ -2,26 +2,26 @@
 title: tipo di associazione
 ms.date: 03/30/2017
 ms.assetid: 26c409f6-06e8-4441-ac78-1b1076a3c005
-ms.openlocfilehash: 895d7fdc464741723322717c3ace027dc49eed9c
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7fbdc0316b1f9fd0bb282fd466857b1426c41df1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411447"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583723"
 ---
 # <a name="association-type"></a>tipo di associazione
 Un' *tipo di associazione* (detto anche associazione) è il blocco predefinito fondamentale per la descrizione delle relazioni in Entity Data Model (EDM). In un modello concettuale, un'associazione rappresenta una relazione tra due [tipi di entità](../../../../docs/framework/data/adonet/entity-type.md) (ad esempio `Customer` e `Order`). In un'applicazione, un'istanza di un'associazione rappresenta un'associazione specifica (ad esempio, un'associazione tra un'istanza di `Customer` e una di `Order`). Le istanze dell'associazione sono raggruppate logicamente in un [set di associazioni](../../../../docs/framework/data/adonet/association-set.md).  
   
  Una definizione di associazione contiene le informazioni seguenti:  
   
--   Un nome univoco. (obbligatorio).  
+- Un nome univoco. (obbligatorio).  
   
--   Due [estremità dell'associazione](../../../../docs/framework/data/adonet/association-end.md), uno per ogni tipo di entità nella relazione. (obbligatorio).  
+- Due [estremità dell'associazione](../../../../docs/framework/data/adonet/association-end.md), uno per ogni tipo di entità nella relazione. (obbligatorio).  
   
     > [!NOTE]
     >  Un'associazione non può rappresentare una relazione tra più di due tipi di entità. Un'associazione può tuttavia definire una relazione interna specificando lo stesso tipo di entità per ognuna delle entità finali dell'associazione.  
   
--   Oggetto [vincolo di integrità referenziale](../../../../docs/framework/data/adonet/referential-integrity-constraint.md). (facoltativo)  
+- Oggetto [vincolo di integrità referenziale](../../../../docs/framework/data/adonet/referential-integrity-constraint.md). (facoltativo)  
   
  Ogni entità finale dell'associazione deve specificare una [molteplicità di estremità dell'associazione](../../../../docs/framework/data/adonet/association-end-multiplicity.md) che indica il numero di istanze del tipo di entità che possono essere in un'entità finale dell'associazione. Una molteplicità di entità finale di associazione può avere un valore di uno (1), zero o uno (0..1) o molti (\*). Istanze del tipo di entità in un'entità finale di un'associazione sono accessibili attraverso [le proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md) o chiavi esterne se sono esposte in un tipo di entità. Per altre informazioni, vedere [Entity Data Model: Le chiavi esterne](../../../../docs/framework/data/adonet/foreign-key-property.md).  
   
