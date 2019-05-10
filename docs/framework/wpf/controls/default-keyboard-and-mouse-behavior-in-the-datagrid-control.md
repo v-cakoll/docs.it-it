@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a518c6123b21ae62742071a0b26c6a09fa272b17
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911846"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591271"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Comportamento predefinito di tastiera e mouse nel controllo DataGrid
 In questo argomento descrive come gli utenti possono interagire con il <xref:System.Windows.Controls.DataGrid> controllo usando la tastiera e mouse.  
@@ -55,21 +55,21 @@ In questo argomento descrive come gli utenti possono interagire con il <xref:Sys
   
  Le chiavi di selezione seguente modificata la selezione di più righe.  
   
--   MAIUSC+freccia GIÙ  
+- MAIUSC+freccia GIÙ  
   
--   MAIUSC+freccia SU  
+- MAIUSC+freccia SU  
   
--   MAIUSC+PGGIÙ  
+- MAIUSC+PGGIÙ  
   
--   MAIUSC+PGSU  
+- MAIUSC+PGSU  
   
--   CTRL+MAIUSC+freccia GIÙ  
+- CTRL+MAIUSC+freccia GIÙ  
   
--   CTRL+MAIUSC+freccia SU  
+- CTRL+MAIUSC+freccia SU  
   
--   CTRL + MAIUSC + HOME  
+- CTRL + MAIUSC + HOME  
   
--   CTRL + MAIUSC + END  
+- CTRL + MAIUSC + END  
   
 ## <a name="default-mouse-behavior"></a>Comportamento predefinito del Mouse  
  La tabella seguente elenca il comportamento del mouse predefinito per il <xref:System.Windows.Controls.DataGrid>.  

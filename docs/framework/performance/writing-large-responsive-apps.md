@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa3d428d311fd954d092c3859cf8ad273e8a5c1f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61861231"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613808"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Scrittura di app grandi e reattive in .NET Framework
 Questo articolo include suggerimenti per il miglioramento delle prestazioni delle app .NET Framework di grandi dimensioni o di app che elaborano una quantità elevata di dati, ad esempio file o database. Questi suggerimenti derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e l'articolo include diversi esempi concreti tratti dal compilatore C#. 
@@ -453,13 +453,13 @@ class Compilation { /*...*/
   
  In questo articolo è stato illustrato come individuare i sintomi relativi a colli di bottiglia delle prestazioni che possono influire sulla reattività dell'app, in particolare per sistemi di grandi dimensioni o sistemi che elaborano quantità elevate di dati. Le cause più comuni includono la conversione boxing, le modifiche alle stringhe, le espressioni LINQ e lambda, la memorizzazione di metodi async nella cache, la memorizzazione nella cache senza limiti di dimensione o criteri di eliminazione, l'uso non appropriato di dizionari e il passaggio di strutture. Occorre tenere presenti le quattro considerazioni per l'ottimizzazione delle app:  
   
--   Non eseguire prematuramente l'ottimizzazione: è consigliabile essere produttivi e ottimizzare l'app quando si individuano problemi. 
+- Non eseguire prematuramente l'ottimizzazione: è consigliabile essere produttivi e ottimizzare l'app quando si individuano problemi. 
   
--   I profili sono attendibili: solo le misurazioni assicurano la precisione. 
+- I profili sono attendibili: solo le misurazioni assicurano la precisione. 
   
--   La qualità degli strumenti è essenziale: scaricare PerfView e provare a usarlo. 
+- La qualità degli strumenti è essenziale: scaricare PerfView e provare a usarlo. 
   
--   Le allocazioni sono importantissime: il team responsabile della piattaforma del compilatore si è impegnato principalmente nel migliorare le prestazioni dei nuovi compilatori da questo punto di vista. 
+- Le allocazioni sono importantissime: il team responsabile della piattaforma del compilatore si è impegnato principalmente nel migliorare le prestazioni dei nuovi compilatori da questo punto di vista. 
   
 ## <a name="see-also"></a>Vedere anche
 

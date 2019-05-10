@@ -2,12 +2,12 @@
 title: Supporto di configurazione e metadati
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74dab4528ae11b60fc930a826962b71595073a7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858364"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587721"
 ---
 # <a name="configuration-and-metadata-support"></a>Supporto di configurazione e metadati
 In questo argomento viene illustrato come abilitare il supporto della configurazione e dei metadati per associazioni ed elementi di associazione.  
@@ -15,13 +15,13 @@ In questo argomento viene illustrato come abilitare il supporto della configuraz
 ## <a name="overview-of-configuration-and-metadata"></a>Panoramica della configurazione e dei metadati  
  In questo argomento vengono illustrate le attività seguenti, che sono elementi facoltativi 1, 2 e 4 nella [emergenti canali](../../../../docs/framework/wcf/extending/developing-channels.md) elenco attività.  
   
--   Attivazione del supporto dei file di configurazione per un elemento di associazione.  
+- Attivazione del supporto dei file di configurazione per un elemento di associazione.  
   
--   Attivazione del supporto dei file di configurazione per un'associazione.  
+- Attivazione del supporto dei file di configurazione per un'associazione.  
   
--   Esportazione di asserzioni di criteri e WSDL per un elemento di associazione.  
+- Esportazione di asserzioni di criteri e WSDL per un elemento di associazione.  
   
--   Identificazione di asserzioni di criteri e WSDL per inserire e configurare l'associazione o l'elemento di associazione.  
+- Identificazione di asserzioni di criteri e WSDL per inserire e configurare l'associazione o l'elemento di associazione.  
   
  Per informazioni sulla creazione di associazioni definite dall'utente ed elementi di associazione, vedere [associazioni Creating User-Defined](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md) e [creazione di un oggetto BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md), rispettivamente.  
   

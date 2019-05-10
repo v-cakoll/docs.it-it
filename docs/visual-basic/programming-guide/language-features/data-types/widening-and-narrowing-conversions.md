@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 9f1a71e8e2e3e4ebb9b412be74b5ea8702eb164f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98702f2fb8f912b9503f3ccdad74e61ef097f617
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61827157"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600885"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Conversioni di ampliamento e restrizione (Visual Basic)
 Una considerazione importante con una conversione del tipo è se il risultato della conversione è compreso nell'intervallo del tipo di dati di destinazione.  
@@ -68,15 +68,15 @@ Una considerazione importante con una conversione del tipo è se il risultato de
 ## <a name="narrowing-conversions"></a>conversioni verso un tipo di dati più piccolo  
  Le conversioni di narrowing standard includono quanto segue:  
   
--   Le istruzioni inverse delle conversioni di ampliamento nella precedente tabella (ad eccezione del fatto che ogni tipo viene ampliato a se stessa)  
+- Le istruzioni inverse delle conversioni di ampliamento nella precedente tabella (ad eccezione del fatto che ogni tipo viene ampliato a se stessa)  
   
--   Le conversioni in entrambe le direzioni tra [booleana](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) e qualsiasi tipo numerico  
+- Le conversioni in entrambe le direzioni tra [booleana](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) e qualsiasi tipo numerico  
   
--   Le conversioni da qualsiasi tipo numerico a qualsiasi tipo enumerato (`Enum`)  
+- Le conversioni da qualsiasi tipo numerico a qualsiasi tipo enumerato (`Enum`)  
   
--   Le conversioni in entrambe le direzioni tra [stringa](../../../../visual-basic/language-reference/data-types/string-data-type.md) e qualsiasi tipo numerico `Boolean`, o [Data](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+- Le conversioni in entrambe le direzioni tra [stringa](../../../../visual-basic/language-reference/data-types/string-data-type.md) e qualsiasi tipo numerico `Boolean`, o [Data](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
--   Le conversioni da un tipo di dati o un oggetto tipo per un tipo derivato da esso  
+- Le conversioni da un tipo di dati o un oggetto tipo per un tipo derivato da esso  
   
  Conversioni di Narrowing non sempre riuscire in fase di esecuzione e può avere esito negativo o comportano una perdita di dati. Si verifica un errore se il tipo di dati di destinazione non può ricevere il valore convertito. Ad esempio, una conversione numerica può comportare un overflow. Il compilatore non consente di eseguire conversioni di narrowing in modo implicito, a meno che il [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) imposta il tipo di opzione di controllo `Off`.  
   
@@ -89,9 +89,9 @@ Una considerazione importante con una conversione del tipo è se il risultato de
 ## <a name="exceptions-during-conversion"></a>Eccezioni durante la conversione  
  Poiché le conversioni di ampliamento sempre esito positivo, non generano eccezioni. Conversioni di Narrowing, quando non riescono, generano di solito le eccezioni seguenti:  
   
--   <xref:System.InvalidCastException> ovvero se non è stata definita alcuna conversione tra i due tipi  
+- <xref:System.InvalidCastException> ovvero se non è stata definita alcuna conversione tra i due tipi  
   
--   <xref:System.OverflowException> : (solo tipi integrali) se il valore convertito è troppo grande per il tipo di destinazione  
+- <xref:System.OverflowException> : (solo tipi integrali) se il valore convertito è troppo grande per il tipo di destinazione  
   
  Se una classe o struttura definisce un [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) da usare come un operatore di conversione da o verso tale classe o struttura, che `CType` possibile generare qualsiasi eccezione considera appropriata. Inoltre, che `CType` potrebbe chiamare funzioni di Visual Basic o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metodi, che a sua volta è stato possibile generare un'ampia gamma di eccezioni.  
   

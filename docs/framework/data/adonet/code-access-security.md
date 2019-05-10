@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: ee633e2488611417f72a9d51ab6b0fe2d9ddfa27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174109"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583572"
 ---
 # <a name="code-access-security-and-adonet"></a>Sicurezza dell'accesso al codice e ADO.NET
 In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezza dall'accesso di codice (CAS, Code Access Security), entrambe implementate usando un'infrastruttura comune fornita da CLR (Common Language Runtime). In un contesto di codice non gestito la maggior parte delle applicazioni viene eseguita con le autorizzazioni dell'utente o entità di sicurezza. Di conseguenza, quando un utente con privilegi elevati esegue software dannoso o con errori possono verificarsi danni al sistemi del computer e ai dati privati.  
@@ -27,11 +27,11 @@ In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezz
   
  Sono disponibili tre tipi di autorizzazioni di accesso al codice:  
   
--   `Code access permissions`, che derivano dalla classe <xref:System.Security.CodeAccessPermission>. Le autorizzazioni sono necessarie per accedere a risorse protette, ad esempio file e variabili di ambiente, nonché per eseguire operazioni protette, ad esempio l'accesso a codice non gestito.  
+- `Code access permissions`, che derivano dalla classe <xref:System.Security.CodeAccessPermission>. Le autorizzazioni sono necessarie per accedere a risorse protette, ad esempio file e variabili di ambiente, nonché per eseguire operazioni protette, ad esempio l'accesso a codice non gestito.  
   
--   `Identity permissions`, che rappresentano le caratteristiche identificative di un assembly. Le autorizzazioni vengono concesse a un assembly in base a una prova, che può includere elementi quali una firma digitale o l'origine del codice. Le autorizzazioni di identità derivano anche dalla classe base <xref:System.Security.CodeAccessPermission>.  
+- `Identity permissions`, che rappresentano le caratteristiche identificative di un assembly. Le autorizzazioni vengono concesse a un assembly in base a una prova, che può includere elementi quali una firma digitale o l'origine del codice. Le autorizzazioni di identità derivano anche dalla classe base <xref:System.Security.CodeAccessPermission>.  
   
--   `Role-based security permissions`, che variano a seconda che un'entità di sicurezza disponga di un'identità specificata o sia membro di un ruolo specificato. La classe <xref:System.Security.Permissions.PrincipalPermission> consente l'esecuzione di controlli di autorizzazione dichiarativi e imperativi sull'entità di sicurezza attiva.  
+- `Role-based security permissions`, che variano a seconda che un'entità di sicurezza disponga di un'identità specificata o sia membro di un ruolo specificato. La classe <xref:System.Security.Permissions.PrincipalPermission> consente l'esecuzione di controlli di autorizzazione dichiarativi e imperativi sull'entità di sicurezza attiva.  
   
  Per determinare se il codice è autorizzato ad accedere a una risorsa o a eseguire un'operazione, il sistema di sicurezza del runtime attraversa lo stack di chiamate, confrontando le autorizzazioni concesse di ogni chiamante con l'autorizzazione richiesta. Se un qualsiasi chiamante nello stack di chiamate non dispone dell'autorizzazione richiesta, viene generata un'eccezione <xref:System.Security.SecurityException> e l'accesso viene rifiutato.  
   
