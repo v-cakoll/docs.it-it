@@ -2,40 +2,40 @@
 title: Dispatcher di esempio nella tabella UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
-ms.openlocfilehash: 800765c6b01e49b730414132ac64ab8eed3e9e5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4c5f7172543f575655faafad781a272e355224b6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007566"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662420"
 ---
-# <a name="uritemplate-table-dispatcher-sample"></a><span data-ttu-id="abed8-102">Dispatcher di esempio nella tabella UriTemplate</span><span class="sxs-lookup"><span data-stu-id="abed8-102">UriTemplate Table Dispatcher Sample</span></span>
-<span data-ttu-id="abed8-103">La classe <xref:System.UriTemplateTable> fornisce una struttura con tabella associativa simile a un dizionario per lavorare con un set di istanze <xref:System.UriTemplate>.</span><span class="sxs-lookup"><span data-stu-id="abed8-103">The <xref:System.UriTemplateTable> class provides a dictionary-like associative table structure for working with a set of <xref:System.UriTemplate> instances.</span></span> <span data-ttu-id="abed8-104">In questo esempio viene illustrato un motore di distribuzione di base compilato utilizzando `UriTemplateTable`, uno scenario di utilizzo comune per la classe `UriTemplateTable`.</span><span class="sxs-lookup"><span data-stu-id="abed8-104">This sample demonstrates a basic dispatching engine built using `UriTemplateTable`, a common usage scenario for the `UriTemplateTable` class.</span></span>  
+# <a name="uritemplate-table-dispatcher-sample"></a><span data-ttu-id="2afa0-102">Dispatcher di esempio nella tabella UriTemplate</span><span class="sxs-lookup"><span data-stu-id="2afa0-102">UriTemplate Table Dispatcher Sample</span></span>
+<span data-ttu-id="2afa0-103">La classe <xref:System.UriTemplateTable> fornisce una struttura con tabella associativa simile a un dizionario per lavorare con un set di istanze <xref:System.UriTemplate>.</span><span class="sxs-lookup"><span data-stu-id="2afa0-103">The <xref:System.UriTemplateTable> class provides a dictionary-like associative table structure for working with a set of <xref:System.UriTemplate> instances.</span></span> <span data-ttu-id="2afa0-104">In questo esempio viene illustrato un motore di distribuzione di base compilato utilizzando `UriTemplateTable`, uno scenario di utilizzo comune per la classe `UriTemplateTable`.</span><span class="sxs-lookup"><span data-stu-id="2afa0-104">This sample demonstrates a basic dispatching engine built using `UriTemplateTable`, a common usage scenario for the `UriTemplateTable` class.</span></span>  
   
- <span data-ttu-id="abed8-105">In questo esempio vengono illustrati i seguenti concetti principali relativi alla classe `UriTemplateTable`:</span><span class="sxs-lookup"><span data-stu-id="abed8-105">This sample demonstrates the following key concepts for the `UriTemplateTable` class:</span></span>  
+ <span data-ttu-id="2afa0-105">In questo esempio vengono illustrati i seguenti concetti principali relativi alla classe `UriTemplateTable`:</span><span class="sxs-lookup"><span data-stu-id="2afa0-105">This sample demonstrates the following key concepts for the `UriTemplateTable` class:</span></span>  
   
-- <span data-ttu-id="abed8-106">Associazione di delegati a `UriTemplates` in un `UriTemplateTable`.</span><span class="sxs-lookup"><span data-stu-id="abed8-106">Associating delegates with `UriTemplates` in a `UriTemplateTable`.</span></span>  
+- <span data-ttu-id="2afa0-106">Associazione di delegati a `UriTemplates` in un `UriTemplateTable`.</span><span class="sxs-lookup"><span data-stu-id="2afa0-106">Associating delegates with `UriTemplates` in a `UriTemplateTable`.</span></span>  
   
-- <span data-ttu-id="abed8-107">Utilizzo di <xref:System.UriTemplateTable.MatchSingle%2A> per ottenere il delegato del gestore corretto per un particolare URI.</span><span class="sxs-lookup"><span data-stu-id="abed8-107">Using <xref:System.UriTemplateTable.MatchSingle%2A> to obtain the correct handler delegate for a particular URI.</span></span>  
+- <span data-ttu-id="2afa0-107">Utilizzo di <xref:System.UriTemplateTable.MatchSingle%2A> per ottenere il delegato del gestore corretto per un particolare URI.</span><span class="sxs-lookup"><span data-stu-id="2afa0-107">Using <xref:System.UriTemplateTable.MatchSingle%2A> to obtain the correct handler delegate for a particular URI.</span></span>  
   
-- <span data-ttu-id="abed8-108">Chiamata al delegato del gestore per elaborare la richiesta.</span><span class="sxs-lookup"><span data-stu-id="abed8-108">Invoking the handler delegate to process the request.</span></span>  
+- <span data-ttu-id="2afa0-108">Chiamata al delegato del gestore per elaborare la richiesta.</span><span class="sxs-lookup"><span data-stu-id="2afa0-108">Invoking the handler delegate to process the request.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="abed8-109">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="abed8-109">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="2afa0-109">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="2afa0-109">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="abed8-110">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="abed8-110">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+1. <span data-ttu-id="2afa0-110">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="2afa0-110">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2. <span data-ttu-id="abed8-111">Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="abed8-111">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+2. <span data-ttu-id="2afa0-111">Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="2afa0-111">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="abed8-112">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="abed8-112">The samples may already be installed on your machine.</span></span> <span data-ttu-id="abed8-113">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="abed8-113">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="2afa0-112">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="2afa0-112">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2afa0-113">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="2afa0-113">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="abed8-114">Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi.</span><span class="sxs-lookup"><span data-stu-id="abed8-114">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="abed8-115">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="abed8-115">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="2afa0-114">Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi.</span><span class="sxs-lookup"><span data-stu-id="2afa0-114">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2afa0-115">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="2afa0-115">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplateDispatcher`  
   
-## <a name="see-also"></a><span data-ttu-id="abed8-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="abed8-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2afa0-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2afa0-116">See also</span></span>
 
-- [<span data-ttu-id="abed8-117">UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="abed8-117">UriTemplate Table</span></span>](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
-- [<span data-ttu-id="abed8-118">UriTemplate</span><span class="sxs-lookup"><span data-stu-id="abed8-118">UriTemplate</span></span>](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
+- [<span data-ttu-id="2afa0-117">UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="2afa0-117">UriTemplate Table</span></span>](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [<span data-ttu-id="2afa0-118">UriTemplate</span><span class="sxs-lookup"><span data-stu-id="2afa0-118">UriTemplate</span></span>](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
