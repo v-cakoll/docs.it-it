@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: e51ba4ad0910d0db2b927f84303e5c55515f4b84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e9bf248da980705f070be878208c55b0cc6dae01
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921277"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589728"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Le espressioni lambda non sono valide nella prima espressione di un'istruzione 'Select Case'
 È possibile usare un'espressione lambda per l'espressione di test in un `Select Case` istruzione. Le definizioni delle espressioni lambda restituiscono le funzioni e l'espressione di test di un `Select Case` istruzione deve essere un tipo di dati elementare.  

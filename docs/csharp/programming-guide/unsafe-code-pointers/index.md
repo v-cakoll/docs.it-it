@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, pointers
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
-ms.openlocfilehash: 3712e04d4496d13178843564b5d0753f62e28fa0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f4e74e1e8fa71d1492a10162191822c1edfb635
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61678103"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608044"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Codice unsafe e puntatori (Guida per programmatori C#)
 Per mantenere l'indipendenza dai tipi e la sicurezza, C# non supporta il puntatore aritmetico per impostazione predefinita. Tuttavia, se si usa la parola chiave [unsafe](../../../csharp/language-reference/keywords/unsafe.md), è possibile definire un contesto non sicuro in cui si possono usare i puntatori. Per altre informazioni sui puntatori, vedere l'argomento [Tipi di puntatori](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).  
@@ -27,26 +27,26 @@ Per mantenere l'indipendenza dai tipi e la sicurezza, C# non supporta il puntato
 ## <a name="unsafe-code-overview"></a>Panoramica del codice unsafe  
  Il codice unsafe presenta le proprietà seguenti:  
   
--   Metodi, tipi e blocchi di codice possono essere definiti come unsafe.  
+- Metodi, tipi e blocchi di codice possono essere definiti come unsafe.  
   
--   In alcuni casi il codice unsafe può migliorare le prestazioni di un'applicazione poiché vengono rimosse le verifiche dei limiti di matrice.  
+- In alcuni casi il codice unsafe può migliorare le prestazioni di un'applicazione poiché vengono rimosse le verifiche dei limiti di matrice.  
   
--   Il codice unsafe è necessario quando si chiamano funzioni native che richiedono i puntatori.  
+- Il codice unsafe è necessario quando si chiamano funzioni native che richiedono i puntatori.  
   
--   L'uso del codice unsafe implica rischi per la sicurezza e la stabilità.  
+- L'uso del codice unsafe implica rischi per la sicurezza e la stabilità.  
   
--   Affinché C# compili il codice unsafe, l'applicazione deve essere compilata con [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md).  
+- Affinché C# compili il codice unsafe, l'applicazione deve essere compilata con [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md).  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  Per altre informazioni, vedere:  
   
--   [Tipi di puntatori](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [Tipi di puntatori](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
   
--   [Buffer a dimensione fissa](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
+- [Buffer a dimensione fissa](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
   
--   [Procedura: Usare i puntatori per copiare una matrice di byte](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
+- [Procedura: Usare i puntatori per copiare una matrice di byte](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
   
--   [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

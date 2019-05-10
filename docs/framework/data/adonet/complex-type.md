@@ -2,31 +2,31 @@
 title: tipo complesso
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-ms.openlocfilehash: 9d63660c441192bbc9ecb48bb3a86030b46461cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6a7190a144280930d67f179373f29f6b19e98cc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880012"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583667"
 ---
 # <a name="complex-type"></a>tipo complesso
 Oggetto *tipo complesso* è un modello per la definizione di proprietà dettagliate e strutturate sul [tipi di entità](../../../../docs/framework/data/adonet/entity-type.md) o su altri tipi complessi. Ogni modello contiene quanto segue:  
   
--   Un nome univoco. (obbligatorio).  
+- Un nome univoco. (obbligatorio).  
   
     > [!NOTE]
     >  Il nome di un tipo complesso non può coincidere con il nome di un tipo di entità all'interno dello stesso spazio dei nomi.  
   
--   Dati sotto forma di uno o più [proprietà](../../../../docs/framework/data/adonet/property.md). (Facoltative)  
+- Dati sotto forma di uno o più [proprietà](../../../../docs/framework/data/adonet/property.md). (Facoltative)  
   
     > [!NOTE]
     >  Una proprietà di un tipo complesso può essere un altro tipo complesso.  
   
  Un tipo complesso è analogo a un tipo di entità in cui un tipo complesso può contenere un payload di dati sotto forma di proprietà di tipo primitivo o di altri tipi complessi. Tuttavia esistono alcune differenze importanti tra i tipi complessi e i tipi di entità:  
   
--   I tipi complessi non dispongono di identità e pertanto non possono esistere indipendentemente. I tipi complessi possono esistere solo come proprietà in tipi di entità o altri tipi complessi.  
+- I tipi complessi non dispongono di identità e pertanto non possono esistere indipendentemente. I tipi complessi possono esistere solo come proprietà in tipi di entità o altri tipi complessi.  
   
--   I tipi complessi non possono partecipare [associazioni](../../../../docs/framework/data/adonet/association-type.md). Le entità finali di un'associazione possono essere un tipo complesso e pertanto [le proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md) non è possibile definire i tipi complessi.  
+- I tipi complessi non possono partecipare [associazioni](../../../../docs/framework/data/adonet/association-type.md). Le entità finali di un'associazione possono essere un tipo complesso e pertanto [le proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md) non è possibile definire i tipi complessi.  
   
 ## <a name="example"></a>Esempio  
  Il [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) Usa un linguaggio specifico di dominio (DSL) denominato conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Nel linguaggio CSDL seguente viene definito un tipo complesso, Address, con le proprietà di tipo primitivo `StreetAddress`, `City`, `StateOrProvince`, `Country` e `PostalCode`.  

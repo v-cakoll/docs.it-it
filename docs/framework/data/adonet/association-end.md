@@ -2,12 +2,12 @@
 title: entità finale dell'associazione
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: e549254533f8362ce3475fb3aa5dbaffb3e900e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 085188969b0daf5153b40361d4b15d696920c829
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769615"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592593"
 ---
 # <a name="association-end"></a>entità finale dell'associazione
 Un' *finale dell'associazione* identifica le [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) sul uno lato di una [associazione](../../../../docs/framework/data/adonet/association-type.md) e il numero di istanze che possono essere presenti in tale entità finale di un'associazione del tipo di entità. Le entità finali dell'associazione sono definite come parte di un'associazione; un'associazione deve disporre esattamente di due entità finali. [Le proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md) consentono di navigare da un'estremità dell'associazione a altra.  

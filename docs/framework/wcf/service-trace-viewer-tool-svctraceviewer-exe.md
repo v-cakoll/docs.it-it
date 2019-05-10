@@ -2,12 +2,12 @@
 title: Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a15024c0d2308da8cf2cc0d72d79c9f585f2912
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051769"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606011"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
 Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation (WCF) consente di analizzare le tracce di diagnostica vengono generate da WCF. Service Trace Viewer offre un modo per unire, visualizzare e filtrare i messaggi di traccia nel log in modo che è possibile diagnosticare, riparare e verificare i problemi del servizio WCF.  
@@ -62,11 +62,11 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Apertura e visualizzazione di file di traccia WCF  
  Il Visualizzatore traccia servizio supporta tre tipi di file:  
   
--   Analisi di File (svclog) di WCF  
+- Analisi di File (svclog) di WCF  
   
--   File di traccia eventi, con estensione etl  
+- File di traccia eventi, con estensione etl  
   
--   File di traccia Crimson  
+- File di traccia Crimson  
   
  Mediante lo strumento Visualizzatore di tracce dei servizi è possibile aprire i file di traccia supportati, aggiungere e integrare file aggiuntivi e aprire e unire simultaneamente un gruppo di file di traccia.  
   
@@ -106,9 +106,9 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
   
  Esistono due modalità per gestire i progetti:  
   
--   Nel **File** menu, è possibile aprire, salvare e chiudere progetti.  
+- Nel **File** menu, è possibile aprire, salvare e chiudere progetti.  
   
--   Nel **progetto** scheda, è possibile aggiungere file a un progetto.  
+- Nel **progetto** scheda, è possibile aggiungere file a un progetto.  
   
 ### <a name="viewing-wcf-traces"></a>Visualizzazione di tracce WCF  
  WCF genera tracce utilizzando il formato di traccia di attività. Nel modello delle tracce delle attività, le singole tracce vengono raggruppate in attività in base al loro scopo. Il flusso di controllo logico viene trasferito tra le attività. Durante il periodo di attività di un'applicazione, ad esempio, iniziano e terminano molte attività di trasmissione di messaggi. Per altre informazioni sulla visualizzazione troppo le tracce e le attività e dell'interfaccia utente di Service Trace Viewer, vedere [utilizzando Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
@@ -116,13 +116,13 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
 #### <a name="switching-to-different-views"></a>Passaggio a una visualizzazione specifica  
  Nel Visualizzatore di tracce dei servizi sono disponibili le visualizzazioni distinte seguenti, Essi vengono visualizzati come schede nel riquadro a sinistra del visualizzatore e sono accessibili anche dal **vista** menu.  
   
--   Visualizzazione Attività  
+- Visualizzazione Attività  
   
--   Visualizzazione Progetto  
+- Visualizzazione Progetto  
   
--   Visualizzazione Messaggio  
+- Visualizzazione Messaggio  
   
--   Visualizzazione grafico  
+- Visualizzazione grafico  
   
 ##### <a name="activity-view"></a>Visualizzazione Attività  
  Una volta vengono aperti i file di traccia, è possibile visualizzare le tracce raggruppate per attività e visualizzato nei **attività** vista nel riquadro a sinistra.  
@@ -144,9 +144,12 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
   
 ##### <a name="project-view"></a>Visualizzazione Progetto  
  Questa visualizzazione consente di gestire i file di traccia del progetto corrente. Per ulteriori dettagli, vedere la sezione relativa alla gestione dei progetti.  
-  
+
+##### <a name="message-view"></a>Visualizzazione Messaggio
+ Questa vista consente visualizzare tutti i log dei messaggi tiene traccia, tra cui azione, data/ora, processo, attività e da/verso e passare ai dettagli di traccia del log dei messaggi associati. È possibile raggruppare le tracce di log messaggio dal limite di attività, processi e Thread, o trasmissione e ricezione per semplificare l'esplorazione del flusso del messaggio.
+ 
 ##### <a name="graph-view"></a>Visualizzazione grafico  
- Una delle funzionalità più potenti di Service Trace Viewer è il **Graph** visualizzazione, che consente di visualizzare i dati di traccia per una determinata attività in formato grafico. Questo tipo di visualizzazione consente di esaminare l'esecuzione sequenziale dei passaggi degli eventi e le interrelazioni tra più attività dovute allo spostamento di dati fra tali file.  
+ Questa vista sono riportati i dati di traccia per una determinata attività in formato grafico. Questo tipo di visualizzazione consente di esaminare l'esecuzione sequenziale dei passaggi degli eventi e le interrelazioni tra più attività dovute allo spostamento di dati fra tali file.  
   
  Per passare alla **Graph** visualizzazione, selezionare un'attività nel **attività** consente di visualizzare e fare clic sul **attività** tab oppure una traccia log dei messaggi nel **messaggio**Vista. Se sono stati caricati più file di traccia e l'attività contiene tracce ricavate da più di un file, tutte le tracce attinenti sono visualizzate nella visualizzazione Grafico. Facendo doppio clic sulle attività e le tracce del log dei messaggi comporta anche per il **Graph** visualizzazione.  
   
@@ -192,9 +195,9 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
 ###### <a name="options"></a>Opzioni  
  È possibile selezionare due opzioni di **opzione** menu nella parte visibile del grafico.  
   
--   Mostra tracce del limite delle attività. Tale opzione, se deselezionata, consente di escludere dal grafico le tracce di limite attività.  
+- Mostra tracce del limite delle attività. Tale opzione, se deselezionata, consente di escludere dal grafico le tracce di limite attività.  
   
--   Mostra tracce dettagliate che non appartengono a messaggi. Tale opzione, se deselezionata, consente di escludere dal grafico le tracce di livello dettagliato, tranne nel caso di tracce di messaggio. Nella maggior parte dei casi le tracce di livello dettagliato sono meno importanti ai fini dell'analisi. Questa opzione è utile quando non si desidera analizzare le tracce di livello dettagliato al fine di concentrarsi esclusivamente sulle tracce più importanti.  
+- Mostra tracce dettagliate che non appartengono a messaggi. Tale opzione, se deselezionata, consente di escludere dal grafico le tracce di livello dettagliato, tranne nel caso di tracce di messaggio. Nella maggior parte dei casi le tracce di livello dettagliato sono meno importanti ai fini dell'analisi. Questa opzione è utile quando non si desidera analizzare le tracce di livello dettagliato al fine di concentrarsi esclusivamente sulle tracce più importanti.  
   
 ###### <a name="layout-mode"></a>Modalità di layout  
  Il visualizzatore presenta due modalità di Layout: **Processo** e **Thread**. Questa impostazione definisce l'unità massima di organizzazione. La modalità di Layout predefinita è **processo**, il che significa che le attività vengono raggruppate da parte dei processi nel grafico.  
@@ -222,22 +225,22 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
 ### <a name="filtering-wcf-traces"></a>Filtro delle tracce WCF  
  Per semplificare l'analisi dei file di traccia è possibile filtrarli nei modi seguenti:  
   
--   la barra degli strumenti di filtro consente di accedere ai filtri predefiniti e personalizzati. Può essere abilitata tramite il **vista** menu.  
+- la barra degli strumenti di filtro consente di accedere ai filtri predefiniti e personalizzati. Può essere abilitata tramite il **vista** menu.  
   
--   Il filtro predefinito del visualizzatore è utilizzabile per filtrare in modo selettivo parti delle tracce WCF. Per impostazione predefinita, tale filtro è impostato in modo da consentire il passaggio di tutte le tracce dell'infrastruttura. Le impostazioni di questo filtro vengono definite nel **opzioni di filtro** sottomenu **visualizzazione** menu.  
+- Il filtro predefinito del visualizzatore è utilizzabile per filtrare in modo selettivo parti delle tracce WCF. Per impostazione predefinita, tale filtro è impostato in modo da consentire il passaggio di tutte le tracce dell'infrastruttura. Le impostazioni di questo filtro vengono definite nel **opzioni di filtro** sottomenu **visualizzazione** menu.  
   
--   I filtri XPath personalizzati consentono agli utenti di avere il controllo completo sull'applicazione dei filtri. Possono essere definiti nel **filtro personalizzato** sotto **visualizzazione** menu.  
+- I filtri XPath personalizzati consentono agli utenti di avere il controllo completo sull'applicazione dei filtri. Possono essere definiti nel **filtro personalizzato** sotto **visualizzazione** menu.  
   
  Vengono visualizzate solo le tracce che passano attraverso tutti i filtri attivi.  
   
 #### <a name="using-the-filter-toolbar"></a>Utilizzo della barra degli strumenti di filtro  
  La barra degli strumenti di filtro si trova nella parte superiore dello strumento. Se non è presente, è possibile attivarla nella **vista** menu. La barra è costituita da tre componenti:  
   
--   Cercare: **Cercare** definisce l'oggetto da ricercare nell'operazione di filtro. Ad esempio, se si desidera trovare tutte le tracce generate nel contesto del processo X, impostare questo campo su X e il **Cerca In** campo "Nome processo". Quando si sceglie un filtro basato su tempo, questo campo diventa un controllo di selezione Datetime.  
+- Cercare: **Cercare** definisce l'oggetto da ricercare nell'operazione di filtro. Ad esempio, se si desidera trovare tutte le tracce generate nel contesto del processo X, impostare questo campo su X e il **Cerca In** campo "Nome processo". Quando si sceglie un filtro basato su tempo, questo campo diventa un controllo di selezione Datetime.  
   
--   Cerca: Questo campo definisce il tipo di filtro da applicare.  
+- Cerca: Questo campo definisce il tipo di filtro da applicare.  
   
--   Livello: Questa impostazione definisce il livello di traccia minimo consentito dal filtro. Ad esempio, se il livello è impostato su Errore e successivi, consente di visualizzare soltanto le tracce di livello Errore e Critico. I criteri di questo filtro vengono applicati insieme ai criteri specificati in Cerca e Cerca in.  
+- Livello: Questa impostazione definisce il livello di traccia minimo consentito dal filtro. Ad esempio, se il livello è impostato su Errore e successivi, consente di visualizzare soltanto le tracce di livello Errore e Critico. I criteri di questo filtro vengono applicati insieme ai criteri specificati in Cerca e Cerca in.  
   
  Il **Filtra ora** pulsante Avvia l'operazione di filtro. L'applicazione di alcuni filtri, specialmente quando riguarda set di dati di grandi dimensioni, richiede molto tempo. È possibile annullare l'operazione di filtro, premere il **arrestare** pulsante visualizzato nella barra di stato sotto il **operazioni** menu.  
   
@@ -321,27 +324,27 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
 ### <a name="finding-data"></a>Ricerca dei dati  
  Il visualizzatore offre le modalità seguenti per la ricerca dei dati:  
   
--   La barra degli strumenti Trova consente di accedere rapidamente alle opzioni di ricerca più comuni.  
+- La barra degli strumenti Trova consente di accedere rapidamente alle opzioni di ricerca più comuni.  
   
--   La finestra di dialogo Trova offre ulteriori opzioni di ricerca. È accessibile tramite il **modifica** dal menu o tramite i tasti Ctrl + F.  
+- La finestra di dialogo Trova offre ulteriori opzioni di ricerca. È accessibile tramite il **modifica** dal menu o tramite i tasti Ctrl + F.  
   
  La barra degli strumenti Trova si trova nella parte superiore del visualizzatore. Se non è presente, è possibile attivarla nella **vista** menu. La barra è costituita da due componenti:  
   
--   Trova: Consente di immettere una parola chiave di ricerca.  
+- Trova: Consente di immettere una parola chiave di ricerca.  
   
--   Cerca In: Consente di immettere l'ambito di ricerca. È possibile scegliere se eseguire la ricerca in tutte le attività o soltanto nell'attività corrente.  
+- Cerca In: Consente di immettere l'ambito di ricerca. È possibile scegliere se eseguire la ricerca in tutte le attività o soltanto nell'attività corrente.  
   
  Nella finestra di dialogo Trova sono disponibili altre due opzioni:  
   
--   Trova destinazione:  
+- Trova destinazione:  
   
-    -   L'opzione "dati di log non elaborati" Cerca la parola chiave in tutti i dati non elaborati.  
+    - L'opzione "dati di log non elaborati" Cerca la parola chiave in tutti i dati non elaborati.  
   
-    -   Le opzioni "Testo XML" e "Nell'attributo XML" solo la ricerca negli elementi XML.  
+    - Le opzioni "Testo XML" e "Nell'attributo XML" solo la ricerca negli elementi XML.  
   
-    -   L'opzione "Messaggio registrato" Cerca la parola chiave solo nei messaggi.  
+    - L'opzione "Messaggio registrato" Cerca la parola chiave solo nei messaggi.  
   
--   Ignora attività radice: La ricerca ignora le tracce di attività "000000000000". Ciò consente di migliorare le prestazioni nei file di traccia di grandi dimensioni quando l'attività radice presenta migliaia di tracce, per lo più relative a trasferimenti.  
+- Ignora attività radice: La ricerca ignora le tracce di attività "000000000000". Ciò consente di migliorare le prestazioni nei file di traccia di grandi dimensioni quando l'attività radice presenta migliaia di tracce, per lo più relative a trasferimenti.  
   
 ### <a name="navigating-traces"></a>Esplorazione delle tracce  
  Poiché le tracce vengono registrate in sequenza durante la fase di esecuzione dell'applicazione, l'esplorazione delle tracce può agevolarne il debug. Il Visualizzatore di tracce dei servizi offre varie opzioni di esplorazione delle tracce.  
@@ -349,9 +352,9 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
 #### <a name="step-forward-or-backward"></a>Passo avanti o Passo indietro  
  Se si considera ogni traccia come una riga di codice nel programma, l'esecuzione di istruzioni in avanti è molto simile a "Esegui istruzione/routine" nell'ambiente di sviluppo integrato (IDE) di Visual Studio. A differenza di tale funzione, tuttavia, è inoltre possibile passare alla traccia precedente. Queste opzioni consentono di passare alla traccia successiva o precedente dell'attività.  
   
--   Passo avanti: Usare la **attività** menu o premere "F10". È inoltre possibile utilizzare tasto di direzione "giù" nel riquadro delle tracce.  
+- Passo avanti: Usare la **attività** menu o premere "F10". È inoltre possibile utilizzare tasto di direzione "giù" nel riquadro delle tracce.  
   
--   Passaggio con le versioni precedenti: Usare la **attività** menu o premere "F9". È inoltre possibile utilizzare tasto di direzione "up" nel riquadro delle tracce.  
+- Passaggio con le versioni precedenti: Usare la **attività** menu o premere "F9". È inoltre possibile utilizzare tasto di direzione "up" nel riquadro delle tracce.  
   
 > [!NOTE]
 >  Questo è possibile accedere a un'attività che si verificano in un processo diverso o anche in un computer diverso, poiché messaggi WCF possono contenere ID che si estendono su macchine attività.  
@@ -363,9 +366,9 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
   
  Esistono due modalità per eseguire questo tipo di esplorazione: tramite mouse o mediante tastiera.  
   
--   Tramite Mouse: Fare doppio clic sulla traccia di trasferimento nel riquadro delle tracce.  
+- Tramite Mouse: Fare doppio clic sulla traccia di trasferimento nel riquadro delle tracce.  
   
--   Mediante tastiera: Selezionare una traccia di trasferimento e utilizzare "Trasferimento successivo" nel **attività** menu o premere "F11"  
+- Mediante tastiera: Selezionare una traccia di trasferimento e utilizzare "Trasferimento successivo" nel **attività** menu o premere "F11"  
   
 > [!NOTE]
 >  In molti casi, quando l'attività A trasferisce l'esecuzione all'attività B, l'attività A attende che l'attività B restituisca l'esecuzione. Di conseguenza, durante la registrazione di traccia dell'attività B, per l'attività A non viene eseguita alcuna registrazione di traccia. Tuttavia, è anche possibile che l'attività A non attenda l'attività B. In questo caso la registrazione di traccia dell'attività A continua normalmente. Un'altra possibilità è che l'attività B non restituisca l'esecuzione all'attività A. Ciò rappresenta una differenza rispetto alle chiamate di funzione. I trasferimenti fra le attività risultano più comprensibili se esaminati nella visualizzazione Grafico.  
@@ -373,9 +376,9 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
 #### <a name="jump-to-next-or-previous-transfer"></a>Vai al trasferimento successivo o Vai al trasferimento precedente  
  Durante l'analisi dell'attività corrente o delle attività selezionate, quando vengono selezionate più attività, può essere utile individuare rapidamente le attività a cui viene trasferita l'esecuzione. "Vai al trasferimento successivo" consente di individuare la traccia di trasferimento successiva dell'attività. Dopo aver trovato la traccia di trasferimento, è possibile utilizzare "Trasferimento successivo" per passare all'attività successiva.  
   
--   Passare al trasferimento successivo: Usare la **attività** menu o premere "CTRL+F10".  
+- Passare al trasferimento successivo: Usare la **attività** menu o premere "CTRL+F10".  
   
--   Vai al trasferimento precedente: Usare la **attività** menu o premere "CTRL+F9".  
+- Vai al trasferimento precedente: Usare la **attività** menu o premere "CTRL+F9".  
   
 #### <a name="navigate-in-graph-view"></a>Esplorazione tramite la visualizzazione Grafico  
  Anche se lo spostamento nel riquadro attività e riquadro delle tracce è simile all'esecuzione del debug, usando **Graph** Vista fornisce una migliore esperienza di navigazione. Per altre informazioni vedere la sezione "Visualizzazione grafico".  

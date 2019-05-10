@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e793fc130252caf91d9b1c15b41beba1cc8ae1f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856440"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587605"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Tipi di enumerazioni nei contratti dati
 Le enumerazioni possono essere espresse nel modello del contratto dati. In questo argomento vengono esaminati molti esempi che spiegano il modello di programmazione.  
@@ -43,9 +43,9 @@ Le enumerazioni possono essere espresse nel modello del contratto dati. In quest
   
  Esistono due eccezioni a questo contesto:  
   
--   Enumerazioni di flag (esaminate più avanti in questo argomento).  
+- Enumerazioni di flag (esaminate più avanti in questo argomento).  
   
--   Membri dati dell'enumerazione con la proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> impostata su `false` (in tal caso l'enumerazione con valore zero viene omessa dai dati serializzati).  
+- Membri dati dell'enumerazione con la proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> impostata su `false` (in tal caso l'enumerazione con valore zero viene omessa dai dati serializzati).  
   
 ### <a name="customizing-enumeration-member-values"></a>Personalizzazione dei valori membro dell'enumerazione  
  È possibile personalizzare il valore del membro dell'enumerazione che costituisce una parte del contratto dati usando la proprietà <xref:System.Runtime.Serialization.EnumMemberAttribute.Value%2A> dell'attributo <xref:System.Runtime.Serialization.EnumMemberAttribute>.  

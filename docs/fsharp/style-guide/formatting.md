@@ -2,12 +2,12 @@
 title: F#linee guida per la formattazione del codice
 description: Per ulteriori linee guida per la formattazione, vedere F# codice.
 ms.date: 02/08/2019
-ms.openlocfilehash: 259d4bb2147d1fc8bc5d35d7ff2e3c34ec2185d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce07bd800984ec082a522bc62cb487f786fa0510
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902590"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063594"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#linee guida per la formattazione del codice
 
@@ -86,6 +86,46 @@ type MyFun = int -> int -> string
 
 // Bad
 type MyFunBad = int->int->string
+```
+
+### <a name="surround-function-arguments-with-white-space"></a>Argomenti della funzione snippet di inclusione con uno spazio vuoto
+
+Quando si definisce una funzione, usare uno spazio bianco intorno a ogni argomento.
+
+```fsharp
+// OK
+let myFun (a: decimal) b c = a + b + c
+
+// Bad
+let myFunBad (a:decimal)(b)c = a + b + c
+```
+
+### <a name="type-annotations"></a>Annotazioni di tipo
+
+#### <a name="right-pad-function-argument-type-annotations"></a>Annotazioni del tipo di argomento di funzione di riempimento a destra
+
+Quando si definiscono gli argomenti con annotazioni del tipo, usare lo spazio vuoto dopo la `:` simbolo:
+
+```fsharp
+// OK
+let complexFunction (a: int) (b: int) c = a + b + c
+
+// Bad
+let complexFunctionBad (a :int) (b :int) (c:int) = a + b + c
+```
+
+#### <a name="surround-return-type-annotations-with-white-space"></a>Annotazioni di tipo restituito di snippet di inclusione con uno spazio vuoto
+
+In un'associazione let funzione o un valore di annotazione di tipo (tipo restituito in caso di una funzione), usare gli spazi vuoti prima e dopo il `:` simbolo:
+
+```fsharp
+// OK
+let expensiveToCompute : int = 0 // Type annotation for let-bound value
+let myFun (a: decimal) b c : decimal = a + b + c // Type annotation for the return type of a function
+// Bad
+let expensiveToComputeBad1:int = 1
+let expensiveToComputeBad2 :int = 2
+let myFunBad (a: decimal) b c:decimal = a + b + c
 ```
 
 ## <a name="formatting-blank-lines"></a>Formattazione di righe vuote

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f7770db59c346f0981dd89a9995f11e41d17a1d
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052001"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063498"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Procedura: Controllare il momento in cui il database di origine viene aggiornato dal testo di TextBox
 In questo argomento viene descritto come utilizzare il <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> proprietà per controllare la tempistica degli aggiornamenti dell'origine di associazione. L'argomento viene utilizzato il <xref:System.Windows.Controls.TextBox> controllo come esempio.  
@@ -28,7 +28,7 @@ In questo argomento viene descritto come utilizzare il <xref:System.Windows.Data
   
  Di conseguenza, il <xref:System.Windows.Controls.TextBlock> Mostra lo stesso testo (poiché viene modificata l'origine), come l'utente immette il testo nella <xref:System.Windows.Controls.TextBox>, come illustrato nello screenshot seguente dell'esempio:  
   
- ![Schermata di esempio di associazione di dati semplici](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![Screenshot che mostra il data binding semplice.](./media/how-to-control-when-the-textbox-text-updates-the-source/data-binding-simple-binding-sample.png)  
   
  Se si dispone di una finestra di dialogo o un modulo modificabile dall'utente e si desidera rinviare gli aggiornamenti dell'origine finché l'utente al termine della modifica dei campi e fa clic su "OK", è possibile impostare il <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valore di binding su <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, come illustrato nell'esempio seguente:  
   

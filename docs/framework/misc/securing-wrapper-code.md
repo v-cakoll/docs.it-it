@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4d8497d17e1a82791f4dd6ca8f91c9a012db167
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d4adfa5d592514c9a91c93095e7199f4b425b712
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868938"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596642"
 ---
 # <a name="securing-wrapper-code"></a>Protezione del codice wrapper
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -29,20 +29,20 @@ ms.locfileid: "61868938"
 ### <a name="in-version-10-and-11-of-the-net-framework"></a>Nelle versioni 1.0 e 1.1 di .NET Framework  
  Le versioni 1.0 e 1.1 di .NET Framework eseguono le seguenti azioni di sicurezza su un creatore del delegato e un chiamante del delegato.  
   
--   Quando viene creato un delegato, le richieste di collegamento sicurezza per il metodo destinazione delegato vengono eseguite sul set di concessioni del creatore del delegato.  Se si verifica un errore nell'azione di sicurezza, viene generata un'eccezione <xref:System.Security.SecurityException>.  
+- Quando viene creato un delegato, le richieste di collegamento sicurezza per il metodo destinazione delegato vengono eseguite sul set di concessioni del creatore del delegato.  Se si verifica un errore nell'azione di sicurezza, viene generata un'eccezione <xref:System.Security.SecurityException>.  
   
--   Quando il delegato viene richiamato, vengono eseguite le eventuali richieste di sicurezza esistenti per il chiamante del delegato.  
+- Quando il delegato viene richiamato, vengono eseguite le eventuali richieste di sicurezza esistenti per il chiamante del delegato.  
   
  Quando il codice accetta un <xref:System.Delegate> da un codice considerato meno attendibile che potrebbe chiamarlo, assicurarsi di non consentire al codice considerato meno attendibile di eseguire l'escalation delle autorizzazioni. Se si accetta un delegato e lo si usa in un secondo momento, il codice che ha creato il delegato non è nello stack di chiamate e le autorizzazioni non verranno testate se il codice dentro o sotto il delegato tenta di eseguire un'operazione protetta. Se il proprio codice e il codice del chiamante hanno privilegi più elevati di quelli del creatore, il creatore può orchestrare il percorso di chiamate senza far parte dello stack di chiamate.  
   
 ### <a name="in-version-20-and-later-versions-of-the-net-framework"></a>Nella versione 2.0 e versioni successive di .NET Framework  
  Diversamente dalle versioni precedenti, versione 2.0 e versioni successive di .NET Framework esegue azioni di sicurezza sul creatore del delegato quando il delegato viene creato e chiamato.  
   
--   Quando viene creato un delegato, le richieste di collegamento sicurezza per il metodo destinazione delegato vengono eseguite sul set di concessioni del creatore del delegato.  Se si verifica un errore nell'azione di sicurezza, viene generata un'eccezione <xref:System.Security.SecurityException>.  
+- Quando viene creato un delegato, le richieste di collegamento sicurezza per il metodo destinazione delegato vengono eseguite sul set di concessioni del creatore del delegato.  Se si verifica un errore nell'azione di sicurezza, viene generata un'eccezione <xref:System.Security.SecurityException>.  
   
--   Anche il set di concessioni del creatore del delegato viene acquisito durante la creazione del delegato e archiviato con il delegato.  
+- Anche il set di concessioni del creatore del delegato viene acquisito durante la creazione del delegato e archiviato con il delegato.  
   
--   Quando il delegato viene richiamato, il set di concessioni acquisito del creatore del delegato viene prima confrontato con eventuali richieste nel contesto corrente se il creatore e il chiamante del delegato appartengono ad assembly diversi.  Vengono poi eseguite eventuali richieste di sicurezza esistenti per il chiamante del delegato.  
+- Quando il delegato viene richiamato, il set di concessioni acquisito del creatore del delegato viene prima confrontato con eventuali richieste nel contesto corrente se il creatore e il chiamante del delegato appartengono ad assembly diversi.  Vengono poi eseguite eventuali richieste di sicurezza esistenti per il chiamante del delegato.  
   
 ## <a name="link-demands-and-wrappers"></a>Richieste di collegamento e wrapper  
  Un particolare caso di protezione con richieste di collegamento è stato rafforzato nell'infrastruttura di sicurezza, ma è ancora una possibile fonte di vulnerabilità nel codice.  
@@ -58,48 +58,48 @@ ms.locfileid: "61868938"
   
  Questo problema si verifica con gli elementi API seguenti:  
   
--   <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
 ## <a name="demand-vs-linkdemand"></a>Demand e LinkDemand  
  La sicurezza dichiarativa offre due tipi di controlli di sicurezza che, pur essendo simili, eseguono verifiche molto diverse. È importante conoscerli entrambi perché la scelta sbagliata potrebbe indebolire la sicurezza o provocare una riduzione delle prestazioni.  
   
  La sicurezza dichiarativa offre i controlli di sicurezza seguenti:  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand> specifica il percorso di chiamate nello stack di sicurezza dall'accesso al codice. Tutti i chiamanti nello stack devono disporre dell'identità o dell'autorizzazione specificata per poter passare. **Richiesta** si verifica a ogni chiamata perché lo stack potrebbe contenere chiamanti diversi. Se si chiama un metodo più volte, questo controllo di sicurezza viene eseguito ogni volta. **Richiesta** è una valida protezione contro gli attacchi luring verrà rilevato codice non autorizzato durante il recupero tramite quest'ultimo.  
+- <xref:System.Security.Permissions.SecurityAction.Demand> specifica il percorso di chiamate nello stack di sicurezza dall'accesso al codice. Tutti i chiamanti nello stack devono disporre dell'identità o dell'autorizzazione specificata per poter passare. **Richiesta** si verifica a ogni chiamata perché lo stack potrebbe contenere chiamanti diversi. Se si chiama un metodo più volte, questo controllo di sicurezza viene eseguito ogni volta. **Richiesta** è una valida protezione contro gli attacchi luring verrà rilevato codice non autorizzato durante il recupero tramite quest'ultimo.  
   
--   [LinkDemand](../../../docs/framework/misc/link-demands.md) avviene in fase di compilazione just-in-time (JIT) e controlla solo il chiamante immediato. Questo controllo di sicurezza non verifica il chiamante del chiamante. Una volta passato questo controllo, non ne vengono eseguiti altri, indipendentemente dal numero di chiamate effettuate dal chiamante. Tuttavia, non esiste nemmeno alcuna protezione contro gli attacchi luring. Con **LinkDemand**, qualsiasi codice che supera il test e può fare riferimento al codice può provocare problemi di sicurezza, consentendo a codice dannoso di chiamare usando il codice autorizzato. Pertanto, non usare **LinkDemand** a meno che non possono evitare completamente tutti i possibili punti di debolezza.  
+- [LinkDemand](../../../docs/framework/misc/link-demands.md) avviene in fase di compilazione just-in-time (JIT) e controlla solo il chiamante immediato. Questo controllo di sicurezza non verifica il chiamante del chiamante. Una volta passato questo controllo, non ne vengono eseguiti altri, indipendentemente dal numero di chiamate effettuate dal chiamante. Tuttavia, non esiste nemmeno alcuna protezione contro gli attacchi luring. Con **LinkDemand**, qualsiasi codice che supera il test e può fare riferimento al codice può provocare problemi di sicurezza, consentendo a codice dannoso di chiamare usando il codice autorizzato. Pertanto, non usare **LinkDemand** a meno che non possono evitare completamente tutti i possibili punti di debolezza.  
   
     > [!NOTE]
     >  Nel [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], le richieste di collegamento sono state sostituite dal <xref:System.Security.SecurityCriticalAttribute> attributo <xref:System.Security.SecurityRuleSet.Level2> assembly. Il <xref:System.Security.SecurityCriticalAttribute> equivale a una richiesta di collegamento per l'attendibilità totale; tuttavia, influisce anche sulla regole di ereditarietà. Per altre informazioni su questa modifica, vedere [codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
   
  Le precauzioni aggiuntive necessarie quando si usa **LinkDemand** devono essere programmate singolarmente; il sistema di sicurezza può offrire un'ulteriore tutela. Ogni errore crea un punto di debolezza per la sicurezza. Tutto il codice autorizzato che usa il codice dell'utente deve essere responsabile dell'implementazione di altre misure di sicurezza tramite l'esecuzione delle operazioni seguenti:  
   
--   Limitare l'accesso del codice chiamante alla classe o all'assembly.  
+- Limitare l'accesso del codice chiamante alla classe o all'assembly.  
   
--   Inserire nel codice chiamante gli stessi controlli di sicurezza visualizzati nel codice che viene chiamato e obbligare i chiamanti a fare lo stesso. Ad esempio, se si scrive codice che chiama un metodo che è protetto con un **LinkDemand** per il <xref:System.Security.Permissions.SecurityPermission> con il <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> flag specificato, il metodo deve eseguire anche un **LinkDemand** (o **Richiesta**, che è più affidabile) per questa autorizzazione. L'eccezione è se il codice Usa il **LinkDemand**-metodo protetto in modo limitato che decidi è al sicuro nel codice siano presenti altri meccanismi di protezione dati di sicurezza (ad esempio, le richieste). In questo caso eccezionale, il chiamante si assume la responsabilità di indebolire la protezione della sicurezza nel codice sottostante.  
+- Inserire nel codice chiamante gli stessi controlli di sicurezza visualizzati nel codice che viene chiamato e obbligare i chiamanti a fare lo stesso. Ad esempio, se si scrive codice che chiama un metodo che è protetto con un **LinkDemand** per il <xref:System.Security.Permissions.SecurityPermission> con il <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> flag specificato, il metodo deve eseguire anche un **LinkDemand** (o **Richiesta**, che è più affidabile) per questa autorizzazione. L'eccezione è se il codice Usa il **LinkDemand**-metodo protetto in modo limitato che decidi è al sicuro nel codice siano presenti altri meccanismi di protezione dati di sicurezza (ad esempio, le richieste). In questo caso eccezionale, il chiamante si assume la responsabilità di indebolire la protezione della sicurezza nel codice sottostante.  
   
--   Garantire che i chiamanti del codice non possano spingere il codice a chiamare il codice protetto per conto loro. In altre parole, i chiamanti non possono obbligare il codice autorizzato a passare parametri specifici al codice protetto o recuperare i risultati da esso.  
+- Garantire che i chiamanti del codice non possano spingere il codice a chiamare il codice protetto per conto loro. In altre parole, i chiamanti non possono obbligare il codice autorizzato a passare parametri specifici al codice protetto o recuperare i risultati da esso.  
   
 ### <a name="interfaces-and-link-demands"></a>Interfacce e richieste di collegamento  
  Se un metodo virtuale, una proprietà o evento associato **LinkDemand** esegue l'override di un metodo della classe base, deve anche avere lo stesso metodo della classe base **LinkDemand** per il metodo sottoposto a override per poter essere efficaci. Per il codice dannoso è possibile eseguire nuovamente il cast al tipo di base e chiamare il metodo della classe base. Si noti inoltre che le richieste di collegamento possono essere aggiunte in modo implicito agli assembly che non dispongono dell'attributo a livello di assembly <xref:System.Security.AllowPartiallyTrustedCallersAttribute>.  
   
  È consigliabile proteggere le implementazioni dei metodi con richieste di collegamento quando anche i metodi di interfaccia dispongono di richieste di collegamento. Tenere presente quanto segue sull'uso di richieste di collegamento con interfacce:  
   
--   Se si inserisce un **LinkDemand** in un metodo pubblico di una classe che implementa un metodo di interfaccia, il **LinkDemand** non viene applicata se si esegue il cast all'interfaccia e chiamare il metodo. In questo caso, poiché è stato collegato in base all'interfaccia, solo il **LinkDemand** sull'interfaccia viene presa in considerazione.  
+- Se si inserisce un **LinkDemand** in un metodo pubblico di una classe che implementa un metodo di interfaccia, il **LinkDemand** non viene applicata se si esegue il cast all'interfaccia e chiamare il metodo. In questo caso, poiché è stato collegato in base all'interfaccia, solo il **LinkDemand** sull'interfaccia viene presa in considerazione.  
   
  Verificare la presenza di problemi di sicurezza negli elementi seguenti:  
   
--   Richieste di collegamento esplicite nei metodi di interfaccia. Assicurarsi che le richieste di collegamento offrano la protezione prevista. Determinare se il codice dannoso può usare un cast per evitare le richieste di collegamento, come descritto in precedenza.  
+- Richieste di collegamento esplicite nei metodi di interfaccia. Assicurarsi che le richieste di collegamento offrano la protezione prevista. Determinare se il codice dannoso può usare un cast per evitare le richieste di collegamento, come descritto in precedenza.  
   
--   Metodi virtuali con richieste di collegamento applicate.  
+- Metodi virtuali con richieste di collegamento applicate.  
   
--   Tipi e interfacce implementate. Questi devono usare le richieste di collegamento in modo coerente.  
+- Tipi e interfacce implementate. Questi devono usare le richieste di collegamento in modo coerente.  
   
 ## <a name="see-also"></a>Vedere anche
 

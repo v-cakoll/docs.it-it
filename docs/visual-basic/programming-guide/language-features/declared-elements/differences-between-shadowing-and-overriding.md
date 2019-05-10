@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fcf43040e9cbbcb2a59b1e1cf8c1f58951d5d87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61827944"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610469"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Differenze tra shadowing e override (Visual Basic)
 Quando si definisce una classe che eredita da una classe base, a volte si desidera ridefinire uno o più degli elementi nella classe derivata della classe base. Shadowing e override sono entrambi disponibili per questo scopo.  
@@ -41,15 +41,15 @@ Quando si definisce una classe che eredita da una classe base, a volte si deside
 ## <a name="guidelines"></a>Indicazioni  
  Si usano normalmente viene sottoposto a override nei casi seguenti:  
   
--   Si siano definendo le classi derivate polimorfiche.  
+- Si siano definendo le classi derivate polimorfiche.  
   
--   Quando si desidera che il compilatore di imporre il tipo di elemento identico e una sequenza di chiamata.  
+- Quando si desidera che il compilatore di imporre il tipo di elemento identico e una sequenza di chiamata.  
   
  In genere si usano shadowing nei casi seguenti:  
   
--   Si prevede che la classe di base potrebbe essere stata modificata e definisce un elemento con lo stesso nome come quelle in uso.  
+- Si prevede che la classe di base potrebbe essere stata modificata e definisce un elemento con lo stesso nome come quelle in uso.  
   
--   Si desidera che la libertà di modifica del tipo di elemento o sequenza di chiamata.  
+- Si desidera che la libertà di modifica del tipo di elemento o sequenza di chiamata.  
   
 ## <a name="see-also"></a>Vedere anche
 

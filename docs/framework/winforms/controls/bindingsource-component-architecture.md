@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-ms.openlocfilehash: 81559444b6e3da2861e48bdc637ae01d246c0758
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7300acdf46844dd79445859dfa47874889982bd1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961577"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593465"
 ---
 # <a name="bindingsource-component-architecture"></a>Architettura del componente BindingSource
 Con la <xref:System.Windows.Forms.BindingSource> componente, è possibile associare tutti i controlli Windows Form universalmente a origini dati.  
@@ -78,16 +78,16 @@ Con la <xref:System.Windows.Forms.BindingSource> componente, è possibile associ
   
  Il <xref:System.Windows.Forms.BindingSource> componente incapsula <xref:System.Windows.Forms.CurrencyManager> funzionalità ed espone i più comuni <xref:System.Windows.Forms.CurrencyManager> proprietà ed eventi. Nella tabella seguente vengono descritti alcuni dei membri correlati alla gestione valuta.  
   
- Proprietà <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A>  
+ Proprietà<xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A>   
  Ottiene l'oggetto CurrencyManager associato il <xref:System.Windows.Forms.BindingSource>.  
   
  Metodo <xref:System.Windows.Forms.ICurrencyManagerProvider.GetRelatedCurrencyManager%2A>  
  Se è disponibile un'altra <xref:System.Windows.Forms.BindingSource> associato al membro dati specificato, ottiene il gestore della valuta.  
   
- Proprietà <xref:System.Windows.Forms.BindingSource.Current%2A>  
+ Proprietà<xref:System.Windows.Forms.BindingSource.Current%2A>   
  Ottiene l'elemento corrente dell'origine dati.  
   
- Proprietà <xref:System.Windows.Forms.BindingSource.Position%2A>  
+ Proprietà<xref:System.Windows.Forms.BindingSource.Position%2A>   
  Ottiene o imposta la posizione corrente nell'elenco sottostante.  
   
  Metodo <xref:System.Windows.Forms.BindingSource.EndEdit%2A>  
@@ -119,7 +119,7 @@ Con la <xref:System.Windows.Forms.BindingSource> componente, è possibile associ
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|Proprietà <xref:System.Windows.Forms.BindingSource.List%2A>|Ottiene l'elenco risultante dalla valutazione del <xref:System.Windows.Forms.BindingSource.DataSource%2A> o <xref:System.Windows.Forms.BindingSource.DataMember%2A> proprietà.|  
+|Proprietà<xref:System.Windows.Forms.BindingSource.List%2A> |Ottiene l'elenco risultante dalla valutazione del <xref:System.Windows.Forms.BindingSource.DataSource%2A> o <xref:System.Windows.Forms.BindingSource.DataMember%2A> proprietà.|  
 |Metodo <xref:System.Windows.Forms.BindingSource.AddNew%2A>|Aggiunge un nuovo elemento all'elenco sottostante. Si applica alle origini dati che implementano il <xref:System.ComponentModel.IBindingList> l'interfaccia e consentire l'aggiunta di elementi (vale a dire la <xref:System.Windows.Forms.BindingSource.AllowNew%2A> è impostata su `true`).|  
   
 ### <a name="custom-item-creation"></a>Creazione di elementi personalizzati  
@@ -162,8 +162,8 @@ Con la <xref:System.Windows.Forms.BindingSource> componente, è possibile associ
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|Proprietà <xref:System.Windows.Forms.BindingSource.Filter%2A>|Se l'origine dati è un <xref:System.ComponentModel.IBindingListView>, ottiene o imposta l'espressione usata per filtrare le righe da visualizzare.|  
-|Proprietà <xref:System.Windows.Forms.BindingSource.Sort%2A>|Se l'origine dati è un <xref:System.ComponentModel.IBindingList>, ottiene o imposta un nome di colonna usato per l'ordinamento e il criterio di ordinamento.<br /><br /> -oppure-<br /><br /> Se l'origine dati è un <xref:System.ComponentModel.IBindingListView> e supporta l'ordinamento avanzato, ottiene più nomi di colonna usati per l'ordinamento e ordinamento|  
+|Proprietà<xref:System.Windows.Forms.BindingSource.Filter%2A> |Se l'origine dati è un <xref:System.ComponentModel.IBindingListView>, ottiene o imposta l'espressione usata per filtrare le righe da visualizzare.|  
+|Proprietà<xref:System.Windows.Forms.BindingSource.Sort%2A> |Se l'origine dati è un <xref:System.ComponentModel.IBindingList>, ottiene o imposta un nome di colonna usato per l'ordinamento e il criterio di ordinamento.<br /><br /> -oppure-<br /><br /> Se l'origine dati è un <xref:System.ComponentModel.IBindingListView> e supporta l'ordinamento avanzato, ottiene più nomi di colonna usati per l'ordinamento e ordinamento|  
   
 ### <a name="integration-with-bindingnavigator"></a>Integrazione con BindingNavigator  
  È possibile usare la <xref:System.Windows.Forms.BindingSource> componente da associare qualsiasi controllo Windows Form a un'origine dati, ma la <xref:System.Windows.Forms.BindingNavigator> controllo è progettato specificamente per funzionare con la <xref:System.Windows.Forms.BindingSource> componente. Il <xref:System.Windows.Forms.BindingNavigator> controllo fornisce un'interfaccia utente per il controllo di <xref:System.Windows.Forms.BindingSource> elemento corrente del componente. Per impostazione predefinita, il <xref:System.Windows.Forms.BindingNavigator> controllo fornisce i pulsanti che corrispondono ai metodi di navigazione nella <xref:System.Windows.Forms.BindingSource> componente. Per altre informazioni, vedere [Procedura: Esplorare i dati con il controllo BindingNavigator di Windows Form](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md).  
