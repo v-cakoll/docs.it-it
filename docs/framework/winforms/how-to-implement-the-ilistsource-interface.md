@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 718514c843bbfc0fcc56e89ca0b60bd3ec65b3cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801764"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630659"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>Procedura: Implementare l'interfaccia IListSource
 Implementare il <xref:System.ComponentModel.IListSource> per creare una classe associabile che non implementa l'interfaccia <xref:System.Collections.IList> ma fornisce un elenco da un altro percorso.  
@@ -36,7 +36,7 @@ Implementare il <xref:System.ComponentModel.IListSource> per creare una classe a
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti agli assembly System.Drawing e System.Windows.Forms.  
+- Riferimenti agli assembly System.Drawing e System.Windows.Forms.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: c4a78569f6c0b14c32154611412d6b3ccd8a84ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 682474120cbeeeb4cb83b69188a5a125228279d3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004202"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64631639"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>Procedura: Disegnare una linea con estremità
 È possibile disegnare inizio o alla fine di una riga in una delle diverse forme chiamate estremità. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] supporta diversi limiti di riga, come round, quadrato, a forma di rombo e punta della freccia.  

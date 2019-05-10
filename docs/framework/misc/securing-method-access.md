@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2159199fc12ef83a6bf4a44841d71799e0dad4dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9d423ef71b76b2dcbbf2812e13850922fb50ac0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868966"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625884"
 ---
 # <a name="securing-method-access"></a>Protezione dell'accesso ai metodi
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,17 +28,17 @@ ms.locfileid: "61868966"
   
  Il codice gestito offre diversi modi per limitare l'accesso ai metodi:  
   
--   Limitare l'ambito di accessibilità alla classe, all'assembly o alle classi derivate, se possono essere attendibili. Questo è il modo più semplice per limitare l'accesso del metodo. Si noti che, in generale, le classi derivate possono essere meno affidabili rispetto alla classe da cui derivano, anche se in alcuni casi condividono l'identità della classe padre. In particolare, non attribuire attendibilità alla parola chiave **protetti**, che non è necessariamente usata nel contesto di sicurezza.  
+- Limitare l'ambito di accessibilità alla classe, all'assembly o alle classi derivate, se possono essere attendibili. Questo è il modo più semplice per limitare l'accesso del metodo. Si noti che, in generale, le classi derivate possono essere meno affidabili rispetto alla classe da cui derivano, anche se in alcuni casi condividono l'identità della classe padre. In particolare, non attribuire attendibilità alla parola chiave **protetti**, che non è necessariamente usata nel contesto di sicurezza.  
   
--   Limitare l'accesso al metodo ai chiamanti di un'identità specificata, in pratica, qualsiasi particolare [evidenza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) (nome sicuro, publisher, zona e così via) scelto.  
+- Limitare l'accesso al metodo ai chiamanti di un'identità specificata, in pratica, qualsiasi particolare [evidenza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) (nome sicuro, publisher, zona e così via) scelto.  
   
--   Limitare l'accesso al metodo ai chiamanti che dispongono delle autorizzazioni selezionate.  
+- Limitare l'accesso al metodo ai chiamanti che dispongono delle autorizzazioni selezionate.  
   
  Analogamente, la sicurezza dichiarativa consente di controllare l'ereditarietà delle classi. È possibile usare **InheritanceDemand** per eseguire le operazioni seguenti:  
   
--   Richiedere le classi derivate per ottenere un'identità o autorizzazione specificata.  
+- Richiedere le classi derivate per ottenere un'identità o autorizzazione specificata.  
   
--   Richiedere le classi derivate che eseguono l'override di metodi specifici per ottenere un'identità o autorizzazione specificata.  
+- Richiedere le classi derivate che eseguono l'override di metodi specifici per ottenere un'identità o autorizzazione specificata.  
   
  L'esempio seguente illustra come proteggere una classe pubblica per l'accesso limitato richiedendo che i chiamanti siano firmati con un nome sicuro specifico. Questo esempio Usa la <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> con un **richiesta** per il nome sicuro. Per informazioni su come firmare un assembly con nome sicuro, vedere [creazione e assembly con nome sicuro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
   

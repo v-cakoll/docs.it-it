@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a25186f6283f01ef56b1c684c4a43b9a60fb6d64
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877123"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619672"
 ---
 # <a name="remote-vs-local-execution"></a>Esecuzione remota e locale
 È possibile scegliere di eseguire le query in modalità remota, dove il motore di database esegue la query sul database, oppure localmente, dove [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] esegue la query sulla cache locale.  
@@ -23,18 +23,18 @@ ms.locfileid: "61877123"
   
  Se nel database sono presenti migliaia di righe di ordini, non è opportuno recuperarli tutti per elaborare un piccolo subset. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] la classe <xref:System.Data.Linq.EntitySet%601> implementa l'interfaccia <xref:System.Linq.IQueryable>. Questo approccio assicura che tali query possano essere eseguite in modalità remota. Questa tecnica offre due vantaggi principali:  
   
--   I dati non necessari non vengono recuperati.  
+- I dati non necessari non vengono recuperati.  
   
--   Una query eseguita dal motore di database è spesso più efficiente grazie agli indici del database.  
+- Una query eseguita dal motore di database è spesso più efficiente grazie agli indici del database.  
   
 ## <a name="local-execution"></a>e locale  
  In altre situazioni può essere necessario disporre del set completo di entità correlate nella cache locale. A questo scopo <xref:System.Data.Linq.EntitySet%601> fornisce il metodo <xref:System.Data.Linq.EntitySet%601.Load%2A> per caricare in modo esplicito tutti i membri di <xref:System.Data.Linq.EntitySet%601>.  
   
  Se <xref:System.Data.Linq.EntitySet%601> è già caricato, le query successive vengono eseguite localmente. Questo approccio risulta utile in due modi:  
   
--   Se il set completo deve essere usato localmente o più volte, è possibile evitare l'esecuzione di query remote e le latenze che ne derivano.  
+- Se il set completo deve essere usato localmente o più volte, è possibile evitare l'esecuzione di query remote e le latenze che ne derivano.  
   
--   L'entità può essere serializzata come un'entità completa.  
+- L'entità può essere serializzata come un'entità completa.  
   
  Il frammento di codice seguente illustra come è possibile ottenere l'esecuzione locale:  
   

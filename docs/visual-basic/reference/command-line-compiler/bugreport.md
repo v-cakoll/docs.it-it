@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: e7b4ebc58b6fe9850b92ef945cb0d715e4369efe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ff9aa23fb6d7dee5c245ed174318f6589e7d245
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61839566"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624312"
 ---
 # <a name="-bugreport"></a>-bugreport
 Crea un file che è possibile usare quando si elabora un report sui bug.  
@@ -31,17 +31,17 @@ Crea un file che è possibile usare quando si elabora un report sui bug.
 ## <a name="remarks"></a>Note  
  Le informazioni seguenti vengono aggiunte a `file`:  
   
--   Una copia di tutti i file di codice sorgente nella compilazione.  
+- Una copia di tutti i file di codice sorgente nella compilazione.  
   
--   Un elenco delle opzioni del compilatore usata nella compilazione.  
+- Un elenco delle opzioni del compilatore usata nella compilazione.  
   
--   Informazioni sulla versione su compilatore, common language runtime e del sistema operativo.  
+- Informazioni sulla versione su compilatore, common language runtime e del sistema operativo.  
   
--   L'eventuale output del compilatore.  
+- L'eventuale output del compilatore.  
   
--   Descrizione del problema per cui viene richiesto.  
+- Descrizione del problema per cui viene richiesto.  
   
--   Una descrizione del modo in cui si può risolvere il problema dovrebbe essere risolto, per cui viene richiesto.  
+- Una descrizione del modo in cui si può risolvere il problema dovrebbe essere risolto, per cui viene richiesto.  
   
  Poiché una copia di tutti i file di codice sorgente è incluso `file`, è possibile riprodurre l'errore del codice (sospetti) nel programma più breve possibile.  
   

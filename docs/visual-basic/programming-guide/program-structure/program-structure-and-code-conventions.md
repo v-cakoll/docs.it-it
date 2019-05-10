@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: b79e339ebe81a7228a02837e5c0c23c80a8132e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9dbe8fe977b2aa11573ab7a1ac1d79be0b5204af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916942"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624325"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Struttura del programma e convenzioni di scrittura del codice (Visual Basic)
 In questa sezione presenta la struttura del programma Visual Basic tipica, offre un semplice programma Visual Basic, "Hello, World" e vengono illustrate le convenzioni di codice Visual Basic. Convenzioni di codice sono suggerimenti dello stato attivo non sulla logica del programma ma sulla sua struttura fisica e aspetto. Seguendo queste istruzioni, il codice più facile da leggere, comprendere e gestire. Convenzioni del codice possono includere, tra gli altri:  

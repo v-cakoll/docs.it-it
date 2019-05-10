@@ -2,12 +2,12 @@
 title: Database di persistenza SQL Server
 ms.date: 03/30/2017
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
-ms.openlocfilehash: f69a6b3a67407a2273e04ba3e652693a3a10f9a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 913b799cf9f90790c58f3d104f9bd224890de22c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004653"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626243"
 ---
 # <a name="sql-server-persistence-database"></a>Database di persistenza SQL Server
 Contenuto della sezione vengono forniti dettagli su viste di database pubbliche supportate dall'archivio di istanze del flusso di lavoro SQL e viene descritto come deserializzare le proprietà di dati di istanza primitive e come eseguire query per istanze non persistenti.  

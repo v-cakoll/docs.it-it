@@ -23,12 +23,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7642aea72ddaa3789dba3b2328f271afcb92a16a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61828620"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610545"
 ---
 # <a name="declared-element-names-visual-basic"></a>Nomi di elementi dichiarati (Visual Basic)
 Ogni elemento dichiarato è un nome, detto anche un *identificatore*, che viene usato il codice per fare riferimento a esso.  
@@ -36,13 +36,13 @@ Ogni elemento dichiarato è un nome, detto anche un *identificatore*, che viene 
 ## <a name="rules"></a>Regole  
  Il nome di un elemento in Visual Basic è necessario rispettare le regole seguenti:  
   
--   Deve iniziare con un carattere alfabetico o un carattere di sottolineatura (`_`).  
+- Deve iniziare con un carattere alfabetico o un carattere di sottolineatura (`_`).  
   
--   Deve contenere solo caratteri alfabetici, cifre decimali e caratteri di sottolineatura.  
+- Deve contenere solo caratteri alfabetici, cifre decimali e caratteri di sottolineatura.  
   
--   Deve contenere almeno un carattere alfabetico o una cifra decimale se inizia con un carattere di sottolineatura.  
+- Deve contenere almeno un carattere alfabetico o una cifra decimale se inizia con un carattere di sottolineatura.  
   
--   Non deve essere lungo più di 1023 caratteri.  
+- Non deve essere lungo più di 1023 caratteri.  
   
  La lunghezza massima di 1023 caratteri inoltre valida per l'intera stringa di un nome completo, ad esempio `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
   
@@ -75,9 +75,9 @@ Ogni elemento dichiarato è un nome, detto anche un *identificatore*, che viene 
   
  In generale, è consigliabile usare nomi con caratteri di escape solo se:  
   
--   Il codice è eseguita la migrazione da una versione precedente di Visual Basic che non era riservata la parola chiave viene usata come un nome. o  
+- Il codice è eseguita la migrazione da una versione precedente di Visual Basic che non era riservata la parola chiave viene usata come un nome. o  
   
--   Si lavora con il codice scritto in un altro linguaggio in cui la parola chiave specificata non è riservata.  
+- Si lavora con il codice scritto in un altro linguaggio in cui la parola chiave specificata non è riservata.  
   
  In caso contrario, è consigliabile rinominare l'elemento se il nome è in conflitto con una parola chiave. L'ambiente di sviluppo integrato (IDE) fornisce un modo semplice per eseguire questa operazione. Per altre informazioni, vedere [Refactoring](/visualstudio/vb-ide/refactoring-vb).  
   

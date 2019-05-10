@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b37b00cfbeee10f217d1dbe1c754c50b65e31de9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344663"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625859"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Procedura: Creare criteri editore
 I fornitori di assembly possono indicare che le applicazioni devono utilizzare una versione più recente di un assembly includendo un file dei criteri editore con l'assembly aggiornato. File dei criteri editore specifica il reindirizzamento di assembly e le impostazioni della codebase e Usa lo stesso formato di un file di configurazione dell'applicazione. File dei criteri editore viene compilato in un assembly e inserito nella global assembly cache.  
@@ -57,15 +57,15 @@ I fornitori di assembly possono indicare che le applicazioni devono utilizzare u
   
      In questo comando:  
   
-    -   Il *publisherPolicyFile* argomento è il nome del file dei criteri editore.  
+    - Il *publisherPolicyFile* argomento è il nome del file dei criteri editore.  
   
-    -   Il *publisherPolicyAssemblyFile* argomento è il nome dell'assembly dei criteri editore risultante da questo comando. Nome file dell'assembly deve seguire il formato:  
+    - Il *publisherPolicyAssemblyFile* argomento è il nome dell'assembly dei criteri editore risultante da questo comando. Nome file dell'assembly deve seguire il formato:  
   
          **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
-    -   Il *keyPairFile* argomento è il nome del file contenente la coppia di chiavi. È necessario firmare l'assembly e assembly dei criteri editore con la stessa coppia di chiavi.  
+    - Il *keyPairFile* argomento è il nome del file contenente la coppia di chiavi. È necessario firmare l'assembly e assembly dei criteri editore con la stessa coppia di chiavi.  
   
-    -   Il *processorArchitecture* argomento identifica la piattaforma di destinazione da un assembly specifico del processore.  
+    - Il *processorArchitecture* argomento identifica la piattaforma di destinazione da un assembly specifico del processore.  
   
         > [!NOTE]
         >  La possibilità di un'architettura di processore specifica di destinazione è le novità di .NET Framework versione 2.0.  

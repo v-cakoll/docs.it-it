@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a32e12b593f273c8b812390306c81b311da7c2a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868979"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624689"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API basate sulla reflection
 In alcuni casi, l'uso della reflection nel codice non è scontato, quindi la catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)] non conserva i metadati necessari al runtime. In questo argomento vengono illustrati modelli di programmazione o API comuni non considerati parte dell'API di reflection ma basati sulla reflection per una corretta esecuzione. Se vengono usati nel codice sorgente, è possibile aggiungere informazioni su di essi al file di direttive di runtime (.rd.xml) in modo che le chiamate a queste API non generino un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) o altre eccezioni al runtime.  
@@ -51,11 +51,11 @@ App1.AppClass`1<System.Int32>.
   
  Per una corretta esecuzione, questo codice richiede diversi elementi di metadati:  
   
--   I metadati `Browse` per il tipo di metodo da chiamare.  
+- I metadati `Browse` per il tipo di metodo da chiamare.  
   
--   I metadati `Browse` per il metodo da chiamare.  Se si tratta di un metodo pubblico, l'aggiunta di metadati `Browse` pubblici per il tipo contenitore include anche il metodo.  
+- I metadati `Browse` per il metodo da chiamare.  Se si tratta di un metodo pubblico, l'aggiunta di metadati `Browse` pubblici per il tipo contenitore include anche il metodo.  
   
--   I metadati dinamici per il metodo da chiamare, in modo che il delegato di chiamata della reflection non venga rimosso dalla catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Se i metadati dinamici non sono disponibili per il metodo, viene generata la seguente eccezione quando viene chiamato il metodo <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>:  
+- I metadati dinamici per il metodo da chiamare, in modo che il delegato di chiamata della reflection non venga rimosso dalla catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Se i metadati dinamici non sono disponibili per il metodo, viene generata la seguente eccezione quando viene chiamato il metodo <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>:  
   
     ```  
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  

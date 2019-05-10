@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 5df6d39bef137bd4005316eac252ca0952df5e7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a9f04f6da4dc4024f4c9ece19f045eb8e3775e6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098780"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620889"
 ---
 # <a name="use-automatic-layout-overview"></a>Cenni preliminari sull'utilizzo del layout automatico
 In questo argomento illustra le linee guida per gli sviluppatori su come scrivere [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] le applicazioni con localizzabile [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. In passato, la localizzazione di un'interfaccia utente era un processo molto tempo. Ogni lingua dell'interfaccia utente è stato adattato per richiedeva modifiche pixel per pixel. Oggi, con la progettazione e standard, di codifica corretti [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] può essere costruito in modo che i localizzatori hanno ridimensionamento e riposizionamento a scopo. L'approccio alla scrittura di applicazioni che è possibile ridimensionare e riposizionare con maggiore semplicità viene definito layout automatico e può essere ottenuta utilizzando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] progettazione dell'applicazione.  
@@ -19,15 +19,15 @@ In questo argomento illustra le linee guida per gli sviluppatori su come scriver
 ## <a name="advantages-of-using-automatic-layout"></a>Vantaggi dell'uso del layout automatico  
  Poiché il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di presentazione è potente e flessibile, offre la possibilità di layout di elementi in un'applicazione che può essere modificata per soddisfare i requisiti di lingue diverse. L'elenco seguente indica alcuni vantaggi del layout automatico.  
 
--   Interfaccia utente viene visualizzata correttamente in qualsiasi linguaggio.  
+- Interfaccia utente viene visualizzata correttamente in qualsiasi linguaggio.  
 
--   Riduce l'esigenza di ulteriori modifiche alla posizione e alle dimensioni dei controlli dopo la traduzione del testo.  
+- Riduce l'esigenza di ulteriori modifiche alla posizione e alle dimensioni dei controlli dopo la traduzione del testo.  
   
--   Riduce l'esigenza di ulteriori modifiche alle dimensioni delle finestre.  
+- Riduce l'esigenza di ulteriori modifiche alle dimensioni delle finestre.  
 
--   Layout dell'interfaccia utente viene visualizzato correttamente in qualsiasi linguaggio.  
+- Layout dell'interfaccia utente viene visualizzato correttamente in qualsiasi linguaggio.  
 
--   La localizzazione può essere ridotta a semplici attività che vanno poco oltre la traduzione delle stringhe.  
+- La localizzazione può essere ridotta a semplici attività che vanno poco oltre la traduzione delle stringhe.  
   
 <a name="autolayout_controls"></a>   
 ## <a name="automatic-layout-and-controls"></a>Layout automatico e controlli  

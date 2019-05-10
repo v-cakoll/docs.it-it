@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70ed0fe9191c18e88198871319b3c3ee3c0b4ab4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856532"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626964"
 ---
 # <a name="distributed-application-security"></a>Protezione delle applicazioni distribuite
 Sicurezza di Windows Communication Foundation (WCF) viene suddiviso in tre aree funzionali principali: protezione del trasferimento, controllo degli accessi e il controllo. La protezione di trasferimento, oltre a offrire funzionalità di autenticazione, garantisce integrità e riservatezza. Questa area funzionale utilizza uno dei meccanismi seguenti: protezione a livello di trasporto, protezione a livello di messaggio e `TransportWithMessageCredential`.  
@@ -20,11 +20,11 @@ Sicurezza di Windows Communication Foundation (WCF) viene suddiviso in tre aree 
 ## <a name="transfer-security-scenarios"></a>Scenari di utilizzo della protezione di trasferimento  
  Gli scenari comuni che si avvalgono di sicurezza del trasferimento WCF includono quanto segue:  
   
--   Protezione di trasferimento basata su Windows: Un client WCF e servizi sono distribuiti in un dominio di Windows (o una foresta di Windows). Poiché i messaggi contengono dati personali, i requisiti prevedono l'autenticazione reciproca del client e del servizio nonché l'integrità e la riservatezza dei messaggi. Occorre inoltre implementare una funzione che provi l'avvenuta esecuzione di una determinata transazione. Ad esempio, è necessario che il destinatario del messaggio registri le informazioni sulla firma.  
+- Protezione di trasferimento basata su Windows: Un client WCF e servizi sono distribuiti in un dominio di Windows (o una foresta di Windows). Poiché i messaggi contengono dati personali, i requisiti prevedono l'autenticazione reciproca del client e del servizio nonché l'integrità e la riservatezza dei messaggi. Occorre inoltre implementare una funzione che provi l'avvenuta esecuzione di una determinata transazione. Ad esempio, è necessario che il destinatario del messaggio registri le informazioni sulla firma.  
   
--   Protezione di trasferimento basata sull'elemento `UserName` e su HTTPS: Un client WCF e un servizio necessario sviluppare per funzionare in Internet. L'autenticazione delle credenziali client si basa su un database di coppie nome utente/password. Il servizio è distribuito presso un indirizzo HTTPS che utilizza un certificato SSL (Secure Sockets Layer) attendibile. Poiché i messaggi sono trasmessi su Internet, occorre implementare l'autenticazione reciproca fra client e servizio nonché garantire la riservatezza e l'integrità dei messaggi durante il trasferimento.  
+- Protezione di trasferimento basata sull'elemento `UserName` e su HTTPS: Un client WCF e un servizio necessario sviluppare per funzionare in Internet. L'autenticazione delle credenziali client si basa su un database di coppie nome utente/password. Il servizio è distribuito presso un indirizzo HTTPS che utilizza un certificato SSL (Secure Sockets Layer) attendibile. Poiché i messaggi sono trasmessi su Internet, occorre implementare l'autenticazione reciproca fra client e servizio nonché garantire la riservatezza e l'integrità dei messaggi durante il trasferimento.  
   
--   Protezione di trasferimento basata su certificati: Un client WCF e un servizio necessario sviluppare per lavorare sulla rete internet pubblica. Sia il client sia il servizio presentano certificati utilizzabili per proteggere i messaggi. Il client e il servizio comunicano fra loro via Internet allo scopo di eseguire transazioni di elevata importanza per cui occorre implementare funzionalità che, oltre a garantire l'integrità e la riservatezza delle comunicazioni, eseguano l'autenticazione reciproca.  
+- Protezione di trasferimento basata su certificati: Un client WCF e un servizio necessario sviluppare per lavorare sulla rete internet pubblica. Sia il client sia il servizio presentano certificati utilizzabili per proteggere i messaggi. Il client e il servizio comunicano fra loro via Internet allo scopo di eseguire transazioni di elevata importanza per cui occorre implementare funzionalità che, oltre a garantire l'integrità e la riservatezza delle comunicazioni, eseguano l'autenticazione reciproca.  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>Integrità, riservatezza e autenticazione  
  La protezione di trasferimento è costituita da tre funzioni: integrità, riservatezza e autenticazione. La sicurezza di trasferimento offre funzioni che consentono di ridurre i rischi per un'applicazione distribuita. Nella tabella seguente sono descritte brevemente le tre funzioni che costituiscono la protezione di trasferimento.  

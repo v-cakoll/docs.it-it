@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-ms.openlocfilehash: 180fc99195444057c5bbb4a1679e948f9ddf1830
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 560b03b8e2788c88e6c92c64834bf36c750575ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856662"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626938"
 ---
 # <a name="enabling-transaction-flow"></a>Attivazione del flusso delle transazioni
 Windows Communication Foundation (WCF) disponibili opzioni estremamente flessibili per controllare il flusso delle transazioni. Le impostazioni del flusso delle transazioni di un servizio possono essere espresse con una determinata combinazione di attributi e configurazione.  
@@ -17,11 +17,11 @@ Windows Communication Foundation (WCF) disponibili opzioni estremamente flessibi
 ## <a name="transaction-flow-settings"></a>Impostazioni del flusso delle transazioni  
  Le impostazioni del flusso delle transazioni vengono generate per un endpoint del servizio come esito dell'intersezione dei tre valori seguenti:  
   
--   L'attributo <xref:System.ServiceModel.TransactionFlowAttribute> specificato per ogni metodo contenuto nel contratto di servizio.  
+- L'attributo <xref:System.ServiceModel.TransactionFlowAttribute> specificato per ogni metodo contenuto nel contratto di servizio.  
   
--   La proprietà `TransactionFlow` nella specifica associazione.  
+- La proprietà `TransactionFlow` nella specifica associazione.  
   
--   La proprietà `TransactionFlowProtocol` nella specifica associazione. La proprietà `TransactionFlowProtocol` di associazione consente di scegliere fra due protocolli di transazione diversi che è possibile utilizzare per propagare una transazione. Questi valori vengono descritti brevemente nelle sezioni seguenti.  
+- La proprietà `TransactionFlowProtocol` nella specifica associazione. La proprietà `TransactionFlowProtocol` di associazione consente di scegliere fra due protocolli di transazione diversi che è possibile utilizzare per propagare una transazione. Questi valori vengono descritti brevemente nelle sezioni seguenti.  
   
 ### <a name="ws-atomictransaction-protocol"></a>Protocollo WS-AtomicTransaction  
  Il protocollo WS-AtomicTransaction (WS-AT) è utile per scenari in cui è richiesta l'interoperabilità con stack del protocollo di terze parti.  

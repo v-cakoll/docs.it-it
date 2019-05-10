@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 01530d4ae9779934948bbaff60fbbd392de6e701
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86779197004f2a8e84d44aaeff2df2dacb05fb01
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007126"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621205"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Procedura dettagliata: Localizzazione di un'applicazione ibrida
 
@@ -18,15 +18,15 @@ Questa procedura dettagliata mostra come localizzare [!INCLUDE[TLA2#tla_winclien
 
 Le attività illustrate nella procedura dettagliata sono le seguenti:
 
--   Creazione di [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] progetto host.
+- Creazione di [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] progetto host.
 
--   Aggiunta di contenuto localizzabile.
+- Aggiunta di contenuto localizzabile.
 
--   Abilitazione della localizzazione.
+- Abilitazione della localizzazione.
 
--   Assegnazione di identificatori di risorsa.
+- Assegnazione di identificatori di risorsa.
 
--   Utilizzo dello strumento LocBaml per produrre un assembly satellite.
+- Utilizzo dello strumento LocBaml per produrre un assembly satellite.
 
 Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [localizzazione di un'applicazione ibrida](https://go.microsoft.com/fwlink/?LinkID=160015).
 
@@ -36,7 +36,7 @@ Al termine, sarà disponibile un'applicazione ibrida localizzata.
 
 Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-windows-forms-host-project"></a>Creazione del progetto host Windows Form
 

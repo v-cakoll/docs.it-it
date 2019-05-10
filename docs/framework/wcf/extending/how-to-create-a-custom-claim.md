@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: 1892e910a86e01b7b2ee0f6a2403ad7af4688808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c1c1e050cfef36aa53b83a764c0b7e308783394
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857779"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619613"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Procedura: Creare un'attestazione personalizzata
 L'infrastruttura del modello di identità in Windows Communication Foundation (WCF) offre un set di tipi di attestazione incorporati e diritti con le funzioni di supporto per la creazione di <xref:System.IdentityModel.Claims.Claim> istanze con tali tipi e diritti. Queste attestazioni incorporate sono progettate per modellare le informazioni presenti nei tipi di credenziale client supportati da WCF per impostazione predefinita. In molti casi, le attestazioni incorporate sono sufficienti; tuttavia alcune applicazioni possono richiedere attestazioni personalizzate. Un'attestazione è costituita dal tipo di attestazione, dalla risorsa a cui si applica l'attestazione e dal diritto asserito sulla risorsa in questione. In questo argomento viene descritto come creare un'attestazione personalizzata.  
@@ -19,15 +19,15 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
   
 1. Creare un'attestazione personalizzata passando il tipo di attestazione, il valore della risorsa e il diritto al costruttore <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29>.  
   
-    1.  Stabilire un valore univoco per il tipo di attestazione.  
+    1. Stabilire un valore univoco per il tipo di attestazione.  
   
          Il tipo di attestazione è un identificatore di stringa univoco. È responsabilità di chi progetta l'attestazione personalizzata assicurare che l'identificatore di stringa usato per il tipo di attestazione sia univoco. Per un elenco di tipi di attestazione definiti da WCF, vedere il <xref:System.IdentityModel.Claims.ClaimTypes> classe.  
   
-    2.  Scegliere il tipo di dati primitivo e il valore della risorsa.  
+    2. Scegliere il tipo di dati primitivo e il valore della risorsa.  
   
          Una risorsa è un oggetto. Il tipo CLR della risorsa può essere primitivo, ad esempio <xref:System.String> o <xref:System.Int32> o qualsiasi tipo serializzabile. Il tipo CLR della risorsa deve essere serializzabile, poiché le attestazioni vengono serializzate in diversi punti da WCF. I tipi primitivi sono serializzabili.  
   
-    3.  Scegliere un diritto definito da WCF o un valore univoco per un diritto personalizzato.  
+    3. Scegliere un diritto definito da WCF o un valore univoco per un diritto personalizzato.  
   
          Un diritto è un identificatore di stringa univoco. I diritti definiti da WCF sono definiti nel <xref:System.IdentityModel.Claims.Rights> classe.  
   
@@ -42,11 +42,11 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
   
 1. Creare un'attestazione personalizzata passando il tipo di attestazione, il valore della risorsa e il diritto al costruttore <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29>.  
   
-    1.  Stabilire un valore univoco per il tipo di attestazione.  
+    1. Stabilire un valore univoco per il tipo di attestazione.  
   
          Il tipo di attestazione è un identificatore di stringa univoco. È responsabilità di chi progetta l'attestazione personalizzata assicurare che l'identificatore di stringa usato per il tipo di attestazione sia univoco. Per un elenco di tipi di attestazione definiti da WCF, vedere il <xref:System.IdentityModel.Claims.ClaimTypes> classe.  
   
-    2.  Scegliere o definire un tipo non primitivo serializzabile per la risorsa.  
+    2. Scegliere o definire un tipo non primitivo serializzabile per la risorsa.  
   
          Una risorsa è un oggetto. Il tipo CLR della risorsa deve essere serializzabile, poiché le attestazioni vengono serializzate in diversi punti da WCF. I tipi primitivi sono già serializzabili.  
   
@@ -57,7 +57,7 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)] 
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]        
   
-    3.  Scegliere un diritto definito da WCF o un valore univoco per un diritto personalizzato.  
+    3. Scegliere un diritto definito da WCF o un valore univoco per un diritto personalizzato.  
   
          Un diritto è un identificatore di stringa univoco. I diritti definiti da WCF sono definiti nel <xref:System.IdentityModel.Claims.Rights> classe.  
   
