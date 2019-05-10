@@ -3,12 +3,12 @@ title: Autorizzazione basata su attestazioni con WIF
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0c99053610c8df9b6825c773a09cb1330d1e22f4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792834"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650442"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorizzazione basata su attestazioni con WIF
 Tramite l'autorizzazione di un'applicazione relying party vengono determinate le risorse di un'identità autenticata a cui è consentito l'accesso e le operazioni eseguibili in queste risorse. Un'autorizzazione non corretta o debole comporta la diffusione di informazioni e l'alterazione dei dati. In questo argomento vengono descritti gli approcci disponibili per implementare l'autorizzazione per i servizi e le applicazioni Web ASP.NET in grado di riconoscere attestazioni mediante WIF (Windows Identity Foundation) e un servizio token di sicurezza (STS), ad esempio il Servizio di controllo di accesso (ACS) di Microsoft Azure.  
@@ -19,7 +19,7 @@ Tramite l'autorizzazione di un'applicazione relying party vengono determinate le
  Inoltre, possono essere utilizzate per abilitare decisioni di autorizzazione più complesse oltre ai ruoli. Le attestazioni possono essere basate su qualsiasi informazione relativa all'utente, ovvero età, codice postale, numero di scarpe e così via. Un meccanismo di controllo degli accessi basato su attestazioni arbitrarie è definito autorizzazione basata sulle attestazioni. Per altre informazioni, vedere [Autorizzazione basata sulle attestazioni](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_2).  
   
 <a name="BKMK_1"></a>   
-## <a name="role-based-access-control"></a>Controllo dell'accesso basato sui ruoli  
+## <a name="role-based-access-control"></a>Controllo degli accessi in base al ruolo  
  Il controllo dell'accesso basato sui ruoli è un approccio di autorizzazione in cui le autorizzazioni utente vengono gestite e applicate da un'applicazione basata sui ruoli utente. Se un utente dispone di un ruolo necessario per l'esecuzione di un'azione, l'accesso viene consentito; in caso contrario, viene negato.  
   
 ### <a name="iprincipalisinrole-method"></a>Metodo IPrincipal.IsInRole  
