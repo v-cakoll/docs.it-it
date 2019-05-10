@@ -2,12 +2,12 @@
 title: Stati di oggetti e rilevamento di modifiche
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 704c5271f71c3709bbf48cf6a5af0a60828e6244
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794394"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610089"
 ---
 # <a name="object-states-and-change-tracking"></a>Stati di oggetti e rilevamento di modifiche
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gli oggetti sempre associato uno *stato*. Ad esempio, quando in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene creato un nuovo oggetto, lo stato dell'oggetto è `Unchanged`. Un nuovo oggetto creato dall'utente è sconosciuto per il <xref:System.Data.Linq.DataContext> e si trova in `Untracked` dello stato. Dopo la corretta esecuzione di <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, tutti gli oggetti riconosciuti da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sono nello stato `Unchanged`. La sola eccezione è rappresentata dagli oggetti eliminati dal database che sono nello stato `Deleted` e di conseguenza inutilizzabili in quell'istanza di <xref:System.Data.Linq.DataContext>.  

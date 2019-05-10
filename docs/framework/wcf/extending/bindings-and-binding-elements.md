@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-ms.openlocfilehash: 33ebb07e350dbbbdd324b442f52dfb6287322bd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eae78220196395ba3002141f01d554f2335a1f28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858377"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613353"
 ---
 # <a name="bindings-and-binding-elements"></a>Associazioni ed elementi di associazione
 Le associazioni sono raccolte di elementi di configurazione speciale, chiamati *elementi di associazione*, vengono esaminati dal runtime del servizio ogni volta che un client o in fase di costruzione dell'endpoint di servizio. Il tipo e l'ordine degli elementi di un'associazione determinano la scelta e l'ordine di sovrapposizione dei canali di protocollo e di trasporto dello stack di canali di un endpoint.  
@@ -21,13 +21,13 @@ Le associazioni sono raccolte di elementi di configurazione speciale, chiamati *
 ## <a name="extending-bindings-and-binding-elements"></a>Estensione delle associazioni e degli elementi di associazione  
  Windows Communication Foundation (WCF) include le associazioni fornite dal sistema che coprono un'ampia gamma di scenari. (Per altre informazioni, vedere [System-provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).) È possibile che, tuttavia, quando è necessario creare e usare un'associazione che non è incluso in WCF. Negli scenari seguenti occorre creare una nuova associazione.  
   
--   Esigenza di utilizzare un nuovo elemento di associazione, ad esempio di trasporto, di codifica o di protocollo. In questo scenario è necessario creare una nuova associazione contenente l'elemento di associazione desiderato. Ad esempio, se si aggiunge un elemento di trasporto UDP `UdpTransportBindingElement` personalizzato occorre creare una nuova associazione per utilizzarlo. Per informazioni sull'esecuzione di questo comportamento usando il <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> del tipo, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+- Esigenza di utilizzare un nuovo elemento di associazione, ad esempio di trasporto, di codifica o di protocollo. In questo scenario è necessario creare una nuova associazione contenente l'elemento di associazione desiderato. Ad esempio, se si aggiunge un elemento di trasporto UDP `UdpTransportBindingElement` personalizzato occorre creare una nuova associazione per utilizzarlo. Per informazioni sull'esecuzione di questo comportamento usando il <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> del tipo, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
--   Configurazione di elementi di associazione esistenti in modo che le associazioni fornite dal sistema non espongano proprietà pubbliche. Ad esempio, per modificare l'ordine di esecuzione delle operazioni di firma e crittografia è necessario creare una nuova associazione. Per informazioni sull'esecuzione di questo comportamento, vedere [come: Personalizzare un'associazione fornita dal sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+- Configurazione di elementi di associazione esistenti in modo che le associazioni fornite dal sistema non espongano proprietà pubbliche. Ad esempio, per modificare l'ordine di esecuzione delle operazioni di firma e crittografia è necessario creare una nuova associazione. Per informazioni sull'esecuzione di questo comportamento, vedere [come: Personalizzare un'associazione fornita dal sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   
--   Creazione di associazioni standard aziendali che espongono soltanto opzioni di configurazione specifiche. Ad esempio, per creare una versione aziendale dell'associazione <xref:System.ServiceModel.WSHttpBinding> in cui non sia consentito disattivare la protezione è possibile creare una nuova associazione che funziona come l'associazione <xref:System.ServiceModel.WSHttpBinding> ma in cui la protezione sia sempre attiva. Per informazioni dettagliate, vedere [associazioni Creating User-Defined](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+- Creazione di associazioni standard aziendali che espongono soltanto opzioni di configurazione specifiche. Ad esempio, per creare una versione aziendale dell'associazione <xref:System.ServiceModel.WSHttpBinding> in cui non sia consentito disattivare la protezione è possibile creare una nuova associazione che funziona come l'associazione <xref:System.ServiceModel.WSHttpBinding> ma in cui la protezione sia sempre attiva. Per informazioni dettagliate, vedere [associazioni Creating User-Defined](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
--   Personalizzazione di metadati, quasi sempre allo scopo di configurare o utilizzare un determinato elemento di associazione personalizzato. Per altre informazioni su come fornire supporto per i metadati per associazioni ed elementi di associazione, vedere [supporto dei metadati e configurazione](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
+- Personalizzazione di metadati, quasi sempre allo scopo di configurare o utilizzare un determinato elemento di associazione personalizzato. Per altre informazioni su come fornire supporto per i metadati per associazioni ed elementi di associazione, vedere [supporto dei metadati e configurazione](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
 
 ## <a name="channels-bindings-and-binding-elements"></a>Canali, associazioni ed elementi di associazione  
  Le associazioni e gli elementi di associazione rappresentano la connessione tra il modello di programmazione delle applicazioni, che comprende attributi e comportamenti, e il modello di canale, che comprende le factory e i listener, i codificatori di messaggi e le implementazioni di trasporto e di protocollo. In genere gli elementi di associazione e le associazioni vengono implementate per consentire al livello applicazione di utilizzare i canali.  

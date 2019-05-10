@@ -15,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: ad2c41cc99422217b9f85acbd32f91ac78a9a7c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876148"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614233"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Traccia e strumentazione di applicazioni
 La traccia consente di monitorare l'esecuzione dell'applicazione mentre è in corso. È possibile aggiungere strumentazione di traccia e debug all'applicazione .NET Framework quando la si sviluppa e usare tale strumentazione sia mentre si sviluppa l'applicazione sia dopo la distribuzione. È possibile usare le classi <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> per registrare le informazioni sugli errori e sull'esecuzione dell'applicazione in log, file di testo o altri dispositivi per un'analisi successiva.  
   
  Il termine *strumentazione* si riferisce alla possibilità di monitorare o misurare il livello di prestazioni di un prodotto e di diagnosticare gli errori. In programmazione, ciò significa la capacità di un'applicazione di incorporare:  
   
--   **Traccia del codice** - Ricezione di messaggi informativi sull'esecuzione di un'applicazione in fase di esecuzione.  
+- **Traccia del codice** - Ricezione di messaggi informativi sull'esecuzione di un'applicazione in fase di esecuzione.  
   
--   **Debug** - Rilevamento e correzione di errori di programmazione in un'applicazione in fase di sviluppo. Per altre informazioni, vedere [Debug](/visualstudio/debugger/debugging-in-visual-studio).  
+- **Debug** - Rilevamento e correzione di errori di programmazione in un'applicazione in fase di sviluppo. Per altre informazioni, vedere [Debug](/visualstudio/debugger/debugging-in-visual-studio).  
   
--   **Contatori delle prestazioni** - Componenti che consentono di tenere traccia delle prestazioni dell'applicazione. Per altre informazioni, vedere [Contatori delle prestazioni](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+- **Contatori delle prestazioni** - Componenti che consentono di tenere traccia delle prestazioni dell'applicazione. Per altre informazioni, vedere [Contatori delle prestazioni](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
--   **Log eventi** - Componenti che consentono di ricevere e registrare i principali eventi durante l'esecuzione dell'applicazione. Per altre informazioni, vedere la classe <xref:System.Diagnostics.EventLog>.  
+- **Log eventi** - Componenti che consentono di ricevere e registrare i principali eventi durante l'esecuzione dell'applicazione. Per altre informazioni, vedere la classe <xref:System.Diagnostics.EventLog>.  
   
  La strumentazione dell'applicazione inserendo istruzioni di traccia in posizioni strategiche nel codice è particolarmente utile per le applicazioni distribuite. Usando istruzioni di traccia, è possibile instrumentare un'applicazione non solo per visualizzare informazioni in caso di problemi, ma anche per monitorare le prestazioni dell'applicazione.  
   
@@ -91,11 +91,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 6. Compilare l'applicazione nel codice eseguibile usando una delle procedure seguenti:  
   
-    -   Usare il menu **Compila** con la pagina **Debug** della finestra di dialogo **Pagine delle proprietà** in **Esplora soluzioni**. Usare questa opzione quando si esegue la compilazione in Visual Studio.  
+    - Usare il menu **Compila** con la pagina **Debug** della finestra di dialogo **Pagine delle proprietà** in **Esplora soluzioni**. Usare questa opzione quando si esegue la compilazione in Visual Studio.  
   
          \- oppure -  
   
-    -   Usare le direttive del compilatore **Trace** e **Debug** per il metodo di compilazione dalla riga di comando. Per altre informazioni, vedere [Compilazione condizionale con analisi e debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Usare questa opzione quando si compila dalla riga di comando.  
+    - Usare le direttive del compilatore **Trace** e **Debug** per il metodo di compilazione dalla riga di comando. Per altre informazioni, vedere [Compilazione condizionale con analisi e debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Usare questa opzione quando si compila dalla riga di comando.  
   
 7. Se si verifica un problema in fase di esecuzione, attivare l'opzione di traccia appropriata. Per altre informazioni, vedere [Configurazione delle opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   

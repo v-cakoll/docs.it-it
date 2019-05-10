@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 186c5bc91204770e636eed5c008db23b798b6880
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcc905353ada734e50fd56f50c4f705aa400f70d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710251"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608480"
 ---
 # <a name="generics-c-programming-guide"></a>Generics (Guida per programmatori C#)
 I generics sono stati aggiunti alla versione 2.0 del linguaggio C# e di Common Language Runtime (CLR). I generics introducono in .NET Framework il concetto dei parametri di tipo, che consentono di progettare classi e metodi che rinviano la specifica di uno o più tipi finché non si dichiara la classe o il metodo e si crea un'istanza dal codice client. Ad esempio, usando un parametro di tipo generico T è possibile scrivere un'unica classe che altro codice client può usare senza rischiare cast di runtime o operazioni di boxing, come illustrato di seguito:  
@@ -20,42 +20,42 @@ I generics sono stati aggiunti alla versione 2.0 del linguaggio C# e di Common L
   
 ## <a name="generics-overview"></a>Panoramica sui generics  
   
--   Usare i tipi generici per ottimizzare il riutilizzo del codice, l'indipendenza dai tipi e le prestazioni.  
+- Usare i tipi generici per ottimizzare il riutilizzo del codice, l'indipendenza dai tipi e le prestazioni.  
   
--   L'uso più comune dei generics consiste nel creare classi di raccolte.  
+- L'uso più comune dei generics consiste nel creare classi di raccolte.  
   
--   La libreria di classi .NET Framework contiene diverse nuove classi di raccolte generiche nello spazio dei nomi <xref:System.Collections.Generic>. Queste classi devono essere usate ogni volta che sia possibile al posto di classi come <xref:System.Collections.ArrayList> nello spazio dei nomi <xref:System.Collections>.  
+- La libreria di classi .NET Framework contiene diverse nuove classi di raccolte generiche nello spazio dei nomi <xref:System.Collections.Generic>. Queste classi devono essere usate ogni volta che sia possibile al posto di classi come <xref:System.Collections.ArrayList> nello spazio dei nomi <xref:System.Collections>.  
   
--   È possibile creare interfacce, classi, metodi, eventi e delegati generici.  
+- È possibile creare interfacce, classi, metodi, eventi e delegati generici.  
   
--   Le classi generiche possono essere limitate in modo da abilitare l'accesso ai metodi per particolari tipi di dati.  
+- Le classi generiche possono essere limitate in modo da abilitare l'accesso ai metodi per particolari tipi di dati.  
   
--   Le informazioni sui tipi usati in un tipo di dati generico possono essere ottenute usando la reflection in fase di esecuzione.  
+- Le informazioni sui tipi usati in un tipo di dati generico possono essere ottenute usando la reflection in fase di esecuzione.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  Per ulteriori informazioni:  
   
--   [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
   
--   [Vantaggi dei generics](../../../csharp/programming-guide/generics/benefits-of-generics.md)  
+- [Vantaggi dei generics](../../../csharp/programming-guide/generics/benefits-of-generics.md)  
   
--   [Parametri di tipo generico](../../../csharp/programming-guide/generics/generic-type-parameters.md)  
+- [Parametri di tipo generico](../../../csharp/programming-guide/generics/generic-type-parameters.md)  
   
--   [Vincoli sui parametri di tipo](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
+- [Vincoli sui parametri di tipo](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
   
--   [Classi generiche](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [Classi generiche](../../../csharp/programming-guide/generics/generic-classes.md)  
   
--   [Interfacce generiche](../../../csharp/programming-guide/generics/generic-interfaces.md)  
+- [Interfacce generiche](../../../csharp/programming-guide/generics/generic-interfaces.md)  
   
--   [Metodi generici](../../../csharp/programming-guide/generics/generic-methods.md)  
+- [Metodi generici](../../../csharp/programming-guide/generics/generic-methods.md)  
   
--   [Delegati generici](../../../csharp/programming-guide/generics/generic-delegates.md)  
+- [Delegati generici](../../../csharp/programming-guide/generics/generic-delegates.md)  
   
--   [Differenze tra modelli C++ e generics C#](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)  
+- [Differenze tra modelli C++ e generics C#](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)  
   
--   [Generics e reflection](../../../csharp/programming-guide/generics/generics-and-reflection.md)  
+- [Generics e reflection](../../../csharp/programming-guide/generics/generics-and-reflection.md)  
   
--   [Generics in fase di esecuzione](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
+- [Generics in fase di esecuzione](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  Per altre informazioni, vedere la [specifica del linguaggio C#](~/_csharplang/spec/types.md#constructed-types).  

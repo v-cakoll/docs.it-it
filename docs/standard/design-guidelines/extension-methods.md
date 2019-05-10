@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
-ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1835f84a5126ef07adbe119089d2d943ffda18cd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026419"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615281"
 ---
 # <a name="extension-methods"></a>Metodi di estensione
 I metodi di estensione sono una funzionalità del linguaggio che consente ai metodi statici di essere chiamato usando la sintassi di chiamata del metodo di istanza. Questi metodi devono richiedere almeno un parametro, che rappresenta l'istanza che è il metodo su cui operare.  

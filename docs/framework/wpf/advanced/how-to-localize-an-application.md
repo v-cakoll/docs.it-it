@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: d08f991204b2d74899cbd1aee82c0cc23e175dd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8f1251195fdb21ac57030056abc7b5657edb49fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298318"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614615"
 ---
 # <a name="how-to-localize-an-application"></a>Procedura: Localizzare un'applicazione
 Questa esercitazione spiega come creare un'applicazione localizzata usando lo strumento LocBaml.  
@@ -91,21 +91,21 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
 4. Le opzioni che è possibile specificare quando si esegue LocBaml sono le seguenti:  
   
-    -   **analizzare** o **-p:** Analizza Baml, le risorse o [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] file per generare un file con estensione csv o txt.  
+    - **analizzare** o **-p:** Analizza Baml, le risorse o [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] file per generare un file con estensione csv o txt.  
   
-    -   **generare** o **-g:** Genera un file binario localizzato usando un file convertito.  
+    - **generare** o **-g:** Genera un file binario localizzato usando un file convertito.  
   
-    -   **out** oppure **-o** {*filedirectory*] **:** Nome di file di output.  
+    - **out** oppure **-o** {*filedirectory*] **:** Nome di file di output.  
   
-    -   **le impostazioni cultura** oppure **- cul** {*dalle impostazioni cultura*] **:** Impostazioni locali degli assembly di output.  
+    - **le impostazioni cultura** oppure **- cul** {*dalle impostazioni cultura*] **:** Impostazioni locali degli assembly di output.  
   
-    -   **traduzione** oppure **- trans** {*Translation*] **:** File convertito o localizzato.  
+    - **traduzione** oppure **- trans** {*Translation*] **:** File convertito o localizzato.  
   
-    -   **asmpath** oppure **- asmpath:** {*filedirectory*] **:** Se il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] codice contiene controlli personalizzati, è necessario specificare il **asmpath** all'assembly dei controlli personalizzati.  
+    - **asmpath** oppure **- asmpath:** {*filedirectory*] **:** Se il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] codice contiene controlli personalizzati, è necessario specificare il **asmpath** all'assembly dei controlli personalizzati.  
   
-    -   **nologo:** Non visualizza loghi o copyright informazioni.  
+    - **nologo:** Non visualizza loghi o copyright informazioni.  
   
-    -   **verbose:** Visualizza le informazioni sulla modalità dettagliata.  
+    - **verbose:** Visualizza le informazioni sulla modalità dettagliata.  
   
     > [!NOTE]
     >  Se è necessario un elenco delle opzioni quando si esegue lo strumento, digitare **LocBaml.exe** e premere INVIO.  
@@ -133,19 +133,19 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
 
    I campi di sette sono:  
   
-   1.  **Nome BAML**. Il nome della risorsa BAML rispetto all'assembly satellite per la lingua di origine.  
+   1. **Nome BAML**. Il nome della risorsa BAML rispetto all'assembly satellite per la lingua di origine.  
   
-   2.  **Chiave di risorsa**. L'identificatore della risorsa localizzata.  
+   2. **Chiave di risorsa**. L'identificatore della risorsa localizzata.  
   
-   3.  **Categoria**. Tipo di valore. Visualizzare [commenti e gli attributi di localizzazione](localization-attributes-and-comments.md).  
+   3. **Categoria**. Tipo di valore. Visualizzare [commenti e gli attributi di localizzazione](localization-attributes-and-comments.md).  
   
-   4.  **Leggibilità**. Se il valore può essere letto da un localizzatore. Visualizzare [commenti e gli attributi di localizzazione](localization-attributes-and-comments.md).  
+   4. **Leggibilità**. Se il valore può essere letto da un localizzatore. Visualizzare [commenti e gli attributi di localizzazione](localization-attributes-and-comments.md).  
   
-   5.  **Modificabilità**. Se il valore può essere modificato da un localizzatore. Visualizzare [commenti e gli attributi di localizzazione](localization-attributes-and-comments.md).  
+   5. **Modificabilità**. Se il valore può essere modificato da un localizzatore. Visualizzare [commenti e gli attributi di localizzazione](localization-attributes-and-comments.md).  
   
-   6.  **Commenti**. Descrizione aggiuntiva del valore per determinarne la modalità di localizzazione. Visualizzare [commenti e gli attributi di localizzazione](localization-attributes-and-comments.md).  
+   6. **Commenti**. Descrizione aggiuntiva del valore per determinarne la modalità di localizzazione. Visualizzare [commenti e gli attributi di localizzazione](localization-attributes-and-comments.md).  
   
-   7.  **Valore**. Il valore di testo da convertire nelle impostazioni cultura desiderate.  
+   7. **Valore**. Il valore di testo da convertire nelle impostazioni cultura desiderate.  
   
    La tabella seguente mostra come viene eseguito il mapping di questi campi ai valori delimitati del file CSV:  
   
@@ -188,9 +188,9 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
 7. Per testare il nuovo assembly satellite, è necessario modificare le impostazioni cultura con cui verrà eseguita l'applicazione. Questa operazione può essere eseguita in due modi:  
   
-    -   Modificare le impostazioni internazionali del sistema operativo (**avviare** &#124; **Pannello di controllo** &#124; **Regional and Language Options**).  
+    - Modificare le impostazioni internazionali del sistema operativo (**avviare** &#124; **Pannello di controllo** &#124; **Regional and Language Options**).  
   
-    -   Aggiungere il codice seguente al file App.xaml.cs nell'applicazione:  
+    - Aggiungere il codice seguente al file App.xaml.cs nell'applicazione:  
   
    [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
    [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
@@ -199,11 +199,11 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>Alcuni suggerimenti per l'uso di LocBaml  
   
--   Tutti gli assembly dipendenti che definiscono i controlli personalizzati devono essere copiati nella directory locale di LocBaml o installati in Global Assembly Cache. È un passaggio necessario perché l'API di localizzazione deve avere accesso agli assembly dipendenti quando legge [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].  
+- Tutti gli assembly dipendenti che definiscono i controlli personalizzati devono essere copiati nella directory locale di LocBaml o installati in Global Assembly Cache. È un passaggio necessario perché l'API di localizzazione deve avere accesso agli assembly dipendenti quando legge [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].  
   
--   Se l'assembly principale è firmato, anche la DLL di risorse generata deve essere firmata per poter essere caricata.  
+- Se l'assembly principale è firmato, anche la DLL di risorse generata deve essere firmata per poter essere caricata.  
   
--   La versione della DLL di risorsa localizzata deve essere sincronizzata con l'assembly principale.  
+- La versione della DLL di risorsa localizzata deve essere sincronizzata con l'assembly principale.  
   
 <a name="Whats_Next"></a>   
 ## <a name="whats-next"></a>Argomenti successivi  

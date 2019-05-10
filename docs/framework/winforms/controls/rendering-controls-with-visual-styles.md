@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b97ce0e4ce32e272ff884240b566c1c1c0e0d271
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903435"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614653"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Rendering dei controlli con stili visivi
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] offre supporto per il rendering dei controlli e di altri elementi dell'interfaccia utente (UI) di Windows usando gli stili di visualizzazione nei sistemi operativi che li supportano. Questo argomento illustra i diversi livelli di supporto di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per il rendering dei controlli e di altri elementi dell'interfaccia utente con lo stile di visualizzazione corrente del sistema operativo.  
@@ -27,27 +27,27 @@ ms.locfileid: "61903435"
   
  Alcune di queste classi sono progettate per creare il relativo controllo, indipendentemente dalla disponibilità degli stili di visualizzazione. Se gli stili di visualizzazione sono abilitati, i membri della classe creeranno il relativo controllo con gli stili impostati. Se invece sono disabilitati, i membri della classe creeranno il controllo nello stile classico di Windows. Tali classi includono:  
   
--   <xref:System.Windows.Forms.ButtonRenderer>  
+- <xref:System.Windows.Forms.ButtonRenderer>  
   
--   <xref:System.Windows.Forms.CheckBoxRenderer>  
+- <xref:System.Windows.Forms.CheckBoxRenderer>  
   
--   <xref:System.Windows.Forms.GroupBoxRenderer>  
+- <xref:System.Windows.Forms.GroupBoxRenderer>  
   
--   <xref:System.Windows.Forms.RadioButtonRenderer>  
+- <xref:System.Windows.Forms.RadioButtonRenderer>  
   
  Altre classi possono creare il relativo controllo solo quando sono disponibili gli stili di visualizzazione e i membri di tali classi genereranno un'eccezione se gli stili di visualizzazione sono disabilitati. Tali classi includono:  
   
--   <xref:System.Windows.Forms.ComboBoxRenderer>  
+- <xref:System.Windows.Forms.ComboBoxRenderer>  
   
--   <xref:System.Windows.Forms.ProgressBarRenderer>  
+- <xref:System.Windows.Forms.ProgressBarRenderer>  
   
--   <xref:System.Windows.Forms.ScrollBarRenderer>  
+- <xref:System.Windows.Forms.ScrollBarRenderer>  
   
--   <xref:System.Windows.Forms.TabRenderer>  
+- <xref:System.Windows.Forms.TabRenderer>  
   
--   <xref:System.Windows.Forms.TextBoxRenderer>  
+- <xref:System.Windows.Forms.TextBoxRenderer>  
   
--   <xref:System.Windows.Forms.TrackBarRenderer>  
+- <xref:System.Windows.Forms.TrackBarRenderer>  
   
  Per altre informazioni sull'uso di queste classi per disegnare un controllo, vedere [come: Usare una classe Control Rendering](how-to-use-a-control-rendering-class.md).  
   

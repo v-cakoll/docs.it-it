@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 6aecad3719fff98a2e834cff6eee9cfe39a699aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa6486db483c004430e0e8ed75c75a6b25c05d6b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858455"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613574"
 ---
 # <a name="endpoint-creation-overview"></a>Cenni preliminari sulla creazione di endpoint
 Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) viene eseguita tramite il *endpoint* del servizio. Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un servizio WCF. Questa sezione descrive la struttura di un endpoint e viene illustrato come definire un endpoint nella configurazione e nel codice.  
@@ -20,11 +20,11 @@ Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) vi
 ## <a name="the-structure-of-an-endpoint"></a>Struttura di un endpoint  
  Ogni endpoint contiene un indirizzo che indica dove individuare l'endpoint, un'associazione che specifica in che modo un client può comunicare con l'endpoint e un contratto che identifica i metodi disponibili.  
   
--   **Indirizzo**. L'indirizzo identifica in modo univoco l'endpoint e comunica ai potenziali utenti l'ubicazione del servizio. È rappresentato nel modello a oggetti WCF dal <xref:System.ServiceModel.EndpointAddress> indirizzo, che contiene un identificatore URI (Uniform Resource) e le proprietà di indirizzo che includono un'identità, alcuni elementi di servizi Web (WSDL, Web Services Description Language) e una raccolta di facoltativo intestazioni. Le intestazioni facoltative forniscono dettagli aggiuntivi sull'indirizzo per identificare o interagire con l'endpoint. Per altre informazioni, vedere [che specifica un indirizzo Endpoint](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+- **Indirizzo**. L'indirizzo identifica in modo univoco l'endpoint e comunica ai potenziali utenti l'ubicazione del servizio. È rappresentato nel modello a oggetti WCF dal <xref:System.ServiceModel.EndpointAddress> indirizzo, che contiene un identificatore URI (Uniform Resource) e le proprietà di indirizzo che includono un'identità, alcuni elementi di servizi Web (WSDL, Web Services Description Language) e una raccolta di facoltativo intestazioni. Le intestazioni facoltative forniscono dettagli aggiuntivi sull'indirizzo per identificare o interagire con l'endpoint. Per altre informazioni, vedere [che specifica un indirizzo Endpoint](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
--   **Associazione**. L'associazione specifica la modalità di comunicazione con l'endpoint. L'associazione specifica in che modo l'endpoint comunica con il mondo, incluso il protocollo di trasporto da usare (ad esempio, TCP o HTTP), il tipo di codifica da usare per i messaggi (ad esempio, testo o binaria) e i requisiti di sicurezza necessari (ad esempio, Secure Sockets Layer [SSL] o sicurezza dei messaggi SOAP). Per altre informazioni, vedere [utilizzando le associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+- **Associazione**. L'associazione specifica la modalità di comunicazione con l'endpoint. L'associazione specifica in che modo l'endpoint comunica con il mondo, incluso il protocollo di trasporto da usare (ad esempio, TCP o HTTP), il tipo di codifica da usare per i messaggi (ad esempio, testo o binaria) e i requisiti di sicurezza necessari (ad esempio, Secure Sockets Layer [SSL] o sicurezza dei messaggi SOAP). Per altre informazioni, vedere [utilizzando le associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
--   **Contratto di servizio**. Il contratto di servizio delinea la funzionalità che l'endpoint espone al client. Un contratto specifica le operazioni che un client può richiamare, il modulo del messaggio e il tipo di parametri o dati di input necessari per chiamare l'operazione e il tipo di elaborazione o messaggio di risposta che il client può aspettarsi. Tre tipi di contratti di base corrispondono a modelli di scambio dei messaggi (MEP, Message Exchange Pattern) di base: datagramma (unidirezionale), request/reply e duplex (bidirezionale). Il contratto di servizio può inoltre usare contratti dati e contratti di messaggio per richiedere tipi di dati e formati di messaggio specifici al momento dell'accesso. Per altre informazioni su come definire un contratto di servizio, vedere [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md). Per ricevere messaggi dal servizio in un modello di scambio dei messaggi (MEP) duplex, è possibile che un client debba implementare un contratto definito dal servizio, detto contratto di callback. Per altre informazioni, vedere [servizi Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+- **Contratto di servizio**. Il contratto di servizio delinea la funzionalità che l'endpoint espone al client. Un contratto specifica le operazioni che un client può richiamare, il modulo del messaggio e il tipo di parametri o dati di input necessari per chiamare l'operazione e il tipo di elaborazione o messaggio di risposta che il client può aspettarsi. Tre tipi di contratti di base corrispondono a modelli di scambio dei messaggi (MEP, Message Exchange Pattern) di base: datagramma (unidirezionale), request/reply e duplex (bidirezionale). Il contratto di servizio può inoltre usare contratti dati e contratti di messaggio per richiedere tipi di dati e formati di messaggio specifici al momento dell'accesso. Per altre informazioni su come definire un contratto di servizio, vedere [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md). Per ricevere messaggi dal servizio in un modello di scambio dei messaggi (MEP) duplex, è possibile che un client debba implementare un contratto definito dal servizio, detto contratto di callback. Per altre informazioni, vedere [servizi Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
  L'endpoint per un servizio può essere specificato in modo imperativo mediante l'uso di codice oppure in modo dichiarativo mediante la configurazione. Se non è specificato alcun endpoint, il runtime ne fornisce di predefiniti aggiungendone uno per ogni indirizzo di base per ciascun contratto di servizio implementato dal servizio. In genere definire endpoint nel codice non è pratico in quanto le associazioni e gli indirizzi di un servizio distribuito sono solitamente diversi da quelli usati durante lo sviluppo del servizio. In genere è più pratico definire endpoint di servizio mediante la configurazione piuttosto che mediante codice. Se le informazioni sull'associazione e sull'indirizzo non vengono incluse nel codice, tali dati possono essere modificati senza dover compilare e distribuire nuovamente l'applicazione.  
   
@@ -34,13 +34,13 @@ Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) vi
 ## <a name="defining-endpoints-in-code"></a>Definizione di endpoint nel codice  
  Nell'esempio riportato di seguito viene illustrato come specificare un endpoint nel codice.  
   
--   Definire un contratto per un `IEcho` tipo di servizio che accetta di un utente nome e l'istruzione echo con la risposta "Hello \<nome >!".  
+- Definire un contratto per un `IEcho` tipo di servizio che accetta di un utente nome e l'istruzione echo con la risposta "Hello \<nome >!".  
   
--   Implementare un servizio `Echo` del tipo definito dal contratto `IEcho`.  
+- Implementare un servizio `Echo` del tipo definito dal contratto `IEcho`.  
   
--   Specificare un indirizzo dell'endpoint di `http://localhost:8000/Echo` per il servizio.  
+- Specificare un indirizzo dell'endpoint di `http://localhost:8000/Echo` per il servizio.  
   
--   Configurare il servizio `Echo` usando un'associazione <xref:System.ServiceModel.WSHttpBinding>.  
+- Configurare il servizio `Echo` usando un'associazione <xref:System.ServiceModel.WSHttpBinding>.  
   
 ```csharp  
 Namespace Echo  

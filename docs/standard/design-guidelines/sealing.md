@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
-ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f25573c0fef29ef54dc04c5287757903429d89d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762059"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615207"
 ---
 # <a name="sealing"></a>sealed
 Una delle funzionalità orientate a oggetti Framework è che gli sviluppatori possono estendere e personalizzarli in modi non previsti per i progettisti del framework. Questa è la potenza e pericolo di progettazione estendibile. Quando si progetta il tuo framework, è quindi molto importante per progettare con attenzione per l'estensibilità quando lo si desidera e per limitare l'estendibilità è pericoloso.  

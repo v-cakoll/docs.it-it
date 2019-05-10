@@ -2,12 +2,12 @@
 title: Hosting di servizi flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: c933fd2bd46588ccd5c6115fbc2efca72bfadca4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbb5e9b687a735376d720b83607fc67350cd429f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855868"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613330"
 ---
 # <a name="hosting-workflow-services"></a>Hosting di servizi flusso di lavoro
 Per poter rispondere ai messaggi in arrivo, un servizio flusso di lavoro deve essere ospitato. I servizi flusso di lavoro utilizzano l'infrastruttura di messaggistica WCF e sono quindi ospitati in modi analoghi. Come servizi WCF, servizi flusso di lavoro possono essere ospitati in qualsiasi applicazione gestita, in Internet Information Services (IIS) o in Windows Process Activation Services (WAS). Inoltre, i servizi flusso di lavoro possono essere ospitati in Windows Server AppFabric. Per altre informazioni su Windows Server AppFabric, vedere [documentazione di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193037), [funzionalità di Hosting di AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494), e [concetti di Hosting](https://go.microsoft.com/fwlink/?LinkId=196495). Per altre informazioni sui diversi modi per ospitare WCF servizi, vedere [servizi di Hosting](../../../../docs/framework/wcf/hosting-services.md).
@@ -18,9 +18,9 @@ Per poter rispondere ai messaggi in arrivo, un servizio flusso di lavoro deve es
 ## <a name="hosting-under-iis-or-was"></a>Hosting in IIS o WAS
  L'hosting di un servizio flusso di lavoro in IIS o WAS prevede la creazione di una directory virtuale e il posizionamento dei file nella directory virtuale che definiscono il servizio e il relativo comportamento. Quando si ospita un servizio flusso di lavoro in IIS o WAS esistono diverse possibilità:
 
--   Posizionare un file con estensione xamlx che definisce il servizio flusso di lavoro in una directory virtuale IIS/WAS insieme a un file Web.config che specifica i comportamenti del servizio, gli endpoint e altri elementi di configurazione.
+- Posizionare un file con estensione xamlx che definisce il servizio flusso di lavoro in una directory virtuale IIS/WAS insieme a un file Web.config che specifica i comportamenti del servizio, gli endpoint e altri elementi di configurazione.
 
--   Posizionare un file con estensione xamlx che definisce il servizio flusso di lavoro in una directory virtuale IIS/WAS. Il file con estensione xamlx specifica gli endpoint da esporre. Gli endpoint sono specificati in un elemento `WorkflowService.Endpoints`, come indicato nell'esempio seguente.
+- Posizionare un file con estensione xamlx che definisce il servizio flusso di lavoro in una directory virtuale IIS/WAS. Il file con estensione xamlx specifica gli endpoint da esporre. Gli endpoint sono specificati in un elemento `WorkflowService.Endpoints`, come indicato nell'esempio seguente.
 
     ```xml
     <WorkflowService xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"  xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
@@ -38,9 +38,9 @@ Per poter rispondere ai messaggi in arrivo, un servizio flusso di lavoro deve es
     > [!NOTE]
     > Non è possibile specificare i comportamenti in un file con estensione xamlx, pertanto è richiesto un file Web.config se è necessario specificare impostazioni relative al comportamento.
 
--   Posizionare un file con estensione xamlx che definisce il servizio flusso di lavoro in una directory virtuale IIS/WAS. Posizionare inoltre un file con estensione svc nella directory virtuale. Il file con estensione svc consente di specificare una factory di host di servizio Web personalizzata, applicare il comportamento personalizzato o caricare la configurazione da un percorso personalizzato.
+- Posizionare un file con estensione xamlx che definisce il servizio flusso di lavoro in una directory virtuale IIS/WAS. Posizionare inoltre un file con estensione svc nella directory virtuale. Il file con estensione svc consente di specificare una factory di host di servizio Web personalizzata, applicare il comportamento personalizzato o caricare la configurazione da un percorso personalizzato.
 
--   Posizionare un assembly nella directory virtuale IIS/WAS che contiene un'attività che utilizza le attività di messaggistica di WCF.
+- Posizionare un assembly nella directory virtuale IIS/WAS che contiene un'attività che utilizza le attività di messaggistica di WCF.
 
  Un file con estensione xamlx che definisce un servizio del flusso di lavoro deve contenere una <`Service`> elemento radice o un elemento radice contenente qualsiasi tipo derivato da <xref:System.Workflow.ComponentModel.Activity>. Quando si usa il modello di attività di Visual Studio, viene creato un file con estensione xamlx. Quando si usa il modello di servizio del flusso di lavoro WCF, viene creato un file con estensione xamlx.
 

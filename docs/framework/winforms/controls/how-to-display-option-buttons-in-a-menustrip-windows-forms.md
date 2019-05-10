@@ -9,12 +9,12 @@ helpviewer_keywords:
 - displaying option buttons [Windows Forms], MenuStrip [Windows Forms]
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
-ms.openlocfilehash: e764c7e181870d8faf6157cacc13164977ce2e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2ee8f75725fada624e7075c51e111b970acc80b5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013422"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610103"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Procedura: Visualizza i pulsanti di opzione in un controllo MenuStrip (Windows Form)
 I pulsanti di opzione, detta anche pulsanti di opzione, sono simili alle caselle di controllo ad eccezione del fatto che gli utenti possono selezionare solo una alla volta. Anche se per impostazione predefinita il <xref:System.Windows.Forms.ToolStripMenuItem> classe non fornisce il comportamento del pulsante di opzione, la classe fornisce il comportamento di casella di controllo che è possibile personalizzare per implementare il comportamento di pulsanti di opzione per voci di menu in un <xref:System.Windows.Forms.MenuStrip> controllo.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: a84b00e93354a9aaff074a570cee931591816161
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 82d75559260292476d81e4440280efb46bfd86c9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053069"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613028"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Procedura: Ancorare e agganciare controlli figlio in un controllo TableLayoutPanel
 Il controllo <xref:System.Windows.Forms.TableLayoutPanel> supporta le proprietà <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> nei controlli figlio.  
@@ -28,7 +28,8 @@ Il controllo <xref:System.Windows.Forms.TableLayoutPanel> supporta le proprietà
   
 2. Impostare il valore della <xref:System.Windows.Forms.TableLayoutPanel> del controllo <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> e <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> delle proprietà per **1**.  
   
-3. Creare un controllo <xref:System.Windows.Forms.Button> nel controllo <xref:System.Windows.Forms.TableLayoutPanel>. <xref:System.Windows.Forms.Button> occupa l'angolo superiore sinistro della cella.  
+3. Creare un controllo <xref:System.Windows.Forms.Button> nel controllo <xref:System.Windows.Forms.TableLayoutPanel>. 
+  <xref:System.Windows.Forms.Button> occupa l'angolo superiore sinistro della cella.  
   
 4. Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button> , <xref:System.Windows.Forms.Control.Anchor%2A> , su `Left`. Il controllo <xref:System.Windows.Forms.Button> viene spostato per allinearlo al bordo sinistro della cella.  
   

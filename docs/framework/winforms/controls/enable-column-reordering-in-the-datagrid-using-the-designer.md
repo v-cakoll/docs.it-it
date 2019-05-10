@@ -7,12 +7,12 @@ helpviewer_keywords:
 - columns [Windows Forms], reordering
 - data [Windows Forms], displaying
 ms.assetid: d82bd69c-6799-4439-a32c-91139c5901d1
-ms.openlocfilehash: 966ffe131d10b97fe9632bb1ff23273b1dabd061
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4ccd9d0be702289386b6b817da781e255787fffe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972094"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614781"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: Abilitare il riordinamento delle colonne nel controllo DataGridView di Windows Forms usando la finestra di progettazione
 Quando si visualizzano i dati visualizzati in un form Windows <xref:System.Windows.Forms.DataGridView> (controllo), talvolta può essere confrontare i valori in colonne specifiche. Ciò può risultare poco pratico se le colonne sono ampiamente separate nel controllo, in particolare se gli utenti devono scorrere in avanti e indietro orizzontale per visualizzare tutte le colonne che sono interessati a. È possibile rendere l'attività di confronto di valori di colonna più semplice, consentendo agli utenti di riordinare le colonne. Quando si abilita riordinamento delle colonne, gli utenti possono spostare una colonna in una nuova posizione trascinando le intestazioni di colonna con il mouse.  
