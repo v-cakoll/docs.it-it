@@ -2,12 +2,12 @@
 title: Utilizzo di azioni per implementare il comportamento lato server
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23a01b7221fcfcbfc3cceb82123c68879eba98a3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875251"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063168"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Utilizzo di azioni per implementare il comportamento lato server
 
@@ -46,7 +46,7 @@ Le azioni OData consentono di implementare un comportamento che agisce su una ri
   
 3. Archiviazione dei risultati restituiti da Invoke() in modo da poter essere recuperati mediante GetResult()  
   
- I parametri possono essere passati come token poiché è possibile scrivere un provider di servizi dati da usare con i token che rappresentano le risorse. In tal caso, potrebbe essere necessario convertire (effettuare il marshalling) i token in risorse effettive prima della distribuzione all'azione effettiva. Dopo il marshalling del parametro, è necessario che venga impostato uno stato modificabile in modo tale che tutte le modifiche alla risorsa, che si verificano quando l'azione viene richiamata, vengano salvate e scritte su disco.  
+ I parametri possono essere passati come token poiché è possibile scrivere un provider di servizi dati da usare con i token che rappresentano le risorse. In tal caso, potrebbe essere necessario convertire (effettuare il marshalling) i token in risorse effettive prima della distribuzione all'azione effettiva. Dopo che il parametro è stato effettuato il marshalling, deve essere in uno stato modificabile in modo che qualsiasi modifica alla risorsa che si verifica quando viene richiamata l'azione verrà salvato e scritte su disco.  
   
  Questa interfaccia richiede due metodi: Invoke e GetResult appropriati. Invoke richiama il delegato che implementa il comportamento dell'azione e GetResult restituisce il risultato dell'azione.  
   

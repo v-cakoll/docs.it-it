@@ -2,12 +2,12 @@
 title: Passaggi tipici per l'utilizzo di LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0c472fcac0e664e17c1869ba7ffc61ed2b802e8e
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876974"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063011"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Passaggi tipici per l'utilizzo di LINQ to SQL
 Per implementare un'applicazione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], attenersi ai passaggi descritti in questo argomento. Molti passaggi sono tuttavia facoltativi ed è molto probabile che si possa usare il modello a oggetti nello stato predefinito.  
@@ -55,7 +55,7 @@ Per implementare un'applicazione [!INCLUDE[vbtecdlinq](../../../../../../include
 ## <a name="using-the-object-model"></a>Uso del modello a oggetti  
  Nell'immagine seguente viene illustrata la relazione tra lo sviluppatore e i dati in un scenario a due livelli. Per altri scenari, vedere [a più livelli e le applicazioni Remote con LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md).  
   
- ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
+ ![Screenshot che mostra il modello a oggetti Linq.](./media/the-linq-to-sql-object-model/linq-object-model-two-tier.png)  
   
  Dopo avere creato il modello a oggetti, si procederà alla descrizione delle richieste di informazioni e alla modifica dei dati all'interno del modello. Il modello a oggetti deve essere considerato in termini di oggetti e proprietà e non di righe e colonne del database. Infatti, non si gestisce direttamente il database.  
   

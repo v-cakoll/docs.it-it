@@ -3,12 +3,12 @@ title: WIF e Web farm
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 656e7b116b9da68dbb38a5a2fc3d1ed90fda576a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796104"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592271"
 ---
 # <a name="wif-and-web-farms"></a>WIF e Web farm
 Quando si usa Windows Identity Foundation (WIF) per proteggere le risorse di un'applicazione relying party (RP) distribuita in una Web farm, è necessario eseguire passaggi specifici per garantire che WIF possa elaborare i token da istanze dell'applicazione relying party in esecuzione in computer diversi nella farm. Tale elaborazione comprende la convalida delle firme dei token di sessione, la crittografia e la decrittografia dei token di sessione, la memorizzazione nella cache dei token di sessione e il rilevamento dei token di sicurezza riprodotti.  
