@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30594
 ms.assetid: 5b9fceb4-ab11-41bb-ad3b-6f1a9da8ae7e
-ms.openlocfilehash: 2b32043898986b3e3e68fab18c5f907843d7691c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6067c75835ecd14f1dd796c20ae3f29f456e541
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803254"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642949"
 ---
 # <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>Impossibile gestire gli eventi delle variabili WithEvents condivise mediante metodi non condivisi
 Una variabile dichiarata con la `Shared` modificatore è una variabile condivisa. Una variabile condivisa identifica esattamente una posizione di archiviazione. Una variabile dichiarata con la `WithEvents` modificatore asserisce che il tipo a cui appartiene la variabile gestisce il set di eventi genera la variabile. Quando viene assegnato un valore alla variabile, la proprietà creata per il `WithEvents` dichiarazione qualsiasi gestore eventi esistente, scollega e collega il nuovo gestore di eventi tramite il `Add` (metodo).  
@@ -21,7 +21,7 @@ Una variabile dichiarata con la `Shared` modificatore è una variabile condivisa
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Dichiarare il gestore eventi `Shared`.  
+- Dichiarare il gestore eventi `Shared`.  
   
 ## <a name="see-also"></a>Vedere anche
 

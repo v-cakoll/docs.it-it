@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: 3027be6ee4ed3664b81c661b6a086a3604573833
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c7fb92c963ea7fa4129cddf060fe7c0b0261fc7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802609"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665151"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>L'espressione è un valore, quindi non può essere la destinazione di un'assegnazione
 Un'istruzione prova ad assegnare un valore a un'espressione. È possibile assegnare un valore solo a una variabile scrivibile, una proprietà o un elemento della matrice in fase di esecuzione. Nell'esempio seguente viene illustrato come questo errore può verificarsi.  
@@ -49,13 +49,13 @@ exitButton.Location = exitLocation
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Se l'istruzione viene assegnato un valore a un'espressione, sostituire l'espressione con una singola variabile scrivibile, proprietà o elemento di matrice.  
+- Se l'istruzione viene assegnato un valore a un'espressione, sostituire l'espressione con una singola variabile scrivibile, proprietà o elemento di matrice.  
   
--   Se l'istruzione effettua l'accesso indiretto tramite un tipo di valore (in genere una struttura), creare una variabile per contenere il tipo di valore.  
+- Se l'istruzione effettua l'accesso indiretto tramite un tipo di valore (in genere una struttura), creare una variabile per contenere il tipo di valore.  
   
--   Assegnare la struttura appropriata (o altro tipo di valore) alla variabile.  
+- Assegnare la struttura appropriata (o altro tipo di valore) alla variabile.  
   
--   Usare la variabile per accedere alla proprietà per assegnare un valore.  
+- Usare la variabile per accedere alla proprietà per assegnare un valore.  
   
 ## <a name="see-also"></a>Vedere anche
 

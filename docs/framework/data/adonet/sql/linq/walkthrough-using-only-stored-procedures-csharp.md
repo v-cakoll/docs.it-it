@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Usare solo stored procedure (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: e5497c1c6bfe032ba272c911217adaa3bd7f4f4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4c34252f7d92985dac94663c85d3cca0dc58ab3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876525"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655119"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Procedura dettagliata: Usare solo stored procedure (C#)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'accesso ai dati eseguendo solo stored procedure. Questo approccio viene spesso è usato dagli amministratori di database per limitare l'accesso all'archivio dati.  
@@ -26,13 +26,13 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 ## <a name="prerequisites"></a>Prerequisiti  
  Per l'esecuzione di questa procedura sono richiesti i seguenti elementi:  
   
--   Per i file usati nella procedura dettagliata viene usata una cartella dedicata ("c:\linqtest7"). Creare la cartella prima di avviare la procedura.  
+- Per i file usati nella procedura dettagliata viene usata una cartella dedicata ("c:\linqtest7"). Creare la cartella prima di avviare la procedura.  
   
--   Il database di esempio Northwind.  
+- Il database di esempio Northwind.  
   
      Se questo database non è disponibile nel computer di sviluppo, è possibile scaricarlo dal sito di download Microsoft. Per istruzioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Dopo avere scaricato il database, copiare il file northwnd.mdf nella cartella c:\linqtest7 .  
   
--   Un file di codice C# generato dal database Northwind.  
+- Un file di codice C# generato dal database Northwind.  
   
      Questa procedura dettagliata è stata scritta usando lo strumento SqlMetal con la riga di comando seguente:  
   
@@ -43,17 +43,17 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 ## <a name="overview"></a>Panoramica  
  La procedura dettagliata è costituita da sei attività principali:  
   
--   Configurare il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] soluzione in Visual Studio.  
+- Configurare il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] soluzione in Visual Studio.  
   
--   Aggiunta dell'assembly System.Data.Linq al progetto.  
+- Aggiunta dell'assembly System.Data.Linq al progetto.  
   
--   Aggiunta del file di codice del database al progetto.  
+- Aggiunta del file di codice del database al progetto.  
   
--   Creazione di una connessione con il database.  
+- Creazione di una connessione con il database.  
   
--   Impostazione dell'interfaccia utente.  
+- Impostazione dell'interfaccia utente.  
   
--   Esecuzione e test dell'applicazione.  
+- Esecuzione e test dell'applicazione.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Creazione di una soluzione LINQ to SQL  
  In questa prima attività, si crea una soluzione di Visual Studio che contiene i riferimenti necessari per compilare ed eseguire un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetto.  

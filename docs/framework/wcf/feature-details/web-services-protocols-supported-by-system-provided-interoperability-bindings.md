@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: caf9a66e8c42fb80955539aa9d3eb32179309004
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b77e0bf52e20ce5bd8f1c0deecfc822e9f910675
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929688"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648382"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protocolli di servizi Web supportati da associazioni di interoperabilità fornite dal sistema
 Windows Communication Foundation (WCF) è realizzato per interoperare con servizi Web che supportano un set di specifiche note come specifiche dei servizi Web. Per semplificare la configurazione del servizio per le procedure consigliate di interoperabilità, WCF introduce tre associazioni interoperative fornite dal sistema: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, e <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Per l'interoperabilità con organizzazione per gli standard Advancement of Structured Information Standards (OASIS), WCF include un'associazione interoperativa fornita dal sistema: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Per la pubblicazione dei metadati, WCF include due associazioni interoperative fornite dal sistema: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) e [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). In questo argomento vengono elencate le specifiche supportate dalle associazioni interoperative fornite dal sistema.  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) è realizzato per interoperare con serviz
 > [!NOTE]
 >  Per informazioni sulle associazioni utilizzate per pubblicare metadati, vedere la sezione "Associazioni di metadati fornite dal sistema", più avanti in questo argomento.  
   
-|Category|Protocollo|Specifica e utilizzo|  
+|Category|Protocol|Specifica e utilizzo|  
 |--------------|--------------|-----------------------------|  
 |Trasporto|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> `BasicHttpBinding`, `WSHttpBinding` e `WS2007HttpBinding` utilizzano i trasporti HTTP e HTTPS.|  
 |Messaggistica|MTOM|[MTOM](https://go.microsoft.com/fwlink/?LinkId=95326)<br /><br /> `basicHttpBinding`, `wsHttpBinding` e `ws2007HttpBinding` supportano Message Transmission Optimization Mechanism (MTOM). Non utilizzato per impostazione predefinita. Per utilizzare MTOM, impostare l'attributo `messageEncoding` su `"Mtom"`.<br /><br /> Esempio:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) è realizzato per interoperare con serviz
   
 ### <a name="basichttpbinding"></a>basicHttpBinding  
   
-|Category|Protocollo|Specifica e utilizzo|  
+|Category|Protocol|Specifica e utilizzo|  
 |--------------|--------------|-----------------------------|  
 |Messaggistica|SOAP 1,1|[SOAP 1.1](https://go.microsoft.com/fwlink/?LinkId=90520)<br /><br /> In conformità con Basic Profile 1.1, l'elemento `basicHttpBinding` implementa il protocollo di messaggi SOAP 1.1.|  
 |Sicurezza|WSS SOAP Message Security 1.0|[WSS SOAP Message Security 1,0](https://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> In conformità con Basic Security Profile, l'elemento `basicHttpBinding` implementa la specifica Web Services Security (WSS) SOAP Message Security 1.0 per protezione basata su nome utente/password e X.509.<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential &#124;                     "Message" .../> </binding> </basicHttpBinding>`|  
@@ -45,7 +45,7 @@ Windows Communication Foundation (WCF) è realizzato per interoperare con serviz
   
 ### <a name="wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding"></a>wsHttpBinding, ws2007HttpBinding, e wsDualHttpBinding  
   
-|Category|Protocollo|Specifica e utilizzo|  
+|Category|Protocol|Specifica e utilizzo|  
 |--------------|--------------|-----------------------------|  
 |Messaggistica|SOAP 1.2|[Primer](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Framework di messaggistica](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Aggiunte (inclusa l'associazione HTTP)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
 |Messaggistica|WS-Addressing 2005/08|[Web Services Addressing 1.0 - Core](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web Services Addressing 1.0 - SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> `wsHttpBinding`, `ws2007HttpBinding` e `wsDualHttpBinding` implementano la raccomandazione WS-Addressing del World Wide Web Consortium (W3C) per abilitare la messaggistica asincrona, la correlazione dei messaggi e i meccanismi di indirizzamento indipendenti dal trasporto.<br /><br /> WCF non supporta la crittografia delle intestazioni WS-Addressing, sebbene sia consentita dalle specifiche WS-*.|  
@@ -91,7 +91,7 @@ Windows Communication Foundation (WCF) è realizzato per interoperare con serviz
 ### <a name="mexhttpbinding"></a>mexHttpBinding  
  Il [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) associazione supporta i protocolli seguenti. Per altre informazioni sull'uso di questa associazione, vedere [pubblicazione di metadati](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
-|Category|Protocollo|Specifica e utilizzo|  
+|Category|Protocol|Specifica e utilizzo|  
 |--------------|--------------|-----------------------------|  
 |Trasporto|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)|  
 |Messaggistica|SOAP 1.2|[Primer](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Framework di messaggistica](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Aggiunte (inclusa l'associazione HTTP)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
@@ -101,7 +101,7 @@ Windows Communication Foundation (WCF) è realizzato per interoperare con serviz
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
  [\<l'associazione mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) supporta i protocolli seguenti. Per altre informazioni sull'uso di questa associazione, vedere [pubblicazione di metadati](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
-|Category|Protocollo|Specifica e utilizzo|  
+|Category|Protocol|Specifica e utilizzo|  
 |--------------|--------------|-----------------------------|  
 |Trasporto|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> La protezione del trasporto è attivata.|  
 |Messaggistica|SOAP 1.2|[Primer](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Framework di messaggistica](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Aggiunte (inclusa l'associazione HTTP)](https://go.microsoft.com/fwlink/?LinkId=95329)|  

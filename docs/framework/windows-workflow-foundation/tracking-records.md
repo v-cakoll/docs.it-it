@@ -2,12 +2,12 @@
 title: Record di rilevamento
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c9c0d7d8c29d89ab47957c271444740f5f2f9b7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699851"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650930"
 ---
 # <a name="tracking-records"></a>Record di rilevamento
 L'esecuzione del flusso di lavoro è instrumentata per creare record di rilevamento per seguire l'esecuzione di un'istanza del flusso di lavoro.  

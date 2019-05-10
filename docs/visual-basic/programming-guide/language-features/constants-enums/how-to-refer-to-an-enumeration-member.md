@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumeration members
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
-ms.openlocfilehash: e9ea359d58dfa11f7bba7fec3d31955e18d24953
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 000c7f8f87792b598f177cae123010eb8888c328
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907595"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645956"
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>Procedura: Fare riferimento a un membro di enumerazione (Visual Basic)
 Le enumerazioni offrono un modo pratico per usare i set di costanti correlate e per associare i nomi di valori costanti. Ad esempio, si può dichiarare un'enumerazione per un set di costanti integer associate ai giorni della settimana e quindi usare i nomi dei giorni anziché i relativi valori integer nel codice.  
@@ -21,7 +21,7 @@ Le enumerazioni offrono un modo pratico per usare i set di costanti correlate e 
   
 ### <a name="to-refer-to-an-enumeration-member"></a>Per fare riferimento a un membro di enumerazione  
   
--   Qualificare il nome del membro con l'enumerazione. Ad esempio, l'esempio seguente assegna il `Saturday` membro del `FirstDayOfWeek` enumerazione alla variabile `DayValue`.  
+- Qualificare il nome del membro con l'enumerazione. Ad esempio, l'esempio seguente assegna il `Saturday` membro del `FirstDayOfWeek` enumerazione alla variabile `DayValue`.  
   
      [!code-vb[VbEnumsTask#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#19)]  
   

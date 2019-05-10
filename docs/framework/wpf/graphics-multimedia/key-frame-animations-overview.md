@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5c0e574ea494bedc1c359d38cda0d17bbb03fcdf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785802"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645333"
 ---
 # <a name="key-frame-animations-overview"></a>Cenni preliminari sulle animazioni con fotogrammi chiave
 Questo argomento presenta le animazioni con fotogrammi chiave. Le animazioni con fotogrammi chiave consentono di usare più di due valori di destinazione e di controllare il metodo di interpolazione di un'animazione.  
@@ -122,7 +122,7 @@ Questo argomento presenta le animazioni con fotogrammi chiave. Le animazioni con
 ### <a name="linear-interpolation"></a>Interpolazione lineare  
  Con l'interpolazione lineare, l'animazione avanza a una velocità costante della durata del segmento. Se ad esempio un segmento di fotogramma chiave esegue una transizione da 0 a 10 per una durata di 5 secondi, l'animazione restituirà i valori seguenti alle ore specificate:  
   
-|Ora|Valore di output|  
+|Time|Valore di output|  
 |----------|------------------|  
 |0|0|  
 |1|2|  

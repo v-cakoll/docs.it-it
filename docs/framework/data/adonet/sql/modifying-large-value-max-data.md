@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: eb938cfae645a9cc3811f1b5a02cddef742bac89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 134759d729d6f291db61e6f64ebd51dfe5a4443b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922226"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648713"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modifica di dati con valori elevati (massimi) in ADO.NET
 I tipi di dati LOB (oggetti di grandi dimensioni) sono quelli che superano la dimensione massima di 8 kilobyte (KB) per le righe. In SQL Server viene fornito un identificatore `max` per i tipi di dati `varchar`, `nvarchar` e `varbinary` per consentire l'archiviazione di valori di dimensioni pari a 2^32 byte. Nelle colonne di tabelle e nelle variabili Transact-SQL possono essere specificati tipi di dati `varchar(max)`, `nvarchar(max)` o `varbinary(max)`. In ADO.NET i tipi di dati `max` possono essere recuperati da un `DataReader` e possono inoltre essere specificati come parametri di input e di output senza richiedere una gestione speciale. Per tipi di dati `varchar` di grandi dimensioni, è possibile recuperare e aggiornare i dati in modo incrementale.  
@@ -26,11 +26,11 @@ I tipi di dati LOB (oggetti di grandi dimensioni) sono quelli che superano la di
 ## <a name="large-value-type-restrictions"></a>Restrizioni per i tipi di valori di grandi dimensioni  
  Le seguenti restrizioni si applicano ai tipi di dati `max` e non ai tipi di dati di dimensioni minori:  
   
--   Un tipo `sql_variant` non può contenere un tipo di dati `varchar` di grandi dimensioni.  
+- Un tipo `sql_variant` non può contenere un tipo di dati `varchar` di grandi dimensioni.  
   
--   Le colonne `varchar` di grandi dimensioni non possono essere specificate come colonne di chiave primaria in un indice. Sono consentite in una colonna inclusa in un indice non cluster.  
+- Le colonne `varchar` di grandi dimensioni non possono essere specificate come colonne di chiave primaria in un indice. Sono consentite in una colonna inclusa in un indice non cluster.  
   
--   Le colonne `varchar` di grandi dimensioni non possono essere usate come colonne chiave di partizionamento.  
+- Le colonne `varchar` di grandi dimensioni non possono essere usate come colonne chiave di partizionamento.  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Uso di tipi di valori di grandi dimensioni in Transact-SQL  
  La funzione `OPENROWSET` di Transact-SQL è un metodo unico per eseguire la connessione e l'accesso ai dati remoti. Include tutte le informazioni di connessione necessarie per l'accesso remoto ai dati da un'origine dati OLE DB. È possibile fare riferimento a `OPENROWSET` nella clausola FROM di una query come se fosse un nome di tabella. È inoltre possibile farvi riferimento come tabella di destinazione di un'istruzione INSERT, UPDATE o DELETE, soggetta alle funzionalità del provider OLE DB.  

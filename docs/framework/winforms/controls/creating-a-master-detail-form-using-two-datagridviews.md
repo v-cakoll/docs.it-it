@@ -10,12 +10,12 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: a887dacfcb83b4b6ea4cb2690ab09b0d1b20b4fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 774151efb136207a1c4f7a2f8f812bbbaefbf9e1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772892"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648215"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Procedura dettagliata: Creazione di un modulo Master-Details usando due controlli DataGridView di Windows Forms
 Uno degli scenari più comuni per l'uso di <xref:System.Windows.Forms.DataGridView> controllo è il *master/dettaglio* form, in cui viene visualizzata una relazione padre/figlio tra due tabelle di database. La selezione di righe nella tabella master fa sì che la tabella di dettagli da aggiornare con i dati figlio corrispondente.  

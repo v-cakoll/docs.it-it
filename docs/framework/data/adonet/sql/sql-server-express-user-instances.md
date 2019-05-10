@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb9b61f0c0b787a2de0a39a0d47c5767acad9cc5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876278"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645885"
 ---
 # <a name="sql-server-express-user-instances"></a>Connessione alle istanze utente di SQL Server Express
 In Microsoft SQL Server Express Edition (SQL Server Express) è supportata la funzionalità istanze utente, disponibile solo quando si usa il provider di dati .NET Framework per SQL Server (`SqlClient`). Un'istanza utente è un'istanza distinta del motore di database di SQL Server Express generata da un'istanza padre. Le istanze utente consentono agli utenti non amministratori di collegarsi e connettersi ai database SQL Server Express dai propri computer locali. Ogni istanza viene eseguita nel contesto di sicurezza del singolo utente, a livello di un'istanza per ogni utente.  
@@ -41,15 +41,15 @@ sp_configure 'user instances enabled','0'
   
  Si noti quanto segue sull'esempio di stringa di connessione illustrato di seguito:  
   
--   La parola chiave `Data Source` fa riferimento all'istanza padre di SQL Server Express che genera l'istanza utente. L'istanza predefinita è .\sqlexpress.  
+- La parola chiave `Data Source` fa riferimento all'istanza padre di SQL Server Express che genera l'istanza utente. L'istanza predefinita è .\sqlexpress.  
   
--   `Integrated Security` è impostato su `true`. Per connettersi a un'istanza utente, è necessario usare l'autenticazione di Windows. Gli account di accesso di SQL Server non sono supportati.  
+- `Integrated Security` è impostato su `true`. Per connettersi a un'istanza utente, è necessario usare l'autenticazione di Windows. Gli account di accesso di SQL Server non sono supportati.  
   
--   `User Instance` è impostata su `true`, che richiama un'istanza utente. Il valore predefinito è `false`.  
+- `User Instance` è impostata su `true`, che richiama un'istanza utente. Il valore predefinito è `false`.  
   
--   La parola chiave per la stringa di connessione `AttachDbFileName` viene usata per collegare il file di database primario (con estensione mdf) che deve includere il nome del percorso completo. `AttachDbFileName` corrisponde anche alle chiavi "extended properties" e "initial file name" all'interno della stringa di connessione <xref:System.Data.SqlClient.SqlConnection>.  
+- La parola chiave per la stringa di connessione `AttachDbFileName` viene usata per collegare il file di database primario (con estensione mdf) che deve includere il nome del percorso completo. `AttachDbFileName` corrisponde anche alle chiavi "extended properties" e "initial file name" all'interno della stringa di connessione <xref:System.Data.SqlClient.SqlConnection>.  
   
--   La stringa di sostituzione `|DataDirectory|` racchiusa tra barre verticali fa riferimento alla directory di dati dell'applicazione che apre la connessione e fornisce un percorso relativo che indica la posizione dei file di database e di log, con estensione mdf e ldf. Se si desidera individuare altrove questi file, è necessario fornire il percorso completo.  
+- La stringa di sostituzione `|DataDirectory|` racchiusa tra barre verticali fa riferimento alla directory di dati dell'applicazione che apre la connessione e fornisce un percorso relativo che indica la posizione dei file di database e di log, con estensione mdf e ldf. Se si desidera individuare altrove questi file, è necessario fornire il percorso completo.  
   
 ```  
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -144,11 +144,11 @@ private static void OpenSqlConnection()
   
  Gli scenari delle istanze utente includono:  
   
--   Qualsiasi applicazione in modalità utente singolo in cui non è necessario condividere dati.  
+- Qualsiasi applicazione in modalità utente singolo in cui non è necessario condividere dati.  
   
--   Distribuzione ClickOnce. Se .NET Framework 2.0 (o versione successiva) e SQL Server Express sono già installati nel computer di destinazione, il pacchetto di installazione scaricato come risultato di un'azione ClickOnce può essere installato e usato da utenti non amministratori. Si noti che un amministratore deve installare SQL Server Express se fa parte dell'installazione. Per altre informazioni, vedere [distribuzione ClickOnce per Windows Form](../../../winforms/clickonce-deployment-for-windows-forms.md).
+- Distribuzione ClickOnce. Se .NET Framework 2.0 (o versione successiva) e SQL Server Express sono già installati nel computer di destinazione, il pacchetto di installazione scaricato come risultato di un'azione ClickOnce può essere installato e usato da utenti non amministratori. Si noti che un amministratore deve installare SQL Server Express se fa parte dell'installazione. Per altre informazioni, vedere [distribuzione ClickOnce per Windows Form](../../../winforms/clickonce-deployment-for-windows-forms.md).
   
--   Hosting ASP.NET dedicato con autenticazione di Windows. Una Intranet può contenere una singola istanza di SQL Server Express. L'applicazione si connette usando l'account di Windows ASPNET, non tramite rappresentazione. Le istanze utente non devono essere usate per scenari di hosting di terze parti o condivisi in cui tutte le applicazioni condividerebbero la stessa istanza utente e non rimarrebbero più isolate una dall'altra.  
+- Hosting ASP.NET dedicato con autenticazione di Windows. Una Intranet può contenere una singola istanza di SQL Server Express. L'applicazione si connette usando l'account di Windows ASPNET, non tramite rappresentazione. Le istanze utente non devono essere usate per scenari di hosting di terze parti o condivisi in cui tutte le applicazioni condividerebbero la stessa istanza utente e non rimarrebbero più isolate una dall'altra.  
   
 ## <a name="see-also"></a>Vedere anche
 

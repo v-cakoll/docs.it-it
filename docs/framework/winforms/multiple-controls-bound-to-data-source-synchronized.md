@@ -8,19 +8,19 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a39c50bfc452c807a18a9bf0a65e56cb75d20aa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800767"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655634"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Procedura: Garantire la sincronizzazione di più controlli associati alla stessa origine dati
 Quando si lavora con data binding in Windows Form, spesso più controlli associati alla stessa origine dati. In alcuni casi, è necessario eseguire passaggi aggiuntivi per garantire che le proprietà associate dei controlli restino sincronizzate tra loro e l'origine dati. Questi passaggi sono necessari in due situazioni:  
   
--   Se l'origine dati non implementa <xref:System.ComponentModel.IBindingList>e quindi generare <xref:System.ComponentModel.IBindingList.ListChanged> eventi di tipo <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
+- Se l'origine dati non implementa <xref:System.ComponentModel.IBindingList>e quindi generare <xref:System.ComponentModel.IBindingList.ListChanged> eventi di tipo <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
   
--   Se l'origine dati implementa <xref:System.ComponentModel.IEditableObject>.  
+- Se l'origine dati implementa <xref:System.ComponentModel.IEditableObject>.  
   
  Nel primo caso, è possibile usare un <xref:System.Windows.Forms.BindingSource> per associare l'origine dati ai controlli. Nel secondo caso, si utilizza un <xref:System.Windows.Forms.BindingSource> e gestire i <xref:System.Windows.Forms.BindingSource.BindingComplete> eventi e chiamate <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> sull'oggetto associato <xref:System.Windows.Forms.BindingManagerBase>.  
   
@@ -34,11 +34,11 @@ Quando si lavora con data binding in Windows Form, spesso più controlli associa
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Questo esempio di codice necessaria  
+- Questo esempio di codice necessaria  
   
--   Riferimenti agli assembly <xref:System>, <xref:System.Windows.Forms> e <xref:System.Drawing>.  
+- Riferimenti agli assembly <xref:System>, <xref:System.Windows.Forms> e <xref:System.Drawing>.  
   
--   Un form con il <xref:System.Windows.Forms.Form.Load> evento come gestito e una chiamata per il `InitializeControlsAndDataSource` metodo nell'esempio del form <xref:System.Windows.Forms.Form.Load> gestore dell'evento.  
+- Un form con il <xref:System.Windows.Forms.Form.Load> evento come gestito e una chiamata per il `InitializeControlsAndDataSource` metodo nell'esempio del form <xref:System.Windows.Forms.Form.Load> gestore dell'evento.  
   
 ## <a name="see-also"></a>Vedere anche
 
