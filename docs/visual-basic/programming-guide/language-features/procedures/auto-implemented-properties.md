@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4577609c78271ac91e011b20ef6a8b4066072428
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864312"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649663"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Proprietà implementate automaticamente (Visual Basic)
 *Proprietà implementate automaticamente* consentono di specificare rapidamente una proprietà di una classe senza dover scrivere codice per `Get` e `Set` la proprietà. Quando si scrive il codice per una proprietà implementata automaticamente, il compilatore Visual Basic crea automaticamente un campo privato per archiviare la variabile della proprietà oltre a creare le routine `Get` e `Set` associate.  
@@ -52,13 +52,13 @@ End Class
   
  Il campo sottostante presenta inoltre le caratteristiche seguenti:  
   
--   Il modificatore di accesso per il campo sottostante è sempre `Private`, anche quando la proprietà stessa dispone di un livello di accesso diverso, ad esempio `Public`.  
+- Il modificatore di accesso per il campo sottostante è sempre `Private`, anche quando la proprietà stessa dispone di un livello di accesso diverso, ad esempio `Public`.  
   
--   Se la proprietà è contrassegnata come `Shared`, anche il campo sottostante è condiviso.  
+- Se la proprietà è contrassegnata come `Shared`, anche il campo sottostante è condiviso.  
   
--   Gli attributi specificati per la proprietà non si applicano al campo sottostante.  
+- Gli attributi specificati per la proprietà non si applicano al campo sottostante.  
   
--   L'accesso al campo sottostante può essere eseguito dal codice all'interno della classe e dagli strumenti di debug, ad esempio la finestra Espressioni di controllo. Tuttavia, il campo sottostante non viene visualizzato in un elenco di completamento di parole di IntelliSense.  
+- L'accesso al campo sottostante può essere eseguito dal codice all'interno della classe e dagli strumenti di debug, ad esempio la finestra Espressioni di controllo. Tuttavia, il campo sottostante non viene visualizzato in un elenco di completamento di parole di IntelliSense.  
   
 ## <a name="initializing-an-auto-implemented-property"></a>Inizializzazione di una proprietà implementata automaticamente  
  Qualsiasi espressione utilizzabile per inizializzare un campo è valida per l'inizializzazione di una proprietà implementata automaticamente. Quando si inizializza una proprietà implementata automaticamente, l'espressione viene valutata e passata alla routine `Set` per la proprietà. Gli esempi di codice seguenti mostrano alcune proprietà implementate automaticamente che includono i valori iniziali.  
@@ -78,17 +78,17 @@ End Class
   
  È necessario usare la sintassi di definizione della proprietà espansa se si vuole eseguire una delle operazioni seguenti:  
   
--   Aggiungere codice alla routine `Get` o `Set` di una proprietà, ad esempio il codice per convalidare i valori in ingresso nella routine `Set`. È possibile, ad esempio, verificare che una stringa che rappresenta un numero di telefono contenga il numero obbligatorio di numerali prima di impostare il valore della proprietà.  
+- Aggiungere codice alla routine `Get` o `Set` di una proprietà, ad esempio il codice per convalidare i valori in ingresso nella routine `Set`. È possibile, ad esempio, verificare che una stringa che rappresenta un numero di telefono contenga il numero obbligatorio di numerali prima di impostare il valore della proprietà.  
   
--   Specificare un'accessibilità diversa per le routine `Get` e `Set`. Ad esempio, si può impostare la routine `Set` come `Private` e la routine `Get` come `Public`.  
+- Specificare un'accessibilità diversa per le routine `Get` e `Set`. Ad esempio, si può impostare la routine `Set` come `Private` e la routine `Get` come `Public`.  
   
--   Creare proprietà `WriteOnly`.  
+- Creare proprietà `WriteOnly`.  
   
--   Usare proprietà con parametri (incluse le proprietà `Default`). È necessario dichiarare una proprietà espansa per specificare un parametro per la proprietà o per specificare parametri aggiuntivi per la routine `Set`.  
+- Usare proprietà con parametri (incluse le proprietà `Default`). È necessario dichiarare una proprietà espansa per specificare un parametro per la proprietà o per specificare parametri aggiuntivi per la routine `Set`.  
   
--   Inserire un attributo nel campo sottostante o modificare il livello di accesso del campo sottostante.  
+- Inserire un attributo nel campo sottostante o modificare il livello di accesso del campo sottostante.  
   
--   Fornire commenti XML per il campo sottostante.  
+- Fornire commenti XML per il campo sottostante.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>Espansione di una proprietà implementata automaticamente  
  Se è necessario convertire una proprietà implementata automaticamente in una proprietà espansa contenente una routine `Get` o `Set`, l'editor di codice di Visual Basic può generare automaticamente le routine `Get` e `Set` e l'istruzione `End Property` per la proprietà. Il codice viene generato se si posiziona il cursore su una riga vuota che segue il `Property` istruzione, digitare un `G` (per `Get`) o un' `S` (per `Set`) e premere INVIO. L'editor di codice di Visual Basic genera automaticamente la routine `Get` o `Set` per le proprietà di sola lettura e di sola scrittura quando si preme INVIO alla fine di un'istruzione `Property`.  

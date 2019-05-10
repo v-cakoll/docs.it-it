@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f1d77ac27def556d94fac12dbde2f36d5b139de
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61830362"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649752"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Operatori aritmetici in Visual Basic
 Operatori aritmetici consentono di eseguire molte delle comuni operazioni aritmetiche che coinvolgono il calcolo dei valori numerici rappresentati da valori letterali, variabili, altre espressioni, (funzione) e le chiamate di proprietà e costanti. Anche classificati con operatori aritmetici sono elencati gli operatori di spostamento di bit, che operano a livello dei singoli bit di operandi- and -shift degli schemi di bit verso sinistra o destra.  
@@ -70,13 +70,13 @@ Operatori aritmetici consentono di eseguire molte delle comuni operazioni aritme
   
  Aritmetici non sono circolari, ovvero i bit spostati oltre un'estremità del risultato non sono reintrodotto a altra estremità. Le posizioni dei bit lasciati liberi tramite un turno sono impostate come indicato di seguito:  
   
--   0 per uno spostamento a sinistra aritmetico  
+- 0 per uno spostamento a sinistra aritmetico  
   
--   0 per uno scorrimento aritmetico a destra di un numero positivo  
+- 0 per uno scorrimento aritmetico a destra di un numero positivo  
   
--   0 per uno scorrimento aritmetico a destra di un tipo di dati non firmati (`Byte`, `UShort`, `UInteger`, `ULong`)  
+- 0 per uno scorrimento aritmetico a destra di un tipo di dati non firmati (`Byte`, `UShort`, `UInteger`, `ULong`)  
   
--   1 per uno scorrimento aritmetico a destra di un numero negativo (`SByte`, `Short`, `Integer`, o `Long`)  
+- 1 per uno scorrimento aritmetico a destra di un numero negativo (`SByte`, `Short`, `Integer`, o `Long`)  
   
  Nell'esempio seguente sposta un' `Integer` valore sia a sinistra e destra.  
   
