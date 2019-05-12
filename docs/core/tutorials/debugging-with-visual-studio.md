@@ -3,16 +3,16 @@ title: Eseguire il debug dell'applicazione .NET Core Hello World con Visual Stud
 description: Informazioni su come eseguire il debug di un'app Hello World scritta in C# o Visual Basic con Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 4c6a9fe46e29addf53319adf2351af3a7af05119
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610717"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063070"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Eseguire il debug dell'applicazione .NET Core Hello World C# o Visual Basic con Visual Studio 2017
 
-Finora sono stati seguiti i passaggi nell'argomento [Compilare un'applicazione Hello World usando C# con .NET Core in Visual Studio 2017](with-visual-studio.md) o [Compilare un'applicazione Hello World in Visual Basic con .NET Core in Visual Studio 2017](vb-with-visual-studio.md), per creare un'applicazione console semplice. Dopo aver scritto e compilato l'applicazione, è possibile iniziare a testarla. Visual Studio include un set completo di strumenti di debug che è possibile usare durante il test e la risoluzione dei problemi dell'applicazione.
+Finora sono stati seguiti i passaggi nell'argomento [Compilare un'applicazione Hello World usando C# con .NET Core in Visual Studio 2017](with-visual-studio.md) o [Compilare un'applicazione Hello World in Visual Basic con .NET Core in Visual Studio 2017](vb-with-visual-studio.md), per creare un'applicazione console semplice. Dopo aver scritto e compilato l'applicazione, è possibile iniziare a testarla. Visual Studio include un set completo di strumenti di debug che è possibile usare durante il test e la risoluzione dei problemi dell'applicazione. 
 
 ## <a name="debugging-in-debug-mode"></a>Debug in modalità di debug
 
