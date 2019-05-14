@@ -2,27 +2,27 @@
 title: Uso della funzionalità Async per l'accesso ai file (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 9fa96869e56357a5feb4b0ac0b5bc7514f6eb186
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34ce05bd1270877aa3c626292e8b2464a23fad0c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657376"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583430"
 ---
 # <a name="using-async-for-file-access-c"></a>Uso della funzionalità Async per l'accesso ai file (C#)
 È possibile usare la funzionalità Async per accedere ai file. Con la funzionalità Async è possibile chiamare i metodi asincroni senza usare callback o suddividere il codice in più metodi o espressioni lambda. Per rendere asincrono il codice sincrono, è sufficiente chiamare un metodo asincrono anziché un metodo sincrono e aggiungere alcune parole chiave al codice.  
   
  È opportuno considerare i seguenti motivi per l'aggiunta della modalità asincrona alle chiamate di accesso ai file:  
   
--   La modalità asincrona rende più reattive le applicazioni dell'interfaccia utente perché il thread dell'interfaccia utente che avvia l'operazione può eseguire altre operazioni. Se il thread dell'interfaccia utente deve eseguire codice che richiede molto tempo (ad esempio, più di 50 millisecondi), l'interfaccia utente può bloccarsi fino al completamento dell'I/O e il thread dell'interfaccia utente può nuovamente elaborare l'input di tastiera e mouse e altri eventi.  
+- La modalità asincrona rende più reattive le applicazioni dell'interfaccia utente perché il thread dell'interfaccia utente che avvia l'operazione può eseguire altre operazioni. Se il thread dell'interfaccia utente deve eseguire codice che richiede molto tempo (ad esempio, più di 50 millisecondi), l'interfaccia utente può bloccarsi fino al completamento dell'I/O e il thread dell'interfaccia utente può nuovamente elaborare l'input di tastiera e mouse e altri eventi.  
   
--   La modalità asincrona migliora la scalabilità di ASP.NET e di altre applicazioni basate su server, riducendo la necessità di thread. Se l'applicazione usa un thread dedicato per ogni risposta e vengono gestite contemporaneamente mille richieste, sono necessari mille thread. Le operazioni asincrone non richiedono spesso l'uso di un thread durante l'attesa. Usano brevemente il thread di completamento di I/O esistente alla fine.  
+- La modalità asincrona migliora la scalabilità di ASP.NET e di altre applicazioni basate su server, riducendo la necessità di thread. Se l'applicazione usa un thread dedicato per ogni risposta e vengono gestite contemporaneamente mille richieste, sono necessari mille thread. Le operazioni asincrone non richiedono spesso l'uso di un thread durante l'attesa. Usano brevemente il thread di completamento di I/O esistente alla fine.  
   
--   La latenza di un'operazione di accesso ai file può essere molto bassa nelle condizioni attuali, ma aumentare notevolmente in futuro. Ad esempio, un file può essere spostato in tutt'altra parte del mondo.  
+- La latenza di un'operazione di accesso ai file può essere molto bassa nelle condizioni attuali, ma aumentare notevolmente in futuro. Ad esempio, un file può essere spostato in tutt'altra parte del mondo.  
   
--   Il sovraccarico aggiuntivo dovuto all'uso della funzionalità Async è ridotto.  
+- Il sovraccarico aggiuntivo dovuto all'uso della funzionalità Async è ridotto.  
   
--   Le attività asincrone possono essere facilmente eseguite in parallelo.  
+- Le attività asincrone possono essere facilmente eseguite in parallelo.  
   
 ## <a name="running-the-examples"></a>Esecuzione degli esempi  
  Per eseguire gli esempi in questo argomento, è possibile creare un'**applicazione WPF** o un'**applicazione Windows Form** e quindi aggiungere un **pulsante**. Nell'evento `Click` del pulsante aggiungere una chiamata al primo metodo in ogni esempio.  

@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7bda02e1862740e6a6328835367a6a5e9929033
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bd1ced48847739318f22ec77b17a83a36fd36ee0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328309"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647774"
 ---
 # <a name="memory-mapped-files"></a>File mappati alla memoria
 Un file mappato alla memoria include il contenuto di un file nella memoria virtuale. Questo mapping tra un file e uno spazio di memoria consente a un'applicazione, inclusi più processi, di modificare il file leggendo e scrivendo direttamente nella memoria. A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare il codice gestito per accedere ai file mappati alla memoria nello stesso modo in cui le funzioni Windows native accedono ai file mappati alla memoria, come descritto in [Managing Memory-Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) (Gestione di file mappati alla memoria).  
   
  Esistono due tipi di file di cui è stato eseguito il mapping alla memoria:  
   
--   File persistenti di cui è stato eseguito il mapping alla memoria  
+- File persistenti di cui è stato eseguito il mapping alla memoria  
   
      I file persistenti sono file di cui è stato eseguito il mapping alla memoria associati a un file di origine su un disco. Quando l'ultimo processo ha terminato di usare il file, i dati vengono salvati nel file di origine sul disco. Questi file di cui è stato eseguito il mapping alla memoria sono adatti per usare file di origine di dimensioni molto grandi.  
   
--   File non persistenti di cui è stato eseguito il mapping alla memoria  
+- File non persistenti di cui è stato eseguito il mapping alla memoria  
   
      I file non persistenti sono file di cui è stato eseguito il mapping alla memoria non associati a un file su un disco. Quando l'ultimo processo ha terminato di usare il file, i dati vanno persi e il file viene recuperato dalla Garbage Collection. Questi file sono adatti per la creazione di memoria condivisa per le comunicazioni interprocesso (IPC).  
   
@@ -64,11 +64,11 @@ Un file mappato alla memoria include il contenuto di un file nella memoria virtu
 ### <a name="security"></a>Sicurezza  
  È possibile applicare i diritti di accesso quando si crea un file di cui è stato eseguito il mapping alla memoria, usando i metodi seguenti che accettano un'enumerazione <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> come parametro:  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
   
  È possibile specificare i diritti di accesso per l'apertura di un file esistente di cui è stato eseguito il mapping alla memoria usando i metodi <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A> che accettano <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> come parametro.  
   

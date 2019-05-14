@@ -2,12 +2,12 @@
 title: Cache PNRP
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 9cd1901e716cab9f1b47825a5d3ecdb071a58440
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3ed3e11e702c8933b500421de5654b212cdd80d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182481"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622987"
 ---
 # <a name="pnrp-caches"></a>Cache PNRP
 Le cache PNRP (Peer Name Resolution Protocol) sono raccolte locali di endpoint peer selezionati tramite algoritmo e mantenuti disponibili nel peer.  
@@ -15,9 +15,9 @@ Le cache PNRP (Peer Name Resolution Protocol) sono raccolte locali di endpoint p
 ## <a name="pnrp-cache-initialization"></a>Inizializzazione della cache PNRP  
  Per inizializzare la cache PNRP, o raccolta di record di nomi di peer, un nodo di peer può usare i metodi seguenti all'avvio:  
   
--   Le voci di cache persistenti presenti al momento della chiusura del nodo vengono caricate dallo spazio di archiviazione su disco rigido.  
+- Le voci di cache persistenti presenti al momento della chiusura del nodo vengono caricate dallo spazio di archiviazione su disco rigido.  
   
--   Se un'applicazione usa l'infrastruttura di collaborazione P2P, le informazioni di collaborazione sono disponibili in Gestione contatto per il nodo.  
+- Se un'applicazione usa l'infrastruttura di collaborazione P2P, le informazioni di collaborazione sono disponibili in Gestione contatto per il nodo.  
   
 ## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a>Scalabilità della risoluzione dei nomi di peer con una cache multilivello  
  Per limitare le dimensioni delle cache PNRP, i nodi di peer usano una cache multilivello, nella quale ciascun livello contiene un numero massimo di voci. Ogni livello della cache rappresenta un decimo dello spazio del numero ID PNRP (2<sup>256</sup>). Il livello minimo presente nella cache contiene un ID PNRP registrato localmente e altri ID PNRP numericamente vicini. Quando un livello di cache risulta riempito con il massimo di 20 voci, viene creato un nuovo livello inferiore. Il numero massimo di livelli della cache è nell'ordine di log10(Numero totale di ID PNRP nel cloud). Ad esempio, per un cloud globale con 100 milioni di ID PNRP, nella cache non vi sono più di 8 (=log10(100.000.000)) livelli e un numero simile di hop per risolvere un ID PNRP durante la risoluzione dei nomi. Questo meccanismo consente una tabella hash distribuita per la quale un ID PNRP arbitrario può essere risolto inoltrando messaggi di richiesta PNRP al successivo peer più vicino fino al reperimento del peer con il CPA corrispondente.  

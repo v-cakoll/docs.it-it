@@ -4,14 +4,14 @@ description: Architettura di microservizi .NET per applicazioni .NET incluse in 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ec56a02e27f4218b3abc5839d1265815e188d2ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb07f11e4c123ed04232e41d5d50d4ef59b76bbd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363020"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621229"
 ---
-# <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementare un modello di dominio del microservizio con .NET Core 
+# <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementare un modello di dominio del microservizio con .NET Core
 
 La sezione precedente ha illustrato i principi e gli schemi fondamentali per la progettazione di un modello di dominio. È giunto ora il momento di esplorare i possibili modi per implementare il modello di dominio usando .NET Core (normale codice C\#) e EF Core. Si noti che il modello di dominio sarà costituito semplicemente dal codice: avrà i requisiti del modello EF Core, ma non vere dipendenze su EF. Il modello di dominio non deve contenere dipendenze rigide o riferimenti a EF Core né a nessun altro ORM.
 
@@ -60,7 +60,7 @@ public class Order : Entity, IAggregateRoot
 
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
-  
+
     public Order(string userId, Address address, int cardTypeId, string cardNumber, string cardSecurityNumber,
             string cardHolderName, DateTime cardExpiration, int? buyerId = null, int? paymentMethodId = null)
     {
@@ -74,8 +74,8 @@ public class Order : Entity, IAggregateRoot
         // ...Additional code ...
     }
 
-    public void AddOrderItem(int productId, string productName, 
-                            decimal unitPrice, decimal discount, 
+    public void AddOrderItem(int productId, string productName,
+                            decimal unitPrice, decimal discount,
                             string pictureUrl, int units = 1)
     {
         //...
@@ -83,9 +83,9 @@ public class Order : Entity, IAggregateRoot
         // ...
 
         var orderItem = new OrderItem(productId, productName, unitPrice, discount, pictureUrl, units);
-        
+
         _orderItems.Add(orderItem);
-  
+
     }
     // ...
     // Additional methods with domain rules/logic related to the Order aggregate
@@ -117,7 +117,7 @@ Ad esempio, seguendo gli schemi DDD, **non *è* consigliabile** eseguire le oper
 OrderItem myNewOrderItem = new OrderItem(orderId, productId, productName,
     pictureUrl, unitPrice, discount, units);
 
-//... (WRONG) Accessing the OrderItems colletion directly from the application layer // or command handlers
+//... (WRONG) Accessing the OrderItems collection directly from the application layer // or command handlers
 myOrder.OrderItems.Add(myNewOrderItem);
 //...
 ```
@@ -171,12 +171,12 @@ Ad esempio, nell'esempio di codice OrderAggregate precedente, sono presenti dive
 - **Vaughn Vernon. Modellazione di aggregazioni con DDD ed Entity Framework.** Si osservi che *non* si tratta di Entity Framework Core. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. Data Points - Coding for Domain-Driven Design: Tips for Data-Focused Devs** \ (Punti dati - Creazione di codice per strutture basate sui domini: suggerimenti per lo sviluppo incentrato sui dati)
+- **Julie Lerman. Data Points - Coding for Domain-Driven Design: Tips for Data-Focused Devs** \ (Creazione di codice per strutture basate sui domini: suggerimenti per lo sviluppo incentrato sui dati)
   <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
 - **Udi Dahan. How to create fully encapsulated Domain Models** \ (Come creare modelli di dominio completamente incapsulati)
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
->[!div class="step-by-step"]
->[Precedente](microservice-domain-model.md)
->[Successivo](seedwork-domain-model-base-classes-interfaces.md)
+> [!div class="step-by-step"]
+> [Precedente](microservice-domain-model.md)
+> [Successivo](seedwork-domain-model-base-classes-interfaces.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
-ms.openlocfilehash: c0a4a492b06ac3be09d00779f97f1eb76d2690f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8066286f458c730671acbafd713d0cbda4218ec3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202683"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624617"
 ---
 # <a name="how-to-detect-network-availability-and-address-changes"></a>Procedura: Rilevare la disponibilità della rete e le modifiche all'indirizzo
 Questo esempio mostra come rilevare le modifiche apportate all'indirizzo di rete di un'interfaccia.  
@@ -48,4 +48,4 @@ namespace Examples.Net.AddressChanges
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti allo spazio dei nomi **System.Net**.
+- Riferimenti allo spazio dei nomi **System.Net**.

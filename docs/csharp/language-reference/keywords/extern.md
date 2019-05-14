@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: d860f1a3c6917238a529093672dc5f2abc5ae066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edc513a31d348dc685ce70aa8e63577473e47d97
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620195"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755896"
 ---
 # <a name="extern-c-reference"></a>extern (Riferimenti per C#)
 
@@ -29,7 +29,7 @@ La parola chiave `extern` può definire anche un alias di assembly esterno, rend
 
 È errato usare i modificatori [abstract](abstract.md) e `extern` contemporaneamente per modificare lo stesso membro. L'utilizzo del modificatore `extern` indica che il metodo viene implementato all'esterno del codice C#, mentre l'utilizzo del modificatore `abstract` indica che l'implementazione del metodo non viene fornita nella classe.
 
-La parola chiave extern ha un utilizzo più limitato in C# rispetto a C++. Per confrontare la parola chiave C# con la parola chiave C++, vedere Utilizzo di extern per specificare il collegamento in Riferimenti al linguaggio C++.
+La parola chiave extern ha un utilizzo più limitato in c# rispetto a C++. Per confrontare la parola chiave C# con la parola chiave C++, vedere Utilizzo di extern per specificare il collegamento in Riferimenti al linguaggio C++.
 
 ## <a name="example-1"></a>Esempio 1
 
@@ -43,46 +43,46 @@ In questo esempio viene illustrato un programma C# che chiama una libreria C (un
 
 1. Creare il seguente file C e denominarlo `cmdll.c`:
 
-```c
-// cmdll.c
-// Compile with: -LD
-int __declspec(dllexport) SampleMethod(int i)
-{
-  return i*10;
-}
-```
+    ```c
+    // cmdll.c
+    // Compile with: -LD
+    int __declspec(dllexport) SampleMethod(int i)
+    {
+      return i*10;
+    }
+    ```
 
 2. Aprire una finestra del prompt dei comandi degli strumenti nativi di Visual Studio x64 o x32 dalla directory di installazione di Visual Studio e compilare il file `cmdll.c` digitando **cl -LD cmdll.c** al prompt dei comandi.
 
 3. Nella stessa directory creare il seguente file C# e denominarlo `cm.cs`:
 
-```csharp
-// cm.cs
-using System;
-using System.Runtime.InteropServices;
-public class MainClass
-{
-    [DllImport("Cmdll.dll")]
-      public static extern int SampleMethod(int x);
-
-    static void Main()
+    ```csharp
+    // cm.cs
+    using System;
+    using System.Runtime.InteropServices;
+    public class MainClass
     {
-        Console.WriteLine("SampleMethod() returns {0}.", SampleMethod(5));
+        [DllImport("Cmdll.dll")]
+          public static extern int SampleMethod(int x);
+
+        static void Main()
+        {
+            Console.WriteLine("SampleMethod() returns {0}.", SampleMethod(5));
+        }
     }
-}
-```
+    ```
 
 4. Aprire una finestra del prompt dei comandi degli strumenti nativi di Visual Studio x64 o x32) dalla directory di installazione di Visual Studio e compilare il file `cm.cs` digitando:
 
-> **csc cm.cs** (al prompt dei comandi x64) o **csc-platform:x86 cm.cs** (al prompt dei comandi x32)
+    > **csc cm.cs** (al prompt dei comandi x64) o **csc-platform:x86 cm.cs** (al prompt dei comandi x32)
 
-Verrà creato il file eseguibile `cm.exe`.
+    Verrà creato il file eseguibile `cm.exe`.
 
 5. Eseguire `cm.exe`. Il metodo `SampleMethod` passa il valore 5 al file DLL, che restituisce il valore moltiplicato per 10.  Il programma produce l'output seguente:
 
-```
-SampleMethod() returns 50.
-```
+    ```
+    SampleMethod() returns 50.
+    ```
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

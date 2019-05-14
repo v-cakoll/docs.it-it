@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3eb5c9686f54bcaacef8d593f0ace4804d4ae60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1f29420038276739623c534656a94e13080637c6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098221"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626358"
 ---
 # <a name="default-marshaling-for-arrays"></a>Marshalling predefinito per le matrici
 In un'applicazione costituita interamente da codice gestito Common Language Runtime passa i tipi di matrice come parametri In/Out. Il gestore di marshalling di interoperabilità invece passa una matrice come parametro In per impostazione predefinita.  
@@ -146,7 +146,7 @@ void New3(ref String ar);
   
  Per fornire al gestore di marshalling la dimensione della matrice, è possibile modificare il codice Microsoft Intermediate Language (MSIL) prodotto da Tlbimp.exe e quindi ricompilarlo. Per informazioni dettagliate su come modificare il codice MSIL, vedere [Personalizzazione dei Runtime Callable Wrapper](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)). Per indicare il numero di elementi della matrice, applicare il tipo <xref:System.Runtime.InteropServices.MarshalAsAttribute> al parametro matrice della definizione di metodo gestito in uno dei modi seguenti:  
   
--   Identificare un altro parametro che contiene il numero di elementi nella matrice. I parametri vengono identificati in base alla posizione, considerando il primo parametro come numero 0.     
+- Identificare un altro parametro che contiene il numero di elementi nella matrice. I parametri vengono identificati in base alla posizione, considerando il primo parametro come numero 0.     
   
     ```vb  
     Sub [New](ElemCnt As Integer, _  
@@ -160,7 +160,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
--   Definire la dimensione della matrice come costante. Ad esempio:  
+- Definire la dimensione della matrice come costante. Ad esempio:  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  

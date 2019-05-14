@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: b352c35a327ed4736a1f41816d3f15c1a0f559f5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479568"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644812"
 ---
 # <a name="managed-threading-basics"></a>Nozioni di base sul threading gestito
 
@@ -42,9 +42,6 @@ I primi cinque argomenti di questa sezione contengono informazioni utili per det
   
  [Threading gestito e non gestito in Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  Illustra la relazione tra il threading gestito e non gestito, elenca gli equivalenti gestiti delle API di threading Windows e illustra l'interazione degli apartment COM e dei thread gestiti.  
-  
- [Thread.Suspend, operazioni di Garbage Collection e punti sicuri](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
- Illustra la sospensione dei thread e la Garbage Collection.  
   
  [Archiviazione locale del thread: slot di dati e campi statici relativi ai thread](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  Illustra i meccanismi di archiviazione relativi ai thread.  
