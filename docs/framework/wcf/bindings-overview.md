@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652108"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592234"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Panoramica sulle associazioni di Windows Communication Foundation
 Le associazioni sono oggetti che vengono utilizzati per specificare i dettagli di comunicazione necessarie per connettersi all'endpoint di un servizio Windows Communication Foundation (WCF). Ogni endpoint in un servizio WCF richiede un'associazione essere specificato bene. Questo argomento descrive i tipi dei dettagli di comunicazione definiti dalle associazioni, gli elementi di un'associazione, le associazioni incluse in WCF e come specificare un'associazione per un endpoint.  
@@ -36,9 +36,9 @@ Le associazioni sono oggetti che vengono utilizzati per specificare i dettagli d
   
 - <xref:System.ServiceModel.WSHttpBinding>: Un'associazione interoperativa adatta per la connessione agli endpoint conformi a WS-* protocolli.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: Usa il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] per connettersi agli altri endpoint WCF nello stesso computer.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Usa .NET Framework per connettersi ad altri endpoint WCF nello stesso computer.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: Usa il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] per creare connessioni di messaggi in coda con altri endpoint WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Usa .NET Framework per creare in coda dei messaggi le connessioni con altri endpoint WCF.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Questa associazione offre prestazioni più elevate rispetto a binding HTTP ed è ideale per l'uso in una rete locale.
   

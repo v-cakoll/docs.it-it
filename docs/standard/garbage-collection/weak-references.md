@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f2e2fd6f46a430424e6010adbe0662b5bd3db7ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121103"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622664"
 ---
 # <a name="weak-references"></a>Riferimenti deboli
 Il Garbage Collector non può raccogliere un oggetto usato da un'applicazione finché il codice dell'applicazione è in grado raggiungere tale oggetto. Si dice che l'applicazione ha un riferimento sicuro all'oggetto.  
@@ -33,11 +33,11 @@ Il Garbage Collector non può raccogliere un oggetto usato da un'applicazione fi
 ## <a name="short-and-long-weak-references"></a>Riferimenti deboli brevi e lunghi  
  È possibile creare un riferimento debole breve o lungo:  
   
--   Short  
+- Short  
   
      La destinazione di un riferimento debole breve diventa `null` quando l'oggetto viene raccolto dall'operazione di Garbage Collection. Il riferimento debole è in sé un oggetto gestito ed è soggetto a Garbage Collection come qualsiasi altro oggetto gestito.  Un riferimento debole breve è il costruttore predefinito per <xref:System.WeakReference>.  
   
--   Long  
+- Long  
   
      Un riferimento debole lungo viene mantenuto dopo la chiamata al metodo <xref:System.Object.Finalize%2A> dell'oggetto. Ciò consente che l'oggetto venga ricreato, ma lo stato dell'oggetto non è prevedibile. Per usare un riferimento lungo, specificare `true` nel costruttore <xref:System.WeakReference>.  
   

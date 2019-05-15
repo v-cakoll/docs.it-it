@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e033ba4b3b98367452b355363058adc7f1a5887
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 081548f9004d2fedf4d49845d3f44d4609fa508e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198400"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626313"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Procedura: Fare riferimento a tipi .NET da COM
 Dal punto di vista del codice client e server, le differenze tra COM e .NET Framework sono in gran parte invisibili. I client di Microsoft Visual Basic possono visualizzare un oggetto .NET nel Visualizzatore oggetti, che espone i metodi e la sintassi, le proprietà e i campi dell'oggetto esattamente come se si trattasse di un normale oggetto COM.  
@@ -28,7 +28,7 @@ Dal punto di vista del codice client e server, le differenze tra COM e .NET Fram
   
 ### <a name="to-import-a-library"></a>Per importare una libreria  
   
--   Specificare l'opzione **raw_interfaces_only** nella direttiva **#import**. Ad esempio:  
+- Specificare l'opzione **raw_interfaces_only** nella direttiva **#import**. Ad esempio:  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
@@ -36,7 +36,7 @@ Dal punto di vista del codice client e server, le differenze tra COM e .NET Fram
   
      -oppure-  
   
--   Includere una direttiva #import per Mscorlib.tlb. Ad esempio:  
+- Includere una direttiva #import per Mscorlib.tlb. Ad esempio:  
   
     ```cpp  
     #import "mscorlib.tlb"  

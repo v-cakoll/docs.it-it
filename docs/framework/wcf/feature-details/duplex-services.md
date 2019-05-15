@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 33cfcb765b93309d365a85e679107405a55a91f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8197dfc877842be824a5b10c742ef4fb7792858
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858039"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592752"
 ---
 # <a name="duplex-services"></a>Servizi duplex
 
@@ -87,10 +87,10 @@ Nel codice di esempio seguente viene illustrato come specificare l'indirizzo end
 ```
 
 > [!WARNING]
-> Il modello duplex non consente di rilevare automaticamente il momento in cui un servizio o un client permette la chiusura del proprio canale. Pertanto, se un client viene terminato in modo imprevisto, per impostazione predefinita, non sarà inviata alcuna notifica al servizio. Client e servizi sono in grado di implementare il proprio protocollo per inviarsi vicendevolmente una notifica, se necessario.
+> Il modello duplex non consente di rilevare automaticamente il momento in cui un servizio o un client permette la chiusura del proprio canale. Pertanto, se un client viene terminato in modo imprevisto, per impostazione predefinita il servizio non si riceveranno, o se un servizio viene terminato in modo imprevisto, il client non si riceveranno. Client e servizi sono in grado di implementare il proprio protocollo per inviarsi vicendevolmente una notifica, se necessario. Per altre informazioni sulla gestione degli errori, vedere [gestione degli errori WCF](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Duplex](../../../../docs/framework/wcf/samples/duplex.md)
-- [Specifica del comportamento in fase di esecuzione dei client](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Procedura: Creare una Channel Factory e usarlo per creare e gestire canali](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [Duplex](../samples/duplex.md)
+- [Specifica del comportamento in fase di esecuzione dei client](../specifying-client-run-time-behavior.md)
+- [Procedura: Creare una Channel Factory e usarlo per creare e gestire canali](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ca5c26b7e5b830ee8dccffb452b8509c8b0d1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795304"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592743"
 ---
 # <a name="cryptographic-services"></a>servizi crittografici
 
@@ -112,7 +112,7 @@ Lo svantaggio della crittografia a chiave segreta consiste nel fatto che presupp
 
 Supponendo che Alice e Bob siano due parti che vogliono comunicare su un canale non sicuro, è possibile usare crittografia a chiave segreta come indicato di seguito: Alice e Bob decidono di usare un algoritmo specifico (ad esempio, AES) con una chiave e un vettore di Inizializzazione. Alice compone un messaggio e crea un flusso di rete (forse una named pipe o rete posta elettronica) su cui inviare il messaggio. In seguito crittografa il testo usando la chiave e il vettore di inizializzazione e invia il messaggio crittografato e il vettore di inizializzazione a Bob tramite Intranet. Bob riceve il testo crittografato e lo decrittografa usando il vettore di inizializzazione e la chiave precedentemente concordata. Se la trasmissione viene intercettata, l'intercettore non può recuperare il messaggio originale, poiché non conosce la chiave. In questo scenario, solo la chiave deve rimanere segreta. In uno scenario reale Alice o Bob genera una chiave segreta e usa la crittografia a chiave pubblica (asimmetrica) per trasferire la chiave segreta (simmetrica) all'altra parte. Per altre informazioni sulla crittografia a chiave pubblica, vedere la sezione successiva.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornisce le classi seguenti che implementano algoritmi di crittografia a chiave segreta:
+.NET Framework fornisce le classi seguenti che implementano gli algoritmi di crittografia a chiave segreta:
 
 - <xref:System.Security.Cryptography.AesManaged> (introdotto in [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).
 
@@ -154,7 +154,7 @@ L'elenco seguente offre un confronto tra algoritmi di crittografia a chiave pubb
 
 - Gli algoritmi a chiave pubblica sono molto lenti rispetto a quelli a chiave segreta e non sono destinati alla crittografia di grandi quantità di dati. Risultano utili solo per il trasferimento di piccole quantità di dati. Generalmente la crittografia a chiave pubblica viene usata per crittografare una chiave e un vettore di inizializzazione utilizzabili da un algoritmo a chiave segreta. Dopo il trasferimento della chiave e del vettore di inizializzazione, la crittografia a chiave segreta viene usata per il resto della sessione.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre le classi seguenti che implementano gli algoritmi della crittografia a chiave pubblica:
+.NET Framework fornisce le classi seguenti che implementano gli algoritmi di crittografia a chiave pubblica:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -185,7 +185,7 @@ Per apporre una firma digitale a un messaggio usando la crittografia a chiave pu
 > [!NOTE]
 > Chiunque può verificare una firma, poiché la chiave pubblica del mittente è di pubblico dominio e generalmente viene inclusa nel formato della firma digitale. Questo metodo non mantiene la segretezza del messaggio. Perché possa essere segreto, anche il messaggio deve essere crittografato.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre le classi seguenti che implementano gli algoritmi della firma digitale:
+.NET Framework fornisce le classi seguenti che implementano gli algoritmi di firma digitale:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -223,7 +223,7 @@ Due parti (Alice e Bob) sono riuscite a usare una funzione hash per garantire l'
 
 Nessuno dei metodi precedenti impedisce la lettura dei messaggi di Alice, perché vengono trasmessi come testo normale. Una soluzione di sicurezza completa richiede le firme digitali (firma dei messaggi) e la crittografia.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre le classi seguenti che implementano che implementano gli algoritmi di hash:
+.NET Framework fornisce le classi seguenti che implementano gli algoritmi di hash:
 
 - <xref:System.Security.Cryptography.HMACSHA1>.
 
@@ -256,7 +256,7 @@ Nessuno dei metodi precedenti impedisce la lettura dei messaggi di Alice, perch�
 
 ## <a name="random-number-generation"></a>generazione casuale di numeri
 
-La generazione di numeri casuali è integrata in molte operazioni di crittografia. Le chiavi di crittografia, ad esempio, devono essere il più casuali possibile in modo che non sia possibile riprodurle. I generatori di numeri casuali di crittografia devono generare output che sia impossibile da prevedere con una probabilità superiore al 50%. Pertanto, qualsiasi metodo di previsione del bit di output successivo non deve avere una prestazione migliore della previsione casuale. Le classi in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usano i generatori di numeri casuali per generare chiavi di crittografia.
+La generazione di numeri casuali è integrata in molte operazioni di crittografia. Le chiavi di crittografia, ad esempio, devono essere il più casuali possibile in modo che non sia possibile riprodurle. I generatori di numeri casuali di crittografia devono generare output che sia impossibile da prevedere con una probabilità superiore al 50%. Pertanto, qualsiasi metodo di previsione del bit di output successivo non deve avere una prestazione migliore della previsione casuale. Le classi in .NET Framework usano i generatori di numeri casuali per generare le chiavi di crittografia.
 
 La classe <xref:System.Security.Cryptography.RNGCryptoServiceProvider> è un'implementazione di un algoritmo di generazione di numeri casuali.
 

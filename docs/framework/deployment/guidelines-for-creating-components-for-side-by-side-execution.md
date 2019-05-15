@@ -7,53 +7,53 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e88ba4260e9deaf53ae828f222d32f8ece61ffa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8924ed14c597a691698180c7c362b80c41532c2c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151034"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614099"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Linee guida per la creazione di componenti per l'esecuzione affiancata di più versioni
 Per creare applicazioni o componenti gestiti progettati per l'esecuzione affiancata, seguire le indicazioni generali riportate di seguito.  
   
--   Associare l'identità del tipo a una determinata versione di un file.  
+- Associare l'identità del tipo a una determinata versione di un file.  
   
      In Common Language Runtime, l'identità del tipo viene associata a una determinata versione di file con assembly con nome sicuro. Per creare un'applicazione o un componente per l'esecuzione affiancata, è necessario assegnare a tutti gli assembly un nome sicuro. In questo modo, viene creata una precisa identità del tipo e viene garantito che qualsiasi risoluzione del tipo verrà reindirizzata al file corretto. Un assembly con nome sicuro contiene informazioni sulla versione, sulle impostazioni cultura e sull'editore che vengono usate dal runtime per trovare il file corretto in risposta a una richiesta di binding.  
   
--   Usare l'archiviazione con supporto della versione.  
+- Usare l'archiviazione con supporto della versione.  
   
      Per fornire l'archiviazione con supporto della versione, nel runtime viene usata la Global Assembly Cache, che rappresenta una struttura di directory con supporto della versione che viene installata su qualsiasi computer in cui viene usato .NET Framework. Gli assembly installati nella Global Assembly Cache non vengono sovrascritti in caso di installazione di una nuova versione dell'assembly.  
   
--   Creare un'applicazione o un componente che viene eseguito in modalità isolata.  
+- Creare un'applicazione o un componente che viene eseguito in modalità isolata.  
   
      Un'applicazione o un componente eseguito in modalità isolata deve riuscire a gestire le risorse in modo da evitare conflitti quando due istanze dell'applicazione o del componente vengono eseguite contemporaneamente. L'applicazione o il componente deve usare anche una struttura di file specifica della versione.  
   
 ## <a name="application-and-component-isolation"></a>Isolamento di applicazioni e componenti  
  L'isolamento costituisce un fattore determinante per la corretta progettazione di un'applicazione o di un componente per l'esecuzione affiancata. L'applicazione o il componente deve riuscire a gestire tutte le risorse, in particolare l'I/O di file, in modo isolato. Per assicurarsi che l'applicazione o il componente venga eseguito in modalità isolata, seguire le indicazioni riportate di seguito.  
   
--   Scrivere i valori nel Registro di sistema in base alla versione. Archiviare i valori in hive o chiavi in cui viene indicata la versione e non condividere le informazioni o lo stato tra più versioni di un componente. Viene così impedita la sovrascrittura di informazioni da parte di due applicazioni eseguite contemporaneamente.  
+- Scrivere i valori nel Registro di sistema in base alla versione. Archiviare i valori in hive o chiavi in cui viene indicata la versione e non condividere le informazioni o lo stato tra più versioni di un componente. Viene così impedita la sovrascrittura di informazioni da parte di due applicazioni eseguite contemporaneamente.  
   
--   Impostare gli oggetti denominati del kernel in base alla versione, affinché non si verifichi una race condition. Una race condition si verifica ad esempio quando due semafori di due versioni della stessa applicazione si trovano in stato di reciproca attesa.  
+- Impostare gli oggetti denominati del kernel in base alla versione, affinché non si verifichi una race condition. Una race condition si verifica ad esempio quando due semafori di due versioni della stessa applicazione si trovano in stato di reciproca attesa.  
   
--   Usare nomi di file e directory che tengono conto delle informazioni sulla versione. Le strutture di file devono essere basate sulle informazioni relative alla versione.  
+- Usare nomi di file e directory che tengono conto delle informazioni sulla versione. Le strutture di file devono essere basate sulle informazioni relative alla versione.  
   
--   Creare account utente e gruppi in base alla versione. Gli account utente e i gruppi creati da un'applicazione devono essere identificati in base alla versione. Non condividere account utente e gruppi tra versioni diverse di un'applicazione.  
+- Creare account utente e gruppi in base alla versione. Gli account utente e i gruppi creati da un'applicazione devono essere identificati in base alla versione. Non condividere account utente e gruppi tra versioni diverse di un'applicazione.  
   
 ## <a name="installing-and-uninstalling-versions"></a>Installazione o disinstallazione delle versioni  
  In occasione della progettazione di un'applicazione per l'esecuzione affiancata, seguire le indicazioni relative all'installazione e alla disinstallazione delle versioni:  
   
--   Non eliminare dal Registro di sistema informazioni che potrebbero essere necessarie per altre applicazioni eseguite con una diversa versione di .NET Framework.  
+- Non eliminare dal Registro di sistema informazioni che potrebbero essere necessarie per altre applicazioni eseguite con una diversa versione di .NET Framework.  
   
--   Non sostituire informazioni del Registro di sistema che potrebbero essere necessarie per altre applicazioni eseguite con una diversa versione di .NET Framework.  
+- Non sostituire informazioni del Registro di sistema che potrebbero essere necessarie per altre applicazioni eseguite con una diversa versione di .NET Framework.  
   
--   Non annullare la registrazione di componenti COM che potrebbero essere necessari per altre applicazioni eseguite con una diversa versione di .NET Framework.  
+- Non annullare la registrazione di componenti COM che potrebbero essere necessari per altre applicazioni eseguite con una diversa versione di .NET Framework.  
   
--   Non modificare **InprocServer32** o altre voci del Registro di sistema per un server COM già registrato.  
+- Non modificare **InprocServer32** o altre voci del Registro di sistema per un server COM già registrato.  
   
--   Non eliminare account utente o gruppi che potrebbero essere necessari per altre applicazioni eseguite con una diversa versione di .NET Framework.  
+- Non eliminare account utente o gruppi che potrebbero essere necessari per altre applicazioni eseguite con una diversa versione di .NET Framework.  
   
--   Non aggiungere nel Registro di sistema informazioni contenenti un percorso che non tenga conto della versione.  
+- Non aggiungere nel Registro di sistema informazioni contenenti un percorso che non tenga conto della versione.  
   
 ## <a name="file-version-number-and-assembly-version-number"></a>Numero di versione di file e assembly  
  La versione dei file costituisce una risorsa di versione Win32 non usata dal runtime. In generale, la versione dei file viene aggiornata anche per un aggiornamento sul posto. Due file identici possono disporre di informazioni sulla versione del file diverse e due file diversi possono disporre delle stesse informazioni sulla versione del file.  

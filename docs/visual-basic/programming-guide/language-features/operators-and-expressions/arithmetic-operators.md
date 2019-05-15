@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 9f1d77ac27def556d94fac12dbde2f36d5b139de
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1854e35e32a31dbf531e6705a7968434dd02e44
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649752"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593250"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Operatori aritmetici in Visual Basic
 Operatori aritmetici consentono di eseguire molte delle comuni operazioni aritmetiche che coinvolgono il calcolo dei valori numerici rappresentati da valori letterali, variabili, altre espressioni, (funzione) e le chiamate di proprietà e costanti. Anche classificati con operatori aritmetici sono elencati gli operatori di spostamento di bit, che operano a livello dei singoli bit di operandi- and -shift degli schemi di bit verso sinistra o destra.  
@@ -51,7 +51,7 @@ Operatori aritmetici consentono di eseguire molte delle comuni operazioni aritme
  [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>Tentativo di divisione per Zero  
- Divisione per zero potrà avere risultati diversi a seconda dei tipi di dati coinvolti. In integrali divisioni (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] genera un <xref:System.DivideByZeroException> eccezione. Nelle operazioni di divisione il `Decimal` o `Single` tipo di dati, il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] genera inoltre un <xref:System.DivideByZeroException> eccezione.  
+ Divisione per zero potrà avere risultati diversi a seconda dei tipi di dati coinvolti. In integrali divisioni (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), .NET Framework genera un <xref:System.DivideByZeroException> eccezione. Nelle operazioni di divisione il `Decimal` oppure `Single` tipo di dati .NET Framework genera inoltre un <xref:System.DivideByZeroException> eccezione.  
   
  In suddivisioni a virgola mobile che implicano la `Double` tipo di dati, viene generata alcuna eccezione e il risultato è il membro della classe che rappresenta <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, o <xref:System.Double.NegativeInfinity>, a seconda del dividendo. Nella tabella seguente riepiloga i diversi risultati del tentativo di dividere un `Double` valore in base zero.  
   

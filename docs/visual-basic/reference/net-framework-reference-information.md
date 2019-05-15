@@ -6,15 +6,15 @@ helpviewer_keywords:
 - .NET Framework [Visual Basic], reference
 - .NET Framework class library [Visual Basic], reference information
 ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
-ms.openlocfilehash: 36603b7d517e0c6576e9b70fad2cbee8027acad0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c1b6b6a53264be5716a4132cebca78449b30d8d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968311"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593055"
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>Informazioni di riferimento su .NET Framework (Visual Basic)
-In questo argomento vengono forniti collegamenti a informazioni su come usare il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] libreria di classi.  
+In questo argomento vengono forniti collegamenti a informazioni su come usare la libreria di classi .NET Framework.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Introduzione](../../framework/get-started/index.md)  

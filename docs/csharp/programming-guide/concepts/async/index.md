@@ -2,12 +2,12 @@
 title: Programmazione asincrona in C#
 description: Panoramica del supporto del linguaggio C# per la programmazione asincrona con async, await, Task e Task<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: dc85fd4fb30278dc39c75c88d5fd23c1f1633366
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 350ccdeeb31e318ca0c1a8158691f58bf5208efb
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668679"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064108"
 ---
 # <a name="the-task-asynchronous-programming-model-in-c"></a>Modello di programmazione asincrona Task in C\#
 
@@ -22,7 +22,7 @@ L'obiettivo di questa sintassi consiste nell'abilitare un codice che viene letto
 1. Aggiungere burro e marmellata alla fetta di pane tostata.
 1. Versare un bicchiere di succo d'arancia.
 
-Se si ha esperienza in cucina, si eseguiranno queste istruzioni **in modo asincrono**. Si inizierà a scaldare la padella per le uova e si inizierà a cuocere la pancetta. Si inserirà il pane nel tostapane, quindi si inizieranno a cuocere le uova. A ogni passaggio del processo si inizia un'attività, quindi ci si dedica alle attività che man mano richiedono attenzione.
+Se si ha esperienza in cucina, queste istruzioni verranno eseguite **in modo asincrono**. Si inizierà a scaldare la padella per le uova e si inizierà a cuocere la pancetta. Si inserirà il pane nel tostapane, quindi si inizieranno a cuocere le uova. A ogni passaggio del processo si inizia un'attività, quindi ci si dedica alle attività che man mano richiedono attenzione.
 
 La preparazione della colazione è un buon esempio di lavoro asincrono non parallelo. Tutte le attività possono essere gestite da una sola persona (o thread). Continuando con l'analogia della colazione, una sola persona può preparare la colazione in modo asincrono iniziando l'attività successiva prima che l'attività precedente venga completata. La preparazione procede indipendentemente dal fatto che venga controllata da qualcuno. Non appena si inizia a scaldare la padella per le uova, è possibile iniziare a friggere la pancetta. Dopo aver iniziato a cuocere la pancetta, è possibile inserire il pane nel tostapane.
 

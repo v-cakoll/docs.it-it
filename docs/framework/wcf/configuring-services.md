@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8ac62809b1269ae810f026c003c7611b3ec548c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608536"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593316"
 ---
 # <a name="configuring-wcf-services"></a>Configurazione dei servizi WCF
 
@@ -22,7 +22,7 @@ Dopo aver progettato e implementato il contratto di servizio, è possibile confi
  A partire da [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF viene fornito con un nuovo modello di configurazione predefinito che semplifica i requisiti di configurazione WCF. Se non si specifica alcuna configurazione di WCF per un determinato servizio, il runtime configura automaticamente il servizio con i comportamenti, associazioni e gli endpoint predefiniti.  
   
  [Configurazione dei servizi tramite file di configurazione](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- È un servizio di Windows Communication Foundation (WCF) può essere configurato utilizzando il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] la tecnologia di configurazione. In genere, gli elementi XML vengono aggiunti al file Web. config per un sito Internet Information Services (IIS) che ospita un servizio WCF. Gli elementi consentono di modificare i dettagli, ad esempio gli indirizzi dell'endpoint (gli indirizzi effettivi usati per comunicare con il servizio) per i singoli computer.  
+ Un servizio Windows Communication Foundation (WCF) è configurabile tramite la tecnologia di configurazione di .NET Framework. In genere, gli elementi XML vengono aggiunti al file Web. config per un sito Internet Information Services (IIS) che ospita un servizio WCF. Gli elementi consentono di modificare i dettagli, ad esempio gli indirizzi dell'endpoint (gli indirizzi effettivi usati per comunicare con il servizio) per i singoli computer.  
   
  [Associazioni](../../../docs/framework/wcf/bindings.md)  
  Inoltre, WCF include numerose configurazioni comuni fornite dal sistema sotto forma di associazioni che consentono di selezionare rapidamente le funzionalità di base per la comunicazione tra client e servizio, ad esempio i trasporti, sicurezza e messaggio codifiche utilizzate.  

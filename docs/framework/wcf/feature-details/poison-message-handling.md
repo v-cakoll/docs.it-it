@@ -2,12 +2,12 @@
 title: Gestione dei messaggi non elaborabili
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 1a7ab0afa982508f07256f090a13692174b5fb0b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1f01714d2b4587659682661c05b341d0f50254e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638417"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592860"
 ---
 # <a name="poison-message-handling"></a>Gestione dei messaggi non elaborabili
 Oggetto *dei messaggi non elaborabili* è un messaggio che ha superato il numero massimo di tentativi di recapito all'applicazione. Questa situazione può insorgere quando un'applicazione basata sulla coda non è in grado di elaborare un messaggio a causa di errori. Per far fronte a richieste di affidabilità, un'applicazione in coda riceve messaggi nell'ambito di una transazione. Se la transazione nella quale è stato ricevuto un messaggio in coda viene interrotta, il messaggio resta nella coda, quindi viene eseguito un nuovo tentativo nell'ambito di una nuova transazione. Se il problema che ha determinato l'interruzione della transazione non viene risolto, l'applicazione ricevente può rimanere bloccata in una successione continua di ricezioni e interruzioni dello stesso messaggio fino al raggiungimento del numero massimo di tentativi di recapito. Ne consegue l'impossibilità di elaborare il messaggio.  
@@ -52,7 +52,7 @@ Oggetto *dei messaggi non elaborabili* è un messaggio che ha superato il numero
   
  WCF fornisce due associazioni in coda standard:  
   
-- <xref:System.ServiceModel.NetMsmqBinding>. Oggetto [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] associazione adatta per l'esecuzione di comunicazione basata su coda con altri endpoint WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>. Un'associazione di .NET Framework adatta per l'esecuzione di comunicazione basata su coda con altri endpoint WCF.  
   
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Associazione idonea per la comunicazione con applicazioni di accodamento messaggi esistenti.  
   

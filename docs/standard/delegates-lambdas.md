@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 3d4aa5e60ab9bb134716bddcf90b6fc6b07c2ea0
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: e392f6b2e57bebf1ab916bc6142aebbc8f341db2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656154"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615294"
 ---
 # <a name="delegates-and-lambdas"></a>Delegati e lambda
 
@@ -46,9 +46,9 @@ public class Program
 
 Per semplificare il processo di sviluppo, .NET include un set di tipi di delegato che i programmatori possono riutilizzare senza dover creare nuovi tipi. I tipi sono `Func<>`, `Action<>` e `Predicate<>` e possono essere usati in posizioni diverse all'interno delle API .NET senza dover definire nuovi tipi di delegato. Le differenze tra i tre tipi sono evidenti nelle firme e riguardano principalmente la modalità di utilizzo prevista:
 
-*   `Action<>` viene usato quando è necessario eseguire un'azione usando gli argomenti del delegato.
-*   `Func<>` viene in genere usato in presenza di una trasformazione, ovvero quando è necessario trasformare gli argomenti del delegato in un risultato diverso. Le proiezioni sono un esempio tipico.
-*   `Predicate<>` viene usato quando è necessario determinare se l'argomento soddisfa la condizione del delegato. Può essere scritto anche come `Func<T, bool>`.
+* `Action<>` viene usato quando è necessario eseguire un'azione usando gli argomenti del delegato.
+* `Func<>` viene in genere usato in presenza di una trasformazione, ovvero quando è necessario trasformare gli argomenti del delegato in un risultato diverso. Le proiezioni sono un esempio tipico.
+* `Predicate<>` viene usato quando è necessario determinare se l'argomento soddisfa la condizione del delegato. Può essere scritto anche come `Func<T, bool>`.
 
 L'esempio precedente può essere ora riscritto usando il delegato `Func<>` anziché un tipo personalizzato. Il programma continuerà a essere eseguito nello stesso modo.
 
@@ -159,6 +159,6 @@ L'operatore `+=` in questo contesto viene usato per eseguire la sottoscrizione a
 
 ## <a name="further-reading-and-resources"></a>Altre informazioni e risorse
 
-*   [Delegati](../../docs/csharp/programming-guide/delegates/index.md)
-*   [Funzioni anonime](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-*   [Espressioni lambda](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+* [Delegati](../../docs/csharp/programming-guide/delegates/index.md)
+* [Funzioni anonime](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+* [Espressioni lambda](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

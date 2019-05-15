@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d08be327d4c6bf6dd1add3c7ea40ed491619a9ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698891"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625610"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Partitioner personalizzati per PLINQ e TPL
 Per parallelizzare un'operazione in un'origine dati, è essenziale *partizionare* l'origine in più sezioni a cui è possibile accedere contemporaneamente da più thread. PLINQ e Task Parallel Library (TPL) forniscono partitioner predefiniti che funzionano in modo trasparente quando si scrive una query o un ciclo <xref:System.Threading.Tasks.Parallel.ForEach%2A> parallelo. Per scenari più avanzati, è possibile collegare il proprio partitioner.  
@@ -43,7 +43,7 @@ Per parallelizzare un'operazione in un'origine dati, è essenziale *partizionare
   
 |Overload|Usa il bilanciamento del carico|  
 |--------------|-------------------------|  
-|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|Sempre|  
+|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|Always|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28%60%600%5B%5D%2CSystem.Boolean%29>|Quando l'argomento booleano viene specificato come true|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IList%7B%60%600%7D%2CSystem.Boolean%29>|Quando l'argomento booleano viene specificato come true|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%29>|Never|  
@@ -100,25 +100,25 @@ Per parallelizzare un'operazione in un'origine dati, è essenziale *partizionare
 ### <a name="contract-for-partitioners"></a>Contratto per i partitioner  
  Quando si implementa un partitioner personalizzato, seguire queste linee guida per assicurare la corretta interazione con PLINQ e <xref:System.Threading.Tasks.Parallel.ForEach%2A> in TPL:  
   
--   Se <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> viene chiamato con un argomento pari a zero o meno per `partitionsCount`, generare <xref:System.ArgumentOutOfRangeException>. Anche se PLINQ e TPL non passeranno mai un `partitionCount` uguale a 0, è tuttavia consigliabile proteggersi da questa possibilità.  
+- Se <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> viene chiamato con un argomento pari a zero o meno per `partitionsCount`, generare <xref:System.ArgumentOutOfRangeException>. Anche se PLINQ e TPL non passeranno mai un `partitionCount` uguale a 0, è tuttavia consigliabile proteggersi da questa possibilità.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> e <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> devono restituire sempre un numero di partizioni pari a `partitionsCount`. Se il partitioner non ha dati sufficienti e non può creare tutte le partizioni richieste, il metodo deve restituire un enumeratore vuoto per ogni partizione rimanente. In caso contrario, sia PLINQ che TPL genereranno un'eccezione <xref:System.InvalidOperationException>.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> e <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> devono restituire sempre un numero di partizioni pari a `partitionsCount`. Se il partitioner non ha dati sufficienti e non può creare tutte le partizioni richieste, il metodo deve restituire un enumeratore vuoto per ogni partizione rimanente. In caso contrario, sia PLINQ che TPL genereranno un'eccezione <xref:System.InvalidOperationException>.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> e <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> non devono mai restituire `null` (`Nothing` in Visual Basic), altrimenti PLINQ/TPL genererà un'eccezione <xref:System.InvalidOperationException>.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> e <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> non devono mai restituire `null` (`Nothing` in Visual Basic), altrimenti PLINQ/TPL genererà un'eccezione <xref:System.InvalidOperationException>.  
   
--   I metodi che restituiscono partizioni devono sempre restituire partizioni che possano enumerare l'origine dati in modo completo e univoco. Non devono essere presenti duplicazioni nell'origine dati o elementi ignorati se non specificamente richiesto dalla progettazione del partitioner. Se questa regola non viene seguita, l'ordine dell'output potrebbe non risultare corretto.  
+- I metodi che restituiscono partizioni devono sempre restituire partizioni che possano enumerare l'origine dati in modo completo e univoco. Non devono essere presenti duplicazioni nell'origine dati o elementi ignorati se non specificamente richiesto dalla progettazione del partitioner. Se questa regola non viene seguita, l'ordine dell'output potrebbe non risultare corretto.  
   
--   I getter booleani seguenti devono sempre restituire in modo accurato i valori seguenti in modo che l'ordine dell'output sia corretto:  
+- I getter booleani seguenti devono sempre restituire in modo accurato i valori seguenti in modo che l'ordine dell'output sia corretto:  
   
-    -   `KeysOrderedInEachPartition`: ogni partizione restituisce elementi con indici di chiave crescenti.  
+    - `KeysOrderedInEachPartition`: ogni partizione restituisce elementi con indici di chiave crescenti.  
   
-    -   `KeysOrderedAcrossPartitions`: per tutte le partizioni restituite, gli indici di chiave nella partizione *i* hanno un valore superiore rispetto a quelli nella partizione *i*-1.  
+    - `KeysOrderedAcrossPartitions`: per tutte le partizioni restituite, gli indici di chiave nella partizione *i* hanno un valore superiore rispetto a quelli nella partizione *i*-1.  
   
-    -   `KeysNormalized`: tutti gli indici di chiave sono a incremento progressivo costante senza gap, a partire da zero.  
+    - `KeysNormalized`: tutti gli indici di chiave sono a incremento progressivo costante senza gap, a partire da zero.  
   
--   Tutti gli indici devono essere univoci. Non possono essere presenti indici duplicati. Se questa regola non viene seguita, l'ordine dell'output potrebbe non risultare corretto.  
+- Tutti gli indici devono essere univoci. Non possono essere presenti indici duplicati. Se questa regola non viene seguita, l'ordine dell'output potrebbe non risultare corretto.  
   
--   Tutti gli indici devono essere non negativi. Se questa regola non viene rispettata, PLINQ/TPL può generare eccezioni.  
+- Tutti gli indici devono essere non negativi. Se questa regola non viene rispettata, PLINQ/TPL può generare eccezioni.  
   
 ## <a name="see-also"></a>Vedere anche
 

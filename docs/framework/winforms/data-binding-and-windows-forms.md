@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: e8a3011828fd3b3f7aaaa062e837570c86f4fd65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 240b68f901f819313fcae7aab0474abd5535c30d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626848"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592302"
 ---
 # <a name="data-binding-and-windows-forms"></a>Associazione dati e Windows Form
 Nei Windows Form è possibile effettuare associazioni non solo alle origini dati tradizionali, ma anche a quasi ogni struttura che contiene dati. È possibile effettuare associazioni a una matrice di valori che verranno calcolati in fase di esecuzione, letti da un file o derivati dai valori di altri controlli.  
   
- Inoltre, è possibile associare all'origine dati qualsiasi proprietà di qualunque controllo. Nelil data binding tradizionale viene in genere associata all'origine dati la proprietà relativa alla visualizzazione, ad esempio la proprietà <xref:System.Windows.Forms.Control.Text%2A> di un controllo <xref:System.Windows.Forms.TextBox>. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] consente anche di impostare anche altre proprietà tramite associazione. È possibile usare l'associazione per eseguire le attività seguenti:  
+ Inoltre, è possibile associare all'origine dati qualsiasi proprietà di qualunque controllo. Nelil data binding tradizionale viene in genere associata all'origine dati la proprietà relativa alla visualizzazione, ad esempio la proprietà <xref:System.Windows.Forms.Control.Text%2A> di un controllo <xref:System.Windows.Forms.TextBox>. Con .NET Framework, è possibile impostare altre proprietà tramite associazione. È possibile usare l'associazione per eseguire le attività seguenti:  
   
 - Impostazione della grafica di un controllo immagine.  
   

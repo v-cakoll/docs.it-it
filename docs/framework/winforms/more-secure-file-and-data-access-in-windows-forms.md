@@ -13,15 +13,15 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c161cc27bd45f8f29e4d48c572d26d3c153b8f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802089"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592674"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>File e accesso ai dati più protetti in Windows Form
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa le autorizzazioni per proteggere le risorse e i dati. Il fatto che l'applicazione possa leggere o scrivere dati dipende dalle autorizzazioni concesse all'applicazione. Quando l'applicazione viene eseguita in un ambiente parzialmente attendibile, è possibile che non si riesca ad accedere ai dati oppure potrebbe essere necessario modificare la modalità di accesso ai dati.  
+.NET Framework Usa le autorizzazioni per proteggere le risorse e i dati. Il fatto che l'applicazione possa leggere o scrivere dati dipende dalle autorizzazioni concesse all'applicazione. Quando l'applicazione viene eseguita in un ambiente parzialmente attendibile, è possibile che non si riesca ad accedere ai dati oppure potrebbe essere necessario modificare la modalità di accesso ai dati.  
   
  Quando si rileva una restrizione di sicurezza, sono disponibili due opzioni: dichiarare l'autorizzazione (supponendo che sia stata concessa all'applicazione) o usare una versione della funzionalità scritta per operare in caso di attendibilità parziale. Le sezioni seguenti illustrano come usare il file, il database e l'accesso al Registro di sistema da applicazioni in esecuzione in un ambiente parzialmente attendibile.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "61802089"
 >  Per impostazione predefinita, gli strumenti che generano distribuzioni [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] configurano queste distribuzioni in modo che richiedano l'attendibilità totale ai computer su cui sono in esecuzione. Se si decide che si desidera che i vantaggi di sicurezza dell'esecuzione in attendibilità parziale, è necessario modificare questa impostazione predefinita in Visual Studio o uno del [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] strumenti (Mage.exe o MageUI.exe). Per altre informazioni sulla sicurezza di Windows Form e su come determinare il livello di attendibilità appropriato per l'applicazione, vedere [protezione in Windows Forms Overview](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Accesso ai file  
- La classe <xref:System.Security.Permissions.FileIOPermission> controlla l'accesso a file e cartelle in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Per impostazione predefinita, il sistema di sicurezza non concede <xref:System.Security.Permissions.FileIOPermission> agli ambienti con attendibilità parziale, ad esempio la Intranet locale e le aree Internet. Un'applicazione che richiede l'accesso ai file può comunque funzionare in questi ambienti se si modifica la progettazione dell'applicazione o si usano metodi diversi per accedere ai file. Per impostazione predefinita, all'area Intranet locale viene concesso il diritto di accesso agli stessi siti e alle stesse directory, di riconnettersi al sito di origine e di leggere dalla directory di installazione. Per impostazione predefinita, all'area Internet è concesso solo il diritto di riconnettersi al sito di origine.  
+ Il <xref:System.Security.Permissions.FileIOPermission> classe controlla l'accesso in file e cartelle in .NET Framework. Per impostazione predefinita, il sistema di sicurezza non concede <xref:System.Security.Permissions.FileIOPermission> agli ambienti con attendibilità parziale, ad esempio la Intranet locale e le aree Internet. Un'applicazione che richiede l'accesso ai file può comunque funzionare in questi ambienti se si modifica la progettazione dell'applicazione o si usano metodi diversi per accedere ai file. Per impostazione predefinita, all'area Intranet locale viene concesso il diritto di accesso agli stessi siti e alle stesse directory, di riconnettersi al sito di origine e di leggere dalla directory di installazione. Per impostazione predefinita, all'area Internet è concesso solo il diritto di riconnettersi al sito di origine.  
   
 ### <a name="user-specified-files"></a>File specificati dall'utente  
  Se non sono disponibili autorizzazioni di accesso ai file, è possibile chiedere all'utente di fornire informazioni specifiche sui file usando la classe <xref:System.Windows.Forms.OpenFileDialog> o <xref:System.Windows.Forms.SaveFileDialog>. Questa interazione utente fornisce una discreta garanzia che l'applicazione non possa caricare file riservati o sovrascrivere file importanti in modo intenzionalmente dannoso. I metodi <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> e <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> forniscono l'accesso ai file in lettura e scrittura aprendo il flusso di file per il file specificato dall'utente. I metodi consentono anche di proteggere il file dell'utente nascondendo il percorso del file.  
@@ -47,7 +47,7 @@ ms.locfileid: "61802089"
 > [!NOTE]
 >  L'autorizzazione specifica viene richiesta solo dopo che il metodo <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> viene effettivamente chiamato.  
   
- L'autorizzazione per visualizzare una finestra di dialogo per la gestione dei file non concede all'applicazione l'accesso completo a tutti i membri delle classi <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog>e <xref:System.Windows.Forms.SaveFileDialog>. Per le autorizzazioni esattamente necessarie per chiamare ogni metodo, vedere l'argomento di riferimento per tale metodo nella documentazione della libreria di classi di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ L'autorizzazione per visualizzare una finestra di dialogo per la gestione dei file non concede all'applicazione l'accesso completo a tutti i membri delle classi <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog>e <xref:System.Windows.Forms.SaveFileDialog>. Per le autorizzazioni esatte necessarie per chiamare ogni metodo, vedere l'argomento di riferimento per il metodo nella documentazione della libreria di classi .NET Framework.  
   
  Il seguente esempio di codice usa il metodo <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> per aprire un file specificato dall'utente in un controllo <xref:System.Windows.Forms.RichTextBox>. L'esempio richiede <xref:System.Security.Permissions.FileDialogPermission> e il valore dell'enumerazione <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> associata. L'esempio illustra come gestire <xref:System.Security.SecurityException> per determinare se disabilitare la funzionalità di salvataggio. Questo esempio richiede che <xref:System.Windows.Forms.Form> disponga di un controllo <xref:System.Windows.Forms.Button> denominato `ButtonOpen` e di un controllo <xref:System.Windows.Forms.RichTextBox> denominato `RtfBoxMain`.  
   

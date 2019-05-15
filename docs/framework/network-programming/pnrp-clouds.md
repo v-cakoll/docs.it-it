@@ -2,12 +2,12 @@
 title: Cloud PNRP
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 943cad880885a624c0ed0798738665c8bcd7036f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6e7ec5d88e1053f33b86816fec739aae38cac18c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110045"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623036"
 ---
 # <a name="pnrp-clouds"></a>Cloud PNRP
 Un "cloud" PNRP rappresenta un set di nodi che possono comunicare tra loro attraverso la rete. Il termine "cloud" è sinonimo di "rete di peer" e "grafico peer-to-peer".  
@@ -18,9 +18,9 @@ Un "cloud" PNRP rappresenta un set di nodi che possono comunicare tra loro attra
   
  PNRP usa tre "ambiti" di cloud. In questo contesto l'ambito è un raggruppamento di computer in grado di individuarsi reciprocamente:  
   
--   Il cloud globale corrisponde all'ambito globale di indirizzi IPv6 e indirizzi globali; rappresenta tutti i computer sull'intera Internet IPv6. Esiste solo un unico cloud globale.  
+- Il cloud globale corrisponde all'ambito globale di indirizzi IPv6 e indirizzi globali; rappresenta tutti i computer sull'intera Internet IPv6. Esiste solo un unico cloud globale.  
   
--   Il cloud locale al collegamento corrisponde all'ambito di indirizzi IPv6 locali al collegamento e di indirizzi locali al collegamento. Un cloud locale al collegamento riguarda un collegamento specifico, che generalmente coincide con la subnet collegata localmente. Sono possibili più cloud locali al collegamento.  
+- Il cloud locale al collegamento corrisponde all'ambito di indirizzi IPv6 locali al collegamento e di indirizzi locali al collegamento. Un cloud locale al collegamento riguarda un collegamento specifico, che generalmente coincide con la subnet collegata localmente. Sono possibili più cloud locali al collegamento.  
   
  Un terzo cloud specifico del sito corrisponde all'ambito di indirizzi IPv6 del sito e indirizzi locali di sito. Questo cloud è deprecato, ma è ancora supportato in PNRP.  
   

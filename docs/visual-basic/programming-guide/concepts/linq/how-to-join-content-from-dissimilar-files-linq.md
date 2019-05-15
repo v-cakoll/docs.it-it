@@ -2,12 +2,12 @@
 title: 'Procedura: Unire contenuto da file non analoghi (LINQ) (Visual Basic)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ac91ffaf914a8b799ad1124e9361595d482366b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778066"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593497"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Procedura: Unire contenuto da file non analoghi (LINQ) (Visual Basic)
 
@@ -120,14 +120,6 @@ End Class
 ' 12 total names in list 
 ```  
 
-## <a name="compiling-the-code"></a>Compilazione del codice
-
-Creare e compilare un progetto destinato a una delle opzioni seguenti:
-
-- .NET Framework versione 3.5 con un riferimento a System.Core.dll.
-- .NET Framework versione 4.0 o successiva.
-- .NET Core versione 1.0 o successiva.
-  
 ## <a name="see-also"></a>Vedere anche
 
 - [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

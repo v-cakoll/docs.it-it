@@ -13,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: fa4b8fdd56ed8a1304b6ee436ce3391c52ae7b9d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836422"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622728"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza e controvarianza nei generics
 <a name="top"></a> La covarianza e la controvarianza sono termini che fanno riferimento alla possibilità di usare un tipo più derivato (più specifico) o un tipo meno derivato (meno specifico) di quanto specificato in origine. I parametri di tipo generico supportano la covarianza e la controvarianza per offrire la massima flessibilità nell'assegnazione e nell'utilizzo dei tipi generici. Quando si fa riferimento a un sistema di tipi, la covarianza, la controvarianza e l'invarianza hanno le seguenti definizioni. Negli esempi si presuppone una classe di base denominata `Base` e una classe derivata denominata `Derived`.  
   
--   `Covariance`  
+- `Covariance`  
   
      Permette di usare un tipo più derivato di quello originariamente specificato.  
   
      È possibile assegnare un'istanza di `IEnumerable<Derived>` (`IEnumerable(Of Derived)` in Visual Basic) a una variabile di tipo `IEnumerable<Base>`.  
   
--   `Contravariance`  
+- `Contravariance`  
   
      Consente di utilizzare un tipo più generico (meno derivato) di quello originariamente specificato.  
   
      È possibile assegnare un'istanza di `Action<Base>` (`Action(Of Base)` in Visual Basic) a una variabile di tipo `Action<Derived>`.  
   
--   `Invariance`  
+- `Invariance`  
   
      Significa che è possibile usare solo il tipo specificato originariamente; pertanto un parametro di tipo generico invariante non è covariante o controvariante.  
   
@@ -59,25 +59,25 @@ ms.locfileid: "56836422"
   
  La covarianza e la controvarianza sono definite collettivamente *varianza*. Un parametro di tipo generico non contrassegnato come covariante o controvariante viene definito *invariante*. Di seguito vengono riepilogati i concetti relativi alla varianza in Common Language Runtime:  
   
--   In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], i parametri di tipo variante sono limitati ai tipi di interfaccia generica e delegato generico.  
+- In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], i parametri di tipo variante sono limitati ai tipi di interfaccia generica e delegato generico.  
   
--   Un tipo di interfaccia generica o delegato generico può presentare parametri di tipo sia covariante sia controvariante.  
+- Un tipo di interfaccia generica o delegato generico può presentare parametri di tipo sia covariante sia controvariante.  
   
--   La varianza si applica solo ai tipi di riferimento. Se si specifica un tipo di valore per un parametro di tipo variante, tale parametro di tipo è invariante per il tipo costruito risultante.  
+- La varianza si applica solo ai tipi di riferimento. Se si specifica un tipo di valore per un parametro di tipo variante, tale parametro di tipo è invariante per il tipo costruito risultante.  
   
--   La varianza non si applica alla combinazione di delegati. Ciò significa che nel caso di due delegati di tipo `Action<Derived>` e `Action<Base>` (`Action(Of Derived)` e `Action(Of Base)` in Visual Basic), non è possibile combinare il secondo delegato con il primo anche se il risultato sarebbe indipendente dai tipi. La varianza consente l'assegnazione del secondo delegato a una variabile di tipo `Action<Derived>`, ma i delegati possono essere combinati solo se il loro tipo corrisponde esattamente.  
+- La varianza non si applica alla combinazione di delegati. Ciò significa che nel caso di due delegati di tipo `Action<Derived>` e `Action<Base>` (`Action(Of Derived)` e `Action(Of Base)` in Visual Basic), non è possibile combinare il secondo delegato con il primo anche se il risultato sarebbe indipendente dai tipi. La varianza consente l'assegnazione del secondo delegato a una variabile di tipo `Action<Derived>`, ma i delegati possono essere combinati solo se il loro tipo corrisponde esattamente.  
   
  Nelle sottosezioni seguenti vengono descritti in dettaglio parametri di tipo covariante e controvariante:  
   
--   [Interfacce generiche con parametri di tipo covariante](#InterfaceCovariantTypeParameters)  
+- [Interfacce generiche con parametri di tipo covariante](#InterfaceCovariantTypeParameters)  
   
--   [Interfacce generiche con parametri di tipo generico controvariante](#InterfaceCovariantTypeParameters)  
+- [Interfacce generiche con parametri di tipo generico controvariante](#InterfaceCovariantTypeParameters)  
   
--   [Delegati generici con parametri di tipo variante](#DelegateVariantTypeParameters)  
+- [Delegati generici con parametri di tipo variante](#DelegateVariantTypeParameters)  
   
--   [Definizione di interfacce e delegati generici varianti](#DefiningVariantTypeParameters)  
+- [Definizione di interfacce e delegati generici varianti](#DefiningVariantTypeParameters)  
   
--   [Elenco di tipi di interfacce e delegati generici varianti](#VariantList)  
+- [Elenco di tipi di interfacce e delegati generici varianti](#VariantList)  
   
 <a name="InterfaceCovariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>Interfacce generiche con parametri di tipo covariante  

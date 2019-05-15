@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e72e091d9b120042254df5de323169f6f67c61d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306339"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616064"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (strumento per l'ottimizzazione guidata da profilo gestito)
 
@@ -102,9 +102,9 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 ## <a name="using-mpgoexe-from-visual-studio"></a>Utilizzo di Mpgo.exe da Visual Studio  
  È possibile eseguire Mpgo.exe da Visual Studio (vedere l'articolo [Procedura: Specificare eventi di compilazione (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)) con le restrizioni seguenti:  
   
--   Non è possibile usare percorsi tra virgolette con la barra finale, perché anche le macro di Visual Studio usano la barra finale per impostazione predefinita Ad esempio, `–OutDir "C:\Output Folder\"` non è valido. Per ovviare a questa limitazione, è possibile anteporre un carattere o una sequenza di escape alla barra finale Ad esempio, usare invece `-OutDir "$(OutDir)\"`.  
+- Non è possibile usare percorsi tra virgolette con la barra finale, perché anche le macro di Visual Studio usano la barra finale per impostazione predefinita Ad esempio, `–OutDir "C:\Output Folder\"` non è valido. Per ovviare a questa limitazione, è possibile anteporre un carattere o una sequenza di escape alla barra finale Ad esempio, usare invece `-OutDir "$(OutDir)\"`.  
   
--   Per impostazione predefinita, Mpgo.exe non si trova nel percorso di compilazione di Visual Studio. È necessario aggiungere il percorso a Visual Studio o specificare il percorso completo sulla riga di comando di Mpgo. È possibile utilizzare il parametro `–Scenario` o `–Import` nell'evento di post-compilazione in Visual Studio. Il processo tipico consiste tuttavia nell'usare `–Scenario` richiesto una sola volta al Prompt dei comandi per gli sviluppatori per Visual Studio e quindi usare `–Import` per aggiornare gli assembly ottimizzati dopo ogni compilazione; ad esempio: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
+- Per impostazione predefinita, Mpgo.exe non si trova nel percorso di compilazione di Visual Studio. È necessario aggiungere il percorso a Visual Studio o specificare il percorso completo sulla riga di comando di Mpgo. È possibile utilizzare il parametro `–Scenario` o `–Import` nell'evento di post-compilazione in Visual Studio. Il processo tipico consiste tuttavia nell'usare `–Scenario` richiesto una sola volta al Prompt dei comandi per gli sviluppatori per Visual Studio e quindi usare `–Import` per aggiornare gli assembly ottimizzati dopo ogni compilazione; ad esempio: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
   
 <a name="samples"></a>   
 ## <a name="examples"></a>Esempi  

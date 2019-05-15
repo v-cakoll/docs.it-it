@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b022c70f7ed1707e27de7cac6ce08c53ee0878d0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: a89739b92d64e8774080d82f9e39af24c269223e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836565"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615167"
 ---
 # <a name="observer-design-pattern"></a>Modello di progettazione observer
 Lo schema progettuale osservatore consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider. È appropriato per qualsiasi scenario che richieda la notifica basata su push. Lo schema definisce un *provider* (anche noto come *oggetto* o *osservabile*) e zero, uno o più *osservatori*. Gli osservatori effettuano la registrazione con il provider e ogni volta che si verifica una condizione, un evento o un cambiamento di stato predefinito, il provider invia automaticamente una notifica a tutti gli osservatori chiamando uno dei relativi metodi. In questa chiamata al metodo, il provider può anche fornire informazioni sullo stato corrente degli osservatori. In .NET Framework, lo schema progettuale osservatore viene applicato implementando le interfacce generiche <xref:System.IObservable%601?displayProperty=nameWithType> e <xref:System.IObserver%601?displayProperty=nameWithType>. Il parametro di tipo generico rappresenta il tipo che fornisce le informazioni di notifica.  
@@ -29,21 +29,21 @@ Lo schema progettuale osservatore consente a un sottoscrittore di effettuare la 
   
  Per implementare lo schema è necessario fornire gli elementi seguenti:  
   
--   Un provider o oggetto, che corrisponde all'oggetto che invia le notifiche agli osservatori. Un provider è una classe o una struttura che implementa l'interfaccia <xref:System.IObservable%601>. Il provider deve implementare un singolo metodo, <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>, che viene chiamato dagli osservatori che desiderano ricevere notifiche dal provider.  
+- Un provider o oggetto, che corrisponde all'oggetto che invia le notifiche agli osservatori. Un provider è una classe o una struttura che implementa l'interfaccia <xref:System.IObservable%601>. Il provider deve implementare un singolo metodo, <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>, che viene chiamato dagli osservatori che desiderano ricevere notifiche dal provider.  
   
--   Un osservatore, che è un oggetto che riceve le notifiche da un provider. Un osservatore è una classe o una struttura che implementa l'interfaccia <xref:System.IObserver%601>. L'osservatore deve implementare tre metodi, che vengono tutti chiamati dal provider:  
+- Un osservatore, che è un oggetto che riceve le notifiche da un provider. Un osservatore è una classe o una struttura che implementa l'interfaccia <xref:System.IObserver%601>. L'osservatore deve implementare tre metodi, che vengono tutti chiamati dal provider:  
   
-    -   <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, che fornisce all'osservatore informazioni nuove o correnti.  
+    - <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, che fornisce all'osservatore informazioni nuove o correnti.  
   
-    -   <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, che informa l'osservatore che si è verificato un errore.  
+    - <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, che informa l'osservatore che si è verificato un errore.  
   
-    -   <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, che indica che il provider ha completato l'invio di notifiche.  
+    - <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, che indica che il provider ha completato l'invio di notifiche.  
   
--   Un meccanismo che consenta al provider di tenere traccia degli osservatori. In genere, il provider usa un oggetto contenitore, ad esempio un oggetto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, per contenere i riferimenti alle implementazioni di <xref:System.IObserver%601> che hanno sottoscritto le notifiche. Usando un contenitore di archiviazione a questo scopo, si consente al provider di gestire da zero a un numero illimitato di osservatori. L'ordine in cui gli osservatori ricevono le notifiche non è definito. Il provider può usare qualsiasi metodo per determinare l'ordine.  
+- Un meccanismo che consenta al provider di tenere traccia degli osservatori. In genere, il provider usa un oggetto contenitore, ad esempio un oggetto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, per contenere i riferimenti alle implementazioni di <xref:System.IObserver%601> che hanno sottoscritto le notifiche. Usando un contenitore di archiviazione a questo scopo, si consente al provider di gestire da zero a un numero illimitato di osservatori. L'ordine in cui gli osservatori ricevono le notifiche non è definito. Il provider può usare qualsiasi metodo per determinare l'ordine.  
   
--   Un'implementazione di <xref:System.IDisposable> che consenta al provider di rimuovere gli osservatori quando la notifica è completa. Gli osservatori ricevono un riferimento all'implementazione di <xref:System.IDisposable> dal metodo <xref:System.IObservable%601.Subscribe%2A>, pertanto possono anche chiamare il metodo <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> per annullare la sottoscrizione prima che il provider abbia completato l'invio di notifiche.  
+- Un'implementazione di <xref:System.IDisposable> che consenta al provider di rimuovere gli osservatori quando la notifica è completa. Gli osservatori ricevono un riferimento all'implementazione di <xref:System.IDisposable> dal metodo <xref:System.IObservable%601.Subscribe%2A>, pertanto possono anche chiamare il metodo <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> per annullare la sottoscrizione prima che il provider abbia completato l'invio di notifiche.  
   
--   Un oggetto contenente i dati che il provider invia agli osservatori. Il tipo di questo oggetto corrisponde al parametro di tipo generico delle interfacce <xref:System.IObservable%601> e <xref:System.IObserver%601>. Sebbene questo oggetto possa essere lo stesso dell'implementazione di <xref:System.IObservable%601>, in genere è un tipo distinto.  
+- Un oggetto contenente i dati che il provider invia agli osservatori. Il tipo di questo oggetto corrisponde al parametro di tipo generico delle interfacce <xref:System.IObservable%601> e <xref:System.IObserver%601>. Sebbene questo oggetto possa essere lo stesso dell'implementazione di <xref:System.IObservable%601>, in genere è un tipo distinto.  
   
 > [!NOTE]
 >  Oltre all'implementazione dello schema progettuale osservatore, potrebbe risultare interessante l'esplorazione delle librerie compilate usando le interfacce <xref:System.IObservable%601> e <xref:System.IObserver%601>. Ad esempio, le [estensioni Rx (Reactive Extensions) per .NET](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) sono costituite da un set di metodi di estensione e da operatori di sequenza standard LINQ per supportare la programmazione asincrona.  
@@ -56,9 +56,9 @@ Lo schema progettuale osservatore consente a un sottoscrittore di effettuare la 
   
  Una classe `BaggageHandler` è responsabile della ricezione di informazioni sui voli in arrivo e sui nastri per il ritiro dei bagagli. Internamente, gestisce due raccolte:  
   
--   `observers`: una raccolta di client che riceveranno informazioni aggiornate.  
+- `observers`: una raccolta di client che riceveranno informazioni aggiornate.  
   
--   `flights`: una raccolta di voli e dei nastri ad essi assegnati.  
+- `flights`: una raccolta di voli e dei nastri ad essi assegnati.  
   
  Entrambe le raccolte sono rappresentate da oggetti <xref:System.Collections.Generic.List%601> generici di cui viene creata un'istanza nel costruttore della classe `BaggageHandler`. Il codice sorgente per la classe `BaggageHandler` è illustrato nell'esempio seguente.  
   

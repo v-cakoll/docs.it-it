@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c2c2718d79ce9aa4fed343cf368bbf541e493d0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151554"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613705"
 ---
 # <a name="how-to-configure-network-tracing"></a>Procedura: Configurare la traccia di rete
 Nel file di configurazione del computer o dell'applicazione sono contenute le impostazioni che determinano il formato e il contenuto delle tracce di rete. Prima di eseguire questa procedura, assicurarsi che la funzionalità di traccia sia abilitata. Per informazioni su come abilitare la traccia di rete, vedere [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -27,7 +27,7 @@ Nel file di configurazione del computer o dell'applicazione sono contenute le im
   
 ### <a name="to-configure-network-tracing"></a>Per configurare la traccia di rete  
   
--   Aggiungere le seguenti righe al file di configurazione appropriato. I valori e le opzioni per queste impostazioni sono descritti nelle tabelle riportate di seguito.  
+- Aggiungere le seguenti righe al file di configurazione appropriato. I valori e le opzioni per queste impostazioni sono descritti nelle tabelle riportate di seguito.  
   
     ```xml  
     <configuration>  
