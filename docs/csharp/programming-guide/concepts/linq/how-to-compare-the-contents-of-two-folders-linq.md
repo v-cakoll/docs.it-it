@@ -2,21 +2,21 @@
 title: 'Procedura: Confrontare il contenuto di due cartelle (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: c6a44070e251a1521e7ea94c47a3c0c9360df1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec333fd3a54927f39569173db4e30999f632513
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543042"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597105"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Procedura: Confrontare il contenuto di due cartelle (LINQ) (C#)
 In questo esempio vengono illustrati tre modi per confrontare due elenchi di file:  
   
--   Eseguendo una query su un valore booleano che specifica se i due elenchi di file sono identici.  
+- Eseguendo una query su un valore booleano che specifica se i due elenchi di file sono identici.  
   
--   Eseguendo una query sull'intersezione per recuperare i file presenti in entrambe le cartelle.  
+- Eseguendo una query sull'intersezione per recuperare i file presenti in entrambe le cartelle.  
   
--   Eseguendo una query sulla differenza tra set per recuperare i file che sono presenti in una cartella, ma non nell'altra.  
+- Eseguendo una query sulla differenza tra set per recuperare i file che sono presenti in una cartella, ma non nell'altra.  
   
     > [!NOTE]
     >  Le tecniche illustrate di seguito possono essere adattate per confrontare le sequenze di oggetti di qualsiasi tipo.  

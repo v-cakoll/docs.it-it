@@ -2,18 +2,18 @@
 title: Architettura ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: e85100733e20b69cf6b8c52c58d250be869971cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2e91077287c051d871eb61f83ec77b7baf90b2d8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592635"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584572"
 ---
 # <a name="adonet-architecture"></a>Architettura ADO.NET
 L'elaborazione dei dati è stata sempre basata principalmente su un modello a due livelli basato su connessione. In considerazione dell'utilizzo crescente dell'architettura a più livelli per l'elaborazione dei dati, i programmatori si avvalgono di un approccio disconnesso per ottenere applicazioni con scalabilità maggiore.  
   
 ## <a name="adonet-components"></a>Componenti di ADO.NET  
- I due componenti principali di [!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)]per l'accesso e la modifica dei dati sono i provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e <xref:System.Data.DataSet>.  
+ I due componenti principali di [!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] per l'accesso e la modifica dei dati sono i provider di dati .NET Framework e <xref:System.Data.DataSet>.  
   
 ### <a name="net-framework-data-providers"></a>Provider di dati .NET Framework  
  I provider di dati .NET Framework sono componenti espressamente progettati per la modifica dei dati e per un accesso ai dati rapido, di tipo forward-only e di sola lettura. L'oggetto `Connection` fornisce la connettività a un'origine dati mentre l'oggetto `Command` consente di accedere ai comandi di database per restituire e modificare i dati, eseguire stored procedure e inviare o recuperare informazioni relative ai parametri. `DataReader` fornisce un flusso di dati a elevate prestazioni dall'origine dati e infine `DataAdapter` costituisce infine un collegamento tra l'oggetto `DataSet` e l'origine dati. Gli oggetti `DataAdapter` vengono usati da `Command` per eseguire comandi SQL nell'origine dati in modo da caricare dati in `DataSet` e risolvere le differenze relative alle modifiche apportate ai dati in `DataSet` fino all'origine dati. Per altre informazioni, vedere [provider di dati .NET Framework](../../../../docs/framework/data/adonet/data-providers.md) e [recupero e modifica dei dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md).  
@@ -21,7 +21,7 @@ L'elaborazione dei dati è stata sempre basata principalmente su un modello a du
 ### <a name="the-dataset"></a>Il DataSet  
  L'oggetto `DataSet` di ADO.NET è stato espressamente progettato per un accesso ai dati indipendente dall'origine dati. Di conseguenza, può essere usato con diverse origini dati, con dati XML o per la gestione di dati locali dell'applicazione. Il `DataSet` contiene una raccolta di uno o più oggetti <xref:System.Data.DataTable>, costituiti da righe e colonne di dati, nonché da informazioni su chiave primaria, chiave esterna, vincoli e relazioni relative ai dati degli oggetti `DataTable`. Per altre informazioni, vedere [DataSet, DataTable e DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md).  
   
- Nel diagramma seguente viene illustrata la relazione tra un provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e un `DataSet`.  
+ Il diagramma seguente illustra la relazione tra un provider di dati .NET Framework e un `DataSet`.  
   
  ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 Architettura di ADO.NET  
@@ -52,9 +52,9 @@ Architettura di ADO.NET
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] viene usato per distribuire servizi dati nel Web o in una rete Intranet. I dati sono strutturati come entità e relazioni in base alle specifiche di Entity Data Model. I dati distribuiti in questo modello sono indirizzabili tramite il protocollo HTTP standard. Per altre informazioni, vedere [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="xml-and-adonet"></a>XML e ADO.NET  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] si avvale di XML per fornire un accesso disconnesso ai dati. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] è stato progettato in stretta associazione con le classi XML in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]: si tratta di componenti di un'unica architettura.  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] si avvale di XML per fornire un accesso disconnesso ai dati. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] è stato progettato in stretta associazione con le classi XML in .NET Framework. si tratta di componenti di un'unica architettura.  
   
- In [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e le classi XML convergono nell'oggetto `DataSet`. È possibile compilare il `DataSet` con dati provenienti da un'origine XML, sia che si tratti di un file che di un flusso XML. È possibile scrivere il `DataSet` sotto forma di XML in conformità con le specifiche W3C (World Wide Web Consortium), includendone lo schema sotto forma di schema XSD (XML Schema Definition Language), indipendentemente dall'origine dati nel `DataSet`. XML, che costituisce il formato di serializzazione nativo del `DataSet`, rappresenta un supporto eccellente per lo spostamento di dati tra i livelli e rende il `DataSet` una soluzione ottimale per le attività in remoto relative al contesto dei dati e dello schema da e per un servizio Web XML. Per altre informazioni, vedere [XML Documents and Data](../../../../docs/standard/data/xml/index.md) (Documenti e dati XML).  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] e le classi XML in .NET Framework convergono nel `DataSet` oggetto. È possibile compilare il `DataSet` con dati provenienti da un'origine XML, sia che si tratti di un file che di un flusso XML. È possibile scrivere il `DataSet` sotto forma di XML in conformità con le specifiche W3C (World Wide Web Consortium), includendone lo schema sotto forma di schema XSD (XML Schema Definition Language), indipendentemente dall'origine dati nel `DataSet`. XML, che costituisce il formato di serializzazione nativo del `DataSet`, rappresenta un supporto eccellente per lo spostamento di dati tra i livelli e rende il `DataSet` una soluzione ottimale per le attività in remoto relative al contesto dei dati e dello schema da e per un servizio Web XML. Per altre informazioni, vedere [XML Documents and Data](../../../../docs/standard/data/xml/index.md) (Documenti e dati XML).  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: ee6de112dcf92b1780fd331b581e6794d61f9406
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6425b0df5735c2469079e1c5a07a1ddd3be414a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654442"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588809"
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipi di raccolta nei contratti dati
-Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]tali elenchi possono essere rappresentati mediante matrici o una varietà di altri tipi (elenco generico, <xref:System.ComponentModel.BindingList%601>generico, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Una raccolta, ad esempio, può contenere un elenco di indirizzi per un determinato cliente. Queste raccolte vengono denominate *raccolte di elenchi*, indipendentemente dal tipo effettivo.  
+Una *raccolta* costituisce un elenco di elementi di un certo tipo. In .NET Framework, tali elenchi possono essere rappresentati mediante matrici o una varietà di altri tipi (elenco generico e generica <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, o <xref:System.Collections.ArrayList>). Una raccolta, ad esempio, può contenere un elenco di indirizzi per un determinato cliente. Queste raccolte vengono denominate *raccolte di elenchi*, indipendentemente dal tipo effettivo.  
   
- Esiste una forma speciale di raccolta che rappresenta un'associazione tra un elemento (la "chiave") e un altro elemento (il "valore"). In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]questa raccolta è rappresentata da tipi quali <xref:System.Collections.Hashtable> e il dizionario generico. Una raccolta di associazioni, ad esempio, può eseguire il mapping di una città (la "chiave") alla relativa popolazione (il "valore") Queste raccolte vengono denominate *raccolte di dizionario*, indipendentemente dal tipo effettivo.  
+ Esiste una forma speciale di raccolta che rappresenta un'associazione tra un elemento (la "chiave") e un altro elemento (il "valore"). In .NET Framework, sono rappresentati dai tipi, ad esempio <xref:System.Collections.Hashtable> e il dizionario generico. Una raccolta di associazioni, ad esempio, può eseguire il mapping di una città (la "chiave") alla relativa popolazione (il "valore") Queste raccolte vengono denominate *raccolte di dizionario*, indipendentemente dal tipo effettivo.  
   
  Le raccolte ricevono un trattamento speciale nel modello del contratto dati.  
   

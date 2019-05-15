@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - managed HTML DOM
 ms.assetid: a017dd5c-cd7b-47e4-952c-f4f54cb48409
-ms.openlocfilehash: c18c6df29f79e9bde8474fa38e45dea03d4e0020
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe84cabfaabdc14c7dec6cb69653d41b4c6f6416
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009164"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590164"
 ---
 # <a name="using-the-managed-html-document-object-model"></a>Utilizzare il Document Object Model HTML gestito
-Il modello a oggetti documento (DOM) HTML gestito fornisce un wrapper di base di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per le classi HTML esposte da Internet Explorer. Usare queste classi per modificare pagine HTML ospitate nel <xref:System.Windows.Forms.WebBrowser> (controllo), o per creare nuove pagine dall'inizio.  
+Il modello a oggetti documento (DOM) HTML gestito fornisce un wrapper basato su .NET Framework per le classi HTML esposte da Internet Explorer. Usare queste classi per modificare pagine HTML ospitate nel <xref:System.Windows.Forms.WebBrowser> (controllo), o per creare nuove pagine dall'inizio.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Accedere al modello a oggetti documenti HTML gestito](how-to-access-the-managed-html-document-object-model.md)  

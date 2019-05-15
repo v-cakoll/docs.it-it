@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: ce019e97e54781976736dd5bd6e6d7e134322f65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2eb6d8f8bb7886e4615438e463aeea3c3825662
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916864"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582638"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Esecuzione di query sul servizio dati (WCF Data Services)
 
-La libreria client di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di eseguire query su un servizio dati mediante i modelli di programmazione comuni di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], compreso il linguaggio LINQ (Language Integrated Query). La libreria client traduce una query, definita nel client come un'istanza della classe <xref:System.Data.Services.Client.DataServiceQuery%601>, in un messaggio di richiesta HTTP GET. La libreria riceve il messaggio di risposta e lo converte in istanze di classi del servizio dati client. Queste classi vengono rilevate dall'oggetto <xref:System.Data.Services.Client.DataServiceContext> a cui appartiene <xref:System.Data.Services.Client.DataServiceQuery%601>.
+La libreria client di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di eseguire query su un servizio dati mediante i modelli di programmazione comuni di .NET Framework, compreso il linguaggio LINQ (Language Integrated Query). La libreria client traduce una query, definita nel client come un'istanza della classe <xref:System.Data.Services.Client.DataServiceQuery%601>, in un messaggio di richiesta HTTP GET. La libreria riceve il messaggio di risposta e lo converte in istanze di classi del servizio dati client. Queste classi vengono rilevate dall'oggetto <xref:System.Data.Services.Client.DataServiceContext> a cui appartiene <xref:System.Data.Services.Client.DataServiceQuery%601>.
 
 ## <a name="data-service-queries"></a>Query sul servizio dati
 
 La classe generica <xref:System.Data.Services.Client.DataServiceQuery%601> rappresenta una query che restituisce una raccolta di zero o più istanze di tipi di entità. Una query sul servizio dati appartiene sempre a un contesto del servizio dati esistente. Il contesto gestisce l'URI del servizio e le informazioni sui metadati necessarie per comporre ed eseguire la query.
 
-Quando si usa la **Aggiungi riferimento al servizio** finestra di dialogo per aggiungere un servizio dati a un [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-applicazione basata su client, una classe di contenitore di entità viene creata da cui eredita il <xref:System.Data.Services.Client.DataServiceContext> classe. Tale classe include proprietà che restituiscono istanze della classe <xref:System.Data.Services.Client.DataServiceQuery%601> tipizzate. Esiste una proprietà per ogni set di entità esposto dal servizio dati. Tali proprietà semplificano la creazione di un'istanza di <xref:System.Data.Services.Client.DataServiceQuery%601> tipizzata.
+Quando si usa la **Aggiungi riferimento al servizio** finestra di dialogo per aggiungere un servizio dati a un'applicazione client basata su .NET Framework, una classe di contenitore di entità viene creata da cui eredita il <xref:System.Data.Services.Client.DataServiceContext> classe. Tale classe include proprietà che restituiscono istanze della classe <xref:System.Data.Services.Client.DataServiceQuery%601> tipizzate. Esiste una proprietà per ogni set di entità esposto dal servizio dati. Tali proprietà semplificano la creazione di un'istanza di <xref:System.Data.Services.Client.DataServiceQuery%601> tipizzata.
 
 Una query viene eseguita negli scenari seguenti:
 

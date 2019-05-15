@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: d7b5cb57e921fa802207d2ad606ba3535b78a77b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 986f8c2d1eec91ee9a68d2b6068f5b38dfdf14f1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587017"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591255"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importazione dello schema per generare classi
 Per generare classi da schemi che possono essere utilizzati con Windows Communication Foundation (WCF), usare il <xref:System.Runtime.Serialization.XsdDataContractImporter> classe. In questo argomento viene descritto il processo e le relative varianti.  
@@ -21,9 +21,9 @@ Per generare classi da schemi che possono essere utilizzati con Windows Communic
 ## <a name="the-import-process"></a>Processo di importazione
  Il processo di importazione dello schema ha inizio con una classe <xref:System.Xml.Schema.XmlSchemaSet> e produce una classe <xref:System.CodeDom.CodeCompileUnit>.  
   
- La classe `XmlSchemaSet` fa parte del modello di oggetti dello schema di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] che rappresenta un set di documenti dello schema XSD (XML Schema Definition Language). Per creare un oggetto `XmlSchemaSet` da un set di documenti XSD, deserializzare ogni documento in un oggetto <xref:System.Xml.Schema.XmlSchema> (mediante <xref:System.Xml.Serialization.XmlSerializer>) e aggiungere questi oggetti a una nuova classe `XmlSchemaSet`.  
+ Il `XmlSchemaSet` fa parte del .NET Framework modello SOM (Schema Object) che rappresenta un set di documenti dello schema di XML Schema definition language (XSD). Per creare un oggetto `XmlSchemaSet` da un set di documenti XSD, deserializzare ogni documento in un oggetto <xref:System.Xml.Schema.XmlSchema> (mediante <xref:System.Xml.Serialization.XmlSerializer>) e aggiungere questi oggetti a una nuova classe `XmlSchemaSet`.  
   
- La classe `CodeCompileUnit` fa parte del CodeDOM (Code Document Object Model) di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] che rappresenta il codice [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] in modo astratto. Per generare il codice effettivo da una classe `CodeCompileUnit`, usare una sottoclasse della classe <xref:System.CodeDom.Compiler.CodeDomProvider>, ad esempio la classe <xref:Microsoft.CSharp.CSharpCodeProvider> o <xref:Microsoft.VisualBasic.VBCodeProvider>.  
+ Il `CodeCompileUnit` fa parte di .NET Framework Code Document Object Model (CodeDOM) che rappresenta il codice .NET Framework in modo astratto. Per generare il codice effettivo da una classe `CodeCompileUnit`, usare una sottoclasse della classe <xref:System.CodeDom.Compiler.CodeDomProvider>, ad esempio la classe <xref:Microsoft.CSharp.CSharpCodeProvider> o <xref:Microsoft.VisualBasic.VBCodeProvider>.  
   
 ### <a name="to-import-a-schema"></a>Per importare uno schema  
   
@@ -60,7 +60,7 @@ Per generare classi da schemi che possono essere utilizzati con Windows Communic
 #### <a name="controlling-namespaces-namespaces-or-the-namespace-switch"></a>Controllo degli spazi dei nomi (opzione Namespaces o /namespace)  
  Corrisponde al **/namespace** accendere il `Svcutil.exe` dello strumento.  
   
- In genere, i tipi generati dallo schema vengono generati nello [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] spazi dei nomi, con ogni spazio dei nomi XSD corrisponde a un determinato [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dello spazio dei nomi in base a un mapping descritto in [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). È possibile personalizzare questo mapping impostando la proprietà <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> su <xref:System.Collections.Generic.Dictionary%602>. Se uno specifico spazio dei nomi XSD viene rilevato nel dizionario, anche lo spazio dei nomi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] corrispondente viene prelevato dal dizionario.  
+ In genere, vengono generati tipi generati dallo schema in .NET Framework gli spazi dei nomi, con ogni spazio dei nomi XSD corrispondente a un determinato spazio dei nomi .NET Framework in base a un mapping descritto in [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). È possibile personalizzare questo mapping impostando la proprietà <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> su <xref:System.Collections.Generic.Dictionary%602>. Se un determinato spazio dei nomi XSD viene trovato nel dizionario, lo spazio dei nomi .NET Framework corrisponda anche viene prelevato dal dizionario.  
   
  Si consideri ad esempio lo schema seguente.  
   
@@ -74,7 +74,7 @@ Per generare classi da schemi che possono essere utilizzati con Windows Communic
 #### <a name="adding-the-serializableattribute-generateserializable-or-the-serializable-switch"></a>Aggiunta di SerializableAttribute (opzione GenerateSerializable o /serializable)  
  Corrisponde al **/ serializzabile** accendere il `Svcutil.exe` dello strumento.  
   
- In alcuni casi può essere importante che i tipi generati dallo schema possano essere usati con i motori di serializzazione di runtime di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (ad esempio, le classi <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> e <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>). Questo aspetto è utile quando si usano tipi per i servizi remoti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Per abilitare questo aspetto è necessario applicare l'attributo <xref:System.SerializableAttribute> ai tipi generati in aggiunta all'attributo <xref:System.Runtime.Serialization.DataContractAttribute> normale. L'attributo viene generato automaticamente se l'opzione di importazione `GenerateSerializable` è impostata su `true`.  
+ In alcuni casi è importante per i tipi generati dallo schema per poter essere usato con motori di serializzazione di runtime di .NET Framework (ad esempio, il <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> e il <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> classi). Ciò è utile quando si usano tipi per la comunicazione remota di .NET Framework. Per abilitare questo aspetto è necessario applicare l'attributo <xref:System.SerializableAttribute> ai tipi generati in aggiunta all'attributo <xref:System.Runtime.Serialization.DataContractAttribute> normale. L'attributo viene generato automaticamente se l'opzione di importazione `GenerateSerializable` è impostata su `true`.  
   
  Nell'esempio seguente viene illustrata la classe `Vehicle` generata con l'opzione di importazione `GenerateSerializable` impostata su `true`.  
   
@@ -103,7 +103,7 @@ Per generare classi da schemi che possono essere utilizzati con Windows Communic
 > [!NOTE]
 >  Qualsiasi associazione può essere considerata un elenco. Ad esempio, è possibile visualizzare l'associazione precedente come un elenco di oggetti `city` complessi che presentano due campi (un campo stringa e un campo numero intero). Entrambi i modelli sono rappresentati nello schema XSD. Non è possibile distinguere tra un elenco e un'associazione, in modo che tali modelli vengono sempre considerati come elenchi a meno che non è presente nello schema di un'annotazione speciale specifica di WCF. L'annotazione indica che un modello specifico rappresenta un'associazione. Per altre informazioni, vedere [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
- In genere, un elenco viene importato come un contratto dati della raccolta che deriva da un elenco generico o come una matrice [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], a seconda che lo schema segua o meno il modello di denominazione standard per le raccolte. Come descritto più dettagliatamente [tipi di raccolta nei contratti dati](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Le associazioni normalmente vengono importate come un tipo <xref:System.Collections.Generic.Dictionary%602> o un contratto dati della raccolta che deriva dall'oggetto dizionario. Si consideri ad esempio lo schema seguente.  
+ In genere, un elenco viene importato come un contratto dati della raccolta che deriva da un elenco generico o come una matrice di .NET Framework, a seconda se lo schema segua il modello di denominazione standard per le raccolte. Come descritto più dettagliatamente [tipi di raccolta nei contratti dati](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Le associazioni normalmente vengono importate come un tipo <xref:System.Collections.Generic.Dictionary%602> o un contratto dati della raccolta che deriva dall'oggetto dizionario. Si consideri ad esempio lo schema seguente.  
   
  [!code-xml[c_SchemaImportExport#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  
   
@@ -130,11 +130,11 @@ Per generare classi da schemi che possono essere utilizzati con Windows Communic
  Il `ReferencedCollectionTypes` proprietà corrisponde alla proprietà di **/collectionType** SvcUtil.exe dello strumento. Si noti che per fare riferimento a più tipi di raccolta, il **/collectionType** deve essere specificata più volte. Se il tipo non è presente in mscorlib. dll, l'assembly deve anche fare riferimento tramite il **/Reference** passare.  
   
 #### <a name="import-options-referencing-existing-types"></a>Opzioni di importazione: Riferimento ai tipi esistenti  
- A volte i tipi nello schema corrispondono ai tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] esistenti e non è necessario generare questi tipi da zero (questa sezione si applica solo ai tipi non di raccolta. Per i tipi di raccolta, vedere la sezione precedente).  
+ In alcuni casi, i tipi nello schema corrispondono ai tipi .NET Framework esistenti e non è necessario generare questi tipi da zero. (questa sezione si applica solo ai tipi non di raccolta. Per i tipi di raccolta, vedere la sezione precedente).  
   
  Ad esempio, è possibile che si disponga di un contratto dati "Person" standard per tutta l'azienda che si desidera usare sempre quando si rappresenta una persona. Ogni volta che un servizio usa questo tipo e lo schema è presente nei metadati del servizio, è possibile riutilizzare il tipo `Person` esistente durante l'importazione di questo schema anziché generare un nuovo tipo per ogni servizio.  
   
- Per questo scopo, passare un elenco dei tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] che si desidera riutilizzare nella raccolta che la proprietà <xref:System.Runtime.Serialization.ImportOptions.ReferencedTypes%2A> restituisce sulla classe <xref:System.Runtime.Serialization.ImportOptions>. Se uno di questi tipi presenta un nome del contratto dati e un spazio dei nomi corrispondenti al nome e allo spazio dei nomi di un tipo di schema, viene eseguito un confronto strutturale. Se si stabilisce che i tipi hanno nomi e strutture corrispondenti, il tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] esistente viene riutilizzato anziché generare un nuovo tipo. Se corrisponde solo il nome ma non la struttura, viene generata un'eccezione. Si noti che non è consentito il controllo delle versioni quando si fa riferimento ai tipi (ad esempio, aggiungendo nuovi membri dati facoltativi). Le strutture devono corrispondere perfettamente.  
+ A tale scopo, passare un elenco di tipi .NET Framework che si desidera riutilizzare nella raccolta di <xref:System.Runtime.Serialization.ImportOptions.ReferencedTypes%2A> proprietà restituisce nel <xref:System.Runtime.Serialization.ImportOptions> classe. Se uno di questi tipi presenta un nome del contratto dati e un spazio dei nomi corrispondenti al nome e allo spazio dei nomi di un tipo di schema, viene eseguito un confronto strutturale. Se è stato stabilito che i tipi hanno nomi e le strutture corrispondente, il tipo di .NET Framework esistente viene riutilizzato anziché generare una nuova. Se corrisponde solo il nome ma non la struttura, viene generata un'eccezione. Si noti che non è consentito il controllo delle versioni quando si fa riferimento ai tipi (ad esempio, aggiungendo nuovi membri dati facoltativi). Le strutture devono corrispondere perfettamente.  
   
  È possibile aggiungere più tipi con lo stesso nome del contratto dati e lo stesso spazio dei nomi alla raccolta di tipi a cui si fa riferimento, fintanto che non vengono importati tipi dello schema con tale nome e spazio dei nomi. In questo modo è possibile aggiungere facilmente tutti i tipi di un assembly alla raccolta senza temere che vengano creati duplicati dei tipi che non sono presenti nello schema.  
   
@@ -175,7 +175,7 @@ Per generare classi da schemi che possono essere utilizzati con Windows Communic
 #### <a name="import-options-advanced-options"></a>Opzioni di importazione: Opzioni avanzate  
  Di seguito sono elencate le opzioni importazione avanzate:  
   
-- Proprietà <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Specifica la classe <xref:System.CodeDom.Compiler.CodeDomProvider> da usare per generare il codice per le classi generate. Il meccanismo di importazione tenta di evitare funzionalità non supportate da <xref:System.CodeDom.Compiler.CodeDomProvider>. Se la proprietà <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> non è impostata, il set completo di funzionalità [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] viene usato senza restrizioni.  
+- Proprietà <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Specifica la classe <xref:System.CodeDom.Compiler.CodeDomProvider> da usare per generare il codice per le classi generate. Il meccanismo di importazione tenta di evitare funzionalità non supportate da <xref:System.CodeDom.Compiler.CodeDomProvider>. Se il <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> non è impostato, il set completo di funzionalità di .NET Framework viene usato senza alcuna restrizione.  
   
 - Proprietà <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. È possibile specificare un'implementazione <xref:System.Runtime.Serialization.IDataContractSurrogate> con questa proprietà. <xref:System.Runtime.Serialization.IDataContractSurrogate> personalizza il processo di importazione. Per altre informazioni, vedere [surrogati del contratto dati](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Per impostazione predefinita, non viene usato alcun surrogato.  
   

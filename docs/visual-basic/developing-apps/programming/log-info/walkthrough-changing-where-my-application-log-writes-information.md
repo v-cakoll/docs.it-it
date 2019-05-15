@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cba90119fa6f26946e72ce097074f275178ff33b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327646"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593343"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log (Visual Basic)
 È possibile usare gli oggetti `My.Application.Log` e `My.Log` per registrare informazioni sugli eventi che si verificano nell'applicazione. Questa procedura dettagliata mostra come eseguire l'override delle impostazioni predefinite e fare in modo che l'oggetto `Log` scriva le informazioni in altri listener di log.  
@@ -28,11 +28,11 @@ ms.locfileid: "59327646"
   
      Se non è presente alcun file app.config:  
   
-    1.  Scegliere **Aggiungi nuovo elemento** dal menu **Progetto**.  
+    1. Scegliere **Aggiungi nuovo elemento** dal menu **Progetto**.  
   
-    2.  Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **File di configurazione dell'applicazione**.  
+    2. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **File di configurazione dell'applicazione**.  
   
-    3.  Fare clic su **Aggiungi**.  
+    3. Fare clic su **Aggiungi**.  
   
 2. Individuare la sezione `<listeners>` all'interno della sezione `<source>` con l'attributo `name` "DefaultSource" che si trova nella sezione `<sources>` . La sezione `<sources>` si trova nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
   
@@ -153,13 +153,13 @@ ms.locfileid: "59327646"
   
      Di seguito sono riportati alcuni esempi di listener che si possono usare.  
   
-    -   Il listener <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>, che scrive le informazioni in un log file.  
+    - Il listener <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>, che scrive le informazioni in un log file.  
   
-    -   Il listener <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>, che scrive le informazioni nel log eventi del computer specificato dal parametro `initializeData`.  
+    - Il listener <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>, che scrive le informazioni nel log eventi del computer specificato dal parametro `initializeData`.  
   
-    -   I listener <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> e <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, che scrivono le informazioni nel file specificato nel parametro `initializeData`.  
+    - I listener <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> e <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, che scrivono le informazioni nel file specificato nel parametro `initializeData`.  
   
-    -   Il listener <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>, che scrive le informazioni nella console della riga di comando.  
+    - Il listener <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>, che scrive le informazioni nella console della riga di comando.  
   
      Per sapere dove gli altri tipi di listener di log scrivono le informazioni, consultare la documentazione relativa al tipo di listener desiderato.  
   

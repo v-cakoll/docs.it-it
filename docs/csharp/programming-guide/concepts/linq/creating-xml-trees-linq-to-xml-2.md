@@ -2,12 +2,12 @@
 title: Creazione di alberi in C# (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 3bac7b62d04c9690cdd08d1993b64db33c4e6ab8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00f528bca00b2c2316d949ceb3b6c4bba2499146
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503169"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597667"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Creazione di alberi in C# (LINQ to XML)
 In questa sezione vengono fornite informazioni sulla creazione di alberi XML in C#.  
@@ -50,17 +50,17 @@ XElement contacts =
   
  Il parametro `content` è estremamente flessibile. Supporta qualsiasi tipo di oggetto che corrisponde a un elemento figlio valido di un oggetto <xref:System.Xml.Linq.XElement>. Ai tipi diversi di oggetti passati in questo parametro si applicano le regole seguenti:  
   
--   Una stringa viene aggiunta come contenuto di tipo testo.  
+- Una stringa viene aggiunta come contenuto di tipo testo.  
   
--   Un oggetto <xref:System.Xml.Linq.XElement> viene aggiunto come elemento figlio.  
+- Un oggetto <xref:System.Xml.Linq.XElement> viene aggiunto come elemento figlio.  
   
--   Un oggetto <xref:System.Xml.Linq.XAttribute> viene aggiunto come attributo.  
+- Un oggetto <xref:System.Xml.Linq.XAttribute> viene aggiunto come attributo.  
   
--   Un oggetto <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> o <xref:System.Xml.Linq.XText> viene aggiunto come contenuto di elemento figlio.  
+- Un oggetto <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> o <xref:System.Xml.Linq.XText> viene aggiunto come contenuto di elemento figlio.  
   
--   Viene enumerato un oggetto <xref:System.Collections.IEnumerable> e queste regole vengono applicate in modo ricorsivo ai risultati.  
+- Viene enumerato un oggetto <xref:System.Collections.IEnumerable> e queste regole vengono applicate in modo ricorsivo ai risultati.  
   
--   Per qualsiasi altro tipo viene chiamato il metodo `ToString` e il risultato viene aggiunto come contenuto di tipo testo.  
+- Per qualsiasi altro tipo viene chiamato il metodo `ToString` e il risultato viene aggiunto come contenuto di tipo testo.  
   
 ### <a name="creating-an-xelement-with-content"></a>Creazione di un XElement con contenuto  
  È possibile creare un oggetto <xref:System.Xml.Linq.XElement> con contenuto semplice usando una sola chiamata di metodo. A tale scopo, specificare il contenuto come secondo parametro, come illustrato di seguito:  

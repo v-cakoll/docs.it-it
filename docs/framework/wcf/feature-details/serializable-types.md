@@ -2,12 +2,12 @@
 title: Tipi serializzabili
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: df00623ba45b356561d4d80d970fdf36ee6a377f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0913d523e93505934b1cf231284e356baba5ded3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586146"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591667"
 ---
 # <a name="serializable-types"></a>Tipi serializzabili
 Per impostazione predefinita, <xref:System.Runtime.Serialization.DataContractSerializer> serializza tutti i tipi visibili pubblicamente. Vengono serializzati i campi e le proprietà di lettura/scrittura pubblici del tipo.  
@@ -36,7 +36,7 @@ Per impostazione predefinita, <xref:System.Runtime.Serialization.DataContractSer
 - Per rifiutare esplicitamente il processo di serializzazione per membri, proprietà o campi pubblici, applicare l'attributo <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> a tale membro.  
   
 ## <a name="inheritance"></a>Ereditarietà  
- I tipi non contrassegnati (tipi senza l'attributo <xref:System.Runtime.Serialization.DataContractAttribute>) possono ereditare da tipi che dispongono di tale attributo, ma l'operazione opposta non è consentita, pertanto i tipi con l'attributo non possono ereditare da tipi non contrassegnati. Questa regola viene applicata principalmente per garantire la compatibilità con il codice scritto in versioni precedenti di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ I tipi non contrassegnati (tipi senza l'attributo <xref:System.Runtime.Serialization.DataContractAttribute>) possono ereditare da tipi che dispongono di tale attributo, ma l'operazione opposta non è consentita, pertanto i tipi con l'attributo non possono ereditare da tipi non contrassegnati. Questa regola viene applicata principalmente per garantire la compatibilità con le versioni precedenti con il codice scritto in versioni precedenti di .NET Framework.  
   
 ## <a name="see-also"></a>Vedere anche
 

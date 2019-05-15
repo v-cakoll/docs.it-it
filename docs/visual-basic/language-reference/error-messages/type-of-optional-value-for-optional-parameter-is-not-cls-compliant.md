@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
-ms.openlocfilehash: ee7d208f7a579f81690ffbda265bde29316e4ec3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 35ddf1d42efae20be477c20b89775de64ceee176
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664295"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589845"
 ---
 # <a name="type-of-optional-value-for-optional-parameter-parametername-is-not-cls-compliant"></a>Tipo di valore facoltativo per il parametro facoltativo \<parametername > non è conforme a CLS
 Una procedura è contrassegnata come `<CLSCompliant(True)>`, ma viene dichiarato un parametro [facoltativo](../../../visual-basic/language-reference/modifiers/optional.md) con valore predefinito di un tipo non conforme.  
@@ -43,4 +43,4 @@ Una procedura è contrassegnata come `<CLSCompliant(True)>`, ma viene dichiarato
   
 - Se la procedura deve essere compatibile con CLS, modificare il tipo di questo valore predefinito impostandolo sul tipo con una compatibilità con CLS più vicina. Al posto di `UInteger` ad esempio può essere possibile usare `Integer` se non è necessario l'intervallo di valore al di sopra di 2.147.483.647. Se è necessario l'intervallo esteso, è possibile sostituire `UInteger` con `Long`.  
   
-- Se si prevede l'interazione con gli oggetti COM o di automazione, tenere presente che alcuni tipi hanno un'ampiezza di dati diversa da [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Ad esempio, `int` è spesso a 16 bit in altri ambienti. Se si accetta un intero a 16 bit da tale componente, dichiararlo come `Short` invece di `Integer` nel codice gestito di Visual Basic.
+- Se si prevede l'interazione con oggetti COM o di automazione, tenere presente che alcuni tipi hanno un'ampiezza di dati diversi in .NET Framework. Ad esempio, `int` è spesso a 16 bit in altri ambienti. Se si accetta un intero a 16 bit da tale componente, dichiararlo come `Short` invece di `Integer` nel codice gestito di Visual Basic.

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: c761a4a866aed3f8d42b28cdc8a360cd4923a7fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 14565c3e73618a4290166d89f0ae6c2c9150f3b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616679"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586187"
 ---
 # <a name="caching-in-net-framework-applications"></a>Memorizzazione nella cache in applicazioni .NET Framework
 La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido. Quando accedono nuovamente ai dati, le applicazioni possono recuperarli dalla cache anziché dall'origine. In questo modo si possono ottenere migliori prestazioni e scalabilità. Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.  
@@ -19,7 +19,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
  .NET Framework offre funzionalità di memorizzazione nella cache che è possibile usare per migliorare le prestazioni e la scalabilità delle applicazioni client e server di Windows, tra cui ASP.NET.  
   
 > [!NOTE]
->  In [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] e versioni precedenti ASP.NET fornisce un'implementazione della cache in memoria nello spazio dei nomi <xref:System.Web.Caching>. Nelle versioni precedenti di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] la memorizzazione nella cache è disponibile solo nello spazio dei nomi <xref:System.Web> e pertanto richiede una dipendenza dalle classi ASP.NET. In .NET Framework 4 lo spazio dei nomi <xref:System.Runtime.Caching> contiene API progettate per le applicazioni Web e anche per quelle non Web.  
+>  In [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] e versioni precedenti ASP.NET fornisce un'implementazione della cache in memoria nello spazio dei nomi <xref:System.Web.Caching>. Nelle versioni precedenti di .NET Framework, la memorizzazione nella cache è disponibile solo nel <xref:System.Web> dello spazio dei nomi e pertanto richiede una dipendenza dalle classi ASP.NET. In .NET Framework 4 lo spazio dei nomi <xref:System.Runtime.Caching> contiene API progettate per le applicazioni Web e anche per quelle non Web.  
   
 ## <a name="caching-data"></a>Memorizzazione di dati nella cache  
  È possibile memorizzare nella cache le informazioni usando le classi dello spazio dei nomi <xref:System.Runtime.Caching>. Le classi di memorizzazione nella cache in questo spazio dei nomi offrono le funzionalità seguenti:  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: 9918f07d9c26c1779a1eedfbc423c31e61659334
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8241485d75932cd0b8be85d231897b0bc199f0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048743"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592110"
 ---
 # <a name="analytic-tracing-overview"></a>Panoramica della traccia analitica
 La traccia analitica in [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] è una funzionalità di traccia a prestazioni elevate e verbosità ridotta impostata in base a Traccia eventi per Windows (ETW). ETW è in esecuzione al livello del kernel per ridurre notevolmente il sovraccarico delle operazioni di traccia. Memorizza nel buffer gli eventi in modalità kernel e utente in modo efficace e consente l'abilitazione dinamica della registrazione senza richiedere riavvii del servizio. I dati della traccia sono disponibili nei log eventi in seguito alla generazione e alla ricezione.  
@@ -47,4 +47,4 @@ La traccia analitica in [!INCLUDE[netfx_current_long](../../../../../includes/ne
  Per altre informazioni su come abilitare la traccia del flusso di messaggi, vedere [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
   
 ### <a name="keywords"></a>Parole chiave  
- Le parole chiave vengono utilizzate per filtrare messaggi di traccia e definire il componente di [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] che ha generato l'evento. Per altre informazioni, vedere [dinamicamente abilitazione della traccia analitica](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).
+ Parole chiave vengono utilizzate per filtrare i messaggi di traccia e definire quale componente di .NET Framework ha generato l'evento. Per altre informazioni, vedere [dinamicamente abilitazione della traccia analitica](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).

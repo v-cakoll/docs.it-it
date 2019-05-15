@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 29c24d9920bff38beced8f5995ec328571e6b5d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 345acd17a6357f71f5c047475a4494a1fa793a58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309225"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595781"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Procedura dettagliata: Scrittura di query in C# (LINQ)
 Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizzate per scrivere espressioni di query LINQ.  
@@ -41,17 +41,17 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
 ## <a name="create-an-in-memory-data-source"></a>Creare un'origine dati in memoria  
  L'origine dati per le query è un semplice elenco di oggetti `Student`. Ogni record `Student` ha un nome, un cognome e una matrice di interi che rappresenta i punteggi dei test nella classe. Copiare questo codice nel progetto. Tenere presente le seguenti caratteristiche:  
   
--   La classe `Student` consiste di proprietà implementate automaticamente.  
+- La classe `Student` consiste di proprietà implementate automaticamente.  
   
--   Ogni studente nell'elenco viene inizializzato con un inizializzatore di oggetto.  
+- Ogni studente nell'elenco viene inizializzato con un inizializzatore di oggetto.  
   
--   L'elenco stesso viene inizializzato con un inizializzatore di raccolta.  
+- L'elenco stesso viene inizializzato con un inizializzatore di raccolta.  
   
  Questa intera struttura di dati sarà inizializzata e istanziata senza chiamate esplicite ad alcun costruttore o accesso a membri espliciti. Per altre informazioni su queste nuove funzionalità, vedere [Proprietà implementate automaticamente](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) e [Inizializzatori di oggetto e di raccolta](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
 #### <a name="to-add-the-data-source"></a>Per aggiungere l'origine dati  
   
--   Aggiungere la classe `Student` e l'elenco di studenti inizializzato alla classe `Program` nel progetto.  
+- Aggiungere la classe `Student` e l'elenco di studenti inizializzato alla classe `Program` nel progetto.  
   
      [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
@@ -63,7 +63,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 #### <a name="to-create-a-simple-query"></a>Per creare una query semplice  
   
--   Nel metodo `Main` dell'applicazione creare una query semplice che, quando viene eseguita, genera un elenco di tutti gli studenti il cui punteggio del primo test è maggiore di 90. Si noti che, poiché è selezionato l'intero oggetto `Student`, il tipo di query è `IEnumerable<Student>`. Il codice potrebbe usare anche la tipizzazione implicita mediante la parola chiave [var](../../../../csharp/language-reference/keywords/var.md), ma si usa la tipizzazione esplicita per illustrare dettagliatamente i risultati. Per altre informazioni su `var`, vedere [Variabili locali tipizzate in modo implicito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+- Nel metodo `Main` dell'applicazione creare una query semplice che, quando viene eseguita, genera un elenco di tutti gli studenti il cui punteggio del primo test è maggiore di 90. Si noti che, poiché è selezionato l'intero oggetto `Student`, il tipo di query è `IEnumerable<Student>`. Il codice potrebbe usare anche la tipizzazione implicita mediante la parola chiave [var](../../../../csharp/language-reference/keywords/var.md), ma si usa la tipizzazione esplicita per illustrare dettagliatamente i risultati. Per altre informazioni su `var`, vedere [Variabili locali tipizzate in modo implicito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
      Si noti anche che la variabile di intervallo della query, `student`, funge da riferimento a ogni `Student` nell'origine, fornendo l'accesso di membro per ogni oggetto.  
   
@@ -75,9 +75,9 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 1. Scrivere ora il ciclo `foreach` che avvia l'esecuzione della query. Tenere presente quanto segue in merito al codice:  
   
-    -   A ogni elemento della sequenza restituita si accede tramite la variabile di iterazione nel ciclo `foreach`.  
+    - A ogni elemento della sequenza restituita si accede tramite la variabile di iterazione nel ciclo `foreach`.  
   
-    -   Il tipo di questa variabile è `Student` e il tipo della variabile di query è compatibile, `IEnumerable<Student>`.  
+    - Il tipo di questa variabile è `Student` e il tipo della variabile di query è compatibile, `IEnumerable<Student>`.  
   
 2. Dopo aver aggiunto questo codice, compilare ed eseguire l'applicazione per vedere i risultati nella finestra **Console**.  
   

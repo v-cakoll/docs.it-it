@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 9f1ddf7691c9c00c3a4a7a20fc81d2f42f5830f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f1392a6ee2e8f5b3f85650ee91e20e7ec3436fa
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652092"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592221"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurazione dei servizi tramite file di configurazione
 Configurazione di un servizio Windows Communication Foundation (WCF) con un file di configurazione ti offre la possibilità di fornire endpoint e i dati sul comportamento del servizio al momento della distribuzione invece che in fase di progettazione. In questo argomento vengono delineate le principali tecniche disponibili.  
   
- È un servizio WCF può essere configurato utilizzando il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] la tecnologia di configurazione. In genere, gli elementi XML vengono aggiunti al file Web. config per un sito Internet Information Services (IIS) che ospita un servizio WCF. Gli elementi consentono di modificare dettagli, quali gli indirizzi degli endpoint (gli indirizzi effettivi usati per comunicare con il servizio), per i singoli computer. Inoltre, WCF include diversi elementi forniti dal sistema che consentono di selezionare rapidamente le funzionalità di base per un servizio. A partire da [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF viene fornito con un nuovo modello di configurazione predefinito che semplifica i requisiti di configurazione WCF. Se non si specifica alcuna configurazione di WCF per un determinato servizio, il runtime configura automaticamente il servizio con alcuni endpoint standard e comportamento/associazione predefinito. In pratica, la creazione della configurazione è un'importante parte della programmazione di applicazioni WCF.  
+ Un servizio WCF è configurabile tramite la tecnologia di configurazione di .NET Framework. In genere, gli elementi XML vengono aggiunti al file Web. config per un sito Internet Information Services (IIS) che ospita un servizio WCF. Gli elementi consentono di modificare dettagli, quali gli indirizzi degli endpoint (gli indirizzi effettivi usati per comunicare con il servizio), per i singoli computer. Inoltre, WCF include diversi elementi forniti dal sistema che consentono di selezionare rapidamente le funzionalità di base per un servizio. A partire da [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF viene fornito con un nuovo modello di configurazione predefinito che semplifica i requisiti di configurazione WCF. Se non si specifica alcuna configurazione di WCF per un determinato servizio, il runtime configura automaticamente il servizio con alcuni endpoint standard e comportamento/associazione predefinito. In pratica, la creazione della configurazione è un'importante parte della programmazione di applicazioni WCF.  
   
  Per altre informazioni, vedere [configurazione di associazioni per i servizi](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Per un elenco delle domande più comunemente utilizzati elementi, vedere [System-provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md). Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).  
   
@@ -22,7 +22,7 @@ Configurazione di un servizio Windows Communication Foundation (WCF) con un file
 >  Nel caso di distribuzione di scenari affiancati in cui vengono implementate due versioni diverse di un servizio, è necessario specificare nomi parziali di assembly a cui viene fatto riferimento nei file di configurazione. Questa operazione è necessaria perché il file di configurazione è condiviso tra tutte le versioni di un servizio che potrebbero essere in esecuzione in versioni diverse di .NET Framework.  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web. config e App. config  
- WCF utilizza il sistema di configurazione di System. Configuration del [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ WCF Usa il sistema di configurazione di System. Configuration di .NET Framework.  
   
  Quando si configura un servizio in Visual Studio, usare un file Web. config o App. config per specificare le impostazioni. La scelta del nome del file di configurazione è determinata dall'ambiente host scelto per il servizio. Se si sta usando IIS per ospitare il servizio, usare un file Web.config. Se si sta usando un altro ambiente host, usare un file App.config.  
   

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 65dfe906276912b5f6dc8d49af6a2662e3a09157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630779"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591199"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Procedura dettagliata: Memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF
 La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido. Quando accedono nuovamente ai dati, le applicazioni possono recuperarli dalla cache anziché dall'origine. In questo modo si possono ottenere migliori prestazioni e scalabilità. Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.
 
- Il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fornisce le classi che consentono di usare la memorizzazione nella cache [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applicazioni. Queste classi si trovano nel <xref:System.Runtime.Caching> dello spazio dei nomi.
+ .NET Framework fornisce le classi che consentono di usare la memorizzazione nella cache in applicazioni .NET Framework. Queste classi si trovano nel <xref:System.Runtime.Caching> dello spazio dei nomi.
 
 > [!NOTE]
->  Il <xref:System.Runtime.Caching> dello spazio dei nomi è una novità di [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Questo spazio dei nomi rende la memorizzazione nella cache è disponibile per tutti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applicazioni. Nelle versioni precedenti di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] la memorizzazione nella cache è disponibile solo nello spazio dei nomi <xref:System.Web> e pertanto richiede una dipendenza dalle classi ASP.NET.
+>  Il <xref:System.Runtime.Caching> dello spazio dei nomi è una novità di [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Questo spazio dei nomi rende la memorizzazione nella cache è disponibile per tutte le applicazioni .NET Framework. Nelle versioni precedenti di .NET Framework, la memorizzazione nella cache è disponibile solo nel <xref:System.Web> dello spazio dei nomi e pertanto richiede una dipendenza dalle classi ASP.NET.
 
- Questa procedura dettagliata illustra come usare le funzionalità di memorizzazione nella cache sono disponibile nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] come parte di un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dell'applicazione. Nella procedura dettagliata, si memorizzano nella cache il contenuto di un file di testo.
+ Questa procedura dettagliata illustra come usare le funzionalità di memorizzazione nella cache sono disponibile in .NET Framework come parte di un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dell'applicazione. Nella procedura dettagliata, si memorizzano nella cache il contenuto di un file di testo.
 
  Di seguito vengono illustrate le attività incluse nella procedura dettagliata:
 
@@ -67,7 +67,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 4. Nel **nuovo progetto** finestra di dialogo **applicazione WPF**.
 
     > [!NOTE]
-    >  Se non viene visualizzato il **applicazione WPF** modello, assicurarsi che si intende utilizzare una versione del [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] che supporta WPF. Nel **nuovo progetto** finestra di dialogo [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] dall'elenco.
+    >  Se non viene visualizzato il **WPF Application** modello, assicurarsi che si intende utilizzare una versione di .NET Framework che supporta WPF. Nel **nuovo progetto** finestra di dialogo [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] dall'elenco.
 
 5. Nel **nome** testo casella, immettere un nome per il progetto. Ad esempio, è possibile immettere **WPFCaching**.
 

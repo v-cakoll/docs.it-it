@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6dcdbde480c1900ea488c6db3cc320b20f9f182
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971985"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591493"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Cenni preliminari sul controllo SplitContainer (Windows Form)
 Il controllo <xref:System.Windows.Forms.SplitContainer> Windows Form può essere considerato un oggetto composto, poiché è costituito da due pannelli separati da una barra mobile. Quando il puntatore del mouse viene posizionato sopra la barra, assume una forma diversa per indicare che la barra è mobile.  
   
 > [!IMPORTANT]
->  Nel **casella degli strumenti**, <xref:System.Windows.Forms.SplitContainer> controllo sostituisce il <xref:System.Windows.Forms.Splitter> controllo che era presente nella versione precedente di Visual Studio. È consigliabile usare il controllo <xref:System.Windows.Forms.SplitContainer> anziché il controllo <xref:System.Windows.Forms.Splitter>. Il <xref:System.Windows.Forms.Splitter> classe è ancora incluso nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per la compatibilità con le applicazioni esistenti, ma si consiglia di utilizzare il <xref:System.Windows.Forms.SplitContainer> controllo per i nuovi progetti.  
+>  Nel **casella degli strumenti**, <xref:System.Windows.Forms.SplitContainer> controllo sostituisce il <xref:System.Windows.Forms.Splitter> controllo che era presente nella versione precedente di Visual Studio. È consigliabile usare il controllo <xref:System.Windows.Forms.SplitContainer> anziché il controllo <xref:System.Windows.Forms.Splitter>. La classe <xref:System.Windows.Forms.Splitter> è ancora inclusa in .NET Framework per assicurare la compatibilità con le applicazioni esistenti, ma per i nuovi progetti si consiglia di usare il controllo <xref:System.Windows.Forms.SplitContainer>.  
   
  Con la <xref:System.Windows.Forms.SplitContainer> (controllo), è possibile creare complesse interfacce utente, spesso, una selezione in un pannello determina quali oggetti vengono visualizzati in altro pannello. Questa disposizione è particolarmente efficace per la visualizzazione e la ricerca di informazioni. Con due pannelli consente aggregare informazioni nelle aree e la barra di "separatore", rende più semplice per gli utenti di ridimensionare i pannelli.  
   
@@ -40,12 +40,12 @@ Il controllo <xref:System.Windows.Forms.SplitContainer> Windows Form può essere
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|Proprietà <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Determina quale pannello rimarranno invariati dimensione dopo il <xref:System.Windows.Forms.SplitContainer> controllo viene ridimensionato.|  
-|Proprietà <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Determina se la barra di divisione può essere spostato con la tastiera o il mouse.|  
-|Proprietà <xref:System.Windows.Forms.SplitContainer.Orientation%2A>|Determina se la barra di divisione viene disposto orizzontalmente o verticalmente.|  
-|Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Determina la distanza in pixel dal bordo sinistro o superiore per la barra di divisione mobile.|  
-|Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Determina la distanza minima, in pixel, che la barra di divisione può essere spostato dall'utente.|  
-|Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Determina lo spessore, in pixel, della barra di divisione.|  
+|Proprietà<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> |Determina quale pannello rimarranno invariati dimensione dopo il <xref:System.Windows.Forms.SplitContainer> controllo viene ridimensionato.|  
+|Proprietà<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> |Determina se la barra di divisione può essere spostato con la tastiera o il mouse.|  
+|Proprietà<xref:System.Windows.Forms.SplitContainer.Orientation%2A> |Determina se la barra di divisione viene disposto orizzontalmente o verticalmente.|  
+|Proprietà<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> |Determina la distanza in pixel dal bordo sinistro o superiore per la barra di divisione mobile.|  
+|Proprietà<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> |Determina la distanza minima, in pixel, che la barra di divisione può essere spostato dall'utente.|  
+|Proprietà<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> |Determina lo spessore, in pixel, della barra di divisione.|  
 |Evento<xref:System.Windows.Forms.SplitContainer.SplitterMoving> |Si verifica quando la barra di divisione viene spostato.|  
 |Evento<xref:System.Windows.Forms.SplitContainer.SplitterMoved> |Si verifica quando la barra di divisione viene spostato.|  
   
