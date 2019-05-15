@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b44ff3f460d2f33903f7f083cd1bb59c7bf83e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ddb6a5534eb7ef2dc823ac05e03d3b2d3d0cee7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648699"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623966"
 ---
 # <a name="order-preservation-in-plinq"></a>Conservazione dell'ordine in PLINQ
 In PLINQ, l'obiettivo è ottimizzare le prestazioni, mantenendo la correttezza. Una query deve essere eseguita il più velocemente possibile ma comunque produrre i risultati corretti. In alcuni casi, la correttezza richiede il mantenimento dell'ordine della sequenza di origine, ma l'ordinamento può essere oneroso a livello di risorse di calcolo. Pertanto, per impostazione predefinita, PLINQ non mantiene l'ordine della sequenza di origine. Da questo punto di vista, PLINQ è simile a [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], ma differisce da LINQ to Objects, che mantiene l'ordinamento.  
@@ -44,25 +44,25 @@ In PLINQ, l'obiettivo è ottimizzare le prestazioni, mantenendo la correttezza. 
 ## <a name="query-operators-and-ordering"></a>Operatori di query e di ordinamento  
  Gli operatori di query seguenti introducono il mantenimento dell'ordine in tutte le successive operazioni in una query o fino a quando non viene chiamato <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>:  
   
--   <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  
+- <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>  
+- <xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.ThenBy%2A>  
+- <xref:System.Linq.ParallelEnumerable.ThenBy%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>  
+- <xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>  
   
  Gli operatori di query PLINQ seguenti possono richiedere in alcuni casi sequenze di origine ordinate per produrre risultati corretti:  
   
--   <xref:System.Linq.ParallelEnumerable.Reverse%2A>  
+- <xref:System.Linq.ParallelEnumerable.Reverse%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>  
+- <xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.TakeWhile%2A>  
+- <xref:System.Linq.ParallelEnumerable.TakeWhile%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.SkipWhile%2A>  
+- <xref:System.Linq.ParallelEnumerable.SkipWhile%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.Zip%2A>  
+- <xref:System.Linq.ParallelEnumerable.Zip%2A>  
   
  Alcuni operatori di query PLINQ si comportano in modo diverso, a seconda che la sequenza di origine sia ordinata o non ordinata. Questi operatori sono elencati nella tabella seguente.  
   

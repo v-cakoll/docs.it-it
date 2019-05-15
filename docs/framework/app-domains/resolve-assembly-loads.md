@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: accb06421b8a697b0ee89adab0a9dffa23cffb05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4c40e2150bf56540fc95281f07bd14c60e138abc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193109"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607663"
 ---
 # <a name="resolving-assembly-loads"></a>risoluzione caricamenti assembly
 .NET Framework offre l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> per le applicazioni che richiedono un maggiore controllo sul caricamento di assembly. Con questo evento, l'applicazione può caricare un assembly nel contesto di caricamento dall'esterno di percorsi di sondaggio normale, selezionare la versione di assembly da caricare, creare e restituire un assembly dinamico e così via. Questo argomento illustra il materiale sussidiario per la gestione dell'evento <xref:System.AppDomain.AssemblyResolve>.  
@@ -30,24 +30,24 @@ ms.locfileid: "59193109"
 ## <a name="how-the-assemblyresolve-event-works"></a>Funzionamento dell'evento AssemblyResolve  
  Quando si registra un gestore per l'evento <xref:System.AppDomain.AssemblyResolve>, il gestore viene richiamato ogni volta che il runtime non riesce ad associarlo a un assembly in base al nome. Ad esempio, la chiamata dei metodi seguenti dal codice utente può causare l'evento <xref:System.AppDomain.AssemblyResolve>:  
   
--   Un overload del metodo <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, il cui primo argomento è una stringa che rappresenta il nome visualizzato dell'assembly da caricare (ovvero, la stringa restituita dalla proprietà <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>).  
+- Un overload del metodo <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, il cui primo argomento è una stringa che rappresenta il nome visualizzato dell'assembly da caricare (ovvero, la stringa restituita dalla proprietà <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>).  
   
--   Un overload del metodo <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, il cui primo argomento è un oggetto <xref:System.Reflection.AssemblyName> che identifica l'assembly da caricare.  
+- Un overload del metodo <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, il cui primo argomento è un oggetto <xref:System.Reflection.AssemblyName> che identifica l'assembly da caricare.  
   
--   Un overload del metodo <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+- Un overload del metodo <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
--   Un overload del metodo <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> o <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> che crea un'istanza di un oggetto in un altro dominio di applicazioni.  
+- Un overload del metodo <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> o <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> che crea un'istanza di un oggetto in un altro dominio di applicazioni.  
   
 ### <a name="what-the-event-handler-does"></a>Funzionamento del gestore eventi  
  Il gestore per l'evento <xref:System.AppDomain.AssemblyResolve> riceve il nome visualizzato dell'assembly da caricare nella proprietà <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType>. Se il gestore non riconosce il nome dell'assembly, viene restituito Null (`Nothing` in Visual Basic, `nullptr` in Visual C++).  
   
  Se il gestore riconosce il nome dell'assembly, può caricare e restituire un assembly che soddisfi la richiesta. Nell'elenco seguente vengono illustrati alcuni scenari di esempio.  
   
--   Se il gestore conosce il percorso di una versione dell'assembly, può caricare l'assembly usando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> e può restituire l'assembly caricato, se ha esito positivo.  
+- Se il gestore conosce il percorso di una versione dell'assembly, può caricare l'assembly usando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> e può restituire l'assembly caricato, se ha esito positivo.  
   
--   Se il gestore ha accesso a un database di assembly archiviati come matrici di byte, può caricare una matrice di byte usando uno degli overload del metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> che accetta una matrice di byte.  
+- Se il gestore ha accesso a un database di assembly archiviati come matrici di byte, può caricare una matrice di byte usando uno degli overload del metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> che accetta una matrice di byte.  
   
--   Il gestore può generare e restituire un assembly dinamico.  
+- Il gestore può generare e restituire un assembly dinamico.  
   
 > [!NOTE]
 >  Il gestore deve caricare l'assembly nel contesto di caricamento di provenienza, nel contesto di caricamento o in nessun contesto. Se il gestore carica l'assembly nel contesto di reflection solo usando il metodo <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType>, il tentativo di caricamento che ha generato l'evento <xref:System.AppDomain.AssemblyResolve> ha esito negativo.  
@@ -58,11 +58,11 @@ ms.locfileid: "59193109"
   
  Nella maggior parte dei casi, l'assembly restituito dal gestore viene visualizzato nel contesto di caricamento, indipendentemente dal contesto in cui lo carica il gestore. Ad esempio, se il gestore usa il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> per caricare un assembly nel contesto di caricamento di provenienza, l'assembly viene visualizzato nel contesto di caricamento quando viene restituito dal gestore. Tuttavia, nel caso seguente l'assembly viene visualizzato senza contesto quando viene restituito dal gestore:  
   
--   Il gestore carica un assembly senza contesto.  
+- Il gestore carica un assembly senza contesto.  
   
--   La proprietà <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> non è Null.  
+- La proprietà <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> non è Null.  
   
--   L'assembly richiedente (vale a dire l'assembly restituito dalla proprietà <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType>) è stato caricato senza contesto.  
+- L'assembly richiedente (vale a dire l'assembly restituito dalla proprietà <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType>) è stato caricato senza contesto.  
   
  Per informazioni sui contesti, vedere l'overload del metodo <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=nameWithType>.  
   

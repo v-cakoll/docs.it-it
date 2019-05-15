@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7ccee788a00e56da16d1e78597815553d3c6212
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 788229053f5702b44c6ac351b59ad1c464e4e133
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678265"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633635"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>quantificatori in espressioni regolari
 I quantificatori specificano il numero di istanze di un carattere, un gruppo o una classe di caratteri che deve essere presente nell'input affinché venga trovata una corrispondenza.  Nella tabella seguente vengono elencati i quantificatori supportati da .NET.  
@@ -228,11 +228,11 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
 ## <a name="greedy-and-lazy-quantifiers"></a>Quantificatori greedy e lazy  
  Alcuni quantificatori hanno due versioni:  
   
--   Una versione greedy.  
+- Una versione greedy.  
   
      Un quantificatore greedy tenta di trovare la corrispondenza con un elemento il maggior numero di volte possibile.  
   
--   Una versione non greedy (o lazy).  
+- Una versione non greedy (o lazy).  
   
      Un quantificatore non greedy tenta di trovare la corrispondenza con un elemento il minor numero di volte possibile. È possibile trasformare un quantificatore greedy in un quantificatore lazy aggiungendo semplicemente un `?`.  
   

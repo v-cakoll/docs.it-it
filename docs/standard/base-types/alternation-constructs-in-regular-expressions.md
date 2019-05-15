@@ -18,21 +18,21 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 6d9761d2e9904e865e7f6a17526327e1b04a1597
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 756d63be456dce10ca9e95963ed25602e6f4aec1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142931"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634781"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Costrutti di alternanza nelle espressioni regolari
 <a name="top"></a> I costrutti di alternanza modificano un'espressione regolare per abilitare la corrispondenza di tipo either/or o condizionale. .NET supporta tre costrutti di alternanza:  
   
--   [Criteri di ricerca con &#124;](#Either_Or)  
+- [Criteri di ricerca con &#124;](#Either_Or)  
   
--   [Corrispondenza condizionale con (?(espressione)yes&#124;no)](#Conditional_Expr)  
+- [Corrispondenza condizionale con (?(espressione)yes&#124;no)](#Conditional_Expr)  
   
--   [Corrispondenza condizionale in base a un gruppo di acquisizione valido](#Conditional_Group)  
+- [Corrispondenza condizionale in base a un gruppo di acquisizione valido](#Conditional_Group)  
   
 <a name="Either_Or"></a>   
 ## <a name="pattern-matching-with-124"></a>Criteri di ricerca con &#124;  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63931f4498f4c1f313e7980b91ef712d4a46a837
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 43037f897dfb591572a62a9bb3cccf9170d1f5fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865179"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645014"
 ---
 # <a name="exceptions-in-managed-threads"></a>Eccezioni in thread gestiti
 A partire da .NET Framework versione 2.0, Common Language Runtime consente alla maggior parte delle eccezioni non gestite nei thread di proseguire normalmente. Nella maggior parte dei casi questo significa che l'eccezione non gestita provoca l'interruzione dell'applicazione.  
@@ -25,11 +25,11 @@ A partire da .NET Framework versione 2.0, Common Language Runtime consente alla 
   
  Common Language Runtime fornisce una barriera per determinate eccezioni non gestite usate per controllare il flusso del programma:  
   
--   Viene generata un'eccezione <xref:System.Threading.ThreadAbortException> in un thread perché è stato chiamato il metodo <xref:System.Threading.Thread.Abort%2A>.  
+- Viene generata un'eccezione <xref:System.Threading.ThreadAbortException> in un thread perché è stato chiamato il metodo <xref:System.Threading.Thread.Abort%2A>.  
   
--   Viene generata un'eccezione <xref:System.AppDomainUnloadedException> in un thread perché è in corso lo scaricamento del dominio dell'applicazione in cui è in esecuzione il thread.  
+- Viene generata un'eccezione <xref:System.AppDomainUnloadedException> in un thread perché è in corso lo scaricamento del dominio dell'applicazione in cui è in esecuzione il thread.  
   
--   Common Language Runtime o un processo host termina il thread generando un'eccezione interna.  
+- Common Language Runtime o un processo host termina il thread generando un'eccezione interna.  
   
  Se una qualsiasi di queste eccezioni viene gestita nei thread creati da Common Language Runtime, l'eccezione termina il thread, ma Common Language Runtime non consente all'eccezione di proseguire.  
   
@@ -47,11 +47,11 @@ A partire da .NET Framework versione 2.0, Common Language Runtime consente alla 
 ## <a name="change-from-previous-versions"></a>Cambiamenti dalle versioni precedenti  
  Il cambiamento più significativo riguarda i thread gestiti. In .NET Framework versioni 1.0 e 1.1, Common Language Runtime fornisce una barriera per le eccezioni non gestite nelle situazioni seguenti:  
   
--   Non esiste alcun equivalente di un'eccezione non gestita in un pool di thread. Quando un'attività genera un'eccezione non gestibile, il runtime consente di stampare la traccia dello stack eccezione nella console e quindi restituisce il thread al pool di thread.  
+- Non esiste alcun equivalente di un'eccezione non gestita in un pool di thread. Quando un'attività genera un'eccezione non gestibile, il runtime consente di stampare la traccia dello stack eccezione nella console e quindi restituisce il thread al pool di thread.  
   
--   Non esiste alcun equivalente di un'eccezione non gestita in un thread creato con il metodo <xref:System.Threading.Thread.Start%2A> della classe <xref:System.Threading.Thread>. Quando un codice in esecuzione su un thread simile genera un'eccezione non gestibile, il runtime consente di stampare la traccia dello stack eccezione nella console e quindi termina normalmente il thread.  
+- Non esiste alcun equivalente di un'eccezione non gestita in un thread creato con il metodo <xref:System.Threading.Thread.Start%2A> della classe <xref:System.Threading.Thread>. Quando un codice in esecuzione su un thread simile genera un'eccezione non gestibile, il runtime consente di stampare la traccia dello stack eccezione nella console e quindi termina normalmente il thread.  
   
--   Non esiste alcun equivalente di un'eccezione non gestita nel thread finalizzatore. Se un finalizzatore genera un'eccezione non gestibile, il runtime consente di stampare la traccia dello stack eccezione nella console e consente quindi al thread finalizzatore di riprendere l'esecuzione dei finalizzatori.  
+- Non esiste alcun equivalente di un'eccezione non gestita nel thread finalizzatore. Se un finalizzatore genera un'eccezione non gestibile, il runtime consente di stampare la traccia dello stack eccezione nella console e consente quindi al thread finalizzatore di riprendere l'esecuzione dei finalizzatori.  
   
  Lo stato in primo piano o in background di un thread gestito non influisce su tale comportamento.  
   
@@ -60,11 +60,11 @@ A partire da .NET Framework versione 2.0, Common Language Runtime consente alla 
 ### <a name="migrating-code"></a>Migrazione del codice  
  In generale, il cambiamento metterà in evidenza i problemi di programmazione in precedenza non riconosciuti in modo che possano essere risolti. In alcuni casi, tuttavia, i programmatori potrebbero aver sfruttato la barriera di runtime, ad esempio per interrompere i thread. A seconda della situazione, è necessario considerare una delle seguenti strategie di migrazione:  
   
--   Ristrutturare il codice in modo che il thread venga chiuso normalmente quando viene ricevuto un segnale.  
+- Ristrutturare il codice in modo che il thread venga chiuso normalmente quando viene ricevuto un segnale.  
   
--   Usare il metodo <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> per interrompere il thread.  
+- Usare il metodo <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> per interrompere il thread.  
   
--   Se un thread deve essere arrestato in modo che la terminazione del processo possa continuare, spostare il thread in background in modo che venga terminato automaticamente all'uscita dal processo.  
+- Se un thread deve essere arrestato in modo che la terminazione del processo possa continuare, spostare il thread in background in modo che venga terminato automaticamente all'uscita dal processo.  
   
  In tutti i casi, la strategia deve rispettare le linee guida di progettazione per le eccezioni. Vedere [Linee guida di progettazione delle eccezioni](../../../docs/standard/design-guidelines/exceptions.md).  
   

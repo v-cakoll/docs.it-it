@@ -2,12 +2,12 @@
 title: Esempio di concatenamento di query (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: b77de6b1e5bd81ac70165640aecf0d4ce89be03d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8564a2ece7dc09bd3330dc9bdad31689408089cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677348"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598546"
 ---
 # <a name="chaining-queries-example-c"></a>Esempio di concatenamento di query (C#)
 In questo esempio, basato sull'esempio precedente, vengono illustrati gli effetti del concatenamento di due query che usano l'esecuzione posticipata e la valutazione lazy.  
@@ -84,7 +84,7 @@ Main: str >GHI!!!<
   
  Nell'argomento successivo di questa esercitazione viene illustrata la materializzazione intermedia:  
   
--   [Materializzazione intermedia (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+- [Materializzazione intermedia (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

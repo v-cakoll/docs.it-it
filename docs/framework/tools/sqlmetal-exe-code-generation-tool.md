@@ -9,21 +9,21 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e91859d4aa6e30877bfdae5da9063a1e2a6b3b44
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206421"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647256"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (strumento per la generazione del codice)
 Lo strumento da riga di comando SqlMetal genera codice e mapping per il componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Mediante l'applicazione delle opzioni riportate più avanti in questo argomento è possibile usare SqlMetal per eseguire diverse operazioni, fra cui:  
   
--   A partire da un database, generare codice sorgente e attributi di mapping oppure un file di mapping.  
+- A partire da un database, generare codice sorgente e attributi di mapping oppure un file di mapping.  
   
--   A partire da un database, generare un file .dbml (Database Markup Language) intermedio da personalizzare.  
+- A partire da un database, generare un file .dbml (Database Markup Language) intermedio da personalizzare.  
   
--   A partire da un file .dbml, generare codice e attributi di mapping oppure un file di mapping.  
+- A partire da un file .dbml, generare codice e attributi di mapping oppure un file di mapping.  
   
  Viene installato automaticamente con Visual Studio. Per impostazione predefinita, il file si trova in `drive`:\Programmi\Microsoft SDKs\Windows\v`n.nn`\bin. Se non si installa Visual Studio, è possibile ottenere il file SQLMetal anche scaricando [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225).  
   
@@ -88,9 +88,9 @@ sqlmetal [options] [<input file>]
 ## <a name="remarks"></a>Osservazioni  
  Il funzionamento di SqlMetal prevede di fatto due passaggi:  
   
--   Estrazione dei metadati del database in un file .dbml.  
+- Estrazione dei metadati del database in un file .dbml.  
   
--   Generazione di un file di output di codice.  
+- Generazione di un file di output di codice.  
   
      Le opzioni della riga di comando, se usate correttamente, consentono di creare codice sorgente Visual Basic o C# oppure un file di mapping XML.  
   
@@ -100,9 +100,9 @@ sqlmetal [options] [<input file>]
   
  [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] genera un'eccezione se almeno una delle condizioni seguenti è vera:  
   
--   SqlMetal tenta di estrarre una stored procedure che chiama se stessa.  
+- SqlMetal tenta di estrarre una stored procedure che chiama se stessa.  
   
--   Il livello di annidamento di una stored procedure, di una funzione o di una vista è maggiore di 32.  
+- Il livello di annidamento di una stored procedure, di una funzione o di una vista è maggiore di 32.  
   
      SqlMetal rileva questa eccezione e la segnala come avviso.  
   

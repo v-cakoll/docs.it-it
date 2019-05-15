@@ -8,12 +8,12 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-ms.openlocfilehash: 9718febfe5aefba75decc133ad2113b64e4547de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4cdab8c818cf3278c829e2486e89be32bb4ba277
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618078"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593026"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (opzioni del compilatore C#)
 Usare l'opzione **-win32manifest** per specificare un file manifesto dell'applicazione Win32 definito dall'utente da incorporare nel file PE (Portable Executable) di un progetto.  
@@ -28,7 +28,7 @@ Usare l'opzione **-win32manifest** per specificare un file manifesto dell'applic
  `filename`  
  Nome e percorso del file manifesto personalizzato.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per impostazione predefinita, il compilatore Visual C# incorpora un manifesto dell'applicazione che specifica il livello di esecuzione richiesto "asInvoker". Viene creato il manifesto nella stessa cartella in cui viene compilato l'eseguibile, in genere la cartella bin\Debug o bin\Release quando si utilizza Visual Studio. Se si desidera fornire un manifesto personalizzato, ad esempio per specificare un livello di esecuzione richiesto "highestAvailable" o "requireAdministrator", utilizzare questa opzione per specificare il nome del file.  
   
 > [!NOTE]
@@ -38,9 +38,9 @@ Usare l'opzione **-win32manifest** per specificare un file manifesto dell'applic
   
  L'applicazione sarà sottoposta a virtualizzazione se una di queste condizioni è vera:  
   
--   Si usa l'opzione **-nowin32manifest** e non si specifica un manifesto in una fase successiva della compilazione o come parte di un file di risorse di Windows (con estensione res) usando l'opzione **-win32res**.  
+- Si usa l'opzione **-nowin32manifest** e non si specifica un manifesto in una fase successiva della compilazione o come parte di un file di risorse di Windows (con estensione res) usando l'opzione **-win32res**.  
   
--   Si indica un manifesto personalizzato che non specifica un livello di esecuzione richiesto.  
+- Si indica un manifesto personalizzato che non specifica un livello di esecuzione richiesto.  
   
  Visual Studio crea un file manifesto predefinito e lo memorizza nelle directory di debug e versione insieme al file eseguibile. Per aggiungere un manifesto personalizzato, crearne uno in qualsiasi editor di testo e quindi aggiungere il file al progetto. In alternativa, fare clic con il pulsante destro del mouse sull'icona **Progetto** in **Esplora soluzioni**, fare clic su **Aggiungi nuovo elemento** e quindi scegliere **File manifesto applicazione**. Dopo aver aggiunto il file manifesto nuovo o esistente, il file apparirà nell'elenco a discesa **Manifesto**. Per altre informazioni, vedere [Pagina Applicazione, Creazione progetti (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  
   

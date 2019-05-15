@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 437a7058abd9ae167fcde15d4bddbe69bc64b7e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 15bec7c9604b243c586b393d71007b02917d3a6e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310772"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628928"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Procedura: Copiare file con un criterio specifico in una directory in Visual Basic
 Il metodo <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> restituisce una raccolta di stringhe di sola lettura che rappresentano i nomi di percorso per i file. È possibile usare il parametro `wildCards` per specificare un criterio specifico.  
@@ -43,19 +43,19 @@ Il metodo <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> re
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).  
+- Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).  
   
--   Il percorso non è valido in quanto è `Nothing` (<xref:System.ArgumentNullException>).  
+- Il percorso non è valido in quanto è `Nothing` (<xref:System.ArgumentNullException>).  
   
--   La directory non esiste (<xref:System.IO.DirectoryNotFoundException>).  
+- La directory non esiste (<xref:System.IO.DirectoryNotFoundException>).  
   
--   La directory punta a un file esistente (<xref:System.IO.IOException>).  
+- La directory punta a un file esistente (<xref:System.IO.IOException>).  
   
--   La lunghezza del percorso supera la lunghezza massima definita dal sistema (<xref:System.IO.PathTooLongException>).  
+- La lunghezza del percorso supera la lunghezza massima definita dal sistema (<xref:System.IO.PathTooLongException>).  
   
--   Il nome di un file o di una directory nel percorso contiene i due punti (:) o ha un formato non valido (<xref:System.NotSupportedException>).  
+- Il nome di un file o di una directory nel percorso contiene i due punti (:) o ha un formato non valido (<xref:System.NotSupportedException>).  
   
--   L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>). L'utente non dispone delle autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
+- L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>). L'utente non dispone delle autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Vedere anche
 

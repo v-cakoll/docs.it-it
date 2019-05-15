@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cbda9c160b99bf5648c670a67d39b245f031645
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7970ba4431161a1da8e0d509ee3d00c19b17c6e9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319872"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607722"
 ---
 # <a name="enhanced-strong-naming"></a>Denominazione sicura avanzata
 Una firma con nome sicuro è un meccanismo di identità in .NET Framework per l'identificazione degli assembly. È una firma digitale a chiave pubblica che in genere si usa per verificare l'integrità dei dati passati da un autore (firmatario) a un destinatario (verificatore). Questa firma viene usata come identità univoca per un assembly e garantisce che i riferimenti all'assembly non siano ambigui. L'assembly è firmato come parte del processo di compilazione e quindi verificato quando viene caricato.  
@@ -22,16 +22,16 @@ Una firma con nome sicuro è un meccanismo di identità in .NET Framework per l'
 ## <a name="limitations-of-conventional-strong-names"></a>Limitazioni dei nomi sicuri convenzionali  
  La tecnologia di denominazione sicura usata nelle versioni precedenti a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] presenta queste limitazioni:  
   
--   Le chiavi sono costantemente sotto attacco e grazie all'uso di tecniche e hardware più evoluti è più semplice dedurre una chiave privata da una chiave pubblica. Per proteggersi dagli attacchi, sono necessarie chiavi di dimensioni maggiori. Le versioni di .NET Framework precedenti alla [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] offrono la possibilità di accedere con chiavi di qualsiasi dimensione (quella predefinita è 1024 bit), ma firmare un assembly con una nuova chiave interrompe tutti i file binari che fanno riferimento all'identità precedente dell'assembly. È quindi estremamente difficile aggiornare la dimensione di una chiave di firma se si vuole mantenere la compatibilità.  
+- Le chiavi sono costantemente sotto attacco e grazie all'uso di tecniche e hardware più evoluti è più semplice dedurre una chiave privata da una chiave pubblica. Per proteggersi dagli attacchi, sono necessarie chiavi di dimensioni maggiori. Le versioni di .NET Framework precedenti alla [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] offrono la possibilità di accedere con chiavi di qualsiasi dimensione (quella predefinita è 1024 bit), ma firmare un assembly con una nuova chiave interrompe tutti i file binari che fanno riferimento all'identità precedente dell'assembly. È quindi estremamente difficile aggiornare la dimensione di una chiave di firma se si vuole mantenere la compatibilità.  
   
--   La firma con nome sicuro supporta solo l'algoritmo SHA-1. Si è scoperto di recente che SHA-1 non è adeguato per le applicazioni che usano l'algoritmo SHA. È quindi necessario un algoritmo più robusto, ad esempio SHA-256 o superiore. È possibile che in futuro SHA-1 non sia più conforme agli standard FIPS e questo può causare problemi agli utenti che scelgono di usare solo software e algoritmi conformi agli standard FIPS.  
+- La firma con nome sicuro supporta solo l'algoritmo SHA-1. Si è scoperto di recente che SHA-1 non è adeguato per le applicazioni che usano l'algoritmo SHA. È quindi necessario un algoritmo più robusto, ad esempio SHA-256 o superiore. È possibile che in futuro SHA-1 non sia più conforme agli standard FIPS e questo può causare problemi agli utenti che scelgono di usare solo software e algoritmi conformi agli standard FIPS.  
   
 ## <a name="advantages-of-enhanced-strong-names"></a>Vantaggi dei nomi sicuri avanzati  
  I vantaggi principali offerti dai nomi sicuri avanzati sono la compatibilità con nomi sicuri preesistenti e la possibilità di richiedere che un'identità sia equivalente a un'altra:  
   
--   Gli sviluppatori che usano assembly firmati preesistenti possono eseguire la migrazione delle proprie identità agli algoritmi SHA-2 conservando la compatibilità con gli assembly che fanno riferimento alle identità precedenti.  
+- Gli sviluppatori che usano assembly firmati preesistenti possono eseguire la migrazione delle proprie identità agli algoritmi SHA-2 conservando la compatibilità con gli assembly che fanno riferimento alle identità precedenti.  
   
--   Gli sviluppatori che creano nuovi assembly e non ritengono rilevanti le firme con nome sicuro preesistenti possono usare gli algoritmi SHA-2, più sicuri, e firmare gli assembly come in precedenza.  
+- Gli sviluppatori che creano nuovi assembly e non ritengono rilevanti le firme con nome sicuro preesistenti possono usare gli algoritmi SHA-2, più sicuri, e firmare gli assembly come in precedenza.  
   
 ## <a name="using-enhanced-strong-names"></a>Uso dei nomi sicuri avanzati  
  Le chiavi con nome sicuro sono costituite da una chiave di firma e una chiave di identità. L'assembly è firmato con la chiave di firma e identificato dalla chiave di identità. Prima della versione [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] queste due chiavi erano identiche. A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], la chiave di identità rimane la stessa come nelle versioni precedenti di .NET Framework, ma la chiave di firma è stata migliorata con un algoritmo hash più avanzato. Inoltre, la chiave di firma viene firmata con la chiave di identità per creare una controfirma.  

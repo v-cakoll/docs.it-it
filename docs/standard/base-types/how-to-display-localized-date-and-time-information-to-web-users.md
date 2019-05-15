@@ -15,12 +15,12 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320158"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633886"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Procedura: Visualizzare le informazioni su data e ora localizzate agli utenti del Web
 Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni di analisi e formattazione di valori di data e ora non devono essere basate su un formato predefinito, che molto spesso corrisponde al formato delle impostazioni cultura locali del server Web, durante l'interazione con l'utente. Al contrario, i Web Form che gestiscono stringhe di data e ora immesse dall'utente devono analizzare le stringhe tramite le impostazioni cultura preferite dell'utente. Analogamente, i dati di data e ora devono essere visualizzati all'utente in un formato conforme alle impostazioni cultura dell'utente stesso. In questo argomento viene illustrato come eseguire questa operazione.  
@@ -35,9 +35,9 @@ Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni
   
 4. Chiamare il metodo `TryParse` o `Parse` del tipo <xref:System.DateTime> o <xref:System.DateTimeOffset> per provare la conversione. Usare un overload del metodo `TryParse` o `Parse` con un parametro `provider` e passare uno degli oggetti seguenti:  
   
-    -   Oggetto <xref:System.Globalization.CultureInfo> creato nel passaggio 3.  
+    - Oggetto <xref:System.Globalization.CultureInfo> creato nel passaggio 3.  
   
-    -   Oggetto <xref:System.Globalization.DateTimeFormatInfo> restituito dalla proprietà <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> dell'oggetto <xref:System.Globalization.CultureInfo> creato nel passaggio 3.  
+    - Oggetto <xref:System.Globalization.DateTimeFormatInfo> restituito dalla proprietà <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> dell'oggetto <xref:System.Globalization.CultureInfo> creato nel passaggio 3.  
   
 5. Se la conversione non riesce, ripetere i passaggi da 2 a 4 per ogni elemento rimanente nella matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A>.  
   
@@ -65,9 +65,9 @@ Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni
   
 10. Chiamare il metodo <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> o <xref:System.DateTime.TryParse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%2CSystem.DateTime%40%29?displayProperty=nameWithType> per convertire la data e l'ora della richiesta dell'utente in un valore <xref:System.DateTime>. Usare un overload del metodo con un parametro `provider` e passare uno degli oggetti seguenti:  
   
-    -   Oggetto <xref:System.Globalization.CultureInfo> creato nel passaggio 8.  
+    - Oggetto <xref:System.Globalization.CultureInfo> creato nel passaggio 8.  
   
-    -   Oggetto <xref:System.Globalization.DateTimeFormatInfo> restituito dalla proprietà <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> dell'oggetto <xref:System.Globalization.CultureInfo> creato nel passaggio 8.  
+    - Oggetto <xref:System.Globalization.DateTimeFormatInfo> restituito dalla proprietà <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> dell'oggetto <xref:System.Globalization.CultureInfo> creato nel passaggio 8.  
   
 11. Se l'operazione di analisi nel passaggio 10 non riesce, andare al passaggio 13. In caso contrario, chiamare il metodo <xref:System.UInt32.Parse%28System.String%29?displayProperty=nameWithType> per convertire la rappresentazione di stringa della differenza di fuso orario dell'utente in un numero intero.  
   
@@ -100,13 +100,13 @@ Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Per compilare il codice, creare una pagina Web [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] senza code-behind. Copiare quindi l'esempio nella pagina Web in modo da sostituire tutto il codice esistente. La pagina Web [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] deve contenere i controlli seguenti:  
   
--   Controllo <xref:System.Web.UI.WebControls.Label>, che non è referenziato nel codice. Impostarne la proprietà <xref:System.Web.UI.WebControls.TextBox.Text%2A> su "Immettere un numero:".  
+- Controllo <xref:System.Web.UI.WebControls.Label>, che non è referenziato nel codice. Impostarne la proprietà <xref:System.Web.UI.WebControls.TextBox.Text%2A> su "Immettere un numero:".  
   
--   Un controllo <xref:System.Web.UI.WebControls.TextBox> denominato `DateString`.  
+- Un controllo <xref:System.Web.UI.WebControls.TextBox> denominato `DateString`.  
   
--   Un controllo <xref:System.Web.UI.WebControls.Button> denominato `OKButton`. Impostarne la proprietà <xref:System.Web.UI.WebControls.Button.Text%2A> su "OK".  
+- Un controllo <xref:System.Web.UI.WebControls.Button> denominato `OKButton`. Impostarne la proprietà <xref:System.Web.UI.WebControls.Button.Text%2A> su "OK".  
   
--   Un controllo <xref:System.Web.UI.WebControls.HiddenField> denominato `DateInfo`.  
+- Un controllo <xref:System.Web.UI.WebControls.HiddenField> denominato `DateInfo`.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Per impedire a un utente di inserire script nel flusso HTML, l'input dell'utente non deve essere mai restituito direttamente nella risposta del server. Al contrario, deve essere codificato tramite il metodo <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>.  

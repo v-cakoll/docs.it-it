@@ -2,12 +2,12 @@
 title: Trasformazione funzionale di XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 75ad909994d75387648dbfa72f827cf63b85739e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 237a96e3cc1a2e2cb231b23954613f6a0ad0761c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643033"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596650"
 ---
 # <a name="functional-transformation-of-xml-c"></a>Trasformazione funzionale di XML (C#)
 In questo argomento viene illustrato l'approccio alla modifica di documenti XML basato sulla trasformazione funzionale pure. Tale approccio viene quindi messo a confronto con un approccio procedurale.  
@@ -15,11 +15,11 @@ In questo argomento viene illustrato l'approccio alla modifica di documenti XML 
 ## <a name="modifying-an-xml-document"></a>Modifica di un documento XML  
  Una delle attività più comuni richieste a un programmatore XML è la trasformazione di codice XML da una forma a un'altra. Per forma di un documento XML si intende la struttura del documento, che include:  
   
--   La gerarchia espressa dal documento.  
+- La gerarchia espressa dal documento.  
   
--   I nomi di elementi e attributi.  
+- I nomi di elementi e attributi.  
   
--   I tipi di dati di elementi e attributi.  
+- I tipi di dati di elementi e attributi.  
   
  In generale, l'approccio più efficace alla trasformazione di codice XML da una forma a un'altra è quello basato sulla trasformazione funzionale pure. In questo approccio l'attività principale del programmatore consiste nel creare una trasformazione che viene applicata all'intero documento XML (o a uno o più nodi definiti rigidamente). La trasformazione funzionale è decisamente la più facile da codificare (una volta che il programmatore ha familiarizzato con l'approccio), consente di ottenere codice più conservabile ed offre spesso maggior compattezza rispetto agli approcci alternativi.  
   

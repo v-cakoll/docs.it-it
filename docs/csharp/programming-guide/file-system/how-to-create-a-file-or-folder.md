@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: d94c3624b84b2fea6760ac8f36fc592928a55834
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3163598de5d03bf1691379cddae031841b9865d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970714"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595635"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Procedura: Creare un file o una cartella (Guida per programmatori C#)
 A livello di codice è possibile creare una cartella, una sottocartella e un file nella sottocartella e quindi scrivere dati nel file.  
@@ -25,7 +25,7 @@ A livello di codice è possibile creare una cartella, una sottocartella e un fil
   
  Apportando le modifiche seguenti nell'esempio, è possibile specificare risultati diversi in base all'esistenza o meno di un file con un determinato nome. Se il file non esiste, il codice ne crea uno. Se il file esiste, il codice aggiunge i dati a questo.  
   
--   Specificare un nome file non casuale.  
+- Specificare un nome file non casuale.  
   
     ```csharp  
     // Comment out the following line.  
@@ -35,7 +35,7 @@ A livello di codice è possibile creare una cartella, una sottocartella e un fil
     string fileName = "MyNewFile.txt";  
     ```  
   
--   Sostituire l'istruzione `if`-`else` con l'istruzione `using` riportata nel codice seguente.  
+- Sostituire l'istruzione `if`-`else` con l'istruzione `using` riportata nel codice seguente.  
   
     ```csharp  
     using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
@@ -53,15 +53,15 @@ A livello di codice è possibile creare una cartella, una sottocartella e un fil
   
  Le seguenti condizioni possono generare un'eccezione:  
   
--   Il formato del nome della cartella non è valido. Ad esempio, contiene caratteri non validi o è costituito solo da spazi (classe <xref:System.ArgumentException>). Per creare nomi di percorso validi, usare la classe <xref:System.IO.Path>.  
+- Il formato del nome della cartella non è valido. Ad esempio, contiene caratteri non validi o è costituito solo da spazi (classe <xref:System.ArgumentException>). Per creare nomi di percorso validi, usare la classe <xref:System.IO.Path>.  
   
--   La cartella padre della cartella da creare è di sola lettura (classe <xref:System.IO.IOException>).  
+- La cartella padre della cartella da creare è di sola lettura (classe <xref:System.IO.IOException>).  
   
--   Il nome della cartella è `null` (classe <xref:System.ArgumentNullException>).  
+- Il nome della cartella è `null` (classe <xref:System.ArgumentNullException>).  
   
--   Il nome della cartella è troppo lungo (classe <xref:System.IO.PathTooLongException>).  
+- Il nome della cartella è troppo lungo (classe <xref:System.IO.PathTooLongException>).  
   
--   Il nome della cartella è composto solo da un carattere due punti, ":" (classe <xref:System.IO.PathTooLongException>).  
+- Il nome della cartella è composto solo da un carattere due punti, ":" (classe <xref:System.IO.PathTooLongException>).  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  In situazioni di attendibilità parziale può essere generata un'istanza della classe <xref:System.Security.SecurityException>.  

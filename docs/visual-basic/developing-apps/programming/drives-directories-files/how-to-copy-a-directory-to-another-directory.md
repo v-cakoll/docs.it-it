@@ -7,12 +7,12 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: e45de705eb25d58857239cc549125c524765aaa5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9a02407ea805db4ae23f001de49ed6610f807b8c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816577"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628899"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Procedura: Copiare una directory in un'altra directory di Visual Basic
 Usare il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> per copiare una directory in un'altra directory. Questo metodo consente di copiare il contenuto della directory nonché la directory stessa. Se la directory di destinazione non esiste, viene creata. Se è presente una directory con lo stesso nome nel percorso di destinazione e `overwrite` è impostato su `False`, il contenuto delle due directory viene unito. È possibile specificare un nuovo nome per la directory durante l'operazione.  
@@ -21,7 +21,7 @@ Usare il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> 
   
 ### <a name="to-copy-a-directory-to-another-directory"></a>Per copiare una directory in un'altra directory  
   
--   Usare il metodo `CopyDirectory` specificando i nomi della directory di origine e di destinazione. Nell'esempio di codice riportato di seguito la directory denominata `TestDirectory1` viene copiata in `TestDirectory2`, sovrascrivendo i file esistenti.  
+- Usare il metodo `CopyDirectory` specificando i nomi della directory di origine e di destinazione. Nell'esempio di codice riportato di seguito la directory denominata `TestDirectory1` viene copiata in `TestDirectory2`, sovrascrivendo i file esistenti.  
   
      [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]  
   
@@ -30,35 +30,35 @@ Usare il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> 
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   Il nuovo nome specificato per la directory contiene il segno dei due punti (:) o una barra (\ o /) (<xref:System.ArgumentException>).  
+- Il nuovo nome specificato per la directory contiene il segno dei due punti (:) o una barra (\ o /) (<xref:System.ArgumentException>).  
   
--   Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).  
+- Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).  
   
--   Il percorso non è valido in quanto è `Nothing` (<xref:System.ArgumentNullException>).  
+- Il percorso non è valido in quanto è `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `destinationDirectoryName` è `Nothing` o una stringa vuota (<xref:System.ArgumentNullException>)  
+- `destinationDirectoryName` è `Nothing` o una stringa vuota (<xref:System.ArgumentNullException>)  
   
--   La directory di origine non esiste (<xref:System.IO.DirectoryNotFoundException>).  
+- La directory di origine non esiste (<xref:System.IO.DirectoryNotFoundException>).  
   
--   La directory di origine è una directory radice (<xref:System.IO.IOException>).  
+- La directory di origine è una directory radice (<xref:System.IO.IOException>).  
   
--   Il percorso combinato punta a un file esistente (<xref:System.IO.IOException>).  
+- Il percorso combinato punta a un file esistente (<xref:System.IO.IOException>).  
   
--   Il percorso di origine e il percorso di destinazione coincidono (<xref:System.IO.IOException>).  
+- Il percorso di origine e il percorso di destinazione coincidono (<xref:System.IO.IOException>).  
   
--   `ShowUI` è impostato su `UIOption.AllDialogs` e l'utente annulla l'operazione oppure non è possibile copiare uno o più file nella directory (<xref:System.OperationCanceledException>).  
+- `ShowUI` è impostato su `UIOption.AllDialogs` e l'utente annulla l'operazione oppure non è possibile copiare uno o più file nella directory (<xref:System.OperationCanceledException>).  
   
--   L'operazione è ciclica (<xref:System.InvalidOperationException>).  
+- L'operazione è ciclica (<xref:System.InvalidOperationException>).  
   
--   Il percorso contiene i due punti (:) (<xref:System.NotSupportedException>).  
+- Il percorso contiene i due punti (:) (<xref:System.NotSupportedException>).  
   
--   La lunghezza del percorso supera la lunghezza massima definita dal sistema (<xref:System.IO.PathTooLongException>).  
+- La lunghezza del percorso supera la lunghezza massima definita dal sistema (<xref:System.IO.PathTooLongException>).  
   
--   Il nome di un file o di una cartella nel percorso contiene i due punti (:) o ha un formato non valido (<xref:System.NotSupportedException>).  
+- Il nome di un file o di una cartella nel percorso contiene i due punti (:) o ha un formato non valido (<xref:System.NotSupportedException>).  
   
--   L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).  
+- L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).  
   
--   Esiste un file di destinazione ma non è possibile accedervi (<xref:System.UnauthorizedAccessException>).  
+- Esiste un file di destinazione ma non è possibile accedervi (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Vedere anche
 

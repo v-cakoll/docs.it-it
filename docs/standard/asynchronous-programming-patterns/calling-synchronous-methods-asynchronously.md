@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 371e958aca87c922c902d8efd945d94d611672d9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 342af20b78ae996bb61c6b563ecf42137ee51022
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702881"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629096"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Chiamata asincrona dei metodi sincroni
 
@@ -45,13 +45,13 @@ Il metodo `EndInvoke` recupera i risultati della chiamata asincrona. Può essere
 
 Gli esempi di codice in questo argomento presentano quattro modi comuni per usare `BeginInvoke` e `EndInvoke` per effettuare chiamate asincrone. Dopo avere chiamato `BeginInvoke` è possibile procedere nel modo seguente:
 
--   Eseguire alcune operazioni, quindi chiamare `EndInvoke` per bloccare l'esecuzione fino al completamento della chiamata.
+- Eseguire alcune operazioni, quindi chiamare `EndInvoke` per bloccare l'esecuzione fino al completamento della chiamata.
 
--   Ottenere un oggetto <xref:System.Threading.WaitHandle> con la proprietà <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType>, usare il relativo metodo <xref:System.Threading.WaitHandle.WaitOne%2A> per bloccare l'esecuzione fino a quando non viene segnalato <xref:System.Threading.WaitHandle>, quindi chiamare `EndInvoke`.
+- Ottenere un oggetto <xref:System.Threading.WaitHandle> mediante la proprietà <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> , usare il relativo metodo <xref:System.Threading.WaitHandle.WaitOne%2A> per bloccare l'esecuzione fino a quando non viene segnalato <xref:System.Threading.WaitHandle> , quindi chiamare `EndInvoke`.
 
--   Eseguire il polling dell'oggetto <xref:System.IAsyncResult> restituito da `BeginInvoke` per stabilire quando viene completata la chiamata, quindi chiamare `EndInvoke`.
+- Eseguire il polling dell'oggetto <xref:System.IAsyncResult> restituito da `BeginInvoke` per stabilire quando viene completata la chiamata, quindi chiamare `EndInvoke`.
 
--   Passare un delegato per un metodo di callback a `BeginInvoke`. Il metodo viene eseguito su un thread <xref:System.Threading.ThreadPool> al completamento della chiamata asincrona. Il metodo di callback chiama `EndInvoke`.
+- Passare un delegato per un metodo di callback a `BeginInvoke`. Il metodo viene eseguito su un thread <xref:System.Threading.ThreadPool> al completamento della chiamata asincrona. Il metodo di callback chiama `EndInvoke`.
 
 > [!IMPORTANT]
 > Indipendentemente dalla tecnica usata, chiamare sempre `EndInvoke` per completare la chiamata asincrona.
@@ -81,7 +81,7 @@ Gli esempi di codice in questo argomento presentano quattro modi comuni per usar
  Se si usa un <xref:System.Threading.WaitHandle>, è possibile eseguire altre operazioni prima o dopo il completamento della chiamata asincrona, ma prima di chiamare `EndInvoke` per recuperare i risultati.
 
 > [!NOTE]
-> L'handle di attesa non viene chiuso automaticamente quando si chiama `EndInvoke`. Se si rilasciano tutti i riferimenti all'handle di attesa, le risorse di sistema vengono liberate quando Garbage Collection recupera l'handle di attesa. Per liberare le risorse di sistema non appena si ha finito di usare l'handle di attesa, eliminarlo chiamando il metodo <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType>. Garbage Collection opera in modo più efficiente quando gli oggetti eliminabili vengono eliminati in modo esplicito.
+> L'handle di attesa non viene chiuso automaticamente quando si chiama `EndInvoke`. Se si rilasciano tutti i riferimenti all'handle di attesa, le risorse di sistema vengono liberate quando Garbage Collection recupera l'handle di attesa. Per liberare le risorse di sistema non appena si ha finito di usare l'handle di attesa, eliminarlo chiamando il metodo <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType> . Garbage Collection opera in modo più efficiente quando gli oggetti eliminabili vengono eliminati in modo esplicito.
 
  [!code-cpp[AsyncDelegateExamples#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/waithandle.cpp#3)]
  [!code-csharp[AsyncDelegateExamples#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/waithandle.cs#3)]
@@ -101,11 +101,11 @@ Gli esempi di codice in questo argomento presentano quattro modi comuni per usar
 
  Note sull'esempio:
 
--   Il parametro `threadId` di `TestMethod` è un parametro `out` ([`<Out>` `ByRef` in Visual Basic), quindi il valore di input non viene mai usato da `TestMethod`. Viene passata una variabile fittizia alla chiamata `BeginInvoke` . Se il parametro `threadId` fosse un parametro `ref` (`ByRef` in Visual Basic), la variabile dovrebbe essere un campo a livello di classe perché possa essere passata sia a `BeginInvoke` che a `EndInvoke`.
+- Il parametro `threadId` di `TestMethod` è un parametro `out` ([`<Out>` `ByRef` in Visual Basic), quindi il valore di input non viene mai usato da `TestMethod`. Viene passata una variabile fittizia alla chiamata `BeginInvoke` . Se il parametro `threadId` fosse un parametro `ref` (`ByRef` in Visual Basic), la variabile dovrebbe essere un campo a livello di classe perché possa essere passata sia a `BeginInvoke` che a `EndInvoke`.
 
--   Le informazioni sullo stato che vengono passate a `BeginInvoke` sono costituite da una stringa di formato, che viene usata dal metodo di callback per formattare un messaggio di output. Dato che le informazioni sullo stato vengono passate come tipo <xref:System.Object>, è necessario eseguirne il cast al tipo appropriato prima di poterle usare.
+- Le informazioni sullo stato che vengono passate a `BeginInvoke` sono costituite da una stringa di formato, che viene usata dal metodo di callback per formattare un messaggio di output. Dato che le informazioni sullo stato vengono passate come tipo <xref:System.Object>, è necessario eseguirne il cast al tipo appropriato prima di poterle usare.
 
--   Il callback viene eseguito su un thread <xref:System.Threading.ThreadPool> . I thread<xref:System.Threading.ThreadPool> sono thread in background, che non mantengono l'applicazione in esecuzione se il thread principale termina, quindi il thread principale dell'esempio deve rimanere sospeso per un tempo sufficiente al completamento del callback.
+- Il callback viene eseguito su un thread <xref:System.Threading.ThreadPool> . I thread<xref:System.Threading.ThreadPool> sono thread in background, che non mantengono l'applicazione in esecuzione se il thread principale termina, quindi il thread principale dell'esempio deve rimanere sospeso per un tempo sufficiente al completamento del callback.
 
  [!code-cpp[AsyncDelegateExamples#5](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/callback.cpp#5)]
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]
