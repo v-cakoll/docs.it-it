@@ -2,12 +2,12 @@
 title: Istruzioni per l'hosting su IIS (Internet Information Services)
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-ms.openlocfilehash: a537f37132e5014901d415cd96bc72a55ae0b750
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92ee270426dbb7fdd166964c1b10e37f280e28f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600259"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591874"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Istruzioni per l'hosting su IIS (Internet Information Services)
 Per eseguire gli esempi ospitati su Internet Information Services (IIS) è necessario assicurarsi che IIS sia installato correttamente e sia in esecuzione.  
@@ -163,7 +163,7 @@ Per eseguire gli esempi ospitati su Internet Information Services (IIS) è neces
 4. Dovrebbe venire visualizzata una pagina Web contenente il testo "Hello World".  
   
 > [!NOTE]
->  Ogni volta che si installa una nuova versione di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], è necessario registrare di nuovo aspnet_isapi come estensione del servizio Web per IIS. A tale scopo, eseguire il comando `aspnet_regiis –I –enable`.  
+>  Ogni volta che si installa una nuova versione di .NET Framework, è necessario registrare nuovamente aspnet_isapi come estensione del servizio Web per IIS. A tale scopo, eseguire il comando `aspnet_regiis –I –enable`.  
   
 ## <a name="sample-code"></a>Codice di esempio  
   

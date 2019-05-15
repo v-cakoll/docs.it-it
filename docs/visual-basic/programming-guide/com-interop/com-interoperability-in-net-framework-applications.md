@@ -6,16 +6,16 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: 6e8b4eba40cc1872cb289ca120679bb951f2652a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e45f8eafa696c61f917e333c665380c454401e0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022379"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589009"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>Interoperabilità COM nelle applicazioni .NET Framework (Visual Basic)
 
-Quando si desidera usare oggetti COM e .NET Framework nella stessa applicazione, è necessario risolvere le differenze nel modo in cui gli oggetti presenti in memoria. Un oggetto .NET Framework si trova nella memoria gestita, ovvero la memoria controllata da common language runtime e può essere spostato dal runtime in base alle esigenze. Un oggetto COM si trova nella memoria non gestita e non è previsto per spostare in un'altra posizione di memoria. Visual Studio e [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] forniscono strumenti per controllare l'interazione di queste gestito e i componenti. Per altre informazioni sul codice gestito, vedere [Common Language Runtime](../../../standard/clr.md).
+Quando si desidera usare oggetti COM e .NET Framework nella stessa applicazione, è necessario risolvere le differenze nel modo in cui gli oggetti presenti in memoria. Un oggetto .NET Framework si trova nella memoria gestita, ovvero la memoria controllata da common language runtime e può essere spostato dal runtime in base alle esigenze. Un oggetto COM si trova nella memoria non gestita e non è previsto per spostare in un'altra posizione di memoria. Visual Studio e .NET Framework forniscono strumenti per controllare l'interazione di questi componenti non gestiti e non gestito. Per altre informazioni sul codice gestito, vedere [Common Language Runtime](../../../standard/clr.md).
 
 Oltre a usare gli oggetti COM nelle applicazioni .NET, è anche possibile usare Visual Basic per sviluppare gli oggetti accessibili da codice non gestito tramite COM.
 
