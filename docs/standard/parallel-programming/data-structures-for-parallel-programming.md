@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 87ea2cbb46aca87af15b2c12321322c1b048df56
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479698"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625613"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Strutture di dati per la programmazione in parallelo
 In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nella programmazione parallela, inclusi un set di classi di raccolta simultanee, primitive di sincronizzazione leggera e tipi per l'inizializzazione differita. È possibile usare questi tipi con qualsiasi codice dell'applicazione multithreading, inclusi Task Parallel Library e PLINQ.  
@@ -22,7 +22,7 @@ In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nell
   
  Nella tabella seguente vengono elencate le nuove classi di raccolta simultanee:  
   
-|Tipo|Descrizione|  
+|Tipo|Description|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Fornisce funzionalità di blocco e limitazione per le raccolte thread-safe che implementano <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>. I thread producer vengono bloccati se non sono disponibili slot o se la raccolta è completa. I thread consumer vengono bloccati se la raccolta è vuota. Questo tipo supporta anche l'accesso che non causa blocchi da parte di consumer e producer. <xref:System.Collections.Concurrent.BlockingCollection%601> può essere usata come classe di base o archivio di backup per fornire funzionalità di blocco limitazione per le classi di raccolta che supportano <xref:System.Collections.Generic.IEnumerable%601>.|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Implementazione di un contenitore thread-safe che fornisce operazioni add e get scalabili.|  
@@ -37,7 +37,7 @@ In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nell
   
  La tabella seguente elenca i nuovi tipi di sincronizzazione:  
   
-|Tipo|Descrizione|  
+|Tipo|Description|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Consente a più thread di usare un algoritmo in parallelo fornendo un punto in cui ogni attività può segnalare il proprio arrivo e quindi venire bloccata finché non arrivano alcune o tutte le attività. Per altre informazioni, vedere [Barriera](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Semplifica gli scenari di fork e join fornendo un agevole meccanismo di rendezvous. Per altre informazioni, vedere [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
@@ -48,16 +48,16 @@ In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nell
   
  Per altre informazioni, vedere:  
   
--   [Procedura: Usare SpinLock per la sincronizzazione di basso livello](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+- [Procedura: Usare SpinLock per la sincronizzazione di basso livello](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
--   [Procedura: Sincronizzare operazioni simultanee con una barriera](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+- [Procedura: Sincronizzare operazioni simultanee con una barriera](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>Classi di inizializzazione differita  
  Con l'inizializzazione differita, la memoria per un oggetto non viene allocata fino a quando non è necessaria. L'inizializzazione differita può migliorare le prestazioni distribuendo le allocazioni degli oggetti in modo uniforme per l'intera durata di un programma. È possibile abilitare l'inizializzazione differita per qualsiasi tipo personalizzato eseguendo il wrapping del tipo <xref:System.Lazy%601>.  
   
  La tabella seguente elenca i nuovi tipi di inizializzazione differita:  
   
-|Tipo|Descrizione|  
+|Tipo|Description|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|Fornisce l'inizializzazione differita leggera e thread-safe.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Fornisce un valore con inizializzazione differita per ogni thread e ogni thread richiama in modo differito la funzione di inizializzazione.|  
