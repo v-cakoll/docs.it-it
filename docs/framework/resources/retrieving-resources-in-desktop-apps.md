@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 64df7a4dc859c5d4035dd640a011a813348a0334
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109798"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650500"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recupero di risorse nelle applicazioni desktop
 Quando si utilizzano le risorse localizzate in applicazioni desktop di .NET Framework, è consigliabile comprimere le risorse per le impostazioni cultura predefinite o non associate ad alcun paese con l'assembly principale e creare un assembly satellite separato per ciascuna lingua o impostazione cultura supportata dall'applicazione. È quindi possibile utilizzare la classe <xref:System.Resources.ResourceManager> come descritto nella sezione successiva per accedere alle risorse denominate. Se si sceglie di non includere le risorse nell'assembly principale e negli assembly satellite, è inoltre possibile accedere direttamente ai file binari .resources, come illustrato nella sezione [Recupero delle risorse dai file .resources](#from_file) più avanti in questo articolo.  Per recuperare le risorse nelle app di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] , vedere [Creazione e recupero di risorse nelle app di Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674) nel Windows Dev Center.  
@@ -34,9 +34,9 @@ Quando si utilizzano le risorse localizzate in applicazioni desktop di .NET Fram
 ## <a name="retrieving-resources-from-assemblies"></a>Recupero delle risorse dagli assembly  
  La classe <xref:System.Resources.ResourceManager> fornisce l'accesso alle risorse in fase di esecuzione. Utilizzare il metodo <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> per recuperare le risorse di tipo stringa e il metodo <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> o <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> per recuperare le risorse non di tipo stringa. Ogni metodo dispone di due overload:  
   
--   Un overload di cui l'unico parametro è una stringa contenente il nome della risorsa. Il metodo tenta di recuperare la risorsa per le impostazioni cultura del thread corrente. Per ulteriori informazioni, vedere i metodi <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>e <xref:System.Resources.ResourceManager.GetStream%28System.String%29> .  
+- Un overload di cui l'unico parametro è una stringa contenente il nome della risorsa. Il metodo tenta di recuperare la risorsa per le impostazioni cultura del thread corrente. Per ulteriori informazioni, vedere i metodi <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>e <xref:System.Resources.ResourceManager.GetStream%28System.String%29> .  
   
--   Un overload che dispone di due parametri: una stringa contenente il nome della risorsa e un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura di cui deve essere recuperata la risorsa. Se non è possibile trovare un set di risorse per le impostazioni cultura, il gestore di risorse utilizza le regole di fallback per recuperare una risorsa appropriata. Per ulteriori informazioni, vedere i metodi <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>e <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> .  
+- Un overload che dispone di due parametri: una stringa contenente il nome della risorsa e un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura di cui deve essere recuperata la risorsa. Se non è possibile trovare un set di risorse per le impostazioni cultura, il gestore di risorse utilizza le regole di fallback per recuperare una risorsa appropriata. Per ulteriori informazioni, vedere i metodi <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>e <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> .  
   
  Il gestore di risorse utilizza il processo di fallback delle risorse per controllare come l'applicazione recupera le risorse specifiche delle impostazioni cultura. Per altre informazioni, vedere la sezione "Il processo di fallback delle risorse" in [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Per informazioni sulla creazione di un'istanza di un oggetto <xref:System.Resources.ResourceManager> , vedere la sezione "Creazione di un'istanza di un oggetto ResourceManager" nell'argomento relativo alla classe <xref:System.Resources.ResourceManager> .  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314009"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634562"
 ---
 # <a name="composite-formatting"></a>Formattazione composita
 
@@ -126,11 +126,11 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
   
 3. Se il valore implementa l'interfaccia <xref:System.IFormattable>, verrà chiamato il relativo metodo <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29>. Al metodo viene passato il valore *formatString*, se disponibile nell'elemento di formato, o `null` in caso contrario. L'argomento <xref:System.IFormatProvider> è determinato come segue:  
   
-    -   Per un valore numerico, se viene chiamato un metodo di formattazione composita con un argomento non Null <xref:System.IFormatProvider>, il runtime richiede un oggetto <xref:System.Globalization.NumberFormatInfo> dal relativo metodo <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Se non è in grado di fornirne uno, se il valore dell'argomento è `null` o se il metodo di formattazione composita non dispone di un parametro di <xref:System.IFormatProvider>, viene usato l'oggetto <xref:System.Globalization.NumberFormatInfo> per le impostazioni cultura del thread corrente.  
+    - Per un valore numerico, se viene chiamato un metodo di formattazione composita con un argomento non Null <xref:System.IFormatProvider>, il runtime richiede un oggetto <xref:System.Globalization.NumberFormatInfo> dal relativo metodo <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Se non è in grado di fornirne uno, se il valore dell'argomento è `null` o se il metodo di formattazione composita non dispone di un parametro di <xref:System.IFormatProvider>, viene usato l'oggetto <xref:System.Globalization.NumberFormatInfo> per le impostazioni cultura del thread corrente.  
   
-    -   Per un valore di data e ora, se viene chiamato un metodo di formattazione composita con un argomento non Null <xref:System.IFormatProvider>, il runtime richiede un oggetto <xref:System.Globalization.DateTimeFormatInfo> dal relativo metodo <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Se non è in grado di fornirne uno, se il valore dell'argomento è `null` o se il metodo di formattazione composita non dispone di un parametro di <xref:System.IFormatProvider>, viene usato l'oggetto <xref:System.Globalization.DateTimeFormatInfo> per le impostazioni cultura del thread corrente.  
+    - Per un valore di data e ora, se viene chiamato un metodo di formattazione composita con un argomento non Null <xref:System.IFormatProvider>, il runtime richiede un oggetto <xref:System.Globalization.DateTimeFormatInfo> dal relativo metodo <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Se non è in grado di fornirne uno, se il valore dell'argomento è `null` o se il metodo di formattazione composita non dispone di un parametro di <xref:System.IFormatProvider>, viene usato l'oggetto <xref:System.Globalization.DateTimeFormatInfo> per le impostazioni cultura del thread corrente.  
   
-    -   Per gli oggetti di altri tipi, se un metodo di formattazione composita viene chiamato con un argomento <xref:System.IFormatProvider>, il relativo valore viene passato direttamente all'implementazione di <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. In caso contrario, `null` viene passato all'implementazione di <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
+    - Per gli oggetti di altri tipi, se un metodo di formattazione composita viene chiamato con un argomento <xref:System.IFormatProvider>, il relativo valore viene passato direttamente all'implementazione di <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. In caso contrario, `null` viene passato all'implementazione di <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
   
 4. Viene chiamato il metodo senza parametri `ToString` del tipo, che esegue l'override di <xref:System.Object.ToString?displayProperty=nameWithType> o eredita il comportamento della relativa classe di base. In questo caso la stringa di formato specificata dal componente *formatString* nell'elemento di formato, se presente, viene ignorata.  
   
