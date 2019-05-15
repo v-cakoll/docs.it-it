@@ -10,12 +10,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: bc3cf7775f68237f8b3393f867b81fcf020e52fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e14d9de2326234b86c1f24b227e86f822fbfdb71
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649284"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592355"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Procedura: Riprodurre un suono ripetutamente in un Windows Form
 Nell'esempio di codice seguente un suono viene riprodotto ripetutamente. Quando viene eseguito il codice nel gestore dell'evento `stopPlayingButton_Click`, l'eventuale riproduzione corrente di un suono viene interrotta. Se non è in corso di riproduzione alcun suono, non accadrà nulla.  
@@ -30,8 +30,6 @@ Nell'esempio di codice seguente un suono viene riprodotto ripetutamente. Quando 
 - Riferimenti agli assembly System e System.Windows.Forms.  
   
 - Sostituzione del nome del file `"c:\Windows\Media\chimes.wav"` con un nome file valido.  
-  
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le operazioni sui file devono essere racchiuse tra blocchi di gestione delle eccezioni appropriati.  

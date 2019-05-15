@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 87a85511669e676f2943bf5f079b54e96b926490
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9503af53cd699405d14f4f92a1d962a59918f759
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979866"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608556"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Gestione delle eccezioni (Guida per programmatori C#)
 I programmatori C# usano un blocco [try](../../../csharp/language-reference/keywords/try-catch.md) per creare partizioni di codice in cui potrebbe essere rilevata un'eccezione. I blocchi [catch](../../../csharp/language-reference/keywords/try-catch.md) associati vengono usati per gestire tutte le eccezioni risultanti. Un blocco [finally](../../../csharp/language-reference/keywords/try-finally.md) contiene il codice eseguito, indipendentemente dal fatto che venga generata o meno un'eccezione nel blocco `try`, ad esempio il codice relativo al rilascio delle risorse allocate nel blocco `try`. Un blocco `try` richiede uno o più blocchi `catch` associati, un blocco `finally` o entrambi.  
@@ -33,13 +33,13 @@ I programmatori C# usano un blocco [try](../../../csharp/language-reference/keyw
   
  È necessario intercettare le eccezioni quando le condizioni seguenti sono vere:  
   
--   Si è compreso il motivo per cui è stata generata l'eccezione ed è possibile implementare un recupero specifico, ad esempio chiedendo all'utente di immettere un nuovo nome di file quando si intercetta un oggetto <xref:System.IO.FileNotFoundException>.  
+- Si è compreso il motivo per cui è stata generata l'eccezione ed è possibile implementare un recupero specifico, ad esempio chiedendo all'utente di immettere un nuovo nome di file quando si intercetta un oggetto <xref:System.IO.FileNotFoundException>.  
   
--   È possibile creare e generare una nuova eccezione più specifica.  
+- È possibile creare e generare una nuova eccezione più specifica.  
   
      [!code-csharp[csProgGuideExceptions#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#9)]  
   
--   Si vuole gestire parzialmente un'eccezione prima di passarla a funzioni di gestione aggiuntive. Nell'esempio seguente un blocco `catch` viene usato per aggiungere una voce al log degli errori prima di generare di nuovo l'eccezione.  
+- Si vuole gestire parzialmente un'eccezione prima di passarla a funzioni di gestione aggiuntive. Nell'esempio seguente un blocco `catch` viene usato per aggiungere una voce al log degli errori prima di generare di nuovo l'eccezione.  
   
      [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   

@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: ce92705d22edfc832e894dd2feaafcd11088bf26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8668ee115a3babbdf1ef549a418187d2c5e26b8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772021"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583414"
 ---
 # <a name="oracle-and-adonet"></a>Oracle e ADO.NET
 > [!NOTE]
 >  I tipi in <xref:System.Data.OracleClient> sono deprecati. I tipi restano supportati nella versione corrente di .NET Framework, ma saranno rimossi in una versione futura. Microsoft consiglia di usare un provider Oracle di terze parti.  
   
- Contenuto della sezione vengono descritte le caratteristiche e i comportamenti specifici del provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per Oracle.  
+ Questa sezione descrive le funzionalità e i comportamenti specifici per il Provider di dati .NET Framework per Oracle.  
   
- Il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per Oracle fornisce l'accesso a un database Oracle mediante l'interfaccia OCI (Oracle Call Interface) del software client Oracle. La funzionalità del provider di dati è progettata per essere simile a quella del [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provider di dati per SQL Server, OLE DB e ODBC.  
+ Il Provider di dati .NET Framework per Oracle fornisce l'accesso a un database Oracle mediante l'interfaccia OCI (Oracle Call Interface) del software Client Oracle. La funzionalità del provider di dati è progettata per essere simile a quella dei provider di dati .NET Framework per SQL Server, OLE DB e ODBC.  
   
- Per usare il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per Oracle, è necessario che l'applicazione faccia riferimento allo spazio dei nomi <xref:System.Data.OracleClient> come indicato di seguito:  
+ Per usare il Provider di dati .NET Framework per Oracle, è necessario fare riferimento a un'applicazione di <xref:System.Data.OracleClient> dello spazio dei nomi come indicato di seguito:  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -38,7 +38,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Requisiti di sistema](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- Vengono descritti i requisiti e i problemi relativi all'utilizzo del provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per Oracle.  
+ Vengono descritti i requisiti per l'uso di Provider di dati .NET Framework per Oracle e descrive alcuni problemi da tenere in considerazione quando viene usato.  
   
  [Oggetti BFILE Oracle](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  Viene descritta la classe <xref:System.Data.OracleClient.OracleBFile> usata per il tipo di dati BFILE Oracle.  

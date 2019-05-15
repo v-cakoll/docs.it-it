@@ -2,12 +2,12 @@
 title: Panoramica delle classi LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: a50b58ad3e8f375d80701f454e74fef00e4d2203
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f93e3a791bfd56095df12ebf070f72540a8b21dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509662"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597046"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>Panoramica delle classi LINQ to XML (C#)
 In questo argomento viene fornito un elenco delle classi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] disponibili nello spazio dei nomi <xref:System.Xml.Linq>, con una breve descrizione.  
@@ -26,9 +26,9 @@ In questo argomento viene fornito un elenco delle classi [!INCLUDE[sqltecxlinq](
 ### <a name="xcontainer-class"></a>Classe XContainer  
  <xref:System.Xml.Linq.XContainer> è una classe di base astratta per tutti i nodi che possono avere nodi figlio. Le seguenti classi derivano dalla classe <xref:System.Xml.Linq.XContainer>:  
   
--   <xref:System.Xml.Linq.XElement>  
+- <xref:System.Xml.Linq.XElement>  
   
--   <xref:System.Xml.Linq.XDocument>  
+- <xref:System.Xml.Linq.XDocument>  
   
 ### <a name="xdeclaration-class"></a>Classe XDeclaration  
  <xref:System.Xml.Linq.XDeclaration> rappresenta una dichiarazione XML. Una dichiarazione XML viene usata per dichiarare la versione XML e la codifica di un documento XML. Inoltre, una dichiarazione XML specifica se il documento XML è autonomo o meno. Se il documento è autonomo non sono presenti dichiarazioni di markup esterne in una DTD esterna o in un'entità parametro esterna a cui è fatto riferimento dal subset interno.  
@@ -55,15 +55,15 @@ In questo argomento viene fornito un elenco delle classi [!INCLUDE[sqltecxlinq](
 ### <a name="xnode-class"></a>Classe XNode  
  <xref:System.Xml.Linq.XNode> è una classe astratta che rappresenta i nodi di un albero XML. Le seguenti classi derivano dalla classe <xref:System.Xml.Linq.XNode>:  
   
--   <xref:System.Xml.Linq.XText>  
+- <xref:System.Xml.Linq.XText>  
   
--   <xref:System.Xml.Linq.XContainer>  
+- <xref:System.Xml.Linq.XContainer>  
   
--   <xref:System.Xml.Linq.XComment>  
+- <xref:System.Xml.Linq.XComment>  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>  
+- <xref:System.Xml.Linq.XProcessingInstruction>  
   
--   <xref:System.Xml.Linq.XDocumentType>  
+- <xref:System.Xml.Linq.XDocumentType>  
   
 ### <a name="xnodedocumentordercomparer-class"></a>Classe XNodeDocumentOrderComparer  
  <xref:System.Xml.Linq.XNodeDocumentOrderComparer> fornisce funzionalità per confrontare nodi per rilevare l'ordine del documento.  

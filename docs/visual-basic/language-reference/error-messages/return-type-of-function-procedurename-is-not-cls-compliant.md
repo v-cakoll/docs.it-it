@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: 797dbf7f6203b7f85846dc6596751c4298e96481
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d6ac07b653a27a7c4c5534f441b9d673592124c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593308"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592251"
 ---
 # <a name="return-type-of-function-procedurename-is-not-cls-compliant"></a>Tipo restituito della funzione '\<nomeroutine >' non è conforme a CLS
 Oggetto `Function` routine contrassegnata come `<CLSCompliant(True)>` ma restituisce un tipo contrassegnato come `<CLSCompliant(False)>`, non è contrassegnata o non può essere utilizzato perché è un tipo non conforme.  
@@ -43,4 +43,4 @@ Oggetto `Function` routine contrassegnata come `<CLSCompliant(True)>` ma restitu
   
 - Se il `Function` procedure deve essere conforme a CLS, modificare il tipo restituito di tipo conforme a CLS più vicina. Al posto di `UInteger` ad esempio può essere possibile usare `Integer` se non è necessario l'intervallo di valore al di sopra di 2.147.483.647. Se è necessario l'intervallo esteso, è possibile sostituire `UInteger` con `Long`.  
   
-- Se si prevede l'interazione con gli oggetti COM o di automazione, tenere presente che alcuni tipi hanno un'ampiezza di dati diversa da [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Ad esempio, `int` è spesso a 16 bit in altri ambienti. Se si restituisce un integer a 16 bit a tale componente, dichiararlo come `Short` invece di `Integer` nel codice gestito di Visual Basic.
+- Se si prevede l'interazione con oggetti COM o di automazione, tenere presente che alcuni tipi hanno un'ampiezza di dati diversi in .NET Framework. Ad esempio, `int` è spesso a 16 bit in altri ambienti. Se si restituisce un integer a 16 bit a tale componente, dichiararlo come `Short` invece di `Integer` nel codice gestito di Visual Basic.

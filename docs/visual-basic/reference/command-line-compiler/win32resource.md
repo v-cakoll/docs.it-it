@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-ms.openlocfilehash: 9351e9f6bcb7660dac2c49667ca8db6d578eff7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8f9c9aac87fd71b61a5413386582ae660efd903
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774764"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593081"
 ---
 # <a name="-win32resource"></a>-win32resource
 Inserisce un file di risorse Win32 nel file di output.  
@@ -34,7 +34,7 @@ Inserisce un file di risorse Win32 nel file di output.
   
  Una risorsa Win32 può contenere versione o le informazioni di bitmap (icona) che consente di identificare l'applicazione in **Esplora File**. Se non si specifica `-win32resource`, il compilatore genera le informazioni sulla versione in base alla versione dell'assembly. Il `-win32resource` e `-win32icon` opzioni si escludono a vicenda.  
   
- Visualizzare [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) per fare riferimento a un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] file di risorse, o [-risorse (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) collegare un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] file di risorse.  
+ Visualizzare [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) per fare riferimento a un file di risorse .NET Framework, o [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) per allegare un file di risorse .NET Framework.  
   
 > [!NOTE]
 >  Il `-win32resource` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio, è disponibile solo durante la compilazione dalla riga di comando.  

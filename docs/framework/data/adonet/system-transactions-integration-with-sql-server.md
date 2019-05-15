@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 4ff415adf57bf72cb4da6d405f652a4a50c19041
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033371"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583518"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integrazione di System.Transactions con SQL Server
-In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versione 2.0 è stato introdotto un framework per le transazioni, accessibile tramite lo spazio dei nomi <xref:System.Transactions> . Questo framework espone le transazioni in modo completamente integrato con [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]e con [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+.NET Framework versione 2.0 introdotto un framework per le transazioni che sono accessibili tramite il <xref:System.Transactions> dello spazio dei nomi. Questo framework espone le transazioni in un modo completamente integrato in .NET Framework, tra cui [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Oltre ai miglioramenti a livello di programmabilità, <xref:System.Transactions> e [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] possono essere usati insieme per coordinare le ottimizzazioni quando si usano le transazioni. Una transazione promuovibile è una transazione di tipo semplice (locale) che può essere promossa in modo automatico a una transazione completamente distribuita in base alle esigenze.  
   
  A partire [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> supporta le transazioni promuovibili quando si lavora con SQL Server. Una transazione promuovibile non richiama l'overhead aggiunto di una transazione distribuita, a meno che non sia necessario. Le transazioni promuovibili sono automatiche e non richiedono alcun intervento da parte dello sviluppatore.  
   
- Le transazioni promuovibili sono disponibili solo quando si usa la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server (`SqlClient`) con SQL Server.  
+ Le transazioni promuovibili sono disponibili solo quando si usa il Provider di dati .NET Framework per SQL Server (`SqlClient`) con SQL Server.  
   
 ## <a name="creating-promotable-transactions"></a>Creazione di transazioni promuovibili  
- Il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider per SQL Server fornisce il supporto per le transazioni promuovibili, che vengono gestite tramite le classi di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> dello spazio dei nomi. Le transazioni promuovibili consentono di ottimizzare le transazioni distribuite rinviandone la creazione finché non è richiesta. Se è necessario un solo gestore di risorse, non si verificherà alcuna transazione distribuita.  
+ Il Provider .NET Framework per SQL Server fornisce il supporto per le transazioni promuovibili, che vengono gestite tramite le classi in .NET Framework <xref:System.Transactions> dello spazio dei nomi. Le transazioni promuovibili consentono di ottimizzare le transazioni distribuite rinviandone la creazione finché non è richiesta. Se è necessario un solo gestore di risorse, non si verificherà alcuna transazione distribuita.  
   
 > [!NOTE]
 >  In un scenario ad attendibilità parziale è richiesto <xref:System.Transactions.DistributedTransactionPermission> quando una transazione viene promossa a transazione distribuita.  

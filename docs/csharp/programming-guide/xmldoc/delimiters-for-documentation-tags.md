@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: ef1f6ceed49d728f6c9923204c0cb7e11aa3905a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9874b71462fb66828f6baeef4f46ad93899d4cc8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627369"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607992"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Delimitatori per i tag della documentazione (Guida per programmatori C#)
 L'uso dei commenti XML relativi alla documentazione richiede la specifica di delimitatori per indicare al compilatore il punto di inizio e di fine di un commento relativo alla documentazione. È possibile usare con i tag della documentazione XML i tipi di delimitatori seguenti:  
@@ -28,15 +28,15 @@ L'uso dei commenti XML relativi alla documentazione richiede la specifica di del
   
  Quando si usano i delimitatori `/** */` è necessario rispettare determinate regole di formattazione.  
   
--   Nella riga contenente il delimitatore `/**` se la parte restante della riga è rappresentata da uno spazio vuoto, la riga non viene elaborata per i commenti. Se il primo carattere dopo il delimitatore `/**` è uno spazio vuoto, lo spazio vuoto viene ignorato e il resto della riga viene elaborato. In caso contrario, l'intero testo della riga dopo il delimitatore `/**` viene elaborato come parte del commento.  
+- Nella riga contenente il delimitatore `/**` se la parte restante della riga è rappresentata da uno spazio vuoto, la riga non viene elaborata per i commenti. Se il primo carattere dopo il delimitatore `/**` è uno spazio vuoto, lo spazio vuoto viene ignorato e il resto della riga viene elaborato. In caso contrario, l'intero testo della riga dopo il delimitatore `/**` viene elaborato come parte del commento.  
   
--   Se sulla riga contenente il delimitatore `*/` sono presenti solo spazi vuoti fino al delimitatore `*/`, la riga viene ignorata. In caso contrario, il testo contenuto nella riga fino al delimitatore `*/` viene elaborato come parte del commento, in base alle regole dei criteri di ricerca descritte nel punto che segue.  
+- Se sulla riga contenente il delimitatore `*/` sono presenti solo spazi vuoti fino al delimitatore `*/`, la riga viene ignorata. In caso contrario, il testo contenuto nella riga fino al delimitatore `*/` viene elaborato come parte del commento, in base alle regole dei criteri di ricerca descritte nel punto che segue.  
   
--   Per le righe successive a quella che inizia con il delimitatore `/**`, il compilatore cerca un modello comune all'inizio di ogni riga. Il modello può essere costituito da uno spazio vuoto facoltativo e un asterisco (`*`) seguiti da altri spazi vuoti facoltativi. Se trova un modello comune all'inizio di ogni riga che non inizia con il delimitatore `/**` o `*/`, il compilatore ignora tale modello per ogni riga.  
+- Per le righe successive a quella che inizia con il delimitatore `/**`, il compilatore cerca un modello comune all'inizio di ogni riga. Il modello può essere costituito da uno spazio vuoto facoltativo e un asterisco (`*`) seguiti da altri spazi vuoti facoltativi. Se trova un modello comune all'inizio di ogni riga che non inizia con il delimitatore `/**` o `*/`, il compilatore ignora tale modello per ogni riga.  
   
  Gli esempi seguenti illustrano queste regole.  
   
--   La sola parte del commento riportato di seguito che verrà elaborata è la riga che inizia con `<summary>`. I tre formati di tag producono gli stessi commenti.  
+- La sola parte del commento riportato di seguito che verrà elaborata è la riga che inizia con `<summary>`. I tre formati di tag producono gli stessi commenti.  
   
     ```csharp  
     /** <summary>text</summary> */   
@@ -50,7 +50,7 @@ L'uso dei commenti XML relativi alla documentazione richiede la specifica di del
     */  
     ```  
   
--   Il compilatore identifica il modello comune " * " all'inizio della seconda e della terza riga. Il modello non è incluso nell'output.  
+- Il compilatore identifica il modello comune " * " all'inizio della seconda e della terza riga. Il modello non è incluso nell'output.  
   
     ```csharp  
     /**   
@@ -58,7 +58,7 @@ L'uso dei commenti XML relativi alla documentazione richiede la specifica di del
      * text </summary>*/   
     ```  
   
--   Il compilatore non trova alcun modello comune nel commento seguente poiché il secondo carattere nella terza riga non è un asterisco. Di conseguenza, tutto il testo contenuto nella seconda e nella terza riga viene elaborato come parte del commento.  
+- Il compilatore non trova alcun modello comune nel commento seguente poiché il secondo carattere nella terza riga non è un asterisco. Di conseguenza, tutto il testo contenuto nella seconda e nella terza riga viene elaborato come parte del commento.  
   
     ```csharp  
     /**   
@@ -67,7 +67,7 @@ L'uso dei commenti XML relativi alla documentazione richiede la specifica di del
     */   
     ```  
   
--   Nel commento seguente il compilatore non rileva alcun modello per due motivi. In primo luogo, il numero di spazi prima dell'asterisco non è coerente. In secondo luogo, la quinta riga inizia con una tabulazione senza corrispondenza degli spazi. Di conseguenza, tutto il testo dalla seconda alla quinta riga verrà elaborato come parte del commento.  
+- Nel commento seguente il compilatore non rileva alcun modello per due motivi. In primo luogo, il numero di spazi prima dell'asterisco non è coerente. In secondo luogo, la quinta riga inizia con una tabulazione senza corrispondenza degli spazi. Di conseguenza, tutto il testo dalla seconda alla quinta riga verrà elaborato come parte del commento.  
   
     ```csharp  
     /**   

@@ -2,12 +2,12 @@
 title: 'Procedura: Eseguire una query per il numero totale di byte in un Set di cartelle (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-ms.openlocfilehash: 9aa098ddca2e3ad300913b207c9db5a4976eded7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e69acbd42e703cdaca1d91f4597c980e6fd8508
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051403"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593274"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Procedura: Eseguire una query per il numero totale di byte in un Set di cartelle (LINQ) (Visual Basic)
 Questo esempio illustra come recuperare il numero totale di byte usati da tutti i file in una cartella specificata e in tutte le relative sottocartelle.  
@@ -72,7 +72,7 @@ End Module
  La query effettua una chiamata a un metodo separato per ottenere la lunghezza del file. Questa operazione viene eseguita per gestire la possibile eccezione che viene generata nel caso in cui il file sia stato eliminato in un altro thread dopo la creazione dell'oggetto <xref:System.IO.FileInfo> nella chiamata a `GetFiles`. Anche se l'oggetto <xref:System.IO.FileInfo> è già stato creato, è possibile che si verifichi un'eccezione perché un oggetto <xref:System.IO.FileInfo> tenterà di aggiornare la relativa proprietà <xref:System.IO.FileInfo.Length%2A> usando la lunghezza più recente quando viene eseguito per la prima volta l'accesso alla proprietà. Inserendo questa operazione in un blocco try/catch all'esterno della query, si evita di eseguire operazioni nelle query che possono causare effetti collaterali. In generale, è necessario prestare particolare attenzione durante la gestione delle eccezioni per assicurarsi che un'applicazione non venga lasciata in uno stato sconosciuto.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento alla DLL e una `Imports` istruzione dello spazio dei nomi System. Linq.  
+Creare un progetto di applicazione console VB.NET, con un `Imports` istruzione dello spazio dei nomi System. Linq.
   
 ## <a name="see-also"></a>Vedere anche
 

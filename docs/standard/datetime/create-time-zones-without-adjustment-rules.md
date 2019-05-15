@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb3ffc7b6f1f7baec7ce6beb5a50b706ff78bfa1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff4cfe2b492b676c061043f018390844f1807440
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026549"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586405"
 ---
 # <a name="how-to-create-time-zones-without-adjustment-rules"></a>Procedura: Creare fusi orari senza regole di regolazione
 
@@ -62,8 +62,6 @@ La stringa assegnata al <xref:System.TimeZoneInfo.DisplayName%2A> proprietà seg
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
 L'esempio presenta i requisiti seguenti:
-
-* Aggiungere un riferimento a DLL al progetto.
 
 * Che siano importati spazi dei nomi seguenti:
 

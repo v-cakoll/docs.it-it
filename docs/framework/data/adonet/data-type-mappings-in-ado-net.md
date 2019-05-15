@@ -2,22 +2,22 @@
 title: Mapping dei tipi di dati in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 1db427424e48d5b94e6c158e1d9967626297f4aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e85db4732da664848cee2ef48f9a880a86fef18
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607474"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583769"
 ---
 # <a name="data-type-mappings-in-adonet"></a>Mapping dei tipi di dati in ADO.NET
-.NET Framework è basato su Common Type System, che definisce come vengono dichiarati, usati e gestiti i tipi nel runtime. È costituito sia da tipi di valore che da tipi di riferimento, che derivano tutti dal tipo di base <xref:System.Object>. Quando si usa un'origine dati, il tipo di dati viene dedotto dal provider di dati, se non è specificato in modo esplicito. Un oggetto <xref:System.Data.DataSet> è ad esempio indipendente da qualsiasi origine dati specifica. I dati in un oggetto `DataSet` vengono recuperati da un'origine dati e le modifiche vengono applicate nell'origine dati usando un oggetto `DataAdapter`. Questo significa che quando un `DataAdapter` compila un oggetto <xref:System.Data.DataTable> in un `DataSet` con valori provenienti da un'origine dati, i tipi di dati che si ottengono nelle colonne dell'oggetto `DataTable` sono tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] anziché tipi specifici del provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] usato per la connessione all'origine dati.  
+.NET Framework è basato su Common Type System, che definisce come vengono dichiarati, usati e gestiti i tipi nel runtime. È costituito sia da tipi di valore che da tipi di riferimento, che derivano tutti dal tipo di base <xref:System.Object>. Quando si usa un'origine dati, il tipo di dati viene dedotto dal provider di dati, se non è specificato in modo esplicito. Un oggetto <xref:System.Data.DataSet> è ad esempio indipendente da qualsiasi origine dati specifica. I dati in un oggetto `DataSet` vengono recuperati da un'origine dati e le modifiche vengono applicate nell'origine dati usando un oggetto `DataAdapter`. Ciò significa che quando un `DataAdapter` riempie una <xref:System.Data.DataTable> in un `DataSet` con i valori da un'origine dati, i tipi di dati risultanti delle colonne di `DataTable` sono tipi di .NET Framework, anziché tipi specifici del provider di dati .NET Framework che viene usato per connettersi all'origine dati.  
   
- Analogamente, quando un `DataReader` restituisce un valore da un'origine dati, il valore ottenuto viene archiviato in una variabile locale con un tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Per le operazioni `Fill` di `DataAdapter` e i metodi `Get` di `DataReader`, il tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] viene dedotto dal valore restituito dal provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Analogamente, quando un `DataReader` restituisce un valore da un'origine dati, il valore risultante viene archiviato in una variabile locale con un tipo .NET Framework. Sia per il `Fill` operazioni dei `DataAdapter` e il `Get` metodi del `DataReader`, il tipo di .NET Framework viene dedotto dal valore restituito dal provider di dati .NET Framework.  
   
- Anziché basarsi sul tipo di dati dedotto, quando si conosce il tipo specifico del valore che viene restituito è consigliabile usare i metodi delle funzioni di accesso tipizzate di `DataReader` . I metodi delle funzioni di accesso tipizzate garantiscono prestazioni migliori restituendo un valore come tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] specifico ed eliminando quindi la necessità di un'ulteriore conversione del tipo.  
+ Anziché basarsi sul tipo di dati dedotto, quando si conosce il tipo specifico del valore che viene restituito è consigliabile usare i metodi delle funzioni di accesso tipizzate di `DataReader` . I metodi tipizzati della funzione di accesso consentono di ottenere prestazioni migliori restituendo un valore come un tipo .NET Framework specifico, che elimina la necessità di ulteriore conversione del tipo.  
   
 > [!NOTE]
->  I valori null per i tipi di dati dei provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sono rappresentati da `DBNull.Value`.  
+>  I valori null per tipi di dati del provider di dati .NET Framework sono rappresentati da `DBNull.Value`.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Mapping dei tipi di dati SQL Server](../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  

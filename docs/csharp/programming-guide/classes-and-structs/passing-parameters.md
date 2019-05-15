@@ -9,12 +9,12 @@ helpviewer_keywords:
 - methods [C#], passing parameters
 - C# language, method parameters
 ms.assetid: a5c3003f-7441-4710-b8b1-c79de77e0b77
-ms.openlocfilehash: c8da86d2a8f5101acf5b9cc1bcc2f9ad50378fa4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 77228def3a6426b6e0383d657c2eaeac37e5e273
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969544"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600145"
 ---
 # <a name="passing-parameters-c-programming-guide"></a>Passaggio di parametri (Guida per programmatori C#)
 In C# è possibile passare gli argomenti ai parametri per valore o per riferimento. Il passaggio per riferimento consente a membri di funzioni, metodi, proprietà, indicizzatori, operatori e costruttori di modificare il valore dei parametri e rendere permanenti le modifiche nell'ambiente chiamante. Per passare un parametro per riferimento con l'intenzione di modificare il valore, usare la parola chiave `ref` o `out`. Per passare per riferimento con l'intenzione di evitare la copia, ma non la modifica del valore, usare il modificatore `in`. Per semplicità, negli esempi riportati in questo argomento verrà utilizzata soltanto la parola chiave `ref`. Per altre informazioni sulla differenza tra `in`, `ref` e `out`, vedere [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) e [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md).  
@@ -25,9 +25,9 @@ In C# è possibile passare gli argomenti ai parametri per valore o per riferimen
   
  Per altre informazioni, vedere i seguenti argomenti:  
   
--   [Passaggio di parametri di tipo di valore](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md)  
+- [Passaggio di parametri di tipo di valore](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md)  
   
--   [Passaggio di parametri di tipo di riferimento](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)  
+- [Passaggio di parametri di tipo di riferimento](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 

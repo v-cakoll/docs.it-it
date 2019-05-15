@@ -2,17 +2,17 @@
 title: Mapping dei tipi di dati SQL Server
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: f90f44666fa5843ccf9bd1cd9ccb5c20b812f494
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04a3bbd9ba18b30a24b425888cce78597deb068a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664090"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583730"
 ---
 # <a name="sql-server-data-type-mappings"></a>Mapping dei tipi di dati SQL Server
 SQL Server e .NET Framework sono basati su sistemi di tipi diversi. La struttura <xref:System.Decimal> .NET Framework dispone ad esempio di una scala massima di 28, mentre i tipi di dati decimali e numerici di SQL Server dispongono di una scala massima di 38. Per mantenere l'integrità dei dati in caso di lettura e scrittura dei dati, <xref:System.Data.SqlClient.SqlDataReader> espone metodi delle funzioni di accesso tipizzate specifici di SQL Server che restituiscono oggetti di <xref:System.Data.SqlTypes>, nonché metodi delle funzioni di accesso che restituiscono tipi .NET Framework. Sia i tipi SQL Server che i tipi .NET Framework sono rappresentati anche dalle enumerazioni nelle classi <xref:System.Data.DbType> e <xref:System.Data.SqlDbType>, che è possibile usare quando si specificano tipi di dati <xref:System.Data.SqlClient.SqlParameter>.  
   
- La tabella seguente illustra il tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dedotto, le enumerazioni <xref:System.Data.DbType> e <xref:System.Data.SqlDbType> e i metodi delle funzioni di accesso per <xref:System.Data.SqlClient.SqlDataReader>.  
+ La tabella seguente mostra il tipo dedotto di .NET Framework, il <xref:System.Data.DbType> e <xref:System.Data.SqlDbType> enumerazioni e i metodi della funzione di accesso per il <xref:System.Data.SqlClient.SqlDataReader>.  
   
 |Tipo del Motore di database di SQL Server|Tipo .NET Framework|Enumerazione SqlDbType|Funzione di accesso tipizzata SqlTypes SqlDataReader|Enumerazione DbType|Funzione di accesso tipizzata DbType SqlDataReader|  
 |-------------------------------------|-------------------------|---------------------------|-------------------------------------------|------------------------|-----------------------------------------|  

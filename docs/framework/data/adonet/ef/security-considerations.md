@@ -2,15 +2,15 @@
 title: Considerazioni sulla sicurezza (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 14d07fcb1d97a4e71747d6517f63fbc4108493da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641180"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583475"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerazioni sulla sicurezza (Entity Framework)
-In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che riguardano in modo particolare lo sviluppo, la distribuzione e l'esecuzione di applicazioni [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. È consigliabile inoltre seguire le raccomandazioni relative alla creazione di applicazioni [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] protette. Per altre informazioni, vedere [Cenni preliminari sulla sicurezza](../../../../../docs/framework/data/adonet/security-overview.md).  
+In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che riguardano in modo particolare lo sviluppo, la distribuzione e l'esecuzione di applicazioni [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. È consigliabile seguire anche le raccomandazioni per la creazione di applicazioni .NET Framework protette. Per altre informazioni, vedere [Cenni preliminari sulla sicurezza](../../../../../docs/framework/data/adonet/security-overview.md).  
   
 ## <a name="general-security-considerations"></a>Considerazioni generali sulla sicurezza  
  Le considerazioni sulla sicurezza sono valide per tutte le applicazioni che usano [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
@@ -63,7 +63,7 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
  Un amministratore dell'origine dati deve concedere solo le autorizzazioni necessarie agli utenti. Sebbene [!INCLUDE[esql](../../../../../includes/esql-md.md)] non supporti istruzioni DML che modificano i dati, ad esempio INSERT, UPDATE o DELETE, gli utenti possono comunque accedere alla connessione all'origine dati. Un utente malintenzionato potrebbe usare questa connessione per eseguire istruzioni DML nel linguaggio nativo dell'origine dati.  
   
 #### <a name="run-applications-with-the-minimum-permissions"></a>Eseguire le applicazioni con le autorizzazioni minime.  
- Quando si consente l'esecuzione di un'applicazione gestita con autorizzazione di attendibilità totale, [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] non limita l'accesso dell'applicazione al computer. Questo potrebbe rendere vulnerabile l'applicazione e compromettere l'intero sistema. Per usare la sicurezza dall'accesso di codice e gli altri meccanismi di sicurezza di [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], è necessario eseguire le applicazioni tramite autorizzazioni parzialmente attendibili e con il set minimo di autorizzazioni necessarie a consentirne il funzionamento. Le autorizzazioni di accesso al codice seguenti sono le autorizzazioni minime necessarie per l'applicazione [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]:  
+ Quando si consente a un'applicazione gestita per l'esecuzione con autorizzazione di attendibilità, .NET Framework non limita l'accesso dell'applicazione nel computer. Questo potrebbe rendere vulnerabile l'applicazione e compromettere l'intero sistema. Per usare la sicurezza dall'accesso di codice e altri meccanismi di sicurezza in .NET Framework, è necessario eseguire applicazioni tramite autorizzazioni parzialmente attendibili e con il set minimo di autorizzazioni necessarie per consentire il funzionamento dell'applicazione. Le autorizzazioni di accesso al codice seguenti sono le autorizzazioni minime necessarie per l'applicazione [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]:  
   
 - <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> per aprire i file di metadati specificati o <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> per cercare i file di metadati in una directory.  
   

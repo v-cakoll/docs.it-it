@@ -2,12 +2,12 @@
 title: Proiezione di XML in una forma diversa (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 381d674c420128f75d27394c21a7b622b2d78402
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac9c6e05b366c9d34f82c6da9bf154d741840b3d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723784"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596807"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Proiezione di XML in una forma diversa (C#)
 In questo argomento viene illustrato un esempio di proiezione del codice XML in una forma diversa da quella del codice XML di origine.  
@@ -233,7 +233,7 @@ class Program
 ## <a name="next-steps"></a>Passaggi successivi  
  Nell'esempio successivo viene eseguita una query per individuare tutto il testo in un documento di Word:  
   
--   [Ricerca di testo nei documenti di Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Ricerca di testo nei documenti di Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

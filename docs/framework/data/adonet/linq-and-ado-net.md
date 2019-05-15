@@ -2,12 +2,12 @@
 title: LINQ e ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: f57d50e6c76b3d95c1d87b6beafe345f9a251e04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79d6c52656e545c07260f3a97b089c238a74db3c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878742"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583503"
 ---
 # <a name="linq-and-adonet"></a>LINQ e ADO.NET
 Oggi, molti sviluppatori aziendali devono usare linguaggi di programmazione due (o più): un linguaggio di alto livello per i livelli di presentazione e della logica di business (ad esempio, Visual c# o Visual Basic) e un linguaggio di query per interagire con il database (ad esempio [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Tale necessità non solo richiede una conoscenza approfondita di diversi linguaggi da parte degli sviluppatori, ma provoca anche problemi di mancata corrispondenza tra linguaggi nell'ambiente di sviluppo. Ad esempio, in un'applicazione che usa un'API di accesso ai dati per eseguire una query su un database la query viene specificata come valore letterale stringa racchiuso tra virgolette. Tale stringa di query è tuttavia illeggibile per il compilatore e non è possibile eseguire su di essa un controllo per verificare la presenza di errori, ad esempio l'uso di sintassi non valida o l'effettiva esistenza delle colonne o delle righe cui fa riferimento. Non viene eseguito il controllo dei tipi dei parametri della query, né è disponibile il supporto per `IntelliSense`.  
@@ -30,7 +30,7 @@ Oggi, molti sviluppatori aziendali devono usare linguaggi di programmazione due 
  <xref:System.Data.DataSet> rappresenta un elemento chiave del modello di programmazione disconnesso su cui si basa [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] ed è ampiamente usato. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consente agli sviluppatori di compilare funzionalità di query più complesse in <xref:System.Data.DataSet> usando lo stesso meccanismo di formulazione delle query disponibile per molte altre origini dati. Per altre informazioni, vedere [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="linq-to-sql"></a>LINQ to SQL  
- [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] è uno strumento utile per gli sviluppatori che non necessitano del mapping a un modello concettuale. Con [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] è possibile usare il modello di programmazione di [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] direttamente sullo schema del database esistente. [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] consente agli sviluppatori di generare classi di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] che rappresentano i dati. Anziché eseguire il mapping a un modello di dati concettuale, tali classi generate vengono mappate direttamente a tabelle di database, visualizzazioni, stored procedure e funzioni definite dall'utente.  
+ [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] è uno strumento utile per gli sviluppatori che non necessitano del mapping a un modello concettuale. Con [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] è possibile usare il modello di programmazione di [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] direttamente sullo schema del database esistente. [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] consente agli sviluppatori di generare le classi di .NET Framework che rappresentano i dati. Anziché eseguire il mapping a un modello di dati concettuale, tali classi generate vengono mappate direttamente a tabelle di database, visualizzazioni, stored procedure e funzioni definite dall'utente.  
   
  Con [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] gli sviluppatori possono scrivere il codice direttamente nello schema di archiviazione usando lo stesso modello di programmazione [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] delle raccolte in memoria e di <xref:System.Data.DataSet>, oltre ad altre origini dati, quali XML. Per altre informazioni, vedere [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).  
   

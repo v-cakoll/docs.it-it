@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 47e7f94fff4c76b3af7f07b1e023b545eed24953
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f130c4de45f81dfb21c8c87c9e24d22cd4276ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659639"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586735"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Creazione e utilizzo di componenti in Visual Basic
-Un *componente* è una classe che implementa l'interfaccia <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> o che deriva direttamente o indirettamente da una classe che implementa <xref:System.ComponentModel.IComponent>. Un componente di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] è un oggetto riutilizzabile in grado di interagire con altri oggetti, che consente di controllare le risorse esterne e il supporto in fase di progettazione.  
+Un *componente* è una classe che implementa l'interfaccia <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> o che deriva direttamente o indirettamente da una classe che implementa <xref:System.ComponentModel.IComponent>. Un componente di .NET Framework è un oggetto che può essere riutilizzato, può interagire con altri oggetti e consente di controllare le risorse esterne e supporto in fase di progettazione.  
   
- Una caratteristica importante dei componenti è che possono essere manipolati in fase di progettazione, quindi se una classe è un componente può essere usata nell'ambiente di sviluppo integrato (IDE) di Visual Studio. Un componente può essere aggiunto alla casella degli strumenti, trascinato e rilasciato in un form e manipolato in un'area di progettazione. Si noti che il supporto di base per i componenti in fase di progettazione è incorporato in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], quindi uno sviluppatore di componenti non deve effettuare operazioni aggiuntive per sfruttare la funzionalità di base in fase di progettazione.  
+ Una caratteristica importante dei componenti è che possono essere manipolati in fase di progettazione, quindi se una classe è un componente può essere usata nell'ambiente di sviluppo integrato (IDE) di Visual Studio. Un componente può essere aggiunto alla casella degli strumenti, trascinato e rilasciato in un form e manipolato in un'area di progettazione. Si noti che il supporto in fase di progettazione per i componenti di base sono incorporato in .NET Framework. uno sviluppatore di componenti non dovrà effettuare operazioni aggiuntive per sfruttare la funzionalità di base in fase di progettazione.  
   
  Un *controllo* è simile a un componente, poiché entrambi possono essere manipolati. A differenza di un componente, un controllo produce però un'interfaccia utente. Un controllo deve derivare da una delle classi di controllo di base: <xref:System.Windows.Forms.Control> o <xref:System.Web.UI.Control>.  
   

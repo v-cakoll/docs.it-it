@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e87fdd31a4dfb9b595f165225f7b86d5e88ea7af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087534"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607752"
 ---
 # <a name="assembly-manifest"></a>Manifesto dell'assembly
 Ogni assembly, sia esso statico o dinamico, include una raccolta di dati che descrivono le relazioni tra i diversi elementi che lo compongono. Tali metadati sono contenuti nel manifesto dell'assembly. Il manifesto dell'assembly contiene tutti i metadati necessari per specificare l'identità di sicurezza e i requisiti di versione dell'assembly e tutti i metadati necessari per definire l'ambito dell'assembly e risolvere i riferimenti a classi e risorse. Il manifesto dell'assembly può essere memorizzato in un file PE, che avrà estensione EXE o DLL e ospiterà anche codice Microsoft Intermediate Language (MSIL), oppure in un file PE autonomo che conterrà solo le informazioni del manifesto dell'assembly.  
@@ -28,15 +28,15 @@ Ogni assembly, sia esso statico o dinamico, include una raccolta di dati che des
   
  Il manifesto dell'assembly svolge le seguenti funzioni:  
   
--   Enumera i file che compongono l'assembly.  
+- Enumera i file che compongono l'assembly.  
   
--   Determina in che modo i riferimenti ai tipi e alle risorse dell'assembly vengono collegati ai file che contengono le relative dichiarazioni e implementazioni.  
+- Determina in che modo i riferimenti ai tipi e alle risorse dell'assembly vengono collegati ai file che contengono le relative dichiarazioni e implementazioni.  
   
--   Enumera altri assembly da cui l'assembly dipende.  
+- Enumera altri assembly da cui l'assembly dipende.  
   
--   Fornisce un livello di riferimenti indiretti tra i consumatori dell'assembly e i dettagli di implementazione dell'assembly.  
+- Fornisce un livello di riferimenti indiretti tra i consumatori dell'assembly e i dettagli di implementazione dell'assembly.  
   
--   Conferisce all'assembly la capacità di descrivere se stesso.  
+- Conferisce all'assembly la capacità di descrivere se stesso.  
   
 ## <a name="assembly-manifest-contents"></a>Contenuto del manifesto dell'assembly  
  Nella tabella che segue vengono mostrate le informazioni contenute nel manifesto dell'assembly. I primi quattro elementi (le informazioni sul nome, il numero di versione, le impostazioni cultura e il nome sicuro dell'assembly) costituiscono l'identità dell'assembly.  

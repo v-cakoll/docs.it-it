@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: c9cb40cb318bd044cb9204ba2ed384b41b475d57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625767"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592776"
 ---
 # <a name="application-settings-architecture"></a>Architettura Impostazioni applicazione
 Questo argomento descrive il funzionamento dell'architettura Impostazioni applicazione e ne analizza le funzionalità avanzate, come i raggruppamenti e le chiavi delle impostazioni.  
@@ -44,7 +44,7 @@ Questo argomento descrive il funzionamento dell'architettura Impostazioni applic
 ## <a name="settings-persistence"></a>Persistenza delle impostazioni  
  Il <xref:System.Configuration.ApplicationSettingsBase> classe non mantiene o carica le impostazioni; tale operazione è effettuata dal provider di impostazioni, una classe che deriva da <xref:System.Configuration.SettingsProvider>. Se una classe derivata di <xref:System.Configuration.ApplicationSettingsBase> non specifica un provider di impostazioni tramite i <xref:System.Configuration.SettingsProviderAttribute>, quindi il provider predefinito, <xref:System.Configuration.LocalFileSettingsProvider>, viene usato.  
   
- Il sistema di configurazione che è stato rilasciato originariamente con [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] supporta l'offerta di dati di configurazione dell'applicazione statici tramite file machine.config del computer locale o in un file `app.`.exe.config da distribuire con l'applicazione. Il <xref:System.Configuration.LocalFileSettingsProvider> classe espande tale supporto nativo nei modi seguenti:  
+ Il sistema di configurazione che è stato rilasciato originariamente con .NET Framework supporta la fornitura di dati di configurazione dell'applicazione statici tramite file Machine. config entrambi del computer locale o in un `app.`file exe. config che si distribuisce con l'applicazione. Il <xref:System.Configuration.LocalFileSettingsProvider> classe espande tale supporto nativo nei modi seguenti:  
   
 - Le impostazioni con ambito applicazione possono essere archiviate in entrambi i file machine.config o `app.`exe.config. Il file machine.config è sempre di sola lettura, mentre `app`.exe.config è limitato dalle considerazioni sulla sicurezza alla sola lettura per la maggior parte delle applicazioni.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: 283d3a0a0350823be8c0680dd24e04999b040363
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fd3be8a60048b10bbd94ac5b3bfadaee954943ef
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641122"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583594"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Controllo delle versioni del servizio dati (WCF Data Services)
 Il [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] consente di creare servizi dati in modo che i client possono accedere ai dati come risorse usando URI basati su un modello di dati. OData supporta anche la definizione di operazioni del servizio. Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro ciclo di vita, potrebbe essere necessario cambiare questi servizi dati per molteplici ragioni, ad esempio perché cambiano le esigenze aziendali, i requisiti IT o per risolvere altri problemi. Quando si apportano modifiche a un servizio dati esistente, è necessario valutare se definire una nuova versione del servizio dati e il modo migliore per ridurre l'impatto sulle applicazioni client esistenti. In questo argomento vengono fornite informazioni su quando e come creare una nuova versione di un servizio dati. Viene inoltre descritto il modo in cui WCF Data Services gestisce uno scambio tra client e servizi dati che supportano versioni diverse del protocollo OData.
@@ -60,7 +60,7 @@ Il [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] consente di c
 
  Quando un'applicazione utilizza le librerie client di WCF Data Services per accedere a un servizio dati, le librerie di queste intestazioni viene impostato automaticamente per i valori corretti, a seconda della versione di OData e le funzionalità che vengono usate nell'applicazione. Per impostazione predefinita, WCF Data Services utilizza la versione minima del protocollo che supporta l'operazione richiesta.
 
- Nella tabella seguente illustra in dettaglio le versioni di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] che includono il supporto di WCF Data Services per versioni specifiche del protocollo OData.
+ Nella tabella seguente illustra in dettaglio le versioni di .NET Framework e [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] che includono il supporto di WCF Data Services per versioni specifiche del protocollo OData.
 
 |Versione del protocollo OData|Supporto introdotto in…|
 |-----------------------------------------------------------------------------------|----------------------------|

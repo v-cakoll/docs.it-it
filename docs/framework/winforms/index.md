@@ -6,15 +6,15 @@ helpviewer_keywords:
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00e359e7c2440b6d88f2c42fd0267fc1f12b7bb7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801179"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583429"
 ---
 # <a name="windows-forms"></a>Windows Form
-I form sono l'unità base di un'applicazione e di conseguenza è fondamentale fare molta attenzione alla loro funzione e progettazione. Un form è una sorta di foglio o di lavagna pulita, in cui uno sviluppatore inserisce controlli, al fine di creare un'interfaccia utente e un codice per la modifica dei dati. A tale scopo, Visual Studio offre un ambiente di sviluppo integrato (IDE) per semplificare la scrittura di codice, nonché un controllo rich impostare scritto con il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Completando la funzionalità di tali controlli con il codice creato, è possibile sviluppare velocemente e senza difficoltà le soluzioni desiderate.  
+I form sono l'unità base di un'applicazione e di conseguenza è fondamentale fare molta attenzione alla loro funzione e progettazione. Un form è una sorta di foglio o di lavagna pulita, in cui uno sviluppatore inserisce controlli, al fine di creare un'interfaccia utente e un codice per la modifica dei dati. A tale scopo, Visual Studio offre un ambiente di sviluppo integrato (IDE) per semplificare la scrittura di codice, nonché un folto gruppo scritto con .NET Framework di controlli. Completando la funzionalità di tali controlli con il codice creato, è possibile sviluppare velocemente e senza difficoltà le soluzioni desiderate.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Guida introduttiva a Windows Form](getting-started-with-windows-forms.md)  

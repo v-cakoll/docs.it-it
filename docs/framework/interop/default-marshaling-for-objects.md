@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b05d5c72491265b7617950550935e3c719421f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c694a9d0ba0d6c7d41a9ce3b932b88519fcddfeb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076160"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626338"
 ---
 # <a name="default-marshaling-for-objects"></a>Marshalling predefinito per gli oggetti
 I parametri e i campi tipizzati come <xref:System.Object?displayProperty=nameWithType> possono essere esposti al codice non gestito come uno dei tipi seguenti:  
   
--   Una variante quando l'oggetto è un parametro.  
+- Una variante quando l'oggetto è un parametro.  
   
--   Un'interfaccia quando l'oggetto è un campo della struttura.  
+- Un'interfaccia quando l'oggetto è un campo della struttura.  
   
  Solo l'interoperabilità COM supporta il marshalling per i tipi di oggetto. Il comportamento predefinito è il marshalling degli oggetti alle varianti COM. Queste regole si applicano solo al tipo **Object** e non agli oggetti fortemente tipizzati derivanti dalla classe **Object**.  
   
@@ -120,11 +120,11 @@ struct ObjectHolder {
 ## <a name="marshaling-object-to-variant"></a>Marshalling dell'oggetto alla variante  
  Quando viene effettuato il marshalling di un oggetto a una variante, il tipo di variante interno viene determinato in fase di esecuzione, in base alle regole seguenti:  
   
--   Se il riferimento all'oggetto è null (**Nothing** in Visual Basic), viene effettuato il marshalling dell'oggetto a una variante di tipo **VT_EMPTY**.  
+- Se il riferimento all'oggetto è null (**Nothing** in Visual Basic), viene effettuato il marshalling dell'oggetto a una variante di tipo **VT_EMPTY**.  
   
--   Se l'oggetto è un'istanza di un tipo elencato nella tabella seguente, il tipo di variante risultante viene determinato dalle regole incluse nel gestore di marshalling e visualizzate nella tabella.  
+- Se l'oggetto è un'istanza di un tipo elencato nella tabella seguente, il tipo di variante risultante viene determinato dalle regole incluse nel gestore di marshalling e visualizzate nella tabella.  
   
--   Gli altri oggetti che devono controllare in modo esplicito il comportamento di marshalling possono implementare l'interfaccia <xref:System.IConvertible>. In tal caso, il tipo di variante viene determinato dal codice del tipo restituito dal metodo <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType>. In caso contrario, viene effettuato il marshalling dell'oggetto come variante di tipo **VT_UNKNOWN**.  
+- Gli altri oggetti che devono controllare in modo esplicito il comportamento di marshalling possono implementare l'interfaccia <xref:System.IConvertible>. In tal caso, il tipo di variante viene determinato dal codice del tipo restituito dal metodo <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType>. In caso contrario, viene effettuato il marshalling dell'oggetto come variante di tipo **VT_UNKNOWN**.  
   
 ### <a name="marshaling-system-types-to-variant"></a>Marshalling di tipi di sistema alla variante  
  La tabella seguente illustra i tipi di oggetto gestito e i corrispondenti tipi di varianti COM. Questi tipi vengono convertiti solo quando la firma del metodo chiamato è di tipo <xref:System.Object?displayProperty=nameWithType>.  
@@ -281,26 +281,26 @@ Varianti passate per valore e per riferimento
   
  **Comportamento predefinito per il marshalling di oggetti e varianti per valore**  
   
--   Quando si passano gli oggetti dal codice gestito a COM, i contenuti dell'oggetto vengono copiati in una nuova variante creata dal gestore di marshalling, usando le regole definite in [Marshalling dell'oggetto alla variante](#marshaling-object-to-variant). Le modifiche apportate alla variante sul lato non gestito non vengono propagate all'oggetto originale al ritorno dalla chiamata.  
+- Quando si passano gli oggetti dal codice gestito a COM, i contenuti dell'oggetto vengono copiati in una nuova variante creata dal gestore di marshalling, usando le regole definite in [Marshalling dell'oggetto alla variante](#marshaling-object-to-variant). Le modifiche apportate alla variante sul lato non gestito non vengono propagate all'oggetto originale al ritorno dalla chiamata.  
   
--   Quando si passano le varianti da COM al codice gestito, i contenuti della variante vengono copiati in un nuovo oggetto creato, usando le regole definite in [Marshalling della variante all'oggetto](#marshaling-variant-to-object). Le modifiche apportate all'oggetto sul lato gestito non vengono propagate alla variante originale al ritorno dalla chiamata.  
+- Quando si passano le varianti da COM al codice gestito, i contenuti della variante vengono copiati in un nuovo oggetto creato, usando le regole definite in [Marshalling della variante all'oggetto](#marshaling-variant-to-object). Le modifiche apportate all'oggetto sul lato gestito non vengono propagate alla variante originale al ritorno dalla chiamata.  
   
  **Comportamento predefinito per il marshalling di oggetti e varianti per riferimento**  
   
  Per propagare le modifiche al chiamante, i parametri devono essere passati per riferimento. È ad esempio possibile usare la parola chiave **ref** in C# (o **ByRef** nel codice gestito di Visual Basic) per passare i parametri per riferimento. In COM i parametri per riferimento vengono passati usando un puntatore, ad esempio una **variante \***.  
   
--   Quando si passa un oggetto a COM per riferimento, il gestore di marshalling crea una nuova variante e copia i contenuti del riferimento all'oggetto nella variante prima che venga effettuata la chiamata. La variante viene passata alla funzione non gestita in cui l'utente può modificare i contenuti della variante. Al ritorno dalla chiamata, le modifiche apportate alla variante sul lato non gestito vengono propagate all'oggetto originale. Se il tipo della variante è diverso dal tipo della variante passata alla chiamata, le modifiche vengono propagate a un oggetto di tipo diverso, ovvero il tipo dell'oggetto passato nella chiamata può essere diverso dal tipo dell'oggetto restituito dalla chiamata.  
+- Quando si passa un oggetto a COM per riferimento, il gestore di marshalling crea una nuova variante e copia i contenuti del riferimento all'oggetto nella variante prima che venga effettuata la chiamata. La variante viene passata alla funzione non gestita in cui l'utente può modificare i contenuti della variante. Al ritorno dalla chiamata, le modifiche apportate alla variante sul lato non gestito vengono propagate all'oggetto originale. Se il tipo della variante è diverso dal tipo della variante passata alla chiamata, le modifiche vengono propagate a un oggetto di tipo diverso, ovvero il tipo dell'oggetto passato nella chiamata può essere diverso dal tipo dell'oggetto restituito dalla chiamata.  
   
--   Quando si passa una variante al codice gestito per riferimento, il gestore di marshalling crea un nuovo oggetto e copia i contenuti della variante nell'oggetto prima di effettuare la chiamata. Un riferimento all'oggetto viene passato alla funzione non gestita, in cui l'utente può modificare l'oggetto. Al ritorno dalla chiamata, le modifiche apportate all'oggetto di riferimento vengono propagate alla variante originale. Se il tipo dell'oggetto è diverso dal tipo dell'oggetto passato alla chiamata, il tipo della variante originale viene modificato e il valore viene propagato nella variante. Anche in questo caso il tipo della variante passata nella chiamata può essere diverso dal tipo della variante restituita dalla chiamata.  
+- Quando si passa una variante al codice gestito per riferimento, il gestore di marshalling crea un nuovo oggetto e copia i contenuti della variante nell'oggetto prima di effettuare la chiamata. Un riferimento all'oggetto viene passato alla funzione non gestita, in cui l'utente può modificare l'oggetto. Al ritorno dalla chiamata, le modifiche apportate all'oggetto di riferimento vengono propagate alla variante originale. Se il tipo dell'oggetto è diverso dal tipo dell'oggetto passato alla chiamata, il tipo della variante originale viene modificato e il valore viene propagato nella variante. Anche in questo caso il tipo della variante passata nella chiamata può essere diverso dal tipo della variante restituita dalla chiamata.  
   
  **Comportamento predefinito per il marshalling di una variante con il flag VT_BYREF impostato**  
   
--   Una variante che viene passata al codice gestito per valore può avere il flag **VT_BYREF** impostato per indicare che la variante contiene un riferimento invece che un valore. In questo caso, viene ancora effettuato il marshalling della variante a un oggetto perché la variante verrà passata per valore. Il gestore di marshalling dereferenzia automaticamente i contenuti della variante e la copia in un nuovo oggetto creato prima di eseguire la chiamata. L'oggetto viene quindi passato nella funzione gestita, tuttavia, al ritorno dalla chiamata, l'oggetto non viene propagato nella variante originale. Le modifiche apportate all'oggetto gestito vengono perse.  
+- Una variante che viene passata al codice gestito per valore può avere il flag **VT_BYREF** impostato per indicare che la variante contiene un riferimento invece che un valore. In questo caso, viene ancora effettuato il marshalling della variante a un oggetto perché la variante verrà passata per valore. Il gestore di marshalling dereferenzia automaticamente i contenuti della variante e la copia in un nuovo oggetto creato prima di eseguire la chiamata. L'oggetto viene quindi passato nella funzione gestita, tuttavia, al ritorno dalla chiamata, l'oggetto non viene propagato nella variante originale. Le modifiche apportate all'oggetto gestito vengono perse.  
   
     > [!CAUTION]
     >  Non è possibile modificare il valore di una variante passata per valore, anche se la variante ha il flag **VT_BYREF** impostato.  
   
--   Una variante che viene passata al codice gestito per riferimento può anche avere il flag **VT_BYREF** impostato per indicare che la variante contiene un altro riferimento. In questo caso, viene effettuato il marshalling della variante a un oggetto **ref** perché la variante verrà passata per riferimento. Il gestore di marshalling dereferenzia automaticamente i contenuti della variante e la copia in un nuovo oggetto creato prima di eseguire la chiamata. Al ritorno dalla chiamata, il valore dell'oggetto viene propagato al riferimento nella variante originale solo se l'oggetto è dello stesso tipo dell'oggetto passato, ovvero la propagazione non modifica il tipo di una variante con il flag **VT_BYREF** impostato. Se il tipo dell'oggetto viene modificato durante la chiamata, al ritorno dalla chiamata viene generata un'eccezione <xref:System.InvalidCastException>.  
+- Una variante che viene passata al codice gestito per riferimento può anche avere il flag **VT_BYREF** impostato per indicare che la variante contiene un altro riferimento. In questo caso, viene effettuato il marshalling della variante a un oggetto **ref** perché la variante verrà passata per riferimento. Il gestore di marshalling dereferenzia automaticamente i contenuti della variante e la copia in un nuovo oggetto creato prima di eseguire la chiamata. Al ritorno dalla chiamata, il valore dell'oggetto viene propagato al riferimento nella variante originale solo se l'oggetto è dello stesso tipo dell'oggetto passato, ovvero la propagazione non modifica il tipo di una variante con il flag **VT_BYREF** impostato. Se il tipo dell'oggetto viene modificato durante la chiamata, al ritorno dalla chiamata viene generata un'eccezione <xref:System.InvalidCastException>.  
   
  La tabella seguente riepiloga le regole di propagazione per varianti e oggetti.  
   

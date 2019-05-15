@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 3423e5d9-234c-4571-8161-e35f6d130128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bb09f827726f759383598d18fb80657a7e2ff04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a014058feb2ccb5187081fc63fb9c6eb6ac53d41
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179062"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607562"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>Utilizzo dei componenti serviti con la Global Assembly Cache
 È consigliabile inserire nella Global Assembly Cache i componenti serviti (componenti COM+ di codice gestito). In alcuni scenari, ma non in tutti, la gestione dei componenti serviti non inclusi nella Global Assembly Cache può essere eseguita da Common Language Runtime e dai servizi COM+. Questo caso viene illustrato negli scenari seguenti:  
   
--   Per quanto riguarda i componenti serviti di un'applicazione COM+ Server, è necessario che l'assembly contenente i componenti si trovi nella Global Assembly Cache, poiché Dllhost.exe non viene eseguito nella stessa directory in cui si trovano i componenti serviti.  
+- Per quanto riguarda i componenti serviti di un'applicazione COM+ Server, è necessario che l'assembly contenente i componenti si trovi nella Global Assembly Cache, poiché Dllhost.exe non viene eseguito nella stessa directory in cui si trovano i componenti serviti.  
   
--   Per quanto riguarda i componenti serviti di un'applicazione COM+ Library, Common Language Runtime e i servizi COM+ sono in grado di risolvere i riferimenti all'assembly contenente i componenti effettuando una ricerca nella directory corrente. In questo caso non è quindi necessario che l'assembly si trovi nella Global Assembly Cache.  
+- Per quanto riguarda i componenti serviti di un'applicazione COM+ Library, Common Language Runtime e i servizi COM+ sono in grado di risolvere i riferimenti all'assembly contenente i componenti effettuando una ricerca nella directory corrente. In questo caso non è quindi necessario che l'assembly si trovi nella Global Assembly Cache.  
   
--   La situazione è diversa per i componenti serviti di un'applicazione ASP.NET. Se si inserisce l'assembly contenente i componenti serviti nella directory bin in cui risiede il codice base dell'applicazione e si usa la registrazione su richiesta, verrà effettuata la copia con shadowing dell'assembly nella Download Cache, poiché ASP.NET si avvale delle funzionalità di shadowing di Common Language Runtime.  
+- La situazione è diversa per i componenti serviti di un'applicazione ASP.NET. Se si inserisce l'assembly contenente i componenti serviti nella directory bin in cui risiede il codice base dell'applicazione e si usa la registrazione su richiesta, verrà effettuata la copia con shadowing dell'assembly nella Download Cache, poiché ASP.NET si avvale delle funzionalità di shadowing di Common Language Runtime.  
   
 ## <a name="see-also"></a>Vedere anche
 

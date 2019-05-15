@@ -2,12 +2,12 @@
 title: LINQ to XML e DOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 44e5a4d00705d1cd7aff66e0a9be387d5c6c633a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ab775cc259fd3a337358bca2da6055d7b1ea6bd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702431"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596959"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML e DOM (C#)
 Questa sezione descrive alcune delle differenze principali tra [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e l'API di programmazione XML attualmente più diffusa, ovvero DOM (Document Object Model) W3C.  
@@ -80,11 +80,11 @@ XElement contacts =
 ## <a name="working-directly-with-xml-elements"></a>Utilizzo diretto di elementi XML  
  Quando si programma con XML, l'obiettivo principale riguarda in genere gli elementi XML e talvolta gli attributi. In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è possibile usare direttamente gli elementi e gli attributi XML. Ad esempio, è possibile eseguire quanto le operazioni seguenti:  
   
--   Creare elementi XML senza usare affatto un oggetto documento. In questo modo la programmazione risulta semplificata quando è necessario usare frammenti di alberi XML.  
+- Creare elementi XML senza usare affatto un oggetto documento. In questo modo la programmazione risulta semplificata quando è necessario usare frammenti di alberi XML.  
   
--   Caricare oggetti `T:System.Xml.Linq.XElement` direttamente da un file XML.  
+- Caricare oggetti `T:System.Xml.Linq.XElement` direttamente da un file XML.  
   
--   Serializzare oggetti `T:System.Xml.Linq.XElement` a un file o un flusso.  
+- Serializzare oggetti `T:System.Xml.Linq.XElement` a un file o un flusso.  
   
  Al contrario, in W3C DOM il documento XML viene usato come contenitore logico per l'albero XML. In DOM i nodi XML, inclusi elementi e attributi, devono essere creati nel contesto di un documento XML. Di seguito è riportato un frammento del codice usato per creare un elemento name in DOM:  
   

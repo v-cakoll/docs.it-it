@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: e4d05d803cccf9a76c6229903cb1d322a42b11e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e51b93d53e1ad65b2f19f81de8833e83bfb18c1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613041"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582759"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Informazioni su Windows Communication Foundation
 Windows Communication Foundation (WCF) è un framework per la creazione di applicazioni orientate ai servizi. Utilizzo di WCF, è possibile inviare dati come messaggi asincroni da un endpoint del servizio a un altro. Un endpoint del servizio può appartenere a un servizio disponibile in modo continuo ospitato da IIS oppure essere un servizio ospitato in un'applicazione. Un endpoint può essere un client di un servizio che richiede dati da un endpoint del servizio. Il messaggio può essere semplice come una parola o come un singolo carattere inviato in formato XML o complesso come un flusso di dati binari. Di seguito vengono indicati alcuni scenari di esempio:
@@ -52,7 +52,7 @@ WCF include il seguente set di funzionalità. Per altre informazioni, vedere [de
 
 - **Contratti dati**
 
-     Poiché WCF viene compilata usando il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], include anche metodi intuitivi per fornire i contratti da applicare. Uno dei tipi di contratti più generali è il contratto dati. In pratica, quando si crea il codice del servizio in Visual C# o Visual Basic, il modo più semplice di gestire i dati è costituito dalla creazione di classi che rappresentano un'entità dati con proprietà che appartengono all'entità stessa. WCF include un sistema completo per utilizzare i dati in questa semplice modalità. Dopo che sono state create le classi che rappresentano i dati, il servizio genera automaticamente i metadati che consentono ai client di essere conformi ai tipi di dati progettati. Per altre informazioni, vedere [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+     Poiché WCF viene compilato con .NET Framework, nonché metodi intuitivi per fornire i contratti da applicare. Uno dei tipi di contratti più generali è il contratto dati. In pratica, quando si crea il codice del servizio in Visual C# o Visual Basic, il modo più semplice di gestire i dati è costituito dalla creazione di classi che rappresentano un'entità dati con proprietà che appartengono all'entità stessa. WCF include un sistema completo per utilizzare i dati in questa semplice modalità. Dopo che sono state create le classi che rappresentano i dati, il servizio genera automaticamente i metadati che consentono ai client di essere conformi ai tipi di dati progettati. Per altre informazioni, vedere [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 
 - **Sicurezza**
 

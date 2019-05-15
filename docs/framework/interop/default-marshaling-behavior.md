@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a057f872d15ca1fcd49d86d08606776a0c0bea0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315764"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063315"
 ---
 # <a name="default-marshaling-behavior"></a>comportamento predefinito del marshalling
 Il marshalling di interoperabilità opera sulle regole che stabiliscono il comportamento dei dati associati a parametri del metodo durante il passaggio tra memoria gestita e non gestita. Queste regole predefinite controllano tali attività di marshalling come le trasformazioni dei tipi di dati, il fatto che un oggetto chiamato possa modificare i dati passati e restituire tali modifiche al chiamante e le circostanze in cui il gestore di marshalling fornisce ottimizzazioni delle prestazioni.  
@@ -58,9 +58,9 @@ BSTR MethodOne (BSTR b) {
   
  Ad esempio, il gestore di marshalling determina che il wrapper della classe deve essere usato per eseguire il wrapping dell'interfaccia passata al codice gestito. Quando l'interfaccia viene passata per la prima volta attraverso il gestore di marshalling, quest'ultimo controlla se l'interfaccia proviene da un oggetto noto. Questo controllo viene eseguito in due situazioni:  
   
--   Quando un'interfaccia viene implementata da un altro oggetto gestito passato a COM in un'altra posizione. Il gestore di marshalling può identificare immediatamente le interfacce esposte dagli oggetti gestiti ed è in grado di associare l'interfaccia all'oggetto gestito che fornisce l'implementazione. L'oggetto gestito viene quindi passato al metodo e non sono necessari wrapper.  
+- Quando un'interfaccia viene implementata da un altro oggetto gestito passato a COM in un'altra posizione. Il gestore di marshalling può identificare immediatamente le interfacce esposte dagli oggetti gestiti ed è in grado di associare l'interfaccia all'oggetto gestito che fornisce l'implementazione. L'oggetto gestito viene quindi passato al metodo e non sono necessari wrapper.  
   
--   Quando un oggetto di cui è già stato eseguito il wrapping implementa l'interfaccia. Per determinare se questo è il caso, il gestore di marshalling invia una query all'oggetto per l'interfaccia **IUnknown** e confronta l'interfaccia restituita con le interfacce di altri oggetti di cui è già stato eseguito il wrapping. Se l'interfaccia corrisponde a quella di un altro wrapper, gli oggetti hanno la stessa identità e il wrapper esistente viene passato al metodo.  
+- Quando un oggetto di cui è già stato eseguito il wrapping implementa l'interfaccia. Per determinare se questo è il caso, il gestore di marshalling invia una query all'oggetto per l'interfaccia **IUnknown** e confronta l'interfaccia restituita con le interfacce di altri oggetti di cui è già stato eseguito il wrapping. Se l'interfaccia corrisponde a quella di un altro wrapper, gli oggetti hanno la stessa identità e il wrapper esistente viene passato al metodo.  
   
  Se un'interfaccia non proviene da un oggetto noto, il gestore di marshalling esegue le operazioni seguenti:  
   
@@ -73,9 +73,9 @@ BSTR MethodOne (BSTR b) {
 ## <a name="default-marshaling-for-delegates"></a>Marshalling predefinito per i delegati  
  Un delegato gestito viene sottoposto a marshalling come un'interfaccia COM o come un puntatore a funzione, in base al meccanismo di chiamata:  
   
--   Per platform invoke, un delegato viene sottoposto a marshalling come puntatore a funzione non gestito per impostazione predefinita.  
+- Per platform invoke, un delegato viene sottoposto a marshalling come puntatore a funzione non gestito per impostazione predefinita.  
   
--   Per l'interoperabilità COM, un delegato viene sottoposto a marshalling come interfaccia COM di tipo **_Delegate** per impostazione predefinita. L'interfaccia **_Delegate** è definita nella libreria dei tipi Mscorlib.tlb e contiene il metodo <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType>, che consente di chiamare il metodo a cui fa riferimento il delegato.  
+- Per l'interoperabilità COM, un delegato viene sottoposto a marshalling come interfaccia COM di tipo **_Delegate** per impostazione predefinita. L'interfaccia **_Delegate** è definita nella libreria dei tipi Mscorlib.tlb e contiene il metodo <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType>, che consente di chiamare il metodo a cui fa riferimento il delegato.  
   
  La tabella seguente illustra le opzioni di marshalling per il tipo di dati delegato gestito. L'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornisce diversi valori di enumerazione <xref:System.Runtime.InteropServices.UnmanagedType> per il marshalling di delegati.  
   
@@ -166,23 +166,23 @@ internal class DelegateTest {
   
  Questa sezione contiene informazioni sui tipi di valore formattati seguenti:  
   
--   [Tipi valore usati in platform invoke](#value-types-used-in-platform-invoke)  
+- [Tipi valore usati in platform invoke](#value-types-used-in-platform-invoke)  
   
--   [Tipi valore usati nell'interoperabilità COM](#value-types-used-in-com-interop)  
+- [Tipi valore usati nell'interoperabilità COM](#value-types-used-in-com-interop)  
   
  Oltre a descrivere i tipi formattati, questo argomento identifica i [tipi valore di sistema](#system-value-types) che presentano un comportamento di marshalling insolito.  
   
  Un tipo formattato è un tipo complesso che contiene informazioni che controllano in modo esplicito il layout dei relativi membri in memoria. Le informazioni sul layout dei membri vengono fornite tramite l'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>. Il layout può essere uno dei seguenti valori di enumerazione <xref:System.Runtime.InteropServices.LayoutKind>:  
   
--   **LayoutKind.Automatic**  
+- **LayoutKind.Automatic**  
   
      Indica che Common Language Runtime può riordinare i membri del tipo per migliorare l'efficienza. Tuttavia, quando un tipo di valore viene passato al codice non gestito, il layout dei membri è prevedibile. Un tentativo di effettuare automaticamente il marshalling di tale struttura provoca un'eccezione.  
   
--   **LayoutKind.Sequential**  
+- **LayoutKind.Sequential**  
   
      Indica che i membri del tipo devono essere disposti nella memoria non gestita nello stesso ordine in cui appaiono nella definizione del tipo gestito.  
   
--   **LayoutKind.Explicit**  
+- **LayoutKind.Explicit**  
   
      Indica che i membri vengono disposti in base all'oggetto <xref:System.Runtime.InteropServices.FieldOffsetAttribute> fornito con ogni campo.  
   
@@ -229,14 +229,14 @@ BOOL PtInRect(const RECT *lprc, POINT pt);
  È possibile passare le strutture usando la definizione di platform invoke seguente:  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function PtInRect Lib "User32.dll" (
         ByRef r As Rect, p As Point) As Boolean
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("User32.dll")]
    internal static extern bool PtInRect(ref Rect r, Point p);
@@ -291,14 +291,14 @@ void GetSystemTime(SYSTEMTIME* SystemTime);
  La definizione di platform invoke equivalente per **GetSystemTime** è la seguente:  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
         ByVal sysTime As SystemTime)
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
    internal static extern void GetSystemTime(SystemTime st);

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f02cbac83bd1e849c30f6c732395335464e6e4e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874237"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582820"
 ---
 # <a name="runtime-profiling"></a>Profilatura runtime
 La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi scenario di sviluppo o distribuzione. Questa sezione è destinata agli sviluppatori e agli amministratori di sistema che vogliono raccogliere le informazioni sulle prestazioni delle applicazioni.  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>Rilevamento delle prestazioni con Performance Monitor (Perfmon.exe)  
- Performance Monitor è lo strumento più facile da usare per la profilatura dell'applicazione [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . Performance Monitor rappresenta graficamente i dati trovati nei contatori delle prestazioni di .NET Framework installati con Common Language Runtime e [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Questi contatori possono essere usati per monitorare una serie di attività, dalla gestione della memoria alle prestazioni del compilatore JIT. Forniscono informazioni sulle risorse usate dall'applicazione, che indirettamente misurano le prestazioni dell'applicazione. Usare questi contatori per comprendere il funzionamento interno dell'applicazione.  
+ Il monitoraggio delle prestazioni è lo strumento più semplice da usare per profilare l'applicazione .NET Framework. Performance Monitor rappresenta graficamente i dati trovati nei contatori delle prestazioni di .NET Framework installati con Common Language Runtime e [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Questi contatori possono essere usati per monitorare una serie di attività, dalla gestione della memoria alle prestazioni del compilatore JIT. Forniscono informazioni sulle risorse usate dall'applicazione, che indirettamente misurano le prestazioni dell'applicazione. Usare questi contatori per comprendere il funzionamento interno dell'applicazione.  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Per eseguire Perfmon.exe in Windows Vista e versioni successive  
   
@@ -57,7 +57,7 @@ La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi 
 >  Nei sistemi in cui è installato [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] , Performance Monitor potrebbe non visualizzare i dati per i contatori delle prestazioni in alcune categorie, ad esempio **Dati CLR .NET** e **Rete CLR .NET**, per le applicazioni sviluppate con [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]. In questo caso, è possibile configurare Performance Monitor per visualizzare questi dati aggiungendo l'elemento [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) al file di configurazione dell'applicazione.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Lettura e creazione di contatori delle prestazioni a livello di codice  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornisce le classi che è possibile usare per accedere a livello di codice alle stesse informazioni sulle prestazioni disponibili nella console prestazioni. È anche possibile usare queste classi per creare contatori delle prestazioni personalizzati. La tabella seguente descrive alcune classi di monitoraggio delle prestazioni disponibili in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ .NET Framework fornisce le classi che è possibile usare per accedere a livello di codice le stesse informazioni sulle prestazioni che sono disponibile nella console prestazioni. È anche possibile usare queste classi per creare contatori delle prestazioni personalizzati. Nella tabella seguente descrive alcune delle classi fornite in .NET Framework di monitoraggio delle prestazioni.  
   
 |Classe|Descrizione|  
 |-----------|-----------------|  

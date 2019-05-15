@@ -2,12 +2,12 @@
 title: 'Procedura: Scrivere dati oggetto in un file XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 064d7ed61921f3f700311a1b09ee77e0c9818d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4fdb496e3b015b2e3b46c9705ba1c05c20423f0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554283"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595518"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Procedura: Scrivere dati oggetto in un file XML (C#)
 Questo esempio scrive l'oggetto da una classe in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -50,13 +50,13 @@ public class XMLWrite
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   La classe da serializzare non ha un costruttore pubblico senza parametri.  
+- La classe da serializzare non ha un costruttore pubblico senza parametri.  
   
--   Il file esiste ed è di sola lettura (<xref:System.IO.IOException>).  
+- Il file esiste ed è di sola lettura (<xref:System.IO.IOException>).  
   
--   Percorso del file troppo lungo (<xref:System.IO.PathTooLongException>).  
+- Percorso del file troppo lungo (<xref:System.IO.PathTooLongException>).  
   
--   Il disco è pieno (<xref:System.IO.IOException>).  
+- Il disco è pieno (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Questo esempio crea un nuovo file, se il file non esiste. Se un'applicazione deve creare un file, deve avere accesso `Create` alla cartella. Se il file esiste già, per l'applicazione è sufficiente l'accesso `Write`, un privilegio di livello inferiore. Se possibile, è più sicuro creare il file durante la distribuzione e concedere l'accesso `Read` a un unico file, anziché l'accesso `Create` a una cartella.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dec3cea200f388a904296542776a02d838b3e19
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914836"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063872"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 
@@ -35,7 +35,7 @@ Questo articolo riepiloga le nuove funzionalità e i principali miglioramenti ap
 Non vengono fornite informazioni complete su ogni nuova funzionalità e l'articolo è soggetto a modifiche. Per informazioni generali su .NET Framework, vedere [Introduzione a .NET Framework](../get-started/index.md). Per informazioni sulle piattaforme supportate, vedere [Requisiti di sistema di .NET Framework](~/docs/framework/get-started/system-requirements.md). Per i collegamenti per il download e le istruzioni di installazione, vedere [Guida all'installazione](../install/guide-for-developers.md).
 
 > [!NOTE]
-> Il team di .NET Framework rende disponibili anche alcune funzionalità fuori programma con NuGet per espandere le piattaforme supportate e introdurre nuove funzionalità, ad esempio le raccolte non modificabili e i tipi di vettore abilitati per SIMD. Per altre informazioni, vedere [API e librerie di classi aggiuntive](../additional-apis/index.md) e [.NET Framework e rilascio fuori programma](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). Vedere l'[elenco completo dei pacchetti NuGet](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/) per .NET Framework oppure sottoscrivere [questo feed](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).
+> Il team di .NET Framework rende disponibili anche alcune funzionalità fuori programma con NuGet per espandere le piattaforme supportate e introdurre nuove funzionalità, ad esempio le raccolte non modificabili e i tipi di vettore abilitati per SIMD. Per altre informazioni, vedere [API e librerie di classi aggiuntive](../additional-apis/index.md) e [.NET Framework e rilascio fuori programma](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). Vedere un [elenco completo dei pacchetti NuGet](https://www.nuget.org/profiles/dotnetframework) per .NET Framework.
 
 <a name="v48" />
 
@@ -62,7 +62,7 @@ Per .NET Framework 4.8 in Visual Studio 2012 o versioni successive è possibile 
 - [Classi di base](#core48)
 - [Windows Communication Foundation (WCF)](#wcf48)
 - [Windows Presentation Foundation (WPF)](#wpf48)
-- [Common Language Runtime](#clr48) 
+- [Common Language Runtime](#clr48)
 
 Un'accessibilità migliorata, grazie alla quale un'applicazione può offrire un'esperienza appropriata agli utenti di Assistive Technology, continua a essere uno dei principali obiettivi di .NET Framework 4.8. Per informazioni sui miglioramenti apportati all'accessibilità in .NET Framework 4.8, vedere [Nuove funzionalità di accessibilità in .NET Framework](whats-new-in-accessibility.md).
 
@@ -79,7 +79,7 @@ Per impostazione predefinita, nelle applicazioni destinate a .NET Framework 4.8 
 - <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
 - <xref:System.Security.Cryptography.RijndaelManaged>
 - <xref:System.Security.Cryptography.RIPEMD160Managed>
-- <xref:System.Security.Cryptography.SHA256Managed> 
+- <xref:System.Security.Cryptography.SHA256Managed>
 
 Al contrario, queste classi reindirizzano le operazioni di crittografia a una libreria di crittografia del sistema. Questa modifica rimuove in modo efficiente una differenza potenzialmente fuorviante tra ambienti di sviluppo e ambienti di produzione e rende possibile eseguire i componenti nativi e i componenti gestiti in base agli stessi criteri di crittografia. Le applicazioni che dipendono da queste eccezioni possono ripristinare il comportamento precedente impostando l'opzione di AppContext `Switch.System.Security.Cryptography.UseLegacyFipsThrow` su `true`. Per altre informazioni, vedere la sezione relativa alle [classi di crittografia gestite che non generano un'eccezione CryptographyException in modalità FIPS](../migration-guide/retargeting/4.7.2-4.8.md#managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode).
 
@@ -93,7 +93,7 @@ A partire da .NET Framework 4.5, l'assembly clrcompression.dll usa [ZLib](https:
 
 **Introduzione di ServiceHealthBehavior**
 
-Gli endpoint di integrità vengono ampiamente usati tramite gli strumenti di orchestrazione per gestire i servizi in base allo stato di integrità. I controlli di integrità possono anche essere usati tramite strumenti di monitoraggio, al fine di tenere traccia e fornire notifiche sulla disponibilità e sulle prestazioni di un servizio. 
+Gli endpoint di integrità vengono ampiamente usati tramite gli strumenti di orchestrazione per gestire i servizi in base allo stato di integrità. I controlli di integrità possono anche essere usati tramite strumenti di monitoraggio, al fine di tenere traccia e fornire notifiche sulla disponibilità e sulle prestazioni di un servizio.
 
 **ServiceHealthBehavior** è il comportamento di un servizio WCF che estende <xref:System.ServiceModel.Description.IServiceBehavior>.  Se aggiunto alla raccolta <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType>, il comportamento di un servizio esegue queste operazioni:
 
@@ -106,15 +106,26 @@ Esistono due modi per esporre l'endpoint di integrità e pubblicare le informazi
 - Tramite codice. Ad esempio:
 
   ```csharp
-  ServiceHost host = new ServiceHost(typeof(Service1), 
-                     new Uri("http://contoso:81/Service1")); 
+  ServiceHost host = new ServiceHost(typeof(Service1),
+                     new Uri("http://contoso:81/Service1"));
   ServiceHealthBehavior healthBehavior =
-      host.Description.Behaviors.Find<ServiceHealthBehavior>(); 
+      host.Description.Behaviors.Find<ServiceHealthBehavior>();
   if (healthBehavior == null)
-  { 
-     healthBehavior = new ServiceHealthBehavior(); 
-  } 
-   host.Description.Behaviors.Add(healthBehavior); 
+  {
+     healthBehavior = new ServiceHealthBehavior();
+  }
+   host.Description.Behaviors.Add(healthBehavior);
+  ```
+
+  ```vb
+  Dim host As New ServiceHost(GetType(Service1),
+              New Uri("http://contoso:81/Service1"))
+  Dim healthBehavior As ServiceHealthBehavior = 
+     host.Description.Behaviors.Find(Of ServiceHealthBehavior)()
+  If healthBehavior Is Nothing Then
+     healthBehavior = New ServiceHealthBehavior()
+  End If
+  host.Description.Behaviors.Add(healthBehavior) 
   ```
 
 - Tramite un file di configurazione. Ad esempio:
@@ -137,7 +148,7 @@ Esistono due modi per esporre l'endpoint di integrità e pubblicare le informazi
 Esempi e parametri di query:
 
 - OnDispatcherFailure: `https://contoso:81/Service1?health&OnDispatcherFailure=455`
-  
+
   Un codice di stato della risposta HTTP 455 viene restituito quando lo stato di uno dei dispatcher di canale è maggiore di <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>.
 
 - OnListenerFailure: `https://contoso:81/Service1?health&OnListenerFailure=465`
@@ -147,11 +158,11 @@ Esempi e parametri di query:
 - OnThrottlePercentExceeded: `https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
 
   Specifica la percentuale {1-100} che attiva la risposta e il relativo codice di risposta HTTP {599-200}. In questo esempio:
-  
+
     - Se la percentuale è maggiore di 95, viene restituito un codice di risposta HTTP 500.
-    
+
     - Se la percentuale equivale a 70 e 95 o è inclusa tra tali valori, viene restituito 350.
-    
+
     - In caso contrario, viene restituito 200.
 
 Lo stato di integrità del servizio può essere visualizzato in HTML, specificando una stringa di query come `https://contoso:81/Service1?health`, o in codice XML, specificando una stringa di query come `https://contoso:81/Service1?health&Xml`. Una stringa di query come `https://contoso:81/Service1?health&NoContent` restituisce una pagina HTML vuota.
@@ -162,9 +173,9 @@ Lo stato di integrità del servizio può essere visualizzato in HTML, specifican
 
 **Miglioramenti a valori DPI alti**
 
-In .NET Framework 4.8 WPF aggiunge supporto per la sensibilità ai valori DPI per monitor V2 e per il ridimensionamento DPI in modalità mista. Vedere la pagina [High DPI Desktop Application Development on Windows](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) (Sviluppo di applicazioni desktop con valori DPI alti in Windows) per altre informazioni sullo sviluppo con valori DPI alti. 
+In .NET Framework 4.8 WPF aggiunge supporto per la sensibilità ai valori DPI per monitor V2 e per il ridimensionamento DPI in modalità mista. Vedere la pagina [High DPI Desktop Application Development on Windows](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) (Sviluppo di applicazioni desktop con valori DPI alti in Windows) per altre informazioni sullo sviluppo con valori DPI alti.
 
-.NET Framework 4.8 migliora il supporto per le finestre HWND ospitate e l'interoperatività di Windows Form nelle applicazioni WPF con valori DPI alti in piattaforme che supportano il ridimensionamento DPI in modalità mista, a partire dall'Aggiornamento di Windows 10 (aprile 2018). Quando le finestre HWND ospitate o i controlli Windows Form vengono creati come finestre con ridimensionamento DPI in modalità mista chiamando [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) e [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext), possono essere ospitati in un'applicazione WPF per monitor V2 e vengono ridimensionati in modo appropriato. Il rendering di questi contenuti ospitati non viene eseguito in base ai valori DPI nativi. Il sistema operativo ridimensiona infatti i contenuti ospitati in modo appropriato. Il supporto per la sensibilità ai valori DPI per monitor V2 consente anche l'hosting dei controlli WPF, ad esempio con associazione con elemento padre, in una finestra nativa in un'applicazione con valori DPI alti. 
+.NET Framework 4.8 migliora il supporto per le finestre HWND ospitate e l'interoperatività di Windows Form nelle applicazioni WPF con valori DPI alti in piattaforme che supportano il ridimensionamento DPI in modalità mista, a partire dall'Aggiornamento di Windows 10 (aprile 2018). Quando le finestre HWND ospitate o i controlli Windows Form vengono creati come finestre con ridimensionamento DPI in modalità mista chiamando [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) e [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext), possono essere ospitati in un'applicazione WPF per monitor V2 e vengono ridimensionati in modo appropriato. Il rendering di questi contenuti ospitati non viene eseguito in base ai valori DPI nativi. Il sistema operativo ridimensiona infatti i contenuti ospitati in modo appropriato. Il supporto per la sensibilità ai valori DPI per monitor V2 consente anche l'hosting dei controlli WPF, ad esempio con associazione con elemento padre, in una finestra nativa in un'applicazione con valori DPI alti.
 
 Per abilitare il supporto per il ridimensionamento con valori DPI alti in modalità mista, è possibile impostare le opzioni [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) seguenti per il file di configurazione dell'applicazione:
 
@@ -180,11 +191,11 @@ Per abilitare il supporto per il ridimensionamento con valori DPI alti in modali
 
 Il runtime in .NET Framework 4.8 include le modifiche e i miglioramenti seguenti:
 
-**Miglioramenti al compilatore JIT**. Il compilatore JIT in .NET Framework 4.8 è basato sul compilatore JIT in .NET Core 2.1. Molte delle ottimizzazioni e tutte le correzioni di bug apportate al compilatore JIT di .NET Core 2.1 sono incluse nel compilatore JIT di .NET Framework 4.8. 
+**Miglioramenti al compilatore JIT**. Il compilatore JIT in .NET Framework 4.8 è basato sul compilatore JIT in .NET Core 2.1. Molte delle ottimizzazioni e tutte le correzioni di bug apportate al compilatore JIT di .NET Core 2.1 sono incluse nel compilatore JIT di .NET Framework 4.8.
 
 **Miglioramenti di NGEN**. Il runtime ha migliorato la gestione della memoria per le immagini del [generatore di immagini native](../tools/ngen-exe-native-image-generator.md) (NGEN) in modo tale che i dati mappati dalle immagini NGEN non siano residenti in memoria. In questo modo viene ridotta la superficie di attacco vulnerabile agli attacchi che tentano di eseguire codice arbitrario mediante la modifica della memoria.
 
-**Analisi antimalware per tutti gli assembly**. Nelle versioni precedenti di .NET Framework il runtime esegue l'analisi di tutti gli assembly caricati da disco tramite Windows Defender o software antimalware di terze parti. Gli assembly caricati da altre origini, ad esempio tramite il metodo <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>, non vengono tuttavia analizzati e potrebbero contenere malware non rilevato. A partire da .NET Framework 4.8 eseguito su Windows 10, il runtime attiva un'analisi tramite soluzioni antimalware che implementano l'[interfaccia AMSI (Antimalware Scan Interface)](/windows/desktop/AMSI/antimalware-scan-interface-portal).  
+**Analisi antimalware per tutti gli assembly**. Nelle versioni precedenti di .NET Framework il runtime esegue l'analisi di tutti gli assembly caricati da disco tramite Windows Defender o software antimalware di terze parti. Gli assembly caricati da altre origini, ad esempio tramite il metodo <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>, non vengono tuttavia analizzati e potrebbero contenere malware non rilevato. A partire da .NET Framework 4.8 eseguito su Windows 10, il runtime attiva un'analisi tramite soluzioni antimalware che implementano l'[interfaccia AMSI (Antimalware Scan Interface)](/windows/desktop/AMSI/antimalware-scan-interface-portal).
 
 <a name="v472" />
 
@@ -551,6 +562,15 @@ public class StaticResourceResolvedEventArgs : EventArgs
 }
 ```
 
+```vb
+Public Class StaticResourceResolvedEvcentArgs : Inherits EventArgs
+   Public ReadOnly Property TargetObject As Object
+   Public ReadOnly Property TargetProperty As Object
+   Public ReadOnly Property ResourceDictionary As ResourceDictionary
+   Public ReadOnly Property ResourceKey As Object
+End Class
+```
+
 L'evento non viene attivato (e la funzione di accesso `add` corrispondente viene ignorata), a meno che la classe  <xref:System.Windows.Diagnostics.VisualDiagnostics> non sia abilitata e la variabile di ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) non sia impostata.
 
 #### <a name="clickonce"></a>ClickOnce
@@ -840,6 +860,13 @@ public interface ISessionStateModule : IHttpModule {
     void ReleaseSessionState(HttpContext context);
     Task ReleaseSessionStateAsync(HttpContext context);
 }
+```
+
+```vb
+Public Interface ISessionStateModule : Inherits IHttpModule
+   Sub ReleaseSessionState(context As HttpContext)
+   Function ReleaseSessionStateAsync(context As HttpContext) As Task
+End Interface
 ```
 
  La classe <xref:System.Web.SessionState.SessionStateUtility> include anche due nuovi metodi, <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> e <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>, che possono essere usati a supporto delle operazioni asincrone.
@@ -1515,6 +1542,10 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
         AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", true);
         ```
 
+        ```vb
+        AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", True)
+        ```
+
          La libreria deve controllare se un consumer è dichiarato il valore dell'opzione e si comporta in modo appropriato in base ad essa.
 
         ```csharp
@@ -1526,15 +1557,31 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
            // A false value implies the latest behavior.
         }
 
-           // The library can use the value of shouldThrow to throw exceptions or not.
-           if (shouldThrow)
-           {
-              // old code
-           }
-           else {
-              // new code
-           }
+        // The library can use the value of shouldThrow to throw exceptions or not.
+        if (shouldThrow)
+        {
+           // old code
         }
+        else 
+        {
+           // new code
+        }
+        ```
+
+        ```vb
+        If Not AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", shouldThrow) Then
+           ' This is the case where the switch value was not set by the application.
+           ' The library can choose to get the value of shouldThrow by other means.
+           ' If no overrides nor default values are specified, the value should be 'false'.
+           ' A false value implies the latest behavior.
+        End If
+
+        ' The library can use the value of shouldThrow to throw exceptions or not.
+        If shouldThrow Then
+           ' old code
+        Else 
+           ' new code
+        End If
         ```
 
          È opportuno usare un formato coerente per le opzioni, poiché si tratta di un contratto formale esposto da una libreria. Di seguito sono riportati due formati ovvi.
@@ -1781,6 +1828,14 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
                                               IPromotableSinglePhaseNotification promotableNotification,
                                               ISinglePhaseNotification enlistmentNotification,
                                               EnlistmentOptions enlistmentOptions)
+    ```
+
+    ```vb
+    <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name:="FullTrust")>
+    public Function PromoteAndEnlistDurable(GresourceManagerIdentifier As Guid,
+                                            promotableNotification As IPromotableSinglePhaseNotification,
+                                            enlistmentNotification As ISinglePhaseNotification,
+                                            enlistmentOptions As EnlistmentOptions) As Enlistment
     ```
 
      Il metodo può essere usato da un elenco creato in precedenza da <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> in risposta al metodo <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>. Chiede a `System.Transactions` di alzare la transazione al livello di transazione MSDTC e di "convertire" l'elenco promuovibile in un elenco durevole. Dopo il completamento di questo metodo, l'interfaccia <xref:System.Transactions.IPromotableSinglePhaseNotification> non sarà più usata come riferimento da `System.Transactions` e le eventuali notifiche future arriveranno all'interfaccia <xref:System.Transactions.ISinglePhaseNotification> fornita. L'elenco in questione deve agire come un elenco durevole, supportando la registrazione e il ripristino delle transazioni. Vedere <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> per informazioni dettagliate. Inoltre, l'elenco deve supportare <xref:System.Transactions.ISinglePhaseNotification>.  Questo metodo può essere chiamato *solo* durante l'elaborazione di una chiamata <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>. Diversamente, viene generata un'eccezione <xref:System.Transactions.TransactionException>.

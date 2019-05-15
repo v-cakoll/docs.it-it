@@ -2,12 +2,12 @@
 title: Refactoring in funzioni pure (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 3e856c1e32d4b0dc16291e1b913e9a5cc19717c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a498588e9ca1ab85602946b75b593804fa0953a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497131"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596888"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refactoring in funzioni pure (C#)
 
@@ -18,9 +18,9 @@ Per le trasformazioni funzionali pure, è fondamentale comprendere come eseguire
   
  Come accennato in precedenza, una funzione pura prevede due caratteristiche utili:  
   
--   Non ha effetti collaterali. La funzione non cambia le variabili o i dati di qualsiasi tipo all'esterno della funzione.  
+- Non ha effetti collaterali. La funzione non cambia le variabili o i dati di qualsiasi tipo all'esterno della funzione.  
   
--   È coerente. Dato lo stesso set di dati di input, restituirà sempre lo stesso valore di output.  
+- È coerente. Dato lo stesso set di dati di input, restituirà sempre lo stesso valore di output.  
   
  Per passare alla programmazione funzionale, è possibile eseguire il refactoring del codice esistente per eliminare inutili effetti collaterali e dipendenze esterne. In questo modo, è possibile creare versioni di funzioni pure del codice esistente.  
   

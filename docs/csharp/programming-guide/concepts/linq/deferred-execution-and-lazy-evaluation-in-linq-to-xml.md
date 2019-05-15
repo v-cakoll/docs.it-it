@@ -2,12 +2,12 @@
 title: Esecuzione posticipata e valutazione lazy in LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: 83fdc73b583a2c8aba5383f4a5b3af11a1f6f9c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 940885d6499bd2730c0bd4a5e15a490a9e85deab
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709689"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597435"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Esecuzione posticipata e valutazione lazy in LINQ to XML (C#)
 Operazioni di query e su asse vengono spesso implementate in modo da usare l'esecuzione posticipata. In questo argomento vengono illustrati requisiti e vantaggi dell'esecuzione posticipata e vengono fornite alcune considerazioni sull'implementazione.  
@@ -22,16 +22,16 @@ Operazioni di query e su asse vengono spesso implementate in modo da usare l'ese
 ## <a name="eager-vs-lazy-evaluation"></a>Valutazione eager e valutazione lazy  
  Quando si scrive un metodo che implementa l'esecuzione posticipata, è inoltre necessario decidere se implementare il metodo tramite la valutazione lazy o la valutazione eager.  
   
--   Nella *valutazione lazy* durante ogni chiamata all'iteratore viene elaborato un unico elemento della raccolta di origine. Si tratta della modalità di implementazione tipica degli iteratori.  
+- Nella *valutazione lazy* durante ogni chiamata all'iteratore viene elaborato un unico elemento della raccolta di origine. Si tratta della modalità di implementazione tipica degli iteratori.  
   
--   Nella *valutazione eager* in seguito alla prima chiamata all'iteratore verrà elaborata l'intera raccolta. Potrebbe inoltre essere necessaria una copia temporanea della raccolta di origine. Ad esempio, il metodo <xref:System.Linq.Enumerable.OrderBy%2A> deve ordinare l'intera raccolta prima di restituire il primo elemento.  
+- Nella *valutazione eager* in seguito alla prima chiamata all'iteratore verrà elaborata l'intera raccolta. Potrebbe inoltre essere necessaria una copia temporanea della raccolta di origine. Ad esempio, il metodo <xref:System.Linq.Enumerable.OrderBy%2A> deve ordinare l'intera raccolta prima di restituire il primo elemento.  
   
  La valutazione lazy offre in genere prestazioni migliori perché implica una distribuzione uniforme dell'overhead di elaborazione in tutte le fasi della valutazione della raccolta e riduce al minimo l'uso di dati temporanei. Per alcune operazioni è naturalmente inevitabile dover materializzare i risultati intermedi.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Nel successivo argomento dell'esercitazione verrà illustrata l'esecuzione posticipata:  
   
--   [Esempio di esecuzione posticipata (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [Esempio di esecuzione posticipata (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

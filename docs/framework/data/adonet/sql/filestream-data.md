@@ -2,12 +2,12 @@
 title: Dati FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 1dea5d1e2f40c44e8f24bdbc9742288429d9933a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032487"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582717"
 ---
 # <a name="filestream-data"></a>Dati FILESTREAM
 
@@ -20,7 +20,7 @@ Se si specifica l'attributo FILESTREAM in una colonna varbinary(max), in SQL Ser
 
 ## <a name="sqlclient-support-for-filestream"></a>Supporto di SqlClient per FILESTREAM
 
-Il [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server, <xref:System.Data.SqlClient>, supporta la lettura e scrittura di dati FILESTREAM utilizzando il <xref:System.Data.SqlTypes.SqlFileStream> definito nella classe di <xref:System.Data.SqlTypes> dello spazio dei nomi. `SqlFileStream` eredita dalla classe <xref:System.IO.Stream> che fornisce metodi per la lettura e la scrittura nei flussi di dati. La lettura da un flusso comporta il trasferimento dei dati dal flusso in una struttura di dati, ad esempio una matrice di byte. La scrittura comporta il trasferimento dei dati dalla struttura di dati in un flusso.
+Il Provider di dati .NET Framework per SQL Server, <xref:System.Data.SqlClient>, supporta la lettura e scrittura di dati FILESTREAM utilizzando la <xref:System.Data.SqlTypes.SqlFileStream> definito nella classe di <xref:System.Data.SqlTypes> dello spazio dei nomi. `SqlFileStream` eredita dalla classe <xref:System.IO.Stream> che fornisce metodi per la lettura e la scrittura nei flussi di dati. La lettura da un flusso comporta il trasferimento dei dati dal flusso in una struttura di dati, ad esempio una matrice di byte. La scrittura comporta il trasferimento dei dati dalla struttura di dati in un flusso.
 
 ### <a name="creating-the-sql-server-table"></a>Creazione di una tabella SQL Server
 

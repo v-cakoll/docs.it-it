@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 053df7eeba10938f1d1d749e856f64d179d471d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410524"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664683"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Linguaggio di espressioni regolari - Riferimento rapido
  Un'espressione regolare è un modello per il quale il motore delle espressioni regolari tenta di trovare una corrispondenza nel testo di input. Un modello è costituito da uno o più i valori letterali carattere, operatori o costrutti.  Per una breve introduzione, vedere [Espressioni regolari di .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -170,9 +170,9 @@ ms.locfileid: "58410524"
   
  È possibile specificare un'opzione inline in due modi:  
   
--   Usando il [costrutto vario](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, dove un segno meno (-) prima di un'opzione o di un set di opzioni consente di disattivare tali opzioni. Ad esempio, `(?i-mn)` attiva la non corrispondenza tra maiuscole e minuscole (`i`), disattiva la modalità su più righe (`m`) e disattiva le acquisizioni del gruppo senza nome (`n`). L'opzione si applica al criterio di espressione regolare dal punto in cui l'opzione viene definita e diventa effettiva sia alla fine del criterio sia al punto in cui un altro costrutto annulla l'opzione.  
+- Usando il [costrutto vario](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, dove un segno meno (-) prima di un'opzione o di un set di opzioni consente di disattivare tali opzioni. Ad esempio, `(?i-mn)` attiva la non corrispondenza tra maiuscole e minuscole (`i`), disattiva la modalità su più righe (`m`) e disattiva le acquisizioni del gruppo senza nome (`n`). L'opzione si applica al criterio di espressione regolare dal punto in cui l'opzione viene definita e diventa effettiva sia alla fine del criterio sia al punto in cui un altro costrutto annulla l'opzione.  
   
--   Usando il [costrutto di raggruppamento](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*sottoespressione*`)`, che definisce le opzioni solo per il gruppo specificato.  
+- Usando il [costrutto di raggruppamento](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*sottoespressione*`)`, che definisce le opzioni solo per il gruppo specificato.  
   
  Il motore delle espressioni regolari di .NET supporta le seguenti opzioni inline.  
   

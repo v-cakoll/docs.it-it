@@ -5,18 +5,18 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4902cd8ab97771f75e5421a9de7ed1150a7443a8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640508"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586591"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Ridimensionamento automatico in Windows Form
 
-Con il ridimensionamento automatico, un form e i relativi controlli, progettati su un computer con una determinata risoluzione dello schermo o tipo di carattere del sistema, possono essere visualizzati correttamente su un altro computer con una risoluzione dello schermo o tipo di carattere del sistema diverso. Questa funzionalità assicura che il form e i controlli vengano ridimensionati in modo coerente con le finestre native e le altre applicazioni presenti sia sui computer degli utenti che su quelli di altri sviluppatori. Il supporto di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] per il ridimensionamento automatico e gli stili di visualizzazione consente alle applicazioni [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] di avere sempre un aspetto coerente, se confrontate con le applicazioni Windows native sul computer di ogni utente.
+Con il ridimensionamento automatico, un form e i relativi controlli, progettati su un computer con una determinata risoluzione dello schermo o tipo di carattere del sistema, possono essere visualizzati correttamente su un altro computer con una risoluzione dello schermo o tipo di carattere del sistema diverso. Questa funzionalità assicura che il form e i controlli vengano ridimensionati in modo coerente con le finestre native e le altre applicazioni presenti sia sui computer degli utenti che su quelli di altri sviluppatori. Il supporto di .NET Framework per la scalabilità automatica e gli stili di visualizzazione consente alle applicazioni di .NET Framework mantenere un aspetto uniforme e coerente rispetto alle applicazioni Windows native sul computer di ogni utente.
 
-Il ridimensionamento automatico funziona per lo più come previsto in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versione 2.0 e successive. Le modifiche delle combinazioni tipi di carattere tuttavia possono essere problematiche. Per un esempio di come risolvere questo problema, vedere [come: Rispondere alle modifiche dello schema del tipo di carattere in una Windows Forms Application](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+Nella maggior parte, funzionamento del ridimensionamento automatico come previsto in .NET Framework versione 2.0 e versioni successive. Le modifiche delle combinazioni tipi di carattere tuttavia possono essere problematiche. Per un esempio di come risolvere questo problema, vedere [come: Rispondere alle modifiche dello schema del tipo di carattere in una Windows Forms Application](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
 
 ## <a name="need-for-automatic-scaling"></a>È necessario per la scalabilità automatica
 
@@ -24,11 +24,11 @@ Senza ridimensionamento automatico, un'applicazione progettata per un'unica riso
 
 Una situazione analoga si verifica quando un'applicazione è progettata per una determinata risoluzione dello schermo. La risoluzione dello schermo più comune è 96 punti per pollice (DPI), che è uguale a 100% ridimensionamento schermo, ma display con risoluzione superiore a 125%, 150%, 200% (quali 120 rispettivamente uguale, 144 DPI 192 e) e versioni successive sono sempre più diffuse. Senza regolazione, un'applicazione, soprattutto una con molti elementi grafici, progettata per un'unica risoluzione apparirà troppo grande o troppo piccola se eseguita con un'altra risoluzione.
 
-Il ridimensionamento automatico cerca di risolvere questi problemi ridimensionando automaticamente il form e i controlli figlio in base alle dimensioni del carattere o risoluzione dello schermo relativa. Per supportare il ridimensionamento automatico delle finestre di dialogo, il sistema operativo Windows usa un'unità di misura relativa, chiamata DLU. Una DLU si basa sul tipo di carattere del sistema e la relazione con i pixel può essere determinata attraverso la funzione `GetDialogBaseUnits` di Win32 SDK. Quando un utente cambia il tema usato da Windows, tutte le finestre di dialogo vengono automaticamente adattate di conseguenza. Inoltre, il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] supporta la scalabilità automatica in base alla risoluzione dello schermo o tipo di carattere del sistema predefinito. Facoltativamente, il ridimensionamento automatico può essere disabilitato in un'applicazione.
+Il ridimensionamento automatico cerca di risolvere questi problemi ridimensionando automaticamente il form e i controlli figlio in base alle dimensioni del carattere o risoluzione dello schermo relativa. Per supportare il ridimensionamento automatico delle finestre di dialogo, il sistema operativo Windows usa un'unità di misura relativa, chiamata DLU. Una DLU si basa sul tipo di carattere del sistema e la relazione con i pixel può essere determinata attraverso la funzione `GetDialogBaseUnits` di Win32 SDK. Quando un utente cambia il tema usato da Windows, tutte le finestre di dialogo vengono automaticamente adattate di conseguenza. Inoltre, .NET Framework supporta la scalabilità automatica in base alla risoluzione dello schermo o tipo di carattere del sistema predefinito. Facoltativamente, il ridimensionamento automatico può essere disabilitato in un'applicazione.
 
 ## <a name="original-support-for-automatic-scaling"></a>Supporto originale per la scalabilità automatica
 
-Le versioni 1.0 e 1.1 di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] supportavano un tipo di ridimensionamento automatico semplice, che dipendeva dal tipo di carattere predefinito di Windows usato per l'interfaccia utente, rappresentato dal valore **DEFAULT_GUI_FONT** di Win32 SDK. Questo tipo di carattere in genere viene modificato solo quando cambia la risoluzione dello schermo. Per implementare il ridimensionamento automatico, veniva usato il meccanismo seguente:
+Le versioni 1.0 e 1.1 di .NET Framework è supportata la scalabilità automatica in modo semplice che dipendeva dal tipo di carattere predefinito Windows utilizzato per l'interfaccia utente, rappresentata dal valore di Win32 SDK **DEFAULT_GUI_FONT**. Questo tipo di carattere in genere viene modificato solo quando cambia la risoluzione dello schermo. Per implementare il ridimensionamento automatico, veniva usato il meccanismo seguente:
 
 1. In fase di progettazione, la proprietà <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> (ora deprecata) veniva impostata sull'altezza e sulla larghezza del tipo di carattere del sistema predefinito sul computer dello sviluppatore.
 
@@ -46,18 +46,18 @@ Anche se questo meccanismo era sufficiente per la maggior parte degli scopi, tut
 
 - I form e i controlli figlio potevano essere progettati simultaneamente da più sviluppatori solo se le risoluzioni dei computer erano le stesse. Allo stesso modo, l'ereditarietà di un form dipendeva dalla risoluzione associata al form padre.
 
-- Non è compatibile con i nuovi gestori di layout introdotti con [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versione 2.0, ad esempio <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel>.
+- Non è compatibile con i gestori di layout più recenti introdotti con .NET Framework versione 2.0, ad esempio <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel>.
 
 - Non supportava il ridimensionamento basato direttamente sulla risoluzione dello schermo, necessario per la compatibilità con [!INCLUDE[compact](../../../includes/compact-md.md)].
 
-Anche se questo meccanismo è ancora presente in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versione 2.0 per mantenere la compatibilità con le versioni precedenti, è stato sostituito da un meccanismo di ridimensionamento più affidabile, descritto di seguito. Di conseguenza, <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> e alcuni overload di <xref:System.Windows.Forms.Control.Scale%2A> sono contrassegnati come obsoleti.
+Anche se questo meccanismo viene mantenuto in .NET Framework versione 2.0 per garantire la compatibilità con le versioni precedenti, è stato sostituito dal meccanismo di ridimensionamento più affidabile, descritto più avanti. Di conseguenza, <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> e alcuni overload di <xref:System.Windows.Forms.Control.Scale%2A> sono contrassegnati come obsoleti.
 
 > [!NOTE]
-> È possibile eliminare senza problemi i riferimenti a questi membri quando si aggiorna il codice legacy per [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versione 2.0.
+> È possibile eliminare i riferimenti a questi membri in modo sicuro quando si aggiorna il codice legacy a .NET Framework versione 2.0.
 
 ## <a name="current-support-for-automatic-scaling"></a>Supporto corrente per la scalabilità automatica
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versione 2.0 supera i precedenti limiti introducendo le seguenti modifiche al ridimensionamento automatico di Windows Form:
+.NET Framework versione 2.0 supera i precedenti limiti introducendo le seguenti modifiche al ridimensionamento automatico di Windows Form:
 
 - Il supporto di base per il ridimensionamento è stato spostato nella classe <xref:System.Windows.Forms.ContainerControl> in modo che i form, i controlli compositi nativi e i controlli utente ricevano tutti lo stesso supporto. Sono stati aggiunti i nuovi membri <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> e <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>.
 

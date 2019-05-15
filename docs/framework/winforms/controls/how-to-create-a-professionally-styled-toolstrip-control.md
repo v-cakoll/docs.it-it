@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ToolStripRenderer class [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c208b2f6-8105-474b-9075-d582e1792870
-ms.openlocfilehash: 6ba5d948b99889e26f620363b7fefbe2e63ffd2d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4e4e899d583eb87b3ced7161f1fd274c0bcc591c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616013"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586562"
 ---
 # <a name="how-to-create-a-professionally-styled-toolstrip-control"></a>Procedura: Creare un controllo ToolStrip professionale
 Per assegnare un aspetto professionale ai controlli <xref:System.Windows.Forms.ToolStrip> dell'applicazione è possibile scrivere una classe personalizzata derivata dal tipo <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.  
@@ -34,8 +34,6 @@ Per assegnare un aspetto professionale ai controlli <xref:System.Windows.Forms.T
  L'esempio presenta i requisiti seguenti:  
   
 - Riferimenti agli assembly System.Drawing e System.Windows.Forms.  
-  
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [procedura dettagliata: Creazione di un controllo ToolStrip professionale](walkthrough-creating-a-professionally-styled-toolstrip-control.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd6004bce42a3617c9b7de940336de0fb03c8cc9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: fe56c0ec3b8a5a150a999e7de98f283436a0ba9d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674581"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607917"
 ---
 # <a name="application-domains"></a>Domini applicazione
 
@@ -41,18 +41,18 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
   
  L'isolamento fornito dai domini applicazione offre i seguenti vantaggi:  
   
--   Gli errori di un'applicazione non possono influire sulle altre applicazioni. Poiché il codice indipendente dai tipi non può provocare errori di memoria, l'utilizzo dei domini applicazione assicura che il codice in esecuzione in un dominio non possa influire sulle altre applicazioni nel processo.  
+- Gli errori di un'applicazione non possono influire sulle altre applicazioni. Poiché il codice indipendente dai tipi non può provocare errori di memoria, l'utilizzo dei domini applicazione assicura che il codice in esecuzione in un dominio non possa influire sulle altre applicazioni nel processo.  
   
--   È possibile arrestare singole applicazioni senza arrestare l'intero processo. L'utilizzo dei domini applicazione consente di scaricare il codice in esecuzione in una specifica applicazione.  
+- È possibile arrestare singole applicazioni senza arrestare l'intero processo. L'utilizzo dei domini applicazione consente di scaricare il codice in esecuzione in una specifica applicazione.  
   
     > [!NOTE]
     >  Non è possibile scaricare singoli assembly o tipi. È possibile scaricare solo un dominio completo.  
   
--   Il codice in esecuzione in un'applicazione non può accedere direttamente al codice o alle risorse di un'altra applicazione. Common Language Runtime assicura tale isolamento impedendo le chiamate dirette tra gli oggetti appartenenti a domini applicazione diversi. Il passaggio di un oggetto da un dominio all'altro avviene tramite copia o usando un proxy. Se l'oggetto viene copiato, la chiamata all'oggetto è locale. In altre parole, sia l'oggetto a cui viene fatto riferimento che il chiamante si trovano nello stesso dominio applicazione. Se si accede all'oggetto tramite un proxy, la chiamata all'oggetto è remota. In questo caso, l'oggetto a cui viene fatto riferimento e il chiamante si trovano in domini applicazione diversi. Le chiamate tra domini usano la stessa infrastruttura di chiamata remota delle chiamate tra due processi o tra due computer. I metadati relativi all'oggetto a cui viene fatto riferimento devono essere pertanto disponibili per entrambi i domini applicazione, affinché il compilatore JIT possa compilare la chiamata in modo corretto. Se il dominio chiamante non ha accesso ai metadati per l'oggetto chiamato, la compilazione può avere esito negativo, con un'eccezione di tipo <xref:System.IO.FileNotFoundException>. Per altre informazioni, vedere [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Il meccanismo che stabilisce in che modo è possibile accedere a un oggetto da un dominio diverso è determinato dall'oggetto. Per ulteriori informazioni, vedere <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+- Il codice in esecuzione in un'applicazione non può accedere direttamente al codice o alle risorse di un'altra applicazione. Common Language Runtime assicura tale isolamento impedendo le chiamate dirette tra gli oggetti appartenenti a domini applicazione diversi. Il passaggio di un oggetto da un dominio all'altro avviene tramite copia o usando un proxy. Se l'oggetto viene copiato, la chiamata all'oggetto è locale. In altre parole, sia l'oggetto a cui viene fatto riferimento che il chiamante si trovano nello stesso dominio applicazione. Se si accede all'oggetto tramite un proxy, la chiamata all'oggetto è remota. In questo caso, l'oggetto a cui viene fatto riferimento e il chiamante si trovano in domini applicazione diversi. Le chiamate tra domini usano la stessa infrastruttura di chiamata remota delle chiamate tra due processi o tra due computer. I metadati relativi all'oggetto a cui viene fatto riferimento devono essere pertanto disponibili per entrambi i domini applicazione, affinché il compilatore JIT possa compilare la chiamata in modo corretto. Se il dominio chiamante non ha accesso ai metadati per l'oggetto chiamato, la compilazione può avere esito negativo, con un'eccezione di tipo <xref:System.IO.FileNotFoundException>. Per altre informazioni, vedere [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Il meccanismo che stabilisce in che modo è possibile accedere a un oggetto da un dominio diverso è determinato dall'oggetto. Per ulteriori informazioni, vedere <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
--   L'ambito del comportamento del codice viene stabilito dall'applicazione in cui questo è in esecuzione. In altri termini, il dominio applicazione fornisce impostazioni di configurazione quali i criteri di controllo delle versioni dell'applicazione, la posizione degli assembly remoti a cui questa accede e le informazioni sul percorso degli assembly che vengono caricati nel dominio.  
+- L'ambito del comportamento del codice viene stabilito dall'applicazione in cui questo è in esecuzione. In altri termini, il dominio applicazione fornisce impostazioni di configurazione quali i criteri di controllo delle versioni dell'applicazione, la posizione degli assembly remoti a cui questa accede e le informazioni sul percorso degli assembly che vengono caricati nel dominio.  
   
--   Le autorizzazioni concesse al codice possono essere controllate dal dominio applicazione in cui il codice è in esecuzione.  
+- Le autorizzazioni concesse al codice possono essere controllate dal dominio applicazione in cui il codice è in esecuzione.  
   
 ## <a name="application-domains-and-assemblies"></a>Domini applicazione e assembly
 
@@ -60,9 +60,9 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
   
  Il modo in cui viene caricato un assembly determina se il codice con compilazione JIT può essere condiviso da più domini applicazione nel processo e se l'assembly può essere scaricato dal processo.  
   
--   Se un assembly viene caricato come indipendente dal dominio, tutti i domini applicazione che condividono lo stesso insieme di autorizzazioni di sicurezza possono condividere lo stesso codice con compilazione JIT, il che comporta una riduzione della quantità di memoria richiesta dall'applicazione. L'assembly tuttavia non può mai essere scaricato dal processo.  
+- Se un assembly viene caricato come indipendente dal dominio, tutti i domini applicazione che condividono lo stesso insieme di autorizzazioni di sicurezza possono condividere lo stesso codice con compilazione JIT, il che comporta una riduzione della quantità di memoria richiesta dall'applicazione. L'assembly tuttavia non può mai essere scaricato dal processo.  
   
--   Se non viene caricato come indipendente dal dominio, un assembly deve essere sottoposto a compilazione JIT in ogni dominio applicazione in cui viene caricato. È tuttavia possibile scaricare l'assembly dal processo scaricando tutti i domini applicazione nei quali è caricato.  
+- Se non viene caricato come indipendente dal dominio, un assembly deve essere sottoposto a compilazione JIT in ogni dominio applicazione in cui viene caricato. È tuttavia possibile scaricare l'assembly dal processo scaricando tutti i domini applicazione nei quali è caricato.  
   
  L'host di runtime determina se caricare gli assembly come indipendenti dal dominio nel momento in cui carica il runtime in un processo. Per le applicazioni gestite, applicare l'attributo <xref:System.LoaderOptimizationAttribute> al metodo del punto di ingresso del processo e specificare un valore dall'enumerazione <xref:System.LoaderOptimization> associata. Per applicazioni non gestite che ospitano Common Language Runtime, specificare il flag appropriato quando si chiama il metodo [CorBindToRuntimeEx](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md).  
   
@@ -84,9 +84,9 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
   
  Quando si decide se caricare o meno gli assembly come indipendenti dal dominio, è necessario trovare un compromesso tra la riduzione dell'utilizzo di memoria e altri fattori relativi alle prestazioni.  
   
--   L'accesso a dati e metodi statici è più lento per gli assembly indipendenti dal dominio a causa della necessità di isolare gli assembly. Ciascun dominio applicazione che accede all'assembly deve disporre di una copia separata dei dati statici, per evitare che i riferimenti agli oggetti contenuti nei campi statici superino i limiti del dominio. Il runtime contiene la logica aggiuntiva necessaria per indirizzare un chiamante alla copia appropriata del metodo o dei dati statici. Tale logica aggiuntiva rallenta la chiamata.  
+- L'accesso a dati e metodi statici è più lento per gli assembly indipendenti dal dominio a causa della necessità di isolare gli assembly. Ciascun dominio applicazione che accede all'assembly deve disporre di una copia separata dei dati statici, per evitare che i riferimenti agli oggetti contenuti nei campi statici superino i limiti del dominio. Il runtime contiene la logica aggiuntiva necessaria per indirizzare un chiamante alla copia appropriata del metodo o dei dati statici. Tale logica aggiuntiva rallenta la chiamata.  
   
--   Tutte le dipendenze di un assembly devono essere individuate e caricate quando l'assembly viene caricato come indipendente dal dominio, poiché una dipendenza che non può essere caricata come indipendente dal dominio impedisce il caricamento dell'assembly come indipendente dal dominio.  
+- Tutte le dipendenze di un assembly devono essere individuate e caricate quando l'assembly viene caricato come indipendente dal dominio, poiché una dipendenza che non può essere caricata come indipendente dal dominio impedisce il caricamento dell'assembly come indipendente dal dominio.  
   
 ## <a name="application-domains-and-threads"></a>Domini applicazione e thread
 
@@ -100,9 +100,9 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
 
  Le impostazioni cultura, rappresentate da un oggetto <xref:System.Globalization.CultureInfo>, sono associate ai thread. È possibile ottenere le impostazioni cultura associate al thread attualmente in esecuzione tramite la proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> e ottenere o impostare le impostazioni cultura associate al thread attualmente in esecuzione tramite la proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Se le impostazioni cultura associate a un thread sono state impostate in modo esplicito tramite la proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>, continueranno a essere associate al thread in questione quando da quest'ultimo vengono superati i limiti del dominio applicazione. In caso contrario, le impostazioni cultura associate al thread in un determinato momento sono determinate dal valore della proprietà <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> nel dominio applicazione in cui il thread è in esecuzione:  
   
--   Se il valore della proprietà non è `null`, le impostazioni cultura che vengono restituite dalla proprietà sono associate al thread e pertanto restituite dalle proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>.  
+- Se il valore della proprietà non è `null`, le impostazioni cultura che vengono restituite dalla proprietà sono associate al thread e pertanto restituite dalle proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>.  
   
--   Se il valore della proprietà è `null`, le impostazioni cultura correnti del sistema vengono associate al thread.  
+- Se il valore della proprietà è `null`, le impostazioni cultura correnti del sistema vengono associate al thread.  
   
 ## <a name="programming-with-application-domains"></a>Programmazione con i domini applicazione
 
@@ -110,7 +110,7 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
   
  La <xref:System.AppDomain> è l'interfaccia che consente di accedere ai domini applicazione a livello di codice. e include metodi per creare e scaricare domini, per creare istanze di tipi nei domini e per effettuare la registrazione per varie notifiche, come ad esempio quelle per scaricare i domini applicazione. La tabella riportata di seguito elenca i metodi di <xref:System.AppDomain> comunemente usati.  
   
-|Metodo AppDomain|Descrizione|  
+|Metodo AppDomain|Description|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|Crea un nuovo dominio applicazione. Si consiglia di usare un overload di questo metodo che specifica un oggetto <xref:System.AppDomainSetup>. Si tratta del sistema preferito per impostare le proprietà di un nuovo dominio, quali la base o la directory radice dell'applicazione, il percorso del file di configurazione del dominio e il percorso di ricerca usato da Common Language Runtime per caricare gli assembly nel dominio.|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> e <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Esegue un assembly nel dominio applicazione. Si tratta di un metodo di istanza, pertanto è possibile utilizzarlo per eseguire codice in un altro dominio applicazione per il quale si dispone di un riferimento.|  
@@ -132,15 +132,15 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
  Tramite un'applicazione tipica vengono caricati diversi assembly in un dominio applicazione prima che il codice in essi contenuto possa essere eseguito.  
   
  Il modo in cui viene caricato l'assembly determina se il codice con compilazione JIT può essere condiviso da più domini applicazione nel processo.  
   
--   Se un assembly viene caricato come indipendente dal dominio, tutti i domini applicazione che condividono lo stesso set di autorizzazioni di sicurezza possono condividere lo stesso codice compilato tramite JIT. In questo modo, la memoria richiesta dall'applicazione viene ridotta.  
+- Se un assembly viene caricato come indipendente dal dominio, tutti i domini applicazione che condividono lo stesso set di autorizzazioni di sicurezza possono condividere lo stesso codice compilato tramite JIT. In questo modo, la memoria richiesta dall'applicazione viene ridotta.  
   
--   Se un assembly non viene caricato come indipendente dal dominio, deve essere compilato tramite JIT in ogni dominio applicazione in cui viene caricato e da parte del caricatore non devono essere condivise le risorse interne tra domini applicazione.  
+- Se un assembly non viene caricato come indipendente dal dominio, deve essere compilato tramite JIT in ogni dominio applicazione in cui viene caricato e da parte del caricatore non devono essere condivise le risorse interne tra domini applicazione.  
   
  Se impostato su 1, tramite il flag di ambiente COMPLUS_LoaderOptimization viene forzato il caricamento di tutti gli assembly nella modalità non indipendente dal dominio nota come SingleDomain da parte dell'host di runtime. Con SingleDomain non viene caricato alcun assembly come indipendente dal dominio, a eccezione di Mscorlib, che viene sempre caricato come indipendente dal dominio. Questa impostazione viene denominata a dominio singolo perché viene usata in genere quando sull'host è in esecuzione una sola applicazione nel processo.  
   

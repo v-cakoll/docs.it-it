@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-ms.openlocfilehash: e36e9187ab8c9c2b4950a66ff8ff3fc93adbd9c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc48a8f79aa04892c514917da00b8fd6489695b1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774829"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593094"
 ---
 # <a name="-win32icon"></a>-win32icon
 Inserisce un file con estensione ICO nel file di output. Il file ICO rappresenta il file di output in **Esplora File**.  
@@ -31,7 +31,7 @@ Inserisce un file con estensione ICO nel file di output. Il file ICO rappresenta
 ## <a name="remarks"></a>Note  
  È possibile creare un file con estensione ico con il compilatore di risorse (RC) di Microsoft Windows. Il compilatore di risorse viene richiamato quando si compila un programma in Visual C++. il file RC viene creato un file con estensione ico. Il `-win32icon` e `-win32resource` opzioni si escludono a vicenda.  
   
- Visualizzare [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) per fare riferimento a un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] file di risorse, o [-risorse (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) collegare un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] file di risorse. Visualizzare [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) per importare un file con estensione res.  
+ Visualizzare [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) per fare riferimento a un file di risorse .NET Framework, o [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) per allegare un file di risorse .NET Framework. Visualizzare [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) per importare un file con estensione res.  
   
 |Per impostare - win32icon nell'IDE di Visual Studio|  
 |---|  
