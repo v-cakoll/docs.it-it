@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6e21d2514ad357c906885750d9320575bdb75b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d93dea42dbb854d8d52bd5cf3e54d1ce0d892d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643933"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635522"
 ---
 # <a name="net-framework-guide"></a>Guida a .NET Framework
 
@@ -28,7 +28,7 @@ ms.locfileid: "61643933"
 
 Per un'introduzione generale a .NET Framework per utenti e sviluppatori, vedere [Introduzione](./get-started/index.md). Per un'introduzione all'architettura e alle principali funzionalità di .NET Framework, vedere la [panoramica](./get-started/overview.md).
 
-.NET Framework può essere usato con Docker e con i [contenitori Windows](/virtualization/windowscontainers/about/). Per informazioni su come eseguire applicazioni in contenitori Docker, vedere [Deploying .NET Framework applications with Docker](./docker/index.md) (Distribuzione di applicazioni .NET Framework con Docker).
+.NET Framework può essere usato con Docker e con i [contenitori Windows](/virtualization/windowscontainers/about/).
 
 ## <a name="installation"></a>Installazione
 
@@ -51,9 +51,6 @@ Fornisce risorse e indicazioni sull'installazione di .NET Framework e la risoluz
 
 * [Guida alla migrazione](./migration-guide/index.md)  
 Fornisce risorse e un elenco di modifiche che è necessario considerare se si sta migrando l'applicazione a una nuova versione di .NET Framework.
-
-* [.NET Framework on Docker Guide](./docker/index.md) (Guida a .NET Framework su Docker)  
-Fornisce risorse per eseguire applicazioni .NET Framework con Docker usando i contenitori Windows.
 
 * [Guida di sviluppo](./development-guide.md)  
 Viene fornita una guida per tutte le aree e attività principali per lo sviluppo di applicazioni, quali la creazione, la configurazione, il debug, la sicurezza e la distribuzione dell'applicazione e informazioni su programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.

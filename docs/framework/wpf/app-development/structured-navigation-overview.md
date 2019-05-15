@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 8092289d6adc6a017999d14dc7439323a7fc0d37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a0da874c74562822d521d4a44782d9372cd62f90
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751001"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588647"
 ---
 # <a name="structured-navigation-overview"></a>Cenni preliminari sulla navigazione strutturata
 Contenuto che può essere ospitato da un' [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], una <xref:System.Windows.Controls.Frame>, o una <xref:System.Windows.Navigation.NavigationWindow> è composto da pagine che possono essere identificate da pack [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] e la navigazione da collegamenti ipertestuali. La struttura della pagine e i modi in cui è possibile spostarsi tra di esse, definiti dai collegamenti ipertestuali, costituiscono una topologia di navigazione. Tale topologia è adatta a vari tipi di applicazioni, in particolare a quelli che consentono di spostarsi tra documenti. Per tali applicazioni, l'utente può spostarsi da una pagina all'altra senza che una pagina disponga di informazioni sull'altra.  
@@ -70,7 +70,7 @@ Contenuto che può essere ospitato da un' [!INCLUDE[TLA#tla_xbap](../../../../in
   
  La dichiarazione di una <xref:System.Windows.Navigation.PageFunction%601> è simile alla dichiarazione di un <xref:System.Windows.Controls.Page> con l'aggiunta degli argomenti di tipo. Come si può notare nell'esempio di codice, gli argomenti tipo sono specificati sia nel markup [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], usando l'attributo `x:TypeArguments`, che in code-behind, usando la sintassi degli argomenti di tipo generico standard.  
   
- Non è necessario usare solo le classi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] come argomenti tipo. Oggetto <xref:System.Windows.Navigation.PageFunction%601> potrebbe essere chiamato per raccogliere dati specifici del dominio astratti come un tipo personalizzato. Il codice seguente viene illustrato come utilizzare un tipo personalizzato come argomento di tipo per un <xref:System.Windows.Navigation.PageFunction%601>.  
+ Non è necessario utilizzare solo le classi di .NET Framework come argomenti tipo. Oggetto <xref:System.Windows.Navigation.PageFunction%601> potrebbe essere chiamato per raccogliere dati specifici del dominio astratti come un tipo personalizzato. Il codice seguente viene illustrato come utilizzare un tipo personalizzato come argomento di tipo per un <xref:System.Windows.Navigation.PageFunction%601>.  
   
  [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode1)]
  [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode1)]  

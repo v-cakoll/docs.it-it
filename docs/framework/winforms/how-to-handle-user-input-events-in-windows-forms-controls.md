@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, user input
 - user input [Windows Forms], Windows Forms controls
 ms.assetid: 3de74dcf-fae3-42d0-92b5-bc04a61a6888
-ms.openlocfilehash: cffcdbbaa988033352b08834e52d603fbebfa870
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ae230f22c929be39ea00eafe378c6910c4a9d35f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591601"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592092"
 ---
 # <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Procedura: Gestire eventi di input utente nei controlli Windows Forms
 In questo esempio viene illustrato come gestire la maggior parte degli eventi di convalida, stato attivo, mouse e tastiera che possono verificarsi in un controllo Windows Form. La casella di testo denominata `TextBoxInput` riceve gli eventi quando è attiva e le informazioni relative a ogni evento vengono scritte nella casella di testo denominata `TextBoxOutput` nell'ordine di generazione degli eventi. L'applicazione include anche un set di caselle di controllo che possono essere usate per filtrare gli eventi da segnalare.  
@@ -28,8 +28,6 @@ In questo esempio viene illustrato come gestire la maggior parte degli eventi di
  L'esempio presenta i requisiti seguenti:  
   
 - Riferimenti agli assembly System, System.Drawing e System.Windows.Forms.  
-  
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
 

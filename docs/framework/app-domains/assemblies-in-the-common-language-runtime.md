@@ -14,31 +14,31 @@ helpviewer_keywords:
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eefd3773d26fe71741668a9df366f041ba0ae0a4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a91890435b1c2b5b955875f52de86249c2ee79df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744330"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607815"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Assembly in Common Language Runtime
 Gli assembly sono i blocchi costitutivi delle applicazioni .NET Framework. Costituiscono la base per la distribuzione, il controllo della versione, il riutilizzo, la definizione dell'ambito di attivazione e le autorizzazioni di sicurezza. Un assembly è una raccolta di tipi e risorse creati per essere usati insieme e per formare un'unità logica di funzionalità. Un assembly offre a Common Language Runtime le informazioni necessarie per il riconoscimento delle implementazioni di tipi. Per il runtime, un tipo non esiste all'esterno del contesto di un assembly.  
   
  Un assembly svolge le funzioni seguenti:  
   
--   Include codice eseguito da Common Language Runtime. Il codice MSIL (Microsoft Intermediate Language) in un file eseguibile portabile sarà eseguito solo se dispone di un manifesto di assembly associato. Si noti che ogni assembly può avere solo un punto di ingresso, ovvero, `DllMain`, `WinMain` o `Main`.  
+- Include codice eseguito da Common Language Runtime. Il codice MSIL (Microsoft Intermediate Language) in un file eseguibile portabile sarà eseguito solo se dispone di un manifesto di assembly associato. Si noti che ogni assembly può avere solo un punto di ingresso, ovvero, `DllMain`, `WinMain` o `Main`.  
   
--   Forma un limite di sicurezza. Un assembly è l'unità presso cui sono richieste e concesse le autorizzazioni. Per altre informazioni sui limiti di sicurezza e l'applicazione di questi agli assembly, vedere [Considerazioni sulla sicurezza degli assembly](../../../docs/framework/app-domains/assembly-security-considerations.md).  
+- Forma un limite di sicurezza. Un assembly è l'unità presso cui sono richieste e concesse le autorizzazioni. Per altre informazioni sui limiti di sicurezza e l'applicazione di questi agli assembly, vedere [Considerazioni sulla sicurezza degli assembly](../../../docs/framework/app-domains/assembly-security-considerations.md).  
   
--   Forma un limite di tipi. L'identità di ogni tipo include il nome dell'assembly in cui risiede. Un tipo con nome `MyType` caricato nell'ambito di un assembly è diverso da un tipo con nome `MyType` caricato nell'ambito di un altro assembly.  
+- Forma un limite di tipi. L'identità di ogni tipo include il nome dell'assembly in cui risiede. Un tipo con nome `MyType` caricato nell'ambito di un assembly è diverso da un tipo con nome `MyType` caricato nell'ambito di un altro assembly.  
   
--   Forma un limite dell'ambito dei riferimenti. Il manifesto dell'assembly contiene metadati dell'assembly usati per risolvere i tipi e soddisfare le richieste di risorse. Specifica i tipi e le risorse esposti all'esterno dell'assembly. Il manifesto enumera anche altri assembly da cui dipende.  
+- Forma un limite dell'ambito dei riferimenti. Il manifesto dell'assembly contiene metadati dell'assembly usati per risolvere i tipi e soddisfare le richieste di risorse. Specifica i tipi e le risorse esposti all'esterno dell'assembly. Il manifesto enumera anche altri assembly da cui dipende.  
   
--   Forma un limite delle versioni. L'assembly è l'unità più piccola di cui si possono creare versioni in Common Language Runtime. Tutti i tipi e tutte le risorse nello stesso assembly sono considerati come un'unità in caso di creazione di versioni. Il manifesto dell'assembly descrive le dipendenze delle versioni specificate per eventuali assembly dipendenti. Per altre informazioni sul controllo delle versioni, vedere [Controllo delle versioni degli assembly](../../../docs/framework/app-domains/assembly-versioning.md).  
+- Forma un limite delle versioni. L'assembly è l'unità più piccola di cui si possono creare versioni in Common Language Runtime. Tutti i tipi e tutte le risorse nello stesso assembly sono considerati come un'unità in caso di creazione di versioni. Il manifesto dell'assembly descrive le dipendenze delle versioni specificate per eventuali assembly dipendenti. Per altre informazioni sul controllo delle versioni, vedere [Controllo delle versioni degli assembly](../../../docs/framework/app-domains/assembly-versioning.md).  
   
--   Forma un'unità di distribuzione. All'avvio di un'applicazione, devono essere presenti solo gli assembly chiamati inizialmente dall'applicazione. Gli altri assembly, ad esempio le risorse di localizzazione o gli assembly che contengono classi di utilità, possono essere recuperati su richiesta. Le applicazioni appena scaricate saranno quindi semplici e agili. Per altre informazioni sulla distribuzione di assembly, vedere [Distribuzione di applicazioni](../../../docs/framework/deployment/index.md).  
+- Forma un'unità di distribuzione. All'avvio di un'applicazione, devono essere presenti solo gli assembly chiamati inizialmente dall'applicazione. Gli altri assembly, ad esempio le risorse di localizzazione o gli assembly che contengono classi di utilità, possono essere recuperati su richiesta. Le applicazioni appena scaricate saranno quindi semplici e agili. Per altre informazioni sulla distribuzione di assembly, vedere [Distribuzione di applicazioni](../../../docs/framework/deployment/index.md).  
   
--   Corrisponde all'unità in cui è supportata l'esecuzione side-by-side. Per altre informazioni sull'esecuzione di più versioni di un assembly, vedere [Assembly ed esecuzione side-by-side](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
+- Corrisponde all'unità in cui è supportata l'esecuzione side-by-side. Per altre informazioni sull'esecuzione di più versioni di un assembly, vedere [Assembly ed esecuzione side-by-side](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
   
  Gli assembly possono essere statici o dinamici. Gli assembly statici possono includere tipi di .NET Framework (interfacce e classi), oltre a risorse per l'assembly (bitmap, file JPEG, file di risorse e così via). Gli assembly statici sono archiviati su disco in file eseguibili portabili. È anche possibile usare .NET Framework per creare assembly dinamici, eseguiti direttamente dalla memoria e non salvati su disco prima dell'esecuzione. È possibile salvare gli assembly dinamici su disco dopo l'esecuzione.  
   
@@ -46,7 +46,7 @@ Gli assembly sono i blocchi costitutivi delle applicazioni .NET Framework. Costi
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Descrizione|  
+|Titolo|Description|  
 |-----------|-----------------|  
 |[Contenuto degli assembly](../../../docs/framework/app-domains/assembly-contents.md)|Descrive gli elementi che costituiscono un assembly.|  
 |[Manifesto dell'assembly](../../../docs/framework/app-domains/assembly-manifest.md)|Descrive i dati nel manifesto dell'assembly e il modo in cui sono archiviati negli assembly.|  

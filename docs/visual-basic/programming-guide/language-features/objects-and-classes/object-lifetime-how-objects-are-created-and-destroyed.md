@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 430041f5f4315c5ad20cd2495f01a6f776f239c7
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: a63134b966fe6e6cd0cd40f69ac04a7cd986513d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469700"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591538"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Durata degli oggetti: Come gli oggetti vengono creati e distrutti (Visual Basic)
 È stata creata un'istanza di una classe, un oggetto, mediante la parola chiave `New`. Prima di usare i nuovi oggetti per la prima volta, è spesso necessario eseguire attività di inizializzazione. Tra le attività di inizializzazione più comuni vi sono l'apertura dei file, la connessione a un database e la lettura dei valori delle chiavi del Registro di sistema. Visual Basic l'inizializzazione di nuovi oggetti mediante routine denominate *costruttori* (metodi speciali che consentono il controllo dell'inizializzazione).  
@@ -140,7 +140,7 @@ End Sub
  Una classe derivata non deve eseguire l'override del metodi <xref:System.IDisposable.Dispose%2A> e `Finalize` della classe base. Infatti, quando questi metodi vengono chiamati da un'istanza della classe derivata, la relativa implementazione della classe base chiama l'override del metodo `Dispose(disposing)` della classe derivata.  
   
 ## <a name="garbage-collection-and-the-finalize-destructor"></a>Garbage Collection e il distruttore Finalize  
- Il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] utilizza le *garbage collection riferimento ad analisi* sistema periodicamente rilasciare le risorse inutilizzate. Visual Basic 6.0 e versioni precedenti usano un sistema diverso, definito *conteggio dei riferimenti* per gestire le risorse. Anche se in entrambi i casi viene eseguita automaticamente la stessa funzione, vi sono alcune importanti differenze.  
+ .NET Framework Usa il *garbage collection riferimento ad analisi* sistema periodicamente rilasciare le risorse inutilizzate. Visual Basic 6.0 e versioni precedenti usano un sistema diverso, definito *conteggio dei riferimenti* per gestire le risorse. Anche se in entrambi i casi viene eseguita automaticamente la stessa funzione, vi sono alcune importanti differenze.  
   
  Mediante il metodo CLR gli oggetti vengono eliminati definitivamente con cadenza periodica quando il sistema stabilisce che non sono più necessari. Gli oggetti vengono rilasciati più rapidamente quando le risorse di sistema sono insufficienti e con una frequenza minore in caso contrario. Il ritardo tra il momento in cui un oggetto abbandona l'ambito e il relativo rilascio da parte di CLR indica che, a differenza di quanto avveniva in Visual Basic 6.0 e nelle versioni precedenti, non è possibile stabilire esattamente quando l'oggetto verrà eliminato in modo permanente. In questo caso, gli oggetti le seconde esiste *durata non deterministica*. Nella maggior parte dei casi la durata non deterministica non influisce sulla modalità di scrittura delle applicazioni, purché si ricordi che è possibile che il distruttore `Finalize` non venga eseguito immediatamente dopo la perdita di ambito di un oggetto.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4114c974da9c108f641aebdb69f32fb3b0c484c9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990886"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591525"
 ---
 # <a name="security-considerations-for-data"></a>Considerazioni sulla protezione per i dati
 
@@ -28,7 +28,7 @@ Un numero di posizioni nell'infrastruttura di Windows Communication Foundation (
 
 L'autore del codice ha la responsabilità di assicurare che non esistano punti vulnerabili. Se si crea, ad esempio, un tipo di contratto dati con una proprietà del membro dati di tipo integer e nell'implementazione della funzione di accesso `set` si alloca una matrice in base al valore della proprietà, è possibile che si verifichi un attacco Denial of Service se un messaggio dannoso contiene un valore estremamente grande per questo membro dati. In generale evitare le allocazioni basate su dati in arrivo o lunghe elaborazioni in codice fornito dall'utente, soprattutto se il prolungamento dei tempi di elaborazione può essere causato da una piccola quantità di dati in arrivo. Quando si esegue l'analisi di sicurezza di codice fornito dall'utente, assicurarsi di considerare anche tutti i casi di errore, ovvero tutti i branch del codice in cui vengono generate eccezioni.
 
-L'esempio più estremo di codice fornito dall'utente è il codice interno all'implementazione del servizio per ogni operazione. È responsabilità dello sviluppatore proteggere l'implementazione del servizio. È facile creare inavvertitamente implementazioni dell'operazione non protette che possono indurre vulnerabilità agli attacchi Denial of Service. Ad esempio, un'operazione che utilizza una stringa e restituisce l'elenco dei clienti da un database il cui nome inizia con quella stringa. Se il database è di grandi dimensioni e la stringa passata è di una sola lettera, il codice potrebbe tentare di creare un messaggio di dimensioni maggiori della memoria disponibile, paralizzando l'intero servizio. L'eccezione <xref:System.OutOfMemoryException> non è reversibile e in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] causa sempre la chiusura dell'applicazione.
+L'esempio più estremo di codice fornito dall'utente è il codice interno all'implementazione del servizio per ogni operazione. È responsabilità dello sviluppatore proteggere l'implementazione del servizio. È facile creare inavvertitamente implementazioni dell'operazione non protette che possono indurre vulnerabilità agli attacchi Denial of Service. Ad esempio, un'operazione che utilizza una stringa e restituisce l'elenco dei clienti da un database il cui nome inizia con quella stringa. Se il database è di grandi dimensioni e la stringa passata è di una sola lettera, il codice potrebbe tentare di creare un messaggio di dimensioni maggiori della memoria disponibile, paralizzando l'intero servizio. (Un <xref:System.OutOfMemoryException> non è recuperabile in .NET Framework e comporta sempre la chiusura dell'applicazione in uso.)
 
 È necessario assicurarsi che non vi sia codice dannoso collegato ai vari punti di estendibilità. Soprattutto in caso di esecuzione con attendibilità parziale, nella gestione di tipi provenienti da assembly parzialmente attendibili o nella creazione di componenti utilizzati da codici parzialmente attendibili. Per ulteriori informazioni, vedere "Minacce legate all'attendibilità parziale" in una sezione successiva .
 
@@ -54,7 +54,7 @@ Fare in modo che il lato ricevente allochi un quantità di memoria significativa
 
 Gli attacchi Denial of Service vengono in genere mitigati utilizzando le quote. Al superamento di una quota viene di solito generata un'eccezione <xref:System.ServiceModel.QuotaExceededException> . In assenza di quote, un messaggio dannoso potrebbe causare l'utilizzo di tutta la memoria disponibile, provocando la generazione di un'eccezione <xref:System.OutOfMemoryException> o l'utilizzo di tutti gli stack disponibili, con la conseguente generazione di un'eccezione <xref:System.StackOverflowException>.
 
-Il superamento di una quota è reversibile; se si verifica in un servizio in esecuzione, il messaggio al momento in fase di elaborazione viene ignorato e il servizio rimane in esecuzione e continua a elaborare messaggi. I casi di memoria insufficiente e di overflow dello stack non sono tuttavia reversibili in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], pertanto il servizio termina se incontra tali eccezioni.
+Il superamento di una quota è reversibile; se si verifica in un servizio in esecuzione, il messaggio al momento in fase di elaborazione viene ignorato e il servizio rimane in esecuzione e continua a elaborare messaggi. Gli scenari di overflow di memoria insufficiente e stack, non sono tuttavia reversibili in .NET Framework. il servizio termina se incontra tali eccezioni.
 
 Le quote in WCF non comportano preallocazioni. Se, ad esempio, la quota <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> (presente in varie classi) è impostata su 128 KB, non significa che vengano automaticamente allocati 128 KB per ogni messaggio. La quantità realmente allocata dipende dalla dimensione effettiva del messaggio in arrivo.
 
@@ -274,7 +274,7 @@ Il possibile autore di un attacco potrebbe inviare un messaggio dannoso come que
 
 - Non progettare tipi di contratto dati che si affidano a un ordine particolare per la chiamata dei metodi Setter sulla proprietà.
 
-- Fare attenzione quando si utilizzano tipi legacy contrassegnati con l'attributo <xref:System.SerializableAttribute> . Molti di essi sono progettati per essere utilizzati con la comunicazione remota di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per l'utilizzo esclusivamente con dati attendibili. I tipi esistenti contrassegnati con questo attributo possono non essere stati progettati tenendo presente la sicurezza dello stato.
+- Fare attenzione quando si utilizzano tipi legacy contrassegnati con l'attributo <xref:System.SerializableAttribute> . Molti di essi sono stati progettati per funzionare con .NET Framework remoting per l'utilizzo esclusivamente con dati attendibili. I tipi esistenti contrassegnati con questo attributo possono non essere stati progettati tenendo presente la sicurezza dello stato.
 
 - Non affidarsi alla proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> dell'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> per garantire la presenza di dati per quanto riguarda la sicurezza dello stato. I dati potrebbero sempre essere `null`, `zero`o `invalid`.
 
@@ -282,7 +282,7 @@ Il possibile autore di un attacco potrebbe inviare un messaggio dannoso come que
 
 ### <a name="using-the-netdatacontractserializer-securely"></a>Utilizzo sicuro di NetDataContractSerializer
 
-<xref:System.Runtime.Serialization.NetDataContractSerializer> è un motore di serializzazione che utilizza l'accoppiamento stretto ai tipi. È simile a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e a <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Vale a dire che determina quale sia il tipo di cui creare un'istanza leggendo l'assembly [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e il nome del tipo dai dati in arrivo. Sebbene sia una parte di WCF, non è possibile fornito di inserimento di questo motore della serializzazione; deve essere scritto codice personalizzato. Il `NetDataContractSerializer` viene fornito soprattutto per agevolare la migrazione da [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .NET remoting a WCF. Per altre informazioni, vedere la sezione pertinente in [serializzazione e deserializzazione](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
+<xref:System.Runtime.Serialization.NetDataContractSerializer> è un motore di serializzazione che utilizza l'accoppiamento stretto ai tipi. È simile a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e a <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Vale a dire, determina il tipo da creare un'istanza leggendo l'assembly .NET Framework e il nome del tipo di dati in ingresso. Sebbene sia una parte di WCF, non è possibile fornito di inserimento di questo motore della serializzazione; deve essere scritto codice personalizzato. Il `NetDataContractSerializer` viene fornito soprattutto per agevolare la migrazione da .NET Framework remoting a WCF. Per altre informazioni, vedere la sezione pertinente in [serializzazione e deserializzazione](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
 
 Poiché il messaggio stesso può indicare che è possibile caricare qualsiasi tipo, il meccanismo <xref:System.Runtime.Serialization.NetDataContractSerializer> non è protetto intrinsecamente e deve essere utilizzato solo con dati attendibili. È possibile renderlo sicuro scrivendo un gestore di associazione con limitazione del tipo (utilizzando la proprietà <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> ) che consenta di caricare esclusivamente tipi sicuri.
 

@@ -4,12 +4,12 @@
     - name: Buffer a dimensione fissa
       href: fixed-size-buffers.md
     - name: Tipi puntatore
-      href: pointer-types.md
       items:
+        - name: Panoramica
+          href: pointer-types.md
         - name: Conversioni puntatore
           href: pointer-conversions.md
         - name: Espressioni puntatore
-          href: pointer-expressions.md
           items:
             - name: 'Procedura: Ottenere il valore di una variabile puntatore'
               href: how-to-obtain-the-value-of-a-pointer-variable.md
@@ -20,7 +20,6 @@
             - name: 'Procedura: Accedere a un elemento di matrice con un puntatore'
               href: how-to-access-an-array-element-with-a-pointer.md
             - name: Modifica dei puntatori
-              href: manipulating-pointers.md
               items:
                 - name: 'Procedura: Incrementare e decrementare i puntatori'
                   href: how-to-increment-and-decrement-pointers.md

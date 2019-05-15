@@ -2,12 +2,12 @@
 title: Uso di Strumentazione gestione Windows (WMI) per la diagnostica
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 47aece36368be12a2a63283367e95dcaa64ef484
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ecc5c754a51a8e1a52797dfd0af0891704eaad1f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662473"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591248"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Uso di Strumentazione gestione Windows (WMI) per la diagnostica
 Windows Communication Foundation (WCF) espone dati di ispezione di un servizio in fase di esecuzione tramite un provider di Strumentazione gestione Windows (WMI) di WCF.  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) espone dati di ispezione di un servizio i
  Questa voce di configurazione espone un'interfaccia WMI. Le applicazioni di gestione possono ora connettersi usando questa interfaccia e accedere la strumentazione di gestione dell'applicazione.  
   
 ## <a name="accessing-wmi-data"></a>Accesso ai dati WMI  
- L'accesso ai dati WMI può essere eseguito in molti modi diversi. Microsoft fornisce le API di WMI per gli script, le applicazioni Visual Basic, le applicazioni C++ e [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Per altre informazioni, vedere [mediante WMI](https://go.microsoft.com/fwlink/?LinkId=95183).  
+ L'accesso ai dati WMI può essere eseguito in molti modi diversi. Microsoft fornisce le API WMI per gli script, le applicazioni Visual Basic, C++ applicazioni e .NET Framework. Per altre informazioni, vedere [mediante WMI](https://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
 >  Se si usano i metodi forniti da .NET Framework per accedere ai dati WMI a livello di programmazione, tenere presente che questi metodi possono generare eccezioni nel momento in cui viene stabilita la connessione. La connessione non viene stabilita durante la costruzione dell'istanza <xref:System.Management.ManagementObject>, ma alla prima richiesta che comporta uno scambio di dati effettivo. Per intercettare le possibili eccezioni è pertanto necessario usare un blocco `try..catch`.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 125c577710ed9c2b8a53e367cd22924a3ccb483c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc40d7e10243f63040d7e4ad457aac0f9122b6ad
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615115"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590793"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Nozioni fondamentali relative alle applicazioni Windows Forms (Visual Basic)
 Una parte importante di Visual Basic è la possibilità di creare applicazioni Windows Forms che vengono eseguite localmente sui computer degli utenti. È possibile usare Visual Studio per creare l'applicazione e interfaccia utente mediante Windows Forms. Un'applicazione Windows Forms è basata sulle classi dal <xref:System.Windows.Forms> dello spazio dei nomi.  
@@ -25,7 +25,7 @@ Una parte importante di Visual Basic è la possibilità di creare applicazioni W
 - [Le applicazioni di servizio Windows](../../../framework/windows-services/index.md). Elenca argomenti che illustrano come creare servizi Windows.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>Compilazione di interfacce utente complete e interattive  
- Windows Forms è il componente smart client del [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], un set di librerie gestite che semplificano attività comuni dell'applicazione, ad esempio la lettura e scrittura nel file System. Usa un ambiente di sviluppo come Visual Studio, è possibile creare applicazioni Windows Forms che visualizzano informazioni, richiedono l'input dagli utenti e comunicano con i computer remoti tramite una rete.  
+ Windows Forms è il componente smart client di .NET Framework, un set di librerie gestite che semplificano attività comuni dell'applicazione, ad esempio la lettura e scrittura nel file System. Usa un ambiente di sviluppo come Visual Studio, è possibile creare applicazioni Windows Forms che visualizzano informazioni, richiedono l'input dagli utenti e comunicano con i computer remoti tramite una rete.  
   
  In Windows Form, un modulo è una superficie visiva sulla quale è possibile visualizzare le informazioni all'utente. Per compilare applicazioni Windows Forms, inserire i controlli nei form e sviluppare le risposte alle azioni dell'utente, ad esempio clic del mouse o pressioni di tasti. Un *controllo* è un elemento separato dell'interfaccia utente usato per visualizzare dati o accettare input di dati.  
   
@@ -86,7 +86,7 @@ Una parte importante di Visual Basic è la possibilità di creare applicazioni W
 |Gestire la sicurezza con [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Procedura: Abilitare le impostazioni di sicurezza ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Altri controlli e funzionalità  
- Windows Form dispone di altre funzioni che rendono le comuni attività di implementazione estremamente semplici e rapide, quali il supporto per la creazione di caselle di dialogo, la stampa, l'aggiunta della Guida e la documentazione, la localizzazione dell'applicazione in diverse lingue. Inoltre, Windows Form si basa sul potente sistema di sicurezza del [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], consentendo di affidabilità delle applicazioni distribuite ai clienti.  
+ Windows Form dispone di altre funzioni che rendono le comuni attività di implementazione estremamente semplici e rapide, quali il supporto per la creazione di caselle di dialogo, la stampa, l'aggiunta della Guida e la documentazione, la localizzazione dell'applicazione in diverse lingue. Inoltre, Windows Form si basa sul potente sistema di sicurezza di .NET Framework, consentendo di affidabilità delle applicazioni distribuite ai clienti.  
   
  Per informazioni dettagliate sull'uso di queste funzionalità, vedere gli argomenti della Guida seguenti:  
   

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 8ff2a3a4e9249b324dac9b244cab68ae8f8e1cab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df234ecaf25243dbdf2d6552942ca86001d4a6fe
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624831"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592184"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Procedura: Oggetti di riferimento COM da Visual Basic
-In Visual Basic, l'aggiunta di riferimenti a oggetti COM con librerie dei tipi richiede la creazione di un assembly di interoperabilità per la libreria COM. I riferimenti ai membri dell'oggetto COM vengono indirizzati all'assembly di interoperabilità e quindi inoltrati all'oggetto COM effettivo. Le risposte dall'oggetto COM vengono indirizzate all'assembly di interoperabilità e inoltrate al [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dell'applicazione.  
+In Visual Basic, l'aggiunta di riferimenti a oggetti COM con librerie dei tipi richiede la creazione di un assembly di interoperabilità per la libreria COM. I riferimenti ai membri dell'oggetto COM vengono indirizzati all'assembly di interoperabilità e quindi inoltrati all'oggetto COM effettivo. Le risposte dall'oggetto COM vengono indirizzate all'assembly di interoperabilità e inoltrate all'applicazione .NET Framework.  
   
  È possibile fare riferimento a un oggetto COM senza usare un assembly di interoperabilità per incorporare le informazioni sul tipo per l'oggetto COM in un assembly .NET. Per incorporare le informazioni sul tipo, impostare il `Embed Interop Types` proprietà `True` per il riferimento all'oggetto COM. Se esegue la compilazione usando il compilatore della riga di comando, usare il `/link` opzione per fare riferimento alla libreria COM. Per altre informazioni, vedere [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
   

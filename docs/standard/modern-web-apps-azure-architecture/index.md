@@ -4,12 +4,12 @@ description: Una guida che offre linee guida end-to-end sulla compilazione di ap
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 27212045d9870c9f2fc15509d76f3e9b07d8657f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b29a407ae18f3ce0c7499c75ee3c888296102c2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019349"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639315"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Progettare applicazioni Web moderne con ASP.NET Core e Azure
 

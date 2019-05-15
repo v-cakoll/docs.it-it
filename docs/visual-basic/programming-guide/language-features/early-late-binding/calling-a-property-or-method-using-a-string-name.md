@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: e267c0c4d1d3e8f986348863d933c984f686b33b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92430f23b3d4d6237d0b6ec606ce2cb9b945f6f8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973342"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590038"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Chiamata di una proprietà o di un metodo mediante un nome di stringa (Visual Basic)
 Nella maggior parte dei casi, è possibile individuare le proprietà e metodi di un oggetto in fase di progettazione e scrivere codice per gestirli. Tuttavia, in alcuni casi potrebbe non sapere sui metodi e proprietà di un oggetto in anticipo, oppure è possibile semplicemente la flessibilità di un utente finale di specificare le proprietà o eseguire i metodi in fase di esecuzione.  
@@ -31,7 +31,7 @@ Nella maggior parte dei casi, è possibile individuare le proprietà e metodi di
   
  Il primo argomento, *oggetto*, accetta il nome dell'oggetto a cui si vuole agire. Il *nomeroutine* argomento accetta una stringa che contiene il nome del metodo o proprietà della routine da richiamare. Il *CallType* argomento accetta una costante che rappresenta il tipo di routine da richiamare: un metodo (`Microsoft.VisualBasic.CallType.Method`), una proprietà di lettura (`Microsoft.VisualBasic.CallType.Get`), o una proprietà impostata (`Microsoft.VisualBasic.CallType.Set`). Il *argomenti* argomenti, che sono facoltativo, accetta una matrice di tipo `Object` che contiene gli argomenti per la procedura.  
   
- È possibile usare `CallByName` con le classi nella soluzione corrente, ma è in genere usato per accedere agli oggetti COM o gli oggetti da [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assembly.  
+ È possibile usare `CallByName` con le classi nella soluzione corrente, ma è più frequente per accedere a oggetti COM o oggetti dagli assembly .NET Framework.  
   
  Si supponga di aggiunta un riferimento a un assembly che contiene una classe denominata `MathClass`, che dispone di una nuova funzione denominata `SquareRoot`, come illustrato nel codice seguente:  
   

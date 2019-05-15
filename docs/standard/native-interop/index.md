@@ -4,12 +4,12 @@ description: Informazioni su come interagire con i componenti nativi in .NET.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 29aacc9210b4103f379b7776c36fc3c29b9e6dec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b01ea9c17db6da32755309d9c1c2359cecaa1155
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973558"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062706"
 ---
 # <a name="native-interoperability"></a>Interoperabilità nativa
 
@@ -29,5 +29,5 @@ L'elenco sopra riportato non esaurisce tutti i potenziali scenari e situazioni i
 ## <a name="see-also"></a>Vedere anche
 
 - [Platform Invoke (P/Invoke)](pinvoke.md)
-- [Marshalling dei tipi](type-marshalling.md)
+- [Marshalling dei tipi](type-marshaling.md)
 - [Procedure consigliate di interoperabilità nativa](best-practices.md)

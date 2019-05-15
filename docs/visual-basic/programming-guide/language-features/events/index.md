@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 5986923b10700b1795886c24343a4b45e6bff46e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76d074d2870a2d7efa62516b5868cdd7faaacd79
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616695"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586701"
 ---
 # <a name="events-visual-basic"></a>Eventi (Visual Basic)
 Sebbene sia possibile rappresentare graficamente un progetto di Visual Studio come una serie di procedure eseguite in sequenza, in realtà, la maggior parte dei programmi sono basata su eventi, vale a dire il flusso di esecuzione è determinato da occorrenze esterne denominate *eventi*.  
@@ -104,6 +104,6 @@ Sebbene sia possibile rappresentare graficamente un progetto di Visual Studio co
 |[Procedura: Dichiarare eventi personalizzati per evitare il blocco](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Illustra come definire un evento personalizzato che consente la chiamata asincrona dei gestori eventi.|  
 |[Procedura: Dichiarare eventi personalizzati per proteggere la memoria](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Illustra come definire un evento personalizzato che usa la memoria solo quando viene gestito l'evento.|  
 |[Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Elenca i problemi comuni che si verificano con i gestori eventi nei componenti ereditati.|  
-|[Eventi](../../../../standard/events/index.md)|Panoramica del modello di eventi usato in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
+|[Eventi](../../../../standard/events/index.md)|Viene fornita una panoramica del modello di eventi usato in .NET Framework.|  
 |[Creazione di gestori eventi in Windows Form](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Descrive come usare gli eventi associati agli oggetti di Windows Form.|  
 |[Delegati](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Panoramica dei delegati in Visual Basic.|

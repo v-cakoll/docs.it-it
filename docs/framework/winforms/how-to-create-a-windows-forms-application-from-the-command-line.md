@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91261e5077352179719e631ebeb26670ffd74792
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 72195dd49c163b26a5bcfa739768718f2a32f346
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665237"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588985"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Procedura: Creare un'applicazione Windows Forms dalla riga di comando
 Le procedure seguenti descrivono i passaggi di base che è necessario completare per creare ed eseguire un'applicazione Windows Forms dalla riga di comando. Esiste un supporto completo per queste procedure in Visual Studio.  Vedere anche [procedura dettagliata: Controllo che ospita un Windows Form in WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
@@ -108,10 +108,6 @@ Le procedure seguenti descrivono i passaggi di base che è necessario completare
   
  [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Compilazione del codice  
-  
-- Per compilare il codice, seguire le istruzioni disponibili nella procedura che descrive come compilare ed eseguire l'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche
 

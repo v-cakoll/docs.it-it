@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8170dd2e2941be3a73f7a4fd8c37d4fb2ef96235
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622804"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592240"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -119,7 +119,7 @@ ms.locfileid: "64622804"
   
  Di seguito sono elencate alcune limitazioni di generics:  
   
-- I tipi generici possono derivare dalla maggior parte delle classi base, ad esempio <xref:System.MarshalByRefObject> (e i vincoli possono essere usati per richiedere che i parametri di tipo generico derivino da classi base quali <xref:System.MarshalByRefObject>). Tuttavia, il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] non supporta tipi generici associati al contesto. Un tipo generico può derivare da <xref:System.ContextBoundObject>, ma provare a creare un'istanza di quel tipo causa un <xref:System.TypeLoadException>.  
+- I tipi generici possono derivare dalla maggior parte delle classi base, ad esempio <xref:System.MarshalByRefObject> (e i vincoli possono essere usati per richiedere che i parametri di tipo generico derivino da classi base quali <xref:System.MarshalByRefObject>). Tuttavia, .NET Framework non supporta tipi generici associati al contesto. Un tipo generico può derivare da <xref:System.ContextBoundObject>, ma provare a creare un'istanza di quel tipo causa un <xref:System.TypeLoadException>.  
   
 - L'enumerazione non può avere parametri di tipo generico. Un'enumerazione può essere generica solo incidentalmente (ad esempio, perché è annidata in un tipo generico che viene definito con Visual Basic, C# o C++). Per altre informazioni, vedere "Enumerazioni" in [Common Type System](../../../docs/standard/base-types/common-type-system.md).  
   

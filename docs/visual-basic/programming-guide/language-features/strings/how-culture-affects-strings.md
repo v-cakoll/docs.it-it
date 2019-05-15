@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: c498ae0a9d39240e715e6ba66e57c5e1d3ebbfbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7301d52cf2c55394f731a8b7af5427e5fa66ba88
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610422"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591956"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Influenza delle impostazioni cultura sulle stringhe in Visual Basic
 Questa pagina della Guida viene illustrato come Visual Basic Usa informazioni sulle impostazioni cultura per eseguire confronti e le conversioni di stringa.  
@@ -38,7 +38,7 @@ Questa pagina della Guida viene illustrato come Visual Basic Usa informazioni su
 ## <a name="using-a-specific-culture"></a>Usando impostazioni cultura  
  Si supponga che si sta sviluppando un'applicazione che invia una data (formattata sotto forma di stringa) a un servizio Web. In questo caso, l'applicazione deve usare impostazioni cultura specifiche per la conversione di stringa. Per illustrare il motivo, considerare i risultati ottenuti utilizzando la data <xref:System.DateTime.ToString> metodo: Se l'applicazione usa questo metodo per formattare la data 4 luglio 2005, viene restituito "7/4/2005 12:00:00 AM" viene eseguito con impostazioni cultura inglese Stati Uniti (en-US), ma restituisce "04.07.2005 00:00:00" viene eseguito con le impostazioni cultura tedesco (de-DE).  
   
- Quando è necessario eseguire una conversione di stringhe in un formato specifico delle impostazioni cultura, è consigliabile usare la `CultureInfo` classe che viene compilato nel [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. È possibile creare una nuova `CultureInfo` oggetto delle impostazioni cultura, passando il nome delle impostazioni cultura per il <xref:System.Globalization.CultureInfo.%23ctor%2A> costruttore. I nomi di impostazioni cultura supportate sono elencati nel <xref:System.Globalization.CultureInfo> pagina della Guida di classe.  
+ Quando è necessario eseguire una conversione di stringhe in un formato specifico delle impostazioni cultura, è consigliabile usare il `CultureInfo` classe che viene compilato in .NET Framework. È possibile creare una nuova `CultureInfo` oggetto delle impostazioni cultura, passando il nome delle impostazioni cultura per il <xref:System.Globalization.CultureInfo.%23ctor%2A> costruttore. I nomi di impostazioni cultura supportate sono elencati nel <xref:System.Globalization.CultureInfo> pagina della Guida di classe.  
   
  In alternativa, è possibile ottenere un'istanza del *invariabile* dal <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> proprietà. La lingua inglese è basata sulla lingua inglese, ma esistono alcune differenze. Le impostazioni cultura invarianti ad esempio, specificano un orologio di 24 ore invece di un formato a 12 ore.  
   
@@ -62,7 +62,7 @@ Questa pagina della Guida viene illustrato come Visual Basic Usa informazioni su
   
  [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
- È anche possibile usare la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] partner del `StrComp` funzione, il <xref:System.String.Compare%2A?displayProperty=nameWithType> (metodo). Si tratta di un metodo statico, overload della classe base string. L'esempio seguente illustra come viene utilizzato questo metodo:  
+ È anche possibile usare il partner di .NET Framework dei `StrComp` funzione, il <xref:System.String.Compare%2A?displayProperty=nameWithType> (metodo). Si tratta di un metodo statico, overload della classe base string. L'esempio seguente illustra come viene utilizzato questo metodo:  
   
  [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   

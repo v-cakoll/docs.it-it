@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 452aacab4580a3b07168daa6b7c03740dc98620b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801712"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583738"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Procedura: Esplorare dati in Windows Forms
 In un'applicazione di Windows, è il modo più semplice per spostarsi tra i record in un'origine dati per associare un <xref:System.Windows.Forms.BindingSource> componente per l'origine dati e quindi associare i controlli per il <xref:System.Windows.Forms.BindingSource>. È quindi possibile utilizzare il metodo di navigazione predefiniti in di <xref:System.Windows.Forms.BindingSource> tali una <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> e <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Usando questi metodi regolerà la <xref:System.Windows.Forms.BindingSource.Position%2A> e <xref:System.Windows.Forms.BindingSource.Current%2A> delle proprietà del <xref:System.Windows.Forms.BindingSource> in modo appropriato. È anche possibile trovare un elemento e impostarlo come elemento corrente, impostando il <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà.  
@@ -26,7 +26,7 @@ In un'applicazione di Windows, è il modo più semplice per spostarsi tra i reco
 1. Impostare il <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà del <xref:System.Windows.Forms.BindingSource> per i dati associati alla posizione del record su cui spostarsi. Nell'esempio seguente viene illustrato l'utilizzo di <xref:System.Windows.Forms.BindingSource.MoveNext%2A> metodo del <xref:System.Windows.Forms.BindingSource> per incrementare il <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà quando il `nextButton` si fa clic. Il <xref:System.Windows.Forms.BindingSource> è associato il `Customers` tabella di un set di dati `Northwind`.  
   
     > [!NOTE]
-    >  Impostando il <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà su un valore di là del primo o ultimo record non produce un errore, come il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] non consentirà di impostare la posizione su un valore esterno ai limiti dell'elenco. Se è importante per sapere se è stato oltrepassato il primo o ultimo record in un'applicazione, includere la logica per verificare se si supera il numero di elementi di dati.  
+    >  L'impostazione di <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà su un valore di là del primo o ultimo record non viene generato un errore, perché .NET Framework non consentirà di impostare la posizione su un valore esterno ai limiti dell'elenco. Se è importante per sapere se è stato oltrepassato il primo o ultimo record in un'applicazione, includere la logica per verificare se si supera il numero di elementi di dati.  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.NavigatingData#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  

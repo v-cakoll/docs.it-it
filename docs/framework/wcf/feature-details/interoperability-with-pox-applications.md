@@ -2,19 +2,19 @@
 title: Interoperabilità con applicazioni POX
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17b85ab41589a130e950cd52c759305cc17e92b7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046892"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591044"
 ---
 # <a name="interoperability-with-pox-applications"></a>Interoperabilità con applicazioni POX
 
 "Plain Old XML" applicazioni (POX) comunicano scambiando messaggi HTTP non elaborati che contengono solo dati di applicazioni XML non inclusi all'interno di una SOAP envelope. Windows Communication Foundation (WCF) può fornire servizi e client che utilizzano messaggi POX. Nel servizio, WCF è utilizzabile per implementare servizi che espongono endpoint a client, ad esempio i browser Web e linguaggi di scripting che inviano e ricevono messaggi POX. Sul client, il modello di programmazione WCF è utilizzabile per implementare i client che comunicano con servizi basati su POX.  
   
 > [!NOTE]
-> Questo documento è stato scritto originariamente per [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5 dispone di supporto incorporato per l'utilizzo di applicazioni POX. Per altre informazioni, vedere [modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
+> Questo documento è stato scritto originariamente per .NET Framework 3.0.  .NET framework 3.5 include supporto predefinito per l'utilizzo con applicazioni POX. Per altre informazioni, vedere [modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
   
 ## <a name="pox-programming-with-wcf"></a>Programmazione POX con WCF
 

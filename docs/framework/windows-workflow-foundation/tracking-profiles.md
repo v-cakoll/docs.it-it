@@ -2,12 +2,12 @@
 title: Profili di rilevamento
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c934ec9fd0524506577ab4457a2ec194d4d0cba7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699677"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589942"
 ---
 # <a name="tracking-profiles"></a>Profili di rilevamento
 
@@ -17,7 +17,7 @@ I profili di rilevamento contengono query di rilevamento che consentono a un par
 
 I profili di rilevamento vengono usati per specificare le informazioni di rilevamento generate per un'istanza del flusso di lavoro. Se non è specificato alcun profilo, vengono generati tutti gli eventi di rilevamento. Se viene specificato un profilo, verranno generati gli eventi di rilevamento specificati nel profilo. A seconda dei requisiti di monitoraggio, è possibile scrivere un profilo molto generale che sottoscrive un piccolo set di modifiche dello stato di alto livello in un flusso di lavoro oppure creare un profilo molto dettagliato i cui eventi risultanti sono sufficientemente precisi per ricostruire un flusso di esecuzione dettagliato in un secondo momento.
 
-I profili di rilevamento si manifestano come elementi XML all'interno di un file di configurazione standard di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] o specificati nel codice. Nell'esempio seguente è illustrato un profilo di rilevamento di [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] in un file di configurazione che consente a un partecipante del rilevamento di sottoscrivere gli eventi del flusso di lavoro `Started` e `Completed`.
+I profili di rilevamento si manifestano come elementi XML all'interno di un file di configurazione di .NET Framework standard o specificato nel codice. Nell'esempio seguente è illustrato un profilo di rilevamento di [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] in un file di configurazione che consente a un partecipante del rilevamento di sottoscrivere gli eventi del flusso di lavoro `Started` e `Completed`.
 
 ```xml
 <system.serviceModel>

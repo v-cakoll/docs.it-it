@@ -3,12 +3,12 @@ title: Panoramica del modulo di autenticazione WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: f4dc63272c47dc0cd9eaa15986e4369d9d689b64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63090efdf97066b4a276880d4f4be0f843de6800
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592372"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586048"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Panoramica del modulo di autenticazione WSFederation
 Windows Identity Foundation (WIF) include il supporto per l'autenticazione federata nelle applicazioni ASP.NET tramite il modulo di autenticazione WS-Federated (WS-FAM, WS-Federated Authentication Module). Questo argomento aiuta capire come funziona l'autenticazione federata e come usarla.  
@@ -44,7 +44,7 @@ Windows Identity Foundation (WIF) include il supporto per l'autenticazione feder
  WS-FAM genera inoltre diversi eventi che consentono di personalizzare le relative funzionalità in un'applicazione [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
   
 ### <a name="how-the-ws-fam-works"></a>Funzionamento di WS-FAM  
- WS-FAM viene implementato nella classe <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>. In genere, si aggiunge WS-FAM alla pipeline HTTP dell'applicazione relying party [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Quando un utente non autenticato cerca di accedere a una risorsa protetta, la relying party restituisce una risposta HTTP di tipo "401 autorizzazione negata". WS-FAM intercetta questa risposta invece di consentire al client di riceverla, quindi reindirizza l'utente al servizio token di sicurezza specificato. Il servizio token di sicurezza rilascia un token di sicurezza, che viene anch'esso intercettato da WS-FAM. WS-FAM usa il token per creare un'istanza di <xref:System.Security.Claims.ClaimsPrincipal> per l'utente autenticato e tale istanza consente il funzionamento dei normali meccanismi di autorizzazione di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ WS-FAM viene implementato nella classe <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>. In genere, si aggiunge WS-FAM alla pipeline HTTP dell'applicazione relying party [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Quando un utente non autenticato cerca di accedere a una risorsa protetta, la relying party restituisce una risposta HTTP di tipo "401 autorizzazione negata". WS-FAM intercetta questa risposta invece di consentire al client di riceverla, quindi reindirizza l'utente al servizio token di sicurezza specificato. Il servizio token di sicurezza rilascia un token di sicurezza, che viene anch'esso intercettato da WS-FAM. WS-FAM Usa il token per creare un'istanza di <xref:System.Security.Claims.ClaimsPrincipal> per l'utente autenticato, che consente i normali meccanismi di autorizzazione .NET Framework funzionare.  
   
  Poiché HTTP è senza stato, è necessaria una soluzione per evitare di ripetere l'intero processo ogni volta che l'utente cerca di accedere a un'altra risorsa protetta. A questo scopo, si usa <xref:System.IdentityModel.Services.SessionAuthenticationModule>. Quando il servizio token di sicurezza rilascia un token di sicurezza per l'utente, <xref:System.IdentityModel.Services.SessionAuthenticationModule> crea anche un token di sicurezza della sessione per l'utente e lo inserisce in un cookie. Nelle richieste successive, <xref:System.IdentityModel.Services.SessionAuthenticationModule> intercetta questo cookie e lo usa per ricostruire l'oggetto <xref:System.Security.Claims.ClaimsPrincipal> dell'utente.  
   

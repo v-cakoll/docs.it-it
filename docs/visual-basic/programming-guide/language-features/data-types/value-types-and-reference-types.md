@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: f823d9e80eb644487eab1ed84345dd8bdc10efc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 541fe9f176a6210372b58753254692142f086992
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600949"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589827"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 In Visual Basic, i tipi di dati vengono implementati in base alla classificazione. I tipi di dati di Visual Basic possono essere classificati in base al fatto che una variabile di un determinato tipo archivia i propri dati o un puntatore ai dati. Se archivia i propri dati è un *tipo di valore*; se contiene un puntatore ai dati in un' posizione in memoria è un *fanno riferimento a tipo*.  
@@ -46,7 +46,7 @@ In Visual Basic, i tipi di dati vengono implementati in base alla classificazion
   
 - Delegati  
   
- Una classe è un *fanno riferimento a tipo*. Per questo motivo, fare riferimento ai tipi, ad esempio `Object` e `String` sono supportati da [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classi. Si noti che ogni matrice è un tipo riferimento, anche se i relativi membri sono tipi valore.  
+ Una classe è un *fanno riferimento a tipo*. Per questo motivo, fare riferimento ai tipi, ad esempio `Object` e `String` sono supportati dalle classi di .NET Framework. Si noti che ogni matrice è un tipo riferimento, anche se i relativi membri sono tipi valore.  
   
  Poiché ogni tipo di riferimento rappresenta una classe sottostante di .NET Framework, è necessario usare il [operatore New](../../../../visual-basic/language-reference/operators/new-operator.md) parola chiave quando si inizializza. L'istruzione seguente consente di inizializzare una matrice.  
   

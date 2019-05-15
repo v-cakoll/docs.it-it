@@ -2,12 +2,12 @@
 title: Modellazione e mapping
 ms.date: 03/30/2017
 ms.assetid: ec8a9515-3708-4cde-a688-4d8e6975f150
-ms.openlocfilehash: 847d518710b21df714343b541401ff7fc8443fb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55fea170d98c737197d1e3e26c8d25fd97760ddd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034021"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583593"
 ---
 # <a name="modeling-and-mapping"></a>Modellazione e mapping
 In [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] è possibile definire il modello concettuale, il modello di archiviazione e il mapping tra i due nella modalità che soddisfa meglio le esigenze dell'applicazione. Gli strumenti di Entity Data Model in Visual Studio consentono di creare una. [file edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)) da un database o modello grafico e quindi aggiornare il file quando viene modificata del database o del modello.  
@@ -16,4 +16,4 @@ In [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] è possibile d
   
  Per altre informazioni, vedere [creazione e il Mapping di un modello concettuale](https://go.microsoft.com/fwlink/?LinkId=235016).  
   
- È anche possibile usare il generatore EDM incluso con il [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. EdmGen.exe genera file con estensione csdl, ssdl e msl da un'origine dati esistente. È possibile inoltre creare il contenuto del modello e del mapping manualmente. Per altre informazioni, vedere [generatore EDM (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).
+ È anche possibile usare il generatore EDM incluso in .NET Framework. EdmGen.exe genera file con estensione csdl, ssdl e msl da un'origine dati esistente. È possibile inoltre creare il contenuto del modello e del mapping manualmente. Per altre informazioni, vedere [generatore EDM (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).

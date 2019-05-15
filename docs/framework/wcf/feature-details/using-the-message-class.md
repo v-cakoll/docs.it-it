@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: 00b64bdd3795cf282847a3bbaa0940f76faa1c2e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1db509d8f1c672bf51cac7f1ca6b1af91b34fa4d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637532"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591272"
 ---
 # <a name="using-the-message-class"></a>Utilizzo della classe Message
 Il <xref:System.ServiceModel.Channels.Message> classe è di fondamentale importanza per Windows Communication Foundation (WCF). Tutte le comunicazioni tra client e servizi implicano in ultima istanza l'invio e la ricezione di istanze di <xref:System.ServiceModel.Channels.Message>.  
   
  Di norma non si interagisce con la classe <xref:System.ServiceModel.Channels.Message> in modo diretto. Al contrario, i costrutti del modello di servizio WCF, ad esempio contratti dati, i contratti di messaggio e contratti di operazione, vengono utilizzati per descrivere i messaggi in ingresso e in uscita. Tuttavia, in alcuni scenari avanzati, è possibile eseguire la programmazione usando direttamente la classe <xref:System.ServiceModel.Channels.Message>. Ad esempio, può essere necessario usare la classe <xref:System.ServiceModel.Channels.Message>:  
   
-- Quando è necessaria una modalità alternativa per creare il contenuto dei messaggi in uscita (ad esempio, creando un messaggio direttamente da un file sul disco), invece di serializzare oggetti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+- Quando è necessario un modo alternativo per la creazione di contenuto del messaggio in uscita (ad esempio, la creazione di un messaggio direttamente da un file su disco) invece di serializzare gli oggetti di .NET Framework.  
   
-- Quando è necessaria una modalità alternativa per usare il contenuto dei messaggi in arrivo (ad esempio, quando si desidera applicare una trasformazione XSLT al contenuto XML non elaborato), invece di eseguire la deserializzazione in oggetti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+- Quando è necessario un modo alternativo dell'utilizzo di contenuto del messaggio in ingresso (ad esempio, quando si desidera applicare una trasformazione XSLT al contenuto XML non elaborato) anziché la deserializzazione in oggetti .NET Framework.  
   
 - Quando è necessario gestire i messaggi in modo generico, indipendentemente dal contenuto (ad esempio, per l'indirizzamento o l'inoltro di messaggi durante la creazione di un router, un servizio di bilanciamento del carico o un sistema di pubblicazione-sottoscrizione).  
   

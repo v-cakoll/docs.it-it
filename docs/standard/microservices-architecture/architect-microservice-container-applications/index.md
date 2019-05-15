@@ -1,15 +1,13 @@
 ---
 title: Progettazione di applicazioni basate su contenitori e microservizi
 description: La progettazione di applicazioni basate su contenitori e microservizi è un'opera tutt'altro che semplice e non è da prendere alla leggera. In questo capitolo vengono illustrati i concetti di base.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 6b1d5f7f0ab18e4f1d4b5c2200ac0c6f40c701ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aff30c907f1140b94dbcae330ed7cb633b0a744b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026055"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644144"
 ---
 # <a name="architecting-container-and-microservice-based-applications"></a>Progettazione di applicazioni basate su contenitori e microservizi
 

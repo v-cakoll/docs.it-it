@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: 9b037dfbb3a82b8df4c91468eeb8b2dea24e2a37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b604502e0fea591460f30cae28b64ff1703da65
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625428"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589430"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Considerazioni sull'inserimento di controlli ActiveX in Windows Form
 Anche se Windows Form è stato ottimizzato per ospitare i controlli Windows Form, è tuttavia possibile usare i controlli ActiveX. Quando si pianifica un'applicazione che usa i controlli ActiveX, tenere presenti le considerazioni seguenti:  
@@ -26,7 +26,7 @@ Anche se Windows Form è stato ottimizzato per ospitare i controlli Windows Form
     >  Per usare un controllo ActiveX, è necessario un wrapper di interoperabilità COM. Per altre informazioni, vedere [Interoperabilità COM in Visual Basic e Visual C#](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
     > [!NOTE]
-    >  Se il nome di un membro del controllo ActiveX corrisponde a un nome definito nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], quindi il Control Importer di ActiveX verrà prefisso al nome del membro **Ctl** quando crea il <xref:System.Windows.Forms.AxHost> classe derivata. Se, ad esempio, il controllo ActiveX contiene un membro denominato **Layout**, questo verrà rinominato **CtlLayout** nella classe derivata da AxHost perché l'evento **Layout** è definito in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+    >  Se il nome di un membro del controllo ActiveX corrisponde a un nome definito in .NET Framework, quindi il Control Importer di ActiveX verrà prefisso al nome del membro **Ctl** quando crea il <xref:System.Windows.Forms.AxHost> classe derivata. Ad esempio, se il controllo ActiveX contiene un membro denominato **Layout**, viene rinominato **CtlLayout** nella classe derivata da AxHost perché il **Layout** evento è definito all'interno di. NET Framework.  
   
 ## <a name="see-also"></a>Vedere anche
 

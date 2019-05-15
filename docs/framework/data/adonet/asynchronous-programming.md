@@ -2,16 +2,16 @@
 title: Programmazione asincrona
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: c41a231959536f4bd558fcd3e94d0d58c2375021
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846129"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584499"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
-In questo argomento viene descritto il supporto per la programmazione asincrona nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server (SqlClient) inclusi i miglioramenti apportati per supportare la funzionalità di programmazione asincrona introdotta in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+In questo argomento viene descritto il supporto per la programmazione asincrona nel Provider di dati .NET Framework per SQL Server (SqlClient) inclusi i miglioramenti apportati per supportare la funzionalità di programmazione asincrona introdotta in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
 
 ## <a name="legacy-asynchronous-programming"></a>Programmazione asincrona legacy
 
@@ -177,7 +177,7 @@ class A {
 }
 ```
 
-### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>Uso del modello di provider di base e la nuova funzionalità asincrona
+### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>Utilizzo del modello di provider di base e la nuova funzionalità asincrona
 
 Potrebbe essere necessario creare uno strumento in grado di connettersi al database e di eseguire query. È possibile usare il modello di provider di base e la nuova funzionalità asincrona
 
