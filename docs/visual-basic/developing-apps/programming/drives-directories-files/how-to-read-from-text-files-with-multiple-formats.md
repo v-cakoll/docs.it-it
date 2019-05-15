@@ -11,19 +11,19 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: 3ad34864e162f8f62fed3754bdbcd39c75f7b3f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9fa484f0a74d900bd6f0365f2ce71fd32e1422db
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334302"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623187"
 ---
-# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a><span data-ttu-id="685d0-102">Procedura: Leggere da file di testo con più formati in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="685d0-102">How to: Read From Text Files with Multiple Formats in Visual Basic</span></span>
-<span data-ttu-id="685d0-103">L'oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> consente di analizzare in modo facile ed efficace i file di testo strutturati, ad esempio i log.</span><span class="sxs-lookup"><span data-stu-id="685d0-103">The <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object provides a way to easily and efficiently parse structured text files, such as logs.</span></span> <span data-ttu-id="685d0-104">È possibile elaborare un file con più formati usando il metodo `PeekChars` per determinare il formato di ogni riga durante l'analisi del file.</span><span class="sxs-lookup"><span data-stu-id="685d0-104">You can process a file with multiple formats by using the `PeekChars` method to determine the format of each line as you parse through the file.</span></span>  
+# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a><span data-ttu-id="28479-102">Procedura: Leggere da file di testo con più formati in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="28479-102">How to: Read From Text Files with Multiple Formats in Visual Basic</span></span>
+<span data-ttu-id="28479-103">L'oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> consente di analizzare in modo facile ed efficace i file di testo strutturati, ad esempio i log.</span><span class="sxs-lookup"><span data-stu-id="28479-103">The <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object provides a way to easily and efficiently parse structured text files, such as logs.</span></span> <span data-ttu-id="28479-104">È possibile elaborare un file con più formati usando il metodo `PeekChars` per determinare il formato di ogni riga durante l'analisi del file.</span><span class="sxs-lookup"><span data-stu-id="28479-104">You can process a file with multiple formats by using the `PeekChars` method to determine the format of each line as you parse through the file.</span></span>  
   
-### <a name="to-parse-a-text-file-with-multiple-formats"></a><span data-ttu-id="685d0-105">Per analizzare un file di testo con più formati</span><span class="sxs-lookup"><span data-stu-id="685d0-105">To parse a text file with multiple formats</span></span>  
+### <a name="to-parse-a-text-file-with-multiple-formats"></a><span data-ttu-id="28479-105">Per analizzare un file di testo con più formati</span><span class="sxs-lookup"><span data-stu-id="28479-105">To parse a text file with multiple formats</span></span>  
   
-1. <span data-ttu-id="685d0-106">Aggiungere un file di testo denominato testfile.txt al progetto.</span><span class="sxs-lookup"><span data-stu-id="685d0-106">Add a text file named testfile.txt to your project.</span></span> <span data-ttu-id="685d0-107">Aggiungere quanto segue al file di testo.</span><span class="sxs-lookup"><span data-stu-id="685d0-107">Add the following content to the text file.</span></span>  
+1. <span data-ttu-id="28479-106">Aggiungere un file di testo denominato testfile.txt al progetto.</span><span class="sxs-lookup"><span data-stu-id="28479-106">Add a text file named testfile.txt to your project.</span></span> <span data-ttu-id="28479-107">Aggiungere quanto segue al file di testo.</span><span class="sxs-lookup"><span data-stu-id="28479-107">Add the following content to the text file.</span></span>  
   
     ```  
     Err  1001 Cannot access resource.  
@@ -34,41 +34,41 @@ ms.locfileid: "59334302"
     Acc  10/04/2009User2      Standard user.  
     ```  
   
-2. <span data-ttu-id="685d0-108">Definire il formato previsto e il formato usato al momento della segnalazione dell'errore.</span><span class="sxs-lookup"><span data-stu-id="685d0-108">Define the expected format and the format used when an error is reported.</span></span> <span data-ttu-id="685d0-109">L'ultima voce in ogni matrice è -1, pertanto si presuppone che l'ultimo campo sia di larghezza variabile.</span><span class="sxs-lookup"><span data-stu-id="685d0-109">The last entry in each array is -1, therefore the last field is assumed to be of variable width.</span></span> <span data-ttu-id="685d0-110">Tale occorrenza si verifica quando l'ultima voce nella matrice è minore o uguale a 0.</span><span class="sxs-lookup"><span data-stu-id="685d0-110">This occurs when the last entry in the array is less than or equal to 0.</span></span>  
+2. <span data-ttu-id="28479-108">Definire il formato previsto e il formato usato al momento della segnalazione dell'errore.</span><span class="sxs-lookup"><span data-stu-id="28479-108">Define the expected format and the format used when an error is reported.</span></span> <span data-ttu-id="28479-109">L'ultima voce in ogni matrice è -1, pertanto si presuppone che l'ultimo campo sia di larghezza variabile.</span><span class="sxs-lookup"><span data-stu-id="28479-109">The last entry in each array is -1, therefore the last field is assumed to be of variable width.</span></span> <span data-ttu-id="28479-110">Tale occorrenza si verifica quando l'ultima voce nella matrice è minore o uguale a 0.</span><span class="sxs-lookup"><span data-stu-id="28479-110">This occurs when the last entry in the array is less than or equal to 0.</span></span>  
   
      [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]  
   
-3. <span data-ttu-id="685d0-111">Creare un nuovo oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>, specificando la larghezza e il formato.</span><span class="sxs-lookup"><span data-stu-id="685d0-111">Create a new <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object, defining the width and format.</span></span>  
+3. <span data-ttu-id="28479-111">Creare un nuovo oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>, specificando la larghezza e il formato.</span><span class="sxs-lookup"><span data-stu-id="28479-111">Create a new <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object, defining the width and format.</span></span>  
   
      [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]  
   
-4. <span data-ttu-id="685d0-112">Scorrere le righe, verificando il formato prima della lettura.</span><span class="sxs-lookup"><span data-stu-id="685d0-112">Loop through the rows, testing for format before reading.</span></span>  
+4. <span data-ttu-id="28479-112">Scorrere le righe, verificando il formato prima della lettura.</span><span class="sxs-lookup"><span data-stu-id="28479-112">Loop through the rows, testing for format before reading.</span></span>  
   
      [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]  
   
-5. <span data-ttu-id="685d0-113">Scrivere gli errori nella console.</span><span class="sxs-lookup"><span data-stu-id="685d0-113">Write errors to the console.</span></span>  
+5. <span data-ttu-id="28479-113">Scrivere gli errori nella console.</span><span class="sxs-lookup"><span data-stu-id="28479-113">Write errors to the console.</span></span>  
   
      [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]  
   
-## <a name="example"></a><span data-ttu-id="685d0-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="685d0-114">Example</span></span>  
- <span data-ttu-id="685d0-115">Di seguito è riportato l'esempio completo di lettura dal file `testfile.txt`.</span><span class="sxs-lookup"><span data-stu-id="685d0-115">Following is the complete example that reads from the file `testfile.txt`.</span></span>  
+## <a name="example"></a><span data-ttu-id="28479-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="28479-114">Example</span></span>  
+ <span data-ttu-id="28479-115">Di seguito è riportato l'esempio completo di lettura dal file `testfile.txt`.</span><span class="sxs-lookup"><span data-stu-id="28479-115">Following is the complete example that reads from the file `testfile.txt`.</span></span>  
   
  [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="685d0-116">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="685d0-116">Robust Programming</span></span>  
- <span data-ttu-id="685d0-117">Le seguenti condizioni possono generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="685d0-117">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="28479-116">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="28479-116">Robust Programming</span></span>  
+ <span data-ttu-id="28479-117">Le seguenti condizioni possono generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="28479-117">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="685d0-118">Impossibile analizzare la riga usando il formato specificato (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span><span class="sxs-lookup"><span data-stu-id="685d0-118">A row cannot be parsed using the specified format (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span></span> <span data-ttu-id="685d0-119">Il messaggio di eccezione specifica la riga che ha generato l'eccezione, mentre alla proprietà <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> viene assegnato il testo contenuto nella riga.</span><span class="sxs-lookup"><span data-stu-id="685d0-119">The exception message specifies the line causing the exception, while the <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> property is assigned to the text contained in the line.</span></span>  
+- <span data-ttu-id="28479-118">Impossibile analizzare la riga usando il formato specificato (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span><span class="sxs-lookup"><span data-stu-id="28479-118">A row cannot be parsed using the specified format (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span></span> <span data-ttu-id="28479-119">Il messaggio di eccezione specifica la riga che ha generato l'eccezione, mentre alla proprietà <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> viene assegnato il testo contenuto nella riga.</span><span class="sxs-lookup"><span data-stu-id="28479-119">The exception message specifies the line causing the exception, while the <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> property is assigned to the text contained in the line.</span></span>  
   
--   <span data-ttu-id="685d0-120">File specificato inesistente (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="685d0-120">The specified file does not exist (<xref:System.IO.FileNotFoundException>).</span></span>  
+- <span data-ttu-id="28479-120">File specificato inesistente (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="28479-120">The specified file does not exist (<xref:System.IO.FileNotFoundException>).</span></span>  
   
--   <span data-ttu-id="685d0-121">Un contesto di attendibilità parziale in cui gli utenti non dispongono di autorizzazioni sufficienti per accedere al file</span><span class="sxs-lookup"><span data-stu-id="685d0-121">A partial-trust situation in which the user does not have sufficient permissions to access the file.</span></span> <span data-ttu-id="685d0-122">(<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="685d0-122">(<xref:System.Security.SecurityException>).</span></span>  
+- <span data-ttu-id="28479-121">Un contesto di attendibilità parziale in cui gli utenti non dispongono di autorizzazioni sufficienti per accedere al file</span><span class="sxs-lookup"><span data-stu-id="28479-121">A partial-trust situation in which the user does not have sufficient permissions to access the file.</span></span> <span data-ttu-id="28479-122">(<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="28479-122">(<xref:System.Security.SecurityException>).</span></span>  
   
--   <span data-ttu-id="685d0-123">Percorso del file troppo lungo (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="685d0-123">The path is too long (<xref:System.IO.PathTooLongException>).</span></span>  
+- <span data-ttu-id="28479-123">Percorso del file troppo lungo (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="28479-123">The path is too long (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   <span data-ttu-id="685d0-124">L'utente non dispone di autorizzazioni sufficienti per accedere al file (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="685d0-124">The user does not have sufficient permissions to access the file (<xref:System.UnauthorizedAccessException>).</span></span>  
+- <span data-ttu-id="28479-124">L'utente non dispone di autorizzazioni sufficienti per accedere al file (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="28479-124">The user does not have sufficient permissions to access the file (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="685d0-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="685d0-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28479-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="28479-125">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>
@@ -76,6 +76,6 @@ ms.locfileid: "59334302"
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>
-- [<span data-ttu-id="685d0-126">Procedura: Leggere da file di testo con valori delimitati da virgole</span><span class="sxs-lookup"><span data-stu-id="685d0-126">How to: Read From Comma-Delimited Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [<span data-ttu-id="685d0-127">Procedura: Leggere da file di testo a larghezza fissa</span><span class="sxs-lookup"><span data-stu-id="685d0-127">How to: Read From Fixed-width Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
-- [<span data-ttu-id="685d0-128">Analisi dei file di testo con l'oggetto TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="685d0-128">Parsing Text Files with the TextFieldParser Object</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+- [<span data-ttu-id="28479-126">Procedura: Leggere da file di testo con valori delimitati da virgole</span><span class="sxs-lookup"><span data-stu-id="28479-126">How to: Read From Comma-Delimited Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
+- [<span data-ttu-id="28479-127">Procedura: Leggere da file di testo a larghezza fissa</span><span class="sxs-lookup"><span data-stu-id="28479-127">How to: Read From Fixed-width Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
+- [<span data-ttu-id="28479-128">Analisi dei file di testo con l'oggetto TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="28479-128">Parsing Text Files with the TextFieldParser Object</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
