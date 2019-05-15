@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 2edaf8c823f228ecb50a256961fe78980826d7f2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ab6c5029518cbe5deb0f2c5a16c99992022d7a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203717"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595477"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Utilizzo di eccezioni (Guida per programmatori C#)
 In C# gli errori del programma in fase di esecuzione vengono propagati attraverso il programma usando il meccanismo delle eccezioni. Le eccezioni vengono generate dal codice che rileva un errore e intercettate dal codice in grado di correggere l'errore. Le eccezioni possono essere generate da Common Language Runtime (CLR) in .NET Framework o dal codice in un programma. Quando viene generata un'eccezione, si propaga nello stack di chiamate finché non viene trovata un'istruzione `catch` per l'eccezione. Le eccezioni non rilevate vengono gestite da un gestore di eccezioni generico del sistema che visualizza una finestra di dialogo.  
@@ -38,11 +38,11 @@ In C# gli errori del programma in fase di esecuzione vengono propagati attravers
   
  Se non viene trovato alcun blocco `catch` compatibile nello stack di chiamate dopo la generazione di un'eccezione, si verifica una delle tre situazioni seguenti:  
   
--   Se l'eccezione è all'interno di un finalizzatore, il finalizzatore viene interrotto e viene chiamato il finalizzatore di base, se presente.  
+- Se l'eccezione è all'interno di un finalizzatore, il finalizzatore viene interrotto e viene chiamato il finalizzatore di base, se presente.  
   
--   Se lo stack di chiamate contiene un costruttore statico o un inizializzatore di campo statico, viene generata <xref:System.TypeInitializationException> con l'eccezione originale assegnata alla proprietà <xref:System.Exception.InnerException%2A> della nuova eccezione.  
+- Se lo stack di chiamate contiene un costruttore statico o un inizializzatore di campo statico, viene generata <xref:System.TypeInitializationException> con l'eccezione originale assegnata alla proprietà <xref:System.Exception.InnerException%2A> della nuova eccezione.  
   
--   Se viene raggiunto l'inizio del thread, il thread viene terminato.  
+- Se viene raggiunto l'inizio del thread, il thread viene terminato.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: 94e9f7133c9a78ece7df5bd10cfc27c79d0652c2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d7823611df5e02040fd8735e1fa6ea7841298836
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203013"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595060"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Metodi anonimi (Guida per programmatori C#)
 Nelle versioni di C# precedenti alla 2.0, l'unico modo per dichiarare un [delegato](../../../csharp/language-reference/keywords/delegate.md) consiste nell'usare [metodi denominati](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). In C# 2.0 sono stati introdotti i metodi anonimi e in C# versione 3.0 e successive le espressioni lambda sostituiscono i metodi anonimi come modalità preferita per la scrittura di codice inline. Le informazioni sui metodi anonimi in questo argomento, tuttavia, si applicano anche alle espressioni lambda. Esiste un caso in cui un metodo anonimo fornisce funzionalità non disponibili nelle espressioni lambda. I metodi anonimi consentono di omettere l'elenco di parametri. Ciò significa che un metodo anonimo può essere convertito in delegati con un'ampia gamma di firme. Questo non è possibile con le espressioni lambda. Per altre informazioni specifiche sulle espressioni lambda, vedere [Espressioni lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
@@ -49,9 +49,9 @@ Nelle versioni di C# precedenti alla 2.0, l'unico modo per dichiarare un [delega
 ## <a name="example"></a>Esempio  
  L'esempio seguente dimostra due modi per creare un'istanza di un delegato:  
   
--   Associazione del delegato a un metodo anonimo.  
+- Associazione del delegato a un metodo anonimo.  
   
--   Associazione del delegato con un metodo denominato (`DoWork`).  
+- Associazione del delegato con un metodo denominato (`DoWork`).  
   
  In ogni caso, viene visualizzato un messaggio quando viene richiamato il delegato.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72e9e698e510153073515aa891f1ed3b4d7b9886
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3f87fb330fbea1344cc8532519d358fe8580a9fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081437"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592709"
 ---
 # <a name="strong-named-assemblies"></a>Assembly con nomi sicuri
 L'assegnazione di un nome sicuro a un assembly permette di creare un'identità univoca e prevenire gli eventuali conflitti con altri assembly.  
@@ -32,13 +32,13 @@ L'assegnazione di un nome sicuro a un assembly permette di creare un'identità u
   
  Gli assembly con nome sicuro risultano utili negli scenari seguenti:  
   
--   Per abilitare il riferimento agli assembly da parte degli assembly con nome sicuro o per concedere a un `friend` l'accesso all'assembly da altri assembly con nome sicuro.  
+- Per abilitare il riferimento agli assembly da parte degli assembly con nome sicuro o per concedere a un `friend` l'accesso all'assembly da altri assembly con nome sicuro.  
   
--   Un'app deve accedere a versioni diverse dello stesso assembly. Ciò significa che sono necessarie più versioni di un assembly da caricare affiancate nello stesso dominio di app senza conflitti. Ad esempio , se negli assembly esistono estensioni differenti di una API con lo stesso nome semplice, l'assegnazione di un nome sicuro consente di fornire un'identità univoca a ciascuna versione dell'assembly.  
+- Un'app deve accedere a versioni diverse dello stesso assembly. Ciò significa che sono necessarie più versioni di un assembly da caricare affiancate nello stesso dominio di app senza conflitti. Ad esempio , se negli assembly esistono estensioni differenti di una API con lo stesso nome semplice, l'assegnazione di un nome sicuro consente di fornire un'identità univoca a ciascuna versione dell'assembly.  
   
--   Non si vuole influire negativamente sulle prestazioni delle app usando il proprio assembly, quindi si usa un assembly indipendente dal dominio. Questo richiede l'uso di nomi sicuri perché gli assembly indipendenti dal dominio devono essere installati in Global Assembly Cache.  
+- Non si vuole influire negativamente sulle prestazioni delle app usando il proprio assembly, quindi si usa un assembly indipendente dal dominio. Questo richiede l'uso di nomi sicuri perché gli assembly indipendenti dal dominio devono essere installati in Global Assembly Cache.  
   
--   Per centralizzare i servizi dell'app applicando i criteri dell'editore che prevedono l'installazione dell'assembly in Global Assembly Cache.  
+- Per centralizzare i servizi dell'app applicando i criteri dell'editore che prevedono l'installazione dell'assembly in Global Assembly Cache.  
   
  Gli sviluppatori open source che vogliono ottenere i vantaggi relativi all'identità di un assembly con nome sicuro possono archiviare la chiave privata associata a un assembly nel sistema di controllo del codice sorgente.  
   

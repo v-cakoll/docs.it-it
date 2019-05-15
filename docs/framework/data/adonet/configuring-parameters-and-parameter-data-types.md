@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034554"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583834"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurazione dei parametri e tipi di dati di parametro
 
@@ -33,7 +33,7 @@ Quando si aggiungono parametri, è necessario fornire una proprietà <xref:Syste
 
 ## <a name="working-with-parameter-placeholders"></a>Utilizzo dei segnaposto di parametri
 
-La sintassi per i segnaposto dei parametri varia in base all'origine dati. I provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] gestiscono in modo diverso la denominazione e la specifica di parametri e segnaposto di parametri. Questa sintassi è personalizzata in base a un'origine dati specifica, come descritto nella tabella seguente.
+La sintassi per i segnaposto dei parametri varia in base all'origine dati. I provider di dati .NET Framework gestiscono in modo diverso la denominazione e la specifica di parametri e segnaposto di parametri. Questa sintassi è personalizzata in base a un'origine dati specifica, come descritto nella tabella seguente.
 
 |Provider di dati|Sintassi di denominazione di parametri|
 |-------------------|-----------------------------|
@@ -44,9 +44,9 @@ La sintassi per i segnaposto dei parametri varia in base all'origine dati. I pro
 
 ## <a name="specifying-parameter-data-types"></a>Specifica dei tipi di dati di parametro
 
-Il tipo di dati di un parametro è specifico del provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Se si specifica il tipo, il valore dell'oggetto `Parameter` viene convertito nel tipo del provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] prima che il valore venga passato all'origine dati. È inoltre possibile specificare il tipo di un oggetto `Parameter` in modo generico impostando la proprietà `DbType` dell'oggetto `Parameter` su un determinato oggetto <xref:System.Data.DbType>.
+Il tipo di dati di un parametro è specifico del provider di dati .NET Framework. Che specifica il tipo converte il valore della `Parameter` al tipo di provider di dati .NET Framework prima di passare il valore per l'origine dati. È inoltre possibile specificare il tipo di un oggetto `Parameter` in modo generico impostando la proprietà `DbType` dell'oggetto `Parameter` su un determinato oggetto <xref:System.Data.DbType>.
 
-Il tipo del provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] di un oggetto `Parameter` viene inferito dal tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] di `Value` dell'oggetto `Parameter` oppure da `DbType` dell'oggetto `Parameter` . La tabella seguente illustra il tipo `Parameter` dedotto in base all'oggetto passato come valore di `Parameter` o all'oggetto `DbType`specificato.
+Il tipo di provider di dati .NET Framework di un `Parameter` l'oggetto viene dedotto dal tipo di .NET Framework il `Value` del `Parameter` oggetto, o dal `DbType` del `Parameter` oggetto. La tabella seguente illustra il tipo `Parameter` dedotto in base all'oggetto passato come valore di `Parameter` o all'oggetto `DbType`specificato.
 
 |Tipo .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
@@ -101,7 +101,7 @@ Le stored procedure offrono numerosi vantaggi nelle applicazioni guidate dai dat
 > [!NOTE]
 > Le istruzioni con parametri vengono eseguite sul server tramite `sp_executesql,` , che consente il riutilizzo del piano di query. I cursori o le variabili locali del batch `sp_executesql` non sono visibili per il batch che chiama `sp_executesql`. Le modifiche apportate al contesto del database durano solo fino al termine dell'esecuzione dell'istruzione `sp_executesql` . Per altre informazioni, vedere [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
 
-Quando si usano parametri con <xref:System.Data.SqlClient.SqlCommand> per eseguire una stored procedure di SQL Server, i nomi dei parametri aggiunti alla raccolta <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> devono corrispondere ai nomi dei marcatori dei parametri nella stored procedure. Con il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per SQL Server non è possibile usare il punto interrogativo (?) come segnaposto per passare i parametri a un'istruzione SQL o a una stored procedure. I parametri nella stored procedure vengono trattati come parametri denominati e vengono ricercati marcatori di parametri corrispondenti. Ad esempio, la stored procedure `CustOrderHist` è definita con un parametro denominato `@CustomerID`. Quando il codice esegue la stored procedure deve usare anche un parametro denominato `@CustomerID`.
+Quando si usano parametri con <xref:System.Data.SqlClient.SqlCommand> per eseguire una stored procedure di SQL Server, i nomi dei parametri aggiunti alla raccolta <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> devono corrispondere ai nomi dei marcatori dei parametri nella stored procedure. Il Provider di dati .NET Framework per SQL Server non supporta il segnaposto punto interrogativo (?) per passare parametri a un'istruzione SQL o una stored procedure. I parametri nella stored procedure vengono trattati come parametri denominati e vengono ricercati marcatori di parametri corrispondenti. Ad esempio, la stored procedure `CustOrderHist` è definita con un parametro denominato `@CustomerID`. Quando il codice esegue la stored procedure deve usare anche un parametro denominato `@CustomerID`.
 
 ```sql
 CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
@@ -119,9 +119,9 @@ In questo esempio viene illustrato come chiamare una stored procedure di SQL Ser
 
 ## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>Utilizzo di parametri con OleDbCommand o OdbcCommand
 
-Quando si usano parametri con <xref:System.Data.OleDb.OleDbCommand> o <xref:System.Data.Odbc.OdbcCommand>, l'ordine dei parametri aggiunti alla raccolta `Parameters` deve corrispondere all'ordine dei parametri definiti nella stored procedure. Con il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per OLE DB e il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per ODBC i parametri di una stored procedure vengono gestiti come segnaposto e i valori dei parametri vengono applicati nell'ordine. Inoltre, i parametri dei valori restituiti devono essere i primi parametri aggiunti alla raccolta `Parameters` .
+Quando si usano parametri con <xref:System.Data.OleDb.OleDbCommand> o <xref:System.Data.Odbc.OdbcCommand>, l'ordine dei parametri aggiunti alla raccolta `Parameters` deve corrispondere all'ordine dei parametri definiti nella stored procedure. Il Provider di dati .NET Framework per OLE DB e Provider di dati .NET Framework per ODBC i parametri di una stored procedure come segnaposto e applicare i valori dei parametri nell'ordine. Inoltre, i parametri dei valori restituiti devono essere i primi parametri aggiunti alla raccolta `Parameters` .
 
-Con il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per OLE DB e il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per ODBC non è possibile usare parametri denominati nel passaggio di parametri a un'istruzione SQL o a una stored procedure. In questo caso è necessario usare il punto interrogativo (?) come segnaposto, come nell'esempio seguente.
+Il Provider di dati .NET Framework per OLE DB e Provider di dati .NET Framework per ODBC non supportano i parametri denominati per passare parametri a un'istruzione SQL o una stored procedure. In questo caso è necessario usare il punto interrogativo (?) come segnaposto, come nell'esempio seguente.
 
 ```sql
 SELECT * FROM Customers WHERE CustomerID = ?

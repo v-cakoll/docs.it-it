@@ -6,19 +6,19 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9bce692c767169536d762a36ea2b9343655680c7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322082"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583076"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guida per programmatori C#)
 Il polimorfismo è spesso definito il terzo pilastro della programmazione orientata a oggetti, dopo l'incapsulamento e l'ereditarietà. Polimorfismo è una parola che deriva dal greco e significa "multiforme". Il polimorfismo presenta due aspetti distinti:  
   
--   In fase di esecuzione, oggetti di una classe derivata possono essere trattati come oggetti di una classe base in posizioni quali parametri del metodo e raccolte o matrici. In questo caso, il tipo dichiarato dell'oggetto non è più identico al tipo in fase di esecuzione.  
+- In fase di esecuzione, oggetti di una classe derivata possono essere trattati come oggetti di una classe base in posizioni quali parametri del metodo e raccolte o matrici. In questo caso, il tipo dichiarato dell'oggetto non è più identico al tipo in fase di esecuzione.  
   
--   Le classi base possono definire e implementare *metodi* [virtuali](../../../csharp/language-reference/keywords/virtual.md) e le classi derivate possono eseguirne l'[override](../../../csharp/language-reference/keywords/override.md), ovvero possono specificarne una propria definizione e implementazione. Durante la fase di esecuzione, quando il codice client chiama il metodo, CLR cerca il tipo in fase di esecuzione dell'oggetto e richiama quell'override del metodo virtuale. Quindi, nel codice sorgente è possibile chiamare un metodo su una classe base, causando l'esecuzione di una versione di tale metodo definita in una classe derivata.  
+- Le classi base possono definire e implementare *metodi* [virtuali](../../../csharp/language-reference/keywords/virtual.md) e le classi derivate possono eseguirne l'[override](../../../csharp/language-reference/keywords/override.md), ovvero possono specificarne una propria definizione e implementazione. Durante la fase di esecuzione, quando il codice client chiama il metodo, CLR cerca il tipo in fase di esecuzione dell'oggetto e richiama quell'override del metodo virtuale. Quindi, nel codice sorgente è possibile chiamare un metodo su una classe base, causando l'esecuzione di una versione di tale metodo definita in una classe derivata.  
   
  I metodi virtuali consentono di usare gruppi di oggetti correlati in modo uniforme. Si supponga ad esempio di avere un'applicazione di disegno che consenta a un utente di creare vari tipi di forme in un'area di disegno. In fase di compilazione non è possibile sapere i tipi specifici di forme che l'utente creerà. L'applicazione deve tuttavia tenere traccia di tutti i vari tipi di forme create e deve aggiornarli in risposta alle azioni del mouse dell'utente. È possibile usare il polimorfismo per risolvere questo problema in due passaggi di base:  
   
@@ -37,11 +37,11 @@ Il polimorfismo è spesso definito il terzo pilastro della programmazione orient
 ### <a name="virtual-members"></a>Membri virtuali  
  Quando una classe derivata eredita da una classe base, ottiene tutti i metodi, i campi, le proprietà e gli eventi della classe base. Il progettista della classe derivata può scegliere se:  
   
--   eseguire l'override di membri virtuali nella classe base;  
+- eseguire l'override di membri virtuali nella classe base;  
   
--   ereditare il metodo della classe di base più vicino senza eseguirne l'override;  
+- ereditare il metodo della classe di base più vicino senza eseguirne l'override;  
   
--   definire la nuova implementazione non virtuale di quei membri che nascondono le implementazioni della classe base.  
+- definire la nuova implementazione non virtuale di quei membri che nascondono le implementazioni della classe base.  
   
  Una classe derivata può eseguire l'override di un membro della classe base solo se quest'ultimo è dichiarato come [virtuale](../../../csharp/language-reference/keywords/virtual.md) o [astratto](../../../csharp/language-reference/keywords/abstract.md). Il membro derivato deve usare la parola chiave [override](../../../csharp/language-reference/keywords/override.md) per indicare esplicitamente che il metodo deve partecipare alla chiamata virtuale. Nel codice seguente ne viene illustrato un esempio:  
   
@@ -89,11 +89,11 @@ Il polimorfismo è spesso definito il terzo pilastro della programmazione orient
   
 ## <a name="in-this-section"></a>In questa sezione  
   
--   [Controllo delle versioni con le parole chiave Override e New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+- [Controllo delle versioni con le parole chiave Override e New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
--   [Sapere quando usare le parole chiave Override e New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+- [Sapere quando usare le parole chiave Override e New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Procedura: Eseguire l'override del metodo ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+- [Procedura: Eseguire l'override del metodo ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

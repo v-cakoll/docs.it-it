@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e4768b598f6046ffb7a0ac014d8594eac40309f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361265"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593061"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (opzione del compilatore C#)
 Specifica l'assembly i cui tipi non pubblici sono accessibili da un file con estensione NETMODULE.  
@@ -31,11 +31,11 @@ Specifica l'assembly i cui tipi non pubblici sono accessibili da un file con est
 ## <a name="remarks"></a>Osservazioni  
  È necessario usare **-moduleassemblyname** quando si compila un file con estensione netmodule, se sono soddisfatte le condizioni seguenti:  
   
--   Tramite il file con estensione netmodule deve essere possibile accedere a tipi non pubblici in un assembly esistente.  
+- Tramite il file con estensione netmodule deve essere possibile accedere a tipi non pubblici in un assembly esistente.  
   
--   L'utente conosce il nome dell'assembly in cui verrà compilato il file con estensione netmodule.  
+- L'utente conosce il nome dell'assembly in cui verrà compilato il file con estensione netmodule.  
   
--   L'assembly esistente ha concesso l'accesso assembly Friend all'assembly in cui verrà compilato il file con estensione netmodule.  
+- L'assembly esistente ha concesso l'accesso assembly Friend all'assembly in cui verrà compilato il file con estensione netmodule.  
   
  Per altre informazioni sulla compilazione di un file con estensione netmodule, vedere [-target:module (opzione del compilatore C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342455"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593324"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Procedura dettagliata: Creazione di listener di log personalizzati (Visual Basic)
 Questa procedura spiega come creare un listener di log personalizzato e configurarlo in modo che resti in ascolto dell'output dell'oggetto `My.Application.Log`.  
@@ -20,7 +20,7 @@ Questa procedura spiega come creare un listener di log personalizzato e configur
   
 #### <a name="to-create-the-listener"></a>Per creare il listener  
   
--   Nell'applicazione creare una classe denominata `SimpleListener` che eredita da <xref:System.Diagnostics.TraceListener>.  
+- Nell'applicazione creare una classe denominata `SimpleListener` che eredita da <xref:System.Diagnostics.TraceListener>.  
   
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]  
   
@@ -64,7 +64,7 @@ Questa procedura spiega come creare un listener di log personalizzato e configur
   
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>Per determinare il nome sicuro del listener  
   
--   Il codice seguente illustra come determinare il nome sicuro del tipo per `SimpleListener`.  
+- Il codice seguente illustra come determinare il nome sicuro del tipo per `SimpleListener`.  
   
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]  
   
@@ -80,11 +80,11 @@ Questa procedura spiega come creare un listener di log personalizzato e configur
   
      Se non è presente un file app.config:  
   
-    1.  Scegliere **Aggiungi nuovo elemento** dal menu **Progetto**.  
+    1. Scegliere **Aggiungi nuovo elemento** dal menu **Progetto**.  
   
-    2.  Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.  
+    2. Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.  
   
-    3.  Fare clic su **Aggiungi**.  
+    3. Fare clic su **Aggiungi**.  
   
 2. Individuare la sezione `<listeners>` all'interno della sezione `<source>` con l'attributo `name` "DefaultSource" che si trova nella sezione `<sources>` . La sezione `<sources>` si trova nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
   

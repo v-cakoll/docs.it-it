@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0f6f6fa8afe2e4aaea6e9f2b96329542b7fe5292
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218070"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607700"
 ---
 # <a name="assembly-security-considerations"></a>Considerazioni sulla sicurezza degli assembly
 <a name="top"></a> Quando si compila un assembly, è possibile specificare un set di autorizzazioni necessarie per consentirne l'esecuzione. Se sussistano o meno le autorizzazioni per l'utilizzo di un assembly lo si evince dalle evidenze.  
   
  Le evidenze vengono utilizzate in due modi diversi:  
   
--   L'evidenza di input viene unita all'evidenza acquisita durante il caricamento per creare un set di evidenze finale utilizzato per la risoluzione dei criteri. I metodi in cui viene usata tale semantica sono **Assembly.Load**, **Assembly.LoadFrom** e **Activator.CreateInstance**.  
+- L'evidenza di input viene unita all'evidenza acquisita durante il caricamento per creare un set di evidenze finale utilizzato per la risoluzione dei criteri. I metodi in cui viene usata tale semantica sono **Assembly.Load**, **Assembly.LoadFrom** e **Activator.CreateInstance**.  
   
--   L'evidenza di input viene utilizzata non modificata come set di evidenze finale per la risoluzione dei criteri. I metodi in cui viene usata tale semantica sono **Assembly.Load(byte[])** e **AppDomain.DefineDynamicAssembly()**.  
+- L'evidenza di input viene utilizzata non modificata come set di evidenze finale per la risoluzione dei criteri. I metodi in cui viene usata tale semantica sono **Assembly.Load(byte[])** e **AppDomain.DefineDynamicAssembly()**.  
   
  Autorizzazioni facoltative possono essere concesse dai [criteri di sicurezza](../../../docs/framework/misc/code-access-security-basics.md) impostati per il computer che eseguirà l'assembly. Se si desidera che il proprio codice gestisca tutte le possibili eccezioni di sicurezza, si può procedere in uno dei modi seguenti:  
   
--   Inserire una richiesta per tutte le autorizzazioni di cui il codice deve disporre e gestire gli errori che si verificheranno in fase di caricamento nel caso in cui le autorizzazioni non venissero riconosciute.  
+- Inserire una richiesta per tutte le autorizzazioni di cui il codice deve disporre e gestire gli errori che si verificheranno in fase di caricamento nel caso in cui le autorizzazioni non venissero riconosciute.  
   
--   Non prevedere una richiesta per le autorizzazioni eventualmente necessarie, ma limitarsi a predisporre la gestione delle eccezioni di sicurezza che si verificheranno in mancanza di tali autorizzazioni.  
+- Non prevedere una richiesta per le autorizzazioni eventualmente necessarie, ma limitarsi a predisporre la gestione delle eccezioni di sicurezza che si verificheranno in mancanza di tali autorizzazioni.  
   
     > [!NOTE]
     >  Quello della sicurezza è un tema complesso in cui è possibile scegliere tra molte possibili opzioni. Per altre informazioni, vedere [Concetti principali sulla sicurezza](../../../docs/standard/security/key-security-concepts.md).  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: a205682bb15b5d25ba0a2df895533d3443a41409
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2394a23ddd59d09ce53c78fc4486fc5bae9e8516
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663474"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583364"
 ---
 # <a name="-reference-visual-basic"></a>-riferimenti (Visual Basic)
 Indica al compilatore di rendere disponibili per il progetto in corso di compilazione informazioni sui tipi negli assembly specificati.  
@@ -46,7 +46,7 @@ Indica al compilatore di rendere disponibili per il progetto in corso di compila
   
  Per il compilatore di riconoscere un tipo in un assembly (non un modulo), è necessario imporre la risoluzione del tipo. Un esempio di come è possibile eseguire questa operazione consiste nel definire un'istanza del tipo. Esistono altri modi risolvere i nomi dei tipi in un assembly per consentire al compilatore. Ad esempio, se si eredita da un tipo in un assembly, il nome del tipo quindi diventa noto al compilatore.  
   
- Il file di risposta Vbc. rsp, che fa riferimento comunemente utilizzati [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assembly, viene usato per impostazione predefinita. Usare `-noconfig` se non si desidera al compilatore di utilizzare vbc. rsp.  
+ Il file di risposta Vbc. rsp, che fa riferimento agli assembly di .NET Framework comunemente utilizzati, viene usato per impostazione predefinita. Usare `-noconfig` se non si desidera al compilatore di utilizzare vbc. rsp.  
   
  La forma breve di `-reference` è `/r`.  
   

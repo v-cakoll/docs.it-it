@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: fc8e55d8f3824ca11c575479863491d7f949efa3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665850"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592509"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Cenni preliminari su Windows Form e applicazioni non gestite
 Le applicazioni e i controlli Windows Form possono interagire con le applicazioni non gestite, con alcune raccomandazioni. Nelle sezioni che seguono vengono descritti configurazioni e scenari supportati e non supportati dalle applicazioni e dai controlli Windows Form.  
@@ -47,7 +47,7 @@ Le applicazioni e i controlli Windows Form possono interagire con le applicazion
  Il ciclo di messaggi di un'applicazione è un ciclo interno di programma che recupera i messaggi dalla coda di messaggi di un thread, li converte e li invia all'applicazione per la gestione. Il ciclo di messaggi di Windows Form non dispone della stessa architettura dei cicli di messaggi fornita dalle applicazioni precedenti, come le applicazioni Visual Basic 6.0 e le applicazioni MFC. I messaggi inseriti nel ciclo dei messaggi possono essere gestiti in modo diverso da quanto previsto nel Windows Form. Di conseguenza, può prodursi un comportamento imprevisto. Alcune combinazioni di tasti potrebbero non funzionare, così come alcune operazioni eseguite con il mouse, oppure alcuni eventi potrebbero non essere generati in modo appropriato.  
   
 ## <a name="resolving-interoperability-issues"></a>Risoluzione di problemi di interoperabilità  
- È possibile risolvere i problemi di interoperabilità visualizzando il form in un ciclo di messaggi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , creato usando il metodo <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> .  
+ È possibile risolvere i problemi visualizzando il form in un ciclo di messaggi di .NET Framework, che viene creato utilizzando il <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> (metodo).  
   
  Perché un Windows Form funzioni correttamente da un'applicazione client COM, è necessario eseguirlo in un ciclo di messaggi Windows Form. Per eseguire questa operazione, adottare uno degli approcci seguenti:  
   

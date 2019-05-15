@@ -2,12 +2,12 @@
 title: 'Procedura: Aggiungere individuazione a un client e un servizio WCF a livello di codice'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de227e8df895dd4c031aadce16102559c43e47ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761546"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586620"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedura: Aggiungere individuazione a un client e un servizio WCF a livello di codice
 In questo argomento viene illustrato come rendere individuabile un servizio Windows Communication Foundation (WCF). Si basa il [self-hosting](https://go.microsoft.com/fwlink/?LinkId=145523) esempio.  
@@ -16,7 +16,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
   
 1. Aprire la soluzione self-hosting in Visual Studio 2012. L'esempio si trova nella directory TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
-2. Aggiungere al progetto di servizio un riferimento a `System.ServiceModel.Discovery.dll`. Si può vedere un messaggio di errore che informa che "System. ServiceModel.Discovery.dll o una delle relative dipendenze richiede una versione successiva del [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] rispetto a quella specificata nel progetto... " Se viene visualizzato questo messaggio, fare clic sul progetto in Esplora soluzioni e scegliere **proprietà**. Nel **proprietà progetto** finestra, assicurarsi che il **Framework di destinazione** è [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2. Aggiungere al progetto di servizio un riferimento a `System.ServiceModel.Discovery.dll`. Si può vedere un messaggio di errore che informa che "System. ServiceModel.Discovery.dll o una delle relative dipendenze richiede una versione successiva di .NET Framework rispetto a quella specificata nel progetto..." Se viene visualizzato questo messaggio, fare clic sul progetto in Esplora soluzioni e scegliere **proprietà**. Nel **proprietà progetto** finestra, assicurarsi che il **Framework di destinazione** è [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 3. Aprire il file Service.cs e aggiungere l'istruzione `using` seguente.  
   

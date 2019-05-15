@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: a98528a4bae1a22352096958cfec2350b21ddf8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c69210c3d8f35ccab4375cfe7e49e2de147f2289
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103415"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599877"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Introduzione alle applicazioni di servizio Windows
 I servizi Microsoft Windows, noti in precedenza come servizi NT, consentono di creare applicazioni eseguibili di lunga durata in esecuzione in sessioni Windows dedicate. Questi servizi possono essere avviati automaticamente all'avvio del computer, possono essere sospesi e riavviati e non visualizzano alcuna interfaccia utente. Queste funzionalità rendono i servizi ideali per l'uso in un server o per fornire funzionalità di lunga durata che non interferiscono con gli altri utenti che lavorano sullo stesso computer. È anche possibile eseguire i servizi nel contesto di sicurezza di un account utente specifico diverso dall'utente connesso o dall'account computer predefinito. Per altre informazioni sui servizi e le sessioni di Windows, vedere la documentazione di Windows SDK.  
@@ -41,19 +41,19 @@ I servizi Microsoft Windows, noti in precedenza come servizi NT, consentono di c
 ## <a name="service-applications-vs-other-visual-studio-applications"></a>Applicazioni di servizio a confronto con altre applicazioni di Visual Studio  
  Le applicazioni di servizio funzionano in modo diverso rispetto a molti altri tipi di progetto per vari aspetti:  
   
--   Il file eseguibile compilato creato da un progetto di applicazione di servizio deve essere installato nel server prima che il progetto possa funzionare in modo significativo. Non è possibile eseguire il debug o eseguire un'applicazione di servizio premendo F5 o F11. Non è possibile eseguire immediatamente un servizio o eseguirne il codice istruzione per istruzione. È invece necessario installare e avviare il servizio, quindi collegare un debugger al processo del servizio. Per altre informazioni, vedere [Procedura: Eseguire il debug di applicazioni di servizio di Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
+- Il file eseguibile compilato creato da un progetto di applicazione di servizio deve essere installato nel server prima che il progetto possa funzionare in modo significativo. Non è possibile eseguire il debug o eseguire un'applicazione di servizio premendo F5 o F11. Non è possibile eseguire immediatamente un servizio o eseguirne il codice istruzione per istruzione. È invece necessario installare e avviare il servizio, quindi collegare un debugger al processo del servizio. Per altre informazioni, vedere [Procedura: Eseguire il debug di applicazioni di servizio di Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
   
--   A differenza di alcuni tipi di progetti, è necessario creare i componenti di installazione per le applicazioni di servizio. I componenti di installazione installano e registrano il servizio nel server e creano una voce per il servizio con **Gestione controllo servizi** di Windows. Per altre informazioni, vedere [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+- A differenza di alcuni tipi di progetti, è necessario creare i componenti di installazione per le applicazioni di servizio. I componenti di installazione installano e registrano il servizio nel server e creano una voce per il servizio con **Gestione controllo servizi** di Windows. Per altre informazioni, vedere [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
--   Il metodo `Main` per l'applicazione di servizio deve eseguire il comando Esegui per i servizi contenuti nel progetto. Il metodo `Run` carica i servizi in **Gestione controllo servizi** nel server appropriato. Se si usa il modello di progetto **Servizio Windows**, questo metodo viene creato automaticamente. Si noti che il caricamento di un servizio non equivale all'avvio del servizio. Vedere "Ciclo di vita del servizio" di seguito per altre informazioni.  
+- Il metodo `Main` per l'applicazione di servizio deve eseguire il comando Esegui per i servizi contenuti nel progetto. Il metodo `Run` carica i servizi in **Gestione controllo servizi** nel server appropriato. Se si usa il modello di progetto **Servizio Windows**, questo metodo viene creato automaticamente. Si noti che il caricamento di un servizio non equivale all'avvio del servizio. Vedere "Ciclo di vita del servizio" di seguito per altre informazioni.  
   
--   Le applicazioni di servizio Windows vengono eseguite in un oggetto finestra diverso rispetto all'oggetto interattivo dell'utente connesso. Un oggetto finestra è un oggetto sicuro che contiene gli Appunti, un set di atom globali e un gruppo di oggetti desktop. Dato che l'oggetto del servizio Windows non è interattivo, le finestre di dialogo generate da un'applicazione di servizio Windows non saranno visibili e potrebbero causare il blocco del programma. Analogamente, i messaggi di errore devono essere registrati nel registro eventi di Windows anziché essere generati nell'interfaccia utente.  
+- Le applicazioni di servizio Windows vengono eseguite in un oggetto finestra diverso rispetto all'oggetto interattivo dell'utente connesso. Un oggetto finestra è un oggetto sicuro che contiene gli Appunti, un set di atom globali e un gruppo di oggetti desktop. Dato che l'oggetto del servizio Windows non è interattivo, le finestre di dialogo generate da un'applicazione di servizio Windows non saranno visibili e potrebbero causare il blocco del programma. Analogamente, i messaggi di errore devono essere registrati nel registro eventi di Windows anziché essere generati nell'interfaccia utente.  
   
      Le classi del servizio Windows supportate da .NET Framework non supportano l'interazione con gli oggetti interattivi, ovvero l'utente connesso. Inoltre, .NET Framework non include classi che rappresentano oggetti e desktop. Se il servizio Windows deve interagire con altri oggetti, sarà necessario accedere all'API di Windows non gestita. Per altre informazioni, vedere la documentazione di Windows SDK.  
   
      L'interazione del servizio Windows con l'utente o altri oggetti deve essere progettata attentamente per includere scenari come l'assenza di un utente connesso o un utente con un set di oggetti desktop imprevisto. In alcuni casi, potrebbe essere più opportuno scrivere un'applicazione Windows eseguita sotto il controllo dell'utente.  
   
--   Le applicazioni di servizio Windows vengono eseguite all'interno di un contesto di sicurezza proprio e avviate prima che l'utente acceda al computer Windows in cui sono installate. È necessario pianificare attentamente l'account utente nell'ambito del quale eseguire il servizio. Un servizio in esecuzione con l'account di sistema ha più autorizzazioni e privilegi rispetto al contesto di un account utente.  
+- Le applicazioni di servizio Windows vengono eseguite all'interno di un contesto di sicurezza proprio e avviate prima che l'utente acceda al computer Windows in cui sono installate. È necessario pianificare attentamente l'account utente nell'ambito del quale eseguire il servizio. Un servizio in esecuzione con l'account di sistema ha più autorizzazioni e privilegi rispetto al contesto di un account utente.  
   
 ## <a name="service-lifetime"></a>Ciclo di vita del servizio  
  Un servizio passa attraverso diversi stati interni durante il ciclo di vita. In primo luogo, il servizio viene installato nel sistema in cui verrà eseguito. Questo processo esegue i programmi di installazione per il progetto di servizio e carica il servizio in **Gestione controllo servizi** per tale computer. **Gestione controllo servizi** è l'utilità centrale fornita da Windows per amministrare i servizi.  
@@ -76,9 +76,9 @@ I servizi Microsoft Windows, noti in precedenza come servizi NT, consentono di c
   
 ## <a name="requirements"></a>Requisiti  
   
--   I servizi devono essere creati in un progetto di applicazione **Servizio Windows** o in un altro progetto abilitato per .NET Framework, che viene compilato come file EXE ed eredita dalla classe <xref:System.ServiceProcess.ServiceBase>.  
+- I servizi devono essere creati in un progetto di applicazione **Servizio Windows** o in un altro progetto abilitato per .NET Framework, che viene compilato come file EXE ed eredita dalla classe <xref:System.ServiceProcess.ServiceBase>.  
   
--   I progetti contenenti servizi Windows devono avere componenti di installazione per il progetto e i relativi servizi. È possibile ottenere facilmente questo risultato dalla finestra **Proprietà**. Per altre informazioni, vedere [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+- I progetti contenenti servizi Windows devono avere componenti di installazione per il progetto e i relativi servizi. È possibile ottenere facilmente questo risultato dalla finestra **Proprietà**. Per altre informazioni, vedere [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

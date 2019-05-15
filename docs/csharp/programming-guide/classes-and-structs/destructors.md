@@ -7,27 +7,27 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 19c1f754aaef66197b033a68bc215255511cd618
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 87755eadeaebb72c5a8ce147ba2e6faf109e6c12
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202886"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584380"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizzatori (Guida per programmatori C#)
 I finalizzatori (detti anche **distruttori**) vengono usati per eseguire operazioni di pulizia finale eventualmente necessarie quando un'istanza di classe viene raccolta da Garbage Collector.  
   
 ## <a name="remarks"></a>Osservazioni  
   
--   I finalizzatori non possono essere definiti negli struct. Vengono usati solo con le classi.  
+- I finalizzatori non possono essere definiti negli struct. Vengono usati solo con le classi.  
   
--   Una classe può avere un solo finalizzatore.  
+- Una classe può avere un solo finalizzatore.  
   
--   I finalizzatori non possono essere ereditati e non è possibile eseguirne l'overload.  
+- I finalizzatori non possono essere ereditati e non è possibile eseguirne l'overload.  
   
--   I finalizzatori non possono essere chiamati. Vengono richiamati automaticamente.  
+- I finalizzatori non possono essere chiamati. Vengono richiamati automaticamente.  
   
--   Un finalizzatore non accetta modificatori e non ha parametri.  
+- Un finalizzatore non accetta modificatori e non ha parametri.  
   
  Ad esempio, di seguito è riportata la dichiarazione di un finalizzatore per la classe `Car`.
   
@@ -72,11 +72,11 @@ protected override void Finalize()
   
  Per informazioni dettagliate sulla pulitura delle risorse, vedere gli argomenti seguenti:  
   
--   [Pulizia delle risorse non gestite](../../../standard/garbage-collection/unmanaged.md)  
+- [Pulizia delle risorse non gestite](../../../standard/garbage-collection/unmanaged.md)  
   
--   [Implementazione di un metodo Dispose](../../../standard/garbage-collection/implementing-dispose.md)  
+- [Implementazione di un metodo Dispose](../../../standard/garbage-collection/implementing-dispose.md)  
   
--   [Istruzione using](../../../csharp/language-reference/keywords/using-statement.md)  
+- [Istruzione using](../../../csharp/language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente crea tre classi che costituiscono una catena di ereditarietà. La classe `First` è la classe base, `Second` è derivata da `First` e `Third` è derivata da `Second`. Tutte e tre hanno finalizzatori. In `Main` viene creata un'istanza della classe più derivata. Durante l'esecuzione del programma, si noti che i finalizzatori delle tre classi vengono chiamati automaticamente e in ordine, dalla classe più derivata alla meno derivata.  

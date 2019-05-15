@@ -2,12 +2,12 @@
 title: Generatore EDM (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 7f06b393cd7e7ccf3d3637d6fb46eb6d983d943a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9c75cd7589b1c5fb28112a22390acf90f46e465
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607671"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584581"
 ---
 # <a name="edm-generator-edmgenexe"></a>Generatore EDM (EdmGen.exe)
 
@@ -21,7 +21,7 @@ EdmGen.exe è uno strumento da riga di comando per l'uso di file di modello e di
 
 - Generare un file di codice C# o Visual Basic contenente le visualizzazioni pregenerate per un modello esistente. Per altre informazioni, [come: Pre-generare viste per migliorare le prestazioni delle Query](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100)).
 
-Lo strumento EdmGen.exe viene installato nella directory [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. In molti casi, il file si trova in C:\windows\Microsoft.NET\Framework\v4.0. Per i sistemi a 64 bit, questa directory si trova in C:\windows\Microsoft.NET\Framework64\v4.0. È anche possibile accedere allo strumento EdmGen.exe dal prompt dei comandi di Visual Studio (fare clic su **avviare**, scegliere **tutti i programmi**, scegliere **Microsoft Visual Studio 2010**, scegliere **Strumenti di visual Studio**, quindi fare clic su **Prompt dei comandi di Visual Studio 2010**).
+Lo strumento EdmGen.exe viene installato nella directory di .NET Framework. In molti casi, il file si trova in C:\windows\Microsoft.NET\Framework\v4.0. Per i sistemi a 64 bit, questa directory si trova in C:\windows\Microsoft.NET\Framework64\v4.0. È anche possibile accedere allo strumento EdmGen.exe dal prompt dei comandi di Visual Studio (fare clic su **avviare**, scegliere **tutti i programmi**, scegliere **Microsoft Visual Studio 2010**, scegliere **Strumenti di visual Studio**, quindi fare clic su **Prompt dei comandi di Visual Studio 2010**).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -46,7 +46,7 @@ Quando si usa lo strumento EdmGen.exe, è necessario specificare una delle modal
 |Opzione|Descrizione|
 |------------|-----------------|
 |`/p[roject]:`\<string>|Consente di specificare il nome del progetto da usare. Il nome del progetto viene usato come impostazione predefinita per la configurazione dello spazio dei nomi, il nome dei file di modello e di mapping, il nome del file di origine degli oggetti e il nome del file di origine di generazione delle visualizzazioni. Il nome del contenitore di entità viene impostato su \<progetto > contesto.|
-|`/prov[ider]:`\<string>|Nome del provider di dati [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] da usare per generare il file del modello di archiviazione (con estensione ssdl). Il provider predefinito è il [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
+|`/prov[ider]:`\<string>|Nome del provider di dati .NET Framework da utilizzare per generare il file del modello di archiviazione (con estensione ssdl). Il provider predefinito è il provider di dati .NET Framework per SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
 |`/c[onnectionstring]:`\<stringa di connessione >|Consente di specificare la stringa usata per la connessione all'origine dati.|
 |`/incsdl:`\<file>|Consente di specificare il file con estensione csdl o una directory contenente i file con questa estensione. Questo argomento può essere specificato più volte in modo che sia possibile indicare più directory o file con estensione csdl. La specifica di più directory può essere utile per generare classi (`/mode:EntityClassGeneration`) o visualizzazioni (`/mode:ViewGeneration`) quando il modello concettuale è suddiviso in più file. Può inoltre risultare utile quando si desidera convalidare più modelli (`/mode:ValidateArtifacts`).|
 |`/refcsdl:`\<file>|Consente di specificare il file con estensione csdl aggiuntivo o i file usati per risolvere qualsiasi riferimento nel file con estensione csdl di origine. Il file con estensione csdl di origine è il file specificato dall'opzione `/incsdl`. Il file `/refcsdl` contiene i tipi da cui dipende il file con estensione csdl di origine. Questo argomento può essere specificato più volte.|

@@ -16,24 +16,24 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbd8d901f018d95b8a1f5c81c813853838c4a4cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050469"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586292"
 ---
 # <a name="namespaces-in-visual-basic"></a>Spazi dei nomi in Visual Basic
 Gli spazi dei nomi organizzano gli oggetti definiti in un assembly. Gli assembly possono contenere più spazi dei nomi, che a loro volta possono contenere altri spazi dei nomi. Gli spazi dei nomi consentono di evitare problemi di ambiguità e di semplificare i riferimenti quando si usano gruppi di oggetti di grandi dimensioni, ad esempio librerie di classi.  
   
- Ad esempio, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] definisce la classe <xref:System.Windows.Forms.ListBox> nello spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> . Il frammento di codice seguente illustra come dichiarare una variabile usando il nome completo per questa classe:  
+ Ad esempio, .NET Framework definisce il <xref:System.Windows.Forms.ListBox> classe la <xref:System.Windows.Forms?displayProperty=nameWithType> dello spazio dei nomi. Il frammento di codice seguente illustra come dichiarare una variabile usando il nome completo per questa classe:  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>Evitare conflitti di nomi  
- Gli spazi dei nomi di[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] consentono di risolvere un problema, talvolta chiamato *inquinamento dello spazio dei nomi*, per cui lo sviluppatore di una libreria di classi incontra difficoltà a causa dell'uso di nomi simili in un'altra libreria. Questi conflitti con i componenti esistenti sono talvolta denominati *conflitti di nomi*.  
+ Gli spazi dei nomi .NET framework risolvere un problema, talvolta chiamato *inquinamento dello spazio dei nomi*, in cui lo sviluppatore di una libreria di classi è complicato dall'uso di nomi simili in un'altra libreria. Questi conflitti con i componenti esistenti sono talvolta denominati *conflitti di nomi*.  
   
- Se, ad esempio, si crea una nuova classe denominata `ListBox`, è possibile usarla all'interno del progetto senza qualificazione. Tuttavia, se si desidera utilizzare il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> classe nello stesso progetto, è necessario usare un riferimento completo per rendere univoco il riferimento. Se il riferimento non è univoco, Visual Basic genera un errore che informa che il nome è ambiguo. L'esempio di codice seguente illustra come dichiarare questi oggetti:  
+ Se, ad esempio, si crea una nuova classe denominata `ListBox`, è possibile usarla all'interno del progetto senza qualificazione. Tuttavia, se si desidera usare .NET Framework <xref:System.Windows.Forms.ListBox> classe nello stesso progetto, è necessario usare un riferimento completo per rendere univoco il riferimento. Se il riferimento non è univoco, Visual Basic genera un errore che informa che il nome è ambiguo. L'esempio di codice seguente illustra come dichiarare questi oggetti:  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   

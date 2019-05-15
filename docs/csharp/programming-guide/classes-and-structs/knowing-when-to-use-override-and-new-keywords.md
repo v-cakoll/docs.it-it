@@ -7,12 +7,12 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: b1d99b0c5241a99ba7f621faff7c39d20776b2ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d653761236cae580eb78a35f9697764f600ec6ee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496257"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583115"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Sapere quando utilizzare le parole chiave Override e New (Guida per programmatori C#)
 Nel linguaggio C# un metodo in una classe derivata può avere lo stesso nome di un metodo in una classe di base. È possibile specificare in che modo avviene l'interazione tra i metodi usando le parole chiave [new](../../../csharp/language-reference/keywords/new.md) e [override](../../../csharp/language-reference/keywords/override.md). Il modificatore `override` *estende* il metodo della classe di base e il modificatore `new` lo *nasconde*. La differenza è illustrata negli esempi riportati in questo argomento.  
@@ -39,11 +39,11 @@ class DerivedClass : BaseClass
   
  Nel metodo `Main` dichiarare le variabili `bc`, `dc` e `bcdc`.  
   
--   `bc`è di tipo `BaseClass` e il suo valore è di tipo `BaseClass`.  
+- `bc`è di tipo `BaseClass` e il suo valore è di tipo `BaseClass`.  
   
--   `dc`è di tipo `DerivedClass` e il suo valore è di tipo `DerivedClass`.  
+- `dc`è di tipo `DerivedClass` e il suo valore è di tipo `DerivedClass`.  
   
--   `bcdc`è di tipo `BaseClass` e il suo valore è di tipo `DerivedClass`. Si tratta della variabile a cui prestare attenzione.  
+- `bcdc`è di tipo `BaseClass` e il suo valore è di tipo `DerivedClass`. Si tratta della variabile a cui prestare attenzione.  
   
  Poiché `bc` e `bcdc` sono di tipo `BaseClass`, possono solo accedere direttamente a `Method1`, a meno che non venga usato il cast. Attraverso la variabile `dc` è possibile accedere sia a `Method1` che a `Method2`. Queste relazioni sono illustrate nel codice seguente.  
   

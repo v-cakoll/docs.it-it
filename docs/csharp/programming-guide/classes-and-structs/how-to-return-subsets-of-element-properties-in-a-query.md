@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 80f13250576957b252d6d83bfbcf70346b49b5a7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: da4ecb11c51f42c2297b6d40ed9a963590b3f441
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980727"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599976"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Procedura: Restituire sottoinsiemi di proprietà degli elementi in una query (Guida per programmatori C#)
 Usare un tipo anonimo in un'espressione di query quando si verificano entrambe le condizioni seguenti:  
   
--   Si vogliono restituire solo alcune delle proprietà di ogni elemento di origine.  
+- Si vogliono restituire solo alcune delle proprietà di ogni elemento di origine.  
   
--   Non è necessario archiviare la query all'esterno dell'ambito del metodo in cui è stata eseguita.  
+- Non è necessario archiviare la query all'esterno dell'ambito del metodo in cui è stata eseguita.  
   
  Se si vuole restituire solo una proprietà o un campo da ogni elemento di origine, è sufficiente usare l'operatore punto nella clausola `select`. Per restituire, ad esempio, solo l'`ID` di ogni `student`, scrivere la clausola `select` come segue:  
   
@@ -44,7 +44,7 @@ Console.WriteLine(student.First + " " + student.Last);
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Per eseguire questo codice, copiare e incollare la classe in un progetto di applicazione console di Visual C# creato in Visual Studio. Per impostazione predefinita, questo progetto usa la versione 3.5 di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] e contiene un riferimento a System.Core.dll e una direttiva `using` per System.Linq. Se uno o più di questi requisiti non sono presenti nel progetto, è possibile aggiungerli manualmente.   
+- Per eseguire questo codice, copiare e incollare la classe in un progetto di applicazione console di Visual C# creato in Visual Studio. Per impostazione predefinita, questo progetto usa la versione 3.5 di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] e contiene un riferimento a System.Core.dll e una direttiva `using` per System.Linq. Se uno o più di questi requisiti non sono presenti nel progetto, è possibile aggiungerli manualmente.   
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,12 +2,12 @@
 title: 'Procedura: Leggere dati oggetto in un file XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 33e4395c2be421385948d256a989d06ac215c9c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2608c737744f5c0789c69147063f9ced0ffd6d9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583483"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595235"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Procedura: Leggere dati oggetto in un file XML (C#)
 Questo esempio legge i dati oggetto scritti in precedenza in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -52,11 +52,11 @@ public void ReadXML()
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   La classe da serializzare non ha un costruttore pubblico senza parametri.  
+- La classe da serializzare non ha un costruttore pubblico senza parametri.  
   
--   I dati nel file non rappresentano i dati della classe da deserializzare.  
+- I dati nel file non rappresentano i dati della classe da deserializzare.  
   
--   Il file non esiste (<xref:System.IO.IOException>).  
+- Il file non esiste (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Verificare sempre gli input e non deserializzare mai i dati proveniente da un'origine non attendibile. L'oggetto ricreato viene eseguito in un computer locale con le autorizzazioni del codice che ha eseguito la deserializzazione. Prima di usare i dati nell'applicazione verificare tutti gli input.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 458b53c9a2f1ea9774a61bb3439fe041cc8c2861
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fee2aad90485d3d06f1730d5937fd4e1240b4801
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672094"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064040"
 ---
 # <a name="c-guide"></a>Guida a C#
 
@@ -39,7 +39,7 @@ La Guida a C# è organizzata in varie sezioni. È possibile leggere le sezioni n
   * Le esercitazioni di introduzione a C# presentano esercitazioni interattive che consentono agli sviluppatori neofiti di esplorare e apprendere il linguaggio C# nel browser tramite un'interfaccia REPL (Read Eval Print Loop). Dopo aver completato le lezioni interattive, è possibile migliorare le proprie competenze di scrittura del codice facendo pratica con le stesse lezioni nel proprio computer.
 
 * [Esercitazioni](tutorials/index.md)
-  * Questa sezione offre un'ampia gamma di scenari end-to-end, inclusi descrizioni e codice. Viene illustrato il motivo per cui preferire determinati costrutti, vengono indicate le funzionalità di C# che offrono i risultati migliori in determinate situazioni e vengono presentate alcune implementazioni di riferimento per attività comuni. Se si ritiene di apprendere meglio analizzando il codice, partire da questa sezione. È anche possibile scaricare tutto il codice e sperimentare nel proprio ambiente.
+  * Questa sezione offre un'ampia gamma di scenari end-to-end, inclusi descrizioni e codice. Viene illustrato il motivo per cui preferire determinati costrutti, vengono indicate le funzionalità di C# che offrono i risultati migliori in determinate situazioni e vengono presentate alcune implementazioni di riferimento per attività comuni. Se si apprende meglio analizzando il codice, partire da questa sezione. È anche possibile scaricare tutto il codice e sperimentare nel proprio ambiente.
 
 * [Panoramica di C#](tour-of-csharp/index.md)
   * Questa sezione offre una panoramica del linguaggio. Vengono descritti gli elementi che costituiscono il linguaggio C# e vengono illustrate le funzionalità di quest'ultimo. Sono disponibili piccoli esempi di tutti gli elementi della sintassi C# e vengono discussi i principali aspetti del linguaggio.

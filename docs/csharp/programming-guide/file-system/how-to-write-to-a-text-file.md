@@ -9,12 +9,12 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: da1526afe48a0d4bda63274380dcf59ee30c480e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e3fa0eb12c9259629ff8151ff2d057f2744e9e36
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968803"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595620"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Procedura: Scrivere in un file di testo (Guida per programmatori C#)
 In questi esempi vengono mostrati vari modi per scrivere testo in un file. I primi due esempi usano metodi pratici statici nella classe <xref:System.IO.File?displayProperty=nameWithType> per scrivere ogni elemento di qualsiasi oggetto `IEnumerable<string>` e una stringa in un file di testo. Nell'esempio 3 viene illustrato come aggiungere testo a un file quando è necessario elaborare individualmente ogni riga mentre si scrive nel file. Gli esempi da 1 a 3 sovrascrivono tutto il contenuto esistente nel file, ma l'esempio 4 mostra come aggiungere il testo a un file esistente.  
@@ -27,11 +27,11 @@ In questi esempi vengono mostrati vari modi per scrivere testo in un file. I pri
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   Il file esiste ed è di sola lettura.  
+- Il file esiste ed è di sola lettura.  
   
--   Il nome del percorso è troppo lungo.  
+- Il nome del percorso è troppo lungo.  
   
--   Il disco è pieno.  
+- Il disco è pieno.  
   
 ## <a name="see-also"></a>Vedere anche
 

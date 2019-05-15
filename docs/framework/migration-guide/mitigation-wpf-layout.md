@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f81af76ed305fb614202c240e449adc62b310933
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c261a025548b2d22f6df3051dbcdb637723d4324
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189937"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599463"
 ---
 # <a name="mitigation-wpf-layout"></a>Mitigazione: Layout WPF
 Il layout dei controlli WPF può cambiare leggermente.  
@@ -17,11 +17,11 @@ Il layout dei controlli WPF può cambiare leggermente.
 ## <a name="impact"></a>Impatto  
  Come conseguenza di questo cambiamento:  
   
--   La larghezza o l'altezza degli elementi può aumentare o diminuire al massimo di un pixel.  
+- La larghezza o l'altezza degli elementi può aumentare o diminuire al massimo di un pixel.  
   
--   La posizione di un oggetto può cambiare al massimo di un pixel.  
+- La posizione di un oggetto può cambiare al massimo di un pixel.  
   
--   Gli elementi centrati possono risultare decentrati in orizzontale o in verticale al massimo di un pixel.  
+- Gli elementi centrati possono risultare decentrati in orizzontale o in verticale al massimo di un pixel.  
   
  Per impostazione predefinita, questo nuovo layout è disponibile solo per app destinate a .NET Framework 4.6.  
   

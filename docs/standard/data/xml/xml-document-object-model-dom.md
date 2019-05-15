@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b3a2432deb1e956060ab3615db01821658f8782
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 664debd5432273cc25871f85d5d3c23f4c32dd6e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508679"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589827"
 ---
 # <a name="xml-document-object-model-dom"></a>XML DOM (Document Object Model)
 La classe DOM (Document Object Model) XML è una rappresentazione in memoria di un documento XML. Il modello DOM consente di leggere e modificare un documento XML a livello di codice. Anche la classe **XmlReader** è in grado di leggere un documento XML, tuttavia essa fornisce un accesso non memorizzato nella cache, di tipo forward-only e di sola lettura. Questo significa che con **XmlReader** non sono disponibili funzionalità per la modifica dei valori di un attributo o del contenuto di un elemento, né per l'inserimento e la rimozione di nodi. La modifica è la funzione primaria del DOM. È il modo comune e strutturato in cui i dati XML vengono rappresentati nella memoria, sebbene i dati XML effettivi siano archiviati in modo lineare all'interno di un file o quando provengono da un altro oggetto. Di seguito sono riportati i dati XML.  
@@ -39,32 +39,32 @@ Struttura del documento XML
   
  All'interno della struttura del documento XML, ogni cerchio di questa figura rappresenta un nodo, denominato oggetto **XmlNode**, **XmlNode**che costituisce l'oggetto di base nell'albero DOM. La classe **XmlDocument**, che estende **XmlNode**, supporta i metodi per l'esecuzione di operazioni sul documento nella sua totalità, ad esempio il caricamento del documento in memoria o il salvataggio del documento XML in un file. **XmlDocument** costituisce inoltre un modo per visualizzare e modificare i nodi nell'intero documento XML. **XmlNode** e **XmlDocument** sono stati entrambi migliorati dal punto di vista delle prestazioni e dell'usabilità e dispongono di metodi e proprietà per:  
   
--   Accedere e apportare modifiche ai nodi specifici del DOM, ad esempio ai nodi degli elementi, ai nodi di riferimento all'entità e così via.  
+- Accedere e apportare modifiche ai nodi specifici del DOM, ad esempio ai nodi degli elementi, ai nodi di riferimento all'entità e così via.  
   
--   Recuperare interi nodi, oltre alle informazioni contenute nel nodo, quali il testo in un nodo di elemento.  
+- Recuperare interi nodi, oltre alle informazioni contenute nel nodo, quali il testo in un nodo di elemento.  
   
     > [!NOTE]
     >  Se la struttura e le funzionalità di modifica del DOM non sono richieste da un'applicazione, le classi **XmlReader** e **XmlWriter** forniscono un accesso al flusso XML non memorizzato nella cache e di tipo forward-only. Per altre informazioni, vedere <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter>.  
   
  Gli oggetti **Node** dispongono di un set di metodi e proprietà, oltre a caratteristiche di base ben definite. Di seguito sono riportate alcune di queste caratteristiche.  
   
--   I nodi presentano un singolo nodo padre, ovvero quello al livello immediatamente superiore. Gli unici nodi che non presentano nodi padre sono al livello radice del documento, in quanto si tratta dei nodi di primo livello contenenti il documento stesso e i frammenti di documento.  
+- I nodi presentano un singolo nodo padre, ovvero quello al livello immediatamente superiore. Gli unici nodi che non presentano nodi padre sono al livello radice del documento, in quanto si tratta dei nodi di primo livello contenenti il documento stesso e i frammenti di documento.  
   
--   La maggior parte dei nodi può presentare più nodi figlio, ovvero quelli al livello immediatamente inferiore. Di seguito viene riportato un elenco di tipi di nodi che possono contenere nodi figlio.  
+- La maggior parte dei nodi può presentare più nodi figlio, ovvero quelli al livello immediatamente inferiore. Di seguito viene riportato un elenco di tipi di nodi che possono contenere nodi figlio.  
   
-    -   **Document**  
+    - **Document**  
   
-    -   **DocumentFragment**  
+    - **DocumentFragment**  
   
-    -   **EntityReference**  
+    - **EntityReference**  
   
-    -   **Elemento**  
+    - **Elemento**  
   
-    -   **Attributo**  
+    - **Attributo**  
   
      I nodi **XmlDeclaration**, **Notation**, **Entity**, **CDATASection**, **Text**, **Comment**, **ProcessingInstruction** e **DocumentType** non contengono nodi figlio.  
   
--   I nodi che si trovano allo stesso livello, rappresentati nel diagramma dai nodi **book** e **pubinfo**, sono nodi di pari livello.  
+- I nodi che si trovano allo stesso livello, rappresentati nel diagramma dai nodi **book** e **pubinfo**, sono nodi di pari livello.  
   
  Una caratteristica del DOM è rappresentata dalla gestione degli attributi. Gli attributi non sono nodi che fanno parte delle relazioni tra nodi padre, nodi figlio o nodi di pari livello, ma sono considerati una proprietà del nodo dell'elemento e sono costituiti da una coppia composta da nome e valore. Se, ad esempio, si dispone di dati XML costituiti da `format="dollar`" associato all'elemento `price`, il termine `format` è il nome, mentre il valore dell'attributo `format` è `dollar`. Per recuperare l'attributo `format="dollar"` del nodo **price**, è necessario chiamare il metodo **GetAttribute** quando il cursore si trova in corrispondenza del nodo dell'elemento `price`. Per altre informazioni, vedere [Accesso agli attributi nel DOM](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).  
   

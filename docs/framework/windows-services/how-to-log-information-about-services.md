@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: dfcfb7370ffd59a50cf6d0b01e84e581ddc6fc52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8a744337803a7a26397c999a6d9c6d10f69a1c5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306521"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591657"
 ---
 # <a name="how-to-log-information-about-services"></a>Procedura: Registrare informazioni sui servizi
 Per impostazione predefinita, tutti i progetti di servizio di Windows possono interagire con il log eventi dell'applicazione in cui possono scrivere informazioni ed eccezioni. È possibile usare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> per indicare se si vuole fornire questa funzionalità nell'applicazione. Per impostazione predefinita, la registrazione è attivata per tutti i servizi creati con il modello di progetto di servizio di Windows. È possibile usare un form statico della classe <xref:System.Diagnostics.EventLog> per scrivere le informazioni sul servizio in un log senza dover creare un'istanza di un componente <xref:System.Diagnostics.EventLog> o registrare manualmente un'origine.  
@@ -32,14 +32,14 @@ Per impostazione predefinita, tutti i progetti di servizio di Windows possono in
   
 ### <a name="to-enable-default-event-logging-for-your-service"></a>Per abilitare la registrazione predefinita degli eventi per il servizio  
   
--   Impostare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> del componente su `true`.  
+- Impostare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> del componente su `true`.  
   
     > [!NOTE]
     >  Per impostazione predefinita, questa proprietà è impostata su `true`. Non è necessario impostarla esplicitamente a meno che non si debba eseguire un'elaborazione più complessa, ad esempio la valutazione di una condizione seguita dall'impostazione della proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> in base al risultato di tale condizione.  
   
 ### <a name="to-disable-event-logging-for-your-service"></a>Per disabilitare la registrazione degli eventi per il servizio  
   
--   Impostare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> del componente su `false`.  
+- Impostare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> del componente su `false`.  
   
      [!code-csharp[VbRadconService#17](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#17)]
      [!code-vb[VbRadconService#17](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#17)]  

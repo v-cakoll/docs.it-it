@@ -2,12 +2,12 @@
 title: Sicurezza in LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
-ms.openlocfilehash: e13a1db6a02ac2990624e93480e973284a0784e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2e535b67b6c9b599eb9e8c9b71e150079c626ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493093"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597015"
 ---
 # <a name="linq-to-xml-security-c"></a>Sicurezza in LINQ to XML (C#)
 In questo argomento vengono descritti i problemi di sicurezza associati a LINQ to XML. Vengono inoltre fornite alcune indicazioni per ridurre l'esposizione ai rischi.  
@@ -26,25 +26,25 @@ In questo argomento vengono descritti i problemi di sicurezza associati a LINQ t
   
  Se si opera in ambienti meno protetti, è necessario tenere conto di diversi problemi di sicurezza associati a XML e all'utilizzo delle classi in <xref:System.Xml?displayProperty=nameWithType>, <xref:System.Xml.Schema?displayProperty=nameWithType>, <xref:System.Xml.XPath?displayProperty=nameWithType> e <xref:System.Xml.Xsl?displayProperty=nameWithType>. Di seguito sono riportati solo alcuni di questi problemi:  
   
--   XSD, XPath e XSLT sono linguaggi basati su stringa in cui è possibile specificare operazioni che richiedono quantità elevate di tempo o memoria. È responsabilità dei programmatori di applicazioni che ottengono stringhe XSD, XPath o XSLT da origini non attendibili verificare che tali stringhe non siano dannose o monitorare e limitare la possibilità che la valutazione delle stringhe comporti un consumo eccessivo delle risorse di sistema.  
+- XSD, XPath e XSLT sono linguaggi basati su stringa in cui è possibile specificare operazioni che richiedono quantità elevate di tempo o memoria. È responsabilità dei programmatori di applicazioni che ottengono stringhe XSD, XPath o XSLT da origini non attendibili verificare che tali stringhe non siano dannose o monitorare e limitare la possibilità che la valutazione delle stringhe comporti un consumo eccessivo delle risorse di sistema.  
   
--   Gli schemi XSD (compresi quelli inline) sono intrinsecamente vulnerabili ad attacchi di tipo Denial of Service. Non accettare schemi da origini non attendibili.  
+- Gli schemi XSD (compresi quelli inline) sono intrinsecamente vulnerabili ad attacchi di tipo Denial of Service. Non accettare schemi da origini non attendibili.  
   
--   XSD e XSLT possono includere riferimenti ad altri file, ad esempio riferimenti che generano attacchi tra zone e tra domini diversi.  
+- XSD e XSLT possono includere riferimenti ad altri file, ad esempio riferimenti che generano attacchi tra zone e tra domini diversi.  
   
--   Le entità esterne nelle dichiarazioni DTD possono generare attacchi tra zone e tra domini diversi.  
+- Le entità esterne nelle dichiarazioni DTD possono generare attacchi tra zone e tra domini diversi.  
   
--   Le dichiarazioni DTD sono vulnerabili ad attacchi di tipo Denial of Service  
+- Le dichiarazioni DTD sono vulnerabili ad attacchi di tipo Denial of Service  
   
--   I documenti XML particolarmente complessi possono presentare problemi di Denial of Service. È preferibile limitare la complessità dei documenti XML.  
+- I documenti XML particolarmente complessi possono presentare problemi di Denial of Service. È preferibile limitare la complessità dei documenti XML.  
   
--   Non accettare componenti di supporto, ad esempio oggetti <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager>, e <xref:System.Xml.XmlResolver>, provenienti da assembly non attendibili.  
+- Non accettare componenti di supporto, ad esempio oggetti <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager>, e <xref:System.Xml.XmlResolver>, provenienti da assembly non attendibili.  
   
--   Leggere i dati in blocchi per limitare gli attacchi a documenti di grandi dimensioni.  
+- Leggere i dati in blocchi per limitare gli attacchi a documenti di grandi dimensioni.  
   
--   I blocchi di script nei fogli di stile XSLT possono esporre numerosi attacchi.  
+- I blocchi di script nei fogli di stile XSLT possono esporre numerosi attacchi.  
   
--   Effettuare convalide accurate prima di costruire espressioni XPath dinamiche.  
+- Effettuare convalide accurate prima di costruire espressioni XPath dinamiche.  
   
 ## <a name="linq-to-xml-security-issues"></a>Problemi di sicurezza in LINQ to XML  
  I problemi di sicurezza illustrati in questo argomento non vengono presentati in un ordine specifico. Tutti i problemi sono importanti e devono essere affrontati nel modo appropriato.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2713011d61b41dfa4d72a635c656c0c00cb42f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 993c7f590f30b44f45e4833b4364b40ad9748b58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643611"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607771"
 ---
 # <a name="creating-assemblies"></a>Creazione degli assembly
 
@@ -24,23 +24,23 @@ ms.locfileid: "54643611"
 
 Quando si raggruppano moduli di codice e risorse negli assembly, sono disponibili diverse opzioni in base ai fattori seguenti:
 
--   Controllo delle versioni
+- Controllo delle versioni
 
      Raggruppare i moduli che devono avere le stesse informazioni sulla versione.
 
--   Distribuzione
+- Distribuzione
 
      Raggruppare i moduli di codice e le risorse che supportano il modello di distribuzione usato.
 
--   Riuso
+- Riuso
 
      Raggruppare i moduli se possono essere usati insieme in modo logico per uno scopo. Ad esempio, è possibile inserire nello stesso assembly un assembly costituito da tipi e classi usati raramente per la manutenzione di programmi. In più, i tipi che si intende condividere più applicazioni devono essere raggruppati in un assembly, che deve essere firmato con un nome sicuro.
 
--   Sicurezza
+- Sicurezza
 
      Raggruppare moduli contenenti tipi che richiedono le stesse autorizzazioni di sicurezza.
 
--   Ambito
+- Ambito
 
      Raggruppare moduli contenenti tipi la cui visibilità deve essere limitata allo stesso assembly.
 

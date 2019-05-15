@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 7166c27a946fb76c9351647ac6465c151866a2ad
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 3e62dd4b4e1b1eb4586dcb3ce0e3f39c54a5686c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202561"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608743"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Procedura: Dichiarare un delegato, crearne un'istanza e usarlo (Guida per programmatori C#)
 In C# 1.0 e versioni successive i delegati possono essere dichiarati come illustrato nell'esempio seguente.  
@@ -42,7 +42,7 @@ In C# 1.0 e versioni successive i delegati possono essere dichiarati come illust
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
   
--   Dichiarazione di un delegato.  
+- Dichiarazione di un delegato.  
   
      L'istruzione seguente dichiara un nuovo tipo di delegato.  
   
@@ -50,7 +50,7 @@ In C# 1.0 e versioni successive i delegati possono essere dichiarati come illust
   
      Ogni tipo delegato descrive il numero e il tipo degli argomenti e il tipo di valore restituito dai metodi in esso incapsulati. Ogni volta che è necessario un nuovo set di tipi di argomento o un nuovo tipo di valore restituito, è necessario dichiarare un nuovo tipo di delegato.  
   
--   Creazione di un'istanza di un delegato.  
+- Creazione di un'istanza di un delegato.  
   
      Dopo aver dichiarato un tipo delegato, è necessario creare un oggetto delegato e associarlo a un determinato metodo. Nell'esempio precedente questa operazione viene eseguita passando il metodo `PrintTitle` al metodo `ProcessPaperbackBooks`, come illustrato nell'esempio seguente:  
   
@@ -64,7 +64,7 @@ In C# 1.0 e versioni successive i delegati possono essere dichiarati come illust
   
      Dopo la creazione di un delegato, il metodo ad esso associato non viene mai modificato, poiché gli oggetti delegati non sono modificabili.  
   
--   Chiamata a un delegato.  
+- Chiamata a un delegato.  
   
      Una volta creato, un oggetto delegato viene in genere passato a un altro codice che chiamerà il delegato. Per la chiamata di un oggetto delegato viene usato il nome dell'oggetto stesso, seguito dagli argomenti, racchiusi tra parentesi, che devono essere passati al delegato. Di seguito viene riportato un esempio di chiamata a un delegato:  
   

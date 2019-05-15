@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 920787c00a12a56de2766ec9ea104241a5722852
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305195"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593659"
 ---
 # <a name="assembly-versioning"></a>Controllo delle versioni degli assembly
 Il controllo delle versioni degli assembly che utilizzano Common Language Runtime viene svolto interamente a livello dell'assembly. La specifica versione di un assembly e le versioni degli assembly dipendenti sono memorizzate nel manifesto dell'assembly. I criteri di versione predefiniti del runtime prevedono che l'applicazione venga eseguita solo con le versioni con cui è stata compilata e testata. Per modificare il comportamento predefinito, è possibile esprimere esplicitamente criteri di versione diversi nei file di configurazione (il file di configurazione dell'applicazione, il file dei criteri dell'autore e il file di configurazione dell'amministratore del computer).  
@@ -42,9 +42,9 @@ Il controllo delle versioni degli assembly che utilizzano Common Language Runtim
 ## <a name="version-information"></a>Informazioni sulla versione  
  In ciascun assembly le informazioni sulla versione sono espresse in due modi:  
   
--   Il numero di versione dell'assembly, che insieme al nome dell'assembly e alle informazioni sulle impostazioni cultura è parte dell'identità dell'assembly. Tale numero viene utilizzato dal runtime per applicare i criteri di versione e gioca un ruolo determinante nel processo per la risoluzione dei tipi in fase di esecuzione.  
+- Il numero di versione dell'assembly, che insieme al nome dell'assembly e alle informazioni sulle impostazioni cultura è parte dell'identità dell'assembly. Tale numero viene utilizzato dal runtime per applicare i criteri di versione e gioca un ruolo determinante nel processo per la risoluzione dei tipi in fase di esecuzione.  
   
--   Una versione informativa, cioè una stringa che riporta informazioni aggiuntive sulla versione a fini esclusivamente informativi.  
+- Una versione informativa, cioè una stringa che riporta informazioni aggiuntive sulla versione a fini esclusivamente informativi.  
   
 ### <a name="assembly-version-number"></a>Numero di versione dell'assembly  
  Tutti gli assembly hanno un numero di versione che concorre a definirne l'identità. Di conseguenza, due assembly che hanno numeri di versione differenti sono considerati dal runtime come due assembly distinti. Il numero di versione è rappresentato fisicamente da una stringa divisa in quattro parti, come indicato di seguito:  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: bcf4cd9d4ac4e4de3174cb57d83c8cab7de86c21
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 28253a46e8da48cfc2812d7f3fef1a2dd3d1cf87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202405"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599845"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classi statiche e membri di classi statiche (Guida per programmatori C#)
 Una classe [statica](../../../csharp/language-reference/keywords/static.md) corrisponde fondamentalmente a una classe non statica, ma c'è una differenza: di una classe statica non è possibile creare un'istanza. In altre parole, non è possibile usare la parola chiave [new](../../../csharp/language-reference/keywords/new.md) per creare una variabile del tipo di classe. Poiché non esiste una variabile dell'istanza, si accede ai membri di una classe statica tramite il nome stesso della classe. Se ad esempio si dispone di una classe statica denominata `UtilityClass` che ha un metodo statico pubblico denominato `MethodA`, si chiama il metodo come illustrato nell'esempio seguente:  
@@ -44,13 +44,13 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  Nell'esempio riportato di seguito sono indicate le principali funzionalità delle classi statiche:  
   
--   Contiene solo membri statici.  
+- Contiene solo membri statici.  
   
--   Non è possibile crearne istanze.  
+- Non è possibile crearne istanze.  
   
--   È sealed.  
+- È sealed.  
   
--   Non può contenere [costruttori di istanze](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+- Non può contenere [costruttori di istanze](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
   
  La creazione di una classe statica è pertanto analoga alla creazione di una classe che contiene solo membri statici e un costruttore privato, che impedisce la creazione di istanze della classe. Una classe statica presenta un indubbio vantaggio. Consente infatti al compilatore di verificare che non vengano aggiunti accidentalmente membri di istanze e quindi di garantire che non vengano create istanze di questa classe.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 831f306a19d926b70170c1a6ebc4ab670f1b9851
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e6c4cfce1b5e97f70040b318eb68ee78ee4a953
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718650"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595395"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Procedura: leggere un file di testo una riga alla volta (Visual C#)
 Questo esempio legge il contenuto di un file di testo, una riga alla volta, in una stringa usando il metodo `ReadLine` della classe `StreamReader`. Ogni riga di testo è memorizzata nella stringa `line` e visualizzata nella schermata.  
@@ -45,7 +45,7 @@ System.Console.ReadLine();
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   È possibile che il file non esista.  
+- È possibile che il file non esista.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Non basarsi sul nome del file per prendere decisioni in merito al relativo contenuto. Ad esempio, il file `myFile.cs` potrebbe non essere un file di origine C#.  

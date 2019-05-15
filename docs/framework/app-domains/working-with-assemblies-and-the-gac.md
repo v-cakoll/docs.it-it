@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91e780ed7e841809f21130822babe55ad4935670
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 363410baea1706211acaa639f1704e91230723a8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744304"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592724"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Utilizzo di assembly e della Global Assembly Cache
 Se si vuole condividere un assembly tra diverse applicazioni, è possibile installarlo nella Global Assembly Cache. Tale cache di codice a livello di computer si trova su ogni computer in cui è installato Common Language Runtime. La Global Assembly Cache memorizza gli assembly specificamente designati per essere condivisi da più applicazioni sul computer. L'assembly deve avere un nome sicuro per essere installato nella Global Assembly Cache.  
@@ -27,19 +27,19 @@ Se si vuole condividere un assembly tra diverse applicazioni, è possibile insta
   
  Esistono diverse ragioni per cui installare un assembly nella Global Assembly Cache:  
   
--   Percorso condiviso.  
+- Percorso condiviso.  
   
      Gli assembly che devono essere usati dalle applicazioni possono essere inseriti nella Global Assembly Cache. Ad esempio, se tutte le applicazioni devono usare un assembly nella Global Assembly Cache, è possibile aggiungere un'istruzione di criteri di versione al file Machine.config che reindirizza i riferimenti all'assembly.  
   
--   Sicurezza dei file.  
+- Sicurezza dei file.  
   
      Gli amministratori spesso proteggono la directory systemroot usando un elenco di controllo di accesso (ACL) per controllare l'accesso in scrittura ed esecuzione. Poiché la Global Assembly Cache viene installata nella directory systemroot, eredita l'ACL di tale directory. È consigliabile che solo gli utenti con privilegi di amministratore siano autorizzati a eliminare file dalla Global Assembly Cache.  
   
--   Controllo delle versioni side-by-side.  
+- Controllo delle versioni side-by-side.  
   
      Nella Global Assembly Cache possono essere gestite più copie di assembly con lo stesso nome ma con informazioni di versione diverse.  
   
--   Altri percorsi di ricerca.  
+- Altri percorsi di ricerca.  
   
      Common language runtime cerca nella Global Assembly Cache un assembly che corrisponda alla richiesta di assembly prima di effettuare l'esecuzione del probe o usare le informazioni della base di codici in un file di configurazione.  
   
@@ -65,7 +65,7 @@ Se si vuole condividere un assembly tra diverse applicazioni, è possibile insta
  [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
  Descrive la Global Assembly Cache.  
   
- [Procedura: Visualizzare il contenuto dell'assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ [Procedura: Visualizzare il contenuto degli assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
  Illustra come usare [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) per visualizzare le informazioni di Microsoft Intermediate Language (MSIL) in un assembly.  
   
  [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

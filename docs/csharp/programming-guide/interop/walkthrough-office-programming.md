@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 1f46d6594c249db394a5493ad9cdbbb1937a5d45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 594f97d47d87d846ba27fc192096005e94587dd1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328452"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608270"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Procedura dettagliata: Programmazione di Office (C# e Visual Basic)
 Visual Studio offre funzionalità di C# e Visual Basic che migliorano la programmazione di Microsoft Office. Tra le utili funzionalità di C# sono disponibili gli argomenti denominati e facoltativi e i valori restituiti di tipo `dynamic`. Nella programmazione COM è possibile omettere la parola chiave `ref` e accedere alle proprietà indicizzate. Le funzionalità di Visual Basic includono le proprietà implementate automaticamente, le istruzioni nelle espressioni lambda e gli inizializzatori di insieme.
@@ -93,11 +93,11 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
   
      In questo metodo vengono usati due nuove funzionalità di C#. Entrambe queste funzionalità sono già esistenti in Visual Basic.  
   
-    -   Il metodo [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) usa un *parametro facoltativo* per specificare un modello particolare. I parametri facoltativi, una novità di [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], consentono di omettere l'argomento per il parametro se si vuole usare il valore predefinito del parametro. Poiché nessun argomento viene inviato nell'esempio precedente, `Add` usa il modello predefinito e crea una nuova cartella di lavoro. L'istruzione equivalente nelle precedenti versioni di C# richiede un argomento segnaposto: `excelApp.Workbooks.Add(Type.Missing)`.  
+    - Il metodo [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) usa un *parametro facoltativo* per specificare un modello particolare. I parametri facoltativi, una novità di [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], consentono di omettere l'argomento per il parametro se si vuole usare il valore predefinito del parametro. Poiché nessun argomento viene inviato nell'esempio precedente, `Add` usa il modello predefinito e crea una nuova cartella di lavoro. L'istruzione equivalente nelle precedenti versioni di C# richiede un argomento segnaposto: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Per altre informazioni, vedere [Argomenti denominati e facoltativi](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
-    -   Le proprietà `Range` e `Offset` dell'oggetto [Range](<xref:Microsoft.Office.Interop.Excel.Range>) usano la funzionalità delle *proprietà indicizzate*. Questa funzionalità consente di usare tali proprietà dai tipi COM con la tipica sintassi di C# seguente. Le proprietà indicizzate consentono anche di usare la proprietà `Value` dell'oggetto `Range`, eliminando la necessità di usare la proprietà `Value2`. La proprietà `Value` è indicizzata, ma l'indice è facoltativo. Nell'esempio seguente sono presenti sia argomenti facoltativi sia proprietà indicizzate.  
+    - Le proprietà `Range` e `Offset` dell'oggetto [Range](<xref:Microsoft.Office.Interop.Excel.Range>) usano la funzionalità delle *proprietà indicizzate*. Questa funzionalità consente di usare tali proprietà dai tipi COM con la tipica sintassi di C# seguente. Le proprietà indicizzate consentono anche di usare la proprietà `Value` dell'oggetto `Range`, eliminando la necessità di usare la proprietà `Value2`. La proprietà `Value` è indicizzata, ma l'indice è facoltativo. Nell'esempio seguente sono presenti sia argomenti facoltativi sia proprietà indicizzate.  
   
          [!code-csharp[csOfficeWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#5)]  
   

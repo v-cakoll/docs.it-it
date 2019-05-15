@@ -7,15 +7,15 @@ helpviewer_keywords:
 - printing [Windows Forms], security
 - security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
-ms.openlocfilehash: 5ee170980ed02d90606c774e2a7055f047292e33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0387a82f142fb32912dad1370d6ac0c784e8894
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801803"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592650"
 ---
 # <a name="more-secure-printing-in-windows-forms"></a>Stampa più protetta in Windows Form
-Le applicazioni Windows Forms spesso includono funzionalità di stampa. Il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] utilizza le <xref:System.Drawing.Printing.PrintingPermission> classe per controllare l'accesso alle funzionalità di stampa e associato <xref:System.Drawing.Printing.PrintingPermissionLevel> valore di enumerazione per indicare il livello di accesso. Per impostazione predefinita, la stampa è abilitata per impostazione predefinita nelle aree Internet e Intranet locale; Tuttavia, il livello di accesso è limitato in entrambe le aree. Se l'applicazione può essere stampato, richiede l'intervento dell'utente, o non è possibile stampare dipende il valore dell'autorizzazione concesso all'applicazione. Per impostazione predefinita, l'area Intranet locale riceve <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> riceve l'accesso e l'area Intranet <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> accesso.  
+Le applicazioni Windows Forms spesso includono funzionalità di stampa. .NET Framework Usa il <xref:System.Drawing.Printing.PrintingPermission> classe per controllare l'accesso alle funzionalità di stampa e associato <xref:System.Drawing.Printing.PrintingPermissionLevel> valore di enumerazione per indicare il livello di accesso. Per impostazione predefinita, la stampa è abilitata per impostazione predefinita nelle aree Internet e Intranet locale; Tuttavia, il livello di accesso è limitato in entrambe le aree. Se l'applicazione può essere stampato, richiede l'intervento dell'utente, o non è possibile stampare dipende il valore dell'autorizzazione concesso all'applicazione. Per impostazione predefinita, l'area Intranet locale riceve <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> riceve l'accesso e l'area Intranet <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> accesso.  
   
  La tabella seguente illustra le funzionalità disponibili in ogni livello di autorizzazione Stampa.  
   

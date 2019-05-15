@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300697"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607679"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Creare e usare gli assembly con nome sicuro
 
@@ -36,9 +36,9 @@ Lo scenario seguente descrive il processo di firma di un assembly con un nome si
 
 1. L'assembly A viene creato con un nome sicuro usando uno dei metodi seguenti:
 
-    -   Usando un ambiente di sviluppo che supporta la creazione di nomi sicuri, come Visual Studio.
+    - Usando un ambiente di sviluppo che supporta la creazione di nomi sicuri, come Visual Studio.
 
-    -   Creando una coppia di chiavi crittografiche usando lo [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) e assegnandola all'assembly mediante un compilatore della riga di comando o [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Windows Software Development Kit (SDK)
+    - Creando una coppia di chiavi crittografiche usando lo [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) e assegnandola all'assembly mediante un compilatore della riga di comando o [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Windows Software Development Kit (SDK)
 
 2. L'ambiente di sviluppo o lo strumento firma l'hash del file contenente il manifesto dell'assembly con la chiave privata dello sviluppatore. La firma digitale viene archiviata nel file eseguibile portabile (PE) che contiene il manifesto dell'assembly A.
 
@@ -55,13 +55,13 @@ A partire da [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)
 
 Questa funzionalità si applica a qualsiasi assembly firmato con un nome sicuro e che ha le caratteristiche seguenti:
 
--   È completamente attendibile senza prova <xref:System.Security.Policy.StrongName> (ad esempio, include la prova della zona `MyComputer`).
+- È completamente attendibile senza prova <xref:System.Security.Policy.StrongName> (ad esempio, include la prova della zona `MyComputer`).
 
--   Viene caricato in un dominio <xref:System.AppDomain> completamente attendibile.
+- Viene caricato in un dominio <xref:System.AppDomain> completamente attendibile.
 
--   Viene caricato da una località nell'ambito della proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> di <xref:System.AppDomain>.
+- Viene caricato da una località nell'ambito della proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> di <xref:System.AppDomain>.
 
--   Non ha firma ritardata.
+- Non ha firma ritardata.
 
 Questa funzionalità può essere disabilitata per singole applicazioni o per un computer. Vedere [How to: Disabilitare la funzionalità che consente di ignorare il nome sicuro](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).
 

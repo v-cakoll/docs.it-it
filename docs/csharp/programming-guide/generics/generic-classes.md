@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 5f898bf342c8596d9dd4cc0b03396aec4dcf545c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1e5a8d221468f5028f7b44af1c634b4c988063a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970220"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596281"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Classi generiche (Guida per programmatori C#)
 Le classi generiche incapsulano operazioni che non sono specifiche di un determinato tipo di dati. L'uso più comune per le classi generiche è con raccolte come elenchi collegati, tabelle hash, stack, code, alberi e così via. Le operazioni come l'aggiunta e la rimozione di elementi dalla raccolta vengono eseguite praticamente allo stesso modo, indipendentemente dal tipo dei dati archiviati.  
@@ -20,19 +20,19 @@ Le classi generiche incapsulano operazioni che non sono specifiche di un determi
   
  Normalmente, per creare classi generiche è possibile iniziare da una classe concreta esistente, modificando quindi i tipi in parametri di tipo uno per volta fino a raggiungere l'equilibrio ottimale tra generalizzazione e usabilità. Ecco alcuni aspetti importanti di cui tenere conto quando si creano classi generiche personalizzate:  
   
--   Tipi da generalizzare in parametri di tipo.  
+- Tipi da generalizzare in parametri di tipo.  
   
      Di norma, maggiore è il numero di tipi che è possibile parametrizzare, più flessibile e riutilizzabile sarà il codice. Tuttavia, una generalizzazione eccessiva può creare codice difficile da leggere e comprendere per gli altri sviluppatori.  
   
--   Vincoli, se presenti, da applicare ai parametri di tipo. Vedere [Vincoli sui parametri di tipo](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
+- Vincoli, se presenti, da applicare ai parametri di tipo. Vedere [Vincoli sui parametri di tipo](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
   
      Una buona regola consiste nell'applicare il numero massimo di vincoli possibile, ma che permetta di continuare a gestire tutti i tipi necessari. Se, ad esempio, la classe generica è destinata solo all'uso con tipi riferimento, applicare il vincolo di classe. In questo modo, si eviterà l'uso indesiderato della classe con tipi valore e sarà possibile usare l'operatore `as` in `T` e verificare la presenza di valori null.  
   
--   Se suddividere il comportamento generico in classi e sottoclassi base.  
+- Se suddividere il comportamento generico in classi e sottoclassi base.  
   
      Poiché le classi generiche possono fungere da classi base, valgono le stesse considerazioni di progettazione relative alle classi non generiche. Vedere le regole sull'ereditarietà da classi base generiche più avanti in questo argomento.  
   
--   Se implementare una o più interfacce generiche.  
+- Se implementare una o più interfacce generiche.  
   
      Se, ad esempio, si progetta una classe che verrà usata per creare elementi in una raccolta basata su generics, potrebbe essere necessario implementare un'interfaccia come <xref:System.IComparable%601>, dove `T` è il tipo della classe.  
   

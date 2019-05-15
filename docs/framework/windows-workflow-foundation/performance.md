@@ -2,12 +2,12 @@
 title: Prestazioni di Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 4351955eeed722cfd10db79b9dbe5ec6692ed2ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592153"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592542"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Prestazioni di Windows Workflow Foundation 4
 
@@ -18,7 +18,7 @@ ms.locfileid: "64592153"
 ## <a name="terminology"></a>Terminologia
  La versione di [!INCLUDE[wf1](../../../includes/wf1-md.md)] introdotta in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] verrà denominata WF4 nella parte restante di questo argomento.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] è stato introdotto in .NET 3.0 ed era stato alcune revisioni secondarie fino [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1. La versione [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] di Workflow Foundation verrà denominata WF3 nella parte restante di questo argomento. WF3 viene fornito con [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] insieme a WF4. Per altre informazioni sulla migrazione degli elementi WF3 in WF4, vedere: [Guida alla migrazione di Windows Workflow Foundation 4](https://go.microsoft.com/fwlink/?LinkID=153313)
 
- Windows Communication Foundation (WCF) è modello di programmazione unificato di Microsoft per la compilazione di applicazioni orientate ai servizi. È stata introdotta come parte di .NET 3.0 insieme a WF3 e ora è uno dei componenti principali del [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].
+ Windows Communication Foundation (WCF) è modello di programmazione unificato di Microsoft per la compilazione di applicazioni orientate ai servizi. È stata introdotta come parte di .NET 3.0 insieme a WF3 e ora è uno dei componenti principali di .NET Framework.
 
  Windows Server AppFabric è un set di tecnologie integrate che facilitano la compilazione, il dimensionamento e la gestione di applicazioni Web e composite destinate all'esecuzione su IIS (Internet Information Services). Fornisce gli strumenti per monitorare e gestire servizi e flussi di lavoro. Per altre informazioni, vedere [Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
 
@@ -401,7 +401,7 @@ public class Workflow1 : Activity
 
  WF3 era dotato di un servizio di rilevamento basato su SQL.  Il servizio poteva funzionare in modalità batch e non batch.  In modalità non batch, gli eventi di rilevamento vengono scritti direttamente nel database.  In modalità batch, gli eventi di rilevamento vengono raccolti nello stesso batch dello stato dell'istanza del flusso di lavoro.  La modalità batch offre le prestazioni migliori per la tipologia più ampia di progettazioni del flusso di lavoro.  Tuttavia, se il flusso di lavoro esegue molte attività senza renderle persistenti e tali attività vengono rilevate, l'invio in batch può influire negativamente sulle prestazioni.  Ciò si verificherebbe solitamente nei cicli e il modo migliore per evitare questo scenario è progettare cicli di grandi dimensioni per contenere un punto di persistenza.  L'introduzione di un punto di persistenza in un ciclo può influire negativamente sulle prestazioni, quindi è importante valutare l'onere di ciascuno di essi e trovare un equilibrio ottimale.
 
- WF4 non è dotato di un servizio di rilevamento basato su SQL.  La registrazione delle informazioni di rilevamento in un database SQL può essere gestita meglio da un server applicazioni piuttosto che essere incorporata in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Pertanto il rilevamento SQL viene ora gestito da AppFabric.  Il provider di rilevamento predefinito di WF4 si basa su ETW (Event Tracing for Windows).
+ WF4 non è dotato di un servizio di rilevamento basato su SQL.  Registrazione delle informazioni di rilevamento in un database SQL può essere gestita meglio da un server applicazioni anziché incorporate in .NET Framework. Pertanto il rilevamento SQL viene ora gestito da AppFabric.  Il provider di rilevamento predefinito di WF4 si basa su ETW (Event Tracing for Windows).
 
  ETW è un sistema di eventi a livello del kernel con bassa latenza integrato in Windows.  Usa un modello provider/consumer che penalizza il sistema per il rilevamento degli eventi solo quando è presente realmente un consumer.  Oltre agli eventi del kernel, quali utilizzo del processore, del disco, della memoria e della rete, molte applicazioni sfruttano anche ETW.  Gli eventi ETW sono più potenti dei contatori delle prestazioni poiché è possibile personalizzarli in base all'applicazione.  Un evento può contenere del testo, quale un ID del flusso di lavoro o un messaggio informativo.  Inoltre, gli eventi sono suddivisi in categorie con le maschere di bit in modo che l'impatto sulle prestazioni derivante dall'utilizzo di un determinato subset di eventi sia minore rispetto all'acquisizione di tutti gli eventi.
 

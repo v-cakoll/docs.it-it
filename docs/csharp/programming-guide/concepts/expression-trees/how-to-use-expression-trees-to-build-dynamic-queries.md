@@ -2,12 +2,12 @@
 title: 'Procedura: Usare alberi delle espressioni per la compilazione di query dinamiche (C#)'
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: dec9d84f7fa37f859e307f2a653464608684bc88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3c65770af11518f6ac86e0fecd47b56f78cff59
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499551"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597968"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Procedura: Usare alberi delle espressioni per la compilazione di query dinamiche (C#)
 In LINQ gli alberi delle espressioni vengono usati per rappresentare query strutturate destinate alle origini dati che implementano <xref:System.Linq.IQueryable%601>. Il provider LINQ, ad esempio, implementa l'interfaccia <xref:System.Linq.IQueryable%601> per l'esecuzione di query su archivi dati relazionali. Il compilatore C# compila le query destinate a tali origini dati nel codice di un albero delle espressioni in runtime. Il provider di query può quindi percorrere la struttura dei dati dell'albero delle espressioni e convertirla in un linguaggio di query adatto all'origine dati.  
@@ -100,13 +100,13 @@ foreach (string company in results)
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Creare un nuovo progetto **Applicazione console**.  
+- Creare un nuovo progetto **Applicazione console**.  
   
--   Aggiungere un riferimento a System.Core.dll, se non è già presente.  
+- Aggiungere un riferimento a System.Core.dll, se non è già presente.  
   
--   Includere lo spazio dei nomi System.Linq.Expressions.  
+- Includere lo spazio dei nomi System.Linq.Expressions.  
   
--   Copiare il codice dall'esempio e incollarlo nel metodo `Main`.  
+- Copiare il codice dall'esempio e incollarlo nel metodo `Main`.  
   
 ## <a name="see-also"></a>Vedere anche
 
