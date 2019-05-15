@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: effbf1571c70d25c60cf5f5e361e5474dc70fb99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 771f2911d71268917941cc91605deef162c4f0fb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981514"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672339"
 ---
-<span data-ttu-id="d8169-101">Microsoft Windows Server 2003 (SP1)</span><span class="sxs-lookup"><span data-stu-id="d8169-101">Microsoft Windows Server 2003 (SP1)</span></span>
+<span data-ttu-id="a7338-101">Microsoft Windows Server 2003 (SP1)</span><span class="sxs-lookup"><span data-stu-id="a7338-101">Microsoft Windows Server 2003 (SP1)</span></span>

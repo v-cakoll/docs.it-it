@@ -15,18 +15,18 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: b77dd1277e7d23729f30d9d495c5417055a22759
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e3a6714489e2051a09b5855ab9f911ef2f57450
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948805"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632290"
 ---
-# <a name="icordebugprocess4processstatechanged-method"></a><span data-ttu-id="c1169-102">Metodo ICorDebugProcess4::ProcessStateChanged</span><span class="sxs-lookup"><span data-stu-id="c1169-102">ICorDebugProcess4::ProcessStateChanged Method</span></span>
+# <a name="icordebugprocess4processstatechanged-method"></a><span data-ttu-id="d8257-102">Metodo ICorDebugProcess4::ProcessStateChanged</span><span class="sxs-lookup"><span data-stu-id="d8257-102">ICorDebugProcess4::ProcessStateChanged Method</span></span>
 
-<span data-ttu-id="c1169-103">Notifica la pipeline ICorDebug che il timeout del debugger di processo è in continua l'esecuzione dell'oggetto del debug.</span><span class="sxs-lookup"><span data-stu-id="c1169-103">Notifies the ICorDebug pipeline that the out of process debugger is continuing the debugee's execution.</span></span>
+<span data-ttu-id="d8257-103">Notifica la pipeline ICorDebug che il timeout del debugger di processo è in continua l'esecuzione dell'oggetto del debug.</span><span class="sxs-lookup"><span data-stu-id="d8257-103">Notifies the ICorDebug pipeline that the out of process debugger is continuing the debugee's execution.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="c1169-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c1169-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="d8257-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d8257-104">Syntax</span></span>
 
 ```
 HRESULT ProcessStateChanged(
@@ -34,27 +34,27 @@ HRESULT ProcessStateChanged(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="c1169-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="c1169-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="d8257-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d8257-105">Parameters</span></span>
 
  `eChange`\
-<span data-ttu-id="c1169-106">[in] Un membro del [enumerazione CorDebugStateChange](cordebugstatechange-enumeration.md) che descrive una modifica nello stato di esecuzione del processo.</span><span class="sxs-lookup"><span data-stu-id="c1169-106">[in] A member of the [CorDebugStateChange enumeration](cordebugstatechange-enumeration.md) describing a change in the process's execution state.</span></span>
+<span data-ttu-id="d8257-106">[in] Un membro del [enumerazione CorDebugStateChange](cordebugstatechange-enumeration.md) che descrive una modifica nello stato di esecuzione del processo.</span><span class="sxs-lookup"><span data-stu-id="d8257-106">[in] A member of the [CorDebugStateChange enumeration](cordebugstatechange-enumeration.md) describing a change in the process's execution state.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="c1169-107">Note</span><span class="sxs-lookup"><span data-stu-id="c1169-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="d8257-107">Note</span><span class="sxs-lookup"><span data-stu-id="d8257-107">Remarks</span></span>
 
-<span data-ttu-id="c1169-108">Il metodo specificato fa parte di `ICorDebugProcess4` interfaccia e corrisponde al quarto slot della tabella di metodo virtuale.</span><span class="sxs-lookup"><span data-stu-id="c1169-108">The provided method is part of the `ICorDebugProcess4` interface and corresponds to the fourth slot of the virtual method table.</span></span>
+<span data-ttu-id="d8257-108">Il metodo specificato fa parte di `ICorDebugProcess4` interfaccia e corrisponde al quarto slot della tabella di metodo virtuale.</span><span class="sxs-lookup"><span data-stu-id="d8257-108">The provided method is part of the `ICorDebugProcess4` interface and corresponds to the fourth slot of the virtual method table.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="c1169-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c1169-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="d8257-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d8257-109">Requirements</span></span>
 
- <span data-ttu-id="c1169-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c1169-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+ <span data-ttu-id="d8257-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d8257-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
- <span data-ttu-id="c1169-111">**Intestazione:** nessuno</span><span class="sxs-lookup"><span data-stu-id="c1169-111">**Header:** None</span></span>
+ <span data-ttu-id="d8257-111">**Intestazione:** nessuno</span><span class="sxs-lookup"><span data-stu-id="d8257-111">**Header:** None</span></span>
 
- <span data-ttu-id="c1169-112">**Libreria:** nessuno</span><span class="sxs-lookup"><span data-stu-id="c1169-112">**Library:** None</span></span>
+ <span data-ttu-id="d8257-112">**Libreria:** nessuno</span><span class="sxs-lookup"><span data-stu-id="d8257-112">**Library:** None</span></span>
  
- <span data-ttu-id="c1169-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1169-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="d8257-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d8257-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c1169-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c1169-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8257-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d8257-114">See also</span></span>
 
-- [<span data-ttu-id="c1169-115">Interfaccia ICorDebugProcess4</span><span class="sxs-lookup"><span data-stu-id="c1169-115">ICorDebugProcess4 Interface</span></span>](icordebugprocess4-interface.md)
-- [<span data-ttu-id="c1169-116">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="c1169-116">Debugging Interfaces</span></span>](debugging-interfaces.md)
-- [<span data-ttu-id="c1169-117">Debug</span><span class="sxs-lookup"><span data-stu-id="c1169-117">Debugging</span></span>](index.md)
+- [<span data-ttu-id="d8257-115">Interfaccia ICorDebugProcess4</span><span class="sxs-lookup"><span data-stu-id="d8257-115">ICorDebugProcess4 Interface</span></span>](icordebugprocess4-interface.md)
+- [<span data-ttu-id="d8257-116">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="d8257-116">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="d8257-117">Debug</span><span class="sxs-lookup"><span data-stu-id="d8257-117">Debugging</span></span>](index.md)

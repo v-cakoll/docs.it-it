@@ -1,1 +1,9 @@
-<span data-ttu-id="8d717-101">bitmap (BMP)</span><span class="sxs-lookup"><span data-stu-id="8d717-101">bitmap (BMP)</span></span>
+---
+ms.openlocfilehash: 500059feafe4b53b2f012c2ec4ee6c0d17674b4b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672630"
+---
+<span data-ttu-id="cf388-101">bitmap (BMP)</span><span class="sxs-lookup"><span data-stu-id="cf388-101">bitmap (BMP)</span></span>

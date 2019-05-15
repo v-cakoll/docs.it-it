@@ -1,1 +1,9 @@
-<span data-ttu-id="36a86-101">Enhanced Metafile (EMF)</span><span class="sxs-lookup"><span data-stu-id="36a86-101">Enhanced Metafile (EMF)</span></span>
+---
+ms.openlocfilehash: 31b93cd419a4deeb86759093544002fe8d4bd9b3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672842"
+---
+<span data-ttu-id="2992c-101">Enhanced Metafile (EMF)</span><span class="sxs-lookup"><span data-stu-id="2992c-101">Enhanced Metafile (EMF)</span></span>
