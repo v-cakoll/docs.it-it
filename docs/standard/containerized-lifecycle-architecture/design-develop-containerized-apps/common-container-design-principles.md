@@ -1,15 +1,13 @@
 ---
 title: Principi comuni di progettazione dei contenitori
 description: Informazioni su un principio fondamentale della progettazione di contenitore valido, è che un contenitore deve ospitare un unico processo.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 206963d63cf8e6ab4fc61b9176f1ba095868c6fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69f3ff6c9303f0c4082695d861a8c90031295b6a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969117"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644803"
 ---
 # <a name="common-container-design-principles"></a>Principi comuni di progettazione dei contenitori
 

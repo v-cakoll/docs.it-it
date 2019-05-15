@@ -1,9 +1,13 @@
 ---
 title: Considerazioni principali
 description: Esaminare le considerazioni principali per la Guida.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: d28739a87e5c7c7e6c9304c36e1ec2a73cf0d0db
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644718"
 ---
 # <a name="key-takeaways"></a>Considerazioni principali
 

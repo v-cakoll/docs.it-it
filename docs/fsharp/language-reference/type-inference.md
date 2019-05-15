@@ -2,12 +2,12 @@
 title: Inferenza di tipi
 description: Informazioni su come il F# compilatore deduce i tipi di valori, le variabili, parametri e valori restituiti.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3e61d5c81fde0a48af66a47745123a842dc04cb1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab1a4aa8df4312287df749d5d6d0ea2858091152
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666235"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641682"
 ---
 # <a name="type-inference"></a>Inferenza di tipi
 

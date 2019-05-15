@@ -1,9 +1,13 @@
 ---
 title: Introduzione a contenitori e Docker
 description: Ottenere una panoramica generale dei vantaggi principali dell'uso di Docker.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: a03c67ed4fbc55c84e69fba5b7978863c8305e00
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644951"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introduzione ai contenitori e a Docker
 

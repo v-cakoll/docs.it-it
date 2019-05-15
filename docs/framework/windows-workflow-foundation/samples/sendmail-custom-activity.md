@@ -2,12 +2,12 @@
 title: Attività personalizzata SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 3bbb16fd99d5d7de4183b26030c0afe65ebc90cd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d760f95b8e98bae52341296b90008e72d5c47d1f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617305"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637661"
 ---
 # <a name="sendmail-custom-activity"></a>Attività personalizzata SendMail
 In questo esempio viene illustrato come creare un'attività personalizzata che deriva da <xref:System.Activities.AsyncCodeActivity> per inviare messaggi di posta elettronica tramite il protocollo SMTP da usare in un'applicazione flusso di lavoro. L'attività personalizzata Usa le funzionalità di <xref:System.Net.Mail.SmtpClient> per inviare posta elettronica in modo asincrono e per inviare posta elettronica con l'autenticazione. Nell'attività sono inoltre disponibili funzionalità per l'utente finale, ad esempio la modalità test, la sostituzione dei token, i modelli di file e il percorso di rilascio di prova.  
@@ -17,11 +17,11 @@ In questo esempio viene illustrato come creare un'attività personalizzata che d
 |Nome|Tipo|Descrizione|  
 |-|-|-|  
 |Host|Stringa|Indirizzo dell'host del server SMTP.|  
-|Port|Stringa|Porta del servizio SMTP nell'host.|  
+|Porta|Stringa|Porta del servizio SMTP nell'host.|  
 |EnableSsl|bool|Specifica se la classe <xref:System.Net.Mail.SmtpClient> usa il protocollo SSL (Secure Sockets Layer) per crittografare la connessione.|  
 |UserName|Stringa|Nome utente per configurare le credenziali per l'autenticazione della proprietà <xref:System.Net.Mail.SmtpClient.Credentials%2A> del mittente.|  
 |Password|Stringa|Password per configurare le credenziali per l'autenticazione della proprietà <xref:System.Net.Mail.SmtpClient.Credentials%2A> del mittente.|  
-|Subject|<xref:System.Activities.InArgument%601>\<string>|Oggetto del messaggio.|  
+|Oggetto|<xref:System.Activities.InArgument%601>\<string>|Oggetto del messaggio.|  
 |Body|<xref:System.Activities.InArgument%601>\<string>|Corpo del messaggio.|  
 |Allegati|<xref:System.Activities.InArgument%601>\<string>|Insieme di allegati utilizzato per archiviare i dati allegati al messaggio di posta elettronica.|  
 |Da|<xref:System.Net.Mail.MailAddress>|Indirizzo del mittente per questo messaggio di posta elettronica.|  
