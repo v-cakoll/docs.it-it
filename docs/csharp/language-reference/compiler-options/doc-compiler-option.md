@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: c46118a9b02df653844a0ca04f9e8f9952a957c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7c8fc11c8799912ea6340940ccd254ae82519591
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333600"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591685"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (opzioni del compilatore C#)
 L'opzione **-doc** consente di inserire commenti per la documentazione in un file XML.  
@@ -35,9 +35,9 @@ L'opzione **-doc** consente di inserire commenti per la documentazione in un fil
 ## <a name="remarks"></a>Osservazioni  
  Nei file del codice sorgente è possibile elaborare e aggiungere al file XML i commenti di documentazione che precedono quanto segue:  
   
--   Tipi definiti dall'utente, ad esempio una [classe](../../../csharp/language-reference/keywords/class.md), un [delegato](../../../csharp/language-reference/keywords/delegate.md) o un'[interfaccia](../../../csharp/language-reference/keywords/interface.md)  
+- Tipi definiti dall'utente, ad esempio una [classe](../../../csharp/language-reference/keywords/class.md), un [delegato](../../../csharp/language-reference/keywords/delegate.md) o un'[interfaccia](../../../csharp/language-reference/keywords/interface.md)  
   
--   Membri quali un campo, un [evento](../../../csharp/language-reference/keywords/event.md), una [proprietà](../../../csharp/programming-guide/classes-and-structs/using-properties.md) o un metodo  
+- Membri quali un campo, un [evento](../../../csharp/language-reference/keywords/event.md), una [proprietà](../../../csharp/programming-guide/classes-and-structs/using-properties.md) o un metodo  
   
  Il primo output inserito nel file XML è quello del file di codice sorgente che contiene Main.  
   

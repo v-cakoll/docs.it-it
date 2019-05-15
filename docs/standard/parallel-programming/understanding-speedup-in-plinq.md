@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26128e5d707d3f331dc2b691f5a5f798bdf84c25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1905a61a1843427563ffcbad43ea6b2a4c161828
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322992"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654961"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Informazioni sull'aumento di velocità in PLINQ
 L'obiettivo principale di PLINQ consiste nel velocizzare l'esecuzione di query LINQ to Objects mediante l'esecuzione di delegati di query in parallelo in computer multicore. PLINQ assicura le prestazioni migliori quando l'elaborazione di ogni elemento in una raccolta di origine è indipendente, senza stati condivisi tra i singoli delegati. Tali operazioni sono comuni in LINQ to Objects e PLINQ e spesso vengono definite "*squisitamente parallele*" perché si prestano facilmente alla pianificazione su più thread. Tuttavia, non tutte le query sono costituite interamente da operazioni squisitamente parallele. Nella maggior parte dei casi una query implica alcuni operatori che non possono essere parallelizzati o che rallentano l'esecuzione parallela. Anche in caso di query che sono tutte squisitamente parallele, PLINQ deve comunque partizionare l'origine dati e pianificare il lavoro sui thread, unendo in genere i risultati al termine della query. Tutte queste operazioni incrementano i costi di calcolo della parallelizzazione, che vengono definiti *sovraccarico*. Per ottenere prestazioni ottimali in una query PLINQ, l'obiettivo è ottimizzare le parti squisitamente parallele e ridurre al minimo quelle che comportano un sovraccarico. Questo articolo fornisce informazioni che consentono di scrivere query PLINQ che siano il più efficaci possibile producendo comunque risultati corretti.  
@@ -74,15 +74,15 @@ L'obiettivo principale di PLINQ consiste nel velocizzare l'esecuzione di query L
   
  Nell'elenco seguente sono riportate le forme delle query che per impostazione predefinita PLINQ eseguirà in modalità sequenziale:  
   
--   Query che contengono una clausola Select, una clausola Where indicizzata, una clausola SelectMany indicizzata o una clausola ElementAt dopo un operatore di ordinamento o di filtro che ha rimosso o riorganizzato gli indici originali.  
+- Query che contengono una clausola Select, una clausola Where indicizzata, una clausola SelectMany indicizzata o una clausola ElementAt dopo un operatore di ordinamento o di filtro che ha rimosso o riorganizzato gli indici originali.  
   
--   Query che contengono un operatore Take, TakeWhile, Skip, SkipWhile e in cui gli indici nella sequenza di origine non sono nell'ordine originale.  
+- Query che contengono un operatore Take, TakeWhile, Skip, SkipWhile e in cui gli indici nella sequenza di origine non sono nell'ordine originale.  
   
--   Query che contengono Zip o SequenceEquals, a meno che in una delle origini dati non sia presente un indice originariamente ordinato e l'altra origine dati non sia indicizzabile (ad esempio un array o IList(T)).  
+- Query che contengono Zip o SequenceEquals, a meno che in una delle origini dati non sia presente un indice originariamente ordinato e l'altra origine dati non sia indicizzabile (ad esempio un array o IList(T)).  
   
--   Query che contengono Concat, a meno che non sia applicato a origini dati indicizzabili.  
+- Query che contengono Concat, a meno che non sia applicato a origini dati indicizzabili.  
   
--   Query che contengono Reverse, a meno che non sia applicato a un'origine dati indicizzabile.  
+- Query che contengono Reverse, a meno che non sia applicato a un'origine dati indicizzabile.  
   
 ## <a name="see-also"></a>Vedere anche
 

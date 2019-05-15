@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2cb07389ad68985362993e76f82e58d2a59e237
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bb2aabfd083a71d8d083d08e9bc7e2a7ad065e7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178880"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623355"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (generatore di file di risorse)
 Il generatore di file di risorse (Resgen.exe) converte i file di testo (.txt o .restext) e i file di risorse basati su XML (.resx) in file binari Common Language Runtime (.resources) incorporabili in un eseguibile binario o in un assembly satellite di runtime. Vedere [Creazione di file di risorse](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
   
  Resgen.exe è un'utilità generica di conversione delle risorse che esegue le seguenti attività:  
   
--   Converte i file .txt o .restext in file .resources o .resx. Il formato dei file .restext è identico al formato dei file .txt, Tuttavia, l'estensione .restext consente di identificare più facilmente i file di testo che contengono definizioni di risorse.  
+- Converte i file .txt o .restext in file .resources o .resx. Il formato dei file .restext è identico al formato dei file .txt, Tuttavia, l'estensione .restext consente di identificare più facilmente i file di testo che contengono definizioni di risorse.  
   
--   Converte i file .resources in file di testo o .resx.  
+- Converte i file .resources in file di testo o .resx.  
   
--   Converte i file .resx in file di testo o .resources.  
+- Converte i file .resx in file di testo o .resources.  
   
--   Estrae le risorse di tipo stringa da un assembly in un file .resw adatto a essere utilizzato in un'app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+- Estrae le risorse di tipo stringa da un assembly in un file .resw adatto a essere utilizzato in un'app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
--   Crea una classe fortemente tipizzata che fornisce accesso alle singole risorse denominate e all'istanza <xref:System.Resources.ResourceManager>.  
+- Crea una classe fortemente tipizzata che fornisce accesso alle singole risorse denominate e all'istanza <xref:System.Resources.ResourceManager>.  
   
  Se l'esecuzione di Resgen.exe non riesce per qualsiasi motivo, il valore restituito è -1.  
   
@@ -116,17 +116,17 @@ resgen filename.extension [outputDirectory]
 ## <a name="performing-specific-resgenexe-tasks"></a>Esecuzione di specifiche attività di Resgen.exe  
  È possibile utilizzare Resgen.exe per diversi scopi: per la compilazione di un file di risorse basato su testo o su XML in un file binario, per la conversione tra formati di file di risorse e per la generazione di una classe che esegue il wrapping della funzionalità <xref:System.Resources.ResourceManager> e fornisce accesso alle risorse. In questa sezione vengono fornite informazioni dettagliate su ogni attività:  
   
--   [Compilazione di risorse in un file binario](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
+- [Compilazione di risorse in un file binario](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
   
--   [Conversione tra tipi di file di risorse](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
+- [Conversione tra tipi di file di risorse](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
   
--   [Compilazione o conversione di più file](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
+- [Compilazione o conversione di più file](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
   
--   [Esportazione di risorse in un file RESW](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
+- [Esportazione di risorse in un file RESW](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
   
--   [Compilazione condizionale di risorse](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
+- [Compilazione condizionale di risorse](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
   
--   [Generazione di una classe di risorse fortemente tipizzata](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
+- [Generazione di una classe di risorse fortemente tipizzata](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
   
 <a name="Compiling"></a>   
 ### <a name="compiling-resources-into-a-binary-file"></a>Compilazione di risorse in un file binario  
@@ -170,13 +170,13 @@ resgen Resources.resx Resources.resources
 ### <a name="converting-between-resource-file-types"></a>Conversione tra tipi di file di risorse  
  Oltre a compilare file di risorse basati su testo o su XML in file .resources binari, Resgen.exe può convertire qualsiasi tipo di file supportato in qualsiasi altro tipo di file supportato. Ciò significa che è possibile effettuare le seguenti conversioni:  
   
--   file .txt e .restext in file .resx  
+- file .txt e .restext in file .resx  
   
--   file .resx in file .txt e .restext  
+- file .resx in file .txt e .restext  
   
--   file .resources in file .txt e .restext  
+- file .resources in file .txt e .restext  
   
--   file .resources in file .resx  
+- file .resources in file .resx  
   
  La sintassi è identica a quella mostrata nella sezione precedente.  
   
@@ -315,13 +315,13 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  La classe di risorse fortemente tipizzata include i seguenti membri:  
   
--   Un costruttore senza parametri, che può essere utilizzato per creare un'istanza della classe di risorse fortemente tipizzata.  
+- Un costruttore senza parametri, che può essere utilizzato per creare un'istanza della classe di risorse fortemente tipizzata.  
   
--   Una proprietà `static` `Shared` (C#) o `ResourceManager` (Visual Basic) e di sola lettura, che restituisce l'istanza di <xref:System.Resources.ResourceManager> che gestisce la risorsa fortemente tipizzata.  
+- Una proprietà `static` `Shared` (C#) o `ResourceManager` (Visual Basic) e di sola lettura, che restituisce l'istanza di <xref:System.Resources.ResourceManager> che gestisce la risorsa fortemente tipizzata.  
   
--   Una proprietà `Culture` statica, che consente di configurare le impostazioni cultura utilizzate per il recupero delle risorse. Per impostazione predefinita, il valore è `null`, che indica che vengono usate le impostazioni cultura dell'interfaccia utente correnti.  
+- Una proprietà `Culture` statica, che consente di configurare le impostazioni cultura utilizzate per il recupero delle risorse. Per impostazione predefinita, il valore è `null`, che indica che vengono usate le impostazioni cultura dell'interfaccia utente correnti.  
   
--   Una proprietà `static` (C#) o `Shared` (Visual Basic) di sola lettura per ogni risorsa nel file .resources. Il nome della proprietà è il nome della risorsa.  
+- Una proprietà `static` (C#) o `Shared` (Visual Basic) di sola lettura per ogni risorsa nel file .resources. Il nome della proprietà è il nome della risorsa.  
   
  Ad esempio, il seguente comando compila un file di risorse denominato StringResources.txt in StringResources.resources e genera una classe denominata `StringResources` in un file di codice sorgente Visual Basic denominato StringResources.vb utilizzabile per accedere a Gestione risorse.  
   

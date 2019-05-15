@@ -10,27 +10,27 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 12f65fe4b1dc710ff5c053073817dbd793c86082
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3378cffc1dcee7bb12705704e66b7fdd287105fb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511839"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592970"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked e Unchecked (Riferimenti per C#)
 È possibile eseguire istruzioni C# in contesti verificati o non verificati. In un contesto verificato l'overflow aritmetico genera un'eccezione. In un contesto non verificato, l'overflow aritmetico viene ignorato e il risultato viene troncato mediante l'eliminazione di tutti i bit più significativi che non corrispondono al tipo di destinazione.  
   
--   [checked](checked.md) Specificare il contesto verificato.  
+- [checked](checked.md) Specificare il contesto verificato.  
   
--   [unchecked](unchecked.md) Specificare il contesto non verificato.  
+- [unchecked](unchecked.md) Specificare il contesto non verificato.  
   
  Le operazioni seguenti sono interessate dal controllo di overflow:  
   
--   Espressioni che usano gli operatori predefiniti seguenti su tipi integrali:  
+- Espressioni che usano gli operatori predefiniti seguenti su tipi integrali:  
   
      `++`, `--`, `-` unario, `+`, `-`, `*`, `/`  
   
--   Conversioni numeriche esplicite tra tipi integrali oppure da `float` o `double` a un tipo integrale.  
+- Conversioni numeriche esplicite tra tipi integrali oppure da `float` o `double` a un tipo integrale.  
   
  Se non si specifica `checked` né `unchecked`, il contesto predefinito per le espressioni non costanti (espressioni che vengono valutate in fase di esecuzione) è definito dal valore dell'opzione del compilatore [-checked](../compiler-options/checked-compiler-option.md). Per impostazione predefinita il valore di tale opzione non è impostato e le operazioni aritmetiche vengono eseguite in un contesto non verificato.
  

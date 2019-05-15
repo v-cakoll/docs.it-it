@@ -12,33 +12,33 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c238f0aebd7c81443eb55fe0ee84844f0c9aee8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 34f0002554320f99d961d03e9eebd8d0f774f1f6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207513"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591506"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerazioni sulla sicurezza in relazione alla reflection
 La reflection consente di ottenere informazioni su tipi e membri e di accedere ai membri, vale a dire chiamare metodi e costruttori, ottenere e impostare valori di proprietà, aggiungere e rimuovere gestori eventi e così via. L'uso della reflection per ottenere informazioni su tipi e membri non presenta limitazioni. L'intero codice può usare la reflection per eseguire le attività seguenti:  
   
--   Enumerare tipi e membri ed esaminare i rispettivi metadati.  
+- Enumerare tipi e membri ed esaminare i rispettivi metadati.  
   
--   Enumerare ed esaminare assembly e moduli.  
+- Enumerare ed esaminare assembly e moduli.  
   
  L'uso della reflection per accedere ai membri, per contro, è soggetto a limitazioni. A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare la reflection per accedere ai membri critici per la sicurezza solo tramite il codice attendibile. Inoltre, solo un codice affidabile può usare la reflection per accedere a membri non pubblici che non sarebbero altrimenti accessibili direttamente dal codice compilato. Infine, al codice in cui viene usata la reflection per accedere a un membro critico per la sicurezza devono essere associate le autorizzazioni richieste dal membro critico per la sicurezza, come nel codice compilato.  
   
  Fatte salve le autorizzazioni necessarie, il codice può usare la reflection per eseguire i tipi di accesso seguenti:  
   
--   Accesso a membri pubblici non critici per la sicurezza.  
+- Accesso a membri pubblici non critici per la sicurezza.  
   
--   Accesso a membri non pubblici ai quali il codice compilato potrebbe accedere, se non critici per la sicurezza. Gli esempi di tali membri non pubblici includono:  
+- Accesso a membri non pubblici ai quali il codice compilato potrebbe accedere, se non critici per la sicurezza. Gli esempi di tali membri non pubblici includono:  
   
-    -   Membri protetti delle classi base del codice chiamante. Nella reflection viene fatto riferimento a questa operazione con il termine accesso a livello di famiglia.  
+    - Membri protetti delle classi base del codice chiamante. Nella reflection viene fatto riferimento a questa operazione con il termine accesso a livello di famiglia.  
   
-    -   Membri `internal` (membri `Friend` in Visual Basic) nell'assembly del codice chiamante. Nella reflection viene fatto riferimento a questa operazione con il termine accesso a livello di assembly.  
+    - Membri `internal` (membri `Friend` in Visual Basic) nell'assembly del codice chiamante. Nella reflection viene fatto riferimento a questa operazione con il termine accesso a livello di assembly.  
   
-    -   Membri privati di altre istanze della classe che contiene il codice chiamante.  
+    - Membri privati di altre istanze della classe che contiene il codice chiamante.  
   
  Ad esempio, il codice eseguito in un dominio applicazione in modalità sandbox è limitato all'accesso descritto in questo elenco, a meno che il dominio dell'applicazione non conceda altre autorizzazioni.  
   
@@ -50,9 +50,9 @@ La reflection consente di ottenere informazioni su tipi e membri e di accedere a
 ## <a name="accessing-security-critical-members"></a>Accesso ai membri critici per la sicurezza  
  Un membro è critico per la sicurezza se possiede l'attributo <xref:System.Security.SecurityCriticalAttribute>, se appartiene a un tipo che possiede l'attributo <xref:System.Security.SecurityCriticalAttribute> o se è contenuto in un assembly critico per la sicurezza. A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], per l'accesso ai membri critici per la sicurezza valgono le regole seguenti:  
   
--   Il codice Transparent non può usare la reflection per accedere a membri critici per la sicurezza, sebbene sia completamente attendibile. Viene generata un'eccezione <xref:System.MethodAccessException>, <xref:System.FieldAccessException> o <xref:System.TypeAccessException>.  
+- Il codice Transparent non può usare la reflection per accedere a membri critici per la sicurezza, sebbene sia completamente attendibile. Viene generata un'eccezione <xref:System.MethodAccessException>, <xref:System.FieldAccessException> o <xref:System.TypeAccessException>.  
   
--   Il codice eseguito con attendibilità parziale è considerato Transparent.  
+- Il codice eseguito con attendibilità parziale è considerato Transparent.  
   
  Queste regole valgono sempre, indipendentemente dal fatto che l'accesso al membro critico per la sicurezza venga eseguito direttamente dal codice compilato o tramite reflection.  
   
@@ -77,18 +77,18 @@ La reflection consente di ottenere informazioni su tipi e membri e di accedere a
 ## <a name="accessing-members-that-are-normally-inaccessible"></a>Accesso a membri generalmente non accessibili  
  Per usare la reflection per richiamare membri non accessibili secondo le regole di accessibilità di Common Language Runtime, è necessario concedere al codice una delle due autorizzazioni seguenti:  
   
--   Per consentire al codice di richiamare qualsiasi membro non pubblico, è necessario concedere al codice l'autorizzazione <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>.  
+- Per consentire al codice di richiamare qualsiasi membro non pubblico, è necessario concedere al codice l'autorizzazione <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>.  
   
     > [!NOTE]
     >  Per impostazione predefinita, i criteri di sicurezza negano questa autorizzazione al codice proveniente da Internet. L'autorizzazione, infatti, non dovrebbe mai essere concessa a codice proveniente da Internet.  
   
--   Per consentire al codice di chiamare qualsiasi membro non pubblico, a condizione che il set di concessioni dell'assembly contenente il membro chiamato sia uguale o sia un sottoinsieme del set di concessioni dell'assembly contenente il codice chiamante: è necessario concedere al codice l'autorizzazione <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
+- Per consentire al codice di chiamare qualsiasi membro non pubblico, a condizione che il set di concessioni dell'assembly contenente il membro chiamato sia uguale o sia un sottoinsieme del set di concessioni dell'assembly contenente il codice chiamante: è necessario concedere al codice l'autorizzazione <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
  Ad esempio, si supponga di concedere a un dominio applicazione autorizzazioni Internet più <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, quindi di eseguire un'applicazione Internet con due assembly, A e B.  
   
--   L''assembly A può usare la reflection per accedere ai membri privati dell'assembly B, in quanto il set di concessioni dell'assembly B non include autorizzazioni che non siano state concesse anche ad A.  
+- L''assembly A può usare la reflection per accedere ai membri privati dell'assembly B, in quanto il set di concessioni dell'assembly B non include autorizzazioni che non siano state concesse anche ad A.  
   
--   L'assembly A non può usare la reflection per accedere ai membri privati degli assembly di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ad esempio mscorlib.dll, poiché mscorlib.dll è completamente attendibile e pertanto ha autorizzazioni che non sono state concesse all'assembly A. Viene generata un'accezione <xref:System.MemberAccessException> quando la sicurezza dall'accesso di codice esamina lo stack in fase di esecuzione.  
+- L'assembly A non può usare la reflection per accedere ai membri privati degli assembly di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ad esempio mscorlib.dll, poiché mscorlib.dll è completamente attendibile e pertanto ha autorizzazioni che non sono state concesse all'assembly A. Viene generata un'accezione <xref:System.MemberAccessException> quando la sicurezza dall'accesso di codice esamina lo stack in fase di esecuzione.  
   
 ## <a name="serialization"></a>Serializzazione  
  Per la serializzazione, <xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> consente di ottenere e impostare membri di tipi serializzabili, indipendentemente dall'accessibilità. Questa autorizzazione consente di individuare e modificare lo stato privato di un'istanza tramite codice. Oltre a disporre delle autorizzazioni appropriate, il tipo deve essere [contrassegnato](../../../docs/standard/attributes/applying-attributes.md) come serializzabile nei metadati.  
@@ -98,11 +98,11 @@ La reflection consente di ottenere informazioni su tipi e membri e di accedere a
   
 ## <a name="version-information"></a>Informazioni sulla versione  
   
--   A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], il codice Transparent non può usare la reflection per accedere ai membri critici per la sicurezza.  
+- A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], il codice Transparent non può usare la reflection per accedere ai membri critici per la sicurezza.  
   
--   Il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> viene introdotto in [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] richiedono il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> per il codice che usa la reflection per accedere ai membri non pubblici. Questa autorizzazione non dovrebbe mai essere concessa al codice parzialmente attendibile.  
+- Il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> viene introdotto in [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] richiedono il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> per il codice che usa la reflection per accedere ai membri non pubblici. Questa autorizzazione non dovrebbe mai essere concessa al codice parzialmente attendibile.  
   
--   A partire da [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], l'uso della reflection per ottenere informazioni su tipi e membri non pubblici non richiede alcuna autorizzazione. Nelle versioni precedenti è necessario usare <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.  
+- A partire da [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], l'uso della reflection per ottenere informazioni su tipi e membri non pubblici non richiede alcuna autorizzazione. Nelle versioni precedenti è necessario usare <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
 

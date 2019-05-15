@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10f947fc44e69368e30614e0b41eaf7c73fb6563
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: cc4850ff87d9ea827e86a16ee6b3a6953c1e3552
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084949"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622699"
 ---
 # <a name="garbage-collection-notifications"></a>Notifiche di Garbage Collection
 In alcune situazioni un'operazione completa di Garbage Collection (cioè di generazione 2) eseguita da Common Language Runtime può influire negativamente sulle prestazioni. Può essere un problema soprattutto con i server che elaborano grandi volumi di richieste. In questo caso, una lunga procedura di Garbage Collection può provocare un timeout delle richieste. Per evitare che venga eseguita una raccolta completa durante un periodo critico, è possibile essere informati che sta per iniziare una Garbage Collection completa e quindi intraprendere un'azione per reindirizzare il carico di lavoro a un'altra istanza del server. È anche possibile indurre manualmente una raccolta, a condizione che l'istanza del server corrente non sia necessaria per elaborare le richieste.  
@@ -28,33 +28,33 @@ In alcune situazioni un'operazione completa di Garbage Collection (cioè di gene
   
  Per determinare quando è stata generata una notifica, usare i metodi <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A>. Questi metodi vengono in genere usati in un ciclo `while` per ottenere continuamente un'enumerazione <xref:System.GCNotificationStatus> che indica lo stato della notifica. Se tale valore è <xref:System.GCNotificationStatus.Succeeded>, è possibile procedere nel modo seguente:  
   
--   In risposta a una notifica ottenuta con il metodo <xref:System.GC.WaitForFullGCApproach%2A>, è possibile reindirizzare il carico di lavoro e probabilmente indurre manualmente una raccolta.  
+- In risposta a una notifica ottenuta con il metodo <xref:System.GC.WaitForFullGCApproach%2A>, è possibile reindirizzare il carico di lavoro e probabilmente indurre manualmente una raccolta.  
   
--   In risposta a una notifica ottenuta con il metodo <xref:System.GC.WaitForFullGCComplete%2A>, è possibile rendere l'istanza corrente del server disponibile per elaborare di nuovo le richieste. È anche possibile raccogliere informazioni. È ad esempio è possibile usare il metodo <xref:System.GC.CollectionCount%2A> per registrare il numero di raccolte.  
+- In risposta a una notifica ottenuta con il metodo <xref:System.GC.WaitForFullGCComplete%2A>, è possibile rendere l'istanza corrente del server disponibile per elaborare di nuovo le richieste. È anche possibile raccogliere informazioni. È ad esempio è possibile usare il metodo <xref:System.GC.CollectionCount%2A> per registrare il numero di raccolte.  
   
  I metodi <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> sono progettati per interagire. L'uso di uno senza l'altro può produrre risultati imprevisti.  
   
 ## <a name="full-garbage-collection"></a>Garbage Collection completa  
  Il runtime genera una Garbage Collection completa quando si verifica uno degli scenari seguenti:  
   
--   È stata promossa memoria sufficiente alla generazione 2 per generare la raccolta di generazione 2 successiva.  
+- È stata promossa memoria sufficiente alla generazione 2 per generare la raccolta di generazione 2 successiva.  
   
--   È stata promossa memoria sufficiente all'heap degli oggetti grandi per generare la raccolta di generazione 2 successiva.  
+- È stata promossa memoria sufficiente all'heap degli oggetti grandi per generare la raccolta di generazione 2 successiva.  
   
--   Viene eseguita l'escalation di una raccolta di generazione 1 a una raccolta di generazione 2 a causa di altri fattori.  
+- Viene eseguita l'escalation di una raccolta di generazione 1 a una raccolta di generazione 2 a causa di altri fattori.  
   
  Le soglie specificate nel metodo <xref:System.GC.RegisterForFullGCNotification%2A> si applicano ai primi due scenari. Nel primo scenario, tuttavia, non si riceverà sempre la notifica nel periodo di tempo proporzionale ai valori della soglia specificati, per due motivi:  
   
--   Il runtime non controlla ogni allocazione di oggetti piccoli (per motivi di prestazioni).  
+- Il runtime non controlla ogni allocazione di oggetti piccoli (per motivi di prestazioni).  
   
--   Sole le raccolte di generazione 1 promuovono la memoria alla generazione 2.  
+- Sole le raccolte di generazione 1 promuovono la memoria alla generazione 2.  
   
  Nel terzo scenario è incerto anche quando si riceverà la notifica. Anche se non è una garanzia, è un modo utile per ridurre gli effetti di una Garbage Collection completa non opportuna reindirizzando le richieste durante questo intervallo di tempo o inducendo manualmente la raccolta quando può essere gestita meglio.  
   
 ## <a name="notification-threshold-parameters"></a>Parametri delle soglie di notifica  
  Il metodo <xref:System.GC.RegisterForFullGCNotification%2A> presenta due parametri per specificare i valori di soglia degli oggetti di generazione 2 e dell'heap degli oggetti grandi. Quando tali valori sono soddisfatti, verrà generata una notifica di Garbage Collection. Nella tabella seguente vengono descritti i parametri.  
   
-|Parametro|Descrizione|  
+|Parametro|Description|  
 |---------------|-----------------|  
 |`maxGenerationThreshold`|Numero compreso tra 1 e 99 che specifica se la notifica deve essere generata in base agli oggetti promossi alla generazione 2.|  
 |`largeObjectHeapThreshold`|Numero compreso tra 1 e 99 che specifica quando generare la notifica in base agli oggetti allocati nell'heap degli oggetti grandi.|  
@@ -65,12 +65,12 @@ In alcune situazioni un'operazione completa di Garbage Collection (cioè di gene
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Descrizione  
+### <a name="description"></a>Description  
  Nell'esempio seguente un gruppo di server gestisce le richieste Web in ingresso. Per simulare il carico di lavoro dell'elaborazione delle richieste, vengono aggiunte matrici di byte a una raccolta <xref:System.Collections.Generic.List%601>. Ogni server registra una notifica di Garbage Collection e quindi avvia un thread nel metodo utente `WaitForFullGCProc` per monitorare costantemente l'enumerazione <xref:System.GCNotificationStatus> restituita dai metodi <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A>.  
   
  I metodi <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> chiamano i rispettivi metodi utente di gestione eventi quando viene generata una notifica:  
   
--   `OnFullGCApproachNotify`  
+- `OnFullGCApproachNotify`  
   
      Questo metodo chiama il metodo utente `RedirectRequests`, che indica al server di accodamento delle richieste di sospendere l'invio di richieste al server. Questa azione viene simulata impostando la variabile a livello di classe `bAllocate` su `false` in modo che non vengano allocati altri oggetti.  
   
@@ -78,7 +78,7 @@ In alcune situazioni un'operazione completa di Garbage Collection (cioè di gene
   
      Viene infine indotta una Garbage Collection perché il carico di lavoro è leggero.  
   
--   `OnFullGCCompleteNotify`  
+- `OnFullGCCompleteNotify`  
   
      Questo metodo chiama il metodo utente `AcceptRequests` per riprendere l'accettazione delle richieste perché il server non è più soggetto a una Garbage Collection completa. Questa azione viene simulata impostando la variabile `bAllocate` su `true` in modo che sia possibile riprendere l'aggiunta degli oggetti alla raccolta <xref:System.Collections.Generic.List%601>.  
   
@@ -96,7 +96,7 @@ In alcune situazioni un'operazione completa di Garbage Collection (cioè di gene
   
  Il codice seguente contiene il metodo `OnFullGCApproachNotify` chiamato dal  
   
- Metodo `WaitForFullGCProc`.  
+ Metodo`WaitForFullGCProc` .  
   
  [!code-cpp[GCNotification#5](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#5)]
  [!code-csharp[GCNotification#5](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#5)]
@@ -104,7 +104,7 @@ In alcune situazioni un'operazione completa di Garbage Collection (cioè di gene
   
  Il codice seguente contiene il metodo `OnFullGCApproachComplete` chiamato dal  
   
- Metodo `WaitForFullGCProc`.  
+ Metodo`WaitForFullGCProc` .  
   
  [!code-cpp[GCNotification#6](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#6)]
  [!code-csharp[GCNotification#6](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#6)]

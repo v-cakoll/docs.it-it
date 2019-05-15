@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 638ea8c1f01c62075fc4399cada282128e07422d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186563"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607554"
 ---
 # <a name="setting-assembly-attributes"></a>Impostazione degli attributi dell'assembly
 Gli attributi dell'assembly sono valori che forniscono informazioni relative a un assembly. Tali attributi sono suddivisi nei seguenti gruppi di informazioni:  
   
--   Attributi relativi all'identità dell'assembly.  
+- Attributi relativi all'identità dell'assembly.  
   
--   Attributi informativi.  
+- Attributi informativi.  
   
--   Attributi relativi al manifesto dell'assembly.  
+- Attributi relativi al manifesto dell'assembly.  
   
--   Attributi relativi al nome sicuro.  
+- Attributi relativi al nome sicuro.  
   
 ## <a name="assembly-identity-attributes"></a>Attributi relativi all'identità dell'assembly  
  Tre attributi, insieme a un nome sicuro (se disponibile), consentono di determinare l'identità di un assembly: il nome, la versione e le impostazioni cultura. Il nome completo dell'assembly è costituito da questi attributi, che risultano necessari per creare riferimenti all'assembly nel codice. È possibile usare gli attributi per impostare la versione e le impostazioni cultura di un assembly. Il valore relativo al nome viene impostato dal compilatore o da [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) quando l'assembly viene creato ed è basato sul file contenente il manifesto dell'assembly.  

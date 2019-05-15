@@ -2,15 +2,15 @@
 title: Hosting in un'applicazione gestita
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1f4d91994ba44407ff5c93dbd34aa0bdef9332b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855829"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591741"
 ---
 # <a name="hosting-in-a-managed-application"></a>Hosting in un'applicazione gestita
-Servizi Windows Communication Foundation (WCF) possono essere ospitati in qualsiasi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dell'applicazione. Il self-hosting dei servizi è l'opzione di hosting più flessibile, poiché richiede la distribuzione di un'infrastruttura minima. Tuttavia, è anche l'opzione meno solida, infatti, le applicazioni gestite non forniscono l'hosting avanzati e funzionalità di gestione delle altre opzioni di hosting in WCF, ad esempio servizi Internet Information Services (IIS) e Windows.  
+Servizi Windows Communication Foundation (WCF) possono essere ospitati in qualsiasi applicazione .NET Framework. Il self-hosting dei servizi è l'opzione di hosting più flessibile, poiché richiede la distribuzione di un'infrastruttura minima. Tuttavia, è anche l'opzione meno solida, infatti, le applicazioni gestite non forniscono l'hosting avanzati e funzionalità di gestione delle altre opzioni di hosting in WCF, ad esempio servizi Internet Information Services (IIS) e Windows.  
   
  Per creare un servizio indipendente, creare e aprire un'istanza di <xref:System.ServiceModel.ServiceHost>, che avvia un servizio di ascolto di messaggi. Per altre informazioni, vedere [Procedura: Ospitare un servizio WCF in un'applicazione gestita](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   

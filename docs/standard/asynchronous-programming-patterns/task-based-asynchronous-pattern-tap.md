@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9dd8e49ad3270fe62b65469470485fcb169a4e7
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 96499d2a3d74deb7208fa49f9fc0927109d93a69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788544"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623800"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Modello asincrono basato su attività (TAP)
 Il modello asincrono basato su attività (TAP) è basato sui tipi <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> nello spazio dei nomi <xref:System.Threading.Tasks?displayProperty=nameWithType>, che vengono usati per rappresentare le operazioni asincrone arbitrarie. TAP è il modello di progettazione asincrono consigliato per le nuove attività di sviluppo.  
@@ -39,9 +39,9 @@ TAP usa un singolo metodo per rappresentare l'inizio e il completamento di un'op
 ## <a name="initiating-an-asynchronous-operation"></a>Avvio di un'operazione asincrona  
  Un metodo asincrono basato su TAP può eseguire una piccola quantità di lavoro in modo sincrono, ad esempio convalidare gli argomenti e avviare l'operazione asincrona, prima di restituire l'attività risultante. Le attività sincrone devono essere minime in modo che il metodo asincrono possa eseguire rapidamente la restituzione. I motivi per una restituzione rapida includono:  
   
--   I metodi asincroni possono essere richiamati dai thread dell'interfaccia utente e le attività sincrone a esecuzione prolungata potrebbero compromettere la velocità di risposta dell'applicazione.  
+- I metodi asincroni possono essere richiamati dai thread dell'interfaccia utente e le attività sincrone a esecuzione prolungata potrebbero compromettere la velocità di risposta dell'applicazione.  
   
--   Più metodi asincroni possono essere avviati simultaneamente. Pertanto, le attività a esecuzione prolungata nella parte sincrona di un metodo asincrono possono ritardare l'avvio di altre operazioni asincrone, riducendo quindi i vantaggi della concorrenza.  
+- Più metodi asincroni possono essere avviati simultaneamente. Pertanto, le attività a esecuzione prolungata nella parte sincrona di un metodo asincrono possono ritardare l'avvio di altre operazioni asincrone, riducendo quindi i vantaggi della concorrenza.  
   
  In alcuni casi, la quantità di lavoro richiesta per completare l'operazione è inferiore alla quantità di lavoro richiesta per avviare un'operazione in modo asincrono. La lettura da un flusso in cui l'operazione di lettura può essere soddisfatta dai dati che sono già stati memorizzati nel buffer in memoria è un esempio di tale scenario. In tali casi, l'operazione può essere completata in modo sincrono e può restituire un'attività già completata.  
   

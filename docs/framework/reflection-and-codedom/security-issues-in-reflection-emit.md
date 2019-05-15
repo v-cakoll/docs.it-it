@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7609c88b088b9386201f5ac5725d16f4c5f11071
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074521"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591394"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemi di sicurezza nella reflection emit
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornisce tre modalità per creare codice Microsoft Intermediate Language (MSIL), ciascuna con specifici problemi di sicurezza:  
   
--   [Assembly dinamici](#Dynamic_Assemblies)  
+- [Assembly dinamici](#Dynamic_Assemblies)  
   
--   [Metodi dinamici ospitati anonimamente](#Anonymously_Hosted_Dynamic_Methods)  
+- [Metodi dinamici ospitati anonimamente](#Anonymously_Hosted_Dynamic_Methods)  
   
--   [Metodi dinamici associati ad assembly esistenti](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
+- [Metodi dinamici associati ad assembly esistenti](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
   
  Indipendentemente dalla modalità di generazione del codice dinamico, l'esecuzione del codice generato richiede tutte le autorizzazioni necessarie per i tipi e i metodi usati dal codice generato.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "59074521"
 ### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>Generazione di assembly dinamici da codice parzialmente attendibile  
  Considerare le condizioni in cui un assembly con autorizzazioni Internet può generare un assembly dinamico temporaneo ed eseguirne il codice:  
   
--   L'assembly dinamico usa solo tipi e membri pubblici di altri assembly.  
+- L'assembly dinamico usa solo tipi e membri pubblici di altri assembly.  
   
--   Le autorizzazioni richieste da questi tipi e membri sono incluse nel set di concessioni dell'assembly parzialmente attendibile.  
+- Le autorizzazioni richieste da questi tipi e membri sono incluse nel set di concessioni dell'assembly parzialmente attendibile.  
   
--   L'assembly non viene salvato su disco.  
+- L'assembly non viene salvato su disco.  
   
--   I simboli di debug non vengono generati. I set di autorizzazioni `Internet` e `LocalIntranet` non includono le autorizzazioni necessarie.  
+- I simboli di debug non vengono generati. I set di autorizzazioni `Internet` e `LocalIntranet` non includono le autorizzazioni necessarie.  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>   
 ## <a name="anonymously-hosted-dynamic-methods"></a>Metodi dinamici ospitati anonimamente  
@@ -70,9 +70,9 @@ ms.locfileid: "59074521"
   
  Se il dominio dell'applicazione lo consente, i metodi dinamici ospitati in modo anonimo possono ignorare i controlli di visibilità JIT, ma solo se viene rispettata la restrizione seguente: i tipi e i membri non pubblici a cui accede un metodo dinamico ospitato in modo anonimo devono trovarsi in assembly i cui set di concessioni sono uguali o sono subset del set di concessioni dello stack di chiamate di creazione. Questa possibilità limitata di ignorare i controlli di visibilità JIT viene abilitata se il dominio applicazione concede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
--   Se il metodo usa solo tipi e membri pubblici, non sono necessarie autorizzazioni durante la costruzione.  
+- Se il metodo usa solo tipi e membri pubblici, non sono necessarie autorizzazioni durante la costruzione.  
   
--   Se si specifica che i controlli di visibilità JIT debbano essere ignorati, la richiesta effettuata durante la costruzione del metodo includerà <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> e il set di concessioni dell'assembly che contiene il membro non pubblico a cui si accede.  
+- Se si specifica che i controlli di visibilità JIT debbano essere ignorati, la richiesta effettuata durante la costruzione del metodo includerà <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> e il set di concessioni dell'assembly che contiene il membro non pubblico a cui si accede.  
   
  Poiché il set di concessioni del membro non pubblico viene preso in considerazione, il codice parzialmente attendibile che ha ottenuto <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> non può elevare i privilegi eseguendo membri non pubblici di assembly attendibili.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "59074521"
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>Generazione di metodi dinamici ospitati anonimamente dal codice parzialmente attendibile  
  Considerare le condizioni in cui un assembly con autorizzazioni Internet può generare un metodo dinamico ospitato anonimamente ed eseguirlo:  
   
--   Il metodo dinamico usa solo tipi e membri pubblici. Se il set di concessioni include <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, è possibile usare i tipi e i membri non pubblici di qualsiasi assembly il cui set di concessioni sia uguale o sia un subset del set di concessioni dell'assembly di creazione.  
+- Il metodo dinamico usa solo tipi e membri pubblici. Se il set di concessioni include <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, è possibile usare i tipi e i membri non pubblici di qualsiasi assembly il cui set di concessioni sia uguale o sia un subset del set di concessioni dell'assembly di creazione.  
   
--   Le autorizzazioni necessarie per tutti i tipi e i membri usati dal metodo dinamico sono incluse nel set di concessioni dell'assembly parzialmente attendibile.  
+- Le autorizzazioni necessarie per tutti i tipi e i membri usati dal metodo dinamico sono incluse nel set di concessioni dell'assembly parzialmente attendibile.  
   
 > [!NOTE]
 >  I metodi dinamici non supportano i simboli di debug.  
@@ -96,21 +96,21 @@ ms.locfileid: "59074521"
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Metodi dinamici associati ad assembly esistenti  
  Per associare un metodo dinamico a un tipo o a un modulo in un assembly esistente, usare uno qualsiasi dei costruttori <xref:System.Reflection.Emit.DynamicMethod> che specificano il tipo o il modulo associato. Le autorizzazioni necessarie per chiamare questi costruttori variano, poiché l'associazione di un metodo dinamico a un tipo o a un modulo esistente fornisce al metodo dinamico l'accesso ai membri e ai tipi non pubblici:  
   
--   Un metodo dinamico associato a un tipo può accedere a tutti i membri di tale tipo, anche ai membri privati, e a tutti i tipi e membri interni nell'assembly che contiene il tipo associato.  
+- Un metodo dinamico associato a un tipo può accedere a tutti i membri di tale tipo, anche ai membri privati, e a tutti i tipi e membri interni nell'assembly che contiene il tipo associato.  
   
--   Un metodo dinamico associato a un modulo può accedere a tutti i tipi e membri di `internal` (`Friend` in Visual Basic, `assembly` nei metadati di Common Language Runtime) nel modulo.  
+- Un metodo dinamico associato a un modulo può accedere a tutti i tipi e membri di `internal` (`Friend` in Visual Basic, `assembly` nei metadati di Common Language Runtime) nel modulo.  
   
  Inoltre, è possibile usare un costruttore che consente di specificare la possibilità di ignorare i controlli di visibilità del compilatore JIT. In questo modo il metodo dinamico può accedere a tutti i tipi e membri in tutti gli assembly, indipendentemente dal livello di accesso.  
   
  Le autorizzazioni richieste dal costruttore dipendono dal livello di accesso che si decide di concedere al metodo dinamico:  
   
--   Se il metodo usa solo membri e tipi pubblici e lo si associa a un tipo o a un modulo personalizzato, non sono necessarie autorizzazioni.  
+- Se il metodo usa solo membri e tipi pubblici e lo si associa a un tipo o a un modulo personalizzato, non sono necessarie autorizzazioni.  
   
--   Se si specifica che devono essere ignorati i controlli di visibilità JIT, il costruttore richiede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>.  
+- Se si specifica che devono essere ignorati i controlli di visibilità JIT, il costruttore richiede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>.  
   
--   Se si associa il metodo dinamico a un altro tipo, anche all'interno dell'assembly, il costruttore richiede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> e <xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
+- Se si associa il metodo dinamico a un altro tipo, anche all'interno dell'assembly, il costruttore richiede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> e <xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
   
--   Se si associa il metodo dinamico a un tipo o a un modulo in un altro assembly, il costruttore richiede due cose: <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> e il set di concessioni dell'assembly che contiene l'altro modulo. Ovvero, lo stack di chiamate deve includere tutte le autorizzazioni nel set di concessioni del modulo di destinazione, oltre a <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
+- Se si associa il metodo dinamico a un tipo o a un modulo in un altro assembly, il costruttore richiede due cose: <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> e il set di concessioni dell'assembly che contiene l'altro modulo. Ovvero, lo stack di chiamate deve includere tutte le autorizzazioni nel set di concessioni del modulo di destinazione, oltre a <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
     > [!NOTE]
     >  Per la compatibilità con le versioni precedenti, se la richiesta per il set di concessioni di destinazione con <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ha esito negativo, il costruttore richiede <xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
@@ -126,13 +126,13 @@ ms.locfileid: "59074521"
   
  Considerare le condizioni in cui un assembly con autorizzazioni Internet può generare un metodo dinamico ed eseguirlo:  
   
--   Il metodo dinamico è associato al modulo o al tipo che lo genera oppure il set di concessioni include <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ed è associato a un modulo in un assembly il cui set di concessioni è uguale o è un subset del set di concessioni dell'assembly di creazione.  
+- Il metodo dinamico è associato al modulo o al tipo che lo genera oppure il set di concessioni include <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ed è associato a un modulo in un assembly il cui set di concessioni è uguale o è un subset del set di concessioni dell'assembly di creazione.  
   
--   Il metodo dinamico usa solo tipi e membri pubblici. Se il set di concessioni include <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ed è associato a un modulo in un assembly il cui set di concessioni è uguale o è un subset del set di concessioni dell'assembly di creazione, può usare tipi e membri contrassegnati come `internal` (`Friend` in Visual Basic, `assembly` nei metadati di Common Language Runtime) nel modulo associato.  
+- Il metodo dinamico usa solo tipi e membri pubblici. Se il set di concessioni include <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ed è associato a un modulo in un assembly il cui set di concessioni è uguale o è un subset del set di concessioni dell'assembly di creazione, può usare tipi e membri contrassegnati come `internal` (`Friend` in Visual Basic, `assembly` nei metadati di Common Language Runtime) nel modulo associato.  
   
--   Le autorizzazioni richieste da tutti i tipi e i membri usati dal metodo dinamico sono inclusi nel set di concessioni dell'assembly parzialmente attendibile.  
+- Le autorizzazioni richieste da tutti i tipi e i membri usati dal metodo dinamico sono inclusi nel set di concessioni dell'assembly parzialmente attendibile.  
   
--   Il metodo dinamico non ignora i controlli di visibilità JIT.  
+- Il metodo dinamico non ignora i controlli di visibilità JIT.  
   
 > [!NOTE]
 >  I metodi dinamici non supportano i simboli di debug.  

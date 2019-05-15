@@ -4,12 +4,12 @@ description: Informazioni su esempi ed esercitazioni per .NET Core, ASP.NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950852"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469472"
 ---
 # <a name="net-samples-and-tutorials"></a>Esempi ed esercitazioni per .NET
 
@@ -60,6 +60,10 @@ Questo esempio illustra molti dei problemi che possono essere risolti usando gli
 **Esempi LINQ**
 
 Questa serie di esempi illustra molte delle funzionalità di LINQ (Language Integrated Query). L'[esempio completo](https://github.com/dotnet/samples/tree/master/core/linq/csharp) è disponibile nel repository dotnet/samples su GitHub.
+
+**Esempio di server COM gestito**
+
+L'esempio del [server COM](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) illustra la creazione di un server COM gestito e la sua registrazione a livello globale.
 
 **Esempio di assembly di interoperabilità primario di Microsoft Office**
 

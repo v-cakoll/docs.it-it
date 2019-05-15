@@ -2,12 +2,12 @@
 title: 'Procedura: Eseguire alberi delle espressioni (C#)'
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: bed37d8d96837062831f4a3017df8a3633446bf0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 034a391a21e685a6ceb8342bb1738ff34381cebb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583272"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598047"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>Procedura: Eseguire alberi delle espressioni (C#)
 In questo argomento viene illustrato come eseguire un albero delle espressioni. L'esecuzione di un albero delle espressioni può restituire un valore o può eseguire solo un'azione, ad esempio la chiamata a un metodo.  
@@ -44,9 +44,9 @@ Console.WriteLine(result);
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Aggiungere un riferimento di progetto a System.Core.dll, se non è già presente.  
+- Aggiungere un riferimento di progetto a System.Core.dll, se non è già presente.  
   
--   Includere lo spazio dei nomi System.Linq.Expressions.  
+- Includere lo spazio dei nomi System.Linq.Expressions.  
   
 ## <a name="see-also"></a>Vedere anche
 

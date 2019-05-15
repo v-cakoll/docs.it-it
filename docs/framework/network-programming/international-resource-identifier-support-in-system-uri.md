@@ -2,12 +2,12 @@
 title: Supporto per IRI (International Resource Identifier) in System.Uri
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: 589c49859592cba55cb5110fe65fdc49e451f478
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f78fff250aae177b5f0360e77a1c41a2f2bb0527
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769112"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647343"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>Supporto per IRI (International Resource Identifier) in System.Uri
 La classe <xref:System.Uri?displayProperty=nameWithType> è stata estesa con il supporto per gli IRI (International Resource Identifier) e gli IDN (Internationalized Domain Name). Questi miglioramenti sono disponibili in .NET Framework 3.5, 3.0 SP1 e 2.0 SP1.  
@@ -15,11 +15,11 @@ La classe <xref:System.Uri?displayProperty=nameWithType> è stata estesa con il 
 ## <a name="iri-and-idn-support"></a>Supporto per IRI e IDN  
  Gli indirizzi Web vengono in genere espressi tramite URI (Uniform Resource Identifier), che sono costituiti da un set di caratteri molto limitato:  
   
--   Lettere ASCII maiuscole e minuscole dell'alfabeto inglese.  
+- Lettere ASCII maiuscole e minuscole dell'alfabeto inglese.  
   
--   Cifre comprese tra 0 e 9.  
+- Cifre comprese tra 0 e 9.  
   
--   Numero ridotto di altri simboli ASCII.  
+- Numero ridotto di altri simboli ASCII.  
   
  Le specifiche per gli URI sono documentate nelle note RFC 2396 e RFC 3986 pubblicate da Internet Engineering Task Force (IETF).  
   

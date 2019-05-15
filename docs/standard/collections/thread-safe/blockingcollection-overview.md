@@ -10,35 +10,35 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abf6f193f97319db0cdff7e2a33846cdf011fbdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07dbffff9f3d93a33fa458fb9c2f16e64aeaf977
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673998"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664542"
 ---
 # <a name="blockingcollection-overview"></a>Panoramica di BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> è una classe di raccolta thread-safe che offre le funzionalità seguenti:  
   
--   Implementazione del modello Producer-Consumer.  
+- Implementazione del modello Producer-Consumer.  
   
--   Aggiunta e rimozione simultanea di elementi da più thread.  
+- Aggiunta e rimozione simultanea di elementi da più thread.  
   
--   Capacità massima facoltativa.  
+- Capacità massima facoltativa.  
   
--   Operazioni di inserimento e rimozione che si bloccano quando la raccolta è vuota o piena.  
+- Operazioni di inserimento e rimozione che si bloccano quando la raccolta è vuota o piena.  
   
--   Operazioni "prova" di inserimento e rimozione che non si bloccano o che si bloccano per un periodo di tempo specificato.  
+- Operazioni "prova" di inserimento e rimozione che non si bloccano o che si bloccano per un periodo di tempo specificato.  
   
--   Incapsulamento di qualsiasi tipo di raccolta che implementi <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>  
+- Incapsulamento di qualsiasi tipo di raccolta che implementi <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>  
   
--   Annullamento con token di annullamento.  
+- Annullamento con token di annullamento.  
   
--   Due tipi di enumerazione con `foreach` (`For Each` in Visual Basic):  
+- Due tipi di enumerazione con `foreach` (`For Each` in Visual Basic):  
   
-    1.  Enumerazione di sola lettura.  
+    1. Enumerazione di sola lettura.  
   
-    2.  Enumerazione che rimuove gli elementi quando vengono enumerati.  
+    2. Enumerazione che rimuove gli elementi quando vengono enumerati.  
   
 ## <a name="bounding-and-blocking-support"></a>Supporto di delimitazione e blocco  
  <xref:System.Collections.Concurrent.BlockingCollection%601> supporta delimitazione e blocco. La delimitazione consente di impostare la capacità massima della raccolta. La delimitazione è importante in determinati scenari poiché consente di controllare la dimensione massima della raccolta in memoria, impedendo ai thread Producer di spostarsi troppo oltre i thread Consumer.  

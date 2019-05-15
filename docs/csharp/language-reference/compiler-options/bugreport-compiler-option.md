@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 63d64acc0d0a1ed90a722db75b467bd3ce5f260e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f25455fac84903f9c39861e1f6863f6b2f6928f3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560338"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587381"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (opzioni del compilatore C#s)
 Specifica che le informazioni di debug devono essere inserite in un file per analisi successive.  
@@ -28,22 +28,22 @@ Specifica che le informazioni di debug devono essere inserite in un file per ana
  `file`  
  Nome del file in cui si vuole inserire il report sui bug.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'opzione **-bugreport** specifica che in `file` devono essere inserite le informazioni seguenti:  
   
--   Una copia di tutti i file di codice sorgente nella compilazione.  
+- Una copia di tutti i file di codice sorgente nella compilazione.  
   
--   Un elenco delle opzioni del compilatore usate nella compilazione.  
+- Un elenco delle opzioni del compilatore usate nella compilazione.  
   
--   Informazioni sulla versione per il compilatore, il runtime e il sistema operativo.  
+- Informazioni sulla versione per il compilatore, il runtime e il sistema operativo.  
   
--   Assembly e moduli di riferimento, salvati come cifre esadecimali, ad eccezione degli assembly forniti con .NET Framework e SDK.  
+- Assembly e moduli di riferimento, salvati come cifre esadecimali, ad eccezione degli assembly forniti con .NET Framework e SDK.  
   
--   L'eventuale output del compilatore.  
+- L'eventuale output del compilatore.  
   
--   Una descrizione del problema, che verrà richiesta.  
+- Una descrizione del problema, che verrà richiesta.  
   
--   Una descrizione del modo in cui si può risolvere il problema, che verrà richiesta.  
+- Una descrizione del modo in cui si può risolvere il problema, che verrà richiesta.  
   
  Se questa opzione viene usata con **-errorreport:prompt** o **-errorreport:send**, le informazioni nel file verranno inviate a Microsoft Corporation.  
   

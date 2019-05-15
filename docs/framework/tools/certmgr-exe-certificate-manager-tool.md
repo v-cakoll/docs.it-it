@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14dc09ff8ceaa5e754c2a8ee64846fbcac55e37f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 12415c6d461f3c8040aaa407edf9567633c5b108
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221101"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591554"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (strumento di gestione certificati)
 Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi di scopi consentiti ai certificati ed elenchi di revoche di certificati (CRL, Certificate Revocation List).  
@@ -75,13 +75,13 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
 ## <a name="remarks"></a>Osservazioni  
  Certmgr.exe svolge le seguenti funzioni di base:  
   
--   Visualizza certificati, elenchi di scopi consentiti e CRL sulla console.  
+- Visualizza certificati, elenchi di scopi consentiti e CRL sulla console.  
   
--   Aggiunge certificati, elenchi di scopi consentiti ai certificati e CRL a un archivio certificati.  
+- Aggiunge certificati, elenchi di scopi consentiti ai certificati e CRL a un archivio certificati.  
   
--   Elimina certificati, elenchi di scopi consentiti e CRL da un archivio certificati.  
+- Elimina certificati, elenchi di scopi consentiti e CRL da un archivio certificati.  
   
--   Salva su file un certificato X.509, un elenco di scopi consentiti o un CRL da un archivio certificati.  
+- Salva su file un certificato X.509, un elenco di scopi consentiti o un CRL da un archivio certificati.  
   
  Certmgr.exe funziona con due tipi di archivi certificati: **StoreFile** e archivi di sistema. Non è necessario specificare il tipo di archivio certificati: Certmgr.exe è infatti in grado di identificare il tipo di archivio e di eseguire le operazioni appropriate.  
   

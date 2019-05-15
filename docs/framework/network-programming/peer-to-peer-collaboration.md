@@ -2,12 +2,12 @@
 title: Collaborazione peer-to-peer
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 91e9179fc426934e78a1e0223c9bffafe5efbef1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0c257782ad391bb8de61caffdd13af1f2872ef6c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225300"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623168"
 ---
 # <a name="peer-to-peer-collaboration"></a>Collaborazione peer-to-peer
 
@@ -19,21 +19,21 @@ L'infrastruttura di collaborazione peer-to-peer è un'implementazione semplifica
 
  Un'applicazione di collaborazione peer-to-peer tipica include i passaggi seguenti:  
   
--   Il peer determina l'identità di un peer interessato a ospitare una sessione di collaborazione  
+- Il peer determina l'identità di un peer interessato a ospitare una sessione di collaborazione  
   
--   Viene inviata una richiesta per ospitare una sessione, in qualche modo, e il peer host accetta di gestire l'attività di collaborazione.  
+- Viene inviata una richiesta per ospitare una sessione, in qualche modo, e il peer host accetta di gestire l'attività di collaborazione.  
   
--   L'host invita i contatti nella subnet (incluso il richiedente) a una sessione.  
+- L'host invita i contatti nella subnet (incluso il richiedente) a una sessione.  
   
--   Tutti i peer che vogliono collaborare possono aggiungere l'host ai relativi strumenti di gestione dei contatti.  
+- Tutti i peer che vogliono collaborare possono aggiungere l'host ai relativi strumenti di gestione dei contatti.  
   
--   La maggior parte dei peer invierà risposte all'invito al peer host in modo tempestivo, indicando se accettano o rifiutano l'invito.  
+- La maggior parte dei peer invierà risposte all'invito al peer host in modo tempestivo, indicando se accettano o rifiutano l'invito.  
   
--   Tutti i peer che vogliono collaborare sottoscriveranno il peer host.  
+- Tutti i peer che vogliono collaborare sottoscriveranno il peer host.  
   
--   Mentre i peer eseguono le attività di collaborazione iniziali, il peer host può aggiungere peer remoti allo strumento di gestione dei contatti. Elabora inoltre tutte le risposte agli inviti per stabilire chi ha accettato, chi ha rifiutato e chi non ha risposto.  Può annullare gli inviti per coloro che non hanno risposto oppure eseguire un'altra attività.  
+- Mentre i peer eseguono le attività di collaborazione iniziali, il peer host può aggiungere peer remoti allo strumento di gestione dei contatti. Elabora inoltre tutte le risposte agli inviti per stabilire chi ha accettato, chi ha rifiutato e chi non ha risposto.  Può annullare gli inviti per coloro che non hanno risposto oppure eseguire un'altra attività.  
   
--   A questo punto, il peer host può avviare una sessione di collaborazione con tutti i peer invitati o registrare un'applicazione nell'infrastruttura di collaborazione.  Le applicazioni P2P usano l'infrastruttura di collaborazione peer-to-peer e lo spazio dei nomi <xref:System.Net.PeerToPeer.Collaboration> per coordinare le comunicazioni per giochi, BBS, conferenze e altre applicazioni per la presenza senza server.  
+- A questo punto, il peer host può avviare una sessione di collaborazione con tutti i peer invitati o registrare un'applicazione nell'infrastruttura di collaborazione.  Le applicazioni P2P usano l'infrastruttura di collaborazione peer-to-peer e lo spazio dei nomi <xref:System.Net.PeerToPeer.Collaboration> per coordinare le comunicazioni per giochi, BBS, conferenze e altre applicazioni per la presenza senza server.  
   
 ## <a name="peer-to-peer-networking-security"></a>Sicurezza delle reti peer-to-peer  
 

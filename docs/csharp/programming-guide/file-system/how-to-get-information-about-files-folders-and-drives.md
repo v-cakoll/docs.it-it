@@ -5,25 +5,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: e2315f5bfdca05da79e5ee4d897cd06dba6f1ed1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ecf07a11b92dccee888fb8113b6f3e2f333cf591
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966164"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595333"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Procedura: Ottenere informazioni relative a file, cartelle e unità (Guida per programmatori C#)
 In .NET Framework è possibile accedere a informazioni sul file system mediante le classi seguenti:  
   
--   <xref:System.IO.FileInfo?displayProperty=nameWithType>  
+- <xref:System.IO.FileInfo?displayProperty=nameWithType>  
   
--   <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>  
+- <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>  
   
--   <xref:System.IO.DriveInfo?displayProperty=nameWithType>  
+- <xref:System.IO.DriveInfo?displayProperty=nameWithType>  
   
--   <xref:System.IO.Directory?displayProperty=nameWithType>  
+- <xref:System.IO.Directory?displayProperty=nameWithType>  
   
--   <xref:System.IO.File?displayProperty=nameWithType>  
+- <xref:System.IO.File?displayProperty=nameWithType>  
   
  Le classi <xref:System.IO.FileInfo> e <xref:System.IO.DirectoryInfo> rappresentano un file o una directory e contengono proprietà che espongono molti degli attributi di file supportati dal file system NTFS. Contengono anche i metodi per l'apertura, la chiusura, lo spostamento e l'eliminazione di file e cartelle. È possibile creare istanze di queste classi passando al costruttore una stringa che rappresenta il nome del file, della cartella o dell'unità:  
   
@@ -43,13 +43,13 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Quando si elaborano stringhe di percorso specificate dall'utente, occorre gestire anche le eccezioni per le condizioni seguenti:  
   
--   Il nome file non è valido. Ad esempio, contiene caratteri non validi o solo spazi vuoti.  
+- Il nome file non è valido. Ad esempio, contiene caratteri non validi o solo spazi vuoti.  
   
--   Il nome del file è Null.  
+- Il nome del file è Null.  
   
--   La lunghezza del nome del file è maggiore della lunghezza massima definita nel sistema.  
+- La lunghezza del nome del file è maggiore della lunghezza massima definita nel sistema.  
   
--   Il nome del file contiene i due punti (:).  
+- Il nome del file contiene i due punti (:).  
   
  Se l'applicazione non ha autorizzazioni sufficienti per leggere il file specificato, il metodo `Exists` restituisce `false` indipendentemente dal fatto che il percorso esista. Il metodo non genera un'eccezione.  
   

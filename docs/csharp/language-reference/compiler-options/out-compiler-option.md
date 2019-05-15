@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0cb0b78396731a9b8e127430cd06a9e71812d4fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331299"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593023"
 ---
 # <a name="-out-c-compiler-options"></a>-out (opzioni del compilatore C#)
 L'opzione **-out** specifica il nome del file di output.  
@@ -35,9 +35,9 @@ L'opzione **-out** specifica il nome del file di output.
   
  Se non si specifica il nome del file di output:  
   
--   Un file con estensione exe corrisponderà al nome del file di codice sorgente che contiene il metodo **Main**.  
+- Un file con estensione exe corrisponderà al nome del file di codice sorgente che contiene il metodo **Main**.  
   
--   Un file con estensione dll o netmodule corrisponderà al nome del primo file di codice sorgente.  
+- Un file con estensione dll o netmodule corrisponderà al nome del primo file di codice sorgente.  
   
  Non è possibile usare per la compilazione di un file di output un file di codice sorgente già usato per compilare un altro file di output nella stessa compilazione.  
   

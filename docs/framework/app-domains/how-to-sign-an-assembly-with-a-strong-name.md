@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 458b18ad34cfff6ab136408ab8e8b2e7953b35cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303432"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593557"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedura: Firmare un assembly con un nome sicuro
 Sono disponibili diversi modi per firmare un assembly con un nome sicuro:  
   
--   Utilizzando la scheda di **Firma** nella finestra di dialogo **Proprietà** di un progetto in Visual Studio. Questo è il modo più semplice e più pratico per firmare un assembly con un nome sicuro.  
+- Utilizzando la scheda di **Firma** nella finestra di dialogo **Proprietà** di un progetto in Visual Studio. Questo è il modo più semplice e più pratico per firmare un assembly con un nome sicuro.  
   
--   Usando [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) per collegare un modulo di codice di .NET Framework (un file con estensione netmodule) con un file di chiave.  
+- Usando [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) per collegare un modulo di codice di .NET Framework (un file con estensione netmodule) con un file di chiave.  
   
--   Utilizzando attributi dell'assembly per inserire le informazioni relative al nome sicuro nel codice. È possibile utilizzare l'attributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute> , a seconda della posizione del file di chiave da utilizzare.  
+- Utilizzando attributi dell'assembly per inserire le informazioni relative al nome sicuro nel codice. È possibile utilizzare l'attributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute> , a seconda della posizione del file di chiave da utilizzare.  
   
--   Utilizzando le opzioni del compilatore.  
+- Utilizzando le opzioni del compilatore.  
   
  Per firmare un assembly con un nome sicuro, è necessario disporre di una coppia di chiavi crittografiche. Per altre informazioni sulla creazione di una coppia di chiavi, vedere [Procedura: Creare una coppia di chiavi pubblica/privata](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   
@@ -48,7 +48,7 @@ Sono disponibili diversi modi per firmare un assembly con un nome sicuro:
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Per creare e firmare un assembly con un nome sicuro utilizzando Assembly Linker  
   
--   Al [prompt dei comandi per gli sviluppatori per Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), digitare il comando seguente:  
+- Al [prompt dei comandi per gli sviluppatori per Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), digitare il comando seguente:  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   
@@ -90,7 +90,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 ### <a name="to-sign-an-assembly-with-a-strong-name-by-using-the-compiler"></a>Per firmare un assembly con un nome sicuro utilizzando il compilatore  
   
--   Compilare il file o i file del codice sorgente con l'opzione del compilatore `/keyfile` o `/delaysign` in C# e Visual Basic o con l'opzione del linker `/KEYFILE` o `/DELAYSIGN` in C++. Dopo il nome di opzione, aggiungere due punti e il nome del file di chiave. Se si utilizzano compilatori della riga di comando, è possibile copiare il file di chiave nella directory contenente i file del codice sorgente.  
+- Compilare il file o i file del codice sorgente con l'opzione del compilatore `/keyfile` o `/delaysign` in C# e Visual Basic o con l'opzione del linker `/KEYFILE` o `/DELAYSIGN` in C++. Dopo il nome di opzione, aggiungere due punti e il nome del file di chiave. Se si utilizzano compilatori della riga di comando, è possibile copiare il file di chiave nella directory contenente i file del codice sorgente.  
   
      Per informazioni sulla firma ritardata, vedere [Delay Signing an Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md).  
   
