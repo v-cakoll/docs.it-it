@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 80a07e389f84c56f6fa3f718b8ba7e0504201ba7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329518"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591518"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visualizzatore log associazioni assembly)
 Il Visualizzatore log associazione assembly consente di visualizzare i dettagli relativi alle associazioni di assembly. Queste informazioni facilitano la diagnosi delle cause dell'impossibilità di individuare un assembly in fase di esecuzione. Questi errori sono generalmente dovuti alla distribuzione di un assembly nel percorso errato, a un'immagine nativa che non è più valida o a una mancata corrispondenza di numeri di versione o impostazioni cultura. L'impossibilità da parte di Common Language Runtime di individuare un assembly produce generalmente un'eccezione <xref:System.TypeLoadException> nell'applicazione.  
@@ -51,17 +51,17 @@ fuslogvw
   
      Vengono visualizzati i seguenti dettagli relativi all'errore di associazione selezionato:  
   
-    -   Causa specifica dell'errore, ad esempio irreperibilità del file o versioni non corrispondenti.  
+    - Causa specifica dell'errore, ad esempio irreperibilità del file o versioni non corrispondenti.  
   
-    -   Informazioni sull'applicazione con cui è stata avviata l'associazione, inclusi il nome, la directory radice dell'applicazione (AppBase) e una descrizione del percorso di ricerca privato, se presente.  
+    - Informazioni sull'applicazione con cui è stata avviata l'associazione, inclusi il nome, la directory radice dell'applicazione (AppBase) e una descrizione del percorso di ricerca privato, se presente.  
   
-    -   Identità dell'assembly cercato.  
+    - Identità dell'assembly cercato.  
   
-    -   Descrizione dei criteri di controllo delle versioni applicati a livello di applicazione, editore o amministratore.  
+    - Descrizione dei criteri di controllo delle versioni applicati a livello di applicazione, editore o amministratore.  
   
-    -   Provenienza o meno dell'assembly dalla [Global Assembly Cache](../../../docs/framework/app-domains/gac.md).  
+    - Provenienza o meno dell'assembly dalla [Global Assembly Cache](../../../docs/framework/app-domains/gac.md).  
   
-    -   Elenco di tutti gli URL di sondaggio.  
+    - Elenco di tutti gli URL di sondaggio.  
   
  Nell'esempio seguente viene illustrata una voce di log in cui sono visualizzate informazioni dettagliate su un'associazione di assembly non riuscita.  
   
@@ -105,26 +105,26 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-all-entries-from-the-log"></a>Per eliminare tutte le voci dal log  
   
--   Fare clic sul pulsante **Elimina tutto**.  
+- Fare clic sul pulsante **Elimina tutto**.  
   
 ### <a name="to-refresh-the-user-interface"></a>Per aggiornare l'interfaccia utente  
   
--   Fare clic sul pulsante **Aggiorna**. Il visualizzatore non rileva automaticamente le nuove voci di log mentre è in esecuzione. Per visualizzarle è necessario scegliere il pulsante **Aggiorna**.  
+- Fare clic sul pulsante **Aggiorna**. Il visualizzatore non rileva automaticamente le nuove voci di log mentre è in esecuzione. Per visualizzarle è necessario scegliere il pulsante **Aggiorna**.  
   
 ### <a name="to-change-the-log-settings"></a>Per modificare le impostazioni di log  
   
--   Scegliere il pulsante **Impostazioni** per aprire la finestra di dialogo **Impostazioni log**.  
+- Scegliere il pulsante **Impostazioni** per aprire la finestra di dialogo **Impostazioni log**.  
   
 ### <a name="to-view-the-about-dialog"></a>Per visualizzare la finestra di dialogo Informazioni su  
   
--   Fare clic sul pulsante **Informazioni su**.  
+- Fare clic sul pulsante **Informazioni su**.  
   
 ## <a name="binding-logs-for-native-images"></a>Log di associazioni per immagini native  
  Per impostazione predefinita, Fuslogvw.exe registra le normali richieste di associazione di assembly. In alternativa, è possibile registrare le associazioni di assembly per le immagini native create usando [Ngen.exe (generatore di immagini native)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
 #### <a name="to-log-assembly-binds-for-native-images"></a>Per registrare le associazioni di assembly per le immagini native  
   
--   Nel gruppo **Categorie log**, selezionare il pulsante di opzione **Immagini native**.  
+- Nel gruppo **Categorie log**, selezionare il pulsante di opzione **Immagini native**.  
   
  Nel log seguente viene riportato un errore causato da una dipendenza inesistente nel momento in cui è stata creata l'immagine nativa per l'applicazione. Se le dipendenze in fase di esecuzione differiscono dalle dipendenze durante l'esecuzione di Ngen.exe, l'associazione a un'immagine nativa non è consentita.  
   
@@ -185,23 +185,23 @@ Discarding native image.
   
 #### <a name="to-disable-logging"></a>Per disabilitare la registrazione  
   
--   Selezionare il pulsante di opzione **Log disattivato**.  Questa opzione è selezionata per impostazione predefinita.  
+- Selezionare il pulsante di opzione **Log disattivato**.  Questa opzione è selezionata per impostazione predefinita.  
   
 #### <a name="to-log-assembly-binds-in-exceptions"></a>Per registrare le associazioni di assembly in eccezioni  
   
--   Selezionare il pulsante di opzione **Registra nel testo dell'eccezione**. Solo le informazioni meno dettagliate del log Fusion vengono registrate nel testo dell'eccezione. Per visualizzare le informazioni complete, usare una delle altre impostazioni.  
+- Selezionare il pulsante di opzione **Registra nel testo dell'eccezione**. Solo le informazioni meno dettagliate del log Fusion vengono registrate nel testo dell'eccezione. Per visualizzare le informazioni complete, usare una delle altre impostazioni.  
   
      Vedere la nota Importante relativa agli assembly caricati come indipendenti dal dominio.  
   
 #### <a name="to-log-assembly-bind-failures"></a>Per registrare gli errori di associazione di assembly  
   
--   Selezionare il pulsante di opzione **Registra errori di associazione su disco**.  
+- Selezionare il pulsante di opzione **Registra errori di associazione su disco**.  
   
      Vedere la nota Importante relativa agli assembly caricati come indipendenti dal dominio.  
   
 #### <a name="to-log-all-assembly-binds"></a>Per registrare tutte le associazioni di assembly  
   
--   Selezionare il pulsante di opzione **Registra tutte le associazioni su disco**.  
+- Selezionare il pulsante di opzione **Registra tutte le associazioni su disco**.  
   
      Vedere la nota Importante relativa agli assembly caricati come indipendenti dal dominio.  
   

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19aeab232f366818291bd682ab9c063a75be6687
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa004f0def04c7efe2ba7450050a899760b0bbcd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724499"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590196"
 ---
 # <a name="node-types-recognized-with-xpath-queries"></a>Tipi di nodo riconosciuti con le query XPath
 I tipi di nodi riconosciuti in una query XPath non corrispondono a quelli del DOM (Document Object Model).  
@@ -18,25 +18,25 @@ I tipi di nodi riconosciuti in una query XPath non corrispondono a quelli del DO
 ## <a name="w3c-xpath-node-types"></a>Tipi di nodo XPath W3C  
  I tipi di nodo riconosciuti in una query XPath non corrispondono a quelli del DOM (Document Object Model). Di seguito sono riportati i tipi di nodo XPath rappresentati dall'enumerazione <xref:System.Xml.XPath.XPathNodeType>.  
   
--   <xref:System.Xml.XPath.XPathNodeType.All>  
+- <xref:System.Xml.XPath.XPathNodeType.All>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Attribute>  
+- <xref:System.Xml.XPath.XPathNodeType.Attribute>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Comment>  
+- <xref:System.Xml.XPath.XPathNodeType.Comment>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Element>  
+- <xref:System.Xml.XPath.XPathNodeType.Element>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Namespace>  
+- <xref:System.Xml.XPath.XPathNodeType.Namespace>  
   
--   <xref:System.Xml.XPath.XPathNodeType.ProcessingInstruction>  
+- <xref:System.Xml.XPath.XPathNodeType.ProcessingInstruction>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Root>  
+- <xref:System.Xml.XPath.XPathNodeType.Root>  
   
--   <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace>  
+- <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Text>  
+- <xref:System.Xml.XPath.XPathNodeType.Text>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Whitespace>  
+- <xref:System.Xml.XPath.XPathNodeType.Whitespace>  
   
  Questi tipi di nodo sono basati sul modello dati XPath, dove i nodi derivano dal set di informazioni XML. I tipi di nodo <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> e <xref:System.Xml.XPath.XPathNodeType.Whitespace> sono estensioni Microsoft .NET Framework dei tipi di nodi di base descritti nel modello dati XPath.  
   

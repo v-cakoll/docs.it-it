@@ -2,12 +2,12 @@
 title: Pubblicazione e risoluzione di nomi di peer
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 330117e103f7729ecf6f18ff551f65f1ba0f35da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a0787972a61f5700d1e8728be96db8ef9ee749e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769489"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623195"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Pubblicazione e risoluzione di nomi di peer
 
@@ -15,9 +15,9 @@ ms.locfileid: "59769489"
 
  Per pubblicare un nuovo ID PNRP, un peer esegue le operazioni seguenti:  
   
--   Invia i messaggi di pubblicazione PNRP ai suoi vicini di cache (i peer che hanno registrato ID PNRP nel livello più basso della cache) per inizializzare le rispettive cache.  
+- Invia i messaggi di pubblicazione PNRP ai suoi vicini di cache (i peer che hanno registrato ID PNRP nel livello più basso della cache) per inizializzare le rispettive cache.  
   
--   Sceglie casualmente nodi nel cloud che non sono adiacenti e invia loro richieste di risoluzione dei nomi PNRP per il proprio ID P2P. Il processo di determinazione dell'endpoint risultante inizializza le cache dei nodi casuali nel cloud con l'ID PNRP del peer di pubblicazione.  
+- Sceglie casualmente nodi nel cloud che non sono adiacenti e invia loro richieste di risoluzione dei nomi PNRP per il proprio ID P2P. Il processo di determinazione dell'endpoint risultante inizializza le cache dei nodi casuali nel cloud con l'ID PNRP del peer di pubblicazione.  
   
 I nodi della versione 2 PNRP non pubblicano ID PNRP se stanno solo risolvendo altri ID P2P. Il valore del Registro di sistema HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 (tipo REG_DWORD) specifica che i peer possono usare PNRP solo per la risoluzione dei nomi e mai per la pubblicazione dei nomi. Questo valore del Registro di sistema può essere configurato anche tramite Criteri di gruppo.  
   
@@ -37,11 +37,11 @@ I nodi della versione 2 PNRP non pubblicano ID PNRP se stanno solo risolvendo al
   
  Per eseguire la risoluzione dei nomi in PNRP, il peer esamina le voci nella propria cache per individuare una voce corrispondente all'ID PNRP di destinazione. Se viene trovata, il peer invia un messaggio di richiesta PNRP al peer e attende una risposta. In caso negativo, il peer invia un messaggio di richiesta PNRP al peer che corrisponde alla voce che ha l'ID PNRP che assomiglia di più all'ID PNRP. Il nodo che riceve il messaggio di richiesta PNRP controlla nella sua cache ed esegue le operazioni seguenti:  
   
--   Se trova l'ID PNRP, il peer dell'endpoint richiesto risponde direttamente al peer richiedente.  
+- Se trova l'ID PNRP, il peer dell'endpoint richiesto risponde direttamente al peer richiedente.  
   
--   Se l'ID PNRP non viene trovato e un ID PNRP nella cache si avvicina di più all'ID PNRP di destinazione, il peer richiesto invia una risposta al peer richiedente contenente l'indirizzo IPv6 del peer che rappresenta la voce con un ID PNRP più simile all'ID PNRP di destinazione. Usando l'indirizzo IP nella risposta, il nodo richiedente invia un altro messaggio di richiesta PNRP all'indirizzo IPv6 per rispondere o esaminarne la cache.  
+- Se l'ID PNRP non viene trovato e un ID PNRP nella cache si avvicina di più all'ID PNRP di destinazione, il peer richiesto invia una risposta al peer richiedente contenente l'indirizzo IPv6 del peer che rappresenta la voce con un ID PNRP più simile all'ID PNRP di destinazione. Usando l'indirizzo IP nella risposta, il nodo richiedente invia un altro messaggio di richiesta PNRP all'indirizzo IPv6 per rispondere o esaminarne la cache.  
   
--   Se non trova l'ID PNRP e se nella sua cache non è presente alcun ID PNRP più simile a quello di destinazione, il peer che ha ricevuto la richiesta invia al richiedente una risposta con la situazione accertata. Il peer richiedente sceglie quindi il secondo ID PNRP più vicino.  
+- Se non trova l'ID PNRP e se nella sua cache non è presente alcun ID PNRP più simile a quello di destinazione, il peer che ha ricevuto la richiesta invia al richiedente una risposta con la situazione accertata. Il peer richiedente sceglie quindi il secondo ID PNRP più vicino.  
   
 Il peer richiedente continua questo processo con iterazioni successive, fino a individuare il nodo che ha registrato l'ID PNRP.  
   

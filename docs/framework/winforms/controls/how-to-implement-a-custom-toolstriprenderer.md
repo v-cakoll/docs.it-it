@@ -8,12 +8,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
-ms.openlocfilehash: ec74528ecb3d2ca1fca78c3a81e71a0093843b4d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a84571bf8b81cd26c864edcd4d313a4009dda16
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651653"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592420"
 ---
 # <a name="how-to-implement-a-custom-toolstriprenderer"></a>Procedura: Implementare un oggetto ToolStripRenderer personalizzato
 È possibile personalizzare l'aspetto di un controllo <xref:System.Windows.Forms.ToolStrip> implementando una classe che deriva da <xref:System.Windows.Forms.ToolStripRenderer>. In questo modo è possibile creare un aspetto differente da quello fornito dalle classi <xref:System.Windows.Forms.ToolStripProfessionalRenderer> e <xref:System.Windows.Forms.ToolStripSystemRenderer>.  
@@ -36,8 +36,6 @@ ms.locfileid: "64651653"
  L'esempio presenta i requisiti seguenti:  
   
 - Riferimenti agli assembly System.Drawing e System.Windows.Forms.  
-  
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
 

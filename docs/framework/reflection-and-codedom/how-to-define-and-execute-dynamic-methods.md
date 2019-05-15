@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17bc7c417980c0850788f082ebb6e810fd0c53d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 883eb60197b79e0ddebf5e48438c81e29f609549
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333301"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591705"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Procedura: Definire ed eseguire metodi dinamici
 Le procedure seguenti illustrano come definire ed eseguire un metodo dinamico semplice e un metodo dinamico associato a un'istanza di una classe. Per altre informazioni sui metodi dinamici, vedere la classe <xref:System.Reflection.Emit.DynamicMethod> e [Scenari relativi a metodi dinamici della reflection emit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
@@ -116,11 +116,11 @@ Le procedure seguenti illustrano come definire ed eseguire un metodo dinamico se
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Il codice include le istruzioni `using` C# (`Imports` in Visual Basic) necessarie per la compilazione.  
+- Il codice include le istruzioni `using` C# (`Imports` in Visual Basic) necessarie per la compilazione.  
   
--   Non sono necessari altri riferimenti ad assembly.  
+- Non sono necessari altri riferimenti ad assembly.  
   
--   Compilare il codice dalla riga di comando usando csc.exe, vbc.exe o cl.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
+- Compilare il codice dalla riga di comando usando csc.exe, vbc.exe o cl.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
   
 ## <a name="see-also"></a>Vedere anche
 

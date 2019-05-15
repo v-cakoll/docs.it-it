@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342345"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613971"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Come il runtime individua gli assembly
 Per distribuire correttamente l'applicazione .NET Framework, è necessario comprendere in che modo Common Language Runtime individua e associa gli assembly che costituiscono l'applicazione. Per impostazione predefinita, il runtime tenta di eseguire l'associazione con la versione esatta di un assembly con cui è stata compilata l'applicazione. Questo comportamento predefinito può essere sottoposto a override dalle impostazioni del file di configurazione.  
@@ -51,11 +51,11 @@ Per distribuire correttamente l'applicazione .NET Framework, è necessario compr
   
 4. [Individua tramite probe l'assembly](#step4) usando la procedura seguente:  
   
-    1.  Se i criteri dell'editore e della configurazione non hanno effetto sul riferimento originale e se la richiesta di associazione è stata creata usando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, il runtime cerca suggerimenti per la posizione.  
+    1. Se i criteri dell'editore e della configurazione non hanno effetto sul riferimento originale e se la richiesta di associazione è stata creata usando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, il runtime cerca suggerimenti per la posizione.  
   
-    2.  Se viene trovata una codebase nei file di configurazione, il runtime controlla solo questo percorso. Se la probe non riesce, il runtime determina che la richiesta di associazione non è riuscita e non vengono eseguite altre individuazioni tramite probe.  
+    2. Se viene trovata una codebase nei file di configurazione, il runtime controlla solo questo percorso. Se la probe non riesce, il runtime determina che la richiesta di associazione non è riuscita e non vengono eseguite altre individuazioni tramite probe.  
   
-    3.  Le probe per l'assembly che usa le euristiche descritte nella [sezione relativa all'individuazione tramite probe](#step4). Se l'assembly non è stato trovato dopo l'individuazione tramite probe, il runtime lo richiede a Windows Installer. Questa operazione opera come una funzionalità di installazione su richiesta.  
+    3. Le probe per l'assembly che usa le euristiche descritte nella [sezione relativa all'individuazione tramite probe](#step4). Se l'assembly non è stato trovato dopo l'individuazione tramite probe, il runtime lo richiede a Windows Installer. Questa operazione opera come una funzionalità di installazione su richiesta.  
   
         > [!NOTE]
         >  Per gli assembly senza nomi sicuri non vengono eseguiti controlli della versione né controlli nella Global Assembly Cache con il runtime.  
@@ -64,11 +64,11 @@ Per distribuire correttamente l'applicazione .NET Framework, è necessario compr
 ## <a name="step-1-examining-the-configuration-files"></a>Passaggio 1: Esame dei file di configurazione  
  Il comportamento dell'associazione di assembly può essere configurato a livelli diversi in base a tre file XML:  
   
--   File di configurazione dell'applicazione.  
+- File di configurazione dell'applicazione.  
   
--   File dei criteri editore.  
+- File dei criteri editore.  
   
--   File di configurazione del computer.  
+- File di configurazione del computer.  
   
  Questi file seguono la stessa sintassi e forniscono informazioni quali i reindirizzamenti delle associazioni, la posizione del codice e le modalità di associazione per determinati assembly. Ogni file di configurazione può contenere un elemento [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) che reindirizza il processo di associazione. Negli elementi figlio dell'elemento [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) è incluso l'elemento [\<dependentAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md). Negli elementi figlio dell'elemento [\<dependentAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) sono inclusi gli elementi [\<assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), [\<bindingRedirect>](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) e [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md).  
   
@@ -172,13 +172,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ### <a name="locating-the-assembly-through-probing"></a>Individuazione dell'assembly mediante l'individuazione tramite probe  
  Se nel file di configurazione dell'applicazione non è stato specificato alcun elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md), il runtime esegue la ricerca dell'assembly usando quattro criteri:  
   
--   La base dell'applicazione, ovvero il percorso radice in cui viene eseguita l'applicazione.  
+- La base dell'applicazione, ovvero il percorso radice in cui viene eseguita l'applicazione.  
   
--   Le impostazioni cultura, ovvero l'attributo delle impostazioni cultura dell'assembly di riferimento.  
+- Le impostazioni cultura, ovvero l'attributo delle impostazioni cultura dell'assembly di riferimento.  
   
--   Il nome, ovvero il nome dell'assembly di riferimento.  
+- Il nome, ovvero il nome dell'assembly di riferimento.  
   
--   L'attributo `privatePath` dell'elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), ovvero l'elenco definito dall'utente delle sottodirectory del percorso radice. Questo percorso può essere specificato nel file di configurazione dell'applicazione e nel codice gestito mediante la proprietà <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> di un dominio applicazione. Quando è specificato nel codice gestito, viene eseguita prima l'individuazione tramite probe del codice gestito `privatePath`, seguita dal percorso specificato nel file di configurazione dell'applicazione.  
+- L'attributo `privatePath` dell'elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), ovvero l'elenco definito dall'utente delle sottodirectory del percorso radice. Questo percorso può essere specificato nel file di configurazione dell'applicazione e nel codice gestito mediante la proprietà <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> di un dominio applicazione. Quando è specificato nel codice gestito, viene eseguita prima l'individuazione tramite probe del codice gestito `privatePath`, seguita dal percorso specificato nel file di configurazione dell'applicazione.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Individuazione tramite probe delle directory Application Base e Culture  
  Il runtime avvia sempre l'individuazione tramite probe nella base dell'applicazione, che può essere un URL o la directory radice dell'applicazione in un computer. Se l'assembly di riferimento non viene trovato nella base dell'applicazione e non viene fornita alcuna informazione sulle impostazioni cultura, il runtime cerca il nome dell'assembly in tutte le sottodirectory. Le directory di cui viene eseguita l'individuazione tramite probe includono:  
@@ -213,13 +213,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="probing-examples"></a>Esempi di individuazione tramite probe  
  Date le seguenti informazioni:  
   
--   Nome dell'assembly di riferimento: myAssembly  
+- Nome dell'assembly di riferimento: myAssembly  
   
--   Directory radice dell'applicazione: `http://www.code.microsoft.com`  
+- Directory radice dell'applicazione: `http://www.code.microsoft.com`  
   
--   Elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) specificato nel file di configurazione: bin  
+- Elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) specificato nel file di configurazione: bin  
   
--   Impostazioni cultura: de  
+- Impostazioni cultura: de  
   
  Il runtime esegue l'individuazione tramite probe dei seguenti URL:  
   

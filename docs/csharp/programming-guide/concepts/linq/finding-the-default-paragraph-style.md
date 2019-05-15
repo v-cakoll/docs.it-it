@@ -2,12 +2,12 @@
 title: Ricerca dello stile di paragrafo predefinito (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 052accf31007001c0fa0d46870ee6e4cd30f6bb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89c70fcbc9d5286e2c9381250b30d525ebb1eb36
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674076"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596687"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>Ricerca dello stile di paragrafo predefinito (C#)
 La prima attività dell'esercitazione Modifica di informazioni in un documento WordprocessingML consiste nell'individuare lo stile predefinito dei paragrafi del documento.  
@@ -86,7 +86,7 @@ The default style is: Normal
 ## <a name="next-steps"></a>Passaggi successivi  
  Nell'esempio successivo verrà creata una query simile che trova tutti i paragrafi in un documento e i relativi stili:  
   
--   [Recupero dei paragrafi e dei relativi stili (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [Recupero dei paragrafi e dei relativi stili (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

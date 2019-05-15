@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f97650099aed0be7e1983f759cd0f38fc568f857
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f4f51cf554c60a2ff8ed319faa95397d2a0bb48b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082763"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623955"
 ---
 # <a name="mitigation-pool-blocking-period"></a>Mitigazione: periodo di blocco del pool
 Il periodo di blocco del pool di connessioni è stato rimosso per le connessioni ai database SQL di Azure.  
@@ -25,11 +25,11 @@ Il periodo di blocco del pool di connessioni è stato rimosso per le connessioni
 ## <a name="mitigation"></a>Mitigazione  
  Per le app che subiscono effetti negativi da questa modifica, è possibile configurare il periodo di blocco del pool di connessioni impostando la nuova proprietà <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A?displayProperty=nameWithType>.  Il valore della proprietà è un membro dell'enumerazione <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=nameWithType> che può assumere uno dei tre valori seguenti:  
   
--   <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType>
+- <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType>
   
--   <xref:System.Data.SqlClient.PoolBlockingPeriod.Auto?displayProperty=nameWithType>
+- <xref:System.Data.SqlClient.PoolBlockingPeriod.Auto?displayProperty=nameWithType>
   
--   <xref:System.Data.SqlClient.PoolBlockingPeriod.NeverBlock?displayProperty=nameWithType>
+- <xref:System.Data.SqlClient.PoolBlockingPeriod.NeverBlock?displayProperty=nameWithType>
   
  È possibile ripristinare il comportamento precedente impostando la proprietà <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> su <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType>.  
   

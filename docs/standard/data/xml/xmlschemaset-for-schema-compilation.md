@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e56680a74bc6800242ff56d27bcf179ee372df74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579589"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615378"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>XmlSchemaSet per la compilazione di schemi
 Viene descritto <xref:System.Xml.Schema.XmlSchemaSet>, ovvero una cache in cui è possibile archiviare e convalidare gli schemi XSD (XML Schema Definition Language).  
@@ -37,9 +37,9 @@ Viene descritto <xref:System.Xml.Schema.XmlSchemaSet>, ovvero una cache in cui �
 ## <a name="migrating-to-the-xmlschemaset"></a>Migrazione a XmlSchemaSet  
  Nel seguente esempio di codice viene fornita una guida per eseguire la migrazione alla nuova classe <xref:System.Xml.Schema.XmlSchemaSet> dalla classe obsoleta <xref:System.Xml.Schema.XmlSchemaCollection>. Nell'esempio di codice vengono illustrate le seguenti differenze principali tra le due classi.  
   
--   A differenza del metodo <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> della classe <xref:System.Xml.Schema.XmlSchemaCollection>, gli schemi non vengono compilati quando si chiama il metodo <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet>. Il metodo <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet> viene chiamato in modo esplicito nel codice di esempio.  
+- A differenza del metodo <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> della classe <xref:System.Xml.Schema.XmlSchemaCollection>, gli schemi non vengono compilati quando si chiama il metodo <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet>. Il metodo <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet> viene chiamato in modo esplicito nel codice di esempio.  
   
--   Per scorrere un tipo <xref:System.Xml.Schema.XmlSchemaSet>, è necessario usare la proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet>.  
+- Per scorrere un tipo <xref:System.Xml.Schema.XmlSchemaSet>, è necessario usare la proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  Di seguito è riportato l'esempio di codice obsoleto del tipo <xref:System.Xml.Schema.XmlSchemaCollection>.  
   

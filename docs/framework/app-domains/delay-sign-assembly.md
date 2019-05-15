@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc955ca892a8a0e5d15710b76a6a1c798ad4ecf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 31c43607a710316696a9765feb6f36b7676f906f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334055"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593636"
 ---
 # <a name="delay-signing-an-assembly"></a>Ritardo della firma di un assembly
 È possibile che in un'organizzazione venga usata una coppia di chiavi sottoposta a una rigorosa sicurezza e quindi non accessibile giornalmente agli sviluppatori. La chiave pubblica è spesso disponibile, ma l'accesso alla chiave privata è consentito solo ad alcune persone. Quando si sviluppano assembly con nome sicuro, in ogni assembly che fa riferimento all'assembly con nome sicuro di destinazione è contenuto un token della chiave pubblica usata per assegnare un nome sicuro all'assembly di destinazione. È quindi necessario che la chiave pubblica risulti disponibile durante il processo di sviluppo.  
@@ -32,9 +32,9 @@ ms.locfileid: "59334055"
   
 2. Apporre annotazioni al codice sorgente per l'assembly usando due attributi personalizzati da <xref:System.Reflection>:  
   
-    -   <xref:System.Reflection.AssemblyKeyFileAttribute>, che consente di passare il nome del file contenente la chiave pubblica come parametro al costruttore.  
+    - <xref:System.Reflection.AssemblyKeyFileAttribute>, che consente di passare il nome del file contenente la chiave pubblica come parametro al costruttore.  
   
-    -   <xref:System.Reflection.AssemblyDelaySignAttribute>, che indica che si sta usando il ritardo della firma passando **true** come parametro al costruttore. Ad esempio:  
+    - <xref:System.Reflection.AssemblyDelaySignAttribute>, che indica che si sta usando il ritardo della firma passando **true** come parametro al costruttore. Ad esempio:  
   
          [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
          [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]

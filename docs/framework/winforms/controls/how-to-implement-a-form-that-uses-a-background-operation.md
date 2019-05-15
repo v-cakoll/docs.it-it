@@ -16,12 +16,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: fc7ca8e96a7ee241b0899ee14f63cd891f23b665
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df7c6caf7b23824a596e94e1bd62205907b0b56a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638386"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592415"
 ---
 # <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Procedura: Implementare un modulo che usa un'operazione in background
 Nell'esempio di codice riportato di seguito viene creato un form che calcola numeri di Fibonacci. Il calcolo viene eseguito su un thread separato da quello dell'interfaccia utente, in modo che la risposta dell'interfaccia utente non venga ritardata dall'esecuzione del calcolo.  
@@ -39,8 +39,6 @@ Nell'esempio di codice riportato di seguito viene creato un form che calcola num
  L'esempio presenta i requisiti seguenti:  
   
 - Riferimenti agli assembly System, System.Drawing e System.Windows.Forms.  
-  
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
   

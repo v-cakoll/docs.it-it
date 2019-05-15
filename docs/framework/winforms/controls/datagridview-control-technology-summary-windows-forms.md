@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8898f76971b6088fa8ca831961ea7f12e1ab4e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909273"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588819"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Riepilogo della tecnologia del controllo DataGridView (Windows Form)
 Questo argomento riepiloga le informazioni relative al controllo `DataGridView` e alle classi che ne supportano l'uso.  
@@ -29,7 +29,7 @@ Questo argomento riepiloga le informazioni relative al controllo `DataGridView` 
  `BindingSource`  
   
 ## <a name="background"></a>Sfondo  
- Finestre di progettazione dell'interfaccia utente di frequente che sia necessario visualizzare dati in formato tabulare per gli utenti. Il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] offre diversi modi per visualizzare i dati in una tabella o una griglia. Il `DataGridView` controllo rappresenta la più recente evoluzione di questa tecnologia per le applicazioni Windows Form.  
+ Finestre di progettazione dell'interfaccia utente di frequente che sia necessario visualizzare dati in formato tabulare per gli utenti. .NET Framework offre diversi modi per visualizzare i dati in una tabella o una griglia. Il `DataGridView` controllo rappresenta la più recente evoluzione di questa tecnologia per le applicazioni Windows Form.  
   
  Il `DataGridView` controllo può visualizzare le righe di dati da un archivio dati. Sono supportati molti tipi di archivi dati. L'archivio dati può contenere dati semplici e non tipizzati, ad esempio una matrice unidimensionale, o può contenere dati tipizzati, ad esempio un <xref:System.Data.DataSet>. Per altre informazioni, vedere [Procedura: Associare i dati per i Windows Form controllo DataGridView](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a394aea0e5f8081f2be3b91422e29a251cef918e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314750"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626269"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Procedura: Registrare assembly di interoperabilità primari
 
@@ -28,9 +28,9 @@ ms.locfileid: "59314750"
 
  Anche se non è necessario registrare gli assembly di interoperabilità primari, a meno che non si preveda di usare Visual Studio, la registrazione offre due vantaggi:
 
--   Un assembly di interoperabilità primario registrato è contrassegnato chiaramente in corrispondenza della chiave del Registro di sistema della libreria dei tipi originale. La registrazione è il modo migliore per individuare un assembly di interoperabilità primario nel computer in uso.
+- Un assembly di interoperabilità primario registrato è contrassegnato chiaramente in corrispondenza della chiave del Registro di sistema della libreria dei tipi originale. La registrazione è il modo migliore per individuare un assembly di interoperabilità primario nel computer in uso.
 
--   È possibile evitare di generare accidentalmente un nuovo assembly di interoperabilità e di usarlo se, in futuro, si userà Visual Studio per fare riferimento a un tipo per cui si dispone di un assembly di interoperabilità primario non registrato.
+- È possibile evitare di generare accidentalmente un nuovo assembly di interoperabilità e di usarlo se, in futuro, si userà Visual Studio per fare riferimento a un tipo per cui si dispone di un assembly di interoperabilità primario non registrato.
 
 Usare lo [strumento di registrazione degli assembly (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) per registrare un assembly di interoperabilità primario.
 

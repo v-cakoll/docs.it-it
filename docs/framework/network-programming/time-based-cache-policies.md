@@ -17,12 +17,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 0fb9b50fdbc0a1e11992baac684c5e2e8c081f5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4dc57ae05822a602b4647839da259ca8f469fb82
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129311"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613840"
 ---
 # <a name="time-based-cache-policies"></a>criteri di cache basati sull'ora
 I criteri di cache basati sul tempo definiscono il livello di aggiornamento delle voci memorizzate nella cache usando l'ora di recupero della risorsa, le intestazioni restituite con la risorsa e l'ora corrente. Durante l'impostazione di criteri di cache basati sul tempo, è possibile usare il criterio basato sul tempo <xref:System.Net.Cache.HttpRequestCacheLevel.Default> oppure creare criteri personalizzati. Quando si usano i criteri basati sul tempo predefiniti per le risorse ottenute mediante HTTP (Hypertext Transfer Protocol), il comportamento esatto della cache è determinato dalle intestazioni incluse nella risposta memorizzata nella cache e dai comportamenti specificati nelle sezioni 13 e 14 del documento RFC 2616, disponibile nel sito Web [Internet Engineering Task Force (IETF)](https://www.ietf.org/). Per un esempio di codice che illustra l'impostazione di criteri basati sul tempo predefiniti per le risorse HTTP, vedere [Procedura: Impostare criteri di cache predefiniti basati sul tempo per un'applicazione](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Per esempi di codice che illustrano la creazione e l'uso dei criteri di cache, vedere [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
@@ -30,13 +30,13 @@ I criteri di cache basati sul tempo definiscono il livello di aggiornamento dell
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>Criteri per determinare il livello di aggiornamento delle voci memorizzate nella cache  
  Per personalizzare i criteri di cache basati sul tempo, è possibile specificare che occorre usare una o più delle impostazioni seguenti per determinare il livello di aggiornamento delle voci memorizzate nella cache:  
   
--   Durata massima  
+- Durata massima  
   
--   Obsolescenza massima  
+- Obsolescenza massima  
   
--   Validità minima  
+- Validità minima  
   
--   Data di sincronizzazione della cache  
+- Data di sincronizzazione della cache  
   
 > [!NOTE]
 >  L'uso dei criteri di cache basati sul tempo predefiniti non è da confondersi con l'impostazione di criteri di cache predefiniti per l'applicazione. I criteri basati sul tempo predefiniti sono criteri specifici che possono essere usati a livello di richiesta o di applicazione. I criteri di cache predefiniti per l'applicazione sono criteri (basati sulla posizione o sul tempo) applicati quando non è impostato alcun criterio per una richiesta. Per informazioni dettagliate sull'impostazione di criteri di cache predefiniti per l'applicazione, vedere <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
@@ -57,9 +57,9 @@ I criteri di cache basati sul tempo definiscono il livello di aggiornamento dell
   
  Gli argomenti seguenti forniscono informazioni sugli effetti della combinazione delle impostazioni per i criteri di cache basati sul tempo:  
   
--   [Interazione tra criteri di cache: durata massima e obsolescenza massima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
+- [Interazione tra criteri di cache: durata massima e obsolescenza massima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
--   [Interazione tra criteri di cache: durata massima e validità minima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
+- [Interazione tra criteri di cache: durata massima e validità minima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

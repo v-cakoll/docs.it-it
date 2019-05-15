@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 10e60ebd71c4615354c25d3a61a04e9d12d7c800
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49f28acc5001d63e7a1f6a5bfe8cb3415311e379
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033826"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582745"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET e LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fa parte di [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] della famiglia di tecnologie. e si basa sui servizi forniti dal modello provider [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]. È pertanto possibile combinare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] codice esistenti [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] applicazioni ed eseguire la migrazione corrente [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] soluzioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Nell'illustrazione seguente viene fornita una panoramica della relazione.  
@@ -31,7 +31,7 @@ ms.locfileid: "62033826"
 ## <a name="transactions"></a>Transazioni  
  È possibile fornire l'oggetto <xref:System.Data.Linq.DataContext> con la transazione di database personalizzata qualora l'applicazione abbia già avviato la transazione e si desideri che venga usato anche <xref:System.Data.Linq.DataContext>.  
   
- Il metodo preferito per creare transazioni con [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] consiste nell'usare l'oggetto <xref:System.Transactions.TransactionScope>. Usando questo approccio, è possibile creare transazioni distribuite che potranno essere usate sia con database che con altri gestori di risorse residenti in memoria. Gli ambiti di transazione richiedono alcune risorse per iniziare. Vengono promossi a transazioni distribuite solo quando sono presenti più connessioni all'interno dell'ambito della transazione.  
+ Il metodo preferito di creare transazioni con .NET Framework consiste nell'usare il <xref:System.Transactions.TransactionScope> oggetto. Usando questo approccio, è possibile creare transazioni distribuite che potranno essere usate sia con database che con altri gestori di risorse residenti in memoria. Gli ambiti di transazione richiedono alcune risorse per iniziare. Vengono promossi a transazioni distribuite solo quando sono presenti più connessioni all'interno dell'ambito della transazione.  
   
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  

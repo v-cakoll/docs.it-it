@@ -16,12 +16,12 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: bbebd9f040c60016305a861abee3723450a7456b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1047958a5600d8e6ee0ba461305e09395151ab14
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651975"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592282"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Procedura: Garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta
 Quando si usa il data binding in Windows Form, spesso i dati vengono mostrati in una visualizzazione denominata padre/figlio o master/dettagli Si tratta di uno scenario di data binding in cui i dati provenienti dalla stessa origine vengono visualizzati in due controlli. Se si modifica la selezione in un controllo, automaticamente vengono modificati anche i dati visualizzati nel secondo controllo. Ad esempio, il primo controllo può contenere un elenco di clienti e il secondo un elenco di ordini correlati al cliente selezionato nel primo controllo.  
@@ -80,8 +80,6 @@ Quando si usa il data binding in Windows Form, spesso i dati vengono mostrati in
  L'esempio presenta i requisiti seguenti:  
   
 - Riferimenti agli assembly System, System.Data, System.Drawing, System.Windows.Forms e System.XML.  
-  
- Per informazioni su come compilare questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [compilazione da riga di comando con csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
 

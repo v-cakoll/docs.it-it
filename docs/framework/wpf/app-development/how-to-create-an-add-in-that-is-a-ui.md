@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: e12769eca2d3c963e2d7a19e50c67814bcff3152
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0464d87aef3d4e88d9340af2ac1db93c13ba26e2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625364"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592657"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procedura: Creare un componente aggiuntivo che costituisca un'interfaccia utente
 In questo esempio viene illustrato come creare un componente aggiuntivo che è un Windows Presentation Foundation (WPF) che è ospitata da un'applicazione WPF autonoma.  
@@ -81,7 +81,7 @@ In questo esempio viene illustrato come creare un componente aggiuntivo che è u
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>Implementazione dell'applicazione host  
- Adattatore lato host e la visualizzazione host creato, è possibile usare l'applicazione host di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modello per aprire la pipeline e acquisire una visualizzazione host del componente aggiuntivo. Il codice riportato di seguito illustra i diversi passaggi.  
+ Adattatore lato host e la visualizzazione host creato, l'applicazione host può utilizzare il modello di componente aggiuntivo di .NET Framework per aprire la pipeline e acquisire una visualizzazione host del componente aggiuntivo. Il codice riportato di seguito illustra i diversi passaggi.  
 
  L'applicazione host Usa codice tipico modello di componente aggiuntivo di .NET Framework per attivare il componente aggiuntivo, il quale restituisce implicitamente la visualizzazione host per l'applicazione host. L'applicazione host successivamente, viene visualizzata la visualizzazione host (che è un <xref:System.Windows.Controls.UserControl>) da un <xref:System.Windows.Controls.Grid>.  
   

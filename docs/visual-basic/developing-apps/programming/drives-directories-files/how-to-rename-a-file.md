@@ -5,19 +5,19 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: b86797018e1471590fd4c89848921e696afbc819
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2bc3e19968362993528c166ca6ec7a7fbbec1993
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814152"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623244"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Procedura: Rinominare un file in Visual Basic
 Usare il metodo `RenameFile` dell'oggetto `My.Computer.FileSystem` per rinominare un file fornendo la posizione corrente, il nome file attuale e il nuovo nome file. Questo metodo non può essere usato per spostare un file. Per spostare e rinominare un file, usare il metodo `MoveFile`.  
   
 ### <a name="to-rename-a-file"></a>Per rinominare un file  
   
--   Usare il metodo `My.Computer.FileSystem.RenameFile`per rinominare un file. In questo esempio il file `Test.txt` viene rinominato in `SecondTest.txt`.  
+- Usare il metodo `My.Computer.FileSystem.RenameFile`per rinominare un file. In questo esempio il file `Test.txt` viene rinominato in `SecondTest.txt`.  
   
      [!code-vb[VbVbcnMyFileSystem#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#9)]  
   
@@ -26,25 +26,25 @@ Usare il metodo `RenameFile` dell'oggetto `My.Computer.FileSystem` per rinominar
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).  
+- Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).  
   
--   `newName` contiene informazioni sul percorso (<xref:System.ArgumentException>).  
+- `newName` contiene informazioni sul percorso (<xref:System.ArgumentException>).  
   
--   Il percorso non è valido in quanto è `Nothing` (<xref:System.ArgumentNullException>).  
+- Il percorso non è valido in quanto è `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `newName` è `Nothing` o una stringa vuota (<xref:System.ArgumentNullException>).  
+- `newName` è `Nothing` o una stringa vuota (<xref:System.ArgumentNullException>).  
   
--   Il file di origine non è valido o non esiste (<xref:System.IO.FileNotFoundException>).  
+- Il file di origine non è valido o non esiste (<xref:System.IO.FileNotFoundException>).  
   
--   Esiste un file o directory con il nome specificato in `newName` (<xref:System.IO.IOException>).  
+- Esiste un file o directory con il nome specificato in `newName` (<xref:System.IO.IOException>).  
   
--   La lunghezza del percorso supera la lunghezza massima definita dal sistema (<xref:System.IO.PathTooLongException>).  
+- La lunghezza del percorso supera la lunghezza massima definita dal sistema (<xref:System.IO.PathTooLongException>).  
   
--   Il nome di un file o di una directory nel percorso contiene i due punti (:) o ha un formato non valido (<xref:System.NotSupportedException>).  
+- Il nome di un file o di una directory nel percorso contiene i due punti (:) o ha un formato non valido (<xref:System.NotSupportedException>).  
   
--   L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).  
+- L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).  
   
--   L'utente non dispone delle autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
+- L'utente non dispone delle autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Vedere anche
 

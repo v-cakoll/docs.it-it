@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b129da00fcd841566a4a823d8929348441d0a0f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 30036df99559c67a3b11a5c651053dc644267bbb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315543"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592451"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procedura: Definire un tipo generico tramite reflection emit
 Questo argomento illustra come creare un tipo generico semplice con due parametri di tipo, come applicare vincoli speciali, di classe e di interfaccia ai parametri di tipo e come creare membri che usano i parametri di tipo della classe come tipi di parametro o tipi restituiti.  
@@ -129,11 +129,11 @@ Questo argomento illustra come creare un tipo generico semplice con due parametr
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Il codice include le istruzioni `using` C# (`Imports` in Visual Basic) necessarie per la compilazione.  
+- Il codice include le istruzioni `using` C# (`Imports` in Visual Basic) necessarie per la compilazione.  
   
--   Non sono necessari altri riferimenti ad assembly.  
+- Non sono necessari altri riferimenti ad assembly.  
   
--   Compilare il codice dalla riga di comando usando csc.exe, vbc.exe o cl.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
+- Compilare il codice dalla riga di comando usando csc.exe, vbc.exe o cl.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
   
 ## <a name="see-also"></a>Vedere anche
 

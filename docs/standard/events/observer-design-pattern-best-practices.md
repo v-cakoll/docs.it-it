@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 839772fac51ab006d03875920360824a73b033e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c37480f18c100d66e78e851439bd15e2ecfdd381
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599998"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615185"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Procedure consigliate per un modello di progettazione observer
 In.NET Framework, il modello di progettazione osservatore è implementato come un insieme di interfacce. L'interfaccia <xref:System.IObservable%601?displayProperty=nameWithType> rappresenta il provider di dati, che è anche responsabile di fornire un'implementazione di <xref:System.IDisposable> che consenta agli osservatori di annullare la sottoscrizione di notifiche. L'interfaccia <xref:System.IObserver%601?displayProperty=nameWithType> rappresenta l'osservatore. In questo argomento vengono descritte le procedure consigliate che gli sviluppatori devono seguire per implementare il modello di progettazione osservatore usando queste interfacce.  
@@ -31,11 +31,11 @@ In.NET Framework, il modello di progettazione osservatore è implementato come u
   
  Il provider dovrebbe seguire queste procedure consigliate durante la gestione delle eccezioni e la chiamata del metodo <xref:System.IObserver%601.OnError%2A>:  
   
--   Il provider deve gestire le proprie eccezioni in caso di requisiti specifici.  
+- Il provider deve gestire le proprie eccezioni in caso di requisiti specifici.  
   
--   Il provider non dovrebbe aspettarsi o richiedere che gli osservatori gestiscano le eccezioni in alcun modo particolare.  
+- Il provider non dovrebbe aspettarsi o richiedere che gli osservatori gestiscano le eccezioni in alcun modo particolare.  
   
--   Il provider dovrà chiamare il metodo <xref:System.IObserver%601.OnError%2A> quando gestisce un'eccezione che compromette la sua capacità di fornire aggiornamenti. Le informazioni su tali eccezioni possono essere passate all'osservatore. In altri casi, non è necessario notificare un'eccezione agli osservatori.  
+- Il provider dovrà chiamare il metodo <xref:System.IObserver%601.OnError%2A> quando gestisce un'eccezione che compromette la sua capacità di fornire aggiornamenti. Le informazioni su tali eccezioni possono essere passate all'osservatore. In altri casi, non è necessario notificare un'eccezione agli osservatori.  
   
  Quando il provider chiama il metodo <xref:System.IObserver%601.OnError%2A> o <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, non vi saranno altre notifiche e il provider potrà annullare la sottoscrizione dei relativi osservatori. Questi ultimi, tuttavia, potranno a loro volta annullare una sottoscrizione in qualsiasi momento, sia prima sia dopo aver ricevuto una notifica <xref:System.IObserver%601.OnError%2A> o <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>. Il modello di progettazione dell'osservatore non indica se il provider o l'osservatore è responsabile dell'annullamento della sottoscrizione. Quindi, è possibile che entrambi provino ad annullare la sottoscrizione. In genere, quando gli osservatori annullano l'iscrizione, vengono rimossi da una raccolta di sottoscrittori. In un'applicazione a thread singolo, l'implementazione di <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> dovrà garantire che un riferimento all'oggetto sia valido e che l'oggetto sia un membro della raccolta di sottoscrittori prima di provare a rimuoverlo. In un'applicazione multithreading, è necessario usare un oggetto di raccolta thread-safe, come ad esempio un oggetto <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>.  
   
@@ -44,9 +44,9 @@ In.NET Framework, il modello di progettazione osservatore è implementato come u
   
  L'osservatore dovrebbe seguire queste procedure consigliate durante la risposta a gestione delle eccezioni e la chiamata al metodo <xref:System.IObserver%601.OnError%2A> da un provider:  
   
--   L'osservatore non deve generare eccezioni dalle implementazioni dell'interfaccia, come ad esempio <xref:System.IObserver%601.OnNext%2A> o <xref:System.IObserver%601.OnError%2A>. Tuttavia, se l'osservatore genera eccezioni, deve aspettarsi che queste eccezioni rimangano non gestite.  
+- L'osservatore non deve generare eccezioni dalle implementazioni dell'interfaccia, come ad esempio <xref:System.IObserver%601.OnNext%2A> o <xref:System.IObserver%601.OnError%2A>. Tuttavia, se l'osservatore genera eccezioni, deve aspettarsi che queste eccezioni rimangano non gestite.  
   
--   Per preservare lo stack di chiamate, un osservatore che intenda generare un oggetto <xref:System.Exception> che è stato passato al relativo metodo <xref:System.IObserver%601.OnError%2A> dovrà eseguire il wrapping dell'eccezione prima di generarla. A questo scopo è necessario usare un oggetto eccezione standard.  
+- Per preservare lo stack di chiamate, un osservatore che intenda generare un oggetto <xref:System.Exception> che è stato passato al relativo metodo <xref:System.IObserver%601.OnError%2A> dovrà eseguire il wrapping dell'eccezione prima di generarla. A questo scopo è necessario usare un oggetto eccezione standard.  
   
 ## <a name="additional-best-practices"></a>Procedure consigliate aggiuntive  
  Un tentativo di annullamento della registrazione nel metodo <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> può produrre un riferimento null. È quindi consigliabile evitare questa operazione.  

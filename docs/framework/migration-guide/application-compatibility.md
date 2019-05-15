@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcbcced47cfb2031e4a35a7437ec875a20354eed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176254"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623784"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilità delle applicazioni in .NET Framework
 
@@ -42,11 +42,11 @@ I problemi di ridestinazione sono quelli che si verificano quando per un assembl
 
 Per ogni problema sono incluse le informazioni seguenti:
 
--   Descrizione delle modifiche rispetto a una versione precedente.
+- Descrizione delle modifiche rispetto a una versione precedente.
 
--   Le conseguenze della modifica sui clienti e l'eventuale disponibilità di soluzioni per mantenere la compatibilità tra versioni diverse.
+- Le conseguenze della modifica sui clienti e l'eventuale disponibilità di soluzioni per mantenere la compatibilità tra versioni diverse.
 
--   Valutazione dell'importanza della modifica. I problemi di compatibilità delle applicazioni sono classificati come segue:
+- Valutazione dell'importanza della modifica. I problemi di compatibilità delle applicazioni sono classificati come segue:
 
     |   |   |
     |---|---|
@@ -55,18 +55,18 @@ Per ogni problema sono incluse le informazioni seguenti:
     |Caso limite|Una modifica che influisce sulle app in scenari molto specifici e non comuni.|
     |Trasparente|Una modifica senza effetti evidenti sullo sviluppatore o sull'utente dell'applicazione.|
 
--   La versione indica quando la modifica è comparsa per la prima volta nel framework. Alcune modifiche vengono introdotte in una versione specifica e ripristinate in una versione successiva. Anche il ripristino viene indicato.
+- La versione indica quando la modifica è comparsa per la prima volta nel framework. Alcune modifiche vengono introdotte in una versione specifica e ripristinate in una versione successiva. Anche il ripristino viene indicato.
 
--   Tipo di modifica:
+- Tipo di modifica:
 
     |   |   |
     |---|---|
     |Ridestinazione|La modifica influisce sulle app ricompilate per una nuova versione di .NET Framework.|
     |Runtime|La modifica influisce su un'app esistente destinata a una versione precedente di .NET Framework, ma che viene eseguita su una versione successiva.|
 
--   Le eventuali API interessate.
+- Le eventuali API interessate.
 
--   ID delle diagnostiche disponibili
+- ID delle diagnostiche disponibili
 
 ## <a name="usage"></a>Utilizzo
 Per iniziare, selezionare il tipo di modifica della compatibilità di seguito:

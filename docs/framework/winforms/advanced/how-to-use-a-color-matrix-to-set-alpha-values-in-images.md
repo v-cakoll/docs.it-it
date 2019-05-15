@@ -10,12 +10,12 @@ helpviewer_keywords:
 - matrices [Windows Forms], alpha values
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
-ms.openlocfilehash: 79937f0801a790d4ff1ab327aaaf45ef1b881827
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd63380e04eeb4b7ec7ed7d59032309ea7446507
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954552"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593161"
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Procedura: Usare una matrice di colori per impostare i valori alfa nelle immagini
 Il <xref:System.Drawing.Bitmap> classe (che eredita dal <xref:System.Drawing.Image> classe) e il <xref:System.Drawing.Imaging.ImageAttributes> classe fornisce la funzionalità per ottenere e impostare valori di pixel. È possibile usare la <xref:System.Drawing.Imaging.ImageAttributes> valori di classe per modificare il valore alfa per un'immagine intera, oppure è possibile chiamare il <xref:System.Drawing.Bitmap.SetPixel%2A> metodo il <xref:System.Drawing.Bitmap> classe per modificare i valori dei singoli pixel.  
@@ -33,7 +33,7 @@ Il <xref:System.Drawing.Bitmap> classe (che eredita dal <xref:System.Drawing.Ima
  [!code-vb[System.Drawing.AlphaBlending#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vedere anche
 

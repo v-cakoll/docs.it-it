@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 50ad01376f3de9cda26f6b00e2d32fc8d3dabdcd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5145b013db1a86ef1b3128ab1c4495dddaaaf987
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169715"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624624"
 ---
 # <a name="enabling-network-tracing"></a>Abilitazione della traccia di rete
 La funzionalità di traccia di rete consente di accedere alle informazioni sulle chiamate ai metodi e sul traffico di rete generato da un'applicazione gestita. È necessario completare le attività seguenti per abilitare la traccia di rete nell'applicazione:  
   
--   Compilare il codice con la traccia abilitata. Vedere [How to: Compilare in modo condizionale con traccia e debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) per altre informazioni sulle opzioni del compilatore necessarie per abilitare la traccia.  
+- Compilare il codice con la traccia abilitata. Vedere [How to: Compilare in modo condizionale con traccia e debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) per altre informazioni sulle opzioni del compilatore necessarie per abilitare la traccia.  
   
--   Specificare una destinazione per l'output di traccia.  
+- Specificare una destinazione per l'output di traccia.  
   
--   Configurare il comportamento della traccia di rete. Vedere [How to: Configurare la traccia di rete](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) per informazioni dettagliate.  
+- Configurare il comportamento della traccia di rete. Vedere [How to: Configurare la traccia di rete](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) per informazioni dettagliate.  
   
  Le destinazioni di traccia più comuni, dette anche listener di traccia, sono il listener predefinito e il file di log.  
   

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49c7ceb431e9ab59b47e3b8b912e2881aeeef6c2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972419"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583561"
 ---
 # <a name="application-settings-overview"></a>Cenni preliminari sulle impostazioni delle applicazioni
 Questo argomento descrive come creare e archiviare i dati delle impostazioni per conto dell'applicazione e degli utenti.  
   
  La funzionalità Impostazioni applicazione di Windows Form semplifica le operazioni di creazione, archiviazione e gestione delle preferenze personalizzate a livello di applicazione e utente nel computer client. Le impostazioni dell'applicazione Windows Form consentono non solo di archiviare dati applicativi quali stringhe di connessione a database, ma anche dati specifici dell'utente, quali preferenze per l'applicazione. L'uso di Visual Studio o di codice gestito personalizzato consente di creare nuove impostazioni, leggerle e scriverle su disco, associarle a proprietà di form e convalidare i dati delle impostazioni prima di caricarle e salvarle.  
   
- Le impostazioni dell'applicazione consentono agli sviluppatori di salvare lo stato nell'applicazione ricorrendo a una quantità molto limita di codice personalizzato sostituendo in tal modo le proprietà dinamiche delle versioni precedenti di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Contengono molti miglioramenti rispetto alle proprietà dinamiche, che sono di sola lettura, ad associazione tardiva e richiedono ulteriore programmazione personalizzata. Le classi delle proprietà dinamiche sono state mantenute in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], ma sono solo classi shell che eseguono il wrapping delle classi delle impostazioni dell'applicazione.  
+ Le impostazioni dell'applicazione consente agli sviluppatori di salvare lo stato nella propria applicazione con un minimo di codice personalizzato e sostituendo le proprietà dinamiche nelle versioni precedenti di .NET Framework. Contengono molti miglioramenti rispetto alle proprietà dinamiche, che sono di sola lettura, ad associazione tardiva e richiedono ulteriore programmazione personalizzata. Le classi delle proprietà dinamiche sono state mantenute in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], ma sono solo classi shell che eseguono il wrapping delle classi delle impostazioni dell'applicazione.  
   
 ## <a name="what-are-application-settings"></a>Informazioni sulle impostazioni dell'applicazione.  
  Le applicazioni Windows Form richiedono spesso dati di importanza fondamentale per l'esecuzione che tuttavia non è opportuno includere direttamente nel codice dell'applicazione. Se l'applicazione usa un servizio Web o un server di database, è consigliabile archiviare le informazioni in un file separato, in modo che sia possibile modificarle in futuro senza dover ricompilare. Analogamente, è possibile che le applicazioni richiedano di archiviare dati specifici per l'utente corrente. Molte applicazioni, ad esempio, dispongono di preferenze utente che ne personalizzano l'aspetto e il comportamento.  
@@ -34,7 +34,7 @@ Questo argomento descrive come creare e archiviare i dati delle impostazioni per
  Anche per i controlli personalizzati è possibile salvare le impostazioni implementando l'interfaccia <xref:System.Configuration.IPersistComponentSettings> , che espone il metodo <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> . Il controllo <xref:System.Windows.Forms.ToolStrip> di Windows Form implementa questa interfaccia per salvare la posizione delle barre degli strumenti e dei relativi elementi tra le sessioni di un'applicazione. Per altre informazioni sui controlli personalizzati e le impostazioni dell'applicazione, vedere [Application Settings for Custom Controls](application-settings-for-custom-controls.md) (Impostazioni delle applicazioni per i controlli personalizzati).  
   
 ## <a name="limitations-of-application-settings"></a>Limitazioni della funzionalità Impostazioni applicazione  
- Non è possibile usare questa funzionalità in un'applicazione non gestita basata su [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Le impostazioni non funzioneranno correttamente in ambienti come i componenti aggiuntivi di Visual Studio, C++ per Microsoft Office, i controlli contenuti in Internet Explorer o i componenti aggiuntivi e i progetti di Microsoft Outlook.  
+ È possibile usare le impostazioni dell'applicazione in un'applicazione non gestita che ospita .NET Framework. Le impostazioni non funzioneranno correttamente in ambienti come i componenti aggiuntivi di Visual Studio, C++ per Microsoft Office, i controlli contenuti in Internet Explorer o i componenti aggiuntivi e i progetti di Microsoft Outlook.  
   
  Al momento non è possibile eseguire l'associazione ad alcune proprietà nei Windows Form. L'esempio più evidente è la proprietà <xref:System.Windows.Forms.Form.ClientSize%2A> , in quanto eseguendo l'associazione a questa proprietà si genera un comportamento non prevedibile in fase di esecuzione. In genere è possibile ovviare a questi problemi salvando e caricando le impostazioni a livello di codice.  
   

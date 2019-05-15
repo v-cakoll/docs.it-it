@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: bf645cf88c4905cd5cf47c2a6c7af088fa428c8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b390caf644b86de0001387b2c3f41503fd34759a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954671"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593205"
 ---
 # <a name="how-to-shear-colors"></a>Procedura: Variare le componenti cromatiche
 Inclinazione aumenta o diminuisce di un componente di colore in modo proporzionale a un altro componente di colore. Si consideri ad esempio la trasformazione in cui il componente rossa viene incrementato della metà di quella del valore del componente blu. In una trasformazione di questo tipo, il colore (0,2, 0.5, 1) diventerebbe (0,7, 0.5, 1). Il nuovo componente rossa è la 0.2 + (1/2)(1) = 0,7.  
@@ -38,7 +38,7 @@ Inclinazione aumenta o diminuisce di un componente di colore in modo proporziona
  [!code-vb[System.Drawing.Misc3#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>. Sostituire `ColorBars.bmp` con un nome di immagine e un percorso valido nel sistema.  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento. Sostituire `ColorBars.bmp` con un nome di immagine e un percorso valido nel sistema.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: f85c3d5a337262812c69bdf199c9b8c8e0b5a022
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d2e837ec13e6a0b507d004cd75c2f77ae0008dc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625970"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583397"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Procedura: Simulare eventi di mouse e tastiera nel codice
 Windows Form include diverse opzioni per simulare a livello di codice l'input del mouse e della tastiera. In questo argomento viene fornita una panoramica di queste opzioni.  
@@ -86,8 +86,6 @@ Windows Form include diverse opzioni per simulare a livello di codice l'input de
  L'esempio presenta i requisiti seguenti:  
   
 - Riferimenti agli assembly System, System.Drawing e System.Windows.Forms.  
-  
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
 

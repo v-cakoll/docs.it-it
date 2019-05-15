@@ -10,12 +10,12 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], brush
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
-ms.openlocfilehash: a302b8bf978afcead5768fadeb6336c1ece986ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1be3fd2ce10f6681e531559a6e9594fe3d021f5f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004135"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582581"
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>Procedura: Disegnare con pennelli opachi e semitrasparenti
 Quando si riempie una forma, è necessario passare un oggetto <xref:System.Drawing.Brush> a uno dei metodi di riempimento della classe <xref:System.Drawing.Graphics>. L'unico parametro del costruttore <xref:System.Drawing.SolidBrush.%23ctor%2A> è un oggetto <xref:System.Drawing.Color>. Per riempire una forma opaca, impostare il componente alfa del colore su 255. Per riempire una forma semitrasparente, impostare il componente alfa su un valore qualsiasi compreso tra 1 e 254.  
@@ -33,7 +33,7 @@ Quando si riempie una forma, è necessario passare un oggetto <xref:System.Drawi
  ![Figura che mostra l'output opache e semitrasparenti.](./media/how-to-draw-with-opaque-and-semitransparent-brushes/compositingquality-ellipse-semitransparent.png)  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vedere anche
 

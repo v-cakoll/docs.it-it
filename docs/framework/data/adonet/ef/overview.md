@@ -2,18 +2,18 @@
 title: Cenni preliminari su Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8c870c1990da9b86515dc933716cd628f63eb0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034062"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583841"
 ---
 # <a name="entity-framework-overview"></a>Panoramica di Entity Framework
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] è un set di tecnologie ADO.NET che supportano lo sviluppo di applicazioni software orientate ai dati. Gli architetti e gli sviluppatori di questo tipo di applicazioni si trovano nella difficile condizione di dover realizzare due obiettivi molto diversi tra loro, ovvero la modellazione delle entità, delle relazioni e della logica dei problemi aziendali che sono preposti a risolvere e al tempo stesso la gestione dei motori dei dati usati per archiviare e recuperare i dati stessi. Dal momento che i dati potrebbero essere distribuiti in più sistemi di archiviazione, ciascuno con i suoi protocolli, è necessario che nelle applicazioni che gestiscono un solo sistema di archiviazione venga rispettato l'equilibrio tra i requisiti del sistema di archiviazione e i requisiti di scrittura di codice dell'applicazione efficiente e gestibile.
 
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] consente agli sviluppatori di utilizzare i dati sotto forma di proprietà e oggetti specifici di un dominio, ad esempio clienti e indirizzi dei clienti, indipendentemente dalle colonne e dalle tabelle di database sottostanti in cui sono archiviati. Con [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], gli sviluppatori possono operare a un livello superiore di astrazione quando gestiscono i dati e possono creare e gestire applicazioni orientate ai dati con meno codice rispetto alle applicazioni tradizionali. Poiché il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] è un componente del [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] applicazioni eseguibili in qualsiasi computer in cui il [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] a partire dalla versione 3.5 SP1 è installato.
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] consente agli sviluppatori di utilizzare i dati sotto forma di proprietà e oggetti specifici di un dominio, ad esempio clienti e indirizzi dei clienti, indipendentemente dalle colonne e dalle tabelle di database sottostanti in cui sono archiviati. Con [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], gli sviluppatori possono operare a un livello superiore di astrazione quando gestiscono i dati e possono creare e gestire applicazioni orientate ai dati con meno codice rispetto alle applicazioni tradizionali. Poiché il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] è un componente di .NET Framework, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] applicazioni possono essere eseguite in qualsiasi computer in cui è installato .NET Framework a partire dalla versione 3.5 SP1.
 
 ## <a name="give-life-to-models"></a>Dare vita ai modelli
  Un approccio di progettazione comune e consolidato quando si compila un'applicazione o un servizio consiste nel dividere l'applicazione o il servizio in tre parti: un modello di dominio, un modello logico e un modello fisico. Il modello di dominio definisce le entità e le relazioni nel sistema da modellare. Il modello logico per un database relazionale normalizza le entità e le relazioni in tabelle con vincoli di chiave esterna. Il modello fisico gestisce le funzionalità di un determinato motore dei dati specificando dettagli sull'archiviazione come il partizionamento e l'indicizzazione.

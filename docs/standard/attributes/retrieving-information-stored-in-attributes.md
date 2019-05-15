@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d921c13765f5d61ce9822df0b4059b2cf93a6f6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6939c215633be10e487f9cd5bd25856c0c611921
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744085"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623662"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recupero di informazioni memorizzate negli attributi
 Il recupero di un attributo personalizzato è un processo semplice. Dichiarare prima di tutto un'istanza dell'attributo da recuperare. Usare quindi il metodo <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> per inizializzare il nuovo attributo per il valore dell'attributo da recuperare. Dopo avere inizializzato il nuovo attributo, è sufficiente usarne le proprietà per ottenere i valori.  
@@ -28,11 +28,11 @@ Il recupero di un attributo personalizzato è un processo semplice. Dichiarare p
   
  Questa sezione descrive i modi seguenti per recuperare gli attributi:  
   
--   [Recupero di una singola istanza di un attributo](#cpconretrievingsingleinstanceofattribute)  
+- [Recupero di una singola istanza di un attributo](#cpconretrievingsingleinstanceofattribute)  
   
--   [Recupero di più istanze di un attributo applicate allo stesso ambito](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
+- [Recupero di più istanze di un attributo applicate allo stesso ambito](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
--   [Recupero di più istanze di un attributo applicate ad ambiti diversi](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+- [Recupero di più istanze di un attributo applicate ad ambiti diversi](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>   
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>Recupero di una singola istanza di un attributo  

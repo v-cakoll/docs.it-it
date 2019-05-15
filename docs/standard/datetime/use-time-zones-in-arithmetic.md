@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d504aa9ad7d6e4084192a2434ac408e8fa7a041
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026497"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588536"
 ---
 # <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Procedura: Usare fusi orari nell'aritmetica di data e ora
 
@@ -59,8 +59,6 @@ Si noti che se questa aggiunta viene eseguita semplicemente il <xref:System.Date
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
 L'esempio presenta i requisiti seguenti:
-
-* Aggiungere un riferimento a DLL al progetto.
 
 * Che il <xref:System> dello spazio dei nomi importati con il `using` istruzione (obbligatorio nel codice c#).
 

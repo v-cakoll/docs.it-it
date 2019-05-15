@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 76c7b9fa9ef103fc5fc62830932cc724ba50baca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 41303bf548502fe319cbcfb8a152179863902817
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333372"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623571"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementazione del modello asincrono basato su eventi
 In caso di scrittura di una classe con alcune operazioni che possono causare ritardi notevoli, è consigliabile assegnare la funzionalità asincrona implementando [Cenni preliminari sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -35,26 +35,26 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
   
  L'elenco seguente descrive le funzionalità del modello asincrono basato su eventi affrontate in questo argomento.  
   
--   Opportunità per implementare il modello asincrono basato su eventi  
+- Opportunità per implementare il modello asincrono basato su eventi  
   
--   Denominazione di metodi asincroni  
+- Denominazione di metodi asincroni  
   
--   Supporto facoltativo dell'annullamento  
+- Supporto facoltativo dell'annullamento  
   
--   Supporto facoltativo della proprietà IsBusy  
+- Supporto facoltativo della proprietà IsBusy  
   
--   Supporto facoltativo per la generazione di report sullo stato di avanzamento  
+- Supporto facoltativo per la generazione di report sullo stato di avanzamento  
   
--   Supporto facoltativo per la restituzione di risultati incrementali  
+- Supporto facoltativo per la restituzione di risultati incrementali  
   
--   Gestione dei parametri Out e Ref nei metodi  
+- Gestione dei parametri Out e Ref nei metodi  
   
 ## <a name="opportunities-for-implementing-the-event-based-asynchronous-pattern"></a>Opportunità per implementare il modello asincrono basato su eventi  
  Valutare l'implementazione del modello asincrono basato su eventi quando:  
   
--   I client della classe non richiedono che siano disponibili oggetti <xref:System.Threading.WaitHandle> e <xref:System.IAsyncResult> per le operazioni asincrone, quindi il polling e il metodo <xref:System.Threading.WaitHandle.WaitAll%2A> o <xref:System.Threading.WaitHandle.WaitAny%2A> devono essere compilati dal client.  
+- I client della classe non richiedono che siano disponibili oggetti <xref:System.Threading.WaitHandle> e <xref:System.IAsyncResult> per le operazioni asincrone, quindi il polling e il metodo <xref:System.Threading.WaitHandle.WaitAll%2A> o <xref:System.Threading.WaitHandle.WaitAny%2A> devono essere compilati dal client.  
   
--   Si desidera che le operazioni asincrone vengano gestite dal client con il modello noto di evento/delegato.  
+- Si desidera che le operazioni asincrone vengano gestite dal client con il modello noto di evento/delegato.  
   
  Qualsiasi operazione è un candidato per un'implementazione asincrona, ma è opportuno considerare quelle con lunghe latenze previste. Sono particolarmente indicate le operazioni in cui i client chiamano un metodo e ricevono una notifica al completamento, senza richiedere ulteriori interventi. Rientrano in questa condizione anche le operazioni con esecuzione continua,che inviano notifiche periodiche ai client sullo stato di avanzamento, sui risultati incrementali o sulle modifiche di stato.  
   
@@ -65,11 +65,11 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
   
  Definire un metodo _MethodName_**Async** che:  
   
--   Restituisce `void`.  
+- Restituisce `void`.  
   
--   Accetta gli stessi parametri del metodo *MethodName*.  
+- Accetta gli stessi parametri del metodo *MethodName*.  
   
--   Accetta più chiamate.  
+- Accetta più chiamate.  
   
  Facoltativamente, definire un overload di _MethodName_**Async**, identico a _MethodName_**Async**, ma con un parametro con valore di oggetto aggiuntivo denominato `userState`. Seguire questa procedura se si intende gestire più chiamate simultanee del metodo, nel qual caso il valore `userState` verrà recapitato nuovamente a tutti i gestori eventi per distinguere le chiamate del metodo. È anche possibile scegliere questa opzione come posizione in cui archiviare lo stato utente per un successivo recupero.  
   
@@ -108,9 +108,9 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
     }  
     ```  
   
-    -   Verificare che la classe _MethodName_**CompletedEventArgs** esponga i relativi membri come proprietà di sola lettura e non come campi, dal momento che questi ultimi non consentono il data binding.  
+    - Verificare che la classe _MethodName_**CompletedEventArgs** esponga i relativi membri come proprietà di sola lettura e non come campi, dal momento che questi ultimi non consentono il data binding.  
   
-    -   Non definire alcuna classe derivata da <xref:System.ComponentModel.AsyncCompletedEventArgs> per i metodi che non producono risultati. Usare semplicemente un'istanza di <xref:System.ComponentModel.AsyncCompletedEventArgs>.  
+    - Non definire alcuna classe derivata da <xref:System.ComponentModel.AsyncCompletedEventArgs> per i metodi che non producono risultati. Usare semplicemente un'istanza di <xref:System.ComponentModel.AsyncCompletedEventArgs>.  
   
         > [!NOTE]
         >  È perfettamente accettabile, quando possibile e appropriato, riutilizzare il delegato e i tipi <xref:System.ComponentModel.AsyncCompletedEventArgs>. In questo caso, la denominazione non sarà coerente con il nome del metodo, perché un delegato e un oggetto <xref:System.ComponentModel.AsyncCompletedEventArgs> specifici non saranno associati a un singolo metodo.  
@@ -118,9 +118,9 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
 ## <a name="optionally-support-cancellation"></a>Supporto facoltativo dell'annullamento  
  Se la classe supporta l'annullamento delle operazioni asincrone, l'annullamento dovrebbe essere esposto al client come descritto di seguito. Si noti che è necessario raggiungere due decisioni prima di definire il supporto dell'annullamento:  
   
--   La classe, incluse eventuali aggiunte future previste, include una sola operazione asincrona che supporta l'annullamento?  
+- La classe, incluse eventuali aggiunte future previste, include una sola operazione asincrona che supporta l'annullamento?  
   
--   Le operazioni asincrone che supportano l'annullamento supportano più operazioni in sospeso? In altre parole, il metodo _MethodName_**Async** accetta un parametro `userState` e consente più chiamate prima di attendere il completamento di una di esse?  
+- Le operazioni asincrone che supportano l'annullamento supportano più operazioni in sospeso? In altre parole, il metodo _MethodName_**Async** accetta un parametro `userState` e consente più chiamate prima di attendere il completamento di una di esse?  
   
  Usare le risposte a queste due domande nella tabella seguente per determinare la firma per il metodo di annullamento scelto.  
   
@@ -156,13 +156,13 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
 ## <a name="optionally-provide-support-for-progress-reporting"></a>Supporto facoltativo per la generazione di report sullo stato di avanzamento  
  È spesso utile che un'operazione asincrona generi un report sullo stato di avanzamento durante il funzionamento. Il modello asincrono basato su eventi offre linee guida a tale scopo.  
   
--   Definire facoltativamente un evento che verrà generato dall'operazione asincrona e chiamato sul thread appropriato. L'oggetto <xref:System.ComponentModel.ProgressChangedEventArgs> supporta un indicatore di stato con valori interi compresi tra 0 e 100.  
+- Definire facoltativamente un evento che verrà generato dall'operazione asincrona e chiamato sul thread appropriato. L'oggetto <xref:System.ComponentModel.ProgressChangedEventArgs> supporta un indicatore di stato con valori interi compresi tra 0 e 100.  
   
--   Denominare l'evento come indicato di seguito:  
+- Denominare l'evento come indicato di seguito:  
   
-    -   `ProgressChanged` se la classe dispone di più operazioni asincrone (o presumibilmente aumenterà per includere più operazioni asincrone nelle versioni future);  
+    - `ProgressChanged` se la classe dispone di più operazioni asincrone (o presumibilmente aumenterà per includere più operazioni asincrone nelle versioni future);  
   
-    -   _MethodName_**ProgressChanged** se la classe include una singola operazione asincrona.  
+    - _MethodName_**ProgressChanged** se la classe include una singola operazione asincrona.  
   
      Questa scelta di denominazione è paragonabile a quella eseguita per il metodo di annullamento, come descritto nella sezione Supporto facoltativo dell'annullamento.  
   
@@ -180,9 +180,9 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
 ### <a name="single-operation-class"></a>Classe con singola operazione  
  Se la classe supporta solo una singola operazione asincrona e tale operazione è in grado di restituire risultati incrementali:  
   
--   Estendere il tipo <xref:System.ComponentModel.ProgressChangedEventArgs> per il supporto dei dati dei risultati incrementali e definire un evento _MethodName_**ProgressChanged** con i dati estesi.  
+- Estendere il tipo <xref:System.ComponentModel.ProgressChangedEventArgs> per il supporto dei dati dei risultati incrementali e definire un evento _MethodName_**ProgressChanged** con i dati estesi.  
   
--   Generare questo evento _MethodName_**ProgressChanged** in presenza di un risultato incrementale da segnalare.  
+- Generare questo evento _MethodName_**ProgressChanged** in presenza di un risultato incrementale da segnalare.  
   
  Questa soluzione si applica in modo specifico a una classe con singola operazione asincrona perché non si verificano problemi se lo stesso evento si ripete per restituire gli stessi risultati incrementali in tutte le operazioni, come avviene con l'evento _MethodName_**ProgressChanged**.  
   
@@ -194,9 +194,9 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
 ### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a>Classe con più operazioni con risultati incrementali eterogenei  
  Se la classe supporta più metodi asincroni, ognuno dei quali restituisce un tipo diverso di dati, è consigliabile:  
   
--   Separare il report dei risultati incrementali dal report sullo stato di avanzamento.  
+- Separare il report dei risultati incrementali dal report sullo stato di avanzamento.  
   
--   Definire un evento _MethodName_**ProgressChanged** separato con l'oggetto <xref:System.EventArgs> appropriato per ogni metodo asincrono per gestire i dati dei risultati incrementali del metodo.  
+- Definire un evento _MethodName_**ProgressChanged** separato con l'oggetto <xref:System.EventArgs> appropriato per ogni metodo asincrono per gestire i dati dei risultati incrementali del metodo.  
   
  Chiamare il gestore eventi sul thread appropriato, come descritto in [Suggerimenti per l'implementazione del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
   
@@ -205,9 +205,9 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
   
  Dato un metodo *MethodName* sincrono:  
   
--   I parametri `out` per *MethodName* non devono far parte di _MethodName_**Async**. Devono invece far parte di _MethodName_**CompletedEventArgs**, con lo stesso nome del relativo parametro equivalente in *MethodName* (a meno che non esista un nome più appropriato).  
+- I parametri `out` per *MethodName* non devono far parte di _MethodName_**Async**. Devono invece far parte di _MethodName_**CompletedEventArgs**, con lo stesso nome del relativo parametro equivalente in *MethodName* (a meno che non esista un nome più appropriato).  
   
--   I parametri `ref` di *MethodName* devono far parte di _MethodName_**Async** e di _MethodName_**CompletedEventArgs**, con lo stesso nome del relativo parametro equivalente in *MethodName* (a meno che non esista un nome più appropriato).  
+- I parametri `ref` di *MethodName* devono far parte di _MethodName_**Async** e di _MethodName_**CompletedEventArgs**, con lo stesso nome del relativo parametro equivalente in *MethodName* (a meno che non esista un nome più appropriato).  
   
  Ad esempio, dato:  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
-ms.openlocfilehash: 026b5456134be531b05e75474bcad6bbd46dc7fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28eceaec72053d70885d54bc09179cff743ff71c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630470"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591432"
 ---
 # <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Procedura: Condividere i dati associati tra moduli usando il componente BindingSource
 È possibile condividere facilmente i dati tra i form con il componente <xref:System.Windows.Forms.BindingSource>. Ad esempio, è possibile visualizzare un form di sola lettura che riepiloga i dati dell'origine dati e un altro form modificabile che contiene informazioni dettagliate sull'elemento attualmente selezionato nell'origine dati. L'esempio illustra questo scenario.  
@@ -33,8 +33,6 @@ ms.locfileid: "64630470"
  L'esempio presenta i requisiti seguenti:  
   
 - Riferimenti agli assembly System, System.Windows.Forms, System.Drawing, System.Data e System.Xml.  
-  
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: efd9711f93478b1ecc2ded7b57fa45f38286eeb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ab05db770f312a362e26f17df684f6f4f49c0eb3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651221"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586743"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Elaborazione del file XML (Visual Basic)
-Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. (Per informazioni su come contrassegnare il codice, vedere [tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md).) La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML è possono usare la stringa ID per identificare il corrispondente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] elemento metadati/reflection.  
+Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. (Per informazioni su come contrassegnare il codice, vedere [tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md).) La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML è possono usare la stringa ID per identificare il corrispondente elemento metadati/reflection di .NET Framework.  
   
  Il file XML non è una rappresentazione gerarchica del codice. è un elenco semplice con un ID generato per ogni elemento.  
   
@@ -34,7 +34,7 @@ Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del 
   
 - La seconda parte di `String` è il nome completo dell'elemento, iniziando dalla radice dello spazio dei nomi. Il nome dell'elemento, relativo i tipi di inclusione e lo spazio dei nomi sono separati da punti. Se il nome dell'elemento stesso contiene punti, vengono sostituiti con il simbolo di cancelletto (#). Si presuppone che nessun elemento contiene un simbolo di cancelletto direttamente nel nome. Ad esempio, il nome completo del `String` costruttore sarebbe `System.String.#ctor`.  
   
-- Per le proprietà e i metodi, se il metodo ha degli argomenti, verrà incluso di seguito l'elenco degli argomenti racchiuso tra parentesi. Se non sono presenti argomenti, non verranno usate le parentesi. Gli argomenti sono separati da virgole. La codifica di ciascun argomento simile alla modalità di codifica un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] firma.  
+- Per le proprietà e i metodi, se il metodo ha degli argomenti, verrà incluso di seguito l'elenco degli argomenti racchiuso tra parentesi. Se non sono presenti argomenti, non verranno usate le parentesi. Gli argomenti sono separati da virgole. La codifica di ciascun argomento simile alla modalità di codifica in una firma di .NET Framework.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente illustra come le stringhe di ID per una classe e i relativi membri vengono generati.  

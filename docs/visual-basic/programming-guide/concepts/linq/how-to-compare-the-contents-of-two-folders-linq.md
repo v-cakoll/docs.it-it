@@ -2,12 +2,12 @@
 title: 'Procedura: Confrontare il contenuto di due cartelle (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 63027e892fe8404001c6869be33af8cff1bc014a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75283faf25e7a26055b1122eb45e23c510fc6b39
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644001"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593016"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Procedura: Confrontare il contenuto di due cartelle (LINQ) (Visual Basic)
 In questo esempio vengono illustrati tre modi per confrontare due elenchi di file:  
@@ -114,8 +114,8 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e un'istruzione `Imports` per lo spazio dei nomi System.Linq.  
-  
+ Creare un progetto di applicazione console VB.NET, con un `Imports` istruzione dello spazio dei nomi System. Linq.
+ 
 ## <a name="see-also"></a>Vedere anche
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

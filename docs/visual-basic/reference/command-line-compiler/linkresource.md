@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 5555f83107a40b40c7f05c7cc5729f721727f67c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 637a1d4b7a523feb2fc8da10a0c18e68774c480a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793939"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586690"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 Crea un collegamento a una risorsa gestita.  
@@ -39,7 +39,7 @@ Crea un collegamento a una risorsa gestita.
   
  Il `-linkresource` necessaria un'opzione il `-target` diversa da `-target:module`.  
   
- Se `filename` è un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] file di risorse creato, ad esempio, mediante il [Resgen.exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri di <xref:System.Resources> dello spazio dei nomi. Per altre informazioni, vedere <xref:System.Resources.ResourceManager>. Per accedere a tutte le altre risorse in fase di esecuzione, usare i metodi che iniziano con `GetManifestResource` nella <xref:System.Reflection.Assembly> classe.  
+ Se `filename` è un file di risorse .NET Framework creato ad esempio, dal [Resgen.exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri di <xref:System.Resources> dello spazio dei nomi. Per altre informazioni, vedere <xref:System.Resources.ResourceManager>. Per accedere a tutte le altre risorse in fase di esecuzione, usare i metodi che iniziano con `GetManifestResource` nella <xref:System.Reflection.Assembly> classe.  
   
  Il nome del file può avere qualsiasi formato di file. Può ad esempio risultare opportuno rendere una DLL nativa parte dell'assembly in modo che possa essere installata nella Global Assembly Cache e che sia possibile accedervi dal codice gestito nell'assembly.  
   
