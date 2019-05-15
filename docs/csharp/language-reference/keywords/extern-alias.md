@@ -9,43 +9,43 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 136d3959a52b793acddf21ae83b8d8eaec053eee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a33b466bbe75b84d6cd28ebd6f4fc57695aa420
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616277"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452433"
 ---
-# <a name="extern-alias-c-reference"></a><span data-ttu-id="f95d4-102">extern alias (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="f95d4-102">extern alias (C# Reference)</span></span>
-<span data-ttu-id="f95d4-103">È necessario far riferimento a due versioni di assembly che dispongono degli stessi nomi di tipo completi.</span><span class="sxs-lookup"><span data-stu-id="f95d4-103">You might have to reference two versions of assemblies that have the same fully-qualified type names.</span></span> <span data-ttu-id="f95d4-104">Ad esempio, potrebbe essere necessario usare due o più versioni di un assembly nella stessa applicazione.</span><span class="sxs-lookup"><span data-stu-id="f95d4-104">For example, you might have to use two or more versions of an assembly in the same application.</span></span> <span data-ttu-id="f95d4-105">Con un alias di assembly esterno, è possibile eseguire il wrapping degli spazi dei nomi di ogni assembly all'interno degli spazi dei nomi a livello radice denominati dall'alias, consentendone l'utilizzo nello stesso file.</span><span class="sxs-lookup"><span data-stu-id="f95d4-105">By using an external assembly alias, the namespaces from each assembly can be wrapped inside root-level namespaces named by the alias, which enables them to be used in the same file.</span></span>  
+# <a name="extern-alias-c-reference"></a><span data-ttu-id="921ff-102">extern alias (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="921ff-102">extern alias (C# Reference)</span></span>
+<span data-ttu-id="921ff-103">È necessario far riferimento a due versioni di assembly che dispongono degli stessi nomi di tipo completi.</span><span class="sxs-lookup"><span data-stu-id="921ff-103">You might have to reference two versions of assemblies that have the same fully-qualified type names.</span></span> <span data-ttu-id="921ff-104">Ad esempio, potrebbe essere necessario usare due o più versioni di un assembly nella stessa applicazione.</span><span class="sxs-lookup"><span data-stu-id="921ff-104">For example, you might have to use two or more versions of an assembly in the same application.</span></span> <span data-ttu-id="921ff-105">Con un alias di assembly esterno, è possibile eseguire il wrapping degli spazi dei nomi di ogni assembly all'interno degli spazi dei nomi a livello radice denominati dall'alias, consentendone l'utilizzo nello stesso file.</span><span class="sxs-lookup"><span data-stu-id="921ff-105">By using an external assembly alias, the namespaces from each assembly can be wrapped inside root-level namespaces named by the alias, which enables them to be used in the same file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f95d4-106">La parola chiave [extern](../../../csharp/language-reference/keywords/extern.md) viene anche usata come modificatore di metodo, che dichiara un metodo scritto in codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="f95d4-106">The [extern](../../../csharp/language-reference/keywords/extern.md) keyword is also used as a method modifier, declaring a method written in unmanaged code.</span></span>  
+>  <span data-ttu-id="921ff-106">La parola chiave [extern](../../../csharp/language-reference/keywords/extern.md) viene anche usata come modificatore di metodo, che dichiara un metodo scritto in codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="921ff-106">The [extern](../../../csharp/language-reference/keywords/extern.md) keyword is also used as a method modifier, declaring a method written in unmanaged code.</span></span>  
   
- <span data-ttu-id="f95d4-107">Per far riferimento a due assembly con gli stessi nomi di tipo completi, è necessario specificare un alias al prompt dei comandi, come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="f95d4-107">To reference two assemblies with the same fully-qualified type names, an alias must be specified at a command prompt, as follows:</span></span>  
+ <span data-ttu-id="921ff-107">Per far riferimento a due assembly con gli stessi nomi di tipo completi, è necessario specificare un alias al prompt dei comandi, come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="921ff-107">To reference two assemblies with the same fully-qualified type names, an alias must be specified at a command prompt, as follows:</span></span>  
   
  `/r:GridV1=grid.dll`  
   
  `/r:GridV2=grid20.dll`  
   
- <span data-ttu-id="f95d4-108">In questo modo vengono creati gli alias extern `GridV1` e `GridV2`.</span><span class="sxs-lookup"><span data-stu-id="f95d4-108">This creates the external aliases `GridV1` and `GridV2`.</span></span> <span data-ttu-id="f95d4-109">Per usare questi alias all'interno di un programma, far riferimento a essi tramite la parola chiave `extern`.</span><span class="sxs-lookup"><span data-stu-id="f95d4-109">To use these aliases from within a program, reference them by using the `extern` keyword.</span></span> <span data-ttu-id="f95d4-110">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="f95d4-110">For example:</span></span>  
+ <span data-ttu-id="921ff-108">In questo modo vengono creati gli alias extern `GridV1` e `GridV2`.</span><span class="sxs-lookup"><span data-stu-id="921ff-108">This creates the external aliases `GridV1` and `GridV2`.</span></span> <span data-ttu-id="921ff-109">Per usare questi alias all'interno di un programma, far riferimento a essi tramite la parola chiave `extern`.</span><span class="sxs-lookup"><span data-stu-id="921ff-109">To use these aliases from within a program, reference them by using the `extern` keyword.</span></span> <span data-ttu-id="921ff-110">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="921ff-110">For example:</span></span>  
   
  `extern alias GridV1;`  
   
  `extern alias GridV2;`  
   
- <span data-ttu-id="f95d4-111">Ogni dichiarazione di alias extern introduce uno spazio dei nomi aggiuntivo a livello radice che affianca lo spazio dei nomi globale, ma non si trova al suo interno.</span><span class="sxs-lookup"><span data-stu-id="f95d4-111">Each extern alias declaration introduces an additional root-level namespace that parallels (but does not lie within) the global namespace.</span></span> <span data-ttu-id="f95d4-112">In questo modo, è possibile far riferimento ai tipi di ogni assembly senza ambiguità, usando il nome completo che dispone di una radice nell'alias dello spazio dei nomi appropriato.</span><span class="sxs-lookup"><span data-stu-id="f95d4-112">Thus types from each assembly can be referred to without ambiguity by using their fully qualified name, rooted in the appropriate namespace-alias.</span></span>  
+ <span data-ttu-id="921ff-111">Ogni dichiarazione di alias extern introduce uno spazio dei nomi aggiuntivo a livello radice che affianca lo spazio dei nomi globale, ma non si trova al suo interno.</span><span class="sxs-lookup"><span data-stu-id="921ff-111">Each extern alias declaration introduces an additional root-level namespace that parallels (but does not lie within) the global namespace.</span></span> <span data-ttu-id="921ff-112">In questo modo, è possibile far riferimento ai tipi di ogni assembly senza ambiguità, usando il nome completo che dispone di una radice nell'alias dello spazio dei nomi appropriato.</span><span class="sxs-lookup"><span data-stu-id="921ff-112">Thus types from each assembly can be referred to without ambiguity by using their fully qualified name, rooted in the appropriate namespace-alias.</span></span>  
   
- <span data-ttu-id="f95d4-113">Nell'esempio precedente, l'oggetto `GridV1::Grid` rappresenta il controllo griglia dell'oggetto `grid.dll`, e `GridV2::Grid` rappresenta il controllo griglia dell'oggetto `grid20.dll`.</span><span class="sxs-lookup"><span data-stu-id="f95d4-113">In the previous example, `GridV1::Grid` would be the grid control from `grid.dll`, and `GridV2::Grid` would be the grid control from `grid20.dll`.</span></span>  
+ <span data-ttu-id="921ff-113">Nell'esempio precedente, l'oggetto `GridV1::Grid` rappresenta il controllo griglia dell'oggetto `grid.dll`, e `GridV2::Grid` rappresenta il controllo griglia dell'oggetto `grid20.dll`.</span><span class="sxs-lookup"><span data-stu-id="921ff-113">In the previous example, `GridV1::Grid` would be the grid control from `grid.dll`, and `GridV2::Grid` would be the grid control from `grid20.dll`.</span></span>  
   
-## <a name="c-language-specification"></a><span data-ttu-id="f95d4-114">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="f95d4-114">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="921ff-114">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="921ff-114">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f95d4-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f95d4-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="921ff-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="921ff-115">See also</span></span>
 
-- [<span data-ttu-id="f95d4-116">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="f95d4-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="f95d4-117">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="f95d4-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="f95d4-118">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="f95d4-118">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
-- [<span data-ttu-id="f95d4-119">Parole chiave per gli spazi dei nomi</span><span class="sxs-lookup"><span data-stu-id="f95d4-119">Namespace Keywords</span></span>](../../../csharp/language-reference/keywords/namespace-keywords.md)
-- [<span data-ttu-id="f95d4-120">:: (operatore)</span><span class="sxs-lookup"><span data-stu-id="f95d4-120">:: Operator</span></span>](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
-- [<span data-ttu-id="f95d4-121">-reference (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="f95d4-121">/reference (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
+- [<span data-ttu-id="921ff-116">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="921ff-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="921ff-117">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="921ff-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="921ff-118">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="921ff-118">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="921ff-119">Parole chiave per gli spazi dei nomi</span><span class="sxs-lookup"><span data-stu-id="921ff-119">Namespace Keywords</span></span>](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [<span data-ttu-id="921ff-120">:: (operatore)</span><span class="sxs-lookup"><span data-stu-id="921ff-120">:: Operator</span></span>](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
+- [<span data-ttu-id="921ff-121">-reference (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="921ff-121">/reference (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
