@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 93b414eea5849ed020b521fcd5e5d5f5d194c35f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831982"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589800"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Integrazione di XML con dati relazionali e ADO.NET
 La classe **XmlDataDocument** è una classe derivata di **XmlDocument** e contiene dati XML. Il principale vantaggio è costituito dal fatto che **XmlDataDocument** fornisce un collegamento tra i dati relazionali e quelli gerarchici. Si tratta infatti di un elemento di **XmlDocument** che può essere associato a un **DataSet** ed entrambe le classi sono in grado di sincronizzare le modifiche apportate ai dati in esse contenuti. Usando un elemento di **XmlDocument** associato a un **DataSet** è possibile integrare l'XML con i dati relazionali senza dover rappresentare i dati in formato relazionale o XML. È possibile usare entrambe le rappresentazioni di dati, senza essere costretti a usarne una sola.  
   
  La possibilità di visualizzare i dati in due modi diversi comporta i seguenti vantaggi:  
   
--   È possibile associare la parte strutturata di un documento XML a un dataset per aumentare l'efficacia delle operazioni di archiviazione, indicizzazione e ricerca.  
+- È possibile associare la parte strutturata di un documento XML a un dataset per aumentare l'efficacia delle operazioni di archiviazione, indicizzazione e ricerca.  
   
--   Le operazioni di trasformazione, convalida e navigazione possono essere eseguite in modo efficace tramite un modello a cursore per i dati XML archiviati in modo relazionale. A volte queste operazioni si rivelano più efficaci se eseguite in strutture relazionali, anziché con dati XML archiviati in un modello **XmlDocument**.  
+- Le operazioni di trasformazione, convalida e navigazione possono essere eseguite in modo efficace tramite un modello a cursore per i dati XML archiviati in modo relazionale. A volte queste operazioni si rivelano più efficaci se eseguite in strutture relazionali, anziché con dati XML archiviati in un modello **XmlDocument**.  
   
--   È possibile archiviare in un **DataSet** solo una parte dei dati XML. Questo significa che è possibile usare **XPath** o **XslTransform** per archiviare in un **DataSet** solo gli elementi e gli attributi desiderati. Pertanto, è possibile apportare le modifiche a un subset di dati filtrato e di dimensioni minori, quindi propagarle a gruppi di dati di dimensioni maggiori nella classe **XmlDataDocument**.  
+- È possibile archiviare in un **DataSet** solo una parte dei dati XML. Questo significa che è possibile usare **XPath** o **XslTransform** per archiviare in un **DataSet** solo gli elementi e gli attributi desiderati. Pertanto, è possibile apportare le modifiche a un subset di dati filtrato e di dimensioni minori, quindi propagarle a gruppi di dati di dimensioni maggiori nella classe **XmlDataDocument**.  
   
  È inoltre possibile eseguire una trasformazione dei dati caricati in un **DataSet** da SQL Server e associare controlli gestiti Web Form e Windows Form, costituiti da classi .NET Framework, a un **DataSet** compilato da un flusso di input XML.  
   

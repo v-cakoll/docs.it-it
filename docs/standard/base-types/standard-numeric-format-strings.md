@@ -18,20 +18,20 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6d11e16f58b6da24d7df0ccd97c1d54050004ae1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979958"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664657"
 ---
 # <a name="standard-numeric-format-strings"></a>Stringhe di formato numerico standard
 
 Le stringhe di formato numerico standard vengono usate per formattare tipi numerici comuni. Una stringa di formato numerico standard usa il formato `Axx`, dove:  
   
--   `A` è un carattere alfabetico denominato *identificatore di formato*. Le stringhe di formato numerico contenenti più caratteri alfabetici, inclusi gli spazi, vengono interpretate come stringhe di formato numerico personalizzate. Per altre informazioni, vedere [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- `A` è un carattere alfabetico denominato *identificatore di formato*. Le stringhe di formato numerico contenenti più caratteri alfabetici, inclusi gli spazi, vengono interpretate come stringhe di formato numerico personalizzate. Per altre informazioni, vedere [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   `xx` è un numero intero facoltativo denominato *identificatore di precisione*. L'identificatore di precisione, compreso tra 0 e 99, controlla il numero di cifre nel risultato. L'identificatore di precisione controlla il numero di cifre nella rappresentazione di stringa di un numero. Non arrotonda il numero stesso. Per eseguire un'operazione di arrotondamento, usare il metodo <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> o <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
+- `xx` è un numero intero facoltativo denominato *identificatore di precisione*. L'identificatore di precisione, compreso tra 0 e 99, controlla il numero di cifre nel risultato. L'identificatore di precisione controlla il numero di cifre nella rappresentazione di stringa di un numero. Non arrotonda il numero stesso. Per eseguire un'operazione di arrotondamento, usare il metodo <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> o <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
   
     Quando l'*identificatore di precisione* controlla il numero di cifre frazionali nella stringa del risultato, quest'ultima riflette un numero arrotondato al risultato rappresentabile più vicino al risultato con precisione all'infinito. In presenza di due risultati rappresentabili equivalenti:
     - **In .NET Framework e .NET Core fino alla versione .NET Core 2.0** il runtime seleziona il risultato con la cifra meno significativa maggiore, ovvero usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>.
@@ -46,7 +46,7 @@ Le stringhe di formato numerico standard sono supportate:
  
 - Dalla [funzionalità di formattazione composita](../../../docs/standard/base-types/composite-formatting.md) di .NET usata da alcuni metodi `Write` e `WriteLine` delle classi <xref:System.Console> e <xref:System.IO.StreamWriter>, dal metodo <xref:System.String.Format%2A?displayProperty=nameWithType> e dal metodo <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La funzionalità di formattazione composta consente di includere la rappresentazione di stringa di più elementi dati in un'unica stringa per specificare la larghezza di un campo e per allinearvi i numeri all'interno. Per altre informazioni, vedere [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md).  
 
-- Dalle [stringhe interpolate](../../csharp/language-reference/tokens/interpolated.md) in C# e Visual Basic, che forniscono una sintassi semplificata rispetto alle stringhe di formato composito.
+- Dalle [stringhe interpolate](../../csharp/language-reference/tokens/interpolated.md) in c# e Visual Basic, che forniscono una sintassi semplificata rispetto alle stringhe di formato composito.
  
 > [!TIP]
 >  È possibile scaricare l' [utilità di formattazione](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), un'applicazione che consente di applicare stringhe di formato a valori numerici o di data e ora e di visualizzare la stringa di risultato.  
@@ -73,13 +73,13 @@ Le stringhe di formato numerico standard sono supportate:
 
 È possibile usare una stringa di formato numerico standard per definire la formattazione di un valore numerico in uno dei due modi seguenti:  
   
--   È possibile passare la stringa a un overload del metodo `ToString` che ha un parametro `format`. Nell'esempio seguente un valore numerico viene formattato come stringa di valuta nelle impostazioni cultura correnti (in questo caso, en-US).  
+- È possibile passare la stringa a un overload del metodo `ToString` che ha un parametro `format`. Nell'esempio seguente un valore numerico viene formattato come stringa di valuta nelle impostazioni cultura correnti (in questo caso, en-US).  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   È possibile fornire la stringa come argomento `formatString` in un elemento di formato usato con metodi come <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> e <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Per altre informazioni, vedere [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md). Nell'esempio seguente viene usato un elemento di formato per inserire un valore di valuta in una stringa.  
+- È possibile fornire la stringa come argomento `formatString` in un elemento di formato usato con metodi come <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> e <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Per altre informazioni, vedere [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md). Nell'esempio seguente viene usato un elemento di formato per inserire un valore di valuta in una stringa.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -91,7 +91,7 @@ Le stringhe di formato numerico standard sono supportate:
      [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
--   Può essere passato come argomento `formatString` in un elemento espressione interpolata di una stringa interpolata. Per altre informazioni, vedere l'argomento [Interpolazione di stringhe](../../csharp/language-reference/tokens/interpolated.md) nelle informazioni di riferimento di C# o l'argomento [Stringhe interpolate](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) nelle informazioni di riferimento di Visual Basic.  
+- Può essere passato come argomento `formatString` in un elemento espressione interpolata di una stringa interpolata. Per altre informazioni, vedere l'argomento [Interpolazione di stringhe](../../csharp/language-reference/tokens/interpolated.md) nelle informazioni di riferimento di C# o l'argomento [Stringhe interpolate](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) nelle informazioni di riferimento di Visual Basic.  
   
  Nelle sezioni seguenti vengono fornite informazioni dettagliate su ognuna delle stringhe di formato numerico standard.  
   

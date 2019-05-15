@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 37c9140db390c55c9cab4e8a3203287d2dd12725
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318377"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634230"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Procedura: Definire e usare provider di formati numerici personalizzati
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]offre ampio controllo sulla rappresentazione di stringa dei valori numerici. e supporta le funzionalità seguenti per la personalizzazione del formato di tali valori:  
   
--   Stringhe in formato numerico standard, che forniscono un insieme predefinito di formati per la conversione dei numeri nella rispettiva rappresentazione di stringa. È possibile usarle con qualsiasi metodo di formattazione numerica, ad esempio <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, che include un parametro `format`. Per informazioni dettagliate, vedere [Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
+- Stringhe in formato numerico standard, che forniscono un insieme predefinito di formati per la conversione dei numeri nella rispettiva rappresentazione di stringa. È possibile usarle con qualsiasi metodo di formattazione numerica, ad esempio <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, che include un parametro `format`. Per informazioni dettagliate, vedere [Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
--   Stringhe in formato numerico personalizzato che forniscono un insieme di simboli che possono essere combinati per definire identificatori di formato numerico personalizzato. È anche possibile usarle con qualsiasi metodo di formattazione numerica, ad esempio <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, che include un parametro `format`. Per informazioni dettagliate, vedere [Stringhe in formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- Stringhe in formato numerico personalizzato che forniscono un insieme di simboli che possono essere combinati per definire identificatori di formato numerico personalizzato. È anche possibile usarle con qualsiasi metodo di formattazione numerica, ad esempio <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, che include un parametro `format`. Per informazioni dettagliate, vedere [Stringhe in formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   Oggetti <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.NumberFormatInfo> personalizzati, che definiscono i simboli e i modelli di formato usati per la visualizzazione delle rappresentazioni di stringa di valori numerici. È possibile usarle con qualsiasi metodo di formattazione numerica, ad esempio <xref:System.Int32.ToString%2A>, che include un parametro `provider`. In genere, il parametro `provider` viene usato per specificare un formato specifico delle impostazioni cultura.  
+- Oggetti <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.NumberFormatInfo> personalizzati, che definiscono i simboli e i modelli di formato usati per la visualizzazione delle rappresentazioni di stringa di valori numerici. È possibile usarle con qualsiasi metodo di formattazione numerica, ad esempio <xref:System.Int32.ToString%2A>, che include un parametro `provider`. In genere, il parametro `provider` viene usato per specificare un formato specifico delle impostazioni cultura.  
   
  In alcuni casi, ad esempio quando un'applicazione deve visualizzare un numero di account formattato, un numero di identificazione o un codice postale, queste tre tecniche non sono adatte. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permette anche di definire un oggetto di formattazione diverso da un oggetto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.NumberFormatInfo> per determinare come viene formattato un valore numerico. In questo argomento sono contenute istruzioni dettagliate per l'implementazione di tale oggetto ed è anche riportato un esempio di formattazione di numeri di telefono.  
   
@@ -41,21 +41,21 @@ ms.locfileid: "59318377"
   
 2. Implementare il metodo <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A> è un metodo di callback richiamato dal metodo di formattazione, ad esempio il metodo <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, per recuperare l'oggetto effettivamente responsabile della formattazione personalizzata. Una tipica implementazione di <xref:System.IFormatProvider.GetFormat%2A> esegue le operazioni seguenti:  
   
-    1.  Determina se l'oggetto <xref:System.Type> passato come parametro del metodo rappresenta un'interfaccia <xref:System.ICustomFormatter>.  
+    1. Determina se l'oggetto <xref:System.Type> passato come parametro del metodo rappresenta un'interfaccia <xref:System.ICustomFormatter>.  
   
-    2.  Se il parametro non rappresenta l'interfaccia <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> restituisce un oggetto che implementa l'interfaccia <xref:System.ICustomFormatter> responsabile della formattazione personalizzata. In genere, l'oggetto di formattazione personalizzata restituisce se stesso.  
+    2. Se il parametro non rappresenta l'interfaccia <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> restituisce un oggetto che implementa l'interfaccia <xref:System.ICustomFormatter> responsabile della formattazione personalizzata. In genere, l'oggetto di formattazione personalizzata restituisce se stesso.  
   
-    3.  Se il parametro non rappresenta l'interfaccia <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> restituisce `null`.  
+    3. Se il parametro non rappresenta l'interfaccia <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> restituisce `null`.  
   
 3. Implementare il metodo <xref:System.ICustomFormatter.Format%2A>. Questo metodo viene chiamato dal metodo <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> ed è responsabile della restituzione della rappresentazione di stringa di un numero. L'implementazione del metodo in genere implica le attività seguenti:  
   
-    1.  Facoltativamente, è possibile verificare che il metodo sia legittimamente responsabile di fornire servizi di formattazione esaminando il parametro `provider`. Per la formattazione di oggetti che implementano sia <xref:System.IFormatProvider> sia <xref:System.ICustomFormatter>, questa operazione comporta l'esecuzione di test sul parametro `provider` per verificarne l'uguaglianza all'oggetto di formattazione corrente.  
+    1. Facoltativamente, è possibile verificare che il metodo sia legittimamente responsabile di fornire servizi di formattazione esaminando il parametro `provider`. Per la formattazione di oggetti che implementano sia <xref:System.IFormatProvider> sia <xref:System.ICustomFormatter>, questa operazione comporta l'esecuzione di test sul parametro `provider` per verificarne l'uguaglianza all'oggetto di formattazione corrente.  
   
-    2.  Stabilire se l'oggetto di formattazione deve supportare identificatori di formato personalizzato. Ad esempio, un identificatore di formato "N" potrebbe indicare che un numero di telefono degli Stati Uniti deve essere restituito in formato NANP e un identificatore di formato "I" potrebbe indicare l'output in formato ITU-T Recommendation E.123. Se si usano identificatori di formato, il metodo deve gestire l'identificatore di formato specifico. Quest'ultimo viene passato al metodo nel parametro `format`. Se non è disponibile alcun identificatore, il valore del parametro `format` è <xref:System.String.Empty?displayProperty=nameWithType>.  
+    2. Stabilire se l'oggetto di formattazione deve supportare identificatori di formato personalizzato. Ad esempio, un identificatore di formato "N" potrebbe indicare che un numero di telefono degli Stati Uniti deve essere restituito in formato NANP e un identificatore di formato "I" potrebbe indicare l'output in formato ITU-T Recommendation E.123. Se si usano identificatori di formato, il metodo deve gestire l'identificatore di formato specifico. Quest'ultimo viene passato al metodo nel parametro `format`. Se non è disponibile alcun identificatore, il valore del parametro `format` è <xref:System.String.Empty?displayProperty=nameWithType>.  
   
-    3.  Recuperare il valore numerico passato al metodo come parametro `arg`. Eseguire le eventuali modifiche necessarie per convertirlo nella relativa rappresentazione di stringa.  
+    3. Recuperare il valore numerico passato al metodo come parametro `arg`. Eseguire le eventuali modifiche necessarie per convertirlo nella relativa rappresentazione di stringa.  
   
-    4.  Restituire la rappresentazione di stringa del parametro `arg`.  
+    4. Restituire la rappresentazione di stringa del parametro `arg`.  
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>Per usare un oggetto di formattazione numerica personalizzata  
   

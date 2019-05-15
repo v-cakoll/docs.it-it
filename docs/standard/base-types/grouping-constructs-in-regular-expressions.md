@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16776e83c8bae6cc82329a8f709fd9d1d7cab145
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645899"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634335"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Costrutti di raggruppamento nelle espressioni regolari
 I costrutti di raggruppamento delineano sottoespressioni di un'espressione regolare e acquisiscono sottostringhe di una stringa di input. È possibile usare i costrutti di raggruppamento per effettuare le operazioni seguenti:  
   
--   Trovare la corrispondenza di una sottoespressione ripetuta nella stringa di input.  
+- Trovare la corrispondenza di una sottoespressione ripetuta nella stringa di input.  
   
--   Applicare un quantificatore a una sottoespressione che dispone di più elementi del linguaggio di espressioni regolari. Per altre informazioni sui quantificatori, vedere [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+- Applicare un quantificatore a una sottoespressione che dispone di più elementi del linguaggio di espressioni regolari. Per altre informazioni sui quantificatori, vedere [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
--   Includere una sottoespressione nella stringa restituita dai metodi <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> e <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> .  
+- Includere una sottoespressione nella stringa restituita dai metodi <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> e <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> .  
   
--   Recuperare le singole sottoespressioni dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> ed elaborarle separatamente dal testo corrispondente nel suo complesso.  
+- Recuperare le singole sottoespressioni dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> ed elaborarle separatamente dal testo corrispondente nel suo complesso.  
   
  La tabella seguente elenca i costrutti di raggruppamento supportati dal motore delle espressioni regolari di .NET e indica se sono di acquisizione o non acquisizione.  
   
@@ -63,13 +63,13 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  È possibile accedere a questi gruppi acquisiti in quattro modi diversi:  
   
--   Tramite il costrutto del backreference all'interno dell'espressione regolare. Si fa riferimento alla sottoespressione corrispondente nella stessa espressione regolare tramite la sintassi `\`*numero*, dove *numero* è il numero ordinale della sottoespressione acquisita.  
+- Tramite il costrutto del backreference all'interno dell'espressione regolare. Si fa riferimento alla sottoespressione corrispondente nella stessa espressione regolare tramite la sintassi `\`*numero*, dove *numero* è il numero ordinale della sottoespressione acquisita.  
   
--   Tramite il costrutto del backreference denominato all'interno dell'espressione regolare. Si fa riferimento alla sottoespressione corrispondente nella stessa espressione regolare tramite la sintassi `\k<`*nome*`>`, dove *nome* è il nome di un gruppo di acquisizione, o `\k<`*numero*`>`, dove *numero* è il numero ordinale di un gruppo di acquisizione. Un gruppo di acquisizione ha un nome predefinito identico al relativo numero ordinale. Per altre informazioni, vedere [Sottoespressioni corrispondenti denominate](#named_matched_subexpression) più avanti in questo argomento.  
+- Tramite il costrutto del backreference denominato all'interno dell'espressione regolare. Si fa riferimento alla sottoespressione corrispondente nella stessa espressione regolare tramite la sintassi `\k<`*nome*`>`, dove *nome* è il nome di un gruppo di acquisizione, o `\k<`*numero*`>`, dove *numero* è il numero ordinale di un gruppo di acquisizione. Un gruppo di acquisizione ha un nome predefinito identico al relativo numero ordinale. Per altre informazioni, vedere [Sottoespressioni corrispondenti denominate](#named_matched_subexpression) più avanti in questo argomento.  
   
--   Tramite la sequenza di sostituzione `$`*numero* in una <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o la chiamata al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , dove *numero* è il numero ordinale della sottoespressione acquisita.  
+- Tramite la sequenza di sostituzione `$`*numero* in una <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o la chiamata al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , dove *numero* è il numero ordinale della sottoespressione acquisita.  
   
--   A livello di codice, usando l'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Il membro alla posizione zero nella raccolta rappresenta l'intera corrispondenza dell'espressione regolare. Ogni membro successivo rappresenta una sottoespressione corrispondente. Per altre informazioni, vedere la sezione [Grouping Constructs and Regular Expression Objects](#Objects) .  
+- A livello di codice, usando l'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Il membro alla posizione zero nella raccolta rappresenta l'intera corrispondenza dell'espressione regolare. Ogni membro successivo rappresenta una sottoespressione corrispondente. Per altre informazioni, vedere la sezione [Grouping Constructs and Regular Expression Objects](#Objects) .  
   
  Nell'esempio seguente viene illustrata un'espressione regolare che identifica le parole duplicate in un testo. I due gruppi di acquisizione del criterio di ricerca di espressioni regolari rappresentano le due istanze della parola duplicata. La seconda istanza è acquisita per riportare la posizione iniziale nella stringa di input.  
   
@@ -112,17 +112,17 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  È possibile accedere ai gruppi acquisiti denominati nei modi seguenti:  
   
--   Tramite il costrutto del backreference denominato all'interno dell'espressione regolare. Si fa riferimento alla sottoespressione corrispondente nella stessa espressione regolare tramite la sintassi `\k<`*nome*`>`, dove *nome* è il nome della sottoespressione acquisita.  
+- Tramite il costrutto del backreference denominato all'interno dell'espressione regolare. Si fa riferimento alla sottoespressione corrispondente nella stessa espressione regolare tramite la sintassi `\k<`*nome*`>`, dove *nome* è il nome della sottoespressione acquisita.  
   
--   Tramite il costrutto del backreference all'interno dell'espressione regolare. Si fa riferimento alla sottoespressione corrispondente nella stessa espressione regolare tramite la sintassi `\`*numero*, dove *numero* è il numero ordinale della sottoespressione acquisita. Le sottoespressioni corrispondenti denominate sono numerate consecutivamente da sinistra a destra dopo le sottoespressioni corrispondenti.  
+- Tramite il costrutto del backreference all'interno dell'espressione regolare. Si fa riferimento alla sottoespressione corrispondente nella stessa espressione regolare tramite la sintassi `\`*numero*, dove *numero* è il numero ordinale della sottoespressione acquisita. Le sottoespressioni corrispondenti denominate sono numerate consecutivamente da sinistra a destra dopo le sottoespressioni corrispondenti.  
   
--   Tramite la sequenza di sostituzione `${`*nome*`}` in una <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o la chiamata al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , dove *nome* è il nome della sottoespressione acquisita.  
+- Tramite la sequenza di sostituzione `${`*nome*`}` in una <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o la chiamata al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , dove *nome* è il nome della sottoespressione acquisita.  
   
--   Tramite la sequenza di sostituzione `$`*numero* in una chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , dove *numero* è il numero ordinale della sottoespressione acquisita.  
+- Tramite la sequenza di sostituzione `$`*numero* in una chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , dove *numero* è il numero ordinale della sottoespressione acquisita.  
   
--   A livello di codice, usando l'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Il membro alla posizione zero nella raccolta rappresenta l'intera corrispondenza dell'espressione regolare. Ogni membro successivo rappresenta una sottoespressione corrispondente. I gruppi acquisiti denominati vengono archiviati nella raccolta dopo i gruppi acquisiti numerati.  
+- A livello di codice, usando l'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Il membro alla posizione zero nella raccolta rappresenta l'intera corrispondenza dell'espressione regolare. Ogni membro successivo rappresenta una sottoespressione corrispondente. I gruppi acquisiti denominati vengono archiviati nella raccolta dopo i gruppi acquisiti numerati.  
   
--   A livello di codice, fornendo il nome della sottoespressione all'indicizzatore dell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> (in C#) o alla relativa proprietà <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> (in Visual Basic).  
+- A livello di codice, fornendo il nome della sottoespressione all'indicizzatore dell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> (in C#) o alla relativa proprietà <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> (in Visual Basic).  
   
  Un criterio di ricerca di espressioni regolari semplice illustra in che modo è possibile fare riferimento a gruppi denominati e numerati (non denominati) a livello di codice o tramite la sintassi del linguaggio delle espressioni regolari. L'espressione regolare `((?<One>abc)\d+)?(?<Two>xyz)(.*)` crea i gruppi di acquisizione seguenti in base a numero e nome. Il primo gruppo di acquisizione (numero 0) fa sempre riferimento all'intero criterio.  
   
@@ -446,11 +446,11 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>costrutti di raggruppamento e oggetti delle espressioni regolari  
  Le sottostringhe per cui viene trovata una corrispondenza da parte di un gruppo di acquisizione dell'espressione regolare sono rappresentate da oggetti <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> , che possono essere recuperati dall'oggetto <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . L'oggetto <xref:System.Text.RegularExpressions.GroupCollection> è popolato come descritto di seguito:  
   
--   Il primo oggetto <xref:System.Text.RegularExpressions.Group> della raccolta (in corrispondenza dell'indice zero) rappresenta l'intera corrispondenza.  
+- Il primo oggetto <xref:System.Text.RegularExpressions.Group> della raccolta (in corrispondenza dell'indice zero) rappresenta l'intera corrispondenza.  
   
--   Il set di oggetti <xref:System.Text.RegularExpressions.Group> successivo rappresenta i gruppi di acquisizione non denominati (numerati). Vengono visualizzati nell'ordine in cui sono definiti nell'espressione regolare, da sinistra a destra. I valori di indice di questi gruppi sono compresi tra 1 e il numero dei gruppi di acquisizione non denominati nella raccolta. L'indice di un gruppo specifico è equivalente al relativo backreference numerato. Per altre informazioni sui backreference, vedere [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)  
+- Il set di oggetti <xref:System.Text.RegularExpressions.Group> successivo rappresenta i gruppi di acquisizione non denominati (numerati). Vengono visualizzati nell'ordine in cui sono definiti nell'espressione regolare, da sinistra a destra. I valori di indice di questi gruppi sono compresi tra 1 e il numero dei gruppi di acquisizione non denominati nella raccolta. L'indice di un gruppo specifico è equivalente al relativo backreference numerato. Per altre informazioni sui backreference, vedere [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)  
   
--   Il set di oggetti <xref:System.Text.RegularExpressions.Group> finale rappresenta i gruppi di acquisizione denominati. Vengono visualizzati nell'ordine in cui sono definiti nell'espressione regolare, da sinistra a destra. Il valore di indice del primo gruppo di acquisizione denominato è maggiore di uno rispetto all'ultimo gruppo di acquisizione non denominato. Se l'espressione regolare non contiene gruppi di acquisizione non denominati, il valore di indice del primo gruppo di acquisizione denominato è uno.  
+- Il set di oggetti <xref:System.Text.RegularExpressions.Group> finale rappresenta i gruppi di acquisizione denominati. Vengono visualizzati nell'ordine in cui sono definiti nell'espressione regolare, da sinistra a destra. Il valore di indice del primo gruppo di acquisizione denominato è maggiore di uno rispetto all'ultimo gruppo di acquisizione non denominato. Se l'espressione regolare non contiene gruppi di acquisizione non denominati, il valore di indice del primo gruppo di acquisizione denominato è uno.  
   
  Se si applica un quantificatore a un gruppo di acquisizione, le proprietà <xref:System.Text.RegularExpressions.Group> , <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>e <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>dell'oggetto <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> corrispondente riflettono l'ultima sottostringa acquisita da un gruppo di acquisizione. È possibile recuperare un set completo di sottostringhe acquisite da gruppi che dispongono di quantificatori dall'oggetto <xref:System.Text.RegularExpressions.CaptureCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> .  
   

@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5214ee83ab3009c3d2bb1360f46b39831c37c2ef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970571"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664631"
 ---
 # <a name="net-class-library-overview"></a>Panoramica della libreria di classi .NET
 
@@ -52,17 +52,17 @@ Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore 
   
  I tipi .NET sono gli elementi fondamentali per la compilazione di applicazioni, componenti e controlli .NET. Nelle implementazioni .NET sono inclusi tipi che consentono di eseguire le funzioni seguenti:  
   
--   Rappresentare tipi di dati ed eccezioni di base.  
+- Rappresentare tipi di dati ed eccezioni di base.  
   
--   Incapsulare strutture di dati.  
+- Incapsulare strutture di dati.  
   
--   Eseguire I/O.  
+- Eseguire I/O.  
   
--   Accedere a informazioni su tipi caricati.  
+- Accedere a informazioni su tipi caricati.  
   
--   Richiamare i controlli di sicurezza di .NET Framework.  
+- Richiamare i controlli di sicurezza di .NET Framework.  
   
--   Offrire l'accesso ai dati, un'elaborata interfaccia GUI (Graphical User Interface, interfaccia grafica utente) per il lato client e una GUI per il lato client controllata dal server.  
+- Offrire l'accesso ai dati, un'elaborata interfaccia GUI (Graphical User Interface, interfaccia grafica utente) per il lato client e una GUI per il lato client controllata dal server.  
   
  .NET offre una vasta gamma di interfacce, nonché di classi astratte e concrete (non astratte). È possibile utilizzare le classi concrete così come sono oppure, in molti casi, derivare da esse classi personalizzate. Per avvalersi delle funzionalità di un'interfaccia è possibile creare, oppure derivare da una delle classi di .NET, una classe che consenta di implementare l'interfaccia.  
   
@@ -89,12 +89,12 @@ Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore 
 |Category|Nome di classe|Description|Tipo di dati di Visual Basic|Tipo di dati di C#|Tipo di dati C++/CLI|Tipo di dati F#|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Integer|<xref:System.Byte>|Intero senza segno a 8 bit.|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|Intero con segno a 8 bit.<br /><br /> Non conforme a CLS.|**SByte**|**sbyte**|**char**<br /> oppure<br /> **signed** **char**|**sbyte**|  
+||<xref:System.SByte>|Intero con segno a 8 bit.<br /><br /> Non conforme a CLS.|**SByte**|**sbyte**|**char**<br /> -oppure-<br /> **signed** **char**|**sbyte**|  
 ||<xref:System.Int16>|Intero con segno a 16 bit.|**Short**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|Intero con segno a 32 bit.|**Integer**|**int**|**int**<br /><br /> oppure<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|Intero con segno a 32 bit.|**Integer**|**int**|**int**<br /><br /> -oppure-<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|Intero con segno a 64 bit.|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|Intero senza segno a 16 bit.<br /><br /> Non conforme a CLS.|**UShort**|**ushort**|**unsigned short**|**uint16**|  
-||<xref:System.UInt32>|Intero senza segno a 32 bit.<br /><br /> Non conforme a CLS.|**UInteger**|**uint**|**unsigned int**<br /> oppure<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt32>|Intero senza segno a 32 bit.<br /><br /> Non conforme a CLS.|**UInteger**|**uint**|**unsigned int**<br /> -oppure-<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|Intero senza segno a 64 bit.<br /><br /> Non conforme a CLS.|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
 |Virgola mobile|<xref:System.Single>|Un numero a virgola mobile e precisione singola a 32 bit.|**Single**|**float**|**float**|**float32**<br> oppure<br>**single**|  
 ||<xref:System.Double>|Un numero a virgola mobile e precisione doppia a 64 bit.|**Double**|**double**|**double**|**float**<br> oppure <br> **double**|  

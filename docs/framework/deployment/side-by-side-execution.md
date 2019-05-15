@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341075"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641030"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Esecuzione side-by-side in .NET Framework
 L'esecuzione side-by-side consente di eseguire più versioni di un'applicazione o di un componente sullo stesso computer. È possibile disporre contemporaneamente sullo stesso computer di più versioni di Common Language Runtime e di più versioni di applicazioni e componenti che usano una versione runtime.  
@@ -33,15 +33,15 @@ L'esecuzione side-by-side consente di eseguire più versioni di un'applicazione 
   
  Allo scopo di eliminare i conflitti tra DLL, l'esecuzione side-by-side e .NET Framework forniscono le funzionalità illustrate di seguito.  
   
--   Assembly con nome sicuro.  
+- Assembly con nome sicuro.  
   
      Nell'ambito dell'esecuzione side-by-side vengono usati assembly con nome sicuro per associare le informazioni sui tipi a una specifica versione di un assembly. In questo modo viene impedita l'associazione di un'applicazione o di un componente a una versione non valida di un assembly. Gli assembly con nome sicuro consentono la presenza di più versioni di un file sullo stesso computer e il relativo uso da parte delle applicazioni. Per altre informazioni, vedere [Assembly con nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md).  
   
--   Archiviazione del codice con supporto della versione.  
+- Archiviazione del codice con supporto della versione.  
   
      .NET Framework consente l'archiviazione del codice con supporto della versione nella Global Assembly Cache. La Global Assembly Cache rappresenta una cache di codice a livello di computer presente su tutti i computer su cui è installato .NET Framework. Questa cache, in cui gli assembly vengono archiviati in base alle informazioni sulla versione, sulle impostazioni cultura e sull'editore, supporta più versioni di componenti e applicazioni. Per altre informazioni, vedere [Global Assembly Cache](../../../docs/framework/app-domains/gac.md).  
   
--   Isolamento.  
+- Isolamento.  
   
      Usando .NET Framework, è possibile creare applicazioni e componenti eseguiti in isolamento. L'isolamento è un componente essenziale dell'esecuzione side-by-side. Per l'isolamento è necessario tenere traccia delle risorse usate e condividere in modo sicuro le risorse tra più versioni di un'applicazione o di un componente. L'isolamento comprende inoltre l'archiviazione dei file in base alla versione. Per altre informazioni sull'isolamento, vedere [Linee guida per la creazione di applicazioni e componenti per l'esecuzione affiancata di più versioni](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md).  
   
@@ -66,9 +66,9 @@ L'esecuzione side-by-side consente di eseguire più versioni di un'applicazione 
 ## <a name="determining-which-version-of-the-runtime-to-load"></a>Determinazione della versione runtime da caricare  
  Common Language Runtime usa le informazioni seguenti per determinare la versione runtime da caricare per un'applicazione:  
   
--   Le versioni di runtime disponibili.  
+- Le versioni di runtime disponibili.  
   
--   Le versioni di runtime supportate da un'applicazione.  
+- Le versioni di runtime supportate da un'applicazione.  
   
 ### <a name="supported-runtime-versions"></a>Versioni di runtime supportate  
  Il runtime usa il file di configurazione dell'applicazione e l'intestazione del file eseguibile di tipo PE per determinare quale versione runtime è supportata da un'applicazione. Se non sono presenti file di configurazione dell'applicazione, il runtime carica la versione runtime specificata nell'intestazione del file PE dell'applicazione, se disponibile.  

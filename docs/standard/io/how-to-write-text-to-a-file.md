@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 93d87dc98284fad6b8159f681f7d99ce460d60d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59b33c24c2821d0aef17f5feb67c1178810b939e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524195"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647777"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Procedura: Scrivere testo in un file
 Questo argomento illustra diversi modi per scrivere testo in un file per un'app .NET. 
 
 Per scrivere un testo in un file vengono in genere usati le classi e i metodi seguenti:  
   
--   <xref:System.IO.StreamWriter> contiene metodi per scrivere in un file in modo sincrono (<xref:System.IO.StreamWriter.Write%2A> e <xref:System.IO.TextWriter.WriteLine%2A>) o asincrono (<xref:System.IO.StreamWriter.WriteAsync%2A> e <xref:System.IO.StreamWriter.WriteLineAsync%2A>).  
+- <xref:System.IO.StreamWriter> contiene metodi per scrivere in un file in modo sincrono (<xref:System.IO.StreamWriter.Write%2A> e <xref:System.IO.TextWriter.WriteLine%2A>) o asincrono (<xref:System.IO.StreamWriter.WriteAsync%2A> e <xref:System.IO.StreamWriter.WriteLineAsync%2A>).  
   
--   <xref:System.IO.File> specifica metodi statici per scrivere un testo in un file, ad esempio <xref:System.IO.File.WriteAllLines%2A> e <xref:System.IO.File.WriteAllText%2A> o per accodare testo a un file, ad esempio <xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> e <xref:System.IO.File.AppendText%2A>.  
+- <xref:System.IO.File> specifica metodi statici per scrivere un testo in un file, ad esempio <xref:System.IO.File.WriteAllLines%2A> e <xref:System.IO.File.WriteAllText%2A> o per accodare testo a un file, ad esempio <xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> e <xref:System.IO.File.AppendText%2A>.  
   
 - <xref:System.IO.Path> è destinato alle stringhe che contengono informazioni sul percorso di file o directory. Contiene il metodo <xref:System.IO.Path.Combine%2A> e in .NET Core 2.1 e versioni successive i metodi <xref:System.IO.Path.Join%2A> e <xref:System.IO.Path.TryJoin%2A>, che consentono la concatenazione di stringhe per compilare un percorso di file o directory.
 

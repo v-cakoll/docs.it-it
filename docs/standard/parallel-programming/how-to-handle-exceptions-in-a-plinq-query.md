@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b1a72a2b2443b419ea4f4b036664fb5f8932096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef107ae0dceb7ee937b21d65cba92cbcf6a9a96c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554244"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628992"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Procedura: Gestire le eccezioni in una query PLINQ
 Il primo esempio in questo argomento mostra come gestire l'oggetto <xref:System.AggregateException?displayProperty=nameWithType>, che può essere generato da una query PLINQ in fase di esecuzione. Il secondo esempio mostra come inserire blocchi Try-Catch all'interno di delegati, il più vicino possibile al punto in cui verrà generata l'eccezione. In questo modo, è possibile intercettare le eccezioni non appena si verificano, per poter proseguire con l'esecuzione della query. Quando alle eccezioni è consentita la propagazione fino al thread di unione, è possibile che una query continui a elaborare alcuni elementi dopo la generazione dell'eccezione.  
@@ -43,7 +43,7 @@ Il primo esempio in questo argomento mostra come gestire l'oggetto <xref:System.
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Per compilare ed eseguire questi esempi, copiarli nel progetto PLINQ Data Sample e chiamare il metodo da Main.  
+- Per compilare ed eseguire questi esempi, copiarli nel progetto PLINQ Data Sample e chiamare il metodo da Main.  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Non intercettare un'eccezione se non si è in grado di gestirla, in modo da non danneggiare lo stato del programma.  

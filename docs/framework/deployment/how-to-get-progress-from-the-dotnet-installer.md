@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c070f043d306cfc67cc2a05cb474d92c1d382ae
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bdb74259d7b034511722b1d2992b4ec16adb551e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355636"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750431"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5
 
@@ -40,13 +40,13 @@ ms.locfileid: "57355636"
 
 - **Codici di uscita**. I codici di uscita seguenti del comando per la chiamata al programma ridistribuibile [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] indicano se l'installazione è riuscita o meno:
 
-    - 0: installazione completata.
+  - 0: installazione completata.
 
-    - 3010: installazione completata; è necessario un riavvio del sistema.
+  - 3010: installazione completata; è necessario un riavvio del sistema.
 
-    - 1602: l'installazione è stata annullata.
+  - 1602: l'installazione è stata annullata.
 
-    - Tutti gli altri codici: si sono verificati errori durante l'installazione; esaminare i file di log creati in %temp% per informazioni dettagliate.
+  - Tutti gli altri codici: si sono verificati errori durante l'installazione; esaminare i file di log creati in %temp% per informazioni dettagliate.
 
 - **Annullamento dell'installazione**. È possibile annullare l'installazione in qualsiasi momento usando il metodo `Abort` per impostare i flag `m_downloadAbort` e `m_ installAbort` nella sezione MMIO.
 

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd3b1cacc73743622aaaad72bfd4edb26dc26390
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f2be5881a7f663b13dd13ffc0e0faf88afd7efc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740476"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647967"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Navigazione dei nodi di attributi e dello spazio dei nomi con XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> offre due set di metodi di navigazione. Il primo set, che si trova nell'argomento [Navigazione del set di nodi con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), consente di navigare nei *set di nodi* di un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>. Il secondo set, descritto in questo argomento, consente di navigare nei *nodi di attributi e dello spazio dei nomi* di un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.  
@@ -22,11 +22,11 @@ La classe <xref:System.Xml.XPath.XPathNavigator> offre due set di metodi di navi
   
  Di seguito sono riportati i metodi di navigazione degli attributi della classe <xref:System.Xml.XPath.XPathNavigator>.  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>  
   
  Quando il nodo corrente è un elemento, è possibile usare la proprietà <xref:System.Xml.XPath.XPathNavigator.HasAttributes%2A> per verificare la presenza di eventuali attributi associati all'elemento. Una volta appurato che l'elemento dispone di attributi, sono disponibili diversi metodi per accedere agli attributi. Per rimuovere un singolo attributo dall'elemento, usare il metodo <xref:System.Xml.XPath.XPathNavigator.GetAttribute%2A>. Per spostare l'oggetto <xref:System.Xml.XPath.XPathNavigator> su un attributo specifico, usare il metodo <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>. È inoltre possibile scorrere ogni attributo di un elemento usando il metodo <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A> seguito da più chiamate al metodo <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>.  
   
@@ -40,11 +40,11 @@ La classe <xref:System.Xml.XPath.XPathNavigator> offre due set di metodi di navi
   
  Di seguito sono riportati i metodi di navigazione dello spazio dei nomi della classe <xref:System.Xml.XPath.XPathNavigator>.  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>  
   
  È sempre presente almeno un nodo dello spazio dei nomi nell'ambito di ogni elemento in un documento XML. Questo è il nodo dello spazio dei nomi con il prefisso `xml` e l'URI dello spazio dei nomi `http://www.w3.org/XML/1998/namespace`. Per recuperare un URI dello spazio dei nomi nell'ambito in base a un prefisso specifico, usare il metodo <xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A>. Per spostare l'oggetto <xref:System.Xml.XPath.XPathNavigator> su un nodo specifico dello spazio dei nomi, usare il metodo <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>. È inoltre possibile scorrere ogni nodo dello spazio dei nomi di un elemento usando il metodo <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> seguito da più chiamate al metodo <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>.  
   
@@ -66,11 +66,11 @@ La classe <xref:System.Xml.XPath.XPathNavigator> offre due set di metodi di navi
   
  La sequenza di spazi dei nomi (ovvero, lo spazio dei nomi in corrispondenza del quale si trova l'oggetto <xref:System.Xml.XPath.XPathNavigator> dopo la chiamata al metodo <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> seguita da una serie di chiamate al metodo <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>) è la seguente.  
   
--   Quando è posizionata su `element2`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` e `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
+- Quando è posizionata su `element2`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` e `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
   
--   Quando è posizionata su `element1`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` e `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
+- Quando è posizionata su `element1`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` e `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
   
--   Quando è posizionata su `root`: `xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
+- Quando è posizionata su `root`: `xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
   
 > [!NOTE]
 >  La classe <xref:System.Xml.XPath.XPathNavigator> restituisce i nodi dello spazio dei nomi in ordine inverso rispetto al documento. Pertanto, il metodo <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> essenzialmente consente uno spostamento all'ultimo nodo dello spazio dei nomi nell'ambito corrente.  
@@ -87,11 +87,11 @@ La classe <xref:System.Xml.XPath.XPathNavigator> offre due set di metodi di navi
   
  Quando è posizionata su `child2`, la sequenza di spazi dei nomi (ovvero, lo spazio dei nomi in corrispondenza del quale si trova l'oggetto <xref:System.Xml.XPath.XPathNavigator> dopo la chiamata al metodo <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> seguita da una serie di chiamate al metodo <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>) è la seguente.  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.All>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, `xmlns="http://www.contoso.com"` e `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
+- <xref:System.Xml.XPath.XPathNamespaceScope.All>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, `xmlns="http://www.contoso.com"` e `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"` e `xmlns="http://www.contoso.com"`.  
+- <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"` e `xmlns="http://www.contoso.com"`.  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.  
+- <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.  
   
 > [!NOTE]
 >  La classe <xref:System.Xml.XPath.XPathNavigator> restituisce i nodi dello spazio dei nomi in ordine inverso rispetto al documento. Pertanto, il metodo <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> essenzialmente consente uno spostamento all'ultimo nodo dello spazio dei nomi nell'ambito corrente.  

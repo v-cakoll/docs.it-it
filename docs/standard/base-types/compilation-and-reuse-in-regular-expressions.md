@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2166412269a84329d42f58c7e3423229be4327b8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ca2dfcfbb5407be2727343a5b3a5b429af83ae20
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877756"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634591"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Compilazione e riutilizzo nelle espressioni regolari
 Se si comprendono le modalità con cui le espressioni regolari vengono compilate dal motore e vengono memorizzate nella cache, è possibile ottimizzare le prestazioni delle applicazioni che fanno ampio uso di espressioni regolari. In questo argomento vengono descritte sia la compilazione che la memorizzazione nella cache.  
@@ -40,9 +40,9 @@ Tuttavia, il codice MSIL generato non può essere scaricato. L'unico modo per sc
   
  L'applicazione dell'utente può trarre vantaggio delle espressioni regolari precompilate in uno dei due modi seguenti:  
   
--   Usando un metodo statico dell'oggetto <xref:System.Text.RegularExpressions.Regex> per definire l'espressione regolare. Se si usa un modello di espressione regolare che è già stato definito in un'altra chiamata di metodo statico, il motore delle espressioni regolari lo recupera dalla cache. In caso contrario il motore compila l'espressione regolare e la aggiunge alla cache.  
+- Usando un metodo statico dell'oggetto <xref:System.Text.RegularExpressions.Regex> per definire l'espressione regolare. Se si usa un modello di espressione regolare che è già stato definito in un'altra chiamata di metodo statico, il motore delle espressioni regolari lo recupera dalla cache. In caso contrario il motore compila l'espressione regolare e la aggiunge alla cache.  
   
--   Usando ripetutamente un oggetto <xref:System.Text.RegularExpressions.Regex> esistente finché il modello di espressione regolare relativo è necessario.  
+- Usando ripetutamente un oggetto <xref:System.Text.RegularExpressions.Regex> esistente finché il modello di espressione regolare relativo è necessario.  
   
  A causa del sovraccarico di creazione di istanze di oggetti e di compilazione di espressioni regolari, la creazione e l'eliminazione rapide di numerosi oggetti <xref:System.Text.RegularExpressions.Regex> è un processo molto costoso. Per le applicazioni che usano un numero elevato di espressioni regolari, è possibile ottimizzare le prestazioni con chiamate a metodi statici `Regex` e aumentando eventualmente la dimensione della cache delle espressioni regolari.  
   

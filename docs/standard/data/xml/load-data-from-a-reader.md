@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e4b789a23b790757ce2dfaa82b6eaec7fdaf3cb3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207226"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647877"
 ---
 # <a name="load-data-from-a-reader"></a>Caricamento di dati da un lettore
 Se un documento XML viene caricato usando il metodo <xref:System.Xml.XmlDocument.Load%2A> e un parametro di un lettore <xref:System.Xml.XmlReader>, si otterrà un comportamento diverso rispetto alla situazione in cui i dati vengono caricati dagli altri formati. Se il lettore è nel suo stato iniziale, il metodo <xref:System.Xml.XmlDocument.Load%2A> utilizzerà l'intero contenuto del lettore e compilerà il modello DOM XML usando tutti i dati nel lettore.  
   
  Se il lettore è già posizionato su un nodo in un punto del documento e quindi viene passato al metodo <xref:System.Xml.XmlDocument.Load%2A>, <xref:System.Xml.XmlDocument.Load%2A> tenta di leggere il nodo corrente e tutti i nodi di pari livello fino al tag di fine che chiude il livello corrente nella memoria. La riuscita del metodo <xref:System.Xml.XmlDocument.Load%2A> dipende dal nodo sul quale si trova il lettore al momento del caricamento, in quanto con il metodo <xref:System.Xml.XmlDocument.Load%2A> viene verificato che l'XML del lettore sia nel formato corretto. In caso contrario, il metodo <xref:System.Xml.XmlDocument.Load%2A> genererà un’eccezione. Il set di nodi seguente, ad esempio, contiene due elementi di livello radice e poiché l'XML non ha un formato corretto, <xref:System.Xml.XmlDocument.Load%2A> genera un'eccezione.  
   
--   Nodo Comment, seguito da un nodo Element, seguito da un nodo Element, seguito da un nodo EndElement.  
+- Nodo Comment, seguito da un nodo Element, seguito da un nodo Element, seguito da un nodo EndElement.  
   
  Dal seguente set di nodi viene creato un DOM incompleto, in quanto non vi è alcun elemento di livello radice.  
   
--   Nodo Comment, seguito da un nodo ProcessingInstruction, seguito da un nodo Comment, seguito da un nodo EndElement.  
+- Nodo Comment, seguito da un nodo ProcessingInstruction, seguito da un nodo Comment, seguito da un nodo EndElement.  
   
  In questo caso non viene generata un'eccezione e i dati vengono caricati. È possibile aggiungere un elemento radice sopra questi nodi e creare un XML in formato corretto che potrà essere salvato senza errori.  
   

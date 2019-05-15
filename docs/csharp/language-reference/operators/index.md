@@ -1,6 +1,6 @@
 ---
 title: Operatori C#
-ms.date: 04/04/2018
+ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689814"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452375"
 ---
 # <a name="c-operators"></a>Operatori C#
 
-C# fornisce diversi operatori, ovvero simboli che specificano quali operazioni (matematiche, indicizzazione, chiamate di funzione e così via) eseguire in un'espressione. È possibile eseguire l'[overload](../../programming-guide/statements-expressions-operators/overloadable-operators.md) di diversi operatori per cambiarne il significato quando vengono applicati a un tipo definito dall'utente.
+C# fornisce una serie di operatori predefiniti supportati dai tipi incorporati. Ad esempio, gli [operatori aritmetici](arithmetic-operators.md) eseguono operazioni aritmetiche con gli operandi di tipi numerici incorporati e gli [operatori logici booleani](boolean-logical-operators.md) eseguono operazioni logiche con gli operandi [bool](../keywords/bool.md).
 
-Le operazioni sui tipi integrali (come `==`, `!=`, `<`, `>`, `&`, `|`) sono generalmente consentite sui tipi di enumerazione (`enum`).
+Un tipo definito dall'utente può eseguire l'overload di operatori specifici per definire il comportamento corrispondente per gli operandi di quel tipo. Per altre informazioni, vedere l'articolo sulla parola chiave [operator](../keywords/operator.md).
 
 Le sezioni seguenti elencano gli operatori C# da quelli con la precedenza più alta a quelli con la più bassa. Gli operatori di ogni sezione condividono lo stesso livello di precedenza.
 
@@ -37,15 +37,15 @@ Le sezioni seguenti elencano gli operatori C# da quelli con la precedenza più a
 
 Sono gli operatori con la precedenza più alta.
 
-[x.y](member-access-operator.md): accesso ai membri.
+[x.y](member-access-operators.md#member-access-operator-): accesso ai membri.
 
-[x?.y](null-conditional-operators.md): accesso ai membri condizionali null. Restituisce `null` se l'operando sul lato sinistro è `null`.
+[x?.y](member-access-operators.md#null-conditional-operators--and-): accesso ai membri condizionali null. Restituisce `null` se l'operando sul lato sinistro è `null`.
 
-[x?[y]](null-conditional-operators.md): accesso all'indice condizionale null. Restituisce `null` se l'operando sul lato sinistro è `null`.
+[x?[y]](member-access-operators.md#null-conditional-operators--and-): elemento di matrice condizionale null o accesso al tipo di indicizzatore. Restituisce `null` se l'operando sul lato sinistro è `null`.
 
-[f(x)](invocation-operator.md): chiamata di funzione.
+[f(x)](member-access-operators.md#invocation-operator-): chiamata di metodo o chiamata a un delegato.
 
-[a&#91;x&#93;](index-operator.md): indicizzazione oggetto aggregato.
+[a&#91;x&#93;](member-access-operators.md#indexer-operator-): elemento di matrice o accesso al tipo di indicizzatore.
 
 [x++](arithmetic-operators.md#increment-operator-): incremento suffisso. Restituisce il valore di x e quindi aggiorna la posizione di archiviazione con il valore di x che risulta maggiore (in genere aggiunge il numero intero 1).
 
@@ -61,9 +61,13 @@ Sono gli operatori con la precedenza più alta.
 
 [default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md): genera il valore predefinito del tipo T.
 
+[nameof](../keywords/nameof.md): ottiene il nome semplice (non qualificato) di una variabile, di un tipo o di un membro come stringa costante.
+
 [delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md): dichiara e restituisce un'istanza di delegato.
 
 [sizeof](../keywords/sizeof.md): restituisce le dimensioni in byte dell'operando type.
+
+[stackalloc](../keywords/stackalloc.md): alloca un blocco di memoria nello stack.
 
 [->](dereference-operator.md): dereferenziazione puntatore combinata con l'accesso ai membri.
 
@@ -125,13 +129,13 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 
 Questi operatori hanno una precedenza più alta di quelli della sezione successiva e più bassa di quelli della sezione precedente.
 
-[x \< y](less-than-operator.md): minore di (true se x è minore di y).
+[x \< y](comparison-operators.md#less-than-operator-): minore di (true se x è minore di y).
 
-[x > y](greater-than-operator.md): maggiore di (true se x è maggiore di y).
+[x > y](comparison-operators.md#greater-than-operator-): maggiore di (true se x è maggiore di y).
 
-[x \<= y](less-than-equal-operator.md): minore o uguale a.
+[x \<= y](comparison-operators.md#less-than-or-equal-operator-): minore o uguale a.
 
-[x >= y](greater-than-equal-operator.md): maggiore o uguale a.
+[x >= y](comparison-operators.md#greater-than-or-equal-operator-): maggiore o uguale a.
 
 [is](../keywords/is.md): compatibilità del tipo. Restituisce true se è possibile eseguire il cast dell'operando di sinistra valutato al tipo specificato nell'operando di destra (un tipo statico).
 

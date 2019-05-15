@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24e7eed539898c511250a1a09a187448e9424890
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a3de327001f987b6c35d547b7cf3cbe7feeac49
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300996"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648521"
 ---
 # <a name="registration-free-com-interop"></a>Interoperabilità COM senza registrazione
 L'interoperabilità COM senza registrazione consente di attivare un componente senza usare il Registro di sistema di Windows per memorizzare informazioni sugli assembly. Anziché registrare un componente su un computer durante la distribuzione, vengono creati file manifesto di tipo Win32 contenenti informazioni sull'associazione e sull'attivazione in fase di progettazione. L'attivazione di un oggetto è controllata da tali file manifesto, anziché da chiavi del Registro di sistema.  
   
  Usando l'attivazione senza registrazione per gli assembly, anziché effettuarne la registrazione durante la distribuzione, è possibile usufruire di due vantaggi:  
   
--   È possibile controllare la versione della DLL che verrà attivata in caso di installazione di più versioni in un computer.  
+- È possibile controllare la versione della DLL che verrà attivata in caso di installazione di più versioni in un computer.  
   
--   Gli utenti finali possono copiare l'applicazione in una directory appropriata del computer tramite XCOPY o FTP. L'applicazione potrà quindi essere eseguita da tale directory.  
+- Gli utenti finali possono copiare l'applicazione in una directory appropriata del computer tramite XCOPY o FTP. L'applicazione potrà quindi essere eseguita da tale directory.  
   
  Questa sezione descrive i due tipi di manifesto necessari per l'interoperabilità COM senza registrazione: il manifesto dell'applicazione e quello del componente. Questi manifesti sono costituiti da file XML. Un manifesto dell'applicazione, creato dallo sviluppatore di un'applicazione, contiene metadati che descrivono gli assembly e le relative dipendenze. Un manifesto del componente, creato dallo sviluppatore di un componente, contiene informazioni altrimenti inserite nel Registro di sistema di Windows.  
   

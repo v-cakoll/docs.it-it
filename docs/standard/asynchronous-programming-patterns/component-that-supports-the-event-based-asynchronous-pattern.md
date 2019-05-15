@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: da6f21ba452c5c0413881759879cca371507a290
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334289"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628921"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Procedura: Implementare un componente che supporta il modello asincrono basato su eventi
 In caso di scrittura di una classe con alcune operazioni che possono causare ritardi notevoli, è consigliabile assegnare la funzionalità asincrona implementando [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -34,19 +34,19 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
   
  Le attività illustrate nella procedura dettagliata sono le seguenti:  
   
--   Creazione del componente  
+- Creazione del componente  
   
--   Definizione di delegati ed eventi asincroni pubblici  
+- Definizione di delegati ed eventi asincroni pubblici  
   
--   Definizione di delegati privati  
+- Definizione di delegati privati  
   
--   Implementazione di eventi pubblici  
+- Implementazione di eventi pubblici  
   
--   Implementazione del metodo di completamento  
+- Implementazione del metodo di completamento  
   
--   Implementazione dei metodi di lavoro  
+- Implementazione dei metodi di lavoro  
   
--   Implementazione dei metodi di avvio e di annullamento  
+- Implementazione dei metodi di avvio e di annullamento  
   
  Per copiare il codice in questo argomento come singolo listato, vedere [Procedura: Implementare un client del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
@@ -55,7 +55,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
   
 #### <a name="to-create-the-component"></a>Per creare il componente  
   
--   Creare una classe denominata `PrimeNumberCalculator` che eredita da <xref:System.ComponentModel.Component>.  
+- Creare una classe denominata `PrimeNumberCalculator` che eredita da <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Definizione di delegati ed eventi asincroni pubblici  
  Il componente comunica con i client usando gli eventi. L'evento _MethodName_**Completed** avvisa i client del completamento di un'attività asincrona, mentre l'evento _MethodName_**ProgressChanged** li informa dello stato di avanzamento di questa attività.  
@@ -87,7 +87,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
   
 #### <a name="to-test-your-component"></a>Per eseguire il test del componente  
   
--   Compilare il componente.  
+- Compilare il componente.  
   
      Verranno visualizzati due avvisi del compilatore:  
   
@@ -148,7 +148,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
   
 #### <a name="to-complete-an-asynchronous-operation"></a>Per completare un'operazione asincrona:  
   
--   Implementare il metodo di completamento. Accetta sei parametri, che usa per popolare `CalculatePrimeCompletedEventArgs` restituito al client tramite `CalculatePrimeCompletedEventHandler` del client. Rimuove il token ID attività del client dalla raccolta interna e termina la durata dell'operazione asincrona con una chiamata a <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. <xref:System.ComponentModel.AsyncOperation> effettua il marshalling della chiamata al thread o al contesto adeguato al modello di applicazione.  
+- Implementare il metodo di completamento. Accetta sei parametri, che usa per popolare `CalculatePrimeCompletedEventArgs` restituito al client tramite `CalculatePrimeCompletedEventHandler` del client. Rimuove il token ID attività del client dalla raccolta interna e termina la durata dell'operazione asincrona con una chiamata a <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. <xref:System.ComponentModel.AsyncOperation> effettua il marshalling della chiamata al thread o al contesto adeguato al modello di applicazione.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
@@ -158,7 +158,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
   
 #### <a name="to-test-your-component"></a>Per eseguire il test del componente  
   
--   Compilare il componente.  
+- Compilare il componente.  
   
      Verrà visualizzato un avviso del compilatore:  
   
@@ -212,7 +212,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
   
 #### <a name="to-test-your-component"></a>Per eseguire il test del componente  
   
--   Compilare il componente.  
+- Compilare il componente.  
   
      Gli unici elementi ancora da scrivere sono i metodi che avviano e annullano le operazioni asincrone, `CalculatePrimeAsync` e `CancelAsync`.  
   
@@ -238,7 +238,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
   
 #### <a name="to-test-your-component"></a>Per eseguire il test del componente  
   
--   Compilare il componente.  
+- Compilare il componente.  
   
  Il componente `PrimeNumberCalculator` è ora completo e pronto per l'uso.  
   

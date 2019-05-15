@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cafb15f691daa8d0d0e6c1ebab3cb89f7c811612
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095100"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648601"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshalling di diversi tipi di matrici
 Una matrice è un tipo di riferimento nel codice gestito che contiene uno o più elementi dello stesso tipo. Anche se le matrici sono tipi di riferimento, vengono passate come parametri in alle funzioni non gestite. Questo comportamento non è coerente con il modo in cui le matrici gestite vengono passate agli oggetti gestiti, ovvero come parametri in/out. Per altri dettagli, vedere [Copia e blocco](copying-and-pinning.md).  
@@ -34,53 +34,53 @@ Una matrice è un tipo di riferimento nel codice gestito che contiene uno o più
 ## <a name="example"></a>Esempio  
  Questo esempio illustra come passare i tipi di matrice seguenti:  
   
--   Matrice di Integer in base al valore.  
+- Matrice di Integer in base al valore.  
   
--   Matrice di Integer in base al riferimento, che è possibile ridimensionare.  
+- Matrice di Integer in base al riferimento, che è possibile ridimensionare.  
   
--   Matrice multidimensionale di Integer in base al valore.  
+- Matrice multidimensionale di Integer in base al valore.  
   
--   Matrice di stringhe in base al valore.  
+- Matrice di stringhe in base al valore.  
   
--   Matrice di strutture con Integer.  
+- Matrice di strutture con Integer.  
   
--   Matrice di strutture con stringhe.  
+- Matrice di strutture con stringhe.  
   
  A meno che non venga eseguito il marshalling esplicito di una matrice in base al riferimento, il comportamento predefinito esegue il marshalling della matrice come un parametro in. È possibile modificare questo comportamento applicando in modo esplicito gli attributi <xref:System.Runtime.InteropServices.InAttribute> e <xref:System.Runtime.InteropServices.OutAttribute> .  
   
  Nell'esempio di matrici vengono usate le seguenti funzioni non gestite, illustrate con le dichiarazioni di funzione originali:  
   
--   **TestArrayOfInts** esportata da PinvokeLib.dll.  
+- **TestArrayOfInts** esportata da PinvokeLib.dll.  
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   **TestRefArrayOfInts** esportata da PinvokeLib.dll.  
+- **TestRefArrayOfInts** esportata da PinvokeLib.dll.  
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   **TestMatrixOfInts** esportata da PinvokeLib.dll.  
+- **TestMatrixOfInts** esportata da PinvokeLib.dll.  
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   **TestArrayOfStrings** esportata da PinvokeLib.dll.  
+- **TestArrayOfStrings** esportata da PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   **TestArrayOfStructs** esportata da PinvokeLib.dll.  
+- **TestArrayOfStructs** esportata da PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   **TestArrayOfStructs2** esportata da PinvokeLib.dll.  
+- **TestArrayOfStructs2** esportata da PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  

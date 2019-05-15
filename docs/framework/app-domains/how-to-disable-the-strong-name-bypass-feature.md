@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86fc35ae20211bd32a21d60b7313074361aef671
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 20b482ee94446ffa863697d8c25276658a4bb122
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296173"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593610"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Procedura: Disabilitare la funzionalità che consente di ignorare il nome sicuro
 A partire da .NET Framework versione 3.5 Service Pack 1 (SP1), le firme con nome sicuro non vengono convalidate quando un assembly viene caricato in un oggetto <xref:System.AppDomain> con attendibilità totale, ad esempio l'oggetto predefinito <xref:System.AppDomain> per la zona `MyComputer`. Questo comportamento è reso possibile dalla funzionalità che consente di ignorare la verifica del nome sicuro. In un ambiente ad attendibilità totale le richieste di <xref:System.Security.Permissions.StrongNameIdentityPermission> hanno sempre esito positivo per gli assembly ad attendibilità totale firmati, indipendentemente dalla firma. L'unica restrizione è che l'assembly deve essere ad attendibilità totale perché la relativa area è ad attendibilità totale. Poiché il nome sicuro non è un fattore determinante in queste condizioni, non esiste alcun motivo per cui venga validato. Se la convalida di firme con nome sicuro viene ignorata, si ottengono miglioramenti significativi delle prestazioni.  
@@ -28,9 +28,9 @@ A partire da .NET Framework versione 3.5 Service Pack 1 (SP1), le firme con nome
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>Per disabilitare la funzionalità che consente di ignorare il nome sicuro per tutte le applicazioni  
   
--   Nei computer a 32 bit creare nel Registro di sistema una voce DWORD con valore 0 denominata `AllowStrongNameBypass` nella chiave HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework.  
+- Nei computer a 32 bit creare nel Registro di sistema una voce DWORD con valore 0 denominata `AllowStrongNameBypass` nella chiave HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework.  
   
--   Nei computer a 64 bit creare nel Registro di sistema una voce DWORD con valore 0 denominata `AllowStrongNameBypass` nelle chiavi HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework e HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework.  
+- Nei computer a 64 bit creare nel Registro di sistema una voce DWORD con valore 0 denominata `AllowStrongNameBypass` nelle chiavi HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework e HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework.  
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>Per disabilitare la funzionalità che consente di ignorare il nome sicuro per una singola applicazione  
   

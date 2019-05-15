@@ -2,12 +2,12 @@
 title: Autenticazione di Windows integrata con Protezione estesa
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 672737471c7c73e7ddd03d26d00d30cff3e23ec4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325722"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647400"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticazione di Windows integrata con Protezione estesa
 Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'autenticazione integrata di Windows viene gestita da <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> e dalle classi correlate in <xref:System.Net> e negli spazi dei nomi correlati. È stato aggiunto il supporto per la protezione estesa per migliorare la sicurezza.  
@@ -39,21 +39,21 @@ Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'aute
   
  Le informazioni sull'associazione di servizi indicano l'intenzione di un client di eseguire l'autenticazione in un endpoint servizio specifico. Queste informazioni vengono comunicate dal client al server con le proprietà seguenti:  
   
--   Il valore SPN deve essere disponibile al server che esegue l'autenticazione client in formato testo non crittografato.  
+- Il valore SPN deve essere disponibile al server che esegue l'autenticazione client in formato testo non crittografato.  
   
--   Il valore dell'SPN è pubblico.  
+- Il valore dell'SPN è pubblico.  
   
--   L'SPN deve essere protetto con crittografia durante il transito, in modo che un attacco man-in-the-middle non possa inserirne, rimuoverne o modificarne il valore.  
+- L'SPN deve essere protetto con crittografia durante il transito, in modo che un attacco man-in-the-middle non possa inserirne, rimuoverne o modificarne il valore.  
   
  Un token di associazione del canale è una proprietà del canale sicuro esterno, ad esempio TLS, usata per associarlo a una conversazione tramite un canale autenticato dal client. Il token di associazione del canale deve avere le proprietà seguenti, definite anche dal documento IETF RFC 5056:  
   
--   Quando è presente un canale esterno, il valore del token di associazione del canale deve essere una proprietà che identifica il canale esterno o l'endpoint servizio, cui arrivano in modo indipendente sia il lato client sia il lato server di una conversazione.  
+- Quando è presente un canale esterno, il valore del token di associazione del canale deve essere una proprietà che identifica il canale esterno o l'endpoint servizio, cui arrivano in modo indipendente sia il lato client sia il lato server di una conversazione.  
   
--   Il valore del token di associazione del canale inviato dal client non deve poter essere danneggiato da un utente malintenzionato.  
+- Il valore del token di associazione del canale inviato dal client non deve poter essere danneggiato da un utente malintenzionato.  
   
--   La segretezza del valore del token di associazione del canale non è garantita. Tuttavia, questo non significa che il valore delle informazioni sull'associazione di servizi e di canali possa essere sempre esaminato da altri componenti oltre al server che esegue l'autenticazione, in quanto può essere crittografato dal protocollo usato per trasmettere il token di associazione del canale.  
+- La segretezza del valore del token di associazione del canale non è garantita. Tuttavia, questo non significa che il valore delle informazioni sull'associazione di servizi e di canali possa essere sempre esaminato da altri componenti oltre al server che esegue l'autenticazione, in quanto può essere crittografato dal protocollo usato per trasmettere il token di associazione del canale.  
   
--   L'integrità del token di associazione del canale deve essere protetta con crittografia durante il transito, in modo che un utente malintenzionato non possa inserirne, rimuoverne o modificarne il valore.  
+- L'integrità del token di associazione del canale deve essere protetta con crittografia durante il transito, in modo che un utente malintenzionato non possa inserirne, rimuoverne o modificarne il valore.  
   
  L'associazione di canali viene eseguita dal client che trasferisce l'SPN e il token di associazione del canale al server in modo a prova di manomissione. Il server convalida le informazioni sull'associazione di canali in base ai criteri e rifiuta i tentativi di autenticazione per cui determina di non essere la destinazione prevista. In questo modo, i due canali vengono associati con crittografia.  
   
@@ -72,37 +72,37 @@ Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'aute
   
  <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> che include gli elementi seguenti:  
   
--   Proprietà <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> che indica se il sistema operativo supporta l'autenticazione integrata di Windows con protezione estesa.  
+- Proprietà <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> che indica se il sistema operativo supporta l'autenticazione integrata di Windows con protezione estesa.  
   
--   Valore di <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> che indica quando i criteri di protezione estesa devono essere applicati.  
+- Valore di <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> che indica quando i criteri di protezione estesa devono essere applicati.  
   
--   Valore di <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> che indica lo scenario di distribuzione. Questo valore influisce sul modo in cui viene verificata la protezione estesa.  
+- Valore di <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> che indica lo scenario di distribuzione. Questo valore influisce sul modo in cui viene verificata la protezione estesa.  
   
--   Oggetto <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> facoltativo che contiene l'elenco di SPN personalizzati, usato per verificare la corrispondenza rispetto all'SPN fornito dal client come destinazione prevista dell'autenticazione.  
+- Oggetto <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> facoltativo che contiene l'elenco di SPN personalizzati, usato per verificare la corrispondenza rispetto all'SPN fornito dal client come destinazione prevista dell'autenticazione.  
   
--   Oggetto <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> facoltativo che contiene un'associazione di canali personalizzata da usare per la convalida. Questo scenario non rappresenta un caso comune  
+- Oggetto <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> facoltativo che contiene un'associazione di canali personalizzata da usare per la convalida. Questo scenario non rappresenta un caso comune  
   
  Lo spazio dei nomi <xref:System.Security.Authentication.ExtendedProtection.Configuration> fornisce il supporto per la configurazione dell'autenticazione con protezione estesa per le applicazioni.  
   
  Sono state apportate alcune modifiche alle funzionalità per supportare la protezione estesa nello spazio dei nomi <xref:System.Net> esistente. Le modifiche includono le seguenti:  
   
--   Nuova classe <xref:System.Net.TransportContext> aggiunta allo spazio dei nomi <xref:System.Net> che rappresenta un contesto di trasporto.  
+- Nuova classe <xref:System.Net.TransportContext> aggiunta allo spazio dei nomi <xref:System.Net> che rappresenta un contesto di trasporto.  
   
--   Nuovi metodi di overload <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> e <xref:System.Net.HttpWebRequest.GetRequestStream%2A> nella classe <xref:System.Net.HttpWebRequest> che permettono il recupero di <xref:System.Net.TransportContext> per supportare la protezione estesa per le applicazioni client.  
+- Nuovi metodi di overload <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> e <xref:System.Net.HttpWebRequest.GetRequestStream%2A> nella classe <xref:System.Net.HttpWebRequest> che permettono il recupero di <xref:System.Net.TransportContext> per supportare la protezione estesa per le applicazioni client.  
   
--   Aggiunte alle classi <xref:System.Net.HttpListener> e <xref:System.Net.HttpListenerRequest> per supportare le applicazioni server.  
+- Aggiunte alle classi <xref:System.Net.HttpListener> e <xref:System.Net.HttpListenerRequest> per supportare le applicazioni server.  
   
  È stata apportata una modifica per supportare la protezione estesa per le applicazioni client SMTP nello spazio dei nomi <xref:System.Net.Mail> esistente:  
   
--   Proprietà <xref:System.Net.Mail.SmtpClient.TargetName%2A> nella classe <xref:System.Net.Mail.SmtpClient> che rappresenta l'SPN da usare per l'autenticazione quando si usa la protezione estesa per applicazioni client SMTP.  
+- Proprietà <xref:System.Net.Mail.SmtpClient.TargetName%2A> nella classe <xref:System.Net.Mail.SmtpClient> che rappresenta l'SPN da usare per l'autenticazione quando si usa la protezione estesa per applicazioni client SMTP.  
   
  Sono state apportate alcune modifiche alle funzionalità per supportare la protezione estesa nello spazio dei nomi <xref:System.Net.Security> esistente. Le modifiche includono le seguenti:  
   
--   Nuovi metodi di overload <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> e <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> nella classe <xref:System.Net.Security.NegotiateStream> che permettono il passaggio di un token di associazione del canale per supportare la protezione estesa per le applicazioni client.  
+- Nuovi metodi di overload <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> e <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> nella classe <xref:System.Net.Security.NegotiateStream> che permettono il passaggio di un token di associazione del canale per supportare la protezione estesa per le applicazioni client.  
   
--   Nuovi metodi di overload <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> e <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> nella classe <xref:System.Net.Security.NegotiateStream> che permettono il passaggio di un oggetto <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> per supportare la protezione estesa per le applicazioni server.  
+- Nuovi metodi di overload <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> e <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> nella classe <xref:System.Net.Security.NegotiateStream> che permettono il passaggio di un oggetto <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> per supportare la protezione estesa per le applicazioni server.  
   
--   Nuova proprietà <xref:System.Net.Security.SslStream.TransportContext%2A> nella classe <xref:System.Net.Security.SslStream> per supportare la protezione estesa per le applicazioni client e server.  
+- Nuova proprietà <xref:System.Net.Security.SslStream.TransportContext%2A> nella classe <xref:System.Net.Security.SslStream> per supportare la protezione estesa per le applicazioni client e server.  
   
  Proprietà <xref:System.Net.Configuration.SmtpNetworkElement> aggiunta per supportare la configurazione della protezione estesa per client SMTP nello spazio dei nomi <xref:System.Net.Security>.  
   

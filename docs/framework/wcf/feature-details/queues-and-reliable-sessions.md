@@ -2,12 +2,12 @@
 title: Code e sessioni affidabili
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: d6b1e62e2b0f91856867128c2c0695ab0bdf1c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7a60e6f92f6875b6fb446d29abc7d858bfdefe73
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643536"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557163"
 ---
 # <a name="queues-and-reliable-sessions"></a>Code e sessioni affidabili
 Code e sessioni affidabili sono le funzionalità di Windows Communication Foundation (WCF) che implementano la messaggistica affidabile. Gli argomenti contenuti in questa sezione descrivono le funzionalità di messaggistica affidabile di WCF.  
@@ -31,7 +31,7 @@ Code e sessioni affidabili sono le funzionalità di Windows Communication Founda
   
  Le sessioni affidabili forniscono trasferimenti affidabili dei messaggi con una latenza bassa. Provvedono ai messaggi SOAP su qualsiasi proxy o intermediario, in modo equivalente a TCP per i pacchetti su bridge IP. Per altre informazioni sulle sessioni affidabili, vedere [sessioni affidabili](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
-### <a name="queues"></a>Code  
+## <a name="queues"></a>Code  
  Code in WCF forniscono il trasferimento affidabile dei messaggi e la separazione tra origini e destinazioni al costo di una latenza elevata. WCF in coda la comunicazione si basa sull'accodamento messaggi (noto anche come MSMQ).  
   
  MSMQ viene fornito con Windows come opzione e viene eseguito come servizio NT. Acquisisce i messaggi da trasmettere in una coda di trasmissione per conto dell'origine e li recapita a una coda di destinazione. La coda di destinazione accetta i messaggi per conto della destinazione a cui verranno recapitati in seguito quando la destinazione richiede i messaggi. I gestori code MSMQ implementano un protocollo di trasferimento messaggi affidabile, in modo che i messaggi non vengano persi durante la trasmissione. Il protocollo può essere nativo o un protocollo basato su SOAP, come SRMP (SOAP Reliable Messagging Protocol).  

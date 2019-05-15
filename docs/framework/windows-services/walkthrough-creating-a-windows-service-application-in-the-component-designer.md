@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d30b7b98648e36a3008ac015f9560620f77b363
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518032"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751826"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Esercitazione: Creare un'app di servizio di Windows
 
@@ -32,13 +32,13 @@ Le prime operazioni da effettuare sono la creazione del progetto e l'impostazion
 
    > [!NOTE]
    > Se il modello **Servizio di Windows** non è visualizzato, può essere necessario installare il carico di lavoro **Sviluppo per desktop .NET**:
-   >  
+   >
    > Nella finestra di dialogo **Nuovo progetto** selezionare **Apri il programma di installazione di Visual Studio** in basso a sinistra. Selezionare il carico di lavoro **Sviluppo per desktop .NET** e quindi selezionare **Modifica**.
 
 3. Per **Nome** immettere *MyNewService* e quindi selezionare **OK**.
 
    Verrà visualizzata la scheda **Progettazione** (**Service1.cs [Progettazione]** oppure **Service1.vb [Progettazione]**).
-   
+
    Il modello di progetto include una classe di componente denominata `Service1` che eredita dalla classe <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Include gran parte del codice del servizio di base, ad esempio il codice per avviare il servizio.
 
 ## <a name="rename-the-service"></a>Rinominare il servizio
@@ -53,11 +53,11 @@ Rinominare il servizio da **Service1** a **MyNewService**.
 
     ![Domanda sulla ridenominazione](media/windows-service-rename.png "Domanda sulla ridenominazione del servizio di Windows")
 
-2. Nella scheda **Progettazione** selezionare **Proprietà** dal menu di scelta rapida. Nella finestra **Proprietà** cambiare il valore di **ServiceName** in *MyNewService*.
+3. Nella scheda **Progettazione** selezionare **Proprietà** dal menu di scelta rapida. Nella finestra **Proprietà** cambiare il valore di **ServiceName** in *MyNewService*.
 
     ![Proprietà del servizio](media/windows-service-properties.png "Proprietà del servizio di Windows")
 
-3. Selezionare **Salva tutto** dal menu **File**.
+4. Selezionare **Salva tutto** dal menu **File**.
 
 ## <a name="add-features-to-the-service"></a>Aggiungere funzionalità al servizio
 
@@ -97,7 +97,7 @@ Nell'editor di codice per **MyNewService.cs** o **MyNewService.vb** individuare 
 
 #### <a name="polling"></a>Polling
 
-Poiché le applicazioni di servizio sono progettate per un'esecuzione di lunga durata, generalmente eseguono operazioni di polling o di monitoraggio del sistema, che vengono configurate nel metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A>. Il metodo `OnStart` deve rispondere al sistema operativo dopo l'avvio del servizio, perché il sistema non rimanga bloccato. 
+Poiché le applicazioni di servizio sono progettate per un'esecuzione di lunga durata, generalmente eseguono operazioni di polling o di monitoraggio del sistema, che vengono configurate nel metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A>. Il metodo `OnStart` deve rispondere al sistema operativo dopo l'avvio del servizio, perché il sistema non rimanga bloccato.
 
 Per impostare un semplice meccanismo di polling, usare il componente <xref:System.Timers.Timer?displayProperty=nameWithType>. Il timer genera un evento <xref:System.Timers.Timer.Elapsed> a intervalli regolari. In corrispondenza di questo evento il servizio può eseguire il monitoraggio. Per usare il componente <xref:System.Timers.Timer> eseguire le operazioni seguenti:
 
@@ -173,7 +173,7 @@ Inserire nel metodo <xref:System.ServiceProcess.ServiceBase.OnStop%2A> una riga 
 
 ### <a name="define-other-actions-for-the-service"></a>Definire altre azioni del servizio
 
-È possibile eseguire l'override dei metodi <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> e <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> per definire ulteriori operazioni di elaborazione del componente. 
+È possibile eseguire l'override dei metodi <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> e <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> per definire ulteriori operazioni di elaborazione del componente.
 
 Il codice seguente illustra come eseguire l'override del metodo <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> nella classe `MyNewService`:
 
@@ -182,7 +182,7 @@ Il codice seguente illustra come eseguire l'override del metodo <xref:System.Ser
 
 ## <a name="set-service-status"></a>Impostare lo stato del servizio
 
-I servizi segnalano il proprio stato a [Gestione controllo servizi](/windows/desktop/Services/service-control-manager), in modo che gli utenti possano stabilire se un servizio funziona correttamente. Per impostazione predefinita, un servizio che eredita da <xref:System.ServiceProcess.ServiceBase> segnala un set limitato di impostazioni di stato, ovvero SERVICE_STOPPED, SERVICE_PAUSED e SERVICE_RUNNING. Se l'avvio di un servizio richiede tempo, è utile segnalare lo stato SERVICE_START_PENDING. 
+I servizi segnalano il proprio stato a [Gestione controllo servizi](/windows/desktop/Services/service-control-manager), in modo che gli utenti possano stabilire se un servizio funziona correttamente. Per impostazione predefinita, un servizio che eredita da <xref:System.ServiceProcess.ServiceBase> segnala un set limitato di impostazioni di stato, ovvero SERVICE_STOPPED, SERVICE_PAUSED e SERVICE_RUNNING. Se l'avvio di un servizio richiede tempo, è utile segnalare lo stato SERVICE_START_PENDING.
 
 È possibile implementare le impostazioni di stato SERVICE_START_PENDING e SERVICE_STOP_PENDING aggiungendo codice che chiami la funzione [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) di Windows.
 
@@ -319,7 +319,7 @@ I servizi segnalano il proprio stato a [Gestione controllo servizi](/windows/des
 
     ' Update the service state to Stopped.
     serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED
-    SetServiceStatus(Me.ServiceHandle, serviceStatus)    
+    SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
 ## <a name="add-installers-to-the-service"></a>Aggiungere programmi di installazione al servizio
@@ -332,27 +332,27 @@ Prima di eseguire un servizio di Windows, è necessario installarlo, ovvero regi
 
      Per impostazione predefinita, Visual Studio aggiunge al progetto una classe di componenti denominata `ProjectInstaller`, contenente due programmi di installazione. Questi programmi di installazione sono destinati al servizio e al processo associato al servizio stesso.
 
-4. Nella visualizzazione **Progettazione** per **ProjectInstaller** selezionare **serviceInstaller1** per un progetto Visual C# o **ServiceInstaller1** per un progetto Visual Basic e quindi scegliere **Proprietà** dal menu di scelta rapida.
+3. Nella visualizzazione **Progettazione** per **ProjectInstaller** selezionare **serviceInstaller1** per un progetto Visual C# o **ServiceInstaller1** per un progetto Visual Basic e quindi scegliere **Proprietà** dal menu di scelta rapida.
 
-5. Nella finestra **Proprietà** verificare che la proprietà <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> sia impostata su **MyNewService**.
+4. Nella finestra **Proprietà** verificare che la proprietà <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> sia impostata su **MyNewService**.
 
-6. Aggiungere testo alla proprietà <xref:System.ServiceProcess.ServiceInstaller.Description%2A>, ad esempio *A sample service* (Servizio di esempio). 
+5. Aggiungere testo alla proprietà <xref:System.ServiceProcess.ServiceInstaller.Description%2A>, ad esempio *A sample service* (Servizio di esempio).
 
      Questo testo, che viene visualizzato nella colonna **Descrizione** della finestra **Servizi**, descrive il servizio all'utente.
 
     ![Descrizione del servizio nella finestra Servizi. ](media/windows-service-description.png "Descrizione del servizio")
 
-7. Aggiungere testo alla proprietà <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A>, ad esempio, *MyNewService Display Name* (Nome visualizzato di MyNewService). 
+6. Aggiungere testo alla proprietà <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A>, ad esempio, *MyNewService Display Name* (Nome visualizzato di MyNewService).
 
      Questo testo viene visualizzato nella colonna **Nome visualizzato** della finestra **Servizi**. Questo nome può essere diverso dalla proprietà <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A>, che corrisponde al nome usato dal sistema, ad esempio il nome usato con il comando `net start` per avviare il servizio.
 
-8. Impostare la proprietà <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> su <xref:System.ServiceProcess.ServiceStartMode.Automatic> dall'elenco a discesa.
+7. Impostare la proprietà <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> su <xref:System.ServiceProcess.ServiceStartMode.Automatic> dall'elenco a discesa.
 
-9. Al termine, la finestra **Proprietà** dovrebbe avere l'aspetto della figura seguente:
+8. Al termine, la finestra **Proprietà** dovrebbe avere l'aspetto della figura seguente:
 
      ![Proprietà del programma di installazione per un servizio di Windows](media/windows-service-installer-properties.png "Proprietà del programma di installazione di un servizio di Windows")
 
-9. Nella visualizzazione **Progettazione** per **ProjectInstaller** scegliere **serviceProcessInstaller1** per un progetto Visual C# o **ServiceProcessInstaller1** per un progetto Visual Basic e quindi scegliere **Proprietà** dal menu di scelta rapida. Impostare la proprietà <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> su <xref:System.ServiceProcess.ServiceAccount.LocalSystem> dall'elenco a discesa. 
+9. Nella visualizzazione **Progettazione** per **ProjectInstaller** scegliere **serviceProcessInstaller1** per un progetto Visual C# o **ServiceProcessInstaller1** per un progetto Visual Basic e quindi scegliere **Proprietà** dal menu di scelta rapida. Impostare la proprietà <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> su <xref:System.ServiceProcess.ServiceAccount.LocalSystem> dall'elenco a discesa.
 
      Questa impostazione consente di installare ed eseguire il servizio tramite l'account di sistema locale.
 
@@ -364,7 +364,7 @@ Per altre informazioni sui programmi di installazione, vedere [Procedura: Aggiun
 ## <a name="optional-set-startup-parameters"></a>(Facoltativo) Impostare i parametri di avvio
 
 > [!NOTE]
-> Prima di decidere di aggiungere parametri di avvio, valutare se sia l'approccio migliore per passare informazioni al servizio. Anche se i parametri di avvio sono facili da usare e da analizzare e gli utenti possono facilmente eseguirne l'override, possono essere più difficili da individuare e da usare senza documentazione. In genere, se il servizio richiede diversi parametri di avvio, è consigliabile usare il Registro di sistema o un file di configurazione. 
+> Prima di decidere di aggiungere parametri di avvio, valutare se sia l'approccio migliore per passare informazioni al servizio. Anche se i parametri di avvio sono facili da usare e da analizzare e gli utenti possono facilmente eseguirne l'override, possono essere più difficili da individuare e da usare senza documentazione. In genere, se il servizio richiede diversi parametri di avvio, è consigliabile usare il Registro di sistema o un file di configurazione.
 
 Un servizio di Windows può accettare argomenti della riga di comando o parametri di avvio. Quando si aggiunge il codice ai parametri di avvio del processo, gli utenti possono avviare il servizio con parametri di avvio personalizzati nella finestra delle proprietà del servizio. Questi parametri di avvio, tuttavia, non vengono mantenuti al successivo avvio del servizio. Per impostare parametri di avvio in modo permanente, impostarli nel Registro di sistema.
 
@@ -480,13 +480,13 @@ Una volta compilato il servizio Windows, è possibile installarlo. Per installar
     installutil MyNewService.exe
     ```
 
-    Se il servizio viene installato correttamente, il comando segnala l'esito positivo. 
+    Se il servizio viene installato correttamente, il comando segnala l'esito positivo.
 
     Se il sistema non riesce a trovare *installutil.exe*, assicurarsi che sia presente nel computer in uso. Questo strumento viene installato con .NET Framework nella cartella *%windir%\Microsoft.NET\Framework[64]\\&lt;versione framework&gt;*. Il percorso predefinito per la versione a 64 bit, ad esempio, è *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
 
-    Se il processo **installutil.exe** ha esito negativo, controllare il log di installazione per determinarne il motivo. Per impostazione predefinita, il log è nella stessa cartella del file eseguibile del servizio. L'installazione può non riuscire se: 
+    Se il processo **installutil.exe** ha esito negativo, controllare il log di installazione per determinarne il motivo. Per impostazione predefinita, il log è nella stessa cartella del file eseguibile del servizio. L'installazione può non riuscire se:
     - La classe <xref:System.ComponentModel.RunInstallerAttribute> non è presente nella classe `ProjectInstaller`.
-    -  L'attributo non è impostato su `true`. 
+    - L'attributo non è impostato su `true`.
     - La classe `ProjectInstaller` non è definita come `public`.
 
 Per altre informazioni, vedere [Procedura: Installare e disinstallare servizi](how-to-install-and-uninstall-services.md).
@@ -520,7 +520,7 @@ Per altre informazioni, vedere [Procedura: Installare e disinstallare servizi](h
 
 ## <a name="clean-up-resources"></a>Pulire le risorse
 
-Se l'app del servizio di Windows non è più necessaria, è possibile rimuoverla. 
+Se l'app del servizio di Windows non è più necessaria, è possibile rimuoverla.
 
 1. Aprire il **Prompt dei comandi per gli sviluppatori per Visual Studio** con credenziali amministrative.
 

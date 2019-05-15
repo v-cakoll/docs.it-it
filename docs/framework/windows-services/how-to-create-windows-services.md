@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 469074336c8aa49fee1acf871360f8dbc1363247
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 124e8a0dff18f02c178b56167cd12faa1fc97992
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313268"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649404"
 ---
 # <a name="how-to-create-windows-services"></a>Procedura: Creare servizi Windows
 Quando si crea un servizio, è possibile usare un modello di progetto di Visual Studio denominato **Servizio Windows**. Questo modello esegue automaticamente una buona parte del lavoro facendo riferimento alle classi e agli spazi dei nomi appropriati, impostando l'ereditarietà dalla classe di base per i servizi ed eseguendo l'override di molti metodi, quando occorre.  
@@ -21,11 +21,11 @@ Quando si crea un servizio, è possibile usare un modello di progetto di Visual 
   
  Per creare un servizio funzionale è necessario eseguire almeno le operazioni seguenti:  
   
--   Impostare la proprietà <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>.  
+- Impostare la proprietà <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>.  
   
--   Creare i programmi di installazione necessari per l'applicazione di servizio.  
+- Creare i programmi di installazione necessari per l'applicazione di servizio.  
   
--   Eseguire l'override e specificare il codice dei metodi <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> per personalizzare il comportamento del servizio.  
+- Eseguire l'override e specificare il codice dei metodi <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> per personalizzare il comportamento del servizio.  
   
 ### <a name="to-create-a-windows-service-application"></a>Per creare un'applicazione di servizio Windows  
   

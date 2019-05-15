@@ -1,21 +1,16 @@
 ---
 title: Creare un'app elenco di corrispondenze di gioco con Infer.NET e la programmazione probabilistica
 description: Informazioni su come usare la programmazione probabilistica con Infer.NET per creare un'app elenco di corrispondenze di gioco basata su una versione semplificata di TrueSkill.
-ms.date: 03/05/2019
+ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 06538ec9de26f5aeabe474fbcae69f0a313c8d32
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679134"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211430"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Creare un'app elenco di corrispondenze di gioco con Infer.NET e la programmazione probabilistica
-
-> [!NOTE]
-> Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
-
-Questa procedura e l'esempio correlato usano attualmente **ML.NET versione 0.10**. Per altre informazioni, vedere le note sulla versione nel [repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Questa guida pratica descrive la programmazione probabilistica tramite Infer.NET. La programmazione probabilistica è un approccio di apprendimento automatico in cui modelli personalizzati vengono espressi come programmi. Permette di integrare informazioni specifiche di un dominio nei modelli e rendere il sistema di apprendimento automatico maggiormente interpretabile. Supporta anche l'inferenza online, ovvero il processo di apprendere man mano che arrivano nuovi dati. Infer.NET viene usato in diversi prodotti Microsoft, tra cui Azure, Xbox e Bing.
 

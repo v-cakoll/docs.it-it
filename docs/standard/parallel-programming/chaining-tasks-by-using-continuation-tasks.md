@@ -10,33 +10,33 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b924f281a2a543ff98e9ae681a6100150898f240
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1f88308dcea250c02d9c6cd7f326570f8bc0133c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219906"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630110"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Concatenamento di attività tramite attività di continuazione
 Nella programmazione asincrona è comune che, dopo il completamento, un'operazione asincrona chiami una seconda operazione e passi i dati a tale operazione. Tradizionalmente le continuazioni venivano eseguite tramite metodi di callback. In Task Parallel Library la stessa funzionalità viene resa possibile dalle *attività di continuazione*. Un'attivazione di continuazione, chiamata anche semplicemente continuazione, è un'attività asincrona richiamata da un'altra attività, denominata *attività precedente*, al termine di quest'ultima.  
   
  Le continuazioni sono relativamente facili da usare, ma sono comunque potenti e flessibili. Ad esempio, è possibile eseguire queste operazioni:  
   
--   Passare dati dall'attività precedente alla continuazione.  
+- Passare dati dall'attività precedente alla continuazione.  
   
--   Specificare le condizioni esatte in cui la continuazione verrà richiamata o non richiamata.  
+- Specificare le condizioni esatte in cui la continuazione verrà richiamata o non richiamata.  
   
--   Annullare una continuazione prima del suo avvio o cooperativamente durante la sua esecuzione.  
+- Annullare una continuazione prima del suo avvio o cooperativamente durante la sua esecuzione.  
   
--   Fornire suggerimenti sul modo in cui pianificare la continuazione.  
+- Fornire suggerimenti sul modo in cui pianificare la continuazione.  
   
--   Richiamare più continuazioni dalla stessa attività precedente.  
+- Richiamare più continuazioni dalla stessa attività precedente.  
   
--   Richiamare una continuazione al termine di tutte o una delle attività precedenti.  
+- Richiamare una continuazione al termine di tutte o una delle attività precedenti.  
   
--   Concatenare continuazioni una dopo l'altra a qualsiasi lunghezza arbitraria.  
+- Concatenare continuazioni una dopo l'altra a qualsiasi lunghezza arbitraria.  
   
--   Usare una continuazione per gestire le eccezioni generate dall'attività precedente.  
+- Usare una continuazione per gestire le eccezioni generate dall'attività precedente.  
   
 ## <a name="about-continuations"></a>Informazioni sulle continuazioni  
  Una continuazione è un'attività creata nello stato <xref:System.Threading.Tasks.TaskStatus.WaitingForActivation> . Questa attività viene automaticamente attivata al termine della o delle attività precedenti. Se si chiama <xref:System.Threading.Tasks.Task.Start%2A?displayProperty=nameWithType> in una continuazione nel codice utente, viene generata un'eccezione <xref:System.InvalidOperationException?displayProperty=nameWithType> .  
@@ -85,11 +85,11 @@ Nella programmazione asincrona è comune che, dopo il completamento, un'operazio
 ## <a name="canceling-a-continuation"></a>Annullamento di una continuazione  
  La proprietà <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> di una continuazione è impostata su <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> nelle situazioni seguenti:  
   
--   Genera un'eccezione <xref:System.OperationCanceledException> in risposta a una richiesta di annullamento. Come per qualsiasi attività, se l'eccezione contiene lo stesso token passato alla continuazione, viene considerato un acknowledgement di annullamento cooperativo.  
+- Genera un'eccezione <xref:System.OperationCanceledException> in risposta a una richiesta di annullamento. Come per qualsiasi attività, se l'eccezione contiene lo stesso token passato alla continuazione, viene considerato un acknowledgement di annullamento cooperativo.  
   
--   Alla continuazione viene passato un oggetto <xref:System.Threading.CancellationToken?displayProperty=nameWithType> la cui proprietà <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> è `true`. In questo caso, la continuazione non viene avviata e passa allo stato <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> .  
+- Alla continuazione viene passato un oggetto <xref:System.Threading.CancellationToken?displayProperty=nameWithType> la cui proprietà <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> è `true`. In questo caso, la continuazione non viene avviata e passa allo stato <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> .  
   
--   La continuazione non viene mai eseguita perché la condizione impostata dal relativo argomento <xref:System.Threading.Tasks.TaskContinuationOptions> non è stata soddisfatta. Ad esempio, se un'attività precedente passa a uno stato <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> , la relativa continuazione a cui è stata passata l'opzione <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> non verrà eseguita, ma passerà allo stato <xref:System.Threading.Tasks.TaskStatus.Canceled> .  
+- La continuazione non viene mai eseguita perché la condizione impostata dal relativo argomento <xref:System.Threading.Tasks.TaskContinuationOptions> non è stata soddisfatta. Ad esempio, se un'attività precedente passa a uno stato <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> , la relativa continuazione a cui è stata passata l'opzione <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> non verrà eseguita, ma passerà allo stato <xref:System.Threading.Tasks.TaskStatus.Canceled> .  
   
  Se un'attività e la relativa continuazione rappresentano due parti della stessa operazione logica, è possibile passare lo stesso token di annullamento a entrambe le attività, come mostrato nell'esempio seguente. L'esempio è costituito da un'attività precedente che genera un elenco di numeri interi divisibili per 33, che viene passato alla continuazione. La continuazione visualizza a sua volta l'elenco. L'attività precedente e la continuazione vengono entrambe sospese regolarmente per intervalli casuali. Inoltre, viene usato un oggetto <xref:System.Threading.Timer?displayProperty=nameWithType> per eseguire il metodo `Elapsed` dopo un intervallo di timeout di cinque secondi. Questo esempio chiama il metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType>, che fa sì che l'attività attualmente in esecuzione chiami il metodo <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType>. Il fatto che il metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> venga chiamato durante l'esecuzione dell'attività precedente o della sua continuazione dipende dalla durata delle pause generate casualmente. Se l'attività precedente viene annullata, la continuazione non verrà avviata. Se l'attività precedente non viene annullata, il token può comunque essere usato per annullare la continuazione.  
   
@@ -133,12 +133,12 @@ Nella programmazione asincrona è comune che, dopo il completamento, un'operazio
 ## <a name="handling-exceptions-thrown-from-continuations"></a>Gestione delle eccezioni generate dalle continuazioni  
  Una relazione tra attività precedenti e attività di continuazione non è una relazione padre-figlio. Le eccezioni generate dalle continuazioni non vengono propagate all'attività precedente. Di conseguenza, gestire le eccezioni generate dalle continuazioni allo stesso modo in cui si gestisce qualsiasi altra attività, nel modo seguente:  
   
--   È possibile usare il metodo <xref:System.Threading.Tasks.Task.Wait%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A>o <xref:System.Threading.Tasks.Task.WaitAny%2A> , o la controparte generica, per restare in attesa della continuazione. È possibile attendere un'attività precedente e la sua continuazione nella stessa istruzione `try` , come mostrato nell'esempio seguente.  
+- È possibile usare il metodo <xref:System.Threading.Tasks.Task.Wait%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A>o <xref:System.Threading.Tasks.Task.WaitAny%2A> , o la controparte generica, per restare in attesa della continuazione. È possibile attendere un'attività precedente e la sua continuazione nella stessa istruzione `try` , come mostrato nell'esempio seguente.  
   
      [!code-csharp[TPL_Continuations#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception1.cs#6)]
      [!code-vb[TPL_Continuations#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception1.vb#6)]  
   
--   È possibile usare una seconda continuazione per osservare la proprietà <xref:System.Threading.Tasks.Task.Exception%2A> della prima continuazione. Nell'esempio seguente un'attività tenta di leggere da un file inesistente. La continuazione visualizza quindi informazioni sull'eccezione nell'attività precedente.  
+- È possibile usare una seconda continuazione per osservare la proprietà <xref:System.Threading.Tasks.Task.Exception%2A> della prima continuazione. Nell'esempio seguente un'attività tenta di leggere da un file inesistente. La continuazione visualizza quindi informazioni sull'eccezione nell'attività precedente.  
   
      [!code-csharp[TPL_Continuations#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#4)]
      [!code-vb[TPL_Continuations#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#4)]  
@@ -150,7 +150,7 @@ Nella programmazione asincrona è comune che, dopo il completamento, un'operazio
   
      Per altre informazioni, vedere [Gestione delle eccezioni](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
   
--   Se la continuazione è un'attività figlio collegata creata usando l'opzione <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> , le eccezioni verranno propagate dall'attività padre di nuovo al thread di chiamata, come nel caso di qualsiasi altra attività figlio collegata. Per altre informazioni, vedere [Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md) (Attività figlio connesse e disconnesse).  
+- Se la continuazione è un'attività figlio collegata creata usando l'opzione <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> , le eccezioni verranno propagate dall'attività padre di nuovo al thread di chiamata, come nel caso di qualsiasi altra attività figlio collegata. Per altre informazioni, vedere [Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md) (Attività figlio connesse e disconnesse).  
   
 ## <a name="see-also"></a>Vedere anche
 

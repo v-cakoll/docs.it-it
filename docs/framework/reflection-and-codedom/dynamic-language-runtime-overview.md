@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dd67ea312f3677b9010dfea7f14fa366259bcd6
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e873f23e0178efefe37f371c379caa3d15bde4cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220978"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649493"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Cenni preliminari su Dynamic Language Runtime
 
@@ -24,11 +24,11 @@ I linguaggi dinamici sono in grado di identificare il tipo di un oggetto in fase
 
 La maggior parte dei linguaggi dinamici offre agli sviluppatori i vantaggi seguenti:
 
--   Possibilità di usare un ciclo di commenti rapido (REPL o ciclo Read–Eval–Print). Ciò consente di immettere diverse istruzioni e di eseguirle immediatamente per vedere i risultati.
+- Possibilità di usare un ciclo di commenti rapido (REPL o ciclo Read–Eval–Print). Ciò consente di immettere diverse istruzioni e di eseguirle immediatamente per vedere i risultati.
 
--   Supporto per lo sviluppo dall'alto verso il basso e per quello più tradizionale dal basso verso l'alto. Ad esempio, quando si usa un approccio dall'alto verso il basso è possibile chiamare le funzioni non ancora implementate e quindi aggiungere le implementazioni sottostanti quando necessario.
+- Supporto per lo sviluppo dall'alto verso il basso e per quello più tradizionale dal basso verso l'alto. Ad esempio, quando si usa un approccio dall'alto verso il basso è possibile chiamare le funzioni non ancora implementate e quindi aggiungere le implementazioni sottostanti quando necessario.
 
--   Semplificazione del refactoring e delle modifiche del codice poiché non è necessario modificare le dichiarazioni di tipo statico in tutto il codice.
+- Semplificazione del refactoring e delle modifiche del codice poiché non è necessario modificare le dichiarazioni di tipo statico in tutto il codice.
 
 I linguaggi dinamici sono eccellenti linguaggi di scripting. Grazie ai linguaggi dinamici, i clienti possono estendere facilmente le applicazioni create con nuovi comandi e funzionalità. I linguaggi dinamici sono spesso usati anche per creare siti Web e test harness, gestire server farm, sviluppare varie utilità ed eseguire trasformazioni di dati.
 
@@ -51,9 +51,9 @@ Come CLR, DLR è incluso in .NET Framework e viene fornito con i pacchetti di in
 
 Gli esempi di linguaggi sviluppati mediante l'uso di DLR includono i seguenti:
 
--   IronPython. Disponibile come software open source nel sito Web [GitHub](https://github.com/IronLanguages/ironpython2).
+- IronPython. Disponibile come software open source nel sito Web [GitHub](https://github.com/IronLanguages/ironpython2).
 
--   IronRuby. Disponibile come software open source nel sito Web [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044).
+- IronRuby. Disponibile come software open source nel sito Web [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044).
 
 ## <a name="primary-dlr-advantages"></a>Vantaggi principali di DLR
  DLR offre i vantaggi seguenti.
@@ -80,11 +80,11 @@ Gli esempi di linguaggi sviluppati mediante l'uso di DLR includono i seguenti:
 
  DLR estende CLR con un set di servizi in grado di supportare in modo più efficiente i linguaggi dinamici. Questi servizi includono:
 
--   Alberi delle espressioni. DLR usa gli alberi delle espressioni per rappresentare la semantica del linguaggio. A questo scopo, DLR ha esteso gli alberi dell'espressione LINQ affinché includano il flusso di controllo, l'assegnazione e altri nodi di modellazione del linguaggio. Per altre informazioni, vedere [Alberi delle espressioni (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) o [Alberi delle espressioni (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
+- Alberi delle espressioni. DLR usa gli alberi delle espressioni per rappresentare la semantica del linguaggio. A questo scopo, DLR ha esteso gli alberi dell'espressione LINQ affinché includano il flusso di controllo, l'assegnazione e altri nodi di modellazione del linguaggio. Per altre informazioni, vedere [Alberi delle espressioni (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) o [Alberi delle espressioni (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
--   Memorizzazione nella cache del sito di chiamata. Un *sito di chiamata dinamica* è un punto nel codice in cui si esegue un'operazione come `a + b` o `a.b()` su oggetti dinamici. DLR memorizza nella cache le caratteristiche di `a` e `b` (in genere i tipi di questi oggetti) e le informazioni sull'operazione. Se questa operazione è stata eseguita in precedenza, DLR recupera tutte le informazioni necessarie dalla cache per l'invio rapido.
+- Memorizzazione nella cache del sito di chiamata. Un *sito di chiamata dinamica* è un punto nel codice in cui si esegue un'operazione come `a + b` o `a.b()` su oggetti dinamici. DLR memorizza nella cache le caratteristiche di `a` e `b` (in genere i tipi di questi oggetti) e le informazioni sull'operazione. Se questa operazione è stata eseguita in precedenza, DLR recupera tutte le informazioni necessarie dalla cache per l'invio rapido.
 
--   Interoperabilità con gli oggetti dinamici. DLR offre un set di classi e interfacce che rappresentano operazioni e oggetti dinamici e che possono essere usate dai responsabili dell'implementazione del linguaggio e dagli autori di librerie dinamiche. Queste classi e interfacce includono <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject> e <xref:System.Dynamic.ExpandoObject>.
+- Interoperabilità con gli oggetti dinamici. DLR offre un set di classi e interfacce che rappresentano operazioni e oggetti dinamici e che possono essere usate dai responsabili dell'implementazione del linguaggio e dagli autori di librerie dinamiche. Queste classi e interfacce includono <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject> e <xref:System.Dynamic.ExpandoObject>.
 
 DLR usa i binder nei siti di chiamata per comunicare non solo con .NET Framework, ma anche con altri servizi e infrastrutture, tra cui Silverlight e COM. I binder incapsulano la semantica di un linguaggio e specificano la modalità di esecuzione delle operazioni in un sito di chiamata usando gli alberi delle espressioni. Ciò consente ai linguaggi dinamici e a quelli tipizzati in modo statico che usano DLR di condividere le librerie e di accedere a tutte le tecnologie supportate da DLR.
 

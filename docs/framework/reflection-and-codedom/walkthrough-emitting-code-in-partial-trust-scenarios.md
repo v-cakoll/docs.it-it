@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299475"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592446"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procedura dettagliata: Creazione di codice in scenari di attendibilità parziale
 La reflection emit usa le stesse API in scenari di attendibilità sia parziale che completa, ma alcune funzionalità richiedono autorizzazioni speciali nel codice parzialmente attendibile. Inoltre, la reflection emit include una funzionalità, i metodi dinamici ospitati in modo anonimo, progettata per l'uso in situazioni di attendibilità parziale da parte di assembly trasparenti per la sicurezza.  
@@ -31,14 +31,14 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
   
  Questa procedura dettagliata illustra le attività seguenti:  
   
--   [Configurazione di un oggetto sandbox semplice per il test del codice parzialmente attendibile](#Setting_up).  
+- [Configurazione di un oggetto sandbox semplice per il test del codice parzialmente attendibile](#Setting_up).  
   
     > [!IMPORTANT]
     >  Questo è un modo semplice per sperimentare il codice in situazioni di attendibilità parziale. Per eseguire codice realmente proveniente da percorsi non attendibili, vedere [Procedura: Eseguire codice parzialmente attendibile in un oggetto sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
--   [Esecuzione di codice in domini di applicazioni parzialmente attendibili](#Running_code).  
+- [Esecuzione di codice in domini di applicazioni parzialmente attendibili](#Running_code).  
   
--   [Uso di metodi dinamici ospitati in modo anonimo per generare ed eseguire codice in situazioni di attendibilità parziale](#Using_methods).  
+- [Uso di metodi dinamici ospitati in modo anonimo per generare ed eseguire codice in situazioni di attendibilità parziale](#Using_methods).  
   
  Per altre informazioni sulla generazione di codice in scenari di attendibilità parziale, vedere la sezione relativa ai [problemi di sicurezza nella reflection emit](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).  
   
@@ -48,9 +48,9 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
 ## <a name="setting-up-partially-trusted-locations"></a>Impostazione di percorsi parzialmente attendibili  
  Le due procedure seguenti illustrano come impostare i percorsi da cui è possibile testare il codice con attendibilità parziale.  
   
--   La prima procedura spiega come creare un dominio dell'applicazione sandbox in cui vengono concesse autorizzazioni Internet al codice.  
+- La prima procedura spiega come creare un dominio dell'applicazione sandbox in cui vengono concesse autorizzazioni Internet al codice.  
   
--   La seconda procedura illustra come aggiungere <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> a un dominio dell'applicazione parzialmente attendibile, per consentire l'accesso ai dati privati negli assembly con attendibilità uguale o inferiore.  
+- La seconda procedura illustra come aggiungere <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> a un dominio dell'applicazione parzialmente attendibile, per consentire l'accesso ai dati privati negli assembly con attendibilità uguale o inferiore.  
   
 ### <a name="creating-sandboxed-application-domains"></a>Creazione di domini dell'applicazione sandbox  
  Per creare un dominio applicazione in cui gli assembly sono eseguiti con attendibilità parziale, è necessario specificare il set di autorizzazioni da concedere agli assembly usando l'overload del metodo <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> per creare il dominio dell'applicazione. Il modo più semplice per specificare il set di concessioni è recuperare un set di autorizzazioni denominato dai criteri di sicurezza.  
@@ -155,7 +155,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
   
 #### <a name="to-use-anonymously-hosted-dynamic-methods"></a>Per usare i metodi dinamici ospitati in modo anonimo  
   
--   Creare un metodo dinamico ospitato in modo anonimo usando un costruttore che non specifica un modulo o un tipo associato.  
+- Creare un metodo dinamico ospitato in modo anonimo usando un costruttore che non specifica un modulo o un tipo associato.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#15)]
      [!code-vb[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#15)]  
@@ -164,7 +164,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
   
      Non sono richieste autorizzazioni speciali per generare un metodo dinamico, ma per il codice generato sono necessarie le autorizzazioni obbligatorie per i tipi e i metodi usati. Ad esempio, se il codice generato chiama un metodo che accede a un file, richiede <xref:System.Security.Permissions.FileIOPermission>. Se il livello di attendibilità non include tale autorizzazione, viene generata un'eccezione di sicurezza quando viene eseguito il codice generato. Il codice riportato di seguito genera un metodo dinamico che usa solo il metodo <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>. Di conseguenza, il codice può essere eseguito da percorsi parzialmente attendibili.  
   
--   In alternativa, creare un metodo dinamico ospitato in modo anonimo con la possibilità limitata di ignorare i controlli di visibilità JIT, usando il costruttore <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> e specificando `true` per il parametro `restrictedSkipVisibility`.  
+- In alternativa, creare un metodo dinamico ospitato in modo anonimo con la possibilità limitata di ignorare i controlli di visibilità JIT, usando il costruttore <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> e specificando `true` per il parametro `restrictedSkipVisibility`.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
@@ -191,15 +191,15 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
   
  L'esempio usa un metodo helper per creare un set di concessioni limitato alle autorizzazioni `Internet`, quindi crea un dominio dell'applicazione usando l'overload del metodo <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> per specificare che tutto il codice eseguito nel dominio usa questo set di concessioni. Nell'esempio viene creata un'istanza della classe `Worker` nel dominio dell'applicazione e viene eseguito due volte il metodo `AccessPrivateMethod`.  
   
--   La prima volta che il metodo `AccessPrivateMethod` viene eseguito, vengono applicati i controlli di visibilità JIT. Il metodo dinamico ha esito negativo quando viene richiamato, perché i controlli di visibilità JIT impediscono l'accesso al metodo privato.  
+- La prima volta che il metodo `AccessPrivateMethod` viene eseguito, vengono applicati i controlli di visibilità JIT. Il metodo dinamico ha esito negativo quando viene richiamato, perché i controlli di visibilità JIT impediscono l'accesso al metodo privato.  
   
--   La seconda volta che il metodo `AccessPrivateMethod` viene eseguito, i controlli di visibilità JIT vengono ignorati. Il metodo dinamico ha esito negativo quando viene compilato, poiché il set di concessioni `Internet` non concede autorizzazioni sufficienti per ignorare i controlli di visibilità.  
+- La seconda volta che il metodo `AccessPrivateMethod` viene eseguito, i controlli di visibilità JIT vengono ignorati. Il metodo dinamico ha esito negativo quando viene compilato, poiché il set di concessioni `Internet` non concede autorizzazioni sufficienti per ignorare i controlli di visibilità.  
   
  Nell'esempio viene aggiunto <xref:System.Security.Permissions.ReflectionPermission> con <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> al set di concessioni. Viene quindi creato un secondo dominio, specificando che a tutto il codice eseguito nel dominio vengano concesse le autorizzazioni del nuovo set di concessioni. Viene creata un'istanza della classe `Worker` nel nuovo dominio dell'applicazione e vengono eseguiti entrambi gli overload del metodo `AccessPrivateMethod`.  
   
--   Viene eseguito il primo overload del metodo `AccessPrivateMethod` e i controlli di visibilità JIT vengono ignorati. Il metodo dinamico viene compilato ed eseguito correttamente, poiché l'assembly che genera il codice è lo stesso assembly che contiene il metodo privato. Di conseguenza, i livelli di attendibilità sono uguali. Se l'applicazione che contiene la classe `Worker` ha diversi assembly, l'esito del processo sarà lo stesso per tutti gli assembly, poiché sono tutti allo stesso livello di attendibilità.  
+- Viene eseguito il primo overload del metodo `AccessPrivateMethod` e i controlli di visibilità JIT vengono ignorati. Il metodo dinamico viene compilato ed eseguito correttamente, poiché l'assembly che genera il codice è lo stesso assembly che contiene il metodo privato. Di conseguenza, i livelli di attendibilità sono uguali. Se l'applicazione che contiene la classe `Worker` ha diversi assembly, l'esito del processo sarà lo stesso per tutti gli assembly, poiché sono tutti allo stesso livello di attendibilità.  
   
--   Viene eseguito il secondo overload del metodo `AccessPrivateMethod` e i controlli di visibilità JIT vengono di nuovo ignorati. Questa volta il metodo dinamico ha esito negativo quando viene compilato, perché tenta di accedere alla proprietà `internal` `FirstChar` della classe <xref:System.String>. L'assembly che contiene la classe <xref:System.String> è completamente attendibile. Si trova quindi a un livello di attendibilità superiore rispetto all'assembly che genera il codice.  
+- Viene eseguito il secondo overload del metodo `AccessPrivateMethod` e i controlli di visibilità JIT vengono di nuovo ignorati. Questa volta il metodo dinamico ha esito negativo quando viene compilato, perché tenta di accedere alla proprietà `internal` `FirstChar` della classe <xref:System.String>. L'assembly che contiene la classe <xref:System.String> è completamente attendibile. Si trova quindi a un livello di attendibilità superiore rispetto all'assembly che genera il codice.  
   
  Questo confronto spiega come <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> consente al codice parzialmente attendibile di ignorare i controlli di visibilità per altro codice parzialmente attendibile senza compromettere la sicurezza del codice attendibile.  
   
@@ -209,7 +209,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Se si compila questo esempio di codice in Visual Studio, è necessario modificare il nome della classe in modo che includa lo spazio dei nomi quando si passa la classe al metodo <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Per impostazione predefinita, lo spazio dei nomi è il nome del progetto. Ad esempio, se il progetto è "PartialTrust", il nome della classe deve essere "PartialTrust.Worker".  
+- Se si compila questo esempio di codice in Visual Studio, è necessario modificare il nome della classe in modo che includa lo spazio dei nomi quando si passa la classe al metodo <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Per impostazione predefinita, lo spazio dei nomi è il nome del progetto. Ad esempio, se il progetto è "PartialTrust", il nome della classe deve essere "PartialTrust.Worker".  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 06d458828c77f61e03d18f635ec00f6a7267bab8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1bbbb558134e5f11537de0efef594be2b964cdcb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341868"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647378"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Procedura: Impostare criteri di cache basati sulla posizione per un'applicazione
 I criteri di cache basati sulla posizione consentono a un'applicazione di definire in modo esplicito il comportamento di memorizzazione nella cache in base alla posizione della risorsa richiesta. Questo argomento illustra l'impostazione dei criteri di cache a livello di codice. Per informazioni sull'impostazione dei criteri per un'applicazione che usa file di configurazione, vedere [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
@@ -29,7 +29,7 @@ I criteri di cache basati sulla posizione consentono a un'applicazione di defini
   
 ### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>Per impostare un criterio che prende le risorse richieste da una cache  
   
--   È possibile creare un criterio che prende le risorse richieste da una cache, se disponibili, e in caso contrario invia le richieste al server, impostando il livello di cache su <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>. Una richiesta può essere soddisfatta da qualsiasi cache tra il client e il server, incluse le cache remote.  
+- È possibile creare un criterio che prende le risorse richieste da una cache, se disponibili, e in caso contrario invia le richieste al server, impostando il livello di cache su <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>. Una richiesta può essere soddisfatta da qualsiasi cache tra il client e il server, incluse le cache remote.  
   
     ```csharp  
     public static void UseCacheIfAvailable()  
@@ -50,7 +50,7 @@ I criteri di cache basati sulla posizione consentono a un'applicazione di defini
   
 ### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-resources"></a>Per impostare un criterio che impedisce a qualsiasi cache di fornire risorse  
   
--   È possibile creare un criterio che impedisce a qualsiasi cache di fornire le risorse richieste impostando il livello di cache su <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>. Questo livello di criteri rimuove la risorsa dalla cache locale se è presente e indica anche alle cache remote di rimuovere la risorsa.  
+- È possibile creare un criterio che impedisce a qualsiasi cache di fornire le risorse richieste impostando il livello di cache su <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>. Questo livello di criteri rimuove la risorsa dalla cache locale se è presente e indica anche alle cache remote di rimuovere la risorsa.  
   
     ```csharp  
     public static void DoNotUseCache()  
@@ -71,7 +71,7 @@ I criteri di cache basati sulla posizione consentono a un'applicazione di defini
   
 ### <a name="to-set-a-policy-that-returns-requested-resources-only-if-they-are-in-the-local-cache"></a>Per impostare un criterio che restituisce le risorse richieste solo se sono nella cache locale  
   
--   È possibile creare un criterio che restituisce le risorse richieste solo se sono nella cache locale impostando il livello di cache su <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>. Se la risorsa richiesta non è presente nella cache, viene generata un'eccezione <xref:System.Net.WebException>.  
+- È possibile creare un criterio che restituisce le risorse richieste solo se sono nella cache locale impostando il livello di cache su <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>. Se la risorsa richiesta non è presente nella cache, viene generata un'eccezione <xref:System.Net.WebException>.  
   
     ```csharp  
     public static void OnlyUseCache()  
@@ -92,7 +92,7 @@ I criteri di cache basati sulla posizione consentono a un'applicazione di defini
   
 ### <a name="to-set-a-policy-that-prevents-the-local-cache-from-supplying-resources"></a>Per impostare un criterio che impedisce alla cache locale di fornire risorse  
   
--   È possibile creare un criterio che impedisce alla cache locale di fornire le risorse richieste impostando il livello di cache su <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>. Se la risorsa richiesta è presente in una cache intermedia e viene riconvalidata correttamente, la cache intermedia può fornire la risorsa richiesta.  
+- È possibile creare un criterio che impedisce alla cache locale di fornire le risorse richieste impostando il livello di cache su <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>. Se la risorsa richiesta è presente in una cache intermedia e viene riconvalidata correttamente, la cache intermedia può fornire la risorsa richiesta.  
   
     ```csharp  
     public static void DoNotUseLocalCache()  
@@ -113,7 +113,7 @@ I criteri di cache basati sulla posizione consentono a un'applicazione di defini
   
 ### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-requested-resources"></a>Per impostare un criterio che impedisce a qualsiasi cache di fornire le risorse richieste  
   
--   È possibile creare un criterio che impedisce a qualsiasi cache di fornire le risorse richieste impostando il livello di cache su <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>. La risorsa restituita dal server può essere archiviata nella cache.  
+- È possibile creare un criterio che impedisce a qualsiasi cache di fornire le risorse richieste impostando il livello di cache su <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>. La risorsa restituita dal server può essere archiviata nella cache.  
   
     ```csharp  
     public static void SendToServer()  
@@ -134,7 +134,7 @@ I criteri di cache basati sulla posizione consentono a un'applicazione di defini
   
 ### <a name="to-set-a-policy-that-allows-any-cache-to-supply-requested-resources-if-the-resource-on-the-server-is-not-newer-than-the-cached-copy"></a>Per impostare un criterio che consente a qualsiasi cache di fornire le risorse richieste se la risorsa nel server non è più recente della copia memorizzata nella cache  
   
--   È possibile creare un criterio che consente a qualsiasi cache di fornire le risorse richieste se la risorsa nel server non è più recente della copia memorizzata nella cache impostando il livello di cache su <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>.  
+- È possibile creare un criterio che consente a qualsiasi cache di fornire le risorse richieste se la risorsa nel server non è più recente della copia memorizzata nella cache impostando il livello di cache su <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>.  
   
     ```csharp  
     public static void CheckServer()  

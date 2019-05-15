@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d3825ef73a6ec312ff51d1bddf5360f3de6cc69
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 3f25ffb16fa5feb382bb42c737440317cfb777b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758921"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666311"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> è una primitiva di sincronizzazione che sblocca i thread in attesa dopo che è stata segnalata un certo numero di volte. <xref:System.Threading.CountdownEvent> è progettato per gli scenari in cui altrimenti sarebbe necessario usare <xref:System.Threading.ManualResetEvent> o <xref:System.Threading.ManualResetEventSlim> e diminuire manualmente una variabile prima di segnalare l'evento. In uno scenario di fork/join, ad esempio, è sufficiente creare una classe <xref:System.Threading.CountdownEvent> con un conteggio di segnali pari a 5 e quindi avviare cinque elementi di lavoro nel pool di thread e fare in modo che ogni elemento di lavoro chiami <xref:System.Threading.CountdownEvent.Signal%2A> quando viene completato. Ogni chiamata a <xref:System.Threading.CountdownEvent.Signal%2A> riduce il conteggio di segnali di 1. Nel thread principale la chiamata a <xref:System.Threading.CountdownEvent.Wait%2A> verrà bloccata finché il conteggio dei segnali sarà pari a zero.  
@@ -25,13 +25,13 @@ ms.locfileid: "55758921"
   
  <xref:System.Threading.CountdownEvent> ha queste funzionalità aggiuntive:  
   
--   L'operazione di attesa può essere annullata tramite i token di annullamento.  
+- L'operazione di attesa può essere annullata tramite i token di annullamento.  
   
--   Il conteggio dei segnali può essere incrementato dopo la creazione dell'istanza.  
+- Il conteggio dei segnali può essere incrementato dopo la creazione dell'istanza.  
   
--   Le istanze possono essere riutilizzate dopo che <xref:System.Threading.CountdownEvent.Wait%2A> è stato restituito chiamando il metodo <xref:System.Threading.CountdownEvent.Reset%2A>.  
+- Le istanze possono essere riutilizzate dopo che <xref:System.Threading.CountdownEvent.Wait%2A> è stato restituito chiamando il metodo <xref:System.Threading.CountdownEvent.Reset%2A>.  
   
--   Le istanze espongono una classe <xref:System.Threading.WaitHandle> per l'integrazione con altre API di sincronizzazione di .NET Framework, ad esempio <xref:System.Threading.WaitHandle.WaitAll%2A>.  
+- Le istanze espongono una classe <xref:System.Threading.WaitHandle> per l'integrazione con altre API di sincronizzazione di .NET Framework, ad esempio <xref:System.Threading.WaitHandle.WaitAll%2A>.  
   
 ## <a name="basic-usage"></a>Utilizzo di base  
  L'esempio seguente illustra come usare una classe <xref:System.Threading.CountdownEvent> con gli elementi di lavoro <xref:System.Threading.ThreadPool>.  

@@ -11,37 +11,37 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cad67f52a4ca977606d7b5a307868ff129570e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2e57ec1a70aaae384f73b1ffdbf92e93fc0a7bdd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097977"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648567"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Qualificazione di tipi .NET per l'interoperabilità
 Se si vuole esporre i tipi contenuti in un assembly alle applicazioni COM, tenere presenti i requisiti di interoperabilità COM in fase di progettazione. Rispettando le linee guida seguenti, è possibile ottenere una facile integrazione tra i tipi gestiti (classi, interfacce, strutture ed enumerazioni) e i tipi COM:  
   
--   Le classi devono implementare le interfacce in modo esplicito.  
+- Le classi devono implementare le interfacce in modo esplicito.  
   
      Anche se l'interoperabilità COM fornisce un meccanismo per generare automaticamente un'interfaccia contenente tutti i membri della classe e i membri della relativa classe di base, è decisamente preferibile fornire interfacce esplicite. L'interfaccia generata automaticamente è detta interfaccia di classe. Per informazioni, vedere [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
      Per incorporare le definizioni di interfaccia nel codice, è possibile usare Visual Basic, C# e C++ invece del linguaggio di definizione dell'interfaccia (IDL, Interface Definition Language) o di soluzioni equivalenti. Per informazioni dettagliate sulla sintassi, vedere la documentazione relativa al linguaggio.  
   
--   I tipi gestiti devono essere pubblici.  
+- I tipi gestiti devono essere pubblici.  
   
      Solo i tipi pubblici di un assembly vengono registrati ed esportati nella libreria dei tipi. Di conseguenza, solo i tipi pubblici sono visibili in COM.  
   
      I tipi gestiti espongono ad altro codice gestito funzionalità che potrebbero non essere esposte a COM. Non vengono ad esempio esposti ai client COM i costruttori con parametri, i metodi statici e i campi costanti. Poiché inoltre il runtime esegue il marshalling dei dati in entrata e in uscita da un tipo, è possibile che i dati vengano copiati o trasformati.  
   
--   Metodi, proprietà, campi ed eventi devono essere pubblici.  
+- Metodi, proprietà, campi ed eventi devono essere pubblici.  
   
      Anche i membri dei tipi pubblici devono essere pubblici per essere visibili in COM. È possibile limitare la visibilità di un assembly, di un tipo pubblico o dei membri pubblici di un tipo pubblico applicando l'oggetto <xref:System.Runtime.InteropServices.ComVisibleAttribute>. Per impostazione predefinita, tutti i membri e i tipi pubblici sono visibili.  
   
--   I tipi devono avere un costruttore pubblico predefinito per essere attivati da COM.  
+- I tipi devono avere un costruttore pubblico predefinito per essere attivati da COM.  
   
      I tipi pubblici gestiti sono visibili in COM. Senza un costruttore pubblico predefinito (un costruttore senza argomenti), tuttavia, i client COM non possono creare il tipo. I client COM possono comunque usare il tipo se viene attivato in un altro modo.  
   
--   I tipi non possono essere astratti.  
+- I tipi non possono essere astratti.  
   
      Né i client COM né i client .NET possono creare tipi astratti.  
   

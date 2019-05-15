@@ -15,37 +15,37 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622949"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634700"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classi di caratteri nelle espressioni regolari
 <a name="Top"></a> Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può verificarsi in una stringa di input per trovare una corrispondenza. Il linguaggio delle espressioni regolari di .NET supporta le classi di caratteri seguenti:  
   
--   Gruppi di caratteri positivi. Un carattere nella stringa di input deve corrispondere a un set di caratteri specificato. Per altre informazioni, vedere [Gruppo di caratteri positivi](#PositiveGroup).  
+- Gruppi di caratteri positivi. Un carattere nella stringa di input deve corrispondere a un set di caratteri specificato. Per altre informazioni, vedere [Gruppo di caratteri positivi](#PositiveGroup).  
   
--   Gruppi di caratteri negativi. Un carattere nella stringa di input non deve corrispondere a un set di caratteri specificato. Per altre informazioni, vedere [Gruppo di caratteri negativi](#NegativeGroup).  
+- Gruppi di caratteri negativi. Un carattere nella stringa di input non deve corrispondere a un set di caratteri specificato. Per altre informazioni, vedere [Gruppo di caratteri negativi](#NegativeGroup).  
   
--   Qualsiasi carattere. Il carattere `.` (punto) in un'espressione regolare è un carattere jolly che corrisponde a qualsiasi carattere, eccetto `\n`. Per altre informazioni, vedere [Qualsiasi carattere](#AnyCharacter).  
+- Qualsiasi carattere. Il carattere `.` (punto) in un'espressione regolare è un carattere jolly che corrisponde a qualsiasi carattere, eccetto `\n`. Per altre informazioni, vedere [Qualsiasi carattere](#AnyCharacter).  
   
--   Categoria generale Unicode o blocco denominato. Per trovare una corrispondenza, un carattere nella stringa di input deve appartenere a una particolare categoria Unicode o essere compreso in un intervallo contiguo di caratteri Unicode. Per altre informazioni, vedere [Categoria Unicode o blocco Unicode](#CategoryOrBlock).  
+- Categoria generale Unicode o blocco denominato. Per trovare una corrispondenza, un carattere nella stringa di input deve appartenere a una particolare categoria Unicode o essere compreso in un intervallo contiguo di caratteri Unicode. Per altre informazioni, vedere [Categoria Unicode o blocco Unicode](#CategoryOrBlock).  
   
--   Categoria Unicode generale o blocco denominato. Per trovare una corrispondenza, un carattere nella stringa di input non deve appartenere a una particolare categoria Unicode o non deve essere compreso in un intervallo contiguo di caratteri Unicode. Per altre informazioni, vedere [Categoria Unicode negativa o blocco Unicode](#NegativeCategoryOrBlock).  
+- Categoria Unicode generale o blocco denominato. Per trovare una corrispondenza, un carattere nella stringa di input non deve appartenere a una particolare categoria Unicode o non deve essere compreso in un intervallo contiguo di caratteri Unicode. Per altre informazioni, vedere [Categoria Unicode negativa o blocco Unicode](#NegativeCategoryOrBlock).  
   
--   Carattere alfanumerico. Un carattere nella stringa di input può appartenere a qualsiasi categoria Unicode appropriata per i caratteri alfanumerico. Per altre informazioni, vedere [Carattere alfanumerico](#WordCharacter).  
+- Carattere alfanumerico. Un carattere nella stringa di input può appartenere a qualsiasi categoria Unicode appropriata per i caratteri alfanumerico. Per altre informazioni, vedere [Carattere alfanumerico](#WordCharacter).  
   
--   Carattere non alfanumerico. Un carattere nella stringa di input può appartenere a qualsiasi categoria Unicode che non sia un carattere alfanumerico. Per altre informazioni, vedere [Carattere non alfanumerico](#NonWordCharacter).  
+- Carattere non alfanumerico. Un carattere nella stringa di input può appartenere a qualsiasi categoria Unicode che non sia un carattere alfanumerico. Per altre informazioni, vedere [Carattere non alfanumerico](#NonWordCharacter).  
   
--   Spazio vuoto. Un carattere nella stringa di input può essere qualsiasi carattere separatore Unicode, nonché un numero qualsiasi di caratteri di controllo. Per altre informazioni, vedere [Spazio vuoto](#WhitespaceCharacter).  
+- Spazio vuoto. Un carattere nella stringa di input può essere qualsiasi carattere separatore Unicode, nonché un numero qualsiasi di caratteri di controllo. Per altre informazioni, vedere [Spazio vuoto](#WhitespaceCharacter).  
   
--   Carattere diverso da uno spazio vuoto. Un carattere nella stringa di input può essere qualsiasi carattere diverso da uno spazio vuoto. Per altre informazioni, vedere [Carattere diverso da uno spazio vuoto](#NonWhitespaceCharacter).  
+- Carattere diverso da uno spazio vuoto. Un carattere nella stringa di input può essere qualsiasi carattere diverso da uno spazio vuoto. Per altre informazioni, vedere [Carattere diverso da uno spazio vuoto](#NonWhitespaceCharacter).  
   
--   Cifra decimale. Un carattere nella stringa di input può essere qualsiasi numero di caratteri classificati come cifre decimali Unicode. Per altre informazioni, vedere [Carattere cifra decimale](#DigitCharacter).  
+- Cifra decimale. Un carattere nella stringa di input può essere qualsiasi numero di caratteri classificati come cifre decimali Unicode. Per altre informazioni, vedere [Carattere cifra decimale](#DigitCharacter).  
   
--   Cifra non decimale. Un carattere nella stringa di input può essere qualsiasi carattere tranne una cifra decimale Unicode. Per altre informazioni, vedere [Carattere cifra decimale](#NonDigitCharacter).  
+- Cifra non decimale. Un carattere nella stringa di input può essere qualsiasi carattere tranne una cifra decimale Unicode. Per altre informazioni, vedere [Carattere cifra decimale](#NonDigitCharacter).  
   
  .NET supporta espressioni di sottrazione di classi di caratteri che consentono di definire un set di caratteri come risultato dell'esclusione di una classe di caratteri da un'altra classe di caratteri. Per altre informazioni, vedere [Sottrazione di classi di caratteri](#CharacterClassSubtraction).  
   
@@ -160,7 +160,7 @@ ms.locfileid: "54622949"
 ## <a name="any-character-"></a>Qualsiasi carattere: .  
  Il carattere punto (.) corrisponde a qualsiasi carattere eccetto `\n` (carattere di nuova riga, \u000A), con le due qualificazioni seguenti:  
   
--   Se un criterio di ricerca di espressioni regolari viene modificato dall'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> o se la parte del criterio contenente la classe di caratteri `.` viene modificata dall'opzione `s`, `.` corrisponde a qualsiasi carattere. Per altre informazioni, vedere [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
+- Se un criterio di ricerca di espressioni regolari viene modificato dall'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> o se la parte del criterio contenente la classe di caratteri `.` viene modificata dall'opzione `s`, `.` corrisponde a qualsiasi carattere. Per altre informazioni, vedere [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
      Nell'esempio seguente viene illustrato il diverso comportamento della classe di caratteri `.` per impostazione predefinita e con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>. L'espressione regolare `^.+` parte dall'inizio della stringa e individua una corrispondenza per ogni carattere. Per impostazione predefinita, la corrispondenza termina alla fine della prima riga. Il criterio di ricerca di espressioni regolari trova la corrispondenza del carattere di ritorno a capo, `\r` o \u000D, ma non di `\n`. Poiché l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> interpreta l'intera stringa di input come riga singola, ottiene una corrispondenza per ogni carattere nella stringa di input, incluso `\n`.  
   
@@ -170,13 +170,13 @@ ms.locfileid: "54622949"
 > [!NOTE]
 >  Poiché corrisponde a qualsiasi carattere eccetto `\n`, la classe di caratteri `.` corrisponde anche a `\r` (il carattere di ritorno a capo, \u000D).  
   
--   In un gruppo di caratteri positivi o negativi un punto viene interpretato come carattere punto letterale e non come classe di caratteri. Per altre informazioni, vedere [Gruppo di caratteri positivi](#PositiveGroup) e [Gruppo di caratteri negativi](#NegativeGroup) descritti in precedenza in questo argomento. Nell'esempio seguente viene fornita un'illustrazione mediante la definizione di un'espressione regolare che include il carattere punto (`.`) sia come classe di caratteri che come membro di un gruppo di caratteri positivi. L'espressione regolare `\b.*[.?!;:](\s|\z)` inizia in corrispondenza di un confine di parola, corrisponde a qualsiasi carattere fino a quando non incontra uno dei cinque segni di punteggiatura, incluso un punto, quindi individua la corrispondenza con uno spazio vuoto o con la fine della stringa.  
+- In un gruppo di caratteri positivi o negativi un punto viene interpretato come carattere punto letterale e non come classe di caratteri. Per altre informazioni, vedere [Gruppo di caratteri positivi](#PositiveGroup) e [Gruppo di caratteri negativi](#NegativeGroup) descritti in precedenza in questo argomento. Nell'esempio seguente viene fornita un'illustrazione mediante la definizione di un'espressione regolare che include il carattere punto (`.`) sia come classe di caratteri che come membro di un gruppo di caratteri positivi. L'espressione regolare `\b.*[.?!;:](\s|\z)` inizia in corrispondenza di un confine di parola, corrisponde a qualsiasi carattere fino a quando non incontra uno dei cinque segni di punteggiatura, incluso un punto, quindi individua la corrispondenza con uno spazio vuoto o con la fine della stringa.  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  Poiché corrisponde a qualsiasi carattere, l'elemento di linguaggio `.` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere. Per altre informazioni, vedere [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Poiché corrisponde a qualsiasi carattere, l'elemento di linguaggio `.` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere. Per altre informazioni, vedere [Quantificatori ](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  [Torna all'inizio](#Top)  
   
@@ -248,7 +248,7 @@ ms.locfileid: "54622949"
  Se viene specificato il comportamento conforme a ECMAScript, `\w` equivale a `[a-zA-Z_0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Poiché corrisponde a qualsiasi carattere alfanumerico, l'elemento di linguaggio `\w` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere alfanumerico, seguito da un carattere alfanumerico specifico. Per altre informazioni, vedere [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Poiché corrisponde a qualsiasi carattere alfanumerico, l'elemento di linguaggio `\w` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere alfanumerico, seguito da un carattere alfanumerico specifico. Per altre informazioni, vedere [Quantificatori ](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  Nell'esempio seguente viene usato l'elemento di linguaggio `\w` per individuare una corrispondenza con i caratteri duplicati in una parola. L'esempio definisce un criterio di ricerca di espressioni regolari, `(\w)\1`, che può essere interpretato nel modo seguente.  
   
@@ -286,7 +286,7 @@ ms.locfileid: "54622949"
  Se viene specificato il comportamento conforme a ECMAScript, `\W` equivale a `[^a-zA-Z_0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Poiché corrisponde a qualsiasi carattere non alfanumerico, l'elemento di linguaggio `\W` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere non alfanumerico, seguito da un carattere non alfanumerico specifico. Per altre informazioni, vedere [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Poiché corrisponde a qualsiasi carattere non alfanumerico, l'elemento di linguaggio `\W` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere non alfanumerico, seguito da un carattere non alfanumerico specifico. Per altre informazioni, vedere [Quantificatori ](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  L'esempio seguente illustra la classe di caratteri `\W`.  Definisce un criterio di ricerca di espressioni regolari, `\b(\w+)(\W){1,2}`, che corrisponde a una parola seguita da uno o due caratteri non alfanumerici, ad esempio uno spazio vuoto o un segno di punteggiatura. L'espressione regolare viene interpretata come illustrato nella tabella seguente.  
   

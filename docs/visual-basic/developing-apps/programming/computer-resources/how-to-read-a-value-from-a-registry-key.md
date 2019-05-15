@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: bc71dd2e3a78454236b2f6f30c2d51aa596e5b8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 36183290a1ffdf4216eb845625aa38d63739eff6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840185"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662758"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Procedura: Leggere un valore da una chiave del Registro di sistema in Visual Basic
 Il metodo `GetValue` dell'oggetto `My.Computer.Registry` può essere usato per leggere i valori nel Registro di sistema di Windows.  
@@ -26,7 +26,7 @@ Il metodo `GetValue` dell'oggetto `My.Computer.Registry` può essere usato per l
   
 ### <a name="to-read-a-value-from-a-registry-key"></a>Per leggere un valore da una chiave del Registro di sistema  
   
--   Usare il metodo `GetValue` (specificando il percorso e il nome) per leggere un valore dalla chiave del Registro di sistema. L'esempio seguente legge il valore `Name` da `HKEY_CURRENT_USER\Software\MyApp` e lo visualizza in una finestra di messaggio.  
+- Usare il metodo `GetValue` (specificando il percorso e il nome) per leggere un valore dalla chiave del Registro di sistema. L'esempio seguente legge il valore `Name` da `HKEY_CURRENT_USER\Software\MyApp` e lo visualizza in una finestra di messaggio.  
   
      [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   
@@ -34,7 +34,7 @@ Il metodo `GetValue` dell'oggetto `My.Computer.Registry` può essere usato per l
   
 ### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>Per determinare se esiste un valore in una chiave del Registro di sistema  
   
--   Usare il metodo `GetValue` per recuperare il valore. Il codice seguente controlla se il valore esiste e restituisce un messaggio se il valore non esiste.  
+- Usare il metodo `GetValue` per recuperare il valore. Il codice seguente controlla se il valore esiste e restituisce un messaggio se il valore non esiste.  
   
      [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
@@ -43,11 +43,11 @@ Il metodo `GetValue` dell'oggetto `My.Computer.Registry` può essere usato per l
   
  Le seguenti condizioni possono generare un'eccezione:  
   
--   Il nome della chiave è `Nothing` (<xref:System.ArgumentNullException>).  
+- Il nome della chiave è `Nothing` (<xref:System.ArgumentNullException>).  
   
--   L'utente non ha le autorizzazioni per la lettura delle chiavi del Registro di sistema (<xref:System.Security.SecurityException>).  
+- L'utente non ha le autorizzazioni per la lettura delle chiavi del Registro di sistema (<xref:System.Security.SecurityException>).  
   
--   Il nome della chiave supera il limite di 255 caratteri (<xref:System.ArgumentException>).  
+- Il nome della chiave supera il limite di 255 caratteri (<xref:System.ArgumentException>).  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Per eseguire questo processo, l'assembly richiede un livello di privilegio concesso dalla classe <xref:System.Security.Permissions.RegistryPermission>. Se viene eseguito in un contesto parzialmente attendibile, il processo potrebbe generare un'eccezione a causa di privilegi insufficienti. Allo stesso modo, l'utente deve disporre degli ACL corretti per la creazione o la scrittura nelle impostazioni. Ad esempio, un'applicazione locale che ha l'autorizzazione di sicurezza dall'accesso di codice potrebbe non avere l'autorizzazione del sistema operativo. Per altre informazioni, vedere [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).  

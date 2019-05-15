@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ba1ded1757d71a2b7839ae8b45489da53763b8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73440f2ed689bdad56bb1f05025f826da9c409e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603612"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633332"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analisi di stringhe numeriche in .NET
 Tutti i tipi numerici hanno due metodi di analisi statici, `Parse` e `TryParse`, che è possibile usare per convertire la rappresentazione di stringa di un numero in un tipo numerico. Tali metodi consentono di analizzare le stringhe generate usando le stringhe di formato documentate in [Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md) e [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md). Per impostazione predefinita, i metodi `Parse` e `TryParse` consentono di convertire correttamente le stringhe contenenti cifre decimali integrali solo in valori integer. Consentono di convertire correttamente le stringhe che contengono cifre decimali integrali e frazionarie, separatori di gruppi e un separatore decimale in valori a virgola mobile. Il metodo `Parse` genera un'eccezione se l'operazione ha esito negativo, mentre il metodo `TryParse` restituisce `false`.  
@@ -28,9 +28,9 @@ Tutti i tipi numerici hanno due metodi di analisi statici, `Parse` e `TryParse`,
   
  Un provider di formato è rappresentato da un'implementazione <xref:System.IFormatProvider>. Questa interfaccia ha un singolo membro, il metodo <xref:System.IFormatProvider.GetFormat%2A>, il cui unico parametro è un oggetto <xref:System.Type> che rappresenta il tipo da formattare. Questo metodo restituisce l'oggetto che fornisce le informazioni di formattazione. .NET supporta le due implementazioni <xref:System.IFormatProvider> seguenti per l'analisi di stringhe numeriche:  
   
--   Un oggetto <xref:System.Globalization.CultureInfo> il cui metodo <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> restituisce un oggetto <xref:System.Globalization.NumberFormatInfo> che fornisce informazioni di formattazione specifiche delle impostazioni cultura.  
+- Un oggetto <xref:System.Globalization.CultureInfo> il cui metodo <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> restituisce un oggetto <xref:System.Globalization.NumberFormatInfo> che fornisce informazioni di formattazione specifiche delle impostazioni cultura.  
   
--   Oggetto <xref:System.Globalization.NumberFormatInfo> il cui metodo <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> restituisce se stesso.  
+- Oggetto <xref:System.Globalization.NumberFormatInfo> il cui metodo <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> restituisce se stesso.  
   
  Nell'esempio seguente si tenta di convertire ogni stringa in una matrice in un valore <xref:System.Double>. Per prima cosa si tenta di analizzare la stringa usando un provider di formato che riflette le convenzioni delle impostazioni cultura Inglese (Stati Uniti). Se questa operazione genera un'eccezione <xref:System.FormatException>, si tenta di analizzare la stringa usando un provider di formato che riflette le convenzioni delle impostazioni cultura Francese (Francia).  
   

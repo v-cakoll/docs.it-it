@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: b812db3259cbd2313cdf172950f51ab34679b460
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 66cacfbb031a531190a8cc5eafdb3e375609ee1e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208566"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647296"
 ---
 # <a name="making-asynchronous-requests"></a>Esecuzione di richieste asincrone
 Le classi <xref:System.Net> usano il modello di programmazione asincrona standard di .NET Framework per l'accesso asincrono alle risorse Internet. I metodi <xref:System.Net.WebRequest.BeginGetResponse%2A> e <xref:System.Net.WebRequest.EndGetResponse%2A> della classe <xref:System.Net.WebRequest> avviano e completano richieste asincrone per una risorsa Internet.  
@@ -32,15 +32,15 @@ Le classi <xref:System.Net> usano il modello di programmazione asincrona standar
   
  La classe **ClientGetAsync** implementa una richiesta asincrona per una risorsa Internet e scrive la risposta risultante nella console. Contiene i metodi e le proprietà descritti nell'elenco seguente.  
   
--   La proprietà `allDone` contiene un'istanza della classe <xref:System.Threading.ManualResetEvent> che segnala il completamento della richiesta.  
+- La proprietà `allDone` contiene un'istanza della classe <xref:System.Threading.ManualResetEvent> che segnala il completamento della richiesta.  
   
--   Il metodo `Main()` legge la riga di comando e avvia la richiesta per la risorsa Internet specificata. Crea l'oggetto **WebRequest** `wreq` e l'oggetto **RequestState** `rs`, chiama **BeginGetResponse** per avviare l'elaborazione della richiesta e quindi chiama il metodo `allDone.WaitOne()` in modo che l'applicazione non restituisca il controllo fino al completamento del callback. Dopo la lettura della risposta dalla risorsa Internet, `Main()` la scrive nella console e l'applicazione termina.  
+- Il metodo `Main()` legge la riga di comando e avvia la richiesta per la risorsa Internet specificata. Crea l'oggetto **WebRequest** `wreq` e l'oggetto **RequestState** `rs`, chiama **BeginGetResponse** per avviare l'elaborazione della richiesta e quindi chiama il metodo `allDone.WaitOne()` in modo che l'applicazione non restituisca il controllo fino al completamento del callback. Dopo la lettura della risposta dalla risorsa Internet, `Main()` la scrive nella console e l'applicazione termina.  
   
--   Il metodo `showusage()` scrive una riga di comando di esempio nella console. Viene chiamato da `Main()` quando non viene fornito alcun URI nella riga di comando.  
+- Il metodo `showusage()` scrive una riga di comando di esempio nella console. Viene chiamato da `Main()` quando non viene fornito alcun URI nella riga di comando.  
   
--   Il metodo `RespCallBack()` implementa il metodo di callback asincrono per la richiesta Internet. Crea l'istanza di **WebResponse** contenente la risposta dalla risorsa Internet, ottiene il flusso di risposta e quindi avvia la lettura dei dati dal flusso in modo asincrono.  
+- Il metodo `RespCallBack()` implementa il metodo di callback asincrono per la richiesta Internet. Crea l'istanza di **WebResponse** contenente la risposta dalla risorsa Internet, ottiene il flusso di risposta e quindi avvia la lettura dei dati dal flusso in modo asincrono.  
   
--   Il metodo `ReadCallBack()` implementa il metodo di callback asincrono per la lettura del flusso di risposta. Trasferisce i dati ricevuti dalla risorsa Internet alla proprietà **ResponseData** dell'istanza **RequestState**, quindi avvia un'altra lettura asincrona del flusso di risposta fino a quando non vengono restituiti altri dati. Dopo la lettura di tutti i dati, `ReadCallBack()` chiude il flusso di risposta e chiama il metodo `allDone.Set()` per indicare che l'intera risposta è presente in **ResponseData**.  
+- Il metodo `ReadCallBack()` implementa il metodo di callback asincrono per la lettura del flusso di risposta. Trasferisce i dati ricevuti dalla risorsa Internet alla proprietà **ResponseData** dell'istanza **RequestState**, quindi avvia un'altra lettura asincrona del flusso di risposta fino a quando non vengono restituiti altri dati. Dopo la lettura di tutti i dati, `ReadCallBack()` chiude il flusso di risposta e chiama il metodo `allDone.Set()` per indicare che l'intera risposta è presente in **ResponseData**.  
   
     > [!NOTE]
     >  È fondamentale che tutti i flussi di rete vengano chiusi. Se non si chiude ogni richiesta e flusso di risposta, l'applicazione esaurirà le connessioni al server e non sarà più in grado di elaborare ulteriori richieste.  

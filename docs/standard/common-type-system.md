@@ -4,12 +4,12 @@ description: Informazioni sul modo in cui CTS (Common Type System) e CLS (Common
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: a6704b09a51a509cb7fbd786f9040454f78cc862
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d162a736b8f7b56293fc75a445c2a80cce597768
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675368"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664523"
 ---
 # <a name="common-type-system--common-language-specification"></a>Common Type System e Common Language Specification
 
@@ -21,10 +21,10 @@ Per partire dall'inizio, tenere presente che un'implementazione di .NET è _indi
 
 Per poter far ciò in modo trasparente, deve esistere una modalità comune per descrivere tutti i tipi supportati. Questo è il compito di Common Type System (CTS). È stato realizzato per eseguire diverse operazioni:
 
-*   Stabilire un framework per l'esecuzione di diversi linguaggi.
-*   Offrire un modello orientato a oggetti per supportare l'implementazione di vari linguaggi in una implementazione di .NET.
-*   Definire un set di regole che tutti i linguaggi devono seguire quando si tratta di uso dei tipi.
-*   Specificare una libreria che contenga i tipi di dati primitivi di base, ad esempio `Boolean`, `Byte`, `Char` e così via, usati nello sviluppo delle applicazioni.
+* Stabilire un framework per l'esecuzione di diversi linguaggi.
+* Offrire un modello orientato a oggetti per supportare l'implementazione di vari linguaggi in una implementazione di .NET.
+* Definire un set di regole che tutti i linguaggi devono seguire quando si tratta di uso dei tipi.
+* Specificare una libreria che contenga i tipi di dati primitivi di base, ad esempio `Boolean`, `Byte`, `Char` e così via, usati nello sviluppo delle applicazioni.
 
 CTS definisce due tipologie principali di tipi che devono essere supportati: riferimento e valore. I rispettivi nomi ne indicano la definizione.
 
@@ -34,11 +34,11 @@ I tipi valore sono l'opposto, in quanto gli oggetti sono rappresentati dai propr
 
 CTS definisce diverse categorie di tipi, ognuna con una semantica e un uso specifici:
 
-*   Classi
-*   Strutture
-*   Enumerazioni
-*   Interfacce
-*   Delegati
+* Classi
+* Strutture
+* Enumerazioni
+* Interfacce
+* Delegati
 
 CTS definisce anche tutte le altre proprietà dei tipi, ad esempio i modificatori di accesso, quali sono i membri di tipo valido, come funzionano ereditarietà e overload e così via. Sfortunatamente, un'analisi approfondita di tali aspetti va oltre l'ambito di un articolo introduttivo come questo, ma è possibile accedere alla sezione [Altre risorse](#more-resources) alla fine per collegamenti a contenuti più dettagliati su questi argomenti.
 
@@ -52,5 +52,5 @@ CLS è un subset di CTS. Ciò significa che tutte le regole in CTS si applicano 
 
 ## <a name="more-resources"></a>Altre risorse
 
-*   [Common Type System](./base-types/common-type-system.md)
-*   [Common Language Specification](language-independence-and-language-independent-components.md)
+* [Common Type System](./base-types/common-type-system.md)
+* [Common Language Specification](language-independence-and-language-independent-components.md)

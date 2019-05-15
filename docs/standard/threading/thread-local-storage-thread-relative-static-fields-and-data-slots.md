@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69107cd7f1f84fa402479bb8a76c4b9b8a825d69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 681a9e71dcfb139c364d750383f13cdabbf33366
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718260"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644898"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Archiviazione locale del thread: slot di dati e campi statici relativi ai thread
 È possibile usare l'archiviazione locale dei thread gestiti per archiviare dati univoci relativi a un thread e un dominio dell'applicazione. In .NET Framework sono disponibili due strumenti per usare l'archiviazione locale dei thread gestiti: i campi statici relativi ai thread e gli slot di dati.  
   
--   Usare i campi statici relativi ai thread (campi `Shared` relativi ai thread in Visual Basic) se è possibile prevedere con esattezza le esigenze in fase di compilazione. I campi statici relativi ai thread forniscono infatti prestazioni ottimali. Offrono inoltre il vantaggio di poter controllare il tipo in fase di compilazione.  
+- Usare i campi statici relativi ai thread (campi `Shared` relativi ai thread in Visual Basic) se è possibile prevedere con esattezza le esigenze in fase di compilazione. I campi statici relativi ai thread forniscono infatti prestazioni ottimali. Offrono inoltre il vantaggio di poter controllare il tipo in fase di compilazione.  
   
--   Se i requisiti effettivi possono essere individuati solo in fase di runtime, usare gli slot di dati. Gli slot di dati sono più lenti e scomodi da usare rispetto ai campi statici relativi ai thread e i dati vengono archiviati come tipo <xref:System.Object>. Prima di usarli, quindi, è necessario eseguirne il cast al tipo corretto.  
+- Se i requisiti effettivi possono essere individuati solo in fase di runtime, usare gli slot di dati. Gli slot di dati sono più lenti e scomodi da usare rispetto ai campi statici relativi ai thread e i dati vengono archiviati come tipo <xref:System.Object>. Prima di usarli, quindi, è necessario eseguirne il cast al tipo corretto.  
   
  In C++ non gestito si usa `TlsAlloc` per allocare gli slot dinamicamente e `__declspec(thread)` per dichiarare che una variabile deve essere allocata in una risorsa di archiviazione relativa ai thread. I campi statici relativi ai thread e gli slot di dati forniscono la versione gestita di questo comportamento.  
   
@@ -31,9 +31,9 @@ ms.locfileid: "54718260"
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Unicità dei dati nell'archiviazione locale dei thread gestiti  
  Indipendentemente dal fatto che si usino i campi statici relativi ai thread o gli slot di dati, i dati presenti nell'archiviazione locale dei thread gestiti sono univoci per la combinazione di thread e dominio dell'applicazione.  
   
--   All'interno di un dominio dell'applicazione, un thread non può modificare dati provenienti da un altro thread, anche se usano entrambi lo stesso campo o slot.  
+- All'interno di un dominio dell'applicazione, un thread non può modificare dati provenienti da un altro thread, anche se usano entrambi lo stesso campo o slot.  
   
--   Quando un thread accede allo stesso campo o slot da più domini dell'applicazione, viene mantenuto un valore separato in ogni dominio dell'applicazione.  
+- Quando un thread accede allo stesso campo o slot da più domini dell'applicazione, viene mantenuto un valore separato in ogni dominio dell'applicazione.  
   
  Se, ad esempio, un thread imposta il valore di un campo statico relativo al thread, immette un altro dominio dell'applicazione e quindi recupera il valore del campo, il valore recuperato nel secondo dominio dell'applicazione differisce dal valore presente nel primo dominio dell'applicazione. L'impostazione di un nuovo valore per il campo nel secondo dominio dell'applicazione non influisce sul valore del campo nel primo dominio dell'applicazione.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "54718260"
 ## <a name="data-slots"></a>Slot dei dati  
  .NET Framework fornisce slot di dati dinamici univoci per ogni combinazione di thread e dominio dell'applicazione. Esistono due tipi di slot di dati: con e senza nome. Entrambi vengono implementati usando la struttura <xref:System.LocalDataStoreSlot>.  
   
--   Per creare uno slot di dati con nome, usare il metodo <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> o <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>. Per ottenere un riferimento a uno slot con nome esistente, passare il nome al metodo <xref:System.Threading.Thread.GetNamedDataSlot%2A>.  
+- Per creare uno slot di dati con nome, usare il metodo <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> o <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>. Per ottenere un riferimento a uno slot con nome esistente, passare il nome al metodo <xref:System.Threading.Thread.GetNamedDataSlot%2A>.  
   
--   Per creare uno slot di dati senza nome, usare il metodo <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType>.  
+- Per creare uno slot di dati senza nome, usare il metodo <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType>.  
   
  Per entrambi i tipo di slot, con e senza nome, usare i metodi <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> per impostare e recuperare le informazioni nello slot. Si tratta di metodi statici che agiscono sempre sui dati per il thread che li sta eseguendo.  
   

@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: f0e42c0032dc6f9dac0895a29db9de79547c0a49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85e971d3464b6f2a073288e7f8b5406563598f79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675367"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634761"
 ---
 # <a name="anchors-in-regular-expressions"></a>Ancoraggi in espressioni regolari
 <a name="top"></a> Gli ancoraggi, o asserzioni atomiche di larghezza zero, specificano una posizione della stringa in cui deve verificarsi una corrispondenza. Quando si usa un ancoraggio nell'espressione di ricerca, il motore delle espressioni regolari non avanza nella stringa né utilizza caratteri, ma cerca una corrispondenza solo nella posizione specificata. Ad esempio, `^` specifica che la corrispondenza deve iniziare all'inizio di una riga o stringa. Di conseguenza, l'espressione regolare `^http:` considera la corrispondenza "http:" solo quando si verifica all'inizio di una riga. La tabella seguente contiene gli ancoraggi supportati dalle espressioni regolari in .NET.  
@@ -46,9 +46,9 @@ ms.locfileid: "54675367"
   
  L'esempio seguente usa l'ancoraggio `^` in un'espressione regolare che estrae informazioni sugli anni durante i quali sono esistite alcune squadre di baseball professionale. L'esempio chiama due overload del metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>  
   
--   La chiamata dell'overload <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> trova solo la prima sottostringa nella stringa di input corrispondente al criterio di espressione regolare.  
+- La chiamata dell'overload <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> trova solo la prima sottostringa nella stringa di input corrispondente al criterio di espressione regolare.  
   
--   La chiamata dell'overload <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> con il parametro `options` impostato su <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> trova tutte le cinque sottostringhe.  
+- La chiamata dell'overload <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> con il parametro `options` impostato su <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> trova tutte le cinque sottostringhe.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring1.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring1.vb#1)]  

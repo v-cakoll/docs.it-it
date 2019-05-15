@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0793f3688f1f6ca66d92c5a22e158aa85e5470ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ab06c2d87de9483d7a3e9eb810f4be1f3278ddc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58133337"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634516"
 ---
 # <a name="custom-numeric-format-strings"></a>Stringhe in formato numerico personalizzato
 
 È possibile creare una stringa di formato numerico personalizzata costituita da uno o più identificatori numerici personalizzati, per definire la formattazione dei dati numerici. Viene considerata stringa di formato numerico personalizzata qualsiasi stringa di formato che non rientri nella categoria di [stringa di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
-  
 
  Le stringhe di formato numerico personalizzate sono supportate da alcuni overload del metodo `ToString` di tutti i tipi numerici. È ad esempio possibile fornire una stringa di formato numerico ai metodi <xref:System.Int32.ToString%28System.String%29> e <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> del tipo <xref:System.Int32> . Le stringhe di formato numerico personalizzate sono supportate anche dalla [funzionalità di formattazione composita](../../../docs/standard/base-types/composite-formatting.md) di .NET usata da alcuni metodi `Write` e `WriteLine` delle classi <xref:System.Console> e <xref:System.IO.StreamWriter>, dal metodo <xref:System.String.Format%2A?displayProperty=nameWithType> e dal metodo <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La funzionalità di [interpolazione di stringhe](../../csharp/language-reference/tokens/interpolated.md) supporta anche le stringhe in formato numerico personalizzate.  
   
@@ -109,11 +108,11 @@ ms.locfileid: "58133337"
 ## <a name="the--custom-specifier"></a>Identificatore personalizzato ","  
  Il carattere "," viene usato sia come separatore di gruppi che come identificatore di rappresentazione in scala dei numeri.  
   
--   Separatore di gruppi: se vengono specificate una o più virgole tra due segnaposto per cifre (0 o #) che formattano le cifre integrali di un numero, viene inserito un carattere di separazione di gruppi tra ogni gruppo di numeri nella parte integrale dell'output.  
+- Separatore di gruppi: se vengono specificate una o più virgole tra due segnaposto per cifre (0 o #) che formattano le cifre integrali di un numero, viene inserito un carattere di separazione di gruppi tra ogni gruppo di numeri nella parte integrale dell'output.  
   
      Le proprietà <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> e <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> dell'oggetto <xref:System.Globalization.NumberFormatInfo> corrente determinano il carattere usato come separatore di gruppi di numeri e la dimensione di ogni gruppo di numeri. Se ad esempio vengono usate la stringa "#, #" e le impostazioni cultura invarianti per formattare il numero 1000, l'output sarà "1,000".  
   
--   Identificatore di rappresentazione in scala dei numeri: se vengono specificate una o più virgole immediatamente a sinistra del separatore decimale esplicito o implicito, il numero da formattare viene diviso per 1000 per ogni virgola presente. Se ad esempio viene usata la stringa "0" per formattare il numero 100 milioni, l'output sarà "100".  
+- Identificatore di rappresentazione in scala dei numeri: se vengono specificate una o più virgole immediatamente a sinistra del separatore decimale esplicito o implicito, il numero da formattare viene diviso per 1000 per ogni virgola presente. Se ad esempio viene usata la stringa "0" per formattare il numero 100 milioni, l'output sarà "100".  
   
  È possibile usare gli identificatori del separatore di gruppi e di rappresentazione in scala dei numeri nella stessa stringa di formato. Se ad esempio vengono usate la stringa "#,0,," e le impostazioni cultura invarianti per formattare il numero un miliardo, l'output sarà "1,000".  
   

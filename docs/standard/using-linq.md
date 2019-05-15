@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: eb1ba14bbcfe4e561fa575b9802126fab59d31fc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 52b92048fa845725ce46740e36b96ed55af67c30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968036"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644717"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -103,15 +103,15 @@ Una domanda sorge spontanea. **È consigliabile usare solo la sintassi di query?
 
 La risposta a questa domanda è **sì** se...
 
-*   La codebase esistente usa già la sintassi di query
-*   È necessario definire l'ambito delle variabili all'interno delle query per motivi di complessità
-*   Si preferisce la sintassi di query, che non si distaccherà dalla codebase
+* La codebase esistente usa già la sintassi di query
+* È necessario definire l'ambito delle variabili all'interno delle query per motivi di complessità
+* Si preferisce la sintassi di query, che non si distaccherà dalla codebase
 
 La risposta a questa domanda è **no** se...
 
-*   La codebase esistente usa già la sintassi dell'API
-*   Non è necessario definire l'ambito delle variabili all'interno delle query
-*   Si preferisce la sintassi dell'API, che non si distaccherà dalla codebase
+* La codebase esistente usa già la sintassi dell'API
+* Non è necessario definire l'ambito delle variabili all'interno delle query
+* Si preferisce la sintassi dell'API, che non si distaccherà dalla codebase
 
 ## <a name="essential-samples"></a>Esempi significativi
 
@@ -119,7 +119,7 @@ Per un elenco completo di esempi di LINQ, vedere [101 LINQ Samples](https://code
 
 Di seguito una rapida dimostrazione di alcune delle parti essenziali di LINQ. Non è affatto una dimostrazione completa, poiché LINQ offre molte più funzionalità rispetto a quanto viene illustrato di seguito.
 
-*   Essenziali sono `Where`, `Select` e `Aggregate`:
+* Essenziali sono `Where`, `Select` e `Aggregate`:
 
 ```csharp
 // Filtering a list
@@ -142,14 +142,14 @@ int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
 
-*   Elenco di elenchi bidimensionale:
+* Elenco di elenchi bidimensionale:
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 ```
 
-*   Unione tra due set, con criteri di confronto personalizzati:
+* Unione tra due set, con criteri di confronto personalizzati:
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -184,7 +184,7 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
 ```
 
-*   Intersezione tra due set:
+* Intersezione tra due set:
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -192,7 +192,7 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
 ```
 
-*   Ordinamento:
+* Ordinamento:
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   Infine, un esempio più avanzato: determinare se i valori delle proprietà di due istanze dello stesso tipo sono uguali. L'esempio è stato preso in prestito e modificato da [questo articolo di StackOverflow](https://stackoverflow.com/a/844855):
+* Infine, un esempio più avanzato: determinare se i valori delle proprietà di due istanze dello stesso tipo sono uguali. L'esempio è stato preso in prestito e modificato da [questo articolo di StackOverflow](https://stackoverflow.com/a/844855):
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -252,6 +252,6 @@ I processi basati su CPU parallelizzabili che possono essere espressi facilmente
 
 ## <a name="further-resources"></a>Altre risorse:
 
-*   [101 esempi di LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-*   [Linqpad](https://www.linqpad.net/), un ambiente di sviluppo e un motore di query sul database per C#/F#/VB
-*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), un e-book per scoprire come implementare LINQ-to-objects
+* [101 esempi di LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [Linqpad](https://www.linqpad.net/), un ambiente di sviluppo e un motore di query sul database per C#/F#/VB
+* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), un e-book per scoprire come implementare LINQ-to-objects

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e6e97591508c2aa90306ed22556f12f257cc4b03
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336148"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647711"
 ---
 # <a name="managed-execution-process"></a>processo di esecuzione gestita
 <a name="introduction"></a> Il processo di esecuzione gestita include i passaggi seguenti, descritti in modo dettagliato più avanti in questo argomento:  
@@ -58,9 +58,9 @@ ms.locfileid: "59336148"
 ## <a name="compiling-msil-to-native-code"></a>Compilazione del codice MSIL in codice nativo  
  Prima di poter essere eseguito, il codice MSIL (Microsoft Intermediate Language) deve essere compilato con Common Language Runtime in codice nativo per l'architettura di computer di destinazione. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] offre due strumenti per eseguire questa conversione:  
   
--   A .NET Framework just-in-time (JIT) compiler.  
+- A .NET Framework just-in-time (JIT) compiler.  
   
--   [Generatore di immagini native (Ngen.exe)](../../docs/framework/tools/ngen-exe-native-image-generator.md) di .NET Framework.  
+- [Generatore di immagini native (Ngen.exe)](../../docs/framework/tools/ngen-exe-native-image-generator.md) di .NET Framework.  
   
 ### <a name="compilation-by-the-jit-compiler"></a>Compilazione tramite il compilatore JIT  
  La compilazione JIT converte il codice MSIL in codice nativo su richiesta in fase di esecuzione dell'applicazione, durante il caricamento e l'esecuzione del contenuto di un assembly. Poiché Common Language Runtime fornisce un compilatore JIT per ogni architettura CPU supportata, gli sviluppatori possono compilare un set di assembly MSIL da compilare tramite JIT ed eseguire su più computer con diverse architetture di computer. Tuttavia, se il codice gestito chiama API native specifiche della piattaforma o una libreria di classi specifica della piattaforma, viene eseguito solo su tale sistema operativo.  
@@ -70,22 +70,22 @@ ms.locfileid: "59336148"
 ### <a name="install-time-code-generation-using-ngenexe"></a>Generazione di codice in fase di installazione mediante NGen.exe  
  Poiché il compilatore JIT converte il codice MSIL di un assembly in codice nativo quando vengono chiamati singoli metodi definiti nell'assembly, influisce negativamente sulle prestazioni in fase di esecuzione. Nella maggior parte dei casi, queste prestazioni inferiori sono comunque accettabili. Un aspetto ancora più importante è che il codice generato dal compilatore JIT è associato al processo che ha attivato la compilazione e non può essere condiviso tra più processi. Per permettere la condivisione del codice generato tra più chiamate di un'applicazione o tra più processi che condividono un set di assembly, Common Language Runtime supporta una modalità di compilazione anticipata. Questa modalità di compilazione usa il [generatore di immagini native (Ngen.exe)](../../docs/framework/tools/ngen-exe-native-image-generator.md) per convertire assembly MSIL in codice nativo in modo molto simile al compilatore JIT. Tuttavia, il funzionamento di Ngen.exe differisce da quello del compilatore JIT per tre aspetti:  
   
--   Esegue la conversione da codice MSIL a codice nativo prima di eseguire l'applicazione invece che durante l'esecuzione dell'applicazione.  
+- Esegue la conversione da codice MSIL a codice nativo prima di eseguire l'applicazione invece che durante l'esecuzione dell'applicazione.  
   
--   Compila un intero assembly per volta, invece di un metodo per volta.  
+- Compila un intero assembly per volta, invece di un metodo per volta.  
   
--   Mantiene il codice generato nella cache delle immagini native come file su disco.  
+- Mantiene il codice generato nella cache delle immagini native come file su disco.  
   
 ### <a name="code-verification"></a>Verifica del codice  
  Come parte della compilazione in codice nativo, il codice MSIL deve superare un processo di verifica, a meno che un amministratore non abbia definito criteri di sicurezza che permettono di evitare la verifica del codice. La verifica esamina il codice MSIL e i metadati per determinare se il codice è indipendente dai tipi, che significa che accede solo alle posizioni di memoria cui è autorizzato ad accedere. L'indipendenza dai tipi isola gli oggetti gli uni dagli altri e aiuta a proteggerli da danni accidentali o intenzionali. Inoltre, garantisce l'applicazione affidabile delle restrizioni di sicurezza.  
   
  Il runtime si basa sul fatto che le affermazioni seguenti siano vere per il codice verificabile come indipendente dai tipi:  
   
--   Un riferimento a un tipo è strettamente compatibile con il tipo a cui viene fatto riferimento.  
+- Un riferimento a un tipo è strettamente compatibile con il tipo a cui viene fatto riferimento.  
   
--   Vengono richiamate in un oggetto solo le operazioni definite in modo appropriato.  
+- Vengono richiamate in un oggetto solo le operazioni definite in modo appropriato.  
   
--   Le identità sono quello che sostengono di essere.  
+- Le identità sono quello che sostengono di essere.  
   
  Durante il processo di verifica, il codice MSIL viene esaminato nel tentativo di confermare che possa accedere alle posizioni di memoria e chiamare metodi solo attraverso i tipi definiti in modo appropriato. Ad esempio, il codice non può permettere l'accesso ai campi di un oggetto in un modo che consenta l'overrun delle posizioni di memoria. La verifica esamina inoltre il codice per determinare se il codice MSIL sia stato generato correttamente, perché quello generato in modo non corretto può causare una violazione delle regole di indipendenza dai tipi. Il processo di verifica passa un set di codice indipendente dai tipi ben definito e passa solo il codice indipendente dai tipi. Tuttavia, parte del codice indipendente dai tipi potrebbe non superare la verifica a causa di alcune limitazioni del processo di verifica e alcuni linguaggi, in base alla progettazione, non producono codice verificabile come indipendente dai tipi. Se i criteri di sicurezza richiedono codice indipendente dai tipi ma il codice non supera la verifica, al momento dell'esecuzione verrà generata un'eccezione.  
   

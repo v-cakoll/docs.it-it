@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - serial ports, sending strings to
 ms.assetid: 6ebf46cd-b2d0-4b2c-9a1f-be177b22ad52
-ms.openlocfilehash: e1f0c9d5ba428f5379f8025c0e733cdbeb5204e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 66f7d0b51e51f6d550a42cca55b3194c2e273969
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822857"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662733"
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Procedura: Inviare stringhe a porte seriali in Visual Basic
 Questo argomento descrive come usare `My.Computer.Ports` per inviare stringhe alle porte seriali del computer in Visual Basic.  
@@ -30,7 +30,7 @@ Questo argomento descrive come usare `My.Computer.Ports` per inviare stringhe al
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Questo esempio presuppone l'uso della porta `COM1`.  
+- Questo esempio presuppone l'uso della porta `COM1`.  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Questo esempio presuppone che il computer usi la porta `COM1`; per una maggiore flessibilità, il codice deve consentire all'utente di selezionare la porta seriale desiderata da un elenco di porte disponibili. Per altre informazioni, vedere [Procedura: Mostrare le porte seriali disponibili](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  

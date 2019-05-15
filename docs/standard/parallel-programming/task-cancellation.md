@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84da3e1e896397b4e5dacec9d7dd0eeeed96d1c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7fefbfd33788ea84a8daf9dfbab452802ffd50d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690839"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650744"
 ---
 # <a name="task-cancellation"></a>Annullamento delle attività
 Le classi <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> supportano l'annullamento tramite l'utilizzo dei token di annullamento in .NET Framework. Per altre informazioni, vedere [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md). Nelle classi Task l'annullamento comporta la cooperazione tra il delegato dell'utente, che rappresenta un'operazione annullabile, e il codice che ha richiesto l'annullamento.  Un annullamento riuscito prevede una chiamata al metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> da parte del codice richiedente nonché l'interruzione tempestiva dell'operazione da parte del delegato dell'utente. L'operazione può essere interrotta tramite una di queste opzioni:  
   
--   Completare l'esecuzione del delegato. In molti scenari questo approccio è sufficiente. Tuttavia, un'istanza di attività "annullata" in questo modo passa allo stato <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> , non allo stato <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> .  
+- Completare l'esecuzione del delegato. In molti scenari questo approccio è sufficiente. Tuttavia, un'istanza di attività "annullata" in questo modo passa allo stato <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> , non allo stato <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> .  
   
--   Generare un oggetto <xref:System.OperationCanceledException> e passare a quest'ultimo il token in cui è stato richiesto l'annullamento. Il modo preferito per eseguire queste operazioni è tramite il metodo <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> . Un'attività annullata in questo modo passa allo stato Canceled. Il codice chiamante può usare tale stato per verificare che l'attività ha risposto alla richiesta di annullamento.  
+- Generare un oggetto <xref:System.OperationCanceledException> e passare a quest'ultimo il token in cui è stato richiesto l'annullamento. Il modo preferito per eseguire queste operazioni è tramite il metodo <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> . Un'attività annullata in questo modo passa allo stato Canceled. Il codice chiamante può usare tale stato per verificare che l'attività ha risposto alla richiesta di annullamento.  
   
  Nell'esempio seguente viene mostrato il modello di base relativo all'annullamento di attività che genera l'eccezione. Notare che il token viene passato al delegato dell'utente e all'istanza di attività stessa.  
   

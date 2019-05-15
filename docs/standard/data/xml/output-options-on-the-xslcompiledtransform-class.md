@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0f56e27b2ae9a32385aa9a44db631d2909023206
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47205017"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647848"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Opzioni di output nella classe XslCompiledTransform
 In questo argomento vengono illustrate le opzioni disponibili per l'output di XSLT. È possibile specificare le opzioni di output nel foglio di stile oppure nel metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
@@ -55,7 +55,7 @@ In questo argomento vengono illustrate le opzioni disponibili per l'output di XS
   
 ## <a name="notes"></a>Note  
   
--   Quando si scrivono tag vuoti, viene scritto uno spazio tra l'ultimo carattere del nome dell'elemento e la barra rovesciata, ad esempio `<myElement />`. Questo consente ai browser meno recenti di visualizzare correttamente le pagine HTML generate.  
+- Quando si scrivono tag vuoti, viene scritto uno spazio tra l'ultimo carattere del nome dell'elemento e la barra rovesciata, ad esempio `<myElement />`. Questo consente ai browser meno recenti di visualizzare correttamente le pagine HTML generate.  
   
 ## <a name="see-also"></a>Vedere anche
 

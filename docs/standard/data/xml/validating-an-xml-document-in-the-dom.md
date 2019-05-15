@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298422"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589854"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Convalida di un documento XML nel DOM
 La classe <xref:System.Xml.XmlDocument> non esegue la convalida del codice XML nel DOM (Document Object Model) in base a uno schema XSD (XML Schema Definition Language) o a una DTD (Document Type Definition) per impostazione predefinita. Viene solo verificata la correttezza del formato XML.  
@@ -56,9 +56,9 @@ La classe <xref:System.Xml.XmlDocument> non esegue la convalida del codice XML n
   
  Quando si convalidano i dati XML durante il caricamento nel DOM, è necessario prendere in considerazione quanto segue.  
   
--   Nell'esempio precedente, viene chiamato l'oggetto <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> ogni volta che viene rilevato un tipo non valido. Se non è impostato un oggetto <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> sull'oggetto <xref:System.Xml.XmlReader> di convalida, quando viene chiamato <xref:System.Xml.Schema.XmlSchemaValidationException> viene generata un'eccezione <xref:System.Xml.XmlDocument.Load%2A> se un tipo di attributo o di elemento non corrisponde al tipo specificato nello schema di convalida.  
+- Nell'esempio precedente, viene chiamato l'oggetto <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> ogni volta che viene rilevato un tipo non valido. Se non è impostato un oggetto <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> sull'oggetto <xref:System.Xml.XmlReader> di convalida, quando viene chiamato <xref:System.Xml.Schema.XmlSchemaValidationException> viene generata un'eccezione <xref:System.Xml.XmlDocument.Load%2A> se un tipo di attributo o di elemento non corrisponde al tipo specificato nello schema di convalida.  
   
--   Quando un documento XML viene caricato in un oggetto <xref:System.Xml.XmlDocument> con uno schema associato che definisce valori predefiniti, l'oggetto <xref:System.Xml.XmlDocument> tratta tali valori predefiniti come se si trovassero nel documento XML. Pertanto la proprietà <xref:System.Xml.XmlReader.IsEmptyElement%2A> restituisce sempre un valore `false` per un elemento ottenuto automaticamente dallo schema. Anche se è incluso nel documento XML, è stato scritto come elemento vuoto.  
+- Quando un documento XML viene caricato in un oggetto <xref:System.Xml.XmlDocument> con uno schema associato che definisce valori predefiniti, l'oggetto <xref:System.Xml.XmlDocument> tratta tali valori predefiniti come se si trovassero nel documento XML. Pertanto la proprietà <xref:System.Xml.XmlReader.IsEmptyElement%2A> restituisce sempre un valore `false` per un elemento ottenuto automaticamente dallo schema. Anche se è incluso nel documento XML, è stato scritto come elemento vuoto.  
   
 ## <a name="validating-an-xml-document-in-the-dom"></a>Convalida di un documento XML nel DOM  
  Il metodo <xref:System.Xml.XmlDocument.Validate%2A> della classe <xref:System.Xml.XmlDocument> esegue la convalida dei dati XML caricati nel DOM in base agli schemi nella proprietà <xref:System.Xml.XmlDocument> dell'oggetto <xref:System.Xml.XmlDocument.Schemas%2A>. Una volta eseguita la convalida, vengono applicati i valori predefiniti dello schema, i valori di testo vengono convertiti in valori di tipo atomic in base alle necessità e le informazioni sui tipi vengono associate agli elementi delle informazioni convalidate. Di conseguenza, i dati XML tipizzati sostituiscono i dati XML in precedenza non tipizzati.  

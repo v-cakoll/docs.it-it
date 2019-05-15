@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 352848f9b14300a6e8291cefa8d7a7ee251e1d14
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466153"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647798"
 ---
 # <a name="types-of-isolation"></a>Tipi di isolamento
 L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente che l'ha creata. Per implementare questo tipo di isolamento, Common Language Runtime usa la stessa nozione di identità utente riconosciuta dal sistema operativo, ovvero l'identità associata al processo in cui è in esecuzione il codice quando viene aperto lo spazio di memorizzazione. Sebbene sia un'identità utente autenticata, è possibile che con la rappresentazione l'identità dell'utente corrente venga modificata dinamicamente.  
   
  L'accesso allo spazio di memorizzazione isolato viene limitato anche in base all'identità associata all'assembly e al dominio dell'applicazione oppure solo all'assembly. Il runtime ottiene queste identità nei modi seguenti:  
   
--   L'identità del dominio rappresenta l'evidenza dell'applicazione, che nel caso di un'applicazione Web può coincidere con l'URL completo. Per il codice su shell, l'identità del dominio può essere basata sul percorso di directory dell'applicazione. Se ad esempio il file eseguibile viene eseguito dal percorso C:\Office\MyApp.exe, l'identità del dominio sarà C:\Office\MyApp.exe.  
+- L'identità del dominio rappresenta l'evidenza dell'applicazione, che nel caso di un'applicazione Web può coincidere con l'URL completo. Per il codice su shell, l'identità del dominio può essere basata sul percorso di directory dell'applicazione. Se ad esempio il file eseguibile viene eseguito dal percorso C:\Office\MyApp.exe, l'identità del dominio sarà C:\Office\MyApp.exe.  
   
--   L'identità dell'assembly è l'evidenza dell'assembly. Può derivare da una firma digitale crittografica, che può corrispondere al [nome sicuro](../../../docs/framework/app-domains/strong-named-assemblies.md) dell'assembly, all'editore dell'assembly oppure all'identità del relativo URL. Se un assembly dispone sia di un'identità fornita dal nome sicuro sia di un'identità fornita dall'editore, verrà usata quella fornita dall'editore. Se l'assembly proviene da Internet e non è firmato, verrà usata invece l'identità dell'URL. Per altre informazioni sugli assembly e sui nomi sicuri, vedere [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md).  
+- L'identità dell'assembly è l'evidenza dell'assembly. Può derivare da una firma digitale crittografica, che può corrispondere al [nome sicuro](../../../docs/framework/app-domains/strong-named-assemblies.md) dell'assembly, all'editore dell'assembly oppure all'identità del relativo URL. Se un assembly dispone sia di un'identità fornita dal nome sicuro sia di un'identità fornita dall'editore, verrà usata quella fornita dall'editore. Se l'assembly proviene da Internet e non è firmato, verrà usata invece l'identità dell'URL. Per altre informazioni sugli assembly e sui nomi sicuri, vedere [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md).  
   
--   Gli spazi di memorizzazione roaming si spostano con gli utenti che dispongono di un profilo di utente roaming. I file vengono scritti in una directory di rete e scaricati su qualsiasi computer a cui l'utente accede. Per altre informazioni sui profili di utente roaming, vedere <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
+- Gli spazi di memorizzazione roaming si spostano con gli utenti che dispongono di un profilo di utente roaming. I file vengono scritti in una directory di rete e scaricati su qualsiasi computer a cui l'utente accede. Per altre informazioni sui profili di utente roaming, vedere <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   
  Combinando i concetti di identità di utente, dominio e assembly, lo spazio di memorizzazione isolato può isolare i dati nei modi seguenti, ciascuno dei quali presenta specifici scenari di utilizzo:  
   
--   [Isolamento in base all'utente e all'assembly](#UserAssembly)  
+- [Isolamento in base all'utente e all'assembly](#UserAssembly)  
   
--   [Isolamento in base all'utente, al dominio e all'assembly](#UserDomainAssembly)  
+- [Isolamento in base all'utente, al dominio e all'assembly](#UserDomainAssembly)  
   
  Ognuno di questi isolamenti può essere combinato con un profilo di utente roaming. Per altre informazioni, vedere la sezione [Spazio di memorizzazione isolato e roaming](#Roaming).  
   

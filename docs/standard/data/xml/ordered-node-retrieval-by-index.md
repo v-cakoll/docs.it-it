@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4e4847dd6bc05127799cb6d8424a8fdb63fbc0f7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676191"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590068"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Recupero di nodi ordinati in base all'indice
 Il DOM (Document Object Model) XML W3C (World Wide Web Consortium) descrive anche un oggetto NodeList, che ha la capacità di gestire un elenco ordinato di nodi, mentre i set non ordinati sono gestiti da **XmlNamedNodeMap**. L'oggetto NodeList in Microsoft .NET Framework è denominato **XmlNodeList**. I metodi e le proprietà che restituiscono un oggetto **XmlNodeList** sono:  
   
--   XmlNode.ChildNodes  
+- XmlNode.ChildNodes  
   
--   XmlDocument.GetElementsByTagName  
+- XmlDocument.GetElementsByTagName  
   
--   XmlElement.GetElementsByTagName  
+- XmlElement.GetElementsByTagName  
   
--   XmlNode.SelectNodes  
+- XmlNode.SelectNodes  
   
  Per l'oggetto **XmlNodeList** è disponibile una proprietà **Count** che può essere usata per scrivere cicli di iterazione per scorrere i nodi in **XmlNodeList**, come mostrato nell'esempio di codice seguente:  
   

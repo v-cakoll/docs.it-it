@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6482d5fa046409d15913ea26300d298238750326
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169026"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648550"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrazione di assembly presso COM
 È possibile eseguire uno strumento da riga di comando denominato [Assembly Registration Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) per registrare o annullare la registrazione di un assembly per l'uso con COM. Regasm.exe aggiunge informazioni sulla classe al Registro di sistema, così che i client COM possano usare la classe di .NET Framework in modo trasparente. La classe <xref:System.Runtime.InteropServices.RegistrationServices> fornisce funzionalità equivalenti.  
@@ -30,11 +30,11 @@ ms.locfileid: "59169026"
   
  Nella chiave HKCR\CLSID\\{0000…0000} il valore predefinito viene impostato sull'oggetto ProgID della classe e vengono aggiunti due valori denominati, Class e Assembly. Il runtime legge il valore di Assembly dal Registro di sistema e lo passa al resolver di assembly di runtime. Il resolver di assembly cerca di individuare l'assembly, in base alle informazioni sull'assembly come il nome e il numero di versione. Affinché il resolver possa individuare un assembly, l'assembly deve trovarsi in una delle posizioni seguenti:  
   
--   Global Assembly Cache (l'assembly deve avere un nome sicuro).  
+- Global Assembly Cache (l'assembly deve avere un nome sicuro).  
   
--   Directory dell'applicazione. Gli assembly caricati dal percorso dell'applicazione sono accessibili solo da tale applicazione.  
+- Directory dell'applicazione. Gli assembly caricati dal percorso dell'applicazione sono accessibili solo da tale applicazione.  
   
--   Percorso specificato con l'opzione **/codebase** in Regasm.exe.  
+- Percorso specificato con l'opzione **/codebase** in Regasm.exe.  
   
  Regasm.exe crea anche la chiave InProcServer32 nella chiave HKCR\CLSID\\{0000…0000}. Il valore predefinito per la chiave è impostato sul nome della DLL che inizializza Common Language Runtime (Mscoree.dll).  
   

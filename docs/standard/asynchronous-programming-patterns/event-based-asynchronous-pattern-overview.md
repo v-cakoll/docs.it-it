@@ -16,25 +16,25 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 3f3c7e96f1c372bb05aba9bef81192aec47b3cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f923ca42e67c76f8b4296089953fada65b645f4f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678291"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629005"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Cenni preliminari sul modello asincrono basato su eventi
 Le applicazioni che eseguono più attività contemporaneamente, pur rimanendo disponibili all'utente, richiedono spesso una progettazione che preveda l'uso di più thread. Lo spazio dei nomi <xref:System.Threading> offre tutti gli strumenti necessari per creare applicazioni multithreading a elevate prestazioni, per l'uso dei quali è necessaria tuttavia una notevole esperienza nel campo dell'ingegneria del software multithreading. Per applicazioni multithreading relativamente semplici, il componente <xref:System.ComponentModel.BackgroundWorker> rappresenta una soluzione adeguata. Per applicazioni asincrone più complesse, si consiglia di implementare una classe che segua il modello asincrono basato su eventi.  
   
  Tale modello consente di usufruire dei vantaggi offerti dalle applicazioni multithreading nascondendo al contempo gran parte degli aspetti complessi inerenti la progettazione multithreading. L'uso di una classe che supporta questo modello consente di:  
   
--   Eseguire in background attività che richiedono una quantità eccessiva di tempo, come download e operazioni di database, senza interrompere l'applicazione.  
+- Eseguire in background attività che richiedono una quantità eccessiva di tempo, come download e operazioni di database, senza interrompere l'applicazione.  
   
--   Eseguire più operazioni contemporaneamente, ricevendo notifiche relative al completamento di ognuna.  
+- Eseguire più operazioni contemporaneamente, ricevendo notifiche relative al completamento di ognuna.  
   
--   Attendere la disponibilità delle risorse senza interrompere o sospendere l'esecuzione dell'applicazione.  
+- Attendere la disponibilità delle risorse senza interrompere o sospendere l'esecuzione dell'applicazione.  
   
--   Comunicare con operazioni asincrone in sospeso mediante un modello noto di eventi e delegati. Per altre informazioni sull'uso di gestori eventi e delegati, vedere [Eventi](../../../docs/standard/events/index.md).  
+- Comunicare con operazioni asincrone in sospeso mediante un modello noto di eventi e delegati. Per altre informazioni sull'uso di gestori eventi e delegati, vedere [Eventi](../../../docs/standard/events/index.md).  
   
  Una classe che supporta il modello asincrono basato su eventi avrà uno o più metodi denominati _NomeMetodo_**Async**. Tali metodi possono eseguire il mirroring delle versioni sincrone che eseguono la stessa operazione sul thread corrente. La classe può anche avere un evento _NomeMetodo_**Completed** e un metodo _NomeMetodo_**AsyncCancel** (o semplicemente **CancelAsync**).  
   

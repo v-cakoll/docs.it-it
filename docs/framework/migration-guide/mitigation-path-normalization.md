@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37241dd666a5d10eeb35bcbb4c9e09a5bc56f620
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 51291fbc9ad2927bc3b9649074a6dbf374aaf7f1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176540"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648445"
 ---
 # <a name="mitigation-path-normalization"></a>Mitigazione: Normalizzazione del percorso
 A partire dalle applicazioni destinate a [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], la normalizzazione del percorso in .NET Framework è stata modificata.  
@@ -17,26 +17,26 @@ A partire dalle applicazioni destinate a [!INCLUDE[net_v462](../../../includes/n
 ## <a name="what-is-path-normalization"></a>Che cos'è la normalizzazione di un percorso?  
  La normalizzazione di un percorso include la modifica della stringa che identifica un file o il percorso in modo che sia conforme a un percorso valido sul sistema operativo di destinazione. In genere, la normalizzazione implica:  
   
--   La conversione in forma canonica dei separatori di directory e dei componenti.  
+- La conversione in forma canonica dei separatori di directory e dei componenti.  
   
--   L'applicazione della directory corrente in un percorso relativo.  
+- L'applicazione della directory corrente in un percorso relativo.  
   
--   La valutazione della directory relativa (`.`) o della directory padre (`..`) in un percorso.  
+- La valutazione della directory relativa (`.`) o della directory padre (`..`) in un percorso.  
   
--   La rimozione di caratteri specificati.  
+- La rimozione di caratteri specificati.  
   
 ## <a name="the-changes"></a>Le modifiche  
  A partire dalle applicazioni destinate a [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], la normalizzazione è stata modificata così come segue:  
   
--   Il runtime viene rinviato alla funzione [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) del sistema operativo per normalizzare i percorsi.  
+- Il runtime viene rinviato alla funzione [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) del sistema operativo per normalizzare i percorsi.  
   
--   La normalizzazione non consiste più nel rimuovere la fine dei segmenti di directory (ad esempio uno spazio alla fine di un nome di directory).  
+- La normalizzazione non consiste più nel rimuovere la fine dei segmenti di directory (ad esempio uno spazio alla fine di un nome di directory).  
   
--   Supporto per la sintassi del percorso dispositivo in attendibilità totale, tra cui `\\.\` e, per le API del file I/O in mscorlib. dll, `\\?\`.  
+- Supporto per la sintassi del percorso dispositivo in attendibilità totale, tra cui `\\.\` e, per le API del file I/O in mscorlib. dll, `\\?\`.  
   
--   Il runtime non convalida i percorsi di sintassi del dispositivo.  
+- Il runtime non convalida i percorsi di sintassi del dispositivo.  
   
--   È supportato l'uso della sintassi del dispositivo per accedere ai flussi di dati alternativi.  
+- È supportato l'uso della sintassi del dispositivo per accedere ai flussi di dati alternativi.  
   
 ## <a name="impact"></a>Impatto  
  Per le applicazioni destinate a [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] o versioni successive, queste modifiche sono applicate per impostazione predefinita. Tali modifiche migliorano le prestazioni, consentendo al contempo ai metodi di accedere ai percorsi in precedenza inaccessibili.  

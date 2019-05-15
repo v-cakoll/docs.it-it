@@ -9,33 +9,33 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: baa7655481c24ebe96b76a0accbff63b6965a021
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e709db257c839dc7e583412a87af6d25b80de969
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328426"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591424"
 ---
 # <a name="how-to-write-services-programmatically"></a>Procedura: Scrivere servizi a livello di codice
 Se si sceglie di non usare il modello di progetto Servizio Windows, è possibile scrivere servizi personalizzati impostando manualmente l'ereditarietà e altri elementi di infrastruttura. Quando si crea un servizio a livello di codice, è necessario eseguire diversi passaggi che altrimenti vengono gestiti automaticamente dal modello:  
   
--   È necessario impostare la classe del servizio in modo che erediti dalla classe <xref:System.ServiceProcess.ServiceBase>.  
+- È necessario impostare la classe del servizio in modo che erediti dalla classe <xref:System.ServiceProcess.ServiceBase>.  
   
--   È necessario creare un metodo `Main` per il progetto del servizio che definisce i servizi da eseguire e chiama il metodo <xref:System.ServiceProcess.ServiceBase.Run%2A> su di essi.  
+- È necessario creare un metodo `Main` per il progetto del servizio che definisce i servizi da eseguire e chiama il metodo <xref:System.ServiceProcess.ServiceBase.Run%2A> su di essi.  
   
--   È necessario eseguire l'override delle procedure <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> e scrivere l'eventuale codice che si vuole eseguire con tali procedure.  
+- È necessario eseguire l'override delle procedure <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> e scrivere l'eventuale codice che si vuole eseguire con tali procedure.  
   
 ### <a name="to-write-a-service-programmatically"></a>Per scrivere un servizio a livello di codice  
   
 1. Creare un progetto vuoto e creare un riferimento agli spazi dei nomi necessari seguendo questa procedura:  
   
-    1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo **Riferimenti** e scegliere **Aggiungi riferimento**.  
+    1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo **Riferimenti** e scegliere **Aggiungi riferimento**.  
   
-    2.  Nella scheda **.NET Framework** scorrere fino a **System.dll** e fare clic su **Seleziona**.  
+    2. Nella scheda **.NET Framework** scorrere fino a **System.dll** e fare clic su **Seleziona**.  
   
-    3.  Scorrere fino a **System.ServiceProcess.dll** e fare clic su **Seleziona**.  
+    3. Scorrere fino a **System.ServiceProcess.dll** e fare clic su **Seleziona**.  
   
-    4.  Fare clic su **OK**.  
+    4. Fare clic su **OK**.  
   
 2. Aggiungere una classe e configurarla in modo che erediti da <xref:System.ServiceProcess.ServiceBase>:  
   

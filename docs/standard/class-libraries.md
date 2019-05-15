@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: d5b067f299d96b687d44b83e431d89667f2d84f8
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c918883d8620513749826680f9f1b6d89ae87585
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745768"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664593"
 ---
 # <a name="net-class-libraries"></a>Librerie di classi .NET
 
@@ -19,9 +19,9 @@ Le librerie di classi rappresentano il concetto di [libreria condivisa](https://
 
 È possibile usare tre tipi di librerie di classi:
 
-*   Le librerie di classi **specifiche della piattaforma**  possono accedere a tutte le API in una determinata piattaforma, ad esempio .NET Framework, Xamarin iOS, ma possono essere usate solo da app e librerie destinate a tale piattaforma.
-*   Le librerie di classi **portabili** possono accedere a un sottoinsieme di API e possono essere usate da app e librerie destinate a più piattaforme.
-*   Le librerie di classi **.NET Standard** sono una fusione del concetto di libreria specifica della piattaforma e della libreria portabile in un unico modello che offre i vantaggi di entrambi i tipi di libreria.
+* Le librerie di classi **specifiche della piattaforma**  possono accedere a tutte le API in una determinata piattaforma, ad esempio .NET Framework, Xamarin iOS, ma possono essere usate solo da app e librerie destinate a tale piattaforma.
+* Le librerie di classi **portabili** possono accedere a un sottoinsieme di API e possono essere usate da app e librerie destinate a più piattaforme.
+* Le librerie di classi **.NET Standard** sono una fusione del concetto di libreria specifica della piattaforma e della libreria portabile in un unico modello che offre i vantaggi di entrambi i tipi di libreria.
 
 ## <a name="platform-specific-class-libraries"></a>Librerie di classi specifiche della piattaforma
 

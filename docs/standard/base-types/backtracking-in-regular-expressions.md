@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88e8bfadf34aecb207b1d2858eacf40338363599
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615978"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634737"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking nelle espressioni regolari
 <a name="top"></a> Il backtracking si verifica quando un modello di espressione regolare contiene [quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) facoltativi o [costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)e il motore delle espressioni regolari torna a uno stato salvato in precedenza per continuare la ricerca di una corrispondenza. Il backtracking è fondamentale per la potenza delle espressioni regolari. Consente alle espressioni di essere potenti e flessibili e di cercare una corrispondenza di modelli molto complessi. Questa tecnica presenta tuttavia anche alcuni svantaggi. Il backtracking spesso è il fattore più importante che influisce sulle prestazioni del motore delle espressioni regolari. Fortunatamente, lo sviluppatore è in grado di controllare il comportamento del motore delle espressioni regolari e il modo in cui viene utilizzato il backtracking. In questo argomento viene illustrato il funzionamento del backtracking e il modo in cui può essere controllato.  
@@ -35,13 +35,13 @@ ms.locfileid: "54615978"
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
--   [Confronto lineare senza backtracking](#linear_comparison_without_backtracking)  
+- [Confronto lineare senza backtracking](#linear_comparison_without_backtracking)  
   
--   [Backtracking con quantificatori facoltativi o costrutti di alternanza](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
+- [Backtracking con quantificatori facoltativi o costrutti di alternanza](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
   
--   [Backtracking con quantificatori facoltativi annidati](#backtracking_with_nested_optional_quantifiers)  
+- [Backtracking con quantificatori facoltativi annidati](#backtracking_with_nested_optional_quantifiers)  
   
--   [Controllo del backtracking](#controlling_backtracking)  
+- [Controllo del backtracking](#controlling_backtracking)  
   
 <a name="linear_comparison_without_backtracking"></a>   
 ## <a name="linear-comparison-without-backtracking"></a>Confronto lineare senza backtracking  
@@ -91,15 +91,15 @@ ms.locfileid: "54615978"
   
  A tale scopo, il motore delle espressioni regolari utilizza il backtracking come segue:  
   
--   Trova la corrispondenza di `.*` , ovvero di zero, uno o più occorrenze di qualsiasi carattere, con l'intera stringa di input.  
+- Trova la corrispondenza di `.*` , ovvero di zero, uno o più occorrenze di qualsiasi carattere, con l'intera stringa di input.  
   
--   Tenta di trovare una corrispondenza di "e" nel modello di espressione regolare. Tuttavia, nella stringa di input non sono presenti altri caratteri di cui cercare una corrispondenza.  
+- Tenta di trovare una corrispondenza di "e" nel modello di espressione regolare. Tuttavia, nella stringa di input non sono presenti altri caratteri di cui cercare una corrispondenza.  
   
--   Esegue il backtracking fino all'ultima corrispondenza esatta, "Essential services are provided by regular expressions", e tenta di trovare una corrispondenza di "e" con il punto alla fine della frase. La corrispondenza ha esito negativo.  
+- Esegue il backtracking fino all'ultima corrispondenza esatta, "Essential services are provided by regular expressions", e tenta di trovare una corrispondenza di "e" con il punto alla fine della frase. La corrispondenza ha esito negativo.  
   
--   Continua a eseguire il backtracking fino a una corrispondenza esatta precedente, un carattere alla volta, finché la sottostringa temporaneamente corrispondente non è "Essential services are provided by regular expr". Confronta quindi la "e" nel modello con la seconda "e" in "expressions" e trova una corrispondenza.  
+- Continua a eseguire il backtracking fino a una corrispondenza esatta precedente, un carattere alla volta, finché la sottostringa temporaneamente corrispondente non è "Essential services are provided by regular expr". Confronta quindi la "e" nel modello con la seconda "e" in "expressions" e trova una corrispondenza.  
   
--   Confronta la "s" nel modello con la "s" che segue il carattere "e" corrispondente (la prima "s" in "expressions"). La corrispondenza ha esito positivo.  
+- Confronta la "s" nel modello con la "s" che segue il carattere "e" corrispondente (la prima "s" in "expressions"). La corrispondenza ha esito positivo.  
   
  Quando si utilizza il backtracking, la ricerca di una corrispondenza tra il modello di espressione regolare e la stringa di input, con una lunghezza pari a 55 caratteri, richiede 67 operazioni di confronto. In genere, se un modello di espressione regolare include un singolo costrutto di alternanza o un singolo quantificatore facoltativo, il numero di operazioni di confronto necessarie per trovare una corrispondenza del modello è più del doppio rispetto al numero di caratteri della stringa di input.  
   
@@ -114,11 +114,11 @@ ms.locfileid: "54615978"
   
  Come illustrato nell'output dell'esempio, il motore delle espressioni regolari ha impiegato il doppio del tempo per rilevare che una stringa di input non corrisponde al modello rispetto al tempo impiegato per identificare una stringa corrispondente. Ciò è dovuto al fatto che una corrispondenza negativa rappresenta sempre lo scenario peggiore. Il motore delle espressioni regolari deve utilizzare l'espressione regolare per seguire tutti i percorsi possibili nei dati prima di poter concludere che la corrispondenza è negativa e le parentesi annidate creano molti percorsi aggiuntivi nei dati. Il motore delle espressioni regolari conclude che la seconda stringa non corrisponde al modello effettuando le operazioni seguenti:  
   
--   Verifica di essere all'inizio della stringa, quindi cerca una corrispondenza tra i primi cinque caratteri della stringa e il modello `a+`. Determina quindi che non esistono altri gruppi di caratteri "a" nella stringa. Infine, verifica la fine della stringa. Poiché nella stringa rimane un ulteriore carattere, la corrispondenza ha esito negativo. La corrispondenza non riuscita richiede 9 confronti. Il motore delle espressioni regolari salva inoltre le informazioni di stato dalle relative corrispondenze di "a" (che chiameremo corrispondenza 1), "aa" (corrispondenza 2), "aaa" (corrispondenza 3) e "aaaa" (corrispondenza 4).  
+- Verifica di essere all'inizio della stringa, quindi cerca una corrispondenza tra i primi cinque caratteri della stringa e il modello `a+`. Determina quindi che non esistono altri gruppi di caratteri "a" nella stringa. Infine, verifica la fine della stringa. Poiché nella stringa rimane un ulteriore carattere, la corrispondenza ha esito negativo. La corrispondenza non riuscita richiede 9 confronti. Il motore delle espressioni regolari salva inoltre le informazioni di stato dalle relative corrispondenze di "a" (che chiameremo corrispondenza 1), "aa" (corrispondenza 2), "aaa" (corrispondenza 3) e "aaaa" (corrispondenza 4).  
   
--   Torna alla corrispondenza 4 salvata in precedenza. Determina che esiste un altro carattere "a" da assegnare a un gruppo acquisito aggiuntivo. Infine, verifica la fine della stringa. Poiché nella stringa rimane un ulteriore carattere, la corrispondenza ha esito negativo. La corrispondenza non riuscita richiede 4 confronti. Fino a questo momento sono stati eseguiti complessivamente 13 confronti.  
+- Torna alla corrispondenza 4 salvata in precedenza. Determina che esiste un altro carattere "a" da assegnare a un gruppo acquisito aggiuntivo. Infine, verifica la fine della stringa. Poiché nella stringa rimane un ulteriore carattere, la corrispondenza ha esito negativo. La corrispondenza non riuscita richiede 4 confronti. Fino a questo momento sono stati eseguiti complessivamente 13 confronti.  
   
--   Torna alla corrispondenza 3 salvata in precedenza. Determina che esistono sono altri due caratteri "a" da assegnare a un gruppo acquisito aggiuntivo. Tuttavia, il test di fine della stringa ha esito negativo. Torna quindi alla corrispondenza 3 e tenta di trovare una corrispondenza degli altri due caratteri "a" nei due gruppi acquisiti aggiuntivi. Il test di fine della stringa ha ancora esito negativo. Le corrispondenza non riuscite richiedono 12 confronti. Fino a questo punto, sono stati eseguiti complessivamente 25 confronti.  
+- Torna alla corrispondenza 3 salvata in precedenza. Determina che esistono sono altri due caratteri "a" da assegnare a un gruppo acquisito aggiuntivo. Tuttavia, il test di fine della stringa ha esito negativo. Torna quindi alla corrispondenza 3 e tenta di trovare una corrispondenza degli altri due caratteri "a" nei due gruppi acquisiti aggiuntivi. Il test di fine della stringa ha ancora esito negativo. Le corrispondenza non riuscite richiedono 12 confronti. Fino a questo punto, sono stati eseguiti complessivamente 25 confronti.  
   
  Il confronto della stringa di input con l'espressione regolare continua in questo modo fino a quando il motore delle espressioni regolari non ha tentato tutte le combinazioni di corrispondenze possibili, concludendo infine che non vi è alcuna corrispondenza. A causa dei quantificatori annidati, questo confronto è un'operazione O(2<sup>n</sup>) o un'operazione esponenziale, dove *n* è il numero di caratteri all'interno della stringa di input. Ciò significa che nei casi peggiori una stringa di input di 30 caratteri richiede circa 1.073.741.824 confronti e una stringa di input di 40 caratteri richiede circa 1.099.511.627.776 confronti. Se si utilizzano stringhe di queste lunghezze o di lunghezze ancora maggiore, i metodi delle espressioni regolari possono richiedere una quantità di tempo eccessiva per il completamento quando elaborano un input che non corrisponde al modello di espressione regolare.  
   

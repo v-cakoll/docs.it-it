@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79bbf33ff1b1e843836aa1b93188970b6a1c8ede
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 91520b8967445a70a7775b99faef0cefc5e01cc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302978"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654413"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Procedura dettagliata: uso di BatchBlock e BatchedJoinBlock per migliorare l'efficienza
 La libreria del flusso di dati TPL fornisce le classi <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> che consentono di ricevere e memorizzare nel buffer i dati di una o più origini e quindi propagare tali dati come unica raccolta. Questo meccanismo di invio in batch è utile quando si raccolgono dati da una o più origini e quindi si elaborano più elementi dati come batch. Ad esempio, si consideri un'applicazione che usa un flusso di dati per inserire record in un database. Questa operazione può essere più efficiente se nello stesso momento vengono inseriti più elementi anziché uno alla volta, in modo sequenziale. Questo documento descrive come usare la classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> per migliorare l'efficienza di tali operazioni di inserimento nel database. Descrive anche come usare la classe <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> per acquisire sia i risultati che le eventuali eccezioni che si verificano durante la lettura da database da parte del programma.
@@ -34,19 +34,19 @@ La libreria del flusso di dati TPL fornisce le classi <xref:System.Threading.Tas
   
  Questa procedura dettagliata contiene le sezioni seguenti:  
   
--   [Creazione dell'applicazione console](#creating)  
+- [Creazione dell'applicazione console](#creating)  
   
--   [Definizione della classe Employee](#employeeClass)  
+- [Definizione della classe Employee](#employeeClass)  
   
--   [Definizione delle operazioni dei dipendenti sul database](#operations)  
+- [Definizione delle operazioni dei dipendenti sul database](#operations)  
   
--   [Aggiunta di dati dei dipendenti al database senza usare la memorizzazione nel buffer](#nonBuffering)  
+- [Aggiunta di dati dei dipendenti al database senza usare la memorizzazione nel buffer](#nonBuffering)  
   
--   [Uso della memorizzazione nel buffer per aggiungere dati dei dipendenti nel database](#buffering)  
+- [Uso della memorizzazione nel buffer per aggiungere dati dei dipendenti nel database](#buffering)  
   
--   [Uso di un join memorizzato nel buffer per leggere dati dei dipendenti dal database](#bufferedJoin)  
+- [Uso di un join memorizzato nel buffer per leggere dati dei dipendenti dal database](#bufferedJoin)  
   
--   [Esempio completo](#complete)  
+- [Esempio completo](#complete)  
   
 <a name="creating"></a>   
 ## <a name="creating-the-console-application"></a>Creazione dell'applicazione console  

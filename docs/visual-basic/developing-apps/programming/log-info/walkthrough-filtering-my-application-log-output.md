@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e32f36a0490a198078f8357f3603c91cc50cb3b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298396"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647099"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Procedura dettagliata: Filtro dell'output di My.Application.Log (Visual Basic)
 Questa procedura dettagliata illustra come modificare il filtro di log predefinito per l'oggetto `My.Application.Log` per stabilire quali informazioni vengono passate dall'oggetto `Log` ai listener e quali informazioni vengono scritte dai listener. È possibile modificare il comportamento di registrazione anche dopo la compilazione dell'applicazione, poiché le informazioni di configurazione vengono archiviate nel file di configurazione dell'applicazione.  
@@ -77,11 +77,11 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
   
      Se non è presente alcun file app.config:  
   
-    1.  Scegliere **Aggiungi nuovo elemento** dal menu **Progetto**.  
+    1. Scegliere **Aggiungi nuovo elemento** dal menu **Progetto**.  
   
-    2.  Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.  
+    2. Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.  
   
-    3.  Fare clic su **Aggiungi**.  
+    3. Fare clic su **Aggiungi**.  
   
 2. Individuare la sezione `<switches>` nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
   
@@ -152,11 +152,11 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
   
      Se non è presente alcun file app.config:  
   
-    1.  Scegliere **Aggiungi nuovo elemento** dal menu **Progetto**.  
+    1. Scegliere **Aggiungi nuovo elemento** dal menu **Progetto**.  
   
-    2.  Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.  
+    2. Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.  
   
-    3.  Fare clic su **Aggiungi**.  
+    3. Fare clic su **Aggiungi**.  
   
 2. Fare clic con il pulsante destro del mouse su app.config in **Esplora soluzioni**. Scegliere **Apri**.  
   

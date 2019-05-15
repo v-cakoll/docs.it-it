@@ -5,25 +5,25 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 976c34d72f9fcc89193658e50727a0ad365f2dd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208582"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647881"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modifica di nodi, contenuto e valori in un documento XML
 Sono disponibili molti modi per modificare i nodi e il contenuto in un documento. È possibile:  
   
--   Modificare il valore dei nodi usando la proprietà <xref:System.Xml.XmlNode.Value%2A>.  
+- Modificare il valore dei nodi usando la proprietà <xref:System.Xml.XmlNode.Value%2A>.  
   
--   Modificare un intero set di nodi, sostituendoli con nodi nuovi. Questa operazione viene eseguita tramite la proprietà <xref:System.Xml.XmlNode.InnerXml%2A>.  
+- Modificare un intero set di nodi, sostituendoli con nodi nuovi. Questa operazione viene eseguita tramite la proprietà <xref:System.Xml.XmlNode.InnerXml%2A>.  
   
--   Sostituire i nodi esistenti con nodi nuovi usando il metodo <xref:System.Xml.XmlNode.RemoveChild%2A>.  
+- Sostituire i nodi esistenti con nodi nuovi usando il metodo <xref:System.Xml.XmlNode.RemoveChild%2A>.  
   
--   Aggiungere ulteriori caratteri ai nodi che ereditano dalla classe <xref:System.Xml.XmlCharacterData> usando il metodo <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A> o <xref:System.Xml.XmlCharacterData.ReplaceData%2A>.  
+- Aggiungere ulteriori caratteri ai nodi che ereditano dalla classe <xref:System.Xml.XmlCharacterData> usando il metodo <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A> o <xref:System.Xml.XmlCharacterData.ReplaceData%2A>.  
   
--   Modificare il contenuto rimuovendo una serie di caratteri con il metodo <xref:System.Xml.XmlCharacterData.DeleteData%2A> nei tipi di nodo che ereditano da <xref:System.Xml.XmlCharacterData>.  
+- Modificare il contenuto rimuovendo una serie di caratteri con il metodo <xref:System.Xml.XmlCharacterData.DeleteData%2A> nei tipi di nodo che ereditano da <xref:System.Xml.XmlCharacterData>.  
   
  Una tecnica semplice per modificare il valore di un nodo consiste nell'usare `node.Value = "new value";`. Nella tabella seguente sono elencati i tipi di nodo sui quali funziona quest'unica riga di codice ed esattamente quali dati verranno modificati per quel tipo di nodo.  
   
