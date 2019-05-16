@@ -1,15 +1,13 @@
 ---
 title: Eseguire la migrazione a scenari di cloud ibrido
 description: Modernizzare le applicazioni .NET esistenti con contenitori Windows e il Cloud di Azure | Eseguire la migrazione a scenari di cloud ibrido
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 6cba29ad654b09b01f9b6969fa6688dd5f165fbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 04c618681c61f5584e641e0a4735e1261ab34fa3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636585"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643728"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Eseguire la migrazione a scenari di cloud ibrido
 

@@ -2,12 +2,12 @@
 title: Strutture
 description: Scopri la F# tipo di struttura, un oggetto compatto spesso più efficiente rispetto a una classe per i tipi con una piccola quantità di dati e comportamento semplice.
 ms.date: 05/16/2016
-ms.openlocfilehash: c091dc91765d6e828426de21e9bc5f79bfdebc6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc302b975604bebcd145a385fb59b21417547c5e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925879"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645336"
 ---
 # <a name="structures"></a>Strutture
 

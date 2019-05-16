@@ -2,12 +2,12 @@
 title: Generics
 description: Informazioni su come usare F# funzioni e tipi, che consentono di scrivere codice che funziona con un'ampia gamma di tipi senza ripetere codice generici.
 ms.date: 05/16/2016
-ms.openlocfilehash: bafb80893df2f3fab85840ee844bc78d1fb33428
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e30b00343e48d3a8abd51f62c003ba0d1984db18
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937527"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641858"
 ---
 # <a name="generics"></a>Generics
 

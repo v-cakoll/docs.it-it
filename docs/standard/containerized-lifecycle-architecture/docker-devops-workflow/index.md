@@ -1,11 +1,14 @@
 ---
 title: Flusso di lavoro DevOps per le applicazioni Docker con strumenti Microsoft
 description: Ciclo di vita di applicazioni Docker in contenitori con flusso di lavoro di Microsoft Platform e strumenti DevOps con strumenti Microsoft
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 6b138301a7e6794ce0a7b15957684b3b73e9f89f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644810"
 ---
-
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Flusso di lavoro DevOps per le applicazioni Docker con strumenti Microsoft
 
 *Microsoft Visual Studio, servizi di Azure DevOps, Team Foundation Server e monitoraggio di Azure offrono che un ecosistema completo per lo sviluppo e operazioni IT in grado di fornire a ogni team gli strumenti per gestire i progetti e creare rapidamente, testare e distribuire in contenitori applicazioni.*

@@ -1,15 +1,13 @@
 ---
 title: Passaggi nel flusso di lavoro DevOps del ciclo esterno per un'applicazione Docker
 description: Informazioni sulla procedura per il ciclo"esterno" del flusso di lavoro DevOps
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 7193200d74eeac23e9cba11b3ed2056458c9984e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 194786a90fc02801211c7614eb632392d67f0109
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795764"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641059"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Passaggi nel flusso di lavoro DevOps del ciclo esterno per un'applicazione Docker
 

@@ -2,12 +2,12 @@
 title: Tipi flessibili
 description: Informazioni su come usare F# dell'annotazione di tipo flessibile, che indica che un parametro, una variabile o un valore è un tipo compatibile con un tipo specificato.
 ms.date: 05/16/2016
-ms.openlocfilehash: 32857cc317bc6b4b7baf53b623b551e8e0733e41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8edae671c54971862a35f03da8663c8567e2261
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981383"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641919"
 ---
 # <a name="flexible-types"></a>Tipi flessibili
 
