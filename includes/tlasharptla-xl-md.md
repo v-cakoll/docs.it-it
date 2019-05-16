@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 87276ecf605640589cec1d79d00bf26c970b94e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 94776f2dda164d77a32e9b3d67d2f1d53608db3b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61851246"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672714"
 ---
-<span data-ttu-id="64e94-101">Microsoft Excel</span><span class="sxs-lookup"><span data-stu-id="64e94-101">Microsoft Excel</span></span>
+<span data-ttu-id="a0523-101">Microsoft Excel</span><span class="sxs-lookup"><span data-stu-id="a0523-101">Microsoft Excel</span></span>

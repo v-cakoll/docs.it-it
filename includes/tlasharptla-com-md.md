@@ -1,1 +1,9 @@
-<span data-ttu-id="51fa2-101">Component Object Model (COM)</span><span class="sxs-lookup"><span data-stu-id="51fa2-101">Component Object Model (COM)</span></span>
+---
+ms.openlocfilehash: e744be75951a1b844991f45625d841a4d86b6ab9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671675"
+---
+<span data-ttu-id="fc331-101">Component Object Model (COM)</span><span class="sxs-lookup"><span data-stu-id="fc331-101">Component Object Model (COM)</span></span>

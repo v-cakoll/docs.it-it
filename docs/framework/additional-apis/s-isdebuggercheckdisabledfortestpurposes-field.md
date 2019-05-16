@@ -11,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 9033a513-c255-4f31-b6d7-09b8d8c50e2d
-ms.openlocfilehash: ab71ab6aa2b0ed454b86388ba369204a2131cca5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad9bc0ecf4b7a8e5f3ef13fdff5aa59ca8915922
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706000"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634662"
 ---
-# <a name="sisdebuggercheckdisabledfortestpurposes-field"></a><span data-ttu-id="bdcd5-102">Campo s_isDebuggerCheckDisabledForTestPurposes</span><span class="sxs-lookup"><span data-stu-id="bdcd5-102">s_isDebuggerCheckDisabledForTestPurposes Field</span></span>
+# <a name="sisdebuggercheckdisabledfortestpurposes-field"></a><span data-ttu-id="3ce41-102">Campo s_isDebuggerCheckDisabledForTestPurposes</span><span class="sxs-lookup"><span data-stu-id="3ce41-102">s_isDebuggerCheckDisabledForTestPurposes Field</span></span>
 
-<span data-ttu-id="bdcd5-103">Questo campo privato all'interno di `System.Windows.Diagnostics.VisualDiagnostics` classe viene utilizzata da Visual Studio per determinare se verrà eseguito un controllo interno per un debugger attivo.</span><span class="sxs-lookup"><span data-stu-id="bdcd5-103">This private field in the `System.Windows.Diagnostics.VisualDiagnostics` class is used by Visual Studio to determine whether an internal check for an active debugger will be performed.</span></span>
+<span data-ttu-id="3ce41-103">Questo campo privato all'interno di `System.Windows.Diagnostics.VisualDiagnostics` classe viene utilizzata da Visual Studio per determinare se verrà eseguito un controllo interno per un debugger attivo.</span><span class="sxs-lookup"><span data-stu-id="3ce41-103">This private field in the `System.Windows.Diagnostics.VisualDiagnostics` class is used by Visual Studio to determine whether an internal check for an active debugger will be performed.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="bdcd5-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bdcd5-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="3ce41-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3ce41-104">Syntax</span></span>
 
 ```csharp
 private static bool s_isDebuggerCheckDisabledForTestPurposes
 ```
 
 > [!WARNING]
-> <span data-ttu-id="bdcd5-105">Le API nel `System.Windows.Diagnostics.VisualDiagnostics` classe sono disponibili solo quando un'applicazione è in esecuzione in un debugger.</span><span class="sxs-lookup"><span data-stu-id="bdcd5-105">APIs in the `System.Windows.Diagnostics.VisualDiagnostics` class are only available when an application is running under a debugger.</span></span> <span data-ttu-id="bdcd5-106">Impostare `s_isDebuggerCheckDisabledForTestPurposes` a `true` per accedere alle API di fuori di un debugger.</span><span class="sxs-lookup"><span data-stu-id="bdcd5-106">Set `s_isDebuggerCheckDisabledForTestPurposes` to `true` to access the APIs outside of a debugger.</span></span>
+> <span data-ttu-id="3ce41-105">Le API nel `System.Windows.Diagnostics.VisualDiagnostics` classe sono disponibili solo quando un'applicazione è in esecuzione in un debugger.</span><span class="sxs-lookup"><span data-stu-id="3ce41-105">APIs in the `System.Windows.Diagnostics.VisualDiagnostics` class are only available when an application is running under a debugger.</span></span> <span data-ttu-id="3ce41-106">Impostare `s_isDebuggerCheckDisabledForTestPurposes` a `true` per accedere alle API di fuori di un debugger.</span><span class="sxs-lookup"><span data-stu-id="3ce41-106">Set `s_isDebuggerCheckDisabledForTestPurposes` to `true` to access the APIs outside of a debugger.</span></span>
 >
-> <span data-ttu-id="bdcd5-107">Microsoft non supporta l'uso di questo campo in un'applicazione di produzione in alcuna circostanza.</span><span class="sxs-lookup"><span data-stu-id="bdcd5-107">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="3ce41-107">Microsoft non supporta l'uso di questo campo in un'applicazione di produzione in alcuna circostanza.</span><span class="sxs-lookup"><span data-stu-id="3ce41-107">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="bdcd5-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bdcd5-108">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="3ce41-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="3ce41-108">Requirements</span></span>
 
-<span data-ttu-id="bdcd5-109">**Spazio dei nomi:** <xref:System.Windows.Diagnostics></span><span class="sxs-lookup"><span data-stu-id="bdcd5-109">**Namespace:** <xref:System.Windows.Diagnostics></span></span>
+<span data-ttu-id="3ce41-109">**Spazio dei nomi:** <xref:System.Windows.Diagnostics></span><span class="sxs-lookup"><span data-stu-id="3ce41-109">**Namespace:** <xref:System.Windows.Diagnostics></span></span>
 
-<span data-ttu-id="bdcd5-110">**Assembly:** PresentationCore (in PresentationCore. dll)</span><span class="sxs-lookup"><span data-stu-id="bdcd5-110">**Assembly:** PresentationCore (in PresentationCore.dll)</span></span>
+<span data-ttu-id="3ce41-110">**Assembly:** PresentationCore (in PresentationCore. dll)</span><span class="sxs-lookup"><span data-stu-id="3ce41-110">**Assembly:** PresentationCore (in PresentationCore.dll)</span></span>
 
-<span data-ttu-id="bdcd5-111">**Versioni di .NET framework:** Disponibile dalla 4.6.</span><span class="sxs-lookup"><span data-stu-id="bdcd5-111">**.NET Framework versions:** Available since 4.6.</span></span>
+<span data-ttu-id="3ce41-111">**Versioni di .NET framework:** Disponibile dalla 4.6.</span><span class="sxs-lookup"><span data-stu-id="3ce41-111">**.NET Framework versions:** Available since 4.6.</span></span>
