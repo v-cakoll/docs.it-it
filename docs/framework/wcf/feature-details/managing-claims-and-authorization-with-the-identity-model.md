@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046632"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875570"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gestione di attestazioni e autorizzazioni con il modello di identità
 L'autorizzazione è il processo volto a determinare quali entità dispongono delle autorizzazioni per modificare, visualizzare o altrimenti accedere a una risorsa del computer. In un'azienda, ad esempio, è possibile che l'accesso ai file dei dipendenti sia consentito solo ai responsabili. Windows Communication Foundation (WCF) supporta due meccanismi per l'esecuzione del processo di autorizzazione. Il primo meccanismo consente di controllare l'autorizzazione utilizzando costrutti Common Language Runtime (CLR) esistenti. Il secondo è un modello basato sulle attestazioni definito come il *modello di identità*. WCF utilizza il modello di identità per creare attestazioni dai messaggi in ingresso; Classi di modello di identità possono essere esteso per supportare nuovi tipi di attestazione per schemi di autorizzazione personalizzati. In questo argomento viene presentata una panoramica dei principali concetti di programmazione del modello di identità, nonché un elenco delle classi più importanti utilizzate da tale funzionalità.  
@@ -90,11 +90,12 @@ L'autorizzazione è il processo volto a determinare quali entità dispongono del
   
  Nella figura seguente viene illustrato un esempio di tre set di attestazioni, in cui un set di attestazioni ha come emittente un altro set di attestazioni, che a sua volta ha come emittente il set di attestazioni System. I set di attestazioni formano pertanto una gerarchia che può avere una profondità arbitraria.  
   
- ![Gestione di attestazioni e autorizzazioni](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "claimshierarchy")  
+ ![Set di attestazioni all'interno della gerarchia.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
- Più set di attestazioni possono avere come emittente lo stesso set di attestazioni, come illustrato nella figura seguente.  
+ Più set di attestazioni possono avere come emittente lo stesso set di attestazioni, come illustrato nella figura seguente:
+ 
   
- ![Gestione di attestazioni e autorizzazioni](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "multiplesetsofclaims")  
+ ![Più set di attestazioni con come emittente lo stesso set di attestazioni.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   
  Ad eccezione di un set di attestazioni che è il proprio emittente, il modello di identità non fornisce alcun supporto che consenta ai set di attestazioni di formare un ciclo. Pertanto non potrà mai verificarsi una situazione in cui il set di attestazioni A viene emesso da set di attestazioni B che viene emesso dal set di attestazioni A. Inoltre, il modello di identità non fornisce alcun supporto che consenta ai set di attestazioni di avere più emittenti. Se due o più emittenti devono emettere un determinato set di attestazioni, è necessario utilizzare più set di attestazioni, ognuno contenente le stesse attestazioni, ma con emittenti diversi.  
   

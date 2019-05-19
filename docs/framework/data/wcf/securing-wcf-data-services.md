@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: cf99979e2ea3a47247a5df4b6e0ececab6abe8ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4db6d7e13bfc4a0e2705c210820db511a60e09de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645522"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877359"
 ---
 # <a name="securing-wcf-data-services"></a>Protezione di WCF Data Services
 In questo argomento vengono fornite considerazioni sulla sicurezza specifiche per lo sviluppo, distribuzione e l'esecuzione di WCF Data Services e applicazioni che servizi di accesso che supportano Open Data Protocol (OData). È consigliabile seguire anche le raccomandazioni per la creazione di applicazioni .NET Framework protette.  
@@ -55,7 +55,7 @@ context.Credentials = _
  Quando il servizio dati richiede credenziali di accesso che non possono essere specificate tramite un oggetto <xref:System.Net.NetworkCredential>, ad esempio un cookie o un token basato sulle attestazioni, è necessario impostare manualmente le intestazioni nella richiesta HTTP, generalmente le intestazioni `Authorization` e `Cookie`. Per altre informazioni su questo tipo di scenario di autenticazione, vedere il post di blog [ OData e autenticazione – Part 3 – ClientSide Hooks](https://devblogs.microsoft.com/odata/odata-and-authentication-part-3-clientside-hooks/). Per un esempio di come impostare le intestazioni HTTP in un messaggio di richiesta, vedere [come: Impostare le intestazioni nella richiesta del Client](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md).  
   
 ## <a name="impersonation"></a>Rappresentazione  
- Generalmente il servizio dati accede alle risorse richieste, ad esempio i file sul server o un database, tramite le credenziali del processo di lavoro che ospita il servizio dati. Quando si usa la rappresentazione, è possibile eseguire le applicazioni [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] con l'identità Windows (account utente) dell'utente che effettua la richiesta. La rappresentazione è di utilizzo comune in applicazioni che si basano su IIS per autenticare l'utente e le credenziali di questo principio sono usate per accedere alle risorse richieste. Per altre informazioni, vedere [rappresentazione ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)).  
+ Generalmente il servizio dati accede alle risorse richieste, ad esempio i file sul server o un database, tramite le credenziali del processo di lavoro che ospita il servizio dati. Quando si usa la rappresentazione, le applicazioni ASP.NET possono eseguire con l'identità di Windows (account utente) dell'utente che effettua la richiesta. La rappresentazione è di utilizzo comune in applicazioni che si basano su IIS per autenticare l'utente e le credenziali di questo principio sono usate per accedere alle risorse richieste. Per altre informazioni, vedere [rappresentazione ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)).  
   
 ## <a name="configuring-data-service-authorization"></a>Configurazione dell'autorizzazione del servizio dati  
  L'autorizzazione è il conferimento dell'accesso alle risorse dell'applicazione concesso a un principio o un processo identificato in base a un'autenticazione precedentemente riuscita. Come regola generale, è opportuno concedere agli utenti del servizio dati solo i diritti sufficienti per eseguire le operazioni richieste dalle applicazioni client.  

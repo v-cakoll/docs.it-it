@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: ceffef8e911bb3e49e0d6526328523667a462b61
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: c9da2e1daff23ef9ba39d8b5d53cb3be67f35a27
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912446"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878215"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Procedura: Diagnosticare un processo di stampa problematico
 Gli amministratori di rete fanno spesso fronte ai reclami degli utenti su processi di stampa lenti o che non vengono eseguiti affatto. Il set completo di proprietà di processo di stampa esposto nel [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] di Microsoft .NET Framework forniscono un mezzo per eseguire una rapida diagnosi remota dei processi di stampa.  
@@ -59,7 +59,7 @@ Gli amministratori di rete fanno spesso fronte ai reclami degli utenti su proces
  [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
  [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
   
- Per controllare lo stato del processo di stampa usando i flag del <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> proprietà, esaminare ogni flag pertinente per verificare se è impostato. Il metodo standard per verificare se un bit è impostato in un set di flag di bit consiste nell'eseguire un'operazione di AND logico con il set di flag come uno degli operandi e il flag stesso come altro operando. Poiché il flag stesso ha un solo bit impostato, il risultato dell'AND logico è che, al massimo, è impostato quello stesso bit. Per verificare se lo è o meno, confrontare il risultato dell’AND logico con il flag stesso. Per altre informazioni, vedere <xref:System.Printing.PrintJobStatus>, il [& operatore (C# riferimento)](~/docs/csharp/language-reference/operators/and-operator.md), e <xref:System.FlagsAttribute>.  
+ Per controllare lo stato del processo di stampa usando i flag del <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> proprietà, esaminare ogni flag pertinente per verificare se è impostato. Il metodo standard per verificare se un bit è impostato in un set di flag di bit consiste nell'eseguire un'operazione di AND logico con il set di flag come uno degli operandi e il flag stesso come altro operando. Poiché il flag stesso ha un solo bit impostato, il risultato dell'AND logico è che, al massimo, è impostato quello stesso bit. Per verificare se lo è o meno, confrontare il risultato dell’AND logico con il flag stesso. Per altre informazioni, vedere <xref:System.Printing.PrintJobStatus>, il [& operatore (C# riferimento)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-), e <xref:System.FlagsAttribute>.  
   
  Per ogni attributo il cui bit è impostato, il codice lo riporta allo schermo della console e talvolta suggerisce un modo per rispondere. Il metodo **HandlePausedJob** che viene chiamato se il processo o la coda è in pausa è illustrato di seguito.  
   
@@ -87,6 +87,6 @@ Gli amministratori di rete fanno spesso fronte ai reclami degli utenti su proces
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& Operatore (C# riferimento)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& Operatore (C# riferimento)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [Documenti in WPF](documents-in-wpf.md)
 - [Panoramica della stampa](printing-overview.md)

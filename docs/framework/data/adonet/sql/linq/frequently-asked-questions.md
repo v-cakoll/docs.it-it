@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 05ba633415f782d5edea7028c1b82b8031428576
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583521"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878244"
 ---
 # <a name="frequently-asked-questions"></a>Domande frequenti
 Nelle sezioni seguenti vengono fornite le risposte ad alcuni problemi comuni che possono verificarsi durante l'implementazione di [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -185,7 +185,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  Un  Non tentare di riutilizzare le istanze di <xref:System.Data.Linq.DataContext>. Ogni oggetto <xref:System.Data.Linq.DataContext> conserva lo stato (inclusa una cache delle identità) per una determinata sessione di modifica/query. Per ottenere nuove istanze basate sullo stato corrente del database, usare un nuovo oggetto <xref:System.Data.Linq.DataContext>.  
   
- È tuttavia possibile usare il pool di connessioni [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] sottostante. Per altre informazioni, vedere [Pool di connessioni SQL Server (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ È comunque possibile usare pool di connessioni ADO.NET sottostante. Per altre informazioni, vedere [Pool di connessioni SQL Server (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ## <a name="second-datacontext-is-not-updated"></a>Il secondo oggetto DataContext non viene aggiornato  
  D. Un'istanza di <xref:System.Data.Linq.DataContext> è stata usata per archiviare i valori nel database. Tuttavia, un secondo oggetto <xref:System.Data.Linq.DataContext> nello stesso database non riflette i valori aggiornati. La seconda istanza <xref:System.Data.Linq.DataContext> sembra restituire i valori memorizzati nella cache.  

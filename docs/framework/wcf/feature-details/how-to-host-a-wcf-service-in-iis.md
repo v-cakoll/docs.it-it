@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9ff82d58f08d8c040984b37422a7048b9d4361d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000831"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878644"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Procedura: Hosting di un servizio WCF in WAS
 Questo argomento descrive i passaggi di base necessari per creare un servizio Windows Communication Foundation (WCF) ospitato in Internet Information Services (IIS). Questo argomento presuppone la conoscenza di IIS e la comprensione dello strumento di gestione IIS per creare e gestire applicazioni IIS. Per altre informazioni su IIS vedere [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Un servizio WCF che viene eseguito nell'ambiente IIS sfrutta appieno le funzionalità IIS, quali il riciclo dei processi, interruzione dell'inattività, il monitoraggio dello stato di processo e attivazione basata su messaggi. Questa opzione di hosting richiede che IIS sia configurato correttamente, ma non richiede la scrittura di codice di hosting come parte dell'applicazione. È possibile utilizzare l'hosting IIS solo con un trasporto HTTP.  
   
- Per altre informazioni su come WCF e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] interagiscono, vedere [i servizi WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Per altre informazioni sulla configurazione della protezione, vedere [sicurezza](../../../../docs/framework/wcf/feature-details/security.md).  
+ Per altre informazioni sulle modalità di interazione di WCF e ASP.NET, vedere [servizi WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Per altre informazioni sulla configurazione della protezione, vedere [sicurezza](../../../../docs/framework/wcf/feature-details/security.md).  
   
  Per la copia di origine di questo esempio, vedere [IIS di Hosting usando il codice Inline](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md).  
   
@@ -23,7 +23,7 @@ Questo argomento descrive i passaggi di base necessari per creare un servizio Wi
   
 1. Confermare che IIS sia installato e in esecuzione nel computer. Per altre informazioni sull'installazione e configurazione di IIS vedere [Installing and Configuring IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2. Creare una nuova cartella per i file dell'applicazione denominata "IISHostedCalcService", assicurarsi che [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] abbia accesso al contenuto della cartella e utilizzare lo strumento di gestione IIS per creare una nuova applicazione IIS situata fisicamente in questa directory dell'applicazione. Quando si crea un alias per la directory dell'applicazione utilizzare "IISHostedCalc".  
+2. Creare una nuova cartella per i file dell'applicazione denominata "IISHostedCalcService", verificare che ASP.NET possa accedere al contenuto della cartella e utilizzare lo strumento di gestione IIS per creare una nuova applicazione IIS fisicamente ubicata in questa directory dell'applicazione. Quando si crea un alias per la directory dell'applicazione utilizzare "IISHostedCalc".  
   
 3. Creare un nuovo file "service.svc" nella directory dell'applicazione. Modificare questo file aggiungendo il codice seguente @ServiceHost elemento.  
   

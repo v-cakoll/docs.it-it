@@ -8,15 +8,15 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: 2b22cccbd24671a74ed9819d1613ffe5a7e072a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ef8ac62d9d969ce4463931d69b0302376ca0ccc4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598393"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881538"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Espressioni incorporate in XML (Visual Basic)
-Le espressioni incorporate consentono di creare valori letterali XML che contengono espressioni valutate in fase di esecuzione. Sintassi dell'espressione incorporata `<%=` `expression` `%>`, che è la stessa sintassi utilizzata [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
+Le espressioni incorporate consentono di creare valori letterali XML che contengono espressioni valutate in fase di esecuzione. Sintassi dell'espressione incorporata `<%=` `expression` `%>`, che è la stessa sintassi usata in ASP.NET.  
   
  Ad esempio, è possibile creare un elemento XML letterale, se si combinano espressioni incorporate con contenuto di testo letterale.  
   

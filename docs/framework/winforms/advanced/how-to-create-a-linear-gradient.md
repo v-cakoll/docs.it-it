@@ -10,12 +10,12 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 953a1944073a8cb5b19ef072e2a523baec3a5605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e55d27b454579268658192ae56daa52e0b28bb83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650010"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876064"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Procedura: Creare una sfumatura lineare
 GDI+ fornisce orizzontali, verticali e diagonali sfumature lineari. Per impostazione predefinita, il colore in una sfumatura lineare viene modificato in modo uniforme. Tuttavia, è possibile personalizzare una sfumatura lineare in modo che il colore viene modificato in modo non uniforme.  
@@ -31,9 +31,9 @@ Il <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> costruttore ri
   
  La figura seguente mostra la riga, i puntini di sospensione e il rettangolo. Si noti che la sfumatura di colore viene ripetuto man mano che aumenta la coordinata orizzontale a oltre 200.  
   
- ![Sfumatura lineare](./media/cslineargradient1.png "cslineargradient1")  
+ ![Una riga, un'ellisse e un rettangolo riempito con una sfumatura di colore.](./media/how-to-create-a-linear-gradient/gradient-line-ellipse-rectangle.png)  
   
-### <a name="to-use-horizontal-linear-gradients"></a>Per utilizzare sfumature lineari orizzontali  
+## <a name="to-use-horizontal-linear-gradients"></a>Per utilizzare sfumature lineari orizzontali  
   
 - Passare blu rosso ed è opaco opaco come il terzo e quarto argomento, rispettivamente.  
   
@@ -56,9 +56,9 @@ Il <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> costruttore ri
   
  La figura seguente mostra l'ellisse risultante e il rettangolo.  
   
- ![Sfumatura lineare](./media/cslineargradient2.png "cslineargradient2")  
+ ![Un'ellisse e un rettangolo riempito con una sfumatura di colore orizzontale.](./media/how-to-create-a-linear-gradient/gradient-ellipse-rectangle.png)  
 
-### <a name="to-customize-linear-gradients"></a>Per personalizzare le sfumature lineari  
+## <a name="to-customize-linear-gradients"></a>Per personalizzare le sfumature lineari  
   
 - Passare il rosso opaco e nero opaco come il terzo e quarto argomento, rispettivamente.  
   
@@ -71,9 +71,9 @@ Il <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> costruttore ri
   
  La figura seguente mostra la riga e l'ellisse. Si noti che il colore in ellisse cambia gradualmente quando si sposta lungo una riga che sono parallelo a quella che passa attraverso (0, 0) e (200, 100).  
   
- ![Sfumatura lineare](./media/cslineargradient3.png "cslineargradient3")  
+ ![Una riga e un elemento ellipse riempito con una sfumatura di colore diagonale.](./media/how-to-create-a-linear-gradient/gradient-line-ellipse.png)  
   
-### <a name="to-create-diagonal-linear-gradients"></a>Per creare diagonale sfumature lineari  
+## <a name="to-create-diagonal-linear-gradients"></a>Per creare diagonale sfumature lineari  
   
 - Passare l'opaco blu e verde opaco come il terzo e quarto argomento, rispettivamente.  
   

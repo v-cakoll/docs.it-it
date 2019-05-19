@@ -2,12 +2,12 @@
 title: 'Codificatore di messaggi personalizzati: Codificatore di compressione'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: d5ec330fb4aa0a136c4a0e4c8d249d7ebb9d0692
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6ada1cdeee02eb747f9f85abc9c99602d5f26b72
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650194"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878453"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Codificatore di messaggi personalizzati: Codificatore di compressione
 In questo esempio viene illustrato come implementare un codificatore personalizzato utilizzando la piattaforma di Windows Communication Foundation (WCF).  
@@ -334,7 +334,7 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Installare [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando il comando seguente:  
+1. Installare ASP.NET 4.0 usando il comando seguente:  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  

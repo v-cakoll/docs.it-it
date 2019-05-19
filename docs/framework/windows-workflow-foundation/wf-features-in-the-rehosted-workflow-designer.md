@@ -2,12 +2,12 @@
 title: Supporto per nuovo funzionalità di Workflow Foundation 4.5 nella finestra di progettazione del flusso di lavoro ospitata nuovamente
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8807506866ef0f5d73065958f1102460ebcc5e9f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669800"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876459"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Supporto per nuovo funzionalità di Workflow Foundation 4.5 nella finestra di progettazione del flusso di lavoro ospitata nuovamente
 Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introdotte molte nuove funzionalità, inclusi numerosi miglioramenti all'esperienza di progettazione del flusso di lavoro. In questo argomento vengono descritte quali funzionalità sono supportate nella finestra di progettazione ospitata nuovamente e quali non sono attualmente supportate.
@@ -37,25 +37,25 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
 
  Nella schermata seguente è illustrato il menu di scelta rapida della finestra di progettazione delle variabili e degli argomenti.
 
- ![Variabili e menu di scelta rapida della finestra di progettazione argomenti](./media/designercontextmenu.png "DesignerContextMenu")
+ ![Menu di scelta rapida della finestra di progettazione argomenti e variabili](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>Racchiudere automaticamente con l'attività Sequence
  Poiché un flusso di lavoro o determinate attività contenitore (ad esempio <xref:System.Activities.Statements.NoPersistScope>) potevano contenere solo un'unica attività Body, l'aggiunta di una seconda attività richiedeva allo sviluppatore di eliminare la prima attività, di aggiungere un'attività <xref:System.Activities.Statements.Sequence> e, successivamente, di aggiungere entrambe le attività all'attività Sequence. A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], quando si aggiunge una seconda attività all'area di progettazione, verrà creata automaticamente un'attività `Sequence` per eseguire il wrapping di entrambe le attività. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.
 
  La schermata riportata di seguito mostra un'attività di `WriteLine` in `Body` di `NoPersistScope`.
 
- ![Automatico&#45;racchiudere il percorso di rilascio](./media/autosurround1.png "AutoSurround1")
+ ![Un'attività WriteLine nel corpo di un'attività NoPersistScope.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-write-line-activity.png)
 
  La schermata riportata di seguito mostra l'attività automaticamente creata di `Sequence` in `Body` quando un secondo `WriteLine` viene rilasciato sotto il primo.
 
- ![Attività sequence creata automaticamente](./media/autosurround2.png "AutoSurround2")
+ ![Una sequenza creata automaticamente nel corpo di un NoPersistScope.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-sequence-activity.png)
 
 ### <a name="pan-mode"></a>Modalità dettaglio
  Per spostarsi più facilmente in un flusso di lavoro di grandi dimensioni nella finestra di progettazione è possibile abilitare la modalità dettaglio, consentendo allo sviluppatore di selezionare e trascinare la parte visibile del flusso di lavoro, anziché dover usare le barre di scorrimento. Il pulsante per attivare la modalità dettaglio si trova nell'angolo inferiore destro della finestra di progettazione. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.
 
  Nella schermata seguente viene illustrato il pulsante della modalità dettaglio posizionato nell'angolo inferiore destro della finestra di progettazione del flusso di lavoro.
 
- ![Pulsante mano nella finestra di progettazione del flusso di lavoro](./media/panbutton.png "PanButton")
+ ![Il pulsante Zoom evidenziato nella finestra di progettazione del flusso di lavoro.](./media/wf-features-in-the-rehosted-workflow-designer/pan-button-workflow-designer.png)
 
  Per ottenere il dettaglio della finestra di progettazione del flusso di lavoro è anche possibile usare il pulsante centrale del mouse o la barra spaziatrice.
 
@@ -69,7 +69,7 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
 
  Lo screenshot seguente del flusso di lavoro completata dal [esercitazione introduttiva su](getting-started-tutorial.md) Mostra la visualizzazione struttura con un flusso di lavoro sequenza.
 
- ![Visualizzazione nella finestra di progettazione del flusso di lavoro struttura](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+ ![Screenshot della visualizzazione struttura con un flusso di lavoro sequenza in Visual Studio](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Maggiore controllo della visibilità degli elementi della barra della shell e dell'intestazione
  In una finestra di progettazione ospitata nuovamente, alcuni dei controlli dell'interfaccia utente standard possono non essere appropriati per un determinato flusso di lavoro e, pertanto, è possibile disattivarli. In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] questa personalizzazione è supportata solo dalla barra della shell nella parte inferiore della finestra di progettazione. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] la visibilità degli elementi dell'intestazione della shell nella parte superiore della finestra di progettazione può essere regolata impostando la proprietà <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> con il valore <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> appropriato.
@@ -79,18 +79,18 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
 
  Nella schermata seguente vengono illustrati i punti di associazione che diventano visibili quando un'attività viene trascinata dalla casella degli strumenti.
 
- ![Nodo iniziale del diagramma di flusso che illustra i punti di connessione automatica](./media/autoconnect1.png "Autoconnect1")
+ ![Visualizzazione di diagramma di flusso iniziale nodo punti di connessione automatica](./media/wf-features-in-the-rehosted-workflow-designer/auto-connect-points-start-node.png)
 
  Le attività possono anche essere trascinate nelle connessioni tra i nodi e gli stati del diagramma di flusso per inserire automaticamente un nodo tra altri due. Nella schermata seguente viene illustrata la linea di connessione evidenziata in cui è possibile trascinare e rilasciare le attività dalla casella degli strumenti.
 
- ![Automatico&#45;inserire handle per l'eliminazione di attività](./media/autoinsert.png "Autoinsert")
+ ![Handle di inserimento automatico per il rilascio delle attività](./media/wf-features-in-the-rehosted-workflow-designer/auto-insert-connecting-line.png)
 
  Connessione e inserimento automatici sono supportati nella finestra di progettazione ospitata nuovamente.
 
 ### <a name="designer-annotations"></a>Annotazioni della finestra di progettazione
  Per semplificare lo sviluppo di flussi di lavoro di grandi dimensioni, la finestra di progettazione supporta ora l'aggiunta di annotazioni per consentire di tenere traccia del processo di progettazione. Le annotazioni possono essere aggiunte ad attività, stati, nodi del diagramma di flusso, variabili e argomenti. Nella schermata seguente è illustrato il menu di scelta rapida usato per aggiungere annotazioni alla finestra di progettazione.
 
- ![Menu di scelta rapida annotazione](./media/annotationdialog.png "annotationdialog")
+ ![Screenshot che mostra il menu per l'aggiunta di notazioni.](./media/wf-features-in-the-rehosted-workflow-designer/designer-annotations-context-menu.png)
 
  Le annotazioni della finestra di progettazione non sono supportate nella finestra di progettazione ospitata nuovamente.
 
@@ -134,7 +134,7 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
   
  Lo screenshot seguente illustra il flusso di lavoro alla macchina sullo stato completato il [esercitazione introduttiva](getting-started-tutorial.md) passaggio [come: Creare un flusso di lavoro macchina a stati](how-to-create-a-state-machine-workflow.md).  
   
- ![Flusso di lavoro macchina a stati completo](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Figura che mostra il lavoro macchina a stati completato.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
  Per altre informazioni sulla creazione di flussi, vedere [flussi](state-machine-workflows.md). I flussi di lavoro macchina a stati sono supportati nella finestra di progettazione ospitata nuovamente.  
   

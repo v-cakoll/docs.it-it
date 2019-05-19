@@ -2,12 +2,12 @@
 title: Considerazioni sulla sicurezza (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583475"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879925"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerazioni sulla sicurezza (Entity Framework)
 In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che riguardano in modo particolare lo sviluppo, la distribuzione e l'esecuzione di applicazioni [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. È consigliabile seguire anche le raccomandazioni per la creazione di applicazioni .NET Framework protette. Per altre informazioni, vedere [Cenni preliminari sulla sicurezza](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -141,22 +141,23 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
  Accedere ai metodi e alle proprietà di un oggetto <xref:System.Data.Objects.ObjectContext> all'interno di un blocco try-catch. L'intercettazione di eccezioni impedisce alle eccezioni non gestite di esporre voci nell'oggetto <xref:System.Data.Objects.ObjectStateManager> o informazioni del modello (ad esempio i nomi di tabella) agli utenti dell'applicazione.  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>Considerazioni sulla sicurezza relative ad applicazioni ASP.NET  
- Quando si usano percorsi in applicazioni [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)], è necessario considerare quanto segue.  
+
+È opportuno considerare quanto segue quando si lavora con percorsi nelle applicazioni ASP.NET.  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>Verificare se l'host esegue i controlli del percorso.  
- Quando viene usata la stringa di sostituzione `|DataDirectory|` (racchiusa tra barre verticali), [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] verifica che il percorso risolto sia supportato. "..", ad esempio, non è consentito dietro `DataDirectory`. Lo stesso controllo per la risoluzione dell'operatore radice dell'applicazione Web (`~`) viene eseguito dal processo che ospita [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]. IIS esegue questo controllo, ma è possibile che host diversi da IIS non verifichino il supporto del percorso risolto. È opportuno dunque conoscere il comportamento dell'host su cui viene distribuita un'applicazione [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+ Quando il `|DataDirectory|` (racchiusa tra barre verticali) viene usata la stringa di sostituzione, ADO.NET consente di verificare che il percorso risolto sia supportato. "..", ad esempio, non è consentito dietro `DataDirectory`. Lo stesso controllo per la risoluzione di operatore radice dell'applicazione Web (`~`) viene eseguita dal processo di hosting ASP.NET. IIS esegue questo controllo, ma è possibile che host diversi da IIS non verifichino il supporto del percorso risolto. È opportuno dunque conoscere il comportamento dell'host su cui viene distribuita un'applicazione [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Non dare per scontati i nomi di percorso risolti.  
  Anche se i valori in cui l'operatore radice (`~`) e la stringa di sostituzione `DataDirectory` si risolvono dovrebbero rimanere costanti durante il runtime dell'applicazione, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] non impedisce all'host di modificarli.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Verificare la lunghezza del percorso prima della distribuzione.  
- Prima di distribuire un'applicazione [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], occorre assicurarsi che i valori dell'operatore radice (~) e la stringa di sostituzione `DataDirectory` sono superino i limiti di lunghezza del percorso del sistema operativo. I provider di dati [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] non si assicurano che la lunghezza del percorso sia all'interno di limiti validi.  
+ Prima di distribuire un'applicazione [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], occorre assicurarsi che i valori dell'operatore radice (~) e la stringa di sostituzione `DataDirectory` sono superino i limiti di lunghezza del percorso del sistema operativo. Provider di dati ADO.NET garantisce che la lunghezza del percorso sia all'interno di limiti validi.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Considerazioni sulla sicurezza relative ai metadati ADO.NET  
  Le considerazioni sulla sicurezza illustrate di seguito si applicano in caso di generazione e utilizzo di file di mapping e di modello.  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>Non esporre informazioni riservate tramite la registrazione.  
- I componenti del servizio di metadati [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] non registrano informazioni private. In presenza di risultati che non è possibile restituire a causa di restrizioni di accesso, i sistemi di gestione dei database e i file system devono restituire zero risultati anziché generare un'eccezione che potrebbe contenere informazioni riservate.  
+Componenti del servizio metadati ADO.NET non registrano informazioni private. In presenza di risultati che non è possibile restituire a causa di restrizioni di accesso, i sistemi di gestione dei database e i file system devono restituire zero risultati anziché generare un'eccezione che potrebbe contenere informazioni riservate.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Non accettare oggetti MetadataWorkspace da fonti non attendibili.  
  Le applicazioni non devono accettare istanze della classe <xref:System.Data.Metadata.Edm.MetadataWorkspace> da fonti non attendibili. Al contrario, è necessario costruire in modo esplicito un'area di lavoro e popolarla a partire da tale origine.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: cc40d7e10243f63040d7e4ad457aac0f9122b6ad
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6ab898c93086e477bf4384b4d6c725fbdc8fe761
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590793"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879144"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Nozioni fondamentali relative alle applicazioni Windows Forms (Visual Basic)
 Una parte importante di Visual Basic è la possibilità di creare applicazioni Windows Forms che vengono eseguite localmente sui computer degli utenti. È possibile usare Visual Studio per creare l'applicazione e interfaccia utente mediante Windows Forms. Un'applicazione Windows Forms è basata sulle classi dal <xref:System.Windows.Forms> dello spazio dei nomi.  
@@ -67,7 +67,7 @@ Una parte importante di Visual Basic è la possibilità di creare applicazioni W
 |A|Vedere|  
 |--------|---------|  
 |Usare il <xref:System.Windows.Forms.BindingSource> componente|[Procedura: Associare controlli Windows Form al componente BindingSource usando la finestra di progettazione](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|Lavorare con [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zdroje dat|[Procedura: Ordinare e filtrare i dati ADO.NET con il Windows Form componente BindingSource](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Usare le origini dati ADO.NET|[Procedura: Ordinare e filtrare i dati ADO.NET con il Windows Form componente BindingSource](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Utilizzare la finestra Origini dati|[Procedura dettagliata: Visualizzazione dei dati in un Windows Form](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Distribuzione delle applicazioni ai client  

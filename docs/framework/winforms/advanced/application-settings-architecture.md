@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592776"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876226"
 ---
 # <a name="application-settings-architecture"></a>Architettura Impostazioni applicazione
 Questo argomento descrive il funzionamento dell'architettura Impostazioni applicazione e ne analizza le funzionalità avanzate, come i raggruppamenti e le chiavi delle impostazioni.  
@@ -22,7 +22,7 @@ Questo argomento descrive il funzionamento dell'architettura Impostazioni applic
  Si tratta di interfacce che consentono ai componenti personalizzati di mantenere le proprie impostazioni quando sono ospitati in un'applicazione. Usando le chiavi delle impostazioni, i componenti possono mantenere le impostazioni per più istanze del componente separato.  
   
 ## <a name="defining-settings"></a>Definizione delle impostazioni  
- L'architettura delle impostazioni applicazione viene usata sia in [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] che in Windows Form e contiene un numero di classi di base condivise in entrambi gli ambienti. La più importante è <xref:System.Configuration.SettingsBase>, fornisce l'accesso alle impostazioni attraverso una raccolta che fornisce metodi di basso livello per il caricamento e salvataggio delle impostazioni. Ogni ambiente implementa una propria classe derivata da <xref:System.Configuration.SettingsBase> per fornire funzionalità aggiuntive delle impostazioni per quell'ambiente. In un'applicazione basata su Windows Form, tutte le impostazioni dell'applicazione devono essere definite in una classe derivata dal <xref:System.Configuration.ApplicationSettingsBase> (classe), che consente di aggiungere le funzionalità seguenti alla classe di base:  
+ L'architettura Impostazioni applicazione viene utilizzato all'interno di ASP.NET e Windows Form e contiene un numero di classi di base che vengono condivise tra entrambi gli ambienti. La più importante è <xref:System.Configuration.SettingsBase>, fornisce l'accesso alle impostazioni attraverso una raccolta che fornisce metodi di basso livello per il caricamento e salvataggio delle impostazioni. Ogni ambiente implementa una propria classe derivata da <xref:System.Configuration.SettingsBase> per fornire funzionalità aggiuntive delle impostazioni per quell'ambiente. In un'applicazione basata su Windows Form, tutte le impostazioni dell'applicazione devono essere definite in una classe derivata dal <xref:System.Configuration.ApplicationSettingsBase> (classe), che consente di aggiungere le funzionalità seguenti alla classe di base:  
   
 - Caricamento e salvataggio delle operazioni di livello superiore  
   

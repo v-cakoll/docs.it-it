@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 89d9517a92155f569a15c5272bcecc1c8f427f1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b914509656d3ce67d62dcd23cebdcc3b74278d72
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013153"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882000"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Procedura: Impostare l'immagine visualizzata da un controllo di Windows Forms usando la finestra di progettazione
 Vari controlli Windows Form consente di visualizzare immagini. L'immagine può essere un'icona che illustra lo scopo del controllo, ad esempio un'icona del disco su un pulsante indica la **salvare** comando. In alternativa, è possibile utilizzare un'immagine di sfondo per fornire il controllo l'aspetto desiderato.  
@@ -26,7 +26,7 @@ Vari controlli Windows Form consente di visualizzare immagini. L'immagine può e
   
 1. Nel **proprietà** finestra, seleziona la **immagine** oppure **BackgroundImage** proprietà del controllo, quindi fare clic sul pulsante con i puntini di sospensione (  
   
-     ![VisualStudioEllipsesButton screenshot](../media/vbellipsesbutton.png "vbEllipsesButton")  
+     ![Il pulsante con puntini di sospensione (...) nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png))  
   
      ) per visualizzare il **Seleziona risorsa** nella finestra di dialogo.  
   

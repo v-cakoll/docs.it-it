@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: d9af75474f6b0aec2bdf6aa2f550c280209f91e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a5fbc28a470415312540fff0acc969f939410b5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633489"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875535"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introduzione a LINQ in Visual Basic
 Language-Integrated Query (LINQ) aggiunge funzionalità di query a Visual Basic e fornisce semplici e potenti funzionalità quando si lavora con tutti i tipi di dati. Anziché inviare una query a un database da elaborare, o utilizzare sintassi di query differenti per ogni tipo di dati che si stanno cercando, LINQ introduce le query come parte del linguaggio Visual Basic. Utilizza una sintassi unificata indipendentemente dal tipo di dati.  
@@ -43,7 +43,7 @@ Language-Integrated Query (LINQ) aggiunge funzionalità di query a Visual Basic 
 |LINQ to Objects|Il provider LINQ to Objects consente di eseguire una query su raccolte e matrici in memoria. Se un oggetto supporta l'interfaccia <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, il provider LINQ to Objects consente di eseguire una query su di esso.<br /><br /> È possibile abilitare il provider LINQ to Objects importando il <xref:System.Linq> dello spazio dei nomi, che viene importato per impostazione predefinita per tutti i progetti di Visual Basic.<br /><br /> Per altre informazioni sul provider LINQ to Objects, vedere [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
 |LINQ to SQL|Il provider LINQ to SQL consente di eseguire query e di modificare i dati su un database SQL server. Questo semplifica il mapping del modello a oggetti per un'applicazione alle tabelle e agli oggetti in un database.<br /><br /> Visual Basic semplifica l'utilizzo di LINQ to SQL includendo il Object Relational Designer (O/R Designer). Questa finestra di progettazione viene utilizzata per creare un modello a oggetti in un'applicazione con mapping sugli oggetti in un database. O/R Designer anche fornisce funzionalità per eseguire il mapping di stored procedure e funzioni per i <xref:System.Data.Linq.DataContext> oggetto, che gestisce la comunicazione con il database e archivia lo stato per le verifiche della concorrenza ottimistica.<br /><br /> Per altre informazioni sul provider LINQ to SQL, vedere [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Per altre informazioni su Progettazione relazionale oggetti, vedere [strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
 |LINQ to XML|Il provider LINQ to XML consente di eseguire query e di modificare l'XML. È possibile modificare l'XML in memoria o caricare l'XML da file o salvare l'XML in un file.<br /><br /> Inoltre, il provider LINQ to XML consente i valori letterali XML e proprietà axis XML che consentono di scrivere codice XML direttamente nel codice Visual Basic. Per altre informazioni, vedere [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
-|LINQ to DataSet|Il provider LINQ to DataSet consente di eseguire query e aggiornamento dati in un [!INCLUDE[vstecado](~/includes/vstecado-md.md)] set di dati. È possibile aggiungere le caratteristiche avanzate di LINQ ad applicazioni che utilizzano set di dati per semplificare ed estendere le funzionalità per l'esecuzione di query, l'aggregazione e l'aggiornamento dei dati nel set di dati.<br /><br /> Per altre informazioni, vedere [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
+|LINQ to DataSet|Il provider LINQ to DataSet consente di eseguire una query e aggiornare i dati in un set di dati ADO.NET. È possibile aggiungere le caratteristiche avanzate di LINQ ad applicazioni che utilizzano set di dati per semplificare ed estendere le funzionalità per l'esecuzione di query, l'aggregazione e l'aggiornamento dei dati nel set di dati.<br /><br /> Per altre informazioni, vedere [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
 ## <a name="structure-of-a-linq-query"></a>Struttura di una query LINQ  
  Una query LINQ, noto anche come un *espressione di query*, costituito da una combinazione di clausole di query che identificano le origini dati e variabili di iterazione per la query. Un'espressione di query può includere anche istruzioni per ordinare, filtrare, raggruppare e unire o eseguire calcoli da applicare ai dati di origine. La sintassi delle espressioni di query è simile alla sintassi SQL; pertanto, gran parte della sintassi risulterà familiare.  

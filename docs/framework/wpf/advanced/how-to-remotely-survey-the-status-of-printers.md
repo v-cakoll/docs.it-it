@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 311889d70a5dd9b30f4151c453d489edf77b92e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da2576696b514dca882636125cfb3e31a82d7f6e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591633"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878194"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Procedura: Sorvegliare da remoto lo stato delle stampanti
 In qualsiasi momento in aziende di medie e grandi dimensioni potrebbero essere presenti più stampanti non funzionanti a causa di fogli bloccati o carta esaurita o un'altra situazione problematica. Il set completo di proprietà della stampante esposto nel [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] di Microsoft .NET Framework forniscono un mezzo per eseguire una rapida verifica dello stato delle stampanti.  
@@ -51,7 +51,7 @@ In qualsiasi momento in aziende di medie e grandi dimensioni potrebbero essere p
  [!code-csharp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#surveyqueues)]
  [!code-vb[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#surveyqueues)]  
   
- Per controllare lo stato delle stampanti usando i flag del <xref:System.Printing.PrintQueue.QueueStatus%2A> proprietà, esaminare ogni flag pertinente per verificare se è impostato. Il metodo standard per verificare se un bit è impostato in un set di flag di bit consiste nell'eseguire un'operazione di AND logico con il set di flag come uno degli operandi e il flag stesso come altro operando. Poiché il flag stesso ha un solo bit impostato, il risultato dell'AND logico è che, al massimo, è impostato quello stesso bit. Per verificare se lo è o meno, confrontare il risultato dell’AND logico con il flag stesso. Per altre informazioni, vedere <xref:System.Printing.PrintQueueStatus>, il [& operatore (C# riferimento)](~/docs/csharp/language-reference/operators/and-operator.md), e <xref:System.FlagsAttribute>.  
+ Per controllare lo stato delle stampanti usando i flag del <xref:System.Printing.PrintQueue.QueueStatus%2A> proprietà, esaminare ogni flag pertinente per verificare se è impostato. Il metodo standard per verificare se un bit è impostato in un set di flag di bit consiste nell'eseguire un'operazione di AND logico con il set di flag come uno degli operandi e il flag stesso come altro operando. Poiché il flag stesso ha un solo bit impostato, il risultato dell'AND logico è che, al massimo, è impostato quello stesso bit. Per verificare se lo è o meno, confrontare il risultato dell’AND logico con il flag stesso. Per altre informazioni, vedere <xref:System.Printing.PrintQueueStatus>, il [& operatore (C# riferimento)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-), e <xref:System.FlagsAttribute>.  
   
  Per ogni attributo il cui bit è impostato, il codice aggiunge un avviso al report finale che verrà presentato all'utente. (Il metodo **ReportAvailabilityAtThisTime** che viene chiamato alla fine del codice è illustrato di seguito.)  
   
@@ -85,6 +85,6 @@ In qualsiasi momento in aziende di medie e grandi dimensioni potrebbero essere p
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
-- [& Operatore (C# riferimento)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& Operatore (C# riferimento)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [Documenti in WPF](documents-in-wpf.md)
 - [Panoramica della stampa](printing-overview.md)

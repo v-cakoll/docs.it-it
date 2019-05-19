@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f0510b9e3f31686e22532f21989cb95905522286
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583798"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879882"
 ---
 # <a name="connection-string-builders"></a>Generatori di stringhe di connessione
-Nelle versioni precedenti di [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]controllo delle stringhe di connessione con la stringa concatenata valori non sia stato eseguito, in modo che in fase di esecuzione, una parola chiave non corretta generata in fase di compilazione, un <xref:System.ArgumentException>. Ognuno dei provider di dati .NET Framework supporta una sintassi diversa per parole chiave di stringa di connessione, che ha effettuato la costruzione di stringhe di connessione valide difficile se eseguito manualmente. Per risolvere questo problema, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 sono stati introdotti nuovi generatori di stringhe di connessione per ogni provider di dati .NET Framework. Ogni provider di dati include una classe di generatori di stringhe di connessione fortemente tipizzata che eredita da <xref:System.Data.Common.DbConnectionStringBuilder>. La tabella seguente elenca i provider di dati .NET Framework e le classi di generatori di stringa di connessione associata.  
+Nelle versioni precedenti di ADO.NET, controllo delle stringhe di connessione con i valori di stringa concatenata in fase di compilazione non sia stato eseguito, in modo che in fase di esecuzione, una parola chiave non corretta generata un <xref:System.ArgumentException>. Ognuno dei provider di dati .NET Framework supporta una sintassi diversa per parole chiave di stringa di connessione, che ha effettuato la costruzione di stringhe di connessione valide difficile se eseguito manualmente. Per risolvere questo problema, ADO.NET 2.0 ha introdotto nuovi generatori di stringhe di connessione per ogni provider di dati .NET Framework. Ogni provider di dati include una classe di generatori di stringhe di connessione fortemente tipizzata che eredita da <xref:System.Data.Common.DbConnectionStringBuilder>. La tabella seguente elenca i provider di dati .NET Framework e le classi di generatori di stringa di connessione associata.  
   
 |Provider|Classe ConnectionStringBuilder|  
 |--------------|-----------------------------------|  

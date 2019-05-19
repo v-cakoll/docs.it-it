@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: e9b2c1077cf3323a7d5b69bee6dff7e6f9611818
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 78286cde925a4583a3610ce100d23e16adcefe49
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634140"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878080"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Procedura: Creare un servizio dati tramite un'origine dati di ADO.NET Entity Framework (WCF Data Services)
 
-WCF Data Services espone i dati di entità come un servizio dati. Tali dati vengono forniti da [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] quando l'origine dati è un database relazionale. In questo argomento viene illustrato come creare un [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-basato sul modello di dati in un'applicazione Web di Visual Studio che si basa su un database esistente e Usa questo modello di dati per creare un nuovo servizio dati.
+WCF Data Services espone i dati di entità come un servizio dati. Questi dati di entità vengono forniti da ADO.NET[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] quando l'origine dati è un database relazionale. In questo argomento viene illustrato come creare un [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-basato sul modello di dati in un'applicazione Web di Visual Studio che si basa su un database esistente e Usa questo modello di dati per creare un nuovo servizio dati.
 
 Il [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] fornisce anche uno strumento da riga di comando che può generare un [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] modello all'esterno di un progetto di Visual Studio. Per altre informazioni, vedere [Procedura: Consente di generare il modello e i file di Mapping EdmGen.exe](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
 
@@ -53,7 +53,7 @@ Il [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] fornisce anche un
 
 2. Nel **Visualizzatore modelli**, fare clic sul modello, fare clic su **proprietà**e quindi prendere nota del nome del contenitore di entità.
 
-3. Nella **Esplora soluzioni**, fare doppio clic il nome delle [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] del progetto e quindi fare clic su **Add** > **nuovo elemento**.
+3. Nelle **Esplora soluzioni**, fare doppio clic il nome del progetto ASP.NET e quindi fare clic su **Add** > **nuovo elemento**.
 
 4. Nel **Aggiungi nuovo elemento** finestra di dialogo, seleziona la **WCF Data Services** modello nel **Web** categoria.
 

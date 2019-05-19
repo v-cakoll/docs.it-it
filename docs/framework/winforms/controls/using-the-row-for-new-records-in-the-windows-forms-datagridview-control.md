@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: ace4b1c32ac30c54b56e2adbbbbf6af0450a4740
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b28a8a8fc2d75f80a14447008c850de63e4e04b3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651544"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882439"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Utilizzo della riga per i nuovi record del controllo DataGridView di Windows Form
 Quando si usa un <xref:System.Windows.Forms.DataGridView> per la modifica dei dati nell'applicazione, spesso si desidera offrire agli utenti la possibilità di aggiungere nuove righe di dati nell'archivio dati. Il <xref:System.Windows.Forms.DataGridView> controllo supporta questa funzionalità, fornendo una riga per i nuovi record, che viene sempre visualizzata come ultima riga. È contrassegnato con un simbolo di asterisco (*) l'intestazione di riga. Le sezioni seguenti illustrano alcune delle attività che è necessario considerare quando si programma con la riga per i nuovi record abilitato.  
@@ -47,7 +47,7 @@ Quando si usa un <xref:System.Windows.Forms.DataGridView> per la modifica dei da
 ## <a name="sorting"></a>Ordinamento  
  In modalità non associata, nuovi record vengono sempre aggiunti alla fine della <xref:System.Windows.Forms.DataGridView> anche se l'utente ha ordinato il contenuto del <xref:System.Windows.Forms.DataGridView>. L'utente dovrà applicare nuovamente l'ordinamento per ordinare la riga nella posizione corretta; Questo comportamento è simile a quella del <xref:System.Windows.Forms.ListView> controllo.  
   
- Nei dati di modalità associata e virtuale, il comportamento di inserimento quando viene applicato un ordinamento sarà dipende dall'implementazione del modello di dati. Per [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], la riga viene immediatamente ordinata nella posizione corretta.  
+ Nei dati di modalità associata e virtuale, il comportamento di inserimento quando viene applicato un ordinamento sarà dipende dall'implementazione del modello di dati. Per ADO.NET, la riga viene ordinata immediatamente nella posizione corretta.  
   
 ## <a name="other-notes-on-the-row-for-new-records"></a>Altre note sulla riga per i nuovi record  
  Non è possibile impostare il <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> proprietà di questa riga a `false`. Un <xref:System.InvalidOperationException> viene generato se si tenta.  

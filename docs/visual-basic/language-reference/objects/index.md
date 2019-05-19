@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 161edd2cb3afeb6ba8b10455a1c3a2c43b90dac1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8852a3daa3cd3891d5053cc1fffe19fa310125de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949669"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880712"
 ---
 # <a name="objects-visual-basic"></a>Oggetti (Visual Basic)
 Questo argomento contiene collegamenti ad altri argomenti che illustrano gli oggetti runtime di Visual Basic e contengono tabelle di procedure, proprietà ed eventi dei relativi membri.  
@@ -37,9 +37,9 @@ Questo argomento contiene collegamenti ad altri argomenti che illustrano gli ogg
 |`My.Computer.Registry` (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)|Specifica proprietà e metodi per la modifica del Registro di sistema.|  
 |[Oggetto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)|Offre proprietà per l'accesso a un'istanza di ogni Windows Form dichiarato nel progetto corrente.|  
 |`My.Log` (<xref:Microsoft.VisualBasic.Logging.AspLog>)|Specifica una proprietà e i metodi per la scrittura di informazioni relative a eventi ed eccezioni nei listener di log dell'applicazione per le applicazioni Web.|  
-|[Oggetto My.Request](../../../visual-basic/language-reference/objects/my-request-object.md)|Ottiene l'oggetto <xref:System.Web.HttpRequest> per la pagina richiesta. L'oggetto `My.Request` contiene informazioni sulla richiesta HTTP corrente.<br /><br /> L'oggetto `My.Request` è disponibile solo per le applicazioni [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].|  
+|[Oggetto My.Request](../../../visual-basic/language-reference/objects/my-request-object.md)|Ottiene l'oggetto <xref:System.Web.HttpRequest> per la pagina richiesta. L'oggetto `My.Request` contiene informazioni sulla richiesta HTTP corrente.<br /><br /> L'oggetto `My.Request` è disponibile solo per le applicazioni ASP.NET.|  
 |[Oggetto My.Resources](../../../visual-basic/language-reference/objects/my-resources-object.md)|Specifica proprietà e classi per l'accesso alle risorse di un'applicazione.|  
-|[Oggetto My.Response](../../../visual-basic/language-reference/objects/my-response-object.md)|Ottiene l'oggetto <xref:System.Web.HttpResponse> associato a <xref:System.Web.UI.Page>. Questo oggetto consente di inviare dati di risposta HTTP a un client e contiene informazioni su tale risposta.<br /><br /> L'oggetto `My.Response` è disponibile solo per le applicazioni [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].|  
+|[Oggetto My.Response](../../../visual-basic/language-reference/objects/my-response-object.md)|Ottiene l'oggetto <xref:System.Web.HttpResponse> associato a <xref:System.Web.UI.Page>. Questo oggetto consente di inviare dati di risposta HTTP a un client e contiene informazioni su tale risposta.<br /><br /> L'oggetto `My.Response` è disponibile solo per le applicazioni ASP.NET.|  
 |[Oggetto My.Settings](../../../visual-basic/language-reference/objects/my-settings-object.md)|Specifica proprietà e metodi per l'accesso alle impostazioni di un'applicazione.|  
 |`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|Offre l'accesso alle informazioni sull'utente corrente.|  
 |[Oggetto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)|Specifica le proprietà per la creazione e l'accesso a una singola istanza di ogni servizio Web a cui fa riferimento il progetto corrente.|  

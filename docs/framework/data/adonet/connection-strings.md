@@ -2,12 +2,12 @@
 title: Stringhe di connessione in ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b7cb0ab061da8364a9fecc3868ba9aaf7501577
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032755"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881165"
 ---
 # <a name="connection-strings-in-adonet"></a>Stringhe di connessione in ADO.NET
 
@@ -17,24 +17,32 @@ Una stringa di connessione contiene informazioni di inizializzazione che vengono
 
 Una stringa di connessione è un elenco delimitato da punto e virgola di coppie chiave/valore parametro:
 
-    keyword1=value; keyword2=value;
+```
+keyword1=value; keyword2=value;
+```
 
 Le parole chiave non sono tra maiuscole e minuscole. I valori, tuttavia, potrebbero essere tra maiuscole e minuscole, a seconda dell'origine dati. Entrambe le parole chiave e i valori possono contenere [spazi vuoti](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Spazi vuoti iniziali e finali viene ignorato nelle parole chiave e senza virgolette i valori.
 
 Se il valore contiene il punto e virgola, [caratteri di controllo Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), o iniziali o finali lo spazio vuoto, deve essere racchiuso tra virgolette singole o doppie. Ad esempio:
 
-    Keyword=" whitespace  ";
-    Keyword='special;character';
+```
+Keyword=" whitespace  ";
+Keyword='special;character';
+```
 
 Il carattere che lo contiene potrebbe non verificarsi all'interno del valore che racchiude. Pertanto, un valore che contiene virgolette singole può essere racchiusi solo tra virgolette doppie e viceversa:
 
-    Keyword='double"quotation;mark';
-    Keyword="single'quotation;mark";
+```
+Keyword='double"quotation;mark';
+Keyword="single'quotation;mark";
+```
 
 Le virgolette se stessi, nonché il segno di uguale, non richiede l'escape, in modo che le stringhe di connessione seguenti sono valide:
 
-    Keyword=no "escaping" 'required';
-    Keyword=a=b=c
+```
+Keyword=no "escaping" 'required';
+Keyword=a=b=c
+```
 
 Poiché ogni valore viene letto fino alla fine della stringa o il successivo punto e virgola, il valore nell'esempio di quest'ultimo è `a=b=c`, e il punto e virgola finale è facoltativo.
 

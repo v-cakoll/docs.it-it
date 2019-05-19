@@ -2,26 +2,43 @@
 title: Debug degli alberi delle espressioni in Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: fb5905c3c1124dd64371216bddda0a17235abdce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fc97d898c5956b5a569036e6e0fe1174714576d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787192"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879876"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Debug degli alberi delle espressioni in Visual Studio (Visual Basic)
+È possibile analizzare la struttura e il contenuto degli alberi delle espressioni durante il debug delle applicazioni. Per ottenere una rapida panoramica della struttura ad albero dell'espressione, è possibile usare la `DebugView` proprietà, che rappresenta gli alberi delle espressioni usando una sintassi speciale descritta [seguito](#debugview-syntax). (Si noti che `DebugView` è disponibile solo in modalità di debug.)  
 
-È possibile analizzare la struttura e il contenuto degli alberi delle espressioni durante il debug delle applicazioni. Per una breve panoramica della struttura ad albero dell'espressione, è possibile usare la proprietà `DebugView`, disponibile solo nella modalità di debug. Per altre informazioni sul debug, vedere [Debug in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
+![DebugView di albero delle espressioni all'interno del debugger di Visual Studio](media/debugging-expression-trees-in-visual-studio/debugview_vb.png)
 
-Per rappresentare meglio il contenuto degli alberi delle espressioni, la proprietà `DebugView` usa i visualizzatori di Visual Studio. Per altre informazioni, vedere [Creare visualizzatori personalizzati](/visualstudio/debugger/create-custom-visualizers-of-data).
+Poiché `DebugView` è una stringa, è possibile usare il [Visualizzatore testo incorporato](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer) per visualizzarlo su più righe, selezionando **Visualizzatore di testo** dall'icona della lente di ingrandimento accanto al `DebugView` etichetta.
 
-### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Per aprire un visualizzatore per un albero delle espressioni
+ ![Visualizzatore testo applicato ai risultati di 'DebugView'](media/debugging-expression-trees-in-visual-studio/string_visualizer_vb.png)
 
-1. Fare clic sull'icona a forma di lente di ingrandimento visualizzata accanto alla proprietà `DebugView` di una struttura ad albero dell'espressione in **Suggerimenti dati**, in una finestra **Espressioni di controllo**, nella finestra **Auto** o nella finestra **Variabili locali**.
+In alternativa, è possibile installare e usare [un visualizzatore personalizzato](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data) degli alberi delle espressioni:
 
-    Verrà visualizzato un elenco di visualizzatori.
+* [Le espressioni leggibile](https://github.com/agileobjects/ReadableExpressions) ([licenza MIT](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md), disponibile all'indirizzo il [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers)), viene eseguito il rendering dell'albero delle espressioni come C# codice:
 
-2. Fare clic sul visualizzatore da usare.
+  ![Visualizzatore espressioni leggibile](media/debugging-expression-trees-in-visual-studio/readable_expressions_visualizer.png)
+
+* [Visualizzatore di struttura ad albero delle espressioni](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([licenza MIT](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)), offre una visualizzazione grafica di albero delle espressioni, relative proprietà e oggetti correlati e può eseguire il rendering dell'albero delle espressioni tramite codice Visual Basic:
+
+  ![Visualizzatore ExpressionToString](media/debugging-expression-trees-in-visual-studio/expression_to_string_visualizer_vb.png)
+
+### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Per aprire un visualizzatore per un albero delle espressioni  
+  
+1. Fai clic sull'icona della lente di ingrandimento visualizzata accanto l'albero delle espressioni in **suggerimenti dati**, un **Watch** finestra, il **Auto** finestra o il **variabililocali** finestra.  
+  
+     Viene visualizzato un elenco di visualizzatori disponibili.: 
+
+      ![Visualizzatori di apertura da Visual Studio](media/debugging-expression-trees-in-visual-studio/expression_tree_visualizers_vb.png)
+
+2. Fare clic sul visualizzatore da usare.  
+
+## <a name="debugview-syntax"></a>`DebugView` Sintassi 
 
 Ogni tipo di espressione viene visualizzato nel visualizzatore come descritto nelle sezioni seguenti.
 
@@ -40,7 +57,7 @@ Se un parametro non ha un nome, viene assegnato un nome generato automaticamente
     Expression.Parameter(GetType(Integer), "num")
     ```
 
-    Proprietà `DebugView`
+    Proprietà`DebugView` 
 
     `$num`
 
@@ -51,7 +68,7 @@ Se un parametro non ha un nome, viene assegnato un nome generato automaticamente
     Expression.Parameter(GetType(Integer))
     ```
 
-    Proprietà `DebugView`
+    Proprietà`DebugView` 
 
     `$var1`
 
@@ -67,7 +84,7 @@ Se un parametro non ha un nome, viene assegnato un nome generato automaticamente
     Dim expr As ConstantExpression = Expression.Constant(num)
     ```
 
-    Proprietà `DebugView`
+    Proprietà`DebugView` 
 
     10
 
@@ -78,7 +95,7 @@ Se un parametro non ha un nome, viene assegnato un nome generato automaticamente
     Dim expr As ConstantExpression = Expression.Constant(num)
     ```
 
-    Proprietà `DebugView`
+    Proprietà`DebugView` 
 
     10D
 
@@ -94,7 +111,7 @@ Se il tipo di un oggetto <xref:System.Linq.Expressions.BlockExpression> differis
     Dim block As BlockExpression = Expression.Block(Expression.Constant("test"))
     ```
 
-    Proprietà `DebugView`
+    Proprietà`DebugView` 
 
     `.Block() {`
 
@@ -109,7 +126,7 @@ Se il tipo di un oggetto <xref:System.Linq.Expressions.BlockExpression> differis
     Expression.Block(GetType(Object), Expression.Constant("test"))
     ```
 
-    Proprietà `DebugView`
+    Proprietà`DebugView` 
 
     `.Block<System.Object>() {`
 
@@ -132,7 +149,7 @@ Se un'espressione lamda non ha un nome, viene assegnato un nome generato automat
     Expression.Lambda(Of Func(Of Integer))(Expression.Constant(1))
     ```
 
-    Proprietà `DebugView`
+    Proprietà`DebugView` 
 
     `.Lambda #Lambda1<System.Func'1[System.Int32]>() {`
 
@@ -147,7 +164,7 @@ Se un'espressione lamda non ha un nome, viene assegnato un nome generato automat
     Expression.Lambda(Of Func(Of Integer))(Expression.Constant(1), "SampleLambda", Nothing)
     ```
 
-    Proprietà `DebugView`
+    Proprietà`DebugView` 
 
     `.Lambda SampleLambda<System.Func'1[System.Int32]>() {`
 
@@ -174,7 +191,7 @@ Se un'etichetta non presenta un nome, ne viene assegnato uno generato automatica
     Expression.Label(target, Expression.Constant(-1)))
     ```
 
-    Proprietà `DebugView`
+    Proprietà`DebugView` 
 
     `.Block() {`
 
@@ -196,7 +213,7 @@ Se un'etichetta non presenta un nome, ne viene assegnato uno generato automatica
     Expression.Goto(target), Expression.Label(target))
     ```
 
-    Proprietà `DebugView`
+    Proprietà`DebugView` 
 
     `.Block() {`
 
@@ -221,7 +238,7 @@ Gli operatori di questo tipo vengono visualizzati con il simbolo "#" davanti l'o
     Expression.Constant(1), Expression.Constant(2))
     ```
 
-    Proprietà `DebugView`
+    Proprietà`DebugView` 
 
     `1 #+ 2`
 
@@ -232,7 +249,7 @@ Gli operatori di questo tipo vengono visualizzati con il simbolo "#" davanti l'o
     Expression.Constant(10.0), GetType(Integer))
     ```
 
-    Proprietà `DebugView`
+    Proprietà`DebugView` 
 
     `#(System.Int32)10D`
 

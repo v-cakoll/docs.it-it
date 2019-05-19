@@ -2,12 +2,12 @@
 title: Procedure consigliate per l'hosting in Internet Information Services (IIS)
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972614"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878597"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Procedure consigliate per l'hosting in Internet Information Services (IIS)
 Questo argomento descrive alcune procedure consigliate per l'hosting di servizi Windows Communication Foundation (WCF).  
@@ -40,7 +40,7 @@ Questo argomento descrive alcune procedure consigliate per l'hosting di servizi 
  È possibile configurare le associazioni del sito Web IIS utilizzando lo snap-in IIS Microsoft Management Console (MMC).  
   
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>I pool di applicazioni che sono in esecuzione in contesti utente diversi sovrascrivono gli assembly da altri account nella cartella temporanea  
- Per assicurare che i pool di applicazioni in esecuzione in contesti utente diversi non possano sovrascrivere gli assembly da altri account nella cartella temporanea dei file [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], utilizzare identità diverse e cartelle temporanee per le diverse applicazioni. Se si hanno, ad esempio, due applicazioni virtuali /Application1 e / Application2, è possibile creare due pool Application, A e B, con due identità diverse. Il pool dell'applicazione A può essere eseguito sotto un'identità utente (user1) mentre il pool dell'applicazione B può essere eseguito sotto un'altra identità utente (user2). Configurare inoltre /Application1 in modo che utilizzi A e /Application2 in modo che utilizzi B.  
+ Per garantire che i pool di applicazioni in esecuzione in contesti utente diversi non è possibile sovrascrivere gli assembly da altri account nella cartella dei file ASP.NET temporanei, utilizzare identità diverse e le cartelle temporanee per applicazioni diverse. Se si hanno, ad esempio, due applicazioni virtuali /Application1 e / Application2, è possibile creare due pool Application, A e B, con due identità diverse. Il pool dell'applicazione A può essere eseguito sotto un'identità utente (user1) mentre il pool dell'applicazione B può essere eseguito sotto un'altra identità utente (user2). Configurare inoltre /Application1 in modo che utilizzi A e /Application2 in modo che utilizzi B.  
   
  Nel file Web. config, è possibile configurare la cartella temporanea utilizzando \< system.web/compilation/@tempFolder>. Per inoltre/Application1, può essere "c:\tempForUser1" e per application2, può essere "c:\tempForUser2". Concedere a queste due cartelle l'autorizzazione di scrittura corrispondente per le due identità.  
   

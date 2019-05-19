@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: 2f72f493d99c1e0b0469150c041649486e5ed124
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e49a3b5732ee1a3626666ce06e366c4940eca05
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794992"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881970"
 ---
 # <a name="myresponse-object"></a>Oggetto My.Response
 Ottiene il <xref:System.Web.HttpResponse> oggetto associato di <xref:System.Web.UI.Page>. Questo oggetto consente di inviare dati di risposta HTTP a un client e contiene informazioni su tale risposta.  
@@ -20,7 +20,7 @@ Ottiene il <xref:System.Web.HttpResponse> oggetto associato di <xref:System.Web.
 ## <a name="remarks"></a>Note  
  Il `My.Response` oggetto contiene l'oggetto corrente <xref:System.Web.HttpResponse> oggetto associato alla pagina.  
   
- Il `My.Response` oggetto è disponibile solo per [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] applicazioni.  
+ Il `My.Response` oggetto è disponibile solo per le applicazioni ASP.NET.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente ottiene la raccolta di intestazioni dal `My.Request` oggetto e viene utilizzato il `My.Response` oggetto da scrivere la pagina ASP.NET.  

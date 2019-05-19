@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-ms.openlocfilehash: 10550416a75592133b69c2807f1da2cca25e8707
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 560bb35bf9685abbc40bc7b87a4490752c546ea4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665837"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880640"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Procedura: Aggiungere e rimuovere schede con TabControl di Windows Forms usando la finestra di progettazione
 Quando si inserisce un <xref:System.Windows.Forms.TabControl> controllo sul form, contiene due schede per impostazione predefinita. È possibile aggiungere o rimuovere schede tramite la finestra di progettazione.  
@@ -29,7 +29,7 @@ Quando si inserisce un <xref:System.Windows.Forms.TabControl> controllo sul form
   
      -oppure-  
   
-     Nel **delle proprietà** finestra, fare clic sul **puntini di sospensione** pulsante (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto a il <xref:System.Windows.Forms.TabControl.TabPages%2A> per aprire la **Editor della raccolta controllo TabPage**. Fare clic sui **Add** oppure **rimuovere** pulsante.  
+     Nel **delle proprietà** finestra, fare clic sul **puntini di sospensione** pulsante (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)) accanto al <xref:System.Windows.Forms.TabControl.TabPages%2A> proprietà Per aprire la **Editor della raccolta controllo TabPage**. Fare clic sui **Add** oppure **rimuovere** pulsante.  
   
 ## <a name="see-also"></a>Vedere anche
 

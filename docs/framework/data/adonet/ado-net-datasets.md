@@ -2,15 +2,15 @@
 title: Dataset ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29aba76731c4170c8af3c913a06e78e89ce3a08d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607587"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877219"
 ---
 # <a name="adonet-datasets"></a>Dataset ADO.NET
-L'oggetto <xref:System.Data.DataSet> è fondamentale per il supporto di scenari di dati disconnessi e distribuiti con [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Il **set di dati** è una rappresentazione residente in memoria dei dati che fornisce un modello di programmazione relazionale coerente indipendentemente dall'origine dati. È possibile usarlo con numerose origini dati diverse, con dati XML o per la gestione di dati locali all'applicazione. Il **set di dati** rappresenta un set completo di dati che include tabelle correlate, vincoli e relazioni tra le tabelle. La figura seguente mostra le **set di dati** modello a oggetti.  
+Il <xref:System.Data.DataSet> oggetto è fondamentale per il supporto disconnessi e distribuiti gli scenari di dati con ADO.NET. Il **set di dati** è una rappresentazione residente in memoria dei dati che fornisce un modello di programmazione relazionale coerente indipendentemente dall'origine dati. È possibile usarlo con numerose origini dati diverse, con dati XML o per la gestione di dati locali all'applicazione. Il **set di dati** rappresenta un set completo di dati che include tabelle correlate, vincoli e relazioni tra le tabelle. La figura seguente mostra le **set di dati** modello a oggetti.  
   
  ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 Modello a oggetti DataSet  
@@ -20,7 +20,7 @@ Modello a oggetti DataSet
  Il **set di dati** possono anche mantenere e ricaricare il contenuto come XML e il relativo schema come schema XML schema definition language (XSD). Per altre informazioni, vedere [Uso di XML in un set di dati](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
 ## <a name="the-datatablecollection"></a>DataTableCollection  
- Un' [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] **set di dati** contiene una raccolta di zero o più tabelle rappresentate da <xref:System.Data.DataTable> oggetti. Il <xref:System.Data.DataTableCollection> contiene tutte le **DataTable** gli oggetti in un **set di dati**.  
+ ADO.NET **set di dati** contiene una raccolta di zero o più tabelle rappresentate da <xref:System.Data.DataTable> oggetti. Il <xref:System.Data.DataTableCollection> contiene tutte le **DataTable** gli oggetti in un **set di dati**.  
   
  Oggetto **DataTable** definito nel <xref:System.Data> dello spazio dei nomi e rappresenta una singola tabella di dati residenti in memoria. In tale oggetto sono contenuti una raccolta di colonne rappresentata da un tipo <xref:System.Data.DataColumnCollection> e dei vincoli rappresentati da un tipo <xref:System.Data.ConstraintCollection>. Lo schema della tabella viene definito da questi due elementi. Oggetto **DataTable** inoltre contiene una raccolta di righe, rappresentate dal <xref:System.Data.DataRowCollection>, che contiene i dati nella tabella. Oltre allo stato corrente, in <xref:System.Data.DataRow> vengono mantenute sia la versione corrente che la versione originale, in modo da consentire l'identificazione delle modifiche apportate ai valori memorizzati nella riga.  
   

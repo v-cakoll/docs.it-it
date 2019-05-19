@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 6d631d51cc4f40b5be91b6579039a8b8dffa3dee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 53e164bfdc27d99073cc893f98f332366091a753
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613206"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881289"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Guida rapida alla risoluzione dei problemi di WCF
 In questo argomento viene elencata una serie di problemi noti rilevati dai clienti durante lo sviluppo di client e servizi WCF. Se il problema rilevato non presente in questo elenco, si consiglia di configurare la traccia del servizio. In tal modo verrà generato un file di traccia che è possibile visualizzare con il visualizzatore dei file di traccia e verranno ricevute informazioni dettagliate sulle eccezioni che si possono verificare nel servizio. Per altre informazioni sulla configurazione della traccia, vedere: [Configurazione della traccia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Per altre informazioni sul Visualizzatore dei file di traccia, vedere: [Strumento Visualizzatore di tracce (SvcTraceViewer.exe) del servizio](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -194,7 +194,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q10"></a>   
 ## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>Quale è l'indirizzo di base? In che modo è correlato a un indirizzo dell'endpoint?  
- Un indirizzo di base è l'indirizzo radice per una classe <xref:System.ServiceModel.ServiceHost> . Per impostazione predefinita, se si aggiunge una classe <xref:System.ServiceModel.Description.ServiceMetadataBehavior> alla configurazione del servizio, il linguaggio di descrizione dei servizi Web (WSDL, Web Services Description Language) per tutti gli endpoint che l'host pubblica viene recuperato dall'indirizzo di base HTTP, oltre che da qualsiasi indirizzo relativo fornito al comportamento dei metadati, più "?wsdl". Se si ha familiarità con [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] e IIS, l'indirizzo di base è equivalente alla directory virtuale.  
+ Un indirizzo di base è l'indirizzo radice per una classe <xref:System.ServiceModel.ServiceHost> . Per impostazione predefinita, se si aggiunge una classe <xref:System.ServiceModel.Description.ServiceMetadataBehavior> alla configurazione del servizio, il linguaggio di descrizione dei servizi Web (WSDL, Web Services Description Language) per tutti gli endpoint che l'host pubblica viene recuperato dall'indirizzo di base HTTP, oltre che da qualsiasi indirizzo relativo fornito al comportamento dei metadati, più "?wsdl". Se si ha familiarità con ASP.NET e IIS, l'indirizzo di base è equivalente alla directory virtuale.  
   
 ## <a name="sharing-a-port-between-a-service-endpoint-and-a-mex-endpoint-using-the-nettcpbinding"></a>Condivisione di una porta tra un endpoint servizio e un endpoint MEX utilizzando NetTcpBinding  
  Se si specifica l'indirizzo di base per un servizio come net.tcp://MioServer:8080/MioServizio e si aggiungono gli endpoint seguenti:  

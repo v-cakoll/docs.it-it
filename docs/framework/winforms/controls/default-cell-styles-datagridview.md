@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7babc0918f5e8a7b4561d99bcfcfc9d7bdf9fb69
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011372"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878789"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: Impostare formati di dati e stili di cella predefiniti per il controllo DataGridView di Windows Forms usando la finestra di progettazione
 Il <xref:System.Windows.Forms.DataGridView> controllo consente di specificare gli stili di cella predefiniti e formati di dati per l'intero controllo, per colonne specifiche, per le intestazioni di riga e colonna e per le righe per creare un effetto del libro mastro alterne della cella. Gli stili predefiniti impostati per l'intero controllo vengono sostituiti dagli stili predefiniti impostati per le colonne e righe alterne. Inoltre, gli stili impostati nel codice per le singole righe e celle sostituiranno gli stili predefiniti.  
@@ -30,7 +30,7 @@ Il <xref:System.Windows.Forms.DataGridView> controllo consente di specificare gl
   
 1. Selezionare il <xref:System.Windows.Forms.DataGridView> controllo nella finestra di progettazione.  
   
-2. Nel **delle proprietà** finestra, fare clic sul pulsante con puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto al <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, o <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> proprietà. Il **Generatore CellStyle** verrà visualizzata la finestra di dialogo.  
+2.  Nel **delle proprietà** finestra, fare clic sul pulsante con puntini di sospensione (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)) accanto al <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, o <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> proprietà. Il **Generatore CellStyle** verrà visualizzata la finestra di dialogo.  
   
 3. Definire lo stile, impostando le proprietà, usando il **Preview** riquadro per confermare le scelte effettuate.  
   
@@ -45,7 +45,7 @@ Il <xref:System.Windows.Forms.DataGridView> controllo consente di specificare gl
   
 2. Selezionare una colonna dal **colonne selezionate** elenco.  
   
-3. Nel **le proprietà delle colonne** griglia, fare clic sul pulsante con puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto al <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> proprietà. Il **Generatore CellStyle** verrà visualizzata la finestra di dialogo.  
+3.  Nel **le proprietà delle colonne** griglia, fare clic sul pulsante con puntini di sospensione (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)) accanto al <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> proprietà. Il **Generatore CellStyle** verrà visualizzata la finestra di dialogo.  
   
 4. Definire lo stile, impostando le proprietà, usando il **Preview** riquadro per confermare le scelte effettuate.  
   
@@ -53,7 +53,7 @@ Il <xref:System.Windows.Forms.DataGridView> controllo consente di specificare gl
   
 1. Usare una delle procedure precedenti per visualizzare un **Generatore CellStyle** nella finestra di dialogo correlate a una proprietà di stile di cella predefinito.  
   
-2. Nel **Generatore CellStyle** finestra di dialogo fare clic sui puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto al <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> proprietà. Il **stringa di formato** verrà visualizzata la finestra di dialogo.  
+2.  Nel **Generatore CellStyle** finestra di dialogo fare clic sui puntini di sospensione (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)) accanto al <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> proprietà. Il **stringa di formato** verrà visualizzata la finestra di dialogo.  
   
 3. Selezionare un tipo di formato, quindi modificare i dettagli del tipo (ad esempio, il numero di posizioni decimali da visualizzare), usando il **esempio** casella per confermare le scelte effettuate.  
   

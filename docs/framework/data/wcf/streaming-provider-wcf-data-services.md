@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 19571f3102039176ed4d8fab46a7f8229cbfecbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eff4ee3cb8502645d3b6d9a8986c9c410fe73f1a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875537"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877581"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provider di flusso (WCF Data Services)
 
@@ -88,7 +88,7 @@ Per informazioni generali su come creare un servizio dati, vedere [configurazion
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Abilitazione dei flussi binari di grandi dimensioni nell'ambiente di hosting
 
-Quando si crea un servizio dati in un'applicazione Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], Windows Communication Foundation (WCF) viene utilizzato per fornire l'implementazione del protocollo HTTP. Per impostazione predefinita, WCF limita la dimensione dei messaggi HTTP a soli 65.000 byte. Per consentire il flusso dei dati binari di grandi dimensioni verso e dal servizio dati, è inoltre necessario configurare l'applicazione Web per l'abilitazione di file binari di grandi dimensioni e l'uso di flussi per il trasferimento. A tal fine, aggiungere quanto segue all'elemento `<configuration />` del file Web.config dell'applicazione:
+Quando si crea un servizio dati in un'applicazione Web ASP.NET, Windows Communication Foundation (WCF) viene utilizzato per fornire l'implementazione del protocollo HTTP. Per impostazione predefinita, WCF limita la dimensione dei messaggi HTTP a soli 65.000 byte. Per consentire il flusso dei dati binari di grandi dimensioni verso e dal servizio dati, è inoltre necessario configurare l'applicazione Web per l'abilitazione di file binari di grandi dimensioni e l'uso di flussi per il trasferimento. A tal fine, aggiungere quanto segue all'elemento `<configuration />` del file Web.config dell'applicazione:
 
 > [!NOTE]
 > È necessario usare un <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> modalità di trasferimento per garantire che i dati binari nei messaggi di richiesta e risposta vengono trasmessi e non memorizzato nel buffer da WCF.
@@ -125,7 +125,7 @@ Quando si implementa un provider di flusso e si accede alle risorse multimediali
 
 - Quando si implementa il metodo <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> o <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>, è necessario usare i valori eTag e Content-Type forniti come parametri dei metodi. Non impostare le intestazioni eTag o Content-Type nell'implementazione del provider <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
 
-- Per impostazione predefinita, il client invia i flussi binari di grandi dimensioni tramite codifica di trasferimento HTTP Chunked. Poiché il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server non supporta questo tipo di codifica, è possibile utilizzare questo server Web per ospitare un servizio dati di flusso che debba accettare flussi binari di grandi dimensioni. Per ulteriori informazioni sul [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, vedere [server Web in Visual Studio per progetti Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
+- Per impostazione predefinita, il client invia i flussi binari di grandi dimensioni tramite codifica di trasferimento HTTP Chunked. Poiché il Server di sviluppo ASP.NET non supporta questo tipo di codifica, è possibile utilizzare questo server Web per ospitare un servizio dati di flusso che debba accettare flussi binari di grandi dimensioni. Per altre informazioni sul Server di sviluppo ASP.NET, vedere [server Web in Visual Studio per progetti Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
 
 <a name="versioning"></a>
 

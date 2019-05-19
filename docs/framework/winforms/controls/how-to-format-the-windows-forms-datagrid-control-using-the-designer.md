@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: fddb59fc32feabf708e209ac4a5e78a14585fa66
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0c11937f1a0300c4a376657d423ef348a844f700
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637560"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880648"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Procedura: Formattare il controllo DataGrid di Windows Forms usando la finestra di progettazione
 
@@ -79,7 +79,7 @@ ms.locfileid: "65637560"
 
 1. Selezionare il <xref:System.Windows.Forms.DataGrid> controllo sul form.
 
-2. Nel **delle proprietà** finestra, seleziona il <xref:System.Windows.Forms.DataGrid.TableStyles%2A> proprietà e fare clic sul **puntini di sospensione** (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png " vbEllipsesButton")) pulsante.
+2.  Nel **delle proprietà** finestra, seleziona il <xref:System.Windows.Forms.DataGrid.TableStyles%2A> proprietà e fare clic sul **puntini di sospensione** (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)) pulsante.
 
 3. Nel **raccolta DataGridTableStyle** della finestra di dialogo fare clic su **Add** per aggiungere uno stile di tabella all'insieme.
 
@@ -89,7 +89,7 @@ ms.locfileid: "65637560"
 
      Il nome del mapping consente di specificare quali stile di tabella deve essere usato con la tabella.
 
-5. Nel **raccolta DataGridTableStyle**, selezionare la <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> proprietà e fare clic sul pulsante con puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton ")).
+5.  Nel **raccolta DataGridTableStyle**, selezionare la <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> proprietà e fare clic sul pulsante con puntini di sospensione (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)).
 
 6. Nel **raccolta DataGridColumnStyle** finestra di dialogo, aggiungere gli stili di colonna per lo stile di tabella è stato creato.
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84d2355a78c7d33bf712baf158f28861e59e75d1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773516"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881955"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Procedura: Creare un flusso di lavoro della macchina a stati
 I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate. In questo argomento illustra la creazione di un flusso di lavoro che vengono usate sia attività incorporate, ad esempio la <xref:System.Activities.Statements.StateMachine> attività e le attività personalizzate dal precedente [come: Creare un'attività](how-to-create-an-activity.md) argomento. Il flusso di lavoro consente di modellare un gioco per determinare un numero.  
@@ -179,7 +179,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
   
      Nell'esempio seguente viene illustrato il flusso di lavoro completato.  
   
-     ![Flusso di lavoro macchina a stati completo](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+     ![Figura che mostra il lavoro macchina a stati completato.](./media/how-to-create-a-state-machine-workflow/complete-state-machine-workflow.jpg)  
   
 ### <a name="to-build-the-workflow"></a>Per compilare il flusso di lavoro  
   

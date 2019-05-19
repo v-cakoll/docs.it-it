@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 438be2ffbff5c4f88ccfef4cad63dbfc71d132d5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75177b609f14d335aa57aba77d647827f50a8692
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648264"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881887"
 ---
 # <a name="how-to-obtain-font-metrics"></a>Procedura: Ottenere le misure dei tipi di carattere
 Il <xref:System.Drawing.FontFamily> classe fornisce i metodi seguenti che recuperano diverse metriche per una particolare famiglia/combinazione stile:  
@@ -28,22 +28,22 @@ Il <xref:System.Drawing.FontFamily> classe fornisce i metodi seguenti che recupe
   
  I numeri restituiti da questi metodi sono in unità di progettazione del tipo di carattere, in modo che siano indipendenti dalla dimensione e le unità di un determinato <xref:System.Drawing.Font> oggetto.  
   
- La figura seguente illustra le varie metriche.  
+ La figura seguente illustra le varie metriche:
   
- ![I tipi di carattere testo](./media/fontstext7a.png "fontstext7A")  
+ ![Illustrazione delle metriche del tipo di carattere: ascent dei valori descent con e interlinea.](./media/how-to-obtain-font-metrics/various-font-metrics.png)  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente mostra le metriche per lo stile regolare della famiglia del tipo di carattere Arial. Il codice crea inoltre una <xref:System.Drawing.Font> oggetto (in base alla famiglia Arial) con dimensioni di 16 pixel e consente di visualizzare le metriche, in pixel, per quel particolare <xref:System.Drawing.Font> oggetto.  
   
- Nella figura seguente mostra l'output del codice di esempio.  
+ Nella figura seguente mostra l'output del codice di esempio:
   
- ![I tipi di carattere testo](./media/csfontstext8.png "csFontsText8")  
+ ![Output di codice di esempio delle metriche del tipo di carattere Arial.](./media/how-to-obtain-font-metrics/example-output-code-arial-font.png)  
   
  Tenere presente le prime due righe di output nella figura precedente. Il <xref:System.Drawing.Font> object restituisce una dimensione pari a 16 e il <xref:System.Drawing.FontFamily> oggetto restituisce un'altezza em di 2048. Questi due numeri (16 e 2,048) sono la chiave per la conversione tra unità di progettazione del tipo di carattere e le unità (in questo caso pixel) del <xref:System.Drawing.Font> oggetto.  
   
  Ad esempio, è possibile convertire l'ascent di unità di progettazione pixel come indicato di seguito:  
   
- ![I tipi di carattere testo](./media/fontstext9.png "FontsText9")  
+ ![Formula che mostra la conversione da unità di progettazione per pixel](./media/how-to-obtain-font-metrics/convert-font-units-example.png)  
   
  Il codice seguente posiziona testo verticalmente impostando il <xref:System.Drawing.PointF.Y%2A> membro dati di un <xref:System.Drawing.PointF> oggetto. La coordinata y è aumentata `font.Height` per ogni nuova riga di testo. Il <xref:System.Drawing.Font.Height%2A> proprietà di un <xref:System.Drawing.Font> object restituisce l'interlinea, in pixel, per quel particolare <xref:System.Drawing.Font> oggetto. In questo esempio, il numero restituito da <xref:System.Drawing.Font.Height%2A> è 19. Si noti che questo è lo stesso come numero (arrotondato per eccesso a un numero intero) ottenuto tramite la conversione della metrica di interlinea in pixel.  
   

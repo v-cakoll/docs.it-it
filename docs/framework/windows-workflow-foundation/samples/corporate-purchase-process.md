@@ -2,17 +2,17 @@
 title: Processo di acquisto aziendale
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: eaf77fc8b1697d0e337d8c4823ca2184cb9c545c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665934"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876176"
 ---
 # <a name="corporate-purchase-process"></a>Processo di acquisto aziendale
 In questo esempio viene illustrato come creare un semplice processo di acquisto basato su richieste di proposte (RDP) con la selezione automatica della proposta migliore. Vengono combinati gli oggetti <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> e <xref:System.Activities.Statements.ForEach%601>, nonché un'attività personalizzata per creare un flusso di lavoro che rappresenta il processo.
 
- In questo esempio è presente un'applicazione client [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] che consente l'interazione con il processo come partecipanti diversi, ovvero come il richiedente originale o un fornitore particolare.
+ In questo esempio contiene un'applicazione client ASP.NET che consente l'interazione con il processo come partecipanti diversi (come il richiedente originale o un particolare fornitore).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -36,7 +36,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 
 - Rilevamento.
 
-- Hosting di [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in client diversi (applicazioni Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e applicazioni WinForms).
+- Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in client diversi (applicazioni Windows Form e applicazioni Web ASP.NET).
 
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
@@ -82,7 +82,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 |-------------|-----------------|  
 |Comuni|Oggetti entità usati all'interno del processo (Richiesta di proposta, Fornitore e Proposta del fornitore).|  
 |WfDefinition|Definizione del processo (come programma [!INCLUDE[wf1](../../../../includes/wf1-md.md)]) e dell'host (`PurchaseProcessHost`) usati dalle applicazioni client per la creazione e l'uso di istanze del flusso di lavoro del processo di acquisto.|  
-|WebClient|Applicazione client [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] che consente agli utenti di creare e partecipare alle istanze del processo di acquisto. Viene usato un host creato in modo personalizzato per interagire con il motore del flusso di lavoro.|  
+|WebClient|Un'applicazione client ASP.NET che consente agli utenti di creare e partecipare alle istanze del processo di acquisto. Viene usato un host creato in modo personalizzato per interagire con il motore del flusso di lavoro.|  
 |WinFormsClient|Applicazione client Windows Form che consente agli utenti di creare e partecipare alle istanze del processo di acquisto. Viene usato un host creato in modo personalizzato per interagire con il motore del flusso di lavoro.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  
@@ -134,7 +134,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 ### <a name="persistence-files"></a>File di persistenza  
  Nella tabella seguente vengono mostrati i file generati dal provider di persistenza (`XmlPersistenceProvider`) che si trovano nel percorso della cartella temporanea del sistema corrente (tramite il metodo <xref:System.IO.Path.GetTempPath%2A>). Il file di traccia viene creato nel percorso di esecuzione corrente.  
   
-|Nome file|Descrizione|`Path`|  
+|Nome file|Descrizione|Path|  
 |-|-|-|  
 |rfps.xml|File XML con tutte le richieste di proposte attive e completate.|<xref:System.IO.Path.GetTempPath%2A>|  
 |[instanceid]|In questo file sono contenute tutte le informazioni su un'istanza del flusso di lavoro.<br /><br /> Questo file viene generato dall'implementazione della persistenza schematizzata (PersistenceParticipant in XmlPersistenceProvider).|<xref:System.IO.Path.GetTempPath%2A>|  

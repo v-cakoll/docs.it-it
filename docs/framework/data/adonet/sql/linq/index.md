@@ -2,12 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: ef95a7cebb527b01c15d124227664823fcbbaa23
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4a44bd3f55cf6c21bb785ff70bca80e2c003cd18
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582774"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878269"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è un componente di .NET Framework versione 3.5 che fornisce un'infrastruttura di runtime per la gestione dei dati relazionali come oggetti.  
@@ -45,7 +45,7 @@ ms.locfileid: "65582774"
  Descrive [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] tecnologie per gli utenti di Visual Basic.  
   
  [LINQ e ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- Vengono forniti collegamenti al portale [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)].  
+ Collegamenti al portale di ADO.NET.  
   
  [Procedure dettagliate relative a LINQ to SQL](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))  
  Vengono elencate le procedure dettagliate disponibili per [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -54,4 +54,4 @@ ms.locfileid: "65582774"
  Viene descritto come scaricare i database di esempio usati nella documentazione.  
   
  [Cenni preliminari sul controllo Server Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- Viene descritto come il controllo <xref:System.Web.UI.WebControls.LinqDataSource> consenta di esporre [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] agli sviluppatori Web tramite l'architettura di controllo origine dati di [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)].
+ Viene descritto come la <xref:System.Web.UI.WebControls.LinqDataSource> controllo espone [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] agli sviluppatori Web tramite l'architettura del controllo origine dati ASP.NET.

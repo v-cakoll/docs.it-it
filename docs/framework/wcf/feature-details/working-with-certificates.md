@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: f424e4ef62f42da9065aa6ff846e8bd2c7a42a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8c7d65f593f2ba5c21625835a0be7a77a44afb5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625818"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881110"
 ---
 # <a name="working-with-certificates"></a>Utilizzo dei certificati
 Per programmare le funzionalità di sicurezza di Windows Communication Foundation (WCF) in genere si usano i certificati digitali X.509. In particolare, questi certificati vengono usati per autenticare client e server, nonché per crittografare e firmare digitalmente i messaggi. Questo argomento fornisce una breve descrizione delle funzionalità relative ai certificati digitali X.509 e illustra come usarle in WCF. Questo argomento contiene inoltre i collegamenti agli argomenti che trattano questi concetti in modo più dettagliato o che descrivono come eseguire attività comuni tramite l'uso di WCF e dei certificati.  
@@ -29,7 +29,7 @@ Per programmare le funzionalità di sicurezza di Windows Communication Foundatio
 ## <a name="certificate-stores"></a>Archivi certificati  
  I certificati vengono memorizzati in appositi archivi. Sono disponibili due posizioni principali di archiviazione, ognuna delle quali è composta da più sottoarchivi. Gli amministratori di un computer possono visualizzare entrambi gli archivi principali mediante lo snap-in MMC. Gli altri utenti, invece, sono in grado di visualizzare soltanto l'archivio utente corrente.  
   
-- **Archivio locale del computer**. contiene i certificati utilizzati dai processi del computer, ad esempio [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Utilizzare questa posizione per archiviare i certificati utilizzati per l'autenticazione del server presso i client.  
+- **Archivio locale del computer**. Questo file contiene i certificati utilizzati dai processi del computer, ad esempio ASP.NET. Utilizzare questa posizione per archiviare i certificati utilizzati per l'autenticazione del server presso i client.  
   
 - **Archivio dell'utente corrente**. questa posizione in genere viene utilizzata dalle applicazioni interattive per memorizzare i certificati relativi all'utente corrente del computer. Se si crea un'applicazione client, utilizzare questa posizione per archiviare i certificati utilizzati per l'autenticazione degli utenti presso un servizio.  
   
@@ -52,7 +52,7 @@ Per programmare le funzionalità di sicurezza di Windows Communication Foundatio
 - Se il servizio o il client è un'applicazione in esecuzione con un account utente, usare l'archivio **utente corrente**.  
   
 ### <a name="accessing-stores"></a>Accesso agli archivi  
- Analogamente alle cartelle di un computer, anche gli archivi vengono protetti tramite gli elenchi di controllo di accesso (ACL, Access Control List). Quando si crea un servizio ospitato in Internet Information Services (IIS), il processo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] è in esecuzione nell'account [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Tale account deve essere autorizzato ad accedere all'archivio contenente i certificati utilizzati da un servizio. Ogni archivio principale viene protetto mediante un ACL predefinito, che tuttavia può essere modificato. Se si crea un ruolo a parte per accedere a un archivio, a tale ruolo è necessario concedere l'autorizzazione di accesso. Per informazioni su come modificare l'elenco di accesso usando lo strumento WinHttpCertConfig.exe, vedere [come: Creare certificati temporanei da usare durante lo sviluppo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Per altre informazioni sull'uso di certificati client in IIS, vedere la pagina relativa alla [procedura per chiamare un servizio Web tramite un certificato client per l'autenticazione in un'applicazione Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
+ Analogamente alle cartelle di un computer, anche gli archivi vengono protetti tramite gli elenchi di controllo di accesso (ACL, Access Control List). Quando si crea un servizio ospitato da Internet Information Services (IIS), il processo di ASP.NET viene eseguito con l'account ASP.NET. Tale account deve essere autorizzato ad accedere all'archivio contenente i certificati utilizzati da un servizio. Ogni archivio principale viene protetto mediante un ACL predefinito, che tuttavia può essere modificato. Se si crea un ruolo a parte per accedere a un archivio, a tale ruolo è necessario concedere l'autorizzazione di accesso. Per informazioni su come modificare l'elenco di accesso usando lo strumento WinHttpCertConfig.exe, vedere [come: Creare certificati temporanei da usare durante lo sviluppo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Per altre informazioni sull'uso di certificati client in IIS, vedere la pagina relativa alla [procedura per chiamare un servizio Web tramite un certificato client per l'autenticazione in un'applicazione Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Catena di trust e autorità di certificazione  
  I certificati vengono creati in una gerarchia dove ogni singolo certificato è collegato alla CA che ha emesso il certificato. Questo collegamento è per il certificato della CA. L'autorità di certificazione del certificato quindi i collegamenti all'autorità di certificazione che ha emesso il certificato della CA originale. Questo processo si ripete fino a raggiungere il certificato della CA radice. Il certificato della CA radice è considerato naturalmente attendibile.  

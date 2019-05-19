@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 84762d8917609b84a049ea665b575acfa6e5fecf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b43ae8345fe8c4286f00f4b6e4f6373746e8bbe
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857532"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882161"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Procedura: Configurare un servizio WCF per interagire con client di servizi Web ASP.NET
-Per configurare un endpoint del servizio Windows Communication Foundation (WCF) per essere interoperabile con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] client del servizio Web, usare il <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> tipo come tipo di associazione per l'endpoint di servizio.  
+Per configurare un endpoint del servizio Windows Communication Foundation (WCF) per essere interoperabile con i client del servizio Web ASP.NET, usare il <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> tipo come tipo di associazione per l'endpoint di servizio.  
   
- È possibile, se lo si desidera, attivare nell'associazione il supporto per HTTPS e l'autenticazione del client a livello di trasporto. I client di servizi Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] non supportano la codifica messaggi MTOM, pertanto la proprietà <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> deve essere lasciata con il suo valore predefinito <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. I client di servizi Web ASP.NET non supportano WS-Security, pertanto <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> deve essere impostato su <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
+ È possibile, se lo si desidera, attivare nell'associazione il supporto per HTTPS e l'autenticazione del client a livello di trasporto. I client del servizio Web ASP.NET non supportano codifica MTOM, pertanto <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> proprietà deve essere lasciata come relativo valore predefinito, ovvero <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. I client di servizi Web ASP.NET non supportano WS-Security, pertanto <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> deve essere impostato su <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
   
- Per rendere disponibili per i metadati per un servizio WCF [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] strumenti di generazione proxy del servizio Web (vale a dire [Web Services Description Language Tool (Wsdl.exe)](https://go.microsoft.com/fwlink/?LinkId=73833), [strumento di individuazione Servizi Web (Disco.exe)](https://go.microsoft.com/fwlink/?LinkId=73834)e la funzionalità Aggiungi riferimento Web in Visual Studio), è consigliabile esporre un endpoint di metadati HTTP/GET.  
+ Per rendere i metadati per un servizio WCF disponibile per strumenti di generazione proxy del servizio Web ASP.NET (vale a dire [Web Services Description Language Tool (Wsdl.exe)](https://go.microsoft.com/fwlink/?LinkId=73833), [strumento di individuazione Servizi Web (Disco.exe)](https://go.microsoft.com/fwlink/?LinkId=73834), e la funzionalità Aggiungi riferimento Web in Visual Studio), è consigliabile esporre un endpoint di metadati HTTP/GET.  
   
 ### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>Per aggiungere un endpoint WCF compatibile con client di servizi Web ASP.NET nel codice  
   
@@ -40,7 +40,7 @@ Per configurare un endpoint del servizio Windows Communication Foundation (WCF) 
 4. Attivare un endpoint dei metadati HTTP/GET per il servizio. Per informazioni dettagliate, vedere il [come: Pubblicare i metadati per un servizio utilizzando un File di configurazione](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
   
 ## <a name="example"></a>Esempio  
- Esempio di codice seguente viene illustrato come aggiungere un endpoint WCF compatibile con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] nel codice client del servizio Web e in alternativa nei file di configurazione.  
+ Esempio di codice seguente viene illustrato come aggiungere un endpoint WCF compatibile con i client del servizio Web ASP.NET nel codice e in alternativa nei file di configurazione.  
   
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)] 
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)] 

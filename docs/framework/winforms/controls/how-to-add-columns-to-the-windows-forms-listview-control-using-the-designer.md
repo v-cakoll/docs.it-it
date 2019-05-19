@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding column headers
 - columns [Windows Forms], adding to ListView controls
 ms.assetid: 5b1a8b4d-587e-479a-95c1-f9b90884f13a
-ms.openlocfilehash: 48fd223c8e770e64513d79ef9d24f93321c98332
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a37f5d64e8ca10b26a8897d45b8757113ce900c9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322095"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877604"
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>Procedura: Aggiungere colonne al controllo ListView di Windows Forms usando la finestra di progettazione
 I moduli di Windows <xref:System.Windows.Forms.ListView> controllo può visualizzare più colonne per ogni elenco di elementi nel **dettagli** visualizzazione. È possibile usare le colonne per visualizzare diversi tipi di informazioni su ogni elemento dell'elenco. Ad esempio, un elenco di file è stato possibile visualizzare il nome del file, tipo di file, le dimensioni e data che dell'ultima modifica apportata al file. Per informazioni sulla compilazione delle colonne dopo la creazione, vedere [come: Visualizzare elementi secondari nelle colonne con il Windows Form controllo ListView](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).  
@@ -24,7 +24,7 @@ I moduli di Windows <xref:System.Windows.Forms.ListView> controllo può visualiz
   
 1. Nel **delle proprietà** finestra, impostare il controllo <xref:System.Windows.Forms.ListView.View%2A> proprietà <xref:System.Windows.Forms.View.Details>.  
   
-2. Nel **delle proprietà** finestra, fare clic sul **puntini di sospensione** pulsante (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto a il <xref:System.Windows.Forms.ListView.Columns%2A> proprietà.  
+2.  Nel **delle proprietà** finestra, fare clic sul **puntini di sospensione** pulsante (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)) accanto al <xref:System.Windows.Forms.ListView.Columns%2A> proprietà .  
   
      Il **Editor della raccolta ColumnHeader** viene visualizzata.  
   

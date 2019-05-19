@@ -2,15 +2,15 @@
 title: Provider di appartenenza e di ruoli
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 73084bb766274d6eab497555e82e029f94be0359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c172402f95b137117941381fd4803b8b6e4a5d61
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638356"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876736"
 ---
 # <a name="membership-and-role-provider"></a>Provider di appartenenza e di ruoli
-Nell'esempio del provider di appartenenza e di ruoli viene illustrato in che modo un servizio può utilizzare i provider di appartenenza e di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] per autenticare e autorizzare i client.  
+Nell'esempio di Provider di appartenenza e ruoli viene illustrato come un servizio può usare il provider di ruoli e appartenenza ASP.NET per autenticare e autorizzare i client.  
   
  In questo esempio, il client è un'applicazione console (.exe) e il servizio è ospitato da Internet Information Services (IIS).  
   
@@ -21,11 +21,11 @@ Nell'esempio del provider di appartenenza e di ruoli viene illustrato in che mod
   
 - Un client può eseguire l'autenticazione utilizzando una combinazione nome utente-password.  
   
-- Il server può convalidare le credenziali client in base al provider di appartenenza [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+- Il server può convalidare le credenziali del client con il provider di appartenenze ASP.NET.  
   
 - Il server può essere autenticato tramite il certificato X.509 del server.  
   
-- Il server può eseguire il mapping del client autenticato a un ruolo utilizzando il provider di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+- Il server può eseguire il mapping del client autenticato a un ruolo utilizzando il provider di ruoli ASP.NET.  
   
 - Il server può utilizzare `PrincipalPermissionAttribute` per controllare l'accesso a determinati metodi esposti dal servizio.  
   
@@ -69,7 +69,7 @@ Nell'esempio del provider di appartenenza e di ruoli viene illustrato in che mod
 </system.web>  
 ```  
   
- Il servizio espone un solo endpoint per la comunicazione con il servizio, che viene definito mediante il file di configurazione Web.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione viene configurata con una classe standard `wsHttpBinding`, per la quale è impostata l'autenticazione Windows come predefinita. In questo esempio viene impostata la classe `wsHttpBinding` standard per utilizzare l'autenticazione del nome utente. Il comportamento specifica che il certificato server deve essere utilizzato per autenticare il servizio. Il certificato del server deve contenere lo stesso valore per il `SubjectName` come il `findValue` attributo il [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento di configurazione. Il comportamento specifica inoltre che l'autenticazione della coppia nome utente-password deve essere eseguita dal provider di appartenenze [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e il mapping del ruolo deve essere eseguito dal provider di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] specificando i nomi definiti per i due provider.  
+ Il servizio espone un solo endpoint per la comunicazione con il servizio, che viene definito mediante il file di configurazione Web.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione viene configurata con una classe standard `wsHttpBinding`, per la quale è impostata l'autenticazione Windows come predefinita. In questo esempio viene impostata la classe `wsHttpBinding` standard per utilizzare l'autenticazione del nome utente. Il comportamento specifica che il certificato server deve essere utilizzato per autenticare il servizio. Il certificato del server deve contenere lo stesso valore per il `SubjectName` come il `findValue` attributo il [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento di configurazione. Il comportamento specifica inoltre che l'autenticazione di coppie di nome utente-password viene eseguita dal provider di appartenenze ASP.NET e mapping del ruolo viene eseguito dal provider di ruoli ASP.NET, specificando i nomi definiti per i due provider.  
   
 ```xml  
 <system.serviceModel>  
@@ -123,10 +123,10 @@ Nell'esempio del provider di appartenenza e di ruoli viene illustrato in che mod
 2. Assicurarsi di aver configurato il [ASP.NET Application Services Database](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
-    >  Se si sta eseguendo SQL Server Express Edition, il nome del server è .\SQLEXPRESS. Questo server deve essere utilizzato quando si configura il database dei servizi per le applicazioni [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e nella stringa di connessione di Web.config.  
+    >  Se si sta eseguendo SQL Server Express Edition, il nome del server è .\SQLEXPRESS. Questo server deve essere utilizzato quando si configura l'applicazione Database dei servizi ASP.NET anche come stringa di connessione di Web. config.  
   
     > [!NOTE]
-    >  L'account del processo di lavoro [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] deve disporre delle autorizzazioni sul database creato in questo passaggio. Utilizzare l'utilità sqlcmd o SQL Server Management Studio per questo scopo.  
+    >  L'account di processo di lavoro ASP.NET necessario disporre delle autorizzazioni nel database di cui viene creato in questo passaggio. Utilizzare l'utilità sqlcmd o SQL Server Management Studio per questo scopo.  
   
 3. Per eseguire l'esempio su un solo computer o tra computer diversi, seguire le istruzioni indicate di seguito.  
   

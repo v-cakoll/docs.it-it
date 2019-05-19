@@ -15,12 +15,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: a8f228d334785cd880b06dbeda8f96550471599a
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 39adcbd6d915f8b086df7e425efbe08ae8680a45
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211541"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882456"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Procedura dettagliata: Debug di controlli di Windows Form personalizzati in fase di progettazione
 
@@ -124,7 +124,7 @@ Per eseguire il debug di comportamento in fase di progettazione del controllo pe
 
 2. Nel **DebugControlLibrary** delle proprietà, selezionare la **Debug** scheda.
 
-     Nel **azione di avvio** sezione, selezionare **Avvia programma esterno**. Sarà pertanto il debug di un'istanza separata di Visual Studio, fare clic sui puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) per cercare l'IDE di Visual Studio. È il nome del file eseguibile **devenv.exe**, e se è installato nel percorso predefinito, il percorso è %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
+     Nel **azione di avvio** sezione, selezionare **Avvia programma esterno**. Sarà pertanto il debug di un'istanza separata di Visual Studio, fare clic sui puntini di sospensione (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)) per cercare l'IDE di Visual Studio. È il nome del file eseguibile **devenv.exe**, e se è installato nel percorso predefinito, il percorso è %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
 
 3. Fare clic su **OK** per chiudere la finestra di dialogo.
 

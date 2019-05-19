@@ -2,12 +2,12 @@
 title: Novità in Windows Workflow Foundation in .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6be2e3bd64fd93fab8af792bb92c3c0238a7ecde
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61671418"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876625"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Novità in Windows Workflow Foundation in .NET 4.5
 
@@ -118,7 +118,7 @@ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le variabili
 
 Nella schermata seguente è illustrato il menu di scelta rapida della finestra di progettazione delle variabili e degli argomenti.
 
-![Variabili e menu di scelta rapida della finestra di progettazione argomenti](./media/designercontextmenu.png "DesignerContextMenu")
+![Menu di scelta rapida della finestra di progettazione argomenti e variabili](./media/whats-new-in-wf-in-dotnet/designer-context-menu.png)
 
 ### <a name="BKMK_AutoSurround"></a> Auto-surround con sequenza
 
@@ -126,11 +126,11 @@ Poiché un flusso di lavoro o determinate attività contenitore (ad esempio <xre
 
 La schermata riportata di seguito mostra un'attività di `WriteLine` in `Body` di `NoPersistScope`.
 
-![Automatico&#45;racchiudere il percorso di rilascio](./media/autosurround1.png "AutoSurround1")
+![Un'attività WriteLine nel corpo di un'attività NoPersistScope.](./media/whats-new-in-wf-in-dotnet/auto-surround-write-line-activity.png)
 
 La schermata riportata di seguito mostra l'attività automaticamente creata di `Sequence` in `Body` quando un secondo `WriteLine` viene rilasciato sotto il primo.
 
-![Attività sequence creata automaticamente](./media/autosurround2.png "AutoSurround2")
+![Una sequenza creata automaticamente nel corpo di un NoPersistScope.](./media/whats-new-in-wf-in-dotnet/auto-surround-sequence-activity.png)
 
 ### <a name="BKMK_PanMode"></a> Modalità dettaglio
 
@@ -138,7 +138,7 @@ Per spostarsi più facilmente in un flusso di lavoro di grandi dimensioni nella 
 
 Nella schermata seguente viene illustrato il pulsante della modalità dettaglio posizionato nell'angolo inferiore destro della finestra di progettazione del flusso di lavoro.
 
-![Pulsante mano nella finestra di progettazione del flusso di lavoro](./media/panbutton.png "PanButton")
+![Il pulsante Zoom evidenziato nella finestra di progettazione del flusso di lavoro.](./media/whats-new-in-wf-in-dotnet/pan-button-workflow-designer.png)
 
 Per ottenere il dettaglio della finestra di progettazione del flusso di lavoro è anche possibile usare il pulsante centrale del mouse o la barra spaziatrice.
 
@@ -154,7 +154,7 @@ Per consentire uno spostamento più semplice nei flussi di lavoro gerarchici, i 
 
 Lo screenshot seguente del flusso di lavoro completata dal [esercitazione introduttiva su](getting-started-tutorial.md) Mostra la visualizzazione struttura con un flusso di lavoro sequenza.
 
-![Visualizzazione nella finestra di progettazione del flusso di lavoro struttura](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![Screenshot della visualizzazione struttura con un flusso di lavoro sequenza in Visual Studio.](./media/whats-new-in-wf-in-dotnet/outline-view-in-workflow-designer.jpg)
 
 ### <a name="BKMK_CSharpExpressions"></a> Espressioni c#
 
@@ -174,17 +174,17 @@ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le connessio
 
 Nella schermata seguente vengono illustrati i punti di associazione che diventano visibili quando un'attività viene trascinata dalla casella degli strumenti.
 
-![Nodo iniziale del diagramma di flusso che illustra i punti di connessione automatica](./media/autoconnect1.png "Autoconnect1")
+![Visualizzazione di diagramma di flusso iniziale nodo punti di connessione automatica](./media/whats-new-in-wf-in-dotnet/auto-connect-points-start-node.png)
 
 Le attività possono anche essere trascinate nelle connessioni tra i nodi e gli stati del diagramma di flusso per inserire automaticamente un nodo tra altri due. Nella schermata seguente viene illustrata la linea di connessione evidenziata in cui è possibile trascinare e rilasciare le attività dalla casella degli strumenti.
 
-![Automatico&#45;inserire handle per l'eliminazione di attività](./media/autoinsert.png "Autoinsert")
+![Handle di inserimento automatico per il rilascio delle attività](./media/whats-new-in-wf-in-dotnet/auto-insert-connecting-line.png)
 
 ### <a name="BKMK_Annotations"></a> Annotazioni della finestra di progettazione
 
 Per semplificare lo sviluppo di flussi di lavoro di grandi dimensioni, la finestra di progettazione supporta ora l'aggiunta di annotazioni per consentire di tenere traccia del processo di progettazione. Le annotazioni possono essere aggiunte ad attività, stati, nodi del diagramma di flusso, variabili e argomenti. Nella schermata seguente è illustrato il menu di scelta rapida usato per aggiungere annotazioni alla finestra di progettazione.
 
-![Menu di scelta rapida annotazione](./media/annotationdialog.png "annotationdialog")
+![Screenshot che mostra un menu di scelta per l'aggiunta di annotazioni.](./media/whats-new-in-wf-in-dotnet/designer-annotations-context-menu.png)
 
 ### <a name="debugging-states"></a>Stati di debug
 
@@ -232,7 +232,7 @@ I flussi di lavoro macchina a stati sono stati introdotti come parte di .NET Fra
 
 Lo screenshot seguente illustra il flusso di lavoro alla macchina sullo stato completato il [esercitazione introduttiva](getting-started-tutorial.md) passaggio [come: Creare un flusso di lavoro macchina a stati](how-to-create-a-state-machine-workflow.md).
 
-![Flusso di lavoro macchina a stati completo](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![Figura che mostra il lavoro macchina a stati completato.](./media/whats-new-in-wf-in-dotnet/complete-state-machine-workflow.jpg)
 
 Per altre informazioni sulla creazione di flussi, vedere [flussi](state-machine-workflows.md).
 

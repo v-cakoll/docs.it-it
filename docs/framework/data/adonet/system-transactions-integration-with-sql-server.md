@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 09fcf3f1a7e58a4bd8c2c6b0d25c24f32ea5ec5e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583518"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880585"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integrazione di System.Transactions con SQL Server
-.NET Framework versione 2.0 introdotto un framework per le transazioni che sono accessibili tramite il <xref:System.Transactions> dello spazio dei nomi. Questo framework espone le transazioni in un modo completamente integrato in .NET Framework, tra cui [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+.NET Framework versione 2.0 introdotto un framework per le transazioni che sono accessibili tramite il <xref:System.Transactions> dello spazio dei nomi. Questo framework espone le transazioni in un modo completamente integrato in .NET Framework, tra cui ADO.NET.  
   
- Oltre ai miglioramenti a livello di programmabilità, <xref:System.Transactions> e [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] possono essere usati insieme per coordinare le ottimizzazioni quando si usano le transazioni. Una transazione promuovibile è una transazione di tipo semplice (locale) che può essere promossa in modo automatico a una transazione completamente distribuita in base alle esigenze.  
+ Oltre a miglioramenti della programmabilità, <xref:System.Transactions> e ADO.NET possono lavorare insieme per coordinare le ottimizzazioni quando si utilizzano le transazioni. Una transazione promuovibile è una transazione di tipo semplice (locale) che può essere promossa in modo automatico a una transazione completamente distribuita in base alle esigenze.  
   
- A partire [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> supporta le transazioni promuovibili quando si lavora con SQL Server. Una transazione promuovibile non richiama l'overhead aggiunto di una transazione distribuita, a meno che non sia necessario. Le transazioni promuovibili sono automatiche e non richiedono alcun intervento da parte dello sviluppatore.  
+ A partire da ADO.NET 2.0, <xref:System.Data.SqlClient> supporta le transazioni promuovibili quando si lavora con SQL Server. Una transazione promuovibile non richiama l'overhead aggiunto di una transazione distribuita, a meno che non sia necessario. Le transazioni promuovibili sono automatiche e non richiedono alcun intervento da parte dello sviluppatore.  
   
  Le transazioni promuovibili sono disponibili solo quando si usa il Provider di dati .NET Framework per SQL Server (`SqlClient`) con SQL Server.  
   

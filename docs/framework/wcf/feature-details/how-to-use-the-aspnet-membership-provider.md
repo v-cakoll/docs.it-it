@@ -6,21 +6,21 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 8011b026e857dd6e5815ef7da00c1c33db8b5b4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61324bbc5ea07dd19e23589bfc90f9ea44a6b331
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038714"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880180"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Procedura: Usare provider di appartenenza ASP.NET
-Il provider di appartenenza [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] è una funzionalità che consente agli sviluppatori di [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] di creare siti Web che consentono agli utenti di creare combinazioni di nome utente e password univoche. Con questa funzionalità qualsiasi utente può stabilire un account nel sito e accedere in modo esclusivo al sito e ai relativi servizi. Si tratta di una funzionalità in contrasto con la protezione di Windows, in base alla quale è necessario che gli utenti dispongano di un account in un dominio Windows. Qualsiasi utente che fornisca le credenziali (ovvero nome utente e password) può utilizzare il sito e i relativi servizi.  
+Il provider di appartenenze ASP.NET è una funzionalità che consente agli sviluppatori ASP.NET creare siti Web che consentono agli utenti di creare combinazioni di nome e una password utente univoco. Con questa funzionalità qualsiasi utente può stabilire un account nel sito e accedere in modo esclusivo al sito e ai relativi servizi. Si tratta di una funzionalità in contrasto con la protezione di Windows, in base alla quale è necessario che gli utenti dispongano di un account in un dominio Windows. Qualsiasi utente che fornisca le credenziali (ovvero nome utente e password) può utilizzare il sito e i relativi servizi.  
   
- Per un'applicazione di esempio, vedere [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Per informazioni sull'uso di [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] funzionalità di provider di ruoli, vedere [come: Usare il Provider di ruoli ASP.NET con un servizio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
+ Per un'applicazione di esempio, vedere [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Per informazioni sull'utilizzo della funzionalità di provider di ruoli ASP.NET, vedere [come: Usare il Provider di ruoli ASP.NET con un servizio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
  La funzionalità di appartenenza richiede l'utilizzo di un database SQL Server per archiviare le informazioni utente. La funzionalità include anche metodi per presentare una domanda agli utenti che hanno dimenticato la password.  
   
- Gli sviluppatori di Windows Communication Foundation (WCF) possono sfruttare queste funzionalità per motivi di sicurezza. Se è integrato in un'applicazione WCF, gli utenti devono fornire una combinazione nome utente/password per l'applicazione client WCF. Per trasferire i dati al servizio WCF, utilizzare un'associazione che supporta le credenziali di nome e la password utente, ad esempio la <xref:System.ServiceModel.WSHttpBinding> (nella configurazione, il [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) e impostare il tipo di credenziale da client`UserName`. Nel servizio, autentica l'utente basato sul nome utente e la password, sicurezza WCF e assegna anche il ruolo specificato per il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ruolo.  
+ Gli sviluppatori di Windows Communication Foundation (WCF) possono sfruttare queste funzionalità per motivi di sicurezza. Se è integrato in un'applicazione WCF, gli utenti devono fornire una combinazione nome utente/password per l'applicazione client WCF. Per trasferire i dati al servizio WCF, utilizzare un'associazione che supporta le credenziali di nome e la password utente, ad esempio la <xref:System.ServiceModel.WSHttpBinding> (nella configurazione, il [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) e impostare il tipo di credenziale da client`UserName`. Nel servizio, la sicurezza WCF autentica l'utente basato sul nome utente e la password e assegna anche il ruolo specificato dal ruolo ASP.NET.  
   
 > [!NOTE]
 >  WCF non fornisce metodi per popolare il database con combinazioni di nome e la password utente o altre informazioni sull'utente.  
@@ -98,7 +98,7 @@ Il provider di appartenenza [!INCLUDE[vstecasp](../../../../includes/vstecasp-md
 6. Impostare l'attributo `userNamePasswordValidationMode` su `MembershipProvider`.  
   
     > [!IMPORTANT]
-    >  Se il `userNamePasswordValidationMode` valore non è impostato, WCF Usa l'autenticazione di Windows anziché il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provider di appartenenze.  
+    >  Se il `userNamePasswordValidationMode` valore non è impostato, WCF Usa l'autenticazione di Windows anziché il provider di appartenenze ASP.NET.  
   
 7. Impostare l'attributo `membershipProviderName` sul nome del provider (specificato al momento di aggiungere il provider nella prima procedura in questo argomento). Nell'esempio seguente viene illustrato il frammento `<serviceCredentials>` fino a questo punto.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4223ee8c8790ad4d0ae2275b347c4f974eeb4158
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773295"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877965"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procedura: Creare certificati temporanei da usare durante lo sviluppo
 
@@ -28,16 +28,16 @@ Quando si sviluppa un servizio sicuro o un client che utilizza Windows Communica
 Il comando seguente crea un certificato autofirmato con un nome soggetto "RootCA" nell'archivio utente corrente personale.
 
 ```powershell
-PS $rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("1.3.6.1.4.1.311.21.10={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2")
+$rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2") -KeyUsage CertSign,DigitalSignature
 ```
 
 È necessario esportare il certificato in un file PFX in modo che possa essere importato da dove è necessario in un passaggio successivo. Quando si esporta un certificato con la chiave privata, è necessaria una password per proteggerla. Si salva la password in un `SecureString` e usare il [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlet per esportare il certificato con la chiave privata associata a un file PFX. È inoltre salvare solo il certificato pubblico in un file CRT usando il [Export-Certificate](/powershell/module/pkiclient/export-certificate) cmdlet.
 
 ```powershell
-PS [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
-PS [String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
-PS Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
-PS Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
+[System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
+[String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
+Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
+Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 ```
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>Per creare un nuovo certificato firmato mediante un certificato dell'autorità radice
@@ -45,15 +45,15 @@ PS Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 Il comando seguente crea un certificato firmato mediante il `RootCA` con un nome soggetto "SignedByRootCA" usando la chiave privata dell'autorità emittente.
 
 ```powershell
-PS $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
+$testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
 ```
 
 Allo stesso modo, si salva il certificato firmato con la chiave privata in un file PFX e solo la chiave pubblica in un file CRT.
 
 ```powershell
-PS [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
-PS Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword
-PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
+[String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
+Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword
+Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 ```
 
 ## <a name="installing-a-certificate-in-the-trusted-root-certification-authorities-store"></a>Installazione di un certificato nell'archivio dell'Autorità di certificazione radice attendibili

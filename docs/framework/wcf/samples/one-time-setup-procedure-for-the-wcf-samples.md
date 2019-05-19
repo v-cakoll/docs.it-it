@@ -2,12 +2,12 @@
 title: Procedura di installazione singola per gli esempi di Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: a34c2ee7cb98c6120e23114674712de0ba5b8162
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f55f994d1fd2d8af8ba15aa159d1bab84cc72d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664808"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876714"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura di installazione singola per gli esempi di Windows Communication Foundation
 La maggior parte degli esempi Windows Communication Foundation (WCF) sono ospitata in Internet Information Services (IIS) ed eseguire da una directory virtuale comune. Questa procedura di installazione singola crea una cartella sul disco. Aggiunge inoltre una directory virtuale IIS denominato **ServiceModelSamples**.
@@ -19,7 +19,7 @@ La maggior parte degli esempi Windows Communication Foundation (WCF) sono ospita
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Procedura di installazione singola per esempi WCF  
   
-1. Assicurarsi che [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sia configurato. Per altre informazioni su come configurare [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], vedere [istruzioni di Hosting Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1. Verificare che ASP.NET sia configurato. Per altre informazioni su come configurare ASP.NET, vedere [istruzioni di Hosting Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
 2. Assicurarsi che [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] sia installato. Cercare le seguenti directory per v4.0 (o versioni successive): **\Windows\Microsoft.NET\Framework.**  
   

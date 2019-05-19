@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 0252259d92f08a0f871167fc7930818bab542cc5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6782261953fb5df94498deefb261407a2f0ba33a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626793"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882390"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Origini dati supportate da Windows Form
 In genere, l'associazione dati è stata utilizzata all'interno delle applicazioni per sfruttare i vantaggi dei dati archiviati nel database. Con data binding in Windows Form, è possibile accedere ai dati dal database, nonché i dati in altre strutture, ad esempio matrici e raccolte, purché siano stati soddisfatti alcuni requisiti minimi.  
@@ -44,12 +44,12 @@ In genere, l'associazione dati è stata utilizzata all'interno delle applicazion
  <xref:System.Collections.IEnumerable>  
  Controlli Windows Form possono essere associati alle origini dati che supportano solo il <xref:System.Collections.IEnumerable> interfaccia se vengono associati attraverso un <xref:System.Windows.Forms.BindingSource> componente.  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] oggetti dati  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] fornisce una serie di strutture di dati adatte per l'associazione. Ciascuna offre il livello di complessità e la complessità.  
+ Oggetti dati ADO.NET  
+ ADO.NET fornisce una serie di strutture di dati adatte per l'associazione. Ciascuna offre il livello di complessità e la complessità.  
   
 - <xref:System.Data.DataColumn>. Oggetto <xref:System.Data.DataColumn> è il blocco predefinito fondamentale di un <xref:System.Data.DataTable>, in quanto un numero di colonne costituita una tabella. Ciascuna <xref:System.Data.DataColumn> ha un <xref:System.Data.DataColumn.DataType%2A> proprietà che determina il tipo di dati contenuti nelle colonne (ad esempio, i componenti di un'automobile in una tabella che descrive automobili). È possibile semplice associare un controllo (ad esempio un <xref:System.Windows.Forms.TextBox> del controllo <xref:System.Windows.Forms.Control.Text%2A> proprietà) a una colonna all'interno di una tabella di dati.  
   
-- <xref:System.Data.DataTable>. Oggetto <xref:System.Data.DataTable> è la rappresentazione di una tabella con righe e colonne, in [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Una tabella di dati contiene due raccolte: <xref:System.Data.DataColumn>, che rappresenta le colonne di dati in una determinata tabella (che viene determinato il tipo di dati che possono essere immessi nella tabella), e <xref:System.Data.DataRow>, che rappresenta le righe di dati in una determinata tabella. È possibile complesso associare un controllo per le informazioni contenute in una tabella di dati (ad esempio l'associazione di <xref:System.Windows.Forms.DataGridView> controllo a una tabella dati). Tuttavia, quando si associa a un <xref:System.Data.DataTable>, si è in realtà un'associazione alla visualizzazione predefinita della tabella.  
+- <xref:System.Data.DataTable>. Oggetto <xref:System.Data.DataTable> è la rappresentazione di una tabella con righe e colonne, in ADO.NET. Una tabella di dati contiene due raccolte: <xref:System.Data.DataColumn>, che rappresenta le colonne di dati in una determinata tabella (che viene determinato il tipo di dati che possono essere immessi nella tabella), e <xref:System.Data.DataRow>, che rappresenta le righe di dati in una determinata tabella. È possibile complesso associare un controllo per le informazioni contenute in una tabella di dati (ad esempio l'associazione di <xref:System.Windows.Forms.DataGridView> controllo a una tabella dati). Tuttavia, quando si associa a un <xref:System.Data.DataTable>, si è in realtà un'associazione alla visualizzazione predefinita della tabella.  
   
 - <xref:System.Data.DataView>. Oggetto <xref:System.Data.DataView> è una visualizzazione personalizzata di una singola tabella dati che può essere ordinata o filtrata. Una vista dati è i dati "snapshot" utilizzato dai controlli con associazione complessa. È possibile un'associazione semplice o complesso per i dati all'interno di una vista dati, ma è essere a conoscenza che si desidera associare a un' "immagine" fissa dei dati anziché un'origine dati viene aggiornata.  
   

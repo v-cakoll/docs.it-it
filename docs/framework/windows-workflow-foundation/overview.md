@@ -2,12 +2,12 @@
 title: Panoramica sul flusso di lavoro di Windows
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: bb714e5e5e4c1fe009ffa775efb456ebcc65c218
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 285ab75f7f67bbb9ffa18367eff126c04227f193
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592563"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876145"
 ---
 # <a name="windows-workflow-overview"></a>Panoramica sul flusso di lavoro di Windows
 Un flusso di lavoro è un set di unità elementari chiamate *attività* che vengono archiviati come un modello che descrive un processo reale. I flussi di lavoro forniscono un metodo per descrivere l'ordine di esecuzione e le relazioni dipendenti tra porzioni di lavoro di breve o lunga durata. Questo lavoro passa attraverso il modello dall'inizio alla fine e le attività possono essere eseguite da persone o da funzioni del sistema.  
@@ -23,7 +23,7 @@ Un flusso di lavoro è un set di unità elementari chiamate *attività* che veng
   
  Ognuna di queste classi esegue il wrapping del runtime di attività principale rappresentato come oggetto <xref:System.Activities.ActivityInstance> responsabile dell'esecuzione di attività. In un dominio dell'applicazione possono essere in esecuzione contemporaneamente diversi oggetti <xref:System.Activities.ActivityInstance>.  
   
- Ognuno dei tre precedenti oggetti di interazione host viene creato da un albero delle attività definito programma di flusso di lavoro. Usando questi tipi o un host personalizzato che esegue il wrapping <xref:System.Activities.ActivityInstance>, i flussi di lavoro può essere eseguite in qualsiasi processo Windows, incluse applicazioni console, applicazioni basate su form, servizi di Windows, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web, siti e (Windows Communication Foundation Servizi WCF).  
+ Ognuno dei tre precedenti oggetti di interazione host viene creato da un albero delle attività definito programma di flusso di lavoro. Usando questi tipi o un host personalizzato che esegue il wrapping <xref:System.Activities.ActivityInstance>, i flussi di lavoro può essere eseguite in qualsiasi processo Windows tra cui le applicazioni console, applicazioni basate su form, servizi Windows, siti Web ASP.NET e Windows Communication Foundation (WCF) servizi.  
   
  ![I componenti del flusso di lavoro nel processo host](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 Componenti del flusso di lavoro nel processo host  

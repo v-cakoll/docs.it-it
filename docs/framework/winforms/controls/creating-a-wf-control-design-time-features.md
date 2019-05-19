@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 4d741beffa5649d1d1593ba3dbb7a1918b669b80
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211209"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882307"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Procedura dettagliata: Creazione di un controllo di Windows Forms che usufruisca delle funzionalità offerte da Visual Studio in fase di progettazione
 
@@ -59,7 +59,7 @@ Le attività illustrate nella procedura dettagliata sono le seguenti:
 
 Al termine, il controllo personalizzato avrà un aspetto simile al seguente:
 
-![Possibile disposizione di MarqueeControl](./media/demomarqueecontrol.gif "DemoMarqueeControl")
+![L'app che mostra un testo scorrevole che indica il testo e pulsanti di avvio e arresto.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
 Per il listato di codice completo, vedere [come: Creare un controllo di Windows Form che sfrutta i vantaggi della funzionalità Design-Time](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).
 
@@ -178,7 +178,7 @@ Quando si sviluppa un'esperienza in fase di progettazione personalizzata, sarà 
 
 2. Nella finestra di dialogo "Pagine delle proprietà MarqueeControlLibrary", selezionare la **Debug** pagina.
 
-3. Nel **azione di avvio** sezione, selezionare **Avvia programma esterno**. Sarà pertanto il debug di un'istanza separata di Visual Studio, fare clic sui puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) per cercare l'IDE di Visual Studio. Il nome del file eseguibile è devenv.exe e se è installato nel percorso predefinito, il percorso è %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
+3. Nel **azione di avvio** sezione, selezionare **Avvia programma esterno**. Sarà pertanto il debug di un'istanza separata di Visual Studio, fare clic sui puntini di sospensione (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)) per cercare l'IDE di Visual Studio. Il nome del file eseguibile è devenv.exe e se è installato nel percorso predefinito, il percorso è %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
 
 4. Fare clic su OK per chiudere la finestra di dialogo.
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 638e8177060c489a7469f80adde68cb9ba266365
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583834"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879960"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurazione dei parametri e tipi di dati di parametro
 
@@ -96,7 +96,7 @@ Per altre informazioni, vedere [generazione di comandi tramite commandbuilders](
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Utilizzo di parametri con SqlCommand e una stored procedure
 
-Le stored procedure offrono numerosi vantaggi nelle applicazioni guidate dai dati. Usando le stored procedure, le operazioni nel database possono essere incapsulate in un unico comando, ottimizzate per migliorare le prestazioni e rese più sicure con funzioni di sicurezza aggiuntive. Anche se una stored procedure può essere chiamata passando il nome della stored procedure seguito dagli argomenti dei parametri come istruzione SQL, tramite il <xref:System.Data.Common.DbCommand.Parameters%2A> raccolta del [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> consente di definire in modo più esplicito stored parametri di procedure e per accedere ai parametri di output e valori restituiti.
+Le stored procedure offrono numerosi vantaggi nelle applicazioni guidate dai dati. Usando le stored procedure, le operazioni nel database possono essere incapsulate in un unico comando, ottimizzate per migliorare le prestazioni e rese più sicure con funzioni di sicurezza aggiuntive. Anche se una stored procedure può essere chiamata passando il nome della stored procedure seguito dagli argomenti dei parametri come istruzione SQL, tramite il <xref:System.Data.Common.DbCommand.Parameters%2A> raccolta di ADO.NET <xref:System.Data.Common.DbCommand> consente di definire in modo più esplicito stored procedure i parametri e per accedere ai parametri di output e valori restituiti.
 
 > [!NOTE]
 > Le istruzioni con parametri vengono eseguite sul server tramite `sp_executesql,` , che consente il riutilizzo del piano di query. I cursori o le variabili locali del batch `sp_executesql` non sono visibili per il batch che chiama `sp_executesql`. Le modifiche apportate al contesto del database durano solo fino al termine dell'esecuzione dell'istruzione `sp_executesql` . Per altre informazioni, vedere [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).

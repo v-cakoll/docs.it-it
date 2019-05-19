@@ -2,12 +2,12 @@
 title: Recupero e modifica di dati in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5ac8fbd2a53d2670471c1ef5e59508f582ed944
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033917"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881427"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recupero e modifica di dati in ADO.NET
 La connessione a un'origine dati e il recupero dei dati in essa contenuti sono funzioni fondamentali nelle applicazioni di database. I provider di dati .NET Framework di ADO.NET fungono da ponte tra un'applicazione e un'origine dati, consentendo di eseguire comandi e recuperare i dati utilizzando un **DataReader** o una **DataAdapter** . Una funzione chiave di qualsiasi applicazione di database è la capacità di aggiornare i dati archiviati nel database. In ADO.NET, l'aggiornamento dei dati prevede l'uso di **DataAdapter** e <xref:System.Data.DataSet>, e **comando** degli oggetti può anche comprendere l'utilizzo delle transazioni.  
@@ -53,7 +53,7 @@ La connessione a un'origine dati e il recupero dei dati in essa contenuti sono f
  Vengono descritti i contatori delle prestazioni disponibili per `SqlClient` e `OracleClient`.  
   
  [Programmazione asincrona](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
- Viene descritto il supporto di [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] per la programmazione asincrona.  
+ Viene descritto il supporto ADO.NET per la programmazione asincrona.  
   
  [Supporto per flusso SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  Viene illustrato come scrivere applicazioni che trasmettere dati da SQL Server senza che siano completamente caricata in memoria.  

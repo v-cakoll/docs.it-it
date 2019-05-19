@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3217680a2bab43124b75529bead97ffcfbb06aea
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961655"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882130"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Procedura: Modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid di Windows Forms
 > [!NOTE]
@@ -64,13 +64,13 @@ ms.locfileid: "61961655"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     In fase di esecuzione è possibile usare la <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo a cui associare il <xref:System.Windows.Forms.DataGrid> controllo a un'origine dati diversa. Ad esempio, si possono invece avere diversi [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] controlli dei dati, ciascuna connessa a un database diverso.  
+     In fase di esecuzione è possibile usare la <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo a cui associare il <xref:System.Windows.Forms.DataGrid> controllo a un'origine dati diversa. Ad esempio, si potrebbero disporre di più controlli di dati ADO.NET, ciascuna connessa a un database diverso.  
   
 ### <a name="to-change-the-datasource-programmatically"></a>Per modificare l'origine dati a livello di codice  
   
 1. Impostare il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> al nome dell'origine dati e della tabella che si desidera associare al metodo.  
   
-     Nell'esempio seguente viene illustrato come modificare l'origine dati utilizzando il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo a un [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] controllo dati (adoPubsAuthors) che è connessa alla tabella Authors nel database Pubs.  
+     Nell'esempio seguente viene illustrato come modificare l'origine dati utilizzando il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo a un controllo di dati ADO.NET (adoPubsAuthors) che è connessa alla tabella Authors nel database Pubs.  
   
     ```vb  
     Private Sub ResetSource()  

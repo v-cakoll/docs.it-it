@@ -2,12 +2,12 @@
 title: Scenari di distribuzione supportati - WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: f1a95e5448d2cc8f1ac472c3b1735f58460e2be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639145"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881053"
 ---
 # <a name="supported-deployment-scenarios"></a>Scenari di distribuzione supportati
 
@@ -27,7 +27,7 @@ Per altre informazioni sulle funzionalità supportate in questi set di autorizza
 
 ## <a name="partial-trust-on-the-server"></a>Attendibilità parziale nel server
 
-Numerosi provider commerciali di servizi host di applicazioni Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] richiedono che le applicazioni che sono in esecuzione nei loro server vengano eseguite nel set di autorizzazioni di Attendibilità media [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] . Servizi WCF possono essere eseguiti in questi ambienti condizione che utilizzino il <xref:System.ServiceModel.BasicHttpBinding>, il <xref:System.ServiceModel.WebHttpBinding>, o <xref:System.ServiceModel.WSHttpBinding> con sicurezza a livello di trasporto.
+Numerosi provider commerciali di applicazione Web ASP.NET che ospita i servizi impone che le applicazioni in esecuzione nei loro server vengano eseguiti nel [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Medium Trust set di autorizzazioni. Servizi WCF possono essere eseguiti in questi ambienti condizione che utilizzino il <xref:System.ServiceModel.BasicHttpBinding>, il <xref:System.ServiceModel.WebHttpBinding>, o <xref:System.ServiceModel.WSHttpBinding> con sicurezza a livello di trasporto.
 
 Servizi WCF in esecuzione in ambienti host ad attendibilità media possono fungere anche servizi di livello intermedio inviando messaggi ad altri server in risposta alle richieste dei client. Gli scenari di livello medio nel server sono supportati se l'ambiente host ha concesso all'applicazione la <xref:System.Net.WebPermission> appropriata per effettuare richieste in uscita al server desiderato.
 

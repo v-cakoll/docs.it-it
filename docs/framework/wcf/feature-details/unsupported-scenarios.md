@@ -2,12 +2,12 @@
 title: Scenari non supportati
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 48ed292b3bb22ae4966680805a74b40b249d8a32
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637743"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878750"
 ---
 # <a name="unsupported-scenarios"></a>Scenari non supportati
 Per vari motivi, Windows Communication Foundation (WCF) non supporta alcuni scenari di sicurezza specifico. Ad esempio, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition può neimplementuje metodu i protocolli di autenticazione SSPI o Kerberos, e pertanto WCF non supporta l'esecuzione di un servizio con l'autenticazione di Windows che utilizzano tale piattaforma. Durante l'esecuzione di WCF in Windows XP Home Edition, sono supportati altri meccanismi di autenticazione, ad esempio nome utente/password e l'autenticazione integrata di HTTP/HTTPS.  
@@ -36,7 +36,7 @@ Per vari motivi, Windows Communication Foundation (WCF) non supporta alcuni scen
 >  I requisiti precedenti sono specifici. Ad esempio, il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crea un elemento di associazione che genera un'identità Windows senza tuttavia creare un token SCT. È pertanto possibile utilizzare questa identità con l'opzione `Required` di [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Possibile conflitto con ASP.NET  
- WCF e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] possono entrambi attivare o disabilitare la rappresentazione. Quando [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ospita un'applicazione WCF, potrebbe esistere un conflitto tra WCF e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] le impostazioni di configurazione. In caso di conflitto, l'impostazione di WCF ha la precedenza, a meno che il <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> è impostata su <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, nel qual caso il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rappresentazione impostazione ha la precedenza.  
+ WCF e ASP.NET possono entrambi attivare o disattivare la rappresentazione. Quando ASP.NET ospita un'applicazione WCF, potrebbe esistere un conflitto tra le impostazioni di configurazione WCF e ASP.NET. In caso di conflitto, l'impostazione di WCF ha la precedenza, a meno che il <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> è impostata su <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, nel qual caso l'impostazione di rappresentazione ASP.NET ha la precedenza.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Possibilità di esito negativo dei caricamenti dell'assembly in caso di utilizzo della rappresentazione  
  Se il contesto rappresentato non dispone delle autorizzazioni di accesso per caricare un assembly e se è la prima volta che il Common Language Runtime (CLR) tenta di caricare l'assembly per tale dominio applicazione, il dominio <xref:System.AppDomain> memorizza l'errore nella cache. I tentativi successivi di caricamento dell'assembly (o degli assembly) hanno esito negativo, anche dopo aver ripristinato la rappresentazione e anche se il contesto ripristinato dispone delle autorizzazioni di accesso per caricare l'assembly. Ciò è dovuto al fatto che CLR non esegue nuovi tentativi di caricamento dopo che il contesto utente è cambiato. Per risolvere il problema è necessario riavviare il dominio applicazione.  
@@ -75,13 +75,13 @@ Per vari motivi, Windows Communication Foundation (WCF) non supporta alcuni scen
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Errore di sicurezza a livello di messaggio quando si utilizza la rappresentazione ASP.NET e la compatibilità con ASP.NET è obbligatoria  
  WCF non supporta la combinazione di impostazioni seguente perché possono impedire l'autenticazione di client che si verifichi:  
   
-- È stata attivata la rappresentazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Questa operazione viene eseguita nel file Web. config impostando il `impersonate` attributo del <`identity`> elemento `true`.  
+- Rappresentazione ASP.NET è abilitata. Questa operazione viene eseguita nel file Web. config impostando il `impersonate` attributo del <`identity`> elemento `true`.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modalità di compatibilità viene abilitata impostando il `aspNetCompatibilityEnabled` attributo del [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) a `true`.  
+- Modalità di compatibilità ASP.NET viene abilitata impostando il `aspNetCompatibilityEnabled` attributo del [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) a `true`.  
   
 - Viene utilizzata la protezione a livello di messaggio.  
   
- Per risolvere questo problema è sufficiente disattivare la modalità di compatibilità con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Oppure, se il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] è necessaria la modalità di compatibilità, disabilitare il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] la rappresentazione delle funzionalità e usare invece la rappresentazione fornita da WCF. Per altre informazioni, vedere [delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ La soluzione alternativa consiste nel disattivare la modalità di compatibilità ASP.NET. In alternativa, se la modalità di compatibilità ASP.NET è necessaria, disabilitare la funzionalità della rappresentazione ASP.NET e usare invece la rappresentazione fornita da WCF. Per altre informazioni, vedere [delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>Errore di indirizzo letterale IPv6  
  Le richieste di sicurezza hanno esito negativo quando il client e il servizio si trovano nello stesso computer e gli indirizzi letterali Ipv6 vengono utilizzati per il servizio.   

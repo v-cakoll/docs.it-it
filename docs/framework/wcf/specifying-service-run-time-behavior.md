@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 7fb3398ec325cd8b483ef7a222c8dd392a4e72b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1635d0eccf0886577eafe2ab11126093defac2b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656001"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875984"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Specifica del comportamento in fase di esecuzione del servizio
 Dopo aver definito un contratto di servizio ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) e implementato tale contratto ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)), è possibile configurare il comportamento operativo del runtime del servizio. In questo argomento vengono illustrati i comportamenti dell'operazione e del servizio forniti dal sistema e viene descritto dove trovare ulteriori informazioni per creare nuovi comportamenti. Mentre alcuni comportamenti vengono applicati come attributi, molti vengono applicati utilizzando un file di configurazione dell'applicazione o a livello di codice. Per altre informazioni sulla configurazione dell'applicazione di servizio, vedere [configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md).  
@@ -77,7 +77,7 @@ Dopo aver definito un contratto di servizio ([Designing Service Contracts](../..
 ### <a name="service-behaviors"></a>Comportamenti del servizio  
  I comportamenti seguenti operano sui servizi.  
   
-- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Applicato a un servizio WCF per indicare se tale servizio può essere eseguito in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] modalità di compatibilità.  
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Applicato a un servizio WCF per indicare se tale servizio può essere eseguito in modalità di compatibilità ASP.NET.  
   
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Controlla come il servizio autorizza le richieste del client.  
   
