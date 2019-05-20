@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bc4b4df6829f5b86dff400c5cd7cbd3d86f5507
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a4640e776cc76ef56227858f6a4aa04e77ecbbdc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591537"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586011"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Procedura: Associare un delegato tramite reflection
 Quando viene usata la reflection per il caricamento e l'esecuzione di assembly, non è possibile usare le funzioni del linguaggio come l'operatore `+=` di C# o l'[istruzione AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) di Visual Basic per associare gli eventi. Le procedure seguenti illustrano come associare un metodo esistente a un evento recuperando tutti i tipi necessari tramite reflection e come creare un metodo dinamico usando reflection emit e associarlo a un evento.  
@@ -104,14 +104,6 @@ Quando viene usata la reflection per il caricamento e l'esecuzione di assembly, 
  [!code-cpp[HookUpDelegate#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#1)]
  [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)]
  [!code-vb[HookUpDelegate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Compilazione del codice  
-  
-- Il codice include le istruzioni `using` C# (`Imports` in Visual Basic) necessarie per la compilazione.  
-  
-- Per la compilazione dalla riga di comando non sono necessari altri riferimenti ad assembly. Poiché questo esempio rappresenta un'applicazione console, in Visual Studio è necessario aggiungere un riferimento a System.Windows.Forms.dll.  
-  
-- Compilare il codice dalla riga di comando usando csc.exe, vbc.exe o cl.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
   
 ## <a name="see-also"></a>Vedere anche
 

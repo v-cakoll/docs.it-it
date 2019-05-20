@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: bfa81bc926b4fe81455cecb88bc55f4dcd69268e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b08f9dbf8137e483bd38a4f396732191598532cf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977838"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635229"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>Operazioni aritmetiche sui puntatori (Guida per programmatori C#)
 Questo argomento illustra l'uso degli operatori aritmetici `+` e `-` per modificare i puntatori.  
@@ -40,9 +40,8 @@ Questo argomento illustra l'uso degli operatori aritmetici `+` e `-` per modific
 
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
-- [Espressioni puntatore](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [Operatori C#](../../../csharp/language-reference/operators/index.md)
-- [Modifica dei puntatori](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)
+- [Modifica dei puntatori](../../../csharp/programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)
 - [Tipi di puntatori](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Tipi](../../../csharp/language-reference/keywords/types.md)
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)

@@ -1,15 +1,13 @@
 ---
 title: Gestione degli errori parziali
 description: Informazioni su come gestire correttamente gli errori parziali. Un microservizio potrebbe non essere completamente funzionale, ma essere comunque in grado di eseguire operazioni utili.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 16b6237f79d6b4bc2bc9152ba6eb023ffbd3899f
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: a667ad2e1456db7b5846023de27d3797dad58731
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362704"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640102"
 ---
 # <a name="handle-partial-failure"></a>Gestire gli errori parziali
 

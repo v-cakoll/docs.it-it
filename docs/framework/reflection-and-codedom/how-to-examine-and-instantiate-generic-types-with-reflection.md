@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 949760026bc965fbb9a94d1f40eb0996a1ce7e92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41070b5d51f0b613d7a6bbbc72b24a8c1793964d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592387"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586107"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Procedura: Esaminare e creare istanze di tipi generici tramite reflection
 Le informazioni sui tipi generici vengono ottenute esattamente come quelle relative ad altri tipi, ovvero esaminando un oggetto <xref:System.Type> che rappresenta il tipo generico. La differenza principale è data dal fatto che un tipo generico dispone di un elenco di oggetti <xref:System.Type> che rappresentano i relativi parametri di tipo generico. La prima procedura in questa sezione esamina i tipi generici.  
@@ -114,14 +114,6 @@ Le informazioni sui tipi generici vengono ottenute esattamente come quelle relat
  [!code-cpp[HowToGeneric#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#1)]
  [!code-csharp[HowToGeneric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#1)]
  [!code-vb[HowToGeneric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Compilazione del codice  
-  
-- Il codice include le istruzioni `using` C# (`Imports` in Visual Basic) necessarie per la compilazione.  
-  
-- Non sono necessari altri riferimenti ad assembly.  
-  
-- Compilare il codice dalla riga di comando usando csc.exe, vbc.exe o cl.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
   
 ## <a name="see-also"></a>Vedere anche
 

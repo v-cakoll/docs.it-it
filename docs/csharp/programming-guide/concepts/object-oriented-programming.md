@@ -2,12 +2,12 @@
 title: Programmazione orientata a oggetti (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: a7a3ce1b33d040b337087dfede90b58906c95cbd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2adb1ac24aa625c89fcafe074fe65189aa3767c7
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481171"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880702"
 ---
 # <a name="object-oriented-programming-c"></a>Programmazione orientata a oggetti (C#)
 
@@ -25,17 +25,17 @@ In questa sezione vengono descritti i concetti seguenti:
 
   - [Membri di classi](#Members)
 
-        [Properties and Fields](#Properties)
+    - [Proprietà e campi](#Properties)
 
-        [Methods](#Methods)
+    - [Metodi](#Methods)
 
-        [Constructors](#Constructors)
+    - [Costruttori](#Constructors)
 
-        [Finalizers](#Finalizers)
+    - [Finalizzatori](#Finalizers)
 
-        [Events](#Events)
+    - [Eventi](#Events)
 
-        [Nested Classes](#NestedClasses)
+    - [Classi annidate](#NestedClasses)
 
   - [Modificatori di accesso e livelli di accesso](#AccessModifiers)
 

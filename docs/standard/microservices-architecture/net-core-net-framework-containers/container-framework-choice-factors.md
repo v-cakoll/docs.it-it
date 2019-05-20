@@ -1,15 +1,13 @@
 ---
 title: Tabella decisioni. Framework .NET da usare per Docker
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Tabella decisioni, framework .NET da usare per Docker
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 8044e3064ac372750c174d8b47c3f7a63d6bbd0b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 96b2750e52d64b06444b7f87dea624879f37d3d7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149055"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639173"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>Tabella decisioni: framework .NET da usare per Docker
 

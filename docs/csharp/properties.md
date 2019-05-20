@@ -2,12 +2,12 @@
 title: Proprietà
 description: Informazioni sulle proprietà di C#, tra cui funzionalità per la convalida, valori calcolati, valutazione lazy e notifiche di modifica di proprietà.
 ms.date: 04/25/2018
-ms.openlocfilehash: d4fa7b6117bec63c41318dd4bcc3850ce55a5907
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956238"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878272"
 ---
 # <a name="properties"></a>Proprietà
 
@@ -140,7 +140,7 @@ Uno scenario finale in cui è necessario scrivere codice nella funzione di acces
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-L'operatore `?.` è chiamato *operatore condizionale Null*. L'operatore cerca un riferimento Null prima di eseguire la valutazione della parte destra dell'operatore. Se non vengono trovati sottoscrittori dell'evento `PropertyChanged`, il codice che genera l'evento non viene eseguito. In questo caso, verrà generato `NullReferenceException` senza eseguire il controllo. Per altre informazioni, vedere [`events`](delegates-events.md). Questo esempio usa anche il nuovo operatore `nameof` per convertire il simbolo del nome della proprietà nella rappresentazione di testo.
+L'operatore `?.` è chiamato *operatore condizionale Null*. L'operatore cerca un riferimento Null prima di eseguire la valutazione della parte destra dell'operatore. Se non vengono trovati sottoscrittori dell'evento `PropertyChanged`, il codice che genera l'evento non viene eseguito. In questo caso, verrà generato `NullReferenceException` senza eseguire il controllo. Per altre informazioni, vedere [`events`](events-overview.md). Questo esempio usa anche il nuovo operatore `nameof` per convertire il simbolo del nome della proprietà nella rappresentazione di testo.
 L'uso di `nameof` può ridurre gli errori nel caso in cui il nome della proprietà sia stato digitato erroneamente.
 
 L'implementazione di <xref:System.ComponentModel.INotifyPropertyChanged> è quindi un esempio di caso in cui è possibile scrivere codice nelle funzioni di accesso per supportare gli scenari necessari.

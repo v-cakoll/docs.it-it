@@ -2,12 +2,12 @@
 title: 'Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328816"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585728"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)
 
@@ -124,14 +124,6 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="compiling-the-code"></a>Compilazione del codice
-
-Creare e compilare un progetto destinato a una delle opzioni seguenti:
-
-- .NET Framework versione 3.5 con un riferimento a System.Core.dll.
-- .NET Framework versione 4.0 o successiva.
-- .NET Core versione 1.0 o successiva.
-  
 ## <a name="see-also"></a>Vedere anche
 
 - [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

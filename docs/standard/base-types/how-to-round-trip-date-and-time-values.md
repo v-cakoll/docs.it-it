@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb9eabe006dd10b0c36d0fb477637a519853ef2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b8f56fcad74287e260c2989534e6bd4931ad646a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633838"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590023"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Procedura: Valori di data e ora round trip
 In molte applicazioni un valore di data e ora deve identificare una data e un'ora singole in modo non ambiguo. Questo argomento illustra come salvare e ripristinare un valore <xref:System.DateTime>, un valore <xref:System.DateTimeOffset> e un valore di data e ora con informazioni sul fuso orario, in modo che il valore ripristinato identifichi la stessa ora del valore salvato.  
@@ -94,8 +94,6 @@ In molte applicazioni un valore di data e ora deve identificare una data e un'or
     - <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
   
     - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
-  
-- Un riferimento a System.Core.dll.  
   
 - Ogni esempio di codice, ad eccezione della classe `DateInTimeZone`, deve essere incluso in una classe o un modulo di Visual Basic, ne deve essere eseguito il wrapping nei metodi e deve essere chiamato dal metodo `Main`.  
   

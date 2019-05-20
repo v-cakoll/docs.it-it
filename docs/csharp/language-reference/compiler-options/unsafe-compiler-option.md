@@ -7,15 +7,16 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.openlocfilehash: 4cfd7c82bc2cbf816164b235642c0647eeb7e5b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 146299fda103567b111c66400c17edf36addd843
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337331"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877985"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (opzioni del compilatore C#)
-L'opzione del compilatore **-unsafe** consente la compilazione del codice che usa la parola chiave [unsafe](../../../csharp/language-reference/keywords/unsafe.md).  
+
+L'opzione del compilatore **-unsafe** consente la compilazione del codice che usa la parola chiave [unsafe](../keywords/unsafe.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -23,8 +24,9 @@ L'opzione del compilatore **-unsafe** consente la compilazione del codice che us
 -unsafe  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Per altre informazioni sul codice unsafe, vedere [Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md).  
+## <a name="remarks"></a>Osservazioni
+
+Per altre informazioni sul codice unsafe, vedere [Codice unsafe e puntatori](../../programming-guide/unsafe-code-pointers/index.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
@@ -46,8 +48,9 @@ Aprire il file con estensione csproj per un progetto e aggiungere gli elementi s
 
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>.  
   
-## <a name="example"></a>Esempio  
- Compilare `in.cs` per la modalità unsafe:  
+## <a name="example"></a>Esempio
+
+Compilare `in.cs` per la modalità unsafe:  
   
 ```console  
 csc -unsafe in.cs  
@@ -55,5 +58,5 @@ csc -unsafe in.cs
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opzioni del compilatore C#](index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

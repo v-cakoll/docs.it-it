@@ -1,15 +1,13 @@
 ---
 title: Problemi e soluzioni per la gestione dei dati distribuiti
 description: Informazioni sulle problematiche e le soluzioni per la gestione dei dati distribuiti nell'area dei microservizi.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 3e683044ea6a31116f1e7da6d690fc32ad87bd76
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 7733a4523e147591151cd0dda26c43992dbe9a41
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613702"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644370"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemi e soluzioni per la gestione dei dati distribuiti
 

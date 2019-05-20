@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3009bf9eb24c44cedc4021f3d09f1707ae2e40d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 862a224c696ebafb23b30add7c8e8d66e1846b4c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593599"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584478"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Procedura: Ricevere notifiche di eccezioni first-chance
 L'evento <xref:System.AppDomain.FirstChanceException> della classe <xref:System.AppDomain> consente di ricevere una notifica in cui si informa che è stata generata un'eccezione, prima che Common Language Runtime inizi a cercare gestori di eccezioni .
@@ -97,10 +97,6 @@ L'evento <xref:System.AppDomain.FirstChanceException> della classe <xref:System.
 
  [!code-csharp[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#1)]
  [!code-vb[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#1)]
-
-## <a name="compiling-the-code"></a>Compilazione del codice
-
-- Questo esempio è un'applicazione della riga di comando. Per compilare ed eseguire questo codice in Visual Studio, aggiungere il codice C# `Console.ReadLine();` (in Visual Basic, `Console.ReadLine()`) alla fine di `Main()`, per impedire che la finestra di comando si chiuda prima di poter leggere l'output.
 
 ## <a name="see-also"></a>Vedere anche
 

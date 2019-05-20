@@ -1,15 +1,13 @@
 ---
 title: Stato e dati nelle applicazioni di Docker
 description: Gestione di stato e dati nelle applicazioni di Docker. Le istanze dei microservizi sono espandibili, ma I DATI NON LO SONO.Informazioni su come gestire questo aspetto con i microservizi.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 70c3cee8c5fd1e63f2ff869f49b1fb02ab8f59dd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d7b0ff0e73267c6b80be2f1c956c3b4eae140e2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152656"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641359"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stato e dati nelle applicazioni di Docker
 

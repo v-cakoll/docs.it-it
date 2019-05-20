@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3950b7a8cf107fc06240f56e5f95eca4e6882251
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 97ea5c7389cf30f7f58c944c95e095ebe4146192
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314932"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590598"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Procedura: Visualizzare i millisecondi nei valori di data e ora
 I metodi di formattazione di data e ora predefiniti, ad esempio <xref:System.DateTime.ToString?displayProperty=nameWithType>, includono le ore, i minuti e i secondi di un valore di ora, ma ne escludono il componente dei millisecondi. Questo argomento descrive come includere un componente millisecondi di una data e un'ora nelle stringhe di data e ora formattate.  
@@ -50,9 +50,6 @@ I metodi di formattazione di data e ora predefiniti, ad esempio <xref:System.Dat
   
 > [!NOTE]
 >  È possibile visualizzare piccolissime unità di secondo frazionarie, come decimillesimi di secondo o centomillesimi di secondo. Questi valori tuttavia potrebbero non essere significativi. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. In Windows NT 3.5 e versioni successive e nei sistemi operativi [!INCLUDE[windowsver](../../../includes/windowsver-md.md)] la risoluzione del clock è di circa 10-15 millisecondi.  
-  
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Compilare il codice nella riga di comando usando csc.exe o vbc.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
   
 ## <a name="see-also"></a>Vedere anche
 

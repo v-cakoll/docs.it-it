@@ -1,15 +1,13 @@
 ---
 title: Considerazioni principali
 description: Considerazioni principali nella guida/ebook Architettura di microservizi .NET per applicazioni .NET in contenitori, che consentono un esame rapido degli aspetti principali dell'uso di un'architettura di microservizi, quali vantaggi e svantaggi, modelli DDD per la progettazione e lo sviluppo, nonché resilienza, sicurezza e uso di agenti di orchestrazione.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 90babf9a32d1e139216cbc8eb1c629401b8e83e3
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362119"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639693"
 ---
 # <a name="key-takeaways"></a>Considerazioni principali
 

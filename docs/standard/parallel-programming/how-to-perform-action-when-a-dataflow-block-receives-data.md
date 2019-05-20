@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 369559feca4edab6de587a3494588973e0c2e1b7
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: f79b244f35bfe006b1f83f2689fe5fafcca4e6fd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221063"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592039"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Procedura: eseguire un'azione alla ricezione di dati in un blocco di flussi di dati
 Tramite i tipi di *blocchi di flussi di esecuzione* viene chiamato un delegato fornito dall'utente alla ricezione dei dati. Le classi <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> sono tipi di blocchi di flussi di dati di esecuzione. È possibile utilizzare la parola chiave `delegate` (`Sub` in Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> o un'espressione lambda, quando viene fornita una funzione lavoro a un blocco di flussi di dati di esecuzione. In questo documento viene descritto come utilizzare <xref:System.Func%602> e le espressioni lambda per eseguire l'azione nei blocchi di esecuzione.  
@@ -32,17 +32,6 @@ Tramite i tipi di *blocchi di flussi di esecuzione* viene chiamato un delegato f
  Sebbene sia possibile fornire un'espressione lambda a un oggetto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, in questo esempio viene utilizzato l'oggetto <xref:System.Func%602> per consentire l'utilizzo del metodo `CountBytes` ad altro codice. Nell'oggetto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> viene utilizzata un'espressione lambda in quanto il lavoro da eseguire è specifico per questa attività e probabilmente non è utile per altro codice. Per altre informazioni sull'uso di espressioni lambda nella libreria TPL, vedere [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
  La sezione Riepilogo dei tipi delegati del documento [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) riepiloga i tipi di delegati che è possibile fornire agli oggetti <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>. Nella tabella viene inoltre specificato se il tipo delegato viene eseguito in modo sincrono o asincrono.  
-  
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi per gli sviluppatori per Visual Studio.  
-  
- Visual C#  
-  
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.cs**  
-  
- Visual Basic  
-  
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.vb**  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
  In questo esempio viene fornito un delegato di tipo <xref:System.Func%602> all'oggetto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> per eseguire l'attività del blocco di flussi di dati in modo sincrono. Per abilitare un comportamento asincrono del blocco di flussi di dati, fornire un delegato di tipo <xref:System.Func%601> a questo tipo di blocco. Quando il comportamento di un blocco di flussi di dati è asincrono, l'attività del blocco di flussi di dati viene completata solo quando termina l'oggetto <xref:System.Threading.Tasks.Task%601> restituito. Nell'esempio seguente viene modificato il metodo `CountBytes` e vengono usati gli operatori [async](~/docs/csharp/language-reference/keywords/async.md) e [await](~/docs/csharp/language-reference/keywords/await.md) ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) e [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) in Visual Basic) per calcolare in modo asincrono il numero totale di byte che è pari a zero nel file specificato. Tramite il metodo <xref:System.IO.FileStream.ReadAsync%2A> vengono eseguite operazioni di lettura da file in modo asincrono.  

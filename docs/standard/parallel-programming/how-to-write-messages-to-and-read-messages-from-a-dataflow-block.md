@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 638cd917bdb40fa5bbf1cb02857c71a0127d0e3f
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 564f5f880f32dbab1387d03f30082e1972c3f353
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221154"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591965"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Procedura: scrivere messaggi in un blocco di flussi di dati e leggere messaggi da un blocco di flussi di dati
 In questo documento viene descritto come utilizzare la libreria del flusso di dati TPL per scrivere messaggi in un blocco di flussi di dati e per leggerli da quest'ultimo. La libreria del flusso di dati TPL fornisce sia metodi sincroni sia asincroni per la lettura e scrittura di messaggi da e in un blocco di flussi di dati. In questo documento viene utilizzata la classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>. Mediante la classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> i messaggi vengono inseriti nel buffer; inoltre, essa viene utilizzata sia come origine sia come destinazione dei messaggi.  
@@ -50,17 +50,6 @@ In questo documento viene descritto come utilizzare la libreria del flusso di da
   
  [!code-csharp[TPLDataflow_ReadWrite#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#1)]
  [!code-vb[TPLDataflow_ReadWrite#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowReadWrite.cs` (`DataflowReadWrite.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi per gli sviluppatori per Visual Studio.  
-  
- Visual C#  
-  
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.cs**  
-  
- Visual Basic  
-  
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.vb**  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  In questo esempio viene mostrato come leggere da un blocco di messaggi e come scrivere in quest'ultimo direttamente. È anche possibile connettere i blocchi di flussi di dati per creare *pipeline*, che sono sequenze lineari di blocchi di flussi di dati, o *reti*, che sono grafici di blocchi di flussi di dati. I dati di origini in una pipeline o in una rete vengono propagati nelle destinazioni in modo asincrono quando i dati in questione diventano disponibili. Per un esempio in cui viene creata una pipeline di base del flusso di dati, vedere [Procedura dettagliata: creazione di una pipeline del flusso di dati](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Per un esempio in cui viene creata una rete più complessa del flusso di dati, vedere [Procedura dettagliata: uso del flusso di dati in un'applicazione Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  

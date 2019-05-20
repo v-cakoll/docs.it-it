@@ -4,16 +4,16 @@ description: Esplorare i componenti di progettazione delle funzionalità support
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: d3261f88a8e52c71f8ddf4d3d5c90b2e2b22b620
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636532"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65558020"
 ---
 # <a name="data-transformations"></a>Trasformazioni dati
 
-Le trasformazioni dati vengono usate per preparare i dati per il training del modello. Le trasformazioni in questa guida restituiscono classi che implementano l'interfaccia [IEstimator](xref:Microsoft.ML.IEstimator`1). Le trasformazioni dati possono essere concatenate. Ogni trasformazione prevede e produce dati di determinati tipi e formati, che vengono specificati nella documentazione di riferimento collegata.
+Le trasformazioni dati vengono usate per preparare i dati per il training del modello. Le trasformazioni in questa guida restituiscono classi che implementano l'interfaccia [IEstimator](xref:Microsoft.ML.IEstimator%601). Le trasformazioni dati possono essere concatenate. Ogni trasformazione prevede e produce dati di determinati tipi e formati, che vengono specificati nella documentazione di riferimento collegata.
 
 Alcune trasformazioni dati richiedono dati di training per calcolare i relativi parametri. Ad esempio, il trasformatore <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> calcola la media e la varianza dei dati di training durante l'operazione `Fit()` e usa tali parametri nell'operazione `Transform()`. 
 

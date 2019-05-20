@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 91be48aa2ca64b152af3dc3f33c713bf4adac0c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 872406fdf012ed3b8326789f6664cb3396d59a84
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968387"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635178"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Conversioni di puntatori (Guida per programmatori C#)
 Nella tabella seguente sono illustrate le conversioni di puntatori implicite predefinite. Le conversioni implicite possono avere luogo in numerose situazioni, ad esempio le chiamate di metodi e le istruzioni di assegnazione.  
@@ -42,7 +42,6 @@ Nella tabella seguente sono illustrate le conversioni di puntatori implicite pre
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Espressioni puntatore](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [Tipi di puntatori](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Tipi](../../../csharp/language-reference/keywords/types.md)
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)
