@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: c8f6e51b5ab8242ba8253a04160c40e59fce0088
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6484e6bfce885c28b943ad9844bfa6fc17889c2b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648193"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882241"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Procedura dettagliata: Creazione di un'interfaccia di tipo Esplora risorse con i controlli ListView e TreeView usando la finestra di progettazione
 Uno dei vantaggi di Visual Studio è la possibilità di creare rapidamente applicazioni di Windows Forms dall'aspetto professionale della quantità di tempo. Uno scenario comune consiste nel creare un'interfaccia utente (UI) con <xref:System.Windows.Forms.ListView> e <xref:System.Windows.Forms.TreeView> controlli simile alla funzionalità di Windows Explorer dei sistemi operativi Windows. Windows Explorer visualizza una struttura gerarchica di file e cartelle nel computer dell'utente.  
@@ -54,7 +54,7 @@ Uno dei vantaggi di Visual Studio è la possibilità di creare rapidamente appli
   
     2. Impostare la proprietà <xref:System.Windows.Forms.ListView.View%2A> su <xref:System.Windows.Forms.View.Details>.  
   
-    3. Aprire l'Editor della raccolta ColumnHeader facendo clic sui puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) nella <xref:System.Windows.Forms.ListView.Columns%2A> proprietà **.** Aggiungere tre colonne e impostare loro <xref:System.Windows.Forms.ColumnHeader.Text%2A> proprietà `Name`, `Type`, e `Last Modified`, rispettivamente. Fare clic su **OK** per chiudere la finestra di dialogo.  
+    3.  Aprire l'Editor della raccolta ColumnHeader facendo clic sui puntini di sospensione (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)) nella <xref:System.Windows.Forms.ListView.Columns%2A> proprietà **.** Aggiungere tre colonne e impostare loro <xref:System.Windows.Forms.ColumnHeader.Text%2A> proprietà `Name`, `Type`, e `Last Modified`, rispettivamente. Fare clic su **OK** per chiudere la finestra di dialogo.  
   
     4. Impostare la proprietà <xref:System.Windows.Forms.ListView.SmallImageList%2A> su `imageList1.`  
   

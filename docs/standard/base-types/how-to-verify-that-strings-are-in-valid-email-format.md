@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddd8b0e7965ca734865e83373af2f7ee45d62c05
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633445"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589531"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procedura: Verificare che le stringhe siano nel formato di posta elettronica valido
 L'esempio seguente usa un'espressione regolare per verificare la validità del formato di posta elettronica di una stringa.  
@@ -72,36 +72,12 @@ L'esempio seguente usa un'espressione regolare per verificare la validità del f
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  I metodi `IsValidEmail` e `DomainMapper` possono essere inclusi in una libreria di metodi di utilità di espressioni regolari oppure possono essere inclusi come metodi di istanza o statici privati nella classe dell'applicazione.  
   
- Per includerli in una libreria di espressioni regolari, copiare e incollare il codice in un progetto libreria di classi Visual Studio oppure copiare e incollare il codice in un file di testo e compilarlo dalla riga di comando con un comando simile al seguente (supponendo che il nome del file del codice sorgente sia RegexUtilities.cs o RegexUtilities.vb:  
-  
-```csharp  
-csc /t:library RegexUtilities.cs  
-```  
-  
-```vb  
-vbc /t:library RegexUtilities.vb  
-```  
-  
  È anche possibile usare il metodo <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> per includere questa espressione regolare in una libreria di espressioni regolari.  
   
  Se vengono usati in una libreria di espressioni regolari, è possibile chiamarli usando il codice seguente:  
   
  [!code-csharp[RegularExpressions.Examples.Email#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#8)]
  [!code-vb[RegularExpressions.Examples.Email#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#8)]  
-  
- Supponendo di aver creato una libreria di classi denominata RegexUtilities.dll che include l'espressione regolare di convalida tramite posta elettronica, è possibile compilare questo esempio in uno dei modi seguenti:  
-  
-- In Visual Studio, creando un'applicazione console e aggiungendo al progetto un riferimento a RegexUtilities.dll.  
-  
-- Dalla riga di comando, copiando e incollando il codice sorgente in un file di testo e compilandolo con un comando simile al seguente (supponendo che il nome del file del codice sorgente sia Example.cs o Example.vb:  
-  
-    ```csharp  
-    csc Example.cs /r:RegexUtilities.dll  
-    ```  
-  
-    ```vb  
-    vbc Example.vb /r:RegexUtilities.dll  
-    ```  
   
 ## <a name="see-also"></a>Vedere anche
 

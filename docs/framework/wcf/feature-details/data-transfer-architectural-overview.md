@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 6b6e77dea17d71b74c2c06534fd3a941e3e867a8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 83fd5ab1cfe7f48999dd2765405f58543eeb743a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592550"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882212"
 ---
 # <a name="data-transfer-architectural-overview"></a>Panoramica dell'architettura di trasferimento dei dati
 Windows Communication Foundation (WCF) può essere considerato come un'infrastruttura di messaggistica. Può ricevere messaggi, elaborarli e inviarli a codice utente per ulteriori azioni, oppure può costruire messaggi dai dati forniti dal codice utente e recapitarli a una destinazione. In questo argomento, rivolto agli sviluppatori avanzati, viene illustrata l'architettura per la gestione dei messaggi e dei dati in essi contenuti. Per informazioni più semplici e orientate alle attività su come inviare e ricevere dati, vedere [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -268,7 +268,7 @@ Windows Communication Foundation (WCF) può essere considerato come un'infrastru
   
  WCF supporta due tecnologie di serializzazione "automatica" per serializzare e deserializzare parametri e parti del messaggio: il <xref:System.Runtime.Serialization.DataContractSerializer> e il `XmlSerializer`. È inoltre possibile scrivere serializzatori personalizzati. Tuttavia, altre parti di WCF (ad esempio il tipo generico `GetBody` SOAP o metodo di serializzazione di errori) può essere limitata al solo uso il <xref:System.Runtime.Serialization.XmlObjectSerializer> sottoclassi (<xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.NetDataContractSerializer>, ma non il <xref:System.Xml.Serialization.XmlSerializer>), o può anche essere impostati come hardcoded da usare solo il <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- `XmlSerializer` è il motore di serializzazione utilizzato nei servizi Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . `DataContractSerializer` è il nuovo motore di serializzazione che riconosce il nuovo modello di programmazione del contratto dati. `DataContractSerializer` è la scelta predefinita e la scelta di utilizzare `XmlSerializer` può essere fatta in base a ogni singola operazione utilizzando l'attributo <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> .  
+ Il `XmlSerializer` è il motore di serializzazione utilizzato nei servizi Web ASP.NET. `DataContractSerializer` è il nuovo motore di serializzazione che riconosce il nuovo modello di programmazione del contratto dati. `DataContractSerializer` è la scelta predefinita e la scelta di utilizzare `XmlSerializer` può essere fatta in base a ogni singola operazione utilizzando l'attributo <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> .  
   
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> e <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> sono i comportamenti dell'operazione responsabili del collegamento dei formattatori dei messaggi rispettivamente per `DataContractSerializer` e `XmlSerializer`. Il comportamento <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> può di fatto operare con qualsiasi serializzatore che deriva da <xref:System.Runtime.Serialization.XmlObjectSerializer>, compreso <xref:System.Runtime.Serialization.NetDataContractSerializer> (descritto in dettaglio nella sezione sull'utilizzo della serializzazione autonoma). Il comportamento chiama uno degli overload del metodo virtuale `CreateSerializer` per ottenere il serializzatore. Per collegare un serializzatore diverso, creare una nuova sottoclasse <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> ed eseguire l'override di entrambi gli overload `CreateSerializer` .  
   

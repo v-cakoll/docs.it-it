@@ -2,15 +2,15 @@
 title: Servizio AJAX con il protocollo HTTP POST
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: 2bc1722056af4fc71f5f93d92ecd12accd99548f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2fb98e38956719608517caa0e7eeaebd14df8d95
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002846"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882146"
 ---
 # <a name="ajax-service-using-http-post"></a>Servizio AJAX con il protocollo HTTP POST
-Questo esempio viene illustrato come utilizzare Windows Communication Foundation (WCF) per creare un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] servizio Asynchronous JavaScript and XML (AJAX) che utilizza HTTP POST. È possibile accedere a questo servizio utilizzando il codice JavaScript di base da un client del browser Web. In questo esempio si basa sul [servizio AJAX di base](../../../../docs/framework/wcf/samples/basic-ajax-service.md) esempio; l'unica differenza tra i due è l'uso di HTTP POST anziché HTTP GET.  
+Questo esempio viene illustrato come utilizzare Windows Communication Foundation (WCF) per creare un servizio ASP.NET Asynchronous JavaScript and XML (AJAX) che utilizza HTTP POST. È possibile accedere a questo servizio utilizzando il codice JavaScript di base da un client del browser Web. In questo esempio si basa sul [servizio AJAX di base](../../../../docs/framework/wcf/samples/basic-ajax-service.md) esempio; l'unica differenza tra i due è l'uso di HTTP POST anziché HTTP GET.  
   
  Supporto AJAX in Windows Communication Foundation (WCF) è ottimizzato per l'utilizzo con ASP.NET AJAX tramite il `ScriptManager` controllo. Per un esempio dell'utilizzo di WCF con ASP.NET AJAX, vedere la [esempi Ajax](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   

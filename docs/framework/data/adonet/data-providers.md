@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 9fead8a5d54fba7232831bba349f27b7eed4657b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d343f7be3e26575ee9a1e9ccae9f17314db10ac5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583796"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882111"
 ---
 # <a name="net-framework-data-providers"></a>Provider di dati .NET Framework
 Un provider di dati .NET Framework viene utilizzato per la connessione a un database, l'esecuzione di comandi e il recupero dei risultati. Tali risultati vengono elaborati direttamente, inseriti in un oggetto <xref:System.Data.DataSet> in modo da consentirne l'esposizione all'utente se necessario, combinati con dati provenienti da più origini o elaborati in modalità remota tra livelli. I provider di dati .NET framework sono leggeri, la creazione di un livello minimo tra l'origine dati e codice, migliorando le prestazioni senza compromettere le funzionalità.  
@@ -74,7 +74,7 @@ using System.Data.SqlClient;
 ## <a name="net-framework-data-provider-for-ole-db"></a>Provider di dati .NET Framework per OLE DB  
  Il Provider di dati .NET Framework per OLE DB (OleDb) Usa OLE DB nativo tramite l'interoperabilità COM per abilitare l'accesso ai dati. Il Provider di dati .NET Framework per OLE DB supporta transazioni sia locali che distribuite. Per le transazioni distribuite, il Provider di dati .NET Framework per OLE DB, per impostazione predefinita, automaticamente viene integrato in una transazione e ottiene i dettagli di transazione da Servizi componenti di Windows. Per altre informazioni, vedere [transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
   
- Nella tabella seguente sono elencati i provider che sono stati testati con [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+ Nella tabella seguente mostra i provider che sono stati testati con ADO.NET.  
   
 |Driver|Provider|  
 |------------|--------------|  
@@ -83,11 +83,11 @@ using System.Data.SqlClient;
 |Microsoft.Jet.OLEDB.4.0|Provider OLE DB per Microsoft Jet|  
   
 > [!NOTE]
->  È sconsigliato l'uso di un database Access (Jet) come origine dati per applicazioni con multithreading, quali le applicazioni [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . Se è necessario usare Jet come origine dati per un'applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , tenere presente che le applicazioni [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] che si connettono a un database Access possono riscontrare problemi di connessione.  
+>  Utilizzo di un database di Access (Jet) come origine dati per le applicazioni a thread multipli, ad esempio le applicazioni ASP.NET, non è consigliabile. Se è necessario usare Jet come origine dati per un'applicazione ASP.NET, tenere presente che le applicazioni ASP.NET la connessione a un database di Access possono riscontrare problemi di connessione.  
   
  Il Provider di dati .NET Framework per OLE DB non supporta le interfacce OLE DB versione 2.5. Provider OLE DB che richiedono il supporto per le interfacce OLE DB 2.5 non funzionerà correttamente con il Provider di dati .NET Framework per OLE DB. Tra tali provider sono inclusi il provider Microsoft OLE DB per Exchange e il provider Microsoft OLE DB per Internet Publishing.  
   
- Il Provider di dati .NET Framework per OLE DB non funziona con il provider OLE DB per ODBC (MSDASQL). Per accedere a un'origine dati ODBC utilizzando [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], utilizzare il Provider di dati .NET Framework per ODBC.  
+ Il Provider di dati .NET Framework per OLE DB non funziona con il provider OLE DB per ODBC (MSDASQL). Per accedere a un'origine dati ODBC tramite ADO.NET, usare il Provider di dati .NET Framework per ODBC.  
   
  Provider di dati .NET framework per OLE DB classi si trovano nel <xref:System.Data.OleDb> dello spazio dei nomi. Nell'esempio di codice seguente viene illustrato come includere lo spazio dei nomi `System.Data.OleDb` nelle applicazioni.  
   
@@ -102,7 +102,7 @@ using System.Data.OleDb;
 ## <a name="net-framework-data-provider-for-odbc"></a>Provider di dati .NET Framework per ODBC  
  Il Provider di dati .NET Framework per ODBC (Odbc) usa il Manager di Driver ODBC (DM) nativa per abilitare l'accesso ai dati. Il provider di dati ODBC supporta transazioni sia locali che distribuite. Per le transazioni distribuite, il provider di dati per ODBC si inserisce automaticamente, per impostazione predefinita, in una transazione e ottiene i dettagli relativi alla transazione da Servizi componenti di Windows. Per altre informazioni, vedere [transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
   
- Nella tabella seguente sono elencati i driver ODBC testati con [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+ La tabella seguente illustra i driver ODBC testati con ADO.NET.  
   
 |Driver|  
 |------------|  
