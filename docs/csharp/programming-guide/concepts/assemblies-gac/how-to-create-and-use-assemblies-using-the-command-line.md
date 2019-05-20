@@ -2,25 +2,25 @@
 title: 'Procedura: Creare e usare assembly dalla riga di comando (C#)'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 76243034b4291142efa5ac78c21f65333e1378e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 12d23816b740816bd357c3c2ac57583f31bf3cb3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599861"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586032"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a><span data-ttu-id="2f076-102">Procedura: Creare e usare assembly dalla riga di comando (C#)</span><span class="sxs-lookup"><span data-stu-id="2f076-102">How to: Create and Use Assemblies Using the Command Line (C#)</span></span>
-<span data-ttu-id="2f076-103">Un assembly, o libreria a collegamento dinamico (DLL), viene collegato al programma in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="2f076-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="2f076-104">Per illustrare la creazione e l'uso di una DLL, si consideri lo scenario seguente:</span><span class="sxs-lookup"><span data-stu-id="2f076-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a><span data-ttu-id="09d49-102">Procedura: Creare e usare assembly dalla riga di comando (C#)</span><span class="sxs-lookup"><span data-stu-id="09d49-102">How to: Create and Use Assemblies Using the Command Line (C#)</span></span>
+<span data-ttu-id="09d49-103">Un assembly, o libreria a collegamento dinamico (DLL), viene collegato al programma in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="09d49-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="09d49-104">Per illustrare la creazione e l'uso di una DLL, si consideri lo scenario seguente:</span><span class="sxs-lookup"><span data-stu-id="09d49-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  
   
-- <span data-ttu-id="2f076-105">`MathLibrary.DLL`: il file libreria che contiene i metodi da chiamare in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="2f076-105">`MathLibrary.DLL`: The library file that contains the methods to be called at run time.</span></span> <span data-ttu-id="2f076-106">In questo esempio la DLL contiene due metodi: `Add` e `Multiply`.</span><span class="sxs-lookup"><span data-stu-id="2f076-106">In this example, the DLL contains two methods, `Add` and `Multiply`.</span></span>  
+- <span data-ttu-id="09d49-105">`MathLibrary.DLL`: il file libreria che contiene i metodi da chiamare in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="09d49-105">`MathLibrary.DLL`: The library file that contains the methods to be called at run time.</span></span> <span data-ttu-id="09d49-106">In questo esempio la DLL contiene due metodi: `Add` e `Multiply`.</span><span class="sxs-lookup"><span data-stu-id="09d49-106">In this example, the DLL contains two methods, `Add` and `Multiply`.</span></span>  
   
-- <span data-ttu-id="2f076-107">`Add`: il file di origine che contiene il metodo `Add`.</span><span class="sxs-lookup"><span data-stu-id="2f076-107">`Add`: The source file that contains the method `Add`.</span></span> <span data-ttu-id="2f076-108">Restituisce la somma dei suoi parametri.</span><span class="sxs-lookup"><span data-stu-id="2f076-108">It returns the sum of its parameters.</span></span> <span data-ttu-id="2f076-109">La classe `AddClass` che contiene il metodo `Add` è un membro dello spazio dei nomi `UtilityMethods`.</span><span class="sxs-lookup"><span data-stu-id="2f076-109">The class `AddClass` that contains the method `Add` is a member of the namespace `UtilityMethods`.</span></span>  
+- <span data-ttu-id="09d49-107">`Add`: il file di origine che contiene il metodo `Add`.</span><span class="sxs-lookup"><span data-stu-id="09d49-107">`Add`: The source file that contains the method `Add`.</span></span> <span data-ttu-id="09d49-108">Restituisce la somma dei suoi parametri.</span><span class="sxs-lookup"><span data-stu-id="09d49-108">It returns the sum of its parameters.</span></span> <span data-ttu-id="09d49-109">La classe `AddClass` che contiene il metodo `Add` è un membro dello spazio dei nomi `UtilityMethods`.</span><span class="sxs-lookup"><span data-stu-id="09d49-109">The class `AddClass` that contains the method `Add` is a member of the namespace `UtilityMethods`.</span></span>  
   
-- <span data-ttu-id="2f076-110">`Mult`: il codice sorgente che contiene il metodo `Multiply`.</span><span class="sxs-lookup"><span data-stu-id="2f076-110">`Mult`: The source code that contains the method `Multiply`.</span></span> <span data-ttu-id="2f076-111">Restituisce il prodotto dei suoi parametri.</span><span class="sxs-lookup"><span data-stu-id="2f076-111">It returns the product of its parameters.</span></span> <span data-ttu-id="2f076-112">Anche la classe `MultiplyClass` che contiene il metodo `Multiply` è un membro dello spazio dei nomi `UtilityMethods`.</span><span class="sxs-lookup"><span data-stu-id="2f076-112">The class `MultiplyClass` that contains the method `Multiply` is also a member of the namespace `UtilityMethods`.</span></span>  
+- <span data-ttu-id="09d49-110">`Mult`: il codice sorgente che contiene il metodo `Multiply`.</span><span class="sxs-lookup"><span data-stu-id="09d49-110">`Mult`: The source code that contains the method `Multiply`.</span></span> <span data-ttu-id="09d49-111">Restituisce il prodotto dei suoi parametri.</span><span class="sxs-lookup"><span data-stu-id="09d49-111">It returns the product of its parameters.</span></span> <span data-ttu-id="09d49-112">Anche la classe `MultiplyClass` che contiene il metodo `Multiply` è un membro dello spazio dei nomi `UtilityMethods`.</span><span class="sxs-lookup"><span data-stu-id="09d49-112">The class `MultiplyClass` that contains the method `Multiply` is also a member of the namespace `UtilityMethods`.</span></span>  
   
-- <span data-ttu-id="2f076-113">`TestCode`: il file che contiene il metodo `Main`.</span><span class="sxs-lookup"><span data-stu-id="2f076-113">`TestCode`: The file that contains the `Main` method.</span></span> <span data-ttu-id="2f076-114">Usa i metodi del file DLL per calcolare la somma e il prodotto degli argomenti in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="2f076-114">It uses the methods in the DLL file to calculate the sum and the product of the run-time arguments.</span></span>  
+- <span data-ttu-id="09d49-113">`TestCode`: il file che contiene il metodo `Main`.</span><span class="sxs-lookup"><span data-stu-id="09d49-113">`TestCode`: The file that contains the `Main` method.</span></span> <span data-ttu-id="09d49-114">Usa i metodi del file DLL per calcolare la somma e il prodotto degli argomenti in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="09d49-114">It uses the methods in the DLL file to calculate the sum and the product of the run-time arguments.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2f076-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="2f076-115">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="09d49-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="09d49-115">Example</span></span>  
   
 ```csharp  
 // File: Add.cs   
@@ -84,46 +84,27 @@ class TestCode
 */  
 ```  
   
- <span data-ttu-id="2f076-116">Questo file contiene l'algoritmo che usa i metodi della DLL: `Add` e `Multiply`.</span><span class="sxs-lookup"><span data-stu-id="2f076-116">This file contains the algorithm that uses the DLL methods, `Add` and `Multiply`.</span></span> <span data-ttu-id="2f076-117">Inizia con l'analisi degli argomenti immessi dalla riga di comando: `num1` e `num2`.</span><span class="sxs-lookup"><span data-stu-id="2f076-117">It starts with parsing the arguments entered from the command line, `num1` and `num2`.</span></span> <span data-ttu-id="2f076-118">Quindi calcola la somma usando il metodo `Add` sulla classe `AddClass` e il prodotto usando il metodo `Multiply` sulla classe `MultiplyClass`.</span><span class="sxs-lookup"><span data-stu-id="2f076-118">Then it calculates the sum by using the `Add` method on the `AddClass` class, and the product by using the `Multiply` method on the `MultiplyClass` class.</span></span>  
+ <span data-ttu-id="09d49-116">Questo file contiene l'algoritmo che usa i metodi della DLL: `Add` e `Multiply`.</span><span class="sxs-lookup"><span data-stu-id="09d49-116">This file contains the algorithm that uses the DLL methods, `Add` and `Multiply`.</span></span> <span data-ttu-id="09d49-117">Inizia con l'analisi degli argomenti immessi dalla riga di comando: `num1` e `num2`.</span><span class="sxs-lookup"><span data-stu-id="09d49-117">It starts with parsing the arguments entered from the command line, `num1` and `num2`.</span></span> <span data-ttu-id="09d49-118">Quindi calcola la somma usando il metodo `Add` sulla classe `AddClass` e il prodotto usando il metodo `Multiply` sulla classe `MultiplyClass`.</span><span class="sxs-lookup"><span data-stu-id="09d49-118">Then it calculates the sum by using the `Add` method on the `AddClass` class, and the product by using the `Multiply` method on the `MultiplyClass` class.</span></span>  
   
- <span data-ttu-id="2f076-119">Si noti che la direttiva `using` all'inizio del file consente di usare i nomi di classe non qualificati per fare riferimento ai metodi della DLL in fase di compilazione, come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="2f076-119">Notice that the `using` directive at the beginning of the file enables you to use the unqualified class names to reference the DLL methods at compile time, as follows:</span></span>  
+ <span data-ttu-id="09d49-119">Si noti che la direttiva `using` all'inizio del file consente di usare i nomi di classe non qualificati per fare riferimento ai metodi della DLL in fase di compilazione, come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="09d49-119">Notice that the `using` directive at the beginning of the file enables you to use the unqualified class names to reference the DLL methods at compile time, as follows:</span></span>  
   
 ```csharp  
 MultiplyClass.Multiply(num1, num2);  
 ```  
   
- <span data-ttu-id="2f076-120">In caso contrario è necessario usare nomi completi, come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="2f076-120">Otherwise, you have to use the fully qualified names, as follows:</span></span>  
+ <span data-ttu-id="09d49-120">In caso contrario è necessario usare nomi completi, come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="09d49-120">Otherwise, you have to use the fully qualified names, as follows:</span></span>  
   
 ```csharp  
 UtilityMethods.MultiplyClass.Multiply(num1, num2);  
 ```  
   
-## <a name="execution"></a><span data-ttu-id="2f076-121">Esecuzione</span><span class="sxs-lookup"><span data-stu-id="2f076-121">Execution</span></span>  
- <span data-ttu-id="2f076-122">Per eseguire il programma immettere il nome del file EXE, seguito da due numeri, come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="2f076-122">To run the program, enter the name of the EXE file, followed by two numbers, as follows:</span></span>  
+## <a name="execution"></a><span data-ttu-id="09d49-121">Esecuzione</span><span class="sxs-lookup"><span data-stu-id="09d49-121">Execution</span></span>  
+ <span data-ttu-id="09d49-122">Per eseguire il programma immettere il nome del file EXE, seguito da due numeri, come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="09d49-122">To run the program, enter the name of the EXE file, followed by two numbers, as follows:</span></span>  
   
  `TestCode 1234 5678`  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="2f076-123">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="2f076-123">Compiling the Code</span></span>  
- <span data-ttu-id="2f076-124">Per compilare il file `MathLibrary.DLL`, compilare i due file `Add` e `Mult` usando la seguente riga di comando.</span><span class="sxs-lookup"><span data-stu-id="2f076-124">To build the file `MathLibrary.DLL`, compile the two files `Add` and `Mult` by using the following command line.</span></span>  
-  
-```csharp  
-csc /target:library /out:MathLibrary.DLL Add.cs Mult.cs  
-```  
-  
- <span data-ttu-id="2f076-125">L'opzione [/target:library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) del compilatore indica al compilatore di generare un file DLL anziché un file EXE.</span><span class="sxs-lookup"><span data-stu-id="2f076-125">The [/target:library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) compiler option tells the compiler to output a DLL instead of an EXE file.</span></span> <span data-ttu-id="2f076-126">L'opzione [/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) del compilatore seguita da un nome di file viene usata per specificare il nome di file della DLL.</span><span class="sxs-lookup"><span data-stu-id="2f076-126">The [/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) compiler option followed by a file name is used to specify the DLL file name.</span></span> <span data-ttu-id="2f076-127">In caso contrario il compilatore usa il primo file (`Add.cs`) come nome della DLL.</span><span class="sxs-lookup"><span data-stu-id="2f076-127">Otherwise, the compiler uses the first file (`Add.cs`) as the name of the DLL.</span></span>  
-  
- <span data-ttu-id="2f076-128">Per compilare il file eseguibile, `TestCode.exe`, usare la seguente riga di comando:</span><span class="sxs-lookup"><span data-stu-id="2f076-128">To build the executable file, `TestCode.exe`, use the following command line:</span></span>  
-  
-```csharp  
-csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs  
-```  
-  
- <span data-ttu-id="2f076-129">L'opzione **/out** del compilatore indica al compilatore di generare un file EXE e specifica il nome del file che deve essere generato (`TestCode.exe`).</span><span class="sxs-lookup"><span data-stu-id="2f076-129">The **/out** compiler option tells the compiler to output an EXE file and specifies the name of the output file (`TestCode.exe`).</span></span> <span data-ttu-id="2f076-130">Questa opzione del compilatore è opzionale.</span><span class="sxs-lookup"><span data-stu-id="2f076-130">This compiler option is optional.</span></span> <span data-ttu-id="2f076-131">L'opzione [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) del compilatore specifica il file o i file DLL utilizzati dal programma.</span><span class="sxs-lookup"><span data-stu-id="2f076-131">The [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) compiler option specifies the DLL file or files that this program uses.</span></span> <span data-ttu-id="2f076-132">Per altre informazioni, vedere [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="2f076-132">For more information, see [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md).</span></span>  
-  
- <span data-ttu-id="2f076-133">Per altre informazioni sulla compilazione dalla riga di comando, vedere [Compilazione dalla riga di comando con csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="2f076-133">For more information about building from the command line, see [Command-line Building With csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="2f076-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2f076-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="09d49-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="09d49-123">See also</span></span>
 
-- [<span data-ttu-id="2f076-135">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="2f076-135">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="2f076-136">Assembly in .NET</span><span class="sxs-lookup"><span data-stu-id="2f076-136">Assemblies in .NET</span></span>](../../../../standard/assembly/index.md)
-- [<span data-ttu-id="2f076-137">Creazione di una classe che contenga le funzioni DLL</span><span class="sxs-lookup"><span data-stu-id="2f076-137">Creating a Class to Hold DLL Functions</span></span>](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
+- [<span data-ttu-id="09d49-124">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="09d49-124">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="09d49-125">Assembly in .NET</span><span class="sxs-lookup"><span data-stu-id="09d49-125">Assemblies in .NET</span></span>](../../../../standard/assembly/index.md)
+- [<span data-ttu-id="09d49-126">Creazione di una classe che contenga le funzioni DLL</span><span class="sxs-lookup"><span data-stu-id="09d49-126">Creating a Class to Hold DLL Functions</span></span>](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
