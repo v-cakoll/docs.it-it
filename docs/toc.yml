@@ -496,11 +496,13 @@
     - name: Introduzione
       href: csharp/getting-started/
     - name: Esercitazioni
-      href: csharp/tutorials/index.md
       items:
-        - name: 'Introduzione a C#'
-          href: csharp/tutorials/intro-to-csharp/index.md
+        - name: Panoramica
+          href: csharp/tutorials/index.md
+        - name: 'Introduzione alla programmazione con C#'
           items:
+            - name: Scegliere la prima lezione
+              href: csharp/tutorials/intro-to-csharp/index.md
             - name: Hello world
               href: csharp/tutorials/intro-to-csharp/hello-world.yml
             - name: 'Numeri in C#'
@@ -510,8 +512,9 @@
             - name: Raccolte di elenchi
               href: csharp/tutorials/intro-to-csharp/list-collection.yml
             - name: Lavorare nell'ambiente locale
-              href: csharp/tutorials/intro-to-csharp/local-environment.md
               items:
+                - name: Configurare l'ambiente
+                  href: csharp/tutorials/intro-to-csharp/local-environment.md
                 - name: 'Numeri in C#'
                   href: csharp/tutorials/intro-to-csharp/numbers-in-csharp-local.md
                 - name: Rami e cicli
@@ -609,7 +612,6 @@
         - name: Iterators
           href: csharp/iterators.md
         - name: Delegati ed eventi
-          href: csharp/delegates-events.md
           items:
             - name: Introduzione ai delegati
               href: csharp/delegates-overview.md
@@ -636,8 +638,9 @@
         - name: Scrivere codice efficiente e sicuro
           href: csharp/write-safe-efficient-code.md
         - name: Alberi delle espressioni
-          href: csharp/expression-trees.md
           items:
+            - name: Introduzione agli alberi delle espressioni
+              href: csharp/expression-trees.md
             - name: Nozioni di base sugli alberi delle espressioni
               href: csharp/expression-trees-explained.md
             - name: Tipi di framework che supportano alberi delle espressioni
@@ -659,8 +662,9 @@
         - name: Controllo delle versioni
           href: csharp/versioning.md
     - name: 'Argomenti di procedure per C#'
-      href: csharp/how-to/index.md
       items:
+        - name: Indice degli argomenti
+          href: csharp/how-to/index.md
         - name: Analizzare le stringhe con `String.Split`
           href: csharp/how-to/parse-strings-using-split.md
         - name: Concatenare le stringhe

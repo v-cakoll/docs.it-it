@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452375"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876956"
 ---
 # <a name="c-operators"></a>Operatori C#
 
@@ -69,7 +69,7 @@ Sono gli operatori con la precedenza più alta.
 
 [stackalloc](../keywords/stackalloc.md): alloca un blocco di memoria nello stack.
 
-[->](dereference-operator.md): dereferenziazione puntatore combinata con l'accesso ai membri.
+[->](pointer-related-operators.md#pointer-member-access-operator--): riferimento indiretto al puntatore combinato con l'accesso ai membri.
 
 ## <a name="unary-operators"></a>Operatori unari
 
@@ -91,9 +91,9 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 
 [await](../keywords/await.md): attende un oggetto `Task`.
 
-[&x](and-operator.md): indirizzo.
+[&x](pointer-related-operators.md#address-of-operator-): indirizzo di una variabile.
 
-[*x](multiplication-operator.md): dereferenziazione.
+[*x](pointer-related-operators.md#pointer-indirection-operator-): riferimento indiretto al puntatore o dereferenziazione.
 
 [Operatore true](../keywords/true-false-operators.md): restituisce il valore [bool](../keywords/bool.md) `true` per indicare che un operando è senza dubbio true.
 

@@ -9,6 +9,12 @@
   items:
     - name: Introduzione
       href: tutorials/get-started.md
+    - name: Distribuire in Azure HDInsight
+      href: tutorials/hdinsight-deployment.md
+    - name: Distribuire in AWS EMR Spark
+      href: tutorials/amazon-emr-spark-deployment.md
+    - name: Distribuire in Databricks
+      href: tutorials/databricks-deployment.md
 - name: Riferimenti
   items:
     - name: Riferimento API

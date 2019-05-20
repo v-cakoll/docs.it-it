@@ -19,6 +19,9 @@
     - name: Operatori di accesso ai membri
       href: member-access-operators.md
       displayName: '., [], ?., ?[], (), indexer, null-conditional, invocation'
+    - name: Operatori relativi al puntatore
+      href: pointer-related-operators.md
+      displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
     - name: Operatore ()
       href: invocation-operator.md
     - name: ':: Operatore'
@@ -27,10 +30,6 @@
       href: addition-operator.md
     - name: '- Operatore'
       href: subtraction-operator.md
-    - name: '* Operatore'
-      href: multiplication-operator.md
-    - name: Operatore &
-      href: and-operator.md
     - name: Operatore =
       href: assignment-operator.md
     - name: '?: Operatore'
@@ -39,12 +38,6 @@
       href: addition-assignment-operator.md
     - name: Operatore -=
       href: subtraction-assignment-operator.md
-    - name: Operatore *=
-      href: multiplication-assignment-operator.md
-    - name: Operatore &=
-      href: and-assignment-operator.md
-    - name: Operatore ->
-      href: dereference-operator.md
     - name: '?? Operatore'
       href: null-coalescing-operator.md
     - name: Operatore =>
