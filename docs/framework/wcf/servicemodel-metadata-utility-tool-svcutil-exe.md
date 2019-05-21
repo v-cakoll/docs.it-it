@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 29b030708f2174b55386b13931f1088d15f4eb4f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0cb14bba724b50a8a2b723fe88503fafeeea3880
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582692"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959900"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)
 
@@ -49,7 +49,7 @@ Lo strumento non supporta il multitargeting. Se si desidera generare un artefatt
 
 ### <a name="accessing-wsdl-documents"></a>Accesso ai documenti WSDL
 
-Quando si utilizza Svcutil per accedere a un documento WSDL che presenti un riferimento al servizio token di sicurezza (STS), Svcutil effettua una chiamata di WS-MetadataExchange a STS. Tuttavia, il servizio può esporre il proprio documento WSDL utilizzando sia WS-MetadataExchange, sia HTTP GET. Pertanto, se STS ha solamente esposto il documento WSDL utilizzando HTTP GET, un client scritto in [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] avrà esito negativo. Per i client scritti in [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], Svcutil tenterà di utilizzare sia WS-MetadataExchange e HTTP GET per ottenere WSDL del servizio token di sicurezza.
+Quando si utilizza Svcutil per accedere a un documento WSDL che presenti un riferimento al servizio token di sicurezza (STS), Svcutil effettua una chiamata di WS-MetadataExchange a STS. Tuttavia, il servizio può esporre il proprio documento WSDL utilizzando sia WS-MetadataExchange, sia HTTP GET. Pertanto, se STS ha solamente esposto il documento WSDL utilizzando HTTP GET, un client scritto in WinFX avrà esito negativo. Per i client scritti in [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], Svcutil tenterà di utilizzare sia WS-MetadataExchange e HTTP GET per ottenere WSDL del servizio token di sicurezza.
 
 ## <a name="using-svcutilexe"></a>Utilizzo di SvcUtil.exe
 
@@ -107,7 +107,7 @@ Per un servizio con un endpoint BasicHttpContextBinding *Svcutil.exe* genera un 
 |/serializer:Auto|Consente di selezionare automaticamente il serializzatore. Questa prova a usare il serializzatore dei contratti dati e Usa XmlSerializer se ha esito negativo.<br /><br /> Forma abbreviata: `/ser`|
 |/serializer:DataContractSerializer|Genera tipi di dati che utilizzano DataContract Serializer per la serializzazione e la deserializzazione.<br /><br /> Forma abbreviata: `/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|Genera tipi di dati che utilizzano <xref:System.Xml.Serialization.XmlSerializer> per la serializzazione e la deserializzazione.<br /><br /> Forma abbreviata: `/ser:XmlSerializer`|
-|/targetClientVersion|Specificare quale versione di .NET Framework è destinata all'applicazione. I valori validi sono `Version30` e `Version35`. Il valore predefinito è `Version30`.<br /><br /> Forma abbreviata: `/tcv`<br /><br /> `Version30`: Usare `/tcv:Version30` se si sta generando codice per i client che usano [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].<br /><br /> `Version35`: Usare `/tcv:Version35` se si sta generando codice per i client che usano [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Se si utilizza `/tcv:Version35` con il commutatore `/async`, vengono generati entrambi metodi asincroni sia basati su eventi che su delegati/callback. Viene inoltre abilitato il supporto per dataset abilitati da LINQ e <xref:System.DateTimeOffset>.|
+|/targetClientVersion|Specificare quale versione di .NET Framework è destinata all'applicazione. I valori validi sono `Version30` e `Version35`. Il valore predefinito è `Version30`.<br /><br /> Forma abbreviata: `/tcv`<br /><br /> `Version30`: Usare `/tcv:Version30` se si sta generando codice per i client che usano WinFX.<br /><br /> `Version35`: Usare `/tcv:Version35` se si sta generando codice per i client che usano [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Se si utilizza `/tcv:Version35` con il commutatore `/async`, vengono generati entrambi metodi asincroni sia basati su eventi che su delegati/callback. Viene inoltre abilitato il supporto per dataset abilitati da LINQ e <xref:System.DateTimeOffset>.|
 |/wrapped|Controlla se viene utilizzata una combinazione di maiuscole e minuscole speciale per i documenti in stile document-literal con parametri sottoposti a wrapping. Usare la **/Wrapped** passare con il [Service Model Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) dello strumento per specificare le maiuscole e minuscole normale.|
 
 > [!NOTE]

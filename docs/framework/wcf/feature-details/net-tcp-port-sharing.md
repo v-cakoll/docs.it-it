@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: f40afe25bbc3238ec773ee1ee19673d4d5a3ef1d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8eb0a2a5b8b6edad17477e1fd65f72b540a8a674
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603951"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960043"
 ---
 # <a name="nettcp-port-sharing"></a>Condivisione delle porte Net.TCP
 Windows Communication Foundation (WCF) offre un nuovo protocollo di rete basata su TCP (net.tcp://) per la comunicazione ad alte prestazioni. WCF introduce inoltre un nuovo componente di sistema, il servizio condivisione porte NET che consente la condivisione tra più processi utente delle porte Net. TCP.  
@@ -38,7 +38,7 @@ Windows Communication Foundation (WCF) offre un nuovo protocollo di rete basata 
  Quando un servizio WCF che usa la porta net.tcp:// condivisione viene visualizzata, l'infrastruttura di trasporto TCP WCF non apre direttamente un socket TCP nel processo dell'applicazione. Registra, invece, l'URI (Uniform Resource Identifier) dell'indirizzo di base del servizio presso il Servizio di condivisione porte Net.TCP e attende che quest'ultimo ascolti i messaggi per suo conto.  Il servizio di condivisione delle porte invia i messaggi indirizzati al servizio dell'applicazione non appena arrivano.  
   
 ## <a name="installing-port-sharing"></a>Installazione della condivisione delle porte  
- Il Servizio di condivisione porte Net.TCP è disponibile in tutti i sistemi operativi che supportano [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], ma non viene attivato per impostazione predefinita. Per motivi di sicurezza, gli amministratori devono attivare manualmente il Servizio di condivisione porte Net.TCP al primo utilizzo. Il Servizio di condivisione porte Net.TCP espone opzioni di configurazione che consentono di modificare diverse caratteristiche dei socket di rete appartenenti al servizio stesso. Per altre informazioni, vedere [Procedura: Abilitare il servizio di condivisione delle porte Net. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
+ Il servizio di condivisione porte Net. TCP è disponibile in tutti i sistemi operativi che supportano WinFX, ma il servizio non è abilitato per impostazione predefinita. Per motivi di sicurezza, gli amministratori devono attivare manualmente il Servizio di condivisione porte Net.TCP al primo utilizzo. Il Servizio di condivisione porte Net.TCP espone opzioni di configurazione che consentono di modificare diverse caratteristiche dei socket di rete appartenenti al servizio stesso. Per altre informazioni, vedere [Procedura: Abilitare il servizio di condivisione delle porte Net. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>Utilizzo della condivisione delle porte Net.tcp in un'applicazione  
  Il modo più semplice da utilizzare nell'applicazione WCF di condivisione delle porte net.tcp:// consiste nell'esporre un servizio usando il <xref:System.ServiceModel.NetTcpBinding> e quindi abilitare servizio di condivisione porte Net. TCP tramite il <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> proprietà.  

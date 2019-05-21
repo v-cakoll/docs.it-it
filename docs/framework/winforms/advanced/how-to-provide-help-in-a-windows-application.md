@@ -8,16 +8,16 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 19bf6a8de3f9ddd5babd149747df87c54b456aeb
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 2f9c0a9791db28cebd055ca446fdff16b9e276a4
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211358"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959605"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Procedura: Visualizzare la Guida in un'applicazione Windows
 
-È possibile utilizzare il <xref:System.Windows.Forms.HelpProvider> componente collegare gli argomenti della Guida all'interno di un file della Guida a controlli specifici in un Windows Form. Il file della Guida può essere in formato HTML o HTMLHelp 1. x o versione successiva.
+È possibile rendere utilizzare il <xref:System.Windows.Forms.HelpProvider> componente collegare gli argomenti della Guida all'interno di un file della Guida a controlli specifici in un Windows Form. Il file della Guida può essere in formato HTML o HTMLHelp 1. x o versione successiva.
 
 ## <a name="provide-help"></a>Fornire la Guida
 
@@ -38,7 +38,7 @@ ms.locfileid: "65211358"
     |Nome del membro|Descrizione|
     |-----------------|-----------------|
     |AssociateIndex|Specifica che l'indice di un argomento specificato viene eseguito nell'URL specificato.|
-    |Trova|Specifica che viene visualizzata la pagina di ricerca di un URL specificato.|
+    |Find|Specifica che viene visualizzata la pagina di ricerca di un URL specificato.|
     |Indice|Specifica che viene visualizzato l'indice di un URL specificato.|
     |KeywordIndex|Specifica una parola chiave da cercare e l'azione da eseguire nell'URL specificato.|
     |TableOfContents|Specifica che viene visualizzato il sommario del file della Guida HTML 1.0.|
