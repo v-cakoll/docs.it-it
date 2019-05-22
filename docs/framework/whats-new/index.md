@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dec3cea200f388a904296542776a02d838b3e19
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 81995d8003a9bb78f6a97ca7eadca94a2136c8a7
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063872"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960010"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 
@@ -1399,7 +1399,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
 ## <a name="whats-new-in-net-2015"></a>Novità di .NET 2015
 
-.NET 2015 introduce [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e .NET Core. Alcune nuove funzionalità sono valide per entrambi, mentre altre sono specifiche di [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] o [!INCLUDE[net_core](../../../includes/net-core-md.md)].
+.NET 2015 introduce [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e .NET Core. Alcune nuove funzionalità sono valide per entrambi, mentre altre sono specifiche di [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] o .NET Core.
 
 - **ASP.NET Core**
 
@@ -1747,11 +1747,11 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
 - **Supporto per le codifiche della tabella codici**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] supporta principalmente le codifiche Unicode e per impostazione predefinita offre un supporto limitato per le codifiche della tabella codici. È possibile aggiungere il supporto delle codifiche della tabella codici disponibili in .NET Framework, ma non supportate in [!INCLUDE[net_core](../../../includes/net-core-md.md)] registrando le codifiche della tabella codici con il metodo <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Per ulteriori informazioni, vedere <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+     .NET Core supporta principalmente le codifiche Unicode e per impostazione predefinita offre un supporto limitato per le codifiche della tabella codici. È possibile aggiungere il supporto delle codifiche della tabella codici disponibili in .NET Framework, ma non supportate in .NET Core registrando le codifiche della tabella codici con il metodo <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Per ulteriori informazioni, vedere <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 
-     Le app di Windows per Windows 10 destinate a [!INCLUDE[net_core](../../../includes/net-core-md.md)] e scritte in C# o Visual Basic ora possono avvalersi di una nuova tecnologia che compila le app in codice nativo anziché IL. Producono app caratterizzate da maggiore rapidità di avvio ed esecuzione. Per altre informazioni, vedere [Compilazione di app con .NET Native](../net-native/index.md). Per una panoramica di .NET Native che esamina le differenze rispetto alla compilazione JIT e NGEN e descrive tutti i vantaggi per il codice, vedere [Compilazione e .NET Native](../net-native/net-native-and-compilation.md).
+     Le app di Windows per Windows 10 destinate a .NET Core e scritte in C# o Visual Basic ora possono avvalersi di una nuova tecnologia che compila le app in codice nativo anziché IL. Producono app caratterizzate da maggiore rapidità di avvio ed esecuzione. Per altre informazioni, vedere [Compilazione di app con .NET Native](../net-native/index.md). Per una panoramica di .NET Native che esamina le differenze rispetto alla compilazione JIT e NGEN e descrive tutti i vantaggi per il codice, vedere [Compilazione e .NET Native](../net-native/net-native-and-compilation.md).
 
      Le app vengono compilate in codice nativo per impostazione predefinita quando si compilano con Visual Studio 2015 o versione successiva. Per altre informazioni, vedere [Introduzione a .NET Native](../net-native/getting-started-with-net-native.md).
 

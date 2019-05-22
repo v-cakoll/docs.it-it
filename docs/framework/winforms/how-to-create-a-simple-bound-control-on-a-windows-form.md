@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79b31e61f4c7739a20765c9484db6a8cfd04b01b
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008954"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003768"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procedura: Creare un controllo con associazione semplice in un Windows Form
 Con *associazione semplice*, è possibile visualizzare un singolo elemento di dati, ad esempio un valore di colonna da una tabella di set di dati, in un controllo. È possibile un'associazione semplice di qualsiasi proprietà di un controllo a un valore di dati.  
@@ -28,7 +28,7 @@ Con *associazione semplice*, è possibile visualizzare un singolo elemento di da
   
      Le proprietà associate in genere sono visualizzate sotto le **(DataBindings)** proprietà. Ad esempio, nella maggior parte dei controlli, il **testo** più di frequente è associata la proprietà.  
   
-4. Se la proprietà si desidera binding non è uno dei più comunemente associate, selezionare la **puntini di sospensione** pulsante (![schermata di VisualStudioEllipsesButton](./media/vbellipsesbutton.png "vbEllipsesButton") ) nei **(avanzate)** casella per visualizzare i **formattazione e associazione avanzata** finestra di dialogo contenente un elenco completo delle proprietà per il controllo.  
+4.  Se la proprietà che si desidera l'associazione non è uno dei più comunemente associate, fare clic sui **puntini di sospensione** pulsante (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)) nella **( Avanzate)** casella per visualizzare il **formattazione e associazione avanzata** finestra di dialogo contenente un elenco completo delle proprietà per il controllo.  
   
 5. Selezionare la proprietà si desidera eseguire il binding e fare clic sulla freccia a discesa sotto **Binding**.  
   

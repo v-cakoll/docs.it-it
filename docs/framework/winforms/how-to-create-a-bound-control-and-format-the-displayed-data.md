@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: f7f1ed2fbca4ab8892cb6c439ae8841fa8828bf0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22ffdfcc1068dd546c8c07a481c9e21fb1faab80
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008967"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003735"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Procedura: Creare un controllo con associazione e formattare i dati visualizzati
 Con data binding in Windows Form, è possibile formattare i dati visualizzati in un controllo con associazione a dati mediante la **formattazione e associazione avanzata** nella finestra di dialogo.  
@@ -27,7 +27,7 @@ Con data binding in Windows Form, è possibile formattare i dati visualizzati in
   
 2. Nel form selezionare il controllo e aprire la finestra Proprietà.  
   
-3. Espandere la **(DataBindings)** proprietà, quindi nella **(avanzate)** fare clic sui puntini di sospensione (![schermata di VisualStudioEllipsesButton](./media/vbellipsesbutton.png " vbEllipsesButton")) per visualizzare il **formattazione e associazione avanzata** nella finestra di dialogo include un elenco completo delle proprietà per il controllo.  
+3.  Espandere la **(DataBindings)** proprietà, quindi nella **(avanzate)** fare clic sui puntini di sospensione (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/how-to-create-a-bound-control-and-format-the-displayed-data/visual-studio-ellipsis-button.png)) Per visualizzare il **formattazione e associazione avanzata** nella finestra di dialogo include un elenco completo delle proprietà per il controllo.  
   
 4. Selezionare la proprietà si desidera eseguire l'associazione e quindi scegliere il **Binding** freccia.  
   
