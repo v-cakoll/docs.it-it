@@ -3,12 +3,12 @@ title: Panoramica di .NET Core SDK
 description: Informazioni su .NET Core SDK, ovvero un set di librerie e strumenti usati per creare progetti .NET Core.
 ms.date: 05/13/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: ed9d51b337af8edc251a4f3b02c31b72b76ba33d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f56d7238eaaaa677db38430358ce94890632469e
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877981"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959239"
 ---
 # <a name="net-core-sdk-overview"></a>Panoramica di .NET Core SDK
 

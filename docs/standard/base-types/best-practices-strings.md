@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 0f7c390d2ad7233475786e795fef0290af545145
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 82fdcae2887cf5a3428a0c874b43d9770f35afcf
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634752"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052987"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedure consigliate per l'uso delle stringhe in .NET
 <a name="top"></a> .NET offre un ampio supporto per lo sviluppo di applicazioni localizzate e globalizzate e semplifica l'applicazione delle convenzioni relative alle impostazioni cultura correnti o alle impostazioni cultura specifiche quando si eseguono operazioni comuni come l'ordinamento e la visualizzazione delle stringhe. Tuttavia, l'ordinamento o il confronto delle stringhe non è sempre un'operazione con distinzione delle impostazioni cultura. Ad esempio, le stringhe usate internamente da un'applicazione in genere devono essere gestite in modo identico in tutte le impostazioni cultura. Quando i dati di stringa indipendenti dalle impostazioni cultura, ad esempio i tag XML, i tag HTML, i nomi utente, i percorsi di file e i nomi degli oggetti di sistema, vengono interpretati come dati con distinzione delle impostazioni cultura, nel codice dell'applicazione possono verificarsi bug complessi, riduzioni delle prestazioni e, in alcuni casi, problemi di sicurezza.  
@@ -125,7 +125,7 @@ ms.locfileid: "64634752"
  Il confronto tra stringhe è la base di molte operazioni relative alle stringhe, in particolare l'ordinamento e il test di uguaglianza. L'ordinamento delle stringhe viene eseguito in un modo specifico: se "my" compare prima di "string" in un elenco ordinato di stringhe, nel confronto "my" deve essere minore o uguale a "string". Inoltre, il confronto definisce implicitamente l'uguaglianza. L'operazione di confronto restituisce zero per le stringhe che considera uguali. In altre parole, nessuna stringa viene considerata minore delle altre. Le operazioni più significative relative alle stringhe includono una o più delle seguenti procedure: confronto con un'altra stringa ed esecuzione di un'operazione di ordinamento definita correttamente.  
 
 > [!NOTE]
-> È possibile scaricare le [tabelle di ordinamento spessore](https://www.microsoft.com/en-us/download/details.aspx?id=10921), un set di file di testo che contengono informazioni sugli spessori dei caratteri usati nelle operazioni di ordinamento e confronto per i sistemi operativi Windows, e la [tabella degli elementi delle regole di confronto Unicode predefinite](https://www.unicode.org/Public/UCA/latest/allkeys.txt), la versione più recente della tabella di ordinamento spessore per Linux e MacOS. La versione specifica della tabella di ordinamento spessore in Linux e macOS dipende dalla versione delle librerie [International Components for Unicode](http://site.icu-project.org/) installate nel sistema. Per informazioni sulle versioni ICU e sulle versioni Unicode implementate, vedere [Downloading ICU](http://site.icu-project.org/download) (Download di ICU).
+> È possibile scaricare le [tabelle di ordinamento spessore](https://www.microsoft.com/download/details.aspx?id=10921), un set di file di testo che contengono informazioni sugli spessori dei caratteri usati nelle operazioni di ordinamento e confronto per i sistemi operativi Windows, e la [tabella degli elementi delle regole di confronto Unicode predefinite](https://www.unicode.org/Public/UCA/latest/allkeys.txt), la versione più recente della tabella di ordinamento spessore per Linux e MacOS. La versione specifica della tabella di ordinamento spessore in Linux e macOS dipende dalla versione delle librerie [International Components for Unicode](http://site.icu-project.org/) installate nel sistema. Per informazioni sulle versioni ICU e sulle versioni Unicode implementate, vedere [Downloading ICU](http://site.icu-project.org/download) (Download di ICU).
 
  Tuttavia, la valutazione di due stringhe per l'uguaglianza e l'ordinamento non produce un unico risultato corretto; l'esito dipende dai criteri usati per il confronto delle stringhe. In particolare, i confronti tra stringhe ordinali o basati sulle convenzioni di utilizzo di maiuscole e minuscole e di ordinamento delle impostazioni cultura correnti o della lingua inglese (impostazioni indipendenti dalle impostazioni cultura basate sulla lingua inglese) possono produrre risultati diversi.  
 

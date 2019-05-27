@@ -3,12 +3,12 @@ title: Come usare l'API di Machine Learning automatizzato per ML.NET
 description: L'API di Machine Learning automatizzato per ML.NET consente di automatizzare il processo di compilazione del modello e genera un modello pronto per la distribuzione. Sono disponibili varie opzioni per configurare attività di Machine Learning automatizzato.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 23410a11f94ab6052ab64bd8968f0ed127441898
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: d624b999384dd92d41033e385d01fe556e10a065
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065614"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960421"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Come usare l'API di Machine Learning automatizzato per ML.NET
 
@@ -19,7 +19,7 @@ Il Machine Learning automatizzato (AutoML) consente di automatizzare il processo
 
 ## <a name="load-data"></a>Caricare i dati
 
-Il Machine Learning automatizzato supporta il caricamento di un set di dati in un elemento [IDataView](https://docs.microsoft.com/dotnet/api/microsoft.ml.idataview?view=ml-dotnet). I dati possono essere sotto forma di file di valori delimitati da tabulazioni (con estensione tsv) e file di valori delimitati da virgole (con estensione csv).
+Il Machine Learning automatizzato supporta il caricamento di un set di dati in un elemento [IDataView](xref:Microsoft.ML.IDataView). I dati possono essere sotto forma di file di valori delimitati da tabulazioni (con estensione tsv) e file di valori delimitati da virgole (con estensione csv).
 
 Esempio:
 
@@ -61,7 +61,7 @@ Creare le impostazioni dell'esperimento per il tipo specifico di attività di ap
 
 ## <a name="configure-experiment-settings"></a>Configurare le impostazioni dell'esperimento
 
-Gli esperimenti sono ampiamente configurabili. Vedere la [documentazione dell'API AutoML](https://docs.microsoft.com/dotnet/api/microsoft.ml.auto?view=ml-dotnet) per un elenco completo delle impostazioni di configurazione.
+Gli esperimenti sono ampiamente configurabili. Vedere la [documentazione dell'API AutoML](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) per un elenco completo delle impostazioni di configurazione.
 
 Di seguito sono riportati alcuni esempi:
 
@@ -104,15 +104,15 @@ Di seguito sono riportati alcuni esempi:
     ```
 
 L'elenco degli algoritmi di training supportati per ogni attività di apprendimento automatico è disponibile nel collegamento corrispondente riportato di seguito:
-* [Algoritmi di classificazione binaria supportati](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.binaryclassificationtrainer?view=automl-dotnet)
-* [Algoritmi di classificazione multiclasse supportati](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.multiclassclassificationtrainer?view=automl-dotnet)
-* [Algoritmi di regressione supportati](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.regressiontrainer?view=automl-dotnet)
+* [Algoritmi di classificazione binaria supportati](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
+* [Algoritmi di classificazione multiclasse supportati](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
+* [Algoritmi di regressione supportati](xref:Microsoft.ML.AutoML.RegressionTrainer)
 
 ## <a name="optimizing-metric"></a>Metrica di ottimizzazione
 
 Come illustrato nell'esempio precedente, la metrica di ottimizzazione determina la metrica da ottimizzare durante il training del modello. La metrica di ottimizzazione selezionabile è determinata dal tipo di attività scelto. Ecco un elenco delle metriche disponibili.
 
-|[Classificazione binaria](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet) | [Classificazione multiclasse](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet) | [Regressione](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet)
+|[Classificazione binaria](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Classificazione multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regressione](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |Accuratezza| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -210,12 +210,9 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 ```
 
 Di seguito sono elencate tutte le metriche disponibili per attività ML:
-* [Metriche di classificazione binaria](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet
-)
-* [Metriche di classificazione multiclasse](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet
-)
-* [Metriche di regressione](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet
-)
+* [Metriche di classificazione binaria](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
+* [Metriche di classificazione multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
+* [Metriche di regressione](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>Vedere anche
 

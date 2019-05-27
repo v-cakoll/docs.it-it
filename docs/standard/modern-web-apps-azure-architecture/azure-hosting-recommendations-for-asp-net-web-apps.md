@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Cons
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: d328f92ef5e64ee5d92b71472a5e32e2f5d007fd
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a93009e66d63aa7d9c3b60951d43eafa3c351a63
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063246"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053270"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Consigli relativi all'hosting di Azure per le applicazioni Web ASP.NET Core
 
@@ -44,7 +44,7 @@ Le app Web del servizio app offrono una piattaforma completamente gestita, ottim
 
 - Integrazione con Visual Studio.
 
-- Supporto per i contenitori Linux e Windows tramite [app Web per contenitori](https://azure.microsoft.com/en-us/services/app-service/containers/).
+- Supporto per i contenitori Linux e Windows tramite [app Web per contenitori](https://azure.microsoft.com/services/app-service/containers/).
 
 Il servizio app di Azure è la scelta ottimale per la maggior parte delle applicazioni Web. La gestione e la distribuzione sono integrate nella piattaforma e i siti possono essere ridimensionati rapidamente per gestire volumi di traffico elevati, mentre il bilanciamento e la gestione del traffico incorporati garantiscono una disponibilità elevata. È possibile spostare facilmente siti esistenti al servizio app di Azure con uno strumento di migrazione online, usare un'app open source dalla Raccolta di app Web o creare un nuovo sito usando il framework e gli strumenti preferiti. La funzionalità Processi Web semplifica l'aggiunta dell'elaborazione di processi in background all'app Web del servizio app.
 
@@ -101,7 +101,7 @@ La figura 11-2 illustra un'architettura di riferimento di esempio. Questo diagra
   <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
 - App Web per contenitori\
-  <https://azure.microsoft.com/en-us/services/app-service/containers/>
+  <https://azure.microsoft.com/services/app-service/containers/>
 
 - Introduzione a servizio Azure Kubernetes\
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>

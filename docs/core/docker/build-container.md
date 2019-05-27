@@ -4,12 +4,12 @@ description: In questa esercitazione si apprenderà come distribuire un'applicaz
 ms.date: 04/10/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a96f96bd91976b0966fb7e8d0c8fb6fb7842cfe3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2ea9e9bc2614e62fe6ec0d59e39d42c2e32a80a1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631856"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051808"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Esercitazione: Distribuire un'app .NET Core in un contenitore
 
@@ -410,6 +410,6 @@ Usare il comando `docker images` per visualizzare un elenco delle immagini insta
 ## <a name="next-steps"></a>Passaggi successivi
 
 * [Provare l'esercitazione sulla creazione di microservizi ASP.NET Core.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [Esaminare i servizi di Azure che supportano i contenitori.](https://azure.microsoft.com/en-us/overview/containers/)
+* [Esaminare i servizi di Azure che supportano i contenitori.](https://azure.microsoft.com/overview/containers/)
 * [Leggere le informazioni sui comandi del Dockerfile.](https://docs.docker.com/engine/reference/builder/)
 * [Esplorare gli strumenti per contenitori di Visual Studio](/visualstudio/containers/overview)

@@ -4,12 +4,12 @@ description: Informazioni sulle funzionalità di telemetria dell'interfaccia del
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 49ebd6c9e1b77c85d891b8c9fb8cbd5c66b478a9
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 36f4af48615e2e3247f8e21343d0a00519ba1c0a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065544"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645017"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Raccolta di dati di telemetria dall'interfaccia della riga di comando di ML.NET
 
@@ -42,15 +42,17 @@ Rifiutare esplicitamente la funzionalità di telemetria impostando la variabile 
 
 La funzionalità raccoglie i dati seguenti:
 
-- Quale comando è stato richiamato, ad esempio `auto-train`
+- Il comando che è stato richiamato, ad esempio `auto-train`
+- I nomi dei parametri della riga di comando usati (ad esempio "dataset-name, label-column-name, ml-task, output-path, max-exploration-time, verbosity")
 - Indirizzo MAC con hash: ID univoco e anonimo dal punto di vista crittografico (SHA256) per un computer
 - Il timestamp di una chiamata
-- Indirizzo IP a tre ottetti usato solo per determinare la posizione geografica
+- Indirizzo IP a tre ottetti (non l'indirizzo IP completo) usato solo per determinare la posizione geografica
 - Nome di tutti gli argomenti e dei parametri usati. Non i valori del cliente, ad esempio le stringhe
+- Nome di file del set di dati con hash
+- Bucket delle dimensioni di file del set di dati
 - Sistema operativo e versione
-- Valore del parametro --ml-task: Valori di categorie, ad esempio `regression`, `binary-classification` e `multiclass-classification`
-- Dimensione del set di dati [con arrotondamento logaritmico](https://en.wikipedia.org/wiki/Rounding#Rounding_to_a_specified_power) (potenza di 2 più vicina)
-- `ExitCode` del comando
+- Valore del parametro --task: Valori di categorie, ad esempio `regression`, `binary-classification` e `multiclass-classification`
+- Versione dell'interfaccia della rigaa di comando ML.NET (vale a dire 0.3.27703.4)
 
 I dati vengono inviati ai server Microsoft in modalità protetta grazie alla tecnologia [Azure Application Insights](https://azure.microsoft.com/services/application-insights/), conservati con accesso limitato e usati in base a severi controlli di sicurezza da parte di sistemi di [archiviazione di Azure](https://azure.microsoft.com/services/storage/).
 

@@ -4,12 +4,12 @@ description: Informazioni su come scegliere un algoritmo ML.NET per il modello d
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: 3fd515a1d150ea51214b55f882726c4ba76bd6d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065634"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557789"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Come scegliere un algoritmo ML.NET
 
@@ -81,8 +81,8 @@ Questi algoritmi di training creano un algoritmo di training multiclasse da un a
 
 |Algoritmo|Proprietà|Algoritmi di training|
 |---------|----------|--------|
-|One versus all|Questo classificatore multiclasse esegue il training di un classificatore binario per ogni classe, che distingue tale classe da tutte le altre classi. È limitato in termini di scalatura dal numero di classi da categorizzare|[OneVersusAllTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
-|Pairwise coupling|Questo classificatore multiclasse esegue il training di un algoritmo di classificazione binaria su ogni coppia di classi. È limitato in termini di scalatura dal numero di classi, perché è necessario eseguire il training di ogni combinazione di due classi.|[PairwiseCouplingTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
+|One versus all|Questo classificatore multiclasse esegue il training di un classificatore binario per ogni classe, che distingue tale classe da tutte le altre classi. È limitato in termini di scalatura dal numero di classi da categorizzare|[OneVersusAllTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
+|Pairwise coupling|Questo classificatore multiclasse esegue il training di un algoritmo di classificazione binaria su ogni coppia di classi. È limitato in termini di scalatura dal numero di classi, perché è necessario eseguire il training di ogni combinazione di due classi.|[PairwiseCouplingTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
 ## <a name="k-means"></a>K-Means
 
@@ -107,4 +107,3 @@ Questi algoritmi di training creano un algoritmo di training multiclasse da un a
 |Proprietà|Algoritmi di training|
 |----------|--------|
 |Usare questo algoritmo di training di classificazione binaria per definire le prestazioni di altri algoritmi di training. Per essere efficienti, le metriche degli altri algoritmi di training devono essere migliori di quelle dell'algoritmo di training Prior. |<xref:Microsoft.ML.Trainers.PriorTrainer>|
-

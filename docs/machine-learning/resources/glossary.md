@@ -2,20 +2,17 @@
 title: Glossario dell'apprendimento automatico
 description: Glossario dei principali termini relativi all'apprendimento automatico, utili per la creazione di modelli personalizzati in ML.NET.
 ms.custom: seodec18
-ms.date: 03/05/2019
-ms.openlocfilehash: a3f94f2dedbe620c4d5c2bed2af99471572a91e5
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.date: 05/09/2019
+ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063667"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557972"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossario dell'apprendimento automatico
 
 Di seguito sono riportati i principali termini relativi all'apprendimento automatico, utili per la creazione di modelli personalizzati in ML.NET.
-
-> [!NOTE]
-> Questa documentazione si riferisce a ML.NET, che è attualmente in anteprima. Il materiale potrà essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 ## <a name="accuracy"></a>Accuratezza
 
@@ -56,7 +53,7 @@ I dati sono fondamentali per qualsiasi applicazione di apprendimento automatico.
 
 ## <a name="estimator"></a>Strumento di stima
 
-Classe di ML.NET che implementa l'interfaccia <xref:Microsoft.ML.IEstimator`1>.
+Classe di ML.NET che implementa l'interfaccia <xref:Microsoft.ML.IEstimator%601>.
 
 Uno strumento di stima è una specifica di una trasformazione, sia la trasformazione di preparazione dei dati, sia la trasformazione del training del modello di apprendimento automatico. Gli strumenti di stima possono essere concatenati in una pipeline di trasformazioni. I parametri di uno strumento di stima o una pipeline di strumenti di stima vengono appresi quando si chiama <xref:Microsoft.ML.IEstimator`1.Fit*>. Il risultato di <xref:Microsoft.ML.IEstimator`1.Fit*> è un [trasformatore](#transformer).
 

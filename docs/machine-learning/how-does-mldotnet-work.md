@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: ea5797cb8f2fd0654d9facb636bc857eeb8e5aad
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 054fa0e1d9d8cc0d7c32efd4a9e8c81b91cb1335
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063704"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960423"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Che cos'è ML.NET e come funziona?
 
@@ -65,7 +65,7 @@ Il codice del frammento seguente illustra l'applicazione più semplice di ML.NET
 
             // 2. Specify data preparation and model training pipeline
             var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
-                .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100);
+                .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
     
             // 3. Train model
             var model = pipeline.Fit(trainingData);
@@ -145,7 +145,7 @@ Per l'esempio di definizione dei prezzi di unità immobiliari è stata usata l'a
             new HouseData() { Size = 3.4F, Price = 3.6F }
         };
 
-        var testHouseDataView = mlContext.Data.LoadFromEnumerable(houseData);
+        var testHouseDataView = mlContext.Data.LoadFromEnumerable(testHouseData);
         var testPriceDataView = model.Transform(testHouseDataView);
                 
         var metrics = mlContext.Regression.Evaluate(testPriceDataView, labelColumnName: "Price");
@@ -153,8 +153,8 @@ Per l'esempio di definizione dei prezzi di unità immobiliari è stata usata l'a
         Console.WriteLine($"R^2: {metrics.RSquared:0.##}");
         Console.WriteLine($"RMS error: {metrics.RootMeanSquaredError:0.##}");
 
-        // R^2: 0.99
-        // RMS error: 0.09
+        // R^2: 0.96
+        // RMS error: 0.19
 ```
 
 Le metriche di valutazione indicano che la quantità di errori è ridotta e che la correlazione tra l'output previsto e l'output del test è elevata. Questa elaborazione non ha presentato problemi. Negli esempi reali, per ottenere metriche del modello valide sono necessarie più operazioni di ottimizzazione.
@@ -187,10 +187,10 @@ Ogni catalogo include un set di metodi di estensione. Ora si esaminerà come i m
 
 ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
-        .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100);
+        .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
 ```
 
-Nel frammento, sia `Concatenate` che `Sdca` sono metodi nel catalogo. Ognuno di essi crea un oggetto [IEstimator](xref:Microsoft.ML.IEstimator`1) che viene accodato alla pipeline.
+Nel frammento, sia `Concatenate` che `Sdca` sono metodi nel catalogo. Ognuno di essi crea un oggetto [IEstimator](xref:Microsoft.ML.IEstimator%601) che viene accodato alla pipeline.
 
 In questa fase viene eseguita solo la creazione degli oggetti. Non si verifica ancora nessuna esecuzione.
 
