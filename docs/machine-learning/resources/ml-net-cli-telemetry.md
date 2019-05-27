@@ -4,12 +4,12 @@ description: Informazioni sulle funzionalità di telemetria dell'interfaccia del
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 36f4af48615e2e3247f8e21343d0a00519ba1c0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 94c66267dfeec4b70ba4dd1fc47518eb0e01509a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645017"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053580"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Raccolta di dati di telemetria dall'interfaccia della riga di comando di ML.NET
 
@@ -75,5 +75,5 @@ Quando si esegue un [comando dell'interfaccia della riga di comando di ML.NET](.
 ## <a name="see-also"></a>Vedere anche
 - [Riferimento interfaccia della riga di comando](../reference/ml-net-cli-reference.md)
 - [Condizioni di licenza software Microsoft: Microsoft .NET Library](https://aka.ms/dotnet-core-eula)
-- [Privacy at Microsoft](https://www.microsoft.com/en-us/trustcenter/privacy/) (La privacy in Microsoft)
-- [Informativa sulla privacy di Microsoft](https://privacy.microsoft.com/en-us/privacystatement)
+- [Privacy at Microsoft](https://www.microsoft.com/trustcenter/privacy/) (La privacy in Microsoft)
+- [Informativa sulla privacy di Microsoft](https://privacy.microsoft.com/privacystatement)
