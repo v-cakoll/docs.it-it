@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724044"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880324"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipi di puntatori (Guida per programmatori C#)
 
@@ -75,28 +75,26 @@ Nella tabella riportata di seguito sono elencati gli operatori e le istruzioni c
 
 |Operatore/istruzione|Usa|
 |-------------------------|---------|
-|*|Esegue il riferimento indiretto al puntatore.|
-|->|Accede a un membro di struct tramite un puntatore.|
-|[]|Indicizza un puntatore.|
+|`*`|Esegue il riferimento indiretto al puntatore.|
+|`->`|Accede a un membro di struct tramite un puntatore.|
+|`[]`|Indicizza un puntatore.|
 |`&`|Ottiene l'indirizzo di una variabile.|
-|++ e --|Incrementa e decrementa puntatori.|
-|+ e -|Utilizza l'aritmetica dei puntatori.|
-|==, !=, \<, >, \<= e >=|Confronta puntatori.|
-|`stackalloc`|Alloca memoria nello stack.|
-|Istruzione `fixed`|Corregge temporaneamente una variabile per consentire di trovarne l'indirizzo.|
+|`++` e `--`|Incrementa e decrementa puntatori.|
+|`+` e `-`|Utilizza l'aritmetica dei puntatori.|
+|`==`, `!=`, `<`, `>`, `<=` e `>=`|Confronta puntatori.|
+|[Operatore `stackalloc`](../../language-reference/keywords/stackalloc.md)|Alloca memoria nello stack.|
+|[Istruzione `fixed`](../../language-reference/keywords/fixed-statement.md)|Corregge temporaneamente una variabile per consentire di trovarne l'indirizzo.|
+
+Per altre informazioni sugli operatori correlati ai puntatori, vedere [Operatori correlati ai puntatori](../../language-reference/operators/pointer-related-operators.md).
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Per altre informazioni, vedere la sezione [Tipi puntatore](~/_csharplang/spec/unsafe-code.md#pointer-types) nella [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
 - [Codice unsafe e puntatori](index.md)
 - [Conversioni puntatore](pointer-conversions.md)
-- [Espressioni puntatore](pointer-expressions.md)
 - [Tipi](../../language-reference/keywords/types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
-- [Istruzione fixed](../../language-reference/keywords/fixed-statement.md)
-- [stackalloc](../../language-reference/keywords/stackalloc.md)
-- [Boxing e unboxing](../types/boxing-and-unboxing.md)

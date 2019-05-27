@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cf5b621be7532239b67bfe970302f27eca3ea2a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 22cf168c660349bda16c59aec4824e3283430807
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835135"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877932"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Procedura: Eseguire la conversione tra flussi di .NET Framework e di Windows Runtime (solo Windows)
 
@@ -51,7 +51,7 @@ Per convertire un flusso di .NET Framework in un flusso di Windows Runtime, usar
   
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsOutputStream%2A?displayProperty=nameWithType> converte un flusso gestito di .NET per app UWP in un flusso di output di Windows Runtime.
   
-- [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) converte un flusso gestito in .NET per app UWP in un flusso ad accesso casuale che può essere usato da Windows Runtime per la lettura o la scrittura.
+- <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A?displayProperty=nameWithType> converte un flusso gestito in .NET per app UWP in un flusso ad accesso casuale che può essere usato da Windows Runtime per la lettura o la scrittura.
 
 Quando si converte un flusso di .NET Framework in un flusso di Windows Runtime, le funzionalità del flusso convertito dipendono dal flusso originale. Ad esempio, se il flusso originale supporta sia la lettura che la scrittura e si chiama <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> per convertirlo, il tipo restituito è `IRandomAccessStream`. `IRandomAccessStream` implementa `IInputStream` e `IOutputStream` e supporta lettura e scrittura.
 
@@ -59,7 +59,7 @@ I flussi di .NET Framework non supportano la clonazione, anche dopo la conversio
 
 ## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>Esempio: Convertire un flusso di .NET Framework in un flusso ad accesso casuale di Windows Runtime
 
-Per convertire un flusso di .NET Framework in un flusso ad accesso casuale di Windows Runtime, usare il metodo [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md), come illustrato nell'esempio seguente:
+Per convertire un flusso di .NET Framework in un flusso ad accesso casuale di Windows Runtime usare il metodo <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A>, come illustrato nell'esempio seguente:
 
 > [!IMPORTANT]
 > Assicurarsi che il flusso di .NET Framework usato supporti la ricerca oppure copiarlo in un flusso che la supporti. A tale scopo, è possibile usare la proprietà <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> .

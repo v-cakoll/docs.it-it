@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 3adc2891579cafff9c8aeb3e918ae74c6f3ad8a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fddb51bfe998c360ca418374b119ec12f25b0fad
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591007"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052286"
 ---
 # <a name="events-overview-windows-forms"></a>Cenni preliminari sugli eventi (Windows Form)
 Un evento è un'azione a cui si può rispondere o che può essere "gestita" nel codice. Gli eventi possono essere generati da un'azione utente, ad esempio un clic del mouse o la pressione di un tasto, oppure da codice programma o dal sistema.
@@ -29,7 +29,7 @@ Un evento è un'azione a cui si può rispondere o che può essere "gestita" nel 
  Per informazioni su come generare e utilizzare un evento, vedere [eventi](../../standard/events/index.md).
 
 ## <a name="delegates-and-their-role"></a>Delegati e rispettivo ruolo
- I delegati sono classi usate comunemente in .NET Framework per creare meccanismi di gestione degli eventi. È possibile paragonare a grandi linee i delegati ai puntatori a funzioni, usati in genere in [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] e in altri linguaggi orientati ad oggetti. A differenza dei puntatori a funzioni, tuttavia, i delegati sono orientati ad oggetti, indipendenti dai tipi e sicuri. Mentre un puntatore a funzioni, inoltre, include solo un riferimento a una funzione specifica, un delegato è costituito da un riferimento a un oggetto e fa riferimento a uno o più metodi nell'oggetto.
+ I delegati sono classi usate comunemente in .NET Framework per creare meccanismi di gestione degli eventi. I delegati sono paragonabili ai puntatori a funzione comunemente usati nell'oggetto visivo C++ e altri linguaggi orientate a oggetti. A differenza dei puntatori a funzioni, tuttavia, i delegati sono orientati ad oggetti, indipendenti dai tipi e sicuri. Mentre un puntatore a funzioni, inoltre, include solo un riferimento a una funzione specifica, un delegato è costituito da un riferimento a un oggetto e fa riferimento a uno o più metodi nell'oggetto.
 
  Usa questo modello di eventi *delegati* per associare gli eventi ai metodi che vengono usati per gestirli. Il delegato permette alle altre classi di effettuare la registrazione per la notifica di eventi specificando un metodo del gestore. Quando si verifica l'evento, il delegato chiama il metodo associato. Per altre informazioni su come definire delegati, vedere [eventi](../../standard/events/index.md).
 

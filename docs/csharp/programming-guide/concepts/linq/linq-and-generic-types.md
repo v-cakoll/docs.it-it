@@ -6,15 +6,15 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: cd0fae0c7d99491f21e5e1fb265e4aabafaa63c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2b599906082cabceeb8d97ec737b6fa39fed6825
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332690"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584404"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ e tipi generici (C#)
-Le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sono basate su tipi generici introdotti nella versione 2.0 di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Non è necessaria una conoscenza approfondita dei generics per poter iniziare a scrivere le query. È tuttavia importante comprendere due concetti di base:  
+Le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] si basano sui tipi generici introdotti nella versione 2.0 di .NET Framework. Non è necessaria una conoscenza approfondita dei generics per poter iniziare a scrivere le query. È tuttavia importante comprendere due concetti di base:  
   
 1. Quando si crea un'istanza di una classe di raccolte generiche, ad esempio <xref:System.Collections.Generic.List%601>, sostituire "T" con il tipo di oggetti che saranno contenuti nell'elenco. Ad esempio, un elenco di stringhe viene espresso come `List<string>` e un elenco di oggetti `Customer` viene espresso come `List<Customer>`. Un elenco generico è fortemente tipizzato e offre molti vantaggi rispetto alle raccolte che archiviano gli elementi come <xref:System.Object>. Se si tenta di aggiungere un oggetto `Customer` a un oggetto `List<string>`, verrà generato un errore in fase di compilazione. È semplice usare le raccolte generiche poiché non è necessario eseguire il cast dei tipi in fase di esecuzione.  
   

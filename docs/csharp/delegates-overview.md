@@ -3,16 +3,14 @@ title: Introduzione ai delegati
 description: Questo argomento di panoramica fornisce informazioni sui delegati presentando i concetti di base e descrivendo gli obiettivi di progettazione del linguaggio per i delegati.
 ms.date: 06/20/2016
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.openlocfilehash: d42d9d10aeaa153f12933fa3a59e58719f7741e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 43cdf9345f0bae9d5c4d0e6a31d80bc269c37fec
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212187"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879028"
 ---
 # <a name="introduction-to-delegates"></a>Introduzione ai delegati
-
-[Precedente](delegates-events.md)
 
 I delegati offrono un meccanismo di *associazione tardiva* in .NET. L'associazione tardiva indica la creazione di un algoritmo in cui il chiamante specifica almeno un metodo che implementa parte dell'algoritmo.
 
@@ -32,11 +30,11 @@ I designer del linguaggio hanno enumerato diversi obiettivi per la funzionalità
 
 Il team voleva un costrutto di linguaggio comune che potesse essere usato per i successivi algoritmi di associazione tardiva. Ciò consente agli sviluppatori di apprendere un solo concetto e di usare lo stesso concetto in diversi problemi software.
 
-Inoltre, il team voleva che fossero supportate le chiamate al metodo singole e multicast. I delegati multicast sono i delegati nei quali sono stati concatenati più metodi. Gli esempi sono descritti [di seguito](delegate-class.md). 
+In secondo luogo, il team voleva supportare le chiamate al metodo sia singole che multicast. I delegati multicast sono i delegati che concatenano più chiamate al metodo. Alcuni esempi sono disponibili [più avanti in questa serie](delegate-class.md). 
 
 Il team voleva che i delegati supportassero la stessa indipendenza dai tipi stesso che gli sviluppatori si aspettano da tutti i costrutti C#. 
 
-Il team ha infine riconosciuto che un modello di evento è un modello specifico in cui i delegati o gli algoritmi di associazione tardiva successivi sono utili. Il team voleva assicurarsi che il codice per i delegati potesse offrire la base per il modello di evento di .NET.
+Infine il team ha riconosciuto che un modello di evento è un modello specifico, in cui i delegati o qualsiasi algoritmo di associazione tardiva risultano molto utili. Il team voleva assicurarsi che il codice per i delegati potesse offrire la base per il modello di evento di .NET.
 
 Il risultato di tutto il lavoro sono stati il delegato e il supporto degli eventi di C# e .NET. Gli articoli rimanenti di questa sezione descrivono le funzionalità del linguaggio, il supporto delle librerie e i termini comuni usati per i delegati.
 

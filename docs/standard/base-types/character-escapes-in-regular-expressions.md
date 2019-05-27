@@ -18,19 +18,19 @@ ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 2643e6ec1edf9cd69d7530def1e2605e1af20de4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 71da71d1331e9eab818a7492daa230f758840762
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152364"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634660"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Caratteri di escape nelle espressioni regolari
 La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni seguenti:  
   
--   Il carattere che segue è un carattere speciale, come illustrato nella tabella nella sezione seguente. Ad esempio, `\b` è un ancoraggio che indica che una corrispondenza di un'espressione regolare deve iniziare sul confine di una parola, `\t` rappresenta un carattere di tabulazione e `\x020` rappresenta uno spazio.  
+- Il carattere che segue è un carattere speciale, come illustrato nella tabella nella sezione seguente. Ad esempio, `\b` è un ancoraggio che indica che una corrispondenza di un'espressione regolare deve iniziare sul confine di una parola, `\t` rappresenta un carattere di tabulazione e `\x020` rappresenta uno spazio.  
   
--   Un carattere che altrimenti verrebbe interpretato come un costrutto di linguaggio non di escape deve essere interpretato letteralmente. Ad esempio, una parentesi graffa (`{`) segna l'inizio della definizione di un quantificatore, ma una barra rovesciata seguita da una parentesi graffa (`\{`) indica che il motore delle espressioni regolari deve trovare la corrispondenza con la parentesi graffa. Analogamente, una singola barra rovesciata segna l'inizio di un costrutto di linguaggio di escape, ma due barre rovesciate (`\\`) indicano che il motore delle espressioni regolari deve trovare la corrispondenza con la barra rovesciata.  
+- Un carattere che altrimenti verrebbe interpretato come un costrutto di linguaggio non di escape deve essere interpretato letteralmente. Ad esempio, una parentesi graffa (`{`) segna l'inizio della definizione di un quantificatore, ma una barra rovesciata seguita da una parentesi graffa (`\{`) indica che il motore delle espressioni regolari deve trovare la corrispondenza con la parentesi graffa. Analogamente, una singola barra rovesciata segna l'inizio di un costrutto di linguaggio di escape, ma due barre rovesciate (`\\`) indicano che il motore delle espressioni regolari deve trovare la corrispondenza con la barra rovesciata.  
   
 > [!NOTE]
 >  Le sequenze di caratteri di escape vengono riconosciute nei modelli di espressioni regolari, ma non nei modelli di sostituzione.  
@@ -52,7 +52,7 @@ La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni 
 |`\` *nnn*|Corrisponde a un carattere ASCII dove *nnn* è costituito da due o tre cifre che rappresentano il codice carattere ottale. Ad esempio, `\040` rappresenta un carattere di spazio. Questo costrutto viene interpretato come un backreference se è costituito solo da una cifra, ad esempio `\2` o se corrisponde al numero di un gruppo di acquisizione. Vedere [Costrutti di backreference](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).|  
 |`\x` *nn*|Corrisponde a un carattere ASCII dove *nn* è un codice carattere esadecimale a due cifre.|  
 |`\c` *X*|Corrisponde a un carattere di controllo ASCII, dove X è la lettera del carattere di controllo. Ad esempio, `\cC` corrisponde a CTRL-C.|  
-|`\u` *nnnn*|Corrisponde a un'unità di codice UTF-16 il cui valore è l'esadecimale *nnnn*. **Nota:** la sequenza di caratteri di escape Perl 5 usata per specificare Unicode non è supportata da .NET. La sequenza di caratteri di escape Perl 5 ha il formato `\x{`*####*`…}`, dove *####*`…` è una serie di cifre esadecimali. Usare invece `\u`*nnnn*.|  
+|`\u` *nnnn*|Corrisponde a un'unità di codice UTF-16 il cui valore è l'esadecimale *nnnn*. **Nota:**  la sequenza di caratteri di escape Perl 5 usata per specificare Unicode non è supportata da .NET. La sequenza di caratteri di escape Perl 5 ha il formato `\x{`*####*`…}`, dove *####*`…` è una serie di cifre esadecimali. Usare invece `\u`*nnnn*.|  
 |`\`|Quando è seguito da un carattere non riconosciuto come carattere di escape, corrisponde a tale carattere. Ad esempio, `\*` corrisponde a un asterisco (*) ed equivale a `\x2A`.|  
   
 ## <a name="an-example"></a>Esempio  

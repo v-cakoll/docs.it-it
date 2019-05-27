@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: b54c48fb7869fb3d308e238366f8e8b91368320a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: febfe0ae0a3e478109b338b228d0bc306bf56454
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675602"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052782"
 ---
 # <a name="additional-resources"></a>Risorse aggiuntive
 
@@ -39,7 +39,7 @@ Nei siti Web seguenti è disponibile materiale sussidiario per trovare la soluzi
 
 |Termine|Definizione|
 |----------|----------------|
-|[Forum su Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|Si discutono problemi generali di Visual Basic.|
+|[Forum su Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|Si discutono problemi generali di Visual Basic.|
 
 ### <a name="videos-and-webcasts"></a>Video e webcast
 
@@ -52,7 +52,7 @@ Nei siti Web seguenti è disponibile materiale sussidiario per trovare la soluzi
 |Termine|Definizione|
 |----------|----------------|
 |[Support Microsoft](https://support.microsoft.com)|È possibile accedere agli articoli di Microsoft Knowledge Base (KB), a download e ad aggiornamenti, a servizi di supporto su Web e ad altri servizi.|
-|[Domande su Visual Studio](https://developercommunity.visualstudio.com)|Consente di segnalare bug o inoltrare suggerimenti a Microsoft su .NET e Visual Studio. È anche possibile segnalare un bug selezionando **?** > **Commenti e suggerimenti** > **Segnala un problema** in Visual Studio.|
+|[Domande su Visual Studio](https://developercommunity.visualstudio.com)|Consente di segnalare bug o inoltrare suggerimenti a Microsoft su .NET e Visual Studio. È anche possibile segnalare un bug selezionando **?**  > **Commenti e suggerimenti** > **Segnala un problema** in Visual Studio.|
 
 ## <a name="third-party-resources"></a>Risorse di terze parti
 

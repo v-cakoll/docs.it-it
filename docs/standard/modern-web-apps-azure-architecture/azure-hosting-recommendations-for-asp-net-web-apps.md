@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Cons
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: cda4c002c73e2dd0db1b2d5d1fa8bc76903c5c62
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d328f92ef5e64ee5d92b71472a5e32e2f5d007fd
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828384"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063246"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Consigli relativi all'hosting di Azure per le applicazioni Web ASP.NET Core
 
@@ -26,11 +26,9 @@ Le applicazioni Web possono essere ospitate con:
 
 - Contenitori
 
-- Azure Service Fabric
-
 - Macchine virtuali (VM)
 
-Le app Web del servizio app è la soluzione consigliata per la maggior parte degli scenari. Per le architetture con microservizi può risultare opportuno un approccio basato sui contenitori o su Service Fabric. Se è necessario un maggior controllo sui computer che eseguono l'applicazione, prendere in considerazione le macchine virtuali di Azure.
+Le app Web del servizio app è la soluzione consigliata per la maggior parte degli scenari. Per le architetture con microservizi può risultare opportuno un approccio basato sui contenitori. Se è necessario un maggior controllo sui computer che eseguono l'applicazione, prendere in considerazione le macchine virtuali di Azure.
 
 ### <a name="app-service-web-apps"></a>App Web del servizio app
 
@@ -46,9 +44,11 @@ Le app Web del servizio app offrono una piattaforma completamente gestita, ottim
 
 - Integrazione con Visual Studio.
 
+- Supporto per i contenitori Linux e Windows tramite [app Web per contenitori](https://azure.microsoft.com/en-us/services/app-service/containers/).
+
 Il servizio app di Azure è la scelta ottimale per la maggior parte delle applicazioni Web. La gestione e la distribuzione sono integrate nella piattaforma e i siti possono essere ridimensionati rapidamente per gestire volumi di traffico elevati, mentre il bilanciamento e la gestione del traffico incorporati garantiscono una disponibilità elevata. È possibile spostare facilmente siti esistenti al servizio app di Azure con uno strumento di migrazione online, usare un'app open source dalla Raccolta di app Web o creare un nuovo sito usando il framework e gli strumenti preferiti. La funzionalità Processi Web semplifica l'aggiunta dell'elaborazione di processi in background all'app Web del servizio app.
 
-### <a name="azure-kubernetes-service"></a>Servizio Azure Kubernetes
+### <a name="azure-kubernetes-service"></a>Servizio Kubernetes di Azure
 
 Il servizio Azure Kubernetes gestisce l'ambiente Kubernetes ospitato, rendendo veloce e facile distribuire e gestire applicazioni in contenitori senza competenze nell'orchestrazione di contenitori. Elimina inoltre il carico delle operazioni in corso e la manutenzione con il provisioning, l'aggiornamento e il ridimensionamento delle risorse su richiesta, senza portare offline le applicazioni.
 
@@ -61,30 +61,9 @@ Il servizio Azure Kubernetes riduce la complessità e i costi operativi di gesti
 
 Grazie alla gestione dei nodi nel cluster del servizio Azure Kubernetes da parte di Azure, non è più necessario eseguire molte attività manualmente, ad esempio gli aggiornamenti del cluster. Poiché Azure gestisce queste attività di manutenzione critiche per l'utente, il servizio Azure Kubernetes non fornisce accesso diretto (ad esempio con SSH) al cluster.
 
-### <a name="azure-service-fabric"></a>Azure Service Fabric
-
-Se si crea una nuova app o si riscrive un'app esistente per l'uso di un'architettura di microservizi, Service Fabric è una scelta ottimale. Le app vengono eseguite in un pool condiviso di computer che inizialmente può essere piccolo e poi crescere fino a includere centinaia o migliaia di computer, in base alle esigenze. I servizi con stato semplificano notevolmente l'archiviazione affidabile e coerente dello stato delle app e Service Fabric gestisce in modo automatico il partizionamento, la scalatura e la disponibilità dei servizi. Service Fabric supporta anche WebAPI con Open Web Interface for .NET (OWIN) e ASP.NET Core. Rispetto al servizio app, Service Fabric offre anche maggior controllo o un accesso diretto all'infrastruttura sottostante. È possibile operare a livello remoto nei server o configurare attività di avvio dei server.
-
 ### <a name="azure-virtual-machines"></a>Macchine virtuali di Azure
 
-Se un'applicazione esistente richiede modifiche sostanziali per l'esecuzione nel servizio app di Azure o in Service Fabric, la scelta delle macchine virtuali può semplificare la migrazione al cloud. Tuttavia la configurazione, la protezione e la gestione ottimale delle macchine virtuali richiedono molto più tempo e molte più competenze IT rispetto al servizio app di Azure e a Service Fabric. Se si prevede di usare le macchine virtuali di Azure, prendere in considerazione il carico di lavoro continuativo necessario per applicare patch, aggiornare e gestire l'ambiente delle macchine virtuali. Macchine virtuali di Azure è una soluzione infrastruttura distribuita come servizio (IaaS), mentre il servizio app e Service Fabric sono soluzioni PaaS.
-
-#### <a name="feature-comparison"></a>Confronto tra funzionalità
-
-| Funzionalità                                                                                    | Servizio app | Contenitori (servizio Azure Kubernetes) | Service Fabric | Macchina virtuale |
-| ------------------------------------------------------------------------------------------ | ----------- | ---------------- | -------------- | --------------- |
-| Distribuzione quasi immediata                                                                    | x           | x                | x              |                 |
-| Scalabilità verticale a computer più grandi senza ridistribuzione                                               | x           | x                | x              |                 |
-| Le istanze condividono contenuto e configurazione; la ridistribuzione o la riconfigurazione non sono necessarie in caso di ridimensionamento | x           | x                | x              |                 |
-| Più ambienti di distribuzione (produzione, gestione temporanea)                                     | x           | x                | x              |                 |
-| Gestione automatica degli aggiornamenti del sistema operativo                                                             | x           | x                |                |                 |
-| Commutazione trasparente fra piattaforme a 32/64 bit                                             | x           | x                |                |                 |
-| Distribuire codice con Git, FTP                                                                  | x           | x                |                | x               |
-| Distribuire codice con WebDeploy                                                                 | x           | x                |                | x               |
-| Distribuire codice con TFS                                                                       | x           | x                | x              | x               |
-| Web host o livello di servizio Web di un'architettura a più livelli                                    | x           | x                | x              | x               |
-| Accedere a servizi Azure quali il bus di servizio, l'archiviazione e il database SQL                              | x           | x                | x              | x               |
-| Installare qualsiasi file personalizzato con estensione msi                                                                     |             | x                | x              | x               |
+Se un'applicazione esistente richiede modifiche sostanziali per l'esecuzione nel servizio app di Azure, la scelta delle macchine virtuali può semplificare la migrazione al cloud. Tuttavia la configurazione, la protezione e la gestione ottimale delle macchine virtuali richiedono molto più tempo e molte più competenze IT rispetto al servizio app di Azure. Se si prevede di usare le macchine virtuali di Azure, prendere in considerazione il carico di lavoro continuativo necessario per applicare patch, aggiornare e gestire l'ambiente delle macchine virtuali. Macchine virtuali di Azure è una soluzione infrastruttura distribuita come servizio (IaaS), mentre il servizio app e una soluzione PaaS. È anche necessario considerare se la distribuzione dell'app come un contenitore Windows nell'app Web per contenitori potrebbe essere un'opzione valida per il proprio scenario.
 
 ## <a name="logical-processes"></a>Processi logici
 
@@ -121,8 +100,8 @@ La figura 11-2 illustra un'architettura di riferimento di esempio. Questo diagra
 - Panoramica sulle app Web\
   <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
-- Confronto tra Servizio app di Azure, Macchine virtuali, Service Fabric e Servizi cloud\
-  <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+- App Web per contenitori\
+  <https://azure.microsoft.com/en-us/services/app-service/containers/>
 
 - Introduzione a servizio Azure Kubernetes\
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>

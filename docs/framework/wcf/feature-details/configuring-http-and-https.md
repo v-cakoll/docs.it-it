@@ -4,12 +4,12 @@ ms.date: 04/08/2019
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 86705a4f8daa327c442ac6c53c9b44c5b5c5c2ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bfdbbc19bb9ed72bc50ebeeac114241ccd47c25
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857363"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053404"
 ---
 # <a name="configuring-http-and-https"></a>Configurazione di HTTP e HTTPS
 
@@ -57,7 +57,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 
 Quando si utilizza <xref:System.ServiceModel.WSDualHttpBinding>, la connessione client utilizza impostazioni predefinite compatibili con le prenotazioni dello spazio dei nomi e il firewall Windows. Se si sceglie di personalizzare l'indirizzo client di base di una connessione doppia, è necessario configurare anche queste impostazioni HTTP sul client per farle corrispondere al nuovo indirizzo.
 
-L'API Server HTTP ha alcune impostazioni di configurazione avanzata che non sono disponibili tramite HttpCfg. Queste impostazioni vengono mantenute nel Registro di sistema e valgono per tutte le applicazioni in esecuzione sui sistemi che utilizzano API server HTTP. Per informazioni su queste impostazioni, vedere [impostazioni del Registro di sistema HTTP. sys per IIS](https://support.microsoft.com/en-us/help/820129/http-sys-registry-settings-for-windows). La maggior parte degli utenti non necessario modificare queste impostazioni.
+L'API Server HTTP ha alcune impostazioni di configurazione avanzata che non sono disponibili tramite HttpCfg. Queste impostazioni vengono mantenute nel Registro di sistema e valgono per tutte le applicazioni in esecuzione sui sistemi che utilizzano API server HTTP. Per informazioni su queste impostazioni, vedere [impostazioni del Registro di sistema HTTP. sys per IIS](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows). La maggior parte degli utenti non necessario modificare queste impostazioni.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: e32f36a0490a198078f8357f3603c91cc50cb3b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 00e9eeb3227ceef54f899129847bfb74a370c51c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647099"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591279"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Procedura dettagliata: Filtro dell'output di My.Application.Log (Visual Basic)
 Questa procedura dettagliata illustra come modificare il filtro di log predefinito per l'oggetto `My.Application.Log` per stabilire quali informazioni vengono passate dall'oggetto `Log` ai listener e quali informazioni vengono scritte dai listener. È possibile modificare il comportamento di registrazione anche dopo la compilazione dell'applicazione, poiché le informazioni di configurazione vengono archiviate nel file di configurazione dell'applicazione.  
@@ -135,7 +135,7 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
 9. Impostare di nuovo il valore dell'attributo `value` su "Information".  
   
     > [!NOTE]
-    >  L'impostazione dell'opzione `DefaultSwitch` controlla solo `My.Application.Log`. Non modifica il comportamento delle classi <xref:System.Diagnostics.Trace?displayProperty=nameWithType> e <xref:System.Diagnostics.Debug?displayProperty=nameWithType> di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+    >  L'impostazione dell'opzione `DefaultSwitch` controlla solo `My.Application.Log`. Non modifica il comportamento delle classi <xref:System.Diagnostics.Trace?displayProperty=nameWithType> e <xref:System.Diagnostics.Debug?displayProperty=nameWithType> di .NET Framework.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Filtro individuale per i listener di My.Application.Log  
  Nell'esempio precedente viene illustrato come modificare il filtro per tutto l'output di `My.Application.Log`. Questo esempio illustra come filtrare un singolo listener di log. Per impostazione predefinita, un'applicazione ha due listener che scrivono nell'output di debug dell'applicazione e nel file di log.  

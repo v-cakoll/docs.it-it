@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77740f86265db86c998af25e6e9ed4c20a7014e6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: c21a1303cd67f5f5de42241f4d5ada929e68bf2c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835746"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589896"
 ---
 # <a name="commonly-used-collection-types"></a>Tipi di raccolte comunemente utilizzate
 I tipi di raccolta sono le varianti comuni delle raccolte di dati, ad esempio tabelle hash, code, stack, contenitori, dizionari ed elenchi.  
@@ -36,10 +36,10 @@ I tipi di raccolta sono le varianti comuni delle raccolte di dati, ad esempio ta
   
 |Titolo|Description|  
 |-----------|-----------------|  
-|[Raccolte e strutture di dati](../../../docs/standard/collections/index.md)|Vengono descritti i diversi tipi di raccolta disponibili in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], compresi stack, code, elenchi, matrici e dizionari.|  
+|[Raccolte e strutture di dati](../../../docs/standard/collections/index.md)|Vengono descritti i diversi tipi di raccolta disponibili in .NET Framework, compresi stack, code, elenchi, matrici e dizionari.|  
 |[Tipi di Collection Hashtable e Dictionary](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Vengono descritte le funzionalità dei tipi di dizionario basati su hash generici e non generici.|  
 |[Tipi di raccolta ordinati](../../../docs/standard/collections/sorted-collection-types.md)|Vengono descritte le classi che forniscono funzionalità di ordinamento per elenchi e set.|  
-|[Generics](../../../docs/standard/generics/index.md)|Viene descritta la funzionalità generics, compresi delegati, interfacce e raccolte generiche fornite da [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Vengono forniti collegamenti alla documentazione sulle funzionalità per i linguaggi C#, Visual Basic e Visual C++ e a tecnologie di supporto come reflection.|  
+|[Generics](../../../docs/standard/generics/index.md)|Viene descritta la funzionalità Generics, compresi delegati, interfacce e Collection generiche fornite da .NET Framework. Vengono forniti collegamenti alla documentazione sulle funzionalità per i linguaggi C#, Visual Basic e Visual C++ e a tecnologie di supporto come reflection.|  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Collections?displayProperty=nameWithType>  

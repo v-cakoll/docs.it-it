@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 16aa1cd43db0b10c4617b4fa92783c75a4ba5303
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335017"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755207"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -27,9 +27,9 @@ Le diverse implementazioni di .NET specificano come destinazione determinate ver
 
 ## <a name="net-implementation-support"></a>Supporto per le implementazioni di .NET
 
-Nella tabella seguente sono riportate le versioni minime della piattaforma che supportano ogni versione di .NET Standard.
+Nella tabella seguente sono riportate le versioni **minime** della piattaforma che supportano ogni versione di .NET Standard. Ciò significa che le versioni successive di una piattaforma elencata supportano anche la versione di .NET Standard corrispondente. Ad esempio, .NET Core 2.2 supporta .NET Standard 2.0 e versioni precedenti.
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
 Per trovare la versione più recente di .NET Standard che è possibile definire come destinazione, eseguire le operazioni seguenti:
 

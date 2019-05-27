@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eac5f9f6c8b47a6f14898eac2505ecc890015010
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f9cad5b24af86afdb1f3894dc124362fed732e93
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188120"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628891"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Utilizzo del modello asincrono basato su attività
 
@@ -101,13 +101,13 @@ var cts = new CancellationTokenSource();
 
  Questo approccio all'annullamento presenta diversi vantaggi:
 
--   È possibile passare lo stesso token di annullamento a un numero qualsiasi di operazioni asincrone e sincrone.
+- È possibile passare lo stesso token di annullamento a un numero qualsiasi di operazioni asincrone e sincrone.
 
--   La stessa richiesta di annullamento può essere estesa a un numero qualsiasi di listener.
+- La stessa richiesta di annullamento può essere estesa a un numero qualsiasi di listener.
 
--   Lo sviluppatore dell'API asincrona ha il controllo totale sull'eventuale richiesta di annullamento e sull'eventuale esecuzione.
+- Lo sviluppatore dell'API asincrona ha il controllo totale sull'eventuale richiesta di annullamento e sull'eventuale esecuzione.
 
--   Il codice che usa l'API può determinare in modo selettivo a quali chiamate asincrone verranno propagate le richieste di annullamento.
+- Il codice che usa l'API può determinare in modo selettivo a quali chiamate asincrone verranno propagate le richieste di annullamento.
 
 ## <a name="monitoring-progress"></a>Monitoraggio dello stato
  Alcuni metodi asincroni espongono lo stato di avanzamento tramite un'interfaccia dello stato di avanzamento passata all'interno del metodo asincrono.  Si consideri ad esempio una funzione che scarica in modo asincrono una stringa di testo e, durante il processo, genera gli aggiornamenti dello stato di avanzamento che include la percentuale di download completata fino a quel momento.  Tale metodo può essere usato in un'applicazione Windows Presentation Foundation (WPF) come segue:
@@ -247,13 +247,13 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  È possibile usare il metodo <xref:System.Threading.Tasks.Task.WhenAny%2A> per attendere in modo asincrono più operazioni asincrone rappresentate come attività da completare.  Questo metodo viene usato principalmente in quattro casi:
 
--   Ridondanza: esecuzione ripetuta di un'operazione e selezione di quella che viene terminata per prima (ad esempio contatto di più servizi Web di quotazioni di borsa tramite cui verrà generato un solo risultato e selezione di quello che viene completato più velocemente).
+- Ridondanza:  esecuzione ripetuta di un'operazione e selezione di quella che viene terminata per prima (ad esempio contatto di più servizi Web di quotazioni di borsa tramite cui verrà generato un solo risultato e selezione di quello che viene completato più velocemente).
 
--   Interfoliazione: avvio di più operazioni e attesa del completamento di tutte, ma elaborazione al termine delle operazioni in questione.
+- Interfoliazione:  avvio di più operazioni e attesa del completamento di tutte, ma elaborazione al termine delle operazioni in questione.
 
--   Limitazione: consentire l'avvio di operazioni aggiuntive al completamento delle altre.  Questa è un'estensione dello scenario di interfoliazione.
+- Limitazione:  consentire l'avvio di operazioni aggiuntive al completamento delle altre.  Questa è un'estensione dello scenario di interfoliazione.
 
--   Bailout iniziale: ad esempio, un'operazione rappresentata dall'attività t1 può essere raggruppata in un'attività <xref:System.Threading.Tasks.Task.WhenAny%2A> con un'altra attività t2 ed è possibile attendere l'attività <xref:System.Threading.Tasks.Task.WhenAny%2A>. L'attività t2 potrebbe rappresentare un timeout, un annullamento o un altro segnale che fa sì che l'attività <xref:System.Threading.Tasks.Task.WhenAny%2A> termini prima di t1.
+- Bailout iniziale:  ad esempio, un'operazione rappresentata dall'attività t1 può essere raggruppata in un'attività <xref:System.Threading.Tasks.Task.WhenAny%2A> con un'altra attività t2 ed è possibile attendere l'attività <xref:System.Threading.Tasks.Task.WhenAny%2A>. L'attività t2 potrebbe rappresentare un timeout, un annullamento o un altro segnale che fa sì che l'attività <xref:System.Threading.Tasks.Task.WhenAny%2A> termini prima di t1.
 
 #### <a name="redundancy"></a>Ridondanza
  Si consideri il caso in cui si desidera decidere se comprare o meno dei titoli.  Esistono numerosi servizi Web attendibili che consigliano su azioni, ma a seconda del traffico giornaliero, ogni servizio può risultare lento in determinati momenti.  È possibile usare il metodo <xref:System.Threading.Tasks.Task.WhenAny%2A> per ricevere una notifica quando un'operazione termina:
@@ -290,7 +290,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- Anche se il primo processo viene completato correttamente, le attività successive possono dare esito negativo.  A questo punto, sono disponibili diverse opzioni per la gestione delle eccezioni: è possibile attendere il completamento di tutte le attività avviate e, in questo caso, è possibile utilizzare il metodo <xref:System.Threading.Tasks.Task.WhenAll%2A> oppure è possibile decidere che tutte le eccezioni sono importanti e devono essere registrate.  È possibile a tale scopo usare le continuazioni per ricevere una notifica quando le attività terminano in modo asincrono:
+ Anche se il primo processo viene completato correttamente, le attività successive possono dare esito negativo.  A questo punto, sono disponibili diverse opzioni per la gestione delle eccezioni:  è possibile attendere il completamento di tutte le attività avviate e, in questo caso, è possibile usare il metodo <xref:System.Threading.Tasks.Task.WhenAll%2A> oppure si può decidere che tutte le eccezioni sono importanti e devono essere registrate.  È possibile a tale scopo usare le continuazioni per ricevere una notifica quando le attività terminano in modo asincrono:
 
 ```csharp
 foreach(Task recommendation in recommendations)

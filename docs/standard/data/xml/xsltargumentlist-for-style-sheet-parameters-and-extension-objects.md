@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3afbffcbbaa5e8398a9ab10c762e60305cfc164b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11cf0b694d75836ad903edeafc79a55ec4612b45
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615226"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586468"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList per i parametri dei fogli di stile e gli oggetti di estensione
 La classe <xref:System.Xml.Xsl.XsltArgumentList> contiene parametri Extensible Stylesheet Language for Transformations (XSLT) e oggetti di estensione XSLT. Quando vengono passati al metodo <xref:System.Xml.Xsl.XslTransform.Transform%2A>, questi parametri e oggetti di estensione possono essere richiamati dai fogli di stile.  
@@ -36,7 +36,7 @@ La classe <xref:System.Xml.Xsl.XsltArgumentList> contiene parametri Extensible S
 ## <a name="xslt-style-sheet-parameters"></a>Parametri dei fogli di stile XSLT  
  I parametri XSLT vengono aggiunti all'elenco <xref:System.Xml.Xsl.XsltArgumentList> mediante il metodo <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. Un nome completo e un URI dello spazio dei nomi sono associati all'oggetto parametro in quel momento.  
   
- L'oggetto parameter deve corrispondere a un tipo W3C (World Wide Web Consortium). Nella tabella seguente sono illustrati i tipi W3C corrispondenti e le classi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] equivalenti (tipo) e viene indicato se il tipo W3C è un tipo XPath o XSLT.  
+ L'oggetto parameter deve corrispondere a un tipo W3C (World Wide Web Consortium). La tabella seguente illustra i tipi W3C corrispondenti, le classi .NET Framework equivalenti (tipo) e se il tipo W3C è un tipo XML Path Language (XPath) o XSLT.  
   
 |Tipo W3C|Classe .NET Framework equivalente (tipo)|Tipo XPath o tipo XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  

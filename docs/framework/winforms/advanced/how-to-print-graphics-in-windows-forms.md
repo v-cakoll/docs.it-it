@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: 55459482d0994c581164128b17c08a7ca90d0717
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 347c7064c199e953b496c9505f08c9e12c1ae670
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756562"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052807"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>Procedura: Stampare grafica in Windows Form
 Spesso è necessario stampare grafica nelle tue applicazioni basate su Windows. Il <xref:System.Drawing.Graphics> classe fornisce metodi per disegnare oggetti in un dispositivo, ad esempio un monitor o una stampante.  
@@ -52,7 +52,7 @@ Spesso è necessario stampare grafica nelle tue applicazioni basate su Windows. 
        }  
     ```  
   
-     (Visual c# e [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) inserire il codice seguente nel costruttore del form per registrare il gestore dell'evento.  
+     (Visual C# e Visual C++) Inserire il codice seguente nel costruttore del form per registrare il gestore dell'evento.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

@@ -4,12 +4,12 @@ description: Informazioni sulle procedure consigliate per interfacciarsi con i c
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196658"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063093"
 ---
 # <a name="native-interoperability-best-practices"></a>Procedure consigliate di interoperabilità nativa
 
@@ -33,7 +33,7 @@ Le linee guida in questa sezione si applicano a tutti gli scenari di interoperab
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Mantenere l'impostazione predefinita  | Con l'impostazione esplicita su false, i valori restituiti HRESULT di errore verranno convertiti in eccezioni e il valore restituito nella definizione diventa Null di conseguenza.|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | Dipende dall'API  | Impostare su true se l'API usa GetLastError e usare Marshal.GetLastWin32Error per ottenere il valore. Se l'API imposta una condizione che indica la presenza di un errore, recuperare l'errore prima di effettuare altre chiamate in modo da evitare di sovrascriverlo inavvertitamente.|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None` con fallback al comportamento `CharSet.Ansi`  | Usare in modo esplicito `CharSet.Unicode` o `CharSet.Ansi` quando sono presenti stringhe o caratteri nella definizione | Specifica il comportamento di marshalling delle stringhe e cosa fa `ExactSpelling` quando l'impostazione è `false`. Si noti che `CharSet.Ansi` è in effetti UTF8 su Unix. Nella _maggior parte_ dei casi Windows usa Unicode, mentre Unix usa UTF8. Vedere altre informazioni nella [documentazione sui set di caratteri](./charset.md). |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None` con fallback al comportamento `CharSet.Ansi`  | Usare in modo esplicito `CharSet.Unicode` o `CharSet.Ansi` quando sono presenti stringhe o caratteri nella definizione | Specifica il comportamento di marshalling delle stringhe e il comportamento di `ExactSpelling` quando è impostato su `false`. Si noti che `CharSet.Ansi` è in effetti UTF8 su Unix. Nella _maggior parte_ dei casi Windows usa Unicode, mentre Unix usa UTF8. Vedere altre informazioni nella [documentazione sui set di caratteri](./charset.md). |
 | <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Impostare su true e ottenere un leggero miglioramento delle prestazioni perché il runtime non cercherà nomi di funzioni alternativi con suffisso "A" o "W" in base al valore dell'impostazione `CharSet` ("A" per `CharSet.Ansi` e "W" per `CharSet.Unicode`). |
 
 ## <a name="string-parameters"></a>Parametri stringa
@@ -57,11 +57,11 @@ Vale a dire *{4}* allocazioni per ottenere una stringa dal codice nativo. Il meg
 
 L'altro problema con `StringBuilder` è che copia sempre il buffer restituito fino primo valore Null. Se la stringa passata non è terminata o è una stringa con terminazione Null doppia, nel migliore dei casi P/Invoke non è corretto.
 
-Se si *usa* `StringBuilder`, un altro aspetto da tenere presente è che la capacità **non** include un valore Null nascosto, sempre considerato per l'interoperabilità. È comune sbagliarsi, perché la maggior parte delle API vuole le dimensioni del buffer *comprensive* del valore Null. Ciò può comportare allocazioni sprecate/superflue. Inoltre, questo problema impedisce al runtime di ottimizzare il marshalling di `StringBuilder` per ridurre al minimo le copie.
+Se si *usa* `StringBuilder`, un altro aspetto da tenere presente è che la capacità **non** include un valore Null nascosto, sempre considerato per l'interoperabilità. È comune sbagliarsi, perché la maggior parte delle API vuole le dimensioni del buffer *comprensive* del valore Null. Ciò può comportare allocazioni sprecate/superflue. Questo problema impedisce inoltre al runtime di ottimizzare il marshalling di `StringBuilder` per ridurre al minimo le copie.
 
 **✔️ PRENDERE IN CONSIDERAZIONE** l'uso di `char[]` da un `ArrayPool`.
 
-Per altre informazioni sul marshalling delle stringhe, vedere [Marshalling predefinito per le stringhe](../../framework/interop/default-marshaling-for-strings.md) e [Personalizzazione dei parametri stringa](customize-parameter-marshalling.md#customizing-string-parameters).
+Per altre informazioni sul marshalling delle stringhe, vedere [Marshalling predefinito per le stringhe](../../framework/interop/default-marshaling-for-strings.md) e [Personalizzazione dei parametri stringa](customize-parameter-marshaling.md#customizing-string-parameters).
 
 > __Informazioni specifiche per Windows__  
 > Per le stringhe `[Out]`, CLR userà `CoTaskMemFree` per impostazione predefinita per liberare le stringhe o `SysStringFree` per le stringhe contrassegnate come `UnmanagedType.BSTR`.  
@@ -73,7 +73,7 @@ Per altre informazioni sul marshalling delle stringhe, vedere [Marshalling prede
 
 ## <a name="boolean-parameters-and-fields"></a>Parametri e campi booleani
 
-È facile sbagliare con i valori booleani. Per impostazione predefinita, per il tipo `bool` .NET viene effettuato il marshalling nel tipo `BOOL` Windows, in cui è un valore a 4 byte. Tuttavia, i tipi `_Bool` e `bool` in C e C++ sono a byte *singolo*. A causa di questa differenza può essere difficile risolvere eventuali bug, perché metà del valore restituito verrà rimosso e il risultato verrà modificato solo *potenzialmente*. Per altre informazioni sul marshalling dei valori `bool` .NET nei tipi `bool` C o C++, vedere la documentazione relativa alla [personalizzazione del marshalling di campi booleani](customize-struct-marshalling.md#customizing-boolean-field-marshalling).
+È facile sbagliare con i valori booleani. Per impostazione predefinita, per il tipo `bool` .NET viene effettuato il marshalling nel tipo `BOOL` Windows, in cui è un valore a 4 byte. Tuttavia, i tipi `_Bool` e `bool` in C e C++ sono a byte *singolo*. A causa di questa differenza può essere difficile risolvere eventuali bug, perché metà del valore restituito verrà rimosso e il risultato verrà modificato solo *potenzialmente*. Per altre informazioni sul marshalling dei valori `bool` .NET in tipi `bool` C o C++, vedere la documentazione relativa alla [personalizzazione del marshalling di campi booleani](customize-struct-marshaling.md#customizing-boolean-field-marshaling).
 
 ## <a name="guids"></a>GUID
 
@@ -87,7 +87,7 @@ I GUID possono essere usati direttamente nelle firme. Molte API di Windows accet
 
 ## <a name="blittable-types"></a>Tipi copiabili da BLT
 
-I tipi copiabili da BLT sono tipi che hanno la stessa rappresentazione a livello di bit nel codice gestito e nativo. Di conseguenza non devono essere convertiti in un altro formato per effettuarne il marshalling in e da codice nativo e dovrebbero essere preferiti perché ciò migliora le prestazioni.
+I tipi copiabili da BLT sono tipi che hanno la stessa rappresentazione a livello di bit nel codice gestito e nativo. Di conseguenza non è necessario convertirli in un altro formato per effettuarne il marshalling in e da codice nativo e dovrebbero essere preferiti perché le prestazioni risultano migliori.
 
 **Tipi copiabili da BLT:**
 
@@ -126,7 +126,7 @@ public struct UnicodeCharStruct
 Per altre informazioni, vedere:
 
 - [Tipi copiabili e non copiabili](../../framework/interop/blittable-and-non-blittable-types.md)  
-- [Marshalling dei tipi](type-marshalling.md)
+- [Marshalling dei tipi](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>Mantenere attivi gli oggetti gestiti
 
@@ -210,7 +210,7 @@ Per un tipo `PVOID` Windows corrispondente al tipo `void*` C è possibile effett
 
 Gli struct gestiti vengono creati nello stack e non vengono rimossi fino a quando il metodo non restituisce il controllo. Per definizione vengono quindi "bloccati" (non verranno spostati dal GC). È possibile semplicemente accettare l'indirizzo nei blocchi di codice non gestito, se il codice nativo non userà il puntatore oltre la fine del metodo corrente.
 
-Gli struct copiabili da BLT offrono prestazioni molto migliori, perché possono essere semplicemente usati direttamente dal livello di marshalling. Provare a rendere gli struct copiabili da BLT (ad esempio, evitare `bool`). Per altre informazioni, vedere la sezione [Tipi copiabili da BLT](#blittable-types).
+Gli struct copiabili da BLT offrono prestazioni decisamente migliori perché possono essere usati direttamente dal livello di marshalling. Provare a rendere gli struct copiabili da BLT (ad esempio, evitare `bool`). Per altre informazioni, vedere la sezione [Tipi copiabili da BLT](#blittable-types).
 
 *Se* lo struct è copiabile da BLT, usare `sizeof()` invece di `Marshal.SizeOf<MyStruct>()` per ottenere prestazioni migliori. Come indicato in precedenza, è possibile verificare che il tipo sia copiabile da BLT tentando di creare un `GCHandle` bloccato. Se il tipo non è una stringa o non è considerato copiabile da BLT, `GCHandle.Alloc` genererà una `ArgumentException`.
 
@@ -245,4 +245,4 @@ internal unsafe struct SYSTEM_PROCESS_INFORMATION
 }
 ```
 
-Esistono tuttavia alcune complicazioni con i buffer fissi. I buffer fissi di tipi non copiabili da BLT non verranno correttamente sottoposti a marshalling, quindi la matrice sul posto deve essere espansa in più campi singoli. Inoltre, in .NET Framework e .NET Core prima della versione 3.0, se uno struct contenente un campo buffer fisso viene annidato all'interno di uno struct non copiabili da BLT, il campo buffer fisso non verrà correttamente sottoposto a marshalling in codice nativo.
+Esistono tuttavia alcune complicazioni con i buffer fissi. I buffer fissi di tipi non copiabili da BLT non verranno correttamente sottoposti a marshalling, quindi la matrice sul posto deve essere espansa in più campi singoli. Inoltre, in .NET Framework e .NET Core precedente alla versione 3.0, se uno struct contenente un campo buffer fisso viene annidato all'interno di uno struct non copiabile da BLT, il marshalling in codice nativo del campo buffer fisso non verrà eseguito correttamente.

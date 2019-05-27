@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e942b3f6f6572c05d42a0267f98e6c876a113616
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 728f360d2e8f93ebdf2b17fec39477b95ed11357
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504340"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063277"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Linee guida per l'utilizzo di Memory\<T> e Span\<T>
 
@@ -86,7 +86,7 @@ In questo codice:
 
 - Il metodo `Main` mantiene il riferimento all'istanza di <xref:System.Buffers.IMemoryOwner%601>, quindi il metodo `Main` è il proprietario del buffer.
 
-- I metodi `WriteInt32ToBuffer` e `DisplayBufferToConsole` accettano xref:System.Memory%601> come API pubblica. Sono pertanto consumer del buffer e lo utilizzano uno alla volta.
+- I metodi `WriteInt32ToBuffer` e `DisplayBufferToConsole` accettano <xref:System.Memory%601> come API pubblica. Sono pertanto consumer del buffer e lo utilizzano uno alla volta.
 
 Anche se il metodo `WriteInt32ToBuffer` è progettato per scrivere un valore nel buffer, il metodo `DisplayBufferToConsole` non lo è. Di conseguenza, potrebbe avere accettato un argomento di tipo <xref:System.ReadOnlyMemory%601>. Per altre informazioni su <xref:System.ReadOnlyMemory%601>, vedere [Regola 2: Usare ReadOnlySpan\<T> o ReadOnlyMemory\<T> se il buffer deve essere di sola lettura](#rule-2).
 
@@ -110,13 +110,13 @@ Dato che un blocco di memoria ha un proprietario, ma è destinato a essere passa
 
 - È possibile che un componente operi su un buffer in contemporanea con un altro componente, con un processo che danneggia i dati nel buffer.
 
-- Anche se il funzionamento basato sull'allocazione dello stack di <xref:System.Span%601> consente di ottimizzare le prestazioni e rende <xref:System.Span%601> il tipo preferito per operare su un blocco di memoria, <xref:System.Span%601> diventa soggetto ad alcune restrizioni notevoli. È importante sapere quando usare <xref:System.Span%601> e quando usare <xref:System.Memory%601>.
+- Anche se il funzionamento basato sull'allocazione dello stack di <xref:System.Span%601> consente di ottimizzare le prestazioni e rende <xref:System.Span%601> il tipo preferito per operare su un blocco di memoria, <xref:System.Span%601> diventa soggetto ad alcune restrizioni significative. È importante sapere quando usare <xref:System.Span%601> e quando usare <xref:System.Memory%601>.
 
 Di seguito sono riportati alcuni consigli per usare correttamente <xref:System.Memory%601> e i tipi correlati. Si noti che le linee guida valide per <xref:System.Memory%601> e <xref:System.Span%601> si applicano anche a <xref:System.ReadOnlyMemory%601> e <xref:System.ReadOnlySpan%601>, se non diversamente indicato in modo esplicito.
 
 **Regola 1: Per un'API sincrona, usare Span\<T> invece di Memory\<T> come parametro se possibile.**
 
-<xref:System.Span%601> è più versatile di <xref:System.Memory%601> e può rappresentare una più ampia gamma di buffer di memoria contigui. <xref:System.Span%601> offre anche prestazioni migliori di <xref:System.Memory%601>>. Infine, è possibile usare la proprietà <xref:System.Memory%601.Span?displayProperty=nameWithType> per convertire un'istanza di <xref:System.Memory%601> in <xref:System.Span%601>, anche se la conversione da Span\<T> a Memory\<T> non è possibile. Nel caso i chiamanti abbiano un'istanza di <xref:System.Memory%601>, pertanto, potranno chiamare comunque i metodi con i parametri <xref:System.Span%601>.
+<xref:System.Span%601> è più versatile di <xref:System.Memory%601> e può rappresentare una più ampia gamma di buffer di memoria contigui. <xref:System.Span%601> offre anche prestazioni migliori di <xref:System.Memory%601>. Infine, è possibile usare la proprietà <xref:System.Memory%601.Span?displayProperty=nameWithType> per convertire un'istanza di <xref:System.Memory%601> in <xref:System.Span%601>, anche se la conversione da Span\<T> a Memory\<T> non è possibile. Nel caso i chiamanti abbiano un'istanza di <xref:System.Memory%601>, pertanto, potranno chiamare comunque i metodi con i parametri <xref:System.Span%601>.
 
 L'uso di un parametro di tipo <xref:System.Span%601> anziché di tipo <xref:System.Memory%601> consente anche di scrivere un'implementazione corretta del metodo consumer. Si otterranno automaticamente controlli in fase di compilazione per assicurarsi che non si stia tentando di accedere al buffer dopo la scadenza del lease del metodo (più avanti sono disponibili altre informazioni su questo argomento).
 
@@ -246,7 +246,7 @@ Qualsiasi componente che trasferisce la proprietà dell'istanza di <xref:System.
 
 **Regola 9: Se si esegue il wrapping di un metodo P/Invoke sincrono, l'API deve accettare Span\<T> come parametro.**
 
-In base alla regola 1, <xref:System.Span%601> è in genere il tipo corretto da usare per le API sincrone. È possibile bloccare le istanze di <xref:System.Span%601>\<T> tramite la parola chiave [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md), come nell'esempio seguente.
+In base alla regola 1, <xref:System.Span%601> è in genere il tipo corretto da usare per le API sincrone. È possibile bloccare le istanze di <xref:System.Span%601> tramite la parola chiave [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md), come nell'esempio seguente.
 
 ```csharp
 using System.Runtime.InteropServices;

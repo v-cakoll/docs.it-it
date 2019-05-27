@@ -1,17 +1,21 @@
 ---
 title: Comando dotnet clean
 description: Il comando dotnet clean consente di pulire la directory corrente.
-ms.date: 12/04/2018
-ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 04/14/2019
+ms.openlocfilehash: fa19f1b041e4031082f928135395a5f06ce702e9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169859"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631817"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
+**Questo argomento si applica a: ✓** .NET Core 2.1.x SDK e versioni successive
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>nome
 
@@ -20,7 +24,7 @@ ms.locfileid: "53169859"
 ## <a name="synopsis"></a>Riepilogo
 
 ```
-dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -30,9 +34,9 @@ Il comando `dotnet clean` pulisce l'output della compilazione precedente. Viene 
 
 ## <a name="arguments"></a>Argomenti
 
-`PROJECT`
+`PROJECT | SOLUTION`
 
-Progetto MSBuild da pulire. Se non viene specificato un file di progetto, MSBuild cerca nella directory di lavoro corrente un file con estensione che termina con *proj* e usa tale file.
+Progetto o soluzione MSBuild da pulire. Se non viene specificato alcun file di progetto o di soluzione, MSBuild cercherà nella directory di lavoro corrente un file con estensione *proj* o *sln* e userà questo file.
 
 ## <a name="options"></a>Opzioni
 
@@ -48,9 +52,13 @@ Progetto MSBuild da pulire. Se non viene specificato un file di progetto, MSBuil
 
   Stampa una breve guida per il comando.
 
+* **`--interactive`**
+
+  Consente al comando di arrestarsi e attendere l'input o l'azione dell'utente, ad esempio il completamento dell'autenticazione. Disponibile a partire da .NET Core 3.0 SDK.
+
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Directory in cui vengono inseriti gli output di compilazione. Se al momento della compilazione del progetto è stato specificato il framework, specificare l'opzione `-f|--framework <FRAMEWORK>` con l'opzione della directory di output.
+  Directory contenente gli artefatti di compilazione da pulire. Se al momento della compilazione del progetto è stato specificato il framework, specificare l'opzione `-f|--framework <FRAMEWORK>` con l'opzione della directory di output.
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -58,7 +66,7 @@ Progetto MSBuild da pulire. Se non viene specificato un file di progetto, MSBuil
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Imposta il livello di dettaglio del comando. I livelli consentiti sono q[uiet], m[inimal], n[ormal], d[etailed] e diag[nostic].
+  Imposta il livello di dettaglio di MSBuild. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Il valore predefinito è `normal`.
 
 ## <a name="examples"></a>Esempi
 

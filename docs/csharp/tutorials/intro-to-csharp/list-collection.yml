@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 0de2cc0434087797b9411075a98cc11dd598ed81
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: 8ee13ec60f0504982c33ecc61940b731d320d2de
+  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54029489"
+  ms.lasthandoff: 05/19/2019
+  ms.locfileid: "65880568"
 items:
 - durationInMinutes: 1
   content: >
@@ -56,7 +56,7 @@ items:
     La raccolta creata usa il tipo <xref:System.Collections.Generic.List%601>. Questo tipo archivia sequenze di elementi. Il tipo degli elementi viene specificato tra parentesi uncinate.
 
 
-    Un aspetto importante di questo tipo di <xref:System.Collections.Generic.List%601> è che supporta estensioni o riduzioni, consentendo l'aggiunta o la rimozione di elementi. Aggiungere il codice seguente sotto il codice già scritto:
+    Un aspetto importante di questo tipo di <xref:System.Collections.Generic.List%601> è che supporta estensioni o riduzioni, consentendo l'aggiunta o la rimozione di elementi. È possibile visualizzare i risultati modificando il contenuto dopo averlo visualizzato. Aggiungere il codice seguente sotto il codice già scritto (sotto il ciclo che stampa il contenuto):
 
 
     ```csharp
@@ -78,7 +78,7 @@ items:
     ```
 
 
-    Sono stati aggiunti altri due nomi alla fine dell'elenco e ne è stato anche rimosso uno.
+    Sono stati aggiunti altri due nomi alla fine dell'elenco e ne è stato anche rimosso uno. L'output di questo blocco di codice mostra il contenuto iniziale, quindi stampa una riga vuota e il nuovo contenuto.
 
 
     <xref:System.Collections.Generic.List%601> consente di fare riferimento a singoli elementi anche in base all'**indice**. Per accedere agli elementi si usano i token `[` e `]`. Aggiungere il codice seguente sotto il codice già scritto e provarlo:
@@ -152,7 +152,7 @@ items:
 - title: Elenchi di altri tipi
   durationInMinutes: 5
   content: >
-    Finora è stato usato il tipo `string` negli elenchi. Di seguito verrà creato un <xref:System.Collections.Generic.List%601> con un tipo diverso. Per iniziare, creare un set di numeri. Eliminare il codice scritto finora e sostituirlo con questo:
+    Finora è stato usato il tipo `string` negli elenchi. Di seguito verrà creato un <xref:System.Collections.Generic.List%601> con un tipo diverso. Per iniziare, creare un set di numeri. Eliminare il codice scritto e sostituirlo con il codice seguente:
 
 
     ```csharp
@@ -162,7 +162,7 @@ items:
     ```
 
 
-    Questo codice crea un elenco di interi e imposta i primi due interi sul valore 1. Questi sono i primi due valori di una *successione di Fibonacci*, ovvero una sequenza di numeri. Ogni numero della successione di Fibonacci viene ottenuto dalla somma dei due numeri precedenti. Aggiungere questo codice:
+    Questo codice crea un elenco di interi e imposta i primi due interi sul valore 1. La *sequenza di Fibonacci*, una sequenza di numeri, inizia con due cifre 1. Ogni numero della successione di Fibonacci viene ottenuto dalla somma dei due numeri precedenti. Aggiungere questo codice:
 
 
     ```csharp
@@ -230,7 +230,7 @@ items:
     È stata completata questa esercitazione interattiva dedicata agli elenchi. Si tratta dell'introduzione finale all'esercitazione interattiva su C#. È possibile visitare il [sito Web .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) per scaricare .NET Core SDK, creare un progetto nel computer e continuare a scrivere codice. Il passaggio "Per continuare ad apprendere" consente di tornare a queste esercitazioni per compilare progetti nel proprio computer.
 
 
-    Negli argomenti seguenti sono disponibili altre informazioni sulle [raccolte .NET](../../../standard/collections/index.md):
+    Per altre informazioni sulle [raccolte .NET](../../../standard/collections/index.md), vedere gli articoli seguenti:
 
     - [Selezione di una classe Collection](../../../standard/collections/selecting-a-collection-class.md)
 

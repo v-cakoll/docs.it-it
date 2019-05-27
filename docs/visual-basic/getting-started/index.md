@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: 0a8481d312c0a2c58d6e68d3fc0945766eba3e2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb1ce118bd46b2db840138a7ca13e9d1f5d75231
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797137"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053657"
 ---
 # <a name="get-started-with-visual-basic"></a>Introduzione a Visual Basic
 Questa sezione della documentazione fornisce informazioni introduttive per lo sviluppo di applicazione di Visual Basic.  
@@ -37,7 +37,7 @@ Viene fornito un elenco di siti Web e newsgroup in cui individuare risposte ai p
 - [Ottenere Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)\
 Fornisce i collegamenti ai download per le versioni di Visual Studio che includono il supporto di Visual Basic, comprese le versioni gratuite.
 
-- [Concetti di base su Visual Basic per principianti](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)\
+- [Concetti di base su Visual Basic per principianti](https://mva.microsoft.com/en-us/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)\
 Corso Microsoft Virtual Academy che illustra le nozioni di base della programmazione con Visual Basic.
 
 - [Programmazione orientata ad oggetti](../programming-guide/concepts/object-oriented-programming.md)\

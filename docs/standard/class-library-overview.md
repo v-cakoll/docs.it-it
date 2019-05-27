@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5214ee83ab3009c3d2bb1360f46b39831c37c2ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b890ac02d54a9092bf2ad24e31367ef1d487c01f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664631"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593503"
 ---
 # <a name="net-class-library-overview"></a>Panoramica della libreria di classi .NET
 
@@ -70,7 +70,7 @@ Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore 
 
  Nei tipi .NET viene usato uno schema di denominazione che applica la sintassi con il punto per definire una gerarchia. Secondo questa tecnica i tipi correlati vengono raggruppati in spazi dei nomi, in modo da semplificarne le ricerche e i riferimenti. La prima parte del nome completo, fino al primo punto da destra, è il nome dello spazio dei nomi. L'ultima parte del nome è il nome del tipo. Ad esempio, `System.Collections.Generic.List<T>` rappresenta il tipo `List<T>`, che appartiene allo spazio dei nomi `System.Collections.Generic`. I tipi in <xref:System.Collections.Generic> possono essere utilizzati per lavorare con raccolte generiche.  
   
- Questo schema di denominazione è vantaggioso per gli sviluppatori di librerie che desiderano estendere [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] poiché consente di creare gruppi gerarchici di tipi e denominarli in modo coerente utilizzando nomi di immediata comprensione. Consente inoltre l'identificazione non ambigua dei tipi mediante il relativo nome completo, ovvero mediante il relativo spazio dei nomi e nome di tipo, in modo da evitare conflitti tra i nomi di tipo. Nella denominazione degli spazi dei nomi è opportuno che gli sviluppatori di librerie rispettino la seguente convenzione:  
+ Questo schema di denominazione rende più semplice per gli sviluppatori di librerie estendere .NET Framework per creare gruppi gerarchici di tipi e denominarli in modo coerente utilizzando nomi di immediata comprensione. Consente inoltre l'identificazione non ambigua dei tipi mediante il relativo nome completo, ovvero mediante il relativo spazio dei nomi e nome di tipo, in modo da evitare conflitti tra i nomi di tipo. Nella denominazione degli spazi dei nomi è opportuno che gli sviluppatori di librerie rispettino la seguente convenzione:  
   
  *NomeSocietà*.*NomeTecnologia*  
   

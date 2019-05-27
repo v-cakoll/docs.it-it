@@ -1,7 +1,6 @@
 ---
-title: Common Language Runtime (CLR)
-ms.custom: updateeachrelease
-ms.date: 04/16/2018
+title: Panoramica di CRL (Common Language Runtime) - .NET Framework
+ms.date: 04/02/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - compiling source code, runtime functionality
@@ -18,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 740c804dae32a79dd06f951751bd0980fb34ca07
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.custom: updateeachrelease
+ms.openlocfilehash: a1e1fd2b7843299fdd8fbd62dbfba6c62a7be50f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904108"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645014"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Panoramica di CLR (Common Language Runtime)
 
@@ -64,7 +64,7 @@ I compilatori e gli strumenti dei linguaggi sono progettati per esporre le funzi
 
 ## <a name="clr-versions"></a>Versioni CLR
 
-Il numero di versione di .NET Framework non corrisponde necessariamente al numero di versione di CLR inclusa. Nella tabella seguente viene mostrata la correlazione tra due numeri di versione.
+Il numero di versione di .NET Framework non corrisponde necessariamente al numero di versione di CLR inclusa. La tabella seguente illustra la correlazione tra due numeri di versione:
 
 |Versione di .NET Framework|Include la versione CLR|
 |----------------------------|--------------------------|
@@ -77,10 +77,11 @@ Il numero di versione di .NET Framework non corrisponde necessariamente al numer
 |4.5 (incluse 4.5.1 e 4.5.2)|4|
 |4.6 (incluse 4.6.1 e 4.6.2)|4|
 |4.7 (incluse 4.7.1 e 4.7.2)|4|
+|4.8|4|
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-|Titolo|Descrizione|
+|Titolo|Description|
 |-----------|-----------------|
 |[Processo di esecuzione gestita](managed-execution-process.md)|Vengono descritti i passaggi necessari per essere in condizione di sfruttare i vantaggi di Common Language Runtime.|
 |[Gestione automatica della memoria](automatic-memory-management.md)|Viene descritta la modalità usata dal Garbage Collector per allocare e liberare memoria.|

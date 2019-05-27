@@ -1,15 +1,15 @@
 ---
-title: Attività di apprendimento automatico - ML.NET
+title: Attività di apprendimento automatico
 description: Esplorare le diverse attività di apprendimento automatico e le attività associate supportate in ML.NET.
 ms.custom: seodec18
-ms.date: 04/12/2019
+ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bfed9cf12f8d539c4327549e5305415ce096e022
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613161"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063539"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Attività di apprendimento automatico in ML.NET
 
@@ -28,22 +28,36 @@ Un'attività di [apprendimento automatico con supervisione](glossary.md#supervis
 
 Per altre informazioni, vedere l'articolo relativo alla [classificazione binaria](https://en.wikipedia.org/wiki/Binary_classification) su Wikipedia.
 
-### <a name="binary-classification-training-algorithms"></a>Algoritmi di training di classificazione binaria
+### <a name="binary-classification-trainers"></a>Algoritmi di training di classificazione binaria
 
 È possibile eseguire il training di un modello di classificazione binaria usando gli algoritmi seguenti:
 
 * <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.PriorTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer> 
+* <xref:Microsoft.ML.Trainers.PriorTrainer> 
+* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
+
+### <a name="binary-classification-inputs-and-outputs"></a>Input e output di classificazione binaria
+
+Per ottenere risultati ottimali con la classificazione binaria, i dati di training devono essere bilanciati, vale a dire avere un numero uguale di dati di training positivi e negativi. Gli elementi mancanti e i valori devono essere gestiti prima del training.
+
+I dati della colonna dell'etichetta di input devono essere <xref:System.Boolean>.
+I dati della colonna delle funzionalità di input devono essere un vettore a dimensione fissa di <xref:System.Single>.
+
+Questi algoritmi di training restituiscono le colonne seguenti:
+
+| Nome colonna di output | Tipo di colonna | Description|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Il punteggio non elaborato calcolato dal modello|
+| `PredictedLabel` | <xref:System.Boolean> | L'etichetta stimata, in base al segno del punteggio. Un punteggio negativo esegue il mapping a `false` e un punteggio negativo esegue il mapping a `true`.|
 
 ## <a name="multiclass-classification"></a>Classificazione multiclasse
 
@@ -58,17 +72,29 @@ Per altre informazioni, vedere l'articolo relativo alla [classificazione multicl
 >[!NOTE]
 >Il modello "uno contro tutti" aggiorna gli [algoritmi di apprendimento per la classificazione binaria](#binary-classification) in modo che possano agire sui set di dati multiclasse. Per altre informazioni, vedere [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
 
-### <a name="multiclass-classification-training-algorithms"></a>Algoritmi di training di classificazione multiclasse
+### <a name="multiclass-classification-trainers"></a>Algoritmi di training di classificazione multiclasse
 
 È possibile eseguire il training di un modello di classificazione multiclasse usando gli algoritmi di training seguenti:
 
-* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer> 
+
+### <a name="multiclass-classification-inputs-and-outputs"></a>Input e output di classificazione multiclasse
+
+I dati della colonna dell'etichetta di input devono essere di tipo [key](xref:Microsoft.ML.Data.KeyDataViewType).
+La colonna delle funzionalità deve essere un vettore di dimensioni fisse di <xref:System.Single>.
+
+Questo algoritmo di training restituisce quanto segue:
+
+| Nome output | Tipo | Description|
+| -- | -- | -- |
+| `Score` | Vettore di <xref:System.Single> | I punteggi di tutte le classi. Valori più alti indicano maggiori probabilità di rientrare nella classe associata. Se l'elemento i-esimo ha il valore più elevato, l'indice delle etichette stimate sarà i. Si noti che i è l'indice a base zero. |
+| `PredictedLabel` | Tipo [key](xref:Microsoft.ML.Data.KeyDataViewType) | L'indice dell'etichetta stimata. Se il valore è i, l'etichetta effettiva potrebbe essere la categoria i-esima nel tipo di etichetta di input con valori key. |
 
 ## <a name="regression"></a>Regressione
 
@@ -78,19 +104,29 @@ Un attività di [apprendimento automatico con supervisione](glossary.md#supervis
 * Stima dei prezzi futuri delle azioni in base ai dati cronologici e alle tendenze di mercato correnti.
 * Stima delle vendite di un prodotto in base ai budget pubblicitari.
 
-### <a name="regression-training-algorithms"></a>Algoritmi di training di regressione
+### <a name="regression-trainers"></a>Algoritmi di training di regressione
 
 È possibile eseguire il training di un modello di regressione usando gli algoritmi seguenti:
 
+* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.OlsTrainer>
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer> 
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.OlsTrainer>
-* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+
+### <a name="regression-inputs-and-outputs"></a>Input e output di regressione
+
+I dati della colonna dell'etichetta di input devono essere <xref:System.Single>.
+
+Gli algoritmi di training per questa attività restituiscono quanto segue:
+
+| Nome output | Tipo | Description|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Il punteggio non elaborato stimato dal modello |
 
 ## <a name="clustering"></a>Clustering
 
@@ -100,11 +136,22 @@ Un'[attività di apprendimento automatico senza supervisione](glossary.md#unsupe
 * Identificazione di segmenti di clienti e dati demografici per la creazione di campagne pubblicitarie mirate.
 * Classificazione di inventari in base alle metriche di produzione.
 
-### <a name="clustering-training-algorithms"></a>Algoritmi di training di clustering
+### <a name="clustering-trainer"></a>Algoritmi di training di clustering
 
 È possibile eseguire il training di un modello di clustering usando l'algoritmo seguente:
 
-* <xref:Microsoft.ML.Trainers.KMeansTrainer>
+* <xref:Microsoft.ML.Trainers.KMeansTrainer> 
+
+### <a name="clustering-inputs-and-outputs"></a>Input e output di clustering
+
+I dati delle funzionalità di input devono essere <xref:System.Single>. Non sono necessarie etichette.
+
+Questo algoritmo di training restituisce quanto segue:
+
+| Nome output | Tipo | Description|
+| -- | -- | -- |
+| `Score` | vettore di <xref:System.Single> | Le distanze del punto dati specificato dai baricentri di tutti i cluster |
+| `PredictedLabel` | Tipo [key](xref:Microsoft.ML.Data.KeyDataViewType) | L'indice del cluster più vicino stimato dal modello. |
 
 ## <a name="anomaly-detection"></a>Rilevamento di anomalie
 
@@ -121,11 +168,21 @@ Il rilevamento di anomalie comprende molte attività importanti correlate all'ap
 
 Poiché le anomalie sono per definizione eventi rari, può essere difficile raccogliere un campione rappresentativo di dati da usare per la modellazione. Gli algoritmi inclusi in questa categoria sono stati appositamente progettati per risolvere i problemi principali relativi alla creazione e al training dei modelli tramite set di dati non bilanciati.
 
-### <a name="anomaly-detection-training-algorithms"></a>Algoritmi di training di rilevamento anomalie
+### <a name="anomaly-detection-trainer"></a>Algoritmo di training di rilevamento anomalie
 
 È possibile eseguire il training di un modello di rilevamento anomalie usando l'algoritmo seguente:
 
 * <xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>
+
+### <a name="anomaly-detection-inputs-and-outputs"></a>Input e output di rilevamento anomalie
+
+Le funzionalità di input devono essere un vettore a dimensione fissa di <xref:System.Single>.
+
+Questo algoritmo di training restituisce quanto segue:
+
+| Nome output | Tipo | Description|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Il punteggio non negativo, illimitato calcolato dal modello di rilevamento anomalie |
 
 ## <a name="ranking"></a>Ranking
 
@@ -135,8 +192,20 @@ Un'attività di ranking crea un modello di ranking in base a un set di esempi co
 
 È possibile eseguire il training di un modello di classificazione con gli algoritmi seguenti:
 
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer> 
+
+### <a name="ranking-input-and-outputs"></a>Input e output di classificazione
+
+Il tipo di dati dell'etichetta di input deve essere [key](xref:Microsoft.ML.Data.KeyDataViewType) o <xref:System.Single>. Il valore dell'etichetta determina la pertinenza, dove valori più alti indicano maggior pertinenza. Se l'etichetta è un tipo [key](xref:Microsoft.ML.Data.KeyDataViewType), l'indice di chiave è il valore di pertinenza, dove l'indice più basso è il meno pertinente. Se l'etichetta è un tipo <xref:System.Single>, valori più alti indicano maggior pertinenza.
+
+I dati della funzionalità devono essere un vettore di dimensioni fisse di <xref:System.Single> e la colonna gruppo di righe di input deve essere un tipo [key](xref:Microsoft.ML.Data.KeyDataViewType).
+
+Questo algoritmo di training restituisce quanto segue:
+
+| Nome output | Tipo | Description|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Il punteggio illimitato calcolato dal modello per determinare la stima |
 
 ## <a name="recommendation"></a>Consiglio
 

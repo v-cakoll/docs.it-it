@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d11e16f58b6da24d7df0ccd97c1d54050004ae1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0b428e3d9612fdfdaaecec44f1c35c4f883c134
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664657"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052821"
 ---
 # <a name="standard-numeric-format-strings"></a>Stringhe di formato numerico standard
 
@@ -117,7 +117,7 @@ Le stringhe di formato numerico standard sono supportate:
  Nell'esempio seguente viene formattato un valore <xref:System.Double> con l'identificatore di formato di valuta.  
   
  [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
- [!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
  [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]  
   
  [Torna alla tabella](#table)  
@@ -161,7 +161,7 @@ Le stringhe di formato numerico standard sono supportate:
  Nell'esempio seguente viene formattato un valore <xref:System.Double> con l'identificatore di formato esponenziale.  
   
  [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
- [!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
  [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]  
   
  [Torna alla tabella](#table)  
@@ -183,7 +183,7 @@ Le stringhe di formato numerico standard sono supportate:
  Nell'esempio seguente vengono formattati un valore <xref:System.Double> e un valore <xref:System.Int32> con l'identificatore di formato a virgola fissa.  
   
  [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
- [!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
  [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]  
   
  [Torna alla tabella](#table)  
@@ -212,7 +212,7 @@ Le stringhe di formato numerico standard sono supportate:
  
 Si noti che, se usato con un valore <xref:System.Double>, l'identificatore di formato "G17" assicura che il valore <xref:System.Double> originale esegua correttamente il round trip. Ciò è dovuto al fatto che <xref:System.Double> è un numero in formato a virgola mobile a doppia precisione (`binary64`) conforme allo standard IEEE 754-2008, caratterizzato da una precisione con fino a 17 cifre significative. Se ne consiglia l'uso al posto dell'[identificatore di formato "R"](#RFormatString), dal momento che in alcuni casi "R" non esegue correttamente il round trip dei valori a virgola mobile e precisione doppia. Nell'esempio riportato di seguito viene illustrato un caso di questo tipo.
 
-[!code-csharp-interactive[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
+[!code-csharp-interactive[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs#GeneralFormatSpecifier)]   
 [!code-vb[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/vb/g17.vb)]   
 
 Se usato con un valore <xref:System.Single>, l'identificatore di formato "G9" assicura che il valore <xref:System.Single> originale esegua correttamente il round trip. Ciò è dovuto al fatto che <xref:System.Single> è un numero in formato a virgola mobile a precisione singola (`binary32`) conforme allo standard IEEE 754-2008, caratterizzato da una precisione con fino a nove cifre significative. Per motivi di prestazioni, è consigliabile usare questo anziché l'[identificatore di formato "R"](#RFormatString).
@@ -228,7 +228,7 @@ Se usato con un valore <xref:System.Single>, l'identificatore di formato "G9" as
  Nell'esempio seguente vengono formattati diversi valori a virgola mobile con l'identificatore di formato generale.  
   
  [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
- [!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
  [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]  
   
  [Torna alla tabella](#table)  
@@ -251,7 +251,7 @@ Se usato con un valore <xref:System.Single>, l'identificatore di formato "G9" as
  Nell'esempio seguente vengono formattati diversi valori a virgola mobile con l'identificatore di formato numerico.  
   
  [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
- [!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
  [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]  
   
  [Torna alla tabella](#table)  
@@ -276,7 +276,7 @@ Se usato con un valore <xref:System.Single>, l'identificatore di formato "G9" as
  Nell'esempio seguente vengono formattati diversi valori a virgola mobile con l'identificatore di formato percentuale.  
   
  [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
- [!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
  [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]  
   
  [Torna alla tabella](#table)  
@@ -301,7 +301,7 @@ Per i valori <xref:System.Double> l'identificatore di formato "R" in alcuni casi
  Nell'esempio seguente viene formattato un valore <xref:System.Numerics.BigInteger> con l'identificatore di formato round trip.  
   
  [!code-cpp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cpp)]
- [!code-csharp-interactive[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
+ [!code-csharp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
  [!code-vb[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.vb)]  
   
 > [!IMPORTANT]
@@ -309,7 +309,7 @@ Per i valori <xref:System.Double> l'identificatore di formato "R" in alcuni casi
   
  Per ovviare al problema dei valori <xref:System.Double> formattati con la stringa di formato numerico standard "R" che non completano correttamente il round trip se compilati usando l'opzione `/platform:x64` o `/platform:anycpu` e in esecuzione in sistemi a 64 bit, è possibile formattare i valori <xref:System.Double> usando la stringa di formato numerico standard "G17". Nell'esempio seguente viene usata la stringa di formato "R" con un valore <xref:System.Double> che non completa il round trip e viene anche usata la stringa di formato "G17" per completare correttamente il round trip sul valore originale.  
   
- [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
+ [!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
  [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]  
   
  [Torna alla tabella](#table)  
@@ -356,7 +356,7 @@ Per i valori <xref:System.Double> l'identificatore di formato "R" in alcuni casi
  
  Nell'esempio seguente vengono formattati un valore numerico a virgola mobile e uno integrale usando le impostazioni cultura en-US e tutti gli identificatori di formato numerico standard. Nell'esempio vengono usati due tipi numerici particolari (<xref:System.Double> e <xref:System.Int32>), tuttavia i risultati sarebbero simili con qualsiasi altro tipo numerico di base (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal> e <xref:System.Single>).  
   
- [!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
+ [!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
  [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche

@@ -3,12 +3,12 @@ title: Interpolazione di stringhe in C#
 description: Informazioni su come includere risultati di espressione formattati in una stringa di risultato in C# con interpolazione.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 5a66ba9215579a459b543a24ece338ffbbfd9aea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920714"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063234"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolazione di stringhe in C\#
 
@@ -30,9 +30,7 @@ Come illustrato nell'esempio, per includere un'espressione in una stringa interp
 {<interpolatedExpression>}
 ```
 
-In fase di compilazione, una stringa interpolata viene in genere trasformata in una chiamata al metodo <xref:System.String.Format%2A?displayProperty=nameWithType>. In questo modo tutte le caratteristiche della funzionalità di [formattazione composita delle stringhe](../../standard/base-types/composite-formatting.md) sono disponibili per l'uso anche con le stringhe interpolate.
-
-Il compilatore può sostituire <xref:System.String.Format%2A?displayProperty=nameWithType> con <xref:System.String.Concat%2A?displayProperty=nameWithType> se il comportamento analizzato è equivalente alla concatenazione.
+Le stringhe interpolate supportano tutte le caratteristiche della funzionalità di [formattazione composita delle stringhe](../../standard/base-types/composite-formatting.md), che li rende un'alternativa più leggibile all'uso del metodo <xref:System.String.Format%2A?displayProperty=nameWithType>.
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Come specificare una stringa di formato per un'espressione interpolata
 

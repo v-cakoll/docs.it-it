@@ -1,15 +1,13 @@
 ---
 title: Uso di Azure Service Fabric
 description: Informazioni sui modelli di applicazione Azure Service Fabric che è possibile usare, oltre all'uso di Service Fabric solo per l'orchestrazione di contenitori.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: b29be05f5ab353ddfae0d23211efaf57979d0604
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3c629b473a429b64243b5756c96fef6585c939b7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126965"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644521"
 ---
 # <a name="using-azure-service-fabric"></a>Uso di Azure Service Fabric
 

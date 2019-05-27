@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 014af254d299d357c22a898357a533d650715500
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea993880d68ab13eab8dfb4cf5e1d172025c6186
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650519"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052580"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Misurazione dei miglioramenti dell'avvio con .NET Native
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] consente di migliorare in modo significativo il tempo di avvio delle applicazioni. Questo miglioramento è particolarmente evidente nei dispositivi portatili a basso consumo e con app complesse. In questo argomento viene introdotta la strumentazione di base necessaria per misurare il miglioramento dell'avvio.  
+.NET native migliora significativamente il tempo di avvio delle app. Questo miglioramento è particolarmente evidente nei dispositivi portatili a basso consumo e con app complesse. In questo argomento viene introdotta la strumentazione di base necessaria per misurare il miglioramento dell'avvio.  
   
  Per facilitare l'analisi delle prestazioni, .NET Framework e Windows usano un framework di eventi chiamato Event Tracing for Windows (ETW) che consente all'app di notificare gli strumenti quando si verificano degli eventi. È quindi possibile usare uno strumento chiamato PerfView per visualizzare e analizzare facilmente gli eventi ETW. In questo argomento viene descritto come:  
   
@@ -95,7 +95,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Selezionare tutti gli eventi elencati nel riquadro di sinistra (CTRL+A) e premere **INVIO**. A questo punto, dovrebbero essere visualizzati i timestamp di tutti gli eventi. Questi timestamp sono relativi all'inizio della traccia, quindi è necessario sottrarre il tempo di ciascun evento dall'ora di inizio del processo per identificare il tempo trascorso dall'avvio. Se si usa CTRL + clic per selezionare due timestamp, la differenza tra di essi verrà visualizzata nella barra di stato nella parte inferiore della pagina. Questo consente di visualizzare facilmente il tempo trascorso tra due eventi nella visualizzazione (compreso l'avvio del processo). È possibile aprire il menu di scelta rapida per la visualizzazione e selezionare diverse opzioni utili, ad esempio l'esportazione in file CSV o l'apertura di Microsoft Excel per salvare o elaborare i dati.  
   
- Ripetendo la procedura per l'app originale e la versione compilata usando la catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)], è possibile confrontare la differenza di prestazioni.   Le app [!INCLUDE[net_native](../../../includes/net-native-md.md)] in genere vengono avviate più rapidamente delle app non-[!INCLUDE[net_native](../../../includes/net-native-md.md)]. Se si desidera, PerfView fornisce anche informazioni dettagliate che consentono di identificare le parti di codice che richiedono più tempo. Per altre informazioni, guardare le [esercitazioni di PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) o leggere il [post di blog di Vance Morrison](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
+ Ripetendo la procedura per l'app originale e la versione compilata usando la catena di strumenti .NET Native, è possibile confrontare la differenza nelle prestazioni.   Le app .NET native in genere iniziano più rapidamente rispetto alle App non - .NET Native. Se si desidera, PerfView fornisce anche informazioni dettagliate che consentono di identificare le parti di codice che richiedono più tempo. Per altre informazioni, guardare le [esercitazioni di PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) o leggere il [post di blog di Vance Morrison](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
   
 ## <a name="see-also"></a>Vedere anche
 

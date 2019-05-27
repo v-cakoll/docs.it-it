@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676822"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583058"
 ---
 # <a name="properties-c-programming-guide"></a>Proprietà (Guida per programmatori C#)
 
@@ -54,21 +54,21 @@ L'esempio seguente illustra il modello. Nell'esempio la classe `TimePeriod` rapp
 
 In alcuni casi, le funzioni di accesso `get` e `set` delle proprietà si limitano ad assegnare o a recuperare un valore da un campo sottostante senza includere alcuna logica aggiuntiva. Usando le proprietà implementate automaticamente è possibile semplificare il codice e fare in modo che il compilatore C# specifichi automaticamente in modo trasparente il campo sottostante. 
 
-Se una proprietà ha entrambe le funzioni di accesso `get` e `set`, entrambe le funzioni devono essere implementate automaticamente. È possibile definire una proprietà implementata automaticamente usando le parole chiave `get` e `set` senza specificare alcuna implementazione. L'esempio seguente ripete l'esempio precedente, ad eccezione del fatto che `Name` e `Price` sono proprietà implementate automaticamente. Si noti che l'esempio rimuove anche il costruttore con parametri in modo che gli oggetti `SaleItem` vengano ora inizializzati con una chiamata al costruttore predefinito e un [inizializzatore di oggetto](object-and-collection-initializers.md).
+Se una proprietà ha entrambe le funzioni di accesso `get` e `set`, entrambe le funzioni devono essere implementate automaticamente. È possibile definire una proprietà implementata automaticamente usando le parole chiave `get` e `set` senza specificare alcuna implementazione. L'esempio seguente ripete l'esempio precedente, ad eccezione del fatto che `Name` e `Price` sono proprietà implementate automaticamente. Si noti che l'esempio rimuove anche il costruttore con parametri in modo che gli oggetti `SaleItem` vengano ora inizializzati con una chiamata al costruttore senza parametri e un [inizializzatore di oggetto](object-and-collection-initializers.md).
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>Sezioni correlate  
   
--   [Uso delle proprietà](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Uso delle proprietà](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
   
--   [Proprietà dell'interfaccia](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Proprietà dell'interfaccia](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
--   [Confronto tra proprietà e indicizzatori](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Confronto tra proprietà e indicizzatori](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Limitazione dell'accessibilità delle funzioni di accesso](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Limitazione dell'accessibilità delle funzioni di accesso](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
--   [Proprietà implementate automaticamente](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Proprietà implementate automaticamente](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 

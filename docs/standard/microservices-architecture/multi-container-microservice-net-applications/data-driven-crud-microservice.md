@@ -2,12 +2,12 @@
 title: Creazione di un microservizio CRUD semplice basato sui dati
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sulla creazione di un microservizio CRUD semplice basato sui dati nel contesto di un'applicazione di microservizi.
 ms.date: 01/07/2019
-ms.openlocfilehash: 5dd7154fc81c7d0c3fb78bce662ea822f2392a10
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 53aba727c8dae35df8b34bc1558c0cc390fe2014
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644415"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053559"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Creazione di un microservizio CRUD semplice basato sui dati
 
@@ -294,13 +294,13 @@ Questo meccanismo di controllo delle versioni è semplice e dipende dal server c
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy (Controllo facilitato delle versioni delle API Web ASP.NET Core RESTful)** \
+- **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy (Controllo facilitato delle versioni delle API Web ASP.NET Core RESTful)**  \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
-- **Versioning a RESTful web API (Controllo delle versioni delle API Web RESTful)** \
+- **Versioning a RESTful web API (Controllo delle versioni delle API Web RESTful)**  \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
-- **Roy Fielding. Versioning, Hypermedia, and REST (Controllo delle versioni, ipermedia e REST)** \
+- **Roy Fielding. Versioning, Hypermedia, and REST (Controllo delle versioni, ipermedia e REST)**  \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Generazione dei metadati delle descrizioni Swagger dall'API Web ASP.NET Core
@@ -321,7 +321,7 @@ I motivi principali per generare i metadati di Swagger per le API sono i seguent
 
 - [AutoRest](https://github.com/Azure/AutoRest). È possibile generare automaticamente le classi client .NET per chiamare Swagger. Questo strumento può essere usato dall'interfaccia della riga di comando ed è inoltre integrato in Visual Studio in modo da poterlo usare più facilmente tramite l'interfaccia utente grafica.
 
-- [Microsoft Flow](https://flow.microsoft.com/en-us/). È possibile [usare e integrare automaticamente l'API](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) in un flusso di lavoro Microsoft Flow di alto livello senza che siano necessarie competenze di programmazione.
+- [Microsoft Flow](https://flow.microsoft.com/). È possibile [usare e integrare automaticamente l'API](https://flow.microsoft.com/blog/integrating-custom-api/) in un flusso di lavoro Microsoft Flow di alto livello senza che siano necessarie competenze di programmazione.
 
 - [Microsoft PowerApps](https://powerapps.microsoft.com/). È possibile utilizzare automaticamente l'API da [app per dispositivi mobili PowerApps](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/) create con [PowerApps Studio](https://powerapps.microsoft.com/build-powerapps/) senza che siano necessarie competenze di programmazione.
 

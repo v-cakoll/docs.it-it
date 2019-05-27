@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 5115973e3d8e558199f9569baeea9e272c0528b0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 895c49fb1fde56a1c9bf8b3a0ecf9de4f29f9972
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674108"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591220"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Procedura dettagliata: Individuazione della posizione di inserimento delle informazioni con My.Application.Log (Visual Basic)
 
@@ -35,7 +35,7 @@ Per altre informazioni sui percorsi di output predefiniti, vedere [Utilizzo dei 
 
     Se queste sezioni non esistono, è possibile configurare i listener di log `My.Application.Log` nel file di configurazione del computer. I passaggi seguenti descrivono come determinare ciò che viene definito dal file di configurazione del computer:
 
-    1. Individuare il file machine.config del computer. Il file si trova in genere nella directory *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* , dove `SystemRoot` è la directory del sistema operativo e `frameworkVersion` è la versione di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].
+    1. Individuare il file machine.config del computer. Il file si trova in genere nella directory *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* dove `SystemRoot` è la directory del sistema operativo e `frameworkVersion` è la versione di .NET Framework.
 
         È possibile eseguire l'override delle impostazioni del file machine.config con il file di configurazione di un'applicazione.
 

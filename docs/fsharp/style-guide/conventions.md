@@ -1,15 +1,15 @@
 ---
-title: F#convenzioni di codifica
+title: Convenzioni di codifica F#
 description: Informazioni su termini e le linee guida generali durante la scrittura di F# codice.
 ms.date: 05/14/2018
-ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902135"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052804"
 ---
-# <a name="f-coding-conventions"></a>F#convenzioni di codifica
+# <a name="f-coding-conventions"></a>Convenzioni di codifica F#
 
 Le seguenti convenzioni vengono formulate dall'esperienza di utilizzo di grandi dimensioni F# basi di codice. Il [cinque principi buone F# codice](index.md#five-principles-of-good-f-code) sono alla base di ogni raccomandazione. Sono correlate al [ F# linee guida di progettazione componenti](component-design-guidelines.md), ma sono applicabili per qualsiasi F# del codice, non solo i componenti come le librerie.
 
@@ -611,7 +611,7 @@ Poiché non è necessario per una classe quando si interagisce con l'API di Visu
 
 ## <a name="type-abbreviations"></a>Abbreviazioni dei tipi
 
-[Abbreviazioni di tipo](../language-reference/type-abbreviations.md) sono un modo pratico per assegnare un'etichetta a un altro tipo, ad esempio una firma della funzione o un tipo più complesso. Ad esempio, viene assegnata un'etichetta per cosa è necessario definire un calcolo con l'alias seguente [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/), una libreria di apprendimento avanzato:
+[Abbreviazioni di tipo](../language-reference/type-abbreviations.md) sono un modo pratico per assegnare un'etichetta a un altro tipo, ad esempio una firma della funzione o un tipo più complesso. Ad esempio, viene assegnata un'etichetta per cosa è necessario definire un calcolo con l'alias seguente [CNTK](https://docs.microsoft.com/cognitive-toolkit/), una libreria di apprendimento avanzato:
 
 ```fsharp
 open CNTK

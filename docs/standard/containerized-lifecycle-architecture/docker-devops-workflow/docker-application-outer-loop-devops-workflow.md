@@ -2,12 +2,12 @@
 title: Passaggi nel flusso di lavoro DevOps del ciclo esterno per un'applicazione Docker
 description: Informazioni sulla procedura per il ciclo"esterno" del flusso di lavoro DevOps
 ms.date: 02/15/2019
-ms.openlocfilehash: 194786a90fc02801211c7614eb632392d67f0109
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e7a82d2e5a5d503e5efbe9ac8242b163baab1286
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641059"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195631"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Passaggi nel flusso di lavoro DevOps del ciclo esterno per un'applicazione Docker
 
@@ -152,7 +152,7 @@ Verrà ora illustrato lo scenario meno complesso: distribuzione semplice host Do
 
 **Figura 5-6**. Distribuzione di contenitori di applicazioni semplici registro ambienti host di Docker
 
-Figura 5-7 evidenzia come è possibile connettersi l'elemento di configurazione di compilazione per gli ambienti di test/controllo qualità tramite servizi di Azure DevOps facendo clic su Docker Compose nella finestra di dialogo Aggiungi attività. Tuttavia, durante la distribuzione in ambienti di gestione temporanea o produzione, in genere utilizzare funzionalità di Release Management, gestione di più ambienti (ad esempio di controllo di qualità, staging e produzione). Se si esegue la distribuzione host Docker singoli, Usa i servizi di Azure DevOps "Docker Compose" task (che sta richiamando il `docker-compose up` comando dietro le quinte). Se si esegue la distribuzione del servizio contenitore di Azure, Usa l'attività di distribuzione di Docker, come illustrato nella sezione che segue.
+Figura 5-7 evidenzia come è possibile connettersi l'elemento di configurazione di compilazione per gli ambienti di test/controllo qualità tramite servizi di Azure DevOps facendo clic su Docker Compose nella finestra di dialogo Aggiungi attività. Tuttavia, durante la distribuzione in ambienti di gestione temporanea o produzione, in genere utilizzare funzionalità di Release Management, gestione di più ambienti (ad esempio di controllo di qualità, staging e produzione). Se si esegue la distribuzione host Docker singoli, Usa i servizi di Azure DevOps "Docker Compose" task (che sta richiamando il `docker-compose up` comando dietro le quinte). Se si esegue la distribuzione di Azure Kubernetes Service (AKS), Usa l'attività di distribuzione di Docker, come illustrato nella sezione che segue.
 
 ![Visualizzazione nel browser dell'aggiunta di un'attività di Docker Compose.](./media/image7.png)
 
@@ -186,15 +186,15 @@ Dal punto di vista di CD e i servizi di Azure DevOps in particolare, è possibil
 
 Inizialmente, durante la distribuzione di determinati i cluster o gli agenti di orchestrazione, in genere utilizzare meccanismi per ogni agente di orchestrazione (vale a dire, Kubernetes e Service Fabric dispone di meccanismi di distribuzione diverso) e gli script di distribuzione specifici anziché il più semplice e facile da usare `docker-compose` dello strumento base il `docker-compose.yml` file di definizione. Tuttavia, grazie all'attività distribuzione Docker di servizi di Azure DevOps, illustrato nella figura 5-10, è ora anche possibile distribuire per l'agente di orchestrazione supportati solo con cui si ha familiarità `docker-compose.yml` file perché lo strumento esegue tale "conversione" per l'utente (dalle `docker-compose.yml`file di formato necessari per l'agente di orchestrazione).
 
-![Visualizzazione di esplorazione del catalogo delle attività in DevOps di Azure, che mostra il Docker di attività di distribuzione.](./media/image10.png)
+![Visualizzazione di esplorazione del catalogo delle attività in DevOps di Azure, che mostra la distribuzione all'attività di Kubernetes.](./media/add-deploy-to-kubernetes-task.png)
 
-**Figura 5-10**. Aggiunta dell'attività di distribuzione Docker per Gestione risorse di ambiente
+**Figura 5-10**. Aggiunta per la distribuzione all'attività di Kubernetes per l'ambiente
 
-Figura 5-11 viene illustrato come è possibile modificare l'attività di distribuzione Docker e specificare il tipo di destinazione (Azure DC/OS del servizio contenitore, in questo caso), il File Docker Compose e la connessione al registro Docker (ad esempio registro contenitori di Azure o Hub Docker). Si tratta di attività che recupererà le immagini Docker personalizzate pronti da usare per la distribuzione come i contenitori nel cluster.
+Figura 5-11 viene illustrato come è possibile modificare l'attività di Kubernetes con le sezioni disponibili per la configurazione di distribuzione. Si tratta di attività che recupererà le immagini Docker personalizzate pronti da usare per la distribuzione come i contenitori nel cluster.
 
-![Visualizzazione di esplorazione di DevOps di Azure, distribuire la definizione di attività dell'agente di orchestrazione.](./media/image11.png)
+![Visualizzazione di esplorazione di DevOps di Azure, distribuire la definizione di attività Kubernetes.](./media/edit-deploy-to-kubernetes-task.png)
 
-**Figura 5-11**. Docker Deploy attività definizione distribuzione a Azure DC/OS del servizio contenitore
+**Figura 5-11**. Docker Deploy attività definizione la distribuzione di DC/OS del servizio contenitore
 
 > [! INFORMAZIONI] per altre informazioni sulla pipeline di recapito Continuo con servizi di Azure DevOps e Docker, visitare <https://azure.microsoft.com/services/devops/pipelines>
 

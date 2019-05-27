@@ -2,12 +2,12 @@
 title: Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 description: Le applicazioni di produzione reale devono essere distribuite e gestite con gli agenti di orchestrazione di gestire l'integrità, il carico di lavoro e i cicli di vita di tutti i contenitori.
 ms.date: 02/15/2019
-ms.openlocfilehash: 6cb41e632db7c7c6b9412bf54d2efeb44deee80f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: bde9a2815d0496608b3172582481c169cab37f04
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644722"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195641"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 
@@ -70,7 +70,7 @@ Nell'ambiente di sviluppo che [Docker annunciato nel mese di luglio 2018](https:
 
 ## <a name="get-started-with-azure-kubernetes-service-aks"></a>Iniziare a usare con Azure Kubernetes Service (AKS)
 
-Per iniziare a usare servizio contenitore di AZURE, distribuire un cluster del servizio contenitore di AZURE dal portale di Azure o usando l'interfaccia della riga di comando. Per altre informazioni sulla distribuzione di un cluster del servizio Azure Container, vedere [Distribuire un cluster del servizio Azure Kubernetes](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
+Per iniziare a usare servizio contenitore di AZURE, distribuire un cluster del servizio contenitore di AZURE dal portale di Azure o usando l'interfaccia della riga di comando. Per altre informazioni sulla distribuzione di un cluster Kubernetes in Azure, vedere [distribuire un cluster Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
 Non sono previsti addebiti per il software installato per impostazione predefinita come parte del servizio Azure Kubernetes. Tutte le opzioni predefinite vengono implementate con software open source. Il servizio Azure Kubernetes è disponibile per più macchine virtuali in Azure. Vengono applicati addebiti solo per le istanze di risorse di calcolo scelte, oltre che per le altre risorse di infrastruttura sottostanti usate, ad esempio per le risorse di archiviazione e di rete. Non sono previsti addebiti incrementali per il servizio Azure Kubernetes.
 
@@ -137,7 +137,7 @@ Service Fabric è agnostico rispetto al modo in cui si crea il servizio ed è po
 
 Come illustrato nella figura 4-10, è possibile creare ed eseguire microservizi in Service Fabric come processi semplici o come contenitori Docker. È anche possibile combinare microservizi basati su contenitori con microservizi basati su processi all'interno dello stesso cluster di Service Fabric.
 
-![Confronto tra Azure service Fabric cluster: Microservizi come processi in cui ogni nodo viene eseguito un processo per ogni microservizio; I Microservizi come contenitori in cui ogni nodo esegue Docker con contenitori diversi, un contenitore per ogni microservizio.](./media/azure-service-fabric-cluster-types.png)
+![Confronto tra cluster di Azure Service Fabric: microservizi basati su processi, in cui ogni nodo esegue un processo per ogni microservizio, e microservizi basati su contenitori, in cui ogni nodo esegue Docker con più contenitori, uno per ogni microservizio.](./media/azure-service-fabric-cluster-types.png)
 
 **Figura 4-10**. Distribuzione di microservizi come processi o contenitori in Azure Service Fabric
 

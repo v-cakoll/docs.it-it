@@ -14,7 +14,7 @@
     - name: Categorizzare i problemi di supporto (classificazione multiclasse)
       href: tutorials/github-issue-classification.md
     - name: Eseguire una stima dei prezzi (regressione)
-      href: tutorials/taxi-fare.md
+      href: tutorials/predict-prices.md
     - name: Categorizzare i fiori di iris (clustering k-means)
       href: tutorials/iris-clustering.md
     - name: Sistema di raccomandazione di film (fattorizzazione di matrice)

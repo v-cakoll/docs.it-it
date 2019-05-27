@@ -3,12 +3,12 @@ title: Classi e oggetti in C# - Panoramica del linguaggio C#
 description: Introduzione a C# Leggere questa panoramica su classi, oggetti ed ereditarietà
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 6f06a43b60a1101e5583ffa85bd948c69679943b
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 681ed03661bf54dcb1e7e70735a53a553763c95c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921247"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750393"
 ---
 # <a name="classes-and-objects"></a>Classi e oggetti
 
@@ -33,42 +33,42 @@ I membri di una classe possono essere membri statici o membri di istanza. I prim
 Di seguito viene fornita una panoramica dei tipi di membri che può contenere una classe.
 
 * Costanti
-    - Valori costanti associati alla classe
+  - Valori costanti associati alla classe
 * Campi
-    - Variabili della classe
+  - Variabili della classe
 * Metodi
-    - Calcoli e azioni che possono essere eseguiti dalla classe
+  - Calcoli e azioni che possono essere eseguiti dalla classe
 * Proprietà
-    - Azioni associate alla lettura e alla scrittura di proprietà denominate della classe
+  - Azioni associate alla lettura e alla scrittura di proprietà denominate della classe
 * Indicizzatori
-    - Azioni associate all'indicizzazione di istanze della classe, come una matrice
+  - Azioni associate all'indicizzazione di istanze della classe, come una matrice
 * Eventi
-    - Notifiche che possono essere generate dalla classe
+  - Notifiche che possono essere generate dalla classe
 * Operatori
-    - Conversioni e operatori di espressione supportati dalla classe
+  - Conversioni e operatori di espressione supportati dalla classe
 * Costruttori
-    - Azioni necessarie per inizializzare istanze della classe o la classe stessa
+  - Azioni necessarie per inizializzare istanze della classe o la classe stessa
 * Finalizzatori
-    - Azioni da eseguire prima che istanze della classe vengano eliminate in modo permanente
+  - Azioni da eseguire prima che istanze della classe vengano eliminate in modo permanente
 * Tipi
-    - Tipi annidati dichiarati dalla classe
+  - Tipi annidati dichiarati dalla classe
 
 ## <a name="accessibility"></a>Accessibilità
 
 A ogni membro di una classe è associata una caratteristica di accessibilità, che controlla le aree di testo del programma in grado di accedere al membro. Esistono sei diverse forme di accessibilità, riepilogate nella tabella seguente.
 
 * `public`
-    - Accesso non limitato
+  - Accesso non limitato
 * `protected`
-    - Accesso limitato a questa classe o alle classi derivate da questa classe
+  - Accesso limitato a questa classe o alle classi derivate da questa classe
 * `internal`
-    - Accesso limitato all'assembly corrente (file EXE, file DLL e cosi via.)
+  - Accesso limitato all'assembly corrente (file EXE, file DLL e cosi via.)
 * `protected internal`
-    - Accesso limitato alla classe principale, alle classi derivate dalla classe principale o alle classi all'interno dello stesso assembly
+  - Accesso limitato alla classe principale, alle classi derivate dalla classe principale o alle classi all'interno dello stesso assembly
 * `private`
-    - Accesso limitato a questa classe
+  - Accesso limitato a questa classe
 * `private protected`
-    - Accesso limitato alla classe principale o alle classi derivate dal tipo principale all'interno dello stesso assembly
+  - Accesso limitato alla classe principale o alle classi derivate dal tipo principale all'interno dello stesso assembly
 
 ## <a name="type-parameters"></a>Parametri di tipo
 
@@ -230,7 +230,7 @@ C# supporta sia costruttori di istanza sia costruttori statici. Un *costruttore 
 
 Un costruttore viene dichiarato come un metodo, senza tipo restituito e con lo stesso nome della classe in cui è contenuto. Se una dichiarazione di costruttore include un modificatore static, dichiara un costruttore statico. In caso contrario, dichiara un costruttore di istanza.
 
-I costruttori di istanza possono essere sottoposti a overload e possono avere parametri facoltativi. La classe `MyList<T>`, ad esempio, dichiara due costruttori di istanza, uno senza parametri e uno che accetta un parametro `int`. I costruttori di istanza vengono richiamati con l'operatore `new`. Le istruzioni seguenti allocano due istanze `MyList<string>` usando il costruttore della classe `MyList` con e senza l'argomento facoltativo.
+I costruttori di istanza possono essere sottoposti a overload e avere parametri facoltativi. La classe `MyList<T>`, ad esempio, dichiara un costruttore di istanza con un singolo parametro `int` facoltativo. I costruttori di istanza vengono richiamati con l'operatore `new`. Le istruzioni seguenti allocano due istanze `MyList<string>` usando il costruttore della classe `MyList` con e senza l'argomento facoltativo.
 
 [!code-csharp[ListExample1](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
 

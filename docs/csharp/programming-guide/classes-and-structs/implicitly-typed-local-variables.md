@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 9c6f7ae5d7a579abead2a62f8fdc7c63e5c53328
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 72114233044fbf0e9910048343806eb542ed7ea5
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222702"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063746"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variabili locali tipizzate in modo implicito - Guida per programmatori C#
 
@@ -55,7 +55,7 @@ Dal punto di vista del codice sorgente, un tipo anonimo non ha nome. Se una vari
 
 [!code-csharp[csProgGuideLINQ#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#44)]
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Alle dichiarazioni di variabili tipizzate in modo implicito si applicano le restrizioni seguenti:
 
@@ -68,6 +68,20 @@ Alle dichiarazioni di variabili tipizzate in modo implicito si applicano le rest
 - Non è possibile inizializzare più variabili tipizzate in modo implicito nella stessa istruzione.
 
 - Se un tipo denominato `var` rientra nell'ambito, la parola chiave `var` si risolverà in tale nome di tipo e non verrà trattata come parte di una dichiarazione di variabile locale tipizzata in modo implicito.
+
+La tipizzazione implicita con la parola chiave `var` può essere applicata solo alle variabili nell'ambito del metodo locale. La tipizzazione implicita non è disponibile per i campi di classe perché il compilatore C# riscontrerebbe un paradosso logico durante l'elaborazione del codice: il compilatore deve conoscere il tipo del campo, ma è in grado di determinare il tipo solo dopo che l'espressione di assegnazione è stata analizzata e l'espressione non può essere valutata senza conoscere il tipo. Esaminare il codice seguente:
+
+```csharp
+private var bookTitles;
+```
+
+`bookTitles` è un campo di classe a cui è stato assegnato il tipo `var`. Poiché il campo non ha alcuna espressione da valutare, è impossibile per il compilatore dedurre quale tipo dovrebbe essere `bookTitles`. Inoltre, anche l'aggiunta di un'espressione al campo, come si farebbe per una variabile locale, risulta insufficiente:
+
+```csharp
+private var bookTitles = new List<string>();
+```
+
+Quando il compilatore rileva i campi durante la compilazione del codice, registra il tipo di ogni campo prima di elaborare le espressioni a esso associate. Durante il tentativo di analisi di `bookTitles`, il compilatore rileva lo stesso paradosso: ha necessità di conoscere il tipo del campo, ma il compilatore normalmente determina il tipo di `var` tramite l'analisi dell'espressione, operazione che non è possibile eseguire senza conoscere prima il tipo.
 
 `var` può anche risultare utile con le espressioni di query in cui è difficile determinare con esattezza il tipo costruito della variabile della query, ad esempio con il raggruppamento e l'ordinamento di operazioni.
 

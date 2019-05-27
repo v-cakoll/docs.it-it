@@ -3,12 +3,12 @@ title: Scrivere codice C# sicuro ed efficiente
 description: I recenti miglioramenti apportati al linguaggio C# consentono di scrivere codice sicuro verificabile, con prestazioni superiori a quelle in precedenza associate al codice non gestito.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: d363e357d3749bb2014456c0064c4de7dd7f1acb
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411566"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753897"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Scrivere codice C# sicuro ed efficiente
 
@@ -180,6 +180,8 @@ Se invece il calcolo della distanza usa lo struct non modificabile, `ReadonlyPoi
 [!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 Il compilatore genera codice più efficiente quando si chiamano i membri di `readonly struct`: Il riferimento `this`, invece che una copia del ricevitore, è sempre un parametro `in` passato per riferimento al metodo del membro. Questa ottimizzazione consente un risparmio a livello di copie quando si usa `readonly struct` come argomento `in`.
+
+Non passare un valore di tipo nullable come argomento `in`. Il tipo <xref:System.Nullable%601> non è dichiarato come uno struct di sola lettura. Ciò significa che il compilatore deve generare le copie difensive di tutti gli argomenti del valore di tipo nullable passato a un metodo tramite il modificatore `in` nella dichiarazione del parametro.
 
 Per un programma di esempio che illustra le differenze in termini di prestazioni, vedere [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) nel [repository di esempi](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) in GitHub. Viene confrontato il passaggio di uno struct modificabile per valore e per riferimento con il passaggio di uno struct non modificabile per valore e per riferimento. L'uso dello struct non modificabile e del passaggio per riferimento è più veloce.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677174"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753963"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap oggetti grandi nei sistemi Windows
 
@@ -154,9 +154,9 @@ Questi contatori delle prestazioni sono in genere un buon primo passo nell'anali
 
    Visualizza la dimensione corrente in byte dell'heap oggetti grandi, incluso lo spazio disponibile. Questo contatore viene aggiornato alla fine di una Garbage Collection, non a ogni allocazione.
 
-Un metodo molto comune per il controllo dei contatori è Performance Monitor (perfmon.exe). Usare "Aggiungi contatori" per aggiungere il contatore corrispondente ai processi che interessano. I dati del contatore delle prestazioni possono essere salvati in un file di registro, come indicato nella figura 4.
+Un metodo molto comune per il controllo dei contatori è Performance Monitor (perfmon.exe). Usare "Aggiungi contatori" per aggiungere il contatore corrispondente ai processi che interessano. I dati del contatore delle prestazioni possono essere salvati in un file di registro, come indicato nella figura 4:
 
-![Figura 4: Aggiunta di contatori delle prestazioni.](media/loh/perfcounter.png)\
+![Screenshot che illustra come aggiungere contatori delle prestazioni.](media/large-object-heap/add-performance-counter.png)
 Figura 4: LOH dopo un'operazione GC di generazione 2
 
 È anche possibile eseguire query sui contatori delle prestazioni a livello di codice. Molti utenti raccolgono i dati con questa modalità come parte del processo di test di routine. Se vengono identificati contatori con valori anomali, è possibile usare altri mezzi per ottenere dati più dettagliati ai fini dell'analisi.
@@ -184,7 +184,8 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 Il risultato è simile al seguente:
 
-![Figura 5: Esame degli eventi ETW con PerfView](media/loh/perfview.png) Figura 5: Eventi ETW visualizzati mediante PerfView
+![Screenshot che mostra gli eventi ETW in PerfView.](media/large-object-heap/event-tracing-windows-perfview.png)
+Figura 5: Eventi ETW visualizzati mediante PerfView
 
 Si osservi che tutte le operazioni GCs sono di generazione 2 e tutte sono attivate da AllocLarge. Ciò significa che l'operazione GC è stata attivata da un oggetto grande. Il fatto che si tratti di allocazioni temporanee è indicato dal valore 1% nella colonna **LOH Survival Rate %** (% heap oggetti grandi attivi).
 
@@ -196,7 +197,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 registra un evento AllocationTick ogni 100 KB circa di allocazione. In altre parole viene generato un evento ogni volta che viene allocato un oggetto grande. È quindi possibile esaminare una delle visualizzazioni di allocazione heap GC che includono gli stack di chiamate che hanno allocato oggetti grandi:
 
-![Figura 6: Visualizzazione di allocazione heap GC](media/loh/perfview2.png)\
+![Screenshot che mostra una visualizzazione heap Garbage Collector.](media/large-object-heap/garbage-collector-heap.png)
 Figura 6: Visualizzazione di allocazione heap GC
 
 Questo test molto semplice esegue solo l'allocazione di oggetti grandi dal relativo metodo `Main`.

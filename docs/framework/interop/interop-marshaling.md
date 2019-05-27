@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677214"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469708"
 ---
 # <a name="interop-marshaling"></a>Marshalling di interoperabilità
 <a name="top"></a> Il marshalling di interoperabilità determina il passaggio di dati in argomenti di metodo e i valori restituiti tra memoria gestita e non gestita durante le chiamate. Il marshalling di interoperabilità è un'attività di run-time eseguita dal servizio di marshalling di Common Language Runtime.  
@@ -24,23 +24,23 @@ ms.locfileid: "57677214"
   
  In questa panoramica sono incluse le sezioni seguenti:  
   
--   [Modelli basati su platform invoke e sull'interoperabilità COM](#platform_invoke_and_com_interop_models)  
+- [Modelli basati su platform invoke e sull'interoperabilità COM](#platform_invoke_and_com_interop_models)  
   
--   [Marshalling e apartment COM](#marshaling_and_com_apartments)  
+- [Marshalling e apartment COM](#marshaling_and_com_apartments)  
   
--   [Marshalling di chiamate remote](#marshaling_remote_calls)  
+- [Marshalling di chiamate remote](#marshaling_remote_calls)  
   
--   [Argomenti correlati](#related_topics)  
+- [Argomenti correlati](#related_topics)  
   
--   [Riferimento](#reference)  
+- [Riferimento](#reference)  
   
 <a name="platform_invoke_and_com_interop_models"></a>   
 ## <a name="platform-invoke-and-com-interop-models"></a>Modelli basati su platform invoke e sull'interoperabilità COM  
  In Common Language Runtime vengono forniti due meccanismi per l'interoperabilità con il codice non gestito:  
   
--   Platform invoke, che consente la chiamata di funzioni esportate da una libreria non gestita da parte del codice gestito.  
+- Platform invoke, che consente la chiamata di funzioni esportate da una libreria non gestita da parte del codice gestito.  
   
--   L'interoperabilità COM, che consente l'interazione del codice gestito con oggetti COM (Component Object Model) mediante interfacce.  
+- L'interoperabilità COM, che consente l'interazione del codice gestito con oggetti COM (Component Object Model) mediante interfacce.  
   
  Il marshalling di interoperabilità viene usato sia da platform invoke che dall'interoperabilità COM per spostare con precisione gli argomenti dei metodi tra chiamante e chiamato e viceversa, se necessario. Come mostrato nella figura seguente, una chiamata al metodo di platform invoke viene effettuata dal codice gestito al codice non gestito e mai viceversa, ad eccezione del caso in cui sono coinvolte [funzioni di callback](callback-functions.md). Benché il flusso delle chiamate platform invoke possa andare solo dal codice gestito a quello non gestito, il flusso dei dati può essere in entrambe le direzioni, come parametri di input o di output. Le chiamate al metodo di interoperabilità COM possono scorrere in entrambe le direzioni.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "57677214"
  Se si intende esportare un server gestito, ricordare che il client COM determina l'apartment del server. Un server gestito chiamato da un client COM inizializzato in un MTA deve garantire la thread safety.  
   
 ### <a name="managed-clients-and-com-servers"></a>Client gestiti e server COM  
- Benché l'impostazione predefinita per gli apartment dei client gestiti sia MTA, è possibile che essa venga modificata dal tipo di applicazione del client .NET. L'impostazione di apartment per i client di [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], ad esempio, è STA. Per esaminare e modificare l'impostazione di apartment di un client gestito, è possibile usare l'oggetto <xref:System.STAThreadAttribute?displayProperty=nameWithType>, l'oggetto <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, la proprietà <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> o la proprietà <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType>.  
+ Benché l'impostazione predefinita per gli apartment dei client gestiti sia MTA, è possibile che essa venga modificata dal tipo di applicazione del client .NET. L'impostazione di apartment per i client di Visual Basic, ad esempio, è STA. Per esaminare e modificare l'impostazione di apartment di un client gestito, è possibile usare l'oggetto <xref:System.STAThreadAttribute?displayProperty=nameWithType>, l'oggetto <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, la proprietà <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> o la proprietà <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType>.  
   
  L'autore del componente imposta l'affinità di thread di un server COM. La tabella riportata di seguito mostra le combinazioni delle impostazioni di apartment per i client .NET e i server COM, nonché i requisiti di marshalling per le diverse combinazioni.  
   
@@ -86,9 +86,9 @@ ms.locfileid: "57677214"
   
  Per effettuare il marshalling su diversi apartment, procedere come indicato di seguito:  
   
--   Accettare l'overhead del marshalling su diversi apartment, evidente solo quando sono presenti molte chiamate oltre il limite. Registrare la libreria dei tipi del componente COM per consentire alle chiamate di attraversare correttamente il limite dell'apartment.  
+- Accettare l'overhead del marshalling su diversi apartment, evidente solo quando sono presenti molte chiamate oltre il limite. Registrare la libreria dei tipi del componente COM per consentire alle chiamate di attraversare correttamente il limite dell'apartment.  
   
--   Modificare il thread principale impostando il thread del client su STA o MTA. Se il client C# chiama ad esempio molti componenti COM STA, è possibile evitare il marshalling su diversi apartment impostando il thread principale su STA.  
+- Modificare il thread principale impostando il thread del client su STA o MTA. Se il client C# chiama ad esempio molti componenti COM STA, è possibile evitare il marshalling su diversi apartment impostando il thread principale su STA.  
   
     > [!NOTE]
     >  Dopo avere impostato il thread di un client C# su STA, occorre effettuare il marshalling su diversi apartment per le chiamate ai componenti COM MTA.  
@@ -101,9 +101,9 @@ ms.locfileid: "57677214"
 ## <a name="marshaling-remote-calls"></a>Marshalling di chiamate remote  
  Come per il marshalling su diversi apartment, si ricorre al marshalling COM nelle chiamate tra il codice gestito e non gestito ogni volta che gli oggetti si trovano in processi separati. Ad esempio:  
   
--   Un client COM che richiama un server gestito in un host remoto usa DCOM.  
+- Un client COM che richiama un server gestito in un host remoto usa DCOM.  
   
--   Un client gestito che richiama un server COM su un host remoto usa DCOM.  
+- Un client gestito che richiama un server COM su un host remoto usa DCOM.  
   
  Nell'illustrazione seguente viene mostrato come il marshalling di interoperabilità e il marshalling COM forniscano canali di comunicazione attraverso i limiti dell'host e del processo.  
   
@@ -116,9 +116,9 @@ ms.locfileid: "57677214"
   
  In questa illustrazione:  
   
--   Un client non gestito recupera un riferimento a un oggetto COM da un oggetto gestito che lo recupera da un host remoto. Il meccanismo dei servizi remoti è DCOM.  
+- Un client non gestito recupera un riferimento a un oggetto COM da un oggetto gestito che lo recupera da un host remoto. Il meccanismo dei servizi remoti è DCOM.  
   
--   Un client gestito recupera un riferimento a un oggetto gestito da un oggetto COM che lo recupera da un host remoto. Il meccanismo dei servizi remoti è DCOM.  
+- Un client gestito recupera un riferimento a un oggetto gestito da un oggetto COM che lo recupera da un host remoto. Il meccanismo dei servizi remoti è DCOM.  
   
     > [!NOTE]
     >  La libreria dei tipi esportata del server gestito deve essere registrata.  

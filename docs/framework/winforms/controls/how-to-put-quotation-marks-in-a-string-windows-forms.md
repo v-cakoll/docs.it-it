@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0148f9fde9d69bb1605776f1ab617079be96b59e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913224"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053459"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Procedura: Inserire virgolette in una stringa (Windows Form)
 In alcuni casi è possibile racchiudere tra virgolette (" ") una stringa di testo. Ad esempio:  
@@ -26,7 +26,7 @@ In alcuni casi è possibile racchiudere tra virgolette (" ") una stringa di test
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Per inserire le virgolette in una stringa nel codice  
   
-1. In Visual Basic, inserire due virgolette in una riga come virgolette incorporate. Nell'oggetto visivo C# e [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], inserire la sequenza di escape \\"come virgolette incorporate. Ad esempio, per creare la stringa precedente, usare il codice seguente.  
+1. In Visual Basic, inserire due virgolette in una riga come virgolette incorporate. Nell'oggetto visivo C# e Visual C++, inserire la sequenza di escape \\"come virgolette incorporate. Ad esempio, per creare la stringa precedente, usare il codice seguente.  
   
     ```vb  
     Private Sub InsertQuote()  

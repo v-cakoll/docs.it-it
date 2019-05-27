@@ -3,16 +3,16 @@ title: Aggiornare le interfacce in modo sicuro con i membri dell'interfaccia pre
 description: Questa esercitazione avanzata esplora come sia possibile aggiungere in modo sicuro nuove funzionalità alle definizioni di interfaccia esistenti senza interrompere tutte le classi e gli struct che implementano tale interfaccia.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: ded3704428282b8f9f0542e938137585a07802b4
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452913"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877911"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-8"></a>Esercitazione: Aggiornare le interfacce con i membri di interfaccia predefiniti in C# 8
+# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Esercitazione: Aggiornare le interfacce con i membri di interfaccia predefiniti in C# 8.0
 
-A partire da C# 8 in .NET Core 3.0 è possibile definire un'implementazione quando si dichiara un membro di un'interfaccia. Lo scenario più comune consiste nell'aggiunta sicura di membri a un'interfaccia già rilasciata e usata da innumerevoli client.
+A partire da C# 8.0 su .NET Core 3.0 è possibile definire un'implementazione quando si dichiara un membro di un'interfaccia. Lo scenario più comune consiste nell'aggiunta sicura di membri a un'interfaccia già rilasciata e usata da innumerevoli client.
 
 In questa esercitazione si imparerà a:
 
@@ -23,7 +23,7 @@ In questa esercitazione si imparerà a:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Sarà necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore di anteprima di C# 8.0. Il compilatore di anteprima di C# 8 è disponibile a partire da [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o dall'ultima versione di [.NET Core 3.0 Preview SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0). I membri di interfaccia predefiniti sono disponibili a partire dall'anteprima 4 di .NET Core 3.0.
+Sarà necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore di anteprima di C# 8.0. Il compilatore di anteprima di C# 8.0 è disponibile a partire [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o dalla versione più recente del [SDK dell'anteprima di .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0). I membri di interfaccia predefiniti sono disponibili a partire dall'anteprima 4 di .NET Core 3.0.
 
 ## <a name="scenario-overview"></a>Panoramica dello scenario
 

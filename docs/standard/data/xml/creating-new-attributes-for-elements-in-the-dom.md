@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9cbef07e3db294dd4c0ffca1f25c15ec39e6ecf3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024571"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647940"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Creazione di nuovi attributi per gli elementi nel DOM
 La creazione di nuovi attributi è diversa dalla creazione di altri tipi di nodi, perché gli attributi non sono nodi, ma proprietà di un nodo di elemento e sono contenuti in una classe **XmlAttributeCollection** associata all'elemento. Sono disponibili diversi modi per creare un attributo e associarlo a un elemento:  
   
--   Ottenere il nodo dell'elemento e usare **SetAttribute** per aggiungere un attributo alla raccolta di attributi di tale elemento.  
+- Ottenere il nodo dell'elemento e usare **SetAttribute** per aggiungere un attributo alla raccolta di attributi di tale elemento.  
   
--   Creare un nodo **XmlAttribute** usando il metodo **CreateAttribute**, ottenere il nodo dell'elemento, quindi usare **SetAttributeNode** per aggiungere il nodo alla raccolta di attributi di tale elemento.  
+- Creare un nodo **XmlAttribute** usando il metodo **CreateAttribute**, ottenere il nodo dell'elemento, quindi usare **SetAttributeNode** per aggiungere il nodo alla raccolta di attributi di tale elemento.  
   
  Nell'esempio seguente viene illustrato come aggiungere un attributo a un elemento usando il metodo **SetAttribute**.  
   

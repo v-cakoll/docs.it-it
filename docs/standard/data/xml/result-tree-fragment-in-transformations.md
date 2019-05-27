@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4835536dd3ae815fbe7e50582b94caefb1fc9082
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb130c17fa7b2a5d02f55a2944be386bc1bb334c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683820"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750722"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Frammento di alberi risultato nelle trasformazioni
 
@@ -35,7 +35,7 @@ Il valore del nome completo (`parameter`) dell'elemento `Qname` può essere asse
 
 Anche il valore dell'elemento `variable` può essere assegnato in diversi modi. È possibile assegnarlo tramite il contenuto restituito dall'espressione XPath nell'attributo `select` oppure usando il contenuto del corpo del modello.
 
-Da entrambi gli elementi `parameter` e `variable`, se viene assegnato un valore dall'espressione XPath, viene restituito uno dei quattro tipi XPath principali: Boolean, string, number o node set. Se il valore viene assegnato usando un corpo del modello non vuoto, verrà restituito un tipo di dati non XPath, ovvero un frammento di albero risultato.
+Per entrambi gli elementi `parameter` e `variable`, se viene assegnato un valore dall'espressione XPath, viene restituito uno dei quattro tipi XPath principali: boolean, string, number o node set. Se il valore viene assegnato usando un corpo del modello non vuoto, verrà restituito un tipo di dati non XPath, ovvero un frammento di albero risultato.
 
 Una query XPath restituisce un tipo di dati che non appartiene a uno dei quattro tipi di oggetti XPath unicamente nel caso in cui una variabile è associata a un frammento di albero risultato, anziché a uno dei quattro tipi di dati XPath di base. I frammenti di albero risultato e il relativo comportamento sono descritti nella [specifica World Wide Web Consortium (W3C)](https://www.w3.org/TR/xslt-10/), dalla [sezione 11.1 Result Tree Fragments](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments) (Frammenti di albero risultato) alla [sezione 11.6 Passing Parameters to Templates](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates) (Passaggio di parametri ai modelli). Nell'[introduzione alla sezione 1](https://www.w3.org/TR/xslt-10/#section-Introduction) viene inoltre illustrato come i modelli possano contenere elementi dello spazio dei nomi XSLT che restituiscono o creano frammenti di albero risultato.
 
@@ -194,7 +194,6 @@ Il risultato della trasformazione di dati XML con il presente foglio di stile è
 
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Xml.XPath.XPathNodeIterator>
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [Trasformazioni XSLT con la classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)
 - [Implementazione del processore XSLT da parte della classe XslTransform](xsltransform-class-implements-the-xslt-processor.md)

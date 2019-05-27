@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 304c2ed354c2b3bfe6333550810dde6c779f2e21
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e106709c7410b289e7aab2b5cf924466f2eeb501
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663448"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959936"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipi obsoleti in .NET Framework
 <a name="introduction"></a> Le tabelle in questo articolo elencano i tipi obsoleti in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], organizzati per assembly. Usare i seguenti collegamenti per vedere un elenco di tipi obsoleti e le alternative consigliate in ogni assembly. Poiché questi tipi sono obsoleti, lo sono anche tutti i relativi membri. Per un elenco di altri membri obsoleti nella libreria di classi .NET Framework, vedere [Membri obsoleti](obsolete-members.md).
@@ -512,8 +512,8 @@ ms.locfileid: "64663448"
 
 |Tipo|Messaggio|
 |----------|-------------|
-|<xref:System.Activities.Statements.Interop>|Deprecata inizialmente in .NET Framework 4.5.<br /><br />I tipi di Workflow Foundation 3.0 sono stati deprecati. Usare invece i nuovi tipi Workflow 4.0 da <xref:System.Activities>\*.|
-|<xref:System.Activities.Tracking.InteropTrackingRecord>|Deprecata inizialmente in .NET Framework 4.5.<br /><br />I tipi di Workflow Foundation 3.0 sono stati deprecati. Usare invece i nuovi tipi Workflow 4.0 da <xref:System.Activities>\*.|
+|<xref:System.Activities.Statements.Interop?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br />I tipi di Workflow Foundation 3.0 sono stati deprecati. Usare invece i nuovi tipi Workflow 4.0 da <xref:System.Activities>\*.|
+|<xref:System.Activities.Tracking.InteropTrackingRecord?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br />I tipi di Workflow Foundation 3.0 sono stati deprecati. Usare invece i nuovi tipi Workflow 4.0 da <xref:System.Activities>\*.|
 |Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|
 |Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.Configuration>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|
 |Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.DebugEngine> fatta eccezione per <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|

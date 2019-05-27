@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: aea2715211ad03b763aae9cadc32e97d0e06d09e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 26e1fd4231964be5448229a6b3c7d90c0ba64499
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628840"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882506"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Suggerimenti per l'implementazione del modello asincrono basato su eventi
 Il modello asincrono basato su eventi offre un sistema efficace per l'esposizione del comportamento asincrono nelle classi attraverso una semantica nota di eventi e delegati. Per implementare tale modello, è necessario soddisfare alcuni requisiti comportamentali specifici. Nelle sezioni riportate di seguito vengono illustrati i requisiti e le indicazioni da tenere presenti per l'implementazione di una classe che segue il modello asincrono basato su eventi.  
@@ -118,7 +118,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - Intercettare le eccezioni che si verificano nell'operazione asincrona e impostare il valore della proprietà <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> su tali eccezioni.  
   
 ### <a name="threading-and-contexts"></a>Thread e contesti  
- Per un corretto funzionamento della classe, è fondamentale che i gestori eventi del client siano richiamati sul thread o sul contesto appropriato per il modello di applicazione specifico, incluse le applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] e Windows Form. Per garantire il comportamento corretto della classe asincrona con qualsiasi modello di applicazione sono disponibili due classi di supporto, <xref:System.ComponentModel.AsyncOperation> e <xref:System.ComponentModel.AsyncOperationManager>.  
+ Per un corretto funzionamento della classe, è fondamentale che i gestori eventi del client siano chiamati sul thread o sul contesto appropriato per il modello di applicazione specifico, incluse le applicazioni ASP.NET e Windows Forms. Per garantire il comportamento corretto della classe asincrona con qualsiasi modello di applicazione sono disponibili due classi di supporto, <xref:System.ComponentModel.AsyncOperation> e <xref:System.ComponentModel.AsyncOperationManager>.  
   
  <xref:System.ComponentModel.AsyncOperationManager> fornisce un metodo, <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, che restituisce un oggetto <xref:System.ComponentModel.AsyncOperation>. Il metodo <em>NomeMetodo</em>**Async** chiama <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> e la classe usa l'oggetto <xref:System.ComponentModel.AsyncOperation> restituito per tenere traccia del ciclo di vita dell'attività asincrona.  
   

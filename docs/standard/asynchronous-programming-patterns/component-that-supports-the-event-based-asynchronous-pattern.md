@@ -18,17 +18,17 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6c35398d54b91c9aa595ffdcde56004e59b7693
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628921"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882500"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Procedura: Implementare un componente che supporta il modello asincrono basato su eventi
 In caso di scrittura di una classe con alcune operazioni che possono causare ritardi notevoli, è consigliabile assegnare la funzionalità asincrona implementando [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
- Questa procedura dettagliata illustra come creare un componente che implementa un modello asincrono basato su eventi. L'implementazione viene eseguita usando classi helper dallo spazio dei nomi <xref:System.ComponentModel?displayProperty=nameWithType>, per poter assicurare che il componente funzioni correttamente con qualsiasi modello di applicazione, inclusi [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], applicazioni console e applicazioni Windows Form. Questo componente è anche identificabile da un controllo <xref:System.Windows.Forms.PropertyGrid> e dalle finestre di progettazione personalizzate.  
+ Questa procedura dettagliata illustra come creare un componente che implementa un modello asincrono basato su eventi. L'implementazione viene eseguita usando classi helper dallo spazio dei nomi <xref:System.ComponentModel?displayProperty=nameWithType>, per poter assicurare che il componente funzioni correttamente con qualsiasi modello di applicazione, tra cui ASP.NET, applicazioni console e applicazioni Windows Form. Questo componente è anche identificabile da un controllo <xref:System.Windows.Forms.PropertyGrid> e dalle finestre di progettazione personalizzate.  
   
  Nel corso della procedura, un'applicazione calcola i numeri primi in modo asincrono. L'applicazione avrà un thread di interfaccia utente principale e un thread per ogni calcolo di numero primo. Anche se verificare che un numero a molte cifre sia un numero primo può richiedere una notevole quantità di tempo, il thread principale dell'interfaccia utente non verrà interrotto da questa operazione e la capacità di risposta del form resterà inalterata durante i calcoli. Sarà possibile eseguire simultaneamente tutti i calcoli necessari e annullare in modo selettivo i calcoli in sospeso.  
   

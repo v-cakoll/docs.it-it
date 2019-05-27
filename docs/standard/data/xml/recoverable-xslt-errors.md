@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32a4875b42c0282ffdb90e3fc825b38af935affb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202985"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590050"
 ---
 # <a name="recoverable-xslt-errors"></a>Errori XSLT risolvibili
 Nella raccomandazione W3C, XSL Transformations (XSLT) Version 1.0, sono incluse aree in cui il provider dell'implementazione può decidere come gestire una determinata situazione. Queste aree si considerano come aree di comportamento discretionary. Nella sezione 7.3 Creating Processing Instructions della raccomandazione XSLT 1.0, ad esempio, viene specificato che la creazione di nodi diversi da nodi di tipo text durante la creazione di un'istanza del contenuto di `xsl:processing-instruction` costituisce un errore. Per alcuni problemi, la raccomandazione XSLT 1.0 fornisce una linea d'azione nel caso in cui il processore tenti di risolvere l'errore. Per l'errore illustrato nella sezione 7.3 viene spiegato che il problema può essere risolto ignorando i nodi e il relativo contenuto.  
@@ -18,11 +18,11 @@ Nella raccomandazione W3C, XSL Transformations (XSLT) Version 1.0, sono incluse 
 ## <a name="discretionary-behaviors"></a>Comportamenti discretionary  
  Nella tabella seguente viene elencato ogni comportamento discretionary consentito dalla raccomandazione XSLT 1.0 e il modo in cui tali comportamenti vengono gestiti dalla classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
--   "Ripristino" indica che la classe <xref:System.Xml.Xsl.XslCompiledTransform> eseguirà la correzione dell'errore. È possibile usare l'evento <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> per segnalare tutti gli eventi dal processore XSLT.  
+- "Ripristino" indica che la classe <xref:System.Xml.Xsl.XslCompiledTransform> eseguirà la correzione dell'errore. È possibile usare l'evento <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> per segnalare tutti gli eventi dal processore XSLT.  
   
--   "Errore" indica che è stata generata un'eccezione per questa condizione.  
+- "Errore" indica che è stata generata un'eccezione per questa condizione.  
   
--   I riferimenti alle sezioni sono reperibili nei documenti [W3C XSL Transformations (XSLT) Version 1.0 Recommendation](https://www.w3.org/TR/xslt) e [W3C XSL Transformations (XSLT) Version 1.0 Specification Errata](https://www.w3.org/1999/11/REC-xslt-19991116-errata/) (informazioni in lingua inglese).  
+- I riferimenti alle sezioni sono reperibili nei documenti [W3C XSL Transformations (XSLT) Version 1.0 Recommendation](https://www.w3.org/TR/xslt) e [W3C XSL Transformations (XSLT) Version 1.0 Specification Errata](https://www.w3.org/1999/11/REC-xslt-19991116-errata/) (informazioni in lingua inglese).  
   
 |Condizione XSLT|Sezione|Comportamento di XslCompiledTransform|  
 |--------------------|-------------|-----------------------------------|  

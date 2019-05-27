@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94ac21dfdf58e8aa1b629604792ad2f0f57c60d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50750b23af9e9cfca79b0f7db9d272e8e24971ab
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659491"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591405"
 ---
 # <a name="creating-new-strings-in-net"></a>Creazione di nuove stringhe in .NET
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] consente di creare stringhe usando una semplice assegnazione, oltre a eseguire l'overload del costruttore di classe per supportare la creazione di stringhe tramite una serie di parametri diversi. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornisce diversi metodi nella classe <xref:System.String?displayProperty=nameWithType> per creare nuovi oggetti stringa combinando più stringhe, matrici di stringhe o oggetti.  
+.NET Framework consente di creare stringhe usando una semplice assegnazione, oltre a eseguire l'overload del costruttore di classe per supportare la creazione di stringhe tramite una serie di parametri diversi. .NET Framework offre anche diversi metodi nella classe <xref:System.String?displayProperty=nameWithType> per creare nuovi oggetti stringa combinando più stringhe, matrici di stringhe o oggetti.  
   
 ## <a name="creating-strings-using-assignment"></a>Creazione di stringhe tramite assegnazione  
  Il modo più semplice per creare un nuovo oggetto <xref:System.String> consiste nell'assegnare un valore letterale stringa a un oggetto <xref:System.String>.  

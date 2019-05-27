@@ -17,42 +17,42 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a45ef91eba38223270a04cff2f00c30decb019f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0536acbcc71ae7792ec668ac352e95e604bd979
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399704"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591362"
 ---
 # <a name="reflection-and-generic-types"></a>Reflection e tipi generici
 <a name="top"></a> Dal punto di vista della reflection, un tipo ordinario si differenzia da un tipo generico perché quest'ultimo è associato a un insieme di parametri di tipo, se è una definizione di tipo generico, o a un insieme di argomenti di tipo, se è un tipo costruito. Un metodo generico si differenzia da un metodo ordinario esattamente nello stesso modo.  
   
  Per comprendere come i tipi e i metodi generici vengono gestiti dalla reflection, è opportuno considerare due fattori fondamentali:  
   
--   I parametri di tipo delle definizioni di tipo e di metodo generico sono rappresentati da istanze della classe <xref:System.Type> .  
+- I parametri di tipo delle definizioni di tipo e di metodo generico sono rappresentati da istanze della classe <xref:System.Type> .  
   
     > [!NOTE]
     >  Numerosi metodi e proprietà di <xref:System.Type> hanno un comportamento diverso quando un oggetto <xref:System.Type> rappresenta un parametro di tipo generico. Queste differenze sono illustrate negli argomenti relativi alle proprietà e ai metodi in questione. Vedere ad esempio <xref:System.Type.IsAutoClass%2A> e <xref:System.Type.DeclaringType%2A>. Inoltre, alcuni membri sono validi solo quando un oggetto <xref:System.Type> rappresenta un parametro di tipo generico. Ad esempio, vedere <xref:System.Type.GetGenericTypeDefinition%2A>.  
   
--   Se un'istanza di <xref:System.Type> rappresenta un tipo generico, includerà una matrice di tipi che rappresentano i parametri di tipo (per le definizioni di tipo generico) o gli argomenti di tipo (per i tipi costruiti). Questo è vero anche per un'istanza della classe <xref:System.Reflection.MethodInfo> che rappresenta un metodo generico.  
+- Se un'istanza di <xref:System.Type> rappresenta un tipo generico, includerà una matrice di tipi che rappresentano i parametri di tipo (per le definizioni di tipo generico) o gli argomenti di tipo (per i tipi costruiti). Questo è vero anche per un'istanza della classe <xref:System.Reflection.MethodInfo> che rappresenta un metodo generico.  
   
  La reflection fornisce metodi di <xref:System.Type> e <xref:System.Reflection.MethodInfo> che consentono di accedere alla matrice di parametri di tipo e stabilire se un'istanza di <xref:System.Type> rappresenta un parametro di tipo o un tipo effettivo.  
   
- Per un codice di esempio in cui sono illustrati i metodi indicati in questo argomento, vedere [How to: Examine and Instantiate Generic Types with Reflection](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md) (Procedura: Esaminare e creare istanze di tipi generici con reflection).  
+ Per un codice di esempio che illustra i metodi descritti in questo articolo, vedere [Procedura: Esaminare e creare istanze di tipi generici tramite reflection](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
   
  Nelle considerazioni che seguono si presuppone la conoscenza della terminologia relativa ai generics, ad esempio la differenza tra argomenti e parametri di tipo e quella tra tipi costruiti aperti o chiusi. Per altre informazioni, vedere [Generics](../../../docs/standard/generics/index.md).  
   
  Questa panoramica include le sezioni seguenti:  
   
--   [Come stabilire se un tipo o un metodo è generico](#is_this_a_generic_type_or_method)  
+- [Come stabilire se un tipo o un metodo è generico](#is_this_a_generic_type_or_method)  
   
--   [Generazione di tipi generici chiusi](#generating_closed_generic_types)  
+- [Generazione di tipi generici chiusi](#generating_closed_generic_types)  
   
--   [Analisi degli argomenti e dei parametri di tipo](#examining_type_arguments)  
+- [Analisi degli argomenti e dei parametri di tipo](#examining_type_arguments)  
   
--   [Invarianti](#invariants)  
+- [Invarianti](#invariants)  
   
--   [Argomenti correlati](#related_topics)  
+- [Argomenti correlati](#related_topics)  
   
 <a name="is_this_a_generic_type_or_method"></a>   
 ## <a name="is-this-a-generic-type-or-method"></a>Come stabilire se un tipo o un metodo è generico  
@@ -115,9 +115,9 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 ### <a name="source-of-a-generic-parameter"></a>Origine di un parametro generico  
  Un parametro di tipo generico può provenire dal tipo in esame, da un tipo di inclusione o da un metodo generico. È possibile determinarne l'origine nel modo seguente:  
   
--   Prima di tutto, usare la proprietà <xref:System.Type.DeclaringMethod%2A> per determinare se il parametro di tipo proviene da un metodo generico. Se il valore della proprietà non è un riferimento Null (`Nothing` in Visual Basic), l'origine è un metodo generico.  
+- Prima di tutto, usare la proprietà <xref:System.Type.DeclaringMethod%2A> per determinare se il parametro di tipo proviene da un metodo generico. Se il valore della proprietà non è un riferimento Null (`Nothing` in Visual Basic), l'origine è un metodo generico.  
   
--   Se l'origine non è un metodo generico, usare la proprietà <xref:System.Type.DeclaringType%2A> per determinare il tipo generico a cui appartiene il parametro di tipo generico.  
+- Se l'origine non è un metodo generico, usare la proprietà <xref:System.Type.DeclaringType%2A> per determinare il tipo generico a cui appartiene il parametro di tipo generico.  
   
  Se il parametro di tipo appartiene a un metodo generico, la proprietà <xref:System.Type.DeclaringType%2A> restituisce il tipo che ha dichiarato tale metodo, che non è un'informazione rilevante.  
   
@@ -147,9 +147,9 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Descrizione|  
+|Titolo|Description|  
 |-----------|-----------------|  
-|[How to: Examine and Instantiate Generic Types with Reflection](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md) (Procedura: Esaminare e creare istanze di tipi generici con reflection)|Mostra come usare le proprietà e i metodi di <xref:System.Type> e <xref:System.Reflection.MethodInfo> per esaminare i tipi generici.|  
+|[Procedura: Esaminare e creare istanze di tipi generici tramite reflection](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|Mostra come usare le proprietà e i metodi di <xref:System.Type> e <xref:System.Reflection.MethodInfo> per esaminare i tipi generici.|  
 |[Generics](../../../docs/standard/generics/index.md)|Descrive la funzionalità generics con la relativa modalità di supporto in .NET Framework.|  
 |[Procedura: Definire un tipo generico tramite reflection emit](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Mostra come usare la reflection emit per generate tipi generici in assembly dinamici.|  
 |[Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Descrive la classe <xref:System.Type> e vengono forniti esempi di codice in cui viene descritto l'uso di <xref:System.Type> con diverse classi di reflection per ottenere informazioni su costruttori, metodi, campi, proprietà ed eventi.|

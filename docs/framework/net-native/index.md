@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3c845cefad451c608f5c095e4941c3368dc9975
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28b09bf07d831747be0006ffe1f1d8c5ac5171ce
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650553"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052637"
 ---
 # <a name="compiling-apps-with-net-native"></a>Compilazione di app con .NET Native
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] è una tecnologia di precompilazione per la compilazione e distribuzione di App di Windows che è inclusa in Visual Studio 2015 e versioni successive. che compila automaticamente la versione finale delle app scritte in codice gestito (C# o Visual Basic) e destina .NET Framework e Windows 10 al codice nativo.  
+.NET native è una tecnologia di precompilazione per la compilazione e distribuzione di App di Windows che è inclusa in Visual Studio 2015 e versioni successive. che compila automaticamente la versione finale delle app scritte in codice gestito (C# o Visual Basic) e destina .NET Framework e Windows 10 al codice nativo.  
   
- In genere, le applicazioni che usano .NET Framework vengono compilate in Microsoft Intermediate Language (IL). In fase di esecuzione, il compilatore just-in-time (JIT) traduce IL in codice nativo. Al contrario, [!INCLUDE[net_native](../../../includes/net-native-md.md)] consente di compilare applicazioni Windows direttamente in codice nativo. Per gli sviluppatori, questo significa che:  
+ In genere, le applicazioni che usano .NET Framework vengono compilate in Microsoft Intermediate Language (IL). In fase di esecuzione, il compilatore just-in-time (JIT) traduce IL in codice nativo. Al contrario, .NET Native compila le app Windows direttamente in codice nativo. Per gli sviluppatori, questo significa che:  
   
 - Le app offrono le prestazioni del codice nativo. In genere, le prestazioni risulteranno superiori al codice che viene innanzitutto compilato a livello di integrità e quindi compilato in codice nativo tramite il compilatore JIT. 
   
@@ -28,7 +28,7 @@ ms.locfileid: "64650553"
   
 - È possibile continuare a sfruttare le risorse fornite da .NET Framework, tra cui la libreria di classi, gestione della memoria e Garbage Collection automatiche e la gestione delle eccezioni.  
   
- Per gli utenti delle applicazioni, [!INCLUDE[net_native](../../../includes/net-native-md.md)] offre i seguenti vantaggi:  
+ Per gli utenti delle app .NET nativa offre i seguenti vantaggi:  
   
 - Tempi di esecuzione per la maggior parte delle App e gli scenari.
   
@@ -41,17 +41,17 @@ ms.locfileid: "64650553"
 > [!IMPORTANT]
 > Per la maggior parte delle App e gli scenari, .NET Native offre tempi di avvio significativamente più veloce e prestazioni superiori rispetto a un'app compilata in linguaggio intermedio o di un'immagine NGEN. Tuttavia, i risultati possono variare. Per assicurarsi che l'app ha tratto vantaggio dai miglioramenti delle prestazioni di .NET Native, è necessario confrontare le prestazioni con quello della versione non - .NET Native dell'app. Per altre informazioni, vedere [panoramica delle sessioni di prestazioni](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
  
-Ma [!INCLUDE[net_native](../../../includes/net-native-md.md)] prevede molto più di una semplice compilazione in codice nativo: trasforma il modo in cui le applicazioni di .NET Framework vengono compilate ed eseguite. In particolare:  
+Ma prevede più di una compilazione in codice nativo .NET Native. trasforma il modo in cui le applicazioni di .NET Framework vengono compilate ed eseguite. In particolare:  
   
 - Durante la precompilazione, le parti necessarie di .NET Framework vengono collegate staticamente nell'applicazione. Ciò consente di eseguire l'applicazione con le librerie app-local di .NET Framework e di effettuare l'analisi globale per offrire prestazioni ottimali del compilatore. Di conseguenza, l'avvio delle applicazioni sarà più rapido e coerente dopo l'aggiornamento di .NET Framework.  
   
-- Il [!INCLUDE[net_native](../../../includes/net-native-md.md)] runtime è ottimizzato per la precompilazione statica e nella maggior parte dei casi offre prestazioni superiori. Allo stesso tempo, mantiene le funzionalità di reflection di base che gli sviluppatori troveranno estremamente produttive.  
+- Il runtime di .NET Native è ottimizzato per la precompilazione statica e nella maggior parte dei casi offre prestazioni superiori. Allo stesso tempo, mantiene le funzionalità di reflection di base che gli sviluppatori troveranno estremamente produttive.  
   
-- [!INCLUDE[net_native](../../../includes/net-native-md.md)] usa lo stesso back-end del compilatore C++, che è ottimizzato per scenari di precompilazione statici.  
+- .NET native Usa il back-end stesso come il C++ compilatore, che è ottimizzato per scenari di precompilazione statici.  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] può offrire i vantaggi delle prestazioni di C++ agli sviluppatori di codice gestito perché usa strumenti identici o simili come C++ dietro le quinte, come illustrato in questa tabella.  
+ .NET native è in grado di offrire i vantaggi delle prestazioni di C++ gestire gli sviluppatori di codice perché Usa gli strumenti identici o simili come C++ dietro le quinte, come illustrato in questa tabella.  
   
-||[!INCLUDE[net_native](../../../includes/net-native-md.md)]|C++|  
+||.NET Native|C++|  
 |-|----------------------------------------------------------------|-----------|  
 |Librerie|.NET Framework + Windows Runtime|Win32 + Windows Runtime|  
 |Compilatore|Compilatore di ottimizzazione UTC|Compilatore di ottimizzazione UTC|  

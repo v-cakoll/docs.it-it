@@ -15,12 +15,12 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633886"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882481"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Procedura: Visualizzare le informazioni su data e ora localizzate agli utenti del Web
 Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni di analisi e formattazione di valori di data e ora non devono essere basate su un formato predefinito, che molto spesso corrisponde al formato delle impostazioni cultura locali del server Web, durante l'interazione con l'utente. Al contrario, i Web Form che gestiscono stringhe di data e ora immesse dall'utente devono analizzare le stringhe tramite le impostazioni cultura preferite dell'utente. Analogamente, i dati di data e ora devono essere visualizzati all'utente in un formato conforme alle impostazioni cultura dell'utente stesso. In questo argomento viene illustrato come eseguire questa operazione.  
@@ -98,7 +98,7 @@ Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni
  Il codice può chiamare il metodo <xref:System.DateTime.Parse%2A> o <xref:System.DateTime.TryParse%2A> per convertire la rappresentazione di stringa dell'utente di una data e un'ora in un valore <xref:System.DateTime>. Per una singola operazione di analisi, possono essere necessarie chiamate ripetute a un metodo di analisi. Di conseguenza, il metodo <xref:System.DateTime.TryParse%2A> è quello preferibile perché restituisce `false` se un'operazione di analisi non riesce. Al contrario, la gestione delle eccezioni ripetute che possono essere generate dal metodo <xref:System.DateTime.Parse%2A> può rivelarsi un problema molto costoso in un'applicazione Web.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Per compilare il codice, creare una pagina Web [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] senza code-behind. Copiare quindi l'esempio nella pagina Web in modo da sostituire tutto il codice esistente. La pagina Web [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] deve contenere i controlli seguenti:  
+ Per compilare il codice, creare una pagina Web ASP.NET senza code-behind. Copiare quindi l'esempio nella pagina Web in modo da sostituire tutto il codice esistente. La pagina Web ASP.NET deve contenere i controlli seguenti:  
   
 - Controllo <xref:System.Web.UI.WebControls.Label>, che non è referenziato nel codice. Impostarne la proprietà <xref:System.Web.UI.WebControls.TextBox.Text%2A> su "Immettere un numero:".  
   

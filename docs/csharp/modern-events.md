@@ -3,12 +3,12 @@ title: Schema di eventi .NET Core aggiornato
 description: Informazioni su come lo schema di eventi .NET Core favorisca la flessibilità grazie alla compatibilità con le versioni precedenti e come implementare l'elaborazione sicura di eventi con sottoscrittori asincroni.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 3cab80a0f4fcd3343fdeff265135f1503c036514
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 158295215932f54c75afdf1e96d48453434129fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188482"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751781"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Schema di eventi .NET Core aggiornato
 
@@ -23,9 +23,23 @@ Il programma funzionerà esattamente allo stesso modo.
 
 È anche possibile modificare `SearchDirectoryArgs` in uno struct se si esegue una modifica aggiuntiva:
 
-[!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
+```csharp
+internal struct SearchDirectoryArgs
+{
+    internal string CurrentSearchDirectory { get; }
+    internal int TotalDirs { get; }
+    internal int CompletedDirs { get; }
 
-La modifica aggiuntiva consiste nell'effettuare una chiamata al costruttore predefinito prima di specificare il costruttore che inizializza tutti i campi. Senza questa aggiunta, le regole del linguaggio C# segnalano un accesso alle proprietà precedente alla loro assegnazione.
+    internal SearchDirectoryArgs(string dir, int totalDirs, int completedDirs) : this()
+    {
+        CurrentSearchDirectory = dir;
+        TotalDirs = totalDirs;
+        CompletedDirs = completedDirs;
+    }
+}
+```
+
+La modifica aggiuntiva consiste nell'effettuare una chiamata al costruttore senza parametri prima di specificare il costruttore che inizializza tutti i campi. Senza questa aggiunta, le regole del linguaggio C# segnalano un accesso alle proprietà precedente alla loro assegnazione.
 
 Non modificare `FileFoundArgs` da classe (tipo riferimento) a struct (tipo valore) poiché il protocollo di gestione dell'annullamento richiede che gli argomenti degli eventi vengano passati per riferimento. Se è stata apportata la stessa modifica, la classe di ricerca file non potrà mai osservare le modifiche apportate da un sottoscrittore di eventi. Per ogni sottoscrittore verrà usata una nuova copia della struttura che sarà una copia diversa da quella vista dall'oggetto di ricerca file.
 

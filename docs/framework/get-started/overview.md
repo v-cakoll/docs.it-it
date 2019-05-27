@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4aad615df6db5a29b9af21b585ea2b0dfbdedf4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093684"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878045"
 ---
 # <a name="overview-of-the-net-framework"></a>Panoramica di .NET Framework
 
@@ -45,7 +45,7 @@ Internet Explorer è un esempio di app non gestita che contiene il runtime in fo
 
 L'illustrazione seguente visualizza la relazione di Common Language Runtime e della libreria di classi con le app e con l'intero sistema. Viene inoltre mostrato come opera il codice gestito all'interno di un'architettura più ampia.
 
-![Codice gestito all'interno di un'architettura più ampia](../../../docs/framework/get-started/media/circle.gif "circle") .NET Framework nel contesto
+![Screenshot che visualizza il funzionamento del codice gestito all'interno di un'architettura più ampia.](./media/overview/language-runtime-class-library-relationship.gif)
 
 Nelle sezioni seguenti vengono descritte più dettagliatamente le principali funzionalità di .NET Framework.
 

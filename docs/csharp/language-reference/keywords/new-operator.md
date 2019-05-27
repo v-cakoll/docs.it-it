@@ -5,12 +5,12 @@ ms.date: 03/15/2018
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: e528771d7afeec705f35fa3093a3e4f534b3a1e4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ce3d39c42dc35ca3038fc38edd9327e9b96fb20f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239852"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633426"
 ---
 # <a name="new-operator-c-reference"></a>Operatore new (Riferimenti per C#)
 
@@ -27,7 +27,7 @@ var query = from cust in customers
             select new { Name = cust.Name, Address = cust.PrimaryAddress };
 ```
 
-L'operatore `new` viene usato anche per richiamare il costruttore predefinito per i tipi di valore. Ad esempio:
+L'operatore `new` viene usato anche per richiamare il costruttore senza parametri per i tipi di valore. Ad esempio:
 
 ```csharp
 int i = new int();
@@ -41,7 +41,7 @@ int i = 0;
 
 Per un elenco completo dei valori predefiniti, vedere [Tabella dei valori predefiniti](default-values-table.md).
 
-È utile ricordare che è errato dichiarare un costruttore predefinito per uno [struct](struct.md) poiché ogni tipo di valore ha implicitamente un costruttore predefinito pubblico. È possibile dichiarare costruttori con parametri su un tipo struct per impostarne i valori iniziali, ma questa operazione è necessaria solo se sono richiesti valori diversi da quello predefinito.
+È utile ricordare che è errato dichiarare un costruttore senza parametri per uno [struct](struct.md) poiché ogni tipo di valore ha implicitamente un costruttore senza parametri pubblico. È possibile dichiarare costruttori con parametri su un tipo struct per impostarne i valori iniziali, ma questa operazione è necessaria solo se sono richiesti valori diversi da quello predefinito.
 
 Sia gli oggetti di tipo valore come gli struct che gli oggetti di tipo riferimento come le classi vengono eliminati automaticamente, ma gli oggetti di tipo valore vengono eliminati quando viene eliminato il loro contesto contenitore, mentre gli oggetti di tipo riferimento vengono eliminati da Garbage Collector in un momento non specificato dopo la rimozione dell'ultimo riferimento a essi relativo. Per i tipi che contengono risorse come ad esempio gli handle di file o le connessioni di rete, è consigliabile adottare la pulitura deterministica per garantire che le risorse contenute vengano rilasciate nel più breve tempo possibile. Per altre informazioni, vedere [Istruzione using](using-statement.md).
 

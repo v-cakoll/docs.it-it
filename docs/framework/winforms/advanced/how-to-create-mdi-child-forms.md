@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: fbc92c03da69dd452f35e5b4e00cd4a9ca17e252
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8965231307da84fd555b181440978adbea7e7244
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211187"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052837"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Procedura: Creare form figlio MDI
 
@@ -34,7 +34,7 @@ Nella procedura seguente, si userà Visual Studio per creare un form figlio MDI 
 
 4. Nelle **Esplora soluzioni**, fare clic sul progetto, scegliere **Add**, quindi selezionare **Aggiungi nuovo elemento**.
 
-5. Nel **Aggiungi nuovo elemento** finestra di dialogo **Windows Form** (in Visual Basic o Visual c#) o **Windows Forms Application (.NET)** (in [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) dal  **I modelli** riquadro. Nel **Name** casella, come nome del form **Form2**. Scegliere il **Open** pulsante per aggiungere il form al progetto.
+5. Nel **Aggiungi nuovo elemento** finestra di dialogo **Windows Form** (in Visual Basic o Visual C#) oppure **Windows Forms Application (.NET)** (in Visual C++) dal **Modelli** riquadro. Nel **Name** casella, come nome del form **Form2**. Scegliere il **Open** pulsante per aggiungere il form al progetto.
 
     > [!NOTE]
     > Il form figlio MDI creato in questo passaggio è un Windows Form standard. Dispone pertanto di una proprietà <xref:System.Windows.Forms.Form.Opacity%2A> che consente di controllare la trasparenza del form. La proprietà <xref:System.Windows.Forms.Form.Opacity%2A>, tuttavia, è stata progettata per le finestre di primo livello. Per evitare problemi di disegno, non usarla con i form figlio MDI.

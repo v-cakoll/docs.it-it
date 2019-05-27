@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b7e8a4d92661b974fba7c88989891b30e54e94d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a236b3b4b5c4cde66bad2b460637bb533b764be
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218451"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881608"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5
 Il programma di installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usa [Gestione riavvio](https://go.microsoft.com/fwlink/?LinkId=231425) per evitare, quando possibile, i riavvii del sistema durante l'installazione. Se il programma di installazione dell'app installa .NET Framework, può interagire con la Gestione riavvio per sfruttare i vantaggi di questa funzionalità. Per altre informazioni, vedere [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
@@ -26,8 +26,7 @@ Il programma di installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md
   
  Se la Gestione riavvio rileva una situazione in cui è necessario riavviare il sistema anche se le app in esecuzione vengono chiuse, non viene visualizzato il messaggio.  
   
- ![Chiudere una finestra di dialogo applicazione](../../../docs/framework/deployment/media/closeapplicationdialog.png "CloseApplicationDialog")  
-Richiesta di chiusura delle app .NET Framework in uso  
+ ![Finestra di dialogo Chiudi applicazione con i programmi attualmente in esecuzione.](./media/reducing-system-restarts/close-application-dialog.png)  
   
 ## <a name="using-a-chained-installer"></a>Uso di un programma di installazione concatenato  
  Se si vuole ridistribuire .NET Framework con l'app, ma si preferisce usare un programma di installazione e un'interfaccia utente personalizzati, è possibile includere (concatenare) il processo di installazione di .NET Framework nel processo di installazione. Per altre informazioni sulle installazioni concatenate, vedere [Guida alla distribuzione per sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md). Per ridurre i riavvii del sistema in installazioni concatenate, il programma di installazione di .NET Framework elenca le app da chiudere. Il programma di installazione personalizzato deve specificare tali informazioni all'utente tramite un'interfaccia utente, ad esempio una finestra di messaggio, ottenere la risposta dell'utente e quindi passare la risposta al programma di installazione di .NET Framework. Per un esempio di programma di installazione concatenata, vedere [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  

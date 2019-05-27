@@ -1,18 +1,18 @@
 ---
 title: Operatori - Guida per programmatori C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 04/30/2019
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fd10999066f599d819ef188e09028c64c6a5e9e6
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307468"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064050"
 ---
 # <a name="operators-c-programming-guide"></a>Operatori (Guida per programmatori C#)
 
@@ -26,108 +26,19 @@ Nel linguaggio C# un *operatore* è un elemento del programma che si applica a u
   
  [!code-csharp[csProgGuideStatements#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#6)]  
   
-## <a name="operators-evaluation-and-operator-precedence"></a>Operatori, valutazione e precedenza operatori
+Un operando può essere un'espressione valida composta da codice di qualsiasi lunghezza e può includere un numero qualsiasi di sottoespressioni. In un'espressione che contiene più operatori, l'ordine in cui vengono applicati gli operatori è determinata dalla *precedenza tra operatori*, l' *associatività*e le parentesi.  
 
- Un operando può essere un'espressione valida composta da codice di qualsiasi lunghezza e può includere un numero qualsiasi di sottoespressioni. In un'espressione che contiene più operatori, l'ordine in cui vengono applicati gli operatori è determinata dalla *precedenza tra operatori*, l' *associatività*e le parentesi.  
+## <a name="operator-precedence"></a>Precedenza tra gli operatori
   
- Ogni operatore ha una precedenza definita. In un'espressione che contiene più operatori che dispongono di diversi livelli di precedenza, la precedenza degli operatori determina l'ordine in cui gli operatori verranno valutati. L'istruzione che segue, ad esempio, assegna il valore 3 a `n1`.  
-  
- `n1 = 11 - 2 * 4;`  
-  
- La moltiplicazione viene eseguita per prima perché ha la precedenza sulla sottrazione.  
-  
- Nella tabella riportata di seguito gli operatori sono suddivisi in categorie in base al tipo di operazione che eseguono. Le categorie sono elencate in ordine di precedenza.  
-  
- **Operatori primari**  
-  
-|Espressione|Description|  
-|----------------|-----------------|  
-|x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|Accesso ai membri<br /><br /> Accesso ai membri condizionali|  
-|f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|Chiamata a metodi e delegati|  
-|a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|Accesso a matrici e indicizzatori<br /><br /> Accesso a matrici e indicizzatori condizionali|  
-|x[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)|Post-incremento|  
-|x[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)|Post-decremento|  
-|[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)|Creazione di oggetti e delegati|  
-|`new` T(...){...}|Creazione di oggetti con inizializzatore. Vedere [Inizializzatori di oggetto e di insieme](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).|  
-|`new` {...}|Inizializzatore di oggetti anonimi. Vedere [Tipi anonimi](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).|  
-|`new` T[...]|Creazione di matrici. Vdere [Matrici](../../../csharp/programming-guide/arrays/index.md).|  
-|[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)|Ottenere l'oggetto System.Type per T|  
-|[checked](../../../csharp/language-reference/keywords/checked.md)(x)|Valutare l'espressione in un contesto controllato (checked)|  
-|[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)|Valutare l'espressione in un contesto non controllato (unchecked)|  
-|[default](../../../csharp/language-reference/keywords/default.md) (T)|Ottenere il valore predefinito del tipo T|  
-|[delegate](../../../csharp/language-reference/keywords/delegate.md) {}|Funzione anonima (metodo anonimo)|  
-  
- **Operatori unari**  
-  
-|Espressione|Description|  
-|----------------|-----------------|  
-|[+](../../../csharp/language-reference/operators/addition-operator.md)x|identità|  
-|[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Negazione|  
-|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|Negazione logica|  
-|[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Negazione bit per bit|  
-|[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Pre-incremento|  
-|[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Pre-decremento|  
-|[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|Convertire in modo esplicito x nel tipo T|  
-  
- **Operatori di moltiplicazione**  
-  
-|Espressione|Description|  
-|----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/arithmetic-operators.md#multiplication-operator-)|Moltiplicazione|  
-|[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|Divisione|  
-|[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|Resto|  
-  
- **Operatori di addizione**  
-  
-|Espressione|Description|  
-|----------------|-----------------|  
-|x [+](../../../csharp/language-reference/operators/addition-operator.md) y|Addizione, concatenazione di stringhe, combinazione di delegati|  
-|x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|Sottrazione, rimozione di delegati|  
-  
- **Operatori shift**  
-  
-|Espressione|Description|  
-|----------------|-----------------|  
-|x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|Spostamento a sinistra|  
-|x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|Spostamento a destra|  
-  
- **Operatori relazionali e operatori di tipo**  
-  
-|Espressione|Description|  
-|----------------|-----------------|  
-|x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|Minore di|  
-|x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|Maggiore di|  
-|x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y|Minore o uguale a|  
-|x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y|Maggiore o uguale a|  
-|x [is](../../../csharp/language-reference/keywords/is.md) T|Restituisce true se x è un oggetto T; in caso contrario, false|  
-|x [as](../../../csharp/language-reference/keywords/as.md) T|Restituisce x tipizzato come T oppure Null se x non è un oggetto T|  
-  
- **Operatori di uguaglianza**  
-  
-|Espressione|Description|  
-|----------------|-----------------|  
-|x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Uguale|  
-|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Non uguaglianza|  
-  
- **Operatori logici, condizionali e Null**  
-  
-|Category|Espressione|Description|  
-|--------------|----------------|-----------------|  
-|AND logico|x [&](../../../csharp/language-reference/operators/and-operator.md) y|AND Integer bit per bit, AND logico booleano|  
-|XOR logico|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|XOR Integer bit per bit, XOR logico booleano|  
-|OR logico|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|OR Integer bit per bit, OR logico booleano|  
-|AND condizionale|x [&&](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|Restituisce y solo se x è true|  
-|OR condizionale|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|Restituisce y solo se x è false|  
-|Null-coalescing|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) s|Restituisce y se x è Null; in caso contrario x|  
-|Condizionale|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Restituisce y se x è true, z se x è false|  
-  
- **Operatori di assegnazione e operatori anonimi**  
-  
-|Espressione|Description|  
-|----------------|-----------------|  
-|[=](../../../csharp/language-reference/operators/assignment-operator.md)|Assegnazione|  
-|x op= y|Assegnazione composta. Supporta gli operatori seguenti: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [/=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [%=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
-|(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|Funzione anonima (espressione lambda)|  
+Ogni operatore ha una precedenza definita. In un'espressione che contiene più operatori che dispongono di diversi livelli di precedenza, la precedenza degli operatori determina l'ordine in cui gli operatori verranno valutati. L'istruzione che segue, ad esempio, assegna il valore 3 a `n1`:
+
+```csharp
+n1 = 11 - 2 * 4;
+```
+
+La moltiplicazione viene eseguita per prima perché ha la precedenza sulla sottrazione.
+
+Per l'elenco completo degli operatori C# ordinati in base al livello di precedenza, vedere [Operatori C#](../../language-reference/operators/index.md).
   
 ## <a name="associativity"></a>Associazione
 
@@ -169,13 +80,11 @@ a = (b = c);
   
 ## <a name="operator-overloading"></a>Overload degli operatori
 
- È possibile modificare il comportamento degli operatori per classi e struct personalizzati. Questo processo è denominato *overload degli operatori*. Per altre informazioni, vedere [Operatori che supportano l'overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) e l'articolo relativo alla parola chiave [operator](../../../csharp/language-reference/keywords/operator.md).  
-  
-## <a name="related-sections"></a>Sezioni correlate
-
- Per altre informazioni, vedere [Parole chiave per operatori](../../../csharp/language-reference/keywords/operator-keywords.md) e [Operatori C#](../../../csharp/language-reference/operators/index.md).  
+È possibile definire il comportamento di determinati operatori per classi e struct personalizzati. Questo processo è denominato *overload degli operatori*. Per altre informazioni, vedere [Operatori che supportano l'overload](overloadable-operators.md) e l'articolo relativo alla parola chiave [operator](../../language-reference/keywords/operator.md).
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Istruzioni, espressioni e operatori](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+- [Guida per programmatori C#](../index.md)
+- [Istruzioni, espressioni e operatori](index.md)
+- [Operatori C#](../../language-reference/operators/index.md)
+- [Parole chiave per gli operatori](../../language-reference/keywords/operator-keywords.md)

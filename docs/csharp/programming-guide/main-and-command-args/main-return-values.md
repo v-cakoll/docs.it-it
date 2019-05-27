@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: f515268af13ef95b8b6d9a79f71c49d5d4a98d05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ea6f93e52ade91e61bdfcbc35aeb56de9101e80f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149838"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878921"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valori restituiti da Main() (Guida per programmatori C#)
 
@@ -22,7 +22,7 @@ Può anche restituire `int`:
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-Se il valore restituito da `Main` non viene usato, la restituzione di `void` consente di semplificare leggermente il codice. Tuttavia, la restituzione di un valore intero consente al programma di comunicare le informazioni sullo stato ad altri programmi o script che richiamano il file eseguibile. Il valore restituito da `Main` viene considerato come codice di uscita per il processo. L'esempio seguente illustra come è possibile accedere al valore restituito da `Main`.
+Se il valore restituito da `Main` non viene usato, la restituzione di `void` consente di semplificare leggermente il codice. Tuttavia, la restituzione di un valore intero consente al programma di comunicare le informazioni sullo stato ad altri programmi o script che richiamano il file eseguibile. Il valore restituito da `Main` viene considerato come codice di uscita per il processo. Se viene restituito `void` da `Main` il codice di uscita sarà in modo implicito `0`. L'esempio seguente illustra come è possibile accedere al valore restituito da `Main`.
 
 ## <a name="example"></a>Esempio
 
@@ -99,4 +99,3 @@ Quando il punto di ingresso dell'applicazione restituisce `Task` o `Task<int>` i
 - [Riferimenti per C#](../index.md)
 - [Main() e argomenti della riga di comando](index.md)
 - [Procedura: Visualizzare gli argomenti della riga di comando](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Procedura: Accedere agli argomenti della riga di comando usando foreach](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)

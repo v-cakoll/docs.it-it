@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ca8cf76745190bd9819dde522c34e57952cd1ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c6f1a2d23d5f33ba7e4f0d51f795e75d7cf785e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906321"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052447"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Riferimento a file di configurazione di direttive di runtime (rd.xml)
 
@@ -405,7 +405,7 @@ L'applicazione del criterio `Serialize` a un campo implica le seguenti modifiche
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>L'effetto dei criteri XmlSerializer, DataContractSerializer e DataContractJsonSerializer
 
-A differenza del criterio `Serialize`, destinato ai serializzatori basati sulla reflection, i criteri <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sono usati per abilitare un set di serializzatori noti alla catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Questi serializzatori non vengono implementati tramite reflection, ma l'insieme di tipi che possono essere serializzati in fase di esecuzione è determinato in modo simile come tipi soggetti a reflection.
+A differenza di `Serialize` criteri, che sono destinato ai serializzatori basati su reflection, il <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>, e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> criteri vengono usati per abilitare un set di serializzatori noti alla catena di strumenti .NET Native. Questi serializzatori non vengono implementati tramite reflection, ma l'insieme di tipi che possono essere serializzati in fase di esecuzione è determinato in modo simile come tipi soggetti a reflection.
 
 L'applicazione di uno di questi criteri a un tipo consente di serializzare il tipo con il serializzatore corrispondente. Inoltre, eventuali tipi che il motore di serializzazione determina come serializzabili saranno indicati come tali.
 

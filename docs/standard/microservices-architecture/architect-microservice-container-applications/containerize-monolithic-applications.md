@@ -1,15 +1,13 @@
 ---
 title: Inserimento di applicazioni monolitiche nei contenitori
 description: L'inserimento di applicazioni monolitiche nei contenitori, anche se non consente di usufruire di tutti i vantaggi dell'architettura dei microservizi, offre fin dall'inizio vantaggi notevoli per la distribuzione.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: d1de4c4beb8c60aa543e5c71243d93b83fe52072
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 061afe86e0d38f058becde2b3afdb45b4428517a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130888"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640820"
 ---
 # <a name="containerizing-monolithic-applications"></a>Inserimento di applicazioni monolitiche nei contenitori
 
@@ -35,7 +33,7 @@ Dal punto di vista dell'infrastruttura, ogni server può eseguire molte applicaz
 
 ![Un host può eseguire diverse app monolitiche, ognuna in un contenitore separato.](./media/image2.png)
 
-**Figura 4-2**. Approccio monolitico: Host che esegue più applicazioni, ciascuna delle quali in esecuzione come contenitore
+**Figura 4-2**. Approccio monolitico: host che esegue più applicazioni, ciascuna delle quali in esecuzione come contenitore
 
 Le applicazioni monolitiche in Microsoft Azure possono essere distribuite usando macchine virtuali dedicate per ogni istanza. Con i [set di scalabilità di macchine virtuali di Microsoft Azure](https://azure.microsoft.com/documentation/services/virtual-machine-scale-sets/) è anche possibile ridimensionare facilmente le macchine virtuali. Anche il [Servizio app di Azure](https://azure.microsoft.com/services/app-service/) può eseguire applicazioni monolitiche e scalare facilmente le istanze senza la necessità di gestire le macchine virtuali. Dal 2016, i Servizi app di Azure possono eseguire anche singole istanze di contenitori Docker, semplificando la distribuzione.
 

@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6939efa608f4887dfdb00abe8292bec841929440
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532192"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664633"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Stringhe di formato di data e ora standard
 Una stringa di formato data e ora standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore di data e ora. Qualsiasi stringa di formato data e ora contenente più di un carattere, inclusi gli spazi, viene interpretata come una stringa di formato data e ora personalizzata. Per altre informazioni, vedere [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Una stringa di formato standard o personalizzata può essere usata in due modi:  
   
--   Per definire la stringa risultante da un'operazione di formattazione.  
+- Per definire la stringa risultante da un'operazione di formattazione.  
   
--   Per definire la rappresentazione di testo di un valore di data e ora che può essere convertito in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> da un'operazione di analisi.  
+- Per definire la rappresentazione di testo di un valore di data e ora che può essere convertito in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> da un'operazione di analisi.  
 
 > [!TIP]
 >  È possibile scaricare l' [utilità di formattazione](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), un'applicazione che consente di applicare stringhe di formato a valori numerici o di data e ora e di visualizzare la stringa di risultato.  
@@ -63,17 +63,17 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Se in un'operazione di formattazione viene eseguito il mapping di una stringa di formato standard alla stringa di formato personalizzata di impostazioni cultura particolari, nell'applicazione possono essere definite le impostazioni cultura specifiche le cui stringhe di formato personalizzate vengono usate in una di queste modalità:  
   
--   È possibile usare le impostazioni cultura predefinite, o correnti. Nell'esempio seguente viene visualizzata una data usando il formato di data breve delle impostazioni cultura correnti. In questo caso le impostazioni cultura correnti sono en-US.  
+- È possibile usare le impostazioni cultura predefinite, o correnti. Nell'esempio seguente viene visualizzata una data usando il formato di data breve delle impostazioni cultura correnti. In questo caso le impostazioni cultura correnti sono en-US.  
   
      [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
--   È possibile passare un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura di cui deve essere usata la formattazione a un metodo con un parametro <xref:System.IFormatProvider>. Nell'esempio seguente viene visualizzata una data usando il formato di data breve delle impostazioni cultura pt-BR.  
+- È possibile passare un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura di cui deve essere usata la formattazione a un metodo con un parametro <xref:System.IFormatProvider>. Nell'esempio seguente viene visualizzata una data usando il formato di data breve delle impostazioni cultura pt-BR.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
--   È possibile passare un oggetto <xref:System.Globalization.DateTimeFormatInfo> che fornisce informazioni di formattazione a un metodo con un parametro <xref:System.IFormatProvider>. Nell'esempio seguente viene visualizzata una data usndo il formato di data breve da un oggetto <xref:System.Globalization.DateTimeFormatInfo> per le impostazioni cultura hr-HR.  
+- È possibile passare un oggetto <xref:System.Globalization.DateTimeFormatInfo> che fornisce informazioni di formattazione a un metodo con un parametro <xref:System.IFormatProvider>. Nell'esempio seguente viene visualizzata una data usndo il formato di data breve da un oggetto <xref:System.Globalization.DateTimeFormatInfo> per le impostazioni cultura hr-HR.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
@@ -249,11 +249,11 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  L'identificatore di formato standard "O" o "o" (e la stringa di formato personalizzata "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK") sfrutta i tre modi in cui lo standard ISO 8601 rappresenta le informazioni sul fuso orario per preservare la proprietà <xref:System.DateTime.Kind%2A> dei valori <xref:System.DateTime>:  
   
--   Il componente relativo al fuso orario dei valori di data e ora <xref:System.DateTimeKind.Local?displayProperty=nameWithType> è un offset rispetto all'ora UTC (ad esempio +01:00, -07:00). Anche tutti i valori <xref:System.DateTimeOffset> sono rappresentati in questo formato.  
+- Il componente relativo al fuso orario dei valori di data e ora <xref:System.DateTimeKind.Local?displayProperty=nameWithType> è un offset rispetto all'ora UTC (ad esempio +01:00, -07:00). Anche tutti i valori <xref:System.DateTimeOffset> sono rappresentati in questo formato.  
   
--   Il componente relativo al fuso orario dei valori di data e ora <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> usa "Z" (che sta per zero offset) per rappresentare l'ora UTC.  
+- Il componente relativo al fuso orario dei valori di data e ora <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> usa "Z" (che sta per zero offset) per rappresentare l'ora UTC.  
   
--   I valori di data e ora <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> non dispongono di informazioni sul fuso orario.  
+- I valori di data e ora <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> non dispongono di informazioni sul fuso orario.  
   
  Poiché l'identificatore di formato standard "O" o "o" è conforme a uno standard internazionale, l'operazione di formattazione o analisi che usa l'identificatore impiega sempre le impostazioni cultura invarianti e il calendario gregoriano.  
   

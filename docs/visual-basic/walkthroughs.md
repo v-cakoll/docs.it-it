@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 47c79b8d716be6c247be3ec66c9ef00fbc021973
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739462"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586273"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Procedure dettagliate relative al linguaggio Visual Basic
 Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, che li rende un ottimo strumento per apprendere l'utilizzo del prodotto o di una determinata area funzionale.  
@@ -72,7 +72,7 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  Illustra come usare le funzioni Visual Basic per determinare informazioni su un file, cercare una stringa in un file e scrivere in un file.  
   
  [Modifica di file mediante i metodi .NET Framework](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Viene illustrato come usare i metodi [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] per determinare informazioni su un file, cercare una stringa in un file e scrivere in un file.  
+ Illustra come usare i metodi .NET Framework per determinare informazioni su un file, cercare una stringa in un file e scrivere in un file.  
   
  [Persistenza di un oggetto in Visual Basic](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Viene illustrato come creare un oggetto semplice e rendere persistenti i relativi dati in un file.  

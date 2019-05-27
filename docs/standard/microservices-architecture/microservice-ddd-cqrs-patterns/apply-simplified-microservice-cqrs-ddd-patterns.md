@@ -1,15 +1,13 @@
 ---
 title: Applicazione di schemi CQRS e DDD semplificati in un microservizio
 description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | Riconoscere la relazione globale tra criteri CQRS e DDD.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ef3260143c91c2500becd7c8c1a6cd0b81dbf3d2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a5df8ce495b308df63af47ef1ec2ed26be2b5e37
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148067"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875896"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Applicare modelli CQRS e DDD semplificati in un microservizio
 
@@ -21,7 +19,7 @@ CQRS è uno schema architetturale che separa i modelli per la lettura e la scrit
 
 CQS è un concetto semplice: riguarda i metodi all'interno di un oggetto, che si tratti di query o comandi. Ogni metodo restituisce lo stato oppure modifica lo stato, ma non esegue entrambe le operazioni. Anche un singolo oggetto di schema di repository può essere conforme a CQS. CQS può essere considerato un principio fondamentale per CQRS.
 
-[Command and Query Responsibility Segregation (CQRS)](https://martinfowler.com/bliki/CQRS.html) è stato introdotto da Greg Young e fortemente promosso da Udi Dahan e altri esperti. È basato sul principio CQS, sebbene sia più dettagliato. Può essere considerato uno schema basato sui comandi e sugli eventi, oltre che facoltativamente sui messaggi asincroni. In molti casi, CQRS è correlato a scenari più avanzati, come l'uso di un database per le operazioni di lettura (query) diverso da quello per le operazioni di scrittura (aggiornamenti). Inoltre, un sistema CQRS più evoluto potrebbe implementare la [determinazione dell'origine degli eventi](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/) per il database degli aggiornamenti, consentendo di archiviare solo gli eventi nel modello di dominio, anziché archiviare i dati sullo stato corrente. In questa guida, tuttavia, non sarà applicato tale approccio. Verrà usato l'approccio più semplice a CQRS, che prevede solo la separazione delle query dai comandi.
+[Command and Query Responsibility Segregation (CQRS)](https://martinfowler.com/bliki/CQRS.html) è stato introdotto da Greg Young e fortemente promosso da Udi Dahan e altri esperti. È basato sul principio CQS, sebbene sia più dettagliato. Può essere considerato uno schema basato sui comandi e sugli eventi, oltre che facoltativamente sui messaggi asincroni. In molti casi, CQRS è correlato a scenari più avanzati, come l'uso di un database per le operazioni di lettura (query) diverso da quello per le operazioni di scrittura (aggiornamenti). Inoltre, un sistema CQRS più evoluto potrebbe implementare la [determinazione dell'origine degli eventi](https://martinfowler.com/eaaDev/EventSourcing.html) per il database degli aggiornamenti, consentendo di archiviare solo gli eventi nel modello di dominio, anziché archiviare i dati sullo stato corrente. In questa guida, tuttavia, non sarà applicato tale approccio. Verrà usato l'approccio più semplice a CQRS, che prevede solo la separazione delle query dai comandi.
 
 L'aspetto di separazione di CQRS viene ottenuto mediante il raggruppamento delle operazioni di query in un livello e dei comandi in un altro livello. Ogni livello dispone di un proprio modello di dati (si noti che parliamo di modello, non necessariamente di un database diverso) e viene creato tramite una specifica combinazione di schemi e tecnologie. Cosa ancora più importante, i due livelli possono essere contenuti nello stesso livello o microservizio, come illustrato nell'esempio (microservizio per gli ordini) usato per questa guida. In alternativa, possono essere implementati in diversi microservizi o processi, in modo da poter essere ottimizzati e scalati in orizzontale separatamente senza influire l'uno sull'altro.
 
@@ -34,6 +32,11 @@ Un esempio di questo tipo di servizio è il microservizio per gli ordini dell'ap
 **Figura 7-2**. Microservizio semplificato basato su CQRS e DDD
 
 Il livello dell'applicazione può essere la stessa API Web. L'aspetto di progettazione importante a questo proposito è che il microservizio ha suddiviso le query e i ViewModel (modelli di dati creati appositamente per le applicazioni client) dai comandi, dal modello di dominio e dalle transazioni seguendo lo schema CQRS. Questo approccio mantiene le query indipendenti da restrizioni e vincoli provenienti da schemi DDD che sono applicabili esclusivamente per le transazioni e gli aggiornamenti, come descritto nelle sezioni successive.
+
+## <a name="additional-resources"></a>Risorse aggiuntive
+
+ - **Greg Young. Versioning in an Event Sourced System** (Controllo delle versioni in un sistema con origini eventi - e-book online gratuito) \
+   <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]
 >[Precedente](index.md)

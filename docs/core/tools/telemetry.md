@@ -4,12 +4,12 @@ description: Informazioni sulle funzionalità di telemetria degli strumenti di .
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 3a757daab372b8be8bfe2ee27d910e21fa4e3337
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 82410863c81faa95edfb120c95ec6bc186ed1328
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718038"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751684"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria di .NET Core SDK
 
@@ -89,12 +89,12 @@ I dati pubblicati sono disponibili su base trimestrale e sono elencati in [dati 
 
 ### <a name="datasets"></a>Dataset
 
-[2016 - 3° trim.](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)  
-[2016 - 4° trim.](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)  
-[2017 - 1° trim.](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)  
-[2017 - 2° trim.](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)  
-[2017 - 3° trim.](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)  
-[2017 - 4° trim.](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)  
+- [2016 - 3° trim.](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)
+- [2016 - 4° trim.](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)
+- [2017 - 1° trim.](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)
+- [2017 - 2° trim.](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)
+- [2017 - 3° trim.](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)
+- [2017 - 4° trim.](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)
 
 Set di dati aggiuntivi vengono pubblicati con un formato URL standard. Sostituire `<YEAR>` con l'anno e sostituire `<QUARTER>` con il trimestre dell'anno (utilizzare `1`, `2`, `3`, o `4`). I file sono in formato con valori delimitati da tabulazioni (*TSV*).
 
@@ -102,11 +102,9 @@ Set di dati aggiuntivi vengono pubblicati con un formato URL standard. Sostituir
 
 ## <a name="license"></a>Licenza
 
-La distribuzione Microsoft di .NET Core è concessa in base alle [condizioni di licenza di MICROSOFT .NET LIBRARY](https://aka.ms/dotnet-core-eula). Nelle condizioni è inclusa la sezione "DATA", per l'abilitazione della telemetria (riportata di seguito).
+La distribuzione Microsoft di .NET Core è concessa in base alle [condizioni di licenza software Microsoft: Mirosoft .NET Library](https://aka.ms/dotnet-core-eula). Per informazioni dettagliate sulla raccolta e l'elaborazione dei dati, vedere la sezione intitolata "DATA".
 
 Questa licenza viene usata anche dai [pacchetti NuGet .NET](https://www.nuget.org/profiles/dotnetframework) per i quali, tuttavia, la funzionalità di telemetria non è abilitata (vedere la sezione [Ambito](#scope)).
-
-> 2. DATI. Il software può raccogliere informazioni sull'utente e sull'uso del software e inviarle a Microsoft. Microsoft può usare queste informazioni per migliorare i prodotti e i servizi. Per altre informazioni sulla raccolta dati, sull'uso nella documentazione della Guida e sull'informativa sulla privacy, vedere <http://go.microsoft.com/fwlink/?LinkId=528096>. L'uso del software viene considerato come autorizzazione all'applicazione di queste pratiche.
 
 ## <a name="disclosure"></a>Divulgazione
 

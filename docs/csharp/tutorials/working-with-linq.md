@@ -3,12 +3,12 @@ title: Uso di LINQ
 description: Questa esercitazione illustra come generare sequenze con LINQ, come scrivere i metodi da usare nelle query LINQ e come distinguere le modalità di valutazione eager e lazy.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 702770650533b0549e414a1de87acf17d77af4e3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815586"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063225"
 ---
 # <a name="working-with-linq"></a>Uso di LINQ
 
@@ -340,9 +340,9 @@ Oltre a LINQ, è stata illustrata una tecnica usata dai prestigiatori per i truc
 
 Per altre informazioni su LINQ, vedere:
 - [LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md)
-    - [Introduzione a LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
-    - [Nozioni di base su LINQ in C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
-        - [Operazioni di query LINQ di base (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-        - [Trasformazioni dati con LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-        - [Sintassi di query e sintassi di metodi in LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-        - [Funzionalità di C# che supportano LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)
+  - [Introduzione a LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
+  - [Nozioni di base su LINQ in C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
+    - [Operazioni di query LINQ di base (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+    - [Trasformazioni dati con LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+    - [Sintassi di query e sintassi di metodi in LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+    - [Funzionalità di C# che supportano LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)

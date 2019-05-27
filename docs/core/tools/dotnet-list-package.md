@@ -2,12 +2,12 @@
 title: Comando dotnet list package
 description: Il comando "dotnet list package" offre un'opzione utile per visualizzare un elenco dei riferimenti al pacchetto per un progetto o una soluzione.
 ms.date: 04/09/2019
-ms.openlocfilehash: bc38b94201f85ed4b22e11722ef5cabcb6fbf040
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 88ef3302a955eadc4167384312e4eb721dd496fb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481573"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631758"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -15,7 +15,7 @@ ms.locfileid: "59481573"
 
 ## <a name="name"></a>nome
 
-`dotnet list package` - Elenca i riferimenti al pacchetto per un progetto o una soluzione.
+`dotnet list package`: elenca i riferimenti al pacchetto per un progetto o una soluzione.
 
 ## <a name="synopsis"></a>Riepilogo
 

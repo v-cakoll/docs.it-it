@@ -9,25 +9,25 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: f0d5c4e48d8a44c2e39942cbe76acbb5ef44ea7d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3ff305a6b22918681561ed7262a7377dbdf7aadc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462773"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591509"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)
 
 Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unità, file e directory.
 
-Lo spazio dei nomi <xref:System.IO> contiene le classi <xref:System.IO.File> e <xref:System.IO.Directory> che forniscono la funzionalità [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] per la gestione di file e directory. Poiché i metodi di questi oggetti sono membri statici o condivisi, è possibile usarli direttamente senza prima creare un'istanza della classe. Associate a queste classi sono le classi <xref:System.IO.FileInfo> e <xref:System.IO.DirectoryInfo> che saranno note agli utenti della funzionalità `My`. Per usare queste classi è necessario specificare in modo completo i nomi oppure importare gli spazi dei nomi appropriati, includendo le istruzioni `Imports` all'inizio del codice in questione. Per altre informazioni, vedere [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).
+Lo spazio dei nomi <xref:System.IO> contiene le classi <xref:System.IO.File> e <xref:System.IO.Directory> che offrono la funzionalità .NET Framework per la gestione di file e directory. Poiché i metodi di questi oggetti sono membri statici o condivisi, è possibile usarli direttamente senza prima creare un'istanza della classe. Associate a queste classi sono le classi <xref:System.IO.FileInfo> e <xref:System.IO.DirectoryInfo> che saranno note agli utenti della funzionalità `My`. Per usare queste classi è necessario specificare in modo completo i nomi oppure importare gli spazi dei nomi appropriati, includendo le istruzioni `Imports` all'inizio del codice in questione. Per altre informazioni, vedere [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).
 
 > [!NOTE]
-> Altri argomenti di questa sezione usano l'oggetto `My.Computer.FileSystem` anziché le classi `System.IO` per lavorare con unità, file e directory. L'oggetto `My.Computer.FileSystem` è destinato principalmente all'uso nei programmi Visual Basic. Le classi `System.IO` sono destinate all'uso da parte di qualsiasi linguaggio che supporta [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], incluso Visual Basic.
+> Altri argomenti di questa sezione usano l'oggetto `My.Computer.FileSystem` anziché le classi `System.IO` per lavorare con unità, file e directory. L'oggetto `My.Computer.FileSystem` è destinato principalmente all'uso nei programmi Visual Basic. Le classi `System.IO` sono destinate all'uso da parte di qualsiasi linguaggio che supporta .NET Framework, incluso Visual Basic.
 
 ## <a name="definition-of-a-stream"></a>Definizione di un flusso
 
-Il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usa i flussi per supportare la lettura e scrittura su file. Un flusso è paragonabile a un set unidimensionale di dati contigui, con un inizio e una fine, e in cui il cursore indica la posizione corrente nel flusso.
+.NET Framework usa i flussi per supportare la lettura e scrittura su file. Un flusso è paragonabile a un set unidimensionale di dati contigui, con un inizio e una fine, e in cui il cursore indica la posizione corrente nel flusso.
 
 ![Il cursore mostra la posizione corrente all'interno del flusso dei file](./media/basics-of-net-framework-file-io-and-the-file-system/filestream-cursor-position.gif)
 
@@ -45,7 +45,7 @@ Per altre informazioni, vedere [Composing Streams](../../../../standard/io/compo
 
 ## <a name="types-of-streams"></a>Tipi di flussi
 
-Nel [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] un flusso è rappresentato dalla classe <xref:System.IO.Stream> che costituisce la classe astratta per tutti i flussi. Non è possibile creare direttamente un'istanza della classe <xref:System.IO.Stream> ma è necessario usare una delle classi che essa implementa.
+In .NET Framework un flusso è rappresentato dalla classe <xref:System.IO.Stream> che costituisce la classe astratta per tutti gli altri flussi. Non è possibile creare direttamente un'istanza della classe <xref:System.IO.Stream> ma è necessario usare una delle classi che essa implementa.
 
 Esistono molti tipi di flussi, ma per lavorare con l'input/output (I/O) su file, i tipi più importanti sono la classe <xref:System.IO.FileStream>, che fornisce un modo per leggere e scrivere sui file, e la classe <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>, che consente di creare file e directory in uno spazio di memorizzazione isolato. Altri flussi che possono essere usati quando si lavora con l'I/O su file includono:
 
@@ -84,7 +84,7 @@ La tabella seguente elenca le attività che coinvolgono l'accesso ai file e gli 
 
 ## <a name="file-permissions"></a>Autorizzazioni di file
 
-Il controllo dell'accesso ai file e alle directory può essere eseguito con la classe <xref:System.Security.Permissions.FileIOPermission>. Questo può essere particolarmente importante per gli sviluppatori che lavorano con i Web Form che, per impostazione predefinita, vengono eseguiti nel contesto di un account utente locale speciale denominato ASPNET, che viene creato come parte delle installazioni di [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] e [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Quando una tale applicazione richiede l'accesso a una risorsa, l'account utente ASPNET dispone di autorizzazioni limitate, che potrebbero impedire all'utente di eseguire azioni quali la scrittura in un file da un'applicazione Web. Per ulteriori informazioni, vedere <xref:System.Security.Permissions.FileIOPermission>.
+Il controllo dell'accesso ai file e alle directory può essere eseguito con la classe <xref:System.Security.Permissions.FileIOPermission>. Questo può essere particolarmente importante per gli sviluppatori che lavorano con i Web Form che, per impostazione predefinita, vengono eseguiti nel contesto di un account utente locale speciale denominato ASPNET, che viene creato come parte delle installazioni di ASP.NET e .NET Framework. Quando una tale applicazione richiede l'accesso a una risorsa, l'account utente ASPNET dispone di autorizzazioni limitate, che potrebbero impedire all'utente di eseguire azioni quali la scrittura in un file da un'applicazione Web. Per ulteriori informazioni, vedere <xref:System.Security.Permissions.FileIOPermission>.
 
 ## <a name="isolated-file-storage"></a>Archiviazione di file isolati
 

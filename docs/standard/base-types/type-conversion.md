@@ -26,37 +26,37 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04ed4dcaab8d39d8a34cadef8285ea8307f198c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea32efaad24f171b7d5ebfa457834b35edbddf4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659761"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664609"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversione di tipi in .NET Framework
 <a name="top"></a> A ogni valore è associato un tipo che definisce attributi quali la quantità di spazio allocato per il valore, l'intervallo di valori possibili supportati e i membri resi disponibili. Numerosi valori possono essere espressi mediante tipi diversi. Il valore 4, ad esempio, può essere espresso come intero o come valore a virgola mobile. Mediante la conversione di tipi viene creato un valore in un nuovo tipo equivalente al valore del tipo precedente, ma non viene necessariamente mantenuta l'identità, o il valore esatto, dell'oggetto originale.  
   
  .NET Framework supporta automaticamente le conversioni seguenti:  
   
--   Conversione da una classe derivata a una classe di base. Ciò significa, ad esempio, che un'istanza di qualsiasi classe o struttura può essere convertita in un'istanza <xref:System.Object>.  Questa conversione non richiede un operatore di conversione o di cast.  
+- Conversione da una classe derivata a una classe di base. Ciò significa, ad esempio, che un'istanza di qualsiasi classe o struttura può essere convertita in un'istanza <xref:System.Object>.  Questa conversione non richiede un operatore di conversione o di cast.  
   
--   Conversione da una classe di base a classe derivata originale. In C#, questa conversione richiede un operatore di cast. In Visual Basic, è necessario l'operatore `CType` se `Option Strict` è attivo.  
+- Conversione da una classe di base a classe derivata originale. In C#, questa conversione richiede un operatore di cast. In Visual Basic, è necessario l'operatore `CType` se `Option Strict` è attivo.  
   
--   Conversione da un tipo che implementa un'interfaccia a un oggetto di interfaccia che rappresenta tale interfaccia. Questa conversione non richiede un operatore di conversione o di cast.  
+- Conversione da un tipo che implementa un'interfaccia a un oggetto di interfaccia che rappresenta tale interfaccia. Questa conversione non richiede un operatore di conversione o di cast.  
   
--   Conversione da un oggetto di interfaccia al tipo originale che implementa l'interfaccia.  In C#, questa conversione richiede un operatore di cast. In Visual Basic, è necessario l'operatore `CType` se `Option Strict` è attivo.  
+- Conversione da un oggetto di interfaccia al tipo originale che implementa l'interfaccia.  In C#, questa conversione richiede un operatore di cast. In Visual Basic, è necessario l'operatore `CType` se `Option Strict` è attivo.  
   
  Oltre a queste conversioni automatiche, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre diverse funzionalità che supportano la conversione di tipo personalizzato. tra cui:  
   
--   Operatore `Implicit` che definisce le conversioni tra tipi verso un tipo di dati più grande. Per altre informazioni, vedere la sezione [Conversione implicita con l'operatore Implicit](#implicit_conversion_with_the_implicit_operator).  
+- Operatore `Implicit` che definisce le conversioni tra tipi verso un tipo di dati più grande. Per altre informazioni, vedere la sezione [Conversione implicita con l'operatore Implicit](#implicit_conversion_with_the_implicit_operator).  
   
--   Operatore `Explicit` che definisce le conversioni tra tipi verso un tipo di dati più piccolo. Per altre informazioni, vedere la sezione [Conversione esplicita con l'operatore Explicit](#explicit_conversion_with_the_explicit_operator).  
+- Operatore `Explicit` che definisce le conversioni tra tipi verso un tipo di dati più piccolo. Per altre informazioni, vedere la sezione [Conversione esplicita con l'operatore Explicit](#explicit_conversion_with_the_explicit_operator).  
   
--   Interfaccia <xref:System.IConvertible> che definisce le conversioni in ognuno dei tipi di dati .NET Framework di base. Per altre informazioni, vedere la sezione [Interfaccia IConvertible](#the_iconvertible_interface).  
+- Interfaccia <xref:System.IConvertible> che definisce le conversioni in ognuno dei tipi di dati .NET Framework di base. Per altre informazioni, vedere la sezione [Interfaccia IConvertible](#the_iconvertible_interface).  
   
--   Classe <xref:System.Convert> che fornisce un set di metodi che implementano i metodi nell'interfaccia <xref:System.IConvertible>. Per altre informazioni, vedere la sezione [Classe Convert](#Convert).  
+- Classe <xref:System.Convert> che fornisce un set di metodi che implementano i metodi nell'interfaccia <xref:System.IConvertible>. Per altre informazioni, vedere la sezione [Classe Convert](#Convert).  
   
--   Classe <xref:System.ComponentModel.TypeConverter>, una classe di base che può essere estesa per supportare la conversione di un tipo specifico in qualsiasi altro tipo. Per altre informazioni, vedere la sezione [Classe TypeConverter](#the_typeconverter_class).  
+- Classe <xref:System.ComponentModel.TypeConverter>, una classe di base che può essere estesa per supportare la conversione di un tipo specifico in qualsiasi altro tipo. Per altre informazioni, vedere la sezione [Classe TypeConverter](#the_typeconverter_class).  
   
 <a name="implicit_conversion_with_the_implicit_operator"></a>   
 ## <a name="implicit-conversion-with-the-implicit-operator"></a>Conversione implicita con l'operatore Implicit  
@@ -129,11 +129,11 @@ ms.locfileid: "54659761"
 ## <a name="the-iconvertible-interface"></a>Interfaccia IConvertible  
  Per supportare la conversione di un tipo qualsiasi in un tipo di base Common Language Runtime, in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] è disponibile l'interfaccia <xref:System.IConvertible>. È necessario che il tipo di implementazione fornisca gli elementi seguenti:  
   
--   Un metodo che restituisce l'oggetto <xref:System.TypeCode> del tipo di implementazione.  
+- Un metodo che restituisce l'oggetto <xref:System.TypeCode> del tipo di implementazione.  
   
--   Metodi per convertire il tipo di implementazione in ognuno dei tipi di base di Common Language Runtime (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.DateTime><xref:System.Decimal>, <xref:System.Double> e così via).  
+- Metodi per convertire il tipo di implementazione in ognuno dei tipi di base di Common Language Runtime (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.DateTime><xref:System.Decimal>, <xref:System.Double> e così via).  
   
--   Un metodo di conversione generalizzato per convertire un'istanza del tipo di implementazione in un altro tipo specificato. Le conversioni non supportate devono generare un evento <xref:System.InvalidCastException>.  
+- Un metodo di conversione generalizzato per convertire un'istanza del tipo di implementazione in un altro tipo specificato. Le conversioni non supportate devono generare un evento <xref:System.InvalidCastException>.  
   
  Ogni tipo di base di Common Language Runtime (ovvero <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.String>, <xref:System.UInt16>, <xref:System.UInt32> e <xref:System.UInt64>) nonché i tipi <xref:System.DBNull> e <xref:System.Enum>, implementano l'interfaccia <xref:System.IConvertible>. Si tratta tuttavia di implementazioni esplicite dell'interfaccia. Il metodo di conversione può essere chiamato solo tramite una variabile dell'interfaccia <xref:System.IConvertible>, come illustrato nell'esempio seguente. In questo esempio viene convertito un valore <xref:System.Int32> nel valore <xref:System.Char> equivalente.  
   

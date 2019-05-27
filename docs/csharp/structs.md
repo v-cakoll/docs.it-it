@@ -3,12 +3,12 @@ title: Struct - Guida a C#
 description: Informazioni sui tipi di struct e su come crearli
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 0db9ebca8a3b0be1d380128f7802e30a41c34a37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbaa7fcc26009fe3117784b411941d30af0ba3c5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506979"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608013"
 ---
 # <a name="structs"></a>Struct
 Uno *struct* è un tipo valore. Quando viene creato uno struct, la variabile a cui è assegnato lo struct contiene i dati effettivi dello struct. Quando viene assegnato a una nuova variabile, il tipo struct viene copiato. La nuova variabile e quella originale contengono quindi due copie separate degli stessi dati. Eventuali modifiche apportate a una copia non influiscono sull'altra copia.
@@ -35,21 +35,21 @@ Per altre informazioni sui tipi valore in NET Framework, vedere [Common Type Sys
     
 Gli struct condividono la maggior parte della sintassi delle classi, anche sono più limitati rispetto alle classi:  
   
--   All'interno di una dichiarazione di struct, non è possibile inizializzare i campi a meno che non siano stati dichiarati come `const` o `static`.  
+- All'interno di una dichiarazione di struct, non è possibile inizializzare i campi a meno che non siano stati dichiarati come `const` o `static`.  
   
--   Uno struct non può dichiarare un finalizzatore o un costruttore, ovvero un costruttore senza parametri, predefinito.  
+- Uno struct non può dichiarare un costruttore senza parametri o un finalizzatore.  
   
--   Gli struct vengono copiati su assegnazione. Quando uno struct viene assegnato a una nuova variabile, tutti i dati vengono copiati e qualsiasi modifica alla nuova copia non modifica i dati nella copia originale. È importante ricordare questo aspetto quando si lavora con le Collection di tipi valore come Dictionary<string, myStruct>.  
+- Gli struct vengono copiati su assegnazione. Quando uno struct viene assegnato a una nuova variabile, tutti i dati vengono copiati e qualsiasi modifica alla nuova copia non modifica i dati nella copia originale. È importante ricordare questo aspetto quando si lavora con le Collection di tipi valore come Dictionary<string, myStruct>.  
   
--   Gli struct sono tipi valore e le classi sono tipi di riferimento.  
+- Gli struct sono tipi valore e le classi sono tipi di riferimento.  
   
--   A differenza delle classi, è possibile creare istanze di struct senza usare un operatore `new`.  
+- A differenza delle classi, è possibile creare istanze di struct senza usare un operatore `new`.  
   
--   Gli struct possono dichiarare costruttori con parametri.  
+- Gli struct possono dichiarare costruttori con parametri.  
   
--   Uno struct non può ereditare da un altro struct o da una classe e non può essere la base di una classe. Tutti gli struct ereditano direttamente da <xref:System.ValueType>, che eredita da <xref:System.Object>.  
+- Uno struct non può ereditare da un altro struct o da una classe e non può essere la base di una classe. Tutti gli struct ereditano direttamente da <xref:System.ValueType>, che eredita da <xref:System.Object>.  
   
--   Uno struct può implementare le interfacce.
+- Uno struct può implementare le interfacce.
 
 ## <a name="literal-values"></a>Valori letterali  
 In C# i valori letterali ricevono un tipo dal compilatore. È possibile specificare come deve essere tipizzato un valore letterale numerico aggiungendo una lettera alla fine del numero. Per specificare, ad esempio, che il valore 4.56 deve essere considerato come un tipo float, aggiungere una "f" o una "F" dopo il numero: `4.56f`. Se non viene aggiunta alcuna lettera, il compilatore dedurrà un tipo `double` per il valore letterale. Per altre informazioni sui tipi che possono essere specificati con suffissi letterali, vedere le pagine di riferimento relative ai singoli tipi in [Tipi valore](./language-reference/keywords/value-types.md).  

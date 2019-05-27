@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: b95699430a05ef9d81c705b05d04b4ab06e7abc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b8ae80ff17ea2cf12c3d78c092dd3233ac0751d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307652"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755962"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relazioni tra i tipi nelle operazioni di query LINQ (C#)
 Per scrivere le query in modo efficace, è necessario comprendere in che modo i tipi di variabili in un'operazione di query completa interagiscono tra loro. Conoscendo queste relazioni, si comprenderanno più facilmente gli esempi di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e di codice nella documentazione. In aggiunta, è possibile comprendere che cosa accade dietro le quinte quando le variabili vengono tipizzate in modo implicito tramite `var`.  
@@ -29,7 +29,7 @@ Per scrivere le query in modo efficace, è necessario comprendere in che modo i 
 ## <a name="queries-that-do-not-transform-the-source-data"></a>Query che non trasformano i dati di origine  
  La figura seguente mostra un'operazione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects che non esegue alcuna trasformazione sui dati. L'origine contiene una sequenza di stringhe e anche l'output della query è una sequenza di stringhe.  
   
- ![Relazione dei tipi di dati in una query LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")  
+ ![Diagramma che illustra la relazione dei tipi di dati in una query LINQ.](./media/type-relationships-in-linq-query-operations/linq-query-data-type-relation.png)  
   
 1. L'argomento del tipo dell'origine dati determina il tipo della variabile di intervallo.  
   
@@ -40,7 +40,7 @@ Per scrivere le query in modo efficace, è necessario comprendere in che modo i 
 ## <a name="queries-that-transform-the-source-data"></a>Query che trasformano i dati di origine  
  La figura seguente mostra un'operazione di query [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] che esegue una trasformazione sui dati di lieve entità. La query usa una sequenza di oggetti `Customer` come input e seleziona solo la proprietà `Name` nel risultato. Poiché `Name` è una stringa, la query genera una sequenza di stringhe come output.  
   
- ![Query che trasforma il tipo di dati](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")  
+ ![Diagramma che illustra una query che trasforma il tipo di dati.](./media/type-relationships-in-linq-query-operations/linq-query-transform-data-type.png)  
   
 1. L'argomento del tipo dell'origine dati determina il tipo della variabile di intervallo.  
   
@@ -50,7 +50,7 @@ Per scrivere le query in modo efficace, è necessario comprendere in che modo i 
   
  La figura seguente mostra una trasformazione leggermente più complessa. L'istruzione `select` restituisce un tipo anonimo che acquisisce solo due membri dell'oggetto di origine `Customer`.  
   
- ![Query che trasforma il tipo di dati](../../../../csharp/programming-guide/concepts/linq/media/linq_flow3.png "LINQ_flow3")  
+ ![Diagramma che illustra una query più complessa che trasforma il tipo di dati.](./media/type-relationships-in-linq-query-operations/linq-complex-query-transform-data-type.png)  
   
 1. L'argomento del tipo dell'origine dati è sempre il tipo della variabile di intervallo nella query.  
   
@@ -61,7 +61,7 @@ Per scrivere le query in modo efficace, è necessario comprendere in che modo i 
 ## <a name="letting-the-compiler-infer-type-information"></a>Deduzione delle informazioni sul tipo tramite il compilatore  
  Sebbene sia necessario comprendere le relazioni di tipo in un'operazione di query, è possibile scegliere di far eseguire al compilatore tutto il lavoro al posto dell'utente. La parola chiave [var](../../../../csharp/language-reference/keywords/var.md) può essere usata per qualsiasi variabile locale in un'operazione di query. La figura seguente è simile all'esempio 2 illustrato in precedenza. Il compilatore fornisce, tuttavia, il tipo forte per ogni variabile nell'operazione di query.  
   
- ![Flusso di tipo con tipizzazione implicita](../../../../csharp/programming-guide/concepts/linq/media/linq_flow4.png "LINQ_flow4")  
+ ![Diagramma che illustra il flusso di tipi con tipizzazione implicita.](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
  Per altre informazioni su `var`, vedere [Variabili locali tipizzate in modo implicito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

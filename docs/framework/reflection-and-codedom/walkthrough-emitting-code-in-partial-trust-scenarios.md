@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592446"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585920"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procedura dettagliata: Creazione di codice in scenari di attendibilità parziale
 La reflection emit usa le stesse API in scenari di attendibilità sia parziale che completa, ma alcune funzionalità richiedono autorizzazioni speciali nel codice parzialmente attendibile. Inoltre, la reflection emit include una funzionalità, i metodi dinamici ospitati in modo anonimo, progettata per l'uso in situazioni di attendibilità parziale da parte di assembly trasparenti per la sicurezza.  
@@ -77,12 +77,12 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
   
-     L'ultimo parametro dell'overload del metodo <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> consente di specificare un set di assembly a cui deve essere concessa l'attendibilità totale, anziché il set di concessioni del dominio dell'applicazione. Non è necessario specificare gli assembly [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usati dall'applicazione, perché si trovano nella Global Assembly Cache. Gli assembly nella Global Assembly Cache sono sempre completamente attendibili. È possibile usare questo parametro per specificare assembly con nome sicuro che non sono presenti nella Global Assembly Cache.  
+     L'ultimo parametro dell'overload del metodo <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> consente di specificare un set di assembly a cui deve essere concessa l'attendibilità totale, anziché il set di concessioni del dominio dell'applicazione. Non è necessario specificare gli assembly .NET Framework usati dall'applicazione, perché si trovano nella Global Assembly Cache. Gli assembly nella Global Assembly Cache sono sempre completamente attendibili. È possibile usare questo parametro per specificare assembly con nome sicuro che non sono presenti nella Global Assembly Cache.  
   
 ### <a name="adding-restrictedmemberaccess-to-sandboxed-domains"></a>Aggiunta di RestrictedMemberAccess ai domini sandbox  
  Le applicazioni host possono consentire ai metodi dinamici ospitati in modo anonimo di accedere ai dati privati negli assembly con livelli di attendibilità uguali o inferiori a quelli dell'assembly che genera il codice. Per abilitare la possibilità limitata di ignorare i controlli di visibilità just-in-time (JIT), l'applicazione host aggiunge un oggetto <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> (RMA) al set di concessioni.  
   
- Ad esempio, un host può concedere alle applicazioni Internet autorizzazioni Internet più RMA, in modo tale che un'applicazione Internet sia in grado di generare codice che accede ai dati privati nei propri assembly. Poiché l'accesso è limitato agli assembly con attendibilità uguale o minore, un'applicazione Internet non può accedere a membri di assembly completamente attendibili, ad esempio gli assembly [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ Ad esempio, un host può concedere alle applicazioni Internet autorizzazioni Internet più RMA, in modo tale che un'applicazione Internet sia in grado di generare codice che accede ai dati privati nei propri assembly. Poiché l'accesso è limitato agli assembly con attendibilità uguale o minore, un'applicazione Internet non può accedere a membri di assembly completamente attendibili, ad esempio gli assembly .NET Framework.  
   
 > [!NOTE]
 >  Per evitare l'elevazione dei privilegi, le informazioni sullo stack per l'assembly di creazione vengono incluse quando si creano metodi dinamici ospitati in modo anonimo. Quando il metodo viene richiamato, vengono controllate le informazioni sullo stack. Di conseguenza, un metodo dinamico ospitato in modo anonimo richiamato da codice completamente attendibile è comunque limitato al livello di attendibilità dell'assembly di creazione.  
@@ -169,7 +169,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     La limitazione consiste nel fatto che il metodo dinamico ospitato in modo anonimo può accedere ai dati privati solo negli assembly con livelli di attendibilità uguali o inferiori a quello dell'assembly di creazione. Ad esempio, se il metodo dinamico è in esecuzione con attendibilità Internet, può accedere ai dati privati in altri assembly in esecuzione con attendibilità Internet, ma non può accedere ai dati privati degli assembly [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Gli assembly [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sono installati nella Global Assembly Cache sono sempre completamente attendibili.  
+     La limitazione consiste nel fatto che il metodo dinamico ospitato in modo anonimo può accedere ai dati privati solo negli assembly con livelli di attendibilità uguali o inferiori a quello dell'assembly di creazione. Ad esempio, se il metodo dinamico è in esecuzione con attendibilità Internet, può accedere ai dati privati in altri assembly in esecuzione con attendibilità Internet, ma non può accedere ai dati privati degli assembly .NET Framework. Gli assembly .NET Framework sono installati nella Global Assembly Cache e sono sempre completamente attendibili.  
   
      I metodi dinamici ospitati in modo anonimo possono usare questa possibilità limitata di ignorare i controlli di visibilità JIT solo se l'applicazione host concede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>. La richiesta di questa autorizzazione viene effettuata quando viene richiamato il metodo.  
   

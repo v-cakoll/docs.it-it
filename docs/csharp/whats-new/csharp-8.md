@@ -1,18 +1,20 @@
 ---
 title: Novità di C# 8.0 - Guida a C#
-description: Panoramica delle nuove funzionalità disponibili in C# 8.0. Questo articolo è aggiornato alla versione di anteprima 2.
+description: Panoramica delle nuove funzionalità disponibili in C# 8.0. Questo articolo è aggiornato alla versione di anteprima 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427279"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557141"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
-Sono disponibili numerosi miglioramenti per il linguaggio C# che è già possibile provare con l'anteprima 2. Le nuove funzionalità aggiunte nell'anteprima 2 sono:
+Sono disponibili numerosi miglioramenti per il linguaggio C# che è già possibile provare. 
 
+- [Membri di sola lettura](#readonly-members)
+- [Membri di interfaccia predefiniti](#default-interface-members)
 - [Miglioramenti dei criteri di ricerca](#more-patterns-in-more-places):
   * [Espressioni switch](#switch-expressions)
   * [Criteri per le proprietà](#property-patterns)
@@ -21,17 +23,67 @@ Sono disponibili numerosi miglioramenti per il linguaggio C# che è già possibi
 - [Dichiarazioni using](#using-declarations)
 - [Funzioni locali statiche](#static-local-functions)
 - [Struct ref Disposable](#disposable-ref-structs)
-
-Le funzionalità del linguaggio seguenti sono state introdotte nell'anteprima 1 di C# 8.0:
-
 - [Tipi riferimento nullable](#nullable-reference-types)
 - [Flussi asincroni](#asynchronous-streams)
 - [Indici e intervalli](#indices-and-ranges)
 
 > [!NOTE]
-> Questo articolo è stato aggiornato per l'ultima volta per l'anteprima 2 di C# 8.0.
+> Questo articolo è stato aggiornato per l'ultima volta per l'anteprima 5 di C# 8.0.
 
 Il resto di questo articolo descrive brevemente queste funzionalità. Se sono disponibili articoli approfonditi, vengono forniti collegamenti a queste panoramiche ed esercitazioni.
+
+## <a name="readonly-members"></a>Membri di sola lettura
+
+È possibile applicare il modificatore `readonly` a qualsiasi membro di uno struct. Indica che il membro non modifica lo stato. È più granulare rispetto all'applicazione del modificatore `readonly` a una dichiarazione `struct`.  Considerare lo struct modificabile seguente:
+
+```csharp
+public struct Point
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+    public double Distance => Math.Sqrt(X * X + Y * Y);
+
+    public override string ToString() =>
+        $"({X}, {Y}) is {Distance} from the origin";
+}
+```
+
+Come la maggior parte degli struct, il metodo `ToString()` non modifica lo stato. Si potrebbe indicare questa condizione aggiungendo il modificatore `readonly` alla dichiarazione di `ToString()`:
+
+```csharp
+public readonly override string ToString() =>
+    $"({X}, {Y}) is {Distance} from the origin";
+```
+
+La modifica precedente genera un avviso del compilatore, poiché `ToString` accede alla proprietà `Distance`, che non è contrassegnata come `readonly`:
+
+```console
+warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
+```
+
+Il compilatore genera un avviso quando deve creare una copia difensiva.  La proprietà `Distance` non modifica lo stato, pertanto è possibile correggere il problema aggiungendo il modificatore `readonly` alla dichiarazione:
+
+```csharp
+public readonly double Distance => Math.Sqrt(X * X + Y * Y);
+```
+
+Si noti che il modificatore `readonly` è necessario per una proprietà di sola lettura. Il compilatore non presume che le funzioni di accesso `get` non modifichino lo stato. È necessario dichiarare `readonly` in modo esplicito. Il compilatore applica la regola che i membri `readonly` non modificano lo stato. Il metodo seguente non verrà compilato a meno che non si rimuova il modificatore `readonly`:
+
+```csharp
+public readonly void Translate(int xOffset, int yOffset)
+{
+    X += xOffset;
+    Y += yOffset;
+}
+```
+
+Questa funzionalità consente di specificare la finalità della progettazione in modo che il compilatore possa imporla e applicare le ottimizzazioni in base a tale finalità.
+
+## <a name="default-interface-members"></a>Membri di interfaccia predefiniti
+
+È ora possibile aggiungere membri alle interfacce e fornire un'implementazione per tali membri. Questa funzionalità del linguaggio consente agli autori di API di aggiungere metodi a un'interfaccia nelle versioni più recenti senza compromettere l'origine o la compatibilità binaria con le implementazioni esistenti di tale interfaccia. Le implementazioni esistenti *ereditano* l'implementazione predefinita. Questa funzionalità supporta anche l'interoperabilità di C# con API destinate ad Android o Swift, che supporta funzionalità simili. I membri di interfaccia predefiniti abilitano anche scenari simili alla funzionalità del linguaggio "tratti".
+
+I membri di interfaccia predefiniti hanno effetti su molti scenari ed elementi del linguaggio. La prima esercitazione illustra l'[aggiornamento di un'interfaccia con le implementazioni predefinite](../tutorials/default-interface-members-versions.md). Sono previsti altre esercitazioni e aggiornamenti dei riferimenti in tempo per il rilascio generale.
 
 ## <a name="more-patterns-in-more-places"></a>Più criteri in più posizioni
 
@@ -321,9 +373,15 @@ await foreach (var number in GenerateSequence())
 
 Gli intervalli e gli indici offrono una sintassi concisa per la specifica di intervalli secondari in una matrice, <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>.
 
-È possibile specificare un indice **dalla fine**. Per specificarlo **dalla fine** si usa l'operatore `^`. Si ha familiarità con `array[2]`, che indica l'elemento "2 dall'inizio". `array[^2]` significa l'elemento "2 dalla fine". L'indice `^0` significa "la fine" o l'indice che segue l'ultimo elemento.
+Questo supporto del linguaggio si basa su due nuovi tipi e due nuovi operatori.
+- <xref:System.Index?displayProperty=nameWithType> rappresenta un indice in una sequenza.
+- L'operatore `^`, che specifica che un indice è relativo alla fine della sequenza.
+- <xref:System.Range?displayProperty=nameWithType> rappresenta un intervallo secondario di una sequenza.
+- L'operatore Range (`..`), che specifica l'inizio e fine di un intervallo come operandi.
 
-È possibile specificare un **intervallo** con l'**operatore range**: `..`. Ad esempio, `0..^0` specifica l'intero intervallo della matrice: 0 dall'inizio fino a 0 dalla fine, escluso. Per entrambi gli operandi è possibile usare "dall'inizio" o "dalla fine". Inoltre, uno degli operandi può essere omesso. I valori predefiniti sono `0` per l'indice iniziale e `^0` per l'indice finale.
+Per iniziare, ecco come funzionano le regole per gli indici. Prendere in considerazione una matrice `sequence`. L'indice `0` è uguale a `sequence[0]`. L'indice `^0` è uguale a `sequence[sequence.Length]`. Si noti che `sequence[^0]` genera un'eccezione, proprio come `sequence[sequence.Length]`. Per qualsiasi numero `n`, l'indice `^n` è uguale a `sequence.Length - n`.
+
+Un intervallo specifica *inizio* e *fine* di un intervallo. Gli intervalli sono esclusivi, vale a dire che la *fine* non è inclusa nell'intervallo. L'intervallo `[0..^0]` rappresenta l'intero intervallo, proprio come `[0..sequence.Length]` rappresenta l'intero intervallo. 
 
 Di seguito verranno esaminati alcuni esempi. Si consideri la matrice seguente, annotata con il relativo indice dall'inizio e dalla fine:
 
@@ -340,10 +398,8 @@ var words = new string[]
     "the",      // 6                   ^3
     "lazy",     // 7                   ^2
     "dog"       // 8                   ^1
-};
+};              // 9 (or words.Length) ^0
 ```
-
-L'indice di ogni elemento consolida il concetto di "dall'inizio" e "dalla fine" e che gli intervalli escludono la fine dell'intervallo. L'intera matrice "inizia" con il primo elemento. La "fine" dell'intera matrice è *dopo* l'ultimo elemento.
 
 È possibile recuperare l'ultima parola con l'indice `^1`:
 
@@ -383,3 +439,5 @@ L'intervallo può quindi essere usato all'interno dei caratteri `[` e `]`:
 ```csharp
 var text = words[phrase];
 ```
+
+È possibile ottenere maggiori informazioni su indici e intervalli nell'esercitazione [Indici e intervalli](../tutorials/ranges-indexes.md).

@@ -2,12 +2,12 @@
 title: Novità di C# 7.1
 description: Panoramica delle nuove funzionalità in C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480963"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881534"
 ---
 # <a name="whats-new-in-c-71"></a>Novità di C# 7.1
 
@@ -26,7 +26,7 @@ Le nuove funzionalità relative al linguaggio in questa versione sono:
 * [Criteri di ricerca su parametri di tipo generico](#pattern-matching-on-generic-type-parameters)
   - È possibile usare espressioni di criteri di ricerca sulle variabili in cui il tipo è un parametro di tipo generico.
 
-Infine, il compilatore offre due opzioni `/refout` e `/refonly` che controllano la [generazione dell'assembly di riferimento](#reference-assembly-generation).
+Infine, il compilatore offre due opzioni `-refout` e `-refonly` che controllano la [generazione dell'assembly di riferimento](#reference-assembly-generation).
 
 Per usare le funzionalità più recenti in una versione intermedia, è necessario [configurare la versione in lingua del compilatore](../language-reference/configure-language-version.md) e selezionare la versione.
 
@@ -109,5 +109,5 @@ A partire da C# 7.1, l'espressione di criteri per `is` e il criterio di tipo `sw
 
 ## <a name="reference-assembly-generation"></a>Generazione assembly di riferimento
 
-Sono disponibili due nuove opzioni del compilatore che generano *gli assembly di solo riferimento* : [/refout](../language-reference/compiler-options/refout-compiler-option.md) e [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
+Sono disponibili due nuove opzioni del compilatore che generano gli *assembly di solo riferimento*: [-refout](../language-reference/compiler-options/refout-compiler-option.md) e [-refonly](../language-reference/compiler-options/refonly-compiler-option.md).
 Gli articoli collegati illustrano in modo più dettagliato queste opzioni e gli assembly di riferimento.

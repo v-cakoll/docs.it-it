@@ -9,15 +9,15 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: e91859d4aa6e30877bfdae5da9063a1e2a6b3b44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6f7450b4f682ea5ac69fd1bab434b27451e58df
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647256"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586057"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (strumento per la generazione del codice)
-Lo strumento da riga di comando SqlMetal genera codice e mapping per il componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Mediante l'applicazione delle opzioni riportate più avanti in questo argomento è possibile usare SqlMetal per eseguire diverse operazioni, fra cui:  
+Lo strumento da riga di comando SqlMetal genera codice e mapping per il componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] di .NET Framework. Mediante l'applicazione delle opzioni riportate più avanti in questo argomento è possibile usare SqlMetal per eseguire diverse operazioni, fra cui:  
   
 - A partire da un database, generare codice sorgente e attributi di mapping oppure un file di mapping.  
   
@@ -49,7 +49,7 @@ sqlmetal [options] [<input file>]
 |**/database:** *\<nome>*|Specifica il catalogo del database contenuto nel server.|  
 |**/user:** *\<nome>*|Specifica l'ID utente di accesso. Valore predefinito: Usa autenticazione di Windows.|  
 |**/password:** *\<password>*|Specifica la password di accesso. Valore predefinito: Usa autenticazione di Windows.|  
-|**/conn:** *\<stringa di connessione>*|Specifica la stringa di connessione al database. Non può essere usata con l'opzione **/server**, **/database**, **/user**o **/password** .<br /><br /> Non includere il nome file nella stringa di connessione. Aggiungere invece il nome file alla riga di comando come file di input. La riga seguente, ad esempio, specifica "c:\northwnd.mdf" come file di input: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**.|  
+|**/conn:** *\<stringa di connessione>*|Specifica la stringa di connessione al database. Non può essere usata con l'opzione **/server**, **/database**, **/user**o **/password** .<br /><br /> Non includere il nome file nella stringa di connessione. Aggiungere invece il nome file alla riga di comando come file di input. La riga seguente, ad esempio, specifica "c:\northwnd.mdf" come file di input: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** .|  
 |**/timeout:** *\<secondi>*|Specifica il valore di timeout quando SqlMetal accede al database. Valore predefinito: 0 (ovvero nessun limite di tempo).|  
   
  **Opzioni di estrazione**  
@@ -72,12 +72,12 @@ sqlmetal [options] [<input file>]
   
 |Opzione|Description|  
 |------------|-----------------|  
-|**/language:** *\<linguaggio>*|Specifica il linguaggio del codice sorgente.<br /><br /> Valori validi per *\<linguaggio>*: vb, csharp.<br /><br /> Valore predefinito: derivato dall'estensione nel nome file del codice.|  
+|**/language:** *\<linguaggio>*|Specifica il linguaggio del codice sorgente.<br /><br /> Valori validi per *\<linguaggio>* : vb, csharp.<br /><br /> Valore predefinito: derivato dall'estensione nel nome file del codice.|  
 |**/namespace:** *\<nome>*|Specifica lo spazio dei nomi del codice generato. Valore predefinito: nessuno spazio dei nomi.|  
 |**/context:** *\<tipo>*|Specifica il nome della classe del contesto dati. Valore predefinito: derivato dal nome del database.|  
 |**/entitybase:** *\<tipo>*|Specifica la classe base delle classi di entità nel codice generato. Valore predefinito: le entità non dispongono di classe base.|  
 |**/pluralize**|Rende automaticamente plurali o singolari i nomi delle classi e dei membri.<br /><br /> Opzione disponibile solo nella versione in lingua inglese degli Stati Uniti.|  
-|**/serialization:** *\<opzione>*|Genera classi serializzabili.<br /><br /> Valori validi per *\<opzione>*: None, Unidirectional. Valore predefinito: Nessuno.<br /><br /> Per altre informazioni, vedere [Serializzazione](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
+|**/serialization:** *\<opzione>*|Genera classi serializzabili.<br /><br /> Valori validi per *\<opzione>* : None, Unidirectional. Valore predefinito: Nessuno.<br /><br /> Per altre informazioni, vedere [Serializzazione](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
   
  **File di input**  
   

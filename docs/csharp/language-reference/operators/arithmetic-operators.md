@@ -27,19 +27,19 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 25f716084c489c834e9242800f4c7e341c41aa58
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301126"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880669"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatori aritmetici (Riferimenti per C#)
 
 Gli operatori seguenti eseguono operazioni aritmetiche con i tipi numerici:
 
-- Operatori unari [`++` (incremento)](#increment-operator-), [`--` (decremento)](#decrement-operator---), [`+` (più)](#unary-plus-and-minus-operators) e [`-` (meno)](#unary-plus-and-minus-operators).
-- Operatori binari [`*` (moltiplicazione)](#multiplication-operator-), [`/` (divisione)](#division-operator-), [`%` (resto)](#remainder-operator-), [`+` (addizione)](#addition-operator-) e [`-` (sottrazione)](#subtraction-operator--).
+- Operatori unari [`++` (incremento)](#increment-operator-), [`--` (decremento)](#decrement-operator---), [`+` (più)](#unary-plus-and-minus-operators) e [`-` (meno)](#unary-plus-and-minus-operators)
+- Operatori binari [`*` (moltiplicazione)](#multiplication-operator-), [`/` (divisione)](#division-operator-), [`%` (resto)](#remainder-operator-), [`+` (addizione)](#addition-operator-) e [`-` (sottrazione)](#subtraction-operator--)
 
 Questi operatori supportano tutti i tipi numerici [integrali](../keywords/integral-types-table.md) e [a virgola mobile](../keywords/floating-point-types-table.md).
 
@@ -93,7 +93,7 @@ L'operatore di moltiplicazione `*` calcola il prodotto degli operandi:
 
 [!code-csharp-interactive[multiplication operator](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#Multiplication)]
 
-L'operatore `*` unario è l'[operatore di riferimento indiretto a puntatore](multiplication-operator.md#pointer-indirection-operator).
+L'operatore `*` unario è l'[operatore di riferimento indiretto a puntatore](pointer-related-operators.md#pointer-indirection-operator-).
 
 ## <a name="division-operator-"></a>Operatore di divisione /
 
@@ -163,23 +163,6 @@ L'operatore di sottrazione `-` sottrae il secondo operando dal primo:
 
 È possibile usare l'operatore `-` anche per la rimozione di delegati. Per altre informazioni, vedere l'articolo [Operatore `-`](subtraction-operator.md).
 
-## <a name="operator-precedence-and-associativity"></a>Precedenza e associatività degli operatori
-
-Nell'elenco seguente gli operatori aritmetici sono ordinati dalla precedenza più elevata a quella più bassa:
-
-- Operatori di incremento `x++` e decremento `x--` in forma suffissa.
-- Operatori di incremento `++x` e decremento `--x` e unari `+` e `-` in forma prefissa.
-- Operatori moltiplicativi `*`, `/` e `%`.
-- Operatori additivi `+` e `-`.
-
-Gli operatori aritmetici binari prevedono l'associazione all'operando sinistro. Ciò significa che gli operatori con lo stesso livello di precedenza vengono valutati da sinistra a destra.
-
-Usare le parentesi, `()`, per cambiare l'ordine di valutazione imposto dalla precedenza e dall'associatività degli operatori.
-
-[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
-
-Per l'elenco completo degli operatori C# ordinati in base al livello di precedenza, vedere [Operatori C#](index.md).
-
 ## <a name="compound-assignment"></a>Assegnazione composta
 
 Per un operatore binario `op`, un'espressione di assegnazione composta in formato
@@ -200,7 +183,28 @@ L'esempio seguente illustra l'uso dell'assegnazione composta con gli operatori a
 
 [!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
+In ragione delle [promozioni numeriche](~/_csharplang/spec/expressions.md#numeric-promotions) il risultato dell'operazione `op` potrebbe non essere convertibile in modo implicito nel tipo `T` di `x`. In questo caso, se `op` è un operatore già definito e il risultato dell'operazione è convertibile in modo esplicito nel tipo `T` di `x`, un'espressione di assegnazione composta nel formato `x op= y` equivale a `x = (T)(x op y)`, con la differenza che `x` viene valutato una sola volta. L'esempio seguente illustra questo comportamento:
+
+[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
+
 È possibile usare gli operatori `+=` e `-=` anche per la sottoscrizione e l'annullamento della sottoscrizione di [eventi](../keywords/event.md). Per altre informazioni, vedere [Procedura: Sottoscrivere e annullare la sottoscrizione di eventi](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
+## <a name="operator-precedence-and-associativity"></a>Precedenza e associatività degli operatori
+
+Nell'elenco seguente gli operatori aritmetici sono ordinati dalla precedenza più elevata a quella più bassa:
+
+- Operatori di incremento `x++` e decremento `x--` in forma suffissa
+- Operatori di incremento `++x` e decremento `--x` e unari `+` e `-`
+- Operatori moltiplicativi `*`, `/` e `%`
+- Operatori additivi `+` e `-`
+
+Gli operatori aritmetici binari prevedono l'associazione all'operando sinistro. Ciò significa che gli operatori con lo stesso livello di precedenza vengono valutati da sinistra a destra.
+
+Usare le parentesi, `()`, per cambiare l'ordine di valutazione imposto dalla precedenza e dall'associatività degli operatori.
+
+[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
+
+Per l'elenco completo degli operatori C# ordinati in base al livello di precedenza, vedere [Operatori C#](index.md).
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>Overflow aritmetico e divisione per zero
 
@@ -256,6 +260,7 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 - [Operatore di sottrazione](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [Assegnazione composta](~/_csharplang/spec/expressions.md#compound-assignment)
 - [Operatori Checked e Unchecked](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
+- [Promozioni numeriche](~/_csharplang/spec/expressions.md#numeric-promotions)
 
 ## <a name="see-also"></a>Vedere anche
 

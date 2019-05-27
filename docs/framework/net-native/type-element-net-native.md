@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a92e6627ba937b10b183a833a005792f0a51f921
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d5541cc34f8967916e4896fd5f9be82edcb332f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033124"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051987"
 ---
 # <a name="type-element-net-native"></a>\<Tipo > elemento (.NET Native)
 Applica i criteri di runtime a un determinato tipo, ad esempio una classe o una struttura.  
@@ -102,7 +102,7 @@ Applica i criteri di runtime a un determinato tipo, ad esempio una classe o una 
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
- Poiché i metadati per la classe <xref:System.Collections.Generic.List%601> non viene incluso automaticamente dalla catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)], l'esempio non riesce a visualizzare le informazioni sul membro richiesto in fase di esecuzione. Per fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime. Da notare che dal momento che è stato fornito un elemento [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md) padre, non è necessario fornire un nome di tipo completo nell'elemento `<Type>`.  
+ Poiché i metadati per il <xref:System.Collections.Generic.List%601> classe non viene incluso automaticamente dalla catena di strumenti .NET Native, nell'esempio viene eseguito visualizzare le informazioni sul membro richiesto in fase di esecuzione. Per fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime. Da notare che dal momento che è stato fornito un elemento [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md) padre, non è necessario fornire un nome di tipo completo nell'elemento `<Type>`.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -120,7 +120,7 @@ Applica i criteri di runtime a un determinato tipo, ad esempio una classe o una 
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   
- Poiché i metadati relativi all'oggetto <xref:System.String> non sono disponibili, la chiamata al metodo <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> genera un'eccezione <xref:System.NullReferenceException> in fase di esecuzione quando compilato con la catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Per eliminare l'eccezione e fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime:  
+ Poiché i metadati per il <xref:System.String> oggetto non è disponibile, la chiamata al <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metodo genera un <xref:System.NullReferenceException> eccezione in fase di esecuzione ora quando viene compilato con la catena di strumenti .NET Native. Per eliminare l'eccezione e fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

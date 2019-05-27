@@ -18,7 +18,7 @@
       displayName: '>, <, >=, <=, greater, less'
     - name: Operatori di accesso ai membri
       href: member-access-operators.md
-      displayName: '., [], ?., ?[], (), indexer, null-conditional, invocation'
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
     - name: Operatori relativi al puntatore
       href: pointer-related-operators.md
       displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
