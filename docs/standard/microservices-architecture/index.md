@@ -2,12 +2,12 @@
 title: Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori
 description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | I microservizi sono servizi modulari e distribuibili in modo indipendente. I contenitori Docker (per Linux e Windows) semplificano le attività di distribuzione e test riunendo un servizio e le relative dipendenze in una singola unità che viene quindi eseguita in un ambiente isolato.
 ms.date: 01/07/2019
-ms.openlocfilehash: bbd72b02ae446bbd0df31889679023d3b5040db8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a348a9c122ef7f0293a1385aa05dc98f61deab7e
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644418"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195969"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET: Architettura per le applicazioni .NET incluse in contenitori
 
@@ -31,7 +31,7 @@ Per rendere più semplice iniziare, la guida illustra un'applicazione di riferim
 
 ## <a name="introduction"></a>Introduzione
 
-Sempre più spesso nelle aziende vengono usati i contenitori per realizzare risparmi sui costi, risolvere i problemi di distribuzione e migliorare DevOps e operazioni di produzione. Microsoft ha introdotto innovazioni dei contenitori per Windows e Linux tramite la creazione di prodotti come il servizio Azure Container e Azure Service Fabric, oltre che attraverso la collaborazione con aziende leader del settore quali Docker, Mesosphere e Kubernetes. Questi prodotti offrono soluzioni per i contenitori che consentono alle aziende di creare e distribuire le applicazioni con la velocità e la scalabilità del cloud, indipendentemente dalla piattaforma o dagli strumenti scelti.
+Sempre più spesso nelle aziende vengono usati i contenitori per realizzare risparmi sui costi, risolvere i problemi di distribuzione e migliorare DevOps e operazioni di produzione. Microsoft ha introdotto innovazioni dei contenitori per Windows e Linux tramite la creazione di prodotti come il servizio Azure Kubernetes e Azure Service Fabric, oltre che attraverso la collaborazione con aziende leader del settore come Docker, Mesosphere e Kubernetes. Questi prodotti offrono soluzioni per i contenitori che consentono alle aziende di creare e distribuire le applicazioni con la velocità e la scalabilità del cloud, indipendentemente dalla piattaforma o dagli strumenti scelti.
 
 Docker sta diventando lo standard di fatto nel settore dei contenitori, supportato dai più significativi fornitori negli ecosistemi Windows e Linux (Microsoft è uno dei principali fornitori cloud che supportano Docker). In futuro, probabilmente Docker sarà presente in qualsiasi data center nel cloud o locale.
 
