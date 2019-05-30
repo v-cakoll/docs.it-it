@@ -10,65 +10,65 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd91cf0179ef9731c456b41fdc865e3eacdb33eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5df7ab070cc0a40f4e2f3d0545c5bc40ccb07f4d
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674155"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378030"
 ---
-# <a name="gcserver-element"></a><span data-ttu-id="5d5e8-102">\<gcServer> Element</span><span class="sxs-lookup"><span data-stu-id="5d5e8-102">\<gcServer> Element</span></span>
-<span data-ttu-id="5d5e8-103">Specifica se Common Language Runtime esegue Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-103">Specifies whether the common language runtime runs server garbage collection.</span></span>  
+# <a name="gcserver-element"></a><span data-ttu-id="8fe45-102">\<gcServer> Element</span><span class="sxs-lookup"><span data-stu-id="8fe45-102">\<gcServer> Element</span></span>
+<span data-ttu-id="8fe45-103">Specifica se Common Language Runtime esegue Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="8fe45-103">Specifies whether the common language runtime runs server garbage collection.</span></span>  
   
- <span data-ttu-id="5d5e8-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="5d5e8-104">\<configuration></span></span>  
-<span data-ttu-id="5d5e8-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="5d5e8-105">\<runtime></span></span>  
-<span data-ttu-id="5d5e8-106">\<gcServer></span><span class="sxs-lookup"><span data-stu-id="5d5e8-106">\<gcServer></span></span>  
+ <span data-ttu-id="8fe45-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="8fe45-104">\<configuration></span></span>  
+<span data-ttu-id="8fe45-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="8fe45-105">\<runtime></span></span>  
+<span data-ttu-id="8fe45-106">\<gcServer></span><span class="sxs-lookup"><span data-stu-id="8fe45-106">\<gcServer></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5d5e8-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5d5e8-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8fe45-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8fe45-107">Syntax</span></span>  
   
 ```xml  
 <gcServer    
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="5d5e8-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="5d5e8-108">Attributes and Elements</span></span>  
- <span data-ttu-id="5d5e8-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8fe45-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="8fe45-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="8fe45-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="8fe45-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="5d5e8-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="5d5e8-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="8fe45-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="8fe45-110">Attributes</span></span>  
   
-|<span data-ttu-id="5d5e8-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="5d5e8-111">Attribute</span></span>|<span data-ttu-id="5d5e8-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5d5e8-112">Description</span></span>|  
+|<span data-ttu-id="8fe45-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="8fe45-111">Attribute</span></span>|<span data-ttu-id="8fe45-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8fe45-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="5d5e8-113">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="5d5e8-114">Specifica se il runtime esegue Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-114">Specifies whether the runtime runs server garbage collection.</span></span>|  
+|`enabled`|<span data-ttu-id="8fe45-113">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="8fe45-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="8fe45-114">Specifica se il runtime esegue Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="8fe45-114">Specifies whether the runtime runs server garbage collection.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="5d5e8-115">Attributo enabled</span><span class="sxs-lookup"><span data-stu-id="5d5e8-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="8fe45-115">Attributo enabled</span><span class="sxs-lookup"><span data-stu-id="8fe45-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="5d5e8-116">Valore</span><span class="sxs-lookup"><span data-stu-id="5d5e8-116">Value</span></span>|<span data-ttu-id="5d5e8-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5d5e8-117">Description</span></span>|  
+|<span data-ttu-id="8fe45-116">Valore</span><span class="sxs-lookup"><span data-stu-id="8fe45-116">Value</span></span>|<span data-ttu-id="8fe45-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8fe45-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="5d5e8-118">Non esegue Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-118">Does not run server garbage collection.</span></span> <span data-ttu-id="5d5e8-119">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="5d5e8-120">Esegue Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-120">Runs server garbage collection.</span></span>|  
+|`false`|<span data-ttu-id="8fe45-118">Non esegue Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="8fe45-118">Does not run server garbage collection.</span></span> <span data-ttu-id="8fe45-119">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="8fe45-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="8fe45-120">Esegue Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="8fe45-120">Runs server garbage collection.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="5d5e8-121">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="5d5e8-121">Child Elements</span></span>  
- <span data-ttu-id="5d5e8-122">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="8fe45-121">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="8fe45-121">Child Elements</span></span>  
+ <span data-ttu-id="8fe45-122">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="8fe45-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="5d5e8-123">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="5d5e8-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="8fe45-123">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="8fe45-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="5d5e8-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="5d5e8-124">Element</span></span>|<span data-ttu-id="5d5e8-125">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5d5e8-125">Description</span></span>|  
+|<span data-ttu-id="8fe45-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="8fe45-124">Element</span></span>|<span data-ttu-id="8fe45-125">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8fe45-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="5d5e8-126">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="5d5e8-127">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="8fe45-126">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="8fe45-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="8fe45-127">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="8fe45-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5d5e8-128">Note</span><span class="sxs-lookup"><span data-stu-id="5d5e8-128">Remarks</span></span>  
- <span data-ttu-id="5d5e8-129">Common Language Runtime (CLR) supporta due tipi di Garbage Collection: Garbage Collection per workstation, disponibile in tutti i sistemi, e Garbage Collection per server, disponibile nei sistemi con più processori.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-129">The common language runtime (CLR) supports two types of garbage collection: workstation garbage collection, which is available on all systems, and server garbage collection, which is available on multiprocessor systems.</span></span> <span data-ttu-id="5d5e8-130">Si usa l'elemento `<gcServer>` per controllare il tipo di Garbage Collection eseguito da CLR.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-130">You use the `<gcServer>` element to control the type of garbage collection the CLR performs.</span></span> <span data-ttu-id="5d5e8-131">Usare la proprietà <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> per determinare se l'operazione Garbage Collection per server è abilitata.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-131">Use the <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> property to determine if server garbage collection is enabled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8fe45-128">Note</span><span class="sxs-lookup"><span data-stu-id="8fe45-128">Remarks</span></span>  
+ <span data-ttu-id="8fe45-129">Common Language Runtime (CLR) supporta due tipi di Garbage Collection: Garbage Collection per workstation, disponibile in tutti i sistemi, e Garbage Collection per server, disponibile nei sistemi con più processori.</span><span class="sxs-lookup"><span data-stu-id="8fe45-129">The common language runtime (CLR) supports two types of garbage collection: workstation garbage collection, which is available on all systems, and server garbage collection, which is available on multiprocessor systems.</span></span> <span data-ttu-id="8fe45-130">Si usa l'elemento `<gcServer>` per controllare il tipo di Garbage Collection eseguito da CLR.</span><span class="sxs-lookup"><span data-stu-id="8fe45-130">You use the `<gcServer>` element to control the type of garbage collection the CLR performs.</span></span> <span data-ttu-id="8fe45-131">Usare la proprietà <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> per determinare se l'operazione Garbage Collection per server è abilitata.</span><span class="sxs-lookup"><span data-stu-id="8fe45-131">Use the <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> property to determine if server garbage collection is enabled.</span></span>  
   
- <span data-ttu-id="5d5e8-132">Per i computer con un solo processore, l'operazione di Garbage Collection per workstation predefinita dovrebbe essere l'opzione più rapida.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-132">For single-processor computers, the default workstation garbage collection should be the fastest option.</span></span> <span data-ttu-id="5d5e8-133">Per i computer con due processori, si può usare quella per workstation o quella per server.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-133">Either workstation or server can be used for two-processor computers.</span></span> <span data-ttu-id="5d5e8-134">L'operazione di Garbage Collection per server dovrebbe essere l'opzione più rapida per più di due processori.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-134">Server garbage collection should be the fastest option for more than two processors.</span></span>  
+ <span data-ttu-id="8fe45-132">Per i computer con un solo processore, l'operazione di Garbage Collection per workstation predefinita dovrebbe essere l'opzione più rapida.</span><span class="sxs-lookup"><span data-stu-id="8fe45-132">For single-processor computers, the default workstation garbage collection should be the fastest option.</span></span> <span data-ttu-id="8fe45-133">Per i computer con due processori, si può usare quella per workstation o quella per server.</span><span class="sxs-lookup"><span data-stu-id="8fe45-133">Either workstation or server can be used for two-processor computers.</span></span> <span data-ttu-id="8fe45-134">L'operazione di Garbage Collection per server dovrebbe essere l'opzione più rapida per più di due processori.</span><span class="sxs-lookup"><span data-stu-id="8fe45-134">Server garbage collection should be the fastest option for more than two processors.</span></span>  
   
- <span data-ttu-id="5d5e8-135">Questo elemento può essere usato solo nel file di configurazione dell'applicazione. Se è nel file di configurazione del computer, viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-135">This element can be used only in the application configuration file; it is ignored if it is in the machine configuration file.</span></span>  
+ <span data-ttu-id="8fe45-135">Questo elemento può essere usato solo nel file di configurazione dell'applicazione. Se è nel file di configurazione del computer, viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="8fe45-135">This element can be used only in the application configuration file; it is ignored if it is in the machine configuration file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5d5e8-136">In .NET Framework 4 e versioni precedenti, la modalità di Garbage Collection simultanea non è disponibile quando l'operazione di Garbage Collection per server è abilitata.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-136">In the .NET Framework 4 and earlier versions, concurrent garbage collection is not available when server garbage collection is enabled.</span></span> <span data-ttu-id="5d5e8-137">A partire da [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], l'operazione di Garbage Collection per server è simultanea.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-137">Starting with the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], server garbage collection is concurrent.</span></span> <span data-ttu-id="5d5e8-138">Per usare garbage collection del server non simultanea, impostare il `<gcServer>` elemento `true` e il [ \<gcConcurrent > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) a `false`.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-138">To use non-concurrent server garbage collection, set the `<gcServer>` element to `true` and the [\<gcConcurrent> element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) to `false`.</span></span>  
+>  <span data-ttu-id="8fe45-136">In .NET Framework 4 e versioni precedenti, la modalità di Garbage Collection simultanea non è disponibile quando l'operazione di Garbage Collection per server è abilitata.</span><span class="sxs-lookup"><span data-stu-id="8fe45-136">In the .NET Framework 4 and earlier versions, concurrent garbage collection is not available when server garbage collection is enabled.</span></span> <span data-ttu-id="8fe45-137">A partire da .NET Framework 4.5, l'operazione di Garbage Collection per server è simultanea.</span><span class="sxs-lookup"><span data-stu-id="8fe45-137">Starting with the .NET Framework 4.5, server garbage collection is concurrent.</span></span> <span data-ttu-id="8fe45-138">Per usare garbage collection del server non simultanea, impostare il `<gcServer>` elemento `true` e il [ \<gcConcurrent > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) a `false`.</span><span class="sxs-lookup"><span data-stu-id="8fe45-138">To use non-concurrent server garbage collection, set the `<gcServer>` element to `true` and the [\<gcConcurrent> element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) to `false`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5d5e8-139">Esempio</span><span class="sxs-lookup"><span data-stu-id="5d5e8-139">Example</span></span>  
- <span data-ttu-id="5d5e8-140">L'esempio seguente abilita l'operazione di Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="5d5e8-140">The following example enables server garbage collection.</span></span>  
+## <a name="example"></a><span data-ttu-id="8fe45-139">Esempio</span><span class="sxs-lookup"><span data-stu-id="8fe45-139">Example</span></span>  
+ <span data-ttu-id="8fe45-140">L'esempio seguente abilita l'operazione di Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="8fe45-140">The following example enables server garbage collection.</span></span>  
   
 ```xml  
 <configuration>  
@@ -78,9 +78,9 @@ ms.locfileid: "61674155"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5d5e8-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5d5e8-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8fe45-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8fe45-141">See also</span></span>
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="5d5e8-142">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="5d5e8-142">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="5d5e8-143">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="5d5e8-143">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="5d5e8-144">Per disabilitare la garbage collection simultanea</span><span class="sxs-lookup"><span data-stu-id="5d5e8-144">To disable concurrent garbage collection</span></span>](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [<span data-ttu-id="8fe45-142">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="8fe45-142">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="8fe45-143">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="8fe45-143">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="8fe45-144">Per disabilitare la garbage collection simultanea</span><span class="sxs-lookup"><span data-stu-id="8fe45-144">To disable concurrent garbage collection</span></span>](gcconcurrent-element.md#to-disable-background-garbage-collection)

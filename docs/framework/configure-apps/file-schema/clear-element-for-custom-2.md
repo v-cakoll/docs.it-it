@@ -7,52 +7,52 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ad3ac93b2a7f92cd33787620fc0caa2b632aa072
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5ab12150c5200dc346e950541443d5286f739c8
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705363"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301240"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="34cee-102">\<Cancella > elemento per NameValueSectionHandler e DictionarySectionHandler</span><span class="sxs-lookup"><span data-stu-id="34cee-102">\<clear> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="9d20e-102">\<Cancella > elemento per NameValueSectionHandler e DictionarySectionHandler</span><span class="sxs-lookup"><span data-stu-id="9d20e-102">\<clear> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
 
-<span data-ttu-id="34cee-103">Cancella tutte le impostazioni definite in precedenza in una sezione.</span><span class="sxs-lookup"><span data-stu-id="34cee-103">Clears all previously defined settings in a section.</span></span>
+<span data-ttu-id="9d20e-103">Cancella tutte le impostazioni definite in precedenza in una sezione.</span><span class="sxs-lookup"><span data-stu-id="9d20e-103">Clears all previously defined settings in a section.</span></span>
 
-<span data-ttu-id="34cee-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="34cee-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="34cee-105">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span><span class="sxs-lookup"><span data-stu-id="34cee-105">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span></span>  
-<span data-ttu-id="34cee-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**</span><span class="sxs-lookup"><span data-stu-id="34cee-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**</span></span>
+<span data-ttu-id="9d20e-104">[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="9d20e-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="9d20e-105">&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span><span class="sxs-lookup"><span data-stu-id="9d20e-105">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span></span>  
+<span data-ttu-id="9d20e-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**</span><span class="sxs-lookup"><span data-stu-id="9d20e-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="34cee-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="34cee-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="9d20e-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9d20e-107">Syntax</span></span>
 
 ```xml
 <clear />
 ```
 
-## <a name="attributes"></a><span data-ttu-id="34cee-108">Attributi</span><span class="sxs-lookup"><span data-stu-id="34cee-108">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="9d20e-108">Attributi</span><span class="sxs-lookup"><span data-stu-id="9d20e-108">Attributes</span></span>
 
-<span data-ttu-id="34cee-109">nessuno</span><span class="sxs-lookup"><span data-stu-id="34cee-109">None</span></span>
+<span data-ttu-id="9d20e-109">nessuno</span><span class="sxs-lookup"><span data-stu-id="9d20e-109">None</span></span>
 
-## <a name="parent-element"></a><span data-ttu-id="34cee-110">Elemento padre</span><span class="sxs-lookup"><span data-stu-id="34cee-110">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="9d20e-110">Elemento padre</span><span class="sxs-lookup"><span data-stu-id="9d20e-110">Parent element</span></span>
 
-|     | <span data-ttu-id="34cee-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="34cee-111">Description</span></span> |
+|     | <span data-ttu-id="9d20e-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9d20e-111">Description</span></span> |
 | --- | ------------|
-| [<span data-ttu-id="34cee-112">**\<sectionName >** elemento</span><span class="sxs-lookup"><span data-stu-id="34cee-112">**\<sectionName>** Element</span></span>](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | <span data-ttu-id="34cee-113">Definisce le impostazioni per le sezioni di configurazione personalizzati che usano il <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classi.</span><span class="sxs-lookup"><span data-stu-id="34cee-113">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
+| [<span data-ttu-id="9d20e-112"> *\*\<sectionName >** elemento</span><span class="sxs-lookup"><span data-stu-id="9d20e-112">**\<sectionName>** Element</span></span>](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | <span data-ttu-id="9d20e-113">Definisce le impostazioni per le sezioni di configurazione personalizzati che usano il <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classi.</span><span class="sxs-lookup"><span data-stu-id="9d20e-113">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="34cee-114">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="34cee-114">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="9d20e-114">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="9d20e-114">Child elements</span></span>
 
-<span data-ttu-id="34cee-115">nessuno</span><span class="sxs-lookup"><span data-stu-id="34cee-115">None</span></span>
+<span data-ttu-id="9d20e-115">nessuno</span><span class="sxs-lookup"><span data-stu-id="9d20e-115">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="34cee-116">Note</span><span class="sxs-lookup"><span data-stu-id="34cee-116">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="9d20e-116">Note</span><span class="sxs-lookup"><span data-stu-id="9d20e-116">Remarks</span></span>
 
-<span data-ttu-id="34cee-117">È possibile usare la  **\<clear >** elemento da cui rimuovere tutte le impostazioni dall'applicazione che sono stati definiti a un livello superiore nella gerarchia di file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="34cee-117">You can use the **\<clear>** element to remove all settings from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
+<span data-ttu-id="9d20e-117">È possibile usare la  **\<clear >** elemento da cui rimuovere tutte le impostazioni dall'applicazione che sono stati definiti a un livello superiore nella gerarchia di file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="9d20e-117">You can use the **\<clear>** element to remove all settings from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
 
-## <a name="example"></a><span data-ttu-id="34cee-118">Esempio</span><span class="sxs-lookup"><span data-stu-id="34cee-118">Example</span></span>
+## <a name="example"></a><span data-ttu-id="9d20e-118">Esempio</span><span class="sxs-lookup"><span data-stu-id="9d20e-118">Example</span></span>
 
-<span data-ttu-id="34cee-119">In questo esempio definisce un file di configurazione di computer e un file di configurazione dell'applicazione e viene illustrato come utilizzare il  **\<clear >** elemento in un file di configurazione dell'applicazione per cancellare le sezioni definite in precedenza di file di configurazione macchina.</span><span class="sxs-lookup"><span data-stu-id="34cee-119">This example defines a machine configuration file and an application configuration file and shows how to use the **\<clear>** element in an application configuration file to clear sections previously defined in the machine configuration file.</span></span>
+<span data-ttu-id="9d20e-119">In questo esempio definisce un file di configurazione di computer e un file di configurazione dell'applicazione e viene illustrato come utilizzare il  **\<clear >** elemento in un file di configurazione dell'applicazione per cancellare le sezioni definite in precedenza di file di configurazione macchina.</span><span class="sxs-lookup"><span data-stu-id="9d20e-119">This example defines a machine configuration file and an application configuration file and shows how to use the **\<clear>** element in an application configuration file to clear sections previously defined in the machine configuration file.</span></span>
 
-<span data-ttu-id="34cee-120">Il codice di file di configurazione macchina seguente dichiara la sezione  **\<mySection >**:</span><span class="sxs-lookup"><span data-stu-id="34cee-120">The following machine configuration file code declares the section **\<mySection>**:</span></span>
+<span data-ttu-id="9d20e-120">Il codice di file di configurazione macchina seguente dichiara la sezione  **\<mySection >** :</span><span class="sxs-lookup"><span data-stu-id="9d20e-120">The following machine configuration file code declares the section **\<mySection>**:</span></span>
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ ms.locfileid: "61705363"
 </configuration>
 ```
 
-<span data-ttu-id="34cee-121">Il codice di file di configurazione dell'applicazione seguente rimuove tutte le impostazioni nelle  **\<mySection >**.</span><span class="sxs-lookup"><span data-stu-id="34cee-121">The following application configuration file code removes all settings from **\<mySection>**.</span></span> <span data-ttu-id="34cee-122">L'applicazione non è possibile recuperare le impostazioni che sono state dichiarate nel nel  **\<mySection >** sezione del file di configurazione della macchina.</span><span class="sxs-lookup"><span data-stu-id="34cee-122">The application cannot retrieve any of the settings that were declared in the in the **\<mySection>** section of the machine configuration file.</span></span>
+<span data-ttu-id="9d20e-121">Il codice di file di configurazione dell'applicazione seguente rimuove tutte le impostazioni nelle  **\<mySection >** .</span><span class="sxs-lookup"><span data-stu-id="9d20e-121">The following application configuration file code removes all settings from **\<mySection>**.</span></span> <span data-ttu-id="9d20e-122">L'applicazione non è possibile recuperare le impostazioni che sono state dichiarate nel nel  **\<mySection >** sezione del file di configurazione della macchina.</span><span class="sxs-lookup"><span data-stu-id="9d20e-122">The application cannot retrieve any of the settings that were declared in the in the **\<mySection>** section of the machine configuration file.</span></span>
 
 ```xml
 <!-- Application configuration file -->
@@ -78,10 +78,10 @@ ms.locfileid: "61705363"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="34cee-123">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="34cee-123">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="9d20e-123">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="9d20e-123">Configuration file</span></span>
 
-<span data-ttu-id="34cee-124">Questo elemento può essere usato nel file di configurazione dell'applicazione, file di configurazione computer (*Machine. config*), e *Web. config* file che non sono a livello di directory dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="34cee-124">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="9d20e-124">Questo elemento può essere usato nel file di configurazione dell'applicazione, file di configurazione computer (*Machine. config*), e *Web. config* file che non sono a livello di directory dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="9d20e-124">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="34cee-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="34cee-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d20e-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9d20e-125">See also</span></span>
 
-- [<span data-ttu-id="34cee-126">Schema di file di configurazione per .NET Framework</span><span class="sxs-lookup"><span data-stu-id="34cee-126">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="9d20e-126">Schema di file di configurazione per .NET Framework</span><span class="sxs-lookup"><span data-stu-id="9d20e-126">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
