@@ -2,15 +2,15 @@
 title: Supporto SqlClient per disponibilità elevata, ripristino di emergenza
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 9b928be56ac09ec707a45829c862e606b68b717c
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
-ms.translationtype: HT
+ms.openlocfilehash: b01db93c51c6d975c9cc951f08b64c5ffd6c1de4
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251174"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380014"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Supporto SqlClient per disponibilità elevata, ripristino di emergenza
-In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) per i gruppi di disponibilità AlwaysOn, con disponibilità elevata e ripristino di emergenza.  La funzionalità gruppi di disponibilità AlwaysOn è stato aggiunto a SQL Server 2012. Per altre informazioni sui gruppi di disponibilità AlwaysOn, vedere la documentazione Online di SQL Server.  
+In questo argomento viene descritto il supporto di SqlClient (aggiunto in .NET Framework 4.5) per il ripristino di emergenza a disponibilità elevata - gruppi di disponibilità AlwaysOn.  La funzionalità gruppi di disponibilità AlwaysOn è stato aggiunto a SQL Server 2012. Per altre informazioni sui gruppi di disponibilità AlwaysOn, vedere la documentazione Online di SQL Server.  
   
  È ora possibile specificare il listener del gruppo di disponibilità di un (disponibilità elevata, ripristino di emergenza) il gruppo di disponibilità (AG) o istanza Cluster di Failover SQL Server 2012 nella proprietà di connessione. Se un'applicazione di SqlClient è connessa a un database AlwaysOn che esegue il failover, la connessione originale viene interrotta e l'applicazione deve aprire una nuova connessione per continuare a funzionare dopo il failover.  
   
@@ -19,7 +19,7 @@ In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCL
 > [!NOTE]
 >  L'aumento del timeout di connessione e l'implementazione di una logica di ripetizione dei tentativi di connessione aumenterà la probabilità che un'applicazione si connetta a un gruppo di disponibilità. Inoltre, poiché una connessione può avere esito negativo a causa di un failover, è necessario implementare la logica di ripetizione dei tentativi di connessione, in modo che una connessione non riuscita venga ripetuta finché non avrà esito positivo.  
   
- Le seguenti proprietà di connessione sono state aggiunte a SqlClient in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]:  
+ Le proprietà di connessione sono state aggiunte a SqlClient in .NET Framework 4.5:  
   
 - `ApplicationIntent`  
   
