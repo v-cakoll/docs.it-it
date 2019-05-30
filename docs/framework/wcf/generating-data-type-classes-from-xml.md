@@ -2,15 +2,15 @@
 title: Generazione di classi di tipo dati da XML
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: c1b5dfda8aa5370dbc202ab90c75ab5677970467
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b99bb40105398dbd91b910c4a19828d069c3d9e7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929571"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380212"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>Generazione di classi di tipo dati da XML
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] include una nuova funzionalità per generare classi di tipi di dati da XML. In questo argomento viene descritto come generare automaticamente i tipi di dati per feed RSS del Blog .NET.  
+.NET framework 4.5 include una nuova funzionalità per generare classi del tipo di dati da XML. In questo argomento viene descritto come generare automaticamente i tipi di dati per feed RSS del Blog .NET.  
   
 ### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>Acquisizione del codice XML dal RSS del Blog .NET feed  
   
@@ -22,7 +22,7 @@ ms.locfileid: "61929571"
   
 ### <a name="creating-the-data-types"></a>Creazione dei tipi di dati  
   
-1. Aprire un file di codice in cui deve essere usato il proxy. Questo file deve far parte di un progetto [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
+1. Aprire un file di codice in cui deve essere usato il proxy. Questo file deve far parte di un progetto di .NET Framework 4.5.  
   
 2. Posizionare il cursore nel file ma all'esterno di a qualsiasi classe esistente.  
   

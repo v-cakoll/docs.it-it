@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], data model
 ms.assetid: d5752e51-cfc9-4499-af71-53b6daae9879
-ms.openlocfilehash: 9b6a6b572bafc3a13c5c15e29527644b1c1a16ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c001d2a7a388b46e277b23a527c8792bcdcebfeb
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945860"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378144"
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Modello di dati di Windows Workflow Foundation
 Il modello di dati di Windows Workflow Foundation è costituito da tre concetti: variabili, argomenti ed espressioni. Le variabili rappresentano l'archivio di dati mentre gli argomenti il flusso di dati all'interno e all'esterno di un'attività. Gli argomenti vengono associati (una volta assegnato un valore) usando espressioni che possono fare riferimento alle variabili.  
@@ -22,7 +22,7 @@ Il modello di dati di Windows Workflow Foundation è costituito da tre concetti:
  Vengono illustrate le espressioni e la relativa modalità di utilizzo nello sviluppo del flusso di lavoro.  
   
  [Espressioni C#](csharp-expressions.md)  
- Vengono descritte le espressioni C# nei flussi di lavoro, introdotte con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
+ Descrive C# le espressioni nei flussi di lavoro, introdotti con .NET Framework 4.5.  
   
  [Proprietà e argomenti](properties-vs-arguments.md)  
  Viene descritto come selezionare il tipo da usare per gli input dell'attività.  

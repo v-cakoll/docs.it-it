@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 0323c0f10538eda2ed3b365a54470bdecac061a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3ac8b2260e5da1e91c167e3e9ef91039deb983b2
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586210"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380238"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Gestione di più versioni in WorkflowServiceHost
-Il controllo delle versioni side-by-side di <xref:System.ServiceModel.Activities.WorkflowServiceHost> introdotto in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] fornisce la possibilità di ospitare più versioni di un servizio di flusso di lavoro in un unico endpoint. La funzionalità side-by-side consente di configurare un servizio di flusso di lavoro in modo che le sue nuove istanze vengano create con la nuova definizione del flusso di lavoro, mentre le istanze in esecuzione vengono completate con la definizione esistente. In questo argomento viene fornita una panoramica dell'esecuzione side-by-side del servizio di flusso di lavoro usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
+Il <xref:System.ServiceModel.Activities.WorkflowServiceHost> controllo delle versioni side-by-side introdotta in .NET Framework 4.5 offre la possibilità di ospitare più versioni di un servizio del flusso di lavoro in un singolo endpoint. La funzionalità side-by-side consente di configurare un servizio di flusso di lavoro in modo che le sue nuove istanze vengano create con la nuova definizione del flusso di lavoro, mentre le istanze in esecuzione vengono completate con la definizione esistente. In questo argomento viene fornita una panoramica dell'esecuzione side-by-side del servizio di flusso di lavoro usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
   
 > [!NOTE]
 >  Per scaricare un esempio e guardare una procedura dettagliata video del controllo delle versioni side-by-side di servizio del flusso di lavoro, vedere [controllo delle versioni Side-by-Side con un servizio di flusso di lavoro Xamlx gestione](https://go.microsoft.com/fwlink/?LinkId=393746).  

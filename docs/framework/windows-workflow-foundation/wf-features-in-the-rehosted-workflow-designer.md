@@ -2,24 +2,24 @@
 title: Supporto per nuovo funzionalità di Workflow Foundation 4.5 nella finestra di progettazione del flusso di lavoro ospitata nuovamente
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 8807506866ef0f5d73065958f1102460ebcc5e9f
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8459311239d46557405245c10b6fb5e887a4691c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876459"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380154"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Supporto per nuovo funzionalità di Workflow Foundation 4.5 nella finestra di progettazione del flusso di lavoro ospitata nuovamente
-Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introdotte molte nuove funzionalità, inclusi numerosi miglioramenti all'esperienza di progettazione del flusso di lavoro. In questo argomento vengono descritte quali funzionalità sono supportate nella finestra di progettazione ospitata nuovamente e quali non sono attualmente supportate.
+Windows Workflow Foundation (WF) in .NET Framework 4.5 introdotte molte nuove funzionalità, inclusi numerosi miglioramenti all'esperienza di progettazione del flusso di lavoro. In questo argomento vengono descritte quali funzionalità sono supportate nella finestra di progettazione ospitata nuovamente e quali non sono attualmente supportate.
 
 > [!NOTE]
->  Per un elenco di tutte le nuove funzionalità di Windows Workflow Foundation (WF) introdotte [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], inclusi quelli che non sono correlati alla riallocazione della finestra di progettazione, vedere [Novità in Windows Workflow Foundation in .NET 4.5](whats-new-in-wf-in-dotnet.md).
+>  Per un elenco di tutte le nuove funzionalità di Windows Workflow Foundation (WF) introdotte in .NET Framework 4.5, inclusi quelli che non sono correlati alla riallocazione della finestra di progettazione, vedere [What ' s New in Windows Workflow Foundation in .NET 4.5](whats-new-in-wf-in-dotnet.md).
 
 ## <a name="activities"></a>Attività
  La libreria di attività predefinita contiene nuove attività e funzionalità per le attività esistenti. Tutte queste nuove attività sono supportate nella finestra di progettazione ospitata nuovamente. Per altre informazioni su queste nuove attività, vedere la [impegni](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) sezione [Novità in Windows Workflow Foundation in .NET 4.5](whats-new-in-wf-in-dotnet.md).
 
 ## <a name="c-expressions"></a>Espressioni C#
- In precedenza a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], tutte le espressioni nei flussi di lavoro potevano essere scritte solo in Visual Basic. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] le espressioni di Visual Basic vengono usate solo per i progetti creati tramite questo linguaggio. Nei progetti Visual C# viene ora usato C# per le espressioni. Durante la creazione di flussi di lavoro in Visual Studio 2012, un editor di espressioni c# completamente funzionale viene fornito funzionalità quali l'evidenziazione della grammatica e intellisense. I progetti di flussi di lavoro C# creati in versioni precedenti che utilizzavano espressioni di Visual Basic continueranno a funzionare.
+ Prima di .NET Framework 4.5, tutte le espressioni nei flussi di lavoro potevano essere scritte solo in Visual Basic. In .NET Framework 4.5, le espressioni Visual Basic vengono utilizzate solo per i progetti creati con Visual Basic. Nei progetti Visual C# viene ora usato C# per le espressioni. Durante la creazione di flussi di lavoro in Visual Studio 2012, un editor di espressioni c# completamente funzionale viene fornito funzionalità quali l'evidenziazione della grammatica e intellisense. I progetti di flussi di lavoro C# creati in versioni precedenti che utilizzavano espressioni di Visual Basic continueranno a funzionare.
 
 > [!WARNING]
 >  Le espressioni C# non sono supportate nella finestra di progettazione ospitata nuovamente.
@@ -27,20 +27,20 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
 ## <a name="new-designer-capabilities"></a>Nuove funzionalità di progettazione
 
 ### <a name="designer-search"></a>Ricerca nella finestra di progettazione
- Il [ricerca veloce](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [Cerca nei file](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) funzionalità introdotte con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] non sono supportate nella finestra di progettazione ospitata nuovamente. La ricerca di `Toolbox` è supportata nella finestra di progettazione ospitata nuovamente. Per altre informazioni su queste funzionalità, vedere [ricerca progettazione](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).
+ Il [ricerca veloce](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [Cerca nei file](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) funzionalità introdotte con .NET Framework 4.5 non sono supportate nella finestra di progettazione ospitata nuovamente. La ricerca di `Toolbox` è supportata nella finestra di progettazione ospitata nuovamente. Per altre informazioni su queste funzionalità, vedere [ricerca progettazione](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).
 
 > [!WARNING]
 >  [Ricerca veloce](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [Cerca nei file](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) non sono supportate nella finestra di progettazione ospitata nuovamente.
 
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>Eliminare l'elemento del menu di scelta rapida nella finestra di progettazione delle variabili e degli argomenti
- In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le variabili e gli argomenti potevano essere eliminati solo nella finestra di progettazione mediante la tastiera. A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] le variabili e gli argomenti possono essere eliminati usando il menu di scelta rapida. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.
+ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le variabili e gli argomenti potevano essere eliminati solo nella finestra di progettazione mediante la tastiera. A partire da .NET Framework 4.5, variabili e argomenti possono essere eliminati usando il menu di scelta rapida. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.
 
  Nella schermata seguente è illustrato il menu di scelta rapida della finestra di progettazione delle variabili e degli argomenti.
 
  ![Menu di scelta rapida della finestra di progettazione argomenti e variabili](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>Racchiudere automaticamente con l'attività Sequence
- Poiché un flusso di lavoro o determinate attività contenitore (ad esempio <xref:System.Activities.Statements.NoPersistScope>) potevano contenere solo un'unica attività Body, l'aggiunta di una seconda attività richiedeva allo sviluppatore di eliminare la prima attività, di aggiungere un'attività <xref:System.Activities.Statements.Sequence> e, successivamente, di aggiungere entrambe le attività all'attività Sequence. A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], quando si aggiunge una seconda attività all'area di progettazione, verrà creata automaticamente un'attività `Sequence` per eseguire il wrapping di entrambe le attività. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.
+ Poiché un flusso di lavoro o determinate attività contenitore (ad esempio <xref:System.Activities.Statements.NoPersistScope>) potevano contenere solo un'unica attività Body, l'aggiunta di una seconda attività richiedeva allo sviluppatore di eliminare la prima attività, di aggiungere un'attività <xref:System.Activities.Statements.Sequence> e, successivamente, di aggiungere entrambe le attività all'attività Sequence. Partire da .NET Framework 4.5, quando si aggiunge una seconda attività all'area di progettazione, un `Sequence` verrà automaticamente creata l'attività per eseguire il wrapping di entrambe le attività. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.
 
  La schermata riportata di seguito mostra un'attività di `WriteLine` in `Body` di `NoPersistScope`.
 
@@ -72,10 +72,10 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
  ![Screenshot della visualizzazione struttura con un flusso di lavoro sequenza in Visual Studio](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Maggiore controllo della visibilità degli elementi della barra della shell e dell'intestazione
- In una finestra di progettazione ospitata nuovamente, alcuni dei controlli dell'interfaccia utente standard possono non essere appropriati per un determinato flusso di lavoro e, pertanto, è possibile disattivarli. In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] questa personalizzazione è supportata solo dalla barra della shell nella parte inferiore della finestra di progettazione. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] la visibilità degli elementi dell'intestazione della shell nella parte superiore della finestra di progettazione può essere regolata impostando la proprietà <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> con il valore <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> appropriato.
+ In una finestra di progettazione ospitata nuovamente, alcuni dei controlli dell'interfaccia utente standard possono non essere appropriati per un determinato flusso di lavoro e, pertanto, è possibile disattivarli. In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] questa personalizzazione è supportata solo dalla barra della shell nella parte inferiore della finestra di progettazione. In .NET Framework 4.5, la visibilità degli elementi di intestazione della shell nella parte superiore della finestra di progettazione può essere modificata impostando <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> con l'appropriato <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> valore.
 
 ### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>Connessione e inserimento automatici nei flussi di lavoro del diagramma di flusso e della macchina a stati
- In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le connessioni tra i nodi di un flusso di lavoro del diagramma di flusso devono essere aggiunte manualmente. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i nodi del diagramma di flusso e della macchina a stati dispongono di punti di connessione automatica che diventano visibili quando un'attività viene trascinata dalla casella degli strumenti nell'area di progettazione. Rilasciando un'attività in uno di questi punti, viene automaticamente aggiunta insieme alla connessione necessaria.
+ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le connessioni tra i nodi di un flusso di lavoro del diagramma di flusso devono essere aggiunte manualmente. In .NET Framework 4.5, i nodi del diagramma di flusso e di macchina a stati hanno-connessione automatica di punti che diventano visibili quando un'attività viene trascinata dalla casella degli strumenti nell'area di progettazione. Rilasciando un'attività in uno di questi punti, viene automaticamente aggiunta insieme alla connessione necessaria.
 
  Nella schermata seguente vengono illustrati i punti di associazione che diventano visibili quando un'attività viene trascinata dalla casella degli strumenti.
 
@@ -100,7 +100,7 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
  I delegati di attività non sono supportati nella finestra di progettazione ospitata nuovamente.
 
 ### <a name="build-time-validation"></a>Convalida in fase di compilazione
- In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] gli errori di convalida del flusso di lavoro non venivano contati come errori di compilazione durante l'esecuzione di questa operazione per un progetto di flusso di lavoro. In questo modo, la compilazione di un progetto di flusso di lavoro poteva essere completata correttamente anche in presenza di errori di convalida del flusso di lavoro. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] gli errori di convalida del flusso di lavoro comportano il mancato completamento della compilazione.
+ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] gli errori di convalida del flusso di lavoro non venivano contati come errori di compilazione durante l'esecuzione di questa operazione per un progetto di flusso di lavoro. In questo modo, la compilazione di un progetto di flusso di lavoro poteva essere completata correttamente anche in presenza di errori di convalida del flusso di lavoro. In .NET Framework 4.5, gli errori di convalida del flusso di lavoro causano l'errore di compilazione.
 
 > [!WARNING]
 >  La convalida in fase di compilazione non è supportata nella finestra di progettazione ospitata nuovamente.  
@@ -111,18 +111,18 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
  La convalida in background in fase di progettazione non è supportata nella finestra di progettazione ospitata nuovamente.  
   
 ### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>Stato di visualizzazione presente in un percorso separato nei file XAML  
- In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le informazioni sullo stato di visualizzazione per un flusso di lavoro sono archiviate nel file XAML in molti percorsi diversi. Questa condizione è poco pratica per gli sviluppatori che desiderano leggere direttamente i file XAML o scrivere codice per rimuovere le informazioni sullo stato di visualizzazione. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], le informazioni sullo stato di visualizzazione nel file XAML viene serializzate come elemento separato nel file XAML.  Gli sviluppatori possono facilmente individuare e modificare le informazioni sullo stato di visualizzazione di un'attività oppure rimuovere completamente lo stato di visualizzazione.  
+ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le informazioni sullo stato di visualizzazione per un flusso di lavoro sono archiviate nel file XAML in molti percorsi diversi. Questa condizione è poco pratica per gli sviluppatori che desiderano leggere direttamente i file XAML o scrivere codice per rimuovere le informazioni sullo stato di visualizzazione. In .NET Framework 4.5, le informazioni sullo stato di visualizzazione nel file XAML viene serializzate come elemento separato nel file XAML.  Gli sviluppatori possono facilmente individuare e modificare le informazioni sullo stato di visualizzazione di un'attività oppure rimuovere completamente lo stato di visualizzazione.  
   
  Questa funzionalità è supportata nella finestra di progettazione del flusso di lavoro ospitata nuovamente.  
   
 ### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a>Consenso esplicito per le funzionalità di .NET 4.5 in una finestra di progettazione ospitata nuovamente  
- Per mantenere la compatibilità con le versioni precedenti, alcune nuove funzionalità incluse in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] non vengono abilitate per impostazione predefinita nella finestra di progettazione ospitata nuovamente. In questo modo si garantisce che le applicazioni esistenti in cui viene usata la finestra di progettazione ospitata nuovamente non vengano interrotte in caso di aggiornamento alla versione più recente. Per abilitare le nuove funzionalità nella finestra di progettazione ospitata nuovamente, impostare la proprietà <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> su ".NET Framework 4.5" oppure impostare singoli membri dell'oggetto <xref:System.Activities.Presentation.DesignerConfigurationService> per abilitare singole funzionalità.  
+ Per mantenere la compatibilità con le versioni precedenti, alcune nuove funzionalità incluse in .NET Framework 4.5 non sono abilitati per impostazione predefinita nella finestra di progettazione ospitata nuovamente. In questo modo si garantisce che le applicazioni esistenti in cui viene usata la finestra di progettazione ospitata nuovamente non vengano interrotte in caso di aggiornamento alla versione più recente. Per abilitare le nuove funzionalità nella finestra di progettazione ospitata nuovamente, impostare la proprietà <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> su ".NET Framework 4.5" oppure impostare singoli membri dell'oggetto <xref:System.Activities.Presentation.DesignerConfigurationService> per abilitare singole funzionalità.  
   
 ## <a name="new-workflow-development-models"></a>Nuovi modelli di sviluppo dei flussi di lavoro  
  Oltre ai modelli di sviluppo dei flussi di lavoro del diagramma di flusso e sequenziale, in questa versione sono inclusi i flussi di lavoro macchina a stati e i servizi dei flussi di lavoro con priorità al contratto ("contract-first").  
   
 ### <a name="state-machine-workflows"></a>Flussi di lavoro macchina a stati  
- I flussi di lavoro macchina a stati sono stati introdotti come parte di .NET Framework 4.0.1 nel [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). In questo aggiornamento sono incluse numerose nuove classi e attività che hanno consentito agli sviluppatori di creare i flussi di lavoro macchina a stati. Queste classi e attività sono state aggiornate per [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Gli aggiornamenti includono:  
+ I flussi di lavoro macchina a stati sono stati introdotti come parte di .NET Framework 4.0.1 nel [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). In questo aggiornamento sono incluse numerose nuove classi e attività che hanno consentito agli sviluppatori di creare i flussi di lavoro macchina a stati. Queste classi e attività sono state aggiornate per .NET Framework 4.5. Gli aggiornamenti includono:  
   
 1. Possibilità di impostare punti di interruzione negli stati  
   

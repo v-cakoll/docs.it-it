@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583549"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052730"
 ---
 # <a name="net-framework-development-guide"></a>Guida di sviluppo per .NET Framework
 Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere e distribuire app .NET Framework. In questa sezione vengono fornite informazioni sulle aree tecnologiche, ad esempio programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.  
@@ -48,7 +48,7 @@ Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere
  Viene illustrato come usare i file di configurazione per modificare le impostazioni senza dover ricompilare le app .NET Framework.  
   
  [Compilazione di app con .NET Native](../../docs/framework/net-native/index.md)  
- Viene illustrato come usare la tecnologia di precompilazione di [!INCLUDE[net_native](../../includes/net-native-md.md)] per compilare e implementare app di Windows Store. [!INCLUDE[net_native](../../includes/net-native-md.md)] compila le app scritte in codice gestito (C#) e destinate a .NET Framework in codice nativo.  
+ Descrive come usare la tecnologia di precompilazione di .NET Native per compilare e distribuire app di Windows Store. .NET Native compila le app scritte in codice gestito (C#) e destinate a .NET Framework in codice nativo.  
   
  [Sicurezza](../../docs/standard/security/index.md)  
  Vengono fornite informazioni sulle classi e sui servizi in .NET Framework che semplificano lo sviluppo di app sicure.  

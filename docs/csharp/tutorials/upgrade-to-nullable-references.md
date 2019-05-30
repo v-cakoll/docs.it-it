@@ -3,12 +3,12 @@ title: Progettare con tipi riferimento nullable
 description: Questa esercitazione avanzata fornisce un'introduzione ai tipi riferimento nullable. Si imparerà a esprimere le finalità della progettazione in merito a quando i valori di riferimento possono essere Null e a configurare il compilatore in modo che stabilisca quando non possono essere Null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427292"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195839"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Esercitazione: Migrazione di codice esistente con tipi riferimento nullable
 
@@ -49,8 +49,11 @@ L'aggiornamento della versione del linguaggio seleziona C# 8.0, ma non abilita i
 Un buon passo successivo è attivare il contesto delle annotazioni nullable e vedere quanti avvisi vengono generati. Aggiungere l'elemento seguente sia ai file csproj nella soluzione, che direttamente nell'elemento `LangVersion`:
 
 ```xml
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
+
+> [!IMPORTANT]
+> Il nome dell'elemento `Nullable` nelle versioni precedenti è `NullableContextOptions`. La ridenominazione è stata introdotta in Visual Studio 2019, 16.2-p1. .NET Core SDK 3.0.100-preview5-011568 non include questa modifica. Se si usa l'interfaccia della riga di comando di .NET Core, è necessario usare `NullableContextOptions` fino a quando non sarà disponibile la prossima anteprima.
 
 Eseguire una compilazione di prova ed esaminare l'elenco degli avvisi. In questa piccola applicazione, il compilatore genera cinque avvisi, dunque è probabile che in un caso come questo si lasci abilitato il contesto delle annotazioni nullable e si inizi a risolvere gli avvisi per l'intero progetto.
 
@@ -58,7 +61,7 @@ Questa strategia funziona solo per i progetti più piccoli. Per qualsiasi proget
 
 ## <a name="warnings-help-discover-original-design-intent"></a>Gli avvisi sono utili per individuare le finalità di progettazione originali
 
-Esistono due classi che generano più avvisi. Prima di tutto la classe `NewsStoryViewModel`. Rimuovere l'elemento `NullableContextOptions` da entrambi i file csproj in modo da poter limitare l'ambito degli avvisi alle sezioni del codice su cui si sta lavorando. Aprire il file *NewsStoryViewModel.cs* e aggiungere le direttive seguenti per abilitare il contesto delle annotazioni nullable per `NewsStoryViewModel` e ripristinarlo seguendo tale definizione di classe:
+Esistono due classi che generano più avvisi. Prima di tutto la classe `NewsStoryViewModel`. Rimuovere l'elemento `Nullable` da entrambi i file csproj in modo da poter limitare l'ambito degli avvisi alle sezioni del codice su cui si sta lavorando. Aprire il file *NewsStoryViewModel.cs* e aggiungere le direttive seguenti per abilitare il contesto delle annotazioni nullable per `NewsStoryViewModel` e ripristinarlo seguendo tale definizione di classe:
 
 ```csharp
 #nullable enable

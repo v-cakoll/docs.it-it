@@ -2,12 +2,12 @@
 title: Implementazione dei tentativi di chiamate HTTP con backoff esponenziale con Polly
 description: Informazioni su come gestire gli errori HTTP con Polly e HttpClientFactory.
 ms.date: 01/07/2019
-ms.openlocfilehash: f9f7c60792527c6bdba9a63b31e3dcbec2963da9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9ffb0d918dc2efdc41d6c2db2e2141d14061b687
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644569"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053108"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementazione dei tentativi di chiamate HTTP con backoff esponenziale con i criteri di Polly e HttpClientFactory
 
@@ -15,7 +15,7 @@ L'approccio consigliato per i tentativi con backoff esponenziale prevede l'uso d
 
 Polly è una libreria .NET che fornisce funzionalità di resilienza e di gestione degli errori temporanei. È possibile implementare queste funzionalità applicando i criteri di Polly, ad esempio Retry, Circuit Breaker, Bulkhead Isolation, Timeout e Fallback. La libreria Polly è compatibile con .NET 4.x e .NET Standard Library 1.0, che supporta .NET Core.
 
-L'uso della libreria Polly con il proprio codice personalizzato con HttpClient, tuttavia, può essere un'operazione estremamente complessa. Nella versione originale di eShopOnContainers si è verificato un [blocco predefinito di ResilientHttpClient](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) basato su Polly. Ma con il rilascio di [HttpClientFactory](https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests), la comunicazione HTTP resiliente è diventata molto più semplice da implementare, deprecando così il blocco predefinito da eShopOnContainers. 
+L'uso della libreria Polly con il proprio codice personalizzato con HttpClient, tuttavia, può essere un'operazione estremamente complessa. Nella versione originale di eShopOnContainers si è verificato un [blocco predefinito di ResilientHttpClient](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) basato su Polly. Con il rilascio di [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md), tuttavia, la comunicazione HTTP resiliente è diventata molto più semplice da implementare, quindi il blocco predefinito è stato deprecato in eShopOnContainers. 
 
 I passaggi seguenti mostrano come usare i tentativi HTTP con Polly integrato in HttpClientFactory, come spiegato nella sezione precedente.
 

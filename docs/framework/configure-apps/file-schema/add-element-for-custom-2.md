@@ -7,22 +7,22 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 9b421b4bab32c1aae7a6ba7d69b9f4aea2ab99a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3bbe4ad6559e324db5853b95e797f50a7b908dcb
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705493"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301442"
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Aggiungi > elemento per NameValueSectionHandler e DictionarySectionHandler
 
 Aggiunge impostazioni personalizzate dell'applicazione. Ciascuna  **\<Aggiungi >** tag contiene una coppia chiave/valore.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,7 +41,7 @@ Aggiunge impostazioni personalizzate dell'applicazione. Ciascuna  **\<Aggiungi >
 
 | Elemento | Descrizione |
 | ------- | ------------|
-| [**\<sectionName >** elemento](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Definisce le impostazioni per le sezioni di configurazione personalizzati che usano il <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classi. |
+| [ **\<sectionName >** elemento](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Definisce le impostazioni per le sezioni di configurazione personalizzati che usano il <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classi. |
 
 ## <a name="child-elements"></a>Elementi figlio
 

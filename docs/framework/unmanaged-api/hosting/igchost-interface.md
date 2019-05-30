@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3202aa25261863dae953e3edac36f3406fa001d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 167e2477e5185112408793e145bc5a4fabea7fc8
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699755"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377622"
 ---
 # <a name="igchost-interface"></a>Interfaccia IGCHost
 Fornisce metodi di recupero di informazioni sul sistema di garbage collection e di controllo di alcuni aspetti del processo di garbage collection.  
   
 > [!NOTE]
->  Inizia con il [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], è possibile usare il [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) metodo per impostare le dimensioni di un segmento di garbage collection e le dimensioni massime della generazione del sistema di garbage collection 0 sui valori maggiore il `DWORD` limite imposto per la [SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/igchost-setgcstartuplimits-method.md) (metodo).  
+>  A partire da .NET Framework 4.5, è possibile usare la [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) metodo per impostare le dimensioni di un segmento di garbage collection e le dimensioni massime della generazione del sistema di garbage collection 0 sui valori maggiore di il `DWORD` limite imposto per la [SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/igchost-setgcstartuplimits-method.md) (metodo).  
   
 > [!NOTE]
 >  Questa interfaccia è per solo all'utilizzo degli esperti. Se usato in modo corretto le prestazioni di un'applicazione può influire sulla.  

@@ -2,15 +2,15 @@
 title: Strumento con priorità al contratto ("contract-first")
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 95aef67eb43176ab062b38979e714f232898f221
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ddc3b2c733c73808d17b6e0f45129cc19d7527c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652070"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380377"
 ---
 # <a name="contract-first-tool"></a>Strumento con priorità al contratto ("contract-first")
-I contratti di servizio devono spesso essere creati a partire da servizi esistenti. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] le classi dei contratti dati possono essere create automaticamente dai servizi esistenti utilizzando lo strumento con priorità al contratto ("contract-first"). Per utilizzare lo strumento con priorità al contratto ("contract-first") è necessario che il file di definizione di XML Schema (XSD) sia scaricato localmente; lo strumento non può importare i contratti dati remoti tramite HTTP.
+I contratti di servizio devono spesso essere creati a partire da servizi esistenti. In .NET Framework 4.5, le classi del contratto dati possono essere create automaticamente da servizi esistenti mediante lo strumento contratto-first. Per utilizzare lo strumento con priorità al contratto ("contract-first") è necessario che il file di definizione di XML Schema (XSD) sia scaricato localmente; lo strumento non può importare i contratti dati remoti tramite HTTP.
 
  Lo strumento contratto-first è integrato in Visual Studio 2012 come un'attività di compilazione. I file di codice generati dall'attività di compilazione vengono creati ogni volta che il progetto viene compilato, in modo che nel progetto possano essere facilmente adottate le modifiche nel contratto di servizio sottostante.
 

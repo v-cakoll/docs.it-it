@@ -7,12 +7,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: a852f36c05075365ced8ec39457b15601ca3c3fb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2c49c8517e15534121b0f8dbc04902b46a92ef20
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877076"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959358"
 ---
 # <a name="fixed-statement-c-reference"></a>Istruzione fixed (Riferimenti per C#)
 
@@ -63,13 +63,11 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-È possibile allocare memoria nello stack, dove non è soggetta a Garbage Collection e pertanto non deve essere bloccata. Per altre informazioni, vedere [stackalloc](stackalloc.md).
-
-[!code-csharp[Initializing multiple pointers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#4)]
+È possibile allocare memoria nello stack, dove non è soggetta a Garbage Collection e pertanto non deve essere bloccata. A questo scopo, usare l'operatore [`stackalloc`](stackalloc.md).
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Per altre informazioni, vedere la sezione [Istruzione fixed](~/_csharplang/spec/unsafe-code.md#the-fixed-statement) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Vedere anche
 

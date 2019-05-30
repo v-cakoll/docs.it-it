@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ad3ac93b2a7f92cd33787620fc0caa2b632aa072
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5ab12150c5200dc346e950541443d5286f739c8
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705363"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301240"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Cancella > elemento per NameValueSectionHandler e DictionarySectionHandler
 
 Cancella tutte le impostazioni definite in precedenza in una sezione.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,7 +38,7 @@ nessuno
 
 |     | Descrizione |
 | --- | ------------|
-| [**\<sectionName >** elemento](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Definisce le impostazioni per le sezioni di configurazione personalizzati che usano il <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classi. |
+| [ **\<sectionName >** elemento](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Definisce le impostazioni per le sezioni di configurazione personalizzati che usano il <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classi. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
@@ -52,7 +52,7 @@ nessuno
 
 In questo esempio definisce un file di configurazione di computer e un file di configurazione dell'applicazione e viene illustrato come utilizzare il  **\<clear >** elemento in un file di configurazione dell'applicazione per cancellare le sezioni definite in precedenza di file di configurazione macchina.
 
-Il codice di file di configurazione macchina seguente dichiara la sezione  **\<mySection >**:
+Il codice di file di configurazione macchina seguente dichiara la sezione  **\<mySection >** :
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ Il codice di file di configurazione macchina seguente dichiara la sezione  **\<m
 </configuration>
 ```
 
-Il codice di file di configurazione dell'applicazione seguente rimuove tutte le impostazioni nelle  **\<mySection >**. L'applicazione non è possibile recuperare le impostazioni che sono state dichiarate nel nel  **\<mySection >** sezione del file di configurazione della macchina.
+Il codice di file di configurazione dell'applicazione seguente rimuove tutte le impostazioni nelle  **\<mySection >** . L'applicazione non è possibile recuperare le impostazioni che sono state dichiarate nel nel  **\<mySection >** sezione del file di configurazione della macchina.
 
 ```xml
 <!-- Application configuration file -->

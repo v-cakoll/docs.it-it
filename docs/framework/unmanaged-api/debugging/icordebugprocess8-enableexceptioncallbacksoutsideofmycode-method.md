@@ -6,15 +6,15 @@ dev_langs:
 ms.assetid: b3af44ec-7d41-425b-aed9-0c4379e5cbe9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f390bced01428f2d94b4cebcc26e1d773bda2191
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 52a58f75ca7abd1bd1f871bcf4637bfd7eb7bdcd
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613782"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300548"
 ---
 # <a name="icordebugprocess8enableexceptioncallbacksoutsideofmycode-method"></a>Metodo ICorDebugProcess8::EnableExceptionCallbacksOutsideOfMyCode
-[Supportato in [!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] e versioni successive]  
+[Supportato in .NET Framework 4.6 e versioni successive]  
   
  Abilita o disabilita alcuni tipi di [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) callback di eccezione.  
   

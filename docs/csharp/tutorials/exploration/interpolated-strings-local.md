@@ -4,12 +4,12 @@ description: Questa esercitazione mostra come usare la funzionalità di interpol
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: 97773659ea7dd00c291aa6a96401cac531adfdc8
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: c1e6fed2293b7447384a657e720fb847f2fa041f
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921373"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195889"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Usare l'interpolazione di stringhe per la costruzione di stringhe formattate
 
@@ -34,19 +34,19 @@ var name = "<name>";
 Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 ```
 
-Per provare questo codice, digitare `dotnet run` nella finestra della console. Quando si esegue il programma viene visualizzata un'unica stringa contenente un messaggio di saluto che include il nome dell'utente. La stringa inclusa nella chiamata al metodo <xref:System.Console.WriteLine%2A> è una *stringa interpolata*. Si tratta di un tipo di modello che consente di costruire un'unica stringa detta *stringa di risultato* da una stringa che include codice incorporato. Le stringhe interpolate sono particolarmente utili per inserire valori in una stringa o per concatenare (unire) più stringhe.
+Per provare questo codice, digitare `dotnet run` nella finestra della console. Quando si esegue il programma viene visualizzata un'unica stringa contenente un messaggio di saluto che include il nome dell'utente. La stringa inclusa nella chiamata del metodo <xref:System.Console.WriteLine%2A> è un'*espressione di stringa interpolata*. Si tratta di un tipo di modello che consente di costruire un'unica stringa detta *stringa di risultato* da una stringa che include codice incorporato. Le stringhe interpolate sono particolarmente utili per inserire valori in una stringa o per concatenare (unire) più stringhe.
 
 Questo semplice esempio contiene i due elementi che devono essere presenti in ogni stringa interpolata:
 
 - Un valore letterale stringa che inizia con il carattere `$` prima delle virgolette inglesi aperte. Tra il simbolo `$` e le virgolette non devono essere presenti spazi. Se si vuole vedere cosa accade se ne viene incluso uno, inserire uno spazio dopo il carattere `$`, salvare il file ed eseguire nuovamente il programma digitando `dotnet run` nella finestra della console. Il compilatore C# visualizza un messaggio di errore CS1056 per segnalare che il carattere "$" non è previsto.
 
-- Una o più *espressioni interpolate*. Un'espressione interpolata è indicata tra parentesi graffe di apertura e chiusura (`{` e `}`). All'interno delle parentesi graffe è possibile inserire qualsiasi espressione C# che restituisce un valore, incluso `null`.
+- Una o più *espressioni di interpolazione*. Un'espressione di interpolazione è indicata da parentesi graffe di apertura e chiusura (`{` e `}`). All'interno delle parentesi graffe è possibile inserire qualsiasi espressione C# che restituisce un valore, incluso `null`.
 
 Ora si proveranno altri esempi di interpolazione di stringhe con altri tipi di dati.
 
 ## <a name="include-different-data-types"></a>Includere tipi di dati diversi
 
-Nella sezione precedente è stata usata l'interpolazione di stringhe per inserire una stringa in un'altra. Il risultato di un'espressione interpolata può avere qualsiasi tipo di dati. Includiamo valori di vari tipi di dati in una stringa interpolata.
+Nella sezione precedente è stata usata l'interpolazione di stringhe per inserire una stringa in un'altra. Il risultato di un'espressione di interpolazione può avere tuttavia qualsiasi tipo di dati. Includiamo valori di vari tipi di dati in una stringa interpolata.
 
 Nell'esempio seguente viene definito prima di tutto un tipo di dati [class](../../programming-guide/classes-and-structs/classes.md) `Vegetable` con la [proprietà](../../properties.md) `Name` e un [metodo](../../methods.md) `ToString` che esegue l'[override](../../language-reference/keywords/override.md) del comportamento del metodo <xref:System.Object.ToString?displayProperty=nameWithType>. Il [modificatore di accesso `public`](../../language-reference/keywords/public.md)rende tale metodo disponibile per qualsiasi codice client per ottenere la rappresentazione stringa di un'istanza di `Vegetable`. Nell'esempio il metodo `Vegetable.ToString` restituisce il valore della proprietà `Name` inizializzata nel [costruttore](../../programming-guide/classes-and-structs/constructors.md) `Vegetable`:
 
@@ -89,15 +89,15 @@ public class Program
 }
 ```
 
-L'espressione interpolata `item` nella stringa interpolata restituisce il testo "eggplant" nella stringa di risultato. Questo accade perché, quando il tipo di risultato dell'espressione non è una stringa, il risultato restituisce una stringa nel modo seguente:
+L'espressione di interpolazione `item` nella stringa interpolata restituisce il testo "eggplant" nella stringa del risultato. Questo accade perché, quando il tipo di risultato dell'espressione non è una stringa, il risultato restituisce una stringa nel modo seguente:
 
-- Se l'espressione interpolata restituisce `null`, viene usata una stringa vuota ("" o <xref:System.String.Empty?displayProperty=nameWithType>).
+- Se l'espressione di interpolazione restituisce `null`, viene usata una stringa vuota ("" o <xref:System.String.Empty?displayProperty=nameWithType>).
 
-- Se l'espressione interpolata non restituisce `null`, in genere viene chiamato il metodo `ToString` del tipo di risultato. È possibile testare questo processo aggiornando l'implementazione del metodo `Vegetable.ToString`. Potrebbe anche non essere necessario implementare il metodo `ToString`, poiché ogni tipo prevede un'implementazione di questo metodo. Per il test di questo funzionamento, impostare come commento la definizione del metodo `Vegetable.ToString` nell'esempio (facendola precedere dal simbolo di commento `//`). Nell'output la stringa "eggplant" viene sostituita dal nome completo del tipo ("Vegetable" in questo esempio), ovvero il comportamento predefinito del metodo <xref:System.Object.ToString?displayProperty=nameWithType>. Il comportamento predefinito del metodo `ToString` per un tipo di enumerazione prevede la restituzione della rappresentazione stringa di un valore usato nella definizione dell'enumerazione.
+- Se l'espressione di interpolazione non restituisce `null`, in genere viene chiamato il metodo `ToString` del tipo di risultato. È possibile testare questo processo aggiornando l'implementazione del metodo `Vegetable.ToString`. Potrebbe anche non essere necessario implementare il metodo `ToString`, poiché ogni tipo prevede un'implementazione di questo metodo. Per il test di questo funzionamento, impostare come commento la definizione del metodo `Vegetable.ToString` nell'esempio (facendola precedere dal simbolo di commento `//`). Nell'output la stringa "eggplant" viene sostituita dal nome completo del tipo ("Vegetable" in questo esempio), ovvero il comportamento predefinito del metodo <xref:System.Object.ToString?displayProperty=nameWithType>. Il comportamento predefinito del metodo `ToString` per un tipo di enumerazione prevede la restituzione della rappresentazione stringa di un valore usato nella definizione dell'enumerazione.
 
 Nell'output di questo esempio la data è troppo precisa (il prezzo delle melanzane non varia ogni secondo) e il valore del prezzo non indica una valuta. Nella sezione successiva si apprenderà come risolvere questi problemi controllando la formattazione delle rappresentazioni di stringa dei risultati delle espressioni.
 
-## <a name="control-the-formatting-of-interpolated-expressions"></a>Controllare la formattazione delle espressioni interpolate
+## <a name="control-the-formatting-of-interpolation-expressions"></a>Controllare la formattazione delle espressioni di interpolazione
 
 Nella sezione precedente sono state inserite nella stringa di risultato due stringhe con formattazione non valida. Il primo problema è un valore di data e ora nel quale solo la data risultava corretta. Il secondo è un prezzo che non indica la valuta. Entrambi i problemi sono di facile risoluzione. L'interpolazione di stringhe consente di specificare *stringhe di formato* che controllano la formattazione di determinati tipi. Modificare la chiamata in `Console.WriteLine` dell'esempio precedente in modo da includere le stringhe di formato per le espressioni di data e prezzo, come indicato nella riga seguente:
 
@@ -105,7 +105,7 @@ Nella sezione precedente sono state inserite nella stringa di risultato due stri
 Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
 ```
 
-Per specificare una stringa di formato, far seguire all'espressione interpolata i due punti (":") e la stringa di formato desiderata. "d" è un [stringa di formato data e ora standard](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) che rappresenta il formato di data breve. "C2" è un [stringa di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) che rappresenta un numero come valore di valuta con due cifre dopo il separatore decimale.
+Per specificare una stringa di formato, aggiungere i due punti (":") e la stringa di formato desiderata dopo l'espressione di interpolazione. "d" è un [stringa di formato data e ora standard](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) che rappresenta il formato di data breve. "C2" è un [stringa di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) che rappresenta un numero come valore di valuta con due cifre dopo il separatore decimale.
 
 Molti tipi delle librerie .NET supportano un set predefinito di stringhe di formato. Tali tipi includono tutti i tipi numerici e i tipi data e ora. Per l'elenco completo dei tipi che supportano le stringhe di formato, vedere [Stringhe di formato e tipi della libreria di classe .NET](../../../standard/base-types/formatting-types.md#stringRef) nell'articolo [Formattazione di tipi in .NET](../../../standard/base-types/formatting-types.md).
 
@@ -113,9 +113,9 @@ Provare a modificare le stringhe di formato nell'editor di testo ed eseguire nuo
 
 Oltre alla formattazione è possibile controllare la larghezza del campo e l'allineamento delle stringhe formattate incluse nella stringa di risultato. La sezione successiva spiega come eseguire questa operazione.
 
-## <a name="control-the-field-width-and-alignment-of-interpolated-expressions"></a>Controllare la larghezza del campo e l'allineamento delle espressioni interpolate
+## <a name="control-the-field-width-and-alignment-of-interpolation-expressions"></a>Controllare la larghezza del campo e l'allineamento delle espressioni di interpolazione
 
-In genere quando il risultato di un'espressione interpolata è formattato in una stringa, questa viene inclusa in una stringa di risultato senza spazi iniziali o finali. In particolare quando si usa un set di dati, la possibilità di controllare la larghezza di un campo e l'allineamento del testo consente di generare un output più leggibile. Per verificare, sostituire tutto il codice nell'editor di testo con il codice seguente e digitare `dotnet run` per eseguire il programma:
+In genere quando il risultato di un'espressione di interpolazione è formattato in stringa, questa viene inclusa in una stringa del risultato senza spazi iniziali o finali. In particolare quando si usa un set di dati, la possibilità di controllare la larghezza di un campo e l'allineamento del testo consente di generare un output più leggibile. Per verificare, sostituire tutto il codice nell'editor di testo con il codice seguente e digitare `dotnet run` per eseguire il programma:
 
 ```csharp
 using System;
@@ -141,7 +141,7 @@ public class Example
 }
 ```
 
-I nomi degli autori vengono allineati a sinistra e i titoli da loro scritti sono allineati a destra. Per specificare l'allineamento, aggiungere una virgola (",") dopo un'espressione interpolata e indicare la larghezza *minima* del campo. Se il valore specificato è un numero positivo, il campo è allineato a destra. Se è un numero negativo, il campo è allineato a sinistra.
+I nomi degli autori vengono allineati a sinistra e i titoli da loro scritti sono allineati a destra. Per specificare l'allineamento, aggiungere una virgola (",") dopo un'espressione di interpolazione e indicare la larghezza *minima* del campo. Se il valore specificato è un numero positivo, il campo è allineato a destra. Se è un numero negativo, il campo è allineato a sinistra.
 
 Provare a rimuovere il segno negativo dal codice `{"Author",-25}` e `{title.Key,-25}` ed eseguire di nuovo l'esempio, come indicato dal codice seguente:
 
@@ -153,7 +153,7 @@ foreach (var title in titles)
 
 Questa volta le informazioni sull'autore sono allineate a destra.
 
-È possibile combinare un identificatore di allineamento e una stringa di formato per un'unica espressione interpolata. A tale scopo, specificare prima l'allineamento, seguito da due punti e dalla stringa di formato. Sostituire tutto il codice nel metodo `Main` con il codice seguente, che consente di visualizzare tre stringhe formattate con le larghezze di campo definite. A questo punto eseguire il programma immettendo il comando `dotnet run`.
+È possibile combinare un identificatore di allineamento e una stringa di formato per un'unica espressione di interpolazione. A tale scopo, specificare prima l'allineamento, seguito da due punti e dalla stringa di formato. Sostituire tutto il codice nel metodo `Main` con il codice seguente, che consente di visualizzare tre stringhe formattate con le larghezze di campo definite. A questo punto eseguire il programma immettendo il comando `dotnet run`.
 
 ```csharp
 Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.342,15:N2}] feet");

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 731e52958b89886c2bc069c4c181c0cc3928d487
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8636050b2618d1b2c2da0c08c756b0ed221c7f6f
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674727"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300764"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Elemento personalizzato per NameValueSectionHandler e DictionarySectionHandler
 
 Definisce le impostazioni per le sezioni di configurazione personalizzati che usano il <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classi.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
-&nbsp;&nbsp;**\<sectionName>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
+&nbsp;&nbsp; **\<sectionName>**
 
 ## <a name="attributes"></a>Attributi
 
@@ -30,15 +30,15 @@ nessuno
 
 |     | Descrizione |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
 |     | Descrizione |
 | --- | ----------- |
-| [**\<aggiungere >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) per <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler>  | Aggiunge impostazioni personalizzate dell'applicazione. |
-| [**\<rimuovere >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) per <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> | Rimuove un'impostazione definita in precedenza. |
-| [**\<Cancella >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) per <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> | Cancella tutte le impostazioni definite in precedenza in una sezione. |
+| [ **\<aggiungere >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) per <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler>  | Aggiunge impostazioni personalizzate dell'applicazione. |
+| [ **\<rimuovere >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) per <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> | Rimuove un'impostazione definita in precedenza. |
+| [ **\<Cancella >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) per <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> | Cancella tutte le impostazioni definite in precedenza in una sezione. |
 
 ## <a name="remarks"></a>Note
 
@@ -55,7 +55,7 @@ Nella tabella seguente mostra che il tipo di oggetto, il metodo GetConfig restit
 
 Nell'esempio seguente viene illustrato come dichiarare le sezioni che usano il <xref:System.Configuration.DictionarySectionHandler> e <xref:System.Configuration.NameValueSectionHandler> classi.
 
-Il primo elemento personalizzato viene  **\<dictionarySample >**, che contiene le impostazioni lette dal <xref:System.Configuration.DictionarySectionHandler> classe la `System.dll` assembly. Il secondo elemento personalizzato viene  **\<mySection >**, che contiene le impostazioni lette dal <xref:System.Configuration.NameValueSectionHandler> classe la `System.dll` assembly.
+Il primo elemento personalizzato viene  **\<dictionarySample >** , che contiene le impostazioni lette dal <xref:System.Configuration.DictionarySectionHandler> classe la `System.dll` assembly. Il secondo elemento personalizzato viene  **\<mySection >** , che contiene le impostazioni lette dal <xref:System.Configuration.NameValueSectionHandler> classe la `System.dll` assembly.
 
 ```xml
 <configuration>

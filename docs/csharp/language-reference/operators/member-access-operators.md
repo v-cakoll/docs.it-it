@@ -17,6 +17,7 @@ helpviewer_keywords:
 - indexer operator [C#]
 - '[] operator [C#]'
 - null-conditional operators [C#]
+- Elvis operator [C#]
 - ?. operator [C#]
 - ?[] operator [C#]
 - invocation operator [C#]
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: a76c2855196b229918ee0a6a7d2a4dc66d87d059
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: eec70f5446eec11fa4e241b86eed4ed8d6146f85
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881038"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195774"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatori di accesso ai membri (Riferimenti per C#)
 
@@ -99,7 +100,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Operatori condizionali Null ?. e ?[]
 
-Un operatore condizionale Null, disponibile in C# 6 e nelle versioni successive, applica un'operazione di accesso ai membri, `?.`, o di accesso a elementi, `?[]`, al relativo operando solo se l'operando restituisce un valore diverso da Null. Se l'operando restituisce `null`, il risultato dell'applicazione dell'operatore è `null`.
+Un operatore condizionale Null, disponibile in C# 6 e nelle versioni successive, applica un'operazione di accesso ai membri, `?.`, o di accesso a elementi, `?[]`, al relativo operando solo se l'operando restituisce un valore diverso da Null. Se l'operando restituisce `null`, il risultato dell'applicazione dell'operatore è `null`. L'operatore di accesso ai membri condizionale Null `?.` è anche noto come operatore Elvis.
 
 Gli operatori condizionali Null causano corto circuiti. Vale a dire, se un'operazione in una catena di operazioni condizionali di accesso a un membro o a un elemento restituisce `null`, l'esecuzione delle altre operazioni della catena viene interrotta. Nell'esempio seguente `B` non viene valutato se `A` restituisce `null` e `C` non viene valutato se `A` oppure `B` restituisce `null`:
 

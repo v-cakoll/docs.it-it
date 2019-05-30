@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 589bb205b10a5b7b0c4480393b8937e0df36022f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337552"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052390"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Cenni preliminari sull'interoperabilità (Guida per programmatori C#)
 In questo argomento vengono descritti i metodi per consentire l'interoperabilità tra il codice gestito C# e il codice non gestito.  
@@ -28,7 +28,7 @@ In questo argomento vengono descritti i metodi per consentire l'interoperabilit�
 >  Il [Common Language Runtime](../../../standard/clr.md) (CLR) gestisce l'accesso alle risorse di sistema. La chiamata di codice non gestito esterno al CLR ignora questo meccanismo di sicurezza e presenta pertanto un rischio per la sicurezza. Ad esempio, il codice non gestito può chiamare direttamente le risorse nel codice non gestito, ignorando i meccanismi di sicurezza CLR. Per altre informazioni, vedere [Sicurezza in .NET](../../../standard/security/index.md).  
   
 ## <a name="c-interop"></a>interoperabilità C++  
- È possibile usare l'interoperabilità C++, nota anche come It Just Works (IJW), per eseguire il wrapping di una classe C++ nativa in modo che possa essere usata dal codice creato in C# o in un altro linguaggio .NET Framework. A tale scopo, scrivere codice C++ per eseguire il wrapping di un componente COM o DLL nativo. A differenza degli altri linguaggi .NET Framework, [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] offre un supporto all'interoperabilità che consente la presenza di codice gestito e non gestito nella stessa applicazione e perfino nello stesso file. Compilare quindi il codice C++ mediante l'opzione del compilatore **/clr** per produrre un assembly gestito. Infine, aggiungere un riferimento all'assembly nel progetto C# e usare gli oggetti con wrapping esattamente come si userebbero altre classi gestite.  
+ È possibile usare l'interoperabilità C++, nota anche come It Just Works (IJW), per eseguire il wrapping di una classe C++ nativa in modo che possa essere usata dal codice creato in C# o in un altro linguaggio .NET Framework. A tale scopo, scrivere codice C++ per eseguire il wrapping di un componente COM o DLL nativo. A differenza di altri linguaggi .NET Framework, Visual C++ offre un tipo di supporto per l'interoperabilità che permette la presenza di codice gestito e non gestito nella stessa applicazione e anche nello stesso file. Compilare quindi il codice C++ mediante l'opzione del compilatore **/clr** per produrre un assembly gestito. Infine, aggiungere un riferimento all'assembly nel progetto C# e usare gli oggetti con wrapping esattamente come si userebbero altre classi gestite.  
   
 ## <a name="exposing-com-components-to-c"></a>Esposizione di componenti COM a C\#
  È possibile usare un componente COM da un progetto C#. La procedura generale è la seguente:  

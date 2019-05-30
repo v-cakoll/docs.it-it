@@ -2,12 +2,12 @@
 title: Tipi riferimento nullable
 description: Questo articolo offre una panoramica dei tipi riferimento nullable, aggiunti in C# 8. Si apprenderà come la funzionalità offra sicurezza contro le eccezioni dei riferimenti Null, per progetti nuovi ed esistenti.
 ms.date: 02/19/2019
-ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725025"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195927"
 ---
 # <a name="nullable-reference-types"></a>Tipi riferimento nullable
 
@@ -58,7 +58,7 @@ Il supporto dei valori Null di un tipo in una dichiarazione di variabile viene c
 
 I contesti nullable consentono il controllo con granularità fine di come il compilatore interpreta le variabili dei tipi riferimento. Il **contesto dell'annotazione nullable** di una determinata riga di origine è `enabled` o `disabled`. Nel compilatore delle versioni precedenti a C# 8 la compilazione di tutto il codice viene eseguita in un contesto nullable `disabled`: Qualsiasi tipo riferimento potrebbe essere null. Il **contesto degli avvisi nullable** potrebbe essere impostato su `enabled`, `disabled` o `safeonly`. Il contesto degli avvisi nullable specifica gli avvisi generati dal compilatore usando l'analisi del flusso.
 
-Il contesto dell'annotazione nullable e il contesto dell'avviso nullable possono essere impostati per un progetto usando l'elemento `NullableContextOptions` nel file `csproj`. Questo elemento configura come il compilatore interpreta il supporto dei valori Null dei tipi e quali avvisi vengono generati. Le impostazioni valide sono:
+Il contesto dell'annotazione nullable e il contesto dell'avviso nullable possono essere impostati per un progetto usando l'elemento `Nullable` nel file `csproj`. Questo elemento configura come il compilatore interpreta il supporto dei valori Null dei tipi e quali avvisi vengono generati. Le impostazioni valide sono:
 
 - `enable`: il contesto dell'annotazione nullable è **enabled**. Il contesto dell'avviso nullable è **enabled**.
   - Le variabili di un tipo riferimento, ad esempio `string`, sono non nullable.  Tutti gli avvisi relativi al supporto dei valori Null sono abilitati.
@@ -70,6 +70,9 @@ Il contesto dell'annotazione nullable e il contesto dell'avviso nullable possono
   - Le variabili di un tipo riferimento sono indipendenti dai valori. Tutti gli avvisi relativi al supporto dei valori Null sono abilitati.
 - `safeonlywarnings`: il contesto dell'annotazione nullable è **disabled**. Il contesto dell'avviso nullable è **safeonly**.
   - Le variabili di un tipo riferimento sono indipendenti dai valori. Tutti gli avvisi relativi al supporto dei valori Null per la sicurezza sono abilitati.
+
+> [!IMPORTANT]
+> Il nome dell'elemento `Nullable` nelle versioni precedenti è `NullableContextOptions`. La ridenominazione è stata introdotta in Visual Studio 2019, 16.2-p1. .NET Core SDK 3.0.100-preview5-011568 non include questa modifica. Se si usa l'interfaccia della riga di comando di .NET Core, è necessario usare `NullableContextOptions` fino a quando non sarà disponibile la prossima anteprima.
 
 È anche possibile usare le direttive per impostare questi stessi contesti ovunque nel progetto:
 

@@ -8,27 +8,27 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 58f823ce0c128f30e361b4a631d41286533b5f0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64556054df2689ff758f52c7e98556997a3e9d3d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701502"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301181"
 ---
 # <a name="section-element"></a>\<sezione > elemento
 
 Contiene una dichiarazione della sezione di configurazione.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<section>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<section>**
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<section>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<section>**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -59,8 +59,8 @@ Gli attributi seguenti sono applicabili solo per le applicazioni ASP.NET. Il sis
 
 |     | Descrizione |
 | --- | ----------- |
-| [**\<configSections >** elemento](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene le dichiarazioni dello spazio dei nomi e sezione di configurazione. |
-| [**\<sectionGroup >** elemento](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |
+| [ **\<configSections >** elemento](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene le dichiarazioni dello spazio dei nomi e sezione di configurazione. |
+| [ **\<sectionGroup >** elemento](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |
 
 > [!NOTE]
 > Oggetto  **\<sezione >** è un elemento figlio di uno  **\<configSections >** oppure  **\<sectionGroup >** ma non entrambi.

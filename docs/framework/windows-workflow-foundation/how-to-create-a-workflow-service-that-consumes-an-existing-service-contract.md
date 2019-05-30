@@ -2,15 +2,15 @@
 title: 'Procedura: Creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente'
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: c2ca9c349718c3939d74d052ff0ed448879cd045
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82c9ccc21600ae0b9ff8c514a51ec9b97f8f1d37
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945574"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378125"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Procedura: Creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] offre una maggiore integrazione tra i servizi Web e i flussi di lavoro sotto forma di sviluppo di flussi di lavoro con priorità al contratto. Lo strumento di sviluppo di flussi di lavoro con priorità al contratto consente di progettare il contratto innanzitutto nel codice. Lo strumento consente di generare automaticamente un modello di attività nella casella degli strumenti per le operazioni nel contratto.  
+Le funzionalità di .NET framework 4.5 una maggiore integrazione tra i servizi web e i flussi di lavoro sotto forma di sviluppo di flussi di lavoro del contratto. Lo strumento di sviluppo di flussi di lavoro con priorità al contratto consente di progettare il contratto innanzitutto nel codice. Lo strumento consente di generare automaticamente un modello di attività nella casella degli strumenti per le operazioni nel contratto.  
   
 > [!NOTE]
 >  In questo argomento viene fornito materiale sussidiario dettagliato per la creazione di un servizio del flusso di lavoro con priorità al contratto ("contract-first"). Per altre informazioni sullo sviluppo di flussi di lavoro contratto di servizio, vedere [sviluppo del servizio del flusso di lavoro prima Contract](contract-first-workflow-service-development.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "61945574"
   
 ### <a name="importing-the-service-contract"></a>Importazione del contratto di servizio  
   
-1. Fare clic sul progetto in **Esplora soluzioni** e selezionare **Importa contratto del servizio**. Sotto  **\<progetto corrente >**, aprire tutti i sottonodi e selezionare **IBookService**. Fare clic su **OK**.  
+1. Fare clic sul progetto in **Esplora soluzioni** e selezionare **Importa contratto del servizio**. Sotto  **\<progetto corrente >** , aprire tutti i sottonodi e selezionare **IBookService**. Fare clic su **OK**.  
   
 2. Verrà visualizzata una finestra di dialogo indicante che l'operazione è stata completata correttamente e che le attività generate verranno inserite nella casella degli strumenti dopo che il progetto sarà stato compilato. Fare clic su **OK**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "61945574"
   
 4. Nelle **Esplora soluzioni**, aprire il file Service1.xamlx. Il servizio del flusso di lavoro verrà visualizzata nella finestra di progettazione.  
   
-5. Selezionare il **sequenza** attività. Nella finestra Proprietà, fare clic su di **...** pulsante di **ImplementedContract** proprietà. Nel **Editor raccolta di tipi** finestra visualizzata, fare clic sui **tipo** elenco a discesa e selezionare il **Cerca tipi...** voce. Nel **individuare e selezionare un tipo .NET** finestra di dialogo, sotto  **\<progetto corrente >**, aprire tutti i sottonodi e selezionare **IBookService**. Fare clic su **OK**. Nel **Editor raccolta di tipi** finestra di dialogo, fare clic su **OK**.  
+5. Selezionare il **sequenza** attività. Nella finestra Proprietà, fare clic su di **...** pulsante di **ImplementedContract** proprietà. Nel **Editor raccolta di tipi** finestra visualizzata, fare clic sui **tipo** elenco a discesa e selezionare il **Cerca tipi...** voce. Nel **individuare e selezionare un tipo .NET** finestra di dialogo, sotto  **\<progetto corrente >** , aprire tutti i sottonodi e selezionare **IBookService**. Fare clic su **OK**. Nel **Editor raccolta di tipi** finestra di dialogo, fare clic su **OK**.  
   
 6. Selezionare ed eliminare le **ReceiveRequest** e **SendResponse** attività.  
   

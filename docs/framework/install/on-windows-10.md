@@ -3,60 +3,56 @@ title: Installare .NET Framework in Windows 10
 description: Informazioni sull'installazione di .NET Framework in Windows 10 o Windows Server 2016.
 author: rlander
 ms.author: mairaw
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: db5c6a45db299d716b2fdd115086e0dbc5952a59
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 69c647e57dead3b4f61bb45202c6b039099f0499
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204301"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052178"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Installare .NET Framework in Windows 10 e Windows Server 2016 e versioni successive
 
-.NET Framework è necessario per l'esecuzione di diverse applicazioni in Windows. Le istruzioni contenute in questo articolo consentono di installare le versioni di .NET Framework necessarie. [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) è la versione più recente disponibile.
+.NET Framework è necessario per l'esecuzione di diverse applicazioni in Windows. Le istruzioni contenute in questo articolo consentono di installare le versioni di .NET Framework necessarie. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) è la versione più recente disponibile.
 
 È possibile che si sia arrivati a questa pagina dopo avere provato a eseguire un'applicazione e avere visualizzato sul computer una finestra di dialogo simile a quella seguente:
 
 ![Impossibile avviare l'applicazione](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-472"></a>.NET Framework 4.7.2
+## <a name="net-framework-48"></a>.NET Framework 4.8
 
-.NET Framework 4.7.2 è incluso in:
+.NET Framework 4.8 è incluso in:
 
-* [Aggiornamento di Windows 10 (ottobre 2018)](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
-
-* [Aggiornamento di Windows 10 (aprile 2018)](https://www.microsoft.com/software-download/windows10)
-
-* Windows Server 2019
-
-* Windows Server, versione 1809
-
-* Windows Server, versione 1803
+* [Aggiornamento di Windows di 10 maggio 2019](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
-> [Scaricare .NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472)
+> [Download di .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-[.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) può essere usato per eseguire le applicazioni create per le versioni di .NET Framework da 4.0 a 4.7.1.
+È possibile usare [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) per eseguire applicazioni compilate per le versioni di .NET Framework da 4.0 a 4.7.2.
 
-È possibile installare [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) in:
+È possibile installare [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) in:
 
+* Aggiornamento di Windows 10 di ottobre 2018 (versione 1809)
+* Aggiornamento di Windows 10 di aprile 2018 (versione 1803)
 * Windows 10 Fall Creators Update (versione 1709)
 * Windows 10 Creators Update (versione 1703)
 * Aggiornamento dell'anniversario di Windows 10 (versione 1607)
-* Windows Server, versione 1709
+* Windows Server 2019
+* Windows Server, versione 1809
+* Windows Server, versione 1803
 * Windows Server 2016
 
-.NET Framework 4.7.2 non è supportato in:
+.NET Framework 4.8 non è supportato in:
 
 * Windows 10 1507
 * Windows 10 1511
 
-Se si usa Windows 10 1507 o 1511 e si vuole installare .NET Framework 4.7.2, è prima necessario eseguire l'aggiornamento a una versione più recente di Windows 10.
+Se si usa Windows 10 1507 o 1511 e si vuole installare .NET Framework 4.8, è prima necessario eseguire l'aggiornamento a una versione più recente di Windows 10.
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-[.NET Framework 4.6.2](https://www.microsoft.com/en-us/download/details.aspx?id=53345) è la versione di .NET Framework supportata più recente in Windows 10 1507 e 1511.
+[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) è la versione di .NET Framework supportata più recente in Windows 10 1507 e 1511.
 
 .NET Framework 4.6.2 supporta le app create per .NET Framework da 4.0 a 4.6.2.
 
@@ -74,7 +70,7 @@ Le versioni 4.x di .NET Framework sono aggiornamenti sul posto di versioni prece
 
 - Non è possibile installare una versione precedente elencata di .NET Framework nel computer se è già installata una versione successiva.
 
-- Le versioni 4.x di .NET Framework possono essere usate per eseguire le applicazioni create per .NET Framework da 4.0 a tale versione. .NET Framework 4.7, ad esempio, può essere usato per eseguire le applicazioni create per le versioni di .NET Framework da 4.0 a 4.7. La versione più recente (.NET Framework 4.7.2) può essere usata per eseguire le applicazioni create con tutte le versioni di .NET Framework a partire dalla 4.0.
+- Le versioni 4.x di .NET Framework possono essere usate per eseguire le applicazioni create per .NET Framework da 4.0 a tale versione. .NET Framework 4.7, ad esempio, può essere usato per eseguire le applicazioni create per le versioni di .NET Framework da 4.0 a 4.7. La versione più recente (.NET Framework 4.8) può essere usata per eseguire applicazioni compilate con tutte le versioni di .NET Framework a partire dalla 4.0.
 
 Per un elenco di tutte le versioni di .NET Framework disponibili per il download, vedere la pagina [.NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) (Download di .NET).
 

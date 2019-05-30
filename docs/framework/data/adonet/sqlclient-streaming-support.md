@@ -2,16 +2,16 @@
 title: Supporto del flusso SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 6fda1dd2d46bbe5ad6b23cab0cd817365c6104eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83a657d1156774ec5ea342d47dca0434fd9d506c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698447"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379999"
 ---
 # <a name="sqlclient-streaming-support"></a>Supporto del flusso SqlClient
 
-Supporto tra SQL Server e un'applicazione di streaming (Novità [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) supporta i dati non strutturati nel server (documenti, immagini e file multimediali). Un database di SQL Server può archiviare oggetti binari di grandi dimensioni (BLOB), ma il recupero di BLOB possa usare molta memoria.
+Supporto del flusso tra SQL Server e un'applicazione (nuova in .NET Framework 4.5) supporta i dati non strutturati nel server (documenti, immagini e file multimediali). Un database di SQL Server può archiviare oggetti binari di grandi dimensioni (BLOB), ma il recupero di BLOB possa usare molta memoria.
 
 Supporto da e verso SQL Server del flusso semplifica la scrittura di applicazioni per i dati di flusso, senza dover caricare completamente i dati in memoria, generando un minor numero eccezioni di overflow di memoria.
 
@@ -101,9 +101,9 @@ Nell'esempio vengono descritte le operazioni seguenti:
 
 - Evitare di bloccare un thread di interfaccia utente fornendo una modalità asincrona per recuperare i file di grandi dimensioni.
 
-- Trasferire un file di testo di grandi dimensioni da SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Trasferire un file di testo di grandi dimensioni da SQL Server in .NET Framework 4.5.
 
-- Trasferire un file XML di grandi dimensioni da SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Trasferire un file XML di grandi dimensioni da SQL Server in .NET Framework 4.5.
 
 - Recuperare dati da SQL Server.
 
@@ -323,9 +323,9 @@ GO
 
 Nell'esempio vengono descritte le operazioni seguenti:
 
-- Trasferimento di un BLOB di grandi dimensioni in SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Trasferimento di un BLOB di grandi dimensioni in SQL Server in .NET Framework 4.5.
 
-- Trasferimento di un file di testo di grandi dimensioni in SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Trasferimento di un file di testo di grandi dimensioni in SQL Server in .NET Framework 4.5.
 
 - Utilizzo della nuova funzionalità asincrona per trasferire un BLOB di grandi dimensioni.
 

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 9ceffd3194c7df41f12ac6cd6b589602965b4920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c0173879c692588cc2e15f0b14a5687bb0404fb
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674311"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300668"
 ---
 # <a name="remove-element-for-configsections"></a>\<rimuovere > (elemento) per \<configSections >
 
 Rimuove una sezione predefiniti o un gruppo di sezioni.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,7 +40,7 @@ Rimuove una sezione predefiniti o un gruppo di sezioni.
 
 |     | Descrizione |
 | --- | ----------- |
-| [**\<configSections >** elemento](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene le dichiarazioni dello spazio dei nomi e sezione di configurazione. |
+| [ **\<configSections >** elemento](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene le dichiarazioni dello spazio dei nomi e sezione di configurazione. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
@@ -54,7 +54,7 @@ nessuno
 
 Nell'esempio seguente viene illustrato come utilizzare il  **\<rimuovere >** elemento in un file di configurazione dell'applicazione per rimuovere una sezione definita in precedenza nel file di configurazione del computer.
 
-Il codice di file di configurazione macchina seguente dichiara la sezione  **\<sampleSection >**:
+Il codice di file di configurazione macchina seguente dichiara la sezione  **\<sampleSection >** :
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ Il codice di file di configurazione macchina seguente dichiara la sezione  **\<s
 </configuration>
 ```
 
-Il codice di file di configurazione dell'applicazione seguente rimuove il  **\<sampleSection >** sezione. Dopo la rimozione, l'applicazione non è possibile recuperare le impostazioni in  **\<sampleSection >**.
+Il codice di file di configurazione dell'applicazione seguente rimuove il  **\<sampleSection >** sezione. Dopo la rimozione, l'applicazione non è possibile recuperare le impostazioni in  **\<sampleSection >** .
 
 ```xml
 <!-- Application configuration file -->

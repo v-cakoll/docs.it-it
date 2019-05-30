@@ -3,12 +3,12 @@ title: Progettare con tipi riferimento nullable
 description: Questa esercitazione avanzata fornisce un'introduzione ai tipi riferimento nullable. Si imparerà a esprimere le finalità della progettazione in merito a quando i valori di riferimento possono essere Null e a configurare il compilatore in modo che stabilisca quando non possono essere Null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cd73a73554514c2b7c70c78ba24038ee8d543266
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296147"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195828"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Esercitazione: Esprimere più chiaramente le finalità di progettazione con tipi riferimento nullable e non nullable
 
@@ -36,15 +36,18 @@ Il codice scritto per questo esempio esprime questa intenzione e il compilatore 
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>Creare l'applicazione e abilitare i tipi riferimento nullable
 
-Creare una nuova applicazione console in Visual Studio oppure dalla riga di comando tramite `dotnet new console`. Assegnare all'applicazione il nome `NullableIntroduction`. Dopo aver creato l'applicazione, sarà necessario abilitare le funzionalità della versione beta di C# 8. Aprire il file `csproj` e aggiungere un elemento `LangVersion` all'elemento `PropertyGroup`. È necessario acconsentire esplicitamente alle funzionalità dei **tipi riferimento nullable**, anche nei progetti C# 8. Questo perché dopo che la funzionalità viene attivata, le dichiarazioni di variabili di riferimento esistenti diventano **tipi riferimento non nullable**. Sebbene questa decisione contribuisca a individuare problemi laddove il codice esistente non disponga di adeguati controlli dei valori Null, potrebbe non rispecchiare esattamente le finalità originali della progettazione. Attivare la funzionalità impostando l'elemento `NullableContextOptions` su `enable`:
+Creare una nuova applicazione console in Visual Studio oppure dalla riga di comando tramite `dotnet new console`. Assegnare all'applicazione il nome `NullableIntroduction`. Dopo aver creato l'applicazione, sarà necessario abilitare le funzionalità della versione beta di C# 8. Aprire il file `csproj` e aggiungere un elemento `LangVersion` all'elemento `PropertyGroup`. È necessario acconsentire esplicitamente alle funzionalità dei **tipi riferimento nullable**, anche nei progetti C# 8. Questo perché dopo che la funzionalità viene attivata, le dichiarazioni di variabili di riferimento esistenti diventano **tipi riferimento non nullable**. Sebbene questa decisione contribuisca a individuare problemi laddove il codice esistente non disponga di adeguati controlli dei valori Null, potrebbe non rispecchiare esattamente le finalità originali della progettazione. Attivare la funzionalità impostando l'elemento `Nullable` su `enable`:
 
 ```xml
 <LangVersion>8.0</LangVersion>
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
 
+> [!IMPORTANT]
+> Il nome dell'elemento `Nullable` nelle versioni precedenti è `NullableContextOptions`. La ridenominazione è stata introdotta in Visual Studio 2019, 16.2-p1. .NET Core SDK 3.0.100-preview5-011568 non include questa modifica. Se si usa l'interfaccia della riga di comando di .NET Core, è necessario usare `NullableContextOptions` fino a quando non sarà disponibile la prossima anteprima.
+
 > [!NOTE]
-> Quando C# 8 verrà rilasciato (non più in modalità di anteprima), l'elemento `NullableContextOptions` verrà aggiunto dai nuovi modelli di progetto. Fino ad allora, è necessario aggiungerlo manualmente.
+> Quando C# 8 verrà rilasciato (non più in modalità di anteprima), l'elemento `Nullable` verrà aggiunto dai nuovi modelli di progetto. Fino ad allora, è necessario aggiungerlo manualmente.
 
 ### <a name="design-the-types-for-the-application"></a>Progettare i tipi per l'applicazione
 

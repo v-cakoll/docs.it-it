@@ -7,35 +7,35 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 548d93e5447c06480629658b13b673aa3d15fc86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd836f9ebd4d22ad6542c1fadc204b1ea67d1c26
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705467"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300774"
 ---
 # <a name="app-settings-schema"></a>Schema impostazioni applicazione
 
 Contiene le impostazioni dell'applicazione personalizzate, ad esempio i percorsi di file, gli URL del servizio Web XML o qualsiasi altra informazione di configurazione personalizzata per un'applicazione.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md)
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings >** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md)
 
 | Elemento | Descrizione |
 | ------- | ----------- |
-| [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Contiene i tag **\<add>**, **\<clear>** e **\<remove>** per controllare le impostazioni dell'applicazione. Include un attributo **file** facoltativo. |
-| [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Definisce un'impostazione. Elemento figlio di **\<appSettings>**. Richiede gli attributi **key** e **value**. |
-| [**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Deseleziona tutte le impostazioni. Elemento figlio di **\<appSettings>**. Non ha attributi. |
-| [**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Rimuove un'impostazione. Elemento figlio di **\<appSettings>**. Richiede un attributo **key**. |
+| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Contiene i tag **\<add>** , **\<clear>** e **\<remove>** per controllare le impostazioni dell'applicazione. Include un attributo **file** facoltativo. |
+| [ **\<add>** ](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Definisce un'impostazione. Elemento figlio di **\<appSettings>** . Richiede gli attributi **key** e **value**. |
+| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Deseleziona tutte le impostazioni. Elemento figlio di **\<appSettings>** . Non ha attributi. |
+| [ **\<remove>** ](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Rimuove un'impostazione. Elemento figlio di **\<appSettings>** . Richiede un attributo **key**. |
 
 ## <a name="appsettings-element"></a>Elemento \<appSettings>
 
-Questo elemento contiene i tag **\<add>**, **\<clear>** e **\<remove>** per controllare le impostazioni dell'applicazione. Definisce un attributo facoltativo per **file**.
+Questo elemento contiene i tag **\<add>** , **\<clear>** e **\<remove>** per controllare le impostazioni dell'applicazione. Definisce un attributo facoltativo per **file**.
 
 ## <a name="add-element"></a>Elemento \<add>
 
@@ -43,7 +43,7 @@ Aggiunge un'impostazione personalizzata dell'applicazione come coppia nome/valor
 
 ## <a name="clear-element"></a>Elemento \<clear>
 
-Rimuove tutti i riferimenti alle impostazioni personalizzate ereditate dell'applicazione e consente solo i riferimenti aggiunti da elementi **\<add>** che seguono l'elemento **\<clear>**. Non definisce alcun attributo.
+Rimuove tutti i riferimenti alle impostazioni personalizzate ereditate dell'applicazione e consente solo i riferimenti aggiunti da elementi **\<add>** che seguono l'elemento **\<clear>** . Non definisce alcun attributo.
 
 ## <a name="remove-element"></a>Elemento \<remove>
 

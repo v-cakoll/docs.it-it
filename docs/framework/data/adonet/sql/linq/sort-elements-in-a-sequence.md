@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 33473eadefabc2bcbbb552d225d021eae4bed0bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f645232d2ae9d9bad8c26a5b9fec2243c6cf9d0
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033384"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380017"
 ---
 # <a name="sort-elements-in-a-sequence"></a>Ordinare elementi in una sequenza
 Usare l'operatore <xref:System.Linq.Enumerable.OrderBy%2A> per ordinare una sequenza in base a una o più chiavi.  
@@ -43,7 +43,7 @@ Usare l'operatore <xref:System.Linq.Enumerable.OrderBy%2A> per ordinare una sequ
  [!code-vb[DLinqQueryExamples#24](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#24)]  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente vengono ordinati gli ordini da `EmployeeID 1` in base al paese di spedizione, quindi in base al costo di spedizione dal più alto al più basso.  
+ Nell'esempio seguente vengono ordinati gli ordini dal `EmployeeID 1` da `ShipCountry`e quindi dal più alto al più basso costo di spedizione.  
   
  [!code-csharp[DLinqQueryExamples#25](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#25)]
  [!code-vb[DLinqQueryExamples#25](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#25)]  

@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 735fedc5869ab82d49ef4d9068c67302bf825e2e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac4de843b3a134b840fc37e3c1d8327fe0010d79
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634670"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960323"
 ---
 # <a name="character-encoding-in-net"></a>Codifica dei caratteri in .NET
 I caratteri sono entità astratte rappresentabili in molti modi. La codifica dei caratteri è un sistema che abbina ogni carattere di un set di caratteri supportato a un valore che lo rappresenta. Il codice Morse, ad esempio, è una codifica dei caratteri che abbina ogni carattere dell'alfabeto romano a una serie di punti e linee utilizzabili per la trasmissione su linee telegrafiche. La codifica dei caratteri per i computer abbina ogni carattere di un set di caratteri supportato a un valore numerico che lo rappresenta. La codifica dei caratteri presenta due componenti distinti:  
@@ -78,8 +78,8 @@ I caratteri sono entità astratte rappresentabili in molti modi. La codifica dei
   
  Queste codifiche consentono di lavorare con i caratteri Unicode e con le codifiche più comunemente usate nelle applicazioni legacy. Inoltre, è possibile creare una codifica personalizzata definendo una classe che deriva da <xref:System.Text.Encoding> ed eseguendo l'override dei relativi membri.  
   
-### <a name="platform-notes-includenetcoreincludesnet-core-mdmd"></a>Note sulla piattaforma: [!INCLUDE[net_core](../../../includes/net-core-md.md)]  
- Per impostazione predefinita, [!INCLUDE[net_core](../../../includes/net-core-md.md)] non rende disponibili le codifiche delle tabelle codici diverse dalla tabella codice 28591 e le codifiche Unicode, ad esempio UTF-8 e UTF-16. È tuttavia possibile aggiungere all'app le codifiche delle tabelle codici presenti nelle app di Windows standard destinate a .NET. Per informazioni complete, vedere l'argomento <xref:System.Text.CodePagesEncodingProvider> .  
+### <a name="platform-notes-net-core"></a>Note sulla piattaforma: .NET Core  
+ Per impostazione predefinita, .NET Core non rende disponibili le codifiche delle tabelle codici diverse dalla tabella codice 28591 e le codifiche Unicode, ad esempio UTF-8 e UTF-16. È tuttavia possibile aggiungere all'app le codifiche delle tabelle codici presenti nelle app di Windows standard destinate a .NET. Per informazioni complete, vedere l'argomento <xref:System.Text.CodePagesEncodingProvider> .  
   
 <a name="Selecting"></a>   
 ## <a name="selecting-an-encoding-class"></a>Selezione di una classe Encoding  

@@ -2,15 +2,15 @@
 title: Sviluppo del servizio del flusso di lavoro con priorità al contratto ("contract-first")
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 2fcc0054a3e4c9dd2152344617c8506c9ce6b0d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 244a6973dde9aba860b08177a42a2ecd64f3479c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587628"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380196"
 ---
 # <a name="contract-first-workflow-service-development"></a>Sviluppo del servizio del flusso di lavoro con priorità al contratto ("contract-first")
-A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF) offre una maggiore integrazione tra i servizi web e i flussi di lavoro sotto forma di sviluppo di flussi di lavoro del contratto. Lo strumento di sviluppo di flussi di lavoro con priorità al contratto consente di progettare il contratto innanzitutto nel codice. Lo strumento consente di generare automaticamente un modello di attività nella casella degli strumenti per le operazioni nel contratto. In questo argomento viene fornita una panoramica del mapping di attività e proprietà di un servizio del flusso di lavoro agli attributi di un contratto di servizio. Per un esempio dettagliato di creazione di un servizio del flusso di lavoro di contratto-first, vedere [come: Creare un servizio del flusso di lavoro che utilizza un contratto di servizio esistente](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+A partire da .NET Framework 4.5, le funzionalità di Windows Workflow Foundation (WF) una maggiore integrazione tra i servizi web e i flussi di lavoro sotto forma di sviluppo di flussi di lavoro del contratto. Lo strumento di sviluppo di flussi di lavoro con priorità al contratto consente di progettare il contratto innanzitutto nel codice. Lo strumento consente di generare automaticamente un modello di attività nella casella degli strumenti per le operazioni nel contratto. In questo argomento viene fornita una panoramica del mapping di attività e proprietà di un servizio del flusso di lavoro agli attributi di un contratto di servizio. Per un esempio dettagliato di creazione di un servizio del flusso di lavoro di contratto-first, vedere [come: Creare un servizio del flusso di lavoro che utilizza un contratto di servizio esistente](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>Contenuto dell'argomento  
   

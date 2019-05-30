@@ -5,20 +5,20 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b6c9c3508c53e8a68a3f7e1cb12b6b6c95600e7b
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880116"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380094"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico
 
-Quando si esegue la compilazione di App in Visual Studio che hanno come destinazione il [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e versioni successive, i reindirizzamenti di associazione possono essere aggiunte automaticamente al file di configurazione dell'app per eseguire l'override di unificazione degli assembly. I reindirizzamenti di associazione vengono aggiunti se l'app o i relativi componenti fanno riferimento a più di una versione dello stesso assembly, anche se è possibile specificare manualmente i reindirizzamenti di associazione nel file di configurazione dell'app. La funzionalità di reindirizzamento di associazione automatico influisce sulle App web e App desktop destinate le [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] o versione successiva, anche se il comportamento è leggermente diverso per un'app web. È possibile abilitare il reindirizzamento di associazione automatico se si dispongono delle App esistenti destinati a versioni precedenti di .NET Framework, o se si vuole creare manualmente i reindirizzamenti di associazione, è possibile disabilitare questa funzionalità.
+Quando si compilano App in Visual Studio che hanno come destinazione .NET Framework 4.5.1 e versioni successive, i reindirizzamenti di associazione possono essere aggiunto automaticamente al file di configurazione dell'app per eseguire l'override di unificazione degli assembly. I reindirizzamenti di associazione vengono aggiunti se l'app o i relativi componenti fanno riferimento a più di una versione dello stesso assembly, anche se è possibile specificare manualmente i reindirizzamenti di associazione nel file di configurazione dell'app. La funzionalità di reindirizzamento di associazione automatico influisce sulle App desktop e App web che hanno come destinazione .NET Framework 4.5.1 o versione successiva, anche se il comportamento è leggermente diverso per un'app web. È possibile abilitare il reindirizzamento di associazione automatico se si dispongono delle App esistenti destinati a versioni precedenti di .NET Framework, o se si vuole creare manualmente i reindirizzamenti di associazione, è possibile disabilitare questa funzionalità.
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Disabilitare i reindirizzamenti di associazione automatici nelle App desktop
 
-Reindirizzamenti di associazione automatici sono abilitati per impostazione predefinita per le app desktop di Windows che usano il [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e versioni successive. I reindirizzamenti di associazione vengono aggiunti alla configurazione di output (**app. config**) del file quando l'app viene compilata ed eseguire l'override dell'unificazione degli assembly che in caso contrario, potrebbe essere eseguito. L'origine **app. config** file non viene modificato. È possibile disabilitare questa funzionalità modificando il file di progetto per l'app o deselezionando una casella di controllo nelle proprietà del progetto in Visual Studio.
+Reindirizzamenti di associazione automatici sono abilitati per impostazione predefinita per le app Windows desktop destinate a .NET Framework 4.5.1 e versioni successive. I reindirizzamenti di associazione vengono aggiunti alla configurazione di output (**app. config**) del file quando l'app viene compilata ed eseguire l'override dell'unificazione degli assembly che in caso contrario, potrebbe essere eseguito. L'origine **app. config** file non viene modificato. È possibile disabilitare questa funzionalità modificando il file di progetto per l'app o deselezionando una casella di controllo nelle proprietà del progetto in Visual Studio.
 
 ### <a name="disable-through-project-properties"></a>Disabilitare tramite le proprietà del progetto
 
@@ -35,7 +35,7 @@ Se si dispone di Visual Studio 2017 versione 15.7 o successiva, è possibile dis
 1. Aprire il file di progetto per la modifica mediante uno dei metodi seguenti:
 
    - In Visual Studio, selezionare il progetto in **Esplora soluzioni**, quindi scegliere **Apri cartella in Esplora File** dal menu di scelta rapida. In Esplora File, trovare il file di progetto (con estensione csproj o vbproj) e aprirlo con blocco note.
-   - In Visual Studio, in **Esplora soluzioni**, fare clic sul progetto e scegliere **Scarica progetto**. Fare clic nuovamente sul progetto scaricato e quindi scegliere **modifica [NomeProgetto]**.
+   - In Visual Studio, in **Esplora soluzioni**, fare clic sul progetto e scegliere **Scarica progetto**. Fare clic nuovamente sul progetto scaricato e quindi scegliere **modifica [NomeProgetto]** .
 
 2. Nel file di progetto trovare la voce di proprietà seguente:
 
@@ -56,7 +56,7 @@ Se si dispone di Visual Studio 2017 versione 15.7 o successiva, è possibile dis
 1. Aprire il file di progetto per la modifica mediante uno dei metodi seguenti:
 
    - In Visual Studio, selezionare il progetto in **Esplora soluzioni**, quindi scegliere **Apri cartella in Esplora File** dal menu di scelta rapida. In Esplora File, trovare il file di progetto (con estensione csproj o vbproj) e aprirlo con blocco note.
-   - In Visual Studio, in **Esplora soluzioni**, fare clic sul progetto e scegliere **Scarica progetto**. Fare clic nuovamente sul progetto scaricato e quindi scegliere **modifica [NomeProgetto]**.
+   - In Visual Studio, in **Esplora soluzioni**, fare clic sul progetto e scegliere **Scarica progetto**. Fare clic nuovamente sul progetto scaricato e quindi scegliere **modifica [NomeProgetto]** .
 
 2. Aggiungere l'elemento seguente al primo gruppo di proprietà di configurazione (sotto il \<PropertyGroup > tag):
 

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37a6dc0caa81a365727bfc32a6a0363bb7e1713d
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 4a2ce58576ebf03d756c4e8157ab65d57cd7683b
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960138"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380258"
 ---
 # <a name="metahostpolicyflags-enumeration"></a>Enumerazione METAHOST_POLICY_FLAGS
 Fornisce i criteri di associazione che sono comuni per la maggior parte degli host di runtime. Questa enumerazione viene utilizzata per la [ICLRMetaHostPolicy::](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) (metodo).  
@@ -48,7 +48,7 @@ typedef enum {
 |`METAHOST_POLICY_HIGHCOMPAT`|Definisce i criteri di compatibilità elevata, che non considera qualsiasi common language runtime (CLR) caricato nel processo corrente. Invece considera solo i runtime installati e le preferenze del componente, come derivata da file di assembly stesso, la versione compilata su dichiarata o il file di configurazione.|  
 |`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Applica criteri di aggiornamento per il risultato di associazione di versione quando una corrispondenza esatta non viene trovata, in base al contenuto di HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\Policy\Upgrades. Ciò ha lo stesso effetto [RUNTIME_INFO_UPGRADE_VERSION](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md).|  
 |`METAHOST_POLICY_EMULATE_EXE_LAUNCH`|Associazione di risultati viene restituita come se l'immagine fornita alla chiamata sono stata avviata in un nuovo processo. Attualmente, `GetRequestedRuntime` ignora i set di runtime può essere caricati e associa a fronte del set di runtime installati. Questo flag consente a un host determinare quale runtime di un file eseguibile verrà associato da quando viene avviata.|  
-|`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Viene visualizzata una finestra di dialogo di errore se `GetRequestedRuntime` non riesce a trovare un runtime che è compatibile con i parametri di input. A partire dal [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], questa finestra di dialogo di errore può assumere la forma di una finestra di dialogo funzionalità Windows in cui viene chiesto se l'utente desidera abilitare la funzionalità appropriata.|  
+|`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Viene visualizzata una finestra di dialogo di errore se `GetRequestedRuntime` non riesce a trovare un runtime che è compatibile con i parametri di input. A partire da .NET Framework 4.5, questa finestra di dialogo di errore può avere la forma di una finestra di dialogo funzionalità Windows in cui viene chiesto se l'utente desidera abilitare la funzionalità appropriata.|  
 |`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime` Usa come input aggiuntivi per il processo di associazione dell'immagine del processo (e qualsiasi file di configurazione corrispondente). Per impostazione predefinita, `GetRequestedRuntime` non eseguire il fallback per il percorso dell'immagine processo (in genere, il file EXE che è stato usato per avviare il processo) quando si determina il runtime a cui associarsi.|  
 |`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` è necessario controllare se è installato lo SKU appropriato quando non sono disponibili informazioni nel file di configurazione. Ciò consente alle applicazioni che non dispongono di file di configurazione ha esito negativo correttamente sugli SKU inferiori rispetto all'installazione predefinita di .NET Framework. Per impostazione predefinita `GetRequestedRuntime` non verifica se è installato lo SKU appropriato, a meno che l'attributo SKU è specificato nel file di configurazione `<supportedRuntime />` elemento.|  
 |`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime` deve ignorare SEM_FAILCRITICALERRORS (che viene impostato chiamando il [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) funzione) e visualizzare la finestra di dialogo di errore. Per impostazione predefinita, SEM_FAILCRITICALERRORS Elimina la finestra di dialogo di errore. Sono stata ereditata da un altro processo e l'errore invisibile all'utente può essere inaccettabile nel proprio scenario.|  

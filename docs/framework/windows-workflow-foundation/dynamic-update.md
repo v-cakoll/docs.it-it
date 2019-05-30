@@ -2,16 +2,16 @@
 title: Aggiornamento dinamico
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: e28a34e500034eec6cf250d94cf7631ca85a7d40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2553e6a29f498a9b53752d6c191df21a391dee34
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945808"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378288"
 ---
 # <a name="dynamic-update"></a>Aggiornamento dinamico
 
-L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso di lavoro un meccanismo per aggiornare la definizione del flusso di lavoro di un'istanza persistente del flusso di lavoro. Può servire a implementare una correzione di bug, nuovi requisiti o per implementare modifiche impreviste. In questo argomento viene fornita una panoramica sulla funzionalità di aggiornamento dinamico introdotta in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
+L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso di lavoro un meccanismo per aggiornare la definizione del flusso di lavoro di un'istanza persistente del flusso di lavoro. Può servire a implementare una correzione di bug, nuovi requisiti o per implementare modifiche impreviste. In questo argomento viene fornita una panoramica della funzionalità di aggiornamento dinamico introdotta in .NET Framework 4.5.
 
 ## <a name="dynamic-update"></a>Aggiornamento dinamico
 

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: dcdf8d0f11ae65353da08bba1f8d2fe5ab415c6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8f85be2efe972fc45230855d18649a89f2fbd61
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705558"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300811"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > (elemento) per \<configuration >
 
 Contiene impostazioni personalizzate dell'applicazione. Si tratta di una sezione di configurazione predefiniti fornita da .NET Framework.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<appSettings>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp; **\<appSettings>**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,21 +35,21 @@ Contiene impostazioni personalizzate dell'applicazione. Si tratta di una sezione
 
 |           | Descrizione |
 | --------- | ----------- |
-| **file**  | Attributo facoltativo.<br><br>Specifica il percorso relativo a un file esterno che contiene le impostazioni di configurazione dell'applicazione personalizzata. Il file specificato contenga lo stesso tipo di impostazioni che vengono specificate nella  **\<Aggiungi >**,  **\<rimuovere >**, e  **\<deselezionare >** elementi e utilizza la coppia chiave/valore stesso formato di tali elementi.<br><br>Il percorso specificato è relativo al file di configurazione principale. Per un'applicazione Windows Forms, si tratta della cartella binaria (ad esempio */bin/debug*), non il percorso del file di configurazione dell'applicazione. Per le applicazioni Web Form, il percorso è relativo alla radice dell'applicazione, in cui il *Web. config* file si trova.<br><br>Si noti che il runtime ignora l'attributo se il file specificato non è possibile trovare. |
+| **file**  | Attributo facoltativo.<br><br>Specifica il percorso relativo a un file esterno che contiene le impostazioni di configurazione dell'applicazione personalizzata. Il file specificato contenga lo stesso tipo di impostazioni che vengono specificate nella  **\<Aggiungi >** ,  **\<rimuovere >** , e  **\<deselezionare >** elementi e utilizza la coppia chiave/valore stesso formato di tali elementi.<br><br>Il percorso specificato è relativo al file di configurazione principale. Per un'applicazione Windows Forms, si tratta della cartella binaria (ad esempio */bin/debug*), non il percorso del file di configurazione dell'applicazione. Per le applicazioni Web Form, il percorso è relativo alla radice dell'applicazione, in cui il *Web. config* file si trova.<br><br>Si noti che il runtime ignora l'attributo se il file specificato non è possibile trovare. |
 
 ## <a name="parent-element"></a>Elemento padre
 
 |     | Descrizione |
 | --- | ----------- |
-| [**\<configurazione >** elemento](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
+| [ **\<configurazione >** elemento](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
 |     | Descrizione |
 | --- | ----------- |
-| [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Aggiunge un'impostazione personalizzata dell'applicazione. |
-| [**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Cancella tutte le impostazioni dell'applicazione definita in precedenza. |
-| [**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Rimuove un'impostazione dell'applicazione definita in precedenza. |
+| [ **\<add>** ](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Aggiunge un'impostazione personalizzata dell'applicazione. |
+| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Cancella tutte le impostazioni dell'applicazione definita in precedenza. |
+| [ **\<remove>** ](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Rimuove un'impostazione dell'applicazione definita in precedenza. |
 
 ## <a name="remarks"></a>Note
 
@@ -57,7 +57,7 @@ Il  **\<appSettings >** elemento archivia le informazioni di configurazione dell
 
 È possibile usare la **file** attributo il  **\<appSettings >** elemento del *Web. config* e file di configurazione dell'applicazione. Questo attributo specifica un file di configurazione che fornisce impostazioni aggiuntive oppure esegue l'override le impostazioni specificate nella  **\<appSettings >** elemento. Il **file** attributo può essere utilizzato in origine controllo team scenari di sviluppo, ad esempio quando un utente desidera eseguire l'override delle impostazioni del progetto specificate in un file di configurazione dell'applicazione.
 
-I file di configurazione specificati dal **file** attributo deve essere un nodo radice del  **\<appSettings >** anziché  **\<configuration >**.
+I file di configurazione specificati dal **file** attributo deve essere un nodo radice del  **\<appSettings >** anziché  **\<configuration >** .
 
 ## <a name="example"></a>Esempio
 

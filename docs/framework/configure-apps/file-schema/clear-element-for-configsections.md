@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: d824ae828dd025f3292990facaa5e423add9c282
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e79def513637937262d00b0edb1b0f7676fd120b
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705350"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300797"
 ---
 # <a name="clear-element-for-configsections"></a>\<Cancella > (elemento) per \<configSections >
 
 Cancella tutte le sezioni definite in precedenza e i gruppi.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,7 +40,7 @@ Cancella tutte le sezioni definite in precedenza e i gruppi.
 
 |     | Descrizione |
 | --- | ----------- |
-| [**\<configSections >** elemento](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene le dichiarazioni dello spazio dei nomi e sezione di configurazione. |
+| [ **\<configSections >** elemento](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene le dichiarazioni dello spazio dei nomi e sezione di configurazione. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
@@ -54,7 +54,7 @@ Il  **\<clear >** elemento rimuove tutte le sezioni e gruppi dall'applicazione c
 
 In questo esempio definisce un file di configurazione di computer e un file di configurazione dell'applicazione e viene illustrato come utilizzare il  **\<clear >** elemento in un file di configurazione dell'applicazione per cancellare le sezioni definite in precedenza di file di configurazione macchina.
 
-Il codice di file di configurazione macchina seguente dichiara due sezioni  **\<sampleSection >** e  **\<anotherSampleSection >**, che vengono lette prima che l'applicazione file di configurazione:
+Il codice di file di configurazione macchina seguente dichiara due sezioni  **\<sampleSection >** e  **\<anotherSampleSection >** , che vengono lette prima che l'applicazione file di configurazione:
 
 ```xml
 <!-- Machine.config file -->

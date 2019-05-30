@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 300d2263c076c9028340863e2f7a3fa27a36ef9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4bf3605331e6900fd890e49bb3f71f4ca4409c7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993728"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377587"
 ---
 # <a name="icordebugvalue3-interface"></a>Interfaccia ICorDebugValue3
 Estende le interfacce "ICorDebugValue" e "ICorDebugValue2" per fornire il supporto per le matrici di dimensioni superiori a 2 GB.  
@@ -33,7 +33,7 @@ Estende le interfacce "ICorDebugValue" e "ICorDebugValue2" per fornire il suppor
 |[Metodo GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|Ottiene la dimensione, espressa in byte, di questo `ICorDebugValue3` oggetto.|  
   
 ## <a name="remarks"></a>Note  
- Il [ICorDebugValue](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) metodo restituisce una dimensione di oggetto compreso nell'intervallo da 0 a 2.147.483.647 byte. Nel [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], le dimensioni delle matrici possono superare i 2 GB. Il `ICorDebugValue3` interfaccia consente di determinare le dimensioni di queste matrici.  
+ Il [ICorDebugValue](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) metodo restituisce una dimensione di oggetto compreso nell'intervallo da 0 a 2.147.483.647 byte. In .NET Framework 4.5, le dimensioni delle matrici possono superare 2 GB. Il `ICorDebugValue3` interfaccia consente di determinare le dimensioni di queste matrici.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

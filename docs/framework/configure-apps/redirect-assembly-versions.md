@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: 68169063c9cf152942ff8a7757a1b3d97886002a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa7c0c22d070ec12cb67252dee7dca02c5160b9e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034567"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380092"
 ---
 # <a name="redirecting-assembly-versions"></a>Reindirizzamento delle versioni di assembly
 
@@ -23,7 +23,7 @@ ms.locfileid: "62034567"
 ## <a name="assembly-unification-and-default-binding"></a>Unificazione e associazione predefinita degli assembly
  Le associazioni agli assembly .NET Framework vengono talvolta reindirizzate mediante un processo denominato *unificazione degli assembly*. .NET Framework è costituito da una versione di Common Language Runtime e da oltre venti assembly .NET Framework che costituiscono la libreria dei tipi. Questi assembly .NET Framework vengono gestiti dal runtime come una singola unità. Per impostazione predefinita, quando viene avviata un'app, tutti i riferimenti ai tipi nel codice eseguito dal runtime vengono indirizzati agli assembly .NET Framework che hanno lo stesso numero di versione del runtime caricato in un processo. I reindirizzamenti eseguiti con questo modello rappresentano il comportamento predefinito per il runtime.
 
- Ad esempio, se l'app fa riferimento ai tipi nello spazio dei nomi di System.XML ed è stata compilata usando [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], contiene riferimenti statici all'assembly System.XML assembly fornito con la versione 4.5 del runtime. Per reindirizzare il riferimento dell'associazione in modo da puntare all'assembly System.XML fornito con .NET Framework 4, si possono inserire le informazioni di reindirizzamento nel file di configurazione dell'app. Il reindirizzamento di un'associazione in un file di configurazione per un assembly .NET Framework unificato determina l'annullamento dell'unificazione per tale assembly.
+ Ad esempio, se i riferimenti ad app tipi nello spazio dei nomi System. XML ed è stato compilato con .NET Framework 4.5, contiene i riferimenti statici all'assembly System. XML che viene fornito con la versione 4.5. Per reindirizzare il riferimento dell'associazione in modo da puntare all'assembly System.XML fornito con .NET Framework 4, si possono inserire le informazioni di reindirizzamento nel file di configurazione dell'app. Il reindirizzamento di un'associazione in un file di configurazione per un assembly .NET Framework unificato determina l'annullamento dell'unificazione per tale assembly.
 
  Inoltre, è possibile reindirizzare manualmente l'associazione di assembly per gli assembly di terze parti in caso di più versioni disponibili.
 
@@ -55,7 +55,7 @@ ms.locfileid: "62034567"
 
 ### <a name="relying-on-automatic-binding-redirection"></a>Reindirizzamento di associazione automatico
 
-Quando si crea un'app desktop in Visual Studio, che fa riferimento il [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] o una versione successiva, l'app Usa il reindirizzamento di associazione automatico. Ciò significa che se due componenti fanno riferimento a versioni diverse dello stesso assembly con nome sicuro, il runtime aggiunge automaticamente un reindirizzamento di associazione alla versione più recente dell'assembly nel file di output di configurazione dell'app (app.config). Il reindirizzamento esegue l'override dell'unificazione di assembly che in caso contrario potrebbe essere eseguito. Il file app.config di origine non viene modificato. Si supponga, ad esempio, che l'app faccia riferimento direttamente a un componente di .NET Framework fuori banda, ma viene usata una libreria di terze parti destinata a una versione precedente dello stesso componente. Quando si compila l'app, il file di configurazione dell'app di output viene modificato in modo da contenere un reindirizzamento di associazione alla versione più recente del componente. Se si crea un'app Web, si riceve un avviso di compilazione relativo al conflitto di associazione, che a sua volta offre la possibilità di aggiungere il reindirizzamento di associazione necessario al file di configurazione Web di origine.
+Quando si crea un'app desktop in Visual Studio destinata a .NET Framework 4.5.1 o versione successiva, l'app Usa il reindirizzamento di associazione automatico. Ciò significa che se due componenti fanno riferimento a versioni diverse dello stesso assembly con nome sicuro, il runtime aggiunge automaticamente un reindirizzamento di associazione alla versione più recente dell'assembly nel file di output di configurazione dell'app (app.config). Il reindirizzamento esegue l'override dell'unificazione di assembly che in caso contrario potrebbe essere eseguito. Il file app.config di origine non viene modificato. Si supponga, ad esempio, che l'app faccia riferimento direttamente a un componente di .NET Framework fuori banda, ma viene usata una libreria di terze parti destinata a una versione precedente dello stesso componente. Quando si compila l'app, il file di configurazione dell'app di output viene modificato in modo da contenere un reindirizzamento di associazione alla versione più recente del componente. Se si crea un'app Web, si riceve un avviso di compilazione relativo al conflitto di associazione, che a sua volta offre la possibilità di aggiungere il reindirizzamento di associazione necessario al file di configurazione Web di origine.
 
 Se si aggiunge manualmente reindirizzamenti di associazione al file app. config di origine, in fase di compilazione, Visual Studio prova a unificare gli assembly in base i reindirizzamenti di associazione che è stato aggiunto. Ad esempio, si inserisce il seguente reindirizzamento dell'associazione per un assembly:
 

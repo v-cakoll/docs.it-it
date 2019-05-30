@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 898771c3de8b54c08decd91f1a631a6205292912
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: d064e2377e39f673d47ce497ebd6c96e9f3c1cd0
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053632"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251063"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 
@@ -689,7 +689,7 @@ Per l'elenco delle nuove API aggiunte a .NET Framework 4.7, vedere l'argomento [
 
 .NET Framework 4.7 migliora la serializzazione di <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
 
-**Funzionalità migliorate con l'algoritmo ECC (Elliptic Curve Cryptography)***
+**Funzionalità migliorate con l'algoritmo ECC (Elliptic Curve Cryptography)** *
 
 In .NET Framework 4.7 sono stati aggiunti i metodi `ImportParameters(ECParameters)` alle classi <xref:System.Security.Cryptography.ECDsa> e <xref:System.Security.Cryptography.ECDiffieHellman> per consentire a un oggetto di rappresentare una chiave già stabilita. È stato anche aggiunto un metodo `ExportParameters(Boolean)` per l'esportazione della chiave usando parametri della curva esplicita.
 
@@ -782,7 +782,7 @@ Le API di stampa di WPF nella classe <xref:System.Printing.PrintQueue?displayPro
 
 ## <a name="whats-new-in-net-framework-462"></a>Novità di .NET Framework 4.6.2
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] include nuove funzionalità nelle aree seguenti:
+.NET Framework 4.6.2 include nuove funzionalità nelle aree seguenti:
 
 - [ASP.NET 2.0](#ASPNET462)
 
@@ -810,11 +810,11 @@ Per un elenco delle nuove API aggiunte a .NET Framework 4.6.2, vedere l'argoment
 
 ### <a name="aspnet"></a>ASP.NET
 
-In [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ASP.NET include i miglioramenti seguenti:
+In .NET Framework 4.6.2, ASP.NET include i miglioramenti seguenti:
 
 **Supporto migliorato per i messaggi di errore localizzati nei validator di annotazione dei dati**
 
-I validator di annotazione dei dati consentono di eseguire la convalida aggiungendo uno o più attributi a una proprietà di classe. L'elemento <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> dell'attributo definisce il testo del messaggio di errore se la convalida non riesce. A partire da [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ASP.NET semplifica la localizzazione dei messaggi di errore. I messaggi di errore verranno localizzati se:
+I validator di annotazione dei dati consentono di eseguire la convalida aggiungendo uno o più attributi a una proprietà di classe. L'elemento <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> dell'attributo definisce il testo del messaggio di errore se la convalida non riesce. A partire da .NET Framework 4.6.2, ASP.NET semplifica la localizzazione dei messaggi di errore. I messaggi di errore verranno localizzati se:
 
 1. <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> viene indicato nell'attributo di convalida.
 
@@ -873,7 +873,7 @@ End Interface
 
  **Supporto asincrono per provider di cache di output**
 
- A partire da [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], i metodi di restituzione di Task possono essere usati con i provider di cache di output per usufruire dei vantaggi di scalabilità offerti dalle operazioni asincrone.  I provider che implementano questi metodi riducono i blocchi dei thread su un server Web e migliorano la scalabilità di un servizio ASP.NET.
+ A partire da .NET Framework 4.6.2, i metodi di restituzione di Task possono essere usati con i provider di cache di output per usufruire dei vantaggi di scalabilità offerti dalle operazioni asincrone.  I provider che implementano questi metodi riducono i blocchi dei thread su un server Web e migliorano la scalabilità di un servizio ASP.NET.
 
  Per supportare i provider di cache di output asincroni sono state aggiunte le API seguenti:
 
@@ -897,7 +897,7 @@ End Interface
 
 ### <a name="character-categories"></a>Categorie di caratteri
 
-I caratteri in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] sono classificati in base allo [standard Unicode, versione 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], i caratteri sono stati classificati in base alle categorie di caratteri Unicode 6.3.
+I caratteri in .NET Framework 4.6.2 sono classificati in base allo standard [Unicode, versione 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). In .NET Framework 4.6 e .NET Framework 4.6.1, i caratteri sono stati classificati in base alle categorie di caratteri Unicode 6.3.
 
 Il supporto per Unicode 8.0 è limitato alla classificazione dei caratteri della classe <xref:System.Globalization.CharUnicodeInfo> e ai tipi e metodi basati sulla stessa. Sono inclusi la classe <xref:System.Globalization.StringInfo>, il metodo <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> in overload e le [classi di caratteri](../../standard/base-types/character-classes-in-regular-expressions.md) riconosciute dal motore delle espressioni regolari di .NET Framework.  Il confronto e l'ordinamento di stringhe e caratteri non sono interessati da questa modifica e continuano a basarsi sul sistema operativo sottostante o, nei sistemi Windows 7, sui dati dei caratteri provenienti da .NET Framework.
 
@@ -909,11 +909,11 @@ Per informazioni sulle modifiche nelle categorie di caratteri da Unicode 6.0 a U
 
 **Supporto per certificati X509 contenenti FIPS 186-3 DSA**
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] aggiunge il supporto per certificati DSA (Digital Signature Algorithm) X509 le cui chiavi superano il limite FIPS 186-2 di 1024 bit.
+.NET Framework 4.6.2 aggiunge il supporto per certificati DSA (Digital Signature Algorithm) X509 le cui chiavi superano il limite di 1024 bit di FIPS 186-2.
 
-Oltre a supportare le dimensioni della chiave più grandi di FIPS 186-3, [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] consente di calcolare le firme con la famiglia SHA-2 di algoritmi hash (SHA256, SHA384 e SHA512). Il supporto per FIPS 186-3 è assicurato dalla nuova classe <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType>.
+Oltre a supportare le dimensioni della chiave più grandi di FIPS 186-3, .NET Framework 4.6.2 consente di calcolare le firme con la famiglia SHA-2 di algoritmi hash (SHA256, SHA384 e SHA512). Il supporto per FIPS 186-3 è assicurato dalla nuova classe <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType>.
 
-In conformità alle recenti modifiche apportate alla classe <xref:System.Security.Cryptography.RSA> in .NET Framework 4.6 e alla classe <xref:System.Security.Cryptography.ECDsa> in .NET Framework 4.6.1, la classe di base astratta <xref:System.Security.Cryptography.DSA> in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] offre ulteriori metodi per consentire ai chiamanti di usare questa funzionalità senza eseguire il cast. È possibile chiamare il metodo di estensione <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> per firmare i dati, come illustrato nell'esempio seguente.
+In conformità alle recenti modifiche apportate alla classe <xref:System.Security.Cryptography.RSA> in .NET Framework 4.6 e alla classe <xref:System.Security.Cryptography.ECDsa> in .NET Framework 4.6.1, la classe di base astratta <xref:System.Security.Cryptography.DSA> in .NET Framework 4.6.2 offre metodi aggiuntivi per consentire ai chiamanti di usare questa funzionalità senza eseguire il cast. È possibile chiamare il metodo di estensione <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> per firmare i dati, come illustrato nell'esempio seguente.
 
 ```csharp
 public static byte[] SignDataDsaSha384(byte[] data, X509Certificate2 cert)
@@ -957,7 +957,7 @@ End Function
 
 .NET Framework 3.5 offre in più il supporto per la chiave concordata Elliptic Curve Diffie-Hellman con tre diverse routine di funzione di derivazione di chiave (KDF). Gli input per le routine e le routine stesse sono stati configurati usando le proprietà dell'oggetto <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Ma poiché non tutte le routine leggono tutte le proprietà di input, in passato era molto probabile che si creasse confusione per lo sviluppatore.
 
-Per risolvere questo problema in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], sono stati aggiunti i tre metodi seguenti alla classe base <xref:System.Security.Cryptography.ECDiffieHellman> per rappresentare in modo più chiaro le routine KDF e i relativi input:
+Per gestire questo aspetto in .NET Framework 4.6.2 sono stati aggiunti i tre metodi seguenti alla classe base <xref:System.Security.Cryptography.ECDiffieHellman> per rappresentare in modo chiaro le routine di funzione di derivazione chiave e i rispettivi input:
 
 |Metodo ECDiffieHellman|Description|
 |----------------------------|-----------------|
@@ -967,7 +967,7 @@ Per risolvere questo problema in [!INCLUDE[net_v462](../../../includes/net-v462-
 
 **Supporto per la crittografia simmetrica con chiave persistente**
 
-La libreria di crittografia di Windows (CNG) ha aggiunto il supporto per l'archiviazione delle chiavi simmetriche persistenti e l'uso delle chiavi simmetriche archiviate nell'hardware e [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] rende possibile l'uso di questa funzionalità da parte degli sviluppatori.  Poiché le nozioni di nome della chiave e provider di chiavi sono specifiche dell'implementazione, questa funzionalità richiede l'uso del costruttore dei tipi di implementazione concreti anziché della modalità factory preferita, ad esempio la chiamata a `Aes.Create`.
+La libreria di crittografia di Windows (CNG) ha aggiunto il supporto per l'archiviazione delle chiavi simmetriche persistenti e l'uso delle chiavi simmetriche archiviate nell'hardware e .NET Framework 4.6.2 ha reso possibile l'uso di questa funzionalità da parte degli sviluppatori.  Poiché le nozioni di nome della chiave e provider di chiavi sono specifiche dell'implementazione, questa funzionalità richiede l'uso del costruttore dei tipi di implementazione concreti anziché della modalità factory preferita, ad esempio la chiamata a `Aes.Create`.
 
 Il supporto per la crittografia simmetrica con chiave persistente esiste per gli algoritmi AES (<xref:System.Security.Cryptography.AesCng>) e 3DES (<xref:System.Security.Cryptography.TripleDESCng>). Ad esempio:
 
@@ -1010,7 +1010,7 @@ End Function
 
 **Supporto SignedXml per la generazione di hash SHA-2**
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] offre il supporto per la classe <xref:System.Security.Cryptography.Xml.SignedXml> per i metodi di firma PKCS#1 per RSA-SHA256, RSA-SHA384 e RSA-SHA512 e SHA256, SHA384 e SHA512 fanno riferimento agli algoritmi con classificazione.
+.NET Framework 4.6.2 offre il supporto per la classe <xref:System.Security.Cryptography.Xml.SignedXml> per i metodi di firma SHA256, RSA-SHA384 e RSA-SHA512 PKCS#1, mentre SHA256, SHA384 e SHA512 fanno riferimento agli algoritmi con classificazione.
 
 Le costanti URI sono tutte esposte in <xref:System.Security.Cryptography.Xml.SignedXml>:
 
@@ -1029,7 +1029,7 @@ Le costanti URI sono tutte esposte in <xref:System.Security.Cryptography.Xml.Sig
 
 ### <a name="sqlclient"></a>SqlClient
 
-Il provider di dati .NET Framework per SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>) include le nuove funzionalità seguenti in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]:
+Il provider di dati .NET Framework per SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>) include le nuove funzionalità seguenti in .NET Framework 4.6.2:
 
 **Pool di connessioni e timeout con database SQL di Azure**
 
@@ -1071,13 +1071,13 @@ SQLClient introduce due miglioramenti per Always Encrypted:
 
 ### <a name="windows-communication-foundation"></a>Windows Communication Foundation
 
-In [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Windows Communication Foundation è stato ottimizzato nelle aree seguenti:
+In .NET Framework 4.6.2, Windows Communication Foundation è stato ottimizzato nelle aree seguenti:
 
 **Supporto della sicurezza del trasporto WCF per certificati archiviati tramite CNG**
 
-La sicurezza del trasporto WCF supporta i certificati archiviati usando la libreria di crittografia di Windows (CNG). In [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] questo supporto è limitato all'utilizzo dei certificati con una chiave pubblica che ha un esponente di lunghezza non superiore a 32 bit. Quando un'applicazione ha come destinazione [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], questa funzionalità è attivata per impostazione predefinita.
+La sicurezza del trasporto WCF supporta i certificati archiviati usando la libreria di crittografia di Windows (CNG). In .NET Framework 4.6.2 questo supporto è limitato all'utilizzo dei certificati con una chiave pubblica che ha un esponente di lunghezza non superiore a 32 bit. Quando un'applicazione ha come destinazione .NET Framework 4.6.2, questa funzionalità è attivata per impostazione predefinita.
 
-Per le applicazioni destinate a [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] e versioni precedenti, ma eseguite in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], questa funzionalità può essere abilitata aggiungendo la riga seguente alla sezione [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del file app.config o web.config.
+Per le applicazioni destinate a .NET Framework 4.6.1 e versioni precedenti ma eseguite in .NET Framework 4.6.2, questa funzionalità può essere abilitata aggiungendo la riga seguente alla sezione [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del file app.config o web.config.
 
 ```xml
 <AppContextSwitchOverrides
@@ -1146,7 +1146,7 @@ Quando si usa NetTcp con la sicurezza del trasporto e un tipo di certificato con
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-In [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Windows Presentation Foundation è stato ottimizzato nelle aree seguenti:
+In .NET Framework 4.6.2, Windows Presentation Foundation è stato ottimizzato nelle aree seguenti:
 
 **Ordinamento di gruppi**
 
@@ -1180,11 +1180,11 @@ Nelle versioni precedenti di .NET Framework, non è possibile attivare il rileva
 
 **DPI per monitor**
 
-Per supportare la recente proliferazione di ambienti ad alta risoluzione e risoluzione ibrida per le applicazioni WPF, in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] WPF consente di abilitare la sensibilità ai valori DPI del monitor. Per altre informazioni su come abilitare l'app WPF per la sensibilità ai valori DPI del monitor, vedere gli [esempi e la guida per gli sviluppatori](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) su GitHub.
+Per supportare la recente proliferazione di ambienti ad alta risoluzione e risoluzione ibrida per le applicazioni WPF, WPF in .NET Framework 4.6.2 abilita la sensibilità ai valori DPI del monitor. Per altre informazioni su come abilitare l'app WPF per la sensibilità ai valori DPI del monitor, vedere gli [esempi e la guida per gli sviluppatori](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) su GitHub.
 
 Nelle versioni precedenti di .NET Framework, le applicazioni WPF sono compatibili con i valori DPI del sistema. In altre parole, l'interfaccia utente dell'applicazione viene adeguata in modo appropriato dal sistema operativo, in base alla risoluzione del monitor in cui viene eseguito il rendering dell'applicazione. ,
 
-Per le app eseguite in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], è possibile disabilitare le modifiche dei valori DPI per monitor nelle app WPF aggiungendo un'istruzione di configurazione alla sezione [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del file di configurazione dell'applicazione in questo modo:
+Per le app eseguite in .NET Framework 4.6.2, è possibile disabilitare le modifiche dei valori DPI per monitor nelle app WPF aggiungendo un'istruzione di configurazione alla sezione [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del file di configurazione dell'applicazione in questo modo:
 
 ```xml
 <runtime>
@@ -1196,13 +1196,13 @@ Per le app eseguite in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], �
 
 ### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
 
-In [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Windows Workflow Foundation è stato ottimizzato nell'area seguente:
+In .NET Framework 4.6.2, Windows Workflow Foundation è stato ottimizzato nell'area seguente:
 
 **Supporto per espressioni C# e IntelliSense nell'utilità di progettazione di WF rieseguita nell'host**
 
 A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF supporta le espressioni C# sia nella progettazione di Visual Studio che nei flussi di lavoro di codice. La riallocazione della progettazione del flusso di lavoro è una funzionalità chiave di WF che consente di usare la finestra di progettazione del flusso di lavoro in un'applicazione esterna a Visual Studio, ad esempio WPF.  Windows Workflow Foundation offre la possibilità di supportare le espressioni C# e IntelliSense nell'utilità di progettazione del flusso di lavoro riallocata. Per altre informazioni, vedere il [blog di Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` Nelle versioni di .NET Framework precedenti a [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] IntelliSense viene interrotta nella finestra di progettazione del flusso di lavoro quando un cliente ricompila un progetto di flusso di lavoro da Visual Studio. Anche se la compilazione del progetto ha esito positivo, i tipi di flusso di lavoro non vengono trovati nell'utilità di progettazione e vengono visualizzati alcuni avvisi di IntelliSense per i tipi di flusso di lavoro mancanti nella finestra **Elenco errori**. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] risolve questo problema e rende disponibile IntelliSense.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` Nelle versioni di .NET Framework precedenti a .NET Framework 4.6.2 l'esecuzione di IntelliSense viene interrotta nella progettazione del flusso di lavoro quando un cliente ricompila un progetto di flusso di lavoro da Visual Studio. Anche se la compilazione del progetto ha esito positivo, i tipi di flusso di lavoro non vengono trovati nell'utilità di progettazione e vengono visualizzati alcuni avvisi di IntelliSense per i tipi di flusso di lavoro mancanti nella finestra **Elenco errori**. .NET Framework 4.6.2 risolve questo problema e rende disponibile IntelliSense.
 
 **Le applicazioni flusso di lavoro versione 1 con tracciabilità del flusso di lavoro vengono ora eseguite in modalità FIPS**
 
@@ -1216,7 +1216,7 @@ Se questo scenario non è abilitato, eseguire l'applicazione continua a generare
 
 **Miglioramenti apportati ai flussi di lavoro quando si usa l'aggiornamento dinamico con Progettazione flussi di lavoro di Visual Studio**
 
-Progettazione flussi di lavoro, ActivityDesigner Diagramma di flusso e altre utilità di progettazione delle attività dei flussi di lavoro ora caricano e visualizzano correttamente i flussi di lavoro che sono stati salvati dopo la chiamata del metodo <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>. Nelle versioni di .NET Framework precedenti a [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] il caricamento di un file XAML in Visual Studio per un flusso di lavoro salvato dopo la chiamata di <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> può causare i problemi seguenti:
+Progettazione flussi di lavoro, ActivityDesigner Diagramma di flusso e altre utilità di progettazione delle attività dei flussi di lavoro ora caricano e visualizzano correttamente i flussi di lavoro che sono stati salvati dopo la chiamata del metodo <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>. Nelle versioni di .NET Framework precedenti a .NET Framework 4.6.2 il caricamento di un file XAML in Visual Studio per un flusso di lavoro salvato dopo la chiamata di <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> può causare i problemi seguenti:
 
 - Progettazione flussi di lavoro non è in grado di caricare correttamente il file XAML se <xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=nameWithType> si trova alla fine della riga.
 
@@ -1240,7 +1240,7 @@ Le applicazioni desktop convertite ottengono un'identità di applicazione simile
 
 ### <a name="debugging-improvements"></a>Miglioramenti apportati al debug
 
-L'*API di debug non gestito* è stata ottimizzata in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] per l'esecuzione di un'ulteriore analisi quando viene generata un'<xref:System.NullReferenceException> in modo che sia possibile determinare quale variabile in una singola riga di codice sorgente è `null`.   A supporto di questo scenario, le API seguenti sono state aggiunte all'API di debug non gestito.
+L'*API di debug non gestito* è stata ottimizzata in .NET Framework 4.6.2 per l'esecuzione di un'ulteriore analisi quando viene generata un'eccezione <xref:System.NullReferenceException>, in modo che sia possibile determinare quale variabile in una singola riga di codice sorgente è `null`.   A supporto di questo scenario, le API seguenti sono state aggiunte all'API di debug non gestito.
 
 - Interfacce [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md) e [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md), che espongono le posizioni native delle variabili gestite. Questo consente ai debugger di effettuare alcune analisi del flusso di codice quando si verifica un <xref:System.NullReferenceException> e di lavorare con le versioni precedenti per determinare la variabile gestita che corrisponde alla posizione nativa che era `null`.
 
@@ -1250,7 +1250,7 @@ L'*API di debug non gestito* è stata ottimizzata in [!INCLUDE[net_v462](../../.
 
 ## <a name="whats-new-in-net-framework-461"></a>Novità di .NET Framework 4.6.1
 
-[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] include nuove funzionalità nelle aree seguenti:
+.NET Framework 4.6.1 include nuove funzionalità nelle aree seguenti:
 
 - [Crittografia](#Crypto)
 
@@ -1264,7 +1264,7 @@ L'*API di debug non gestito* è stata ottimizzata in [!INCLUDE[net_v462](../../.
 
 - [NGen](#NGEN461)
 
-Per altre informazioni su [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], vedere gli argomenti seguenti:
+Per altre informazioni su .NET Framework 4.6.1, vedere gli argomenti seguenti:
 
 - [Elenco delle modifiche di .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=622964)
 
@@ -1276,11 +1276,11 @@ Per altre informazioni su [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]
 
 ### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Crittografia: Supporto per i certificati X509 contenenti ECDSA
 
-In .NET Framework 4.6 è stato aggiunto il supporto RSACng per i certificati X509. [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] aggiunge il supporto di certificati X509 con ECDSA (Elliptic Curve Digital Signature Algorithm).
+In .NET Framework 4.6 è stato aggiunto il supporto RSACng per i certificati X509. .NET Framework 4.6.1 aggiunge il supporto di certificati X509 con ECDSA (Elliptic Curve Digital Signature Algorithm).
 
 Offrendo prestazioni migliori e trattandosi di un algoritmo di crittografia più sicuro rispetto a RSA, ECDSA rappresenta un'ottima scelta per ambienti in cui la scalabilità e le prestazioni TLS (Transport Layer Security) sono fattori importanti. L'implementazione di .NET Framework esegue il wrapping delle chiamate nelle funzionalità di Windows esistenti.
 
-L'esempio di codice seguente illustra quanto sia semplice generare una firma per un flusso di byte usando il nuovo supporto dei certificati X509 ECDSA incluso in [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].
+L'esempio di codice seguente illustra quanto sia semplice generare una firma per un flusso di byte usando il nuovo supporto dei certificati X509 ECDSA incluso in .NET Framework 4.6.1.
 
 [!code-csharp[whatsnew.461.crypto#1](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
 [!code-vb[whatsnew.461.crypto#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
@@ -1314,7 +1314,7 @@ Windows Presentation Foundation include molti miglioramenti e cambiamenti.
 
 **Miglioramento delle prestazioni**
 
-Il ritardo di attivazione degli eventi tocco è stato risolto in [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]. Inoltre, l'inserimento di un controllo <xref:System.Windows.Controls.RichTextBox> non blocca più il thread di rendering durante l'input veloce.
+Il ritardo di attivazione degli eventi tocco è stato risolto in .NET Framework 4.6.1. Inoltre, l'inserimento di un controllo <xref:System.Windows.Controls.RichTextBox> non blocca più il thread di rendering durante l'input veloce.
 
 **Miglioramenti di controllo ortografico**
 
@@ -1332,7 +1332,7 @@ Per altre informazioni sul supporto delle lingue in WPF, vedere il [post di blog
 
 **Supporto aggiuntivo per i dizionari personalizzati per utente**
 
-In [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] WPF riconosce i dizionari personalizzati che sono registrati a livello globale. Questa funzionalità si aggiunge alla possibilità di registrarli a livello di controllo.
+In .NET Framework 4.6.1, WPF riconosce i dizionari personalizzati che sono registrati a livello globale. Questa funzionalità si aggiunge alla possibilità di registrarli a livello di controllo.
 
 Nelle versioni precedenti di WPF, i dizionari personalizzati non riconoscono le parole escluse e gli elenchi di correzione automatica. Sono supportati in Windows 8.1 e Windows 10 mediante l'uso di file che possono essere inseriti nella directory `%AppData%\Microsoft\Spelling\<language tag>`.  A questi file si applicano le regole seguenti:
 

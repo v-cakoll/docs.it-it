@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 365261883f0b81884bb7cf70614628c05f9067c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e65a83d1da0580436babd15e4f27e2db7a698668
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993265"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377605"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>Metodo IGCHost::SetGCStartupLimits
 Imposta le dimensioni del segmento e le dimensioni massime per la generazione 0.  
   
 > [!IMPORTANT]
->  Inizia con il [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], è possibile impostare le dimensioni dei segmenti e dimensioni del numero massimo di generazioni 0 per i valori maggiori `DWORD` tramite il [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) (metodo).  
+>  A partire da .NET Framework 4.5, è possibile impostare dimensioni segmento e del numero massimo di generazioni 0 per i valori maggiori `DWORD` usando il [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) (metodo).  
   
 ## <a name="syntax"></a>Sintassi  
   

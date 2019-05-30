@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1905a61a1843427563ffcbad43ea6b2a4c161828
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 014adfbf6f9afab0eaacd574cfb181c0eec07b5b
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654961"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960307"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Informazioni sull'aumento di velocità in PLINQ
 L'obiettivo principale di PLINQ consiste nel velocizzare l'esecuzione di query LINQ to Objects mediante l'esecuzione di delegati di query in parallelo in computer multicore. PLINQ assicura le prestazioni migliori quando l'elaborazione di ogni elemento in una raccolta di origine è indipendente, senza stati condivisi tra i singoli delegati. Tali operazioni sono comuni in LINQ to Objects e PLINQ e spesso vengono definite "*squisitamente parallele*" perché si prestano facilmente alla pianificazione su più thread. Tuttavia, non tutte le query sono costituite interamente da operazioni squisitamente parallele. Nella maggior parte dei casi una query implica alcuni operatori che non possono essere parallelizzati o che rallentano l'esecuzione parallela. Anche in caso di query che sono tutte squisitamente parallele, PLINQ deve comunque partizionare l'origine dati e pianificare il lavoro sui thread, unendo in genere i risultati al termine della query. Tutte queste operazioni incrementano i costi di calcolo della parallelizzazione, che vengono definiti *sovraccarico*. Per ottenere prestazioni ottimali in una query PLINQ, l'obiettivo è ottimizzare le parti squisitamente parallele e ridurre al minimo quelle che comportano un sovraccarico. Questo articolo fornisce informazioni che consentono di scrivere query PLINQ che siano il più efficaci possibile producendo comunque risultati corretti.  

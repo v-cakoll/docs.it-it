@@ -2,12 +2,12 @@
 title: Panoramica di F#
 description: Esaminare alcune delle principali funzionalità del linguaggio in questa presentazione con esempi di codice di programmazione F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64394342777003b33dd77028739fb7209b9f3c86
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901728"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301259"
 ---
 # <a name="tour-of-f"></a>Panoramica di F\#
 
@@ -17,7 +17,7 @@ Esistono due concetti primari in F#: tipi e funzioni.  Questa esercitazione verr
 
 ## <a name="executing-the-code-online"></a>L'esecuzione del codice online
 
-Se non hai F# installato nel computer, è possibile eseguire tutti gli esempi in linea con il [REPL Fable](https://fable.io/repl/). Fable è un sottolinguaggio di F# che viene eseguita direttamente nel browser. Per visualizzare gli esempi che seguono in REPL, consultare **esempi > Scopri > Panoramica del F#**  nella barra dei menu a sinistra delle transazioni replica Fable
+Se non hai F# installato nel computer, è possibile eseguire tutti gli esempi nel browser con [prova F# su WebAssembly](https://tryfsharp.fsbolero.io/). Fable è un sottolinguaggio di F# che viene eseguita direttamente nel browser. Per visualizzare gli esempi che seguono in REPL, consultare **esempi > Scopri > Panoramica del F#**  nella barra dei menu a sinistra delle transazioni replica Fable
 
 ## <a name="functions-and-modules"></a>Funzioni e moduli
 

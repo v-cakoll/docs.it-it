@@ -2,19 +2,19 @@
 title: Novità in Windows Workflow Foundation in .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 6be2e3bd64fd93fab8af792bb92c3c0238a7ecde
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fb9604061fd6ccd7909a2d5b26675a1b637f2b4d
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876625"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380143"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Novità in Windows Workflow Foundation in .NET 4.5
 
-Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduce molte nuove funzionalità, come nuove attività, funzionalità di progettazione e modelli di sviluppo del flusso di lavoro. Molte, ma non tutte, le nuove funzionalità del flusso di lavoro introdotte in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sono supportate nella finestra di progettazione del flusso di lavoro ospitata nuovamente. Per altre informazioni sulle nuove funzionalità supportate, vedere [supporto per nuove funzionalità di Workflow Foundation 4.5 in Progettazione flussi di lavoro riallocate](wf-features-in-the-rehosted-workflow-designer.md). Per altre informazioni sulla migrazione delle applicazioni del flusso di lavoro .NET 3.0 e .NET 3.5 per usare la versione più recente, vedere [materiale sussidiario di migrazione](migration-guidance.md). In questo argomento viene fornita una panoramica delle nuove funzionalità del flusso di lavoro introdotte in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
+Windows Workflow Foundation (WF) in .NET Framework 4.5 introduce molte nuove funzionalità, come nuove attività, funzionalità di progettazione e modelli di sviluppo del flusso di lavoro. Molte, ma non tutte, del flusso di lavoro nuove funzionalità introdotte in .NET Framework 4.5 sono supportate nella finestra di progettazione del flusso di lavoro ospitata nuovamente. Per altre informazioni sulle nuove funzionalità supportate, vedere [supporto per nuove funzionalità di Workflow Foundation 4.5 in Progettazione flussi di lavoro riallocate](wf-features-in-the-rehosted-workflow-designer.md). Per altre informazioni sulla migrazione delle applicazioni del flusso di lavoro .NET 3.0 e .NET 3.5 per usare la versione più recente, vedere [materiale sussidiario di migrazione](migration-guidance.md). In questo argomento viene fornita una panoramica delle nuove funzionalità del flusso di lavoro introdotte in .NET Framework 4.5.
 
 > [!WARNING]
-> Le nuove funzionalità di Windows Workflow Foundation introdotte [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] non sono disponibili per i progetti destinati a versioni precedenti del framework. Se un progetto destinato a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] viene reindirizzato a una versione precedente del framework, si possono verificare diversi problemi.
+> Le nuove funzionalità di Windows Workflow Foundation introdotte in .NET Framework 4.5 non sono disponibili per i progetti destinati a versioni precedenti del framework. Se un progetto che le destinazioni .NET Framework 4.5 viene destinata a una versione precedente di framework, possono verificarsi diversi problemi.
 >
 > - Le espressioni c# verranno sostituite nel finestra di progettazione con il messaggio **valore impostato in XAML**.
 > - Si verificheranno molti errori di compilazione, incluso il seguente errore.
@@ -23,7 +23,7 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
 
 ## <a name="BKMK_Versioning"></a> Controllo delle versioni del flusso di lavoro
 
-In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sono state introdotte numerose nuove funzionalità di controllo delle versioni basate sulla nuova classe <xref:System.Activities.WorkflowIdentity>. La classe <xref:System.Activities.WorkflowIdentity> fornisce agli autori dell'applicazione flusso di lavoro un meccanismo per eseguire il mapping di un'istanza del flusso di lavoro persistente con la relativa definizione.
+.NET framework 4.5 introdotte numerose nuove funzionalità di controllo delle versioni basate sulla nuova <xref:System.Activities.WorkflowIdentity> classe. La classe <xref:System.Activities.WorkflowIdentity> fornisce agli autori dell'applicazione flusso di lavoro un meccanismo per eseguire il mapping di un'istanza del flusso di lavoro persistente con la relativa definizione.
 
 - Gli sviluppatori che usano l'hosting di <xref:System.Activities.WorkflowApplication> possono usare la classe <xref:System.Activities.WorkflowIdentity> per consentire l'hosting side-by-side di più versioni di un flusso di lavoro. Le istanze del flusso di lavoro persistenti possono essere caricate usando la nuova classe <xref:System.Activities.WorkflowApplicationInstance>. Successivamente, <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> può essere usato dall'host per fornire la versione corretta della definizione del flusso di lavoro durante la creazione di istanze di <xref:System.Activities.WorkflowApplication>. Per altre informazioni, vedere [uso di WorkflowIdentity e controllo delle versioni](using-workflowidentity-and-versioning.md) e [come: Ospitare più versioni di un flusso di lavoro Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
@@ -31,7 +31,7 @@ In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sono state introdotte nu
 
 - Viene introdotto l'aggiornamento dinamico che fornisce un meccanismo per aggiornare la definizione di un'istanza del flusso di lavoro persistente. Per altre informazioni, vedere [aggiornamento dinamico](dynamic-update.md) e [come: Aggiornare la definizione di un'istanza del flusso di lavoro in esecuzione](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
-- Uno script del database SqlWorkflowInstanceStoreSchemaUpgrade.sql viene fornito per aggiornare i database di persistenza creati mediante gli script del database di [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Questo script aggiorna i database di persistenza di [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] per supportare nuove funzionalità di controllo delle versioni introdotte in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Le istanze persistenti del flusso di lavoro nel database sono valori predefiniti specificati per il controllo delle versioni e possono partecipare all'esecuzione side-by-side e all'aggiornamento dinamico. Per altre informazioni, vedere [l'aggiornamento di .NET Framework 4 i database di persistenza al controllo delle versioni del flusso di lavoro di supporto](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
+- Uno script del database SqlWorkflowInstanceStoreSchemaUpgrade.sql viene fornito per aggiornare i database di persistenza creati mediante gli script del database di [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Questo script aggiorna [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] i database di persistenza per supportare le nuove funzionalità di controllo delle versioni introdotte in .NET Framework 4.5. Le istanze persistenti del flusso di lavoro nel database sono valori predefiniti specificati per il controllo delle versioni e possono partecipare all'esecuzione side-by-side e all'aggiornamento dinamico. Per altre informazioni, vedere [l'aggiornamento di .NET Framework 4 i database di persistenza al controllo delle versioni del flusso di lavoro di supporto](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
 
 ## <a name="BKMK_NewActivities"></a> Attività
 
@@ -43,7 +43,7 @@ La libreria di attività predefinita contiene nuove attività e funzionalità pe
 
 ### <a name="BKMK_NewFlowchartCapabilities"></a> Nuove capacità di diagramma di flusso
 
-I diagrammi di flusso vengono aggiornati per [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e dispongono delle nuove funzionalità seguenti:
+I diagrammi di flusso sono stati aggiornati per .NET Framework 4.5 e hanno le nuove funzionalità seguenti:
 
 - La proprietà `DisplayName` di un'attività <xref:System.Activities.Statements.FlowSwitch%601> o <xref:System.Activities.Statements.FlowDecision> è modificabile. In questo modo, nell'ActivityDesigner verranno illustrate ulteriori informazioni sullo scopo dell'attività.
 
@@ -51,7 +51,7 @@ I diagrammi di flusso vengono aggiornati per [!INCLUDE[net_v45](../../../include
 
 ## <a name="support-for-partial-trust"></a>Supporto per l'attendibilità parziale
 
-I flussi di lavoro in [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] prevedono un dominio applicazione con attendibilità totale. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], i flussi di lavoro possono operare in un ambiente parzialmente attendibile. In un ambiente parzialmente attendibile, i componenti di terze parti possono essere usati senza concedere loro accesso completo alle risorse dell'host. Di seguito vengono riportati alcuni dei problemi che riguardano i flussi di lavoro in esecuzione con attendibilità parziale:
+I flussi di lavoro in [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] prevedono un dominio applicazione con attendibilità totale. In .NET Framework 4.5, i flussi di lavoro possono operare in un ambiente parzialmente attendibile. In un ambiente parzialmente attendibile, i componenti di terze parti possono essere usati senza concedere loro accesso completo alle risorse dell'host. Di seguito vengono riportati alcuni dei problemi che riguardano i flussi di lavoro in esecuzione con attendibilità parziale:
 
 1. L'utilizzo dei componenti legacy (regole incluse) contenuti nell'attività di <xref:System.Activities.Statements.Interop> non è supportato con l'attendibilità parziale.
 
@@ -114,7 +114,7 @@ Le parole chiave ricercate nei flussi di lavoro corrisponderanno al contenuto ef
 
 ### <a name="BKMK_VariableDeleteContextMenu"></a> Eliminare i menu di scelta rapida nella finestra di progettazione variabili e degli argomenti
 
-In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le variabili e gli argomenti potevano essere eliminati solo nella finestra di progettazione mediante la tastiera. A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] le variabili e gli argomenti possono essere eliminati usando il menu di scelta rapida.
+In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le variabili e gli argomenti potevano essere eliminati solo nella finestra di progettazione mediante la tastiera. A partire da .NET Framework 4.5, variabili e argomenti possono essere eliminati usando il menu di scelta rapida.
 
 Nella schermata seguente è illustrato il menu di scelta rapida della finestra di progettazione delle variabili e degli argomenti.
 
@@ -122,7 +122,7 @@ Nella schermata seguente è illustrato il menu di scelta rapida della finestra d
 
 ### <a name="BKMK_AutoSurround"></a> Auto-surround con sequenza
 
-Poiché un flusso di lavoro o determinate attività contenitore (ad esempio <xref:System.Activities.Statements.NoPersistScope>) potevano contenere solo un'unica attività Body, l'aggiunta di una seconda attività richiedeva allo sviluppatore di eliminare la prima attività, di aggiungere un'attività <xref:System.Activities.Statements.Sequence> e, successivamente, di aggiungere entrambe le attività all'attività Sequence. A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], quando si aggiunge una seconda attività all'area di progettazione, verrà creata automaticamente un'attività `Sequence` per eseguire il wrapping di entrambe le attività.
+Poiché un flusso di lavoro o determinate attività contenitore (ad esempio <xref:System.Activities.Statements.NoPersistScope>) potevano contenere solo un'unica attività Body, l'aggiunta di una seconda attività richiedeva allo sviluppatore di eliminare la prima attività, di aggiungere un'attività <xref:System.Activities.Statements.Sequence> e, successivamente, di aggiungere entrambe le attività all'attività Sequence. Partire da .NET Framework 4.5, quando si aggiunge una seconda attività all'area di progettazione, un `Sequence` verrà automaticamente creata l'attività per eseguire il wrapping di entrambe le attività.
 
 La schermata riportata di seguito mostra un'attività di `WriteLine` in `Body` di `NoPersistScope`.
 
@@ -158,7 +158,7 @@ Lo screenshot seguente del flusso di lavoro completata dal [esercitazione introd
 
 ### <a name="BKMK_CSharpExpressions"></a> Espressioni c#
 
-In precedenza a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], tutte le espressioni nei flussi di lavoro potevano essere scritte solo in Visual Basic. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] le espressioni di Visual Basic vengono usate solo per i progetti creati tramite questo linguaggio. Nei progetti Visual C# viene ora usato C# per le espressioni. È ora disponibile un editor espressioni C# completamente funzionale con funzionalità quali l'evidenziazione della grammatica e Intellisense. I progetti di flussi di lavoro C# creati in versioni precedenti che utilizzavano espressioni di Visual Basic continueranno a funzionare.
+Prima di .NET Framework 4.5, tutte le espressioni nei flussi di lavoro potevano essere scritte solo in Visual Basic. In .NET Framework 4.5, le espressioni Visual Basic vengono utilizzate solo per i progetti creati con Visual Basic. Nei progetti Visual C# viene ora usato C# per le espressioni. È ora disponibile un editor espressioni C# completamente funzionale con funzionalità quali l'evidenziazione della grammatica e Intellisense. I progetti di flussi di lavoro C# creati in versioni precedenti che utilizzavano espressioni di Visual Basic continueranno a funzionare.
 
 Le espressioni C# vengono convalidate in fase di progettazione. Gli errori nelle espressioni C# verranno contrassegnati con una sottolineatura ondulata rossa.
 
@@ -166,11 +166,11 @@ Per altre informazioni sulle espressioni di c#, vedere [espressioni c#](csharp-e
 
 ### <a name="BKMK_Visibility"></a> Maggiore controllo della visibilità della barra della shell e intestazione elementi
 
-In una finestra di progettazione ospitata nuovamente, alcuni dei controlli dell'interfaccia utente standard possono non essere appropriati per un determinato flusso di lavoro e, pertanto, è possibile disattivarli. In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] questa personalizzazione è supportata solo dalla barra della shell nella parte inferiore della finestra di progettazione. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] la visibilità degli elementi dell'intestazione della shell nella parte superiore della finestra di progettazione può essere regolata impostando la proprietà <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> con il valore <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> appropriato.
+In una finestra di progettazione ospitata nuovamente, alcuni dei controlli dell'interfaccia utente standard possono non essere appropriati per un determinato flusso di lavoro e, pertanto, è possibile disattivarli. In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] questa personalizzazione è supportata solo dalla barra della shell nella parte inferiore della finestra di progettazione. In .NET Framework 4.5, la visibilità degli elementi di intestazione della shell nella parte superiore della finestra di progettazione può essere modificata impostando <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> con l'appropriato <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> valore.
 
 ### <a name="BKMK_AutoConnect"></a> Connessione e inserimento automatici nei flussi di lavoro macchina a stati e diagramma di flusso
 
-In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le connessioni tra i nodi di un flusso di lavoro del diagramma di flusso devono essere aggiunte manualmente. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i nodi del diagramma di flusso e della macchina a stati dispongono di punti di connessione automatica che diventano visibili quando un'attività viene trascinata dalla casella degli strumenti nell'area di progettazione. Rilasciando un'attività in uno di questi punti, viene automaticamente aggiunta insieme alla connessione necessaria.
+In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le connessioni tra i nodi di un flusso di lavoro del diagramma di flusso devono essere aggiunte manualmente. In .NET Framework 4.5, i nodi del diagramma di flusso e di macchina a stati hanno-connessione automatica di punti che diventano visibili quando un'attività viene trascinata dalla casella degli strumenti nell'area di progettazione. Rilasciando un'attività in uno di questi punti, viene automaticamente aggiunta insieme alla connessione necessaria.
 
 Nella schermata seguente vengono illustrati i punti di associazione che diventano visibili quando un'attività viene trascinata dalla casella degli strumenti.
 
@@ -196,7 +196,7 @@ Le attività in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]
 
 ### <a name="BKMK_BuildTimeValidation"></a> Convalida in fase di compilazione
 
-In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] gli errori di convalida del flusso di lavoro non venivano contati come errori di compilazione durante l'esecuzione di questa operazione per un progetto di flusso di lavoro. In questo modo, la compilazione di un progetto di flusso di lavoro poteva essere completata correttamente anche in presenza di errori di convalida del flusso di lavoro. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] gli errori di convalida del flusso di lavoro comportano il mancato completamento della compilazione.
+In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] gli errori di convalida del flusso di lavoro non venivano contati come errori di compilazione durante l'esecuzione di questa operazione per un progetto di flusso di lavoro. In questo modo, la compilazione di un progetto di flusso di lavoro poteva essere completata correttamente anche in presenza di errori di convalida del flusso di lavoro. In .NET Framework 4.5, gli errori di convalida del flusso di lavoro causano l'errore di compilazione.
 
 ### <a name="BKMK_DesignTimeValidation"></a> Convalida in background in fase di progettazione
 
@@ -204,15 +204,15 @@ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] i flussi di 
 
 ### <a name="BKMK_ViewState"></a> Stato di visualizzazione che si trova in un percorso separato nei file XAML
 
-In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le informazioni sullo stato di visualizzazione per un flusso di lavoro sono archiviate nel file XAML in molti percorsi diversi. Questa condizione è poco pratica per gli sviluppatori che desiderano leggere direttamente i file XAML o scrivere codice per rimuovere le informazioni sullo stato di visualizzazione. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], le informazioni sullo stato di visualizzazione nel file XAML viene serializzate come elemento separato nel file XAML. Gli sviluppatori possono facilmente individuare e modificare le informazioni sullo stato di visualizzazione di un'attività oppure rimuovere completamente lo stato di visualizzazione.
+In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le informazioni sullo stato di visualizzazione per un flusso di lavoro sono archiviate nel file XAML in molti percorsi diversi. Questa condizione è poco pratica per gli sviluppatori che desiderano leggere direttamente i file XAML o scrivere codice per rimuovere le informazioni sullo stato di visualizzazione. In .NET Framework 4.5, le informazioni sullo stato di visualizzazione nel file XAML viene serializzate come elemento separato nel file XAML. Gli sviluppatori possono facilmente individuare e modificare le informazioni sullo stato di visualizzazione di un'attività oppure rimuovere completamente lo stato di visualizzazione.
 
 ### <a name="BKMK_ExpressionExtensibility"></a> Estendibilità dell'espressione
 
-In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] gli sviluppatori possono creare le proprie espressioni, che possono essere inserite nella finestra di progettazione del flusso di lavoro, e acquisire una relativa esperienza di creazione.
+In .NET Framework 4.5, offriamo un modo per gli sviluppatori creare le proprie espressioni e l'esperienza che può essere inserita nella finestra di progettazione del flusso di lavoro di creazione.
 
 ### <a name="BKMK_BackwardCompatRehostedDesigner"></a> Acconsenti esplicitamente di funzionalità del flusso di lavoro 4.5 nella finestra di progettazione ospitata nuovamente
 
-Per mantenere la compatibilità con le versioni precedenti, alcune nuove funzionalità incluse in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] non vengono abilitate per impostazione predefinita nella finestra di progettazione ospitata nuovamente. In questo modo si garantisce che le applicazioni esistenti in cui viene usata la finestra di progettazione ospitata nuovamente non vengano interrotte in caso di aggiornamento alla versione più recente. Per abilitare le nuove funzionalità nella finestra di progettazione ospitata nuovamente, impostare la proprietà <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> su ".NET Framework 4.5" oppure impostare singoli membri dell'oggetto <xref:System.Activities.Presentation.DesignerConfigurationService> per abilitare singole funzionalità.
+Per mantenere la compatibilità con le versioni precedenti, alcune nuove funzionalità incluse in .NET Framework 4.5 non sono abilitati per impostazione predefinita nella finestra di progettazione ospitata nuovamente. In questo modo si garantisce che le applicazioni esistenti in cui viene usata la finestra di progettazione ospitata nuovamente non vengano interrotte in caso di aggiornamento alla versione più recente. Per abilitare le nuove funzionalità nella finestra di progettazione ospitata nuovamente, impostare la proprietà <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> su ".NET Framework 4.5" oppure impostare singoli membri dell'oggetto <xref:System.Activities.Presentation.DesignerConfigurationService> per abilitare singole funzionalità.
 
 ## <a name="BKMK_NewWFModels"></a> Nuovi modelli di sviluppo del flusso di lavoro
 
@@ -220,7 +220,7 @@ Oltre ai modelli di sviluppo dei flussi di lavoro del diagramma di flusso e sequ
 
 ### <a name="BKMK_StateMachine"></a> Flussi di lavoro macchina a stati
 
-I flussi di lavoro macchina a stati sono stati introdotti come parte di .NET Framework 4, versione 4.0.1 nel [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). In questo aggiornamento sono incluse numerose nuove classi e attività che hanno consentito agli sviluppatori di creare i flussi di lavoro macchina a stati. Queste classi e attività sono state aggiornate per [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Gli aggiornamenti includono:
+I flussi di lavoro macchina a stati sono stati introdotti come parte di .NET Framework 4, versione 4.0.1 nel [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). In questo aggiornamento sono incluse numerose nuove classi e attività che hanno consentito agli sviluppatori di creare i flussi di lavoro macchina a stati. Queste classi e attività sono state aggiornate per .NET Framework 4.5. Gli aggiornamenti includono:
 
 1. Possibilità di impostare punti di interruzione negli stati
 

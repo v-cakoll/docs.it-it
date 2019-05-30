@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: feddafdd6becd676f4d18aa94bdfae50f02abc6e
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557949"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053638"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Generare automaticamente un classificatore binario con l'interfaccia della riga di comando
 
@@ -65,7 +65,7 @@ Verrà usato un set di dati esistente per uno scenario di 'analisi del sentiment
 
         | Testo (indice di colonna 0) | Etichetta (indice di colonna 1)|
         |--------------------------|-------|
-        | Wow... Loved this place. | 1 |
+        | Wow... Mi è piaciuto molto questo posto. | 1 |
         | Crust is not good. | 0 |
         | Not tasty and the texture was just nasty. | 0 |
         | ...MOLTE ALTRE RIGHE DI TESTO... | ...(1 o 0)... |
@@ -142,12 +142,12 @@ Questi asset enumerati vengono descritti nei passaggi successivi dell'esercitazi
 
     ![Soluzione VS generata dall'interfaccia della riga di comando](./media/mlnet-cli/generated-csharp-solution-detailed.png)
 
-    - La **libreria di classi** generata, contenente il modello di ML serializzato e le classi di dati, si può usare direttamente nell'applicazione per utenti finali, anche facendovi riferimento direttamente o, se si preferisce, spostando il codice.
+    - La **libreria di classi** generata, contenente il modello di ML serializzato (file ZIP) e le classi di dati (modelli di dati), si può usare direttamente nell'applicazione per utenti finali, anche facendovi riferimento direttamente o, se si preferisce, spostando il codice.
     - L'**app console** generata contiene codice di esecuzione che è necessario rivedere. Quindi in genere si riutilizza il 'codice di assegnazione punteggi' (che esegue il modello di ML per le stime), spostando questo semplice codice, composto da poche righe, nell'applicazione per utenti finali in cui si vogliono eseguire le stime. 
 
-1. Aprire i file delle classi **Observation.cs** e **Prediction.cs** all'interno del progetto di libreria di classi. Si noterà che queste classi sono 'classi di dati' o POCO usate per memorizzare i dati. Si tratta di 'codice boilerplate', ma è utile generarlo se il set di dati contiene decine o anche centinaia di colonne. 
-    - La classe `SampleObservation` viene usata durante la lettura di dati dal set di dati. 
-    - La classe `SamplePrediction`
+1. Aprire i file delle classi **ModelInput.cs** e **ModelOutput.cs** all'interno del progetto di libreria di classi. Si noterà che queste classi sono 'classi di dati' o POCO usate per memorizzare i dati. Si tratta di 'codice boilerplate', ma è utile generarlo se il set di dati contiene decine o anche centinaia di colonne. 
+    - La classe `ModelInput` viene usata durante la lettura di dati dal set di dati. 
+    - La classe `ModelOutput` viene usata per ottenere il risultato di stima (dati di stima).
 
 1. Aprire il file Program.cs ed esplorare il codice. Con poche righe è possibile eseguire il modello ed eseguire una stima del campione.
 
@@ -160,13 +160,13 @@ Questi asset enumerati vengono descritti nei passaggi successivi dell'esercitazi
         //ModelBuilder.CreateModel();
 
         ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
-        var predEngine = mlContext.Model.CreatePredictionEngine<SampleObservation, SamplePrediction>(mlModel);
+        var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 
         // Create sample data to do a single prediction with it 
-        SampleObservation sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
+        ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
 
         // Try a single prediction
-        SamplePrediction predictionResult = predEngine.Predict(sampleData);
+        ModelOutput predictionResult = predEngine.Predict(sampleData);
 
         Console.WriteLine($"Single Prediction --> Actual value: {sampleData.Label} | Predicted value: {predictionResult.Prediction}");
     }
@@ -178,14 +178,14 @@ Questi asset enumerati vengono descritti nei passaggi successivi dell'esercitazi
 
 - Nella terza riga di codice il modello viene caricato dal file ZIP del modello serializzato con l'API `mlContext.Model.Load()` specificando il percorso di tale file.
 
-- Nella quarta riga di codice viene creato l'oggetto `PredictionEngine` con l'API `mlContext.Model.CreatePredictionEngine<TObservation, TPrediction>()`. L'oggetto `PredictionEngine` è necessario ogni volta che si vuole eseguire una stima destinata a un singolo campione di dati, in questo caso una singola parte di testo per stimarne il sentiment.
+- Nella quarta riga di codice viene creato l'oggetto `PredictionEngine` con l'API `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)`. L'oggetto `PredictionEngine` è necessario ogni volta che si vuole eseguire una stima destinata a un singolo campione di dati, in questo caso una singola parte di testo per stimarne il sentiment.
 
 - La quinta riga di codice consente di creare i *dati di questo singolo campione* da usare per la stima chiamando la funzione `CreateSingleDataSample()`. Poiché l'interfaccia della riga di comando non riconosce il tipo di dati del campione da usare, all'interno della funzione carica la prima riga del set di dati. Tuttavia, per questo esempio è anche possibile creare dati 'hardcoded' personalizzati invece dell'implementazione corrente della funzione `CreateSingleDataSample()` aggiornando questo codice pù semplice che implementa tale funzione:
 
     ```csharp
-    private static SampleObservation CreateSingleDataSample()
+    private static ModelInput CreateSingleDataSample()
     {
-        SampleObservation sampleForPrediction = new SampleObservation() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
         return sampleForPrediction;
     }
     ```
@@ -219,7 +219,7 @@ Questi asset enumerati vengono descritti nei passaggi successivi dell'esercitazi
 
 È possibile usare un codice di assegnazione punteggi simile a quello del modello di ML per eseguirlo nell'applicazione per utenti finali ed eseguire stime. 
 
-Ad esempio, è possibile spostare direttamente questo codice in qualsiasi applicazione desktop Windows, come **WPP** e **WinForms**, ed eseguire la modello come è stato fatto per l'app console.
+È ad esempio possibile spostare direttamente il codice in qualsiasi applicazione desktop Windows, come **WPF** e **WinForms**, ed eseguire il modello come è stato fatto nell'app console.
 
 È tuttavia necessario ottimizzare il modo in cui vengono implementate queste righe di codice per eseguire un modello di ML, ossia memorizzare nella cache il file ZIP e caricarlo una sola volta, e avere oggetti singleton invece di crearli per ogni richiesta, soprattutto se l'applicazione deve essere scalabile, ad esempio un'applicazione Web o un servizio distribuito, come descritto nella sezione seguente.
 
@@ -242,7 +242,7 @@ Questo 'codice di training del modello' viene attualmente generato nella classe 
 
 Soprattutto, per questo specifico scenario (modello di analisi del sentiment) è anche possibile confrontare il codice di training generato con il codice descritto nell'esercitazione seguente:
 
-- Confrontare: [Esercitazione: Usare ML.NET in uno scenario di classificazione binaria per l'analisi del sentiment](https://docs.microsoft.com/en-us/dotnet/machine-learning/tutorials/sentiment-analysis).
+- Confrontare: [Esercitazione: Usare ML.NET in uno scenario di classificazione binaria per l'analisi del sentiment](sentiment-analysis.md).
 
 È interessante confrontare l'algoritmo scelto e la configurazione della pipeline dell'esercitazione con il codice generato dall'interfaccia della riga di comando. A seconda del tempo dedicato all'iterazione e alla ricerca di modelli migliori, l'algoritmo scelto può essere diverso, così come gli specifici iperparametri e la configurazione della pipeline.
 

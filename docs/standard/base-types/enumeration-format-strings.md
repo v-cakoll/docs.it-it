@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4f2a8fc10d2aad6b2d43bf128697e86aa73c411
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: be2e5dbe0d02bcec8974a1e52c0dce107d3bf46b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644662"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052845"
 ---
 # <a name="enumeration-format-strings"></a>Stringhe di formato di enumerazione
 
@@ -48,7 +48,7 @@ Visualizza la voce di enumerazione come valore intero nella rappresentazione pi√
 
 ## <a name="x-or-x"></a>X o x
 
-Visualizza la voce di enumerazione come valore esadecimale. Il valore viene rappresentato con l'aggiunta di un numero di zeri iniziali sufficiente a raggiungere la lunghezza minima di otto cifre. L'esempio seguente illustra l'identificatore di formato X.
+Visualizza la voce di enumerazione come valore esadecimale. Il valore viene rappresentato con zeri inziali, se necessario, per garantire che la stringa del risultato abbia due caratteri per ogni byte nel [tipo numerico sottostante](xref:System.Enum.GetUnderlyingType%2A) del tipo di enumerazione. L'esempio seguente illustra l'identificatore di formato X. Nell'esempio il tipo sottostante di <xref:System.ConsoleColor> e <xref:System.IO.FileAttributes> √® <xref:System.Int32> o un numero intero a 32 bit (o 4 byte) che produce una stringa del risultato di 8 caratteri.
 
 [!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]

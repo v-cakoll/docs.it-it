@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd91cf0179ef9731c456b41fdc865e3eacdb33eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5df7ab070cc0a40f4e2f3d0545c5bc40ccb07f4d
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674155"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378030"
 ---
 # <a name="gcserver-element"></a>\<gcServer> Element
 Specifica se Common Language Runtime esegue Garbage Collection per server.  
@@ -65,7 +65,7 @@ Specifica se Common Language Runtime esegue Garbage Collection per server.
  Questo elemento può essere usato solo nel file di configurazione dell'applicazione. Se è nel file di configurazione del computer, viene ignorato.  
   
 > [!NOTE]
->  In .NET Framework 4 e versioni precedenti, la modalità di Garbage Collection simultanea non è disponibile quando l'operazione di Garbage Collection per server è abilitata. A partire da [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], l'operazione di Garbage Collection per server è simultanea. Per usare garbage collection del server non simultanea, impostare il `<gcServer>` elemento `true` e il [ \<gcConcurrent > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) a `false`.  
+>  In .NET Framework 4 e versioni precedenti, la modalità di Garbage Collection simultanea non è disponibile quando l'operazione di Garbage Collection per server è abilitata. A partire da .NET Framework 4.5, l'operazione di Garbage Collection per server è simultanea. Per usare garbage collection del server non simultanea, impostare il `<gcServer>` elemento `true` e il [ \<gcConcurrent > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) a `false`.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente abilita l'operazione di Garbage Collection per server.  

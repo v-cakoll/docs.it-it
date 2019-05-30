@@ -2,12 +2,12 @@
 title: Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 description: Informazioni sulle opzioni che consentono di orchestrare microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate e le possibilità di Azure Dev Spaces nello sviluppo del ciclo di vita dell'applicazione Kubernetes.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3b7383f6153b787ce8bfad87e3902c34afba0fb2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 27155736c6b5308d4794b17e5f5bd0b93109b5c1
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644885"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196043"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 
@@ -101,7 +101,7 @@ Nell'ambiente di sviluppo, [Docker ha annunciato nel mese di luglio 2018](https:
 
 ## <a name="getting-started-with-azure-kubernetes-service-aks"></a>Introduzione al servizio Azure Kubernetes 
 
-Per iniziare a usare il servizio Azure Kubernetes, distribuire un cluster del servizio Azure Kubernetes dal portale di Azure o tramite l'interfaccia della riga di comando. Per altre informazioni sulla distribuzione di un cluster del servizio Azure Container, vedere [Distribuire un cluster del servizio Azure Kubernetes](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
+Per iniziare a usare il servizio Azure Kubernetes, distribuire un cluster del servizio Azure Kubernetes dal portale di Azure o tramite l'interfaccia della riga di comando. Per altre informazioni sulla distribuzione di un cluster Kubernetes in Azure, vedere [Distribuire un cluster del servizio Azure Kubernetes](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
 Non sono previsti addebiti per il software installato per impostazione predefinita come parte del servizio Azure Kubernetes. Tutte le opzioni predefinite vengono implementate con software open source. Il servizio Azure Kubernetes è disponibile per più macchine virtuali in Azure. Vengono applicati addebiti solo per le istanze di risorse di calcolo scelte, oltre che per le altre risorse di infrastruttura sottostanti usate, ad esempio per le risorse di archiviazione e di rete. Non sono previsti addebiti incrementali per il servizio Azure Kubernetes.
 

@@ -3,12 +3,12 @@ title: Informazioni su .NET Core
 description: Informazioni su .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 87514b476124196c835e4b22154f9bbaca7482a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: fb6088bcadcdc9c28699446df035b899485c406d
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296407"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003750"
 ---
 # <a name="about-net-core"></a>Informazioni su .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "59296407"
 - **Multipiattaforma:** viene eseguito nei [sistemi operativi](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md) Windows, macOS e Linux.
 - **Coerenza in tutte le architetture:** esegue il codice con lo stesso comportamento in molteplici architetture, tra cui x64, x86 e ARM.
 - **Strumenti da riga di comando:**  include strumenti da riga di comando facili da usare per lo sviluppo locale e in scenari di integrazione continua.
-- **Distribuzione flessibile:** può essere incluso nell'app o installato side-by-side a livello di computer o di utente. Può essere usato con i [contenitori Docker](docker/index.md).
+- **Distribuzione flessibile:** lo strumento può essere incluso nell'app o installato side-by-side (installazioni a livello di utente o di sistema). Può essere usato con i [contenitori Docker](docker/index.md).
 - **Compatibile:** .NET Core è compatibile con .NET Framework, Xamarin e Mono tramite [.NET Standard](../standard/net-standard.md).
 - **Open source:** la piattaforma .NET Core è open source e usa le licenze MIT e Apache 2. .NET Core è un progetto [.NET Foundation](https://dotnetfoundation.org/).
 - **Supportato da Microsoft:** .NET Core è supportato da Microsoft, in base al [Supporto di .NET Core](https://www.microsoft.com/net/core/support/).
@@ -102,6 +102,8 @@ Differenze principali tra .NET Core e .NET Framework:
 - **Open Source**: .NET Core è open source, mentre in [.NET Framework è open source un sottoinsieme di sola lettura](https://github.com/microsoft/referencesource).
 
 Sebbene .NET Core sia unico e presenti differenze significative rispetto a .NET Framework e ad altre implementazioni .NET, la condivisione del codice tra queste implementazioni risulta molto semplice tramite l'uso di tecniche di condivisione del codice sorgente o binario.
+
+Poiché .NET Core supporta l'installazione side-by-side e il relativo runtime è completamente indipendente da .NET Framework, può essere installato nei computer in cui è presente .NET Framework senza alcun problema.
 
 ### <a name="comparison-with-mono"></a>Confronto con Mono
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416a00eb6966a9c5f83427182d9a12c4bbb20810
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b47c4d07fc0ee0cdaf53fe3c8199fb37dcb6c1b1
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592655"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377896"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > elemento
 Specifica se le eccezioni di attività non gestite devono comportare l'arresto di un processo in esecuzione.  
@@ -63,9 +63,9 @@ Specifica se le eccezioni di attività non gestite devono comportare l'arresto d
   
  In [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], per impostazione predefinita, se un oggetto <xref:System.Threading.Tasks.Task> con un'eccezione non osservata viene sottoposto a Garbage Collection, tramite il finalizzatore viene generata un'eccezione e il processo viene terminato. L'interruzione del processo è determinata dall'intervallo di Garbage Collection e finalizzazione.  
   
- Per semplificare la scrittura di codice asincrono basato sulle attività per gli sviluppatori, in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] questo comportamento predefinito viene modificato per le eccezioni non osservate. Le eccezioni non osservate comportano ancora la generazione dell'evento <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>, ma, per impostazione predefinita, il processo non viene terminato. Invece, l'eccezione viene ignorata dopo la generazione dell'evento, indipendentemente dal fatto che l'eccezione venga rilevata da un gestore eventi.  
+ Per renderne più semplice per gli sviluppatori di scrivere codice asincrono basato su attività, .NET Framework 4.5 modifica questo comportamento predefinito per le eccezioni non osservate. Le eccezioni non osservate comportano ancora la generazione dell'evento <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>, ma, per impostazione predefinita, il processo non viene terminato. Invece, l'eccezione viene ignorata dopo la generazione dell'evento, indipendentemente dal fatto che l'eccezione venga rilevata da un gestore eventi.  
   
- Nel [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], è possibile usare il [ \<ThrowUnobservedTaskExceptions > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) in un file di configurazione dell'applicazione per abilitare il [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] comportamento di generare un'eccezione.  
+ In .NET Framework 4.5, è possibile usare la [ \<ThrowUnobservedTaskExceptions > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) in un file di configurazione dell'applicazione per abilitare il [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] comportamento di generare un'eccezione.  
   
  Il comportamento dell'eccezione può anche essere specificato in uno dei modi seguenti:  
   

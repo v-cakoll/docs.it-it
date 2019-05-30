@@ -7,21 +7,21 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: dc2bb949c7db4f70c20c3c0b687cacafed8696df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d522d004630dee942e24c39a936feae7dc957bd5
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674800"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300783"
 ---
 # <a name="configsections-element-for-configuration"></a>\<configSections > (elemento) per \<configuration >
 
 Contiene le dichiarazioni dello spazio dei nomi e sezione di configurazione.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<configSections>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp; **\<configSections>**
 
 ## <a name="attributes"></a>Attributi
 
@@ -31,16 +31,16 @@ nessuno
 
 |     | Descrizione |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
 |     | Descrizione |
 | --- | ----------- |
-| [**\<sezione >**](~/docs/framework/configure-apps/file-schema/section-element.md) | Contiene una dichiarazione della sezione di configurazione. |
-| [**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |
-| [**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Rimuove una sezione predefiniti o un gruppo di sezioni. |
-| [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Cancella tutte le sezioni definite in precedenza e i gruppi. |
+| [ **\<sezione >** ](~/docs/framework/configure-apps/file-schema/section-element.md) | Contiene una dichiarazione della sezione di configurazione. |
+| [ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |
+| [ **\<remove>** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Rimuove una sezione predefiniti o un gruppo di sezioni. |
+| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Cancella tutte le sezioni definite in precedenza e i gruppi. |
 
 ## <a name="remarks"></a>Note
 
