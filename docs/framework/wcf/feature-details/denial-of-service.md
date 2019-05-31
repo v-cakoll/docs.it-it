@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 426429eefd038008340a956ab3fa3cba21906c84
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627017"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423895"
 ---
 # <a name="denial-of-service"></a>Denial of Service (Negazione del servizio)
 Si verifica un attacco Denial of Service quando un sistema viene sommerso da una quantità di messaggi tale da non poter essere elaborata o da poter essere elaborata solo molto lentamente.  
@@ -46,8 +46,8 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
   
  Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. Per altre informazioni sull'utilizzo nel Visualizzatore eventi per visualizzare e gestire i registri eventi, vedere [Visualizzatore eventi](https://go.microsoft.com/fwlink/?LinkId=186123). Per altre informazioni, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
-## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Possibili blocchi del servizio causati da implementazioni non valide di IAuthorizationPolicy  
- La chiamata del metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> su un'implementazione non valida dell'interfaccia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> può causare il blocco del servizio.  
+## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Implementazioni non valide di IAuthorizationPolicy possono provocare un servizio smette di rispondere  
+ Chiama il <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> metodo in un'implementazione non corretta del <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interfaccia può causare il servizio smette di rispondere.  
   
  Mitigazione: Usare solo codice attendibile. In altre parole, usare solo codice scritto e verificato o proveniente da un provider attendibile. Non consentire l'aggiunta nel codice di estensioni non attendibili di <xref:System.IdentityModel.Policy.IAuthorizationPolicy> senza la dovuta considerazione. Questo vale per tutte le estensioni usate in un'implementazione del servizio. WCF non distinzioni tra codice dell'applicazione e codice esterno viene aggiunto utilizzando punti di estensibilità.  
   

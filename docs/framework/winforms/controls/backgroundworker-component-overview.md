@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: da1d87464ef30fb549a2c201170e81c45cbdf6fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ef09fdc755480205b9929037277162349afa135
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587735"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423810"
 ---
 # <a name="backgroundworker-component-overview"></a>Cenni preliminari sul componente BackgroundWorker
 Molte operazioni comuni hanno tempi di esecuzione particolarmente lunghi, Ad esempio:  
@@ -39,7 +39,7 @@ Molte operazioni comuni hanno tempi di esecuzione particolarmente lunghi, Ad ese
   
 - Accesso locale ai dischi, a causa della velocità ridotta rispetto all'accesso alla memoria  
   
- Durante l'esecuzione di questo tipo di operazioni è possibile che l'interfaccia utente si blocchi. Nel caso sia necessario eseguire operazioni di questo genere ma si vogliano evitare ritardi di risposta dell'interfaccia utente, il componente <xref:System.ComponentModel.BackgroundWorker> costituisce la soluzione ideale.  
+ Operazioni simili ai seguenti possono causare l'interfaccia utente bloccare mentre sono in esecuzione. Nel caso sia necessario eseguire operazioni di questo genere ma si vogliano evitare ritardi di risposta dell'interfaccia utente, il componente <xref:System.ComponentModel.BackgroundWorker> costituisce la soluzione ideale.  
   
  Il componente <xref:System.ComponentModel.BackgroundWorker> offre la possibilità di eseguire operazioni che richiedono molto tempo in modo asincrono (in background) su un thread diverso da quello usato dall'interfaccia utente principale dell'applicazione. Per usare un componente <xref:System.ComponentModel.BackgroundWorker>, è sufficiente indicare il metodo di lavoro da eseguire in background e quindi chiamare il metodo <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>. Il thread chiamante continua l'esecuzione normale mentre il metodo di lavoro viene eseguito in modo asincrono. Al completamento dell'esecuzione del metodo, il componente <xref:System.ComponentModel.BackgroundWorker> avvisa il thread chiamante attivando l'evento <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>, in cui è possibile includere i risultati dell'operazione.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 58c52a7d73efbd96d772dd85d6bf2c9084fb1241
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4374a229392d51b67c99210da91ae05dd3342e96
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863649"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424065"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Procedura: Overload di una routine che accetta parametri facoltativi (Visual Basic)
 Se una routine contiene uno o più [facoltativo](../../../../visual-basic/language-reference/modifiers/optional.md) parametri, non è possibile definire una versione di overload corrisponda a uno dei relativi overload impliciti. Per altre informazioni, vedere "Esegue l'overload implicito per i parametri facoltativi" nella [considerazioni sull'overload di routine](./considerations-in-overloading-procedures.md).  
@@ -51,7 +51,7 @@ Se una routine contiene uno o più [facoltativo](../../../../visual-basic/langua
   
 #### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>Eseguire l'overload di una routine che accetta più di un parametro facoltativo  
   
-1. Stabilisce le combinazioni di argomenti facoltativi forniti accettabili per la logica della routine. Una combinazione inaccettabile potrebbe verificarsi se un parametro facoltativo dipende da un'altra. Ad esempio, se un parametro accetta il nome del personale dell'assistenza e un altro accetta l'età, una combinazione di argomenti che specifica l'età, ma omette il nome è accettabile.  
+1. Stabilisce le combinazioni di argomenti facoltativi forniti accettabili per la logica della routine. Una combinazione inaccettabile potrebbe verificarsi se un parametro facoltativo dipende da un'altra. Ad esempio, se un parametro accetta un nome di persona e un altro accetta l'età della persona, una combinazione di argomenti che specifica l'età, ma omette il nome è accettabile.  
   
 2. Per ogni combinazione accettabili di argomenti facoltativi forniti, scrivere un `Sub` o `Function` istruzione di dichiarazione che definisce l'elenco di parametri corrispondenti. Non usare il `Optional` (parola chiave).  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: d6179624ffbdf423f8d9b895c65ff41ac9846f33
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 970c69b36eecd110dd81b6a3700fbb0a7eea2834
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647038"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424031"
 ---
 # <a name="date-data-type-visual-basic"></a>Tipo di dati Date (Visual Basic)
 Contiene valori a 64 bit (8 byte) conformi alle specifiche IEEE che rappresentano le date comprese tra l'1 gennaio dell'anno 0001 e il 31 dicembre dell'anno 9999 e le ore comprese tra le 00.00.00 (mezzanotte) e le 23.59.59.9999999. Ogni incremento rappresenta 100 nanosecondi di tempo trascorso dall'inizio del 1° gennaio dell'anno 1 del calendario gregoriano. Il valore massimo rappresenta 100 nanosecondi prima dell'inizio del 1° gennaio dell'anno 10000.  
@@ -35,7 +35,7 @@ Contiene valori a 64 bit (8 byte) conformi alle specifiche IEEE che rappresentan
 ## <a name="format-requirements"></a>Requisiti di formato  
  È necessario racchiudere un valore letterale `Date` tra simboli di cancelletto (`# #`). Il valore della data deve essere specificato nel formato M/g/aaaa, ad esempio `#5/31/1993#`, oppure aaaa-MM-gg, ad esempio `#1993-5-31#`. Quando si specifica prima l'anno, è possibile usare le barre.  Questo requisito è indipendente dalle impostazioni locali usate e dalle impostazioni relative al formato di data e ora del computer.  
   
- Il motivo di questa limitazione è che il significato del codice non deve mai cambiare a seconda delle impostazioni locali con cui l'applicazione viene eseguita. Si supponga di impostare come hardcoded il valore letterale `Date``#3/4/1998#` per rappresentare la data del 4 marzo 1998. Se nelle impostazioni locali è definito il formato mm/gg/aaaa, la compilazione di 3/4/1998 viene eseguita nel modo desiderato. Si supponga però di distribuire l'applicazione in molti paesi. Se nelle impostazioni locali è definito il formato gg/mm/aaaa, il valore letterale hardcoded verrà compilato come 3 aprile 1998. Se invece è definito il formato aaaa/mm/gg, il valore letterale non sarà valido (1998 aprile 0003) e verrà generato un errore del compilatore.  
+ Il motivo di questa limitazione è che il significato del codice non deve mai cambiare a seconda delle impostazioni locali con cui l'applicazione viene eseguita. Si supponga di impostare come hardcoded il valore letterale `Date``#3/4/1998#` per rappresentare la data del 4 marzo 1998. Se nelle impostazioni locali è definito il formato mm/gg/aaaa, la compilazione di 3/4/1998 viene eseguita nel modo desiderato. Ma si supponga che si distribuisce l'applicazione in molti paesi/aree geografiche. Se nelle impostazioni locali è definito il formato gg/mm/aaaa, il valore letterale hardcoded verrà compilato come 3 aprile 1998. Se invece è definito il formato aaaa/mm/gg, il valore letterale non sarà valido (1998 aprile 0003) e verrà generato un errore del compilatore.  
   
 ## <a name="workarounds"></a>Soluzioni  
  Per convertire un valore letterale `Date` nel formato delle impostazioni locali in uso o in un formato personalizzato, fornire il valore letterale alla funzione <xref:Microsoft.VisualBasic.Strings.Format%2A>, specificando un formato di data predefinito o definito dall'utente. Nell'esempio che segue viene illustrato quanto descritto.  
@@ -51,7 +51,7 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
 ```  
   
 ## <a name="hour-format"></a>Formato dell'ora  
- È possibile specificare il valore dell'ora nel formato 12 o 24 ore, ad esempio `#1:15:30 PM#` o `#13:15:30#`.  Tuttavia, se non si specificano i minuti o i secondi, è necessario indicare AM o PM.  
+ È possibile specificare il valore dell'ora nel formato 12 o 24 ore, ad esempio `#1:15:30 PM#` o `#13:15:30#`. Tuttavia, se non si specificano i minuti o i secondi, è necessario indicare AM o PM.  
   
 ## <a name="date-and-time-defaults"></a>Valori predefiniti di data e ora  
  Se non si include una data in un valore letterale di data/ora, Visual Basic imposta la parte del valore relativa alla data sul 1° gennaio 0001. Se non si include un'ora in un valore letterale di data/ora, Visual Basic imposta la parte del valore relativa all'ora sull'inizio della giornata, ossia mezzanotte (00.00.00).  

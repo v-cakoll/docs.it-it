@@ -2,18 +2,18 @@
 title: Endpoint di controllo del flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-ms.openlocfilehash: 40fec2902598daed178e070b02c1067c308507c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 781a7cefaeeb8cd9cd21298471c59de2e7815244
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929714"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424014"
 ---
 # <a name="workflow-control-endpoint"></a>Endpoint di controllo del flusso di lavoro
 L'endpoint di controllo del flusso di lavoro consente agli sviluppatori di chiamare operazioni di controllo per controllare in remoto le istanze del flusso di lavoro ospitate utilizzando <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Questa funzionalità può essere utilizzata per eseguire operazioni di controllo a livello di codice, quali la sospensione, la ripresa e la terminazione.  
   
 > [!WARNING]
->  Se si utilizza l'endpoint di controllo del flusso di lavoro all'interno di una transazione e il flusso di lavoro controllato contiene un'attività <xref:System.Activities.Statements.Persist>, l'istanza del flusso di lavoro verrà interrotta finché non si verifica il timeout della transazione.  
+>  Se tramite l'endpoint di controllo del flusso di lavoro all'interno di una transazione e il flusso di lavoro controllato contiene un <xref:System.Activities.Statements.Persist> attività, l'istanza del flusso di lavoro si bloccherà fino a quando la transazione scade.  
   
 ## <a name="workflow-instance-management"></a>Gestione delle istanze di flusso di lavoro  
  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] definisce un nuovo contratto denominato <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Questo contratto definisce una serie di operazioni che consentono di controllare in remoto istanze del flusso di lavoro di controllo ospitate da <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> è un endpoint standard che fornisce un'implementazione del contratto <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. <xref:System.ServiceModel.Activities.WorkflowControlClient> è una classe utilizzata per inviare le operazioni di controllo a <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>.  

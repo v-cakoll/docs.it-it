@@ -2,12 +2,12 @@
 title: Supporto per nuovo funzionalità di Workflow Foundation 4.5 nella finestra di progettazione del flusso di lavoro ospitata nuovamente
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 8459311239d46557405245c10b6fb5e887a4691c
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 70e4a8580a8b383bdd4e5e5299bcc5210f3210dc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380154"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423972"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Supporto per nuovo funzionalità di Workflow Foundation 4.5 nella finestra di progettazione del flusso di lavoro ospitata nuovamente
 Windows Workflow Foundation (WF) in .NET Framework 4.5 introdotte molte nuove funzionalità, inclusi numerosi miglioramenti all'esperienza di progettazione del flusso di lavoro. In questo argomento vengono descritte quali funzionalità sono supportate nella finestra di progettazione ospitata nuovamente e quali non sono attualmente supportate.
@@ -106,7 +106,7 @@ Windows Workflow Foundation (WF) in .NET Framework 4.5 introdotte molte nuove fu
 >  La convalida in fase di compilazione non è supportata nella finestra di progettazione ospitata nuovamente.  
   
 ### <a name="design-time-background-validation"></a>Convalida in background in fase di progettazione  
- In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] i flussi di lavoro venivano convalidati come processo in primo piano. Questa condizione poteva potenzialmente bloccare l'interfaccia utente durante processi di convalida complessi o lunghi. La convalida del flusso di lavoro viene ora effettuata in un thread in background, pertanto l'interfaccia utente non viene bloccata.  
+ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], i flussi di lavoro sono stati convalidati come processo in primo piano, che potrebbe potenzialmente bloccare l'interfaccia utente durante processi di convalida complessi o lunghi. La convalida del flusso di lavoro viene ora effettuata in un thread in background, pertanto l'interfaccia utente non viene bloccata.  
   
  La convalida in background in fase di progettazione non è supportata nella finestra di progettazione ospitata nuovamente.  
   

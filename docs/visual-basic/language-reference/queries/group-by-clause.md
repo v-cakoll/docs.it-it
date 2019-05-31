@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 5224c7b5ae1c8a83be07fdf5f2065794fb46dd55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 04378d2c9a7e565343ff663997e2a3e61f04f9d2
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625556"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423583"
 ---
 # <a name="group-by-clause-visual-basic"></a>Clausola Group By (Visual Basic)
 Raggruppa gli elementi di un risultato della query. Può essere usata anche per applicare funzioni di aggregazione a ogni gruppo. L'operazione di raggruppamento è basata su una o più chiavi.  
@@ -65,7 +65,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
  Per identificare il nome del membro che viene usato per fare riferimento al gruppo, usare il parametro `aggregateList` della clausola `Into` e la parola chiave `Group` . È anche possibile includere funzioni di aggregazione nella clausola `Into` per calcolare i valori per gli elementi raggruppati. Per un elenco di funzioni di aggregazione standard, vedere [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio di codice seguente raggruppa un elenco di clienti in base alla località (paese) e fornisce un conteggio dei clienti in ogni gruppo. I risultati vengono ordinati in base al nome del paese. I risultati raggruppati vengono ordinati in base al nome della città.  
+ Esempio di codice seguente Raggruppa un elenco di clienti in base alla località (paese/area geografica) e fornisce un conteggio dei clienti in ogni gruppo. I risultati vengono ordinati in base al nome di paese/area geografica. I risultati raggruppati vengono ordinati in base al nome della città.  
   
  [!code-vb[VbSimpleQuerySamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#11)]  
   

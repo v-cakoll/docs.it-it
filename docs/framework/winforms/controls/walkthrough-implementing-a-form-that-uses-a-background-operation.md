@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 1988ebd8c5f46346babe212962b617d30d765385
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 60421d6ba634bd7b4107f1c9998fbbe158417c83
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211539"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423841"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Procedura dettagliata: Implementazione di un modulo che usa un'operazione in background
 
-Se si dispone di un'operazione che richiederà molto tempo per il completamento, e il blocco non desiderate l'interfaccia utente (UI) o "blocco", è possibile usare il <xref:System.ComponentModel.BackgroundWorker> classe per eseguire l'operazione in un altro thread.
+Se si dispone di un'operazione che richiederà molto tempo per il completamento, e non si desidera l'interfaccia utente (UI) di rispondere o per bloccare, è possibile usare il <xref:System.ComponentModel.BackgroundWorker> classe per eseguire l'operazione in un altro thread.
 
 Questa procedura dettagliata illustra come usare il <xref:System.ComponentModel.BackgroundWorker> classe per eseguire i calcoli che richiedono molto tempo "in"background, mentre l'interfaccia utente rimane reattiva.  Nel corso della procedura, un'applicazione calcola i numeri Fibonacci in modo asincrono. Sebbene il calcolo di un numero Fibonacci a molte cifre possa impiegare una notevole quantità di tempo, il thread principale dell'interfaccia utente non verrà interrotto da questa operazione e la capacità di risposta del modulo resterà inalterata durante il calcolo.
 

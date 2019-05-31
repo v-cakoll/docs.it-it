@@ -2,12 +2,12 @@
 title: Novità in Windows Workflow Foundation in .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: fb9604061fd6ccd7909a2d5b26675a1b637f2b4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9bf836abaa568b3df2080500d8d2357e604dff60
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380143"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423977"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Novità in Windows Workflow Foundation in .NET 4.5
 
@@ -200,7 +200,7 @@ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] gli errori d
 
 ### <a name="BKMK_DesignTimeValidation"></a> Convalida in background in fase di progettazione
 
-In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] i flussi di lavoro venivano convalidati come processo in primo piano. Questa condizione poteva potenzialmente bloccare l'interfaccia utente durante processi di convalida complessi o lunghi. La convalida del flusso di lavoro viene ora effettuata in un thread in background, pertanto l'interfaccia utente non viene bloccata.
+In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], i flussi di lavoro sono stati convalidati come processo in primo piano, che potrebbe potenzialmente bloccare l'interfaccia utente durante processi di convalida complessi o lunghi. La convalida del flusso di lavoro viene ora effettuata in un thread in background, pertanto l'interfaccia utente non viene bloccata.
 
 ### <a name="BKMK_ViewState"></a> Stato di visualizzazione che si trova in un percorso separato nei file XAML
 
