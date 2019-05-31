@@ -2,12 +2,12 @@
 title: Processo di sviluppo per le applicazioni basate su Docker
 description: Ottenere una panoramica generale delle opzioni per lo sviluppo di applicazioni basate su Docker. Uso a scelta di Visual Studio per Windows, Visual Studio per Mac o Visual Studio Code per il supporto multipiattaforma (Windows, Mac e Linux).
 ms.date: 09/27/2018
-ms.openlocfilehash: a871fcbfcf079c745759cb17960fa4eaa6ec6eec
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8807bc57365e70a0cbf265dc7bce28c93de16098
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640079"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300642"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Processo di sviluppo per le applicazioni basate su Docker
 
@@ -25,7 +25,7 @@ Microsoft include strumenti che è possibile usare per lo sviluppo di applicazio
 
 **Visual Studio Code e CLI di Docker**. Se si preferisce un editor leggero e multipiattaforma che supporta qualsiasi linguaggio di sviluppo, è possibile usare Microsoft Visual Studio Code (codice Visual Studio) e l'interfaccia CLI di Docker. Questo approccio di sviluppo multipiattaforma è adatto per Mac, Linux e Windows. Inoltre, Visual Studio Code supporta le estensioni per Docker, quali IntelliSense per Dockerfile e le attività collegamento per eseguire i comandi di Docker dall'editor.
 
-Installando gli strumenti di [Docker Community Edition (CE)](https://www.docker.com/community-edition), è possibile usare un'interfaccia CLI di Docker singola per creare app per Windows e Linux.
+Installando [Docker Desktop Community Edition (CE)](https://hub.docker.com/search/?type=edition&offering=community), è possibile usare una singola interfaccia della riga di comando di Docker per creare app per Windows e Linux.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
@@ -35,8 +35,11 @@ Installando gli strumenti di [Docker Community Edition (CE)](https://www.docker.
 - **Visual Studio Code**. Sito ufficiale. \
   <https://code.visualstudio.com/download>
 
-- **Docker Community Edition (CE) per Mac e Windows** \
-  [https://www.docker.com/community-editions](https://www.docker.com/community-edition)
+- **Docker Desktop per Windows Community Edition (CE)**  \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+  
+- **Docker Desktop per Mac Community Edition (CE)**  \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>Linguaggi e framework .NET per contenitori di Docker
 
