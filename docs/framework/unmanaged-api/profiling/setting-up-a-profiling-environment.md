@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af68041cd016b457c449c283601bd5a0d4258c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfad184e30ec94c8add265db2ef8131d0d34396f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666057"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457236"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Configurazione di un ambiente di profilatura
 > [!NOTE]
@@ -37,10 +37,10 @@ ms.locfileid: "64666057"
  Per profilare un'applicazione CLR, è necessario impostare le variabili di ambiente COR_ENABLE_PROFILING e COR_PROFILER prima di eseguire l'applicazione. È anche necessario assicurarsi che il file DLL del profiler sia registrato.  
   
 > [!NOTE]
->  A partire da [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], i profiler non devono essere registrati.  
+>  A partire da .NET Framework 4, i profiler non devono essere registrati.  
   
 > [!NOTE]
->  Per usare i profiler di .NET Framework versioni 2.0, 3.0 e 3.5 nel [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] e versioni successive, è necessario impostare la variabile di ambiente COMPLUS_ProfAPI_ProfilerCompatibilitySetting.  
+>  Per usare i profiler di .NET Framework versioni 2.0, 3.0 e 3.5 in .NET Framework 4 e versioni successive, è necessario impostare la variabile di ambiente COMPLUS_ProfAPI_ProfilerCompatibilitySetting.  
   
 ## <a name="environment-variable-scope"></a>Ambito della variabile di ambiente  
  La modalità di impostazione delle variabili di ambiente COR_ENABLE_PROFILING e COR_PROFILER ne determina l'ambito di influenza. È possibile impostare queste variabili in uno dei modi seguenti:  

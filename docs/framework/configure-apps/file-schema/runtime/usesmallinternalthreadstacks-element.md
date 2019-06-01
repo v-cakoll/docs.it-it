@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9833d768b84faaf6e1dcf8c9cb8b00b92adc3d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f098065cc005c59ec558ffa1f95202715624e7d
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673986"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456109"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > elemento
 Le richieste che common language runtime (CLR) ridurre la memoria usano specificando le dimensioni dello stack esplicite quando crea determinati thread usati internamente, invece di usare le dimensioni predefinite dello stack per tali thread.  
@@ -57,7 +57,7 @@ Le richieste che common language runtime (CLR) ridurre la memoria usano specific
  Questo elemento di configurazione viene usato per richiedere l'utilizzo ridotto della memoria virtuale in un processo, perché le dimensioni di thread espliciti usati da CLR per i thread interni, se la richiesta verrà rispettata, sono inferiori alle dimensioni predefinite.  
   
 > [!IMPORTANT]
->  Questo elemento di configurazione è una richiesta a Common Language Runtime anziché a un requisito assoluto. Nel [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], la richiesta verrà rispettata solo per x86 architettura. Questo elemento potrebbe essere completamente ignorato nelle versioni future di CLR o sostituito da dimensioni dello stack esplicite che vengono sempre utilizzate per i thread interno selezionato.  
+>  Questo elemento di configurazione è una richiesta a Common Language Runtime anziché a un requisito assoluto. In .NET Framework 4, la richiesta verrà rispettata solo per x86 architettura. Questo elemento potrebbe essere completamente ignorato nelle versioni future di CLR o sostituito da dimensioni dello stack esplicite che vengono sempre utilizzate per i thread interno selezionato.  
   
  Specifica di che questo elemento di configurazione è necessaria una affidabilità per l'utilizzo di memoria virtuale più piccolo se CLR soddisfa la richiesta, perché di dimensioni inferiori dello stack potrebbe potenzialmente stack overflow più probabile.  
   

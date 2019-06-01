@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 548f7de2753ef0c30aa787f4c879af87987bfbde
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0486e9faf70e7d5d147cfef996edcdaa8846963
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621510"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456299"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > (impostazioni Web)
 Specifica le impostazioni di configurazione che vengono utilizzate da ASP.NET per gestire il comportamento a livello di processo quando un'applicazione ASP.NET viene eseguito in modalità integrata in [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versione successiva.  
@@ -59,7 +59,7 @@ Specifica le impostazioni di configurazione che vengono utilizzate da ASP.NET pe
 > [!IMPORTANT]
 >  Se si esegue [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] su [!INCLUDE[win7](../../../../../includes/win7-md.md)], è possibile configurare un file Aspnet. config separato per ogni pool di applicazioni. Ciò consente di adattare le prestazioni dei thread per ogni pool di applicazioni.  
   
- Per il `maxConcurrentRequestsPerCPU` impostazione, l'impostazione predefinita pari a "5000" nel [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] in modo efficace consente di disattivare la limitazione delle richieste controllata da ASP.NET, a meno che non si hanno effettivamente le richieste di più di 5000 per ogni CPU. L'impostazione predefinita invece dipende il pool di thread CLR per gestire automaticamente la concorrenza per ogni CPU. Le applicazioni che fanno largo uso dell'elaborazione della richiesta asincrona, o che presentano molte richieste a esecuzione prolungata bloccate nella rete i/o, potranno usufruire di aumento del limite predefinito nel [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]. Impostazione `maxConcurrentRequestsPerCPU` su zero disattiva l'utilizzo di thread gestiti per l'elaborazione delle richieste ASP.NET. Quando un'applicazione viene eseguita in un pool di applicazioni IIS, le richieste di restare sempre aggiornato riguardo il thread dei / o IIS e pertanto la concorrenza è limitata dalle impostazioni di thread IIS.  
+ Per il `maxConcurrentRequestsPerCPU` impostazione, l'impostazione predefinita pari a "5000" in .NET Framework 4 in modo efficace consente di disattivare la limitazione delle richieste controllata da ASP.NET, a meno che non si hanno effettivamente le richieste di più di 5000 per ogni CPU. L'impostazione predefinita invece dipende il pool di thread CLR per gestire automaticamente la concorrenza per ogni CPU. Le applicazioni che fanno largo uso dell'elaborazione della richiesta asincrona, o che presentano molte richieste a esecuzione prolungata bloccate nella rete i/o, trarranno vantaggio dall'aumento del limite predefinito in .NET Framework 4. Impostazione `maxConcurrentRequestsPerCPU` su zero disattiva l'utilizzo di thread gestiti per l'elaborazione delle richieste ASP.NET. Quando un'applicazione viene eseguita in un pool di applicazioni IIS, le richieste di restare sempre aggiornato riguardo il thread dei / o IIS e pertanto la concorrenza è limitata dalle impostazioni di thread IIS.  
   
  Il `requestQueueLimit` impostazione funziona esattamente come i `requestQueueLimit` attributo delle [processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100)) elemento, che è impostato nei file Web. config per applicazioni ASP.NET. Tuttavia, il `requestQueueLimit` impostazione in un file ASPNET sostituisce il `requestQueueLimit` impostazione in un file Web. config. In altre parole, se sono impostati entrambi gli attributi (per impostazione predefinita, questo è true), il `requestQueueLimit` impostazione nel file ASPNET ha la precedenza.  
   

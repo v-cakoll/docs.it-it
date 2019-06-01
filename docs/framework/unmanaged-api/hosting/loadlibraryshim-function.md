@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32aee404891bfad1aed2abc9ad84e43bcd002df5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 310aec9b180b37b7e5f34c4594fd61747ef02d39
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765323"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457053"
 ---
 # <a name="loadlibraryshim-function"></a>Funzione LoadLibraryShim
 Carica una versione specifica di una DLL che è incluso nel pacchetto ridistribuibile di .NET Framework.  
@@ -45,7 +45,7 @@ HRESULT LoadLibraryShim (
  [in] Una stringa con terminazione zero che rappresenta il nome della DLL da caricare dalla libreria di .NET Framework.  
   
  `szVersion`  
- [in] Una stringa con terminazione zero che rappresenta la versione della DLL da caricare. Se `szVersion` è null, la versione selezionata per il caricamento è la versione più recente del file DLL specificata che è inferiore alla versione 4. Vale a dire tutte le versioni uguale o maggiore della versione 4 vengono ignorate se `szVersion` è null, e se non è installata alcuna versione inferiore alla versione 4, la DLL non riesce a caricare. Questo modo si garantisce che l'installazione del [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] non influiscono sulle applicazioni preesistenti o componenti. Vedere l'intervento [SxS In-Process e avvio rapido di migrazione](https://go.microsoft.com/fwlink/?LinkId=200329) nel blog del team CLR.  
+ [in] Una stringa con terminazione zero che rappresenta la versione della DLL da caricare. Se `szVersion` è null, la versione selezionata per il caricamento è la versione più recente del file DLL specificata che è inferiore alla versione 4. Vale a dire tutte le versioni uguale o maggiore della versione 4 vengono ignorate se `szVersion` è null, e se non è installata alcuna versione inferiore alla versione 4, la DLL non riesce a caricare. Questo modo si garantisce che l'installazione di .NET Framework 4 non interessa con le applicazioni pre-esistenti o i componenti. Vedere l'intervento [SxS In-Process e avvio rapido di migrazione](https://go.microsoft.com/fwlink/?LinkId=200329) nel blog del team CLR.  
   
  `pvReserved`  
  Riservato per usi futuri.  

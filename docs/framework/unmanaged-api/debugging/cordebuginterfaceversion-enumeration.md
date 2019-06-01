@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50234122aa4ba73b56d1a40cca2db9c9c7a30f50
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7308f37ee96b4efe83aeb198586f7364fdcf9ccc
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616244"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457157"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>Enumerazione CorDebugInterfaceVersion
 Specifica un'interfaccia, una versione di .NET Framework o una versione di .NET Framework in cui è stata introdotta un'interfaccia.  
@@ -235,7 +235,7 @@ typedef enum CorDebugInterfaceVersion {
   
 - In .NET Framework versioni 3.0 e 3.5 vengono usate le interfacce .NET Framework 2.0 esistenti e non vengono introdotte nuove interfacce.  
   
-- Il [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] introduce una combinazione delle versioni dell'interfaccia. Ad esempio, sia `ICorDebugThread3` che `ICorDebugThread4` vengono visualizzate come terza e quarta versione dell'interfaccia `ICorDebugThread`. Il [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] introduce anche la prima versione del `ICorDebugStackWalk` interfaccia e la seconda versione del `ICorDebugNativeFrame` interfaccia (`ICorDebugNativeFrame2`).  
+- Il [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] introduce una combinazione delle versioni dell'interfaccia. Ad esempio, sia `ICorDebugThread3` che `ICorDebugThread4` vengono visualizzate come terza e quarta versione dell'interfaccia `ICorDebugThread`. .NET Framework 4 introduce anche la prima versione del `ICorDebugStackWalk` interfaccia e la seconda versione del `ICorDebugNativeFrame` interface (`ICorDebugNativeFrame2`).  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

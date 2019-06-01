@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 972efa150d560e74f0e7daadf18688ac12b9fbf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8f5c6f6aba9ec4ad627fcd4d3b3caaff810ee72
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583638"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456209"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurazione delle app tramite file di configurazione
 .NET Framework, tramite i file di configurazione, offre agli sviluppatori e agli amministratori controllo e flessibilità sulle modalità di esecuzione delle applicazioni. I file di configurazione sono file XML che è possibile modificare in base alle specifiche esigenze. Un amministratore è in grado di controllare le risorse protette alle quali può accedere un'applicazione, le versioni di assembly che verranno usate dall'applicazione e la posizione in cui risiedono applicazioni e oggetti remoti. Gli sviluppatori possono definire le impostazioni all'interno dei file di configurazione senza dover ricompilare un'applicazione dopo ogni modifica di un'impostazione. In questa sezione viene descritto cosa è possibile configurare e l'utilità della configurazione di un'applicazione.  
@@ -54,7 +54,7 @@ ms.locfileid: "64583638"
 ## <a name="machine-configuration-files"></a>File di configurazione del computer  
  Il file di configurazione del computer, Machine.config, contiene le impostazioni che vengono applicate al computer. Questo file si trova nella directory %*percorso installazione runtime*%\Config. Il file Machine.config contiene le impostazioni di configurazione per l'associazione di assembly del computer, [canali remoti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) predefiniti e ASP.NET.  
   
- Il sistema di configurazione cerca prima di tutto nel file di configurazione del computer l'[**elemento \<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/index.md) e altre sezioni di configurazione che possono essere definite dallo sviluppatore. Successivamente analizza il file di configurazione dell'applicazione. Per gestire al meglio la configurazione del computer, è consigliabile definire queste impostazioni nel file di configurazione dell'applicazione. La definizione delle impostazioni nel file di configurazione del computer semplifica tuttavia la manutenzione del sistema. Se ad esempio è disponibile un componente di terze parti usato da entrambe le applicazioni server e client, risulta più semplice definire le impostazioni relative a tale componente in un solo file di configurazione. In questo caso, è appropriato definire le impostazioni nel file di configurazione del computer, senza definire le stesse impostazioni in due file diversi.  
+ Il sistema di configurazione cerca prima di tutto nel file di configurazione del computer l'[**elemento \<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/index.md) e altre sezioni di configurazione che possono essere definite dallo sviluppatore. Successivamente analizza il file di configurazione dell'applicazione. Per gestire al meglio la configurazione del computer, è consigliabile definire queste impostazioni nel file di configurazione dell'applicazione. La definizione delle impostazioni nel file di configurazione del computer semplifica tuttavia la manutenzione del sistema. Se ad esempio è disponibile un componente di terze parti usato da entrambe le applicazioni server e client, risulta più semplice definire le impostazioni relative a tale componente in un solo file di configurazione. In questo caso, è appropriato definire le impostazioni nel file di configurazione del computer, senza definire le stesse impostazioni in due file diversi.  
   
 > [!NOTE]
 >  La distribuzione di un'applicazione mediante XCOPY non comporta la copia delle impostazioni nel file di configurazione del computer.  
@@ -90,7 +90,7 @@ ms.locfileid: "64583638"
  I file di configurazione della sicurezza contengono informazioni sulla gerarchia dei gruppi di codice e sui set di autorizzazioni associati a un livello di criteri. È consigliabile usare lo [strumento Code Access Security Policy (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) per modificare i criteri di sicurezza, in modo da assicurarsi che eventuali modifiche dei criteri non danneggino i file di configurazione della sicurezza.  
   
 > [!NOTE]
->  A partire da [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], i file di configurazione della sicurezza sono presenti solo se i criteri di sicurezza sono stati modificati.  
+>  A partire da .NET Framework 4, i file di configurazione di sicurezza sono presenti solo se i criteri di sicurezza sono stato modificato.  
   
  I file di configurazione della sicurezza si trovano nelle posizioni seguenti:  
   

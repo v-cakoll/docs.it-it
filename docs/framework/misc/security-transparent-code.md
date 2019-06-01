@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cb528bbb4f85cd4502b4e2efabbcf592ac6bd0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868745"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456508"
 ---
 # <a name="security-transparent-code"></a>Codice SecurityTransparent
 
@@ -59,14 +59,14 @@ L'attributo <xref:System.Security.SecurityRulesAttribute> a livello di assembly 
 
 I livelli sono elencati di seguito.
 
-- Livello 2 (<xref:System.Security.SecurityRuleSet.Level2>): regole di trasparenza di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].
+- Livello 2 (<xref:System.Security.SecurityRuleSet.Level2>): le regole di trasparenza di .NET Framework 4.
 
 - Livello 1 (<xref:System.Security.SecurityRuleSet.Level1>): regole di trasparenza di .NET Framework 2.0.
 
 La differenza principale tra i due livelli di trasparenza è che il livello 1 non applica regole di trasparenza per le chiamate provenienti dall'esterno dell'assembly ed è disponibile solo per garantire la compatibilità.
 
 > [!IMPORTANT]
-> È necessario specificare la trasparenza di livello 1 solo per ragioni di compatibilità, ovvero specificare il livello 1 solo per codice sviluppato con .NET Framework 3.5 o versioni precedenti che usa l'attributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> o non usa il modello di trasparenza. Usare ad esempio la trasparenza di livello 1 per assembly .NET Framework 2.0 che consentono l'uso di chiamate da chiamanti parzialmente attendibili (APTCA). Per il codice sviluppato per [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], usare sempre la trasparenza di livello 2.
+> È necessario specificare la trasparenza di livello 1 solo per ragioni di compatibilità, ovvero specificare il livello 1 solo per codice sviluppato con .NET Framework 3.5 o versioni precedenti che usa l'attributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> o non usa il modello di trasparenza. Usare ad esempio la trasparenza di livello 1 per assembly .NET Framework 2.0 che consentono l'uso di chiamate da chiamanti parzialmente attendibili (APTCA). Per il codice sviluppato per .NET Framework 4, usare sempre la trasparenza di livello 2.
 
 ### <a name="level-2-transparency"></a>Trasparenza di livello 2
 
@@ -114,7 +114,7 @@ Il modello di trasparenza di livello 1 presenta le limitazioni seguenti:
 
 ## <a name="transparency-enforcement"></a>Imposizione della trasparenza
 
-Le regole di trasparenza non vengono applicate fino a quando la trasparenza non viene calcolata. In tale fase, viene generata un'eccezione <xref:System.InvalidOperationException> se una regola di trasparenza risulta violata. Il momento in cui viene calcolata la trasparenza dipende da vari fattori e non può essere previsto. Il calcolo avviene il più tardi possibile. In [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], il calcolo della trasparenza a livello di assembly si verifica prima di quanto avvenga in .NET Framework 2.0. L'unica garanzia è che il calcolo della trasparenza si verifica nel momento in cui è necessario. È un meccanismo analogo al modo in cui il compilatore JIT (Just-In-Time) può modificare il punto in cui un metodo viene compilato e gli eventuali errori in tale metodo vengono rilevati. Il calcolo della trasparenza è invisibile se il codice non contiene errori di trasparenza.
+Le regole di trasparenza non vengono applicate fino a quando la trasparenza non viene calcolata. In tale fase, viene generata un'eccezione <xref:System.InvalidOperationException> se una regola di trasparenza risulta violata. Il momento in cui viene calcolata la trasparenza dipende da vari fattori e non può essere previsto. Il calcolo avviene il più tardi possibile. In .NET Framework 4, il calcolo della trasparenza a livello di assembly si verifica prima di quanto avvenga in .NET Framework 2.0. L'unica garanzia è che il calcolo della trasparenza si verifica nel momento in cui è necessario. È un meccanismo analogo al modo in cui il compilatore JIT (Just-In-Time) può modificare il punto in cui un metodo viene compilato e gli eventuali errori in tale metodo vengono rilevati. Il calcolo della trasparenza è invisibile se il codice non contiene errori di trasparenza.
 
 ## <a name="see-also"></a>Vedere anche
 

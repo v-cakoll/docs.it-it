@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a51b9fb485da605effbad0e81b8baf5e05e382a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91983a0910b272e621783f0fdb68242ddbd20f03
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675091"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456178"
 ---
 # <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > elemento
 Determina se common language runtime calcola i codici hash per le stringhe in una base di dominio dell'applicazione.  
@@ -58,7 +58,7 @@ Determina se common language runtime calcola i codici hash per le stringhe in un
 |`runtime`|Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.|  
   
 ## <a name="remarks"></a>Note  
- Per impostazione predefinita, il <xref:System.StringComparer> classe e il <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> metodo usare un singolo algoritmo di hash che produce un codice hash coerente tra più domini applicazione. Ciò equivale a impostare il `enabled` attributo del `<UseRandomizedStringHashAlgorithm>` elemento `0`. Questo è l'algoritmo hash usato nel [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ Per impostazione predefinita, il <xref:System.StringComparer> classe e il <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> metodo usare un singolo algoritmo di hash che produce un codice hash coerente tra più domini applicazione. Ciò equivale a impostare il `enabled` attributo del `<UseRandomizedStringHashAlgorithm>` elemento `0`. Questo è l'algoritmo hash usato in .NET Framework 4.  
   
  Il <xref:System.StringComparer> classe e il <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> metodo può anche usare un algoritmo di hash diverso che calcola i codici hash in una base di dominio dell'applicazione. Di conseguenza, i codici hash per le stringhe equivalenti risulteranno diversi tra i domini dell'applicazione. Si tratta di una funzionalità che prevede il consenso esplicito; Per sfruttare i vantaggi di esso, è necessario impostare il `enabled` attributo del `<UseRandomizedStringHashAlgorithm>` elemento `1`.  
   

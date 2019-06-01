@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: cc55809ecaffa4cab4fa4336f9f7f5c06debde2d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c6bf4c6b262bc9066277a683d5eda67ada6f4d08
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634218"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456221"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > elemento
 
@@ -22,7 +22,7 @@ Specifica quale versione di common language runtime e, facoltativamente, la vers
 
 [\<configuration>](../configuration-element.md)  
 &nbsp;&nbsp;[\<startup>](../startup/startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<supportedRuntime>**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -51,7 +51,7 @@ Per le app che supportano le versioni di runtime da .NET Framework 1.1 a 3.5, qu
 Se il  **\<supportedRuntime >** elemento con la `sku` attributo è presente nel file di configurazione e la versione di .NET Framework installata è inferiore alla versione supportata specificata, l'applicazione esecuzione non riesce e verrà visualizzato invece un messaggio che richiede di installare la versione supportata. In caso contrario, l'applicazione tenta di eseguire in qualsiasi versione installata, ma potrebbe comportarsi in modo imprevisto se non è completamente compatibile con tale versione. (Le differenze di compatibilità tra versioni di .NET Framework, vedere [compatibilità delle applicazioni in .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility).) Pertanto, è consigliabile che si include questo elemento nel file di configurazione dell'applicazione per la diagnostica degli errori più semplice. (Il file di configurazione generato automaticamente da Visual Studio quando si crea un nuovo progetto già lo contiene.)
   
 > [!NOTE]
-> Se l'applicazione usa i percorsi di attivazione legacy, ad esempio la [funzione CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), e si desidera che questi percorsi per attivare la versione 4 di CLR anziché una versione precedente, o se l'applicazione viene compilata con la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]ma presenta una dipendenza su un assembly in modalità mista compilato con una versione precedente di .NET Framework, non è sufficiente specificare il [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] nell'elenco dei runtime supportati. Inoltre, nelle [ \<avvio > elemento](../startup/startup-element.md) nel file di configurazione, è necessario impostare la `useLegacyV2RuntimeActivationPolicy` attributo `true`. Tuttavia, se questo attributo viene impostato su `true` tutti i componenti compilati con le versioni precedenti di .NET Framework vengono eseguiti utilizzando [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] invece dei runtime con cui sono stati compilati.
+> Se l'applicazione usa i percorsi di attivazione legacy, ad esempio la [funzione CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), e si desidera che questi percorsi per attivare la versione 4 di CLR anziché una versione precedente, o se l'applicazione viene compilata con .NET Framework 4, ma ha una dipendenza su un assembly in modalità mista compilato con una versione precedente di .NET Framework, non è sufficiente specificare .NET Framework 4 nell'elenco dei runtime supportati. Inoltre, nelle [ \<avvio > elemento](../startup/startup-element.md) nel file di configurazione, è necessario impostare la `useLegacyV2RuntimeActivationPolicy` attributo `true`. Tuttavia, impostando questo attributo su `true` significa che tutti i componenti compilati con versioni precedenti di .NET Framework vengono eseguiti utilizzando .NET Framework 4 invece dei runtime con cui sono stati compilati.
 
 È inoltre consigliabile testare l'applicazione con tutte le versioni di .NET Framework in cui possono essere eseguite.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d9281e52de43391a92262f85084715ccabd5515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868914"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456644"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Migrazione e compatibilità dei criteri di sicurezza dall'accesso di codice
 
@@ -22,7 +22,7 @@ Gli aspetti relativi ai criteri di sicurezza dall'accesso di codice sono diventa
 
 È possibile evitare gli avvisi e gli errori nei modi seguenti:
 
-- [Eseguire la migrazione](#migration) per il [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] sostituzioni per le chiamate obsolete.
+- [Eseguire la migrazione](#migration) per le sostituzioni di .NET Framework 4 per le chiamate obsolete.
 
    \- oppure -
 
@@ -114,7 +114,7 @@ Eccezioni di runtime:
 
 ### <a name="determining-an-assemblys-trust-level"></a>Determinazione del livello di attendibilità di un assembly
 
-I criteri di sicurezza dall'accesso di codice vengono spesso usati per determinare il livello di attendibilità o il set di autorizzazioni di un assembly o di un dominio dell'applicazione. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] espone le utili proprietà seguenti, che non richiedono la risoluzione dei criteri di sicurezza:
+I criteri di sicurezza dall'accesso di codice vengono spesso usati per determinare il livello di attendibilità o il set di autorizzazioni di un assembly o di un dominio dell'applicazione. .NET Framework 4 espone le utili proprietà seguenti che non è necessario risolvere i criteri di sicurezza:
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 
@@ -126,15 +126,15 @@ I criteri di sicurezza dall'accesso di codice vengono spesso usati per determina
 
 ### <a name="application-domain-sandboxing"></a>Sandboxing di un dominio dell'applicazione
 
-Il metodo <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> viene in genere usato per il sandboxing degli assembly in un dominio dell'applicazione. Il [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] espone membri che non sono necessario usare <xref:System.Security.Policy.PolicyLevel> per questo scopo. Per altre informazioni, vedere [Procedura: Eseguire codice parzialmente attendibile in un oggetto sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+Il metodo <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> viene in genere usato per il sandboxing degli assembly in un dominio dell'applicazione. .NET Framework 4 espone membri che non sono necessario usare <xref:System.Security.Policy.PolicyLevel> per questo scopo. Per altre informazioni, vedere [Procedura: Eseguire codice parzialmente attendibile in un oggetto sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Determinazione di un set di autorizzazioni ragionevoli o sicure per codice parzialmente attendibile
 
-Gli host devono spesso determinare le autorizzazioni appropriate per il sandboxing del codice ospitato. Prima la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], il criterio CAS fornito un modo per eseguire questa operazione con il <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> (metodo). Rappresenta un sostituto [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] fornisce il <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> metodo, che restituisce un'autorizzazione provvisoria, standard, impostato per l'evidenza fornita.
+Gli host devono spesso determinare le autorizzazioni appropriate per il sandboxing del codice ospitato. Prima di .NET Framework 4, il criterio CAS fornito un modo per eseguire questa operazione con il <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> (metodo). Rappresenta un sostituto, .NET Framework 4 fornisce la <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> metodo, che restituisce un'autorizzazione provvisoria, standard, impostato per l'evidenza fornita.
 
 ### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Scenari senza Sandboxing: Overload per caricamenti di Assembly
 
-Il motivo per usare un overload per il caricamento di un assembly potrebbe essere l'uso di parametri che non sono altrimenti disponibili, anziché l'esecuzione del sandboxing dell'assembly. Inizia con la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], gli overload di caricamento di assembly che non richiedono una <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> oggetto come parametro, ad esempio, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, abilitare questo scenario.
+Il motivo per usare un overload per il caricamento di un assembly potrebbe essere l'uso di parametri che non sono altrimenti disponibili, anziché l'esecuzione del sandboxing dell'assembly. A partire da .NET Framework 4, gli overload che non richiedono di caricamento dell'assembly un <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> oggetto come parametro, ad esempio, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, abilitare questo scenario.
 
 Per eseguire il sandboxing di un assembly, usare l'overload <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType>.
 

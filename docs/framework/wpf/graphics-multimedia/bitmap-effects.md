@@ -9,18 +9,18 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: eb81644bc69edcd1465cf43224eb6af369b5fb3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86e42b5d2fcd5bcb23489bd03a6daf8255d0725f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010228"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457534"
 ---
 # <a name="bitmap-effects"></a>Effetti bitmap
 Negli argomenti di questa sezione viene descritto come applicare effetti visivi alle immagini bitmap tramite [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 > [!IMPORTANT]
->  Nel [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] o versioni successive, il <xref:System.Windows.Media.Effects.BitmapEffect> classe è obsoleta. Se si prova a usare il <xref:System.Windows.Media.Effects.BitmapEffect> (classe), si otterrà un'eccezione obsoleta. L'alternativa non obsoleta per le <xref:System.Windows.Media.Effects.BitmapEffect> classe è il <xref:System.Windows.Media.Effects.Effect> classe. Nella maggior parte dei casi, il <xref:System.Windows.Media.Effects.Effect> classe è notevolmente più veloce.  
+>  In .NET Framework 4 o versioni successive, il <xref:System.Windows.Media.Effects.BitmapEffect> classe è obsoleta. Se si prova a usare il <xref:System.Windows.Media.Effects.BitmapEffect> (classe), si otterrà un'eccezione obsoleta. L'alternativa non obsoleta per le <xref:System.Windows.Media.Effects.BitmapEffect> classe è il <xref:System.Windows.Media.Effects.Effect> classe. Nella maggior parte dei casi, il <xref:System.Windows.Media.Effects.Effect> classe è notevolmente più veloce.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sugli effetti bitmap](bitmap-effects-overview.md)  

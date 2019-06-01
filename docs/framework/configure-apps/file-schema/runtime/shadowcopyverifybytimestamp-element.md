@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ad61b3824b8155cf3f68f61865891c023b4cf32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1815da141beb3dd1022fe1a74f872aa70b4ded43
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674012"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456350"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>Elemento \<shadowCopyVerifyByTimestamp>
 Specifica se la copia shadow usa il comportamento di avvio predefinito introdotto in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o ripristina il comportamento di avvio delle versioni precedenti di .NET Framework.  
@@ -40,7 +40,7 @@ Elemento \<shadowCopyVerifyByTimestamp>
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|true|All'avvio, copia solo gli assembly che sono stati aggiornati dall'ultimo sono stati copiati nella directory della copia shadow. Questo è il valore predefinito per il [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].|  
+|true|All'avvio, copia solo gli assembly che sono stati aggiornati dall'ultimo sono stati copiati nella directory della copia shadow. Questo è il valore predefinito di .NET Framework 4.|  
 |False|Ripristina il comportamento di avvio delle versioni precedenti di .NET Framework, che consiste nel copiare tutti i file all'avvio.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
@@ -54,10 +54,10 @@ Elemento \<shadowCopyVerifyByTimestamp>
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- A partire dal [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], gli assembly vengono replicati solo se i timestamp indicano che essi siano state modificate dall'ultima sono stati copiati nella directory della copia shadow. Migliora i tempi di avvio per molte applicazioni che usano la copia shadow, come descritto in [copie replicate di assembly](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md). Le applicazioni con una percentuale e una frequenza elevate di aggiornamenti dell'assembly non possono trarre vantaggio da questa modifica nel comportamento. In tal caso, è possibile utilizzare questo elemento per ripristinare il comportamento delle versioni precedenti di .NET Framework.  
+ A partire da .NET Framework 4, gli assembly vengono replicati solo se i timestamp indicano che essi siano state modificate dall'ultima sono stati copiati nella directory della copia shadow. Migliora i tempi di avvio per molte applicazioni che usano la copia shadow, come descritto in [copie replicate di assembly](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md). Le applicazioni con una percentuale e una frequenza elevate di aggiornamenti dell'assembly non possono trarre vantaggio da questa modifica nel comportamento. In tal caso, è possibile utilizzare questo elemento per ripristinare il comportamento delle versioni precedenti di .NET Framework.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come disabilitare il comportamento di avvio predefiniti della copia shadow nel [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]e ripristinare il comportamento di avvio delle versioni precedenti di .NET Framework.  
+ Nell'esempio seguente viene illustrato come disabilitare il comportamento di avvio predefiniti della copia shadow in .NET Framework 4 e ripristinare il comportamento di avvio delle versioni precedenti di .NET Framework.  
   
 ```xml  
 <configuration>  

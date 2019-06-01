@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 725bd715f6e70dff08929e58d588a3d8561d5011
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60fcdd902c6acf919e68806ff65e3b8142533280
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674064"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456380"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > elemento
 Specifica se il runtime corregge automaticamente le dichiarazioni platform invoke non corrette in fase di esecuzione, al costo di transizioni più lente tra codice gestito e quello non gestito.  
@@ -56,7 +56,7 @@ Specifica se il runtime corregge automaticamente le dichiarazioni platform invok
 ## <a name="remarks"></a>Note  
  Questo elemento consente di scambiare più veloce il marshalling di interoperabilità per dichiarazioni di richiamo di resilienza in fase di esecuzione per la piattaforma non corretta.  
   
- A partire dal [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], una semplice interoperabilità marshalling architettura fornisce un miglioramento significativo delle prestazioni per le transizioni da codice gestito a codice non gestito. Nelle versioni precedenti di .NET Framework, la piattaforma non corretto a livello rilevato marshalling richiamare le dichiarazioni in piattaforme a 32 bit e corretti automaticamente lo stack. La nuova architettura di marshalling consente di eliminare questo passaggio. Di conseguenza, le transizioni sono molto veloci, ma un platform invoke non corrette dichiarazione possono causare un errore di programma.  
+ A partire da .NET Framework 4, un'architettura semplificata di marshalling interoperabilità offre un miglioramento significativo delle prestazioni per le transizioni da codice gestito a codice non gestito. Nelle versioni precedenti di .NET Framework, la piattaforma non corretto a livello rilevato marshalling richiamare le dichiarazioni in piattaforme a 32 bit e corretti automaticamente lo stack. La nuova architettura di marshalling consente di eliminare questo passaggio. Di conseguenza, le transizioni sono molto veloci, ma un platform invoke non corrette dichiarazione possono causare un errore di programma.  
   
  Per renderlo semplice rilevare le dichiarazioni di non corrette durante lo sviluppo, è stata migliorata l'esperienza di debug di Visual Studio. Il [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) assistente al debug gestito (MDA) notifica della piattaforma non corretta invoke dichiarazioni quando l'applicazione viene eseguita con il debugger collegato.  
   

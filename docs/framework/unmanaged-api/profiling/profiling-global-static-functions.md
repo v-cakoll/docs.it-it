@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 08a13a57-dc49-488d-b937-31e3051fda97
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8bb5d93c91de857ebbee63009cad73fba7e1d284
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ea65c06871d9762fa6daac229a568594b4c4479
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758249"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457481"
 ---
 # <a name="profiling-global-static-functions"></a>Funzioni statiche globali di profilatura
 Questa sezione descrive le funzioni API non gestite usate dall'API di profilatura.  
@@ -35,13 +35,13 @@ Questa sezione descrive le funzioni API non gestite usate dall'API di profilatur
  Notifica al profiler che l'identificatore specificato di una funzione può essere rimappato a un ID alternativo da utilizzare per il [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), e [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) richiamate per tale funzione. Consente inoltre al profiler di indicare se vuole ricevere i callback per la funzione  
   
  [Funzione FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- Notifica al profiler che controllo viene passato a una funzione e fornisce informazioni sullo stack frame e funzione gli argomenti. Deprecato nel [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Notifica al profiler che controllo viene passato a una funzione e fornisce informazioni sullo stack frame e funzione gli argomenti. Obsoleta in .NET Framework 4.  
   
  [Funzione FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- Notifica al profiler che una funzione sta per restituire al chiamante e vengono fornite informazioni relative al valore restituito dello stack frame e la funzione. Deprecato nel [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Notifica al profiler che una funzione sta per restituire al chiamante e vengono fornite informazioni relative al valore restituito dello stack frame e la funzione. Obsoleta in .NET Framework 4.  
   
  [Funzione FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- Notifica al profiler che la funzione attualmente in esecuzione sta per effettuare una chiamata tail ad un'altra funzione e fornisce informazioni sullo stack frame. Deprecato nel [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Notifica al profiler che la funzione attualmente in esecuzione sta per effettuare una chiamata tail ad un'altra funzione e fornisce informazioni sullo stack frame. Obsoleta in .NET Framework 4.  
   
  [Funzione StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)  
  Fornisce informazioni su ogni frame gestito e ogni esecuzione dei frame non gestiti nello stack durante un'analisi dello stack, che viene avviata dal profiler il [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) (metodo).  

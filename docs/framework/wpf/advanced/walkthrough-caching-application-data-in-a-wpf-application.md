@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4ee973eb5a81a6428ee5a5fcfc00e28425ff2a44
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591199"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457521"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Procedura dettagliata: Memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF
 La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido. Quando accedono nuovamente ai dati, le applicazioni possono recuperarli dalla cache anziché dall'origine. In questo modo si possono ottenere migliori prestazioni e scalabilità. Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.
@@ -22,7 +22,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
  .NET Framework fornisce le classi che consentono di usare la memorizzazione nella cache in applicazioni .NET Framework. Queste classi si trovano nel <xref:System.Runtime.Caching> dello spazio dei nomi.
 
 > [!NOTE]
->  Il <xref:System.Runtime.Caching> dello spazio dei nomi è una novità di [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Questo spazio dei nomi rende la memorizzazione nella cache è disponibile per tutte le applicazioni .NET Framework. Nelle versioni precedenti di .NET Framework, la memorizzazione nella cache è disponibile solo nel <xref:System.Web> dello spazio dei nomi e pertanto richiede una dipendenza dalle classi ASP.NET.
+>  Il <xref:System.Runtime.Caching> dello spazio dei nomi è stato introdotto in .NET Framework 4. Questo spazio dei nomi rende la memorizzazione nella cache è disponibile per tutte le applicazioni .NET Framework. Nelle versioni precedenti di .NET Framework, la memorizzazione nella cache è disponibile solo nel <xref:System.Web> dello spazio dei nomi e pertanto richiede una dipendenza dalle classi ASP.NET.
 
  Questa procedura dettagliata illustra come usare le funzionalità di memorizzazione nella cache sono disponibile in .NET Framework come parte di un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dell'applicazione. Nella procedura dettagliata, si memorizzano nella cache il contenuto di un file di testo.
 
@@ -30,7 +30,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 
 - Creazione di un progetto di applicazione WPF.
 
-- Aggiunge un riferimento al [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
+- Aggiunge un riferimento a .NET Framework 4.
 
 - Inizializzazione di una cache.
 
@@ -62,12 +62,12 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 
      Verrà visualizzata la finestra di dialogo **Nuovo progetto**.
 
-3. Sotto **modelli installati**, selezionare il linguaggio di programmazione da usare (**Visual Basic** oppure **Visual c#**).
+3. Sotto **modelli installati**, selezionare il linguaggio di programmazione da usare (**Visual Basic** oppure **Visual c#** ).
 
 4. Nel **nuovo progetto** finestra di dialogo **applicazione WPF**.
 
     > [!NOTE]
-    >  Se non viene visualizzato il **WPF Application** modello, assicurarsi che si intende utilizzare una versione di .NET Framework che supporta WPF. Nel **nuovo progetto** finestra di dialogo [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] dall'elenco.
+    >  Se non viene visualizzato il **WPF Application** modello, assicurarsi che si intende utilizzare una versione di .NET Framework che supporta WPF. Nel **nuovo progetto** della finestra di dialogo selezionare .NET Framework 4 nell'elenco.
 
 5. Nel **nome** testo casella, immettere un nome per il progetto. Ad esempio, è possibile immettere **WPFCaching**.
 
@@ -78,7 +78,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
      Viene aperta WPF **progettazione** consente di visualizzare e visualizza il file MainWindow. Xaml. Visual Studio crea il **My Project** cartella, il file Application. XAML e il file MainWindow. Xaml.
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Sviluppare per .NET Framework e aggiungere un riferimento all'assembly di memorizzazione nella cache
- Per impostazione predefinita, sono destinate le applicazioni WPF di [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Usare la <xref:System.Runtime.Caching> dello spazio dei nomi in un'applicazione WPF, l'applicazione deve avere come destinazione il [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (non il [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) e deve includere un riferimento allo spazio dei nomi.
+ Per impostazione predefinita, sono destinate le applicazioni WPF di [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Usare la <xref:System.Runtime.Caching> dello spazio dei nomi in un'applicazione WPF, l'applicazione deve avere come destinazione .NET Framework 4 (non il [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) e deve includere un riferimento allo spazio dei nomi.
 
  Pertanto, il passaggio successivo è modificare la destinazione di .NET Framework e aggiungere un riferimento al <xref:System.Runtime.Caching> dello spazio dei nomi.
 
@@ -97,7 +97,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 
      Il **impostazioni del compilatore avanzate** verrà visualizzata la finestra di dialogo.
 
-4. Nel **framework di destinazione (tutte le configurazioni)** elenco, selezionare [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Non selezionare [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
+4. Nel **framework di destinazione (tutte le configurazioni)** selezionare .NET Framework 4. (Non selezionare [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
 
 5. Fare clic su **OK**.
 
@@ -121,7 +121,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 
 2. Fare clic sulla scheda **Applicazione** .
 
-3. Nel **framework di destinazione** elenco, selezionare [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Non si seleziona **.NET Framework 4 Client Profile**.)
+3. Nel **framework di destinazione** selezionare .NET Framework 4. (Non si seleziona **.NET Framework 4 Client Profile**.)
 
 4. Aggiungere un riferimento all'assembly di memorizzazione nella cache, seguire questi passaggi:
 

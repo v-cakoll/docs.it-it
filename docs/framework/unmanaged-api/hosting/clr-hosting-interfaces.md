@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03839a2c6e52f9d2dcdd2e0941ff4fdbeb8a3a17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80404e65263aa4ad245a8c8213630a4736bd7b11
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789662"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456878"
 ---
 # <a name="clr-hosting-interfaces"></a>Interfacce di hosting CLR
 In questa sezione vengono descritte le interfacce non gestite gli host possono usare per l'integrazione common language runtime (CLR) nelle proprie applicazioni. Le informazioni si riferiscono alla versione di .NET Framework 2.0 e versioni successive. Queste interfacce consentono all'host di controllare molti altri aspetti del runtime rispetto a quanto accadeva nelle versioni 1.0 e 1.1 e forniscono più stretta integrazione tra CLR e il modello di esecuzione dell'host.  
@@ -191,4 +191,4 @@ In questa sezione vengono descritte le interfacce non gestite gli host possono u
  Contiene argomenti che descrivono le interfacce di hosting disponibili in .NET Framework versioni 1.0 e 1.1.  
   
  [Interfacce di hosting CLR aggiunte in .NET Framework 4 e 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- Contiene argomenti che descrivono le interfacce di hosting fornite nel [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
+ Contiene argomenti che descrivono le interfacce di hosting disponibili in .NET Framework 4.

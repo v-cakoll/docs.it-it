@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: df8ce418b761ce1fca7f94614f5708ecb1b3652e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ccf837bd9f0e0bb40cfb07d5eeaa1f0f80a86ca9
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615484"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456679"
 ---
 # <a name="bitmap-effects-overview"></a>Cenni preliminari sugli effetti bitmap
 Gli effetti bitmap consentono a progettisti e agli sviluppatori di applicare effetti visivi al rendering del contenuto Windows Presentation Foundation (WPF). Ad esempio, gli effetti bitmap consentono di applicare facilmente un <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> effetto o un effetto sfocatura a un'immagine o un pulsante.  
   
 > [!IMPORTANT]
->  Nel [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] o versioni successive, il <xref:System.Windows.Media.Effects.BitmapEffect> classe è obsoleta. Se si prova a usare il <xref:System.Windows.Media.Effects.BitmapEffect> (classe), si otterrà un'eccezione obsoleta. L'alternativa non obsoleta per le <xref:System.Windows.Media.Effects.BitmapEffect> classe è il <xref:System.Windows.Media.Effects.Effect> classe. Nella maggior parte dei casi, il <xref:System.Windows.Media.Effects.Effect> classe è notevolmente più veloce.  
+>  In .NET Framework 4 o versioni successive, il <xref:System.Windows.Media.Effects.BitmapEffect> classe è obsoleta. Se si prova a usare il <xref:System.Windows.Media.Effects.BitmapEffect> (classe), si otterrà un'eccezione obsoleta. L'alternativa non obsoleta per le <xref:System.Windows.Media.Effects.BitmapEffect> classe è il <xref:System.Windows.Media.Effects.Effect> classe. Nella maggior parte dei casi, il <xref:System.Windows.Media.Effects.Effect> classe è notevolmente più veloce.  
 
 <a name="wpf_effects"></a>   
 ## <a name="wpf-bitmap-effects"></a>Effetti bitmap WPF  

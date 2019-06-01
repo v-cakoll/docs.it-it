@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78b670d8b23b5ecf274432d3758d07dae34dcfcf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8733e11aba30ebea30fc71a5350f76dfd041eb4
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607166"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456411"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > elemento
 Specifica se common language runtime consente al codice gestito rilevare le violazioni di accesso e altre eccezioni stato danneggiato.  
@@ -64,10 +64,10 @@ Specifica se common language runtime consente al codice gestito rilevare le viol
   
 - Si applicano i <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> al metodo che contiene le eccezioni `catch` blocco.  
   
- Questo elemento di configurazione è disponibile solo nel [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] e versioni successive.  
+ Questo elemento di configurazione è disponibile solo in .NET Framework 4 e versioni successive.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come specificare che l'applicazione viene ripristinato il comportamento prima di [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]e rilevare tutte le eccezioni stato danneggiato.  
+ Nell'esempio seguente viene illustrato come specificare che l'applicazione deve ripristinare il comportamento prima di .NET Framework 4 e rilevare tutte le eccezioni stato danneggiato.  
   
 ```xml  
 <configuration>  

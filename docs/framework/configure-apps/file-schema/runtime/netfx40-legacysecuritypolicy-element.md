@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20a0ca8560fcd5d7f9d171df3e3b4c3f42e78641
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 848c56773c0ff2986f0bec3e82a08a3d0dd35434
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674181"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456479"
 ---
 # <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > elemento
 Specifica se il runtime usa i criteri di sicurezza per l'accesso di codice legacy.  
@@ -57,7 +57,7 @@ Specifica se il runtime usa i criteri di sicurezza per l'accesso di codice legac
 ## <a name="remarks"></a>Note  
  In .NET Framework versione 3.5 e versioni precedenti, il criterio CAS è sempre attivo. Nel [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], deve essere abilitato il criterio CAS.  
   
- Questi criteri sono specifica della versione. Criteri personalizzati di autorità di certificazione presenti nelle versioni precedenti di .NET Framework devono essere specificati nuovamente nel [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ Questi criteri sono specifica della versione. Criteri personalizzati di autorità di certificazione presenti nelle versioni precedenti di .NET Framework devono essere specificati nuovamente in .NET Framework 4.  
   
  Applicando la `<NetFx40_LegacySecurityPolicy>` elemento a un [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] assembly non influisce sul [codice SecurityTransparent](../../../../../docs/framework/misc/security-transparent-code.md); le regole di trasparenza vengono mantenuti.  
   
@@ -65,7 +65,7 @@ Specifica se il runtime usa i criteri di sicurezza per l'accesso di codice legac
 >  Applicando il `<NetFx40_LegacySecurityPolicy>` elemento può comportare riduzioni significative delle prestazioni per gli assembly di immagini native creati dal [generatore di immagini Native (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) che non sono installati nel [cache assembly globali ](../../../../../docs/framework/app-domains/gac.md). La riduzione delle prestazioni è causato dall'impossibilità di runtime di caricare gli assembly come le immagini native quando è applicato l'attributo, determinando che ne caricati gli assembly come just-in-time.  
   
 > [!NOTE]
->  Se si specifica una versione di .NET Framework di destinazione precedente al [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] nelle impostazioni del progetto per il progetto di Visual Studio, le autorità di certificazione criteri saranno abilitati, inclusi i criteri personalizzati di autorità di certificazione specificata per tale versione. Tuttavia, non sarà in grado di utilizzare i nuovi [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] tipi e membri. È anche possibile specificare una versione precedente di .NET Framework usando il [ \<supportedRuntime > elemento](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) nello schema delle impostazioni di avvio nel [file di configurazione dell'applicazione](../../../../../docs/framework/configure-apps/index.md).  
+>  Se si specifica una versione di .NET Framework di destinazione precedente a .NET Framework 4 nelle impostazioni del progetto per il progetto di Visual Studio, le autorità di certificazione criteri saranno abilitati, inclusi i criteri personalizzati di autorità di certificazione specificata per tale versione. Tuttavia, non sarà in grado di utilizzare i membri e i nuovi tipi di .NET Framework 4. È anche possibile specificare una versione precedente di .NET Framework usando il [ \<supportedRuntime > elemento](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) nello schema delle impostazioni di avvio nel [file di configurazione dell'applicazione](../../../../../docs/framework/configure-apps/index.md).  
   
 > [!NOTE]
 >  Sintassi dei file di configurazione è tra maiuscole e minuscole. È necessario usare la sintassi come specificato nelle sezioni di esempio e sintassi.  
