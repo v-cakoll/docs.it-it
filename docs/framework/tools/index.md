@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81110736651db9fe00b116c3abbbdaa8d3670bee
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920302"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456093"
 ---
 # <a name="net-framework-tools"></a>Strumenti di .NET Framework
 Gli strumenti di .NET Framework facilitano la creazione, la distribuzione e la gestione di applicazioni e componenti destinati a .NET Framework.  
@@ -63,10 +63,10 @@ La maggior parte degli strumenti di .NET Framework descritti in questa sezione v
  Accetta un file eseguibile di tipo PE contenente codice del linguaggio intermedio (IL) e crea un file di testo utilizzabile come input per l'assembler IL (Ilasm.exe).  
   
  [Installutil.exe (Strumento Programma di installazione)](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
- Consente di installare e disinstallare le risorse del server eseguendo i componenti del programma di installazione di un assembly specificato. Funziona con le classi dello spazio dei nomi <xref:System.Configuration.Install>. Consente di installare e disinstallare le risorse del server eseguendo i componenti del programma di installazione di un assembly specificato. Funziona con le classi dello spazio dei nomi <xref:System.Configuration.Install>.  
+ Consente di installare e disinstallare le risorse del server eseguendo i componenti del programma di installazione di un assembly specificato. Funziona con le classi dello spazio dei nomi <xref:System.Configuration.Install>. 
   
  [Lc.exe (Compilatore licenze)](../../../docs/framework/tools/lc-exe-license-compiler.md)  
- Legge i file di testo che contengono informazioni sulla licenza e genera un file con estensione licenses che è possibile incorporare come risorsa in un eseguibile di Common Language Runtime. Legge i file di testo che contengono informazioni sulla licenza e genera un file con estensione licenses che è possibile incorporare come risorsa in un eseguibile di Common Language Runtime.  
+ Legge i file di testo che contengono informazioni sulla licenza e genera un file con estensione licenses che è possibile incorporare come risorsa in un eseguibile di Common Language Runtime. 
   
  [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
  Consente di creare, modificare e firmare manifesti dell'applicazione e di distribuzione. Come strumento della riga di comando, Mage.exe può essere eseguito sia da script batch sia da altre applicazioni basate su Windows, incluse le applicazioni ASP.NET.  
