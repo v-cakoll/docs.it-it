@@ -1,14 +1,14 @@
 ---
 title: Modelli personalizzati per dotnet new
 description: Informazioni sui modelli personalizzati per qualsiasi tipo di file o progetto .NET.
-author: guardrex
+author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: e37fb692640c25d7a91904b0802f97ebfab75851
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 6ce53cab308ed404974e4d736e735bc82ac04fe6
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679060"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299913"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelli personalizzati per dotnet new
 
@@ -85,7 +85,7 @@ Il contenuto della cartella del progetto e il relativo file *.template.config/te
 | **\<authors>**     | string | Elenco con valori delimitati da virgola di autori di pacchetti, corrispondenti ai nomi di profili in nuget.org. Gli autori, visualizzati nella raccolta NuGet in nuget.org, vengono usati per creare riferimenti incrociati ai pacchetti dello stesso autore. |
 | **\<description>** | string | Descrizione lunga del pacchetto per la visualizzazione dell'interfaccia utente. |
 | **\<id>**          | string | L'identificatore del pacchetto senza distinzione tra maiuscole e minuscole che deve essere univoco in nuget.org o qualsiasi raccolta in cui risiederà il pacchetto. L'ID non può contenere spazi o caratteri non validi per un URL e in genere segue le regole dello spazio dei nomi .NET. Vedere [Choosing a unique package identifier and setting the version number](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) (Scelta di un identificatore univoco del pacchetto e impostazione del numero di versione) per il materiale sussidiario. |
-| **\<packageType>** | string | Inserire l'elemento all'interno di un elemento  **\<packageTypes >** tra elementi  **\<metadata >**. Impostare l'attributo `name` dell'elemento **\<packageType>** su `Template`. |
+| **\<packageType>** | string | Inserire l'elemento all'interno di un elemento  **\<packageTypes >** tra elementi  **\<metadata >** . Impostare l'attributo `name` dell'elemento **\<packageType>** su `Template`. |
 | **\<version>**     | string | La versione del pacchetto secondo il criterio major.minor.patch. I numeri di versione possono includere un suffisso di versione non definitiva, come descritto nell'argomento [Versioni non definitive](/nuget/create-packages/prerelease-packages#semantic-versioning). |
 
 Vedere il [riferimento a .nuspec](/nuget/schema/nuspec) per lo schema completo del file *nuspec*. Un file *nuspec* di esempio per un modello viene visualizzato nell'esercitazione [Creare un modello personalizzato per dotnet new](~/docs/core/tutorials/create-custom-template.md).

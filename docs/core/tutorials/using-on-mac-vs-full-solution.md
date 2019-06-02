@@ -1,15 +1,15 @@
 ---
 title: Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac
 description: Questo argomento descrive il processo di creazione di una soluzione .NET Core contenente una libreria riutilizzabile e unit test.
-author: guardrex
+author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: be0aebb1ac700de07a52c4c50383f45d1191b7f6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 44ade71a257f5c4fdcb8da9b572adf7133448fb8
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327750"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300150"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac
 
@@ -164,7 +164,7 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
 
-1. Per eseguire l'app in una finestra della console anziché nell'IDE, fare clic con il pulsante destro del mouse sul progetto `WordCounterApp`, scegliere **Opzioni** e aprire il nodo **Predefinito** in **Configurazioni**. Selezionare la casella di controllo **Esegui in console esterna**. Lasciare selezionata l'opzione **Sospendi output della console**. Con questa impostazione l'app viene generata in una finestra della console in cui è possibile digitare l'input per le istruzioni `Console.ReadLine`. Se invece si lascia che l'app venga eseguita nell'ambiente IDE, è possibile vedere solo l'output delle istruzioni `Console.WriteLine`. `Console.ReadLine` Le istruzioni Console.ReadLine non funzionano nel pannello **Output applicazione** dell'ambiente IDE.
+1. Per eseguire l'app in una finestra della console anziché nell'IDE, fare clic con il pulsante destro del mouse sul progetto `WordCounterApp`, scegliere **Opzioni** e aprire il nodo **Predefinito** in **Configurazioni**. Selezionare la casella di controllo **Esegui in console esterna**. Lasciare selezionata l'opzione **Sospendi output della console**. Con questa impostazione l'app viene generata in una finestra della console in cui è possibile digitare l'input per le istruzioni `Console.ReadLine`. Se invece si lascia che l'app venga eseguita nell'ambiente IDE, è possibile vedere solo l'output delle istruzioni `Console.WriteLine`. Le istruzioni `Console.ReadLine` non funzionano nel pannello **Output applicazione** dell'ambiente IDE.
 
    ![Finestra delle opzioni del progetto di Visual Studio per Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-project-options.png)
 

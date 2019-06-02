@@ -1,15 +1,15 @@
 ---
 title: Creare un modello personalizzato per dotnet new
 description: Informazioni su come creare un modello personalizzato per il comando dotnet new in questa gradevole esercitazione.
-author: guardrex
+author: mairaw
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3b45a24c8a249eeb99fb1a4b14918483b978980b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e47da048584ec31c275ff9c122d157f34556268a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676447"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299951"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Creare un modello personalizzato per dotnet new
 
@@ -35,7 +35,7 @@ Se si desidera utilizzare l'esempio scaricato con la distribuzione di file syste
 
 ## <a name="create-a-template-from-a-project"></a>Creare un modello da un progetto
 
-Usare un progetto esistente di cui è stata verificata la corretta compilazione ed esecuzione oppure creare un nuovo progetto di app console in una cartella nel disco rigido. In questa esercitazione si presuppone che il nome della cartella del progetto sia *GarciaSoftware.ConsoleTemplate.CSharp*, in *Documents/Templates* nel profilo utente. Il nome del modello di progetto dell'esercitazione è nel formato  *\<nome società>.\< Tipo di modello>. \<Linguaggio di programmazione>*, tuttavia è possibile attribuire al progetto e al modello il nome desiderato.
+Usare un progetto esistente di cui è stata verificata la corretta compilazione ed esecuzione oppure creare un nuovo progetto di app console in una cartella nel disco rigido. In questa esercitazione si presuppone che il nome della cartella del progetto sia *GarciaSoftware.ConsoleTemplate.CSharp*, in *Documents/Templates* nel profilo utente. Il nome del modello di progetto dell'esercitazione è nel formato  *\<nome società>.\< Tipo di modello>. \<Linguaggio di programmazione>* , tuttavia è possibile attribuire al progetto e al modello il nome desiderato.
 
 1. Aggiungere una cartella radice del progetto denominato *.template.config*.
 1. All'interno della cartella *.template.config*, creare un file di configurazione del modello *template.json*. Per altre informazioni e la definizione del membro per il file *template.json*, vedere l’argomento [Modelli personalizzati per dotnet new](../tools/custom-templates.md#templatejson) e lo schema [ *template.json* nell'archivio di Schema JSON](http://json.schemastore.org/template).
@@ -73,7 +73,7 @@ Il modello è finito. A questo punto, sono disponibili due opzioni per la distri
    | **\<authors>**     | string | Elenco con valori delimitati da virgola di autori di pacchetti, corrispondenti ai nomi di profili in nuget.org. Gli autori, visualizzati nella raccolta NuGet in nuget.org, vengono usati per creare riferimenti incrociati ai pacchetti dello stesso autore. |
    | **\<description>** | string | Descrizione lunga del pacchetto per la visualizzazione dell'interfaccia utente. |
    | **\<id>**          | string | L'identificatore del pacchetto senza distinzione tra maiuscole e minuscole che deve essere univoco in nuget.org o qualsiasi raccolta in cui risiederà il pacchetto. L'ID non può contenere spazi o caratteri non validi per un URL e in genere segue le regole dello spazio dei nomi .NET. Vedere [Choosing a unique package identifier and setting the version number](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) (Scelta di un identificatore univoco del pacchetto e impostazione del numero di versione) per il materiale sussidiario. |
-   | **\<packageType>** | string | Inserire l'elemento all'interno di un elemento  **\<packageTypes >** tra elementi  **\<metadata >**. Impostare l'attributo `name` dell'elemento **\<packageType>** su `Template`. |
+   | **\<packageType>** | string | Inserire l'elemento all'interno di un elemento  **\<packageTypes >** tra elementi  **\<metadata >** . Impostare l'attributo `name` dell'elemento **\<packageType>** su `Template`. |
    | **\<version>**     | string | La versione del pacchetto secondo il criterio major.minor.patch. I numeri di versione possono includere un suffisso di versione non definitiva, come descritto in [Versioni non definitive](/nuget/create-packages/prerelease-packages#semantic-versioning). |
 
    Vedere il [riferimento a .nuspec](/nuget/schema/nuspec) per lo schema completo del file *nuspec*.
