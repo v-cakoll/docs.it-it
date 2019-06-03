@@ -5,37 +5,38 @@
       href: statements.md
     - name: Espressioni
       href: expressions.md
-      items:
-        - name: Membri con corpo di espressione
-          href: expression-bodied-members.md
+    - name: Membri con corpo di espressione
+      href: expression-bodied-members.md
     - name: Operatori
       href: operators.md
     - name: Funzioni anonime
-      href: anonymous-functions.md
       items:
+        - name: Panoramica
+          href: anonymous-functions.md
         - name: Espressioni lambda
           href: lambda-expressions.md
-          items:
-            - name: 'Procedura: Usare espressioni lambda in una query'
-              href: how-to-use-lambda-expressions-in-a-query.md
-            - name: 'Procedura: Usare espressioni lambda all''esterno di LINQ'
-              href: how-to-use-lambda-expressions-outside-linq.md
+        - name: 'Procedura: Usare espressioni lambda in una query'
+          href: how-to-use-lambda-expressions-in-a-query.md
+        - name: 'Procedura: Usare espressioni lambda all''esterno di LINQ'
+          href: how-to-use-lambda-expressions-outside-linq.md
         - name: Metodi anonimi
           href: anonymous-methods.md
     - name: Operatori che supportano l'overload
       href: overloadable-operators.md
     - name: Operatori di conversione
-      href: conversion-operators.md
       items:
+        - name: Panoramica delle conversioni
+          href: conversion-operators.md
         - name: Uso degli operatori di conversione
           href: using-conversion-operators.md
         - name: 'Procedura: Implementare conversioni tra struct definite dall''utente'
           href: how-to-implement-user-defined-conversions-between-structs.md
     - name: espressioni con valore predefinito
       href: default-value-expressions.md
-    - name: Confronti di uguaglianza
-      href: equality-comparisons.md
+    - name: Uguaglianza e confronti di uguaglianza
       items:
+        - name: Confronti di uguaglianza
+          href: equality-comparisons.md
         - name: 'Procedura: Definire l''uguaglianza di valori per un tipo'
           href: how-to-define-value-equality-for-a-type.md
         - name: 'Procedura: Testare l''uguaglianza dei riferimenti (identità)'
