@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 1e5a8d221468f5028f7b44af1c634b4c988063a4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc2beb78cc6594a3de594b50c1c45d23b30966f6
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596281"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423481"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Classi generiche (Guida per programmatori C#)
 Le classi generiche incapsulano operazioni che non sono specifiche di un determinato tipo di dati. L'uso più comune per le classi generiche è con raccolte come elenchi collegati, tabelle hash, stack, code, alberi e così via. Le operazioni come l'aggiunta e la rimozione di elementi dalla raccolta vengono eseguite praticamente allo stesso modo, indipendentemente dal tipo dei dati archiviati.  
@@ -36,7 +36,7 @@ Le classi generiche incapsulano operazioni che non sono specifiche di un determi
   
      Se, ad esempio, si progetta una classe che verrà usata per creare elementi in una raccolta basata su generics, potrebbe essere necessario implementare un'interfaccia come <xref:System.IComparable%601>, dove `T` è il tipo della classe.  
   
- Per un esempio di una classe generica semplice, vedere [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md).  
+ Per un esempio di una classe generica semplice, vedere [Introduzione ai generics](../../../csharp/programming-guide/generics/index.md).  
   
  Le regole per i parametri di tipo e i vincoli hanno diverse implicazioni per il comportamento delle classi generiche, in particolare riguardo a ereditarietà e accessibilità dei membri. Prima di continuare, è utile comprendere alcuni termini. Per una classe generica, il codice client `Node<T>,` può fare riferimento alla classe specificando un argomento tipo, per creare un tipo costruito chiuso (`Node<int>`). In alternativa, può lasciare il parametro di tipo non specificato, ad esempio quando si specifica una classe base generica, per creare un tipo costruito aperto (`Node<T>`). Le classi generiche possono ereditare da classi concrete, classi costruite chiuse o classi base costruite aperte:  
   
