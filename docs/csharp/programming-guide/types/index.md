@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 23aae1a41a19689bd5ad4e29f19c8cff704e742c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c971a2d5d7caeb030cf504c44be8c8123decc3fc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61709687"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423413"
 ---
 # <a name="types-c-programming-guide"></a>Tipi (Guida per programmatori C#)
 
@@ -64,7 +64,7 @@ Per altre informazioni, vedere [Cast e conversioni di tipi](../../../csharp/prog
 
 ## <a name="built-in-types"></a>Tipi incorporati
 
-Il linguaggio C# offre un set standard di tipi numerici incorporati per rappresentare numeri interi, valori a virgola mobile, espressioni booleane, caratteri di testo, valori decimali e altri tipi di dati. Sono anche disponibili tipi `string` e `object` incorporati, Questi possono essere usati in qualsiasi programma C#. Per altre informazioni sui tipi incorporati, vedere le [Tabelle di riferimento per i tipi](../../../csharp/language-reference/keywords/reference-tables-for-types.md).
+Il linguaggio C# offre un set standard di tipi numerici incorporati per rappresentare numeri interi, valori a virgola mobile, espressioni booleane, caratteri di testo, valori decimali e altri tipi di dati. Sono anche disponibili tipi `string` e `object` incorporati, Questi possono essere usati in qualsiasi programma C#. Per altre informazioni sui tipi incorporati, vedere [Reference Tables for built-in Types](../../../csharp/language-reference/keywords/built-in-types-table.md) (Tabelle di riferimento per i tipi incorporati).
 
 ## <a name="custom-types"></a>Tipi personalizzati
 

@@ -1,6 +1,7 @@
 - name: Riferimenti per il linguaggio
-  href: index.md
   items:
+    - name: 'Riferimenti per il linguaggio C#'
+      href: index.md
     - name: Configurare la versione del linguaggio
       href: configure-language-version.md
     - name: 'Parole chiave di C#'

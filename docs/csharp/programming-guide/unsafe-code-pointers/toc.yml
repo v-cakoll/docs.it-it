@@ -1,13 +1,13 @@
-- name: Codice unsafe e puntatori
-  href: index.md
-  items:
-    - name: Buffer a dimensione fissa
-      href: fixed-size-buffers.md
-    - name: Tipi puntatore
-      items:
-        - name: Panoramica
-          href: pointer-types.md
-        - name: Conversioni puntatore
-          href: pointer-conversions.md
-        - name: 'Procedura: Usare i puntatori per copiare una matrice di byte'
-          href: how-to-use-pointers-to-copy-an-array-of-bytes.md
+items:
+  - name: Panoramica e restrizioni
+    href: index.md
+  - name: Buffer a dimensione fissa
+    href: fixed-size-buffers.md
+  - name: Tipi puntatore
+    items:
+      - name: Panoramica
+        href: pointer-types.md
+      - name: Conversioni puntatore
+        href: pointer-conversions.md
+      - name: 'Procedura: Usare i puntatori per copiare una matrice di byte'
+        href: how-to-use-pointers-to-copy-an-array-of-bytes.md
