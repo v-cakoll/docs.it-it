@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 3e8daf24929339e31cda81a726ec11fdcffc687a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 072af9850f792cb6d7322724f2adbc978465dc84
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029502"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421750"
 ---
 # <a name="using-directive-c-reference"></a>Direttiva using (Riferimenti per C#)
 
@@ -54,7 +54,7 @@ class Program
 }
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'ambito di una direttiva `using` è limitato al file in cui viene visualizzata.
 
@@ -102,6 +102,5 @@ Per altre informazioni, vedere [Direttive using](~/_csharplang/spec/namespaces.m
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Uso degli spazi dei nomi](../../programming-guide/namespaces/using-namespaces.md)
 - [Parole chiave di C#](index.md)
-- [Parole chiave per gli spazi dei nomi](namespace-keywords.md)
 - [Spazi dei nomi](../../programming-guide/namespaces/index.md)
 - [Istruzione using](using-statement.md)

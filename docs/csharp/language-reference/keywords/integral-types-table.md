@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: 7f8e4a9dabb3e24293ae7fcc724e8787dd6d4cf5
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: b4a3a46ba98c0c621b747284ce39e03d68a5b62d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396786"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421727"
 ---
 # <a name="integral-types-table-c-reference"></a>Tabella dei tipi integrali (Riferimenti per C#)
 
@@ -32,7 +32,7 @@ La tabella seguente elenca le dimensioni e gli intervalli dei tipi integrali, ch
 |[long](long.md)|Da -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807|Numero intero con segno a 64 bit|  
 |[ulong](ulong.md)|Da 0 a 18.446.744.073.709.551.615|Intero senza segno a 64 bit|  
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
   
 Se il valore rappresentato da un valore letterale Integer supera <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione [CS1021](../../misc/cs1021.md).
 
@@ -43,7 +43,6 @@ Usare la struttura <xref:System.Numerics.BigInteger?displayProperty=nameWithType
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
-- [Tabelle di riferimento per i tipi](reference-tables-for-types.md)
 - [Tabella dei tipi a virgola mobile](floating-point-types-table.md)
 - [Tabella dei valori predefiniti](default-values-table.md)
 - [Tabella di formattazione dei risultati numerici](formatting-numeric-results-table.md)

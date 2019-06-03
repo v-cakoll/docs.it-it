@@ -7,12 +7,12 @@ f1_keywords:
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 654e225ef98b13aeb4f689e17b1ff378e6002d28
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: c72daa58d2fceb05d9cc9c388a9d2e5dbe062796
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063922"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422435"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Riferimenti per C#)
 
@@ -77,5 +77,4 @@ L'esempio seguente inizializza una matrice `stackalloc` di interi su una mascher
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
-- [Parole chiave per gli operatori](operator-keywords.md)
 - [Codice unsafe e puntatori](../../programming-guide/unsafe-code-pointers/index.md)

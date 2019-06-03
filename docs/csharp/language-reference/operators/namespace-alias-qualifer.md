@@ -9,12 +9,12 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 5bd43bb60736bbcaf8034cc2b369c34f977319ac
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0b456ed3ce9965ef389d8ce40167afa4ac33da18
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633914"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422531"
 ---
 # <a name="-operator-c-reference"></a>Operatore :: (Riferimenti per C#)
 
@@ -48,6 +48,5 @@ Per un esempio di utilizzo dell'operatore `::`, vedere la seguente sezione:
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Operatori C#](index.md)
-- [Parole chiave per gli spazi dei nomi](../keywords/namespace-keywords.md)
 - [Operatore .](member-access-operators.md#member-access-operator-)
 - [alias extern](../keywords/extern-alias.md)

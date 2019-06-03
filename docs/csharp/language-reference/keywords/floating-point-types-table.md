@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ranges of floating-point types [C#]
 - types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
-ms.openlocfilehash: de14541be0e1247b99d6f000a69544b5f601ef8f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6dcab8e546ef12ebec5f8b57c66458172fc6f5d0
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753779"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422325"
 ---
 # <a name="floating-point-types-table-c-reference"></a>Tabella dei tipi a virgola mobile (Riferimenti per C#)
 
@@ -30,7 +30,6 @@ La tabella seguente mostra la precisione e gli intervalli approssimativi per i t
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
-- [Tabelle di riferimento per i tipi](reference-tables-for-types.md)
 - [Tabella dei tipi integrali](integral-types-table.md)
 - [Tabella dei valori predefiniti](default-values-table.md)
 - [Tabella di formattazione dei risultati numerici](formatting-numeric-results-table.md)

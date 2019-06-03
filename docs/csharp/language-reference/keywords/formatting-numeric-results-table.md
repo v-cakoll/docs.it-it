@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 12fe89e3aa63e9d3d8c3f102fe5a01a5f2225375
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0f2b5bc54a0e9055d64a95dc229eaadf66687b43
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239969"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421963"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabella di formattazione dei risultati numerici (Riferimenti per C#)
 
@@ -31,7 +31,7 @@ Nella tabella seguente vengono descritti gli identificatori di formato supportat
 |R o r|Round trip|`string s = $"{2.5:R}";`|2.5|  
 |X o x|Esadecimale|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Usare un identificatore di formato per creare una stringa di formato. La stringa di formato ha il formato seguente: `Axx`, dove
 
@@ -54,7 +54,6 @@ Per altre informazioni, vedere [Stringhe di formato numerico standard](../../../
 
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
-- [Tabelle di riferimento per i tipi](reference-tables-for-types.md)
 - [Formattazione di tipi](../../../standard/base-types/formatting-types.md)
 - [Formattazione composita](../../../standard/base-types/composite-formatting.md)
 - [Interpolazione di stringhe](../tokens/interpolated.md)
