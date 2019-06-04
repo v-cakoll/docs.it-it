@@ -2,12 +2,12 @@
 title: Dati FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4edd03a38f8f5df6cb4fb9c2446f966dfe601564
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582717"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490071"
 ---
 # <a name="filestream-data"></a>Dati FILESTREAM
 
@@ -16,7 +16,7 @@ L'attributo di archiviazione FILESTREAM è per i dati (BLOB) binari archiviati i
 > [!NOTE]
 > Per usare i dati FILESTREAM con SqlClient, è necessario installare .NET Framework 3.5 SP1 (o versione successiva).
 
-Se si specifica l'attributo FILESTREAM in una colonna varbinary(max), in SQL Server i dati vengono archiviati nel file system NTFS locale anziché nel file di database. Sebbene vengano archiviati separatamente, è possibile usare le stesse istruzioni [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] supportate per l'uso di dati varbinary(max) archiviati nel database.
+Se si specifica l'attributo FILESTREAM in una colonna varbinary(max), in SQL Server i dati vengono archiviati nel file system NTFS locale anziché nel file di database. Sebbene vengano archiviati separatamente, è possibile utilizzare le stesse istruzioni Transact-SQL supportate per l'utilizzo di dati varbinary(max) archiviati nel database.
 
 ## <a name="sqlclient-support-for-filestream"></a>Supporto di SqlClient per FILESTREAM
 
@@ -24,7 +24,7 @@ Il Provider di dati .NET Framework per SQL Server, <xref:System.Data.SqlClient>,
 
 ### <a name="creating-the-sql-server-table"></a>Creazione di una tabella SQL Server
 
-Le istruzioni [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] seguenti consentono di creare una tabella denominata employees e di inserire una riga di dati. Dopo avere abilitato l'archiviazione FILESTREAM, è possibile usare questa tabella insieme agli esempi di codice seguenti. I collegamenti alle risorse nella documentazione Online di SQL Server si trovano alla fine di questo argomento.
+Le istruzioni Transact-SQL seguenti consentono di creare una tabella denominata employees e di inserire una riga di dati. Dopo avere abilitato l'archiviazione FILESTREAM, è possibile usare questa tabella insieme agli esempi di codice seguenti. I collegamenti alle risorse nella documentazione Online di SQL Server si trovano alla fine di questo argomento.
 
 ```sql
 CREATE TABLE employees

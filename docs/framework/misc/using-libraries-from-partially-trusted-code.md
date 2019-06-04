@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8500abe590d4c85dcb5ecda54212a1ba9cc7950d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d858ef4c2f70c55b0a36e845f90d9a8e08f5e2d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586978"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487818"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Utilizzo di librerie da codice parzialmente attendibile
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  In questo argomento viene descritto il comportamento degli assembly con nome sicuro e si applica solo a [livello 1](../../../docs/framework/misc/security-transparent-code-level-1.md) assembly. [Codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md) gli assembly nel [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] o versioni successive non sono interessati dai nomi sicuri. Per altre informazioni sulle modifiche apportate al sistema di sicurezza, vedere [modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
+>  In questo argomento viene descritto il comportamento degli assembly con nome sicuro e si applica solo a [livello 1](../../../docs/framework/misc/security-transparent-code-level-1.md) assembly. [Codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md) gli assembly in .NET Framework 4 o versioni successive non sono interessati dai nomi sicuri. Per altre informazioni sulle modifiche apportate al sistema di sicurezza, vedere [modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
   
  Le applicazioni che non sono ritenute del tutto attendibili dall'host o sandbox non possono chiamare librerie gestite condivise a meno che il writer delle librerie non lo consenta in modo specifico mediante l'uso dell'attributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Di conseguenza, i writer delle applicazioni devono tenere presente che alcune librerie non saranno disponibili da un contesto parzialmente attendibile. Per impostazione predefinita, tutto il codice eseguito in una relazione di trust parziale [sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) e non è in elenco di assembly totalmente attendibili è parzialmente attendibile. Se non si prevede che il codice venga eseguito da un contesto parzialmente attendibile o venga chiamato da un codice parzialmente attendibile, non sono rilevanti le informazioni contenute in questa sezione. Se tuttavia si scrive codice che deve interagire con codice parzialmente attendibile o agire da un contesto parzialmente attendibile, si devono prendere in considerazione i seguenti fattori:  
   

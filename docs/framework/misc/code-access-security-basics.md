@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d5a5658fcb6bbba72938a16a9e5c82fd779e2e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c41becaa149b933d46a01f6ada0ea4b29b68fe8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868771"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66488028"
 ---
 # <a name="code-access-security-basics"></a>Nozioni fondamentali sulla sicurezza per l’accesso al codice
 
@@ -32,7 +32,7 @@ L'host predefinito per le applicazioni desktop consente l'esecuzione del codice 
 
 - **Librerie di classi sicure**: Una libreria di classi protetta Usa richieste di sicurezza per garantire che i relativi chiamanti dispongano dell'autorizzazione per accedere alle risorse che espone la libreria. Una libreria di classi protetta potrebbe ad esempio usare un metodo per la creazione di file mediante il quale si impone che i chiamanti dispongano di specifiche autorizzazioni per creare file. In .NET Framework sono disponibili librerie di classi protette. È necessario conoscere esattamente le autorizzazioni necessarie per l'accesso a ognuna delle librerie usate dal codice. Per altre informazioni, vedere la [uso di librerie di classi protette](#secure_library) sezione più avanti in questo argomento.
 
-- **Il codice Transparent**: A partire dal [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], oltre a identificare autorizzazioni specifiche, è necessario determinare se il codice deve essere eseguito come SecurityTransparent. Il codice SecurityTransparent non può chiamare tipi o membri identificati come SecurityCritical. Questa regola si applica sia alle applicazioni completamente attendibili che a quelle parzialmente attendibili. Per altre informazioni, vedere [codice SecurityTransparent](../../../docs/framework/misc/security-transparent-code.md).
+- **Il codice Transparent**: A partire da .NET Framework 4, oltre a identificare autorizzazioni specifiche, è inoltre necessario determinare se il codice deve essere eseguito come SecurityTransparent. Il codice SecurityTransparent non può chiamare tipi o membri identificati come SecurityCritical. Questa regola si applica sia alle applicazioni completamente attendibili che a quelle parzialmente attendibili. Per altre informazioni, vedere [codice SecurityTransparent](../../../docs/framework/misc/security-transparent-code.md).
 
 <a name="typesafe_code"></a>
 
@@ -55,7 +55,7 @@ La sicurezza per l'accesso al codice non elimina la possibilità di errori umani
 Usa la sintassi di sicurezza dichiarativa [attributi](../../../docs/standard/attributes/index.md) per inserire informazioni di sicurezza nelle [metadati](../../../docs/standard/metadata-and-self-describing-components.md) del codice. Gli attributi possono essere inseriti a livello di assembly, classe o membro, per indicare il tipo di richiesta, la domanda o l'override che si vuole usare. Le richieste vengono usate in applicazioni destinate a Common Language Runtime per informare il sistema di sicurezza runtime sulle autorizzazioni necessarie o non necessarie per l'applicazione. Le richieste e gli override vengono usati nelle librerie per proteggere le risorse dai chiamanti o per eseguire l'override del comportamento di sicurezza predefinito.
 
 > [!NOTE]
-> In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]sono state apportate importanti modifiche al modello di sicurezza e alla terminologia di .NET Framework. Per altre informazioni su queste modifiche, vedere [modifiche della sicurezza](../../../docs/framework/security/security-changes.md).
+> In .NET Framework 4, sono state apportate importanti modifiche al modello di sicurezza di .NET Framework e terminologia. Per altre informazioni su queste modifiche, vedere [modifiche della sicurezza](../../../docs/framework/security/security-changes.md).
 
 Per usare le chiamate di sicurezza dichiarativa, è necessario inizializzare i dati dello stato dell'oggetto di autorizzazione in modo che rappresenti la forma specifica di autorizzazione necessaria. Ciascuna autorizzazione incorporata dispone di un attributo a cui viene passata un'enumerazione <xref:System.Security.Permissions.SecurityAction> per descrivere il tipo di operazione di protezione che si vuole eseguire. Tuttavia, le autorizzazioni accettano anche i propri parametri esclusivi.
 

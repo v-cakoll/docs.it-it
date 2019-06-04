@@ -2,12 +2,12 @@
 title: Autenticazione in SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 94de49fe89f2b7f4aabaade624e960202f9973bf
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5809a75dbadffbd2528f6882aa586aecd3232408
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877452"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490094"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticazione in SQL Server
 In SQL Server sono supportate due modalità di autenticazione: la modalità dell'autenticazione di Windows e la modalità mista.  
@@ -46,7 +46,7 @@ In SQL Server sono supportate due modalità di autenticazione: la modalità dell
 - Applicazioni Internet, ad esempio ASP.NET.  
   
 > [!NOTE]
->  Se si specifica l'autenticazione di Windows, gli account di accesso di SQL Server non vengono disabilitati. Usare ALTER LOGIN DISABLE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] istruzione per disabilitare gli accessi di SQL Server con privilegi elevati.  
+>  Se si specifica l'autenticazione di Windows, gli account di accesso di SQL Server non vengono disabilitati. Utilizzare l'istruzione Transact-SQL ALTER LOGIN DISABLE per disabilitare gli account di accesso di SQL Server con privilegi elevati.  
   
 ## <a name="login-types"></a>Tipi di account di accesso  
  SQL Server supporta tre tipi di account di accesso:  

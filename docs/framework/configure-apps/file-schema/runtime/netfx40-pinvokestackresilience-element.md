@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60fcdd902c6acf919e68806ff65e3b8142533280
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: f7a1cf34f63b1ba0dfced8ff23c252f3363723c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456380"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489404"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > elemento
 Specifica se il runtime corregge automaticamente le dichiarazioni platform invoke non corrette in fase di esecuzione, al costo di transizioni più lente tra codice gestito e quello non gestito.  
@@ -40,7 +40,7 @@ Specifica se il runtime corregge automaticamente le dichiarazioni platform invok
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|`0`|Il runtime Usa introdotto nell'architettura di marshalling di interoperabilità più veloce il [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], che non ne rileva e Correggi dichiarazioni platform invoke errate. Questa è l'impostazione predefinita.|  
+|`0`|Il runtime Usa architettura introdotta in .NET Framework 4, che non vengono rilevati di marshalling di interoperabilità più veloci e correzione dichiarazioni platform invoke errate. Questa è l'impostazione predefinita.|  
 |`1`|Dichiarazioni di richiamo il runtime utilizza transizioni più lente che rileva e Correggi piattaforma non corretta.|  
   
 ### <a name="child-elements"></a>Elementi figlio  

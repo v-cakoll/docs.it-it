@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456644"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487979"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Migrazione e compatibilità dei criteri di sicurezza dall'accesso di codice
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-Gli aspetti relativi ai criteri di sicurezza dall'accesso di codice sono diventati obsoleti a partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Di conseguenza, potrebbero verificarsi avvisi di compilazione ed eccezioni di runtime se si chiamano i membri e tipi dei criteri obsoleti [in modo esplicito](#explicit_use) oppure [implicitamente](#implicit_use) (tramite altri tipi e membri).
+I criteri di sicurezza dall'accesso di codice (CAS) sono diventati obsoleti in .NET Framework 4. Di conseguenza, potrebbero verificarsi avvisi di compilazione ed eccezioni di runtime se si chiamano i membri e tipi dei criteri obsoleti [in modo esplicito](#explicit_use) oppure [implicitamente](#implicit_use) (tramite altri tipi e membri).
 
 È possibile evitare gli avvisi e gli errori nei modi seguenti:
 

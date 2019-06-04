@@ -2,12 +2,12 @@
 title: Valori letterali
 description: Informazioni sui tipi di valore letterali in di F# linguaggio di programmazione.
 ms.date: 02/08/2019
-ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904566"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490983"
 ---
 # <a name="literals"></a>Valori letterali
 
@@ -28,6 +28,7 @@ La tabella seguente illustra i tipi di valore letterali in F#. I caratteri che r
 |uint16|Numero naturale senza segno a 16 bit|us|`86us`|
 |int<br /><br />int32|intero con segno a 32 bit|l o nessuno|`86`<br /><br />`86l`|
 |uint<br /><br />uint32|Numero naturale senza segno a 32 bit|u o ul|`86u`<br /><br />`86ul`|
+|nativeint|puntatore nativo in un numero naturale con segno|n|`123n`|
 |unativeint|puntatore nativo come numero naturale senza segno|Annulla la|`0x00002D3Fun`|
 |int64|intero con segno a 64 bit|L|`86L`|
 |uint64|Numero naturale senza segno a 64 bit|UL|`86UL`|

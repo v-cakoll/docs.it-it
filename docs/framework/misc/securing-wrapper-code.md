@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4adfa5d592514c9a91c93095e7199f4b425b712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: abbc817142ab6906a04b4dc053693f87109922dc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596642"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487904"
 ---
 # <a name="securing-wrapper-code"></a>Protezione del codice wrapper
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -76,7 +76,7 @@ ms.locfileid: "64596642"
 - [LinkDemand](../../../docs/framework/misc/link-demands.md) avviene in fase di compilazione just-in-time (JIT) e controlla solo il chiamante immediato. Questo controllo di sicurezza non verifica il chiamante del chiamante. Una volta passato questo controllo, non ne vengono eseguiti altri, indipendentemente dal numero di chiamate effettuate dal chiamante. Tuttavia, non esiste nemmeno alcuna protezione contro gli attacchi luring. Con **LinkDemand**, qualsiasi codice che supera il test e può fare riferimento al codice può provocare problemi di sicurezza, consentendo a codice dannoso di chiamare usando il codice autorizzato. Pertanto, non usare **LinkDemand** a meno che non possono evitare completamente tutti i possibili punti di debolezza.  
   
     > [!NOTE]
-    >  Nel [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], le richieste di collegamento sono state sostituite dal <xref:System.Security.SecurityCriticalAttribute> attributo <xref:System.Security.SecurityRuleSet.Level2> assembly. Il <xref:System.Security.SecurityCriticalAttribute> equivale a una richiesta di collegamento per l'attendibilità totale; tuttavia, influisce anche sulla regole di ereditarietà. Per altre informazioni su questa modifica, vedere [codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+    >  In .NET Framework 4, le richieste di collegamento sono state sostituite dal <xref:System.Security.SecurityCriticalAttribute> attributo <xref:System.Security.SecurityRuleSet.Level2> assembly. Il <xref:System.Security.SecurityCriticalAttribute> equivale a una richiesta di collegamento per l'attendibilità totale; tuttavia, influisce anche sulla regole di ereditarietà. Per altre informazioni su questa modifica, vedere [codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
   
  Le precauzioni aggiuntive necessarie quando si usa **LinkDemand** devono essere programmate singolarmente; il sistema di sicurezza può offrire un'ulteriore tutela. Ogni errore crea un punto di debolezza per la sicurezza. Tutto il codice autorizzato che usa il codice dell'utente deve essere responsabile dell'implementazione di altre misure di sicurezza tramite l'esecuzione delle operazioni seguenti:  
   

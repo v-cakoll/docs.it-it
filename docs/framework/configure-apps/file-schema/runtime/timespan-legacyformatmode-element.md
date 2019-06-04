@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38adde3cd51a96f0e15ed5a0c539e088f2d3b480
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31e2a075f9202439cd62c81a06528b20c4971656
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701632"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489340"
 ---
 # <a name="timespanlegacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > elemento
 Determina se il runtime deve mantenere il comportamento legacy in operazioni di formattazione con <xref:System.TimeSpan?displayProperty=nameWithType> valori.  
@@ -58,7 +58,7 @@ Determina se il runtime deve mantenere il comportamento legacy in operazioni di 
 |`runtime`|Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.|  
   
 ## <a name="remarks"></a>Note  
- Inizia con la [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], il <xref:System.TimeSpan?displayProperty=nameWithType> struttura implementa il <xref:System.IFormattable> interfaccia e supporta operazioni di formattazione con stringhe di formato standard e personalizzate. Se un metodo di analisi viene rilevato un identificatore di formato non supportato o una stringa di formato, viene generata una <xref:System.FormatException>.  
+ A partire da .NET Framework 4, il <xref:System.TimeSpan?displayProperty=nameWithType> struttura implementa il <xref:System.IFormattable> interfaccia e supporta operazioni di formattazione con stringhe di formato standard e personalizzate. Se un metodo di analisi viene rilevato un identificatore di formato non supportato o una stringa di formato, viene generata una <xref:System.FormatException>.  
   
  Nelle versioni precedenti di .NET Framework, il <xref:System.TimeSpan> struttura non ha implementato <xref:System.IFormattable> e non supporta le stringhe di formato. Tuttavia, molti sviluppatori ritengono erroneamente che <xref:System.TimeSpan> supportava un set di stringhe di formato e usato nella [operazioni di formattazione composita](../../../../../docs/standard/base-types/composite-formatting.md) con i metodi come <xref:System.String.Format%2A?displayProperty=nameWithType>. In genere, se un tipo implementa <xref:System.IFormattable> e supporta le stringhe, le chiamate ai metodi di formattazione con formato non supportato in genere generano stringhe di formato un <xref:System.FormatException>. Tuttavia, poiché <xref:System.TimeSpan> non ha implementato <xref:System.IFormattable>, il runtime ignorata la stringa di formato e invece chiamato il <xref:System.TimeSpan.ToString?displayProperty=nameWithType> (metodo). Ciò significa che, anche se le stringhe di formato non aveva alcun effetto sull'operazione di formattazione, la loro presenza non ha restituito un <xref:System.FormatException>.  
   
@@ -76,13 +76,13 @@ Determina se il runtime deve mantenere il comportamento legacy in operazioni di 
 12:30:45  
 ```  
   
- È notevolmente differente dall'output dell'esempio eseguito in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o versioni successive:  
+ È notevolmente differente dall'output se si esegue l'esempio di .NET Framework 4 o versione successiva:  
   
 ```  
 Invalid Format  
 ```  
   
- Tuttavia, se si aggiunge il file di configurazione seguente alla directory dell'esempio e, successivamente, si esegue l'esempio in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o versioni successive, l'output è identico a quello prodotto dall'esempio quando viene eseguito in [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ Tuttavia, se si aggiunge il file di configurazione seguente alla directory di esempio e quindi eseguirla l'esempio di .NET Framework 4 o versione successiva, l'output è identico a quello prodotto dall'esempio quando viene eseguito [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
   
 ```xml  
 <?xml version ="1.0"?>  
