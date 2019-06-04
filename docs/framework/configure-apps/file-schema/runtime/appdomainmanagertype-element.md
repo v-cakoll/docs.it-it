@@ -7,61 +7,61 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aa13d26ac11ed624caa4c9704325f2d604418bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19cd74f0e2550ec91cb56e70cf34a03bd84fc60e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705051"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487746"
 ---
-# <a name="appdomainmanagertype-element"></a><span data-ttu-id="013cf-102">\<appDomainManagerType > elemento</span><span class="sxs-lookup"><span data-stu-id="013cf-102">\<appDomainManagerType> Element</span></span>
-<span data-ttu-id="013cf-103">Specifica il tipo che funge da gestore di dominio dell'applicazione per il dominio applicazione predefinito.</span><span class="sxs-lookup"><span data-stu-id="013cf-103">Specifies the type that serves as the application domain manager for the default application domain.</span></span>  
+# <a name="appdomainmanagertype-element"></a><span data-ttu-id="e1c49-102">\<appDomainManagerType > elemento</span><span class="sxs-lookup"><span data-stu-id="e1c49-102">\<appDomainManagerType> Element</span></span>
+<span data-ttu-id="e1c49-103">Specifica il tipo che funge da gestore di dominio dell'applicazione per il dominio applicazione predefinito.</span><span class="sxs-lookup"><span data-stu-id="e1c49-103">Specifies the type that serves as the application domain manager for the default application domain.</span></span>  
   
- <span data-ttu-id="013cf-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="013cf-104">\<configuration></span></span>  
-<span data-ttu-id="013cf-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="013cf-105">\<runtime></span></span>  
-<span data-ttu-id="013cf-106">\<appDomainManagerType></span><span class="sxs-lookup"><span data-stu-id="013cf-106">\<appDomainManagerType></span></span>  
+ <span data-ttu-id="e1c49-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e1c49-104">\<configuration></span></span>  
+<span data-ttu-id="e1c49-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="e1c49-105">\<runtime></span></span>  
+<span data-ttu-id="e1c49-106">\<appDomainManagerType></span><span class="sxs-lookup"><span data-stu-id="e1c49-106">\<appDomainManagerType></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="013cf-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="013cf-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e1c49-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e1c49-107">Syntax</span></span>  
   
 ```xml  
 <appDomainManagerAssembly   
    value="type name" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="013cf-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="013cf-108">Attributes and Elements</span></span>  
- <span data-ttu-id="013cf-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="013cf-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e1c49-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="e1c49-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="e1c49-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="e1c49-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="013cf-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="013cf-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e1c49-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="e1c49-110">Attributes</span></span>  
   
-|<span data-ttu-id="013cf-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="013cf-111">Attribute</span></span>|<span data-ttu-id="013cf-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="013cf-112">Description</span></span>|  
+|<span data-ttu-id="e1c49-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="e1c49-111">Attribute</span></span>|<span data-ttu-id="e1c49-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e1c49-112">Description</span></span>|  
 |---------------|-----------------|  
-|`value`|<span data-ttu-id="013cf-113">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="013cf-113">Required attribute.</span></span> <span data-ttu-id="013cf-114">Specifica il nome del tipo, incluso lo spazio dei nomi, che funge da gestore di dominio di applicazione per il dominio applicazione predefinito nel processo.</span><span class="sxs-lookup"><span data-stu-id="013cf-114">Specifies the name of the type, including the namespace, that serves as the application domain manager for the default application domain in the process.</span></span>|  
+|`value`|<span data-ttu-id="e1c49-113">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="e1c49-113">Required attribute.</span></span> <span data-ttu-id="e1c49-114">Specifica il nome del tipo, incluso lo spazio dei nomi, che funge da gestore di dominio di applicazione per il dominio applicazione predefinito nel processo.</span><span class="sxs-lookup"><span data-stu-id="e1c49-114">Specifies the name of the type, including the namespace, that serves as the application domain manager for the default application domain in the process.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="013cf-115">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="013cf-115">Child Elements</span></span>  
- <span data-ttu-id="013cf-116">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="013cf-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e1c49-115">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="e1c49-115">Child Elements</span></span>  
+ <span data-ttu-id="e1c49-116">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="e1c49-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="013cf-117">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="013cf-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e1c49-117">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="e1c49-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="013cf-118">Elemento</span><span class="sxs-lookup"><span data-stu-id="013cf-118">Element</span></span>|<span data-ttu-id="013cf-119">Descrizione</span><span class="sxs-lookup"><span data-stu-id="013cf-119">Description</span></span>|  
+|<span data-ttu-id="e1c49-118">Elemento</span><span class="sxs-lookup"><span data-stu-id="e1c49-118">Element</span></span>|<span data-ttu-id="e1c49-119">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e1c49-119">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="013cf-120">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="013cf-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="013cf-121">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="013cf-121">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="e1c49-120">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e1c49-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="e1c49-121">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="e1c49-121">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="013cf-122">Note</span><span class="sxs-lookup"><span data-stu-id="013cf-122">Remarks</span></span>  
- <span data-ttu-id="013cf-123">Per specificare il tipo del gestore di dominio dell'applicazione, è necessario specificare sia questo elemento e il [ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="013cf-123">To specify the type of the application domain manager, you must specify both this element and the [\<appDomainManagerAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md) element.</span></span> <span data-ttu-id="013cf-124">Se uno di questi elementi non è specificato, l'altra viene ignorata.</span><span class="sxs-lookup"><span data-stu-id="013cf-124">If either of these elements is not specified, the other is ignored.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e1c49-122">Note</span><span class="sxs-lookup"><span data-stu-id="e1c49-122">Remarks</span></span>  
+ <span data-ttu-id="e1c49-123">Per specificare il tipo del gestore di dominio dell'applicazione, è necessario specificare sia questo elemento e il [ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="e1c49-123">To specify the type of the application domain manager, you must specify both this element and the [\<appDomainManagerAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md) element.</span></span> <span data-ttu-id="e1c49-124">Se uno di questi elementi non è specificato, l'altra viene ignorata.</span><span class="sxs-lookup"><span data-stu-id="e1c49-124">If either of these elements is not specified, the other is ignored.</span></span>  
   
- <span data-ttu-id="013cf-125">Quando viene caricato il dominio applicazione predefinito, <xref:System.TypeLoadException> viene generata un'eccezione se il tipo specificato non esiste nell'assembly specificato dal [ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md) elemento; e il processo ha esito negativo a avviare.</span><span class="sxs-lookup"><span data-stu-id="013cf-125">When the default application domain is loaded, <xref:System.TypeLoadException> is thrown if the specified type does not exist in the assembly that is specified by the [\<appDomainManagerAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md) element; and the process fails to start.</span></span>  
+ <span data-ttu-id="e1c49-125">Quando viene caricato il dominio applicazione predefinito, <xref:System.TypeLoadException> viene generata un'eccezione se il tipo specificato non esiste nell'assembly specificato dal [ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md) elemento; e il processo ha esito negativo a avviare.</span><span class="sxs-lookup"><span data-stu-id="e1c49-125">When the default application domain is loaded, <xref:System.TypeLoadException> is thrown if the specified type does not exist in the assembly that is specified by the [\<appDomainManagerAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md) element; and the process fails to start.</span></span>  
   
- <span data-ttu-id="013cf-126">Quando si specifica il tipo di gestore di dominio dell'applicazione per il dominio applicazione predefinito, gli altri domini applicazione creati dal dominio applicazione predefinito ereditano il tipo di gestione del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="013cf-126">When you specify the application domain manager type for the default application domain, other application domains created from the default application domain inherit the application domain manager type.</span></span> <span data-ttu-id="013cf-127">Usare la <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> e <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> le proprietà per specificare un tipo di gestione dominio applicazione diverso per un nuovo dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="013cf-127">Use the <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> and <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> properties to specify a different application domain manager type for a new application domain.</span></span>  
+ <span data-ttu-id="e1c49-126">Quando si specifica il tipo di gestore di dominio dell'applicazione per il dominio applicazione predefinito, gli altri domini applicazione creati dal dominio applicazione predefinito ereditano il tipo di gestione del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="e1c49-126">When you specify the application domain manager type for the default application domain, other application domains created from the default application domain inherit the application domain manager type.</span></span> <span data-ttu-id="e1c49-127">Usare la <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> e <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> le proprietà per specificare un tipo di gestione dominio applicazione diverso per un nuovo dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="e1c49-127">Use the <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> and <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> properties to specify a different application domain manager type for a new application domain.</span></span>  
   
- <span data-ttu-id="013cf-128">Specifica il tipo di gestione del dominio dell'applicazione richiede che l'applicazione disponga di attendibilità.</span><span class="sxs-lookup"><span data-stu-id="013cf-128">Specifying the application domain manager type requires the application to have full trust.</span></span> <span data-ttu-id="013cf-129">(Ad esempio, un'applicazione in esecuzione sul desktop sia totalmente attendibile.) Se l'applicazione non ha attendibilità totale, una <xref:System.TypeLoadException> viene generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="013cf-129">(For example, an application running on the desktop has full trust.) If the application does not have full trust, a <xref:System.TypeLoadException> is thrown.</span></span>  
+ <span data-ttu-id="e1c49-128">Specifica il tipo di gestione del dominio dell'applicazione richiede che l'applicazione disponga di attendibilità.</span><span class="sxs-lookup"><span data-stu-id="e1c49-128">Specifying the application domain manager type requires the application to have full trust.</span></span> <span data-ttu-id="e1c49-129">(Ad esempio, un'applicazione in esecuzione sul desktop sia totalmente attendibile.) Se l'applicazione non ha attendibilità totale, una <xref:System.TypeLoadException> viene generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="e1c49-129">(For example, an application running on the desktop has full trust.) If the application does not have full trust, a <xref:System.TypeLoadException> is thrown.</span></span>  
   
- <span data-ttu-id="013cf-130">Il formato del tipo e spazio dei nomi è lo stesso formato utilizzato per il <xref:System.Type.FullName%2A?displayProperty=nameWithType> proprietà.</span><span class="sxs-lookup"><span data-stu-id="013cf-130">The format of the type and namespace is the same format that is used for the <xref:System.Type.FullName%2A?displayProperty=nameWithType> property.</span></span>  
+ <span data-ttu-id="e1c49-130">Il formato del tipo e spazio dei nomi è lo stesso formato utilizzato per il <xref:System.Type.FullName%2A?displayProperty=nameWithType> proprietà.</span><span class="sxs-lookup"><span data-stu-id="e1c49-130">The format of the type and namespace is the same format that is used for the <xref:System.Type.FullName%2A?displayProperty=nameWithType> property.</span></span>  
   
- <span data-ttu-id="013cf-131">Questo elemento di configurazione è disponibile solo nel [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] e versioni successive.</span><span class="sxs-lookup"><span data-stu-id="013cf-131">This configuration element is available only in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] and later.</span></span>  
+ <span data-ttu-id="e1c49-131">Questo elemento di configurazione è disponibile solo in .NET Framework 4 e versioni successive.</span><span class="sxs-lookup"><span data-stu-id="e1c49-131">This configuration element is available only in the .NET Framework 4 and later.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="013cf-132">Esempio</span><span class="sxs-lookup"><span data-stu-id="013cf-132">Example</span></span>  
- <span data-ttu-id="013cf-133">Nell'esempio seguente viene illustrato come specificare che il gestore del dominio dell'applicazione per il dominio applicazione predefinito di un processo è il `MyMgr` digitare il `AdMgrExample` assembly.</span><span class="sxs-lookup"><span data-stu-id="013cf-133">The following example shows how to specify that the application domain manager for the default application domain of a process is the `MyMgr` type in the `AdMgrExample` assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="e1c49-132">Esempio</span><span class="sxs-lookup"><span data-stu-id="e1c49-132">Example</span></span>  
+ <span data-ttu-id="e1c49-133">Nell'esempio seguente viene illustrato come specificare che il gestore del dominio dell'applicazione per il dominio applicazione predefinito di un processo è il `MyMgr` digitare il `AdMgrExample` assembly.</span><span class="sxs-lookup"><span data-stu-id="e1c49-133">The following example shows how to specify that the application domain manager for the default application domain of a process is the `MyMgr` type in the `AdMgrExample` assembly.</span></span>  
   
 ```xml  
 <configuration>  
@@ -73,11 +73,11 @@ ms.locfileid: "61705051"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="013cf-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="013cf-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e1c49-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e1c49-134">See also</span></span>
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="013cf-135">\<appDomainManagerAssembly> Element</span><span class="sxs-lookup"><span data-stu-id="013cf-135">\<appDomainManagerAssembly> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)
-- [<span data-ttu-id="013cf-136">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="013cf-136">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="013cf-137">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="013cf-137">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="013cf-138">Metodo SetAppDomainManagerType</span><span class="sxs-lookup"><span data-stu-id="013cf-138">SetAppDomainManagerType Method</span></span>](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)
+- [<span data-ttu-id="e1c49-135">\<appDomainManagerAssembly> Element</span><span class="sxs-lookup"><span data-stu-id="e1c49-135">\<appDomainManagerAssembly> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)
+- [<span data-ttu-id="e1c49-136">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="e1c49-136">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="e1c49-137">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="e1c49-137">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="e1c49-138">Metodo SetAppDomainManagerType</span><span class="sxs-lookup"><span data-stu-id="e1c49-138">SetAppDomainManagerType Method</span></span>](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)
