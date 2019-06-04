@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cc26f9721e911e05c5b5d4092be21a4e1191c84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab9feaa1c46a45471395fd4c6158490a24882a65
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704752"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489373"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > elemento
 Specifica che un'applicazione può fare riferimento allo stesso assembly in due implementazioni diverse di .NET Framework, disabilitando il comportamento predefinito che tratta gli assembly come equivalenti per scopi di portabilità dell'applicazione.  
@@ -57,7 +57,7 @@ Specifica che un'applicazione può fare riferimento allo stesso assembly in due 
 |`assemblyBinding`|Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.|  
   
 ## <a name="remarks"></a>Note  
- A partire dal [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], il supporto viene fornito automaticamente per le applicazioni che è possono usare uno dei due implementazioni di .NET Framework, ad esempio l'implementazione di .NET Framework o .NET Framework per l'implementazione di Silverlight. Le due implementazioni di un particolare assembly di .NET Framework sono considerate equivalenti dal binder di assembly. In alcuni scenari, questa funzionalità di portabilità dell'applicazione può causare problemi. In questi scenari il `<supportPortability>` elemento può essere usato per disabilitare la funzionalità.  
+ A partire da .NET Framework 4, il supporto viene fornito automaticamente per le applicazioni che è possono usare uno dei due implementazioni di .NET Framework, ad esempio l'implementazione di .NET Framework o .NET Framework per l'implementazione di Silverlight. Le due implementazioni di un particolare assembly di .NET Framework sono considerate equivalenti dal binder di assembly. In alcuni scenari, questa funzionalità di portabilità dell'applicazione può causare problemi. In questi scenari il `<supportPortability>` elemento può essere usato per disabilitare la funzionalità.  
   
  Uno scenario di questo tipo è un assembly che deve fare riferimento sia l'implementazione di .NET Framework e .NET Framework per l'implementazione di Silverlight di un particolare assembly di riferimento. Ad esempio, una finestra di progettazione XAML scritta in Windows Presentation Foundation (WPF) potrebbe essere necessario fare riferimento a entrambi l'implementazione Desktop WPF, per interfaccia utente della finestra di progettazione e il subset di WPF è incluso nell'implementazione di Silverlight. Per impostazione predefinita, i riferimenti separati provocano un errore del compilatore, poiché l'associazione di assembly considera uguali i due assembly. Questo elemento consente di disattivare il comportamento predefinito e consente la compilazione abbia esito positivo.  
   

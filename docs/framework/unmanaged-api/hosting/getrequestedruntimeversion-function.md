@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ee737f4c6d34e77996f5ba08ce4d84132a99238
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbc77195c3fe2581475d768b59993de274ac06a6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985660"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490325"
 ---
 # <a name="getrequestedruntimeversion-function"></a>Funzione GetRequestedRuntimeVersion
 Ottiene il numero di versione di common language runtime (CLR) richiesto dall'applicazione specificata. Se non viene installata la versione, ottiene la versione più recente installata prima della versione richiesta.  
   
- Questa funzione è stata deprecata nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Questa funzione è stata deprecata in .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintassi  
   

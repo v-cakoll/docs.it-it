@@ -2,12 +2,12 @@
 title: Agilità di crittografia nella sicurezza WCF
 ms.date: 03/30/2017
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
-ms.openlocfilehash: 0a4171d6e753be9fbdd6974850fc6757ff585ae0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b8e3b6dc62baf31901520d7f5edac0529e937016
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637843"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490946"
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>Agilità di crittografia nella sicurezza WCF
 
@@ -27,7 +27,7 @@ Si tratta di un client WCF che accede al servizio al termine dell'autenticazione
 
 2. Per compilare la soluzione, premere CTRL+MAIUSC+B.
 
-3. Aprire [!INCLUDE[fileExplorer](~/includes/fileexplorer-md.md)] e passare alla directory \WCF\Basic\Security\CryptoAgility\Service\bin ed eseguire il file service.exe con privilegi di amministratore facendo clic service.exe e selezionando **Esegui come amministratore**.
+3. Aprire Esplora File e passare alla directory \WCF\Basic\Security\CryptoAgility\Service\bin ed eseguire il file service.exe con privilegi di amministratore facendo clic service.exe e selezionando **Esegui come amministratore**.
 
 4. Passare alla directory \WCF\Basic\Security\CryptoAgility\Client\bin ed eseguire il file client.exe.
 

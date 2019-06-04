@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: c5e1c1ad838440419024a2abb44f86f6bce01061
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 03f7e17983e56cc2d2136b38b3402ce689f719ee
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457034"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491066"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>Tipi migrati da WPF a System.Xaml
-Nelle [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] e [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)], entrambi [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] e Windows Workflow Foundation è inclusa un'implementazione del linguaggio XAML. Molti dei tipi pubblici che fornivano l'estensibilità per l'implementazione XAML di WPF erano inclusi negli assembly WindowsBase, PresentationCore e PresentationFramework. Analogamente, i tipi pubblici che fornivano l'estensibilità per Windows Workflow Foundation XAML erano inclusi nell'assembly ComponentModel. In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]è stata eseguita la migrazione di alcuni tipi correlati a XAML nell'assembly System.Xaml. Un'implementazione di .NET Framework comune dei servizi di linguaggio XAML consente molti scenari di estensibilità XAML che sono stati originariamente definiti dall'implementazione XAML di un framework specifico, ma fanno ora parte di supporto generale per il linguaggio XAML di .NET Framework 4. In questo argomento sono elencati i tipi di cui è stata eseguita la migrazione e vengono illustrati i problemi correlati alla migrazione.  
+In .NET Framework 3.5 e [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)], entrambi [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] e Windows Workflow Foundation è inclusa un'implementazione del linguaggio XAML. Molti dei tipi pubblici che fornivano l'estensibilità per l'implementazione XAML di WPF erano inclusi negli assembly WindowsBase, PresentationCore e PresentationFramework. Analogamente, i tipi pubblici che fornivano l'estensibilità per Windows Workflow Foundation XAML erano inclusi nell'assembly ComponentModel. In .NET Framework 4, alcuni dei tipi correlati a XAML viene eseguita la migrazione all'assembly System. Xaml. Un'implementazione di .NET Framework comune dei servizi di linguaggio XAML consente molti scenari di estensibilità XAML che sono stati originariamente definiti dall'implementazione XAML di un framework specifico, ma fanno ora parte di supporto generale per il linguaggio XAML di .NET Framework 4. In questo argomento sono elencati i tipi di cui è stata eseguita la migrazione e vengono illustrati i problemi correlati alla migrazione.  
   
 <a name="assemblies_and_namespaces"></a>   
 ## <a name="assemblies-and-namespaces"></a>Assembly e spazi dei nomi  

@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d059a5d4df402b309f628bf3e9393114c4cdeec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 441cae712e7338b36e8983f41341b1721770a0bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723199"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489704"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Eventi ETW in Common Language Runtime
 Common Language Runtime (CLR) fornisce utili informazioni di diagnostica ETW (Event Tracing for Windows) tramite svariati eventi di debug e profilatura. Gli eventi ETW di CLR sfruttano il sistema di traccia Windows ETW per migliorare il supporto esistente per la profilatura e il debug offerto da Common Language Runtime.  
   
  Per altre informazioni su ETW, vedere l'articolo [Improve Debugging and Performance Tuning with ETW](https://go.microsoft.com/fwlink/?LinkID=161142) (Migliorare il debug e l'ottimizzazione delle prestazioni con ETW) su MSDN. Per informazioni su Xperf, vedere la voce [Windows Performance Toolkit - Xperf](https://go.microsoft.com/fwlink/?LinkID=161144) (Xperf di Windows Performance Toolkit) nel blog NTDebugging.  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] o versioni successive è richiesto per tutti gli eventi descritti in questi argomenti. Il sistema operativo Windows Vista è il client minimo supportato e Windows Server 2008 è il server minimo supportato.  
+ .NET Framework 4 o versione successivo è obbligatorio per tutti gli eventi descritti negli argomenti di evento. Il sistema operativo Windows Vista è il client minimo supportato e Windows Server 2008 è il server minimo supportato.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Controllo della registrazione di .NET Framework](../../../docs/framework/performance/controlling-logging.md)  

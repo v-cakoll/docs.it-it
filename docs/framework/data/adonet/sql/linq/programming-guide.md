@@ -2,12 +2,12 @@
 title: Guida per programmatori
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 32e62899c13be3f2f08bef7e882d5b9c4d11fda2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 102d2ecba162e19258b707c1c902c29b0a7f2f02
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794459"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490040"
 ---
 # <a name="programming-guide"></a>Guida per programmatori
 Questa sezione fornisce informazioni sulla creazione e sull'uso del modello a oggetti di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Se si usa Visual Studio, è anche possibile usare il [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per eseguire molte di queste stesse attività.  
@@ -40,7 +40,7 @@ Questa sezione fornisce informazioni sulla creazione e sull'uso del modello a og
  [stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
  Sono inclusi collegamenti ad argomenti che illustrano come usare stored procedure.  
   
- [Introduzione a LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)  
+ [Introduzione a LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)  
  Fornisce le risorse che facilitano l'apprendimento per altre informazioni su LINQ a SQL tramite C#.
 
  [Introduzione a LINQ (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 848c56773c0ff2986f0bec3e82a08a3d0dd35434
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 868c5f0742fa4dc963539fd70414752092156c64
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456479"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489426"
 ---
 # <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > elemento
 Specifica se il runtime usa i criteri di sicurezza per l'accesso di codice legacy.  
@@ -55,11 +55,11 @@ Specifica se il runtime usa i criteri di sicurezza per l'accesso di codice legac
 |`runtime`|Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.|  
   
 ## <a name="remarks"></a>Note  
- In .NET Framework versione 3.5 e versioni precedenti, il criterio CAS è sempre attivo. Nel [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], deve essere abilitato il criterio CAS.  
+ In .NET Framework versione 3.5 e versioni precedenti, il criterio CAS è sempre attivo. In .NET Framework 4, è necessario abilitare il criterio CAS.  
   
  Questi criteri sono specifica della versione. Criteri personalizzati di autorità di certificazione presenti nelle versioni precedenti di .NET Framework devono essere specificati nuovamente in .NET Framework 4.  
   
- Applicando la `<NetFx40_LegacySecurityPolicy>` elemento a un [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] assembly non influisce sul [codice SecurityTransparent](../../../../../docs/framework/misc/security-transparent-code.md); le regole di trasparenza vengono mantenuti.  
+ Applicando la `<NetFx40_LegacySecurityPolicy>` elemento a un assembly .NET Framework 4 non influisce sul [codice SecurityTransparent](../../../../../docs/framework/misc/security-transparent-code.md); le regole di trasparenza vengono mantenuti.  
   
 > [!IMPORTANT]
 >  Applicando il `<NetFx40_LegacySecurityPolicy>` elemento può comportare riduzioni significative delle prestazioni per gli assembly di immagini native creati dal [generatore di immagini Native (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) che non sono installati nel [cache assembly globali ](../../../../../docs/framework/app-domains/gac.md). La riduzione delle prestazioni è causato dall'impossibilità di runtime di caricare gli assembly come le immagini native quando è applicato l'attributo, determinando che ne caricati gli assembly come just-in-time.  

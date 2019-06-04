@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98940c075a01de2ebe061b6dff53917247fc5193
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780445"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489918"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 Determina se un oggetto `String` di caratteri specifico corrisponde a un criterio specificato.  
@@ -49,7 +49,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 > [!NOTE]
 >  La clausola ESCAPE e l'operatore LIKE [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non possono essere applicati ai valori `System.DateTime` o `System.Guid`.  
   
- LIKE supporta i criteri di ricerca ASCII e Unicode. Quando tutti i parametri sono caratteri ASCII, viene eseguita una ricerca ASCII. Se uno o più argomenti sono di tipo Unicode, tutti gli argomenti vengono convertiti in Unicode e viene eseguita una ricerca Unicode. Quando si usa il formato Unicode con LIKE, gli spazi finali sono significativi, a differenza del formato non Unicode, in cui gli spazi finali non sono significativi. La sintassi della stringa di modello [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è uguale a quello di [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
+ LIKE supporta i criteri di ricerca ASCII e Unicode. Quando tutti i parametri sono caratteri ASCII, viene eseguita una ricerca ASCII. Se uno o più argomenti sono di tipo Unicode, tutti gli argomenti vengono convertiti in Unicode e viene eseguita una ricerca Unicode. Quando si usa il formato Unicode con LIKE, gli spazi finali sono significativi, a differenza del formato non Unicode, in cui gli spazi finali non sono significativi. La sintassi della stringa di modello [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è analoga a quella di Transact-SQL.  
   
  Un criterio può includere caratteri normali e caratteri jolly. Durante la ricerca i caratteri normali devono corrispondere esattamente ai caratteri specificati nell'oggetto `string` di caratteri. I caratteri jolly possono tuttavia corrispondere a frammenti arbitrari della stringa di caratteri. Quando viene usato con i caratteri jolly, l'operatore LIKE è più flessibile rispetto agli operatori di confronto tra stringhe = e !=.  
   

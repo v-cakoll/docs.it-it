@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: c99e44c7d373d050113687753d4f18eca27e0de5
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 61b141642fa3745c3abcf8d0234f70373fa5485e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457403"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491115"
 ---
 # <a name="xaml-services"></a>Servizi XAML
 In questo argomento descrive le funzionalità di un set di tecnologie noto come .NET Framework XAML Services. La maggior parte dei servizi e le API descritte si trovano nell'assembly System. XAML, che è un assembly introdotto con il set di .NET Framework 4 degli assembly di .NET core. I servizi includono lettori e writer, le classi dello schema e supporto dello schema, factory, assegnazione di attributi di classi di supporto intrinseco del linguaggio XAML e altre funzionalità del linguaggio XAML.  
@@ -38,7 +38,7 @@ In questo argomento descrive le funzionalità di un set di tecnologie noto come 
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>Servizi XAML di .NET framework e System. XAML dell'architettura .NET  
  Nelle versioni precedenti di Microsoft .NET Framework, il supporto per le funzionalità del linguaggio XAML è stato implementato da Framework basati su Microsoft .NET Framework ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation e Windows Communication Foundation (WCF)) e pertanto diversi a seconda del framework specifico si usava il relativo comportamento e l'API usata. Inclusi il XAML parser e il relativo oggetto grafico meccanismo di creazione, intrinseci del linguaggio XAML, il supporto della serializzazione e così via.  
   
- In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], dei servizi XAML di .NET Framework e l'assembly System. XAML definire gran parte delle informazioni necessarie per supportare le funzionalità del linguaggio XAML. Ciò include le classi di base per i lettori XAML e writer XAML. La caratteristica più importante aggiunta a servizi XAML .NET Framework che non era presente in una qualsiasi delle implementazioni specifiche del framework XAML è una rappresentazione di sistema di tipo per XAML. La rappresentazione del sistema tipo presenta XAML in una modalità orientata agli oggetti che si concentra sulle funzionalità di XAML senza le dipendenze sulle funzionalità specifiche del Framework.  
+ In .NET Framework 4, dei servizi XAML di .NET Framework e l'assembly System. XAML definire gran parte delle informazioni necessarie per supportare le funzionalità del linguaggio XAML. Ciò include le classi di base per i lettori XAML e writer XAML. La caratteristica più importante aggiunta a servizi XAML .NET Framework che non era presente in una qualsiasi delle implementazioni specifiche del framework XAML è una rappresentazione di sistema di tipo per XAML. La rappresentazione del sistema tipo presenta XAML in una modalità orientata agli oggetti che si concentra sulle funzionalità di XAML senza le dipendenze sulle funzionalità specifiche del Framework.  
   
  Il sistema di tipi XAML non è limitato dal modulo di markup o in fase di esecuzione specifiche dell'origine XAML; né è limitata da qualsiasi sistema di tipi di supporto specifici. Il sistema di tipi XAML include le rappresentazioni di oggetti per i tipi, membri, contesti dello schema XAML, i concetti a livello di XML e altri concetti del linguaggio XAML o oggetti intrinseci XAML. Utilizzo o l'estensione del sistema di tipi XAML consente di derivare dalle classi, ad esempio lettori XAML e writer XAML ed estendere le funzionalità delle rappresentazioni XAML in specifiche funzionalità abilitate da un framework, una tecnologia o un'applicazione che utilizza o genera XAML. Il concetto di un contesto dello schema XAML consente le operazioni di scrittura grafo di oggetto pratico dalla combinazione di un'implementazione del writer di oggetti XAML, sistema di tipi di supporto di una tecnologia comunicato tramite informazioni sull'assembly nel contesto e il nodo XAML origine. Per altre informazioni sul concetto dello schema XAML. visualizzare [contesto dello Schema XAML predefinito e contesto dello Schema XAML WPF](default-xaml-schema-context-and-wpf-xaml-schema-context.md).  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc3f9c9c61afd4c231846adffc4b304a01d59281
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: dd3501bc74da2c9a812f9c4816b5a081b3780cd0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457260"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490025"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Contatori delle prestazioni e applicazioni affiancate in-process
 Con Performance Monitor (Perfmon.exe) è possibile distinguere i contatori delle prestazioni in base al runtime. Questo argomento descrive la modifica del Registro di sistema necessaria per abilitare questa funzionalità.  
@@ -27,7 +27,7 @@ Con Performance Monitor (Perfmon.exe) è possibile distinguere i contatori delle
   
 - Quando viene eseguito il monitoraggio di due applicazioni con lo stesso nome. Ad esempio, se entrambe le applicazioni sono denominate app.exe, una verrà visualizzata come **app** e l'altra come **app#1** nella colonna **Istanza**. In questo caso, è difficile associare un contatore delle prestazioni a un'applicazione specifica. Non è chiaro se i dati raccolti per **app #1** fanno riferimento alla prima o alla seconda app.exe.  
   
-- Quando un'applicazione usa più istanze di Common Language Runtime. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] supporta scenari di hosting side-by-side, ovvero un singolo processo o una singola applicazione può caricare più istanze di Common Language Runtime. Se una singola applicazione denominata app.exe carica due istanze di runtime, per impostazione predefinita verranno designate come **app** e **app#1** nella colonna **Istanza**. In questo caso, non è chiaro se **app** e **app#1** fanno riferimento a due applicazioni con lo stesso nome o alla stessa applicazione con due runtime. Se più applicazioni con lo stesso nome caricano più runtime, l'ambiguità è ancora maggiore.  
+- Quando un'applicazione usa più istanze di Common Language Runtime. .NET Framework 4 supporta scenari di hosting side-by-side in-process. vale a dire, un singolo processo o un'applicazione può caricare più istanze di common language runtime. Se una singola applicazione denominata app.exe carica due istanze di runtime, per impostazione predefinita verranno designate come **app** e **app#1** nella colonna **Istanza**. In questo caso, non è chiaro se **app** e **app#1** fanno riferimento a due applicazioni con lo stesso nome o alla stessa applicazione con due runtime. Se più applicazioni con lo stesso nome caricano più runtime, l'ambiguità è ancora maggiore.  
   
  È possibile impostare una chiave del Registro di sistema per evitare questa ambiguità. Per le applicazioni sviluppate con .NET Framework 4, questa modifica del Registro di sistema aggiunge un identificatore di processo seguito da un identificatore di istanza di runtime per il nome dell'applicazione nel **istanza** colonna. Anziché come *applicazione* o *applicazione*#1, l'applicazione è ora identificata come *applicazione*_`p`*IDprocesso*\_`r`*IDruntime* nella colonna **Istanza**. Se un'applicazione è stata sviluppata utilizzando una versione precedente di common language runtime, questa istanza viene rappresentata come *application\_* `p`*processID* purché il. NET Framework 4 è installato.  
   

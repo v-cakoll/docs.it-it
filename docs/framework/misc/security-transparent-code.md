@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456508"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487842"
 ---
 # <a name="security-transparent-code"></a>Codice SecurityTransparent
 
@@ -23,7 +23,7 @@ ms.locfileid: "66456508"
 La sicurezza implica tre meccanismi che interagiscono tra loro: il sandboxing, le autorizzazioni e l'imposizione. Per sandboxing si intende la pratica basata sulla creazione di domini isolati in cui parte del codice viene trattata come codice completamente attendibile, mentre altro codice viene limitato con le autorizzazioni della concessione per il sandbox. Il codice dell'applicazione che viene eseguito all'interno della concessione del sandbox è considerato Transparent, ovvero non può eseguire operazioni che possono influire sulla sicurezza. La concessione impostata per il sandbox è determinata da un'evidenza (classe <xref:System.Security.Policy.Evidence>). L'evidenza identifica le autorizzazioni specifiche richieste dai sandbox e quali tipi di sandbox è possibile creare. L'imposizione consiste nel consentire l'esecuzione di codice Transparent solo all'interno della relativa concessione.
 
 > [!IMPORTANT]
-> I criteri di sicurezza erano un elemento fondamentale nelle versioni precedenti di .NET Framework. A partire dal [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], criteri di sicurezza sono obsoleto. L'eliminazione dei criteri di sicurezza non corrisponde alla trasparenza della sicurezza. Per informazioni sugli effetti di questa modifica, vedere [migrazione e compatibilità dei criteri di sicurezza dall'accesso di codice](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
+> I criteri di sicurezza erano un elemento fondamentale nelle versioni precedenti di .NET Framework. A partire da .NET Framework 4, i criteri di sicurezza sono obsoleto. L'eliminazione dei criteri di sicurezza non corrisponde alla trasparenza della sicurezza. Per informazioni sugli effetti di questa modifica, vedere [migrazione e compatibilità dei criteri di sicurezza dall'accesso di codice](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
 
 In questo argomento viene descritto il modello di trasparenza in maggiore dettaglio. Include le sezioni seguenti:
 
@@ -70,7 +70,7 @@ La differenza principale tra i due livelli di trasparenza è che il livello 1 no
 
 ### <a name="level-2-transparency"></a>Trasparenza di livello 2
 
-La trasparenza di livello 2 è stata introdotta in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. I tre concetti principali di questo modello sono il codice Transparent, il codice SecuritySafeCritical e il codice SecurityCritical.
+Trasparenza di livello 2 è stato introdotto in .NET Framework 4. I tre concetti principali di questo modello sono il codice Transparent, il codice SecuritySafeCritical e il codice SecurityCritical.
 
 - Il codice Transparent, indipendentemente dalla autorizzazioni di cui dispone e anche nel caso dell'attendibilità totale, può chiamare solo altro codice Transparent o codice SecuritySafeCritical. Se il codice è parzialmente attendibile, può eseguire solo azioni consentite dal set di autorizzazioni del dominio. Il codice Transparent non può eseguire le operazioni seguenti:
 

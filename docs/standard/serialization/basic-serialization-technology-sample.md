@@ -2,12 +2,12 @@
 title: Esempio di tecnologia di serializzazione di base
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 860a33adcb2109ac26045b37631ede37fe1be362
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 803f45db008dc6d12566868ba4a8c61642687d89
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602472"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486395"
 ---
 # <a name="basic-serialization-technology-sample"></a>Esempio di tecnologia di serializzazione di base
 [Scaricare l'esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -24,7 +24,7 @@ ms.locfileid: "64602472"
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Per compilare l'esempio utilizzando Visual Studio  
   
-1. Aprire [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)], quindi spostarsi in una delle sottodirectory specifiche del linguaggio relative all'esempio.  
+1. Aprire Esplora File e passare a una delle sottodirectory specifiche del linguaggio per il codice di esempio.  
   
 2. Fare doppio clic sull'icona relativa a SerializationCS.sln, SerializationJSL.sln o SerializationVB.sln, a seconda del linguaggio di programmazione che si desidera utilizzare, per aprire il file in Visual Studio.  
   

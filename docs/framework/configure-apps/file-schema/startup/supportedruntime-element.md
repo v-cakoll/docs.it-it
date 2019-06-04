@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: c6bf4c6b262bc9066277a683d5eda67ada6f4d08
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 90bdd5b8c5fdebe2c5d7ec580975dc63144b2401
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456221"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489307"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > elemento
 
@@ -34,7 +34,7 @@ Specifica quale versione di common language runtime e, facoltativamente, la vers
 
 |Attributo|Descrizione|
 |---------------|-----------------|
-|**version**|Attributo facoltativo.<br /><br /> Valore stringa mediante il quale viene specificata la versione di Common Language Runtime (CLR) supportata da questa applicazione. Per i valori validi del `version` dell'attributo, vedere la [i valori di "runtime version"](#version) sezione. **Nota:**  Tramite .NET Framework 3.5, il "*versione runtime*" valore assume la forma *principali*. *minori*. *Compilare*. A partire da [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], sono necessari solo i numeri delle versioni principale e secondaria (vale a dire, "v4.0" anziché "v4.0.30319"). È consigliabile la stringa più corta.|
+|**version**|Attributo facoltativo.<br /><br /> Valore stringa mediante il quale viene specificata la versione di Common Language Runtime (CLR) supportata da questa applicazione. Per i valori validi del `version` dell'attributo, vedere la [i valori di "runtime version"](#version) sezione. **Nota:**  Tramite .NET Framework 3.5, il "*versione runtime*" valore assume la forma *principali*. *minori*. *Compilare*. A partire da .NET Framework 4, solo i numeri di versione principale e secondaria sono necessari (vale a dire, "v4.0" anziché "v4.0.30319"). È consigliabile la stringa più corta.|
 |**sku**|Attributo facoltativo.<br /><br /> Valore stringa che specifica il codice di riferimento del prodotto (SKU), che a sua volta specifica la versione di .NET Framework supportata dall'applicazione.<br /><br /> A partire da .NET Framework 4.0, si consiglia l'uso dell'attributo `sku`.  Quando è presente, indica la versione di .NET Framework di destinazione dell'app.<br /><br /> Per i valori validi dell'attributo sku, vedere la [i valori di "sku id"](#sku) sezione.|
 
 ## <a name="remarks"></a>Note

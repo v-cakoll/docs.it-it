@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 5165f3ec1ef41e3fb0dd053c112610183197108a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dca5830a73d0f4374302862e7ccdffdf9dc48cb2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877442"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490112"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Pool di connessioni SQL Server (ADO.NET)
 Generalmente, la connessione a un server database comporta passaggi che richiedono molto tempo. È necessario, infatti, stabilire un canale fisico, ad esempio un socket oppure una named pipe. Deve verificarsi l'handshake iniziale con il server, deve essere analizzata l'informazione sulla stringa di connessione, la connessione deve essere autenticata dal server, sono necessarie verifiche per l'inserimento in un elenco nella transazione corrente e così via.  
@@ -99,7 +99,7 @@ Per altre informazioni su eventi associati all'apertura e chiusura delle conness
 ### <a name="pool-fragmentation-due-to-many-databases"></a>Frammentazione di pool dovuta a numerosi database  
  Molti provider di servizi Internet ospitano numerosi siti Web su un unico server. Possono usare un unico database per confermare un accesso basato su form e aprire una connessione a un database specifico di un utente o di un gruppo di utenti. La connessione al database di autenticazione viene eseguita in pool e può essere usata da tutti. Tuttavia è presente un pool di connessioni separato per ogni database, aumentando il numero di connessioni al server.  
   
- Anche questo è un effetto collaterale della progettazione dell'applicazione. È relativamente semplice evitare questo effetto collaterale senza compromettere la sicurezza quando ci si connette a SQL Server. Invece di connettersi a un solo database per ogni utente o gruppo, è sufficiente connettersi allo stesso database sul server e successivamente eseguire l'istruzione USE [!INCLUDE[tsql](../../../../includes/tsql-md.md)] per passare al database desiderato. Nel frammento di codice seguente viene illustrata la creazione di una connessione iniziale al database `master` e il passaggio al database specificato nella variabile di tipo stringa `databaseName`.  
+ Anche questo è un effetto collaterale della progettazione dell'applicazione. È relativamente semplice evitare questo effetto collaterale senza compromettere la sicurezza quando ci si connette a SQL Server. Invece di connettersi a un solo database per ogni utente o gruppo, è sufficiente connettersi allo stesso database sul server e successivamente eseguire l'istruzione USE Transact-SQL per passare al database desiderato. Nel frammento di codice seguente viene illustrata la creazione di una connessione iniziale al database `master` e il passaggio al database specificato nella variabile di tipo stringa `databaseName`.  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  

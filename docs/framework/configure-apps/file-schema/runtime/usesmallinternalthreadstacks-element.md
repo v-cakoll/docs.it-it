@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f098065cc005c59ec558ffa1f95202715624e7d
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 70113d98c5a4ab41700f6c9842dba89e2b49c297
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456109"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489324"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > elemento
 Le richieste che common language runtime (CLR) ridurre la memoria usano specificando le dimensioni dello stack esplicite quando crea determinati thread usati internamente, invece di usare le dimensioni predefinite dello stack per tali thread.  
@@ -41,7 +41,7 @@ Le richieste che common language runtime (CLR) ridurre la memoria usano specific
 |Valore|Descrizione|  
 |-----------|-----------------|  
 |true|Le dimensioni dello stack esplicita della richiesta.|  
-|False|Usare le dimensioni predefinite dello stack. Questo è il valore predefinito per il [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|False|Usare le dimensioni predefinite dello stack. Questo è il valore predefinito di .NET Framework 4.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  

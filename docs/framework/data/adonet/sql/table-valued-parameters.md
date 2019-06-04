@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: ccef487eb27a5a170d197a6bc670ec4d2bcf8bdf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a7a39677bbd975ac384357481ef419f57b96d977
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645790"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489814"
 ---
 # <a name="table-valued-parameters"></a>Parametri valutati a livello di tabella
-I parametri valutati a livello di tabella consentono di eseguire facilmente il marshaling di più righe di dati di un'applicazione client in SQL Server senza richiedere più round trip o logica speciale lato server per l'elaborazione dei dati. È possibile usare i parametri con valori di tabella per incapsulare le righe di dati in un'applicazione client e inviare i dati al server in un singolo comando con parametri. Le righe di dati in arrivo vengono archiviate in una variabile di tabella che può quindi essere usata tramite [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
+I parametri valutati a livello di tabella consentono di eseguire facilmente il marshaling di più righe di dati di un'applicazione client in SQL Server senza richiedere più round trip o logica speciale lato server per l'elaborazione dei dati. È possibile usare i parametri con valori di tabella per incapsulare le righe di dati in un'applicazione client e inviare i dati al server in un singolo comando con parametri. Le righe di dati in arrivo vengono archiviate in una variabile di tabella che può quindi essere utilizzata tramite Transact-SQL.  
   
- I valori di colonna nei parametri con valori di tabella sono accessibili tramite istruzioni SELECT [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] standard. I parametri con valori di tabella sono fortemente tipizzati e la loro struttura viene convalidata automaticamente. La dimensione dei parametri valutati a livello di tabella è limitata solo dalla memoria del server.  
+ I valori di colonna nei parametri valutati a livello di tabella sono accessibili tramite istruzioni Transact-SQL SELECT standard. I parametri con valori di tabella sono fortemente tipizzati e la loro struttura viene convalidata automaticamente. La dimensione dei parametri valutati a livello di tabella è limitata solo dalla memoria del server.  
   
 > [!NOTE]
 >  Non è possibile restituire dati in un parametro valutato a livello di tabella. I parametri valutati a livello di tabella sono di solo input. La parola chiave OUTPUT non è supportata.  
@@ -39,7 +39,7 @@ I parametri valutati a livello di tabella consentono di eseguire facilmente il m
 - Usare l'utilità `bcp` o l'oggetto <xref:System.Data.SqlClient.SqlBulkCopy> per caricare numerose righe di dati in una tabella. Sebbene questa tecnica sia molto efficace, non supporta l'elaborazione sul lato server, a meno che i dati non vengano caricati in una tabella temporanea o in una variabile di tabella.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Creazione di tipi di parametri con valori di tabella  
- I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite istruzioni CREATE TYPE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Per poter utilizzare i parametri con valori di tabella nelle applicazioni client, è prima necessario creare un tipo di tabella e definire la struttura in SQL Server. Per altre informazioni sulla creazione di tipi di tabella, vedere [tipi di tabella definiti dall'utente](https://go.microsoft.com/fwlink/?LinkID=98364) nella documentazione Online di SQL Server.  
+ I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite istruzioni CREATE TYPE Transact-SQL. Per poter utilizzare i parametri con valori di tabella nelle applicazioni client, è prima necessario creare un tipo di tabella e definire la struttura in SQL Server. Per altre informazioni sulla creazione di tipi di tabella, vedere [tipi di tabella definiti dall'utente](https://go.microsoft.com/fwlink/?LinkID=98364) nella documentazione Online di SQL Server.  
   
  L'istruzione seguente consente di creare un tipo di tabella denominato CategoryTableType, costituito dalle colonne CategoryID e CategoryName:  
   
@@ -48,7 +48,7 @@ CREATE TYPE dbo.CategoryTableType AS TABLE
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
- Dopo aver creato un tipo di tabella, è possibile dichiarare i parametri con valori di tabella basati su tale tipo. Nel frammento [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] seguente viene illustrato come dichiarare un parametro con valori di tabella in una definizione di stored procedure. Si noti che, per dichiarare un parametro con valori di tabella, è necessaria la parola chiave READONLY.  
+ Dopo aver creato un tipo di tabella, è possibile dichiarare i parametri con valori di tabella basati su tale tipo. Nel frammento Transact-SQL seguente viene illustrato come dichiarare un parametro con valori di tabella in una definizione di stored procedure. Si noti che, per dichiarare un parametro con valori di tabella, è necessaria la parola chiave READONLY.  
   
 ```  
 CREATE PROCEDURE usp_UpdateCategories   
@@ -58,7 +58,7 @@ CREATE PROCEDURE usp_UpdateCategories
 ## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>Modifica di dati con i parametri con valori di tabella (Transact-SQL)  
  I parametri con valori di tabella possono essere usati nelle modifiche dei dati basate su set che riguardano più righe eseguendo un'unica istruzione. È ad esempio possibile selezionare tutte le righe in un parametro con valori di tabella e inserirle in una tabella di database oppure creare un'istruzione di aggiornamento tramite l'unione in join di un parametro con valori di tabella con la tabella che si desidera aggiornare.  
   
- L'istruzione UPDATE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] seguente illustra come usare un parametro con valori di tabella tramite la sua unione in join con la tabella Categories. Quando si usa un parametro con valori di tabella con un JOIN in una clausola FROM, è anche necessario usare un alias per il parametro, come illustrato di seguito, dove per il parametro con valori di tabella viene usato l'alias "ec":  
+ L'istruzione UPDATE Transact-SQL seguente illustra come utilizzare un parametro con valori di tabella tramite la sua unione in join con la tabella Categories. Quando si usa un parametro con valori di tabella con un JOIN in una clausola FROM, è anche necessario usare un alias per il parametro, come illustrato di seguito, dove per il parametro con valori di tabella viene usato l'alias "ec":  
   
 ```  
 UPDATE dbo.Categories  
@@ -67,7 +67,7 @@ UPDATE dbo.Categories
     ON dbo.Categories.CategoryID = ec.CategoryID;  
 ```  
   
- In questo esempio [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] viene illustrato come selezionare le righe da un parametro con valori di tabella per eseguire un'istruzione INSERT in una singola operazione basata su set.  
+ In questo esempio Transact-SQL viene illustrato come selezionare le righe da un parametro con valori di tabella per eseguire un'istruzione INSERT in una singola operazione basata su set.  
   
 ```  
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
@@ -81,7 +81,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
 - I parametri con valori di tabella possono essere indicizzati solo per supportare vincoli UNIQUE o PRIMARY KEY. In SQL Server non vengono gestite statistiche relative ai parametri con valori di tabella.  
   
-- I parametri con valori di tabella sono di sola lettura nel codice [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Non è possibile aggiornare i valori delle colonne nelle righe di un parametro con valori di tabella e non è possibile inserire o eliminare righe. Per modificare i dati passati a una stored procedure o a un'istruzione con parametri in un parametro con valori di tabella, è necessario inserire i dati in una tabella temporanea o in una variabile di tabella.  
+- I parametri con valori di tabella sono di sola lettura nel codice Transact-SQL. Non è possibile aggiornare i valori delle colonne nelle righe di un parametro con valori di tabella e non è possibile inserire o eliminare righe. Per modificare i dati passati a una stored procedure o a un'istruzione con parametri in un parametro con valori di tabella, è necessario inserire i dati in una tabella temporanea o in una variabile di tabella.  
   
 - Non è possibile usare istruzioni ALTER TABLE per modificare la struttura dei parametri con valori di tabella.  
   

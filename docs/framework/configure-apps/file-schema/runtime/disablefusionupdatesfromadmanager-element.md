@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27c8c1cac68aca1c40826ff549d62d9636d9b0c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c96d5aea150c0dbb55889e9fc26417e7803a155
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704908"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487669"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager > elemento
 Specifica se è disabilitato il comportamento predefinito, ovvero consentire all'host di runtime di eseguire l'override delle impostazioni di configurazione per un dominio applicazione.  
@@ -40,7 +40,7 @@ Specifica se è disabilitato il comportamento predefinito, ovvero consentire all
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|0|Non disabilitare la possibilità di eseguire l'override delle impostazioni Fusion. Si tratta del comportamento predefinito, a partire dal [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|0|Non disabilitare la possibilità di eseguire l'override delle impostazioni Fusion. Si tratta del comportamento predefinito, a partire da .NET Framework 4.|  
 |1|Disabilitare la possibilità di eseguire l'override delle impostazioni Fusion. Viene ripristinato il comportamento delle versioni precedenti di .NET Framework.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
@@ -54,7 +54,7 @@ Specifica se è disabilitato il comportamento predefinito, ovvero consentire all
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- Inizia con il [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], è il comportamento predefinito per consentire la <xref:System.AppDomainManager> oggetto eseguire l'override delle impostazioni di configurazione tramite il <xref:System.AppDomainSetup.ConfigurationFile%2A> proprietà o il <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metodo del <xref:System.AppDomainSetup> oggetto che viene passato all'implementazione del <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> metodo, in una sottoclasse di <xref:System.AppDomainManager>. Per il dominio applicazione predefinito, le impostazioni modificate si sostituiscono le impostazioni specificate per il file di configurazione dell'applicazione. Per altri domini applicazione, queste sostituiscono le impostazioni di configurazione che sono state passate per il <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> o <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> (metodo).  
+ A partire da .NET Framework 4, il comportamento predefinito è per consentire la <xref:System.AppDomainManager> oggetto eseguire l'override delle impostazioni di configurazione tramite il <xref:System.AppDomainSetup.ConfigurationFile%2A> proprietà o il <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metodo del <xref:System.AppDomainSetup> oggetto che viene passato all'implementazione del <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> metodo, in una sottoclasse di <xref:System.AppDomainManager>. Per il dominio applicazione predefinito, le impostazioni modificate si sostituiscono le impostazioni specificate per il file di configurazione dell'applicazione. Per altri domini applicazione, queste sostituiscono le impostazioni di configurazione che sono state passate per il <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> o <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> (metodo).  
   
  È possibile passare nuove informazioni di configurazione, o passa un valore null (`Nothing` in Visual Basic) per eliminare le informazioni di configurazione che è state passate.  
   

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b523c5819994e6da0332188311b4b631e3f9072
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb0944829d9f33277fdf53ad78cc37878336434f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000584"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486959"
 ---
 # <a name="icorprofilerinfo3-interface"></a>Interfaccia ICorProfilerInfo3
-Fornisce metodi che i Code Profiler possono usare per comunicare con Common Language Runtime (CLR) allo scopo di controllare il monitoraggio di eventi e richiedere informazioni. Il `ICorProfilerInfo3` interfaccia è un'estensione del [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) interfaccia. Fornisce nuovi metodi supportati in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] e versioni successive.  
+Fornisce metodi che i Code Profiler possono usare per comunicare con Common Language Runtime (CLR) allo scopo di controllare il monitoraggio di eventi e richiedere informazioni. Il `ICorProfilerInfo3` interfaccia è un'estensione del [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) interfaccia. Fornisce nuovi metodi supportati in .NET Framework 4 e versioni successive.  
   
 ## <a name="methods"></a>Metodi  
   

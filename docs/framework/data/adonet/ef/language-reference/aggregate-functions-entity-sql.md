@@ -2,19 +2,19 @@
 title: Funzioni di aggregazione (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: 423c7e843f54e48d4f05f26f3f4071bff1795c69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b01c7dca675e79c61b87bcc1fb30455286db3118
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631748"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489972"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Funzioni di aggregazione (Entity SQL)
 Un'aggregazione è un construct di linguaggio che condensa una raccolta in un scalare come parte di un'operazione di gruppo. Le aggregazioni [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sono disponibili in due formati:  
   
 - [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funzioni di raccolta possono essere usate ovunque in un'espressione. È incluso l'utilizzo di funzioni di aggregazione nelle proiezioni e di predicati che agiscono sulle raccolte. Le funzioni di raccolta sono la modalità preferibile di specificare aggregazioni in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
-- Aggregazioni di gruppo in espressioni di query che dispongono di una clausola GROUP BY. Come in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], le aggregazioni di gruppo accettano DISTINCT e ALL come modificatori all'input di aggregazione.  
+- Aggregazioni di gruppo in espressioni di query che dispongono di una clausola GROUP BY. Come in Transact-SQL, le aggregazioni di gruppo accettano DISTINCT e ALL come modificatori all'input di aggregazione.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta innanzitutto di interpretare un'espressione come funzione di raccolta e se l'espressione è nel contesto di un'espressione SELECT, interpreta come aggregazione di gruppo.  
   

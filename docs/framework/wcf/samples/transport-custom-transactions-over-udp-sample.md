@@ -2,12 +2,12 @@
 title: "Trasporto: Transazioni personalizzate nell'esempio UDP"
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: ff53890da73d81165da6b0e845360424ec869a87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a7b0c4e9ea73fa952710f2b415082b56062dad0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637119"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483097"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Trasporto: Transazioni personalizzate nell'esempio UDP
 Questo esempio è basato sul [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio in Windows Communication Foundation (WCF)[estensibilità del trasporto](../../../../docs/framework/wcf/samples/transport-extensibility.md). Estende l'esempio Trasporto di UDP per supportare flussi di transazioni personalizzate e illustra l'utilizzo della proprietà <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
@@ -178,7 +178,7 @@ if (transaction != null)
   
 1. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2. L'esempio corrente deve essere eseguito in modo simile al [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio. Per eseguirlo, avviare il servizio con UdpTestService.exe. Se si sta eseguendo [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], sarà necessario avviare il servizio con privilegi elevati. A tale scopo, fare doppio clic su nella UdpTestService.exe [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] e fare clic su **Esegui come amministratore**.  
+2. L'esempio corrente deve essere eseguito in modo simile al [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio. Per eseguirlo, avviare il servizio con UdpTestService.exe. Se si sta eseguendo [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], sarà necessario avviare il servizio con privilegi elevati. A tale scopo, fare doppio clic UdpTestService.exe in Esplora File e fare clic su **Esegui come amministratore**.  
   
 3. Si otterrà l'output seguente:  
   

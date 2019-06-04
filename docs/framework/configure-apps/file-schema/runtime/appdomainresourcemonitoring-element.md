@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71cc69eba17de8465cc7999f334c724e4ec14e7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad0ae023215eeb1f42f9351369ee77d41d537b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704999"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487736"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > elemento
 Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel processo per la durata del processo.  
@@ -59,7 +59,7 @@ Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel 
   
  Per abilitare il monitoraggio dal codice gestito, usare il <xref:System.AppDomain.MonitoringIsEnabled%2A> proprietà.  
   
- Questo elemento di configurazione è disponibile solo nel [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] e versioni successive.  
+ Questo elemento di configurazione è disponibile solo in .NET Framework 4 e versioni successive.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come abilitare Monitoraggio risorse del dominio applicazione.  

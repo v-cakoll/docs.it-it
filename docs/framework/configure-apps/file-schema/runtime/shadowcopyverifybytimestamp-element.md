@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1815da141beb3dd1022fe1a74f872aa70b4ded43
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 4187d266d82783ebb72073c1da92faff95352884
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456350"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489384"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>Elemento \<shadowCopyVerifyByTimestamp>
-Specifica se la copia shadow usa il comportamento di avvio predefinito introdotto in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o ripristina il comportamento di avvio delle versioni precedenti di .NET Framework.  
+Specifica se la copia shadow Usa il comportamento di avvio predefinito introdotto in .NET Framework 4 o Ripristina il comportamento di avvio delle versioni precedenti di .NET Framework.  
   
  \<configurazione > elemento  
 \<runtime > elemento  

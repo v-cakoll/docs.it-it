@@ -20,17 +20,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b95625cfe17b36c0244e6780a08dcf50ce50763d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a28b33f80299ae6fce34f9de66b6f7f1bc70ef6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985816"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490562"
 ---
 # <a name="corexitprocess-function"></a>Funzione CorExitProcess
 Arresta il processo non gestito corrente.  
   
- Questa funzione è stata deprecata nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Usare la [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) metodo invece.  
+ Questa funzione è stata deprecata in .NET Framework 4. Usare la [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) metodo invece.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +47,7 @@ void STDMETHODCALLTYPE CorExitProcess (
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Inizia con la [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], `CorExitProcess` chiude ogni runtime avviato il processo, non solo il runtime a cui sono state associate le API legacy.  
+>  A partire da .NET Framework 4, `CorExitProcess` chiude ogni runtime avviato il processo, non solo il runtime a cui sono state associate le API legacy.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

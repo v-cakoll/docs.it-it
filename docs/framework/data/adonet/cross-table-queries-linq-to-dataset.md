@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
-ms.openlocfilehash: e22df1148fab9148c1ca46f27e8603f55f71b34b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e974f643fd1515b701d2e81048725b88055b57dc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607774"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489565"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>Query su tabella incrociata (LINQ to DataSet)
 Oltre alle query su singola tabella, è possibile eseguire query tra tabelle in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Questa operazione viene eseguita usando un *join*. Per join si intende l'associazione degli oggetti di un'origine dati con oggetti di un'altra origine dati che condividono un attributo comune, ad esempio un ID prodotto o contatto. Nella programmazione orientata a oggetti, lo spostamento nelle relazioni tra oggetti è relativamente semplice, perché ogni oggetto include un membro che fa riferimento a un altro oggetto. Nelle tabelle di database esterne, tuttavia, lo spostamento nelle relazioni non è un processo così semplice. Le tabelle di database non contengono relazioni predefinite. In questi casi, l'operazione join può essere utilizzata per far corrispondere gli elementi di ogni origine. Ad esempio, date due tabelle contenenti informazioni sui prodotti e sulle vendite, è possibile usare un'operazione join per creare una corrispondenza tra le informazioni sulle vendite e i prodotti relativi allo stesso ordine di vendita.  
   
- Nel framework [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] sono disponibili due operatori join, <xref:System.Linq.Enumerable.Join%2A> e <xref:System.Linq.Enumerable.GroupJoin%2A>. Questi operatori eseguono *equijoin*:, ovvero join che associano due origini solo quando le relative chiavi sono uguali. Al contrario, in [!INCLUDE[tsql](../../../../includes/tsql-md.md)] sono supportati operatori di join diversi da `equals`, ad esempio l'operatore `less than`.  
+ Nel framework [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] sono disponibili due operatori join, <xref:System.Linq.Enumerable.Join%2A> e <xref:System.Linq.Enumerable.GroupJoin%2A>. Questi operatori eseguono *equijoin*:, ovvero join che associano due origini solo quando le relative chiavi sono uguali. (Al contrario, Transact-SQL supporta operatori join diversi da `equals`, ad esempio il `less than` operator.)  
   
  In termini di database relazionale, il metodo <xref:System.Linq.Enumerable.Join%2A> implementa un inner join. Un inner join è un tipo di join in cui vengono restituiti solo gli oggetti che dispongono di una corrispondenza nel set di dati opposto.  
   

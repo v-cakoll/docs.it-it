@@ -2,12 +2,12 @@
 title: Problemi noti in SqlClient per Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 0a6fec7e2d129523e5f68955e51ac50154cb58df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631721"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489542"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemi noti in SqlClient per Entity Framework
 Questa sezione descrive i problemi noti relativi al provider di dati .NET Framework per SQL Server.  
@@ -43,9 +43,9 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>Utilizzo della versione di SQL Server corretta  
- Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] destinazioni il [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] in base alla versione di SQL Server specificato nella query il `ProviderManifestToken` attributo dell'elemento dello Schema nel file di modello (con estensione SSDL) di archiviazione. Tale versione potrebbe differire dalla versione effettiva di SQL Server a cui si è connessi. Se, ad esempio, si utilizza SQL Server 2005, ma l'attributo `ProviderManifestToken` è impostato su 2008, la query [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] generata potrebbe non essere eseguita sul server. Una query che utilizza ad esempio i nuovi tipi datetime introdotti in SQL Server 2008 non verrà eseguita sulle versioni precedente di SQL Server. Se si usa SQL Server 2005, ma il `ProviderManifestToken` attributo è impostato su 2000, generato [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] query potrebbe essere meno ottimizzata o si verifichi un'eccezione che indica che la query non è supportata. Per altre informazioni, vedere la sezione applica gli operatori CROSS e OUTER, più indietro in questo argomento.  
+ Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ha come destinazione la query Transact-SQL in base alla versione di SQL Server specificato nella `ProviderManifestToken` attributo dell'elemento dello Schema nel file di modello (con estensione SSDL) di archiviazione. Tale versione potrebbe differire dalla versione effettiva di SQL Server a cui si è connessi. Ad esempio, se si usa SQL Server 2005, ma il `ProviderManifestToken` attributo è impostato su 2008, la query Transact-SQL generata potrebbe non essere eseguita nel server. Una query che utilizza ad esempio i nuovi tipi datetime introdotti in SQL Server 2008 non verrà eseguita sulle versioni precedente di SQL Server. Se si usa SQL Server 2005, ma il `ProviderManifestToken` attributo è impostato su 2000, la query Transact-SQL generata potrebbe essere meno ottimizzata o si verifichi un'eccezione che indica che la query non è supportata. Per altre informazioni, vedere la sezione applica gli operatori CROSS e OUTER, più indietro in questo argomento.  
   
- Determinati comportamenti del database dipendono dal livello di compatibilità impostato per il database. Se l'attributo `ProviderManifestToken` è impostato su 2005 e si usa la versione 2005 di SQL Server, ma il livello di compatibilità di un database è impostato su "80" (SQL Server 2000), il codice [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] generato avrà come destinazione SQL Server 2005, ma potrebbe non essere eseguito nel modo previsto a causa dell'impostazione del livello di compatibilità. Se, ad esempio, un nome di colonna nell'elenco ORDER BY corrisponde a un nome di colonna nel selettore, può verificarsi la perdita delle informazioni sugli ordini.  
+ Determinati comportamenti del database dipendono dal livello di compatibilità impostato per il database. Se il `ProviderManifestToken` attributo è impostato su 2005 e la versione di SQL Server è 2005, ma il livello di compatibilità di un database è impostato su "80" (SQL Server 2000), l'istruzione Transact-SQL generato avrà come destinazione SQL Server 2005, ma potrebbe non essere eseguita come previsto a causa dell'errore di impostazione del livello di compatibilità. Se, ad esempio, un nome di colonna nell'elenco ORDER BY corrisponde a un nome di colonna nel selettore, può verificarsi la perdita delle informazioni sugli ordini.  
   
 ## <a name="nested-queries-in-projection"></a>Query annidate nella proiezione  
  Le query annidate in una clausola di proiezione potrebbero essere tradotte in query di un prodotto cartesiano sul server. In alcuni server back-end, tra cui Server SLQ, questo può causare la tabella di database TempDB assumere dimensioni notevoli. con una conseguente riduzione della prestazione del server.  

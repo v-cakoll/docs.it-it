@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fe1dfbd62a6967ae51031fa12f80e9c5563dc44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff8c91680a0c3049fa9bc2f7e9c1bf3f654a19b9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704921"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487767"
 ---
 # <a name="appdomainmanagerassembly-element"></a>\<appDomainManagerAssembly > elemento
 Specifica l'assembly che fornisce il gestore di dominio dell'applicazione per il dominio applicazione predefinito nel processo.  
@@ -58,7 +58,7 @@ Specifica l'assembly che fornisce il gestore di dominio dell'applicazione per il
   
  Per il formato del nome visualizzato dell'assembly, vedere il <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> proprietà.  
   
- Questo elemento di configurazione è disponibile solo nel [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] e versioni successive.  
+ Questo elemento di configurazione è disponibile solo in .NET Framework 4 e versioni successive.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come specificare che il gestore del dominio dell'applicazione per il dominio applicazione predefinito di un processo è il `MyMgr` digitare il `AdMgrExample` assembly.  

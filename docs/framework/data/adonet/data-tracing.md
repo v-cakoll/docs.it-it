@@ -2,12 +2,12 @@
 title: Traccia dati in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 120a9e2a817401ba04e0dce8052caecb83115e0e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583775"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489528"
 ---
 # <a name="data-tracing-in-adonet"></a>Traccia dati in ADO.NET
 
@@ -41,7 +41,7 @@ Per le operazioni di connessione, ADO.NET invierà un ID della connessione clien
 
 ADO.NET invia inoltre un ID di attività specifico del thread. L'ID attività viene acquisito nelle sessioni eventi estesi se le sessioni vengono avviate con l'opzione TRACK_CAUSALITY abilitata. Per i problemi di prestazioni con una connessione attiva, è possibile ottenere un ID attività dell'analisi di accesso ai dati del client (campo di`ActivityID` ) e quindi individuare gli ID attività nell'output di eventi estesi. L'ID attività negli eventi estesi è un GUID a 16 byte (diverso dal GUID per l'ID di connessione client seguito da un numero in sequenza di quattro byte). Il numero di sequenze rappresenta l'ordine di una richiesta all'interno di un thread e indica un ordinamento relativo del batch e delle istruzioni RPC per il thread. `ActivityID` viene attualmente inviato facoltativamente per le istruzioni batch SQL e le richieste RPC quando è abilitata l'analisi di accesso ai dati e il diciottesimo bit della parola di configurazione dell'analisi di accesso ai dati è ON.
 
-Di seguito viene riportato un esempio che usa [!INCLUDE[tsql](../../../../includes/tsql-md.md)] per avviare una sessione di eventi estesi che verrà archiviata in un buffer circolare e che registrerà l'ID attività inviato da un client nelle operazioni RPC e batch.
+Di seguito è riportato un esempio che usa Transact-SQL per avviare una sessione eventi estesi che verrà archiviata in un buffer circolare e che registrerà l'ID attività inviato da un client nelle operazioni batch e RPC.
 
 ```sql
 create event session MySession on server

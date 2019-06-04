@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d530f37c979a1ecddf2cb3895234aab2f7556b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698161"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489624"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>Metodo ICLRDebugging::OpenVirtualProcess
 Ottiene l'interfaccia ICorDebugProcess che corrisponde a un modulo common language runtime (CLR) caricato nel processo.  
@@ -78,7 +78,7 @@ HRESULT OpenVirtualProcess(
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|Il [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) callback restituisce un errore o non fornisce un handle valido.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` non implementa le interfacce di destinazione i dati necessari per questa versione del runtime.|  
 |CORDBG_E_NOT_CLR|Il modulo indicato non è un modulo CLR. Questo valore di HRESULT viene restituito anche quando un modulo CLR non può essere rilevato memoria è stata danneggiata, il modulo non è disponibile, oppure la versione di CLR successiva alla versione di shim.|  
-|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Questa versione di runtime non supporta questo modello di debug. Attualmente, il modello di debug non è supportato dalle versioni precedenti CLR il [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Il `pwszVersion` parametro di output è ancora impostato sul valore corretto dopo questo errore.|  
+|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Questa versione di runtime non supporta questo modello di debug. Attualmente, il modello di debug non è supportato dalle versioni precedenti di Common Language Runtime di .NET Framework 4. Il `pwszVersion` parametro di output è ancora impostato sul valore corretto dopo questo errore.|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|La versione di CLR è maggiore della versione che questo debugger dichiara di supportare. Il `pwszVersion` parametro di output è ancora impostato sul valore corretto dopo questo errore.|  
 |E_NO_INTERFACE|Il `riidProcess` interfaccia non è disponibile.|  
 |CORDBG_E_UNSUPPORTED_VERSION_STRUCT|Il `CLR_DEBUGGING_VERSION` struttura non dispone di un valore riconosciuto per `wStructVersion`. L'unico valore accettato in questa fase è 0.|  

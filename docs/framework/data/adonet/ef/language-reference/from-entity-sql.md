@@ -2,12 +2,12 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 3cc02b4c51b32d0faace4d89d0c6c1f6923dd138
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36e3059869ed048bd7c5294c4f5f5407288610b2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879580"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489934"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 Specifica la raccolta usata nella [seleziona](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) istruzioni.  
@@ -46,7 +46,7 @@ LOB.Customers
  Se non viene specificato alcun alias, in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] viene eseguito un tentativo di generare un alias in base all'espressione della raccolta.  
   
 ### <a name="join-from-clause-item"></a>Elemento della clausola JOIN FROM  
- Un elemento della clausola `JOIN FROM` rappresenta un join tra due elementi della clausola `FROM`. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta cross join, inner join, left e right outer join e full outer join. Il supporto di questi join presenta caratteristiche analoghe a quelle del supporto offerto da [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]. Come in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], i due elementi della clausola `FROM` inclusi nel `JOIN` devono essere indipendenti. In altre parole, non possono essere correlati. In questi casi è possibile usare una clausola `CROSS APPLY` o `OUTER APPLY`.  
+ Un elemento della clausola `JOIN FROM` rappresenta un join tra due elementi della clausola `FROM`. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta cross join, inner join, left e right outer join e full outer join. Tutti questi join sono supportati simili a quelle che sono supportati in Transact-SQL. Come in Transact-SQL, i due `FROM` interessati gli elementi della clausola di `JOIN` deve essere indipendente. In altre parole, non possono essere correlati. In questi casi è possibile usare una clausola `CROSS APPLY` o `OUTER APPLY`.  
   
 #### <a name="cross-joins"></a>Cross join  
  Un'espressione di query `CROSS JOIN` genera il prodotto cartesiano di due raccolte, come illustrato nell'esempio seguente:  
@@ -77,7 +77,7 @@ LOB.Customers
  L'espressione di query precedente elabora una combinazione di ogni elemento della raccolta a sinistra abbinato a ogni elemento della raccolta a destra, in cui la condizione `ON` è vera. Se la condizione `ON` è falsa, l'espressione elabora comunque una sola istanza dell'elemento a sinistra abbinato all'elemento a destra con valore Null. Elabora inoltre una sola istanza dell'elemento a destra abbinato all'elemento a sinistra con valore Null.  
   
 > [!NOTE]
->  Per mantenere la compatibilità con SQL-92, in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] la parola chiave OUTER è facoltativa. Pertanto, `LEFT JOIN`, `RIGHT JOIN` e `FULL JOIN` sono sinonimi di `LEFT OUTER JOIN`, `RIGHT OUTER JOIN` e `FULL OUTER JOIN`.  
+>  Per mantenere la compatibilità con SQL-92, in Transact-SQL, la parola chiave OUTER è facoltativa. Pertanto, `LEFT JOIN`, `RIGHT JOIN` e `FULL JOIN` sono sinonimi di `LEFT OUTER JOIN`, `RIGHT OUTER JOIN` e `FULL OUTER JOIN`.  
   
 ### <a name="apply-clause-item"></a>Elemento della clausola APPLY  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta due tipi di clausola `APPLY`: `CROSS APPLY` e `OUTER APPLY`.  
@@ -93,7 +93,7 @@ LOB.Customers
  `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`  
   
 > [!NOTE]
->  A differenza di [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non è necessario un passaggio UNNEST esplicito.  
+>  A differenza di Transact-SQL, non è necessario per un passaggio unnest esplicito in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 > [!NOTE]
 >  Gli operatori `CROSS` e `OUTER APPLY` sono stati introdotti in [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. In alcuni casi, è possibile che la pipeline della query produca istruzioni Transact-SQL contenenti gli operatori `CROSS APPLY` e/o `OUTER APPLY`. Poiché alcuni provider di back-end, incluse le versioni di SQL Server precedenti a [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], questi operatori non sono supportati, tali query non possono essere eseguite su questi provider di back-end.  
@@ -137,7 +137,7 @@ from (C as c join D as d) cross apply c.Names as e
 from (C as c join D as d) cross apply c.Names as e  
 ```  
   
- In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (a differenza di [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]), la clausola `FROM` introduce solo gli alias nell'ambito. Tutti i riferimenti alle colonne, o proprietà, di tali raccolte devono essere qualificati con l'alias.  
+ Nelle [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (a differenza di Transact-SQL), il `FROM` clausola introduce solo gli alias nell'ambito. Tutti i riferimenti alle colonne, o proprietà, di tali raccolte devono essere qualificati con l'alias.  
   
 ## <a name="pulling-up-keys-from-nested-queries"></a>Pull delle chiavi da query annidate  
  Non sono supportati determinati tipi di query che richiedono l'estrazione delle chiavi da una query annidata. Viene ad esempio considerata valida la query seguente:  

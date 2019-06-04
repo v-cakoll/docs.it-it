@@ -2,12 +2,12 @@
 title: Rilevamento SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: f3c48b40e2d3d7dec2b9008b3de738f9b2983610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b69336e9a6fd0d3cf91c2a187412638d08490eea
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785918"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491078"
 ---
 # <a name="sql-tracking"></a>Rilevamento SQL
 In questo esempio viene illustrato come scrivere un partecipante del rilevamento SQL personalizzato che scrive record di rilevamento in un database SQL. Windows Workflow Foundation (WF) fornisce per ottenere visibilità nell'esecuzione di un'istanza del flusso di lavoro di rilevamento del flusso di lavoro. Il runtime di rilevamento crea record di rilevamento del flusso di lavoro durante l'esecuzione di quest'ultimo. Per altre informazioni sul rilevamento del flusso di lavoro, vedere [flusso di lavoro di rilevamento e traccia](../workflow-tracking-and-tracing.md).
@@ -35,7 +35,7 @@ In questo esempio viene illustrato come scrivere un partecipante del rilevamento
   
      Un esempio dell'indirizzo WSDL del servizio locale è `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
   
-8. Tramite [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], eseguire il client di prova WCF (WcfTestClient.exe). che si trova nella directory Microsoft Visual Studio 10.0\Common7\IDE.  
+8. Usando Esplora File, eseguire il client di prova WCF (WcfTestClient.exe). che si trova nella directory Microsoft Visual Studio 10.0\Common7\IDE.  
   
 9. Nel client di prova WCF fare clic sui **File** dal menu **Aggiungi servizio**. Incollare l'indirizzo del servizio locale nella casella di testo. Fare clic su **OK** per chiudere la finestra di dialogo.  
   

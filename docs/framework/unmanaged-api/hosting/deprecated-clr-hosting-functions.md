@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa84ca0defd173563817673aad183a8b64226d41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dde711f2d626d88fd80009fa83f1198dd9d47810
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905970"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490490"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Funzioni di hosting CLR deprecate
 Questa sezione descrive le funzioni statiche globali non gestite utilizzate versioni precedenti dell'API di hosting.  
   
- Fatta eccezione per le funzioni dell'infrastruttura (`_Cor*` funzioni), che vengono usate solo da .NET Framework, queste funzioni sono state deprecate nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Fatta eccezione per le funzioni dell'infrastruttura (`_Cor*` funzioni), che vengono usate solo da .NET Framework, queste funzioni sono state deprecate in .NET Framework 4.  
   
 ## <a name="activation-functions"></a>Funzioni di attivazione  
  [Funzione ClrCreateManagedInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreatemanagedinstance-function.md)  

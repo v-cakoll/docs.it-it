@@ -2,15 +2,15 @@
 title: LINQ e ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 312eb4b1c0512ca1244daec5bcda3ed864c3646d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bfd5bb845917f9ca8ba3b154a51a946b610ca571
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878323"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489828"
 ---
 # <a name="linq-and-adonet"></a>LINQ e ADO.NET
-Oggi, molti sviluppatori aziendali devono usare linguaggi di programmazione due (o più): un linguaggio di alto livello per i livelli di presentazione e della logica di business (ad esempio, Visual c# o Visual Basic) e un linguaggio di query per interagire con il database (ad esempio [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Tale necessità non solo richiede una conoscenza approfondita di diversi linguaggi da parte degli sviluppatori, ma provoca anche problemi di mancata corrispondenza tra linguaggi nell'ambiente di sviluppo. Ad esempio, in un'applicazione che usa un'API di accesso ai dati per eseguire una query su un database la query viene specificata come valore letterale stringa racchiuso tra virgolette. Tale stringa di query è tuttavia illeggibile per il compilatore e non è possibile eseguire su di essa un controllo per verificare la presenza di errori, ad esempio l'uso di sintassi non valida o l'effettiva esistenza delle colonne o delle righe cui fa riferimento. Non viene eseguito il controllo dei tipi dei parametri della query, né è disponibile il supporto per `IntelliSense`.  
+Oggi, molti sviluppatori aziendali devono usare linguaggi di programmazione due (o più): un linguaggio di alto livello per i livelli di presentazione e della logica di business (ad esempio di oggetto visivo C# o Visual Basic) e un linguaggio di query per interagire con il database (ad esempio Transact-SQL) . Tale necessità non solo richiede una conoscenza approfondita di diversi linguaggi da parte degli sviluppatori, ma provoca anche problemi di mancata corrispondenza tra linguaggi nell'ambiente di sviluppo. Ad esempio, in un'applicazione che usa un'API di accesso ai dati per eseguire una query su un database la query viene specificata come valore letterale stringa racchiuso tra virgolette. Tale stringa di query è tuttavia illeggibile per il compilatore e non è possibile eseguire su di essa un controllo per verificare la presenza di errori, ad esempio l'uso di sintassi non valida o l'effettiva esistenza delle colonne o delle righe cui fa riferimento. Non viene eseguito il controllo dei tipi dei parametri della query, né è disponibile il supporto per `IntelliSense`.  
   
  [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] consente agli sviluppatori di formare query basate su set nel codice dell'applicazione, senza dover usare un linguaggio di query diverso. È possibile scrivere query [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] su diverse origini dati enumerabili (ovvero origini dati che implementano l'interfaccia <xref:System.Collections.IEnumerable>), ad esempio strutture dei dati in memoria, documenti XML, database SQL e oggetti <xref:System.Data.DataSet>. Sebbene queste origini dati enumerabili vengono implementate in modi diversi, espongono tutte la stessa sintassi e gli stessi costrutti di linguaggio. Poiché è possibile formare query nel linguaggio di programmazione stesso, non è necessario usare un altro linguaggio di query incorporato sotto forma di valori letterali stringa che il compilatore non è in grado di riconoscere o verificare. L'integrazione di query nel linguaggio di programmazione consente inoltre di essere più produttivi fornendo tipi in fase di compilazione e la verifica della sintassi, i programmatori di Visual Studio e `IntelliSense`. Queste funzionalità riducono l'esigenza di debug e correzione degli errori delle query.  
   

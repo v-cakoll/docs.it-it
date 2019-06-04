@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fa05fe1e170a0285df73d179ef39db6301059ac8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592743"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490957"
 ---
 # <a name="cryptographic-services"></a>servizi crittografici
 
@@ -39,7 +39,7 @@ ms.locfileid: "65592743"
 
 In .NET Framework le classi dello spazio dei nomi <xref:System.Security.Cryptography?displayProperty=nameWithType> gestiscono automaticamente molti dettagli della crittografia. In alcuni casi si tratta di wrapper presenti nelle CryptoAPI di Microsoft non gestite, in altri semplicemente di implementazioni gestite. Non è necessario essere esperti di crittografia per usare queste classi. Quando si crea una nuova istanza di una delle classi dell'algoritmo di crittografia, le chiavi vengono generate automaticamente per semplificare l'uso e le proprietà predefinite offrono la maggiore sicurezza possibile.
 
-Questa panoramica offre un riepilogo dei metodi e delle procedure di crittografia supportati da .NET Framework, inclusi i manifesti ClickOnce, Suite B e il supporto per Cryptography Next Generation (CNG) introdotto in [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].
+Questa panoramica offre un riepilogo dei metodi di crittografia e delle procedure supportati da .NET Framework, inclusi i manifesti ClickOnce, Suite B e il supporto di Cryptography Next Generation (CNG) introdotto in .NET Framework 3.5.
 
 In questa panoramica sono incluse le sezioni seguenti:
 
@@ -114,7 +114,7 @@ Supponendo che Alice e Bob siano due parti che vogliono comunicare su un canale 
 
 .NET Framework fornisce le classi seguenti che implementano gli algoritmi di crittografia a chiave segreta:
 
-- <xref:System.Security.Cryptography.AesManaged> (introdotto in [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).
+- <xref:System.Security.Cryptography.AesManaged> (introdotta in .NET Framework 3.5).
 
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 

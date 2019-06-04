@@ -2,12 +2,12 @@
 title: Supporto SqlClient per disponibilità elevata, ripristino di emergenza
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: b01db93c51c6d975c9cc951f08b64c5ffd6c1de4
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: aa4c716dc1b27d50620777613e698ca6dbab31d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380014"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487643"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Supporto SqlClient per disponibilità elevata, ripristino di emergenza
 In questo argomento viene descritto il supporto di SqlClient (aggiunto in .NET Framework 4.5) per il ripristino di emergenza a disponibilità elevata - gruppi di disponibilità AlwaysOn.  La funzionalità gruppi di disponibilità AlwaysOn è stato aggiunto a SQL Server 2012. Per altre informazioni sui gruppi di disponibilità AlwaysOn, vedere la documentazione Online di SQL Server.  
@@ -79,7 +79,7 @@ In questo argomento viene descritto il supporto di SqlClient (aggiunto in .NET F
   
  La parola chiave `ApplicationIntent` non funziona con i database legacy di sola lettura.  
   
- Un database può consentire o non consentire carichi di lavoro di lettura nel database AlwaysOn di destinazione. Questa operazione viene eseguita con la clausola `ALLOW_CONNECTIONS` delle istruzioni `PRIMARY_ROLE` e `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
+ Un database può consentire o non consentire carichi di lavoro di lettura nel database AlwaysOn di destinazione. (Questa operazione viene eseguita con il `ALLOW_CONNECTIONS` clausola del `PRIMARY_ROLE` e `SECONDARY_ROLE`istruzioni Transact-SQL.)  
   
  La parola chiave `ApplicationIntent` viene usata per abilitare il routing di sola lettura.  
   

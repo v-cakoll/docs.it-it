@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3bbb55ec65df1af776779682d307a67034e34b3
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760428"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489896"
 ---
 # <a name="null-comparisons"></a>Confronti Null
 Un valore `null` nell'origine dati indica che il valore è sconosciuto. Nella query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] è possibile verificare la presenza di valori Null in modo che alcuni calcoli o confronti vengano eseguiti solo sulle righe che includono dati validi, ovvero non NULL. Tuttavia, la semantica dei valori Null di CLR può differire da quella dell'origine dati. La maggior parte dei database usa una versione della logica con tre valori per la gestione dei confronti di valori Null. Vale a dire, un confronto con un valore null non restituiscono `true` oppure `false`, viene restituito `unknown`. Spesso, ma non sempre, si tratta di un'implementazione di valori Null ANSI.  
   
- Per impostazione predefinita, in SQL Server il confronto tra valori Null con il metodo Equals restituisce un valore Null. Nell'esempio seguente, le righe in cui `ShipDate` è null sono escluse dal set di risultati e l'istruzione [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] restituisce 0 righe.  
+ Per impostazione predefinita, in SQL Server il confronto tra valori Null con il metodo Equals restituisce un valore Null. Nell'esempio seguente, le righe in cui `ShipDate` è null sono escluse dal set di risultati e l'istruzione Transact-SQL restituisce pertanto 0 righe.  
   
 ```  
 -- Find order details and orders with no ship date.  

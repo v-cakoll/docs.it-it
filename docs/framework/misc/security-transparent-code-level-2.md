@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 36c3f139564b39555370cd5d41133f39c6b271bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456564"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487839"
 ---
 # <a name="security-transparent-code-level-2"></a>Codice SecurityTransparent, livello 2
 
@@ -22,7 +22,7 @@ ms.locfileid: "66456564"
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-La trasparenza di livello 2 è stata introdotta in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. I tre concetti principali di questo modello sono il codice Transparent, il codice SecuritySafeCritical e il codice SecurityCritical.
+Trasparenza di livello 2 è stato introdotto in .NET Framework 4. I tre concetti principali di questo modello sono il codice Transparent, il codice SecuritySafeCritical e il codice SecurityCritical.
 
 - Il codice Transparent, incluso il codice in esecuzione con attendibilità totale, può chiamare solo altro codice Transparent o codice SecuritySafeCritical. Può eseguire solo azioni consentite dal set di autorizzazioni parzialmente attendibile, se esistente, del dominio. Il codice Transparent non può eseguire le operazioni seguenti:
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9d423ef71b76b2dcbbf2812e13850922fb50ac0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8be971cee4aa2ae09745a090396269c80ca62198
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625884"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487956"
 ---
 # <a name="securing-method-access"></a>Protezione dell'accesso ai metodi
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -60,7 +60,7 @@ public class Class1
  Usare le dichiarazioni illustrate in questa sezione per impedire l'uso di specifiche classi e metodi, nonché proprietà ed eventi, da parte di codice parzialmente attendibile. Applicando tali dichiarazioni a una classe, è possibile applicare la protezione a tutti i relativi metodi, proprietà ed eventi. Si noti tuttavia che l'accesso al campo non è influenzato dalla protezione dichiarativa. Si noti inoltre che le richieste di collegamento aiutano a proteggere solo dai chiamanti immediati e potrebbero essere comunque soggette ad attacchi.  
   
 > [!NOTE]
->  È stato introdotto un nuovo modello di trasparenza in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Il [codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md) identifica il modello di codice sicuro con il <xref:System.Security.SecurityCriticalAttribute> attributo. Il codice critico per la sicurezza richiede che chiamanti ed eredi siano completamente attendibili. Gli assembly in esecuzione con le regole di protezione dell'accesso al codice delle versioni precedenti di .NET Framework possono chiamare gli assembly di livello 2. In questo caso, gli attributi critici per la sicurezza verranno considerati come richieste di collegamento per l'attendibilità totale.  
+>  Un nuovo modello di trasparenza è stata introdotta in .NET Framework 4. Il [codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md) identifica il modello di codice sicuro con il <xref:System.Security.SecurityCriticalAttribute> attributo. Il codice critico per la sicurezza richiede che chiamanti ed eredi siano completamente attendibili. Gli assembly in esecuzione con le regole di protezione dell'accesso al codice delle versioni precedenti di .NET Framework possono chiamare gli assembly di livello 2. In questo caso, gli attributi critici per la sicurezza verranno considerati come richieste di collegamento per l'attendibilità totale.  
   
  Nell'assembly con nome sicuro, un [LinkDemand](../../../docs/framework/misc/link-demands.md) viene applicato a tutti i metodi accessibili pubblicamente, proprietà ed eventi per limitarne l'uso per i chiamanti completamente attendibili. Per disabilitare questa funzionalità, è necessario applicare l'attributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Di conseguenza, contrassegnare esplicitamente le classi in modo da escludere i chiamanti non attendibili è necessario solo per gli assembly non firmati oppure per gli assembly con questo attributo. È possibile usare queste dichiarazioni per contrassegnare un sottoinsieme di tipi non destinati a chiamanti non attendibili.  
   

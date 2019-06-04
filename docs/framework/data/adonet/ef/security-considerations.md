@@ -2,12 +2,12 @@
 title: Considerazioni sulla sicurezza (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879925"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489830"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerazioni sulla sicurezza (Entity Framework)
 In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che riguardano in modo particolare lo sviluppo, la distribuzione e l'esecuzione di applicazioni [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. È consigliabile seguire anche le raccomandazioni per la creazione di applicazioni .NET Framework protette. Per altre informazioni, vedere [Cenni preliminari sulla sicurezza](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -92,7 +92,7 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
  Le considerazioni sulla sicurezza illustrate di seguito riguardano l'esecuzione di query su un modello concettuale. Tali considerazioni si applicano alle query [!INCLUDE[esql](../../../../../includes/esql-md.md)] che usano EntityClient e alle query di oggetto che usano LINQ, [!INCLUDE[esql](../../../../../includes/esql-md.md)] e i metodi del generatore di query.  
   
 #### <a name="prevent-sql-injection-attacks"></a>Impedire attacchi SQL injection.  
- Le applicazioni spesso accettano input esterno, ad esempio da un utente o da un altro agente esterno, ed eseguono azioni basate su tale input. L'eventuale input derivato in modo diretto o indiretto dall'utente o da un agente esterno può includere contenuto che sfrutta la sintassi del linguaggio di destinazione per eseguire azioni non autorizzate. Quando il linguaggio di destinazione è un linguaggio SQL (Structured Query Language), ad esempio [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], questa manipolazione è nota come attacco SQL injection. Un utente malintenzionato può inserire comandi direttamente nella query e rilasciare una tabella di database, determinare un attacco di tipo Denial of Service o alterare in altro modo la natura dell'operazione da eseguire.  
+ Le applicazioni spesso accettano input esterno, ad esempio da un utente o da un altro agente esterno, ed eseguono azioni basate su tale input. L'eventuale input derivato in modo diretto o indiretto dall'utente o da un agente esterno può includere contenuto che sfrutta la sintassi del linguaggio di destinazione per eseguire azioni non autorizzate. Quando la lingua di destinazione è un linguaggio SQL (Structured Query), ad esempio Transact-SQL, questa manipolazione è nota come attacco SQL injection. Un utente malintenzionato può inserire comandi direttamente nella query e rilasciare una tabella di database, determinare un attacco di tipo Denial of Service o alterare in altro modo la natura dell'operazione da eseguire.  
   
 - Attacchi injection di [!INCLUDE[esql](../../../../../includes/esql-md.md)]:  
   

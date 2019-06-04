@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09a12f062b2fe3ad6e5ac90f0d268bbbeab44876
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a0861436ca727d63cdae58e3222826bf6414610
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674142"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489450"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > elemento
 Specifica se il runtime crea <xref:System.Security.Policy.Publisher> evidenza per la sicurezza dall'accesso di codice (CAS).  
@@ -57,7 +57,7 @@ Specifica se il runtime crea <xref:System.Security.Policy.Publisher> evidenza pe
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Nel [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] e versioni successive, l'elemento non ha alcun effetto sui tempi di caricamento di assembly. Per altre informazioni, vedere la sezione "Semplificazione dei criteri di sicurezza" nella [modifiche della sicurezza](../../../../../docs/framework/security/security-changes.md).  
+>  In .NET Framework 4 e versioni successive, questo elemento non ha alcun effetto sui tempi di caricamento di assembly. Per altre informazioni, vedere la sezione "Semplificazione dei criteri di sicurezza" nella [modifiche della sicurezza](../../../../../docs/framework/security/security-changes.md).  
   
  Common language runtime (CLR) tenta di verificare la firma Authenticode in fase di caricamento per creare <xref:System.Security.Policy.Publisher> evidenza dell'assembly. Tuttavia, per impostazione predefinita, la maggior parte delle applicazioni non sono necessario <xref:System.Security.Policy.Publisher> evidenza. Criterio CAS standard non si basa sul <xref:System.Security.Policy.PublisherMembershipCondition>. È consigliabile evitare il costo di esecuzione automatica non necessari associato alla verifica della firma del server di pubblicazione, a meno che l'applicazione viene eseguita in un computer con criteri personalizzati di autorità di certificazione o non sia progettata per soddisfare le richieste per <xref:System.Security.Permissions.PublisherIdentityPermission> in un ambiente parzialmente attendibile. (Le richieste per le autorizzazioni di identità sempre esito positivo in un ambiente completamente attendibile).  
   
