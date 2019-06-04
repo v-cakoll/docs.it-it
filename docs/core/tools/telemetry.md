@@ -4,12 +4,12 @@ description: Informazioni sulle funzionalità di telemetria degli strumenti di .
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 82410863c81faa95edfb120c95ec6bc186ed1328
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751684"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377495"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria di .NET Core SDK
 
@@ -79,7 +79,7 @@ I dati pubblicati sono disponibili su base trimestrale e sono elencati in [dati 
 
 &#8224; Nella colonna *Occorrenze* è riportato il conteggio in aggregato dell'utilizzo da parte del comando di metriche di tale riga nel giorno in questione.
 
-&#8225; In genere, nella colonna*Geografia* è riportato il nome di un Paese. In alcuni casi, continente Antartide viene visualizzato in questa colonna, a causa di ricercatori che utilizzano .NET Core in Antartide o dati della posizione non corretti.
+&#8225; In genere, nella colonna *Geografia* è riportato il nome di un paese o un'area geografica. In alcuni casi, continente Antartide viene visualizzato in questa colonna, a causa di ricercatori che utilizzano .NET Core in Antartide o dati della posizione non corretti.
 
 ### <a name="example"></a>Esempio
 
