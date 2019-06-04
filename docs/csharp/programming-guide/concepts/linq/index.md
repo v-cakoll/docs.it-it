@@ -2,23 +2,29 @@
 title: Language-Integrated Query (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: fbd73d879a3e2fe4cc38d6c8548434d21ca06467
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f2cbab6295fd9a2c2b3458f520dbf231d9b5413
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597079"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484540"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ (Language-Integrated Query)
 
-LINQ (Language-Integrated Query) è il nome di un set di tecnologie basate sull'integrazione delle funzionalità di query direttamente nel linguaggio C#. In genere, le query sui dati vengono espresse come stringhe semplici senza il controllo dei tipi in fase di compilazione o il supporto di IntelliSense. È anche necessario apprendere un linguaggio di query diverso per ogni tipo di origine dati: database SQL, documenti XML, vari servizi Web e così via. Con LINQ, una query è un costrutto del linguaggio di prima classe, come le classi, i metodi e gli eventi.
+LINQ (Language-Integrated Query) è il nome di un set di tecnologie basate sull'integrazione delle funzionalità di query direttamente nel linguaggio C#. In genere, le query sui dati vengono espresse come stringhe semplici senza il controllo dei tipi in fase di compilazione o il supporto di IntelliSense. È anche necessario apprendere un linguaggio di query diverso per ogni tipo di origine dati: database SQL, documenti XML, vari servizi Web e così via. Con LINQ, una query è un costrutto del linguaggio di prima classe, come le classi, i metodi e gli eventi. È possibile scrivere query su insiemi di oggetti fortemente tipizzati usando le parole chiave del linguaggio e gli operatori comuni.  La famiglia di tecnologie LINQ offre coerenza per l'esecuzione di query per oggetti (LINQ to Objects), database relazionali (LINQ to SQL) e XML (LINQ to XML).  
 
 Per uno sviluppatore che scrive query, la parte integrata nel linguaggio più visibile di LINQ è l'espressione di query. Le espressioni di query vengono scritte con una *sintassi di query* dichiarativa. Tramite la sintassi di query è possibile eseguire operazioni di filtro, ordinamento e raggruppamento sulle origini dati usando una quantità minima di codice. Vengono usati gli stessi modelli di espressioni di query di base per eseguire una query e trasformare i dati in database SQL, set di dati ADO .NET, documenti e flussi XML e raccolte .NET.
+
+È possibile scrivere query LINQ in C# per database SQL Server, documenti XML, set di dati ADO.NET e qualsiasi raccolta di oggetti che supporta <xref:System.Collections.IEnumerable> o l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> generica. Il supporto per LINQ viene anche offerto da terze parti per numerosi servizi Web e altre implementazioni di database.  
 
 L'esempio seguente mostra l'operazione di query completa. L'operazione completa include la creazione di un'origine dati, la definizione dell'espressione di query e l'esecuzione della query in un'istruzione `foreach`.
 
 [!code-csharp[csProgGuideLINQ#11](../../../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
 
+ Nella figura seguente presa da Visual Studio viene illustrata una query LINQ completata parzialmente su un database di SQL Server in C# e Visual Basic con controllo completo del tipo e supporto IntelliSense:  
+  
+ ![Diagramma che illustra una query LINQ con Intellisense.](./media/introduction-to-linq/linq-query-intellisense.png)  
+  
 ## <a name="query-expression-overview"></a>Panoramica sulle espressioni di query
 
 - Le espressioni di query possono essere usate per eseguire una query e trasformare dati da qualsiasi origine dati abilitata per LINQ. Una sola query, ad esempio, è in grado di recuperare dati da un database SQL e di produrre un flusso XML come output.  
@@ -49,3 +55,7 @@ Per altre informazioni dettagliate su LINQ, iniziare ad acquisire dimestichezza 
 Per approfondire LINQ in generale, vedere [LINQ in C#](../../../linq/linq-in-csharp.md).
 
 Per iniziare a utilizzare LINQ in C#, vedere l'esercitazione [Uso di LINQ](../../../tutorials/working-with-linq.md).
+
+## <a name="see-also"></a>Vedere anche
+
+- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
