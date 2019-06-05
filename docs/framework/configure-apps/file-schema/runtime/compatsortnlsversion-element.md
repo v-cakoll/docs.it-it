@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6aef46db47f881d6a15cc1e58d46219a80194b0
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: b426eaaa2dab4d54ea4c82483c079428f3bfac57
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456452"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689917"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > elemento
 Specifica che nel runtime devono essere utilizzati ordinamenti legacy quando si eseguono confronti di stringhe.  
@@ -44,7 +44,7 @@ Specifica che nel runtime devono essere utilizzati ordinamenti legacy quando si 
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|4096|ID impostazioni locali mediante il quale viene rappresentato un ordinamento alternativo. In questo caso, 4096 rappresenta l'ordinamento di [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] e versioni precedenti.|  
+|4096|ID impostazioni locali mediante il quale viene rappresentato un ordinamento alternativo. In questo caso, 4096 rappresenta l'ordinamento di .NET Framework 3.5 e versioni precedenti.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -57,7 +57,7 @@ Specifica che nel runtime devono essere utilizzati ordinamenti legacy quando si 
 |`runtime`|Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.|  
   
 ## <a name="remarks"></a>Note  
- Operazioni di maiuscole e minuscole, l'ordinamento e confronto di stringhe eseguita dal <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> classe in .NET Framework 4 è conforme a standard Unicode 5.1, i risultati dei metodi di confronto di stringa, ad esempio <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> e <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> può differire da versioni precedenti di .NET Framework. Se l'applicazione dipende dal comportamento legacy, è possibile ripristinare il confronto di stringhe e le regole di ordinamento utilizzati in [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] e nelle versioni precedenti includendo l'elemento `<CompatSortNLSVersion>` nel file di configurazione dell'applicazione.  
+ Operazioni di maiuscole e minuscole, l'ordinamento e confronto di stringhe eseguita dal <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> classe in .NET Framework 4 è conforme a standard Unicode 5.1, i risultati dei metodi di confronto di stringa, ad esempio <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> e <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> può differire da versioni precedenti di .NET Framework. Se l'applicazione dipende dal comportamento legacy, è possibile ripristinare il confronto di stringhe e l'ordinamento delle regole usate in .NET Framework 3.5 e versioni precedenti includendo il `<CompatSortNLSVersion>` elemento nel file di configurazione dell'applicazione.  
   
 > [!IMPORTANT]
 >  Per il ripristino del confronto di stringhe legacy e delle regole di ordinamento è necessaria inoltre la disponibilità della libreria di collegamento dinamico sort00001000.dll nel sistema locale.  
@@ -76,13 +76,13 @@ Specifica che nel runtime devono essere utilizzati ordinamenti legacy quando si 
 sta follows a in the sort order.  
 ```  
   
- Si tratta di un output completamente diverso da quello che viene visualizzato quando si esegue l'esempio in [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ Ciò è completamente diversa dall'output che viene visualizzato quando si esegue l'esempio in .NET Framework 3.5.  
   
 ```  
 sta equals a in the sort order.  
 ```  
   
- Tuttavia, se si aggiunge il file di configurazione seguente alla directory di esempio e quindi esegue l'esempio in .NET Framework 4, l'output è identico a quello prodotto dall'esempio quando viene eseguito nel [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ Tuttavia, se si aggiunge il file di configurazione seguente alla directory di esempio e quindi esegue l'esempio in .NET Framework 4, l'output è identico a quello prodotto dall'esempio quando viene eseguito in .NET Framework 3.5.  
   
 ```xml  
 <?xml version ="1.0"?>  

@@ -9,58 +9,62 @@ helpviewer_keywords:
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 854b58a1f57008326874b5e5ee60cc9e6297960b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23917977add2343732957eaa8dad5d2176315acf
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674041"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689869"
 ---
 # <a name="netfx45cultureawarecomparergethashcodelongstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings > elemento
-Specifica se il runtime utilizza una quantità di memoria fissa per calcolare i codici hash per il metodo <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> .  
-  
- \<configuration>  
-\<runtime>  
-<NetFx45_CultureAwareComparerGetHashCode_LongStrings>  
-  
-## <a name="syntax"></a>Sintassi  
-  
+
+Specifica se il runtime utilizza una quantità di memoria fissa per calcolare i codici hash per il metodo <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> .
+
+\<configuration>\
+\<runtime>\
+\<NetFx45_CultureAwareComparerGetHashCode_LongStrings>
+
+## <a name="syntax"></a>Sintassi
+
 ```xml
-<NetFx45_CultureAwareComparerGetHashCode_LongStrings enabled="0|1">  
-```  
-  
-## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
-  
-### <a name="attributes"></a>Attributi  
-  
-|Attributo|Descrizione|  
-|---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se tramite Common Language Runtime viene allocata una quantità di memoria fissa durante il calcolo dei codici hash.|  
-  
-## <a name="enabled-attribute"></a>Attributo enabled  
-  
-|Valore|Descrizione|  
-|-----------|-----------------|  
-|0|Specifica se tramite Common Language Runtime viene allocata una quantità di memoria variabile al metodo <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> per il calcolo dei codici hash. Questa è l'impostazione predefinita.|  
-|1|Specifica se tramite Common Language Runtime viene allocata una quantità di memoria fissa al metodo <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> per il calcolo dei codici hash.|  
-  
-### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
-  
-### <a name="parent-elements"></a>Elementi padre  
-  
-|Elemento|Descrizione|  
-|-------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`runtime`|Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.|  
-  
-## <a name="remarks"></a>Note  
- Per impostazione predefinita, tramite Common Language Runtime viene allocata una quantità di memoria variabile per il metodo <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> e <xref:System.ArgumentException> può essere generata quando il metodo tenta di calcolare il codice hash di stringhe di dimensioni considerevoli (oltre diversi milioni di caratteri). Aggiungendo questo elemento a un file di configurazione dell'applicazione e impostando il relativo attributo `enabled` su "1", è possibile specificare che il metodo <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> utilizza un algoritmo alternativo che alloca una quantità di memoria fissa per il calcolo di codici hash.  
-  
+<NetFx45_CultureAwareComparerGetHashCode_LongStrings enabled="0|1">
+```
+
+## <a name="attributes-and-elements"></a>Attributi ed elementi
+
+Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.
+
+### <a name="attributes"></a>Attributi
+
+|Attributo|Descrizione|
+|---------------|-----------------|
+|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se tramite Common Language Runtime viene allocata una quantità di memoria fissa durante il calcolo dei codici hash.|
+
+## <a name="enabled-attribute"></a>Attributo enabled
+
+|Valore|Descrizione|
+|-----------|-----------------|
+|0|Specifica se tramite Common Language Runtime viene allocata una quantità di memoria variabile al metodo <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> per il calcolo dei codici hash. Questa è l'impostazione predefinita.|
+|1|Specifica se tramite Common Language Runtime viene allocata una quantità di memoria fissa al metodo <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> per il calcolo dei codici hash.|
+
+### <a name="child-elements"></a>Elementi figlio
+
+Nessuno.
+
+### <a name="parent-elements"></a>Elementi padre
+
+|Elemento|Descrizione|
+|-------------|-----------------|
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|
+|`runtime`|Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.|
+
+## <a name="remarks"></a>Note
+
+Per impostazione predefinita, tramite Common Language Runtime viene allocata una quantità di memoria variabile per il metodo <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> e <xref:System.ArgumentException> può essere generata quando il metodo tenta di calcolare il codice hash di stringhe di dimensioni considerevoli (oltre diversi milioni di caratteri). Aggiungendo questo elemento a un file di configurazione dell'applicazione e impostando il relativo attributo `enabled` su "1", è possibile specificare che il metodo <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> utilizza un algoritmo alternativo che alloca una quantità di memoria fissa per il calcolo di codici hash.
+
 > [!IMPORTANT]
->  L'elemento di `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` non viene utilizzato in [!INCLUDE[win8](../../../../../includes/win8-md.md)] e versioni successive.  
-  
+> L'elemento di `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` non viene utilizzato in [!INCLUDE[win8](../../../../../includes/win8-md.md)] e versioni successive.
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
