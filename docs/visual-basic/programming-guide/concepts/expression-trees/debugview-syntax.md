@@ -1,6 +1,6 @@
 ---
 title: Sintassi utilizzata dalla proprietà DebugView (Visual Basic)
-description: Viene descritta la sintassi speciale utilizzata dalla proprietà DebugView per produrre una rappresentazione di stringa degli alberi delle espressioni
+description: Descrive la sintassi speciale usata dalla proprietà DebugView per produrre una rappresentazione di stringa degli alberi delle espressioni
 author: zspitz
 ms.author: wiwagn
 ms.date: 05/22/2019
@@ -8,26 +8,26 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: 1b2a1164f02208cc7578820d8f8ed3bc145fb5b8
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: ae2c75607f7b9cdc40fc5c163ce533f0472ab454
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196531"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689544"
 ---
-# <a name="debugview-syntax"></a><span data-ttu-id="9830a-103">Sintassi `DebugView`</span><span class="sxs-lookup"><span data-stu-id="9830a-103">`DebugView` syntax</span></span> 
+# <a name="debugview-syntax"></a><span data-ttu-id="43ac7-103">Sintassi `DebugView`</span><span class="sxs-lookup"><span data-stu-id="43ac7-103">`DebugView` syntax</span></span>
 
-<span data-ttu-id="9830a-104">Il `DebugView` proprietà (disponibile solo durante il debug) fornisce un rendering di stringa degli alberi delle espressioni.</span><span class="sxs-lookup"><span data-stu-id="9830a-104">The `DebugView` property (available only when debugging) provides a string rendering of expression trees.</span></span> <span data-ttu-id="9830a-105">La maggior parte della sintassi è piuttosto semplice da comprendere; Nelle sezioni seguenti vengono descritti i casi speciali.</span><span class="sxs-lookup"><span data-stu-id="9830a-105">Most of the syntax is fairly straightforward to understand; the special cases are described in the following sections.</span></span>
+<span data-ttu-id="43ac7-104">La proprietà `DebugView` (disponibile solo durante il debug) fornisce un rendering in forma di stringa degli alberi delle espressioni.</span><span class="sxs-lookup"><span data-stu-id="43ac7-104">The `DebugView` property (available only when debugging) provides a string rendering of expression trees.</span></span> <span data-ttu-id="43ac7-105">La maggior parte della sintassi è piuttosto semplice da comprendere e i casi speciali vengono descritti nelle sezioni seguenti.</span><span class="sxs-lookup"><span data-stu-id="43ac7-105">Most of the syntax is fairly straightforward to understand; the special cases are described in the following sections.</span></span>
 
-<span data-ttu-id="9830a-106">Ogni esempio è seguito da un blocco di commento contenente il `DebugView`.</span><span class="sxs-lookup"><span data-stu-id="9830a-106">Each example is followed by a comment block containing the `DebugView`.</span></span> 
+<span data-ttu-id="43ac7-106">Ogni esempio è seguito da un blocco di commento contenente il `DebugView`.</span><span class="sxs-lookup"><span data-stu-id="43ac7-106">Each example is followed by a comment block containing the `DebugView`.</span></span>
 
-## <a name="parameterexpression"></a><span data-ttu-id="9830a-107">ParameterExpression</span><span class="sxs-lookup"><span data-stu-id="9830a-107">ParameterExpression</span></span>
+## <a name="parameterexpression"></a><span data-ttu-id="43ac7-107">ParameterExpression</span><span class="sxs-lookup"><span data-stu-id="43ac7-107">ParameterExpression</span></span>
 
-<span data-ttu-id="9830a-108">I nomi delle variabili <xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> vengono visualizzati con un simbolo "$" all'inizio.</span><span class="sxs-lookup"><span data-stu-id="9830a-108"><xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> variable names are displayed with a "$" symbol at the beginning.</span></span>
+<span data-ttu-id="43ac7-108">I nomi delle variabili <xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> vengono visualizzati con un simbolo "$" all'inizio.</span><span class="sxs-lookup"><span data-stu-id="43ac7-108"><xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> variable names are displayed with a "$" symbol at the beginning.</span></span>
 
-<span data-ttu-id="9830a-109">Se un parametro non ha un nome, viene assegnato un nome generato automaticamente, ad esempio `$var1` o `$var2`.</span><span class="sxs-lookup"><span data-stu-id="9830a-109">If a parameter does not have a name, it is assigned an automatically generated name, such as `$var1` or `$var2`.</span></span>
+<span data-ttu-id="43ac7-109">Se un parametro non ha un nome, viene assegnato un nome generato automaticamente, ad esempio `$var1` o `$var2`.</span><span class="sxs-lookup"><span data-stu-id="43ac7-109">If a parameter does not have a name, it is assigned an automatically generated name, such as `$var1` or `$var2`.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="9830a-110">Esempi</span><span class="sxs-lookup"><span data-stu-id="9830a-110">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="43ac7-110">Esempi</span><span class="sxs-lookup"><span data-stu-id="43ac7-110">Examples</span></span>
 
 ```vb
 Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer), "num")
@@ -41,22 +41,22 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 '
 ```
 
-## <a name="constantexpressions"></a><span data-ttu-id="9830a-111">ConstantExpressions</span><span class="sxs-lookup"><span data-stu-id="9830a-111">ConstantExpressions</span></span>
+## <a name="constantexpressions"></a><span data-ttu-id="43ac7-111">ConstantExpressions</span><span class="sxs-lookup"><span data-stu-id="43ac7-111">ConstantExpressions</span></span>
 
-<span data-ttu-id="9830a-112">Per gli oggetti <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> che rappresentano valori interi, stringhe e `null`, viene visualizzato il valore della costante.</span><span class="sxs-lookup"><span data-stu-id="9830a-112">For <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> objects that represent integer values, strings, and `null`, the value of the constant is displayed.</span></span>
+<span data-ttu-id="43ac7-112">Per gli oggetti <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> che rappresentano valori interi, stringhe e `null`, viene visualizzato il valore della costante.</span><span class="sxs-lookup"><span data-stu-id="43ac7-112">For <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> objects that represent integer values, strings, and `null`, the value of the constant is displayed.</span></span>
 
-<span data-ttu-id="9830a-113">Per alcuni tipi numerici, un suffisso viene aggiunto al valore:</span><span class="sxs-lookup"><span data-stu-id="9830a-113">For some numeric types, a suffix is added to the value:</span></span>
+<span data-ttu-id="43ac7-113">Per alcuni tipi numerici, un suffisso viene aggiunto al valore:</span><span class="sxs-lookup"><span data-stu-id="43ac7-113">For some numeric types, a suffix is added to the value:</span></span>
 
-| <span data-ttu-id="9830a-114">Tipo</span><span class="sxs-lookup"><span data-stu-id="9830a-114">Type</span></span> | <span data-ttu-id="9830a-115">Parola chiave</span><span class="sxs-lookup"><span data-stu-id="9830a-115">Keyword</span></span> | <span data-ttu-id="9830a-116">Suffisso</span><span class="sxs-lookup"><span data-stu-id="9830a-116">Suffix</span></span> |  
+| <span data-ttu-id="43ac7-114">Tipo</span><span class="sxs-lookup"><span data-stu-id="43ac7-114">Type</span></span> | <span data-ttu-id="43ac7-115">Parola chiave</span><span class="sxs-lookup"><span data-stu-id="43ac7-115">Keyword</span></span> | <span data-ttu-id="43ac7-116">Suffisso</span><span class="sxs-lookup"><span data-stu-id="43ac7-116">Suffix</span></span> |
 |--|--|--|
-| <xref:System.UInt32> | [<span data-ttu-id="9830a-117">UInteger</span><span class="sxs-lookup"><span data-stu-id="9830a-117">UInteger</span></span>](../../../language-reference/data-types/uinteger-data-type.md) | <span data-ttu-id="9830a-118">G</span><span class="sxs-lookup"><span data-stu-id="9830a-118">U</span></span> |
-| <xref:System.Int64> | [<span data-ttu-id="9830a-119">Long</span><span class="sxs-lookup"><span data-stu-id="9830a-119">Long</span></span>](../../../language-reference/data-types/long-data-type.md) | <span data-ttu-id="9830a-120">L</span><span class="sxs-lookup"><span data-stu-id="9830a-120">L</span></span> |
-| <xref:System.UInt64> | [<span data-ttu-id="9830a-121">ULong</span><span class="sxs-lookup"><span data-stu-id="9830a-121">ULong</span></span>](../../../language-reference/data-types/ulong-data-type.md) | <span data-ttu-id="9830a-122">UL</span><span class="sxs-lookup"><span data-stu-id="9830a-122">UL</span></span> |
-| <xref:System.Double> | [<span data-ttu-id="9830a-123">Double</span><span class="sxs-lookup"><span data-stu-id="9830a-123">Double</span></span>](../../../language-reference/data-types/double-data-type.md) | <span data-ttu-id="9830a-124">D</span><span class="sxs-lookup"><span data-stu-id="9830a-124">D</span></span> |
-| <xref:System.Single> | [<span data-ttu-id="9830a-125">Single</span><span class="sxs-lookup"><span data-stu-id="9830a-125">Single</span></span>](../../../language-reference/data-types/single-data-type.md) | <span data-ttu-id="9830a-126">F</span><span class="sxs-lookup"><span data-stu-id="9830a-126">F</span></span> | 
-| <xref:System.Decimal> | [<span data-ttu-id="9830a-127">Decimal</span><span class="sxs-lookup"><span data-stu-id="9830a-127">Decimal</span></span>](../../../language-reference/data-types/decimal-data-type.md) | <span data-ttu-id="9830a-128">M</span><span class="sxs-lookup"><span data-stu-id="9830a-128">M</span></span> |
+| <xref:System.UInt32> | [<span data-ttu-id="43ac7-117">UInteger</span><span class="sxs-lookup"><span data-stu-id="43ac7-117">UInteger</span></span>](../../../language-reference/data-types/uinteger-data-type.md) | <span data-ttu-id="43ac7-118">G</span><span class="sxs-lookup"><span data-stu-id="43ac7-118">U</span></span> |
+| <xref:System.Int64> | [<span data-ttu-id="43ac7-119">Long</span><span class="sxs-lookup"><span data-stu-id="43ac7-119">Long</span></span>](../../../language-reference/data-types/long-data-type.md) | <span data-ttu-id="43ac7-120">L</span><span class="sxs-lookup"><span data-stu-id="43ac7-120">L</span></span> |
+| <xref:System.UInt64> | [<span data-ttu-id="43ac7-121">ULong</span><span class="sxs-lookup"><span data-stu-id="43ac7-121">ULong</span></span>](../../../language-reference/data-types/ulong-data-type.md) | <span data-ttu-id="43ac7-122">UL</span><span class="sxs-lookup"><span data-stu-id="43ac7-122">UL</span></span> |
+| <xref:System.Double> | [<span data-ttu-id="43ac7-123">Double</span><span class="sxs-lookup"><span data-stu-id="43ac7-123">Double</span></span>](../../../language-reference/data-types/double-data-type.md) | <span data-ttu-id="43ac7-124">D</span><span class="sxs-lookup"><span data-stu-id="43ac7-124">D</span></span> |
+| <xref:System.Single> | [<span data-ttu-id="43ac7-125">Single</span><span class="sxs-lookup"><span data-stu-id="43ac7-125">Single</span></span>](../../../language-reference/data-types/single-data-type.md) | <span data-ttu-id="43ac7-126">F</span><span class="sxs-lookup"><span data-stu-id="43ac7-126">F</span></span> |
+| <xref:System.Decimal> | [<span data-ttu-id="43ac7-127">Decimal</span><span class="sxs-lookup"><span data-stu-id="43ac7-127">Decimal</span></span>](../../../language-reference/data-types/decimal-data-type.md) | <span data-ttu-id="43ac7-128">M</span><span class="sxs-lookup"><span data-stu-id="43ac7-128">M</span></span> |
 
-### <a name="examples"></a><span data-ttu-id="9830a-129">Esempi</span><span class="sxs-lookup"><span data-stu-id="9830a-129">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="43ac7-129">Esempi</span><span class="sxs-lookup"><span data-stu-id="43ac7-129">Examples</span></span>
 
 ```vb
 Dim num as Integer = 10
@@ -72,11 +72,11 @@ Dim expr As ConstantExpression = Expression.Constant(num)
 '
 ```
 
-## <a name="blockexpression"></a><span data-ttu-id="9830a-130">BlockExpression</span><span class="sxs-lookup"><span data-stu-id="9830a-130">BlockExpression</span></span>
+## <a name="blockexpression"></a><span data-ttu-id="43ac7-130">BlockExpression</span><span class="sxs-lookup"><span data-stu-id="43ac7-130">BlockExpression</span></span>
 
-<span data-ttu-id="9830a-131">Se il tipo di un <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> oggetto differisce dal tipo dell'ultima espressione nel blocco, il tipo viene visualizzato tra parentesi angolari (`<` e `>`).</span><span class="sxs-lookup"><span data-stu-id="9830a-131">If the type of a <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> object differs from the type of the last expression in the block, the type is displayed within angle brackets (`<` and `>`).</span></span> <span data-ttu-id="9830a-132">In caso contrario, il tipo dell'oggetto <xref:System.Linq.Expressions.BlockExpression> non viene visualizzato.</span><span class="sxs-lookup"><span data-stu-id="9830a-132">Otherwise, the type of the <xref:System.Linq.Expressions.BlockExpression> object is not displayed.</span></span>
+<span data-ttu-id="43ac7-131">Se il tipo di un oggetto <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> differisce dal tipo dell'ultima espressione nel blocco, il tipo viene visualizzato all'interno di parentesi angolari (`<` e `>`).</span><span class="sxs-lookup"><span data-stu-id="43ac7-131">If the type of a <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> object differs from the type of the last expression in the block, the type is displayed within angle brackets (`<` and `>`).</span></span> <span data-ttu-id="43ac7-132">In caso contrario, il tipo dell'oggetto <xref:System.Linq.Expressions.BlockExpression> non viene visualizzato.</span><span class="sxs-lookup"><span data-stu-id="43ac7-132">Otherwise, the type of the <xref:System.Linq.Expressions.BlockExpression> object is not displayed.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="9830a-133">Esempi</span><span class="sxs-lookup"><span data-stu-id="9830a-133">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="43ac7-133">Esempi</span><span class="sxs-lookup"><span data-stu-id="43ac7-133">Examples</span></span>
 
 ```vb
 Dim block As BlockExpression = Expression.Block(Expression.Constant("test"))
@@ -87,7 +87,7 @@ Dim block As BlockExpression = Expression.Block(Expression.Constant("test"))
 '
 
 Dim block As BlockExpression = Expression.Block(
-    GetType(Object), 
+    GetType(Object),
     Expression.Constant("test")
 )
 '
@@ -97,13 +97,13 @@ Dim block As BlockExpression = Expression.Block(
 '
 ```
 
-## <a name="lambdaexpression"></a><span data-ttu-id="9830a-134">LambdaExpression</span><span class="sxs-lookup"><span data-stu-id="9830a-134">LambdaExpression</span></span>
+## <a name="lambdaexpression"></a><span data-ttu-id="43ac7-134">LambdaExpression</span><span class="sxs-lookup"><span data-stu-id="43ac7-134">LambdaExpression</span></span>
 
-<span data-ttu-id="9830a-135">Gli oggetti <xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> vengono visualizzati insieme ai rispettivi tipi delegato.</span><span class="sxs-lookup"><span data-stu-id="9830a-135"><xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> objects are displayed together with their delegate types.</span></span>
+<span data-ttu-id="43ac7-135">Gli oggetti <xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> vengono visualizzati insieme ai rispettivi tipi delegato.</span><span class="sxs-lookup"><span data-stu-id="43ac7-135"><xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> objects are displayed together with their delegate types.</span></span>
 
-<span data-ttu-id="9830a-136">Se un'espressione lamda non ha un nome, viene assegnato un nome generato automaticamente, ad esempio `#Lambda1` o `#Lambda2`.</span><span class="sxs-lookup"><span data-stu-id="9830a-136">If a lambda expression does not have a name, it is assigned an automatically generated name, such as `#Lambda1` or `#Lambda2`.</span></span>
+<span data-ttu-id="43ac7-136">Se un'espressione lamda non ha un nome, viene assegnato un nome generato automaticamente, ad esempio `#Lambda1` o `#Lambda2`.</span><span class="sxs-lookup"><span data-stu-id="43ac7-136">If a lambda expression does not have a name, it is assigned an automatically generated name, such as `#Lambda1` or `#Lambda2`.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="9830a-137">Esempi</span><span class="sxs-lookup"><span data-stu-id="9830a-137">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="43ac7-137">Esempi</span><span class="sxs-lookup"><span data-stu-id="43ac7-137">Examples</span></span>
 
 ```vb
 Dim lambda As LambdaExpression = Expression.Lambda(Of Func(Of Integer))(
@@ -127,15 +127,15 @@ Dim lambda As LambdaExpression = Expression.Lambda(Of Func(Of Integer))(
 '
 ```
 
-## <a name="labelexpression"></a><span data-ttu-id="9830a-138">LabelExpression</span><span class="sxs-lookup"><span data-stu-id="9830a-138">LabelExpression</span></span>
+## <a name="labelexpression"></a><span data-ttu-id="43ac7-138">LabelExpression</span><span class="sxs-lookup"><span data-stu-id="43ac7-138">LabelExpression</span></span>
 
-<span data-ttu-id="9830a-139">Se si specifica un valore predefinito per l'oggetto <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType>, questo valore viene visualizzato prima dell'oggetto <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="9830a-139">If you specify a default value for the <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType> object, this value is displayed before the <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType> object.</span></span>
+<span data-ttu-id="43ac7-139">Se si specifica un valore predefinito per l'oggetto <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType>, questo valore viene visualizzato prima dell'oggetto <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="43ac7-139">If you specify a default value for the <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType> object, this value is displayed before the <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType> object.</span></span>
 
-<span data-ttu-id="9830a-140">Il token `.Label` indica l'inizio dell'etichetta.</span><span class="sxs-lookup"><span data-stu-id="9830a-140">The `.Label` token indicates the start of the label.</span></span> <span data-ttu-id="9830a-141">Il token `.LabelTarget` indica la destinazione alla quale passare.</span><span class="sxs-lookup"><span data-stu-id="9830a-141">The `.LabelTarget` token indicates the destination of the target to jump to.</span></span>
+<span data-ttu-id="43ac7-140">Il token `.Label` indica l'inizio dell'etichetta.</span><span class="sxs-lookup"><span data-stu-id="43ac7-140">The `.Label` token indicates the start of the label.</span></span> <span data-ttu-id="43ac7-141">Il token `.LabelTarget` indica la destinazione alla quale passare.</span><span class="sxs-lookup"><span data-stu-id="43ac7-141">The `.LabelTarget` token indicates the destination of the target to jump to.</span></span>
 
-<span data-ttu-id="9830a-142">Se un'etichetta non presenta un nome, ne viene assegnato uno generato automaticamente, ad esempio `#Label1` o `#Label2`.</span><span class="sxs-lookup"><span data-stu-id="9830a-142">If a label does not have a name, it is assigned an automatically generated name, such as `#Label1` or `#Label2`.</span></span>
+<span data-ttu-id="43ac7-142">Se un'etichetta non presenta un nome, ne viene assegnato uno generato automaticamente, ad esempio `#Label1` o `#Label2`.</span><span class="sxs-lookup"><span data-stu-id="43ac7-142">If a label does not have a name, it is assigned an automatically generated name, such as `#Label1` or `#Label2`.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="9830a-143">Esempi</span><span class="sxs-lookup"><span data-stu-id="9830a-143">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="43ac7-143">Esempi</span><span class="sxs-lookup"><span data-stu-id="43ac7-143">Examples</span></span>
 
 ```vb
 Dim target As LabelTarget = Expression.Label(GetType(Integer), "SampleLabel")
@@ -154,7 +154,7 @@ Dim label1 As BlockExpression = Expression.Block(
 
 Dim target As LabelTarget = Expression.Label()
 Dim block As BlockExpression = Expression.Block(
-    Expression.Goto(target), 
+    Expression.Goto(target),
     Expression.Label(target)
 )
 '
@@ -166,11 +166,11 @@ Dim block As BlockExpression = Expression.Block(
 '
 ```
 
-## <a name="checked-operators"></a><span data-ttu-id="9830a-144">Operatori checked</span><span class="sxs-lookup"><span data-stu-id="9830a-144">Checked Operators</span></span>
+## <a name="checked-operators"></a><span data-ttu-id="43ac7-144">Operatori checked</span><span class="sxs-lookup"><span data-stu-id="43ac7-144">Checked Operators</span></span>
 
-<span data-ttu-id="9830a-145">Gli operatori vengono visualizzati con il `#` simbolo davanti l'operatore.</span><span class="sxs-lookup"><span data-stu-id="9830a-145">Checked operators are displayed with the `#` symbol in front of the operator.</span></span> <span data-ttu-id="9830a-146">Ad esempio, l'operatore di addizione checked viene visualizzato come `#+`.</span><span class="sxs-lookup"><span data-stu-id="9830a-146">For example, the checked addition operator is displayed as `#+`.</span></span>
+<span data-ttu-id="43ac7-145">Gli operatori checked vengono visualizzati con il simbolo `#` davanti all'operatore.</span><span class="sxs-lookup"><span data-stu-id="43ac7-145">Checked operators are displayed with the `#` symbol in front of the operator.</span></span> <span data-ttu-id="43ac7-146">Ad esempio, l'operatore di addizione checked viene visualizzato come `#+`.</span><span class="sxs-lookup"><span data-stu-id="43ac7-146">For example, the checked addition operator is displayed as `#+`.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="9830a-147">Esempi</span><span class="sxs-lookup"><span data-stu-id="9830a-147">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="43ac7-147">Esempi</span><span class="sxs-lookup"><span data-stu-id="43ac7-147">Examples</span></span>
 
 ```vb
 Dim expr As Expression = Expression.AddChecked(
