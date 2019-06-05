@@ -1,6 +1,6 @@
 ---
 title: Sintassi utilizzata dalla proprietà DebugView (Visual Basic)
-description: Viene descritta la sintassi speciale utilizzata dalla proprietà DebugView per produrre una rappresentazione di stringa degli alberi delle espressioni
+description: Descrive la sintassi speciale usata dalla proprietà DebugView per produrre una rappresentazione di stringa degli alberi delle espressioni
 author: zspitz
 ms.author: wiwagn
 ms.date: 05/22/2019
@@ -8,18 +8,18 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: 1b2a1164f02208cc7578820d8f8ed3bc145fb5b8
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: ae2c75607f7b9cdc40fc5c163ce533f0472ab454
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196531"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689544"
 ---
-# <a name="debugview-syntax"></a>Sintassi `DebugView` 
+# <a name="debugview-syntax"></a>Sintassi `DebugView`
 
-Il `DebugView` proprietà (disponibile solo durante il debug) fornisce un rendering di stringa degli alberi delle espressioni. La maggior parte della sintassi è piuttosto semplice da comprendere; Nelle sezioni seguenti vengono descritti i casi speciali.
+La proprietà `DebugView` (disponibile solo durante il debug) fornisce un rendering in forma di stringa degli alberi delle espressioni. La maggior parte della sintassi è piuttosto semplice da comprendere e i casi speciali vengono descritti nelle sezioni seguenti.
 
-Ogni esempio è seguito da un blocco di commento contenente il `DebugView`. 
+Ogni esempio è seguito da un blocco di commento contenente il `DebugView`.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -47,13 +47,13 @@ Per gli oggetti <xref:System.Linq.Expressions.ConstantExpression?displayProperty
 
 Per alcuni tipi numerici, un suffisso viene aggiunto al valore:
 
-| Tipo | Parola chiave | Suffisso |  
+| Tipo | Parola chiave | Suffisso |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | G |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |
 | <xref:System.UInt64> | [ULong](../../../language-reference/data-types/ulong-data-type.md) | UL |
 | <xref:System.Double> | [Double](../../../language-reference/data-types/double-data-type.md) | D |
-| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | F | 
+| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | F |
 | <xref:System.Decimal> | [Decimal](../../../language-reference/data-types/decimal-data-type.md) | M |
 
 ### <a name="examples"></a>Esempi
@@ -74,7 +74,7 @@ Dim expr As ConstantExpression = Expression.Constant(num)
 
 ## <a name="blockexpression"></a>BlockExpression
 
-Se il tipo di un <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> oggetto differisce dal tipo dell'ultima espressione nel blocco, il tipo viene visualizzato tra parentesi angolari (`<` e `>`). In caso contrario, il tipo dell'oggetto <xref:System.Linq.Expressions.BlockExpression> non viene visualizzato.
+Se il tipo di un oggetto <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> differisce dal tipo dell'ultima espressione nel blocco, il tipo viene visualizzato all'interno di parentesi angolari (`<` e `>`). In caso contrario, il tipo dell'oggetto <xref:System.Linq.Expressions.BlockExpression> non viene visualizzato.
 
 ### <a name="examples"></a>Esempi
 
@@ -87,7 +87,7 @@ Dim block As BlockExpression = Expression.Block(Expression.Constant("test"))
 '
 
 Dim block As BlockExpression = Expression.Block(
-    GetType(Object), 
+    GetType(Object),
     Expression.Constant("test")
 )
 '
@@ -154,7 +154,7 @@ Dim label1 As BlockExpression = Expression.Block(
 
 Dim target As LabelTarget = Expression.Label()
 Dim block As BlockExpression = Expression.Block(
-    Expression.Goto(target), 
+    Expression.Goto(target),
     Expression.Label(target)
 )
 '
@@ -168,7 +168,7 @@ Dim block As BlockExpression = Expression.Block(
 
 ## <a name="checked-operators"></a>Operatori checked
 
-Gli operatori vengono visualizzati con il `#` simbolo davanti l'operatore. Ad esempio, l'operatore di addizione checked viene visualizzato come `#+`.
+Gli operatori checked vengono visualizzati con il simbolo `#` davanti all'operatore. Ad esempio, l'operatore di addizione checked viene visualizzato come `#+`.
 
 ### <a name="examples"></a>Esempi
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 15e693f716d02e6f7ef8b666ddf51a8bd352f642
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487979"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690276"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Migrazione e compatibilità dei criteri di sicurezza dall'accesso di codice
 
@@ -26,7 +26,7 @@ I criteri di sicurezza dall'accesso di codice (CAS) sono diventati obsoleti in .
 
    \- oppure -
 
-- Usando il [elemento di configurazione < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) per acconsentire esplicitamente il comportamento dei criteri di criteri.
+- Usando il [ \<NetFx40_LegacySecurityPolicy > elemento di configurazione](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) per acconsentire esplicitamente il comportamento dei criteri di criteri.
 
 Di seguito sono elencate le diverse sezioni di questo argomento:
 
@@ -142,7 +142,7 @@ Per eseguire il sandboxing di un assembly, usare l'overload <xref:System.AppDoma
 
 ## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Compatibilità: Usando l'opzione Legacy relativa ai criteri CAS
 
-Il [elemento di configurazione < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) consente di specificare che un processo o la libreria Usa criteri CAS legacy. Quando si abilita questo elemento, gli overload relativi ai criteri e all'evidenza funzionano in modo analogo a quanto avveniva nelle versioni precedenti del framework.
+Il [ \<NetFx40_LegacySecurityPolicy > elemento di configurazione](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) consente di specificare che un processo o la libreria Usa criteri CAS legacy. Quando si abilita questo elemento, gli overload relativi ai criteri e all'evidenza funzionano in modo analogo a quanto avveniva nelle versioni precedenti del framework.
 
 > [!NOTE]
 > Il comportamento dei criteri di sicurezza dall'accesso di codice viene specificato per ogni versione runtime, pertanto la modifica di questi criteri per una versione runtime non influisce sui criteri di sicurezza dall'accesso di codice di un'altra versione.

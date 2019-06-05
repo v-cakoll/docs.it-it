@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa05fe1e170a0285df73d179ef39db6301059ac8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490957"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690527"
 ---
 # <a name="cryptographic-services"></a>servizi crittografici
 
@@ -266,7 +266,7 @@ La classe <xref:System.Security.Cryptography.RNGCryptoServiceProvider> è un'imp
 
 ## <a name="clickonce-manifests"></a>Manifesti ClickOnce
 
-In [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]sono disponibili le classi di crittografia seguenti che consentono di ottenere e verificare informazioni sulle firme del manifesto per applicazioni distribuite con la [tecnologia ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment):
+In .NET Framework 3.5, le classi di crittografia seguenti consentono di ottenere e verificare informazioni sulle firme del manifesto per le applicazioni che vengono distribuite mediante [tecnologia ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment):
 
 - La classe <xref:System.Security.Cryptography.ManifestSignatureInformation> ottiene informazioni su una firma del manifesto quando si usano i relativi overload del metodo <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> .
 
@@ -290,7 +290,7 @@ In [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]sono disponib
 
 ## <a name="suite-b-support"></a>Supporto per Suite B
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] supporta l'insieme di algoritmi di crittografia Suite B pubblicati da National Security Agency (NSA). Per altre informazioni su Suite B, vedere la pagina relativa alla [scheda descrittiva della crittografia Suite B dell'agenzia NSA](https://www.nsa.gov/what-we-do/information-assurance/).
+.NET Framework 3.5 supporta il set B Suite di algoritmi di crittografia pubblicati da National Security Agency (NSA). Per altre informazioni su Suite B, vedere la pagina relativa alla [scheda descrittiva della crittografia Suite B dell'agenzia NSA](https://www.nsa.gov/what-we-do/information-assurance/).
 
 Sono inclusi gli algoritmi seguenti:
 
@@ -314,7 +314,7 @@ Le classi Cryptography Next Generation (CNG) forniscono un wrapper gestito intor
 
 La classe <xref:System.Security.Cryptography.CngKey> viene usata per una varietà di operazioni aggiuntive, incluse l'apertura, la creazione, l'eliminazione e l'esportazione di chiavi. Fornisce inoltre l'accesso all'handle di chiave sottostante da usare quando le funzioni native vengono chiamate direttamente.
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] include anche varie classi CNG di supporto, quali le seguenti:
+.NET Framework 3.5 include anche varie classi CNG, ad esempio di supporto:
 
 - <xref:System.Security.Cryptography.CngProvider> gestisce un provider di archiviazione chiavi.
 
