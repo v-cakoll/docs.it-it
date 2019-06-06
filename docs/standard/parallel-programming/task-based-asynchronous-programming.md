@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409926"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300627"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programmazione asincrona basata su attività
 
@@ -113,21 +113,21 @@ Le opzioni possono essere combinate usando un'operazione **OR** bit per bit. Nel
 
 ## <a name="tasks-threads-and-culture"></a>Attività, thread e impostazioni cultura
 
-Ogni thread dispone di impostazioni cultura nonché di impostazioni cultura dell'interfaccia utente associate e definite rispettivamente dalle proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>. Le impostazioni cultura di un thread vengono usate in operazioni quali formattazione, analisi, ordinamento e confronto di stringhe. Le impostazioni cultura dell'interfaccia utente di un thread vengono usate per la ricerca delle risorse. In genere, a meno che non sia possibile specificare delle impostazioni cultura predefinite per tutti i thread in un dominio applicazione usando le proprietà <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>, le impostazioni cultura e le impostazioni cultura dell'interfaccia utente predefinite per un thread vengono definite dalle impostazioni cultura del sistema. Se si impostano le impostazioni cultura di un thread in modo esplicito e si avvia un nuovo thread, quest'ultimo non eredita le impostazioni cultura del thread chiamante, al contrario, le relative impostazioni cultura vengono definite da quelle del sistema. Il modello di programmazione basato su attività per le applicazioni destinate alle versioni di .NET Framework precedenti a [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] è conforme a questa prassi.
+Ogni thread dispone di impostazioni cultura nonché di impostazioni cultura dell'interfaccia utente associate e definite rispettivamente dalle proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>. Le impostazioni cultura di un thread vengono usate in operazioni quali formattazione, analisi, ordinamento e confronto di stringhe. Le impostazioni cultura dell'interfaccia utente di un thread vengono usate per la ricerca delle risorse. In genere, a meno che non sia possibile specificare delle impostazioni cultura predefinite per tutti i thread in un dominio applicazione usando le proprietà <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>, le impostazioni cultura e le impostazioni cultura dell'interfaccia utente predefinite per un thread vengono definite dalle impostazioni cultura del sistema. Se si impostano le impostazioni cultura di un thread in modo esplicito e si avvia un nuovo thread, quest'ultimo non eredita le impostazioni cultura del thread chiamante, al contrario, le relative impostazioni cultura vengono definite da quelle del sistema. Il modello di programmazione basato su attività per le applicazioni destinate alle versioni di .NET Framework precedenti a .NET Framework 4.6 è conforme a questa prassi.
 
 > [!IMPORTANT]
-> Si noti che le impostazioni cultura del thread chiamante come parte del contesto di un'attività si applicano alle applicazioni che hanno come *destinazione*[!INCLUDE[net_v46](../../../includes/net-v46-md.md)], non applicazioni che vengono *eseguite* in [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. È possibile usare una versione specifica di .NET Framework come destinazione quando si crea il progetto in Visual Studio selezionando la versione nell'elenco a discesa nella parte superiore della finestra di dialogo **Nuovo progetto** oppure, esternamente a Visual Studio, è possibile usare l'attributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute>. Per applicazioni destinate a versioni di .NET Framework precedenti alla [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], o non destinate a una versione specifica di .NET Framework, le impostazioni cultura di un'attività continuano a essere determinate dalle impostazioni cultura del thread in cui sono in esecuzione.
+> Si noti che le impostazioni cultura del thread chiamante come parte del contesto di un'attività si applicano alle applicazioni che hanno come *destinazione* .NET Framework 4.6, non applicazioni che vengono *eseguite* in .NET Framework 4.6. È possibile usare una versione specifica di .NET Framework come destinazione quando si crea il progetto in Visual Studio selezionando la versione nell'elenco a discesa nella parte superiore della finestra di dialogo **Nuovo progetto** oppure, esternamente a Visual Studio, è possibile usare l'attributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute>. Per applicazioni destinate a versioni di .NET Framework precedenti a .NET Framework 4.6, o non destinate a una versione specifica di .NET Framework, le impostazioni cultura di un'attività continuano a essere determinate dalle impostazioni cultura del thread in cui sono in esecuzione.
 
-A partire dalle applicazioni destinate a [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], le impostazioni cultura del thread chiamante viene ereditata da ogni attività, anche se l'attività viene eseguita in modo asincrono in un pool di thread.
+A partire dalle applicazioni destinate a .NET Framework 4.6, le impostazioni cultura del thread chiamante vengono ereditate da ogni attività, anche se l'attività viene eseguita in modo asincrono in un pool di thread.
 
-Nell'esempio seguente viene illustrato questo concetto. Viene usato l'attributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> per indicare [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] come destinazione e vengono modificate le impostazioni cultura correnti dell'applicazione in francese (Francia) o, se francese (Francia) corrisponde già alle impostazioni cultura correnti, inglese (Stati Uniti). Viene quindi richiamato un delegato denominato `formatDelegate` che restituisce alcuni numeri formattati come valori di valuta nelle nuove impostazioni cultura. Si noti che, sia che il delegato venga eseguito come attività in modo sincrono o asincrono, esso restituirà il risultato previsto perché le impostazioni cultura del thread chiamante vengono ereditate dall'attività asincrona.
+Nell'esempio seguente viene illustrato questo concetto. Viene usato l'attributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> per indicare .NET Framework 4.6 come destinazione e vengono modificate le impostazioni cultura correnti dell'applicazione in francese (Francia) o, se francese (Francia) corrisponde già alle impostazioni cultura correnti, inglese (Stati Uniti). Viene quindi richiamato un delegato denominato `formatDelegate` che restituisce alcuni numeri formattati come valori di valuta nelle nuove impostazioni cultura. Si noti che, sia che il delegato venga eseguito come attività in modo sincrono o asincrono, esso restituirà il risultato previsto perché le impostazioni cultura del thread chiamante vengono ereditate dall'attività asincrona.
 
 [!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
 [!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
 
 Se si usa Visual Studio, è possibile omettere l'attributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> e selezionare invece .NET Framework 4.6 come destinazione quando si crea il progetto nella finestra di dialogo **Nuovo progetto**.
 
-Per ottenere un output che rifletta il comportamento delle app che hanno come destinazione versioni di .NET Framework precedenti alla [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], rimuovere l'attributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> dal codice sorgente. L'output rifletterà le convenzioni di formattazione delle impostazioni cultura di sistema predefinite e non di quelle del thread chiamante.
+Per ottenere un output che rifletta il comportamento delle app che hanno come destinazione versioni di .NET Framework precedenti a .NET Framework 4.6, rimuovere l'attributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> dal codice sorgente. L'output rifletterà le convenzioni di formattazione delle impostazioni cultura di sistema predefinite e non di quelle del thread chiamante.
 
 Per altre informazioni sulle attività asincrone e sulle impostazioni cultura, vedere la sezione dedicata alle impostazioni cultura e alle operazioni asincrone basate sulle attività nell'argomento dedicato alla classe <xref:System.Globalization.CultureInfo>.
 
@@ -222,11 +222,11 @@ Tramite il metodo <xref:System.Threading.Tasks.Task.FromResult%2A?displayPropert
 
 Quando un'attività genera una o più eccezioni, il sistema esegue il wrapping di queste ultime in un'eccezione <xref:System.AggregateException>. Tale eccezione viene ripropagata al thread che si unisce all'attività, ovvero in genere il thread che resta in attesa del completamento dell'attività o che accede alla proprietà <xref:System.Threading.Tasks.Task%601.Result%2A>. Questo comportamento serve a imporre i criteri di .NET Framework secondo cui tutte le eccezioni non gestite devono comportare per impostazione predefinita la terminazione del processo. Il codice che effettua la chiamata può gestire le eccezioni usando uno qualsiasi degli elementi seguenti in un blocco `try`/`catch`:
 
-- Metodo <xref:System.Threading.Tasks.Task.Wait%2A> 
+- Metodo <xref:System.Threading.Tasks.Task.Wait%2A>
 
-- Metodo <xref:System.Threading.Tasks.Task.WaitAll%2A> 
+- Metodo <xref:System.Threading.Tasks.Task.WaitAll%2A>
 
-- Metodo <xref:System.Threading.Tasks.Task.WaitAny%2A> 
+- Metodo <xref:System.Threading.Tasks.Task.WaitAny%2A>
 
 - Proprietà <xref:System.Threading.Tasks.Task%601.Result%2A>
 

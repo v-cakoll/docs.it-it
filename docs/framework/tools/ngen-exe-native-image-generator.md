@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e425394df0d04ffbb4cde41c83a9efe3c5b4abe0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 011bb2d7a1a700ba4daf86d96d825373e353f57e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481262"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457423"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (generatore di immagini native)
 
@@ -139,7 +139,7 @@ Per eseguire Ngen.exe, è necessario disporre di privilegi amministrativi.
 > [!CAUTION]
 > Non eseguire Ngen.exe su assembly che non sono completamente attendibili. A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Ngen.exe compila assembly con attendibilità totale e i criteri di sicurezza dall'accesso di codice non vengono più valutati.
 
-A partire da [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], le immagini native generate con Ngen.exe non possono più essere caricate in applicazioni in modalità di esecuzione parzialmente attendibile. Viene invece richiamato il compilatore JIT.
+A partire da .NET Framework 4, le immagini native generate con Ngen.exe non possono più essere caricate in applicazioni in modalità di esecuzione parzialmente attendibile. Viene invece richiamato il compilatore JIT.
 
 Ngen.exe genera immagini native per l'assembly specificato dall'argomento `assemblyname` di `install` e tutte le relative dipendenze. Le dipendenze vengono determinate in base ai riferimenti presenti nel manifesto dell'assembly. L'unico scenario in cui è necessario installare separatamente una dipendenza si verifica quando l'applicazione ne esegue il caricamento tramite reflection, ad esempio chiamando il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.
 

@@ -1,7 +1,7 @@
 ---
 title: Procedure consigliate per l'uso delle stringhe in .NET
 description: Informazioni su come usare le stringhe in modo efficace in applicazioni .NET.
-ms.date: 09/13/2018
+ms.date: 05/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 82fdcae2887cf5a3428a0c874b43d9770f35afcf
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052987"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250813"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedure consigliate per l'uso delle stringhe in .NET
 <a name="top"></a> .NET offre un ampio supporto per lo sviluppo di applicazioni localizzate e globalizzate e semplifica l'applicazione delle convenzioni relative alle impostazioni cultura correnti o alle impostazioni cultura specifiche quando si eseguono operazioni comuni come l'ordinamento e la visualizzazione delle stringhe. Tuttavia, l'ordinamento o il confronto delle stringhe non è sempre un'operazione con distinzione delle impostazioni cultura. Ad esempio, le stringhe usate internamente da un'applicazione in genere devono essere gestite in modo identico in tutte le impostazioni cultura. Quando i dati di stringa indipendenti dalle impostazioni cultura, ad esempio i tag XML, i tag HTML, i nomi utente, i percorsi di file e i nomi degli oggetti di sistema, vengono interpretati come dati con distinzione delle impostazioni cultura, nel codice dell'applicazione possono verificarsi bug complessi, riduzioni delle prestazioni e, in alcuni casi, problemi di sicurezza.  
@@ -69,7 +69,7 @@ ms.locfileid: "66052987"
   
 - Usare i metodi <xref:System.String.Compare%2A?displayProperty=nameWithType> e <xref:System.String.CompareTo%2A?displayProperty=nameWithType> per ordinare le stringhe, non per controllare l'uguaglianza.  
   
-- Usare la formattazione con distinzione delle impostazioni cultura per visualizzare i dati non di tipo stringa, ad esempio numeri e dati, in un'interfaccia utente. Usare la formattazione con la lingua inglese per conservare i dati non di tipo stringa in formato stringa.  
+- Usare la formattazione con distinzione delle impostazioni cultura per visualizzare i dati non di tipo stringa, ad esempio numeri e dati, in un'interfaccia utente. Usare la formattazione con le [impostazioni cultura inglese non dipendenti da paese/area geografica](xref:System.Globalization.CultureInfo.InvariantCulture) per salvare in modo permanente i dati non di tipo stringa in formato stringa.  
   
  Evitare le operazioni seguenti quando si usano le stringhe:  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66052987"
 > [!NOTE]
 > È possibile scaricare le [tabelle di ordinamento spessore](https://www.microsoft.com/download/details.aspx?id=10921), un set di file di testo che contengono informazioni sugli spessori dei caratteri usati nelle operazioni di ordinamento e confronto per i sistemi operativi Windows, e la [tabella degli elementi delle regole di confronto Unicode predefinite](https://www.unicode.org/Public/UCA/latest/allkeys.txt), la versione più recente della tabella di ordinamento spessore per Linux e MacOS. La versione specifica della tabella di ordinamento spessore in Linux e macOS dipende dalla versione delle librerie [International Components for Unicode](http://site.icu-project.org/) installate nel sistema. Per informazioni sulle versioni ICU e sulle versioni Unicode implementate, vedere [Downloading ICU](http://site.icu-project.org/download) (Download di ICU).
 
- Tuttavia, la valutazione di due stringhe per l'uguaglianza e l'ordinamento non produce un unico risultato corretto; l'esito dipende dai criteri usati per il confronto delle stringhe. In particolare, i confronti tra stringhe ordinali o basati sulle convenzioni di utilizzo di maiuscole e minuscole e di ordinamento delle impostazioni cultura correnti o della lingua inglese (impostazioni indipendenti dalle impostazioni cultura basate sulla lingua inglese) possono produrre risultati diversi.  
+ Tuttavia, la valutazione di due stringhe per l'uguaglianza e l'ordinamento non produce un unico risultato corretto; l'esito dipende dai criteri usati per il confronto delle stringhe. In particolare, i confronti tra stringhe ordinali o basati sulle convenzioni di uso di maiuscole e minuscole e di ordinamento delle impostazioni cultura correnti o delle [impostazioni cultura inglese non dipendenti da paese/area geografica](xref:System.Globalization.CultureInfo.InvariantCulture) possono produrre risultati diversi.  
 
 I confronti di stringhe tramite versioni diverse di .NET oppure tramite .NET in sistemi operativi o versioni del sistema operativo diverse possono inoltre restituire risultati diversi. Per altre informazioni, vedere [Stringhe e standard Unicode](xref:System.String#Unicode). 
 
@@ -348,10 +348,36 @@ I confronti di stringhe tramite versioni diverse di .NET oppure tramite .NET in 
  [Torna all'inizio](#top)  
   
 <a name="Formatted"></a>   
-## <a name="displaying-and-persisting-formatted-data"></a>Visualizzazione e conservazione dei dati formattati  
- Quando si consente agli utenti di visualizzare dati non di tipo stringa, come numeri e date e ore, formattarli usando le impostazioni cultura dell'utente. Per impostazione predefinita, il metodo <xref:System.String.Format%2A?displayProperty=nameWithType> e i metodi `ToString` dei tipi numerici e dei tipi data e ora usano le impostazioni cultura del thread corrente per le operazioni di formattazione. Per specificare esplicitamente che il metodo di formattazione deve usare le impostazioni cultura correnti, è possibile chiamare un overload di un metodo di formattazione con un parametro `provider` , ad esempio <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> o <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, e passare la proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> .  
-  
- È possibile conservare i dati non di tipo stringa come dati binari o formattati. Se si sceglie di salvarli come dati formattati, è necessario chiamare un overload del metodo di formattazione che include un parametro `provider` e passare la proprietà <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> . La lingua inglese fornisce un formato coerente per i dati formattati, indipendente dalle impostazioni cultura e dal computer. Al contrario, conservare i dati formattati con impostazioni cultura diverse dalla lingua inglese presenta diverse limitazioni:  
+## <a name="displaying-and-persisting-formatted-data"></a>Visualizzazione e conservazione dei dati formattati
+
+Quando si consente agli utenti di visualizzare dati non di tipo stringa, come numeri e date e ore, formattarli usando le impostazioni cultura dell'utente. Per impostazione predefinita, nei casi seguenti si usano impostazioni cultura del thread corrente nelle operazioni di formattazione:
+
+- Stringhe interpolate supportate da compilatori [C#](../../csharp/language-reference/tokens/interpolated.md) e [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+
+- Operazioni di concatenazione di stringhe che usano operatori di concatenazione [ C# ](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) o [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) o che chiamano il metodo <xref:System.String.Concat%2A?displayProperty=nameWithType> direttamente.
+
+- Metodo <xref:System.String.Format%2A?displayProperty=nameWithType> .
+
+- Metodi `ToString` dei tipi numerici e dei tipi data e ora.
+
+Per specificare in modo esplicito che una stringa deve essere formattata usando le convenzioni delle impostazioni cultura definite o le [impostazioni cultura inglese non dipendenti da paese/area geografica](xref:System.Globalization.CultureInfo.InvariantCulture), è possibile eseguire le operazioni seguenti:
+
+- Quando si usano i metodi <xref:System.String.Format%2A?displayProperty=nameWithType> e `ToString`, chiamare un overload con un parametro `provider`, ad esempio <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> o <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> e passarlo alla proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, un'istanza di <xref:System.Globalization.CultureInfo> che rappresenta il valore desiderato delle impostazioni cultura, o proprietà <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType>.  
+
+- Per la concatenazione di stringhe, non consentire al compilatore di eseguire tutte le conversioni implicite. In alternativa, eseguire una conversione esplicita tramite la chiamata a un overload di `ToString` che abbia un parametro `provider`. Ad esempio, il compilatore usa in modo implicito le impostazioni cultura correnti durante la conversione di un valore <xref:System.Double> in una stringa nel codice C# seguente:
+
+  [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
+
+  In alternativa, è possibile specificare esplicitamente le impostazioni cultura le cui convenzioni di formattazione vengono usate nella conversione chiamando il metodo <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType>, come nel caso del codice C# seguente:
+
+  [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
+
+- Per l'interpolazione di stringhe, anziché assegnare una stringa interpolata a un'istanza di <xref:System.String>, assegnarla a un'istanza di <xref:System.FormattableString>. È quindi possibile chiamare il metodo <xref:System.FormattableString.ToString?displayProperty=nameWithType> per produrre una stringa di risultato che rifletta le convenzioni delle impostazioni cultura correnti, oppure è possibile chiamare il metodo <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> per produrre una stringa di risultato che rifletta le convenzioni delle impostazioni cultura specificate. È anche possibile passare la stringa formattabile al metodo statico <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> per produrre una stringa di risultato che rifletta le convenzioni delle impostazioni cultura inglese non dipendenti da paese/area geografica. Questo approccio viene illustrato nell'esempio seguente: L'output dell'esempio riflette le impostazioni cultura correnti en-US.
+
+  [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
+  [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]
+
+È possibile conservare i dati non di tipo stringa come dati binari o formattati. Se si sceglie di salvarli come dati formattati, è necessario chiamare un overload del metodo di formattazione che include un parametro `provider` e passare la proprietà <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> . La lingua inglese fornisce un formato coerente per i dati formattati, indipendente dalle impostazioni cultura e dal computer. Al contrario, conservare i dati formattati con impostazioni cultura diverse dalla lingua inglese presenta diverse limitazioni:  
   
 - È probabile che i dati non saranno utilizzabili se vengono recuperati in un sistema con impostazioni cultura diverse oppure se l'utente del sistema corrente modifica le impostazioni cultura correnti e prova a recuperare i dati.  
   
@@ -366,7 +392,7 @@ I confronti di stringhe tramite versioni diverse di .NET oppure tramite .NET in 
   
  Tuttavia, se si sostituisce la proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> con <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> nelle chiamate a <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> e a <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, i dati persistenti di data e ora vengono ripristinati correttamente, come illustrato nell'output riportato di seguito.  
   
-```  
+```console  
 06.05.1758 21:26  
 05.05.1818 07:19  
 22.04.1870 23:54  

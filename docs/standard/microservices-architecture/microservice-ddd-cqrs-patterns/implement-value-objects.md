@@ -2,12 +2,12 @@
 title: Implementazione di oggetti valore
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni su dettagli e opzioni per implementare oggetti valore con le nuove funzionalità di Entity Framework.
 ms.date: 10/08/2018
-ms.openlocfilehash: 850d571ffb92f2d200e24430a9611fb13b64e635
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644305"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423728"
 ---
 # <a name="implement-value-objects"></a>Implementare oggetti valore
 
@@ -21,7 +21,7 @@ La figura 7-13 illustra l'oggetto valore Address all'interno dell'aggregazione O
 
 **Figura 7-13**. Oggetto valore Address all'interno dell'aggregazione Order
 
-Come illustrato nella figura 7-13, un'entità è generalmente composta da più attributi. Ad esempio, l'entità `Order` può essere modellata come entità con un'identità, composta internamente da un set di attributi come OrderId, OrderDate, OrderItems e così via. Invece l'indirizzo, che è semplicemente un valore complesso costituito da paese, strada, città e così via, e che non ha un'identità in questo dominio, deve essere modellato e gestito come oggetto valore.
+Come illustrato nella figura 7-13, un'entità è generalmente composta da più attributi. Ad esempio, l'entità `Order` può essere modellata come entità con un'identità, composta internamente da un set di attributi come OrderId, OrderDate, OrderItems e così via. Invece l'indirizzo, che è semplicemente un valore complesso costituito da paese/area geografica, strada, città e così via, e che non ha un'identità in questo dominio, deve essere modellato e gestito come oggetto valore.
 
 ## <a name="important-characteristics-of-value-objects"></a>Caratteristiche importanti degli oggetti valore
 
@@ -319,7 +319,7 @@ public class Address
 - **Proprietà shadow** \
   [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
-- **Complex types and/or value objects (Tipi complessi e/o oggetti valore)**. Discussione nel repository GitHub di EF Core (scheda Issues) \
+- **Complex types and/or value objects (Tipi complessi e/o oggetti valore)** . Discussione nel repository GitHub di EF Core (scheda Issues) \
   <https://github.com/aspnet/EntityFramework/issues/246>
 
 - **ValueObject.cs.** Classe oggetti valore di base in eShopOnContainers. \

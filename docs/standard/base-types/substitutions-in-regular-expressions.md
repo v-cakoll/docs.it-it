@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51e22407bd20cc6aa17b242948a83d698167590e
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 5c06a20e3d6cf3030da1cc63435423e087408aa6
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030158"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301509"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sostituzioni nelle espressioni regolari
 <a name="Top"></a> Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei criteri di sostituzione. Utilizzano un modello di espressione regolare per definire in tutto o in parte il testo che sostituirà il testo corrispondente nella stringa di input. Il criterio di sostituzione può essere costituito da una o più sostituzioni insieme a caratteri letterali. I criteri di sostituzione vengono forniti agli overload del metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> che dispongono di un parametro `replacement` e al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> . I metodi sostituiscono il criterio di ricerca con il criterio definito dal parametro `replacement` .  
@@ -29,14 +29,14 @@ ms.locfileid: "54030158"
   
 |Sostituzione|Description|  
 |------------------|-----------------|  
-|`$` *numero*|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo di acquisizione identificato da *numero*dove *numero* è un valore decimale. Per ulteriori informazioni, vedere [Sostituzione di un gruppo numerato](#Numbered).|  
-|`${` *name* `}`|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo denominato definito da `(?<`*nome*`> )` . Per ulteriori informazioni, vedere [Sostituzione di un gruppo denominato](#Named).|  
-|`$$`|Include un solo simbolo letterale "$" nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione di un simbolo "$"](#DollarSign).|  
-|`$&`|Include una copia dell'intera corrispondenza nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione dell'intera corrispondenza](#EntireMatch).|  
-|``$` ``|Include nella stringa di sostituzione tutto il testo della stringa di input precedente alla corrispondenza. Per ulteriori informazioni, vedere [Sostituzione del testo prima della corrispondenza](#BeforeMatch).|  
-|`$'`|Include nella stringa di sostituzione tutto il testo della stringa di input successivo alla corrispondenza. Per ulteriori informazioni, vedere [Sostituzione del testo dopo la corrispondenza](#AfterMatch).|  
-|`$+`|Include nella stringa di sostituzione l'ultimo gruppo acquisito. Per ulteriori informazioni, vedere [Sostituzione dell'ultimo gruppo acquisito](#LastGroup).|  
-|`$_`|Include l'intera stringa di input nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione dell'intera stringa di input](#EntireString).|  
+|$  *numero*|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo di acquisizione identificato da *numero*dove *numero* è un valore decimale. Per ulteriori informazioni, vedere [Sostituzione di un gruppo numerato](#Numbered).|  
+|${ *nome* }|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo denominato definito da `(?<`*nome*`> )` . Per ulteriori informazioni, vedere [Sostituzione di un gruppo denominato](#Named).|  
+|$$|Include un solo simbolo letterale "$" nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione di un simbolo "$"](#DollarSign).|  
+|$&|Include una copia dell'intera corrispondenza nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione dell'intera corrispondenza](#EntireMatch).|  
+|$\`|Include nella stringa di sostituzione tutto il testo della stringa di input precedente alla corrispondenza. Per ulteriori informazioni, vedere [Sostituzione del testo prima della corrispondenza](#BeforeMatch).|  
+|$'|Include nella stringa di sostituzione tutto il testo della stringa di input successivo alla corrispondenza. Per ulteriori informazioni, vedere [Sostituzione del testo dopo la corrispondenza](#AfterMatch).|  
+|$+|Include nella stringa di sostituzione l'ultimo gruppo acquisito. Per ulteriori informazioni, vedere [Sostituzione dell'ultimo gruppo acquisito](#LastGroup).|  
+|$_|Include l'intera stringa di input nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione dell'intera stringa di input](#EntireString).|  
   
 ## <a name="substitution-elements-and-replacement-patterns"></a>Elementi di sostituzione e criteri di sostituzione  
  Le sostituzioni sono gli unici costrutti speciali riconosciuti in un criterio di sostituzione. Nessuno degli altri elementi del linguaggio delle espressioni regolari, compresi i caratteri di escape e il punto (`.`), che corrispondono a qualsiasi carattere, è supportato. Analogamente, gli elementi del linguaggio di sostituzione sono riconosciuti solo nei criteri di sostituzione e non sono mai validi nei modelli di espressioni regolari.  

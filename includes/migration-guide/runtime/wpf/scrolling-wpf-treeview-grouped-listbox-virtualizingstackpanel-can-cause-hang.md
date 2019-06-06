@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 0887379fb23e9e66c6cc55a3774545162634c3f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 53fc2a51a7995e9b6ad43e28429313d2aea9abf1
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236710"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379249"
 ---
-### <a name="scrolling-a-wpf-treeview-or-grouped-listbox-in-a-virtualizingstackpanel-can-cause-a-hang"></a>Lo scorrimento di un controllo TreeView WPF o ListBox raggruppato in un VirtualizingStackPanel può causare un blocco
+### <a name="scrolling-a-wpf-treeview-or-grouped-listbox-in-a-virtualizingstackpanel-can-result-in-an-unresponsive-application"></a>Lo scorrimento di un controllo TreeView WPF o ListBox raggruppato in VirtualizingStackPanel può causare rallentare la risposta di un'applicazione
 
 |   |   |
 |---|---|
-|Dettagli|In .NET Framework 4.5, lo scorrimento di un controllo <xref:System.Windows.Controls.TreeView?displayProperty=name> WPF in un pannello Stack virtualizzato può causare blocchi se sono presenti margini nel viewport (tra gli elementi nel controllo <xref:System.Windows.Controls.TreeView?displayProperty=name>, ad esempio, o in un elemento ItemsPresenter). In alcuni casi, inoltre, elementi di dimensioni diverse nella visualizzazione possono causare instabilità anche se non sono presenti margini.|
+|Dettagli|In .NET Framework 4.5 lo scorrimento di un controllo <xref:System.Windows.Controls.TreeView?displayProperty=name> WPF in un pannello Stack virtualizzato può rallentare la risposta di un'applicazione se sono presenti margini nel viewport (ad esempio tra gli elementi nel controllo <xref:System.Windows.Controls.TreeView?displayProperty=name> oppure in un elemento ItemsPresenter). In alcuni casi, inoltre, elementi di dimensioni diverse nella visualizzazione possono causare instabilità anche se non sono presenti margini.|
 |Suggerimento|È possibile evitare questo bug eseguendo l'aggiornamento a .NET Framework 4.5.1. In alternativa, i margini possono essere rimossi dalle raccolte di visualizzazioni (ad esempio <xref:System.Windows.Controls.TreeView?displayProperty=name>) all'interno di pannelli Stack virtualizzati, se tutti gli elementi contenuti sono della stessa dimensione.|
 |Ambito|Principale|
 |Versione|4.5|

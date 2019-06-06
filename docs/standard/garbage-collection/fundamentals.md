@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccea0aace05016f8e485de92d61f23622d7db797
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c6b7b120a5a21301ff82aa8ebd1cfc169f7884e4
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615148"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457444"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Principi fondamentali di Garbage Collection
 <a name="top"></a> In Common Language Runtime (CLR) il Garbage Collector funge da gestore di memoria automatico, offrendo i seguenti vantaggi:  
@@ -149,7 +149,7 @@ ms.locfileid: "64615148"
   
      Poiché le raccolte di generazione 2 possono occupare più segmenti, gli oggetti promossi alla generazione 2 possono essere spostati in un segmento meno recente. Gli oggetti esclusi di generazione 1 e 2 possono essere spostati in un segmento diverso, in quanto vengono promossi alla generazione 2.  
   
-     L'heap oggetti grandi non viene in genere compresso perché la copia di oggetti grandi impone un calo delle prestazioni. Tuttavia, a partire da [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], è possibile usare la proprietà <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> per comprimere l'heap oggetti grandi su richiesta.  
+     L'heap oggetti grandi non viene in genere compresso perché la copia di oggetti grandi impone un calo delle prestazioni. Tuttavia, a partire da .NET Framework 4.5.1, è possibile usare la proprietà <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> per comprimere l'heap di oggetti di grandi dimensioni su richiesta.  
   
  Per stabilire se gli oggetti sono attivi, il Garbage Collector usa le seguenti informazioni:  
   
@@ -253,7 +253,7 @@ Garbage Collection contemporanea
  In un'operazione di Garbage Collection in background, le generazioni temporanee (0 e 1) vengono raccolte in base alle esigenze mentre è in corso la raccolta di generazione 2. La modalità Garbage Collection in background non prevede impostazioni; viene abilitata automaticamente con la modalità simultanea. Le operazioni di Garbage Collection in background vengono usate in sostituzione delle operazioni simultanee. Al pari di queste ultime, le operazioni di Garbage Collection in background vengono eseguite in un thread dedicato e sono applicabili unicamente alle raccolte di generazione 2.  
   
 > [!NOTE]
->  Le operazioni di Garbage Collection in background sono disponibili solo in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] e versioni successive. In [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]è supportato solo per l'operazione di Garbage Collection per workstation. A partire da .NET Framework 4.5, l'operazione di Garbage Collection in background è disponibile sia per workstation sia per server.  
+>  Le operazioni di Garbage Collection in background sono disponibili solo in .NET Framework 4 e versioni successive. In .NET Framework 4 è supportato solo per l'operazione di Garbage Collection per workstation. A partire da .NET Framework 4.5, l'operazione di Garbage Collection in background è disponibile sia per workstation sia per server.  
   
  Una raccolta nelle generazioni temporanee durante un'operazione in background è definita Garbage Collection in primo piano. Durante l'esecuzione di un'operazione di Garbage Collection in primo piano, tutti i thread gestiti vengono sospesi.  
   

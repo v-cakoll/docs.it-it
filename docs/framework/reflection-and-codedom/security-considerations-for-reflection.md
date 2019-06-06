@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ef6b73d683d43b2a33628db13fa592c7f02199a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585998"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457301"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerazioni sulla sicurezza in relazione alla reflection
 La reflection consente di ottenere informazioni su tipi e membri e di accedere ai membri, vale a dire chiamare metodi e costruttori, ottenere e impostare valori di proprietà, aggiungere e rimuovere gestori eventi e così via. L'uso della reflection per ottenere informazioni su tipi e membri non presenta limitazioni. L'intero codice può usare la reflection per eseguire le attività seguenti:  
@@ -58,10 +58,10 @@ La reflection consente di ottenere informazioni su tipi e membri e di accedere a
   
  Il codice dell'applicazione eseguito dalla riga di comando viene eseguito con attendibilità totale. A condizione che non sia contrassegnato come Transparent, può usare la reflection per accedere a membri critici per la sicurezza. Quando lo stesso codice viene eseguito con attendibilità parziale (ad esempio in un dominio dell'applicazione creato mediante sandbox), il livello di attendibilità dell'assembly determina se può accedere a codice critico per la sicurezza: se l'assembly ha un nome sicuro e viene installato nella Global Assembly Cache, è un assembly attendibile e può chiamare membri critici per la sicurezza. Nel caso non sia attendibile, diventa Transparent anche se non è stato contrassegnato come tale e non può accedere a membri critici per la sicurezza.  
   
- Per altre informazioni sul modello di sicurezza in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], vedere [Security Changes](../../../docs/framework/security/security-changes.md) (Modifiche di sicurezza).  
+ Per altre informazioni sul modello di sicurezza in .NET Framework 4.5, vedere [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
   
 ## <a name="reflection-and-transparency"></a>Reflection e trasparenza  
- A partire da [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], Common Language Runtime determina il livello di trasparenza di un tipo o membro sulla base di diversi fattori, inclusi i livelli di attendibilità dell'assembly e del dominio dell'applicazione. La reflection fornisce le proprietà <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Type.IsSecuritySafeCritical%2A> e <xref:System.Type.IsSecurityTransparent%2A>, che consentono di individuare il livello di trasparenza di un tipo. La tabella seguente illustra le combinazioni valide di queste proprietà.  
+ A partire da .NET Framework 4, Common Language Runtime determina il livello di trasparenza di un tipo o di un membro sulla base di diversi fattori, tra cui i livelli di attendibilità dell'assembly e del dominio dell'applicazione. La reflection fornisce le proprietà <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Type.IsSecuritySafeCritical%2A> e <xref:System.Type.IsSecurityTransparent%2A>, che consentono di individuare il livello di trasparenza di un tipo. La tabella seguente illustra le combinazioni valide di queste proprietà.  
   
 |Livello di sicurezza|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
 |--------------------|------------------------|----------------------------|---------------------------|  

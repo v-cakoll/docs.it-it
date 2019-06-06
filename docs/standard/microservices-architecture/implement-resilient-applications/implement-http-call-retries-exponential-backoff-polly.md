@@ -2,12 +2,12 @@
 title: Implementazione dei tentativi di chiamate HTTP con backoff esponenziale con Polly
 description: Informazioni su come gestire gli errori HTTP con Polly e HttpClientFactory.
 ms.date: 01/07/2019
-ms.openlocfilehash: 9ffb0d918dc2efdc41d6c2db2e2141d14061b687
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053108"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301484"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementazione dei tentativi di chiamate HTTP con backoff esponenziale con i criteri di Polly e HttpClientFactory
 
@@ -69,16 +69,16 @@ Policy
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Modello di ripetizione dei tentativi**\
+- **Retry pattern** (Modello di ripetizione dei tentativi)  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
-- **Polly e HttpClientFactory**\
+- **Polly e HttpClientFactory**  
   <https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory>
 
-- **Polly (libreria .NET con funzionalità di resilienza e gestione degli errori temporanei)**\
+- **Polly (libreria .NET con funzionalità di resilienza e di gestione degli errori temporanei)**  
   <https://github.com/App-vNext/Polly>
 
-- **Marc Brooker. Jitter: Making Things Better With Randomness**\ (Instabilità: come migliorare l'esecuzione con la casualità)
+- **Marc Brooker. Jitter: Making Things Better With Randomness** (Instabilità: come migliorare l'esecuzione con la casualità)  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]

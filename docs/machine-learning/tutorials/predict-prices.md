@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: f216c8aac37a28d5cd998ba2e406af4cfc4be686
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 40f70b6d89bf19ae0b20cb00d56e9f7dceb48f61
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882759"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377783"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Esercitazione: Stimare i prezzi usando la regressione con ML.NET
 
@@ -127,11 +127,11 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="load-and-transform-data"></a>Caricare e trasformare i dati
 
-ML.NET usa la [classe IDataView](xref:Microsoft.ML.IDataView) come modalità efficiente e flessibile per descrivere dati tabulari numerici o di testo. `IDataView` può caricare file testo o in tempo reale (ad esempio file di database SQL o file di log). Aggiungere il codice seguente come prima riga del metodo `Train()`:
+ML.NET usa la [classe IDataView](xref:Microsoft.ML.IDataView) come un modo efficiente e flessibile per descrivere i dati tabulari numerici o di testo. `IDataView` può caricare file testo o in tempo reale (ad esempio file di database SQL o file di log). Aggiungere il codice seguente come prima riga del metodo `Train()`:
 
 [!code-csharp[LoadTrainData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "loading training dataset")]
 
-Dato che si vuole stimare la tariffa della corsa del taxi, la colonna `FareAmount` è l'elemento `Label` che si stimerà (l'output del modello). Usare la classe di trasformazione `CopyColumnsEstimator` per copiare `FareAmount` e aggiungere il codice seguente: 
+Dato che si vuole stimare la tariffa di un viaggio in taxi, la colonna `FareAmount` è l'elemento `Label` che si andrà a stimare (output del modello). Usare la classe di trasformazione `CopyColumnsEstimator` per copiare `FareAmount` e aggiungere il codice seguente: 
 
 [!code-csharp[CopyColumnsEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
 
@@ -145,7 +145,7 @@ L'ultimo passaggio della preparazione dei dati combina tutte le colonne di funzi
 
 ## <a name="choose-a-learning-algorithm"></a>Scegliere un algoritmo di apprendimento
 
-Questo problema riguarda la stima del costo di una corsa in taxi nella città di New York. A prima vista, potrebbe sembrare dipendere semplicemente dalla distanza percorsa. Tuttavia, le società di taxi di New York applicano un addebito per quantità variabili di altri fattori, come i passeggeri aggiuntivi o il pagamento tramite carta di credito anziché in contanti. Si vuole stimare il valore del prezzo, ovvero un valore reale, in base ad altri fattori nel set di dati. Per fare ciò si sceglie un'attività di apprendimento automatico di tipo [regressione](../resources/glossary.md#regression).
+Questo problema riguarda la stima del costo di una corsa in taxi nella città di New York. A prima vista, potrebbe sembrare dipendere semplicemente dalla distanza percorsa. Tuttavia, le società di taxi di New York applicano un addebito per quantità variabili di altri fattori, come i passeggeri aggiuntivi o il pagamento tramite carta di credito anziché in contanti. Si vuole stimare il valore del prezzo, ovvero un valore reale, in base ad altri fattori nel set di dati. Per fare ciò, scegliere un'attività di apprendimento automatico di tipo [regressione](../resources/glossary.md#regression).
 
 Aggiungere l'attività di apprendimento automatico [FastTreeRegressionTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer) alle definizioni di trasformazione dei dati aggiungendo il codice seguente come riga successiva in `Train()`:
 
@@ -158,6 +158,10 @@ Adattare il modello all'elemento di training `dataview` e restituire il modello 
 [!code-csharp[TrainModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
 
 Il metodo [Fit()](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) esegue il training del modello trasformando il set di dati e applicando il training.
+
+Restituire il modello di cui è stato eseguito il training con la riga di codice seguente nel metodo `Train()`:
+
+[!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#12 "Return the model")]
 
 ## <a name="evaluate-the-model"></a>Valutare il modello
 
@@ -189,7 +193,7 @@ Quindi trasformare i dati `Test` aggiungendo il codice seguente a `EvaluateModel
 
 [!code-csharp[PredictWithTransformer](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
 
-Il metodo [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) esegue stime per le righe di input del set di dati di test.
+Il metodo [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) esegue stime per le righe di input della serie di dati di test.
 
 Il metodo `RegressionContext.Evaluate` calcola le metriche di qualità per l'istanza di `PredictionModel` usando il set di dati specificato. Restituisce un oggetto <xref:Microsoft.ML.Data.RegressionMetrics> che contiene le metriche complessive calcolate dagli analizzatori della regressione. 
 
@@ -242,13 +246,13 @@ Usare `PredictionEngine` per stimare l'importo della tariffa aggiungendo il codi
 
 [!code-csharp[MakePredictionEngine](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
 
-La [classe PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di servizio che consente di passare una singola istanza di dati e di eseguire una stima sull'istanza.
+La [classe PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di servizio che consente di passare una singola istanza di dati e di eseguire quindi una stima su di essa.
 
 In questa esercitazione viene usato un solo viaggio di test all'interno di questa classe. Successivamente, è possibile aggiungere altri scenari da sperimentare con il modello. Aggiungere una corsa per testare la stima dei costi del modello sottoposto a training nel metodo `TestSinglePrediction()` creando un'istanza di `TaxiTrip`:
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
-Quindi stimare la tariffa in base a una singola istanza dei dati della corsa del taxi e passarla a `PredictionEngine` aggiungendo il codice seguente come righe di codice successive nel metodo `TestSinglePrediction()`:
+Successivamente eseguire la stima della tariffa in base a una singola istanza dei dati relativi al viaggio in taxi e passarla a `PredictionEngine` aggiungendo il codice seguente come righe successive di codice nel metodo `TestSinglePrediction()`:
 
 [!code-csharp[Predict](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 

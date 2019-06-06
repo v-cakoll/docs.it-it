@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6adbe4e5c82d5f886fcffd5ab272a337c377395
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5ca4a087b60e6cb857ec78273dad099e5e5da07a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586117"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457313"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemi di sicurezza nella reflection emit
 .NET Framework offre tre modalità per creare codice Microsoft Intermediate Language (MSIL), ciascuna con specifici problemi di sicurezza:  
@@ -78,7 +78,7 @@ ms.locfileid: "65586117"
   
  Come con qualsiasi altro codice generato, l'esecuzione del metodo dinamico richiede le autorizzazioni obbligatorie per i metodi usate dal metodo dinamico.  
   
- L'assembly di sistema che ospita i metodi dinamici ospitati anonimamente usa il modello di trasparenza <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType>, usato in .NET Framework prima di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+ L'assembly di sistema che ospita i metodi dinamici ospitati in modo anonimo usa il modello di trasparenza <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType>, usato in .NET Framework prima di .NET Framework 4.  
   
  Per altre informazioni, vedere la classe <xref:System.Reflection.Emit.DynamicMethod>.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "65586117"
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>Informazioni sulla versione  
- A partire da [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], i criteri di sicurezza a livello di computer vengono eliminati e la trasparenza della sicurezza diventa il meccanismo di imposizione predefinito. Vedere [Modifiche di sicurezza](../../../docs/framework/security/security-changes.md).  
+ A partire da .NET Framework 4, i criteri di sicurezza a livello di computer vengono eliminati e la trasparenza della sicurezza diventa il meccanismo di imposizione predefinito. Vedere [Modifiche di sicurezza](../../../docs/framework/security/security-changes.md).  
   
  A partire da [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], non è più necessario usare <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> quando si generano assembly e metodi dinamici. Questo flag è richiesto in tutte le versioni precedenti di .NET Framework.  
   

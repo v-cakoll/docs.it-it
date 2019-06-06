@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607679"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377874"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Creare e usare gli assembly con nome sicuro
 
@@ -71,7 +71,7 @@ Questa funzionalità può essere disabilitata per singole applicazioni o per un 
 |-----------|-----------------|
 |[Procedura: Creare una coppia di chiavi pubblica/privata](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Descrive come creare una coppia di chiavi crittografiche per la firma di un assembly.|
 |[Procedura: Firmare un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Descrive come creare un assembly con nome sicuro.|
-|[Denominazione sicura avanzata](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Descrive i miglioramenti apportati ai nomi sicuri in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|
+|[Denominazione sicura avanzata](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Descrive i miglioramenti apportati ai nomi sicuri in .NET Framework 4.5.|
 |[Procedura: Aggiungere un riferimento a un assembly con nome sicuro](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Descrive come fare riferimento a tipi o risorse in un assembly con nome sicuro in fase di compilazione o di esecuzione.|
 |[Procedura: Disabilitare la funzionalità che consente di ignorare il nome sicuro](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Descrive come disabilitare la funzionalità che consente di ignorare la convalida delle firme con nome sicuro. Questa funzionalità può essere disabilitata per tutte le applicazioni o per applicazioni specifiche.|
 |[Creazione degli assembly](../../../docs/framework/app-domains/create-assemblies.md)|Offre una panoramica degli assembly a file singolo e su più file.|

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00dc191d53d01d33a5dce3ed2d012942e2672dae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 51bf359ea6ba4e5b45827928a50a095a7960a68f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607522"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456708"
 ---
 # <a name="shadow-copying-assemblies"></a>Creazione di copie replicate di assembly
 La creazione di copie shadow consente di aggiornare gli assembly usati in un dominio applicazione senza scaricare quest'ultimo. Ciò è particolarmente utile per le applicazioni che devono essere disponibili in modo continuo, ad esempio siti ASP.NET.  
@@ -67,9 +67,9 @@ La creazione di copie shadow consente di aggiornare gli assembly usati in un dom
   
 <a name="StartupPerformance"></a>   
 ## <a name="startup-performance"></a>Prestazioni di avvio  
- All'avvio di un dominio applicazione che usa la creazione di copie shadow, si verifica un ritardo mentre gli assembly nella directory dell'applicazione vengono copiati nella directory di copia shadow o verificati, se si trovano già in tale posizione. Prima di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], tutti gli assembly sono stati copiati in una directory temporanea. Ogni assembly è stato aperto per verificare il nome dell'assembly e il nome sicuro è stato convalidato. Ogni assembly è stato controllato per verificare se è stato aggiornato più di recente rispetto alla copia nella directory della copia shadow. In tal caso, è stato copiato nella directory della copia shadow. Infine, le copie temporanee vengono rimosse.  
+ All'avvio di un dominio applicazione che usa la creazione di copie shadow, si verifica un ritardo mentre gli assembly nella directory dell'applicazione vengono copiati nella directory di copia shadow o verificati, se si trovano già in tale posizione. Nelle versioni precedenti a .NET Framework 4, tutti gli assembly vengono copiati in una directory temporanea. Ogni assembly è stato aperto per verificare il nome dell'assembly e il nome sicuro è stato convalidato. Ogni assembly è stato controllato per verificare se è stato aggiornato più di recente rispetto alla copia nella directory della copia shadow. In tal caso, è stato copiato nella directory della copia shadow. Infine, le copie temporanee vengono rimosse.  
   
- A partire da [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], il comportamento di avvio predefinito consiste nel confrontare direttamente la data e l' ora del file di ciascun assembly nella directory dell'applicazione con la data e l'ora della copia nella directory della copia shadow. Se l'assembly è stato aggiornato, viene copiato usando la stessa procedura adottata nelle versioni precedenti di .NET Framework. In caso contrario, viene caricata la copia nella directory della copia shadow.  
+ A partire da .NET Framework 4, il comportamento di avvio predefinito consiste nel confrontare direttamente la data e l'ora del file di ogni assembly nella directory dell'applicazione con la data e l'ora della copia nella directory della copia shadow. Se l'assembly è stato aggiornato, viene copiato usando la stessa procedura adottata nelle versioni precedenti di .NET Framework. In caso contrario, viene caricata la copia nella directory della copia shadow.  
   
  Il miglioramento delle prestazioni risultante è maggiore per le applicazioni in cui gli assembly non vengono modificati di frequente e le modifiche vengono apportate in genere in un piccolo subset di assembly. Se la maggior parte degli assembly in un'applicazione viene modificata frequentemente, il nuovo comportamento predefinito potrebbe causare una regressione delle prestazioni. È possibile ripristinare il comportamento di avvio delle versioni precedenti di .NET Framework aggiungendo l'[\<elemento shadowCopyVerifyByTimestamp>](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) al file di configurazione con `enabled="false"`.  
   

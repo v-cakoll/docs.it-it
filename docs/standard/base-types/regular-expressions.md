@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 201dbc759b619f65599e09c78c14b96d17395952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb70b0ef4c6e619418f8464b543795a59c2ddff5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620704"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423791"
 ---
 # <a name="net-regular-expressions"></a>Espressioni regolari .NET
 Le espressioni regolari ("regular expression") garantiscono un metodo efficace e flessibile per elaborare del testo. L'ampia notazione per la formulazione dei criteri di ricerca fornita dalle espressioni regolari consente di analizzare rapidamente grandi quantità di testo per trovare combinazioni di caratteri specifiche, per convalidare il testo verificandone la corrispondenza con un modello predefinito, ad esempio un indirizzo di posta elettronica, per estrarre, modificare, sostituire o eliminare sottostringhe di testo e per aggiungere le stringhe estratte a una raccolta per generare un rapporto. Per numerose applicazioni che gestiscono stringhe o che analizzano grandi blocchi di testo, le espressioni regolari rappresentano uno strumento indispensabile.  
@@ -97,7 +97,7 @@ Le espressioni regolari ("regular expression") garantiscono un metodo efficace e
   
 |||  
 |-|-|  
-|`\$`|Cerca una singola occorrenza del simbolo di dollaro ($) nella stringa di input. La stringa del criterio di espressione regolare include una barra rovesciata per indicare che il simbolo di dollaro deve essere interpretato letteralmente e non come un ancoraggio dell'espressione regolare. Il simbolo $ da solo indica che il motore delle espressioni regolari deve cercare di iniziare la ricerca della corrispondenza alla fine di una stringa. Per garantire che il simbolo di valuta delle impostazioni cultura correnti non venga erroneamente interpretato come un simbolo dell'espressione regolare, l'esempio chiama il metodo <xref:System.Text.RegularExpressions.Regex.Escape%2A> per far precedere il carattere dai caratteri di escape.|  
+|`\$`|Cerca una singola occorrenza del simbolo del dollaro (`$`) nella stringa di input. La stringa del criterio di espressione regolare include una barra rovesciata per indicare che il simbolo di dollaro deve essere interpretato letteralmente e non come un ancoraggio dell'espressione regolare. Il simbolo `$` da solo indica che il motore delle espressioni regolari deve cercare di iniziare la ricerca della corrispondenza alla fine di una stringa. Per garantire che il simbolo di valuta delle impostazioni cultura correnti non venga erroneamente interpretato come un simbolo dell'espressione regolare, l'esempio chiama il metodo <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> per far precedere il carattere dai caratteri di escape.|  
 |`\s*`|Cerca zero o più occorrenze di uno spazio vuoto.|  
 |`[-+]?`|Cerca zero o una occorrenza di un segno positivo o negativo.|  
 |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|Le parentesi esterne che delimitano questa espressione la definiscono come gruppo di acquisizione o come sottoespressione. Se viene trovata una corrispondenza, è possibile recuperare informazioni relative a questa parte della stringa corrispondente dal secondo oggetto <xref:System.Text.RegularExpressions.Group> nell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Il primo elemento della raccolta rappresenta la corrispondenza completa.|  

@@ -3,12 +3,12 @@ title: Interpolazione di stringhe in C#
 description: Informazioni su come includere risultati di espressione formattati in una stringa di risultato in C# con interpolazione.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063234"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251020"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolazione di stringhe in C\#
 
@@ -27,17 +27,17 @@ Per identificare un valore letterale stringa come stringa interpolata, anteporre
 Come illustrato nell'esempio, per includere un'espressione in una stringa interpolata è necessario racchiuderla tra parentesi graffe:
 
 ```
-{<interpolatedExpression>}
+{<interpolationExpression>}
 ```
 
 Le stringhe interpolate supportano tutte le caratteristiche della funzionalità di [formattazione composita delle stringhe](../../standard/base-types/composite-formatting.md), che li rende un'alternativa più leggibile all'uso del metodo <xref:System.String.Format%2A?displayProperty=nameWithType>.
 
-## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Come specificare una stringa di formato per un'espressione interpolata
+## <a name="how-to-specify-a-format-string-for-an-interpolation-expression"></a>Come specificare una stringa di formato per un'espressione di interpolazione
 
-Per specificare una stringa di formato supportata dal tipo del risultato dell'espressione, far seguire all'espressione interpolata i due punti (":") e la stringa di formato da usare:
+Per specificare una stringa di formato supportata dal tipo del risultato dell'espressione, far seguire all'espressione di interpolazione i due punti (":") e la stringa di formato da usare:
 
 ```
-{<interpolatedExpression>:<formatString>}
+{<interpolationExpression>:<formatString>}
 ```
 
 L'esempio seguente illustra come specificare stringhe di formato standard e personalizzate per espressioni che producono risultati di tipo data e ora o numerici:
@@ -46,12 +46,12 @@ L'esempio seguente illustra come specificare stringhe di formato standard e pers
 
 Per altre informazioni, vedere la sezione [Componente della stringa di formato](../../standard/base-types/composite-formatting.md#format-string-component) dell'argomento [Formattazione composita](../../standard/base-types/composite-formatting.md). Questa sezione mette a disposizione i collegamenti agli argomenti che descrivono le stringhe di formato standard e personalizzate supportate dai tipi di base .NET.
 
-## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>Come controllare la larghezza del campo e l'allineamento delle espressioni interpolate formattate
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolation-expression"></a>Come controllare la larghezza del campo e l'allineamento delle espressioni di interpolazione formattate
 
-È possibile specificare la larghezza minima del campo e l'allineamento del risultato dell'espressione formattata facendo seguire l'espressione interpolata da una virgola (",") e dall'espressione costante:
+È possibile specificare la larghezza minima del campo e l'allineamento del risultato dell'espressione formattata facendo seguire l'espressione di interpolazione da una virgola (",") e dall'espressione costante:
 
 ```
-{<interpolatedExpression>,<alignment>}
+{<interpolationExpression>,<alignment>}
 ```
 
 Se il valore *alignment* è positivo, il risultato dell'espressione formattata è allineato a destra, mentre se è negativo è allineato a sinistra.
@@ -59,7 +59,7 @@ Se il valore *alignment* è positivo, il risultato dell'espressione formattata �
 Se è necessario specificare sia l'allineamento che una stringa di formato, iniziare con l'allineamento:
 
 ```
-{<interpolatedExpression>,<alignment>:<formatString>}
+{<interpolationExpression>,<alignment>:<formatString>}
 ```
 
 L'esempio seguente illustra come specificare l'allineamento e usa caratteri barra verticale ("|") per delimitare i campi di testo:
@@ -82,9 +82,9 @@ L'esempio seguente illustra come includere parentesi graffe in una stringa di ri
 
 [!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
 
-## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>Come usare un operatore condizionale ternario `?:` in un'espressione interpolata
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolation-expression"></a>Come usare un operatore condizionale ternario `?:` in un'espressione di interpolazione
 
-Dato che i due punti (":") hanno un significato speciale in un elemento con un'espressione interpolata, per usare un [operatore condizionale](../language-reference/operators/conditional-operator.md) in un'espressione, racchiudere l'espressione tra parentesi, come illustrato dall'esempio seguente:
+Dato che i due punti (":") hanno un significato speciale in un elemento con un'espressione di interpolazione, per usare un [operatore condizionale](../language-reference/operators/conditional-operator.md) in un'espressione, racchiudere l'espressione tra parentesi, come illustrato dall'esempio seguente:
 
 [!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
 

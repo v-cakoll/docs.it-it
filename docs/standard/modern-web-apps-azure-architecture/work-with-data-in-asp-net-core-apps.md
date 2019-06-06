@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Usar
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 23c0995c512a07c41b3e2dbe8bc7528723379efa
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 9f765acce89bec1fd73e9c43a6e7d75d78be785d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463735"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423995"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
@@ -330,7 +330,7 @@ Per la maggior parte delle applicazioni e per molte parti di quasi tutte le appl
 
 I database relazionali, ad esempio SQL Server, hanno tradizionalmente dominato il mercato in termini di archiviazione dei dati persistenti, ma non sono l'unica soluzione disponibile. I database NoSQL come [MongoDB](https://www.mongodb.com/what-is-mongodb) offrono un approccio diverso per l'archiviazione degli oggetti. Anziché eseguire il mapping di oggetti in tabelle e righe, è possibile serializzare l'intero oggetto grafico e memorizzare il risultato. I vantaggi di questo approccio sono, almeno inizialmente, le prestazioni e la semplicità. È certamente più semplice archiviare un singolo oggetto serializzato con una chiave, rispetto a decomporre l'oggetto in molte tabelle con relazioni e aggiornare le righe che potrebbero essere state modificate dall'ultima volta in cui l'oggetto è stato recuperato dal database. Analogamente, il recupero e la deserializzazione di un singolo oggetto da un archivio basato su chiavi è in genere molto più veloce e più semplice rispetto all'uso di join complessi o più query di database necessari per comporre completamente lo stesso oggetto da un database relazionale. La mancanza di blocchi, transazioni o di uno schema fisso rende i database NoSQL anche particolarmente adatti ai fini della scalabilità su molti computer, che supportano set di dati di grandi dimensioni.
 
-Di contro, nei comunemente detti database NoSQL non mancano gli svantaggi. Nei database relazionali viene applicata la normalizzazione per garantire coerenza ed evitare la duplicazione dei dati. In questo modo si riducono le dimensioni totali del database e si assicura che gli aggiornamenti ai dati condivisi siano immediatamente disponibili in tutto il database. In un database relazionale è possibile che una tabella Address faccia riferimento a una tabella Country usando l'ID, in modo che se il nome di un paese è stato modificato, i record relativi agli indirizzi possano avvantaggiarsi dell'aggiornamento senza dover essere a loro volta aggiornati. In un database NoSQL la tabella Address e la relativa tabella Country associata potrebbero essere invece serializzate come parte di molti oggetti archiviati. Per poter aggiornare il nome del paese è necessario aggiornare tutti questi oggetti anziché una sola riga. I database relazionali possono anche garantire l'integrità relazionale tramite l'applicazione di regole, come le chiavi esterne. I database NoSQL non offrono solitamente vincoli di questo genere sui dati.
+Di contro, nei comunemente detti database NoSQL non mancano gli svantaggi. Nei database relazionali viene applicata la normalizzazione per garantire coerenza ed evitare la duplicazione dei dati. In questo modo si riducono le dimensioni totali del database e si assicura che gli aggiornamenti ai dati condivisi siano immediatamente disponibili in tutto il database. In un database relazionale è possibile che una tabella Address faccia riferimento a una tabella Country usando l'ID, in modo che se il nome di un paese/area geografica è stato modificato, i record relativi agli indirizzi possano usare l'aggiornamento senza dover essere a loro volta aggiornati. In un database NoSQL la tabella Address e la relativa tabella Country associata potrebbero essere invece serializzate come parte di molti oggetti archiviati. Per poter aggiornare il nome del paese o dell'area geografica è necessario aggiornare tutti questi oggetti anziché una sola riga. I database relazionali possono anche garantire l'integrità relazionale tramite l'applicazione di regole, come le chiavi esterne. I database NoSQL non offrono solitamente vincoli di questo genere sui dati.
 
 Un altro aspetto complesso che i database NoSQL devono gestire è il controllo delle versioni. Quando le proprietà di un oggetto vengono modificate, non è possibile eseguire la deserializzazione degli oggetti dalle versioni precedenti in cui sono archiviati. Di conseguenza, è necessario aggiornare tutti gli oggetti esistenti con una versione (precedente) serializzata dell'oggetto per rispettare il nuovo schema. Concettualmente non è diverso da quanto accade in un database relazionale dove, in seguito a modifiche allo schema, è talvolta necessario aggiornare script e mapping. Spesso però il numero delle modifiche da apportare in un database NoSQL è molto più elevato, in quanto è necessaria una maggiore duplicazione dei dati.
 

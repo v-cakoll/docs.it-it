@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b73a98542dfc6fa68e79655bc5538cf005e4636
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492583"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378586"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Assembler IL)
 
@@ -58,7 +58,7 @@ ilasm [options] filename [[options]filename...]
 |**/include:** `includePath`|Imposta un percorso per la ricerca di file inclusi con `#include`.|
 |**/itanium**|Specifica Intel Itanium come processore di destinazione.<br /><br /> Se non viene specificato il numero di bit dell'immagine, viene utilizzata l'impostazione predefinita **/pe64**.|
 |**/key:** `keyFile`|Compila `filename` con una firma sicura usando la chiave privata contenuta in `keyFile`.|
-|**/key:** @`keySource`|Compila `filename` con una firma sicura usando la chiave privata prodotta in `keySource`.|
+|**/key:**  @`keySource`|Compila `filename` con una firma sicura usando la chiave privata prodotta in `keySource`.|
 |**/listing**|Produce un file di elenco sull'output standard. Se si omette questa opzione, non verrà prodotto alcun file di elenco.<br /><br /> Questo parametro non è supportato in .NET Framework 2.0 o versione successiva.|
 |**/mdv:** `versionString`|Imposta la stringa di versione dei metadati.|
 |**/msv:** `major`.`minor`|Imposta la versione del flusso di metadati, dove `major` e `minor` sono numeri interi.|
@@ -108,7 +108,7 @@ Per ulteriori informazioni sulla grammatica di IL, vedere il file asmparse.gramm
 
 ## <a name="version-information"></a>Informazioni sulla versione
 
-A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], è possibile associare un attributo personalizzato a un'implementazione di interfaccia utilizzando codice analogo al seguente:
+A partire da .NET Framework 4.5, è possibile associare un attributo personalizzato a un'implementazione di interfaccia usando codice analogo al seguente:
 
 ```
 .class interface public abstract auto ansi IMyInterface
@@ -128,7 +128,7 @@ A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], è possibile 
       …
 ```
 
-A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], è possibile specificare un marshalling BLOB (oggetto binario di grandi dimensioni) arbitrario utilizzando la relativa rappresentazione binaria non elaborata, come illustrato nel codice seguente:
+A partire da .NET Framework 4.5, è possibile specificare un BLOB (oggetto binario di grandi dimensioni) marshalling arbitrario usando la relativa rappresentazione binaria non elaborata, come illustrato nel codice seguente:
 
 ```
 .method public hidebysig abstract virtual

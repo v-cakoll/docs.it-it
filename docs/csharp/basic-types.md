@@ -3,12 +3,12 @@ title: Tipi di base - Guida a C#
 description: Informazioni sui tipi di base (dati numerici, stringhe e oggetto) in tutti i programmi C#
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: dc91452bb261b7c799cf3b69cab5b33175148b8a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3619e1dc9a82c7f120680c198c327252744444b4
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508046"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422093"
 ---
 # <a name="types-variables-and-values"></a>Tipi, variabili e valori
 
@@ -47,13 +47,13 @@ I tipi di parametri e valori restituiti del metodo sono specificati nella firma 
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-Una variabile dichiarata non può essere dichiarata una seconda volta con un tipo nuovo e non è possibile assegnare a tale variabile un valore non compatibile con il relativo tipo dichiarato. Non è possibile, ad esempio, dichiarare una variabile [int](language-reference/keywords/int.md) e assegnare ad essa il valore booleano [true](language-reference/keywords/true.md). I valori possono tuttavia essere convertiti in altri tipi, ad esempio quando vengono assegnati a nuove variabili o passati come argomenti di metodo. Una *conversione del tipo* che non causa la perdita di dati viene eseguita automaticamente dal compilatore, Una conversione che potrebbe causare la perdita di dati richiede un *cast* nel codice sorgente.
+Una variabile dichiarata non può essere dichiarata una seconda volta con un tipo nuovo e non è possibile assegnare a tale variabile un valore non compatibile con il relativo tipo dichiarato. Non è possibile, ad esempio, dichiarare una variabile [int](language-reference/keywords/int.md) e assegnare ad essa il valore booleano [true](language-reference/keywords/true-literal.md). I valori possono tuttavia essere convertiti in altri tipi, ad esempio quando vengono assegnati a nuove variabili o passati come argomenti di metodo. Una *conversione del tipo* che non causa la perdita di dati viene eseguita automaticamente dal compilatore, Una conversione che potrebbe causare la perdita di dati richiede un *cast* nel codice sorgente.
 
 Per altre informazioni, vedere [Cast e conversioni di tipi](programming-guide/types/casting-and-type-conversions.md).
 
 ## <a name="built-in-types"></a>Tipi incorporati
 
-Il linguaggio C# offre un set standard di tipi numerici predefiniti per rappresentare numeri interi, valori a virgola mobile, espressioni booleane, caratteri di testo, valori decimali e altri tipi di dati. Sono anche disponibili tipi **string** e **object** predefiniti. Questi possono essere usati in qualsiasi programma C#. Per altre informazioni sui tipi incorporati, vedere [Tabelle di riferimento per i tipi](language-reference/keywords/reference-tables-for-types.md).  
+Il linguaggio C# offre un set standard di tipi numerici predefiniti per rappresentare numeri interi, valori a virgola mobile, espressioni booleane, caratteri di testo, valori decimali e altri tipi di dati. Sono anche disponibili tipi **string** e **object** predefiniti. Questi possono essere usati in qualsiasi programma C#. Per altre informazioni sui tipi incorporati, vedere [Tabella dei tipi incorporati](language-reference/keywords/built-in-types-table.md).  
   
 ## <a name="custom-types"></a>Tipi personalizzati
 

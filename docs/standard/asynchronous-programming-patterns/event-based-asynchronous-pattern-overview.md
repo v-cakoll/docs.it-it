@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: f923ca42e67c76f8b4296089953fada65b645f4f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629005"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423859"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Cenni preliminari sul modello asincrono basato su eventi
 Le applicazioni che eseguono più attività contemporaneamente, pur rimanendo disponibili all'utente, richiedono spesso una progettazione che preveda l'uso di più thread. Lo spazio dei nomi <xref:System.Threading> offre tutti gli strumenti necessari per creare applicazioni multithreading a elevate prestazioni, per l'uso dei quali è necessaria tuttavia una notevole esperienza nel campo dell'ingegneria del software multithreading. Per applicazioni multithreading relativamente semplici, il componente <xref:System.ComponentModel.BackgroundWorker> rappresenta una soluzione adeguata. Per applicazioni asincrone più complesse, si consiglia di implementare una classe che segua il modello asincrono basato su eventi.  
@@ -32,13 +32,13 @@ Le applicazioni che eseguono più attività contemporaneamente, pur rimanendo di
   
 - Eseguire più operazioni contemporaneamente, ricevendo notifiche relative al completamento di ognuna.  
   
-- Attendere la disponibilità delle risorse senza interrompere o sospendere l'esecuzione dell'applicazione.  
+- Attendere la disponibilità delle risorse senza interrompere o bloccare l'esecuzione dell'applicazione.  
   
 - Comunicare con operazioni asincrone in sospeso mediante un modello noto di eventi e delegati. Per altre informazioni sull'uso di gestori eventi e delegati, vedere [Eventi](../../../docs/standard/events/index.md).  
   
  Una classe che supporta il modello asincrono basato su eventi avrà uno o più metodi denominati _NomeMetodo_**Async**. Tali metodi possono eseguire il mirroring delle versioni sincrone che eseguono la stessa operazione sul thread corrente. La classe può anche avere un evento _NomeMetodo_**Completed** e un metodo _NomeMetodo_**AsyncCancel** (o semplicemente **CancelAsync**).  
   
- <xref:System.Windows.Forms.PictureBox> è un componente tipico che supporta il modello asincrono basato su eventi. Per scaricare un'immagine in modo sincrono è possibile chiamare il relativo metodo <xref:System.Windows.Forms.PictureBox.Load%2A>, ma qualora le dimensioni dell'immagine fossero eccessive o la connessione di rete troppo lenta, l'esecuzione dell'applicazione verrà interrotta o sospesa fino al completamento dell'operazione di download e alla restituzione della chiamata a <xref:System.Windows.Forms.PictureBox.Load%2A>.  
+ <xref:System.Windows.Forms.PictureBox> è un componente tipico che supporta il modello asincrono basato su eventi. Per scaricare un'immagine in modo sincrono è possibile chiamare il relativo metodo <xref:System.Windows.Forms.PictureBox.Load%2A>, ma qualora le dimensioni dell'immagine fossero eccessive o la connessione di rete troppo lenta, l'esecuzione dell'applicazione verrà interrotta fino al completamento dell'operazione di download e alla restituzione della chiamata a <xref:System.Windows.Forms.PictureBox.Load%2A>.  
   
  Per lasciare che l'applicazione continui a essere eseguita durante il caricamento dell'immagine, è possibile chiamare il metodo <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> e gestire l'evento <xref:System.Windows.Forms.PictureBox.LoadCompleted> analogamente a qualsiasi altro evento. Quando si chiama il metodo <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> l'esecuzione dell'applicazione procede mentre l'operazione di download continua su un altro thread, in background. Al termine dell'operazione di caricamento dell'immagine verrà chiamato il gestore eventi che potrà esaminare il parametro <xref:System.ComponentModel.AsyncCompletedEventArgs> per determinare se il download è stato eseguito.  
   

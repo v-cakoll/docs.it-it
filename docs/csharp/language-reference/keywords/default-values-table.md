@@ -6,18 +6,18 @@ ms.date: 08/23/2018
 helpviewer_keywords:
 - constructors [C#], return values
 - keywords [C#], new
-- default constructor [C#]
+- parameterless constructor [C#]
 - defaults [C#]
 - value types [C#], initializing
 - variables [C#], value types
-- constructors [C#], default constructor
-- types [C#], default constructor return values
-ms.openlocfilehash: 19e9e4f94ab573f2313c185a08192d89103b98fd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+- constructors [C#], parameterless constructor
+- types [C#], parameterless constructor return values
+ms.openlocfilehash: 4fc9a35f69540e047a97c21788015ca8e54068a0
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237038"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422027"
 ---
 # <a name="default-values-table-c-reference"></a>Tabella dei valori predefiniti (Riferimenti per C#)
 
@@ -41,7 +41,7 @@ La tabella seguente mostra i valori predefiniti dei [tipi valore](value-types.md
 |[ulong](ulong.md)|0|
 |[ushort](ushort.md)|0|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Non è possibile usare le variabili non inizializzate in C#. È possibile inizializzare una variabile con il valore predefinito del relativo tipo. È anche possibile usare il valore predefinito di un tipo per specificare il valore predefinito di un [argomento facoltativo](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments) del metodo.
 
@@ -57,7 +57,7 @@ A partire da C# 7.1 è possibile usare il [ valore letterale `default`](../../pr
 int a = default;
 ```
 
-È anche possibile usare il costruttore predefinito o il costruttore predefinito implicito per produrre il valore predefinito di un tipo valore, come illustrato nell'esempio seguente. Per altre informazioni sui costruttori, vedere l'articolo [Costruttori](../../programming-guide/classes-and-structs/constructors.md).
+È anche possibile usare il costruttore senza parametri o il costruttore senza parametri implicito per generare il valore predefinito di un tipo valore, come illustrato nell'esempio seguente. Per altre informazioni sui costruttori, vedere l'articolo [Costruttori](../../programming-guide/classes-and-structs/constructors.md).
 
 ```csharp
 int a = new int();
@@ -70,7 +70,6 @@ Il valore predefinito di un qualsiasi [tipo di riferimento](reference-types.md) 
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
-- [Tabelle di riferimento per i tipi](reference-tables-for-types.md)
 - [Tipi valore](value-types.md)
 - [Tabella dei tipi valore](value-types-table.md)
 - [Tabella dei tipi incorporati](built-in-types-table.md)

@@ -1,15 +1,15 @@
 ---
 title: Usare ML.NET in uno scenario di rilevamento anomalie di vendita
 description: Informazioni su come usare ML.NET in uno scenario di rilevamento anomalie di vendita dei prodotti per comprendere come analizzare i dati per fare in modo di adottare azioni appropriate per le anomalie dei picchi e dei punti di modifica.
-ms.date: 05/06/2019
+ms.date: 05/29/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 39e812facccfa75d1643704f8960a387a70c94bc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d31765aa4ff2a0be9c4f140f33de1f5678fc7612
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641139"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423915"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Esercitazione: Usare ML.NET per il rilevamento anomalie di vendita dei prodotti 
 
@@ -173,7 +173,7 @@ Usare [IidSpikeEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidSpikeEstima
 
 [!code-csharp[AddSpikeTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddSpikeTrainer)]
 
-Eseguire il fit del modello ai dati `productSales` e restituire il modello sottoposto a training aggiungendo il codice seguente come riga successiva nel metodo `DetectSpike()`:
+Adattare il modello ai dati di `productSales` aggiungendo il codice seguente come riga successiva nel metodo `DetectSpike()`:
 
 [!code-csharp[TrainModel1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel1)]
 
@@ -283,7 +283,7 @@ static void DetectChangepoint(MLContext mlContext, int docSize, IDataView produc
 
 [!code-csharp[AddChangepointTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddChangepointTrainer)]
 
-Come in precedenza, eseguire il fit del modello ai dati `productSales` e restituire il modello sottoposto a training aggiungendo il codice seguente come riga successiva nel metodo `DetectChangePoint()`:
+Come in precedenza, adattare il modello ai dati di `productSales` aggiungendo il codice seguente come riga successiva nel metodo `DetectChangePoint()`:
 
 [!code-csharp[TrainModel2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel2)]
 

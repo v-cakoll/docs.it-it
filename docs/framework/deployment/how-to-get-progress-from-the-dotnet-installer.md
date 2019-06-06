@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdb74259d7b034511722b1d2992b4ec16adb551e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 991053a2728ec7b8c5d9157dbf6307e0974479c6
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750431"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379928"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] è un runtime ridistribuibile. Se si sviluppano applicazioni per questa versione di .NET Framework, è possibile includere (a catena) l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] come un componente prerequisito nell'impostazione dell'applicazione. Per offrire un'esperienza d'installazione personalizzata o unificata, si consiglia di avviare l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] in modo invisibile all'utente, tenendone traccia visualizzando lo stato di avanzamento dell'installazione dell'app. Per abilitare la gestione invisibile, l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], che può essere controllata, definisce un protocollo usando un segmento di I/O mappato alla memoria (MMIO) per comunicare con l'installazione, ovvero con il watcher o il chainer. Questo protocollo definisce una modalità per il chainer per ottenere lo stato di avanzamento, i risultati dettagliati, per rispondere ai messaggi e per annullare l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
+.NET Framework 4.5 è un runtime ridistribuibile. Se si sviluppano app per questa versione di .NET Framework, è possibile includere (a catena) l'installazione di .NET Framework 4.5 come componente prerequisito nell'installazione dell'app. Per offrire un'esperienza d'installazione personalizzata o unificata, è consigliabile avviare l'installazione di .NET Framework 4.5 n modo invisibile all'utente e tenere traccia dello stato di avanzamento visualizzando l'avanzamento dell'installazione dell'app. Per abilitare la gestione invisibile all'utente, l'installazione di .NET Framework 4.5, che può essere controllata, definisce un protocollo usando un segmento di I/O mappato alla memoria (MMIO) per comunicare con l'installazione, vale a dire con il watcher o il chainer. Questo protocollo definisce come un chainer può ottenere informazioni sullo stato di avanzamento, ottenere risultati dettagliati, rispondere ai messaggi e annullare l'installazione di .NET Framework 4.5.
 
-- **Chiamata**. Per chiamare l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e ricevere informazioni sullo stato di avanzamento della sezione MMIO, il programma di installazione deve eseguire le operazioni seguenti:
+- **Chiamata**. Per chiamare l'installazione di .NET Framework 4.5 e ricevere informazioni sullo stato di avanzamento della sezione MMIO, il programma di installazione deve eseguire le operazioni seguenti:
 
-    1. Chiamare il programma ridistribuibile [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]:
+    1. Chiamare il programma ridistribuibile .NET Framework 4.5:
 
         ```
         dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name
@@ -36,9 +36,9 @@ ms.locfileid: "64750431"
 
         Sostituire i nomi con nomi univoci per il programma di installazione.
 
-    2. Leggere dalla sezione MMIO. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] le operazioni di download e installazione sono simultanee: una parte di .NET Framework potrebbe essere in installazione mentre un'altra parte in download. Di conseguenza, lo stato di avanzamento viene restituito, ovvero scritto, nella sezione MMIO come due numeri (`m_downloadSoFar` e `m_installSoFar`) crescenti da 0 a 255. Quando viene scritto 255 e viene chiuso .NET Framework, l'installazione è completa.
+    2. Leggere dalla sezione MMIO. In .NET Framework 4.5 le operazioni di download e installazione sono simultanee: una parte di .NET Framework potrebbe essere in installazione mentre un'altra parte in download. Di conseguenza, lo stato di avanzamento viene restituito, ovvero scritto, nella sezione MMIO come due numeri (`m_downloadSoFar` e `m_installSoFar`) crescenti da 0 a 255. Quando viene scritto 255 e viene chiuso .NET Framework, l'installazione è completa.
 
-- **Codici di uscita**. I codici di uscita seguenti del comando per la chiamata al programma ridistribuibile [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] indicano se l'installazione è riuscita o meno:
+- **Codici di uscita**. I codici di uscita seguenti del comando per la chiamata al programma ridistribuibile .NET Framework 4.5 indicano se l'installazione è riuscita o meno:
 
   - 0: installazione completata.
 
@@ -52,7 +52,7 @@ ms.locfileid: "64750431"
 
 ## <a name="chainer-sample"></a>Esempio di chainer
 
-L'esempio di chainer avvia in modo invisibile all'utente e tiene traccia dell'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] mentre visualizza lo stato di avanzamento. Questo esempio è simile all'esempio di chainer di .NET Framework 4. Tuttavia, in questo caso, è possibile evitare i riavvii del sistema elaborando la finestra di messaggio per chiudere le app di .NET Framework 4. Per informazioni sulla finestra di messaggio, vedere [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md). L'esempio può essere usato con il programma di installazione di .NET Framework 4, In questo caso, il messaggio non viene inviato.
+L'esempio di Chainer avvia l'installazione di .NET Framework 4.5 in modo invisibile all'utente e tiene traccia dello stato di avanzamento. Questo esempio è simile all'esempio di chainer di .NET Framework 4. Tuttavia, in questo caso, è possibile evitare i riavvii del sistema elaborando la finestra di messaggio per chiudere le app di .NET Framework 4. Per informazioni sulla finestra di messaggio, vedere [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md). L'esempio può essere usato con il programma di installazione di .NET Framework 4, In questo caso, il messaggio non viene inviato.
 
 > [!WARNING]
 > È necessario eseguire l'esempio come amministratore.
@@ -63,7 +63,7 @@ Le sezioni seguenti descrivono i file più importanti dell'esempio: MMIOChainer.
 
 #### <a name="mmiochainerh"></a>MMIOChainer.h
 
-- Il file MMIOChainer.h (vedere il [codice completo](https://go.microsoft.com/fwlink/?LinkId=231369)) contiene la definizione della struttura dei dati e la classe di base dalla quale deve essere derivata la classe del chainer. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] estende la struttura dei dati MMIO per gestire i dati necessari al programma di installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Poiché le modifiche alla struttura MMIO sono compatibili con le versioni precedenti, un chainer di .NET Framework 4 può essere usato con l'installazione di .NET Framework 4.5 senza richiedere una ricompilazione. Tuttavia, questo scenario non supporta la funzionalità per ridurre il numero di riavvii del sistema.
+- Il file MMIOChainer.h (vedere il [codice completo](https://go.microsoft.com/fwlink/?LinkId=231369)) contiene la definizione della struttura dei dati e la classe di base dalla quale deve essere derivata la classe del chainer. .NET Framework 4.5 estende la struttura dei dati MMIO per gestire i dati necessari al programma di installazione di .NET Framework 4.5. Poiché le modifiche alla struttura MMIO sono compatibili con le versioni precedenti, un chainer di .NET Framework 4 può essere usato con l'installazione di .NET Framework 4.5 senza richiedere una ricompilazione. Tuttavia, questo scenario non supporta la funzionalità per ridurre il numero di riavvii del sistema.
 
     Un campo della versione consente di identificare le revisioni alla struttura e al formato dei messaggi. L'installazione di .NET Framework determina la versione dell'interfaccia del chainer chiamando la funzione `VirtualQuery` per determinare la dimensione del mapping del file. Se la dimensione è abbastanza grande per contenere il campo della versione, l'installazione di .NET Framework usa il valore specificato. Se il mapping del file è troppo piccolo per contenere un campo della versione, come avviene nel caso di .NET Framework 4, il processo di installazione presuppone che la versione sia la versione 0 (4). Se il chainer non supporta la versione del messaggio che l'installazione di .NET Framework vuole inviare, l'installazione di .NET Framework presuppone una risposta Ignora.
 
@@ -96,7 +96,7 @@ Le sezioni seguenti descrivono i file più importanti dell'esempio: MMIOChainer.
         };
     ```
 
-- La struttura dei dati `MmioDataStructure` non deve essere usata direttamente; usare invece la classe `MmioChainer` per implementare il chainer. Derivare dalla classe `MmioChainer` per concatenare il programma ridistribuibile [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
+- La struttura dei dati `MmioDataStructure` non deve essere usata direttamente; usare invece la classe `MmioChainer` per implementare il chainer. Derivare dalla classe `MmioChainer` per concatenare il programma ridistribuibile .NET Framework 4.5.
 
 #### <a name="iprogressobserverh"></a>IProgressObserver.h
 
@@ -151,7 +151,7 @@ Le sezioni seguenti descrivono i file più importanti dell'esempio: MMIOChainer.
     }
     ```
 
-- Prima di avviare l'installazione, il chainer verifica se [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] è già installato effettuando una chiamata a `IsNetFx4Present`:
+- Prima di avviare l'installazione, il chainer verifica se .NET Framework 4.5 è già installato eseguendo una chiamata a `IsNetFx4Present`:
 
     ```cpp
     ///  Checks for presence of the .NET Framework 4.
@@ -307,7 +307,7 @@ Le sezioni seguenti descrivono i file più importanti dell'esempio: MMIOChainer.
     ```
 
     > [!IMPORTANT]
-    > Il programma ridistribuibile [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] scrive in genere numerosi messaggi sullo stato di avanzamento e un unico messaggio che indica il completamento (sul lato del chainer). La lettura viene eseguita in modo asincrono cercando i record `Abort`. Se viene ricevuto un record `Abort`, l'installazione viene annullata e il programma scrive un record completato con i dati E_ABORT dopo che l'installazione è stata interrotta ed è stato eseguito il rollback delle operazioni di installazione.
+    > Il programma ridistribuibile .NET Framework 4.5 scrive in genere molti messaggi sullo stato di avanzamento e un unico messaggio per indicarne il completamento (sul lato del chainer). La lettura viene eseguita in modo asincrono cercando i record `Abort`. Se viene ricevuto un record `Abort`, l'installazione viene annullata e il programma scrive un record completato con i dati E_ABORT dopo che l'installazione è stata interrotta ed è stato eseguito il rollback delle operazioni di installazione.
 
 Un server tipico crea un nome file MMIO casuale, crea il file (come illustrato nell'esempio di codice precedente in `Server::CreateSection`) e avvia il programma ridistribuibile usando il metodo `CreateProcess` e passando il nome pipe con l'opzione `-pipe someFileSectionName`. Il server deve implementare il metodi `OnProgress`, `Send` e `Finished` con il codice specifico dall'interfaccia utente dell'applicazione.
 

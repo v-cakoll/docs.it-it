@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517538"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378565"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Disassembler IL)
 
@@ -38,7 +38,7 @@ Le opzioni che seguono sono disponibili per i file *.exe*, *.dll*, *.obj*, *.lib
 
 | Opzione | Description |
 | ------ | ----------- |
-|**/out =**`filename`|Crea un file di output con `filename` specificato anziché visualizzare i risultati in un'interfaccia utente grafica.|
+|**/out =** `filename`|Crea un file di output con `filename` specificato anziché visualizzare i risultati in un'interfaccia utente grafica.|
 |**/rtf**|Genera l'output in formato RTF (Rich Text Format). Non valida con l'opzione **/text**.|
 |**/text**|Visualizza i risultati nella finestra della console, anziché in un'interfaccia utente grafica o in un file di output.|
 |**/html**|Genera l'output in formato HTML. Valida solo con l'opzione **/output**.|
@@ -53,7 +53,7 @@ Le altre opzioni che seguono sono disponibili per i file *.exe*, *.dll* e *.winm
 |**/linenum**|Include riferimenti alle righe di origine.|
 |**/nobar**|Evita la visualizzazione della finestra popup contenente l'indicatore di stato del processo del disassembler.|
 |**/noca**|Evita la generazione dell'output di attributi personalizzati.|
-|**/project**|Mostra i metadati come vengono visualizzati nel codice gestito invece che nel [!INCLUDE[wrt](../../../includes/wrt-md.md)]nativo. Se `PEfilename` non è un file di metadati Windows (*.winmd*), questa opzione non ha effetto. Vedere [Supporto .NET Framework per applicazioni Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/project**|Mostra i metadati come vengono visualizzati nel codice gestito invece che nel [!INCLUDE[wrt](../../../includes/wrt-md.md)]nativo. Se `PEfilename` non è un file di metadati Windows ( *.winmd*), questa opzione non ha effetto. Vedere [Supporto .NET Framework per applicazioni Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Disassembla solo membri e tipi pubblici. Equivale a **/visibility:PUB**.|
 |**/quoteallnames**|Racchiude tutti i nomi tra virgolette singole.|
 |**/raweh**|Mostra le clausole di gestione delle eccezioni in formato non elaborato.|
@@ -69,7 +69,7 @@ Le opzioni che seguono sono valide per i file *.exe*, *.dll* e *.winmd* solo per
 |**/classlist**|Include un elenco di classi definite nel modulo.|
 |**/forward**|Utilizza la dichiarazione con prototipo della classe.|
 |**/headers**|Include nell'output le informazioni sull'intestazione del file.|
-|**/item:** `class`[**::** `member`[`(sig`]]|Disassembla quanto segue a seconda dell'argomento fornito:<br /><br /> -   Disassembla l'oggetto `class` specificato.<br />-   Disassembla l'oggetto `member` di `class` specificato.<br />-   Disassembla l'oggetto `member` di `class` con la firma `sig` specificata. Il formato di `sig` è il seguente:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Nota** Nelle versioni 1.0 e 1.1 di .NET Framework `sig` deve essere seguito da una parentesi di chiusura: `(sig)`. A partire da .NET Framework 2.0 la parentesi di chiusura deve essere omessa: `(sig`.|
+|**/item:** `class`[ **::** `member`[`(sig`]]|Disassembla quanto segue a seconda dell'argomento fornito:<br /><br /> -   Disassembla l'oggetto `class` specificato.<br />-   Disassembla l'oggetto `member` di `class` specificato.<br />-   Disassembla l'oggetto `member` di `class` con la firma `sig` specificata. Il formato di `sig` è il seguente:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Nota** Nelle versioni 1.0 e 1.1 di .NET Framework `sig` deve essere seguito da una parentesi di chiusura: `(sig)`. A partire da .NET Framework 2.0 la parentesi di chiusura deve essere omessa: `(sig`.|
 |**/noil**|Evita l'output del codice dell'assembly IL.|
 |**/stats**|Include le statistiche relative all'immagine.|
 |**/typelist**|Genera l'elenco completo dei tipi per mantenere l'ordinamento dei tipi in un round trip.|
@@ -82,7 +82,7 @@ Le opzioni che seguono sono valide per i file *.exe*, *.dll*, *.obj*, *.lib* e *
 | ------ | ----------- |
 |**/metadata**[=`specifier`]|Mostra i metadati, dove `specifier` è:<br /><br /> **MDHEADER**: visualizza le informazioni sull'intestazione e le dimensioni dei metadati.<br /><br /> **HEX**: visualizza le informazioni in esadecimali e in testo normale.<br /><br /> **CSV**: visualizza i conteggi di record e le dimensioni di heap.<br /><br /> **UNREX**: visualizza i riferimenti esterni non risolti.<br /><br /> **SCHEMA**: visualizza le informazioni sull'intestazione e lo schema dei metadati.<br /><br /> **RAW**: visualizza le tabelle di metadati non elaborate.<br /><br /> **HEAPS**: visualizza gli heap non elaborati.<br /><br /> **VALIDATE**: convalida la coerenza dei metadati.<br /><br /> È possibile specificare **/metadata** più volte, con valori diversi per `specifier`.|
 
-Le opzioni che seguono sono valide per i file *.lib* solo per l'output su file o su console. 
+Le opzioni che seguono sono valide per i file *.lib* solo per l'output su file o su console.
 
 | Opzione | Description |
 | ------ | ----------- |
@@ -111,7 +111,7 @@ Per determinare se il file è gestito è possibile eseguire *Ildasm.exe* su un f
 
 ## <a name="version-information"></a>Informazioni sulla versione
 
-A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], *Ildasm.exe* gestisce un BLOB (oggetto binario di grandi dimensioni) di marshalling non riconosciuto visualizzando il contenuto binario non elaborato. Ad esempio, il codice seguente mostra come viene visualizzato un BLOB di marshalling generato da un programma C#:
+A partire da .NET Framework 4.5, *Ildasm.exe* gestisce un BLOB (oggetto binario di grandi dimensioni) di marshalling non riconosciuto visualizzando il contenuto binario non elaborato. Ad esempio, il codice seguente mostra come viene visualizzato un BLOB di marshalling generato da un programma C#:
 
 ```csharp
 public void Test([MarshalAs((short)70)] int test) { }
@@ -122,7 +122,7 @@ public void Test([MarshalAs((short)70)] int test) { }
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
-A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], *Ildasm.exe* visualizza gli attributi applicati alle implementazioni di interfaccia, come illustrato nel seguente estratto dell'output di *Ildasm.exe*:
+A partire da .NET Framework 4.5, *Ildasm.exe* visualizza gli attributi applicati alle implementazioni di interfaccia, come illustrato nel seguente estratto dell'output di *Ildasm.exe*:
 
 ```
 .class public auto ansi beforefieldinit MyClass
