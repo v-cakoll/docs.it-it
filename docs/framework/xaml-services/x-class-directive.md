@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: ee94d7bf52f3fb2ea534cdb2f44d0be2cc8699eb
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 7245b14ff2f765c1cfe96a2d49aec34eff7e8a17
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689408"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722560"
 ---
 # <a name="xclass-directive"></a>Direttiva x:Class
 Configura la compilazione del markup XAML per creare un join classi parziali tra markup e code-behind. La classe parziale del codice è definita in un file di codice separato in un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] language, mentre la classe parziale di markup viene in genere creata dalla generazione del codice durante la compilazione XAML.  
@@ -52,7 +52,7 @@ Configura la compilazione del markup XAML per creare un join classi parziali tra
  In un certo livello di architettura, il significato di `x:Class` non è definito nei servizi XAML di .NET Framework. Questo avviene perché servizi XAML di .NET Framework non specifica il modello di programmazione mediante cui XAML markup e il codice di supporto sono connessi. Altri usi del `x:Class` direttiva può essere implementata da framework specifici che utilizzano modelli di programmazione o i modelli di applicazione per definire la modalità di connessione basati su CLR code-behind e markup XAML. Ogni framework può avere un proprio azioni di compilazione che consentono alcuni comportamento o componenti specifici che devono essere inclusi nell'ambiente di compilazione. All'interno di un framework, le azioni di compilazione anche possono variare a seconda del linguaggio specifico di CLR che viene usato per il code-behind.  
   
 ## <a name="xclass-in-the-wpf-programming-model"></a>X:Class nel modello di programmazione WPF  
- Nelle applicazioni WPF e il modello applicazione WPF, `x:Class` può essere dichiarato come un attributo per qualsiasi elemento che è la radice di un file XAML ed è in fase di compilazione (in cui è incluso il XAML in un progetto di applicazione WPF con `Page` azione di compilazione), o per il < C4 > <xref:System.Windows.Application>  radice nella definizione di applicazione di un'applicazione WPF compilata. La dichiarazione `x:Class` su un elemento diverso da una radice della pagina o la directory radice dell'applicazione o in un file di WPF XAML non compilato, provoca un errore in fase di compilazione sotto il [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] e il compilatore XAML di WPF di .NET Framework 3.5. Per informazioni su altri aspetti della `x:Class` gestisce in WPF, vedere [Code-Behind e XAML in WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md).  
+ Nelle applicazioni WPF e il modello applicazione WPF, `x:Class` può essere dichiarato come un attributo per qualsiasi elemento che è la radice di un file XAML ed è in fase di compilazione (in cui è incluso il XAML in un progetto di applicazione WPF con `Page` azione di compilazione), o per il < C4 > <xref:System.Windows.Application>  radice nella definizione di applicazione di un'applicazione WPF compilata. La dichiarazione `x:Class` su un elemento diverso da una radice della pagina o la directory radice dell'applicazione o in un file di WPF XAML non compilato, provoca un errore in fase di compilazione con il compilatore di .NET Framework 3.0 e WPF XAML di .NET Framework 3.5. Per informazioni su altri aspetti della `x:Class` gestisce in WPF, vedere [Code-Behind e XAML in WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md).  
   
 ## <a name="xclass-for-windows-workflow-foundation"></a>X:Class per Windows Workflow Foundation  
  Per Windows Workflow Foundation, `x:Class` denomina la classe di un'attività personalizzata costituita interamente in XAML oppure nomi di classe parziale della pagina XAML per ActivityDesigner con code-behind.  
