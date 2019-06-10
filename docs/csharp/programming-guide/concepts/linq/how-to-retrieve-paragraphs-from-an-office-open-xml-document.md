@@ -2,12 +2,12 @@
 title: 'Procedura: Recuperare paragrafi da un documento Office Open XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 192f04e9862b9cb901494f0a09744d3f9f289399
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b0919b7c5c40444587a18c0087109af8172ebb1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688272"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486451"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Procedura: Recuperare paragrafi da un documento Office Open XML (C#)
 In questo argomento viene presentato un esempio in cui viene aperto un documento Office Open XML e viene recuperata una raccolta di tutti i relativi paragrafi.  
@@ -19,7 +19,7 @@ In questo argomento viene presentato un esempio in cui viene aperto un documento
   
  Viene usato un metodo di estensione denominato `StringConcatenate`, specificato nell'esempio.  
   
- Per un'esercitazione dettagliata con una spiegazione del funzionamento dell'esempio, vedere [Trasformazioni funzionali pure di XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Per un'esercitazione dettagliata con una spiegazione del funzionamento dell'esempio, vedere [Trasformazioni funzionali pure di XML (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md).  
   
  In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -182,7 +182,3 @@ StyleName:Normal >This example produces the following output:<
 StyleName:Normal ><  
 StyleName:Code >Hello World<  
 ```  
-  
-## <a name="see-also"></a>Vedere anche
-
-- [Advanced Query Techniques (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md) (Tecniche di query avanzate (LINQ to XML) in C#)

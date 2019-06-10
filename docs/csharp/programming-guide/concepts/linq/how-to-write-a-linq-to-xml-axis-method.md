@@ -2,12 +2,12 @@
 title: "Procedura: Scrivere un metodo dell'asse LINQ to XML (C#)"
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 7e00ba6ba2880ab4f26f59a0b8543ac9f58dfbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e777e615d21dd43317f0813461a3f1d8a506c90
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529749"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484656"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Procedura: Scrivere un metodo dell'asse LINQ to XML (C#)
 È possibile scrivere metodi dell'asse personalizzati per recuperare raccolte da un albero XML. Uno dei modi migliori per eseguire questa operazione consiste nello scrivere un metodo di estensione che restituisce una raccolta di elementi o attributi. È possibile scrivere il metodo di estensione per restituire subset specifici di elementi o attributi, in base ai requisiti dell'applicazione.  
@@ -15,7 +15,7 @@ ms.locfileid: "54529749"
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono usati due metodi di estensione: Il primo metodo di estensione, `GetXPath`, opera su <xref:System.Xml.Linq.XObject> e restituisce un'espressione XPath che, quando viene valutata, restituisce il nodo o l'attributo. Il secondo metodo di estensione, `Find`, opera su <xref:System.Xml.Linq.XElement>. Restituisce una raccolta di oggetti <xref:System.Xml.Linq.XAttribute> e oggetti <xref:System.Xml.Linq.XElement> che contengono un testo specificato.  
   
- Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 public static class MyExtensions  
@@ -291,6 +291,3 @@ class Program
 1999-10-22  
 ```  
   
-## <a name="see-also"></a>Vedere anche
-
-- [Advanced Query Techniques (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md) (Tecniche di query avanzate (LINQ to XML) in C#)

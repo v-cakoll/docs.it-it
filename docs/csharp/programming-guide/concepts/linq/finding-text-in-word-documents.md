@@ -2,12 +2,12 @@
 title: Ricerca di testo nei documenti di Word (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: d421916335f4cf163a449bc7b0c7c7bb30179a5c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9f81795c00c29da34bb5f229afb557eb89af6509
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596622"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487490"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Ricerca di testo nei documenti di Word (C#)
 In questo argomento le query precedenti vengono estese in modo da individuare tutte le occorrenze di una stringa nel documento.  
@@ -325,10 +325,10 @@ StyleName:Code ><
 ## <a name="next-steps"></a>Passaggi successivi  
  Nella sezione successiva vengono fornite ulteriori informazioni sui documenti WordprocessingML:  
   
-- [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md) (Dettagli di documenti WordprocessingML Office Open XML (C#))  
+- [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md) (Dettagli di documenti WordprocessingML Office Open XML (C#))  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
 - [Refactoring con una funzione pura (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
 - [Esecuzione posticipata e valutazione lazy in LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

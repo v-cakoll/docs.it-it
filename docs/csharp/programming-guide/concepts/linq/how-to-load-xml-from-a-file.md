@@ -2,12 +2,12 @@
 title: 'Procedura: Caricare XML da un file (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3ed38487-8028-4209-9872-c8dce0ed4dfe
-ms.openlocfilehash: f97e99a3d5fb2dd5628e1dc00909b6608255a967
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd4e45767b2f72de8d9a3de9814da6260d2413fe
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688132"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485316"
 ---
 # <a name="how-to-load-xml-from-a-file-c"></a>Procedura: Caricare XML da un file (C#)
 In questo argomento viene illustrato come caricare XML da un URI tramite il metodo <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
@@ -15,7 +15,7 @@ In questo argomento viene illustrato come caricare XML da un URI tramite il meto
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come caricare un documento XML da un file. Viene caricato il file books.xml e viene restituito l'albero XML alla console.  
   
- Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: libri (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XElement booksFromFile = XElement.Load(@"books.xml");  
@@ -48,6 +48,3 @@ Console.WriteLine(booksFromFile);
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
-
-- [Analisi di codice XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: b8884f2ae230a92f48e93d9b5408ff241f874f92
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4200b3bfc14918b46c16b8f6a1007624c6c23f70
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968192"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486287"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operazioni di query LINQ di base (C#)
 Questo argomento offre una breve introduzione alle espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e ad alcuni tipi di operazioni specifiche eseguite in una query. Informazioni più specifiche sono disponibili negli argomenti seguenti:  
@@ -101,7 +101,6 @@ from order in Customer.Orders...
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [Procedura dettagliata: Scrittura di query in C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
 - [Parole chiave di query (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)

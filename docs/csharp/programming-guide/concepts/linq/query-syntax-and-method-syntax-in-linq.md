@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: e3fced818a257cb0bde166b0dd98c59c3b41e8ac
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654042"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484106"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Sintassi di query e sintassi di metodi in LINQ (C#)
 La maggior parte delle query presenti nella documentazione di Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) sono scritte usando la sintassi di query dichiarativa di LINQ. Tuttavia, la sintassi di query deve essere convertita in chiamate al metodo per Common Language Runtime (CLR) di .NET quando il codice viene compilato. Queste chiamate al metodo richiamano gli operatori query standard, che hanno nomi come `Where`, `Select`, `GroupBy`, `Join`, `Max` e `Average`. È possibile chiamarli direttamente usando la sintassi di metodo anziché la sintassi di query.  
@@ -41,7 +41,3 @@ La maggior parte delle query presenti nella documentazione di Language Integrate
   
 ## <a name="composability-of-queries"></a>Componibilità delle query  
  Nell'esempio di codice precedente il metodo `OrderBy` viene richiamato usando l'operatore punto nella chiamata a `Where`. `Where` genera una sequenza filtrata e quindi `Orderby` agisce sulla sequenza ordinandola. Poiché le query restituiscono un oggetto `IEnumerable`, è necessario comporle nella sintassi di metodo concatenando le chiamate al metodo. Questa è l'operazione che il compilatore esegue in background quando si scrivono le query usando la sintassi di query. E poiché una variabile di query non archivia i risultati della query, è possibile modificarla o usarla come base per una nuova query in qualsiasi momento, anche dopo che è stata eseguita.  
-  
-## <a name="see-also"></a>Vedere anche
-
-- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

@@ -2,12 +2,12 @@
 title: Esempio di esecuzione posticipata (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: 08125f8da54db18423f90564a51fcffad8db44c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c9ac87cf2b2af4114e5a20c211b4a6b3f7fced6b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598025"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486099"
 ---
 # <a name="deferred-execution-example-c"></a>Esempio di esecuzione posticipata (C#)
 In questo argomento vengono illustrati gli effetti dell'esecuzione posticipata e della valutazione lazy sulle query LINQ to XML.  
@@ -65,4 +65,4 @@ Main: str GHI
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: Concatenamento di query (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [Esercitazione: Concatenamento di query (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: Uso di XSLT per trasformare un albero XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
-ms.openlocfilehash: cbba118be31a852420616a667660cef25cb9fd88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69d1dd639b5bee226c8e295efe5d623eed169ac6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692311"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487033"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-c"></a>Uso di XSLT per trasformare un albero XML (C#)
 È possibile creare un albero XML, creare un oggetto <xref:System.Xml.XmlReader> dall'albero XML, creare un nuovo documento e infine creare un oggetto <xref:System.Xml.XmlWriter> che scriverà nel documento nuovo. Quindi, è possibile richiamare la trasformazione XSLT, passando <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> alla trasformazione. Dopo il completamento della trasformazione, il nuovo albero XML viene popolato con i relativi risultati.  
@@ -62,4 +62,3 @@ Console.WriteLine(newTree);
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>
-- [Programmazione LINQ to XML avanzata (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

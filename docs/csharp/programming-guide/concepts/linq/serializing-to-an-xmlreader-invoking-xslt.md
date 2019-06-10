@@ -2,12 +2,12 @@
 title: Serializzazione in base a un XmlReader (richiamo di XSLT) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cc3ee03-ef4c-429b-a408-fedd10b728cd
-ms.openlocfilehash: 7faf86badad116d9e6ea920d9d745261c078c43c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b079fe05fa8c230f644e011dcb62ec54f55cae60
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596956"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487186"
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>Serializzazione in base a un XmlReader (richiamo di XSLT) (C#)
 Quando si usano le funzionalità di interoperabilità <xref:System.Xml?displayProperty=nameWithType> di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], è possibile usare <xref:System.Xml.Linq.XNode.CreateReader%2A> per creare un oggetto <xref:System.Xml.XmlReader>. Il modulo che legge dall'oggetto <xref:System.Xml.XmlReader> creato legge i nodi dell'albero XML e li elabora di conseguenza.  
@@ -61,4 +61,4 @@ Console.WriteLine(newTree);
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Serializzazione di alberi XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [Serializzazione di alberi XML (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

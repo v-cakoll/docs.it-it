@@ -2,12 +2,12 @@
 title: 'Procedura: Creare una gerarchia tramite il raggruppamento (C#)'
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: bd2e8ab9fb0ed1fee68cb51d2d032b202b14ba88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 685c8ad1360ba2959dc81632ae084b935bd37c47
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560854"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485849"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-c"></a>Procedura: Creare una gerarchia tramite il raggruppamento (C#)
 In questo esempio viene illustrato come raggruppare dati e quindi generare codice XML basato sul raggruppamento.  
@@ -15,7 +15,7 @@ In questo esempio viene illustrato come raggruppare dati e quindi generare codic
 ## <a name="example"></a>Esempio  
  In questo esempio vengono prima raggruppati i dati in base a una categoria, quindi viene generato un nuovo file XML in cui la gerarchia XML riflette il raggruppamento.  
   
- Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: dati numerici (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -73,7 +73,3 @@ Console.WriteLine(newData);
   </Group>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>Vedere anche
-
-- [Advanced Query Techniques (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md) (Tecniche di query avanzate (LINQ to XML) in C#)

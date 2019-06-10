@@ -2,12 +2,12 @@
 title: Conservazione di spazi vuoti durante il caricamento o l'analisi di dati XML
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: 68b52f1d69c57b4292f02fea932e392de4a3ffc8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 802cd9089d0ab52e9c05546ddad04af8100e82a0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596792"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484089"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Conservazione di spazi vuoti durante il caricamento o l'analisi di dati XML
 Questo argomento descrive come controllare il comportamento dello spazio vuoto di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -37,6 +37,3 @@ Questo argomento descrive come controllare il comportamento dello spazio vuoto d
   
  È possibile creare un albero XML usando <xref:System.Xml.XmlWriter>. I nodi scritti in <xref:System.Xml.XmlWriter> vengono popolati nell'albero. Tuttavia, quando si compila un albero XML usando questo metodo, vengono conservati tutti i nodi, a prescindere che corrispondano o meno a spazio vuoto e indipendentemente dal fatto che lo spazio vuoto sia o meno significativo.  
   
-## <a name="see-also"></a>Vedere anche
-
-- [Analisi di codice XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

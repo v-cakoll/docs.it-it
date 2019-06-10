@@ -2,12 +2,12 @@
 title: Esecuzione posticipata e valutazione lazy in LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: 940885d6499bd2730c0bd4a5e15a490a9e85deab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f68a6c7de943d4a38ad0e5777298368e1c4e554
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597435"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487560"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Esecuzione posticipata e valutazione lazy in LINQ to XML (C#)
 Operazioni di query e su asse vengono spesso implementate in modo da usare l'esecuzione posticipata. In questo argomento vengono illustrati requisiti e vantaggi dell'esecuzione posticipata e vengono fornite alcune considerazioni sull'implementazione.  
@@ -35,7 +35,7 @@ Operazioni di query e su asse vengono spesso implementate in modo da usare l'ese
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: Concatenamento di query (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [Esercitazione: Concatenamento di query (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
 - [Concetti e terminologia (trasformazione funzionale) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
 - [Operazioni di aggregazione (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)
 - [yield](../../../../csharp/language-reference/keywords/yield.md)

@@ -2,12 +2,12 @@
 title: Esempio che genera parti di documento Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
-ms.openlocfilehash: fbfecf43824249363bf23596c9a148536423f9a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be4c0ba2ce2a007fa6e19a65d7d86854d85851c4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642779"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485999"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Esempio che genera parti di documento Office Open XML (C#)
 In questo argomento viene illustrato come aprire un documento Office Open XML e accedere a parti del documento.  
@@ -65,7 +65,3 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
     }  
 }  
 ```  
-  
-## <a name="see-also"></a>Vedere anche
-
-- [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md) (Dettagli di documenti WordprocessingML Office Open XML (C#))

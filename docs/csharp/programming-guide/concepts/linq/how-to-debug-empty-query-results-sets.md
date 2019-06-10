@@ -2,12 +2,12 @@
 title: 'Procedura: Eseguire il debug di set di risultati vuoti di query (C#)'
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: d77a92acf54420b5add3bb9ae8b3f0b8c5448d18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ba82e37ef4f57c78e7ba66676ba90312c2a9400f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357911"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485773"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>Procedura: Eseguire il debug di set di risultati vuoti di query (C#)
 Uno dei problemi più comuni che viene riscontrato durante l'esecuzione di query su alberi XML è che, se l'albero XML include uno spazio dei nomi predefinito, lo sviluppatore scrive talvolta la query come se il codice XML non fosse incluso in uno spazio dei nomi.  
@@ -16,7 +16,7 @@ Uno dei problemi più comuni che viene riscontrato durante l'esecuzione di query
   
  Nel secondo set di esempi sono illustrate le correzioni necessarie da effettuare per poter eseguire query su codice XML in uno spazio dei nomi.  
   
- Per altre informazioni, vedere [Utilizzo degli spazi dei nomi XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Per altre informazioni, vedere [Utilizzo degli spazi dei nomi XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
   
 ## <a name="example"></a>Esempio  
  In questo esempio è illustrata la creazione di codice XML in uno spazio dei nomi e una query che restituisce un set di risultati vuoto.  
@@ -81,7 +81,3 @@ Result set follows:
 3  
 End of result set  
 ```  
-  
-## <a name="see-also"></a>Vedere anche
-
-- [Query di base (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

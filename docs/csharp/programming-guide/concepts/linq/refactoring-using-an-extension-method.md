@@ -2,12 +2,12 @@
 title: Refactoring con un metodo di estensione (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 0f41c4b4357125b6c92b17d8c818a0cfcf9822e7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 06c09b1c76e0c5287cc3bf96947b2ebf54337592
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596188"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487265"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refactoring con un metodo di estensione (C#)
 Questo esempio si basa sull'esempio precedente [Recupero del testo dei paragrafi (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), effettuando il refactoring della concatenazione di stringhe usando una funzione pura che viene implementata come metodo di estensione.  
@@ -248,5 +248,5 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
 - [Refactoring in funzioni pure (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

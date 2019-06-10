@@ -2,12 +2,12 @@
 title: Differenze tra la modifica dell'albero XML in memoria e la costruzione funzionale (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
-ms.openlocfilehash: 1dea6a687f041c3464f582d3339f76713828f244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55eb95585bdd5d2c52175cacae2e6d049bd06f69
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692285"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484561"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Differenze tra la modifica dell'albero XML in memoria e la costruzione funzionale (LINQ to XML) (C#)
 La modifica di un albero XML sul posto è un approccio tradizionale per cambiare la forma di un documento XML. In una tipica applicazione un documento viene caricato in un archivio dati quale DOM o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], viene usata un'interfaccia di programmazione per inserire o eliminare nodi oppure per modificarne il contenuto, quindi il file XML viene salvato in un file o trasmesso tramite una rete.  
@@ -73,6 +73,3 @@ Console.WriteLine(newTree);
   
  Questo esempio è molto semplice, ma serve a illustrare le differenze concettuali tra i due approcci. L'approccio funzionale offre un aumento della produttività per la trasformazione di documenti XML di grandi dimensioni.  
   
-## <a name="see-also"></a>Vedere anche
-
-- [Modifica degli alberi XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

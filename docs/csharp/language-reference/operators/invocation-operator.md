@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 412d3ac5296eaf7d67f4a5e84b7a42f6fa5bb8a5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8f7382a49c81b6fd8e104b864ffc2f70db7fe4a6
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633836"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758105"
 ---
 # <a name="-operator-c-reference"></a>Operatore () (Riferimenti per C#)
 
@@ -26,7 +26,7 @@ Le parentesi `()` vengono in genere usate per la chiamata di un metodo o un dele
 
 L'esempio seguente illustra come richiamare un metodo (con o senza argomenti) e un delegato:
 
-[!code-csharp-interactive[use for invocation](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Invocation)]
+[!code-csharp-interactive[use for invocation](~/samples/csharp/language-reference/operators/InvocationOperatorExamples.cs#Invocation)]
 
 Le parentesi si usano anche per richiamare un [costruttore](../../programming-guide/classes-and-structs/constructors.md) con un operatore [`new`](../keywords/new-operator.md).
 
@@ -38,7 +38,7 @@ Un'espressione cast con formato `(T)E` richiama un operatore di conversione per 
 
 L'esempio seguente illustra la conversione di tipi tra tipi numerici:
 
-[!code-csharp-interactive[use for cast](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Cast)]
+[!code-csharp-interactive[use for cast](~/samples/csharp/language-reference/operators/InvocationOperatorExamples.cs#Cast)]
 
 Per altre informazioni sulle conversioni esplicite predefinite tra tipi numerici, vedere [Tabella delle conversioni numeriche esplicite](../keywords/explicit-numeric-conversions-table.md).
 

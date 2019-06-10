@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 5476e99cbd1a5af2acf91ed6bf854fded3425e72
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 64f650df0a9f6e6279e21b9cbd5ff444ef5c7a49
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452446"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758430"
 ---
 # <a name="abstract-c-reference"></a>abstract (Riferimenti per C#)
 Il modificatore `abstract` indica che l'oggetto in fase di modifica ha un'implementazione mancante o incompleta. Il modificatore abstract può essere usato con classi, metodi, proprietà, indicizzatori ed eventi. Usare il modificatore `abstract` in una dichiarazione di classe per indicare che una classe verrà usata solo come classe di base per altre classi e che non verrà creata un'istanza relativamente alla stessa. I membri contrassegnati come astratti devono essere implementati dalle classi che derivano dalla classe astratta.
   
 ## <a name="example"></a>Esempio  
- In questo esempio, la classe `Square` deve eseguire un'implementazione di `Area` poiché deriva da `ShapesClass`:  
+ In questo esempio, la classe `Square` deve eseguire un'implementazione di `GetArea` poiché deriva da `Shape`:  
   
  [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
   

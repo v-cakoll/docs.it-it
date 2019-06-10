@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 3b8ae80ff17ea2cf12c3d78c092dd3233ac0751d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b58219a8a4d45ce01f80fd367ed56b13a773e4bc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755962"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483406"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relazioni tra i tipi nelle operazioni di query LINQ (C#)
 Per scrivere le query in modo efficace, è necessario comprendere in che modo i tipi di variabili in un'operazione di query completa interagiscono tra loro. Conoscendo queste relazioni, si comprenderanno più facilmente gli esempi di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e di codice nella documentazione. In aggiunta, è possibile comprendere che cosa accade dietro le quinte quando le variabili vengono tipizzate in modo implicito tramite `var`.  
@@ -64,7 +64,3 @@ Per scrivere le query in modo efficace, è necessario comprendere in che modo i 
  ![Diagramma che illustra il flusso di tipi con tipizzazione implicita.](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
  Per altre informazioni su `var`, vedere [Variabili locali tipizzate in modo implicito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
-  
-## <a name="see-also"></a>Vedere anche
-
-- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

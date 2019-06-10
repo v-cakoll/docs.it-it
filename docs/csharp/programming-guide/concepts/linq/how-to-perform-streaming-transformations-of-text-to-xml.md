@@ -2,12 +2,12 @@
 title: 'Procedura: Eseguire trasformazioni del flusso di testo in XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 906150483f7f76b4429ea390d083e9f18696ac9e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d37ea5167576098d4ea343e49ae4ff6bac20d4ba
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555882"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485251"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Procedura: Eseguire trasformazioni del flusso di testo in XML (C#)
 Uno degli approcci disponibili per l'elaborazione di un file di testo consiste nello scrivere un metodo di estensione che genera un flusso del file di testo, una riga alla volta, tramite il costrutto `yield return`. È quindi possibile scrivere una query LINQ che elabora il file di testo in modo posticipato lazy. Se poi si usa <xref:System.Xml.Linq.XStreamingElement> per il flusso di output, è possibile creare una trasformazione del file di testo in XML che usa una quantità minima di memoria, indipendentemente dalle dimensioni del file di testo di origine.  
@@ -89,4 +89,3 @@ class Program
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.Linq.XStreamingElement>
-- [Advanced Query Techniques (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md) (Tecniche di query avanzate (LINQ to XML) in C#)

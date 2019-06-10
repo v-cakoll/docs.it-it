@@ -2,12 +2,12 @@
 title: 'Procedura: Trovare elementi con un attributo specifico (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-ms.openlocfilehash: c5b8ae9a41c5b05438d14f2717c8edfb151d47c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc1bc285a066dcb1843dcb626b1b3b354f28da74
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709377"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486812"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>Procedura: Trovare elementi con un attributo specifico (XPath-LINQ to XML) (C#)
 Talvolta si desidera individuare tutti gli elementi con un attributo specifico. Il contenuto dell'attributo non è rilevante perché si desidera solo individuare gli elementi in cui tale attributo è presente.  
@@ -56,6 +56,3 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
-
-- [LINQ to XML per gli utenti di XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

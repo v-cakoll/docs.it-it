@@ -2,12 +2,12 @@
 title: Refactoring in funzioni pure (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 3a498588e9ca1ab85602946b75b593804fa0953a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0ddf3eb937f0ff9ee6b0ce289d73be7640499ba4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596888"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483984"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refactoring in funzioni pure (C#)
 
@@ -24,7 +24,7 @@ Per le trasformazioni funzionali pure, è fondamentale comprendere come eseguire
   
  Per passare alla programmazione funzionale, è possibile eseguire il refactoring del codice esistente per eliminare inutili effetti collaterali e dipendenze esterne. In questo modo, è possibile creare versioni di funzioni pure del codice esistente.  
   
- In questo argomento vengono descritte le caratteristiche presenti e non presenti in una funzione pura. [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) illustra come modificare un documento WordprocessingML e include due esempi di esecuzione del refactoring usando una funzione pura.  
+ In questo argomento vengono descritte le caratteristiche presenti e non presenti in una funzione pura. [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) illustra come modificare un documento WordprocessingML e include due esempi di esecuzione del refactoring usando una funzione pura.  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminazione di effetti collaterali e dipendenze esterne  
  Negli esempi seguenti vengono confrontate due funzioni non pure e una funzione pura.  

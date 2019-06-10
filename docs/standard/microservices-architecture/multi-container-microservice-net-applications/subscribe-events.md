@@ -2,12 +2,12 @@
 title: Sottoscrizione di eventi
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sui dettagli di pubblicazione e sottoscrizione di eventi di integrazione.
 ms.date: 10/02/2018
-ms.openlocfilehash: ff165f6bba7940b99ef9712049191e356b893897
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c0eaacce51b186191431bf827bb84d3a2d2b7b1f
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639710"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722665"
 ---
 # <a name="subscribing-to-events"></a>Sottoscrizione di eventi
 
@@ -322,13 +322,13 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Fork di eShopOnContainers tramite NServiceBus (Particular Software)** \
+- **Fork di eShopOnContainers tramite NServiceBus (Particular Software)**  \
     <https://go.particular.net/eShopOnContainers>
 
 - **Event Driven Messaging** \ (Messaggistica basata su eventi)
     [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
-- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring e resilienza: valutazione dell'accoppiamento)** \
+- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring e resilienza: valutazione dell'accoppiamento)**  \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 - **Publish-Subscribe channel** \ (Canale di pubblicazione-sottoscrizione)
@@ -378,12 +378,6 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 
 - **Reliability Guide** (Guida all'affidabilità), documentazione RabbitMQ \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
-
-- **Bus di servizio di Azure. Messaggistica negoziata: Rilevamento duplicati** \
-    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
-
-- **Reliability Guide** (Guida all'affidabilità), documentazione RabbitMQ \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)
 
 > [!div class="step-by-step"]
 > [Precedente](rabbitmq-event-bus-development-test-environment.md)
