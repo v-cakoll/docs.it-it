@@ -197,13 +197,13 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 
 [x = y](assignment-operator.md): assegnazione.
 
-[x = y](arithmetic-operators.md#compound-assignment): incremento. Aggiunge il valore di `y` al valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore. Se `x` indica un elemento [event](../keywords/event.md), `y` deve essere un metodo appropriato che C# aggiunge come gestore eventi.
+[x += y](arithmetic-operators.md#compound-assignment): incremento. Aggiunge il valore di `y` al valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore. Se `x` indica un elemento [event](../keywords/event.md), `y` deve essere un metodo appropriato che C# aggiunge come gestore eventi.
 
 [x -= y](arithmetic-operators.md#compound-assignment): decremento. Sottrae il valore di `y` dal valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore. Se `x` indica un elemento [event](../keywords/event.md), `y` deve essere un metodo appropriato che C# rimuove come gestore eventi.
 
-[x -= y](arithmetic-operators.md#compound-assignment): assegnazione di moltiplicazione. Moltiplica il valore di `y` per il valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore.
+[x *= y](arithmetic-operators.md#compound-assignment): assegnazione di moltiplicazione. Moltiplica il valore di `y` per il valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore.
 
-[x -= y](arithmetic-operators.md#compound-assignment): assegnazione di divisione. Divide il valore di `x` per il valore di `y`, archivia il risultato in `x` e restituisce il nuovo valore.
+[x /= y](arithmetic-operators.md#compound-assignment): assegnazione di divisione. Divide il valore di `x` per il valore di `y`, archivia il risultato in `x` e restituisce il nuovo valore.
 
 [x %= y](arithmetic-operators.md#compound-assignment): assegnazione di resto. Divide il valore di `x` per il valore di `y`, archivia il resto in `x` e restituisce il nuovo valore.
 
