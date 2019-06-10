@@ -27,7 +27,7 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">Classificare i problemi di GitHub usando la classificazione multiclasse</a></li>
           - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">Stimare le tariffe dei taxi a New York usando la regressione</a>
           - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">Classificare i fiori in base alle caratteristiche usando il clustering</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommmendation">Creare un sistema di raccomandazione di film con la fattorizzazione di matrice</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Creare un sistema di raccomandazione di film con la fattorizzazione di matrice</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Creare un classificatore di immagini personalizzato con TensorFlow</a>
   - title: Riferimenti e risorse
     items:

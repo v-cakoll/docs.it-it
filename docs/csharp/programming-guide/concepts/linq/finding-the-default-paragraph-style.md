@@ -2,26 +2,26 @@
 title: Ricerca dello stile di paragrafo predefinito (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 89c70fcbc9d5286e2c9381250b30d525ebb1eb36
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5cbe1ad7b3a384448a4e570156b45f57446e73e6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596687"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485985"
 ---
-# <a name="finding-the-default-paragraph-style-c"></a><span data-ttu-id="fd35a-102">Ricerca dello stile di paragrafo predefinito (C#)</span><span class="sxs-lookup"><span data-stu-id="fd35a-102">Finding the Default Paragraph Style (C#)</span></span>
-<span data-ttu-id="fd35a-103">La prima attività dell'esercitazione Modifica di informazioni in un documento WordprocessingML consiste nell'individuare lo stile predefinito dei paragrafi del documento.</span><span class="sxs-lookup"><span data-stu-id="fd35a-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  
+# <a name="finding-the-default-paragraph-style-c"></a><span data-ttu-id="e57c5-102">Ricerca dello stile di paragrafo predefinito (C#)</span><span class="sxs-lookup"><span data-stu-id="e57c5-102">Finding the Default Paragraph Style (C#)</span></span>
+<span data-ttu-id="e57c5-103">La prima attività dell'esercitazione Modifica di informazioni in un documento WordprocessingML consiste nell'individuare lo stile predefinito dei paragrafi del documento.</span><span class="sxs-lookup"><span data-stu-id="e57c5-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fd35a-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="fd35a-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e57c5-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="e57c5-104">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="fd35a-105">Description</span><span class="sxs-lookup"><span data-stu-id="fd35a-105">Description</span></span>  
- <span data-ttu-id="fd35a-106">Nell'esempio seguente viene aperto un documento WordprocessingML di Office Open XML, vengono individuate le parti del package relative a documento e stile, quindi viene eseguita una query che trova il nome dello stile predefinito.</span><span class="sxs-lookup"><span data-stu-id="fd35a-106">The following example opens an Office Open XML WordprocessingML document, finds the document and style parts of the package, and then executes a query that finds the default style name.</span></span> <span data-ttu-id="fd35a-107">Per informazioni sui pacchetti di documenti Office Open XML e sulle parti da cui sono costituiti, vedere [Dettagli di documenti WordprocessingML Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).</span><span class="sxs-lookup"><span data-stu-id="fd35a-107">For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).</span></span>  
+### <a name="description"></a><span data-ttu-id="e57c5-105">Description</span><span class="sxs-lookup"><span data-stu-id="e57c5-105">Description</span></span>  
+ <span data-ttu-id="e57c5-106">Nell'esempio seguente viene aperto un documento WordprocessingML di Office Open XML, vengono individuate le parti del package relative a documento e stile, quindi viene eseguita una query che trova il nome dello stile predefinito.</span><span class="sxs-lookup"><span data-stu-id="e57c5-106">The following example opens an Office Open XML WordprocessingML document, finds the document and style parts of the package, and then executes a query that finds the default style name.</span></span> <span data-ttu-id="e57c5-107">Per informazioni sui pacchetti di documenti Office Open XML e sulle parti da cui sono costituiti, vedere [Dettagli di documenti WordprocessingML Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md).</span><span class="sxs-lookup"><span data-stu-id="e57c5-107">For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md).</span></span>  
   
- <span data-ttu-id="fd35a-108">La query cerca un nodo denominato `w:style` che ha un attributo denominato `w:type` con il valore "paragraph" e un attributo denominato `w:default` con il valore "1".</span><span class="sxs-lookup"><span data-stu-id="fd35a-108">The query finds a node named `w:style` that has an attribute named `w:type` with a value of "paragraph", and also has an attribute named `w:default` with a value of "1".</span></span> <span data-ttu-id="fd35a-109">Poiché sarà disponibile un solo nodo XML con questi attributi, la query usa l'operatore <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> per convertire una raccolta in un Singleton.</span><span class="sxs-lookup"><span data-stu-id="fd35a-109">Because there will be only one XML node with these attributes, the query uses the <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operator to convert a collection to a singleton.</span></span> <span data-ttu-id="fd35a-110">Ottiene quindi il valore dell'attributo con il nome `w:styleId`.</span><span class="sxs-lookup"><span data-stu-id="fd35a-110">It then gets the value of the attribute with the name `w:styleId`.</span></span>  
+ <span data-ttu-id="e57c5-108">La query cerca un nodo denominato `w:style` che ha un attributo denominato `w:type` con il valore "paragraph" e un attributo denominato `w:default` con il valore "1".</span><span class="sxs-lookup"><span data-stu-id="e57c5-108">The query finds a node named `w:style` that has an attribute named `w:type` with a value of "paragraph", and also has an attribute named `w:default` with a value of "1".</span></span> <span data-ttu-id="e57c5-109">Poiché sarà disponibile un solo nodo XML con questi attributi, la query usa l'operatore <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> per convertire una raccolta in un Singleton.</span><span class="sxs-lookup"><span data-stu-id="e57c5-109">Because there will be only one XML node with these attributes, the query uses the <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operator to convert a collection to a singleton.</span></span> <span data-ttu-id="e57c5-110">Ottiene quindi il valore dell'attributo con il nome `w:styleId`.</span><span class="sxs-lookup"><span data-stu-id="e57c5-110">It then gets the value of the attribute with the name `w:styleId`.</span></span>  
   
- <span data-ttu-id="fd35a-111">In questo esempio vengono usate classi dell'assembly WindowsBase</span><span class="sxs-lookup"><span data-stu-id="fd35a-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="fd35a-112">e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="fd35a-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="e57c5-111">In questo esempio vengono usate classi dell'assembly WindowsBase</span><span class="sxs-lookup"><span data-stu-id="e57c5-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="e57c5-112">e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e57c5-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="fd35a-113">Codice</span><span class="sxs-lookup"><span data-stu-id="fd35a-113">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="e57c5-113">Codice</span><span class="sxs-lookup"><span data-stu-id="e57c5-113">Code</span></span>  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -76,18 +76,15 @@ string defaultStyle =
 Console.WriteLine("The default style is: {0}", defaultStyle);  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="fd35a-114">Commenti</span><span class="sxs-lookup"><span data-stu-id="fd35a-114">Comments</span></span>  
- <span data-ttu-id="fd35a-115">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="fd35a-115">This example produces the following output:</span></span>  
+### <a name="comments"></a><span data-ttu-id="e57c5-114">Commenti</span><span class="sxs-lookup"><span data-stu-id="e57c5-114">Comments</span></span>  
+ <span data-ttu-id="e57c5-115">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="e57c5-115">This example produces the following output:</span></span>  
   
 ```  
 The default style is: Normal  
 ```  
   
-## <a name="next-steps"></a><span data-ttu-id="fd35a-116">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="fd35a-116">Next Steps</span></span>  
- <span data-ttu-id="fd35a-117">Nell'esempio successivo verrà creata una query simile che trova tutti i paragrafi in un documento e i relativi stili:</span><span class="sxs-lookup"><span data-stu-id="fd35a-117">In the next example, you'll create a similar query that finds all the paragraphs in a document and their styles:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="e57c5-116">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="e57c5-116">Next Steps</span></span>  
+ <span data-ttu-id="e57c5-117">Nell'esempio successivo verrà creata una query simile che trova tutti i paragrafi in un documento e i relativi stili:</span><span class="sxs-lookup"><span data-stu-id="e57c5-117">In the next example, you'll create a similar query that finds all the paragraphs in a document and their styles:</span></span>  
   
-- [<span data-ttu-id="fd35a-118">Recupero dei paragrafi e dei relativi stili (C#)</span><span class="sxs-lookup"><span data-stu-id="fd35a-118">Retrieving the Paragraphs and Their Styles (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [<span data-ttu-id="e57c5-118">Recupero dei paragrafi e dei relativi stili (C#)</span><span class="sxs-lookup"><span data-stu-id="e57c5-118">Retrieving the Paragraphs and Their Styles (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
-## <a name="see-also"></a><span data-ttu-id="fd35a-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fd35a-119">See also</span></span>
-
-- [<span data-ttu-id="fd35a-120">Esercitazione: Manipolazione di contenuto in un documento WordprocessingML</span><span class="sxs-lookup"><span data-stu-id="fd35a-120">Tutorial: Manipulating Content in a WordprocessingML Document</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

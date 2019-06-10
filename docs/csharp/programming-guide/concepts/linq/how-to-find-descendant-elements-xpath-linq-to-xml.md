@@ -2,22 +2,22 @@
 title: 'Procedura: Trovare elementi discendenti (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
-ms.openlocfilehash: 0b9d89f0a9adb540e7efdccd1e4e7c2f8caf9696
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99f5f552935d6169537ccfbadff2a21396828e47
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599231"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486763"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="9ecc5-102">Procedura: Trovare elementi discendenti (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="9ecc5-102">How to: Find Descendant Elements (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="9ecc5-103">In questo argomento viene illustrato come ottenere gli elementi discendenti con un determinato nome.</span><span class="sxs-lookup"><span data-stu-id="9ecc5-103">This topic shows how to get the descendant elements with a particular name.</span></span>  
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="cdf5f-102">Procedura: Trovare elementi discendenti (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="cdf5f-102">How to: Find Descendant Elements (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="cdf5f-103">In questo argomento viene illustrato come ottenere gli elementi discendenti con un determinato nome.</span><span class="sxs-lookup"><span data-stu-id="cdf5f-103">This topic shows how to get the descendant elements with a particular name.</span></span>  
   
- <span data-ttu-id="9ecc5-104">L'espressione XPath è `//Name`.</span><span class="sxs-lookup"><span data-stu-id="9ecc5-104">The XPath expression is `//Name`.</span></span>  
+ <span data-ttu-id="cdf5f-104">L'espressione XPath è `//Name`.</span><span class="sxs-lookup"><span data-stu-id="cdf5f-104">The XPath expression is `//Name`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9ecc5-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="9ecc5-105">Example</span></span>  
- <span data-ttu-id="9ecc5-106">In questo esempio vengono trovati tutti i discendenti denominati `Name`.</span><span class="sxs-lookup"><span data-stu-id="9ecc5-106">This example finds all descendants named `Name`.</span></span>  
+## <a name="example"></a><span data-ttu-id="cdf5f-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="cdf5f-105">Example</span></span>  
+ <span data-ttu-id="cdf5f-106">In questo esempio vengono trovati tutti i discendenti denominati `Name`.</span><span class="sxs-lookup"><span data-stu-id="cdf5f-106">This example finds all descendants named `Name`.</span></span>  
   
- <span data-ttu-id="9ecc5-107">Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="9ecc5-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="cdf5f-107">Nell'esempio viene usato il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="cdf5f-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -37,7 +37,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="9ecc5-108">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="9ecc5-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="cdf5f-108">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="cdf5f-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -48,7 +48,3 @@ Results are identical
 <Name>Jessica Arnold</Name>  
 <Name>Jessica Arnold</Name>  
 ```  
-  
-## <a name="see-also"></a><span data-ttu-id="9ecc5-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9ecc5-109">See also</span></span>
-
-- [<span data-ttu-id="9ecc5-110">LINQ to XML per gli utenti di XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="9ecc5-110">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

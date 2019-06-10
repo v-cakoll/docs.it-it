@@ -2,18 +2,18 @@
 title: Esempio di concatenamento di query (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: 8564a2ece7dc09bd3330dc9bdad31689408089cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8685db7461a1ce97c7a9c0045ed842fa4ac1a1f6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598546"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486191"
 ---
-# <a name="chaining-queries-example-c"></a><span data-ttu-id="9ee0d-102">Esempio di concatenamento di query (C#)</span><span class="sxs-lookup"><span data-stu-id="9ee0d-102">Chaining Queries Example (C#)</span></span>
-<span data-ttu-id="9ee0d-103">In questo esempio, basato sull'esempio precedente, vengono illustrati gli effetti del concatenamento di due query che usano l'esecuzione posticipata e la valutazione lazy.</span><span class="sxs-lookup"><span data-stu-id="9ee0d-103">This example builds on the previous example and shows what happens when you chain together two queries that both use deferred execution and lazy evaluation.</span></span>  
+# <a name="chaining-queries-example-c"></a><span data-ttu-id="588ce-102">Esempio di concatenamento di query (C#)</span><span class="sxs-lookup"><span data-stu-id="588ce-102">Chaining Queries Example (C#)</span></span>
+<span data-ttu-id="588ce-103">In questo esempio, basato sull'esempio precedente, vengono illustrati gli effetti del concatenamento di due query che usano l'esecuzione posticipata e la valutazione lazy.</span><span class="sxs-lookup"><span data-stu-id="588ce-103">This example builds on the previous example and shows what happens when you chain together two queries that both use deferred execution and lazy evaluation.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9ee0d-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="9ee0d-104">Example</span></span>  
- <span data-ttu-id="9ee0d-105">In questo esempio viene introdotto un altro metodo di estensione, `AppendString`, che aggiunge una stringa specificata a ogni stringa della raccolta di origine e quindi restituisce le nuove stringhe.</span><span class="sxs-lookup"><span data-stu-id="9ee0d-105">In this example, another extension method is introduced, `AppendString`, which appends a specified string onto every string in the source collection, and then yields the new strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="588ce-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="588ce-104">Example</span></span>  
+ <span data-ttu-id="588ce-105">In questo esempio viene introdotto un altro metodo di estensione, `AppendString`, che aggiunge una stringa specificata a ogni stringa della raccolta di origine e quindi restituisce le nuove stringhe.</span><span class="sxs-lookup"><span data-stu-id="588ce-105">In this example, another extension method is introduced, `AppendString`, which appends a specified string onto every string in the source collection, and then yields the new strings.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -62,7 +62,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="9ee0d-106">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="9ee0d-106">This example produces the following output:</span></span>  
+ <span data-ttu-id="588ce-106">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="588ce-106">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source >abc<  
@@ -78,14 +78,14 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- <span data-ttu-id="9ee0d-107">In questo esempio è possibile osservare che i metodi di estensione operano uno alla volta per ogni elemento della raccolta di origine.</span><span class="sxs-lookup"><span data-stu-id="9ee0d-107">In this example, you can see that each extension method operates one at a time for each item in the source collection.</span></span>  
+ <span data-ttu-id="588ce-107">In questo esempio è possibile osservare che i metodi di estensione operano uno alla volta per ogni elemento della raccolta di origine.</span><span class="sxs-lookup"><span data-stu-id="588ce-107">In this example, you can see that each extension method operates one at a time for each item in the source collection.</span></span>  
   
- <span data-ttu-id="9ee0d-108">Scopo di questo esempio è dimostrare che, anche se le query che restituiscono le raccolte sono state concatenate, non vengono materializzate raccolte intermedie.</span><span class="sxs-lookup"><span data-stu-id="9ee0d-108">What should be clear from this example is that even though we have chained together queries that yield collections, no intermediate collections are materialized.</span></span> <span data-ttu-id="9ee0d-109">Al contrario, ogni elemento viene passato da un metodo lazy al successivo.</span><span class="sxs-lookup"><span data-stu-id="9ee0d-109">Instead, each item is passed from one lazy method to the next.</span></span> <span data-ttu-id="9ee0d-110">Il risultato è un footprint di memoria molto più piccolo rispetto a quello di un approccio che prevede di prendere una matrice di stringhe, quindi creare una seconda matrice di stringhe che sono state convertite in maiuscolo e infine creare una terza matrice di stringhe in cui alla fine di ogni stringa è stato aggiunto un punto esclamativo.</span><span class="sxs-lookup"><span data-stu-id="9ee0d-110">This results in a much smaller memory footprint than an approach that would first take one array of strings, then create a second array of strings that have been converted to uppercase, and finally create a third array of strings where each string has the exclamation points appended to it.</span></span>  
+ <span data-ttu-id="588ce-108">Scopo di questo esempio è dimostrare che, anche se le query che restituiscono le raccolte sono state concatenate, non vengono materializzate raccolte intermedie.</span><span class="sxs-lookup"><span data-stu-id="588ce-108">What should be clear from this example is that even though we have chained together queries that yield collections, no intermediate collections are materialized.</span></span> <span data-ttu-id="588ce-109">Al contrario, ogni elemento viene passato da un metodo lazy al successivo.</span><span class="sxs-lookup"><span data-stu-id="588ce-109">Instead, each item is passed from one lazy method to the next.</span></span> <span data-ttu-id="588ce-110">Il risultato è un footprint di memoria molto più piccolo rispetto a quello di un approccio che prevede di prendere una matrice di stringhe, quindi creare una seconda matrice di stringhe che sono state convertite in maiuscolo e infine creare una terza matrice di stringhe in cui alla fine di ogni stringa è stato aggiunto un punto esclamativo.</span><span class="sxs-lookup"><span data-stu-id="588ce-110">This results in a much smaller memory footprint than an approach that would first take one array of strings, then create a second array of strings that have been converted to uppercase, and finally create a third array of strings where each string has the exclamation points appended to it.</span></span>  
   
- <span data-ttu-id="9ee0d-111">Nell'argomento successivo di questa esercitazione viene illustrata la materializzazione intermedia:</span><span class="sxs-lookup"><span data-stu-id="9ee0d-111">The next topic in this tutorial illustrates intermediate materialization:</span></span>  
+ <span data-ttu-id="588ce-111">Nell'argomento successivo di questa esercitazione viene illustrata la materializzazione intermedia:</span><span class="sxs-lookup"><span data-stu-id="588ce-111">The next topic in this tutorial illustrates intermediate materialization:</span></span>  
   
-- [<span data-ttu-id="9ee0d-112">Materializzazione intermedia (C#)</span><span class="sxs-lookup"><span data-stu-id="9ee0d-112">Intermediate Materialization (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+- [<span data-ttu-id="588ce-112">Materializzazione intermedia (C#)</span><span class="sxs-lookup"><span data-stu-id="588ce-112">Intermediate Materialization (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9ee0d-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9ee0d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="588ce-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="588ce-113">See also</span></span>
 
-- [<span data-ttu-id="9ee0d-114">Esercitazione: Concatenamento di query (C#)</span><span class="sxs-lookup"><span data-stu-id="9ee0d-114">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [<span data-ttu-id="588ce-114">Esercitazione: Concatenamento di query (C#)</span><span class="sxs-lookup"><span data-stu-id="588ce-114">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
