@@ -1,17 +1,17 @@
 ---
 title: Record
 description: Informazioni su come F# i record rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri.
-ms.date: 05/16/2016
-ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.date: 06/09/2019
+ms.openlocfilehash: cfb8de8272b479571119ae4cf91ea1d6fd5db73c
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795421"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816196"
 ---
 # <a name="records"></a>Record
 
-I record rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri.  A partire da F# 4.1, reti virtuali possono essere tipi riferimento o struct.  Si tratta di tipi di riferimento per impostazione predefinita.
+I record rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri. Reti virtuali possono essere tipi riferimento o struct.  Si tratta di tipi di riferimento per impostazione predefinita.
 
 ## <a name="syntax"></a>Sintassi
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - .NET Framework application configuration, cryptography
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
-ms.openlocfilehash: ba11eed316e227ceae4cb5acecb2b081fa8868f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5c1178519601d7dcb7c5b3014f413b6436746fb
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705532"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816166"
 ---
 # <a name="configuring-cryptography-classes"></a>Configurazione di classi di crittografia
-Il [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] consente agli amministratori del computer configurare gli algoritmi di crittografia predefinito e implementazioni di algoritmi che usano .NET Framework e le applicazioni scritte in modo appropriato.  Ad esempio, un'azienda che ha la propria implementazione di un algoritmo di crittografia può utilizzare tale implementazione l'impostazione predefinita anziché l'implementazione fornito con il [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]. Sebbene le applicazioni gestite che usano crittografia sempre possono scegliere di associare in modo esplicito a una particolare implementazione, è consigliabile che creano oggetti di crittografia utilizzando il sistema di configurazione della crittografia.  
+Il [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] consente agli amministratori del computer configurare gli algoritmi di crittografia predefinito e implementazioni di algoritmi che usano .NET Framework e le applicazioni scritte in modo appropriato.  Ad esempio, un'azienda che ha la propria implementazione di un algoritmo di crittografia può utilizzare tale implementazione il valore predefinito anziché l'implementazione fornito nel SDK di Windows. Sebbene le applicazioni gestite che usano crittografia sempre possono scegliere di associare in modo esplicito a una particolare implementazione, è consigliabile che creano oggetti di crittografia utilizzando il sistema di configurazione della crittografia.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Mapping di nomi di algoritmi a classi di crittografia](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  
@@ -28,7 +28,7 @@ Il [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] consente agli ammi
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
- Viene fornita una panoramica dei servizi di crittografia forniti dal [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)].  
+ Fornisce una panoramica di servizi di crittografia forniti da Windows SDK.  
   
  [Schema delle impostazioni di crittografia](../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
  Vengono descritti gli elementi che eseguono il mapping dei nomi descrittivi degli algoritmi alle classi che implementano gli algoritmi di crittografia.

@@ -1,13 +1,13 @@
 ---
 title: Valori letterali
 description: Informazioni sui tipi di valore letterali in di F# linguaggio di programmazione.
-ms.date: 02/08/2019
-ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.date: 06/08/2019
+ms.openlocfilehash: 93329cd868ff7a2daaffa1b87ba838bbbc98015c
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490983"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816227"
 ---
 # <a name="literals"></a>Valori letterali
 
@@ -44,13 +44,16 @@ La tabella seguente illustra i tipi di valore letterali in F#. I caratteri che r
 |byte[]|Stringa ASCII|B|`"text"B`|
 |String o byte]|stringa verbatim|prefisso @|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
-## <a name="remarks"></a>Note
+## <a name="named-literals"></a>Valori letterali denominati
 
-Le stringhe Unicode possono contenere codifiche esplicite che è possibile specificare utilizzando `\u` seguita da un codice esadecimale a 16 bit o le codifiche UTF-32 che è possibile specificare utilizzando `\U` seguita da un codice esadecimale a 32 bit che rappresenta un Unicode coppia di surrogati.
+I valori che devono essere costanti possono essere contrassegnati con il [letterale](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) attributo. Questo attributo ha l'effetto di provocare un valore essere compilato come una costante.
 
-A partire dal F# 3.1, è possibile usare il `+` accedere per combinare i valori letterali stringa. È anche possibile usare i bit per bit o (`|||`) operatore per combinare i flag dell'enumerazione. Ad esempio, il codice seguente è valido in F# 3.1:
+Nelle espressioni dei criteri, gli identificatori che iniziano con caratteri minuscoli vengono sempre trattati come variabili da associare, anziché come valori letterali, pertanto è consigliabile in genere usare lettere maiuscole iniziali quando si definiscono i valori letterali.
 
 ```fsharp
+[<Literal>]
+let SomeJson = """{"numbers":[1,2,3,4,5]}"""
+
 [<Literal>]
 let Literal1 = "a" + "b"
 
@@ -64,15 +67,13 @@ let Literal2 = 1 ||| 64
 let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
-Non è consentito l'uso di altri operatori bit per bit.
+## <a name="remarks"></a>Note
 
-## <a name="named-literals"></a>Valori letterali denominati
+Le stringhe Unicode possono contenere codifiche esplicite che è possibile specificare utilizzando `\u` seguita da un codice esadecimale a 16 bit o le codifiche UTF-32 che è possibile specificare utilizzando `\U` seguita da un codice esadecimale a 32 bit che rappresenta un Unicode coppia di surrogati.
 
-I valori che devono essere costanti possono essere contrassegnati con il [letterale](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) attributo. Questo attributo ha l'effetto di provocare un valore essere compilato come una costante.
+L'uso di altri operatori bit per bit diverso da `|||` non è consentito.
 
-Nelle espressioni dei criteri, gli identificatori che iniziano con caratteri minuscoli vengono sempre trattati come variabili da associare, anziché come valori letterali, pertanto è consigliabile in genere usare lettere maiuscole iniziali quando si definiscono i valori letterali.
-
-## <a name="integers-in-other-bases"></a>Numeri interi In altre basi
+## <a name="integers-in-other-bases"></a>Numeri interi in altre basi
 
 È possibile anche specificare interi con segno a 32 bit binaria, ottale o esadecimale con un `0x`, `0o` o `0b` rispettivamente del prefisso.
 
@@ -83,7 +84,7 @@ let numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Caratteri di sottolineatura nei valori letterali numerici
 
-A partire da F# 4.1, è possibile separare cifre con il carattere di sottolineatura (`_`).
+È possibile separare cifre con il carattere di sottolineatura (`_`).
 
 ```fsharp
 let value = 0xDEAD_BEEF
