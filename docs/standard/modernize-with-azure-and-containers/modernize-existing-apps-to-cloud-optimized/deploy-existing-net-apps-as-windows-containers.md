@@ -2,12 +2,12 @@
 title: Distribuire app .NET esistenti come contenitori Windows
 description: Modernizzare le applicazioni .NET esistenti con contenitori Windows e il Cloud di Azure | Distribuire le app .NET esistenti come contenitori di Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: 77d10867573765a7e86a9827825e1313de7a3035
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643748"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758840"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Distribuire app .NET esistenti come contenitori Windows
 
@@ -153,7 +153,6 @@ I prodotti in contenitori con supporti di Azure che sono allo stesso tempo posiz
 
 - **Servizio app di Azure**
 - **Azure Kubernetes Service (servizio contenitore di AZURE e servizio contenitore di AZURE)**
-- **Azure Service Fabric** 
 - **Azure Batch** 
 
 Quindi, registro contenitori di Azure è un registro contenitori di scalabilità elevata ospitato in Azure che è possibile usare da tutti i prodotti precedenti durante la registrazione e distribuzione di immagini contenitore personalizzate.

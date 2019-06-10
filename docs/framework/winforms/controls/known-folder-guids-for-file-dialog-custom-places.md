@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 0f06ca2251ae1bf9bd5e199562eff116614e7117
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09c51341a2b81c21804bcca3b244bbebdb7342b6
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973840"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758769"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUID di cartella nota per percorsi personalizzati della finestra di dialogo File.
-Usa un' <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] cartella nota quando si aggiungono le cartelle da un <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> raccolta. Noto GUID di cartella non sono tra maiuscole e minuscole e vengono definiti nel file KnownFolders. H di [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
+Usa un' <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] cartella nota quando si aggiungono le cartelle da un <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> raccolta. GUID della cartella nota non sono tra maiuscole e minuscole e vengono definiti nel file KnownFolders. H in Windows SDK.  
   
 > [!NOTE]
 >  In alcuni casi, aggiungere una cartella nota di <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> non verranno visualizzati nei **collegamenti Preferiti** area. Ad esempio, se la cartella nota specificato non è presente nel computer che esegue l'applicazione, nella cartella noto non viene visualizzata.  

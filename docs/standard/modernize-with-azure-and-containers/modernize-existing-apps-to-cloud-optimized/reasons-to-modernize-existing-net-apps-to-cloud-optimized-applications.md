@@ -2,12 +2,12 @@
 title: Motivi per cui rinnovare le app .NET esistenti per le applicazioni ottimizzato per il Cloud
 description: Modernizzare le applicazioni .NET esistenti con contenitori Windows e il Cloud di Azure | Motivi per cui rinnovare le app .NET esistenti per le applicazioni ottimizzato per il Cloud
 ms.date: 04/28/2018
-ms.openlocfilehash: e09d8066e883aaef55408336e3817158e2c14be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639052"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758753"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Motivi per cui rinnovare le app .NET esistenti per le applicazioni ottimizzato per il Cloud
 
@@ -27,7 +27,7 @@ L'applicazione è ottimizzato per il Cloud se can aggiuntivo un'agile modo-svilu
 
 La chiave è *agilità*. Non è possibile spedire con agilità a meno che non è ridurre al minimo qualsiasi distribuzione alla produzione problemi e problemi di ambiente di sviluppo/test. Contenitori (in particolare, Docker, come uno standard de facto) e i servizi gestiti sono stati progettati per questo scopo specifico.
 
-Per ottenere flessibilità, è necessario anche i processi DevOps automatizzati basati su pipeline CI/CD che rilasciano alle piattaforme scalabili nel cloud. Piattaforme di integrazione continua/recapito Continuo (come Azure DevOps Services o Jenkins) da distribuire in una piattaforma cloud scalabile e resiliente (ad esempio servizio App di Azure, Azure Service Fabric o Azure Kubernetes Service) sono tecnologie fondamentali per ottenere flessibilità sul cloud.
+Per ottenere flessibilità, è necessario anche i processi DevOps automatizzati basati su pipeline CI/CD che rilasciano alle piattaforme scalabili nel cloud. Piattaforme di integrazione continua/recapito Continuo (come Azure DevOps Services o Jenkins) da distribuire in una piattaforma cloud scalabile e resiliente (ad esempio servizio App di Azure o Azure Kubernetes Service) sono tecnologie fondamentali per ottenere flessibilità sul cloud.
 
 Nell'elenco seguente descrive i principi principale o procedure consigliate per le applicazioni ottimizzato per il Cloud. Si noti che è possibile adottare tutti o solo alcuni di questi principi, in un approccio graduale o incrementale:
 

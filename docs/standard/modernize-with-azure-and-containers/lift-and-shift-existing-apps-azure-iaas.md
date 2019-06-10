@@ -2,12 +2,12 @@
 title: Lift- and -shift le app .NET esistenti ad Azure IaaS (infrastruttura di Cloud-Ready)
 description: Modernizza le applicazioni .NET esistenti con Cloud di Azure e i contenitori di Windows.
 ms.date: 04/28/2018
-ms.openlocfilehash: 24e413ad82742067b2fee6cd3a7a99e6f0f87b0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643711"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758870"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Lift- and -shift le app .NET esistenti ad Azure IaaS (infrastruttura di Cloud-Ready)
 
@@ -39,7 +39,7 @@ Le sezioni successive illustrano ottimizzato per il Cloud le applicazioni che so
 
 Se l'obiettivo è semplicemente spostare le applicazioni esistenti nel cloud, prima di tutto identificare le applicazioni esistenti che non richiedono modifiche sostanziali per l'esecuzione in servizio App di Azure. Queste App devono essere i primi candidati per ottimizzato per il Cloud. 
 
-Quindi, per le app che ancora non è possibile spostare in contenitori Windows e PaaS, ad esempio servizio App o gli agenti di orchestrazione come Azure Service Fabric, migrare a semplici plain le macchine virtuali (IaaS). 
+Quindi, per le app che ancora non è possibile spostare in contenitori Windows e PaaS, ad esempio servizio App o gli agenti di orchestrazione come servizio Kubernetes di Azure, eseguire la migrazione di quelli per semplici plain le macchine virtuali (IaaS). 
 
 Tuttavia, tenere presente che correttamente la configurazione, protezione e manutenzione delle macchine virtuali richiede molto più tempo e competenze IT rispetto all'uso dei servizi PaaS in Azure. Se si prevede di macchine virtuali di Azure, assicurarsi di prendere in considerazione il lavoro continuativo necessario per applicare la patch, aggiornare e gestire l'ambiente di macchina virtuale. Macchine virtuali di Azure è la tecnologia IaaS.
 

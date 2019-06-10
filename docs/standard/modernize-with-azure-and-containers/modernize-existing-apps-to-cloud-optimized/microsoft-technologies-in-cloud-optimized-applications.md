@@ -2,12 +2,12 @@
 title: Tecnologie Microsoft nelle applicazioni ottimizzato per il Cloud
 description: Modernizzare le applicazioni .NET esistenti con contenitori Windows e il Cloud di Azure | Tecnologie Microsoft nelle applicazioni ottimizzato per il Cloud
 ms.date: 04/28/2018
-ms.openlocfilehash: ebdbc7bb3a5f51f8408b69a5e13f03f424eae242
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639035"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758628"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Tecnologie Microsoft nelle applicazioni ottimizzato per il cloud
 
@@ -17,7 +17,7 @@ Nell'elenco seguente vengono descritti strumenti, tecnologie e soluzioni che son
 
 - **Runtime**: Questo livello fornisce l'ambiente per l'esecuzione dell'applicazione. Se si usano contenitori, questo livello in genere si basa sul [motore Docker](https://docs.docker.com/engine/), in esecuzione negli host Linux o negli host Windows. ([i contenitori Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/) sono supportate a partire da Windows Server 2016. I contenitori Windows è la scelta migliore per le applicazioni .NET Framework esistenti in esecuzione su Windows).
 
-- **Managed cloud**: Quando si sceglie un'opzione cloud gestito, è possibile evitare i costi e la complessità di gestione e che supportano le patch del sistema operativo dell'infrastruttura, le macchine virtuali, sottostante e configurazione della rete. Se si sceglie di eseguire la migrazione tramite la tecnologia IaaS, è responsabile per tutte queste attività e per i costi associati. In un'opzione cloud gestito, è gestire solo le applicazioni e servizi sviluppati personalmente. In genere il provider di servizi cloud gestisce tutto il resto. Esempi di servizi cloud gestiti in Azure [Database SQL di Azure](https://azure.microsoft.com/services/sql-database), [Cache Redis di Azure](https://azure.microsoft.com/services/cache/), [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [archiviazione di Azure](https://azure.microsoft.com/services/storage/), [Database di azure per MySQL](https://azure.microsoft.com/services/mysql/), [per Database di Azure per PostgreSQL](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)e gestiti i servizi di calcolo, ad esempio [scalabilità di macchine Virtuali imposta](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/), [servizio App di Azure](https://azure.microsoft.com/services/app-service/), e [Azure Kubernetes Service](https://azure.microsoft.com/services/container-service/).
+- **Managed cloud**: Quando si sceglie un'opzione cloud gestito, è possibile evitare i costi e la complessità di gestione e che supportano le patch del sistema operativo dell'infrastruttura, le macchine virtuali, sottostante e configurazione della rete. Se si sceglie di eseguire la migrazione tramite la tecnologia IaaS, è responsabile per tutte queste attività e per i costi associati. In un'opzione cloud gestito, è gestire solo le applicazioni e servizi sviluppati personalmente. In genere il provider di servizi cloud gestisce tutto il resto. Esempi di servizi cloud gestiti in Azure [Database SQL di Azure](https://azure.microsoft.com/services/sql-database), [Cache Redis di Azure](https://azure.microsoft.com/services/cache/), [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [archiviazione di Azure](https://azure.microsoft.com/services/storage/), [Database di azure per MySQL](https://azure.microsoft.com/services/mysql/), [per Database di Azure per PostgreSQL](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)e gestiti i servizi di calcolo, ad esempio [scalabilità di macchine Virtuali imposta](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [servizio App di Azure](https://azure.microsoft.com/services/app-service/), e [Azure Kubernetes Service](https://azure.microsoft.com/services/container-service/).
 
 - **Sviluppo di applicazioni**: È possibile scegliere tra molte lingue quando si compilano applicazioni che vengono eseguiti in contenitori. Questa guida è incentrata sul [.NET](https://www.microsoft.com/net), tuttavia, è possibile sviluppare App basate su contenitore con altri linguaggi, come Java o Node. js, Python, Spring, o passare.
 
@@ -27,7 +27,7 @@ Nell'elenco seguente vengono descritti strumenti, tecnologie e soluzioni che son
 
 - **Application Lifecycle Management**: [Servizi di Azure DevOps](https://azure.microsoft.com/services/devops/) e altri strumenti, come Jenkins, vengono compilati automazione i server che consentono di implementare pipeline CI/CD, tra cui la gestione del rilascio.
 
-Le sezioni successive di questo capitolo e le procedure dettagliate correlate, concentrarsi in modo specifico sui dettagli sul livello di runtime (contenitori Windows). Il materiale sussidiario descrive i modi in cui è possibile distribuire i contenitori di Windows in Windows Server 2016 (e versioni successive) macchine virtuali e istanze di contenitore di Azure. Illustra anche le piattaforme PaaS più avanzate, ad esempio servizio App di Azure e dell'agente di orchestrazione come Azure Service Fabric e Azure Kubernetes Service.
+Le sezioni successive di questo capitolo e le procedure dettagliate correlate, concentrarsi in modo specifico sui dettagli sul livello di runtime (contenitori Windows). Il materiale sussidiario descrive i modi in cui è possibile distribuire i contenitori di Windows in Windows Server 2016 (e versioni successive) macchine virtuali e istanze di contenitore di Azure. Illustra anche le piattaforme PaaS più avanzate, ad esempio servizio App di Azure e dell'agente di orchestrazione come servizio Kubernetes di Azure.
 
 ## <a name="monolithic-applications-can-be-cloud-optimized"></a>Le applicazioni monolitiche *possibile* essere ottimizzato per il Cloud
 
