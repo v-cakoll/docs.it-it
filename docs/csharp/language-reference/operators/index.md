@@ -107,7 +107,7 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 
 [x / y](arithmetic-operators.md#division-operator-): divisione. Se gli operandi sono numeri interi, il risultato è un numero intero troncato verso zero (ad esempio, `-7 / 2 is -3`).
 
-[x % y](arithmetic-operators.md#remainder-operator-): resto. Se gli operandi sono numeri interi, restituisce il resto della divisione di x per y.  Se `q = x / y` e `r = x % y`, allora `x = q * y + r` 
+[x % y](arithmetic-operators.md#remainder-operator-): resto. Se gli operandi sono numeri interi, restituisce il resto della divisione di x per y.  Se `q = x / y` e `r = x % y`, allora `x = q * y + r`
 
 ## <a name="additive-operators"></a>Operatori additivi
 
