@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055017"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025584"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Risorse app per librerie destinate a più piattaforme
 È possibile usare .NET Framework [libreria di classi portabile](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) tipo per garantire che le risorse nelle librerie di classi sono accessibili da più piattaforme progetto. Questo tipo di progetto è disponibile in Visual Studio 2012 e fa riferimento al subset portabile della libreria di classi .NET Framework. Utilizzando la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] viene garantito che sia possibile accedere alla libreria da applicazioni desktop, applicazioni Silverlight, applicazioni Windows Phone e da applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
@@ -35,7 +35,7 @@ ms.locfileid: "62055017"
 
  Il progetto [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] include i quattro membri <xref:System.Resources.ResourceManager> elencati nella tabella seguente. Questi costruttori e metodi consentono di creare un'istanza di un oggetto <xref:System.Resources.ResourceManager> e recuperare le risorse di tipo stringa.
 
-|Membro`ResourceManager` |Descrizione|
+|Membro`ResourceManager`|Descrizione|
 |------------------------------|-----------------|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Crea un'istanza di <xref:System.Resources.ResourceManager> per accedere al file di risorse denominato individuato nell'assembly specificato.|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Crea un'istanza di <xref:System.Resources.ResourceManager> che corrisponde al tipo specificato.|
@@ -47,9 +47,9 @@ ms.locfileid: "62055017"
 ## <a name="the-includenetportableincludesnet-portable-mdmd-and-windows-store-apps"></a>[!INCLUDE[net_portable](../../../includes/net-portable-md.md)] e applicazioni Windows Store
  I progetti [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] archiviano le risorse in file .resx, che vengono quindi compilati in file .resources e incorporati nell'assembly principale o in assembly satellite in fase di compilazione. Le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], invece, richiedono che le risorse vengano archiviate nei file .resw, che vengono compilati in un singolo file di indice risorse (PRI). Tuttavia, nonostante l'incompatibilità dei formati dei file, la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] funzionerà in un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
 
- Per utilizzare la libreria di classi da un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], aggiungere un riferimento al progetto di applicazione Windows Store. Visual Studio estrarrà in modo trasparente le risorse dall'assembly in un file .resw e le userà per generare un file PRI da cui [!INCLUDE[wrt](../../../includes/wrt-md.md)] potranno essere estratte le risorse. In fase di esecuzione, [!INCLUDE[wrt](../../../includes/wrt-md.md)] esegue il codice nella [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], ma recupera le risorse della Libreria di classi portabile dal file PRI.
+ Per utilizzare la libreria di classi da un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], aggiungere un riferimento al progetto di applicazione Windows Store. Visual Studio in modo trasparente estrarre le risorse dall'assembly in un file. resw e verrà utilizzato per generare un file PRI da cui il Runtime di Windows può estrarre le risorse. In fase di esecuzione, il Runtime di Windows esegue il codice nella [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], ma recupera le risorse della libreria di classi di portabile dal file PRI.
 
- Se il progetto [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] include risorse localizzate, utilizzare il modello hub and spoke per distribuirle proprio come avviene per una libreria in un'applicazione desktop. Per usare il file di risorse principale e qualunque file di risorse localizzate in un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], aggiungere un riferimento all'assembly originale. In fase di compilazione, Visual Studio estrae le risorse dal file di risorse principale ed ogni file di risorse localizzate in file .resw separati. Vengono quindi compilate i file .resw in un singolo file PRI a cui [!INCLUDE[wrt](../../../includes/wrt-md.md)] accede in fase di esecuzione.
+ Se il progetto [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] include risorse localizzate, utilizzare il modello hub and spoke per distribuirle proprio come avviene per una libreria in un'applicazione desktop. Per usare il file di risorse principale e qualunque file di risorse localizzate in un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], aggiungere un riferimento all'assembly originale. In fase di compilazione, Visual Studio estrae le risorse dal file di risorse principale ed ogni file di risorse localizzate in file .resw separati. Quindi, viene compilato i file. resw in un unico file PRI che il Runtime di Windows accede in fase di esecuzione.
 
 <a name="NonLoc"></a>
 ## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Esempio: Non localizzato [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]

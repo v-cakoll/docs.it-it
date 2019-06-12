@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43e7c973ee22350f26b4f86bcc8b4c4c727291ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f65c2f74ec5efda027d90b3ffda9a5da5c239122
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045188"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025721"
 ---
 # <a name="cortypeattr-enumeration"></a>Enumerazione CorTypeAttr
 Contiene valori che indicano i metadati del tipo.  
@@ -100,7 +100,7 @@ typedef enum CorTypeAttr {
 |`tdSpecialName`|Specifica che il nome della classe è speciale. Viene descritto il relativo nome come.|  
 |`tdImport`|Specifica che il tipo viene importato.|  
 |`tdSerializable`|Specifica che il tipo è serializzabile.|  
-|`tdWindowsRuntime`|Specifica che questo tipo è un [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipo.|  
+|`tdWindowsRuntime`|Specifica che questo tipo è un tipo Windows Runtime.|  
 |`tdStringFormatMask`|Ottiene informazioni su come le stringhe vengono codificate e formattate.|  
 |`tdAnsiClass`|Specifica che questo tipo interpreta LPTSTR come ANSI.|  
 |`tdUnicodeClass`|Specifica che questo tipo interpreta LPTSTR come Unicode.|  

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed1d7ad95b7c8474121994d0f54557c1c36cb531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 95c84f7f40db0096b26ec448f8f229cdbfe3afb1
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917376"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025898"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>Metodo ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs
-Ottiene un enumeratore per memorizzato nella cache [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipi in un dominio dell'applicazione basati sui rispettivi identificatori di interfaccia.  
+Ottiene un enumeratore per i tipi Windows Runtime memorizzato nella cache in un dominio di applicazione basato su identificatori relativi interfaccia.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,16 +42,16 @@ HRESULT GetCachedWinRTTypesForIIDs (
  [in] Il numero di tipi richiesti.  
   
  `iidsToResolve`  
- [in] Un puntatore a una matrice contenente gli identificatori di interfaccia corrispondenti per le rappresentazioni di gestito il [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipi da recuperare.  
+ [in] Puntatore a una matrice contenente gli identificatori di interfaccia corrispondenti per le rappresentazioni gestite dei tipi Windows Runtime da recuperare.  
   
  `ppTypesEnum`  
- [out] Un puntatore all'indirizzo di un oggetto di interfaccia "ICorDebugTypeEnum" che consente l'enumerazione di memorizzato nella cache gestita le rappresentazioni del [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipi recuperati in base gli identificatori di interfaccia in `iidsToResolve`.  
+ [out] Un puntatore all'indirizzo di un oggetto di interfaccia "ICorDebugTypeEnum" che consente l'enumerazione delle rappresentazioni gestite memorizzato nella cache dei tipi Windows Runtime recuperati in base gli identificatori di interfaccia in `iidsToResolve`.  
   
 ## <a name="remarks"></a>Note  
  Se il metodo non riesce a recuperare le informazioni per un identificatore di interfaccia specifica, la voce corrispondente nella raccolta "ICorDebugTypeEnum" sarà un tipo `ELEMENT_TYPE_END` per gli errori a causa di problemi di recupero dei dati, o `ELEMENT_TYPE_VOID` per interfaccia sconosciuto identificatori.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **Piattaforme:** Windows Runtime  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

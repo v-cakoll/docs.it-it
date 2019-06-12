@@ -2,16 +2,16 @@
 title: Scenari di distribuzione supportati - WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7b508f53365c1b4b90e2883ddb9d5f2a71c7e814
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881053"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025633"
 ---
 # <a name="supported-deployment-scenarios"></a>Scenari di distribuzione supportati
 
-Il sottoinsieme delle funzionalità di Windows Communication Foundation (WCF) supportati per l'uso in applicazioni parzialmente attendibili è progettato per soddisfare i requisiti degli scenari di alcuni, ma non tutti, per l'utilizzo di WCF. Nel server, WCF in uso soddisfi i requisiti a livello di Internet condiviso ai provider di hosting che eseguono le applicazioni di terze parti nel [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Medium Trust set di autorizzazioni per motivi di sicurezza. Sul client, supporto con attendibilità parziale WCF è progettato per soddisfare i requisiti di tecnologie di distribuzione, ad esempio [distribuzione ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) o [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]della tecnologia applicazione Browser XAML, che consente facile e sicuro distribuzione di applicazioni desktop da siti non attendibili.
+Il sottoinsieme delle funzionalità di Windows Communication Foundation (WCF) supportati per l'uso in applicazioni parzialmente attendibili è progettato per soddisfare i requisiti degli scenari di alcuni, ma non tutti, per l'utilizzo di WCF. Nel server, WCF soddisfi i requisiti del provider di hosting condiviso che eseguono le applicazioni di terze parti nell'autorizzazione di attendibilità media ASP.NET 2.0 è impostato per motivi di sicurezza basata su Internet. Sul client, supporto con attendibilità parziale WCF è progettato per soddisfare i requisiti di tecnologie di distribuzione, ad esempio [distribuzione ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) o [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]della tecnologia applicazione Browser XAML, che consente facile e sicuro distribuzione di applicazioni desktop da siti non attendibili.
 
 ## <a name="minimum-permission-requirements"></a>Requisiti minimi di autorizzazione
 
@@ -27,7 +27,7 @@ Per altre informazioni sulle funzionalità supportate in questi set di autorizza
 
 ## <a name="partial-trust-on-the-server"></a>Attendibilità parziale nel server
 
-Numerosi provider commerciali di applicazione Web ASP.NET che ospita i servizi impone che le applicazioni in esecuzione nei loro server vengano eseguiti nel [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Medium Trust set di autorizzazioni. Servizi WCF possono essere eseguiti in questi ambienti condizione che utilizzino il <xref:System.ServiceModel.BasicHttpBinding>, il <xref:System.ServiceModel.WebHttpBinding>, o <xref:System.ServiceModel.WSHttpBinding> con sicurezza a livello di trasporto.
+Numerosi provider commerciali di applicazione Web ASP.NET che ospita i servizi obbliga a usare le applicazioni in esecuzione nei loro server vengano eseguite nel set di autorizzazioni attendibilità media ASP.NET 2.0. Servizi WCF possono essere eseguiti in questi ambienti condizione che utilizzino il <xref:System.ServiceModel.BasicHttpBinding>, il <xref:System.ServiceModel.WebHttpBinding>, o <xref:System.ServiceModel.WSHttpBinding> con sicurezza a livello di trasporto.
 
 Servizi WCF in esecuzione in ambienti host ad attendibilità media possono fungere anche servizi di livello intermedio inviando messaggi ad altri server in risposta alle richieste dei client. Gli scenari di livello medio nel server sono supportati se l'ambiente host ha concesso all'applicazione la <xref:System.Net.WebPermission> appropriata per effettuare richieste in uscita al server desiderato.
 
