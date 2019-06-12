@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 6862ae72b235653d4576915605f14c9e4de92bce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45352d97372e556627ead75d969f088de9c85bd0
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662192"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833242"
 ---
 # <a name="c-reference"></a>Riferimenti per C#
 Questa sezione offre informazioni di riferimento su parole chiave, operatori, caratteri speciali, direttive del preprocessore, opzioni del compilatore ed errori e avvisi del compilatore in C#.  
@@ -40,7 +40,7 @@ Questa sezione offre informazioni di riferimento su parole chiave, operatori, ca
  [Specifiche del linguaggio C#](../../../_csharplang/spec/introduction.md)  
  Specifica del linguaggio C# 6.0. Si tratta di una proposta bozza per il linguaggio C# 6.0. La versione 5.0 è stata rilasciata a dicembre 2017 come documento [Standard ECMA-334 5th Edition](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf).
 
-Le funzionalità che sono state implementate nelle versioni di C# successive alla 6.0 sono rappresentate in proposte di specifica del linguaggio. Questi documenti descrivono i progetti per la specifica del linguaggio per l'aggiunta di queste nuove funzionalità. 
+Le funzionalità che sono state implementate nelle versioni di C# successive alla 6.0 sono rappresentate in proposte di specifica del linguaggio. Questi documenti descrivono i progetti per la specifica del linguaggio per l'aggiunta di queste nuove funzionalità.
 
  [Proposte per il linguaggio C# 7.0](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
  Esistono varie nuove funzionalità implementate in C# 7.0, tra le quali criteri di ricerca, funzioni locali, dichiarazioni di variabili out, espressioni throw, valori letterali binari e separatori di cifre. Questa cartella contiene le specifiche per ognuna di tali funzionalità.
@@ -49,10 +49,10 @@ Le funzionalità che sono state implementate nelle versioni di C# successive all
  In C# 7.1 sono state aggiunte nuove funzionalità. Prima di tutto, è possibile scrivere un metodo `Main` che restituisce `Task` o `Task<int>`. In questo modo è possibile aggiungere il modificatore `async` a `Main`. L'espressione `default` può essere usata senza un tipo nelle posizioni in cui il tipo può essere dedotto. Possono essere dedotti anche i nomi dei membri delle tuple. Infine, è possibile usare criteri di ricerca con generics.
 
  [Proposte per il linguaggio C# 7.2](../../../_csharplang/proposals/csharp-7.2/readonly-ref.md)  
- In C# 7.2 sono state aggiunte varie piccole funzionalità. È possibile passare argomenti per riferimento di sola lettura tramite la parola chiave `in`. Sono state introdotte numerose modifiche di basso livello per supportare la sicurezza in fase di compilazione per `Span` e i tipi correlati. È possibile usare argomenti denominati in cui gli argomenti successivi sono posizionali, in alcune situazioni. Il modificatore di accesso `private protected` consente di specificare che i chiamanti sono limitati ai tipi derivati implementati nello stesso assembly. L' operatore `?:` può essere risolto come riferimento a una variabile. È anche possibile formattare i numeri esadecimali e binari usando un separatore di cifra iniziale.   
+ In C# 7.2 sono state aggiunte varie piccole funzionalità. È possibile passare argomenti per riferimento di sola lettura tramite la parola chiave `in`. Sono state introdotte numerose modifiche di basso livello per supportare la sicurezza in fase di compilazione per `Span` e i tipi correlati. È possibile usare argomenti denominati in cui gli argomenti successivi sono posizionali, in alcune situazioni. Il modificatore di accesso `private protected` consente di specificare che i chiamanti sono limitati ai tipi derivati implementati nello stesso assembly. L' operatore `?:` può essere risolto come riferimento a una variabile. È anche possibile formattare i numeri esadecimali e binari usando un separatore di cifra iniziale.
 
  [Proposte per il linguaggio C# 7.3](../../../_csharplang/proposals/csharp-7.3/blittable.md)  
- C# 7.3 è un'altra versione secondaria che include numerosi piccoli aggiornamenti. È possibile usare nuovi vincoli per i parametri di tipo generico. Altre modifiche rendono più facile lavorare con i campi `fixed`, incluso l'uso delle allocazioni [`stackalloc`](./keywords/stackalloc.md). Le variabili locali dichiarate con la parola chiave `ref` potrebbero essere riassegnate per fare riferimento alla nuova risorsa di archiviazione. È possibile posizionare attributi in proprietà implementate automaticamente destinate al campo di supporto generato dal compilatore. È possibile usare variabili di espressione negli inizializzatori. Le tuple possono essere confrontate per verificarne l'uguaglianza (o la disuguaglianza). Sono stati introdotti anche alcuni miglioramenti per la risoluzione dell'overload.
+ C# 7.3 è un'altra versione secondaria che include numerosi piccoli aggiornamenti. È possibile usare nuovi vincoli per i parametri di tipo generico. Altre modifiche rendono più facile lavorare con i campi `fixed`, incluso l'uso delle allocazioni [`stackalloc`](./operators/stackalloc.md). Le variabili locali dichiarate con la parola chiave `ref` potrebbero essere riassegnate per fare riferimento alla nuova risorsa di archiviazione. È possibile posizionare attributi in proprietà implementate automaticamente destinate al campo di supporto generato dal compilatore. È possibile usare variabili di espressione negli inizializzatori. Le tuple possono essere confrontate per verificarne l'uguaglianza (o la disuguaglianza). Sono stati introdotti anche alcuni miglioramenti per la risoluzione dell'overload.
   
  [Proposte per il linguaggio C# 8.0](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md) C# 8.0 è disponibile in anteprima. Le proposte seguenti corrispondono alle versioni correnti delle specifiche per tali funzionalità. Alcune sono più complete, per altre i lavori sono ancora in corso. Le funzionalità fornite nelle anteprime includono i tipi riferimento nullable, i criteri di ricerca ricorsivi, i flussi asincroni, intervalli e indici, istruzioni using basate su criteri e dichiarazioni using, assegnazione di unione null.
   

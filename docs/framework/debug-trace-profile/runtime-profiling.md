@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0c56018c61e5566043fb2b9ba8bbee042093f12
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 7214fa0342d0946044861c4e375c7797ad6a06b1
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758155"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833767"
 ---
 # <a name="runtime-profiling"></a>Profilatura runtime
 La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi scenario di sviluppo o distribuzione. Questa sezione è destinata agli sviluppatori e agli amministratori di sistema che vogliono raccogliere le informazioni sulle prestazioni delle applicazioni.  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>Rilevamento delle prestazioni con Performance Monitor (Perfmon.exe)  
- Il monitoraggio delle prestazioni è lo strumento più semplice da usare per profilare l'applicazione .NET Framework. Performance Monitor rappresenta graficamente i dati trovati nei contatori delle prestazioni di .NET Framework installati con Common Language Runtime e [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Questi contatori possono essere usati per monitorare una serie di attività, dalla gestione della memoria alle prestazioni del compilatore JIT. Forniscono informazioni sulle risorse usate dall'applicazione, che indirettamente misurano le prestazioni dell'applicazione. Usare questi contatori per comprendere il funzionamento interno dell'applicazione.  
+ Il monitoraggio delle prestazioni è lo strumento più semplice da usare per profilare l'applicazione .NET Framework. Performance Monitor rappresenta graficamente i dati trovati nei contatori delle prestazioni .NET Framework installati con common language runtime e Windows Software Development Kit (SDK). Questi contatori possono essere usati per monitorare una serie di attività, dalla gestione della memoria alle prestazioni del compilatore JIT. Forniscono informazioni sulle risorse usate dall'applicazione, che indirettamente misurano le prestazioni dell'applicazione. Usare questi contatori per comprendere il funzionamento interno dell'applicazione.  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Per eseguire Perfmon.exe in Windows Vista e versioni successive  
   

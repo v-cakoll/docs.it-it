@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: c4629b18a207f1146f97327088fabf5f85a31892
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c36de23a6a49e684330fc0f47fc46bd86c55e767
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623321"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834075"
 ---
 # <a name="application-management-overview"></a>Cenni preliminari sulla gestione di applicazioni
 Tutte le applicazioni tendono a condividere un set comune di funzionalità relative all'implementazione e alla gestione di applicazioni. In questo argomento viene fornita una panoramica delle funzionalità del <xref:System.Windows.Application> classe per la creazione e la gestione delle applicazioni.  
@@ -127,7 +127,7 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
 
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>Schermata iniziale  
- A partire dal [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], è possibile specificare un'immagine da utilizzare in una finestra di avvio, oppure *schermata*. Il <xref:System.Windows.SplashScreen> classe rende più semplice visualizzare una finestra di avvio durante il caricamento dell'applicazione. Il <xref:System.Windows.SplashScreen> finestra viene creata e visualizzata prima <xref:System.Windows.Application.Run%2A> viene chiamato. Per altre informazioni, vedere [Application Startup Time](../advanced/application-startup-time.md) e [aggiungere una schermata iniziale in un'applicazione WPF](how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ A partire da .NET Framework 3.5 SP1, è possibile specificare un'immagine da utilizzare in una finestra di avvio, oppure *schermata iniziale*. Il <xref:System.Windows.SplashScreen> classe rende più semplice visualizzare una finestra di avvio durante il caricamento dell'applicazione. Il <xref:System.Windows.SplashScreen> finestra viene creata e visualizzata prima <xref:System.Windows.Application.Run%2A> viene chiamato. Per altre informazioni, vedere [Application Startup Time](../advanced/application-startup-time.md) e [aggiungere una schermata iniziale in un'applicazione WPF](how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>Avvio di un'applicazione  

@@ -1,5 +1,5 @@
 ---
-title: Impossibile trovare "Sub Main" in "<name>"
+title: Impossibile trovare 'Sub Main' in '<name>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30420

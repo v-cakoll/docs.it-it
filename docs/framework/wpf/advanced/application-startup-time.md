@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689337"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832692"
 ---
 # <a name="application-startup-time"></a>Tempo di avvio delle applicazioni
 La quantità di tempo necessaria per avviare un'applicazione WPF può variare notevolmente. In questo argomento vengono descritte varie tecniche per ridurre il tempo di avvio percepito ed effettivo per un'applicazione Windows Presentation Foundation (WPF).  
@@ -24,7 +24,7 @@ La quantità di tempo necessaria per avviare un'applicazione WPF può variare no
  L'avvio a caldo si verifica quando la maggior parte delle pagine per i componenti principali di Common Language Runtime (CLR) sono già caricata in memoria, il che consente di risparmiare molto tempo per l'accesso al disco. Ecco perché un'applicazione gestita si avvia più rapidamente quando viene eseguita per la seconda volta.  
   
 ## <a name="implement-a-splash-screen"></a>Implementare la schermata iniziale  
- Nei casi in cui c'è un ritardo significativo e inevitabili tra l'avvio di un'applicazione e la visualizzazione della prima interfaccia utente, è possibile ottimizzare il tempo di avvio percepito usando una *schermata iniziale*. Questo approccio consente di visualizzare un'immagine quasi immediatamente dopo l'avvio dell'applicazione da parte dell'utente. Quando l'applicazione è pronta per la visualizzazione della prima interfaccia utente, la schermata iniziale si dissolve. A partire dal [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], è possibile usare il <xref:System.Windows.SplashScreen> classe per implementare la schermata iniziale. Vedere [Aggiungere una schermata iniziale in un'applicazione WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ Nei casi in cui c'è un ritardo significativo e inevitabili tra l'avvio di un'applicazione e la visualizzazione della prima interfaccia utente, è possibile ottimizzare il tempo di avvio percepito usando una *schermata iniziale*. Questo approccio consente di visualizzare un'immagine quasi immediatamente dopo l'avvio dell'applicazione da parte dell'utente. Quando l'applicazione è pronta per la visualizzazione della prima interfaccia utente, la schermata iniziale si dissolve. A partire da .NET Framework 3.5 SP1, è possibile usare il <xref:System.Windows.SplashScreen> classe per implementare la schermata iniziale. Vedere [Aggiungere una schermata iniziale in un'applicazione WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
  È anche possibile implementare la schermata iniziale con grafica Win32 nativa. Visualizzare l'implementazione prima di <xref:System.Windows.Application.Run%2A> viene chiamato il metodo.  
   

@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949227"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833795"
 ---
 # <a name="reliability-best-practices"></a>Procedure consigliate per l'ottimizzazione dell'affidabilità
 
@@ -265,7 +265,7 @@ I finalizzatori non devono avere alcun problema di sincronizzazione. Non usare u
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>Evitare la memoria non gestita, se possibile
 
-La memoria non gestita può andare perduta, proprio come un handle del sistema operativo.  Se possibile, provare a usare la memoria nello stack tramite [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md), un oggetto gestito bloccato, come l'[istruzione fixed](~/docs/csharp/language-reference/keywords/fixed-statement.md), o un oggetto <xref:System.Runtime.InteropServices.GCHandle> che fa uso di un byte[].  Alla fine, <xref:System.GC> eseguirà la pulizia di questi elementi.  Se tuttavia è necessario allocare memoria non gestita, prendere in considerazione l'uso di una classe che deriva da <xref:System.Runtime.InteropServices.SafeHandle> per eseguire il wrapping dell'allocazione della memoria.
+La memoria non gestita può andare perduta, proprio come un handle del sistema operativo. Se possibile, provare a usare la memoria nello stack tramite [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md), un oggetto gestito bloccato, come l'[istruzione fixed](~/docs/csharp/language-reference/keywords/fixed-statement.md), o un oggetto <xref:System.Runtime.InteropServices.GCHandle> che fa uso di un byte[]. Alla fine, <xref:System.GC> eseguirà la pulizia di questi elementi. Se tuttavia è necessario allocare memoria non gestita, prendere in considerazione l'uso di una classe che deriva da <xref:System.Runtime.InteropServices.SafeHandle> per eseguire il wrapping dell'allocazione della memoria.
 
 Si noti che c'è almeno un caso in cui l'oggetto <xref:System.Runtime.InteropServices.SafeHandle> non è adeguato.  Per le chiamate ai metodi COM che allocano o liberano memoria, viene in genere usata una DLL per allocare la memoria tramite `CoTaskMemAlloc`, seguita da un'altra DLL per liberare la memoria con `CoTaskMemFree`.  L'uso di <xref:System.Runtime.InteropServices.SafeHandle> in questi contesti risulta inappropriato perché questo oggetto tenta di legare la durata della memoria non gestita alla durata di <xref:System.Runtime.InteropServices.SafeHandle>, invece di consentire che venga controllata dall'altra DLL.
 

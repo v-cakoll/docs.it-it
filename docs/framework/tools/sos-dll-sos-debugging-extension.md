@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ddd075de6152d7f040d69682dde0361843971922
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0821b4a680db4822cea1787edb095309e6333cbf
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631836"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690162"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (estensione del debugger SOS)
 
@@ -68,11 +68,11 @@ L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di progr
 |**HeapStat** [ **-inclUnrooted** &#124; **-iu**]|Visualizza le dimensioni della generazione per ogni heap e lo spazio disponibile totale in ogni generazione su ogni heap. Se viene specificata l'opzione -**inclUnrooted**, il report include informazioni sugli oggetti gestiti dall'heap di Garbage Collection che non contiene più una radice.|
 |**HistClear**|Rilascia tutte le risorse utilizzate dalla famiglia di comandi `Hist`.<br /><br /> In genere non è necessario chiamare in modo esplicito `HistClear`, perché ogni `HistInit` pulisce le risorse precedenti.|
 |**HistInit**|Inizializza le strutture SOS dal log di stress salvato nell'oggetto del debug.|
-|**HistObj** *<indirizzo_oggetto>*|Esamina tutti i record delle rilocazioni del log di stress e visualizza la catena di rilocazioni di Garbage Collection che hanno potuto condurre all'indirizzo passato come argomento.|
-|**HistObjFind** *<indirizzo_oggetto>*|Visualizza tutte le voci del log che fanno riferimento a un oggetto in corrispondenza dell'indirizzo specificato.|
+|**HistObj** *\<obj_address>*|Esamina tutti i record delle rilocazioni del log di stress e visualizza la catena di rilocazioni di Garbage Collection che hanno potuto condurre all'indirizzo passato come argomento.|
+|**HistObjFind**  *\<obj_address>*|Visualizza tutte le voci del log che fanno riferimento a un oggetto in corrispondenza dell'indirizzo specificato.|
 |**HistRoot** *\<radice>*|Visualizza informazioni correlate sia alle promozioni sia alle rilocazioni della radice specificata.<br /><br /> Il valore radice può essere utilizzato per tenere traccia del movimento di un oggetto attraverso le operazioni di Garbage Collection.|
 |**IP2MD** \<*indirizzo codice*>|Visualizza la struttura `MethodDesc` in corrispondenza dell'indirizzo specificato nel codice con compilazione JIT.|
-|`ListNearObj` (`lno`) *<indirizzo_oggetto>*|Visualizza gli oggetti che precedono e seguono l'indirizzo specificato. Il comando cerca l'indirizzo nell'heap di Garbage Collection che sembra un inizio valido di un oggetto gestito (in base a una tabella dei metodi valida) e l'oggetto che segue l'indirizzo dell'argomento.|
+|`ListNearObj` (`lno`) *\<obj_address>*|Visualizza gli oggetti che precedono e seguono l'indirizzo specificato. Il comando cerca l'indirizzo nell'heap di Garbage Collection che sembra un inizio valido di un oggetto gestito (in base a una tabella dei metodi valida) e l'oggetto che segue l'indirizzo dell'argomento.|
 |**MinidumpMode** [**0**] [**1**]|Impedisce l'esecuzione di comandi non sicuri quando si utilizza un minidump.<br /><br /> Passare **0** per disabilitare la funzionalità o **1** per abilitarla. Per impostazione predefinita, il valore **MinidumpMode** è impostato su **0**.<br /><br /> I minidump creati con il comando **.dump /m** o **.dump** contengono una quantità limitata di dati specifici di CLR e consentono la corretta esecuzione solo di un subset di comandi SOS. È possibile che alcuni comandi abbiano esito negativo con errori imprevisti perché aree richieste di memoria non sono mappate o sono mappate solo parzialmente. Questa opzione impedisce l'esecuzione di comandi non sicuri sui minidump.|
 |**Name2EE** \<*nome modulo*> \<*nome tipo o metodo*><br /><br /> -oppure-<br /><br /> **Name2EE** \<*nome modulo*> **!** \<*nome tipo o metodo*>|Visualizza le strutture `MethodTable` e `EEClass` per il tipo o il metodo specificato nel modulo specificato.<br /><br /> Il modulo specificato deve essere caricato nel processo.<br /><br /> Per ottenere il nome del tipo corretto, esplorare il modulo usando [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). È inoltre possibile passare `*` come parametro del nome del modulo per eseguire la ricerca in tutti i moduli gestiti caricati. Il parametro *nome modulo* può anche essere il nome del debugger di un modulo, ad esempio `mscorlib` o `image00400000`.<br /><br /> Questo comando supporta la sintassi del debugger Windows di <`module`>`!`<`type`>. Il tipo deve essere completo.|
 |**ObjSize** [\<*indirizzo oggetto*>] &#124; [ **-aggregate**] [ **-stat**]|Visualizza la dimensione dell'oggetto specificato. Se non si specifica alcun parametro, il comando **ObjSize** visualizza la dimensione di tutti gli oggetti trovati nei thread gestiti, visualizza tutti gli handle del Garbage Collector nel processo e somma la dimensione di tutti gli oggetti a cui puntano tali handle. Il comando **ObjSize** include la dimensione di tutti gli oggetti figlio oltre a quella dell'entità principale.<br /><br /> L'opzione **-aggregate** può essere usata con l'argomento **-stat** per ottenere una visualizzazione dettagliata dei tipi che contengono ancora una radice. Usando **!dumpheap -stat** e **!objsize -aggregate -stat** è possibile determinare quali oggetti non contengono più una radice e diagnosticare vari problemi relativi alla memoria.|

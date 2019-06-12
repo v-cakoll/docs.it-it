@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: a8fb10fef8e4b5624d8066a15d12d6efd1e62dee
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 94564ba2614e335da36828912e43fb9db7eca91b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590510"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834000"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Procedura: Binding a un servizio Web tramite BindingSource di Windows Forms
 Per associare un controllo Windows Form ai risultati ottenuti dalla chiamata a un servizio Web XML, è possibile usare un componente <xref:System.Windows.Forms.BindingSource>. Questa procedura è simile al binding di un componente <xref:System.Windows.Forms.BindingSource> a un tipo. È necessario creare un proxy lato client contenente i metodi e tipi esposti dal servizio Web. Si genera un proxy lato client direttamente dal servizio Web (asmx) o dal file Web Services Description Language (WSDL). Inoltre, il proxy lato client deve esporre i campi dei tipi complessi usati dal servizio Web come proprietà pubbliche. Quindi si associa <xref:System.Windows.Forms.BindingSource> a uno dei tipi esposti nel proxy del servizio Web.  
@@ -28,7 +28,7 @@ Per associare un controllo Windows Form ai risultati ottenuti dalla chiamata a u
   
 2. Aggiungere un componente <xref:System.Windows.Forms.BindingSource> al form.  
   
-3. Aprire il prompt dei comandi di [!INCLUDE[winsdklong](../../../../includes/winsdklong-md.md)] e passare alla stessa directory in cui si trova il form.  
+3. Aprire il prompt dei comandi di Windows Software Development Kit (SDK) e passare alla stessa directory in cui il modulo si trova in.  
   
 4. Tramite lo strumento WSDL immettere `wsdl` e l'URL del file asmx o WSDL per il servizio Web, seguito dallo spazio dei nomi dell'applicazione e, facoltativamente, dal linguaggio in uso.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: d536d141d1ac7126c5a3339f75ba374d3e071806
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 286ec3c67e296eb49776e0f2882954c75c53eed8
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591399"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833979"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Panoramica delle applicazioni browser XAML di WPF
 <a name="introduction"></a>
@@ -182,7 +182,7 @@ ms.locfileid: "64591399"
 ## <a name="xbap-start-time-performance-considerations"></a>Considerazioni sulle prestazioni dei tempi di avvio delle applicazioni XBAP  
  Un aspetto importante delle prestazioni di applicazioni XBAP riguarda i tempi di avvio. Se un'applicazione XBAP è la prima applicazione WPF da caricare, i tempi di *avvio a freddo* possono essere pari a dieci o più secondi. Questa situazione si verifica perché il rendering della pagina di avanzamento viene eseguito da WPF e per visualizzare l'applicazione, CLR e WPF devono essere avviati a freddo.  
   
- Quando l'avvio viene eseguito in [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], i tempi di avvio a freddo delle applicazioni XBAP vengono ridotti mediante la visualizzazione di una pagina di avanzamento non gestita all'inizio del ciclo di distribuzione. La pagina di avanzamento viene visualizzata subito dopo l'avvio dell'applicazione, in quanto viene visualizzata da codice ospitato in maniera nativa ed eseguendone il rendering in HTML.  
+ A partire da .NET Framework 3.5 SP1, il tempo di avvio a freddo XBAP è stata risolta mediante la visualizzazione di una pagina di avanzamento non gestita nelle prime fasi del ciclo di distribuzione. La pagina di avanzamento viene visualizzata subito dopo l'avvio dell'applicazione, in quanto viene visualizzata da codice ospitato in maniera nativa ed eseguendone il rendering in HTML.  
   
  Inoltre, la concorrenza migliorata della sequenza di download ClickOnce migliora l'ora di inizio fino a dieci percento. Dopo aver ClickOnce, download e convalida dei manifesti, vengono avviati il download dell'applicazione e l'indicatore di stato avvia da aggiornare.  
   

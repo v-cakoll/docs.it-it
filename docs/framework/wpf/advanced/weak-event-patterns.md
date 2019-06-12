@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 92d0a61c2bbf9cc668b969c3e1420914b9f9f150
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c5bae64fbbeddedd905e5df0b5789542e29f2f1
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650774"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833926"
 ---
 # <a name="weak-event-patterns"></a>Modelli di eventi deboli
 Nelle applicazioni, è possibile che i gestori associati alle origini evento non verranno distrutto in combinazione con l'oggetto listener che è associato il gestore per l'origine. Questa situazione può causare perdite di memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduce un modello di progettazione che può essere utilizzato per risolvere questo problema, fornendo una classe di gestione dedicato per determinati eventi e implementando un'interfaccia nei listener per l'evento. Questo schema progettuale è noto come il *modello di eventi deboli*.  
@@ -71,7 +71,7 @@ Nelle applicazioni, è possibile che i gestori associati alle origini evento non
      Analogamente, se il codice Usa il modello seguente per annullare la sottoscrizione a un evento:  
   
     ```  
-    source.SomeEvent -= new SomeEventEventHandler(OnSome);  
+    source.SomeEvent -= new SomeEventEventHandler(OnSomeEvent);  
     ```  
   
      Sostituirlo con il modello seguente:  

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - pipeline processing
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76a5c32660c8a08ef34c40f8f4ee9430e5ead5c8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0ada6003cd6d1cd19036c42a3d0d976e18568f3a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644284"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833964"
 ---
 # <a name="memory--and-span-related-types"></a>Tipi correlati alla memoria e agli intervalli
 
 A partire da .NET Core 2.1, .NET include un numero di tipi correlati che rappresentano un'area contigua fortemente tipizzata di memoria arbitraria. Sono inclusi:
 
-- <xref:System.Span%601?displayProperty=nameWithType>, un tipo usato per accedere a un'area contigua di memoria. Un'istanza di <xref:System.Span%601> può essere supportata da una matrice di tipo `T`, una classe <xref:System.String>, un buffer allocato con [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) o un puntatore alla memoria non gestita. Poiché deve essere allocato nello stack, presenta alcune restrizioni. Un campo in una classe, ad esempio, non può essere di tipo <xref:System.Span%601> e l'intervallo non può essere usato nelle operazioni asincrone.
+- <xref:System.Span%601?displayProperty=nameWithType>, un tipo usato per accedere a un'area contigua di memoria. Un'istanza di <xref:System.Span%601> può essere supportata da una matrice di tipo `T`, una classe <xref:System.String>, un buffer allocato con [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) o un puntatore alla memoria non gestita. Poiché deve essere allocato nello stack, presenta alcune restrizioni. Un campo in una classe, ad esempio, non può essere di tipo <xref:System.Span%601> e l'intervallo non può essere usato nelle operazioni asincrone.
 
 - <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, una versione non modificabile della struttura <xref:System.Span%601>.
 

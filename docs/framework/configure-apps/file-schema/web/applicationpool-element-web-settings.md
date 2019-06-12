@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: f0486e9faf70e7d5d147cfef996edcdaa8846963
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 629eb482768e4ed2b3d70ee3d27157b502eeb72b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456299"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832727"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > (impostazioni Web)
 Specifica le impostazioni di configurazione che vengono utilizzate da ASP.NET per gestire il comportamento a livello di processo quando un'applicazione ASP.NET viene eseguito in modalità integrata in [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versione successiva.  
@@ -70,7 +70,7 @@ Specifica le impostazioni di configurazione che vengono utilizzate da ASP.NET pe
   
 - [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] è in esecuzione in modalità integrata.  
   
-- L'applicazione usa il [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] o versione successiva.  
+- L'applicazione usa .NET Framework 3.5 SP1 o versione successiva.  
   
  I valori nell'esempio sono i valori predefiniti.  
   
