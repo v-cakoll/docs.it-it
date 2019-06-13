@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 556181d32f0539b4a9e24cb1a898b4ccc3788f4e
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 0b70545c2252d6e8b82d6f4d57522ac4bb2481d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250883"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490880"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classi di caratteri nelle espressioni regolari
 
@@ -51,7 +51,7 @@ Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può
  .NET supporta espressioni di sottrazione di classi di caratteri che consentono di definire un set di caratteri come risultato dell'esclusione di una classe di caratteri da un'altra classe di caratteri. Per altre informazioni, vedere [Sottrazione di classi di caratteri](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Le classi di caratteri che corrispondono a caratteri in base alla categoria, ad esempio [\w](#WordCharacter) per la corrispondenza con caratteri alfanumerici o [\p{}](#CategoryOrBlock) per la corrispondenza con una categoria Unicode, si basano sulla classe <xref:System.Globalization.CharUnicodeInfo> per offrire informazioni sulle categorie di caratteri.  A partire da .NET Framework 4.6.2, le categorie di caratteri si basano sullo [standard Unicode, versione 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). Da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] a .NET Framework 4.6.1, si basano sullo [standard Unicode, versione 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+>  Le classi di caratteri che corrispondono a caratteri in base alla categoria, ad esempio [\w](#WordCharacter) per la corrispondenza con caratteri alfanumerici o [\p{}](#CategoryOrBlock) per la corrispondenza con una categoria Unicode, si basano sulla classe <xref:System.Globalization.CharUnicodeInfo> per offrire informazioni sulle categorie di caratteri.  A partire da .NET Framework 4.6.2, le categorie di caratteri si basano sullo [standard Unicode, versione 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). In .NET Framework 4 fino a .NET Framework 4.6.1, sono basate su [Unicode Standard, versione 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Gruppo di caratteri positivi: [ ]  
