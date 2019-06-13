@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81110736651db9fe00b116c3abbbdaa8d3670bee
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 995aeca60d462c96f951411aff9fcb2c772169d1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456093"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489659"
 ---
 # <a name="net-framework-tools"></a>Strumenti di .NET Framework
 Gli strumenti di .NET Framework facilitano la creazione, la distribuzione e la gestione di applicazioni e componenti destinati a .NET Framework.  
@@ -36,7 +36,7 @@ La maggior parte degli strumenti di .NET Framework descritti in questa sezione v
  Consente di convertire le definizioni dei tipi in una libreria di tipi COM per un controllo ActiveX in un controllo Windows Form.  
   
  [Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- Consente di visualizzare e configurare i criteri di sicurezza stabiliti a livello di computer, di utente o dell'intera azienda. In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] e versioni successive questo strumento influisce sui criteri di sicurezza dall'accesso di codice solo se l'elemento [\<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) è impostato su `true`. Per altre informazioni, vedere [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
+ Consente di visualizzare e configurare i criteri di sicurezza stabiliti a livello di computer, di utente o dell'intera azienda. In .NET Framework 4 e versioni successive, questo strumento non influisce sui criteri di sicurezza dall'accesso di codice, a meno che il [ \<legacyCasPolicy > elemento](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) è impostata su `true`. Per altre informazioni, vedere [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
   
  [Cert2spc.exe (strumento di test dei certificati del distributore di software)](../../../docs/framework/tools/cert2spc-exe-software-publisher-certificate-test-tool.md)  
  Crea un certificato dell'editore del software (SPC, Software Publisher's Certificate) da uno o più certificati X.509. Questo strumento è finalizzato unicamente ai test.  

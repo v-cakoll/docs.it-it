@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44e5f52ce2bfe03247ab25bb48607ae313523ff0
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a7e4493fca5b73cfd0bdc59ceab9de097de799aa
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456857"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490750"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza e controvarianza nei generics
 <a name="top"></a> La covarianza e la controvarianza sono termini che fanno riferimento alla possibilità di usare un tipo più derivato (più specifico) o un tipo meno derivato (meno specifico) di quanto specificato in origine. I parametri di tipo generico supportano la covarianza e la controvarianza per offrire la massima flessibilità nell'assegnazione e nell'utilizzo dei tipi generici. Quando si fa riferimento a un sistema di tipi, la covarianza, la controvarianza e l'invarianza hanno le seguenti definizioni. Negli esempi si presuppone una classe di base denominata `Base` e una classe derivata denominata `Derived`.  
@@ -59,7 +59,7 @@ ms.locfileid: "66456857"
   
  La covarianza e la controvarianza sono definite collettivamente *varianza*. Un parametro di tipo generico non contrassegnato come covariante o controvariante viene definito *invariante*. Di seguito vengono riepilogati i concetti relativi alla varianza in Common Language Runtime:  
   
-- In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], i parametri di tipo variante sono limitati ai tipi di interfaccia generica e delegato generico.  
+- In .NET Framework 4, parametri di tipo variante sono limitati ai tipi delegati generici e interfaccia generica.  
   
 - Un tipo di interfaccia generica o delegato generico può presentare parametri di tipo sia covariante sia controvariante.  
   

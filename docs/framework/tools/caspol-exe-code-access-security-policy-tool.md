@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2a0e8d95595d663585639c47be34262f7452e94
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: ccb1d78f939d2faf90013392fc60d5597bc3922e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457418"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489685"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)
 Lo strumento Criteri di sicurezza dall'accesso di codice (Caspol.exe) consente a utenti e amministratori di modificare i criteri di sicurezza definiti a livello di computer, di utente e di azienda.  
   
 > [!IMPORTANT]
->  A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Caspol.exe influisce sui criteri di sicurezza dall'accesso di codice solo se l'elemento[\<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) è impostato su `true`. Eventuali impostazioni indicate o modificate da CasPol.exe interesseranno solo le applicazioni per le quali viene scelto esplicitamente di utilizzare i criteri di sicurezza dall'accesso di codice. Per altre informazioni, vedere [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
+>  A partire da .NET Framework 4, Caspol.exe influisce sui criteri CAS, a meno che il [ \<legacyCasPolicy > elemento](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) è impostata su `true`. Eventuali impostazioni indicate o modificate da CasPol.exe interesseranno solo le applicazioni per le quali viene scelto esplicitamente di utilizzare i criteri di sicurezza dall'accesso di codice. Per altre informazioni, vedere [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
   
 > [!NOTE]
 >  I computer a 64 bit includono sia versioni a 64 che a 32 bit dei criteri di sicurezza. Per assicurarsi che le modifiche ai criteri vengano applicate sia alle applicazioni a 32 bit che a quelle a 64 bit, eseguire entrambe le versioni di Caspol.exe.  

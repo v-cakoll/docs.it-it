@@ -3,12 +3,12 @@ title: Comando auto-train nello strumento dell'interfaccia della riga di comando
 description: Panoramica, esempi e riferimento per il comando auto-train nello strumento dell'interfaccia della riga di comando di ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 28eb56eb018e3d1cc76f300ee78c298af77c9b91
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557929"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722608"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>Comando 'auto-train' nell'interfaccia della riga di comando di ML.NET
 
@@ -228,7 +228,7 @@ Per usare l'argomento `--label-column-name` è necessario che il file del set di
 
 `--max-exploration-time | -x` (string)
 
-Per impostazione predefinita, il tempo massimo di esplorazione è 10 secondi.
+Per impostazione predefinita, il tempo massimo di esplorazione è 30 minuti.
 
 Questo argomento imposta il tempo massimo (in secondi) per il processo per l'esplorazione di più trainer e configurazioni. Il tempo configurato può essere superato se il tempo specificato è troppo breve (ad esempio, 2 secondi) per una singola iterazione. In questo caso, il tempo effettivo corrisponde al tempo necessario per produrre una configurazione di modello in una singola iterazione.
 

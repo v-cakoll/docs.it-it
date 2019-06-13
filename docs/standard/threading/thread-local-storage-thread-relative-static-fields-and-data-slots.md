@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 681a9e71dcfb139c364d750383f13cdabbf33366
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7beb22c68450d7ae4aeb6d0bcae45fafdfe78191
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644898"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490913"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Archiviazione locale del thread: slot di dati e campi statici relativi ai thread
 È possibile usare l'archiviazione locale dei thread gestiti per archiviare dati univoci relativi a un thread e un dominio dell'applicazione. In .NET Framework sono disponibili due strumenti per usare l'archiviazione locale dei thread gestiti: i campi statici relativi ai thread e gli slot di dati.  
@@ -26,7 +26,7 @@ ms.locfileid: "64644898"
   
  In C++ non gestito si usa `TlsAlloc` per allocare gli slot dinamicamente e `__declspec(thread)` per dichiarare che una variabile deve essere allocata in una risorsa di archiviazione relativa ai thread. I campi statici relativi ai thread e gli slot di dati forniscono la versione gestita di questo comportamento.  
   
- In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] è possibile usare la classe <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> per creare oggetti locali di thread inizializzati in modo differito quando l'oggetto viene usato per la prima volta. Per altre informazioni, vedere [Inizializzazione differita](../../../docs/framework/performance/lazy-initialization.md).  
+ In .NET Framework 4, è possibile usare il <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> classe per creare gli oggetti locali del thread che vengono inizializzati in modo differito quando l'oggetto prima di tutto viene utilizzato. Per altre informazioni, vedere [Inizializzazione differita](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Unicità dei dati nell'archiviazione locale dei thread gestiti  
  Indipendentemente dal fatto che si usino i campi statici relativi ai thread o gli slot di dati, i dati presenti nell'archiviazione locale dei thread gestiti sono univoci per la combinazione di thread e dominio dell'applicazione.  

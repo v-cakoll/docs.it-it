@@ -3,12 +3,12 @@ title: Novità di C# 7.0 - Guida a C#
 description: Panoramica delle nuove funzionalità nella versione 7.0 del linguaggio C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 942a126ae026897d608c9fb077fc5f10ff73c110
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b4569f31211afc69efb1b853723fded9329ae41
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753068"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815975"
 ---
 # <a name="whats-new-in-c-70"></a>Novità di C# 7.0
 
@@ -222,7 +222,7 @@ La modifica di un metodo in un membro con corpo di espressione è una [modifica 
 
 ## <a name="throw-expressions"></a>Espressioni throw
 
-In C# `throw` è sempre stata un'istruzione. Poiché `throw` è un'istruzione, non un'espressione, non può essere usata in determinati costrutti di C#. Sono incluse le espressioni condizionali, le espressioni Null ridondanti e alcune espressioni lambda. L'aggiunta di membri con corpo di espressione consente di aggiungere più posizioni in cui le espressioni `throw` possono risultare utili. Per fare in modo che sia possibile scrivere uno di questi costrutti, C# 7.0 introduce le *espressioni throw*.
+In C# `throw` è sempre stata un'istruzione. Poiché `throw` è un'istruzione, non un'espressione, non può essere usata in determinati costrutti di C#. Sono incluse le espressioni condizionali, le espressioni Null ridondanti e alcune espressioni lambda. L'aggiunta di membri con corpo di espressione consente di aggiungere più posizioni in cui le espressioni `throw` possono risultare utili. In modo che sia possibile scrivere uno di questi costrutti, C# 7.0 introduce [ *espressioni throw*](../language-reference/keywords/throw.md#the-throw-expression).
 
 Questa aggiunta facilita la scrittura di codice basato sulle espressioni. Non sono necessarie istruzioni aggiuntive per il controllo degli errori.
 

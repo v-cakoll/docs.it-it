@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585920"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690305"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procedura dettagliata: Creazione di codice in scenari di attendibilità parziale
 La reflection emit usa le stesse API in scenari di attendibilità sia parziale che completa, ma alcune funzionalità richiedono autorizzazioni speciali nel codice parzialmente attendibile. Inoltre, la reflection emit include una funzionalità, i metodi dinamici ospitati in modo anonimo, progettata per l'uso in situazioni di attendibilità parziale da parte di assembly trasparenti per la sicurezza.  
   
 > [!NOTE]
->  Prima di [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)], la creazione di codice richiedeva <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>. Questa autorizzazione è inclusa per impostazione predefinita nei set di autorizzazioni denominati `FullTrust` e `Intranet`, ma non nel set di autorizzazioni `Internet`. Di conseguenza, una libreria può essere usata con attendibilità parziale solo se in essa era presente l'attributo <xref:System.Security.SecurityCriticalAttribute> e veniva eseguito un metodo <xref:System.Security.PermissionSet.Assert%2A> per <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tali librerie richiedono un'attenta revisione della sicurezza perché eventuali errori nel codice potrebbe produrre delle vulnerabilità. [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] consente di generare codice in scenari con attendibilità parziale senza creare alcuna richiesta di sicurezza, poiché la generazione di codice non è implicitamente un'operazione con privilegi. Ovvero, il codice generato non dispone di ulteriori autorizzazioni rispetto all'assembly che lo genera. Questo consente alle librerie che generano il codice di essere trasparenti per la sicurezza ed elimina la necessità di asserire <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, quindi la scrittura di una libreria protetta non richiede una revisione completa della sicurezza.  
+>  Prima di .NET Framework 3.5, creazione di codice richiedeva <xref:System.Security.Permissions.ReflectionPermission> con il <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> flag. Questa autorizzazione è inclusa per impostazione predefinita nei set di autorizzazioni denominati `FullTrust` e `Intranet`, ma non nel set di autorizzazioni `Internet`. Di conseguenza, una libreria può essere usata con attendibilità parziale solo se in essa era presente l'attributo <xref:System.Security.SecurityCriticalAttribute> e veniva eseguito un metodo <xref:System.Security.PermissionSet.Assert%2A> per <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tali librerie richiedono un'attenta revisione della sicurezza perché eventuali errori nel codice potrebbe produrre delle vulnerabilità. .NET Framework 3.5 consente al codice di essere inviati in scenari con attendibilità parziale senza emettere alcuna richiesta di sicurezza, perché la generazione di codice non è implicitamente un'operazione con privilegi. Ovvero, il codice generato non dispone di ulteriori autorizzazioni rispetto all'assembly che lo genera. Questo consente alle librerie che generano il codice di essere trasparenti per la sicurezza ed elimina la necessità di asserire <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, quindi la scrittura di una libreria protetta non richiede una revisione completa della sicurezza.  
   
  Questa procedura dettagliata illustra le attività seguenti:  
   

@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: adf2e3e3d10f4f32952dbca270be4ca0924d0b73
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457272"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816049"
 ---
 # <a name="in-process-side-by-side-execution"></a>Esecuzione side-by-side in-process
-A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare l'hosting side-by-side in-process per eseguire più versioni di Common Language Runtime (CLR) in un unico processo. Per impostazione predefinita, i componenti COM gestiti vengono eseguiti con la versione di .NET Framework con cui sono stati compilati, indipendentemente dalla versione di .NET Framework che viene caricata per il processo.  
+A partire da .NET Framework 4, è possibile usare in-process side-by-side per l'esecuzione di più versioni di common language runtime (CLR) in un unico processo di hosting. Per impostazione predefinita, i componenti COM gestiti vengono eseguiti con la versione di .NET Framework con cui sono stati compilati, indipendentemente dalla versione di .NET Framework che viene caricata per il processo.  
   
 ## <a name="background"></a>Sfondo  
  .NET Framework ha sempre offerto l'hosting side-by-side per applicazioni di codice gestito, ma prima di .NET Framework 4 tale funzionalità non era disponibile per i componenti COM gestiti. In passato, i componenti COM gestiti che venivano caricati in un processo venivano eseguiti con la versione di runtime già caricata o con l'ultima versione di .NET Framework installata. Se tale versione non era compatibile con il componente COM, l'esecuzione di quest'ultimo aveva esito negativo.  
@@ -56,7 +56,7 @@ A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è 
   
      Cosa fare: in questo scenario, non eseguire alcuna operazione. I componenti COM verranno eseguiti con la versione di .NET Framework con la quale sono stati registrati.  
   
-- **Scenario 2**: applicazione gestita compilata con [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] che si preferirebbe eseguire con [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], ma che si è disposti a eseguire in .NET Framework 4 se la versione 2.0 non è disponibile.  
+- **Scenario 2**: Applicazione gestita compilata con .NET Framework 2.0 SP1 che si preferisce eseguire con il [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], ma si è disposti a eseguire in .NET Framework 4, se la versione 2.0 non è presenta.  
   
      Versioni di .NET Framework installate: una versione precedente di .NET Framework e di .NET Framework 4.  
   
@@ -88,7 +88,7 @@ A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è 
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato un host COM non gestito che esegue un componente COM gestito usando la versione di .NET Framework con cui è stato compilato il componente da usare.  
   
- Per eseguire l'esempio riportato di seguito, compilare e registrare il seguente componente COM gestito utilizzando [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Per registrare il componente, nel menu **Progetto** scegliere **Proprietà**, fare clic sulla scheda **Build**, quindi selezionare la casella di controllo **Registra per interoperabilità COM**.  
+ Per eseguire l'esempio seguente, compilare e registrare il seguente componente COM gestito usando .NET Framework 3.5. Per registrare il componente, nel menu **Progetto** scegliere **Proprietà**, fare clic sulla scheda **Build**, quindi selezionare la casella di controllo **Registra per interoperabilità COM**.  
   
 ```csharp
 using System;  

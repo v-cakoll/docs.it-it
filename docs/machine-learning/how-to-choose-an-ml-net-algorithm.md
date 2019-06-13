@@ -4,12 +4,12 @@ description: Informazioni su come scegliere un algoritmo ML.NET per il modello d
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 89c3c612d79f02d58a16070feadb645b081dd3e3
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557789"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722628"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Come scegliere un algoritmo ML.NET
 
@@ -21,7 +21,7 @@ Gli algoritmi operano sulle **caratteristiche**. Le caratteristiche sono valori 
 
 Un algoritmo è la formula matematica che viene eseguita per produrre un **modello**. Algoritmi diversi producono modelli con caratteristiche diverse. 
 
-Con ML.NET è possibile applicare lo stesso algoritmo ad attività diverse. Ad esempio, Stochastic Descent Coordinated Ascent può essere usato per Classificazione binaria, Classificazione multiclasse e Regressione. La differenza sta nell'interpretazione dell'output dell'algoritmo per la corrispondenza con l'attività. 
+Con ML.NET è possibile applicare lo stesso algoritmo ad attività diverse. Ad esempio, è utilizzabile Stochastic Dual Ascent di coordinati per la classificazione binaria, classificazione Multiclasse e la regressione. La differenza sta nell'interpretazione dell'output dell'algoritmo per la corrispondenza con l'attività. 
 
 Per ogni combinazione algoritmo/attività, ML.NET include un componente che esegue l'algoritmo di training e l'interpretazione. Questi componenti sono detti algoritmi di training. Ad esempio <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> usa l'algoritmo **StochasticDualCoordinatedAscent** applicato all'attività **Regressione**.
 
@@ -42,7 +42,7 @@ Gli algoritmi lineari eseguono più passaggi sui dati di training. Se il set di 
 |Algoritmo|Proprietà|Algoritmi di training|
 |---------|----------|--------|
 |Averaged perceptron|Ottimale per la classificazione di testo|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
-|Stochastic descent coordinated ascent|Ottimizzazione non necessaria per prestazioni predefinite ottimali|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
+|Ascent coordinato doppia stocastica|Ottimizzazione non necessaria per prestazioni predefinite ottimali|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
 |L-BFGS|Da usare quando il numero di caratteristiche è elevato. Genera statistiche di training di regressione logistica, ma la sua scalabilità è inferiore a quella di AveragedPerceptronTrainer|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
 |Symbolic stochastic gradient descent|L'algoritmo di training di classificazione binaria lineare più veloce e accurato. Scalatura ottimale con il numero di processori|<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>|
 

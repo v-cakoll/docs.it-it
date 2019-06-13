@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8d95a347237b15dfa55586bb15fe605bd5c7a94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3b3dcc3b96e12f89508f4d2708c5ab083516dba
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947121"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025494"
 ---
 # <a name="file-and-stream-io"></a>I/O di file e di flussi
 
@@ -147,7 +147,7 @@ Vedere [Spazio di memorizzazione isolato](isolated-storage.md).
 
 Alcune differenze importanti da tenere presente quando si usano le operazioni di I/O nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]:
 
-- I tipi relativi specificamente alle operazioni su file, come <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, non sono inclusi in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Usare invece i tipi nello spazio dei nomi <xref:Windows.Storage?displayProperty=nameWithType> di [!INCLUDE[wrt](../../../includes/wrt-md.md)], ad esempio <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
+- I tipi relativi specificamente alle operazioni su file, come <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, non sono inclusi in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Usare invece i tipi nel <xref:Windows.Storage?displayProperty=nameWithType> dello spazio dei nomi del Runtime di Windows, ad esempio <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
 
 - Lo spazio di memorizzazione isolato non è disponibile; usare invece i [dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
 

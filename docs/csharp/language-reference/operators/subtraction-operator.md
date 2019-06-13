@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 9f43a863de69122e251204668af2ea989fcc993c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: aae10f8b03a16e55f0b26981f17585c8790e00c1
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300081"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816077"
 ---
 # <a name="--and---operators-c-reference"></a>Operatori - e -= (Riferimenti per C#)
 
@@ -31,12 +31,22 @@ Per informazioni sull'operatore aritmetico `-`, vedere le sezioni [Operatori pi�
 Per gli operandi dello stesso tipo [delegato](../keywords/delegate.md), l'operatore `-` restituisce un'istanza di delegato che viene calcolata come segue:
 
 - Se entrambi gli operandi sono diversi da Null e l'elenco chiamate del secondo operando è un sottoelenco contiguo dell'elenco chiamate del primo operando, il risultato dell'operazione è un nuovo elenco chiamate ottenuto rimuovendo le voci del secondo operando dall'elenco di chiamate del primo operando. Se l'elenco del secondo operando corrisponde a più sottoelenchi contigui nell'elenco del primo operando, viene rimosso solo il sottoelenco corrispondente più a destra. Se la rimozione restituisce un elenco vuoto, il risultato è `null`.
-- Se l'elenco chiamate del secondo operando non è un sottoelenco contiguo dell'elenco chiamate del primo operando, il risultato dell'operazione è il primo operando.
+
+  [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
+
+- Se l'elenco chiamate del secondo operando non è un sottoelenco contiguo dell'elenco chiamate del primo operando, il risultato dell'operazione è il primo operando. Ad esempio, la rimozione di un delegato che non fa parte del delegato multicast non esegue alcuna operazione e restituisce il delegato multicast invariato.
+
+  [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
+
+  L'esempio precedente dimostra anche che, durante il delegato vengono confrontate le istanze dei delegati per la rimozione. Ad esempio, i delegati che sono state prodotte dalla versione di valutazione di identici [espressioni lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) non sono uguali. Per altre informazioni sull'uguaglianza di delegato, vedere la [delegare gli operatori di uguaglianza](~/_csharplang/spec/expressions.md#delegate-equality-operators) sezione il [ C# specifica del linguaggio](../language-specification/index.md).
+
 - Se il primo operando è `null`, il risultato dell'operazione è `null`. Se il secondo operando è `null`, il risultato dell'operazione è il primo operando.
 
-L'esempio seguente illustra come l'operazione `-` esegue la rimozione dei delegati:
+  [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
-[!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
+Per combinare i delegati, usare il [ `+` operatore](addition-operator.md#delegate-combination).
+
+Per altre informazioni sui tipi delegate, vedere [Delegati](../../programming-guide/delegates/index.md).
 
 ## <a name="subtraction-assignment-operator--"></a>Operatore di assegnazione di sottrazione -=
 
@@ -66,7 +76,7 @@ Un tipo definito dall'utente può eseguire l'[overload](../keywords/operator.md)
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-Per altre informazioni, vedere le sezioni [Operatore meno unario](~/_csharplang/spec/expressions.md#unary-minus-operator) e [Operatore di sottrazione](~/_csharplang/spec/expressions.md#subtraction-operator) di [Specifiche del linguaggio C#](../language-specification/index.md).
+Per altre informazioni, vedere le sezioni [Operatore meno unario](~/_csharplang/spec/expressions.md#unary-minus-operator) e [Operatore di sottrazione](~/_csharplang/spec/expressions.md#subtraction-operator) di [Specifiche del linguaggio C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Vedere anche
 

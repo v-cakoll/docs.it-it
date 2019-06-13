@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51bf359ea6ba4e5b45827928a50a095a7960a68f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 5bbf579540ccb93101dba05c5b2577ae8f24ec09
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456708"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486519"
 ---
 # <a name="shadow-copying-assemblies"></a>Creazione di copie replicate di assembly
 La creazione di copie shadow consente di aggiornare gli assembly usati in un dominio applicazione senza scaricare quest'ultimo. Ciò è particolarmente utile per le applicazioni che devono essere disponibili in modo continuo, ad esempio siti ASP.NET.  
@@ -32,7 +32,7 @@ La creazione di copie shadow consente di aggiornare gli assembly usati in un dom
   
 - [Abilitazione e uso della creazione di copie shadow](#EnablingAndUsing): illustra l'uso di base e le opzioni disponibili per la copia shadow.  
   
-- [Prestazioni di avvio](#StartupPerformance): illustra le modifiche che vengono apportate alla copia shadow in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] per migliorare le prestazioni di avvio e come ripristinare il funzionamento delle versioni precedenti.  
+- [Le prestazioni di avvio](#StartupPerformance) vengono descritte le modifiche apportate alla copia shadow in .NET Framework 4 per migliorare le prestazioni di avvio e come ripristinare il comportamento delle versioni precedenti.  
   
 - [Metodi obsoleti](#ObsoleteMethods): illustra le modifiche apportate ai metodi e alle proprietà che controllano la creazione di copie shadow in [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)].  
   

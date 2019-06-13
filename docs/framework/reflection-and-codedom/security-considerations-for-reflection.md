@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6446cc3ee102fa57f5bf60c1353f7b9d5522be69
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457301"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816126"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerazioni sulla sicurezza in relazione alla reflection
 La reflection consente di ottenere informazioni su tipi e membri e di accedere ai membri, vale a dire chiamare metodi e costruttori, ottenere e impostare valori di proprietà, aggiungere e rimuovere gestori eventi e così via. L'uso della reflection per ottenere informazioni su tipi e membri non presenta limitazioni. L'intero codice può usare la reflection per eseguire le attività seguenti:  
@@ -26,7 +26,7 @@ La reflection consente di ottenere informazioni su tipi e membri e di accedere a
   
 - Enumerare ed esaminare assembly e moduli.  
   
- L'uso della reflection per accedere ai membri, per contro, è soggetto a limitazioni. A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare la reflection per accedere ai membri critici per la sicurezza solo tramite il codice attendibile. Inoltre, solo un codice affidabile può usare la reflection per accedere a membri non pubblici che non sarebbero altrimenti accessibili direttamente dal codice compilato. Infine, al codice in cui viene usata la reflection per accedere a un membro critico per la sicurezza devono essere associate le autorizzazioni richieste dal membro critico per la sicurezza, come nel codice compilato.  
+ L'uso della reflection per accedere ai membri, per contro, è soggetto a limitazioni. A partire da .NET Framework 4, solo codice attendibile può usare la reflection per accedere ai membri SecurityCritical. Inoltre, solo un codice affidabile può usare la reflection per accedere a membri non pubblici che non sarebbero altrimenti accessibili direttamente dal codice compilato. Infine, al codice in cui viene usata la reflection per accedere a un membro critico per la sicurezza devono essere associate le autorizzazioni richieste dal membro critico per la sicurezza, come nel codice compilato.  
   
  Fatte salve le autorizzazioni necessarie, il codice può usare la reflection per eseguire i tipi di accesso seguenti:  
   
@@ -42,13 +42,13 @@ La reflection consente di ottenere informazioni su tipi e membri e di accedere a
   
  Ad esempio, il codice eseguito in un dominio applicazione in modalità sandbox è limitato all'accesso descritto in questo elenco, a meno che il dominio dell'applicazione non conceda altre autorizzazioni.  
   
- A partire da [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], il tentativo di accedere a membri generalmente non accessibili genera una richiesta del set di concessioni dell'oggetto di destinazione più <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>. Il codice eseguito con attendibilità totale (ad esempio il codice in un'applicazione avviata dalla riga di comando) è sempre in grado di soddisfare queste autorizzazioni. Tale codice è soggetto a limitazioni per quanto concerne l'accesso a membri critici per la sicurezza, come descritto più avanti in questo articolo.  
+ A partire da .NET Framework 2.0 Service Pack 1, il tentativo di accedere a membri generalmente non accessibili genera una richiesta per il set di concessioni dell'oggetto di destinazione più <xref:System.Security.Permissions.ReflectionPermission> con il <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flag. Il codice eseguito con attendibilità totale (ad esempio il codice in un'applicazione avviata dalla riga di comando) è sempre in grado di soddisfare queste autorizzazioni. Tale codice è soggetto a limitazioni per quanto concerne l'accesso a membri critici per la sicurezza, come descritto più avanti in questo articolo.  
   
  Facoltativamente, un dominio di applicazioni sandbox può concedere <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>, come descritto nella sezione [Accesso a membri generalmente non accessibili](#accessingNormallyInaccessible) più avanti in questo articolo.  
   
 <a name="accessingSecurityCritical"></a>   
 ## <a name="accessing-security-critical-members"></a>Accesso ai membri critici per la sicurezza  
- Un membro è critico per la sicurezza se possiede l'attributo <xref:System.Security.SecurityCriticalAttribute>, se appartiene a un tipo che possiede l'attributo <xref:System.Security.SecurityCriticalAttribute> o se è contenuto in un assembly critico per la sicurezza. A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], per l'accesso ai membri critici per la sicurezza valgono le regole seguenti:  
+ Un membro è critico per la sicurezza se possiede l'attributo <xref:System.Security.SecurityCriticalAttribute>, se appartiene a un tipo che possiede l'attributo <xref:System.Security.SecurityCriticalAttribute> o se è contenuto in un assembly critico per la sicurezza. A partire da .NET Framework 4, le regole per l'accesso ai membri SecurityCritical sono come segue:  
   
 - Il codice Transparent non può usare la reflection per accedere a membri critici per la sicurezza, sebbene sia completamente attendibile. Viene generata un'eccezione <xref:System.MethodAccessException>, <xref:System.FieldAccessException> o <xref:System.TypeAccessException>.  
   
@@ -98,9 +98,9 @@ La reflection consente di ottenere informazioni su tipi e membri e di accedere a
   
 ## <a name="version-information"></a>Informazioni sulla versione  
   
-- A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], il codice Transparent non può usare la reflection per accedere ai membri critici per la sicurezza.  
+- A partire da .NET Framework 4, il codice trasparente non è possibile usare la reflection per accedere ai membri SecurityCritical.  
   
-- Il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> viene introdotto in [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Le versioni precedenti di .NET Framework richiedono il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> per il codice che usa la reflection per accedere ai membri non pubblici. Questa autorizzazione non dovrebbe mai essere concessa al codice parzialmente attendibile.  
+- Il <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flag è stato introdotto in .NET Framework 2.0 Service Pack 1. Le versioni precedenti di .NET Framework richiedono il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> per il codice che usa la reflection per accedere ai membri non pubblici. Questa autorizzazione non dovrebbe mai essere concessa al codice parzialmente attendibile.  
   
 - A partire da [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], l'uso della reflection per ottenere informazioni su tipi e membri non pubblici non richiede alcuna autorizzazione. Nelle versioni precedenti è necessario usare <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.  
   

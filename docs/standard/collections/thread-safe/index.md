@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b4639402ee99d215edb3fb28ababe6f750fb353
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 0bc333a828a9d18cd5ad98af42a91c1d53c2569b
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457078"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816203"
 ---
 # <a name="thread-safe-collections"></a>Raccolte thread-safe
 .NET Framework 4 introduce lo spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=nameWithType> che include diverse classi di raccolta thread-safe e scalabili. Più thread possono aggiungere o rimuovere elementi da queste raccolte in modo sicuro ed efficiente, senza richiedere una sincronizzazione aggiuntiva nel codice utente. Quando si scrive nuovo codice, usare le classi di raccolta simultanee ogni volta che più thread scriveranno nella raccolta contemporaneamente. Se si prevede di leggere solo da una raccolta condivisa, è possibile usare le classi dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>. È consigliabile evitare di usare le classi di raccolta 1.0 a meno che non sia necessario definire come destinazione il runtime di .NET Framework versione 1.1 o precedente.  
@@ -22,7 +22,7 @@ ms.locfileid: "66457078"
   
  Le classi di raccolta introdotte in .NET Framework 2.0 sono reperibili nello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>. Sono incluse <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> e così via. che forniscono maggiore indipendenza dai tipi e migliori prestazioni rispetto alle classi di .NET Framework 1.0. Tuttavia, le classi di raccolta di .NET Framework 2.0 non forniscono la sincronizzazione dei thread. Quando gli elementi vengono aggiunti o rimossi contemporaneamente su più thread, la sincronizzazione deve essere gestita dal codice utente.  
   
- È quindi consigliabile usare le classi di raccolta simultanea disponibili in .NET Framework 4 perché offrono non solo l'indipendenza dai tipi delle classi di raccolta .NET Framework 2.0, ma anche una thread safety più efficiente e completa rispetto alle raccolte [!INCLUDE[net_v10_short](../../../../includes/net-v10-short-md.md)].  
+ Classi di raccolta simultanee in .NET Framework 4 è consigliabile perché forniscono non solo l'indipendenza dai tipi delle classi di raccolte .NET Framework 2.0, ma anche più efficiente e completa protezione dei thread rispetto alle raccolte di .NET Framework 1.0 fornire.  
   
 ## <a name="fine-grained-locking-and-lock-free-mechanisms"></a>Blocco con granularità fine e meccanismi senza blocco  
  Alcuni tipi di raccolta simultanea usano meccanismi di sincronizzazione leggeri, ad esempio <xref:System.Threading.SpinLock>, <xref:System.Threading.SpinWait>, <xref:System.Threading.SemaphoreSlim> e <xref:System.Threading.CountdownEvent>, che sono una novità di .NET Framework 4. Questi tipi di sincronizzazione usano in genere la rotazione con *stato occupato* per breve periodi di tempo prima di impostare il thread in uno stato di attesa effettivo. Quando si prevedono tempi di attesa molto brevi, la rotazione è molto meno dispendiosa a livello di elaborazione rispetto all'attesa, che implica una transizione del kernel complessa. Per le classi di raccolta che usano la rotazione, questo livello di efficienza significa che più thread possono aggiungere e rimuovere elementi con una frequenza molto elevata. Per altre informazioni sul confronto tra spin e blocco, vedere [SpinLock](../../../../docs/standard/threading/spinlock.md) e [SpinWait](../../../../docs/standard/threading/spinwait.md).  

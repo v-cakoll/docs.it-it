@@ -17,8 +17,8 @@
       href: tutorials/predict-prices.md
     - name: Categorizzare i fiori di iris (clustering k-means)
       href: tutorials/iris-clustering.md
-    - name: Sistema di raccomandazione di film (fattorizzazione di matrice)
-      href: tutorials/movie-recommmendation.md
+    - name: Consiglia di film (fattorizzazione di matrice)
+      href: tutorials/movie-recommendation.md
     - name: Classificazione delle immagini (trasferimento induttivo)
       href: tutorials/image-classification.md
     - name: Analisi delle vendite di prodotti (rilevamento anomalie)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45f3e8533bf7400566304ddb0fdd9d8e5a9b4280
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 2ee08e9ca243ac086a0b75892bf9258246e8fd7c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456131"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490666"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Denominazione sicura (riferimenti alle API non gestite)
 L'API di denominazione sicura consente a un client di amministrare la firma con nome sicuro per gli assembly.  
@@ -23,7 +23,7 @@ L'API di denominazione sicura consente a un client di amministrare la firma con 
 ## <a name="in-this-section"></a>In questa sezione  
   
 > [!NOTE]
->  Tutte queste funzioni sono state deprecate a partire da [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Per le proposte alternative, vedere l'interfaccia [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md).  
+>  Tutte queste funzioni sono state deprecate a partire da .NET Framework 4. Per le proposte alternative, vedere l'interfaccia [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md).  
   
  [Funzione GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
  Ottiene un hash del file di assembly specificato usando l'algoritmo hash specificato. Deprecata a partire da .NET Framework 4.  
