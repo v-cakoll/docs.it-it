@@ -140,7 +140,7 @@
                   href: xdocument-class-overview.md
                 - name: 'Procedura: Compilare esempi in LINQ to XML'
                   href: how-to-build-linq-to-xml-examples.md
-            - name: Strutture ad albero XML
+            - name: Alberi XML
               items:
                 - name: Costruzione funzionale (LINQ to XML)
                   href: functional-construction-linq-to-xml.md

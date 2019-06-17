@@ -807,6 +807,10 @@
               href: fsharp/language-reference/generics/statically-resolved-type-parameters.md
         - name: Record
           href: fsharp/language-reference/records.md
+        - name: Record anonimi
+          href: fsharp/language-reference/anonymous-records.md
+        - name: Copiare e aggiornare espressioni di record
+          href: fsharp/language-reference/copy-and-update-record-expressions.md
         - name: Unioni discriminate
           href: fsharp/language-reference/discriminated-unions.md
         - name: Enumerazioni
@@ -854,8 +858,6 @@
           href: fsharp/language-reference/delegates.md
         - name: Espressioni di oggetto
           href: fsharp/language-reference/object-expressions.md
-        - name: Copiare e aggiornare espressioni di record
-          href: fsharp/language-reference/copy-and-update-record-expressions.md
         - name: Cast e conversioni
           href: fsharp/language-reference/casting-and-conversions.md
         - name: Controllo di accesso
