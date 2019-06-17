@@ -147,7 +147,7 @@ Vedere [Spazio di memorizzazione isolato](isolated-storage.md).
 
 Alcune differenze importanti da tenere presente quando si usano le operazioni di I/O nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]:
 
-- I tipi relativi specificamente alle operazioni su file, come <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, non sono inclusi in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Usare invece i tipi nel <xref:Windows.Storage?displayProperty=nameWithType> dello spazio dei nomi del Runtime di Windows, ad esempio <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
+- I tipi relativi specificamente alle operazioni su file, come <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, non sono inclusi in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Usare invece i tipi nello spazio dei nomi <xref:Windows.Storage?displayProperty=nameWithType> di Windows Runtime, ad esempio <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
 
 - Lo spazio di memorizzazione isolato non è disponibile; usare invece i [dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
 

@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3183f8434dd8a6bc8182e2257d0ab3c7e7c014c4
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880324"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833430"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipi di puntatori (Guida per programmatori C#)
 
@@ -45,7 +45,7 @@ Un puntatore non può puntare a un riferimento o a uno [struct](../../language-r
 
 Il valore della variabile del puntatore di tipo `myType*` è l'indirizzo di una variabile di tipo `myType`. Di seguito sono riportati alcuni esempi di dichiarazioni di tipi di puntatore:
 
-|Esempio|Description|
+|Esempio|DESCRIZIONE|
 |-------------|-----------------|
 |`int* p`|`p` è un puntatore a un Integer.|
 |`int** p`|`p` è un puntatore a un puntatore a un Integer.|
@@ -82,7 +82,7 @@ Nella tabella riportata di seguito sono elencati gli operatori e le istruzioni c
 |`++` e `--`|Incrementa e decrementa puntatori.|
 |`+` e `-`|Utilizza l'aritmetica dei puntatori.|
 |`==`, `!=`, `<`, `>`, `<=` e `>=`|Confronta puntatori.|
-|[Operatore `stackalloc`](../../language-reference/keywords/stackalloc.md)|Alloca memoria nello stack.|
+|[Operatore `stackalloc`](../../language-reference/operators/stackalloc.md)|Alloca memoria nello stack.|
 |[Istruzione `fixed`](../../language-reference/keywords/fixed-statement.md)|Corregge temporaneamente una variabile per consentire di trovarne l'indirizzo.|
 
 Per altre informazioni sugli operatori correlati ai puntatori, vedere [Operatori correlati ai puntatori](../../language-reference/operators/pointer-related-operators.md).

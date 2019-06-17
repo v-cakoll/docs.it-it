@@ -7,12 +7,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 2c49c8517e15534121b0f8dbc04902b46a92ef20
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 88e2b93fda786db15b3a3a693bdb9293ed31df4c
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959358"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833212"
 ---
 # <a name="fixed-statement-c-reference"></a>Istruzione fixed (Riferimenti per C#)
 
@@ -63,7 +63,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-È possibile allocare memoria nello stack, dove non è soggetta a Garbage Collection e pertanto non deve essere bloccata. A questo scopo, usare l'operatore [`stackalloc`](stackalloc.md).
+È possibile allocare memoria nello stack, dove non è soggetta a Garbage Collection e pertanto non deve essere bloccata. A questo scopo, usare l'operatore [`stackalloc`](../operators/stackalloc.md).
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

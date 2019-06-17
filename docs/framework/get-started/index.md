@@ -53,7 +53,7 @@ In generale, le versioni di .NET Framework installate nel computer non devono es
 
 - Se un'app in uso dipende da una specifica versione di .NET Framework che viene rimossa, l'app potrebbe smettere di funzionare.
 
-- Alcune versioni di .NET Framework sono aggiornamenti sul posto di versioni precedenti. Ad esempio, .NET Framework 3.5 è un aggiornamento sul posto alla versione 2.0 e 4.8 il Framework .NET è un aggiornamento sul posto alle versioni 4 a 4.7.2. Per altre informazioni, vedere [Versioni e dipendenze di .NET Framework](../migration-guide/versions-and-dependencies.md).
+- Alcune versioni di .NET Framework sono aggiornamenti sul posto di versioni precedenti. Ad esempio, .NET Framework 3.5 è un aggiornamento sul posto alla versione 2.0 e .NET Framework 4.8 è un aggiornamento sul posto alle versioni da 4 a 4.7.2. Per altre informazioni, vedere [Versioni e dipendenze di .NET Framework](../migration-guide/versions-and-dependencies.md).
 
 Nelle versioni di Windows precedenti a Windows 8, se si sceglie di rimuovere .NET Framework, per la disinstallazione usare sempre **Programmi e funzionalità** dal Pannello di controllo. Non rimuovere mai manualmente una versione di .NET Framework. In Windows 8 e versioni successive, .NET Framework è un componente del sistema operativo e non può essere disinstallato in modo indipendente.
 

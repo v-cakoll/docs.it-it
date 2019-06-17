@@ -2,12 +2,12 @@
 title: Tipi di raccolta F#
 description: Informazioni su F# tipi di raccolta e le differenze rispetto ai tipi di raccolte in .NET Framework.
 ms.date: 05/16/2016
-ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b370d850deaacc961dff9515ffa8c20634af4ed6
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996814"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041719"
 ---
 # <a name="f-collection-types"></a>Tipi di raccolta F#
 
@@ -83,6 +83,7 @@ Questa sezione vengono confrontate le funzioni disponibili in F# tipi di raccolt
 |iteri|O(N)|O(N)|O(N)|-|-|Applica la funzione specificata a ogni elemento della raccolta. Il valore integer che viene passato alla funzione indica l'indice dell'elemento.|
 |iteri2|O(N)|O(N)|-|-|-|Applica la funzione specificata a una coppia di elementi che derivano dagli indici corrispondenti in due matrici. Il valore integer che viene passato alla funzione indica l'indice degli elementi. Le due matrici devono avere la stessa lunghezza.|
 |iter2|O(N)|O(N)|O(N)|-|-|Applica la funzione specificata a una coppia di elementi che derivano dagli indici corrispondenti in due matrici. Le due matrici devono avere la stessa lunghezza.|
+|last|O(1)|O(N)|O(N)|-|-|Restituisce l'ultimo elemento nella raccolta applicabile.|
 |length|O(1)|O(N)|O(N)|-|-|Restituisce il numero di elementi nella raccolta.|
 |map|O(N)|O(N)|O(1)|-|-|Compila una raccolta i cui elementi sono il risultato ottenuto applicando la funzione specificata a ogni elemento della matrice.|
 |map2|O(N)|O(N)|O(1)|-|-|Compila una raccolta i cui elementi sono il risultato ottenuto applicando la funzione specificata agli elementi corrispondenti di due raccolte a coppie. Le due matrici di input devono avere la stessa lunghezza.|
