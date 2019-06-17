@@ -3,12 +3,12 @@ title: Come installare lo strumento dell'interfaccia della riga di comando (CLI)
 description: Panoramica e installazione dello strumento dell'interfaccia della riga di comando (CLI) di ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557863"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832926"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Come installare lo strumento dell'interfaccia della riga di comando (CLI) di ML.NET
 
@@ -34,7 +34,7 @@ L'interfaccia della riga di comando di ML.NET viene installata come gli altri st
 L'esempio seguente illustra come installare l'interfaccia della riga di comando di ML.NET nel percorso del feed NuGet predefinito:
 
 ```console
-> dotnet tool install -g mlnet
+dotnet tool install -g mlnet
 ```
 
 Se lo strumento non può essere installato (ovvero, se non è disponibile nel feed NuGet predefinito), vengono visualizzati i messaggi di errore. Verificare che i feed previsti vengano controllati.
@@ -49,7 +49,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 È possibile verificare che l'installazione sia avvenuta correttamente digitando il comando seguente:
 
 ```console
-> mlnet
+mlnet
 ```
 
 Verranno visualizzate le informazioni della Guida per i comandi disponibili per lo strumento mlnet, ad esempio per il comando 'auto-train'.
@@ -59,13 +59,13 @@ Verranno visualizzate le informazioni della Guida per i comandi disponibili per 
 Se si sta tentando di installare una versione non definitiva o una versione specifica dello strumento, è possibile specificare il [framework](../../standard/frameworks.md) usando il formato seguente:
 
 ```console
-> dotnet tool install -g mlnet --framework <FRAMEWORK>
+dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 È anche possibile verificare se il pacchetto è installato correttamente digitando il comando seguente:
 
 ```console
-> dotnet tool list -g
+dotnet tool list -g
 ```
 
 ## <a name="uninstall-the-cli-package"></a>Disinstallare il pacchetto dell'interfaccia della riga di comando
@@ -73,7 +73,7 @@ Se si sta tentando di installare una versione non definitiva o una versione spec
 Digitare il comando seguente per disinstallare il pacchetto dal computer locale:
 
 ```console
-> dotnet tool uninstall mlnet -g
+dotnet tool uninstall mlnet -g
 ```
 
 ## <a name="update-the-cli-package"></a>Aggiornare il pacchetto dell'interfaccia della riga di comando
@@ -81,7 +81,7 @@ Digitare il comando seguente per disinstallare il pacchetto dal computer locale:
 Digitare il comando seguente per aggiornare il pacchetto del computer locale:
 
 ```console
-> dotnet tool update -g mlnet
+dotnet tool update -g mlnet
 ```
 
 ## <a name="set-up-cli-suggestions-tab-based-auto-completion"></a>Configurare i suggerimenti dell'interfaccia della riga di comando (completamento automatico con il tasto TAB)
@@ -101,7 +101,7 @@ Nel computer in cui si vuole abilitare il completamento, è necessario eseguire 
 1. Installare lo strumento globale `dotnet-suggest` eseguendo il comando seguente:
 
     ```console
-    > dotnet tool install dotnet-suggest -g
+    dotnet tool install dotnet-suggest -g
     ```
 
 2. Aggiungere lo script shim appropriato al profilo della shell. Potrebbe essere necessario creare un file del profilo della shell. Lo script shim inoltra le richieste di completamento della shell allo strumento `dotnet-suggest` che delega all'app basata su `System.CommandLine` appropriata.
@@ -111,7 +111,7 @@ Nel computer in cui si vuole abilitare il completamento, è necessario eseguire 
     * Per PowerShell, aggiungere il contenuto di [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) al profilo PowerShell. È possibile individuare il percorso previsto per il profilo PowerShell eseguendo il comando seguente nella console:
 
     ```console
-    > echo $profile
+    echo $profile
     ``` 
 
 (Per le altre shell, [ricercare](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) o aprire un [problema](https://github.com/dotnet/System.CommandLine/issues)).
