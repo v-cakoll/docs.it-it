@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: e40ca31ddc40cccbeb3b8dda1d148ddec5032d7c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 022f0efbbb2e6e9a4ac9d3d7ddcc1fb1022cdbee
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489548"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169766"
 ---
 # <a name="startup-element"></a>\<avvio > elemento
 
@@ -37,13 +37,13 @@ Specifica informazioni di avvio di common language runtime.
 
 |Attributo|Descrizione|
 |---------------|-----------------|
-|`useLegacyV2RuntimeActivationPolicy`|Attributo facoltativo.<br /><br /> Specifica se abilitare il [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] criteri di attivazione di runtime o usare i criteri di attivazione di .NET Framework 4.|
+|`useLegacyV2RuntimeActivationPolicy`|Attributo facoltativo.<br /><br /> Specifica se abilitare i criteri di attivazione di runtime di .NET Framework 2.0 o usare i criteri di attivazione di .NET Framework 4.|
 
 ## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy attribute
 
 |Value|Descrizione|
 |-----------|-----------------|
-|`true`|Abilitare [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] criteri di attivazione di runtime per il runtime scelto, ovvero per associare le tecniche di attivazione di runtime legacy (ad esempio il [funzione CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) al runtime scelto dal file di configurazione invece di limitazione di essi in CLR versione 2.0. Di conseguenza, se CLR 4 o versione successiva viene scelto dal file di configurazione, gli assembly in modalità mista creati con le versioni precedenti di .NET Framework vengono caricati con la versione di Common Language Runtime scelta. Impostazione di questo valore impedisce CLR versione 1.1 o CLR versione 2.0 di caricamento nello stesso processo, in modo efficace la disabilitazione di funzionalità side-by-side in-process.|
+|`true`|Abilitare i criteri di attivazione di runtime di .NET Framework 2.0 per il runtime scelto, ovvero per associare le tecniche di attivazione di runtime legacy (ad esempio la [funzione CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) al runtime invece scelto dal file di configurazione di limitazione di essi in CLR versione 2.0. Di conseguenza, se CLR 4 o versione successiva viene scelto dal file di configurazione, gli assembly in modalità mista creati con le versioni precedenti di .NET Framework vengono caricati con la versione di Common Language Runtime scelta. Impostazione di questo valore impedisce CLR versione 1.1 o CLR versione 2.0 di caricamento nello stesso processo, in modo efficace la disabilitazione di funzionalità side-by-side in-process.|
 |`false`|Usare i criteri di attivazione predefinite per .NET Framework 4 e versioni successive, che consiste nel consentire le tecniche di attivazione per caricare la versione 1.1 o 2.0 di CLR nel processo di runtime legacy. Impostando questo valore, gli assembly in modalità mista venga caricato in .NET Framework 4 o versioni successive, a meno che non sono state compilate con .NET Framework 4 o versione successiva. Questo valore è il valore predefinito.|
 
 ### <a name="child-elements"></a>Elementi figlio

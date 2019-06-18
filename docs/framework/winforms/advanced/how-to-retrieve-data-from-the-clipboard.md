@@ -8,19 +8,19 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: e8f77a4fd1047598d51c2e0932d9c1309a305a86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e29e71974abda3e6e57d22d9faef28e386ebeefd
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003925"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169908"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Procedura: Recuperare dati dagli Appunti
 Il <xref:System.Windows.Forms.Clipboard> classe fornisce metodi che è possibile usare per interagire con la funzionalità degli Appunti di sistema operativo Windows. Molte applicazioni usano negli Appunti come un archivio temporaneo per i dati. Elaboratori di testo, ad esempio, usare gli Appunti durante le operazioni di taglia e Incolla. Gli Appunti sono anche utili per il trasferimento di informazioni da un'applicazione a altra.  
   
  Alcune applicazioni di archiviano i dati negli Appunti in più formati per aumentare il numero di altre applicazioni che possono utilizzare i dati. Un formato degli Appunti è una stringa che identifica il formato. Un'applicazione che utilizza il formato identificato può recuperare i dati associati negli Appunti. Il <xref:System.Windows.Forms.DataFormats> classe fornisce i nomi di formato predefinito per l'uso. È anche possibile usare i propri nomi di formato o utilizzare un tipo di oggetto come formato. Per informazioni sull'aggiunta di dati negli Appunti, vedere [come: Aggiungere dati agli Appunti](how-to-add-data-to-the-clipboard.md).  
   
- Per determinare se gli Appunti contengono dati in un formato specifico, usare uno dei `Contains` *formato* metodi o <xref:System.Windows.Forms.Clipboard.GetData%2A> (metodo). Per recuperare dati dagli Appunti, usare uno dei `Get` *formato* metodi o <xref:System.Windows.Forms.Clipboard.GetData%2A> (metodo). Questi metodi sono una novità [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+ Per determinare se gli Appunti contengono dati in un formato specifico, usare uno dei `Contains` *formato* metodi o <xref:System.Windows.Forms.Clipboard.GetData%2A> (metodo). Per recuperare dati dagli Appunti, usare uno dei `Get` *formato* metodi o <xref:System.Windows.Forms.Clipboard.GetData%2A> (metodo). Questi metodi sono novità di .NET Framework 2.0.  
   
  Per accedere ai dati dagli Appunti con le versioni precedenti a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)], usare il <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> metodo e chiama i metodi dell'oggetto restituito <xref:System.Windows.Forms.IDataObject>. Per determinare se un particolare formato è disponibile nell'oggetto restituito, ad esempio, chiamare il <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> (metodo).  
   
@@ -31,14 +31,14 @@ Il <xref:System.Windows.Forms.Clipboard> classe fornisce metodi che è possibile
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>Per recuperare i dati dagli Appunti in un formato comune  
   
-1. Usare la <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, o <xref:System.Windows.Forms.Clipboard.GetText%2A> (metodo). Facoltativamente, usare la corrispondente `Contains` *formato* metodi per determinare se i dati sono disponibili in un formato particolare. Questi metodi sono disponibili solo in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Usare la <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, o <xref:System.Windows.Forms.Clipboard.GetText%2A> (metodo). Facoltativamente, usare la corrispondente `Contains` *formato* metodi per determinare se i dati sono disponibili in un formato particolare. Questi metodi sono disponibili solo in .NET Framework 2.0.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>Per recuperare i dati dagli Appunti in un formato personalizzato  
   
-1. Usare il <xref:System.Windows.Forms.Clipboard.GetData%2A> metodo con un nome di formato personalizzato. Questo metodo è disponibile solo in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Usare il <xref:System.Windows.Forms.Clipboard.GetData%2A> metodo con un nome di formato personalizzato. Questo metodo è disponibile solo in .NET Framework 2.0.  
   
      È anche possibile usare nomi di formato predefiniti con il <xref:System.Windows.Forms.Clipboard.SetData%2A> (metodo). Per altre informazioni, vedere <xref:System.Windows.Forms.DataFormats>.  
   

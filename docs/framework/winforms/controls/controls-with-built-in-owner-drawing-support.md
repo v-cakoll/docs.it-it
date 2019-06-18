@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: df3a61dae9ad926f56da4e9d15e0e8b8c6f1c8a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c053c14bb06d1bb28c7b7e6652ccc6e41af9c4e5
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648252"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170602"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Controlli con supporto incorporato per la creazione da parte del proprietario
 Il disegno da parte del proprietario in Windows Form, noto anche come disegno personalizzato, è una tecnica che consente di modificare l'aspetto visivo di alcuni controlli.  
@@ -46,7 +46,7 @@ Il disegno da parte del proprietario in Windows Form, noto anche come disegno pe
   
 - <xref:System.Windows.Forms.TabControl>  
   
- I controlli seguenti supportano il disegno da parte del proprietario solo in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:  
+ I controlli seguenti supportano il disegno personalizzato solo in .NET Framework 2.0:  
   
 - <xref:System.Windows.Forms.ToolTip>  
   
@@ -54,7 +54,7 @@ Il disegno da parte del proprietario in Windows Form, noto anche come disegno pe
   
 - <xref:System.Windows.Forms.TreeView>  
   
- I controlli seguenti, che supportano il disegno da parte del proprietario, sono nuovi in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:  
+ I controlli seguenti supportano il disegno personalizzato e sono una novità di .NET Framework 2.0:  
   
 - <xref:System.Windows.Forms.DataGridView>  
   

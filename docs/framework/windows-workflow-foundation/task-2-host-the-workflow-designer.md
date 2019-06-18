@@ -2,17 +2,17 @@
 title: 'Attività 2: Ospitare Progettazione flussi di lavoro'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: cce90c6b7f5edfaf960415f0a5d0787f8eee526b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 553a02732e08fa148ffdee250df0305deb8e63b7
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665290"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169990"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Attività 2: Ospitare Progettazione flussi di lavoro
 In questo argomento viene descritta la procedura per l'hosting di un'istanza di [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in un'applicazione Windows Presentation Foundation (WPF).  
   
- La procedura consente di configurare il **griglia** controllo che contiene la finestra di progettazione, a livello di codice crea un'istanza del <xref:System.Activities.Presentation.WorkflowDesigner> che contiene un valore predefinito <xref:System.Activities.Statements.Sequence> attività, registra i metadati della finestra di progettazione per fornire supporto di progettazione per attività tutte predefinite e gli host il [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] nella [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] dell'applicazione.  
+ La procedura consente di configurare il **griglia** controllo che contiene la finestra di progettazione, a livello di codice crea un'istanza del <xref:System.Activities.Presentation.WorkflowDesigner> che contiene un valore predefinito <xref:System.Activities.Statements.Sequence> attività, registra i metadati della finestra di progettazione per fornire supporto di progettazione per attività tutte predefinite e gli host il [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] nell'applicazione WPF.  
   
 ### <a name="to-host-the-workflow-designer"></a>Per ospitare la finestra di progettazione del flusso di lavoro  
   
@@ -22,7 +22,7 @@ In questo argomento viene descritta la procedura per l'hosting di un'istanza di 
   
 3. Impostare il nome della griglia selezionando il **griglia** pannello nella finestra di progettazione (fare clic sulla casella all'interno del **MainWindow**) e impostando il **nome** proprietà nella parte superiore del  **Proprietà** finestra su "grid1".  
   
-4. Nel **delle proprietà** finestra, fare clic sui puntini di sospensione (**...** ) accanto al `ColumnDefinitions` per aprire il **Editor della raccolta** nella finestra di dialogo.  
+4. Nel **delle proprietà** finestra, fare clic sui puntini di sospensione ( **...** ) accanto al `ColumnDefinitions` per aprire il **Editor della raccolta** nella finestra di dialogo.  
   
 5. Nel **Editor della raccolta** della finestra di dialogo fare clic sui **Add** tre volte per inserire tre colonne nel layout. La prima colonna conterrà il **della casella degli strumenti**, mentre la seconda ospiterà il [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], e la terza colonna verrà utilizzata per il controllo proprietà.  
   

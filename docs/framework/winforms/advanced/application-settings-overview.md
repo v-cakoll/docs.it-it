@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 49c7ceb431e9ab59b47e3b8b912e2881aeeef6c2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5e70b9c16c3af46b72ea8f8745806c7ebf849e2f
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583561"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169976"
 ---
 # <a name="application-settings-overview"></a>Cenni preliminari sulle impostazioni delle applicazioni
 Questo argomento descrive come creare e archiviare i dati delle impostazioni per conto dell'applicazione e degli utenti.  
   
  La funzionalità Impostazioni applicazione di Windows Form semplifica le operazioni di creazione, archiviazione e gestione delle preferenze personalizzate a livello di applicazione e utente nel computer client. Le impostazioni dell'applicazione Windows Form consentono non solo di archiviare dati applicativi quali stringhe di connessione a database, ma anche dati specifici dell'utente, quali preferenze per l'applicazione. L'uso di Visual Studio o di codice gestito personalizzato consente di creare nuove impostazioni, leggerle e scriverle su disco, associarle a proprietà di form e convalidare i dati delle impostazioni prima di caricarle e salvarle.  
   
- Le impostazioni dell'applicazione consente agli sviluppatori di salvare lo stato nella propria applicazione con un minimo di codice personalizzato e sostituendo le proprietà dinamiche nelle versioni precedenti di .NET Framework. Contengono molti miglioramenti rispetto alle proprietà dinamiche, che sono di sola lettura, ad associazione tardiva e richiedono ulteriore programmazione personalizzata. Le classi delle proprietà dinamiche sono state mantenute in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], ma sono solo classi shell che eseguono il wrapping delle classi delle impostazioni dell'applicazione.  
+ Le impostazioni dell'applicazione consente agli sviluppatori di salvare lo stato nella propria applicazione con un minimo di codice personalizzato e sostituendo le proprietà dinamiche nelle versioni precedenti di .NET Framework. Contengono molti miglioramenti rispetto alle proprietà dinamiche, che sono di sola lettura, ad associazione tardiva e richiedono ulteriore programmazione personalizzata. Le classi delle proprietà dinamiche sono state mantenute in .NET Framework 2.0, ma sono solo classi shell che eseguono il wrapping delle classi delle impostazioni dell'applicazione.  
   
 ## <a name="what-are-application-settings"></a>Informazioni sulle impostazioni dell'applicazione.  
  Le applicazioni Windows Form richiedono spesso dati di importanza fondamentale per l'esecuzione che tuttavia non è opportuno includere direttamente nel codice dell'applicazione. Se l'applicazione usa un servizio Web o un server di database, è consigliabile archiviare le informazioni in un file separato, in modo che sia possibile modificarle in futuro senza dover ricompilare. Analogamente, è possibile che le applicazioni richiedano di archiviare dati specifici per l'utente corrente. Molte applicazioni, ad esempio, dispongono di preferenze utente che ne personalizzano l'aspetto e il comportamento.  

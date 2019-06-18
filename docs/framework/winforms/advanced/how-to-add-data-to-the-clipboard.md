@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4d035dd6611909c9a6b67662d17f80057dc33386
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004471"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169957"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Procedura: Aggiungere dati agli Appunti
 Il <xref:System.Windows.Forms.Clipboard> classe fornisce metodi che è possibile usare per interagire con la funzionalità degli Appunti di sistema operativo Windows. Molte applicazioni usano negli Appunti come un archivio temporaneo per i dati. Elaboratori di testo, ad esempio, usare gli Appunti durante le operazioni di taglia e Incolla. Gli Appunti sono anche utili per il trasferimento dei dati da un'applicazione a altra.  
@@ -24,7 +24,7 @@ Il <xref:System.Windows.Forms.Clipboard> classe fornisce metodi che è possibile
   
  Per aggiungere i dati negli Appunti in uno o più formati, usare il <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> (metodo). È possibile passare qualsiasi oggetto a questo metodo, ma per aggiungere dati in più formati, è necessario aggiungere prima di tutto i dati a un oggetto separato progettato per funzionare con più formati. In genere, si aggiungerà i dati in un <xref:System.Windows.Forms.DataObject>, ma è possibile usare qualsiasi tipo che implementa il <xref:System.Windows.Forms.IDataObject> interfaccia.  
   
- In [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], è possibile aggiungere i dati direttamente negli Appunti con nuovi metodi progettati per semplificare le attività di base negli Appunti. Usare questi metodi quando si lavora con i dati in un formato comune come testo.  
+ In .NET Framework 2.0, è possibile aggiungere i dati direttamente negli Appunti con nuovi metodi progettati per semplificare le attività di base negli Appunti. Usare questi metodi quando si lavora con i dati in un formato comune come testo.  
   
 > [!NOTE]
 >  Tutte le applicazioni basate su Windows condivideranno gli Appunti. Pertanto, il contenuto è soggetto a modifiche quando si passa a un'altra applicazione.  
@@ -35,14 +35,14 @@ Il <xref:System.Windows.Forms.Clipboard> classe fornisce metodi che è possibile
   
 ### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Per aggiungere i dati negli Appunti in un formato comune  
   
-1. Usare la <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, o <xref:System.Windows.Forms.Clipboard.SetText%2A> (metodo). Questi metodi sono disponibili solo in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Usare la <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, o <xref:System.Windows.Forms.Clipboard.SetText%2A> (metodo). Questi metodi sono disponibili solo in .NET Framework 2.0.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>Per aggiungere i dati negli Appunti in un formato personalizzato  
   
-1. Usare il <xref:System.Windows.Forms.Clipboard.SetData%2A> metodo con un nome di formato personalizzato. Questo metodo è disponibile solo in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Usare il <xref:System.Windows.Forms.Clipboard.SetData%2A> metodo con un nome di formato personalizzato. Questo metodo è disponibile solo in .NET Framework 2.0.  
   
      È anche possibile usare nomi di formato predefiniti con il <xref:System.Windows.Forms.Clipboard.SetData%2A> (metodo). Per altre informazioni, vedere <xref:System.Windows.Forms.DataFormats>.  
   

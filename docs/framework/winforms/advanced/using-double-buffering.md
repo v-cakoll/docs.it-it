@@ -7,12 +7,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - buffering [Windows Forms], double buffering
 ms.assetid: dc484e33-7101-4e4b-ada5-d3c96155fbcd
-ms.openlocfilehash: ac6c9b7f2cc1fea86a75eaaf4a2dde1ea60e4f40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b22336221c7bdda3c9dd7adf23308a2b0bad450
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777156"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169912"
 ---
 # <a name="using-double-buffering"></a>Utilizzo del doppio buffer
 È possibile utilizzare grafica a doppio buffer per ridurre lo sfarfallio in applicazioni che prevedono operazioni complesse di disegno. .NET Framework include supporto predefinito per il doppio buffer oppure è possibile gestire ed eseguire il rendering della grafica manualmente.  
@@ -31,11 +31,9 @@ ms.locfileid: "61777156"
  Viene illustrato come eseguire il rendering di grafica a doppio buffer.  
   
 ## <a name="reference"></a>Riferimenti  
- <xref:System.Windows.Forms.Control.SetStyle%2A> ,  
- Metodo di controllo che abilita il buffering doppio.  
+ <xref:System.Windows.Forms.Control.SetStyle%2A> Metodo di controllo che abilita il buffering doppio.  
   
- <xref:System.Drawing.BufferedGraphicsContext> ,  
- Fornisce metodi per la creazione di buffer di grafica.  
+ <xref:System.Drawing.BufferedGraphicsContext> Fornisce metodi per la creazione di buffer di grafica.  
   
  <xref:System.Drawing.BufferedGraphicsManager>  
  Fornisce l'accesso al contesto di grafica memorizzata nel buffer per un dominio dell'applicazione.

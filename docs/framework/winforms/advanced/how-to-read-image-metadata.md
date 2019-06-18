@@ -8,12 +8,12 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3266724503960b8b45cd134dfa5b007a58d578fa
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672601"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169805"
 ---
 # <a name="how-to-read-image-metadata"></a>Procedura: Leggere i metadati delle immagini
 Alcuni file di immagine contengono metadati che è possibile leggere per determinare le caratteristiche dell'immagine. Scatta una foto digitale, ad esempio, potrebbe contenere i metadati che possono leggere per determinare la marca e modello di fotocamera usata per acquisire l'immagine. Con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile leggere i metadati esistenti ed è anche possibile scrivere i nuovi metadati al file di immagine.  
@@ -57,64 +57,66 @@ Alcuni file di immagine contengono metadati che è possibile leggere per determi
  Esempio di codice seguente legge e visualizza i sette porzioni di metadati nel file `FakePhoto.jpg`. Il secondo elemento di proprietà (indice 1) nell'elenco contiene <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 0x010F (produttrice dell'hardware) e <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (matrice di byte con codifica ASCII). L'esempio di codice visualizza il valore di tale elemento di proprietà.  
   
  Il codice restituisce un output simile al seguente:  
+ 
+```
+ Property Item 0
   
- `Property Item 0`  
+ id: 0x320
   
- `id: 0x320`  
+ type: 2
+ 
+ length: 16 bytes 
   
- `type: 2`  
+ Property Item 1
   
- `length: 16 bytes`  
+ id: 0x10f
   
- `Property Item 1`  
+ type: 2 
   
- `id: 0x10f`  
+ length: 17 bytes
   
- `type: 2`  
+ Property Item 2
   
- `length: 17 bytes`  
+ id: 0x110
   
- `Property Item 2`  
+ type: 2
   
- `id: 0x110`  
+ length: 7 bytes
   
- `type: 2`  
+ Property Item 3
   
- `length: 7 bytes`  
+ id: 0x9003
   
- `Property Item 3`  
+ type: 2
   
- `id: 0x9003`  
+ length: 20 bytes
   
- `type: 2`  
+ Property Item 4
   
- `length: 20 bytes`  
+ id: 0x829a
   
- `Property Item 4`  
+ type: 5
   
- `id: 0x829a`  
+ length: 8 bytes
   
- `type: 5`  
+ Property Item 5
   
- `length: 8 bytes`  
+ id: 0x5090
   
- `Property Item 5`  
+ type: 3
   
- `id: 0x5090`  
+ length: 128 bytes
   
- `type: 3`  
+ Property Item 6
   
- `length: 128 bytes`  
+ id: 0x5091
   
- `Property Item 6`  
+ type: 3
   
- `id: 0x5091`  
+ length: 128 bytes
   
- `type: 3`  
-  
- `length: 128 bytes`  
-  
- `The equipment make is Northwind Camera.`  
+ The equipment make is Northwind Camera.
+ ```
   
 ### <a name="code"></a>Codice  
  [!code-csharp[System.Drawing.WorkingWithImages#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#51)]

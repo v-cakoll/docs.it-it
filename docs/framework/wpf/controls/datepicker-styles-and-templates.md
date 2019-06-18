@@ -9,12 +9,12 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-ms.openlocfilehash: 5c8e199dd7123e1490c8a836a62ffea158797eb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 013076fdac8666b974fdf0ce9b09740197031c15
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912249"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170544"
 ---
 # <a name="datepicker-styles-and-templates"></a>Stili e modelli di DatePicker
 In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.DatePicker> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -62,8 +62,8 @@ In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Con
 |Transmux|WatermarkStates|Il controllo Visualizza il testo iniziale.  Il <xref:System.Windows.Controls.Primitives.DatePickerTextBox> si trova nello stato quando l'utente non è il testo immesso o selezionato una data.|  
 |Unwatermarked|WatermarkStates|L'utente ha immesso testo nel <xref:System.Windows.Controls.Primitives.DatePickerTextBox> selezionato una data o il <xref:System.Windows.Controls.DatePicker>.|  
 |Valido|ValidationStates|Il controllo Usa il <xref:System.Windows.Controls.Validation> classi e le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.|  
-|InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo ha lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non è attivo.|  
+|InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` e il controllo ha lo stato attivo.|  
+|InvalidUnfocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` e il controllo non è attivo.|  
   
 ## <a name="datepicker-controltemplate-example"></a>Esempio di ControlTemplate DatePicker  
  Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il <xref:System.Windows.Controls.DatePicker> controllo.  

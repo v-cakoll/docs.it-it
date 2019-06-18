@@ -2,12 +2,12 @@
 title: Estensibilità della griglia delle proprietà - esempio WF
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: d22b6e21fbf2d5deb4d47fce683553378e990000
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1cc8b8b34d6236e263f95439da84994e35d627ed
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637674"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170357"
 ---
 # <a name="property-grid-extensibility"></a>Estensibilità della griglia delle proprietà
 
@@ -69,7 +69,7 @@ Nell'esempio di editor finestre viene illustrato quanto segue:
 
 1. Viene creato un tipo che deriva da <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>.
 
-2. Viene impostato il valore <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> nel costruttore con un modello di dati [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]. Può essere creato in XAML, ma in questo esempio viene creato nel codice.
+2. Imposta il <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> valore nel costruttore con un modello di dati WPF. Può essere creato in XAML, ma in questo esempio viene creato nel codice.
 
 3. Il modello di dati dispone di un contesto dei dati di <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> dell'elemento di cui è stato eseguito il rendering nella griglia delle proprietà. Nel codice seguente viene quindi eseguita l'associazione alla proprietà `Value`. È importante includere inoltre un oggetto <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> per fornire il pulsante che genera la finestra di dialogo in FilePickerEditor.cs.
 

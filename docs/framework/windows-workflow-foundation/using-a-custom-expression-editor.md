@@ -2,12 +2,12 @@
 title: Utilizzo di un editor espressioni personalizzato
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 9d73134c3f17fad618d26f335d89fdab2d99dbdf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7bbd855595bc67f0e2837afd4876ac3690cac776
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650921"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169972"
 ---
 # <a name="using-a-custom-expression-editor"></a>Utilizzo di un editor espressioni personalizzato
 È possibile implementare un editor di espressioni personalizzato per fornire un'esperienza di modifica delle espressioni più dettagliata o più semplice. Esistono diversi scenari in cui è opportuno usare un editor di espressioni personalizzato:  
@@ -222,7 +222,7 @@ namespace MyExpressionEditorService
 ```  
   
 ### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>Pubblicazione di un editor espressioni personalizzato in un progetto WPF  
- Di seguito è riportato il codice che illustra come riallocare la finestra di progettazione in un'applicazione [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] e come creare e pubblicare il servizio `MyEditorService`. Prima di usare questo codice, aggiungere un riferimento al progetto di libreria MyExpressionEditorService dal progetto che contiene l'applicazione avalon2.  
+ Ecco il codice che illustra come riallocare la finestra di progettazione in un'applicazione WPF e su come creare e pubblicare il `MyEditorService` servizio. Prima di usare questo codice, aggiungere un riferimento al progetto di libreria MyExpressionEditorService dal progetto che contiene l'applicazione avalon2.  
   
 ```  
 using System.Windows;  

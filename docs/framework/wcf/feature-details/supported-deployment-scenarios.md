@@ -2,16 +2,16 @@
 title: Scenari di distribuzione supportati - WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 7b508f53365c1b4b90e2883ddb9d5f2a71c7e814
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 2da55176cbfe618b332f2df210e3e1c0516b17ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025633"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170048"
 ---
 # <a name="supported-deployment-scenarios"></a>Scenari di distribuzione supportati
 
-Il sottoinsieme delle funzionalità di Windows Communication Foundation (WCF) supportati per l'uso in applicazioni parzialmente attendibili è progettato per soddisfare i requisiti degli scenari di alcuni, ma non tutti, per l'utilizzo di WCF. Nel server, WCF soddisfi i requisiti del provider di hosting condiviso che eseguono le applicazioni di terze parti nell'autorizzazione di attendibilità media ASP.NET 2.0 è impostato per motivi di sicurezza basata su Internet. Sul client, supporto con attendibilità parziale WCF è progettato per soddisfare i requisiti di tecnologie di distribuzione, ad esempio [distribuzione ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) o [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]della tecnologia applicazione Browser XAML, che consente facile e sicuro distribuzione di applicazioni desktop da siti non attendibili.
+Il sottoinsieme delle funzionalità di Windows Communication Foundation (WCF) supportati per l'uso in applicazioni parzialmente attendibili è progettato per soddisfare i requisiti degli scenari di alcuni, ma non tutti, per l'utilizzo di WCF. Nel server, WCF soddisfi i requisiti del provider di hosting condiviso che eseguono le applicazioni di terze parti nell'autorizzazione di attendibilità media ASP.NET 2.0 è impostato per motivi di sicurezza basata su Internet. Sul client, supporto con attendibilità parziale WCF è progettato per soddisfare i requisiti di tecnologie di distribuzione, ad esempio [distribuzione ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) o la tecnologia applicazione Browser XAML di WPF, che consentono la distribuzione sicura e uniforme di applicazioni desktop da siti non attendibili.
 
 ## <a name="minimum-permission-requirements"></a>Requisiti minimi di autorizzazione
 
@@ -39,7 +39,7 @@ Per altre informazioni, vedere [Procedura: Usare l'attendibilità media in ASP.N
 
 ## <a name="partial-trust-on-the-client"></a>Attendibilità parziale nel client
 
-Quando si scarica ed esegue codice dai siti Internet non attendibili, è necessario adottare determinate precauzioni di sicurezza. La [distribuzione ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) e la tecnologia Applicazione browser XAML (XBAP) di [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]usano entrambe l'attendibilità parziale per concedere autorizzazioni limitate (area Internet) al codice non attendibile.
+Quando si scarica ed esegue codice dai siti Internet non attendibili, è necessario adottare determinate precauzioni di sicurezza. Entrambe [distribuzione ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) allo stesso modo XAML Browser Application tecnologia (XBAP di WPF) di attendibilità parziale per concedere autorizzazioni limitate (area Internet) al codice non attendibile.
 
 WCF può essere utilizzato per comunicare con server remoti da applicazioni parzialmente attendibili distribuite tramite [distribuzione ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) o XBAP. Il set di autorizzazioni area Internet include <xref:System.Net.WebPermission> per l'host di origine, in modo da comunicare con il proprio server di origine usando uno dei binding WCF supportate descritte in queste applicazioni [Partial Trust Feature Compatibility ](partial-trust-feature-compatibility.md).
 

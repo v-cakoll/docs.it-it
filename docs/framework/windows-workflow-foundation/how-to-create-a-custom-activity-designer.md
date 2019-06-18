@@ -2,12 +2,12 @@
 title: 'Procedura: Creare un ActivityDesigner personalizzato'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c6d2ae695a04c85ade6ae4da0b812f4043fa2f6
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945652"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170675"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Procedura: Creare un ActivityDesigner personalizzato
 
@@ -17,7 +17,7 @@ L'ActivityDesigner personalizzato eredita in genere da <xref:System.Activities.P
 
 L'oggetto <xref:System.Activities.Presentation.ActivityDesigner> usa due controlli di supporto, <xref:System.Activities.Presentation.WorkflowItemPresenter> e <xref:System.Activities.Presentation.WorkflowItemsPresenter>, per facilitare lo sviluppo di ActivityDesigner personalizzati. Questi consentono di gestire funzionalità comuni quali il trascinamento e rilascio di elementi figlio, l'eliminazione, la selezione nonché l'aggiunta di tali elementi figlio. Il <xref:System.Activities.Presentation.WorkflowItemPresenter> consente a un singolo elemento figlio elemento dell'interfaccia utente, fornendo il "area di rilascio", mentre il <xref:System.Activities.Presentation.WorkflowItemsPresenter> può fornire supporto di più elementi dell'interfaccia utente, incluse le funzionalità aggiuntive quali ordinamento, lo spostamento, eliminazione e aggiunta di elementi figlio.
 
-L'altro aspetto principale che è opportuno evidenziare nell'implementazione di un ActivityDesigner personalizzato riguarda il modo in cui vengono associate le modifiche visive usando l'associazione dati di [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] all'istanza archiviata in memoria degli elementi in fase di modifica nella finestra di progettazione. Questa operazione viene eseguita dall'albero degli elementi del modello che è inoltre responsabile per l'abilitazione della notifica di modifiche e il rilevamento di eventi quali le modifiche degli stati.
+L'altra parte chiave della storia che è opportuno evidenziare nell'implementazione di un ActivityDesigner personalizzato riguarda il modo in cui sono associate le modifiche visive usando l'associazione dati WPF all'istanza archiviata in memoria di ciò che in fase di modifica nella finestra di progettazione. Questa operazione viene eseguita dall'albero degli elementi del modello che è inoltre responsabile per l'abilitazione della notifica di modifiche e il rilevamento di eventi quali le modifiche degli stati.
 
 In questo argomento vengono delineate due procedure.
 

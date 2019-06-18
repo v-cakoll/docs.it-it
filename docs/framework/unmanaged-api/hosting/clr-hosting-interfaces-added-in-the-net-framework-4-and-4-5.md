@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89d71b3dfa71438b72fe622a491141364db25f52
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ea95789ea1623985a6a53fcf923b70d7df2ad460
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490659"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170429"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>Interfacce di hosting CLR aggiunte in .NET Framework 4 e 4.5
 In questa sezione vengono descritte le interfacce che non gestiti gli host possono usare per l'integrazione common language runtime (CLR) nel .NET Framework 4, .NET Framework 4.5 e versioni successive nelle proprie applicazioni. Queste interfacce forniscono metodi per un host configurare e caricare il runtime in un processo.  
@@ -22,7 +22,7 @@ In questa sezione vengono descritte le interfacce che non gestiti gli host posso
   
 - Usano la gestione della durata (`AddRef` e `Release`), incapsulamento (contesto implicito) e `QueryInterface` da COM.  
   
-- Non utilizzano i tipi COM, ad esempio `BSTR`, `SAFEARRAY`, o `VARIANT`.  
+- Non usano, ad esempio i tipi COM `BSTR`, `SAFEARRAY`, o `VARIANT`.  
   
 - Non sono presenti modelli di apartment, aggregazione o l'attivazione del Registro di sistema che usano il [funzione CoCreateInstance](https://go.microsoft.com/fwlink/?LinkId=142894).  
   
