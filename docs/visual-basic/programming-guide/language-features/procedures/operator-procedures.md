@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: cafc742474d6f7b46fbfb73374a59a350812a2a5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d62c3480db56b5cbf22c1f3f6ff59ab220a48b09
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639093"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152042"
 ---
 # <a name="operator-procedures-visual-basic"></a>Routine di operatore (Visual Basic)
 Una routine di operatore è una serie di istruzioni di Visual Basic che definiscono il comportamento di un operatore standard (ad esempio `*`, `<>`, o `And`) in una classe o struttura definita. Questo è l'acronimo *overload degli operatori*.  
@@ -43,13 +43,15 @@ Una routine di operatore è una serie di istruzioni di Visual Basic che definisc
   
 ## <a name="declaration-syntax"></a>Sintassi di dichiarazione  
  La sintassi per dichiarare una routine di operatore è come segue:  
+ 
+ ```vb 
+ Public Shared [Widening | Narrowing] Operator operatorsymbol ( operand1 [,  operand2 ]) As datatype  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *simbolooperatore* `(` *operand1*`[,`*operand2* `]) As` *datatype*  
+ ' Statements of the operator procedure.
   
- `' Statements of the operator procedure.`  
-  
- `End Operator`  
-  
+ End Operator
+ ```
+ 
  Si utilizza il `Widening` o `Narrowing` parola chiave solo su un operatore di conversione di tipi. Il simbolo dell'operatore è sempre [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) per un operatore di conversione di tipi.  
   
  Si dichiarano due operandi per definire un operatore binario, e si dichiara un operando per definire un operatore unario, incluso un operatore di conversione di tipi. Tutti gli operandi devono essere dichiarati `ByVal`.  
