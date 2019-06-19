@@ -31,7 +31,7 @@ ms.locfileid: "66489672"
 
 Il generatore di immagini native (Ngen.exe) consente di migliorare le prestazioni delle applicazioni gestite. Questo strumento crea immagini native, ovvero file contenenti codice macchina compilato specifico del processore, e le installa nella cache delle immagini native del computer locale. Il runtime può usare le immagini native della cache anziché il compilatore Just-In-Time (JIT) per compilare l'assembly originale.
 
-Modifiche alla Ngen.exe in .NET Framework 4:
+Modifiche apportate a Ngen.exe in .NET Framework 4:
 
 - Ngen.exe ora compila assembly con attendibilità totale e i criteri di sicurezza dall'accesso di codice non vengono più valutati.
 
@@ -77,7 +77,7 @@ Nella tabella riportata di seguito viene illustrata la sintassi di ciascuna `act
 |Operazione|Description|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Genera le immagini native per un assembly e le relative dipendenze e installa le immagini nella cache delle immagini native.<br /><br /> Se si specifica l'opzione `/queue`, l'azione viene accodata per il servizio immagini native. La priorità predefinita è 3. Vedere la tabella [Livelli di priorità](#PriorityTable).|
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Elimina le immagini native di un assembly e le relative dipendenze dalla cache delle immagini native.<br /><br /> Per disinstallare una singola immagine e le relative dipendenze, ricorrere agli stessi argomenti della riga di comando usati per l'installazione dell'immagine. **Nota:**  A partire da .NET Framework 4, azione `uninstall` * non è più supportata.|
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Elimina le immagini native di un assembly e le relative dipendenze dalla cache delle immagini native.<br /><br /> Per disinstallare una singola immagine e le relative dipendenze, ricorrere agli stessi argomenti della riga di comando usati per l'installazione dell'immagine. **Nota:**  a partire da .NET Framework 4, l'azione `uninstall`* non è più supportata.|
 |`update` [`/queue`]|Aggiorna le immagini native diventate non valide.<br /><br /> Se si specifica l'opzione `/queue`, gli aggiornamenti vengono accodati per il servizio immagini native. Gli aggiornamenti vengono sempre pianificati con priorità 3, in modo da essere eseguiti durante i periodi di inattività del computer.|
 |`display` [`assemblyName` &#124; `assemblyPath`]|Visualizza lo stato delle immagini native di un assembly e le relative dipendenze.<br /><br /> Se non viene fornito alcun argomento, verrà visualizzato l'intero contenuto della cache delle immagini native.|
 |`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -oppure-<br /><br /> `eqi` [1&#124;2&#124;3]|Esegue i processi di compilazione accodati.<br /><br /> Se è specificata una priorità, verranno eseguiti i processi di compilazione che hanno un livello di priorità maggiore o uguale a quello specificato. Se non è specificata alcuna priorità, verranno eseguiti tutti i processi di compilazione accodati.|
@@ -137,7 +137,7 @@ Nella tabella riportata di seguito viene illustrata la sintassi di ciascuna `act
 Per eseguire Ngen.exe, è necessario disporre di privilegi amministrativi.
 
 > [!CAUTION]
-> Non eseguire Ngen.exe su assembly che non sono completamente attendibili. A partire da .NET Framework 4, Ngen.exe compila assembly con attendibilità totale e criteri di sicurezza dall'accesso di codice non vengono più valutati.
+> Non eseguire Ngen.exe su assembly che non sono completamente attendibili. A partire da .NET Framework 4, Ngen.exe compila assembly con attendibilità totale e i criteri di sicurezza dall'accesso di codice non vengono più valutati.
 
 A partire da .NET Framework 4, le immagini native generate con Ngen.exe non possono più essere caricate in applicazioni in modalità di esecuzione parzialmente attendibile. Viene invece richiamato il compilatore JIT.
 

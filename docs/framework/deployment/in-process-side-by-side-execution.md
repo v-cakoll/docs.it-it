@@ -15,7 +15,7 @@ ms.lasthandoff: 06/10/2019
 ms.locfileid: "66816049"
 ---
 # <a name="in-process-side-by-side-execution"></a>Esecuzione side-by-side in-process
-A partire da .NET Framework 4, è possibile usare in-process side-by-side per l'esecuzione di più versioni di common language runtime (CLR) in un unico processo di hosting. Per impostazione predefinita, i componenti COM gestiti vengono eseguiti con la versione di .NET Framework con cui sono stati compilati, indipendentemente dalla versione di .NET Framework che viene caricata per il processo.  
+A partire da .NET Framework 4, è possibile usare l'hosting side-by-side in-process per eseguire più versioni di Common Language Runtime (CLR) in un unico processo. Per impostazione predefinita, i componenti COM gestiti vengono eseguiti con la versione di .NET Framework con cui sono stati compilati, indipendentemente dalla versione di .NET Framework che viene caricata per il processo.  
   
 ## <a name="background"></a>Sfondo  
  .NET Framework ha sempre offerto l'hosting side-by-side per applicazioni di codice gestito, ma prima di .NET Framework 4 tale funzionalità non era disponibile per i componenti COM gestiti. In passato, i componenti COM gestiti che venivano caricati in un processo venivano eseguiti con la versione di runtime già caricata o con l'ultima versione di .NET Framework installata. Se tale versione non era compatibile con il componente COM, l'esecuzione di quest'ultimo aveva esito negativo.  
@@ -56,7 +56,7 @@ A partire da .NET Framework 4, è possibile usare in-process side-by-side per l'
   
      Cosa fare: in questo scenario, non eseguire alcuna operazione. I componenti COM verranno eseguiti con la versione di .NET Framework con la quale sono stati registrati.  
   
-- **Scenario 2**: Applicazione gestita compilata con .NET Framework 2.0 SP1 che si preferisce eseguire con il [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], ma si è disposti a eseguire in .NET Framework 4, se la versione 2.0 non è presenta.  
+- **Scenario 2**: applicazione gestita compilata con .NET Framework 2.0 SP1 che si preferirebbe eseguire con [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], ma che si è disposti a eseguire in .NET Framework 4 se la versione 2.0 non è disponibile.  
   
      Versioni di .NET Framework installate: una versione precedente di .NET Framework e di .NET Framework 4.  
   
@@ -88,7 +88,7 @@ A partire da .NET Framework 4, è possibile usare in-process side-by-side per l'
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato un host COM non gestito che esegue un componente COM gestito usando la versione di .NET Framework con cui è stato compilato il componente da usare.  
   
- Per eseguire l'esempio seguente, compilare e registrare il seguente componente COM gestito usando .NET Framework 3.5. Per registrare il componente, nel menu **Progetto** scegliere **Proprietà**, fare clic sulla scheda **Build**, quindi selezionare la casella di controllo **Registra per interoperabilità COM**.  
+ Per eseguire l'esempio riportato di seguito, compilare e registrare il seguente componente COM gestito usando .NET Framework 3.5. Per registrare il componente, nel menu **Progetto** scegliere **Proprietà**, fare clic sulla scheda **Build**, quindi selezionare la casella di controllo **Registra per interoperabilità COM**.  
   
 ```csharp
 using System;  

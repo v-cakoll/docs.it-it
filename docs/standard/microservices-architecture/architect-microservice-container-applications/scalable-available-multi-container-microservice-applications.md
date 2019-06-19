@@ -27,7 +27,7 @@ Per passare a un livello superiore rispetto alla gestione di singoli contenitori
 
 Dal punto di vista dell'architettura e dello sviluppo, se si creano applicazioni aziendali composte di grandi dimensioni e basate su microservizi, è importante comprendere le piattaforme e i prodotti seguenti che supportano gli scenari avanzati:
 
-**Cluster e agenti di orchestrazione.** Quando è necessario aumentare il numero di istanze delle applicazioni in molti host Docker, ad esempio nel caso di un'applicazione di grandi dimensioni basata su microservizi, è essenziale poter gestire tutti questi host come un singolo cluster tramite l'astrazione della complessità della piattaforma sottostante. I cluster di contenitori e gli agenti di orchestrazione offrono questo vantaggio. Kubernetes è un esempio di un agente di orchestrazione ed è disponibile in Azure tramite Azure Kubernetes Service.
+**Cluster e agenti di orchestrazione.** Quando è necessario aumentare il numero di istanze delle applicazioni in molti host Docker, ad esempio nel caso di un'applicazione di grandi dimensioni basata su microservizi, è essenziale poter gestire tutti questi host come un singolo cluster tramite l'astrazione della complessità della piattaforma sottostante. I cluster di contenitori e gli agenti di orchestrazione offrono questo vantaggio. Kubernetes è un esempio di agente di orchestrazione disponibile in Azure tramite il servizio Azure Kubernetes.
 
 **Utilità di pianificazione.** Per *pianificazione* si intende la possibilità per un amministratore di avviare contenitori in un cluster in modo che forniscano anche un'interfaccia utente. Un'utilità di pianificazione di cluster ha molte responsabilità, tra cui usare in modo efficiente le risorse del cluster, configurare i vincoli specificati dall'utente, bilanciare in modo efficiente il carico dei contenitori nei nodi e negli host e infine assicurare l'affidabilità in caso di errori, offrendo al tempo stesso una disponibilità elevata.
 
@@ -53,7 +53,7 @@ I concetti di cluster e utilità di pianificazione sono strettamente correlati, 
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Uso degli agenti di orchestrazione basati su contenitori in Microsoft Azure
 
-Alcuni fornitori cloud, tra cui Microsoft Azure, Amazon EC2 Container Service e Google Container Engine, offrono il supporto per contenitori Docker oltre al supporto per i contenitori e l'agente di orchestrazione Docker. Microsoft Azure offre Docker supporto cluster e dell'agente di orchestrazione tramite Azure Kubernetes Service (AKS).
+Alcuni fornitori cloud, tra cui Microsoft Azure, Amazon EC2 Container Service e Google Container Engine, offrono il supporto per contenitori Docker oltre al supporto per i contenitori e l'agente di orchestrazione Docker. Microsoft Azure offre il supporto per cluster e agente di orchestrazione Docker tramite il servizio Azure Kubernetes.
 
 ## <a name="using-azure-kubernetes-service"></a>Servizio Azure Kubernetes
 

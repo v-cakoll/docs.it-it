@@ -40,7 +40,7 @@ ms.locfileid: "66490826"
  [!code-vb[CDS_CountdownEvent#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/module1.vb#01)]  
   
 ## <a name="countdownevent-with-cancellation"></a>CountdownEvent con annullamento  
- L'esempio seguente illustrato come annullare l'operazione di attesa in <xref:System.Threading.CountdownEvent> usando un token di annullamento. Il modello di base segue il modello per l'annullamento unificato, introdotto in .NET Framework 4. Per altre informazioni, vedere [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md).  
+ L'esempio seguente illustrato come annullare l'operazione di attesa in <xref:System.Threading.CountdownEvent> usando un token di annullamento. Lo schema di base segue il modello per l'annullamento unificato, introdotto in .NET Framework 4. Per altre informazioni, vedere [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md).  
   
  [!code-csharp[CDS_CountdownEvent#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#02)]
  [!code-vb[CDS_CountdownEvent#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/canceleventwait.vb#02)]  

@@ -29,7 +29,7 @@ In genere, le definizioni dei tipi COM sono incluse in una libreria dei tipi. Al
   
  Per rendere queste informazioni sui tipi disponibili all'applicazione, è possibile usare due modi diversi:  
   
-- Uso di assembly di interoperabilità solo in fase di progettazione: A partire da .NET Framework 4, è possibile indicare al compilatore di incorporare informazioni sui tipi da assembly di interoperabilità nell'eseguibile. Il compilatore incorpora solo le informazioni sui tipi usate dall'applicazione. Non è necessario distribuire l'assembly di interoperabilità con l'applicazione. Questa è la tecnica consigliata.  
+- Uso di assembly di interoperabilità solo in fase di progettazione: A partire da .NET Framework 4, è possibile indicare al compilatore di incorporare nell'eseguibile informazioni sul tipo ottenute dall'assembly di interoperabilità. Il compilatore incorpora solo le informazioni sui tipi usate dall'applicazione. Non è necessario distribuire l'assembly di interoperabilità con l'applicazione. Questa è la tecnica consigliata.  
   
 - Distribuzione di assembly di interoperabilità: è possibile creare un riferimento standard all'assembly di interoperabilità. In questo caso, l'assembly di interoperabilità deve essere distribuito con l'applicazione. Se si ricorre a questa tecnica e non si usa un componente COM privato, fare sempre riferimento all'assembly di interoperabilità primario pubblicato dall'autore del componente COM che si intende incorporare nel codice gestito. Per altre informazioni sulla creazione e sull'uso di assembly di interoperabilità primari, vedere [Primary Interop Assemblies](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)) (Assembly di interoperabilità primari).  
   

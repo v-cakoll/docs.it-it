@@ -4,12 +4,12 @@ description: Informazioni su come .NET effettua il marshalling dei tipi in una r
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cb18a7607a3d99907401543b4d37995a956a3920
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065964"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041790"
 ---
 # <a name="type-marshaling"></a>Marshalling dei tipi
 
@@ -79,6 +79,20 @@ Di alcuni tipi è possibile eseguire il marshalling solo come parametri e non co
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
 
 Se queste impostazioni predefinite non producono esattamente il risultato desiderato, è possibile personalizzare la modalità di marshalling dei parametri. L'articolo sul [marshalling dei parametri](customize-parameter-marshaling.md) illustra come personalizzare la modalità di marshalling dei diversi tipi di parametri.
+
+## <a name="default-marshaling-in-com-scenarios"></a>Marshalling predefinito in scenari COM
+
+Quando si chiama un metodo su oggetti COM in .NET, il runtime di .NET cambia le regole del marshalling predefinito in modo da rispettare la semantica COM. Nella tabella seguente sono elencate le regole che i runtime .NET usano negli scenari COM:
+
+| Tipo .NET | Tipo nativo (chiamate al metodo COM) |
+|-----------|--------------------------------|
+| `bool`    | `VARIANT_BOOL`                 |
+| `StringBuilder` | `LPWSTR`                 |
+| `string`  | `BSTR`                         |
+| Tipi delegato | `_Delegate*` in .NET Framework. Non consentito in .NET Core. |
+| `System.Drawing.Color` | `OLECOLOR`        |
+| Matrice .NET | `SAFEARRAY`                   |
+| `string[]` | `SAFEARRAY` di `BSTR`        |
 
 ## <a name="marshaling-classes-and-structs"></a>Marshalling di classi e struct
 

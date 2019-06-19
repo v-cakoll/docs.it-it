@@ -26,7 +26,7 @@ ms.locfileid: "66490913"
   
  In C++ non gestito si usa `TlsAlloc` per allocare gli slot dinamicamente e `__declspec(thread)` per dichiarare che una variabile deve essere allocata in una risorsa di archiviazione relativa ai thread. I campi statici relativi ai thread e gli slot di dati forniscono la versione gestita di questo comportamento.  
   
- In .NET Framework 4, è possibile usare il <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> classe per creare gli oggetti locali del thread che vengono inizializzati in modo differito quando l'oggetto prima di tutto viene utilizzato. Per altre informazioni, vedere [Inizializzazione differita](../../../docs/framework/performance/lazy-initialization.md).  
+ In .NET Framework 4 è possibile usare la classe <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> per creare oggetti locali di thread inizializzati in modo differito quando l'oggetto viene usato per la prima volta. Per altre informazioni, vedere [Inizializzazione differita](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Unicità dei dati nell'archiviazione locale dei thread gestiti  
  Indipendentemente dal fatto che si usino i campi statici relativi ai thread o gli slot di dati, i dati presenti nell'archiviazione locale dei thread gestiti sono univoci per la combinazione di thread e dominio dell'applicazione.  

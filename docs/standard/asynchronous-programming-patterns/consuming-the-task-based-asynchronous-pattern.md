@@ -64,7 +64,7 @@ await someTask.ConfigureAwait(continueOnCapturedContext:false);
 ```
 
 ## <a name="canceling-an-asynchronous-operation"></a>Annullamento di un'operazione asincrona
- A partire da .NET Framework 4, i metodi TAP che supportano l'annullamento forniscono almeno un overload che accetta un token di annullamento (<xref:System.Threading.CancellationToken> oggetto).
+ A partire da .NET Framework 4, i metodi TAP che supportano l'annullamento forniscono almeno un overload che accetta un token di annullamento (oggetto <xref:System.Threading.CancellationToken>).
 
  Un token di annullamento viene creato tramite un'origine di token di annullamento (oggetto <xref:System.Threading.CancellationTokenSource>).  La proprietà <xref:System.Threading.CancellationTokenSource.Token%2A> dell'origine restituisce il token di annullamento che verrà segnalato quando il metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A> dell'origine verrà chiamato.  Ad esempio, per scaricare una singola pagina Web e poter annullare l'operazione, si crea un oggetto <xref:System.Threading.CancellationTokenSource>, si passa il token al metodo TAP e quindi, quando si è pronti per annullare l'operazione, si chiama il metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A> dell'origine:
 

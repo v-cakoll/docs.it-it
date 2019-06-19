@@ -18,7 +18,7 @@ ms.lasthandoff: 06/04/2019
 ms.locfileid: "66490782"
 ---
 # <a name="cancellation-in-managed-threads"></a>Annullamento in thread gestiti
-A partire da .NET Framework 4, .NET Framework Usa un modello unificato per l'annullamento cooperativo di operazioni sincrone asincrone o con esecuzione prolungata. Questo modello è basato su un oggetto leggero chiamato token di annullamento. L'oggetto che richiama una o più operazioni annullabili, ad esempio tramite la creazione di nuovi thread o attività, passa il token a ogni operazione. Singole operazioni possono a loro volta passare copie del token ad altre operazioni. In un secondo momento, l'oggetto che ha creato il token può usarlo per richiedere che le operazioni arrestino le rispettive attività. Solo l'oggetto richiedente può inviare la richiesta di annullamento e ogni listener è responsabile del rilevamento della richiesta e della relativa risposta in modo appropriato e tempestivo.  
+A partire da .NET Framework 4, .NET Framework usa un modello unificato per l'annullamento cooperativo di operazioni asincrone o di operazioni sincrone a esecuzione prolungata. Questo modello è basato su un oggetto leggero chiamato token di annullamento. L'oggetto che richiama una o più operazioni annullabili, ad esempio tramite la creazione di nuovi thread o attività, passa il token a ogni operazione. Singole operazioni possono a loro volta passare copie del token ad altre operazioni. In un secondo momento, l'oggetto che ha creato il token può usarlo per richiedere che le operazioni arrestino le rispettive attività. Solo l'oggetto richiedente può inviare la richiesta di annullamento e ogni listener è responsabile del rilevamento della richiesta e della relativa risposta in modo appropriato e tempestivo.  
   
  Il criterio generale per implementare il modello di annullamento cooperativo è il seguente:  
   
@@ -122,7 +122,7 @@ A partire da .NET Framework 4, .NET Framework Usa un modello unificato per l'ann
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
  [!code-vb[Cancellation#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex9.vb#5)]  
   
- Nel nuovo codice destinato a .NET Framework 4 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> e <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> supportano entrambi il nuovo framework di annullamento nei loro `Wait` metodi. È possibile passare <xref:System.Threading.CancellationToken> al metodo e quando viene richiesto l'annullamento, l'evento viene attivato e genera un'eccezione <xref:System.OperationCanceledException>.  
+ Nel nuovo codice destinato a .NET Framework 4, <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> e <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> supportano entrambi il nuovo framework di annullamento nei rispettivi metodi `Wait`. È possibile passare <xref:System.Threading.CancellationToken> al metodo e quando viene richiesto l'annullamento, l'evento viene attivato e genera un'eccezione <xref:System.OperationCanceledException>.  
   
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  

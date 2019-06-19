@@ -222,7 +222,7 @@ La modifica di un metodo in un membro con corpo di espressione è una [modifica 
 
 ## <a name="throw-expressions"></a>Espressioni throw
 
-In C# `throw` è sempre stata un'istruzione. Poiché `throw` è un'istruzione, non un'espressione, non può essere usata in determinati costrutti di C#. Sono incluse le espressioni condizionali, le espressioni Null ridondanti e alcune espressioni lambda. L'aggiunta di membri con corpo di espressione consente di aggiungere più posizioni in cui le espressioni `throw` possono risultare utili. In modo che sia possibile scrivere uno di questi costrutti, C# 7.0 introduce [ *espressioni throw*](../language-reference/keywords/throw.md#the-throw-expression).
+In C# `throw` è sempre stata un'istruzione. Poiché `throw` è un'istruzione, non un'espressione, non può essere usata in determinati costrutti di C#. Sono incluse le espressioni condizionali, le espressioni Null ridondanti e alcune espressioni lambda. L'aggiunta di membri con corpo di espressione consente di aggiungere più posizioni in cui le espressioni `throw` possono risultare utili. Per fare in modo che sia possibile scrivere uno di questi costrutti, C# 7.0 introduce le [*espressioni throw*](../language-reference/keywords/throw.md#the-throw-expression).
 
 Questa aggiunta facilita la scrittura di codice basato sulle espressioni. Non sono necessarie istruzioni aggiuntive per il controllo degli errori.
 

@@ -34,17 +34,17 @@ Per gli operandi dello stesso tipo [delegato](../keywords/delegate.md), l'operat
 
   [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
 
-- Se l'elenco chiamate del secondo operando non è un sottoelenco contiguo dell'elenco chiamate del primo operando, il risultato dell'operazione è il primo operando. Ad esempio, la rimozione di un delegato che non fa parte del delegato multicast non esegue alcuna operazione e restituisce il delegato multicast invariato.
+- Se l'elenco chiamate del secondo operando non è un sottoelenco contiguo dell'elenco chiamate del primo operando, il risultato dell'operazione è il primo operando. La rimozione di un delegato che non fa parte del delegato multicast, ad esempio, non produce alcun risultato e il delegato multicast rimane invariato.
 
   [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  L'esempio precedente dimostra anche che, durante il delegato vengono confrontate le istanze dei delegati per la rimozione. Ad esempio, i delegati che sono state prodotte dalla versione di valutazione di identici [espressioni lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) non sono uguali. Per altre informazioni sull'uguaglianza di delegato, vedere la [delegare gli operatori di uguaglianza](~/_csharplang/spec/expressions.md#delegate-equality-operators) sezione il [ C# specifica del linguaggio](../language-specification/index.md).
+  L'esempio precedente dimostra anche che, durante la rimozione del delegato, vengono confrontate le istanze del delegato. I delegati prodotti dalla valutazione di [espressioni lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) identiche, ad esempio, non sono uguali. Per altre informazioni sull'uguaglianza dei delegati, vedere la sezione [Delegare gli operatori di uguaglianza](~/_csharplang/spec/expressions.md#delegate-equality-operators) dell'articolo [Specifiche del linguaggio C#](../language-specification/index.md).
 
 - Se il primo operando è `null`, il risultato dell'operazione è `null`. Se il secondo operando è `null`, il risultato dell'operazione è il primo operando.
 
   [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
-Per combinare i delegati, usare il [ `+` operatore](addition-operator.md#delegate-combination).
+Per combinare i delegati, usare l'[operatore `+`](addition-operator.md#delegate-combination).
 
 Per altre informazioni sui tipi delegate, vedere [Delegati](../../programming-guide/delegates/index.md).
 

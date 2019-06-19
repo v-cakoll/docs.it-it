@@ -1,5 +1,5 @@
 ---
-title: + e gli operatori + = - C# riferimento
+title: + Operatori + e += - Riferimenti per C#
 ms.custom: seodec18
 ms.date: 05/24/2019
 f1_keywords:
@@ -21,7 +21,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2019
 ms.locfileid: "67025323"
 ---
-# <a name="-and--operators-c-reference"></a>+ e gli operatori + = (C# riferimento)
+# <a name="-and--operators-c-reference"></a>Operatori + e += (Riferimenti per C#)
 
 L'operatore `+` è supportato dai tipi numerici predefiniti, dai tipi [stringa](../keywords/string.md) e dai tipi [delegato](../keywords/delegate.md).
 
@@ -43,7 +43,7 @@ Per gli operandi con lo stesso tipo [delegato](../keywords/delegate.md), l'opera
 
 [!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
 
-Per eseguire la rimozione dei delegati, usare il [ `-` operatore](subtraction-operator.md#delegate-removal).
+Per eseguire la rimozione dei delegati, usare l'[operatore `-`](subtraction-operator.md#delegate-removal).
 
 Per altre informazioni sui tipi delegate, vedere [Delegati](../../programming-guide/delegates/index.md).
 

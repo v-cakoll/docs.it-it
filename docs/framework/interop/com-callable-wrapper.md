@@ -186,7 +186,7 @@ Un'interfaccia duale generata automaticamente può essere appropriata in alcuni 
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Verificare che tutte le notifiche degli eventi COM siano ad associazione tardiva.
 
-Per impostazione predefinita, le informazioni sui tipi COM sono incorporate direttamente negli assembly gestiti, eliminando così la necessità di assembly di interoperabilità primari. Tuttavia, è una delle limitazioni di informazioni sul tipo incorporate che non supporta il recapito delle notifiche degli eventi COM mediante chiamate ad associazione anticipata vtable, ma supporta solo l'associazione tardiva `IDispatch::Invoke` chiamate.
+Per impostazione predefinita, le informazioni sui tipi COM sono incorporate direttamente negli assembly gestiti, eliminando così la necessità di assembly di interoperabilità primari. Tuttavia, uno dei limiti delle informazioni sui tipi incorporate è dato dal fatto che non è supportato il recapito di notifiche di eventi COM tramite chiamate vtable ad associazione anticipata, ma sono supportate solo le chiamate `IDispatch::Invoke` ad associazione tardiva.
 
 Se l'applicazione richiede chiamate ad associazione anticipata ai metodi dell'interfaccia di eventi COM, è possibile impostare la proprietà **Incorpora tipi di interoperabilità** di Visual Studio su `true` o includere l'elemento seguente nel file di progetto:
 

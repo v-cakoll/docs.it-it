@@ -46,7 +46,7 @@ La classe <xref:System.Collections.SortedList?displayProperty=nameWithType> e le
 > [!NOTE]
 >  Per i valori che contengono chiavi specifiche (ad esempio, record dei dipendenti che contengono un numero di ID dipendente) è possibile creare una raccolta con chiave che include alcune caratteristiche di un elenco e alcune caratteristiche di un dizionario mediante la derivazione dalla classe generica <xref:System.Collections.ObjectModel.KeyedCollection%602>.  
   
- A partire da .NET Framework 4, il <xref:System.Collections.Generic.SortedSet%601> classe fornisce una struttura ad albero Auto-bilanciato che mantiene i dati ordinati dopo inserimenti, eliminazioni e ricerche. Questa classe e la classe <xref:System.Collections.Generic.HashSet%601> implementano l'interfaccia <xref:System.Collections.Generic.ISet%601>.  
+ A partire da .NET Framework 4, la classe <xref:System.Collections.Generic.SortedSet%601> presenta una struttura ad albero auto-bilanciata che mantiene ordinati i dati dopo inserimenti, eliminazioni e ricerche. Questa classe e la classe <xref:System.Collections.Generic.HashSet%601> implementano l'interfaccia <xref:System.Collections.Generic.ISet%601>.  
   
 ## <a name="see-also"></a>Vedere anche
 

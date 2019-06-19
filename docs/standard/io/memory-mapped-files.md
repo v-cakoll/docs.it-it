@@ -19,7 +19,7 @@ ms.lasthandoff: 06/04/2019
 ms.locfileid: "66487048"
 ---
 # <a name="memory-mapped-files"></a>File mappati alla memoria
-Un file mappato alla memoria include il contenuto di un file nella memoria virtuale. Questo mapping tra un file e uno spazio di memoria consente a un'applicazione, inclusi più processi, di modificare il file leggendo e scrivendo direttamente nella memoria. A partire da .NET Framework 4, è possibile utilizzare codice gestito per accedere ai file mappati alla memoria nello stesso modo che le funzioni Windows native accedere ai file mappati alla memoria, come descritto in [file mappati](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
+Un file mappato alla memoria include il contenuto di un file nella memoria virtuale. Questo mapping tra un file e uno spazio di memoria consente a un'applicazione, inclusi più processi, di modificare il file leggendo e scrivendo direttamente nella memoria. A partire da NET Framework 4, è possibile usare il codice gestito per accedere ai file mappati alla memoria nello stesso modo in cui le funzioni Windows native accedono ai file mappati alla memoria, come descritto in [Managing Memory-Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) (Gestione di file mappati alla memoria).  
   
  Esistono due tipi di file di cui è stato eseguito il mapping alla memoria:  
   

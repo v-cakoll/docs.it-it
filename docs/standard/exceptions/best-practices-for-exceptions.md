@@ -56,7 +56,7 @@ Una classe può offrire metodi o proprietà che consentono di evitare di effettu
 
 Un altro modo per evitare le eccezioni consiste nel restituire Null (o default) per i casi di errore estremamente comuni, invece di generare un'eccezione. Un caso di errore estremamente comune può essere considerato come un normale flusso di controllo. Restituendo Null (o default) in questi casi, si riduce al minimo l'impatto sulle prestazioni di un'app.
 
-Per i tipi di valore, se si desidera utilizzare `Nullable<T>` o predefinite perché l'indicatore di errore è un aspetto da considerare per la tua app specifica. Usando `Nullable<Guid>`, `default` diventa `null` invece di `Guid.Empty`. Talvolta, l'aggiunta di `Nullable<T>` può indicare più chiaramente quando un valore è presente o assente. Altre volte, l'aggiunta di `Nullable<T>` può creare casi aggiuntivi da controllare che non sono necessari e serve solo per creare potenziali fonti di errore. 
+Per i tipi di valore, la scelta tra `Nullable<T>` o default come indicatore di errore è un aspetto da considerare in relazione all'app specifica. Usando `Nullable<Guid>`, `default` diventa `null` invece di `Guid.Empty`. Talvolta, l'aggiunta di `Nullable<T>` può indicare più chiaramente quando un valore è presente o assente. Altre volte, l'aggiunta di `Nullable<T>` può creare casi aggiuntivi da controllare che non sono necessari e serve solo per creare potenziali fonti di errore. 
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Generare eccezioni anziché restituire un codice di errore
 

@@ -64,7 +64,7 @@ ms.locfileid: "66491091"
 |*ss*|Numero di secondi, nell'intervallo compreso tra "0" e "59".|  
 |*fffffff*|La parte frazionaria facoltativa di un secondo.  Il valore può variare da "0000001" (un tick oppure un decimilionesimo di secondo) e "9999999" (9.999.999 decimilionesimi di secondo, o un secondo meno di un tick).|  
   
- A differenza degli identificatori di formato "g" e "G", l'identificatore di formato "c" non è dipendente dalle impostazioni cultura. Produce la rappresentazione di stringa di un <xref:System.TimeSpan> valore invariabile e comune a tutte le versioni precedenti di .NET Framework precedenti a .NET Framework 4. "c" è la stringa di formato <xref:System.TimeSpan> predefinita; il metodo <xref:System.TimeSpan.ToString?displayProperty=nameWithType> formatta un valore di intervallo di tempo usando la stringa di formato "c".  
+ A differenza degli identificatori di formato "g" e "G", l'identificatore di formato "c" non è dipendente dalle impostazioni cultura. Produce la rappresentazione di stringa di un valore <xref:System.TimeSpan> invariabile e comune a tutte le versioni di .NET Framework precedenti a .NET Framework 4. "c" è la stringa di formato <xref:System.TimeSpan> predefinita; il metodo <xref:System.TimeSpan.ToString?displayProperty=nameWithType> formatta un valore di intervallo di tempo usando la stringa di formato "c".  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> supporta anche le stringhe di formato standard "t" e "T", che hanno un comportamento identico alla stringa di formato standard "c".  

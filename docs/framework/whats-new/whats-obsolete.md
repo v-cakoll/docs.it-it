@@ -43,7 +43,7 @@ Quando si aggiorna e si ricompila il codice esistente, l'uso di un tipo o membro
 
 - Rivedere la documentazione di quest'area tecnologica per stabilire come rispondere a questa deprecazione.
 
-Si può scegliere di non ricompilare il codice esistente con una versione successiva di .NET Framework. È possibile invece specificare la versione di .NET Framework con la quale eseguire il codice compilato esistente. Ad esempio, si supponga di avere un'applicazione denominata app1.exe compilata con .NET Framework 3.5, ma si desidera che l'applicazione per l'esecuzione su .NET Framework 4.5. La procedura da adottare è la seguente:
+Si può scegliere di non ricompilare il codice esistente con una versione successiva di .NET Framework. È possibile invece specificare la versione di .NET Framework con la quale eseguire il codice compilato esistente. Si supponga ad esempio di avere un'applicazione denominata app1.exe, compilata con .NET Framework 3.5 e di voler eseguire l'applicazione in .NET Framework 4.5. La procedura da adottare è la seguente:
 
 1. Creare un file di configurazione per l'eseguibile principale e denominarlo *NomeApp*.exe.config, dove *NomeApp* è il nome dell'eseguibile dell'applicazione. Nel caso dell'applicazione denominata app1.exe dell'esempio, il nome del file di configurazione da creare sarebbe app1.exe.config.
 

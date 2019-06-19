@@ -59,7 +59,7 @@ ms.locfileid: "66490750"
   
  La covarianza e la controvarianza sono definite collettivamente *varianza*. Un parametro di tipo generico non contrassegnato come covariante o controvariante viene definito *invariante*. Di seguito vengono riepilogati i concetti relativi alla varianza in Common Language Runtime:  
   
-- In .NET Framework 4, parametri di tipo variante sono limitati ai tipi delegati generici e interfaccia generica.  
+- In .NET Framework 4, i parametri di tipo variante sono limitati ai tipi di interfaccia generica e delegato generico.  
   
 - Un tipo di interfaccia generica o delegato generico può presentare parametri di tipo sia covariante sia controvariante.  
   

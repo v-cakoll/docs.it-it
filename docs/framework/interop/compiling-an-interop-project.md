@@ -24,7 +24,7 @@ I progetti di interoperabilità COM che fanno riferimento a uno o più assembly 
 
  Esistono due modi per fare riferimento agli assembly di interoperabilità:
 
-- Tipi di interoperabilità incorporati: A partire da .NET Framework 4 e Visual Studio 2010, è possibile indicare al compilatore di incorporare informazioni sui tipi da assembly di interoperabilità nell'eseguibile. Questa è la tecnica consigliata.
+- Tipi di interoperabilità incorporati: a partire da .NET Framework 4 e Visual Studio 2010, è possibile indicare al compilatore di incorporare nell'eseguibile informazioni sul tipo ottenute da un assembly di interoperabilità. Questa è la tecnica consigliata.
 
 - Distribuzione di assembly di interoperabilità: è possibile creare un riferimento standard a un assembly di interoperabilità. In questo caso, l'assembly di interoperabilità deve essere distribuito con l'applicazione.
 

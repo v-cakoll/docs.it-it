@@ -146,7 +146,7 @@ In questa guida e nell'applicazione di esempio di riferimento (eShopOnContainers
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) è un gateway API leggero, consigliato per gli approcci più semplici. Ocelot è un gateway API open source basato su .NET Core, pensato espressamente per un'architettura di microservizi che necessita di punti di ingresso unificati nel proprio sistema. È leggero, veloce e scalabile e offre molte funzionalità, tra cui routing e autenticazione.
 
-Il motivo principale per scegliere Ocelot per il [applicazione di riferimento eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) perché Ocelot è un API Gateway .NET Core semplice che è possibile distribuire nell'ambiente di distribuzione dell'applicazione stessa in cui si esegue la distribuzione i microservizi o contenitori, ad esempio un Host Docker, Kubernetes e così via. Basandosi su .NET Core, è multipiattaforma e consente la distribuzione in Linux o in Windows.
+Il motivo principale per cui è stato scelto Ocelot nell'[applicazione di riferimento eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) è che Ocelot è un gateway API .NET Core leggero, che è possibile distribuire nello stesso ambiente dell'applicazione in cui si distribuiscono i microservizi/contenitori, come un host Docker, Kubernetes e così via. Basandosi su .NET Core, è multipiattaforma e consente la distribuzione in Linux o in Windows.
 
 I diagrammi precedenti dei gateway API personalizzati in esecuzione nei contenitori rappresentano esattamente come è possibile eseguire anche Ocelot in un contenitore e in un'applicazione basata su microservizi.
 
@@ -182,10 +182,10 @@ Dopo le sezioni iniziali di spiegazione degli schemi e dell'architettura, le sez
 - **Gestione API di Azure** \
   <https://azure.microsoft.com/services/api-management/>
 
-- **Udi Dahan. Service Oriented Composition (Composizione orientata ai servizi)**  \
+- **Udi Dahan. Service Oriented Composition (Composizione orientata ai servizi)** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Vasters. Messaging and Microservices at GOTO 2016 (Messaggistica e microservizi a GOTO 2016) (video)**  \
+- **Clemens Vasters. Messaging and Microservices at GOTO 2016 (Messaggistica e microservizi a GOTO 2016) (video)** \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **API Gateway in a Nutshell (Breve panoramica sul gateway API) (serie di esercitazioni sul gateway API di ASP.NET Core)** \

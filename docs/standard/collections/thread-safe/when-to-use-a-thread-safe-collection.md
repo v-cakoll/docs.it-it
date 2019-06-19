@@ -15,7 +15,7 @@ ms.lasthandoff: 06/04/2019
 ms.locfileid: "66490999"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Quando utilizzare una raccolta thread-safe
-.NET Framework 4 introduce cinque nuovi tipi di raccolta creati specificamente per il supporto multithread aggiungere e rimuovere le operazioni. Per ottenere la thread safety, questi nuovi tipi usano vari nuovi meccanismi di sincronizzazione, sia di blocco che senza blocco. La sincronizzazione aggiunge sovraccarico a un'operazione. La quantità di sovraccarico dipende dal tipo di sincronizzazione usato, dal tipo di operazioni eseguite e da altri fattori, quali il numero di thread che provano ad accedere contemporaneamente alla raccolta.  
+.NET Framework 4 introduce cinque nuovi tipi di raccolta creati specificamente per il supporto di operazioni di aggiunta e rimozione multithread. Per ottenere la thread safety, questi nuovi tipi usano vari nuovi meccanismi di sincronizzazione, sia di blocco che senza blocco. La sincronizzazione aggiunge sovraccarico a un'operazione. La quantità di sovraccarico dipende dal tipo di sincronizzazione usato, dal tipo di operazioni eseguite e da altri fattori, quali il numero di thread che provano ad accedere contemporaneamente alla raccolta.  
   
  In determinati scenari il sovraccarico della sincronizzazione è trascurabile e consente al tipo con multithread un'elaborazione molto più rapida e una miglior scalabilità rispetto al tipo equivalente non thread-safe se protetto da un blocco esterno. In altri scenari il sovraccarico può far sì che la scalabilità e le prestazioni del tipo thread-safe risultino uguali o più lente rispetto alla versione del tipo non thread-safe con blocco esterno.  
   

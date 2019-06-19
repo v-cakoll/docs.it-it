@@ -95,5 +95,5 @@ Per altre informazioni, vedere la sezione [Operatore condizionale](~/_csharplang
 - [Operatori C#](index.md)
 - [Istruzione if-else](../keywords/if-else.md)
 - [Operatori ?. e ?[]](member-access-operators.md#null-conditional-operators--and-)
-- [?? operatore](null-coalescing-operator.md)
+- [Operatore ??](null-coalescing-operator.md)
 - [ref (parola chiave)](../keywords/ref.md)

@@ -18,7 +18,7 @@ ms.locfileid: "66489243"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Equivalenza del tipo e tipi di interoperabilità incorporati
 
-A partire da .NET Framework 4, common language runtime supporta l'incorporamento delle informazioni sui tipi COM direttamente negli assembly gestiti, anziché richiedere agli assembly gestiti ottenere informazioni sui tipi COM dagli assembly di interoperabilità. Dato che le informazioni sui tipi incorporate includono solo i tipi e membri che vengono effettivamente usati da un assembly gestito, due assembly gestiti potrebbero avere viste diverse dello stesso tipo COM. Ogni assembly gestito a un oggetto <xref:System.Type> diverso per rappresentare la vista specifica del tipo COM. Common Language Runtime supporta l'equivalenza del tipo tra queste viste diverse per interfacce, strutture, enumerazioni e delegati.
+A partire da .NET Framework 4, Common Language Runtime supporta l'incorporamento di informazioni sui tipi COM direttamente negli assembly gestiti, anziché richiedere agli assembly gestiti di ottenere informazioni sui tipi COM dagli assembly di interoperabilità. Dato che le informazioni sui tipi incorporate includono solo i tipi e membri che vengono effettivamente usati da un assembly gestito, due assembly gestiti potrebbero avere viste diverse dello stesso tipo COM. Ogni assembly gestito a un oggetto <xref:System.Type> diverso per rappresentare la vista specifica del tipo COM. Common Language Runtime supporta l'equivalenza del tipo tra queste viste diverse per interfacce, strutture, enumerazioni e delegati.
 
 Equivalenza del tipo significa che è possibile eseguire il cast di un oggetto COM passato da un assembly gestito a un altro sul tipo gestito appropriato nell'assembly ricevente.
 

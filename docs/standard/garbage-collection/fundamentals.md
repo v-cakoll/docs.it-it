@@ -186,7 +186,7 @@ Thread che attiva un'operazione di Garbage Collection
   
      Le operazioni di Garbage Collection per workstation possono essere eseguite in modalità simultanea o non simultanea. La modalità simultanea consente ai thread gestiti di continuare le operazioni durante un'operazione di Garbage Collection.  
   
-     A partire da .NET Framework 4, garbage collection in background sostituisce garbage collection simultanea.  
+     A partire da .NET Framework 4, la modalità simultanea è sostituita dalla modalità in background.  
   
 - Garbage Collection per server, per le applicazioni server che richiedono scalabilità e velocità effettiva elevata. L'operazione di Garbage Collection per server può essere eseguita non in modalità di concorrenza o in background.  
   

@@ -32,7 +32,7 @@ La creazione di copie shadow consente di aggiornare gli assembly usati in un dom
   
 - [Abilitazione e uso della creazione di copie shadow](#EnablingAndUsing): illustra l'uso di base e le opzioni disponibili per la copia shadow.  
   
-- [Le prestazioni di avvio](#StartupPerformance) vengono descritte le modifiche apportate alla copia shadow in .NET Framework 4 per migliorare le prestazioni di avvio e come ripristinare il comportamento delle versioni precedenti.  
+- [Prestazioni di avvio](#StartupPerformance): illustra le modifiche che vengono apportate alla copia shadow in .NET Framework 4 per migliorare le prestazioni di avvio e come ripristinare il funzionamento delle versioni precedenti.  
   
 - [Metodi obsoleti](#ObsoleteMethods): illustra le modifiche apportate ai metodi e alle proprietà che controllano la creazione di copie shadow in [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)].  
   

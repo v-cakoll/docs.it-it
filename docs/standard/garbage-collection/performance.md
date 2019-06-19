@@ -44,7 +44,7 @@ ms.locfileid: "66489592"
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>Eventi ETW di Garbage Collection  
- Event Tracing for Windows (ETW) è un sistema di traccia che integra il supporto per profilatura e debug offerto da .NET Framework. A partire da .NET Framework 4 [eventi ETW di garbage collection](../../../docs/framework/performance/garbage-collection-etw-events.md) acquisiscono informazioni utili per l'analisi dell'heap gestito da un punto di vista statistico. Ad esempio, l'evento `GCStart_V1`, generato quando sta per verificarsi un'operazione di Garbage Collection, fornisce le informazioni seguenti:  
+ Event Tracing for Windows (ETW) è un sistema di traccia che integra il supporto per profilatura e debug offerto da .NET Framework. A partire da .NET Framework 4, gli [eventi ETW di Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md) acquisiscono informazioni utili per l'analisi dell'heap gestito da un punto di vista statistico. Ad esempio, l'evento `GCStart_V1`, generato quando sta per verificarsi un'operazione di Garbage Collection, fornisce le informazioni seguenti:  
   
 - Generazione di oggetti raccolta.  
   

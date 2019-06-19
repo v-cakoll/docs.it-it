@@ -24,7 +24,7 @@ Questo argomento fornisce una panoramica delle interfacce generiche che fornisco
  Le interfacce generiche forniscono controparti indipendenti dai tipi a interfacce non generiche per confronti di uguaglianza e ordinamento e per le funzionalità condivise da tipi di raccolta generici.  
   
 > [!NOTE]
->  A partire da .NET Framework 4, il tipo di parametri di diverse interfacce generiche vengono contrassegnati come covarianti o controvariante, una maggiore flessibilità nell'assegnazione e utilizzo di tipi che implementano tali interfacce. Vedere [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
+>  A partire da .NET Framework 4, i parametri di tipo di diverse interfacce generiche vengono contrassegnati come covariante o controvariante, fornendo più flessibilità nell'assegnazione e nell'uso di tipi che implementano queste interfacce. Vedere [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
 ### <a name="equality-and-ordering-comparisons"></a>Confronti di uguaglianza e ordinamento  
  Nello spazio dei nomi <xref:System> le interfacce generiche <xref:System.IComparable%601?displayProperty=nameWithType> e <xref:System.IEquatable%601?displayProperty=nameWithType>, analogamente alle relative controparti non generiche, definiscono rispettivamente i metodi per i confronti di ordinamento e quelli per i confronti di uguaglianza. I tipi implementano queste interfacce per consentire l'esecuzione di questi confronti.  

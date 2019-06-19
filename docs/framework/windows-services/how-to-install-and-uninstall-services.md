@@ -35,7 +35,7 @@ Non è possibile eseguire i progetti del servizio Windows direttamente dall'ambi
 
 ### <a name="install-your-service-manually"></a>Installare il servizio manualmente
 
-1. Dal menu **Start** selezionare la directory **Visual Studio \<*versione*>** , quindi selezionare **Prompt dei comandi per gli sviluppatori per VS \<*versione*>** .
+1. Dal menu **Start** selezionare la directory **Visual Studio \<*versione*>**, quindi selezionare **Prompt dei comandi per gli sviluppatori per VS \<*versione*>**.
 
      Viene visualizzato il prompt dei comandi per gli sviluppatori per Visual Studio.
 
@@ -47,7 +47,7 @@ Non è possibile eseguire i progetti del servizio Windows direttamente dall'ambi
     installutil <yourproject>.exe
     ```
 
-     Se si usa il prompt dei comandi per gli sviluppatori di Visual Studio, *InstallUtil.exe* sarà nel percorso di sistema. In caso contrario, è possibile aggiungerlo al percorso o usare il percorso completo per richiamarlo. Questo strumento viene installato con .NET Framework in *% WINDIR%\Microsoft.NET\Framework[64]\\< versione_framework\>* .
+     Se si usa il prompt dei comandi per gli sviluppatori di Visual Studio, *InstallUtil.exe* sarà nel percorso di sistema. In caso contrario, è possibile aggiungerlo al percorso o usare il percorso completo per richiamarlo. Questo strumento viene installato con .NET Framework in *%WINDIR%\Microsoft.NET\Framework[64]\\<versione framework\>*.
 
      Ad esempio:
      - Per la versione a 32 bit di .NET Framework 4 o 4.5 e versioni successive, se è la directory di installazione di Windows è *C:\Windows*, il percorso predefinito è *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*.
@@ -55,7 +55,7 @@ Non è possibile eseguire i progetti del servizio Windows direttamente dall'ambi
 
 ### <a name="uninstall-your-service-manually"></a>Disinstallare il servizio manualmente
 
-1. Dal menu **Start** selezionare la directory **Visual Studio \<*versione*>** , quindi selezionare **Prompt dei comandi per gli sviluppatori per VS \<*versione*>** .
+1. Dal menu **Start** selezionare la directory **Visual Studio \<*versione*>**, quindi selezionare **Prompt dei comandi per gli sviluppatori per VS \<*versione*>**.
 
      Viene visualizzato il prompt dei comandi per gli sviluppatori per Visual Studio.
 

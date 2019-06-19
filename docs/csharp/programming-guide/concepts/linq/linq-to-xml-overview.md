@@ -11,7 +11,7 @@ ms.locfileid: "66484356"
 ---
 # <a name="linq-to-xml-overview-c"></a>Panoramica di LINQ to XML (C#)
 
-LINQ to XML offre un'interfaccia di programmazione XML in memoria che usa .NET Language-Integrated Query (LINQ) Framework. LINQ to XML Usa le funzionalità .NET e può essere paragonato a un'interfaccia di programmazione XML di Strumentazione gestione Windows (DOM, Document Object Model) aggiornata e riprogettata. 
+LINQ to XML offre un'interfaccia di programmazione XML in memoria che usa .NET Language-Integrated Query (LINQ) Framework. LINQ to XML usa le funzionalità .NET e può essere paragonato a un'interfaccia di programmazione XML DOM aggiornata e riprogettata. 
  
 XML è stato ampiamente adottato per la formattazione dei dati in una vasta gamma di contesti. Viene ad esempio usato in applicazioni Web, file di configurazione, file di Microsoft Office Word e in database.
 
