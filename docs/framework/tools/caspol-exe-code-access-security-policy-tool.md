@@ -28,7 +28,7 @@ ms.locfileid: "66489685"
 Lo strumento Criteri di sicurezza dall'accesso di codice (Caspol.exe) consente a utenti e amministratori di modificare i criteri di sicurezza definiti a livello di computer, di utente e di azienda.  
   
 > [!IMPORTANT]
->  A partire da .NET Framework 4, Caspol.exe influisce sui criteri CAS, a meno che il [ \<legacyCasPolicy > elemento](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) è impostata su `true`. Eventuali impostazioni indicate o modificate da CasPol.exe interesseranno solo le applicazioni per le quali viene scelto esplicitamente di utilizzare i criteri di sicurezza dall'accesso di codice. Per altre informazioni, vedere [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
+>  A partire da .NET Framework 4, Caspol.exe influisce sui criteri di sicurezza dall'accesso di codice solo se l'[elemento \<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) è impostato su `true`. Eventuali impostazioni indicate o modificate da CasPol.exe interesseranno solo le applicazioni per le quali viene scelto esplicitamente di utilizzare i criteri di sicurezza dall'accesso di codice. Per altre informazioni, vedere [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
   
 > [!NOTE]
 >  I computer a 64 bit includono sia versioni a 64 che a 32 bit dei criteri di sicurezza. Per assicurarsi che le modifiche ai criteri vengano applicate sia alle applicazioni a 32 bit che a quelle a 64 bit, eseguire entrambe le versioni di Caspol.exe.  
