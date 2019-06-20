@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: cacda830a2501dcd127248955848d207d80bbe2c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f8afece073076b9ae94faaba8477f2a13e11b295
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636990"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268090"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Ridimensionamento automatico in Windows Form
 
@@ -48,7 +48,7 @@ Anche se questo meccanismo era sufficiente per la maggior parte degli scopi, tut
 
 - Non è compatibile con i gestori di layout più recenti introdotti con .NET Framework versione 2.0, ad esempio <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel>.
 
-- Non supportava il ridimensionamento basato direttamente sulla risoluzione dello schermo, necessario per la compatibilità con [!INCLUDE[compact](../../../includes/compact-md.md)].
+- Non supportava il ridimensionamento basato direttamente sulla risoluzione dello schermo è necessaria per la compatibilità di .NET Compact Framework.
 
 Anche se questo meccanismo viene mantenuto in .NET Framework versione 2.0 per garantire la compatibilità con le versioni precedenti, è stato sostituito dal meccanismo di ridimensionamento più affidabile, descritto più avanti. Di conseguenza, <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> e alcuni overload di <xref:System.Windows.Forms.Control.Scale%2A> sono contrassegnati come obsoleti.
 
@@ -63,7 +63,7 @@ Anche se questo meccanismo viene mantenuto in .NET Framework versione 2.0 per ga
 
 - La classe <xref:System.Windows.Forms.Control> dispone anche di alcuni nuovi membri che le consentono di partecipare al ridimensionamento e di supportare il ridimensionamento misto nello stesso form. In particolare i membri <xref:System.Windows.Forms.Control.Scale%2A>, <xref:System.Windows.Forms.Control.ScaleChildren%2A> e <xref:System.Windows.Forms.Control.GetScaledBounds%2A> supportano il ridimensionamento.
 
-- È stato aggiunto il supporto per il ridimensionamento basato sulla risoluzione dello schermo, come complemento del supporto per il tipo di carattere del sistema, definito dall'enumerazione <xref:System.Windows.Forms.AutoScaleMode>. Questa modalità è compatibile con il ridimensionamento automatico supportato dal [!INCLUDE[compact](../../../includes/compact-md.md)] e semplifica la migrazione delle applicazioni.
+- È stato aggiunto il supporto per il ridimensionamento basato sulla risoluzione dello schermo, come complemento del supporto per il tipo di carattere del sistema, definito dall'enumerazione <xref:System.Windows.Forms.AutoScaleMode>. Questa modalità è compatibile con la scalabilità automatica è supportata da .NET Compact Framework che semplifica la migrazione dell'applicazione.
 
 - È stata aggiunta all'implementazione del ridimensionamento automatico la compatibilità con i gestori di layout, ad esempio <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel>.
 
