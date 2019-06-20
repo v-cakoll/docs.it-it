@@ -1,153 +1,153 @@
 ---
-title: Creazione di applicazioni ASP.NET Core 2.2 distribuite come contenitori Linux nel cluster AKS/Kubernetes
+title: Compilare applicazioni ASP.NET Core 2.2 distribuite come contenitori Linux nell'agente nei cluster AKS/Kubernetes
 description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
 ms.date: 02/25/2019
 ms.openlocfilehash: 89843e0041c12f001f974360da2e5903499155d1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644788"
 ---
-# <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Creazione di applicazioni ASP.NET Core 2.2 distribuite come contenitori Linux in un servizio contenitore di AZURE/Kubernetes orchestrator
+# <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Compilare applicazioni ASP.NET Core 2.2 distribuite come contenitori Linux in un agente di orchestrazione AKS/Kubernetes
 
-Servizi di Kubernetes Azure (AKS) è managed Kubernetes orchestrazioni i servizi di Azure che semplificano la gestione e distribuzione di contenitori.
+Servizio Azure Kubernetes (AKS) include i servizi di orchestrazione Kubernetes gestiti di Azure che semplificano la gestione e la distribuzione dei contenitori.
 
-Funzionalità principali di servizio contenitore di AZURE sono:
+Le funzionalità principali di AKS sono:
 
 - Un piano di controllo ospitato in Azure
 - Aggiornamenti automatici
 - Riparazione automatica
-- Ridimensionamento configurabile utente
-- Un'esperienza utente più semplice per gli sviluppatori e operatori di cluster.
+- Ridimensionamento configurabile dall'utente
+- Un'esperienza utente più semplice sia per gli sviluppatori che per gli operatori di cluster.
 
-Negli esempi seguenti esplorare la creazione di un'applicazione ASP.NET Core 2.2 che viene eseguito in Linux e distribuisce a un Cluster servizio contenitore di AZURE in Azure, mentre avviene lo sviluppo con Visual Studio 2017.
+Negli esempi seguenti viene illustrata la creazione di un'applicazione ASP.NET Core 2.2 che viene eseguita in Linux e distribuita in un cluster AKS in Azure, mentre lo sviluppo avviene con Visual Studio 2017.
 
-## <a name="creating-the-aspnet-core-22-project-using-visual-studio-2017"></a>Creazione del progetto di 2.2 ASP.NET Core usando Visual Studio 2017
+## <a name="creating-the-aspnet-core-22-project-using-visual-studio-2017"></a>Creazione del progetto ASP.NET Core 2.2 con Visual Studio 2017
 
-ASP.NET Core è una piattaforma di sviluppo generale gestita da Microsoft e dalla community .NET su GitHub. È multipiattaforma, supporta Windows, macOS e Linux e può essere usato in scenari IoT/incorporati, cloud e dispositivo.
+ASP.NET Core è una piattaforma di sviluppo generale gestita da Microsoft e dalla community .NET su GitHub. È multipiattaforma, supporta Windows, macOS e Linux e può essere usata in dispositivi, ambienti cloud e scenari IoT/incorporati.
 
-Questo esempio Usa un semplice progetto che si basa su un modello API Web di Visual Studio, in modo non occorre alcuna conoscenza aggiuntiva per creare il codice di esempio. È sufficiente creare il progetto usando un modello standard che include tutti gli elementi per eseguire un progetto di piccole dimensioni con un'API REST, mediante la tecnologia di ASP.NET Core 2.2.
+Questo esempio usa un semplice progetto che si basa su un modello API Web di Visual Studio, quindi non occorre alcuna conoscenza aggiuntiva per creare il codice di esempio. È sufficiente creare il progetto usando un modello standard che include tutti gli elementi per eseguire un progetto di piccole dimensioni con un'API REST, con la tecnologia ASP.NET Core 2.2.
 
-![Aggiungi finestra Nuovo progetto in Visual Studio, selezionare l'applicazione Web ASP.NET Core.](media/create-aspnet-core-application.png)
+![Finestra di aggiunta di un nuovo progetto in Visual Studio, con selezione di un'applicazione Web ASP.NET Core.](media/create-aspnet-core-application.png)
 
-**Figura 4-36**. Creazione di applicazioni ASP.NET Core
+**Figura 4-36**. Creazione di un'applicazione ASP.NET Core
 
-Per creare il progetto di esempio in Visual Studio, selezionare **File** > **New** > **progetto**, selezionare la **Web**nel riquadro sinistro, seguite da tipi di progetto **applicazione Web ASP.NET Core**.
+Per creare il progetto di esempio in Visual Studio, selezionare **File** > **Nuovo** > **Progetto**, selezionare i tipi di progetto **Web**nel riquadro a sinistra e quindi **Applicazione Web ASP.NET Core**.
 
-Visual Studio vengono elencati i modelli per progetti web. Per questo esempio, selezionare **API** per creare un'applicazione API Web ASP.NET.
+Visual Studio elenca i modelli per i progetti Web. Per questo esempio, selezionare **API** per creare un'applicazione API Web ASP.NET.
 
-Verificare di avere selezionato come framework di ASP.NET Core 2.2. .NET core 2.2 è incluso nell'ultima versione di Visual Studio 2017 e viene automaticamente installato e configurato automaticamente quando si installa Visual Studio 2017.
+Verificare di avere selezionato come framework ASP.NET Core 2.2. .NET core 2.2 è incluso nell'ultima versione di Visual Studio 2017 e viene installato e configurato automaticamente quando si installa Visual Studio 2017.
 
-![Finestra di Studio Visual per la selezione del tipo di un'applicazione Web ASP.NET Core con l'opzione API selezionata.](media/create-web-api-application.png)
+![Finestra di dialogo di Visual Studio per selezionare il tipo di applicazione Web ASP.NET Core con l'opzione API selezionata.](media/create-web-api-application.png)
 
-**Figura 4-37**. Tipo di progetto API Web e selezionando ASP.NET CORE 2.2
+**Figura 4-37**. Selezione di ASP.NET CORE 2.2 e del tipo di progetto API Web
 
-Se si dispone di qualsiasi versione precedente di .NET Core, è possibile scaricare e installare la versione 2.2 da <https://www.microsoft.com/net/download/core#/sdk>.
+Se si ha una versione precedente di .NET Core, è possibile scaricare e installare la versione 2.2 da <https://www.microsoft.com/net/download/core#/sdk>.
 
-È possibile aggiungere il supporto Docker quando si crea il progetto o in un secondo momento, pertanto, è possibile "inserirla" il progetto in qualsiasi momento. Per aggiungere supporto per Docker dopo la creazione del progetto, fare doppio clic sul nodo del progetto in Esplora soluzioni e selezionare **Add** > **supporto Docker** nel menu di scelta rapida.
+È possibile aggiungere il supporto per Docker al momento della creazione del progetto o in seguito, in qualsiasi momento. Per aggiungere il supporto per Docker dopo la creazione del progetto, fare clic con il pulsante destro del mouse sul nodo del progetto in Esplora soluzioni e selezionare **Aggiungi** > **Supporto Docker** nel menu di scelta rapida.
 
-![Opzione di menu di scelta rapida per aggiungere il supporto Docker a un progetto esistente: Fare clic con il pulsante destro (sul progetto) > Aggiungi > supporto Docker.](media/add-docker-support-to-project.png)
+![Opzione del menu di scelta rapida per aggiungere il supporto per Docker a un progetto esistente: Fare clic con il pulsante destro sul progetto > Aggiungi > Supporto Docker.](media/add-docker-support-to-project.png)
 
-**Figura 4-38**. Aggiunta del supporto Docker al progetto esistente
+**Figura 4-38**. Aggiunta del supporto per Docker a un progetto esistente
 
-Per completare l'aggiunta del supporto Docker, è possibile scegliere Windows o Linux. In questo caso, selezionare **Linux**, in quanto servizio contenitore di AZURE non supporta i contenitori di Windows (come di ritardo 2018).
+Per completare l'aggiunta del supporto per Docker, è possibile scegliere Windows o Linux. In questo caso, selezionare **Linux**, in quanto AKS non supporta i contenitori di Windows (a partire da fine 2018).
 
-![Finestra di dialogo Opzioni selezionare sistema operativo di destinazione per Dockerfile.](media/select-linux-docker-support.png)
+![Finestra di dialogo delle opzioni per selezionare il sistema operativo di destinazione per Dockerfile.](media/select-linux-docker-support.png)
 
-**Figura 4-39**. Se si seleziona contenitori Linux.
+**Figura 4-39**. Selezione dei contenitori Linux.
 
-Con questi semplici passaggi, è necessario l'applicazione ASP.NET Core 2.2 in esecuzione in un contenitore Linux.
+Bastano questi semplici passaggi per avere un'applicazione ASP.NET Core 2.2 in esecuzione in un contenitore Linux.
 
-Come può notare, l'integrazione tra Visual Studio 2017 e Docker è totalmente orientato alla produttività dello sviluppatore.
+Si noti come l'integrazione tra Visual Studio 2017 e Docker è totalmente orientata alla produttività dello sviluppatore.
 
-A questo punto è possibile eseguire l'applicazione con il **F5** chiave oppure tramite il **riprodurre** pulsante.
+A questo punto è possibile eseguire l'applicazione premendo **F5** o il pulsante **Esegui**.
 
-Dopo aver eseguito il progetto, è possibile elencare le immagini usando il `docker images` comando. Verrà visualizzato il `mssampleapplication` immagine creato dalla distribuzione automatica del progetto con Visual Studio 2017.
+Dopo aver eseguito il progetto, è possibile elencare le immagini usando il comando `docker images`. Verrà visualizzata l'immagine `mssampleapplication` creata dalla distribuzione automatica del progetto con Visual Studio 2017.
 
 ```console
 docker images
 ```
 
-![Console di output del comando di immagini docker, viene visualizzato un elenco con: Repository, Tag, ID immagine, Created (date) e dimensioni.](media/docker-images-command.png)
+![L'output della console del comando delle immagini Docker visualizza un elenco con: Repository, Tag, Image ID, Created (date) e Size.](media/docker-images-command.png)
 
-**Figura 4-40**. Visualizzazione delle immagini Docker
+**Figura 4-40**. Visualizzazione immagini Docker
 
-## <a name="register-the-solution-in-the-azure-container-registry"></a>Registrare la soluzione nel registro contenitori di Azure
+## <a name="register-the-solution-in-the-azure-container-registry"></a>Registrare la soluzione nel Registro Azure Container
 
-Caricare l'immagine in un registro Docker, ad esempio [registro contenitori di Azure (ACR)](https://azure.microsoft.com/services/container-registry/) o in Docker Hub, in modo che le immagini possono essere distribuite nel cluster AKS da tale registro. In questo caso, si sta caricando l'immagine in Registro contenitori di Azure.
+Caricare l'immagine in un registro Docker, ad esempio [Registro Azure Container](https://azure.microsoft.com/services/container-registry/) o in Docker Hub, in modo che le immagini possano essere distribuite nel cluster AKS dal registro. In questo caso l'immagine viene caricata nel Registro Azure Container.
 
-### <a name="create-the-image-in-release-mode"></a>Creare l'immagine in modalità di rilascio
+### <a name="create-the-image-in-release-mode"></a>Creare l'immagine in modalità Rilascio
 
-Ora verrà creata l'immagine nella **Release** modalità (pronta per la produzione) modificando in **rilascio**, come illustrato nella figura 4-41 e l'esecuzione dell'applicazione come fatto in precedenza.
+A questo punto viene creata l'immagine in modalità **Rilascio** (pronta per la produzione) modificando l'opzione relativa in **Rilascio**, come illustrato nella figura 4-41, ed eseguendo l'applicazione come in precedenza.
 
 ![Opzione della barra degli strumenti in Visual Studio per compilare in modalità di rilascio.](media/select-release-mode.png)
 
-**Figura 4-41**. Se si seleziona la modalità di rilascio
+**Figura 4-41**. Selezione della modalità Rilascio
 
-Se si esegue la `docker image` comando, si noterà entrambe le immagini create, uno per `debug` e l'altro per `release` modalità.
+Se si esegue il comando `docker image`, vengono visualizzate entrambe le immagini create, una per la modalità `debug` e l'altra per la modalità `release`.
 
-### <a name="create-a-new-tag-for-the-image"></a>Creare un nuovo Tag dell'immagine
+### <a name="create-a-new-tag-for-the-image"></a>Creare un nuovo tag per l'immagine
 
-Ogni immagine del contenitore deve essere contrassegnata con il `loginServer` nome del Registro di sistema. Questo tag viene usato per il routing quando si effettua il push delle immagini del contenitore nel registro delle immagini.
+Ogni immagine del contenitore deve essere contrassegnata con il nome `loginServer` del registro. Questo tag viene usato per il routing quando si esegue il push delle immagini del contenitore nel registro delle immagini.
 
-È possibile visualizzare il `loginServer` nome dal portale di Azure, tenuto le informazioni dal registro contenitori di Azure
+È possibile visualizzare il nome `loginServer` dal portale di Azure. L'informazione deriva dal Registro Azure Container.
 
-![Visualizzazione di esplorazione del nome del Registro di sistema del contenitore di Azure, in alto a destra.](media/loginServer-name.png)
+![Visualizzazione di esplorazione del nome del registro contenitori, in alto a destra.](media/loginServer-name.png)
 
-**Figura 4-42**. Visualizzazione del nome del Registro di sistema
+**Figura 4-42**. Visualizzazione del nome del registro
 
-O eseguendo il comando seguente:
+In alternativa, è possibile eseguire il comando seguente:
 
 ```console
 az acr list --resource-group MSSampleResourceGroup --query "[].{acrLoginServer:loginServer}" --output table
 ```
 
-![Output del comando precedente della console.](media/az-cli-loginServer-name.png)
+![Output della console del comando riportato sopra.](media/az-cli-loginServer-name.png)
 
-**Figura 4-43**. Ottenere il nome del Registro di sistema usando PowerShell
+**Figura 4-43**. Ottenere il nome del registro usando PowerShell
 
-In entrambi i casi, è possibile ottenere il nome. In questo esempio, `mssampleacr.azurecr.io`.
+In entrambi i casi, si ottiene il nome. Nell'esempio il nome è `mssampleacr.azurecr.io`.
 
-A questo punto è possibile contrassegnare l'immagine, prendendo l'immagine più recente (dell'immagine della versione), con il comando:
+A questo punto è possibile contrassegnare l'immagine, prendendo l'immagine più recente (modalità Rilascio), con il comando:
 
 ```console
 docker tag mssampleaksapplication:latest mssampleacr.azurecr.io/mssampleaksapplication:v1
 ```
 
-Dopo aver eseguito il `docker tag` comando, elencare le immagini con il `docker images` comando che dovrebbe mostrare l'immagine con il nuovo tag.
+Dopo aver eseguito il comando `docker tag`, elencare le immagini con il comando `docker images` che dovrebbe visualizzare l'immagine con il nuovo tag.
 
-![Console di output del comando di immagini docker.](media/tagged-docker-images-list.png)
+![Output della console del comando delle immagini Docker.](media/tagged-docker-images-list.png)
 
 **Figura 4-44**. Visualizzazione di immagini con tag
 
-### <a name="push-the-image-into-the-azure-acr"></a>Eseguire il push dell'immagine in Registro contenitori di AZURE di Azure
+### <a name="push-the-image-into-the-azure-acr"></a>Eseguire il push dell'immagine nel Registro Azure Container
 
-Accedere al registro contenitori di Azure
+Accedere al Registro Azure Container
 
 ```console
 az acr login --name mssampleacr
 ```
 
-Eseguire il push dell'immagine in Registro contenitori di AZURE Azure, usando il comando seguente:
+Eseguire il push dell'immagine nel Registro Azure Container usando il comando seguente:
 
 ```console
 docker push mssampleacr.azurecr.io/mssampleaksapplication:v1
 ```
 
-Questo comando accetta un po' di tempo caricamento delle immagini, ma ti offre commenti e suggerimenti nel processo.
+Questo comando richiede un po' di tempo per caricare le immagini, ma offre feedback durante il processo.
 
-![Console di output del comando di push di docker: mostra un indicatore di stato basato su caratteri per ogni livello.](media/uploading-image-to-acr.png)
+![Output della console del comando di push di Docker: visualizza una barra di avanzamento basata su caratteri per ogni livello.](media/uploading-image-to-acr.png)
 
-**Figura 4-45**. Caricare l'immagine per il registro contenitori di AZURE
+**Figura 4-45**. Caricamento dell'immagine nel Registro Azure Container
 
-È possibile vedere di seguito il risultato che dovrebbe essere visualizzata al termine del processo:
+È possibile visualizzare di seguito il risultato che dovrebbe essere visualizzato al termine del processo:
 
-![Output del comando di push di docker, completato, che mostra tutti i livelli o i nodi della console.](media/uploading-docker-images-complete.png)
+![Output della console del comando di push di Docker, completato, che visualizza tutti i livelli o i nodi.](media/uploading-docker-images-complete.png)
 
 **Figura 4-46**. Visualizzazione dei nodi
 
-Il passaggio successivo consiste nel distribuire il contenitore nel cluster AKS Kubernetes. A tal fine, è necessario un file (**yml distribuire file**) che contiene gli elementi seguenti:
+Il passaggio successivo consiste nel distribuire il contenitore nel cluster AKS Kubernetes. A tale scopo, è necessario un file (**file di distribuzione con estensione yml**) che contiene gli elementi seguenti:
 
 ```yml
 apiVersion: apps/v1beta1
@@ -184,42 +184,42 @@ spec:
 > [!NOTE]
 > Per altre informazioni sulla distribuzione con Kubernetes, vedere: <https://kubernetes.io/docs/reference/kubectl/cheatsheet/>
 
-A questo punto è quasi pronti per eseguire la distribuzione usando **Kubectl**, ma prima di tutto è necessario ottenere le credenziali per il Cluster AKS con questo comando:
+A questo punto si è quasi pronti per eseguire la distribuzione usando **Kubectl**, ma prima di tutto è necessario ottenere le credenziali per il cluster AKS con il comando seguente:
 
 ```console
 az aks get-credentials --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
 ```
 
-![Console di output del comando precedente: Unito MSSampleK8Cluster"come contesto corrente in /root/.kube/config](media/getting-aks-credentials.png)
+![Output della console del comando riportato sopra: Merged "MSSampleK8Cluster as current context in  /root/.kube/config](media/getting-aks-credentials.png)
 
-**Figura 4-47**. ottenere le credenziali
+**Figura 4-47**. Ottenere le credenziali
 
-Usare quindi il `kubectl create` comando per avviare la distribuzione.
+Usare quindi il comando `kubectl create` per avviare la distribuzione.
 
 ```console
 kubectl create -f mssample-deploy.yml
 ```
 
-![Console di output del comando precedente: distribuzione "mssamplesbook" creata. servizio "mssample-kub-app" creata.](media/kubectl-create-command.png)
+![Output della console del comando riportato sopra: deployment "mssamplesbook" created. service "mssample-kub-app" created.](media/kubectl-create-command.png)
 
-**Figura 4-48**. Distribuisci in Kubernetes
+**Figura 4-48**. Eseguire la distribuzione in Kubernetes
 
-Al termine della distribuzione, è possibile accedere alla console di Kubernetes con un proxy locale che è possibile accedere temporaneamente con questo comando:
+Al termine della distribuzione, è possibile accedere alla console di Kubernetes con un proxy locale cui è possibile accedere temporaneamente con il comando seguente:
 
 ```console
 az aks browse --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
 ```
 
-E l'accesso all'url `http://127.0.0.1:8001`.
+In seguito, accedere all'URL `http://127.0.0.1:8001`.
 
-![Visualizzazione di esplorazione del dashboard Kubernetes, che mostra le distribuzioni, i POD, set di repliche e i servizi.](media/kubernetes-cluster-information.png)
+![Visualizzazione di esplorazione del dashboard Kubernetes, che visualizza le distribuzioni, i pod, i set di repliche e i servizi.](media/kubernetes-cluster-information.png)
 
-**Figura 4-49**. Visualizzare le informazioni del cluster Kubernetes
+**Figura 4-49**. Visualizzazione delle informazioni del cluster Kubernetes
 
-È ora disponibile un'applicazione distribuita in Azure, usando un contenitore Linux e un Kubernetes del Cluster servizio contenitore di AZURE. È possibile accedere all'app di esplorazione per l'indirizzo IP pubblico del servizio, che è possibile ottenere dal portale di Azure.
+L'applicazione è stata distribuita in Azure usando un contenitore Linux e un cluster AKS Kubernetes. È possibile accedere all'app passando all'indirizzo IP pubblico del servizio, che può essere ottenuto dal portale di Azure.
 
 > [!NOTE]
-> È possibile vedere come creare il Cluster AKS per questo esempio nella sezione [ **Distribuisci a Azure Kubernetes Service (AKS)** ](deploy-azure-kubernetes-service.md) in questa Guida.
+> Per informazioni su come creare il cluster AKS per questo esempio, vedere la sezione [**Distribuire in servizio Azure Kubernetes**](deploy-azure-kubernetes-service.md) in questa Guida.
 
 >[!div class="step-by-step"]
 >[Precedente](set-up-windows-containers-with-powershell.md)

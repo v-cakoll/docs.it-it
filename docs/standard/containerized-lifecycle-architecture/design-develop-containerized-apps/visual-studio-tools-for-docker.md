@@ -1,91 +1,91 @@
 ---
 title: Visual Studio Tools per Docker in Windows
-description: Conoscere gli strumenti di Docker disponibili in Visual Studio 2017 versione 15.7 e successive.
+description: Informazioni sugli strumenti Docker disponibili in Visual Studio 2017 versione 15.7 e successive.
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 2b6fdc33f9cf850cf9e52fca4a1a9754cd412567
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644676"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Usare gli strumenti di Docker in Visual Studio 2017 in Windows
 
-Il flusso di lavoro per gli sviluppatori quando si usano gli strumenti di Docker inclusi in Visual Studio 2017 versione 15.7 e successive, è simile all'uso di Visual Studio Code e CLI di Docker (infatti, si basa la CLI di Docker stesso), ma è più semplice iniziare, semplifica il processo, e offre una maggiore produttività per la compilazione, esecuzione e la composizione di attività. Può anche eseguire e il debug dei contenitori tramite la consueta `F5` e `Ctrl+F5` chiavi da Visual Studio. Eseguire il debug di un'intera soluzione anche se i contenitori sono definiti nello stesso `docker-compose.yml` file a livello di soluzione.
+Il flusso di lavoro per sviluppatori con gli strumenti di Docker inclusi in Visual Studio 2017 versione 15.7 e successive è simile all'uso di Visual Studio Code e dell'interfaccia della riga di comando di Docker (è infatti basato sulla stessa interfaccia della riga di comando di Docker), ma è più semplice da iniziare, semplifica il processo e offre una maggiore produttività per le attività di compilazione, esecuzione e composizione. Può anche eseguire i contenitori ed eseguirne il debug tramite le chiavi `F5` e `Ctrl+F5` abituali di Visual Studio. È anche possibile eseguire il debug di un'intera soluzione se i relativi contenitori sono definiti nello stesso file `docker-compose.yml` a livello della soluzione.
 
 ## <a name="configure-your-local-environment"></a>Configurare l'ambiente locale
 
-Con le versioni più recenti di Docker per Windows, è più facile che mai, per sviluppare applicazioni Docker perché il programma di installazione è semplice, come spiegato nei riferimenti ai seguenti.
+Con le versioni più recenti di Docker per Windows è più facile che mai sviluppare applicazioni Docker, perché il programma di installazione è semplice, come spiegato nei riferimenti seguenti.
 
 > [!TIP]
-> Per altre informazioni sull'installazione di Docker per Windows, passare a (<https://docs.docker.com/docker-for-windows/>).
+> Per altre informazioni sull'installazione di Docker per Windows, vedere (<https://docs.docker.com/docker-for-windows/>).
 
-## <a name="docker-support-in-visual-studio-2017"></a>Supporto docker in Visual Studio 2017
+## <a name="docker-support-in-visual-studio-2017"></a>Supporto di Docker in Visual Studio 2017
 
-Esistono due livelli di supporto di Docker che è possibile aggiungere a un progetto. Nei progetti ASP.NET Core, è possibile aggiungere solo un `Dockerfile` file per il progetto dall'abilitazione del supporto Docker. Il livello successivo è il supporto di orchestrazione contenitore, che aggiunge un `Dockerfile` al progetto (se non esiste già) e un `docker-compose.yml` file a livello di soluzione. Viene aggiunto il supporto di orchestrazione contenitore, tramite Docker Compose, per impostazione predefinita in Visual Studio 2017 versioni 15.0 alla versione 15.7. Supporto di orchestrazione di contenitori è una funzionalità che prevede il consenso esplicito nelle versioni di Visual Studio 2017 15,8 o versione successive. Versione 15.8 un oggetto in un secondo momento il supporto Docker Compose e Service Fabric.
+Esistono due livelli di supporto di Docker che possono essere aggiunti a un progetto. Nei progetti ASP.NET Core è possibile aggiungere solo un file `Dockerfile` al progetto abilitando il supporto di Docker. Il livello successivo è il supporto dell'orchestrazione dei contenitori, che aggiunge un `Dockerfile` al progetto, se non esiste già, e un file `docker-compose.yml` a livello della soluzione. Il supporto dell'orchestrazione dei contenitori tramite Docker Compose viene aggiunto automaticamente in Visual Studio 2017 dalla versione 15.0 alla versione 15.7. Il supporto dell'orchestrazione dei contenitori è una funzionalità che prevede il consenso esplicito in Visual Studio 2017 versione 15.8 e successive. Le versioni 15.8 e successive supportano Docker Compose e Service Fabric.
 
-Il **Aggiungi > supporto Docker** e **Aggiungi > supporto dell'agente di orchestrazione dei contenitori** comandi si trovano nel menu di scelta rapida (o menu di scelta rapida) del nodo di progetto per un progetto ASP.NET Core in  **Esplora soluzioni**, come illustrato nella figura 4-31:
+I comandi **Aggiungi > Supporto Docker** e **Aggiungi > Supporto per l'agente di orchestrazione del contenitore** sono disponibili nel menu di scelta rapida del nodo di progetto per un progetto ASP.NET Core in **Esplora soluzioni**, come illustrato nella figura 4-31:
 
 ![Opzione di menu Aggiungi Supporto Docker in Visual Studio](./media/add-docker-support-menu.png)
 
-**Figura 4-31**. Aggiunta del supporto Docker a un progetto di Visual Studio 2017
+**Figura 4-31**. Aggiunta del supporto di Docker a un progetto di Visual Studio 2017
 
-### <a name="add-docker-support"></a>Aggiungi supporto Docker
+### <a name="add-docker-support"></a>Aggiungere il supporto di Docker
 
-È possibile aggiungere il supporto Docker a un progetto ASP.NET Core esistente selezionando **Add** > **supporto Docker** nella **Esplora**. È anche possibile abilitare il supporto di Docker durante la creazione del progetto selezionando **Abilita supporto Docker** nel **nuova applicazione Web di ASP.NET Core** la finestra di dialogo visualizzata dopo aver fatto clic **OK** nella **nuovo progetto** finestra di dialogo, come illustrato nella figura 4-32.
+È possibile aggiungere il supporto di Docker a un progetto ASP.NET Core esistente selezionando **Aggiungi** > **Supporto Docker** in **Esplora soluzioni**. È anche possibile abilitare il supporto di Docker durante la creazione del progetto selezionando **Abilita supporto Docker** nella finestra di dialogo **Nuova applicazione Web ASP.NET Core** visualizzata dopo aver fatto clic su **OK** nella finestra di dialogo **Nuovo progetto**, come illustrato nella figura 4-32.
 
 ![Abilitare il supporto di Docker per la nuova app Web ASP.NET Core in Visual Studio](./media/enable-docker-support-visual-studio.png)
 
-**Figura 4-32**. Abilitare il supporto Docker durante la creazione del progetto in Visual Studio 2017
+**Figura 4-32**. Abilitare il supporto di Docker durante la creazione del progetto in Visual Studio 2017
 
-Quando si aggiungono o si abilita supporto per Docker, Visual Studio aggiunge un *Dockerfile* file al progetto.
+Quando si aggiunge o si abilita il supporto di Docker, Visual Studio aggiunge un file *Dockerfile* al progetto.
 
 > [!NOTE]
-> Quando si abilita supporto Docker Compose, durante la creazione del progetto per un progetto ASP.NET (.NET Framework, non a un progetto .NET Core), come illustrato nella figura 4-33, viene inoltre aggiunto il supporto di orchestrazione di contenitori.
+> Quando si abilita il supporto di Docker Compose durante la creazione del progetto per un progetto ASP.NET (.NET Framework, non un progetto .NET Core), come illustrato nella figura 4-33, viene aggiunto anche il supporto dell'orchestrazione dei contenitori.
 
 ![Abilitare il supporto di Docker Compose per un progetto ASP.NET](media/enable-docker-compose-support.png)
 
-**Figura 4-33**. Attivazione del supporto per Docker Compose per un progetto ASP.NET in Visual Studio 2017
+**Figura 4-33**. Abilitare il supporto di Docker Compose per un progetto ASP.NET in Visual Studio 2017
 
-### <a name="add-container-orchestration-support"></a>Aggiungere il supporto di orchestrazione di contenitori
+### <a name="add-container-orchestration-support"></a>Aggiungere il supporto dell'orchestrazione dei contenitori
 
-Quando si desidera comporre una soluzione multi-contenitore, aggiungere il supporto di orchestrazione contenitore per i progetti. Ciò consente di eseguire ed eseguire il debug di un gruppo di contenitori (un'intera soluzione) nello stesso momento, se sono definiti nello stesso *docker-Compose. yml* file.
+Quando si vuole comporre una soluzione con più contenitori, aggiungere il supporto dell'orchestrazione dei contenitori ai progetti. Ciò consente di eseguire un gruppo di contenitori (un'intera soluzione) e di eseguirne il debug contemporaneamente, se sono definiti nello stesso file *docker-compose.yml*.
 
-Per aggiungere il supporto di orchestrazione di contenitori, pulsante destro del mouse sul nodo soluzione o progetto in **Esplora soluzioni**, scegliere **Aggiungi > supporto di orchestrazione contenitore**. Quindi scegliere **Docker Compose** oppure **Service Fabric** per gestire i contenitori.
+Per aggiungere il supporto dell'orchestrazione dei contenitori, fare clic con il pulsante destro del mouse sul nodo della soluzione o del progetto in **Esplora soluzioni** e scegliere **Aggiungi > Container Orchestration Support (Supporto dell'orchestrazione dei contenitori)** . Scegliere quindi **Docker Compose** o **Service Fabric** per gestire i contenitori.
 
-Dopo aver aggiunto il supporto di orchestrazione contenitore al progetto, viene visualizzato un file Docker aggiunti al progetto e un **docker-compose** aggiunto alla soluzione nella cartella **Esplora soluzioni**, come illustrato nella figura 4-34:
+Dopo aver aggiunto il supporto dell'orchestrazione dei contenitori al progetto, si noteranno un Dockerfile aggiunto al progetto e una cartella **docker-compose** aggiunta alla soluzione in **Esplora soluzioni**, come illustrato nella figura 4-34:
 
 ![File di Docker in Esplora soluzioni in Visual Studio](media/docker-support-solution-explorer.png)
 
-**Figura 4-34**. File di docker in Esplora soluzioni in Visual Studio 2017
+**Figura 4-34**. File di Docker in Esplora soluzioni in Visual Studio 2017
 
 Se il file *docker-compose.yml* esiste già, Visual Studio aggiunge solo le righe del codice di configurazione necessarie in tale file.
 
 ## <a name="configure-docker-tools"></a>Configurare gli strumenti di Docker
 
-Dal menu principale scegliere **strumenti > Opzioni**, espandere **Container Tools > Impostazioni**. Le impostazioni di strumenti contenitore vengono visualizzate.
+Dal menu principale scegliere **Strumenti > Opzioni** ed espandere **Strumenti contenitore > Impostazioni**. Vengono visualizzate le impostazioni degli strumenti contenitore.
 
-![Docker in Visual Studio degli strumenti, opzioni di visualizzazione: Automaticamente il pull delle immagini Docker richiesto nel caricamento del progetto, avvia automaticamente i contenitori in background, terminare automaticamente i contenitori in Chiudi soluzione e non chiedere conferma per considerare attendibile il certificato SSL.](./media/visual-studio-docker-tools-options.png)
+![Opzioni degli strumenti di Docker in Visual Studio in cui vengono visualizzate le opzioni seguenti: Pull automatico delle immagini Docker richieste al caricamento del progetto, Avvia automaticamente i contenitori in background, Termina automaticamente i contenitori alla chiusura della soluzione e Non chiedere di considerare attendibile il certificato SSL per localhost.](./media/visual-studio-docker-tools-options.png)
 
-**Figura 4-35**. Opzioni per gli strumenti di docker
+**Figura 4-35**. Opzioni degli strumenti di Docker
 
-Nella tabella seguente consente di decidere come impostare queste opzioni.
+La tabella seguente può essere utile per decidere come impostare queste opzioni.
 
-| Nome | Impostazione predefinita | Si applica a | Descrizione |
+| nome | Impostazione predefinita | Si applica a | Description |
 | -----|:---------------:|:----------:| ----------- |
-| Automaticamente il pull delle immagini Docker richiesto nel caricamento del progetto | Attivato | Docker Compose | Per ottenere migliori prestazioni durante il caricamento dei progetti, Visual Studio verrà avviato un'operazione di pull di Docker in background in modo che quando si è pronti per eseguire il codice, l'immagine è già stato scaricato o in fase di download. Se si sta semplicemente il caricamento di progetti e codice di esplorazione, è possibile disattivare questa funzionalità per evitare il download delle immagini del contenitore che non è necessario. |
-| Avvia automaticamente i contenitori in background | Attivato | Docker Compose | Anche in questo caso per ottenere migliori prestazioni, Visual Studio crea un contenitore con punti di montaggio di volume pronti per quando viene compilato ed eseguito nel contenitore. Se si desidera controllare quando viene creato il contenitore, è possibile disattivare questa funzionalità. |
-| Chiudono automaticamente i contenitori kill sulla soluzione | Attivato | Docker Compose | Disattivare questa funzionalità se si vuole contenitori per la soluzione continuare a eseguire dopo la chiusura della soluzione o chiusura di Visual Studio. |
-| Non chiedere conferma per considerare attendibile il certificato SSL localhost | Disattivato | Progetti ASP.NET Core 2.2 | Se il certificato SSL localhost non è attendibile, Visual Studio richiederà ogni volta che si esegue il progetto, a meno che non è selezionata questa casella di controllo. |
+| Pull automatico delle immagini Docker richieste al caricamento del progetto | Attivato | Docker Compose | Per ottenere migliori prestazioni durante il caricamento dei progetti, Visual Studio avvierà un'operazione di pull automatico di Docker in modo che quando si è pronti per eseguire il codice l'immagine sia già stata scaricata o in fase di download. Se si stanno semplicemente caricando progetti ed esplorando codice, è possibile disattivare questa opzione per evitare che vengano scaricate immagini del contenitore non necessarie. |
+| Avvia automaticamente i contenitori in background | Attivato | Docker Compose | Sempre per ottenere migliori prestazioni, Visual Studio crea un contenitore con punti di montaggio di volume pronti per quando viene compilato ed eseguito il contenitore. Se si vuole controllare quando viene creato il contenitore, disattivare questa opzione. |
+| Termina automaticamente i contenitori alla chiusura della soluzione | Attivato | Docker Compose | Disattivare questa opzione se si vuole che i contenitori della soluzione continuino a essere eseguiti dopo la chiusura della soluzione o di Visual Studio. |
+| Non chiedere di considerare attendibile il certificato SSL per localhost | Disattivato | Progetti ASP.NET Core 2.2 | Se il certificato SSL per localhost non è attendibile, Visual Studio lo richiederà ogni volta che si eseguirà il progetto, a meno che questa casella di controllo non sia selezionata. |
 
 > [!WARNING]
-> Se non è attendibile il certificato SSL localhost e si seleziona la casella per eliminare la richiesta, richieste web HTTPS potrebbero non riuscire in fase di esecuzione nell'app o nel servizio. In tal caso, deselezionare il **non chiedere conferma** casella di controllo, eseguire il progetto e indicare attendibilità al prompt.
+> Se il certificato SSL per localhost non è attendibile e si seleziona la casella di controllo per eliminare la richiesta, le richieste Web HTTPS potrebbero non riuscire in fase di esecuzione nell'app o nel servizio. In questo caso, deselezionare la casella di controllo **Non chiedere**, eseguire il progetto e indicare l'attendibilità al prompt.
 
 > [!TIP]
-> Per altri dettagli sull'implementazione di servizi e l'uso di Visual Studio Tools per Docker, leggere gli articoli seguenti:
+> Per altri dettagli sull'implementazione dei servizi e l'uso di Visual Studio Tools per Docker, vedere gli articoli seguenti:
 >
->Debug di App in un contenitore Docker locale: <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
+>Debug delle applicazioni in un contenitore Docker locale: <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >
 >Distribuire un contenitore ASP.NET in un registro contenitori con Visual Studio: <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 

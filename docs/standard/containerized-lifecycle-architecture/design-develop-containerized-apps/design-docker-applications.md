@@ -1,21 +1,21 @@
 ---
 title: Progettare applicazioni Docker
-description: Fai clic qui per un riferimento a una guida approfondita su architettura di microservizi, perché questo è un argomento che non è descritta in dettaglio in questa Guida.
+description: Riferimento a una guida dettagliata all'architettura dei microservizi, argomento non trattato nel dettaglio nella presente guida.
 ms.date: 02/15/2019
 ms.openlocfilehash: 535b6cefb7371014527032972ec27ebfe4b67ebc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644643"
 ---
 # <a name="design-docker-applications"></a>Progettare applicazioni Docker
 
-Capitolo 1 di sono stati introdotti i concetti fondamentali relative a contenitori e Docker. Tali informazioni sono il livello di base di informazioni necessarie per iniziare. Tuttavia, le applicazioni aziendali possono essere complessi e composte da più servizi anziché un singolo servizio o contenitore. Per i casi di utilizzo facoltativo, è necessario conoscere altri approcci alla progettazione, ad esempio Service-Oriented Architecture (SOA) e i concetti di microservizi più avanzati e un contenitore ai concetti di orchestrazione. L'ambito di questo documento non è limitato ai microservizi, ma per qualsiasi ciclo di vita delle applicazioni di Docker, pertanto, non esplori architettura di microservizi in modo approfondito perché è anche possibile usare i contenitori e Docker con regolare SOA, le attività in background o processi o persino con gli approcci di distribuzione applicazione monolitica.
+Il capitolo 1 ha presentato i concetti fondamentali relativi ai contenitori e a Docker. Le informazioni fornite rappresentano il livello di conoscenza di base necessario per iniziare. Le applicazioni aziendali tuttavia possono essere complesse e composte da più servizi anziché da un singolo servizio o contenitore. Per questi casi d'uso facoltativi, è necessario conoscere ulteriori approcci di programmazione, ad esempio SOA (Service-Oriented Architecture), e concetti più avanzati relativi ai microservizi e all'orchestrazione dei contenitori. Poiché in questo documento non sono descritti solamente i microservizi ma il ciclo di vita di qualsiasi applicazione Docker, l'architettura dei microservizi non è descritta nel dettaglio poiché è anche possibile usare i contenitori e Docker con una normale architettura SOA, attività o processi in background o persino con approcci di sviluppo di applicazioni monolitiche.
 
-**Altre informazioni** per altre informazioni sulle applicazioni aziendali e architettura di microservizi in profondità, leggere la Guida [NET Microservizi: Architettura per applicazioni .NET in contenitori](../../microservices-architecture/index.md) che è anche possibile scaricare da <https://aka.ms/MicroservicesEbook>.
+**Altre informazioni** Per altre informazioni sulle applicazioni aziendali e una descrizione dettagliata dell'architettura dei microservizi, leggere la guida [NET Microservices: Architecture for Containerized .NET Applications](../../microservices-architecture/index.md) (Microservizi NET: Architettura per le applicazioni .NET aggiunte a contenitori) che è possibile scaricare da <https://aka.ms/MicroservicesEbook>.
 
-Tuttavia, prima di addentrarsi il ciclo di vita dell'applicazione e DevOps, è importante conoscere come verrà orchestrata per progettare e costrutto dell'applicazione e quali sono le scelte di progettazione.
+Tuttavia, prima di addentrarsi nel ciclo di vita delle applicazioni e in DevOps, è importante conoscere il modo in cui l'applicazione verrà progettata e costruita e le scelte di progettazione.
 
 >[!div class="step-by-step"]
 >[Precedente](index.md)

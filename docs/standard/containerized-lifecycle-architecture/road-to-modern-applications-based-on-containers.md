@@ -1,30 +1,30 @@
 ---
 title: Percorso verso applicazioni moderne basate su contenitori
-description: Comprendere che Docker, contenitori e un'architettura di Microservizi non sono una soluzione completamente adattabile;. Sono disponibili alcuni riferimenti che consentono di scegliere.
+description: Informazioni sul fatto che Docker, i contenitori e un'architettura basata su microservizi non costituiscono una soluzione unica adatta a qualsiasi situazione. In questo articolo sono disponibili alcune informazioni di riferimento che possono aiutare nella scelta.
 ms.date: 11/23/2018
 ms.openlocfilehash: bd5a53ec557b7dd90733a93d0cb03f19e3bc2940
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65641253"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>Percorso verso applicazioni moderne basate su contenitori
 
-Probabilmente si sta leggendo questo libro in quanto si pianifica lo sviluppo di nuove applicazioni o valutate sia l'impatto dell'uso di Docker, contenitori e nuovi approcci, come i Microservizi nell'azienda.
+Il motivo per cui si sta leggendo questo libro è probabilmente la necessità di pianificare lo sviluppo di nuove applicazioni o di valutare l'impatto sull'azienda di Docker, dei contenitori e di nuovi tipi di approccio quali i microservizi.
 
-L'adozione di nuovi paradigmi di sviluppo necessario con attenzione prima di avviare un progetto, per valutare l'impatto sul team di sviluppo, il tuo budget o dell'infrastruttura.
+L'adozione di nuovi paradigmi di sviluppo prima dell'avvio di un progetto richiede prudenza e un'attenta valutazione dell'impatto sui team di sviluppo, sul budget e sull'infrastruttura.
 
-Microsoft ha lavorato in una guida completa, le applicazioni di esempio e una suite di e-book, che consentono di prendere una decisione consapevole e guidare il team tramite un esito positivo di sviluppo, distribuzione e operazioni delle nuove applicazioni.
+Microsoft ha prodotto una serie di applicazioni avanzate di esempio e di guida e una suite di e-book in grado di consentire decisioni informate e di guidare con esito positivo il team attraverso le fasi di sviluppo, distribuzione e funzionamento delle nuove applicazioni.
 
-Questo libro appartiene a un gruppo di Microsoft delle guide che illustrano molte delle esigenze e le sfide da affrontare durante il processo di sviluppo di nuove applicazioni moderne basate su contenitori.
+Questo libro appartiene a una suite di guide Microsoft che trattano un gran numero di esigenze e problemi da affrontare durante il processo di sviluppo di nuove applicazioni moderne basate su contenitori.
 
-È possibile trovare ulteriori e-book Microsoft correlati ai contenitori Docker nell'elenco seguente:
+È possibile trovare altri e-book Microsoft relativi ai contenitori Docker nell'elenco seguente:
 
-- **Microservizi .NET.: Architettura per applicazioni .NET in contenitori** \
+- **Microservizi .NET.: Architettura per le applicazioni .NET incluse in contenitori** \
   [https://docs.microsoft.com/dotnet/standard/microservices-architecture/](../microservices-architecture/index.md)
 
-- **Modernizzare le applicazioni .NET esistenti con cloud di Azure e i contenitori Windows** \
+- **Modernizzare le applicazioni .NET esistenti con cloud di Azure e i contenitori di Windows** \
   [https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/](../modernize-with-azure-and-containers/index.md)
 
 >[!div class="step-by-step"]
