@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: 41d38dcb3f44ccda19253adcd39401b0ac8dfb02
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e8a8fb571fa65228f3a0acec1f902d21eb9bfe04
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647648"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268313"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
 Specifica che una o più variabili membro dichiarate fanno riferimento a un'istanza di una classe che può generare eventi.  
@@ -31,6 +31,12 @@ Specifica che una o più variabili membro dichiarate fanno riferimento a un'ista
 - **Tipi di elemento.** È necessario dichiarare `WithEvents` variabili come variabili oggetto in modo che accettino le istanze di classe. Tuttavia, non è possibile dichiarare come `Object`. È necessario dichiararli come la classe specifica in grado di generare gli eventi.  
   
  Il `WithEvents` modificatore può essere usato in questo contesto: [Istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ 
+## <a name="example"></a>Esempio
+
+```VB
+Dim WithEvents app As Application
+```
   
 ## <a name="see-also"></a>Vedere anche
 
