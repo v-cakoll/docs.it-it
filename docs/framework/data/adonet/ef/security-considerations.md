@@ -2,12 +2,12 @@
 title: Considerazioni sulla sicurezza (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489830"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307307"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerazioni sulla sicurezza (Entity Framework)
 In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che riguardano in modo particolare lo sviluppo, la distribuzione e l'esecuzione di applicazioni [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. È consigliabile seguire anche le raccomandazioni per la creazione di applicazioni .NET Framework protette. Per altre informazioni, vedere [Cenni preliminari sulla sicurezza](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -86,7 +86,7 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
  Il nome invariante del provider può essere modificato in app.config. L'applicazione client deve accedere al provider sottostante tramite il modello di factory di provider standard usando un nome sicuro.  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Limitare le autorizzazioni ai file di modello e di mapping.  
- Un amministratore deve limitare l'accesso in scrittura ai file di modello e di mapping (edmx, csdl, ssdl e msl) solo agli utenti che modificano il modello o i mapping. Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] richiede solo l'accesso in lettura a questi file in fase di esecuzione. Un amministratore deve limitare anche l'accesso ai file del codice sorgente di visualizzazione precompilati e a livello di oggetto generati dagli strumenti di [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)].  
+ Un amministratore deve limitare l'accesso in scrittura ai file di modello e di mapping (edmx, csdl, ssdl e msl) solo agli utenti che modificano il modello o i mapping. Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] richiede solo l'accesso in lettura a questi file in fase di esecuzione. Un amministratore deve limitare l'accesso anche a livello di oggetti e file del codice sorgente di visualizzazione precompilati generati dagli strumenti di Entity Data Model.  
   
 ## <a name="security-considerations-for-queries"></a>Considerazioni sulla sicurezza relative alle query  
  Le considerazioni sulla sicurezza illustrate di seguito riguardano l'esecuzione di query su un modello concettuale. Tali considerazioni si applicano alle query [!INCLUDE[esql](../../../../../includes/esql-md.md)] che usano EntityClient e alle query di oggetto che usano LINQ, [!INCLUDE[esql](../../../../../includes/esql-md.md)] e i metodi del generatore di query.  

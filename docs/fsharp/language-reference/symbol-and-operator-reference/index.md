@@ -2,12 +2,12 @@
 title: Riferimenti per simboli e operatori
 description: Informazioni sui simboli e operatori usati nel F# linguaggio di programmazione.
 ms.date: 02/11/2019
-ms.openlocfilehash: 0ea8337a9055c8df639fe6abdb6c79445d189d64
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 14ea7a66f7e9a79d24b62a4aa0564eecb891ee1a
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490809"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306191"
 ---
 # <a name="symbol-and-operator-reference"></a>Riferimenti per simboli e operatori
 
@@ -47,7 +47,7 @@ Nella tabella seguente sono descritti i simboli usati nel linguaggio F#, vengono
 |`+?`|[Operatori nullable](nullable-operators.md)|<ul><li>Addiziona il lato sinistro e destro, quando il lato destro è un tipo nullable.<br /></li></ul>|
 |`,`|[Tuple](../tuples.md)|<ul><li>Separa gli elementi di una tupla o parametri di tipo.<br /></li></ul>|
 |`-`|[Operatori aritmetici](arithmetic-operators.md)|<ul><li>Quando usato come operatore binario, sottrae il lato destro dal lato sinistro.<br /></li><li>Quando usato come operatore unario, esegue un'operazione di negazione.<br /></li></ul>|
-|`-`|[Operatori nullable](nullable-operators.md)|<ul><li>Sottrae il lato destro dal lato sinistro, quando la parte destra è un tipo nullable.<br /></li></ul>|
+|`-?`|[Operatori nullable](nullable-operators.md)|<ul><li>Sottrae il lato destro dal lato sinistro, quando la parte destra è un tipo nullable.<br /></li></ul>|
 |`->`|[Funzioni](../functions/index.md)<br /><br />[Espressioni match](../match-expressions.md)|<ul><li>Nei tipi di funzione, delimita argomenti e valori restituiti.<br /></li><li>Produce un'espressione (nelle espressioni di sequenza); equivalente alla parola chiave `yield`.<br /></li><li>Usato nelle espressioni match<br /></li></ul>|
 |`.`|[Membri](../members/index.md)<br /><br />[Tipi primitivi](../primitive-types.md)|<ul><li>Accede a un membro e separa i singoli nomi in un nome completo.<br /></li><li>Consente di specificare un separatore decimale nei numeri a virgola mobile.<br /></li></ul>|
 |`..`|[Cicli: `for...in` Expression](../loops-for-in-expression.md)|<ul><li>Specifica un intervallo.<br /></li></ul>|

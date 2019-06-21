@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79a8d378f69ced0bc22926b066e76dc515b06559
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 04f31748fd53fe3281102fcadcc1e56ea3cc1109
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210436"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307095"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > elemento
 Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.AppContext> per fornire un meccanismo di rifiuto esplicito per la nuova funzionalità.  
@@ -134,7 +134,7 @@ Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.A
 |`Switch.UseLegacyAccessibilityFeatures`|Controlli se la funzionalità di accessibilità, disponibile a partire da .NET Framework 4.7.1 vengono abilitati o disabilitati. | .NET Framework 4.7.1 |
 |`Switch.UseLegacyAccessibilityFeatures.2`|Controlli di funzionalità disponibili in .NET Framework 4.7.2 di accessibilità sono abilitate (`false`) o disabilitato (`true`). Se `true`, `Switch.UseLegacyAccessibilityFeatures` deve anche essere `true` per abilitare le funzionalità di accessibilità di .NET Framework 4.7.1.|.NET Framework 4.7.2|
 |`Switch.UseLegacyAccessibilityFeatures.3`|Indica se le funzionalità di accessibilità introdotta in .NET Framework 4.8 sono abilitati i controlli (`false`) o disabilitato (`true`). Se `true`, `Switch.UseLegacyAccessibilityFeatures` e `Switch.UseLegacyAccessibilityFeatures.2` deve essere anche `true`.|.NET Framework 4.8|
-|`Switch.UseLegacyToolTipDisplay`|Controlli se le descrizioni comando sono displaed quando l'utente posiziona il cursore del mouse su un controllo WPF (`true`), o se vengono visualizzate sia in stato attivo della tastiera e tramite il tasto di scelta rapida da tastiera (`false`, il comportamento predefinito). Per abilitare entrambe le applicazioni in esecuzione in .NET Framework 4.8 ma destinate a versioni precedenti di .NET Framework, lo stato attivo e il supporto di tasti di scelta rapida richiede che `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, e `Switch.UseLegacyAccessibilityFeatures.3` tutti impostati su `false`.|.NET Framework 4.8|
+|`Switch.UseLegacyToolTipDisplay`|Controlli se le descrizioni comandi vengono visualizzati quando un utente posiziona il cursore del mouse su un controllo WPF (`true`), o se vengono visualizzate sia in stato attivo della tastiera e tramite il tasto di scelta rapida da tastiera (`false`, il comportamento predefinito). Per abilitare entrambe le applicazioni in esecuzione in .NET Framework 4.8 ma destinate a versioni precedenti di .NET Framework, lo stato attivo e il supporto di tasti di scelta rapida richiede che `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, e `Switch.UseLegacyAccessibilityFeatures.3` tutti impostati su `false`.|.NET Framework 4.8|
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Controlla se le sequenze di tasti vuote nelle chiavi composte vengono ignorate dalla convalida dello schema XSD. Per altre informazioni, vedere [Mitigazione: Convalida di XML Schema](../../../migration-guide/mitigation-xml-schema-validation.md).|.NET Framework 4.6|  
   
 > [!NOTE]

@@ -2,12 +2,12 @@
 title: Terminologia relativa a Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877489"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306343"
 ---
 # <a name="entity-framework-terminology"></a>Terminologia relativa a Entity Framework
 In questo argomento definisce le condizioni includono spesso riferimenti a [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentazione. Vengono forniti collegamenti agli argomenti rilevanti in cui sono disponibili altre informazioni.  
@@ -27,7 +27,7 @@ In questo argomento definisce le condizioni includono spesso riferimenti a [!INC
 |concorrenza|Processo che consente a più utenti di accedere contemporaneamente ai dati condivisi e di modificarli. Per impostazione predefinita, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] implementa un modello di concorrenza ottimistica.|  
 |direzione|Fa riferimento alla natura asimmetrica di alcune associazioni. La direzione viene specificata con gli attributi `FromRole` e `ToRole` di un elemento `NavigationProperty` o `ReferentialConstraint` di uno schema.<br /><br /> Per altre informazioni, vedere [elemento NavigationProperty (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#navigationproperty-element-csdl) e [proprietà di navigazione](../../../../../docs/framework/data/adonet/navigation-property.md).|  
 |caricamento eager|Processo di caricamento di un set specifico di oggetti correlati insieme agli oggetti richiesti in modo esplicito nella query.|  
-|edmx (file)|File XML che contiene il modello concettuale in linguaggio CSDL, il modello di archiviazione in linguaggio SSDL e i relativi mapping in linguaggio MSL. Il file con estensione edmx viene creato dagli strumenti di [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]. Per altre informazioni, vedere [Cenni preliminari sul File edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).|  
+|edmx (file)|File XML che contiene il modello concettuale in linguaggio CSDL, il modello di archiviazione in linguaggio SSDL e i relativi mapping in linguaggio MSL. Il file con estensione edmx viene creato dagli strumenti di Entity Data Model. Per altre informazioni, vedere [Cenni preliminari sul File edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).|  
 |end|Entità che fa parte di un'associazione.<br /><br /> Per altre informazioni, vedere [elemento End (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl) e [finale dell'associazione](../../../../../docs/framework/data/adonet/association-end.md).|  
 |entità|Concetto nel dominio di un'applicazione dal quale viene definito un tipo di dati.<br /><br /> Per altre informazioni, vedere [elemento EntityType (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl) e [tipo di entità](../../../../../docs/framework/data/adonet/entity-type.md).|  
 |EntityClient|Un provider di dati ADO.NET indipendente dall'archiviazione che contiene classi come `EntityConnection`, `EntityCommand`, e `EntityDataReader`. Funziona con [!INCLUDE[esql](../../../../../includes/esql-md.md)] si connette al provider di dati ADO.NET specifici archiviazione, ad esempio `SqlClient`.<br /><br /> Per altre informazioni, vedere [EntityClient Provider per Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).|  

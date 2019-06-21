@@ -2,19 +2,19 @@
 title: 'Procedura: Definire la stringa di connessione'
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-ms.openlocfilehash: 7fb722acbb13b3502d004978581701cc70118ff8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8386f93d0e80aa824b1e91a130812b9b3a2b3619
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606104"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306376"
 ---
 # <a name="how-to-define-the-connection-string"></a>Procedura: Definire la stringa di connessione
 
 In questo argomento viene illustrato come definire la stringa di connessione usata per la connessione a un modello concettuale. In questo argomento si basa sul [Sales di AdventureWorks](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387147(v=vs.100)) modello concettuale. Il modello Sales di AdventureWorks viene usato in tutti gli argomenti correlati ad attività inclusi nella documentazione di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Questo argomento si presuppone che si è già configurato il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] e definito modello Sales di AdventureWorks. Per altre informazioni, vedere [Procedura: File di Mapping e definire il modello manualmente](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100)). Le procedure descritte in questo argomento sono incluse anche in [come: Configurare manualmente un progetto Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).
 
 > [!NOTE]
-> Se si usa la [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] procedura guidata in un progetto di Visual Studio, viene automaticamente generato un file con estensione edmx e configura il progetto deve utilizzare il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Per altre informazioni, vedere [Procedura: Usare la procedura guidata Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))
+> Se si usa la procedura guidata Entity Data Model in un progetto di Visual Studio, viene automaticamente generato un file con estensione edmx e configura il progetto deve utilizzare il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Per altre informazioni, vedere [Procedura: Usare la procedura guidata Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))
 
 ## <a name="to-define-the-entity-framework-connection-string"></a>Per definire la stringa di connessione Entity Framework
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: e9e5e09bdde82c7b818fd47275bdbfeda5850682
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f45019ccc54056371954965e105e309fd41d9ffd
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645749"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306208"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementazione di una transazione implicita utilizzando l'ambito di transazione
 La classe <xref:System.Transactions.TransactionScope> consente di contrassegnare facilmente un blocco di codice come ambito partecipante a una transazione, senza che sia necessario interagire con la transazione stessa. Un ambito di transazione può selezionare e gestire automaticamente la transazione di ambiente. In quanto efficiente e di facile utilizzo, la classe <xref:System.Transactions.TransactionScope> rappresenta la scelta ideale per sviluppare un'applicazione transazionale.  
@@ -124,7 +124,9 @@ using(TransactionScope scope1 = new TransactionScope())
  L'esempio mostra un blocco di codice in cui non esiste alcuna transazione di ambiente che crea un nuovo ambito (`scope1`) con l'opzione <xref:System.Transactions.TransactionScopeOption.Required>. L'ambito `scope1` è un ambito radice in quanto crea una nuova transazione (Transazione A) che definisce come transazione di ambiente. In `Scope1` quindi vengono creati tre nuovi oggetti, ciascuno con un valore diverso di <xref:System.Transactions.TransactionScopeOption>. Ad esempio, l'ambito `scope2` viene creato con l'opzione <xref:System.Transactions.TransactionScopeOption.Required> e, poiché esiste una transazione di ambiente, si aggiunge alla prima transazione creata dall'ambito `scope1`. Si noti che l'ambito `scope3` è l'ambito radice di una nuova transazione e che l'ambito `scope4` è privo di transazione di ambiente.  
   
  Benché il valore predefinito e più comunemente utilizzato dell'enumerazione <xref:System.Transactions.TransactionScopeOption> sia l'opzione <xref:System.Transactions.TransactionScopeOption.Required>, ognuno degli altri valori presenta uno scopo specifico.  
-  
+
+### <a name="non-transactional-code-inside-a-transaction-scope"></a>Codice non transazionale all'interno di un ambito di transazione
+
  L'opzione <xref:System.Transactions.TransactionScopeOption.Suppress> è utile quando si desidera preservare le operazioni eseguite dalla sezione di codice e non si desidera interrompere la transazione di ambiente se le operazioni hanno esito negativo. Ad esempio, questa opzione è utile quando si desidera eseguire operazioni di registrazione o di controllo, o quando si desidera pubblicare eventi agli iscritti, sia che la transazione di ambiente venga interrotta sia che ne venga eseguito il commit. Questo valore consente di includere una sezione di codice non transazionale in un ambito di transazione, come mostrato nell'esempio seguente.  
   
 ```csharp  

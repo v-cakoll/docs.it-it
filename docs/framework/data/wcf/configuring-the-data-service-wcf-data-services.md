@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 47c320b6d458ff1220808cacfb334e380b1edbc4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d2469324317fe19d2876dceefe68d70a5fd2eae3
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622749"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306290"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configurazione del servizio dati (WCF Data Services)
 Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], è possibile creare servizi dati che espongono [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. I dati di questi feed possono provenire da una varietà di origini dati. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Usa i provider di dati per esporre questi dati come un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Tra tali provider sono inclusi un provider di [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], un provider di reflection e un set di interfacce del provider di servizio dati personalizzate. L'implementazione del provider definisce il modello di dati per il servizio. Per altre informazioni, vedere [provider di servizi dati](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -69,7 +69,7 @@ Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], è possibile cr
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Non supportato|Non supportato|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|Non supportato|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Non supportato|Non supportato|Non supportato|Non supportato|  
   
- <sup>1</sup> in questo esempio `Address` rappresenta una proprietà di tipo complesso delle `Customers` entità che dispone di una proprietà denominata `StreetAddress`. Il modello usato dai servizi dati Northwind non definisce in modo esplicito questo tipo complesso. Quando il modello di dati viene definito usando il provider di [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], è possibile usare gli strumenti di [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] per definire tale tipo complesso. Per altre informazioni, vedere [Procedura: Creare e modificare tipi complessi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
+ <sup>1</sup> in questo esempio `Address` rappresenta una proprietà di tipo complesso delle `Customers` entità che dispone di una proprietà denominata `StreetAddress`. Il modello usato dai servizi dati Northwind non definisce in modo esplicito questo tipo complesso. Quando il modello di dati viene definito usando la [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provider, è possibile usare gli strumenti di Entity Data Model per definire tale tipo complesso. Per altre informazioni, vedere [Procedura: Creare e modificare tipi complessi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
   
  <sup>2</sup> questo URI è supportato quando viene definita una proprietà che restituisce un oggetto binario di grandi dimensioni (BLOB) come risorsa multimediale che appartiene a un'entità che è una voce di collegamento multimediale, che in questo caso, è `Customers`. Per altre informazioni, vedere [Provider di flusso](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   

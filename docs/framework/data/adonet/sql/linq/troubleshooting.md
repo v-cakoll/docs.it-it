@@ -2,12 +2,12 @@
 title: Risoluzione dei problemi
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: ebcfec475d20492f5ce1f971163544d9faa52223
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b34336871d599b72e548e2db90487c17377ba66
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613743"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307197"
 ---
 # <a name="troubleshooting"></a>Risoluzione dei problemi
 Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile incontrare nelle applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e vengono forniti suggerimenti per evitare o altrimenti ridurre l'effetto di questi problemi.  
@@ -42,7 +42,7 @@ Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile 
 ## <a name="expression-not-queryable"></a>Espressione che non può essere sottoposta a query  
  Se viene visualizzato il "espressione [espressione] non è disponibile per query; Probabilmente manca un riferimento all'assembly" errore, verificare quanto segue:  
   
-- L'applicazione possa essere usata con [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
+- L'applicazione è destinato a .NET Compact Framework 3.5.  
   
 - È presente un riferimento a `System.Core.dll` e `System.Data.Linq.dll`.  
   
