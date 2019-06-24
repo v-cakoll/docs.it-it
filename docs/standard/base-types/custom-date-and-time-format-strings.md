@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90e9dbbd43751412c25dd5ca4dae2d503139db69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4d7cd61a771f1c9658b5bc98ec85259da1c77f9
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634554"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268224"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Stringhe di formato di data e ora personalizzato
 
@@ -41,7 +41,7 @@ Le stringhe di formato data e ora personalizzate possono essere usate sia con va
 
 Nelle operazioni di analisi, le stringhe di formato di data e ora personalizzate possono essere usate con i metodi <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> e <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>. Questi metodi richiedono che una stringa di input sia esattamente conforme a un modello specifico affinché l'operazione di analisi abbia esito positivo. Nell'esempio seguente viene illustrata una chiamata al metodo <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> per analizzare una data che deve includere un giorno, un mese e un anno a due cifre.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
+[!code-csharp[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
 [!code-vb[Formatting.DateAndTime.Custom#18](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandparsing1.vb#18)]
 
 Nella tabella seguente vengono descritti gli identificatori di formato data e ora personalizzati e viene visualizzata una stringa di risultato prodotta da ogni identificatore di formato. Per impostazione predefinita, le stringhe di risultato riflettono le convenzioni di formattazione delle impostazioni cultura en-US. Se un identificatore di formato specifico produce una stringa di risultato localizzata, nell'esempio vengono anche indicate le impostazioni cultura alle quali si applica la stringa di risultato. Per altre informazioni sull'uso di stringhe di formato di data e ora personalizzato, vedere la sezione [Note](#notes).
@@ -509,7 +509,7 @@ In un'operazione di analisi, un anno a due cifre analizzato usando l'identificat
 
 L'esempio seguente include l'identificatore di formato personalizzato "yy" in una stringa di formato personalizzata.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
+[!code-csharp[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
 [!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
 [Torna alla tabella](#table)
@@ -638,7 +638,7 @@ Tutti gli altri caratteri vengono sempre interpretati come valori letterali cara
 
 Nell'esempio seguente i caratteri "PST" (abbreviazione di Pacific Standard Time, Ora solare Pacifico) e "PDT" (abbreviazione di Pacific Daylight Time, Ora legale Pacifico) rappresentano il fuso orario locale in una stringa di formato. Si noti che la stringa è inclusa nella stringa di risultato e che una stringa che include la stringa del fuso orario locale viene analizzata correttamente.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
+[!code-csharp[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
 [!code-vb[Formatting.DateAndTime.Custom#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx1.vb#20)]
 
 Esistono due modi per indicare che determinati caratteri devono essere interpretati come caratteri e non come caratteri riservati, per includerli in una stringa di risultato o eseguirne l'analisi in una stringa di input:
@@ -647,12 +647,12 @@ Esistono due modi per indicare che determinati caratteri devono essere interpret
 
 Nell'esempio seguente i caratteri "pst" (abbreviazione di Pacific Standard Time, Ora solare Pacifico) rappresentano il fuso orario locale in una stringa di formato. Poiché sia "s" che "t" sono stringhe di formato personalizzato, perché siano interpretate come valori letterali carattere è necessario usare un carattere di escape per entrambe.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
+[!code-csharp[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
 [!code-vb[Formatting.DateAndTime.Custom#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
 
 - Racchiudendo l'intera stringa tra virgolette o apostrofi. L'esempio seguente è simile a quello precedente, ad eccezione del fatto che "pst" è racchiuso tra virgolette per indicare che l'intera stringa delimitata deve essere interpretata come insieme di valori letterali carattere.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
+[!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
 ## <a name="notes"></a>Note

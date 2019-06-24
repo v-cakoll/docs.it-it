@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 6bf53cba73c4d7331b2a1c68bf7187c13281d844
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c7d5d4ef7d812e186813cd08f9e4e2adf2ab1a58
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633443"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306661"
 ---
 # <a name="lock-statement-c-reference"></a>Istruzione lock (Riferimenti per C#)
 
@@ -54,7 +54,7 @@ Non è possibile usare la parola chiave [await](await.md) nel corpo di un'istruz
 Quando si sincronizza l'accesso dei thread a una risorsa condivisa, applicare il blocco a un'istanza dell'oggetto dedicata (ad esempio `private readonly object balanceLock = new object();`) o a un'altra istanza che ha poche probabilità di essere usata come oggetto di blocco da parti del codice non correlate. Evitare di usare la stessa istanza di oggetto di blocco per diverse risorse condivise. Questo può originare problemi di deadlock o conflitti di blocco. In particolare, evitare di usare gli elementi seguenti come oggetti di blocco:
 
 - `this`, perché potrebbe essere usato dai chiamanti come blocco.
-- Istanze <xref:System.Type>, in quanto possono essere ottenute dall'operatore [typeof](typeof.md) o dalla reflection.
+- Istanze <xref:System.Type>, in quanto possono essere ottenute dall'operatore [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) o dalla reflection.
 - Istanze stringa, tra cui i valori letterali stringa, in quanto potrebbero essere [centralizzate](/dotnet/api/system.string.intern#remarks).
 
 ## <a name="example"></a>Esempio

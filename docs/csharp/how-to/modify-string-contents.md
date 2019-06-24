@@ -3,12 +3,12 @@ title: 'Procedura: Modificare il contenuto delle stringhe - Guida di C#'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cc1166d98a6cc07e0827a138cecb09c0530b899
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664019"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267766"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Procedura: Modificare il contenuto delle stringhe in C\#
 
@@ -67,7 +67,7 @@ Nell'esempio seguente viene illustrato come sostituire un gruppo di caratteri in
 Il codice **unsafe** consente di modificare una stringa "sul posto" dopo che è stata creata. Il codice unsafe ignora molte funzionalità di .NET progettate per ridurre al minimo determinati tipi di bug nel codice. Per modificare una stringa sul posto è necessario usare il codice unsafe, perché la classe string è progettata come tipo **non modificabile**. Dopo che è stato creato, il valore di tale classe non cambia. Il codice unsafe aggira questa proprietà accedendo e modificando la memoria usata da un oggetto `string` senza usare i metodi `string` normali.
 L'esempio seguente viene incluso per i rari casi in cui si vuole modificare una stringa sul posto mediante codice unsafe. L'esempio illustra l'uso della parola chiave `fixed`. La parola chiave `fixed` impedisce a Garbage Collector (GC) di spostare l'oggetto stringa in memoria mentre il codice accede alla memoria usando il puntatore unsafe. Mostra anche un possibile effetto collaterale delle operazioni con codice unsafe sulle stringhe, legato al modo in cui il compilatore C# archivia (inserisce) le stringhe internamente. In generale questa tecnica va usata solo quando è assolutamente necessario. Per altre informazioni, vedere gli articoli relativi a [unsafe](../language-reference/keywords/unsafe.md) e [fixed](../language-reference/keywords/fixed-statement.md). La Guida di riferimento alle API per <xref:System.String.Intern%2A> include informazioni sulla centralizzazione delle stringhe.
 
-[!code-csharp-interactive[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
 È possibile provare questi esempi esaminando il codice nel [repository GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 

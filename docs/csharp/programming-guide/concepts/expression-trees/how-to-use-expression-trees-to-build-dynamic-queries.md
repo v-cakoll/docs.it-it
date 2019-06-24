@@ -2,12 +2,12 @@
 title: 'Procedura: Usare alberi delle espressioni per la compilazione di query dinamiche (C#)'
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 33dbca31af3c088f4cd4af830c690cf9cdaea657
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dc8ff7504464e05ce19df3f0dfe907476a17413a
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586097"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170337"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Procedura: Usare alberi delle espressioni per la compilazione di query dinamiche (C#)
 In LINQ gli alberi delle espressioni vengono usati per rappresentare query strutturate destinate alle origini dati che implementano <xref:System.Linq.IQueryable%601>. Il provider LINQ, ad esempio, implementa l'interfaccia <xref:System.Linq.IQueryable%601> per l'esecuzione di query su archivi dati relazionali. Il compilatore C# compila le query destinate a tali origini dati nel codice di un albero delle espressioni in runtime. Il provider di query può quindi percorrere la struttura dei dati dell'albero delle espressioni e convertirla in un linguaggio di query adatto all'origine dati.  
@@ -19,7 +19,10 @@ In LINQ gli alberi delle espressioni vengono usati per rappresentare query strut
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come usare alberi delle espressioni per costruire una query su un'origine dati `IQueryable` e quindi eseguirla. Il codice compila un albero delle espressioni per rappresentare la query seguente:  
   
- `companies.Where(company => (company.ToLower() == "coho winery" || company.Length > 16)).OrderBy(company => company)`  
+ ```csharp
+ companies.Where(company => (company.ToLower() == "coho winery" || company.Length > 16))
+          .OrderBy(company => company)
+ ```
   
  I metodi factory nello spazio dei nomi <xref:System.Linq.Expressions> vengono usati per creare alberi delle espressioni che rappresentano le espressioni che costituiscono la query complessiva. Le espressioni che rappresentano le chiamate ai metodi degli operatori query standard fanno riferimento alle implementazioni <xref:System.Linq.Queryable> di questi metodi. L'albero delle espressioni finale viene passato all'implementazione <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> del provider dell'origine dati `IQueryable` per creare una query eseguibile di tipo `IQueryable`. I risultati si ottengono enumerando tale variabile di query.  
   

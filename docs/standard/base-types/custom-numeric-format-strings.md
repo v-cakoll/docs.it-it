@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab06c2d87de9483d7a3e9eb810f4be1f3278ddc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634516"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268223"
 ---
 # <a name="custom-numeric-format-strings"></a>Stringhe in formato numerico personalizzato
 
@@ -36,7 +36,7 @@ ms.locfileid: "64634516"
   
 <a name="table"></a> Nella tabella seguente vengono descritti gli identificatori di formato numerico personalizzati e viene visualizzato l'output di esempio prodotto da ogni identificatore di formato. Vedere la sezione [Note](#NotesCustomFormatting) per informazioni aggiuntive sull'utilizzo di stringhe di formato numerico personalizzate e la sezione [Esempio](#example) per un'illustrazione completa dell'utilizzo.  
   
-|Identificatore di formato|nome|Description|Esempi|  
+|Identificatore di formato|nome|DESCRIZIONE|Esempi|  
 |----------------------|----------|-----------------|--------------|  
 |"0"|Segnaposto zero|Sostituisce lo zero con la cifra corrispondente, se disponibile; in caso contrario, lo zero viene visualizzato nella stringa di risultato.<br /><br /> Altre informazioni: [Identificatore personalizzato "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
 |"#"|Segnaposto per cifre|Sostituisce il simbolo "#" con la cifra corrispondente, se disponibile; in caso contrario, nella stringa di risultato non viene visualizzata nessuna cifra.<br /><br /> Si noti che nella stringa di risultato non viene visualizzata nessuna cifra se la cifra corrispondente nella stringa di input equivale a uno 0 non significativo. Ad esempio, 0003 ("####") -> 3.<br /><br /> Altre informazioni: [Identificatore personalizzato "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
@@ -85,7 +85,7 @@ ms.locfileid: "64634516"
  Per restituire una stringa di risultato in cui le cifre mancanti o gli zeri iniziali vengono sostituiti da spazi, usare la [funzionalità di formattazione composita](../../../docs/standard/base-types/composite-formatting.md) e specificare una lunghezza di campo, come illustrato nell'esempio seguente.  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
+ [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
  [Torna alla tabella](#table)  
@@ -189,7 +189,7 @@ ms.locfileid: "64634516"
 ## <a name="the--section-separator"></a>Separatore di sezione ";"  
  Il punto e virgola (;) è un identificatore di formato condizionale che applica una formattazione diversa a un numero, a seconda del fatto che il suo valore sia positivo, negativo o zero. A tale scopo, una stringa di formato personalizzata può contenere un massimo di tre sezioni separate da punti e virgola. Queste sezioni sono descritte nella tabella seguente.  
   
-|Numero di sezioni|Description|  
+|Numero di sezioni|DESCRIZIONE|  
 |------------------------|-----------------|  
 |Una|La stringa di formato viene applicata a tutti i valori.|  
 |Due|La prima sezione viene applicata ai valori positivi e agli zeri, la seconda ai valori negativi.<br /><br /> Se il numero da formattare è negativo, ma diventa zero dopo l'arrotondamento in base al formato della seconda sezione, lo zero risultante viene formattato in base alla prima sezione.|  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b4217221cc5199b9d8904be1ca3073878378b4e9
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208124"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268178"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analisi di stringhe di data e ora in .NET
 
@@ -65,14 +65,14 @@ L'esempio seguente illustra l'uso del metodo <xref:System.DateTime.Parse%2A?disp
 
 È anche possibile definire in modo esplicito le impostazioni cultura di cui usare le convenzioni di formattazione per l'analisi di una stringa. È necessario specificare uno degli oggetti <xref:System.Globalization.DateTimeFormatInfo> standard restituiti dalla proprietà <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>. L'esempio seguente usa un provider di formato per analizzare una stringa in lingua tedesca in un <xref:System.DateTime>. Crea un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura `de-DE`. L'oggetto `CultureInfo` assicura l'analisi corretta di questa stringa particolare. Questo preclude qualsiasi impostazione in <xref:System.Threading.Thread.CurrentCulture> di <xref:System.Threading.Thread.CurrentThread>.  
   
-[!code-csharp-interactive[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
+[!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
 [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#2)]
 
 Tuttavia, sebbene sia possibile usare overload del metodo <xref:System.DateTime.Parse%2A> per specificare provider di formato personalizzati, il metodo non supporta l'analisi di formati non standard. Per analizzare una data e un'ora espresse in un formato non standard, usare il metodo <xref:System.DateTime.ParseExact%2A>.  
 
 <a name="styles-example"></a>L'esempio seguente usa l'enumerazione <xref:System.Globalization.DateTimeStyles> per specificare che le informazioni sulla data e l'ora correnti non devono essere aggiunte a <xref:System.DateTime> per i campi non specificati.  
 
-[!code-csharp-interactive[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
+[!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
  
 ## <a name="parseexact"></a>ParseExact
@@ -81,7 +81,7 @@ Il metodo <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> conv
 
 Nell'esempio seguente, al metodo <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> viene passato un oggetto stringa da analizzare, seguito da un identificatore di formato, seguito da un oggetto <xref:System.Globalization.CultureInfo>. Questo metodo <xref:System.DateTime.ParseExact%2A> consente di analizzare solo le stringhe con il modello di data estesa nelle impostazioni cultura `en-US`.  
 
-[!code-csharp-interactive[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
+[!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
 Ogni overload dei metodi <xref:System.DateTime.Parse%2A> e <xref:System.DateTime.ParseExact%2A> usa anche un parametro <xref:System.IFormatProvider> che indica informazioni specifiche delle impostazioni cultura sulla formattazione della stringa. Questo oggetto <xref:System.IFormatProvider> è un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura standard o un oggetto <xref:System.Globalization.DateTimeFormatInfo> restituito dalla proprietà <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  <xref:System.DateTime.ParseExact%2A> usa anche un argomento stringa o matrice di stringhe aggiuntivo che definisce uno o più formati di data e ora personalizzati.  
