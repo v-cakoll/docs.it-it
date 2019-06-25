@@ -2,12 +2,12 @@
 title: Utilizzo del gestore di associazione della serializzazione
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
-ms.openlocfilehash: 677decebcf444fed95311bd02acf8a96e0a4eca9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 10900950b935b484053fe8e37263f0dfc25eba99
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591773"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348451"
 ---
 # <a name="usage-of-serialization-binder"></a>Utilizzo del gestore di associazione della serializzazione
 In questo esempio viene illustrato come utilizzare <xref:System.Runtime.Serialization.SerializationBinder> per modificare la versione di un tipo generico quando è serializzato.  
@@ -18,7 +18,7 @@ In questo esempio viene illustrato come utilizzare <xref:System.Runtime.Serializ
 ## <a name="discussion"></a>Discussione  
  Questo esempio viene illustrato come due entità che sono targeting versioni diverse dell'oggetto può di .NET Framework di comunicare utilizzando il formattatore binario e lo strumento di associazione della serializzazione.  
   
- Lo sviluppo di questo esempio è stato realizzato tramite .NET Remoting. L'esempio è costituito da un server destinato a [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] che implementa un contratto con tipi generici e due client diversi, uno destinato a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] e un altro destinato a [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)].  
+In questo esempio è stato sviluppato utilizzando .NET Remoting. È costituito da un server di destinazione [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)], che implementa un contratto con tipi generici e due client diversi, una destinazione .NET Framework 2.0 e un altro destinato a [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)].  
   
  Il server allega un oggetto <xref:System.Runtime.Serialization.SerializationBinder> al formattatore binario per essere in grado di modificare di conseguenza la versione dei tipi durante la serializzazione, consentendo a entrambi i client di deserializzare correttamente tali tipi.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: 3c26b08dd7ec70a1763fce89b34376350b985fb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5545e89f744c3874840a773556e0670abc0a46a9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615383"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348062"
 ---
 # <a name="geometry-overview"></a>Cenni preliminari sulle classi Geometry
 Questa panoramica viene descritto come utilizzare il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> classi per descrivere le forme. In questo argomento presenta le differenze tra <xref:System.Windows.Media.Geometry> gli oggetti e <xref:System.Windows.Shapes.Shape> elementi.  
@@ -105,7 +105,7 @@ Oggetto EllipseGeometry usato per ritagliare un controllo Image
   
 <a name="wcpsdk_graphics_geometry_pathgeometry"></a>   
 ## <a name="path-geometries"></a>Geometrie di tracciato  
- Il <xref:System.Windows.Media.PathGeometry> classe e il relativo equivalente più semplice, il <xref:System.Windows.Media.StreamGeometry> di classi, forniscono i mezzi per descrivere più figure complesse costituite da archi, curve e linee.  
+ Il <xref:System.Windows.Media.PathGeometry> classe e il relativo equivalente semplice, il <xref:System.Windows.Media.StreamGeometry> di classi, forniscono i mezzi per descrivere più figure complesse costituite da archi, curve e linee.  
   
  Il fulcro di un' <xref:System.Windows.Media.PathGeometry> è una raccolta di <xref:System.Windows.Media.PathFigure> oggetti, così chiamati perché ogni figura descrive una forma discreta nel <xref:System.Windows.Media.PathGeometry>. Ciascuna <xref:System.Windows.Media.PathFigure> è a sua volta composto da uno o più <xref:System.Windows.Media.PathSegment> oggetti, ognuno dei quali descrive un segmento della figura.  
   

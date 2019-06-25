@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 4a669b4eefeeb91c0835dc41a1c8736aacf0e14f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586659"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348475"
 ---
 # <a name="security-in-windows-forms-overview"></a>Cenni preliminari sulla sicurezza in Windows Form
 
@@ -52,7 +52,7 @@ Quando si sviluppa un'applicazione che verrà eseguita in un ambiente parzialmen
 
 Quando si richiedono autorizzazioni facoltative, è necessario gestire le eccezioni di sicurezza che verranno generate nel caso in cui l'applicazione esegua un'azione che richiede autorizzazioni non concesse. La corretta gestione dell'eccezione <xref:System.Security.SecurityException> assicurerà che l'esecuzione dell'applicazione non venga interrotta. L'eccezione può essere usata dall'applicazione per determinare se è necessario disabilitare una funzionalità per l'utente. Un'applicazione, ad esempio, può disabilitare l'opzione di menu **Salva** se l'autorizzazione necessaria non viene concessa.
 
-In alcuni casi, è difficile sapere se è stata effettuata l'asserzione di tutte le autorizzazioni appropriate. È possibile, ad esempio, che una chiamata a metodo che a prima vista potrebbe sembrare innocua, a un certo punto dell'esecuzione richieda l'accesso al file system. Se l'applicazione non viene distribuita con tutte le autorizzazioni necessarie, è possibile che l'esecuzione risulti corretta nel proprio computer ma non dopo la distribuzione. Entrambi i [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK e Visual Studio 2005 sono disponibili strumenti per il calcolo delle autorizzazioni richieste da un'applicazione: MT.exe comando dello strumento di riga e la funzionalità Elabora autorizzazioni di Visual Studio, rispettivamente.
+In alcuni casi, è difficile sapere se è stata effettuata l'asserzione di tutte le autorizzazioni appropriate. È possibile, ad esempio, che una chiamata a metodo che a prima vista potrebbe sembrare innocua, a un certo punto dell'esecuzione richieda l'accesso al file system. Se l'applicazione non viene distribuita con tutte le autorizzazioni necessarie, è possibile che l'esecuzione risulti corretta nel proprio computer ma non dopo la distribuzione. Sia il SDK per .NET Framework 2.0 e Visual Studio 2005 sono disponibili strumenti per il calcolo delle autorizzazioni richieste da un'applicazione: MT.exe comando dello strumento di riga e la funzionalità Elabora autorizzazioni di Visual Studio, rispettivamente.
 
 Negli argomenti riportati di seguito vengono illustrate le funzionalità di sicurezza aggiuntive di Windows Form.
 
@@ -77,7 +77,7 @@ Queste tecnologie sono descritte nella tabella seguente.
 
 La tecnologia più adatta dipenderà dallo specifico ambiente di distribuzione. Per altre informazioni, vedere [Scelta di una strategia di distribuzione ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Per impostazione predefinita [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] le applicazioni distribuite mediante Visual Studio o il [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] strumenti SDK (Mage.exe e MageUI.exe) configurati per l'esecuzione in un computer client con attendibilità totale. Se si vuole distribuire l'applicazione in un ambiente parzialmente attendibile o assegnando soltanto alcune autorizzazioni aggiuntive, sarà necessario modificare le impostazioni predefinite. È possibile farlo con Visual Studio o [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] strumento SDK MageUI.exe quando si configura la distribuzione. Per altre informazioni su come usare MageUI.exe, vedere questa procedura dettagliata: Distribuzione di un'applicazione ClickOnce dalla riga di comando.  Vedere anche [come: Impostare autorizzazioni personalizzate per un'applicazione ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) o [come: Impostare autorizzazioni personalizzate per un'applicazione ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+Per impostazione predefinita, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] le applicazioni distribuite con Visual Studio o gli strumenti di .NET Framework SDK (Mage.exe e MageUI.exe) configurate per l'esecuzione in un computer client con attendibilità totale. Se si vuole distribuire l'applicazione in un ambiente parzialmente attendibile o assegnando soltanto alcune autorizzazioni aggiuntive, sarà necessario modificare le impostazioni predefinite. È possibile farlo con Visual Studio o lo strumento .NET Framework SDK MageUI.exe quando si configura la distribuzione. Per altre informazioni su come usare MageUI.exe, vedere questa procedura dettagliata: Distribuzione di un'applicazione ClickOnce dalla riga di comando.  Vedere anche [come: Impostare autorizzazioni personalizzate per un'applicazione ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) o [come: Impostare autorizzazioni personalizzate per un'applicazione ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Per altre informazioni sugli aspetti di sicurezza di [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] e sull'elevazione delle autorizzazioni, vedere [Protezione di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Per altre informazioni sulla distribuzione di applicazioni attendibili, vedere [Panoramica della distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview).
 

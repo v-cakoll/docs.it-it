@@ -2,12 +2,12 @@
 title: Attivazione di istanze
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 088722ba19a1f38e8a341e34a8344963021f1113
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e0d5a91a0f0ccc02d13ef96c3470da1942cc520
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584926"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348252"
 ---
 # <a name="instance-activation"></a>Attivazione di istanze
 L'archivio di istanze del flusso di lavoro SQL esegue un'attività interna che attiva e rileva periodicamente istanze del flusso di lavoro eseguibili o attivabili nel database di persistenza. Se rileva un'istanza del flusso di lavoro eseguibile, notifica all'host del flusso di lavoro la possibilità di attivare l'istanza. Se l'archivio di istanze rileva un'istanza del flusso di lavoro attivabile, invia una notifica a un host generico che attiva un host del flusso di lavoro il quale, a sua volta, esegue l'istanza del flusso di lavoro. Nelle sezioni seguenti di questo argomento viene illustrato dettagliatamente il processo di attivazione delle istanze.  
@@ -35,7 +35,7 @@ L'archivio di istanze del flusso di lavoro SQL esegue un'attività interna che a
 ## <a name="generic-hosts"></a>Host generici  
  Un host generico è un host con il valore della proprietà dei metadati **WorkflowServiceType** per gli host generici è impostato su **workflowservicetype. Any** per indicare che può gestire qualsiasi tipo di flusso di lavoro. Un host generico dispone di un parametro XName denominato **ActivationType**.  
   
- La Store di istanza del flusso di lavoro SQL supporta attualmente host generici con il valore del parametro ActivationType impostato su **WAS**. Se il parametro ActivationType non è impostato su WAS, l'archivio di istanze del flusso di lavoro SQL genera un'eccezione <xref:System.Runtime.DurableInstancing.InstancePersistenceException>. Il servizio di gestione del flusso di lavoro fornito con il [!INCLUDE[dublin](../../../includes/dublin-md.md)] è un host generico che ha il tipo di attivazione impostato su **WAS**.  
+ La Store di istanza del flusso di lavoro SQL supporta attualmente host generici con il valore del parametro ActivationType impostato su **WAS**. Se il parametro ActivationType non è impostato su WAS, l'archivio di istanze del flusso di lavoro SQL genera un'eccezione <xref:System.Runtime.DurableInstancing.InstancePersistenceException>. Il servizio di gestione del flusso di lavoro che viene fornito con le funzionalità di hosting di Windows Server AppFabric è un host generico che ha il tipo di attivazione impostato su **WAS**.  
   
  Per l'attivazione di WAS, un host generico richiede un set di parametri di attivazione per derivare l'indirizzo dell'endpoint in cui possono essere attivati nuovi host. I parametri per l'attivazione di WAS sono: nome del sito, percorso dell'applicazione relativa al sito e percorso del servizio relativo all'applicazione. L'archivio di istanze del flusso di lavoro SQL archivia questi parametri di attivazione durante l'esecuzione dell'oggetto <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>.  
   

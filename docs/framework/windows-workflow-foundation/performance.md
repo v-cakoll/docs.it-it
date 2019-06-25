@@ -2,12 +2,12 @@
 title: Prestazioni di Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 51cd5b248789c85ab06073f1bb41a83e5f97c139
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592542"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348531"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Prestazioni di Windows Workflow Foundation 4
 
@@ -31,7 +31,7 @@ ms.locfileid: "65592542"
 ### <a name="wf-runtime"></a>Runtime di WF
  L'elemento di base del runtime di [!INCLUDE[wf1](../../../includes/wf1-md.md)] è un'utilità di pianificazione asincrona che controlla l'esecuzione delle attività in un flusso di lavoro. Fornisce un ambiente di esecuzione prevedibile e con prestazioni elevate per le attività. L'ambiente dispone di un contratto ben definito per l'esecuzione, la continuazione, il completamento, l'annullamento, le eccezioni e un modello di threading prevedibile.
 
- Rispetto a WF3, il runtime di WF4 dispone di un'utilità di pianificazione più efficiente. Sfrutta il pool di thread i/o stesso utilizzato per WCF, che è molto efficiente nell'esecuzione degli elementi di lavoro in batch. La coda interna dell'utilità di pianificazione degli elementi di lavoro è ottimizzata per la maggior parte dei modelli di utilizzo più comuni. Il runtime di WF4 gestisce anche gli stati di esecuzione in modo molto semplice con sincronizzazione minima e logica della gestione degli eventi, mentre WF3 dipende da operazioni di registrazione e chiamata complesse per eseguire la sincronizzazione delle transizioni degli stati.
+ Rispetto a WF3, il runtime di WF4 dispone di un'utilità di pianificazione più efficiente. Sfrutta il pool di thread i/o stesso utilizzato per WCF, che è molto efficiente nell'esecuzione degli elementi di lavoro in batch. La coda interna dell'utilità di pianificazione degli elementi di lavoro è ottimizzata per la maggior parte dei modelli di utilizzo più comuni. Il runtime di WF4 gestisce anche gli stati di esecuzione in un modo molto semplice con sincronizzazione minima e di gestione per la logica, mentre WF3 dipende con intensa attività di registrazione e la chiamata per eseguire la sincronizzazione complessa per le transizioni di stato di eventi.
 
 ### <a name="data-storage-and-flow"></a>Archiviazione e flusso dei dati
  In WF3 i dati associati a un'attività vengono modellati tramite le proprietà di dipendenza implementate dal tipo <xref:System.Windows.DependencyProperty>. Il modello di proprietà di dipendenza è stata introdotta in Windows Presentation Foundation (WPF). In generale, questo modello è molto flessibile per supportare data binding di facile utilizzo e altre funzionalità dell'interfaccia utente. Le proprietà devono, tuttavia, essere definite come campi statici nella definizione di flusso di lavoro. Ogni volta che il runtime di [!INCLUDE[wf1](../../../includes/wf1-md.md)] imposta o ottiene i valori delle proprietà, comporta l'uso di una logica di ricerca molto complessa.
@@ -43,7 +43,7 @@ ms.locfileid: "65592542"
 ### <a name="control-flow"></a>Flusso di controllo
  In modo analogo a quanto avviene con qualsiasi linguaggio di programmazione, [!INCLUDE[wf1](../../../includes/wf1-md.md)] fornisce il supporto per i flussi di controllo per le definizioni dei flussi di lavoro introducendo un set di attività del flusso di controllo per l'ordinamento in sequenza, l'esecuzione in ciclo, la creazione di rami e altri modelli. In WF3, quando è necessario eseguire di nuovo la stessa attività, viene creato un nuovo oggetto <xref:System.Workflow.ComponentModel.ActivityExecutionContext> e l'attività viene duplicata usando una logica di serializzazione e deserializzazione complessa basata su <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Generalmente i flussi di controllo iterativi hanno prestazioni più rallentate rispetto all'esecuzione di una sequenza di attività.
 
- WF4 li gestisce in modo molto diverso. Prende il modello di attività, crea un nuovo oggetto ActivityInstance e lo aggiunge alla coda dell'utilità di pianificazione. L'intero processo comporta solo la creazione di un oggetto esplicito ed è molto semplice.
+ WF4 li gestisce in modo molto diverso. Prende il modello di attività, crea un nuovo oggetto ActivityInstance e lo aggiunge alla coda dell'utilità di pianificazione. L'intero processo solo comporta la creazione di oggetti espliciti e non è molto leggero.
 
 ### <a name="asynchronous-programming"></a>Programmazione asincrona
  In genere le applicazioni offrono prestazioni migliori e una maggiore scalabilità con la programmazione asincrona per le operazioni di blocco a esecuzione prolungata, quali ad esempio le operazioni di calcolo distribuite o I/O. WF4 fornisce il supporto asincrono tramite tipi di attività di base <xref:System.Activities.AsyncCodeActivity>, <xref:System.Activities.AsyncCodeActivity%601>. Il runtime supporta in modo nativo le attività asincrone e pertanto può inserire automaticamente l'istanza in un'area di non persistenza mentre è in sospeso il lavoro asincrono. Le attività personalizzate possono derivare da questi tipi per eseguire un lavoro asincrono senza contenere il thread dell'utilità di pianificazione del flusso di lavoro e senza bloccare alcuna delle attività che possono essere eseguite in parallelo.
@@ -444,8 +444,8 @@ Nella tabella seguente vengono illustrati i risultati dell'esecuzione di un flus
 
 |Test|Velocità effettiva (flussi di lavoro/sec)|
 |----------|-----------------------------------|
-|Sequenza di WF3 nel runtime di WF3|1.576|
-|Sequenza di WF3 nel runtime di WF4 usando Interop|2.745|
+|Sequenza di WF3 nel runtime di WF3|1\.576|
+|Sequenza di WF3 nel runtime di WF4 usando Interop|2\.745|
 |Sequenza di WF4|153.582|
 
  L'utilizzo dell'attività Interop in WF3 migliora notevolmente le prestazioni.  Tuttavia, se confrontato con le attività di WF4, l'aumento è trascurabile.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 558600c9256f205598288f9e20d38cb94608c920
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592613"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348477"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Rendering dei controlli con stili visivi
 .NET Framework fornisce supporto per il rendering dei controlli e altri utenti di Windows gli elementi dell'interfaccia usando gli stili nei sistemi operativi che li supportano. In questo argomento illustra i diversi livelli di supporto in .NET Framework per il rendering dei controlli e altri elementi dell'interfaccia utente con lo stile di visualizzazione corrente del sistema operativo.  
@@ -23,7 +23,7 @@ ms.locfileid: "65592613"
 ## <a name="rendering-classes-for-common-controls"></a>Classi di rendering per i controlli comuni  
  Il rendering di un controllo si riferisce alla grafica dell'interfaccia utente di un controllo. Lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> include la classe <xref:System.Windows.Forms.ControlPaint> per il rendering di alcuni controlli comuni di Windows Form. Questa classe consente tuttavia di disegnare controlli nello stile classico di Windows, pertanto può essere difficile mantenere un'esperienza coerente per l'interfaccia utente quando si creano controlli personalizzati nelle applicazioni in cui sono abilitati gli stili di visualizzazione.  
   
- [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] include classi nello spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> che eseguono il rendering delle parti e degli stati dei controlli comuni con gli stili di visualizzazione. Ciascuna di queste classi include metodi `static` per la creazione del controllo o delle relative parti in un determinato stato con lo stile di visualizzazione corrente del sistema operativo.  
+ .NET Framework 2.0 include le classi di <xref:System.Windows.Forms?displayProperty=nameWithType> dello spazio dei nomi che eseguono il rendering di parti e stati dei controlli comuni con gli stili di visualizzazione. Ciascuna di queste classi include metodi `static` per la creazione del controllo o delle relative parti in un determinato stato con lo stile di visualizzazione corrente del sistema operativo.  
   
  Alcune di queste classi sono progettate per creare il relativo controllo, indipendentemente dalla disponibilità degli stili di visualizzazione. Se gli stili di visualizzazione sono abilitati, i membri della classe creeranno il relativo controllo con gli stili impostati. Se invece sono disabilitati, i membri della classe creeranno il controllo nello stile classico di Windows. Tali classi includono:  
   

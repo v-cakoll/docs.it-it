@@ -4,26 +4,26 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8449fe048cc9149e8e8cf02f27f131c0d90d6984
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592234"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348191"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Panoramica sulle associazioni di Windows Communication Foundation
 Le associazioni sono oggetti che vengono utilizzati per specificare i dettagli di comunicazione necessarie per connettersi all'endpoint di un servizio Windows Communication Foundation (WCF). Ogni endpoint in un servizio WCF richiede un'associazione essere specificato bene. Questo argomento descrive i tipi dei dettagli di comunicazione definiti dalle associazioni, gli elementi di un'associazione, le associazioni incluse in WCF e come specificare un'associazione per un endpoint.  
   
 ## <a name="what-a-binding-defines"></a>Elementi definiti da un'associazione  
- Le informazioni presenti in un'associazione possono essere molto semplici o molto complesse. L'associazione più semplice specifica solo il protocollo di trasporto (ad esempio HTTP) che deve essere usato per connettersi all'endpoint. In termini più generali, le informazioni contenute in un'associazione sulla modalità di connessione a un endpoint rientrano in una delle categorie seguenti.  
+ Le informazioni presenti in un'associazione possono essere molto semplici o molto complesse. L'associazione più semplice specifica solo il protocollo di trasporto (ad esempio HTTP) che deve essere usato per connettersi all'endpoint. Più in generale, le informazioni contenute in un'associazione sulla connessione a un endpoint rientrano in una delle categorie seguenti:  
   
- Protocolli  
+ **Protocolli**  
  Determina il meccanismo di sicurezza usato: la funzionalità di messaggistica affidabile o le impostazioni di flusso del contesto della transazione.  
   
- Codifica  
+ **Codifica**  
  Determina la codifica del messaggio (ad esempio, testo o binario).  
   
- Trasporto  
+ **Trasporto**  
  Determina il protocollo di trasporto sottostante da usare (ad esempio, TCP o HTTP).  
   
 ## <a name="the-elements-of-a-binding"></a>Elementi di un'associazione  

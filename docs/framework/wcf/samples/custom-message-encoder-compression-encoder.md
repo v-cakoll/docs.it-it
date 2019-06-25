@@ -2,12 +2,12 @@
 title: 'Codificatore di messaggi personalizzati: Codificatore di compressione'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 6ada1cdeee02eb747f9f85abc9c99602d5f26b72
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 32ca96987a86c04c227f8bb0d680f647898dfccf
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878453"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348434"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Codificatore di messaggi personalizzati: Codificatore di compressione
 In questo esempio viene illustrato come implementare un codificatore personalizzato utilizzando la piattaforma di Windows Communication Foundation (WCF).  
@@ -222,7 +222,7 @@ binding.Namespace = "http://tempuri.org/bindings";
   
  Sebbene questo possa essere sufficiente per la maggioranza degli scenari utente, se un servizio deve essere ospitato sul Web è essenziale che supporti un file di configurazione. Per supportare lo scenario ospitato sul Web, è necessario sviluppare un gestore di configurazione personalizzato per consentire a un elemento di associazione personalizzato di essere configurabile in un file.  
   
- È possibile compilare un gestore di configurazione per l'elemento di associazione nel sistema di configurazione fornito da [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]. Il gestore di configurazione per l'elemento di associazione deve derivare dalla classe <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. La proprietà `BindingElementType` viene utilizzata per informare il sistema di configurazione del tipo di elemento di associazione da creare per questa sezione. Tutti gli aspetti di `BindingElement` che possono essere impostati devono essere esposti come proprietà nella classe derivata <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. <xref:System.Configuration.ConfigurationPropertyAttribute> viene utilizzato per assistere nell'operazione di mapping degli attributi dell'elemento di configurazione alle proprietà e nell'impostazione dei valori predefiniti se gli attributi non sono disponibili. Dopo aver caricato i valori della configurazione e averli applicati alle proprietà, viene chiamato il metodo <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> che converte le proprietà in un'istanza concreta di un elemento di associazione. Il metodo <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A> viene utilizzato per convertire le proprietà della classe derivata <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> nei valori da impostare sull'elemento di associazione appena creato.  
+ È possibile compilare un gestore di configurazione per l'elemento di associazione sul sistema di configurazione. Il gestore di configurazione per l'elemento di associazione deve derivare dalla classe <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Il <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> informa il sistema di configurazione del tipo di elemento di associazione da creare per questa sezione. Tutti gli aspetti di `BindingElement` che possono essere impostati devono essere esposti come proprietà nella classe derivata <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Il <xref:System.Configuration.ConfigurationPropertyAttribute> assiste nel mapping degli attributi di elemento di configurazione alle proprietà e impostazione dei valori predefiniti se non sono presenti attributi. Dopo aver caricato i valori della configurazione e averli applicati alle proprietà, viene chiamato il metodo <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> che converte le proprietà in un'istanza concreta di un elemento di associazione. Il <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> metodo viene utilizzato per convertire le proprietà di <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> classe derivata nei valori da impostare per l'elemento di associazione appena creato.  
   
  Nel codice di esempio seguente viene mostrata l'implementazione di `GZipMessageEncodingElement`.  
   
