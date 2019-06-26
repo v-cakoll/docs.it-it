@@ -2,12 +2,12 @@
 title: Distribuzione di un servizio WCF ospitato in Internet Information Services (IIS)
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025728"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402290"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Distribuzione di un servizio WCF ospitato in Internet Information Services (IIS)
 
@@ -43,7 +43,7 @@ Se IIS è già presente nel computer, il processo di installazione di .NET Frame
 
 Servizi WCF ospitati in IIS devono risiedere all'interno di un'applicazione IIS. È possibile creare una nuova applicazione IIS per ospitare servizi WCF in modo esclusivo. In alternativa, è possibile distribuire un servizio WCF in un'applicazione esistente che sta già ospitando contenuto ASP.NET 2.0 (ad esempio pagine aspx e servizi Web ASP.NET [ASMX]). Per altre informazioni su queste opzioni, vedere la "Hosting WCF Side-by-Side con ASP.NET" e "Hosting WCF Services in modalità di compatibilità ASP.NET" sezioni nel [servizi WCF e ASP.NET](wcf-services-and-aspnet.md).
 
-Si noti che in [!INCLUDE[iis601](../../../../includes/iis601-md.md)] e versioni successive un'applicazione di programmazione isolata e orientata a oggetti viene riavviata periodicamente. Il valore predefinito è 1740 minuti. Il valore massimo supportato è 71.582 minuti. Il riavvio può essere disabilitato. Per altre informazioni su questa proprietà, vedere la [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
+Si noti che IIS 6.0 e versioni successive riavviare periodicamente un'applicazione di programmazione isolata e orientata. Il valore predefinito è 1740 minuti. Il valore massimo supportato è 71.582 minuti. Il riavvio può essere disabilitato. Per altre informazioni su questa proprietà, vedere la [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>Creare un file con estensione svc per il servizio WCF
 
@@ -103,7 +103,7 @@ Per gli endpoint del servizio ospitati in IIS è necessario utilizzare sempre in
 
 ### <a name="available-transports"></a>Trasporti disponibili
 
-Servizi WCF ospitati in IIS 5.1 e [!INCLUDE[iis601](../../../../includes/iis601-md.md)] sono limitate all'uso di comunicazioni basate su HTTP. Su queste piattaforme IIS, la configurazione di un servizio ospitato affinché utilizzi un'associazione non HTTP, comporta un errore durante l'attivazione del servizio. Per [!INCLUDE[iisver](../../../../includes/iisver-md.md)], i trasporti supportati includono HTTP, Net.TCP, Net.Pipe, Net.MSMQ e msmq.formatname per la compatibilità delle versioni precedenti con le applicazioni MSMQ esistenti.
+Servizi WCF ospitati in IIS 5.1 e 6.0 di IIS sono limitate all'uso di comunicazioni basate su HTTP. Su queste piattaforme IIS, la configurazione di un servizio ospitato affinché utilizzi un'associazione non HTTP, comporta un errore durante l'attivazione del servizio. Per [!INCLUDE[iisver](../../../../includes/iisver-md.md)], i trasporti supportati includono HTTP, Net.TCP, Net.Pipe, Net.MSMQ e msmq.formatname per la compatibilità delle versioni precedenti con le applicazioni MSMQ esistenti.
 
 ### <a name="http-transport-security"></a>Protezione del trasporto HTTP
 

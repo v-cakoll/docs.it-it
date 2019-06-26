@@ -2,12 +2,12 @@
 title: Procedure consigliate per l'hosting in Internet Information Services (IIS)
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bb60330aeedfe4b16a2a53d644e79a4a16636afa
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878597"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402441"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Procedure consigliate per l'hosting in Internet Information Services (IIS)
 Questo argomento descrive alcune procedure consigliate per l'hosting di servizi Windows Communication Foundation (WCF).  
@@ -16,7 +16,7 @@ Questo argomento descrive alcune procedure consigliate per l'hosting di servizi 
  L'implementazione di un WCF service come una DLL distribuita nella directory \bin di un'applicazione Web consente che riutilizzare il servizio all'esterno del modello di applicazione Web, ad esempio, in un ambiente di test che non abbia distribuito Internet Information Services (IIS).  
   
 ## <a name="service-hosts-in-iis-hosted-applications"></a>Host di servizi in applicazioni ospitate da IIS  
- Non utilizzare API indipendenti imperative per creare nuovi host di servizi che ascoltano sulla rete trasporti non supportati a livello nativo dall'ambiente host IIS (ad esempio, [!INCLUDE[iis601](../../../../includes/iis601-md.md)] per ospitare servizi TCP, perché la comunicazione TCP non è supportata a livello nativo su [!INCLUDE[iis601](../../../../includes/iis601-md.md)]). Questo approccio non è consigliato. Gli host di servizi creati in modo imperativo non sono conosciuti all'interno dell'ambiente host IIS. Il punto critico è il fatto che l'elaborazione eseguita da servizi creati in modo imperativo non viene considerata da IIS quando determina se il pool di applicazioni host è inattivo. Di conseguenza, le applicazioni con host di servizi creati in modo imperativo hanno un ambiente host IIS che elimina bruscamente i processi host IIS.  
+ Non utilizzare l'API indipendenti imperative per creare nuovi host di servizi che ascoltano sulla rete trasporti supportati in modo nativo dall'ambiente host IIS (ad esempio, IIS 6.0 per l'host TCP servizi, perché la comunicazione TCP non è supportata in modo nativo in IIS 6.0). Questo approccio non è consigliato. Gli host di servizi creati in modo imperativo non sono conosciuti all'interno dell'ambiente host IIS. Il punto critico è il fatto che l'elaborazione eseguita da servizi creati in modo imperativo non viene considerata da IIS quando determina se il pool di applicazioni host è inattivo. Di conseguenza, le applicazioni con host di servizi creati in modo imperativo hanno un ambiente host IIS che elimina bruscamente i processi host IIS.  
   
 ## <a name="uris-and-iis-hosted-endpoints"></a>URI ed endpoint ospitati da IIS  
  Gli endpoint per un servizio ospitato da IIS devono essere configurati tramite URI (Uniform Resource Identifier), non tramite indirizzi assoluti. Ciò garantisce che l'indirizzo endpoint rientri nel set di indirizzi URI che appartengono all'applicazione host e assicurano che l'attivazione basata su messaggi si verifichi come previsto.  
