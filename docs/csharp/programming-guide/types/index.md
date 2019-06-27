@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: c971a2d5d7caeb030cf504c44be8c8123decc3fc
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 796dbb012426cdaea7828afeea4fba15f57095c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423413"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398090"
 ---
 # <a name="types-c-programming-guide"></a>Tipi (Guida per programmatori C#)
 
@@ -120,13 +120,13 @@ L'altra categoria di tipi valore è [enum](../../../csharp/language-reference/ke
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
-Il valore della costante `System.IO.FileMode.Create` è 2. I nomi, tuttavia, sono molto più significativi per gli utenti che leggono il codice sorgente e, quindi, è preferibile usare enumerazioni anziché valori letterali numerici costanti. Per ulteriori informazioni, vedere <xref:System.IO.FileMode?displayProperty=nameWithType>.
+Il valore della costante `System.IO.FileMode.Create` è 2. I nomi, tuttavia, sono molto più significativi per gli utenti che leggono il codice sorgente e, quindi, è preferibile usare enumerazioni anziché valori letterali numerici costanti. Per altre informazioni, vedere <xref:System.IO.FileMode?displayProperty=nameWithType>.
 
 Tutte le enumerazioni ereditano da <xref:System.Enum?displayProperty=nameWithType>, che eredita da <xref:System.ValueType?displayProperty=nameWithType>. Tutte le regole valide per i tipi struct sono valide anche per le enumerazioni. Per altre informazioni sulle enumerazioni, vedere [Tipi di enumerazione](../../../csharp/programming-guide/enumeration-types.md).
 
 ### <a name="reference-types"></a>Tipi riferimento
 
-Un tipo definito come [classe](../../../csharp/language-reference/keywords/class.md), [delegato](../../../csharp/language-reference/keywords/delegate.md), matrice o [interfaccia](../../../csharp/language-reference/keywords/interface.md) è un *tipo riferimento*. In fase di esecuzione, quando si dichiara una variabile di un tipo riferimento, la variabile contiene il valore [null](../../../csharp/language-reference/keywords/null.md) fino a quando non si crea in modo esplicito un oggetto usando l'operatore [new](../../../csharp/language-reference/keywords/new.md) o fino a quando non le viene assegnato un oggetto creato altrove tramite `new`, come illustrato nell'esempio seguente:
+Un tipo definito come [classe](../../../csharp/language-reference/keywords/class.md), [delegato](../../../csharp/language-reference/keywords/delegate.md), matrice o [interfaccia](../../../csharp/language-reference/keywords/interface.md) è un *tipo riferimento*. In fase di esecuzione, quando si dichiara una variabile di un tipo riferimento, la variabile contiene il valore [null](../../../csharp/language-reference/keywords/null.md) fino a quando non si crea in modo esplicito un oggetto usando l'operatore [new](../../../csharp/language-reference/operators/new-operator.md) o fino a quando non le viene assegnato un oggetto creato altrove tramite `new`, come illustrato nell'esempio seguente:
 
 ```csharp
 MyClass mc = new MyClass();

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e193d6a51c3d4f1d81e3b74b1474d0e7cdcfca53
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61678504"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398118"
 ---
 # <a name="strings-c-programming-guide"></a>Stringhe (Guida per programmatori C#)
 Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. Internamente il testo viene archiviato come una raccolta di sola lettura sequenziale di oggetti <xref:System.Char>. Le stringhe C# non presentano un carattere di terminazione null alla fine, pertanto una stringa C# può contenere qualsiasi numero di caratteri null incorporati ('\0'). La proprietà <xref:System.String.Length%2A> di una stringa rappresenta il numero di oggetti `Char` in essa contenuti e non il numero di caratteri Unicode. Per accedere ai singoli punti di codice Unicode in una stringa usare l'oggetto <xref:System.Globalization.StringInfo>.  
@@ -24,7 +24,7 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- Si noti che l'operatore [new](../../../csharp/language-reference/keywords/new-operator.md) non viene usato per creare un oggetto stringa tranne nel caso in cui la stringa viene inizializzata con una matrice di caratteri.  
+ Si noti che l'operatore [new](../../../csharp/language-reference/operators/new-operator.md) non viene usato per creare un oggetto stringa tranne nel caso in cui la stringa viene inizializzata con una matrice di caratteri.  
   
  Inizializzare una stringa con il valore costante <xref:System.String.Empty> per creare un nuovo oggetto <xref:System.String> con stringa di lunghezza zero. La rappresentazione del valore letterale stringa di una stringa di lunghezza zero è "". L'inizializzazione di stringhe con il valore <xref:System.String.Empty> anziché con [null](../../../csharp/language-reference/keywords/null.md) riduce le probabilità di un errore <xref:System.NullReferenceException>. Usare il metodo statico <xref:System.String.IsNullOrEmpty%28System.String%29> per verificare il valore di una stringa prima di provare ad accedere alla stringa.  
   
@@ -126,7 +126,7 @@ string s = String.Empty;
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Argomento|Description|  
+|Argomento|DESCRIZIONE|  
 |-----------|-----------------|  
 |[Procedura: Modificare il contenuto delle stringhe](../../how-to/modify-string-contents.md)|Illustra le tecniche per trasformare le stringhe e modificare il contenuto di queste.|  
 |[Procedura: Confrontare le stringhe](../../how-to/compare-strings.md)|Illustra come eseguire confronti di stringhe tra ordinali e impostazioni cultura.|  
