@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: f037c47618873a6d866433483aadf2f20c4c4971
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b9dd02724b8c2a9e4f50ecd61d822d5f1a478eee
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882246"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402331"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delega e rappresentazione con WCF
 La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l'accesso dei client alle risorse del dominio del servizio. Tali risorse possono essere risorse del computer, ad esempio file locali (rappresentazione), o risorse in un'altro computer, ad esempio una condivisione file (delega). Per un'applicazione di esempio, vedere [Rappresentazione di client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Per un esempio di come usare la rappresentazione, vedere [come: Rappresenta un Client in un servizio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -57,7 +57,7 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
  La misura in cui il servizio può eseguire la rappresentazione del client dipende dai privilegi di cui dispone l'account del servizio quando tenta la rappresentazione, dal tipo di rappresentazione utilizzato ed eventualmente dall'ambito di rappresentazione consentito dal client.  
   
 > [!NOTE]
->  Quando il client e il servizio sono in esecuzione nello stesso computer e il client è in esecuzione con un account del sistema (ad esempio `Local System` o `Network Service`), il client non può essere rappresentato quando viene stabilita una sessione protetta con token del contesto di sicurezza con stato. Un'applicazione Windows Form o console viene in genere eseguita con l'account attualmente connesso e quindi l'account può essere rappresentato per impostazione predefinita. Tuttavia, quando il client è una pagina ASP.NET e tale pagina è ospitata [!INCLUDE[iis601](../../../../includes/iis601-md.md)] oppure [!INCLUDE[iisver](../../../../includes/iisver-md.md)], quindi il client viene eseguito con il `Network Service` account per impostazione predefinita. Tutte le associazioni fornite dal sistema che supportano le sessioni protette utilizzano un token del contesto di sicurezza (SCT) senza stato per impostazione predefinita. Tuttavia, se il client è una pagina ASP.NET e vengono utilizzate sessioni protette con token SCT con stato, il client non può essere rappresentato. Per altre informazioni sull'uso di token SCT con stato in una sessione protetta, vedere [come: Creare un contesto di sicurezza Token per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Quando il client e il servizio sono in esecuzione nello stesso computer e il client è in esecuzione con un account del sistema (ad esempio `Local System` o `Network Service`), il client non può essere rappresentato quando viene stabilita una sessione protetta con token del contesto di sicurezza con stato. Un'applicazione Windows Form o console viene in genere eseguita con l'account attualmente connesso e quindi l'account può essere rappresentato per impostazione predefinita. Tuttavia, quando il client è una pagina ASP.NET e tale pagina è ospitata in IIS 6.0 o [!INCLUDE[iisver](../../../../includes/iisver-md.md)], quindi il client viene eseguito con il `Network Service` account per impostazione predefinita. Tutte le associazioni fornite dal sistema che supportano le sessioni protette utilizzano un token del contesto di sicurezza (SCT) senza stato per impostazione predefinita. Tuttavia, se il client è una pagina ASP.NET e vengono utilizzate sessioni protette con token SCT con stato, il client non può essere rappresentato. Per altre informazioni sull'uso di token SCT con stato in una sessione protetta, vedere [come: Creare un contesto di sicurezza Token per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>Rappresentazione in un metodo di servizio: Modello dichiarativo  
  La maggior parte degli scenari di rappresentazione implicano l'esecuzione del metodo del servizio nel contesto del chiamante. WCF fornisce una funzionalità di rappresentazione che semplifica questa operazione consentendo all'utente di specificare il requisito di rappresentazione nel <xref:System.ServiceModel.OperationBehaviorAttribute> attributo. Ad esempio, nel codice seguente, l'infrastruttura WCF rappresenta il chiamante prima di eseguire il `Hello` (metodo). Qualsiasi tentativo di accedere a risorse native nel metodo `Hello` ha esito positivo solo se l'elenco di controllo di accesso (ACL) della risorsa consente al chiamante i privilegi di accesso. Per attivare la rappresentazione, impostare la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> su uno dei valori dell'enumerazione <xref:System.ServiceModel.ImpersonationOption> , ovvero <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> o <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, come illustrato nell'esempio seguente.  
@@ -111,7 +111,7 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
   
  Nella tabella seguente viene indicato il livello di rappresentazione ottenuto dal servizio in caso di rappresentazione da un token memorizzato nella cache.  
   
-|Valore di`AllowedImpersonationLevel` |Il servizio dispone di `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega| `ImpersonationLevel`|  
+|Valore di`AllowedImpersonationLevel`|Il servizio dispone di `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega|`ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Anonymous|Yes|N/D|Rappresentazione|  
 |Anonymous|No|N/D|Identification|  
@@ -125,7 +125,7 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Livello di rappresentazione ottenuto dalla rappresentazione con credenziali basate sul nome utente e con un token memorizzato nella cache  
  Passando al servizio il nome utente e password, un client consente a WCF di accedere come tale utente, che equivale a impostare il `AllowedImpersonationLevel` proprietà <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. (la proprietà `AllowedImpersonationLevel` è disponibile sulle classi <xref:System.ServiceModel.Security.WindowsClientCredential> e <xref:System.ServiceModel.Security.HttpDigestClientCredential>). Nella tabella seguente viene indicato il livello di rappresentazione ottenuto quando il servizio riceve credenziali basate sul nome utente.  
   
-|`AllowedImpersonationLevel`|Il servizio dispone di `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega| `ImpersonationLevel`|  
+|`AllowedImpersonationLevel`|Il servizio dispone di `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega|`ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |N/D|Yes|Yes|Delegation|  
 |N/D|Yes|No|Rappresentazione|  
@@ -133,7 +133,7 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>Livello di rappresentazione ottenuto dalla rappresentazione basata su S4U  
   
-|Il servizio dispone di `SeTcbPrivilege`|Il servizio dispone di `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega| `ImpersonationLevel`|  
+|Il servizio dispone di `SeTcbPrivilege`|Il servizio dispone di `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega|`ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Yes|Yes|N/D|Rappresentazione|  
 |Yes|No|N/D|Identification|  
