@@ -2,12 +2,12 @@
 title: Comportamenti di sicurezza in WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: dd59bc97c2f4e2516528a6cbdf40b4c44f4b41eb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 53d8fedb5f562dfbc4aec566f8d0c442b255e1c9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650242"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424683"
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportamenti di sicurezza in WCF
 In Windows Communication Foundation (WCF), i comportamenti determinano il comportamento in fase di esecuzione a livello di servizio o a livello di endpoint. (Per altre informazioni sui comportamenti in generale, vedere [che specifica il comportamento di Run-Time Service](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Comportamenti di sicurezza* consentono di controllare le credenziali, l'autenticazione, autorizzazione e i registri di controllo. I comportamenti possono essere utilizzati tramite programmazione o mediante configurazione. In questo argomento viene descritto come configurare i comportamenti relativi alle funzioni di sicurezza elencati di seguito:  
@@ -114,7 +114,7 @@ In Windows Communication Foundation (WCF), i comportamenti determinano il compor
  </endpointBehaviors>  
 ```  
   
-#### <a name="clientcertifictate-element"></a>\<clientCertifictate > elemento  
+#### <a name="clientcertificate-element"></a>\<clientCertificate > elemento  
  Questo elemento consente di impostare il certificato utilizzato per autenticare il client. Per altre informazioni, vedere [Procedura: Specificare i valori di credenziale Client](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 #### <a name="httpdigest"></a>\<httpDigest>  

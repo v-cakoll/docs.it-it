@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 3d345cfa3169e22e7c5e85cd1c7d11c2feef4f5f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d224535bb266d0a3673359388c6c211103df7374
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665967"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424853"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Endpoint: indirizzi, associazioni e contratti
 Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) viene eseguita tramite il *endpoint* del servizio. Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un servizio WCF.  
@@ -61,7 +61,7 @@ Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) vi
   
      Per altre informazioni sulla definizione di un contratto, vedere [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
-- Comportamenti: È possibile usare i comportamenti dell'endpoint per personalizzare il comportamento dell'endpoint del servizio locale. I comportamenti dell'endpoint realizzano questo obiettivo partecipando nel processo di compilazione un WCFruntime. Un esempio di comportamento dell'endpoint è rappresentato dalla proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>, che consente di specificare un indirizzo di ascolto diverso dall'indirizzo SOAP o WSDL (Web Services Description Language). Per altre informazioni, vedere [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+- Comportamenti: È possibile usare i comportamenti dell'endpoint per personalizzare il comportamento dell'endpoint del servizio locale. I comportamenti dell'endpoint realizzano questo obiettivo partecipando nel processo di creazione di un runtime WCF. Un esempio di comportamento dell'endpoint è rappresentato dalla proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>, che consente di specificare un indirizzo di ascolto diverso dall'indirizzo SOAP o WSDL (Web Services Description Language). Per altre informazioni, vedere [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Definizione di endpoint  
  È possibile specificare l'endpoint di un servizio in modo imperativo, tramite codice, o in modo dichiarativo, tramite la configurazione. Per altre informazioni, vedere [Procedura: Creare un Endpoint del servizio nella configurazione](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) e [come: Creare un Endpoint del servizio nel codice](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  

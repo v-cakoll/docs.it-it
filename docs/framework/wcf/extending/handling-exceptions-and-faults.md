@@ -2,12 +2,12 @@
 title: Gestione di eccezioni ed errori
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: f2042bac30ee84530c0da9c30193919dfb99a608
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e99ef5721791af229c68a958e4840a0703d34ac9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654988"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424938"
 ---
 # <a name="handling-exceptions-and-faults"></a>Gestione di eccezioni ed errori
 Le eccezioni vengono utilizzate per comunicare errori localmente, all'interno del servizio o nell'implementazione del client. Gli errori, d'altra parte, vengono utilizzati per comunicare problemi tra servizi, ad esempio dal server al client o viceversa. Oltre agli errori, i canali del trasporto spesso utilizzano meccanismi specifici per comunicare errori a livello di trasporto. Il trasporto HTTP, ad esempio, utilizza codici di stato, come 404, per comunicare un URL di endpoint inesistente (nessun endpoint al quale restituire un errore). Questo documento è composto da tre sezioni che contengono materiale sussidiario utile per gli autori di canali personalizzati. Nella prima sezione è contenuto materiale sussidiario sulle circostanze e le modalità di definizione e generazione delle eccezioni. Nella seconda sezione sono fornite istruzioni sulla generazione e l'utilizzo di errori. Nella terza sezione viene spiegato come fornire informazioni di traccia per aiutare l'utente del canale personalizzato a risolvere i problemi delle applicazioni in esecuzione.  
@@ -286,7 +286,7 @@ public override bool OnTryCreateException(
  Per condizioni di errore specifiche con scenari di recupero distinti, prendere in considerazione la definizione di una classe derivata di `ProtocolException`.  
   
 ### <a name="mustunderstand-processing"></a>Elaborazione MustUnderstand  
- SOAP definisce un errore generale per segnalare che un'intestazione obbligatoria non è stata capita dal ricevitore. Questo errore è noto come errore `mustUnderstand`. In WCF, i canali personalizzati non generano mai `mustUnderstand` errori. Al contrario, il Dispatcher WCF, che si trova nella parte superiore dello stack di comunicazione WCF, verifica che tutte le intestazioni contrassegnate con MustUndestand = true siano comprese dallo stack sottostante. In caso contrario, viene generato un errore `mustUnderstand`. L'utente ha la possibilità di disattivare, se lo desidera, questa elaborazione `mustUnderstand` e di fare in modo che l'applicazione riceva tutte le intestazioni del messaggio. In questo caso l'applicazione assume la responsabilità dell'elaborazione di `mustUnderstand`. L'errore generato comprende un'intestazione NotUnderstood contenente i nomi di tutte le intestazioni con MustUnderstand=true non comprese.  
+ SOAP definisce un errore generale per segnalare che un'intestazione obbligatoria non è stata capita dal ricevitore. Questo errore è noto come errore `mustUnderstand`. In WCF, i canali personalizzati non generano mai `mustUnderstand` errori. Al contrario, il Dispatcher WCF, che si trova nella parte superiore dello stack di comunicazione WCF, verifica che tutte le intestazioni contrassegnate con MustUnderstand = true siano comprese dallo stack sottostante. In caso contrario, viene generato un errore `mustUnderstand`. L'utente ha la possibilità di disattivare, se lo desidera, questa elaborazione `mustUnderstand` e di fare in modo che l'applicazione riceva tutte le intestazioni del messaggio. In questo caso l'applicazione assume la responsabilità dell'elaborazione di `mustUnderstand`. L'errore generato comprende un'intestazione NotUnderstood contenente i nomi di tutte le intestazioni con MustUnderstand=true non comprese.  
   
  Se il canale del protocollo invia un'intestazione personalizzata con MustUnderstand=true e riceve un errore `mustUnderstand`, deve appurare se l'errore è dovuto all'intestazione inviata. A questo scopo tornano utili due membri nella classe `MessageFault`:  
   

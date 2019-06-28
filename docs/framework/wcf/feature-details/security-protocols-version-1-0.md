@@ -2,12 +2,12 @@
 title: Protocolli di sicurezza versione 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 8114183109befcb77c3bf2b35fe246118da5afde
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 71855b73bb08d5edef05747dcff9e1ac04fb951f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586880"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425093"
 ---
 # <a name="security-protocols-version-10"></a>Protocolli di sicurezza versione 1.0
 I protocolli di sicurezza dei servizi Web forniscono meccanismi di sicurezza che soddisfano qualsiasi requisito di sicurezza aziendale esistente relativo alla messaggistica. Questa sezione vengono descritti i dettagli di Windows Communication Foundation (WCF) versione 1.0 (implementate nel <xref:System.ServiceModel.Channels.SecurityBindingElement>) per i protocolli di sicurezza dei servizi Web seguenti.  
@@ -129,7 +129,7 @@ I protocolli di sicurezza dei servizi Web forniscono meccanismi di sicurezza che
  WCF supporta i profili specifiche WSS SAML Token 1.0 e 1.1 per token SAML v1.1. È possibile implementare altre versioni di formato di token SAML.  
   
 ### <a name="15-security-context-token"></a>1.5 Security Context Token  
- WCF supporta la protezione rapida Token (SCT) introdotta nella specifica WS-SecureCoversation. Il protocollo SCT viene usato per rappresentare un contesto di sicurezza definito nella specifica SecureConversation nonché i protocolli di negoziazione binaria TLS e SSPI, descritti di seguito.  
+ WCF supporta la protezione rapida Token (SCT) introdotto in WS-SecureConversation. Il protocollo SCT viene usato per rappresentare un contesto di sicurezza definito nella specifica SecureConversation nonché i protocolli di negoziazione binaria TLS e SSPI, descritti di seguito.  
   
 ## <a name="2-common-message-security-parameters"></a>2. Parametri comuni di sicurezza a livello di messaggio  
   

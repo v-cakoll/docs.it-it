@@ -2,12 +2,12 @@
 title: Blocco della sicurezza delle informazioni personali
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 18095845db094f0911578816e6bacdb7f3776156
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83c100459ca5cf522b9040a807008e66e1a5c9d8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664777"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425416"
 ---
 # <a name="pii-security-lockdown"></a>Blocco della sicurezza delle informazioni personali
 In questo esempio viene illustrato come controllare diverse funzionalità correlate alla sicurezza di un servizio Windows Communication Foundation (WCF) da:  
@@ -37,7 +37,7 @@ In questo esempio viene illustrato come controllare diverse funzionalità correl
  In questo esempio viene illustrato come controllare la registrazione di informazioni personali nei registri di traccia e dei messaggi, come il nome utente e la password. Per impostazione predefinita, la registrazione di informazioni personali note è disattivata. Tuttavia in alcune situazioni la registrazione delle informazioni personali può essere importante per eseguire il debug di un'applicazione. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md). Questo esempio usa inoltre la registrazione di traccia e dei messaggi. Per altre informazioni, vedere la [traccia e registrazione dei messaggi](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) esempio.  
   
 ## <a name="encrypting-configuration-file-elements"></a>Crittografia degli elementi del file di configurazione  
- Per motivi di sicurezza in un ambiente di hosting Web condiviso, potrebbe essere auspicabile crittografare alcuni elementi di configurazione, ad esempio le stringhe di connessione al database che potrebbero contenere informazioni riservate. Un elemento di configurazione può essere crittografato usando lo strumento aspnet_regiis.exe situato nella cartella .NET Framework, ad esempio %WINDIR%\Micrsoft.NET\Framework\v4.0.20728.  
+ Per motivi di sicurezza in un ambiente di hosting Web condiviso, potrebbe essere auspicabile crittografare alcuni elementi di configurazione, ad esempio le stringhe di connessione al database che potrebbero contenere informazioni riservate. Un elemento di configurazione può essere crittografato usando lo strumento aspnet_regiis.exe nella cartella .NET Framework, ad esempio, % WINDIR%\Microsoft.NET\Framework\v4.0.20728.  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Per crittografare i valori nella sezione appSettings di Web.config per l'esempio  
   

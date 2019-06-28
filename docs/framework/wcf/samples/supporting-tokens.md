@@ -2,12 +2,12 @@
 title: Token di supporto
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 6257499b22506359c4a23ce7c11655c00c22ef62
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fba9a44342da5b064897b3ab81f34fa39498d379
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650962"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425443"
 ---
 # <a name="supporting-tokens"></a>Token di supporto
 L'esempio dei token di supporto illustra come aggiungere token aggiuntivi a un messaggio che utilizza WS-Security. L'esempio aggiunge un token di sicurezza binario X.509 e un token di sicurezza nome utente. Il token viene passato in un'intestazione di un messaggio WS-Security dal client al servizio e parte del messaggio viene firmata con la chiave privata associata al token di sicurezza X.509 per provare il possesso del certificato X.509 al destinatario. Ciò è utile nel caso in cui vi sia un requisito di più richieste per autenticare o autorizzare il mittente associate a un messaggio. Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.
@@ -156,7 +156,7 @@ public class EchoService : IEchoService
             }
             else if (claimSet is X509CertificateClaimSet)
             {
-                // Try to find an X500DisinguishedName claim. This will
+                // Try to find an X500DistinguishedName claim. This will
                 // have been generated from the client certificate.
                 X500DistinguishedName tmpDistinguishedName;
                 if (TryGetClaimValue<X500DistinguishedName>(claimSet,
@@ -329,7 +329,7 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
         }
         else if (claimSet is X509CertificateClaimSet)
          {
-            //Try to find an X500DisinguishedName claim.
+            //Try to find an X500DistinguishedName claim.
             //This will have been generated from the client
             //certificate.
             X500DistinguishedName tmpDistinguishedName;

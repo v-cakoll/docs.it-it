@@ -2,12 +2,12 @@
 title: 'Procedura: Configurare servizi WCF per interagire con client WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 1c5a5e4e92eedb21e3405370e59344d3b861d1dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5034744059e7ed87d4f8b41c6ae89d1af1bf0f56
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619171"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425393"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Procedura: Configurare servizi WCF per interagire con client WSE 3.0
 Servizi Windows Communication Foundation (WCF) sono compatibili a livello di transito con Web Services Enhancements 3.0 per i client Microsoft .NET (WSE) quando i servizi WCF sono configurati per usare la versione di agosto 2004 della specifica WS-Addressing.  
@@ -24,7 +24,7 @@ Servizi Windows Communication Foundation (WCF) sono compatibili a livello di tra
   
     3. Specificare una modalità di autenticazione e la versione delle specifiche WS-Security utilizzate per proteggere i messaggi che sono compatibili con WSE 3.0, aggiungendo un elemento figlio [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) per il [ \<binding >](../../../../docs/framework/misc/binding.md).  
   
-         Per impostare la modalità di autenticazione, impostare il `authenicationMode` attributo del [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Una modalità di autenticazione è più o meno equivalente a un'asserzione di sicurezza turnkey in WSE 3.0. Nella tabella seguente le modalità di autenticazione in WCF per le asserzioni di sicurezza turnkey in WSE 3.0.  
+         Per impostare la modalità di autenticazione, impostare il `authenticationMode` attributo del [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Una modalità di autenticazione è più o meno equivalente a un'asserzione di sicurezza turnkey in WSE 3.0. Nella tabella seguente le modalità di autenticazione in WCF per le asserzioni di sicurezza turnkey in WSE 3.0.  
   
         |Modalità di autenticazione WCF|Asserzione di sicurezza turnkey WSE 3.0|  
         |-----------------------------|----------------------------------------|  

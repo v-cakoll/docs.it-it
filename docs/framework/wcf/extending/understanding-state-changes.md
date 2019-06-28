@@ -2,12 +2,12 @@
 title: Informazioni sui cambiamenti di stato
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 858da2a88c17920910c05966bb3b211d754fb278
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771592"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424769"
 ---
 # <a name="understanding-state-changes"></a>Informazioni sui cambiamenti di stato
 In questo argomento vengono descritti gli stati e le transizioni dei canali, i tipi utilizzati per strutturare gli stati dei canali e come implementarli.  
@@ -28,7 +28,7 @@ In questo argomento vengono descritti gli stati e le transizioni dei canali, i t
   
  Tutti gli oggetti <xref:System.ServiceModel.ICommunicationObject> iniziano con lo stato Created. In questo stato un'applicazione può configurare l'oggetto impostandone le proprietà. Una volta che l'oggetto ha assunto uno stato diverso da Created, viene considerato immutabile.  
   
- ![Transizione di stato del canale](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
+ ![Transizione dello stato del canale](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 Figura 1. La macchina a stati di ICommunicationObject.  
   
  Windows Communication Foundation (WCF) fornisce una classe base astratta denominata <xref:System.ServiceModel.Channels.CommunicationObject> che implementa <xref:System.ServiceModel.ICommunicationObject> e la macchina a stati del canale. Di seguito è illustrato un diagramma di stato modificato specifico di <xref:System.ServiceModel.Channels.CommunicationObject>. Oltre alla macchina a stati <xref:System.ServiceModel.ICommunicationObject>, è indicato l'intervallo in cui vengono richiamati metodi <xref:System.ServiceModel.Channels.CommunicationObject> aggiuntivi.  

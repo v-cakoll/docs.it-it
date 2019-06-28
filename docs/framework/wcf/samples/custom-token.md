@@ -2,12 +2,12 @@
 title: Token personalizzato
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 862b4b26295ef3e90064b27ecd753e9b541471a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11b89f6d4f2800f079ba6576801b39c85324f6e0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650208"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425077"
 ---
 # <a name="custom-token"></a>Token personalizzato
 Questo esempio viene illustrato come aggiungere un'implementazione del token personalizzata in un'applicazione Windows Communication Foundation (WCF). Nell'esempio viene usato un `CreditCardToken` per passare in modo protetto le informazioni sulle carte di credito del client al servizio. Il token viene passato nell'intestazione del messaggio WS-Security e viene firmato e crittografato usando l'elemento di associazione di sicurezza simmetrica, il corpo del messaggio e altre intestazioni del messaggio. Questa operazione è utile nei casi in cui i token incorporati non sono sufficienti In questo esempio viene illustrato come fornire un token di sicurezza personalizzato a un servizio, invece di usare uno dei token incorporati. Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.
@@ -251,7 +251,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
  In questo esempio, si usa un provider di token solo nel client e un autenticatore del token solo nel servizio, per trasmettere un token della carta di credito solo nella direzione dal client al servizio.
 
- Nel client la funzionalità si trova nelle classi `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` e `CreditCardTokenProvider`.
+ Nel client la funzionalità si trova nelle classi `CreditCardClientCredentials`, `CreditCardClientCredentialsSecurityTokenManager` e `CreditCardTokenProvider`.
 
  Nel servizio, la funzionalità si trova nelle classi `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` e `CreditCardTokenAuthorizationPolicy`.
 

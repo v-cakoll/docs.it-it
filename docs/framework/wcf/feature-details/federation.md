@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: baf65340e390c7439e8639e334819fb0bf60f952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 376448502b7b9c7002213be5c3437849a3868166
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662619"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425026"
 ---
 # <a name="federation"></a>Federazione
 In questo argomento viene illustrato brevemente il concetto di sicurezza federata. Viene inoltre descritto il supporto di Windows Communication Foundation (WCF) per la distribuzione di architetture di sicurezza federata. Per un'applicazione di esempio che illustra la federazione, vedere [esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -284,7 +284,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ### <a name="client-at-organization-a"></a>Client nell'organizzazione A  
  Nella figura seguente viene illustrato il client nell'organizzazione A, insieme ai passaggi necessari per eseguire una chiamata al servizio `MyService`. A fini di completezza, sono inclusi anche gli altri componenti funzionali.  
   
- ![Diagramma showwing la procedura descritta in una chiamata al servizio MyService.](./media/federation/federation-myservice-service-call-process.gif)  
+ ![Diagramma che illustra i passaggi in una chiamata al servizio MyService.](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>Riepilogo  
  La protezione federata offre una divisione netta della responsabilità e contribuisce a creare architetture del servizio sicure e scalabili. Come piattaforma per la compilazione e distribuzione di applicazioni distribuite, WCF fornisce supporto nativo per implementare la protezione federata.  
