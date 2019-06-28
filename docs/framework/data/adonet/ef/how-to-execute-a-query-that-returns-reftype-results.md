@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7dbbfbcd-93f5-4546-9dbf-e5fa290b69fa
-ms.openlocfilehash: f3f1e11d3211140abb02733de4b5b46ac93cf769
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6924cac18775737cee73a0505a9635123c11e77d
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607947"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422674"
 ---
 # <a name="how-to-execute-a-query-that-returns-reftype-results"></a>Procedura: Eseguire una query che restituisce risultati RefType
 In questo argomento viene illustrato come eseguire un comando su un modello concettuale usando un oggetto <xref:System.Data.EntityClient.EntityCommand> e viene mostrato come recuperare i risultati di <xref:System.Data.Metadata.Edm.RefType> usando un oggetto <xref:System.Data.EntityClient.EntityDataReader>.  
@@ -25,7 +25,7 @@ In questo argomento viene illustrato come eseguire un comando su un modello conc
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene eseguita una query che restituisce risultati dell'oggetto <xref:System.Data.Metadata.Edm.RefType>. Se si passa la query seguente come argomento alla funzione `ExectueRefTypeQuery`, viene restituito un riferimento all'entità:  
+ In questo esempio viene eseguita una query che restituisce risultati dell'oggetto <xref:System.Data.Metadata.Edm.RefType>. Se si passa la query seguente come argomento alla funzione `ExecuteRefTypeQuery`, viene restituito un riferimento all'entità:  
   
  [!code-csharp[DP EntityServices Concepts 2#REF2](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#ref2)]  
   

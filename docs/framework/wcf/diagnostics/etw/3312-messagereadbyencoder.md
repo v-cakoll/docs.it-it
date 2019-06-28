@@ -2,12 +2,12 @@
 title: 3312 - MessageReadByEncoder
 ms.date: 03/30/2017
 ms.assetid: cdcc8e3d-e2aa-4c5e-a580-bdf581a66709
-ms.openlocfilehash: c68170d127dbcb914539211be9ff2417ea20517e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20d7251c8df54c0780f7f29755b59ba4f475c65a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61596688"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422129"
 ---
 # <a name="3312---messagereadbyencoder"></a>3312 - MessageReadByEncoder
 ## <a name="properties"></a>Proprietà  
@@ -20,7 +20,7 @@ ms.locfileid: "61596688"
 |Canale|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descrizione  
- Questo evento viene generato quando il messaggio trasmesso è stato letto dal codificatore.  
+ Questo evento viene generato quando il messaggio è stato letto dal codificatore.  
   
 ## <a name="message"></a>Messaggio  
  Un messaggio di dimensioni '%1' byte è stato letto dal codificatore.  

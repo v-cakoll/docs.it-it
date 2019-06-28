@@ -3,12 +3,12 @@ title: Autorizzazione basata su attestazioni con WIF
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 0c99053610c8df9b6825c773a09cb1330d1e22f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9d20f8fbce916a038fc8224492a4077e1978ed8c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650442"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422361"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorizzazione basata su attestazioni con WIF
 Tramite l'autorizzazione di un'applicazione relying party vengono determinate le risorse di un'identità autenticata a cui è consentito l'accesso e le operazioni eseguibili in queste risorse. Un'autorizzazione non corretta o debole comporta la diffusione di informazioni e l'alterazione dei dati. In questo argomento vengono descritti gli approcci disponibili per implementare l'autorizzazione per i servizi e le applicazioni Web ASP.NET in grado di riconoscere attestazioni mediante WIF (Windows Identity Foundation) e un servizio token di sicurezza (STS), ad esempio il Servizio di controllo di accesso (ACS) di Microsoft Azure.  
@@ -19,22 +19,22 @@ Tramite l'autorizzazione di un'applicazione relying party vengono determinate le
  Inoltre, possono essere utilizzate per abilitare decisioni di autorizzazione più complesse oltre ai ruoli. Le attestazioni possono essere basate su qualsiasi informazione relativa all'utente, ovvero età, codice postale, numero di scarpe e così via. Un meccanismo di controllo degli accessi basato su attestazioni arbitrarie è definito autorizzazione basata sulle attestazioni. Per altre informazioni, vedere [Autorizzazione basata sulle attestazioni](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_2).  
   
 <a name="BKMK_1"></a>   
-## <a name="role-based-access-control"></a>Controllo degli accessi in base al ruolo  
+## <a name="role-based-access-control"></a>Controllo dell'accesso basato sui ruoli  
  Il controllo dell'accesso basato sui ruoli è un approccio di autorizzazione in cui le autorizzazioni utente vengono gestite e applicate da un'applicazione basata sui ruoli utente. Se un utente dispone di un ruolo necessario per l'esecuzione di un'azione, l'accesso viene consentito; in caso contrario, viene negato.  
   
 ### <a name="iprincipalisinrole-method"></a>Metodo IPrincipal.IsInRole  
- Per implementare il controllo degli accessi in base al ruolo nelle applicazioni in grado di riconoscere attestazioni, usare il metodo **IsInRole()** nell'interfaccia **IPrincipal**, proprio come nelle applicazioni che non sono in grado di riconoscere attestazioni. Il metodo **IsInRole()** può essere usato in diversi modi:  
+ Per implementare l'approccio di controllo nelle applicazioni in grado di riconoscere attestazioni, usare il **IsInRole ()** metodo nella **IPrincipal** interfaccia, come accade nelle applicazioni non di riconoscere attestazioni. Il metodo **IsInRole()** può essere usato in diversi modi:  
   
-- Eseguendo una chiamata esplicita su **IPrincipal.IsInRole("Administrator")**. In questo approccio, il risultato è un valore booleano. Utilizzarlo nelle istruzioni condizionali. Può essere utilizzato in modo arbitrario in qualsiasi punto nel codice.  
+- Eseguendo una chiamata esplicita su **IPrincipal.IsInRole("Administrator")** . In questo approccio, il risultato è un valore booleano. Utilizzarlo nelle istruzioni condizionali. Può essere utilizzato in modo arbitrario in qualsiasi punto nel codice.  
   
-- Usando la richiesta di sicurezza **PrincipalPermission.Demand()**. In questo approccio, il risultato è un'eccezione in caso di richiesta non soddisfatta. Deve rientrare nella strategia di gestione delle eccezioni. La generazione di eccezioni è molto più costosa dal punto di vista delle prestazioni rispetto alla restituzione di un valore booleano. Può essere utilizzata in qualsiasi punto nel codice.  
+- Usando la richiesta di sicurezza **PrincipalPermission.Demand()** . In questo approccio, il risultato è un'eccezione in caso di richiesta non soddisfatta. Deve rientrare nella strategia di gestione delle eccezioni. La generazione di eccezioni è molto più costosa dal punto di vista delle prestazioni rispetto alla restituzione di un valore booleano. Può essere utilizzata in qualsiasi punto nel codice.  
   
-- Usando gli attributi dichiarativi **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]**. Questo approccio viene chiamato dichiarativo, in quanto viene utilizzato per decorare i metodi. Non può essere utilizzato in blocchi di codice nelle implementazioni del metodo. Il risultato è un'eccezione in caso di richiesta non soddisfatta. È necessario assicurarsi che rientri nella strategia di gestione delle eccezioni.  
+- Usando gli attributi dichiarativi **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]** . Questo approccio viene chiamato dichiarativo, in quanto viene utilizzato per decorare i metodi. Non può essere utilizzato in blocchi di codice nelle implementazioni del metodo. Il risultato è un'eccezione in caso di richiesta non soddisfatta. È necessario assicurarsi che rientri nella strategia di gestione delle eccezioni.  
   
 - Usando l'autorizzazione basata su URL tramite la sezione **\<authorization>** in **web.config**. Questo approccio è utile quando si gestisce l'autorizzazione in un livello URL. Si tratta del livello più grezzo tra quelli indicati in precedenza. Il vantaggio di questo approccio è che le modifiche vengono apportate nel file di configurazione, pertanto il codice non deve essere compilato per sfruttare la modifica.  
   
 ### <a name="expressing-roles-as-claims"></a>Espressione dei ruoli come attestazioni  
- Quando viene chiamato il metodo **IsInRole()**, viene eseguito un controllo per determinare se l'utente corrente dispone del ruolo in questione. Nelle applicazioni in grado di riconoscere attestazioni il ruolo è espresso da un tipo di attestazione del ruolo che deve essere disponibile nel token. Il tipo di attestazione del ruolo viene espresso tramite l'URI seguente:  
+ Quando viene chiamato il metodo **IsInRole()** , viene eseguito un controllo per determinare se l'utente corrente dispone del ruolo in questione. Nelle applicazioni in grado di riconoscere attestazioni il ruolo è espresso da un tipo di attestazione del ruolo che deve essere disponibile nel token. Il tipo di attestazione del ruolo viene espresso tramite l'URI seguente:  
   
  `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`
   

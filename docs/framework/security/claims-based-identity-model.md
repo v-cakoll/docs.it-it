@@ -3,12 +3,12 @@ title: Modello di identità basata sulle attestazioni
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 8560c7fd1969cfed6e43e2982fb69313c45c9405
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b7cafa727251c28b79615a37adce4effe6885392
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650453"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422402"
 ---
 # <a name="claims-based-identity-model"></a>Modello di identità basata sulle attestazioni
 Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identità dell'utente è rappresentata come un set di attestazioni nell'applicazione. Un'attestazione può essere il nome dell'utente, un altro potrebbe essere un indirizzo di posta elettronica. L'idea è che viene configurato un sistema di identità esterno per fornire all'applicazione tutti gli elementi necessari per ottenere informazioni sull'utente con ogni richiesta effettuata, con la garanzia crittografica che i dati di identità ricevuti provengono da un'origine attendibile.  
@@ -58,7 +58,7 @@ Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identit
  Quando si sviluppa un'applicazione basata sulle attestazioni, si compila un'applicazione relying party (RP). Il termine "applicazione relying party" è sinonimo di "applicazione in grado di riconoscere attestazioni" e "applicazione basata sulle attestazioni". Le applicazioni Web e i servizi Web possono essere entrambi esempi di relying party. Tramite un'applicazione relying party vengono utilizzati i token emessi da un servizio token di sicurezza e vengono estratte le attestazioni dai token per utilizzarle per attività correlate all'identità. WIF offre funzionalità di supporto per la compilazione di applicazioni relying party.  
   
 ### <a name="standards"></a>Standard  
- Per rendere interoperabile tutte le operazioni, nello scenario precedente sono stati utilizzati diversi standard WS-*. I criteri vengono recuperati tramite WS-MetadataExchange e i criteri stessi sono strutturati in base alla specifica WS-Policy. Tramite il servizio token di sicurezza vengono esposti gli endpoint con cui viene implementata la specifica WS-Trust, in cui viene illustrato come richiedere e ricevere i token di sicurezza. La maggior parte dei servizi token di sicurezza attuali è stata formattata con SAML (Security Assertion Markup Language), un vocabolario XML riconosciuto dal settore utilizzabile per rappresentare le attestazioni in una modalità interoperabile. In alternativa, in una situazione con più piattaforme, questo consente di comunicare con un servizio token di sicurezza in una piattaforma completamente diversa e ottenere un punto di accesso singolo in tutte le applicazioni, indipendentemente dalla piattaforma.  
+ Per rendere interoperabile tutte le operazioni, nello scenario precedente sono stati utilizzati diversi standard WS-*. I criteri vengono recuperati tramite WS-MetadataExchange e i criteri stessi sono strutturati in base alla specifica WS-Policy. Tramite il servizio token di sicurezza vengono esposti gli endpoint con cui viene implementata la specifica WS-Trust, in cui viene illustrato come richiedere e ricevere i token di sicurezza. La maggior parte dei ruoli STS oggi rilasciare token formattato con Security Assertion Markup Language (SAML). un vocabolario XML riconosciuto dal settore utilizzabile per rappresentare le attestazioni in una modalità interoperabile. In alternativa, in una situazione con più piattaforme, questo consente di comunicare con un servizio token di sicurezza in una piattaforma completamente diversa e ottenere un punto di accesso singolo in tutte le applicazioni, indipendentemente dalla piattaforma.  
   
 ### <a name="browser-based-applications"></a>Applicazioni basate su browser  
  Gli smart client non sono gli unici a poter utilizzare il modello di identità basato sulle attestazioni. Questo modello può inoltre essere utilizzato dalle applicazioni basate sul browser (definite anche client passivi). Il funzionamento è descritto nello scenario seguente:  

@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Generazione SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 380ab80a577fa103c33328047cd24cce6be5cb6e
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 5d8723c6a6d1ab12a2ba1f0f2f7cd5e09e82bfad
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690351"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422771"
 ---
 # <a name="walkthrough-sql-generation"></a>Procedura dettagliata: Generazione SQL
 
@@ -128,7 +128,7 @@ L'input di destra viene elaborato esattamente come l'input di sinistra. Lo stato
 
 ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
 
-Il valore "false" successivo viene inserito nello stack IsParentAJoin e la condizione di join Var(Extent1).CategoryID == Var(Extent2).CategoryID viene elaborata. Var(Extenent1) viene risolto in \<symbol_Extent1 > dopo una ricerca nella tabella dei simboli. Poiché l'istanza viene risolta in un simbolo semplice, in seguito all'elaborazione Var(Extent1). CategoryID, un oggetto SqlBuilder con \<symbol1 >. " Viene restituito CategoryID". Analogamente, viene elaborato l'altro lato del confronto e il risultato della visita della condizione di join viene aggiunto alla clausola FROM di SelectStatement1 e il valore "false" viene estratto dallo stack IsParentAJoin.
+Il valore "false" successivo viene inserito nello stack IsParentAJoin e la condizione di join Var(Extent1).CategoryID == Var(Extent2).CategoryID viene elaborata. Var(Extent1) viene risolto in \<symbol_Extent1 > dopo una ricerca nella tabella dei simboli. Poiché l'istanza viene risolta in un simbolo semplice, in seguito all'elaborazione Var(Extent1). CategoryID, un oggetto SqlBuilder con \<symbol1 >. " Viene restituito CategoryID". Analogamente, viene elaborato l'altro lato del confronto e il risultato della visita della condizione di join viene aggiunto alla clausola FROM di SelectStatement1 e il valore "false" viene estratto dallo stack IsParentAJoin.
 
 A questo punto, l'elaborazione di Join1 è completa e viene estratto un ambito dalla tabella dei simboli.
 

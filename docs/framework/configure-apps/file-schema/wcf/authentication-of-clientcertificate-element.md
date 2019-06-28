@@ -2,12 +2,12 @@
 title: <authentication> di <clientCertificate> elemento
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: e232cde8f6838de734e37aeee3f52cd7f7e7502d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cbc850331dc6bf76c352f975fda834a309564c6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701333"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423233"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<autenticazione > di \<clientCertificate > elemento
 Specifica i comportamenti di autenticazione per i certificati client utilizzati da un servizio.  
@@ -41,7 +41,7 @@ Specifica i comportamenti di autenticazione per i certificati client utilizzati 
 |customCertificateValidatorType|Stringa facoltativa. Un tipo e un assembly usati per convalidare un tipo personalizzato. Questo attributo deve essere impostato quando `certificateValidationMode` è impostato su `Custom`.|  
 |certificateValidationMode|Enumerazione facoltativa. Specifica una delle modalità usate per convalidare credenziali. L'attributo è di tipo <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Se impostato su <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>, è necessario fornire anche un `customCertificateValidator`. Il valore predefinito è <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType>.|  
 |includeWindowsGroups|Valore booleano facoltativo. Specifica se i gruppi di Windows sono inclusi nel contesto di sicurezza. L'impostazione di questo attributo su `true` determina un effetto sulle prestazioni in quanto comporta un'espansione completa del gruppo. Impostare questo attributo su `false` se non è necessario stabilire l'elenco di gruppi a cui appartiene un utente.|  
-|mapClientCertificateToWindowsAcccount|Proprietà di tipo Boolean. Specifica se è possibile eseguire il mapping del client a un'identità di Windows usando il certificato. A tal scopo è necessario che Active Directory sia attivato.|  
+|mapClientCertificateToWindowsAccount|Proprietà di tipo Boolean. Specifica se è possibile eseguire il mapping del client a un'identità di Windows usando il certificato. A tal scopo è necessario che Active Directory sia attivato.|  
 |revocationMode|Enumerazione facoltativa. Una delle modalità usate per verificare un elenco dei certificati revocati. Il valore predefinito è `Online`. Questo valore viene ignorato quando si usa la sicurezza del trasporto HTTP.|  
 |trustedStoreLocation|Enumerazione facoltativa. Uno di due percorsi dell'archivio di sistema: `LocalMachine` o `CurrentUser`. Questo valore viene usato quando viene negoziato un certificato del servizio con il client. La convalida viene eseguita sul **persone attendibili** archiviare nel percorso dell'archivio specificato. Il valore predefinito è `CurrentUser`.|  
   

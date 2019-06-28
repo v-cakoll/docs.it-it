@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eda4f8d3819af05b022e0633d6883cca940f67e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce001ed25d7704301d7f809887a445e3492e93fc
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866858"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422541"
 ---
 # <a name="library-element-net-native"></a>\<Libreria > elemento (.NET Native)
 Definisce l'assembly che contiene i tipi e i membri dei tipi i cui metadati sono disponibili per la reflection al runtime.  
@@ -58,7 +58,7 @@ Elemento \<Library>
   
  L'elemento `<Library>` viene usato come contenitore per definire gli elementi di programma i cui metadati sono richiesti al runtime; questo elemento non esprime criteri. Durante la compilazione, gli strumenti di compilazione cercano gli elementi di programma identificati dagli elementi figlio solo nella libreria designata dall'elemento `<Library>`. Al contrario, gli strumenti di compilazione cercano gli elementi di programma identificati dagli elementi figlio dell'elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) in tutte le librerie, incluse le librerie di base .NET Framework.  
   
- Le direttive `<Library>` possono essere usate in modo condizionale. Se il nome del `<Library>` elemento inizia e termina con un asterisco (\*), il `<Library>` direttiva ha effetto solo se viene fatto riferimento all'assembly racchiuso tra asterischi dall'app. Ad esempio, la seguente direttiva di runtime si applica solo se l'assembly Utillities.dll viene indicata dall'app.  
+ Le direttive `<Library>` possono essere usate in modo condizionale. Se il nome del `<Library>` elemento inizia e termina con un asterisco (\*), il `<Library>` direttiva ha effetto solo se viene fatto riferimento all'assembly racchiuso tra asterischi dall'app. Ad esempio, la seguente direttiva di runtime si applica solo se l'assembly Utilities viene fatto riferimento dall'app.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

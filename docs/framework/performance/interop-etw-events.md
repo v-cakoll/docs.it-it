@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38db390b8fad9cd36dacf33f9647b0272eddc4a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616414"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422419"
 ---
 # <a name="interop-etw-events"></a>Eventi ETW di interoperabilità
 <a name="top"></a> Gli eventi di interoperabilità acquisiscono informazioni sulla generazione di stub e la memorizzazione nella cache di Microsoft Intermediate Language (MSIL).  
@@ -43,7 +43,7 @@ ms.locfileid: "64616414"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|L’identificatore del modulo.|  
 |StubMethodID|win:UInt64|L’identificatore del metodo stub.|  
-|StubFlags|win:UInt64|Flag per lo stub:<br /><br /> 0x1 - Interoperabilità inversa.<br /><br /> 0x2 - interoperabilità COM.<br /><br /> 0x4 - stub generato da NGen.exe.<br /><br /> 0x8 - Delegato.<br /><br /> 0x10 - Argomento variabile.<br /><br /> 0x20 - Computer chiamato non gestito.|  
+|StubFlags|win:UInt64|Flag per lo stub:<br /><br /> 0x1 - Interoperabilità inversa.<br /><br /> 0x2 - interoperabilità COM.<br /><br /> 0x4 - stub generato da NGen.exe.<br /><br /> 0x8 - Delegato.<br /><br /> 0x10 - argomento variabile.<br /><br /> 0x20 - Computer chiamato non gestito.|  
 |ManagedInteropMethodToken|win:UInt32|Il token per il metodo di interoperabilità gestito.|  
 |ManagedInteropMethodNameSpace|win:UnicodeString|Lo spazio dei nomi per il metodo di interoperabilità gestito.|  
 |ManagedInteropMethodName|win:UnicodeString|Il nome per il metodo di interoperabilità gestito.|  

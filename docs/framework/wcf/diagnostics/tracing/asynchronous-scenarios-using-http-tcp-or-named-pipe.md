@@ -2,12 +2,12 @@
 title: Scenari asincroni con trasporti HTTP, TCP o pipe con nome
 ms.date: 03/30/2017
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
-ms.openlocfilehash: 48957ec0abd1b4b0623f9b613fcd94912a38845b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 218887f7d09e234d0d02dfa1df5c1d4e114ddc11
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881658"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422231"
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>Scenari asincroni con trasporti HTTP, TCP o pipe con nome
 In questo argomento vengono descritti attività e trasferimenti per vari scenari Request/Reply asincroni, con richieste multithreading che utilizzano HTTP, TCP o named pipe.  
@@ -24,37 +24,37 @@ In questo argomento vengono descritti attività e trasferimenti per vari scenari
 #### <a name="propagation-is-enabled-on-both-sides-using-http"></a>La propagazione è attivata su entrambi i lati, con l'utilizzo di HTTP  
  ![Client asincrono senza callback in cui propagateActivity è impostato su true su entrambi i lati.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-client-no-callback.gif)   
   
- Se `propagateActivity` = `true`, ProcessMessage indica l'attività processaction nella quale da trasferire.  
+ Se `propagateActivity=true`, ProcessMessage indica l'attività processaction nella quale da trasferire.  
   
  Per gli scenari basati su HTTP, ReceiveBytes viene richiamato nel primo messaggio da inviare ed esiste per la durata della richiesta.  
   
 #### <a name="propagation-is-disabled-on-either-sides-using-http"></a>La propagazione è disattivata su uno dei due lati, con l'utilizzo di HTTP  
- Se `propagateActivity` = `false` su un lato, ProcessMessage non indica attività processaction nella quale da trasferire. Pertanto, viene richiamata una nuova attività ProcessAction temporanea con un nuovo ID. Quando la risposta asincrona viene abbinata alla richiesta nel codice di ServiceModel, l'ID attività può essere recuperato dal contesto locale. L'effettiva attività ProcessAction può essere trasferita con tale ID.  
+ Se `propagateActivity=false` su un lato, ProcessMessage non indica attività processaction nella quale da trasferire. Pertanto, viene richiamata una nuova attività ProcessAction temporanea con un nuovo ID. Quando la risposta asincrona viene abbinata alla richiesta nel codice di ServiceModel, l'ID attività può essere recuperato dal contesto locale. L'effettiva attività ProcessAction può essere trasferita con tale ID.  
   
  ![Client asincrono senza callback in cui propagateActivity è impostata su false in entrambi i lati.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-scenario-propagation-disabled-either-side.gif)  
     
  Per gli scenari basati su HTTP, ReceiveBytes viene richiamato nel primo messaggio da inviare ed esiste per la durata della richiesta.  
   
- Un'attività Processaction viene creata in un client asincrono quando `propagateActivity` = `false` nel chiamante o chiamato e quando il messaggio di risposta non include un'intestazione Action.  
+ Un'attività Processaction viene creata in un client asincrono quando `propagateActivity=false` nel chiamante o chiamato e quando il messaggio di risposta non include un'intestazione Action.  
   
 #### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a>La propagazione è attivata su entrambi i lati, con l'utilizzo di TCP o named pipe  
  ![Client asincrono senza callback in cui propagateActivity è impostata a true su entrambi i lati e named pipe/TCP.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-scenario-propagation-enabled-using-tcp.gif)  
   
  Per uno scenario basato su named pipe o TCP, ReceiveBytes viene richiamato quando il client è aperto ed esiste per la durata della connessione.  
   
- Simile alla prima immagine, se `propagateActivity` = `true`, ProcessMessage indica l'attività processaction nella quale da trasferire.  
+ Simile alla prima immagine, se `propagateActivity=true`, ProcessMessage indica l'attività processaction nella quale da trasferire.  
   
 #### <a name="propagation-is-disabled-on-either-sides-using-tcp-or-named-pipe"></a>La propagazione è disattivata su uno dei due lati, con l'utilizzo di TCP o named pipe  
  Per uno scenario basato su named pipe o TCP, ReceiveBytes viene richiamato quando il client è aperto ed esiste per la durata della connessione.  
   
- Simile alla seconda immagine, se `propagateActivity` = `false` su un lato, ProcessMessage non indica attività processaction nella quale da trasferire. Pertanto, viene richiamata una nuova attività ProcessAction temporanea con un nuovo ID. Quando la risposta asincrona viene abbinata alla richiesta nel codice di ServiceModel, l'ID attività può essere recuperato dal contesto locale. L'effettiva attività ProcessAction può essere trasferita con tale ID.  
+ Simile all'immagine, secondo se `propagateActivity=false` su un lato, ProcessMessage non indica attività processaction nella quale da trasferire. Pertanto, viene richiamata una nuova attività ProcessAction temporanea con un nuovo ID. Quando la risposta asincrona viene abbinata alla richiesta nel codice di ServiceModel, l'ID attività può essere recuperato dal contesto locale. L'effettiva attività ProcessAction può essere trasferita con tale ID.  
   
  ![Client asincrono senza callback, in cui propagateActivity è impostato su false in entrambi i lati e denominato pipe/TCP.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-scenario-propagation-disabled-using-tcp.gif)  
     
 ### <a name="asynchronous-client-with-callback"></a>Client asincrono con callback  
  Questo scenario aggiunge attività G e A', per il callback e `endCall`, e i rispettivi trasferimenti dentro/fuori.  
   
- In questa sezione illustra solo tramite HTTP con `propragateActivity` = `true`. Tuttavia, altre attività e trasferimenti si applicano anche agli altri casi (vale a dire `propagateActivity` = `false`, utilizzo di TCP o Named Pipe).  
+ In questa sezione illustra solo tramite HTTP con `propagateActivity` = `true`. Tuttavia, altre attività e trasferimenti si applicano anche agli altri casi (vale a dire `propagateActivity` = `false`, utilizzo di TCP o Named Pipe).  
   
  Il callback crea un'attività nuova (G) quando il client chiama codice utente per notificare che i risultati sono pronti. Il codice utente chiama quindi `endCall` all'interno del callback (come mostrato in Figura 5) o fuori del callback (Figura 6). Poiché non è possibile sapere quale attività dell'utente `endCall` viene chiamato da questa attività viene etichettata `A’`. È possibile che A' sia identico ad A o diverso.  
   

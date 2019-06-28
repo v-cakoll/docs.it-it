@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75a66ee7ca1d7c99de6e2cc9a1d502ea58dbf9f7
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775843"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422818"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Form aggiungere elemento di configurazione
 
@@ -43,7 +43,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 | ---------- | ------ | ----------- |
 | "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica se i controlli ancorati vengono ridimensionati in un unico passaggio. "true" per disabilitare la singola passare la scalabilità; in caso contrario, false. Vedere la sezione "Singolo pass scalabilità" nel [osservazioni](#remarks) per altre informazioni. |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | Indica se un'applicazione è compatibile con DPI. Impostare la chiave per "PerMonitorV2" per supportare la compatibilità con Dpi; in caso contrario, impostarla su "false". Compatibilità con DPI è una funzionalità che prevede il consenso esplicito; Per sfruttare i vantaggi del supporto di valori DPI alti dei moduli di Windows, è necessario impostare il relativo valore su "PerMonitorV2". Vedere le [osservazioni](#remarks) sezione per altre informazioni. |
-| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Indica se il <xref:System.Windows.Forms.CheckedListBox> controllo consente di sfruttare la scalabilità e il layout i miglioramenti introdotti con .NET Framework 4.7. "true" per rifiutare esplicitamente i miglioramenti di layout e caling; in caso contrario, "false". |
+| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Indica se il <xref:System.Windows.Forms.CheckedListBox> controllo consente di sfruttare la scalabilità e il layout i miglioramenti introdotti con .NET Framework 4.7. "true" per rifiutare esplicitamente i miglioramenti di ridimensionamento e layout; in caso contrario, "false". |
 | "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | Indica se il <xref:System.Windows.Forms.DataGridView> controllare la scalabilità e il layout i miglioramenti introdotti con .NET Framework 4.7. "true" rifiutare esplicitamente la compatibilità con DPI; "false" in caso contrario. |
 | "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true" rifiutare esplicitamente la ricezione di messaggi correlati a DPI ridimensionamento le modifiche. "false" in caso contrario. Vedere le [osservazioni](#remarks) sezione per altre informazioni. |
 | "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Indica se un'applicazione Windows Form viene ridimensionata automaticamente a causa di modifiche di ridimensionamento DPI. "true" per abilitare il ridimensionamento automatico; in caso contrario, false. |

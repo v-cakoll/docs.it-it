@@ -2,12 +2,12 @@
 title: Specifica del manifesto del provider
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 0f3eaa73a26c3f8519e1c168ab2e2968ed4ab28d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641171"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422723"
 ---
 # <a name="provider-manifest-specification"></a>Specifica del manifesto del provider
 Questa sezione illustra come un provider dell'archivio dati può supportare i tipi e le funzioni di tale archivio.  
@@ -83,9 +83,9 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
  Il manifesto del provider viene caricato dal caricatore dei metadati dell'archivio (StoreItemCollection) tramite una connessione all'archivio dati o un token del manifesto del provider.  
   
 #### <a name="using-a-data-store-connection"></a>Uso di una connessione all'archivio dati  
- Quando è disponibile la connessione all'archivio dati, chiamare DbProvderServices.GetProviderManifestToken per restituire il token passato al metodo GetProviderManifest, che restituisce DbProviderManifest. Tale metodo funge da delegato per l'implementazione del provider di GetDbProviderManifestToken.  
+ Quando la connessione all'archivio dati è disponibile, chiamare <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> per restituire il token che viene passato per il <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> metodo, che restituisce <xref:System.Data.Common.DbProviderManifest>. Questo metodo delega per l'implementazione del provider di `GetDbProviderManifestToken`.  
   
-```  
+```csharp
 public string GetProviderManifestToken(DbConnection connection);  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
@@ -274,7 +274,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Nome|Stringa|Yes|N/D|Nome/identificatore del parametro.|  
 |Tipo|Stringa|Yes|N/D|Tipo EDM del parametro.|  
-|Modalità|Parametro<br /><br /> Direction|Yes|N/D|Direzione del parametro:<br /><br /> -   in<br />-out<br />-inout|  
+|Modalità|Parametro<br /><br /> Direzione|Yes|N/D|Direzione del parametro:<br /><br /> -   in<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Attributo namespace  
  Ogni provider dell'archivio dati deve definire uno spazio dei nomi o un gruppo di spazi dei nomi per le informazioni definite nel manifesto. Tale spazio dei nomi può essere usato nelle query Entity SQL per risolvere nomi di funzioni e tipi. Ad esempio: SqlServer. Lo spazio dei nomi deve essere diverso dallo spazio dei nomi canonico, ovvero EDM, definito dai servizi di entità per funzioni standard che devono essere supportate dalle query Entity SQL.  

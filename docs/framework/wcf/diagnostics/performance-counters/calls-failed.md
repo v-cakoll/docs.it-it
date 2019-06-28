@@ -2,12 +2,12 @@
 title: Chiamate non riuscite
 ms.date: 03/30/2017
 ms.assetid: 52afeff8-333c-44a5-96ce-1f3c418523fc
-ms.openlocfilehash: e844f18b96a28c807a6f10195c9ab20780f23306
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8646adf08e2e6141c6117da7129f348c92105a7
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797410"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422145"
 ---
 # <a name="calls-failed"></a>Chiamate non riuscite
 Nome contatore: Chiamate non riuscite  
