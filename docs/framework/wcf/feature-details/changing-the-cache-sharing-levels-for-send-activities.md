@@ -2,12 +2,12 @@
 title: Modifica dei livelli di condivisione della cache per le attività Send
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: 1561d053dc04bbea18f4d6cb43399c2c625d5da1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 079eb037f074155aec3ad5473480bbf5d4d341b2
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614857"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425164"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Modifica dei livelli di condivisione della cache per le attività Send
 L'estensione <xref:System.ServiceModel.Activities.SendMessageChannelCache> consente di personalizzare i livelli di condivisione della cache, le impostazioni della cache della channel factory e della cache del canale per i flussi di lavoro che inviano messaggi agli endpoint del servizio tramite le attività di messaggistica <xref:System.ServiceModel.Activities.Send>. Questi sono in genere flussi di lavoro del client ma potrebbero essere anche servizi del flusso di lavoro ospitati in un oggetto <xref:System.ServiceModel.WorkflowServiceHost>. La cache della channel factory contiene gli oggetti <xref:System.ServiceModel.ChannelFactory%601> memorizzati nella cache. La cache del canale contiene i canali memorizzati nella cache.  
@@ -150,7 +150,7 @@ SendMessageChannelCache customChannelCacheExtension =
 clientInstance.Extensions.Add(customChannelCacheExtension);  
 ```  
   
- In un servizio flusso di lavoro ospitato è possibile specificare le impostazioni della cache della factory e della cache del canale nel file di configurazione dell'applicazione. A tale scopo, aggiungere un comportamento del servizio contenente le impostazioni della cache della factory e del canale e aggiungere tale comportamento al servizio. L'esempio seguente mostra il contenuto del file di configurazione che contiene il `MyChannelCacheBehavior` comportamento del servizio con le impostazioni della cache factory personalizzata della cache e del canale. Questo comportamento viene aggiunto al servizio tramite il `behaviorConfiguarion` attributo.  
+ In un servizio flusso di lavoro ospitato è possibile specificare le impostazioni della cache della factory e della cache del canale nel file di configurazione dell'applicazione. A tale scopo, aggiungere un comportamento del servizio contenente le impostazioni della cache della factory e del canale e aggiungere tale comportamento al servizio. L'esempio seguente mostra il contenuto del file di configurazione che contiene il `MyChannelCacheBehavior` comportamento del servizio con le impostazioni della cache factory personalizzata della cache e del canale. Questo comportamento viene aggiunto al servizio tramite il `behaviorConfiguration` attributo.  
   
 ```xml  
 <configuration>    
