@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet list package
 description: Il comando "dotnet list package" offre un'opzione utile per visualizzare un elenco dei riferimenti al pacchetto per un progetto o una soluzione.
-ms.date: 04/09/2019
-ms.openlocfilehash: 88ef3302a955eadc4167384312e4eb721dd496fb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 98cc456fff02364310cec98f0282700f7697f07e
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631758"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421946"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -20,12 +20,12 @@ ms.locfileid: "65631758"
 ## <a name="synopsis"></a>Riepilogo
 
 ```
-dotnet list [<PROJECT | SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
-   [--include-prerelease] [--include-transitive] [--outdated] [--source]
+dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
+   [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
 dotnet list package [-h|--help]
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>DESCRIZIONE
 
 Il comando `dotnet list package` offre un'opzione utile per visualizzare un elenco di tutti i riferimenti al pacchetto NuGet per un progetto o una soluzione specifica. Occorre prima di tutto compilare il progetto in modo da avere le risorse che il comando dovrà elaborare. L'esempio seguente mostra l'output del comando `dotnet list package` per il progetto [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis):
 
@@ -104,6 +104,10 @@ File di progetto o di soluzione su cui eseguire le operazioni. Se non specificat
 * **`--include-transitive`**
 
   Elenca i pacchetti transitivi, oltre ai pacchetti di primo livello. Quando si specifica questa opzione, si ottiene un elenco di pacchetti da cui dipendono i pacchetti di primo livello.
+
+* **`--interactive`**
+
+  Consente al comando di arrestarsi e attendere l'input o l'azione dell'utente, ad esempio il completamento dell'autenticazione. Disponibile a partire da .NET Core 3.0 SDK.
 
 * **`--outdated`**
 

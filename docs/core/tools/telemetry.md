@@ -4,12 +4,12 @@ description: Informazioni sulle funzionalità di telemetria degli strumenti di .
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 40d9f3f698f513306e087753b4c33d09e8df0046
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377495"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397762"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria di .NET Core SDK
 
@@ -102,7 +102,7 @@ Set di dati aggiuntivi vengono pubblicati con un formato URL standard. Sostituir
 
 ## <a name="license"></a>Licenza
 
-La distribuzione Microsoft di .NET Core è concessa in base alle [condizioni di licenza software Microsoft: Mirosoft .NET Library](https://aka.ms/dotnet-core-eula). Per informazioni dettagliate sulla raccolta e l'elaborazione dei dati, vedere la sezione intitolata "DATA".
+La distribuzione Microsoft di .NET Core è concessa in base alle [condizioni di licenza software Microsoft: Microsoft .NET Library](https://aka.ms/dotnet-core-eula). Per informazioni dettagliate sulla raccolta e l'elaborazione dei dati, vedere la sezione intitolata "DATA".
 
 Questa licenza viene usata anche dai [pacchetti NuGet .NET](https://www.nuget.org/profiles/dotnetframework) per i quali, tuttavia, la funzionalità di telemetria non è abilitata (vedere la sezione [Ambito](#scope)).
 

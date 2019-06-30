@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet clean
 description: Il comando dotnet clean consente di pulire la directory corrente.
-ms.date: 04/14/2019
-ms.openlocfilehash: fa19f1b041e4031082f928135395a5f06ce702e9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 36630c046ff8f1ad8d513b4e64cfb74a8625776b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631817"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422010"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -24,11 +24,12 @@ ms.locfileid: "65631817"
 ## <a name="synopsis"></a>Riepilogo
 
 ```
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+    [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>DESCRIZIONE
 
 Il comando `dotnet clean` pulisce l'output della compilazione precedente. Viene implementato come una [destinazione di MSBuild](/visualstudio/msbuild/msbuild-targets). Per questo motivo, il progetto viene valutato quando tale comando viene eseguito. Vengono puliti solo gli output creati durante la compilazione. Vengono pulite sia la cartella intermedia (*obj*) sia quella dell'output finale (*bin*).
 
@@ -55,6 +56,10 @@ Progetto o soluzione MSBuild da pulire. Se non viene specificato alcun file di p
 * **`--interactive`**
 
   Consente al comando di arrestarsi e attendere l'input o l'azione dell'utente, ad esempio il completamento dell'autenticazione. Disponibile a partire da .NET Core 3.0 SDK.
+
+* **`--nologo`**
+
+  Non visualizza il messaggio di avvio né il messaggio di copyright. Disponibile a partire da .NET Core 3.0 SDK.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 

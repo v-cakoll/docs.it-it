@@ -3,12 +3,12 @@ title: Informazioni su .NET Core
 description: Informazioni su .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: fb6088bcadcdc9c28699446df035b899485c406d
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: d81c6ad15c12d7bb1e866aef3bd1e799d5b62cde
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003750"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421881"
 ---
 # <a name="about-net-core"></a>Informazioni su .NET Core
 
@@ -30,7 +30,7 @@ ms.locfileid: "66003750"
 
 .NET Core espone API per molti scenari, tra cui i seguenti:
 
-- Tipi primitivi, ad esempio [bool](../csharp/language-reference/keywords/bool.md) e [int](../csharp/language-reference/keywords/int.md).
+- Tipi primitivi, ad esempio [bool](../csharp/language-reference/keywords/bool.md) e [int](../csharp/language-reference/builtin-types/integral-numeric-types.md).
 - Raccolte, ad esempio <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> e <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Tipi di utilità, ad esempio <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> e <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Tipi di dati, ad esempio <xref:System.Data.DataSet?displayProperty=nameWithType> e [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
