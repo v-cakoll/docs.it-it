@@ -2,24 +2,24 @@
 title: Opzioni di hosting di flussi di lavoro
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: 2a03c7b5e15b76eabc714f44624f04d3385720d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0cd9748c28cd6206e1fedffc5772b2849462dba
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670217"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487371"
 ---
 # <a name="workflow-hosting-options"></a>Opzioni di hosting di flussi di lavoro
-La maggior parte degli esempi di Windows Workflow Foundation (WF) usa i flussi di lavoro ospitati in un'applicazione console, ma questo non è uno scenario realistico per i flussi di lavoro reali. I flussi di lavoro nelle applicazioni aziendali reali saranno ospitati in processi persistenti, ad esempio un servizio Windows creato dallo sviluppatore o un'applicazione server come [!INCLUDE[iisver](../../../includes/iisver-md.md)] o AppFabric. Di seguito sono riportate le differenze tra questi approcci.  
+La maggior parte degli esempi di Windows Workflow Foundation (WF) usa i flussi di lavoro ospitati in un'applicazione console, ma questo non è uno scenario realistico per i flussi di lavoro reali. I flussi di lavoro nelle applicazioni aziendali reali verrà ospitate in processi persistenti entrambi un servizio di Windows creato dallo sviluppatore o un'applicazione server, ad esempio IIS 7.0 o AppFabric. Di seguito sono riportate le differenze tra questi approcci.  
   
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>Hosting di flussi di lavoro in IIS con Windows AppFabric  
  IIS con AppFabric è l'host preferito per i flussi di lavoro. L'applicazione host per i flussi di lavoro che usano AppFabric è Windows Activation Service che rimuove la dipendenza di HTTP su IIS indipendente.  
   
 ## <a name="hosting-workflows-in-iis-alone"></a>Hosting di flussi di lavoro in IIS indipendente  
- L'utilizzo di [!INCLUDE[iisver](../../../includes/iisver-md.md)] indipendente non è consigliato perché con AppFabric sono disponibili strumenti di gestione e monitoraggio che facilitano la manutenzione delle applicazioni in esecuzione. I flussi di lavoro devono essere ospitati in [!INCLUDE[iisver](../../../includes/iisver-md.md)] indipendente solo in caso di problemi di infrastruttura per il passaggio ad AppFabric.  
+ Usa solo con IIS 7.0 non è consigliata, perché esistono strumenti disponibili con AppFabric che facilitano la manutenzione delle applicazioni in esecuzione di monitoraggio e gestione. I flussi di lavoro deve essere ospitati solo in IIS 7.0 solo se sono presenti problemi di infrastruttura passaggio ad AppFabric.  
   
 > [!WARNING]
->  [!INCLUDE[iisver](../../../includes/iisver-md.md)] ricicla periodicamente i pool di applicazioni per diversi motivi. Quando un pool di applicazioni viene riciclato, IIS smette di accettare i messaggi del pool precedente e crea un'istanza di un nuovo pool di applicazioni per accettare le nuove richieste. Se il flusso di lavoro continua dopo l'invio di una risposta, [!INCLUDE[iisver](../../../includes/iisver-md.md)] non verrà informato del lavoro eseguito e può riciclare il pool di applicazioni host. Se in questo caso, il flusso di lavoro verrà interrotta e i servizi di rilevamento registrerà un [1004 - WorkflowInstanceAborted](1004-workflowinstanceaborted.md) messaggio con un campo motivo vuoto.  
+>  IIS 7.0 Ricicla periodicamente i pool di applicazioni per vari motivi. Quando un pool di applicazioni viene riciclato, IIS smette di accettare i messaggi del pool precedente e crea un'istanza di un nuovo pool di applicazioni per accettare le nuove richieste. Se un flusso di lavoro continua dopo l'invio di una risposta, IIS 7.0 non verrà informato del lavoro svolto e può riciclare il pool di applicazioni host. Se in questo caso, il flusso di lavoro verrà interrotta e i servizi di rilevamento registrerà un [1004 - WorkflowInstanceAborted](1004-workflowinstanceaborted.md) messaggio con un campo motivo vuoto.  
 >   
 >  Se si usa la persistenza, l'host deve esplicitamente riavviare le istanze arrestate dall'ultimo punto di persistenza.  
 >   

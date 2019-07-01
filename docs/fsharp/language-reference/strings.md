@@ -1,13 +1,13 @@
 ---
 title: Stringhe
 description: Informazioni su come il F# di tipo 'stringa' rappresenta il testo non modificabile come sequenza di caratteri Unicode.
-ms.date: 05/16/2016
-ms.openlocfilehash: c2fda4d936abab5bc3f4653613991a7f5471d81d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/28/2019
+ms.openlocfilehash: 8bd7a65a8d8e9e6a2d3930cd1fc9e800342d9a18
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642075"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487766"
 ---
 # <a name="strings"></a>Stringhe
 
@@ -29,7 +29,7 @@ Valori letterali stringa sono delimitati dal carattere di virgolette doppie (").
 |Barra rovesciata|`\\`|
 |Virgoletta|`\"`|
 |Apostrofo|`\'`|
-|Carattere Unicode|`\uXXXX` oppure `\UXXXX` (dove `X` indica una cifra esadecimale)|
+|Carattere Unicode|`\uXXXX` (UTF-16) o `\U00XXXXXX` (UTF-32) (in cui `X` indica una cifra esadecimale)|
 
 Se è preceduto dal simbolo @, il valore letterale è una stringa verbatim. Ciò significa che tutte le sequenze di escape vengono ignorate, ad eccezione del fatto che i due caratteri segno di virgolette doppie vengono interpretate come carattere un segno di virgolette.
 

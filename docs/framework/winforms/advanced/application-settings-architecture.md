@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 717abc8f54669a5ca814a61827a0865215204e1b
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876226"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487348"
 ---
 # <a name="application-settings-architecture"></a>Architettura Impostazioni applicazione
 Questo argomento descrive il funzionamento dell'architettura Impostazioni applicazione e ne analizza le funzionalità avanzate, come i raggruppamenti e le chiavi delle impostazioni.  
@@ -109,16 +109,16 @@ Questo argomento descrive il funzionamento dell'architettura Impostazioni applic
  Se si implementa una propria classe di impostazioni, è possibile usare la <xref:System.Configuration.SettingsSerializeAsAttribute> per contrassegnare un'impostazione per la serializzazione binaria o personalizzata usando il <xref:System.Configuration.SettingsSerializeAs> enumerazione. Per altre informazioni sulla creazione di una propria classe di impostazioni nel codice, vedere [come: Creare le impostazioni dell'applicazione](how-to-create-application-settings.md).  
   
 ### <a name="settings-file-locations"></a>Percorsi dei file delle impostazioni  
- Il percorso dei file `app`.exe.config e *user*.config variano in base alle modalità di installazione dell'applicazione. Per un'applicazione basata su Windows Form copiata nel computer locale, `app`. exe. config si trovi nella stessa directory della directory di base del file eseguibile principale dell'applicazione, e *utente*. config si troverà di percorso specificato da di <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> proprietà. Per un'applicazione installata tramite [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], entrambi questi file si troveranno nella Directory dati [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] %InstallRoot%\Documents e Impostazioni\\*nome utente*\Impostazioni locali.  
+ Il percorso dei file `app`.exe.config e *user*.config variano in base alle modalità di installazione dell'applicazione. Per un'applicazione basata su Windows Form copiata nel computer locale, `app`. exe. config si trovi nella stessa directory della directory di base del file eseguibile principale dell'applicazione, e *utente*. config si troverà di percorso specificato da di <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> proprietà. Per un'applicazione installata tramite ClickOnce, entrambi questi file si troverà nella Directory di dati di ClickOnce sotto %InstallRoot%\Documents e impostazioni\\*username*\Local impostazioni.  
   
- Il percorso di archiviazione di questi file è leggermente diverso se un utente ha abilitato i profili di roaming, che consentono all'utente di definire diverse impostazioni di Windows e dell'applicazione quando usa altri computer all'interno di un dominio. In tal caso, sia le applicazioni [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] che quelle diverse da [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] dispongono dei propri file `app`.exe.config e *user*.config archiviati in %InstallRoot%\Documenti e Impostazioni\\*nome utente*\Application Data.  
+ Il percorso di archiviazione di questi file è leggermente diverso se un utente ha abilitato i profili di roaming, che consentono all'utente di definire diverse impostazioni di Windows e dell'applicazione quando usa altri computer all'interno di un dominio. In tal caso, le applicazioni ClickOnce e le applicazioni non ClickOnce avrà loro `app`. exe. config e *utente*i file con estensione config archiviati in %InstallRoot%\Documents e impostazioni\\  *nome utente*\Application Data.  
   
- Per altre informazioni sul funzionamento delle funzioni di Impostazioni applicazione con la nuova tecnologia di distribuzione, vedere [Impostazioni dell'applicazione e ClickOnce](/visualstudio/deployment/clickonce-and-application-settings). Per altre informazioni sulla directory dei dati [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], vedere [Accesso a dati locali e remoti in applicazioni ClickOnce](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications).  
+ Per altre informazioni sul funzionamento delle funzioni di Impostazioni applicazione con la nuova tecnologia di distribuzione, vedere [Impostazioni dell'applicazione e ClickOnce](/visualstudio/deployment/clickonce-and-application-settings). Per altre informazioni sulla Directory dei dati di ClickOnce, vedere [l'accesso ai dati locali e remoti in applicazioni ClickOnce](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications).  
   
 ## <a name="application-settings-and-security"></a>Impostazioni e sicurezza dell'applicazione  
  Le impostazioni dell'applicazione sono progettate per funzionare in attendibilità parziale, un ambiente con restrizioni predefinito per le applicazioni di Windows Form ospitate in Internet o intranet. Non sono necessarie autorizzazioni speciali oltre all'attendibilità parziale per usare le impostazioni dell'applicazione con il provider di impostazioni predefinito.  
   
- Quando si usano le impostazioni dell'applicazione in un'applicazione [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], il file `user`.config è archiviato nella directory dei dati di [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]. Le dimensioni del file `user`.config dell'applicazione non possono superare la quota della directory dei dati impostata da [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]. Per altre informazioni, vedere [Impostazioni dell'applicazione e ClickOnce](/visualstudio/deployment/clickonce-and-application-settings).  
+ Quando vengono usate le impostazioni dell'applicazione in un'applicazione ClickOnce, la `user`file con estensione config è archiviato nella directory dei dati di ClickOnce. Le dimensioni dell'applicazione `user`file con estensione config non può superare la quota di directory dati impostata da ClickOnce. Per altre informazioni, vedere [Impostazioni dell'applicazione e ClickOnce](/visualstudio/deployment/clickonce-and-application-settings).  
   
 ## <a name="custom-settings-providers"></a>Provider di impostazioni personalizzate  
  Nell'architettura di impostazioni dell'applicazione, è un accoppiamento libero tra le impostazioni di applicazioni classi wrapper, derivato da <xref:System.Configuration.ApplicationSettingsBase>, e il provider di impostazioni associato o il provider, derivato da <xref:System.Configuration.SettingsProvider>. Questa associazione viene definita solo per il <xref:System.Configuration.SettingsProviderAttribute> applicato alla classe wrapper o alle singole proprietà. Se le impostazioni di un provider non è esplicitamente specificata, il provider predefinito, <xref:System.Configuration.LocalFileSettingsProvider>, viene usato. Di conseguenza, questa architettura supporta la creazione e l'uso di provider di impostazioni personalizzate.  

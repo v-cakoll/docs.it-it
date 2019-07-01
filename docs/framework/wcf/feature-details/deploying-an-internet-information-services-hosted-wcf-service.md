@@ -2,12 +2,12 @@
 title: Distribuzione di un servizio WCF ospitato in Internet Information Services (IIS)
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: fcfad4c6cd7ffb0bf1233bab842b57a10bcc7f87
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402290"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486921"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Distribuzione di un servizio WCF ospitato in Internet Information Services (IIS)
 
@@ -103,7 +103,7 @@ Per gli endpoint del servizio ospitati in IIS è necessario utilizzare sempre in
 
 ### <a name="available-transports"></a>Trasporti disponibili
 
-Servizi WCF ospitati in IIS 5.1 e 6.0 di IIS sono limitate all'uso di comunicazioni basate su HTTP. Su queste piattaforme IIS, la configurazione di un servizio ospitato affinché utilizzi un'associazione non HTTP, comporta un errore durante l'attivazione del servizio. Per [!INCLUDE[iisver](../../../../includes/iisver-md.md)], i trasporti supportati includono HTTP, Net.TCP, Net.Pipe, Net.MSMQ e msmq.formatname per la compatibilità delle versioni precedenti con le applicazioni MSMQ esistenti.
+Servizi WCF ospitati in IIS 5.1 e 6.0 di IIS sono limitate all'uso di comunicazioni basate su HTTP. Su queste piattaforme IIS, la configurazione di un servizio ospitato affinché utilizzi un'associazione non HTTP, comporta un errore durante l'attivazione del servizio. Per IIS 7.0, i trasporti supportati includono HTTP, NET. TCP, NET. pipe, NET. MSMQ e MSMQ. FormatName per la compatibilità con applicazioni MSMQ esistenti.
 
 ### <a name="http-transport-security"></a>Protezione del trasporto HTTP
 

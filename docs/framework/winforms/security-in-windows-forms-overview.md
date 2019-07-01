@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348475"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487258"
 ---
 # <a name="security-in-windows-forms-overview"></a>Cenni preliminari sulla sicurezza in Windows Form
 
@@ -21,7 +21,7 @@ Prima del rilascio di .NET Framework, tutto il codice in esecuzione nel computer
 
 .NET Framework introduce un'infrastruttura, denominata sicurezza dall'accesso di codice che consente di differenziare le autorizzazioni o diritti, che dispone di codice ai diritti dell'utente. Per impostazione predefinita, il codice proveniente da Internet e dalla Intranet può essere eseguito soltanto in un ambiente parzialmente attendibile. Le applicazioni parzialmente attendibili sono soggette a una serie di restrizioni, ad esempio non possono accedere al disco rigido locale né eseguire codice non gestito. .NET Framework consente di controllare le risorse di codice viene consentito l'accesso in base all'identità di tale codice: la provenienza, l'eventuale una [assembly con nomi sicuri](../app-domains/strong-named-assemblies.md), se è firmato con un certificato e così via.
 
-Grazie alla tecnologia [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], usata per la distribuzione delle applicazioni Windows Form, risulta molto più semplice sviluppare applicazioni da eseguire in un ambiente parzialmente attendibile, in un ambiente con attendibilità totale o in un ambiente parzialmente attendibile con autorizzazioni elevate. Usando alcune delle funzionalità offerte da [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], ad esempio l'elevazione delle autorizzazioni e la distribuzione di applicazioni attendibili, l'applicazione può richiedere automaticamente che l'utente disponga di autorizzazioni elevate o di attendibilità totale.
+La tecnologia ClickOnce, che consente di distribuire le applicazioni Windows Forms, risulta molto più semplice per lo sviluppo di applicazioni in esecuzione in attendibilità parziale, con attendibilità totale o in ambiente parzialmente attendibile con autorizzazioni elevate. ClickOnce fornisce funzionalità come l'elevazione delle autorizzazioni e distribuzione di applicazioni attendibili in modo che l'applicazione può richiedere autorizzazioni elevate o con attendibilità totale da parte dell'utente locale in modo responsabile.
 
 ## <a name="understanding-security-in-the-net-framework"></a>Informazioni sulla sicurezza in .NET Framework
 
@@ -34,7 +34,7 @@ Se l'utente esegue un file eseguibile di Windows Form direttamente da un server 
 >
 > Le autorizzazioni predefinite concesse in ciascuno di questi insiemi sono elencate nell'argomento [Criteri di sicurezza predefiniti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100)). A seconda delle autorizzazioni ricevute, l'applicazione viene eseguita correttamente o genera un'eccezione di sicurezza.
 >
-> Molte applicazioni Windows Form verranno distribuite mediante [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]. Gli strumenti impiegati per generare una distribuzione [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] prevedono impostazioni di sicurezza predefinite differenti da quelle illustrate precedentemente. Per altre informazioni, vedere più avanti.
+> Molte applicazioni Windows Form verranno distribuite mediante ClickOnce. Gli strumenti utilizzati per la generazione di una distribuzione di ClickOnce hanno impostazioni predefinite di sicurezza diverse da quelle illustrate in precedenza. Per altre informazioni, vedere più avanti.
 
 Poiché i criteri di sicurezza possono essere modificati, è possibile che le autorizzazioni effettive concesse all'applicazione siano diverse dai valori predefiniti. È pertanto possibile che l'applicazione disponga di un'autorizzazione su un computer ma non su un altro.
 
@@ -64,9 +64,9 @@ Negli argomenti riportati di seguito vengono illustrate le funzionalità di sicu
 
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>Distribuzione di un'applicazione con le autorizzazioni appropriate
 
-La distribuzione di un'applicazione Windows Form in un computer client viene in genere eseguita mediante [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], una tecnologia di distribuzione che consente di descrivere tutti i componenti che devono essere eseguiti dall'applicazione. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] usa file XML denominati manifesti per descrivere gli assembly e i file che formano l'applicazione nonché le autorizzazioni richieste da quest'ultima.
+Il mezzo più comune di distribuzione di un'applicazione Windows Form a un computer client è con ClickOnce, una tecnologia di distribuzione che descrive tutti i componenti che dell'applicazione deve eseguire. ClickOnce Usa i file XML denominati manifesti per descrivere gli assembly e i file che costituiscono l'applicazione e le autorizzazioni richieste dall'applicazione.
 
-In [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] vengono usate due tecnologie per la richiesta di autorizzazioni elevate in un computer client, entrambe basate sull'uso di certificati Authenticode. L'uso dei certificati fornisce una discreta garanzia agli utenti che l'applicazione proviene da una fonte attendibile.
+ClickOnce ha due tecnologie per la richiesta di autorizzazioni elevate in un computer client. entrambe basate sull'uso di certificati Authenticode. L'uso dei certificati fornisce una discreta garanzia agli utenti che l'applicazione proviene da una fonte attendibile.
 
 Queste tecnologie sono descritte nella tabella seguente.
 
@@ -77,9 +77,9 @@ Queste tecnologie sono descritte nella tabella seguente.
 
 La tecnologia più adatta dipenderà dallo specifico ambiente di distribuzione. Per altre informazioni, vedere [Scelta di una strategia di distribuzione ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Per impostazione predefinita, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] le applicazioni distribuite con Visual Studio o gli strumenti di .NET Framework SDK (Mage.exe e MageUI.exe) configurate per l'esecuzione in un computer client con attendibilità totale. Se si vuole distribuire l'applicazione in un ambiente parzialmente attendibile o assegnando soltanto alcune autorizzazioni aggiuntive, sarà necessario modificare le impostazioni predefinite. È possibile farlo con Visual Studio o lo strumento .NET Framework SDK MageUI.exe quando si configura la distribuzione. Per altre informazioni su come usare MageUI.exe, vedere questa procedura dettagliata: Distribuzione di un'applicazione ClickOnce dalla riga di comando.  Vedere anche [come: Impostare autorizzazioni personalizzate per un'applicazione ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) o [come: Impostare autorizzazioni personalizzate per un'applicazione ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+Per impostazione predefinita, le applicazioni ClickOnce distribuite con Visual Studio o gli strumenti di .NET Framework SDK (Mage.exe e MageUI.exe) configurate per eseguire in un computer client con attendibilità totale. Se si vuole distribuire l'applicazione in un ambiente parzialmente attendibile o assegnando soltanto alcune autorizzazioni aggiuntive, sarà necessario modificare le impostazioni predefinite. È possibile farlo con Visual Studio o lo strumento .NET Framework SDK MageUI.exe quando si configura la distribuzione. Per altre informazioni su come usare MageUI.exe, vedere questa procedura dettagliata: Distribuzione di un'applicazione ClickOnce dalla riga di comando.  Vedere anche [come: Impostare autorizzazioni personalizzate per un'applicazione ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) o [come: Impostare autorizzazioni personalizzate per un'applicazione ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
-Per altre informazioni sugli aspetti di sicurezza di [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] e sull'elevazione delle autorizzazioni, vedere [Protezione di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Per altre informazioni sulla distribuzione di applicazioni attendibili, vedere [Panoramica della distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview).
+Per altre informazioni sugli aspetti di sicurezza di ClickOnce e sull'elevazione delle autorizzazioni, vedere [protezione di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Per altre informazioni sulla distribuzione di applicazioni attendibili, vedere [Panoramica della distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview).
 
 ### <a name="testing-the-application"></a>Verifica dell'applicazione
 

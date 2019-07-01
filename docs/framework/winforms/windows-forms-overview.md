@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 71bf50bdcf058e94981dc5df4731b5d32dcc2069
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875881"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487211"
 ---
 # <a name="windows-forms-overview"></a>Panoramica sui Windows Form
 
@@ -72,21 +72,21 @@ Per informazioni dettagliate sull'uso di queste funzionalità, vedere i seguenti
 
 ### <a name="deploy-apps-to-client-computers"></a>Distribuire le app nei computer client
 
-Una volta scritta, l'applicazione deve essere inviata agli utenti in modo che possano installarla ed eseguirla sui propri client. Quando si usa il [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] tecnologia, è possibile distribuire le applicazioni dall'interno di Visual Studio con pochi clic e fornire agli utenti con un URL che punta all'applicazione sul Web. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] gestisce tutti gli elementi e le dipendenze dell'applicazione e garantisce la corretta installazione dell'applicazione nel client.
+Una volta scritta, l'applicazione deve essere inviata agli utenti in modo che possano installarla ed eseguirla sui propri client. Quando si usa la tecnologia ClickOnce, è possibile distribuire le applicazioni dall'interno di Visual Studio con pochi clic e fornire agli utenti con un URL che punta all'applicazione sul Web. ClickOnce consente di gestire tutti gli elementi e le dipendenze dell'applicazione e garantisce che l'applicazione sia installata correttamente nel computer client.
 
-Le applicazioni [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] possono essere configurate per essere eseguite solo quando l'utente è connesso alla rete oppure per essere eseguite sia online che offline. Quando si specifica che un'applicazione deve supportare l'esecuzione offline, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] aggiunge un collegamento all'applicazione nel menu **Start**. In questo modo, l'utente può aprire l'applicazione senza usare l'URL.
+Applicazioni ClickOnce possono essere configurato per eseguire solo quando l'utente è connesso alla rete, o per essere eseguite sia online e offline. Quando si specifica che un'applicazione deve supportare l'operazione non in linea, ClickOnce aggiunge un collegamento all'applicazione dell'utente **avviare** menu. In questo modo, l'utente può aprire l'applicazione senza usare l'URL.
 
-Quando si aggiorna l'applicazione, vengono pubblicati un nuovo manifesto della distribuzione e una nuova copia dell'applicazione sul server Web. L'aggiornamento disponibile verrà rilevato da [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] e l'installazione dell'utente verrà aggiornata. Non è necessaria alcuna operazione di programmazione personalizzata per aggiornare gli assembly precedenti.
+Quando si aggiorna l'applicazione, vengono pubblicati un nuovo manifesto della distribuzione e una nuova copia dell'applicazione sul server Web. ClickOnce rileverà che è disponibile un aggiornamento e aggiornare l'installazione dell'utente; Nessuna programmazione personalizzata è necessario per aggiornare gli assembly precedenti.
 
 #### <a name="deploy-clickonce-apps"></a>Distribuire le app ClickOnce
 
-Per un'introduzione completa a [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], vedere [Sicurezza e distribuzione di ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Per informazioni dettagliate sull'uso di queste funzionalità, vedere i seguenti argomenti della Guida.
+Per un'introduzione completa a ClickOnce, vedere [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment). Per informazioni dettagliate sull'uso di queste funzionalità, vedere i seguenti argomenti della Guida.
 
 |Descrizione|Argomento della Guida|
 |-----------------|----------------|
-|Distribuzione di un'applicazione mediante [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Procedura: Pubblicare un'applicazione ClickOnce mediante la Pubblicazione guidata](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Procedura dettagliata: Distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
-|Aggiornamento di una distribuzione [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Procedura: Gestire gli aggiornamenti per un'applicazione ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
-|Gestione della sicurezza con [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Procedura: Abilitare le impostazioni di sicurezza ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
+|Distribuzione di un'applicazione tramite ClickOnce|[Procedura: Pubblicare un'applicazione ClickOnce mediante la Pubblicazione guidata](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Procedura dettagliata: Distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|Aggiornamento di una distribuzione di ClickOnce|[Procedura: Gestire gli aggiornamenti per un'applicazione ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|Gestione della sicurezza con ClickOnce|[Procedura: Abilitare le impostazioni di sicurezza ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
 ### <a name="other-controls-and-features"></a>Altri controlli e funzionalità
 

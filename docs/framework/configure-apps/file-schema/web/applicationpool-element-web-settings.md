@@ -5,18 +5,18 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 629eb482768e4ed2b3d70ee3d27157b502eeb72b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d6c931ec904e9a7e58d5b747c74898208863b8e9
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832727"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486726"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > (impostazioni Web)
-Specifica le impostazioni di configurazione che vengono utilizzate da ASP.NET per gestire il comportamento a livello di processo quando un'applicazione ASP.NET viene eseguito in modalità integrata in [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versione successiva.  
+Specifica le impostazioni di configurazione che vengono utilizzate da ASP.NET per gestire il comportamento a livello di processo quando un'applicazione ASP.NET viene eseguito in modalità integrata in IIS 7.0 o versione successiva.  
   
 > [!IMPORTANT]
->  Questo elemento e la funzionalità supporta funzionano solo se l'applicazione ASP.NET è ospitato in [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versioni successive.  
+>  Questo elemento e la funzionalità supporta funzionano solo se l'applicazione ASP.NET è ospitato in IIS 7.0 o versioni successive.  
   
  \<configuration>  
 \<System. Web > (impostazioni Web)  
@@ -52,12 +52,12 @@ Specifica le impostazioni di configurazione che vengono utilizzate da ASP.NET pe
 |[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Contiene informazioni su come ASP.NET interagisce con un'applicazione host.|  
   
 ## <a name="remarks"></a>Note  
- Quando si esegue [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versioni successive in modalità integrata, questa combinazione di elementi consente di configurare come ASP.NET gestisce le richieste di thread e le code quando l'applicazione è ospitata in un pool di applicazioni IIS. Se si esegue IIS 6 o [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] in modalità classica o in modalità ISAPI, queste impostazioni verranno ignorate.  
+ Quando si esegue IIS 7.0 o versioni successive in modalità integrata, questa combinazione di elementi consente di configurare come ASP.NET gestisce le richieste di thread e le code quando l'applicazione è ospitata in un pool di applicazioni IIS. Se si esegue IIS 6 o esecuzione di IIS 7.0 in modalità classica o in modalità ISAPI, queste impostazioni vengono ignorate.  
   
  Il `applicationPool` impostazioni si applicano a tutti i pool di applicazioni in esecuzione su una particolare versione di .NET Framework. Le impostazioni sono contenute in un file ASPNET config. È disponibile una versione di questo file per le versioni 2.0 e 4.0 di .NET Framework. (Le versioni 3.0 e 3.5 di .NET Framework condividono file Aspnet. config con la versione 2.0).  
   
 > [!IMPORTANT]
->  Se si esegue [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] su [!INCLUDE[win7](../../../../../includes/win7-md.md)], è possibile configurare un file Aspnet. config separato per ogni pool di applicazioni. Ciò consente di adattare le prestazioni dei thread per ogni pool di applicazioni.  
+>  Se si esegue IIS 7.0 in [!INCLUDE[win7](../../../../../includes/win7-md.md)], è possibile configurare un file Aspnet. config separato per ogni pool di applicazioni. Ciò consente di adattare le prestazioni dei thread per ogni pool di applicazioni.  
   
  Per il `maxConcurrentRequestsPerCPU` impostazione, l'impostazione predefinita pari a "5000" in .NET Framework 4 in modo efficace consente di disattivare la limitazione delle richieste controllata da ASP.NET, a meno che non si hanno effettivamente le richieste di più di 5000 per ogni CPU. L'impostazione predefinita invece dipende il pool di thread CLR per gestire automaticamente la concorrenza per ogni CPU. Le applicazioni che fanno largo uso dell'elaborazione della richiesta asincrona, o che presentano molte richieste a esecuzione prolungata bloccate nella rete i/o, trarranno vantaggio dall'aumento del limite predefinito in .NET Framework 4. Impostazione `maxConcurrentRequestsPerCPU` su zero disattiva l'utilizzo di thread gestiti per l'elaborazione delle richieste ASP.NET. Quando un'applicazione viene eseguita in un pool di applicazioni IIS, le richieste di restare sempre aggiornato riguardo il thread dei / o IIS e pertanto la concorrenza è limitata dalle impostazioni di thread IIS.  
   
@@ -66,9 +66,9 @@ Specifica le impostazioni di configurazione che vengono utilizzate da ASP.NET pe
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come configurare il comportamento a livello di processo ASP.NET nel file Aspnet. config nelle circostanze seguenti:  
   
-- L'applicazione è ospitata un [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] pool di applicazioni.  
+- L'applicazione è ospitata in un pool di applicazioni IIS 7.0.  
   
-- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] è in esecuzione in modalità integrata.  
+- IIS 7.0 è in esecuzione in modalità integrata.  
   
 - L'applicazione usa .NET Framework 3.5 SP1 o versione successiva.  
   

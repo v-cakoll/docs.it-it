@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 70ed0fe9191c18e88198871319b3c3ee3c0b4ab4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c4feb52cbefe7e3f8bab7f90568b231302b77372
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626964"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486853"
 ---
 # <a name="distributed-application-security"></a>Protezione delle applicazioni distribuite
 Sicurezza di Windows Communication Foundation (WCF) viene suddiviso in tre aree funzionali principali: protezione del trasferimento, controllo degli accessi e il controllo. La protezione di trasferimento, oltre a offrire funzionalità di autenticazione, garantisce integrità e riservatezza. Questa area funzionale utilizza uno dei meccanismi seguenti: protezione a livello di trasporto, protezione a livello di messaggio e `TransportWithMessageCredential`.  
@@ -80,7 +80,7 @@ Sicurezza di Windows Communication Foundation (WCF) viene suddiviso in tre aree 
 |WINDOWS|Consente lo scambio di messaggi SOAP all'interno di un contesto autenticato di una credenziale Windows. Viene utilizzato il meccanismo di negoziazione SSPI per scegliere il protocollo Kerberos o il protocollo NTLM come servizio di autenticazione.|  
 |Nome utente|Consente al servizio di richiedere che l'autenticazione del client si basi su una credenziale di tipo nome utente. Si noti che WCF non consente le operazioni di crittografia con il nome utente, ad esempio la generazione di una firma o la crittografia dei dati. Di conseguenza, WCF richiede che il trasporto sia protetto quando si usano credenziali nome utente.|  
 |Certificato|Consente al servizio di richiedere che l'autenticazione del client si basi su un certificato.|  
-|[!INCLUDE[infocard](../../../../includes/infocard-md.md)]|Consente al servizio di richiedere che l'autenticazione del client si basi su [!INCLUDE[infocard](../../../../includes/infocard-md.md)].|  
+|CardSpace|Consente al servizio di richiedere che il client venga autenticato tramite un CardSpace.|  
   
 ### <a name="programming-credentials"></a>Programmazione delle credenziali  
  Per ognuno dei tipi di credenziale client, il modello di programmazione WCF consente di specificare i valori e i validator di credenziali usando i comportamenti del servizio e comportamenti di canale.  

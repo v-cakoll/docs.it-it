@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8bdd70a6eaea8aff196e2156d88460a6d24b5d3f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832692"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487180"
 ---
 # <a name="application-startup-time"></a>Tempo di avvio delle applicazioni
 La quantità di tempo necessaria per avviare un'applicazione WPF può variare notevolmente. In questo argomento vengono descritte varie tecniche per ridurre il tempo di avvio percepito ed effettivo per un'applicazione Windows Presentation Foundation (WPF).  
@@ -65,7 +65,7 @@ La quantità di tempo necessaria per avviare un'applicazione WPF può variare no
  La presenza di entrambi i moduli Ngen e JIT può avere effetti negativi, perché è necessario caricare mscorjit.dll e quando il compilatore JIT opera sul codice, l'accesso a molte pagine nelle immagini Ngen deve avvenire quando il compilatore JIT legge i metadati degli assembly.  
   
 ### <a name="ngen-and-clickonce"></a>ClickOnce e Ngen  
- Anche il modo in cui si prevede di distribuire l'applicazione può fare la differenza in fase di caricamento. La distribuzione dell'applicazione [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] non supporta Ngen. Se si decide di usare Ngen.exe per l'applicazione, è necessario usare un altro meccanismo di distribuzione, ad esempio Windows Installer.  
+ Anche il modo in cui si prevede di distribuire l'applicazione può fare la differenza in fase di caricamento. Distribuzione di applicazioni ClickOnce non supporta Ngen. Se si decide di usare Ngen.exe per l'applicazione, è necessario usare un altro meccanismo di distribuzione, ad esempio Windows Installer.  
   
  Per altre informazioni, vedere [Ngen.exe (Native Image Generator)](../../tools/ngen-exe-native-image-generator.md).  
   
@@ -112,9 +112,9 @@ La quantità di tempo necessaria per avviare un'applicazione WPF può variare no
  Se è necessario usare il <xref:System.Xml.Serialization.XmlSerializer> (classe), è possibile ottenere prestazioni migliori se si genera prima l'assembly di serializzazione.  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Configurare ClickOnce per verificare gli aggiornamenti in seguito all'avvio  
- Se l'applicazione usa [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], evitare l'accesso alla rete all'avvio configurando [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] per controllare il sito di distribuzione degli aggiornamenti in seguito all'avvio dell'applicazione.  
+ Se l'applicazione utilizza ClickOnce, evitare l'accesso alla rete all'avvio configurando ClickOnce per verificare il sito di distribuzione degli aggiornamenti dopo l'avvio dell'applicazione.  
   
- Se si usa il modello di applicazione browser XAML (XBAP), tenere presente che [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] controlla il sito di distribuzione degli aggiornamenti anche se XBAP è già nella cache [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]. Per altre informazioni, vedere [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
+ Se si usa il modello XAML browser application (XBAP), tenere presente che ClickOnce controlla il sito di distribuzione degli aggiornamenti anche se l'applicazione XBAP è già nella cache di ClickOnce. Per altre informazioni, vedere [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>Configurare l'avvio automatico del servizio PresentationFontCache  
  La prima applicazione WPF da eseguire dopo un riavvio è il servizio PresentationFontCache. Il servizio memorizza nella cache i tipi di carattere del sistema, migliora l'accesso al tipo di carattere e le prestazioni complessive. Si verifica un sovraccarico all'avvio del servizio e in alcuni ambienti controllati, si consiglia di configurare l'avvio automatico del servizio al riavvio del sistema.  
