@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481457"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424116"
 ---
 # <a name="switch-c-reference"></a>switch (Riferimenti per C#)
 
@@ -46,7 +46,7 @@ In C# 6 e versioni precedenti l'espressione di ricerca deve essere un'espression
 - un [char](char.md).
 - una [string](string.md).
 - un [bool](bool.md).
-- un valore integrale, ad esempio un [int](int.md) o un [long](long.md).
+- un valore integrale, ad esempio un [int](../builtin-types/integral-numeric-types.md) o un [long](../builtin-types/integral-numeric-types.md).
 - un valore [enum](enum.md).
 
 A partire da C# 7.0, l'espressione di ricerca può essere qualsiasi espressione non null.
@@ -121,7 +121,7 @@ Il criterio costante verifica se un'espressione di ricerca è uguale a una costa
 dove *costant* è il valore su cui eseguire il test. *constant* può essere una delle espressioni costanti seguenti:
 
 - Un valore letterale [bool](bool.md), ad esempio `true` o `false`.
-- Qualsiasi costante integrale, ad esempio un [int](int.md), un [long](long.md) o un [byte](byte.md).
+- Qualsiasi costante integrale, ad esempio un [int](../builtin-types/integral-numeric-types.md), un [long](../builtin-types/integral-numeric-types.md) o un [byte](../builtin-types/integral-numeric-types.md).
 - Il nome di una variabile `const` dichiarata.
 - Una costante di enumerazione.
 - Un valore letterale [char](char.md).

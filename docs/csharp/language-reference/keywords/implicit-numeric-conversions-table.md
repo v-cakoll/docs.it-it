@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 703f60f48e1e569e0ffcab66ff7ccc91d4a49514
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 9c3efe1dbea355e8bc00ef44e08efcc9d0e0bdca
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093554"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424172"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Tabella delle conversioni numeriche implicite (Riferimenti per C#)
 
@@ -21,20 +21,20 @@ Nella tabella che segue sono illustrate le conversioni implicite predefinite tra
   
 |Da|A|  
 |----------|--------|  
-|[sbyte](sbyte.md)|`short`, `int`, `long`, `float`, `double` o `decimal`|  
-|[byte](byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` o `decimal`|  
+|[sbyte](../builtin-types/integral-numeric-types.md)|`short`, `int`, `long`, `float`, `double` o `decimal`|  
+|[byte](../builtin-types/integral-numeric-types.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` o `decimal`|  
 |[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` o `decimal`|  
-|[short](short.md)|`int`, `long`, `float`, `double` o `decimal`|  
-|[ushort](ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` o `decimal`|  
-|[int](int.md)|`long`, `float`, `double` o `decimal`|  
-|[uint](uint.md)|`long`, `ulong`, `float`, `double` o `decimal`|  
-|[long](long.md)|`float`, `double`o `decimal`|  
-|[ulong](ulong.md)|`float`, `double`o `decimal`|  
+|[short](../builtin-types/integral-numeric-types.md)|`int`, `long`, `float`, `double` o `decimal`|  
+|[ushort](../builtin-types/integral-numeric-types.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` o `decimal`|  
+|[int](../builtin-types/integral-numeric-types.md)|`long`, `float`, `double` o `decimal`|  
+|[uint](../builtin-types/integral-numeric-types.md)|`long`, `ulong`, `float`, `double` o `decimal`|  
+|[long](../builtin-types/integral-numeric-types.md)|`float`, `double`o `decimal`|  
+|[ulong](../builtin-types/integral-numeric-types.md)|`float`, `double`o `decimal`|  
 |[float](float.md)|`double`|  
   
 ## <a name="remarks"></a>Osservazioni  
 
-- Qualunque [tipo integrale](integral-types-table.md) è implicitamente convertibile in qualunque [tipo a virgola mobile](floating-point-types-table.md).
+- Qualunque [tipo integrale](../builtin-types/integral-numeric-types.md) è implicitamente convertibile in qualunque [tipo a virgola mobile](floating-point-types-table.md).
 
 - Nella conversione da `int`, `uint`, `long` o `ulong` a `float` e da `long` o `ulong` a `double` può andare persa la precisione ma non la grandezza.  
   
@@ -57,7 +57,7 @@ Per altre informazioni sulle conversioni implicite, vedere la sezione [conversio
 
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
-- [Tabella dei tipi integrali](integral-types-table.md)
+- [Tipi integrali](../builtin-types/integral-numeric-types.md)
 - [Tabella dei tipi a virgola mobile](floating-point-types-table.md)
 - [Tabella dei tipi incorporati](built-in-types-table.md)
 - [Tabella delle conversioni numeriche esplicite](explicit-numeric-conversions-table.md)

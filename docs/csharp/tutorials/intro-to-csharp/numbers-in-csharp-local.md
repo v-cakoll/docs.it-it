@@ -3,12 +3,12 @@ title: Numeri in C# - Esercitazione introduttiva su C#
 description: Vengono illustrati i tipi numerici, con le proprietà e i metodi, in C#.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 1b09a65b42395bfa1caf9e564120d3df1f3f1ed5
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 65b31c29fa9662619f92efb7977577f12d23fb30
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673860"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423414"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Modificare numeri a virgola mobile e integrali in C\#
 
@@ -320,7 +320,7 @@ Si otterrà una risposta compresa tra 19 e 20.
 
 Negli argomenti seguenti sono disponibili ulteriori informazioni sui numeri in C#:
 
-- [Tabella dei tipi integrali](../../language-reference/keywords/integral-types-table.md)
+- [Tipi integrali](../../language-reference/builtin-types/integral-numeric-types.md)
 - [Tabella dei tipi a virgola mobile](../../language-reference/keywords/floating-point-types-table.md)
 - [Tabella dei tipi incorporati](../../language-reference/keywords/built-in-types-table.md)
 - [Tabella delle conversioni numeriche implicite](../../language-reference/keywords/implicit-numeric-conversions-table.md)

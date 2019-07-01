@@ -3,12 +3,12 @@ title: Tipi di base - Guida a C#
 description: Informazioni sui tipi di base (dati numerici, stringhe e oggetto) in tutti i programmi C#
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 3619e1dc9a82c7f120680c198c327252744444b4
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c719177b6099104681f590b550014d9a67f3f3ba
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422093"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424462"
 ---
 # <a name="types-variables-and-values"></a>Tipi, variabili e valori
 
@@ -28,12 +28,12 @@ Le informazioni archiviate in un tipo possono includere quanto segue:
   
 - I tipi di operazioni consentite.  
   
-Il compilatore usa le informazioni sul tipo per assicurarsi che tutte le operazioni eseguite nel codice siano *indipendenti dai tipi*. Se ad esempio si dichiara una variabile di tipo [int](language-reference/keywords/int.md), il compilatore consente di usare la variabile anche in operazioni di addizione e sottrazione. Se si prova a eseguire le stesse operazioni su una variabile di tipo [bool](language-reference/keywords/bool.md), il compilatore genera un errore, come illustrato nell'esempio seguente:  
+Il compilatore usa le informazioni sul tipo per assicurarsi che tutte le operazioni eseguite nel codice siano *indipendenti dai tipi*. Se ad esempio si dichiara una variabile di tipo [int](language-reference/builtin-types/integral-numeric-types.md), il compilatore consente di usare la variabile anche in operazioni di addizione e sottrazione. Se si prova a eseguire le stesse operazioni su una variabile di tipo [bool](language-reference/keywords/bool.md), il compilatore genera un errore, come illustrato nell'esempio seguente:  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
 > [!NOTE]  
-> Gli sviluppatori C e C++ devono tenere presente che, in C#, [bool](language-reference/keywords/bool.md) non è convertibile in [int](language-reference/keywords/int.md).  
+> Gli sviluppatori C e C++ devono tenere presente che, in C#, [bool](language-reference/keywords/bool.md) non è convertibile in [int](language-reference/builtin-types/integral-numeric-types.md).  
   
 Il compilatore incorpora le informazioni sul tipo nel file eseguibile come metadati. Common Language Runtime (CLR) usa i metadati in fase di esecuzione per garantire ulteriormente l'indipendenza dai tipi quando alloca e recupera la memoria.  
 
@@ -43,11 +43,11 @@ Quando si dichiara una variabile o costante in un programma, è necessario speci
   
 [!code-csharp[Variable Declaration](../../samples/snippets/csharp/concepts/basic-types/variable-declaration.cs)]  
   
-I tipi di parametri e valori restituiti del metodo sono specificati nella firma del metodo. La firma seguente illustra un metodo che richiede un [int](language-reference/keywords/int.md) come argomento di input e restituisce una stringa:  
+I tipi di parametri e valori restituiti del metodo sono specificati nella firma del metodo. La firma seguente illustra un metodo che richiede un [int](language-reference/builtin-types/integral-numeric-types.md) come argomento di input e restituisce una stringa:  
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-Una variabile dichiarata non può essere dichiarata una seconda volta con un tipo nuovo e non è possibile assegnare a tale variabile un valore non compatibile con il relativo tipo dichiarato. Non è possibile, ad esempio, dichiarare una variabile [int](language-reference/keywords/int.md) e assegnare ad essa il valore booleano [true](language-reference/keywords/true-literal.md). I valori possono tuttavia essere convertiti in altri tipi, ad esempio quando vengono assegnati a nuove variabili o passati come argomenti di metodo. Una *conversione del tipo* che non causa la perdita di dati viene eseguita automaticamente dal compilatore, Una conversione che potrebbe causare la perdita di dati richiede un *cast* nel codice sorgente.
+Una variabile dichiarata non può essere dichiarata una seconda volta con un tipo nuovo e non è possibile assegnare a tale variabile un valore non compatibile con il relativo tipo dichiarato. Non è possibile, ad esempio, dichiarare una variabile [int](language-reference/builtin-types/integral-numeric-types.md) e assegnare ad essa il valore booleano [true](language-reference/keywords/true-literal.md). I valori possono tuttavia essere convertiti in altri tipi, ad esempio quando vengono assegnati a nuove variabili o passati come argomenti di metodo. Una *conversione del tipo* che non causa la perdita di dati viene eseguita automaticamente dal compilatore, Una conversione che potrebbe causare la perdita di dati richiede un *cast* nel codice sorgente.
 
 Per altre informazioni, vedere [Cast e conversioni di tipi](programming-guide/types/casting-and-type-conversions.md).
 

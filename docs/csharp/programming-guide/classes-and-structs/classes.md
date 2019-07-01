@@ -7,17 +7,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 4cea68e76c17e5393ab7213f457c0875cdc5b53b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad19099242a3bedbb7283219dfd7733db13231ec
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596702"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398582"
 ---
 # <a name="classes-c-programming-guide"></a>Classi (Guida per programmatori C#)
 
 ## <a name="reference-types"></a>Tipi riferimento  
-Un tipo definito come [classe](../../../csharp/language-reference/keywords/class.md) è un *tipo di riferimento*. In fase di esecuzione, quando si dichiara una variabile di un tipo riferimento, la variabile contiene il valore [Null](../../../csharp/language-reference/keywords/null.md) fino a quando non si crea in modo esplicito un'istanza della classe usando l'operatore [new](../../../csharp/language-reference/keywords/new.md) o fino a quando non le viene assegnato un oggetto di un tipo compatibile creato altrove, come illustrato nell'esempio seguente:
+Un tipo definito come [classe](../../../csharp/language-reference/keywords/class.md) è un *tipo di riferimento*. In fase di esecuzione, quando si dichiara una variabile di un tipo riferimento, la variabile contiene il valore [Null](../../../csharp/language-reference/keywords/null.md) fino a quando non si crea in modo esplicito un'istanza della classe usando l'operatore [new](../../../csharp/language-reference/operators/new-operator.md) o fino a quando non le viene assegnato un oggetto di un tipo compatibile creato altrove, come illustrato nell'esempio seguente:
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -47,7 +47,7 @@ Quando viene creato l'oggetto, una quantità di memoria sufficiente viene alloca
 
 Anche se vengono talvolta usati in modo intercambiabile, una classe e un oggetto sono elementi diversi. Una classe definisce un tipo di oggetto, ma non è un oggetto. Un oggetto è un'entità concreta ed è basato su una classe. Talvolta si fa riferimento all'oggetto come istanza di una classe.  
   
- Gli oggetti possono essere creati tramite la parola chiave [new](../../language-reference/keywords/new.md) seguita dal nome della classe su cui si baserà l'oggetto, nel modo seguente:  
+ Gli oggetti possono essere creati tramite la parola chiave [new](../../language-reference/operators/new-operator.md) seguita dal nome della classe su cui si baserà l'oggetto, nel modo seguente:  
 
  ```csharp
  Customer object1 = new Customer();

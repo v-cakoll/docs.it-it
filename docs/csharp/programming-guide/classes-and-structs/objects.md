@@ -6,23 +6,23 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: de44f0c416de798fb42fba93e30ec6aa6ed0208d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1ba179c23d9b0e526cdc0dd436ca545377a0db81
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585993"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398419"
 ---
 # <a name="objects-c-programming-guide"></a>Oggetti (Guida per programmatori C#)
 Una definizione di classe o struct è simile a un progetto iniziale in cui vengono specificate le funzionalità del tipo. Un oggetto è essenzialmente un blocco di memoria che è stato allocato e configurato in base al progetto iniziale. Un programma può creare molti oggetti della stessa classe. Gli oggetti, definiti anche istanze, possono essere archiviati in una variabile denominata o in una matrice o raccolta. Il codice client è il codice che usa queste variabili per chiamare i metodi e accedere alle proprietà pubbliche dell'oggetto. In un linguaggio orientato a oggetti come C#, il programma tipico è costituito da più oggetti che interagiscono dinamicamente.  
   
 > [!NOTE]
->  I tipi statici si comportano in modo diverso da quanto descritto qui. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+> I tipi statici si comportano in modo diverso da quanto descritto qui. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
   
 ## <a name="struct-instances-vs-class-instances"></a>Differenze tra istanze di strutture e Istanze di classe  
  Poiché le classi sono tipi di riferimento, una variabile di un oggetto classe contiene un riferimento all'indirizzo dell'oggetto sull'heap gestito. Se al primo oggetto viene assegnato un secondo oggetto dello stesso tipo, entrambe le variabili fanno riferimento all'oggetto in quell'indirizzo. Questo punto viene illustrato più dettagliatamente di seguito in questo argomento.  
   
- Le istanze delle classi vengono create usando l'[operatore new](../../../csharp/language-reference/keywords/new-operator.md). Nell'esempio seguente `Person` è il tipo e `person1` e `person 2` sono le istanze o gli oggetti di tale tipo.  
+ Le istanze delle classi vengono create usando l'[operatore new](../../../csharp/language-reference/operators/new-operator.md). Nell'esempio seguente `Person` è il tipo e `person1` e `person 2` sono le istanze o gli oggetti di tale tipo.  
   
  [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
@@ -33,7 +33,7 @@ Una definizione di classe o struct è simile a un progetto iniziale in cui vengo
  La memoria per `p1` e `p2` viene allocata nello stack di thread. La memoria viene recuperata insieme al tipo o al metodo in cui è stata dichiarata. Questo è il motivo per cui gli struct vengono copiati per assegnazione. Al contrario, la memoria allocata per l'istanza di una classe viene recuperata automaticamente (tramite Garbage Collection) da Common Language Runtime quando tutti i riferimenti all'oggetto sono usciti dall'ambito. Non è possibile eliminare in modo deterministico un oggetto di classe come avviene in C++. Per altre informazioni su Garbage Collection in .NET Framework, vedere [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
->  L'allocazione e la deallocazione di memoria sull'heap gestito sono estremamente ottimizzate in Common Language Runtime. Nella maggior parte dei casi non esistono differenze significative in termini di impatto sulle prestazioni tra l'allocazione di un'istanza di classe sull'heap e l'allocazione di un'istanza di struttura sullo stack.  
+> L'allocazione e la deallocazione di memoria sull'heap gestito sono estremamente ottimizzate in Common Language Runtime. Nella maggior parte dei casi non esistono differenze significative in termini di impatto sulle prestazioni tra l'allocazione di un'istanza di classe sull'heap e l'allocazione di un'istanza di struttura sullo stack.
   
 ## <a name="object-identity-vs-value-equality"></a>Differenze tra identità di oggetto e uguaglianza di valori  
  Quando si confrontano due oggetti per verificarne l'uguaglianza, è necessario innanzitutto distinguere se si vuole determinare se le due variabili rappresentano lo stesso oggetto in memoria oppure se i valori di uno o più campi sono equivalenti. Se si intende confrontare valori, è necessario considerare se gli oggetti sono istanze di tipi di valore (struct) o di tipi di riferimento (classi, delegati, matrici).  
@@ -68,5 +68,5 @@ Una definizione di classe o struct è simile a un progetto iniziale in cui vengo
 - [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
 - [class](../../../csharp/language-reference/keywords/class.md)
 - [struct](../../../csharp/language-reference/keywords/struct.md)
-- [Operatore new](../../../csharp/language-reference/keywords/new-operator.md)
+- [Operatore new](../../../csharp/language-reference/operators/new-operator.md)
 - [Common Type System](../../../standard/base-types/common-type-system.md)

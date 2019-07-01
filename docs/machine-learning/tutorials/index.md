@@ -3,12 +3,12 @@ title: Esercitazioni di ML.NET
 description: Queste esercitazioni di ML.NET aiutano a creare soluzioni di intelligenza artificiale personalizzate e a integrarle nelle applicazioni .NET.
 ms.custom: seodec18
 ms.date: 04/05/2019
-ms.openlocfilehash: 3f14f463dcdb74beb1605626216acd52dd3f6e9a
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 4530e62a0ac8991f6ece37a0ad9909a4c4d08fe7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722328"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401654"
 ---
 # <a name="mlnet-tutorials"></a>Esercitazioni di ML.NET 
 
@@ -19,7 +19,7 @@ Le esercitazioni seguenti consentono di comprendere l'uso di [ML.NET](../index.y
 - [Previsione dei prezzi](taxi-fare.md): illustra come applicare un'attività di **regressione** usando ML.NET.
 - [Clustering Iris](iris-clustering.md): illustra come applicare un'attività di **clustering** usando ML.NET.
 - [Raccomandazione](movie-recommendation.md): generare le **raccomandazioni** per i film in base alle classificazioni degli utenti precedenti
-- [Classificazione delle immagini](image-classification.md): illustra come ripetere il training di un modello Tensorflow esistente per creare un classificatore di immagini personalizzato usando ML.NET.
+- [Classificazione delle immagini](image-classification.md): illustra come ripetere il training di un modello TensorFlow esistente per creare un classificatore di immagini personalizzato usando ML.NET.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

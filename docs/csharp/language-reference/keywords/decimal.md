@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: 7bc806cd5516666c86780bb53842725f0c0c1617
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ad01f9e4f5a8b1a153b1ef306e9d6168335eb3d
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600700"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424302"
 ---
 # <a name="decimal-c-reference"></a>decimal (Riferimenti per C#)
 
@@ -81,7 +81,7 @@ Viene restituito l'errore seguente:
 
 `Operator '+' cannot be applied to operands of type 'double' and 'decimal'`
 
-In questo esempio `decimal` e [int](../../../csharp/language-reference/keywords/int.md) sono combinate nella stessa espressione. Il risultato restituisce il tipo `decimal`.
+In questo esempio `decimal` e [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) sono combinate nella stessa espressione. Il risultato restituisce il tipo `decimal`.
 
 [!code-csharp[csrefKeywordsTypes#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#6)]
 
@@ -101,7 +101,7 @@ In questo esempio l'output viene formattato mediante la stringa del formato valu
 - [Riferimenti per C#](../../../csharp/language-reference/index.md)
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
-- [Tabella dei tipi integrali](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tipi integrali](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md)
 - [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tabella delle conversioni numeriche esplicite](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

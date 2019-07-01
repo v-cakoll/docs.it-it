@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 0d54101badab297457e8d8ecf277898fc6908779
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0a0cf7c3b6024f75196abed5fdb7d18a058c58db
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481055"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398374"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classi e metodi parziali (Guida per programmatori C#)
 
@@ -105,7 +105,7 @@ Quando si usano le definizioni parziali di classi è necessario rispettare diver
 
   - classi base
 
-  - modificatore [new](../../../csharp/language-reference/keywords/new.md) (parti annidate)
+  - modificatore [new](../../../csharp/language-reference/keywords/new-modifier.md) (parti annidate)
 
   - vincoli generici
 
@@ -113,7 +113,7 @@ Per altre informazioni, vedere [Vincoli sui parametri di tipo](../../../csharp/p
 
 ## <a name="example-1"></a>Esempio 1
 
-### <a name="description"></a>Description
+### <a name="description"></a>DESCRIZIONE
 
 Nell'esempio seguente i campi e il costruttore della classe `Coords` vengono dichiarati in una definizione parziale di classe, mentre il membro `PrintCoords` viene dichiarato in un'altra definizione parziale di classe.
 
@@ -123,7 +123,7 @@ Nell'esempio seguente i campi e il costruttore della classe `Coords` vengono dic
 
 ## <a name="example-2"></a>Esempio 2
 
-### <a name="description"></a>Description
+### <a name="description"></a>DESCRIZIONE
 
 L'esempio seguente dimostra che è anche possibile sviluppare struct e interfacce parziali.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: e34350e8f431b6ece95186147762d1954b5dd10f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 669357bbd6527324bbedbcf1f537bf570c63ce5b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601696"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423664"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Tipi di enumerazione (Guida per programmatori C#)
 
@@ -21,7 +21,7 @@ Un tipo di enumerazione (detto anche enumerazione o enum) rappresenta un modo ef
 
 [!code-csharp[csProgGuideEnums#1](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#1)]
 
-Per impostazione predefinita, il tipo sottostante di ogni elemento dell'enumerazione è [int](../../csharp/language-reference/keywords/int.md). È possibile specificare un altro tipo numerico integrale usando i due punti, come illustrato nell'esempio precedente. Per un elenco completo dei tipi possibili, vedere [enum (Riferimenti per C#)](../../csharp/language-reference/keywords/enum.md).
+Per impostazione predefinita, il tipo sottostante di ogni elemento dell'enumerazione è [int](../../csharp/language-reference/builtin-types/integral-numeric-types.md). È possibile specificare un altro tipo numerico integrale usando i due punti, come illustrato nell'esempio precedente. Per un elenco completo dei tipi possibili, vedere [enum (Riferimenti per C#)](../../csharp/language-reference/keywords/enum.md).
 
 È possibile verificare i valori numerici sottostanti eseguendo il cast al tipo sottostante, come illustrato nell'esempio seguente.
 
@@ -84,7 +84,7 @@ Tutti gli enum sono istanze del tipo <xref:System.Enum?displayProperty=nameWithT
 
 [!code-csharp[csProgGuideEnums#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#5)]
 
-Per ulteriori informazioni, vedere <xref:System.Enum?displayProperty=nameWithType>.
+Per altre informazioni, vedere <xref:System.Enum?displayProperty=nameWithType>.
 
 È anche possibile creare un nuovo metodo per un enum tramite un metodo di estensione. Per altre informazioni, vedere [Procedura: Creare un nuovo metodo per un'enumerazione](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 

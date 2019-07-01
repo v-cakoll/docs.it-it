@@ -8,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 25f6fb5e8780611a6ca7396873d0a33684b65a48
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: ef219f2b98e37b8a62d3ee7b88dbc5374d87fca5
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301377"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423539"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Procedura: Convertire una stringa in un numero (Guida per programmatori C#)
 
@@ -51,7 +51,7 @@ Nella tabella seguente sono elencati alcuni dei metodi della classe <xref:System
 |`uint`|<xref:System.Convert.ToUInt32%28System.String%29>|  
 |`ulong`|<xref:System.Convert.ToUInt64%28System.String%29>|  
   
- In questo esempio viene chiamato il metodo <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> per convertire una stringa di input in un tipo [int](../../../csharp/language-reference/keywords/int.md). L'esempio rileva le due eccezioni più comuni che possono essere generate da questo metodo, <xref:System.FormatException> e <xref:System.OverflowException>. Se il numero risultante può essere incrementato senza superare <xref:System.Int32.MaxValue?displayProperty=nameWithType>, l'esempio aggiunge 1 al risultato e visualizza l'output.  
+ In questo esempio viene chiamato il metodo <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> per convertire una stringa di input in un tipo [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md). L'esempio rileva le due eccezioni più comuni che possono essere generate da questo metodo, <xref:System.FormatException> e <xref:System.OverflowException>. Se il numero risultante può essere incrementato senza superare <xref:System.Int32.MaxValue?displayProperty=nameWithType>, l'esempio aggiunge 1 al risultato e visualizza l'output.  
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
