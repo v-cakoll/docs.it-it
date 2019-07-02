@@ -194,6 +194,12 @@
           href: core/whats-new/dotnet-core-2-1.md
         - name: Novità di .NET Core 2.0
           href: core/whats-new/dotnet-core-2-0.md
+    - name: Compatibilità delle applicazioni
+      items:
+        - name: Valutare le modifiche che causano un'interruzione
+          href: core/compatibility/index.md
+        - name: Categorie di modifiche che causano un'interruzione
+          href: core/compatibility/categories.md
     - name: Esercitazioni
       href: core/tutorials/index.md
       items:

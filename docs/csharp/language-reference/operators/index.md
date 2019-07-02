@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025131"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401460"
 ---
 # <a name="c-operators-c-reference"></a>Operatori C# (Riferimenti per C#)
 
@@ -51,9 +51,9 @@ Sono gli operatori con la precedenza più alta.
 
 [x--](arithmetic-operators.md#decrement-operator---): decremento suffisso. Restituisce il valore di x e quindi aggiorna la posizione di archiviazione con il valore di x che risulta minore (in genere sottrae il numero intero 1).
 
-[new](../keywords/new-operator.md): creazione di un'istanza del tipo.
+[new](new-operator.md): creazione di un'istanza del tipo.
 
-[typeof](../keywords/typeof.md): restituisce l'oggetto <xref:System.Type> che rappresenta l'operando.
+[typeof](type-testing-and-conversion-operators.md#typeof-operator): restituisce l'oggetto <xref:System.Type> che rappresenta l'operando.
 
 [checked](../keywords/checked.md): abilita il controllo di overflow per le operazioni con numeri interi.
 
@@ -87,7 +87,7 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 
 [--x](arithmetic-operators.md#decrement-operator---): decremento prefisso. Restituisce il valore di x dopo avere aggiornato la posizione di archiviazione con il valore di x che risulta minore (in genere sottrae il numero intero 1).
 
-[(T)x](invocation-operator.md): cast di tipo.
+[(T)x](type-testing-and-conversion-operators.md#cast-operator-): cast di tipo.
 
 [await](../keywords/await.md): attende un oggetto `Task`.
 
@@ -137,9 +137,9 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 
 [x >= y](comparison-operators.md#greater-than-or-equal-operator-): maggiore o uguale a.
 
-[is](../keywords/is.md): compatibilità del tipo. Restituisce true se è possibile eseguire il cast dell'operando di sinistra valutato al tipo specificato nell'operando di destra (un tipo statico).
+[is](type-testing-and-conversion-operators.md#is-operator): compatibilità del tipo. Restituisce `true` se è possibile eseguire il cast dell'operando di sinistra valutato al tipo specificato dall'operando di destra.
 
-[as](../keywords/as.md): conversione di tipi. Restituisce il cast dell'operando di sinistra al tipo specificato dall'operando di destra (un tipo statico), ma `as` restituisce `null` dove `(T)x` genererebbe un'eccezione.
+[as](type-testing-and-conversion-operators.md#as-operator): conversione di tipi. Restituisce il cast dell'operando di sinistra al tipo specificato dall'operando di destra, ma `as` restituisce `null` dove `(T)x` genererebbe un'eccezione.
 
 ## <a name="equality-operators"></a>Operatori di uguaglianza
 
@@ -171,13 +171,13 @@ Questo operatore ha una precedenza più alta di quelli della sezione successiva 
 
 Questo operatore ha una precedenza più alta di quelli della sezione successiva e più bassa di quelli della sezione precedente.
 
-[x && y](boolean-logical-operators.md#conditional-logical-and-operator-): AND logico. Se il primo operando è false, C# non valuta il secondo operando.
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-): AND logico. Se `x` è `false`, `y` non viene valutato.
 
 ## <a name="conditional-or-operator"></a>Operatore OR condizionale
 
 Questo operatore ha una precedenza più alta di quelli della sezione successiva e più bassa di quelli della sezione precedente.
 
-[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-): OR logico. Se il primo operando è true, C# non valuta il secondo operando.
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-): OR logico. Se `x` è `true`, `y` non viene valutato.
 
 ## <a name="null-coalescing-operator"></a>Operatore null-coalescing
 
