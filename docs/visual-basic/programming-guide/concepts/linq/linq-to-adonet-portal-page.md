@@ -2,18 +2,18 @@
 title: LINQ to ADO.NET (pagina portale)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 21d6ddb4b793d2502b315888d79fb826741fed2e
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
-ms.translationtype: MT
+ms.openlocfilehash: 04fb330b1a8eaea9c5c64f633322696236eb492e
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307489"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487803"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (pagina portale)
-[!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] consente di eseguire query in qualsiasi oggetto enumerabile in ADO.NET tramite il modello di programmazione [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
+LINQ to ADO.NET consente di eseguire una query su qualsiasi oggetto enumerabile in ADO.NET tramite la [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] modello di programmazione.  
   
 > [!NOTE]
->  La documentazione di [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] si trova nella sezione ADO.NET di .NET Framework SDK: [LINQ e ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).
+>  LINQ to ADO.NET documentazione si trova nella sezione ADO.NET di .NET Framework SDK: [LINQ e ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).
   
  Sono disponibili tre diverse tecnologie [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ADO.NET: [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] e [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] fornisce più completo e ottimizzato per l'esecuzione di query tramite il <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] consente di eseguire query direttamente sugli schemi di database di SQL Server e [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] consente di eseguire una query un Entity Data Model.  
   
