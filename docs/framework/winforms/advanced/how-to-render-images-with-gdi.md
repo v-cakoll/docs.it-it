@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
-ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da637152737510847830e885fdcd065ab92f16b3
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967115"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505752"
 ---
 # <a name="how-to-render-images-with-gdi"></a>Procedura: Eseguire il rendering delle immagini con GDI+
-È possibile usare [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per il rendering delle immagini presenti sotto forma di file nelle applicazioni. Eseguire questa operazione creando un nuovo oggetto di un <xref:System.Drawing.Image> classe (, ad esempio <xref:System.Drawing.Bitmap>), creando una <xref:System.Drawing.Graphics> dell'oggetto che fa riferimento all'area di disegno da usare e chiamando il <xref:System.Drawing.Graphics.DrawImage%2A> metodo del <xref:System.Drawing.Graphics> oggetto. L'immagine verrà disegnata sulla superficie da disegno rappresentata dalla classe della grafica. È possibile usare l'editor di immagini per creare e modificare i file di immagine in fase di progettazione ed eseguire su di loro il rendering con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in fase di esecuzione. Per altre informazioni, vedere [Image Editor for Icons](/cpp/windows/image-editor-for-icons) (Editor di immagini per le icone).  
+È possibile utilizzare GDI+ per il rendering delle immagini presenti sotto forma di file nelle applicazioni. Eseguire questa operazione creando un nuovo oggetto di un <xref:System.Drawing.Image> classe (, ad esempio <xref:System.Drawing.Bitmap>), creando una <xref:System.Drawing.Graphics> dell'oggetto che fa riferimento all'area di disegno da usare e chiamando il <xref:System.Drawing.Graphics.DrawImage%2A> metodo del <xref:System.Drawing.Graphics> oggetto. L'immagine verrà disegnata sulla superficie da disegno rappresentata dalla classe della grafica. È possibile usare l'Editor di immagini per creare e modificare i file di immagine in fase di progettazione e il rendering con GDI+ in fase di esecuzione. Per altre informazioni, vedere [Image Editor for Icons](/cpp/windows/image-editor-for-icons) (Editor di immagini per le icone).  
   
 ### <a name="to-render-an-image-with-gdi"></a>Per eseguire il rendering di un'immagine con GDI+  
   

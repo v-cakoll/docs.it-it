@@ -6,15 +6,15 @@ helpviewer_keywords:
 - graphics [Windows Forms], transformations
 - matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
-ms.openlocfilehash: 5093bfa6bc4051c1c6cf3ca059831b0cbe137ef0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d267253a1a75117f986790d1e0002a3607944577
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755766"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506046"
 ---
 # <a name="coordinate-systems-and-transformations"></a>Sistemi di coordinate e trasformazioni
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce una trasformazione globale e una trasformazione di pagina in modo che è possibile trasformare (ruotare, ridimensionare, tradurre e così via) gli elementi si disegna. Le due trasformazioni consentono anche di usare in un'ampia gamma di sistemi di coordinate.  
+GDI+ fornisce una trasformazione globale e una trasformazione di pagina in modo che è possibile trasformare (ruotare, ridimensionare, tradurre e così via) gli elementi si disegna. Le due trasformazioni consentono anche di usare in un'ampia gamma di sistemi di coordinate.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Tipi di sistemi di coordinate](types-of-coordinate-systems.md)  

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: deb8f4396700086627aaef35ead7f15f38d9320c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f8fabd38ec49070bc588196b38ec64942feab93f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583862"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504697"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Query in LINQ to DataSet
 Una query è un'espressione che recupera dati da un'origine dati. Le query sono in genere espresse in un linguaggio di query specializzato, ad esempio SQL per i database relazionali e XQuery per XML. Gli sviluppatori hanno dovuto pertanto imparare un nuovo linguaggio di query per ogni tipo di origine dati o formato dati usato per le query. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] offre un modello più semplice e coerente per l'uso dei dati con tutti i vari tipi di origini e formati dati. In una query [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] vengono sempre usati oggetti di programmazione.  
   
  Un'operazione di query [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] comporta tre azioni: recupero dell'origine o delle origini dati, creazione della query ed esecuzione della query.  
   
- Per eseguire query su origini dati che implementano l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601> è possibile usare [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. La chiamata <xref:System.Data.DataTableExtensions.AsEnumerable%2A> su una <xref:System.Data.DataTable> restituisce un oggetto che implementa l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601> interfaccia, che funge da origine dati per [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query.  
+ Per eseguire query su origini dati che implementano l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601> è possibile usare [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. La chiamata <xref:System.Data.DataTableExtensions.AsEnumerable%2A> su una <xref:System.Data.DataTable> restituisce un oggetto che implementa l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601> interfaccia, che funge da origine dati per LINQ alle query di set di dati.  
   
  Nella query è necessario specificare esattamente le informazioni che si desidera recuperare dall'origine dati. Una query può inoltre specificare in che modo ordinare, raggruppare e formattare le informazioni prima che vengano restituite. In [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] le query vengono archiviate nelle variabili. Se la query è progettata per restituire una sequenza di valori, la variabile di query stessa deve essere un tipo enumerabile. La variabile di query non esegue azioni né restituisce dati. Viene solo usata per archiviare le informazioni sulla query. Dopo aver creato una query è necessario eseguirla per recuperare eventuali dati.  
   
@@ -26,7 +26,7 @@ Una query è un'espressione che recupera dati da un'origine dati. Le query sono 
  A differenza delle query posticipate che restituiscono una sequenza di valori, le query che restituiscono un valore singleton vengono eseguite immediatamente. Alcuni esempi di query singleton sono <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A> e <xref:System.Linq.Enumerable.First%2A>. Tali query vengono eseguite immediatamente perché i risultati restituiti sono necessari per calcolare il risultato singleton. Ad esempio, per individuare la media dei risultati della query, è necessario eseguire la query in modo che per la funzione di calcolo della media siano disponibili i dati di input. È inoltre possibile usare i metodi <xref:System.Linq.Enumerable.ToList%2A> o <xref:System.Linq.Enumerable.ToArray%2A> su una query per forzare l'esecuzione immediata di una query che non restituisce un valore singleton. Queste tecniche per forzare l'esecuzione immediata possono essere utili quando si desidera memorizzare nella cache i risultati di una query.
   
 ## <a name="queries"></a>Query  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] è possibile formulare query in due diverse sintassi: espressione sintassi delle query e sintassi di query basate su metodo.  
+ LINQ alle query di set di dati possono essere formulate in due diverse sintassi: espressione sintassi delle query e sintassi di query basate su metodo.  
   
 ### <a name="query-expression-syntax"></a>Sintassi delle espressioni di query  
  Le espressioni di query vengono scritte in una sintassi di query dichiarativa. Questa sintassi consente a un sviluppatore di scrivere query in C# o Visual Basic in un formato simile a quello di SQL. Tramite la sintassi delle espressioni di query è possibile eseguire anche complesse operazioni di filtro, ordinamento e raggruppamento sulle origini dati usando una quantità minima di codice. Per altre informazioni, vedere [espressioni di Query LINQ](../../../csharp/linq/index.md#query-expression-overview) e [base operazioni di Query (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
@@ -39,7 +39,7 @@ Una query è un'espressione che recupera dati da un'origine dati. Le query sono 
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>Sintassi delle query basate su metodo  
- Per formulare query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], è inoltre possibile usare query basate su metodo. La sintassi delle query basate su metodo è costituita da una sequenza di chiamate dirette del metodo ai metodi dell'operatore [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], in cui come parametri vengono passate espressioni lambda. Per altre informazioni, vedere [Espressioni lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ L'altro modo per formulare LINQ alle query di set di dati consiste nell'usare le query basate su metodo. La sintassi delle query basate su metodo è costituita da una sequenza di chiamate dirette del metodo ai metodi dell'operatore [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], in cui come parametri vengono passate espressioni lambda. Per altre informazioni, vedere [Espressioni lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
  In questo esempio viene usato <xref:System.Linq.Enumerable.Select%2A> per restituire tutte le righe di `Product` e visualizzare i nomi di prodotto.  
   

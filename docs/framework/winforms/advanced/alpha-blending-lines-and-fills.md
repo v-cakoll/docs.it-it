@@ -11,15 +11,15 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], using with fills
 - shapes [Windows Forms], adding transparency
 ms.assetid: 5440f48c-3ac9-44c3-b170-c1c110bdbab8
-ms.openlocfilehash: 7a8286fb741effaf668b87e90da04f79d1490de2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 66061341ee6539e2172c537a0b2a6ec9ff87565c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960940"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506115"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Linee e riempimenti con fusione alfa
-In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], un colore è un valore a 32 bit con 8 bit per ciascun alfa, rosso, verde e blu. Il valore alfa indica la trasparenza del colore, ovvero l'entità a cui il colore viene sfumato con il colore di sfondo. I valori alfa sono compresi tra 0 e 255 e 255, dove 0 rappresenta un colore completamente trasparente, rappresenta un colore completamente opaco.  
+In GDI+, un colore è un valore a 32 bit con 8 bit per ciascun alfa, rosso, verde e blu. Il valore alfa indica la trasparenza del colore, ovvero l'entità a cui il colore viene sfumato con il colore di sfondo. I valori alfa sono compresi tra 0 e 255 e 255, dove 0 rappresenta un colore completamente trasparente, rappresenta un colore completamente opaco.  
   
  Fusione alfa è una fusione pixel per pixel di dati di colori di origine e di sfondo. Ognuno dei tre componenti (rosso, verde, blu) di un colore di origine specificato viene sfumato con il componente corrispondente del colore di sfondo in base alla formula seguente:  
   

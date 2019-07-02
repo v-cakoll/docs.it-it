@@ -2,12 +2,12 @@
 title: LINQ to ADO.NET (pagina portale)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 04fb330b1a8eaea9c5c64f633322696236eb492e
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
-ms.translationtype: HT
+ms.openlocfilehash: 5783e45f666779e6cfecd611f1e2a34dae5e7df9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487803"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505996"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (pagina portale)
 LINQ to ADO.NET consente di eseguire una query su qualsiasi oggetto enumerabile in ADO.NET tramite la [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] modello di programmazione.  
@@ -15,12 +15,12 @@ LINQ to ADO.NET consente di eseguire una query su qualsiasi oggetto enumerabile 
 > [!NOTE]
 >  LINQ to ADO.NET documentazione si trova nella sezione ADO.NET di .NET Framework SDK: [LINQ e ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).
   
- Sono disponibili tre diverse tecnologie [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ADO.NET: [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] e [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] fornisce più completo e ottimizzato per l'esecuzione di query tramite il <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] consente di eseguire query direttamente sugli schemi di database di SQL Server e [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] consente di eseguire una query un Entity Data Model.  
+ Esistono tre ADO.NET separato [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] tecnologie: LINQ to DataSet, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], e [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. LINQ to DataSet fornisce più completo e ottimizzato per l'esecuzione di query tramite il <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] consente di eseguire query direttamente sugli schemi di database di SQL Server e [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] consente di eseguire una query un Entity Data Model.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  <xref:System.Data.DataSet> è uno dei componenti maggiormente usati in ADO.NET ed è un elemento chiave del modello di programmazione disconnessa su cui si basa ADO.NET. Nonostante l'importanza che lo contraddistingue, tuttavia, <xref:System.Data.DataSet> ha solo funzionalità limitate di query.  
   
- [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] consente di compilare funzionalità di esecuzione di query più complesse nell'oggetto <xref:System.Data.DataSet> usando la stessa funzionalità di query disponibile per molte altre origini dati.  
+ LINQ to DataSet consente di compilare funzionalità di query più complesse in <xref:System.Data.DataSet> usando la stessa funzionalità di query disponibile per molte altre origini dati.  
   
  Per altre informazioni, vedere [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).  
   

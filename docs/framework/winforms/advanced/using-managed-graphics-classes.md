@@ -6,19 +6,19 @@ helpviewer_keywords:
 - graphics [Windows Forms], using in Windows Forms
 - graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-ms.openlocfilehash: 86f6b3fff1937694f4b7890249e36d5e12b769dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b6811e1412e1dc5b0731810f159bac633cd1eb2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766168"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505042"
 ---
 # <a name="using-managed-graphics-classes"></a>Utilizzo di classi grafiche gestite
-Gli argomenti seguenti descrivono come usare il [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API nel framework di classi gestite.  
+Gli argomenti seguenti descrivono come usare l'API di GDI+ in framework di classi gestite.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Introduzione alla programmazione grafica](getting-started-with-graphics-programming.md)  
- Viene descritto come eseguire semplici attività utilizzando [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Viene descritto come eseguire attività di base con GDI+.  
   
  [Uso di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)  
  Viene illustrato come costruire un oggetto pen e usarlo per disegnare una varietà di linee e forme.  
