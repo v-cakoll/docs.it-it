@@ -8,15 +8,15 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: d3c4b5b4293b62cfec0f8471f90be673854e9009
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2d609525858c7a8ff77c0b86900b4fc7d6b4e39a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590357"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505950"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Procedura: Creare tipi di carattere e famiglie di caratteri
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Raggruppa i tipi di carattere con lo stesso carattere tipografico, ma diversi stili in famiglie di caratteri. Ad esempio, il tipo di carattere Arial contiene i tipi di carattere seguenti:  
+GDI+ Raggruppa tipi di carattere con lo stesso carattere tipografico, ma diversi stili in famiglie di caratteri. Ad esempio, il tipo di carattere Arial contiene i tipi di carattere seguenti:  
   
 - Arial normale  
   
@@ -26,7 +26,7 @@ ms.locfileid: "65590357"
   
 - Arial grassetto corsivo  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] vengono utilizzati quattro stili per creare i gruppi: normale, grassetto, corsivo e grassetto corsivo. Aggettivi, ad esempio *restringere* e *arrotondato* non vengono considerati gli stili, piuttosto fanno parte del nome della famiglia. Ad esempio, Arial ristretto è una famiglia di caratteri con i membri seguenti:  
+ GDI+ Usa quattro stili per creare i gruppi: normale, grassetto, corsivo e grassetto corsivo. Aggettivi, ad esempio *restringere* e *arrotondato* non vengono considerati gli stili, piuttosto fanno parte del nome della famiglia. Ad esempio, Arial ristretto è una famiglia di caratteri con i membri seguenti:  
   
 - Arial normale ridotta  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65590357"
   
 - Arial Narrow grassetto corsivo  
   
- Prima di poter creare testo con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è necessario costruire una <xref:System.Drawing.FontFamily> oggetto e un <xref:System.Drawing.Font> oggetto. Il <xref:System.Drawing.FontFamily> oggetto specifica il carattere tipografico (ad esempio, Arial) e il <xref:System.Drawing.Font> oggetto specifica le dimensioni, stile e unità.  
+ Prima di poter creare testo con GDI +, è necessario costruire una <xref:System.Drawing.FontFamily> oggetto e un <xref:System.Drawing.Font> oggetto. Il <xref:System.Drawing.FontFamily> oggetto specifica il carattere tipografico (ad esempio, Arial) e il <xref:System.Drawing.Font> oggetto specifica le dimensioni, stile e unità.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente crea uno stile regolare del tipo di carattere Arial con dimensioni pari a 16 pixel. Nel codice seguente, il primo argomento passato per il <xref:System.Drawing.Font.%23ctor%2A> costruttore è la <xref:System.Drawing.FontFamily> oggetto. Il secondo argomento specifica le dimensioni del font misurata nelle unità specificate dal quarto argomento. Il terzo argomento identificato lo stile.  

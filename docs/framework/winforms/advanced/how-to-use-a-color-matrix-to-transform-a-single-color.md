@@ -8,19 +8,19 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2df74e022b842f7e5c9ff80f6aeddfce51af5eab
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063726"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505834"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Procedura: Usare una matrice di colori per trasformare un singolo colore
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce il <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classi per l'archiviazione e la modifica delle immagini. <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> oggetti archiviare il colore di ogni pixel come numero a 32 bit: 8 bit per ciascun rosso, verde, blu e alfa. Ognuno dei quattro componenti è un numero compreso tra 0 e 255, dove 0 rappresenta alcun intensità e 255 che rappresentano piena intensità. Il componente alfa specifica la trasparenza del colore: 0 è completamente trasparente e 255 è completamente opaco.  
+GDI+ è disponibile il <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classi per l'archiviazione e la modifica delle immagini. <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> oggetti archiviare il colore di ogni pixel come numero a 32 bit: 8 bit per ciascun rosso, verde, blu e alfa. Ognuno dei quattro componenti è un numero compreso tra 0 e 255, dove 0 rappresenta alcun intensità e 255 che rappresentano piena intensità. Il componente alfa specifica la trasparenza del colore: 0 è completamente trasparente e 255 è completamente opaco.  
   
  Un vettore di colore è una tupla con 4 del modulo (rosso, verde, blu e alfa). Ad esempio, il vettore (0, 255, 0, 255) di colore rappresenta un colore opaco che non dispone di colore rosso o blu, ma ha verde alla piena intensità.  
   
- Un'altra convenzione per la rappresentazione di colori viene utilizzato il numero 1 per piena intensità. Utilizzando questa convenzione, il colore descritto nel paragrafo precedente viene rappresentato tramite il vettore (0, 1, 0, 1). [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Usa la convenzione di 1 come piena intensità durante l'esecuzione di trasformazioni di colore.  
+ Un'altra convenzione per la rappresentazione di colori viene utilizzato il numero 1 per piena intensità. Utilizzando questa convenzione, il colore descritto nel paragrafo precedente viene rappresentato tramite il vettore (0, 1, 0, 1). GDI+ Usa la convenzione di 1 come piena intensità durante l'esecuzione di trasformazioni di colore.  
   
  È possibile applicare trasformazioni lineari (rotazione, ridimensionamento e simili) a vettori di colore moltiplicando i vettori di colore da una matrice 4x4. Tuttavia, non è possibile utilizzare una matrice 4x4 per eseguire una conversione (non lineare). Se si aggiunge una coordinata quinta fittizia (ad esempio, il numero 1) per ognuno dei vettori di colore, è possibile usare una matrice 5x5 applicare qualsiasi combinazione delle trasformazioni lineari e traduzioni. Una trasformazione costituita da una trasformazione lineare seguita da una traduzione viene chiamata una trasformazione affine.  
   

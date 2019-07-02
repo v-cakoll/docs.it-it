@@ -8,19 +8,19 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: 4f4e26eb3e5ccaf66b2173c7fc9952375c5f2a58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8acb732841aa7aaaad3e8fdd2cf2962ff44dd60b
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025405"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506064"
 ---
 # <a name="xarray-markup-extension"></a>Estensione del markup x:Array
 Fornisce il supporto generale per le matrici di oggetti in XAML tramite un'estensione di markup. Corrisponde al `x:ArrayExtension` tipo XAML in [MS-XAML].  
   
 ## <a name="xaml-object-element-usage"></a>Utilizzo della sintassi XAML per gli elementi oggetto  
   
-```  
+```xaml
 <x:Array Type="typeName">  
   arrayContents  
 </x:Array>  
@@ -55,17 +55,14 @@ Fornisce il supporto generale per le matrici di oggetti in XAML tramite un'esten
   
  Ad esempio, ecco una semplice matrice di due stringhe, con la `sys` prefisso (e anche `x`) definiti a livello della matrice.  
   
- [xaml]  
-  
- `<x:Array Type="sys:String" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`  
-  
- `xmlns:sys="clr-namespace:System;assembly=mscorlib">`  
-  
- `<sys:String>Hello</sys:String>`  
-  
- `<sys:String>World</sys:String>`  
-  
- `</x:Array>`  
+```xaml
+<x:Array Type="sys:String"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String>Hello</sys:String>
+    <sys:String>World</sys:String>
+</x:Array>
+```
   
  Per i tipi personalizzati che vengono utilizzati come elementi della matrice, la classe deve anche supportare i requisiti per la creazione di un'istanza in XAML come elementi oggetto. Per altre informazioni, vedere [XAML e classi personalizzate per WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   

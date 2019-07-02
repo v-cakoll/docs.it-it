@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 88301663a78bb7d6f31c23bb03409ca44a2e55a9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487258"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506174"
 ---
 # <a name="security-in-windows-forms-overview"></a>Cenni preliminari sulla sicurezza in Windows Form
 
@@ -77,7 +77,7 @@ Queste tecnologie sono descritte nella tabella seguente.
 
 La tecnologia più adatta dipenderà dallo specifico ambiente di distribuzione. Per altre informazioni, vedere [Scelta di una strategia di distribuzione ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Per impostazione predefinita, le applicazioni ClickOnce distribuite con Visual Studio o gli strumenti di .NET Framework SDK (Mage.exe e MageUI.exe) configurate per eseguire in un computer client con attendibilità totale. Se si vuole distribuire l'applicazione in un ambiente parzialmente attendibile o assegnando soltanto alcune autorizzazioni aggiuntive, sarà necessario modificare le impostazioni predefinite. È possibile farlo con Visual Studio o lo strumento .NET Framework SDK MageUI.exe quando si configura la distribuzione. Per altre informazioni su come usare MageUI.exe, vedere questa procedura dettagliata: Distribuzione di un'applicazione ClickOnce dalla riga di comando.  Vedere anche [come: Impostare autorizzazioni personalizzate per un'applicazione ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) o [come: Impostare autorizzazioni personalizzate per un'applicazione ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+Per impostazione predefinita, le applicazioni ClickOnce distribuite con Visual Studio o gli strumenti di .NET Framework SDK (Mage.exe e MageUI.exe) configurate per eseguire in un computer client con attendibilità totale. Se si vuole distribuire l'applicazione in un ambiente parzialmente attendibile o assegnando soltanto alcune autorizzazioni aggiuntive, sarà necessario modificare le impostazioni predefinite. È possibile farlo con Visual Studio o lo strumento .NET Framework SDK MageUI.exe quando si configura la distribuzione. Per altre informazioni su come usare MageUI.exe, vedere [procedura dettagliata: Distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  Vedere anche [come: Impostare autorizzazioni personalizzate per un'applicazione ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) o [come: Impostare autorizzazioni personalizzate per un'applicazione ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Per altre informazioni sugli aspetti di sicurezza di ClickOnce e sull'elevazione delle autorizzazioni, vedere [protezione di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Per altre informazioni sulla distribuzione di applicazioni attendibili, vedere [Panoramica della distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview).
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: 1aa3030d9daea57bb9b8970baa78f8117a07bd1a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0bb7293a5423004a13cf98b79bba0a6c411a7c97
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624199"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505523"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Procedura: Creare una raccolta di tipi di carattere privata
 Il <xref:System.Drawing.Text.PrivateFontCollection> classe eredita dal <xref:System.Drawing.Text.FontCollection> classe base astratta. È possibile usare un <xref:System.Drawing.Text.PrivateFontCollection> oggetto per mantenere un set di tipi di carattere specifico per l'applicazione. Una raccolta di caratteri privata può includere i tipi di carattere di sistema installati, nonché i tipi di carattere che non sono stati installati nel computer. Per aggiungere un file del tipo di carattere a una raccolta privata del tipo di carattere, chiamare il <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> metodo di un <xref:System.Drawing.Text.PrivateFontCollection> oggetto.  
@@ -41,9 +41,9 @@ Il <xref:System.Drawing.Text.PrivateFontCollection> classe eredita dal <xref:Sys
   
  ![Screenshot che mostra il testo in vari tipi di carattere.](./media/how-to-create-a-private-font-collection/various-fonts-text-output.png)  
   
- Tff (è stato aggiunto alla raccolta del tipo di carattere privato nell'esempio di codice seguente) è il file del tipo di carattere per lo stile regolare Arial. Si noti tuttavia che l'output del programma illustra alcuni stili disponibili diverso dal normale per il tipo di carattere Arial. Infatti, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] possono simulare gli stili grassetto, corsivo e grassetto corsivo dallo stile regolare. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] può inoltre generare barrati e dallo stile regolare.  
+ Tff (è stato aggiunto alla raccolta del tipo di carattere privato nell'esempio di codice seguente) è il file del tipo di carattere per lo stile regolare Arial. Si noti tuttavia che l'output del programma illustra alcuni stili disponibili diverso dal normale per il tipo di carattere Arial. Ciò avviene perché GDI+ possono simulare gli stili grassetto, corsivo e grassetto corsivo dallo stile regolare. GDI+ può inoltre generare barrati e dallo stile regolare.  
   
- Analogamente, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] possibile simulare lo stile grassetto corsivo dallo stile grassetto o corsivo. Viene illustrato l'output del programma che lo stile grassetto corsivo è disponibile per la famiglia di volte in cui anche se tff (Times New Roman, in grassetto) è l'unico file volte nella raccolta.  
+ Analogamente, GDI+ possono simulare lo stile grassetto corsivo dallo stile grassetto o corsivo. Viene illustrato l'output del programma che lo stile grassetto corsivo è disponibile per la famiglia di volte in cui anche se tff (Times New Roman, in grassetto) è l'unico file volte nella raccolta.  
   
  [!code-csharp[System.Drawing.FontsAndText#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.FontsAndText#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  

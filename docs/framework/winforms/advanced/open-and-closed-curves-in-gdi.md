@@ -10,12 +10,12 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 - curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
-ms.openlocfilehash: 33a8954296a7e63637ad5e210fb30fba1a3fdd53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06afdc4549f7c3c9b0636e5c7052dcca87a153f1
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641471"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505448"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>Curve aperte e chiuse in GDI+
 La figura seguente mostra due curve: quello aperto e una chiusa.  
@@ -23,7 +23,7 @@ La figura seguente mostra due curve: quello aperto e una chiusa.
  ![Curve aperte e chiuse](./media/aboutgdip02-art24.gif "Aboutgdip02_art24")  
   
 ## <a name="managed-interface-for-curves"></a>Interfaccia gestita per le curve  
- Curve chiuse hanno una parte interna e possono quindi essere riempite con un pennello. Il <xref:System.Drawing.Graphics> classe [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce i metodi seguenti per il riempimento curve e forme chiuse: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, e <xref:System.Drawing.Graphics.FillRegion%2A>. Ogni volta che si chiama uno di questi metodi, è necessario passare uno dei tipi di pennello specifico (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, o <xref:System.Drawing.Drawing2D.PathGradientBrush>) come argomento.  
+ Curve chiuse hanno una parte interna e possono quindi essere riempite con un pennello. Il <xref:System.Drawing.Graphics> classe GDI+ fornisce i metodi seguenti per il riempimento curve e forme chiuse: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, e <xref:System.Drawing.Graphics.FillRegion%2A>. Ogni volta che si chiama uno di questi metodi, è necessario passare uno dei tipi di pennello specifico (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, o <xref:System.Drawing.Drawing2D.PathGradientBrush>) come argomento.  
   
  Il <xref:System.Drawing.Graphics.FillPie%2A> metodo è complementare al <xref:System.Drawing.Graphics.DrawArc%2A> (metodo). Proprio come le <xref:System.Drawing.Graphics.DrawArc%2A> metodo disegna una parte del contorno di un'ellisse, di <xref:System.Drawing.Graphics.FillPie%2A> metodo inserisce una parte all'interno di un'ellisse. Nell'esempio seguente disegna un arco e riempie la parte corrispondente della parte interna dell'ellisse:  
   

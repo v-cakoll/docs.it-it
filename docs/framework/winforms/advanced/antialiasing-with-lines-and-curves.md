@@ -9,15 +9,15 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 871c5cb3cd9356f677633acb04fe82021a9787c5
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961101"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506146"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Anti-aliasing con linee e curve
-Quando si usa [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per disegnare una linea, si forniscono i punti iniziale e finale della linea, ma non è necessario fornire informazioni sui singoli pixel nella riga. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funziona in combinazione con il software dei driver di visualizzazione per determinare i pixel che verranno attivati per visualizzare la linea in un dispositivo di visualizzazione particolare.  
+Quando si usa GDI+ per disegnare una linea, si forniscono i punti iniziale e finale della linea, ma non è necessario fornire informazioni sui singoli pixel nella riga. GDI+ interagisce con il software dei driver di visualizzazione per determinare i pixel che verranno attivati per visualizzare la linea in un dispositivo di visualizzazione particolare.  
   
 ## <a name="aliasing"></a>Aliasing  
  Prendere in considerazione la linea rossa direttamente che va da punti (4, 2) per il punto (16, 10). Si supponga il sistema di coordinate è la sua origine nell'angolo superiore sinistro e che l'unità di misura è il pixel. Si supponga anche che l'asse x punta a destra e i punti di asse y verso il basso. Nella figura seguente mostra una visualizzazione ingrandita della riga di colore rosso disegnata su uno sfondo.  

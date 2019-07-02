@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - transformations [Windows Forms], order significance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-ms.openlocfilehash: 4a65e588984241affea3083810b4901266480ea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08927ebaa460e19e558dce22f39c13c31f0e49d0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747459"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504913"
 ---
 # <a name="why-transformation-order-is-significant"></a>Importanza dell'ordine delle trasformazioni
 Un singolo <xref:System.Drawing.Drawing2D.Matrix> oggetti possono archiviare una trasformazione o una sequenza di trasformazioni. Quest'ultimo viene chiamato una trasformazione composita. La matrice di una trasformazione composita viene ottenuta moltiplicando le matrici delle trasformazioni singoli.  
   
 ## <a name="composite-transform-examples"></a>Esempi di trasformazione composita  
- In una trasformazione composita, è importante l'ordine delle trasformazioni singoli. Ad esempio, se si prima di tutto ruota, quindi scalare, traslare, si ottiene un risultato diverso che se innanzitutto traslare, ruotare, quindi ridimensionare. In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], trasformazioni composte vengono compilate da sinistra a destra. Se S, R e T sono rispettivamente le matrici di scala, rotazione e traslazione, quindi il prodotto SRT (in questo ordine) è basato sulla matrice di trasformazione composta con scalabilità prima, quindi Ruota, quindi si traduce. La matrice prodotta dal prodotto SRT è diverso dalla matrice prodotta dal prodotto TRS.  
+ In una trasformazione composita, è importante l'ordine delle trasformazioni singoli. Ad esempio, se si prima di tutto ruota, quindi scalare, traslare, si ottiene un risultato diverso che se innanzitutto traslare, ruotare, quindi ridimensionare. In GDI+, vengono compilate le trasformazioni composite da sinistra a destra. Se S, R e T sono rispettivamente le matrici di scala, rotazione e traslazione, quindi il prodotto SRT (in questo ordine) è basato sulla matrice di trasformazione composta con scalabilità prima, quindi Ruota, quindi si traduce. La matrice prodotta dal prodotto SRT è diverso dalla matrice prodotta dal prodotto TRS.  
   
  Uno dei motivi ordine è significativo è che le trasformazioni, ad esempio la rotazione e ridimensionamento vengono eseguite rispetto all'origine del sistema di coordinate. Ridimensionamento di un oggetto che viene centrato in corrispondenza dell'origine produce un risultato diverso rispetto al ridimensionamento di un oggetto che è stato spostato lontano dall'origine. Analogamente, la rotazione di un oggetto che viene centrato in corrispondenza dell'origine produce un risultato diverso da ruotare un oggetto che è stato spostato lontano dall'origine.  
   

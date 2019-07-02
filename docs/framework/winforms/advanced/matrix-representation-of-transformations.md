@@ -16,12 +16,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ceaad7b4bb5a70a890d261e39bc608becb388c17
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967527"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505632"
 ---
 # <a name="matrix-representation-of-transformations"></a>Rappresentazione tramite matrici delle trasformazioni
 Una matrice di n × m è un set di numeri disposti in righe di m e n colonne. La figura seguente mostra le matrici di diverse.  
@@ -66,7 +66,7 @@ Una matrice di n × m è un set di numeri disposti in righe di m e n colonne. La
   
  ![Transformations](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
- Nelle [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è possibile archiviare una trasformazione affine in un <xref:System.Drawing.Drawing2D.Matrix> oggetto. Perché è sempre la terza colonna di una matrice che rappresenta una trasformazione affine o meno (0, 0, 1), quando costruisce è necessario specificare solo i numeri di sei nelle prime due colonne un <xref:System.Drawing.Drawing2D.Matrix> oggetto. L'istruzione `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` costruisce la matrice illustrata nella figura precedente.  
+ In GDI+ è possibile archiviare una trasformazione affine in un <xref:System.Drawing.Drawing2D.Matrix> oggetto. Perché è sempre la terza colonna di una matrice che rappresenta una trasformazione affine o meno (0, 0, 1), quando costruisce è necessario specificare solo i numeri di sei nelle prime due colonne un <xref:System.Drawing.Drawing2D.Matrix> oggetto. L'istruzione `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` costruisce la matrice illustrata nella figura precedente.  
   
 ## <a name="composite-transformations"></a>Trasformazioni composte  
  Una trasformazione composita è una sequenza di trasformazioni, uno seguita da altro. Prendere in considerazione le matrici e le trasformazioni elencate di seguito:  

@@ -2,17 +2,17 @@
 title: Data binding e LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
-ms.openlocfilehash: b081a648023aa21eea3a20ec409600d3bcbe9878
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 125c9b7df0164092182506a7a71d4180b81d3ca6
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607401"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504118"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>Data binding e LINQ to DataSet
 *Associazione dati* è il processo che stabilisce una connessione tra l'applicazione dell'interfaccia utente e la logica di business. Se l'associazione è impostata correttamente e i dati forniscono le notifiche appropriate, quando il valore dei dati cambia la modifica si riflette automaticamente negli elementi associati ai dati. L'oggetto <xref:System.Data.DataSet> di ADO.NET è una rappresentazione di dati residente in memoria che fornisce un modello di programmazione relazionale coerente, indipendentemente dall'origine dati che contiene. L'oggetto <xref:System.Data.DataView> di ADO.NET 2.0 consente di ordinare e filtrare i dati archiviati in <xref:System.Data.DataTable>. Questa funzionalità viene spesso usata nelle applicazioni di data binding. Tramite un oggetto <xref:System.Data.DataView>, è possibile esporre i dati di una tabella applicando diversi tipi di ordinamento e filtrare i dati per stato di riga o sulla base di un'espressione di filtro. Per altre informazioni sul <xref:System.Data.DataView> oggetti, vedere [DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consente agli sviluppatori di creare query complesse e potenti su un <xref:System.Data.DataSet> tramite [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]. Tuttavia, un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query restituisce un'enumerazione di <xref:System.Data.DataRow> gli oggetti che non viene usato con facilità in uno scenario di associazione. Per semplificare l'associazione, è possibile creare un <xref:System.Data.DataView> da un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query. Ciò <xref:System.Data.DataView> Usa il filtro e ordinamento specificate nella query, ma è più adatto per il data binding. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] estende la funzionalità dei <xref:System.Data.DataView> fornendo [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] basate su espressioni di filtro e ordinamento, che consente di molto più complesse e potenti di filtro e ordinamento di operazioni rispetto a basato su stringa di filtro e ordinamento.  
+ LINQ to DataSet consente agli sviluppatori di creare query complesse e potenti su un <xref:System.Data.DataSet> tramite [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]. Tuttavia, una query LINQ to DataSet restituisce un'enumerazione di <xref:System.Data.DataRow> gli oggetti che non viene usato con facilità in uno scenario di associazione. Per semplificare l'associazione, è possibile creare un <xref:System.Data.DataView> da una query LINQ to DataSet. Ciò <xref:System.Data.DataView> Usa il filtro e ordinamento specificate nella query, ma è più adatto per il data binding. LINQ to DataSet estende la funzionalità dei <xref:System.Data.DataView> fornendo [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] basate su espressioni di filtro e ordinamento, che consente di molto più complesse e potenti di filtro e ordinamento di operazioni rispetto a basato su stringa di filtro e ordinamento.  
   
  Si noti che <xref:System.Data.DataView> rappresenta la query stessa e non è una visualizzazione sopra la query. L'oggetto <xref:System.Data.DataView> è associato a un controllo dell'interfaccia utente, ad esempio <xref:System.Windows.Forms.DataGrid> o <xref:System.Windows.Forms.DataGridView>, che fornisce un modello di data binding semplice. Un oggetto <xref:System.Data.DataView> può essere creato anche da <xref:System.Data.DataTable>, fornendo una visualizzazione predefinita della tabella.  
   

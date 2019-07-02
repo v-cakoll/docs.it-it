@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87a2f6853136b4b3e622968327bde01c9862bfdf
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664168"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504638"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Query su singola tabella (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] le query funzionano sulle origini dati che implementano il <xref:System.Collections.Generic.IEnumerable%601> interfaccia o <xref:System.Linq.IQueryable%601> interfaccia. Il <xref:System.Data.DataTable> classe non implementa entrambe le interfacce, è necessario chiamare il <xref:System.Data.DataTableExtensions.AsEnumerable%2A> metodo, se si desidera utilizzare il <xref:System.Data.DataTable> come origine nel `From` clausola di un [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] query.  
@@ -20,7 +20,7 @@ ms.locfileid: "61664168"
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- La query con variabili locale viene inizializzata con un'espressione di query, che opera su uno o più fonti di informazione applicando uno o più operatori di query da entrambi gli operatori query standard o, nel caso di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], gli operatori specifici per il <xref:System.Data.DataSet>classe. Nell'espressione di query dell'esempio precedente vengono usati due operatori di query standard: `Where` e `Select`.  
+ La query con variabili locale viene inizializzata con un'espressione di query, che opera su uno o più fonti di informazione applicando uno o più operatori di query da entrambi gli operatori query standard o, nel caso di LINQ to DataSet, operatori specifici di <xref:System.Data.DataSet>classe. Nell'espressione di query dell'esempio precedente vengono usati due operatori di query standard: `Where` e `Select`.  
   
  La clausola `Where` filtra la sequenza in base a una condizione, in questo caso che `OnlineOrderFlag` sia impostato su `true`. L'operatore `Select` alloca e restituisce un oggetto enumerabile che acquisisce gli argomenti passati all'operatore. Nell'esempio precedente viene creato un tipo anonimo con tre proprietà: `SalesOrderID`, `OrderDate` e `SalesOrderNumber`. I valori di queste tre proprietà vengono impostati sui valori delle colonne `SalesOrderID`, `OrderDate` e `SalesOrderNumber` della tabella `SalesOrderHeader`.  
   

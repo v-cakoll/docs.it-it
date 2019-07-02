@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2811674ad8d870062e3a0c67dbd21e6550f6c48d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d69de3265fa0954f640c8a2f08ba85c106320f3e
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655671"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506221"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Supporto bidirezionale per le applicazioni Windows Forms
 È possibile usare Visual Studio per creare applicazioni basate su Windows che supportano lingue (right-to-left) bidirezionali, ad esempio arabo ed ebraico. Sono inclusi form standard, finestre di dialogo, form MDI e tutti i controlli che è possibile usare in questi form, ovvero tutti gli oggetti nello spazio dei nomi <xref:System.Windows.Forms.Control>.  
@@ -82,7 +82,7 @@ ms.locfileid: "64655671"
  I Windows Form supportano Unicode, pertanto è possibile includere qualsiasi set di caratteri durante la creazione di applicazioni bidirezionali. Tuttavia, non tutti i controlli di Windows Form supportano Unicode su tutte le piattaforme. Per altre informazioni, vedere [Encoding and Windows Form Globalization](encoding-and-windows-forms-globalization.md) (Globalizzazione di Windows Form e codifica).  
   
 ## <a name="gdi"></a>GDI+  
- È possibile usare [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per creare il testo con ordine di lettura da destra a sinistra. Il metodo <xref:System.Drawing.Graphics.DrawString%2A>, usato per creare il testo, supporta un parametro `StringFormat` che è possibile impostare sul membro <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> dell'enumerazione <xref:System.Drawing.StringFormatFlags> per invertire il punto di origine del testo.  
+ È possibile utilizzare GDI+ per disegnare il testo con ordine di lettura da destra a sinistra. Il metodo <xref:System.Drawing.Graphics.DrawString%2A>, usato per creare il testo, supporta un parametro `StringFormat` che è possibile impostare sul membro <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> dell'enumerazione <xref:System.Drawing.StringFormatFlags> per invertire il punto di origine del testo.  
   
 ## <a name="common-dialog-boxes"></a>Finestre di dialogo comuni  
  Gli strumenti di sistema, ad esempio la finestra di dialogo Apri file, sono controllati da Windows. Gli elementi del linguaggio vengono ereditati dal sistema operativo. Se si usa una versione di Windows con le impostazioni di lingua appropriate, queste finestre di dialogo funzioneranno correttamente con le lingue bidirezionali.  

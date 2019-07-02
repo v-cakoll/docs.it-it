@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-ms.openlocfilehash: 609851737f142cfcbfeace3b1c020f3ac27bfd7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ab0ff93b3ee26467c0de448efd31b698167f95c2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636844"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505707"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Procedura: Usare la modalità di interpolazione per controllare la qualità dell'immagine durante il ridimensionamento
-La modalità di interpolazione di un' <xref:System.Drawing.Graphics> oggetto influenza il modo [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] immagini (vengono adattati). Il <xref:System.Drawing.Drawing2D.InterpolationMode> enumerazione definisce diverse modalità di interpolazione, alcuni dei quali vengono visualizzati nell'elenco seguente:  
+La modalità di interpolazione di un' <xref:System.Drawing.Graphics> oggetto influenza il modo GDI+ (vengono adattati) le immagini. Il <xref:System.Drawing.Drawing2D.InterpolationMode> enumerazione definisce diverse modalità di interpolazione, alcuni dei quali vengono visualizzati nell'elenco seguente:  
   
 - <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   

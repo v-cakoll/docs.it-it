@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e678195e96aea881777c44ab14bb2e56aef015bb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663914"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505303"
 ---
 # <a name="types-of-bitmaps"></a>Tipi di bitmap
 Una bitmap è una matrice di bit che specifica il colore di ogni pixel in una matrice rettangolare di pixel. Il numero di bit destinati a un singolo pixel determina il numero di colori che possono essere assegnati a tale pixel. Ad esempio, se ogni pixel è rappresentato da 4 bit, quindi un pixel specifico può essere assegnato uno dei 16 colori diversi (2 ^ 4 = 16). Nella tabella seguente vengono illustrati alcuni esempi del numero di colori che possono essere assegnati a un pixel rappresentato da un determinato numero di bit.  
@@ -53,7 +53,7 @@ Una bitmap è una matrice di bit che specifica il colore di ogni pixel in una ma
  ![Bitmap sample](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Formati di File grafici  
- Esistono numerosi formati standard per il salvataggio di bitmap in file di disco. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] supporta i file grafici formati descritti nei paragrafi seguenti.  
+ Esistono numerosi formati standard per il salvataggio di bitmap in file di disco. GDI + supporta i file grafici formati descritti nei paragrafi seguenti.  
   
 ### <a name="bmp"></a>BMP  
  BMP è un formato standard usato da Windows per archiviare immagini indipendenti dal dispositivo e indipendente dalle applicazioni. Il numero di bit per pixel (1, 4, 8, 15, 24, 32 o 64) per un determinato file con estensione BMP viene specificato in un'intestazione del file. File BMP con 24 bit per pixel sono comuni. File BMP in genere non vengono compressi e, pertanto, non sono adatti per il trasferimento tramite Internet.  

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4533fbba62c36714f55cd8bd55fde7a1c8f6c9e6
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766301"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505051"
 ---
 # <a name="using-nested-graphics-containers"></a>Utilizzo di contenitori di grafica annidati
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fornisce i contenitori che è possibile utilizzare per sostituire temporaneamente o per migliorare parte dello stato in un <xref:System.Drawing.Graphics> oggetto. Creare un contenitore, chiamare il <xref:System.Drawing.Graphics.BeginContainer%2A> metodo di un <xref:System.Drawing.Graphics> oggetto. È possibile chiamare <xref:System.Drawing.Graphics.BeginContainer%2A> ripetutamente per creare contenitori nidificati. Ogni chiamata a <xref:System.Drawing.Graphics.BeginContainer%2A> deve essere associato a una chiamata a <xref:System.Drawing.Graphics.EndContainer%2A>.  
+GDI+ fornisce contenitori che è possibile utilizzare per sostituire o aumentare parte dello stato nel temporaneamente un <xref:System.Drawing.Graphics> oggetto. Creare un contenitore, chiamare il <xref:System.Drawing.Graphics.BeginContainer%2A> metodo di un <xref:System.Drawing.Graphics> oggetto. È possibile chiamare <xref:System.Drawing.Graphics.BeginContainer%2A> ripetutamente per creare contenitori nidificati. Ogni chiamata a <xref:System.Drawing.Graphics.BeginContainer%2A> deve essere associato a una chiamata a <xref:System.Drawing.Graphics.EndContainer%2A>.  
   
 ## <a name="transformations-in-nested-containers"></a>Trasformazioni nei contenitori annidati  
  L'esempio seguente crea una <xref:System.Drawing.Graphics> oggetto e un contenitore all'interno che <xref:System.Drawing.Graphics> oggetto. La trasformazione globale del <xref:System.Drawing.Graphics> oggetto è un'unità di conversione 100 nella direzione x e 80 unità nella direzione y. La trasformazione globale del contenitore è una rotazione di 30 gradi. Il codice effettua la chiamata `DrawRectangle(pen, -60, -30, 120, 60)` due volte. La prima chiamata a <xref:System.Drawing.Graphics.DrawRectangle%2A> si trova all'interno del contenitore; la chiamata è tra le chiamate a <xref:System.Drawing.Graphics.BeginContainer%2A> e <xref:System.Drawing.Graphics.EndContainer%2A>. La seconda chiamata a <xref:System.Drawing.Graphics.DrawRectangle%2A> dopo la chiamata a <xref:System.Drawing.Graphics.EndContainer%2A>.  

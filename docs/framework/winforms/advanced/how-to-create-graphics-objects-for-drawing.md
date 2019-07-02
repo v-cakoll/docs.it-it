@@ -10,15 +10,15 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: aa4c3e3cd21d702927b3784254184a9cd329f121
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee57b0409d7bb7574c965ff098e7f86c8332536d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643367"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505510"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Procedura: Creare oggetti Graphics per disegnare
-Prima di poter creare linee e forme, il rendering del testo, o visualizzare e manipolare immagini con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è necessario creare un <xref:System.Drawing.Graphics> oggetto. Il <xref:System.Drawing.Graphics> oggetto rappresenta un [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superficie di disegno ed è l'oggetto che viene usato per creare immagini grafiche.  
+Prima di poter creare linee e forme, il rendering del testo, o visualizzare e manipolare immagini con GDI+, è necessario creare un <xref:System.Drawing.Graphics> oggetto. Il <xref:System.Drawing.Graphics> oggetto rappresenta una superficie di disegno GDI+ ed è l'oggetto che viene usato per creare immagini grafiche.  
   
  Nell'utilizzo dei grafici sono disponibili due passaggi:  
   

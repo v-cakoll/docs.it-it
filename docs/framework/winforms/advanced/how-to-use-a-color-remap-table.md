@@ -9,17 +9,17 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-ms.openlocfilehash: bff5e3585804e027f2d0e78e5ea525f933a351a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 360ec30563ee5001d784dc7c4ccdb50563867c29
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593183"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505770"
 ---
 # <a name="how-to-use-a-color-remap-table"></a>Procedura: Usare una tabella per modificare il mapping dei colori
 Modifica del mapping è il processo di conversione dei colori in un'immagine in base a una tabella di rimappatura dei colori. La tabella di riassociazione cromatica è una matrice di <xref:System.Drawing.Imaging.ColorMap> oggetti. Ciascuna <xref:System.Drawing.Imaging.ColorMap> oggetto nella matrice ha un <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> proprietà e un <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> proprietà.  
   
- Quando [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] disegna un'immagine, ogni pixel dell'immagine viene confrontato con la matrice di colori precedente. Se il colore del pixel corrisponde a un colore precedente, il relativo colore viene modificato il nuovo colore corrispondente. I colori vengono modificati solo per il rendering, ovvero i valori di colore dell'immagine di se stesso (archiviati in un' <xref:System.Drawing.Image> o <xref:System.Drawing.Bitmap> oggetto) non vengono modificati.  
+ Quando GDI+ disegna un'immagine, ogni pixel dell'immagine viene confrontato con la matrice di colori precedente. Se il colore del pixel corrisponde a un colore precedente, il relativo colore viene modificato il nuovo colore corrispondente. I colori vengono modificati solo per il rendering, ovvero i valori di colore dell'immagine di se stesso (archiviati in un' <xref:System.Drawing.Image> o <xref:System.Drawing.Bitmap> oggetto) non vengono modificati.  
   
  Per disegnare un'immagine riassociata, inizializzare una matrice di <xref:System.Drawing.Imaging.ColorMap> oggetti. Passare la matrice per il <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> metodo di un <xref:System.Drawing.Imaging.ImageAttributes> dell'oggetto e quindi passare il <xref:System.Drawing.Imaging.ImageAttributes> dell'oggetto per il <xref:System.Drawing.Graphics.DrawImage%2A> metodo di un <xref:System.Drawing.Graphics> oggetto.  
   

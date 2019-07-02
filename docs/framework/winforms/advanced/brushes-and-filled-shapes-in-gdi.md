@@ -13,15 +13,15 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad3a4af2474ace61bbf35ea1357a2a6037af039a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779472"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506230"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pennelli e forme con riempimento in GDI+
-Una forma chiusa, ad esempio un rettangolo o un'ellisse, è costituito da una struttura e una parte interna. La struttura viene disegnata con una penna e la parte interna viene riempita con un pennello. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce diverse classi di pennelli per riempire le parti interne delle forme chiuse: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, e <xref:System.Drawing.Drawing2D.PathGradientBrush>. Tutte queste classi di ereditare il <xref:System.Drawing.Brush> classe. La figura seguente mostra un rettangolo riempito con un pennello tinta unita e un'ellisse riempita con un pennello di tratteggio.  
+Una forma chiusa, ad esempio un rettangolo o un'ellisse, è costituito da una struttura e una parte interna. La struttura viene disegnata con una penna e la parte interna viene riempita con un pennello. GDI+ fornisce diverse classi di pennelli per riempire le parti interne delle forme chiuse: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, e <xref:System.Drawing.Drawing2D.PathGradientBrush>. Tutte queste classi di ereditare il <xref:System.Drawing.Brush> classe. La figura seguente mostra un rettangolo riempito con un pennello tinta unita e un'ellisse riempita con un pennello di tratteggio.  
   
  ![Forme piene](./media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
@@ -40,7 +40,7 @@ Una forma chiusa, ad esempio un rettangolo o un'ellisse, è costituito da una st
  [!code-csharp[LinesCurvesAndShapes#122](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sono disponibili più di 50 stili di tratteggio. i tre stili illustrati nella figura seguente vengono <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, e <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
+ GDI+ è disponibile più di 50 stili di tratteggio. i tre stili illustrati nella figura seguente vengono <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, e <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
   
  ![Forme piene](./media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
@@ -59,7 +59,7 @@ Una forma chiusa, ad esempio un rettangolo o un'ellisse, è costituito da una st
  ![Forma compilata](./media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
 ## <a name="gradient-brushes"></a>Pennelli sfumati  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sono disponibili due tipi di pennelli sfumati: lineare e il percorso. È possibile usare un pennello sfumato lineare per riempire una forma con il colore che cambia gradualmente durante lo spostamento tra la forma orizzontalmente, verticalmente o in diagonale. Esempio di codice seguente viene illustrato come compilare un'ellisse con un pennello a sfumatura orizzontale che passa da blu a verde quando si spostano tra il bordo sinistro dell'ellisse al bordo destro.  
+ GDI+ offre due tipi di pennelli sfumati: lineare e il percorso. È possibile usare un pennello sfumato lineare per riempire una forma con il colore che cambia gradualmente durante lo spostamento tra la forma orizzontalmente, verticalmente o in diagonale. Esempio di codice seguente viene illustrato come compilare un'ellisse con un pennello a sfumatura orizzontale che passa da blu a verde quando si spostano tra il bordo sinistro dell'ellisse al bordo destro.  
   
  [!code-csharp[LinesCurvesAndShapes#124](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  

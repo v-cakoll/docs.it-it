@@ -9,15 +9,15 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: 9c854d8742e50a7136455da72a239623fb0c0d91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 64bec47a186b08298a49c6f188795d1b51d234eb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639751"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505248"
 ---
 # <a name="vector-graphics-overview"></a>Cenni preliminari sulla grafica vettoriale
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Consente di disegnare linee, rettangoli e le altre forme in un sistema di coordinate. È possibile scegliere tra un'ampia gamma di sistemi di coordinate, ma il sistema di coordinate predefinito è l'origine nell'angolo superiore sinistro con l'asse x che punta a destra e l'asse y rivolta verso il basso. L'unità di misura nel sistema di coordinate predefinito è il pixel.  
+GDI+ disegna linee, rettangoli e le altre forme su un sistema di coordinate. È possibile scegliere tra un'ampia gamma di sistemi di coordinate, ma il sistema di coordinate predefinito è l'origine nell'angolo superiore sinistro con l'asse x che punta a destra e l'asse y rivolta verso il basso. L'unità di misura nel sistema di coordinate predefinito è il pixel.  
   
 ## <a name="the-building-blocks-of-gdi"></a>I blocchi predefiniti di GDI+  
  ![Grafica vettoriale](./media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
@@ -26,11 +26,11 @@ ms.locfileid: "64639751"
   
  ![Grafica vettoriale](./media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
- Quando si usa [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per disegnare una riga, nel rettangolo o curve, si forniscono alcune informazioni essenziali sull'elemento da disegnare. Ad esempio, è possibile specificare una riga, fornendo due punti ed è possibile specificare un rettangolo, fornendo un punto, un'altezza e una larghezza. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funziona in combinazione con il software dei driver di visualizzazione per determinare i pixel che devono essere attivati per mostrare la riga, nel rettangolo o curva. La figura seguente mostra i pixel che vengano impostati su on per visualizzare una linea dal punto (4, 2) per il punto (12, 8).  
+ Quando si usa GDI+ per disegnare una riga, nel rettangolo o curve, si forniscono alcune informazioni essenziali sull'elemento da disegnare. Ad esempio, è possibile specificare una riga, fornendo due punti ed è possibile specificare un rettangolo, fornendo un punto, un'altezza e una larghezza. GDI+ interagisce con il software dei driver di visualizzazione per determinare i pixel che devono essere attivati per mostrare la riga, nel rettangolo o curva. La figura seguente mostra i pixel che vengano impostati su on per visualizzare una linea dal punto (4, 2) per il punto (12, 8).  
   
  ![Grafica vettoriale](./media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   
- Nel corso del tempo, determinati componenti di base sono rivelati a essere più utili per la creazione di immagini bidimensionale. Questi blocchi predefiniti, che sono tutti supportati da [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], vengono forniti nell'elenco seguente:  
+ Nel corso del tempo, determinati componenti di base sono rivelati a essere più utili per la creazione di immagini bidimensionale. Nell'elenco seguente sono riportati questi blocchi predefiniti, che sono tutti supportati da GDI+,  
   
 - Linee  
   
@@ -47,7 +47,7 @@ ms.locfileid: "64639751"
 - spline di Bézier  
   
 ## <a name="methods-for-drawing-with-a-graphics-object"></a>Metodi per il disegno con un oggetto Graphics  
- Il <xref:System.Drawing.Graphics> classe [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce i seguenti metodi di disegno degli elementi nell'elenco precedente: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>, <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> (per cardinali), e <xref:System.Drawing.Graphics.DrawBezier%2A>. Ognuno di questi metodi è in overload; ogni metodo, ovvero supporta diversi elenchi di parametri diversi. Ad esempio, una variazione del <xref:System.Drawing.Graphics.DrawLine%2A> metodo riceve un <xref:System.Drawing.Pen> oggetto e quattro interi, mentre un'altra variazione del <xref:System.Drawing.Graphics.DrawLine%2A> metodo riceve un <xref:System.Drawing.Pen> oggetto e due <xref:System.Drawing.Point> oggetti.  
+ Il <xref:System.Drawing.Graphics> classe GDI+ fornisce i seguenti metodi di disegno degli elementi nell'elenco precedente: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>, <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> (per le spline cardinale) e <xref:System.Drawing.Graphics.DrawBezier%2A>. Ognuno di questi metodi è in overload; ogni metodo, ovvero supporta diversi elenchi di parametri diversi. Ad esempio, una variazione del <xref:System.Drawing.Graphics.DrawLine%2A> metodo riceve un <xref:System.Drawing.Pen> oggetto e quattro interi, mentre un'altra variazione del <xref:System.Drawing.Graphics.DrawLine%2A> metodo riceve un <xref:System.Drawing.Pen> oggetto e due <xref:System.Drawing.Point> oggetti.  
   
  I metodi per disegnare linee, rettangoli e spline di Bézier sono associati più metodi che consentono di disegnare vari elementi in una singola chiamata: <xref:System.Drawing.Graphics.DrawLines%2A>, <xref:System.Drawing.Graphics.DrawRectangles%2A>, e <xref:System.Drawing.Graphics.DrawBeziers%2A>. Inoltre, il <xref:System.Drawing.Graphics.DrawCurve%2A> metodo ha un metodo correlato <xref:System.Drawing.Graphics.DrawClosedCurve%2A>, che si chiude una curva connettendo il punto finale della curva per l'avvio di un punto.  
   
