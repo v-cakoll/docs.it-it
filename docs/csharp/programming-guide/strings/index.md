@@ -1,17 +1,17 @@
 ---
 title: Stringhe - Guida per programmatori C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: e193d6a51c3d4f1d81e3b74b1474d0e7cdcfca53
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398118"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67503994"
 ---
 # <a name="strings-c-programming-guide"></a>Stringhe (Guida per programmatori C#)
 Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. Internamente il testo viene archiviato come una raccolta di sola lettura sequenziale di oggetti <xref:System.Char>. Le stringhe C# non presentano un carattere di terminazione null alla fine, pertanto una stringa C# può contenere qualsiasi numero di caratteri null incorporati ('\0'). La proprietà <xref:System.String.Length%2A> di una stringa rappresenta il numero di oggetti `Char` in essa contenuti e non il numero di caratteri Unicode. Per accedere ai singoli punti di codice Unicode in una stringa usare l'oggetto <xref:System.Globalization.StringInfo>.  
@@ -62,13 +62,16 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
 |\n|Nuova riga|0x000A|  
 |\r|Ritorno a capo|0x000D|  
 |\t|Tabulazione orizzontale|0x0009|  
-|\U|Sequenza di escape Unicode per le coppie di surrogati|\Unnnnnnnn|  
-|\u|Sequenza di escape Unicode|\u0041 = "A"|  
+|\U|Sequenza di escape Unicode (UTF-32)|`\U00nnnnnn` (ad esempio, `\U0001F47D` = "&#x1F47D;")|  
+|\u|Sequenza di escape Unicode (UTF-16)|`\unnnn` (ad esempio, `\u0041` = "A")|  
 |\v|Tabulazione verticale|0x000B|  
-|\x|Sequenza di escape Unicode simile a "\u", ma con lunghezza variabile|\x0041 o \x41 = "A"|  
+|\x|Sequenza di escape Unicode simile a "\u", ma con lunghezza variabile|`\x0041` o `\x41` = "A"|  
+  
+> [!WARNING]
+>  Quando si usa la sequenza di escape `\x` e si specificano meno di 4 cifre esadecimali, se i caratteri immediatamente seguenti la sequenza di escape sono cifre esadecimali valide (ad esempio 0-9, A-F e a-f), questi verranno interpretati come parte della sequenza di escape. Ad esempio, `\xA1` produce "&#161;" che è il punto di codice U+00A1. Se tuttavia il carattere successivo è "A" oppure "a", la sequenza di escape verrà invece interpretata come `\xA1A` e produrrà "&#x0A1A;" che è il punto di codice U+0A1A. In questi casi, specificando tutte e 4 le cifre esadecimali (ad esempio, `\x00A1`) si eviteranno possibili interpretazioni errate.  
   
 > [!NOTE]
->  In fase di compilazione, le stringhe verbatim vengono convertite in stringhe normali con tutte le stesse sequenze di escape. Pertanto, se si visualizza una stringa verbatim nella finestra Espressioni di controllo del debugger, si vedranno i caratteri di escape aggiunti dal compilatore e non la versione verbatim del codice sorgente. Ad esempio, la stringa verbatim @"C:\files.txt" verrà visualizzata nella finestra delle espressioni di controllo come "C \\\files.txt".  
+>  In fase di compilazione, le stringhe verbatim vengono convertite in stringhe normali con tutte le stesse sequenze di escape. Pertanto, se si visualizza una stringa verbatim nella finestra Espressioni di controllo del debugger, si vedranno i caratteri di escape aggiunti dal compilatore e non la versione verbatim del codice sorgente. Ad esempio, la stringa verbatim `@"C:\files.txt"` verrà visualizzata nella finestra delle espressioni di controllo come "C \\\files.txt".  
   
 ## <a name="format-strings"></a>Stringhe di formato  
  Una stringa di formato è una stringa il cui contenuto viene determinato dinamicamente in fase di esecuzione. Le stringhe di formato vengono create incorporando segnaposto o *espressioni interpolate* all'interno di parentesi graffe in una stringa. Tutti gli elementi all'interno delle parentesi graffe (`{...}`) restituiranno un valore e verranno visualizzati come stringa formattata in fase di esecuzione. Esistono due metodi per creare stringhe di formato: interpolazione di stringhe e formattazione composita.

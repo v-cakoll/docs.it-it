@@ -302,8 +302,9 @@
     - name: Panoramica di .NET Core SDK
       href: core/sdk.md
     - name: Strumenti dell'interfaccia della riga di comando di .NET Core
-      href: core/tools/index.md
       items:
+        - name: Panoramica dell'interfaccia della riga di comando di .NET Core
+          href: core/tools/index.md
         - name: Telemetria
           href: core/tools/telemetry.md
         - name: Strumenti globali
@@ -311,6 +312,8 @@
           items:
             - name: Creare uno strumento globale
               href: core/tools/global-tools-how-to-create.md
+        - name: Accesso con privilegi elevati
+          href: core/tools/elevated-access.md
         - name: Modello di estendibilità
           href: core/tools/extensibility.md
         - name: Integrazione continua
@@ -530,8 +533,6 @@
                   href: csharp/tutorials/intro-to-csharp/introduction-to-classes.md
         - name: 'Esplorare C# 6'
           href: csharp/tutorials/exploration/csharp-6.yml
-        - name: 'Esplorare C# 7.0'
-          href: csharp/tutorials/exploration/csharp-7.yml
         - name: Esplorare l'interpolazione di stringhe - interattiva
           href: csharp/tutorials/exploration/interpolated-strings.yml
         - name: Esplorare l'interpolazione di stringhe - nell'ambiente
