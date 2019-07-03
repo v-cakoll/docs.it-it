@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: f3bbb55ec65df1af776779682d307a67034e34b3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5862506960ae1e763baebee5d990df83f92cc784
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489896"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539727"
 ---
 # <a name="null-comparisons"></a>Confronti Null
-Un valore `null` nell'origine dati indica che il valore è sconosciuto. Nella query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] è possibile verificare la presenza di valori Null in modo che alcuni calcoli o confronti vengano eseguiti solo sulle righe che includono dati validi, ovvero non NULL. Tuttavia, la semantica dei valori Null di CLR può differire da quella dell'origine dati. La maggior parte dei database usa una versione della logica con tre valori per la gestione dei confronti di valori Null. Vale a dire, un confronto con un valore null non restituiscono `true` oppure `false`, viene restituito `unknown`. Spesso, ma non sempre, si tratta di un'implementazione di valori Null ANSI.  
+Un valore `null` nell'origine dati indica che il valore è sconosciuto. Nelle query LINQ to Entities, è possibile cercare i valori null in modo che determinati calcoli o confronti vengano eseguiti solo sulle righe che contengono dati validi o non null. Tuttavia, la semantica dei valori Null di CLR può differire da quella dell'origine dati. La maggior parte dei database usa una versione della logica con tre valori per la gestione dei confronti di valori Null. Vale a dire, un confronto con un valore null non restituiscono `true` oppure `false`, viene restituito `unknown`. Spesso, ma non sempre, si tratta di un'implementazione di valori Null ANSI.  
   
  Per impostazione predefinita, in SQL Server il confronto tra valori Null con il metodo Equals restituisce un valore Null. Nell'esempio seguente, le righe in cui `ShipDate` è null sono escluse dal set di risultati e l'istruzione Transact-SQL restituisce pertanto 0 righe.  
   
@@ -44,7 +44,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>Passaggio di raccolte null a funzioni di aggregazione  
- Nelle [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], quando si passa una raccolta che supporta `IQueryable` a una funzione di aggregazione, le operazioni di aggregazione vengono eseguite a livello di database. Potrebbero essere presenti differenze nei risultati di una query che è stata eseguita in memoria e una query che è stata eseguita a livello di database. Con una query in memoria, se non sono presenti corrispondenze, la query restituisce zero. A livello di database, la stessa query restituisce `null`. Se un `null` valore viene passato a una funzione di aggregazione LINQ, verrà generata un'eccezione. Per accettare i possibili `null` valori, eseguire il cast ai tipi e le proprietà dei tipi che ricevono i risultati di query per i tipi nullable.  
+ In LINQ to Entities, quando si passa una raccolta che supporta `IQueryable` a una funzione di aggregazione, le operazioni di aggregazione vengono eseguite a livello di database. Potrebbero essere presenti differenze nei risultati di una query che è stata eseguita in memoria e una query che è stata eseguita a livello di database. Con una query in memoria, se non sono presenti corrispondenze, la query restituisce zero. A livello di database, la stessa query restituisce `null`. Se un `null` valore viene passato a una funzione di aggregazione LINQ, verrà generata un'eccezione. Per accettare i possibili `null` valori, eseguire il cast ai tipi e le proprietà dei tipi che ricevono i risultati di query per i tipi nullable.  
   
 ## <a name="see-also"></a>Vedere anche
 

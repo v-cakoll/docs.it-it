@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0d4a7f41-c758-4059-8f83-d2e9c2745593
-ms.openlocfilehash: 2133ae7902cc4746e00be75e7a801296073041e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ad601330a1f271b3221ae744928bdbad6c4fd7f
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614284"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539752"
 ---
 # <a name="query-expression-syntax-examples-navigating-relationships"></a>Esempi di sintassi delle espressioni di query: Spostamento tra relazioni
-Le proprietà di navigazione in [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sono proprietà di collegamento usate per individuare le entità finali di un'associazione. Le proprietà di navigazione consentono a un utente di spostarsi da un'entità a un'altra o da un entità alle entità correlate tramite un set di associazioni. In questo argomento sono inclusi alcuni esempi nella sintassi delle espressioni di query in cui viene illustrato come spostarsi tra relazioni tramite proprietà di navigazione in query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
+Le proprietà di navigazione in [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sono proprietà di collegamento usate per individuare le entità finali di un'associazione. Le proprietà di navigazione consentono a un utente di spostarsi da un'entità a un'altra o da un entità alle entità correlate tramite un set di associazioni. In questo argomento vengono forniti esempi nella sintassi delle espressioni di query come spostarsi nelle relazioni tramite proprietà di navigazione nelle query LINQ alle query di entità.  
   
  Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
