@@ -8,7 +8,7 @@
       items:
         - name: Panoramica
           href: keywords/index.md
-        - name: Tipi
+        - name: Tipi incorporati
           items:
             - name: Tipi valore
               items:
@@ -16,8 +16,9 @@
                   href: keywords/value-types.md
                 - name: bool
                   href: keywords/bool.md
-                - name: byte
-                  href: keywords/byte.md
+                - name: Tipi numerici integrali
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+                  href: builtin-types/integral-numeric-types.md
                 - name: char
                   href: keywords/char.md
                 - name: decimal
@@ -28,22 +29,8 @@
                   href: keywords/enum.md
                 - name: float
                   href: keywords/float.md
-                - name: int
-                  href: keywords/int.md
-                - name: long
-                  href: keywords/long.md
-                - name: sbyte
-                  href: keywords/sbyte.md
-                - name: short
-                  href: keywords/short.md
                 - name: struct
                   href: keywords/struct.md
-                - name: uint
-                  href: keywords/uint.md
-                - name: ulong
-                  href: keywords/ulong.md
-                - name: ushort
-                  href: keywords/ushort.md
             - name: Tipi riferimento
               items:
                 - name: Funzionalità dei tipi riferimento
@@ -68,8 +55,6 @@
               items:
                 - name: Tabella dei tipi incorporati
                   href: keywords/built-in-types-table.md
-                - name: Tabella dei tipi integrali
-                  href: keywords/integral-types-table.md
                 - name: Tabella dei tipi a virgola mobile
                   href: keywords/floating-point-types-table.md
                 - name: Tabella dei tipi valore
@@ -118,6 +103,8 @@
               href: keywords/extern.md
             - name: in (modificatore generico)
               href: keywords/in-generic-modifier.md
+            - name: new (modificatore membro)
+              href: keywords/new-modifier.md
             - name: out (modificatore generico)
               href: keywords/out-generic-modifier.md
             - name: override
@@ -202,7 +189,7 @@
           items:
             - name: namespace
               href: keywords/namespace.md
-            - name: utilizzo
+            - name: using
               items:
                 - name: Contesti per l'uso
                   href: keywords/using.md
@@ -218,20 +205,16 @@
           items:
             - name: is
               href: keywords/is.md
+        - name: Parole chiave del vincolo di tipo generico
+          items:
+            - name: Vincolo new
+              href: keywords/new-constraint.md
+            - name: dove
+              href: keywords/where-generic-type-constraint.md
         - name: Parole chiave per gli operatori
           items:
             - name: await
               href: keywords/await.md
-            - name: new
-              items:
-                - name: 'operatore, modificatore e vincolo new'
-                  href: keywords/new.md
-                - name: Operatore new
-                  href: keywords/new-operator.md
-                - name: Modificatore new
-                  href: keywords/new-modifier.md
-                - name: Vincolo nw
-                  href: keywords/new-constraint.md
             - name: sizeof
               href: keywords/sizeof.md
             - name: nameof
@@ -280,8 +263,6 @@
               href: keywords/set.md
             - name: when (condizione di filtro)
               href: keywords/when.md
-            - name: where (vincolo di tipo generico)
-              href: keywords/where-generic-type-constraint.md
             - name: predefinito
               href: keywords/value.md
             - name: yield
@@ -367,6 +348,8 @@
         - name: 'Operatore ::'
           href: operators/namespace-alias-qualifer.md
           displayName: namespace alias qualifier
+        - name: Operatore new
+          href: operators/new-operator.md
         - name: Operatore stackalloc
           href: operators/stackalloc.md
         - name: Operatori true e false
