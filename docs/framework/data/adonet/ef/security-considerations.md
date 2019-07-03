@@ -2,12 +2,12 @@
 title: Considerazioni sulla sicurezza (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: cf42787d7cc67d80f43a08b5fa71161fee20f5c3
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307307"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539841"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerazioni sulla sicurezza (Entity Framework)
 In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che riguardano in modo particolare lo sviluppo, la distribuzione e l'esecuzione di applicazioni [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. È consigliabile seguire anche le raccomandazioni per la creazione di applicazioni .NET Framework protette. Per altre informazioni, vedere [Cenni preliminari sulla sicurezza](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -100,9 +100,9 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
   
      Le query [!INCLUDE[esql](../../../../../includes/esql-md.md)] accettano parametri ovunque vengano accettati i valori letterali. È opportuno utilizzare query con parametri, anziché inserire valori letterali direttamente nella query tramite un agente esterno. È anche consigliabile usare [metodi del generatore di query](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) per costruire in modo sicuro Entity SQL.  
   
-- Attacchi injection di [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]:  
+- LINQ agli attacchi di injection di entità:  
   
-     Sebbene la composizione di query sia possibile in [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)], essa viene eseguita attraverso l'API del modello a oggetti. A differenza delle query [!INCLUDE[esql](../../../../../includes/esql-md.md)], le query [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] non vengono composte mediante la manipolazione o la concatenazione di stringhe e non sono soggette agli attacchi SQL injection tradizionali.  
+     Sebbene la composizione della query sia possibile in LINQ to Entities, essa viene eseguita attraverso l'API del modello a oggetti. A differenza di [!INCLUDE[esql](../../../../../includes/esql-md.md)] query, query LINQ to Entities non vengono composte mediante la manipolazione delle stringhe o la concatenazione e non sono soggette agli attacchi SQL injection tradizionali.  
   
 #### <a name="prevent-very-large-result-sets"></a>Evitare la creazione di set di risultati molto grandi.  
  Un set di risultati molto grande può causare la chiusura del sistema client se il client sta eseguendo operazioni che usano una quantità di risorse proporzionale alla dimensione del set di risultati. Set di risultati insolitamente grandi possono essere prodotti in presenza delle condizioni seguenti:  
@@ -113,7 +113,7 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
   
 - In query [!INCLUDE[esql](../../../../../includes/esql-md.md)] annidate.  
   
- Quando si accetta l'input dell'utente, è necessario assicurarsi che esso non causi l'aumento delle dimensioni del set di risultati oltre le capacità di gestione del sistema. È anche possibile usare la <xref:System.Linq.Queryable.Take%2A> metodo nella [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] o nella [limite](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) operatore in [!INCLUDE[esql](../../../../../includes/esql-md.md)] per limitare le dimensioni del set di risultati.  
+ Quando si accetta l'input dell'utente, è necessario assicurarsi che esso non causi l'aumento delle dimensioni del set di risultati oltre le capacità di gestione del sistema. È anche possibile usare la <xref:System.Linq.Queryable.Take%2A> metodo nelle query LINQ to Entities o il [limite](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) operatore in [!INCLUDE[esql](../../../../../includes/esql-md.md)] per limitare le dimensioni del set di risultati.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Evitare di restituire risultati IQueryable quando si espongono metodi a chiamanti potenzialmente non attendibili.  
  Evitare di restituire tipi <xref:System.Linq.IQueryable%601> dai metodi esposti a chiamanti potenzialmente non attendibili per i motivi seguenti:  
