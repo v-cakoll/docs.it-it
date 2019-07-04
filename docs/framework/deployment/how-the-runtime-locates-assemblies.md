@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613971"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833723"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Come il runtime individua gli assembly
 Per distribuire correttamente l'applicazione .NET Framework, è necessario comprendere in che modo Common Language Runtime individua e associa gli assembly che costituiscono l'applicazione. Per impostazione predefinita, il runtime tenta di eseguire l'associazione con la versione esatta di un assembly con cui è stata compilata l'applicazione. Questo comportamento predefinito può essere sottoposto a override dalle impostazioni del file di configurazione.  
@@ -24,7 +24,7 @@ Per distribuire correttamente l'applicazione .NET Framework, è necessario compr
  Quando si tenta di individuare un assembly e risolvere un riferimento ad assembly, Common Language Runtime esegue una serie di passaggi. Ogni passaggio è descritto nelle sezioni seguenti. Il termine "individuazione tramite probe" viene usato quando si descrive la modalità di individuazione degli assembly mediante runtime e fa riferimento al set di euristiche usato per individuare l'assembly in base al nome e alle impostazioni cultura.  
   
 > [!NOTE]
->  Per visualizzare le informazioni di associazione nel file di log, usare il [Visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), incluso in [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+>  Per visualizzare le informazioni di associazione nel file di log, usare il [Visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), incluso in Windows Software Development Kit (SDK).  
   
 ## <a name="initiating-the-bind"></a>Avvio dell'associazione  
  Il processo di individuazione e associazione di un assembly inizia quando il runtime tenta di risolvere un riferimento a un altro assembly. Questo riferimento può essere statico o dinamico. I compilatore registra i riferimenti statici nei metadati del manifesto dell'assembly in fase di compilazione. I riferimenti dinamici vengono costruiti nel momento in cui vengono chiamati i diversi metodi, ad esempio <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  
@@ -130,7 +130,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Un file dei criteri editore viene usato quando un componente condiviso viene aggiornato e la nuova versione del componente condiviso deve essere selezionata da tutte le applicazioni che usano il componente. Le impostazioni nel file dei criteri editore eseguono l'override delle impostazioni nel file di configurazione dell'applicazione, a meno che quest'ultimo non attivi la modalità sicura.  
   
 #### <a name="safe-mode"></a>Modalità sicura  
- I file dei criteri editore vengono generalmente installati in maniera esplicita insieme a un Service Pack o a un aggiornamento di un programma. Se si verifica un problema con il componente condiviso aggiornato, è possibile ignorare gli override nel file dei criteri editore usando la modalità sicura. La modalità provvisoria è determinata dall'elemento **\<publisherPolicy apply="yes**&#124;**no"/>**, disponibile solo nel file di configurazione dell'applicazione. Specifica se le informazioni di configurazione dei criteri editore devono essere rimosse dal processo di associazione.  
+ I file dei criteri editore vengono generalmente installati in maniera esplicita insieme a un Service Pack o a un aggiornamento di un programma. Se si verifica un problema con il componente condiviso aggiornato, è possibile ignorare gli override nel file dei criteri editore usando la modalità sicura. La modalità provvisoria è determinata dall'elemento **\<publisherPolicy apply="yes**&#124;**no"/>** , disponibile solo nel file di configurazione dell'applicazione. Specifica se le informazioni di configurazione dei criteri editore devono essere rimosse dal processo di associazione.  
   
  La modalità sicura può essere impostata per l'intera applicazione o per gli assembly selezionati. In altre parole è possibile disattivare i criteri per tutti gli assembly che costituiscono l'applicazione o attivarlo solo in alcuni assembly. Per applicare i criteri dell'editore solo agli assembly che costituiscono un'applicazione, impostare **\<publisherPolicy apply\=no/>** e specificare gli assembly da includere usando l'elemento \<**dependentAssembly**>. Per applicare i criteri dell'editore a tutti gli assembly che costituiscono un'applicazione, impostare **\<publisherPolicy apply\=no/>** senza usare gli elementi relativi agli assembly dipendenti. Per altre informazioni sulla configurazione, vedere [Configurazione delle app con file di configurazione](../../../docs/framework/configure-apps/index.md).  
   

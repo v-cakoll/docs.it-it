@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0423946ab32c04274bb3d5656ed8603ec4314d88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e657b8e2a0a9dbe8db703ce97d41a3767191a26f
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128739"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833860"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (strumento PEVerify)
 Lo strumento PEVerify aiuta gli sviluppatori che utilizzano il linguaggio MSIL (Microsoft Intermediate Language) per creare compilatori, motori di script e così via, a determinare se il codice MSIL creato e i metadati associati soddisfano i requisiti di indipendenza dai tipi. Alcuni compilatori generano codice di cui è verificabile l'indipendenza dai tipi solo se si evita di utilizzare determinati costrutti del linguaggio. Se, in qualità di sviluppatore, si utilizza un compilatore di questo tipo, sarà opportuno verificare di non aver compromesso l'indipendenza dai tipi del codice. In questa situazione è possibile eseguire lo strumento PEVerify sui file per controllare il codice MSIL e i metadati.  
@@ -34,11 +34,11 @@ peverify filename [options]
   
 ## <a name="parameters"></a>Parametri  
   
-|Argomento|Description|  
+|Argomento|DESCRIZIONE|  
 |--------------|-----------------|  
 |*filename*|File eseguibile di tipo PE per il quale controllare il codice MSIL e i metadati.|  
   
-|Opzione|Description|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
 |**/break=** *maxErrorCount*|Interrompe la verifica dopo un numero di errori pari a *maxErrorCount*.<br /><br /> Questo parametro non è supportato in .NET Framework 2.0 o versione successiva.|  
 |**/clock**|Misura e segnala i seguenti tempi di verifica in millisecondi:<br /><br /> **MD Val. cycle**<br /> Ciclo di convalida dei metadati<br /><br /> **MD Val. pure**<br /> Pure di convalida dei metadati<br /><br /> **IL Ver. cycle**<br /> Ciclo di verifica di MSIL (Microsoft Intermediate Language)<br /><br /> **IL Ver pure**<br /> Pure di verifica MSIL<br /><br /> I tempi **MD Val. cycle** e **IL Ver. cycle** includono il tempo richiesto per l'esecuzione delle procedure di avvio e chiusura necessarie. I tempi **MD Val. pure** e **IL Ver pure** corrispondono al tempo richiesto solo per l'esecuzione della convalida o della verifica.|  
@@ -61,7 +61,7 @@ peverify filename [options]
   
  Se non sono state specificate né l'opzione **/md** né l'opzione **/il** verranno eseguiti entrambi i tipi di controllo, iniziando dai controlli **/md**. Se non sono presenti errori vengono effettuati i controlli **/il**. Se si specifica sia **/md** sia **/il** i controlli **/il** vengono effettuati anche in presenza di errori nei metadati. Pertanto in assenza di errori nei metadati, **peverify** *filename* è equivalente a **peverify** *filename* **/md** **/il**.  
   
- Mediante Peverify.exe vengono eseguiti controlli di verifica completi del codice MSIL sulla base dell'analisi del flusso di dati nonché di un elenco di alcune centinaia di regole sui metadati validi. Per informazioni dettagliate sui controlli eseguiti da Peverify.exe, vedere le specifiche di convalida dei metadati e le specifiche del set di istruzioni MSIL nella cartella "Tools Developers Guide" di [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+ Mediante Peverify.exe vengono eseguiti controlli di verifica completi del codice MSIL sulla base dell'analisi del flusso di dati nonché di un elenco di alcune centinaia di regole sui metadati validi. Per informazioni dettagliate sui controlli eseguiti da Peverify.exe, vedere le specifiche di convalida dei metadati e le specifiche del set di istruzioni MSIL nella cartella "Tools Developers Guide" di Windows Software Development Kit (SDK).  
   
  Si noti che in .NET Framework 2.0 o versione successiva sono supportate restituzioni `byref` verificabili specificate mediante le seguenti istruzioni MSIL: `dup`, `ldsflda`, `ldflda`, `ldelema`, `call` e `unbox`.  
   

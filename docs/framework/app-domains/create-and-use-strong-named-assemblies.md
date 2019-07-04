@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377874"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832875"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Creare e usare gli assembly con nome sicuro
 
@@ -51,7 +51,7 @@ Lo scenario seguente descrive il processo di firma di un assembly con un nome si
 
 ## <a name="bypass-signature-verification-of-trusted-assemblies"></a>Ignorare la verifica della firma degli assembly attendibili
 
-A partire da [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)], le firme con nome sicuro non vengono convalidate quando un assembly viene caricato in un dominio applicazione con attendibilità totale, ad esempio il dominio applicazione predefinito per la zona `MyComputer`. Questo comportamento è reso possibile dalla funzionalità che consente di ignorare la verifica del nome sicuro. In un ambiente con attendibilità totale le richieste di <xref:System.Security.Permissions.StrongNameIdentityPermission> hanno sempre esito positivo per gli assembly con attendibilità totale firmati, indipendentemente dalla firma. La funzionalità che consente di ignorare la verifica del nome sicuro evita l'overhead superfluo della verifica delle firme con nome sicuro degli assembly con attendibilità totale in questa situazione, favorendo un caricamento più rapido degli assembly.
+A partire da .NET Framework 3.5 Service Pack 1, le firme con nome sicuro non vengono convalidate quando un assembly viene caricato in un dominio applicazione con attendibilità totale, ad esempio il dominio applicazione predefinito per la zona `MyComputer`. Questo comportamento è reso possibile dalla funzionalità che consente di ignorare la verifica del nome sicuro. In un ambiente con attendibilità totale le richieste di <xref:System.Security.Permissions.StrongNameIdentityPermission> hanno sempre esito positivo per gli assembly con attendibilità totale firmati, indipendentemente dalla firma. La funzionalità che consente di ignorare la verifica del nome sicuro evita l'overhead superfluo della verifica delle firme con nome sicuro degli assembly con attendibilità totale in questa situazione, favorendo un caricamento più rapido degli assembly.
 
 Questa funzionalità si applica a qualsiasi assembly firmato con un nome sicuro e che ha le caratteristiche seguenti:
 
@@ -67,7 +67,7 @@ Questa funzionalità può essere disabilitata per singole applicazioni o per un 
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-|Titolo|Description|
+|Titolo|DESCRIZIONE|
 |-----------|-----------------|
 |[Procedura: Creare una coppia di chiavi pubblica/privata](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Descrive come creare una coppia di chiavi crittografiche per la firma di un assembly.|
 |[Procedura: Firmare un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Descrive come creare un assembly con nome sicuro.|

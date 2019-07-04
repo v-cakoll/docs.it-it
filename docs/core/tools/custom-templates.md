@@ -3,12 +3,12 @@ title: Modelli personalizzati per dotnet new
 description: Informazioni sui modelli personalizzati per qualsiasi tipo di file o progetto .NET.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: d7e9c549ff132deb4682ba81ab5ff354d6cc1522
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 738c6b07f77bdbf6fd946253f95c8691e4172f31
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169625"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410354"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelli personalizzati per dotnet new
 
@@ -100,7 +100,7 @@ Il file con estensione *csproj* è leggermente diverso da un file *csproj* di un
 01. È inclusa l'impostazione `<PackageType>` con il valore `Template`.
 01. È inclusa l'impostazione `<PackageVersion>` con un [numero di versione NuGet](/nuget/reference/package-versioning) valido.
 01. È inclusa l'impostazione `<PackageId>` con un identificatore univoco. Questo identificatore è utile per disinstallare il pacchetto di modelli e viene usato dai feed NuGet per registrare tale pacchetto.
-01. Le impostazioni dei metadati generici devono essere definite: `<Title>`, `<Authors>`, `<Description>` e `<Tags>`.
+01. Le impostazioni dei metadati generici devono essere definite: `<Title>`, `<Authors>`, `<Description>` e `<PackageTags>`.
 01. L'impostazione `<TargetFramework>` deve essere definita, anche se non viene usato il file binario generato dal processo del modello. Nell'esempio seguente è definito il valore `netstandard2.0`.
 
 Per un pacchetto di modelli, nel formato NuGet con estensione *nupkg*, è necessario che tutti i modelli siano archiviati nella cartella *content* all'interno del pacchetto. Vi sono altre impostazioni da aggiungere a un file con estensione *csproj* per assicurarsi che il file *nupkg* generato possa essere installato come pacchetto di modelli:
@@ -125,7 +125,7 @@ Di seguito è riportato un esempio di file con estensione *csproj* in cui sono r
     <Title>AdatumCorporation Templates</Title>
     <Authors>Me</Authors>
     <Description>Templates to use when creating an application for Adatum Corporation.</Description>
-    <Tags>dotnet-new;templates;contoso</Tags>
+    <PackageTags>dotnet-new;templates;contoso</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <IncludeContentInPack>true</IncludeContentInPack>

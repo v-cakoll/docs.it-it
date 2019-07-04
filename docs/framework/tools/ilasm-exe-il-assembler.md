@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378586"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833893"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Assembler IL)
 
@@ -36,11 +36,11 @@ ilasm [options] filename [[options]filename...]
 
 ## <a name="parameters"></a>Parametri
 
-| Argomento | Description |
+| Argomento | DESCRIZIONE |
 | -------- | ----------- |
 |`filename`|Nome del file di origine .il. Questo file è formato da direttive di dichiarazione di metadati e istruzioni IL simboliche. È possibile fornire più argomenti di file di origine per produrre un unico file PE con *Ilasm.exe*. **Nota:** Verificare che nell'ultima riga di codice del file di origine con estensione il sia presente uno spazio vuoto finale o un carattere di fine riga.|
 
-| Opzione | Description |
+| Opzione | DESCRIZIONE |
 | ------ | ----------- |
 |**/32bitpreferred**|Crea un'immagine con preferenza per i 32 bit (PE32).|
 |**/alignment:** `integer`|Imposta FileAlignment sul valore specificato da `integer` nell'intestazione NT facoltativa. Se la direttiva IL .alignment è specificata nel file, questa opzione ne esegue l'override.|
@@ -104,7 +104,7 @@ Per fare in modo che l'utilizzo combinato di *Ildasm.exe* e *Ilasm.exe* risulti 
 > [!NOTE]
 > *Ildasm.exe* opera solo su file su disco. e non su file installati nella Global Assembly Cache.
 
-Per ulteriori informazioni sulla grammatica di IL, vedere il file asmparse.grammar in [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+Per altre informazioni sulla grammatica di IL, vedere il file asmparse.grammar in Windows Software Development Kit (SDK).
 
 ## <a name="version-information"></a>Informazioni sulla versione
 
@@ -137,7 +137,7 @@ A partire da .NET Framework 4.5, è possibile specificare un BLOB (oggetto binar
         Test(object A_1) cil managed
 ```
 
-Per ulteriori informazioni sulla grammatica di IL, vedere il file asmparse.grammar in [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+Per altre informazioni sulla grammatica di IL, vedere il file asmparse.grammar in Windows Software Development Kit (SDK).
 
 ## <a name="examples"></a>Esempi
 

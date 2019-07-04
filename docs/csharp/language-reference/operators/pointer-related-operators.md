@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 6196cb52cb1b42b3354bc7f8836a171397d0af1e
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 50243f148f37f5f33f0c69ddd896549e7aea9462
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758095"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025114"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operatori correlati ai puntatori (Riferimento C#)
 
@@ -96,7 +96,7 @@ L'esempio seguente illustra come accedere agli elementi della matrice con un pun
 
 [!code-csharp[pointer element access](~/samples/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
 
-L'esempio usa l'operatore [`stackalloc` ](../keywords/stackalloc.md) per allocare un blocco di memoria nello stack.
+L'esempio usa l'operatore [`stackalloc` ](stackalloc.md) per allocare un blocco di memoria nello stack.
 
 > [!NOTE]
 > L'operatore di accesso agli elementi del puntatore non ricerca gli errori relativi a valori non compresi nell'intervallo.
@@ -188,10 +188,9 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
 - [Operatori C#](index.md)
 - [Tipi di puntatori](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [`unsafe` - Parola chiave](../keywords/unsafe.md)
-- [`fixed` - Parola chiave](../keywords/fixed-statement.md)
-- [Operatore `stackalloc`](../keywords/stackalloc.md)
-- [Operatore `sizeof`](../keywords/sizeof.md)
+- [Parola chiave unsafe](../keywords/unsafe.md)
+- [Parola chiave fixed](../keywords/fixed-statement.md)
+- [Operatore stackalloc](stackalloc.md)
+- [Operatore sizeof](../keywords/sizeof.md)

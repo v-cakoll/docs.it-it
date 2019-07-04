@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b947aefae4924a70c394626ace5a5abe1ebf546f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816158"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832768"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
@@ -37,15 +37,15 @@ al sources options
 
 È possibile specificare una o più `sources` tra quelle riportate di seguito.
 
-| Origine | Description |
+| Origine | DESCRIZIONE |
 | ------ | ----------- |
 |`file`[,`target`]|Copia il contenuto del modulo `file` nel nome file specificato da `target`. Al termine dell'operazione di copia, *Al.exe* compila `target` in un assembly.|
-|**/embed[risorse]:** `file`[,`name`[,`private`]]|Incorpora la risorsa specificata da `file` nell'immagine contenente il manifesto dell'assembly. *Al.exe* copia i contenuti di `file` nell'immagine eseguibile di tipo PE.<br /><br /> Il parametro `name` è un identificatore interno per la risorsa. Per impostazione predefinita nell'assembly le risorse sono pubbliche, ovvero visibili ad altri assembly. La specifica del parametro `private` rende le risorse non visibili ad altri assembly.<br /><br /> Se `file` è un file di risorse .NET Framework creato ad esempio dal [generatore di file di risorse (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri in <xref:System.Resources>. Per ulteriori informazioni, vedere <xref:System.Resources.ResourceManager>. Per tutte le altre risorse, usare i metodi `GetManifestResource`* di <xref:System.Reflection.Assembly> per accedere alla risorsa in fase di esecuzione.<br /><br /> Se ad *Al.exe* vengono passati solo file di risorse, il file di output sarà un assembly di risorse satellite.|
-|**/link[risorse]:** `file`[,`name`[,`target`[,`private`]]]|Collega un file di risorse a un assembly. La risorsa specificata da `file` diventa parte dell'assembly; il file non viene copiato. Il parametro `file` può essere in qualsiasi formato di file. È possibile, ad esempio, specificare una DLL nativa come parametro `file`. La DLL nativa diventa quindi parte dell'assembly in modo che possa essere installata nella Global Assembly Cache e che sia possibile accedervi dal codice gestito nell'assembly. Per ottenere lo stesso risultato è anche possibile usare l'opzione del compilatore **/linkresource**. Per altre informazioni, vedere [/linkresource (Opzioni del compilatore C#)](~/docs/csharp/language-reference/compiler-options/linkresource-compiler-option.md).<br /><br /> Il parametro `name` è un identificatore interno per la risorsa. Il parametro `target` specifica un percorso e un nome file in cui *Al.exe* copia `file` *.* Al termine dell'operazione di copia, *Al.exe* compila `target` in un assembly. Per impostazione predefinita nell'assembly le risorse sono pubbliche, ovvero visibili ad altri assembly. La specifica del parametro `private` rende le risorse non visibili ad altri assembly.<br /><br /> Se `file` è un file di risorse .NET Framework creato ad esempio dal generatore di file di risorse (*Resgen.exe*) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri dello spazio dei nomi <xref:System.Resources>. Per ulteriori informazioni, vedere <xref:System.Resources.ResourceManager>. Per tutte le altre risorse, usare i metodi `GetManifestResource` * della classe <xref:System.Reflection.Assembly> per accedere alla risorsa in fase di esecuzione.<br /><br /> Se ad *Al.exe* vengono passati solo file di risorse, il file di output sarà un assembly di risorse satellite.|
+|**/embed[risorse]:** `file`[,`name`[,`private`]]|Incorpora la risorsa specificata da `file` nell'immagine contenente il manifesto dell'assembly. *Al.exe* copia i contenuti di `file` nell'immagine eseguibile di tipo PE.<br /><br /> Il parametro `name` è un identificatore interno per la risorsa. Per impostazione predefinita nell'assembly le risorse sono pubbliche, ovvero visibili ad altri assembly. La specifica del parametro `private` rende le risorse non visibili ad altri assembly.<br /><br /> Se `file` è un file di risorse .NET Framework creato ad esempio dal [generatore di file di risorse (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri in <xref:System.Resources>. Per altre informazioni, vedere <xref:System.Resources.ResourceManager>. Per tutte le altre risorse, usare i metodi `GetManifestResource`* di <xref:System.Reflection.Assembly> per accedere alla risorsa in fase di esecuzione.<br /><br /> Se ad *Al.exe* vengono passati solo file di risorse, il file di output sarà un assembly di risorse satellite.|
+|**/link[risorse]:** `file`[,`name`[,`target`[,`private`]]]|Collega un file di risorse a un assembly. La risorsa specificata da `file` diventa parte dell'assembly; il file non viene copiato. Il parametro `file` può essere in qualsiasi formato di file. È possibile, ad esempio, specificare una DLL nativa come parametro `file`. La DLL nativa diventa quindi parte dell'assembly in modo che possa essere installata nella Global Assembly Cache e che sia possibile accedervi dal codice gestito nell'assembly. Per ottenere lo stesso risultato è anche possibile usare l'opzione del compilatore **/linkresource**. Per altre informazioni, vedere [/linkresource (Opzioni del compilatore C#)](~/docs/csharp/language-reference/compiler-options/linkresource-compiler-option.md).<br /><br /> Il parametro `name` è un identificatore interno per la risorsa. Il parametro `target` specifica un percorso e un nome file in cui *Al.exe* copia `file` *.* Al termine dell'operazione di copia, *Al.exe* compila `target` in un assembly. Per impostazione predefinita nell'assembly le risorse sono pubbliche, ovvero visibili ad altri assembly. La specifica del parametro `private` rende le risorse non visibili ad altri assembly.<br /><br /> Se `file` è un file di risorse .NET Framework creato ad esempio dal generatore di file di risorse (*Resgen.exe*) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri dello spazio dei nomi <xref:System.Resources>. Per altre informazioni, vedere <xref:System.Resources.ResourceManager>. Per tutte le altre risorse, usare i metodi `GetManifestResource` * della classe <xref:System.Reflection.Assembly> per accedere alla risorsa in fase di esecuzione.<br /><br /> Se ad *Al.exe* vengono passati solo file di risorse, il file di output sarà un assembly di risorse satellite.|
 
 È possibile specificare le `options` seguenti. L'opzione **/out** è obbligatoria.
 
-| Opzione | Description |
+| Opzione | DESCRIZIONE |
 | ------ | ----------- |
 |**/algid:** `id`|Specifica un algoritmo per generare un hash per tutti i file di un assembly su più file, ad eccezione del file contenente il manifesto dell'assembly. L'algoritmo predefinito è CALG_SHA1. Per altri algoritmi, vedere ALG_ID nella documentazione relativa a Platform SDK. Per la prima versione di .NET Framework sono validi solo gli algoritmi CALG_SHA1 e CALG_MD5.<br /><br /> I valori hash vengono archiviati nella tabella dei file del manifesto dell'assembly. In fase di installazione e caricamento i file dell'assembly vengono verificati rispetto ai valori hash.<br /><br /> È possibile specificare questa opzione anche come attributo personalizzato (<xref:System.Reflection.AssemblyAlgorithmIdAttribute>) nel codice sorgente di qualsiasi modulo.|
 |**/base[address]:** `addr`|Specifica l'indirizzo in corrispondenza del quale caricare una DLL nel computer dell'utente in fase di esecuzione. Il caricamento delle applicazioni risulta più veloce se si specifica l'indirizzo di base delle DLL anziché lasciare al sistema operativo il compito di rilocare le DLL nello spazio di processo.|
@@ -89,7 +89,7 @@ Per installare assembly nella cache, rimuovere assembly dalla cache oppure elenc
 
 La tabella seguente contiene l'elenco degli errori generati da *Al.exe*.
 
-| Error | Description |
+| Error | DESCRIZIONE |
 | ----- | ----------- |
 |al1001|Errore interno del compilatore<br /><br /> Provare a determinare se *Al.exe* ha generato l'errore perché non è in grado di analizzare una sintassi imprevista. Quindi contattare il Supporto tecnico Microsoft.|
 |al1002|Memoria insufficiente<br /><br /> *Al.exe* ha esaurito la memoria ed è stato arrestato. Aumentare la quantità di memoria disponibile.|
@@ -108,7 +108,7 @@ La tabella seguente contiene l'elenco degli errori generati da *Al.exe*.
 |al1015|Impossibile trovare il file di messaggi 'alinkui.dll'<br /><br /> *Al.exe* richiede il file *Alinkui.dll*. Assicurarsi che questo file sia presente nel percorso. Se necessario, copiarlo dal CD del prodotto.|
 |al1016|Nessun file di input specificato<br /><br /> *Al.exe* richiede uno o più file di input che non includano informazioni sull'assembly.|
 |al1017|Nessun nome file di destinazione specificato<br /><br /> L'opzione **/out** obbligatoria che specifica il nome file di destinazione non è presente.|
-|al1018|Impossibile caricare il file richiesto 'file'<br /><br /> Alcuni file DLL non possono essere caricati. Reinstallare Visual Studio o [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].|
+|al1018|Impossibile caricare il file richiesto 'file'<br /><br /> Alcuni file DLL non possono essere caricati. Reinstallare Visual Studio o Windows Software Development Kit (SDK).|
 |al1019|Errore nei metadati durante la creazione dell'assembly: motivo<br /><br /> La generazione dell'assembly è stata interrotta per il motivo specificato. Questo errore si verifica, ad esempio, se non è possibile trovare un file specificato con l'opzione **/win32res**.|
 |al1020|L'assembly incluso 'file' verrà ignorato<br /><br /> È stato specificato un file di input che contiene un assembly. I file di input di *Al.exe* non possono contenere assembly.|
 |al1021|'impostazione': l'impostazione precedente verrà ignorata<br /><br /> In un modulo il valore di una determinata impostazione, possibilmente assegnato attraverso attributi personalizzati, è stato sostituito con un valore passato usando un'opzione della riga di comando di *Al.exe*.|

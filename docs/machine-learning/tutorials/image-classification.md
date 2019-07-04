@@ -1,21 +1,19 @@
 ---
-title: 'Esercitazione: Creare un classificatore di immagini personalizzato ML.NET con TensorFlow'
-description: Informazioni su come creare un classificatore di immagini personalizzato ML.NET in uno scenario di apprendimento trasferito TensorFlow per classificare le immagini riutilizzando un modello TensorFlow con training preliminare.
-ms.date: 05/06/2019
+title: 'Esercitazione: Ripetere il training del classificatore di immagini TensorFlow - apprendimento trasferito'
+description: Informazioni su come ripetere il training di un modello TensorFlow di classificazione delle immagini con l'apprendimento trasferito e ML.NET. Il modello originale è stato sottoposto a training per classificare le singole immagini. Dopo la ripetizione del training, il nuovo modello organizza le immagini in categorie ampie.
+ms.date: 06/12/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e248c5ae73281ed6cd492592ba4a51791db75aa2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 2ad9e71f572cb694897fd12ecbb15da069afe338
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593430"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026090"
 ---
-# <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>Esercitazione: Creare un classificatore di immagini personalizzato ML.NET con TensorFlow
+# <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Esercitazione: Ripetere il training di un classificatore di immagini TensorFlow con l'apprendimento trasferito e ML.NET
 
-Questa esercitazione di esempio illustra come usare un modello `TensorFlow` di classificazione delle immagini già sottoposto a training per creare un nuovo modello personalizzato per classificare le immagini in diverse categorie.
-
-Sarebbe bello poter riutilizzare un modello che è già stato sottoposto a training per risolvere un problema analogo e rieseguire il training di tutti o di alcuni livelli di tale modello per risolvere un problema riscontrato. Questa tecnica che prevede il riutilizzo di parte di un modello già sottoposto a training per crearne uno nuovo è nota come [apprendimento trasferito](https://en.wikipedia.org/wiki/Transfer_learning).
+Informazioni su come ripetere il training di un modello TensorFlow di classificazione delle immagini con l'apprendimento trasferito e ML.NET. Il modello originale è stato sottoposto a training per classificare le singole immagini. Dopo la ripetizione del training, il nuovo modello organizza le immagini in categorie ampie. 
 
 Il training di un modello di [classificazione delle immagini](https://en.wikipedia.org/wiki/Outline_of_object_recognition) da zero richiede l'impostazione di milioni di parametri, di una considerevole quantità di dati di training con etichetta e di un notevole importo di risorse di calcolo (centinaia di ore di GPU). Anche se non è così efficace come il training di un modello personalizzato da zero, l'apprendimento trasferito consente di semplificare questo processo usando migliaia di immagini anziché milioni di immagini con etichetta e di creare un modello personalizzato abbastanza rapidamente (entro un'ora in un computer senza GPU).
 
@@ -24,6 +22,10 @@ In questa esercitazione si imparerà a:
 > * Informazioni sul problema
 > * Riutilizzare e ottimizzare il modello con training preliminare
 > * Classificare le immagini
+
+## <a name="what-is-transfer-learning"></a>Che cos'è l'apprendimento trasferito?
+
+Sarebbe bello poter riutilizzare un modello che è già stato sottoposto a training per risolvere un problema analogo e rieseguire il training di tutti o di alcuni livelli di tale modello per risolvere un problema riscontrato. Questa tecnica che prevede il riutilizzo di parte di un modello già sottoposto a training per crearne uno nuovo è nota come [apprendimento trasferito](https://en.wikipedia.org/wiki/Transfer_learning).
 
 ## <a name="image-classification-sample-overview"></a>Panoramica dell'esempio di classificazione delle immagini
 

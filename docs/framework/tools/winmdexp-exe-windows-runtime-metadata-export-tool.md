@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a00828eba91e4fea41e8b6a6da8953fc399387e3
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 01cdcbb93fde0d2d2f1c800613d9709da0d695f6
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378500"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026012"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Runtime Metadata Export Tool)
-Lo strumento di esportazione dei metadati di [!INCLUDE[wrt](../../../includes/wrt-md.md)] (Winmdexp.exe) trasforma un modulo .NET Framework in un file che contiene metadati di [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Anche se gli assembly .NET Framework e i file di metadati di [!INCLUDE[wrt](../../../includes/wrt-md.md)] utilizzano lo stesso formato fisico, esistono differenze nel contenuto delle tabelle dei metadati, con la conseguenza che gli assembly .NET Framework non sono automaticamente utilizzabili come componenti di [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Il processo di trasformazione di un modulo .NET Framework in un componente di [!INCLUDE[wrt](../../../includes/wrt-md.md)] è denominato *esportazione*. In .NET Framework 4.5 e .NET Framework 4.5.1 il file di metadati di Windows risultante con estensione winmd contiene sia i metadati che l'implementazione.  
+Lo strumento di esportazione dei metadati di Windows Runtime (Winmdexp.exe) trasforma un modulo .NET Framework in un file che contiene metadati di Windows Runtime. Anche se gli assembly .NET Framework e i file di metadati di Windows Runtime usano lo stesso formato fisico, esistono differenze nel contenuto delle tabelle dei metadati, con la conseguenza che gli assembly .NET Framework non sono automaticamente utilizzabili come componenti di Windows Runtime. Il processo di trasformazione di un modulo .NET Framework in un componente di Windows Runtime è denominato *esportazione*. In .NET Framework 4.5 e .NET Framework 4.5.1 il file di metadati di Windows risultante con estensione winmd contiene sia i metadati che l'implementazione.  
   
- Quando si usa il modello **Componente [!INCLUDE[wrt](../../../includes/wrt-md.md)]** , disponibile in **Windows Store** per C# e Visual Basic in Visual Studio 2013 o Visual Studio 2012, la destinazione del compilatore è un file con estensione winmdobj. Un successivo passaggio di compilazione chiama Winmdexp.exe per esportare il file con estensione winmdobj in un file con estensione winmd. Questo è il modo consigliato di compilare un componente di [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Utilizzare direttamente Winmdexp.exe quando si desidera un maggiore controllo sul processo di compilazione rispetto a quello offerto da Visual Studio.  
+ Quando si usa il modello **Componente Windows Runtime**, disponibile in **Windows Store** per C# e Visual Basic in Visual Studio 2013 o Visual Studio 2012, la destinazione del compilatore è un file con estensione winmdobj. Un successivo passaggio di compilazione chiama Winmdexp.exe per esportare il file con estensione winmdobj in un file con estensione winmd. Questo è il modo consigliato di compilare un componente di Windows Runtime. Utilizzare direttamente Winmdexp.exe quando si desidera un maggiore controllo sul processo di compilazione rispetto a quello offerto da Visual Studio.  
   
  Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -31,7 +31,7 @@ winmdexp [options] winmdmodule
   
 ## <a name="parameters"></a>Parametri  
   
-|Argomento o opzione|Description|  
+|Argomento o opzione|DESCRIZIONE|  
 |------------------------|-----------------|  
 |`winmdmodule`|Specifica il modulo (.winmdobj) da esportare. È consentito un solo modulo. Per creare questo modulo, utilizzare l'opzione del compilatore `/target` con destinazione `winmdobj`. Vedere [/target:winmdobj (opzioni del compilatore C#)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) o [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Specifica il file di documentazione XML di output che verrà prodotto da Winmdexp.exe. In .NET Framework 4.5 il file di output è sostanzialmente lo stesso file di documentazione XML di input.|  
@@ -46,9 +46,9 @@ winmdexp [options] winmdmodule
 |**@** `responsefile`|Specifica un file di risposta (.rsp) contenente le opzioni (e facoltativamente `winmdmodule`). Ogni riga in `responsefile` deve contenere un solo argomento o opzione.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Winmdexp.exe non è progettato per convertire un assembly .NET Framework arbitrario in un file .winmd. Richiede un modulo compilato con l'opzione `/target:winmdobj` e prevede delle restrizioni aggiuntive. La più importante di queste restrizioni è che tutti i tipi esposti nella superficie dell'API dell'assembly devono essere tipi di [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Per altre informazioni, vedere la sezione "Dichiarazioni di tipi nei componenti Windows Runtime" nell'articolo [Creazione di componenti Windows Runtime in C# e Visual Basic in Windows Dev Center](https://go.microsoft.com/fwlink/p/?LinkID=238313).  
+ Winmdexp.exe non è progettato per convertire un assembly .NET Framework arbitrario in un file .winmd. Richiede un modulo compilato con l'opzione `/target:winmdobj` e prevede delle restrizioni aggiuntive. La più importante di queste restrizioni è che tutti i tipi esposti nella superficie dell'API dell'assembly devono essere tipi di Windows Runtime. Per altre informazioni, vedere la sezione "Dichiarazioni di tipi nei componenti Windows Runtime" nell'articolo [Creazione di componenti Windows Runtime in C# e Visual Basic in Windows Dev Center](https://go.microsoft.com/fwlink/p/?LinkID=238313).  
   
- Quando si scrive un'app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] o un componente di [!INCLUDE[wrt](../../../includes/wrt-md.md)] con C# o Visual Basic, .NET Framework fornisce supporto per rendere la programmazione con [!INCLUDE[wrt](../../../includes/wrt-md.md)] più naturale. Questo argomento viene illustrato nell'articolo [Supporto .NET Framework per applicazioni Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). Nel processo, alcuni tipi di uso comune di [!INCLUDE[wrt](../../../includes/wrt-md.md)] vengono mappati ai tipi .NET Framework. Winmdexp.exe inverte questo processo e produce una superficie API che utilizza i tipi di [!INCLUDE[wrt](../../../includes/wrt-md.md)] corrispondenti. Ad esempio, per i tipi che vengono costruiti dall'interfaccia <xref:System.Collections.Generic.IList%601> viene effettuato il mapping ai tipi costruiti dall'interfaccia [IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132) di [!INCLUDE[wrt](../../../includes/wrt-md.md)].  
+ Quando si scrive un'app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] o un componente di Windows Runtime con C# o Visual Basic, .NET Framework fornisce supporto per rendere la programmazione con Windows Runtime più naturale. Questo argomento viene illustrato nell'articolo [Supporto .NET Framework per applicazioni Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). Nel processo, alcuni tipi di uso comune di Windows Runtime vengono mappati ai tipi .NET Framework. Winmdexp.exe inverte questo processo e produce una superficie API che usa i tipi di Windows Runtime corrispondenti. Ad esempio, per i tipi che vengono costruiti dall'interfaccia <xref:System.Collections.Generic.IList%601> viene effettuato il mapping ai tipi costruiti dall'interfaccia [IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132) di Windows Runtime.  
   
 ## <a name="see-also"></a>Vedere anche
 

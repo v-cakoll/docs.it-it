@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c806366e8f80e9fd770b45a5f1154d388ac49ab
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489672"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832831"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (generatore di immagini native)
 
@@ -74,7 +74,7 @@ ngen /? | /help
 
 Nella tabella riportata di seguito viene illustrata la sintassi di ciascuna `action`. Per le descrizioni delle singole parti di `action`, vedere le tabelle [Argomenti](#ArgumentTable), [Livelli di priorità](#PriorityTable), [Scenari](#ScenarioTable) e [Configurazione](#ConfigTable). Nella tabella [Opzioni](#OptionTable) vengono descritte le `options` e le opzioni della Guida.
 
-|Operazione|Description|
+|Operazione|DESCRIZIONE|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Genera le immagini native per un assembly e le relative dipendenze e installa le immagini nella cache delle immagini native.<br /><br /> Se si specifica l'opzione `/queue`, l'azione viene accodata per il servizio immagini native. La priorità predefinita è 3. Vedere la tabella [Livelli di priorità](#PriorityTable).|
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Elimina le immagini native di un assembly e le relative dipendenze dalla cache delle immagini native.<br /><br /> Per disinstallare una singola immagine e le relative dipendenze, ricorrere agli stessi argomenti della riga di comando usati per l'installazione dell'immagine. **Nota:**  a partire da .NET Framework 4, l'azione `uninstall`* non è più supportata.|
@@ -87,7 +87,7 @@ Nella tabella riportata di seguito viene illustrata la sintassi di ciascuna `act
 
 ## <a name="arguments"></a>Argomenti
 
-|Argomento|Description|
+|Argomento|DESCRIZIONE|
 |--------------|-----------------|
 |`assemblyName`|Nome visualizzato completo dell'assembly. Ad esempio `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Nota:**  È possibile fornire un nome parziale di assembly, ad esempio `myAssembly`, per le azioni `display` e `uninstall`. <br /><br /> È possibile specificare un solo assembly per ogni riga di comando di Ngen.exe.|
 |`assemblyPath`|Percorso esplicito dell'assembly. È possibile specificare un percorso completo o relativo.<br /><br /> Se si specifica un nome di file senza percorso, l'assembly deve trovarsi nella directory corrente.<br /><br /> È possibile specificare un solo assembly per ogni riga di comando di Ngen.exe.|
@@ -96,7 +96,7 @@ Nella tabella riportata di seguito viene illustrata la sintassi di ciascuna `act
 
 ## <a name="priority-levels"></a>Livelli di priorità
 
-|Priorità|Description|
+|Priorità|DESCRIZIONE|
 |--------------|-----------------|
 |`1`|Le immagini native vengono generate e installate immediatamente, senza attendere il tempo di inattività.|
 |`2`|Le immagini native vengono generate e installate senza attendere il tempo di inattività, ma dopo il completamento di tutte le azioni con priorità 1 (e delle relative dipendenze).|
@@ -106,7 +106,7 @@ Nella tabella riportata di seguito viene illustrata la sintassi di ciascuna `act
 
 ## <a name="scenarios"></a>Scenari
 
-|Scenario|Description|
+|Scenario|DESCRIZIONE|
 |--------------|-----------------|
 |`/Debug`|Genera immagini native utilizzabili con un debugger.|
 |`/Profile`|Genera immagini native utilizzabili con un profiler.|
@@ -116,7 +116,7 @@ Nella tabella riportata di seguito viene illustrata la sintassi di ciascuna `act
 
 ## <a name="config"></a>Config
 
-|Configurazione|Description|
+|Configurazione|DESCRIZIONE|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|Usa la configurazione dell'assembly eseguibile specificato.<br /><br /> Al momento dell'associazione alle dipendenze, le decisioni di Ngen.exe devono coincidere con quelle del caricatore. Quando un componente condiviso viene caricato in fase di esecuzione, mediante il metodo <xref:System.Reflection.Assembly.Load%2A>, il file di configurazione dell'applicazione determina le dipendenze che devono essere caricate per il componente condiviso, ad esempio la versione di una dipendenza caricata. L'opzione `/ExeConfig` indica a Ngen.exe le dipendenze che verranno caricate in fase di esecuzione.|
 |`/AppBase:` `directoryPath`|Al momento dell'individuazione delle dipendenze, la directory specificata viene usata come base dell'applicazione.|
@@ -125,7 +125,7 @@ Nella tabella riportata di seguito viene illustrata la sintassi di ciascuna `act
 
 ## <a name="options"></a>Opzioni
 
-|Opzione|Description|
+|Opzione|DESCRIZIONE|
 |------------|-----------------|
 |`/nologo`|Evita la visualizzazione del messaggio di avvio Microsoft.|
 |`/silent`|Evita la visualizzazione dei messaggi di operazione riuscita.|
@@ -233,7 +233,7 @@ La precompilazione degli assembly con Ngen.exe consente di ridurre il tempo di a
 L'associazione forte può influire negativamente sul tempo di avvio, poiché tutte le immagini associate in maniera forte all'assembly principale dell'applicazione devono essere caricate simultaneamente.
 
 > [!NOTE]
-> Per le versioni precedenti a [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)] è opportuno inserire i componenti condivisi con nome sicuro nella Global Assembly Cache, perché il caricatore esegue un ulteriore controllo di convalida sugli assembly con nome sicuro che non si trovano nella Global Assembly Cache, annullando quindi qualsiasi miglioramento a livello di tempo di avvio ottenuto grazie alle immagini native. Con le ottimizzazioni introdotte in [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] è stata rimossa la convalida aggiuntiva.
+> Per le versioni precedenti a .NET Framework 3.5 Service Pack 1 è opportuno inserire i componenti condivisi con nome sicuro nella Global Assembly Cache, perché il caricatore esegue un ulteriore controllo di convalida sugli assembly con nome sicuro che non si trovano nella Global Assembly Cache, annullando quindi qualsiasi miglioramento a livello di tempo di avvio ottenuto grazie alle immagini native. Con le ottimizzazioni introdotte in .NET Framework 3.5 SP1 è stata rimossa la convalida aggiuntiva.
 
 <a name="UsageSummary"></a>
 

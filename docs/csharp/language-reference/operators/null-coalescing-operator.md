@@ -1,5 +1,5 @@
 ---
-title: ?? \- operatore - Riferimenti per C#
+title: ?? Operatore ?? - Riferimenti per C#
 ms.custom: seodec18
 ms.date: 06/07/2019
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - null-coalescing operator [C#]
 - ?? operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 8ca97261b348b7813ab179abbc1f2c5f535966a1
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: a19b5558da36ffb11dabd1b9bec419a3623a0f17
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816016"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024999"
 ---
-# <a name="-operator-c-reference"></a>?? operator (Riferimenti per C#)
+# <a name="-operator-c-reference"></a>?? Operatore ?? (Riferimenti per C#)
 
 L'operatore null-coalescing `??` restituisce il valore dell'operando a sinistra se è `null`; in caso contrario, valuta l'operando a destra e ne restituisce il risultato. L'operatore `??` non valuta l'operando a destra se l'operando a sinistra restituisce un valore non null.
 
@@ -60,7 +60,6 @@ Per altre informazioni, vedere la sezione [ null coalescing](~/_csharplang/spec/
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
 - [Operatori C#](index.md)
 - [Operatori ?. e ?[]](member-access-operators.md#null-conditional-operators--and-)
 - [Operatore ?:](conditional-operator.md)

@@ -8,23 +8,26 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c3d18a52068b17b4a4259200754819dd43e28a03
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 4a51bb0e854de127c632c28f613a7602bf09f432
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267654"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348015"
 ---
 # <a name="readonly-c-reference"></a>readonly (Riferimenti per C#)
 
 La parola chiave `readonly` è un modificatore che può essere usato in tre contesti:
 
-- In una [dichiarazione di campo](#readonly-field-example) `readonly` indica che l'assegnazione al campo può avvenire solo come parte della dichiarazione del campo o in un costruttore della stessa classe. Un campo readonly può essere assegnato e riassegnato più volte nella dichiarazione del campo e nel costruttore. Un campo `readonly` non può essere assegnato dopo aver chiuso il costruttore. Questo aspetto presenta implicazioni diverse per i tipi di valore e i tipi di riferimento:
-- Poiché i tipi di valore contengono direttamente i rispettivi dati, un campo contenente un tipo di valore `readonly` non è modificabile. 
-- Poiché i tipi di riferimento contengono un riferimento ai rispettivi dati, un campo contenente un tipo di riferimento `readonly` deve sempre fare riferimento allo stesso oggetto, che non è modificabile. Il modificatore `readonly` impedisce che il campo venga sostituito da un'istanza diversa del tipo di riferimento. Il modificatore non impedisce tuttavia che i dati dell'istanza vengano modificati mediante il campo di sola lettura.
+- In una [dichiarazione di campo](#readonly-field-example) `readonly` indica che l'assegnazione al campo può avvenire solo come parte della dichiarazione del campo o in un costruttore della stessa classe. Un campo readonly può essere assegnato e riassegnato più volte nella dichiarazione del campo e nel costruttore. 
+  
+  Un campo `readonly` non può essere assegnato dopo aver chiuso il costruttore. Questo aspetto presenta implicazioni diverse per i tipi di valore e i tipi di riferimento:
+  
+  - Poiché i tipi di valore contengono direttamente i rispettivi dati, un campo contenente un tipo di valore `readonly` non è modificabile. 
+  - Poiché i tipi di riferimento contengono un riferimento ai rispettivi dati, un campo contenente un tipo di riferimento `readonly` deve sempre fare riferimento allo stesso oggetto, che non è modificabile. Il modificatore `readonly` impedisce che il campo venga sostituito da un'istanza diversa del tipo di riferimento. Il modificatore non impedisce tuttavia che i dati dell'istanza vengano modificati mediante il campo di sola lettura.
 
-> [!WARNING]
-> Un tipo visibile esternamente contenente un campo di sola lettura visibile esternamente e costituito da un tipo di riferimento modificabile può essere una vulnerabilità di sicurezza e può attivare l'avviso [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types): "Non dichiarare tipi di riferimento modificabili in sola lettura".
+  > [!WARNING]
+  > Un tipo visibile esternamente contenente un campo di sola lettura visibile esternamente e costituito da un tipo di riferimento modificabile può essere una vulnerabilità di sicurezza e può attivare l'avviso [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types): "Non dichiarare tipi di riferimento modificabili in sola lettura".
 
 - In una definizione [`readonly struct` ](#readonly-struct-example), `readonly` indica che non è possibile modificare `struct`.
 - In una restituzione del metodo[ `ref readonly`](#ref-readonly-return-example), il modificatore `readonly` indica che il metodo restituisce un riferimento e nel riferimento non sono consentite le scritture.
@@ -41,9 +44,9 @@ In questo esempio, il valore del campo `year` non può essere modificato nel met
 
 - Quando la variabile viene inizializzata nella dichiarazione, ad esempio:
 
-```csharp
-public readonly int y = 5;
-```
+  ```csharp
+  public readonly int y = 5;
+  ```
 
 - In un costruttore di istanze della classe che contiene la dichiarazione del campo di istanza.
 - Nel costruttore statico della classe che contiene la dichiarazione del campo statico.

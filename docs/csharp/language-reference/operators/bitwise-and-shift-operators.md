@@ -1,5 +1,5 @@
 ---
-title: Operatori di scorrimento e bit per bit - Riferimento C#
+title: Operatori di scorrimento e bit per bit - Riferimenti per C#
 description: Di seguito sono descritti gli operatori C# che eseguono operazioni di scorrimento o logiche bit per bit con operandi di tipi integrali.
 ms.date: 04/18/2019
 author: pkulikov
@@ -29,14 +29,14 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: bf42a53a89676f457d3d2df8d193a83299c3e4cc
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 4a495fb5ce353bcb4f7ccda975dfc74ba711db79
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758366"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025248"
 ---
-# <a name="bitwise-and-shift-operators-c-reference"></a>Operatori di scorrimento e bit per bit (Riferimento C#)
+# <a name="bitwise-and-shift-operators-c-reference"></a>Operatori di scorrimento e bit per bit (Riferimenti per C#)
 
 Gli operatori seguenti eseguono operazioni di scorrimento o bit per bit con operandi di [tipi integrali](../keywords/integral-types-table.md):
 
@@ -195,6 +195,5 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
 - [Operatori C#](index.md)
 - [Operatori logici booleani](boolean-logical-operators.md)

@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 9e7434f2267baf82021dfb3875f2da39552e72ef
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186078"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025102"
 ---
 # <a name="methods"></a>Metodi
 
@@ -144,9 +144,9 @@ Un chiamante potrà quindi richiamare il metodo in uno dei tre modi seguenti:
 - Passando un elenco delimitato da virgole di singoli argomenti del tipo appropriato al metodo.
 - Non specificando un argomento nella matrice di parametri.
 
-L'esempio seguente definisce un metodo denominato `DoStringOperation` che esegue l'operazione di stringa specificata dal primo parametro, un membro di enumerazione `StringOperation`. Le stringhe in cui deve essere eseguita l'operazione sono definite da una matrice di parametri. Il metodo `Main` illustra tutti e tre i metodi di chiamata al metodo. Si noti che il metodo contrassegnato con la parola chiave `params` deve essere preparato a gestire il caso in cui non viene specificato alcun argomento per la matrice di parametri, in modo che il relativo valore sia `null`.
+L'esempio seguente definisce un metodo denominato `GetVowels` che restituisce tutte le vocali da una matrice di parametri. Il metodo `Main` illustra tutti e tre i metodi di chiamata al metodo. Non è necessario che i chiamanti specifichino un argomento per i parametri che includono il modificatore `params`. In questo caso, il parametro è `null`.
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
+[!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 
 <a name="optional"></a>
 
@@ -157,7 +157,7 @@ La definizione di un metodo può specificare che i parametri sono obbligatori o 
 Il valore predefinito del parametro deve essere assegnato da uno dei tipi di espressioni seguenti:
 
 - Una costante, ad esempio una stringa letterale o un numero.
-- Un'espressione del form `new ValType`, dove `ValType` è un tipo di valore. Si noti che viene richiamato il costruttore predefinito implicito del tipo di valore, che non è un membro effettivo del tipo.
+- Un'espressione del form `new ValType`, dove `ValType` è un tipo di valore. Osservare come venga richiamato il costruttore senza parametri implicito del tipo di valore, che non è un membro effettivo del tipo.
 - Un'espressione del form `default(ValType)`, dove `ValType` è un tipo di valore.
 
 Se un metodo include parametri obbligatori e facoltativi, i parametri facoltativi sono definiti alla fine dell'elenco di parametri, dopo tutti i parametri obbligatori.

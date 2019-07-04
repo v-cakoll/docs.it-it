@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: b7240295f154277e722f38e99beb221c1c4d9a34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77ecab9738afd7ff5cfd4f8ef0cd0e49a302eb27
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521998"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025408"
 ---
 # <a name="c-walkthroughs"></a>Procedure dettagliate di C#
 Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, che li rende un ottimo strumento per apprendere l'utilizzo del prodotto o di una determinata area funzionale.  
@@ -24,7 +24,7 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  Viene illustrato come creare una soluzione asincrona usando [async](../csharp/language-reference/keywords/async.md) e [await](../csharp/language-reference/keywords/await.md).  
   
  [Creazione di un componente di Windows Runtime in C# o Visual Basic e chiamata da JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Viene illustrato come creare un tipo [!INCLUDE[wrt](~/includes/wrt-md.md)], comprimerlo in un componente [!INCLUDE[wrt](~/includes/wrt-md.md)], quindi chiamare il componente da un'app [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] progettata per Windows usando JavaScript.  
+ Viene illustrato come creare un tipo Windows Runtime, comprimerlo in un componente Windows Runtime e quindi chiamare il componente da un'app [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] progettata per Windows usando JavaScript.  
   
  [Programmazione di Office (C# e Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  Viene illustrato come creare una cartella di lavoro di Excel e un documento di Word usando C# e Visual Basic.  
