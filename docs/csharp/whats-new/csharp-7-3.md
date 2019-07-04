@@ -2,12 +2,12 @@
 title: Novità di C# 7.3
 description: Panoramica delle nuove funzionalità in C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: aca5c1b82253c02eccf24af1e5c45d0203d0b1b8
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832703"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397785"
 ---
 # <a name="whats-new-in-c-73"></a>Novità di C# 7.3
 
@@ -34,7 +34,12 @@ Le nuove opzioni del compilatore sono le seguenti:
 - `-publicsign` per abilitare la firma degli assembly con software open source.
 - `-pathmap` per fornire un mapping per le directory di origine.
 
-Il resto di questo articolo fornisce informazioni dettagliate e collegamenti a risorse aggiuntive per ciascuno dei miglioramenti.
+Il resto di questo articolo fornisce informazioni dettagliate e collegamenti a risorse aggiuntive per ciascuno dei miglioramenti. È possibile esplorare queste funzionalità nell'ambiente in uso tramite lo strumento globale `dotnet try`:
+
+1. Installare lo strumento globale [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
+1. Clonare il repository [dotnet/try-samples](https://github.com/dotnet/try-samples).
+1. Impostare la directory corrente sulla sottodirectory *csharp7* per il repository *try-samples*.
+1. Eseguire `dotnet try`.
 
 ## <a name="enabling-more-efficient-safe-code"></a>Miglioramento dell'efficienza del codice gestito
 

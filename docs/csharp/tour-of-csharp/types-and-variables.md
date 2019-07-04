@@ -3,12 +3,12 @@ title: Tipi e variabili C# - Panoramica del linguaggio C#
 description: Informazioni sulla definizione di tipi e la dichiarazione di variabili nel linguaggio C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 5623b4a1e85508ea7206df2c73b7aaffcbc3fbb1
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a3f31eca296265c1e7f0c14a9540e267a2165ec1
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881985"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423447"
 ---
 # <a name="types-and-variables"></a>Tipi e variabili
 
@@ -39,7 +39,7 @@ Di seguito viene offerta una panoramica del sistema di tipi di C#.
     * Tipi definiti dall'utente nel formato `class C {...}`
   - [Tipi interfaccia][InterfaceTypes]
     * Tipi definiti dall'utente nel formato `interface I {...}`
-  - [Tipi matrice][ArrayTypes]
+  - [Tipi di matrice][ArrayTypes]
     * Unidimensionale e multidimensionale, ad esempio `int[]` e `int[,]`
   - [Tipi delegato][DelegateTypes]
     * Tipi definiti dall'utente nel formato `delegate int D(...)`
@@ -55,7 +55,7 @@ Di seguito viene offerta una panoramica del sistema di tipi di C#.
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-Per altre informazioni sui tipi numerici, vedere la [tabella dei tipi integrali](../language-reference/keywords/integral-types-table.md) e la [tabella dei tipi a virgola mobile](../language-reference/keywords/floating-point-types-table.md).
+Per altre informazioni sui tipi numerici, vedere la [tabella dei tipi integrali](../language-reference/builtin-types/integral-numeric-types.md) e la [tabella dei tipi a virgola mobile](../language-reference/keywords/floating-point-types-table.md).
 
 Il tipo `bool` di C# viene usato per rappresentare valori booleani, ovvero valori che sono `true` o `false`.
 

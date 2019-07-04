@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f6f6fa8afe2e4aaea6e9f2b96329542b7fe5292
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b78b770417b9599719ea219041a9fd6adaf5a84
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607700"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423401"
 ---
 # <a name="assembly-security-considerations"></a>Considerazioni sulla sicurezza degli assembly
 <a name="top"></a> Quando si compila un assembly, è possibile specificare un set di autorizzazioni necessarie per consentirne l'esecuzione. Se sussistano o meno le autorizzazioni per l'utilizzo di un assembly lo si evince dalle evidenze.  
@@ -31,7 +31,7 @@ ms.locfileid: "64607700"
   
 - L'evidenza di input viene unita all'evidenza acquisita durante il caricamento per creare un set di evidenze finale utilizzato per la risoluzione dei criteri. I metodi in cui viene usata tale semantica sono **Assembly.Load**, **Assembly.LoadFrom** e **Activator.CreateInstance**.  
   
-- L'evidenza di input viene utilizzata non modificata come set di evidenze finale per la risoluzione dei criteri. I metodi in cui viene usata tale semantica sono **Assembly.Load(byte[])** e **AppDomain.DefineDynamicAssembly()**.  
+- L'evidenza di input viene utilizzata non modificata come set di evidenze finale per la risoluzione dei criteri. I metodi in cui viene usata tale semantica sono **Assembly.Load(byte[])** e **AppDomain.DefineDynamicAssembly()** .  
   
  Autorizzazioni facoltative possono essere concesse dai [criteri di sicurezza](../../../docs/framework/misc/code-access-security-basics.md) impostati per il computer che eseguirà l'assembly. Se si desidera che il proprio codice gestisca tutte le possibili eccezioni di sicurezza, si può procedere in uno dei modi seguenti:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "64607700"
   
  I nomi sicuri non garantiscono alcun livello di attendibilità. A ciò provvede infatti [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md). I due strumenti firma digitale impongono all'autore di provare la propria identità a un'autorità terza per ottenere un certificato. Il certificato viene poi incorporato nel file e può essere utilizzato da un amministratore per decidere se considerare attendibile l'autenticità del codice.  
   
- È possibile associare a un assembly il solo nome sicuro, la sola firma digitale creata tramite [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md) o entrambi. Con i due strumenti firma digitale è possibile firmare un solo file alla volta. Nel caso di assembly su più file, si firmerà solo il file che contiene il manifesto dell'assembly. Il nome sicuro viene memorizzato nel file che contiene il manifesto dell'assembly, mentre la firma creata tramite [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md) viene memorizzata in un'area riservata del file eseguibile portabile (PE, Portable Executable) che contiene il manifesto dell'assembly. La firma di un assembly realizzata tramite [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md) può essere adottata (con o senza un nome sicuro) quando già si dispone di una gerarchia attendibile basata su firme generate tramite [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md) o quando i propri criteri si avvalgono solo della chiave e non controllano la catena di attendibilità.  
+ È possibile associare a un assembly il solo nome sicuro, la sola firma digitale creata tramite [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md) o entrambi. Con i due strumenti firma digitale è possibile firmare un solo file alla volta. Nel caso di assembly su più file, si firmerà solo il file che contiene il manifesto dell'assembly. Il nome sicuro viene memorizzato nel file che contiene il manifesto dell'assembly, mentre la firma creata tramite [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md) viene memorizzata in un'area riservata del file eseguibile portabile (PE, Portable Executable) che contiene il manifesto dell'assembly. La firma di un assembly realizzata tramite [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md) può essere adottata (con o senza un nome sicuro) quando si ha già una gerarchia attendibile basata su firme generate tramite [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md) o quando i propri criteri si avvalgono solo della chiave e non controllano la catena di attendibilità.  
   
 > [!NOTE]
 >  Quando a un assembly si assegna sia un nome sicuro che una firma digitale, il nome sicuro deve essere assegnato per primo.  

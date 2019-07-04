@@ -1,22 +1,22 @@
 ---
-title: Esaminare i valori dei dati intermedi durante l'elaborazione di ML.NET
-description: Informazioni su come esaminare i valori effettivi dei dati intermedi durante l'elaborazione della pipeline di apprendimento automatico di ML.NET
-ms.date: 04/29/2019
+title: Esaminare i dati intermedi durante l'elaborazione di ML.NET
+description: Informazioni su come esaminare i dati intermedi durante il caricamento della pipeline di Machine Learning di ML.NET, l'elaborazione e i passaggi di training del modello in ML.NET.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: 06c4a473841db62a10dfc24025f842df7ae2c583
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: d6ddeb523fb229eb0ebc9c2f22809312060e4266
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063510"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402382"
 ---
-# <a name="inspect-intermediate-data-values-during-processing"></a>Esaminare i valori dei dati intermedi durante l'elaborazione
+# <a name="inspect-intermediate-data-during-processing"></a>Esaminare i dati intermedi durante l'elaborazione
 
-Informazioni su come esaminare i valori durante i passaggi di caricamento, elaborazione e training in ML.NET.
+Di seguito viene descritto come esaminare i dati intermedi durante il caricamento, l'elaborazione e i passaggi di training del modello in ML.NET. I dati intermedi corrispondono all'output di ogni fase della pipeline di Machine Learning.
 
-Dati analoghi a quelli rappresentati di seguito e caricati in un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView) possono essere esaminati in vari modi in ML.NET.
+Dati intermedi come quelli rappresentati di seguito che vengono caricati in un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView) possono essere esaminati in vari modi in ML.NET.
  
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -62,9 +62,9 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>Convertire IDataView in IEnumerable
 
-Uno dei modi più rapidi per esaminare i valori di un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView) consiste nel convertirla in [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601). Per convertire [`IDataView`](xref:Microsoft.ML.IDataView) in [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601), usare il metodo [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*). 
+Uno dei modi più rapidi per esaminare un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView) consiste nel convertirla in un'interfaccia [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601). Per convertire [`IDataView`](xref:Microsoft.ML.IDataView) in [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601), usare il metodo [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*). 
 
-Per ottimizzare le prestazioni, impostare il valore di `reuseRowObject` su `true`. Questa operazione popolerà lo stesso oggetto in modo differito con i dati della riga corrente quando viene valutata anziché creare un nuovo oggetto per ogni riga nel set di dati.
+Per ottimizzare le prestazioni, impostare `reuseRowObject` su `true`. Questa operazione popolerà lo stesso oggetto in modo differito con i dati della riga corrente quando viene valutata anziché creare un nuovo oggetto per ogni riga nel set di dati.
 
 ```csharp
 // Create an IEnumerable of HousingData objects from IDataView
@@ -78,6 +78,8 @@ foreach (HousingData row in housingDataEnumerable)
     Console.WriteLine(row.Size);
 }
 ```
+
+## <a name="accessing-specific-indices-with-ienumerable"></a>Accesso a indici specifici con IEnumerable
 
 Se è sufficiente accedere a una parte dei dati o a indici specifici, usare [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) e impostare il valore del parametro `reuseRowObject` su `false`, in modo che venga creato un nuovo oggetto per ogni riga richiesta del set di dati. Quindi, convertire [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) in una matrice o in un elenco.
 

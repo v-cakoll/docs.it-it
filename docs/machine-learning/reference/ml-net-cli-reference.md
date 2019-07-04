@@ -3,12 +3,12 @@ title: Comando auto-train nello strumento dell'interfaccia della riga di comando
 description: Panoramica, esempi e riferimento per il comando auto-train nello strumento dell'interfaccia della riga di comando di ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 73bae0165af76226152de322d2951086646a1a1d
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722608"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397666"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>Comando 'auto-train' nell'interfaccia della riga di comando di ML.NET
 
@@ -42,7 +42,7 @@ Il comando `mlnet auto-train` genera gli asset seguenti:
 - Il codice C# per eseguire/assegnare un punteggio al modello generato (per effettuare previsioni nelle app degli utenti finali con il modello).
 - Il codice C# con il codice di training usato per generare il modello (a scopo di apprendimento).
 
-I primi due asset possono essere usati direttamente nelle app degli utenti finali (app Web ASP.NET Core, servizi, app desktop, ecc.) per effettuare previsioni con il modello di Machine Learning generato.
+I primi due asset possono essere usati direttamente nelle app degli utenti finali (app Web ASP.NET Core, servizi, app desktop e così via) per effettuare previsioni con il modello di Machine Learning generato.
 
 Poiché il terzo asset, il codice di training, mostra il codice API di ML.NET usato dall'interfaccia della riga di comando per eseguire il training del modello generato, è possibile individuare il trainer/algoritmo specifico e gli iperparametri selezionati dall'interfaccia della riga di comando e dal motore di Machine Learning automatico di ML.NET.
 

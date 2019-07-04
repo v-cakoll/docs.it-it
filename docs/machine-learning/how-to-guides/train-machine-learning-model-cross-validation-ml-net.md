@@ -1,20 +1,20 @@
 ---
-title: Eseguire il training e la valutazione di un modello di Machine Learning tramite la convalida incrociata
-description: Informazioni su come eseguire il training e la valutazione di un modello di Machine Learning tramite la convalida incrociata
-ms.date: 05/03/2019
+title: Eseguire il training di un modello di Machine Learning tramite convalida incrociata
+description: Di seguito viene descritto come usare la convalida incrociata per creare modelli di Machine Learning più affidabili in ML.NET. La convalida incrociata è una tecnica di training e valutazione del modello che suddivide i dati in più partizioni ed esegue il training di più algoritmi nelle partizioni.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc,how-to
-ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.custom: mvc,how-to,title-hack-0625
+ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557842"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397653"
 ---
-# <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>Eseguire il training e la valutazione di un modello di Machine Learning tramite la convalida incrociata
+# <a name="train-a-machine-learning-model-using-cross-validation"></a>Eseguire il training di un modello di Machine Learning tramite convalida incrociata
 
-Di seguito viene descritto come usare la convalida incrociata per creare modelli di Machine Learning più affidabili in ML.NET. 
+Di seguito viene descritto come usare la convalida incrociata per eseguire il training di modelli di Machine Learning più affidabili in ML.NET. 
 
 La convalida incrociata è una tecnica di training e valutazione del modello che suddivide i dati in più partizioni ed esegue il training di più algoritmi nelle partizioni. Questa tecnica consente di migliorare l'affidabilità del modello offrendo dati provenienti dal processo di training. Oltre a migliorare le prestazioni sulle osservazioni non visibili, in ambienti con limiti di dati può rappresentare uno strumento efficace per il training di modelli con set di dati di dimensioni minori.
 
@@ -93,7 +93,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 Il risultato archiviato in `cvResults` è una raccolta di oggetti [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601). Questo oggetto include il modello con training e le metriche, entrambi accessibili rispettivamente dalle proprietà [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) e [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics). In questo esempio la proprietà `Model` è di tipo [`ITransformer`](xref:Microsoft.ML.ITransformer) e la proprietà `Metrics` è di tipo [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics). 
 
-## <a name="extract-metrics"></a>Estrarre le metriche
+## <a name="evaluate-the-model"></a>Valutare il modello
 
 Le metriche per i diversi modelli con training sono accessibili tramite la proprietà `Metrics` del singolo oggetto [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601). In questo caso la [metrica R quadrato](https://en.wikipedia.org/wiki/Coefficient_of_determination) è accessibile e archiviata nella variabile `rSquared`. 
 
@@ -103,11 +103,7 @@ IEnumerable<double> rSquared =
         .Select(fold => fold.Metrics.RSquared);
 ```
 
-Se si esamina il contenuto della variabile `rSquared`, l'output dovrebbe essere di cinque valori compresi tra 0 e 1, dove il valore più prossimo a 1 rappresenta l'elemento migliore.
-
-## <a name="select-the-best-performing-model"></a>Selezionare il modello dalle prestazioni migliori
-
-Usando le metriche come R quadrato, selezionare i modelli dal modello con le prestazioni migliori al modello con le prestazioni peggiori. Quindi, selezionare il modello migliore con cui eseguire le previsioni o altre operazioni.
+Se si esamina il contenuto della variabile `rSquared`, l'output dovrebbe essere di cinque valori compresi tra 0 e 1, dove il valore più prossimo a 1 rappresenta l'elemento migliore. Usando le metriche come R quadrato, selezionare i modelli dal modello con le prestazioni migliori al modello con le prestazioni peggiori. Quindi, selezionare il modello migliore con cui eseguire le previsioni o altre operazioni.
 
 ```csharp
 // Select all models

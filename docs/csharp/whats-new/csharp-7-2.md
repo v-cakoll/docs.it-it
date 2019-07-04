@@ -2,12 +2,12 @@
 title: Novità di C# 7.2
 description: Panoramica delle nuove funzionalità in C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: b8b2be68aac3cba92e0dbd74dfe4ee3cbbef0e88
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185350"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347418"
 ---
 # <a name="whats-new-in-c-72"></a>Novità di C# 7.2
 
@@ -30,6 +30,13 @@ Le nuove funzionalità relative al linguaggio in questa versione sono:
   - Il modificatore di accesso `private protected` consente l'accesso per le classi derivate nello stesso assembly.
 * [Espressioni condizionali `ref`](#conditional-ref-expressions)
   - Il risultato di un'espressione condizionale (`?:`) può ora essere un riferimento.
+
+La parte restante di questo articolo illustra una panoramica di ogni funzionalità. Per ogni funzionalità verranno illustrati i concetti di base e si apprenderà la sintassi. È possibile esplorare queste funzionalità nell'ambiente in uso tramite lo strumento globale `dotnet try`:
+
+1. Installare lo strumento globale [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
+1. Clonare il repository [dotnet/try-samples](https://github.com/dotnet/try-samples).
+1. Impostare la directory corrente sulla sottodirectory *csharp7* per il repository *try-samples*.
+1. Eseguire `dotnet try`.
 
 ## <a name="safe-efficient-code-enhancements"></a>Miglioramenti per un codice efficiente e sicuro
 

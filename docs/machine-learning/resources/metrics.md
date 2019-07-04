@@ -2,19 +2,19 @@
 title: Metriche di ML.NET
 description: Informazioni sulle metriche usate per valutare le prestazioni di un modello ML.NET
 ms.date: 04/29/2019
-author: ''
-ms.openlocfilehash: 802f0a8fd32c492c8d9f89933b183802cb178cb3
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+author: natke
+ms.openlocfilehash: 45176902a195906e7b5cffd24fc9da839406ad9d
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053047"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410517"
 ---
 # <a name="model-evaluation-metrics-in-mlnet"></a>Metriche di valutazione dei modelli in ML.NET
 
 ## <a name="metrics-for-binary-classification"></a>Metriche per la classificazione binaria
 
-| Metrica   |      Description      |  Obiettivo |
+| Metrica   |      DESCRIZIONE      |  Obiettivo |
 |-----------|-----------------------|-----------|
 | **Accuracy** |  [Accuracy](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_binary_classification) o accuratezza corrisponde alla percentuale di stime corrette con un set di dati di test. Equivale al rapporto tra il numero di stime corrette e il numero totale di campioni di input. È una metrica valida solo nel caso di un numero simile di campioni appartenente a ogni classe.| **Quanto più vicino a 1,00, tanto meglio**. Ma se il risultato è esattamente 1,00, significa che si è verificato un problema, in genere di tipo dispersione di dati (etichetta/destinazione), sovradattamento oppure uso di dati di training per il test. Se i dati di test sono squilibrati (per cui la maggior parte delle istanze appartengono a una delle classi), il set di dati è molto piccolo oppure i punteggi si avvicinano a 0,00 o 1,00, l'accuratezza non rileva in realtà l'efficacia di un classificatore ed è necessario controllare altre metriche. |
 | **AUC** |    [aucROC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) o *area sotto la curva*: corrisponde alla misurazione dell'area sotto la curva creata verificando la percentuale di veri positivi rispetto a quella di falsi positivi.  |   **Quanto più vicino a 1,00, tanto meglio**. Il valore dovrebbe essere maggiore di 0,50 perché un modello sia accettabile; un modello con AUC minore o uguale 0,50 è inutile. |
@@ -29,7 +29,7 @@ Per altre informazioni sulle metriche di classificazione binaria, vedere gli art
 
 ## <a name="metrics-for-multi-class-classification"></a>Metriche per la classificazione multiclasse
 
-| Metrica   |      Description      |  Obiettivo |
+| Metrica   |      DESCRIZIONE      |  Obiettivo |
 |-----------|-----------------------|-----------|
 | **Micro-Accuracy** |  L'[accuratezza micro-media](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MicroAccuracy) aggrega i contributi di tutte le classi per calcolare la metrica media. Corrisponde alla percentuale di istanze stimate correttamente. La micro-media non tiene conto dell'appartenenza a una classe. Essenzialmente, ogni coppia campione-classe contribuisce nello stesso modo alla metrica di accuratezza. | **Quanto più vicino a 1,00, tanto meglio**. In un'attività di classificazione multiclasse la micro-accuratezza è preferibile rispetto alla macro-accuratezza se si sospetta uno squilibrio di classi, ossia la presenza di molti più esempi di una classe rispetto ad altre.|
 | **Macro-Accuracy** | L'[accuratezza macro-media](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MacroAccuracy) corrisponde all'accuratezza media a livello di classe. Viene confrontata l'accuratezza per ogni classe e l'accuratezza macro-media è la media di queste accuratezze. Essenzialmente, ogni classe contribuisce nello stesso modo alla metrica di accuratezza. Alle classi di minoranza viene assegnato un peso uguale a quello delle classi più grandi. La metrica della macro-media assegna lo stesso peso a ogni classe, indipendentemente dal numero di istanze di tale classe contenute nel set di dati. |  **Quanto più vicino a 1,00, tanto meglio**.  Calcola la metrica in modo indipendente per ogni classe e quindi ne considera la media, di conseguenza tratta tutte le classi allo stesso modo |
@@ -52,7 +52,7 @@ Per altre informazioni sulle metriche di classificazione multiclasse, vedere gli
 
 ## <a name="metrics-for-regression"></a>Metriche per la regressione
 
-| Metrica   |      Description      |  Obiettivo |
+| Metrica   |      DESCRIZIONE      |  Obiettivo |
 |-----------|-----------------------|-----------|
 | **R-Squared** |  [R-squared (R2)](https://en.wikipedia.org/wiki/Coefficient_of_determination) o *coefficiente di determinazione* rappresenta la potenza predittiva del modello come valore compreso tra -inf e 1,00. 1,00 significa corrispondenza perfetta e la corrispondenza può essere arbitrariamente insufficiente, quindi i punteggi possono essere negativi. Il punteggio 0,00 significa che il modello indovina il valore previsto per l'etichetta. R2 misura il grado di prossimità dei valori dei dati di test effettivi ai valori stimati. | **Quanto più vicino a 1,00, tanto migliore è la qualità**. Tuttavia, a volte i valori di R-squared bassi (ad esempio 0,50) possono essere perfettamente normali o sufficientemente validi per uno specifico scenario, mentre quelli alti non sono sempre validi e possono essere sospetti. |
 | **Absolute-loss** |  [Absolute-loss](https://en.wikipedia.org/wiki/Mean_absolute_error) o *errore assoluto medio* misura la prossimità delle stime ai risultati effettivi. Corrisponde alla media di tutti gli errori del modello, dove un errore del modello è la distanza tra il valore di etichetta stimato e quello corretto. Questo errore di stima viene calcolato per ogni record del set di dati di test. Infine, viene calcolato il valore medio per tutti gli errori assoluti registrati.| **Quanto più vicino a 0,00, tanto migliore è la qualità**. Si noti che l'errore assoluto medio usa la stessa scala dei dati misurati, ossia non è normalizzato in base a un intervallo specifico. Le metriche Absolute-loss, Squared-loss e RMS-loss possono essere usate solo per eseguire confronti tra modelli per lo stesso set di dati o per un set di dati con una distribuzione simile dei valori di etichetta. |

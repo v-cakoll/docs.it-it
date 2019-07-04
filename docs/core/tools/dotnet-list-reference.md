@@ -1,17 +1,21 @@
 ---
 title: Comando dotnet list reference
 description: Il comando dotnet list reference offre un'opzione utile per visualizzare un elenco dei riferimenti da progetto a progetto.
-ms.date: 12/03/2018
-ms.openlocfilehash: c0b88c4a0af4469d7ddc9e0a9368bb1b2d9d20b6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 1f87ff89997cdaa6d0095a4db9f28a2e7cb7e6a9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632405"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421834"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
+**Questo argomento si applica a: ✓** .NET Core 2.1.x SDK e versioni successive
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>nome
 
@@ -19,17 +23,17 @@ ms.locfileid: "65632405"
 
 ## <a name="synopsis"></a>Riepilogo
 
-`dotnet list [<PROJECT>] reference [-h|--help]`
+`dotnet list [<PROJECT>|<SOLUTION>] reference [-h|--help]`
 
-## <a name="description"></a>Description
+## <a name="description"></a>DESCRIZIONE
 
 Il comando `dotnet list reference` offre un'opzione utile per visualizzare un elenco dei riferimenti al progetto per un progetto o una soluzione specificata.
 
 ## <a name="arguments"></a>Argomenti
 
-* **`PROJECT`**
+* **`PROJECT | SOLUTION`**
 
-  Specifica il file di progetto da usare per l'elenco dei riferimenti. Se non specificato, il comando cerca un file di progetto nella directory corrente.
+  Specifica il file di progetto o di soluzione da usare per l'elenco dei riferimenti. Se non specificato, il comando cerca un file di progetto nella directory corrente.
 
 ## <a name="options"></a>Opzioni
 

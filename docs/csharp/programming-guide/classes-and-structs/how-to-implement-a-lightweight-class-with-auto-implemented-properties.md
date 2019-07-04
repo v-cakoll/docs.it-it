@@ -6,24 +6,28 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: be4d7e5cf4d2f7c117766858dbba9c7c59c74b73
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: f9884f353e58ff6119e3bc3b95aa55f0f60d0ad5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267678"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398503"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Procedura: Implementare una classe leggera con proprietà implementate automaticamente (Guida per programmatori C#)
-Questo esempio mostra come creare una classe leggera non modificabile che serve solo a incapsulare un set di proprietà implementate automaticamente. Usare questo genere di costrutto invece di una struct quando è necessario usare la semantica del tipo riferimento.  
-  
- È possibile creare una proprietà non modificabile in due modi.  È possibile dichiarare la funzione di accesso [set](../../../csharp/language-reference/keywords/set.md) come [privata](../../../csharp/language-reference/keywords/private.md).  La proprietà è impostabile solo all'interno del tipo è, ma non è modificabile per i consumer.  È invece possibile dichiarare solo la funzione di accesso [get](../../../csharp/language-reference/keywords/get.md), che rende la proprietà non modificabile ovunque tranne che nel costruttore del tipo.  
-  
- Quando si dichiara una funzione di accesso `set` privata, non è possibile usare un inizializzatore di oggetto per inizializzare la proprietà. È necessario usare un costruttore o un metodo factory.  
-  
-## <a name="example"></a>Esempio  
- Il seguente esempio mostra due modi per implementare una classe non modificabile con proprietà implementate automaticamente. Ogni modo dichiara una delle proprietà con una funzione di accesso `set` privata e una delle proprietà solo con `get`.  La prima classe usa un costruttore solo per inizializzare le proprietà e la seconda classe usa un metodo factory statico che chiama un costruttore.  
-  
-```csharp  
+
+Questo esempio mostra come creare una classe leggera non modificabile che serve solo a incapsulare un set di proprietà implementate automaticamente. Usare questo genere di costrutto invece di una struct quando è necessario usare la semantica del tipo riferimento.
+
+È possibile creare una proprietà non modificabile in due modi:
+- È possibile dichiarare la funzione di accesso [set](../../../csharp/language-reference/keywords/set.md) come [privata](../../../csharp/language-reference/keywords/private.md).  La proprietà è impostabile solo all'interno del tipo è, ma non è modificabile per i consumer.
+
+  Quando si dichiara una funzione di accesso `set` privata, non è possibile usare un inizializzatore di oggetto per inizializzare la proprietà. È necessario usare un costruttore o un metodo factory.
+- È possibile dichiarare solo la funzione di accesso [get](../../../csharp/language-reference/keywords/get.md), che rende la proprietà non modificabile ovunque tranne che nel costruttore del tipo.
+
+## <a name="example"></a>Esempio
+
+Il seguente esempio mostra due modi per implementare una classe non modificabile con proprietà implementate automaticamente. Ogni modo dichiara una delle proprietà con una funzione di accesso `set` privata e una delle proprietà solo con `get`.  La prima classe usa un costruttore solo per inizializzare le proprietà e la seconda classe usa un metodo factory statico che chiama un costruttore.
+
+```csharp
 // This class is immutable. After an object is created,
 // it cannot be modified from outside the class. It uses a
 // constructor to initialize its properties.
@@ -102,18 +106,18 @@ public class Program
         Console.ReadKey();
     }
 }
-  
-/* Output:  
-    Terry Adams, 123 Main St.  
-    Fadi Fakhouri, 345 Cypress Ave.  
-    Hanying Feng, 678 1st Ave  
-    Cesar Garcia, 12 108th St.  
-    Debra Garcia, 89 E. 42nd St.  
-*/  
-```  
-  
- Il compilatore crea campi sottostanti per ogni proprietà implementate automaticamente. I campi non sono accessibili direttamente dal codice sorgente.  
-  
+
+/* Output:
+    Terry Adams, 123 Main St.
+    Fadi Fakhouri, 345 Cypress Ave.
+    Hanying Feng, 678 1st Ave
+    Cesar Garcia, 12 108th St.
+    Debra Garcia, 89 E. 42nd St.
+*/
+```
+
+Il compilatore crea campi sottostanti per ogni proprietà implementate automaticamente. I campi non sono accessibili direttamente dal codice sorgente.
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)

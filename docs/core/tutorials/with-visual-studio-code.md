@@ -4,12 +4,12 @@ description: Informazioni su come creare la prima applicazione .NET Core in C# e
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 7ea2aed3b340b7ae7a6dcd83df30f9453380af15
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1268a943d7cbf1033531a6c51f42c6fd672eaed3
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750879"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401846"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introduzione a C# e Visual Studio Code
 

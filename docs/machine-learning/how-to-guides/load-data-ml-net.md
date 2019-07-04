@@ -1,18 +1,18 @@
 ---
-title: Caricare i dati
-description: Caricare file di dati e dati di streaming in ML.NET
-ms.date: 05/03/2019
-ms.custom: mvc,how-to
-ms.openlocfilehash: 6edcc92b610e2e1f5e21c371b9f0aefd0b216d31
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+title: Caricare i dati da file e altre origini
+description: Questa procedura illustra come caricare i dati per l'elaborazione e il training in ML.NET. I dati vengono inizialmente archiviati nei file o in altre origini dati, ad esempio database, JSON, XML o raccolte in memoria.
+ms.date: 06/25/2019
+ms.custom: mvc,how-to, title-hack-0625
+ms.openlocfilehash: fafbe3fed9e3f0b509eda4f9d8967965bde19767
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063657"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397740"
 ---
-# <a name="load-data-from-file-and-in-memory-sources"></a>Caricare dati da file e origini in memoria
+# <a name="load-data-from-files-and-other-sources"></a>Caricare i dati da file e altre origini
 
-Questa procedura illustra come caricare i dati per l'elaborazione e il training in ML.NET. I dati sono archiviati in file oppure in origini dati in tempo reale o di streaming.
+Questa procedura illustra come caricare i dati per l'elaborazione e il training in ML.NET. I dati vengono inizialmente archiviati nei file o in altre origini dati, ad esempio database, JSON, XML o raccolte in memoria.
 
 ## <a name="create-the-data-model"></a>Creare il modello di dati
 
@@ -102,16 +102,15 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
-## <a name="load-data-from-a-streaming-source"></a>Caricare dati da un'origine di streaming
+## <a name="load-data-from-other-sources"></a>Caricare i dati da altre origini
 
-Oltre a caricare i dati archiviati su disco, ML.NET permette di caricare i dati da diverse origini di streaming, tra cui:
+Oltre a caricare i dati archiviati nei file, ML.NET permette di caricare i dati da altre origini tra cui:
 
 - Raccolte in memoria
 - JSON/XML
 - Database
 
-> [!IMPORTANT]
-> Si noti che quando si usano origini di streaming, ML.NET prevede input in forma di raccolta in memoria. Pertanto, quando si usano origini come JSON/XML, assicurarsi di formattare i dati come una raccolta in memoria.
+Si noti che quando si usano origini di streaming, ML.NET prevede input in forma di raccolta in memoria. Pertanto, quando si usano origini come JSON/XML, assicurarsi di formattare i dati come una raccolta in memoria.
 
 Considerando la raccolta in memoria seguente:
 

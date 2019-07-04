@@ -5,16 +5,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 3a642996da8f0126e59e21d3553a7d8ba73dab23
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 675369936b9f90620b03365104255a622855fa9f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422675"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401791"
 ---
 # <a name="new-modifier-c-reference"></a>Modificatore new (Riferimenti per C#)
 
 Se usata come modificatore di dichiarazione, la parola chiave `new` nasconde in modo esplicito un membro ereditato da una classe base. Quando si nasconde un membro ereditato, la versione derivata del membro sostituisce la versione della classe base. Sebbene sia possibile nascondere i membri senza usare il modificatore `new`, viene visualizzato un avviso del compilatore. Se si usa `new` in modo esplicito per nascondere un membro, esso elimina l'avviso.
+
+È anche possibile usare la parola chiave `new` per [creare un'istanza di un tipo](../operators/new-operator.md) o come [vincolo di tipo generico](../keywords/new-constraint.md).
 
 Per nascondere un membro ereditato, dichiararlo nella classe derivata usando lo stesso nome di membro e modificarlo con la parola chiave `new`. Ad esempio:
 
@@ -24,7 +26,7 @@ In questo esempio `BaseC.Invoke` è nascosto da `DerivedC.Invoke`. Il campo `x` 
 
 Un nome nascosto tramite ereditarietà accetta uno dei formati seguenti:
 
-- In genere, una costante, un campo, una proprietà o un tipo introdotto in una classe o uno struct nasconde tutti i membri della classe base che condividono il nome.  Esistono casi particolari.  Se, ad esempio, si dichiara che un nuovo campo con il nome `N` dispone di un tipo non richiamabile e un tipo di base dichiara che `N` sia un metodo, il nuovo campo non nasconde la dichiarazione di base nella sintassi di chiamata.  Per informazioni dettagliate, vedere la sezione "Member Lookup" (Ricerca di membri) nella sezione "Expressions" (Espressioni) in [C# 5.0 language specification](https://www.microsoft.com/download/details.aspx?id=7029) (Specifiche del linguaggio C# 5.0).
+- In genere, una costante, un campo, una proprietà o un tipo introdotto in una classe o uno struct nasconde tutti i membri della classe base che condividono il nome. Esistono casi particolari. Se, ad esempio, si dichiara che un nuovo campo con il nome `N` dispone di un tipo non richiamabile e un tipo di base dichiara che `N` sia un metodo, il nuovo campo non nasconde la dichiarazione di base nella sintassi di chiamata. Per altre informazioni, vedere la sezione [Ricerca di membri](~/_csharplang/spec/expressions.md#member-lookup) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
 
 - Un metodo inserito in una classe o uno struct nasconde proprietà, campi e tipi che condividono il nome con la classe base. Nasconde inoltre tutti i metodi della classe base con la stessa firma.
 
@@ -48,13 +50,13 @@ In questo esempio, una classe annidata nasconde una classe che ha lo stesso nome
 
 Se si rimuove il modificatore `new`, la compilazione e l'esecuzione del programma saranno comunque possibili, ma verrà visualizzato il messaggio di avviso riportato di seguito:
 
-```
+```text
 The keyword new is required on 'MyDerivedC.x' because it hides inherited member 'MyBaseC.x'.
 ```
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Per altre informazioni, vedere la sezione [Modificatore new](~/_csharplang/spec/classes.md#the-new-modifier) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Vedere anche
 

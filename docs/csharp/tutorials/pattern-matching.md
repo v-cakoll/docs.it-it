@@ -3,12 +3,12 @@ title: Usare funzionalità di criteri di ricerca per estendere i tipi di dati
 description: Questa esercitazione avanzata illustra come usare le tecniche dei criteri di ricerca per creare funzionalità con dati e algoritmi creati separatamente.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 58e4a9175752c7845507f48a3684747092dc609a
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: c42a917deee763e7c3e4e24949ec5c896d55016f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378075"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397839"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Esercitazione: Uso di funzionalità di criteri di ricerca per estendere i tipi di dati
 
@@ -145,7 +145,7 @@ Si può già osservare come i criteri consentano di creare algoritmi in cui il c
 L'autorità di regolazione dei pedaggi vuole incoraggiare i conducenti a viaggiare al massimo della capacità. Si è deciso di far pagare di più i veicoli con un minor numero di passeggeri e di agevolare i veicoli che viaggiano al completo, offrendo prezzi più bassi:
 
 - Automobili e taxi senza passeggeri pagano un extra di $ 0,50.
-- Automobili e taxi con due passeggeri usufruiscono di uno sconto di 0,50.
+- Automobili e taxi con due passeggeri usufruiscono di uno sconto di $ 0,50.
 - Automobili e taxi con tre o più passeggeri usufruiscono di uno sconto di $ 1,00.
 - Gli autobus con meno del 50% dei posti occupati pagano un extra di $ 2,00.
 - Gli autobus con più del 90% dei posti occupati usufruiscono di uno sconto di $ 1,00.
@@ -199,7 +199,12 @@ vehicle switch
 };
 ```
 
-L'autorità di regolazione dei pedaggi non considera il numero di passeggeri dei furgoni, ma applica tariffe più elevate in base alla categoria di peso dei furgoni. I furgoni oltre le 5000 libbre (2268 kg) pagano un extra di $ 5,00. I furgoni leggeri, sotto le 3000 libbre (1360 kg), usufruiscono di uno sconto di $ 2,00. Tale regola viene implementata con il codice seguente:
+L'autorità di regolazione dei pedaggi non considera il numero di passeggeri dei furgoni, L'ammontare dei pedaggi viene invece calcolato sulla base della classe di peso dei furgoni, come indicato di seguito:
+
+- I furgoni oltre le 5000 libbre (2268 kg) pagano un extra di $ 5,00.
+- I furgoni leggeri, sotto le 3000 libbre (1360 kg), usufruiscono di uno sconto di $ 2,00.
+
+Tale regola viene implementata con il codice seguente:
 
 ```csharp
 vehicle switch
