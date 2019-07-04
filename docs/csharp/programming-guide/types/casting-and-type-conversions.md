@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: bfcad2669c5ae34605c142f9834c52b4b84c36ae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cd989b47c87ef32371b45650d531bd8cbeb85032
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608098"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306958"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Cast e conversioni di tipi (Guida per programmatori C#)
 
@@ -30,7 +30,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Conversioni implicite**: non è necessaria alcuna sintassi speciale perché la conversione è indipendente dai tipi e i dati non andranno persi. Gli esempi includono conversioni dai tipi integrali più piccoli ai più grandi e conversioni dalle classi derivate alle classi di base.  
   
-- **Conversioni esplicite (cast)**: le conversioni esplicite richiedono un operatore cast. L'esecuzione di cast è obbligatoria se si prevede una possibile perdita di informazioni durante la conversione oppure se la conversione non riesce per altri motivi.  Alcuni esempi tipici includono la conversione numerica in un tipo con precisione inferiore o con un intervallo più piccolo e la conversione di un'istanza della classe di base in una classe derivata.  
+- **Conversioni esplicite (cast)** : le conversioni esplicite richiedono un operatore cast. L'esecuzione di cast è obbligatoria se si prevede una possibile perdita di informazioni durante la conversione oppure se la conversione non riesce per altri motivi.  Alcuni esempi tipici includono la conversione numerica in un tipo con precisione inferiore o con un intervallo più piccolo e la conversione di un'istanza della classe di base in una classe derivata.  
   
 - **Conversioni definite dall'utente**: le conversioni definite dall'utente vengono eseguite da metodi speciali che possono essere definiti per abilitare conversioni esplicite e implicite tra tipi personalizzati che non hanno una relazione di classe basata su una classe di base. Per altre informazioni, vedere [Operatori di conversione](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
   
@@ -83,7 +83,7 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
- Il linguaggio C# offre gli operatori [is](../../../csharp/language-reference/keywords/is.md) e [as](../../../csharp/language-reference/keywords/as.md) che consentono di testare la compatibilità prima di eseguire un cast. Per altre informazioni, vedere [Procedura: Eseguire il cast sicuro con i criteri di ricerca e gli operatori as e is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
+ Il linguaggio C# offre l'operatore [is](../../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) che consente di testare la compatibilità prima di eseguire effettivamente un cast. Per altre informazioni, vedere [Procedura: Eseguire il cast sicuro tramite i criteri di ricerca e gli operatori as e is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -93,7 +93,7 @@ Giraffe g2 = (Giraffe) a;
 
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [Tipi](../../../csharp/programming-guide/types/index.md)
-- [Operatore ()](../../../csharp/language-reference/operators/invocation-operator.md)
+- [Operatore ()](../../../csharp/language-reference/operators/type-testing-and-conversion-operators.md#cast-operator-)
 - [explicit](../../../csharp/language-reference/keywords/explicit.md)
 - [implicit](../../../csharp/language-reference/keywords/implicit.md)
 - [Operatori di conversione](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 60ee4b8c5ac3a572fd352140c968a8ec8f3a084a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3e5bb96357293c42d4bd2161756260fd849cc099
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632981"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267786"
 ---
 # <a name="yield-c-reference"></a>yield (Riferimenti per C#)
 
@@ -30,7 +30,7 @@ yield break;
 
 Si utilizza un'istruzione `yield return` per restituire un elemento alla volta.
 
-Viene usato un metodo iteratore se si usa un'istruzione [foreach](foreach-in.md) o una query LINQ. Ogni iterazione del ciclo `foreach` chiama il metodo iteratore. Quando si raggiunge un'istruzione `yield return` nel metodo iteratore, viene restituito `expression` e viene mantenuta la posizione corrente nel codice. L'esecuzione viene riavviata a partire da quella posizione la volta successiva che viene chiamata la funzione iteratore.
+La sequenza restituita da un metodo iteratore può essere usata con un'istruzione [foreach](foreach-in.md) o una query LINQ. Ogni iterazione del ciclo `foreach` chiama il metodo iteratore. Quando si raggiunge un'istruzione `yield return` nel metodo iteratore, viene restituito `expression` e viene mantenuta la posizione corrente nel codice. L'esecuzione viene riavviata a partire da quella posizione la volta successiva che viene chiamata la funzione iteratore.
 
 È possibile utilizzare un'istruzione `yield break` per terminare l'iterazione.
 

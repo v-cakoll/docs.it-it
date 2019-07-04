@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb130c17fa7b2a5d02f55a2944be386bc1bb334c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e3b99606698124455ca9b325042ffbe430915aee
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750722"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170768"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Frammento di alberi risultato nelle trasformazioni
 
 > [!NOTE]
-> La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](migrating-from-the-xsltransform-class.md).
+> La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in .NET Framework 2.0. È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](migrating-from-the-xsltransform-class.md).
 
  I frammenti di nodi, detti anche frammenti di albero risultato, sono semplicemente un particolare tipo di set di nodi. Sui frammenti di nodi è possibile eseguire le stesse funzioni che sono eseguibili sui set di nodi. È inoltre possibile usare la funzione `node-set()` per convertire un frammento di albero risultato in un set di nodi, quindi usarlo in qualsiasi posizione adatta.
 

@@ -1,102 +1,174 @@
 ---
 title: Modelli personalizzati per dotnet new
 description: Informazioni sui modelli personalizzati per qualsiasi tipo di file o progetto .NET.
-author: mairaw
-ms.date: 08/11/2017
-ms.openlocfilehash: 6ce53cab308ed404974e4d736e735bc82ac04fe6
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+author: thraka
+ms.date: 06/14/2019
+ms.openlocfilehash: d7e9c549ff132deb4682ba81ab5ff354d6cc1522
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66299913"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169625"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelli personalizzati per dotnet new
 
-[.NET Core SDK](https://www.microsoft.com/net/download/core) viene fornito con molti modelli pre-installati da usare con il comando [ `dotnet new`](dotnet-new.md). A partire da .NET Core 2.0, è possibile creare modelli personalizzati per qualsiasi tipo di progetto, ad esempio un'app, un servizio, uno strumento o una libreria di classi. È possibile anche creare un modello che restituisce uno o più file indipendenti, ad esempio un file di configurazione.
+[.NET Core SDK](https://www.microsoft.com/net/download/core) viene distribuito con molti modelli già installati e pronti per l'uso. Il [comando `dotnet new`](dotnet-new.md) non consente solo di usare un modello, ma anche di installarlo e disinstallarlo. A partire da .NET Core 2.0, è possibile creare modelli personalizzati per qualsiasi tipo di progetto, ad esempio un'app, un servizio, uno strumento o una libreria di classi. È possibile anche creare un modello che restituisce uno o più file indipendenti, ad esempio un file di configurazione.
 
-È possibile installare modelli personalizzati da un pacchetto NuGet in qualsiasi feed, facendo riferimento a un file *nupkg* NuGet direttamente o specificando una directory del file system che contiene il modello. Il motore del modello offre funzionalità che consentono di sostituire i valori, includere ed escludere file e aree del file ed eseguire operazioni di elaborazione personalizzata quando si usa il modello.
+È possibile installare modelli personalizzati da un pacchetto NuGet in qualsiasi feed NuGet, facendo direttamente riferimento a un file NuGet con estensione *nupkg* o specificando una directory del file system che contiene il modello. Il motore del modello offre funzionalità che consentono di sostituire i valori, includere ed escludere file ed eseguire operazioni di elaborazione personalizzate quando si usa il modello.
 
 Il motore del modello è open source e il repository del codice online si trova in [dotnet/templating](https://github.com/dotnet/templating/) su GitHub. Visitare il repository [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) per gli esempi di modelli. Più modelli, inclusi i modelli di terze parti, sono disponibili in [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Modelli disponibili per dotnet new) su GitHub. Per altre informazioni sulla creazione e l'uso di modelli personalizzati, vedere [Come creare modelli personalizzati per dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) e la [wiki del repository GitHub dotnet/templating](https://github.com/dotnet/templating/wiki).
 
 Per seguire una procedura dettagliata e creare un modello, vedere l'esercitazione [Creare un modello personalizzato per dotnet new](~/docs/core/tutorials/create-custom-template.md).
 
+### <a name="net-default-templates"></a>Modelli predefiniti .NET
+
+Quando si installa [.NET Core SDK](https://www.microsoft.com/net/download/core), si riceve circa una decina di modelli predefiniti per la creazione di progetti e file, tra cui app console, librerie di classi, progetti unit test, app ASP.NET Core (inclusi i progetti [Angular](https://angular.io/) e [React](https://facebook.github.io/react/)) e file di configurazione. Per elencare i modelli predefiniti, eseguire il comando `dotnet new` con l'opzione `-l|--list`:
+
+```console
+dotnet new --list
+```
+
 ## <a name="configuration"></a>Configurazione
 
 Un modello è costituito dai componenti seguenti:
 
-- File e cartelle di origine
-- Un file di configurazione (*template.json*)
+- File e cartelle di origine.
+- Un file di configurazione (*template.json*).
 
 ### <a name="source-files-and-folders"></a>File e cartelle di origine
 
-I file e le cartelle di origine includono tutti i file e le cartelle che si desidera vengano usati dal motore del modello quando viene eseguito il comando `dotnet new <TEMPLATE>`. Il motore del modello è progettato per usare *progetti eseguibili* come codice sorgente per creare i progetti. Ciò comporta diversi vantaggi:
+I file e le cartelle di origine includono tutti i file e le cartelle che devono essere usati dal motore del modello quando viene eseguito il comando `dotnet new <TEMPLATE>`. Il motore del modello è progettato per usare *progetti eseguibili* come codice sorgente per creare i progetti. Ciò comporta diversi vantaggi:
 
 - Il motore del modello non richiede di inserire speciali token nel codice sorgente del progetto.
 - I file di codice non sono file speciali o modificati in alcun modo per essere usati con il motore del modello. Gli strumenti usati in genere quando si usano progetti funzionano quindi anche con il contenuto del modello.
 - Compilare, eseguire ed effettuare il debug dei progetti di modello, proprio come per qualsiasi altro progetto.
-- È possibile creare rapidamente un modello da un progetto esistente aggiungendo semplicemente un file di configurazione *template.json* al progetto.
+- È possibile creare rapidamente un modello da un progetto esistente aggiungendo semplicemente un file di configurazione *./.template.config/template.json* al progetto.
 
-File e cartelle archiviati nel modello non sono limitati ai tipi di progetto .NET formali, ad esempio soluzioni .NET Framework o .NET Core. Le cartelle e i file di origine possono essere costituiti da qualsiasi contenuto che si vuole creare quando viene usato il modello, anche se il motore del modello produce un solo file per l'output, ad esempio un file di configurazione o un file di soluzione. Ad esempio, è possibile creare un modello che contiene un file di origine *web.config* e crea un file *web.config* modificato per i progetti in cui viene usato il modello. Le modifiche ai file di origine si basano sulla logica e le impostazioni specificate nel file di configurazione *template.json*, insieme ai valori forniti dall'utente passati come opzioni al comando `dotnet new <TEMPLATE>`.
+I file e le cartelle archiviati nel modello non sono limitati ai tipi di progetto .NET formali. I file e le cartelle di origine possono essere costituiti da qualsiasi contenuto che si vuole creare quando viene usato il modello, anche se il motore del modello genera un solo file di output.
+
+I file generati dal modello possono essere modificati in base alla logica e alle impostazioni specificate nel file di configurazione *template.json*. L'utente può eseguire l'override di queste impostazioni passando opzioni al comando `dotnet new <TEMPLATE>`. Un esempio comune di logica personalizzata consiste nel fornire un nome per una classe o una variabile nel file di codice che viene distribuito da un modello.
 
 ### <a name="templatejson"></a>template.json
 
 Il file *template.json* si trova in una cartella *.template.config* nella directory radice del modello. Il file fornisce informazioni di configurazione al motore del modello. Per la configurazione minima sono necessari i membri visualizzati nella tabella seguente, sufficiente per creare un modello funzionale.
 
-| Member            | Tipo          | Description |
+| Member            | Tipo          | DESCRIZIONE |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | Lo schema JSON per il file *template.json*. Gli editor che supportano gli schemi JSON abilitano le funzionalità di modifica JSON quando viene specificato lo schema. Ad esempio, [Visual Studio Code](https://code.visualstudio.com/) richiede questo membro per abilitare IntelliSense. Usare un valore di `http://json.schemastore.org/template`. |
 | `author`          | string        | L'autore del modello. |
-| `classifications` | array(string) | Zero o più caratteristiche del modello che un utente può usare per individuare il modello durante la ricerca. Le classificazioni vengono visualizzate anche nella colonna *Tags* quando viene visualizzata in un elenco di modelli generati usando il comando <code>dotnet new -l&#124;--list</code>. |
+| `classifications` | array(string) | Zero o più caratteristiche del modello che un utente può usare per individuare il modello durante la ricerca. Le classificazioni vengono visualizzate anche nella colonna *Tags* quando viene visualizzata in un elenco di modelli generati usando il comando `dotnet new -l|--list`. |
 | `identity`        | string        | Un nome univoco per questo modello. |
 | `name`            | string        | Il nome per il modello che verrà visualizzato agli utenti. |
-| `shortName`       | string        | Una valore breve predefinito per la selezione del modello che si applica agli ambienti in cui il nome del modello viene specificato dall'utente e non selezionato tramite un'interfaccia utente grafica. Ad esempio, il nome breve è utile quando si usano i modelli da un prompt dei comandi con i comandi dell'interfaccia della riga di comando. |
+| `shortName`       | string        | Un nome breve predefinito per la selezione del modello che si applica agli ambienti in cui il nome del modello viene specificato dall'utente e non selezionato tramite un'interfaccia utente grafica. Ad esempio, il nome breve è utile quando si usano i modelli da un prompt dei comandi con i comandi dell'interfaccia della riga di comando. |
 
-#### <a name="example"></a>Esempio:
+Lo schema completo per il file *template.json* è disponibile nell'[archivio degli schemi JSON](http://json.schemastore.org/template). Per altre informazioni sul file *template.json*, vedere il [wiki sulla creazione di modelli dotnet](https://github.com/dotnet/templating/wiki).
+
+#### <a name="example"></a>Esempio
+
+Qui è ad esempio riportata la cartella di un modello che contiene due file di contenuto: *console.cs* e *readme.txt*. Si noti che è presente la cartella obbligatoria denominata *.template.config* che contiene il file *template.json*.
+
+```text
+└───mytemplate
+    │   console.cs
+    │   readme.txt
+    │
+    └───.template.config
+            template.json
+```
+
+Il file *template.json* ha un aspetto simile al seguente:
 
 ```json
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "Catalina Garcia",
+  "author": "Travis Chau",
   "classifications": [ "Common", "Console" ],
-  "identity": "GarciaSoftware.ConsoleTemplate.CSharp",
-  "name": "Garcia Software Console Application",
-  "shortName": "garciaconsole"
+  "identity": "AdatumCorporation.ConsoleTemplate.CSharp",
+  "name": "Adatum Corporation Console Application",
+  "shortName": "adatumconsole"
 }
 ```
 
-Lo schema completo per il file *template.json* è disponibile nell'[archivio degli schemi JSON](http://json.schemastore.org/template).
-
-## <a name="net-default-templates"></a>Modelli predefiniti .NET
-
-Quando si installa [.NET Core SDK](https://www.microsoft.com/net/download/core), si riceve circa una decina di modelli predefiniti per la creazione di progetti e file, tra cui app console, librerie di classi, progetti unit test, app ASP.NET Core (inclusi i progetti [Angular](https://angular.io/) e [React](https://facebook.github.io/react/)) e file di configurazione. Per elencare i modelli predefiniti, eseguire il comando `dotnet new` con l'opzione `-l|--list`:
-
-```console
-dotnet new -l
-```
+La cartella *mytemplate* è un pacchetto di modelli installabile. Dopo aver installato il pacchetto, è possibile usare `shortName` con il comando `dotnet new`. `dotnet new adatumconsole`, ad esempio, genera come output i file `console.cs` e `readme.txt` nella cartella corrente.
 
 ## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a>Compressione di un modello in un pacchetto NuGet (file nupkg)
 
-Attualmente il pacchetto di un modello personalizzato viene creato in Windows con [nuget.exe](https://dist.nuget.org/win-x86-commandline/latest/nuget.exe), non con [dotnet pack](dotnet-pack.md). Per la creazione del pacchetto multipiattaforma, è consigliabile usare [NuGetizer 3000](https://github.com/NuGet/Home/wiki/NuGetizer-3000).
+Un modello personalizzato viene compresso in un pacchetto con il comando [dotnet pack](dotnet-pack.md) e un file con estensione *csproj*. In alternativa, è possibile usare [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) con il comando [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) e un file con estensione *nuspec*. Per l'uso di NuGet, tuttavia, è necessario .NET Framework su Windows e [Mono](https://www.mono-project.com/) su Linux e MacOS.
 
-Il contenuto della cartella del progetto e il relativo file *.template.config/template.json* vengono inseriti in una cartella denominata *content*. Accanto alla cartella *content* aggiungere un file [ *nuspec* ](/nuget/create-packages/creating-a-package), ovvero un file manifesto XML che descrive il contenuto di un pacchetto e guida il processo di creazione del pacchetto NuGet. All'interno di un elemento  **\<packageTypes>** nel file *nuspec*, includere un elemento  **\<packageType>** con un valore dell'attributo `name` di `Template`. La cartella *content* e il file *nuspec* devono trovarsi nella stessa directory. La tabella mostra gli elementi del file *nuspec* minimi necessari per produrre un modello come pacchetto NuGet.
+Il file con estensione *csproj* è leggermente diverso da un file *csproj* di un progetto di codice tradizionale. Osservare le seguenti impostazioni:
 
-| Elemento            | Tipo   | Description |
-| ------------------ | ------ | ----------- |
-| **\<authors>**     | string | Elenco con valori delimitati da virgola di autori di pacchetti, corrispondenti ai nomi di profili in nuget.org. Gli autori, visualizzati nella raccolta NuGet in nuget.org, vengono usati per creare riferimenti incrociati ai pacchetti dello stesso autore. |
-| **\<description>** | string | Descrizione lunga del pacchetto per la visualizzazione dell'interfaccia utente. |
-| **\<id>**          | string | L'identificatore del pacchetto senza distinzione tra maiuscole e minuscole che deve essere univoco in nuget.org o qualsiasi raccolta in cui risiederà il pacchetto. L'ID non può contenere spazi o caratteri non validi per un URL e in genere segue le regole dello spazio dei nomi .NET. Vedere [Choosing a unique package identifier and setting the version number](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) (Scelta di un identificatore univoco del pacchetto e impostazione del numero di versione) per il materiale sussidiario. |
-| **\<packageType>** | string | Inserire l'elemento all'interno di un elemento  **\<packageTypes >** tra elementi  **\<metadata >** . Impostare l'attributo `name` dell'elemento **\<packageType>** su `Template`. |
-| **\<version>**     | string | La versione del pacchetto secondo il criterio major.minor.patch. I numeri di versione possono includere un suffisso di versione non definitiva, come descritto nell'argomento [Versioni non definitive](/nuget/create-packages/prerelease-packages#semantic-versioning). |
+01. È inclusa l'impostazione `<PackageType>` con il valore `Template`.
+01. È inclusa l'impostazione `<PackageVersion>` con un [numero di versione NuGet](/nuget/reference/package-versioning) valido.
+01. È inclusa l'impostazione `<PackageId>` con un identificatore univoco. Questo identificatore è utile per disinstallare il pacchetto di modelli e viene usato dai feed NuGet per registrare tale pacchetto.
+01. Le impostazioni dei metadati generici devono essere definite: `<Title>`, `<Authors>`, `<Description>` e `<Tags>`.
+01. L'impostazione `<TargetFramework>` deve essere definita, anche se non viene usato il file binario generato dal processo del modello. Nell'esempio seguente è definito il valore `netstandard2.0`.
 
-Vedere il [riferimento a .nuspec](/nuget/schema/nuspec) per lo schema completo del file *nuspec*. Un file *nuspec* di esempio per un modello viene visualizzato nell'esercitazione [Creare un modello personalizzato per dotnet new](~/docs/core/tutorials/create-custom-template.md).
+Per un pacchetto di modelli, nel formato NuGet con estensione *nupkg*, è necessario che tutti i modelli siano archiviati nella cartella *content* all'interno del pacchetto. Vi sono altre impostazioni da aggiungere a un file con estensione *csproj* per assicurarsi che il file *nupkg* generato possa essere installato come pacchetto di modelli:
 
-[Creare un pacchetto](/nuget/create-packages/creating-a-package#creating-the-package) usando il comando `nuget pack <PATH_TO_NUSPEC_FILE>`.
+01. L'impostazione `<IncludeContentInPack>` ha valore `true` in modo da includere qualsiasi file definito come **content** del progetto nel pacchetto NuGet.
+01. L'impostazione `<IncludeBuildOutput>` ha valore `false` in modo da escludere tutti i file binari generati dal compilatore in base al pacchetto NuGet.
+01. L'impostazione `<ContentTargetFolders>` ha valore `content`. Ciò consente di assicurarsi che i file impostati come **content** vengano archiviati nella cartella *content* del pacchetto NuGet. Questa cartella del pacchetto NuGet viene analizzata dal sistema di modelli dotnet.
+
+Un modo semplice per escludere tutti i file del codice dalla compilazione in base al progetto di modello è quello di usare l'elemento `<Compile Remove="**\*" />` nel file di progetto, all'interno di un elemento `<ItemGroup>`.
+
+Un modo semplice per definire la struttura del pacchetto di modelli è quello di inserire tutti i modelli in singole cartelle e quindi ogni cartella di modello all'interno di una cartella *templates* che si trova nella stessa directory del file con estensione *csproj*. In questo modo, è possibile usare un singolo elemento di progetto per includere tutti i file e le cartelle in *templates* come **content**. All'interno di un elemento `<ItemGroup>` creare un elemento `<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />`.
+
+Di seguito è riportato un esempio di file con estensione *csproj* in cui sono rispettate tutte le linee guida indicate sopra. Comprime la sottocartella *templates* nella cartella *content* del pacchetto ed esclude qualsiasi file di codice compilato.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.0</PackageVersion>
+    <PackageId>AdatumCorporation.Utility.Templates</PackageId>
+    <Title>AdatumCorporation Templates</Title>
+    <Authors>Me</Authors>
+    <Description>Templates to use when creating an application for Adatum Corporation.</Description>
+    <Tags>dotnet-new;templates;contoso</Tags>
+    <TargetFramework>netstandard2.0</TargetFramework>
+
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+</Project>
+```
+
+L'esempio seguente illustra la struttura di file e cartelle necessaria per usare un file con estensione *csproj* per creare un pacchetto di modelli. Il file *MyDotnetTemplates.csproj* e la cartella *templates* si trovano entrambi nella radice di una directory denominata *project_folder*. La cartella *templates* contiene due modelli, *mytemplate1* e *mytemplate2*. Ogni modello ha file di contenuto e una cartella *.template.config* con un file di configurazione *template.json*.
+
+```text
+project_folder
+│   MyDotnetTemplates.csproj
+│
+└───templates
+    ├───mytemplate1
+    │   │   console.cs
+    │   │   readme.txt
+    │   │
+    │   └───.template.config
+    │           template.json
+    │
+    └───mytemplate2
+        │   otherfile.cs
+        │
+        └───.template.config
+                template.json
+```
 
 ## <a name="installing-a-template"></a>Installazione di un modello
 
-Installare un modello personalizzato da un pacchetto NuGet in qualsiasi feed NuGet, facendo riferimento direttamente a un file *nupkg* o specificando una directory del file system che contiene la configurazione dei modelli. Usare l'opzione `-i|--install` con il comando [dotnet new](dotnet-new.md).
+Per installare un pacchetto, usare il comando [dotnet new -i|--install](dotnet-new.md).
 
 ### <a name="to-install-a-template-from-a-nuget-package-stored-at-nugetorg"></a>Per installare un modello da un pacchetto NuGet archiviato in nuget.org
+
+Usare l'identificatore del pacchetto NuGet per installare un pacchetto di modelli.
 
 ```console
 dotnet new -i <NUGET_PACKAGE_ID>
@@ -104,47 +176,73 @@ dotnet new -i <NUGET_PACKAGE_ID>
 
 ### <a name="to-install-a-template-from-a-local-nupkg-file"></a>Per installare un modello da un file nupkg locale
 
+Specificare il percorso di un file di pacchetto NuGet con estensione *nupkg*.
+
 ```console
 dotnet new -i <PATH_TO_NUPKG_FILE>
 ```
 
 ### <a name="to-install-a-template-from-a-file-system-directory"></a>Per installare un modello da una directory del file system
 
-`FILE_SYSTEM_DIRECTORY` è la cartella di progetto che contiene il progetto e la cartella *.template.config*:
+I modelli possono essere installati da una cartella di modello, come *mytemplate1* nell'esempio precedente. Specificare il percorso della cartella *.template.config*. Il percorso della directory del modello non deve essere assoluto. Un percorso assoluto è tuttavia necessario per disinstallare un modello installato da una cartella.
 
 ```console
 dotnet new -i <FILE_SYSTEM_DIRECTORY>
 ```
 
+## <a name="get-a-list-of-installed-templates"></a>Ottenere un elenco dei modelli installati
+
+Il comando uninstall, senza altri parametri, elenca tutti i modelli installati.
+
+```console
+dotnet new -u
+```
+
+Il comando restituisce un output simile al seguente:
+
+```console
+Template Instantiation Commands for .NET Core CLI
+
+Currently installed items:
+  Microsoft.DotNet.Common.ItemTemplates
+    Templates:
+      global.json file (globaljson)
+      NuGet Config (nugetconfig)
+      Solution File (sln)
+      Dotnet local tool manifest file (tool-manifest)
+      Web Config (webconfig)
+  Microsoft.DotNet.Common.ProjectTemplates.3.0
+    Templates:
+      Class library (classlib) C#
+      Class library (classlib) F#
+      Class library (classlib) VB
+      Console Application (console) C#
+      Console Application (console) F#
+      Console Application (console) VB
+...
+```
+
+Il primo livello degli elementi dopo `Currently installed items:` è costituito dagli identificatori usati nella disinstallazione di un modello. Nell'esempio precedente sono elencati `Microsoft.DotNet.Common.ItemTemplates` e `Microsoft.DotNet.Common.ProjectTemplates.3.0`. Se il modello è stato installato usando un percorso del file system, questo identificatore corrisponde al percorso della cartella *.template.config*.
+
 ## <a name="uninstalling-a-template"></a>Disinstallazione di un modello
 
-Disinstallare un modello personalizzato facendo riferimento a un pacchetto NuGet in base al relativo `id` o specificando una directory del file system che contiene una configurazione del modello. Usare l'opzione `-u|--uninstall` con il comando [dotnet new](dotnet-new.md).
+Per disinstallare un pacchetto, usare il comando [dotnet new -u|--uninstall](dotnet-new.md).
 
-### <a name="to-uninstall-a-template-from-a-nuget-package-stored-at-nugetorg"></a>Per disinstallare un modello da un pacchetto NuGet archiviato in nuget.org
-
-```console
-dotnet new -u <NUGET_PACKAGE_ID>
-```
-
-### <a name="to-uninstall-a-template-from-a-local-nupkg-file"></a>Per disinstallare un modello da un file nupkg locale
-
-Per disinstallare il modello, non provare a usare il percorso del file *nupkg*. Il tentativo di disinstallare un modello usando `dotnet new -u <PATH_TO_NUPKG_FILE>` ha esito negativo. Fare riferimento al pacchetto in base al relativo `id`:
+Se il pacchetto è stato installato tramite un feed NuGet o direttamente da un file con estensione *nupkg*, specificare l'identificatore.
 
 ```console
 dotnet new -u <NUGET_PACKAGE_ID>
 ```
 
-### <a name="to-uninstall-a-template-from-a-file-system-directory"></a>Per disinstallare un modello da una directory del file system
-
-`FILE_SYSTEM_DIRECTORY` è la cartella di progetto che contiene il progetto e la cartella *.template.config*. Il percorso specificato deve essere il percorso assoluto. Il tentativo di disinstallare un modello usando un percorso relativo ha esito negativo. Per altre informazioni, vedere l'articolo [dotnet new](dotnet-new.md).
+Se il pacchetto è stato installato specificando un percorso per la cartella *.template.config*, usare tale percorso **assoluto** per disinstallare il pacchetto. È possibile visualizzare il percorso assoluto del modello nell'output generato dal comando `dotnet new -u`. Per altre informazioni, vedere la sezione precedente [Ottenere un elenco dei modelli installati](#get-a-list-of-installed-templates).
 
 ```console
-dotnet new -u <FILE_SYSTEM_DIRECTORY>
+dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 ```
 
 ## <a name="create-a-project-using-a-custom-template"></a>Creare un progetto usando un modello personalizzato
 
-Dopo l'installazione di un modello, usare il modello eseguendo il comando `dotnet new <TEMPLATE>` come si farebbe con qualsiasi altro modello pre-installato. È possibile anche specificare [options](dotnet-new.md#options) al comando `dotnet new`, incluse le opzioni specifiche del modello configurate nelle impostazioni del modello. Specificare il nome breve del modello direttamente nel comando:
+Dopo l'installazione di un modello, usare il modello eseguendo il comando `dotnet new <TEMPLATE>` come si farebbe con qualsiasi altro modello pre-installato. È possibile anche specificare [options](dotnet-new.md#options) per il comando `dotnet new`, includendo le opzioni specifiche del modello configurate nelle impostazioni del modello. Specificare il nome breve del modello direttamente nel comando:
 
 ```console
 dotnet new <TEMPLATE>

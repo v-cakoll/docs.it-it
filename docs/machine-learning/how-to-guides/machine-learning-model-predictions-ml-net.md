@@ -1,16 +1,16 @@
 ---
 title: Effettuare previsioni con un modello con training
 description: Informazioni su come effettuare previsioni con un modello con training
-ms.date: 05/03/2019
+ms.date: 06/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: dac3b3bfa68776975a2e5e762f46db16e39d61fb
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065604"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307393"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>Effettuare previsioni con un modello con training
 
@@ -92,7 +92,7 @@ Se si accede alla proprietà `Score` dell'oggetto `prediction`, si otterrà un v
 
 ## <a name="batch-prediction"></a>Previsione in batch
 
-Caricare i dati seguenti in [`IDataView`](xref:Microsoft.ML.IDataView). Poiché `CurrentPrice` è la destinazione o etichetta per cui si tenta di effettuare la previsione usando i nuovi dati, si presuppone che non includa ancora alcun valore.
+Caricare i dati seguenti in [`IDataView`](xref:Microsoft.ML.IDataView). In questo caso, il nome di [`IDataView`](xref:Microsoft.ML.IDataView) è `inputData`. Poiché `CurrentPrice` è la destinazione o etichetta per cui si tenta di effettuare la previsione usando i nuovi dati, si presuppone che non includa ancora alcun valore.
 
 ```csharp
 // Actual data

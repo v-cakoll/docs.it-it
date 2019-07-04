@@ -5,12 +5,12 @@ ms.date: 05/02/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 51ef4b55b1518381881e57d83fd43f8ec7f786c6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1037a1f1c21ef2c9b9a87a070a7d2003c1e76eb4
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645056"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307375"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>Descrivere le previsioni del modello con Permutation Feature Importance
 
@@ -26,7 +26,7 @@ Inoltre, evidenziando le funzionalità più importanti, i generatori di modelli 
 
 Le funzionalità del set di dati usate per questo esempio si trovano dalla colonna 1 alla colonna 12. L'obiettivo consiste nella previsione di `Price`. 
 
-| Colonna | Funzionalità | Description 
+| Colonna | Funzionalità | DESCRIZIONE 
 | --- | --- | --- |
 | 1 | CrimeRate | Tasso di criminalità pro capite
 | 2 | ResidentialZones | Zone residenziali della città

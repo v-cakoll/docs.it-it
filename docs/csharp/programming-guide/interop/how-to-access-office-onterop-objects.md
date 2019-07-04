@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 382ecb17654377e8d37e1b3a572ed84442d76b1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 76bd9d9bce8e41605b96e979c2a39ea15e1d15ad
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302998"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169947"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C# (Guida per programmatori C#)
 Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Office. Le nuove funzionalità includono argomenti denominati e facoltativi, un nuovo tipo chiamato `dynamic` e la possibilità di passare argomenti a parametri di riferimento nei metodi COM come se fossero parametri di valore.  
@@ -76,7 +76,7 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
 1. Aggiungere il seguente metodo alla classe `Program` per impostare un foglio di lavoro di Excel.  
   
-     Il metodo <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> usa un parametro facoltativo per specificare un modello particolare. I parametri facoltativi, una novità di [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], consentono di omettere l'argomento per il parametro se si vuole usare il valore predefinito del parametro. Poiché nessun argomento viene inviato nel codice seguente, `Add` usa il modello predefinito e crea una nuova cartella di lavoro. L'istruzione equivalente nelle precedenti versioni di C# richiede un argomento segnaposto: `ExcelApp.Workbooks.Add(Type.Missing)`.  
+     Il metodo <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> usa un parametro facoltativo per specificare un modello particolare. I parametri facoltativi, una novità di C# 4, consentono di omettere l'argomento per il parametro se si vuole usare il valore predefinito del parametro. Poiché nessun argomento viene inviato nel codice seguente, `Add` usa il modello predefinito e crea una nuova cartella di lavoro. L'istruzione equivalente nelle precedenti versioni di C# richiede un argomento segnaposto: `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#4)]  
   
@@ -96,7 +96,7 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
-     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], e versioni successive, converte automaticamente l'oggetto restituito `Object` in `dynamic` se si fa riferimento all'assembly con l'opzione del compilatore [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) o, allo stesso modo, se la proprietà **Incorpora tipi di interoperabilità** di Excel viene impostata su true. True è il valore predefinito di questa proprietà.  
+     C# 4 e versioni successive convertono automaticamente l'oggetto `Object` restituito in `dynamic` se si fa riferimento all'assembly dall'opzione del compilatore [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) o, analogamente, se la proprietà **Incorpora tipi di interoperabilità** di Excel è impostata su true. True è il valore predefinito di questa proprietà.  
   
 ## <a name="to-run-the-project"></a>Per eseguire il progetto  
   
@@ -110,13 +110,13 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
 ## <a name="to-add-a-word-document"></a>Per aggiungere un documento di Word  
   
-1. Per illustrare altri modi in cui [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], e versioni successive, consente di migliorare la programmazione di Office, il codice seguente apre un'applicazione Word e crea un'icona di collegamento al foglio di lavoro di Excel.  
+1. Per illustrare altri modi in cui C# 4 e versioni successive consentono di migliorare la programmazione di Office, il codice seguente apre un'applicazione Word e crea un'icona di collegamento al foglio di lavoro di Excel.  
   
-     Incollare il metodo `CreateIconInWordDoc`, fornito più avanti in questo passaggio, nella classe `Program`. `CreateIconInWordDoc` usa argomenti denominati e facoltativi per ridurre la complessità delle chiamate ai metodi di <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> e <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Queste chiamate incorporano altre due nuove funzionalità introdotte in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] che semplificano le chiamate ai metodi COM con parametri di riferimento. In primo luogo, è possibile inviare argomenti ai parametri di riferimento come se fossero parametri di valore. In altre parole, è possibile inviare i valori direttamente, senza creare una variabile per ogni parametro referenziato. Il compilatore genera variabili temporanee per conservare i valori degli argomenti ed elimina le variabili restituite dalla chiamata. In secondo luogo, è possibile omettere la parola chiave `ref` nell'elenco di argomenti.  
+     Incollare il metodo `CreateIconInWordDoc`, fornito più avanti in questo passaggio, nella classe `Program`. `CreateIconInWordDoc` usa argomenti denominati e facoltativi per ridurre la complessità delle chiamate ai metodi di <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> e <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Queste chiamate incorporano altre due nuove funzionalità introdotte in C# 4 che semplificano le chiamate ai metodi COM con parametri di riferimento. In primo luogo, è possibile inviare argomenti ai parametri di riferimento come se fossero parametri di valore. In altre parole, è possibile inviare i valori direttamente, senza creare una variabile per ogni parametro referenziato. Il compilatore genera variabili temporanee per conservare i valori degli argomenti ed elimina le variabili restituite dalla chiamata. In secondo luogo, è possibile omettere la parola chiave `ref` nell'elenco di argomenti.  
   
-     Il metodo `Add` ha quattro parametri di riferimento, tutti facoltativi. In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], o versioni successive, è possibile omettere gli argomenti per alcuni o tutti i parametri se si vogliono usare i valori predefiniti. In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] e versioni precedenti, è necessario fornire un argomento per ogni parametro e l'argomento deve essere una variabile perché i parametri sono di riferimento.  
+     Il metodo `Add` ha quattro parametri di riferimento, tutti facoltativi. In C# 4 o versioni successive è possibile omettere gli argomenti per alcuni o tutti i parametri se si vogliono usare i valori predefiniti. In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] e versioni precedenti, è necessario fornire un argomento per ogni parametro e l'argomento deve essere una variabile perché i parametri sono di riferimento.  
   
-     Il metodo `PasteSpecial` inserisce il contenuto degli Appunti. Il metodo ha sette parametri di riferimento, tutti facoltativi. Il codice seguente consente di specificare gli argomenti per due di essi: `Link`, per creare un collegamento all'origine del contenuto degli Appunti e `DisplayAsIcon`, per visualizzare il collegamento come icona. In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], è possibile usare argomenti denominati per questi due parametri e omettere gli altri. Anche se si tratta di parametri di riferimento, non è necessario usare la parola chiave `ref` o creare variabili per inviarle come argomenti. È possibile inviare direttamente i valori. In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] e versioni precedenti, è necessario inviare un argomento variabile per ogni parametro referenziato.  
+     Il metodo `PasteSpecial` inserisce il contenuto degli Appunti. Il metodo ha sette parametri di riferimento, tutti facoltativi. Il codice seguente consente di specificare gli argomenti per due di essi: `Link`, per creare un collegamento all'origine del contenuto degli Appunti e `DisplayAsIcon`, per visualizzare il collegamento come icona. In C# 4 è possibile usare argomenti denominati per questi due parametri e omettere gli altri. Anche se si tratta di parametri di riferimento, non è necessario usare la parola chiave `ref` o creare variabili per inviarle come argomenti. È possibile inviare direttamente i valori. In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] e versioni precedenti, è necessario inviare un argomento variabile per ogni parametro referenziato.  
   
      [!code-csharp[csProgGuideOfficeHowTo#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#9)]  
   
@@ -142,7 +142,7 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
      Inoltre, la programmazione è più semplice perché i tipi richiesti e restituiti dai metodi COM possono essere rappresentati usando il tipo `dynamic` anziché `Object`. Le variabili di tipo `dynamic` non saranno valutate fino al runtime, eliminando la necessità del cast esplicito. Per altre informazioni, vedere [Uso del tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
-     In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], il comportamento predefinito consiste nell'incorporare le informazioni di tipo invece di usare i PIA. A causa di tale impostazione predefinita, molti degli esempi precedenti vengono semplificati perché non è necessario eseguire il cast esplicito. Ad esempio, la dichiarazione di `worksheet` in `DisplayInExcel` è scritta come `Excel._Worksheet workSheet = excelApp.ActiveSheet` piuttosto che `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Anche le chiamate a `AutoFit` nello stesso metodo richiederebbero il cast esplicito senza valore predefinito, perché `ExcelApp.Columns[1]` restituisce un `Object` e `AutoFit` è un metodo Excel. Nel codice seguente viene illustrato il cast.  
+     In C# 4 il comportamento predefinito consiste nell'incorporare le informazioni di tipo invece di usare i PIA. A causa di tale impostazione predefinita, molti degli esempi precedenti vengono semplificati perché non è necessario eseguire il cast esplicito. Ad esempio, la dichiarazione di `worksheet` in `DisplayInExcel` è scritta come `Excel._Worksheet workSheet = excelApp.ActiveSheet` piuttosto che `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Anche le chiamate a `AutoFit` nello stesso metodo richiederebbero il cast esplicito senza valore predefinito, perché `ExcelApp.Columns[1]` restituisce un `Object` e `AutoFit` è un metodo Excel. Nel codice seguente viene illustrato il cast.  
   
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   

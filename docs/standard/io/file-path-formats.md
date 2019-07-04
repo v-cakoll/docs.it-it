@@ -1,6 +1,6 @@
 ---
 title: Formati dei percorsi di file nei sistemi Windows
-ms.date: 06/28/2018
+ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 75261bc44b938432c9c22b90dc4db30ca00d630b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835824"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170734"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formati dei percorsi di file nei sistemi Windows
 
@@ -30,7 +30,7 @@ Un percorso DOS standard può essere costituito da tre componenti:
 - Un nome di directory. Il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>) separa le sottodirectory all'interno della gerarchia di directory annidata.
 - Un nome file facoltativo. Il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>) separa il percorso e il nome del file.
 
-Se sono presenti tutti e tre i componenti, il percorso è assoluto. Se non si specifica alcun volume o lettera di unità e i nomi delle directory iniziano con il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>), il percorso è relativo dalla radice dell'unità corrente. In caso contrario, il percorso è relativo alla directory corrente. La tabella seguente illustra alcuni percorsi possibili di directory e file.
+Se sono presenti tutti e tre i componenti, il percorso è assoluto. Se non si specifica alcun volume o lettera di unità e il nome della directory inizia con il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>), il percorso è relativo dalla radice dell'unità corrente. In caso contrario, il percorso è relativo alla directory corrente. La tabella seguente illustra alcuni percorsi possibili di directory e file.
 
 |Path  |Description  |
 | -- | -- |
@@ -76,6 +76,11 @@ Il sistema operativo Windows ha un modello a oggetti unificato che punta a tutte
 `\\.\C:\Test\Foo.txt`  
 `\\?\C:\Test\Foo.txt`
 
+Oltre a identificare un'unità con la relativa lettera di unità, è possibile identificare un volume usando l'identificatore univoco globale (GUID) del volume. Assume il formato:
+
+`\\.\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+`\\?\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+
 > [!NOTE]
 > La sintassi del percorso del dispositivo DOS è supportata nelle implementazioni .NET in esecuzione in Windows a partire da .NET Core 1.1 e .NET Framework 4.6.2.
 
@@ -85,8 +90,8 @@ Il percorso del dispositivo DOS è costituito dai componenti seguenti:
 
    > [!NOTE]
    > `\\?\` è supportato in tutte le versioni di .NET Core e in .NET Framework a partire dalla versione 4.6.2.
-   
-- Un collegamento simbolico all'oggetto dispositivo "reale" (C: in questo caso).
+
+- Un collegamento simbolico all'oggetto dispositivo "reale" (C: nel caso di un nome di unità o Volume{b75e2c83-0000-0000-0000-602f00000000} nel caso di un GUID del volume).
 
    Il primo segmento del percorso del dispositivo DOS dopo l'identificatore del percorso del dispositivo identifica il volume o l'unità (ad esempio, `\\?\C:\` e `\\.\BootPartition\`).
 

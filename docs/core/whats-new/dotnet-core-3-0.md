@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 05/06/2019
-ms.openlocfilehash: f7dc95a9f0b652f1509720fb987cbdb88f64e78c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 369c74d2d8e82f157de0eec4294a5ee50542292b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689261"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169790"
 ---
 # <a name="whats-new-in-net-core-30-preview-5"></a>Novità di .NET Core 3.0 (Preview 5)
 
@@ -20,10 +20,11 @@ Questo articolo descrive le novità di .NET Core 3.0 (Preview 5). Uno dei princi
 
 .NET Core 3.0 aggiunge il supporto per C# 8.0. È consigliabile usare la versione più recente di Visual Studio 2019 Update 1 Preview o Visual Studio Code con l'estensione OmniSharp.
 
-[Scaricare e iniziare subito a usare .NET Core 3.0 Preview 5](https://aka.ms/netcore3download) in Windows, Mac e Linux.
+[Scaricare e iniziare subito a usare .NET Core 3.0 Preview 6](https://aka.ms/netcore3download) in Windows, Mac e Linux.
 
 Per altre informazioni su ogni versione di anteprima, vedere gli annunci seguenti:
 
+- [Annuncio di .NET Core 3.0 Preview 6](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [Annuncio di .NET Core 3.0 Preview 5](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
 - [Annuncio di .NET Core 3.0 Preview 4](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
 - [Annuncio di .NET Core 3.0 Preview 3](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
@@ -112,6 +113,34 @@ dotnet publish -r win10-x64 /p:PublishSingleFile=true
 
 Per altre informazioni sulla pubblicazione di file singolo, vedere il [documento sulla progettazione di un bundler con file singolo](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md).
 
+## <a name="assembly-linking"></a>Collegamento di assembly
+
+.NET Core SDK 3.0 include uno strumento che consente di ridurre le dimensioni delle app analizzando il linguaggio intermedio (IL) e rimuovendo gli assembly inutilizzati.
+
+Le app autonome includono tutti gli elementi necessari per eseguire il codice, senza richiedere l'installazione di .NET nel computer host. Tuttavia, per il funzionamento dell'app è spesso sufficiente un piccolo subset del framework, mentre altre librerie inutilizzate possono essere rimosse.
+
+.NET Core include ora un'impostazione che consente l'uso dello strumento [IL Linker](https://github.com/mono/linker) per analizzare il linguaggio intermedio dell'app. Questo strumento rileva il codice necessario e rimuove le librerie inutilizzate. Può quindi ridurre notevolmente le dimensioni di distribuzione di alcune app.
+
+Per abilitare questo strumento, aggiungere l'impostazione `<PublishTrimmed>` nel progetto e pubblicare un'app autonoma:
+
+```xml
+<PropertyGroup>
+  <PublishTrimmed>true</PublishTrimmed>
+</PropertyGroup>
+```
+
+```console
+dotnet publish -r <rid> -c Release
+```
+
+Ad esempio, il nuovo modello predefinito per un progetto di console di base "hello world" ha una dimensione di circa 70 MB quando viene pubblicato. Usando `<PublishTrimmed>` la dimensione viene ridotta fino a circa 30 MB.
+
+È importante tenere presente che le applicazioni o i framework, inclusi ASP.NET Core e WPF, che usano la reflection o le funzionalità dinamiche correlate, sono spesso soggetti a interruzioni in caso di rimozione di assembly. Le interruzioni si verificano perché il linker non riconosce questo comportamento dinamico e non è in grado di identificare i tipi di framework necessari per la reflection. Lo strumento IL Linker può essere configurato in modo da riconoscere questo scenario.
+
+È importante soprattutto accertarsi di testare l'app dopo la rimozione degli assembly inutilizzati.
+
+Per altre informazioni sullo strumento IL Linker, vedere la [documentazione](https://aka.ms/dotnet-illink) o visitare il repository [mono/linker]( https://github.com/mono/linker).
+
 ## <a name="tiered-compilation"></a>Compilazione a livelli
 
 Per impostazione predefinita, con .NET Core 3.0 la [compilazione a livelli](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) è attiva. Questa funzionalità consente al runtime di usare in modo più adattivo il compilatore JIT per ottenere prestazioni migliori.
@@ -131,6 +160,38 @@ Per disabilitare completamente la compilazione a livelli, usare questa impostazi
 ```xml
 <TieredCompilation>false</TieredCompilation>
 ```
+
+## <a name="readytorun-images"></a>Immagini ReadyToRun
+
+È possibile migliorare il tempo di avvio delle applicazioni .NET Core compilando gli assembly nel formato ReadyToRun (R2R). R2R è un formato di compilazione AOT (Ahead-of-time).
+
+I file binari R2R migliorano le prestazioni di avvio riducendo la quantità di lavoro che deve eseguire il compilatore JIT (Just-in-time) durante il caricamento dell'applicazione. I file binari contengono codice nativo simile a ciò che viene generato dal compilatore JIT.
+
+I file binari R2R sono più grandi poiché contengono sia il codice in linguaggio intermedio, che è comunque necessario per alcuni scenari, sia la versione nativa dello stesso codice. R2R è disponibile solo quando si pubblica un'app autonoma che fa riferimento ad ambienti di runtime specifici (RID), ad esempio Linux x64 o Windows x64.
+
+Per compilare l'app come R2R, aggiungere l'impostazione `<PublishReadyToRun>`:
+
+```xml
+<PropertyGroup>
+  <PublishReadyToRun>true</PublishReadyToRun>
+</PropertyGroup>
+```
+
+Pubblicare un'app autonoma. Questo comando, ad esempio, crea un'app autonoma per la versione a 64 bit di Windows:
+
+```console
+dotnet publish -c Release -r win-x64 --self-contained true
+```
+
+### <a name="cross-platformarchitecture-restrictions"></a>Limitazioni per ambienti con più piattaforme o architetture
+
+Il compilatore ReadyToRun attualmente non supporta la definizione di più destinazioni. La compilazione deve essere eseguita per una determinata destinazione. Se, ad esempio, si vogliono immagini R2R per Windows x64, è necessario eseguire il comando di pubblicazione in tale ambiente.
+
+Eccezioni relative all'uso di più destinazioni:
+
+- Windows x64 può essere usato per compilare immagini Windows ARM32, ARM64 e x86.
+- Windows x86 può essere usato per compilare immagini Windows ARM32.
+- Linux x64 può essere usato per compilare immagini Linux ARM32 e ARM64.
 
 ## <a name="build-copies-dependencies"></a>Copia delle dipendenze tramite la compilazione
 
@@ -362,9 +423,19 @@ Windows offre un'API nativa completa, sotto forma di API C semplici, COM e WinRT
 
 ## <a name="http2-support"></a>Supporto per HTTP/2
 
-Il tipo <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> supporta il protocollo HTTP/2. Il supporto è attualmente disabilitato, ma può essere attivato chiamando `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);` prima di usare <xref:System.Net.Http.HttpClient>. È anche possibile abilitare il supporto per HTTP/2 impostando la variabile di ambiente `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` su `true` prima di eseguire l'app.
+Il tipo <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> supporta il protocollo HTTP/2. Se HTTP/2 è abilitato, la versione del protocollo HTTP viene negoziata tramite TLS/ALPN e HTTP/2 viene usato solo in base alla decisione del server.
 
-Se HTTP/2 è abilitato, la versione del protocollo HTTP verrà negoziata tramite TLS/ALPN e HTTP/2 verrà usato solo se il server deciderà di usarlo.
+Il protocollo predefinito rimane HTTP/1.1, anche se HTTP/2 può essere abilitato in due modi diversi. In primo luogo, è possibile impostare il messaggio di richiesta HTTP per usare HTTP/2:
+
+[!CODE-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
+
+In secondo luogo, è possibile modificare <xref:System.Net.Http.HttpClient> in modo da usare HTTP/2 per impostazione predefinita:
+
+[!CODE-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
+
+Molto spesso, quando si sviluppa un'applicazione, si vuole usare una connessione non crittografata. Se si è a conoscenza del fatto che l'endpoint di destinazione userà HTTP/2, è possibile attivare connessioni non crittografate per HTTP/2. Per attivare queste connessioni è possibile impostare la variabile di ambiente `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` su `1` o abilitarla nel contesto dell'app:
+
+[!CODE-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
 ## <a name="tls-13--openssl-111-on-linux"></a>TLS 1.3 e OpenSSL 1.1.1 in Linux
 

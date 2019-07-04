@@ -1,18 +1,18 @@
 ---
 title: Operatore = - Riferimenti per C#
 ms.custom: seodec18
-ms.date: 11/26/2018
+ms.date: 06/21/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 85182acb84ea79cb00a9edb315c3954f440305f4
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: ef9c9bab5c1cebb06edf934254507180e2197349
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758358"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306558"
 ---
 # <a name="-operator-c-reference"></a>Operatore = (Riferimenti per C#)
 
@@ -30,19 +30,37 @@ viene valutata come
 a = (b = c)
 ```
 
-L'esempio seguente illustra l'utilizzo dell'operatore di assegnazione per assegnare valori a una variabile locale, una proprietà e un elemento indicizzatore:
+L'esempio seguente illustra l'utilizzo dell'operatore di assegnazione con una variabile locale, una proprietà e un elemento indicizzatore come operando sul lato sinistro:
 
-[!code-csharp-interactive[assignment operator](~/samples/csharp/language-reference/operators/AssignmentExamples.cs#Assignments)]
+[!code-csharp-interactive[simple assignment](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#Simple)]
 
 ## <a name="ref-assignment-operator"></a>Operatore di assegnazione ref
 
 A partire da C# 7.3, è possibile usare l'operatore di assegnazione ref `= ref` per riassegnare una variabile [locale ref](../keywords/ref.md#ref-locals) o [locale ref readonly](../keywords/ref.md#ref-readonly-locals). L'esempio seguente illustra l'uso dell'operatore di assegnazione ref:
 
-[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentExamples.cs#RefAssignment)]
+[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
 
-Nel caso dell'operatore di assegnazione ref, il tipo dell'operando sinistro deve corrispondere al tipo dell'operando destro.
+Nel caso dell'operatore di assegnazione ref, il tipo dell'operando sinistro deve corrispondere a quello dell'operando destro.
 
-Per altre informazioni, vedere la [nota relativa alla proposta di funzionalità](../../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md).
+Per altre informazioni, vedere la [nota relativa alla proposta di funzionalità](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md).
+
+## <a name="compound-assignment"></a>Assegnazione composta
+
+Per un operatore binario `op`, un'espressione di assegnazione composta in formato
+
+```csharp
+x op= y
+```
+
+equivale a
+
+```csharp
+x = x op y
+```
+
+con la differenza che `x` viene valutato una sola volta.
+
+L'assegnazione composta è supportata da operatori [aritmetici](arithmetic-operators.md#compound-assignment), [logici booleani](boolean-logical-operators.md#compound-assignment) e [logici bit per bit e shift](bitwise-and-shift-operators.md#compound-assignment).
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 
@@ -50,11 +68,10 @@ Un tipo definito dall'utente non può eseguire l'overload dell'operatore di asse
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-Per altre informazioni, vedere la sezione [Assegnazione semplice](~/_csharplang/spec/expressions.md#simple-assignment) della [specifica del linguaggio C#](../language-specification/index.md).
+Per altre informazioni, vedere la sezione [Operatori di assegnazione](~/_csharplang/spec/expressions.md#assignment-operators) della [specifica del linguaggio C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
 - [Operatori C#](index.md)
 - [ref (parola chiave)](../keywords/ref.md)

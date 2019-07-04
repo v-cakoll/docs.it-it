@@ -3,12 +3,12 @@ title: Introduzione alla trasformazione della sintassi (API Roslyn)
 description: Introduzione all'attraversamento, all'esecuzione di query e all'esplorazione di alberi della sintassi.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: bbd56f445a9f06b530a7d094b06f60e6123788da
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788440"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306921"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introduzione alla trasformazione della sintassi
 
@@ -30,7 +30,7 @@ La **non modificabilità** è un principio fondamentale della piattaforma del co
 
 La prima trasformazione della sintassi illustra i metodi factory. Si sostituirà un'istruzione `using System.Collections;` con un'istruzione `using System.Collections.Generic;`. Questo esempio illustra come creare oggetti <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> mediante i metodi factory <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType>. Per ogni tipo di **nodo**, **token** o **elemento semplice** è disponibile un metodo factory che crea un'istanza del tipo corrispondente. È possibile creare alberi della sintassi componendo gerarchicamente i nodi dal basso verso l'alto. Si trasformerà quindi il programma esistente sostituendo i nodi esistenti con il nuovo albero creato.
 
-Avviare Visual Studio e creare un nuovo progetto C# **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo). In Visual Studio scegliere **File** > **Nuovo** > **Progetto** per visualizzare la finestra di dialogo Nuovo progetto. In **Visual C#** > **Estendibilità** scegliere uno **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo). Questa guida include due progetti di esempio, quindi denominare la soluzione **SyntaxTransformationQuickStart** e il progetto **ConstructionCS**. Fare clic su **OK**.
+Avviare Visual Studio e creare un nuovo progetto C# **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo). In Visual Studio scegliere **File** > **Nuovo** > **Progetto** per visualizzare la finestra di dialogo Nuovo progetto. In **Visual C#**  > **Estendibilità** scegliere uno **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo). Questa guida include due progetti di esempio, quindi denominare la soluzione **SyntaxTransformationQuickStart** e il progetto **ConstructionCS**. Fare clic su **OK**.
 
 Questo progetto usa i metodi della classe <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> per costruire un <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> che rappresenta lo spazio dei nomi `System.Collections.Generic`.
 
@@ -63,7 +63,7 @@ Eseguire nuovamente il programma per vedere che è stato creato l'albero per il 
 
 ### <a name="create-a-modified-tree"></a>Creare una struttura modificata
 
-È stato creato un albero della sintassi di piccole dimensioni che contiene una sola istruzione. Le API per la creazione di nuovi nodi sono la soluzione ideale per creare singole istruzioni o altri piccoli blocchi di codice. Tuttavia, per creare blocchi di codice di maggiori dimensioni, è necessario usare metodi che sostituiscono i nodi o inseriscono i nodi in una struttura esistente. Tenere presente che gli alberi della sintassi non sono modificabili. L'**API Syntax** non offre alcun meccanismo per la modifica di un albero della sintassi esistente dopo la costruzione. Fornisce invece metodi che producono nuovi alberi in base alle modifiche a quelli esistenti. I metodi `With*` sono definiti nelle classi concrete che derivano da <xref:Microsoft.CodeAnalysis.SyntaxNode> o nei metodi di estensione dichiarati nella classe <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions>. Questi metodi creano un nuovo nodo applicando le modifiche alle proprietà figlio del nodo esistente. Inoltre, il metodo di estensione <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> può essere usato per sostituire un nodo discendente in un sottoalbero. Anche questo metodo aggiorna l'elemento padre in modo da puntare all'elemento figlio appena creato e ripete il processo per l'intero albero: un processo noto come _re-spining_ dell'albero.
+È stato creato un albero della sintassi di piccole dimensioni che contiene una sola istruzione. Le API per la creazione di nuovi nodi sono la soluzione ideale per creare singole istruzioni o altri piccoli blocchi di codice. Tuttavia, per creare blocchi di codice di maggiori dimensioni, è necessario usare metodi che sostituiscono i nodi o inseriscono i nodi in una struttura esistente. Tenere presente che gli alberi della sintassi non sono modificabili. L'**API Syntax** non offre alcun meccanismo per la modifica di un albero della sintassi esistente dopo la costruzione. Fornisce invece metodi che producono nuovi alberi in base alle modifiche a quelli esistenti. I metodi `With*` sono definiti nelle classi concrete che derivano da <xref:Microsoft.CodeAnalysis.SyntaxNode> o nei metodi di estensione dichiarati nella classe <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions>. Questi metodi creano un nuovo nodo applicando le modifiche alle proprietà figlio del nodo esistente. Inoltre, il metodo di estensione <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> può essere usato per sostituire un nodo discendente in un sottoalbero. Anche questo metodo aggiorna l'elemento padre in modo da puntare all'elemento figlio appena creato e ripete il processo per l'intero albero: un processo noto come _re-spinning_ dell'albero.
 
 Il passaggio successivo consiste nel creare un albero che rappresenta un intero programma (di piccole dimensioni) e quindi modificarlo. Aggiungere il codice seguente all'inizio della classe `Program`:
 
@@ -94,7 +94,7 @@ Eseguire di nuovo il programma. Questa volta l'albero importa correttamente lo s
 
 I metodi `With*` e <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> offrono una pratica soluzione per trasformare singoli rami di un albero della sintassi. La classe <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> esegue più trasformazioni in una struttura della sintassi. La classe <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> è una sottoclasse di <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType>. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> applica una trasformazione a un tipo specifico di <xref:Microsoft.CodeAnalysis.SyntaxNode>. È possibile applicare trasformazioni a vari tipi di oggetti <xref:Microsoft.CodeAnalysis.SyntaxNode> ogni volta che compaiono in un albero della sintassi. Il secondo progetto in questa guida introduttiva crea un refactoring dalla riga di comando che rimuove i tipi espliciti nelle dichiarazioni di variabili locali ovunque sia possibile usare l'inferenza del tipo.
 
-Creare un nuovo progetto C# **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo). In Visual Studio fare doppio clic sul nodo `SyntaxTransformationQuickStart` della soluzione. Scegliere **Aggiungi** > **Nuovo progetto** per visualizzare la finestra di dialogo **Nuovo progetto**. In **Visual C#** > **Estendibilità** scegliere **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo). Assegnare al progetto il nome `TransformationCS` e fare clic su OK.
+Creare un nuovo progetto C# **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo). In Visual Studio fare doppio clic sul nodo `SyntaxTransformationQuickStart` della soluzione. Scegliere **Aggiungi** > **Nuovo progetto** per visualizzare la finestra di dialogo **Nuovo progetto**. In **Visual C#**  > **Estendibilità** scegliere **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo). Assegnare al progetto il nome `TransformationCS` e fare clic su OK.
 
 Il primo passaggio consiste nella creazione di una classe che deriva da <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> per eseguire le trasformazioni. Aggiungere un nuovo file di classe al progetto. In Visual Studio scegliere **Progetto** > **Aggiungi classe**. Nella finestra di dialogo **Aggiungi nuovo elemento** digitare `TypeInferenceRewriter.cs` come nome del file.
 
@@ -112,7 +112,7 @@ Aggiungere il codice seguente per dichiarare un campo privato di sola lettura ch
 
 Eseguire l'override del metodo <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)>:
 
-```C#
+```csharp
 public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
 {
 

@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 617f1da8f9b5b26ddfb2910ac0c06a6898d8ab6e
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835252"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170929"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Scripting dei fogli di stile XSLT con \<msxsl:script>
 La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato mediante l'elemento `script`.  
   
 > [!NOTE]
->  La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+>  La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in .NET Framework 2.0. È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato mediante l'elemento `script`. Dal momento che, quando viene caricato il foglio di stile, le funzioni definite vengono compilate nel linguaggio MSIL (Microsoft Intermediate Language) mediante l'incapsulamento in una definizione della classe, non si verifica alcuna riduzione delle prestazioni.  
   
@@ -49,7 +49,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
   
  È possibile dichiarare le funzioni all'interno dell'elemento `msxsl:script`. Nella tabella seguente sono illustrati gli spazi dei nomi supportati per impostazione predefinita. È possibile usare classi che non sono comprese negli spazi dei nomi elencati. Tuttavia, è necessario che tali classi siano complete.  
   
-|Spazi dei nomi predefiniti|Description|  
+|Spazi dei nomi predefiniti|DESCRIZIONE|  
 |------------------------|-----------------|  
 |System|Classe di sistema.|  
 |System.Collection|Classi di raccolte.|  

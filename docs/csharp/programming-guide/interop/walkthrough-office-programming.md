@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 594f97d47d87d846ba27fc192096005e94587dd1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80f0b97d38b17740916ea5407b78f298aa42604b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608270"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169844"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Procedura dettagliata: Programmazione di Office (C# e Visual Basic)
 Visual Studio offre funzionalità di C# e Visual Basic che migliorano la programmazione di Microsoft Office. Tra le utili funzionalità di C# sono disponibili gli argomenti denominati e facoltativi e i valori restituiti di tipo `dynamic`. Nella programmazione COM è possibile omettere la parola chiave `ref` e accedere alle proprietà indicizzate. Le funzionalità di Visual Basic includono le proprietà implementate automaticamente, le istruzioni nelle espressioni lambda e gli inizializzatori di insieme.
@@ -37,7 +37,7 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
   
 2. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.  
   
-3. Nel riquadro **Modelli installati** espandere **Visual Basic** o **Visual C#**, espandere **Office** e scegliere l'anno della versione del prodotto Office.  
+3. Nel riquadro **Modelli installati** espandere **Visual Basic** o **Visual C#** , espandere **Office** e scegliere l'anno della versione del prodotto Office.  
   
 4. Nel riquadro **Modelli** fare clic su **Excel \<versione > Componente aggiuntivo**.  
   
@@ -93,7 +93,7 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
   
      In questo metodo vengono usati due nuove funzionalità di C#. Entrambe queste funzionalità sono già esistenti in Visual Basic.  
   
-    - Il metodo [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) usa un *parametro facoltativo* per specificare un modello particolare. I parametri facoltativi, una novità di [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], consentono di omettere l'argomento per il parametro se si vuole usare il valore predefinito del parametro. Poiché nessun argomento viene inviato nell'esempio precedente, `Add` usa il modello predefinito e crea una nuova cartella di lavoro. L'istruzione equivalente nelle precedenti versioni di C# richiede un argomento segnaposto: `excelApp.Workbooks.Add(Type.Missing)`.  
+    - Il metodo [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) usa un *parametro facoltativo* per specificare un modello particolare. I parametri facoltativi, una novità di C# 4, consentono di omettere l'argomento per il parametro se si vuole usare il valore predefinito del parametro. Poiché nessun argomento viene inviato nell'esempio precedente, `Add` usa il modello predefinito e crea una nuova cartella di lavoro. L'istruzione equivalente nelle precedenti versioni di C# richiede un argomento segnaposto: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Per altre informazioni, vedere [Argomenti denominati e facoltativi](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   

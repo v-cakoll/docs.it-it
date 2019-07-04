@@ -1,19 +1,19 @@
 ---
-title: Usare ML.NET in uno scenario di rilevamento anomalie di vendita
-description: Informazioni su come usare ML.NET in uno scenario di rilevamento anomalie di vendita dei prodotti per comprendere come analizzare i dati per fare in modo di adottare azioni appropriate per le anomalie dei picchi e dei punti di modifica.
-ms.date: 05/29/2019
+title: 'Esercitazione: Rilevare le anomalie nelle vendite di prodotti'
+description: Informazioni su come creare un'applicazione di rilevamento delle anomalie per i dati di vendita dei prodotti. Questa esercitazione crea un'applicazione console .NET Core usando C# in Visual Studio 2019.
+ms.date: 06/11/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e092aea66ca9f439cf97c1ebee83097def0f520b
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 3e3e368ed3bcb35e7e2c8bdf08abe71afd4ae87c
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758804"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306222"
 ---
-# <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Esercitazione: Usare ML.NET per il rilevamento anomalie di vendita dei prodotti 
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Esercitazione: Rilevare le anomalie nelle vendite di prodotti con ML.NET
 
-In questa esercitazione di esempio viene illustrato l'utilizzo di ML.NET per rilevare le anomalie nei dati di vendita dei prodotti allo scopo di eseguire l'azione appropriata tramite un'applicazione console .NET Core con C# in Visual Studio 2019. 
+Informazioni su come creare un'applicazione di rilevamento delle anomalie per i dati di vendita dei prodotti. Questa esercitazione crea un'applicazione console .NET Core usando C# in Visual Studio.
 
 In questa esercitazione si imparerà a:
 > [!div class="checklist"]

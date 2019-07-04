@@ -2,12 +2,12 @@
 title: Novità di C# 8.0 - Guida a C#
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0. Questo articolo è aggiornato alla versione di anteprima 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557141"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67151971"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
@@ -381,7 +381,7 @@ Questo supporto del linguaggio si basa su due nuovi tipi e due nuovi operatori.
 
 Per iniziare, ecco come funzionano le regole per gli indici. Prendere in considerazione una matrice `sequence`. L'indice `0` è uguale a `sequence[0]`. L'indice `^0` è uguale a `sequence[sequence.Length]`. Si noti che `sequence[^0]` genera un'eccezione, proprio come `sequence[sequence.Length]`. Per qualsiasi numero `n`, l'indice `^n` è uguale a `sequence.Length - n`.
 
-Un intervallo specifica *inizio* e *fine* di un intervallo. Gli intervalli sono esclusivi, vale a dire che la *fine* non è inclusa nell'intervallo. L'intervallo `[0..^0]` rappresenta l'intero intervallo, proprio come `[0..sequence.Length]` rappresenta l'intero intervallo. 
+Un intervallo specifica *inizio* e *fine* di un intervallo. L'inizio dell'intervallo è inclusivo, ma la fine dell'intervallo è esclusiva, vale a dire che l'*inizio* è compreso nell'intervallo, mentre la *fine* non lo è. L'intervallo `[0..^0]` rappresenta l'intero intervallo, proprio come `[0..sequence.Length]` rappresenta l'intero intervallo. 
 
 Di seguito verranno esaminati alcuni esempi. Si consideri la matrice seguente, annotata con il relativo indice dall'inizio e dalla fine:
 

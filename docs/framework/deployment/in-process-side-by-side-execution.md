@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816049"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170508"
 ---
 # <a name="in-process-side-by-side-execution"></a>Esecuzione side-by-side in-process
 A partire da .NET Framework 4, è possibile usare l'hosting side-by-side in-process per eseguire più versioni di Common Language Runtime (CLR) in un unico processo. Per impostazione predefinita, i componenti COM gestiti vengono eseguiti con la versione di .NET Framework con cui sono stati compilati, indipendentemente dalla versione di .NET Framework che viene caricata per il processo.  
@@ -56,7 +56,7 @@ A partire da .NET Framework 4, è possibile usare l'hosting side-by-side in-proc
   
      Cosa fare: in questo scenario, non eseguire alcuna operazione. I componenti COM verranno eseguiti con la versione di .NET Framework con la quale sono stati registrati.  
   
-- **Scenario 2**: applicazione gestita compilata con .NET Framework 2.0 SP1 che si preferirebbe eseguire con [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], ma che si è disposti a eseguire in .NET Framework 4 se la versione 2.0 non è disponibile.  
+- **Scenario 2**: applicazione gestita compilata con .NET Framework 2.0 SP1 che si preferirebbe eseguire con .NET Framework 2.0, ma che si è disposti a eseguire in .NET Framework 4 se la versione 2.0 non è disponibile.  
   
      Versioni di .NET Framework installate: una versione precedente di .NET Framework e di .NET Framework 4.  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 166f8a99a3556664f5f3701c94aa8593ac7ebe32
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: a0252493ffd251b8d760927345c71e2f5ef55aaa
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422086"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401513"
 ---
 # <a name="for-c-reference"></a>for (Riferimenti per C#)
 
@@ -51,7 +51,7 @@ Le istruzioni nella sezione *inizializzatore* vengono eseguite una sola volta, p
 
   - Espressione di [decremento](../operators/arithmetic-operators.md#decrement-operator---) in forma prefissa o suffissa, ad esempio `--i` o `i--`
 
-  - Creazione di un oggetto con la parola chiave [new](new-operator.md)
+  - Creazione di un oggetto con l'operatore [new](../operators/new-operator.md)
 
   - Espressione [await](await.md)
 
@@ -73,7 +73,7 @@ i < 5
 
 ### <a name="the-iterator-section"></a>Sezione *iteratore*
 
-La sezione *iteratore* definisce cosa accade dopo ogni iterazione del corpo del ciclo. Questa sezione contiene zero o più delle espressioni di istruzione seguenti, separate da virgole:
+La sezione *iteratore* definisce cosa accade dopo ogni iterazione del corpo del ciclo. La sezione *iteratore* contiene zero o più delle espressioni di istruzione seguenti, separate da virgole:
 
 - Istruzione di [assegnazione](../operators/assignment-operator.md)
 
@@ -83,7 +83,7 @@ La sezione *iteratore* definisce cosa accade dopo ogni iterazione del corpo del 
 
 - Espressione di [decremento](../operators/arithmetic-operators.md#decrement-operator---) in forma prefissa o suffissa, ad esempio `--i` o `i--`
 
-- Creazione di un oggetto con la parola chiave [new](new-operator.md)
+- Creazione di un oggetto con l'operatore [new](../operators/new-operator.md)
 
 - Espressione [await](await.md)
 

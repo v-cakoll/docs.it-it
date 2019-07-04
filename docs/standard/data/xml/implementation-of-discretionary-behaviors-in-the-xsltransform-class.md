@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcc294f09172eb2029f92d2c05821837aa10c35f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d0a6b3faff0208634e711b9d7908e3fd8dc640ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591497"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170833"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementazione di comportamenti discretionary nella classe XslTransform
 
 > [!NOTE]
-> La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](migrating-from-the-xsltransform-class.md).
+> La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in .NET Framework 2.0. È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](migrating-from-the-xsltransform-class.md).
 
 Sono definiti discretionary i comportamenti, elencati nella [versione 1.0 della raccomandazione W3C (World Wide Web Consortium) sulle trasformazioni XSL (XSLT)](https://www.w3.org/TR/1999/REC-xslt-19991116), nei quali il provider dell'implementazione sceglie una delle numerose opzioni disponibili per gestire una determinata situazione. Nella sezione 7.3 Creating Processing Instructions della raccomandazione W3C, ad esempio, viene specificato che la creazione di nodi diversi da nodi di tipo text durante la creazione di un'istanza del contenuto di `xsl:processing-instruction` costituisce un errore. Per alcuni problemi, il W3C fornisce una linea d'azione per il caso in cui il processore tenta di risolvere l'errore. Per l'errore illustrato nella sezione 7.3 viene spiegato che il problema può essere risolto ignorando i nodi e il relativo contenuto.
 
