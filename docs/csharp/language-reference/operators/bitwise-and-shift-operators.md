@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 4a495fb5ce353bcb4f7ccda975dfc74ba711db79
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 8068ec09f0c7d05d6d711e4e7a607b6183727b41
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025248"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424005"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Operatori di scorrimento e bit per bit (Riferimenti per C#)
 
-Gli operatori seguenti eseguono operazioni di scorrimento o bit per bit con operandi di [tipi integrali](../keywords/integral-types-table.md):
+Gli operatori seguenti eseguono operazioni di scorrimento o bit per bit con operandi di [tipi integrali](../builtin-types/integral-numeric-types.md):
 
 - Operatore unario [`~` (complemento bit per bit)](#bitwise-complement-operator-)
 - Operatori di scorrimento binari [`<<` (scorrimento a sinistra)](#left-shift-operator-) e [`>>` (scorrimento a destra)](#right-shift-operator-)
@@ -60,39 +60,39 @@ L'operatore `~` produce un complemento bit per bit del relativo operando inverte
 
 ## <a name="left-shift-operator-"></a>Operatore di scorrimento a sinistra \<\<
 
-L'operatore `<<` scorre verso sinistra il primo operando del numero di bit specificato dal secondo operando.
+L'operatore `<<` scorre verso sinistra l'operando di sinistra del numero di bit specificato dall'operando di destra.
 
 L'operazione di scorrimento a sinistra rimuove i bit più significativi che non rientrano nell'intervallo del tipo di risultato e imposta le posizioni dei bit vuoti meno significativi su zero, come illustrato nell'esempio seguente:
 
 [!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
-Poiché gli operatori di scorrimento sono definiti solo per i tipi `int`, `uint`, `long` e `ulong`, il risultato di un'operazione contiene almeno 32 bit. Se il primo operando e di un tipo integrale diverso (`sbyte`, `byte`, `short`, `ushort` o `char`), il relativo valore viene convertito nel tipo `int`, come illustrato nell'esempio seguente:
+Poiché gli operatori di scorrimento sono definiti solo per i tipi `int`, `uint`, `long` e `ulong`, il risultato di un'operazione contiene almeno 32 bit. Se l'operando di sinistra e di un tipo integrale diverso (`sbyte`, `byte`, `short`, `ushort` o `char`), il relativo valore viene convertito nel tipo `int`, come illustrato nell'esempio seguente:
 
 [!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
-Per informazioni su come il secondo operando dell'operatore `<<` definisce il conteggio degli scorrimenti, vedere la sezione [Conteggio degli scorrimenti degli operatori di scorrimento](#shift-count-of-the-shift-operators).
+Per informazioni su come l'operando di destra dell'operatore `<<` definisce il conteggio degli scorrimenti, vedere la sezione [Conteggio degli scorrimenti degli operatori di scorrimento](#shift-count-of-the-shift-operators).
 
 ## <a name="right-shift-operator-"></a>Operatore di scorrimento a destra >>
 
-L'operatore `>>` scorre il primo operando verso destra del numero di bit definito dal secondo operando.
+L'operatore `>>` scorre l'operando di sinistra verso destra del numero di bit definito dall'operando di destra.
 
 L'operazione di scorrimento a destra rimuove i bit meno significativi, come illustrato nell'esempio seguente:
 
 [!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
-Le posizioni dei bit vuoti più significativi vengono impostate in base al tipo del primo operando come segue:
+Le posizioni dei bit vuoti più significativi vengono impostate in base al tipo dell'operando di sinistra come segue:
 
-- Se il primo operando è di tipo [int](../keywords/int.md) oppure [long](../keywords/long.md), l'operatore di scorrimento a destra esegue uno scorrimento *aritmetico*: il valore del bit più significativo (il bit di segno) del primo operando viene propagato alle posizioni dei bit vuoti più significativi. Vale a dire, le posizioni dei bit vuoti più significativi vengono impostate su zero se il primo operando è un valore non negativo e impostate su uno se è negativo.
+- Se l'operando di sinistra è di tipo [int](../builtin-types/integral-numeric-types.md) oppure [long](../builtin-types/integral-numeric-types.md), l'operatore di scorrimento a destra esegue uno scorrimento *aritmetico*: il valore del bit più significativo (il bit di segno) dell'operando di sinistra viene propagato alle posizioni dei bit vuoti più significativi. Vale a dire, le posizioni dei bit vuoti più significativi vengono impostate su zero se l'operando di sinistra è un valore non negativo e impostate su uno se è negativo.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- Se il primo operando è di tipo [uint](../keywords/uint.md) oppure [ulong](../keywords/ulong.md), l'operatore di scorrimento a destra esegue uno scorrimento *logico*: le posizioni dei bit vuoti più significativi vengono sempre impostate su zero.
+- Se l'operando di sinistra è di tipo [uint](../builtin-types/integral-numeric-types.md) oppure [ulong](../builtin-types/integral-numeric-types.md), l'operatore di scorrimento a destra esegue uno scorrimento *logico*: le posizioni dei bit vuoti più significativi vengono sempre impostate su zero.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
-Per informazioni su come il secondo operando dell'operatore `>>` definisce il conteggio degli scorrimenti, vedere la sezione [Conteggio degli scorrimenti degli operatori di scorrimento](#shift-count-of-the-shift-operators).
+Per informazioni su come l'operando di destra dell'operatore `>>` definisce il conteggio degli scorrimenti, vedere la sezione [Conteggio degli scorrimenti degli operatori di scorrimento](#shift-count-of-the-shift-operators).
 
-## <a name="logical-and-operator-amp"></a>Operatore AND logico &amp;
+## <a name="logical-and-operator-"></a> Operatore AND logico &amp;
 
 L'operatore `&` calcola l'AND logico bit per bit dei relativi operandi:
 
@@ -158,13 +158,13 @@ Per l'elenco completo degli operatori C# ordinati in base al livello di preceden
 
 ## <a name="shift-count-of-the-shift-operators"></a>Conteggio degli scorrimenti degli operatori di scorrimento
 
-Per gli operatori di scorrimento `<<` e `>>`, il tipo del secondo operando deve essere [int](../keywords/int.md) o un tipo con una [conversione numerica implicita predefinita](../keywords/implicit-numeric-conversions-table.md) in `int`.
+Per gli operatori di scorrimento `<<` e `>>`, il tipo dell'operando di destra deve essere [int](../builtin-types/integral-numeric-types.md) o un tipo con una [conversione numerica implicita predefinita](../keywords/implicit-numeric-conversions-table.md) in `int`.
 
 Per le espressioni `x << count` e `x >> count`, il conteggio effettivo degli scorrimenti varia a seconda del tipo di `x` come segue:
 
-- Se il tipo di `x` è [int](../keywords/int.md) o [uint](../keywords/uint.md), il conteggio degli scorrimenti è definito dai *cinque* bit meno significativi del secondo operando. Vale a dire, il conteggio degli scorrimenti viene calcolato da `count & 0x1F` (o `count & 0b_1_1111`).
+- Se il tipo di `x` è [int](../builtin-types/integral-numeric-types.md) o [uint](../builtin-types/integral-numeric-types.md), il conteggio degli scorrimenti è definito dai *cinque* bit meno significativi dell'operando di destra. Vale a dire, il conteggio degli scorrimenti viene calcolato da `count & 0x1F` (o `count & 0b_1_1111`).
 
-- Se il tipo di `x` è [long](../keywords/long.md) o [ulong](../keywords/ulong.md), il conteggio degli scorrimenti è definito dai *sei* bit meno significativi del secondo operando. Vale a dire, il conteggio degli scorrimenti viene calcolato da `count & 0x3F` (o `count & 0b_11_1111`).
+- Se il tipo di `x` è [long](../builtin-types/integral-numeric-types.md) o [ulong](../builtin-types/integral-numeric-types.md), il conteggio degli scorrimenti è definito dai *sei* bit meno significativi dell'operando di destra. Vale a dire, il conteggio degli scorrimenti viene calcolato da `count & 0x3F` (o `count & 0b_11_1111`).
 
 L'esempio seguente illustra questo comportamento:
 
@@ -180,7 +180,7 @@ Gli operatori logici bit per bit vengono in genere usati con un tipo di enumeraz
 
 Un tipo definito dall'utente può eseguire l'[overload](../keywords/operator.md) degli operatori `~`, `<<`, `>>`, `&`, `|` e `^`. Quando viene eseguito l'overload di un operatore binario, viene anche eseguito in modo implicito l'overload dell'operatore di assegnazione composta corrispondente. Un tipo definito dall'utente non può eseguire in modo esplicito l'overload di un operatore di assegnazione composta.
 
-Se un tipo definito dall'utente `T` esegue l'overload dell'operatore `<<` o `>>`, il tipo del primo operando deve essere `T` e il tipo del secondo operando deve essere `int`.
+Se un tipo definito dall'utente `T` esegue l'overload dell'operatore `<<` o `>>`, il tipo dell'operando di sinistra deve essere `T` e il tipo dell'operando di destra deve essere `int`.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
