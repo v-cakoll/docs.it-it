@@ -17,7 +17,7 @@ ms.locfileid: "67024999"
 ---
 # <a name="-operator-c-reference"></a>?? Operatore ?? (Riferimenti per C#)
 
-L'operatore null-coalescing `??` restituisce il valore dell'operando a sinistra se è `null`; in caso contrario, valuta l'operando a destra e ne restituisce il risultato. L'operatore `??` non valuta l'operando a destra se l'operando a sinistra restituisce un valore non null.
+L'operatore null-coalescing `??` restituisce il valore dell'operando a sinistra se non è `null`; in caso contrario, valuta l'operando a destra e ne restituisce il risultato. L'operatore `??` non valuta l'operando a destra se l'operando a sinistra restituisce un valore non null.
 
 L'operatore null-coalescing si associa all'operando a destra, che significa che un'espressione nel formato
 
