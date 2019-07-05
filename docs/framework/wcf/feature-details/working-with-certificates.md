@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 2122213e69512b06d1328272740ac4ffdc36c1eb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 55d78ed9bf839d66b3487f91d71d7a07a2123c5f
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483043"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569564"
 ---
 # <a name="working-with-certificates"></a>Utilizzo dei certificati
 Per programmare le funzionalità di sicurezza di Windows Communication Foundation (WCF) in genere si usano i certificati digitali X.509. In particolare, questi certificati vengono usati per autenticare client e server, nonché per crittografare e firmare digitalmente i messaggi. Questo argomento fornisce una breve descrizione delle funzionalità relative ai certificati digitali X.509 e illustra come usarle in WCF. Questo argomento contiene inoltre i collegamenti agli argomenti che trattano questi concetti in modo più dettagliato o che descrivono come eseguire attività comuni tramite l'uso di WCF e dei certificati.  
@@ -85,8 +85,8 @@ Per programmare le funzionalità di sicurezza di Windows Communication Foundatio
   
  Quando si crea un autenticatore personalizzato è fondamentale eseguire l'override del metodo <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Per un esempio di autenticazione personalizzata, vedere l'esempio [Validator del certificato X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md). Per altre informazioni, vedere [Credenziale personalizzata e convalida della credenziale](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
-## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Usare il Cmdlet di Powershell New-SelfSignedCertificate per compilare una catena di certificati  
- Il cmdlet di Powershell New-SelfSignedCertificate crea certificati X.509 e coppie di chiavi pubblica/chiave private. La chiave privata può essere salvata su disco e quindi utilizzata per rilasciare e firmare nuovi certificati, simulando in questo modo una gerarchia di certificati concatenati. Il cmdlet è progettato per l'utilizzo solo come supporto durante lo sviluppo di servizi e non dovrà mai essere usato per creare i certificati per distribuzione vera e propria. Quando si sviluppa un servizio WCF, utilizzare la procedura seguente per compilare una catena di trust con il cmdlet New-SelfSignedCertificate.  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Usare il Cmdlet di PowerShell New-SelfSignedCertificate per compilare una catena di certificati  
+ Il cmdlet di PowerShell New-SelfSignedCertificate crea certificati X.509 e coppie di chiavi pubblica/chiave private. La chiave privata può essere salvata su disco e quindi utilizzata per rilasciare e firmare nuovi certificati, simulando in questo modo una gerarchia di certificati concatenati. Il cmdlet è progettato per l'utilizzo solo come supporto durante lo sviluppo di servizi e non dovrà mai essere usato per creare i certificati per distribuzione vera e propria. Quando si sviluppa un servizio WCF, utilizzare la procedura seguente per compilare una catena di trust con il cmdlet New-SelfSignedCertificate.  
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>Per compilare una catena di trust con il cmdlet New-SelfSignedCertificate  
   
