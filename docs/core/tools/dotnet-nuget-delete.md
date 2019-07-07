@@ -2,17 +2,21 @@
 title: Comando dotnet nuget delete
 description: Il comando dotnet-nuget-delete rimuove dall'elenco o elimina un pacchetto dal server.
 author: karann-msft
-ms.date: 12/04/2018
-ms.openlocfilehash: e1362413aa6458674518d68340634741994b34a3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 0b2ba64b70bae5e06f213457e30fedeca26a9819
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632051"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539245"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
+**Questo argomento si applica a: ✓** .NET Core 2.1.x SDK e versioni successive
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>nome
 
@@ -20,25 +24,13 @@ ms.locfileid: "65632051"
 
 ## <a name="synopsis"></a>Riepilogo
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
 dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
     [--non-interactive] [-s|--source]
 dotnet nuget delete [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--non-interactive]
-    [-s|--source]
-dotnet nuget delete [-h|--help]
-```
-
----
-
-## <a name="description"></a>Description
+## <a name="description"></a>DESCRIZIONE
 
 Il comando `dotnet nuget delete` rimuove dall'elenco o elimina un pacchetto dal server. Per [nuget.org](https://www.nuget.org/) l'azione consiste nel rimuovere il pacchetto dall'elenco.
 
@@ -53,8 +45,6 @@ Il comando `dotnet nuget delete` rimuove dall'elenco o elimina un pacchetto dal 
   Versione del pacchetto da eliminare.
 
 ## <a name="options"></a>Opzioni
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`--force-english-output`**
 
@@ -83,30 +73,6 @@ Il comando `dotnet nuget delete` rimuove dall'elenco o elimina un pacchetto dal 
 * **`-s|--source <SOURCE>`**
 
   Specifica l'URL del server. Gli URL supportati per nuget.org includono `https://www.nuget.org`, `https://www.nuget.org/api/v3` e `https://www.nuget.org/api/v2/package`. Per i feed privati, sostituire il nome host (ad esempio, `%hostname%/api/v3`).
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`--force-english-output`**
-
-  Impone all'applicazione l'esecuzione con una cultura invariante e di lingua inglese.
-
-* **`-h|--help`**
-
-  Stampa una breve guida per il comando.
-
-* **`-k|--api-key <API_KEY>`**
-
-  Chiave API per il server.
-
-* **`--non-interactive`**
-
-  Non richiede input o conferme dell'utente.
-
-* **`-s|--source <SOURCE>`**
-
-  Specifica l'URL del server. Gli URL supportati per nuget.org includono `https://www.nuget.org`, `https://www.nuget.org/api/v3` e `https://www.nuget.org/api/v2/package`. Per i feed privati, sostituire il nome host (ad esempio, `%hostname%/api/v3`).
-
----
 
 ## <a name="examples"></a>Esempi
 

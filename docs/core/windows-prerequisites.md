@@ -3,12 +3,12 @@ title: Prerequisiti per .NET Core in Windows
 description: Informazioni sulle dipendenze per sviluppare ed eseguire applicazioni .NET Core in computer Windows.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 423a333edf5b2946a28855352adf2915642b1eae
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 9c4c15a08e0988955ecdf442307059868cb377d1
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051962"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539361"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Prerequisiti per .NET Core in Windows
 
@@ -57,7 +57,7 @@ Per i collegamenti per il download e altre informazioni, vedere [.NET downloads]
 > [!NOTE]
 > **Per Windows 8.1 e versioni precedenti, o Windows Server 2012 R2 e versioni precedenti:**
 >
-> Verificare che l'installazione di Windows sia aggiornata e includa l'aggiornamento [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows), che può essere installato tramite Windows Update. Se l'aggiornamento non è installato, quando si avvia un'applicazione .NET Core verrà visualizzato un errore simile al seguente: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> Verificare che l'installazione di Windows sia aggiornata e includa l'aggiornamento [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows), che può essere installato tramite Windows Update. Se l'aggiornamento non è installato, quando si avvia un'applicazione .NET Core verrà visualizzato un errore simile al seguente: `The program can't start because api-ms-win-crt-runtime-l1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
 > **Per Windows 7 o Windows Server 2008 R2:**
 >
