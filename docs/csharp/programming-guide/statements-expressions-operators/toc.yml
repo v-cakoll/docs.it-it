@@ -21,8 +21,6 @@
           href: how-to-use-lambda-expressions-outside-linq.md
         - name: Metodi anonimi
           href: anonymous-methods.md
-    - name: Operatori che supportano l'overload
-      href: overloadable-operators.md
     - name: Operatori di conversione
       items:
         - name: Panoramica delle conversioni

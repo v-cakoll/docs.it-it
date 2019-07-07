@@ -2,12 +2,12 @@
 title: Articoli sulla procedura (Guida a C#)
 description: Raccolta di suggerimenti rapidi e brevi esempi di codice evidenziati
 ms.date: 12/20/2017
-ms.openlocfilehash: 77b68af5802f79060e30b2817661de4cb5e46942
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 062ce64f4f369ae70074fd81f39b60de29e4d7d2
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879020"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609251"
 ---
 # <a name="how-to-c"></a>Procedura (C#)
 
@@ -21,7 +21,7 @@ Esistono alcuni suggerimenti e consigli comuni per le procedure di sviluppo di C
 - [Informazioni sulle differenze tra il passaggio a un metodo di uno struct e di una classe](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Come usare espressioni lambda](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).
 - [Risolvere conflitti di nomi di tipo tramite l'alias dello spazio dei nomi globale](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
-- [Usare l'overload degli operatori](../language-reference/keywords/operator.md).
+- [Usare l'overload degli operatori](../language-reference/operators/operator-overloading.md).
 - [Implementare e chiamare un metodo di estensione personalizzato](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
 - È possibile che i programmatori C# vogliano [usare lo spazio dei nomi `My` di VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Creare un nuovo metodo per un tipo `enum` usando i metodi di estensione](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
