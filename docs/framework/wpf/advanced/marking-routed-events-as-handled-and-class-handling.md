@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 8cce3d1effa163c35cd219a6a52504b0f4d98c73
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1004ce10baf6293c4c93efc61b91b3b6361377f
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598649"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610376"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Impostazione degli eventi indirizzati come gestiti e gestione delle classi
 I gestori per un evento indirizzato possono contrassegnare l'evento come gestito all'interno dei dati dell'evento. La gestione dell'evento abbrevia efficacemente la route. La gestione delle classi è un concetto di programmazione supportato dagli eventi indirizzati. Un gestore classi ha l'opportunità di gestire un evento indirizzato specifico a livello di classe con un gestore richiamato prima di qualsiasi gestore istanze in qualsiasi istanza di classe.  
@@ -49,7 +49,7 @@ I gestori per un evento indirizzato possono contrassegnare l'evento come gestito
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>Gestori classi e gestori istanze  
- Gli eventi indirizzati considerano due tipi diversi di listener per l'evento: listener di classi e listener di istanze. I listener di classe esistano perché i tipi hanno chiamato un determinato <xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, nel proprio costruttore statico o hanno eseguito l'override di un metodo virtuale del gestore della classe dalla classe di base di un elemento. Listener di istanze sono istanze/elementi di classe specifico in cui sono stati associati uno o più gestori per l'evento indirizzato da una chiamata a <xref:System.Windows.UIElement.AddHandler%2A>. Esistente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gli eventi indirizzati di effettuano chiamate a <xref:System.Windows.UIElement.AddHandler%2A> come parte delle [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] wrapper di eventi aggiungere{} e rimuovere{} implementazioni dell'evento, vale a dire anche come il semplice [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] meccanismo di collegamento i gestori di eventi tramite una sintassi per attributi è abilitata. Pertanto, anche il semplice [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] utilizzo equivale in definitiva a una <xref:System.Windows.UIElement.AddHandler%2A> chiamare.  
+ Gli eventi indirizzati considerano due tipi diversi di listener per l'evento: listener di classi e listener di istanze. I listener di classe esistano perché i tipi hanno chiamato un determinato <xref:System.Windows.EventManager> API,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, nel proprio costruttore statico o hanno eseguito l'override di un metodo virtuale del gestore della classe dalla classe di base di un elemento. Listener di istanze sono istanze/elementi di classe specifico in cui sono stati associati uno o più gestori per l'evento indirizzato da una chiamata a <xref:System.Windows.UIElement.AddHandler%2A>. Esistente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gli eventi indirizzati di effettuano chiamate a <xref:System.Windows.UIElement.AddHandler%2A> come parte delle [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] wrapper di eventi aggiungere{} e rimuovere{} implementazioni dell'evento, vale a dire anche come il semplice [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] meccanismo di collegamento i gestori di eventi tramite una sintassi per attributi è abilitata. Pertanto, anche il semplice [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] utilizzo equivale in definitiva a una <xref:System.Windows.UIElement.AddHandler%2A> chiamare.  
   
  Gli elementi all'interno dell'albero visuale vengono controllati per individuare le eventuali implementazioni di gestori registrati. I gestori vengono potenzialmente richiamati lungo la route, nell'ordine ereditato nel tipo della strategia di routing per l'evento indirizzato specifico. Ad esempio, gli eventi indirizzati di bubbling richiameranno prima di tutto i gestori collegati allo stesso elemento che ha generato l'evento indirizzato. L'evento indirizzato viene propagato al successivo elemento padre e così via fino a raggiungere l'elemento radice dell'applicazione.  
   

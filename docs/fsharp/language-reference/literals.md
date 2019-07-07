@@ -2,12 +2,12 @@
 title: Valori letterali
 description: Informazioni sui tipi di valore letterali in di F# linguaggio di programmazione.
 ms.date: 06/28/2019
-ms.openlocfilehash: 53647d8cbc2a59527a50e122bc1abc6055c1fce5
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0c9ced0b505817a161ca39c6c9f853f94cedf410
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487778"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610149"
 ---
 # <a name="literals"></a>Valori letterali
 
@@ -69,7 +69,7 @@ let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 
 ## <a name="remarks"></a>Note
 
-Le stringhe Unicode possono contenere codifiche esplicite che è possibile specificare utilizzando `\u` seguita da un codice esadecimale a 16 bit (0000 - FFFF) o le codifiche UTF-32 che è possibile specificare utilizzando `\U` seguita da un codice esadecimale a 32 bit che rappresenta qualsiasi punto di codice Unicode (00000000 - 00010FFFF).
+Le stringhe Unicode possono contenere codifiche esplicite che è possibile specificare utilizzando `\u` seguita da un codice esadecimale a 16 bit (0000 - FFFF) o le codifiche UTF-32 che è possibile specificare utilizzando `\U` seguita da un codice esadecimale a 32 bit che rappresenta qualsiasi punto di codice Unicode (00000000 - 0010FFFF).
 
 L'uso di altri operatori bit per bit diverso da `|||` non è consentito.
 

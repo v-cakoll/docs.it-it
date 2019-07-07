@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 326900087f755b6c92d9ebb77dad36e5880fd2c0
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063889"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610455"
 ---
 # <a name="routed-events-overview"></a>Cenni preliminari sugli eventi indirizzati
 Questo argomento descrive il concetto di eventi indirizzati in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. L'argomento definisce la terminologia correlata agli eventi indirizzati, descrive in che modo questi eventi sono indirizzati lungo un albero di elementi, riepiloga le modalità di gestione degli eventi indirizzati e spiega come creare eventi indirizzati personalizzati.
@@ -98,7 +98,7 @@ Questo argomento descrive il concetto di eventi indirizzati in [!INCLUDE[TLA#tla
   
  Gli eventi indirizzati diventano particolarmente efficaci se si usa uno degli scenari suggeriti: definizione di gestori comuni in una radice comune, composizione di un controllo personalizzato o definizione di una classe di controlli personalizzata.  
   
- Non è necessario che i listener e le origini degli eventi indirizzati condividano un evento comune nella gerarchia. Eventuali <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> può essere un listener di eventi per qualsiasi evento indirizzato. È quindi possibile usare il set completo di eventi indirizzati disponibile nel set di [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] come "interfaccia" concettuale tramite cui elementi diversi dell'applicazione possono scambiarsi informazioni sugli eventi. Questo concetto di "interfaccia" per gli eventi indirizzati è applicabile in particolar modo agli eventi di input.  
+ Non è necessario che i listener e le origini degli eventi indirizzati condividano un evento comune nella gerarchia. Eventuali <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> può essere un listener di eventi per qualsiasi evento indirizzato. Pertanto, è possibile usare il set completo di eventi indirizzati disponibili per tutta l'API di utilizzo impostato come un' "interfaccia" concettuale tramite cui elementi diversi dell'applicazione possono scambiarsi informazioni sugli eventi. Questo concetto di "interfaccia" per gli eventi indirizzati è applicabile in particolar modo agli eventi di input.  
   
  Gli eventi indirizzati possono anche essere usati per comunicare nell'albero degli elementi, poiché i dati di un evento vengono trasmessi a ogni elemento nella route. Se un elemento modifica in qualche modo i dati dell'evento, tale modifica risulta disponibile per l'elemento successivo nella route.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 280557a5098c513111557f52d835b20d9a2eeb62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876883"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610560"
 ---
 # <a name="standard-query-operator-translation"></a>Conversione dell'operatore query standard
 
@@ -198,7 +198,7 @@ Per altre informazioni sul mapping di questi tipi di data e ora di SQL Server, v
 
 ## <a name="sql-server-2000-support"></a>Supporto di SQL Server 2000
 
-Le seguenti limitazioni di [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)], rispetto a [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)], influiscono sul supporto di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
+Quanto segue [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] influiscono sulle limitazioni, rispetto a Microsoft SQL Server 2005, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supportano.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Operatori Cross Apply e Outer Apply
 
@@ -208,7 +208,7 @@ Questi operatori non sono disponibili in [!INCLUDE[ss2k](../../../../../../inclu
 
 ### <a name="text--ntext"></a>text/ntext
 
-Tipi di dati `text`  /  `ntext` non può essere utilizzato in alcune operazioni di query sulle `varchar(max)`  /  `nvarchar(max)`, che sono supportate da [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)].
+Tipi di dati `text`  /  `ntext` non può essere utilizzato in alcune operazioni di query sulle `varchar(max)`  /  `nvarchar(max)`, che sono supportate da Microsoft SQL Server 2005.
 
 Non sono disponibili risoluzioni per questa limitazione. In particolare, non è possibile usare `Distinct()` su qualsiasi risultato contenente membri di cui è stato eseguito il mapping a colonne `text` o `ntext`.
 

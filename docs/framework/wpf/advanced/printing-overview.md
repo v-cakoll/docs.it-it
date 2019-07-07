@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: f82fd9803512dbd2466c4d0b49142e2c553d578a
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 2090c58369ed3c7bda5df1342291001d9550d48d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380226"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610466"
 ---
 # <a name="printing-overview"></a>Cenni preliminari sulla stampa
 Con Microsoft .NET Framework, gli sviluppatori di applicazioni con Windows Presentation Foundation (WPF) dispongono di molteplici nuove della stampa e stampare le API di gestione del sistema. Con [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], alcuni dei miglioramenti apportati al sistema di stampa sono anche disponibili agli sviluppatori che creano applicazioni [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e a quelli che usano codice non gestito. Questa nuova funzionalità è basata sul nuovo formato di file [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] e sul percorso di stampa [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
@@ -31,7 +31,7 @@ Con Microsoft .NET Framework, gli sviluppatori di applicazioni con Windows Prese
 ## <a name="about-xps"></a>Informazioni su XPS  
  Stored procedure estese è un formato di documento elettronico, un formato di file di spooling e un linguaggio di descrizione della pagina. Si tratta di un formato di documento aperto basato sull'uso di [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] e di altri standard del settore per creare documenti per più piattaforme. Stored procedure estese semplifica il processo mediante il quale documenti digitali vengono creati, condiviso, stampati, visualizzati e archiviati. Per altre informazioni sulla stored procedure estese, vedere [documenti XPS](/windows/desktop/printdocs/documents).  
   
- Varie tecniche di stampa XPS in base al contenuto mediante [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sono illustrati nelle [a livello di codice stampa di file XPS](how-to-programmatically-print-xps-files.md). Può essere utile fare riferimento a tali esempi durante la lettura di questo argomento. (Gli sviluppatori di codice non gestito dovrebbero riscontrare documentazione per il [funzione MXDC_ESCAPE](/windows/desktop/printdocs/mxdc-escape). Gli sviluppatori di Windows Form è necessario usare il [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] nella <xref:System.Drawing.Printing> dello spazio dei nomi che non supporta la versione completa [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] percorso di stampa, ma supporta un percorso di stampa GDI-XPS ibrido. Vedere **Architettura del percorso di stampa** più avanti.  
+ Varie tecniche di stampa XPS in base al contenuto mediante [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sono illustrati nelle [a livello di codice stampa di file XPS](how-to-programmatically-print-xps-files.md). Può essere utile fare riferimento a tali esempi durante la lettura di questo argomento. (Gli sviluppatori di codice non gestito dovrebbero riscontrare documentazione per il [funzione MXDC_ESCAPE](/windows/desktop/printdocs/mxdc-escape). Gli sviluppatori di Windows Form devono usare l'API dei <xref:System.Drawing.Printing> dello spazio dei nomi che non supporta la versione completa [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] percorso di stampa, ma supporta un percorso di stampa GDI-XPS ibrido. Vedere **Architettura del percorso di stampa** più avanti.  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Percorso di stampa XPS  
@@ -51,7 +51,7 @@ Con Microsoft .NET Framework, gli sviluppatori di applicazioni con Windows Prese
   
 - Formato XPS standard di settore.  
   
- Per scenari di stampa di base, è disponibile un'[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] semplice e di uso intuitivo con un solo punto di ingresso per interfaccia utente, configurazione e invio di processi. Per scenari avanzati, è disponibile un supporto aggiuntivo per la personalizzazione dell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] (o nessuna [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]), la stampa sincrona o asincrona e le funzionalità di stampa in modalità batch. Entrambe le opzioni forniscono supporto di stampa in modalità di attendibilità completa o parziale.  
+ Per scenari di stampa di base, un'API semplice e intuitiva è disponibile con un singolo punto di ingresso per interfaccia utente, configurazione e processo di invio. Per scenari avanzati, è disponibile un supporto aggiuntivo per la personalizzazione dell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] (o nessuna [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]), la stampa sincrona o asincrona e le funzionalità di stampa in modalità batch. Entrambe le opzioni forniscono supporto di stampa in modalità di attendibilità completa o parziale.  
   
  XPS è stato progettato con particolare attenzione all'estendibilità. Usando il framework di estendibilità, è possibile aggiungere funzionalità a XPS in modo modulare. Le funzionalità di estensibilità includono:  
   
@@ -75,7 +75,7 @@ Con Microsoft .NET Framework, gli sviluppatori di applicazioni con Windows Prese
  Il <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> controllo fornisce un singolo punto di ingresso per [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], configurazione e l'invio di processi di stored procedure estese. Per informazioni su come creare un'istanza del controllo e come usarlo, vedere [Richiamare una finestra di dialogo di stampa](how-to-invoke-a-print-dialog.md).  
   
 ### <a name="advanced-xps-printing"></a>Stampa XPS avanzata  
- Per accedere al set completo di stored procedure estese le funzionalità, stampa avanzata [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] deve essere utilizzato. Di seguito vengono descritte in dettaglio diverse [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]. Percorso di stampa per un elenco completo delle stored procedure estese [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], vedere la <xref:System.Windows.Xps> e <xref:System.Printing> riferimenti dello spazio dei nomi.  
+ Per accedere all'insieme completo di funzionalità di stored procedure estese, l'API di stampa avanzato deve essere usata. Diverse API pertinenti sono descritte in maggiore dettaglio di seguito. Percorso di stampa per un elenco completo delle stored procedure estese [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], vedere la <xref:System.Windows.Xps> e <xref:System.Printing> riferimenti dello spazio dei nomi.  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket e PrintCapabilities  
  Il <xref:System.Printing.PrintTicket> e <xref:System.Printing.PrintCapabilities> classi sono alla base delle funzionalità avanzate di stored procedure estese. Entrambi i tipi di oggetti sono strutture in formato [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] di funzionalità orientate alla stampa quali regole di confronto, stampa fronte-retro, graffatura e così via. Queste strutture sono definite dallo schema di stampa. Un oggetto <xref:System.Printing.PrintTicket> indica a una stampante come elaborare un processo di stampa. La classe <xref:System.Printing.PrintCapabilities> consente di definire le funzionalità di una stampante. Eseguendo una query delle funzionalità di una stampante, è possibile creare un oggetto <xref:System.Printing.PrintTicket> per usare in modo completo tutte le funzionalità supportate di una stampante. Analogamente, è possibile evitare le funzionalità non supportate.  

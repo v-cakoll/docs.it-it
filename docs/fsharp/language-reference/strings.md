@@ -1,13 +1,13 @@
 ---
 title: Stringhe
 description: Informazioni su come il F# di tipo 'stringa' rappresenta il testo non modificabile come sequenza di caratteri Unicode.
-ms.date: 06/28/2019
-ms.openlocfilehash: 8bd7a65a8d8e9e6a2d3930cd1fc9e800342d9a18
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.date: 07/05/2019
+ms.openlocfilehash: b252aef7d7e6e299df8282407198714971e80cd5
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487766"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610169"
 ---
 # <a name="strings"></a>Stringhe
 
@@ -22,14 +22,26 @@ Valori letterali stringa sono delimitati dal carattere di virgolette doppie (").
 
 |Carattere|Sequenza di escape|
 |---------|---------------|
+|Avviso|`\a`|
 |Backspace|`\b`|
+|Avanzamento carta|`\f`|
 |Nuova riga|`\n`|
 |Ritorno a capo|`\r`|
 |Scheda|`\t`|
+|Tabulazione verticale|`\v`|
 |Barra rovesciata|`\\`|
 |Virgoletta|`\"`|
 |Apostrofo|`\'`|
-|Carattere Unicode|`\uXXXX` (UTF-16) o `\U00XXXXXX` (UTF-32) (in cui `X` indica una cifra esadecimale)|
+|Carattere Unicode|`\DDD` (dove `D` indica un valore decimal digit; intervallo di 000 - 255; ad esempio `\231` = "ç")|
+|Carattere Unicode|`\xHH` (dove `H` indica una cifra esadecimale; intervallo 00 - FF; ad esempio `\xE7` = "ç")|
+|Carattere Unicode|`\uHHHH` (UTF-16) (in cui `H` indica una cifra esadecimale; intervallo di 0000 - FFFF.  ad esempio `\u00E7` = "ç")|
+|Carattere Unicode|`\U00HHHHHH` (UTF-32) (in cui `H` indica una cifra esadecimale; intervallo di 000000 - 10FFFF;  ad esempio `\U0001F47D` = "👽")|
+
+> [!IMPORTANT]
+> Il `\DDD` sequenza di escape è la notazione decimale, notazione non ottale, ad esempio la maggior parte degli altri linguaggi. Pertanto, cifre `8` e `9` siano valide e una sequenza di `\032` rappresenta uno spazio (u+0020), mentre tale stesso punto di codice in notazione ottale sarebbe `\040`.
+
+> [!NOTE]
+> Che è vincolato a un intervallo pari a 0 - 255 (0xFF), il `\DDD` e `\x` sequenze di escape sono effettivamente il [ISO-8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1#Code_page_layout) set di caratteri e poiché i primi 256 punti di codice Unicode corrispondente.
 
 Se è preceduto dal simbolo @, il valore letterale è una stringa verbatim. Ciò significa che tutte le sequenze di escape vengono ignorate, ad eccezione del fatto che i due caratteri segno di virgolette doppie vengono interpretate come carattere un segno di virgolette.
 

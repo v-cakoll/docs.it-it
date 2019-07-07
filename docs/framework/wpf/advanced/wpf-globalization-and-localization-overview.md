@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: ce54c3299d599e990fa02abd3cea1460d588e280
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28aeaae7292224dc8f56787efbde82712340af11
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662264"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610397"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Panoramica della globalizzazione e localizzazione WPF
 
@@ -90,7 +90,7 @@ Quando si sviluppa un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sha
 
 Il processo di localizzazione inizia dopo la non localizzato `MyDialog.resources.dll` generazione del file. Il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementi e proprietà in originale [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] vengono estratti dal modulo BAML di XAML in coppie chiave-valore tramite il [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] sotto <xref:System.Windows.Markup.Localizer>. I localizzatori usano le coppie chiave-valore per localizzare l'applicazione. È possibile generare un nuovo file con estensione resource.dll a partire dai nuovi valori dopo che la localizzazione è stata completata.
   
- Le chiavi delle coppie chiave-valore sono `x:Uid` i valori che vengono inseriti dallo sviluppatore nell'originale [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Questi `x:Uid` abilitare i valori di [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] di rilevare e unire le modifiche apportate dallo sviluppatore e dal localizzatore durante la localizzazione. Ad esempio, se lo sviluppatore modifica il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dopo che il localizzatore ha iniziato la localizzazione, è possibile unire le modifiche di sviluppo con il lavoro di localizzazione già completato in modo che lavoro minimo traduzione viene perso.  
+ Le chiavi delle coppie chiave-valore sono `x:Uid` i valori che vengono inseriti dallo sviluppatore nell'originale [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Questi `x:Uid` valori abilitare l'API di rilevare e unire le modifiche apportate dallo sviluppatore e dal localizzatore durante la localizzazione. Ad esempio, se lo sviluppatore modifica il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dopo che il localizzatore ha iniziato la localizzazione, è possibile unire le modifiche di sviluppo con il lavoro di localizzazione già completato in modo che lavoro minimo traduzione viene perso.  
   
  La figura seguente mostra un tipico flusso di lavoro di localizzazione basato sul modulo BAML di XAML. Questo diagramma si presuppone che lo sviluppatore scriva l'applicazione in lingua inglese. Lo sviluppatore crea e globalizza l'applicazione WPF. Nel file di progetto lo sviluppatore imposta `<UICulture>en-US</UICulture>` in modo che in fase di compilazione, venga generato un assembly principale indipendente dalla lingua con un satellite. Resources contenente tutte le risorse localizzabili. In alternativa, è possibile mantenere la lingua di origine nell'assembly principale poiché le API di localizzazione WPF supportano l'estrazione dall'assembly principale. Dopo il processo di compilazione, il codice XAML viene compilato in BAML. Il file MyDialog.exe.resources.dll indipendente dalla lingua viene distribuito ai clienti di lingua inglese.  
   

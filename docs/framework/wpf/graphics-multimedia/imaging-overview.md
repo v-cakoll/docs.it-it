@@ -21,21 +21,21 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 6cb389cd0458d1c9e7af94586c394764f01e4bab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b84a2e4c3cf4126a6efa7edaf868080dbc48b859
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665178"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610383"
 ---
 # <a name="imaging-overview"></a>Cenni preliminari sulla creazione dell'immagine
 Questo argomento offre un'introduzione a [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] consente agli sviluppatori di visualizzare, trasformare e formattare le immagini.  
 
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF Imaging Component  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] offre miglioramenti significativi nelle funzionalità di creazione delle immagini all'interno di [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Le funzionalità di creazione delle immagini, ad esempio la visualizzazione di una bitmap o l'uso di un'immagine in un controllo comune, si basavano in precedenza sulle librerie [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] o [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)]. Queste [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] forniscono funzionalità di base per la creazione di immagini, ma sono sprovviste di funzionalità quali il supporto per l'estendibilità dei codec e le immagini ad alta fedeltà. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] è progettato per colmare le carenze di [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] e [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] e fornire un nuovo set di [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] per visualizzare e usare le immagini all'interno delle applicazioni.  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] offre miglioramenti significativi nelle funzionalità di creazione delle immagini all'interno di [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Le funzionalità di creazione delle immagini, ad esempio la visualizzazione di una bitmap o l'uso di un'immagine in un controllo comune, si basavano in precedenza sulle librerie [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] o [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)]. Queste API forniscono funzionalità, ma la mancanza di funzionalità, ad esempio il supporto per l'estendibilità dei codec e supporto per le immagini ad alta fedeltà di creazione dell'immagine di base. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] è progettato per colmare le carenze di [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] e [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] e fornire un nuovo set di API per visualizzare e usare le immagini all'interno delle applicazioni.  
   
- È possibile accedere all'[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] di [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] in due modi: con un componente gestito e un componente non gestito. Il componente non gestito fornisce le funzionalità riportate di seguito.  
+ Esistono due modi per accedere la [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] API, un componente gestito e un componente non gestito. Il componente non gestito fornisce le funzionalità riportate di seguito.  
   
 - Modello di estendibilità per formati di immagine nuovi o proprietari.  
   
@@ -51,9 +51,9 @@ Questo argomento offre un'introduzione a [!INCLUDE[TLA#tla_wic](../../../../incl
   
 - Il componente gestito usa l'infrastruttura non gestita per fornire l'integrazione di immagini con altre funzionalità [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], ad esempio [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animazione e grafica. Il componente gestito sfrutta inoltre da di Windows Presentation Foundation (WPF) imaging codec modello di estendibilità che consente il riconoscimento automatico dei nuovi formati di immagine in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni.  
   
- La maggior parte delle managed [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] si trovano nel <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> dello spazio dei nomi, anche se diverse importanti tipi, ad esempio <xref:System.Windows.Media.ImageBrush> e <xref:System.Windows.Media.ImageDrawing> si trovano nel <xref:System.Windows.Media?displayProperty=nameWithType> dello spazio dei nomi e <xref:System.Windows.Controls.Image> risiede nel <xref:System.Windows.Controls?displayProperty=nameWithType> dello spazio dei nomi.  
+ La maggior parte delle managed [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] API si trovano nel <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> dello spazio dei nomi, anche se diverse importanti tipi, ad esempio <xref:System.Windows.Media.ImageBrush> e <xref:System.Windows.Media.ImageDrawing> si trovano nel <xref:System.Windows.Media?displayProperty=nameWithType> dello spazio dei nomi e <xref:System.Windows.Controls.Image> risiede nel <xref:System.Windows.Controls?displayProperty=nameWithType> spazio dei nomi.  
   
- Questo argomento include informazioni aggiuntive sul componente gestito. Per altre informazioni sull'[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] non gestita, vedere la documentazione relativa a [Unmanaged WPF Imaging Component (WPF Imaging Component non gestito)](/windows/desktop/wic/-wic-lh) non gestito.  
+ Questo argomento include informazioni aggiuntive sul componente gestito. Per altre informazioni sul, vedere API non gestite di [Unmanaged WPF Imaging Component](/windows/desktop/wic/-wic-lh) documentazione.  
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>Formati di immagini WPF  
@@ -167,7 +167,7 @@ I pennelli immagine possono riempire forme, controlli, testo e altro ancora
   
  Accesso ai metadati viene fornito tramite il <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> proprietà di un <xref:System.Windows.Media.Imaging.BitmapSource> oggetto. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> Restituisce un <xref:System.Windows.Media.Imaging.BitmapMetadata> oggetto che include tutti i metadati contenuti nell'immagine. Questi dati possono essere in uno schema di metadati o in una combinazione di schemi diversi. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] supporta gli schemi di metadati di immagini seguenti: [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)], tEXt (PNG Textual Data), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] e [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
   
- Per semplificare il processo di lettura dei metadati, <xref:System.Windows.Media.Imaging.BitmapMetadata> include diverse proprietà denominate facilmente accessibili, ad esempio <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, e <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Molte di queste proprietà denominate consentono anche di scrivere metadati. Il lettore di query dei metadati fornisce supporto aggiuntivo per la lettura dei metadati. Il <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> metodo viene utilizzato per recuperare un lettore di query dei metadati fornendo una stringa di query, ad esempio *"/ app1/app1/exif/"*. Nell'esempio seguente <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> viene usato per ottenere il testo archiviato nel *"/Text/Description"* posizione.  
+ Per semplificare il processo di lettura dei metadati, <xref:System.Windows.Media.Imaging.BitmapMetadata> include diverse proprietà denominate facilmente accessibili, ad esempio <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, e <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Molte di queste proprietà denominate consentono anche di scrivere metadati. Il lettore di query dei metadati fornisce supporto aggiuntivo per la lettura dei metadati. Il <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> metodo viene utilizzato per recuperare un lettore di query dei metadati fornendo una stringa di query, ad esempio *"/ app1/app1/exif/"* . Nell'esempio seguente <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> viene usato per ottenere il testo archiviato nel *"/Text/Description"* posizione.  
   
  [!code-cpp[BitmapMetadata#GetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
  [!code-csharp[BitmapMetadata#GetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
@@ -183,7 +183,7 @@ I pennelli immagine possono riempire forme, controlli, testo e altro ancora
 ## <a name="codec-extensibility"></a>Estendibilità dei codec  
  Il modello di estendibilità per i nuovi codec di immagini è una funzionalità fondamentale di [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]. Queste interfacce non gestite consentono agli sviluppatori di codec di integrare i codec con [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], per consentire l'uso automatico di nuovi formati di immagine da parte delle applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
- Per un esempio dell'[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] di estendibilità, vedere [Win32 Sample Codec (Codec di esempio di Win32)](https://go.microsoft.com/fwlink/?LinkID=160052). Questo esempio spiega come creare un decodificatore e un codificatore per un formato di immagine personalizzato.  
+ Per un esempio di API di estensibilità, vedere la [Codec di esempio di Win32](https://go.microsoft.com/fwlink/?LinkID=160052). Questo esempio spiega come creare un decodificatore e un codificatore per un formato di immagine personalizzato.  
   
 > [!NOTE]
 >  Il codec deve essere firmato digitalmente per il sistema affinché venga riconosciuto.  
