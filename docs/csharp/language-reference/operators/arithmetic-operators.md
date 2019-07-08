@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 155ce5ce4673008a61b4231a3aaee5a40ad9ead6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 4108583a5f97d1349fb54c335d55252352ea4883
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423987"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609999"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatori aritmetici (Riferimenti per C#)
 
@@ -243,7 +243,7 @@ Per altre informazioni, vedere le osservazioni nelle pagine di riferimento [Syst
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 
-Un tipo definito dall'utente può eseguire l'[overload](../keywords/operator.md) degli operatori aritmetici unari (`++`, `--`, `+` e `-`) e binari (`*`, `/`, `%`, `+` e `-`). Quando viene eseguito l'overload di un operatore binario, viene anche eseguito in modo implicito l'overload dell'operatore di assegnazione composta corrispondente. Un tipo definito dall'utente non può eseguire in modo esplicito l'overload di un operatore di assegnazione composta.
+Un tipo definito dall'utente può eseguire l'[overload](operator-overloading.md) degli operatori aritmetici unari (`++`, `--`, `+` e `-`) e binari (`*`, `/`, `%`, `+` e `-`). Quando viene eseguito l'overload di un operatore binario, viene anche eseguito in modo implicito l'overload dell'operatore di assegnazione composta corrispondente. Un tipo definito dall'utente non può eseguire in modo esplicito l'overload di un operatore di assegnazione composta.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

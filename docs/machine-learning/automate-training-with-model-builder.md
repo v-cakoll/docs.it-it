@@ -4,16 +4,16 @@ description: Come usare il generatore di modelli di ML.NET per eseguire automati
 author: natke
 ms.date: 06/26/2019
 ms.custom: overview
-ms.openlocfilehash: 6f5bbe3c389e3ca42550a48ef3e6edbc963ac2e9
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 6049db79753986544de18faebfd047aa190af153
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410589"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539790"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Che cos'è il generatore di modelli e come funziona?
 
-Il generatore di modelli di ML.NET è una semplice estensione grafica di Visual Studio che consente di compilare, eseguire il training e distribuire modelli di Machine Learning personalizzati. 
+Il generatore di modelli di ML.NET è una semplice estensione grafica di Visual Studio che consente di compilare, eseguire il training e distribuire modelli di Machine Learning personalizzati.
 
 Il generatore di modelli usa il Machine Learning automatico (AutoML) per esplorare diversi algoritmi di Machine Learning e impostazioni per individuare quelli più adatti allo scenario.
 
@@ -52,7 +52,7 @@ La classificazione binaria viene usata per classificare i dati in due classi (s�
 - Questa transazione con carta di credito è fraudolenta? (rilevamento delle frodi)
 
 Se lo scenario richiede la classificazione in due categorie, è possibile usare questo modello con il proprio set di dati.
- 
+
 #### <a name="issue-classification-multiclass-classification"></a>Classificazione dei problemi (classificazione multiclasse)
 
 La classificazione dei problemi può essere usata per classificare i problemi dei feedback dei clienti, ad esempio in GitHub, usando il titolo del problema e la descrizione. È un esempio dell'attività di classificazione multiclasse.
@@ -142,10 +142,10 @@ Poiché il generatore di modelli usa Il Machine Learning automatico (AutoML), no
 Dimensioni del set di dati  | Tipo di set di dati       | Avg. Durata del training
 ------------- | ------------------ | --------------
 0 - 10 MB     | Numerico e testo   | 10 sec
-10 - 100 MB   | Numerico e testo   | 10 min 
-100 - 500 MB  | Numerico e testo   | 30 min 
-500 - 1 GB    | Numerico e testo   | 60 min 
-1 GB+         | Numerico e testo   | 3 ore+ 
+10 - 100 MB   | Numerico e testo   | 10 min
+100 - 500 MB  | Numerico e testo   | 30 min
+500 - 1 GB    | Numerico e testo   | 60 min
+1 GB+         | Numerico e testo   | 3 ore+
 
 La durata esatta del training dipende anche dagli elementi seguenti:
 
@@ -160,13 +160,13 @@ Sebbene il generatore di modelli sia stato testato per la scalabilità con un se
 
 La valutazione è il processo di utilizzo del modello con training per effettuare previsioni con nuovi dati di test e quindi misurare la qualità delle previsioni.
 
-Il generatore di modelli suddivide i dati di training in un set di training e un set di test. I dati di training (80%) vengono usati per eseguire il training del modello, mentre i dati di test (20%) vengono usati per la valutazione del modello.  Le metriche usate per la valutazione variano a seconda dell'attività di Machine Learning. Per altre informazioni, vedere [Metriche di valutazione dei modelli](resources/metrics.md).  
+Il generatore di modelli suddivide i dati di training in un set di training e un set di test. I dati di training (80%) vengono usati per eseguire il training del modello, mentre i dati di test (20%) vengono usati per la valutazione del modello.  Le metriche usate per la valutazione variano a seconda dell'attività di Machine Learning. Per altre informazioni, vedere [Metriche di valutazione dei modelli](resources/metrics.md).
 
 ### <a name="sentiment-analysis-binary-classification"></a>Analisi del sentiment (classificazione binaria)
 
 La metrica predefinita per i problemi di classificazione binaria è l'**accuratezza**. L'accuratezza definisce la percentuale di previsioni corrette eseguite dal modello sul set di dati di test. L'**accuratezza migliore è quella più vicina al 100%** .
 
-Le altre metriche indicate come AUC (Area Under the Curve), che misurano il tasso di veri positivi rispetto al tasso di falsi positivi, devono essere maggiori di 0,50 nei modelli accettabili. 
+Le altre metriche indicate come AUC (Area Under the Curve), che misurano il tasso di veri positivi rispetto al tasso di falsi positivi, devono essere maggiori di 0,50 nei modelli accettabili.
 
 Le metriche aggiuntive, ad esempio il punteggio F1, possono essere usate per controllare il bilanciamento tra precisione (percentuale di previsioni corrette sul totale delle previsioni della classe) e richiamo (percentuale di previsioni corrette sul totale dei membri effettivi della classe).
 
@@ -176,15 +176,14 @@ La metrica predefinita per i problemi di classificazione binaria è l'**accurate
 
 Per i problemi in cui i dati sono suddivisi in più classi sono disponibili due tipi di accuratezza:
 
-- Accuratezza micrometrica: la frazione di previsioni corrette in tutte le istanze. Nello scenario di classificazione dei problemi l'accuratezza micrometrica è la percentuale di problemi in ingresso che vengono assegnati alla categoria corretta. 
+- Accuratezza micrometrica: la frazione di previsioni corrette in tutte le istanze. Nello scenario di classificazione dei problemi l'accuratezza micrometrica è la percentuale di problemi in ingresso che vengono assegnati alla categoria corretta.
 - Accuratezza macrometrica: l'accuratezza media a livello di classe. Nello scenario di classificazione dei problemi viene misurata l'accuratezza di ogni categoria e viene quindi calcolata la media dell'accuratezza delle categorie. Per questa metrica viene assegnato lo stesso peso a tutte le classi. Nei set di dati perfettamente bilanciati (con lo stesso numero di esempi di ogni categoria) l'accuratezza micrometrica e l'accuratezza macrometrica corrispondono.
-
 
 ### <a name="price-prediction-regression"></a>Stima dei prezzi (regressione)
 
 La metrica predefinita per i problemi di regressione è **R al quadrato**. 1 è il valore migliore possibile. Il modello migliore è quello con R al quadrato più vicino a 1.
 
-Le altre metriche indicate, ad esempio la perdita di valore assoluto, la perdita di R al quadrato e la perdita di RMS, possono essere usate per comprendere il modello e confrontarlo con altri modelli di regressione. 
+Le altre metriche indicate, ad esempio la perdita di valore assoluto, la perdita di R al quadrato e la perdita di RMS, possono essere usate per comprendere il modello e confrontarlo con altri modelli di regressione.
 
 ## <a name="improve"></a>Migliorare
 
@@ -192,7 +191,7 @@ Se il punteggio delle prestazioni del modello non è quello desiderato, è possi
 
 * Eseguire il training per un periodo di tempo più lungo. Con un periodo di tempo più lungo, il motore di Machine Learning automatico proverà più algoritmi e impostazioni.
 
-* Aggiungere altri dati. A volte la quantità di dati non è sufficiente per eseguire il training di un modello di Machine Learning di qualità elevata. 
+* Aggiungere altri dati. A volte la quantità di dati non è sufficiente per eseguire il training di un modello di Machine Learning di qualità elevata.
 
 * Bilanciare i dati. Per le attività di classificazione, assicurarsi che il set di training sia bilanciato tra le categorie. Ad esempio, se sono presenti quattro classi per 100 esempi di training e le prime due classi (tag1 e tag2) vengono usate per 90 record mentre le altre due classi (tag3 e tag4) vengono usate solo per i rimanenti 10 record, la mancanza di dati bilanciati può rendere più difficile per il modello prevedere correttamente tag3 o tag4.
 

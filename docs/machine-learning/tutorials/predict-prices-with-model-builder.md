@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: db9788e3065a0f2f21d712b2d4826efea2d8a829
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: d9a6f193d877fc1a679b7a3cafd7491e021cb2ad
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410579"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539630"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Stimare i prezzi usando la regressione con il generatore di modelli
 
@@ -51,7 +51,7 @@ Per un elenco di prerequisiti e istruzioni di installazione, vedere la [Guida al
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file *taxi-fare-train.csv* e selezionare **Proprietà**. In **Avanzate** impostare il valore di **Copia nella directory di output** su **Copia se più recente**.
 
-Ogni riga del set di dati `taxi-fare-train.csv` contiene i dettagli delle corse effettuate da un taxi. 
+Ogni riga del set di dati `taxi-fare-train.csv` contiene i dettagli delle corse effettuate da un taxi.
 
 1. Aprire il set di dati **taxi-fare-train.csv**
 
@@ -102,7 +102,7 @@ Il tempo necessario per l'esecuzione del training di ogni modello è proporziona
 Durante il processo di training i dati dell'avanzamento vengono visualizzati nella sezione `Progress` del passaggio relativo al training.
 
 - Stato visualizza lo stato di completamento del processo di training.
-- Precisione migliore visualizza la precisione del modello con le prestazioni migliori individuato dal generatore di modelli. Precisione maggiore indica il modello stimato più correttamente con i dati di test. 
+- Precisione migliore visualizza la precisione del modello con le prestazioni migliori individuato dal generatore di modelli. Precisione maggiore indica il modello stimato più correttamente con i dati di test.
 - Algoritmo migliore visualizza il nome dell'algoritmo con le prestazioni migliori individuato dal generatore di modelli.
 - Ultimo algoritmo visualizza il nome dell'algoritmo usato più di recente dal generatore di modelli per eseguire il training del modello.
 
@@ -122,8 +122,8 @@ Il risultato del processo di training sarà la creazione di due progetti.
 - TaxiFarePredictionML.Model: una libreria di classi .NET Standard che contiene i modelli di dati che definiscono lo schema di input e output dei dati del modello, nonché la versione persistente del modello che ha avuto le prestazioni migliori durante il training.
 
 1. Nella sezione relativa al codice dello strumento generatore di modelli selezionare **Added Projects** (Progetti aggiunti) per aggiungere i progetti alla soluzione.
-1. In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto *TaxiFarePrediction* e selezionare **Aggiungi > Elemento esistente**. Nell'elenco a discesa del tipo di file selezionare `All Files`, passare alla directory del progetto *TaxiFarePredictionML.Model* e selezionare il file `MLModel.zip`. In seguito fare clic con il pulsante destro del mouse sul file `MLModel.zip` appena aggiunto e selezionare *Proprietà*. Per l'opzione Copia nella directory di output, selezionare *Copia se più recente* dall'elenco a discesa.
-1. Fare clic con il pulsante destro del mouse sul progetto *TaxiFarePrediction*. In seguito, selezionare **Aggiungi > Riferimento**. Scegliere il nodo **Progetti > Soluzione** e dall'elenco contrassegnare il progetto *TaxiFarePredictionML.Model* e fare clic su OK.
+2. In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto *TaxiFarePrediction* e selezionare **Aggiungi > Elemento esistente**. Nell'elenco a discesa del tipo di file selezionare `All Files`, passare alla directory del progetto *TaxiFarePredictionML.Model* e selezionare il file `MLModel.zip`. In seguito fare clic con il pulsante destro del mouse sul file `MLModel.zip` appena aggiunto e selezionare *Proprietà*. Per l'opzione Copia nella directory di output, selezionare *Copia se più recente* dall'elenco a discesa.
+3. Fare clic con il pulsante destro del mouse sul progetto *TaxiFarePrediction*. In seguito, selezionare **Aggiungi > Riferimento**. Scegliere il nodo **Progetti > Soluzione** e dall'elenco contrassegnare il progetto *TaxiFarePredictionML.Model* e fare clic su OK.
 
 4. Aprire il file *Program.cs* nel progetto *TaxiFarePrediction*.
 5. Aggiungere le istruzioni using seguenti:

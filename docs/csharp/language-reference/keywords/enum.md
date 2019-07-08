@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 6af1f7f23447f9f1379ac6d223e198a4a2ea5645
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 57043963640f3c384b1e1a9aa7aeb65114689e9f
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424233"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569530"
 ---
 # <a name="enum-c-reference"></a>enum (Riferimenti per C#)
 
-La parola chiave `enum` viene usata per dichiarare un'enumerazione, un tipo distinto costituito da un set di costanti denominate definite elenco degli enumeratori.  
+La parola chiave `enum` viene usata per dichiarare un'enumerazione, un tipo distinto costituito da un set di costanti denominate definite elenco degli enumeratori.
 
 In genere è preferibile definire un'enumerazione direttamente all'interno di uno spazio dei nomi in modo che tutte le classi nello spazio dei nomi possano accedervi con la stessa facilità. Tuttavia, un'enumerazione può anche essere annidata all'interno di una classe o di uno struct.
 
@@ -40,7 +40,6 @@ Ogni tipo di enumerazione ha un tipo sottostante, che può essere qualsiasi [tip
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
-
 
 A una variabile di tipo enumerazione può essere assegnato qualsiasi valore compreso nell'intervallo del tipo sottostante. I valori non sono limitati alle costanti denominate.
 
