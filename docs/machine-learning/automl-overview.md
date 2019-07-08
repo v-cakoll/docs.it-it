@@ -6,26 +6,26 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: 39e454d67f60280c6a43e3b80d788d873345ab77
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: e34694eedd06c0a3e3558c9137c6add9a7f802e4
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307383"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410531"
 ---
-# <a name="automated-machine-learning-with-mlnet"></a><span data-ttu-id="ae82c-103">Machine Learning automatizzato con ML.NET</span><span class="sxs-lookup"><span data-stu-id="ae82c-103">Automated machine learning with ML.NET</span></span>
+# <a name="automated-machine-learning-with-mlnet"></a><span data-ttu-id="00fc0-103">Machine Learning automatizzato con ML.NET</span><span class="sxs-lookup"><span data-stu-id="00fc0-103">Automated machine learning with ML.NET</span></span>
 
-<span data-ttu-id="ae82c-104">Il Machine Learning automatizzato è una funzionalità di ML.NET che esegue la selezione e il training automatici del modello.</span><span class="sxs-lookup"><span data-stu-id="ae82c-104">Automated machine learning is a feature of ML.NET that performs automatic model selection and training.</span></span> <span data-ttu-id="ae82c-105">Dopo aver specificato l'attività di Machine Learning e un set di dati, il Machine Learning automatizzato sceglie il modello con le metriche migliori.</span><span class="sxs-lookup"><span data-stu-id="ae82c-105">You specify the machine learning task and supply a dataset, and automated ML chooses the model with the best metrics.</span></span> <span data-ttu-id="ae82c-106">Vengono generati:</span><span class="sxs-lookup"><span data-stu-id="ae82c-106">It outputs:</span></span>
-- <span data-ttu-id="ae82c-107">un file di modello che può essere caricato nell'applicazione di previsione</span><span class="sxs-lookup"><span data-stu-id="ae82c-107">a model file that can be loaded into your prediction application</span></span>
-- <span data-ttu-id="ae82c-108">il codice dell'applicazione per eseguire previsioni</span><span class="sxs-lookup"><span data-stu-id="ae82c-108">application code to make predictions</span></span>
-- <span data-ttu-id="ae82c-109">il codice sorgente usato per la selezione delle caratteristiche e il training del modello (per comprendere il modello)</span><span class="sxs-lookup"><span data-stu-id="ae82c-109">the source code used for feature selection and model training (to understand the model)</span></span>
+<span data-ttu-id="00fc0-104">Il Machine Learning automatizzato è una funzionalità di ML.NET che esegue la selezione e il training automatici del modello.</span><span class="sxs-lookup"><span data-stu-id="00fc0-104">Automated machine learning is a feature of ML.NET that performs automatic model selection and training.</span></span> <span data-ttu-id="00fc0-105">Dopo aver specificato l'attività di Machine Learning e un set di dati, il Machine Learning automatizzato sceglie il modello con le metriche migliori.</span><span class="sxs-lookup"><span data-stu-id="00fc0-105">You specify the machine learning task and supply a dataset, and automated ML chooses the model with the best metrics.</span></span> <span data-ttu-id="00fc0-106">Vengono generati:</span><span class="sxs-lookup"><span data-stu-id="00fc0-106">It outputs:</span></span>
+- <span data-ttu-id="00fc0-107">un file di modello che può essere caricato nell'applicazione di previsione</span><span class="sxs-lookup"><span data-stu-id="00fc0-107">a model file that can be loaded into your prediction application</span></span>
+- <span data-ttu-id="00fc0-108">il codice dell'applicazione per eseguire previsioni</span><span class="sxs-lookup"><span data-stu-id="00fc0-108">application code to make predictions</span></span>
+- <span data-ttu-id="00fc0-109">il codice sorgente usato per la selezione delle caratteristiche e il training del modello (per comprendere il modello)</span><span class="sxs-lookup"><span data-stu-id="00fc0-109">the source code used for feature selection and model training (to understand the model)</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="ae82c-110">Questa funzionalità è attualmente in anteprima e il materiale può essere soggetto a modifiche.</span><span class="sxs-lookup"><span data-stu-id="ae82c-110">This feature is currently in Preview, and material may be subject to change.</span></span> 
+> <span data-ttu-id="00fc0-110">Questa funzionalità è attualmente in anteprima e il materiale può essere soggetto a modifiche.</span><span class="sxs-lookup"><span data-stu-id="00fc0-110">This feature is currently in Preview, and material may be subject to change.</span></span> 
 
-<span data-ttu-id="ae82c-111">Il Machine Learning automatizzato è attualmente limitato alle [attività](resources/tasks.md) di Machine Learning di classificazione binaria, classificazione multiclasse e regressione.</span><span class="sxs-lookup"><span data-stu-id="ae82c-111">Automated ML is currently limited to the machine learning [tasks](resources/tasks.md) of binary classification, multiclass classification, and regression.</span></span> <span data-ttu-id="ae82c-112">Le altre attività di Machine Learning saranno supportate nelle versioni future.</span><span class="sxs-lookup"><span data-stu-id="ae82c-112">The other machine learning tasks will be supported in future releases.</span></span>
+<span data-ttu-id="00fc0-111">Il Machine Learning automatizzato è attualmente limitato alle [attività](resources/tasks.md) di Machine Learning di classificazione binaria, classificazione multiclasse e regressione.</span><span class="sxs-lookup"><span data-stu-id="00fc0-111">Automated ML is currently limited to the machine learning [tasks](resources/tasks.md) of binary classification, multiclass classification, and regression.</span></span> <span data-ttu-id="00fc0-112">Le altre attività di Machine Learning saranno supportate nelle versioni future.</span><span class="sxs-lookup"><span data-stu-id="00fc0-112">The other machine learning tasks will be supported in future releases.</span></span>
 
-<span data-ttu-id="ae82c-113">Il Machine Learning automatizzato può essere usato in tre modi:</span><span class="sxs-lookup"><span data-stu-id="ae82c-113">There are three ways to use automated ML:</span></span>
-1. <span data-ttu-id="ae82c-114">Nella riga di comando con l'[interfaccia della riga di comando di ML.NET](automate-training-with-cli.md)</span><span class="sxs-lookup"><span data-stu-id="ae82c-114">On the command line, with the [ML.NET CLI](automate-training-with-cli.md)</span></span>
-1. <span data-ttu-id="ae82c-115">Tramite un'applicazione con l'[API di Machine Learning automatizzato](how-to-guides/how-to-use-the-automl-api.md)</span><span class="sxs-lookup"><span data-stu-id="ae82c-115">Via an application, with the [automated ML API](how-to-guides/how-to-use-the-automl-api.md)</span></span>
-1. <span data-ttu-id="ae82c-116">Con un'interfaccia utente grafica con il generatore di modelli di ML.NET</span><span class="sxs-lookup"><span data-stu-id="ae82c-116">With a graphical user interface, with the ML.NET Model Builder</span></span>
+<span data-ttu-id="00fc0-113">Il Machine Learning automatizzato può essere usato in tre modi:</span><span class="sxs-lookup"><span data-stu-id="00fc0-113">There are three ways to use automated ML:</span></span>
+1. <span data-ttu-id="00fc0-114">Con un'interfaccia utente grafica con il [generatore di modelli di ML.NET](automate-training-with-model-builder.md)</span><span class="sxs-lookup"><span data-stu-id="00fc0-114">With a graphical user interface, with the [ML.NET Model Builder](automate-training-with-model-builder.md)</span></span>
+1. <span data-ttu-id="00fc0-115">Nella riga di comando con l'[interfaccia della riga di comando di ML.NET](automate-training-with-cli.md)</span><span class="sxs-lookup"><span data-stu-id="00fc0-115">On the command line, with the [ML.NET CLI](automate-training-with-cli.md)</span></span>
+1. <span data-ttu-id="00fc0-116">Tramite un'applicazione con l'[API di Machine Learning automatizzato](how-to-guides/how-to-use-the-automl-api.md)</span><span class="sxs-lookup"><span data-stu-id="00fc0-116">Via an application, with the [automated ML API](how-to-guides/how-to-use-the-automl-api.md)</span></span>
