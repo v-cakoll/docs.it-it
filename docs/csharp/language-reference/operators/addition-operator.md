@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 258adc45fc6874cca5829479eef1196ebea1e300
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 41355dbadd566648b45d825cdd6515bfc6d411aa
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347972"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610032"
 ---
 # <a name="-and--operators-c-reference"></a>Operatori + e += (Riferimenti per C#)
 
@@ -71,7 +71,7 @@ Nell'esempio seguente viene illustrato l'uso dell'operatore `+=`:
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 
-Un tipo definito dall'utente può eseguire l'[overload](../keywords/operator.md) dell'operatore `+`. Quando viene eseguito l'overload di un operatore `+` binario, viene eseguito in modo implicito anche l'overload dell'operatore `+=`. Un tipo definito dall'utente non può eseguire l'overload dell'operatore `+=` in modo esplicito.
+Un tipo definito dall'utente può eseguire l'[overload](operator-overloading.md) dell'operatore `+`. Quando viene eseguito l'overload di un operatore `+` binario, viene eseguito in modo implicito anche l'overload dell'operatore `+=`. Un tipo definito dall'utente non può eseguire l'overload dell'operatore `+=` in modo esplicito.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

@@ -2,12 +2,12 @@
 title: Varianza nelle interfacce generiche (C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: a2d0bcc049d62978930b4e5cdef7920349e3b894
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 9cbbea35003e86e05d618f5e6000ba2788359cb0
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815956"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539501"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Varianza nelle interfacce generiche (C#)
 
@@ -87,7 +87,7 @@ IEnumerable<int> integers = new List<int>();
 // IEnumerable<Object> objects = integers;
 ```
 
-È anche importante ricordare che le classi che implementano le interfacce varianti sono comunque invariabili. Ad esempio, sebbene <xref:System.Collections.Generic.List%601> implementi l'interfaccia covariante <xref:System.Collections.Generic.IEnumerable%601>, non è possibile convertire `List<Object>` in `List<String>` in modo implicito. come illustra l'esempio di codice riportato di seguito.
+È anche importante ricordare che le classi che implementano le interfacce varianti sono comunque invariabili. Ad esempio, sebbene <xref:System.Collections.Generic.List%601> implementi l'interfaccia covariante <xref:System.Collections.Generic.IEnumerable%601>, non è possibile convertire `List<String>` in `List<Object>` in modo implicito. come illustra l'esempio di codice riportato di seguito.
 
 ```csharp
 // The following line generates a compiler error

@@ -3,12 +3,12 @@ title: Espressioni C# - Panoramica del linguaggio C#
 description: Espressioni, operandi e operatori sono blocchi predefiniti del linguaggio C#
 ms.date: 04/25/2019
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: ffe800304a9125e11e20d96a84919936f1fee2c1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2553730d495942730c53d3646f35e80759a4d168
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753641"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609323"
 ---
 # <a name="expressions"></a>Espressioni
 
@@ -23,7 +23,7 @@ Quando un operando si trova tra due operatori con la stessa precedenza, l'ordine
 
 È possibile controllare la precedenza e l'associatività usando le parentesi. Ad esempio, `x + y * z` prima moltiplica `y` per `z` e quindi somma il risultato a `x`, ma `(x + y) * z` prima somma `x` e `y` e quindi moltiplica il risultato per `z`.
 
-La maggior parte degli operatori può essere [*sottoposta a overload*](../language-reference/keywords/operator.md). L'overload degli operatori consente di specificare implementazioni di operatori definite dall'utente per le operazioni in cui uno o entrambi gli operandi appartengono a un tipo struct o a una classe definita dall'utente.
+La maggior parte degli operatori può essere [*sottoposta a overload*](../language-reference/operators/operator-overloading.md). L'overload degli operatori consente di specificare implementazioni di operatori definite dall'utente per le operazioni in cui uno o entrambi gli operandi appartengono a un tipo struct o a una classe definita dall'utente.
 
 C# offre diversi operatori per eseguire operazioni [aritmetiche](../language-reference/operators/arithmetic-operators.md), [logiche](../language-reference/operators/boolean-logical-operators.md), [di spostamento e bit per bit](../language-reference/operators/bitwise-and-shift-operators.md), nonché confronti di [uguaglianza](../language-reference/operators/equality-operators.md) e [ordinamento](../language-reference/operators/comparison-operators.md).
 
