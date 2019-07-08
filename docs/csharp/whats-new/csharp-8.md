@@ -2,12 +2,12 @@
 title: Novità di C# 8.0 - Guida a C#
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0. Questo articolo è aggiornato alla versione di anteprima 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 962829b68c5d02c3a7e563a00d391c4698024d47
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67151971"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397763"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
@@ -30,7 +30,12 @@ Sono disponibili numerosi miglioramenti per il linguaggio C# che è già possibi
 > [!NOTE]
 > Questo articolo è stato aggiornato per l'ultima volta per l'anteprima 5 di C# 8.0.
 
-Il resto di questo articolo descrive brevemente queste funzionalità. Se sono disponibili articoli approfonditi, vengono forniti collegamenti a queste panoramiche ed esercitazioni.
+Il resto di questo articolo descrive brevemente queste funzionalità. Se sono disponibili articoli approfonditi, vengono forniti collegamenti a queste panoramiche ed esercitazioni. È possibile esplorare queste funzionalità nell'ambiente in uso tramite lo strumento globale `dotnet try`:
+
+1. Installare lo strumento globale [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
+1. Clonare il repository [dotnet/try-samples](https://github.com/dotnet/try-samples).
+1. Impostare la directory corrente sulla sottodirectory *csharp8* per il repository *try-samples*.
+1. Eseguire `dotnet try`.
 
 ## <a name="readonly-members"></a>Membri di sola lettura
 
@@ -425,7 +430,7 @@ Gli esempi seguenti creano intervalli aperti alle estremità, per l'inizio, la f
 ```csharp
 var allWords = words[..]; // contains "The" through "dog".
 var firstPhrase = words[..4]; // contains "The" through "fox"
-var lastPhrase = words[6..]; // contains "the, "lazy" and "dog"
+var lastPhrase = words[6..]; // contains "the", "lazy" and "dog"
 ```
 
 È anche possibile dichiarare gli intervalli come variabili:

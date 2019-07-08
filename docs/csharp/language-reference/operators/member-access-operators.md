@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: b6bca26cc05a13e1384c4fc9642264f65b159ff7
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 4f1d79497f255f52a87dce44f1b5b8709adfada7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306533"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401479"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatori di accesso ai membri (Riferimenti per C#)
 
@@ -141,7 +141,7 @@ L'esempio seguente illustra come chiamare un metodo, con o senza argomenti, e co
 
 [!code-csharp-interactive[invocation with ()](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
 
-Le parentesi si usano anche per richiamare un [costruttore](../../programming-guide/classes-and-structs/constructors.md) con un operatore [`new`](../keywords/new-operator.md).
+Le parentesi si usano anche per richiamare un [costruttore](../../programming-guide/classes-and-structs/constructors.md) con l'operatore [`new`](new-operator.md).
 
 ### <a name="other-usages-of-"></a>Altri utilizzi di ()
 

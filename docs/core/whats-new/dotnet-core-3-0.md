@@ -6,19 +6,19 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 05/06/2019
-ms.openlocfilehash: 369c74d2d8e82f157de0eec4294a5ee50542292b
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.date: 06/14/2019
+ms.openlocfilehash: bb100ea064585235768ecb46781eb830c7dae0c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169790"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401964"
 ---
-# <a name="whats-new-in-net-core-30-preview-5"></a>Novità di .NET Core 3.0 (Preview 5)
+# <a name="whats-new-in-net-core-30-preview-6"></a>Novità di .NET Core 3.0 (Preview 6)
 
-Questo articolo descrive le novità di .NET Core 3.0 (Preview 5). Uno dei principali miglioramenti è il supporto per le applicazioni desktop di Windows (solo Windows). Con il componente Windows Desktop di .NET Core 3.0 SDK, è possibile convertire le applicazioni Windows Forms e WPF (Windows Presentation Foundation). Il componente Windows Desktop è dunque supportato e incluso solo in Windows. Per altre informazioni, vedere la sezione [Desktop di Windows](#windows-desktop) più avanti in questo articolo.
+Questo articolo descrive le novità di .NET Core 3.0 (Preview 6). Uno dei principali miglioramenti è il supporto per le applicazioni desktop di Windows (solo Windows). Con il componente Windows Desktop di .NET Core 3.0 SDK, è possibile convertire le applicazioni Windows Forms e WPF (Windows Presentation Foundation). Il componente Windows Desktop è dunque supportato e incluso solo in Windows. Per altre informazioni, vedere la sezione [Desktop di Windows](#windows-desktop) più avanti in questo articolo.
 
-.NET Core 3.0 aggiunge il supporto per C# 8.0. È consigliabile usare la versione più recente di Visual Studio 2019 Update 1 Preview o Visual Studio Code con l'estensione OmniSharp.
+.NET Core 3.0 aggiunge il supporto per C# 8.0. È consigliabile usare la [versione più recente di Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) o Visual Studio Code con l'estensione OmniSharp.
 
 [Scaricare e iniziare subito a usare .NET Core 3.0 Preview 6](https://aka.ms/netcore3download) in Windows, Mac e Linux.
 
@@ -55,7 +55,7 @@ Anche se .NET Core 3.0 supporta **.NET Standard 2.1**, il modello `dotnet new cl
 </Project>
 ```
 
-Se si usa Visual Studio, è necessario Visual Studio 2019. Visual Studio 2017 non supporta **.NET Standard 2.1** o **.NET Core 3.0**. È consigliabile usare [Visual Studio 2019 Update 1 Preview](https://visualstudio.microsoft.com/vs/preview/).
+Se si usa Visual Studio, è necessario [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) perché Visual Studio 2017 non supporta **.NET Standard 2.1** o **.NET Core 3.0**.
 
 ## <a name="improved-net-core-version-apis"></a>Miglioramento delle API della versione .NET Core
 

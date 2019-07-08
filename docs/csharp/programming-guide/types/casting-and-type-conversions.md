@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: cd989b47c87ef32371b45650d531bd8cbeb85032
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 2aee15443172e753846574806565f7804f1716d1
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306958"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423683"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Cast e conversioni di tipi (Guida per programmatori C#)
 
@@ -38,7 +38,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 ## <a name="implicit-conversions"></a>Conversioni implicite
 
- Per i tipi numerici predefiniti, è possibile eseguire una conversione implicita quando il valore da archiviare può essere adattato nella variabile senza essere troncato o arrotondato. Ad esempio, una variabile di tipo [long](../../../csharp/language-reference/keywords/long.md) (integer a 64 bit) può archiviare qualsiasi valore archiviabile da un tipo [int](../../../csharp/language-reference/keywords/int.md) (integer a 32 bit). Nell'esempio seguente il compilatore converte in modo implicito il valore `num` a destra di un tipo `long` prima di assegnarlo a `bigNum`.  
+ Per i tipi numerici predefiniti, è possibile eseguire una conversione implicita quando il valore da archiviare può essere adattato nella variabile senza essere troncato o arrotondato. Per i tipi integrali, questo significa che l'intervallo del tipo di origine è un subset appropriato dell'intervallo per il tipo di destinazione. Ad esempio, una variabile di tipo [long](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) (integer a 64 bit) può archiviare qualsiasi valore archiviabile da un tipo [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) (integer a 32 bit). Nell'esempio seguente il compilatore converte in modo implicito il valore `num` a destra di un tipo `long` prima di assegnarlo a `bigNum`.  
   
  [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
@@ -53,7 +53,7 @@ Base b = d; // Always OK.
   
 ## <a name="explicit-conversions"></a>Conversioni esplicite
 
- Tuttavia, se una conversione non può essere eseguita senza il rischio di perdita di informazioni, il compilatore richiede di eseguire una conversione esplicita, che viene chiamata *cast*. Un cast è un modo per informare esplicitamente il compilatore che si vuole eseguire la conversione e che si è a conoscenza della possibile perdita di dati. Per eseguire un cast, specificare il tipo tra parentesi davanti al valore o alla variabile da convertire. Il seguente programma esegue il cast di [double](../../../csharp/language-reference/keywords/double.md) in [int](../../../csharp/language-reference/keywords/int.md). Il programma non verrà compilato senza il cast.  
+ Tuttavia, se una conversione non può essere eseguita senza il rischio di perdita di informazioni, il compilatore richiede di eseguire una conversione esplicita, che viene chiamata *cast*. Un cast è un modo per informare esplicitamente il compilatore che si vuole eseguire la conversione e che si è a conoscenza della possibile perdita di dati. Per eseguire un cast, specificare il tipo tra parentesi davanti al valore o alla variabile da convertire. Il seguente programma esegue il cast di [double](../../../csharp/language-reference/keywords/double.md) in [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md). Il programma non verrà compilato senza il cast.  
   
  [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   

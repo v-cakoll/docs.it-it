@@ -1,7 +1,7 @@
 ---
 title: Operatori di uguaglianza - Riferimenti per C#
-description: Informazioni sugli operatori di confronto uguaglianze C#.
-ms.date: 03/28/2019
+description: Informazioni sugli operatori di confronto delle uguaglianze C# e sull'uguaglianza dei tipi C#.
+ms.date: 06/26/2019
 author: pkulikov
 f1_keywords:
 - ==_CSharpKeyword
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: f60d62d1823a8bd06b0417638719a81e95d7438b
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 72e790dc008857a48602c92c9236588c531b64f9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267694"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423921"
 ---
 # <a name="equality-operators-c-reference"></a>Operatori di uguaglianza (Riferimenti per C#)
 
@@ -60,6 +60,18 @@ Due operandi di tipo riferimento diversi da `string` sono uguali quando fanno ri
 [!code-csharp[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
 
 Come illustrato nell'esempio, i tipi riferimento definiti dall'utente supportano l'operatore `==` per impostazione predefinita. Tuttavia, un tipo riferimento definito dall'utente può eseguire l'overload dell'operatore `==`. Se un tipo riferimento esegue l'overload dell'operatore `==`, usare il metodo <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> per verificare se due riferimenti di quel tipo fanno riferimento allo stesso oggetto.
+
+## <a name="delegate-equality"></a>Delegare l'uguaglianza
+
+Due operandi [delegati](../../programming-guide/delegates/index.md) dello stesso tipo di runtime sono uguali quando entrambi sono `null` o i relativi elenchi di chiamate hanno la stessa lunghezza e voci uguali in ogni posizione:
+
+[!code-csharp-interactive[delegate equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#DelegateEquality)]
+
+Per altre informazioni, vedere la sezione [Delegare gli operatori di uguaglianza](~/_csharplang/spec/expressions.md#delegate-equality-operators) dell'articolo [Specifiche del linguaggio C#](~/_csharplang/spec/introduction.md).
+
+I delegati prodotti dalla valutazione di [espressioni lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) semanticamente identiche non sono uguali, come mostra l'esempio seguente:
+
+[!code-csharp-interactive[from identical lambdas](~/samples/csharp/language-reference/operators/EqualityOperators.cs#IdenticalLambdas)]
 
 ## <a name="inequality-operator-"></a>Operatore di disuguaglianza !=
 

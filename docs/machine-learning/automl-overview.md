@@ -6,12 +6,12 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: 39e454d67f60280c6a43e3b80d788d873345ab77
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: e34694eedd06c0a3e3558c9137c6add9a7f802e4
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307383"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410531"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>Machine Learning automatizzato con ML.NET
 
@@ -26,6 +26,6 @@ Il Machine Learning automatizzato è una funzionalità di ML.NET che esegue la s
 Il Machine Learning automatizzato è attualmente limitato alle [attività](resources/tasks.md) di Machine Learning di classificazione binaria, classificazione multiclasse e regressione. Le altre attività di Machine Learning saranno supportate nelle versioni future.
 
 Il Machine Learning automatizzato può essere usato in tre modi:
+1. Con un'interfaccia utente grafica con il [generatore di modelli di ML.NET](automate-training-with-model-builder.md)
 1. Nella riga di comando con l'[interfaccia della riga di comando di ML.NET](automate-training-with-cli.md)
 1. Tramite un'applicazione con l'[API di Machine Learning automatizzato](how-to-guides/how-to-use-the-automl-api.md)
-1. Con un'interfaccia utente grafica con il generatore di modelli di ML.NET
