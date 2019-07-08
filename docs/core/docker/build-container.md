@@ -1,15 +1,15 @@
 ---
 title: Distribuire un'app in un contenitore con Docker - Esercitazione
 description: In questa esercitazione si apprenderà come distribuire un'applicazione .NET Core in un contenitore con Docker.
-ms.date: 04/10/2019
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 2ea9e9bc2614e62fe6ec0d59e39d42c2e32a80a1
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 16edb129be679179450c485ced2586cea9ed9763
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051808"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609289"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Esercitazione: Distribuire un'app .NET Core in un contenitore
 
@@ -29,16 +29,16 @@ L'esercitazione illustra le attività di compilazione e distribuzione di un cont
 
 Installare i prerequisiti seguenti:
 
-- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)\
+* [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)\
 Se .NET Core è già installato, usare il comando `dotnet --info` per determinare quale SDK è in uso.
 
-- [Docker Community Edition](https://www.docker.com/products/docker-desktop)
+* [Docker Community Edition](https://www.docker.com/products/docker-desktop)
 
-- Una directory di lavoro temporanea per il *Dockerfile* e l'app .NET Core di esempio.
+* Una cartella di lavoro temporanea per il *Dockerfile* e l'app .NET Core di esempio. In questa esercitazione, il nome `docker-working` viene usato come cartella di lavoro.
 
 ### <a name="use-sdk-version-22"></a>Usare la versione 2.2 dell'SDK
 
-Se si usa un SDK più recente, ad esempio la versione 3.0, assicurarsi che nell'app venga forzato l'uso della versione 2.2 dell'SDK. Creare un file denominato `global.json` nella directory di lavoro e incollarlo nel codice JSON seguente:
+Se si usa un SDK più recente, ad esempio la versione 3.0, assicurarsi che nell'app venga forzato l'uso della versione 2.2 dell'SDK. Creare un file con nome `global.json` nella cartella di lavoro e incollarlo nel codice JSON seguente:
 
 ```json
 {
@@ -48,17 +48,34 @@ Se si usa un SDK più recente, ad esempio la versione 3.0, assicurarsi che nell'
 }
 ```
 
-Salvare il file. La presenza del file forzerà .NET Core a usare la versione 2.2 per qualsiasi comando `dotnet` chiamato da questa directory e dalle relative sottodirectory.
+Salvare il file. La presenza del file forzerà .NET Core a usare la versione 2.2 per qualsiasi comando `dotnet` chiamato da questa cartella e dalle relative sottocartelle.
 
 ## <a name="create-net-core-app"></a>Creare l'app .NET Core
 
-È necessario creare un'app .NET Core che verrà eseguita dal contenitore Docker. Aprire il terminale, creare una directory di lavoro e accedervi. Nella directory di lavoro eseguire il comando seguente per creare un nuovo progetto in una sottodirectory denominata app:
+È necessario creare un'app .NET Core che verrà eseguita dal contenitore Docker. Aprire il terminale in uso, creare una cartella di lavoro se non è già stata creata e passare alla cartella. Nella cartella di lavoro eseguire il comando seguente per creare un nuovo progetto in una sottocartella denominata app:
 
 ```console
 dotnet new console -o app -n myapp
 ```
 
-Questo comando crea una nuova directory denominata *app* e genera un'app "Hello World". È possibile testare l'app per vedere come funziona. Entrare nella directory *app* ed eseguire il comando `dotnet run`. Verrà visualizzato l'output seguente:
+La struttura di cartelle sarà simile all'esempio seguente:
+
+```console
+docker-working
+│   global.json
+│
+└───app
+    │   myapp.csproj
+    │   Program.cs
+    │
+    └───obj
+            myapp.csproj.nuget.cache
+            myapp.csproj.nuget.g.props
+            myapp.csproj.nuget.g.targets
+            project.assets.json
+```
+
+Il comando `dotnet new` crea una nuova directory denominata *app* e genera un'app "Hello World". Passare alla cartella *app* ed eseguire il comando `dotnet run`. Verrà visualizzato l'output seguente:
 
 ```console
 > dotnet run
@@ -120,25 +137,25 @@ Counter: 4
 Se si passa un numero all'app nella riga di comando, verrà eseguito il conteggio fino a quel numero e quindi l'app verrà chiusa. Provare con `dotnet run -- 5` per contare fino a cinque.
 
 > [!NOTE]
-> Tutti i parametri che seguono `--` vengono passati all'applicazione.
+> I parametri dopo `--` non vengono passati al comando `dotnet run` e vengono invece passati all'applicazione.
 
 ## <a name="publish-net-core-app"></a>Pubblicare l'app .NET Core
 
-Prima di aggiungere l'app .NET Core all'immagine Docker occorre pubblicarla. Il contenitore eseguirà la versione pubblicata dell'app all'avvio.
+Prima di aggiungere l'app .NET Core all'immagine Docker occorre pubblicarla. Si vuole garantire che il contenitore esegua la versione pubblicata dell'app all'avvio.
 
-Dalla directory di lavoro accedere alla directory **app** nel codice sorgente di esempio ed eseguire il comando seguente:
+Dalla cartella di lavoro accedere alla cartella **app** nel codice sorgente di esempio ed eseguire il comando seguente:
 
 ```console
 dotnet publish -c Release
 ```
 
-Questo comando compila l'app nella cartella **publish** all'interno della cartella di output dell'app. Il percorso della cartella **publish** dalla directory di lavoro deve essere `.\app\bin\Release\netcoreapp2.2\publish\`
+Questo comando compila l'app nella cartella **publish**. Il percorso della cartella **publish** dalla cartella di lavoro deve essere `.\app\bin\Release\netcoreapp2.2\publish\`
 
-Ottenere una visualizzazione directory della cartella publish per verificare che **myapp.dll** sia stato creato. Dalla directory **app** eseguire uno dei comandi seguenti:
+Ottenere una visualizzazione directory della cartella publish per verificare che **myapp.dll** sia stato creato. Dalla cartella **app** eseguire uno dei comandi seguenti:
 
 ```console
 > dir bin\Release\netcoreapp2.2\publish
- Directory of C:\path-to-working-dir\app\bin\Release\netcoreapp2.2\publish
+ Directory of C:\docker-working\app\bin\Release\netcoreapp2.2\publish
 
 04/05/2019  11:00 AM    <DIR>          .
 04/05/2019  11:00 AM    <DIR>          ..
@@ -149,23 +166,46 @@ Ottenere una visualizzazione directory della cartella publish per verificare che
 ```
 
 ```bash
-me@DESKTOP:/path-to-working-dir/app$ ls bin/Release/netcoreapp2.2/publish
+me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp2.2/publish
 myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 ```
 
-Nel terminale salire di una directory fino alla directory di lavoro.
-
 ## <a name="create-the-dockerfile"></a>Creare il Dockerfile
 
-Il file *Dockerfile* viene usato dal comando `docker build` per creare un'immagine del contenitore. È un file di testo non crittografato denominato *Dockerfile*, senza estensione. Creare un file denominato *Dockerfile* nella directory di lavoro e aprirlo in un editor di testo. Aggiungere il comando seguente come prima riga del file:
+Il file *Dockerfile* viene usato dal comando `docker build` per creare un'immagine del contenitore. È un file di testo non crittografato denominato *Dockerfile*, senza estensione.
+
+Nel terminale, passare alla cartella di lavoro creata all'inizio. Creare un file con nome *Dockerfile* nella cartella di lavoro e aprirlo in un editor di testo. Aggiungere il comando seguente come prima riga del file:
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/runtime:2.2
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 ```
 
 Il comando `FROM` indica a Docker di scaricare l'immagine con tag **2.2** dal repository **mcr.microsoft.com/dotnet/core/runtime**. Assicurarsi di scaricare il runtime di .NET Core corrispondente al runtime dell'SDK in uso. Ad esempio, l'app creata nella sezione precedente usava .NET Core 2.2 SDK e ha creato un'app destinata a .NET Core 2.2. L'immagine di base a cui viene fatto riferimento nel *Dockerfile* è quindi indentificata dal tag **2.2**.
 
-Salvare il file. Dal terminale eseguire `docker build -t myimage .`, che indica a Docker di elaborare ogni riga del *Dockerfile*. Il punto `.` nel comando `docker build` indica a Docker di usare la directory corrente per trovare un *Dockerfile*. Questo comando compila un'immagine e crea un repository locale denominato **myimage** che punta a tale immagine. Dopo l'esecuzione del comando, eseguire `docker images` per visualizzare un elenco delle immagini installate:
+Salvare il file *Dockerfile*. La struttura directory della cartella di lavoro deve avere un aspetto simile al seguente. Alcuni file e directory nei livelli più profondi sono stati tagliati per risparmiare spazio nell'articolo:
+
+```console
+docker-working
+│   Dockerfile
+│   global.json
+│
+└───app
+    │   myapp.csproj
+    │   Program.cs
+    │
+    ├───bin
+    │   └───Release
+    │       └───netcoreapp2.2
+    │           └───publish
+    │                   myapp.deps.json
+    │                   myapp.dll
+    │                   myapp.pdb
+    │                   myapp.runtimeconfig.json
+    │
+    └───obj
+```
+
+Dal terminale eseguire `docker build -t myimage -f Dockerfile .`, che indica a Docker di elaborare ogni riga del *Dockerfile*. Il punto `.` nel comando `docker build` indica a Docker di usare la cartella corrente per trovare un *Dockerfile*. Questo comando compila un'immagine e crea un repository locale denominato **myimage** che punta a tale immagine. Dopo l'esecuzione del comando, eseguire `docker images` per visualizzare un elenco delle immagini installate:
 
 ```console
 > docker images
@@ -186,10 +226,10 @@ Il comando `COPY` indica a Docker di copiare la cartella specificata nel compute
 
 Il comando successivo, `ENTRYPOINT`, indica a Docker di configurare il contenitore in modo che venga eseguito come un eseguibile. All'avvio del contenitore viene eseguito il comando `ENTRYPOINT`. Al termine del comando, il contenitore si arresta automaticamente.
 
-Salvare il file. Dal terminale eseguire `docker build -t myimage .`, quindi dopo il completamento del comando eseguire `docker images`.
+Dal terminale eseguire `docker build -t myimage -f Dockerfile .`, quindi dopo il completamento del comando eseguire `docker images`.
 
 ```console
-> docker build -t myimage .
+> docker build -t myimage -f Dockerfile .
 Sending build context to Docker daemon  819.7kB
 Step 1/3 : FROM mcr.microsoft.com/dotnet/core/runtime:2.2
  ---> d51bb4452469
@@ -255,7 +295,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ### <a name="connect-to-a-container"></a>Connettersi a un contenitore
 
-Quando un contenitore è in esecuzione, è possibile connettersi ad esso per visualizzare l'output. Usare i comandi `docker start` e `docker attach` per avviare il contenitore e osservare il flusso di output. In questo esempio viene usato il comando <kbd>CTRL + C</kbd> per scollegarsi dal contenitore in esecuzione. Questo comando può effettivamente terminare il processo nel contenitore, arrestando il contenitore stesso. Il parametro `--sig-proxy=false` assicura che <kbd>CTRL + C</kbd> non arresti il processo nel contenitore.
+Quando un contenitore è in esecuzione, è possibile connettersi ad esso per visualizzare l'output. Usare i comandi `docker start` e `docker attach` per avviare il contenitore e osservare il flusso di output. In questo esempio viene usato il comando <kbd>CTRL + C</kbd> per scollegarsi dal contenitore in esecuzione. Questo comando può effettivamente terminare il processo nel contenitore, arrestando il contenitore stesso. Il parametro `--sig-proxy=false` assicura che <kbd>CTRL+C</kbd> non arresti il processo nel contenitore.
 
 Dopo essersi scollegati dal contenitore, collegarsi di nuovo per verificare che sia ancora in esecuzione e continui a eseguire il conteggio.
 

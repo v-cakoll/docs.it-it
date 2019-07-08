@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 58e79cf0b017d65644f25250d05d252b5635c21e
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 06085091a13ad76dcd554cfe637bcc151bbb8476
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67151998"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610173"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Che cos'è ML.NET e come funziona?
 
@@ -164,16 +164,19 @@ In questa sezione si prendono in considerazione i modelli architettonici di ML.N
 Un'applicazione ML.NET inizia con un oggetto <xref:Microsoft.ML.MLContext>. Questo oggetto singleton contiene **cataloghi**. Un catalogo è una factory per il caricamento e salvataggio di dati, le trasformazioni, i formatori e i componenti di gestione del modello. Ogni oggetto catalogo dispone di metodi per creare diversi tipi di componenti:
 
 ||||
-|-|-|-|
-|Caricamento e salvataggio dei dati||<xref:Microsoft.ML.DataOperationsCatalog>|
-|Preparazione dei dati||<xref:Microsoft.ML.TransformsCatalog>|
-|Algoritmi di training|Classificazione binaria|<xref:Microsoft.ML.BinaryClassificationCatalog>|
-||Classificazione multiclasse|<xref:Microsoft.ML.MulticlassClassificationCatalog>|
-||Rilevamento di anomalie|<xref:Microsoft.ML.AnomalyDetectionCatalog>|
-||Ranking|<xref:Microsoft.ML.RankingCatalog>|
-||Regressione|<xref:Microsoft.ML.RegressionCatalog>|
-||Consiglio|<xref:Microsoft.ML.RecommendationCatalog>|
-|Uso dei modelli ||<xref:Microsoft.ML.ModelOperationsCatalog>|
+|-|-|-|-|
+|Caricamento e salvataggio dei dati||<xref:Microsoft.ML.DataOperationsCatalog>||
+|Preparazione dei dati||<xref:Microsoft.ML.TransformsCatalog>||
+|Algoritmi di training|Classificazione binaria|<xref:Microsoft.ML.BinaryClassificationCatalog>||
+||Classificazione multiclasse|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
+||Rilevamento di anomalie|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
+||Clustering|<xref:Microsoft.ML.ClusteringCatalog>||
+||Previsione|<xref:Microsoft.ML.Forecasting>||
+||Ranking|<xref:Microsoft.ML.RankingCatalog>||
+||Regressione|<xref:Microsoft.ML.RegressionCatalog>||
+||Consiglio|<xref:Microsoft.ML.RecommendationCatalog>|Aggiungere Microsoft.ML.Recommender|
+||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|Aggiungere Microsoft.ML.TimeSeries|
+|Uso dei modelli ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 È possibile passare ai metodi di creazione in ognuna delle categorie precedenti. Se si usa Visual Studio i cataloghi sono visualizzabili tramite IntelliSense.
 

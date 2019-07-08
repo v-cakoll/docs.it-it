@@ -1,20 +1,18 @@
 ---
 title: Selezionare la versione di .NET Core da usare
 description: Informazioni su come .NET Core ricerca e sceglie automaticamente le versioni runtime per un programma. Questo articolo illustra anche come forzare una versione specifica.
-author: billwagner
-ms.author: wiwagn
-ms.date: 06/27/2018
+author: thraka
+ms.author: adegeo
+ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7ec22acf33884a5da0062b6e7aaded5dd4a0c665
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127238"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539308"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selezionare la versione di .NET Core da usare
-
-[!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
 Questo articolo illustra i criteri usati dagli strumenti di .NET Core, dall'SDK e dal Common Language Runtime per selezionare le versioni. Questi criteri consentono di bilanciare tra l'esecuzione di applicazioni con le versioni specificate e la possibilità di aggiornare i computer sia degli sviluppatori che degli utenti finali. Questi criteri consentono le azioni seguenti:
 
@@ -87,19 +85,20 @@ L'host sceglie la versione di patch più recente installata nel computer. Se ad 
 
 Se non viene trovata alcuna versione `2.0.*` accettabile, viene usata una nuova versione `2.*`. Se ad esempio è stato specificato `netcoreapp2.0` ed è installata solo la versione `2.1.0`, l'applicazione viene eseguita usando il runtime `2.1.0`. Questo comportamento è detto "roll forward della versione secondaria". Le versioni minori non verranno prese in considerazione. Se non è installato alcun runtime accettabile, l'applicazione non viene eseguita.
 
-Alcuni esempi di utilizzo dimostrano il comportamento:
+Alcuni esempi d'uso dimostrano il comportamento quando la destinazione è 2.0:
 
-- È richiesta la versione 2.0.4. 2.0.5 è la versione di patch più recente installata. Viene usata la versione 2.0.5.
-- È richiesta la versione 2.0.4. Non è installata alcuna versione 2.0.*. 1.1.1 è il runtime più recente installato. Viene visualizzato un messaggio di errore.
-- È richiesta la versione 2.0.4. 2.0.0 è la versione più recente installata. Viene visualizzato un messaggio di errore.
-- È richiesta la versione 2.0.4. Non è installata alcuna versione 2.0.*. 2.2.2 è la versione di runtime 2.x più recente installata. Viene usata la versione 2.2.2.
-- È richiesta la versione 2.0.4. Non è installata alcuna versione 2.x. Viene installata la versione 3.0.0 (non una versione attualmente disponibile). Viene visualizzato un messaggio di errore.
+- È specificata la versione 2.0. 2.0.5 è la versione di patch più recente installata. Viene usata la versione 2.0.5.
+- È specificata la versione 2.0. Non è installata alcuna versione 2.0.*. 1.1.1 è il runtime più recente installato. Viene visualizzato un messaggio di errore.
+- È specificata la versione 2.0. Non è installata alcuna versione 2.0.*. 2.2.2 è la versione di runtime 2.x più recente installata. Viene usata la versione 2.2.2.
+- È specificata la versione 2.0. Non è installata alcuna versione 2.x. È installata la versione 3.0.0. Viene visualizzato un messaggio di errore.
 
 Il roll forward della versione secondaria presenta un effetto collaterale che può interessare gli utenti finali. Si consideri lo scenario seguente:
 
-- È richiesta la versione 2.0.4. Non è installata alcuna versione 2.0.*. Viene installata la versione 2.2.2. Viene usata la versione 2.2.2.
-- In un momento successivo viene installata la versione 2.0.5. Per i successivi avvii dell'applicazione verrà usata la versione 2.0.5, non la 2.2.2. La patch più recente della versione secondaria richiesta viene preferita a una versione secondaria più recente.
-- È possibile che le versioni 2.0.5 e 2.2.2 si comportino diversamente, in particolare per gli scenari come la serializzazione dei dati binari.
+1. L'applicazione specifica che è necessaria la versione 2.0.
+2. Al momento dell'esecuzione non è installata la versione 2.0.* ma la versione 2.2.2. Verrà usata la versione 2.2.2.
+3. In un secondo momento, l'utente installerà la versione 2.0.5 ed eseguirà nuovamente l'applicazione, dopodiché verrà usata la versione 2.0.5.
+
+È possibile che le versioni 2.0.5 e 2.2.2 si comportino diversamente, in particolare per gli scenari come la serializzazione dei dati binari.
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>Distribuzioni autonome con runtime selezionato
 

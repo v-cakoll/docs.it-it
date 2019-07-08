@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: b6f7450b4f682ea5ac69fd1bab434b27451e58df
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d2ee9537df540936e0a5ec448e6aaddbbbc162b1
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586057"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610544"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (strumento per la generazione del codice)
 Lo strumento da riga di comando SqlMetal genera codice e mapping per il componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] di .NET Framework. Mediante l'applicazione delle opzioni riportate più avanti in questo argomento è possibile usare SqlMetal per eseguire diverse operazioni, fra cui:  
@@ -43,7 +43,7 @@ sqlmetal [options] [<input file>]
   
  **Opzioni di connessione**  
   
-|Opzione|Description|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
 |**/server:** *\<nome>*|Specifica il nome del server di database.|  
 |**/database:** *\<nome>*|Specifica il catalogo del database contenuto nel server.|  
@@ -54,7 +54,7 @@ sqlmetal [options] [<input file>]
   
  **Opzioni di estrazione**  
   
-|Opzione|Description|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
 |**/views**|Estrae viste di database.|  
 |**/functions**|Estrae funzioni di database.|  
@@ -62,7 +62,7 @@ sqlmetal [options] [<input file>]
   
  **Opzioni di output**  
   
-|Opzione|Description|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
 |**/dbml** *[:file]*|Invia l'output come file .dbml. Non può essere usata con l'opzione **/map** .|  
 |**/code** *[:file]*|Invia l'output come codice sorgente. Non può essere usata con l'opzione **/dbml** .|  
@@ -70,7 +70,7 @@ sqlmetal [options] [<input file>]
   
  **Varie**  
   
-|Opzione|Description|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
 |**/language:** *\<linguaggio>*|Specifica il linguaggio del codice sorgente.<br /><br /> Valori validi per *\<linguaggio>* : vb, csharp.<br /><br /> Valore predefinito: derivato dall'estensione nel nome file del codice.|  
 |**/namespace:** *\<nome>*|Specifica lo spazio dei nomi del codice generato. Valore predefinito: nessuno spazio dei nomi.|  
@@ -81,9 +81,9 @@ sqlmetal [options] [<input file>]
   
  **File di input**  
   
-|Opzione|Description|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
-|**\<file input>**|Specifica un file .mdf di SQL Server Express, un file .sdf di [!INCLUDE[ssEW](../../../includes/ssew-md.md)] oppure un file .dbml intermedio.|  
+|**\<file input>**|Specifica un file con estensione mdf di SQL Server Express, un file con estensione sdf di SQL Server Compact 3.5 oppure un file con estensione dbml intermedio.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Il funzionamento di SqlMetal prevede di fatto due passaggi:  
@@ -98,7 +98,7 @@ sqlmetal [options] [<input file>]
   
  Se non è specificato alcun valore per **/server** , si presuppone che sia **localhost/sqlexpress** .  
   
- [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] genera un'eccezione se almeno una delle condizioni seguenti è vera:  
+ Microsoft SQL Server 2005 genera un'eccezione se almeno una delle condizioni seguenti è vera:  
   
 - SqlMetal tenta di estrarre una stored procedure che chiama se stessa.  
   
