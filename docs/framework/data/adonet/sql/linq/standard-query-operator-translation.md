@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 1bba36579fce4fe78289ccb986073280b531420a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610560"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661870"
 ---
 # <a name="standard-query-operator-translation"></a>Conversione dell'operatore query standard
 
@@ -198,13 +198,13 @@ Per altre informazioni sul mapping di questi tipi di data e ora di SQL Server, v
 
 ## <a name="sql-server-2000-support"></a>Supporto di SQL Server 2000
 
-Quanto segue [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] influiscono sulle limitazioni, rispetto a Microsoft SQL Server 2005, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supportano.
+Le seguenti limitazioni di SQL Server 2000 (rispetto a Microsoft SQL Server 2005) influiscono sul [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supportano.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Operatori Cross Apply e Outer Apply
 
-Questi operatori non sono disponibili in [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta una serie di operazioni di riscrittura per sostituirli con join appropriati.
+Questi operatori non sono disponibili in SQL Server 2000. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta una serie di operazioni di riscrittura per sostituirli con join appropriati.
 
-`Cross Apply` e `Outer Apply` vengono generati per la navigazione tra relazioni. Il set di query per cui tali riscritture sono possibili non è esattamente definito. Per questo motivo il set minimo di query supportato per [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] è quello che non comporta la navigazione tra relazioni.
+`Cross Apply` e `Outer Apply` vengono generati per la navigazione tra relazioni. Il set di query per cui tali riscritture sono possibili non è esattamente definito. Per questo motivo, il set minimo di query che è supportato per SQL Server 2000 è il set che non comporta la navigazione di relazioni.
 
 ### <a name="text--ntext"></a>text/ntext
 
@@ -214,11 +214,11 @@ Non sono disponibili risoluzioni per questa limitazione. In particolare, non è 
 
 ### <a name="behavior-triggered-by-nested-queries"></a>Comportamento attivato dalle query annidate
 
-[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (con SP4) dello strumento di associazione presenta alcune peculiarità attivate dalle query annidate. Il set di query SQL che attiva queste peculiarità non è esattamente definito. Per questo motivo, è possibile definire il set di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] le query che potrebbero provocare eccezioni di SQL Server.
+Strumento di associazione di SQL Server 2000 (con SP4) presenta alcune peculiarità attivate dalle query annidate. Il set di query SQL che attiva queste peculiarità non è esattamente definito. Per questo motivo, è possibile definire il set di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] le query che potrebbero provocare eccezioni di SQL Server.
 
 ### <a name="skip-and-take-operators"></a>Operatori Skip e Take
 
-<xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano determinate limitazioni quando vengono usati nelle query su [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Per altre informazioni, vedere la voce "Skip e Take eccezioni in SQL Server 2000" nella [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).
+<xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano alcune limitazioni quando vengono usati nelle query su SQL Server 2000. Per altre informazioni, vedere la voce "Skip e Take eccezioni in SQL Server 2000" nella [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).
 
 ## <a name="object-materialization"></a>Materializzazione di oggetti
 

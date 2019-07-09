@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 6372f9cb4c332eb77cd70a9b0786eff005216516
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f99a9f38d5fbb62732f157720ee544042e346469
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642876"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663569"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia di sicurezza di WPF - Sicurezza della piattaforma
 Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi di sicurezza, sfrutta le funzionalità di sicurezza della piattaforma sottostante, che include il sistema operativo, il [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], e [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Questi livelli forniscono a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modello di sicurezza in profondità solido e dettagliato per evitare ogni singola vulnerabilità, come illustrato nella figura seguente:  
@@ -132,7 +132,7 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
   
 - **LocalIntranet**. Per le applicazioni avviate dal **Intranet locale** zona. Viene concesso un sottoinsieme di autorizzazioni per fornire un accesso moderato alle risorse di un computer client, tra cui spazio di memorizzazione isolato, accesso dell'interfaccia utente senza restrizioni, finestre di dialogo di file senza restrizioni, reflection limitata, accesso limitato alle variabili di ambiente. Le autorizzazioni per risorse critiche come il Registro di sistema non vengono concesse.  
   
-- **Internet**. Per le applicazioni avviate dal **Internet** oppure **siti attendibili** zona. Viene concesso un sottoinsieme di autorizzazioni per fornire accesso limitato alle risorse di un computer client, tra cui spazio di memorizzazione isolato, solo apertura di file e interfaccia utente limitata. Sostanzialmente, questo set di autorizzazioni isola le applicazioni dal computer client.  
+- **Internet**. Per le applicazioni avviate dal **Internet** oppure **siti attendibili** zona. Viene concesso un sottoinsieme di autorizzazioni per fornire accesso limitato alle risorse di un computer client, tra cui spazio di memorizzazione isolato, solo apertura di file e interfaccia utente limitata. In pratica, questa autorizzazione impostata isola le applicazioni dal computer client.  
   
  Applicazioni identificate come provenienti dal **siti non attendibili** zona non concede alcuna autorizzazione dal [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] affatto. Di conseguenza, queste non dispongono di alcun set di autorizzazioni predefinito.  
   
@@ -149,7 +149,7 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
   
  Per eseguire questa applicazione [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], il codice [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sottostante deve eseguire molte più funzionalità di quelle disponibili all'applicazione [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] chiamante, tra cui:  
   
-- Creazione di un handle di finestra (hWnd) per il rendering  
+- Creazione di un handle di finestra (HWND) per il rendering  
   
 - Invio di messaggi  
   
@@ -157,7 +157,7 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
   
  Da un punto di vista della sicurezza, consentire l'accesso diretto a queste operazioni dall'applicazione eseguita in una sandbox avrebbe conseguenze devastanti.  
   
- Fortunatamente, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] affronta questa situazione consentendo di eseguire le operazioni con privilegi elevati per conto dell'applicazione eseguita in una sandbox. Mentre tutte le operazioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] vengono controllate a fronte delle autorizzazioni di sicurezza limitate dell'area Internet del dominio dell'applicazione [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (come ad altre librerie di sistema) viene concesso un set di autorizzazioni contenente tutte le autorizzazioni possibili.  
+ Fortunatamente, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] affronta questa situazione consentendo di eseguire le operazioni con privilegi elevati per conto dell'applicazione eseguita in una sandbox. Mentre tutte le [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] operazioni vengono confrontate con autorizzazioni di sicurezza limitate dell'area Internet del dominio dell'applicazione il [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (come con altre librerie di sistema) viene concesso un set di autorizzazioni che include tutte le possibili autorizzazioni.
   
  È quindi necessario che [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] riceva privilegi elevati, ma è altresì fondamentale impedire che tali privilegi vengano determinati dal set di autorizzazioni dell'area Internet del dominio dell'applicazione host.  
   
@@ -174,7 +174,7 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
 ### <a name="clickonce-deployment"></a>Distribuzione ClickOnce  
  [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] è una tecnologia di distribuzione completa inclusa in .NET Framework e si integra con [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (vedere [ClickOnce sicurezza e distribuzione](/visualstudio/deployment/clickonce-security-and-deployment) per informazioni dettagliate). Le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autonome possono essere distribuite tramite [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], mentre le applicazioni ospitate da un browser devono essere distribuite con [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
   
- Alle applicazioni distribuite tramite [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] viene fornito un ulteriore livello di sicurezza su[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]; sostanzialmente, le applicazioni distribuite tramite [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] richiedono le autorizzazioni di cui hanno bisogno. A tali applicazioni vengono concesse solo quelle autorizzazioni se non superano l'insieme di autorizzazioni dell'area da cui vengono distribuite. Riducendo il set di autorizzazioni solo a quelle necessarie, anche se inferiori a quelle fornite dal set di autorizzazioni dell'area di avvio, il numero di risorse a cui l'applicazione ha accesso viene ridotto al minimo. Di conseguenza, se si perde il controllo dell'applicazione, le vulnerabilità del computer client saranno ridotte.  
+ Alle applicazioni distribuite tramite [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] viene fornito un ulteriore livello di sicurezza su[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]; sostanzialmente, le applicazioni distribuite tramite [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] richiedono le autorizzazioni di cui hanno bisogno. A tali applicazioni vengono concesse solo quelle autorizzazioni se non superano l'insieme di autorizzazioni dell'area da cui vengono distribuite. Per ridurre il set di autorizzazioni solo a quelli necessari, anche se sono inferiori a quelle fornite da autorizzazioni dell'area di avvio impostato, il numero di risorse che l'applicazione abbia accesso a viene ridotto al minimo. Di conseguenza, se si perde il controllo dell'applicazione, le vulnerabilità del computer client saranno ridotte.  
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>Metodologia critica per la sicurezza  
@@ -208,7 +208,6 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Informazioni sulla sicurezza di Microsoft Internet Explorer 6 in Windows XP SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
 - [Sicurezza dall'accesso di codice](../misc/code-access-security.md)
 - [Sicurezza](security-wpf.md)
 - [Sicurezza con attendibilità parziale in WPF](wpf-partial-trust-security.md)

@@ -2,12 +2,12 @@
 title: Stringhe
 description: Informazioni su come il F# di tipo 'stringa' rappresenta il testo non modificabile come sequenza di caratteri Unicode.
 ms.date: 07/05/2019
-ms.openlocfilehash: b252aef7d7e6e299df8282407198714971e80cd5
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: ec895723cc6d21a701a27b5d70d053bb681ce2b3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610169"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660604"
 ---
 # <a name="strings"></a>Stringhe
 
@@ -32,10 +32,10 @@ Valori letterali stringa sono delimitati dal carattere di virgolette doppie (").
 |Barra rovesciata|`\\`|
 |Virgoletta|`\"`|
 |Apostrofo|`\'`|
-|Carattere Unicode|`\DDD` (dove `D` indica un valore decimal digit; intervallo di 000 - 255; ad esempio `\231` = "ç")|
-|Carattere Unicode|`\xHH` (dove `H` indica una cifra esadecimale; intervallo 00 - FF; ad esempio `\xE7` = "ç")|
-|Carattere Unicode|`\uHHHH` (UTF-16) (in cui `H` indica una cifra esadecimale; intervallo di 0000 - FFFF.  ad esempio `\u00E7` = "ç")|
-|Carattere Unicode|`\U00HHHHHH` (UTF-32) (in cui `H` indica una cifra esadecimale; intervallo di 000000 - 10FFFF;  ad esempio `\U0001F47D` = "👽")|
+|Carattere Unicode|`\DDD` (dove `D` indica un valore decimal digit; intervallo di 000 - 255, ad esempio `\231` = "ç")|
+|Carattere Unicode|`\xHH` (dove `H` indica una cifra esadecimale; intervallo 00 - FF; ad esempio, `\xE7` = "ç")|
+|Carattere Unicode|`\uHHHH` (UTF-16) (in cui `H` indica una cifra esadecimale; intervallo di 0000 - FFFF.  ad esempio, `\u00E7` = "ç")|
+|Carattere Unicode|`\U00HHHHHH` (UTF-32) (in cui `H` indica una cifra esadecimale; intervallo di 000000 - 10FFFF;  ad esempio, `\U0001F47D` = "👽")|
 
 > [!IMPORTANT]
 > Il `\DDD` sequenza di escape è la notazione decimale, notazione non ottale, ad esempio la maggior parte degli altri linguaggi. Pertanto, cifre `8` e `9` siano valide e una sequenza di `\032` rappresenta uno spazio (u+0020), mentre tale stesso punto di codice in notazione ottale sarebbe `\040`.

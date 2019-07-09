@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 403b0125e6b1966d201c891448ad25ec83f42be5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b28981196490e249d053ecd1704f6ba978585520
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881926"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662858"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Finestre di progettazione composite personalizzate - Relatore di elementi del flusso di lavoro
 
@@ -45,7 +45,7 @@ Nel codice di questo esempio viene illustrato quanto segue:
   - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> è un modello che può essere fornito per determinare il layout degli elementi nella raccolta. In questo caso, viene usato un pannello Stack orizzontale.
 
   Nel codice dell'esempio seguente viene illustrata questa operazione.
-  
+
   ```xaml
   <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
                                 Items="{Binding Path=ModelItem.Branches}">
@@ -64,7 +64,7 @@ Nel codice di questo esempio viene illustrato quanto segue:
 
 - Eseguire un'associazione di `DesignerAttribute` al tipo `Parallel`, quindi restituire gli attributi indicati.
 
-    - Registrare innanzitutto tutte le finestre di progettazione predefinite.
+  - Registrare innanzitutto tutte le finestre di progettazione predefinite.
 
     Di seguito è riportato l'esempio di codice.
 
@@ -82,7 +82,7 @@ Nel codice di questo esempio viene illustrato quanto segue:
     RegisterCustomMetadata()
     ```
 
-    - Eseguire quindi l'override dell'elemento parallelo nel metodo `RegisterCustomMetadata`.
+  - Eseguire quindi l'override dell'elemento parallelo nel metodo `RegisterCustomMetadata`.
 
     Nel codice seguente viene illustrato questa operazione in C# e Visual Basic.
 

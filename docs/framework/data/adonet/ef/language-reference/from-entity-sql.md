@@ -2,12 +2,12 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 36e3059869ed048bd7c5294c4f5f5407288610b2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 69a6af868ace384a63d08d705c395b58a173ca8e
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489934"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662159"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 Specifica la raccolta usata nella [seleziona](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) istruzioni.  
@@ -96,7 +96,7 @@ LOB.Customers
 >  A differenza di Transact-SQL, non è necessario per un passaggio unnest esplicito in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 > [!NOTE]
->  Gli operatori `CROSS` e `OUTER APPLY` sono stati introdotti in [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. In alcuni casi, è possibile che la pipeline della query produca istruzioni Transact-SQL contenenti gli operatori `CROSS APPLY` e/o `OUTER APPLY`. Poiché alcuni provider di back-end, incluse le versioni di SQL Server precedenti a [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], questi operatori non sono supportati, tali query non possono essere eseguite su questi provider di back-end.  
+>  `CROSS` e `OUTER APPLY` gli operatori sono stati introdotti in SQL Server 2005. In alcuni casi, è possibile che la pipeline della query produca istruzioni Transact-SQL contenenti gli operatori `CROSS APPLY` e/o `OUTER APPLY`. Poiché alcuni provider di back-end, incluse le versioni di SQL Server precedenti a SQL Server 2005, questi operatori non sono supportati, tali query non possono essere eseguite tali provider.  
 >   
 >  Di seguito sono elencati alcuni degli scenari tipici che potrebbero determinare la presenza degli operatori `CROSS APPLY` e/o `OUTER APPLY` nella query di output: una subquery correlata con paging, AnyElement su una subquery correlata o su una raccolta prodotta dalla navigazione, query LINQ che usano metodi di raggruppamento che accettano un selettore elemento, una query nella quale viene specificata in modo esplicito una clausola `CROSS APPLY` o `OUTER APPLY`, una query che presenta un costrutto `DEREF` su un costrutto `REF`.  
   

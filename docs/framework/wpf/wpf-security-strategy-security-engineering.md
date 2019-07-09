@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 9123d59709b483c72ab49652bda1e547430fa33d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c28fc87a71a1262ed5b3a6a04f615efc58e685ab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663241"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663337"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Strategia di sicurezza WPF - Progettazione della sicurezza
 Trustworthy Computing è un'iniziativa Microsoft per garantire la produzione di codice sicuro. Un elemento chiave dell'iniziativa Trustworthy Computing è [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] è una procedura di progettazione usata insieme a processi di progettazione standard per semplificare la generazione di codice sicuro. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] prevede dieci fasi che combinano procedure consigliate con formalizzazione, misurabilità e struttura aggiuntiva, tra cui:  
@@ -77,7 +77,7 @@ Trustworthy Computing è un'iniziativa Microsoft per garantire la produzione di 
 ### <a name="testing-techniques"></a>Tecniche di test  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] usa svariate tecniche di test della sicurezza, tra cui:  
   
-- **Whitebox Testing**: I tester visualizzano il codice sorgente e quindi compilano test per gli exploit  
+- **Whitebox Testing**: I tester visualizzano il codice sorgente e quindi compilare i test di exploit.
   
 - **Blackbox Testing**: I tester provano a trovare exploit di sicurezza esaminando l'API e le funzionalità e quindi tentano di attaccare il prodotto.  
   

@@ -2,16 +2,22 @@
 title: Grafica e funzionalità multimediali
 ms.date: 03/30/2017
 dev_langs:
-  - csharp
-  - vb
+- csharp
+- vb
 helpviewer_keywords:
-  - 'media [WPF], features'
-  - 'video effects [WPF]'
-  - 'sound effects [WPF]'
-  - 'animation [WPF], features'
-  - 'graphics features [WPF]'
-  - 'transition effects [WPF]'
+- media [WPF], features
+- video effects [WPF]
+- sound effects [WPF]
+- animation [WPF], features
+- graphics features [WPF]
+- transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
+ms.openlocfilehash: a770bcbbc8ac553c55e9dda5097abec8790182e5
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663727"
 ---
 # <a name="graphics-and-multimedia"></a>Grafica e funzionalità multimediali
 
@@ -53,7 +59,7 @@ WPF include il supporto per gli elementi grafici 2D di qualità elevata. La funz
 
 ### <a name="2-d-shapes"></a>Forme 2D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce una libreria di forme [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] di uso comune basate su vettori, ad esempio i rettangoli e le ellissi mostrati nella figura seguente.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce una libreria di comunemente usate, disegnate da vettori forme 2D, quali rettangoli ed ellissi, come illustrato di seguito.
 
 ![Diagramma che mostra ellissi e rettangoli.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
@@ -95,7 +101,7 @@ Per altre informazioni, vedere [Panoramica degli oggetti Shape e sulle funzional
 
 ### <a name="2-d-geometries"></a>Geometrie 2D
 
-Quando le forme [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] fornite da [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] non sono sufficienti, è possibile usare il supporto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] per creare geometrie e tracciati personalizzati. La figura seguente mostra come usare le geometrie per creare forme, ad esempio un pennello da disegno e per ritagliare altri elementi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+Quando le forme che il 2D [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] offre non sono sufficienti, è possibile usare [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] supportano per geometrie e tracciati per crearne una propria. La figura seguente mostra come usare le geometrie per creare forme, ad esempio un pennello da disegno e per ritagliare altri elementi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
 
 ![Screenshot che illustra come è possibile usare le geometrie per creare forme.](./media/index/use-geometries-create-shapes.png)
 
@@ -103,7 +109,7 @@ Per altre informazioni, vedere [Cenni preliminari sulle classi Geometry](geometr
 
 ### <a name="2-d-effects"></a>Effetti 2D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce una libreria di classi [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] che è possibile usare per creare una vasta gamma di effetti. La funzionalità di rendering [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] offre la possibilità di disegnare elementi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] che hanno gradienti, bitmap, disegni e video e di modificarli mediante rotazione, ridimensionamento e inclinazione. La figura seguente fornisce un esempio dei molti effetti che è possibile ottenere usando i pennelli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce una libreria di classi 2D che è possibile usare per creare una varietà di effetti. La funzionalità di rendering 2D del [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] offre la possibilità di disegnare [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementi con sfumature, bitmap, disegni e video; e di modificarli mediante rotazione, ridimensionamento e inclinazione. La figura seguente fornisce un esempio dei molti effetti che è possibile ottenere usando i pennelli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
 
 ![Figura che illustra le diverse pennelli WPF e gli elementi di disegno.](./media/index/brushes-paint-elements.png)
 
@@ -113,7 +119,7 @@ Per altre informazioni, vedere [Panoramica dei pennelli di WPF](wpf-brushes-over
 
 ## <a name="3-d-rendering"></a>Rendering 3D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce un set di funzionalità di rendering [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] che si integrano con il supporto della grafica [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] per la creazione di layout, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] e visualizzazione dei dati più interessanti. A un'estremità dello spettro, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consente di eseguire il rendering di immagini [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] su superfici di forme [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)], come illustrato di seguito.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce un set di funzionalità di rendering 3D che si integrano con il supporto di grafica 2D in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] in ordine per poter creare layout più interessanti, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]e visualizzazione dei dati. A un'estremità dello spettro, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consente di eseguire il rendering di immagini 2D su superfici di forme 3D che illustra la figura seguente.
 
 ![Screenshot di un esempio che Mostra forme 3D con diverse trame.](./media/index/visual-three-dimensional-shape.png)
 

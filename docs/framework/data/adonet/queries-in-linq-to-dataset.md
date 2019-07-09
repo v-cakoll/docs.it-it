@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: f8fabd38ec49070bc588196b38ec64942feab93f
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: bf3e15527fb3b6979e9363810dbffc05f164715c
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504697"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662088"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Query in LINQ to DataSet
 Una query è un'espressione che recupera dati da un'origine dati. Le query sono in genere espresse in un linguaggio di query specializzato, ad esempio SQL per i database relazionali e XQuery per XML. Gli sviluppatori hanno dovuto pertanto imparare un nuovo linguaggio di query per ogni tipo di origine dati o formato dati usato per le query. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] offre un modello più semplice e coerente per l'uso dei dati con tutti i vari tipi di origini e formati dati. In una query [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] vengono sempre usati oggetti di programmazione.  
@@ -31,7 +31,7 @@ Una query è un'espressione che recupera dati da un'origine dati. Le query sono 
 ### <a name="query-expression-syntax"></a>Sintassi delle espressioni di query  
  Le espressioni di query vengono scritte in una sintassi di query dichiarativa. Questa sintassi consente a un sviluppatore di scrivere query in C# o Visual Basic in un formato simile a quello di SQL. Tramite la sintassi delle espressioni di query è possibile eseguire anche complesse operazioni di filtro, ordinamento e raggruppamento sulle origini dati usando una quantità minima di codice. Per altre informazioni, vedere [espressioni di Query LINQ](../../../csharp/linq/index.md#query-expression-overview) e [base operazioni di Query (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
   
- La sintassi delle espressioni di query rappresenta una novità di C# 3.0 e [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)]. Tuttavia, .NET Framework common language runtime (CLR) non è possibile leggere la sintassi delle espressioni di query stessa. Pertanto, in fase di compilazione, le espressioni di query vengono convertite in chiamate al metodo in modo da poter essere usate da CLR. Questi metodi vengono definiti come le *operatori query standard*. Gli sviluppatori possono scegliere di chiamare direttamente questi metodi usando la relativa sintassi, anziché usare la sintassi delle query. Per altre informazioni, vedere [Sintassi di query e sintassi di metodi in LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md). Per altre informazioni sugli operatori di query standard, vedere [panoramica degli operatori Query Standard](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ .NET Framework common language runtime (CLR) non è possibile leggere la sintassi delle espressioni di query stessa. Pertanto, in fase di compilazione, le espressioni di query vengono convertite in chiamate al metodo in modo da poter essere usate da CLR. Questi metodi vengono definiti come le *operatori query standard*. Gli sviluppatori possono scegliere di chiamare direttamente questi metodi usando la relativa sintassi, anziché usare la sintassi delle query. Per altre informazioni, vedere [Sintassi di query e sintassi di metodi in LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md). Per altre informazioni sugli operatori di query standard, vedere [panoramica degli operatori Query Standard](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  Nell'esempio seguente viene usato <xref:System.Linq.Enumerable.Select%2A> per restituire tutte le righe della tabella `Product` e visualizzare i nomi di prodotto.  
   

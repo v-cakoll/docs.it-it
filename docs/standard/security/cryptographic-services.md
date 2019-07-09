@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: c026174e881768af245860d1b719184dc47f1798
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690527"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663992"
 ---
 # <a name="cryptographic-services"></a>servizi crittografici
 
@@ -207,19 +207,19 @@ Due parti (Alice e Bob) sono riuscite a usare una funzione hash per garantire l'
 
 - Alice invia il messaggio come testo normale e il messaggio con hash (firma digitale) a Bob. Bob riceve il messaggio, ne esegue l'hashing, quindi confronta il proprio valore hash con quello che ha ricevuto da Alice. Se i valori hash corrispondono, il messaggio non è stato alterato. Se invece i valori non corrispondono, il messaggio è stato alterato dopo essere stato scritto da Alice.
 
-    Purtroppo, questo metodo non consente di stabilire l'autenticità del mittente. Chiunque può rappresentare Alice e inviare un messaggio a Bob. Possono usare lo stesso algoritmo hash per firmare il messaggio e tutto ciò che Bob è in grado di determinare è che il messaggio corrisponde alla relativa firma. Si tratta di una forma di attacco di tipo man-in-the-middle. Per altre informazioni, vedere [esempio di comunicazioni protette con Cryptography Next Generation (CNG)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
+  Purtroppo, questo metodo non consente di stabilire l'autenticità del mittente. Chiunque può rappresentare Alice e inviare un messaggio a Bob. Possono usare lo stesso algoritmo hash per firmare il messaggio e tutto ciò che Bob è in grado di determinare è che il messaggio corrisponde alla relativa firma. Si tratta di una forma di attacco di tipo man-in-the-middle. Per altre informazioni, vedere [esempio di comunicazioni protette con Cryptography Next Generation (CNG)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
 
 - Alice invia il messaggio come testo normale a Bob tramite un canale pubblico non protetto. Invia il messaggio con hash a Bob su un canale privato protetto. Bob riceve il messaggio in testo normale, ne esegue l'hashing, quindi confronta il valore hash con quello scambiato privatamente. Se i valori corrispondono, Bob può accertare quanto segue:
 
-    - Il messaggio non è stato modificato.
+  - Il messaggio non è stato modificato.
 
-    - Il mittente del messaggio (Alice) è autentico.
+  - Il mittente del messaggio (Alice) è autentico.
 
-    Perché il sistema funzioni, Alice deve nascondere il valore hash originale a tutte le parti ad eccezione di Bob.
+  Perché il sistema funzioni, Alice deve nascondere il valore hash originale a tutte le parti ad eccezione di Bob.
 
 - Alice invia il messaggio in testo normale a Bob tramite un canale pubblico non protetto e inserisce il messaggio con hash sul proprio sito Web pubblico.
 
-    Questo metodo consente di evitare la manomissione del messaggio impedendo a chiunque di modificare il valore hash. Anche se chiunque può leggere il messaggio e il relativo hash, il valore hash può essere modificato solo da Alice. Un utente non autorizzato che vuole rappresentare Alice necessita di accesso al sito Web di Alice.
+  Questo metodo consente di evitare la manomissione del messaggio impedendo a chiunque di modificare il valore hash. Anche se chiunque può leggere il messaggio e il relativo hash, il valore hash può essere modificato solo da Alice. Un utente non autorizzato che vuole rappresentare Alice necessita di accesso al sito Web di Alice.
 
 Nessuno dei metodi precedenti impedisce la lettura dei messaggi di Alice, perché vengono trasmessi come testo normale. Una soluzione di sicurezza completa richiede le firme digitali (firma dei messaggi) e la crittografia.
 

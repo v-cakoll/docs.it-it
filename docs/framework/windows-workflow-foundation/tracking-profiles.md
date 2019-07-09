@@ -2,12 +2,12 @@
 title: Profili di rilevamento
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: c934ec9fd0524506577ab4457a2ec194d4d0cba7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a643cf37bbb3e72baefb434249aa54b386060627
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589942"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660919"
 ---
 # <a name="tracking-profiles"></a>Profili di rilevamento
 
@@ -112,199 +112,199 @@ I profili di rilevamento vengono strutturati sotto forma di sottoscrizioni dichi
 
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery>: usare questo tipo per rilevare le modifiche del ciclo di vita dell'istanza del flusso di lavoro, ad esempio gli eventi `Started` e `Completed` dimostrati precedentemente. L'oggetto <xref:System.Activities.Tracking.WorkflowInstanceQuery> viene usato per sottoscrivere gli oggetti <xref:System.Activities.Tracking.TrackingRecord> seguenti:
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>
 
-    Gli stati disponibili per la sottoscrizione sono specificati nella classe <xref:System.Activities.Tracking.WorkflowInstanceStates>.
+  Gli stati disponibili per la sottoscrizione sono specificati nella classe <xref:System.Activities.Tracking.WorkflowInstanceStates>.
 
-    La configurazione o il codice usato per sottoscrivere i record di rilevamento a livello di istanza del flusso di lavoro per lo stato dell'istanza `Started` usando l'oggetto <xref:System.Activities.Tracking.WorkflowInstanceQuery> è illustrato nell'esempio seguente.
+  La configurazione o il codice usato per sottoscrivere i record di rilevamento a livello di istanza del flusso di lavoro per lo stato dell'istanza `Started` usando l'oggetto <xref:System.Activities.Tracking.WorkflowInstanceQuery> è illustrato nell'esempio seguente.
 
-    ```xml
-    <workflowInstanceQueries>
-        <workflowInstanceQuery>
-          <states>
-            <state name="Started"/>
-          </states>
-        </workflowInstanceQuery>
-    </workflowInstanceQueries>
-    ```
+  ```xml
+  <workflowInstanceQueries>
+      <workflowInstanceQuery>
+        <states>
+          <state name="Started"/>
+        </states>
+      </workflowInstanceQuery>
+  </workflowInstanceQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new WorkflowInstanceQuery()
-            {
-                States = { WorkflowInstanceStates.Started}
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new WorkflowInstanceQuery()
+          {
+              States = { WorkflowInstanceStates.Started}
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.ActivityStateQuery>: usare questo tipo per rilevare le modifiche del ciclo di vita delle attività che costituiscono un'istanza del flusso di lavoro. Ad esempio, è possibile tenere traccia di ogni volta che viene completata l'attività "Invia messaggio" all'interno di un'istanza del flusso di lavoro. Questa query è necessaria affinché un oggetto <xref:System.Activities.Tracking.TrackingParticipant> sottoscriva gli oggetti <xref:System.Activities.Tracking.ActivityStateRecord>. Gli stati disponibili per la sottoscrizione sono specificati nell'oggetto <xref:System.Activities.Tracking.ActivityStates>.
 
-    La configurazione e il codice usati per sottoscrivere i record di rilevamento dello stato dell'attività che usano l'oggetto <xref:System.Activities.Tracking.ActivityStateQuery> per l'attività `SendEmailActivity` sono illustrati nell'esempio seguente.
+  La configurazione e il codice usati per sottoscrivere i record di rilevamento dello stato dell'attività che usano l'oggetto <xref:System.Activities.Tracking.ActivityStateQuery> per l'attività `SendEmailActivity` sono illustrati nell'esempio seguente.
 
-    ```xml
-    <activityStateQueries>
-      <activityStateQuery activityName="SendEmailActivity">
-        <states>
-          <state name="Closed"/>
-        </states>
-      </activityStateQuery>
-    </activityStateQueries>
-    ```
+  ```xml
+  <activityStateQueries>
+    <activityStateQuery activityName="SendEmailActivity">
+      <states>
+        <state name="Closed"/>
+      </states>
+    </activityStateQuery>
+  </activityStateQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new ActivityStateQuery()
-            {
-                ActivityName = "SendEmailActivity",
-                States = { ActivityStates.Closed }
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new ActivityStateQuery()
+          {
+              ActivityName = "SendEmailActivity",
+              States = { ActivityStates.Closed }
+          }
+      }
+  };
+  ```
 
-    > [!NOTE]
-    > Se più elementi activityStateQuery hanno lo stesso nome, solo gli stati nell'ultimo elemento vengono usati nel profilo di rilevamento.
+  > [!NOTE]
+  > Se più elementi activityStateQuery hanno lo stesso nome, solo gli stati nell'ultimo elemento vengono usati nel profilo di rilevamento.
 
 - <xref:System.Activities.Tracking.ActivityScheduledQuery>: questa query consente di rilevare un'attività pianificata per l'esecuzione da parte di un'attività padre. La query è necessaria affinché un oggetto <xref:System.Activities.Tracking.TrackingParticipant> sottoscriva gli oggetti <xref:System.Activities.Tracking.ActivityScheduledRecord>.
 
-    La configurazione e il codice usati per sottoscrivere i record relativi all'attività figlio `SendEmailActivity` in fase di pianificazione tramite l'oggetto <xref:System.Activities.Tracking.ActivityScheduledQuery> sono illustrati nell'esempio seguente.
+  La configurazione e il codice usati per sottoscrivere i record relativi all'attività figlio `SendEmailActivity` in fase di pianificazione tramite l'oggetto <xref:System.Activities.Tracking.ActivityScheduledQuery> sono illustrati nell'esempio seguente.
 
-    ```xml
-    <activityScheduledQueries>
-      <activityScheduledQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
-     </activityScheduledQueries>
-    ```
+  ```xml
+  <activityScheduledQueries>
+    <activityScheduledQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
+  </activityScheduledQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new ActivityScheduledQuery()
-            {
-                ActivityName = "ProcessNotificationsActivity",
-                ChildActivityName = "SendEmailActivity"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new ActivityScheduledQuery()
+          {
+              ActivityName = "ProcessNotificationsActivity",
+              ChildActivityName = "SendEmailActivity"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.FaultPropagationQuery>: usare questo tipo per rilevare la gestione degli errori che si verificano all'interno di un'attività. La query è necessaria affinché un oggetto <xref:System.Activities.Tracking.TrackingParticipant> sottoscriva gli oggetti <xref:System.Activities.Tracking.FaultPropagationRecord>.
 
-    La configurazione e il codice usati per sottoscrivere i record relativi alla propagazione degli errori tramite l'oggetto <xref:System.Activities.Tracking.FaultPropagationQuery> sono illustrati nell'esempio seguente.
+  La configurazione e il codice usati per sottoscrivere i record relativi alla propagazione degli errori tramite l'oggetto <xref:System.Activities.Tracking.FaultPropagationQuery> sono illustrati nell'esempio seguente.
 
-    ```xml
-    <faultPropagationQueries>
-      <faultPropagationQuery faultSourceActivityName="SendEmailActivity" faultHandlerActivityName="NotificationsFaultHandler" />
-    </faultPropagationQueries>
-    ```
+  ```xml
+  <faultPropagationQueries>
+    <faultPropagationQuery faultSourceActivityName="SendEmailActivity" faultHandlerActivityName="NotificationsFaultHandler" />
+  </faultPropagationQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new FaultPropagationQuery()
-            {
-                FaultSourceActivityName = "SendEmailActivity",
-                FaultHandlerActivityName = "NotificationsFaultHandler"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new FaultPropagationQuery()
+          {
+              FaultSourceActivityName = "SendEmailActivity",
+              FaultHandlerActivityName = "NotificationsFaultHandler"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.CancelRequestedQuery>: usare questo tipo per rilevare le richieste di annullamento di un'attività figlio da parte dell'attività padre. La query è necessaria affinché un oggetto <xref:System.Activities.Tracking.TrackingParticipant> sottoscriva gli oggetti <xref:System.Activities.Tracking.CancelRequestedRecord>.
 
-    La configurazione e il codice usati per sottoscrivere i record relativi all'utilizzo di annullamento attività <xref:System.Activities.Tracking.CancelRequestedQuery> è illustrato nell'esempio seguente.
+  La configurazione e il codice usati per sottoscrivere i record relativi all'utilizzo di annullamento attività <xref:System.Activities.Tracking.CancelRequestedQuery> è illustrato nell'esempio seguente.
 
-    ```xml
-    <cancelRequestedQueries>
-      <cancelRequestedQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
-    </cancelRequestedQueries>
-    ```
+  ```xml
+  <cancelRequestedQueries>
+    <cancelRequestedQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
+  </cancelRequestedQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new CancelRequestedQuery()
-            {
-                ActivityName = "ProcessNotificationsActivity",
-                ChildActivityName = "SendEmailActivity"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new CancelRequestedQuery()
+          {
+              ActivityName = "ProcessNotificationsActivity",
+              ChildActivityName = "SendEmailActivity"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.CustomTrackingQuery>: usare questo tipo per rilevare gli eventi definiti nelle attività del codice. La query è necessaria affinché un oggetto <xref:System.Activities.Tracking.TrackingParticipant> sottoscriva gli oggetti <xref:System.Activities.Tracking.CustomTrackingRecord>.
 
-    La configurazione e il codice usati per sottoscrivere i record relativi ai record di rilevamento personalizzati tramite l'oggetto <xref:System.Activities.Tracking.CustomTrackingQuery> sono illustrati nell'esempio seguente.
+  La configurazione e il codice usati per sottoscrivere i record relativi ai record di rilevamento personalizzati tramite l'oggetto <xref:System.Activities.Tracking.CustomTrackingQuery> sono illustrati nell'esempio seguente.
 
-    ```xml
-    <customTrackingQueries>
-      <customTrackingQuery name="EmailAddress" activityName="SendEmailActivity" />
-    </customTrackingQueries>
-    ```
+  ```xml
+  <customTrackingQueries>
+    <customTrackingQuery name="EmailAddress" activityName="SendEmailActivity" />
+  </customTrackingQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new CustomTrackingQuery()
-            {
-                Name = "EmailAddress",
-                ActivityName = "SendEmailActivity"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new CustomTrackingQuery()
+          {
+              Name = "EmailAddress",
+              ActivityName = "SendEmailActivity"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery>: usare questo tipo per rilevare la ripresa di un segnalibro all'interno di un'istanza del flusso di lavoro. Questa query è necessaria affinché un oggetto <xref:System.Activities.Tracking.TrackingParticipant> sottoscriva gli oggetti <xref:System.Activities.Tracking.BookmarkResumptionRecord>.
 
-    La configurazione e il codice usati per sottoscrivere i record relativi alla ripresa del segnalibro tramite l'oggetto <xref:System.Activities.Tracking.BookmarkResumptionQuery> sono illustrati nell'esempio seguente.
+  La configurazione e il codice usati per sottoscrivere i record relativi alla ripresa del segnalibro tramite l'oggetto <xref:System.Activities.Tracking.BookmarkResumptionQuery> sono illustrati nell'esempio seguente.
 
-    ```xml
-    <bookmarkResumptionQueries>
-      <bookmarkResumptionQuery name="SentEmailBookmark" />
-    </bookmarkResumptionQueries>
-    ```
+  ```xml
+  <bookmarkResumptionQueries>
+    <bookmarkResumptionQuery name="SentEmailBookmark" />
+  </bookmarkResumptionQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new BookmarkResumptionQuery()
-            {
-                Name = "sentEmailBookmark"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new BookmarkResumptionQuery()
+          {
+              Name = "sentEmailBookmark"
+          }
+      }
+  };
+  ```
 
 ### <a name="annotations"></a>Annotazioni
 
@@ -352,38 +352,38 @@ Di seguito sono riportati alcuni degli esempi comuni di profili di rilevamento.
 
 - Profilo di rilevamento per ottenere i record dell'istanza del flusso di lavoro e gli errori.
 
-```xml
-<trackingProfile name="Instance and Fault Records">
-  <workflow activityDefinitionId="*">
-    <workflowInstanceQueries>
-      <workflowInstanceQuery>
-        <states>
-          <state name="*" />
-        </states>
-      </workflowInstanceQuery>
-    </workflowInstanceQueries>
-    <activityStateQueries>
-      <activityStateQuery activityName="*">
-        <states>
-          <state name="Faulted"/>
-        </states>
-      </activityStateQuery>
-    </activityStateQueries>
-  </workflow>
-</trackingProfile>
-```
+  ```xml
+  <trackingProfile name="Instance and Fault Records">
+    <workflow activityDefinitionId="*">
+      <workflowInstanceQueries>
+        <workflowInstanceQuery>
+          <states>
+            <state name="*" />
+          </states>
+        </workflowInstanceQuery>
+      </workflowInstanceQueries>
+      <activityStateQueries>
+        <activityStateQuery activityName="*">
+          <states>
+            <state name="Faulted"/>
+          </states>
+        </activityStateQuery>
+      </activityStateQueries>
+    </workflow>
+  </trackingProfile>
+  ```
 
-1. Profilo di rilevamento per ottenere tutti i record di rilevamento personalizzati.
+- Profilo di rilevamento per ottenere tutti i record di rilevamento personalizzati.
 
-```xml
-<trackingProfile name="Instance_And_Custom_Records">
-  <workflow activityDefinitionId="*">
-    <customTrackingQueries>
-      <customTrackingQuery name="*" activityName="*" />
-    </customTrackingQueries>
-  </workflow>
-</trackingProfile>
-```
+  ```xml
+  <trackingProfile name="Instance_And_Custom_Records">
+    <workflow activityDefinitionId="*">
+      <customTrackingQueries>
+        <customTrackingQuery name="*" activityName="*" />
+      </customTrackingQueries>
+    </workflow>
+  </trackingProfile>
+  ```
 
 ## <a name="see-also"></a>Vedere anche
 

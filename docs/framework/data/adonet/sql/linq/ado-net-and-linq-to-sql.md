@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 4f2f9fa1cb1be421be57ae0671573150871ebd1d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6a6e057b45c1305a889ce4ed915b437a29ab2794
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880474"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662071"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET e LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fa parte della famiglia di tecnologie ADO.NET. Si basa sui servizi forniti dal modello di provider ADO.NET. È pertanto possibile combinare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] con le applicazioni ADO.NET esistenti del codice e la migrazione di soluzioni ADO.NET corrente a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Nell'illustrazione seguente viene fornita una panoramica della relazione.  
@@ -36,7 +36,7 @@ ms.locfileid: "65880474"
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  
   
- Non è possibile usare questo approccio per tutti i database. Ad esempio, la connessione di SqlClient non consente di promuovere transazioni di sistema quando viene usata con un server [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Al contrario, viene inserita automaticamente in una transazione distribuita completa quando viene rilevato l'uso di un ambito della transazione.  
+ Non è possibile usare questo approccio per tutti i database. Ad esempio, la connessione SqlClient non è possibile alzare di livello le transazioni di sistema quando viene usata con un server SQL Server 2000. Al contrario, viene inserita automaticamente in una transazione distribuita completa quando viene rilevato l'uso di un ambito della transazione.  
   
 ## <a name="direct-sql-commands"></a>Comandi SQL diretti  
  In alcune situazioni la capacità di <xref:System.Data.Linq.DataContext> di eseguire query o inviare modifiche è insufficiente per l'attività specifica che si desidera eseguire. In queste circostanze è possibile usare il metodo <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> per inviare comandi SQL al database e convertire i risultati della query in oggetti.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 061a8c7b73903b763de27e614e9b3067777afe58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85792aea8a72ffc0c9b579473332756c6ca3bb47
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64756021"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663832"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Procedura: Ospitare più versioni di un flusso di lavoro side-by-side
 
@@ -27,11 +27,11 @@ In questo passaggio dell'esercitazione, le attività di `WriteLine` nel flusso d
 
 - [Per aggiornare i flussi di lavoro](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)
 
-    - [Per aggiornare il flusso di lavoro StateMachine](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
+  - [Per aggiornare il flusso di lavoro StateMachine](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
 
-    - [Per aggiornare il flusso di lavoro del diagramma di flusso](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
+  - [Per aggiornare il flusso di lavoro del diagramma di flusso](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
 
-    - [Per aggiornare il flusso di lavoro sequenza](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
+  - [Per aggiornare il flusso di lavoro sequenza](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
 
 - [Per aggiornare workflowversionmap in modo da includere le versioni precedenti del flusso di lavoro](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)
 
@@ -68,7 +68,7 @@ In questo passaggio dell'esercitazione, le attività di `WriteLine` nel flusso d
 
 ### <a name="BKMK_UpdateWorkflows"></a> Per aggiornare i flussi di lavoro
 
- Questa sezione aggiorna le definizioni di flusso di lavoro. Le due attività `WriteLine` che forniscono il feedback sul tentativo dell'utente vengono aggiornate e viene aggiunta una nuova attività `WriteLine` che fornisce informazioni aggiuntive sul gioco una volta determinato il numero.
+Questa sezione aggiorna le definizioni di flusso di lavoro. Le due attività `WriteLine` che forniscono il feedback sul tentativo dell'utente vengono aggiornate e viene aggiunta una nuova attività `WriteLine` che fornisce informazioni aggiuntive sul gioco una volta determinato il numero.
 
 #### <a name="BKMK_UpdateStateMachine"></a> Per aggiornare il flusso di lavoro StateMachine
 

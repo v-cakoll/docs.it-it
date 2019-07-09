@@ -2,12 +2,12 @@
 title: Escalation della gestione delle transazioni
 ms.date: 03/30/2017
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-ms.openlocfilehash: 1e40244e1f6b5ffd7b52584a5da121d1203f8376
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2597d6fcce7fbd51f6f17bd42469cb7fcf3fdf
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630575"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662454"
 ---
 # <a name="transaction-management-escalation"></a>Escalation della gestione delle transazioni
 In Windows è disponibile un set di servizi e moduli che costituisce una gestione transazioni. L'escalation della gestione transazioni consiste nel migrare una transazione da un componente di gestione transazioni a un altro.  
@@ -25,7 +25,7 @@ In Windows è disponibile un set di servizi e moduli che costituisce una gestion
   
 - Almeno una risorsa durevole che non supporta le notifiche monofase viene integrata nella transazione.  
   
-- Almeno due risorse durevoli che supportano le notifiche monofase vengono integrate nella transazione. Ad esempio, l'integrazione di una sola connessione a un database [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] non comporta l'escalation di una transazione. Tuttavia, quando si apre una seconda connessione a un database [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] che ne comporta l'integrazione, l'infrastruttura <xref:System.Transactions> rileva che la transazione presenta due risorse durevoli e quindi ne esegue l'escalation a transazione MSDTC.  
+- Almeno due risorse durevoli che supportano le notifiche monofase vengono integrate nella transazione. L'integrazione di una singola connessione con SQL Server 2005, ad esempio, non causa una promozione della transazione. Tuttavia, ogni volta che si apre una seconda connessione a un database di SQL Server 2005 che causa il database da inserire nell'elenco, il <xref:System.Transactions> infrastruttura rileva che è la seconda risorsa durevole nella transazione e si esegue l'escalation a una transazione MSDTC.  
   
 - Si verifica una richiesta di "marshalling" della transazione a un altro dominio applicazione o processo. Si consideri ad esempio il caso della serializzazione di un oggetto di transazione passato attraverso il confine di un dominio applicazione. In tal caso il sistema esegue il marshalling dell'oggetto di transazione per valore: se si tenta di passare tale oggetto attraverso il confine di un dominio applicazione (anche nello stesso processo), l'oggetto di transazione viene serializzato. È possibile passare gli oggetti di transazione effettuando una chiamata a un metodo remoto che accetta come parametro un oggetto <xref:System.Transactions.Transaction>. In alternativa, è possibile tentare di accedere a un componente remoto che supporta le transazioni. Ciò comporta la serializzazione dell'oggetto di transazione nonché un'escalation, analogamente al caso di serializzazione di una transazione passata attraverso il confine di un dominio applicazione. Ciò si verifica in quanto la transazione viene distribuita e quindi la gestione transazioni locali non è più adeguata.  
   

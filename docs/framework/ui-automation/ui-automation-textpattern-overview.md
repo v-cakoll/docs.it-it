@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: d35e5b5127f335eac04caa8ee95749f45cb870bf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c7b30a854667a122ff30ec4a8e4855902489087f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674003"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660788"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Cenni preliminari sul modello TextPattern di automazione interfaccia utente
 
@@ -41,7 +41,7 @@ In breve, le tecnologie accessibili che richiedono accesso in sola lettura a un 
 
 ## <a name="control-types"></a>Tipi di controllo
 
-#### <a name="text"></a>Testo
+### <a name="text"></a>Testo
 
 Il controllo Text è l'elemento di base che rappresenta una sezione di testo sullo schermo.
 
@@ -50,14 +50,14 @@ Un controllo Text autonomo può essere usato come etichetta o testo statico in u
 > [!NOTE]
 > Non è possibile visualizzare i controlli Text nella visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (vedere [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)). Ciò è dovuto al fatto che i controlli di testo sono spesso visualizzati tramite la proprietà Name di un altro controllo. Ad esempio, il testo usato per etichettare un controllo Edit viene esposto tramite la proprietà Name del controllo Edit. Poiché il controllo Edit si trova nella visualizzazione contenuto della struttura ad albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , non è necessario che l'elemento di testo stesso si trovi in tale visualizzazione della struttura ad albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Nella visualizzazione contenuto viene visualizzato solo il testo non ridondante. In questo modo, qualsiasi tecnologia per l’accessibilità è in grado di filtrare rapidamente solo le informazioni necessarie agli utenti.
 
-#### <a name="edit"></a>Modifica
+### <a name="edit"></a>Edit
 
 I controlli Edit consentono agli utenti di visualizzare e modificare una sola riga di testo.
 
 > [!NOTE]
 > In alcuni scenari di layout, una singola riga di testo può essere interrotta da un ritorno a capo.
 
-#### <a name="document"></a>Documento
+### <a name="document"></a>Document
 
 I controlli Document consentono a un utente di spostarsi e ottenere informazioni da più pagine di testo.
 
@@ -67,7 +67,7 @@ I controlli Document consentono a un utente di spostarsi e ottenere informazioni
 
 |||
 |-|-|
-|`System.Windows.Automation.TextPattern Class`|Il punto di ingresso per il modello di testo di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] <br /><br /> Questa classe contiene inoltre i due listener di eventi di <xref:System.Windows.Automation.TextPattern> , <xref:System.Windows.Automation.TextPattern.TextSelectionChangedEvent> e <xref:System.Windows.Automation.TextPattern.TextChangedEvent>.|
+|`System.Windows.Automation.TextPattern Class`|Il punto di ingresso per il modello di testo di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]<br /><br /> Questa classe contiene inoltre i due listener di eventi di <xref:System.Windows.Automation.TextPattern> , <xref:System.Windows.Automation.TextPattern.TextSelectionChangedEvent> e <xref:System.Windows.Automation.TextPattern.TextChangedEvent>.|
 |`System.Windows.Automation.Text.TextPatternRange Class`|La rappresentazione di una sezione di testo all'interno di un contenitore di testo che supporta <xref:System.Windows.Automation.TextPattern>.<br /><br /> I client di automazione interfaccia utente devono valutare con attenzione la validità corrente di un intervallo di testo creato usando <xref:System.Windows.Automation.Text.TextPatternRange>. Se il testo originale nel controllo di testo è completamente sostituito da testo nuovo, l'intervallo di testo corrente non è più valido. L'intervallo di testo, tuttavia, può essere ancora attendibile se viene modificata solo una parte del testo originale e il controllo di testo sottostante gestisce il "puntatore" di testo con ancoraggi (o endpoint), anziché mediante il posizionamento di carattere assoluto.<br /><br /> I client possono restare in ascolto di un oggetto <xref:System.Windows.Automation.TextPattern.TextChangedEvent> per la notifica di qualsiasi modifica apportata al contenuto testuale usato.|
 |`System.Windows.Automation.AutomationTextAttribute Class`|Usato per identificare gli attributi di formattazione di un intervallo di testo.|
 
@@ -93,8 +93,10 @@ Un provider <xref:System.Windows.Automation.TextPattern> deve supportare sempre 
 |`System.Windows.Automation.TextPatternIdentifiers Class`|Contiene valori usati come identificatori per i provider di testo (vedere <xref:System.Windows.Automation.TextPatternIdentifiers>).|
 
 <a name="Security"></a>
+
 ## <a name="security"></a>Sicurezza
- Le classi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è stata progettata con l'obiettivo della sicurezza (vedere [UI Automation Security Overview](../../../docs/framework/ui-automation/ui-automation-security-overview.md)). Le classi TextPattern descritte in questa panoramica, tuttavia richiedono alcune considerazioni specifiche relative alla sicurezza.
+
+Le classi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è stata progettata con l'obiettivo della sicurezza (vedere [UI Automation Security Overview](../../../docs/framework/ui-automation/ui-automation-security-overview.md)). Le classi TextPattern descritte in questa panoramica, tuttavia richiedono alcune considerazioni specifiche relative alla sicurezza.
 
 - I provider di testo di[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] forniscono interfacce di sola lettura, non la possibilità di modificare il testo esistente in un controllo.
 
@@ -104,9 +106,9 @@ Un provider <xref:System.Windows.Automation.TextPattern> deve supportare sempre 
 
 - Una delle modifiche più significative in materia di sicurezza introdotte in [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] è nota come "Input sicuro" e include tecnologie quali LUA (account utente con limitazioni) e UIPI (UI Privilege Level Isolation).
 
-    - UIPI impedisce a un programma di controllare e/o monitorare un altro programma con privilegi superiori, impedendo attacchi di messaggi di finestra tra processi che effettuano lo spoofing dell'input dell'utente.
+  - UIPI impedisce a un programma di controllare e/o monitorare un altro programma con privilegi superiori, impedendo attacchi di messaggi di finestra tra processi che effettuano lo spoofing dell'input dell'utente.
 
-    - Con LUA vengono impostati limiti sui privilegi delle applicazioni eseguite dagli utenti del gruppo Administrators. Alle applicazioni non saranno assegnati privilegi amministratori, ma verranno invece eseguite con i privilegi minimi necessari. Di conseguenza, è possibile che negli scenari LUA vengano applicate alcune restrizioni. Tra le più significative, il troncamento delle stringhe (incluse le stringhe TextPattern) che può prevedere la limitazione delle dimensioni delle stringhe recuperate dalle applicazioni a livello di amministratore, per evitare la necessità di allocare memoria con la conseguente disabilitazione dell'applicazione.
+  - Con LUA vengono impostati limiti sui privilegi delle applicazioni eseguite dagli utenti del gruppo Administrators. Alle applicazioni non saranno assegnati privilegi amministratori, ma verranno invece eseguite con i privilegi minimi necessari. Di conseguenza, è possibile che negli scenari LUA vengano applicate alcune restrizioni. Tra le più significative, il troncamento delle stringhe (incluse le stringhe TextPattern) che può prevedere la limitazione delle dimensioni delle stringhe recuperate dalle applicazioni a livello di amministratore, per evitare la necessità di allocare memoria con la conseguente disabilitazione dell'applicazione.
 
 <a name="Performance"></a>
 
@@ -120,19 +122,25 @@ Per migliorare le prestazioni, è possibile assicurarsi che i client di automazi
 
 ## <a name="textpattern-terminology"></a>Terminologia di TextPattern
 
-**Attributo** una caratteristica di formattazione di un intervallo di testo (ad esempio <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> o <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).
+**Attributo**\
+Una caratteristica di formattazione di un intervallo di testo, ad esempio <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> o <xref:System.Windows.Automation.TextPattern.FontNameAttribute>.
 
-**Intervallo degenerato** un intervallo degenerato è un intervallo di testo vuoto o con zero caratteri. Ai fini del pattern di controllo TextPattern, il punto di inserimento del testo (o cursore di sistema) è considerato un intervallo degenerato. Se non viene selezionato testo, il metodo <xref:System.Windows.Automation.TextPattern.GetSelection%2A> restituisce un intervallo degenerato in corrispondenza del punto di inserimento del testo e il metodo <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> restituisce un intervallo degenerato come endpoint iniziale. I metodi<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> e <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> possono restituire intervalli degenerati quando il provider di testo non è in grado di trovare alcun intervallo di testo corrispondente alla condizione specificata. È possibile usare questo intervallo degenerato come endpoint iniziale all'interno del provider di testo. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> e <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> restituire un riferimento null (`Nothing` in Microsoft Visual Basic .NET) per evitare confusione con un intervallo individuato e un intervallo degenere.
+**Intervallo degenerato**\
+Un intervallo degenerato è un intervallo di testo vuoto o con zero caratteri. Ai fini del pattern di controllo TextPattern, il punto di inserimento del testo (o cursore di sistema) è considerato un intervallo degenerato. Se non viene selezionato testo, il metodo <xref:System.Windows.Automation.TextPattern.GetSelection%2A> restituisce un intervallo degenerato in corrispondenza del punto di inserimento del testo e il metodo <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> restituisce un intervallo degenerato come endpoint iniziale. I metodi<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> e <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> possono restituire intervalli degenerati quando il provider di testo non è in grado di trovare alcun intervallo di testo corrispondente alla condizione specificata. È possibile usare questo intervallo degenerato come endpoint iniziale all'interno del provider di testo. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> e <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> restituire un riferimento null (`Nothing` in Microsoft Visual Basic .NET) per evitare confusione con un intervallo individuato e un intervallo degenere.
 
-**Oggetto incorporato** esistono due tipi di oggetti incorporati nel [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] modello di testo. Sono costituiti da elementi di contenuto basati su testo, quali collegamenti ipertestuali o tabelle, e da elementi di controllo, quali immagini e pulsanti. Per altre informazioni, vedere [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md).
+**Oggetto incorporato**\
+Sono disponibili due tipi di oggetti incorporati nel modello di testo di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Sono costituiti da elementi di contenuto basati su testo, quali collegamenti ipertestuali o tabelle, e da elementi di controllo, quali immagini e pulsanti. Per altre informazioni, vedere [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md).
 
-**Endpoint** assoluto <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> o <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> punto di un intervallo di testo all'interno di un contenitore di testo.
+**Endpoint**\
+Il punto <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> o <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> assoluto di un intervallo di testo all'interno di un contenitore di testo.
 
 ![TextPatternRangeEndpoint &#40;iniziare e terminare&#41;. ](../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints") seguente illustra un gruppo di punti iniziali e finali.
 
-**TextRange** una rappresentazione di un intervallo di testo, con punti iniziale e finale, in un contenitore di testo, inclusi tutti i relativi attributi e funzionalità.
+**TextRange**\
+Una rappresentazione di un intervallo di testo, con punti iniziali e finali, in un contenitore di testo che include tutti gli attributi e le funzionalità associati.
 
-<xref:System.Windows.Automation.Text.TextUnit> Unità di testo (carattere, parola, riga o paragrafo) usata per lo spostamento tramite segmenti logici di un intervallo di testo predefinite.
+<xref:System.Windows.Automation.Text.TextUnit>\
+Un'unità di testo predefinita (carattere, parola, riga o paragrafo) usata per lo spostamento tramite segmenti logici di un intervallo di testo.
 
 ## <a name="see-also"></a>Vedere anche
 

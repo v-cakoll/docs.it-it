@@ -14,28 +14,31 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 4ef97af17893fa7a4e85d09e989539f7f5b32a36
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 27554d7e0a7e980d240e0609fe0561c2138f0aa1
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627373"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664053"
 ---
 # <a name="custom-dependency-properties"></a>Proprietà di dipendenza personalizzate
 
 Questo argomento descrive le ragioni per cui sviluppatori di applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e autori di componenti potrebbero decidere di creare una proprietà di dipendenza personalizzata e illustra i passaggi dell'implementazione oltre ad alcune opzioni di implementazione in grado di migliorare le prestazioni, l'usabilità o la versatilità della proprietà.
 
 <a name="prerequisites"></a>
+
 ## <a name="prerequisites"></a>Prerequisiti
 
 In questo argomento si presuppongono la conoscenza delle proprietà di dipendenza dal punto di vista di un consumer di proprietà di dipendenza esistenti nelle classi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], nonché la lettura dell'argomento [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md). Per seguire gli esempi illustrati in questo argomento, è anche necessario conoscere [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e saper scrivere applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 <a name="whatis"></a>
+
 ## <a name="what-is-a-dependency-property"></a>Che cos'è una proprietà di dipendenza?
 
 È possibile consentire a una proprietà che in caso contrario sarebbe una proprietà [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] di supportare l'aggiunta di stili, il data binding, l'ereditarietà, le animazioni e i valori predefiniti mediante l'implementazione della proprietà stessa come proprietà di dipendenza. Le proprietà di dipendenza sono proprietà registrate con il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di proprietà chiamando il <xref:System.Windows.DependencyProperty.Register%2A> metodo (o <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>), e che sono supportate da un <xref:System.Windows.DependencyProperty> campo dell'identificatore. Le proprietà di dipendenza possono essere usate solo da <xref:System.Windows.DependencyObject> i tipi, ma <xref:System.Windows.DependencyObject> è piuttosto in alto nella [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gerarchia, delle classi in modo che la maggior parte delle classi disponibili in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] può supportare proprietà di dipendenza. Per altre informazioni sulle proprietà di dipendenza e per la terminologia e le convenzioni usate per descriverle in questo [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)], vedere [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md).
 
 <a name="example_dp"></a>
+
 ## <a name="examples-of-dependency-properties"></a>Esempio di proprietà di dipendenza
 
 Esempi di proprietà di dipendenza implementate nelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] classi includono le <xref:System.Windows.Controls.Control.Background%2A> proprietà, il <xref:System.Windows.FrameworkElement.Width%2A> proprietà e il <xref:System.Windows.Controls.TextBox.Text%2A> proprietà, tra le molte altre. Ogni proprietà di dipendenza esposta da una classe ha un campo statico pubblico corrispondente del tipo <xref:System.Windows.DependencyProperty> esposto in quella stessa classe. Si tratta dell'identificatore per la proprietà di dipendenza. L'identificatore viene denominato mediante la seguente convenzione: nome della proprietà di dipendenza seguito dalla stringa `Property`. Ad esempio, il corrispondente <xref:System.Windows.DependencyProperty> campo dell'identificatore per il <xref:System.Windows.Controls.Control.Background%2A> è di proprietà <xref:System.Windows.Controls.Control.BackgroundProperty>. L'identificatore archivia le informazioni sulla proprietà di dipendenza al momento della registrazione e l'identificatore viene quindi usato in un secondo momento per altre operazioni che coinvolgono la proprietà di dipendenza, ad esempio la chiamata <xref:System.Windows.DependencyObject.SetValue%2A>.
@@ -43,6 +46,7 @@ Esempi di proprietà di dipendenza implementate nelle [!INCLUDE[TLA2#tla_winclie
 Come accennato in [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md), tutte le proprietà di dipendenza in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (eccetto la maggior parte delle proprietà associate) sono anche proprietà [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] a causa dell'implementazione del "wrapper". Pertanto, mediante il codice è possibile ottenere o impostare proprietà di dipendenza chiamando funzioni di accesso [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] che definiscono i wrapper in modo identico alle altre proprietà [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. I consumer di proprietà di dipendenza stabilite, non si in genere utilizza il <xref:System.Windows.DependencyObject> metodi <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A>, che sono il punto di connessione al sistema di proprietà sottostante. Piuttosto, l'implementazione esistente del [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] proprietà avrà già chiamato <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> all'interno di `get` e `set` implementazioni del wrapper della proprietà, usando in modo appropriato il campo dell'identificatore . Se l'implementazione di una proprietà di dipendenza personalizzata viene eseguita in modo autonomo, il wrapper verrà definito in modo simile.
 
 <a name="backing_with_dp"></a>
+
 ## <a name="when-should-you-implement-a-dependency-property"></a>Quando implementare una proprietà di dipendenza
 
 Quando si implementa una proprietà in una classe, purché la classe deriva da <xref:System.Windows.DependencyObject>, si ha la possibilità di supportare la proprietà con un <xref:System.Windows.DependencyProperty> identificatore e pertanto per renderla una proprietà di dipendenza. Trasformare una proprietà in una proprietà di dipendenza non sempre è necessario o appropriato e dipende dalle esigenze dello scenario. Talvolta è opportuno usare la tecnica normale che consiste nel supportare la proprietà con un campo privato. Tuttavia, se si vuole che la proprietà supporti una o più delle seguenti funzionalità [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], è necessario implementarla come proprietà di dipendenza:
@@ -66,6 +70,7 @@ Quando si implementa una proprietà in una classe, purché la classe deriva da <
 Quando si esaminano questi scenari, è necessario considerare anche se è possibile realizzare lo scenario eseguendo l'override dei metadati di una proprietà di dipendenza esistente, piuttosto che implementando una proprietà completamente nuova. La praticità di un override di metadati dipende dallo scenario e dalla somiglianza di tale scenario con l'implementazione nelle proprietà di dipendenza [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] esistenti e nelle classi. Per altre informazioni sull'override dei metadati nelle proprietà esistenti, vedere [Metadati delle proprietà di dipendenza](dependency-property-metadata.md).
 
 <a name="checklist"></a>
+
 ## <a name="checklist-for-defining-a-dependency-property"></a>Elenco di controllo per la definizione di una proprietà di dipendenza
 
 La definizione di una proprietà di dipendenza include quattro concetti distinti. Questi concetti non rappresentano necessariamente passaggi rigidi di una procedura, in quanto alcuni di questi finiscono per essere combinati come singole righe di codice nell'implementazione:
@@ -79,6 +84,7 @@ La definizione di una proprietà di dipendenza include quattro concetti distinti
 - Definire una proprietà "wrapper" [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] il cui nome corrisponda al nome della proprietà di dipendenza. Implementare le funzioni di accesso `get` e `set` della proprietà "wrapper" [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] da connettere alla proprietà di dipendenza di supporto.
 
 <a name="registering"></a>
+
 ### <a name="registering-the-property-with-the-property-system"></a>Registrazione della proprietà nel sistema di proprietà
 
 Affinché la proprietà sia una proprietà di dipendenza, è necessario registrarla in una tabella gestita dal sistema di proprietà e assegnarle un identificatore univoco usato come qualificatore per le successive operazioni del sistema di proprietà. Tali operazioni potrebbero essere operazioni interne oppure le [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] del sistema di proprietà di chiamata del codice. Per registrare la proprietà, chiamare il <xref:System.Windows.DependencyProperty.Register%2A> metodo all'interno del corpo della classe (all'interno della classe, ma di fuori di tutte le definizioni dei membri). Il campo dell'identificatore viene inoltre fornito dal <xref:System.Windows.DependencyProperty.Register%2A> chiamata al metodo, il valore restituito. Il motivo che il <xref:System.Windows.DependencyProperty.Register%2A> chiamata avviene all'esterno di altri membri definizioni, infatti, si usa questo valore restituito per assegnare e creare un `public` `static` `readonly` campo di tipo <xref:System.Windows.DependencyProperty> come parte della classe. Questo campo diventa l'identificatore per la proprietà di dipendenza.
@@ -87,6 +93,7 @@ Affinché la proprietà sia una proprietà di dipendenza, è necessario registra
 [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]
 
 <a name="nameconventions"></a>
+
 ### <a name="dependency-property-name-conventions"></a>Convenzioni di denominazione delle proprietà di dipendenza
 
 Esistono convenzioni di denominazione definite relative alle proprietà di dipendenza che è necessario seguire in tutte le circostanze tranne in casi eccezionali.
@@ -99,6 +106,7 @@ Quando si crea il campo dell'identificatore, denominare questo campo con il nome
 > La definizione della proprietà di dipendenza nel corpo della classe costituisce l'implementazione tipica, ma è anche possibile definire una proprietà di dipendenza nel costruttore statico della classe. Questo approccio potrebbe essere utile nel caso in cui siano necessarie più righe di codice per inizializzare la proprietà di dipendenza.
 
 <a name="wrapper1"></a>
+
 ### <a name="implementing-the-wrapper"></a>Implementazione del "wrapper"
 
 L'implementazione del wrapper deve chiamare <xref:System.Windows.DependencyObject.GetValue%2A> nella `get` implementazione, e <xref:System.Windows.DependencyObject.SetValue%2A> nel `set` implementazione (la chiamata di registrazione originale e campo sono mostrati anche in questo caso per maggiore chiarezza).
@@ -119,6 +127,7 @@ Anche in questo caso, per convenzione, il nome della proprietà del wrapper deve
 - L'implementazione corrente del caricatore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ignora completamente i wrapper e si basa sulla convenzione di denominazione al momento dell'elaborazione dei valori dell'attributo. Per altre informazioni, vedere [Caricamento XAML e proprietà di dipendenza](xaml-loading-and-dependency-properties.md).
 
 <a name="metadata"></a>
+
 ### <a name="property-metadata-for-a-new-dependency-property"></a>Metadati della proprietà per una nuova proprietà di dipendenza
 
 Quando si registra una proprietà di dipendenza, la registrazione tramite il sistema di proprietà crea un oggetto dei metadati che archivia le caratteristiche della proprietà. Molte di queste caratteristiche hanno impostazioni predefinite che vengono impostate se la proprietà è registrata con le semplici firme di <xref:System.Windows.DependencyProperty.Register%2A>. Le altre firme di <xref:System.Windows.DependencyProperty.Register%2A> consentono di specificare i metadati desiderati quando si registra la proprietà. I metadati più comuni per le proprietà di dipendenza consistono nel fornire a tali proprietà un valore predefinito che viene applicato alle nuove istanze che usano la proprietà.
@@ -131,13 +140,13 @@ Per <xref:System.Windows.FrameworkPropertyMetadata>, è inoltre possibile specif
 
 - Se la proprietà (o le modifiche nel relativo valore) influisce sulle [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], e in particolare sul modo in cui il sistema di layout deve ridimensionare o eseguire il rendering dell'elemento in una pagina, impostare uno o più dei flag seguenti: <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>.
 
-    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> indica che una modifica a questa proprietà richiede una modifica a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] rendering in cui l'oggetto contenitore potrebbe richiedere più o meno lo spazio nel controllo padre. Ad esempio, è necessario impostare questo flag per una proprietà "Width".
+  - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> indica che una modifica a questa proprietà richiede una modifica a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] rendering in cui l'oggetto contenitore potrebbe richiedere più o meno lo spazio nel controllo padre. Ad esempio, è necessario impostare questo flag per una proprietà "Width".
 
-    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> indica che una modifica a questa proprietà richiede una modifica a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] il rendering, che in genere non richiede una modifica nello spazio dedicato, ma indica che il posizionamento all'interno dello spazio è stato modificato. Ad esempio, è necessario impostare questo flag per una proprietà "Alignment".
+  - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> indica che una modifica a questa proprietà richiede una modifica a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] il rendering, che in genere non richiede una modifica nello spazio dedicato, ma indica che il posizionamento all'interno dello spazio è stato modificato. Ad esempio, è necessario impostare questo flag per una proprietà "Alignment".
 
-    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> indica che un'altra modifica si è verificato che non influirà sul layout e sulle misure, ma richiede un altro rendering. Un esempio potrebbe essere una proprietà che modifica un colore di un elemento esistente, ad esempio "Background".
+  - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> indica che un'altra modifica si è verificato che non influirà sul layout e sulle misure, ma richiede un altro rendering. Un esempio potrebbe essere una proprietà che modifica un colore di un elemento esistente, ad esempio "Background".
 
-    - Questi flag vengono spesso usati come protocollo nei metadati per le implementazioni di override del sistema di proprietà o per i callback del layout. Ad esempio, potrebbe essere un' <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> callback che chiamerà <xref:System.Windows.UIElement.InvalidateArrange%2A> se qualsiasi proprietà dell'istanza segnala una modifica del valore e non ha <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> come `true` nei relativi metadati.
+  - Questi flag vengono spesso usati come protocollo nei metadati per le implementazioni di override del sistema di proprietà o per i callback del layout. Ad esempio, potrebbe essere un' <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> callback che chiamerà <xref:System.Windows.UIElement.InvalidateArrange%2A> se qualsiasi proprietà dell'istanza segnala una modifica del valore e non ha <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> come `true` nei relativi metadati.
 
 - Alcune proprietà possono influire sulle caratteristiche di rendering dell'elemento padre contenitore, in modo maggiore rispetto alle modifiche nelle dimensioni necessarie indicate in precedenza. Un esempio è il <xref:System.Windows.Documents.Paragraph.MinOrphanLines%2A> proprietà utilizzata nel modello di documento dinamico, in cui le modifiche apportate a tale proprietà possono modificare il rendering globale del documento dinamico che contiene il paragrafo. Uso <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange> o <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentMeasure> per identificare casi simili nelle proprietà personalizzate.
 
@@ -150,21 +159,25 @@ Per <xref:System.Windows.FrameworkPropertyMetadata>, è inoltre possibile specif
 - Impostare il <xref:System.Windows.FrameworkPropertyMetadataOptions.Journal> flag che indica se la proprietà di dipendenza deve essere rilevata o usata dai servizi di journaling di navigazione. Un esempio è il <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> proprietà; qualsiasi elemento selezionato in una selezione di controllo deve essere mantenuto quando la cronologia del journaling.
 
 <a name="RODP"></a>
+
 ## <a name="read-only-dependency-properties"></a>Proprietà di dipendenza di sola lettura
 
 È possibile definire una proprietà di dipendenza di sola lettura. Tuttavia, gli scenari in base ai quali è possibile definire la proprietà come proprietà di sola lettura sono piuttosto diversi, allo stesso modo della procedura per registrare queste proprietà con il sistema di proprietà e di quella per esporre l'identificatore. Per altre informazioni, vedere [Proprietà di dipendenza di sola lettura](read-only-dependency-properties.md).
 
 <a name="CTDP"></a>
+
 ## <a name="collection-type-dependency-properties"></a>Proprietà di dipendenza di tipo raccolta
 
 Le proprietà di dipendenza di tipo di raccolta presentano alcuni problemi di implementazione aggiuntivi che è opportuno considerare. Per altri dettagli, vedere [Proprietà di dipendenza di tipo raccolta](collection-type-dependency-properties.md).
 
 <a name="SecurityC"></a>
+
 ## <a name="dependency-property-security-considerations"></a>Considerazioni sulla sicurezza delle proprietà di dipendenza
 
 Le proprietà di dipendenza devono essere dichiarate come proprietà pubbliche. I campi dell'identificatore delle proprietà di dipendenza devono essere dichiarati come campi statici pubblici. Anche se si tenta di dichiarare altri livelli di accesso (ad esempio protetto), è sempre possibile accedere a una proprietà di dipendenza tramite l'identificatore in combinazione con le [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] del sistema di proprietà. Anche un campo dell'identificatore protetto è potenzialmente accessibile a causa di determinazione della creazione di report o valore dei metadati [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] che fanno parte del sistema di proprietà, ad esempio <xref:System.Windows.LocalValueEnumerator>. Per altre informazioni, vedere [Sicurezza delle proprietà di dipendenza](dependency-property-security.md).
 
 <a name="DPCtor"></a>
+
 ## <a name="dependency-properties-and-class-constructors"></a>Proprietà di dipendenza e costruttori di classi
 
 Esiste un principio generale nella programmazione del codice gestito (spesso applicato mediante strumenti di analisi del codice quale FxCop) in base al quale i costruttori di classi non devono chiamare metodi virtuali. Il motivo sta nel fatto che i costruttori possono essere chiamati come inizializzazione di base di un costruttore di classe derivato, pertanto l'uso del metodo virtuale tramite il costruttore potrebbe avvenire a uno stato incompleto dell'inizializzazione dell'istanza di oggetto in corso di creazione. Quando si deriva da una classe che deriva già da <xref:System.Windows.DependencyObject>, è necessario essere consapevoli che il sistema di proprietà stesso chiama ed espone internamente metodi virtuali. Tali metodi virtuali sono parte dei servizi del sistema di proprietà [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. L'esecuzione dell'override dei metodi consente alle classi derivate di partecipare alla determinazione del valore. Per evitare eventuali problemi con l'inizializzazione del runtime, è consigliabile evitare di impostare valori della proprietà di dipendenza all'interno dei costruttori di classi, a meno che non si segua un modello del costruttore molto specifico. Per altri dettagli, vedere [Modelli di costruttore sicuri per DependencyObject](safe-constructor-patterns-for-dependencyobjects.md).

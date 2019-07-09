@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: a0ed7bb48c0b8c81b44d4e321dec902ba68fc523
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77694b2a86c91f3e6946ecd50f4765404750f37b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640849"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664162"
 ---
 # <a name="graphics-rendering-tiers"></a>Livelli di rendering della grafica
 Un livello di rendering definisce un livello di prestazioni e funzionalità hardware grafiche per un dispositivo che esegue un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -101,7 +101,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
 |Impostazione|Descrizione|  
 |-------------|-----------------|  
 |**Opzione di disabilitazione dell'accelerazione hardware**|Specifica se l'accelerazione hardware deve essere abilitata.|  
-|**Valore massimo di multicampionamento**|Specifica il grado di multicampionamento del contenuto anti-aliasing [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)].|  
+|**Valore massimo di multicampionamento**|Specifica il grado di multicampionamento del contenuto 3D anti-aliasing.|  
 |**Impostazione Data driver video necessaria**|Specifica se il sistema disabilita l'accelerazione hardware per i driver rilasciati prima di novembre 2004.|  
 |**Opzione per l'uso di unità di rasterizzazione dei riferimenti**|Specifica se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deve usare l'unità di rasterizzazione dei riferimenti.|  
   
