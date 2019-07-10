@@ -16,44 +16,44 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cdbe36403f830926d611ffdc655d82ea25ddeef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a62199563c620156885c941204207b185834beb4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599091"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752151"
 ---
-# <a name="corprfjitcache-enumeration"></a><span data-ttu-id="79c79-102">Enumerazione COR_PRF_JIT_CACHE</span><span class="sxs-lookup"><span data-stu-id="79c79-102">COR_PRF_JIT_CACHE Enumeration</span></span>
-<span data-ttu-id="79c79-103">Indica il risultato della ricerca di una funzione memorizzata nella cache.</span><span class="sxs-lookup"><span data-stu-id="79c79-103">Indicates the result of a cached function search.</span></span>  
+# <a name="corprfjitcache-enumeration"></a><span data-ttu-id="be345-102">Enumerazione COR_PRF_JIT_CACHE</span><span class="sxs-lookup"><span data-stu-id="be345-102">COR_PRF_JIT_CACHE Enumeration</span></span>
+<span data-ttu-id="be345-103">Indica il risultato della ricerca di una funzione memorizzata nella cache.</span><span class="sxs-lookup"><span data-stu-id="be345-103">Indicates the result of a cached function search.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="79c79-104">`COR_PRF_CACHED_FUNCTION_FOUND` ha un valore pari a zero, pertanto, `COR_PRF_JIT_CACHE` non può essere utilizzato come un surrogato booleano.</span><span class="sxs-lookup"><span data-stu-id="79c79-104">`COR_PRF_CACHED_FUNCTION_FOUND` has a value of zero, so `COR_PRF_JIT_CACHE` cannot be used as a Boolean surrogate.</span></span>  
+>  <span data-ttu-id="be345-104">`COR_PRF_CACHED_FUNCTION_FOUND` ha un valore pari a zero, pertanto, `COR_PRF_JIT_CACHE` non può essere utilizzato come un surrogato booleano.</span><span class="sxs-lookup"><span data-stu-id="be345-104">`COR_PRF_CACHED_FUNCTION_FOUND` has a value of zero, so `COR_PRF_JIT_CACHE` cannot be used as a Boolean surrogate.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79c79-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="79c79-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be345-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="be345-105">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_CACHED_FUNCTION_FOUND,  
     COR_PRF_CACHED_FUNCTION_NOT_FOUND  
 } COR_PRF_JIT_CACHE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="79c79-106">Membri</span><span class="sxs-lookup"><span data-stu-id="79c79-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="be345-106">Membri</span><span class="sxs-lookup"><span data-stu-id="be345-106">Members</span></span>  
   
-|<span data-ttu-id="79c79-107">Member</span><span class="sxs-lookup"><span data-stu-id="79c79-107">Member</span></span>|<span data-ttu-id="79c79-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="79c79-108">Description</span></span>|  
+|<span data-ttu-id="be345-107">Member</span><span class="sxs-lookup"><span data-stu-id="be345-107">Member</span></span>|<span data-ttu-id="be345-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="be345-108">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|<span data-ttu-id="79c79-109">La ricerca ha rilevato la funzione.</span><span class="sxs-lookup"><span data-stu-id="79c79-109">The search found the function.</span></span>|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|<span data-ttu-id="79c79-110">La ricerca non ha trovato la funzione.</span><span class="sxs-lookup"><span data-stu-id="79c79-110">The search did not find the function.</span></span>|  
+|`COR_PRF_FUNCTION_FOUND`|<span data-ttu-id="be345-109">La ricerca ha rilevato la funzione.</span><span class="sxs-lookup"><span data-stu-id="be345-109">The search found the function.</span></span>|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|<span data-ttu-id="be345-110">La ricerca non ha trovato la funzione.</span><span class="sxs-lookup"><span data-stu-id="be345-110">The search did not find the function.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="79c79-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="79c79-111">Requirements</span></span>  
- <span data-ttu-id="79c79-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="79c79-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="be345-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="be345-111">Requirements</span></span>  
+ <span data-ttu-id="be345-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="be345-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="79c79-113">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="79c79-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="be345-113">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="be345-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="79c79-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="79c79-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="be345-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="be345-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="79c79-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79c79-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="be345-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be345-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79c79-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="79c79-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be345-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="be345-116">See also</span></span>
 
-- [<span data-ttu-id="79c79-117">Enumerazioni di profilatura</span><span class="sxs-lookup"><span data-stu-id="79c79-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="be345-117">Enumerazioni di profilatura</span><span class="sxs-lookup"><span data-stu-id="be345-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
