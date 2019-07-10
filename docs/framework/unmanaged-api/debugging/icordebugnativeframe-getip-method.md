@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38f913b742f7ece2f136454f801ae780124aed87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 71e9149bafc866f89253c4318ac69f2705431e48
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987969"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765297"
 ---
 # <a name="icordebugnativeframegetip-method"></a>Metodo ICorDebugNativeFrame::GetIP
 Ottiene il codice nativo offset posizione a cui è attualmente impostato il puntatore all'istruzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetIP (  
     [out] ULONG32           *pnOffset  
 );  
