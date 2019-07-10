@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6998be3daf0ab6a6290a3400b96c32227df3e022
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a1c0f7deb2ef24893530797b4507e2dcc540ad2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942376"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757043"
 ---
 # <a name="icordebugobjectenumnext-method"></a>Metodo ICorDebugObjectEnum::Next
 Ottiene gli indirizzi virtuali relativi (RVA) del numero specificato di oggetti dall'enumerazione, iniziando in corrispondenza della posizione corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT Next (  
     [in] ULONG celt,  
     [out, size_is(celt), length_is(*pceltFetched)]    

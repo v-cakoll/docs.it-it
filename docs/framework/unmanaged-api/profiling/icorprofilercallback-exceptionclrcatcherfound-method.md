@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 59225677671388b4ed31f7fa440b6e502b604c63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 683cec06cd4c2fdef310126adc2921c858ca5687
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597648"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776023"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a>Metodo ICorProfilerCallback::ExceptionCLRCatcherFound
 Chiamato quando un `catch` blocca per un'eccezione si trova all'interno di common language runtime (CLR). Questo metodo è obsoleto in .NET Framework versione 2.0.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT ExceptionCLRCatcherFound();  
 ```  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4d15d9ae63e63f98ab73e250df558dfa16002a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61dcf014a65f524d2b2e7b92bcc7f007d1a47125
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61959965"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754506"
 ---
 # <a name="icordebugfunction2enumeratenativecode-method"></a>Metodo ICorDebugFunction2::EnumerateNativeCode
 Ottiene un puntatore a interfaccia a un oggetto ICorDebugCodeEnum contenente le istruzioni di codice nativo nella funzione di cui viene fatto riferimento dall'oggetto ICorDebugFunction2.  
@@ -32,7 +32,7 @@ Ottiene un puntatore a interfaccia a un oggetto ICorDebugCodeEnum contenente le 
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT EnumerateNativeCode (  
     [out] ICorDebugCodeEnum   **ppCodeEnum  
 );  

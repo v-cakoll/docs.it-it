@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2436288e2f2f241cab15b16abf4df99c73caec25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb3044927e0d9975ed9347cd4f4896b3b75d3e29
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789415"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749629"
 ---
 # <a name="ihosttaskmanagergetcurrenttask-method"></a>Metodo IHostTaskManager::GetCurrentTask
 Ottiene un puntatore a interfaccia per l'attività attualmente in esecuzione nel thread del sistema operativo da cui viene effettuata la chiamata.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetCurrentTask (  
     [out] IHostTask **pTask  
 );  

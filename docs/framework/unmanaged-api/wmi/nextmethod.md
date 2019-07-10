@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b3667f7371131a4c1394ba5ca619d1f605c89ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a730947b0c962d801975917cdf752136e7221c4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000181"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746484"
 ---
 # <a name="nextmethod-function"></a>NextMethod (funzione)
 Recupera il prossimo metodo in un'enumerazione che inizia con una chiamata a [BeginMethodEnumeration](beginmethodenumeration.md).  
@@ -30,7 +30,7 @@ Recupera il prossimo metodo in un'enumerazione che inizia con una chiamata a [Be
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT NextMethod (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 

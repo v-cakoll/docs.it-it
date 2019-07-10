@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ead1c1a91b910e7cfbb09f17ba823fc7a77ce0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76c852ac81126895ea3a2e1b40473722c8445201
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609009"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746563"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType (funzione)
 Recupera il tipo di apartment in cui il chiamante è in esecuzione.   
@@ -30,7 +30,7 @@ Recupera il tipo di apartment in cui il chiamante è in esecuzione.
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetCurrentApartmentType (
    [in] int                   vFunc, 
    [in] IComThreadingInfo*    ptr, 

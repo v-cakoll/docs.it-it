@@ -2,17 +2,17 @@
 title: Passaggi tipici per l'utilizzo di LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: 0c472fcac0e664e17c1869ba7ffc61ed2b802e8e
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: cbcd8099fd085d0198e5ba77ee0a3e86c1ca70d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063011"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742778"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Passaggi tipici per l'utilizzo di LINQ to SQL
 Per implementare un'applicazione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], attenersi ai passaggi descritti in questo argomento. Molti passaggi sono tuttavia facoltativi ed è molto probabile che si possa usare il modello a oggetti nello stato predefinito.  
   
- Per iniziare velocemente, usare [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per creare il modello a oggetti e avviare la codifica delle query.  
+ Per iniziare velocemente, utilizzare Object Relational Designer per creare il modello a oggetti e avviare la codifica delle query.  
   
 ## <a name="creating-the-object-model"></a>Creazione del modello a oggetti  
  Il primo passaggio consiste nel creare un modello a oggetti basato sui metadati di un database relazionale esistente. Il modello a oggetti rappresenta il database secondo il linguaggio di programmazione dello sviluppatore. Per altre informazioni, vedere [LINQ al modello a oggetti SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
@@ -20,17 +20,17 @@ Per implementare un'applicazione [!INCLUDE[vbtecdlinq](../../../../../../include
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Selezionare uno strumento per creare il modello.  
  Per la creazione del modello sono disponibili tre strumenti.  
   
-- Il tipo [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+- Object Relational Designer  
   
      Questa finestra di progettazione offre un'interfaccia utente avanzata per la creazione di un modello a oggetti da un database esistente. Questo strumento fa parte dell'IDE di Visual Studio ed è più adatto ai database di piccoli o medie dimensioni.  
   
 - Strumento per la generazione del codice SQLMetal  
   
-     Questa utilità della riga di comando offre un set di opzioni leggermente diverso rispetto a [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]. Questo strumento è più adatto per la modellazione di database di grandi dimensioni. Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+     Questa utilità della riga di comando offre un set di opzioni leggermente diverso da O/R Designer. Questo strumento è più adatto per la modellazione di database di grandi dimensioni. Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 - Editor di codice  
   
-     È possibile scrivere codice personalizzato usando l'editor di codice di Visual Studio o un altro editor. Si sconsiglia di usare questo approccio, che può essere soggetto a errori, se si dispone già di un database ed è possibile usare [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] o lo strumento SQLMetal. L'editor di codice può tuttavia essere utile per perfezionare o modificare il codice già generato usando altri strumenti. Per altre informazioni, vedere [Procedura: Personalizzare le classi di entità usando l'Editor di codice](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
+     È possibile scrivere codice personalizzato usando l'editor di codice di Visual Studio o un altro editor. Si sconsiglia questo approccio, che può essere soggetto a errori, quando si dispone di un database esistente e si può usare la finestra di Progettazione relazionale oggetti o lo strumento SQLMetal. L'editor di codice può tuttavia essere utile per perfezionare o modificare il codice già generato usando altri strumenti. Per altre informazioni, vedere [Procedura: Personalizzare le classi di entità usando l'Editor di codice](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Selezionare il tipo di codice che si desidera generare.  
   
@@ -43,14 +43,14 @@ Per implementare un'applicazione [!INCLUDE[vbtecdlinq](../../../../../../include
      Usando questo approccio è possibile evitare di includere i metadati di mapping nel codice dell'applicazione. Per altre informazioni, vedere [Mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
     > [!NOTE]
-    >  [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] non supporta la generazione di file di mapping esterni. Per implementare questa funzionalità è necessario usare lo strumento SQLMetal.  
+    >  O/R Designer non supporta la generazione di file di mapping esterni. Per implementare questa funzionalità è necessario usare lo strumento SQLMetal.  
   
 - File DBML che potrà essere modificato prima di generare un file di codice finale.  
   
      Si tratta di una funzionalità avanzata.  
   
 ### <a name="3-refine-the-code-file-to-reflect-the-needs-of-your-application"></a>3. Perfezionare il file di codice in modo che rifletta le esigenze dell'applicazione.  
- A questo scopo, è possibile usare [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] o l'editor di codice.  
+ A tale scopo, è possibile utilizzare la finestra di Progettazione relazionale oggetti o l'editor di codice.  
   
 ## <a name="using-the-object-model"></a>Uso del modello a oggetti  
  Nell'immagine seguente viene illustrata la relazione tra lo sviluppatore e i dati in un scenario a due livelli. Per altri scenari, vedere [a più livelli e le applicazioni Remote con LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md).  

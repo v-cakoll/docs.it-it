@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8f2ada73686dfbe5629e21cfc6468becbd4ccc5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58293929b576493d3751f9ce30ba00cec92e180c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597362"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758169"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>Metodo ICorProfilerCallback4::ReJITCompilationStarted
 Notifica al profiler che il compilatore JIT just-in-time è stato avviato ricompilare una funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT ReJITCompilationStarted(   
     [in] FunctionID functionId,  
     [in] ReJITID    rejitId,  

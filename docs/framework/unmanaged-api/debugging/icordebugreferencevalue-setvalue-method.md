@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59ef7bf8f17e79c9ae7b80dd314a5afce7fa9584
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 804aa4a6508713b2d6f2d154fc47e09638994468
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782930"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747358"
 ---
 # <a name="icordebugreferencevaluesetvalue-method"></a>Metodo ICorDebugReferenceValue::SetValue
 Imposta l'indirizzo di memoria specificato. Vale a dire, questo metodo imposta ICorDebugReferenceValue in modo che punti a un oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT SetValue (  
     [in] CORDB_ADDRESS    value  
 );  

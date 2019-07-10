@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d69ffa05cff534609f8f6b3addc657664b09decb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 10d0fc0c65d6c479ee4bf7bf527ee33615d53084
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624483"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761175"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>Metodo ICorDebugManagedCallback2::CreateConnection
 Notifica al debugger che è stata creata una nuova connessione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT CreateConnection (  
     [in] ICorDebugProcess     *pProcess,  
     [in] CONNID               dwConnectionId,  

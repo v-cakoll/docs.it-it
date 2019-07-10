@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01c0f9ca0299e817618d93133c0eaca9fc63788e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 705771bb04088edf8276bf36432ef88ff288ba34
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767507"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751737"
 ---
 # <a name="strongnamesignaturesize-function"></a>Funzione StrongNameSignatureSize
 Restituisce le dimensioni della firma con nome sicuro. `StrongNameSignatureSize` è in genere utilizzata dai compilatori per determinare la quantità di spazio da riservare nel file durante la creazione di un assembly con firma ritardata.  
@@ -30,7 +30,7 @@ Restituisce le dimensioni della firma con nome sicuro. `StrongNameSignatureSize`
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 BOOLEAN StrongNameSignatureSize (   
     [in]  BYTE   *pbPublicKeyBlob,  
     [in]  ULONG  cbPublicKeyBlob,   

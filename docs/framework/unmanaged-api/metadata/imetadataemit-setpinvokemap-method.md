@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b838a83a160707e546b05ef334eb17d0c6e6cc27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a6fd0a9ae798fa5071d9b4b9fac1f8b3c759a20
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049999"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750879"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>Metodo IMetaDataEmit::SetPinvokeMap
 Imposta o modifica le funzionalità di firma del metodo PInvoke, come definito da una chiamata precedente a [DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT SetPinvokeMap (   
     [in]  mdToken      tk,   
     [in]  DWORD        dwMappingFlags,  

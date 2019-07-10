@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8952b34781045089945e7e72e179e88300b5fdd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd707685dfff31644565db18e72dc153d25781f4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942532"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761082"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>Metodo ICorDebugManagedCallback2::Exception
 Notifica al debugger che una ricerca di un gestore di eccezioni è stato avviato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT Exception (  
     [in] ICorDebugAppDomain   *pAppDomain,  
     [in] ICorDebugThread      *pThread,  

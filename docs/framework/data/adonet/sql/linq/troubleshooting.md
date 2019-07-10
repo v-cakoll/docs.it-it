@@ -2,12 +2,12 @@
 title: Risoluzione dei problemi
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: c09871abcdfb9243b5170386ffe79012c9c3f71d
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 697432dce5f7698a8b4eabde3586bb4f77fd62de
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661857"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742754"
 ---
 # <a name="troubleshooting"></a>Risoluzione dei problemi
 Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile incontrare nelle applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e vengono forniti suggerimenti per evitare o altrimenti ridurre l'effetto di questi problemi.  
@@ -26,7 +26,7 @@ Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile 
  Per specificare un nome file di input, aggiungere il nome nella riga di comando come file di input. Non è possibile includere il nome file nella stringa di connessione mediante l'opzione **/conn** . Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="class-library-projects"></a>Progetti di librerie di classi  
- La [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] crea una stringa di connessione nel file `app.config` del progetto. Nei progetti di librerie di classi il file `app.config` non viene usato. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa la stringa di connessione fornita nei file della fase di progettazione. La modifica del valore in `app.config` non comporta la modifica del database al quale si connette l'applicazione.  
+ Object Relational Designer crea una stringa di connessione nel `app.config` file del progetto. Nei progetti di librerie di classi il file `app.config` non viene usato. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa la stringa di connessione fornita nei file della fase di progettazione. La modifica del valore in `app.config` non comporta la modifica del database al quale si connette l'applicazione.  
   
 ## <a name="cascade-delete"></a>Eliminazione a catena  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta o non riconosce operazioni di eliminazione a catena. Se si desidera eliminare una riga in una tabella contenente vincoli, è necessario effettuare una delle operazioni seguenti:  

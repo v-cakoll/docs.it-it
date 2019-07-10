@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 328462343669b3ea6bed2d86514ea348f6ae2b1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f5c28b7513ccfd0f1a645ed1cd6a3207a7cf0f4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789534"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749800"
 ---
 # <a name="ihosttaskmanagerbegindelayabort-method"></a>Metodo IHostTaskManager::BeginDelayAbort
 Notifica all'host che il codice gestito sta entrando in un periodo in cui l'attività corrente non deve essere interrotta.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT BeginDelayAbort ();  
 ```  
   
