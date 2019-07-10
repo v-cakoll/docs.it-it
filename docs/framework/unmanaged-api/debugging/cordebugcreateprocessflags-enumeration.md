@@ -16,39 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae3ba480e208762f5a80f9f1b78dd008f02b6df4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0dfc7da632a5e56f0f6ab6ed55d1e722f49c7e88
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609113"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740289"
 ---
-# <a name="cordebugcreateprocessflags-enumeration"></a><span data-ttu-id="5262d-102">Enumerazione CorDebugCreateProcessFlags</span><span class="sxs-lookup"><span data-stu-id="5262d-102">CorDebugCreateProcessFlags Enumeration</span></span>
-<span data-ttu-id="5262d-103">Fornisce opzioni aggiuntive di debug che possono essere utilizzate in una chiamata ai [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) (metodo).</span><span class="sxs-lookup"><span data-stu-id="5262d-103">Provides additional debugging options that can be used in a call to the [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) method.</span></span>  
+# <a name="cordebugcreateprocessflags-enumeration"></a><span data-ttu-id="e8425-102">Enumerazione CorDebugCreateProcessFlags</span><span class="sxs-lookup"><span data-stu-id="e8425-102">CorDebugCreateProcessFlags Enumeration</span></span>
+<span data-ttu-id="e8425-103">Fornisce opzioni aggiuntive di debug che possono essere utilizzate in una chiamata ai [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) (metodo).</span><span class="sxs-lookup"><span data-stu-id="e8425-103">Provides additional debugging options that can be used in a call to the [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5262d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5262d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e8425-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e8425-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorDebugCreateProcessFlags {  
     DEBUG_NO_SPECIAL_OPTIONS    = 0x0000  
 } CorDebugCreateProcessFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5262d-105">Membri</span><span class="sxs-lookup"><span data-stu-id="5262d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e8425-105">Membri</span><span class="sxs-lookup"><span data-stu-id="e8425-105">Members</span></span>  
   
-|<span data-ttu-id="5262d-106">Member</span><span class="sxs-lookup"><span data-stu-id="5262d-106">Member</span></span>|<span data-ttu-id="5262d-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5262d-107">Description</span></span>|  
+|<span data-ttu-id="e8425-106">Member</span><span class="sxs-lookup"><span data-stu-id="e8425-106">Member</span></span>|<span data-ttu-id="e8425-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e8425-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_NO_SPECIAL_OPTIONS`|<span data-ttu-id="5262d-108">È impostata alcuna opzione speciale.</span><span class="sxs-lookup"><span data-stu-id="5262d-108">No special options are set.</span></span>|  
+|`DEBUG_NO_SPECIAL_OPTIONS`|<span data-ttu-id="e8425-108">È impostata alcuna opzione speciale.</span><span class="sxs-lookup"><span data-stu-id="e8425-108">No special options are set.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5262d-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5262d-109">Requirements</span></span>  
- <span data-ttu-id="5262d-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5262d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e8425-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e8425-109">Requirements</span></span>  
+ <span data-ttu-id="e8425-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e8425-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5262d-111">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5262d-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e8425-111">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e8425-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5262d-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5262d-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e8425-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e8425-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5262d-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5262d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e8425-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e8425-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5262d-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5262d-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8425-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e8425-114">See also</span></span>
 
-- [<span data-ttu-id="5262d-115">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="5262d-115">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="e8425-115">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="e8425-115">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

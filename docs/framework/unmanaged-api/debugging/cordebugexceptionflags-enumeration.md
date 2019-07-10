@@ -16,44 +16,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c7b9b25673685dde8b75702c80f525515917ae1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 352a45a33a109570f100e91a24cd44dc4f6780e7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915253"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740144"
 ---
-# <a name="cordebugexceptionflags-enumeration"></a><span data-ttu-id="a5d2c-102">Enumerazione CorDebugExceptionFlags</span><span class="sxs-lookup"><span data-stu-id="a5d2c-102">CorDebugExceptionFlags Enumeration</span></span>
-<span data-ttu-id="a5d2c-103">Offre informazioni aggiuntive su un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="a5d2c-103">Provides additional information about an exception.</span></span>  
+# <a name="cordebugexceptionflags-enumeration"></a><span data-ttu-id="b5ad8-102">Enumerazione CorDebugExceptionFlags</span><span class="sxs-lookup"><span data-stu-id="b5ad8-102">CorDebugExceptionFlags Enumeration</span></span>
+<span data-ttu-id="b5ad8-103">Offre informazioni aggiuntive su un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="b5ad8-103">Provides additional information about an exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5d2c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a5d2c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b5ad8-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b5ad8-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorDebugExceptionFlags {  
     DEBUG_EXCEPTION_NONE = 0,  
     DEBUG_EXCEPTION_CAN_BE_INTERCEPTED = 0x0001  
 } CorDebugExceptionFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a5d2c-105">Membri</span><span class="sxs-lookup"><span data-stu-id="a5d2c-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b5ad8-105">Membri</span><span class="sxs-lookup"><span data-stu-id="b5ad8-105">Members</span></span>  
   
-|<span data-ttu-id="a5d2c-106">Member</span><span class="sxs-lookup"><span data-stu-id="a5d2c-106">Member</span></span>|<span data-ttu-id="a5d2c-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a5d2c-107">Description</span></span>|  
+|<span data-ttu-id="b5ad8-106">Member</span><span class="sxs-lookup"><span data-stu-id="b5ad8-106">Member</span></span>|<span data-ttu-id="b5ad8-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b5ad8-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_NONE`|<span data-ttu-id="a5d2c-108">Nessuna eccezione.</span><span class="sxs-lookup"><span data-stu-id="a5d2c-108">There is no exception.</span></span>|  
-|`DEBUG_EXCEPTION_CAN_BE_INTERCEPTED`|<span data-ttu-id="a5d2c-109">L'eccezione è intercettabile.</span><span class="sxs-lookup"><span data-stu-id="a5d2c-109">The exception is interceptable.</span></span><br /><br /> <span data-ttu-id="a5d2c-110">È possibile che la temporizzazione dell'eccezione non consenta al debugger di intercettarla.</span><span class="sxs-lookup"><span data-stu-id="a5d2c-110">The timing of the exception may still be such that the debugger cannot intercept it.</span></span> <span data-ttu-id="a5d2c-111">Ad esempio, in assenza di codice gestito sotto il callback corrente o se l'evento di eccezione è stato generato da un allegato JIT, non è possibile intercettare l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="a5d2c-111">For example, if there is no managed code below the current callback or the exception event resulted from a just-in-time (JIT) attachment, the exception cannot be intercepted.</span></span>|  
+|`DEBUG_EXCEPTION_NONE`|<span data-ttu-id="b5ad8-108">Nessuna eccezione.</span><span class="sxs-lookup"><span data-stu-id="b5ad8-108">There is no exception.</span></span>|  
+|`DEBUG_EXCEPTION_CAN_BE_INTERCEPTED`|<span data-ttu-id="b5ad8-109">L'eccezione è intercettabile.</span><span class="sxs-lookup"><span data-stu-id="b5ad8-109">The exception is interceptable.</span></span><br /><br /> <span data-ttu-id="b5ad8-110">È possibile che la temporizzazione dell'eccezione non consenta al debugger di intercettarla.</span><span class="sxs-lookup"><span data-stu-id="b5ad8-110">The timing of the exception may still be such that the debugger cannot intercept it.</span></span> <span data-ttu-id="b5ad8-111">Ad esempio, in assenza di codice gestito sotto il callback corrente o se l'evento di eccezione è stato generato da un allegato JIT, non è possibile intercettare l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="b5ad8-111">For example, if there is no managed code below the current callback or the exception event resulted from a just-in-time (JIT) attachment, the exception cannot be intercepted.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a5d2c-112">Note</span><span class="sxs-lookup"><span data-stu-id="a5d2c-112">Remarks</span></span>  
- <span data-ttu-id="a5d2c-113">È possibile che nelle versioni successive vengano aggiunti nuovi valori a questa enumerazione, quindi è necessario predisporre codice che usa `CorDebugExceptionFlags` per i valori non previsti.</span><span class="sxs-lookup"><span data-stu-id="a5d2c-113">New values may be added to this enumeration in later versions, so you should prepare code that uses `CorDebugExceptionFlags` for unexpected values.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b5ad8-112">Note</span><span class="sxs-lookup"><span data-stu-id="b5ad8-112">Remarks</span></span>  
+ <span data-ttu-id="b5ad8-113">È possibile che nelle versioni successive vengano aggiunti nuovi valori a questa enumerazione, quindi è necessario predisporre codice che usa `CorDebugExceptionFlags` per i valori non previsti.</span><span class="sxs-lookup"><span data-stu-id="b5ad8-113">New values may be added to this enumeration in later versions, so you should prepare code that uses `CorDebugExceptionFlags` for unexpected values.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a5d2c-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a5d2c-114">Requirements</span></span>  
- <span data-ttu-id="a5d2c-115">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a5d2c-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b5ad8-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b5ad8-114">Requirements</span></span>  
+ <span data-ttu-id="b5ad8-115">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b5ad8-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a5d2c-116">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a5d2c-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b5ad8-116">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b5ad8-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a5d2c-117">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a5d2c-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b5ad8-117">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b5ad8-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a5d2c-118">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5d2c-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b5ad8-118">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5ad8-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a5d2c-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a5d2c-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b5ad8-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b5ad8-119">See also</span></span>
 
-- [<span data-ttu-id="a5d2c-120">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="a5d2c-120">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="b5ad8-120">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="b5ad8-120">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

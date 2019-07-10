@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b3cf91ad4e048ddfccb4086f36923f33d754ac0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcf714cb0c1c1dd59ae2ec56279870c0bb3e1c4a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949123"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741716"
 ---
-# <a name="importfileex-method"></a><span data-ttu-id="d8968-102">Metodo ImportFileEx</span><span class="sxs-lookup"><span data-stu-id="d8968-102">ImportFileEx Method</span></span>
-<span data-ttu-id="d8968-103">Importazioni indicato assembly o un modulo non associato.</span><span class="sxs-lookup"><span data-stu-id="d8968-103">Imports indicated assembly or unbound module.</span></span>  
+# <a name="importfileex-method"></a><span data-ttu-id="6199e-102">Metodo ImportFileEx</span><span class="sxs-lookup"><span data-stu-id="6199e-102">ImportFileEx Method</span></span>
+<span data-ttu-id="6199e-103">Importazioni indicato assembly o un modulo non associato.</span><span class="sxs-lookup"><span data-stu-id="6199e-103">Imports indicated assembly or unbound module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d8968-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d8968-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6199e-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6199e-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT ImportFileEx(  
     LPCWSTR pszFilename,  
     LPCWSTR pszTargetName,  
@@ -40,36 +40,36 @@ HRESULT ImportFileEx(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d8968-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d8968-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6199e-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="6199e-105">Parameters</span></span>  
  `pszFilename`  
- <span data-ttu-id="d8968-106">Nome completo del file da cui importare.</span><span class="sxs-lookup"><span data-stu-id="d8968-106">Fully qualified name of file from which to import.</span></span>  
+ <span data-ttu-id="6199e-106">Nome completo del file da cui importare.</span><span class="sxs-lookup"><span data-stu-id="6199e-106">Fully qualified name of file from which to import.</span></span>  
   
  `pszTargetName`  
- <span data-ttu-id="d8968-107">Nome facoltativo del file di destinazione.</span><span class="sxs-lookup"><span data-stu-id="d8968-107">Optional name of target file.</span></span>  
+ <span data-ttu-id="6199e-107">Nome facoltativo del file di destinazione.</span><span class="sxs-lookup"><span data-stu-id="6199e-107">Optional name of target file.</span></span>  
   
  `fSmartImport`  
- <span data-ttu-id="d8968-108">Se TRUE, viene usato ImportTypes, in caso contrario, l'importazione deve essere eseguita manualmente.</span><span class="sxs-lookup"><span data-stu-id="d8968-108">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
+ <span data-ttu-id="6199e-108">Se TRUE, viene usato ImportTypes, in caso contrario, l'importazione deve essere eseguita manualmente.</span><span class="sxs-lookup"><span data-stu-id="6199e-108">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
   
  `dwOpenFlags`  
- <span data-ttu-id="d8968-109">Flag da passare insieme alla [metodo OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).</span><span class="sxs-lookup"><span data-stu-id="d8968-109">Flags to be passed along to [OpenScope Method](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).</span></span>  
+ <span data-ttu-id="6199e-109">Flag da passare insieme alla [metodo OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).</span><span class="sxs-lookup"><span data-stu-id="6199e-109">Flags to be passed along to [OpenScope Method](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).</span></span>  
   
  `pImportToken`  
- <span data-ttu-id="d8968-110">Riceve l'ID del file da importare.</span><span class="sxs-lookup"><span data-stu-id="d8968-110">Receives ID of the file being imported.</span></span>  
+ <span data-ttu-id="6199e-110">Riceve l'ID del file da importare.</span><span class="sxs-lookup"><span data-stu-id="6199e-110">Receives ID of the file being imported.</span></span>  
   
  `ppAssemblyScope`  
- <span data-ttu-id="d8968-111">Ambito di importazione dell'assembly riceve [interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfaccia.</span><span class="sxs-lookup"><span data-stu-id="d8968-111">Receives assembly import scope [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span> <span data-ttu-id="d8968-112">È impostato su NULL se il file non è un assembly.</span><span class="sxs-lookup"><span data-stu-id="d8968-112">Is set to NULL if file is not an assembly.</span></span>  
+ <span data-ttu-id="6199e-111">Ambito di importazione dell'assembly riceve [interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfaccia.</span><span class="sxs-lookup"><span data-stu-id="6199e-111">Receives assembly import scope [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span> <span data-ttu-id="6199e-112">È impostato su NULL se il file non è un assembly.</span><span class="sxs-lookup"><span data-stu-id="6199e-112">Is set to NULL if file is not an assembly.</span></span>  
   
  `pdwCountOfScopes`  
- <span data-ttu-id="d8968-113">Riceve il numero di file importati e/o gli ambiti.</span><span class="sxs-lookup"><span data-stu-id="d8968-113">Receives count of imported files and/or scopes.</span></span>  
+ <span data-ttu-id="6199e-113">Riceve il numero di file importati e/o gli ambiti.</span><span class="sxs-lookup"><span data-stu-id="6199e-113">Receives count of imported files and/or scopes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d8968-114">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="d8968-114">Return Value</span></span>  
- <span data-ttu-id="d8968-115">Restituisce S_OK se il metodo ha esito positivo.</span><span class="sxs-lookup"><span data-stu-id="d8968-115">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6199e-114">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="6199e-114">Return Value</span></span>  
+ <span data-ttu-id="6199e-115">Restituisce S_OK se il metodo ha esito positivo.</span><span class="sxs-lookup"><span data-stu-id="6199e-115">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d8968-116">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d8968-116">Requirements</span></span>  
- <span data-ttu-id="d8968-117">Richiede alink.h.</span><span class="sxs-lookup"><span data-stu-id="d8968-117">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6199e-116">Requisiti</span><span class="sxs-lookup"><span data-stu-id="6199e-116">Requirements</span></span>  
+ <span data-ttu-id="6199e-117">Richiede alink.h.</span><span class="sxs-lookup"><span data-stu-id="6199e-117">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8968-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d8968-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6199e-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6199e-118">See also</span></span>
 
-- [<span data-ttu-id="d8968-119">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="d8968-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="d8968-120">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="d8968-120">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="d8968-121">Alink (API)</span><span class="sxs-lookup"><span data-stu-id="d8968-121">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="6199e-119">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="6199e-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="6199e-120">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="6199e-120">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="6199e-121">Alink (API)</span><span class="sxs-lookup"><span data-stu-id="6199e-121">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
