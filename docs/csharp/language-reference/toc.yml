@@ -19,16 +19,13 @@
                 - name: Tipi numerici integrali
                   displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
                   href: builtin-types/integral-numeric-types.md
+                - name: Tipi numerici a virgola mobile
+                  displayName: 'float, decimal, double, rational, real'
+                  href: builtin-types/floating-point-numeric-types.md
                 - name: char
                   href: keywords/char.md
-                - name: decimal
-                  href: keywords/decimal.md
-                - name: double
-                  href: keywords/double.md
                 - name: enum
                   href: keywords/enum.md
-                - name: float
-                  href: keywords/float.md
                 - name: struct
                   href: keywords/struct.md
             - name: Tipi riferimento
@@ -55,8 +52,6 @@
               items:
                 - name: Tabella dei tipi incorporati
                   href: keywords/built-in-types-table.md
-                - name: Tabella dei tipi a virgola mobile
-                  href: keywords/floating-point-types-table.md
                 - name: Tabella dei tipi valore
                   href: keywords/value-types-table.md
                 - name: Tabella dei valori predefiniti
