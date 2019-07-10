@@ -2,18 +2,18 @@
 title: Più livelli di LINQ to SQL con Servizi Web
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fafaa60dd75def98b486e18faa5bd3ecd1d6315
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033535"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743045"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>Più livelli di LINQ to SQL con Servizi Web
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è progettato appositamente per essere utilizzati nel livello intermedio in un livello di accesso a regime di controllo dei dati (DAL), ad esempio un servizio Web. Se il livello di presentazione è una pagina Web ASP.NET, verrà usato il controllo server Web <xref:System.Web.UI.WebControls.LinqDataSource> per gestire il trasferimento dei dati tra l'interfaccia utente e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nel livello intermedio. Se il livello di presentazione non è una pagina ASP.NET, sarà necessario eseguire operazioni aggiuntive nel livello intermedio e nel livello di presentazione in modo da gestire la serializzazione e deserializzazione dei dati.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>Configurazione di LINQ to SQL nel livello intermedio  
- In un servizio Web o in un'applicazione a più livelli, il livello intermedio contiene il contesto dati e le classi di entità. È possibile creare manualmente queste classi oppure usando SQLMetal.exe o la [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] come descritto in un altro punto della documentazione. In fase di progettazione è possibile rendere le classi di entità serializzabili. Per altre informazioni, vedere [Procedura: Rendere serializzabili le entità](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Un'altra opzione è creare un set separato di classi che incapsulano i dati da serializzare e quindi proiettare in tali tipi serializzabili quando si restituiscono i dati nelle query [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
+ In un servizio Web o in un'applicazione a più livelli, il livello intermedio contiene il contesto dati e le classi di entità. È possibile creare queste classi, manualmente o tramite SQLMetal.exe o Progettazione relazionale oggetti, come descritto in un' posizione nella documentazione. In fase di progettazione è possibile rendere le classi di entità serializzabili. Per altre informazioni, vedere [Procedura: Rendere serializzabili le entità](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Un'altra opzione è creare un set separato di classi che incapsulano i dati da serializzare e quindi proiettare in tali tipi serializzabili quando si restituiscono i dati nelle query [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
   
  Definire quindi l'interfaccia con i metodi che i client chiameranno per recuperare, inserire e aggiornare i dati. I metodi di interfaccia eseguono il wrapping delle query [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. È possibile usare qualsiasi tipo di meccanismo di serializzazione per gestire le chiamate al metodo remote e la serializzazione dei dati. L'unico requisito è che se si hanno relazioni cicliche o bidirezionali nel modello a oggetti, come ad esempio tra Customers e Orders nel modello a oggetti standard Northwind, è necessario usare un serializzatore che lo supporti. Windows Communication Foundation (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> relazioni bidirezionali supporta, ma la classe XmlSerializer utilizzata con servizi Web non WCF non esiste. Se si sceglie di utilizzare XmlSerializer, sarà necessario accertarsi che il modello a oggetti non contenga relazioni cicliche.  
   

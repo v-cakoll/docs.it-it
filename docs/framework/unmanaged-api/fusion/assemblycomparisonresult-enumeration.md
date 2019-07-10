@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03b8ecc996e14263510e2d0a658cec020696c263
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6c417eec9583ff069c9d61fa31e9c14f3931130
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914500"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778517"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>Enumerazione AssemblyComparisonResult
 Indica l'equivalenza dei due identità di assembly, come determinato dal [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) (funzione).  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef enum _tagAssemblyComparisonResult {  
     ACR_Unknown,   
     ACR_EquivalentFullMatch,  

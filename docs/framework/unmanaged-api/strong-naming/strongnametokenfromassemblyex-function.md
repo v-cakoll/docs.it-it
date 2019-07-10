@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95f00fea637b5263699779b7abe9863d266d7f19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14af44901e7c65933800e41328e95602ce715282
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786191"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783173"
 ---
 # <a name="strongnametokenfromassemblyex-function"></a>Funzione StrongNameTokenFromAssemblyEx
 Crea un token con nome sicuro dal file di assembly specificato e restituisce la chiave pubblica che rappresenta il token.  
@@ -30,7 +30,7 @@ Crea un token con nome sicuro dal file di assembly specificato e restituisce la 
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 BOOLEAN StrongNameTokenFromAssemblyEx (  
     [in]  LPCWSTR   wszFilePath,  
     [out] BYTE      **ppbStrongNameToken,  

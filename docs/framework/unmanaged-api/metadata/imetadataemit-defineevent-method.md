@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48055103b49b4c61bb7561f2d4aa6c8daae07ae2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba35cd678d88389854ca2e866020ea3a9364c923
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044213"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777672"
 ---
 # <a name="imetadataemitdefineevent-method"></a>Metodo IMetaDataEmit::DefineEvent
 Crea una definizione per un evento con la firma dei metadati specificati e ottiene un token di definizione di tale evento.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT DefineEvent (   
     [in]  mdTypeDef    td,   
     [in]  LPCWSTR      szEvent,   

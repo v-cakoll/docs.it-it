@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90af015de4428f75330de89978a7fc0a4b26750b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3eed83cbc983d59e99b3a42e667e9e126316c263
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700748"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780103"
 ---
 # <a name="icorruntimehostlocksheldbylogicalthread-method"></a>Metodo ICorRuntimeHost::LocksHeldByLogicalThread
 Recupera il numero di blocchi che contiene il thread corrente.  
@@ -31,7 +31,7 @@ Recupera il numero di blocchi che contiene il thread corrente.
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT LocksHeldByLogicalThread(  
     [out] DWORD *pCount  
 );  

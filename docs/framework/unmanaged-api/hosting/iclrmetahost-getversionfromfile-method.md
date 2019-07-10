@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a6c7fd48269a3e8291a548b3e13efe5c8e70652
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b17b36f66a9b8b78b16057ec37d3ee5f484f7ae2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919412"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779757"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>Metodo ICLRMetaHost::GetVersionFromFile
 Ottiene .NET Framework versione di compilazione originale un assembly (archiviato nei metadati), dato il percorso di file. Questo metodo sostituisce le [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) (funzione).  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetVersionFromFile (  
     [in] LPCWSTR pwzFilePath,  
     [out, size_is(*pcchBuffer)] LPWSTR pwzBuffer,  
@@ -42,7 +42,7 @@ HRESULT GetVersionFromFile (
  [in] Il percorso del file completo dell'assembly.  
   
  `pwzbuffer`  
- [out] La versione di compilazione di .NET Framework archiviata nei metadati, nel formato "v*un'*. *B*[. *X*] ". *Oggetto*, *B*, e *X* sono numeri decimali che corrispondono alla versione principale, la versione secondaria e il numero di build. La lunghezza di questa stringa è limitata a MAX_PATH.  
+ [out] La versione di compilazione di .NET Framework archiviata nei metadati, nel formato "v*un'* . *B*[. *X*] ". *Oggetto*, *B*, e *X* sono numeri decimali che corrispondono alla versione principale, la versione secondaria e il numero di build. La lunghezza di questa stringa è limitata a MAX_PATH.  
   
 > [!NOTE]
 >  Questo output corrisponde al nome di directory per la versione di .NET Framework, così come appare sotto C:\Windows\Microsoft.NET\Framework.  

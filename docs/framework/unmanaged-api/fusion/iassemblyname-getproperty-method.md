@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9af0773c2ef066c103f823e4d28c0fd6e9eadc24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5ddc2646b560814adef01f2508f3792abe13c1d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697381"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744532"
 ---
 # <a name="iassemblynamegetproperty-method"></a>Metodo IAssemblyName::GetProperty
 Ottiene un puntatore per la proprietà fa riferimento l'identificatore della proprietà specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetProperty (  
     [in]      DWORD    PropertyId,  
     [out]     LPVOID   pvProperty,  

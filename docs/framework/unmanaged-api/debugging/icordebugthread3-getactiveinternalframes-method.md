@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e264f2361c739536d15fbf31d366db74e107bac2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58aaf0445fe42d083c12541056cb362f9a994944
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993889"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765216"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>Metodo ICorDebugThread3::GetActiveInternalFrames
 Restituisce una matrice di frame interni ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) oggetti) nello stack.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp 
 HRESULT GetActiveInternalFrames  
       (  
       [in] ULONG32 cInternalFrames,  

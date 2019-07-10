@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: da37dc2ff08f127e17cd4e6f7cbeab88f2c8d5e9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 788388b93a00cf5393174d35b8a160b4991da3bc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583455"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743722"
 ---
 # <a name="working-with-data-definition-language"></a>Utilizzo di Data Definition Language
 A partire da .NET Framework versione 4, il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supporta il linguaggio di definizione dei dati (DDL). Ciò consente di creare o eliminare un'istanza di database in base alla stringa di connessione e ai metadati del modello di archiviazione (SSDL).  
@@ -34,7 +34,7 @@ A partire da .NET Framework versione 4, il [!INCLUDE[adonet_ef](../../../../../i
   
 ## <a name="procedures"></a>Procedure  
   
-#### <a name="to-define-a-database-based-on-the-existing-model"></a>Per definire un database in base al modello esistente  
+### <a name="to-define-a-database-based-on-the-existing-model"></a>Per definire un database in base al modello esistente  
   
 1. Creare un'applicazione console.  
   

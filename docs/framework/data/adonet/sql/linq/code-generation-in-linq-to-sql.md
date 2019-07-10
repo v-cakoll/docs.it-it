@@ -2,15 +2,15 @@
 title: Generazione di codice in LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbc70669b9c03b59468f4f6a67c1f73432883193
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903279"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743606"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Generazione di codice in LINQ to SQL
-È possibile generare il codice per rappresentare un database usando la [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o lo strumento della riga di comando SQLMetal. In entrambi i casi, si verifica la generazione di codice end-to-end in tre fasi:  
+È possibile generare il codice per rappresentare un database utilizzando lo strumento da riga di comando SQLMetal o Progettazione relazionale oggetti. In entrambi i casi, si verifica la generazione di codice end-to-end in tre fasi:  
   
 1. Il *estrattore DBML* estrae le informazioni sullo schema dal database e riassembla le informazioni in un file DBML in formato XML.  
   
@@ -18,7 +18,7 @@ ms.locfileid: "61903279"
   
 3. Se non sono presenti errori di convalida, il file viene passato al generatore di codice.  
   
- Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Gli sviluppatori che usano Visual Studio consente inoltre di [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per generare il codice. Visualizzare [strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Gli sviluppatori che usano Visual Studio possono anche usare Progettazione relazionale oggetti per generare il codice. Visualizzare [strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="dbml-extractor"></a>Estrattore DBML  
  L'estrattore DBML è un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] componente che accetta i metadati del database come input e produce un file DBML come output.  

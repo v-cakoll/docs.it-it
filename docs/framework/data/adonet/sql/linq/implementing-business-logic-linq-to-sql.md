@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 3dcc6f763acfff076bb03076a17e3a8f8916267c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9456340834c06e87f977cd784a37f7436523d29e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033566"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743146"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementazione della logica di business (LINQ to SQL)
 Il termine "regola business" in questo argomento si riferisce a qualsiasi regola personalizzata o test di convalida applicato ai dati prima che vengano inseriti, aggiornati o eliminati dal database. La regola business viene talvolta definita anche "regola dominio". Nelle applicazioni a più livelli viene in genere progettata come livello logico in modo da essere modificata indipendentemente dal livello di presentazione o dal livello di accesso ai dati. La logica di business può essere richiamata dal livello di accesso ai dati prima o dopo l'aggiornamento, l'inserimento o l'eliminazione dei dati dal database.  
@@ -18,14 +18,14 @@ Il termine "regola business" in questo argomento si riferisce a qualsiasi regola
  La regola business è semplice quanto la convalida di uno schema per assicurarsi che il tipo del campo sia compatibile con il tipo della colonna di tabella. Oppure può essere costituita da un set di oggetti che interagiscono in modalità arbitrariamente complesse. Le regole possono essere implementate come stored procedure nel database o come oggetti in memoria. Tuttavia, viene implementata la logica di business, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consente l'uso delle classi parziali e i metodi parziali per separare la logica di business dal codice di accesso ai dati.  
   
 ## <a name="how-linq-to-sql-invokes-your-business-logic"></a>Richiamo della regola business da LINQ to SQL  
- Quando in fase di progettazione si genera una classe di entità manualmente oppure usando la [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o SQLMetal, tale processo viene definito classe parziale. Ciò significa che, in un file di codice separato, è possibile definire un'altra parte della classe di entità contenente la regola business personalizzata. In fase di compilazione le due parti vengono unite in un'unica classe. È tuttavia possibile rigenerare le classi di entità utilizzando la [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o SQLMetal, senza modificare la parte personalizzata della classe.  
+ Quando si genera una classe di entità in fase di progettazione, manualmente o tramite la Progettazione relazionale oggetti o SQLMetal, viene definito come classe parziale. Ciò significa che, in un file di codice separato, è possibile definire un'altra parte della classe di entità contenente la regola business personalizzata. In fase di compilazione le due parti vengono unite in un'unica classe. Tuttavia, se è necessario rigenerare le classi di entità con la Progettazione relazionale oggetti o SQLMetal, è possibile farlo e non verrà modificata la parte personalizzata della classe.  
   
  Le classi parziali che definiscono le entità e <xref:System.Data.Linq.DataContext> contengono metodi parziali. Si tratta di punti di estensibilità che è possibile usare per applicare la regola business prima e dopo un aggiornamento, inserimento o eliminazione di un'entità o di una proprietà dell'entità. È possibile considerare i metodi parziali come eventi in fase di compilazione. Il generatore di codice definisce una firma del metodo e chiama i metodi nelle funzioni di accesso alle proprietà get e set nonché il costruttore `DataContext`, e in alcuni casi automaticamente quando viene chiamato <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Tuttavia, se non si implementa un particolare metodo parziale, tutti i riferimenti relativi e la definizione verranno rimossi in fase di compilazione.  
   
  Nella definizione di implementazione scritta nel file di codice separato, è possibile eseguire la regola personalizzata necessaria. È possibile usare la classe parziale personalizzata come livello del dominio oppure è possibile chiamare dalla definizione di implementazione del metodo parziale in uno o più oggetti separati. In entrambi i casi, la regola business viene nettamente separata dal codice di accesso ai dati e dal codice del livello di presentazione.  
   
 ## <a name="a-closer-look-at-the-extensibility-points"></a>Informazioni dettagliate sui punti di estensibilità  
- Nell'esempio seguente viene illustrata parte del codice generato per il [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per il `DataContext` classe che dispone di due tabelle: `Customers` e `Orders`. Tenere presente che i metodi di inserimento, aggiornamento ed eliminazione vengono definiti per ogni tabella della classe.  
+ Nell'esempio seguente viene illustrata parte del codice generato da Progettazione relazionale oggetti per il `DataContext` classe che dispone di due tabelle: `Customers` e `Orders`. Tenere presente che i metodi di inserimento, aggiornamento ed eliminazione vengono definiti per ogni tabella della classe.  
   
 ```vb  
 Partial Public Class Northwnd  

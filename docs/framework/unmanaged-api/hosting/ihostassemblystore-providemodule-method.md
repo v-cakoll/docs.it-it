@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e07e2c3f2c6000f5a081b13316c269f322b1ef8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9290fd70b17b5a6456d85cb4b037ebbc62e028f8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599347"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763981"
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>Metodo IHostAssemblyStore::ProvideModule
 Risolve un file di risorse modulo all'interno di un assembly o un collegato (ma non incorporato).  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT ProvideModule (  
     [in]  ModuleBindInfo *pBindInfo,  
     [out] DWORD          *pdwModuleId,  
