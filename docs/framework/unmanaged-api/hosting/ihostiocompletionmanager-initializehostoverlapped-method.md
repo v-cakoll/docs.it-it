@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1dea19a13cd2c741a24695b293ae1c8621ad5688
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d27799e427efd3659dc2864e7d1e8e2061c5c19
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796799"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780771"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>Metodo IHostIoCompletionManager::InitializeHostOverlapped
 Fornisce l'host con un'opportunità per inizializzare dati personalizzati da aggiungere a un Win32 `OVERLAPPED` struttura utilizzata per le richieste dei / o asincrone.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT InitializeHostOverlapped (  
     [in] void* pvOverlapped  
 );  

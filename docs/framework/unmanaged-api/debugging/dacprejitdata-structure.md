@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: a2850add9acb2f7c5297ac6956e349c9277be291
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77ef2c65157df4a033700bb8d0295875ede46554
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965931"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739104"
 ---
 # <a name="dacprejitdata-structure"></a>DacpReJitData Structure
 
@@ -30,7 +30,7 @@ Definisce le informazioni di base per un determinato metodo instrumentato del pr
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 struct MSLAYOUT DacpReJitData
 {
     enum Flags

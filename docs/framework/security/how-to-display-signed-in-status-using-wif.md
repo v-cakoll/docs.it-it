@@ -3,12 +3,12 @@ title: 'Procedura: Visualizzare lo stato di accesso effettuato con WIF'
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: a41f24faa5b535c02feef99ae0d592bd7d13db4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d81bd2023886799f939fc9851db516a00aa92df
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626115"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742445"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Procedura: Visualizzare lo stato di accesso effettuato con WIF
 ## <a name="applies-to"></a>Si applica a  
@@ -54,7 +54,7 @@ ms.locfileid: "64626115"
 ## <a name="step-1--install-the-identity-and-access-extension"></a>Passaggio 1: installare l'estensione Identity and Access  
  Questo passaggio descrive come configurare l'estensione Identity and Access in Visual Studio 2012. Questa estensione consente di automatizzare il processo di configurazione dell'applicazione per comunicare con gli endpoint del servizio token di sicurezza.  
   
-#### <a name="to-install-the-identity-and-access-extension"></a>Per installare l'estensione Identity and Access  
+### <a name="to-install-the-identity-and-access-extension"></a>Per installare l'estensione Identity and Access  
   
 1. Avviare Visual Studio come amministratore in modalità con privilegi elevati.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "64626115"
 ## <a name="step-2--create-a-relying-party-aspnet-application"></a>Passaggio 2: creare un'applicazione ASP.NET relying party  
  Questo passaggio descrive come creare un'applicazione Web Form ASP.NET relying party che verrà integrata con WIF.  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>Per creare un'applicazione ASP.NET semplice  
+### <a name="to-create-a-simple-aspnet-application"></a>Per creare un'applicazione ASP.NET semplice  
   
 1. Avviare Visual Studio e fare clic su **File**, **Nuovo** e **Progetto**.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "64626115"
 ## <a name="step-3--enable-local-development-sts-to-authenticate-users"></a>Passaggio 3: abilitare il servizio token di sicurezza per lo sviluppo locale per autenticare gli utenti  
  Questo passaggio descrive come abilitare il servizio token di sicurezza per lo sviluppo locale nell'applicazione. Il servizio token di sicurezza per lo sviluppo locale viene abilitato tramite l'estensione Identity and Access per Visual Studio.  
   
-#### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a>Per abilitare il servizio token di sicurezza per lo sviluppo locale nell'applicazione ASP.NET  
+### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a>Per abilitare il servizio token di sicurezza per lo sviluppo locale nell'applicazione ASP.NET  
   
 1. In Visual Studio fare clic con il pulsante destro del mouse sul progetto **TestApp** in **Esplora soluzioni** e quindi scegliere **Identity and Access**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "64626115"
 ## <a name="step-4--modify-your-aspnet-application-to-display-sign-in-status"></a>Passaggio 4: modificare l'applicazione ASP.NET per visualizzare lo stato di accesso  
  Questo passaggio descrive come modificare l'applicazione ASP.NET per visualizzare in modo dinamico se l'utente corrente ha effettuato l'accesso. Una volta configurato il provider del servizio token di sicurezza, WIF gestisce le attestazioni in ingresso. È ora necessario configurare il codice dell'applicazione per visualizzare il risultato dell'autenticazione.  
   
-#### <a name="to-display-sign-in-status"></a>Per visualizzare lo stato di accesso  
+### <a name="to-display-sign-in-status"></a>Per visualizzare lo stato di accesso  
   
 1. In Visual Studio aprire il file **Default.aspx** nel progetto **TestApp**.  
   
@@ -149,8 +149,8 @@ ms.locfileid: "64626115"
 ## <a name="step-5--test-the-integration-between-wif-and-your-aspnet-application"></a>Passaggio 5: testare l'integrazione tra WIF e l'applicazione ASP.NET  
  Questo passaggio descrive la procedura per testare l'integrazione tra WIF e l'applicazione ASP.NET.  
   
-#### <a name="to-test-the-integration-between-wif-and-aspnet"></a>Per testare l'integrazione tra WIF e ASP.NET  
+### <a name="to-test-the-integration-between-wif-and-aspnet"></a>Per testare l'integrazione tra WIF e ASP.NET  
   
 1. In Visual Studio premere **F5** per avviare il debug dell'applicazione. Se non vengono rilevati errori, verrà aperta una nuova finestra del browser.  
   
-2. Si può notare che il browser reindirizza automaticamente la richiesta al servizio token di sicurezza e quindi apre la pagina Default.aspx. Se WIF è configurato correttamente, deve visitare il sito verrà visualizzato il testo seguente: **"Si è connessi"**.
+2. Si può notare che il browser reindirizza automaticamente la richiesta al servizio token di sicurezza e quindi apre la pagina Default.aspx. Se WIF è configurato correttamente, deve visitare il sito verrà visualizzato il testo seguente: **"Si è connessi"** .

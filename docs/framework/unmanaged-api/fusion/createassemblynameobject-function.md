@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd8609bedcea28c1cb8559d378b5e171f3ad568e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed26df6580aeaf2936bd50c9f1855a08ac68b90b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669962"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778431"
 ---
 # <a name="createassemblynameobject-function"></a>Funzione CreateAssemblyNameObject
 Ottiene un puntatore a interfaccia a un [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) istanza che rappresenta l'identità univoca dell'assembly con il nome specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT CreateAssemblyNameObject (  
     [out] LPASSEMBLYNAME  *ppAssemblyNameObj,  
     [in]  LPCWSTR         szAssemblyName,  

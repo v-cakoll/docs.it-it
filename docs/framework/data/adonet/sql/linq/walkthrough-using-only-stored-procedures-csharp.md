@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Usare solo stored procedure (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: f4c34252f7d92985dac94663c85d3cca0dc58ab3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f16cbdc1d22e7ec08237c0f13db9499ee2f9194f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655119"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742571"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Procedura dettagliata: Usare solo stored procedure (C#)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'accesso ai dati eseguendo solo stored procedure. Questo approccio viene spesso è usato dagli amministratori di database per limitare l'accesso all'archivio dati.  
@@ -17,7 +17,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
  Ai fini di questa procedura dettagliata, si userà due metodi che sono stato eseguito il mapping alle stored procedure nel database di esempio Northwind: CustOrdersDetail e CustOrderHist. Il mapping viene applicato quando si esegue lo strumento della riga di comando SqlMetal per generare un file C#. Per altre informazioni, vedere la sezione successiva relativa ai prerequisiti.  
   
- Questa procedura dettagliata non si basa su [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Gli sviluppatori che usano Visual Studio consente inoltre di [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] per implementare la funzionalità delle stored procedure. Visualizzare [strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Questa procedura dettagliata non basarsi su Progettazione relazionale oggetti. Gli sviluppatori che usano Visual Studio possono anche usare O/R Designer per implementare la funzionalità delle stored procedure. Visualizzare [strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -112,7 +112,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-set-up-the-user-interface"></a>Per impostare l'interfaccia utente  
   
-1. Tornare a di Windows Form della finestra di progettazione (**Form1.cs[Design]**).  
+1. Tornare a di Windows Form della finestra di progettazione (**Form1.cs[Design]** ).  
   
 2. Scegliere **Casella degli strumenti** dal menu **Visualizza**.  
   
@@ -127,9 +127,9 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 4. Fare doppio clic su **label1**, quindi fare clic su **proprietà**.  
   
-5. Modifica il **testo** proprietà dal **label1** al **Enter OrderID:**.  
+5. Modifica il **testo** proprietà dal **label1** al **Enter OrderID:** .  
   
-6. Nello stesso modo per **label2**, modificare il **testo** proprietà dal **label2** al **Enter CustomerID:**.  
+6. Nello stesso modo per **label2**, modificare il **testo** proprietà dal **label2** al **Enter CustomerID:** .  
   
 7. Nello stesso modo, modificare il **testo** proprietà per **button1** al **Order Details**.  
   

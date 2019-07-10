@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82abeb0ce3db075d794787bb1fcd5bc18321bef2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ae87dd4538a9a8e88591f498c0ce77b51bfa852
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906178"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781613"
 ---
 # <a name="correftodefcheck-enumeration"></a>Enumerazione CorRefToDefCheck
 Specifica i flag per controllare quali elementi a cui viene fatto riferimento vengono convertiti nelle relative definizioni per ottimizzare il codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef enum CorRefToDefCheck {  
     MDRefToDefDefault           = 0x00000003,  
     MDRefToDefAll               = 0xffffffff,  

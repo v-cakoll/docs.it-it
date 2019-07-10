@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 247383e267ab3e8932d43621e122986a59d9a30d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: fe34ffded73e8305e4ade3bb9b402b1d8e1bcc49
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490518"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764683"
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>Funzione CreateDebuggingInterfaceFromVersion
 Crea un' [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) oggetto basata sulle informazioni versione specificata.  
@@ -31,7 +31,7 @@ Crea un' [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebu
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT CreateDebuggingInterfaceFromVersion (  
     [in]  int      iDebuggerVersion,   
     [in]  LPCWSTR  szDebuggeeVersion,   

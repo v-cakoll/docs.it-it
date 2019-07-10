@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9005dd8fde0d7258bd1dd48b561e4925e87733b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f6926d66a438cfc4fd97d7120e359b737212dde
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698070"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738626"
 ---
 # <a name="iclrdatatargetrequest-method"></a>Metodo ICLRDataTarget::Request
 Chiamato dai servizi di accesso ai dati di common language runtime (CLR) per richiedere un'operazione, come definito dall'implementazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT Request (  
     [in] ULONG32            reqCode,  
     [in] ULONG32            inBufferSize,  

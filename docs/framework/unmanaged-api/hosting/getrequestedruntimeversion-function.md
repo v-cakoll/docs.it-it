@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbc77195c3fe2581475d768b59993de274ac06a6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4083440903e6147ae645f2d6420f19160471841c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490325"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779579"
 ---
 # <a name="getrequestedruntimeversion-function"></a>Funzione GetRequestedRuntimeVersion
 Ottiene il numero di versione di common language runtime (CLR) richiesto dall'applicazione specificata. Se non viene installata la versione, ottiene la versione più recente installata prima della versione richiesta.  
@@ -31,7 +31,7 @@ Ottiene il numero di versione di common language runtime (CLR) richiesto dall'ap
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetRequestedRuntimeVersion (  
     [in]  LPWSTR  pExe,   
     [out] LPWSTR  pVersion,   

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7716db814e86258c4cb81047b39142f33798782
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27ad89f1910bc7bb08a23c9fdb0d50828fb8b5e6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949024"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741444"
 ---
 # <a name="setnonassemblyflags-method"></a>Metodo SetNonAssemblyFlags
 Imposta i flag che non sono specifici dell'assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT SetNonAssemblyFlags(  
     AssemblyFlags afFlags  
 ) PURE;  

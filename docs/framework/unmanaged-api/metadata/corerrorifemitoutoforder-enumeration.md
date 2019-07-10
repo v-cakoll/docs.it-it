@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 628ca1b555d80319312450d784981cfed1bda947
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16f6d7bf6fa1730d50cfe81526817e492a453dad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045994"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781977"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>Enumerazione CorErrorIfEmitOutOfOrder
 Contiene valori di flag che indicano in quali condizioni è necessario generare un messaggio di errore per notificare che i metadati sono stati emessi senza ordine.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef enum CorErrorIfEmitOutOfOrder {  
   
     MDErrorOutOfOrderDefault    = 0x00000000,  

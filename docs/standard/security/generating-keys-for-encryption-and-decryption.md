@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd6a5d710f4b42ae8d1bedb535abface7a053cbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 52ec268df38a12dfe7dac469eed9901d7c0646a1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654396"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769612"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Generazione di chiavi per crittografia e decrittografia
 La creazione e la gestione di chiavi sono due momenti importanti del processo di crittografia. Per gli algoritmi simmetrici è richiesta la creazione di una chiave e un vettore di inizializzazione (IV). La chiave deve rimanere segreta per chiunque non debba decrittografare i dati. Il vettore di inizializzazione non deve rimanere segreto, ma dovrebbe essere modificato per ogni sessione. Gli algoritmi asimmetrici richiedono la creazione di una chiave pubblica e di una chiave privata. La chiave pubblica può essere resa pubblica a chiunque, mentre quella privata deve essere nota solo alla parte che decrittograferà i dati crittografati con la chiave pubblica. Questa sezione descrive come generare e gestire chiavi sia per gli algoritmi simmetrici che per quelli asimmetrici.  
   
 ## <a name="symmetric-keys"></a>Chiavi simmetriche  
- Le classi di crittografia simmetrica disponibili in .NET Framework richiedono una chiave e un nuovo vettore di inizializzazione (IV, Initialization Vector) per crittografare e decrittografare i dati. Ogni volta che si crea una nuova istanza di una delle classi di crittografia simmetrica gestite con il costruttore predefinito, vengono automaticamente creati una chiave e un vettore di inizializzazione nuovi. Per riuscire a decrittografare i dati, i destinatari devono avere la stessa chiave e lo stesso vettore di inizializzazione e devono usare il medesimo algoritmo di crittografia. Generalmente è necessario creare una chiave e un vettore di inizializzazione nuovi per ogni sessione e né la chiave né il vettore devono essere archiviati per un uso in una sessione successiva.  
+ Le classi di crittografia simmetrica disponibili in .NET Framework richiedono una chiave e un nuovo vettore di inizializzazione (IV, Initialization Vector) per crittografare e decrittografare i dati. Quando si crea una nuova istanza di una delle classi di crittografia simmetriche gestite usando il costruttore senza parametri, una nuova chiave e vettore di Inizializzazione vengono creati automaticamente. Per riuscire a decrittografare i dati, i destinatari devono avere la stessa chiave e lo stesso vettore di inizializzazione e devono usare il medesimo algoritmo di crittografia. Generalmente è necessario creare una chiave e un vettore di inizializzazione nuovi per ogni sessione e né la chiave né il vettore devono essere archiviati per un uso in una sessione successiva.  
   
  Per comunicare una chiave simmetrica e un vettore di inizializzazione a una parte remota, la chiave simmetrica viene generalmente crittografata mediante la crittografia asimmetrica. L'invio della chiave in una rete non protetta senza crittografarla non è sicuro, poiché chiunque intercetti la chiave e il vettore di inizializzazione è in grado di decrittografare i dati. Per ulteriori informazioni sullo scambio di dati utilizzando la crittografia, vedere [Creare uno schema di crittografia](../../../docs/standard/security/creating-a-cryptographic-scheme.md).  
   
@@ -60,7 +60,7 @@ tdes.GenerateKey();
  Quando viene eseguito il codice precedente, una chiave e un vettore di inizializzazione nuovi vengono generati quando viene creata la nuova istanza di **TripleDESCryptoServiceProvider** . Un'altra chiave e vettore di inizializzazione vengono creati quando vengono chiamati i metodi **GenerateKey** e **GenerateIV** .  
   
 ## <a name="asymmetric-keys"></a>Chiavi asimmetriche  
- In .NET Framework sono incluse le classi <xref:System.Security.Cryptography.RSACryptoServiceProvider> e <xref:System.Security.Cryptography.DSACryptoServiceProvider> per la crittografia asimmetrica. Queste classi creano una coppia di chiavi pubblica/privata quando si usa il costruttore predefinito per creare una nuova istanza. Le chiavi asimmetriche possono essere archiviate per un uso in più sessioni o generate per una sola sessione. Mentre la chiave pubblica può essere generalmente resa disponibile, la chiave privata va custodita con cura.  
+ In .NET Framework sono incluse le classi <xref:System.Security.Cryptography.RSACryptoServiceProvider> e <xref:System.Security.Cryptography.DSACryptoServiceProvider> per la crittografia asimmetrica. Queste classi creano una coppia di chiavi pubblica/privata quando si usa il costruttore senza parametri per creare una nuova istanza. Le chiavi asimmetriche possono essere archiviate per un uso in più sessioni o generate per una sola sessione. Mentre la chiave pubblica può essere generalmente resa disponibile, la chiave privata va custodita con cura.  
   
  Una coppia di chiavi pubblica/privata viene generata ogni volta che viene creata una nuova istanza di una classe di algoritmo asimmetrico. Dopo che è stata creata una nuova istanza della classe, le informazioni sulla chiave possono essere estratte con uno dei metodi indicati di seguito:  
   

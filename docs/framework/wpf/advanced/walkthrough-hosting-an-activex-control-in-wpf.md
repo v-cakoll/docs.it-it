@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 976679e4b6e6bba7288756616db639ed61472591
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f19186380b0cbc71cdd64013ca5e49361ba26cda
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605437"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778376"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Procedura dettagliata: Hosting di un controllo ActiveX in WPF
 Per consentire di migliorare l'interazione con i browser, è possibile usare [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controlli di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-applicazione basata su. Questa procedura dettagliata illustra come è possibile ospitare le [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] come un controllo in un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pagina.
@@ -37,7 +37,7 @@ Per consentire di migliorare l'interazione con i browser, è possibile usare [!I
 
 ## <a name="creating-the-project"></a>Creazione del progetto
 
-#### <a name="to-create-and-set-up-the-project"></a>Per creare e impostare il progetto
+### <a name="to-create-and-set-up-the-project"></a>Per creare e impostare il progetto
 
 1. Creare un progetto di applicazione WPF denominato `HostingAxInWpf`.
 
@@ -62,7 +62,7 @@ Per consentire di migliorare l'interazione con i browser, è possibile usare [!I
 ## <a name="creating-the-activex-control"></a>Creazione di un controllo ActiveX
  [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] Genera automaticamente un <xref:System.Windows.Forms.AxHost> classe wrapper per un [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controllare quando il controllo viene aggiunto all'area di progettazione. La procedura seguente crea un assembly gestito denominato AxInterop.WMPLib.dll.
 
-#### <a name="to-create-the-activex-control"></a>Per creare il controllo ActiveX
+### <a name="to-create-the-activex-control"></a>Per creare il controllo ActiveX
 
 1. Aprire WmpAxControl. vb o WmpAxControl.cs in Progettazione Windows Form.
 
@@ -74,7 +74,7 @@ Per consentire di migliorare l'interazione con i browser, è possibile usare [!I
 
 ## <a name="hosting-the-activex-control-on-a-wpf-page"></a>Hosting del controllo ActiveX in una pagina WPF
 
-#### <a name="to-host-the-activex-control"></a>Per ospitare il controllo ActiveX
+### <a name="to-host-the-activex-control"></a>Per ospitare il controllo ActiveX
 
 1. Nel progetto HostingAxInWpf, aggiungere un riferimento all'oggetto generato [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] assembly di interoperabilità.
 

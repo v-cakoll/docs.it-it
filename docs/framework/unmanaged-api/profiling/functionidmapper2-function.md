@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a236dcae29d00afe3b72dce8f81d657fb4fac28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a070d2e863aecf7b13eb59a118848b96d2cccc17
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598922"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781300"
 ---
 # <a name="functionidmapper2-function"></a>Funzione FunctionIDMapper2
 Notifica al profiler che l'identificatore specificato di una funzione può essere rimappato a un ID alternativo da utilizzare per il [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), e [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), oppure[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), e [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) i callback per tale funzione. `FunctionIDMapper2` consente inoltre al profiler di indicare se vuole ricevere i callback per tale funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 UINT_PTR __stdcall FunctionIDMapper2 (  
     [in]  FunctionID  funcId,  
     [in]  void * clientData,  

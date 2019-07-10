@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 417cf623948d16147f9a1242d714f4df1311a314
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1ea9424c000ad3ae4918181084c89038c2ec8d1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700943"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777283"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>Metodo ISymUnmanagedWriter::Initialize
 Imposta l'interfaccia di emissione dei metadati con il quale verrà associato questo writer e imposta il nome del file di output in cui verranno scritti i simboli di debug.  
@@ -31,7 +31,7 @@ Imposta l'interfaccia di emissione dei metadati con il quale verrà associato qu
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT Initialize(  
     [in] IUnknown     *emitter,  
     [in] const WCHAR  *filename,  

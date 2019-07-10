@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d20c640d6a6a43b7bde4c7d46df470c7bc8c5aa2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d438123dcefb901098954845596c210e5b76cea6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942509"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764113"
 ---
 # <a name="icordebugmodule2setjmcstatus-method"></a>Metodo ICorDebugModule2::SetJMCStatus
 Imposta lo stato di Just My Code (JMC) di tutti i metodi di tutte le classi in questo ICorDebugModule2 sul valore specificato, eccetto quelli presenti il `pTokens` matrice, che imposta il valore opposto.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT SetJMCStatus (  
     [in] BOOL                        bIsJustMyCode,  
     [in] ULONG32                     cTokens,  

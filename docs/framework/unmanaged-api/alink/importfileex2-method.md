@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 784e58e0c5c2329705671580d53763f2ac30f0b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e6584d31674670bcd005161a846b74df71a27a5f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753485"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741641"
 ---
 # <a name="importfileex2-method"></a>Metodo ImportFileEx2
 Importa moduli non associati e assembly. Questo metodo è simile [metodo ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), ma funziona anche se il file da importare non esiste sul disco.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT ImportFileEx2(  
     LPCWSTR pszFilename,  
     LPCWSTR pszTargetName,  

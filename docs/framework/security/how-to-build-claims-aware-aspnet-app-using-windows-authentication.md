@@ -3,12 +3,12 @@ title: "Procedura: Compilare un'applicazione ASP.NET che può riconoscere attest
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 039fccde55dd48571e38f064f68b16480b65cb44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b58a4066538441a48bc6646f364e846a25cc8c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650414"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742507"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Procedura: Compilare un'applicazione ASP.NET che può riconoscere attestazioni con l'autenticazione di Windows
 ## <a name="applies-to"></a>Si applica a  
@@ -56,7 +56,7 @@ ms.locfileid: "64650414"
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
  In questo passaggio si creerà una nuova applicazione Web Form ASP.NET.  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>Per creare un'applicazione ASP.NET semplice  
+### <a name="to-create-a-simple-aspnet-application"></a>Per creare un'applicazione ASP.NET semplice  
   
 1. Avviare Visual Studio e quindi fare clic su **File**, **Nuovo** e **Progetto**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "64650414"
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Passaggio 2: configurare l'applicazione Web Form ASP.NET per le attestazioni usando l'autenticazione di Windows  
  In questo passaggio si aggiungerà una voce di configurazione al file di configurazione *Web.config* e si modificherà il file *Default.aspx* per visualizzare informazioni sulle attestazioni per un account.  
   
-#### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Per configurare l'applicazione ASP.NET per le attestazioni usando l'autenticazione di Windows  
+### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Per configurare l'applicazione ASP.NET per le attestazioni usando l'autenticazione di Windows  
   
 1. Nel file *Default.aspx* del progetto **TestApp** sostituire il markup esistente con il seguente:  
   
@@ -136,6 +136,6 @@ ms.locfileid: "64650414"
 ## <a name="step-3--test-your-solution"></a>Passaggio 3: eseguire i test sulla soluzione  
  In questo passaggio verrà testata l'applicazione Web Form ASP.NET e si verificherà che le attestazioni vengano presentate quando un utente accede con l'autenticazione di Windows.  
   
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Per testare le attestazioni con l'applicazione Web Form ASP.NET usando l'autenticazione di Windows  
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Per testare le attestazioni con l'applicazione Web Form ASP.NET usando l'autenticazione di Windows  
   
 1. Premere **F5** per compilare ed eseguire l'applicazione. Verrà visualizzato il file *Default.aspx* e il nome dell'account Windows personale (incluso il nome di dominio) dovrebbe già essere visualizzato come utente autenticato in alto a destra nella pagina. Il contenuto della pagina deve includere una tabella con le attestazioni recuperate dall'account di Windows.
