@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82d81be7a9e0843dfe382767de582f93371acb4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f005ee9d3d9d4b8977cd6a1838fe46015e604df5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584494"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777476"
 ---
-# <a name="imetadataemitdefinetyperefbyname-method"></a><span data-ttu-id="01945-102">Metodo IMetaDataEmit::DefineTypeRefByName</span><span class="sxs-lookup"><span data-stu-id="01945-102">IMetaDataEmit::DefineTypeRefByName Method</span></span>
-<span data-ttu-id="01945-103">Ottiene i metadati di un token per un tipo definito nell'ambito specificato, che non rientrano nell'ambito corrente.</span><span class="sxs-lookup"><span data-stu-id="01945-103">Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.</span></span>  
+# <a name="imetadataemitdefinetyperefbyname-method"></a><span data-ttu-id="7a781-102">Metodo IMetaDataEmit::DefineTypeRefByName</span><span class="sxs-lookup"><span data-stu-id="7a781-102">IMetaDataEmit::DefineTypeRefByName Method</span></span>
+<span data-ttu-id="7a781-103">Ottiene i metadati di un token per un tipo definito nell'ambito specificato, che non rientrano nell'ambito corrente.</span><span class="sxs-lookup"><span data-stu-id="7a781-103">Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01945-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="01945-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7a781-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="7a781-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT DefineTypeRefByName (   
     [in]  mdToken     tkResolutionScope,   
     [in]  LPCWSTR     szName,   
@@ -37,36 +37,36 @@ HRESULT DefineTypeRefByName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="01945-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="01945-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7a781-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="7a781-105">Parameters</span></span>  
  `tkResolutionScope`  
- <span data-ttu-id="01945-106">[in] Il token che specifica l'ambito di risoluzione.</span><span class="sxs-lookup"><span data-stu-id="01945-106">[in] The token specifying the resolution scope.</span></span> <span data-ttu-id="01945-107">I tipi di token seguenti sono validi:</span><span class="sxs-lookup"><span data-stu-id="01945-107">The following token types are valid:</span></span>  
+ <span data-ttu-id="7a781-106">[in] Il token che specifica l'ambito di risoluzione.</span><span class="sxs-lookup"><span data-stu-id="7a781-106">[in] The token specifying the resolution scope.</span></span> <span data-ttu-id="7a781-107">I tipi di token seguenti sono validi:</span><span class="sxs-lookup"><span data-stu-id="7a781-107">The following token types are valid:</span></span>  
   
-- <span data-ttu-id="01945-108">`mdModuleRef`, se il tipo è definito nello stesso assembly in cui è definito il chiamante.</span><span class="sxs-lookup"><span data-stu-id="01945-108">`mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.</span></span>  
+- <span data-ttu-id="7a781-108">`mdModuleRef`, se il tipo è definito nello stesso assembly in cui è definito il chiamante.</span><span class="sxs-lookup"><span data-stu-id="7a781-108">`mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.</span></span>  
   
-- <span data-ttu-id="01945-109">`mdAssemblyRef`, se il tipo è definito in un assembly diverso da quello in cui è definito il chiamante.</span><span class="sxs-lookup"><span data-stu-id="01945-109">`mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.</span></span>  
+- <span data-ttu-id="7a781-109">`mdAssemblyRef`, se il tipo è definito in un assembly diverso da quello in cui è definito il chiamante.</span><span class="sxs-lookup"><span data-stu-id="7a781-109">`mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.</span></span>  
   
-- <span data-ttu-id="01945-110">`mdTypeRef`, se il tipo è un tipo annidato.</span><span class="sxs-lookup"><span data-stu-id="01945-110">`mdTypeRef`, if the type is a nested type.</span></span>  
+- <span data-ttu-id="7a781-110">`mdTypeRef`, se il tipo è un tipo annidato.</span><span class="sxs-lookup"><span data-stu-id="7a781-110">`mdTypeRef`, if the type is a nested type.</span></span>  
   
-- <span data-ttu-id="01945-111">`mdModule`, se il tipo è definito nello stesso modulo in cui è definito il chiamante.</span><span class="sxs-lookup"><span data-stu-id="01945-111">`mdModule`, if the type is defined in the same module in which the caller is defined.</span></span>  
+- <span data-ttu-id="7a781-111">`mdModule`, se il tipo è definito nello stesso modulo in cui è definito il chiamante.</span><span class="sxs-lookup"><span data-stu-id="7a781-111">`mdModule`, if the type is defined in the same module in which the caller is defined.</span></span>  
   
-- <span data-ttu-id="01945-112">Null se il tipo è definito a livello globale.</span><span class="sxs-lookup"><span data-stu-id="01945-112">Null, if the type is defined globally.</span></span>  
+- <span data-ttu-id="7a781-112">Null se il tipo è definito a livello globale.</span><span class="sxs-lookup"><span data-stu-id="7a781-112">Null, if the type is defined globally.</span></span>  
   
  `szName`  
- <span data-ttu-id="01945-113">[in] Il nome del tipo di destinazione in formato Unicode.</span><span class="sxs-lookup"><span data-stu-id="01945-113">[in] The name of the target type in Unicode.</span></span>  
+ <span data-ttu-id="7a781-113">[in] Il nome del tipo di destinazione in formato Unicode.</span><span class="sxs-lookup"><span data-stu-id="7a781-113">[in] The name of the target type in Unicode.</span></span>  
   
  `ptr`  
- <span data-ttu-id="01945-114">[out] Un puntatore al `mdTypeRef` token assegnato al tipo.</span><span class="sxs-lookup"><span data-stu-id="01945-114">[out] A pointer to the `mdTypeRef` token that is assigned to the type.</span></span>  
+ <span data-ttu-id="7a781-114">[out] Un puntatore al `mdTypeRef` token assegnato al tipo.</span><span class="sxs-lookup"><span data-stu-id="7a781-114">[out] A pointer to the `mdTypeRef` token that is assigned to the type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="01945-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="01945-115">Requirements</span></span>  
- <span data-ttu-id="01945-116">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01945-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7a781-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="7a781-115">Requirements</span></span>  
+ <span data-ttu-id="7a781-116">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7a781-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="01945-117">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="01945-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7a781-117">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="7a781-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="01945-118">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="01945-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7a781-118">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="7a781-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="01945-119">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01945-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7a781-119">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7a781-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01945-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="01945-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7a781-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7a781-120">See also</span></span>
 
-- [<span data-ttu-id="01945-121">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="01945-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="01945-122">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="01945-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="7a781-121">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="7a781-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="7a781-122">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="7a781-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
