@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d246acbf314a83ca3f8113e9a2fb223ac0ebcafe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44d3fee49ae74c69b49029208588f4894e250f78
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040924"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775206"
 ---
 # <a name="icorprofilermoduleenumgetcount-method"></a>Metodo ICorProfilerModuleEnum::GetCount
 Ottiene il numero di moduli gestiti caricati nell'applicazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetCount([out] ULONG * pcelt);  
 ```  
   

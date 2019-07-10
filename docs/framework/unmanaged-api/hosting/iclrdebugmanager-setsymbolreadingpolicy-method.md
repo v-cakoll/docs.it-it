@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2dc3d350f5c97736b3b65c814a668195aceef2b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2921484cb2baa92593ddb0335cf7b20c5c0f33eb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969988"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773016"
 ---
 # <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a>Metodo ICLRDebugManager::SetSymbolReadingPolicy
 Imposta i criteri per la lettura dei file di programma (PDB) del database. Il criterio determina se le informazioni sui file e i numeri di riga viene inclusa negli stack di chiamate.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT SetSymbolReadingPolicy (  
     [in] ESymbolReadingPolicy policy  
 );  

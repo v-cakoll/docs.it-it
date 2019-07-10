@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 559c265c70c199e64782ba185d4925d293d6a778
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d5fbf83690f616556774e8f279e1077fccdb8baf
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763301"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779918"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>Metodo ICLRValidator::Validate
 Convalida il file eseguibile portabile (PE) o Microsoft intermediate language (MSIL) nel file specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT Validate (  
     [in] IVEHandler        *veh,  
     [in] unsigned long      ulAppDomainId,  

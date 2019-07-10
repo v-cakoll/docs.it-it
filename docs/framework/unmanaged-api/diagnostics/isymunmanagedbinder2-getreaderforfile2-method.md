@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fed289b2776e8ac4a12969060cd16c6163ebed2f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db917820de92b2e347385afc5217c0ca190825cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940049"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776828"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>Metodo ISymUnmanagedBinder2::GetReaderForFile2
 Data un'interfaccia di metadati e un nome di file, restituisce il valore corretto [ISymUnmanagedReader](isymunmanagedreader-interface.md) interfaccia che leggerà i simboli di debug associati al modulo.  
@@ -31,7 +31,7 @@ Data un'interfaccia di metadati e un nome di file, restituisce il valore corrett
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetReaderForFile2(  
     [in]  IUnknown     *importer,  
     [in]  const WCHAR  *fileName,  

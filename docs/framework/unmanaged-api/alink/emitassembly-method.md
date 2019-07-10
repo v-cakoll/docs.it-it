@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf7b54ab7a2318e8194bf39dbe41b864633ddb43
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0e6250987997b8d1c833b7b33a985900510fb03
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790065"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742143"
 ---
 # <a name="emitassembly-method"></a>Metodo EmitAssembly
 Crea l'assembly. Chiamare questo metodo dopo la chiusura di tutti gli altri file tranne il file di assembly. Non chiamare questo metodo quando si generano i moduli non associati.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT EmitAssembly(  
     mdAssembly AssemblyID  
 ) PURE;  

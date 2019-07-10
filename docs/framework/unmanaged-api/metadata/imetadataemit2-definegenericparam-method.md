@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de8547ed0ee83bafe4612bdcd62607fc94fb3f69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 027547098edefdca71317b8f885e71f468dc6e77
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043797"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777195"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>Metodo IMetaDataEmit2::DefineGenericParam
 Crea una definizione per un parametro di tipo generico e ottiene un token per tale parametro di tipo generico.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT DefineGenericParam (   
     [in]  mdToken         tk,   
     [in]  ULONG           ulParamSeq,   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e23232b55a841672ee193b980c310995ba688e00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12daac766a09c297bfa129f69342ebad20977e7c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049362"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780141"
 ---
 # <a name="strongnamegetblob-function"></a>Funzione StrongNameGetBlob
 Completa il buffer specificato con la rappresentazione binaria del file eseguibile presente all'indirizzo specificato.  
@@ -30,7 +30,7 @@ Completa il buffer specificato con la rappresentazione binaria del file eseguibi
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 BOOLEAN StrongNameGetBlob (  
     [in]  LPCWSTR    wszFilePath,  
     [in]  BYTE       *pbBlob,  

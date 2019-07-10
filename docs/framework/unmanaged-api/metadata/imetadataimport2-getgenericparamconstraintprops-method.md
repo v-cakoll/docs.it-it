@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e0503c5bd924793df8143c89e358618fb8844c6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3868b07ff01f2d1fec79537dd478a2d005f490f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049869"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778776"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>Metodo IMetaDataImport2::GetGenericParamConstraintProps
 Ottiene i metadati associati al vincolo del parametro generico rappresentato dal token di vincolo specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetGenericParamConstraintProps (  
    [in]  mdGenericParamConstraint  gpc,  
    [out] mdGenericParam            *ptGenericParam,  

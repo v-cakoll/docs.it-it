@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbfd3ae32f4d3033894fdaf6b1bcc880c324e928
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68be16c559431de871dc9ddb1963897b0927d49a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000285"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783170"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>Funzione StrongNameTokenFromPublicKey
 Ottiene un token che rappresenta una chiave pubblica. Un token con nome sicuro Ã¨ il formato abbreviato di una chiave pubblica.  
@@ -34,7 +34,7 @@ Ottiene un token che rappresenta una chiave pubblica. Un token con nome sicuro Ã
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 BOOLEANStrongNameTokenFromPublicKey (   
     [in]  BYTE    *pbPublicKeyBlob,  
     [in]  ULONG   cbPublicKeyBlob,  

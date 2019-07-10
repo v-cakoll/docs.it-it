@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 18f22a771ab7279f177fe39d8c372a8517056890
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c0de529a0005c9dbaf1f8d0f25957b217280e31
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754826"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753013"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (Visual Basic)
 
@@ -51,7 +51,7 @@ Poiché la funzione principale dell'incorporamento dei tipi è supportare l'inco
 
 ## <a name="creating-an-interface"></a>Creare un'interfaccia
 
-#### <a name="to-create-the-type-equivalence-interface-project"></a>Per creare il progetto di interfaccia di equivalenza del tipo
+### <a name="to-create-the-type-equivalence-interface-project"></a>Per creare il progetto di interfaccia di equivalenza del tipo
 
 1. In Visual Studio scegliere **Nuovo** dal menu **File** e quindi fare clic su **Progetto**.
 
@@ -61,7 +61,7 @@ Poiché la funzione principale dell'incorporamento dei tipi è supportare l'inco
 
 4. Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceInterface e fare clic su **Proprietà**. Fare clic sulla scheda **Compila**. Impostare il percorso di output su un percorso valido nel computer di sviluppo, ad esempio `C:\TypeEquivalenceSample`. Questo percorso verrà usato anche in un passaggio successivo di questa procedura dettagliata.
 
-5. Durante la modifica delle proprietà del progetto scegliere la scheda **Firma**. Selezionare l opzione **Firma assembly**. Nell'elenco **Scegli un file chiave con nome sicuro** fare clic su **<Nuovo…>**. Nella casella **Nome file di chiave** digitare `key.snk`. Deselezionare la casella di controllo **Proteggi file di chiave con una password**. Fare clic su **OK**.
+5. Durante la modifica delle proprietà del progetto scegliere la scheda **Firma**. Selezionare l opzione **Firma assembly**. Nell'elenco **Scegli un file chiave con nome sicuro** fare clic su **<Nuovo…>** . Nella casella **Nome file di chiave** digitare `key.snk`. Deselezionare la casella di controllo **Proteggi file di chiave con una password**. Fare clic su **OK**.
 
 6. Aprire il file vb. Aggiungere il codice seguente al file della classe ISampleInterface per creare l'interfaccia ISampleInterface.
 
@@ -96,7 +96,7 @@ Poiché la funzione principale dell'incorporamento dei tipi è supportare l'inco
 
 ## <a name="creating-a-runtime-class"></a>Creare una classe di runtime
 
-#### <a name="to-create-the-type-equivalence-runtime-project"></a>Per creare il progetto di runtime di equivalenza del tipo
+### <a name="to-create-the-type-equivalence-runtime-project"></a>Per creare il progetto di runtime di equivalenza del tipo
 
 1. In Visual Studio scegliere **Nuovo** dal menu **File** e quindi fare clic su **Progetto**.
 
@@ -106,7 +106,7 @@ Poiché la funzione principale dell'incorporamento dei tipi è supportare l'inco
 
 4. Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceRuntime e fare clic su **Proprietà**. Fare clic sulla scheda **Compila**. Impostare il percorso di output sullo stesso percorso usato nel progetto TypeEquivalenceInterface, ad esempio `C:\TypeEquivalenceSample`.
 
-5. Durante la modifica delle proprietà del progetto scegliere la scheda **Firma**. Selezionare l opzione **Firma assembly**. Nell'elenco **Scegli un file chiave con nome sicuro** fare clic su **<Nuovo…>**. Nella casella **Nome file di chiave** digitare `key.snk`. Deselezionare la casella di controllo **Proteggi file di chiave con una password**. Fare clic su **OK**.
+5. Durante la modifica delle proprietà del progetto scegliere la scheda **Firma**. Selezionare l opzione **Firma assembly**. Nell'elenco **Scegli un file chiave con nome sicuro** fare clic su **<Nuovo…>** . Nella casella **Nome file di chiave** digitare `key.snk`. Deselezionare la casella di controllo **Proteggi file di chiave con una password**. Fare clic su **OK**.
 
 6. Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceRuntime e fare clic su **Aggiungi riferimento**. Fare clic sulla scheda **Sfoglia** e passare alla cartella del percorso di output. Selezionare il file TypeEquivalenceInterface.dll e fare clic su **OK**.
 
@@ -142,7 +142,7 @@ Poiché la funzione principale dell'incorporamento dei tipi è supportare l'inco
 
 ## <a name="creating-a-client-project"></a>Creare un progetto client
 
-#### <a name="to-create-the-type-equivalence-client-project"></a>Per creare il progetto client di equivalenza del tipo
+### <a name="to-create-the-type-equivalence-client-project"></a>Per creare il progetto client di equivalenza del tipo
 
 1. In Visual Studio scegliere **Nuovo** dal menu **File** e quindi fare clic su **Progetto**.
 
@@ -181,7 +181,7 @@ Poiché la funzione principale dell'incorporamento dei tipi è supportare l'inco
 
 ## <a name="modifying-the-interface"></a>Modificare l'interfaccia
 
-#### <a name="to-modify-the-interface"></a>Per modificare l'interfaccia
+### <a name="to-modify-the-interface"></a>Per modificare l'interfaccia
 
 1. In Visual Studio scegliere **Apri** dal menu **File** e quindi fare clic su **Progetto/Soluzione**.
 
@@ -201,7 +201,7 @@ Poiché la funzione principale dell'incorporamento dei tipi è supportare l'inco
 
 ## <a name="modifying-the-runtime-class"></a>Modificare la classe di runtime
 
-#### <a name="to-modify-the-runtime-class"></a>Per modificare la classe di runtime
+### <a name="to-modify-the-runtime-class"></a>Per modificare la classe di runtime
 
 1. In Visual Studio scegliere **Apri** dal menu **File** e quindi fare clic su **Progetto/Soluzione**.
 

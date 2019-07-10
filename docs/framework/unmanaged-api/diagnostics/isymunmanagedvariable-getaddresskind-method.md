@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eae5b21af3bcdca911ec13067a61bb957d4ae6ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b5fd3c5e5a7a706929af849ec3a66dd6c41b3bd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797579"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778293"
 ---
 # <a name="isymunmanagedvariablegetaddresskind-method"></a>Metodo ISymUnmanagedVariable::GetAddressKind
 Ottiene il tipo di indirizzo della variabile.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetAddressKind(  
     [out, retval] ULONG32* pRetVal);  
 ```  

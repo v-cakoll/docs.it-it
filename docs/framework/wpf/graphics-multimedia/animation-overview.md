@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 63353f670528cd52f3e2927426ae715432422504
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5c776942bced836437fdcb8aaf30faef48e3aaff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663858"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780151"
 ---
 # <a name="animation-overview"></a>Cenni preliminari sull'animazione
 
@@ -242,7 +242,7 @@ La tabella seguente illustra diversi tipi di animazione comuni e alcune propriet
 
 Tutti i tipi di animazione ereditano dal <xref:System.Windows.Media.Animation.Timeline> classe; pertanto, tutte le animazioni sono tipi speciali di sequenze temporali. Oggetto <xref:System.Windows.Media.Animation.Timeline> definisce un intervallo di tempo. È possibile specificare il *comportamenti di temporizzazione* di una sequenza temporale: relativo <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, quante volte è ripetuta e ora la velocità di avanzamento del.
 
-Poiché un'animazione è un <xref:System.Windows.Media.Animation.Timeline>, rappresenta inoltre un intervallo di tempo. Un'animazione vengono anche calcolati i valori di output durante il relativo avanzamento nell'intervallo di tempo specificato (o <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). Con l'avanzamento, ovvero la riproduzione, dell'animazione, viene aggiornata la proprietà associata.
+Poiché un'animazione è un <xref:System.Windows.Media.Animation.Timeline>, rappresenta inoltre un intervallo di tempo. Un'animazione vengono anche calcolati i valori di output man mano che passa attraverso nell'intervallo di tempo specificato (o <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). Con l'avanzamento, ovvero la riproduzione, dell'animazione, viene aggiornata la proprietà associata.
 
 Sono tre proprietà temporali usate di frequente <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, e <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>.
 
@@ -321,7 +321,7 @@ Il <xref:System.Windows.Media.Animation.DoubleAnimation> nell'esempio precedente
 [!code-csharp[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/FillBehaviorExample.cs#fillbehaviorexamplerectangleinline)]
 [!code-vb[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/fillbehaviorexample.vb#fillbehaviorexamplerectangleinline)]
 
-Poiché relativi <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> non è stata modificata rispetto al valore predefinito, ovvero <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, l'animazione mantiene il valore finale, 0, al termine. Pertanto, il <xref:System.Windows.UIElement.Opacity%2A> del rettangolo rimane impostata su 0 al termine l'animazione termina. Se si imposta la <xref:System.Windows.UIElement.Opacity%2A> del rettangolo da un altro valore, il codice sembra non hanno alcun effetto, poiché l'animazione viene comunque che interessano il <xref:System.Windows.UIElement.Opacity%2A> proprietà.
+Poiché relativi <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> non è stata modificata rispetto al valore predefinito, ovvero <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, l'animazione mantiene il relativo valore finale, 0, al termine. Pertanto, il <xref:System.Windows.UIElement.Opacity%2A> del rettangolo rimane impostata su 0 al termine l'animazione termina. Se si imposta la <xref:System.Windows.UIElement.Opacity%2A> del rettangolo da un altro valore, il codice sembra non hanno alcun effetto, poiché l'animazione viene comunque che interessano il <xref:System.Windows.UIElement.Opacity%2A> proprietà.
 
 Per ottenere nuovamente il controllo di una proprietà animata nel codice consiste nell'utilizzare il <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> metodo e specificare null per il <xref:System.Windows.Media.Animation.AnimationTimeline> parametro. Per altre informazioni e un esempio, vedere [impostare una proprietà dopo averla animata con uno Storyboard](how-to-set-a-property-after-animating-it-with-a-storyboard.md).
 
@@ -372,7 +372,7 @@ Gli esempi seguenti consentono di iniziare ad aggiungere animazione alle applica
 |[Cenni preliminari sull'animazione e sul sistema di temporizzazione](animation-and-timing-system-overview.md)|Descrive il modo in cui il sistema di temporizzazione Usa le <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> classi che consentono di creare animazioni.|
 |[Suggerimenti sulle animazioni](animation-tips-and-tricks.md)|Contiene suggerimenti utili per la risoluzione di problemi relativi alle animazioni, ad esempio problemi di prestazioni.|
 |[Cenni preliminari sulle animazioni personalizzate](custom-animations-overview.md)|Descrive come estendere il sistema dell'animazione con fotogrammi chiave, classi di animazione o callback per fotogramma.|
-|Cenni preliminari sulle animazioni From/To/By|Descrive come creare un'animazione che effettua la transizione tra due valori.|
+|[Panoramica sulle animazioni From/To/By](from-to-by-animations-overview.md)|Descrive come creare un'animazione che effettua la transizione tra due valori.|
 |[Cenni preliminari sulle animazioni con fotogrammi chiave](key-frame-animations-overview.md)|Descrive come creare un'animazione con più valori di destinazione, inclusa la possibilità di controllare il metodo di interpolazione.|
 |[Funzioni di interpolazione](easing-functions.md)|Descrive come applicare formule matematiche alle animazioni per ottenere un comportamento realistico, ad esempio un effetto di rimbalzo.|
 |[Panoramica sulle animazioni tracciato](path-animations-overview.md)|Descrive come spostare o ruotare un oggetto lungo un tracciato complesso.|

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b291521b667954a4118d5319547e90c4cc988a8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f21e3c586ed665ef0b6e55b720f891cc405311ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986882"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772611"
 ---
 # <a name="icordebugvaluecreatebreakpoint-method"></a>Metodo ICorDebugValue::CreateBreakpoint
 Il `CreateBreakpoint` (metodo) non è attualmente implementato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT CreateBreakpoint (  
     [out] ICorDebugValueBreakpoint **ppBreakpoint  
 );  

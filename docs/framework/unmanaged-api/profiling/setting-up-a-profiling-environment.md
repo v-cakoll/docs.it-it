@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc5171b135facfbbe901b38a19fef9e9d47699b5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 33762e08192fae379f3cd249f50cc544e1c89b5a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490726"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775736"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Configurazione di un ambiente di profilatura
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "66490726"
   
 - COR_PROFILER: Se passa il controllo di COR_ENABLE_PROFILING, CLR si connette al profiler che con questo CLSID o ProgID, che deve essere stato archiviato in precedenza nel Registro di sistema. La variabile di ambiente COR_PROFILER viene definita come stringa, come mostrato nei due esempi seguenti.  
   
-    ```  
+    ```cpp  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
     set COR_PROFILER="MyProfiler"  
     ```  
@@ -66,7 +66,7 @@ ms.locfileid: "66490726"
 ## <a name="initializing-the-profiler"></a>Inizializzazione del profiler  
  Quando vengono superati entrambi i controlli delle variabili di ambiente, CLR crea un'istanza del profiler in modo simile alla funzione COM `CoCreateInstance`. Il profiler non viene caricato tramite una chiamata diretta a `CoCreateInstance`. Di conseguenza si evita la chiamata a `CoInitialize`, che richiede l'impostazione del modello di threading. CLR chiama quindi il [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) metodo nel profiler. La firma di questo metodo è la seguente.  
   
-```  
+```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
@@ -75,7 +75,7 @@ HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)
 ## <a name="setting-event-notifications"></a>Impostazione delle notifiche degli eventi  
  Il profiler chiama quindi il [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) metodo per specificare quali categorie di notifiche è interessato. Ad esempio, se il profiler è interessato solo alle notifiche di entrata e uscita dalla funzione e alle notifiche di Garbage Collection, viene specificato quanto segue.  
   
-```  
+```cpp  
 ICorProfilerInfo* pInfo;  
 pICorProfilerInfoUnk->QueryInterface(IID_ICorProfilerInfo, (void**)&pInfo);  
 pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)  

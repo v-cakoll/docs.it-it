@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bfbadc5553e86b2db10d66298c8d24d2a0f8bde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5c1c77b92d94062206cf9eb38981f38ff2a1cad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946172"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775461"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>Metodo ICorDebugVariableSymbol::SetValue
 Assegna il valore di una matrice di byte a una variabile.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT SetValue(  
    [in] ULONG32 offset,  
    [in] DWORD threadID,  

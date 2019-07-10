@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ed13397748b2668c275b221e38bd75c0dd37f03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1935b831902e975616557f512789c339baf49c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969182"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776981"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>Metodo ISymUnmanagedReader::GetMethodFromDocumentPosition
 Restituisce il metodo che contiene il punto di interruzione in corrispondenza della posizione specificata in un documento.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetMethodFromDocumentPosition (  
     [in]  ISymUnmanagedDocument*  document,  
     [in]  ULONG32  line,  
