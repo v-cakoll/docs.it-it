@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35faeb69e864a428dc40394ad89a7d50b95bbcab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5781254b508887f2e76f6ca0eca6a2830ada172b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757664"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774010"
 ---
-# <a name="iinstallreferenceenum-interface"></a><span data-ttu-id="031c6-102">Interfaccia IInstallReferenceEnum</span><span class="sxs-lookup"><span data-stu-id="031c6-102">IInstallReferenceEnum Interface</span></span>
-<span data-ttu-id="031c6-103">Rappresenta un enumeratore per gli assembly di riferimento installato nella global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="031c6-103">Represents an enumerator for the referenced assemblies installed in the global assembly cache.</span></span>  
+# <a name="iinstallreferenceenum-interface"></a><span data-ttu-id="80eaf-102">Interfaccia IInstallReferenceEnum</span><span class="sxs-lookup"><span data-stu-id="80eaf-102">IInstallReferenceEnum Interface</span></span>
+<span data-ttu-id="80eaf-103">Rappresenta un enumeratore per gli assembly di riferimento installato nella global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="80eaf-103">Represents an enumerator for the referenced assemblies installed in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="031c6-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="031c6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80eaf-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="80eaf-104">Syntax</span></span>  
   
-```  
+```cpp  
 interface IInstallReferenceEnum : IUnknown {  
     HRESULT GetNextInstallReferenceItem (  
         [out] IInstallReferenceItem **ppRefItem,  
@@ -38,20 +38,20 @@ interface IInstallReferenceEnum : IUnknown {
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="031c6-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="031c6-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="80eaf-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="80eaf-105">Methods</span></span>  
   
-|<span data-ttu-id="031c6-106">Metodo</span><span class="sxs-lookup"><span data-stu-id="031c6-106">Method</span></span>|<span data-ttu-id="031c6-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="031c6-107">Description</span></span>|  
+|<span data-ttu-id="80eaf-106">Metodo</span><span class="sxs-lookup"><span data-stu-id="80eaf-106">Method</span></span>|<span data-ttu-id="80eaf-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="80eaf-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="031c6-108">Metodo GetNextInstallReferenceItem</span><span class="sxs-lookup"><span data-stu-id="031c6-108">GetNextInstallReferenceItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|<span data-ttu-id="031c6-109">Ottiene un puntatore al successivo `IInstallReferenceItem` contenuti in questo `IInstallReferenceEnum`.</span><span class="sxs-lookup"><span data-stu-id="031c6-109">Gets a pointer to the next `IInstallReferenceItem` contained in this `IInstallReferenceEnum`.</span></span>|  
+|[<span data-ttu-id="80eaf-108">Metodo GetNextInstallReferenceItem</span><span class="sxs-lookup"><span data-stu-id="80eaf-108">GetNextInstallReferenceItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|<span data-ttu-id="80eaf-109">Ottiene un puntatore al successivo `IInstallReferenceItem` contenuti in questo `IInstallReferenceEnum`.</span><span class="sxs-lookup"><span data-stu-id="80eaf-109">Gets a pointer to the next `IInstallReferenceItem` contained in this `IInstallReferenceEnum`.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="031c6-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="031c6-110">Requirements</span></span>  
- <span data-ttu-id="031c6-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="031c6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80eaf-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="80eaf-110">Requirements</span></span>  
+ <span data-ttu-id="80eaf-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80eaf-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="031c6-112">**Intestazione:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="031c6-112">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="80eaf-112">**Intestazione:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="80eaf-112">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="031c6-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="031c6-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="80eaf-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80eaf-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="031c6-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="031c6-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="80eaf-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="80eaf-114">See also</span></span>
 
-- [<span data-ttu-id="031c6-115">Interfacce Fusion</span><span class="sxs-lookup"><span data-stu-id="031c6-115">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [<span data-ttu-id="031c6-116">Interfaccia IInstallReferenceItem</span><span class="sxs-lookup"><span data-stu-id="031c6-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [<span data-ttu-id="80eaf-115">Interfacce Fusion</span><span class="sxs-lookup"><span data-stu-id="80eaf-115">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="80eaf-116">Interfaccia IInstallReferenceItem</span><span class="sxs-lookup"><span data-stu-id="80eaf-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)

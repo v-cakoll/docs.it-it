@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63afd82ca88e1a7c61913ec7fcc4d77d03ae9927
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caec760cea52cb14d3fdb5d4cf0b59adcae5633b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777936"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782509"
 ---
-# <a name="imetadataimportfindmember-method"></a><span data-ttu-id="0cc55-102">Metodo IMetaDataImport::FindMember</span><span class="sxs-lookup"><span data-stu-id="0cc55-102">IMetaDataImport::FindMember Method</span></span>
-<span data-ttu-id="0cc55-103">Ottiene un puntatore al MemberDef token per campo o un metodo che è racchiuso da specificato <xref:System.Type> e avente il nome e i metadati della firma specificata.</span><span class="sxs-lookup"><span data-stu-id="0cc55-103">Gets a pointer to the MemberDef token for field or method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.</span></span>  
+# <a name="imetadataimportfindmember-method"></a><span data-ttu-id="66d7e-102">Metodo IMetaDataImport::FindMember</span><span class="sxs-lookup"><span data-stu-id="66d7e-102">IMetaDataImport::FindMember Method</span></span>
+<span data-ttu-id="66d7e-103">Ottiene un puntatore al MemberDef token per campo o un metodo che è racchiuso da specificato <xref:System.Type> e avente il nome e i metadati della firma specificata.</span><span class="sxs-lookup"><span data-stu-id="66d7e-103">Gets a pointer to the MemberDef token for field or method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0cc55-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0cc55-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="66d7e-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="66d7e-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT FindMember (  
    [in]  mdTypeDef         td,  
    [in]  LPCWSTR           szName,   
@@ -39,42 +39,42 @@ HRESULT FindMember (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0cc55-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="0cc55-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="66d7e-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="66d7e-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="0cc55-106">[in] Il token TypeDef per la classe o interfaccia che include il membro da cercare.</span><span class="sxs-lookup"><span data-stu-id="0cc55-106">[in] The TypeDef token for the class or interface that encloses the member to search for.</span></span> <span data-ttu-id="0cc55-107">Se questo valore è `mdTokenNil`, la ricerca viene eseguita per una variabile globale o una funzione globale.</span><span class="sxs-lookup"><span data-stu-id="0cc55-107">If this value is `mdTokenNil`, the lookup is done for a global-variable or global-function.</span></span>  
+ <span data-ttu-id="66d7e-106">[in] Il token TypeDef per la classe o interfaccia che include il membro da cercare.</span><span class="sxs-lookup"><span data-stu-id="66d7e-106">[in] The TypeDef token for the class or interface that encloses the member to search for.</span></span> <span data-ttu-id="66d7e-107">Se questo valore è `mdTokenNil`, la ricerca viene eseguita per una variabile globale o una funzione globale.</span><span class="sxs-lookup"><span data-stu-id="66d7e-107">If this value is `mdTokenNil`, the lookup is done for a global-variable or global-function.</span></span>  
   
  `szName`  
- <span data-ttu-id="0cc55-108">[in] Il nome del membro da cercare.</span><span class="sxs-lookup"><span data-stu-id="0cc55-108">[in] The name of the member to search for.</span></span>  
+ <span data-ttu-id="66d7e-108">[in] Il nome del membro da cercare.</span><span class="sxs-lookup"><span data-stu-id="66d7e-108">[in] The name of the member to search for.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="0cc55-109">[in] Un puntatore per la firma binaria dei metadati del membro.</span><span class="sxs-lookup"><span data-stu-id="0cc55-109">[in] A pointer to the binary metadata signature of the member.</span></span>  
+ <span data-ttu-id="66d7e-109">[in] Un puntatore per la firma binaria dei metadati del membro.</span><span class="sxs-lookup"><span data-stu-id="66d7e-109">[in] A pointer to the binary metadata signature of the member.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="0cc55-110">[in] La dimensione in byte di `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="0cc55-110">[in] The size in bytes of `pvSigBlob`.</span></span>  
+ <span data-ttu-id="66d7e-110">[in] La dimensione in byte di `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="66d7e-110">[in] The size in bytes of `pvSigBlob`.</span></span>  
   
  `pmb`  
- <span data-ttu-id="0cc55-111">[out] Puntatore al token MemberDef corrispondente.</span><span class="sxs-lookup"><span data-stu-id="0cc55-111">[out] A pointer to the matching MemberDef token.</span></span>  
+ <span data-ttu-id="66d7e-111">[out] Puntatore al token MemberDef corrispondente.</span><span class="sxs-lookup"><span data-stu-id="66d7e-111">[out] A pointer to the matching MemberDef token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0cc55-112">Note</span><span class="sxs-lookup"><span data-stu-id="0cc55-112">Remarks</span></span>  
- <span data-ttu-id="0cc55-113">Si specifica il membro utilizzando la classe o interfaccia contenitore (`td`), il relativo nome (`szName`) e facoltativamente la firma (`pvSigBlob`).</span><span class="sxs-lookup"><span data-stu-id="0cc55-113">You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).</span></span> <span data-ttu-id="0cc55-114">Potrebbero essere presenti più membri con lo stesso nome in una classe o interfaccia.</span><span class="sxs-lookup"><span data-stu-id="0cc55-114">There might be multiple members with the same name in a class or interface.</span></span> <span data-ttu-id="0cc55-115">In tal caso, passare la firma del membro per trovare una corrispondenza univoca.</span><span class="sxs-lookup"><span data-stu-id="0cc55-115">In that case, pass the member's signature to find the unique match.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="66d7e-112">Note</span><span class="sxs-lookup"><span data-stu-id="66d7e-112">Remarks</span></span>  
+ <span data-ttu-id="66d7e-113">Si specifica il membro utilizzando la classe o interfaccia contenitore (`td`), il relativo nome (`szName`) e facoltativamente la firma (`pvSigBlob`).</span><span class="sxs-lookup"><span data-stu-id="66d7e-113">You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).</span></span> <span data-ttu-id="66d7e-114">Potrebbero essere presenti più membri con lo stesso nome in una classe o interfaccia.</span><span class="sxs-lookup"><span data-stu-id="66d7e-114">There might be multiple members with the same name in a class or interface.</span></span> <span data-ttu-id="66d7e-115">In tal caso, passare la firma del membro per trovare una corrispondenza univoca.</span><span class="sxs-lookup"><span data-stu-id="66d7e-115">In that case, pass the member's signature to find the unique match.</span></span>  
   
- <span data-ttu-id="0cc55-116">La firma è passato a `FindMember` deve essere stata generata nell'ambito corrente, in quanto le firme sono associate a un particolare ambito.</span><span class="sxs-lookup"><span data-stu-id="0cc55-116">The signature passed to `FindMember` must have been generated in the current scope, because signatures are bound to a particular scope.</span></span> <span data-ttu-id="0cc55-117">Una firma possibile incorporare un token che identifica il tipo di classe o valore di inclusione.</span><span class="sxs-lookup"><span data-stu-id="0cc55-117">A signature can embed a token that identifies the enclosing class or value type.</span></span> <span data-ttu-id="0cc55-118">Il token è un indice nella tabella di TypeDef locale.</span><span class="sxs-lookup"><span data-stu-id="0cc55-118">The token is an index into the local TypeDef table.</span></span> <span data-ttu-id="0cc55-119">Non è possibile generare una firma in fase di esecuzione all'esterno del contesto dell'ambito corrente e usare come input a quella firma `FindMember`.</span><span class="sxs-lookup"><span data-stu-id="0cc55-119">You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMember`.</span></span>  
+ <span data-ttu-id="66d7e-116">La firma è passato a `FindMember` deve essere stata generata nell'ambito corrente, in quanto le firme sono associate a un particolare ambito.</span><span class="sxs-lookup"><span data-stu-id="66d7e-116">The signature passed to `FindMember` must have been generated in the current scope, because signatures are bound to a particular scope.</span></span> <span data-ttu-id="66d7e-117">Una firma possibile incorporare un token che identifica il tipo di classe o valore di inclusione.</span><span class="sxs-lookup"><span data-stu-id="66d7e-117">A signature can embed a token that identifies the enclosing class or value type.</span></span> <span data-ttu-id="66d7e-118">Il token è un indice nella tabella di TypeDef locale.</span><span class="sxs-lookup"><span data-stu-id="66d7e-118">The token is an index into the local TypeDef table.</span></span> <span data-ttu-id="66d7e-119">Non è possibile generare una firma in fase di esecuzione all'esterno del contesto dell'ambito corrente e usare come input a quella firma `FindMember`.</span><span class="sxs-lookup"><span data-stu-id="66d7e-119">You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMember`.</span></span>  
   
- <span data-ttu-id="0cc55-120">`FindMember` Trova solo i membri che sono stati definiti direttamente nella classe o interfaccia. i membri ereditati non viene trovato.</span><span class="sxs-lookup"><span data-stu-id="0cc55-120">`FindMember` finds only members that were defined directly in the class or interface; it does not find inherited members.</span></span>  
+ <span data-ttu-id="66d7e-120">`FindMember` Trova solo i membri che sono stati definiti direttamente nella classe o interfaccia. i membri ereditati non viene trovato.</span><span class="sxs-lookup"><span data-stu-id="66d7e-120">`FindMember` finds only members that were defined directly in the class or interface; it does not find inherited members.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0cc55-121">`FindMember` è un metodo helper.</span><span class="sxs-lookup"><span data-stu-id="0cc55-121">`FindMember` is a helper method.</span></span> <span data-ttu-id="0cc55-122">Viene chiamato [FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); se tale chiamata non trova una corrispondenza `FindMember` quindi chiama [FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).</span><span class="sxs-lookup"><span data-stu-id="0cc55-122">It calls [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); if that call does not find a match, `FindMember` then calls [IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).</span></span>  
+>  <span data-ttu-id="66d7e-121">`FindMember` è un metodo helper.</span><span class="sxs-lookup"><span data-stu-id="66d7e-121">`FindMember` is a helper method.</span></span> <span data-ttu-id="66d7e-122">Viene chiamato [FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); se tale chiamata non trova una corrispondenza `FindMember` quindi chiama [FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).</span><span class="sxs-lookup"><span data-stu-id="66d7e-122">It calls [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); if that call does not find a match, `FindMember` then calls [IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0cc55-123">Requisiti</span><span class="sxs-lookup"><span data-stu-id="0cc55-123">Requirements</span></span>  
- <span data-ttu-id="0cc55-124">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0cc55-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="66d7e-123">Requisiti</span><span class="sxs-lookup"><span data-stu-id="66d7e-123">Requirements</span></span>  
+ <span data-ttu-id="66d7e-124">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="66d7e-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0cc55-125">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="0cc55-125">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="66d7e-125">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="66d7e-125">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0cc55-126">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="0cc55-126">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="66d7e-126">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="66d7e-126">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="0cc55-127">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0cc55-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="66d7e-127">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="66d7e-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0cc55-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0cc55-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="66d7e-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="66d7e-128">See also</span></span>
 
-- [<span data-ttu-id="0cc55-129">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="0cc55-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="0cc55-130">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="0cc55-130">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="66d7e-129">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="66d7e-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="66d7e-130">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="66d7e-130">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

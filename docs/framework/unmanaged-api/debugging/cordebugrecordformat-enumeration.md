@@ -12,47 +12,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: add1458bb3a50a5e5433e8cc7baaf47d750c927d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: adb13688791cd7d8f467780da1895d4f9fe6e990
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645708"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739639"
 ---
-# <a name="cordebugrecordformat-enumeration"></a><span data-ttu-id="ff34d-102">Enumerazione CorDebugRecordFormat</span><span class="sxs-lookup"><span data-stu-id="ff34d-102">CorDebugRecordFormat Enumeration</span></span>
-<span data-ttu-id="ff34d-103">Descrive il formato dei dati in una matrice di byte che contiene informazioni su un evento di debug per le eccezioni native.</span><span class="sxs-lookup"><span data-stu-id="ff34d-103">Describes the format of the data in a byte array that contains information about a native exception debug event.</span></span>  
+# <a name="cordebugrecordformat-enumeration"></a><span data-ttu-id="eecb7-102">Enumerazione CorDebugRecordFormat</span><span class="sxs-lookup"><span data-stu-id="eecb7-102">CorDebugRecordFormat Enumeration</span></span>
+<span data-ttu-id="eecb7-103">Descrive il formato dei dati in una matrice di byte che contiene informazioni su un evento di debug per le eccezioni native.</span><span class="sxs-lookup"><span data-stu-id="eecb7-103">Describes the format of the data in a byte array that contains information about a native exception debug event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff34d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ff34d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eecb7-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="eecb7-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorDebugRecordFormat {  
     FORMAT_WINDOWS_EXCEPTIONRECORD32 = 1,  
     FORMAT_WINDOWS_EXCEPTIONRECORD64 = 2,  
 } CorDebugRecordFormat;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ff34d-105">Membri</span><span class="sxs-lookup"><span data-stu-id="ff34d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="eecb7-105">Membri</span><span class="sxs-lookup"><span data-stu-id="eecb7-105">Members</span></span>  
   
-|<span data-ttu-id="ff34d-106">Member</span><span class="sxs-lookup"><span data-stu-id="ff34d-106">Member</span></span>|<span data-ttu-id="ff34d-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ff34d-107">Description</span></span>|  
+|<span data-ttu-id="eecb7-106">Member</span><span class="sxs-lookup"><span data-stu-id="eecb7-106">Member</span></span>|<span data-ttu-id="eecb7-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="eecb7-107">Description</span></span>|  
 |------------|-----------------|  
-|`FORMAT_WINDOWS_EXCEPTIONRECORD32`|<span data-ttu-id="ff34d-108">I dati corrispondono a un record di eccezione Windows a 32 bit.</span><span class="sxs-lookup"><span data-stu-id="ff34d-108">The data is a 32-bit Windows exception record.</span></span>|  
-|`FORMAT_WINDOWS_EXCEPTIONRECORD64`|<span data-ttu-id="ff34d-109">I dati corrispondono a un record di eccezione Windows a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="ff34d-109">The data is a 64-bit Windows exception record.</span></span>|  
+|`FORMAT_WINDOWS_EXCEPTIONRECORD32`|<span data-ttu-id="eecb7-108">I dati corrispondono a un record di eccezione Windows a 32 bit.</span><span class="sxs-lookup"><span data-stu-id="eecb7-108">The data is a 32-bit Windows exception record.</span></span>|  
+|`FORMAT_WINDOWS_EXCEPTIONRECORD64`|<span data-ttu-id="eecb7-109">I dati corrispondono a un record di eccezione Windows a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="eecb7-109">The data is a 64-bit Windows exception record.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ff34d-110">Note</span><span class="sxs-lookup"><span data-stu-id="ff34d-110">Remarks</span></span>  
- <span data-ttu-id="ff34d-111">Un membro del `CorDebugRecordFormat` enumerazione viene passata al [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) metodo per indicare il formato della matrice di byte nella relativa `pRecord` argomento.</span><span class="sxs-lookup"><span data-stu-id="ff34d-111">A member of the `CorDebugRecordFormat` enumeration is passed to the [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) method to indicate the format of the byte array in its `pRecord` argument.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="eecb7-110">Note</span><span class="sxs-lookup"><span data-stu-id="eecb7-110">Remarks</span></span>  
+ <span data-ttu-id="eecb7-111">Un membro del `CorDebugRecordFormat` enumerazione viene passata al [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) metodo per indicare il formato della matrice di byte nella relativa `pRecord` argomento.</span><span class="sxs-lookup"><span data-stu-id="eecb7-111">A member of the `CorDebugRecordFormat` enumeration is passed to the [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) method to indicate the format of the byte array in its `pRecord` argument.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ff34d-112">Questa enumerazione è progettata per l'uso solo in scenari di debug di .NET Native.</span><span class="sxs-lookup"><span data-stu-id="ff34d-112">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
+>  <span data-ttu-id="eecb7-112">Questa enumerazione è progettata per l'uso solo in scenari di debug di .NET Native.</span><span class="sxs-lookup"><span data-stu-id="eecb7-112">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ff34d-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ff34d-113">Requirements</span></span>  
- <span data-ttu-id="ff34d-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ff34d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eecb7-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="eecb7-113">Requirements</span></span>  
+ <span data-ttu-id="eecb7-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eecb7-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ff34d-115">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ff34d-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="eecb7-115">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eecb7-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ff34d-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ff34d-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="eecb7-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eecb7-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ff34d-117">**Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ff34d-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="eecb7-117">**Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eecb7-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ff34d-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ff34d-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eecb7-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="eecb7-118">See also</span></span>
 
-- [<span data-ttu-id="ff34d-119">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="ff34d-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="eecb7-119">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="eecb7-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

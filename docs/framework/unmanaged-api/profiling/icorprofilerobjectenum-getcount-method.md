@@ -17,39 +17,39 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8466de39f2f2769fec332290c187ecba396d7d56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f08b3d9634362d47615fe14287ab9ec35e78ee65
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597413"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775051"
 ---
-# <a name="icorprofilerobjectenumgetcount-method"></a><span data-ttu-id="86a97-102">Metodo ICorProfilerObjectEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="86a97-102">ICorProfilerObjectEnum::GetCount Method</span></span>
-<span data-ttu-id="86a97-103">Ottiene il numero totale di oggetti bloccati nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="86a97-103">Gets the total number of frozen objects in the collection.</span></span>  
+# <a name="icorprofilerobjectenumgetcount-method"></a><span data-ttu-id="eedb3-102">Metodo ICorProfilerObjectEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="eedb3-102">ICorProfilerObjectEnum::GetCount Method</span></span>
+<span data-ttu-id="eedb3-103">Ottiene il numero totale di oggetti bloccati nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="eedb3-103">Gets the total number of frozen objects in the collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="86a97-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="86a97-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eedb3-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="eedb3-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetCount (  
     [out] ULONG   *pcelt  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="86a97-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="86a97-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eedb3-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="eedb3-105">Parameters</span></span>  
  `pcelt`  
- <span data-ttu-id="86a97-106">[out] Puntatore al numero di oggetti bloccati nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="86a97-106">[out] A pointer to the number of frozen objects in the collection.</span></span>  
+ <span data-ttu-id="eedb3-106">[out] Puntatore al numero di oggetti bloccati nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="eedb3-106">[out] A pointer to the number of frozen objects in the collection.</span></span>  
   
- <span data-ttu-id="86a97-107">Questo metodo restituirà sempre uguale a zero in .NET Framework versione 3.5 Service Pack 1 (SP1) e versioni successive.</span><span class="sxs-lookup"><span data-stu-id="86a97-107">This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.</span></span>  
+ <span data-ttu-id="eedb3-107">Questo metodo restituirà sempre uguale a zero in .NET Framework versione 3.5 Service Pack 1 (SP1) e versioni successive.</span><span class="sxs-lookup"><span data-stu-id="eedb3-107">This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="86a97-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="86a97-108">Requirements</span></span>  
- <span data-ttu-id="86a97-109">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="86a97-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eedb3-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="eedb3-108">Requirements</span></span>  
+ <span data-ttu-id="eedb3-109">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eedb3-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="86a97-110">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="86a97-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="eedb3-110">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="eedb3-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="86a97-111">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="86a97-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="eedb3-111">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eedb3-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="86a97-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86a97-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="eedb3-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eedb3-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="86a97-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="86a97-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eedb3-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="eedb3-113">See also</span></span>
 
-- [<span data-ttu-id="86a97-114">Interfaccia ICorProfilerObjectEnum</span><span class="sxs-lookup"><span data-stu-id="86a97-114">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+- [<span data-ttu-id="eedb3-114">Interfaccia ICorProfilerObjectEnum</span><span class="sxs-lookup"><span data-stu-id="eedb3-114">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

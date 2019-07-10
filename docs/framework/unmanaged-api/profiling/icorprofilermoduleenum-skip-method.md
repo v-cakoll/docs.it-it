@@ -17,47 +17,47 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 397e8afcc176bcd9733e83dc6425fe49f385931e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eecb2a5da9dddaccbab7fcc6d74af6e4c6bfb72c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598188"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775136"
 ---
-# <a name="icorprofilermoduleenumskip-method"></a><span data-ttu-id="4cdb5-102">Metodo ICorProfilerModuleEnum::Skip</span><span class="sxs-lookup"><span data-stu-id="4cdb5-102">ICorProfilerModuleEnum::Skip Method</span></span>
-<span data-ttu-id="4cdb5-103">Sposta in avanti il cursore dell'enumeratore dalla posizione corrente, in modo che venga ignorato il numero specificato di elementi.</span><span class="sxs-lookup"><span data-stu-id="4cdb5-103">Advances the enumerator's cursor from its current position so that the specified number of elements are skipped.</span></span>  
+# <a name="icorprofilermoduleenumskip-method"></a><span data-ttu-id="0470c-102">Metodo ICorProfilerModuleEnum::Skip</span><span class="sxs-lookup"><span data-stu-id="0470c-102">ICorProfilerModuleEnum::Skip Method</span></span>
+<span data-ttu-id="0470c-103">Sposta in avanti il cursore dell'enumeratore dalla posizione corrente, in modo che venga ignorato il numero specificato di elementi.</span><span class="sxs-lookup"><span data-stu-id="0470c-103">Advances the enumerator's cursor from its current position so that the specified number of elements are skipped.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4cdb5-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4cdb5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0470c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0470c-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Skip([in] ULONG celt);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4cdb5-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="4cdb5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0470c-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="0470c-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="4cdb5-106">[in] Il numero di elementi da ignorare.</span><span class="sxs-lookup"><span data-stu-id="4cdb5-106">[in] The number of elements to be skipped.</span></span>  
+ <span data-ttu-id="0470c-106">[in] Il numero di elementi da ignorare.</span><span class="sxs-lookup"><span data-stu-id="0470c-106">[in] The number of elements to be skipped.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4cdb5-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="4cdb5-107">Return Value</span></span>  
- <span data-ttu-id="4cdb5-108">Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.</span><span class="sxs-lookup"><span data-stu-id="4cdb5-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0470c-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="0470c-107">Return Value</span></span>  
+ <span data-ttu-id="0470c-108">Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.</span><span class="sxs-lookup"><span data-stu-id="0470c-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="4cdb5-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4cdb5-109">HRESULT</span></span>|<span data-ttu-id="4cdb5-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4cdb5-110">Description</span></span>|  
+|<span data-ttu-id="0470c-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0470c-109">HRESULT</span></span>|<span data-ttu-id="0470c-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0470c-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="4cdb5-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="4cdb5-111">S_OK</span></span>|<span data-ttu-id="4cdb5-112">`celt` gli elementi sono stati ignorati.</span><span class="sxs-lookup"><span data-stu-id="4cdb5-112">`celt` elements were skipped.</span></span>|  
-|<span data-ttu-id="4cdb5-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="4cdb5-113">S_FALSE</span></span>|<span data-ttu-id="4cdb5-114">Meno di `celt` elementi sono stati ignorati, che indica che non sono presenti più elementi.</span><span class="sxs-lookup"><span data-stu-id="4cdb5-114">Fewer than `celt` elements were skipped, which indicates that there are no more elements.</span></span>|  
+|<span data-ttu-id="0470c-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="0470c-111">S_OK</span></span>|<span data-ttu-id="0470c-112">`celt` gli elementi sono stati ignorati.</span><span class="sxs-lookup"><span data-stu-id="0470c-112">`celt` elements were skipped.</span></span>|  
+|<span data-ttu-id="0470c-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="0470c-113">S_FALSE</span></span>|<span data-ttu-id="0470c-114">Meno di `celt` elementi sono stati ignorati, che indica che non sono presenti più elementi.</span><span class="sxs-lookup"><span data-stu-id="0470c-114">Fewer than `celt` elements were skipped, which indicates that there are no more elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4cdb5-115">Note</span><span class="sxs-lookup"><span data-stu-id="4cdb5-115">Remarks</span></span>  
- <span data-ttu-id="4cdb5-116">La nuova posizione del cursore dell'enumeratore, questa viene (posizione corrente) + `celt`.</span><span class="sxs-lookup"><span data-stu-id="4cdb5-116">The new position of this enumerator's cursor is (current position) + `celt`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0470c-115">Note</span><span class="sxs-lookup"><span data-stu-id="0470c-115">Remarks</span></span>  
+ <span data-ttu-id="0470c-116">La nuova posizione del cursore dell'enumeratore, questa viene (posizione corrente) + `celt`.</span><span class="sxs-lookup"><span data-stu-id="0470c-116">The new position of this enumerator's cursor is (current position) + `celt`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4cdb5-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4cdb5-117">Requirements</span></span>  
- <span data-ttu-id="4cdb5-118">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4cdb5-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0470c-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="0470c-117">Requirements</span></span>  
+ <span data-ttu-id="0470c-118">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0470c-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4cdb5-119">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4cdb5-119">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0470c-119">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0470c-119">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="4cdb5-120">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4cdb5-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0470c-120">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0470c-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4cdb5-121">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4cdb5-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="0470c-121">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0470c-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4cdb5-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4cdb5-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0470c-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0470c-122">See also</span></span>
 
-- [<span data-ttu-id="4cdb5-123">Interfaccia ICorProfilerModuleEnum</span><span class="sxs-lookup"><span data-stu-id="4cdb5-123">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [<span data-ttu-id="4cdb5-124">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="4cdb5-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="0470c-123">Interfaccia ICorProfilerModuleEnum</span><span class="sxs-lookup"><span data-stu-id="0470c-123">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
+- [<span data-ttu-id="0470c-124">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="0470c-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -17,21 +17,21 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0fb35f5d7fec0c79a31cd8d7b77cf2b1c043f60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d5b82415635980f5bd4e13e87a0a03ec5b7032bb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986076"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777333"
 ---
-# <a name="isymunmanagedwriterdefineparameter-method"></a><span data-ttu-id="51b8e-102">Metodo ISymUnmanagedWriter::DefineParameter</span><span class="sxs-lookup"><span data-stu-id="51b8e-102">ISymUnmanagedWriter::DefineParameter Method</span></span>
-<span data-ttu-id="51b8e-103">Definisce un singolo parametro nel metodo corrente.</span><span class="sxs-lookup"><span data-stu-id="51b8e-103">Defines a single parameter in the current method.</span></span> <span data-ttu-id="51b8e-104">Il tipo di parametro deriva dalla posizione del parametro (sequenza) all'interno di firma del metodo.</span><span class="sxs-lookup"><span data-stu-id="51b8e-104">The parameter type is taken from the parameter's position (sequence) within the method's signature.</span></span>  
+# <a name="isymunmanagedwriterdefineparameter-method"></a><span data-ttu-id="64946-102">Metodo ISymUnmanagedWriter::DefineParameter</span><span class="sxs-lookup"><span data-stu-id="64946-102">ISymUnmanagedWriter::DefineParameter Method</span></span>
+<span data-ttu-id="64946-103">Definisce un singolo parametro nel metodo corrente.</span><span class="sxs-lookup"><span data-stu-id="64946-103">Defines a single parameter in the current method.</span></span> <span data-ttu-id="64946-104">Il tipo di parametro deriva dalla posizione del parametro (sequenza) all'interno di firma del metodo.</span><span class="sxs-lookup"><span data-stu-id="64946-104">The parameter type is taken from the parameter's position (sequence) within the method's signature.</span></span>  
   
- <span data-ttu-id="51b8e-105">Se i parametri vengono definiti nei metadati per un determinato metodo, non è necessario definire nuovamente utilizzando questo metodo.</span><span class="sxs-lookup"><span data-stu-id="51b8e-105">If parameters are defined in the metadata for a given method, you do not have to define them again by using this method.</span></span> <span data-ttu-id="51b8e-106">I reader di simboli devono controllare i metadati normale per i parametri prima di controllare l'archivio dei simboli.</span><span class="sxs-lookup"><span data-stu-id="51b8e-106">The symbol readers must check the normal metadata for the parameters before checking the symbol store.</span></span>  
+ <span data-ttu-id="64946-105">Se i parametri vengono definiti nei metadati per un determinato metodo, non è necessario definire nuovamente utilizzando questo metodo.</span><span class="sxs-lookup"><span data-stu-id="64946-105">If parameters are defined in the metadata for a given method, you do not have to define them again by using this method.</span></span> <span data-ttu-id="64946-106">I reader di simboli devono controllare i metadati normale per i parametri prima di controllare l'archivio dei simboli.</span><span class="sxs-lookup"><span data-stu-id="64946-106">The symbol readers must check the normal metadata for the parameters before checking the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51b8e-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="51b8e-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="64946-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="64946-107">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT DefineParameter(  
     [in] const WCHAR  *name,  
     [in] ULONG32      attributes,  
@@ -42,34 +42,34 @@ HRESULT DefineParameter(
     [in] ULONG32      addr3);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="51b8e-108">Parametri</span><span class="sxs-lookup"><span data-stu-id="51b8e-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="64946-108">Parametri</span><span class="sxs-lookup"><span data-stu-id="64946-108">Parameters</span></span>  
  `name`  
- <span data-ttu-id="51b8e-109">[in] Il nome del parametro.</span><span class="sxs-lookup"><span data-stu-id="51b8e-109">[in] The parameter name.</span></span>  
+ <span data-ttu-id="64946-109">[in] Il nome del parametro.</span><span class="sxs-lookup"><span data-stu-id="64946-109">[in] The parameter name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="51b8e-110">[in] Gli attributi del parametro.</span><span class="sxs-lookup"><span data-stu-id="51b8e-110">[in] The parameter attributes.</span></span>  
+ <span data-ttu-id="64946-110">[in] Gli attributi del parametro.</span><span class="sxs-lookup"><span data-stu-id="64946-110">[in] The parameter attributes.</span></span>  
   
  `sequence`  
- <span data-ttu-id="51b8e-111">[in] Firma del parametro.</span><span class="sxs-lookup"><span data-stu-id="51b8e-111">[in] The parameter signature.</span></span>  
+ <span data-ttu-id="64946-111">[in] Firma del parametro.</span><span class="sxs-lookup"><span data-stu-id="64946-111">[in] The parameter signature.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="51b8e-112">[in] Il tipo di indirizzo.</span><span class="sxs-lookup"><span data-stu-id="51b8e-112">[in] The address type.</span></span>  
+ <span data-ttu-id="64946-112">[in] Il tipo di indirizzo.</span><span class="sxs-lookup"><span data-stu-id="64946-112">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="51b8e-113">[in] Il primo indirizzo relativo al parametro specificato.</span><span class="sxs-lookup"><span data-stu-id="51b8e-113">[in] The first address for the parameter specification.</span></span>  
+ <span data-ttu-id="64946-113">[in] Il primo indirizzo relativo al parametro specificato.</span><span class="sxs-lookup"><span data-stu-id="64946-113">[in] The first address for the parameter specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="51b8e-114">[in] Il secondo indirizzo relativo al parametro specificato.</span><span class="sxs-lookup"><span data-stu-id="51b8e-114">[in] The second address for the parameter specification.</span></span>  
+ <span data-ttu-id="64946-114">[in] Il secondo indirizzo relativo al parametro specificato.</span><span class="sxs-lookup"><span data-stu-id="64946-114">[in] The second address for the parameter specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="51b8e-115">[in] Terzo indirizzo relativo al parametro specificato.</span><span class="sxs-lookup"><span data-stu-id="51b8e-115">[in] The third address for the parameter specification.</span></span>  
+ <span data-ttu-id="64946-115">[in] Terzo indirizzo relativo al parametro specificato.</span><span class="sxs-lookup"><span data-stu-id="64946-115">[in] The third address for the parameter specification.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="51b8e-116">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="51b8e-116">Return Value</span></span>  
- <span data-ttu-id="51b8e-117">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="51b8e-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="64946-116">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="64946-116">Return Value</span></span>  
+ <span data-ttu-id="64946-117">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="64946-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="51b8e-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="51b8e-118">Requirements</span></span>  
- <span data-ttu-id="51b8e-119">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="51b8e-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="64946-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="64946-118">Requirements</span></span>  
+ <span data-ttu-id="64946-119">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="64946-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="51b8e-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="51b8e-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="64946-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="64946-120">See also</span></span>
 
-- [<span data-ttu-id="51b8e-121">Interfaccia ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="51b8e-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="64946-121">Interfaccia ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="64946-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
