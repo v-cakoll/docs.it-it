@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0200ad36490efc546daebfa93904676b0af7684
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3da22faa5e8863275cdfa8d03b980a5cbb55e87d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490520"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758356"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>Funzione CorMarkThreadInThreadPool
 Contrassegna il thread del pool di thread attualmente in esecuzione per l'esecuzione di codice gestito. A partire da .NET Framework versione 2.0, questa funzione ha alcun effetto. Non è obbligatorio e possono essere rimossi dal codice. Questa funzione è obsoleta in .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void CorMarkThreadInThreadPool ();  
 ```  
   
