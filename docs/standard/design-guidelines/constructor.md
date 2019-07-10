@@ -9,23 +9,23 @@ helpviewer_keywords:
 - type constructors
 - virtual members
 - constructors, types
-- default constructors
+- parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 author: KrzysztofCwalina
-ms.openlocfilehash: 68192e3b75a120c73b82c34005d4dee650540bf3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 074aa391b71257584a01171e95da7472354cdc2c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925463"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746785"
 ---
 # <a name="constructor-design"></a>Progettazione di costruttori
 Esistono due tipi di costruttori: digitare costruttori e i costruttori di istanza.  
   
  I costruttori di tipi sono statici e vengono eseguiti da CLR prima che venga utilizzato il tipo. Costruttori di istanza eseguire quando viene creata un'istanza di un tipo.  
   
- I costruttori di tipi non accettano alcun parametro. Costruttori di istanza possono. Costruttori di istanze che non accettano alcun parametro spesso vengono chiamati i costruttori predefiniti.  
+ I costruttori di tipi non accettano alcun parametro. Costruttori di istanza possono. Costruttori di istanze che non accettano alcun parametro vengono spesso definiti costruttori senza parametri.  
   
  I costruttori sono il modo più semplice per creare istanze di un tipo. La maggior parte degli sviluppatori saranno ricerca e provare a usare un costruttore prima che essi prendere in considerazione modi alternativi per la creazione di istanze (ad esempio, metodi factory).  
   
@@ -49,15 +49,15 @@ Esistono due tipi di costruttori: digitare costruttori e i costruttori di istanz
   
  **✓ DO** generare eccezioni da costruttori di istanza, se appropriato.  
   
- **✓ DO** dichiarare in modo esplicito il costruttore predefinito pubblico nelle classi, se tale costruttore è obbligatorio.  
+ **Segno di spunta si** dichiarare in modo esplicito il costruttore pubblico senza parametri nelle classi, se tale costruttore è obbligatorio.  
   
- Se si non dichiarano alcun costruttore in modo esplicito su un tipo, molti linguaggi (ad esempio, c#) aggiungerà automaticamente un costruttore predefinito pubblico. (Le classi astratte ottenere un costruttore protetto).  
+ Se si non dichiarare costruttori in modo esplicito su un tipo, molti linguaggi (ad esempio C#) verrà aggiunto automaticamente un costruttore pubblico senza parametri. (Le classi astratte ottenere un costruttore protetto).  
   
- Aggiunta di un costruttore con parametri a una classe impedisce al compilatore di aggiungere il costruttore predefinito. Ciò spesso causa modifiche di rilievo accidentale.  
+ Aggiunta di un costruttore con parametri a una classe impedisce al compilatore di aggiungere il costruttore senza parametri. Ciò spesso causa modifiche di rilievo accidentale.  
   
- **X AVOID** definire in modo esplicito i costruttori predefiniti sulle strutture.  
+ **X evitare** definirne esplicitamente costruttori senza parametri in struct.  
   
- In questo modo la creazione della matrice meno tempo, in quanto se non è definito il costruttore predefinito, non deve essere eseguito su ogni slot nella matrice. Si noti che molti compilatori, tra cui c#, non consentano strutture possono avere costruttori senza parametri per questo motivo.  
+ In questo modo la creazione della matrice meno tempo, in quanto se non è definito il costruttore senza parametri, non deve essere eseguito su ogni slot nella matrice. Si noti che molti compilatori, tra cui c#, non consentano strutture possono avere costruttori senza parametri per questo motivo.  
   
  **X AVOID** chiamare membri virtuali su un oggetto all'interno di relativo costruttore.  
   

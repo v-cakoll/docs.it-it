@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: d871ca5dfd62dbca309f4ccc3dcedf959033a41e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79c4e0ed99a068d7d806d5c25580dc477aac6475
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986557"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752635"
 ---
 # <a name="ixclrdataprocessstartenummodules-method"></a>Metodo IXCLRDataProcess::StartEnumModules
 
@@ -30,7 +30,7 @@ Fornisce un handle per enumerare i moduli di un processo.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 HRESULT StartEnumModules(
     [out] CLRDATA_ENUM *handle
 );

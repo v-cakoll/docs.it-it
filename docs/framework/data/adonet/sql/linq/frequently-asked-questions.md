@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 68d4215129cf4481beb2d8561c1569b3049a287e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 07801ee7bfbb32540880cdc8599e5b69797b09f9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610576"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743547"
 ---
 # <a name="frequently-asked-questions"></a>Domande frequenti
 Nelle sezioni seguenti vengono fornite le risposte ad alcuni problemi comuni che possono verificarsi durante l'implementazione di [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -53,7 +53,7 @@ Nelle sezioni seguenti vengono fornite le risposte ad alcuni problemi comuni che
  Un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornisce molti strumenti per controllare il codice SQL generato. Uno dei più importanti è <xref:System.Data.Linq.DataContext.Log%2A>. Per altre informazioni, vedere [supporto per il debug](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
 ## <a name="unexpected-stored-procedure-results"></a>Risultati imprevisti delle stored procedure  
- D. Il valore restituito di una stored procedure viene calcolato da `MAX()`. Quando si trascina la stored procedure nell'area della [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)], il valore restituito non è corretto.  
+ D. Il valore restituito di una stored procedure viene calcolato da `MAX()`. Quando trascina la stored procedure all'area di Progettazione relazionale oggetti, il valore restituito non è corretto.  
   
  Un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornisce due modalità per restituire i valori generati dal database tramite le stored procedure:  
   
@@ -107,7 +107,7 @@ Nelle sezioni seguenti vengono fornite le risposte ad alcuni problemi comuni che
 ## <a name="multiple-dbml-files"></a>Più file DBML  
  D. Quando si dispone di più file DBML che condividono alcune tabelle, si verifica un errore del compilatore.  
   
- Un Impostare il **Namespace di contesto** e **Entity Namespace** le proprietà dal [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] su un valore distinto per ogni file DBML. Questo approccio elimina il conflitto di nome/spazio dei nomi.  
+ Un Impostare il **Namespace di contesto** e **Entity Namespace** proprietà da Progettazione relazionale oggetti su un valore distinto per ogni file DBML. Questo approccio elimina il conflitto di nome/spazio dei nomi.  
   
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Come evitare l'impostazione esplicita dei valori generati dal database nelle operazioni di inserimento o aggiornamento  
  D. Quando in una tabella di database con una colonna `DateCreated` la cui impostazione predefinita è SQL `Getdate()` si tenta di inserire un nuovo record usando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], il valore viene impostato su `NULL` anziché sul valore predefinito del database.  
@@ -134,10 +134,10 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="errors-using-sql-compact-35"></a>Errori durante l'uso di SQL Compact 3.5  
  D. Viene visualizzato un errore quando si trascinano le tabelle da un database di SQL Server Compact 3.5.  
   
- Un Il [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] non supporta SQL Server Compact 3.5, anche se il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supportato dal runtime. In questa situazione, è necessario creare classi dell'entità personalizzate e aggiungere gli attributi adatti.  
+ Un Object Relational Designer non supporta SQL Server Compact 3.5, anche se il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supportato dal runtime. In questa situazione, è necessario creare classi dell'entità personalizzate e aggiungere gli attributi adatti.  
   
 ## <a name="errors-in-inheritance-relationships"></a>Errori nelle relazioni di ereditarietà  
- D. Quando si usa la forma di ereditarietà della casella degli strumenti nella [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per connettere due entità, si verificano errori.  
+ D. Ho utilizzato la forma di ereditarietà della casella degli strumenti in Object Relational Designer per connettere due entità, ma si verificano errori.  
   
  Un Non è sufficiente creare la relazione. È necessario fornire informazioni quali la colonna del discriminatore, il valore del discriminatore della classe base e il valore del discriminatore della classe derivata.  
   
@@ -163,7 +163,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3. Esaminare il valore <xref:System.Data.Linq.Mapping.UpdateCheck> predefinito (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) per determinare se questo valore è corretto per l'applicazione.  
   
     > [!CAUTION]
-    >  Se si usa il [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] in Visual Studio, possono essere sovrascritte le modifiche.  
+    >  Se si usa Progettazione relazionale oggetti in Visual Studio, le modifiche potrebbero essere sovrascritte.  
   
 ## <a name="aptca"></a>APTCA  
  D. System.Data.Linq è contrassegnato per l'uso da codice parzialmente attendibile?  

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7e807b502e0905f9ae785203289447c71d25e04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8093a702069e4ecd4dad761ad0a431abe81d6141
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041020"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780416"
 ---
 # <a name="strongnamehashsize-function"></a>Funzione StrongNameHashSize
 Ottiene le dimensioni del buffer necessarie per un hash usando l'algoritmo hash specificato.  
@@ -30,7 +30,7 @@ Ottiene le dimensioni del buffer necessarie per un hash usando l'algoritmo hash 
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 BOOLEAN StrongNameHashSize (  
     [in]  ULONG   ulHashAlg,  
     [out] DWORD   *pcbSize  

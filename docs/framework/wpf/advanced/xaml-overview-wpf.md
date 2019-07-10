@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: e0d277eb039c1fb1668f292d83ab9e7dbe4be70e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457546"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762331"
 ---
 # <a name="xaml-overview-wpf"></a>Cenni preliminari su XAML (WPF)
 Questo argomento descrive le funzionalità del linguaggio XAML e ne illustra l'uso per la scrittura di applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. In particolare descrive il linguaggio XAML implementato in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Il linguaggio XAML in quanto tale, tuttavia, rappresenta un concetto di linguaggio più ampio rispetto a quello implementato in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -64,7 +64,7 @@ Questo argomento descrive le funzionalità del linguaggio XAML e ne illustra l'u
 ### <a name="property-element-syntax"></a>Sintassi per elementi proprietà  
  Per alcune proprietà di un elemento oggetto, non si può usare la sintassi per attributi in quanto non è possibile esprimere l'oggetto o le informazioni necessarie per indicare il valore di proprietà in modo adeguato tra virgolette e nel rispetto delle limitazioni della stringa della sintassi di attributo. In questi casi, è possibile usare una sintassi diversa, nota come sintassi per elementi proprietà.  
   
- La sintassi per il tag di inizio dell'elemento proprietà è `<` *nomeTipo*`.`*nomeProprietà*`>`. Il contenuto di tale tag è in genere un elemento oggetto del tipo accettato come valore dalla proprietà. Dopo avere specificato il contenuto, è necessario chiudere l'elemento proprietà con un tag di fine. La sintassi per il tag di fine è `</` *nomeTipo*`.`*nomeProprietà*`>`.  
+ La sintassi per il tag di inizio dell'elemento proprietà è `<` *nomeTipo*`.`*nomeProprietà*`>`. In genere, il contenuto del tag è un elemento oggetto del tipo che accetta la proprietà come relativo valore. Dopo aver specificato il contenuto, è necessario chiudere l'elemento proprietà con un tag di fine. La sintassi per il tag di fine è `</` *nomeTipo*`.`*nomeProprietà*`>`.  
   
  Se supportata, la sintassi per attributi è in genere più efficace e consente un markup più compatto. Si tratta tuttavia di una questione di stile e non di un limite tecnico. L'esempio seguente mostra le stesse proprietà impostate nell'esempio di sintassi per attributi precedente, tuttavia questa volta viene usata la sintassi per elementi proprietà per tutte le proprietà dell'oggetto `Button`.  
   
@@ -208,7 +208,7 @@ Questo argomento descrive le funzionalità del linguaggio XAML e ne illustra l'u
  L'implementazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] del relativo processore XAML include un'infrastruttura che rileva gli assembly principali WPF. Gli assembly principali [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contengono notoriamente i tipi che supportano i mapping [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] allo spazio dei nomi XAML predefinito. Ciò è consentito tramite la configurazione inclusa nel file di compilazione del progetto e nei sistemi di compilazione e del progetto WPF. La dichiarazione dello spazio dei nomi XAML predefinito come `xmlns` predefinito è pertanto l'unica operazione necessaria per fare riferimento a elementi XAML provenienti da assembly [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ### <a name="the-x-prefix"></a>Il prefisso x:  
- L'esempio di elemento radice precedente usa il prefisso `x:` per eseguire il mapping dello spazio dei nomi XAML [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)] , che è lo spazio dei nomi XAML dedicato che supporta costrutti di linguaggio XAML. Il prefisso `x:` viene usato per il mapping di questo spazio dei nomi XAML nei modelli per i progetti, negli esempi e nella documentazione in tutto l'[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. Lo spazio dei nomi XAML per il linguaggio XAML contiene diversi costrutti di programmazione che verranno usati molto frequentemente in XAML. Di seguito viene presentato un elenco dei più comuni costrutti di programmazione del prefisso `x:` che verranno usati:  
+ L'esempio di elemento radice precedente usa il prefisso `x:` per eseguire il mapping dello spazio dei nomi XAML [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)] , che è lo spazio dei nomi XAML dedicato che supporta costrutti di linguaggio XAML. Il prefisso `x:` viene usato per il mapping di questo spazio dei nomi XAML nei modelli per i progetti, negli esempi e nella documentazione in tutto l'[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. Lo spazio dei nomi XAML per il linguaggio XAML contiene diversi costrutti di programmazione che verranno usati molto frequentemente nel XAML. Di seguito viene presentato un elenco dei più comuni costrutti di programmazione del prefisso `x:` che verranno usati:  
   
 - [x:Key](../../xaml-services/x-key-directive.md): Imposta una chiave univoca per ogni risorsa in un <xref:System.Windows.ResourceDictionary> (o i concetti di dizionario simili in altri framework). `x:Key` sarà coinvolto probabilmente nel 90% degli usi di `x:` osservati nel markup di un'applicazione WPF tipica.  
   

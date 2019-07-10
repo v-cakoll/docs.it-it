@@ -2,17 +2,17 @@
 title: Stored procedure
 ms.date: 03/30/2017
 ms.assetid: 4d23dd7a-a85f-44ff-a717-af7d0950c0fc
-ms.openlocfilehash: 9201965192f300de62679c1e5be75cf98a24e700
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b06dc19aa8b767da6a1c6b00bd5b465465db6060
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917943"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742844"
 ---
 # <a name="stored-procedures"></a>Stored procedure
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Usa i metodi nel modello a oggetti per rappresentare le stored procedure nel database. Per definire metodi come stored procedure, applicare l'attributo <xref:System.Data.Linq.Mapping.FunctionAttribute> quindi, dove richiesto, l'attributo <xref:System.Data.Linq.Mapping.ParameterAttribute>. Per altre informazioni, vedere [LINQ al modello a oggetti SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
   
- Gli sviluppatori che usano Visual Studio Usa in genere il [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per eseguire il mapping di stored procedure. Negli argomenti elencati in questa sezione viene illustrato come formare e chiamare questi metodi nell'applicazione quando si scrive codice personalizzato.  
+ Gli sviluppatori che usano Visual Studio Usa in genere Object Relational Designer per eseguire il mapping di stored procedure. Negli argomenti elencati in questa sezione viene illustrato come formare e chiamare questi metodi nell'applicazione quando si scrive codice personalizzato.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Restituiscono set di righe](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11748d3ad99c4050045cce3786eec5604c02ac0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6094bbedcc5386d3f5c0400960e47ac91defe2a1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777832"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782451"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>Metodo IMetaDataImport::GetClassLayout
 Ottiene le informazioni sul layout per la classe a cui fa riferimento il token TypeDef specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetClassLayout  (   
    [in]  mdTypeDef          td,   
    [out] DWORD              *pdwPackSize,  

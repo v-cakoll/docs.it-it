@@ -8,15 +8,15 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-ms.openlocfilehash: 9d8515b6d5b0caf3552ed05a7e0cd4a271efaf54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 098ca95687d8b0e9f4ac90d5c7e0df9a9a0ad950
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608346"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760370"
 ---
 # <a name="addressof-operator-visual-basic"></a>Operatore AddressOf (Visual Basic)
-Crea un'istanza di delegato di routine che fa riferimento la procedura specifica.  
+Crea un'istanza di delegato che fa riferimento la procedura specifica.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,7 +29,7 @@ AddressOf procedurename
  Obbligatorio. Specifica la routine a cui fa riferimento il delegato appena creato.  
   
 ## <a name="remarks"></a>Note  
- Il `AddressOf` operatore crea un delegato della funzione che fa riferimento alla funzione specificata da `procedurename`. Quando la procedura specificata è che un metodo di istanza, quindi il delegato della funzione fa riferimento a sia l'istanza del metodo. Quindi, quando viene richiamato il delegato della funzione viene chiamato il metodo specificato dell'istanza specificata.  
+ Il `AddressOf` operatore crea un delegato che fa riferimento a sub o function specificato da `procedurename`. Quando la procedura specificata è che un metodo di istanza, quindi il delegato fa riferimento a sia l'istanza del metodo. Quindi, quando viene richiamato il delegato viene chiamato il metodo specificato dell'istanza specificata.  
   
  Il `AddressOf` operatore può essere usato come operando di un costruttore di delegato o può essere usato in un contesto in cui il tipo del delegato può essere determinato dal compilatore.  
   

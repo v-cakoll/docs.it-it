@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a50a799c625c647aa275994bc92738b8a4267eec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbed34f53ff43ca7887a58b3c879eaa74703da3e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782720"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744756"
 ---
 # <a name="icordebugremote-interface"></a>Interfaccia ICorDebugRemote
 Consente di avviare o allegare un debugger gestito a un processo di destinazione remoto.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 interface ICorDebugRemote : IUnknown  
 {  
     HRESULT CreateProcessEx  

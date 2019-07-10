@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8ba8a762c56a666c67b25b9ce0420099fce419a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 057bae1d702fa091ebc3d3178c9fba35d5dd3d90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044161"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777648"
 ---
 # <a name="imetadataemitdefinefield-method"></a>Metodo IMetaDataEmit::DefineField
 Crea una definizione per un campo con la firma dei metadati specificati e ottiene un token per tale definizione di campo.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT DefineField (   
     [in]  mdTypeDef   td,   
     [in]  LPCWSTR     szName,   

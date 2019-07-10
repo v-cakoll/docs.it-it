@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a94673b4be4d15edaaf54c22f90723216c8bc10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2da8f5326bcd7f2c25c79027bb8a980e7d17e72
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700059"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751192"
 ---
 # <a name="icorthreadpoolcorregisterwaitforsingleobject-method"></a>Metodo ICorThreadpool::CorRegisterWaitForSingleObject
 Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT CorRegisterWaitForSingleObject (  
     [in]  HANDLE*             phNewWaitObject,  
     [in]  HANDLE              hWaitObject,  
