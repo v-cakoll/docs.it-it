@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: a0b78afb653d3a47fa12b856de730131e5f8448e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c91fecf9e786f4a8e35486e7b30e9efe36c972e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606419"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771652"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Procedura dettagliata: Disposizione dei controlli in Windows Forms usando le guide di allineamento
 Per molte applicazioni è estremamente importante la sistemazione precisa dei controlli nel form. Finestra di progettazione Windows Form offre molti strumenti di layout per eseguire questa operazione. Uno dei più importanti è la <xref:System.Windows.Forms.Design.Behavior.SnapLine> funzionalità.  
@@ -53,7 +53,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
 ## <a name="creating-the-project"></a>Creazione del progetto  
  Il primo passaggio consiste nella creazione del progetto e nella configurazione del form.  
   
-#### <a name="to-create-the-project"></a>Per creare il progetto  
+### <a name="to-create-the-project"></a>Per creare il progetto  
   
 1. Creare un progetto di applicazione basata su Windows denominato "SnaplineExample" (**File** > **New** > **progetto**  >  **Visual c#** oppure **Visual Basic** > **Desktop classico** > **Windows Forms Application**).  
   
@@ -62,7 +62,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
 ## <a name="spacing-and-aligning-controls-using-snaplines"></a>La spaziatura e allineamento dei controlli con guide di allineamento  
  Le guide di allineamento offrono un modo intuitivo e accurato per allineare i controlli sul form. Vengono visualizzate quando si sposta uno o più controlli selezionati quasi una posizione che sarà allineata con un altro controllo o set di controlli. La selezione verrà "bloccata" per la posizione consigliata quando si sposta oltre agli altri controlli.  
   
-#### <a name="to-arrange-controls-using-snaplines"></a>Per disporre i controlli usando le guide di allineamento  
+### <a name="to-arrange-controls-using-snaplines"></a>Per disporre i controlli usando le guide di allineamento  
   
 1. Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** al form.  
   
@@ -85,7 +85,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
 ## <a name="aligning-to-form-and-container-margins"></a>Allineamento al Form e i margini di contenitore  
  Le guide di allineamento consentono di allineare i controlli ai margini del form e contenitori in modo coerente.  
   
-#### <a name="to-align-controls-to-form-and-container-margins"></a>Per allineare i controlli per i margini di form e contenitori  
+### <a name="to-align-controls-to-form-and-container-margins"></a>Per allineare i controlli per i margini di form e contenitori  
   
 1. Selezionare una del <xref:System.Windows.Forms.Button> controlla e spostarlo vicino al bordo destro del form fino a quando non viene visualizzata una Guida di allineamento. Distanza della Guida di allineamento tra il bordo destro è la somma del controllo <xref:System.Windows.Forms.Control.Margin%2A> proprietà e il form <xref:System.Windows.Forms.Control.Padding%2A> i valori delle proprietà.  
   
@@ -107,7 +107,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
 ## <a name="aligning-to-grouped-controls"></a>Allineamento a controlli raggruppati  
  È possibile usare le guide di allineamento per allineare i controlli raggruppati nonché i controlli all'interno di un <xref:System.Windows.Forms.GroupBox> controllo.  
   
-#### <a name="to-align-to-grouped-controls"></a>In modo da allinearsi ai controlli raggruppati  
+### <a name="to-align-to-grouped-controls"></a>In modo da allinearsi ai controlli raggruppati  
   
 1. Selezionare due dei controlli sul form. Spostare la selezione e le guide di allineamento che appaiono tra la selezione e degli altri controlli.  
   
@@ -120,7 +120,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
 ## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a>Usando le guide di allineamento per posizionare un controllo definendo la dimensione  
  Le guide di allineamento consentono di che allineare controlla quando è prima di tutto inserirli in un form.  
   
-#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>Usare le guide di allineamento per inserire un controllo definendo la dimensione  
+### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>Usare le guide di allineamento per inserire un controllo definendo la dimensione  
   
 1. Nella **Casella degli strumenti**fare clic sull'icona del controllo <xref:System.Windows.Forms.Button> . Non trascinarla nel form.  
   
@@ -137,7 +137,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
 ## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a>Usando le guide di allineamento quando si trascina un controllo dalla casella degli strumenti  
  Consentono di guide di allineamento allineare i controlli quando si trascina il **casella degli strumenti** nel form.  
   
-#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>Usare le guide di allineamento quando si trascina un controllo dalla casella degli strumenti  
+### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>Usare le guide di allineamento quando si trascina un controllo dalla casella degli strumenti  
   
 1. Trascinare un <xref:System.Windows.Forms.Button> controllare dal **della casella degli strumenti** nel form, ma non rilasciare il pulsante del mouse.  
   
@@ -150,7 +150,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
 ## <a name="resizing-controls-using-snaplines"></a>Ridimensionamento di controlli con guide di allineamento  
  Le guide di allineamento consentono di allineare i controlli durante il ridimensionamento.  
   
-#### <a name="to-resize-a-control-using-snaplines"></a>Per ridimensionare un controllo usando le guide di allineamento  
+### <a name="to-resize-a-control-using-snaplines"></a>Per ridimensionare un controllo usando le guide di allineamento  
   
 1. Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** al form.  
   
@@ -163,7 +163,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
 ## <a name="aligning-a-label-to-a-controls-text"></a>Allineare un'etichetta di testo di un controllo  
  Alcuni controlli offrono una Guida di allineamento per allineare il testo visualizzato degli altri controlli.  
   
-#### <a name="to-align-a-label-to-a-controls-text"></a>Per allineare un'etichetta di testo di un controllo  
+### <a name="to-align-a-label-to-a-controls-text"></a>Per allineare un'etichetta di testo di un controllo  
   
 1. Trascinare un controllo <xref:System.Windows.Forms.TextBox> dalla **Casella degli strumenti** al form. Quando si rilascia il <xref:System.Windows.Forms.TextBox> sul form, fare clic sul glifo smart tag e selezionare il **impostare il testo da textBox1** opzione. Per informazioni dettagliate, vedere [procedura dettagliata: Esecuzione di attività comuni usando gli Smart tag nei Windows Form controlli](performing-common-tasks-using-smart-tags-on-wf-controls.md).  
   
@@ -178,7 +178,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
 ## <a name="using-snaplines-with-keyboard-navigation"></a>Usando le guide di allineamento con navigazione tramite tastiera  
  Le guide di allineamento consentono di che allineare controlla quando vengono disposti con i tasti della tastiera.  
   
-#### <a name="to-use-snaplines-with-keyboard-navigation"></a>Usare le guide di allineamento con navigazione tramite tastiera  
+### <a name="to-use-snaplines-with-keyboard-navigation"></a>Usare le guide di allineamento con navigazione tramite tastiera  
   
 1. Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** al form. Inserirlo nell'angolo superiore sinistro del form.  
   
@@ -199,7 +199,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
 ## <a name="snaplines-and-layout-panels"></a>Le guide di allineamento e i pannelli di Layout  
  Le guide di allineamento sono disabilitate in altri pannelli layout.  
   
-#### <a name="to-selectively-disable-snaplines"></a>Per disabilitare in modo selettivo le guide di allineamento  
+### <a name="to-selectively-disable-snaplines"></a>Per disabilitare in modo selettivo le guide di allineamento  
   
 1. Trascinare un controllo <xref:System.Windows.Forms.TableLayoutPanel> dalla **Casella degli strumenti** al form.  
   
@@ -214,13 +214,13 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
 ## <a name="disabling-snaplines"></a>La disabilitazione delle guide di allineamento  
  Le guide di allineamento viene attivate per impostazione predefinita. È possibile disabilitare le guide di allineamento in modo selettivo, oppure è possibile disabilitarli nell'ambiente di progettazione.  
   
-#### <a name="to-selectively-disable-snaplines"></a>Per disabilitare in modo selettivo le guide di allineamento  
+### <a name="to-selectively-disable-snaplines"></a>Per disabilitare in modo selettivo le guide di allineamento  
   
 - Premere il tasto ALT mentre si sposta un controllo nel form.  
   
      Si noti che delle guide di allineamento vengono visualizzati il controllo non viene bloccato in qualsiasi posizione di allineamento potenziali.  
   
-#### <a name="to-disable-snaplines-in-the-design-environment"></a>Per disabilitare le guide di allineamento nell'ambiente di progettazione  
+### <a name="to-disable-snaplines-in-the-design-environment"></a>Per disabilitare le guide di allineamento nell'ambiente di progettazione  
   
 1. Dal **Tools** menu, aprire il **opzioni** nella finestra di dialogo. Aprire la finestra di dialogo di progettazione di Windows Form. Per informazioni dettagliate, vedere [generale, finestra di progettazione Windows Form, finestra di dialogo Opzioni](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)).  
   

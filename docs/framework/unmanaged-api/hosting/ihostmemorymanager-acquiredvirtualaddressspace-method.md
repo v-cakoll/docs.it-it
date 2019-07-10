@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4675c34bfe8d1d79c184c43e5f7f5dd3a03be6a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 423fbfc2bda9d3544a5c32b6cd650643209f0e86
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935668"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767237"
 ---
 # <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a>Metodo IHostMemoryManager::AcquiredVirtualAddressSpace
 Notifica all'host che common language runtime (CLR) ha acquisito la memoria specificata dal sistema operativo.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT AcquiredVirtualAddressSpace(  
     [in] LPVOID  startAddress,  
     [in] SIZE_T  size  

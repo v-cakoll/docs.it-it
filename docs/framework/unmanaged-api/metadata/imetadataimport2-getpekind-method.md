@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9dda1fb38546138d52b5fe61754d5497e676c37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91c80566ed284403ad559583a1e4f1025eb09985
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777416"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755324"
 ---
 # <a name="imetadataimport2getpekind-method"></a>Metodo IMetaDataImport2::GetPEKind
 Ottiene un valore che identifica la natura del codice nel file eseguibile portabile (PE) di file, in genere un file DLL o EXE, definito nell'ambito dei metadati corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetPEKind (  
    [out] DWORD *pdwPEKind,  
    [out] DWORD *pdwMachine  

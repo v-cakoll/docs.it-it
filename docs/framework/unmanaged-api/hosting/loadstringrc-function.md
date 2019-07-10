@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d985ed3b7af2aec7da709c3bbbfd10312e5e3a9
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9047bf973224cdbc1f67463ef70f15f81089f827
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490197"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768462"
 ---
 # <a name="loadstringrc-function"></a>Funzione LoadStringRC
 Converte un valore HRESULT in un messaggio di errore usando le impostazioni cultura predefinite del thread corrente.  
@@ -30,7 +30,7 @@ Converte un valore HRESULT in un messaggio di errore usando le impostazioni cult
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT LoadStringRC (  
     [in]  UINT    iResourceID,   
     [out] LPWSTR  szBuffer,   

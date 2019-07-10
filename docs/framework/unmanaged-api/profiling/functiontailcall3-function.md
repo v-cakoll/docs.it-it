@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 979b3401cbf13761bc5b58b4d8734dfa5e83ec49
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aec2304e00d5328fcf55adbf5521c08865c05c56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586760"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763298"
 ---
 # <a name="functiontailcall3-function"></a>Funzione FunctionTailcall3
 Notifica al profiler che la funzione attualmente in esecuzione sta per effettuare una chiamata tail ad un'altra funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);  
 ```  
   

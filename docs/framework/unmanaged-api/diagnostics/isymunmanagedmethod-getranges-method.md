@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94ca1db2bf85f42117f686a8cb483907003927c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef5a98d510eee8942a2cad0525b6902e3e4eaa52
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939594"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769380"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>Metodo ISymUnmanagedMethod::GetRanges
 Data una posizione in un documento, restituisce una matrice di coppie di offset iniziale e finale che corrispondono agli intervalli di Microsoft intermediate language (MSIL) che la posizione all'interno del metodo. La matrice è una matrice di interi e ha il formato [inizio, fine, inizio, fine]. Il numero di coppie di intervallo è la lunghezza della matrice divisa per 2.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetRanges(  
     [in]  ISymUnmanagedDocument* document,  
     [in]  ULONG32                line,  

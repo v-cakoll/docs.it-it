@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdacb454783cfb8f90ea5a73807f0a199e16475d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c4fa79f4918412720592bce449a001a349ae657
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927858"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766559"
 ---
 # <a name="igchostcollect-method"></a>Metodo IGCHost::Collect
 Forza una raccolta Garbage Collection per la generazione specificata, indipendentemente dallo stato di garbage collection corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT Collect (  
     [in] LONG Generation  
 );  

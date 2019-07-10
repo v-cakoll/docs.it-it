@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54abd54662d4e99881dddf15876b596a4a705f70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00ad48dfe57d388653a9151393dd7b91a28a9615
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638879"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770018"
 ---
 # <a name="iclroneventmanagerunregisteractiononevent-method"></a>Metodo ICLROnEventManager::UnregisterActionOnEvent
 Annulla la registrazione di un puntatore di callback registrato in precedenza per l'evento specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT UnregisterActionOnEvent (  
     [in] EClrEvent event,  
     [in] IActionOnCLREvent *pAction  

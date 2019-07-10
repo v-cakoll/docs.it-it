@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a179b68e2196eeadc712ae8f7d023b2943533335
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10a5247632f242a4b4e0d33cf7fa7233d1b1e13b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995852"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754206"
 ---
 # <a name="icordebugframegetcallee-method"></a>Metodo ICorDebugFrame::GetCallee
 Ottiene un puntatore all'oggetto ICorDebugFrame nella catena che ha chiamato il frame corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetCallee (  
     [out] ICorDebugFrame     **ppFrame  
 );  
