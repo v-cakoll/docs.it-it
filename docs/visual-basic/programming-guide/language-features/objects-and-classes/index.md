@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dd2968f7ab528fa07ef0c5af85f2a7f07147a76e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591562"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755158"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Oggetti e classi in Visual Basic
 
@@ -28,7 +28,7 @@ Per comprendere la relazione esistente tra un oggetto e la classe di appartenenz
 
 Per poter accedere ai membri di un oggetto, è prima necessario creare l'oggetto stesso.
 
-#### <a name="to-create-an-object-from-a-class"></a>Per creare un oggetto da una classe
+### <a name="to-create-an-object-from-a-class"></a>Per creare un oggetto da una classe
 
 1. Scegliere la classe da cui si vuole creare un oggetto.
 
@@ -135,7 +135,7 @@ I membri dichiarati con la parola chiave `Shared` sono *membri condivisi*. Quest
 
 #### <a name="accessing-nonshared-members"></a>Accesso a membri non condivisi
 
-###### <a name="to-access-a-nonshared-member-of-an-object"></a>Per accedere a un membro non condiviso di un oggetto
+##### <a name="to-access-a-nonshared-member-of-an-object"></a>Per accedere a un membro non condiviso di un oggetto
 
 1. Verificare che l'oggetto sia stato creato a partire dalla relativa classe e che sia stato assegnato a una variabile oggetto.
 
@@ -151,7 +151,7 @@ I membri dichiarati con la parola chiave `Shared` sono *membri condivisi*. Quest
 
 #### <a name="accessing-shared-members"></a>Accesso a membri condivisi
 
-###### <a name="to-access-a-shared-member-of-an-object"></a>Per accedere a un membro condiviso di un oggetto
+##### <a name="to-access-a-shared-member-of-an-object"></a>Per accedere a un membro condiviso di un oggetto
 
 - Inserire il nome della classe, quindi l'*operatore di accesso ai membri* (`.`) e infine il nome del membro. È necessario accedere sempre a un membro `Shared` dell'oggetto tramite il nome della classe.
 
@@ -204,7 +204,7 @@ Se sono presenti classi di maggiore importanza e classi da esse derivate, tra le
 
 Nell'esempio seguente, si supponga di voler definire un tipo speciale di classe <xref:System.Windows.Forms.Button> che si comporti come una classe <xref:System.Windows.Forms.Button> normale ma che allo stesso tempo esponga un metodo per invertire i colori di sfondo e di primo piano.
 
-##### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Per definire una classe come derivata da una classe già esistente
+#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Per definire una classe come derivata da una classe già esistente
 
 1. Usare un'[istruzione Class](../../../../visual-basic/language-reference/statements/class-statement.md) per definire una classe dalla quale creare l'oggetto necessario.
 
@@ -239,7 +239,7 @@ Nell'esempio seguente, si supponga di voler definire un tipo speciale di classe 
 
 Le classi derivate ereditano i membri della classe su cui sono basate, consentendo di raggiungere una maggiore complessità mano a mano che si avanza nella gerarchia. Per altre informazioni, vedere [Nozioni fondamentali sull'ereditarietà](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).
 
-#### <a name="compiling-the-code"></a>Compilazione del codice
+### <a name="compiling-the-code"></a>Compilazione del codice
 
 Verificare che il compilatore possa accedere alla classe da cui si vuole derivare la nuova classe. A tale scopo è possibile fornire il nome completo della classe, come nell'esempio precedente, oppure specificare il relativo spazio dei nomi in un'[istruzione Imports (tipo e spazio dei nomi .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Se la classe si trova in un progetto differente, può essere necessario aggiungere un riferimento a tale progetto. Per altre informazioni, vedere [Gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project).
 

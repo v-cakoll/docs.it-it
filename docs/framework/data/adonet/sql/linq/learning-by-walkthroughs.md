@@ -2,18 +2,18 @@
 title: Apprendimento tramite procedure dettagliate
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: d5c8457bc1e484d3c7c2b57225261a3ef74023d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6b5f77d6d918ae1402074c9c3037ccadec8ac02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582915"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743026"
 ---
 # <a name="learning-by-walkthroughs"></a>Apprendimento tramite procedure dettagliate
 Il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentazione vengono fornite diverse procedure dettagliate. In questo argomento vengono discussi alcuni problemi generali relativi alle procedure, inclusa la risoluzione dei problemi, e vengono forniti i collegamenti a diverse procedure dettagliate di base per acquisire familiarità con [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 > [!NOTE]
->  Nelle procedure dettagliate disponibili in questa sezione della Guida introduttiva viene esposto il codice di base che supporta la tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. In pratica, si useranno i progetti di [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] e Windows Form per implementare le applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Nella documentazione di [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] vengono forniti esempi e procedure dettagliate a questo scopo.  
+>  Nelle procedure dettagliate disponibili in questa sezione della Guida introduttiva viene esposto il codice di base che supporta la tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. In pratica, si useranno i progetti Windows Form e Object Relational Designer per implementare il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applicazioni. La documentazione di O/R Designer fornisce esempi e procedure dettagliate per questo scopo.  
   
 ## <a name="getting-started-walkthroughs"></a>Procedure dettagliate della Guida introduttiva  
  In questa sezione sono disponibili diverse procedure dettagliate basate sul database di esempio Northwind, in cui vengono presentate passo passo e con minime complessità le funzionalità di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -57,7 +57,7 @@ Il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 2. Nel riquadro sinistro della finestra di **Gestione configurazione SQL Server**, fare clic su **SQL Server 2005 Services**.  
   
-3. Nel riquadro di destra, fare doppio clic su **SQL Server (SQLEXPRESS)**, quindi fare clic su **proprietà**.  
+3. Nel riquadro di destra, fare doppio clic su **SQL Server (SQLEXPRESS)** , quindi fare clic su **proprietà**.  
   
 4. Fare clic sui **Accedi** scheda e verificare come si sta tentando di accedere al server.  
   
@@ -83,9 +83,9 @@ Il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 1. Nel riquadro sinistro della finestra di **Gestione configurazione SQL Server**, fare clic su **SQL Server 2005 Services**.  
   
-2. Nel riquadro di destra, fare doppio clic su **SQL Server (SQLEXPRESS)**, quindi fare clic su **arrestare**.  
+2. Nel riquadro di destra, fare doppio clic su **SQL Server (SQLEXPRESS)** , quindi fare clic su **arrestare**.  
   
-3. Fare doppio clic su **SQL Server (SQLEXPRESS)**, quindi fare clic su **riavviare**.  
+3. Fare doppio clic su **SQL Server (SQLEXPRESS)** , quindi fare clic su **riavviare**.  
   
 ## <a name="see-also"></a>Vedere anche
 

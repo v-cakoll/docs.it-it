@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: daf97f25b1adc30b173fcd81812a4b197915cdd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f5a596608719889e6440e5cd42dafb82abaa074
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775045"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753718"
 ---
 # <a name="corprfgcreason-enumeration"></a>Enumerazione COR_PRF_GC_REASON
 Indica il motivo per cui è in corso la Garbage Collection.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_GC_INDUCED = 1,  
     COR_PRF_GC_OTHER = 0  
