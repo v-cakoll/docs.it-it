@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67503994"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802307"
 ---
 # <a name="strings-c-programming-guide"></a>Stringhe (Guida per programmatori C#)
 Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. Internamente il testo viene archiviato come una raccolta di sola lettura sequenziale di oggetti <xref:System.Char>. Le stringhe C# non presentano un carattere di terminazione null alla fine, pertanto una stringa C# può contenere qualsiasi numero di caratteri null incorporati ('\0'). La proprietà <xref:System.String.Length%2A> di una stringa rappresenta il numero di oggetti `Char` in essa contenuti e non il numero di caratteri Unicode. Per accedere ai singoli punti di codice Unicode in una stringa usare l'oggetto <xref:System.Globalization.StringInfo>.  
@@ -62,10 +62,10 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
 |\n|Nuova riga|0x000A|  
 |\r|Ritorno a capo|0x000D|  
 |\t|Tabulazione orizzontale|0x0009|  
-|\U|Sequenza di escape Unicode (UTF-32)|`\U00nnnnnn` (ad esempio, `\U0001F47D` = "&#x1F47D;")|  
-|\u|Sequenza di escape Unicode (UTF-16)|`\unnnn` (ad esempio, `\u0041` = "A")|  
 |\v|Tabulazione verticale|0x000B|  
-|\x|Sequenza di escape Unicode simile a "\u", ma con lunghezza variabile|`\x0041` o `\x41` = "A"|  
+|\u|Sequenza di escape Unicode (UTF-16)|`\uHHHH` (range: 0000 - FFFF; ad esempio: `\u00E7` = "ç")|  
+|\U|Sequenza di escape Unicode (UTF-32)|`\U00HHHHHH` (range: 000000 - 10FFFF; ad esempio: `\U0001F47D` = "&#x1F47D;")|  
+|\x|Sequenza di escape Unicode simile a "\u", ma con lunghezza variabile|`\xH[H][H][H]` (range: 0 - FFFF; ad esempio: `\x00E7` o `\x0E7` o `\xE7` = "ç")|  
   
 > [!WARNING]
 >  Quando si usa la sequenza di escape `\x` e si specificano meno di 4 cifre esadecimali, se i caratteri immediatamente seguenti la sequenza di escape sono cifre esadecimali valide (ad esempio 0-9, A-F e a-f), questi verranno interpretati come parte della sequenza di escape. Ad esempio, `\xA1` produce "&#161;" che è il punto di codice U+00A1. Se tuttavia il carattere successivo è "A" oppure "a", la sequenza di escape verrà invece interpretata come `\xA1A` e produrrà "&#x0A1A;" che è il punto di codice U+0A1A. In questi casi, specificando tutte e 4 le cifre esadecimali (ad esempio, `\x00A1`) si eviteranno possibili interpretazioni errate.  

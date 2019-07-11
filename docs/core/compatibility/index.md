@@ -4,12 +4,12 @@ description: Informazioni sui modi in cui .NET Core tenta di garantire la compat
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: b58edd9ff0bd56b12b861162cc92d484a3b36c8b
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: c68a19b8b98a98bb9c64f5b9fa60b378935e6e93
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307549"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736566"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Valutare le modifiche che causano un'interruzione
 
@@ -107,7 +107,7 @@ Le modifiche di questa categoria *interessano* la superficie di attacco pubblica
 
 - **✔️ Aggiunta di un costruttore a una classe, insieme a un costruttore predefinito (senza parametri), se in precedenza la classe era priva di costruttori**
 
-   Non è tuttavia consentita l'aggiunta di un costruttore a una classe che in precedenza era priva di costruttori *senza* aggiungere il costruttore predefinito.
+   Non è tuttavia consentita l'aggiunta di un costruttore a una classe che in precedenza era priva di costruttori *senza* aggiungere il costruttore senza parametri.
 
 - **✔️ Modifica di un membro da [astratto](../../csharp/language-reference/keywords/abstract.md) a [virtuale](../../csharp/language-reference/keywords/virtual.md)**
 
@@ -174,7 +174,7 @@ Le modifiche di questa categoria *interessano* la superficie di attacco pubblica
 
   Questa modifica causa un'interruzione dei client esistenti associati all'overload precedente. Se, ad esempio, una classe dispone di una singola versione di un metodo che accetta uno struct <xref:System.UInt32>, un consumer esistente viene correttamente associato a tale overload quando viene passato un valore <xref:System.Int32>. Se tuttavia si aggiunge un overload che accetta uno struct <xref:System.Int32>, quando viene eseguita la ricompilazione o viene usata l'associazione tardiva, il compilatore stabilisce l'associazione con il nuovo overload. In caso di comportamento diverso, si tratta di una modifica che causa un'interruzione.
 
-- **❌ Aggiunta di un costruttore a una classe che in precedenza era priva di costruttori senza aggiungere il costruttore predefinito**
+- **❌ Aggiunta di un costruttore a una classe che in precedenza era priva di costruttori senza aggiungere il costruttore senza parametri**
 
 - **❌️ Aggiunta di [readonly](../../csharp/language-reference/keywords/readonly.md) a un campo**
 

@@ -2,13 +2,13 @@
 title: Esercitazioni di ML.NET
 description: Queste esercitazioni di ML.NET aiutano a creare soluzioni di intelligenza artificiale personalizzate e a integrarle nelle applicazioni .NET.
 ms.custom: seodec18
-ms.date: 04/05/2019
-ms.openlocfilehash: 4530e62a0ac8991f6ece37a0ad9909a4c4d08fe7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.date: 07/08/2019
+ms.openlocfilehash: 16311a892f9b1da5d6de10f52bec2ad9410966b7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401654"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777959"
 ---
 # <a name="mlnet-tutorials"></a>Esercitazioni di ML.NET 
 
@@ -20,6 +20,7 @@ Le esercitazioni seguenti consentono di comprendere l'uso di [ML.NET](../index.y
 - [Clustering Iris](iris-clustering.md): illustra come applicare un'attività di **clustering** usando ML.NET.
 - [Raccomandazione](movie-recommendation.md): generare le **raccomandazioni** per i film in base alle classificazioni degli utenti precedenti
 - [Classificazione delle immagini](image-classification.md): illustra come ripetere il training di un modello TensorFlow esistente per creare un classificatore di immagini personalizzato usando ML.NET.
+- [Rilevamento anomalie](sales-anomaly-detection.md): informazioni su come creare un'applicazione di rilevamento delle anomalie per l'analisi dei dati di vendita dei prodotti.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

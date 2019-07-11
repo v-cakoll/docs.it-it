@@ -214,12 +214,6 @@
               href: keywords/sizeof.md
             - name: nameof
               href: keywords/nameof.md
-        - name: Parole chiave di conversione
-          items:
-            - name: explicit
-              href: keywords/explicit.md
-            - name: implicit
-              href: keywords/implicit.md
         - name: Parole chiave per l'accesso
           items:
             - name: base
@@ -317,6 +311,9 @@
         - name: Operatori di conversione e di test del tipo
           href: operators/type-testing-and-conversion-operators.md
           displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), cast'
+        - name: Operatori di conversione definiti dall'utente
+          href: operators/user-defined-conversion-operators.md
+          displayName: 'implicit, explicit'
         - name: Operatori relativi al puntatore
           href: operators/pointer-related-operators.md
           displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
