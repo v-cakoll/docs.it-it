@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Esecuzione di query tra relazioni (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: d9233bc7501544fff04c1c9eae215bd981fa4bd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f36f618cfcb82847f6763641ee64565dcdedd919
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618019"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742642"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Procedura dettagliata: Esecuzione di query tra relazioni (C#)
 Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associazioni* per rappresentare le relazioni di chiave esterna nel database.  
@@ -31,7 +31,7 @@ Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdli
 ## <a name="mapping-relationships-across-tables"></a>Esecuzione del mapping delle relazioni tra tabelle  
  Dopo la definizione della classe `Customer`, creare la definizione della classe di entità `Order` includendo il codice seguente per indicare che `Order.Customer` è correlata come chiave esterna a `Customer.CustomerID`.  
   
-#### <a name="to-add-the-order-entity-class"></a>Per aggiungere la classe di entità Order  
+### <a name="to-add-the-order-entity-class"></a>Per aggiungere la classe di entità Order  
   
 - Digitare o incollare il codice seguente dopo la classe `Customer`:  
   
@@ -40,7 +40,7 @@ Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdli
 ## <a name="annotating-the-customer-class"></a>Annotazione della classe Customer  
  In questo passaggio vengono aggiunte annotazioni alla classe `Customer` per indicare la relazione alla classe `Order`. Questa aggiunta non è strettamente necessaria, in quanto la definizione della relazione in una direzione è sufficiente per creare il collegamento. Tuttavia aggiungendo l'annotazione sarà possibile spostarsi facilmente tra gli oggetti in entrambe le direzioni.  
   
-#### <a name="to-annotate-the-customer-class"></a>Per annotare la classe Customer  
+### <a name="to-annotate-the-customer-class"></a>Per annotare la classe Customer  
   
 - Digitare o incollare il codice seguente nella classe `Customer`:  
   
@@ -49,7 +49,7 @@ Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdli
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Creazione ed esecuzione di un query sulla relazione Customer-Order  
  A questo punto è possibile accedere direttamente agli oggetti `Order` dagli oggetti `Customer` o viceversa. Non è necessaria l'esplicita *join* tra customers e orders.  
   
-#### <a name="to-access-order-objects-by-using-customer-objects"></a>Per accedere agli oggetti Order usando oggetti Customer  
+### <a name="to-access-order-objects-by-using-customer-objects"></a>Per accedere agli oggetti Order usando oggetti Customer  
   
 1. Modificare il metodo `Main` digitando o incollando il codice seguente nel metodo stesso:  
   
@@ -67,7 +67,7 @@ Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdli
   
  Nei passaggi seguenti si creerà `Customers` come tabella fortemente tipizzata mappata alla tabella Customers nel database.  
   
-#### <a name="to-strongly-type-the-datacontext-object"></a>Per tipizzare fortemente l'oggetto DataContext  
+### <a name="to-strongly-type-the-datacontext-object"></a>Per tipizzare fortemente l'oggetto DataContext  
   
 1. Aggiungere il codice riportato di seguito sopra la dichiarazione della classe `Customer`.  
   
@@ -85,7 +85,7 @@ Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdli
   
 4. Premere INVIO nella finestra della console per terminare il debug.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Fasi successive  
  Procedura dettagliata seguente ([procedura dettagliata: Gestione dei dati (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) viene illustrato come modificare i dati. Per tale procedura dettagliata non è necessario avere salvato le due procedure dettagliate di questa serie già completate.  
   
 ## <a name="see-also"></a>Vedere anche

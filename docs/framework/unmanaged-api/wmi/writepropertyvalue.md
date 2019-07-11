@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a98103367f497b18f9b8fbd61a37abf9816b8356
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47120ff9de9e6e4802c5aea990841b235cd6c74c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040404"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783061"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue (funzione)
 Scrive un numero specificato di byte in una proprietà identificata da un handle di proprietà.
@@ -30,7 +30,7 @@ Scrive un numero specificato di byte in una proprietà identificata da un handle
     
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT WritePropertyValue (
    [in] int                  vFunc, 
    [in] IWbemObjectAccess*   ptr, 
@@ -61,7 +61,7 @@ HRESULT WritePropertyValue (
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Value  |Descrizione  |
+|Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parametro non è valido. |
 |`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Si è verificato un tipo non corrispondente. |
