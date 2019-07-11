@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 22db347afb45b981602d5a92516271f75b8e4359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 270b0f2123a20787a8e75d40f56a675c55824243
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648684"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742555"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Procedura dettagliata: Usare solo stored procedure (Visual Basic)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'accesso ai dati usando solo stored procedure. Questo approccio viene spesso è usato dagli amministratori di database per limitare l'accesso all'archivio dati.  
@@ -19,7 +19,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
  Ai fini di questa procedura dettagliata, si userà due metodi che sono stato eseguito il mapping alle stored procedure nel database di esempio Northwind: CustOrdersDetail e CustOrderHist. Il mapping si verifica quando si esegue lo strumento da riga di comando SqlMetal per generare un file di Visual Basic. Per altre informazioni, vedere la sezione successiva relativa ai prerequisiti.  
   
- Questa procedura dettagliata non si basa su [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Gli sviluppatori che usano Visual Studio consente inoltre di [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] per implementare la funzionalità delle stored procedure. Visualizzare [strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Questa procedura dettagliata non basarsi su Progettazione relazionale oggetti. Gli sviluppatori che usano Visual Studio possono anche usare O/R Designer per implementare la funzionalità delle stored procedure. Visualizzare [strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -60,7 +60,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 ## <a name="creating-a-linq-to-sql-solution"></a>Creazione di una soluzione LINQ to SQL  
  In questa prima attività, si crea una soluzione di Visual Studio che contiene i riferimenti necessari per compilare ed eseguire un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetto.  
   
-#### <a name="to-create-a-linq-to-sql-solution"></a>Per creare una soluzione LINQ to SQL  
+### <a name="to-create-a-linq-to-sql-solution"></a>Per creare una soluzione LINQ to SQL  
   
 1. Scegliere **Nuovo progetto** dal menu **File**di Visual Studio.  
   
@@ -77,7 +77,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 ## <a name="adding-the-linq-to-sql-assembly-reference"></a>Aggiunta del riferimento all'assembly LINQ to SQL  
  L'assembly [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non è incluso nel modello Applicazione Windows Form standard. Sarà pertanto necessario aggiungere l'assembly manualmente, come descritto nei passaggi seguenti:  
   
-#### <a name="to-add-systemdatalinqdll"></a>Per aggiungere System.Data.Linq.dll  
+### <a name="to-add-systemdatalinqdll"></a>Per aggiungere System.Data.Linq.dll  
   
 1. Nelle **Esplora soluzioni**, fare clic su **Mostra tutti i file**.  
   
@@ -90,7 +90,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 ## <a name="adding-the-northwind-code-file-to-the-project"></a>Aggiunta del file di codice di Northwind al progetto  
  In questa procedura si presuppone che sia stato usato lo strumento SqlMetal per generare un file di codice dal database di esempio Northwind. Per altre informazioni, vedere la sezione precedente relativa ai prerequisiti.  
   
-#### <a name="to-add-the-northwind-code-file-to-the-project"></a>Per aggiungere il file di codice di Northwind al progetto  
+### <a name="to-add-the-northwind-code-file-to-the-project"></a>Per aggiungere il file di codice di Northwind al progetto  
   
 1. Nel **Project** menu, fare clic su **Aggiungi elemento esistente**.  
   
@@ -101,7 +101,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 ## <a name="creating-a-database-connection"></a>Creazione di connessioni a database  
  In questo passaggio si definirà la connessione al database di esempio Northwind. Per questa procedura dettagliata viene usato il percorso "c:\linqtest3\northwnd.mdf".  
   
-#### <a name="to-create-the-database-connection"></a>Per creare la connessione al database  
+### <a name="to-create-the-database-connection"></a>Per creare la connessione al database  
   
 1. Nelle **Esplora soluzioni**, fare doppio clic su **Form1.vb**, quindi fare clic su **Visualizza codice**.  
   
@@ -114,9 +114,9 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 ## <a name="setting-up-the-user-interface"></a>Impostazione dell'interfaccia utente  
  In questa attività verrà creata un'interfaccia per consentire agli utenti di eseguire stored procedure per l'accesso ai dati nel database. Nell'applicazione creata con questa procedura dettagliata gli utenti potranno accedere ai dati nel database solo usando le stored procedure incorporate nell'applicazione.  
   
-#### <a name="to-set-up-the-user-interface"></a>Per impostare l'interfaccia utente  
+### <a name="to-set-up-the-user-interface"></a>Per impostare l'interfaccia utente  
   
-1. Tornare a di Windows Form della finestra di progettazione (**Form1.vb]**).  
+1. Tornare a di Windows Form della finestra di progettazione (**Form1.vb]** ).  
   
 2. Scegliere **Casella degli strumenti** dal menu **Visualizza**.  
   
@@ -131,9 +131,9 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 4. Fare doppio clic su **Label1**, quindi fare clic su **proprietà**.  
   
-5. Modifica il **testo** proprietà dal **Label1** al **Enter OrderID:**.  
+5. Modifica il **testo** proprietà dal **Label1** al **Enter OrderID:** .  
   
-6. Nello stesso modo per **Label2**, modificare il **testo** proprietà dal **Label2** al **Enter CustomerID:**.  
+6. Nello stesso modo per **Label2**, modificare il **testo** proprietà dal **Label2** al **Enter CustomerID:** .  
   
 7. Nello stesso modo, modificare il **testo** proprietà per **Button1** al **Order Details**.  
   
@@ -141,7 +141,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
      Ampliare i controlli pulsante in modo che tutto il testo sia visibile.  
   
-#### <a name="to-handle-button-clicks"></a>Per gestire i clic sui pulsanti  
+### <a name="to-handle-button-clicks"></a>Per gestire i clic sui pulsanti  
   
 1. Fare doppio clic su **Order Details** sul **Form1** per creare il `Button1` gestore eventi e aprire l'editor di codice.  
   
@@ -158,7 +158,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 ## <a name="testing-the-application"></a>Verifica dell'applicazione  
  A questo punto è possibile procedere al test dell'applicazione. Notare che il contatto con l'archivio dati è limitato alle azioni supportate dalle due stored procedure che, in questo caso, consistono nel restituire i prodotti inclusi per qualsiasi ID ordine immesso o nel restituire una cronologia dei prodotti ordinati per qualsiasi ID cliente immesso.  
   
-#### <a name="to-test-the-application"></a>Per eseguire il test dell'applicazione  
+### <a name="to-test-the-application"></a>Per eseguire il test dell'applicazione  
   
 1. Premere F5 per avviare il debug.  
   
@@ -188,7 +188,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 6. Se si al termine delle prove, è possibile fare clic su **Chiudi progetto** nel **File** menu e salvare il progetto quando viene richiesto.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Fasi successive  
  Questo progetto può essere migliorato apportandovi alcune modifiche. Ad esempio, è possibile elencare le stored procedure disponibili in una casella di riepilogo, in modo che l'utente possa selezionare quella da eseguire. È inoltre possibile trasmettere l'output dei rapporti a un file di testo.  
   
 ## <a name="see-also"></a>Vedere anche

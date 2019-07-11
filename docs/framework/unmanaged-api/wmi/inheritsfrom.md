@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d2af1b41f47a3906c0e573c104847aa3ff36cf8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c04a08c9712359453b9c5a9d136e22e1de8648a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040586"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746500"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom (funzione)
 Determina se la classe o l'istanza corrente deriva da una classe padre specificata.
@@ -30,7 +30,7 @@ Determina se la classe o l'istanza corrente deriva da una classe padre specifica
     
 ## <a name="syntax"></a>Sintassi  
   
-```
+```cpp
 HRESULT InheritsFrom (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -53,7 +53,7 @@ HRESULT InheritsFrom (
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Value  |Descrizione  |
+|Costante  |Valore  |DESCRIZIONE  |
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | L'oggetto corrente eredita da `wszAncestor`.  |
 | `WBEM_S_FALSE` | 1 | L'oggetto corrente non eredita da `wszAncestor`. |

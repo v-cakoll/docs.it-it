@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 090183cad17aff6faf5e79639eadff086c1a26ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2debe193b96b065987f6d7ebc6ffc1abac95778
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797462"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778206"
 ---
 # <a name="isymunmanagedwriterabort-method"></a>Metodo ISymUnmanagedWriter::Abort
 Chiude il writer di simboli senza eseguire il commit i simboli per l'archivio dei simboli. Dopo questa chiamata, il writer di simboli viene invalidato per altri aggiornamenti. Per eseguire il commit i simboli e chiudere il writer di simboli, usare il [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) metodo invece.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT Abort();  
 ```  
   

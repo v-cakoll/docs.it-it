@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81f4d5219865bf7f7c9e6d284d74d0c249729dfc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f05f349699b28262c1628cadc6e9a0fb0a3459c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040534"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783095"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass (funzione)
 Crea un nuovo oggetto di classe derivata da un oggetto specificato.    
@@ -30,7 +30,7 @@ Crea un nuovo oggetto di classe derivata da un oggetto specificato.
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT SpawnDerivedClass (
    [in] int                  vFunc, 
    [in] IWbemClassObject*    ptr, 
@@ -56,7 +56,7 @@ HRESULT SpawnDerivedClass (
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Value  |Descrizione  |
+|Costante  |Value  |DESCRIZIONE  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore generale. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | È stata richiesta un'operazione non è valida, come la generazione di una classe da un'istanza. |

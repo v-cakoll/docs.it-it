@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34d9e1a3747ecf3dffc925d7883599b773dd51f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76f064d1683615ef8f665cf1facaa31d61b294a5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638970"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759590"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>Metodo ICLRPolicyManager::SetActionOnFailure
 Specifica l'azione di criteri che Common language runtime (CLR) deve essere intrapresa quando si verifica l'errore specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT SetActionOnFailure (  
     [in] EClrFailure   failure,  
     [in] EPolicyAction action  
@@ -60,16 +60,16 @@ HRESULT SetActionOnFailure (
   
 ||NonCriticalResource|CriticalResource|FatalRuntime|OrphanedLock|StackOverflow|AccessViolation|CodeContract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
-|`eNoAction`|x|x||||N/D||  
-|eThrowException|x|x||||N/D||  
-|`eAbortThread`|x|x||||N/D|x|  
-|`eRudeAbortThread`|x|x||||N/D|x|  
-|`eUnloadAppDomain`|x|x||x||N/D|x|  
-|`eRudeUnloadAppDomain`|x|x||x|x|N/D|x|  
-|`eExitProcess`|x|x||x|x|N/D|x|  
-|eFastExitProcess|x|x||x|x|N/D||  
-|`eRudeExitProcess`|x|x|x|x|x|N/D||  
-|`eDisableRuntime`|x|x|x|x|x|N/D||  
+|`eNoAction`|X|X||||N/D||  
+|eThrowException|X|X||||N/D||  
+|`eAbortThread`|X|X||||N/D|X|  
+|`eRudeAbortThread`|X|X||||N/D|X|  
+|`eUnloadAppDomain`|X|X||X||N/D|X|  
+|`eRudeUnloadAppDomain`|X|X||X|X|N/D|X|  
+|`eExitProcess`|X|X||X|X|N/D|X|  
+|eFastExitProcess|X|X||X|X|N/D||  
+|`eRudeExitProcess`|X|X|X|X|X|N/D||  
+|`eDisableRuntime`|X|X|X|X|X|N/D||  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
