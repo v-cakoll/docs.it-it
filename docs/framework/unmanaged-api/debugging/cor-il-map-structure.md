@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02a7bff021387f615c823b2df96615c1284cb82b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 74f515626f5001cbea1a25e8268338c588524bde
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617708"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740541"
 ---
 # <a name="corilmap-structure"></a>Struttura COR_IL_MAP
 Specifica le modifiche nell'offset relativo di una funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef struct _COR_IL_MAP {  
     ULONG32 oldOffset;   
     ULONG32 newOffset;   
@@ -36,7 +36,7 @@ typedef struct _COR_IL_MAP {
 } COR_IL_MAP;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  

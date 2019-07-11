@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: bf608ebb36a2e8f29e8429b77e023eced67273e1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 151c2f6cbb560d83ef0fcfef518bc50cec246ca2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649766"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783243"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inizializzatori di oggetti: Tipi denominati e anonimi (Visual Basic)
 Gli inizializzatori di oggetto consentono di specificare le proprietà per un oggetto complesso usando un'unica espressione. Possono essere utilizzati per creare istanze di tipi denominati e tipi anonimi.  
@@ -32,7 +32,7 @@ Gli inizializzatori di oggetto consentono di specificare le proprietà per un og
  I requisiti e i risultati delle due dichiarazioni non corrispondono. Per la `namedCust`, una `Customer` classe avente un `Name` proprietà deve esistere già e la dichiarazione crea un'istanza di tale classe. Per la `anonymousCust`, il compilatore definisce una nuova classe che ha una proprietà, una stringa denominata `Name`e crea una nuova istanza della classe.  
   
 ## <a name="named-types"></a>Tipi denominati  
- Gli inizializzatori di oggetto forniscono un modo semplice per chiamare il costruttore di un tipo e quindi impostare i valori di alcune o tutte le proprietà in una singola istruzione. Il compilatore richiama il costruttore appropriato per l'istruzione: il costruttore predefinito se non vengono visualizzati argomenti o un costruttore con parametri, se uno o più argomenti vengono inviati. Successivamente, le proprietà specificate vengono inizializzate nell'ordine in cui sono presentate nell'elenco di inizializzatori.  
+ Gli inizializzatori di oggetto forniscono un modo semplice per chiamare il costruttore di un tipo e quindi impostare i valori di alcune o tutte le proprietà in una singola istruzione. Il compilatore richiama il costruttore appropriato per l'istruzione: il costruttore senza parametri se nessun argomento viene presentato o un costruttore con parametri, se uno o più argomenti vengono inviati. Successivamente, le proprietà specificate vengono inizializzate nell'ordine in cui sono presentate nell'elenco di inizializzatori.  
   
  Ogni inizializzazione nell'elenco di inizializzatori è costituito dall'assegnazione di un valore iniziale a un membro della classe. I nomi e tipi di dati dei membri vengono determinati quando la classe è definita. Negli esempi seguenti, il `Customer` classe deve esistere e devono avere membri denominati `Name` e `City` che può accettare i valori di stringa.  
   
@@ -42,7 +42,7 @@ Gli inizializzatori di oggetto consentono di specificare le proprietà per un og
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- Ognuna di queste dichiarazioni è equivalente all'esempio seguente, che consente di creare un `Customer` dell'oggetto usando il costruttore predefinito e specifica i valori iniziali per il `Name` e `City` delle proprietà utilizzando un `With` istruzione.  
+ Ognuna di queste dichiarazioni è equivalente all'esempio seguente, che consente di creare un `Customer` dell'oggetto usando il costruttore senza parametri e quindi definisce i valori iniziali per il `Name` e `City` delle proprietà utilizzando un `With` affermazione.  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   

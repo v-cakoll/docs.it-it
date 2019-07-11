@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9bbff8bb1f095502f27b649639434010453ffe1
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 01b000ed3d75ddb6a7882cb8f03ff2cec64fb9fe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423854"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767871"
 ---
 # <a name="eclroperation-enumeration"></a>Enumerazione EClrOperation
 Descrive il set di operazioni per il quale un host è possibile applicare azioni dei criteri.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef enum {  
     OPR_ThreadAbort,  
     OPR_ThreadRudeAbortInNonCriticalRegion,  
@@ -40,9 +40,9 @@ typedef enum {
 } EClrOperation;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Member|DESCRIZIONE|  
 |------------|-----------------|  
 |`OPR_AppDomainRudeUnload`|L'host può specificare le azioni dei criteri da eseguire quando un <xref:System.AppDomain> viene scaricato in modo non regolare (non applicabili).|  
 |`OPR_AppDomainUnload`|L'host può specificare le azioni dei criteri da eseguire quando un <xref:System.AppDomain> viene scaricato.|  

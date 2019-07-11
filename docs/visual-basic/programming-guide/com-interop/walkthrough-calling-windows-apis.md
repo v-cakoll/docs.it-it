@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d2dc80ec689f3e9fd2f36c36c3847ec4e5d1a576
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592715"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783153"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Procedura dettagliata: Chiamata delle API di Windows (Visual Basic)
 Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del sistema operativo Windows. Usarli per eseguire attività quando è difficile scrivere procedure equivalente personalizzato. Ad esempio, Windows fornisce una funzione denominata `FlashWindowEx` che consente di apportare passare alternativamente dalla chiaro e scuro sfumatura barra del titolo per un'applicazione.  
@@ -32,7 +32,7 @@ Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del s
 ## <a name="api-calls-using-declare"></a>Chiamate API con Declare  
  Il modo più comune per chiamare le API di Windows consiste nell'usare il `Declare` istruzione.  
   
-#### <a name="to-declare-a-dll-procedure"></a>Per dichiarare una routine DLL  
+### <a name="to-declare-a-dll-procedure"></a>Per dichiarare una routine DLL  
   
 1. Determinare il nome della funzione da chiamare, oltre a relativi argomenti, i tipi di argomento e restituiscono valore, così come il nome e percorso della DLL che lo contiene.  
   
@@ -69,7 +69,7 @@ Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del s
 #### <a name="windows-api-constants"></a>Windows API costanti  
  Alcuni argomenti sono combinazioni di costanti. Ad esempio, il `MessageBox` API illustrato in questa procedura dettagliata accetta un argomento integer denominato `Typ` che determina come appare la finestra di messaggio. È possibile determinare il valore numerico di queste costanti esaminando il `#define` istruzioni nel file winuser. H. I valori numerici vengono in genere visualizzati in formato esadecimale, pertanto è consigliabile utilizzare una calcolatrice per aggiungerli e Converti in decimale. Ad esempio, se si desidera combinare le costanti per lo stile di punto esclamativo `MB_ICONEXCLAMATION` 0x00000030 e Sì/alcuno stile `MB_YESNO` 0x00000004, è possibile aggiungere i numeri e ottenere un risultato di 0x00000034 o 52 decimale. Anche se è possibile usare direttamente il risultato decimale, è preferibile dichiarare questi valori come costanti all'interno dell'applicazione e combinarli usando il `Or` operatore.  
   
-###### <a name="to-declare-constants-for-windows-api-calls"></a>Per dichiarare le costanti per le chiamate API di Windows  
+##### <a name="to-declare-constants-for-windows-api-calls"></a>Per dichiarare le costanti per le chiamate API di Windows  
   
 1. Consultare la documentazione per la funzione di Windows che si sta chiamando. Determinare il nome di costanti utilizzate e il nome del file con estensione h che contiene i valori numerici per queste costanti.  
   
@@ -94,7 +94,7 @@ Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del s
 #### <a name="data-marshaling"></a>Marshalling dei dati  
  Visual Basic converte automaticamente i tipi di dati dei parametri e valori restituiti per le chiamate API di Windows, ma è possibile usare il `MarshalAs` attributo specificare in modo esplicito i tipi di dati non gestiti che prevede un'API. Per altre informazioni sul marshalling di interoperabilità, vedere [marshalling di interoperabilità](../../../framework/interop/interop-marshaling.md).  
   
-###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>Usare Declare e MarshalAs in una chiamata API  
+##### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>Usare Declare e MarshalAs in una chiamata API  
   
 1. Determinare il nome della funzione da chiamare, gli argomenti, i tipi di dati e restituiscono valori.  
   
@@ -111,7 +111,7 @@ Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del s
   
  È possibile usare `DllImport` con l'API di Windows la maggior parte delle chiamate, purché la chiamata fa riferimento a un oggetto condiviso (detta anche *statici*) (metodo). È possibile usare i metodi che richiedono un'istanza di una classe. A differenza `Declare` istruzioni `DllImport` chiamate non è possibile utilizzare il `MarshalAs` attributo.  
   
-#### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>Per chiamare un'API di Windows usando l'attributo DllImport  
+### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>Per chiamare un'API di Windows usando l'attributo DllImport  
   
 1. Aprire un nuovo progetto applicazione Windows facendo clic **New** nel **File** menu e scegliendo **progetto**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   

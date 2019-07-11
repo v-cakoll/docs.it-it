@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: f3671b7071cc30f5fae0dbd85677987f441d846f
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 55ded2f2fbd5c2c6e33627ce7fafe6bb4248d5ef
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505985"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783252"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Procedura dettagliata: Scrittura di query in Visual Basic
 Questa procedura dettagliata illustra come è possibile usare le funzionalità del linguaggio Visual Basic per scrivere [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] le espressioni di query. La procedura dettagliata illustra come creare query in un elenco di oggetti per studenti, come eseguire la query e come modificarli. Le query integrare diverse funzionalità tra cui i tipi anonimi, inferenza del tipo locale e gli inizializzatori di oggetto.  
@@ -21,7 +21,7 @@ Questa procedura dettagliata illustra come è possibile usare le funzionalità d
   
 ## <a name="create-a-project"></a>Creare un progetto  
   
-#### <a name="to-create-a-console-application-project"></a>Per creare un progetto di applicazione console  
+### <a name="to-create-a-console-application-project"></a>Per creare un progetto di applicazione console  
   
 1. Avviare Visual Studio.  
   
@@ -38,21 +38,21 @@ Questa procedura dettagliata illustra come è possibile usare le funzionalità d
 ## <a name="add-an-in-memory-data-source"></a>Aggiungere un'origine dati In memoria  
  L'origine dati per le query in questa procedura dettagliata è un elenco di `Student` oggetti. Ogni `Student` oggetto contiene un nome, cognome, un anno di classe e un grado accademico il corpo degli studenti.  
   
-#### <a name="to-add-the-data-source"></a>Per aggiungere l'origine dati  
+### <a name="to-add-the-data-source"></a>Per aggiungere l'origine dati  
   
 - Definire un `Student` classe e creare un elenco di istanze della classe.  
   
     > [!IMPORTANT]
     >  Il codice necessario per definire le `Student` classe e creare l'elenco utilizzato nella procedura dettagliata gli esempi viene fornito [come: Creare un elenco di elementi](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). È possibile copiarlo da tale posizione e incollarlo nel progetto. Il nuovo codice sostituisce il codice che si verificava quando è stato creato il progetto.  
   
-#### <a name="to-add-a-new-student-to-the-students-list"></a>Per aggiungere un nuovo studente all'elenco degli studenti  
+### <a name="to-add-a-new-student-to-the-students-list"></a>Per aggiungere un nuovo studente all'elenco degli studenti  
   
 - Seguire il modello nel `getStudents` metodo per aggiungere un'altra istanza del `Student` classe all'elenco. Aggiungere gli studenti vengono introdotti gli inizializzatori di oggetto. Per altre informazioni, vedere [gli inizializzatori di oggetto: Tipi denominati e anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="create-a-query"></a>Creare una query  
  Quando viene eseguita, la query è stato aggiunto in questa sezione produce un elenco degli studenti con una classificazione academic li inserisce i primi dieci. Poiché la query seleziona l'intero `Student` ogni volta, il tipo del risultato della query di oggetto è `IEnumerable(Of Student)`. Tuttavia, il tipo della query in genere non è specificato nelle definizioni di query. Al contrario, il compilatore Usa l'inferenza del tipo locale per determinare il tipo. Per altre informazioni, vedere [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Variabile di intervallo della query, `currentStudent`, funge da riferimento a ogni `Student` istanza dell'origine `students`, che fornisce accesso alle proprietà di ogni oggetto `students`.  
   
-#### <a name="to-create-a-simple-query"></a>Per creare una query semplice  
+### <a name="to-create-a-simple-query"></a>Per creare una query semplice  
   
 1. Individuare il punto nel `Main` metodo del progetto che è contrassegnato come indicato di seguito:  
   
@@ -67,7 +67,7 @@ Questa procedura dettagliata illustra come è possibile usare le funzionalità d
 ## <a name="run-the-query"></a>Eseguire la Query  
  La variabile `studentQuery` contiene la definizione della query, non i risultati dell'esecuzione della query. È un meccanismo tipico per l'esecuzione di una query un `For Each` ciclo. Ogni elemento della sequenza restituita si accede tramite la variabile di iterazione del ciclo. Per altre informazioni sull'esecuzione di query, vedere [Writing Your prima Query LINQ](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
-#### <a name="to-run-the-query"></a>Per eseguire la query  
+### <a name="to-run-the-query"></a>Per eseguire la query  
   
 1. Aggiungere il codice seguente `For Each` ciclo sotto la query nel progetto.  
   
@@ -80,7 +80,7 @@ Questa procedura dettagliata illustra come è possibile usare le funzionalità d
 ## <a name="modify-the-query"></a>Modificare la query  
  È più semplice analizzare i risultati della query, se si trovano in un ordine specifico. È possibile ordinare la sequenza restituita in base a qualsiasi campo disponibile.  
   
-#### <a name="to-order-the-results"></a>Per ordinare i risultati  
+### <a name="to-order-the-results"></a>Per ordinare i risultati  
   
 1. Aggiungere il codice seguente `Order By` clausola tra il `Where` istruzione e `Select` istruzione della query. Il `Order By` clausola ordina i risultati in ordine alfabetico dalla alla Z, in base all'ultimo nome di ogni studente.  
   
@@ -98,7 +98,7 @@ Questa procedura dettagliata illustra come è possibile usare le funzionalità d
   
 3. Compilare ed eseguire l'applicazione premendo CTRL+F5. Si noti che i risultati nella finestra della console.  
   
-#### <a name="to-introduce-a-local-identifier"></a>Per introdurre un identificatore locale  
+### <a name="to-introduce-a-local-identifier"></a>Per introdurre un identificatore locale  
   
 1. Aggiungere il codice in questa sezione per introdurre un identificatore locale nell'espressione di query. L'identificatore locale conterrà un risultato intermedio. Nell'esempio seguente, `name` è un identificatore che contiene una concatenazione dello studente nome e cognome. Un identificatore locale può essere utilizzato per comodità, o può migliorare le prestazioni archiviando i risultati di un'espressione che in caso contrario, viene calcolato più volte.  
   
@@ -106,7 +106,7 @@ Questa procedura dettagliata illustra come è possibile usare le funzionalità d
   
 2. Compilare ed eseguire l'applicazione premendo CTRL+F5. Si noti che i risultati nella finestra della console.  
   
-#### <a name="to-project-one-field-in-the-select-clause"></a>Per proiettare un campo nella clausola Select  
+### <a name="to-project-one-field-in-the-select-clause"></a>Per proiettare un campo nella clausola Select  
   
 1. Aggiungere la query e `For Each` ciclo da questa sezione per creare una query che produce una sequenza i cui elementi differiscono dagli elementi nell'origine. Nell'esempio seguente, l'origine è una raccolta di `Student` oggetti, ma solo un membro di ogni oggetto viene restituito: il nome di studenti il cui cognome è Garcia. In quanto `currentStudent.First` è una stringa, il tipo di dati della sequenza restituita da `studentQuery3` è `IEnumerable(Of String)`, una sequenza di stringhe. Come negli esempi precedenti, l'assegnazione di un dato tipo per `studentQuery3` spetta al compilatore di determinare con l'inferenza del tipo locale.  
   
@@ -116,7 +116,7 @@ Questa procedura dettagliata illustra come è possibile usare le funzionalità d
   
 3. Compilare ed eseguire l'applicazione premendo CTRL+F5. Si noti che i risultati nella finestra della console.  
   
-#### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Per creare un tipo anonimo nella clausola Select  
+### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Per creare un tipo anonimo nella clausola Select  
   
 1. Aggiungere il codice da questa sezione per visualizzare i tipi anonimi come vengono usati nelle query. Usarli nelle query, quando si desidera restituire diversi campi dall'origine dati anziché record completi (`currentStudent` record negli esempi precedenti) o singoli campi (`First` nella sezione precedente). Invece di definire un nuovo tipo denominato che contiene i campi da includere nel risultato, consente di specificare i campi nel `Select` clausola e il compilatore crea un tipo anonimo con questi campi come le relative proprietà. Per altre informazioni, vedere [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
