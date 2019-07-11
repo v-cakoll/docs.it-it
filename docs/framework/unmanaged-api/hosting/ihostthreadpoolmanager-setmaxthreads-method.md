@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0df8d11bba870dfec880401064ec3f78f5f04e1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 442e4566749aade5a7f8164fcc43baad902928c0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961278"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749123"
 ---
 # <a name="ihostthreadpoolmanagersetmaxthreads-method"></a>Metodo IHostThreadPoolManager::SetMaxThreads
 Imposta il numero massimo di thread che l'host può mantenere nel pool di thread.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT SetMaxThreads (  
     [in] DWORD MaxThreads  
 );  
@@ -41,7 +41,7 @@ HRESULT SetMaxThreads (
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Descrizione|  
+|HRESULT|DESCRIZIONE|  
 |-------------|-----------------|  
 |S_OK|`SetMaxThreads` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  

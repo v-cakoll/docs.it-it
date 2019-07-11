@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc0a4f52747cbc88a26f4b9aaff6642b6c1d62f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b46d1f5fb797b74726070ae3cd9814dc46c8f03
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044709"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778329"
 ---
 # <a name="imetadataassemblyimportcloseenum-method"></a>Metodo IMetaDataAssemblyImport::CloseEnum
 Rilascia un riferimento all'istanza di enumerazione specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void CloseEnum (  
     [in] HCORENUM     hEnum  
 );  

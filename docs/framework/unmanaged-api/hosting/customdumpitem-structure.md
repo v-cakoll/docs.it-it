@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9000f35e9a8f7ecc6c40cf0ef9c220fc9f4f9c10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05f5d3fbe05ad1e97a1ae61ed0496f314c4ec5cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985686"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765963"
 ---
 # <a name="customdumpitem-structure"></a>Struttura CustomDumpItem
 Viene descritto un elemento da aggiungere a un'immagine personalizzata in segnalazione errori.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 struct {  
     ECustomDumpItemKind itemKind;   
     union {  
@@ -37,9 +37,9 @@ struct {
 } CustomDumpItem;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Member|DESCRIZIONE|  
 |------------|-----------------|  
 |`itemKind`|Un' [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) valore che indica il tipo di elemento da aggiungere.|  
 |`pReserved`|Non è attualmente utilizzato. Gli elementi aggiunti all'unione devono essere superiori a dimensioni del puntatore. Se un `struct` è obbligatorio, è necessario allocarla separatamente e su di esso.|  

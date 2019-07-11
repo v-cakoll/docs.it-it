@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35fdcd4bc3c9dbf6408f501256ce0df0174f9374
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ec3dc37984228565b4a3fcc560d3857a1c1e46d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948733"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767335"
 ---
 # <a name="icordebugprocess5getobject-method"></a>Metodo ICorDebugProcess5::GetObject
 Converte un indirizzo dell'oggetto a un oggetto "ICorDebugObjectValue".  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetObject(  
     [in] CORDB_ADDRESS addr,   
     [out] ICorDebugObjectValue **ppObject  

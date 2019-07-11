@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cfef7d929d40996716a02a4db51630827011a68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28feddffff7dc5dba1860b3d2d1327a17bd08190
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984776"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772944"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>Metodo ICLRDomainManager::SetAppDomainManagerType
 Specifica il tipo, derivato dal <xref:System.AppDomainManager?displayProperty=nameWithType> (classe), l'applicazione del gestore del dominio che verrà usato per inizializzare il dominio applicazione predefinito.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT SetAppDomainManagerType(  
     [in] LPCWSTR wszAppDomainManagerAssembly,  
     [in] LPCWSTR wszAppDomainManagerType,  

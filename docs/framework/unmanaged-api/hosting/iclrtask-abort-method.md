@@ -17,25 +17,25 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57efd4f29ba7e28adf1af03030d7f83eb32c1c2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e48292d1b0bfaa990cca1b290f769d96938d433
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763672"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759024"
 ---
 # <a name="iclrtaskabort-method"></a>Metodo ICLRTask::Abort
 Richiede che common language runtime (CLR) di interrompere l'attività che l'oggetto corrente [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) istanza rappresenta.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT Abort ();  
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Descrizione|  
+|HRESULT|DESCRIZIONE|  
 |-------------|-----------------|  
 |S_OK|`Abort` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  

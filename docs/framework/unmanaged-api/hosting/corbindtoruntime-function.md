@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3af11b3d2170e13bf216aec64f2bff88cc015f41
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d8ed3a85d12d35bb4779297a7bbc94ce911accef
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490597"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767980"
 ---
 # <a name="corbindtoruntime-function"></a>Funzione CorBindToRuntime
 Consente l'host non gestiti di caricare common language runtime (CLR) in un processo.  
@@ -31,7 +31,7 @@ Consente l'host non gestiti di caricare common language runtime (CLR) in un proc
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT CorBindToRuntime (  
     [in]  LPCWSTR     pwszVersion,   
     [in]  LPCWSTR     pwszBuildFlavor,   
