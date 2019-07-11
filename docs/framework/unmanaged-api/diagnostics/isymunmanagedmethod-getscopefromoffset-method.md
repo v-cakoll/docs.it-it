@@ -17,37 +17,37 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e0e859ba8b6ec247073b0b69b035ea4cf074ab05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d540318dabd55e9a520aedde371e0a83d612721e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939620"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759496"
 ---
-# <a name="isymunmanagedmethodgetscopefromoffset-method"></a><span data-ttu-id="10bdf-102">Metodo ISymUnmanagedMethod::GetScopeFromOffset</span><span class="sxs-lookup"><span data-stu-id="10bdf-102">ISymUnmanagedMethod::GetScopeFromOffset Method</span></span>
-<span data-ttu-id="10bdf-103">Ottiene l'ambito lessicale di maggiore inclusione all'interno di questo metodo che racchiude l'offset specificato.</span><span class="sxs-lookup"><span data-stu-id="10bdf-103">Gets the most enclosing lexical scope within this method that encloses the given offset.</span></span> <span data-ttu-id="10bdf-104">Ciò consente di avviare le ricerche di variabili locali.</span><span class="sxs-lookup"><span data-stu-id="10bdf-104">This can be used to start local variable searches.</span></span>  
+# <a name="isymunmanagedmethodgetscopefromoffset-method"></a><span data-ttu-id="79afd-102">Metodo ISymUnmanagedMethod::GetScopeFromOffset</span><span class="sxs-lookup"><span data-stu-id="79afd-102">ISymUnmanagedMethod::GetScopeFromOffset Method</span></span>
+<span data-ttu-id="79afd-103">Ottiene l'ambito lessicale di maggiore inclusione all'interno di questo metodo che racchiude l'offset specificato.</span><span class="sxs-lookup"><span data-stu-id="79afd-103">Gets the most enclosing lexical scope within this method that encloses the given offset.</span></span> <span data-ttu-id="79afd-104">Ciò consente di avviare le ricerche di variabili locali.</span><span class="sxs-lookup"><span data-stu-id="79afd-104">This can be used to start local variable searches.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="10bdf-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="10bdf-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="79afd-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="79afd-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetScopeFromOffset(  
     [in]  ULONG32 offset,  
     [out, retval] ISymUnmanagedScope**  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="10bdf-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="10bdf-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="79afd-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="79afd-106">Parameters</span></span>  
  `offset`  
- <span data-ttu-id="10bdf-107">[in] Oggetto `ULONG` che contiene l'offset.</span><span class="sxs-lookup"><span data-stu-id="10bdf-107">[in] A `ULONG` that contains the offset.</span></span>  
+ <span data-ttu-id="79afd-107">[in] Oggetto `ULONG` che contiene l'offset.</span><span class="sxs-lookup"><span data-stu-id="79afd-107">[in] A `ULONG` that contains the offset.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="10bdf-108">[out] Un puntatore che viene impostato sull'oggetto restituito [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interfaccia.</span><span class="sxs-lookup"><span data-stu-id="10bdf-108">[out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
+ <span data-ttu-id="79afd-108">[out] Un puntatore che viene impostato sull'oggetto restituito [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interfaccia.</span><span class="sxs-lookup"><span data-stu-id="79afd-108">[out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="10bdf-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="10bdf-109">Return Value</span></span>  
- <span data-ttu-id="10bdf-110">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="10bdf-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="79afd-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="79afd-109">Return Value</span></span>  
+ <span data-ttu-id="79afd-110">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="79afd-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="10bdf-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="10bdf-111">Requirements</span></span>  
- <span data-ttu-id="10bdf-112">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="10bdf-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="79afd-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="79afd-111">Requirements</span></span>  
+ <span data-ttu-id="79afd-112">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="79afd-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10bdf-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="10bdf-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="79afd-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="79afd-113">See also</span></span>
 
-- [<span data-ttu-id="10bdf-114">Interfaccia ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="10bdf-114">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="79afd-114">Interfaccia ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="79afd-114">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
