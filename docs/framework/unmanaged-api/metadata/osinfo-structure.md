@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0aba49fb4a60b2e471c541a8d8531a1cbc8627f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a36cd3c5fb638799a735e4b4a1a98959500300b5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775200"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761592"
 ---
 # <a name="osinfo-structure"></a>Struttura OSINFO
 Contiene i dettagli sul sistema operativo per un assembly o un modulo.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef struct {  
     DWORD   dwOSPlatformId;  
     DWORD   dwOSMajorVersion;   
@@ -36,9 +36,9 @@ typedef struct {
 } OSINFO;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Member|DESCRIZIONE|  
 |------------|-----------------|  
 |`dwOSPlatformId`|Uno dei valori identificatore definiti dalla funzione della piattaforma Microsoft Windows `GetVersionEx`. Sono supportati i valori seguenti:<br /><br /> -VER_PLATFORM_WIN32s, o a 0x0000, specificare Microsoft Windows 3.1.<br />-VER_PLATFORM_WIN32_WINDOWS, o 0x0001, per specificare Windows 95, Windows 98 o discendenti da essi i sistemi operativi.<br />-VER_PLATFORM_WIN32_NT, o 0x0010, per specificare i sistemi operativi o Windows NT che derivano da essa.|  
 |`dwOSMajorVersion`|La versione principale del sistema operativo o un valore NULL per indicare tutte le versioni.|  
