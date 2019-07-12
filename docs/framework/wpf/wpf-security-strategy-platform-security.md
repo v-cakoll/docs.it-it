@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 5b40302d93ce1bfc378b86210ed7bb54732d294b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d7b76365178c78d2b20b9541d5e52a605158a77
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756765"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859821"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia di sicurezza di WPF - Sicurezza della piattaforma
 Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi di sicurezza, sfrutta le funzionalità di sicurezza della piattaforma sottostante, che include il sistema operativo, il [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], e [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Questi livelli forniscono a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modello di sicurezza in profondità solido e dettagliato per evitare ogni singola vulnerabilità, come illustrato nella figura seguente:  
@@ -41,7 +41,7 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
   
 - Compilazione /GS  
   
-- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
+- [https://login.microsoftonline.com/common/]([!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]).  
   
 #### <a name="gs-compilation"></a>Compilazione /GS  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] offre protezione ricompilando molte librerie di sistema principali, incluse tutte le dipendenze [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] quali [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], per limitare i sovraccarichi del buffer. A tale scopo, è necessario usare il parametro /GS con il compilatore da riga di comando di C/C++. Anche se i sovraccarichi del buffer dovrebbero essere evitati in modo esplicito, la compilazione /GS rappresenta un esempio di difesa da potenziali vulnerabilità create accidentalmente o intenzionalmente.  
@@ -196,11 +196,11 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
   
 - Numerose finestre di dialogo di sicurezza in alcuni siti Web.  
   
- In alcuni casi, i siti Web non attendibili provano a ingannare gli utenti effettuando lo spoofing della [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] di installazione o visualizzando ripetutamente una finestra di dialogo di installazione di [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)], anche se l'utente la ha annullata. Tramite queste tecniche, è possibile che un numero significativo di utenti sia stato indotto a prendere decisioni che hanno causato l'installazione di applicazioni spyware.  
+ In alcuni casi, siti Web non attendibili provano a ingannare gli utenti effettuando lo spoofing degli indirizzi installazione [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] o visualizzando ripetutamente una finestra di dialogo di installazione Microsoft ActiveX, anche se l'utente la ha annullata. Tramite queste tecniche, è possibile che un numero significativo di utenti sia stato indotto a prendere decisioni che hanno causato l'installazione di applicazioni spyware.  
   
  [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] include molte funzionalità per contenere questi tipi di problemi, che vertono sul concetto di inizializzazione da parte dell'utente. [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] rileva quando un utente ha fatto clic su un elemento di collegamento o di pagina prima un'azione che è noto come *inizializzazione parte dell'utente*ed espone un comportamento diverso rispetto a quando un'azione simile viene attivata tramite script in una pagina. Ad esempio, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] incorpora un **popup** che rileva quando un utente fa clic su un pulsante prima che la pagina Creazione di una finestra popup. In questo modo, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] consente i popup più innocui, mentre blocca quelli non richiesti né desiderati dagli utenti. I popup bloccati vengono intercettati sotto la nuova **sulla barra informazioni**, che consente all'utente di manualmente l'override del blocco e di visualizzare la finestra popup.  
   
- La stessa logica di inizializzazione da parte dell'utente viene applicata anche a **aperto**/**salvare** richieste di sicurezza. Le finestre di dialogo di installazione di [!INCLUDE[TLA2#tla_actx](../../../includes/tla2sharptla-actx-md.md)] vengono sempre intercettate sotto la barra informazioni, a meno che non rappresentino un aggiornamento da un controllo installato in precedenza. Queste misure consentono agli utenti un'esperienza più controllata e sicura, perché sono protetti da quei siti che con l'inganno inducono a installare software indesiderato o dannoso.  
+ La stessa logica di inizializzazione da parte dell'utente viene applicata anche a **aperto**/**salvare** richieste di sicurezza. Finestre di dialogo di installazione ActiveX vengono sempre intercettate sotto la barra informazioni a meno che non rappresentino un aggiornamento da un controllo installato in precedenza. Queste misure consentono agli utenti un'esperienza più controllata e sicura, perché sono protetti da quei siti che con l'inganno inducono a installare software indesiderato o dannoso.  
   
  Queste funzionalità proteggono inoltre i clienti che usano [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] per esplorare siti Web che consentono loro di scaricare e installare applicazioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. In particolare, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] consente una migliore esperienza che riduce le possibilità di installare applicazioni dannose indipendentemente dalla tecnologia usata per compilarle, incluso [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] migliora ulteriormente la sicurezza poiché si basa sull'uso di [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] per facilitare il download di applicazioni da Internet. Poiché le [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] vengono eseguite all'interno di una sandbox di sicurezza dell'area Internet, possono essere avviate senza problemi. Al contrario, l'esecuzione delle applicazioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autonome richiede attendibilità completa. Per queste applicazioni, [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] visualizza una finestra di dialogo di sicurezza durante il processo di avvio, per notificare l'uso dei requisiti di sicurezza aggiuntivi dell'applicazione. Questa operazione, che deve essere avviata dall'utente, verrà determinata dalla logica avviata dall'utente e potrà essere annullata.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 327897d50bd23a739d015a4151459d9d4a6fc1a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e74f7c2790a73211bcc8e6f13dcf2dfdc02e678b
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611801"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859974"
 ---
 # <a name="read-only-dependency-properties"></a>Proprietà di dipendenza di sola lettura
 Questo argomento descrive le proprietà di dipendenza di sola lettura, incluse le proprietà di dipendenza di sola lettura esistenti e gli scenari e le tecniche per la creazione di una proprietà di dipendenza di sola lettura personalizzata.  
@@ -37,7 +37,7 @@ Questo argomento descrive le proprietà di dipendenza di sola lettura, incluse l
   
 - L'oggetto restituito dalla registrazione di sola lettura <xref:System.Windows.DependencyPropertyKey> anziché <xref:System.Windows.DependencyProperty>. Anche se è necessario archiviare il campo come membro, questo in genere non viene reso un membro pubblico del tipo.  
   
- Naturalmente, il valore o campo privato sottostante della proprietà di dipendenza di sola lettura può essere scritto usando qualsiasi logica. Il modo più semplice per impostare la proprietà inizialmente o come parte della logica di runtime consiste nell'usare le [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] del sistema di proprietà anziché aggirare il sistema di proprietà e impostare direttamente il campo sottostante privato. In particolare, è disponibile una firma di <xref:System.Windows.DependencyObject.SetValue%2A> che accetta un parametro di tipo <xref:System.Windows.DependencyPropertyKey>. Come e dove questo valore è impostato a livello di codice all'interno della logica dell'applicazione influirà sulle opzioni disponibili per impostare l'accesso per il <xref:System.Windows.DependencyPropertyKey> creata durante la registrazione prima di tutto la proprietà di dipendenza. Se si gestisce tutta questa logica all'interno della classe è possibile renderla privata o, se è necessario impostarla da un'altra porzione dell'assembly, è possibile impostarla come interna. Un approccio consiste nel chiamare <xref:System.Windows.DependencyObject.SetValue%2A> all'interno di un gestore di eventi di classe di evento pertinente che informa un'istanza della classe che il valore della proprietà archiviato deve essere modificato. Un altro approccio consiste nel collegare tra loro le proprietà di dipendenza utilizzando abbinate <xref:System.Windows.PropertyChangedCallback> e <xref:System.Windows.CoerceValueCallback> callback come parte dei metadati di quelle proprietà durante la registrazione.  
+ Naturalmente, il valore o campo privato sottostante della proprietà di dipendenza di sola lettura può essere scritto usando qualsiasi logica. Tuttavia, il modo più semplice per impostare la proprietà inizialmente o come parte della logica di runtime è usare le API del sistema di proprietà, anziché aggirare il sistema di proprietà e impostare il campo sottostante privato direttamente. In particolare, è disponibile una firma di <xref:System.Windows.DependencyObject.SetValue%2A> che accetta un parametro di tipo <xref:System.Windows.DependencyPropertyKey>. Come e dove questo valore è impostato a livello di codice all'interno della logica dell'applicazione influirà sulle opzioni disponibili per impostare l'accesso per il <xref:System.Windows.DependencyPropertyKey> creata durante la registrazione prima di tutto la proprietà di dipendenza. Se si gestisce tutta questa logica all'interno della classe è possibile renderla privata o, se è necessario impostarla da un'altra porzione dell'assembly, è possibile impostarla come interna. Un approccio consiste nel chiamare <xref:System.Windows.DependencyObject.SetValue%2A> all'interno di un gestore di eventi di classe di evento pertinente che informa un'istanza della classe che il valore della proprietà archiviato deve essere modificato. Un altro approccio consiste nel collegare tra loro le proprietà di dipendenza utilizzando abbinate <xref:System.Windows.PropertyChangedCallback> e <xref:System.Windows.CoerceValueCallback> callback come parte dei metadati di quelle proprietà durante la registrazione.  
   
  Poiché il <xref:System.Windows.DependencyPropertyKey> è privato e non viene propagato dal sistema di proprietà all'esterno del codice, una proprietà di dipendenza di sola lettura delle impostazioni migliore sicurezza rispetto a una proprietà di dipendenza di lettura / scrittura. Per una proprietà di dipendenza di lettura e scrittura, il campo di identificazione è pubblico in modo esplicito oppure implicito, per cui la proprietà può essere impostata senza alcuna limitazione. Per informazioni più specifiche, vedere [Sicurezza della proprietà di dipendenza](dependency-property-security.md).  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: d2fe63ed4bdefc91e4847af799747219bd7b4a76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 31efc6e514682502e91487565869285dad22cab0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611720"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860014"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Condivisione dei cicli di messaggi tra Win32 e WPF
 In questo argomento descrive come implementare un ciclo di messaggi per essere interoperabile con i [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], tramite l'utilizzo esistente del messaggio l'esposizione di ciclo in <xref:System.Windows.Threading.Dispatcher> o tramite la creazione di un ciclo di messaggi separate nel [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] lato del codice di interoperabilità.  
@@ -20,7 +20,7 @@ In questo argomento descrive come implementare un ciclo di messaggi per essere i
 ## <a name="componentdispatcher-and-the-message-loop"></a>ComponentDispatcher e il ciclo di messaggi  
  Uno scenario comune di supporto per gli eventi della tastiera e interoperabilità consiste nell'implementare <xref:System.Windows.Interop.IKeyboardInputSink>, o di sottoclassi da classi che implementano già <xref:System.Windows.Interop.IKeyboardInputSink>, ad esempio <xref:System.Windows.Interop.HwndSource> o <xref:System.Windows.Interop.HwndHost>. Tuttavia, il supporto di sink della tastiera non si applica tutte le esigenze di ciclo di messaggi possibili che possono verificarsi quando l'invio e ricezione dei messaggi attraverso i limiti di interoperatività. Per formalizzare un'architettura di ciclo di messaggi dell'applicazione, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce il <xref:System.Windows.Interop.ComponentDispatcher> (classe), che definisce un protocollo semplice per un ciclo di messaggi da seguire.  
   
- <xref:System.Windows.Interop.ComponentDispatcher> è una classe statica che espone vari membri. L'ambito di ogni metodo in modo implicito è associato al thread chiamante. Un ciclo di messaggi deve chiamare alcune di esse [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] nei momenti critici (come definito nella sezione successiva).  
+ <xref:System.Windows.Interop.ComponentDispatcher> è una classe statica che espone vari membri. L'ambito di ogni metodo in modo implicito è associato al thread chiamante. Un ciclo di messaggi è necessario chiamare alcuni di tali API nei momenti critici (come definito nella sezione successiva).  
   
  <xref:System.Windows.Interop.ComponentDispatcher> fornisce gli eventi che possono essere in ascolto altri componenti (ad esempio, il sink della tastiera). Il <xref:System.Windows.Threading.Dispatcher> classe chiamate tutte appropriate <xref:System.Windows.Interop.ComponentDispatcher> metodi in una sequenza appropriata. Se si implementa il proprio ciclo di messaggi, il codice è responsabile della chiamata <xref:System.Windows.Interop.ComponentDispatcher> metodi in modo analogo.  
   

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: 3876fd9c32d486b8ebecc9ee2428486a687a1624
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cb4d372d3ac228f29c6fa45f124796e5dfb6709
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608320"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859890"
 ---
 # <a name="andalso-operator-visual-basic"></a>Operatore AndAlso (Visual Basic)
 Esegue la congiunzione logica su due espressioni.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb
 result = expression1 AndAlso expression2  
 ```  
   
@@ -31,9 +31,9 @@ result = expression1 AndAlso expression2
   
 |Termine|Definizione|  
 |---|---|  
-|`result`|Obbligatorio. Qualsiasi espressione `Boolean` . Il risultato è il `Boolean` risultato del confronto delle due espressioni.|  
-|`expression1`|Obbligatorio. Qualsiasi espressione `Boolean` .|  
-|`expression2`|Obbligatorio. Qualsiasi espressione `Boolean` .|  
+|`result`|Richiesto. Qualsiasi espressione `Boolean` . Il risultato è il `Boolean` risultato del confronto delle due espressioni.|  
+|`expression1`|Richiesto. Qualsiasi espressione `Boolean` .|  
+|`expression2`|Richiesto. Qualsiasi espressione `Boolean` .|  
   
 ## <a name="remarks"></a>Note  
  Un'operazione logica viene detto *corto circuito* se il codice compilato può ignorare la valutazione di un'espressione in base al risultato di un'altra espressione. Se il risultato della prima espressione valutata determina il risultato finale dell'operazione, non è necessario per valutare la seconda espressione, in quanto non può modificare il risultato finale. Corto circuito può migliorare le prestazioni se l'espressione ignorato è complesso, o se prevede le chiamate di procedura.  
@@ -47,7 +47,8 @@ result = expression1 AndAlso expression2
 |`False`|(non valutati)|`False`|  
   
 ## <a name="data-types"></a>Tipi di dati  
- Il `AndAlso` operatore è definito solo per il [tipo di dati Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic consente di convertire ogni operando in base alle esigenze per `Boolean` ed esegue l'operazione interamente in `Boolean`. Se si assegna il risultato a un tipo numerico, Visual Basic viene convertito da `Boolean` per quel tipo. Questa operazione può generare un comportamento imprevisto. Ad esempio, `5 AndAlso 12` comporterà `–1` quando convertito in `Integer`.  
+ Il `AndAlso` operatore è definito solo per il [tipo di dati Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic consente di convertire ogni operando in base alle esigenze per `Boolean` prima della valutazione dell'espressione. Se si assegna il risultato a un tipo numerico, Visual Basic viene convertito da `Boolean` per quel tipo in modo che `False` diventa `0` e `True` diventa `-1`.
+Per altre informazioni, vedere [conversioni dei tipi booleani](../data-types/boolean-data-type.md#type-conversions)
   
 ## <a name="overloading"></a>Overload  
  Il [operatore And](../../../visual-basic/language-reference/operators/and-operator.md) e il [Operatore IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md) può essere *sottoposti a overload*, il che significa che una classe o struttura può ridefinire il comportamento quando un operando ha il tipo di oggetto che classe o struttura. L'overload di `And` e `IsFalse` operatori influisce sul comportamento del `AndAlso` operatore. Se il codice usi `AndAlso` in una classe o struttura che esegue l'overload `And` e `IsFalse`, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

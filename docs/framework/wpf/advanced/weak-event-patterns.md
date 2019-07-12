@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 0c5bae64fbbeddedd905e5df0b5789542e29f2f1
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 61e7f6d29cf9275004238ca776d5af9bf027004f
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833926"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859919"
 ---
 # <a name="weak-event-patterns"></a>Modelli di eventi deboli
 Nelle applicazioni, è possibile che i gestori associati alle origini evento non verranno distrutto in combinazione con l'oggetto listener che è associato il gestore per l'origine. Questa situazione può causare perdite di memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduce un modello di progettazione che può essere utilizzato per risolvere questo problema, fornendo una classe di gestione dedicato per determinati eventi e implementando un'interfaccia nei listener per l'evento. Questo schema progettuale è noto come il *modello di eventi deboli*.  
@@ -21,7 +21,7 @@ Nelle applicazioni, è possibile che i gestori associati alle origini evento non
   
  Questa tecnica consente di creare un riferimento sicuro dall'origine evento per il listener di eventi. In genere, collegare un gestore eventi per un listener, fa sì che il listener avere una durata degli oggetti che è influenzata dalla durata dell'oggetto di origine (a meno che il gestore eventi viene rimosso in modo esplicito). Ma in alcune circostanze, potrebbe essere consigliabile la durata dell'oggetto del listener da parte di altri fattori, ad esempio se attualmente a cui appartiene la struttura ad albero visuale dell'applicazione e non dalla durata dell'origine. Ogni volta che la durata dell'oggetto di origine si estende oltre la durata dell'oggetto del listener, il modello di eventi normali comporta una perdita di memoria: il listener viene mantenuto attivo più a lungo del previsto.  
   
- Il modello di eventi deboli è progettato per risolvere questo problema di perdita di memoria. Il modello di eventi deboli può essere usato ogni volta che un listener deve effettuare la registrazione per un evento, ma il listener non sa in modo esplicito quando annullare la registrazione. Il modello di eventi deboli può essere usato anche ogni volta che la durata dell'oggetto di origine supera la durata utile del listener. (In questo caso *utile* è determinato dall'utente.) Il modello di eventi deboli consente il listener per registrarsi e ricevere l'evento senza influire sulle caratteristiche di durata del listener in alcun modo. In effetti, il riferimento implicito dall'origine non determina se il listener è idoneo per garbage collection. Il riferimento è un riferimento debole, in questo modo la denominazione del modello di eventi deboli e i relativi [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Il listener può essere garbage collection o altrimenti eliminato e l'origine può continuare senza mantenere riferimenti al gestore creare per un oggetto ora eliminato.  
+ Il modello di eventi deboli è progettato per risolvere questo problema di perdita di memoria. Il modello di eventi deboli può essere usato ogni volta che un listener deve effettuare la registrazione per un evento, ma il listener non sa in modo esplicito quando annullare la registrazione. Il modello di eventi deboli può essere usato anche ogni volta che la durata dell'oggetto di origine supera la durata utile del listener. (In questo caso *utile* è determinato dall'utente.) Il modello di eventi deboli consente il listener per registrarsi e ricevere l'evento senza influire sulle caratteristiche di durata del listener in alcun modo. In effetti, il riferimento implicito dall'origine non determina se il listener è idoneo per garbage collection. Il riferimento è un riferimento debole, in questo modo la denominazione del modello di eventi deboli e le API correlate. Il listener può essere garbage collection o altrimenti eliminato e l'origine può continuare senza mantenere riferimenti al gestore creare per un oggetto ora eliminato.  
   
 ## <a name="who-should-implement-the-weak-event-pattern"></a>Chi deve implementare il modello di eventi deboli?  
  Implementazione del pattern di eventi deboli è interessante principalmente per gli autori di controlli. Quando si crea un controllo, si è in gran parte responsabile per il comportamento e il contenimento del proprio controllo e l'impatto che ha su applicazioni in cui viene inserito. Ciò include il comportamento della durata degli oggetti controllo, in particolare la gestione del problema di perdita di memoria descritta.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14ab9b5b36eee607679ee95423c2af912ed02310
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774998"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860007"
 ---
 # <a name="trees-in-wpf"></a>Strutture ad albero in WPF
 In molte tecnologie gli elementi e i componenti sono organizzati in una struttura ad albero in cui gli sviluppatori modificano direttamente i nodi degli oggetti nell'albero per influire sul rendering o sul comportamento di un'applicazione. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] usa anche molte metafore correlate alla struttura ad albero per definire le relazioni tra gli elementi del programma. In genere gli sviluppatori WPF possono creare un'applicazione nel codice o definire parti dell'applicazione in XAML usando come riferimento concettuale la metafora della struttura ad albero di oggetti, ma chiameranno un'API specifica o useranno un markup specifico a tale scopo anziché un'API di modifica della struttura ad albero di oggetti generica simile a quella usata nel modello DOM XML. WPF espone due classi di helper che forniscono una visualizzazione albero metafora <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>. Nella documentazione di WPF vengono inoltre usati i termini struttura ad albero visuale e albero logico, in quanto tali strutture ad albero sono utili per la comprensione del comportamento di alcune funzionalità chiave di WPF. In questo argomento definisce ciò che rappresentano la struttura ad albero visuale e albero logico, vengono illustrate tali strutture ad albero correlazione tra un concetto di albero di oggetti complessiva e introduce <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -51,7 +51,7 @@ In molte tecnologie gli elementi e i componenti sono organizzati in una struttur
   
 <a name="override_logical_tree"></a>   
 ### <a name="overriding-the-logical-tree"></a>Override dell'albero logico  
- Gli autori di controlli avanzati possono eseguire l'override dell'albero logico tramite l'override di diverse [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] che definiscono in che modo un modello di contenuto o un oggetto generale aggiunge o rimuove oggetti nell'albero logico. Per un esempio relativo all'override dell'albero logico, vedere [Eseguire l'override dell'albero logico](how-to-override-the-logical-tree.md).  
+ Gli autori di controlli avanzati è possono eseguire l'override dell'albero logico eseguendo l'override delle varie API che definiscono come modello di contenuto o un oggetto generale aggiunge o rimuove gli oggetti all'interno dell'albero logico. Per un esempio relativo all'override dell'albero logico, vedere [Eseguire l'override dell'albero logico](how-to-override-the-logical-tree.md).  
   
 <a name="pvi"></a>   
 ### <a name="property-value-inheritance"></a>Ereditarietà del valore della proprietà  

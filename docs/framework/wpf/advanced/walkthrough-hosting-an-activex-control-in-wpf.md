@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: f19186380b0cbc71cdd64013ca5e49361ba26cda
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0181093de1c40889110ab7eae75a3847a17845a9
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778376"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859945"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Procedura dettagliata: Hosting di un controllo ActiveX in WPF
-Per consentire di migliorare l'interazione con i browser, è possibile usare [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controlli di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-applicazione basata su. Questa procedura dettagliata illustra come è possibile ospitare le [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] come un controllo in un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pagina.
+Per consentire di migliorare l'interazione con i browser, è possibile usare controlli Microsoft ActiveX nel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-applicazione basata su. Questa procedura dettagliata illustra come è possibile ospitare le [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] come un controllo in un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pagina.
 
  Le attività illustrate nella procedura dettagliata sono le seguenti:
 
@@ -26,7 +26,7 @@ Per consentire di migliorare l'interazione con i browser, è possibile usare [!I
 
 - Hosting del controllo ActiveX in una pagina WPF.
 
- Dopo aver completato questa procedura dettagliata, si sarà in grado di utilizzare [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controlli di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-applicazione basata su.
+ Dopo aver completato questa procedura dettagliata, si sarà in grado di utilizzare controlli Microsoft ActiveX di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-applicazione basata su.
 
 ## <a name="prerequisites"></a>Prerequisiti
  Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:
@@ -60,7 +60,7 @@ Per consentire di migliorare l'interazione con i browser, è possibile usare [!I
 9. Se viene richiesto di rinominare tutti i riferimenti, fare clic su **Sì**.
 
 ## <a name="creating-the-activex-control"></a>Creazione di un controllo ActiveX
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] Genera automaticamente un <xref:System.Windows.Forms.AxHost> classe wrapper per un [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controllare quando il controllo viene aggiunto all'area di progettazione. La procedura seguente crea un assembly gestito denominato AxInterop.WMPLib.dll.
+ [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] Genera automaticamente un <xref:System.Windows.Forms.AxHost> classe wrapper per un controllo Microsoft ActiveX quando il controllo viene aggiunto all'area di progettazione. La procedura seguente crea un assembly gestito denominato AxInterop.WMPLib.dll.
 
 ### <a name="to-create-the-activex-control"></a>Per creare il controllo ActiveX
 
@@ -76,7 +76,7 @@ Per consentire di migliorare l'interazione con i browser, è possibile usare [!I
 
 ### <a name="to-host-the-activex-control"></a>Per ospitare il controllo ActiveX
 
-1. Nel progetto HostingAxInWpf, aggiungere un riferimento all'oggetto generato [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] assembly di interoperabilità.
+1. Nel progetto HostingAxInWpf, aggiungere un riferimento all'assembly di interoperabilità ActiveX generato.
 
      Questo assembly è denominato AxInterop.WMPLib.dll ed è stato aggiunto alla cartella di Debug del progetto WmpAxLib quando è stato importato il controllo Windows Media Player.
 

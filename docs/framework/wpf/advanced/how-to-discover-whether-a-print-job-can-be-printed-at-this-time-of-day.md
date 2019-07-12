@@ -10,19 +10,19 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: c68e6a69553f2cb14eb442c31e5138009f3c8411
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee38caedc5d5a29d2221d6e5a6bf6cf74617bf8c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619436"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859724"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Procedura: Scoprire se è possibile eseguire un processo di stampa a quest'ora del giorno
 Code di stampa non sono sempre disponibili per 24 ore al giorno. Hanno proprietà ora di inizio e fine che è possibile impostare per renderli disponibili in determinati momenti del giorno. Questa funzionalità è utilizzabile, ad esempio, per riservare una stampante per l'utilizzo esclusivo di un determinato reparto dopo alle 17.00. Tale reparto avrebbe un'altra coda della stampante di altri reparti di manutenzione utilizzano. La coda per gli altri reparti verrebbe impostata sarà disponibile dopo alle 17.00, anche se coda di quella per il reparto può essere impostata per essere sempre disponibile.  
   
  Inoltre, i processi di stampa stessi possono essere impostati come stampabile solo all'interno di un intervallo di tempo specificato.  
   
- Il <xref:System.Printing.PrintQueue> e <xref:System.Printing.PrintSystemJobInfo> classi esposte nel [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] di Microsoft .NET Framework forniscono un mezzo per la verifica in modalità remota se un determinato processo di stampa può stampare su una determinata coda al momento corrente.  
+ Il <xref:System.Printing.PrintQueue> e <xref:System.Printing.PrintSystemJobInfo> classi esposte nell'API di Microsoft .NET Framework consentono di controllare in remoto se un determinato processo di stampa può stampare su una determinata coda al momento corrente.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente è un esempio che è possibile diagnosticare i problemi di un processo di stampa.  
@@ -54,7 +54,7 @@ Code di stampa non sono sempre disponibili per 24 ore al giorno. Hanno propriet�
  I due overload del **ReportAvailabilityAtThisTime** metodo sono identici tranne che per il tipo passato ad essi, in modo che solo il <xref:System.Printing.PrintQueue> versione viene presentata di seguito.  
   
 > [!NOTE]
->  Il fatto che i metodi sono identici a eccezione di tipo pone la domanda di perché il codice di esempio non crea un metodo generico **ReportAvailabilityAtThisTime\<T >**. Il motivo è che questo metodo deve essere limitato a una classe che ha il **StartTimeOfDay** e **UntilTimeOfDay** le proprietà che chiama il metodo, ma un metodo generico può essere limitato a un singola classe e l'unica classe comune a entrambi <xref:System.Printing.PrintQueue> e <xref:System.Printing.PrintSystemJobInfo> l'ereditarietà di struttura ad albero è <xref:System.Printing.PrintSystemObject> che non dispone di tale proprietà.  
+>  Il fatto che i metodi sono identici a eccezione di tipo pone la domanda di perché il codice di esempio non crea un metodo generico **ReportAvailabilityAtThisTime\<T >** . Il motivo è che questo metodo deve essere limitato a una classe che ha il **StartTimeOfDay** e **UntilTimeOfDay** le proprietà che chiama il metodo, ma un metodo generico può essere limitato a un singola classe e l'unica classe comune a entrambi <xref:System.Printing.PrintQueue> e <xref:System.Printing.PrintSystemJobInfo> l'ereditarietà di struttura ad albero è <xref:System.Printing.PrintSystemObject> che non dispone di tale proprietà.  
   
  Il **ReportAvailabilityAtThisTime** metodo, come illustrato nell'esempio di codice riportato di seguito, avvia l'inizializzazione di un <xref:System.Boolean> variabile sentinel `true`. Verranno ripristinate a `false`, se la coda non è disponibile.  
   
