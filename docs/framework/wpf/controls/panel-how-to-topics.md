@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: a0cb1e0b569fb69adf1e474ca3666d5e387274ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45a5b67edeea46a29e5c2fc3aea86d34fa4f5e7a
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770682"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860065"
 ---
-# <a name="panel-how-to-topics"></a><span data-ttu-id="ff678-102">Procedure relative all'elemento Panel</span><span class="sxs-lookup"><span data-stu-id="ff678-102">Panel How-to Topics</span></span>
-<span data-ttu-id="ff678-103">Gli argomenti in questa sezione descrivono come usare il <xref:System.Windows.Controls.Panel> elemento ed elementi correlati [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ff678-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
+# <a name="panel-how-to-topics"></a><span data-ttu-id="60591-102">Procedure relative all'elemento Panel</span><span class="sxs-lookup"><span data-stu-id="60591-102">Panel How-to Topics</span></span>
+<span data-ttu-id="60591-103">Negli argomenti di questa sezione viene descritto come utilizzare il <xref:System.Windows.Controls.Panel> elemento e le relative API.</span><span class="sxs-lookup"><span data-stu-id="60591-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related APIs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ff678-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="ff678-104">In This Section</span></span>  
- [<span data-ttu-id="ff678-105">Creare un elemento Panel personalizzato</span><span class="sxs-lookup"><span data-stu-id="ff678-105">Create a Custom Panel Element</span></span>](how-to-create-a-custom-panel-element.md)  
- [<span data-ttu-id="ff678-106">Eseguire l'override del metodo Panel OnRender</span><span class="sxs-lookup"><span data-stu-id="ff678-106">Override the Panel OnRender Method</span></span>](how-to-override-the-panel-onrender-method.md)  
- [<span data-ttu-id="ff678-107">Impostare le proprietà di altezza di un elemento</span><span class="sxs-lookup"><span data-stu-id="ff678-107">Set the Height Properties of an Element</span></span>](how-to-set-the-height-properties-of-an-element.md)  
- [<span data-ttu-id="ff678-108">Impostare le proprietà di larghezza di un elemento</span><span class="sxs-lookup"><span data-stu-id="ff678-108">Set the Width Properties of an Element</span></span>](how-to-set-the-width-properties-of-an-element.md)  
+## <a name="in-this-section"></a><span data-ttu-id="60591-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="60591-104">In This Section</span></span>  
+ [<span data-ttu-id="60591-105">Creare un elemento Panel personalizzato</span><span class="sxs-lookup"><span data-stu-id="60591-105">Create a Custom Panel Element</span></span>](how-to-create-a-custom-panel-element.md)  
+ [<span data-ttu-id="60591-106">Eseguire l'override del metodo Panel OnRender</span><span class="sxs-lookup"><span data-stu-id="60591-106">Override the Panel OnRender Method</span></span>](how-to-override-the-panel-onrender-method.md)  
+ [<span data-ttu-id="60591-107">Impostare le proprietà di altezza di un elemento</span><span class="sxs-lookup"><span data-stu-id="60591-107">Set the Height Properties of an Element</span></span>](how-to-set-the-height-properties-of-an-element.md)  
+ [<span data-ttu-id="60591-108">Impostare le proprietà di larghezza di un elemento</span><span class="sxs-lookup"><span data-stu-id="60591-108">Set the Width Properties of an Element</span></span>](how-to-set-the-width-properties-of-an-element.md)  
   
-## <a name="reference"></a><span data-ttu-id="ff678-109">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="ff678-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="60591-109">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="60591-109">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -38,9 +38,9 @@ ms.locfileid: "61770682"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="ff678-110">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="ff678-110">Related Sections</span></span>  
- [<span data-ttu-id="ff678-111">Layout</span><span class="sxs-lookup"><span data-stu-id="ff678-111">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="60591-110">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="60591-110">Related Sections</span></span>  
+ [<span data-ttu-id="60591-111">Layout</span><span class="sxs-lookup"><span data-stu-id="60591-111">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="ff678-112">Procedura dettagliata: Prima applicazione desktop WPF</span><span class="sxs-lookup"><span data-stu-id="ff678-112">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="60591-112">Procedura dettagliata: Prima applicazione desktop WPF</span><span class="sxs-lookup"><span data-stu-id="60591-112">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="ff678-113">Panoramica sull'elemento ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="ff678-113">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="60591-113">Panoramica sull'elemento ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="60591-113">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
