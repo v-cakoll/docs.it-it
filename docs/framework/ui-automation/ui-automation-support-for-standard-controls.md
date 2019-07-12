@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 3fde9779205ea7d0902ddd99ed192f097a159d2c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 641fc3f8dfca3ff6506354c076b98cc88073a1b7
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221479"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802114"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Supporto per automazione interfaccia utente dei controlli standard
 > [!NOTE]
@@ -34,18 +34,18 @@ ms.locfileid: "59221479"
 |----------------|------------------|  
 |Button|Button|  
 |Button|RadioButton|  
-|Button|Raggruppa|  
+|Button|Group|  
 |Button|CheckBox|  
 |Button|Hyperlink|  
 |Button|SplitButton|  
 |Button|CheckBox|  
 |ComboBoxEx32|ComboBox|  
 |ComboBox|ComboBox|  
-|Edit|Document|  
+|Edit|Documento|  
 |Edit|Edit|  
 |SysLink|Hyperlink|  
-|Static|Testo|  
-|Static|Image|  
+|statico|Text|  
+|statico|Image|  
 |SysIPAddress32|Custom|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
@@ -56,9 +56,9 @@ ms.locfileid: "59221479"
 |#32768|MenuItem|  
 |msctls_progress32|ProgressBar|  
 |RichEdit|Document Vedere la nota.|  
-|RichEdit20A|Document|  
+|RichEdit20A|Documento|  
 |RichEdit20W|Document|  
-|RichEdit50W|Document|  
+|RichEdit50W|Documento|  
 |ScrollBar|Slider|  
 |msctls_trackbar32|Slider|  
 |msctls_updown32|Spinner|  
@@ -136,7 +136,7 @@ ms.locfileid: "59221479"
 |VscrollBar|  
 |WebBrowser|  
   
- I seguenti controlli sono esposti a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] solo tramite il relativo supporto per [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. Alcune funzionalità potrebbero non essere disponibili.  
+ I seguenti controlli sono esposti a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] solo tramite il supporto per Microsoft Active Accessibility. Alcune funzionalità potrebbero non essere disponibili.  
   
 |Nome controllo|  
 |------------------|  

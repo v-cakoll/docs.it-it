@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: cdd0331ee8ffc664e9fbe04bd1494f1f7d714464
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b83d9c972dbdadb721bae8b7d616c94a0c1c831f
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663391"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804748"
 ---
 # <a name="documents-in-wpf"></a>Documenti in WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre un'ampia gamma di funzionalità per i documenti che consentono la creazione di contenuti ad alta fedeltà progettati per garantire un accesso e una lettura semplificati rispetto alle generazioni precedenti di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Oltre a caratteristiche avanzate in termini di funzionalità e qualità, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assicura servizi integrati per la visualizzazione, la creazione di pacchetti e la sicurezza dei documenti. Questo argomento costituisce un'introduzione ai tipi di documenti e alla creazione di pacchetti di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -39,7 +39,9 @@ ms.locfileid: "64663391"
   
 <a name="flow_document"></a>   
 ### <a name="flow-document-controls"></a>Controlli dei documenti dinamici  
- **Nota:** Per altre informazioni sulla funzionalità dei documenti dinamici e come crearli, vedere [Cenni preliminari sui documenti dinamici](flow-document-overview.md).  
+
+> [!NOTE]
+>  Per altre informazioni sulla funzionalità dei documenti dinamici e come crearli, vedere [Cenni preliminari sui documenti dinamici](flow-document-overview.md).  
   
  La visualizzazione del contenuto di documenti dinamici è supportata da tre controlli: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, e <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
@@ -142,7 +144,7 @@ ms.locfileid: "64663391"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [per](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Cenni preliminari sui documenti dinamici](flow-document-overview.md)
 - [Panoramica della stampa](printing-overview.md)
 - [Serializzazione e archiviazione di documenti](document-serialization-and-storage.md)
