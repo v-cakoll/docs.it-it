@@ -2,12 +2,12 @@
 title: Articoli sulla procedura (Guida a C#)
 description: Raccolta di suggerimenti rapidi e brevi esempi di codice evidenziati
 ms.date: 12/20/2017
-ms.openlocfilehash: 011e2a8208e647fb2df2ea2e949bfe2d2274eb37
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63410d687bd09f95a5ce7ce9304f2281b2f8d334
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744269"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859543"
 ---
 # <a name="how-to-c"></a>Procedura (C#)
 
@@ -98,7 +98,6 @@ Gli eventi offrono un meccanismo per pubblicare o sottoscrivere notifiche.
 - [Implementare eventi dichiarati in interfacce](../programming-guide/events/how-to-implement-interface-events.md).
 - [Conformità alle linee guida di .NET Framework quando il codice pubblica eventi](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
 - [Generare eventi definiti in classi base da classi derivate](../programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md).
-- [Archiviare istanze di eventi in un dizionario](../programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md).
 - [Implementare funzioni di accesso a eventi personalizzati](../programming-guide/events/how-to-implement-custom-event-accessors.md).
 
 ## <a name="linq-practices"></a>Procedure LINQ
