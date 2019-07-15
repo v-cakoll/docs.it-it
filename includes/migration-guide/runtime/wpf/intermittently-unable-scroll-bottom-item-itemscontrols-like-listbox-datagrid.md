@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9c2ee4ba66deb7c3b33698963add2b8a7e70069f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2674edc595d8e4e1e4c2ee42b39aa59265127462
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235784"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803217"
 ---
 ### <a name="intermittently-unable-to-scroll-to-bottom-item-in-itemscontrols-like-listbox-and-datagrid-when-using-custom-datatemplates"></a>Di tanti in tanto non è possibile scorrere fino all'elemento inferiore in ItemsControls (ad esempio ListBox e DataGrid) quando si usano DataTemplates personalizzati
 
@@ -15,3 +15,4 @@ ms.locfileid: "59235784"
 |Ambito|Secondario|
 |Versione|4.5|
 |Tipo|Runtime|
+

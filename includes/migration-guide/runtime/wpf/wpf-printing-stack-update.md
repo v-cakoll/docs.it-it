@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6fafb689af5d50b31b19f5d1fe7090a6c256ca45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e613f0c52c77efebf250f5935d5cbfc29bc09a6b
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236256"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802505"
 ---
 ### <a name="wpf-printing-stack-update"></a>Aggiornamento dello stack di stampa WPF
 
@@ -15,3 +15,4 @@ ms.locfileid: "59236256"
 |Ambito|Microsoft Edge|
 |Versione|4.7|
 |Tipo|Runtime|
+

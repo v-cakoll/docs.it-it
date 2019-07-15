@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690305"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742457"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procedura dettagliata: Creazione di codice in scenari di attendibilità parziale
 La reflection emit usa le stesse API in scenari di attendibilità sia parziale che completa, ma alcune funzionalità richiedono autorizzazioni speciali nel codice parzialmente attendibile. Inoltre, la reflection emit include una funzionalità, i metodi dinamici ospitati in modo anonimo, progettata per l'uso in situazioni di attendibilità parziale da parte di assembly trasparenti per la sicurezza.  
@@ -57,7 +57,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
   
  Nella procedura seguente viene creato un dominio dell'applicazione sandbox che esegue il codice con attendibilità parziale, per testare gli scenari in cui il codice generato può accedere solo ai membri pubblici dei tipi pubblici. Una procedura successiva illustra come aggiungere <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>, per testare scenari in cui il codice generato può accedere a tipi e membri non pubblici negli assembly a cui vengono concesse autorizzazioni uguali o inferiori.  
   
-##### <a name="to-create-an-application-domain-with-partial-trust"></a>Per creare un dominio dell'applicazione con attendibilità parziale  
+#### <a name="to-create-an-application-domain-with-partial-trust"></a>Per creare un dominio dell'applicazione con attendibilità parziale  
   
 1. Creare un set di autorizzazioni da concedere agli assembly nel dominio dell'applicazione sandbox. In questo caso viene usato il set di autorizzazioni dell'area Internet.  
   
@@ -87,7 +87,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
 > [!NOTE]
 >  Per evitare l'elevazione dei privilegi, le informazioni sullo stack per l'assembly di creazione vengono incluse quando si creano metodi dinamici ospitati in modo anonimo. Quando il metodo viene richiamato, vengono controllate le informazioni sullo stack. Di conseguenza, un metodo dinamico ospitato in modo anonimo richiamato da codice completamente attendibile è comunque limitato al livello di attendibilità dell'assembly di creazione.  
   
-##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Per creare un dominio dell'applicazione con attendibilità parziale più RMA  
+#### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Per creare un dominio dell'applicazione con attendibilità parziale più RMA  
   
 1. Creare un nuovo oggetto <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) e usare il metodo <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> per aggiungere l'autorizzazione al set di concessioni.  
   
@@ -184,7 +184,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
 <a name="Example"></a>   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>DESCRIZIONE  
  Nell'esempio di codice riportato di seguito viene illustrato l'uso del flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> per consentire ai metodi dinamici ospitati in modo anonimo di ignorare i controlli di visibilità JIT, ma solo quando il membro di destinazione è un livello uguale o inferiore di attendibilità rispetto all'assembly che genera il codice.  
   
  Nell'esempio viene definita una classe `Worker` che può essere sottoposta a marshalling entro i limiti del dominio dell'applicazione. La classe ha due overload del metodo `AccessPrivateMethod` che generano ed eseguono i metodi dinamici. Il primo overload genera un metodo dinamico che chiama il metodo privato `PrivateMethod` della classe `Worker` e può generare il metodo dinamico con o senza controlli di visibilità JIT. Il secondo overload genera un metodo dinamico che accede a una proprietà `internal` (proprietà `Friend` in Visual Basic) della classe <xref:System.String>.  

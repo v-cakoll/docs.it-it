@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1545c807e3bef675e63e14d01ab82c1131600f39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2f94ec58e6fdb56cfc5147e74b6ffd6bb657228d
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235704"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857598"
 ---
 ### <a name="itemsclear-does-not-remove-duplicates-from-selecteditems"></a>Items.Clear non rimuove i duplicati da SelectedItems
 
@@ -16,3 +16,4 @@ ms.locfileid: "59235704"
 |Versione|4.5|
 |Tipo|Runtime|
 |API interessate|<ul><li><xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems?displayProperty=nameWithType></li></ul>|
+

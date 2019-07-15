@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 141e906077748795e0360cec450a54a9fd170dc9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 745e880db08c5fa7e5514a71758f7fbb042e7ef4
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236426"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859056"
 ---
 ### <a name="the-default-hash-algorithm-for-wpf-packagedigitalsignaturemanager-is-now-sha256"></a>L'algoritmo hash predefinito per WPF PackageDigitalSignatureManager è ora SHA256
 
@@ -16,3 +16,4 @@ ms.locfileid: "59236426"
 |Versione|4.7.1|
 |Tipo|Ridestinazione|
 |API interessate|<ul><li><xref:System.IO.Packaging.PackageDigitalSignatureManager.DefaultHashAlgorithm?displayProperty=nameWithType></li></ul>|
+

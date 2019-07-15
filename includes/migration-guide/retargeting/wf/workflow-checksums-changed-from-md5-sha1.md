@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0b42e320ba439a4cfc196471fc6dd4b3c15cd9d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f007a2b81820a1d25a2d101b35f3a49e7794fec1
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236486"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859066"
 ---
 ### <a name="workflow-checksums-changed-from-md5-to-sha1"></a>Checksum del flusso di lavoro modificati da MD5 a SHA1
 
@@ -15,3 +15,4 @@ ms.locfileid: "59236486"
 |Ambito|Secondario|
 |Versione|4.7|
 |Tipo|Ridestinazione|
+

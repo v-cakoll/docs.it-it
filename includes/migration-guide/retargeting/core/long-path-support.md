@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 506218195417548880a9d8d10508a570a7769682
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f672645fb98f511f7e1326c9c584b287a0fae7dc
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234943"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859278"
 ---
 ### <a name="long-path-support"></a>Supporto del percorso lungo
 
@@ -15,3 +15,4 @@ ms.locfileid: "59234943"
 |Ambito|Secondario|
 |Versione|4.6.2|
 |Tipo|Ridestinazione|
+

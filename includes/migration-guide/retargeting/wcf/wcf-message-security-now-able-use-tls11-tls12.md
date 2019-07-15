@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0a3dc43ebdc58d54675f2264a8ee56d9f4358cd8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3b7b50700541649a785fa9bbe3ecc56c2697fbfc
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236479"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859155"
 ---
 ### <a name="wcf-message-security-now-is-able-to-use-tls11-and-tls12"></a>La sicurezza dei messaggi di WCF è ora in grado di usare TLS1.1 e TLS1.2
 
@@ -15,3 +15,4 @@ ms.locfileid: "59236479"
 |Ambito|Microsoft Edge|
 |Versione|4.7|
 |Tipo|Ridestinazione|
+

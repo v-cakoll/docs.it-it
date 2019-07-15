@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1ef31202d7c072ca27c21fc22db102aafa6b8de7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: eab476a1d3f275e851e5af4198c30b60ad0c17b8
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235745"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858608"
 ---
 ### <a name="etw-eventlisteners-do-not-capture-events-from-providers-with-explicit-keywords-like-the-tpl-provider"></a>Gli EventListener ETW non acquisiscono gli eventi dai provider con parole chiave esplicite (come il provider TPL)
 
@@ -16,3 +16,4 @@ ms.locfileid: "59235745"
 |Versione|4.5|
 |Tipo|Runtime|
 |API interessate|<ul><li><xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel)?displayProperty=nameWithType></li></ul>|
+

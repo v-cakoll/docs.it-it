@@ -2,12 +2,12 @@
 title: Implementazione del livello di persistenza dell'infrastruttura con Entity Framework Core
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Esplorare i dettagli di implementazione per il livello di persistenza dell'infrastruttura con Entity Framework Core.
 ms.date: 10/08/2018
-ms.openlocfilehash: c6b0a022dfecb24c479a0fd3c84dbde719a390a8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639532"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778062"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementare il livello di persistenza dell'infrastruttura con Entity Framework Core
 
@@ -21,7 +21,7 @@ Entity Framework (EF) Core è una versione semplice, estendibile e multipiattafo
 
 Dal momento che nella documentazione Microsoft è già disponibile un'introduzione a Entity Framework Core, in questa sede verranno forniti solo i collegamenti a tali informazioni.
 
-#### <a name="additional-resources"></a>Risorse aggiuntive
+### <a name="additional-resources"></a>Risorse aggiuntive
 
 - **Entity Framework Core** \
   [https://docs.microsoft.com/ef/core/](/ef/core/)
@@ -230,7 +230,7 @@ builder.RegisterType<OrderRepository>()
 
 Si noti che l'uso della durata del singleton per il repository potrebbe causare gravi problemi di concorrenza quando l'oggetto DbContext è impostato sulla durata con ambito (InstancePerLifetimeScope), ovvero la durata predefinita per un oggetto DBContext.
 
-#### <a name="additional-resources"></a>Risorse aggiuntive
+### <a name="additional-resources"></a>Risorse aggiuntive
 
 - **Implementazione dei modelli con repository e unità di lavoro in un'applicazione MVC ASP.NET** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
@@ -447,7 +447,7 @@ Oltre a incapsulare la logica di filtro, la specifica è in grado di indicare la
 
 Anche se non è consigliabile restituire espressioni IQueryable da un repository, è possibile usarle all'interno del repository per creare un set di risultati. È possibile vedere questo approccio usato nel metodo List sopra, che utilizza espressioni intermedie IQueryable per creare l'elenco di istruzioni includes della query prima di eseguire la query con i criteri della specifica nell'ultima riga.
 
-#### <a name="additional-resources"></a>Risorse aggiuntive
+### <a name="additional-resources"></a>Risorse aggiuntive
 
 - **Mapping di tabella** \
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)
@@ -464,7 +464,7 @@ Anche se non è consigliabile restituire espressioni IQueryable da un repository
 - **Proprietà shadow** \
   [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
-- **The Specification pattern.** \ (Schema Specification)
+- **The Specification pattern.**  \ (Schema Specification)
   <https://deviq.com/specification-pattern/>
 
 > [!div class="step-by-step"]

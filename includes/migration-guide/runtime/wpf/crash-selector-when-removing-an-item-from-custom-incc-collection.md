@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a573a78109036b87201b53f72aa8dba6755e7a21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8f4ee44e8432bae3537c6f064f564b9f044a7c33
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236606"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802519"
 ---
 ### <a name="crash-in-selector-when-removing-an-item-from-a-custom-incc-collection"></a>Arresto anomalo del sistema nel selettore quando si rimuove un elemento da una raccolta INCC personalizzata
 
@@ -15,3 +15,4 @@ ms.locfileid: "59236606"
 |Ambito|Secondario|
 |Versione|4.7|
 |Tipo|Runtime|
+

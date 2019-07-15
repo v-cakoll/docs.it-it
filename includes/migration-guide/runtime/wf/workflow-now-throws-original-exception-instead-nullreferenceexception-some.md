@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 470fc2ddcfbb29a677cadb6e7e1d2e55784d7ac2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6e5e90a4cfb862b3bfd74ac5a3715e97a736f598
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236228"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802466"
 ---
 ### <a name="workflow-now-throws-original-exception-instead-of-nullreferenceexception-in-some-cases"></a>Il flusso di lavoro ora genera l'eccezione originale anziché NullReferenceException in alcuni casi
 
@@ -16,3 +16,4 @@ ms.locfileid: "59236228"
 |Versione|4.7|
 |Tipo|Runtime|
 |API interessate|<ul><li><xref:System.Activities.CodeActivity.Execute(System.Activities.CodeActivityContext)?displayProperty=nameWithType></li><li><xref:System.Activities.AsyncCodeActivity.BeginExecute(System.Activities.AsyncCodeActivityContext,System.AsyncCallback,System.Object)?displayProperty=nameWithType></li><li><xref:System.Activities.AsyncCodeActivity%601.BeginExecute(System.Activities.AsyncCodeActivityContext,System.AsyncCallback,System.Object)?displayProperty=nameWithType></li><li><xref:System.Activities.WorkflowInvoker.Invoke?displayProperty=nameWithType></li></ul>|
+

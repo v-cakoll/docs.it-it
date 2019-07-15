@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 85e7f10643c57837cf0b66613825241db94c0065
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 5171b9b9878331069e354eeb17ad57ca9bd594a8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423871"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773660"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Procedura: Implementare un componente che supporta il modello asincrono basato su eventi
 In caso di scrittura di una classe con alcune operazioni che possono causare ritardi notevoli, è consigliabile assegnare la funzionalità asincrona implementando [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -53,14 +53,14 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
 ## <a name="creating-the-component"></a>Creazione del componente  
  Il primo passaggio prevede la creazione del componente che implementerà il modello asincrono basato su eventi.  
   
-#### <a name="to-create-the-component"></a>Per creare il componente  
+### <a name="to-create-the-component"></a>Per creare il componente  
   
 - Creare una classe denominata `PrimeNumberCalculator` che eredita da <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Definizione di delegati ed eventi asincroni pubblici  
  Il componente comunica con i client usando gli eventi. L'evento _MethodName_**Completed** avvisa i client del completamento di un'attività asincrona, mentre l'evento _MethodName_**ProgressChanged** li informa dello stato di avanzamento di questa attività.  
   
-#### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Per definire gli eventi asincroni per i client del componente:  
+### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Per definire gli eventi asincroni per i client del componente:  
   
 1. Importare gli spazi dei nomi <xref:System.Threading?displayProperty=nameWithType> e <xref:System.Collections.Specialized?displayProperty=nameWithType> all'inizio del file.  
   
@@ -85,7 +85,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
 ## <a name="checkpoint"></a>Checkpoint  
  A questo punto, è possibile compilare il componente.  
   
-#### <a name="to-test-your-component"></a>Per eseguire il test del componente  
+### <a name="to-test-your-component"></a>Per eseguire il test del componente  
   
 - Compilare il componente.  
   
@@ -99,9 +99,9 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
      Questi avvisi verranno cancellati nella sezione successiva.  
   
 ## <a name="defining-private-delegates"></a>Definizione di delegati privati  
- Gli aspetti asincroni del componente `PrimeNumberCalculator` vengono implementati internamente con uno speciale delegato noto come <xref:System.Threading.SendOrPostCallback>. Un delegato <xref:System.Threading.SendOrPostCallback> rappresenta un metodo di callback eseguito su un thread <xref:System.Threading.ThreadPool>. Il metodo di callback deve avere una firma che accetta un singolo parametro di tipo <xref:System.Object> e sarà quindi necessario passare lo stato tra i delegati in una classe wrapper. Per ulteriori informazioni, vedere <xref:System.Threading.SendOrPostCallback>.  
+ Gli aspetti asincroni del componente `PrimeNumberCalculator` vengono implementati internamente con uno speciale delegato noto come <xref:System.Threading.SendOrPostCallback>. Un delegato <xref:System.Threading.SendOrPostCallback> rappresenta un metodo di callback eseguito su un thread <xref:System.Threading.ThreadPool>. Il metodo di callback deve avere una firma che accetta un singolo parametro di tipo <xref:System.Object> e sarà quindi necessario passare lo stato tra i delegati in una classe wrapper. Per altre informazioni, vedere <xref:System.Threading.SendOrPostCallback>.  
   
-#### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>Per implementare il comportamento asincrono interno del componente:  
+### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>Per implementare il comportamento asincrono interno del componente:  
   
 1. Dichiarare e creare i delegati <xref:System.Threading.SendOrPostCallback> nella classe `PrimeNumberCalculator`. Creare gli oggetti <xref:System.Threading.SendOrPostCallback> in un metodo di utilità denominato `InitializeDelegates`.  
   
@@ -132,7 +132,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
 ## <a name="implementing-public-events"></a>Implementazione di eventi pubblici  
  I componenti che implementano il modello asincrono basato su eventi comunicano con i client usando gli eventi. Questi eventi vengono richiamati sul thread appropriato grazie alla classe <xref:System.ComponentModel.AsyncOperation>.  
   
-#### <a name="to-raise-events-to-your-components-clients"></a>Per generare eventi per i client del componente:  
+### <a name="to-raise-events-to-your-components-clients"></a>Per generare eventi per i client del componente:  
   
 1. Implementare gli eventi pubblici per la segnalazione ai client. Saranno necessari un evento per segnalare lo stato e uno per segnalare il completamento.  
   
@@ -146,7 +146,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
   
  La firma `CompletionMethod` deve contenere tutti gli stati necessari per descrivere l'esito dell'operazione asincrona. Contiene lo stato per il numero testato da questa particolare operazione asincrona, lo stato che indica se il numero è primo e il valore del primo divisore se non è un numero primo. Contiene anche lo stato che descrive eventuali eccezioni generate e la classe <xref:System.ComponentModel.AsyncOperation> corrispondente a questa particolare attività.  
   
-#### <a name="to-complete-an-asynchronous-operation"></a>Per completare un'operazione asincrona:  
+### <a name="to-complete-an-asynchronous-operation"></a>Per completare un'operazione asincrona:  
   
 - Implementare il metodo di completamento. Accetta sei parametri, che usa per popolare `CalculatePrimeCompletedEventArgs` restituito al client tramite `CalculatePrimeCompletedEventHandler` del client. Rimuove il token ID attività del client dalla raccolta interna e termina la durata dell'operazione asincrona con una chiamata a <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. <xref:System.ComponentModel.AsyncOperation> effettua il marshalling della chiamata al thread o al contesto adeguato al modello di applicazione.  
   
@@ -156,7 +156,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
 ## <a name="checkpoint"></a>Checkpoint  
  A questo punto, è possibile compilare il componente.  
   
-#### <a name="to-test-your-component"></a>Per eseguire il test del componente  
+### <a name="to-test-your-component"></a>Per eseguire il test del componente  
   
 - Compilare il componente.  
   
@@ -178,7 +178,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
 > [!NOTE]
 >  Il report dello stato viene implementato nel metodo `BuildPrimeNumberList`. Nei computer veloci gli eventi `ProgressChanged` possono essere generati in rapida successione. Il thread del client, in cui questi eventi vengono generati, deve poter gestire questa situazione. Il codice dell'interfaccia utente potrebbe non riuscire a stare al passo perché sommerso di messaggi e di conseguenza bloccarsi. Per un esempio di interfaccia utente che gestisce questa situazione, vedere [Procedura: Implementare un client del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
-#### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Per eseguire in modo asincrono il calcolo dei numeri primi:  
+### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Per eseguire in modo asincrono il calcolo dei numeri primi:  
   
 1. Implementare il metodo di utilità `TaskCanceled`, che controlla la raccolta della durata dell'attività per l'ID attività specificato e restituisce `true` se l'ID attività non viene trovato.  
   
@@ -210,7 +210,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
 ## <a name="checkpoint"></a>Checkpoint  
  A questo punto, è possibile compilare il componente.  
   
-#### <a name="to-test-your-component"></a>Per eseguire il test del componente  
+### <a name="to-test-your-component"></a>Per eseguire il test del componente  
   
 - Compilare il componente.  
   
@@ -221,7 +221,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
   
  Per annullare una determinata operazione in sospeso, chiamare <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> sulla classe <xref:System.ComponentModel.AsyncOperation> corrispondente. Verrà terminata l'operazione e tutte le chiamate successive alla classe <xref:System.ComponentModel.AsyncOperation> genereranno un'eccezione.  
   
-#### <a name="to-implement-start-and-cancel-functionality"></a>Per implementare la funzionalità di avvio e annullamento:  
+### <a name="to-implement-start-and-cancel-functionality"></a>Per implementare la funzionalità di avvio e annullamento:  
   
 1. Implementare il metodo `CalculatePrimeAsync`. Verificare che il token fornito dal client (ID attività) sia univoco rispetto a tutti i token che rappresentano le attività attualmente in sospeso. Se il client passa un token non univoco, `CalculatePrimeAsync` genera un'eccezione. In caso contrario, il token viene aggiunto alla raccolta di ID attività.  
   
@@ -236,7 +236,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
 ## <a name="checkpoint"></a>Checkpoint  
  A questo punto, è possibile compilare il componente.  
   
-#### <a name="to-test-your-component"></a>Per eseguire il test del componente  
+### <a name="to-test-your-component"></a>Per eseguire il test del componente  
   
 - Compilare il componente.  
   

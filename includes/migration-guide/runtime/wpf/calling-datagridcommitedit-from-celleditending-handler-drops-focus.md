@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e2d63d85adce64db6e00b62ec17f55ae71ce3052
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b5f12e648a82ebaba7d09b546e8aa2fc7cd82a37
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235725"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803277"
 ---
 ### <a name="calling-datagridcommitedit-from-a-celleditending-handler-drops-focus"></a>La chiamata di DataGrid.CommitEdit da un gestore CellEditEnding fa perdere lo stato attivo
 
@@ -16,3 +16,4 @@ ms.locfileid: "59235725"
 |Versione|4.5|
 |Tipo|Runtime|
 |API interessate|<ul><li><xref:System.Windows.Controls.DataGrid.CommitEdit?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.DataGrid.CommitEdit(System.Windows.Controls.DataGridEditingUnit,System.Boolean)?displayProperty=nameWithType></li></ul>|
+

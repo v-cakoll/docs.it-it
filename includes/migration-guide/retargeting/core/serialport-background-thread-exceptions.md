@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 81b104d8e5a9ccc8e790c3b16e4837cfa0c0def5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 448a6160bd64143000c00d21a9ddecdc61b53475
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236436"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858972"
 ---
 ### <a name="serialport-background-thread-exceptions"></a>Eccezioni di thread in background SerialPort
 
@@ -16,3 +16,4 @@ ms.locfileid: "59236436"
 |Versione|4.7.1|
 |Tipo|Ridestinazione|
 |API interessate|<ul><li><xref:System.IO.Ports.SerialPort?displayProperty=nameWithType></li></ul>|
+

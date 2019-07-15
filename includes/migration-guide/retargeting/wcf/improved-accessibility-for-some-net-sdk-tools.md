@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0b087fca59d60a086a9ea8b2bb19c09f646c3dfd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 79005f19ac31ba32e7e468ef61eb867a052eff40
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236497"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859046"
 ---
 ### <a name="improved-accessibility-for-some-net-sdk-tools"></a>Accessibilità migliorata per alcuni strumenti di .NET SDK
 
@@ -14,3 +14,4 @@ ms.locfileid: "59236497"
 |Ambito|Microsoft Edge|
 |Versione|4.7.1|
 |Tipo|Ridestinazione|
+

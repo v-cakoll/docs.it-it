@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 318609c15d2e0b9a7ee59b38463735b33ef87974
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 71f61f23a8b17459610d253766a99e594f09428e
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236214"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857235"
 ---
 ### <a name="wcf-pipeconnectiongethashalgorithm-now-uses-sha256"></a>PipeConnection.GetHashAlgorithm in WCF ora usa SHA256
 
@@ -15,3 +15,4 @@ ms.locfileid: "59236214"
 |Ambito|Secondario|
 |Versione|4.7.1|
 |Tipo|Runtime|
+

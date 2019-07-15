@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 566a3e0455b30e901b09be88b4256ffe67bdc2b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9e98d3bca645cf82bf4fe99160dd096b0e274ef7
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236241"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802452"
 ---
 ### <a name="workflow-sql-persistence-adds-primary-key-clusters-and-disallows-null-values-in-some-columns"></a>La persistenza SQL del flusso di lavoro aggiunge cluster della chiave primaria e non consente i valori null in alcune colonne
 
@@ -15,3 +15,4 @@ ms.locfileid: "59236241"
 |Ambito|Microsoft Edge|
 |Versione|4.7|
 |Tipo|Runtime|
+

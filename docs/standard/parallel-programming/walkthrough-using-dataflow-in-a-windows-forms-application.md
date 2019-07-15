@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0c9447e53a874da856eb59932ec3871a9a1371d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f4f8e25edb7d61e21406a5f7719f6dc98f686a9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654423"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755046"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms
 Questo documento illustra come creare una rete di blocchi di flussi di dati tramite cui viene eseguita l'elaborazione di immagini in una Windows Forms Application.  
@@ -41,7 +41,7 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
 ## <a name="creating-the-windows-forms-application"></a>Creazione di Windows Forms Application  
  In questa sezione viene descritto come creare la Windows Forms Application di base e aggiungere i controlli al modulo principale.  
   
-#### <a name="to-create-the-windows-forms-application"></a>Per creare l'applicazione Windows Forms  
+### <a name="to-create-the-windows-forms-application"></a>Per creare l'applicazione Windows Forms  
   
 1. In Visual Studio creare un progetto **Applicazione Windows Form** di Visual C# o Visual Basic. In questo documento, il progetto viene denominato `CompositeImages`.  
   
@@ -57,7 +57,7 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
 ## <a name="creating-the-dataflow-network"></a>Creazione della rete del flusso di dati  
  In questa sezione viene descritto come creare la rete del flusso di dati che esegue l'elaborazione delle immagini.  
   
-#### <a name="to-create-the-dataflow-network"></a>Per creare la rete del flusso di dati  
+### <a name="to-create-the-dataflow-network"></a>Per creare la rete del flusso di dati  
   
 1. Nel progetto aggiungere un riferimento a System.Threading.Tasks.Dataflow.dll.  
   
@@ -86,7 +86,7 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
   
  Nella tabella seguente vengono descritti i membri della rete.  
   
-|Member|Tipo|Description|  
+|Member|Tipo|DESCRIZIONE|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Accetta il percorso di una cartella come input e genera una raccolta di oggetti <xref:System.Drawing.Bitmap> come output.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Accetta una raccolta di oggetti <xref:System.Drawing.Bitmap> come input e genera una bitmap composita come output.|  
@@ -107,7 +107,7 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Connessione della rete del flusso dati all'interfaccia utente  
  In questa sezione viene descritto come connettere la rete del flusso di dati all'interfaccia utente. La creazione dell'immagine composita e l'annullamento dell'operazione vengono avviate dai pulsanti **Scegli cartella** e **Annulla**. Quando l'utente sceglie uno di questi pulsanti, l'azione appropriata viene avviata in modo asincrono.  
   
-#### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Per connettere la rete del flusso dati all'interfaccia utente  
+### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Per connettere la rete del flusso dati all'interfaccia utente  
   
 1. Nella finestra di progettazione del form principale creare un gestore per l'evento <xref:System.Windows.Forms.ToolStripItem.Click> per il pulsante **Scegli cartella**.  
   

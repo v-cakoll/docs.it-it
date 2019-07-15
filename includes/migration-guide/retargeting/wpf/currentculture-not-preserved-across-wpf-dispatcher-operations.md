@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 190bca720504535cb54e498ca8da23fbb6634ad4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: cce19d6c9afa5f5ce9bb17b5b5d92f2060a08414
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234480"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804476"
 ---
 ### <a name="currentculture-is-not-preserved-across-wpf-dispatcher-operations"></a>CurrentCulture non viene mantenuto nelle operazioni Dispatcher di WPF
 
@@ -15,3 +15,4 @@ ms.locfileid: "59234480"
 |Ambito|Secondario|
 |Versione|4.6|
 |Tipo|Ridestinazione|
+

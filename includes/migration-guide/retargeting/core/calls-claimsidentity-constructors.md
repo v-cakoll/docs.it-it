@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6dd7f2a2f6dec306940650beee58104b20788bdb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7848b9a15c34e40c33495c31bd942e93c522cbdb
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234948"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859340"
 ---
 ### <a name="calls-to-claimsidentity-constructors"></a>Chiamate dei costruttori ClaimsIdentity
 
@@ -16,3 +16,4 @@ ms.locfileid: "59234948"
 |Versione|4.6.2|
 |Tipo|Ridestinazione|
 |API interessate|<ul><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity)?displayProperty=nameWithType></li><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})?displayProperty=nameWithType></li><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)?displayProperty=nameWithType></li></ul>|
+
