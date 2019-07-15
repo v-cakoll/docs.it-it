@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 9907811a43f408020e2ee76621d4975a53945570
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424027"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661583"
 ---
 # <a name="value-types-c-reference"></a>Tipi valore (Riferimenti per C#)
 
@@ -41,7 +41,7 @@ Ogni tipo valore ha un costruttore senza parametri implicito che inizializza il 
 I *tipi semplici* sono un set di tipi struct predefiniti forniti da C# e comprendono i tipi seguenti:
 
 - [Tipi integrali](../builtin-types/integral-numeric-types.md): i tipi numerici interi e il tipo [char](char.md)
-- [Tipi a virgola mobile](floating-point-types-table.md)
+- [Tipi a virgola mobile](../builtin-types/floating-point-numeric-types.md)
 - [bool](bool.md)
 
 I tipi semplici sono identificati tramite parole chiave, le quali sono in realtà semplicemente degli alias dei tipi struct predefiniti nello spazio dei nomi <xref:System>. Ad esempio, [int](../builtin-types/integral-numeric-types.md) è un alias di <xref:System.Int32?displayProperty=nameWithType>. Per un elenco completo degli alias, vedere [Tabella dei tipi incorporati](built-in-types-table.md).
@@ -93,7 +93,7 @@ Usando l'operatore [new](../operators/new-operator.md), viene chiamato il costru
 Con i tipi definiti dall'utente, usare [new](../operators/new-operator.md) per richiamare il costruttore senza parametri. Ad esempio, l'istruzione seguente richiama il costruttore senza parametri dello struct `Point`:
 
 ```csharp
-Point p = new Point(); // Invoke parameterless constructor for the struct.
+var p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 Dopo questa chiamata, lo struct viene considerato definitivamente assegnato, ovvero tutti i relativi membri sono inizializzati sui valori predefiniti.

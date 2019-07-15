@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 9c3efe1dbea355e8bc00ef44e08efcc9d0e0bdca
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 516505ccacfd2a8a5c275b0de033e1316fa06d3a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424172"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661332"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Tabella delle conversioni numeriche implicite (Riferimenti per C#)
 
@@ -30,11 +30,11 @@ Nella tabella che segue sono illustrate le conversioni implicite predefinite tra
 |[uint](../builtin-types/integral-numeric-types.md)|`long`, `ulong`, `float`, `double` o `decimal`|  
 |[long](../builtin-types/integral-numeric-types.md)|`float`, `double`o `decimal`|  
 |[ulong](../builtin-types/integral-numeric-types.md)|`float`, `double`o `decimal`|  
-|[float](float.md)|`double`|  
+|[float](../builtin-types/floating-point-numeric-types.md)|`double`|  
   
 ## <a name="remarks"></a>Osservazioni  
 
-- Qualunque [tipo integrale](../builtin-types/integral-numeric-types.md) è implicitamente convertibile in qualunque [tipo a virgola mobile](floating-point-types-table.md).
+- Qualunque [tipo integrale](../builtin-types/integral-numeric-types.md) è implicitamente convertibile in qualunque [tipo a virgola mobile](../builtin-types/floating-point-numeric-types.md).
 
 - Nella conversione da `int`, `uint`, `long` o `ulong` a `float` e da `long` o `ulong` a `double` può andare persa la precisione ma non la grandezza.  
   
@@ -58,7 +58,7 @@ Per altre informazioni sulle conversioni implicite, vedere la sezione [conversio
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Tipi integrali](../builtin-types/integral-numeric-types.md)
-- [Tabella dei tipi a virgola mobile](floating-point-types-table.md)
+- [Tabella dei tipi a virgola mobile](../builtin-types/floating-point-numeric-types.md)
 - [Tabella dei tipi incorporati](built-in-types-table.md)
 - [Tabella delle conversioni numeriche esplicite](explicit-numeric-conversions-table.md)
 - [Cast e conversioni di tipi](../../programming-guide/types/casting-and-type-conversions.md)
