@@ -2,12 +2,12 @@
 title: Modernizza .NET le applicazioni con Azure Cloud esistente e i contenitori di Windows (2nd edition)
 description: Scopri come lift and -shift e modernizzare le applicazioni esistenti per il cloud di Azure e contenitori con questo e-book.
 ms.date: 04/28/2018
-ms.openlocfilehash: 79e06c64867a7e1bb6c5d7da718886a713cb3c4c
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 4e632fcfbb8904a9def3fdad992286055c5df4f0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870591"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizzare le applicazioni .NET esistenti con cloud di Azure e i contenitori di Windows (2nd edition)
 
@@ -98,7 +98,7 @@ La tabella 1-1 descrive i vantaggi principali di ogni approccio alla migrazione 
 | **Vantaggi**|
 | <li>Nessun codice rielaborazione, non nuovo <li> Lavoro minimo per una migrazione rapida <li> Minimo comune denominatore supportato in Azure <li> Garanzie di disponibilità di base <li> Dopo lo spostamento nel cloud, è più semplice aumentare ancora di più il livello di modernizzazione | <li> Nessun rielaborazione <li> Modifiche di codice/configurazione minima <li> Distribuzione migliorata e flessibilità DevOps per il rilascio grazie ai contenitori <li> Densità maggiore e costi di distribuzione minori <li> Portabilità di app e dipendenze <li> Flessibilità delle destinazioni host: Gli approcci di PaaS o IaaS | <li> Architetto per il cloud, si ottengono i vantaggi migliori dal cloud, ma è necessario codice nuovo <li> Approcci nativi del cloud basati su microservizi <li> Le applicazioni cruciali moderne, resilienti per il cloud altamente scalabile <li> Servizi completamente gestiti <li> Ottimizzazione per la scalabilità <li> Ottimizzazione per la flessibilità autonoma in base al sottosistema <li> Approccio basato su distribuzione e DevOps |
 | **Sfide** |
-| <li> Valore cloud inferiore, all'infuori del cambiamento nelle spese operative e della chiusura di data center <li> Poco viene gestito: Nessun sistema operativo o middleware l'applicazione di patch; potrebbe usare soluzioni di infrastruttura, come Terraform, Spinnaker o Puppet | <li> Uso di contenitori è un passaggio aggiuntivo della curva di apprendimento per gli sviluppatori e gli operatori IT <li> Pipeline DevOps e integrazione continua/recapito Continuo è in genere 'necessaria' per questo approccio. Se non attualmente presente nelle impostazioni cultura dell'organizzazione, potrebbe essere un'ulteriore sfida| <li> Richiede la rielaborazione per applicazioni native basate su cloud e le architetture di microservizi e in genere richiede codice significativo di refactoring o riscrittura la modernizzazione (tempo e budget maggiori) <li> Pipeline DevOps e integrazione continua/recapito Continuo è in genere 'necessaria' per questo approccio. Se non attualmente presente nelle impostazioni cultura dell'organizzazione, potrebbe essere un'ulteriore sfida|
+| <li> Valore cloud inferiore, all'infuori del cambiamento nelle spese operative e della chiusura di data center <li> Poco viene gestito: Nessun sistema operativo o middleware l'applicazione di patch; potrebbe usare soluzioni di infrastruttura, come Terraform, Spinnaker o Puppet | <li> Uso di contenitori è un passaggio aggiuntivo della curva di apprendimento per gli sviluppatori e gli operatori IT <li> Pipeline di integrazione continua/recapito Continuo e DevOps sono in genere 'necessaria' per questo approccio. Se non attualmente presente nelle impostazioni cultura dell'organizzazione, potrebbe essere un'ulteriore sfida| <li> Richiede la rielaborazione per applicazioni native basate su cloud e le architetture di microservizi e in genere richiede codice significativo di refactoring o riscrittura la modernizzazione (tempo e budget maggiori)|
 > **Tabella 1-1.** Vantaggi e sfide dei percorsi di modernizzazione per servizi e applicazioni .NET esistenti
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Principali tecnologie e architetture in base al livello di maturità
