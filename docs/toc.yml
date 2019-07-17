@@ -203,6 +203,14 @@
     - name: Esercitazioni
       href: core/tutorials/index.md
       items:
+        - name: Modelli per la CLI
+          items:
+            - name: 1 - Creare un modello di elemento
+              href: core/tutorials/cli-templates-create-item-template.md
+            - name: 2 - Creare un modello di progetto
+              href: core/tutorials/cli-templates-create-project-template.md
+            - name: 3 - Creare un pacchetto modello
+              href: core/tutorials/cli-templates-create-template-pack.md
         - name: Introduzione a .NET Core su macOS
           href: core/tutorials/using-on-macos.md
         - name: Introduzione all'uso di .NET Core su macOS con Visual Studio per Mac
@@ -219,8 +227,6 @@
           href: core/tutorials/aspnet-core.md
         - name: Hosting di .NET Core da codice nativo
           href: core/tutorials/netcore-hosting.md
-        - name: Creare un modello personalizzato per dotnet new
-          href: core/tutorials/create-custom-template.md
     - name: 'Pacchetti, metapacchetti e framework'
       href: core/packages.md
     - name: Panoramica delle modifiche dell'interfaccia della riga di comando
