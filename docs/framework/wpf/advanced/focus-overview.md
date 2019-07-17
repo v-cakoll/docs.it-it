@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8546516124b2156e02446e15d7bdcaf3cdbd717d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703426"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238599"
 ---
 # <a name="focus-overview"></a>Cenni preliminari sullo stato attivo
 In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lo stato attivo è basato su due concetti principali, lo stato attivo della tastiera e lo stato attivo logico.  Lo stato attivo della tastiera fa riferimento all'elemento che riceve l'input della tastiera, mentre lo stato attivo logico fa riferimento all'elemento di un ambito che ha ricevuto lo stato attivo.  In questa panoramica verranno illustrati in dettaglio questi concetti.  Comprendere le differenze esistenti tra questi concetti è fondamentale per la creazione di applicazioni complesse costituite da più aree in cui è possibile ottenere lo stato attivo.  
@@ -82,7 +82,7 @@ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
   
 <a name="Manipulating_Focus_Programmatically"></a>   
 ## <a name="navigating-focus-programmatically"></a>Spostamento dello stato attivo a livello di codice  
- Ulteriori [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] per lavorare con lo stato attivo sono <xref:System.Windows.UIElement.MoveFocus%2A> e <xref:System.Windows.UIElement.PredictFocus%2A>.  
+ API aggiuntive per lavorare con lo stato attivo sono <xref:System.Windows.UIElement.MoveFocus%2A> e <xref:System.Windows.UIElement.PredictFocus%2A>.  
   
  <xref:System.Windows.FrameworkElement.MoveFocus%2A> le modifiche dello stato attivo all'elemento successivo nell'applicazione.  Oggetto <xref:System.Windows.Input.TraversalRequest> viene usato per specificare la direzione.   Il <xref:System.Windows.Input.FocusNavigationDirection> passato a <xref:System.Windows.UIElement.MoveFocus%2A> specifica lo stato attivo direzioni diverse può essere spostato, ad esempio <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> e <xref:System.Windows.Input.FocusNavigationDirection.Down>.  
   

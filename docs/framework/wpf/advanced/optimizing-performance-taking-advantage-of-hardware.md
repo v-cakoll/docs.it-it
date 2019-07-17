@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: d40d1636b510fcfe667ab3e728d1688ce38641d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611935"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238443"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Ottimizzazione delle prestazioni: Sfruttare appieno l'hardware
 L'architettura interna di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dispone di due pipeline di rendering, hardware e software. In questo argomento fornisce informazioni su queste pipeline di rendering che consentono di prendere decisioni sull'ottimizzazione delle prestazioni delle applicazioni.  
@@ -30,7 +30,7 @@ L'architettura interna di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
 ### <a name="graphics-rendering-tiers"></a>Livelli di rendering della grafica  
  Potrebbe essere molto difficile prevedere la configurazione hardware che eseguiranno l'applicazione in. Tuttavia, si potrebbe voler considerare una progettazione che consente all'applicazione scambiare le funzionalità durante l'esecuzione su hardware diverso, in modo che è possibile sfruttare appieno tutte le configurazioni hardware diverse.  
   
- A tale scopo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce funzionalità per determinare le funzionalità grafiche di un sistema in fase di esecuzione. Una funzionalità grafica è determinata dal categorizzazione della scheda video come uno dei tre livelli di funzionalità di rendering. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] espone un [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] che consente a un'applicazione eseguire una query il livello di funzionalità di rendering. L'applicazione può quindi accettare i percorsi del codice diversi in fase di esecuzione a seconda del livello di rendering supportato dall'hardware.  
+ A tale scopo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce funzionalità per determinare le funzionalità grafiche di un sistema in fase di esecuzione. Una funzionalità grafica è determinata dal categorizzazione della scheda video come uno dei tre livelli di funzionalità di rendering. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] espone un'API che consente a un'applicazione eseguire una query il livello di funzionalità di rendering. L'applicazione può quindi accettare i percorsi del codice diversi in fase di esecuzione a seconda del livello di rendering supportato dall'hardware.  
   
  Le funzionalità dell'hardware grafico che hanno effetto sui livelli di rendering sono:  
   
@@ -62,6 +62,6 @@ L'architettura interna di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
 - [Grafica bidimensionale e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportamento dell'oggetto](optimizing-performance-object-behavior.md)
 - [Risorse di applicazioni](optimizing-performance-application-resources.md)
-- [per](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Data binding](optimizing-performance-data-binding.md)
 - [Altri suggerimenti relativi alle prestazioni](optimizing-performance-other-recommendations.md)

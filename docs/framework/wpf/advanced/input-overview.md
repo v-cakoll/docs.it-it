@@ -24,15 +24,15 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 5835cfb633451025ed32c2a26228e33a1b24473e
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: defce7949bff47ef109e81d03894b13d95ba4c3d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67857061"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238501"
 ---
 # <a name="input-overview"></a>Cenni preliminari sull'input
-<a name="introduction"></a> Il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un potente sottosistema [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] per ottenere input da un'ampia gamma di dispositivi, tra cui il mouse, tastiera, tocco e stilo. Questo argomento descrive i servizi forniti da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e illustra l'architettura dei sistemi di input.
+<a name="introduction"></a> Il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sottosistema fornisce un'API potente per ottenere input da un'ampia gamma di dispositivi, tra cui il mouse, tastiera, tocco e stilo. Questo argomento descrive i servizi forniti da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e illustra l'architettura dei sistemi di input.
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>API di input

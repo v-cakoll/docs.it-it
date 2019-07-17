@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 3ee02eca9719f4ffa3ee0c165ad2541c9ffd085e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7554471d8b812b60e0b1aeb6dd3096b542ca44d6
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625266"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238411"
 ---
 # <a name="opacity-masks-overview"></a>Cenni preliminari sulle maschere di opacità
 Le maschere di opacità consentono di rendere trasparenti o parzialmente trasparenti parti di un elemento o di un oggetto visivo. Per creare una maschera di opacità, applicare un <xref:System.Windows.Media.Brush> per il <xref:System.Windows.UIElement.OpacityMask%2A> proprietà di un elemento o <xref:System.Windows.Media.Visual>.  Viene eseguito il mapping del pennello all'elemento o oggetto visivo e il valore di opacità di ogni pixel del pennello viene usato per determinare l'opacità risultante di ogni pixel corrispondente dell'elemento o dell'oggetto visivo.  
@@ -69,15 +69,15 @@ Esempio di maschera di opacità DrawingBrush
 ## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>Definizione di cursori sfumatura per una maschera di opacità  
  Nell'esempio precedente, il colore definito dal sistema <xref:System.Windows.Media.Colors.Black%2A> viene utilizzato come il colore iniziale della sfumatura. Poiché tutti i colori nella <xref:System.Windows.Media.Colors> (classe), tranne <xref:System.Windows.Media.Colors.Transparent%2A>, sono completamente opachi, possono essere utilizzati per definire semplicemente un colore iniziale per una maschera di opacità con sfumatura.  
   
- Per un controllo maggiore su valori alfa quando si definisce una maschera di opacità, è possibile specificare il canale alfa dei colori usando [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] notazione esadecimale nel markup oppure usando il <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> (metodo).  
+ Per un controllo maggiore su valori alfa quando si definisce una maschera di opacità, è possibile specificare il canale alfa dei colori usando la notazione esadecimale ARGB nel markup o il <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> (metodo).  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Specifica dell'opacità di colore in "XAML"  
- In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] si usa la notazione esadecimale [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] per specificare l'opacità di colori singoli. La notazione esadecimale [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] usa la sintassi seguente:  
+ In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], si usa la notazione esadecimale ARGB per specificare l'opacità di colori singoli. La notazione esadecimale ARGB Usa la sintassi seguente:  
   
  `#` **aa** *rrggbb*  
   
- *aa* nella riga precedente rappresenta un valore esadecimale a due cifre usato per specificare l'opacità del colore. *rr*, *gg* e *bb* rappresentano un valore esadecimale a due cifre usato per specificare la quantità di rosso, verde e blu nel colore. Ogni cifra esadecimale può avere un valore compreso tra 0 e 9 o tra A e F. 0 è il valore più basso, mentre F è il più elevato. Un valore alfa pari a 00 indica un colore completamente trasparente, mentre un valore alfa pari a FF indica un colore completamente opaco.  Nell'esempio seguente viene usata la notazione esadecimale [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] per specificare due colori. Il primo è completamente opaco, mentre il secondo è completamente trasparente.  
+ *aa* nella riga precedente rappresenta un valore esadecimale a due cifre usato per specificare l'opacità del colore. *rr*, *gg* e *bb* rappresentano un valore esadecimale a due cifre usato per specificare la quantità di rosso, verde e blu nel colore. Ogni cifra esadecimale può avere un valore compreso tra 0 e 9 o tra A e F. 0 è il valore più basso, mentre F è il più elevato. Un valore alfa pari a 00 indica un colore completamente trasparente, mentre un valore alfa pari a FF indica un colore completamente opaco.  Nell'esempio seguente, la notazione esadecimale ARGB consente di specificare due colori. Il primo è completamente opaco, mentre il secondo è completamente trasparente.  
   
  [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
   

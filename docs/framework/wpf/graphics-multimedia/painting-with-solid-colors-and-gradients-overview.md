@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: 4e004b624c331375501c5f48d2566a664b734d3b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ba8127d5be24a9fdcccf0bebcc08e5699d98033
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649974"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238394"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Cenni sul disegno con colori a tinta unita e sfumature
 In questo argomento viene descritto come utilizzare <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, e <xref:System.Windows.Media.RadialGradientBrush> oggetti da disegnare con colori a tinta unita, sfumature lineari e radiali.  
@@ -31,7 +31,7 @@ In questo argomento viene descritto come utilizzare <xref:System.Windows.Media.S
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
-- Scegliere un colore dalla tavolozza dei colori a 32 bit specificando la quantità di rosso, verde e blu da combinare in un solo colore a tinta unita.  Il formato per specificare un colore dalla tavolozza a 32 bit è "*#rrggbb*", dove *rr* è un numero esadecimale a due cifre che specifica la quantità relativa di rosso, *gg* specifica la quantità di colore verde e *bb* specifica la quantità di blu.  Il colore può essere specificato anche come "#*aarrggbb*" in cui *aa* specifica il valore *alpha* o la trasparenza del colore. Questo approccio consente di creare colori parzialmente trasparenti.  Nell'esempio seguente, il <xref:System.Windows.Controls.Control.Background%2A> di un <xref:System.Windows.Controls.Button> è impostata su un rosso completamente opaco tramite notazione esadecimale.  
+- Scegliere un colore dalla tavolozza dei colori a 32 bit specificando la quantità di rosso, verde e blu da combinare in un solo colore a tinta unita.  Il formato per specificare un colore dalla tavolozza a 32 bit è " *#rrggbb*", dove *rr* è un numero esadecimale a due cifre che specifica la quantità relativa di rosso, *gg* specifica la quantità di colore verde e *bb* specifica la quantità di blu.  Il colore può essere specificato anche come "#*aarrggbb*" in cui *aa* specifica il valore *alpha* o la trasparenza del colore. Questo approccio consente di creare colori parzialmente trasparenti.  Nell'esempio seguente, il <xref:System.Windows.Controls.Control.Background%2A> di un <xref:System.Windows.Controls.Button> è impostata su un rosso completamente opaco tramite notazione esadecimale.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
@@ -142,15 +142,15 @@ Oggetto RadialGradientBrushes con impostazioni GradientOrigin, Center, RadiusX e
   
 <a name="specifyinggradientcolors"></a>   
 ## <a name="specifying-transparent-or-partially-transparent-gradient-stops"></a>Specifica dei cursori sfumatura trasparenti o parzialmente trasparenti  
- Poiché i cursori sfumatura non si specifica una proprietà di opacità, è necessario specificare il canale alfa dei colori usando [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] notazione esadecimale nel markup oppure usando il <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> metodo per creare cursori sfumatura trasparenti o parzialmente trasparenti. Le sezioni seguenti illustrano come creare cursori sfumatura parzialmente trasparenti in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e nel codice.  
+ Poiché i cursori sfumatura non si specifica una proprietà di opacità, è necessario specificare il canale alfa dei colori usando la notazione esadecimale ARGB nel markup oppure usando il <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> metodo per creare cursori sfumatura trasparenti o parzialmente trasparenti. Le sezioni seguenti illustrano come creare cursori sfumatura parzialmente trasparenti in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e nel codice.  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Specifica dell'opacità di colore in "XAML"  
- In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] si usa la notazione esadecimale [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] per specificare l'opacità di colori singoli. La notazione esadecimale [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] usa la sintassi seguente:  
+ In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], si usa la notazione esadecimale ARGB per specificare l'opacità di colori singoli. La notazione esadecimale ARGB Usa la sintassi seguente:  
   
  `#` **aa** *rrggbb*  
   
- *aa* nella riga precedente rappresenta un valore esadecimale a due cifre usato per specificare l'opacità del colore. *rr*, *gg* e *bb* rappresentano un valore esadecimale a due cifre usato per specificare la quantità di rosso, verde e blu nel colore. Ogni cifra esadecimale può avere un valore compreso tra 0 e 9 o tra A e F. 0 è il valore più basso, mentre F è il più elevato. Un valore alfa pari a 00 indica un colore completamente trasparente, mentre un valore alfa pari a FF indica un colore completamente opaco.  Nell'esempio seguente viene usata la notazione esadecimale [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] per specificare due colori. Il primo è parzialmente trasparente (con valore alfa pari a x20), mentre il secondo è completamente opaco.  
+ *aa* nella riga precedente rappresenta un valore esadecimale a due cifre usato per specificare l'opacità del colore. *rr*, *gg* e *bb* rappresentano un valore esadecimale a due cifre usato per specificare la quantità di rosso, verde e blu nel colore. Ogni cifra esadecimale può avere un valore compreso tra 0 e 9 o tra A e F. 0 è il valore più basso, mentre F è il più elevato. Un valore alfa pari a 00 indica un colore completamente trasparente, mentre un valore alfa pari a FF indica un colore completamente opaco.  Nell'esempio seguente, la notazione esadecimale ARGB consente di specificare due colori. Il primo è parzialmente trasparente (con valore alfa pari a x20), mentre il secondo è completamente opaco.  
   
  [!code-xaml[GradientBrushExamples_snip#TransparentGradientStopExample1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/GradientStopsExample.xaml#transparentgradientstopexample1xaml)]  
   

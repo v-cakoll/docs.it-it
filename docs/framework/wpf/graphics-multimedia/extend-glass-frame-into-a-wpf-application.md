@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 1c3316fa88d3024af4e81072cbe64c13cfbdb18e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 11c872767b5e3595da1fb4982d3b12e0fc77db98
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610288"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238595"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Estendere l'effetto cristallo a un'applicazione WPF
 
@@ -30,7 +30,7 @@ L'immagine seguente illustra il fotogramma effetto cristallo esteso la barra ind
 
 ![Screenshot che illustra il fotogramma effetto cristallo esteso dietro la barra degli indirizzi di Internet Explorer 7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Per estendere il fotogramma effetto cristallo su un'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], è necessario accedere a [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] non gestita. Esempio di codice seguente esegue Platform Invoke (pinvoke) per le due API necessaria per estendere il fotogramma all'area client. Ognuna di queste API vengono dichiarati in una classe denominata **NonClientRegionAPI**.
+Per estendere il fotogramma effetto cristallo su un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] un'applicazione, è necessario l'accesso all'API non gestite. Esempio di codice seguente esegue Platform Invoke (pinvoke) per le due API necessaria per estendere il fotogramma all'area client. Ognuna di queste API vengono dichiarati in una classe denominata **NonClientRegionAPI**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]

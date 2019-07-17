@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 94937b2c3e6935474d337c62bfd6698441dfcc2e
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 98dc2899fd2c6a294f9f878ccbf87f60520bbe78
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860104"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238678"
 ---
 # <a name="typography-in-wpf"></a>Funzionalità tipografiche di WPF
 Questo argomento presenta le principali funzionalità tipografiche di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Queste includono qualità e prestazioni migliorate nel rendering del testo, supporto tipografico di [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], testo internazionale migliorato, supporto avanzato dei tipi di carattere e nuove API (Application Programming Interface) di testo.  
@@ -142,7 +142,7 @@ Testo con anti-aliasing della direzione y ClearType
 ### <a name="advanced-text-formatting"></a>Formattazione del testo avanzata  
  Al massimo livello avanzato di API, il testo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre la possibilità di creare layout di testo personalizzato usando il <xref:System.Windows.Media.TextFormatting.TextFormatter> oggetto e altri tipi all'interno di <xref:System.Windows.Media.TextFormatting> dello spazio dei nomi. Il <xref:System.Windows.Media.TextFormatting.TextFormatter> e classi associate consentono di implementare il layout di testo personalizzato che supporta la definizione di formati di carattere, stili di paragrafo, regole di interruzione di riga e altre funzionalità di layout per il testo internazionale. Sono pochi i casi in cui occorre eseguire l'override dell'implementazione predefinita del supporto di layout di testo di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Se tuttavia occorre creare un controllo o un'applicazione di modifica del testo, potrebbe essere necessaria un'implementazione diversa da quella predefinita di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- A differenza di un testo tradizionali [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], il <xref:System.Windows.Media.TextFormatting.TextFormatter> interagisce con un client di layout di testo tramite un set di metodi di callback. È necessario che il client fornisca questi metodi in un'implementazione del <xref:System.Windows.Media.TextFormatting.TextSource> classe. Il diagramma seguente illustra l'interazione di layout di testo tra l'applicazione client e <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
+ A differenza delle API, traduzione testuale di un tradizionale il <xref:System.Windows.Media.TextFormatting.TextFormatter> interagisce con un client di layout di testo tramite un set di metodi di callback. È necessario che il client fornisca questi metodi in un'implementazione del <xref:System.Windows.Media.TextFormatting.TextSource> classe. Il diagramma seguente illustra l'interazione di layout di testo tra l'applicazione client e <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
  ![Diagramma del client del layout di testo e TextFormatter](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: c47e1ba89179b38055244c01507318836c899fda
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a7784f37c9e8009adc3735974a6fb0423f24ea37
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637511"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238520"
 ---
 # <a name="how-to-run-a-workflow"></a>Procedura: Eseguire un flusso di lavoro
 In questo argomento è una continuazione di Windows Workflow Foundation esercitazione introduttiva e illustra come creare un host del flusso di lavoro ed eseguire il flusso di lavoro definita nella precedente [come: Creare un flusso di lavoro](how-to-create-a-workflow.md) argomento.
@@ -30,7 +30,7 @@ In questo argomento è una continuazione di Windows Workflow Foundation esercita
     > [!TIP]
     >  Se la finestra **Esplora soluzioni** non è visualizzata, scegliere **Esplora soluzioni** dal menu **Visualizza** .
 
-3. Nel nodo **Modelli installati** selezionare **Visual C#**, **Flusso di lavoro** (oppure **Visual Basic**, **Flusso di lavoro**).
+3. Nel nodo **Modelli installati** selezionare **Visual C#** , **Flusso di lavoro** (oppure **Visual Basic**, **Flusso di lavoro**).
 
     > [!NOTE]
     >  A seconda del linguaggio di programmazione configurato come linguaggio principale in Visual Studio, sotto il nodo **Altri linguaggi** del nodo **Installato** viene visualizzato il nodo **Visual C#** o **Visual Basic** .
@@ -51,13 +51,13 @@ In questo argomento è una continuazione di Windows Workflow Foundation esercita
      Poiché questo progetto viene creato usando il modello **Applicazione console flusso di lavoro** , **Program.cs** o **Module1.vb** contiene il seguente codice host del flusso di lavoro di base.
 
     ```vb
-    ' Create and cache the workflow definition
-    Activity workflow1 = new Workflow1()
+    ' Create and cache the workflow definition.
+    Dim workflow1 As Activity = New Workflow1()
     WorkflowInvoker.Invoke(workflow1)
     ```
 
     ```csharp
-    // Create and cache the workflow definition
+    // Create and cache the workflow definition.
     Activity workflow1 = new Workflow1();
     WorkflowInvoker.Invoke(workflow1);
     ```

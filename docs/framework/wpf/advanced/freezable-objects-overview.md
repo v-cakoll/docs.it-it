@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 79c539bd0117c712670601b7498c490fca76090e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: b2ef3c3dbbfbcef08f58c47948f76cb2c238b48a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610513"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238521"
 ---
 # <a name="freezable-objects-overview"></a>Cenni preliminari sugli oggetti Freezable
 In questo argomento viene descritto come creare e utilizzare in modo efficace <xref:System.Windows.Freezable> oggetti, che forniscono funzionalità speciali che consentono di migliorare le prestazioni dell'applicazione. Sono esempi di oggetti freezable pennelli, penne, trasformazioni, geometrie e animazioni.  
@@ -105,7 +105,7 @@ mc:Ignorable="PresentationOptions"
   
  Per altre informazioni, vedere la [mc: Ignorable attributo](mc-ignorable-attribute.md) pagina.  
   
-### <a name="unfreezing-a-freezable"></a>"Unfreezing" a Freezable  
+### <a name="unfreezing-a-freezable"></a>"L'operazione di sblocco" un oggetto Freezable  
  Una volta bloccate, una <xref:System.Windows.Freezable> non possono mai essere modificati o non è bloccato; tuttavia, è possibile creare un clone non bloccato usando le <xref:System.Windows.Freezable.Clone%2A> o <xref:System.Windows.Freezable.CloneCurrentValue%2A> (metodo).  
   
  Nell'esempio seguente viene impostato lo sfondo dei pulsanti con un pennello e che poi viene bloccato. È costituita il pennello usando la copia non bloccata la <xref:System.Windows.Freezable.Clone%2A> (metodo). Il clone viene modificato e utilizzato per modificare lo sfondo del pulsante da giallo a rosso.  
@@ -148,7 +148,7 @@ mc:Ignorable="PresentationOptions"
   
  È inoltre necessario rispettare le regole seguenti per l'accesso e la scrittura in membri dati che non sono proprietà di dipendenza:  
   
-- All'inizio di qualsiasi [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] che legge i membri dati della proprietà di dipendenza non, chiamare il <xref:System.Windows.Freezable.ReadPreamble%2A> (metodo).  
+- All'inizio di qualsiasi API che legge i membri dati della proprietà di dipendenza non, chiamare il <xref:System.Windows.Freezable.ReadPreamble%2A> (metodo).  
   
 - All'inizio di qualsiasi API che consente di scrivere membri dati della proprietà di dipendenza non, chiamare il <xref:System.Windows.Freezable.WritePreamble%2A> (metodo). (Dopo aver chiamato <xref:System.Windows.Freezable.WritePreamble%2A> in un'API, non è necessario effettuare una chiamata aggiuntiva a <xref:System.Windows.Freezable.ReadPreamble%2A> se è stato inoltre leggere i membri dati della proprietà di dipendenza non.)  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 02700c75152c32ebee3a0898de1e322ddf9b6e17
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: a914f2c54e5e5b368533b686b1926f7f7ef2e12a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802240"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237328"
 ---
 # <a name="ui-automation-overview"></a>Cenni preliminari su automazione interfaccia utente
 > [!NOTE]
@@ -34,9 +34,9 @@ ms.locfileid: "67802240"
 ## <a name="providers-and-clients"></a>Provider e client  
  In[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sono presenti quattro componenti principali, come illustrato nella tabella riportata di seguito.  
   
-|Componente|Descrizione|  
+|Componente|DESCRIZIONE|  
 |---------------|-----------------|  
-|[!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] di provider (UIAutomationProvider.dll e UIAutomationTypes.dll)|Un insieme di definizioni dell'interfaccia implementate dai provider di automazione interfaccia utente, oggetti che forniscono informazioni sugli elementi dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] e rispondono a input a livello di codice.|  
+|Provider di API (UIAutomationProvider. dll e UIAutomationTypes. dll)|Un insieme di definizioni dell'interfaccia implementate dai provider di automazione interfaccia utente, oggetti che forniscono informazioni sugli elementi dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] e rispondono a input a livello di codice.|  
 |API client (UIAutomationClient.dll e UIAutomationTypes.dll)|Un insieme di tipi per il codice gestito che consente alle applicazioni client di automazione interfaccia utente di ottenere informazioni sull' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] e inviare input ai controlli.|  
 |UiAutomationCore.dll|Il codice sottostante (talvolta denominato core di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ) che gestisce la comunicazione tra provider e client.|  
 |UIAutomationClientsideProviders.dll|Un insieme di provider di automazione interfaccia utente per i controlli standard legacy (i controlli [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] dispongono di supporto nativo per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]). Questo supporto è automaticamente disponibile per le applicazioni client.|  
