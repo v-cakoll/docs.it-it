@@ -19,7 +19,7 @@ In alcuni ambienti di distribuzione dei microservizi (denominati cluster e illus
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Chris Richardson. Pattern: Service registry** \ (Modello: registro del servizio)
+- **Chris Richardson. Pattern: Service registry** \(Modello: registro del servizio)
   <https://microservices.io/patterns/service-registry.html>
 
 - **Auth0. Il registro del servizio** \

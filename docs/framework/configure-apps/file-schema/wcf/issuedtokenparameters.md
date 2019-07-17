@@ -52,7 +52,7 @@ Specifica i parametri per un token di sicurezza emesso in uno scenario di sicure
 |inclusionMode|Specifica i requisiti di inclusione del token. L'attributo è di tipo <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>.|  
 |keySize|Valore intero che specifica le dimensioni di chiave del token. Il valore predefinito è 256.|  
 |keyType|Valore valido di <xref:System.IdentityModel.Tokens.SecurityKeyType> che specifica il tipo di chiave. Il valore predefinito è `SymmetricKey`.|  
-|tokenType|Stringa che specifica il tipo di token. Il valore predefinito è http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML.|  
+|tokenType|Stringa che specifica il tipo di token. Il valore predefinito è "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML".|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
