@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: fdd7eef0994ca9c7b0533b6497d76a4720dd1f64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e916d7d335bcdeff64393a25ab697748209d147c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634634"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782638"
 ---
 # <a name="common-type-system"></a>Common Type System
 Common Type System definisce le modalità di dichiarazione, utilizzo e gestione dei tipi in Common Language Runtime e rappresenta una parte importante del supporto runtime per l'integrazione di più linguaggi. Le funzioni assolte dal sistema di tipi comuni sono le seguenti:  
@@ -73,7 +73,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
  Nella tabella seguente vengono descritte alcune delle caratteristiche che una classe può avere. Ogni linguaggio che supporta il runtime fornisce un modo per indicare che una classe o membro di classe dispone di una o più di queste caratteristiche. È tuttavia possibile che i singoli linguaggi di programmazione destinati a .NET non rendano disponibili tutte queste caratteristiche.  
   
-|Caratteristica|Description|  
+|Caratteristica|DESCRIZIONE|  
 |--------------------|-----------------|  
 |sealed|Specifica che da questo tipo non è possibile derivare un'altra classe.|  
 |implementa|Indica che la classe utilizza una o più interfacce fornendo implementazioni dei membri di interfaccia.|  
@@ -86,7 +86,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
  I membri di classe privi di implementazione sono membri astratti. Una classe con uno o più membri astratti è essa stessa astratta e non è possibile crearne nuove istanze. Con alcuni linguaggi destinati al runtime è possibile contrassegnare una classe come astratta anche se nessuno dei relativi membri è astratto. È possibile utilizzare una classe astratta quando si desidera incapsulare un set di base di funzionalità che le classi derivate possono ereditare oppure sottoporre a override nelle circostanze appropriate. Alle classi che non sono astratte viene fatto riferimento come a classi concrete.  
   
- Una classe può implementare un numero qualsiasi di interfacce, ma può ereditare solo da una classe di base, oltre che da <xref:System.Object?displayProperty=nameWithType>, da cui tutte le classi ereditano in modo implicito. Tutte le classi devono avere almeno un costruttore, per l'inizializzazione di nuove istanze della classe. Se non si definisce in modo esplicito un costruttore, la maggior parte dei compilatori fornisce automaticamente un costruttore predefinito (senza parametri).  
+ Una classe può implementare un numero qualsiasi di interfacce, ma può ereditare solo da una classe di base, oltre che da <xref:System.Object?displayProperty=nameWithType>, da cui tutte le classi ereditano in modo implicito. Tutte le classi devono avere almeno un costruttore, per l'inizializzazione di nuove istanze della classe. Se non si definisce in modo esplicito un costruttore, la maggior parte dei compilatori specifica automaticamente un costruttore senza parametri.  
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>Strutture  
@@ -190,7 +190,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 ### <a name="type-accessibility"></a>Accessibilità dei tipi  
  Tutti i tipi dispongono di un modificatore che ne regola l'accessibilità da parte di altri tipi. Nella tabella che segue si descrive l'accessibilità dei tipi supportata dal runtime.  
   
-|Accessibilità|Description|  
+|Accessibilità|DESCRIZIONE|  
 |-------------------|-----------------|  
 |public|Il tipo è accessibile da tutti gli assembly.|  
 |assembly|Il tipo è accessibile solo dall'interno dell'assembly.|  
@@ -273,9 +273,9 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 ### <a name="constructors"></a>Costruttori  
  Un costruttore è un tipo speciale di metodo che consente di creare nuove istanze di una classe o di una struttura. Analogamente a ogni altro metodo, un costruttore può includere parametri. I costruttori, tuttavia, non restituiscono alcun valore, ovvero restituiscono `void`.  
   
- Se il codice sorgente per una classe non definisce in modo esplicito un costruttore, il compilatore include un costruttore predefinito (senza parametri). Se tuttavia il codice sorgente per una classe definisce solo costruttori con parametri, i compilatori Visual Basic e C# non generano un costruttore senza parametri.  
+ Se il codice sorgente per una classe non definisce in modo esplicito un costruttore, il compilatore include un costruttore senza parametri. Se tuttavia il codice sorgente per una classe definisce solo costruttori con parametri, i compilatori Visual Basic e C# non generano un costruttore senza parametri.  
   
- Se il codice sorgente per una struttura definisce i costruttori, essi devono essere con parametri. Una struttura non può definire un costruttore predefinito (senza parametri) e i compilatori non generano costruttori senza parametri per strutture o altri tipi di valori. Tutti i tipi di valori hanno un costruttore predefinito implicito. Questo costruttore viene implementato da Common Language Runtime e inizializza tutti i campi della struttura sui valori predefiniti.  
+ Se il codice sorgente per una struttura definisce i costruttori, essi devono essere con parametri. Una struttura non può definire un costruttore senza parametri e i compilatori non generano costruttori senza parametri per strutture o altri tipi di valori. Tutti i tipi di valori hanno un costruttore senza parametri. Questo costruttore viene implementato da Common Language Runtime e inizializza tutti i campi della struttura sui valori predefiniti.  
   
 <a name="Events"></a>   
 ### <a name="events"></a>Eventi  
@@ -291,7 +291,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 ## <a name="characteristics-of-type-members"></a>Caratteristiche dei membri dei tipi  
  In Common Type System i membri dei tipi possono disporre di caratteristiche diverse, anche se non è necessario che i linguaggi le supportino tutte. Nella tabella riportata di seguito vengono descritte le caratteristiche dei membri.  
   
-|Caratteristica|Si applica a|Description|  
+|Caratteristica|Si applica a|DESCRIZIONE|  
 |--------------------|------------------|-----------------|  
 |abstract|Metodi, proprietà ed eventi|Il tipo non fornisce l'implementazione del metodo. I tipi che ereditano o implementano metodi astratti devono fornire un'implementazione per il metodo. L'unica eccezione si verifica nel caso in cui il tipo derivato sia esso stesso un tipo astratto. Tutti i metodi astratti sono virtuali.|  
 |private, gruppo, assembly, gruppo e assembly, gruppo o assembly o public|Tutti|Consente di definire l'accessibilità del membro.<br /><br /> private<br /> Accessibile solo dall'interno dello stesso tipo del membro o di un tipo annidato.<br /><br /> family<br /> Accessibile dall'interno dello stesso tipo del membro e dai tipi derivati che ereditano da esso.<br /><br /> assembly<br /> Accessibile solo nell'assembly nel quale il tipo viene definito.<br /><br /> family e assembly<br /> Accessibile solo dai tipi che sono qualificati sia per l'accesso di gruppo che di assembly.<br /><br /> family o assembly<br /> Accessibile solo dai tipi che sono qualificati per l'accesso di gruppo o per quello di assembly.<br /><br /> public<br /> Accessibile da qualsiasi tipo.|  

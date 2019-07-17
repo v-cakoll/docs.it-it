@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Prin
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 74ff7196ce17807b98a975687a524041f15a7f5b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442984"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775896"
 ---
 # <a name="architectural-principles"></a>Principi architetturali
 
@@ -50,7 +50,7 @@ L'**inversione delle dipendenze** è un elemento chiave per costruire applicazio
 
 ### <a name="explicit-dependencies"></a>Dipendenze esplicite
 
-**Le classi e i metodi devono richiedere in modo esplicito gli oggetti in collaborazione di cui necessitano per funzionare correttamente.** I costruttori di classi forniscono alle classi l'opportunità di individuare gli elementi necessari per essere in uno stato valido e per funzionare correttamente. Se si definiscono classi che possono essere create e chiamate ma che funzionano correttamente solo in presenza di alcuni componenti di infrastruttura o globali, queste classi si comportano in modo *disonesto* con i relativi client. Il contratto del costruttore dice al client che necessita solo degli elementi specificati, o addirittura di nessun elemento se la classe utilizza solo un costruttore predefinito, ma in realtà in fase di esecuzione necessita di qualcos'altro.
+**Le classi e i metodi devono richiedere in modo esplicito gli oggetti in collaborazione di cui necessitano per funzionare correttamente.** I costruttori di classi forniscono alle classi l'opportunità di individuare gli elementi necessari per essere in uno stato valido e per funzionare correttamente. Se si definiscono classi che possono essere create e chiamate ma che funzionano correttamente solo in presenza di alcuni componenti di infrastruttura o globali, queste classi si comportano in modo *disonesto* con i relativi client. Il contratto del costruttore indica al client che necessita solo degli elementi specificati, o addirittura di nessun elemento se la classe usa semplicemente un costruttore senza parametri, ma in realtà in fase di esecuzione necessita di qualcos'altro.
 
 Se ci si attiene al principio delle dipendenze esplicite, le classi e i metodi comunicano esattamente ai relativi client ciò di cui hanno bisogno per funzionare. Questo rende il codice più autodocumentato e i contratti di codifica di contratti più intuitivi, perché gli utenti saranno sicuri che nel momento in cui forniscono quello che è richiesto sotto forma di metodi o parametri del costruttore, gli oggetti che stanno usando funzioneranno correttamente in fase di esecuzione.
 
@@ -85,7 +85,7 @@ Alcuni esempi di violazioni di questo principio:
 
 - Classi responsabili del proprio salvataggio ad esempio, il criterio del record attivo.
 
-- Un costruttore predefinito obbligatorio.
+- Costruttore senza parametri obbligatorio.
 
 - Proprietà che richiedono una parola chiave virtuale.
 

@@ -4,12 +4,12 @@ description: Risorse per imparare a creare applicazioni .NET Core in Windows, Li
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: 2ec7f57250db8779552305b2ee69cbcf1db55d0c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b111d464b83f3bc6a4a0da86678c5364bf4a9537
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977168"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802304"
 ---
 # <a name="get-started-with-net-core"></a>Introduzione a .NET Core
 
@@ -34,7 +34,7 @@ dotnet run --project sample1
 Hello World!
 ```
 
-La procedura è stata completata. È stata creata una semplice applicazione .NET Core. È anche possibile usare [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio 2017](tutorials/with-visual-studio.md) (solo Windows), o [Visual Studio per Mac](tutorials/using-on-mac-vs.md) (solo macOS), per creare un'applicazione .NET Core.
+La procedura è stata completata. È stata creata una semplice applicazione .NET Core. Per creare un'applicazione .NET Core, è anche possibile usare [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio](tutorials/with-visual-studio.md) (solo Windows) oppure [Visual Studio per Mac](tutorials/using-on-mac-vs.md) (solo macOS).
 
 ## <a name="tutorials"></a>Esercitazioni
 

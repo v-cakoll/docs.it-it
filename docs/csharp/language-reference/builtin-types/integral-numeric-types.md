@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: bde0b7cea52951cd72bde6cfd7d8f1c7dbcb8f46
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425596"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744224"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipi numerici integrali (Riferimenti per C#)
 
@@ -76,14 +76,14 @@ var binaryLiteral = 0b_0010_1010;
 
 I valori letterali decimali non richiedono alcun prefisso. Il prefisso `x` o `X` indica un *valore letterale esadecimale*. Il prefisso `b` o `B` indica un *valore letterale binario*. La dichiarazione di `binaryLiteral` dimostra l'uso di `_` come *separatore di cifra*. Il separatore di cifra può essere usato con tutti i valori letterali numerici. I valori letterali binari e il separatore di cifra `_` sono supportati a partire da C# 7.0.
 
-## <a name="literal-suffixes"></a>Suffissi letterali 
+### <a name="literal-suffixes"></a>Suffissi letterali 
 
-Il suffisso `l` o `L` specifica che il valore letterale integrale deve essere del tipo `long`. Il suffisso `ul` o `UL` specifica il tipo `ulong`. Se il suffisso `L` viene usato su un valore letterale maggiore di 9.223.372.036.854.775.807 (il valore massimo di `long`), il valore viene convertito nel tipo `ulong`. Se il valore rappresentato da un valore letterale Integer supera <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione [CS1021](../../misc/cs1021.md). 
+Il suffisso `l` o `L` specifica che il valore letterale integrale deve essere del tipo `long`. Il suffisso `ul` o `UL` specifica il tipo `ulong`. Se il suffisso `L` viene usato su un valore letterale maggiore di 9.223.372.036.854.775.807 (il valore massimo di `long`), il valore viene convertito nel tipo `ulong`. Se il valore rappresentato da un valore letterale integrale supera <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione [CS1021](../../misc/cs1021.md). 
 
 > [!NOTE]
 > È possibile usare la lettera minuscola "l" come suffisso. In questo caso, viene tuttavia generato un avviso del compilatore perché la lettera "l" viene facilmente confusa con la cifra "1". Per maggiore chiarezza, usare la lettera "L".
 
-## <a name="type-of-an-integral-literal"></a>Tipo di un valore letterale integrale
+### <a name="type-of-an-integral-literal"></a>Tipo di un valore letterale integrale
 
 Se un valore letterale integrale non ha alcun suffisso, il suo tipo corrisponderà al primo dei tipi seguenti in cui il suo valore può essere rappresentato:
 
@@ -118,8 +118,16 @@ Viene eseguita una conversione implicita (detta *conversione verso un tipo di da
 
 - [Specifiche del linguaggio C# - Tipi integrali](~/_csharplang/spec/types.md#integral-types)
 - [Riferimenti per C#](../index.md)
-- [Tabella dei tipi a virgola mobile](../keywords/floating-point-types-table.md)
+- [Tipi a virgola mobile](floating-point-numeric-types.md)
 - [Tabella dei valori predefiniti](../keywords/default-values-table.md)
 - [Tabella di formattazione dei risultati numerici](../keywords/formatting-numeric-results-table.md)
 - [Tabella dei tipi incorporati](../keywords/built-in-types-table.md)
 - [Dati numerici in .NET](../../../standard/numerics.md)
+- <xref:System.Byte?displayProperty=nameWithType>
+- <xref:System.SByte?displayProperty=nameWithType>
+- <xref:System.Int16?displayProperty=nameWithType>
+- <xref:System.UInt16?displayProperty=nameWithType>
+- <xref:System.Int32?displayProperty=nameWithType>
+- <xref:System.UInt32?displayProperty=nameWithType>
+- <xref:System.Int64?displayProperty=nameWithType>
+- <xref:System.UInt64?displayProperty=nameWithType>

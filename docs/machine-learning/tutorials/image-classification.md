@@ -1,15 +1,15 @@
 ---
 title: 'Esercitazione: Ripetere il training del classificatore di immagini TensorFlow - apprendimento trasferito'
 description: Informazioni su come ripetere il training di un modello TensorFlow di classificazione delle immagini con l'apprendimento trasferito e ML.NET. Il modello originale è stato sottoposto a training per classificare le singole immagini. Dopo la ripetizione del training, il nuovo modello organizza le immagini in categorie ampie.
-ms.date: 06/12/2019
+ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 9344d0757e140995dfd9ce7d1a355910a81c6d31
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539845"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804752"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Esercitazione: Ripetere il training di un classificatore di immagini TensorFlow con l'apprendimento trasferito e ML.NET
 
@@ -43,7 +43,7 @@ L'esempio è un'applicazione console che usa ML.NET per creare un classificatore
 
 * [File ZIP della directory assets dell'esercitazione](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
 
-* [Modello di Machine Learning InceptionV3](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
+* [Modello di Machine Learning InceptionV1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>Selezionare l'attività di apprendimento automatico appropriata
 
@@ -77,7 +77,7 @@ L'apprendimento trasferito prevede alcune strategie, come la *ripetizione del tr
 
 Il modello di classificazione delle immagini riutilizza il [modello Inception](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip), un modello di riconoscimento delle immagini ampiamente diffuso sottoposto a training con il set di dati `ImageNet`, in cui il modello TensorFlow prova a classificare intere immagini in migliaia di classi, come "Umbrella", "Jersey" e "Dishwasher".
 
-`Inception v3 model` può essere classificato come una [rete neurale convoluzionale profonda](https://en.wikipedia.org/wiki/Convolutional_neural_network) e può ottenere prestazioni ragionevoli con attività di riconoscimento visivo complesse, uguagliando o superando le prestazioni umane in alcuni campi. Il modello/algoritmo è stato sviluppato da più ricercatori ed è basato sul whitepaper originale ["Rethinking the Inception Architecture for Computer Vision" a cura di Szegedy e altri autori](https://arxiv.org/abs/1512.00567).
+`Inception v1 model` può essere classificato come una [rete neurale convoluzionale profonda](https://en.wikipedia.org/wiki/Convolutional_neural_network) e può ottenere prestazioni ragionevoli con attività di riconoscimento visivo complesse, uguagliando o superando le prestazioni umane in alcuni campi. Il modello/algoritmo è stato sviluppato da più ricercatori ed è basato sul whitepaper originale ["Rethinking the Inception Architecture for Computer Vision" a cura di Szegedy e altri autori](https://arxiv.org/abs/1512.00567).
 
 Poiché il `Inception model` è già stato sottoposto a training con migliaia di immagini diverse, contiene le [caratteristiche delle immagini](https://en.wikipedia.org/wiki/Feature_(computer_vision)) necessarie per la loro identificazione. I livelli delle caratteristiche delle immagini inferiori riconoscono caratteristiche semplici (come i contorni), mentre quelli più elevati riconoscono caratteristiche più complesse (come le forme). Il livello finale è sottoposto a training con un set di dati molto più piccolo perché si inizia con un modello con training preliminare che è già in grado di classificare le immagini. Dal momento che il modello consente di classificare più di due categorie, questo è un esempio di un [classificatore multiclasse](../resources/tasks.md#multiclass-classification). 
 

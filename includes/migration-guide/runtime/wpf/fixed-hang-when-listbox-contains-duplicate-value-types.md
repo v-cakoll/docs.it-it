@@ -1,16 +1,17 @@
 ---
-ms.openlocfilehash: 5d59c5c448d2bb7f17f51c50fd468f67a71c93f2
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 68491da9cb7d2b460eb70ccbf4fc8de20db815a5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423804"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802650"
 ---
-### <a name="fixed-problem-of-unresponsiveness-when-listbox-contains-duplicate-value-types"></a>Risolve il problema di rallentamento della risposta quando ListBox contiene tipi di valori duplicati
+### <a name="fixed-a-hang-when-listbox-contains-duplicate-value-types"></a>Risoluzione di un'interruzione quando Listbox contiene tipi di valore duplicati
 
 |   |   |
 |---|---|
-|Dettagli|È stato risolto un problema per cui una virtualizzazione <xref:System.Windows.Controls.ItemsControl> può interrompersi durante lo scorrimento quando la relativa raccolta <xref:System.Windows.Controls.ItemsControl.Items> contiene oggetti valori.|
+|Dettagli|È stato risolto un problema per cui la virtualizzazione di una classe <xref:System.Windows.Controls.ItemsControl> può interrompersi durante lo scorrimento quando la relativa raccolta Items contiene oggetti con tipi di valore duplicati.|
 |Ambito|Principale|
 |Versione|4.8|
 |Tipo|Runtime|
+
