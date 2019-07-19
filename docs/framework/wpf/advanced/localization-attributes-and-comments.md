@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: a242dc1f69c79b2c1a67c1a9235d3e942553caf1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ef18802ab3568df00e29eb4ccaf717f4bdf4863
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598736"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330991"
 ---
 # <a name="localization-attributes-and-comments"></a>Attributi e commenti di localizzazione
 I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sono proprietà all'interno del codice sorgente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] usate dagli sviluppatori per fornire regole e suggerimenti per la localizzazione. I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contengono due set di informazioni: attributi di localizzabilità e commenti di localizzazione in formato libero. Gli attributi di localizzabilità vengono usati dall'API di localizzazione di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per indicare le risorse da localizzare. I commenti in formato libero comprendono tutte le informazioni che l'autore dell'applicazione vuole includere.  
@@ -33,7 +33,7 @@ I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
     - **All**: dall'assembly vengono rimossi sia i commenti che gli attributi, che vengono inseriti entrambi in un LocFile separato.  
   
-4. Se le risorse localizzabili vengono estratte da [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], l'API di localizzazione di [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] rispetta gli attributi di localizzabilità.  
+4. Quando le risorse localizzabili vengono estratte da BAML, gli attributi di localizzabilità vengono rispettati dall'API di localizzazione BAML.  
   
 5. I file dei commenti di localizzazione, nei quali sono contenuti solo commenti in formato libero, vengono incorporati al processo di localizzazione in un secondo momento.  
   
@@ -82,13 +82,13 @@ I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
  Questi attributi possono essere specificati in qualsiasi ordine e devono essere delimitati da uno spazio. Nel caso in cui vengano specificati attributi duplicati, l'ultimo sostituisce i precedenti. Ad esempio, Localization.Attributes = "Unmodifiable Modifiable" imposta Modifiability su Modifiable poiché questo è l'ultimo valore.  
   
- Gli attributi Modifiability e Readability sono di facile comprensione. L'attributo Category fornisce categorie predefinite che supportano il localizzatore nella traduzione del testo. Categorie quali Text, Label e Title offrono al localizzatore informazioni sulla modalità di traduzione del testo. Sono disponibili anche categorie speciali: None, ereditano, ignorare e NeverLocalize.  
+ Gli attributi Modifiability e Readability sono di facile comprensione. L'attributo Category fornisce categorie predefinite che supportano il localizzatore nella traduzione del testo. Categorie quali Text, Label e Title offrono al localizzatore informazioni sulla modalità di traduzione del testo. Sono disponibili anche categorie speciali: None, inherit, ignore e NeverLocalize.  
   
  La tabella seguente illustra il significato delle categorie speciali.  
   
 |Category|Significato|  
 |--------------|-------------|  
-|nessuno|Per il valore di destinazione non è definita alcuna categoria.|  
+|Nessuna|Per il valore di destinazione non è definita alcuna categoria.|  
 |Eredita|Il valore di destinazione eredita la categoria dall'elemento padre.|  
 |Ignora|Il valore di destinazione viene ignorato nel processo di localizzazione. Questa categoria influisce solo sul valore corrente e non sui nodi figlio.|  
 |NeverLocalize|Il valore corrente non può essere localizzato. Questa categoria viene ereditata dagli elementi figlio di un elemento.|  

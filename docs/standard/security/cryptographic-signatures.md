@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15fd79a1289bd54b81db551abbdfcd63deef3e24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 862d520073dde1b935510bc7c68782c1204c6111
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795252"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331648"
 ---
 # <a name="cryptographic-signatures"></a>Firme di crittografia
 
@@ -44,6 +44,8 @@ Questo argomento spiega come generare e verificare firme digitali usando le clas
 ## <a name="generating-signatures"></a>Generazione di firme
 
 Le firme digitali vengono generalmente applicate a valori hash che rappresentano dati di maggiori dimensioni. Nell'esempio che segue viene applicata una firma digitale a un valore hash. Viene creata prima di tutto una nuova istanza della classe <xref:System.Security.Cryptography.RSACryptoServiceProvider> per generare una coppia di chiavi pubblica/privata. Viene quindi passato <xref:System.Security.Cryptography.RSACryptoServiceProvider> a una nuova istanza della classe <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> . In questo modo la chiave privata viene trasferita a <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>che esegue l'effettiva apposizione della firma digitale. Prima di firmare il codice hash, è necessario specificare un algoritmo hash da usare. Questo esempio usa l'algoritmo SHA1. Infine viene chiamato il metodo <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> per apporre la firma.
+
+A causa di problemi di collisione con SHA1, Microsoft consiglia di SHA256 o meglio.
 
 ```vb
 Imports System

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 6dca154dc6ff560fe589ea56ee49d761a2622fe9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca00b4a0450539741719f5f5a56d241e4bebfcc2
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614550"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331711"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Distribuzione di un'applicazione WPF (WPF)
-Dopo che le applicazioni Windows Presentation Foundation (WPF) sono compilate, devono essere distribuiti. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e .NET Framework include varie tecnologie di distribuzione. che vengono usate per distribuire specifici tipi di applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Questo argomento offre una breve panoramica delle singole tecnologie di distribuzione e di come vengono usate in relazione ai requisiti di distribuzione di ogni tipo di applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è necessario distribuirle. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]e i .NET Framework includono diverse tecnologie di distribuzione. che vengono usate per distribuire specifici tipi di applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Questo argomento offre una breve panoramica delle singole tecnologie di distribuzione e di come vengono usate in relazione ai requisiti di distribuzione di ogni tipo di applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Tecnologie di distribuzione  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e .NET Framework sono incluse diverse tecnologie di distribuzione, tra cui:  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]e i .NET Framework includono diverse tecnologie di distribuzione, tra cui:  
   
 - Distribuzione con XCopy.  
   
@@ -43,7 +43,7 @@ Dopo che le applicazioni Windows Presentation Foundation (WPF) sono compilate, d
   
  [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] semplifica l'installazione e la disinstallazione delle applicazioni, ma non fornisce funzionalità per assicurare che le applicazioni installate restino aggiornate dal punto di vista del controllo delle versioni.  
   
- Per altre informazioni su Windows Installer, vedere [distribuzione di Windows Installer](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
+ Per ulteriori informazioni su Windows Installer, vedere [Windows Installer Deployment](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>Distribuzione ClickOnce  
@@ -69,7 +69,7 @@ Dopo che le applicazioni Windows Presentation Foundation (WPF) sono compilate, d
   
 - Applicazioni [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo markup.  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+- [https://login.microsoftonline.com/common/]([!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]).  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Distribuzione di applicazioni autonome  
@@ -81,7 +81,7 @@ Dopo che le applicazioni Windows Presentation Foundation (WPF) sono compilate, d
   
  Per altre informazioni sulla sicurezza per le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere [Sicurezza](../security-wpf.md).  
   
- Le pagine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo markup possono essere installate nel file system locale tramite XCopy o [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Queste pagine possono essere visualizzate tramite [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] o Windows Explorer.  
+ Le pagine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo markup possono essere installate nel file system locale tramite XCopy o [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Queste pagine possono essere visualizzate tramite [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] o Esplora risorse.  
   
  Per altre informazioni, vedere [Cenni preliminari su XAML (WPF)](../advanced/xaml-overview-wpf.md).  
   
@@ -89,16 +89,16 @@ Dopo che le applicazioni Windows Presentation Foundation (WPF) sono compilate, d
 ### <a name="deploying-xaml-browser-applications"></a>Distribuzione di applicazioni browser XAML  
  Le applicazioni browser XAML (con estensione [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]) sono applicazioni compilate che richiedono i seguenti tre file per essere distribuite:  
   
-- *ApplicationName*.exe: Il file di assembly eseguibile dell'applicazione.  
+- *ApplicationName*. exe: File dell'applicazione dell'assembly eseguibile.  
   
-- *ApplicationName*. xbap: Il manifesto di distribuzione.  
+- *ApplicationName*. xbap: Manifesto della distribuzione.  
   
-- *ApplicationName*. manifest: Manifesto dell'applicazione.  
+- *ApplicationName*. exe. manifest: Manifesto dell'applicazione.  
   
 > [!NOTE]
 >  Per ulteriori informazioni sui manifesti dell'applicazione e di distribuzione, vedere [Compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md).  
   
- Questi file vengono prodotti quando si compila un'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione Browser WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Analogamente alle pagine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo markup, le applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] vengono generalmente pubblicate in un server Web e visualizzate tramite [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
+ Questi file vengono prodotti quando si compila un'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Per altre informazioni, vedere [Procedura: Creare un nuovo progetto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))di applicazione browser WPF. Analogamente alle pagine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo markup, le applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] vengono generalmente pubblicate in un server Web e visualizzate tramite [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
   
  Le applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] possono essere distribuite ai client usando una qualsiasi delle tecniche di distribuzione. Tuttavia, è consigliabile [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] in quanto fornisce le funzionalità seguenti:  
   
@@ -112,13 +112,13 @@ Dopo che le applicazioni Windows Presentation Foundation (WPF) sono compilate, d
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>Installazione di .NET Framework  
- Per eseguire un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] un'applicazione, Microsoft .NET Framework deve essere installato nel client. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] rileva automaticamente se i client vengono installati con .NET Framework quando [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] vengono visualizzate applicazioni ospitate da browser. Se non è installato .NET Framework, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] richiede agli utenti di installarla.  
+ Per eseguire un' [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazione, è necessario che nel client sia installato il Framework Microsoft .NET. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]rileva automaticamente se i client vengono installati con .NET Framework [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] quando vengono visualizzate le applicazioni ospitate da browser. Se il .NET Framework non è installato, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] richiede agli utenti di installarlo.  
   
- Per verificare se è installato .NET Framework, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] include un'applicazione di avvio automatico che viene registrata come il fallback [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] gestore per i file di contenuto con le seguenti estensioni:. XAML, XPS, XBAP e Application. Se si passa a questi tipi di file e .NET Framework non è installato nel client, l'applicazione di avvio automatico richiede l'autorizzazione per installarlo. Se l'autorizzazione non viene specificata, viene installata .NET Framework né l'applicazione.  
+ Per rilevare se la .NET Framework è installata, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] include un'applicazione del programma di avvio automatico registrata come gestore [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] di fallback per i file di contenuto con le estensioni seguenti:. XAML,. XPS,. XBAP e. Application. Se si passa a questi tipi di file e il .NET Framework non è installato nel client, l'applicazione del programma di avvio automatico richiede l'autorizzazione per l'installazione. Se non viene fornita l'autorizzazione, né l'.NET Framework né l'applicazione sono installate.  
   
- Se l'autorizzazione viene concessa, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] Scarica e installa .NET Framework tramite la [!INCLUDE[TLA#tla_bits](../../../../includes/tlasharptla-bits-md.md)]. Al termine dell'installazione di .NET Framework, il file richiesto originariamente viene aperto in una nuova finestra del browser.  
+ Se l'autorizzazione viene concessa, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] Scarica e installa il .NET Framework utilizzando Microsoft servizio trasferimento intelligente in background (BITS). Una volta completata l'installazione del .NET Framework, il file richiesto originariamente viene aperto in una nuova finestra del browser.  
   
- Il rilevamento automatico di .NET framework è disponibile nel [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], e [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] client che dispongono di [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] installato o versione successiva.  
+ .NET Framework rilevamento automatico è disponibile nei client [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)]di [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], e [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] in cui [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] è installato o versione successiva.  
   
  Per altre informazioni, vedere [Distribuzione di .NET Framework e delle applicazioni](../../deployment/index.md).  
   

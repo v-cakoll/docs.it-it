@@ -13,25 +13,25 @@ helpviewer_keywords:
 - BMP decoding [WPF]
 - decoding image formats [WPF]
 ms.assetid: feb5ef27-28ac-40ab-bfc2-e0456990d32c
-ms.openlocfilehash: b7d5ace8aead864cb69a9e696a3f1f925e232600
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d3520a1b1913fe68fedb0ea9d76cc138ed661c4
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947641"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331722"
 ---
 # <a name="how-to-encode-and-decode-a-bmp-image"></a>Procedura: Codificare e decodificare un'immagine BMP
-Gli esempi seguenti illustrano come decodificare e codificare un' [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)] immagine usando le specifiche <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> e <xref:System.Windows.Media.Imaging.BmpBitmapEncoder> oggetti.  
+Negli esempi seguenti viene illustrato come decodificare e codificare un'immagine bitmap (BMP) utilizzando <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> gli <xref:System.Windows.Media.Imaging.BmpBitmapEncoder> oggetti e specifici.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene illustrato come decodificare un' [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)] immagine usando una <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> da un <xref:System.Uri>.  
+ Questo esempio illustra come decodificare un'immagine bmp usando un <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> oggetto da <xref:System.Uri>un oggetto.  
   
  [!code-cpp[BmpBitmapDecoderEncoder#5](~/samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#5)]
  [!code-csharp[BmpBitmapDecoderEncoder#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#5)]
  [!code-vb[BmpBitmapDecoderEncoder#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#5)]  
   
 ## <a name="example"></a>Esempio  
- In questo esempio illustra come codificare un <xref:System.Windows.Media.Imaging.BitmapSource> in un [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)] immagine usando un <xref:System.Windows.Media.Imaging.BmpBitmapEncoder>.  
+ Questo esempio illustra come codificare un <xref:System.Windows.Media.Imaging.BitmapSource> oggetto in un'immagine bmp usando <xref:System.Windows.Media.Imaging.BmpBitmapEncoder>un oggetto.  
   
  [!code-cpp[BmpBitmapDecoderEncoder#4](~/samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#4)]
  [!code-csharp[BmpBitmapDecoderEncoder#4](~/samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#4)]
