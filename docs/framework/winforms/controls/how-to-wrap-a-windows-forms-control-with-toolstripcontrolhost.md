@@ -10,62 +10,62 @@ helpviewer_keywords:
 - toolbars [Windows Forms], wrapping controls
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
-ms.openlocfilehash: 4f1bac24d7742066d2b472f52b7d85c84c243670
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6335d09a89225ae1e202a781a73bfd149608f5fc
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589036"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364198"
 ---
-# <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a><span data-ttu-id="27379-102">Procedura: Eseguire il wrapping di un controllo di Windows Forms con ToolStripControlHost</span><span class="sxs-lookup"><span data-stu-id="27379-102">How to: Wrap a Windows Forms Control with ToolStripControlHost</span></span>
-<span data-ttu-id="27379-103"><xref:System.Windows.Forms.ToolStripControlHost> è progettato per abilitare l'hosting di controlli Windows Form arbitrari usando il costruttore <xref:System.Windows.Forms.ToolStripControlHost> o estendendo direttamente <xref:System.Windows.Forms.ToolStripControlHost>.</span><span class="sxs-lookup"><span data-stu-id="27379-103"><xref:System.Windows.Forms.ToolStripControlHost> is designed to enable hosting of arbitrary Windows Forms controls by using the <xref:System.Windows.Forms.ToolStripControlHost> constructor or by extending <xref:System.Windows.Forms.ToolStripControlHost> itself.</span></span> <span data-ttu-id="27379-104">È più semplice eseguire il wrapping del controllo estendendo <xref:System.Windows.Forms.ToolStripControlHost> e implementando proprietà e metodi che espongono le proprietà e i metodi del controllo usati di frequente.</span><span class="sxs-lookup"><span data-stu-id="27379-104">It is easier to wrap the control by extending <xref:System.Windows.Forms.ToolStripControlHost> and implementing properties and methods that expose frequently used properties and methods of the control.</span></span> <span data-ttu-id="27379-105">È anche possibile esporre gli eventi del controllo a livello di <xref:System.Windows.Forms.ToolStripControlHost>.</span><span class="sxs-lookup"><span data-stu-id="27379-105">You can also expose events for the control at the <xref:System.Windows.Forms.ToolStripControlHost> level.</span></span>  
+# <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a><span data-ttu-id="4f649-102">Procedura: Eseguire il wrapping di un controllo di Windows Forms con ToolStripControlHost</span><span class="sxs-lookup"><span data-stu-id="4f649-102">How to: Wrap a Windows Forms Control with ToolStripControlHost</span></span>
+<span data-ttu-id="4f649-103"><xref:System.Windows.Forms.ToolStripControlHost> è progettato per abilitare l'hosting di controlli Windows Form arbitrari usando il costruttore <xref:System.Windows.Forms.ToolStripControlHost> o estendendo direttamente <xref:System.Windows.Forms.ToolStripControlHost>.</span><span class="sxs-lookup"><span data-stu-id="4f649-103"><xref:System.Windows.Forms.ToolStripControlHost> is designed to enable hosting of arbitrary Windows Forms controls by using the <xref:System.Windows.Forms.ToolStripControlHost> constructor or by extending <xref:System.Windows.Forms.ToolStripControlHost> itself.</span></span> <span data-ttu-id="4f649-104">È più semplice eseguire il wrapping del controllo estendendo <xref:System.Windows.Forms.ToolStripControlHost> e implementando proprietà e metodi che espongono le proprietà e i metodi del controllo usati di frequente.</span><span class="sxs-lookup"><span data-stu-id="4f649-104">It is easier to wrap the control by extending <xref:System.Windows.Forms.ToolStripControlHost> and implementing properties and methods that expose frequently used properties and methods of the control.</span></span> <span data-ttu-id="4f649-105">È anche possibile esporre gli eventi del controllo a livello di <xref:System.Windows.Forms.ToolStripControlHost>.</span><span class="sxs-lookup"><span data-stu-id="4f649-105">You can also expose events for the control at the <xref:System.Windows.Forms.ToolStripControlHost> level.</span></span>  
   
-### <a name="to-host-a-control-in-a-toolstripcontrolhost-by-derivation"></a><span data-ttu-id="27379-106">Per ospitare un controllo in un oggetto ToolStripControlHost tramite derivazione</span><span class="sxs-lookup"><span data-stu-id="27379-106">To host a control in a ToolStripControlHost by derivation</span></span>  
+### <a name="to-host-a-control-in-a-toolstripcontrolhost-by-derivation"></a><span data-ttu-id="4f649-106">Per ospitare un controllo in un oggetto ToolStripControlHost tramite derivazione</span><span class="sxs-lookup"><span data-stu-id="4f649-106">To host a control in a ToolStripControlHost by derivation</span></span>  
   
-1. <span data-ttu-id="27379-107">Estendere <xref:System.Windows.Forms.ToolStripControlHost>.</span><span class="sxs-lookup"><span data-stu-id="27379-107">Extend <xref:System.Windows.Forms.ToolStripControlHost>.</span></span> <span data-ttu-id="27379-108">Implementare un costruttore predefinito che chiama il costruttore di classe base passando il controllo desiderato.</span><span class="sxs-lookup"><span data-stu-id="27379-108">Implement a default constructor that calls the base class constructor passing in the desired control.</span></span>  
+1. <span data-ttu-id="4f649-107">Estendere <xref:System.Windows.Forms.ToolStripControlHost>.</span><span class="sxs-lookup"><span data-stu-id="4f649-107">Extend <xref:System.Windows.Forms.ToolStripControlHost>.</span></span> <span data-ttu-id="4f649-108">Implementare un costruttore senza parametri che chiama il costruttore della classe base passando il controllo desiderato.</span><span class="sxs-lookup"><span data-stu-id="4f649-108">Implement a parameterless constructor that calls the base class constructor passing in the desired control.</span></span>  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#10)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#10)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#10)]  
   
-2. <span data-ttu-id="27379-109">Dichiarare una proprietà dello stesso tipo del controllo di cui è stato eseguito il wrapping e restituire `Control` come tipo corretto di controllo nella funzione di accesso della proprietà.</span><span class="sxs-lookup"><span data-stu-id="27379-109">Declare a property of the same type as the wrapped control and return `Control` as the correct type of control in the property's accessor.</span></span>  
+2. <span data-ttu-id="4f649-109">Dichiarare una proprietà dello stesso tipo del controllo di cui è stato eseguito il wrapping e restituire `Control` come tipo corretto di controllo nella funzione di accesso della proprietà.</span><span class="sxs-lookup"><span data-stu-id="4f649-109">Declare a property of the same type as the wrapped control and return `Control` as the correct type of control in the property's accessor.</span></span>  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#11](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#11)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#11)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#11)]  
   
-3. <span data-ttu-id="27379-110">Esporre altre proprietà e metodi usati di frequente del controllo di cui è stato eseguito il wrapping con le proprietà e i metodi della classe estesa.</span><span class="sxs-lookup"><span data-stu-id="27379-110">Expose other frequently used properties and methods of the wrapped control with properties and methods in the extended class.</span></span>  
+3. <span data-ttu-id="4f649-110">Esporre altre proprietà e metodi usati di frequente del controllo di cui è stato eseguito il wrapping con le proprietà e i metodi della classe estesa.</span><span class="sxs-lookup"><span data-stu-id="4f649-110">Expose other frequently used properties and methods of the wrapped control with properties and methods in the extended class.</span></span>  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#12](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#12)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#12)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#12)]  
   
-4. <span data-ttu-id="27379-111">Facoltativamente, eseguire l'override dei metodi <xref:System.Windows.Forms.ToolStripControlHost.OnSubscribeControlEvents%2A> e <xref:System.Windows.Forms.ToolStripControlHost.OnUnsubscribeControlEvents%2A> e aggiungere gli eventi del controllo che si vuole esporre.</span><span class="sxs-lookup"><span data-stu-id="27379-111">Optionally, override the <xref:System.Windows.Forms.ToolStripControlHost.OnSubscribeControlEvents%2A>, and <xref:System.Windows.Forms.ToolStripControlHost.OnUnsubscribeControlEvents%2A> methods and add the control events you want to expose.</span></span>  
+4. <span data-ttu-id="4f649-111">Facoltativamente, eseguire l'override dei metodi <xref:System.Windows.Forms.ToolStripControlHost.OnSubscribeControlEvents%2A> e <xref:System.Windows.Forms.ToolStripControlHost.OnUnsubscribeControlEvents%2A> e aggiungere gli eventi del controllo che si vuole esporre.</span><span class="sxs-lookup"><span data-stu-id="4f649-111">Optionally, override the <xref:System.Windows.Forms.ToolStripControlHost.OnSubscribeControlEvents%2A>, and <xref:System.Windows.Forms.ToolStripControlHost.OnUnsubscribeControlEvents%2A> methods and add the control events you want to expose.</span></span>  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#16](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#16)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#16)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#16)]  
   
-5. <span data-ttu-id="27379-112">Eseguire il wrapping necessario per gli eventi che si vuole esporre.</span><span class="sxs-lookup"><span data-stu-id="27379-112">Provide the necessary wrapping for the events you want to expose.</span></span>  
+5. <span data-ttu-id="4f649-112">Eseguire il wrapping necessario per gli eventi che si vuole esporre.</span><span class="sxs-lookup"><span data-stu-id="4f649-112">Provide the necessary wrapping for the events you want to expose.</span></span>  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#17](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#17)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#17)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#17)]  
   
-## <a name="example"></a><span data-ttu-id="27379-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="27379-113">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="4f649-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="4f649-113">Example</span></span>  
  [!code-cpp[System.Windows.Forms.ToolStripControlHost#13](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#13)]
  [!code-csharp[System.Windows.Forms.ToolStripControlHost#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#13)]
  [!code-vb[System.Windows.Forms.ToolStripControlHost#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#13)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="27379-114">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="27379-114">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="4f649-114">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="4f649-114">Compiling the Code</span></span>  
   
-<span data-ttu-id="27379-115">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="27379-115">This example requires:</span></span>
+<span data-ttu-id="4f649-115">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="4f649-115">This example requires:</span></span>
   
-- <span data-ttu-id="27379-116">Riferimenti agli assembly System e System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="27379-116">References to the System and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="4f649-116">Riferimenti agli assembly System e System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="4f649-116">References to the System and System.Windows.Forms assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27379-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="27379-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4f649-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4f649-117">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStripControlHost>
-- [<span data-ttu-id="27379-118">Panoramica sul controllo ToolStrip</span><span class="sxs-lookup"><span data-stu-id="27379-118">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="27379-119">Architettura del controllo ToolStrip</span><span class="sxs-lookup"><span data-stu-id="27379-119">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
-- [<span data-ttu-id="27379-120">Riepilogo della tecnologia ToolStrip</span><span class="sxs-lookup"><span data-stu-id="27379-120">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
+- [<span data-ttu-id="4f649-118">Panoramica sul controllo ToolStrip</span><span class="sxs-lookup"><span data-stu-id="4f649-118">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="4f649-119">Architettura del controllo ToolStrip</span><span class="sxs-lookup"><span data-stu-id="4f649-119">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
+- [<span data-ttu-id="4f649-120">Riepilogo della tecnologia ToolStrip</span><span class="sxs-lookup"><span data-stu-id="4f649-120">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
