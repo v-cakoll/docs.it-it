@@ -8,18 +8,18 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 7fbda381b6c60398ef89e11416cafedcf19eec65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80fd55be9230729cb8336be91c1d8fb4f7f3f080
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605662"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364257"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Procedura dettagliata: Abilitare il trascinamento della selezione in un controllo utente
 
 Questa procedura dettagliata illustra come creare un controllo utente personalizzato che possa partecipare al trasferimento di dati tramite trascinamento in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].
 
-In questa procedura dettagliata, si creerà un controllo personalizzato WPF <xref:System.Windows.Controls.UserControl> che rappresenta una forma circolare. Si implementeranno funzionalità nel controllo per consentire il trasferimento di dati tramite trascinamento. Ad esempio, se si trascina da un controllo Circle a un altro, i dati del colore di riempimento vengono copiati dal controllo Circle di origine a quello di destinazione. Se si trascina da un controllo Circle a un <xref:System.Windows.Controls.TextBox>, la rappresentazione di stringa del colore di riempimento viene copiata la <xref:System.Windows.Controls.TextBox>. Si creerà inoltre una piccola applicazione che contiene due controlli panel e un <xref:System.Windows.Controls.TextBox> per testare le funzionalità di trascinamento e rilascio. Si scriverà codice che consente ai pannelli di elaborare i dati Circle rilasciati per permettere di spostare o copiare cerchi dalla raccolta Children di un pannello all'altro.
+In questa procedura dettagliata verrà creato un oggetto WPF <xref:System.Windows.Controls.UserControl> personalizzato che rappresenta una forma circolare. Si implementeranno funzionalità nel controllo per consentire il trasferimento di dati tramite trascinamento. Ad esempio, se si trascina da un controllo Circle a un altro, i dati del colore di riempimento vengono copiati dal controllo Circle di origine a quello di destinazione. Se si trascina da un controllo Circle a un <xref:System.Windows.Controls.TextBox>oggetto, la rappresentazione di stringa del colore di riempimento viene copiata <xref:System.Windows.Controls.TextBox>in. Si creerà anche una piccola applicazione che contiene due controlli Panel e un oggetto <xref:System.Windows.Controls.TextBox> per testare la funzionalità di trascinamento della selezione. Si scriverà codice che consente ai pannelli di elaborare i dati Circle rilasciati per permettere di spostare o copiare cerchi dalla raccolta Children di un pannello all'altro.
 
 Questa procedura dettagliata illustra le attività seguenti:
 
@@ -35,14 +35,14 @@ Questa procedura dettagliata illustra le attività seguenti:
 
 Per completare la procedura dettagliata, è necessario Visual Studio.
 
-## <a name="create-the-application-project"></a>Creare il progetto di applicazione
- In questa sezione si creerà l'infrastruttura dell'applicazione, che include una pagina principale con due pannelli e un <xref:System.Windows.Controls.TextBox>.
+## <a name="create-the-application-project"></a>Creare il progetto dell'applicazione
+ In questa sezione verrà creata l'infrastruttura dell'applicazione, che include una pagina principale con due pannelli e un oggetto <xref:System.Windows.Controls.TextBox>.
 
-1. Creare un nuovo progetto di applicazione WPF in Visual Basic o Visual C# denominato `DragDropExample`. Per altre informazioni, vedere [Procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+1. Creare un nuovo progetto di applicazione WPF in Visual Basic o Visual C# denominato `DragDropExample`. Per altre informazioni, vedere [Procedura dettagliata: Prima applicazione](../getting-started/walkthrough-my-first-wpf-desktop-application.md)desktop WPF.
 
 2. Aprire MainWindow.xaml.
 
-3. Aggiungere il markup seguente tra l'apertura e chiusura <xref:System.Windows.Controls.Grid> tag.
+3. Aggiungere il markup seguente tra i tag di apertura <xref:System.Windows.Controls.Grid> e di chiusura.
 
      Questo markup crea l'interfaccia utente per l'applicazione di prova.
 
@@ -53,7 +53,7 @@ Per completare la procedura dettagliata, è necessario Visual Studio.
 
 1. Scegliere **Aggiungi controllo utente** dal menu Progetto.
 
-2. Nel **Aggiungi nuovo elemento** finestra di dialogo, modificare il nome da `Circle.xaml`, fare clic su **Add**.
+2. Nella finestra di dialogo **Aggiungi nuovo elemento** modificare il nome in `Circle.xaml`, quindi fare clic su **Aggiungi**.
 
      Circle.xaml e il relativo code-behind vengono aggiunti al progetto.
 
@@ -67,7 +67,7 @@ Per completare la procedura dettagliata, è necessario Visual Studio.
 
 5. Aprire Circle.xaml.cs o Circle.xaml.vb.
 
-6. In C# aggiungere il codice seguente dopo il costruttore predefinito per creare un costruttore di copia. In Visual Basic aggiungere il codice seguente per creare un costruttore predefinito e un costruttore di copia.
+6. In C#aggiungere il codice seguente dopo il costruttore senza parametri per creare un costruttore di copia. In Visual Basic aggiungere il codice seguente per creare un costruttore senza parametri e un costruttore di copia.
 
      Per consentire la copia del controllo utente, aggiungere un metodo di costruttore di copia nel file code-behind. Nel controllo utente Circle semplificato si copieranno solo il riempimento e le dimensioni del controllo utente.
 
@@ -78,13 +78,13 @@ Per completare la procedura dettagliata, è necessario Visual Studio.
 
 1. Aprire MainWindow.xaml.
 
-2. Aggiungere il seguente XAML per l'apertura <xref:System.Windows.Window> tag per creare un riferimento a spazio dei nomi XML per l'applicazione corrente.
+2. Aggiungere il codice XAML seguente al tag <xref:System.Windows.Window> di apertura per creare un riferimento allo spazio dei nomi XML all'applicazione corrente.
 
     ```
     xmlns:local="clr-namespace:DragDropExample"
     ```
 
-3. Nel primo <xref:System.Windows.Controls.StackPanel>, aggiungere il seguente XAML per creare due istanze del controllo utente Circle nel primo pannello.
+3. Nel primo <xref:System.Windows.Controls.StackPanel>, aggiungere il codice XAML seguente per creare due istanze del controllo utente Circle nel primo pannello.
 
      [!code-xaml[DragDropWalkthrough#CirclesXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]
 
@@ -92,184 +92,184 @@ Per completare la procedura dettagliata, è necessario Visual Studio.
 
      [!code-xaml[DragDropWalkthrough#PanelsStep2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep2xaml)]
 
-## <a name="implement-drag-source-events-in-the-user-control"></a>Implementare eventi di origine di trascinamento nel controllo utente
- In questa sezione si eseguirà l'override di <xref:System.Windows.UIElement.OnMouseMove%2A> (metodo) e avviare l'operazione di trascinamento e rilascio.
+## <a name="implement-drag-source-events-in-the-user-control"></a>Implementare gli eventi di origine del trascinamento nel controllo utente
+ In questa sezione verrà eseguito l'override del <xref:System.Windows.UIElement.OnMouseMove%2A> metodo e verrà avviata l'operazione di trascinamento della selezione.
 
- Se viene avviato un trascinamento viene premuto un pulsante del mouse e il mouse viene spostato, verranno inseriti i dati per il trasferimento in un <xref:System.Windows.DataObject>. In questo caso, il controllo Circle assemblerà tre elementi di dati: una rappresentazione di stringa del colore di riempimento, una rappresentazione doppia dell'altezza e una copia di se stesso.
+ Se viene avviato un trascinamento (viene premuto un pulsante del mouse e il mouse viene spostato), i dati verranno inseriti in un pacchetto <xref:System.Windows.DataObject>da trasferire in un oggetto. In questo caso, il controllo Circle assemblerà tre elementi di dati: una rappresentazione di stringa del colore di riempimento, una rappresentazione doppia dell'altezza e una copia di se stesso.
 
 ### <a name="to-initiate-a-drag-and-drop-operation"></a>Per avviare un'operazione di riempimento
 
 1. Aprire Circle.xaml.cs o Circle.xaml.vb.
 
-2. Aggiungere il codice seguente <xref:System.Windows.UIElement.OnMouseMove%2A> sottoposto a override per fornire la gestione delle classi di <xref:System.Windows.UIElement.MouseMove> evento.
+2. Aggiungere la seguente <xref:System.Windows.UIElement.OnMouseMove%2A> sostituzione per fornire la gestione delle classi <xref:System.Windows.UIElement.MouseMove> per l'evento.
 
      [!code-csharp[DragDropWalkthrough#OnMouseMove](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#onmousemove)]
      [!code-vb[DragDropWalkthrough#OnMouseMove](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#onmousemove)]
 
-     Ciò <xref:System.Windows.UIElement.OnMouseMove%2A> override esegue le attività seguenti:
+     Questo <xref:System.Windows.UIElement.OnMouseMove%2A> override esegue le attività seguenti:
 
     - Controlla se il pulsante sinistro del mouse viene premuto mentre il mouse è in movimento.
 
-    - Assembla i dati Circle in una <xref:System.Windows.DataObject>. In questo caso, il controllo Circle assembla tre elementi dati: una rappresentazione di stringa del colore di riempimento, una rappresentazione doppia dell'altezza e una copia di se stesso.
+    - Inserisce i dati Circle in un <xref:System.Windows.DataObject>oggetto. In questo caso, il controllo Circle assembla tre elementi dati: una rappresentazione di stringa del colore di riempimento, una rappresentazione doppia dell'altezza e una copia di se stesso.
 
-    - Chiama il metodo statico <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> metodo per avviare l'operazione di trascinamento e rilascio. Passare i tre parametri seguenti per il <xref:System.Windows.DragDrop.DoDragDrop%2A> metodo:
+    - Chiama il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> statico per avviare l'operazione di trascinamento della selezione. Passare i tre parametri seguenti al <xref:System.Windows.DragDrop.DoDragDrop%2A> metodo:
 
         - `dragSource` - Un riferimento a questo controllo.
 
-        - `data` : Le <xref:System.Windows.DataObject> creato nel codice precedente.
+        - `data`: Oggetto <xref:System.Windows.DataObject> creato nel codice precedente.
 
-        - `allowedEffects` -Le operazioni di trascinamento e rilascio consentite, che sono <xref:System.Windows.DragDropEffects.Copy> o <xref:System.Windows.DragDropEffects.Move>.
+        - `allowedEffects`: Le operazioni di trascinamento della selezione consentite <xref:System.Windows.DragDropEffects.Copy> , <xref:System.Windows.DragDropEffects.Move>ovvero o.
 
 3. Premere **F5** per compilare ed eseguire l'applicazione.
 
-4. Fare clic su uno dei controlli Circle e trascinarlo sui pannelli, su altro controllo Circle e <xref:System.Windows.Controls.TextBox>. Quando viene trascinato sul <xref:System.Windows.Controls.TextBox>, il cursore cambia per indicare un'operazione di spostamento.
+4. Fare clic su uno dei controlli Circle e trascinarlo sui pannelli, sull'altro cerchio e <xref:System.Windows.Controls.TextBox>su. Quando si trascina su <xref:System.Windows.Controls.TextBox>, il cursore cambia per indicare uno spostamento.
 
-5. Durante il trascinamento di un cerchio tramite il <xref:System.Windows.Controls.TextBox>, premere la **Ctrl** chiave. Notare come il cursore cambia aspetto per indicare una copia.
+5. Quando si trascina un cerchio sul controllo <xref:System.Windows.Controls.TextBox>, premere il tasto **CTRL** . Notare come il cursore cambia aspetto per indicare una copia.
 
-6. Trascinare e rilasciare un controllo Circle sul <xref:System.Windows.Controls.TextBox>. Rappresentazione di stringa del colore di riempimento del cerchio viene aggiunto il <xref:System.Windows.Controls.TextBox>.
+6. Trascinare e rilasciare un cerchio nell'oggetto <xref:System.Windows.Controls.TextBox>. La rappresentazione di stringa del colore di riempimento del cerchio viene aggiunta all'oggetto <xref:System.Windows.Controls.TextBox>.
 
      ![Rappresentazione di stringa del colore di riempimento del controllo Circle](./media/dragdrop-colorstring.png "DragDrop_ColorString")
 
-Per impostazione predefinita, il cursore cambierà aspetto durante un'operazione di trascinamento per indicare l'effetto che avrà il rilascio dei dati. È possibile personalizzare il feedback fornito all'utente gestendo il <xref:System.Windows.UIElement.GiveFeedback> evento e l'impostazione di un cursore diverso.
+Per impostazione predefinita, il cursore cambierà aspetto durante un'operazione di trascinamento per indicare l'effetto che avrà il rilascio dei dati. È possibile personalizzare il feedback fornito all'utente gestendo l' <xref:System.Windows.UIElement.GiveFeedback> evento e impostando un cursore diverso.
 
-## <a name="give-feedback-to-the-user"></a>Fornire commenti e suggerimenti all'utente
+## <a name="give-feedback-to-the-user"></a>Inviare commenti e suggerimenti all'utente
 
 1. Aprire Circle.xaml.cs o Circle.xaml.vb.
 
-2. Aggiungere il codice seguente <xref:System.Windows.UIElement.OnGiveFeedback%2A> sottoposto a override per fornire la gestione delle classi di <xref:System.Windows.UIElement.GiveFeedback> evento.
+2. Aggiungere la seguente <xref:System.Windows.UIElement.OnGiveFeedback%2A> sostituzione per fornire la gestione delle classi <xref:System.Windows.UIElement.GiveFeedback> per l'evento.
 
      [!code-csharp[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ongivefeedback)]
      [!code-vb[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ongivefeedback)]
 
-     Ciò <xref:System.Windows.UIElement.OnGiveFeedback%2A> override esegue le attività seguenti:
+     Questo <xref:System.Windows.UIElement.OnGiveFeedback%2A> override esegue le attività seguenti:
 
-    - Controlla il <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> i valori impostati nell'obiettivo di rilascio <xref:System.Windows.UIElement.DragOver> gestore dell'evento.
+    - Verifica i <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> valori impostati nel gestore eventi dell'obiettivo di <xref:System.Windows.UIElement.DragOver> rilascio.
 
-    - Impostare un cursore personalizzato in base il <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> valore. Il cursore ha lo scopo di fornire un feedback visivo all'utente sull'effetto che avrà il rilascio dei dati.
+    - Imposta un cursore personalizzato in base al <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> valore. Il cursore ha lo scopo di fornire un feedback visivo all'utente sull'effetto che avrà il rilascio dei dati.
 
 3. Premere **F5** per compilare ed eseguire l'applicazione.
 
-4. Trascinare uno del cerchio controlli sui pannelli, su altro controllo Circle e <xref:System.Windows.Controls.TextBox>. Si noti che i cursori sono ora i cursori personalizzati specificati nella <xref:System.Windows.UIElement.OnGiveFeedback%2A> eseguire l'override.
+4. Trascinare uno dei controlli Circle sui pannelli, sull'altro cerchio e sull'oggetto <xref:System.Windows.Controls.TextBox>. Si noti che i cursori sono ora i cursori personalizzati specificati nella <xref:System.Windows.UIElement.OnGiveFeedback%2A> sostituzione.
 
      ![Trascinamento con cursori personalizzati](./media/dragdrop-customcursor.png "DragDrop_CustomCursor")
 
-5. Selezionare il testo `green` dal <xref:System.Windows.Controls.TextBox>.
+5. Selezionare il testo `green` <xref:System.Windows.Controls.TextBox>da.
 
 6. Trascinare il testo `green` su un controllo Circle. Notare che vengono visualizzati i cursori predefiniti per indicare gli effetti dell'operazione di trascinamento. Il cursore di feedback viene sempre impostato dall'origine di trascinamento.
 
-## <a name="implement-drop-target-events-in-the-user-control"></a>Implementare gli eventi di destinazione di rilascio nel controllo utente
+## <a name="implement-drop-target-events-in-the-user-control"></a>Implementare eventi di destinazione di rilascio nel controllo utente
  In questa sezione si specificherà che il controllo utente è un obiettivo di rilascio, si eseguirà l'override dei metodi che consentono al controllo utente di essere un obiettivo di rilascio e si elaboreranno i dati rilasciati sul controllo.
 
 ### <a name="to-enable-the-user-control-to-be-a-drop-target"></a>Per consentire al controllo utente di essere un obiettivo di rilascio
 
 1. Aprire Circle.xaml.
 
-2. Nell'apertura <xref:System.Windows.Controls.UserControl> tag, aggiungere i <xref:System.Windows.UIElement.AllowDrop%2A> proprietà e impostarla su `true`.
+2. Nel tag di <xref:System.Windows.Controls.UserControl> apertura aggiungere la <xref:System.Windows.UIElement.AllowDrop%2A> proprietà e impostarla su `true`.
 
      [!code-xaml[DragDropWalkthrough#UCTagXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]
 
-Il <xref:System.Windows.UIElement.OnDrop%2A> metodo viene chiamato quando il <xref:System.Windows.UIElement.AllowDrop%2A> è impostata su `true` e dati dall'origine di trascinamento vengono rilasciati sul controllo utente Circle. In questo metodo si elaboreranno i dati rilasciati e li si applicheranno al controllo Circle.
+Il <xref:System.Windows.UIElement.OnDrop%2A> metodo viene chiamato quando la <xref:System.Windows.UIElement.AllowDrop%2A> proprietà è impostata `true` su e i dati dell'origine di trascinamento vengono rilasciati sul controllo utente Circle. In questo metodo si elaboreranno i dati rilasciati e li si applicheranno al controllo Circle.
 
 ### <a name="to-process-the-dropped-data"></a>Per elaborare i dati rilasciati
 
 1. Aprire Circle.xaml.cs o Circle.xaml.vb.
 
-2. Aggiungere il codice seguente <xref:System.Windows.UIElement.OnDrop%2A> sottoposto a override per fornire la gestione delle classi di <xref:System.Windows.UIElement.Drop> evento.
+2. Aggiungere la seguente <xref:System.Windows.UIElement.OnDrop%2A> sostituzione per fornire la gestione delle classi <xref:System.Windows.UIElement.Drop> per l'evento.
 
      [!code-csharp[DragDropWalkthrough#OnDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondrop)]
      [!code-vb[DragDropWalkthrough#OnDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondrop)]
 
-     Ciò <xref:System.Windows.UIElement.OnDrop%2A> override esegue le attività seguenti:
+     Questo <xref:System.Windows.UIElement.OnDrop%2A> override esegue le attività seguenti:
 
-    - Usa il <xref:System.Windows.DataObject.GetDataPresent%2A> metodo per verificare se i dati trascinati contengono un oggetto stringa.
+    - Usa il <xref:System.Windows.DataObject.GetDataPresent%2A> metodo per verificare se i dati trascinati contengono un oggetto String.
 
-    - Usa il <xref:System.Windows.DataObject.GetData%2A> metodo per estrarre i dati stringa, se presente.
+    - Usa il <xref:System.Windows.DataObject.GetData%2A> metodo per estrarre i dati di stringa, se presenti.
 
-    - Usa un' <xref:System.Windows.Media.BrushConverter> per provare a convertire la stringa in un <xref:System.Windows.Media.Brush>.
+    - Usa un <xref:System.Windows.Media.BrushConverter> oggetto per tentare di convertire la stringa in <xref:System.Windows.Media.Brush>un oggetto.
 
-    - Se la conversione ha esito positivo, si applica il pennello per il <xref:System.Windows.Shapes.Shape.Fill%2A> del <xref:System.Windows.Shapes.Ellipse> che fornisce l'interfaccia utente del controllo Circle.
+    - Se la conversione ha esito positivo, applica il pennello <xref:System.Windows.Shapes.Shape.Fill%2A> all'oggetto <xref:System.Windows.Shapes.Ellipse> dell'oggetto che fornisce l'interfaccia utente del controllo Circle.
 
-    - Segni di <xref:System.Windows.UIElement.Drop> evento come gestito. È necessario contrassegnare l'evento di trascinamento come gestito per segnalare agli altri elementi che ricevono l'evento che questo è stato gestito dal controllo utente Circle.
+    - Contrassegna l' <xref:System.Windows.UIElement.Drop> evento come gestito. È necessario contrassegnare l'evento di trascinamento come gestito per segnalare agli altri elementi che ricevono l'evento che questo è stato gestito dal controllo utente Circle.
 
 3. Premere **F5** per compilare ed eseguire l'applicazione.
 
-4. Selezionare il testo `green` nella <xref:System.Windows.Controls.TextBox>.
+4. Selezionare il testo `green` <xref:System.Windows.Controls.TextBox>in.
 
 5. Trascinare il testo su un controllo Circle e rilasciarlo. Il controllo Circle passa da blu a verde.
 
      ![Convertire una stringa in pennello](./media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")
 
-6. Digitare il testo `green` nella <xref:System.Windows.Controls.TextBox>.
+6. Digitare il testo `green` <xref:System.Windows.Controls.TextBox>in.
 
-7. Selezionare il testo `gre` nella <xref:System.Windows.Controls.TextBox>.
+7. Selezionare il testo `gre` <xref:System.Windows.Controls.TextBox>in.
 
 8. Trascinarlo su un controllo Circle e rilasciarlo. Notare che il cursore cambia aspetto per indicare che è consentito il trascinamento ma il colore del controllo Circle non cambia poiché `gre` non è un colore valido.
 
-9. Trascinare dal controllo Circle verde e rilasciare sul controllo Circle blu. Il controllo Circle passa da blu a verde. Si noti che il cursore visualizzato dipende dal fatto che il <xref:System.Windows.Controls.TextBox> o cerchio è l'origine di trascinamento.
+9. Trascinare dal controllo Circle verde e rilasciare sul controllo Circle blu. Il controllo Circle passa da blu a verde. Si noti che il cursore viene visualizzato a seconda che il <xref:System.Windows.Controls.TextBox> o il cerchio sia l'origine del trascinamento.
 
-Impostando il <xref:System.Windows.UIElement.AllowDrop%2A> proprietà `true` ed elabora i dati rilasciati è tutto ciò che è necessaria per consentire un elemento per ottenere un obiettivo di rilascio. Per fornire un'esperienza utente migliore, tuttavia, è necessario gestire anche il <xref:System.Windows.UIElement.DragEnter>, <xref:System.Windows.UIElement.DragLeave>, e <xref:System.Windows.UIElement.DragOver> eventi. In questi eventi, è possibile eseguire controlli e offrire feedback all'utente prima che i dati vengono rilasciati.
+L'impostazione <xref:System.Windows.UIElement.AllowDrop%2A> della proprietà `true` su e l'elaborazione dei dati eliminati è tutto ciò che è necessario per consentire a un elemento di essere un obiettivo di rilascio. Tuttavia, per offrire un'esperienza utente migliore, è necessario gestire anche gli <xref:System.Windows.UIElement.DragEnter>eventi <xref:System.Windows.UIElement.DragLeave>, e <xref:System.Windows.UIElement.DragOver> . In questi eventi, è possibile eseguire controlli e offrire feedback all'utente prima che i dati vengono rilasciati.
 
-Quando i dati vengono rilasciati sul controllo utente Circle, il controllo deve notificare all'origine di trascinamento se può elaborare i dati trascinati. Se il controllo non è in grado di elaborare i dati, deve rifiutare il rilascio. A tale scopo, è necessario gestire il <xref:System.Windows.UIElement.DragOver> evento e impostare il <xref:System.Windows.DragEventArgs.Effects%2A> proprietà.
+Quando i dati vengono rilasciati sul controllo utente Circle, il controllo deve notificare all'origine di trascinamento se può elaborare i dati trascinati. Se il controllo non è in grado di elaborare i dati, deve rifiutare il rilascio. A tale scopo, si gestirà l' <xref:System.Windows.UIElement.DragOver> evento e si imposterà la <xref:System.Windows.DragEventArgs.Effects%2A> proprietà.
 
 ### <a name="to-verify-that-the-data-drop-is-allowed"></a>Per verificare se il rilascio dei dati è consentito
 
 1. Aprire Circle.xaml.cs o Circle.xaml.vb.
 
-2. Aggiungere il codice seguente <xref:System.Windows.UIElement.OnDragOver%2A> sottoposto a override per fornire la gestione delle classi di <xref:System.Windows.UIElement.DragOver> evento.
+2. Aggiungere la seguente <xref:System.Windows.UIElement.OnDragOver%2A> sostituzione per fornire la gestione delle classi <xref:System.Windows.UIElement.DragOver> per l'evento.
 
      [!code-csharp[DragDropWalkthrough#OnDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragover)]
      [!code-vb[DragDropWalkthrough#OnDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragover)]
 
-     Ciò <xref:System.Windows.UIElement.OnDragOver%2A> override esegue le attività seguenti:
+     Questo <xref:System.Windows.UIElement.OnDragOver%2A> override esegue le attività seguenti:
 
     - Imposta la proprietà <xref:System.Windows.DragEventArgs.Effects%2A> su <xref:System.Windows.DragDropEffects.None>.
 
     - Esegue gli stessi controlli che vengono eseguiti nel <xref:System.Windows.UIElement.OnDrop%2A> metodo per determinare se il controllo utente Circle può elaborare i dati trascinati.
 
-    - Se il controllo utente può elaborare i dati, imposta la <xref:System.Windows.DragEventArgs.Effects%2A> proprietà <xref:System.Windows.DragDropEffects.Copy> o <xref:System.Windows.DragDropEffects.Move>.
+    - Se il controllo utente può elaborare i dati, imposta la <xref:System.Windows.DragEventArgs.Effects%2A> proprietà su <xref:System.Windows.DragDropEffects.Copy> o <xref:System.Windows.DragDropEffects.Move>.
 
 3. Premere **F5** per compilare ed eseguire l'applicazione.
 
-4. Selezionare il testo `gre` nella <xref:System.Windows.Controls.TextBox>.
+4. Selezionare il testo `gre` <xref:System.Windows.Controls.TextBox>in.
 
 5. Trascinare il testo su un controllo Circle. Notare che ora il cursore cambia aspetto per indicare che il trascinamento non è consentito poiché `gre` non è un colore valido.
 
- È possibile migliorare ulteriormente l'esperienza utente applicando un'anteprima dell'operazione di trascinamento. Per il controllo utente Circle, si eseguirà l'override di <xref:System.Windows.UIElement.OnDragEnter%2A> e <xref:System.Windows.UIElement.OnDragLeave%2A> metodi. Quando i dati vengono trascinati sul controllo, lo sfondo corrente <xref:System.Windows.Shapes.Shape.Fill%2A> viene salvato in una variabile segnaposto. La stringa viene quindi convertita in un pennello e applicata al <xref:System.Windows.Shapes.Ellipse> che fornisce il cerchio dell'interfaccia utente. Se i dati vengono trascinati all'esterno del cerchio senza essere rilasciati, originale <xref:System.Windows.Shapes.Shape.Fill%2A> valore viene nuovamente applicato al controllo Circle.
+ È possibile migliorare ulteriormente l'esperienza utente applicando un'anteprima dell'operazione di trascinamento. Per il controllo utente Circle, si eseguirà l' <xref:System.Windows.UIElement.OnDragEnter%2A> override <xref:System.Windows.UIElement.OnDragLeave%2A> dei metodi e. Quando i dati vengono trascinati sul controllo, lo sfondo <xref:System.Windows.Shapes.Shape.Fill%2A> corrente viene salvato in una variabile segnaposto. La stringa viene quindi convertita in un pennello e applicata all' <xref:System.Windows.Shapes.Ellipse> oggetto che fornisce l'interfaccia utente del cerchio. Se i dati vengono trascinati fuori dal cerchio senza essere eliminati, il valore <xref:System.Windows.Shapes.Shape.Fill%2A> originale viene nuovamente applicato al cerchio.
 
 ### <a name="to-preview-the-effects-of-the-drag-and-drop-operation"></a>Per visualizzare in anteprima gli effetti dell'operazione di trascinamento
 
 1. Aprire Circle.xaml.cs o Circle.xaml.vb.
 
-2. Nella classe Circle dichiarare una privata <xref:System.Windows.Media.Brush> variabile denominata `_previousFill` e inizializzarla su `null`.
+2. Nella classe Circle dichiarare una variabile privata <xref:System.Windows.Media.Brush> denominata `_previousFill` e inizializzarla su `null`.
 
      [!code-csharp[DragDropWalkthrough#Brush](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#brush)]
      [!code-vb[DragDropWalkthrough#Brush](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#brush)]
 
-3. Aggiungere il codice seguente <xref:System.Windows.UIElement.OnDragEnter%2A> sottoposto a override per fornire la gestione delle classi di <xref:System.Windows.UIElement.DragEnter> evento.
+3. Aggiungere la seguente <xref:System.Windows.UIElement.OnDragEnter%2A> sostituzione per fornire la gestione delle classi <xref:System.Windows.UIElement.DragEnter> per l'evento.
 
      [!code-csharp[DragDropWalkthrough#OnDragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragenter)]
      [!code-vb[DragDropWalkthrough#OnDragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragenter)]
 
-     Ciò <xref:System.Windows.UIElement.OnDragEnter%2A> override esegue le attività seguenti:
+     Questo <xref:System.Windows.UIElement.OnDragEnter%2A> override esegue le attività seguenti:
 
-    - Salva il <xref:System.Windows.Shapes.Shape.Fill%2A> proprietà del <xref:System.Windows.Shapes.Ellipse> nel `_previousFill` variabile.
+    - Salva la <xref:System.Windows.Shapes.Shape.Fill%2A> proprietà dell'oggetto <xref:System.Windows.Shapes.Ellipse> nella `_previousFill` variabile.
 
-    - Esegue gli stessi controlli che vengono eseguiti nel <xref:System.Windows.UIElement.OnDrop%2A> metodo per determinare se i dati possono essere convertiti in un <xref:System.Windows.Media.Brush>.
+    - Esegue gli stessi controlli che vengono eseguiti nel <xref:System.Windows.UIElement.OnDrop%2A> metodo per determinare se i dati possono essere convertiti in un oggetto. <xref:System.Windows.Media.Brush>
 
-    - Se i dati vengono convertiti in un oggetto valido <xref:System.Windows.Media.Brush>, viene applicata al <xref:System.Windows.Shapes.Shape.Fill%2A> del <xref:System.Windows.Shapes.Ellipse>.
+    - Se i dati vengono convertiti in un <xref:System.Windows.Media.Brush>oggetto valido, lo applica <xref:System.Windows.Shapes.Shape.Fill%2A> a del <xref:System.Windows.Shapes.Ellipse>.
 
-4. Aggiungere il codice seguente <xref:System.Windows.UIElement.OnDragLeave%2A> sottoposto a override per fornire la gestione delle classi di <xref:System.Windows.UIElement.DragLeave> evento.
+4. Aggiungere la seguente <xref:System.Windows.UIElement.OnDragLeave%2A> sostituzione per fornire la gestione delle classi <xref:System.Windows.UIElement.DragLeave> per l'evento.
 
      [!code-csharp[DragDropWalkthrough#OnDragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragleave)]
      [!code-vb[DragDropWalkthrough#OnDragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragleave)]
 
-     Ciò <xref:System.Windows.UIElement.OnDragLeave%2A> override esegue le attività seguenti:
+     Questo <xref:System.Windows.UIElement.OnDragLeave%2A> override esegue le attività seguenti:
 
-    - Si applica il <xref:System.Windows.Media.Brush> salvato nel `_previousFill` variabili per il <xref:System.Windows.Shapes.Shape.Fill%2A> del <xref:System.Windows.Shapes.Ellipse> che fornisce l'interfaccia utente del controllo utente Circle.
+    - Applica l' <xref:System.Windows.Media.Brush> oggetto salvato `_previousFill` nella variabile all'oggetto <xref:System.Windows.Shapes.Shape.Fill%2A> dell'oggetto <xref:System.Windows.Shapes.Ellipse> che fornisce l'interfaccia utente del controllo utente Circle.
 
 5. Premere **F5** per compilare ed eseguire l'applicazione.
 
-6. Selezionare il testo `green` nella <xref:System.Windows.Controls.TextBox>.
+6. Selezionare il testo `green` <xref:System.Windows.Controls.TextBox>in.
 
 7. Trascinare il testo su un controllo Circle senza rilasciarlo. Il controllo Circle passa da blu a verde.
 
@@ -277,57 +277,57 @@ Quando i dati vengono rilasciati sul controllo utente Circle, il controllo deve 
 
 8. Trascinare il testo dal controllo Circle. Il controllo Circle passa da verde a blu.
 
-## <a name="enable-a-panel-to-receive-dropped-data"></a>Abilitare un pannello di ricevere dati rilasciati
+## <a name="enable-a-panel-to-receive-dropped-data"></a>Abilitare un pannello per la ricezione dei dati eliminati
 
-In questa sezione si abilita i pannelli di ospitano controlli utente Circle per fungere da destinazioni di rilascio per i dati Circle trascinati. Si implementerà codice che consente di spostare un controllo Circle da un pannello a altro o per creare una copia di un controllo Circle tenendo premuto il **Ctrl** chiave durante il trascinamento della selezione di un cerchio.
+In questa sezione si abilitano i pannelli che ospitano i controlli utente Circle in modo che fungano da destinazioni di rilascio per i dati del cerchio trascinato. Si implementerà il codice che consente di spostare un cerchio da un pannello a un altro o di creare una copia di un controllo Circle tenendo premuto il tasto **CTRL** mentre si trascina e si elimina un cerchio.
 
 1. Aprire MainWindow.xaml.
 
-2. Come illustrato nella finestra di XAML seguente, in ognuna delle <xref:System.Windows.Controls.StackPanel> (controlli), aggiungere i gestori per il <xref:System.Windows.UIElement.DragOver> e <xref:System.Windows.UIElement.Drop> eventi. Nome di <xref:System.Windows.UIElement.DragOver> gestore eventi `panel_DragOver`e assegnare un nome il <xref:System.Windows.UIElement.Drop> gestore eventi, `panel_Drop`.
+2. Come illustrato nel codice XAML seguente, in ognuno dei <xref:System.Windows.Controls.StackPanel> controlli aggiungere i gestori per gli <xref:System.Windows.UIElement.DragOver> eventi e <xref:System.Windows.UIElement.Drop> . Assegnare un <xref:System.Windows.UIElement.DragOver> nome al `panel_DragOver`gestore eventi,, e <xref:System.Windows.UIElement.Drop> denominare `panel_Drop`il gestore dell'evento,.
 
      [!code-xaml[DragDropWalkthrough#PanelsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]
 
 3. Aprire MainWindows.xaml.cs o MainWindow.xaml.vb.
 
-4. Aggiungere il codice seguente per il <xref:System.Windows.UIElement.DragOver> gestore dell'evento.
+4. Aggiungere il codice seguente per il <xref:System.Windows.UIElement.DragOver> gestore eventi.
 
      [!code-csharp[DragDropWalkthrough#PanelDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldragover)]
      [!code-vb[DragDropWalkthrough#PanelDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldragover)]
 
-     Ciò <xref:System.Windows.UIElement.DragOver> gestore eventi esegue le attività seguenti:
+     Questo <xref:System.Windows.UIElement.DragOver> gestore eventi esegue le attività seguenti:
 
-    - Verifica che i dati trascinati contengano i dati "Object" che è stati inseriti nel <xref:System.Windows.DataObject> dal controllo utente Circle e passati nella chiamata a <xref:System.Windows.DragDrop.DoDragDrop%2A>.
+    - Verifica che i dati trascinati contengano i dati "Object" inclusi nel <xref:System.Windows.DataObject> pacchetto dal controllo utente Circle e passati nella chiamata a. <xref:System.Windows.DragDrop.DoDragDrop%2A>
 
-    - Se i dati "Object" sono presenti, controlla se il **Ctrl** viene premuto.
+    - Se i dati dell'oggetto sono presenti, controlla se il tasto **CTRL** è premuto.
 
-    - Se il **Ctrl** viene premuto, imposta la <xref:System.Windows.DragEventArgs.Effects%2A> proprietà <xref:System.Windows.DragDropEffects.Copy>. In caso contrario, impostare il <xref:System.Windows.DragEventArgs.Effects%2A> proprietà <xref:System.Windows.DragDropEffects.Move>.
+    - Se viene premuto il tasto **CTRL** , imposta la <xref:System.Windows.DragEventArgs.Effects%2A> proprietà su <xref:System.Windows.DragDropEffects.Copy>. In caso contrario, <xref:System.Windows.DragEventArgs.Effects%2A> impostare la <xref:System.Windows.DragDropEffects.Move>proprietà su.
 
-5. Aggiungere il codice seguente per il <xref:System.Windows.UIElement.Drop> gestore dell'evento.
+5. Aggiungere il codice seguente per il <xref:System.Windows.UIElement.Drop> gestore eventi.
 
      [!code-csharp[DragDropWalkthrough#PanelDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldrop)]
      [!code-vb[DragDropWalkthrough#PanelDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldrop)]
 
-     Ciò <xref:System.Windows.UIElement.Drop> gestore eventi esegue le attività seguenti:
+     Questo <xref:System.Windows.UIElement.Drop> gestore eventi esegue le attività seguenti:
 
-    - Controlla se il <xref:System.Windows.UIElement.Drop> evento è già stato gestito. Ad esempio, se viene eliminato un cerchio in un'altra Circle che gestisce il <xref:System.Windows.UIElement.Drop> evento, non si desidera il pannello che contiene il controllo Circle anche gestirla.
+    - Verifica se l' <xref:System.Windows.UIElement.Drop> evento è già stato gestito. Ad esempio, se un cerchio viene rilasciato in un altro cerchio che gestisce <xref:System.Windows.UIElement.Drop> l'evento, non si vuole che il pannello che contiene il cerchio lo gestisca anche.
 
-    - Se il <xref:System.Windows.UIElement.Drop> evento non è gestito, controlla se il **Ctrl** viene premuto.
+    - Se l' <xref:System.Windows.UIElement.Drop> evento non viene gestito, controlla se il tasto **CTRL** è premuto.
 
-    - Se il **Ctrl** premuto quando il <xref:System.Windows.UIElement.Drop> avviene, viene creata una copia del cerchio di controllo e aggiungerlo al <xref:System.Windows.Controls.Panel.Children%2A> raccolta del <xref:System.Windows.Controls.StackPanel>.
+    - Se si preme il tasto **CTRL** quando si <xref:System.Windows.UIElement.Drop> verifica l'evento, crea una copia del controllo Circle e <xref:System.Windows.Controls.StackPanel>la <xref:System.Windows.Controls.Panel.Children%2A> aggiunge alla raccolta di.
 
-    - Se il **Ctrl** non viene premuto, sposta il controllo Circle dal <xref:System.Windows.Controls.Panel.Children%2A> del pannello padre alla raccolta di <xref:System.Windows.Controls.Panel.Children%2A> raccolta del pannello che è stato rilasciato.
+    - Se il tasto **CTRL** non è premuto, sposta il cerchio dalla <xref:System.Windows.Controls.Panel.Children%2A> raccolta del relativo pannello <xref:System.Windows.Controls.Panel.Children%2A> padre alla raccolta del pannello su cui è stata rilasciata.
 
-    - Set il <xref:System.Windows.DragEventArgs.Effects%2A> proprietà per notificare il <xref:System.Windows.DragDrop.DoDragDrop%2A> metodo indica se è stata eseguita un'operazione di copia o spostamento.
+    - Imposta la <xref:System.Windows.DragEventArgs.Effects%2A> proprietà per notificare <xref:System.Windows.DragDrop.DoDragDrop%2A> al metodo se è stata eseguita un'operazione di spostamento o copia.
 
 6. Premere **F5** per compilare ed eseguire l'applicazione.
 
-7. Selezionare il testo `green` dal <xref:System.Windows.Controls.TextBox>.
+7. Selezionare il testo `green` <xref:System.Windows.Controls.TextBox>da.
 
 8. Trascinare il testo su un controllo Circle e rilasciarlo.
 
-9. Trascinare un controllo Circle dal pannello di sinistra al pannello di destra e rilasciarlo. Il controllo Circle viene rimosso dal <xref:System.Windows.Controls.Panel.Children%2A> raccolta del pannello a sinistra e aggiunto alla raccolta Children del Pannello di destra.
+9. Trascinare un controllo Circle dal pannello di sinistra al pannello di destra e rilasciarlo. Il cerchio viene rimosso dalla <xref:System.Windows.Controls.Panel.Children%2A> raccolta del pannello sinistro e aggiunto alla raccolta Children del pannello di destra.
 
-10. Trascinare un controllo Circle dal Pannello di cui si trova a altro pannello e rilasciarlo mentre si tiene premuto il **Ctrl** chiave. Il controllo Circle viene copiato e la copia viene aggiunto al <xref:System.Windows.Controls.Panel.Children%2A> raccolta del pannello del ricevente.
+10. Trascinare un controllo Circle dal pannello in cui si trova nell'altro pannello e rilasciarlo mentre si preme il tasto **CTRL** . Il cerchio viene copiato e la copia viene aggiunta alla <xref:System.Windows.Controls.Panel.Children%2A> raccolta del pannello di destinazione.
 
      ![Trascinamento di un controllo Circle mentre si preme CTRL](./media/dragdrop-paneldrop.png "DragDrop_PanelDrop")
 

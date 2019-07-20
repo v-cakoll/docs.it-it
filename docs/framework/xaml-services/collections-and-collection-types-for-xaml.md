@@ -2,49 +2,49 @@
 title: Raccolte e tipi di raccolte per XAML
 ms.date: 03/30/2017
 ms.assetid: 58f8e7c6-9a41-4f25-8551-c042f1315baa
-ms.openlocfilehash: 4123b64545f7c47a96c4cae496046a89b7e576b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63f6346837f77dbdbdcb4a90ec5af725be69ee02
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954180"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364332"
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>Raccolte e tipi di raccolte per XAML
 
-Questo argomento descrive come definire le proprietà di tipi che sono progettate per supportare una raccolta e per supportare la sintassi XAML per creare un'istanza di elementi della raccolta come elementi figlio di un elemento oggetto padre o un elemento di proprietà.
+In questo argomento viene descritto come definire le proprietà dei tipi destinati a supportare una raccolta e per supportare la sintassi XAML per la creazione di un'istanza di elementi della raccolta come elementi figlio di un elemento oggetto o elemento proprietà padre.
 
-## <a name="xaml-collection-concepts"></a>Concetti di raccolta XAML
+## <a name="xaml-collection-concepts"></a>Concetti relativi alla raccolta XAML
 
-Concettualmente, una relazione in XAML in cui sono presenti più elementi figlio all'interno dell'ambito di un elemento oggetto XAML o elemento di proprietà XAML deve essere implementata come una raccolta. Tale raccolta deve essere associata a una particolare proprietà XAML del tipo XAML che rappresenta l'elemento padre nella relazione. La proprietà deve essere una raccolta perché un processore XAML prevede di assegnare ogni elemento nel markup in un elemento appena aggiunta della proprietà della raccolta sottostante.
+Dal punto di vista concettuale, qualsiasi relazione in XAML in cui sono presenti più elementi figlio all'interno dell'ambito di un elemento oggetto XAML o di una proprietà XAML deve essere implementata come raccolta. Tale raccolta deve essere associata a una particolare proprietà XAML del tipo XAML che rappresenta l'elemento padre in quella relazione. La proprietà deve essere una raccolta perché un processore XAML prevede di assegnare a ogni elemento del markup un elemento appena aggiunto della proprietà della raccolta sottostante.
 
-A livello di linguaggio XAML, i requisiti specifici di supporto delle raccolte non sono definiti completamente. Il concetto che una raccolta può essere un elenco o un dizionario (ma non entrambi) viene definito a livello di linguaggio XAML, ma i tipi di backup rappresentano entrambi gli elenchi o dizionari non è definita dal linguaggio XAML.
+A livello di linguaggio XAML, i requisiti esatti del supporto per la raccolta non sono completamente definiti. Il concetto che una raccolta può essere un elenco o un dizionario (ma non entrambi) viene definito a livello di linguaggio XAML, ma i tipi di supporto rappresentano elenchi o dizionari non sono definiti dal linguaggio XAML.
 
-Nei servizi XAML di .NET Framework, il concetto di supporto della raccolta XAML è più chiaramente definito in termini di .NET Framework i tipi di supporto. In particolare, il supporto XAML per le raccolte si basa su diversi concetti di .NET Framework e le API usati per elenchi e dizionari nella programmazione generale di .NET Framework.
+Nei servizi XAML .NET Framework il concetto di supporto della raccolta XAML è definito in modo più chiaro in termini di .NET Framework tipi di supporto. In particolare, il supporto XAML per le raccolte si basa su diversi concetti e API .NET Framework utilizzati per elenchi e dizionari in generale .NET Framework programmazione.
 
-1. Il <xref:System.Collections.IList> interfaccia indica una raccolta di elenchi.
+1. L' <xref:System.Collections.IList> interfaccia indica una raccolta di elenchi.
 
-2. Il <xref:System.Collections.IDictionary> interfaccia indica una raccolta di dizionari.
+2. L' <xref:System.Collections.IDictionary> interfaccia indica una raccolta di dizionari.
 
-3. <xref:System.Array> rappresenta una matrice e una matrice supporta <xref:System.Collections.IList> metodi.
+3. <xref:System.Array>rappresenta una matrice e una matrice supporta <xref:System.Collections.IList> i metodi.
 
-In ognuno di questi concetti di raccolta, un processore XAML di servizi XAML di .NET Framework prevede di chiamare il `Add` metodo in un'istanza specifica del tipo della proprietà di raccolta. In alternativa, in uno scenario di serializzazione, un processore XAML produce istanze del tipo XAML discrete per ogni elemento trovato nell'elenco, dizionario o matrice in base al concetto di specifiche di ogni raccolta di "Elementi". Questi sono: <xref:System.Collections.IList.Item%2A>; <xref:System.Collections.IDictionary.Item%2A>; l'impostazione esplicita <xref:System.Array.System%23Collections%23IList%23Item%2A> per <xref:System.Array>.
+In ognuno di questi concetti di raccolta, un processore XAML dei servizi XAML .NET Framework prevede di chiamare `Add` il metodo su un'istanza specifica del tipo della proprietà della raccolta. In alternativa, in uno scenario di serializzazione, un processore XAML produce istanze discrete di tipo XAML per ogni elemento trovato nell'elenco, nel dizionario o nella matrice in base al concetto specifico di "Items" della raccolta. Sono: <xref:System.Collections.IList.Item%2A> ; esplicito <xref:System.Array.System%23Collections%23IList%23Item%2A> per <xref:System.Array>. <xref:System.Collections.IDictionary.Item%2A>
 
 ## <a name="generic-collections"></a>Raccolte generiche
 
-Le raccolte generiche possono essere utile per la programmazione generale di .NET Framework e possono essere utilizzate anche per le proprietà della raccolta XAML. Tuttavia, il tipo generico interfacce <xref:System.Collections.Generic.IList%601> e <xref:System.Collections.Generic.IDictionary%602> non sono identificate dai processori di servizi XAML di .NET Framework XAML come equivalente a non generica <xref:System.Collections.IList> o <xref:System.Collections.IDictionary>. Anziché implementare le interfacce, è un approccio consigliato per i tipi di proprietà di raccolta generica di derivare dalle classi <xref:System.Collections.Generic.List%601> o <xref:System.Collections.Generic.Dictionary%602>. Queste classi implementano le interfacce non generiche e pertanto includono il supporto previsto per le raccolte XAML nell'implementazione di base.
+Le raccolte generiche possono essere utili per la programmazione .NET Framework generale e possono essere usate anche per le proprietà della raccolta XAML. Tuttavia <xref:System.Collections.Generic.IList%601> , le interfacce generiche e <xref:System.Collections.Generic.IDictionary%602> non sono identificate da .NET Framework processori XAML dei servizi XAML come equivalenti all'oggetto <xref:System.Collections.IList> o <xref:System.Collections.IDictionary>non generico. Anziché implementare le interfacce, un approccio consigliato per i tipi di proprietà della raccolta generica consiste nel derivare <xref:System.Collections.Generic.Dictionary%602>dalle classi <xref:System.Collections.Generic.List%601> o. Queste classi implementano le interfacce non generiche e quindi includono il supporto previsto per le raccolte XAML nell'implementazione di base.
 
-## <a name="read-only-collections-and-initialization-logic"></a>Le raccolte di sola lettura e la logica di inizializzazione
+## <a name="read-only-collections-and-initialization-logic"></a>Raccolte di sola lettura e logica di inizializzazione
 
-In .NET Framework di programmazione, è uno schema progettuale comune per rendere le proprietà che contiene un valore di una raccolta come una raccolta di sola lettura. Questo modello consente l'istanza che possiede la proprietà di raccolta per controllare meglio cosa accade alla raccolta... In particolare, il criterio impedisce la sostituzione accidentale dell'intera raccolta di pre-esistente impostando la proprietà. In questo modello, qualsiasi accesso alla raccolta dai chiamanti invece deve essere eseguita da chiamano metodi o proprietà, supportata dal tipo di raccolta e/o le interfacce di raccolta pertinenti, ad esempio <xref:System.Collections.IList>.
+In .NET Framework programmazione, si tratta di un modello di progettazione comune per rendere qualsiasi proprietà che contenga un valore di una raccolta come raccolta di sola lettura. Questo modello consente all'istanza proprietaria della proprietà della raccolta di controllare meglio cosa accade alla raccolta. In particolare, il modello impedisce la sostituzione accidentale dell'intera raccolta preesistente impostando la proprietà. In questo modello, qualsiasi accesso alla raccolta da parte dei chiamanti deve essere eseguito chiamando metodi o proprietà come supportato dal tipo di raccolta e/o le interfacce di raccolta pertinenti, ad <xref:System.Collections.IList>esempio.
 
-Usando questo modello implica che una classe che espone una proprietà della raccolta di sola lettura prima di tutto necessario inizializzare tale proprietà per contenere una raccolta vuota. In genere l'inizializzazione viene eseguita come parte del comportamento della costruzione della classe. Per essere utile per XAML, è importante che tale logica viene sempre fatto riferimento dal costruttore predefinito, poiché XAML è in genere chiama il costruttore predefinito prima di elaborare le proprietà (proprietà della raccolta o in caso contrario).
+L'utilizzo di questo modello implica che qualsiasi classe che espone una proprietà di raccolta di sola lettura deve innanzitutto inizializzare tale proprietà in modo che contenga una raccolta vuota. In genere l'inizializzazione viene eseguita come parte del comportamento di costruzione per la classe. Per essere utile per XAML, è importante che tale logica faccia sempre riferimento al costruttore senza parametri, perché XAML chiama in genere il costruttore senza parametri prima di elaborare le proprietà (proprietà della raccolta o in caso contrario).
 
-## <a name="xaml-type-system-support-and-collections"></a>Le raccolte e supporto di sistema di tipi XAML
+## <a name="xaml-type-system-support-and-collections"></a>Raccolte e supporto del sistema di tipi XAML
 
-Oltre il meccanismo di base per l'analisi XAML e la compilazione o la serializzazione delle proprietà di raccolta, il sistema di tipi XAML implementato nei servizi XAML di .NET Framework include diverse funzionalità di progettazione relative alle raccolte in XAML.
+Oltre ai meccanismi di base per l'analisi di XAML e il popolamento o la serializzazione delle proprietà della raccolta, il sistema di tipi XAML implementato in .NET Framework servizi XAML include diverse funzionalità di progettazione relative alle raccolte in XAML.
 
-1. <xref:System.Xaml.XamlType.IsCollection%2A> Restituisce true se il tipo XAML è supportato da un tipo che fornisce supporto delle raccolte XAML.
+1. <xref:System.Xaml.XamlType.IsCollection%2A>Restituisce true se il tipo XAML è supportato da un tipo che fornisce il supporto per la raccolta XAML.
 
-2. <xref:System.Xaml.XamlType.IsDictionary%2A> e <xref:System.Xaml.XamlType.IsArray%2A> può identificare ulteriormente la modalità di raccolta supporta il tipo XAML. Per XAML personalizzato processori a cui si basano su servizi XAML di .NET Framework e di XAML sistema di tipi ma non in base a esistente <xref:System.Xaml.XamlWriter> implementazioni, sapendo che viene utilizzata la modalità di raccolta potrebbe essere necessario per conoscere il metodo da richiamare per elaborazione della raccolta.
+2. <xref:System.Xaml.XamlType.IsDictionary%2A>e <xref:System.Xaml.XamlType.IsArray%2A> possono identificare ulteriormente la modalità di raccolta supportata dal tipo XAML. Per i processori XAML personalizzati basati sui servizi XAML .NET Framework e sul sistema di tipi XAML ma non sulla base delle <xref:System.Xaml.XamlWriter> implementazioni esistenti, è possibile sapere quale modalità di raccolta viene utilizzata per conoscere il metodo da richiamare elaborazione della raccolta.
 
-3. Ognuno dei valori della proprietà precedente potenzialmente sono influenzate dalle sostituzioni di <xref:System.Xaml.XamlType.LookupCollectionKind%2A> su un tipo XAML.
+3. Ognuno dei valori di proprietà precedenti è potenzialmente influenzato dalle sostituzioni <xref:System.Xaml.XamlType.LookupCollectionKind%2A> di in un tipo XAML.

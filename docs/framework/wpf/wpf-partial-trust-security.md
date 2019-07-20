@@ -15,17 +15,17 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 98377a48b1ffe1ffabd72d0b42de4ed3da3ef93a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fcc5d3aa6d093f1fbf8af19c4f0c65036e1705d7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642931"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364393"
 ---
 # <a name="wpf-partial-trust-security"></a>Sicurezza con attendibilità parziale in WPF
-<a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] e linguaggi di scripting lato client non sono in grado di accedere alle risorse di sistema critiche. Poiché le applicazioni ospitate da browser di Windows Presentation Foundation (WPF) possono essere avviate dal browser, devono essere conformi a una serie di restrizioni. Per applicare queste restrizioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] si basa su entrambe [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] e [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (vedere [strategia di sicurezza WPF - sicurezza della piattaforma](wpf-security-strategy-platform-security.md)). Per impostazione predefinita, le applicazioni ospitate da browser richiedono l'area Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] set di autorizzazioni, indipendentemente dal fatto che vengano avviate da Internet, intranet locale o nel computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  
+<a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] , e i linguaggi di scripting lato client non sono in grado di accedere alle risorse di sistema critiche. Poiché le applicazioni ospitate da browser Windows Presentation Foundation (WPF) possono essere avviate dal browser, devono essere conformi a un set di restrizioni simile. Per applicare queste restrizioni, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] si basa sulla sicurezza dall'accesso di codice (CAS) [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] e (vedere [strategia di sicurezza di WPF-sicurezza della piattaforma](wpf-security-strategy-platform-security.md)). Per impostazione predefinita, le applicazioni ospitate da browser richiedono il set di autorizzazioni dell'area Internet, indipendentemente dal fatto che vengano avviate da Internet, dall'Intranet locale o dal computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] fornisce un'ampia gamma di supporto per garantire il maggior numero possibile di funzionalità può essere utilizzato in modo sicuro in ambiente parzialmente attendibile e, tramite [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], fornisce supporto aggiuntivo per la programmazione con attendibilità parziale.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]fornisce un'ampia gamma di supporto per garantire che il maggior numero possibile di funzionalità possa essere utilizzato in modo sicuro con attendibilità parziale e, insieme alle autorità di certificazione, fornisca ulteriore supporto per la programmazione parzialmente attendibile.  
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "64642931"
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>Supporto con attendibilità parziale della funzionalità WPF  
- Nella tabella seguente elenca le funzionalità generali di Windows Presentation Foundation (WPF) che sono sicuri da usare entro i limiti del set di autorizzazioni area Internet.  
+ Nella tabella seguente sono elencate le funzionalità di alto livello di Windows Presentation Foundation (WPF) che possono essere utilizzate in modo sicuro entro i limiti del set di autorizzazioni dell'area Internet.  
   
  Tabella 1: Funzionalità WPF sicure in attendibilità parziale  
   
@@ -50,25 +50,25 @@ ms.locfileid: "64642931"
 |Modifica|Controllo ortografico<br /><br /> RichTextBox<br /><br /> Supporto Appunti per testo non crittografato e input penna<br /><br /> Operazione Incolla avviata dall'utente<br /><br /> Copia di contenuto selezionato|  
 |Controlli|Controlli generali|  
   
- Questa tabella descrive le [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] funzionalità a livello generale. Per altre informazioni, il [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] documenta le autorizzazioni necessarie per ogni membro nel [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Inoltre, per le funzionalità seguenti sono disponibili informazioni più dettagliate sull'esecuzione in situazioni di attendibilità parziale, con alcune considerazioni speciali.  
+ Questa tabella illustra le [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] funzionalità di livello elevato. Per informazioni più dettagliate, [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] in vengono documentate le autorizzazioni richieste da ogni membro di. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Inoltre, per le funzionalità seguenti sono disponibili informazioni più dettagliate sull'esecuzione in situazioni di attendibilità parziale, con alcune considerazioni speciali.  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (vedere [Cenni preliminari su XAML (WPF)](./advanced/xaml-overview-wpf.md)).  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]vedere [Cenni preliminari su XAML (WPF)](./advanced/xaml-overview-wpf.md).  
   
-- I popup (vedere <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
+- Popup (vedere <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
-- Trascinamento della selezione (vedere [Drag and Drop Overview](./advanced/drag-and-drop-overview.md)).  
+- Trascinamento della selezione (vedere [Cenni preliminari](./advanced/drag-and-drop-overview.md)sul trascinamento della selezione).  
   
 - Appunti (vedere <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
   
-- Creazione di immagini (vedere <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
+- Creazione di immagini <xref:System.Windows.Controls.Image?displayProperty=nameWithType>(vedere).  
   
-- Serializzazione (vedere <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
+- Serializzazione ( <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>vedere <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
   
-- Aprire la finestra di dialogo File (vedere <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
+- Finestra di dialogo Apri file ( <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>vedere).  
   
- La tabella seguente descrive il [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autorizzazione set di zone di funzionalità che non sono sicura per l'esecuzione entro i limiti di Internet.  
+ Nella tabella seguente vengono descritte le [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] funzionalità non sicure per l'esecuzione entro i limiti del set di autorizzazioni dell'area Internet.  
   
- Tabella 2: Funzionalità di WPF non sicure in attendibilità parziale  
+ Tabella 2: Funzionalità WPF non sicure in attendibilità parziale  
   
 |Area funzionalità|Funzionalità|  
 |------------------|-------------|  
@@ -78,7 +78,7 @@ ms.locfileid: "64642931"
   
 <a name="Partial_Trust_Programming"></a>   
 ## <a name="partial-trust-programming"></a>Programmazione con attendibilità parziale  
- Per [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] applicazioni, il codice che supera il set di autorizzazioni predefinito avrà un comportamento diverso a seconda dell'area di sicurezza. In alcuni casi, l'utente riceverà un avviso quando tenta di installare il codice. L'utente potrà scegliere se continuare o annullare l'installazione. La tabella seguente descrive il comportamento dell'applicazione per ogni area di sicurezza e le azioni necessarie relative all'applicazione per acquisire attendibilità totale.  
+ Per [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] le applicazioni, il codice che supera il set di autorizzazioni predefinito avrà un comportamento diverso a seconda dell'area di sicurezza. In alcuni casi, l'utente riceverà un avviso quando tenta di installare il codice. L'utente potrà scegliere se continuare o annullare l'installazione. La tabella seguente descrive il comportamento dell'applicazione per ogni area di sicurezza e le azioni necessarie relative all'applicazione per acquisire attendibilità totale.  
   
 |Area di sicurezza|Comportamento|Ottenere l'attendibilità totale|  
 |-------------------|--------------|------------------------|  
@@ -89,18 +89,18 @@ ms.locfileid: "64642931"
 > [!NOTE]
 >  Il comportamento descritto nella tabella precedente è relativo alle applicazioni XBAP con attendibilità totale che non seguono il modello di distribuzione attendibile di ClickOnce.  
   
- In genere, è probabile che il codice che richiede autorizzazioni ulteriori rispetto a quelle consentite sia codice comune condiviso dalle applicazioni autonome e da quelle ospitate dal browser. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] e [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] offrono varie tecniche per la gestione di questo scenario.  
+ In genere, è probabile che il codice che richiede autorizzazioni ulteriori rispetto a quelle consentite sia codice comune condiviso dalle applicazioni autonome e da quelle ospitate dal browser. CA e [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] offrono diverse tecniche per la gestione di questo scenario.  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>Rilevamento delle autorizzazioni tramite CAS  
- In alcune situazioni, è possibile che il codice condiviso negli assembly di librerie utilizzabili dalle applicazioni autonome e [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. In questi casi, è possibile che il codice esegua funzionalità che potrebbero richiedere un numero di autorizzazioni maggiore rispetto al set assegnato all'applicazione. L'applicazione può rilevare se sono disponibili determinate autorizzazioni mediante la sicurezza di Microsoft .NET Framework. In particolare, è possibile verificare la disponibilità di una determinata autorizzazione chiamando il <xref:System.Security.CodeAccessPermission.Demand%2A> metodo nell'istanza di autorizzazione desiderata. Questa procedura è illustrata nell'esempio seguente, in cui il codice esegue una query per verificare la disponibilità dell'autorizzazione per salvare un file sul disco locale:  
+ In alcuni casi, è possibile che il codice condiviso negli assembly della libreria venga utilizzato sia da applicazioni autonome [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]che da. In questi casi, è possibile che il codice esegua funzionalità che potrebbero richiedere un numero di autorizzazioni maggiore rispetto al set assegnato all'applicazione. L'applicazione può rilevare se dispone o meno di una determinata autorizzazione usando Microsoft .NET sicurezza del Framework. In particolare, è possibile verificare se dispone di un'autorizzazione specifica chiamando il <xref:System.Security.CodeAccessPermission.Demand%2A> metodo sull'istanza dell'autorizzazione desiderata. Questa procedura è illustrata nell'esempio seguente, in cui il codice esegue una query per verificare la disponibilità dell'autorizzazione per salvare un file sul disco locale:  
   
  [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
  [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
 [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
 [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
- Se un'applicazione non dispone dell'autorizzazione desiderata, la chiamata a <xref:System.Security.CodeAccessPermission.Demand%2A> genererà un'eccezione di sicurezza. In caso contrario, l'autorizzazione è disponibile. `IsPermissionGranted` incapsula questo comportamento e restituisce `true` o `false` come appropriato.  
+ Se un'applicazione non dispone dell'autorizzazione desiderata, la chiamata a genererà un'eccezione di <xref:System.Security.CodeAccessPermission.Demand%2A> sicurezza. In caso contrario, l'autorizzazione è disponibile. `IsPermissionGranted`incapsula questo comportamento e restituisce `true` o `false` in base alle esigenze.  
   
 <a name="Graceful_Degradation_of_Functionality"></a>   
 ### <a name="graceful-degradation-of-functionality"></a>Riduzione normale delle prestazioni della funzionalità  
@@ -113,40 +113,40 @@ ms.locfileid: "64642931"
   
  In molte situazioni è possibile trovare un'alternativa all'attendibilità parziale.  
   
- In un ambiente controllato, ad esempio una rete intranet, è possibile installare Framework gestiti personalizzati nella base nel client di [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]. Queste librerie possono eseguire codice che richiede attendibilità totale e farvi riferimento dalle applicazioni che consentite solo parzialmente attendibile usando <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (per altre informazioni, vedere [Security](security-wpf.md) e [sicurezza WPF Strategia di sicurezza della piattaforma -](wpf-security-strategy-platform-security.md)).  
+ In un ambiente controllato, ad esempio una rete Intranet, è possibile installare Framework gestiti personalizzati attraverso la base client in [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]. Queste librerie consentono di eseguire codice che richiede attendibilità totale ed è possibile farvi riferimento da applicazioni che sono consentite solo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> parzialmente attendibilità usando (per altre informazioni, vedere [sicurezza](security-wpf.md) e strategia di sicurezza di [WPF-sicurezza della piattaforma](wpf-security-strategy-platform-security.md)).  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>Rilevamento host del browser  
- Usando [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] per controllare le autorizzazioni è una tecnica appropriata quando è necessario verificare in base al livello di autorizzazione. Tuttavia, tale tecnica dipende dal rilevamento di eccezioni durante la normale elaborazione, operazione che in genere non è consigliata e che può causare problemi di prestazioni. In alternativa, se il [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] viene eseguita solo nella sandbox dell'area Internet, è possibile usare il <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> proprietà, che restituisce true per [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+ L'uso di CA per verificare le autorizzazioni è una tecnica adatta quando è necessario verificare l'autorizzazione per ogni singola autorizzazione. Tuttavia, tale tecnica dipende dal rilevamento di eccezioni durante la normale elaborazione, operazione che in genere non è consigliata e che può causare problemi di prestazioni. Se invece il [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] viene eseguito solo nella sandbox dell'area Internet, è possibile usare la <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> proprietà, che restituisce true per [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> consente solo di stabilire se un'applicazione è in esecuzione in un browser, non il set di autorizzazioni per un'applicazione è in esecuzione con.  
+>  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>consente di distinguere solo se un'applicazione è in esecuzione in un browser, non in quale set di autorizzazioni viene eseguita un'applicazione.  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>Gestione delle autorizzazioni  
- Per impostazione predefinita, [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] eseguiti con attendibilità parziale (set di autorizzazioni area Internet predefinito). Tuttavia, a seconda dei requisiti dell'applicazione, questo set predefinito può essere modificato. Ad esempio, se un [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] viene avviata da una intranet locale, è possibile sfruttare i vantaggi di un set di autorizzazioni più esteso, come illustrato nella tabella riportata di seguito.  
+ Per impostazione predefinita [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] , eseguire con attendibilità parziale (set di autorizzazioni predefinito dell'area Internet). Tuttavia, a seconda dei requisiti dell'applicazione, questo set predefinito può essere modificato. Se, ad esempio, [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] un viene avviato da una rete Intranet locale, può usufruire di un set di autorizzazioni più elevato, illustrato nella tabella seguente.  
   
- Tabella 3: Autorizzazioni LocalIntranet e Internet  
+ Tabella 3: Autorizzazioni per LocalIntranet e Internet  
   
 |Autorizzazioni|Attributo|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
-|DNS|Accesso ai server DNS|Yes|No|  
+|DNS|Accesso ai server DNS|Sì|No|  
 |Variabili di ambiente|Lettura|Yes|No|  
-|Finestre di dialogo file|Apri|Yes|Yes|  
-|Finestre di dialogo file|Senza restrizioni|Yes|No|  
-|Spazio di memorizzazione isolato|Isolamento assembly in base all'utente|Yes|No|  
-|Spazio di memorizzazione isolato|Isolamento sconosciuto|Yes|Yes|  
-|Spazio di memorizzazione isolato|Quota utenti illimitata|Yes|No|  
-|Supporti|Audio, video e immagini sicuri|Yes|Yes|  
+|Finestre di dialogo file|Apri|Sì|Yes|  
+|Finestre di dialogo file|Senza restrizioni|Sì|No|  
+|Spazio di memorizzazione isolato|Isolamento assembly in base all'utente|Sì|No|  
+|Spazio di memorizzazione isolato|Isolamento sconosciuto|Sì|Sì|  
+|Spazio di memorizzazione isolato|Quota utenti illimitata|Sì|No|  
+|Supporti|Audio, video e immagini sicuri|Sì|Yes|  
 |Stampa|Stampa predefinita|Yes|No|  
 |Stampa|Stampa sicura|Yes|Yes|  
 |Reflection|Emissione|Yes|No|  
-|Sicurezza|Esecuzione del codice gestito|Yes|Yes|  
-|Sicurezza|Asserzione autorizzazioni concesse|Yes|No|  
-|Interfaccia utente|Senza restrizioni|Yes|No|  
-|Interfaccia utente|Finestre di primo livello sicure|Yes|Yes|  
-|Interfaccia utente|Appunti personali|Yes|Yes|  
-|Web browser|Navigazione sicura dei frame in HTML|Yes|Yes|  
+|Security|Esecuzione del codice gestito|Yes|Sì|  
+|Security|Asserzione autorizzazioni concesse|Sì|No|  
+|Interfaccia utente|Senza restrizioni|Sì|No|  
+|Interfaccia utente|Finestre di primo livello sicure|Sì|Yes|  
+|Interfaccia utente|Appunti personali|Sì|Sì|  
+|Web browser|Navigazione sicura dei frame in HTML|Yes|Sì|  
   
 > [!NOTE]
 >  L'operazione di taglia e incolla, se avviata dall'utente, è consentita solo con l'attendibilità parziale.  
@@ -159,9 +159,9 @@ ms.locfileid: "64642931"
   
 - [Sicurezza di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
- Se il [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] richiede attendibilità totale, è possibile usare gli stessi strumenti per aumentare le autorizzazioni necessarie. Sebbene un [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] con attendibilità totale verrà ottenuta solo se è installata e avviata dal computer locale, la rete intranet o da un URL elencato nella finestra del browser attendibili o consentiti siti. Se l'applicazione viene installata dalla Intranet o da un sito attendibile, verrà visualizzato all'utente il prompt standard di ClickOnce con la notifica relativa alle autorizzazioni elevate. L'utente potrà scegliere se continuare o annullare l'installazione.  
+ [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] Se richiede l'attendibilità totale, è possibile usare gli stessi strumenti per aumentare le autorizzazioni richieste. Anche se [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] un oggetto riceverà solo l'attendibilità totale se viene installato e avviato dal computer locale, dalla Intranet o da un URL elencato nei siti attendibili o consentiti del browser. Se l'applicazione viene installata dalla Intranet o da un sito attendibile, verrà visualizzato all'utente il prompt standard di ClickOnce con la notifica relativa alle autorizzazioni elevate. L'utente potrà scegliere se continuare o annullare l'installazione.  
   
- In alternativa, è possibile usare il modello di distribuzione attendibile di ClickOnce per una distribuzione con attendibilità totale da qualsiasi area di sicurezza. Per altre informazioni, vedere [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) e [sicurezza](security-wpf.md).  
+ In alternativa, è possibile usare il modello di distribuzione attendibile di ClickOnce per una distribuzione con attendibilità totale da qualsiasi area di sicurezza. Per ulteriori informazioni, vedere [Cenni preliminari sulla distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview) e [sicurezza](security-wpf.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

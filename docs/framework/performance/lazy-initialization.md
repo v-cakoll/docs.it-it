@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b19fbeb0144698c5091a9bbe6bce45c21c4f0d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aef3105844ee61607bbc85332a76611c91a4198a
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616378"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364044"
 ---
 # <a name="lazy-initialization"></a>Inizializzazione differita
 L'*inizializzazione differita* di un oggetto significa che la creazione dell'oggetto viene posticipata finché l'oggetto non viene usato per la prima volta. In questo argomento i termini *inizializzazione differita* e *creazione di istanze differita* sono sinonimi. L'inizializzazione differita viene usata in particolare per migliorare le prestazioni, evitare calcoli superflui e ridurre i requisiti di memoria del programma. Ecco gli scenari più comuni:  
@@ -27,14 +27,14 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
   
  La tabella seguente elenca i tipi forniti da .NET Framework versione 4 per consentire l'inizializzazione differita in diversi scenari.  
   
-|Tipo|Descrizione|  
+|Type|Descrizione|  
 |----------|-----------------|  
 |<xref:System.Lazy%601>|Classe wrapper che fornisce la semantica di inizializzazione differita per qualsiasi libreria di classi o tipo definito dall'utente.|  
 |<xref:System.Threading.ThreadLocal%601>|È simile a <xref:System.Lazy%601>, con la differenza che fornisce la semantica di inizializzazione differita in base a dati locali del thread. Ogni thread ha accesso al proprio valore univoco.|  
 |<xref:System.Threading.LazyInitializer>|Fornisce metodi `static` (`Shared` in Visual Basic) avanzati per l'inizializzazione differita di oggetti senza l'overhead di una classe.|  
   
 ## <a name="basic-lazy-initialization"></a>Inizializzazione differita di base  
- Per definire un tipo a inizializzazione differita, ad esempio `MyType`, usare `Lazy<MyType>` (`Lazy(Of MyType)` in Visual Basic), come mostrato nell'esempio seguente. Se non viene passato alcun delegato nel costruttore <xref:System.Lazy%601>, il tipo con wrapping viene creato usando <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> in occasione del primo accesso alla proprietà del valore. Se il tipo non ha un costruttore predefinito, viene generata un'eccezione in fase di esecuzione.  
+ Per definire un tipo a inizializzazione differita, ad esempio `MyType`, usare `Lazy<MyType>` (`Lazy(Of MyType)` in Visual Basic), come mostrato nell'esempio seguente. Se non viene passato alcun delegato nel costruttore <xref:System.Lazy%601>, il tipo con wrapping viene creato usando <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> in occasione del primo accesso alla proprietà del valore. Se il tipo non dispone di un costruttore senza parametri, viene generata un'eccezione in fase di esecuzione.  
   
  Nell'esempio seguente si supponga che `Orders` sia una classe che contiene una matrice di oggetti `Order` recuperati da un database. Un oggetto `Customer` contiene un'istanza di `Orders`, ma a seconda delle azioni dell'utente, i dati dell'oggetto `Orders` potrebbero non essere necessari.  
   
@@ -87,9 +87,9 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
   
 <a name="ExceptionsInLazyObjects"></a>   
 ## <a name="exceptions-in-lazy-objects"></a>Eccezioni negli oggetti Lazy  
- Come già indicato, un oggetto <xref:System.Lazy%601> restituisce sempre lo stesso oggetto o valore con cui è stato inizializzato e di conseguenza la proprietà <xref:System.Lazy%601.Value%2A> è di sola lettura. Se si abilita la memorizzazione nella cache delle eccezioni, questa natura non modificabile si estende al comportamento delle eccezioni. Se un oggetto a inizializzazione differita è abilitata la memorizzazione nella cache eccezione e genera un'eccezione dal relativo metodo di inizializzazione quando la <xref:System.Lazy%601.Value%2A> prima di tutto accedere alla proprietà, la stessa eccezione viene generata in tutti i tentativi successivi di accesso di <xref:System.Lazy%601.Value%2A> proprietà . In altre parole, il costruttore del tipo con wrapping non viene mai richiamato, anche in scenari di multithreading. Di conseguenza, l'oggetto <xref:System.Lazy%601> non può generare un'eccezione durante un accesso e restituire un valore all'accesso successivo.  
+ Come già indicato, un oggetto <xref:System.Lazy%601> restituisce sempre lo stesso oggetto o valore con cui è stato inizializzato e di conseguenza la proprietà <xref:System.Lazy%601.Value%2A> è di sola lettura. Se si abilita la memorizzazione nella cache delle eccezioni, questa natura non modificabile si estende al comportamento delle eccezioni. Se per un oggetto con inizializzazione lazy è abilitata la memorizzazione nella cache delle eccezioni e viene generata un' <xref:System.Lazy%601.Value%2A> eccezione dal relativo metodo di inizializzazione quando si accede prima alla proprietà, viene generata la <xref:System.Lazy%601.Value%2A> stessa eccezione a ogni tentativo successivo di accesso alla proprietà. . In altre parole, il costruttore del tipo con wrapping non viene mai richiamato, anche in scenari di multithreading. Di conseguenza, l'oggetto <xref:System.Lazy%601> non può generare un'eccezione durante un accesso e restituire un valore all'accesso successivo.  
   
- La memorizzazione nella cache delle eccezioni viene abilitata quando si usa qualsiasi costruttore <xref:System.Lazy%601?displayProperty=nameWithType> che accetta un metodo di inizializzazione (parametro `valueFactory`). Ad esempio, viene abilitata quando si usa il costruttore `Lazy(T)(Func(T))`. Se il costruttore accetta anche un valore <xref:System.Threading.LazyThreadSafetyMode> (parametro `mode`), specificare <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> o <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Se si specifica un metodo di inizializzazione, la memorizzazione nella cache delle eccezioni viene abilitata per queste due modalità. Il metodo di inizializzazione può essere molto semplice. Ad esempio, può chiamare il costruttore predefinito per `T`: `new Lazy<Contents>(() => new Contents(), mode)` in C# o `New Lazy(Of Contents)(Function() New Contents())` in Visual Basic. Se si usa un costruttore di <xref:System.Lazy%601?displayProperty=nameWithType> che non specifica un metodo di inizializzazione, le eccezioni generate dal costruttore predefinito per `T` non vengono memorizzate nella cache. Per altre informazioni, vedere l'enumerazione <xref:System.Threading.LazyThreadSafetyMode>.  
+ La memorizzazione nella cache delle eccezioni viene abilitata quando si usa qualsiasi costruttore <xref:System.Lazy%601?displayProperty=nameWithType> che accetta un metodo di inizializzazione (parametro `valueFactory`). Ad esempio, viene abilitata quando si usa il costruttore `Lazy(T)(Func(T))`. Se il costruttore accetta anche un valore <xref:System.Threading.LazyThreadSafetyMode> (parametro `mode`), specificare <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> o <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Se si specifica un metodo di inizializzazione, la memorizzazione nella cache delle eccezioni viene abilitata per queste due modalità. Il metodo di inizializzazione può essere molto semplice. Ad esempio, potrebbe chiamare il costruttore senza parametri `T`per: `new Lazy<Contents>(() => new Contents(), mode)` in C#o `New Lazy(Of Contents)(Function() New Contents())` in Visual Basic. Se si usa un <xref:System.Lazy%601?displayProperty=nameWithType> costruttore che non specifica un metodo di inizializzazione, le eccezioni generate dal costruttore senza parametri per `T` non vengono memorizzate nella cache. Per altre informazioni, vedere l'enumerazione <xref:System.Threading.LazyThreadSafetyMode>.  
   
 > [!NOTE]
 >  Se si crea un oggetto <xref:System.Lazy%601> con il parametro del costruttore `isThreadSafe` impostato su `false` o il parametro del costruttore `mode` impostato su <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>, è necessario accedere all'oggetto <xref:System.Lazy%601> da un solo thread o fornire la sincronizzazione. Questo vale per tutti gli aspetti dell'oggetto, anche per la memorizzazione nella cache delle eccezioni.  
@@ -101,9 +101,9 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
 |Costruttore|Modalità di thread safety|Usa il metodo di inizializzazione|Le eccezioni vengono memorizzate nella cache|  
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|No|No|  
-|Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Yes|Yes|  
+|Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Sì|Sì|  
 |Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) o `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|No|No|  
-|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) o `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Yes|Yes|  
+|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) o `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Sì|Yes|  
 |Lazy(T)(LazyThreadSafetyMode)|Specificata dall'utente|No|No|  
 |Lazy(T)(Func(T), LazyThreadSafetyMode)|Specificata dall'utente|Yes|No se l'utente specifica <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>; in caso contrario, sì.|  
   

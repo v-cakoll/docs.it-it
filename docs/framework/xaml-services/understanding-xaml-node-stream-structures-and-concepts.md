@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: a04cc8c9dd3e36e4866e773861fddce3c10d0e20
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c873961982cd1642d8b354e5d77b06105c0b7a1e
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755151"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364314"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Informazioni su strutture e concetti del flusso del nodo XAML
 
@@ -208,21 +208,21 @@ L'oggetto`ProvideValue` dall'estensione di markup non è stato ancora richiamato
 
 ## <a name="xaml-and-xml-language-defined-members-in-the-xaml-node-stream"></a>Membri definiti dai linguaggi XAML e XML nel flusso di nodi XAML
 
-Alcuni membri vengono introdotti in un flusso di nodi XAML a causa di interpretazioni e convenzioni di un reader XAML, anziché tramite una costruzione o una ricerca esplicita di <xref:System.Xaml.XamlMember> . Spesso, questi membri sono direttive XAML. In alcuni casi, è l'operazione di lettura del codice XAML che introduce la direttiva nel flusso di nodi XAML. In altre parole, di input originale testo XAML non è stata specificata in modo esplicito la direttiva membro, ma il reader XAML inserisce la direttiva per soddisfare un XAML convenzione e report informazioni strutturali nel flusso di nodi XAML prima che vengano persi.
+Alcuni membri vengono introdotti in un flusso di nodi XAML a causa di interpretazioni e convenzioni di un reader XAML, anziché tramite una costruzione o una ricerca esplicita di <xref:System.Xaml.XamlMember> . Spesso, questi membri sono direttive XAML. In alcuni casi, è l'operazione di lettura del codice XAML che introduce la direttiva nel flusso di nodi XAML. In altre parole, il testo XAML di input originale non specifica in modo esplicito la direttiva del membro, ma il reader XAML inserisce la direttiva per soddisfare una convenzione XAML strutturale e informazioni sul report nel flusso del nodo XAML prima che tali informazioni vadano perse.
 
 L'elenco seguente illustra tutti i casi in cui si prevede che un reader XAML introduca un nodo membro direttiva XAML e il modo in cui tale nodo membro viene identificato nelle implementazioni dei servizi XAML di .NET Framework.
 
 - **Testo di inizializzazione per un nodo oggetto:** Il nome di questo nodo membro è `_Initialization`, rappresenta una direttiva XAML e viene definito nello spazio dei nomi XAML del linguaggio XAML. È possibile ottenere un'entità statica per esso da <xref:System.Xaml.XamlLanguage.Initialization%2A>.
 
-- **Parametri posizionali per un'estensione di markup:** Il nome di questo nodo membro è `_PositionalParameters`, e viene definito nello spazio dei nomi XAML del linguaggio XAML. Contiene sempre un elenco generico di oggetti, ognuno dei quali è un parametro posizionale pre-separato con il carattere delimitatore `,` come specificato nel codice XAML di input. È possibile ottenere un'entità statica per la direttiva di parametri posizionali da <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>.
+- **Parametri posizionali per un'estensione di markup:** Il nome di questo nodo membro è `_PositionalParameters`e viene definito nello spazio dei nomi XAML del linguaggio XAML. Contiene sempre un elenco generico di oggetti, ognuno dei quali è un parametro posizionale pre-separato con il carattere delimitatore `,` come specificato nel codice XAML di input. È possibile ottenere un'entità statica per la direttiva di parametri posizionali da <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>.
 
 - **Contenuto sconosciuto:** Il nome di questo nodo membro è `_UnknownContent`. Nello specifico, si tratta di un oggetto <xref:System.Xaml.XamlDirective>e viene definito nello spazio dei nomi XAML del linguaggio XAML. Questa direttiva viene usata come elemento sentinel per i casi in cui un elemento oggetto XAML include contenuto nel codice XAML di origine, ma non è possibile determinare alcuna proprietà del contenuto nel contesto dello schema XAML attualmente disponibile. È possibile rilevare questo caso in un flusso di nodi XAML controllando la presenza di membri denominati `_UnknownContent`. Se non viene eseguita alcuna altra azione nel flusso di nodi XAML del percorso di caricamento, l'oggetto <xref:System.Xaml.XamlObjectWriter> predefinito genera un'eccezione nel caso di un tentativo di chiamare `WriteEndObject` quando viene rilevato il membro `_UnknownContent` in qualsiasi oggetto. L'oggetto <xref:System.Xaml.XamlXmlWriter> predefinito non genera un'eccezione e tratta il membro come implicito. È possibile ottenere un'entità statica per `_UnknownContent` da <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.
 
-- **Proprietà della raccolta di una raccolta:** Anche se il tipo CLR sottostante di una classe di raccolta che viene usato in genere per XAML dispone di una proprietà denominata dedicata che contiene gli elementi della raccolta, tale proprietà non è nota a un sistema di tipi XAML prima della risoluzione del tipo di supporto. Il flusso di nodi XAML introduce invece un segnaposto `Items` come membro del tipo XAML della raccolta. Nell'implementazione dei servizi XAML di .NET Framework il nome di questo membro/direttiva nel flusso di nodi è `_Items`. È possibile ottenere una costante per questa direttiva da <xref:System.Xaml.XamlLanguage.Items%2A>.
+- **Proprietà della raccolta di una raccolta:** Sebbene il tipo CLR sottostante di una classe Collection utilizzata per XAML includa in genere una proprietà denominata dedicata che contiene gli elementi della raccolta, tale proprietà non è nota a un sistema di tipi XAML prima della risoluzione del tipo di supporto. Il flusso di nodi XAML introduce invece un segnaposto `Items` come membro del tipo XAML della raccolta. Nell'implementazione dei servizi XAML di .NET Framework il nome di questo membro/direttiva nel flusso di nodi è `_Items`. È possibile ottenere una costante per questa direttiva da <xref:System.Xaml.XamlLanguage.Items%2A>.
 
-    Si noti che un flusso di nodi XAML può contenere una proprietà Items con elementi che non rivelarsi analizzabile basato sulla risoluzione del tipo sottostante e contesto dello schema XAML. Ad esempio,
+    Si noti che un flusso di nodi XAML può contenere una proprietà Items con elementi che risultano non essere analizzabili in base alla risoluzione del tipo di supporto e al contesto dello schema XAML. Ad esempio,
 
-- **Membri definiti da XML:** Il codice XML definito `xml:base`, `xml:lang` e `xml:space` membri vengono segnalati come direttive XAML denominate `base`, `lang`, e `space` nelle implementazioni di servizi XAML di .NET Framework. Lo spazio dei nomi per questi membri è lo spazio dei nomi XML `http://www.w3.org/XML/1998/namespace`. È possibile ottenere costanti per ognuno di essi da <xref:System.Xaml.XamlLanguage>.
+- **Membri definiti da XML:** `xml:base`I membri definiti `xml:lang` da XML e `xml:space` vengono segnalati come direttive XAML denominate `base`, `space` `lang`e nelle implementazioni dei servizi XAML .NET Framework. Lo spazio dei nomi per questi membri è lo spazio dei nomi XML `http://www.w3.org/XML/1998/namespace`. È possibile ottenere costanti per ognuno di essi da <xref:System.Xaml.XamlLanguage>.
 
 ## <a name="node-order"></a>Ordine dei nodi
 
@@ -232,7 +232,7 @@ Alcune direttive sono finalizzate in modo specifico a fornire maggiori informazi
 
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>Comportamento di XamlObjectWriter e ordine dei nodi
 
-`StartObject` per <xref:System.Xaml.XamlObjectWriter> non segnala necessariamente al writer di oggetti XAML di costruire immediatamente l'istanza dell'oggetto. XAML include diverse funzionalità del linguaggio che consentono di inizializzare un oggetto con un input aggiuntivo senza fare completamente affidamento sulla richiamata di un costruttore predefinito per produrre l'oggetto iniziale e quindi impostare le proprietà. Tali funzionalità includono <xref:System.Windows.Markup.XamlDeferLoadAttribute>, testo di inizializzazione, [x:TypeArguments](x-typearguments-directive.md), parametri posizionali di un'estensione di markup, metodi factory e nodi [x:Arguments](x-arguments-directive.md) associati (XAML 2009). Ognuno di questi casi ritarda la costruzione effettiva dell'oggetto e poiché il flusso di nodi viene riordinato, il writer di oggetti XAML può dipendere da un comportamento che prevede la costruzione effettiva dell'istanza ogni volta che viene rilevato un membro iniziale che non è specificamente una direttiva di costruzione per tale tipo di oggetto.
+`StartObject` per <xref:System.Xaml.XamlObjectWriter> non segnala necessariamente al writer di oggetti XAML di costruire immediatamente l'istanza dell'oggetto. XAML include diverse funzionalità del linguaggio che consentono di inizializzare un oggetto con input aggiuntivo e di non basarsi interamente sulla chiamata di un costruttore senza parametri per produrre l'oggetto iniziale e quindi impostare le proprietà. Tali funzionalità includono <xref:System.Windows.Markup.XamlDeferLoadAttribute>, testo di inizializzazione, [x:TypeArguments](x-typearguments-directive.md), parametri posizionali di un'estensione di markup, metodi factory e nodi [x:Arguments](x-arguments-directive.md) associati (XAML 2009). Ognuno di questi casi ritarda la costruzione effettiva dell'oggetto e poiché il flusso di nodi viene riordinato, il writer di oggetti XAML può dipendere da un comportamento che prevede la costruzione effettiva dell'istanza ogni volta che viene rilevato un membro iniziale che non è specificamente una direttiva di costruzione per tale tipo di oggetto.
 
 ### <a name="getobject"></a>GetObject
 

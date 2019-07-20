@@ -2,12 +2,12 @@
 title: Modifica dei livelli di condivisione della cache per le attività Send
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: 079eb037f074155aec3ad5473480bbf5d4d341b2
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ac4f2e4fe85d6b243999add6bda65f4fb202f79c
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425164"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363846"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Modifica dei livelli di condivisione della cache per le attività Send
 L'estensione <xref:System.ServiceModel.Activities.SendMessageChannelCache> consente di personalizzare i livelli di condivisione della cache, le impostazioni della cache della channel factory e della cache del canale per i flussi di lavoro che inviano messaggi agli endpoint del servizio tramite le attività di messaggistica <xref:System.ServiceModel.Activities.Send>. Questi sono in genere flussi di lavoro del client ma potrebbero essere anche servizi del flusso di lavoro ospitati in un oggetto <xref:System.ServiceModel.WorkflowServiceHost>. La cache della channel factory contiene gli oggetti <xref:System.ServiceModel.ChannelFactory%601> memorizzati nella cache. La cache del canale contiene i canali memorizzati nella cache.  
@@ -20,11 +20,11 @@ L'estensione <xref:System.ServiceModel.Activities.SendMessageChannelCache> conse
   
  Di seguito sono riportati i diversi livelli di condivisione della cache disponibili per le attività <xref:System.ServiceModel.Activities.Send> in un flusso di lavoro e il relativo utilizzo consigliato:  
   
-- **Livello host**: Nel livello di condivisione host, la cache è disponibile solo per le istanze del flusso di lavoro ospitate nell'host del servizio del flusso di lavoro. Una cache può essere condivisa anche tra host del servizio flusso di lavoro di una cache a livello di processo.  
+- **Livello host**: Nel livello di condivisione host la cache è disponibile solo per le istanze del flusso di lavoro ospitate nell'host del servizio del flusso di lavoro. Una cache può essere condivisa anche tra host del servizio flusso di lavoro di una cache a livello di processo.  
   
-- **Livello di istanza**: Nell'istanza del livello di condivisione, la cache è disponibile per una particolare istanza tutta la sua durata ma la cache non è disponibile ad altre istanze del flusso di lavoro.  
+- **Livello istanza**: Nel livello di condivisione dell'istanza la cache è disponibile per una particolare istanza del flusso di lavoro per tutta la sua durata, ma la cache non è disponibile per altre istanze del flusso di lavoro.  
   
-- **Nessuna Cache**: La cache è disattivata per impostazione predefinita se si dispone di un flusso di lavoro che utilizza gli endpoint definiti nella configurazione. In questo caso, è consigliabile mantenere disattivata la cache anche perché l'attivazione potrebbe risultare non sicura, ad esempio, se per ogni invio è necessaria un'identità diversa (credenziali diverse o utilizzo della rappresentazione).  
+- **Nessuna cache**: Per impostazione predefinita, la cache è disattivata se si dispone di un flusso di lavoro che utilizza gli endpoint definiti nella configurazione. In questo caso, è consigliabile mantenere disattivata la cache anche perché l'attivazione potrebbe risultare non sicura, ad esempio, se per ogni invio è necessaria un'identità diversa (credenziali diverse o utilizzo della rappresentazione).  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>Modifica del livello di condivisione della cache per un flusso di lavoro client  
  Per impostare la condivisione della cache in un flusso di lavoro client, aggiungere un'istanza della classe <xref:System.ServiceModel.Activities.SendMessageChannelCache> come estensione al set desiderato di istanze del flusso di lavoro. In questo modo la cache viene condivisa in tutte le istanze del flusso di lavoro. Negli esempi di codice seguenti viene mostrato come eseguire questi passaggi.  
@@ -86,7 +86,7 @@ serviceHost.WorkflowExtensions.Add(() => new SendMessageChannelCache
 ```  
   
 ## <a name="customizing-cache-settings"></a>Personalizzazione delle impostazioni della cache  
- È possibile personalizzare le impostazioni della cache della channel factory e del canale. Le impostazioni della cache sono definite nella classe <xref:System.ServiceModel.Activities.ChannelCacheSettings>. La classe <xref:System.ServiceModel.Activities.SendMessageChannelCache> definisce le impostazioni predefinite per la cache della channel factory e del canale nel costruttore predefinito. Nella tabella seguente vengono elencati i valori predefiniti di queste impostazioni per ogni tipo di cache.  
+ È possibile personalizzare le impostazioni della cache della channel factory e del canale. Le impostazioni della cache sono definite nella classe <xref:System.ServiceModel.Activities.ChannelCacheSettings>. La <xref:System.ServiceModel.Activities.SendMessageChannelCache> classe definisce le impostazioni della cache predefinite per la cache della channel factory e la cache del canale nel costruttore senza parametri. Nella tabella seguente vengono elencati i valori predefiniti di queste impostazioni per ogni tipo di cache.  
   
 |Impostazioni|LeaseTimeout (min)|IdleTimeout (min)|MaxItemsInCache|  
 |-|-|-|-|  
@@ -150,7 +150,7 @@ SendMessageChannelCache customChannelCacheExtension =
 clientInstance.Extensions.Add(customChannelCacheExtension);  
 ```  
   
- In un servizio flusso di lavoro ospitato è possibile specificare le impostazioni della cache della factory e della cache del canale nel file di configurazione dell'applicazione. A tale scopo, aggiungere un comportamento del servizio contenente le impostazioni della cache della factory e del canale e aggiungere tale comportamento al servizio. L'esempio seguente mostra il contenuto del file di configurazione che contiene il `MyChannelCacheBehavior` comportamento del servizio con le impostazioni della cache factory personalizzata della cache e del canale. Questo comportamento viene aggiunto al servizio tramite il `behaviorConfiguration` attributo.  
+ In un servizio flusso di lavoro ospitato è possibile specificare le impostazioni della cache della factory e della cache del canale nel file di configurazione dell'applicazione. A tale scopo, aggiungere un comportamento del servizio contenente le impostazioni della cache della factory e del canale e aggiungere tale comportamento al servizio. Nell'esempio seguente viene illustrato il contenuto di un file di configurazione che `MyChannelCacheBehavior` contiene il comportamento del servizio con le impostazioni della cache factory e della cache del canale personalizzate. Questo comportamento del servizio viene aggiunto al servizio tramite l' `behaviorConfiguration` attributo.  
   
 ```xml  
 <configuration>    

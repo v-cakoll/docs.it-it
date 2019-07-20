@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: ce626d9b75f2061ff024fa25ce005f952301603e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 29cf4e03c1e4f91cd4390b84dd62c07268fe0189
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617252"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364325"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Panoramica delle estensioni di markup per XAML
 Le estensioni di markup sono una tecnica XAML per ottenere un valore che non è una primitiva né un tipo XAML specifico. Per utilizzo dell'attributo, le estensioni di markup usano la sequenza di caratteri nota costituita da una parentesi graffa aperta `{` per l'immissione dell'ambito dell'estensione di markup e da una parentesi graffa chiusa `}` . Quando si usano i servizi XAML di .NET Framework, si possono usare alcune delle estensioni di markup predefinite del linguaggio XAML contenute nell'assembly System.Xaml. inoltre possibile creare una sottoclasse dalla classe <xref:System.Windows.Markup.MarkupExtension> , definita in System.Xaml, e definire estensioni di markup personalizzate. In alternativa, è possibile usare le estensioni di markup definite da un particolare framework se già si fa riferimento a tale framework.  
@@ -22,7 +22,7 @@ Le estensioni di markup sono una tecnica XAML per ottenere un valore che non è 
  Diverse estensioni di markup vengono implementate dai servizi XAML di .NET Framework per il supporto del linguaggio XAML. Le estensioni di markup corrispondono a parti della specifica di XAML come linguaggio. In genere, queste estensioni sono identificabili dal prefisso `x:` nella sintassi come illustrato nell'utilizzo comune. Le implementazioni dei servizi XAML di .NET Framework per questi elementi del linguaggio XAML derivano tutte dalla classe base  <xref:System.Windows.Markup.MarkupExtension> .  
   
 > [!NOTE]
->  Il prefisso `x:` viene usato per il mapping dello spazio dei nomi XAML tipico dello spazio dei nomi del linguaggio XAML, nell'elemento radice di una produzione XAML. Ad esempio, modelli di progetto e pagina di Visual Studio per diversi framework specifici avviare un file XAML usando il `x:` mapping. Nel mapping dello spazio dei nomi XAML personalizzato è possibile scegliere un token di prefisso diverso. Tuttavia, per identificare le entità che rappresentano una parte definita dello spazio dei nomi XAML del linguaggio XAML, in questa documentazione viene usato il mapping `x:` predefinito anziché lo spazio dei nomi XAML predefinito di un framework specifico o altri spazi dei nomi CLR o XML arbitrari.  
+>  Il prefisso `x:` viene usato per il mapping dello spazio dei nomi XAML tipico dello spazio dei nomi del linguaggio XAML, nell'elemento radice di una produzione XAML. Ad esempio, i modelli di progetto e di pagina di Visual Studio per diversi framework specifici avviano un file XAML `x:` usando questo mapping. Nel mapping dello spazio dei nomi XAML personalizzato è possibile scegliere un token di prefisso diverso. Tuttavia, per identificare le entità che rappresentano una parte definita dello spazio dei nomi XAML del linguaggio XAML, in questa documentazione viene usato il mapping `x:` predefinito anziché lo spazio dei nomi XAML predefinito di un framework specifico o altri spazi dei nomi CLR o XML arbitrari.  
   
 ### <a name="xtype"></a>x:Type  
  `x:Type` fornisce l'oggetto <xref:System.Type> per il tipo denominato. Questa funzionalità viene il più delle volte usata nei meccanismi di rinvio che usano il tipo CLR sottostante e la derivazione del tipo come moniker o identificatore di raggruppamento. Gli stili e i modelli WPF, nonché il loro utilizzo delle proprietà `TargetType` , sono un esempio specifico. Per altre informazioni, vedere [x:Type Markup Extension](x-type-markup-extension.md).  
@@ -39,8 +39,8 @@ Le estensioni di markup sono una tecnica XAML per ottenere un valore che non è 
 ### <a name="xreference"></a>x:Reference  
  `x:Reference` fa parte di XAML 2009, un'estensione del set del linguaggio originale (2006). `x:Reference` rappresenta un riferimento a un altro oggetto esistente in un oggetto grafico. Questo oggetto viene definito dal relativo attributo `x:Name`. Per altre informazioni, vedere [x:Reference Markup Extension](x-reference-markup-extension.md).  
   
-### <a name="other-x-constructs"></a>Altri x: Costrutti di  
- Esistono altri costrutti `x:` che supportano le funzionalità del linguaggio XAML, che però non sono implementati come estensioni di markup. Per altre informazioni, vedere [XAML Namespace (x) Funzionalità del linguaggio](xaml-namespace-x-language-features.md).  
+### <a name="other-x-constructs"></a>Altre x: Costruisce  
+ Esistono altri costrutti `x:` che supportano le funzionalità del linguaggio XAML, che però non sono implementati come estensioni di markup. Per altre informazioni, vedere [spazio dei nomi XAML (x:) Funzionalità](xaml-namespace-x-language-features.md)del linguaggio.  
   
 <a name="the_markupextension_base_class"></a>   
 ## <a name="the-markupextension-base-class"></a>Classe base MarkupExtension  
@@ -63,9 +63,9 @@ Le estensioni di markup sono una tecnica XAML per ottenere un valore che non è 
  Dal punto di vista dell'utilizzo del markup, l'inclusione del suffisso `Extension` come parte dell'utilizzo è una procedura valida. Tuttavia, `Extension` viene considerato a tutti gli effetti parte del nome della classe, per cui i writer di oggetti XAML non riuscirebbero a risolvere una classe di supporto dell'estensione di markup per quell'utilizzo se la stessa classe non avesse il suffisso `Extension` .  
   
 ### <a name="the-default-constructor"></a>Costruttore predefinito  
- Per tutti i tipi di supporto dell'estensione di markup è necessario esporre un costruttore pubblico predefinito. È necessario un costruttore predefinito per qualsiasi caso in cui un writer dell'oggetto XAML crei un'istanza dell'estensione di markup dall'utilizzo di un elemento oggetto. L'utilizzo dell'elemento oggetto di supporto è un'aspettativa legittima per un'estensione di markup, specialmente per la serializzazione. Si può tuttavia possibile implementare un'estensione di markup senza un costruttore pubblico quando si intende supportare solo gli utilizzi degli attributi dell'estensione di markup.  
+ Per tutti i tipi di supporto dell'estensione di markup è necessario esporre un costruttore pubblico senza parametri. Un costruttore senza parametri è necessario per qualsiasi caso in cui un writer di oggetti XAML crea un'istanza dell'estensione di markup dall'utilizzo di un elemento oggetto. L'utilizzo dell'elemento oggetto di supporto è un'aspettativa legittima per un'estensione di markup, specialmente per la serializzazione. Si può tuttavia possibile implementare un'estensione di markup senza un costruttore pubblico quando si intende supportare solo gli utilizzi degli attributi dell'estensione di markup.  
   
- Se l'utilizzo dell'estensione di markup non dispone di argomenti, il costruttore predefinito sarà necessario per supportare l'utilizzo.  
+ Se l'utilizzo dell'estensione di markup non dispone di argomenti, il costruttore senza parametri è necessario per supportare l'utilizzo.  
   
 <a name="constructor_patterns_and_positional_arguments_for_a_custom_markup_extension"></a>   
 ## <a name="constructor-patterns-and-positional-arguments-for-a-custom-markup-extension"></a>Modelli di costruttore e argomenti posizionali per un'estensione di markup personalizzata  
@@ -81,7 +81,7 @@ public Collate(CollationMode collationMode) {...}
   
  L'elaborazione viene eseguita a livello concettuale come se l'estensione di markup fosse un oggetto da creare, quindi vengono impostati i valori di membro. Ogni proprietà specificata da impostare viene valutata nello stesso modo in cui un membro specificato può essere impostato su un oggetto creato durante l'analisi del codice XAML. Vi sono due differenze importanti:  
   
-- Come osservato in precedenza, non è necessario che un'estensione di markup disponga di un costruttore predefinito perché sia possibile crearne un'istanza in XAML. La costruzione di oggetti viene rinviata fino a quando gli argomenti possibili corrispondenti nella sintassi del testo non vengono convertiti in formato token e valutati come argomenti posizionali o denominati e il costruttore appropriato non viene a quel punto chiamato.  
+- Come indicato in precedenza, non è necessario che un tipo di supporto dell'estensione di markup disponga di un costruttore senza parametri per poter creare un'istanza in XAML. La costruzione di oggetti viene rinviata fino a quando gli argomenti possibili corrispondenti nella sintassi del testo non vengono convertiti in formato token e valutati come argomenti posizionali o denominati e il costruttore appropriato non viene a quel punto chiamato.  
   
 - Gli utilizzi delle estensioni di markup possono essere annidati. L'estensione di markup più interna viene valutata per prima. È dunque possibile presupporre tale utilizzo e dichiarare uno dei parametri della costruzione come tipo che richiede un convertitore di valori, ad esempio un'estensione di markup, da produrre.  
   
@@ -116,7 +116,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="property-element-usage-of-a-markup-extension"></a>Utilizzo dell'elemento proprietà di un'estensione di markup  
  Gli scenari per gli utilizzi di estensioni di markup sono spesso progettati attorno all'uso dell'estensione di markup nell'utilizzo dell'attributo. Tuttavia, si può anche definire la classe sottostante in modo che supporti l'utilizzo dell'elemento proprietà.  
   
- Per supportare l'utilizzo dell'elemento proprietà dell'estensione di markup, definire un costruttore predefinito pubblico. Deve trattarsi di un costruttore di istanza, non di un costruttore statico. Questo è necessario perché un processore XAML deve in genere richiamare il costruttore predefinito in qualsiasi elemento oggetto elaborato dal markup, incluse le classi dell'estensione di markup come elementi oggetto. Per gli scenari avanzati, è possibile definire percorsi di costruzione non predefiniti per le classi. (Per altre informazioni, vedere [direttiva X:FactoryMethod](x-factorymethod-directive.md).) Tuttavia, non si devono usare questi modelli per scopi di estensione di markup poiché questo rende molto più difficile l'individuazione del modello di utilizzo tanto per i progettisti quanto per gli utenti di markup non elaborato.  
+ Per supportare l'utilizzo dell'elemento proprietà dell'estensione di markup, definire un costruttore pubblico senza parametri. Deve trattarsi di un costruttore di istanza, non di un costruttore statico. Questa operazione è necessaria perché un processore XAML deve in genere richiamare il costruttore senza parametri su qualsiasi elemento oggetto elaborato dal markup, incluse le classi dell'estensione di markup come elementi oggetto. Per gli scenari avanzati, è possibile definire percorsi di costruzione non predefiniti per le classi. Per ulteriori informazioni, vedere [X:FactoryMethod Directive](x-factorymethod-directive.md). Tuttavia, non si devono usare questi modelli per scopi di estensione di markup poiché questo rende molto più difficile l'individuazione del modello di utilizzo tanto per i progettisti quanto per gli utenti di markup non elaborato.  
   
 <a name="attributing_for_a_custom_markup_extension"></a>   
 ## <a name="attributing-for-a-custom-markup-extension"></a>Associazione di attributi per un'estensione di markup personalizzata  

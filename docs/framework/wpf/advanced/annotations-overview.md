@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: faf2e9bbe23acfd46ee98e1f0fca01b7563ede73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 861a757effee8d68d1e41682dd91ffadba20c536
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777315"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364369"
 ---
 # <a name="annotations-overview"></a>Cenni preliminari sulle annotazioni
 La scrittura di note o commenti su documenti cartacei è un'attività comune che diamo quasi per scontata. Queste note o commenti sono "annotazioni" aggiunte a un documento per contrassegnare informazioni o evidenziare elementi di interesse a cui fare riferimento in un secondo momento. Sebbene la scrittura di note su documenti stampati sia un'operazione semplice e comune, la capacità di aggiungere commenti personali ai documenti elettronici, se disponibile, è in genere molto limitata.  
   
- In questo argomento vengono esaminati molti tipi comuni di annotazioni, in modo specifico note di sticky notes ed evidenziazioni e viene illustrato come il [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] facilita questi tipi di annotazioni nelle applicazioni tramite il documento di Windows Presentation Foundation (WPF) controlli di visualizzazione.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] includono i controlli di visualizzazione del documento che supportano le annotazioni <xref:System.Windows.Controls.FlowDocumentReader> e <xref:System.Windows.Controls.FlowDocumentScrollViewer>così come controlli derivati da <xref:System.Windows.Controls.Primitives.DocumentViewerBase> , ad esempio <xref:System.Windows.Controls.DocumentViewer> e <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ In questo argomento vengono esaminati diversi tipi comuni di annotazioni, in particolare note e evidenziazioni e viene illustrato il modo in cui il framework delle annotazioni Microsoft semplifica questi tipi di annotazioni nelle applicazioni tramite il Windows Presentation Foundation (WPF ) controlli di visualizzazione del documento.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]i controlli di visualizzazione dei documenti che supportano <xref:System.Windows.Controls.FlowDocumentReader> le <xref:System.Windows.Controls.FlowDocumentScrollViewer>annotazioni includono e, nonché <xref:System.Windows.Controls.Primitives.DocumentViewerBase> i <xref:System.Windows.Controls.DocumentViewer> controlli derivati da, ad esempio e <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Memo  
@@ -36,19 +36,19 @@ La scrittura di note o commenti su documenti cartacei è un'attività comune che
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>Evidenziazioni  
- Quando si eseguono annotazioni su un documento cartaceo, per attirare l'attenzione su elementi di interesse si usano metodi creativi, ad esempio sottolineando, evidenziando, cerchiando parole in una frase o tracciando segni o notazioni sul margine.  Le annotazioni con evidenziatore di [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] forniscono una funzionalità simile per contrassegnare le informazioni visualizzate nei controlli di visualizzazione del documento [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ Quando si eseguono annotazioni su un documento cartaceo, per attirare l'attenzione su elementi di interesse si usano metodi creativi, ad esempio sottolineando, evidenziando, cerchiando parole in una frase o tracciando segni o notazioni sul margine.  Le annotazioni evidenziate in Microsoft Annotations Framework forniscono una funzionalità simile per contrassegnare le informazioni visualizzate nei controlli di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] visualizzazione dei documenti.  
   
  La figura seguente mostra un esempio di annotazione con evidenziatore.  
   
  ![Annotazione con evidenziatore](./media/caf-callouts.png "CAF_Callouts")  
   
- In genere gli utenti creano annotazioni selezionando innanzitutto un testo o un elemento di interesse e quindi facendo clic su per visualizzare un <xref:System.Windows.Controls.ContextMenu> delle opzioni di annotazione.  L'esempio seguente mostra le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] è possibile usare per dichiarare un <xref:System.Windows.Controls.ContextMenu> con comandi indirizzati che gli utenti possono accedere per creare e gestire le annotazioni.  
+ Gli utenti in genere creano annotazioni selezionando prima di tutto un testo o un elemento di interesse, quindi facendo clic <xref:System.Windows.Controls.ContextMenu> con il pulsante destro del mouse per visualizzare una delle opzioni di annotazione.  Nell'esempio seguente viene illustrato [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] l'oggetto che è possibile utilizzare <xref:System.Windows.Controls.ContextMenu> per dichiarare un con i comandi indirizzati a cui gli utenti possono accedere per creare e gestire le annotazioni.  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
 <a name="caf1_framework_data_anchoring"></a>   
 ## <a name="data-anchoring"></a>Ancoraggio dei dati  
- In [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] le annotazioni vengono associate ai dati selezionati dall'utente e non solo a una posizione nella visualizzazione. Pertanto, se la visualizzazione del documento cambia, ad esempio quando l'utente scorre o ridimensiona la finestra di visualizzazione, l'annotazione rimane nella selezione dati alla quale è associata. Ad esempio, l'immagine seguente mostra un'annotazione effettuata dall'utente su una selezione di testo. Quando la visualizzazione del documento cambia (scorre, viene ridimensionata o si sposta), l'annotazione con evidenziatore si sposta insieme alla selezione dati originale.  
+ Il framework delle annotazioni associa le annotazioni ai dati selezionati dall'utente, non solo a una posizione nella visualizzazione. Pertanto, se la visualizzazione del documento cambia, ad esempio quando l'utente scorre o ridimensiona la finestra di visualizzazione, l'annotazione rimane nella selezione dati alla quale è associata. Ad esempio, l'immagine seguente mostra un'annotazione effettuata dall'utente su una selezione di testo. Quando la visualizzazione del documento cambia (scorre, viene ridimensionata o si sposta), l'annotazione con evidenziatore si sposta insieme alla selezione dati originale.  
   
  ![Ancoraggio dei dati dell'annotazione](./media/caf-dataanchoring.png "CAF_DataAnchoring")  
   
@@ -61,7 +61,7 @@ La scrittura di note o commenti su documenti cartacei è un'attività comune che
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- Un altro scenario di esempio riguarda le applicazioni che consentono lo scambio di annotazioni e note tra lettori di documenti tramite posta elettronica. Questa funzionalità consente a tali applicazioni di far spostare il lettore alla pagina contenente l'annotazione che viene scambiata.  
+ Un altro scenario di esempio riguarda le applicazioni che consentono lo scambio di annotazioni e note permanenti tra i lettori di documenti tramite posta elettronica. Questa funzionalità consente a tali applicazioni di far spostare il lettore alla pagina contenente l'annotazione che viene scambiata.  
   
 ## <a name="see-also"></a>Vedere anche
 
