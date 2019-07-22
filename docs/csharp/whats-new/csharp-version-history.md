@@ -3,12 +3,12 @@ title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423245"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363884"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C\#
 
@@ -56,7 +56,7 @@ Qui le cose iniziano a farsi interessanti. Ecco alcune delle funzionalità princ
 
 - [Generics](../programming-guide/generics/index.md)
 - [Tipi parziali](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
-- [Metodi anonimi](../programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Metodi anonimi](../language-reference/operators/delegate-operator.md)
 - [Tipi nullable](../programming-guide/nullable-types/index.md)
 - [Iteratori](../programming-guide/concepts/iterators.md)
 - [Covarianza e controvarianza](../programming-guide/concepts/covariance-contravariance/index.md)

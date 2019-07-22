@@ -18,12 +18,12 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 756d63be456dce10ca9e95963ed25602e6f4aec1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 61f1b93d2f54923f0dfc4832a79fe35dc319d0f6
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634781"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331748"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Costrutti di alternanza nelle espressioni regolari
 <a name="top"></a> I costrutti di alternanza modificano un'espressione regolare per abilitare la corrispondenza di tipo either/or o condizionale. .NET supporta tre costrutti di alternanza:  
@@ -45,7 +45,7 @@ ms.locfileid: "64634781"
   
  L'espressione regolare che usa il carattere `|` , `\bgr(a|e)y\b`, viene interpretata nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`gr`|Corrisponde ai caratteri "gr".|  
@@ -59,7 +59,7 @@ ms.locfileid: "64634781"
   
  L'espressione regolare `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` viene interpretata come illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Corrisponde a una delle due opzioni seguenti: due cifre decimali seguite da un trattino seguito da sette cifre decimali oppure tre cifre decimali, un trattino, due cifre decimali, un altro trattino e quattro cifre decimali.|  
@@ -89,7 +89,7 @@ ms.locfileid: "64634781"
   
  Il criterio di ricerca di espressioni regolari `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`(?(\d{2}-)`|Determina se i tre caratteri successivi sono costituiti da due cifre seguite da un trattino.|  
@@ -120,12 +120,12 @@ ms.locfileid: "64634781"
   
  Il criterio di ricerca di espressioni regolari `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`(?<n2>\d{2}-)?`|Corrisponde a zero o una occorrenza di due cifre seguite da un trattino. Il nome di questo gruppo di acquisizione è `n2`.|  
 |`(?(n2)`|Verificare se per `n2` è stata individuata una corrispondenza nella stringa di input.|  
-|`)\d{7}`|Se per `n2` è stata individuata una corrispondenza, far corrispondere sette cifre decimali.|  
+|`\d{7}`|Se per `n2` è stata individuata una corrispondenza, far corrispondere sette cifre decimali.|  
 |<code>&#124;\d{3}-\d{2}-\d{4}</code>|Se per `n2` non è stata trovata alcuna corrispondenza, far corrispondere tre cifre decimali, un trattino, due cifre decimali, un altro trattino e quattro cifre decimali.|  
 |`\b`|Trova la corrispondenza di un confine di parola.|  
   
