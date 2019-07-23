@@ -331,6 +331,9 @@
         - name: 'Operatore ::'
           href: operators/namespace-alias-qualifer.md
           displayName: namespace alias qualifier
+        - name: Operatore delegate
+          href: operators/delegate-operator.md
+          displayName: anonymous
         - name: Operatore nameof
           href: operators/nameof.md
         - name: Operatore new
