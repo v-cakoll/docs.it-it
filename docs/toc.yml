@@ -296,6 +296,8 @@
           href: core/testing/unit-testing-published-output.md
         - name: Live Unit Testing di progetti .NET Core con Visual Studio
           href: /visualstudio/test/live-unit-testing-start
+    - name: Integrazione continua
+      href: core/tools/using-ci-with-cli.md
     - name: Controllo delle versioni
       href: core/versions/index.md
       items:
@@ -303,86 +305,88 @@
           href: core/versions/selection.md
         - name: Rimozione di SDK e runtime non aggiornati
           href: core/versions/remove-runtime-sdk-versions.md
-    - name: Catalogo Runtime IDentifier
+    - name: Catalogo RID (Runtime Identifier)
       href: core/rid-catalog.md
     - name: Panoramica di .NET Core SDK
       href: core/sdk.md
-    - name: Strumenti dell'interfaccia della riga di comando di .NET Core
+    - name: Interfaccia della riga di comando di .NET Core
       items:
-        - name: Panoramica dell'interfaccia della riga di comando di .NET Core
+        - name: Panoramica
           href: core/tools/index.md
-        - name: Telemetria
-          href: core/tools/telemetry.md
         - name: Strumenti globali
-          href: core/tools/global-tools.md
+          expanded: true
           items:
+            - name: Panoramica
+              href: core/tools/global-tools.md
             - name: Creare uno strumento globale
               href: core/tools/global-tools-how-to-create.md
         - name: Accesso con privilegi elevati
           href: core/tools/elevated-access.md
         - name: Modello di estendibilità
           href: core/tools/extensibility.md
-        - name: Integrazione continua
-          href: core/tools/using-ci-with-cli.md
         - name: Modelli personalizzati
           href: core/tools/custom-templates.md
         - name: Abilitare il completamento tramite TAB
           href: core/tools/enable-tab-autocomplete.md
-        - name: dotnet
-          href: core/tools/dotnet.md
-        - name: dotnet build
-          href: core/tools/dotnet-build.md
-        - name: dotnet build-server
-          href: core/tools/dotnet-build-server.md
-        - name: dotnet clean
-          href: core/tools/dotnet-clean.md
-        - name: dotnet help
-          href: core/tools/dotnet-help.md
-        - name: dotnet migrate
-          href: core/tools/dotnet-migrate.md
-        - name: dotnet msbuild
-          href: core/tools/dotnet-msbuild.md
-        - name: dotnet new
-          href: core/tools/dotnet-new.md
-        - name: dotnet nuget
+        - name: Telemetria
+          href: core/tools/telemetry.md
+        - name: panoramica di global.json
+          href: core/tools/global-json.md
+        - name: Riferimenti
           items:
-            - name: dotnet nuget delete
-              href: core/tools/dotnet-nuget-delete.md
-            - name: dotnet nuget locals
-              href: core/tools/dotnet-nuget-locals.md
-            - name: dotnet nuget push
-              href: core/tools/dotnet-nuget-push.md
-        - name: dotnet pack
-          href: core/tools/dotnet-pack.md
-        - name: dotnet publish
-          href: core/tools/dotnet-publish.md
-        - name: dotnet restore
-          href: core/tools/dotnet-restore.md
-        - name: dotnet run
-          href: core/tools/dotnet-run.md
-        - name: dotnet sln
-          href: core/tools/dotnet-sln.md
-        - name: dotnet store
-          href: core/tools/dotnet-store.md
-        - name: dotnet test
-          href: core/tools/dotnet-test.md
-        - name: dotnet tool
-          items:
-            - name: dotnet tool install
-              href: core/tools/dotnet-tool-install.md
-            - name: dotnet tool list
-              href: core/tools/dotnet-tool-list.md
-            - name: dotnet tool uninstall
-              href: core/tools/dotnet-tool-uninstall.md
-            - name: dotnet tool update
-              href: core/tools/dotnet-tool-update.md
-        - name: dotnet vstest
-          href: core/tools/dotnet-vstest.md
-        - name: Script dotnet-install
-          href: core/tools/dotnet-install-script.md
-        - name: Comandi di modifica dei progetti
-          items:
-            - name: Riferimenti
+            - name: dotnet
+              href: core/tools/dotnet.md
+            - name: dotnet build
+              href: core/tools/dotnet-build.md
+            - name: dotnet build-server
+              href: core/tools/dotnet-build-server.md
+            - name: dotnet clean
+              href: core/tools/dotnet-clean.md
+            - name: dotnet help
+              href: core/tools/dotnet-help.md
+            - name: dotnet migrate
+              href: core/tools/dotnet-migrate.md
+            - name: dotnet msbuild
+              href: core/tools/dotnet-msbuild.md
+            - name: dotnet new
+              href: core/tools/dotnet-new.md
+            - name: dotnet nuget
+              items:
+                - name: dotnet nuget delete
+                  href: core/tools/dotnet-nuget-delete.md
+                - name: dotnet nuget locals
+                  href: core/tools/dotnet-nuget-locals.md
+                - name: dotnet nuget push
+                  href: core/tools/dotnet-nuget-push.md
+            - name: dotnet pack
+              href: core/tools/dotnet-pack.md
+            - name: dotnet publish
+              href: core/tools/dotnet-publish.md
+            - name: dotnet restore
+              href: core/tools/dotnet-restore.md
+            - name: dotnet run
+              href: core/tools/dotnet-run.md
+            - name: dotnet sln
+              href: core/tools/dotnet-sln.md
+            - name: dotnet store
+              href: core/tools/dotnet-store.md
+            - name: dotnet test
+              href: core/tools/dotnet-test.md
+            - name: dotnet tool
+              items:
+                - name: dotnet tool install
+                  href: core/tools/dotnet-tool-install.md
+                - name: dotnet tool list
+                  href: core/tools/dotnet-tool-list.md
+                - name: dotnet tool uninstall
+                  href: core/tools/dotnet-tool-uninstall.md
+                - name: dotnet tool update
+                  href: core/tools/dotnet-tool-update.md
+            - name: dotnet vstest
+              href: core/tools/dotnet-vstest.md
+            - name: Script dotnet-install
+              href: core/tools/dotnet-install-script.md
+            - name: Comandi per i riferimenti del progetto
               items:
                 - name: dotnet add reference
                   href: core/tools/dotnet-add-reference.md
@@ -390,7 +394,7 @@
                   href: core/tools/dotnet-list-reference.md
                 - name: dotnet remove reference
                   href: core/tools/dotnet-remove-reference.md
-            - name: Pacchetti
+            - name: Comandi per i pacchetti del progetto
               items:
                 - name: dotnet add package
                   href: core/tools/dotnet-add-package.md
@@ -398,8 +402,6 @@
                   href: core/tools/dotnet-list-package.md
                 - name: dotnet remove package
                   href: core/tools/dotnet-remove-package.md
-        - name: global.json
-          href: core/tools/global-json.md
     - name: Strumenti aggiuntivi per .NET Core
       href: core/additional-tools/index.md
       items:
