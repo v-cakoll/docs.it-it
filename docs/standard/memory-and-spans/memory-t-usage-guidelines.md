@@ -6,16 +6,16 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 380c0eef137eb5142c30e63f5446f5d60723087a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834050"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68362901"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Linee guida per l'utilizzo di Memory\<T> e Span\<T>
 
-.NET Core include vari tipi che rappresentano una regione contigua arbitraria della memoria. In .NET Core 2.0 sono stati introdotti <xref:System.Span%601> e <xref:System.ReadOnlySpan%601>, ovvero buffer di memoria leggeri che possono essere supportati da memoria gestita o non gestita. Poiché questi tipi possono essere archiviati nello stack, non sono adatti per vari scenari, incluse le chiamate di metodi asincrone. .NET Core 2.1 introduce alcuni tipi aggiuntivi, tra cui <xref:System.Memory%601>, <xref:System.ReadOnlyMemory%601>, <xref:System.Buffers.IMemoryOwner%601> e <xref:System.Buffers.MemoryPool%601>. Come <xref:System.Span%601>, <xref:System.Memory%601> e i tipi correlati possono essere supportati da memoria gestita e non gestita. Diversamente da <xref:System.Span%601>, <xref:System.Memory%601> supporta l'archiviazione solo nell'heap gestito.
+.NET Core include vari tipi che rappresentano una regione contigua arbitraria della memoria. In .NET Core 2.0 sono stati introdotti <xref:System.Span%601> e <xref:System.ReadOnlySpan%601>, ovvero buffer di memoria leggeri che possono essere supportati da memoria gestita o non gestita. Dato che questi tipi possono solo essere archiviati nello stack, non sono adatti per vari scenari, incluse le chiamate di metodi asincrone. .NET Core 2.1 introduce alcuni tipi aggiuntivi, tra cui <xref:System.Memory%601>, <xref:System.ReadOnlyMemory%601>, <xref:System.Buffers.IMemoryOwner%601> e <xref:System.Buffers.MemoryPool%601>. Come <xref:System.Span%601>, <xref:System.Memory%601> e i tipi correlati possono essere supportati da memoria gestita e non gestita. Diversamente da <xref:System.Span%601>, <xref:System.Memory%601> supporta l'archiviazione nell'heap gestito.
 
 Sia <xref:System.Span%601> che <xref:System.Memory%601> sono buffer di dati strutturati che possono essere usati nelle pipeline. Questo significa che sono progettati in modo che alcuni o tutti i dati possano essere passati in modo efficiente ai componenti nella pipeline, che possono elaborarli e facoltativamente modificare il buffer. Dato che <xref:System.Memory%601> e i tipi correlati sono accessibili da più componenti o da più thread, è importante che gli sviluppatori seguano alcune linee guida sull'utilizzo standard in modo da produrre codice solido.
 

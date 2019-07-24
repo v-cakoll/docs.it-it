@@ -1,15 +1,15 @@
 ---
 title: .NET Portability Analyzer | .NET
 description: Informazioni su come usare lo strumento .NET Portability Analyzer per valutare la portabilità del codice tra le diverse implementazioni di .NET, inclusi .NET Core, .NET Standard, UWP e Xamarin.
-ms.date: 07/10/2019
+ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: f05d4f4a2fce8fa9a4d2e334f44190ea37335038
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 433936480aa1181370a6ebc2bd2ba9914a50dfa2
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859748"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331739"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -52,7 +52,7 @@ Nel report sono visualizzate solo le API non supportate da una piattaforma di de
 
 ![Riepilogo della portabilità](./media/portability-analyzer/portabilitysummary.png)
 
-La sezione Portability Summary (Riepilogo della portabilità) del report indica la percentuale di portabilità per ogni assembly interessato dall'esecuzione. Nell'esempio precedente, l'89,74% delle API .NET Framework usate nell'app `ConsoleAppFramework` sono disponibili in .NET Core + Platform Extensions v2.2 (.NET Core + estensioni di piattaforma versione 2.2). Se si esegue lo strumento .NET Portability Analyzer per più assembly, per ognuno di questi deve essere presente una riga nel report di riepilogo della portabilità.
+La sezione Portability Summary (Riepilogo della portabilità) del report indica la percentuale di portabilità per ogni assembly incluso nell'esecuzione. Nell'esempio precedente, il 71,24% delle API .NET Framework usate nell'app `svcutil` sono disponibili in .NET Core + Estensioni della piattaforma. Se si esegue lo strumento .NET Portability Analyzer per più assembly, per ognuno di questi deve essere presente una riga nel report di riepilogo della portabilità.
 
 #### <a name="details"></a>Dettagli
 
@@ -60,11 +60,11 @@ La sezione Portability Summary (Riepilogo della portabilità) del report indica 
 
 La sezione Details (Dettagli) del report elenca le API mancanti da una delle piattaforme di destinazione. 
 
- - Target type (Tipo di destinazione): per il tipo manca un'API da una piattaforma di destinazione 
- - Target member (Membro di destinazione): il metodo manca da una piattaforma di destinazione 
- - Assembly name (Nome dell'assembly): assembly .NET Framework in cui deve trovarsi l'API mancante. 
- - Ognuna delle piattaforme di destinazione selezionate corrisponde a una colonna, ad esempio ".NET Core". Il valore "Not supported" (Non supportata) indica che l'API non è supportata nella piattaforma di destinazione corrispondente. 
- - Recommended Changes (Modifiche consigliate): API o tecnologia consigliata a cui passare. Questo campo è attualmente vuoto o non aggiornato per molte API. A causa dell'elevato numero di API, è molto difficile tenerlo aggiornato. È in corso l'esame di soluzioni alternative che consentano di offrire informazioni utili ai clienti.
+- Target type (Tipo di destinazione): per il tipo manca un'API da una piattaforma di destinazione 
+- Target member (Membro di destinazione): il metodo manca da una piattaforma di destinazione 
+- Assembly name (Nome dell'assembly): assembly .NET Framework in cui deve trovarsi l'API mancante. 
+- Ognuna delle piattaforme di destinazione selezionate corrisponde a una colonna, ad esempio ".NET Core". Il valore "Not supported" (Non supportata) indica che l'API non è supportata nella piattaforma di destinazione corrispondente. 
+- Recommended Changes (Modifiche consigliate): API o tecnologia consigliata a cui passare. Questo campo è attualmente vuoto o non aggiornato per molte API. A causa dell'elevato numero di API, è molto difficile tenerlo aggiornato. È in corso l'esame di soluzioni alternative che consentano di offrire informazioni utili ai clienti.
 
 #### <a name="missing-assemblies"></a>Assembly mancanti
 
@@ -73,5 +73,3 @@ La sezione Details (Dettagli) del report elenca le API mancanti da una delle pia
 Nel report può essere presente la sezione Missing Assemblies (Assembly mancanti). Questa sezione informa che gli assembly analizzati fanno riferimento agli assembly visualizzati nell'elenco, che non sono stati analizzati. Se si tratta di assembly di cui si ha la proprietà, includerli nell'esecuzione di API Portability Analyzer (ApiPort) per ottenere un report dettagliato sulla portabilità a livello di API. Se si tratta di una libreria di terze parti, verificare l'eventuale disponibilità una versione più recente che supporti la piattaforma di destinazione. In caso affermativo, prendere in considerazione la possibilità di passare alla versione più recente. Si prevede che alla fine questo elenco includa tutti gli assembly di terze parti da cui l'app dipende e che per questi sia confermata la disponibilità di una versione che supporti la piattaforma di destinazione.  
 
 Per altre informazioni su .NET Portability Analyzer, vedere la [documentazione di GitHub](https://github.com/Microsoft/dotnet-apiport#documentation) e il video [A Brief Look at the .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer) (Panoramica rapida di .NET Portability Analyzer) in Channel 9.
-
-

@@ -2,12 +2,12 @@
 title: Controllo delle versioni del linguaggio C# - Guida a C#
 description: Informazioni su come viene determinata la versione del linguaggio C# in base al progetto e sui diversi valori ai quali è possibile adattarlo manualmente.
 ms.date: 07/10/2019
-ms.openlocfilehash: 2d593ca0588f291c61cdf52fbc1eb60a1f3f7ecb
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859607"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236101"
 ---
 # <a name="c-language-versioning"></a>Controllo delle versioni del linguaggio C#
 
@@ -34,7 +34,7 @@ Se è necessario specificare in modo esplicito la versione di C#, è possibile f
 
 - Modificare manualmente il [file di progetto](#edit-the-project-file).
 - Impostare la versione del linguaggio [per più progetti in una sottodirectory](#configure-multiple-projects).
-- Configurare l'[opzione del compilatore `-langversion`](#set-the-langversion-compiler-option).
+- Configurare l'[`-langversion`opzione del compilatore](compiler-options/langversion-compiler-option.md)
 
 ### <a name="edit-the-project-file"></a>Modificare il file di progetto
 

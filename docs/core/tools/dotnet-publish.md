@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: Il comando dotnet publish consente di pubblicare il progetto .NET Core in una directory.
 ms.date: 05/29/2018
-ms.openlocfilehash: 24490bd0fbfca65692d7025b5ed2aea659c35473
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 8cefeae17e464e14abc54dce1feb414a72c44164
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611549"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331028"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -45,13 +45,13 @@ dotnet publish [-h|--help]
 
 ---
 
-## <a name="description"></a>Description
+## <a name="description"></a>DESCRIZIONE
 
 `dotnet publish` compila l'applicazione, legge le relative dipendenze specificate nel file di progetto e pubblica il set di file risultante in una directory. L'output include gli asset seguenti:
 
 * Codice linguaggio intermedio (IL) in un assembly con un'estensione *dll*.
 * File *.deps.json* che contiene tutte le dipendenze del progetto.
-* File *.runtime.config.json* che specifica il runtime condiviso previsto dall'applicazione e altre opzioni di configurazione per il runtime, ad esempio il tipo di Garbage Collection.
+* File *.runtimeconfig.json* che specifica il runtime condiviso previsto dall'applicazione e altre opzioni di configurazione per il runtime, ad esempio il tipo di Garbage Collection.
 * Dipendenze dell'applicazione copiate dalla cache NuGet nella cartella di output.
 
 L'output del comando `dotnet publish` è pronto per la distribuzione in un sistema di hosting (ad esempio, un server, un PC, un Mac, un laptop) per l'esecuzione. È l'unico metodo supportato ufficialmente per preparare l'applicazione per la distribuzione. A seconda del tipo di distribuzione specificato dal progetto, nel sistema host il runtime condiviso di .NET Core può essere installato o meno. Per altre informazioni, vedere [Distribuzione di applicazioni .NET Core](../deploying/index.md). Per la struttura di directory di un'applicazione pubblicata, vedere [Directory structure](/aspnet/core/hosting/directory-structure) (Struttura di directory).

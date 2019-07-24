@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e018d8c83165b3e025ad4db7f3d59b6ba58b72a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60f48422d23fc5db743eeb05e3eddeb732bff102
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616086"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364028"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
 Lo strumento Generatore di classi di gestione fortemente tipizzate consente di generare velocemente una classe gestita ad associazione precoce per una specifica classe WMI (Windows Management Instrumentation, Strumentazione gestita Windows). L'utilizzo della classe generata semplifica la scrittura del codice per l'accesso a un'istanza della classe WMI.  
@@ -30,11 +30,11 @@ mgmtclassgen
 WMIClass [options]   
 ```  
   
-|Argomento|Description|  
+|Argomento|DESCRIZIONE|  
 |--------------|-----------------|  
 |*classeWMI*|Classe WMI per la quale generare una classe gestita ad associazione precoce.|  
   
-|Opzione|Description|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
 |**/l**  *linguaggio*|Specifica il linguaggio in cui generare la classe gestita ad associazione precoce. È possibile specificare **CS** (C#; impostazione predefinita), **VB** (Visual Basic),  **MC** (C++) o  **JS** (JScript) come argomento del linguaggio.|  
 |**/m**  *computer*|Specifica il computer al quale eseguire la connessione ovvero quello sul quale risiede la classe WMI. Il valore predefinito è il computer locale.|  
@@ -83,7 +83,7 @@ WMIClass [options]
   
 - Una proprietà numerica può essere modificata tramite i qualificatori **Values** e **ValueMaps** per indicare che la proprietà può essere impostata solo su specifici valori consentiti. Viene generata un'enumerazione con i qualificatori **Values** e **ValueMaps** e viene eseguito il mapping della proprietà all'enumerazione.  
   
-- La strumentazione WMI utilizza il termine Singleton per descrivere una classe che può avere una sola istanza. Il costruttore predefinito per una classe Singleton, pertanto, inizializzerà la classe per l'unica istanza della classe.  
+- La strumentazione WMI utilizza il termine Singleton per descrivere una classe che può avere una sola istanza. Il costruttore senza parametri per una classe singleton, pertanto, inizializzerà la classe per l'unica istanza della classe.  
   
 - Le proprietà di una classe WMI possono essere oggetti. Quando si genera una classe fortemente tipizzata per questo tipo di classe WMI, valutare di generare classi fortemente tipizzate per i tipi delle proprietà oggetti incorporati. Sarà così possibile eseguire un accesso fortemente tipizzato agli oggetti incorporati. Il codice generato potrebbe non essere in grado di individuare il tipo dell'oggetto incorporato. In tal caso nel codice generato verrà creato un commento che notifica il problema. Sarà quindi possibile modificare il codice generato per tipizzare la proprietà sull'altra classe generata.  
   

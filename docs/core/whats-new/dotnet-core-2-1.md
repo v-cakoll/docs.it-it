@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: e28ff83d673951a978e24d9c89621fbbe950f50e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 00edb1c8704aab19d7ff44fe26c514b5ccea64b6
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975212"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331078"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novità di .NET Core 2.1
 
@@ -107,7 +107,7 @@ Per modificare questo comportamento, cambiare l'impostazione per il roll forward
 
 - Impostare la variabile di ambiente `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` su un valore.
 
-- Aggiungere la riga seguente con quel valore al file `runtimeconfig.json`:
+- Aggiungere la riga seguente con il valore desiderato al file *.runtimeconfig.json*:
 
    ```json
    "rollForwardOnNoCandidateFx" : 0

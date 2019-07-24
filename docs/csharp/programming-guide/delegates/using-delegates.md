@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: eb5721d1c04ad761821bcdae03159f290a802ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 27f47d74a6e0775588e40760fe54c281a7f5e233
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979840"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363793"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Utilizzo di delegati (Guida per programmatori C#)
 Un [delegato](../../../csharp/language-reference/keywords/delegate.md) è un tipo che incapsula in modo sicuro un metodo, simile a un puntatore a funzione in C e C++. A differenza dei puntatori a funzione, tuttavia, i delegati sono orientati a oggetti, indipendenti dai tipi e sicuri. Il tipo delegato è definito dal nome del delegato. Nell'esempio seguente viene dichiarato un delegato denominato `Del` che può incapsulare un metodo che accetta una [stringa](../../../csharp/language-reference/keywords/string.md) come argomento e restituisce [void](../../../csharp/language-reference/keywords/void.md):  
   
  [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]  
   
- Un oggetto delegato viene normalmente creato fornendo il nome del metodo di cui il delegato eseguirà il wrapping o con un [metodo anonimo](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md). Una volta che viene creata un'istanza di un delegato, una chiamata al metodo effettuata al delegato verrà passata dal delegato a tale metodo. I parametri passati al delegato dal chiamante vengono passati al metodo e il valore restituito, se presente, dal metodo viene restituito al chiamante dal delegato. Questa operazione è nota come richiamare il delegato. È possibile richiamare un delegato per cui è stata creata un'istanza come se fosse il metodo di wrapping stesso. Ad esempio:  
+ Un oggetto delegato viene normalmente creato fornendo il nome del metodo di cui il delegato eseguirà il wrapping o con una [funzione anonima](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md). Una volta che viene creata un'istanza di un delegato, una chiamata al metodo effettuata al delegato verrà passata dal delegato a tale metodo. I parametri passati al delegato dal chiamante vengono passati al metodo e il valore restituito, se presente, dal metodo viene restituito al chiamante dal delegato. Questa operazione è nota come richiamare il delegato. È possibile richiamare un delegato per cui è stata creata un'istanza come se fosse il metodo di wrapping stesso. Ad esempio:  
   
  [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
   
@@ -37,8 +37,7 @@ Un [delegato](../../../csharp/language-reference/keywords/delegate.md) è un tip
   
  `The number is: 3`  
   
- Usando il delegato come astrazione, non è necessario chiamare direttamente la console da `MethodWithCallback`, ovvero questo non deve essere progettato tenendo presente una console. 
-  `MethodWithCallback` si limita a preparare una stringa e a passarla a un altro metodo. Questa operazione è particolarmente efficace perché un metodo delegato può usare qualsiasi numero di parametri.  
+ Usando il delegato come astrazione, non è necessario chiamare direttamente la console da `MethodWithCallback`, ovvero questo non deve essere progettato tenendo presente una console. `MethodWithCallback` si limita a preparare una stringa e a passarla a un altro metodo. Questa operazione è particolarmente efficace perché un metodo delegato può usare qualsiasi numero di parametri.  
   
  Quando viene creato un delegato per eseguire il wrapping di un metodo di istanza, il delegato fa riferimento sia all'istanza sia al metodo. Un delegato non ha alcuna conoscenza del tipo di istanza a parte il metodo di cui esegue il wrapping, perciò un delegato può fare riferimento a qualsiasi tipo di oggetto a condizione che vi sia un metodo su tale oggetto che corrisponda alla firma del delegato. Quando viene creato un delegato per eseguire il wrapping di un metodo statico, fa riferimento solo al metodo. Si considerino le dichiarazioni seguenti:  
   

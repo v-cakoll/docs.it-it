@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 3e5bb96357293c42d4bd2161756260fd849cc099
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 0d2c3f67715b9b2161a6c908576ac9f964ff13d6
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267786"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363125"
 ---
 # <a name="yield-c-reference"></a>yield (Riferimenti per C#)
 
@@ -46,9 +46,9 @@ La dichiarazione di un iteratore deve soddisfare i seguenti requisiti:
 
 Il tipo `yield` di un iteratore che restituisce <xref:System.Collections.IEnumerable> o <xref:System.Collections.IEnumerator> è `object`.  Se l'iteratore restituisce <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.Generic.IEnumerator%601>, deve essere presente una conversione implicita dal tipo dell'espressione nell'istruzione `yield return` al parametro di tipo generico.
 
-Non è possibile includere un'istruzione `yield return` o `yield break` nei metodi che presentano le seguenti caratteristiche:
+Non è possibile includere un'istruzione `yield return` o `yield break` in:
 
-- Metodi anonimi. Per altre informazioni, vedere [Metodi anonimi](../../programming-guide/statements-expressions-operators/anonymous-methods.md).
+- [Espressioni lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) e [metodi anonimi](../operators/delegate-operator.md).
 
 - Metodi contenenti blocchi unsafe. Per altre informazioni, vedere [unsafe](unsafe.md).
 

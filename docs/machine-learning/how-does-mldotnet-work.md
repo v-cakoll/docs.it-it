@@ -1,21 +1,21 @@
 ---
 title: Che cos'è ML.NET e come funziona?
-description: ML.NET offre la possibilità di aggiungere l'apprendimento automatico alle applicazioni .NET. Con questa funzionalità è possibile eseguire stime automatiche usando i dati disponibili per l'applicazione. Questo articolo illustra le nozioni fondamentali dell'apprendimento automatico in ML.NET.
-ms.date: 04/10/2019
+description: ML.NET offre la possibilità di aggiungere funzionalità di Machine Learning alle applicazioni .NET, in scenari online o offline. Con questa funzionalità è possibile eseguire stime automatiche usando i dati disponibili per l'applicazione senza che sia necessario connettersi a una rete per usare ML.NET. Questo articolo illustra le nozioni fondamentali dell'apprendimento automatico in ML.NET.
+ms.date: 07/17/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 30e96d85ecc04332bc5e6c8f57badd000f729904
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23e71e86b75854042068b6a68f90cf995749ee58
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660642"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331589"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Che cos'è ML.NET e come funziona?
 
-ML.NET offre la possibilità di aggiungere l'apprendimento automatico alle applicazioni .NET. Con questa funzionalità è possibile eseguire stime automatiche usando i dati disponibili per l'applicazione. Questo articolo illustra le nozioni fondamentali dell'apprendimento automatico in ML.NET. 
+ML.NET offre la possibilità di aggiungere funzionalità di Machine Learning alle applicazioni .NET, in scenari online o offline. Con questa funzionalità è possibile eseguire stime automatiche usando i dati disponibili per l'applicazione senza che sia necessario connettersi a una rete. Questo articolo illustra le nozioni fondamentali dell'apprendimento automatico in ML.NET. 
 
 Esempi del tipo di stime che è possibile eseguire con ML.NET:
 

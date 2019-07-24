@@ -32,35 +32,40 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfb1298abaff0cfe8eae7536f94511a30012a4a9
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744224"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236082"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipi numerici integrali (Riferimenti per C#)
 
-I **tipi numerici integrali** sono un subset dei **tipi semplici** e possono essere inizializzati con [*valori letterali*](#integral-literals). Tutti i tipi integrali sono anche tipi valore.
+I **tipi numerici integrali** sono un subset dei **tipi semplici** e possono essere inizializzati con [*valori letterali*](#integral-literals). Tutti i tipi integrali sono anche tipi valore. Tutti i tipi numerici integrali supportano gli operatori [aritmetici](../operators/arithmetic-operators.md), [logici bit per bit](../operators/bitwise-and-shift-operators.md), [di confronto e di uguaglianza](../operators/equality-operators.md).
 
-Tutti i tipi numerici integrali supportano gli operatori [aritmetici](../operators/arithmetic-operators.md), [logici bit per bit](../operators/bitwise-and-shift-operators.md), [di confronto e di uguaglianza](../operators/equality-operators.md).
+## <a name="characteristics-of-the-integral-types"></a>Caratteristiche dei tipi integrali
 
-## <a name="sizes-and-ranges"></a>Dimensioni e intervalli
+C# supporta i tipi integrali predefiniti seguenti:
 
-La tabella seguente elenca le dimensioni e gli intervalli dei tipi integrali:
+|Tipo/parola chiave C#|Intervallo|Dimensione|Tipo .NET|
+|----------|-----------|----------|-------------|
+|`sbyte`|Da -128 a 127|Valore intero con segno a 8 bit|<xref:System.SByte?displayProperty=nameWithType>|
+|`byte`|Da 0 a 255|Intero senza segno a 8 bit|<xref:System.Byte?displayProperty=nameWithType>|
+|`short`|Da –32,768 a 32,767|Valore intero a 16 bit con segno|<xref:System.Int16?displayProperty=nameWithType>|
+|`ushort`|Da 0 a 65.535|Intero senza segno a 16 bit|<xref:System.UInt16?displayProperty=nameWithType>|
+|`int`|da -2.147.483.648 a 2.147.483.647|Valore intero a 32 bit con segno|<xref:System.Int32?displayProperty=nameWithType>|
+|`uint`|Da 0 a 4.294.967.295|Intero senza segno a 32 bit|<xref:System.UInt32?displayProperty=nameWithType>|
+|`long`|Da -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807|Numero intero con segno a 64 bit|<xref:System.Int64?displayProperty=nameWithType>|
+|`ulong`|Da 0 a 18.446.744.073.709.551.615|Intero senza segno a 64 bit|<xref:System.UInt64?displayProperty=nameWithType>|
 
-|Tipo|Intervallo|Dimensione|  
-|----------|-----------|----------|  
-|`sbyte`|Da -128 a 127|Valore intero con segno a 8 bit|  
-|`byte`|Da 0 a 255|Intero senza segno a 8 bit|  
-|`short`|Da –32,768 a 32,767|Valore intero a 16 bit con segno|  
-|`ushort`|Da 0 a 65.535|Intero senza segno a 16 bit|  
-|`int`|da -2.147.483.648 a 2.147.483.647|Valore intero a 32 bit con segno|  
-|`uint`|Da 0 a 4.294.967.295|Intero senza segno a 32 bit|  
-|`long`|Da -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807|Numero intero con segno a 64 bit|  
-|`ulong`|Da 0 a 18.446.744.073.709.551.615|Intero senza segno a 64 bit|  
+Nella tabella precedente ogni tipo/parola chiave C# nella colonna più a sinistra è un alias per il tipo .NET corrispondente. Sono intercambiabili. Ad esempio, le dichiarazioni seguenti dichiarano variabili dello stesso tipo:
 
-Il valore predefinito di tutti i tipi integrali è `0`. Ogni tipo integrale ha costanti denominate `MinValue` e `MaxValue` per il valore minimo e massimo del tipo.
+```csharp
+int a = 123;
+System.Int32 b = 123;
+```
+
+Il valore predefinito di ogni tipo integrale è zero `0`. Ogni tipo integrale ha costanti `MinValue` e `MaxValue` che specificano il valore minimo e massimo del tipo.
 
 Usare la struttura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> per rappresentare un intero con segno senza limiti inferiori o superiori.
 
@@ -76,7 +81,7 @@ var binaryLiteral = 0b_0010_1010;
 
 I valori letterali decimali non richiedono alcun prefisso. Il prefisso `x` o `X` indica un *valore letterale esadecimale*. Il prefisso `b` o `B` indica un *valore letterale binario*. La dichiarazione di `binaryLiteral` dimostra l'uso di `_` come *separatore di cifra*. Il separatore di cifra può essere usato con tutti i valori letterali numerici. I valori letterali binari e il separatore di cifra `_` sono supportati a partire da C# 7.0.
 
-### <a name="literal-suffixes"></a>Suffissi letterali 
+### <a name="literal-suffixes"></a>Suffissi letterali
 
 Il suffisso `l` o `L` specifica che il valore letterale integrale deve essere del tipo `long`. Il suffisso `ul` o `UL` specifica il tipo `ulong`. Se il suffisso `L` viene usato su un valore letterale maggiore di 9.223.372.036.854.775.807 (il valore massimo di `long`), il valore viene convertito nel tipo `ulong`. Se il valore rappresentato da un valore letterale integrale supera <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione [CS1021](../../misc/cs1021.md). 
 
@@ -123,11 +128,3 @@ Viene eseguita una conversione implicita (detta *conversione verso un tipo di da
 - [Tabella di formattazione dei risultati numerici](../keywords/formatting-numeric-results-table.md)
 - [Tabella dei tipi incorporati](../keywords/built-in-types-table.md)
 - [Dati numerici in .NET](../../../standard/numerics.md)
-- <xref:System.Byte?displayProperty=nameWithType>
-- <xref:System.SByte?displayProperty=nameWithType>
-- <xref:System.Int16?displayProperty=nameWithType>
-- <xref:System.UInt16?displayProperty=nameWithType>
-- <xref:System.Int32?displayProperty=nameWithType>
-- <xref:System.UInt32?displayProperty=nameWithType>
-- <xref:System.Int64?displayProperty=nameWithType>
-- <xref:System.UInt64?displayProperty=nameWithType>

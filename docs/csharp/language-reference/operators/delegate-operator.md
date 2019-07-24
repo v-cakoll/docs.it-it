@@ -1,0 +1,39 @@
+---
+title: Operatore delegate - Riferimenti per C#
+ms.date: 07/18/2019
+helpviewer_keywords:
+- delegate [C#]
+- anonymous method [C#]
+ms.openlocfilehash: 1fe281776bd75d8fa869065cd24e85f04fec849d
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331830"
+---
+# <a name="delegate-operator-c-reference"></a>Operatore delegate (Riferimenti per C#)
+
+L'operatore `delegate` crea un metodo anonimo che può essere convertito in un tipo delegato:
+
+[!code-csharp-interactive[anonymous method](~/samples/csharp/language-reference/operators/DelegateOperator.cs#AnonymousMethod)]
+
+A partire da C# 3, le [espressioni lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) forniscono un modo più conciso ed espressivo per creare una funzione anonima. Usare l'[operatore =>](lambda-operator.md) per costruire un'espressione lambda:
+
+[!code-csharp-interactive[lambda expression](~/samples/csharp/language-reference/operators/DelegateOperator.cs#Lambda)]
+
+Quando si usa l'operatore `delegate`, è possibile omettere l'elenco di parametri. In tal caso, il metodo anonimo creato può essere convertito in un tipo delegato con qualsiasi elenco di parametri, come illustrato nell'esempio seguente:
+
+[!code-csharp-interactive[no parameter list](~/samples/csharp/language-reference/operators/DelegateOperator.cs#WithoutParameterList)]
+
+Questa è l'unica funzionalità di metodi anonimi non supportata dalle espressioni lambda. In tutti gli altri casi, un'espressione lambda è la modalità preferita per scrivere codice inline. Per altre informazioni sulle funzionalità delle espressioni lambda, ad esempio l'acquisizione di variabili esterne, vedere [Espressioni lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
+
+È anche possibile usare la parola chiave `delegate` per dichiarare un [tipo delegato](../builtin-types/reference-types.md#the-delegate-type).
+
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
+Per altre informazioni, vedere la sezione [Espressioni di funzioni anonime](~/_csharplang/spec/expressions.md#anonymous-function-expressions) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
+
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../index.md)
+- [Operatori C#](index.md)

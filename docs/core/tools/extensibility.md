@@ -3,12 +3,12 @@ title: Modello di estendibilità dell'interfaccia della riga di comando di .NET 
 description: Informazioni sull'estendibilità degli strumenti dell'interfaccia della riga di comando (CLI).
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: ca6bf30fb6aaf815a859a00bc391ef790566acaf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 784eb50dfdbc0f88050a9f727ddbf53db34d3209
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675095"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331009"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modello di estendibilità degli strumenti CLI di .NET Core
 
@@ -69,7 +69,7 @@ Come affermato in precedenza, gli strumenti sono essenzialmente applicazioni con
 Dopo la compilazione usare il comando [`dotnet pack`](dotnet-pack.md) per creare un pacchetto NuGet (file nupkg) contenente il codice, le informazioni sulle dipendenze e così via. È possibile assegnare qualsiasi nome al pacchetto, ma l'applicazione in esso contenuta, ovvero il file binario dello strumento, deve essere conforme alla convenzione `dotnet-<command>` per consentire a `dotnet` di chiamare il pacchetto.
 
 > [!NOTE]
-> Nelle versioni precedenti alla RC3 degli strumenti della riga di comando di .NET Core, il comando `dotnet pack` ha un bug a causa del quale il file `runtime.config.json` non viene incluso nel pacchetto dello strumento. La mancanza di tale file causa errori in fase di esecuzione. Se si verifica questo problema, assicurarsi di eseguire l'aggiornamento alla versione più recente degli strumenti e ritentare il comando `dotnet pack`.
+> Nelle versioni precedenti alla RC3 degli strumenti della riga di comando di .NET Core, esiste un bug per il comando `dotnet pack` a causa del quale il file *.runtimeconfig.json* non viene incluso nel pacchetto dello strumento. La mancanza di tale file causa errori in fase di esecuzione. Se si verifica questo problema, assicurarsi di eseguire l'aggiornamento alla versione più recente degli strumenti e ritentare il comando `dotnet pack`.
 
 Poiché gli strumenti sono applicazioni portabili, per eseguire uno strumento l'utente deve avere la versione delle librerie .NET Core con le quali lo strumento è stato creato. Qualsiasi altra dipendenza usata dallo strumento e non contenuta nelle librerie .NET Core viene ripristinata e posizionata nella cache NuGet. Di conseguenza, l'intero strumento viene eseguito usando gli assembly delle librerie .NET Core oltre agli assembly della cache NuGet.
 

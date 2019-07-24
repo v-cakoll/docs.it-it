@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09eb37fd2c1bf77e981a2eb7952b1fff5110e977
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bed67019fdd3bb81585d08349715a895dfe5a681
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357300"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363956"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Panoramica sul modello di programmazione con attributi (MEF)
 
@@ -268,7 +268,7 @@ Il nome e il tipo di contratto possono essere specificati nell'attributo `Import
 
 Le parti MEF esportate sono in genere create dal motore della composizione, in risposta a una richiesta diretta o alla necessità di soddisfare un'importazione corrispondente. Per impostazione predefinita, quando si crea una parte, il motore della composizione usa il costruttore senza parametri. Per fare in modo che il motore usi un costruttore diverso, è possibile contrassegnarlo con l'attributo `ImportingConstructor` .
 
-Ogni parte può avere solo un costruttore per l'uso da parte del motore della composizione. Se non si specifica alcun costruttore predefinito e alcun attributo `ImportingConstructor` o se si specifica più di un attributo `ImportingConstructor` , si verificherà un errore.
+Ogni parte può avere solo un costruttore per l'uso da parte del motore della composizione. Se non si specifica alcun costruttore senza parametri e alcun attributo `ImportingConstructor` o se si specifica più di un attributo `ImportingConstructor`, si verificherà un errore.
 
 Per compilare i parametri di un costruttore contrassegnato con l'attributo `ImportingConstructor` , tutti questi parametri sono dichiarati automaticamente come importazioni. Si tratta di una soluzione utile per dichiarare importazioni usate durante l'inizializzazione delle parti. La classe seguente usa `ImportingConstructor` per dichiarare un'importazione.
 
@@ -277,7 +277,7 @@ Public Class MyClass1
 
     Private _theAddin As IMyAddin
 
-    'Default constructor will NOT be used
+    'Parameterless constructor will NOT be used
     'because the ImportingConstructor
     'attribute is present.
     Public Sub New()
@@ -300,7 +300,7 @@ public class MyClass
 {
     private IMyAddin _theAddin;
 
-    //Default constructor will NOT be
+    //Parameterless constructor will NOT be
     //used because the ImportingConstructor
     //attribute is present.
     public MyClass() { }

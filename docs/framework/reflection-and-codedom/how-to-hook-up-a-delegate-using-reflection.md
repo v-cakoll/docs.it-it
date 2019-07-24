@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4640e776cc76ef56227858f6a4aa04e77ecbbdc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586011"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364058"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Procedura: Associare un delegato tramite reflection
 Quando viene usata la reflection per il caricamento e l'esecuzione di assembly, non è possibile usare le funzioni del linguaggio come l'operatore `+=` di C# o l'[istruzione AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) di Visual Basic per associare gli eventi. Le procedure seguenti illustrano come associare un metodo esistente a un evento recuperando tutti i tipi necessari tramite reflection e come creare un metodo dinamico usando reflection emit e associarlo a un evento.  
@@ -33,7 +33,7 @@ Quando viene usata la reflection per il caricamento e l'esecuzione di assembly, 
      [!code-csharp[HookUpDelegate#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#3)]
      [!code-vb[HookUpDelegate#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#3)]  
   
-2. Ottenere un oggetto <xref:System.Type> che rappresenta il tipo e creare un'istanza del tipo. Nel codice seguente viene usato il metodo <xref:System.Activator.CreateInstance%28System.Type%29> poiché il form ha un costruttore predefinito. Se il tipo creato non ha un costruttore predefinito, è possibile usare altri overload del metodo <xref:System.Activator.CreateInstance%2A>. Affinché sembri che non sia disponibile alcuna informazione sull'assembly, la nuova istanza viene memorizzata come tipo <xref:System.Object>. Infatti, la reflection consente di ottenere i tipi in un assembly senza che sia necessario conoscerne i nomi in anticipo.  
+2. Ottenere un oggetto <xref:System.Type> che rappresenta il tipo e creare un'istanza del tipo. Nel codice seguente viene usato il metodo <xref:System.Activator.CreateInstance%28System.Type%29> perché il modulo ha un costruttore senza parametri. Se il tipo creato non ha un costruttore senza parametri, è possibile usare vari altri overload del metodo <xref:System.Activator.CreateInstance%2A>. Affinché sembri che non sia disponibile alcuna informazione sull'assembly, la nuova istanza viene memorizzata come tipo <xref:System.Object>. Infatti, la reflection consente di ottenere i tipi in un assembly senza che sia necessario conoscerne i nomi in anticipo.  
   
      [!code-cpp[HookUpDelegate#4](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#4)]
      [!code-csharp[HookUpDelegate#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#4)]

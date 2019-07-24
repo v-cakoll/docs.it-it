@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e57ec1a70aaae384f73b1ffdbf92e93fc0a7bdd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b2e14a7508d4a5e8069a3b98dee38a0ac62750c
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648567"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363978"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Qualificazione di tipi .NET per l'interoperabilità
 Se si vuole esporre i tipi contenuti in un assembly alle applicazioni COM, tenere presenti i requisiti di interoperabilità COM in fase di progettazione. Rispettando le linee guida seguenti, è possibile ottenere una facile integrazione tra i tipi gestiti (classi, interfacce, strutture ed enumerazioni) e i tipi COM:  
@@ -37,9 +37,9 @@ Se si vuole esporre i tipi contenuti in un assembly alle applicazioni COM, tener
   
      Anche i membri dei tipi pubblici devono essere pubblici per essere visibili in COM. È possibile limitare la visibilità di un assembly, di un tipo pubblico o dei membri pubblici di un tipo pubblico applicando l'oggetto <xref:System.Runtime.InteropServices.ComVisibleAttribute>. Per impostazione predefinita, tutti i membri e i tipi pubblici sono visibili.  
   
-- I tipi devono avere un costruttore pubblico predefinito per essere attivati da COM.  
+- I tipi devono avere un costruttore senza parametri pubblico per essere attivati da COM.  
   
-     I tipi pubblici gestiti sono visibili in COM. Senza un costruttore pubblico predefinito (un costruttore senza argomenti), tuttavia, i client COM non possono creare il tipo. I client COM possono comunque usare il tipo se viene attivato in un altro modo.  
+     I tipi pubblici gestiti sono visibili in COM. Senza un costruttore senza parametri pubblico (un costruttore senza argomenti), tuttavia, i client COM non possono creare il tipo. I client COM possono comunque usare il tipo se viene attivato in un altro modo.  
   
 - I tipi non possono essere astratti.  
   

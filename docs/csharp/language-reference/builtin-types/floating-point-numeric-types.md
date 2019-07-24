@@ -17,30 +17,39 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 738368abd9db75fbd97d1913324cab3b6e869c56
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0d97b3ffd587e8398e5572706a47937716a6e709
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664191"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236052"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipi numerici a virgola mobile (riferimenti per C#)
 
 I **tipi numerici a virgola mobile** sono un subset dei **tipi semplici** e possono essere inizializzati con [*valori letterali*](#floating-point-literals). Tutti i tipi a virgola mobile sono anche tipi di valore. Tutti i tipi numerici a virgola mobile supportano gli operatori [aritmetici](../operators/arithmetic-operators.md), [di confronto e di uguaglianza](../operators/equality-operators.md).
 
-La tabella seguente illustra la precisione e gli intervalli approssimativi per i tipi a virgola mobile:
+## <a name="characteristics-of-the-floating-point-types"></a>Caratteristiche dei tipi a virgola mobile
+
+C# supporta i tipi a virgola mobile predefiniti seguenti:
   
-|Tipo|Intervallo approssimativo|Precisione|  
-|----------|-----------------------|---------------|  
-|`float`|Compreso tra ±1.5 x 10<sup>−45</sup> e ±3.4 x 10<sup>38</sup>|~6-9 cifre|  
-|`double`|Compreso tra ±5,0 × 10<sup>−324</sup> e ±1,7 × 10<sup>308</sup>|~15-17 cifre|  
-|`decimal`|Compreso tra ±1.0 x 10<sup>-28</sup> e ±7.9228 x 10<sup>28</sup>|28-29 cifre|  
+|Tipo/parola chiave C#|Intervallo approssimativo|Precisione|Tipo .NET|
+|----------|-----------------------|---------------|--------------|
+|`float`|Compreso tra ±1.5 x 10<sup>−45</sup> e ±3.4 x 10<sup>38</sup>|~6-9 cifre|<xref:System.Single?displayProperty=nameWithType>|
+|`double`|Compreso tra ±5,0 × 10<sup>−324</sup> e ±1,7 × 10<sup>308</sup>|~15-17 cifre|<xref:System.Double?displayProperty=nameWithType>|
+|`decimal`|Compreso tra ±1.0 x 10<sup>-28</sup> e ±7.9228 x 10<sup>28</sup>|28-29 cifre|<xref:System.Decimal?displayProperty=nameWithType>|
 
-Il valore predefinito per tutti i tipi a virgola mobile è `0`. Ogni tipo a virgola mobile ha costanti denominate `MinValue` e `MaxValue` per il valore minimo e massimo del tipo. I tipi `float` e `double` hanno costanti aggiuntive per `PositiveInfinity`, `NegativeInfinity`, e `NaN` (per "Non un numero"). Il tipo `decimal` include costanti per `Zero`, `One` e `MinusOne`.
+Nella tabella precedente ogni tipo/parola chiave C# nella colonna più a sinistra è un alias per il tipo .NET corrispondente. Sono intercambiabili. Ad esempio, le dichiarazioni seguenti dichiarano variabili dello stesso tipo:
 
-Il tipo `decimal` è caratterizzato da una maggiore precisione e da un intervallo ridotto rispetto a `float` e `double`, che lo rendono appropriato per calcoli finanziari e monetari.
+```csharp
+double a = 12.3;
+System.Double b = 12.3;
+```
 
-In un'espressione è possibile combinare tipi integrali e tipi a virgola mobile. In questo caso i tipi integrali vengono convertiti in tipi a virgola mobile. La valutazione dell'espressione viene eseguita in base alle regole seguenti:
+Il valore predefinito di ogni tipo a virgola mobile è zero `0`. Ogni tipo a virgola mobile ha costanti `MinValue` e `MaxValue` che specificano il valore finito minimo e massimo del tipo. I tipi `float` e `double` forniscono anche costanti che rappresentano valori Not-a-Number (NaN) e infiniti. Ad esempio, il tipo `double` fornisce le costanti seguenti: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> e <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.
+
+Dato che il tipo `decimal` è caratterizzato da una maggiore precisione e da un intervallo più piccolo rispetto a `float` e `double`, è appropriato per calcoli finanziari e monetari.
+
+In un'espressione è possibile combinare tipi [integrali](integral-numeric-types.md) e tipi a virgola mobile. In questo caso i tipi integrali vengono convertiti in tipi a virgola mobile. La valutazione dell'espressione viene eseguita in base alle regole seguenti:
 
 - Se uno dei tipi a virgola mobile è `double`, l'espressione restituirà un valore `double` o [bool](../keywords/bool.md) nei confronti relazionali o nei confronti per l'uguaglianza.
 - Se l'espressione non contiene un tipo `double`, restituirà un valore `float` o [bool](../keywords/bool.md) nei confronti relazionali o nei confronti per l'uguaglianza.
@@ -77,7 +86,7 @@ myMoney = 400.75M;
 
 ## <a name="conversions"></a>Conversioni
 
-La conversione è implicita (denominata *conversione verso un tipo di dati più grande*) da `float` in `double` perché l'intervallo di valori `float` è un subset corretto di `double` e non si perde precisione da `float` in `double`. 
+La conversione è implicita (denominata *conversione verso un tipo di dati più grande*) da `float` in `double` perché l'intervallo di valori `float` è un subset corretto di `double` e non si perde precisione da `float` in `double`.
 
 È necessario usare un cast esplicito per convertire un tipo a virgola mobile in un altro tipo a virgola mobile quando non è definita una conversione implicita dal tipo di origine nel tipo di destinazione. Questa operazione è definita *conversione verso un tipo di dati più piccolo*. Il caso esplicito è necessario perché la conversione può comportare una perdita di dati. La conversione non è implicita tra altri tipi a virgola mobile e il tipo `decimal` perché il tipo `decimal` ha una maggiore precisione rispetto a `float` o `double`.
 
@@ -89,15 +98,11 @@ Per altre informazioni sulle conversioni numeriche esplicite, vedere [Tabella de
 
 - [Riferimenti per C#](../index.md)
 - [Tipi integrali](integral-numeric-types.md)
-- [Tabella dei valori predefiniti](../keywords/default-values-table.md)
-- [Tabella di formattazione dei risultati numerici](../keywords/formatting-numeric-results-table.md)
 - [Tabella dei tipi incorporati](../keywords/built-in-types-table.md)
 - [Dati numerici in .NET](../../../standard/numerics.md)
 - [Cast e conversioni di tipi](../../programming-guide/types/casting-and-type-conversions.md)
 - [Tabella delle conversioni numeriche implicite](../keywords/implicit-numeric-conversions-table.md)
 - [Tabella delle conversioni numeriche esplicite](../keywords/explicit-numeric-conversions-table.md)
-- <xref:System.Single?displayProperty=nameWithType>
-- <xref:System.Double?displayProperty=nameWithType>
-- <xref:System.Decimal?displayProperty=nameWithType>
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- [Tabella di formattazione dei risultati numerici](../keywords/formatting-numeric-results-table.md)
 - [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
