@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 48df7083d990dde157c9b7b2a062c865954cf38a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364199"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401444"
 ---
 # <a name="binding-sources-overview"></a>Cenni preliminari sulle origini del binding
 Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui si ottengono i dati. Questo argomento descrive i tipi di oggetti che è possibile usare come origine del binding.  
@@ -22,7 +22,7 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
   
 |Origine del binding|Descrizione|  
 |--------------------|-----------------|  
-|Oggetti [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].|È possibile stabilire l'associazione a proprietà pubbliche, proprietà secondarie e indicizzatori di qualsiasi oggetto [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Il motore di binding usa la reflection [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] per ottenere i valori delle proprietà. In alternativa, gli oggetti che <xref:System.ComponentModel.ICustomTypeDescriptor> implementano o hanno <xref:System.ComponentModel.TypeDescriptionProvider> un registrato funzionano anche con il motore di associazione.<br /><br /> Per altre informazioni su come implementare una classe che possa essere usata come origine del binding, vedere [Implementazione di una classe come origine del binding](#classes) più avanti in questo argomento.|  
+|oggetti Common Language Runtime (CLR)|È possibile eseguire l'associazione a proprietà pubbliche, sottoproprietà e indicizzatori di qualsiasi oggetto Common Language Runtime (CLR). Il motore di associazione usa la reflection CLR per ottenere i valori delle proprietà. In alternativa, gli oggetti che <xref:System.ComponentModel.ICustomTypeDescriptor> implementano o hanno <xref:System.ComponentModel.TypeDescriptionProvider> un registrato funzionano anche con il motore di associazione.<br /><br /> Per altre informazioni su come implementare una classe che possa essere usata come origine del binding, vedere [Implementazione di una classe come origine del binding](#classes) più avanti in questo argomento.|  
 |oggetti dinamici|È possibile eseguire l'associazione alle proprietà e agli indicizzatori disponibili di un oggetto <xref:System.Dynamic.IDynamicMetaObjectProvider> che implementa l'interfaccia. Se è possibile accedere al membro nel codice, è possibile creare un'associazione a tale membro. Se ad esempio un oggetto dinamico consente di accedere a un membro nel codice tramite `someObjet.AProperty`, è possibile creare un'associazione al membro impostando il percorso di associazione su `AProperty`.|  
 |Oggetti ADO.NET|È possibile eseguire l'associazione a oggetti ADO.NET, <xref:System.Data.DataTable>ad esempio. ADO.NET <xref:System.Data.DataView> implementa l' <xref:System.ComponentModel.IBindingList> interfaccia, che fornisce le notifiche di modifica per le quali il motore di associazione è in ascolto.|  
 |Oggetti [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].|È possibile associare ed `XPath` eseguire query su un oggetto <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>o. <xref:System.Xml.XmlElement> Un modo pratico per accedere [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ai dati che rappresenta l'origine del binding nel markup consiste nell' <xref:System.Windows.Data.XmlDataProvider> usare un oggetto. Per altre informazioni, vedere [Procedura: Eseguire l'associazione a dati XML tramite un oggetto XMLDataProvider e query XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> È anche possibile eseguire l'associazione <xref:System.Xml.Linq.XElement> a <xref:System.Xml.Linq.XDocument>un oggetto o oppure eseguire un'associazione ai risultati delle query eseguite su oggetti di questi tipi usando LINQ to XML. Un modo pratico per usare LINQ to XML per accedere ai dati XML che rappresenta l'origine del binding nel markup consiste nell' <xref:System.Windows.Data.ObjectDataProvider> usare un oggetto. Per altre informazioni, vedere [Procedura: Eseguire l'associazione ai risultati di una query XDocument, XElement o LINQ to XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
@@ -33,9 +33,9 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
  È possibile creare origini del binding personalizzate. Questa sezione illustra i concetti necessari per l'implementazione di una classe da usare come origine del binding.  
   
 ### <a name="providing-change-notifications"></a>Invio di notifiche delle modifiche  
- Se si utilizza <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> binding (perché si desidera che il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] venga aggiornato quando le proprietà di origine del binding cambiano in modo dinamico), è necessario implementare un meccanismo di notifica appropriato modificato per la proprietà. Il meccanismo consigliato prevede che la [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] classe dinamica o implementi l' <xref:System.ComponentModel.INotifyPropertyChanged> interfaccia. Per altre informazioni, vedere [Implementare la notifica di modifiche alle proprietà](how-to-implement-property-change-notification.md).  
+ Se si utilizza <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> binding (perché si desidera che il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] venga aggiornato quando le proprietà di origine del binding cambiano in modo dinamico), è necessario implementare un meccanismo di notifica appropriato modificato per la proprietà. Il meccanismo consigliato prevede che la classe CLR o dinamica implementi l' <xref:System.ComponentModel.INotifyPropertyChanged> interfaccia. Per altre informazioni, vedere [Implementare la notifica di modifiche alle proprietà](how-to-implement-property-change-notification.md).  
   
- Se si crea un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] oggetto che non implementa <xref:System.ComponentModel.INotifyPropertyChanged>, è necessario disporre di un sistema di notifica personalizzato per assicurarsi che i dati utilizzati in un'associazione rimangano aggiornati. È possibile offrire notifiche delle modifiche tramite il supporto del modello `PropertyChanged` per ogni proprietà per cui si desidera impostarle. Per supportare questo modello, definire un evento *NomeProprietà*Changed per ogni proprietà, dove *NomeProprietà* è il nome della proprietà. L'evento viene generato a ogni modifica della proprietà.  
+ Se si crea un oggetto CLR che non implementa <xref:System.ComponentModel.INotifyPropertyChanged>, è necessario disporre di un sistema di notifica personalizzato per assicurarsi che i dati utilizzati in un'associazione rimangano aggiornati. È possibile offrire notifiche delle modifiche tramite il supporto del modello `PropertyChanged` per ogni proprietà per cui si desidera impostarle. Per supportare questo modello, definire un evento *NomeProprietà*Changed per ogni proprietà, dove *NomeProprietà* è il nome della proprietà. L'evento viene generato a ogni modifica della proprietà.  
   
  Se l'origine del binding implementa uno di questi meccanismi di notifica, gli aggiornamenti della destinazione vengono eseguiti automaticamente. Se per qualsiasi motivo l'origine del binding non fornisce le notifiche appropriate per la modifica delle proprietà, è possibile usare il <xref:System.Windows.Data.BindingExpression.UpdateTarget%2A> metodo per aggiornare in modo esplicito la proprietà di destinazione.  
   
@@ -76,11 +76,11 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
 |------------------------------------------------|-----------------------------|-----------------------------|------------------|------------------|-------------------------|-------------------------|  
 |**Livello di attendibilità**|**Attendibilità totale**|**Attendibilità parziale**|**Attendibilità totale**|**Attendibilità parziale**|**Attendibilità totale**|**Attendibilità parziale**|  
 |Classe pubblica|Yes|Sì|Sì|Sì|Sì|Sì|  
-|Classe non pubblica|Sì|No|Sì|No|Yes|Sì|  
+|Classe non pubblica|Yes|No|Sì|No|Yes|Yes|  
   
  Questa tabella descrive punti importanti relativi ai requisiti di autorizzazione per il data binding.  
   
-- Per le proprietà [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], il data binding dati funziona purché il motore di binding sia in grado di accedere alla proprietà di origine del binding usando la reflection. In caso contrario, viene generato un avviso relativo all'impossibilità di trovare la proprietà e viene usato il valore di fallback o quello predefinito, se disponibile.  
+- Per le proprietà CLR, data binding funziona purché il motore di associazione sia in grado di accedere alla proprietà di origine del binding mediante reflection. In caso contrario, viene generato un avviso relativo all'impossibilità di trovare la proprietà e viene usato il valore di fallback o quello predefinito, se disponibile.  
   
 - È possibile creare associazioni alle proprietà degli oggetti dinamici definiti in fase di compilazione o di esecuzione.  
   

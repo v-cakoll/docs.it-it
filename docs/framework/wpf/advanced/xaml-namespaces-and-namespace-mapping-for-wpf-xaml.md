@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fc88f1e32b8ddce6abccad085b0c44a5c716e8b
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031874"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400808"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Spazi dei nomi XAML e mapping dello spazio dei nomi per XAML WPF
 Questo argomento approfondisce la presenza e lo scopo dei due mapping dello spazio dei nomi XAML nel tag radice di ogni file XAML WPF. L'argomento descrive anche come produrre mapping simili per l'uso di elementi definiti nel codice e/o all'interno di assembly separati.  
@@ -49,9 +49,9 @@ Questo argomento approfondisce la presenza e lo scopo dei due mapping dello spaz
   
  `clr-namespace:` lo spazio dei nomi CLR dichiarato nell'assembly che contiene i tipi pubblici da esporre come elementi.  
   
- `assembly=` l'assembly che contiene l'intero spazio dei nomi [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] a cui si fa riferimento o parte di esso. Il valore è dato in genere dal nome dell'assembly, non dal percorso, e non include l'estensione (ad esempio, dll o exe). Il percorso dell'assembly deve essere stabilito come riferimento al progetto nel file di progetto che contiene il codice XAML di cui si sta tentando di eseguire il mapping. Per incorporare il controllo delle versioni e la firma con nome sicuro, il `assembly` valore può essere una stringa come definito da <xref:System.Reflection.AssemblyName>, anziché il nome di stringa semplice.  
+ `assembly=`Assembly che contiene alcuni o tutti gli spazi dei nomi CLR a cui si fa riferimento. Il valore è dato in genere dal nome dell'assembly, non dal percorso, e non include l'estensione (ad esempio, dll o exe). Il percorso dell'assembly deve essere stabilito come riferimento al progetto nel file di progetto che contiene il codice XAML di cui si sta tentando di eseguire il mapping. Per incorporare il controllo delle versioni e la firma con nome sicuro `assembly` , il valore può essere una stringa definita <xref:System.Reflection.AssemblyName>da, anziché il nome di stringa semplice.  
   
- Si noti che il carattere che separa il token `clr-namespace` dal valore è il segno di due punti (:), mentre il carattere che separa il token `assembly` dal valore è un segno di uguale (=). Il carattere da usare tra i due token è il segno di punto e virgola. Inoltre, non includere gli spazi vuoti in un punto qualsiasi nella dichiarazione.  
+ Si noti che il carattere che separa il token `clr-namespace` dal valore è il segno di due punti (:), mentre il carattere che separa il token `assembly` dal valore è un segno di uguale (=). Il carattere da usare tra i due token è il segno di punto e virgola. Inoltre, non includere alcuno spazio vuoto in un punto qualsiasi della dichiarazione.  
   
 ### <a name="a-basic-custom-mapping-example"></a>Esempio di base di mapping personalizzato  
  Il codice seguente definisce una classe personalizzata di esempio:  
@@ -105,37 +105,37 @@ End Namespace
   
 <a name="Mapping_CLR_Namespaces_to_XML_Namespaces_in_an"></a>   
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>Mapping di spazi dei nomi CLR a spazi dei nomi XML in un assembly  
- WPF definisce un attributo CLR che viene usato dai processori XAML per eseguire il mapping di più spazi dei nomi CLR a un unico spazio dei nomi XAML. Questo attributo, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, viene inserito a livello di assembly nel codice sorgente che produce l'assembly. Il codice sorgente assembly WPF questo attributo viene utilizzato per eseguire il mapping di vari spazi dei nomi comuni, ad esempio <xref:System.Windows> e <xref:System.Windows.Controls>, al [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] dello spazio dei nomi.  
+ WPF definisce un attributo CLR che viene usato dai processori XAML per eseguire il mapping di più spazi dei nomi CLR a un unico spazio dei nomi XAML. Questo attributo, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, viene inserito a livello di assembly nel codice sorgente che produce l'assembly. Il codice sorgente dell'assembly WPF usa questo attributo per eseguire il mapping dei vari spazi dei nomi <xref:System.Windows> comuni <xref:System.Windows.Controls>, ad esempio [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] e, allo spazio dei nomi.  
   
- Il <xref:System.Windows.Markup.XmlnsDefinitionAttribute> accetta due parametri: il nome dello spazio dei nomi XML/XAML e lo spazio dei nomi CLR. Più <xref:System.Windows.Markup.XmlnsDefinitionAttribute> possono esistere per eseguire il mapping di più spazi dei nomi CLR allo spazio dei nomi XML stesso. Dopo avere eseguito il mapping, è possibile fare riferimento ai membri degli spazi dei nomi senza nome completo specificando l'istruzione `using` appropriata nella pagina code-behind della classe parziale. Per informazioni dettagliate, vedere <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
+ <xref:System.Windows.Markup.XmlnsDefinitionAttribute> Accetta due parametri: il nome dello spazio dei nomi XML/XAML e il nome dello spazio dei nomi CLR. Per eseguire il <xref:System.Windows.Markup.XmlnsDefinitionAttribute> mapping di più spazi dei nomi CLR allo stesso spazio dei nomi XML è possibile esistere più di uno. Dopo avere eseguito il mapping, è possibile fare riferimento ai membri degli spazi dei nomi senza nome completo specificando l'istruzione `using` appropriata nella pagina code-behind della classe parziale. Per informazioni dettagliate, vedere <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
   
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Spazi dei nomi della finestra di progettazione e altri prefissi di modelli XAML  
  Se si lavora con ambienti di sviluppo e/o con strumenti di progettazione per XAML WPF, si può notare che all'interno del markup XAML esistono altri spazi dei nomi XAML definiti o altri prefissi.  
   
  [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] usa uno spazio dei nomi della finestra di progettazione in genere mappato al prefisso `d:`. I modelli di progetto più recenti per WPF possono eseguire preventivamente il mapping di questo spazio dei nomi XAML per supportare lo scambio di XAML tra [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] e altri ambienti di progettazione. Questo spazio dei nomi XAML di progettazione è usato per trasmettere lo stato di progettazione durante la sequenza di andata e ritorno dell'interfaccia utente basata su XAML nella finestra di progettazione. Questo spazio dei nomi viene usato anche per funzionalità quali `d:IsDataSource`, che abilitano origini dati di runtime in una finestra di progettazione.  
   
- Un altro prefisso che è possibile vedere mappato è `mc:`. `mc:` è finalizzato alla compatibilità dei markup e usa un modello di compatibilità dei markup non necessariamente specifico di XAML. In alcuni casi, è possibile usare le funzionalità di compatibilità dei markup per scambiare XAML tra framework o tra altri limiti di implementazione di supporto, per lavorare tra contesti di schemi XAML, per garantire la compatibilità per modalità limitate nelle finestre di progettazione e così via. Per altre informazioni su concetti di compatibilità dei markup e sulla loro relazione con WPF, vedere [compatibilità dei Markup (mc:) Funzionalità del linguaggio](markup-compatibility-mc-language-features.md).  
+ Un altro prefisso che è possibile vedere mappato è `mc:`. `mc:` è finalizzato alla compatibilità dei markup e usa un modello di compatibilità dei markup non necessariamente specifico di XAML. In alcuni casi, è possibile usare le funzionalità di compatibilità dei markup per scambiare XAML tra framework o tra altri limiti di implementazione di supporto, per lavorare tra contesti di schemi XAML, per garantire la compatibilità per modalità limitate nelle finestre di progettazione e così via. Per ulteriori informazioni sui concetti relativi alla compatibilità dei markup e sul modo in cui [sono correlati a WPF, vedere Compatibilità dei markup (MC:) Funzionalità](markup-compatibility-mc-language-features.md)del linguaggio.  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF e caricamento di assembly  
- Il contesto dello schema XAML per WPF si integra con il modello applicazione WPF, che a sua volta Usa il concetto definito da CLR di <xref:System.AppDomain>. La sequenza seguente descrive come contesto dello schema XAML interpreta la modalità di caricare gli assembly o trovare i tipi in fase di esecuzione o in fase di progettazione, in base all'utilizzo WPF di <xref:System.AppDomain> e ad altri fattori.  
+ Il contesto dello schema XAML per WPF si integra con il modello di applicazione WPF, che a sua volta usa il concetto definito <xref:System.AppDomain>da CLR di. Nella sequenza seguente viene descritto il modo in cui il contesto dello schema XAML interpreta come caricare assembly o trovare tipi in fase di esecuzione o di progettazione, in base <xref:System.AppDomain> all'utilizzo di WPF di e ad altri fattori.  
   
-1. Eseguire l'iterazione attraverso la <xref:System.AppDomain>, alla ricerca di un assembly già caricato che corrisponde a tutti gli aspetti del nome, a partire da più di recente assembly caricato.  
+1. Scorrere l'oggetto <xref:System.AppDomain>, cercando un assembly già caricato che corrisponda a tutti gli aspetti del nome, a partire dall'assembly caricato più di recente.  
   
-2. Se il nome è qualificato, chiamare <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> sul nome completo.  
+2. Se il nome è qualificato, chiamare <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> per il nome completo.  
   
 3. Se la combinazione nome breve e token di chiave pubblica di un nome qualificato corrisponde all'assembly da cui è stato caricato il markup, restituire tale assembly.  
   
-4. Usare il nome breve e token di chiave pubblica per chiamare <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+4. Usare il nome breve e il token di chiave pubblica <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>per chiamare.  
   
-5. Se il nome non qualificato, chiamare <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+5. Se il nome non è qualificato, chiamare <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
  Per il codice XAML loose il passaggio 3 non viene eseguito. Non è infatti presente alcun assembly da cui effettuare il caricamento.  
   
- XAML compilato per WPF (generato tramite XamlBuildTask) non usa gli assembly già caricato da <xref:System.AppDomain> (passaggio 1). Dall'output di XamlBuildTask,poi, il nome non può mai essere non qualificato, pertanto il passaggio 5 non viene applicato.  
+ Il codice XAML compilato per WPF (generato tramite XamlBuildTask) non usa gli assembly già caricati da <xref:System.AppDomain> (passaggio 1). Dall'output di XamlBuildTask,poi, il nome non può mai essere non qualificato, pertanto il passaggio 5 non viene applicato.  
   
  Il codice BAML (generato tramite PresentationBuildTask) usa tutti i passaggi, anche se non deve contenere nomi di assembly non qualificati.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Understanding XML Namespaces](https://go.microsoft.com/fwlink/?LinkId=98069)
+- [Informazioni sugli spazi dei nomi XML](https://go.microsoft.com/fwlink/?LinkId=98069)
 - [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
