@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 7587c8cd24197252506967208869bd454b4f27f2
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6e2b5eaff3ee80434d5cdf39391273685da9faf0
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400680"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68434082"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "68400680"
   
 - Le proprietà e gli eventi rendono disponibili informazioni sulla funzionalità del pattern di controllo, nonché informazioni sullo stato del controllo.  
   
- I pattern di controllo si relazionano all' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] allo stesso modo in cui le interfacce si relazionano agli oggetti [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] . In [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)]è possibile eseguire query su oggetto per chiedere quali interfacce sono supportate e quindi usare tali interfacce per accedere alla funzionalità. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]i client di automazione interfaccia utente possono chiedere a un controllo quali pattern di controllo supporta e quindi interagire con il controllo tramite le proprietà, i metodi, gli eventi e le strutture esposti dai pattern di controllo supportati. Ad esempio, per una casella di modifica multiriga i provider di automazione interfaccia utente implementano <xref:System.Windows.Automation.Provider.IScrollProvider>. Quando un client riconosce che una classe <xref:System.Windows.Automation.AutomationElement> supporta il pattern di controllo <xref:System.Windows.Automation.ScrollPattern> , è possibile usare la proprietà, i metodi e gli eventi esposti da tale pattern di controllo per modificare il controllo o accedere alle informazioni sul controllo.  
+ I pattern di controllo [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] sono correlati alle interfacce As per gli oggetti Component Object Model (com). In COM è possibile eseguire una query su un oggetto per richiedere quali interfacce sono supportate e quindi usare tali interfacce per accedere alla funzionalità. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]i client di automazione interfaccia utente possono chiedere a un controllo quali pattern di controllo supporta e quindi interagire con il controllo tramite le proprietà, i metodi, gli eventi e le strutture esposti dai pattern di controllo supportati. Ad esempio, per una casella di modifica multiriga i provider di automazione interfaccia utente implementano <xref:System.Windows.Automation.Provider.IScrollProvider>. Quando un client riconosce che una classe <xref:System.Windows.Automation.AutomationElement> supporta il pattern di controllo <xref:System.Windows.Automation.ScrollPattern> , è possibile usare la proprietà, i metodi e gli eventi esposti da tale pattern di controllo per modificare il controllo o accedere alle informazioni sul controllo.  
   
 <a name="uiautomation_control_pattern_client_provider"></a>   
 ## <a name="ui-automation-providers-and-clients"></a>Provider e client di automazione interfaccia utente  

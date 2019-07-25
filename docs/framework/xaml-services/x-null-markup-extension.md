@@ -12,12 +12,12 @@ helpviewer_keywords:
 - x:Null markup extension [XAML Services]
 - XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
-ms.openlocfilehash: e46d8561b62d9137d4fed4df447338a97fc0577b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dbea2c7d4010d8defc572dbdc14a0dfd6d7601e
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938912"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484713"
 ---
 # <a name="xnull-markup-extension"></a>Estensione del markup x:Null
 Specifica `null` come valore per un membro XAML.  
@@ -29,20 +29,20 @@ Specifica `null` come valore per un membro XAML.
 ```  
   
 ## <a name="remarks"></a>Note  
- La parola chiave per un riferimento null in C# e [!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)] è null. La parola chiave Microsoft Visual Basic per un riferimento null viene `Nothing`, ma è sempre usare `{x:Null}` come l'utilizzo XAML indipendentemente dal linguaggio di code-behind è associare il XAML.  
+ La parola chiave per un riferimento null C# in C++ e è null. La parola chiave Microsoft Visual Basic per un riferimento null `Nothing`è, ma si usa `{x:Null}` sempre come utilizzo XAML indipendentemente dal linguaggio code-behind associato a XAML.  
   
- Il `x:Null` estensione di markup non contiene proprietà impostabili.  
+ L' `x:Null` estensione di markup non dispone di proprietà impostabili.  
   
- Un utilizzo di null è spesso associato all'esposizione del membro XAML di un tipo CLR <xref:System.Nullable%601> valore.  
+ Un utilizzo null è spesso associato all'esposizione del membro XAML di un valore <xref:System.Nullable%601> CLR.  
   
- Il `x:Null` estensione di markup, come tutte le estensioni di markup XAML, Usa le parentesi graffe (`{,}`) per eseguire l'escape la gestione di valori di attributo sia diverso da valori letterali o i riferimenti del gestore eventi. Sintassi dell'attributo è in genere usati con questa estensione di markup. La sintassi degli elementi oggetto `<x:Null />` sia tecnicamente possibile, ma viene usato raramente perché il `x:Null` estensione di markup non dispone di parametri posizionali o argomenti di costruzione.  
+ L' `x:Null` estensione di markup, come tutte le estensioni di markup XAML, USA le`{,}`parentesi graffe () per l'escape della gestione dei valori di attributo in modo che non siano valori letterali o riferimenti al gestore eventi. La sintassi degli attributi è la sintassi utilizzata più di frequente con questa estensione di markup. Una sintassi `<x:Null />` dell'elemento oggetto è tecnicamente possibile, ma viene usata raramente perché `x:Null` l'estensione di markup non contiene parametri posizionali o argomenti di costruzione.  
   
- Per informazioni sulle estensioni di markup, vedere [estensioni di Markup e XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Per informazioni sulle estensioni di markup, vedere [estensioni di markup e XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
- Nei servizi XAML di .NET Framework, la gestione di questa estensione di markup viene definita per il <xref:System.Windows.Markup.NullExtension> classe.  
+ In .NET Framework servizi XAML, la gestione di questa estensione di markup viene definita dalla <xref:System.Windows.Markup.NullExtension> classe.  
   
-## <a name="wpf-usage-notes"></a>Note sull'utilizzo WPF  
- Si noti che `null` non è necessariamente il valore iniziale non impostato per una proprietà di dipendenza di tipo riferimento. Il valore predefinito iniziale può variare per ogni proprietà di dipendenza e può essere basato su proprietà specifiche metadati. Molte proprietà di dipendenza non accettano `null` come valore, tramite markup o codice a causa delle implementazioni dei callback di convalida. Per altre informazioni sulle proprietà di dipendenza, vedere [Cenni preliminari sulle proprietà di dipendenza](../wpf/advanced/dependency-properties-overview.md).  
+## <a name="wpf-usage-notes"></a>Note sull'utilizzo di WPF  
+ Si noti `null` che non è necessariamente il valore iniziale non impostato per una proprietà di dipendenza di tipo riferimento. Il valore predefinito iniziale può variare per ogni proprietà di dipendenza e può essere basato su metadati specifici della proprietà. Molte proprietà di dipendenza non accettano `null` come valore, tramite markup o codice a causa delle implementazioni di callback di convalida. Per ulteriori informazioni sulle proprietà di dipendenza, vedere [Cenni preliminari sulle proprietà di dipendenza](../wpf/advanced/dependency-properties-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
