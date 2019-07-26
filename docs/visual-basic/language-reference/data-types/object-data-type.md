@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati di oggetto (Visual Basic)
+title: Tipo di dati Object (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Object
@@ -10,62 +10,67 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 593fda6a4949a55d77ae70edd19159a618cc6b6d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ac906494c49810e3d389591b1044f412e7320bc
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592085"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68513054"
 ---
 # <a name="object-data-type"></a>Object Data Type
-Contiene gli indirizzi che fanno riferimento a oggetti. È possibile assegnare qualsiasi tipo riferimento (stringa, matrice, classe o interfaccia) a un `Object` variabile. Un' `Object` variabile anche possibile fare riferimento ai dati di qualsiasi tipo di valore (numerico `Boolean`, `Char`, `Date`, struttura o enumerazione).  
-  
-## <a name="remarks"></a>Note  
- Il `Object` tipo di dati può puntare a dati di qualsiasi tipo di dati, tra cui le istanze di oggetto riconosciuto dall'applicazione. Usare `Object` quando non si conosce in fase di compilazione la variabile di tipo i dati che potrebbe fare riferimento.  
-  
- Il valore predefinito `Object` è `Nothing` (un riferimento null).  
-  
-## <a name="data-types"></a>Tipi di dati  
- È possibile assegnare una variabile, costante o espressione di qualsiasi tipo di dati per un `Object` variabile. Per determinare il tipo di dati un `Object` attualmente fa riferimento alla variabile, è possibile usare il <xref:System.Type.GetTypeCode%2A> metodo il <xref:System.Type?displayProperty=nameWithType> classe. Questa condizione è illustrata nell'esempio seguente.  
-  
-```  
-Dim myObject As Object  
-' Suppose myObject has now had something assigned to it.  
-Dim datTyp As Integer  
-datTyp = Type.GetTypeCode(myObject.GetType())  
-```  
-  
- Il `Object` tipo di dati è un tipo riferimento. Tuttavia, Visual Basic considera un `Object` variabile come tipo di valore quando fa riferimento ai dati di un tipo valore.  
-  
-## <a name="storage"></a>Archiviazione  
- Qualsiasi tipo di dati fa riferimento, un `Object` variabile non contiene il valore di dati stesso, ma piuttosto un puntatore al valore. Usare sempre i quattro byte nella memoria del computer, ma questo non include lo spazio di archiviazione per i dati che rappresenta il valore della variabile. A causa del codice che utilizza il puntatore del mouse per individuare i dati, `Object` variabili che contengono i tipi di valore sono leggermente più lente accedere in modo esplicito rispetto alle variabili di tipo.  
-  
-## <a name="programming-tips"></a>Suggerimenti per la programmazione  
-  
-- **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi di puntatore in altri ambienti non sono compatibili con Visual Basic `Object` tipo.  
-  
-- **Prestazioni.** Una variabile dichiarata con la `Object` è sufficientemente flessibile per contenere un riferimento a qualsiasi oggetto di tipo. Tuttavia, quando si richiama un metodo o una proprietà su tale variabile, si verifica sempre *associazione tardiva* (in fase di esecuzione). Per forzare *associazione anticipata* (in fase di compilazione) e ottenere prestazioni migliori, dichiarare la variabile con un nome di classe specifici o eseguirne il cast al tipo di dati specifico.  
-  
-     Quando si dichiara una variabile oggetto, provare a usare un tipo di classe specifica, ad esempio <xref:System.OperatingSystem>, anziché il generalizzato `Object` tipo. È anche consigliabile utilizzare la classe più specifica disponibile, ad esempio <xref:System.Windows.Forms.TextBox> invece di <xref:System.Windows.Forms.Control>, in modo che è possibile accedere ai relativi metodi e proprietà. In genere, è possibile usare la **classi** nell'elenco il **Visualizzatore oggetti** per trovare i nomi delle classi disponibili.  
-  
-- **Widening.** Tutti i tipi di dati e tutti i tipi riferimento ampliano il `Object` tipo di dati. Ciò significa che è possibile convertire qualsiasi tipo a `Object` senza che si verifichi un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
-  
-     Tuttavia, se è la conversione tra tipi di valore e `Object`, Visual Basic esegue operazioni chiamate *boxing* e *unboxing*, quale verificare l'esecuzione più lenta.  
-  
-- **Caratteri tipo.** `Object` non dispone di alcun carattere di tipo letterale o un carattere di tipo identificatore.  
-  
-- **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la <xref:System.Object?displayProperty=nameWithType> classe.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente illustra un `Object` variabile sta puntando a un'istanza dell'oggetto.  
-  
-```  
-Dim objDb As Object  
-Dim myCollection As New Collection()  
-' Suppose myCollection has now been populated.  
-objDb = myCollection.Item(1)  
-```  
-  
+
+Include indirizzi che fanno riferimento a oggetti. È possibile assegnare qualsiasi tipo di riferimento (stringa, matrice, classe o interfaccia) a una `Object` variabile. Una `Object` variabile può anche fare riferimento a dati di qualsiasi tipo di valore ( `Boolean`numeric `Char`, `Date`,,, Structure o Enumeration).
+
+## <a name="remarks"></a>Note
+
+Il `Object` tipo di dati può puntare a dati di qualsiasi tipo di dati, inclusa qualsiasi istanza di oggetto riconosciuta dall'applicazione. Usare `Object` quando non si conosce in fase di compilazione a quale tipo di dati può puntare la variabile.
+
+Il valore predefinito di `Object` è `Nothing` (un riferimento null).
+
+## <a name="data-types"></a>Tipi di dati
+
+È possibile assegnare una variabile, una costante o un'espressione di qualsiasi tipo di dati `Object` a una variabile. Per determinare il tipo di dati `Object` a cui fa attualmente riferimento una variabile, è <xref:System.Type.GetTypeCode%2A> possibile usare il <xref:System.Type?displayProperty=nameWithType> metodo della classe. Questa condizione è illustrata nell'esempio seguente.
+
+```vb
+Dim myObject As Object
+' Suppose myObject has now had something assigned to it.
+Dim datTyp As Integer
+datTyp = Type.GetTypeCode(myObject.GetType())
+```
+
+Il `Object` tipo di dati è un tipo di riferimento. Tuttavia, Visual Basic considera una `Object` variabile come tipo di valore quando fa riferimento ai dati di un tipo di valore.
+
+## <a name="storage"></a>Archiviazione
+
+Indipendentemente dal tipo di dati a cui `Object` fa riferimento, una variabile non contiene il valore di dati stesso, bensì un puntatore al valore. Usa sempre quattro byte nella memoria del computer, ma non include l'archiviazione per i dati che rappresentano il valore della variabile. A causa del codice che usa il puntatore per individuare i dati, `Object` le variabili che mantengono i tipi di valore sono leggermente più lente per accedere alle variabili tipizzate in modo esplicito.
+
+## <a name="programming-tips"></a>Suggerimenti per la programmazione
+
+- **Considerazioni sull'interoperabilità.** Se si è connessi con componenti non scritti per il .NET Framework, ad esempio oggetti com o di automazione, tenere presente che i tipi di puntatore in altri ambienti non sono compatibili con il `Object` tipo di Visual Basic.
+
+- **Prestazioni.** Una variabile dichiarata con `Object` il tipo è sufficientemente flessibile da contenere un riferimento a qualsiasi oggetto. Tuttavia, quando si richiama un metodo o una proprietà in una variabile di questo tipo, si verifica sempre un' *associazione tardiva* (in fase di esecuzione). Per forzare l' *associazione anticipata* (in fase di compilazione) e migliorare le prestazioni, dichiarare la variabile con un nome di classe specifico oppure eseguirne il cast al tipo di dati specifico.
+
+  Quando si dichiara una variabile oggetto, provare a usare un tipo di classe specifico, ad <xref:System.OperatingSystem>esempio, anziché il `Object` tipo generalizzato. È inoltre consigliabile utilizzare la classe più specifica disponibile, ad esempio <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.Control>anziché, in modo da poter accedere alle proprietà e ai metodi. In genere, è possibile usare l'elenco delle **classi** nella **Visualizzatore oggetti** per trovare i nomi delle classi disponibili.
+
+- **Conversioni.** Tutti i tipi di dati e tutti i tipi di `Object` riferimento vengono ampliati al tipo di dati. Ciò significa che è possibile convertire qualsiasi tipo `Object` in senza riscontrare un <xref:System.OverflowException?displayProperty=nameWithType> errore.
+
+  Tuttavia, se si esegue la conversione tra tipi `Object`di valore e, Visual Basic esegue operazioni denominate *Boxing* *e unboxing*, che rendono l'esecuzione più lenta.
+
+- **Digitare i caratteri.** `Object`non ha un carattere di tipo letterale o un carattere di tipo identificatore.
+
+- **Tipo di Framework.** Il tipo corrispondente nella .NET Framework è la <xref:System.Object?displayProperty=nameWithType> classe.
+
+## <a name="example"></a>Esempio
+
+Nell'esempio seguente viene illustrata `Object` una variabile che punta a un'istanza dell'oggetto.
+
+```vb
+Dim objDb As Object
+Dim myCollection As New Collection()
+' Suppose myCollection has now been populated.
+objDb = myCollection.Item(1)
+```
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Object>

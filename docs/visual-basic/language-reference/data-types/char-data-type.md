@@ -10,53 +10,57 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: 6600b3b2945120f2f24e14d4cc898cd814366045
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca40e6c8dcba3da29bdb68b29c91c852e477f8f7
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647068"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512782"
 ---
 # <a name="char-data-type-visual-basic"></a>Tipo di dati Char (Visual Basic)
-Contiene punti di codice (a 2 byte) a 16 bit senza segno compresi nell'intervallo compreso tra 0 e 65535. Ciascuna *punto di codice*, o il codice carattere rappresenta un singolo carattere Unicode.  
-  
-## <a name="remarks"></a>Note  
- Usare la `Char` quando è necessario contenere un solo tipo di dati carattere e non è necessario l'overhead di `String`. In alcuni casi è possibile usare `Char()`, una matrice di `Char` elementi, per contenere più caratteri.  
-  
- Il valore predefinito di `Char` è il carattere con un punto di codice pari a 0.  
-  
-## <a name="unicode-characters"></a>Caratteri Unicode  
- I punti di 128 codice (0-127) prima di Unicode corrispondono alle lettere e simboli di una tastiera US standard. Questi primi punti di 128 codice sono identici a quelli definisce il set di caratteri ASCII. I secondo 128 punti di codice (128 a 255) rappresentano i caratteri speciali, ad esempio lettere dell'alfabeto basati sull'alfabeto latino, accenti, i simboli di valuta e le frazioni. Unicode utilizza i punti di codice rimanenti (256 e 65535) per un'ampia gamma di simboli, inclusi i caratteri di testo in tutto il mondo, i segni diacritici e simboli matematici e tecnici.  
-  
- È possibile usare metodi quali <xref:System.Char.IsDigit%2A> e <xref:System.Char.IsPunctuation%2A> su un `Char` variabile per determinarne la classificazione di Unicode.  
-  
-## <a name="type-conversions"></a>Conversione di tipi  
- Visual Basic non converte direttamente tra `Char` e i tipi numerici. È possibile usare la <xref:Microsoft.VisualBasic.Strings.Asc%2A> oppure <xref:Microsoft.VisualBasic.Strings.AscW%2A> funzione per convertire un `Char` valore un `Integer` che rappresenta il punto di codice. È possibile usare il <xref:Microsoft.VisualBasic.Strings.Chr%2A> oppure <xref:Microsoft.VisualBasic.Strings.ChrW%2A> funzione per convertire un `Integer` valore un `Char` che dispone di tale punto di codice.  
-  
- Se il controllo del tipo passa ([Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)) è attivo, è necessario aggiungere il carattere di tipo di valore letterale in una stringa di caratteri a un valore letterale per identificarlo come il `Char` tipo di dati. Questa condizione è illustrata nell'esempio seguente.  
-  
-```  
-Option Strict On  
-Dim charVar As Char  
-' The following statement attempts to convert a String literal to Char.  
-' Because Option Strict is On, it generates a compiler error.  
-charVar = "Z"  
-' The following statement succeeds because it specifies a Char literal.  
-charVar = "Z"C  
-```  
-  
-## <a name="programming-tips"></a>Suggerimenti per la programmazione  
-  
-- **Numeri negativi.** `Char` è un tipo senza segno e non può rappresentare un valore negativo. In ogni caso, è consigliabile non usare `Char` per contenere valori numerici.  
-  
-- **Considerazioni sull'interoperabilità.** Se si deve interfacciare con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi di carattere hanno un'ampiezza dei dati diverse (8 bit) in altri ambienti. Se si passa un argomento a 8 bit da tale componente, dichiararlo come `Byte` invece di `Char` nel nuovo codice Visual Basic.  
-  
-- **Widening.** Il `Char` può ampliarsi nel tipo di dati `String`. Ciò significa che è possibile convertire `Char` al `String` senza che si verifichi un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
-  
-- **Caratteri tipo.** Aggiungendo il carattere di tipo di valore letterale `C` a una stringa di caratteri a un valore letterale, se ne determina la `Char` tipo di dati. `Char` possiede alcun carattere di tipo identificatore.  
-  
-- **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Char?displayProperty=nameWithType>.  
-  
+
+Include punti di codice senza segno a 16 bit (2 byte) compresi tra 0 e 65535. Ogni *punto di codice*, o codice carattere, rappresenta un singolo carattere Unicode.
+
+## <a name="remarks"></a>Note
+
+Utilizzare il `Char` tipo di dati quando è necessario mantenere un solo carattere e non è necessario il sovraccarico di `String`. In alcuni casi è possibile usare `Char()`, una matrice di `Char` elementi, per mantenere più caratteri.
+
+Il valore predefinito di `Char` è il carattere con un punto di codice 0.
+
+## <a name="unicode-characters"></a>Caratteri Unicode
+
+I primi 128 punti di codice (0-127) di Unicode corrispondono a lettere e simboli in una tastiera standard degli Stati Uniti. Questi primi 128 punti di codice corrispondono a quelli definiti dal set di caratteri ASCII. I due punti di codice 128 (128-255) rappresentano caratteri speciali, ad esempio lettere di alfabeto latino, accenti, simboli di valuta e frazioni. Unicode usa i punti di codice rimanenti (256-65535) per un'ampia gamma di simboli, inclusi i caratteri testuali in tutto il mondo, i segni diacritici e i simboli matematici e tecnici.
+
+È possibile utilizzare metodi quali <xref:System.Char.IsDigit%2A> e <xref:System.Char.IsPunctuation%2A> su una `Char` variabile per determinare la relativa classificazione Unicode.
+
+## <a name="type-conversions"></a>Conversione di tipi
+
+Visual Basic non esegue la conversione direttamente `Char` tra e i tipi numerici. È possibile utilizzare la <xref:Microsoft.VisualBasic.Strings.Asc%2A> funzione <xref:Microsoft.VisualBasic.Strings.AscW%2A> o per convertire un `Char` valore in un `Integer` oggetto che rappresenta il punto di codice. È possibile usare la <xref:Microsoft.VisualBasic.Strings.Chr%2A> funzione <xref:Microsoft.VisualBasic.Strings.ChrW%2A> o per convertire un `Integer` valore in un `Char` oggetto con tale punto di codice.
+
+Se l'opzione di controllo del tipo ([Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)) è impostata su on, è necessario aggiungere il carattere di tipo letterale a un valore letterale stringa `Char` a carattere singolo per identificarlo come tipo di dati. Questa condizione è illustrata nell'esempio seguente.
+
+```vb
+Option Strict On
+Dim charVar As Char
+' The following statement attempts to convert a String literal to Char.
+' Because Option Strict is On, it generates a compiler error.
+charVar = "Z"
+' The following statement succeeds because it specifies a Char literal.
+charVar = "Z"C
+```
+
+## <a name="programming-tips"></a>Suggerimenti per la programmazione
+
+- **Numeri negativi.** `Char`è un tipo senza segno e non può rappresentare un valore negativo. In ogni caso, è consigliabile non usare `Char` per mantenere i valori numerici.
+
+- **Considerazioni sull'interoperabilità.** Se si interfaccia con componenti non scritti per il .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi di carattere hanno una larghezza dati diversa (8 bit) in altri ambienti. Se si passa un argomento a 8 bit a tale componente, dichiararlo come `Byte` `Char` anziché nel nuovo codice Visual Basic.
+
+- **Conversioni.** Il `Char` tipo di dati viene ampliato a `String`. Ciò significa che è possibile `Char` eseguire `String` la conversione in e non <xref:System.OverflowException?displayProperty=nameWithType> si verificherà un errore.
+
+- **Digitare i caratteri.** L'aggiunta del carattere `C` di tipo letterale a un valore letterale stringa a carattere singolo lo impone `Char` al tipo di dati. `Char`non ha un carattere di tipo identificatore.
+
+- **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Char?displayProperty=nameWithType>.
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Char?displayProperty=nameWithType>

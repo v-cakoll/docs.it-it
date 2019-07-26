@@ -8,62 +8,64 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 8ceff80842ec4e7364a55578c1c3fdb870c73ece
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1fe3c4a29b542302b3615459142a3c565aa8244f
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661977"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68513016"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Impossibile applicare la risoluzione dell'overload con associazione tardiva a '\<nomeroutine >' perché l'istanza di accesso è un tipo interfaccia
-Il compilatore sta provando a risolvere un riferimento a una proprietà in overload o una routine, ma il riferimento ha esito negativo perché è un argomento di tipo `Object` e l'oggetto che fa riferimento ha il tipo di dati di un'interfaccia. Il `Object` argomento induce il compilatore a risolvere il riferimento come associazione tardiva.  
-  
- In questi casi, il compilatore risolve l'overload tramite la classe di implementazione anziché tramite l'interfaccia sottostante. Se la classe consente di rinominare una delle versioni di overload, il compilatore non considera tale versione di un overload perché il nome è diverso. Ciò a sua volta fa sì che il compilatore ignora la versione rinominata quando avrebbe potuto essere la scelta corretta per risolvere il riferimento.  
-  
- **ID errore:** BC30933  
-  
-## <a name="to-correct-this-error"></a>Per correggere l'errore  
-  
-- Uso `CType` per eseguire il cast dell'argomento da `Object` nel tipo specificato per la firma di overload da chiamare.  
-  
-     Si noti che non consente di eseguire il cast l'oggetto che fa riferimento all'interfaccia sottostante. È necessario eseguire il cast dell'argomento per evitare questo errore.  
-  
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata una chiamata a un overload `Sub` procedure che genera questo errore in fase di compilazione.  
-  
-```  
-Module m1  
-    Interface i1  
-        Sub s1(ByVal p1 As Integer)  
-        Sub s1(ByVal p1 As Double)  
-    End Interface  
-    Class c1  
-        Implements i1  
-        Public Overloads Sub s1(ByVal p1 As Integer) Implements i1.s1  
-        End Sub  
-        Public Overloads Sub s2(ByVal p1 As Double) Implements i1.s1  
-        End Sub  
-    End Class  
-    Sub Main()  
-        Dim refer As i1 = New c1  
-        Dim o1 As Object = 3.1415  
-        ' The following reference is INVALID and causes a compiler error.  
-        refer.s1(o1)   
-    End Sub  
-End Module  
-```  
-  
- Nell'esempio precedente, se il compilatore ha consentito la chiamata a `s1` come scritto, la risoluzione avverrebbero tramite la classe `c1` anziché l'interfaccia `i1`. Ciò significa che il compilatore non considererebbero `s2` perché il nome è diverso nel `c1`, anche se è la scelta corretta come definito da `i1`.  
-  
- È possibile correggere l'errore modificando la chiamata a entrambe le righe di codice seguente:  
-  
-```  
-refer.s1(CType(o1, Integer))  
-refer.s1(CType(o1, Double))  
-```  
-  
- Ognuna delle righe di codice precedente esegue esplicitamente il cast di `Object` variabile `o1` a uno dei tipi di parametro definiti per gli overload.  
-  
+# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Impossibile applicare la risoluzione dell'overload con associazione tardiva a\<' ProcedureName >' perché l'istanza di accesso è un tipo di interfaccia
+
+Il compilatore sta provando a risolvere un riferimento a una proprietà o una routine di overload, ma il riferimento non riesce perché un argomento è di tipo `Object` e l'oggetto di riferimento ha il tipo di dati di un'interfaccia. L' `Object` argomento impone al compilatore di risolvere il riferimento come ad associazione tardiva.
+
+In queste circostanze, il compilatore risolve l'overload tramite la classe di implementazione invece che tramite l'interfaccia sottostante. Se la classe Rinomina una delle versioni di overload, il compilatore non considera tale versione come un overload perché il nome è diverso. Ciò comporta a sua volta che il compilatore ignori la versione rinominata quando potrebbe essere stata la scelta corretta per risolvere il riferimento.
+
+**ID errore:** BC30933
+
+## <a name="to-correct-this-error"></a>Per correggere l'errore
+
+- Utilizzare `CType` per eseguire il cast dell' `Object` argomento da al tipo specificato dalla firma dell'overload che si desidera chiamare.
+
+  Si noti che non consente di eseguire il cast dell'oggetto di riferimento all'interfaccia sottostante. Per evitare questo errore, è necessario eseguire il cast dell'argomento.
+
+## <a name="example"></a>Esempio
+
+Nell'esempio seguente viene illustrata una chiamata a una `Sub` routine di overload che causa questo errore in fase di compilazione.
+
+```vb
+Module m1
+    Interface i1
+        Sub s1(ByVal p1 As Integer)
+        Sub s1(ByVal p1 As Double)
+    End Interface
+    Class c1
+        Implements i1
+        Public Overloads Sub s1(ByVal p1 As Integer) Implements i1.s1
+        End Sub
+        Public Overloads Sub s2(ByVal p1 As Double) Implements i1.s1
+        End Sub
+    End Class
+    Sub Main()
+        Dim refer As i1 = New c1
+        Dim o1 As Object = 3.1415
+        ' The following reference is INVALID and causes a compiler error.
+        refer.s1(o1)
+    End Sub
+End Module
+```
+
+Nell'esempio precedente, se il compilatore consentiva la chiamata `s1` a come scritto, la risoluzione verrebbe eseguita tramite la classe `c1` anziché l'interfaccia `i1`. Ciò significa che il compilatore non prende in considerazione `s2` perché il nome è diverso in `c1`, anche se è la scelta corretta in base a quanto `i1`definito da.
+
+È possibile correggere l'errore modificando la chiamata a una delle righe di codice seguenti:
+
+```vb
+refer.s1(CType(o1, Integer))
+refer.s1(CType(o1, Double))
+```
+
+Ognuna delle righe precedenti di codice esegue esplicitamente il cast della `Object` variabile `o1` a uno dei tipi di parametro definiti per gli overload.
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Overload della routine](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
