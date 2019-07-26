@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: ad6d671a45cee7d534347d23963bb5035ecc8dac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf2c62878e8902afa9455c789d41393b73110172
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802712"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68434047"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
-Il `Async` modificatore indica che il metodo oppure [espressione lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) che ha modificato è asincrono. Tali metodi sono dette *metodi asincroni*.  
+Il `Async` modificatore indica che il metodo o l' [espressione lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) modificata è asincrona. Questi metodi sono detti *metodi asincroni*.  
   
- Un metodo asincrono è un modo pratico per eseguire le operazioni potenzialmente di lunga durata senza bloccare il thread del chiamante. Il chiamante del metodo async può riprendere un'operazione senza attendere il fine del metodo async.  
+ Un metodo asincrono è un modo pratico per eseguire le operazioni potenzialmente di lunga durata senza bloccare il thread del chiamante. Il chiamante di un metodo asincrono può riprendere il proprio lavoro senza attendere il completamento del metodo asincrono.  
   
 > [!NOTE]
->  Le parole chiave `Async` e `Await` sono state introdotte in Visual Studio 2012. Per un'introduzione alla programmazione asincrona, vedere [programmazione asincrona con Async e Await](../../../visual-basic/programming-guide/concepts/async/index.md).  
+>  Le parole chiave `Async` e `Await` sono state introdotte in Visual Studio 2012. Per un'introduzione alla programmazione asincrona, vedere [programmazione asincrona con Async e await](../../../visual-basic/programming-guide/concepts/async/index.md).  
   
  Nell'esempio seguente viene illustrata la struttura di un metodo async. Per convenzione, i nomi dei metodi async terminano con "Async".  
   
@@ -42,21 +42,21 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function  
 ```  
   
- In genere, un metodo modificato dal `Async` parola chiave contiene almeno uno [Await](../../../visual-basic/language-reference/modifiers/async.md) espressione o istruzione. Il metodo funziona in modo sincrono fino al primo `Await`, a quel punto viene sospeso finché l'attività di cui si è in attesa non viene completata. Nel frattempo, il controllo viene restituito al chiamante del metodo. Se il metodo non contiene un'espressione o un'istruzione `Await`, il metodo non viene sospeso e viene eseguito come un metodo sincrono. Un avviso del compilatore segnala eventuali metodi asincroni che non contengono `Await` perché questa situazione potrebbe indicare un errore. Per altre informazioni, vedere la [errore del compilatore](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).  
+ In genere, un metodo modificato dalla `Async` parola chiave contiene almeno un'espressione o un'istruzione [await](../../../visual-basic/language-reference/modifiers/async.md) . Il metodo funziona in modo sincrono fino al primo `Await`, a quel punto viene sospeso finché l'attività di cui si è in attesa non viene completata. Nel frattempo, il controllo viene restituito al chiamante del metodo. Se il metodo non contiene un'espressione o un'istruzione `Await`, il metodo non viene sospeso e viene eseguito come un metodo sincrono. Un avviso del compilatore segnala eventuali metodi asincroni che non contengono `Await` perché questa situazione potrebbe indicare un errore. Per ulteriori informazioni, vedere l' [errore del compilatore](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).  
   
  La parola chiave `Async` è una parola chiave non riservata. È una parola chiave quando si modifica un metodo o un'espressione lambda. In tutti gli altri contesti, viene interpretata come identificatore.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- Un metodo asincrono è un [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedure, o un [funzione](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) routine che ha un tipo restituito di <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Il metodo non può dichiarare [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) parametri.  
+ Un metodo asincrono è una routine [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) o una routine di [](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) <xref:System.Threading.Tasks.Task> funzione con un tipo restituito o <xref:System.Threading.Tasks.Task%601>. Il metodo non può dichiarare parametri [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) .  
   
- Si specifica `Task(Of TResult)` per il tipo restituito del metodo async se il [restituire](../../../visual-basic/language-reference/statements/return-statement.md) istruzione del metodo include un operando di tipo TResult. Utilizzare `Task` se non viene restituito alcun valore significativo al completamento del metodo. In altre parole, una chiamata al metodo restituisce `Task`, ma quando `Task` viene completato, ogni istruzione `Await` in attesa di `Task` non produce un valore risultante.  
+ Specificare `Task(Of TResult)` per il tipo restituito di un metodo asincrono se l'istruzione [return](../../../visual-basic/language-reference/statements/return-statement.md) del metodo ha un operando di tipo TResult. Utilizzare `Task` se non viene restituito alcun valore significativo al completamento del metodo. In altre parole, una chiamata al metodo restituisce `Task`, ma quando `Task` viene completato, ogni istruzione `Await` in attesa di `Task` non produce un valore risultante.  
   
  Le subroutine async vengono utilizzate principalmente per definire i gestori eventi in cui è richiesta una procedura `Sub`. Il chiamante di una subroutine async non può attendere il metodo e non può intercettare le eccezioni generate dal metodo.  
   
  Per altre informazioni ed esempi, vedere [Tipi restituiti asincroni](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="example"></a>Esempio  
- Negli esempi seguenti viene illustrato un gestore eventi async, un'espressione lambda async e un metodo async. Per un esempio completo che usa questi elementi, vedere [procedura dettagliata: Accesso al Web con Async e Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). È possibile scaricare il codice della procedura dettagliata dalla pagina [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Esempi di codice per sviluppatori).  
+ Negli esempi seguenti viene illustrato un gestore eventi async, un'espressione lambda async e un metodo async. Per un esempio completo in cui vengono usati questi elementi [, vedere Procedura dettagliata: Accesso al Web con Async e Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). È possibile scaricare il codice della procedura dettagliata dalla pagina [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Esempi di codice per sviluppatori).  
   
 ```vb  
 ' An event handler must be a Sub procedure.  
@@ -78,7 +78,7 @@ AddHandler button1.Click, Async Sub(sender, e)
   
 ' The following async method returns a Task(Of T).  
 ' A typical call awaits the Byte array result:  
-'      Dim result As Byte() = Await GetURLContents("http://msdn.com")  
+'      Dim result As Byte() = Await GetURLContents("https://msdn.com")  
 Private Async Function GetURLContentsAsync(url As String) As Task(Of Byte())  
   
     ' The downloaded resource ends up in the variable named content.  
