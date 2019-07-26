@@ -207,8 +207,6 @@
           items:
             - name: await
               href: keywords/await.md
-            - name: sizeof
-              href: keywords/sizeof.md
         - name: Parole chiave per l'accesso
           items:
             - name: base
@@ -340,6 +338,8 @@
           href: operators/nameof.md
         - name: Operatore new
           href: operators/new-operator.md
+        - name: Operatore sizeof
+          href: operators/sizeof.md
         - name: Operatore stackalloc
           href: operators/stackalloc.md
         - name: Operatori true e false
