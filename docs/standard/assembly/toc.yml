@@ -1,0 +1,11 @@
+- name: Assembly in .NET
+  href: index.md
+  items:
+    - name: Assembly Friend
+      items:
+        - name: Panoramica
+          href: friend-assemblies.md
+    - name: Formato dei file di assembly .NET
+      href: file-format.md
+    - name: Come usare ed eseguire il debug di assembly non caricabili in .NET Core
+      href: unloadability-howto.md

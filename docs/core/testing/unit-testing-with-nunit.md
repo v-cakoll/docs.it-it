@@ -4,31 +4,31 @@ description: Informazioni sui concetti relativi agli unit test in C# e .NET Core
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 7d3daa344b2a6fb8694a255fdc26b5ba31e2d82a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 53e8ebd6e4c3f07ace72df5e7dc916ecd30ce831
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747983"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433924"
 ---
-# <a name="unit-testing-c-with-nunit-and-net-core"></a><span data-ttu-id="bde91-103">Testing unità di C# con NUnit e .NET Core</span><span class="sxs-lookup"><span data-stu-id="bde91-103">Unit testing C# with NUnit and .NET Core</span></span>
+# <a name="unit-testing-c-with-nunit-and-net-core"></a><span data-ttu-id="02480-103">Testing unità di C# con NUnit e .NET Core</span><span class="sxs-lookup"><span data-stu-id="02480-103">Unit testing C# with NUnit and .NET Core</span></span>
 
-<span data-ttu-id="bde91-104">In questa esercitazione viene illustrata un'esperienza interattiva di compilazione passo passo di una soluzione di esempio finalizzata all'apprendimento dei concetti base del testing unità.</span><span class="sxs-lookup"><span data-stu-id="bde91-104">This tutorial takes you through an interactive experience building a sample solution step-by-step to learn unit testing concepts.</span></span> <span data-ttu-id="bde91-105">Se si preferisce seguire l'esercitazione usando una soluzione preesistente, [visualizzare o scaricare il codice di esempio](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/) prima di iniziare.</span><span class="sxs-lookup"><span data-stu-id="bde91-105">If you prefer to follow the tutorial using a pre-built solution, [view or download the sample code](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/) before you begin.</span></span> <span data-ttu-id="bde91-106">Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="bde91-106">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
+<span data-ttu-id="02480-104">In questa esercitazione viene illustrata un'esperienza interattiva di compilazione passo passo di una soluzione di esempio finalizzata all'apprendimento dei concetti base del testing unità.</span><span class="sxs-lookup"><span data-stu-id="02480-104">This tutorial takes you through an interactive experience building a sample solution step-by-step to learn unit testing concepts.</span></span> <span data-ttu-id="02480-105">Se si preferisce seguire l'esercitazione usando una soluzione preesistente, [visualizzare o scaricare il codice di esempio](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/) prima di iniziare.</span><span class="sxs-lookup"><span data-stu-id="02480-105">If you prefer to follow the tutorial using a pre-built solution, [view or download the sample code](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/) before you begin.</span></span> <span data-ttu-id="02480-106">Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="02480-106">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="bde91-107">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="bde91-107">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="02480-107">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="02480-107">Prerequisites</span></span>
 
-- <span data-ttu-id="bde91-108">[.NET Core 2.1 SDK](https://www.microsoft.com/net/download) o versioni successive.</span><span class="sxs-lookup"><span data-stu-id="bde91-108">[.NET Core 2.1 SDK](https://www.microsoft.com/net/download) or later versions.</span></span>
-- <span data-ttu-id="bde91-109">Editor di testo o editor di codice a scelta.</span><span class="sxs-lookup"><span data-stu-id="bde91-109">A text editor or code editor of your choice.</span></span>
+- <span data-ttu-id="02480-108">[.NET Core 2.1 SDK](https://www.microsoft.com/net/download) o versioni successive.</span><span class="sxs-lookup"><span data-stu-id="02480-108">[.NET Core 2.1 SDK](https://www.microsoft.com/net/download) or later versions.</span></span>
+- <span data-ttu-id="02480-109">Editor di testo o editor di codice a scelta.</span><span class="sxs-lookup"><span data-stu-id="02480-109">A text editor or code editor of your choice.</span></span>
 
-## <a name="creating-the-source-project"></a><span data-ttu-id="bde91-110">Creazione del progetto di origine</span><span class="sxs-lookup"><span data-stu-id="bde91-110">Creating the source project</span></span>
+## <a name="creating-the-source-project"></a><span data-ttu-id="02480-110">Creazione del progetto di origine</span><span class="sxs-lookup"><span data-stu-id="02480-110">Creating the source project</span></span>
 
-<span data-ttu-id="bde91-111">Aprire una finestra della shell.</span><span class="sxs-lookup"><span data-stu-id="bde91-111">Open a shell window.</span></span> <span data-ttu-id="bde91-112">Creare una directory denominata *unit-testing-using-nunit* in cui archiviare la soluzione.</span><span class="sxs-lookup"><span data-stu-id="bde91-112">Create a directory called *unit-testing-using-nunit* to hold the solution.</span></span> <span data-ttu-id="bde91-113">In questa nuova directory eseguire il comando seguente per creare un nuovo file di soluzione per la libreria di classi e il progetto di test:</span><span class="sxs-lookup"><span data-stu-id="bde91-113">Inside this new directory, run the following command to create a new solution file for the class library and the test project:</span></span>
+<span data-ttu-id="02480-111">Aprire una finestra della shell.</span><span class="sxs-lookup"><span data-stu-id="02480-111">Open a shell window.</span></span> <span data-ttu-id="02480-112">Creare una directory denominata *unit-testing-using-nunit* in cui archiviare la soluzione.</span><span class="sxs-lookup"><span data-stu-id="02480-112">Create a directory called *unit-testing-using-nunit* to hold the solution.</span></span> <span data-ttu-id="02480-113">In questa nuova directory eseguire il comando seguente per creare un nuovo file di soluzione per la libreria di classi e il progetto di test:</span><span class="sxs-lookup"><span data-stu-id="02480-113">Inside this new directory, run the following command to create a new solution file for the class library and the test project:</span></span>
 
 ```console
 dotnet new sln
 ```
  
-<span data-ttu-id="bde91-114">Creare quindi una directory *PrimeService*.</span><span class="sxs-lookup"><span data-stu-id="bde91-114">Next, create a *PrimeService* directory.</span></span> <span data-ttu-id="bde91-115">Finora è stata creata la struttura di directory e file seguente:</span><span class="sxs-lookup"><span data-stu-id="bde91-115">The following outline shows the directory and file structure so far:</span></span>
+<span data-ttu-id="02480-114">Creare quindi una directory *PrimeService*.</span><span class="sxs-lookup"><span data-stu-id="02480-114">Next, create a *PrimeService* directory.</span></span> <span data-ttu-id="02480-115">Finora è stata creata la struttura di directory e file seguente:</span><span class="sxs-lookup"><span data-stu-id="02480-115">The following outline shows the directory and file structure so far:</span></span>
 
 ```
 /unit-testing-using-nunit
@@ -36,13 +36,13 @@ dotnet new sln
     /PrimeService
 ```
 
-<span data-ttu-id="bde91-116">Impostare *PrimeService* come directory corrente ed eseguire il comando seguente per creare il progetto di origine:</span><span class="sxs-lookup"><span data-stu-id="bde91-116">Make *PrimeService* the current directory and run the following command to create the source project:</span></span>
+<span data-ttu-id="02480-116">Impostare *PrimeService* come directory corrente ed eseguire il comando seguente per creare il progetto di origine:</span><span class="sxs-lookup"><span data-stu-id="02480-116">Make *PrimeService* the current directory and run the following command to create the source project:</span></span>
 
 ```console
 dotnet new classlib
 ```
 
-<span data-ttu-id="bde91-117">Assegnare il nome *PrimeService.cs* al file *Class1.cs*.</span><span class="sxs-lookup"><span data-stu-id="bde91-117">Rename *Class1.cs* to *PrimeService.cs*.</span></span> <span data-ttu-id="bde91-118">Si crea un'implementazione non corretta della classe `PrimeService`:</span><span class="sxs-lookup"><span data-stu-id="bde91-118">You create a failing implementation of the `PrimeService` class:</span></span>
+<span data-ttu-id="02480-117">Assegnare il nome *PrimeService.cs* al file *Class1.cs*.</span><span class="sxs-lookup"><span data-stu-id="02480-117">Rename *Class1.cs* to *PrimeService.cs*.</span></span> <span data-ttu-id="02480-118">Si crea un'implementazione non corretta della classe `PrimeService`:</span><span class="sxs-lookup"><span data-stu-id="02480-118">You create a failing implementation of the `PrimeService` class:</span></span>
 
 ```csharp
 using System;
@@ -59,15 +59,15 @@ namespace Prime.Services
 }
 ```
 
-<span data-ttu-id="bde91-119">Tornare alla directory *unit-testing-using-nunit*.</span><span class="sxs-lookup"><span data-stu-id="bde91-119">Change the directory back to the *unit-testing-using-nunit* directory.</span></span> <span data-ttu-id="bde91-120">Eseguire il comando seguente per aggiungere il progetto di libreria di classi alla soluzione:</span><span class="sxs-lookup"><span data-stu-id="bde91-120">Run the following command to add the class library project to the solution:</span></span>
+<span data-ttu-id="02480-119">Tornare alla directory *unit-testing-using-nunit*.</span><span class="sxs-lookup"><span data-stu-id="02480-119">Change the directory back to the *unit-testing-using-nunit* directory.</span></span> <span data-ttu-id="02480-120">Eseguire il comando seguente per aggiungere il progetto di libreria di classi alla soluzione:</span><span class="sxs-lookup"><span data-stu-id="02480-120">Run the following command to add the class library project to the solution:</span></span>
 
 ```console
 dotnet sln add PrimeService/PrimeService.csproj
 ```
 
-## <a name="creating-the-test-project"></a><span data-ttu-id="bde91-121">Creazione del progetto di test</span><span class="sxs-lookup"><span data-stu-id="bde91-121">Creating the test project</span></span>
+## <a name="creating-the-test-project"></a><span data-ttu-id="02480-121">Creazione del progetto di test</span><span class="sxs-lookup"><span data-stu-id="02480-121">Creating the test project</span></span>
 
-<span data-ttu-id="bde91-122">Creare quindi la directory *PrimeService.Tests*.</span><span class="sxs-lookup"><span data-stu-id="bde91-122">Next, create the *PrimeService.Tests* directory.</span></span> <span data-ttu-id="bde91-123">Di seguito è illustrata la struttura di directory:</span><span class="sxs-lookup"><span data-stu-id="bde91-123">The following outline shows the directory structure:</span></span>
+<span data-ttu-id="02480-122">Creare quindi la directory *PrimeService.Tests*.</span><span class="sxs-lookup"><span data-stu-id="02480-122">Next, create the *PrimeService.Tests* directory.</span></span> <span data-ttu-id="02480-123">Di seguito è illustrata la struttura di directory:</span><span class="sxs-lookup"><span data-stu-id="02480-123">The following outline shows the directory structure:</span></span>
 
 ```
 /unit-testing-using-nunit
@@ -78,25 +78,25 @@ dotnet sln add PrimeService/PrimeService.csproj
     /PrimeService.Tests
 ```
 
-<span data-ttu-id="bde91-124">Impostare *PrimeService.Tests* come directory corrente e creare un nuovo progetto usando il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="bde91-124">Make the *PrimeService.Tests* directory the current directory and create a new project using the following command:</span></span>
+<span data-ttu-id="02480-124">Impostare *PrimeService.Tests* come directory corrente e creare un nuovo progetto usando il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="02480-124">Make the *PrimeService.Tests* directory the current directory and create a new project using the following command:</span></span>
 
 ```console
 dotnet new nunit
 ```
 
-<span data-ttu-id="bde91-125">Il comando [dotnet new](../tools/dotnet-new.md) crea un progetto di test che usa NUnit come libreria di test.</span><span class="sxs-lookup"><span data-stu-id="bde91-125">The [dotnet new](../tools/dotnet-new.md) command creates a test project that uses NUnit as the test library.</span></span> <span data-ttu-id="bde91-126">Il modello generato configura il Test Runner nel file *PrimeService.Tests.csproj*:</span><span class="sxs-lookup"><span data-stu-id="bde91-126">The generated template configures the test runner in the *PrimeService.Tests.csproj* file:</span></span>
+<span data-ttu-id="02480-125">Il comando [dotnet new](../tools/dotnet-new.md) crea un progetto di test che usa NUnit come libreria di test.</span><span class="sxs-lookup"><span data-stu-id="02480-125">The [dotnet new](../tools/dotnet-new.md) command creates a test project that uses NUnit as the test library.</span></span> <span data-ttu-id="02480-126">Il modello generato configura il Test Runner nel file *PrimeService.Tests.csproj*:</span><span class="sxs-lookup"><span data-stu-id="02480-126">The generated template configures the test runner in the *PrimeService.Tests.csproj* file:</span></span>
 
 [!code-xml[Packages](~/samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
 
-<span data-ttu-id="bde91-127">Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti.</span><span class="sxs-lookup"><span data-stu-id="bde91-127">The test project requires other packages to create and run unit tests.</span></span> <span data-ttu-id="bde91-128">`dotnet new` nel passaggio precedente aggiunge Microsoft Test SDK, il framework di test NUnit e l'adattatore di test NUnit.</span><span class="sxs-lookup"><span data-stu-id="bde91-128">`dotnet new` in the previous step added the Microsoft test SDK, the NUnit test framework, and the NUnit test adapter.</span></span> <span data-ttu-id="bde91-129">Aggiungere ora la libreria di classi `PrimeService` come un'altra dipendenza del progetto.</span><span class="sxs-lookup"><span data-stu-id="bde91-129">Now, add the `PrimeService` class library as another dependency to the project.</span></span> <span data-ttu-id="bde91-130">Usare il comando [`dotnet add reference`](../tools/dotnet-add-reference.md):</span><span class="sxs-lookup"><span data-stu-id="bde91-130">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
+<span data-ttu-id="02480-127">Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti.</span><span class="sxs-lookup"><span data-stu-id="02480-127">The test project requires other packages to create and run unit tests.</span></span> <span data-ttu-id="02480-128">`dotnet new` nel passaggio precedente aggiunge Microsoft Test SDK, il framework di test NUnit e l'adattatore di test NUnit.</span><span class="sxs-lookup"><span data-stu-id="02480-128">`dotnet new` in the previous step added the Microsoft test SDK, the NUnit test framework, and the NUnit test adapter.</span></span> <span data-ttu-id="02480-129">Aggiungere ora la libreria di classi `PrimeService` come un'altra dipendenza del progetto.</span><span class="sxs-lookup"><span data-stu-id="02480-129">Now, add the `PrimeService` class library as another dependency to the project.</span></span> <span data-ttu-id="02480-130">Usare il comando [`dotnet add reference`](../tools/dotnet-add-reference.md):</span><span class="sxs-lookup"><span data-stu-id="02480-130">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
 
 ```console
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
-<span data-ttu-id="bde91-131">È possibile visualizzare l'intero file nel [repository degli esempi](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj) su GitHub.</span><span class="sxs-lookup"><span data-stu-id="bde91-131">You can see the entire file in the [samples repository](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj) on GitHub.</span></span>
+<span data-ttu-id="02480-131">È possibile visualizzare l'intero file nel [repository degli esempi](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj) su GitHub.</span><span class="sxs-lookup"><span data-stu-id="02480-131">You can see the entire file in the [samples repository](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj) on GitHub.</span></span>
 
-<span data-ttu-id="bde91-132">Il layout della soluzione finale è il seguente:</span><span class="sxs-lookup"><span data-stu-id="bde91-132">The following outline shows the final solution layout:</span></span>
+<span data-ttu-id="02480-132">Il layout della soluzione finale è il seguente:</span><span class="sxs-lookup"><span data-stu-id="02480-132">The following outline shows the final solution layout:</span></span>
 
 ```
 /unit-testing-using-nunit
@@ -109,15 +109,15 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeService.Tests.csproj
 ```
 
-<span data-ttu-id="bde91-133">Eseguire il comando seguente nella directory *unit-testing-using-nunit*:</span><span class="sxs-lookup"><span data-stu-id="bde91-133">Execute the following command in the *unit-testing-using-nunit* directory:</span></span>
+<span data-ttu-id="02480-133">Eseguire il comando seguente nella directory *unit-testing-using-nunit*:</span><span class="sxs-lookup"><span data-stu-id="02480-133">Execute the following command in the *unit-testing-using-nunit* directory:</span></span>
 
 ```console
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
-## <a name="creating-the-first-test"></a><span data-ttu-id="bde91-134">Creazione del primo test</span><span class="sxs-lookup"><span data-stu-id="bde91-134">Creating the first test</span></span>
+## <a name="creating-the-first-test"></a><span data-ttu-id="02480-134">Creazione del primo test</span><span class="sxs-lookup"><span data-stu-id="02480-134">Creating the first test</span></span>
 
-<span data-ttu-id="bde91-135">Scrivere un test che genera errore, fare in modo che venga superato e quindi ripetere il processo.</span><span class="sxs-lookup"><span data-stu-id="bde91-135">You write one failing test, make it pass, then repeat the process.</span></span> <span data-ttu-id="bde91-136">Nella directory *PrimeService.Tests* rinominare il file *UnitTest1.cs* in *PrimeService_IsPrimeShould.cs* e sostituire l'intero contenuto con il codice seguente:</span><span class="sxs-lookup"><span data-stu-id="bde91-136">In the *PrimeService.Tests* directory, rename the *UnitTest1.cs* file to *PrimeService_IsPrimeShould.cs* and replace its entire contents with the following code:</span></span>
+<span data-ttu-id="02480-135">Scrivere un test che genera errore, fare in modo che venga superato e quindi ripetere il processo.</span><span class="sxs-lookup"><span data-stu-id="02480-135">You write one failing test, make it pass, then repeat the process.</span></span> <span data-ttu-id="02480-136">Nella directory *PrimeService.Tests* rinominare il file *UnitTest1.cs* in *PrimeService_IsPrimeShould.cs* e sostituire l'intero contenuto con il codice seguente:</span><span class="sxs-lookup"><span data-stu-id="02480-136">In the *PrimeService.Tests* directory, rename the *UnitTest1.cs* file to *PrimeService_IsPrimeShould.cs* and replace its entire contents with the following code:</span></span>
 
 ```csharp
 using NUnit.Framework;
@@ -128,29 +128,36 @@ namespace Prime.UnitTests.Services
     [TestFixture]
     public class PrimeService_IsPrimeShould
     {
-        private readonly PrimeService _primeService;
-
         public PrimeService_IsPrimeShould()
         {
-            _primeService = new PrimeService();
         }
 
         [Test]
         public void ReturnFalseGivenValueOf1()
         {
-            var result = _primeService.IsPrime(1);
+            PrimeService primeService = CreatePrimeService();
+            var result = primeService.IsPrime(1);
 
             Assert.IsFalse(result, "1 should not be prime");
+        }
+        
+        /*
+        More tests
+        */
+        
+        private PrimeService CreatePrimeService()
+        {
+             return new PrimerService();
         }
     }
 }
 ```
 
-<span data-ttu-id="bde91-137">L'attributo `[TestFixture]` indica una classe che contiene unit test.</span><span class="sxs-lookup"><span data-stu-id="bde91-137">The `[TestFixture]` attribute denotes a class that contains unit tests.</span></span> <span data-ttu-id="bde91-138">L'attributo `[Test]` indica che il metodo è un metodo di test.</span><span class="sxs-lookup"><span data-stu-id="bde91-138">The `[Test]` attribute indicates a method is a test method.</span></span>
+<span data-ttu-id="02480-137">L'attributo `[TestFixture]` indica una classe che contiene unit test.</span><span class="sxs-lookup"><span data-stu-id="02480-137">The `[TestFixture]` attribute denotes a class that contains unit tests.</span></span> <span data-ttu-id="02480-138">L'attributo `[Test]` indica che il metodo è un metodo di test.</span><span class="sxs-lookup"><span data-stu-id="02480-138">The `[Test]` attribute indicates a method is a test method.</span></span>
 
-<span data-ttu-id="bde91-139">Salvare questo file ed eseguire [`dotnet test`](../tools/dotnet-test.md) per compilare i test e la libreria di classi, quindi eseguire i test.</span><span class="sxs-lookup"><span data-stu-id="bde91-139">Save this file and execute [`dotnet test`](../tools/dotnet-test.md) to build the tests and the class library and then run the tests.</span></span> <span data-ttu-id="bde91-140">Il Test Runner di NUnit include il punto d'ingresso del programma per l'esecuzione dei test.</span><span class="sxs-lookup"><span data-stu-id="bde91-140">The NUnit test runner contains the program entry point to run your tests.</span></span> <span data-ttu-id="bde91-141">`dotnet test` avvia il Test Runner usando il progetto di unit test creato.</span><span class="sxs-lookup"><span data-stu-id="bde91-141">`dotnet test` starts the test runner using the unit test project you've created.</span></span>
+<span data-ttu-id="02480-139">Salvare questo file ed eseguire [`dotnet test`](../tools/dotnet-test.md) per compilare i test e la libreria di classi, quindi eseguire i test.</span><span class="sxs-lookup"><span data-stu-id="02480-139">Save this file and execute [`dotnet test`](../tools/dotnet-test.md) to build the tests and the class library and then run the tests.</span></span> <span data-ttu-id="02480-140">Il Test Runner di NUnit include il punto d'ingresso del programma per l'esecuzione dei test.</span><span class="sxs-lookup"><span data-stu-id="02480-140">The NUnit test runner contains the program entry point to run your tests.</span></span> <span data-ttu-id="02480-141">`dotnet test` avvia il Test Runner usando il progetto di unit test creato.</span><span class="sxs-lookup"><span data-stu-id="02480-141">`dotnet test` starts the test runner using the unit test project you've created.</span></span>
 
-<span data-ttu-id="bde91-142">Il test ha esito negativo.</span><span class="sxs-lookup"><span data-stu-id="bde91-142">Your test fails.</span></span> <span data-ttu-id="bde91-143">Non è stata ancora creata l'implementazione.</span><span class="sxs-lookup"><span data-stu-id="bde91-143">You haven't created the implementation yet.</span></span> <span data-ttu-id="bde91-144">Fare in modo che questo test venga superato scrivendo il codice più semplice e funzionante nella classe `PrimeService`:</span><span class="sxs-lookup"><span data-stu-id="bde91-144">Make this test pass by writing the simplest code in the `PrimeService` class that works:</span></span>
+<span data-ttu-id="02480-142">Il test ha esito negativo.</span><span class="sxs-lookup"><span data-stu-id="02480-142">Your test fails.</span></span> <span data-ttu-id="02480-143">Non è stata ancora creata l'implementazione.</span><span class="sxs-lookup"><span data-stu-id="02480-143">You haven't created the implementation yet.</span></span> <span data-ttu-id="02480-144">Fare in modo che questo test venga superato scrivendo il codice più semplice e funzionante nella classe `PrimeService`:</span><span class="sxs-lookup"><span data-stu-id="02480-144">Make this test pass by writing the simplest code in the `PrimeService` class that works:</span></span>
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -163,22 +170,22 @@ public bool IsPrime(int candidate)
 }
 ```
 
-<span data-ttu-id="bde91-145">Eseguire di nuovo `dotnet test` nella directory *unit-testing-using-nunit*.</span><span class="sxs-lookup"><span data-stu-id="bde91-145">In the *unit-testing-using-nunit* directory, run `dotnet test` again.</span></span> <span data-ttu-id="bde91-146">Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`.</span><span class="sxs-lookup"><span data-stu-id="bde91-146">The `dotnet test` command runs a build for the `PrimeService` project and then for the `PrimeService.Tests` project.</span></span> <span data-ttu-id="bde91-147">Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo,</span><span class="sxs-lookup"><span data-stu-id="bde91-147">After building both projects, it runs this single test.</span></span> <span data-ttu-id="bde91-148">che viene superato.</span><span class="sxs-lookup"><span data-stu-id="bde91-148">It passes.</span></span>
+<span data-ttu-id="02480-145">Eseguire di nuovo `dotnet test` nella directory *unit-testing-using-nunit*.</span><span class="sxs-lookup"><span data-stu-id="02480-145">In the *unit-testing-using-nunit* directory, run `dotnet test` again.</span></span> <span data-ttu-id="02480-146">Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`.</span><span class="sxs-lookup"><span data-stu-id="02480-146">The `dotnet test` command runs a build for the `PrimeService` project and then for the `PrimeService.Tests` project.</span></span> <span data-ttu-id="02480-147">Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo,</span><span class="sxs-lookup"><span data-stu-id="02480-147">After building both projects, it runs this single test.</span></span> <span data-ttu-id="02480-148">che viene superato.</span><span class="sxs-lookup"><span data-stu-id="02480-148">It passes.</span></span>
 
-## <a name="adding-more-features"></a><span data-ttu-id="bde91-149">Aggiunta di altre funzionalità</span><span class="sxs-lookup"><span data-stu-id="bde91-149">Adding more features</span></span>
+## <a name="adding-more-features"></a><span data-ttu-id="02480-149">Aggiunta di altre funzionalità</span><span class="sxs-lookup"><span data-stu-id="02480-149">Adding more features</span></span>
 
-<span data-ttu-id="bde91-150">Ora che il test è stato superato, è necessario scriverne altri.</span><span class="sxs-lookup"><span data-stu-id="bde91-150">Now that you've made one test pass, it's time to write more.</span></span> <span data-ttu-id="bde91-151">Esistono alcuni altri casi semplici per i numeri primi: 0, -1.</span><span class="sxs-lookup"><span data-stu-id="bde91-151">There are a few other simple cases for prime numbers: 0, -1.</span></span> <span data-ttu-id="bde91-152">È possibile aggiungere nuovi test con l'attributo `[Test]`, ma questa operazione risulta rapidamente noiosa.</span><span class="sxs-lookup"><span data-stu-id="bde91-152">You could add new tests with the `[Test]` attribute, but that quickly becomes tedious.</span></span> <span data-ttu-id="bde91-153">Sono disponibili altri attributi NUnit che consentono di scrivere una suite di test analoghi.</span><span class="sxs-lookup"><span data-stu-id="bde91-153">There are other NUnit attributes that enable you to write a suite of similar tests.</span></span>  <span data-ttu-id="bde91-154">Un attributo `[TestCase]` viene usato per creare una suite di test che eseguono lo stesso codice, ma hanno argomenti di input diversi.</span><span class="sxs-lookup"><span data-stu-id="bde91-154">A `[TestCase]` attribute is used to create a suite of tests that execute the same code but have different input arguments.</span></span> <span data-ttu-id="bde91-155">È possibile usare l'attributo `[TestCase]` per specificare i valori per tali input.</span><span class="sxs-lookup"><span data-stu-id="bde91-155">You can use the `[TestCase]` attribute to specify values for those inputs.</span></span>
+<span data-ttu-id="02480-150">Ora che il test è stato superato, è necessario scriverne altri.</span><span class="sxs-lookup"><span data-stu-id="02480-150">Now that you've made one test pass, it's time to write more.</span></span> <span data-ttu-id="02480-151">Esistono alcuni altri casi semplici per i numeri primi: 0, -1.</span><span class="sxs-lookup"><span data-stu-id="02480-151">There are a few other simple cases for prime numbers: 0, -1.</span></span> <span data-ttu-id="02480-152">È possibile aggiungere nuovi test con l'attributo `[Test]`, ma questa operazione risulta rapidamente noiosa.</span><span class="sxs-lookup"><span data-stu-id="02480-152">You could add new tests with the `[Test]` attribute, but that quickly becomes tedious.</span></span> <span data-ttu-id="02480-153">Sono disponibili altri attributi NUnit che consentono di scrivere una suite di test analoghi.</span><span class="sxs-lookup"><span data-stu-id="02480-153">There are other NUnit attributes that enable you to write a suite of similar tests.</span></span>  <span data-ttu-id="02480-154">Un attributo `[TestCase]` viene usato per creare una suite di test che eseguono lo stesso codice, ma hanno argomenti di input diversi.</span><span class="sxs-lookup"><span data-stu-id="02480-154">A `[TestCase]` attribute is used to create a suite of tests that execute the same code but have different input arguments.</span></span> <span data-ttu-id="02480-155">È possibile usare l'attributo `[TestCase]` per specificare i valori per tali input.</span><span class="sxs-lookup"><span data-stu-id="02480-155">You can use the `[TestCase]` attribute to specify values for those inputs.</span></span>
 
-<span data-ttu-id="bde91-156">Anziché creare nuovi test, applicare questo attributo per creare un singolo test basato sui dati.</span><span class="sxs-lookup"><span data-stu-id="bde91-156">Instead of creating new tests, apply this attribute to create a single data driven test.</span></span> <span data-ttu-id="bde91-157">Il test basato sui dati è un metodo che verifica vari valori minori di due, ovvero il numero primo più piccolo:</span><span class="sxs-lookup"><span data-stu-id="bde91-157">The data driven test is a method that tests several values less than two, which is the lowest prime number:</span></span>
+<span data-ttu-id="02480-156">Anziché creare nuovi test, applicare questo attributo per creare un singolo test basato sui dati.</span><span class="sxs-lookup"><span data-stu-id="02480-156">Instead of creating new tests, apply this attribute to create a single data driven test.</span></span> <span data-ttu-id="02480-157">Il test basato sui dati è un metodo che verifica vari valori minori di due, ovvero il numero primo più piccolo:</span><span class="sxs-lookup"><span data-stu-id="02480-157">The data driven test is a method that tests several values less than two, which is the lowest prime number:</span></span>
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-<span data-ttu-id="bde91-158">Eseguire `dotnet test`. Due test hanno esito negativo.</span><span class="sxs-lookup"><span data-stu-id="bde91-158">Run `dotnet test`, and two of these tests fail.</span></span> <span data-ttu-id="bde91-159">Per assicurare che tutti i test vengano superati, modificare la clausola `if` all'inizio del metodo `Main` nel file *PrimeService.cs*:</span><span class="sxs-lookup"><span data-stu-id="bde91-159">To make all of the tests pass, change the `if` clause at the beginning of the `Main` method in the *PrimeService.cs* file:</span></span>
+<span data-ttu-id="02480-158">Eseguire `dotnet test`. Due test hanno esito negativo.</span><span class="sxs-lookup"><span data-stu-id="02480-158">Run `dotnet test`, and two of these tests fail.</span></span> <span data-ttu-id="02480-159">Per assicurare che tutti i test vengano superati, modificare la clausola `if` all'inizio del metodo `Main` nel file *PrimeService.cs*:</span><span class="sxs-lookup"><span data-stu-id="02480-159">To make all of the tests pass, change the `if` clause at the beginning of the `Main` method in the *PrimeService.cs* file:</span></span>
 
 ```csharp
 if (candidate < 2)
 ```
 
-<span data-ttu-id="bde91-160">Continuare a eseguire l'iterazione aggiungendo altri test, altre teorie e altro codice nella libreria principale.</span><span class="sxs-lookup"><span data-stu-id="bde91-160">Continue to iterate by adding more tests, more theories, and more code in the main library.</span></span> <span data-ttu-id="bde91-161">Si ottiene la [versione completa dei test](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs) e l'[implementazione completa della libreria](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService/PrimeService.cs).</span><span class="sxs-lookup"><span data-stu-id="bde91-161">You have the [finished version of the tests](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs) and the [complete implementation of the library](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService/PrimeService.cs).</span></span>
+<span data-ttu-id="02480-160">Continuare a eseguire l'iterazione aggiungendo altri test, altre teorie e altro codice nella libreria principale.</span><span class="sxs-lookup"><span data-stu-id="02480-160">Continue to iterate by adding more tests, more theories, and more code in the main library.</span></span> <span data-ttu-id="02480-161">Si ottiene la [versione completa dei test](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs) e l'[implementazione completa della libreria](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService/PrimeService.cs).</span><span class="sxs-lookup"><span data-stu-id="02480-161">You have the [finished version of the tests](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs) and the [complete implementation of the library](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService/PrimeService.cs).</span></span>
 
-<span data-ttu-id="bde91-162">È stata compilata una piccola libreria e un set di unit test per tale libreria.</span><span class="sxs-lookup"><span data-stu-id="bde91-162">You've built a small library and a set of unit tests for that library.</span></span> <span data-ttu-id="bde91-163">La soluzione è stata strutturata in modo che l'aggiunta di nuovi pacchetti e test faccia parte del normale flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="bde91-163">You've structured the solution so that adding new packages and tests is part of the normal workflow.</span></span> <span data-ttu-id="bde91-164">La maggior parte del tempo e dell'impegno è dedicata alla soluzione degli obiettivi dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="bde91-164">You've concentrated most of your time and effort on solving the goals of the application.</span></span>
+<span data-ttu-id="02480-162">È stata compilata una piccola libreria e un set di unit test per tale libreria.</span><span class="sxs-lookup"><span data-stu-id="02480-162">You've built a small library and a set of unit tests for that library.</span></span> <span data-ttu-id="02480-163">La soluzione è stata strutturata in modo che l'aggiunta di nuovi pacchetti e test faccia parte del normale flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="02480-163">You've structured the solution so that adding new packages and tests is part of the normal workflow.</span></span> <span data-ttu-id="02480-164">La maggior parte del tempo e dell'impegno è dedicata alla soluzione degli obiettivi dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="02480-164">You've concentrated most of your time and effort on solving the goals of the application.</span></span>
