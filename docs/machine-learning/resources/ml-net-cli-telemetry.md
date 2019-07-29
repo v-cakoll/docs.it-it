@@ -4,16 +4,16 @@ description: Informazioni sulle funzionalità di telemetria dell'interfaccia del
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 94c66267dfeec4b70ba4dd1fc47518eb0e01509a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: eab1e37d7d0d47251c4f92422730b105cf2db265
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053580"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433788"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Raccolta di dati di telemetria dall'interfaccia della riga di comando di ML.NET
 
-L'[interfaccia della riga di comando di ML.NET](http://aka.ms/mlnet-cli) include una funzionalità di telemetria che raccoglie dati di utilizzo anonimi che vengono aggregati per l'uso da Microsoft.
+L'[interfaccia della riga di comando di ML.NET](https://aka.ms/mlnet-cli) include una funzionalità di telemetria che raccoglie dati di utilizzo anonimi che vengono aggregati per l'uso da Microsoft.
 
 ## <a name="how-microsoft-uses-the-data"></a>Come Microsoft usa i dati
 

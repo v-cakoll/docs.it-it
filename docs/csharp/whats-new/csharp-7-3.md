@@ -2,12 +2,12 @@
 title: Novità di C# 7.3
 description: Panoramica delle nuove funzionalità in C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: ca53073db1b61300186a483001f79bf0caa79169
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397785"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433515"
 ---
 # <a name="whats-new-in-c-73"></a>Novità di C# 7.3
 
@@ -129,7 +129,7 @@ Per altre informazioni, vedere l'articolo sull'[istruzione `fixed`](../language-
 
 Ora è possibile specificare il tipo <xref:System.Enum?displayProperty=nameWithType> o <xref:System.Delegate?displayProperty=nameWithType> come vincoli di classe di base per un parametro di tipo.
 
-È anche possibile usare il nuovo vincolo `unmanaged` per specificare che un parametro di tipo deve essere un **tipo non gestito**. Un **tipo non gestito** è un tipo che non è un tipo riferimento e non contiene alcun tipo riferimento a nessun livello di annidamento.
+È anche possibile usare il nuovo vincolo `unmanaged` per specificare che un parametro di tipo deve essere un [tipo non gestito](../language-reference/builtin-types/unmanaged-types.md).
 
 Per altre informazioni, vedere gli articoli su [vincoli generici `where`](../language-reference/keywords/where-generic-type-constraint.md) e [vincoli sui parametri di tipo](../programming-guide/generics/constraints-on-type-parameters.md).
 

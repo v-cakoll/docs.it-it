@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 03d6ed19ef01be7712ff2fdde0c1be2a6673e64f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401435"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512350"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operatori correlati ai puntatori (Riferimento C#)
 
@@ -124,7 +124,7 @@ Per un puntatore `p` di tipo `T*` e un'espressione `n` di tipo implicitamente co
 - Entrambe le espressioni `p + n` e `n + p` producono un puntatore di tipo `T*` risultante dalla somma di `n * sizeof(T)` all'indirizzo specificato da `p`.
 - L'espressione `p - n` produce un puntatore di tipo `T*` risultante dalla sottrazione di `n * sizeof(T)` dall'indirizzo specificato da `p`.
 
-L'operatore [`sizeof` ](../keywords/sizeof.md) ottiene la dimensione di un tipo in byte.
+L'operatore [`sizeof` ](sizeof.md) ottiene la dimensione di un tipo in byte.
 
 L'esempio seguente illustra l'uso dell'operatore `+` con un puntatore:
 
@@ -193,4 +193,4 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 - [Parola chiave unsafe](../keywords/unsafe.md)
 - [Parola chiave fixed](../keywords/fixed-statement.md)
 - [Operatore stackalloc](stackalloc.md)
-- [Operatore sizeof](../keywords/sizeof.md)
+- [Operatore sizeof](sizeof.md)

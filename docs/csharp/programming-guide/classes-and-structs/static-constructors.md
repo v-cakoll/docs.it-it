@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: f053a74fcb87971506b83ca8ca2076517ddddf56
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: f8924f5a1e93a616b114506f383242fd2fde615c
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307099"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433567"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Costruttori statici (Guida per programmatori C#)
 Un costruttore statico consente di inizializzare gli eventuali dati [static](../../../csharp/language-reference/keywords/static.md) oppure di eseguire un'operazione specifica che deve essere effettuata una sola volta. Viene chiamato automaticamente prima che ne venga creata la prima istanza o venga fatto riferimento a qualsiasi membro statico.  
@@ -67,4 +67,4 @@ Per altre informazioni, vedere la sezione [Costruttori statici](~/_csharplang/sp
 - [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [Finalizzatori](../../../csharp/programming-guide/classes-and-structs/destructors.md)
 - [Linee guida per la progettazione di costruttori](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
-- [Avviso di sicurezza - CA2121: I costruttori statici devono essere privati](https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2121-static-constructors-should-be-private)
+- [Avviso di sicurezza - CA2121: I costruttori statici devono essere privati](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)
