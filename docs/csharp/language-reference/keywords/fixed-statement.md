@@ -7,12 +7,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 88e2b93fda786db15b3a3a693bdb9293ed31df4c
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d3c87f0e71095bbcc7c5a1d64b026e92838a6306
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833212"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433758"
 ---
 # <a name="fixed-statement-c-reference"></a>Istruzione fixed (Riferimenti per C#)
 
@@ -26,7 +26,7 @@ L'istruzione `fixed` imposta un puntatore a una variabile gestita e la blocca du
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
 
-A partire da C# 7.3, l'istruzione `fixed` opera su tipi aggiuntivi oltre a matrici, stringhe, buffer a dimensione fissa o variabili non gestite. È possibile bloccare qualsiasi tipo che implementa un metodo denominato `GetPinnableReference`. `GetPinnableReference` deve restituire una variabile `ref` a un tipo non gestito. Vedere l'argomento sui [tipi di puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md) per altre informazioni. I tipi .NET <xref:System.Span%601?displayProperty=nameWithType> e <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> introdotti in .NET Core 2.0 usano questo modello e possono essere bloccati. Questa operazione è illustrata nell'esempio seguente:
+A partire da C# 7.3, l'istruzione `fixed` opera su tipi aggiuntivi oltre a matrici, stringhe, buffer a dimensione fissa o variabili non gestite. È possibile bloccare qualsiasi tipo che implementa un metodo denominato `GetPinnableReference`. `GetPinnableReference` deve restituire una variabile `ref` di un [tipo non gestito](../builtin-types/unmanaged-types.md). I tipi .NET <xref:System.Span%601?displayProperty=nameWithType> e <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> introdotti in .NET Core 2.0 usano questo modello e possono essere bloccati. Questa operazione è illustrata nell'esempio seguente:
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
 
@@ -75,4 +75,5 @@ Per altre informazioni, vedere la sezione [Istruzione fixed](~/_csharplang/spec/
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
 - [unsafe](unsafe.md)
+- [Tipi di puntatori](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Buffer a dimensione fissa](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

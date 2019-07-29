@@ -7,22 +7,22 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 44ab9766bead15c97a1397ef1f47de75f72643a3
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: f09f93f27aa4f50cfb7e09b9d6d4f98f22e1ac9a
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423533"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433560"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Vincoli sui parametri di tipo (Guida per programmatori C#)
 
 I vincoli indicano al compilatore quali funzionalità deve usare un argomento tipo. Senza i vincoli, l'argomento tipo può essere qualsiasi tipo. Il compilatore è in grado di dedurre solo i membri di <xref:System.Object?displayProperty=nameWithType>, che è la principale classe di base per qualsiasi tipo .NET. Per altre informazioni, vedere [Motivi per cui usare i vincoli](#why-use-constraints). Se il codice client tenta di creare un'istanza della classe con un tipo non consentito da un vincolo, viene restituito un errore in fase di compilazione. I vincoli vengono specificati usando la parola chiave contestuale `where`. Nella tabella seguente sono riportati i sette tipi di vincoli:
 
-|Vincolo|Description|
+|Vincolo|DESCRIZIONE|
 |----------------|-----------------|
 |`where T : struct`|L'argomento tipo deve essere un tipo valore. È possibile specificare qualsiasi tipo valore tranne <xref:System.Nullable%601>. Per altre informazioni sui tipi nullable, vedere [Tipi nullable](../nullable-types/index.md).|
 |`where T : class`|L'argomento tipo deve essere un tipo riferimento. Questo vincolo si applica anche a qualsiasi tipo di classe, interfaccia, delegato o matrice.|
-|`where T : unmanaged`|L'argomento tipo non deve essere un tipo di riferimento e non deve contenere membri di tipo riferimento a qualsiasi livello di annidamento.|
+|`where T : unmanaged`|L'argomento tipo deve essere un [tipo non gestito](../../language-reference/builtin-types/unmanaged-types.md).|
 |`where T : new()`|L'argomento tipo deve avere un costruttore pubblico senza parametri. Quando il vincolo `new()` viene usato con altri vincoli, deve essere specificato per ultimo.|
 |`where T :` *\<nome della classe di base>*|L'argomento tipo deve corrispondere alla classe di base specificata o derivare da essa.|
 |`where T :` *\<nome dell'interfaccia>*|L'argomento tipo deve corrispondere all'interfaccia specificata o implementare tale interfaccia. È possibile specificare più vincoli di interfaccia. L'interfaccia vincolante può anche essere generica.|
@@ -78,7 +78,7 @@ L'utilità dei parametri di tipo usati come vincoli in classi generiche è limit
 
 ## <a name="unmanaged-constraint"></a>Vincolo non gestito
 
-A partire da C# 7.3, è possibile usare il vincolo `unmanaged` per specificare che il parametro di tipo deve essere un **tipo non gestito**. Un **tipo non gestito** è un tipo che non è un tipo riferimento e non contiene campi di tipi riferimento a nessun livello di annidamento. Il vincolo `unmanaged` consente di scrivere routine riutilizzabili per lavorare con tipi che possono essere modificati come blocchi di memoria, come illustrato nell'esempio seguente:
+A partire da C# 7.3, è possibile usare il vincolo `unmanaged` per specificare che il parametro di tipo deve essere un [tipo non gestito](../../language-reference/builtin-types/unmanaged-types.md). Il vincolo `unmanaged` consente di scrivere routine riutilizzabili per lavorare con tipi che possono essere modificati come blocchi di memoria, come illustrato nell'esempio seguente:
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 
