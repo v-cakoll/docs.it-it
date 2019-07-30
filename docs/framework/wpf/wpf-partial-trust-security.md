@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 259db84c8ab3b9bbad809b9636ba18537dd6fe62
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: b8234dcb33e9d429329c6d68900119382ff2f1cb
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400727"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629800"
 ---
 # <a name="wpf-partial-trust-security"></a>Sicurezza con attendibilità parziale in WPF
 <a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] , e i linguaggi di scripting lato client non sono in grado di accedere alle risorse di sistema critiche. Poiché le applicazioni ospitate da browser Windows Presentation Foundation (WPF) possono essere avviate dal browser, devono essere conformi a un set di restrizioni simile. Per applicare queste restrizioni, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] si basa sulla sicurezza dall'accesso di codice (CAS) e su ClickOnce (vedere [strategia di sicurezza di WPF-sicurezza della piattaforma](wpf-security-strategy-platform-security.md)). Per impostazione predefinita, le applicazioni ospitate da browser richiedono il set di autorizzazioni dell'area Internet, indipendentemente dal fatto che vengano avviate da Internet, dall'Intranet locale o dal computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  
@@ -113,7 +113,7 @@ ms.locfileid: "68400727"
   
  In molte situazioni è possibile trovare un'alternativa all'attendibilità parziale.  
   
- In un ambiente controllato, ad esempio una rete Intranet, è possibile installare Framework gestiti personalizzati attraverso la base client in [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]. Queste librerie consentono di eseguire codice che richiede attendibilità totale ed è possibile farvi riferimento da applicazioni che sono consentite solo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> parzialmente attendibilità usando (per altre informazioni, vedere [sicurezza](security-wpf.md) e strategia di sicurezza di [WPF-sicurezza della piattaforma](wpf-security-strategy-platform-security.md)).  
+ In un ambiente controllato, ad esempio una rete Intranet, è possibile installare Framework gestiti personalizzati attraverso la base client nella Global Assembly Cache (GAC). Queste librerie consentono di eseguire codice che richiede attendibilità totale ed è possibile farvi riferimento da applicazioni che sono consentite solo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> parzialmente attendibilità usando (per altre informazioni, vedere [sicurezza](security-wpf.md) e strategia di sicurezza di [WPF-sicurezza della piattaforma](wpf-security-strategy-platform-security.md)).  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>Rilevamento host del browser  
@@ -131,19 +131,19 @@ ms.locfileid: "68400727"
 |Autorizzazioni|Attributo|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|Accesso ai server DNS|Sì|No|  
-|Variabili di ambiente|Lettura|Sì|No|  
-|Finestre di dialogo file|Apri|Sì|Yes|  
-|Finestre di dialogo file|Senza restrizioni|Yes|No|  
+|Variabili di ambiente|Lettura|Yes|No|  
+|Finestre di dialogo file|Apri|Sì|Sì|  
+|Finestre di dialogo file|Senza restrizioni|Sì|No|  
 |Spazio di memorizzazione isolato|Isolamento assembly in base all'utente|Sì|No|  
-|Spazio di memorizzazione isolato|Isolamento sconosciuto|Sì|Sì|  
-|Spazio di memorizzazione isolato|Quota utenti illimitata|Sì|No|  
-|Supporti|Audio, video e immagini sicuri|Sì|Yes|  
+|Spazio di memorizzazione isolato|Isolamento sconosciuto|Sì|Yes|  
+|Spazio di memorizzazione isolato|Quota utenti illimitata|Yes|No|  
+|Supporti|Audio, video e immagini sicuri|Yes|Sì|  
 |Stampa|Stampa predefinita|Sì|No|  
-|Stampa|Stampa sicura|Yes|Sì|  
+|Stampa|Stampa sicura|Sì|Yes|  
 |Reflection|Emissione|Yes|No|  
-|Security|Esecuzione del codice gestito|Yes|Sì|  
-|Security|Asserzione autorizzazioni concesse|Sì|No|  
-|Interfaccia utente|Senza restrizioni|Sì|No|  
+|Security|Esecuzione del codice gestito|Sì|Sì|  
+|Security|Asserzione autorizzazioni concesse|Yes|No|  
+|Interfaccia utente|Senza restrizioni|Yes|No|  
 |Interfaccia utente|Finestre di primo livello sicure|Sì|Yes|  
 |Interfaccia utente|Appunti personali|Sì|Sì|  
 |Web browser|Navigazione sicura dei frame in HTML|Sì|Sì|  

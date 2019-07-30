@@ -1,17 +1,17 @@
 ---
 title: Associazioni let nelle classi
-description: Informazioni su come definire i campi privati e funzioni private per F# classi usando 'let' associazioni nella definizione della classe.
+description: Informazioni su come definire campi privati e funzioni private per F# le classi usando associazioni ' Let ' nella definizione della classe.
 ms.date: 05/16/2016
-ms.openlocfilehash: 29f843e3e065837a53fd5eb26c79088bc0778c76
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0086d3a91f85395c2bd0555f978c5d951c363357
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645179"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627479"
 ---
 # <a name="let-bindings-in-classes"></a>Associazioni let nelle classi
 
-È possibile definire i campi privati e funzioni private per F# classi usando `let` associazioni nella definizione della classe.
+È possibile definire campi privati e funzioni private per F# le classi `let` utilizzando binding nella definizione della classe.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,17 +25,17 @@ ms.locfileid: "65645179"
 
 ## <a name="remarks"></a>Note
 
-La sintassi precedente viene visualizzata dopo le dichiarazioni di intestazione e l'ereditarietà di classe ma prima di qualsiasi definizione del membro. La sintassi è simile a quella di `let` associazioni di fuori di classi, ma i nomi definiti in una classe hanno un ambito è limitato alla classe. Oggetto `let` binding crea un campo privato o una funzione; per esporre i dati o le funzioni pubblicamente, dichiarare una proprietà o un metodo del membro.
+La sintassi precedente viene visualizzata dopo l'intestazione della classe e le dichiarazioni di ereditarietà, ma prima delle definizioni dei membri. La sintassi è simile a quella `let` delle associazioni esterne alle classi, ma i nomi definiti in una classe hanno un ambito limitato alla classe. Un' `let` associazione crea una funzione o un campo privato; per esporre pubblicamente i dati o le funzioni, dichiarare una proprietà o un metodo del membro.
 
-Oggetto `let` che l'associazione non è statico viene chiamato un'istanza `let` associazione. Istanza `let` associazioni eseguite quando vengono creati gli oggetti. Statico `let` associazioni fanno parte dell'inizializzatore statico per la classe che viene sempre eseguito prima che il tipo viene usato prima di tutto.
+Un' `let` associazione non statica viene chiamata Associazione di istanza `let` . Le `let` associazioni di istanza vengono eseguite quando vengono creati oggetti. Le `let` associazioni statiche fanno parte dell'inizializzatore statico per la classe, che è garantita l'esecuzione prima che il tipo venga usato per la prima volta.
 
-Il codice all'interno di istanza `let` associazioni è possono usare i parametri del costruttore primario.
+Il codice all'interno `let` delle associazioni di istanza può usare i parametri del costruttore primario.
 
-Gli attributi e i modificatori di accessibilità non sono consentiti sui `let` associazioni nelle classi.
+Attributi e modificatori di accessibilità non sono `let` consentiti nelle associazioni nelle classi.
 
-Gli esempi di codice seguenti illustrano diversi tipi di `let` associazioni nelle classi.
+Negli esempi di codice seguenti vengono illustrati diversi `let` tipi di associazioni nelle classi.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3001.fs)]
 
 L'output è indicato di seguito.
 
@@ -43,14 +43,14 @@ L'output è indicato di seguito.
 10 52 1 204
 ```
 
-## <a name="alternative-ways-to-create-fields"></a>Modalità alternative di creazione di campi
+## <a name="alternative-ways-to-create-fields"></a>Metodi alternativi per la creazione di campi
 
-È anche possibile usare il `val` (parola chiave) per creare un campo privato. Quando si usa il `val` (parola chiave), il campo non ha un valore quando l'oggetto viene creato, ma invece viene inizializzata con un valore predefinito. Per altre informazioni, vedere [campi espliciti: Val (parola chiave)](explicit-fields-the-val-keyword.md).
+È anche possibile usare la `val` parola chiave per creare un campo privato. Quando si usa `val` la parola chiave, al campo non viene assegnato un valore quando viene creato l'oggetto, ma viene invece inizializzato con un valore predefinito. Per ulteriori informazioni, vedere [campi espliciti: Parola chiave](explicit-fields-the-val-keyword.md)Val.
 
-È anche possibile definire i campi privati in una classe usando una definizione di membro e aggiungendo la parola chiave `private` alla definizione. Ciò può essere utile se si prevede di modificare l'accessibilità di un membro senza riscrivere il codice. Per altre informazioni, vedere [Controllo di accesso](../access-control.md).
+È anche possibile definire campi privati in una classe usando una definizione del membro e aggiungendo la parola `private` chiave alla definizione. Questa operazione può essere utile se si prevede di modificare l'accessibilità di un membro senza riscrivere il codice. Per altre informazioni, vedere [Controllo di accesso](../access-control.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Membri](index.md)
 - [Associazioni `do` nelle classi](do-bindings-in-classes.md)
-- [`let` associazioni](../functions/let-bindings.md)
+- [`let`Associazioni](../functions/let-bindings.md)

@@ -1,13 +1,13 @@
 ---
 title: Generics
-description: Informazioni su come usare F# funzioni e tipi, che consentono di scrivere codice che funziona con un'ampia gamma di tipi senza ripetere codice generici.
+description: Informazioni su come usare F# funzioni e tipi generici, che consentono di scrivere codice che funziona con un'ampia gamma di tipi senza ripeterne il codice.
 ms.date: 05/16/2016
-ms.openlocfilehash: e30b00343e48d3a8abd51f62c003ba0d1984db18
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 47eed0b8e074cfb591e6d8e2c382b9ea6a6e97f0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641858"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630620"
 ---
 # <a name="generics"></a>Generics
 
@@ -49,19 +49,19 @@ Quando il compilatore F# deduce i tipi nel codice, considera automaticamente com
 
 Nell'esempio di codice seguente, `makeList` è generico, anche se il codice e i relativi parametri non sono dichiarati esplicitamente come generici.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
 
 La firma della funzione viene dedotta come `'a -> 'a -> 'a list`. Si noti che `a` e `b` in questo esempio vengono considerati come elementi dello stesso tipo. Ciò si verifica perché sono inclusi nello stesso elenco e tutti gli elementi di un elenco devono essere dello stesso tipo.
 
 È anche possibile rendere una funzione generica usando la sintassi con virgoletta singola in un'annotazione di tipo per indicare che un tipo di parametro è un parametro di tipo generico. Nel codice seguente, `function1` è generico perché i parametri vengono dichiarati in questo modo, come parametri di tipo.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
 
 ## <a name="explicitly-generic-constructs"></a>Costrutti esplicitamente generici
 
 È anche possibile rendere una funzione generica dichiarando in modo esplicito i parametri di tipo in parentesi acute (`<type-parameter>`). Questa condizione è illustrata nel codice che segue.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
 
 ## <a name="using-generic-constructs"></a>Uso di costrutti generici
 
@@ -69,7 +69,7 @@ Quando si usano funzioni o metodi generici, potrebbe non essere necessario speci
 
 Il codice seguente illustra l'uso delle funzioni definite nelle sezioni precedenti.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
 > [!NOTE]
 > Ci sono due modi per fare riferimento a un tipo generico in base al nome. Ad esempio, `list<int>` e `int list` sono due modi per fare riferimento a un tipo generico `list` che ha un solo argomento di tipo `int`. La seconda forma viene comunemente usata solo con i tipi F# predefiniti, ad esempio `list` e `option`. Se ci sono più argomenti di tipo, in genere si usa la sintassi `Dictionary<int, string>` ma è anche possibile usare la sintassi `(int, string) Dictionary`.
@@ -78,7 +78,7 @@ Il codice seguente illustra l'uso delle funzioni definite nelle sezioni preceden
 
 Per specificare che un argomento di tipo deve essere dedotto dal compilatore, è possibile usare il carattere di sottolineatura o un carattere jolly (`_`), anziché un argomento di tipo denominato. Questo comportamento viene mostrato nel codice seguente.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
 
 ## <a name="constraints-in-generic-types-and-functions"></a>Vincoli in funzioni e tipi generici
 
@@ -90,7 +90,7 @@ Ci sono due tipi di parametri di tipo che possono essere usati in programmi F#. 
 
 ## <a name="examples"></a>Esempi
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
 
 ## <a name="see-also"></a>Vedere anche
 

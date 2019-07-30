@@ -13,41 +13,41 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: f85acfe7592d7b90423107e0d45bb007fce5f4a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 68371a9f8d4dcc5d0a2b67955d5e88943a83b085
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601150"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68631113"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Utilizzo efficiente dei tipi di dati (Visual Basic)
-Le variabili non dichiarate e le variabili dichiarate senza un tipo di dati vengono assegnate i `Object` tipo di dati. Ciò semplifica la scrittura di programmi rapidamente, ma è possibile che vengano eseguite più lentamente.  
-  
-## <a name="strong-typing"></a>Tipizzazione forte  
- Specifica dei tipi di dati per tutte le variabili è detta *tipizzazione forte*. Usando la tipizzazione forte presenta diversi vantaggi:  
-  
-- Consente il supporto IntelliSense per le variabili. In questo modo è possibile visualizzare le relative proprietà e gli altri membri durante la digitazione nel codice.  
-  
-- Sfrutta il controllo del tipo del compilatore. Questo viene intercettato istruzioni possono avere esito negativo in fase di esecuzione a causa di errori, ad esempio overflow. Anche intercetta le chiamate ai metodi su oggetti che non li supportano.  
-  
-- Restituisce un'esecuzione più rapida del codice.  
-  
-## <a name="most-efficient-data-types"></a>Tipi di dati più efficienti  
- Per le variabili che non contengono mai frazioni, i tipi di dati integrali sono più efficienti rispetto ai tipi non integrali. In Visual Basic `Integer` e `UInteger` sono i tipi numerici più efficienti.  
-  
- Per i numeri frazionari, `Double` è il tipo di dati più efficiente, perché i processori in piattaforme corrente eseguono operazioni a virgola mobile a precisione doppia. Tuttavia, le operazioni con `Double` non sono veloci come con i tipi integrali, ad esempio `Integer`.  
-  
-## <a name="specifying-data-type"></a>Impostazione tipo di dati  
- Usare la [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) per dichiarare una variabile di un tipo specifico. Contemporaneamente, è possibile specificare il livello di accesso usando il [pubblico](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), o [privato](../../../../visual-basic/language-reference/modifiers/private.md) (parola chiave), come nel esempio seguente.  
-  
-```  
-Private x As Double  
-Protected s As String  
-```  
-  
-## <a name="character-conversion"></a>Conversione di caratteri  
- Il `AscW` e `ChrW` funzioni operano in Unicode. È consigliabile usarli piuttosto `Asc` e `Chr`, che devono essere convertite in e da Unicode.  
-  
+Alle variabili e alle variabili non dichiarate dichiarate senza `Object` un tipo di dati viene assegnato il tipo di dati. In questo modo è facile scrivere rapidamente i programmi, ma è possibile che vengano eseguiti più lentamente.
+
+## <a name="strong-typing"></a>Tipizzazione forte
+ Specificare i tipi di dati per tutte le variabili è noto come tipizzazione *forte*. L'uso di tipizzazione forte presenta diversi vantaggi:
+
+- Abilita il supporto IntelliSense per le variabili. In questo modo è possibile visualizzare le relative proprietà e altri membri durante la digitazione nel codice.
+
+- Sfrutta i vantaggi del controllo dei tipi del compilatore. Questa operazione intercetta le istruzioni che possono avere esito negativo in fase di esecuzione a causa di errori come l'overflow. Rileva inoltre le chiamate ai metodi su oggetti che non li supportano.
+
+- Questo comporta un'esecuzione più rapida del codice.
+
+## <a name="most-efficient-data-types"></a>Tipi di dati più efficienti
+ Per le variabili che non contengono mai frazioni, i tipi di dati integrali sono più efficienti dei tipi non integrali. In Visual Basic `Integer` e `UInteger` sono i tipi numerici più efficienti.
+
+ Per i numeri frazionari, `Double` è il tipo di dati più efficiente, perché i processori sulle piattaforme correnti eseguono operazioni a virgola mobile con precisione doppia. Tuttavia, le operazioni `Double` con non sono altrettanto veloci dei tipi integrali, `Integer`ad esempio.
+
+## <a name="specifying-data-type"></a>Specifica del tipo di dati
+ Utilizzare l' [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) per dichiarare una variabile di un tipo specifico. È possibile specificare contemporaneamente il relativo livello di accesso tramite la parola chiave [public](../../../../visual-basic/language-reference/modifiers/public.md), [protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)o [private](../../../../visual-basic/language-reference/modifiers/private.md) , come nell'esempio seguente.
+
+```vb
+Private x As Double
+Protected s As String
+```
+
+## <a name="character-conversion"></a>Conversione di caratteri
+ Le `AscW` funzioni `ChrW` e operano in Unicode. È consigliabile usarli in modo preferenziale `Chr`per e, che devono essere `Asc` convertiti all'interno e all'esterno di Unicode.
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>

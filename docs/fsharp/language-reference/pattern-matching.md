@@ -1,23 +1,23 @@
 ---
 title: Criteri di ricerca
-description: Informazioni su come vengono usati i modelli F# per confrontare i dati con strutture logiche, scomporre i dati in parti costituenti o estrarre informazioni dai dati.
+description: Informazioni sul modo in F# cui vengono usati i modelli per confrontare i dati con le strutture logiche, scomporre i dati in parti costituenti o estrarre informazioni dai dati.
 ms.date: 05/16/2016
-ms.openlocfilehash: f76a5fb675f83df87dd896f471a3552495f39e7e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641763"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627294"
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca
 
-I modelli sono regole per la trasformazione dei dati di input. Vengono usati in tutto il F# lingua per confrontare i dati con una struttura logica o le strutture, decomporre i dati nelle parti costituenti o estrarre informazioni dai dati in vari modi.
+I modelli sono regole per la trasformazione dei dati di input. Vengono usati in tutto il F# linguaggio per confrontare i dati con una struttura o strutture logiche, scomporre i dati in parti costituenti o estrarre informazioni dai dati in diversi modi.
 
 ## <a name="remarks"></a>Note
 
-I modelli vengono utilizzati in numerosi costrutti di linguaggio, ad esempio il `match` espressione. Vengono usati quando si elaborano argomenti per le funzioni nel `let` associazioni, le espressioni lambda e nei gestori di eccezioni associati il `try...with` espressione. Per altre informazioni, vedere [espressioni di ricerca](match-expressions.md), [associazioni let](functions/let-bindings.md), [espressioni Lambda: Il `fun` parola chiave](functions/lambda-expressions-the-fun-keyword.md), e [alle eccezioni: Il `try...with` espressione](exception-handling/the-try-with-expression.md).
+I modelli vengono utilizzati in molti costrutti di linguaggio, ad `match` esempio l'espressione. Vengono usati quando si elaborano gli argomenti per le funzioni `let` nelle associazioni, le espressioni lambda e nei gestori di eccezioni associati `try...with` all'espressione. Per ulteriori informazioni, vedere [espressioni di corrispondenza](match-expressions.md), [associazioni let](./functions/let-bindings.md), [espressioni lambda: La `fun` parola](./functions/lambda-expressions-the-fun-keyword.md)chiave e[le eccezioni: `try...with` Espressione.](/.exception-handling/the-try-with-expression.md)
 
-Ad esempio, nelle `match` espressione, il *pattern* è quello che segue il simbolo di barra verticale.
+Nell' `match` espressione, ad esempio, il *modello* è quello che segue il simbolo della pipe.
 
 ```fsharp
 match expression with
@@ -25,56 +25,56 @@ match expression with
 ...
 ```
 
-Ogni modello funge da una regola per trasformare l'input in qualche modo. Nel `match` espressione, ogni modello viene esaminato a turno per vedere se i dati di input sono compatibili con lo schema. Se viene trovata una corrispondenza, viene eseguito l'espressione di risultato. Se non viene trovata una corrispondenza, viene testata la regola del modello successiva. Facoltativo quando *condition* parte viene illustrata in [espressioni di ricerca](match-expressions.md).
+Ogni modello funge da regola per trasformare in qualche modo l'input. `match` Nell'espressione ogni modello viene esaminato a sua volta per verificare se i dati di input sono compatibili con il modello. Se viene trovata una corrispondenza, viene eseguita l'espressione di risultato. Se non viene trovata alcuna corrispondenza, viene testata la regola del modello successiva. La parte della *condizione* when facoltativa è illustrata nelle [Espressioni match](match-expressions.md).
 
-Nella tabella seguente sono illustrati i modelli supportati. In fase di esecuzione, l'input viene verificato rispetto a ognuno dei modelli seguenti nell'ordine elencato nella tabella, e modelli applicate in modo ricorsivo, dalla prima all'ultimo così come appaiono nel codice e da sinistra a destra per i modelli per ogni riga.
+Nella tabella seguente sono illustrati i modelli supportati. In fase di esecuzione, l'input viene testato rispetto a ognuno dei modelli seguenti nell'ordine elencato nella tabella e i modelli vengono applicati in modo ricorsivo, dal primo all'ultimo come appaiono nel codice e da sinistra a destra per i modelli in ogni riga.
 
-|Nome|Descrizione|Esempio|
+|Name|Descrizione|Esempio|
 |----|-----------|-------|
-|Criterio costante|Qualsiasi numerica, carattere, o valore letterale stringa, una costante di enumerazione o identificatore letterale definito|`1.0`, `"test"`, `30`, `Color.Red`|
-|Modello identificatore|Valore case di unione discriminata, etichetta di eccezione o case di modello attivo|`Some(x)`<br /><br />`Failure(msg)`|
-|Modello variabile|*identifier*|`a`|
-|`as` Modello|*pattern* come *identificatore*|`(a, b) as tuple1`|
-|O un modello|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
-|E criterio|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
-|Modello costruttore|*identifier* :: *list-identifier*|`h :: t`|
-|Modello elenco|[ *pattern_1*; ... ; *pattern_n* ]|`[ a; b; c ]`|
-|Modello matrice|[&#124; *pattern_1*; ..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
-|Modello con parentesi|( *pattern* )|`( a )`|
-|Modello tupla|( *pattern_1*, ... , *pattern_n* )|`( a, b )`|
-|Modello record|{ *identifier1* = *pattern_1*;.... *identifier_n* = *pattern_n* }|`{ Name = name; }`|
-|Modello carattere jolly|_|`_`|
-|Modello con annotazione del tipo|*pattern* : *tipo*|`a : int`|
-|Modello di test del tipo|:? *tipo di* [come *identificatore* ]|`:? System.DateTime as dt`|
+|Criterio costante|Qualsiasi valore letterale stringa, numerico o carattere, una costante di enumerazione o un identificatore di valore letterale definito|`1.0`, `"test"`, `30`, `Color.Red`|
+|Modello di identificatore|Valore del case di un'unione discriminata, un'etichetta di eccezione o un case del criterio attivo|`Some(x)`<br /><br />`Failure(msg)`|
+|Modello di variabile|*identifier*|`a`|
+|`as`modello|*modello* come *identificatore*|`(a, b) as tuple1`|
+|Modello OR|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
+|Modello AND|*Ripetizione piatta1* &amp; *pattern2*|`(a, b) & (_, "test")`|
+|Modello cons|identificatore:: *List-Identifier*|`h :: t`|
+|Modello di elenco|[ *pattern_1*;...; *pattern_n* ]|`[ a; b; c ]`|
+|Modello di matrice|[&#124; *pattern_1*; ..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|Modello racchiuso tra parentesi|( *modello* )|`( a )`|
+|Modello tupla|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
+|Modello di record|{ *identificatore1* = *pattern_1*;...; *identifier_n*  =  *pattern_n* }|`{ Name = name; }`|
+|Modello con caratteri jolly|_|`_`|
+|Modello insieme all'annotazione del tipo|*modello* : *tipo*|`a : int`|
+|Modello di test del tipo|:? *tipo* di [come *identificatore* ]|`:? System.DateTime as dt`|
 |Modello null|Null|`null`|
 
 ## <a name="constant-patterns"></a>Modelli costanti
 
-Modelli costanti sono numerici, di carattere e valori letterali stringa, le costanti di enumerazione (con il nome del tipo di enumerazione). Oggetto `match` espressione che include solo modelli costanti può essere confrontato con un'istruzione case in altri linguaggi. L'input viene confrontato con il valore letterale e il modello corrispondente se i valori sono uguali. Il tipo del valore letterale deve essere compatibile con il tipo dell'input.
+I modelli costanti sono numerici, caratteri e valori letterali stringa, costanti di enumerazione (con il nome del tipo di enumerazione incluso). Un' `match` espressione con solo criteri costanti può essere confrontata con un'istruzione case in altri linguaggi. L'input viene confrontato con il valore letterale e il criterio corrisponde se i valori sono uguali. Il tipo del valore letterale deve essere compatibile con il tipo di input.
 
-Nell'esempio seguente viene illustrato l'utilizzo di modelli letterali e Usa anche un modello variabile e un modello OR.
+Nell'esempio seguente viene illustrato l'utilizzo di modelli letterali e viene inoltre utilizzato un modello di variabile e un modello o.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4801.fs)]
 
-Un altro esempio di modello letterale è un modello basato su costanti di enumerazione. Quando si usano le costanti di enumerazione, è necessario specificare il nome del tipo di enumerazione.
+Un altro esempio di modello letterale è un modello basato sulle costanti di enumerazione. Quando si utilizzano le costanti di enumerazione, è necessario specificare il nome del tipo di enumerazione.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4802.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4802.fs)]
 
-## <a name="identifier-patterns"></a>Modelli identificatori
+## <a name="identifier-patterns"></a>Modelli di identificatore
 
-Se il modello è una stringa di caratteri che costituisce un identificatore valido, il formato dell'identificatore determina il modo in cui il modello è associato. Se l'identificatore è più lungo di un singolo carattere e inizia con un carattere maiuscolo, il compilatore prova a trovare una corrispondenza per il modello identificatore. L'identificatore per questo modello può essere un valore contrassegnato con l'attributo letterale, un case di unione discriminato, un identificatore di eccezione o case di modello attivo. Se non viene trovato alcun identificatore corrispondente, la corrispondenza ha esito negativo e l'input viene confrontato con la regola del modello successiva, il modello variabile.
+Se il modello è una stringa di caratteri che formano un identificatore valido, il formato dell'identificatore determina la modalità di corrispondenza del criterio. Se l'identificatore è più lungo di un singolo carattere e inizia con un carattere maiuscolo, il compilatore tenta di trovare una corrispondenza con il modello di identificatore. L'identificatore per questo modello può essere un valore contrassegnato con l'attributo Literal, un case di unione discriminata, un identificatore di eccezione o un caso di criterio attivo. Se non viene trovato alcun identificatore corrispondente, la corrispondenza ha esito negativo e la regola del criterio successiva, ovvero il modello di variabile, viene confrontata con l'input.
 
-Modelli di unione discriminata possono essere case denominati a semplici oppure possono avere un valore o una tupla contenente più valori. Se è presente un valore, è necessario specificare un identificatore per il valore. Nel caso di una tupla, è necessario fornire un modello tupla con un identificatore per ogni elemento della tupla o un identificatore con un nome di campo per uno o più campi unione denominati. Vedere gli esempi di codice in questa sezione per gli esempi.
+I modelli di Unione discriminati possono essere semplici casi denominati o possono avere un valore oppure una tupla contenente più valori. Se è presente un valore, è necessario specificare un identificatore per il valore. Nel caso di una tupla, è necessario fornire un modello di tupla con un identificatore per ogni elemento della tupla o un identificatore con un nome di campo per uno o più campi di unione denominati. Per esempi, vedere gli esempi di codice in questa sezione.
 
-Il `option` il tipo è un'unione discriminata con due casi `Some` e `None`. Un caso (`Some`) ha un valore, mentre l'altro (`None`) è semplicemente un case denominato. Pertanto `Some` deve avere una variabile per il valore associato il `Some` , ma `None` deve comparire da solo. Nel codice seguente, la variabile `var1` viene assegnato il valore ottenuto dalla corrispondenza il `Some` case.
+Il `option` tipo è un'unione discriminata con due case, `Some` e `None`. Un case (`Some`) ha un valore, ma l'altro (`None`) è solo un case denominato. Pertanto, `Some` deve disporre di una variabile per il valore associato `Some` al case, ma `None` deve essere visualizzata da sola. Nel codice seguente alla variabile `var1` viene assegnato il valore ottenuto mediante la corrispondenza `Some` al case.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4803.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4803.fs)]
 
-Nell'esempio seguente, il `PersonName` unione discriminata contiene una combinazione di stringhe e caratteri che rappresentano i possibili formati dei nomi. I case di unione discriminata sono `FirstOnly`, `LastOnly`, e `FirstLast`.
+Nell'esempio seguente, l' `PersonName` unione discriminata contiene una combinazione di stringhe e caratteri che rappresentano le possibili forme di nomi. I case dell'unione discriminata sono `FirstOnly`, `LastOnly`e `FirstLast`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4804.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4804.fs)]
 
-Per le unioni discriminate con campi denominati, utilizzare il segno di uguale (=) per estrarre il valore di un campo denominato. Ad esempio, si consideri un'unione discriminata con una dichiarazione simile alla seguente.
+Per le unioni discriminate con campi denominati, è possibile usare il segno di uguale (=) per estrarre il valore di un campo denominato. Si consideri, ad esempio, un'unione discriminata con una dichiarazione simile alla seguente.
 
 ```fsharp
 type Shape =
@@ -82,7 +82,7 @@ type Shape =
     | Circle of radius : float
 ```
 
-È possibile usare i campi denominati in un'espressione corrispondente come indicato di seguito.
+È possibile utilizzare i campi denominati in un'espressione di criteri di ricerca come indicato di seguito.
 
 ```fsharp
 let matchShape shape =
@@ -91,7 +91,7 @@ let matchShape shape =
     | Circle(r) -> printfn "Circle with radius %f" r
 ```
 
-L'utilizzo del campo denominato è facoltativo, pertanto nell'esempio precedente, entrambi `Circle(r)` e `Circle(radius = r)` hanno lo stesso effetto.
+L'uso del campo denominato è facoltativo, quindi nell'esempio precedente, sia `Circle(r)` che `Circle(radius = r)` hanno lo stesso effetto.
 
 Quando si specificano più campi, usare il punto e virgola (;) come separatore.
 
@@ -101,105 +101,105 @@ match shape with
 | _ -> ()
 ```
 
-Modelli attivi consentono di definire la corrispondenza di modelli personalizzata più complessa. Per altre informazioni sui modelli attivi, vedere [modelli attivi](active-patterns.md).
+I criteri attivi consentono di definire criteri di ricerca personalizzati più complessi. Per ulteriori informazioni sui modelli attivi, vedere [modelli attivi](active-patterns.md).
 
-Il caso in cui l'identificatore è un'eccezione viene usato nel criterio di corrispondenza nel contesto dei gestori di eccezioni. Per informazioni sui criteri di ricerca nella gestione delle eccezioni, vedere [alle eccezioni: Il `try...with` espressione](exception-handling/the-try-with-expression.md).
+Il caso in cui l'identificatore è un'eccezione viene usato nei criteri di ricerca nel contesto dei gestori di eccezioni. Per informazioni sui criteri di ricerca nella gestione delle eccezioni [, vedere eccezioni: `try...with` Espressione.](/.exception-handling/the-try-with-expression.md)
 
 ## <a name="variable-patterns"></a>Modelli variabili
 
-Il modello variabile assegna la corrispondenza con un nome di variabile, che è quindi disponibile per l'utilizzo nell'espressione di esecuzione a destra del valore di `->` simbolo. Un modello variabile da solo corrisponde a qualsiasi input, ma modelli variabili sono spesso inclusi in altri modelli, consentendo pertanto di creare strutture più complesse come tuple e matrici da scomporre in variabili.
+Il modello di variabile assegna il valore corrispondente a un nome di variabile, che è quindi disponibile per l'uso nell'espressione di esecuzione a destra del `->` simbolo. Un modello variabile da solo corrisponde a qualsiasi input, ma i modelli variabili vengono spesso visualizzati all'interno di altri modelli, consentendo quindi di rendere le strutture più complesse, ad esempio le tuple e le matrici, da scomporre in variabili.
 
-L'esempio seguente illustra un modello variabile all'interno di un modello tupla.
+Nell'esempio seguente viene illustrato un modello di variabile all'interno di un modello di tupla.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4805.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4805.fs)]
 
-## <a name="as-pattern"></a>come modello
+## <a name="as-pattern"></a>Modello As
 
-Il `as` pattern è un modello che ha un `as` aggiunta la clausola. Il `as` clausola associa il valore corrispondente a un nome che può essere utilizzato nell'espressione di esecuzione di un `match` espressione, o, nel caso in cui questo modello viene usato in un `let` associazione, il nome viene aggiunto come associazione all'ambito locale.
+Il `as` modello è un modello a cui è `as` stata aggiunta una clausola. La clausola associa il valore corrispondente a un nome che può essere utilizzato nell'espressione di esecuzione di un' `match` espressione o, nel caso in cui questo modello venga utilizzato in un' `let` associazione, il nome viene aggiunto come binding all'ambito locale. `as`
 
-L'esempio seguente usa un `as` pattern.
+Nell'esempio seguente viene usato `as` un modello.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4806.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4806.fs)]
 
-## <a name="or-pattern"></a>O un modello
+## <a name="or-pattern"></a>Modello OR
 
-Il modello OR viene utilizzato quando i dati di input possono corrispondere a più modelli e si desidera eseguire lo stesso codice di conseguenza. I tipi di entrambi i lati del modello OR devono essere compatibili.
+Il modello o viene usato quando i dati di input possono corrispondere a più modelli e si vuole eseguire lo stesso codice di conseguenza. I tipi di entrambi i lati del modello o devono essere compatibili.
 
-Nell'esempio seguente viene illustrato il modello OR.
+Nell'esempio seguente viene illustrato il modello o.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4807.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4807.fs)]
 
-## <a name="and-pattern"></a>E criterio
+## <a name="and-pattern"></a>Modello AND
 
-Il modello AND richiede che l'input corrisponda a due modelli. I tipi di entrambi i lati del modello AND devono essere compatibili.
+Per il modello AND è necessario che l'input corrisponda a due modelli. I tipi di entrambi i lati del modello e devono essere compatibili.
 
-Nell'esempio seguente è simile a `detectZeroTuple` mostrato nel [modello tupla](https://msdn.microsoft.com/library/#tuple) sezione più avanti in questo argomento, ma in questo caso entrambe `var1` e `var2` ottenuti come valori utilizzando il modello AND.
+L'esempio seguente è simile `detectZeroTuple` a quello illustrato nella sezione relativa al [modello](https://msdn.microsoft.com/library/#tuple) di tupla più avanti in `var1` questo `var2` argomento, ma in questo caso e vengono ottenuti come valori utilizzando il modello e.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
 
-## <a name="cons-pattern"></a>Modello costruttore
+## <a name="cons-pattern"></a>Modello cons
 
-Il modello costruttore viene utilizzato per scomporre un elenco nel primo elemento, il *head*e un elenco che contiene gli elementi rimanenti, il *tail*.
+Il modello cons viene usato per scomporre un elenco nel primo elemento, la *testa*e un elenco che contiene gli elementi rimanenti, ovvero la *coda*.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
 
-## <a name="list-pattern"></a>Modello elenco
+## <a name="list-pattern"></a>Modello di elenco
 
-Il modello elenco consente gli elenchi da scomporre in un numero di elementi. Il modello elenco può corrispondere solo elenchi di un numero specifico di elementi.
+Il modello elenco consente di scomporre gli elenchi in un numero di elementi. Il pattern list stesso può corrispondere solo a elenchi di un numero specifico di elementi.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4810.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4810.fs)]
 
-## <a name="array-pattern"></a>Modello matrice
+## <a name="array-pattern"></a>Modello di matrice
 
-Il modello matrice assomiglia al modello elenco e può essere utilizzato per scomporre matrici di un determinato periodo.
+Il modello di matrice è simile al modello di elenco e può essere usato per scomporre le matrici di una lunghezza specifica.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4811.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4811.fs)]
 
-## <a name="parenthesized-pattern"></a>Modello con parentesi
+## <a name="parenthesized-pattern"></a>Modello racchiuso tra parentesi
 
-È possibile raggruppare le parentesi attorno ai modelli per ottenere l'associazione desiderata. Nell'esempio seguente vengono usate parentesi per controllare l'associazione tra un modello AND e un modello di costruttore.
+Le parentesi possono essere raggruppate intorno ai modelli per ottenere l'associatività desiderata. Nell'esempio seguente, le parentesi vengono utilizzate per controllare l'associatività tra un pattern AND e un modello cons.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4812.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4812.fs)]
 
-## <a name="tuple-pattern"></a>Tuple Pattern
+## <a name="tuple-pattern"></a>Modello tupla
 
-Il modello tupla corrisponde all'input in formato di tupla e consente la tupla scomporre nei relativi elementi costituenti utilizzando criteri di ricerca di variabili per ogni posizione nella tupla.
+Il modello di tupla corrisponde all'input nel modulo di tupla e consente di scomporre la tupla nei relativi elementi costitutivi usando variabili di criteri di ricerca per ogni posizione nella tupla.
 
-Nell'esempio seguente viene illustrato il modello tupla e anche utilizzati modelli letterali, modelli variabili e il modello carattere jolly.
+Nell'esempio seguente viene illustrato il modello di tupla e vengono utilizzati anche modelli letterali, modelli variabili e il modello con caratteri jolly.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4813.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4813.fs)]
 
-## <a name="record-pattern"></a>Modello record
+## <a name="record-pattern"></a>Modello di record
 
-Il modello di record è utilizzato per scomporre record per estrarre i valori dei campi. Il modello non dovrà fare riferimento a tutti i campi del record. eventuali campi omessi non partecipano alla corrispondenza sufficiente e non vengono estratti.
+Il pattern di record viene usato per scomporre i record per estrarre i valori dei campi. Il modello non deve fare riferimento a tutti i campi del record; tutti i campi omessi non partecipano alla corrispondenza e non vengono estratti.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4814.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4814.fs)]
 
-## <a name="wildcard-pattern"></a>Modello carattere jolly
+## <a name="wildcard-pattern"></a>Modello con caratteri jolly
 
-Il modello carattere jolly è rappresentato dal carattere di sottolineatura (`_`) di caratteri e corrisponde a qualsiasi input, come il modello variabile, ad eccezione del fatto che l'input viene rimosso anziché essere assegnato a una variabile. Il modello carattere jolly viene spesso usato in altri modelli come segnaposto per i valori che non sono necessari nell'espressione a destra del `->` simbolo. Il modello con caratteri jolly viene usato spesso anche alla fine di un elenco di modelli per la corrispondenza di qualsiasi input senza corrispondenza. In molti esempi di codice in questo argomento viene illustrato il modello carattere jolly. Vedere il codice precedente per un esempio.
+Il carattere jolly è rappresentato dal carattere di sottolineatura (`_`) e corrisponde a qualsiasi input, proprio come il modello di variabile, ad eccezione del fatto che l'input viene eliminato anziché assegnato a una variabile. Il modello con caratteri jolly viene spesso usato all'interno di altri modelli come segnaposto per i valori che non sono necessari nell'espressione a `->` destra del simbolo. Il modello con caratteri jolly viene usato spesso anche alla fine di un elenco di modelli per trovare la corrispondenza con qualsiasi input senza corrispondenza. Il modello con caratteri jolly è illustrato in molti esempi di codice in questo argomento. Per un esempio, vedere il codice precedente.
 
-## <a name="patterns-that-have-type-annotations"></a>Modelli con annotazioni del tipo
+## <a name="patterns-that-have-type-annotations"></a>Modelli con annotazioni di tipo
 
-I modelli possono includere annotazioni del tipo. Queste si comportano come altre annotazioni del tipo e determinano l'inferenza, come altre annotazioni del tipo. Le parentesi sono necessari annotazioni del tipo nei modelli. Il codice seguente illustra un modello che ha un'annotazione di tipo.
+I modelli possono avere annotazioni di tipo. Si comportano come altre annotazioni di tipo e inferenza guida come altre annotazioni di tipo. Le parentesi sono obbligatorie intorno alle annotazioni di tipo nei modelli. Il codice seguente illustra un modello con un'annotazione di tipo.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4815.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4815.fs)]
 
-## <a name="type-test-pattern"></a>Modello di Test del tipo
+## <a name="type-test-pattern"></a>Modello di test del tipo
 
-In base all'input rispetto a un tipo viene utilizzato il modello di test del tipo. Se il tipo di input affinché una corrispondenza (o un tipo derivato del) il tipo specificato nel modello, la corrispondenza ha esito positivo.
+Il modello di test del tipo viene usato per trovare la corrispondenza con l'input rispetto a un tipo. Se il tipo di input corrisponde a (o a un tipo derivato di) il tipo specificato nel criterio, la corrispondenza ha esito positivo.
 
 Nell'esempio seguente viene illustrato il modello di test del tipo.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
 
 ## <a name="null-pattern"></a>Modello null
 
-Il modello null corrisponde al valore null che può essere visualizzato quando si lavora con tipi che consentono un valore null. Modelli null vengono spesso utilizzati per l'interazione con codice di .NET Framework. Ad esempio, il valore restituito di un'API .NET può essere l'input per un `match` espressione. È possibile controllare il flusso di programma basato se il valore restituito è null, nonché su altre caratteristiche del valore restituito. È possibile usare il modello null per impedire la propagazione al resto del programma di valori null.
+Il criterio null corrisponde al valore null che può essere visualizzato quando si utilizzano tipi che consentono un valore null. I modelli null vengono spesso usati quando si interopera con .NET Framework codice. Ad esempio, il valore restituito di un'API .NET potrebbe essere l'input di un' `match` espressione. È possibile controllare il flusso del programma in base al fatto che il valore restituito sia null e anche ad altre caratteristiche del valore restituito. È possibile usare il modello null per impedire che i valori null vengano propagati al resto del programma.
 
-L'esempio seguente usa il modello null e il modello variabile.
+Nell'esempio seguente vengono utilizzati il modello null e il modello di variabile.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
 
 ## <a name="see-also"></a>Vedere anche
 

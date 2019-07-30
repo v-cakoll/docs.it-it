@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 9312f386198459d0d2dac110827cc6c0029eb247
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ffb8101ba0182c8ff11667f59d9bc10c5ffe670
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033033"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629567"
 ---
 # <a name="ui-automation-providers-overview"></a>Cenni preliminari sui provider di automazione interfaccia utente
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: Automazione interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.  
   
  I provider di automazione interfaccia utente abilitano la comunicazione dei controlli con le applicazioni client di automazione interfaccia utente. In generale, ogni controllo o un altro elemento distinto in una [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] è rappresentato da un provider. Il provider espone informazioni sull'elemento e facoltativamente implementa i pattern di controllo che consentono all'applicazione client di interagire con il controllo.  
   
@@ -27,12 +27,12 @@ ms.locfileid: "62033033"
  I provider di automazione interfaccia utente rientrano in due categorie, ovvero provider lato client e provider lato server.  
   
 ### <a name="client-side-providers"></a>Provider lato client  
- I provider lato client vengono implementati dai client di automazione interfaccia utente per comunicare con un'applicazione che non supporta parzialmente o completamente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Provider lato client comunicano in genere con il server attraverso il limite di processo inviando e ricevendo messaggi di Windows.  
+ I provider lato client vengono implementati dai client di automazione interfaccia utente per comunicare con un'applicazione che non supporta parzialmente o completamente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. I provider lato client in genere comunicano con il server attraverso il limite di processo inviando e ricevendo messaggi di Windows.  
   
- Poiché i provider di automazione interfaccia utente per i controlli [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Form, o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] applicazioni viene fornita come parte del sistema operativo, le applicazioni client raramente sono devono implementare i propri provider e questa panoramica non vengono forniti dettagli più avanti.  
+ Poiché i provider di automazione interfaccia utente [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]per i controlli in [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] , Windows Forms o le applicazioni vengono forniti come parte del sistema operativo, le applicazioni client raramente devono implementare i propri provider e questa panoramica non le copre Ulteriori.  
   
 ### <a name="server-side-providers"></a>Provider lato server  
- Provider lato server vengono implementati da controlli personalizzati o da applicazioni basate su un framework interfaccia utente diverso da [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Form, o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ I provider lato server vengono implementati da controlli personalizzati o da applicazioni basate su un Framework dell'interfaccia utente diverso [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]da, Windows Forms o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
  I provider lato server comunicano con le applicazioni client attraverso il limite di processo esponendo le interfacce al sistema principale di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , che a sua volta gestisce le richieste dai client.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62033033"
   
  I controlli contenitore[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] , ad esempio caselle di riepilogo e visualizzazioni albero, sono considerate framework in quanto contengono il proprio codice per il rendering di elementi figlio e l'esecuzione di hit testing su di essi. Per contro, una casella di testo [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] non è un framework perché i processi di rendering  e hit testing sono gestiti dalla finestra [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] che la contiene.  
   
- L' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] in un'applicazione può essere costituita da diversi framework. Ad esempio, una finestra di applicazione HWND può contenere [!INCLUDE[TLA#tla_dhtml](../../../includes/tlasharptla-dhtml-md.md)] , che a sua volta contiene un componente, ad esempio una casella combinata, in un elemento HWND.  
+ L' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] in un'applicazione può essere costituita da diversi framework. Ad esempio, una finestra dell'applicazione HWND potrebbe contenere codice HTML dinamico (DHTML) che a sua volta contiene un componente, ad esempio una casella combinata in un HWND.  
   
 ### <a name="fragments"></a>Frammenti  
  Un frammento è un sottoalbero completo di elementi di un determinato framework. L'elemento in corrispondenza del nodo radice del sottoalbero è definito radice del frammento. Una radice del frammento non ha un elemento padre, ma è ospitato in un altro framework, in genere una finestra [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] (HWND).  

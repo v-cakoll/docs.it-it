@@ -1,25 +1,25 @@
 ---
-title: Le sezioni (F#)
-description: Informazioni su come usare le sezioni esistente F# tipi di dati e come definire le proprie sezioni per altri tipi di dati.
+title: Sezioni (F#)
+description: Informazioni su come usare le sezioni per i tipi F# di dati esistenti e su come definire sezioni personalizzate per altri tipi di dati.
 ms.date: 01/22/2019
-ms.openlocfilehash: 1d8bb029ad18c8853ab58888959967ed279fb368
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925992"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627141"
 ---
 # <a name="slices"></a>Sezioni
 
-In F#, una sezione è un subset di un tipo di dati. Per essere in grado di sfruttare una sezione di un tipo di dati, è necessario definire il tipo di dati un `GetSlice` metodo o in un [digitare estensione](type-extensions.md) vale a dire nell'ambito. Questo articolo illustra come eseguire sezioni di esistenti F# i tipi e come definirne uno proprio.
+In F#una sezione è un subset di un tipo di dati. Per poter eseguire una sezione da un tipo di dati, il tipo di dati deve definire un `GetSlice` metodo o un'estensione del [tipo](type-extensions.md) nell'ambito. Questo articolo illustra come prendere le sezioni dai tipi esistenti F# e come definirne di personalizzate.
 
-Le sezioni sono simili agli [indicizzatori](members/indexed-properties.md), ma anziché restituire un singolo valore dalla struttura di dati sottostante, consentono di produrre più sessioni.
+Le sezioni sono simili agli [indicizzatori](./members/indexed-properties.md), ma anziché restituire un singolo valore dalla struttura dei dati sottostante, producono più di uno.
 
-F#è attualmente il supporto intrinseco per il sezionamento stringhe, elenchi, matrici e matrici 2D.
+F#attualmente dispone del supporto intrinseco per sezionare stringhe, elenchi, matrici e matrici 2D.
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a>Sezionamento di base con F# elenchi e matrici
+## <a name="basic-slicing-with-f-lists-and-arrays"></a>Sezionamento di base F# con elenchi e matrici
 
-I tipi di dati più comuni che vengono sezionati sono F# elenchi e matrici. Nell'esempio seguente viene illustrato come eseguire questa operazione con elenchi:
+I tipi di dati più comuni sezionati sono F# elenchi e matrici. Nell'esempio seguente viene illustrato come eseguire questa operazione con gli elenchi:
 
 ```fsharp
 // Generate a list of 100 integers
@@ -38,7 +38,7 @@ let unboundedEnd = fullList.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-Sezionamento delle matrici è esattamente come gli elenchi di sezionamento:
+Il sezionamento di matrici è analogo a quello degli elenchi di sezionamento:
 
 ```fsharp
 // Generate an array of 100 integers
@@ -57,11 +57,11 @@ let unboundedEnd = fullArray.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-## <a name="slicing-multidimensional-arrays"></a>Sezionamento delle matrici multidimensionali
+## <a name="slicing-multidimensional-arrays"></a>Sezionamento di matrici multidimensionali
 
-F#supporta matrici multidimensionali in di F# libreria di base. Come con le matrici unidimensionali, sezioni di matrici multidimensionali possono anche essere utile. Tuttavia, l'introduzione di altre quote impone una sintassi leggermente diversa in modo che sia possibile eseguire le sezioni di righe e colonne specifiche.
+F#supporta matrici multidimensionali nella libreria F# principale. Come per le matrici unidimensionali, possono essere utili anche le sezioni di matrici multidimensionali. Tuttavia, l'introduzione di dimensioni aggiuntive impone una sintassi leggermente diversa, in modo da poter eseguire sezioni di righe e colonne specifiche.
 
-Negli esempi seguenti illustrano come eseguire il sezionamento una matrice 2D:
+Gli esempi seguenti illustrano come sezionare una matrice 2D:
 
 ```fsharp
 // Generate a 3x3 2D matrix
@@ -89,13 +89,13 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-Il F# libreria di base non definisce `GetSlice`per le matrici 3D. Se si desidera sezionare quelli o ad altre matrici o più dimensioni, è necessario definire il `GetSlice` membro manualmente.
+La F# libreria principale non definisce `GetSlice`per le matrici 3D. Se si desidera sezionare tali matrici o altre matrici di dimensioni maggiori, è necessario definire il `GetSlice` membro manualmente.
 
-## <a name="defining-slices-for-other-data-structures"></a>La definizione di intervalli di altre strutture di dati
+## <a name="defining-slices-for-other-data-structures"></a>Definizione di sezioni per altre strutture di dati
 
-Il F# libreria di base definisce le sezioni per un set limitato di tipi. Se si vuole definire sezioni per più tipi di dati, è possibile farlo nella definizione del tipo stesso o in un'estensione del tipo.
+La F# libreria principale definisce sezioni per un set limitato di tipi. Se si desidera definire sezioni per più tipi di dati, è possibile eseguire questa operazione nella definizione del tipo o in un'estensione del tipo.
 
-Ad esempio, ecco come è possibile definire sezioni per la <xref:System.ArraySegment%601> classe per consentire la manipolazione dei dati utile:
+Ad esempio, di seguito viene illustrato come definire le sezioni per la <xref:System.ArraySegment%601> classe per consentire una manipolazione dei dati semplice:
 
 ```fsharp
 open System
@@ -110,9 +110,9 @@ let arr = ArraySegment [| 1 .. 10 |]
 let slice = arr.[2..5] //[ 3; 4; 5]
 ```
 
-### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Usare l'incorporamento per evitare la conversione boxing se è necessario
+### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Utilizzare l'incorporamento per evitare la conversione boxing se necessario
 
-Se si siano definendo le sezioni per un tipo che è effettivamente uno struct, è consigliabile che si `inline` il `GetSlice` membro. Il F# compilatore ottimizza gli argomenti facoltativi, come evitare allocazioni heap come risultato di sezionamento. Ciò è particolarmente importante per i costrutti di sezionamento, ad esempio <xref:System.Span%601> che non possono essere allocati nell'heap.
+Se si definiscono sezioni per un tipo che è effettivamente uno struct, è consigliabile `inline` usare il `GetSlice` membro. Il F# compilatore ottimizza gli argomenti facoltativi, evitando qualsiasi allocazione di heap in seguito all'sezionamento. Questo è estremamente importante per i costrutti di sezionamento, <xref:System.Span%601> ad esempio, che non possono essere allocati nell'heap.
 
 ```fsharp
 open System
@@ -137,4 +137,4 @@ printSpan sp.[1..2] // |2; 3|]
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Proprietà indicizzate](members/indexed-properties.md)
+- [Proprietà indicizzate](./members/indexed-properties.md)

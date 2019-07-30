@@ -23,54 +23,59 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 42aecd0a5d948ab76d7bd11990d4cdbdce611015
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76073037dcaac0e87bc8a352f3b438332d11d881
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646956"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630137"
 ---
 # <a name="user-defined-data-type"></a>Tipo di dati definito dall'utente
-Contiene i dati in un formato definito. Il `Structure` istruzione definisce il formato.  
-  
- Le versioni precedenti di Visual Basic supportano il tipo definito dall'utente (UDT). La versione corrente lo espande in un *struttura*. Una struttura è una concatenazione di una o più *membri* di vari tipi di dati. Visual Basic vengono considerati una struttura di una singola unità, anche se è anche possibile accedere singolarmente i relativi membri.  
-  
-## <a name="remarks"></a>Note  
- Definire e usare un tipo di dati di struttura quando è necessario combinare diversi tipi di dati in una singola unità, o quando nessuno dei tipi di dati elementari soddisfare le esigenze.  
-  
- Il valore predefinito di un tipo di dati di struttura è costituito dalla combinazione dei valori predefiniti della ognuno dei relativi membri.  
-  
-## <a name="declaration-format"></a>Formato di dichiarazione  
- Una dichiarazione structure inizia con la [istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md) e termina con il `End Structure` istruzione. Il `Structure` istruzione fornisce il nome della struttura, che è anche l'identificatore del tipo di dati consente di definire la struttura. Altre parti del codice è possono usare questo identificatore per dichiarare variabili, parametri e funzioni restituiscono valori di tipo di dati della struttura.  
-  
- Le dichiarazioni tra il `Structure` e `End Structure` istruzioni definiscano i membri della struttura.  
-  
-## <a name="member-access-levels"></a>Livelli di accesso di membro  
- È necessario dichiarare ogni membro usando un [istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md) o un'istruzione che specifica il livello di accesso, ad esempio [pubblico](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), o [privato](../../../visual-basic/language-reference/modifiers/private.md). Se si usa un `Dim` informativa, le impostazioni predefinite a livello di accesso su pubblico.  
-  
-## <a name="programming-tips"></a>Suggerimenti per la programmazione  
-  
-- **Utilizzo di memoria.** Come con tutti i tipi di dati compositi, è possibile calcolare in modo sicuro il consumo di memoria totale di una struttura sommando le allocazioni di archiviazione nominale dei relativi membri. Inoltre, non è possibile tranquillamente presupporre che l'ordine di archiviazione in memoria è lo stesso l'ordine di dichiarazione. Se è necessario controllare il layout di archiviazione di una struttura, è possibile applicare il <xref:System.Runtime.InteropServices.StructLayoutAttribute> dell'attributo di `Structure` istruzione.  
-  
-- **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi definiti dall'utente in altri ambienti non sono compatibili con Visual Basic i tipi di struttura.  
-  
-- **Widening.** Non vi è alcuna conversione automatica a o da qualsiasi tipo di dati della struttura. È possibile definire operatori di conversione per la struttura tramite il [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md), è possibile dichiarare ogni operatore di conversione sia `Widening` o `Narrowing`.  
-  
-- **Caratteri tipo.** Tipi di dati di struttura non dispongono di alcun carattere di tipo letterale o un carattere di tipo identificatore.  
-  
-- **Tipo di Framework.** È disponibile alcun tipo corrispondente in .NET Framework. Tutte le strutture ereditano dalla classe di .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, ma nessun singole strutture corrisponde a <xref:System.ValueType?displayProperty=nameWithType>.  
-  
-## <a name="example"></a>Esempio  
- Il paradigma comune della seguente viene illustrata la struttura della dichiarazione di una struttura.  
-  
-```  
-[Public | Protected | Friend | Protected Friend | Private] Structure structname  
-    {Dim | Public | Friend | Private} member1 As datatype1  
-    ' ...  
-    {Dim | Public | Friend | Private} memberN As datatypeN  
-End Structure  
-```  
-  
+
+Include i dati in un formato definito dall'utente. L' `Structure` istruzione definisce il formato.
+
+Le versioni precedenti di Visual Basic supportano il tipo definito dall'utente (UDT). La versione corrente espande il tipo definito dall'utente a una *struttura*. Una struttura è una concatenazione di uno o più *membri* di diversi tipi di dati. Visual Basic considera una struttura come una singola unità, sebbene sia anche possibile accedere singolarmente ai relativi membri.
+
+## <a name="remarks"></a>Note
+
+Definire e usare un tipo di dati di struttura quando è necessario combinare diversi tipi di dati in una singola unità o quando nessuno dei tipi di dati elementari soddisfa le proprie esigenze.
+
+Il valore predefinito di un tipo di dati della struttura è costituito dalla combinazione dei valori predefiniti di ognuno dei relativi membri.
+
+## <a name="declaration-format"></a>Formato della dichiarazione
+
+Una dichiarazione di struttura inizia con l' [istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md) e termina con `End Structure` l'istruzione. L' `Structure` istruzione fornisce il nome della struttura, che è anche l'identificatore del tipo di dati che la struttura sta definendo. Altre parti del codice possono usare questo identificatore per dichiarare variabili, parametri e valori restituiti della funzione in modo che siano del tipo di dati della struttura.
+
+Le dichiarazioni tra le `Structure` istruzioni e `End Structure` definiscono i membri della struttura.
+
+## <a name="member-access-levels"></a>Livelli di accesso ai membri
+
+È necessario dichiarare ogni membro usando un' [istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md) o un'istruzione che specifica il livello di accesso, ad esempio [public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)o [private](../../../visual-basic/language-reference/modifiers/private.md). Se si usa un' `Dim` istruzione, il livello di accesso predefinito è public.
+
+## <a name="programming-tips"></a>Suggerimenti per la programmazione
+
+- **Consumo di memoria.** Come per tutti i tipi di dati compositi, non è possibile calcolare in modo sicuro il consumo di memoria totale di una struttura aggiungendo le allocazioni di archiviazione nominale dei relativi membri. Inoltre, non è possibile presupporre in modo sicuro che l'ordine di archiviazione in memoria sia uguale all'ordine di dichiarazione. Se è necessario controllare il layout di archiviazione di una struttura, è possibile applicare l' <xref:System.Runtime.InteropServices.StructLayoutAttribute> attributo `Structure` all'istruzione.
+
+- **Considerazioni sull'interoperabilità.** Se si è connessi con componenti non scritti per il .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi definiti dall'utente in altri ambienti non sono compatibili con Visual Basic tipi di struttura.
+
+- **Conversioni.** Non viene eseguita alcuna conversione automatica da o verso qualsiasi tipo di dati della struttura. È possibile definire gli operatori di conversione sulla struttura usando l' [istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)ed è possibile dichiarare ogni operatore di conversione come `Widening` o `Narrowing`.
+
+- **Digitare i caratteri.** I tipi di dati della struttura non hanno un carattere di tipo letterale o un carattere di tipo identificatore.
+
+- **Tipo di Framework.** Nessun tipo corrispondente nell'.NET Framework. Tutte le strutture ereditano dalla classe <xref:System.ValueType?displayProperty=nameWithType>.NET Framework, ma nessuna struttura specifica corrisponde <xref:System.ValueType?displayProperty=nameWithType>a.
+
+## <a name="example"></a>Esempio
+
+Nel paradigma seguente viene illustrato il contorno della dichiarazione di una struttura.
+
+```
+[Public | Protected | Friend | Protected Friend | Private] Structure structname
+    {Dim | Public | Friend | Private} member1 As datatype1
+    ' ...
+    {Dim | Public | Friend | Private} memberN As datatypeN
+End Structure
+```
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ValueType>

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: db7d6ec5663d657969e1508bd0b9f62c25e491b0
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 8f1c4415a834f7eb7c3048a89ab81de6921b7bf6
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484686"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629936"
 ---
 # <a name="cleartype-registry-settings"></a>Impostazioni del Registro di sistema ClearType
-In questo argomento viene fornita una panoramica [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] delle [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] impostazioni del registro di sistema [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilizzate dalle applicazioni di.  
+In questo argomento viene fornita una panoramica delle impostazioni del registro di sistema di Microsoft ClearType utilizzate dalle applicazioni WPF.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Informazioni generali sulla tecnologia  
@@ -29,7 +29,7 @@ In questo argomento viene fornita una panoramica [!INCLUDE[TLA2#tla_winclient](.
 ## <a name="registry-settings"></a>Impostazioni Registro di sistema  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]specifica quattro impostazioni del registro di sistema per il controllo delle funzionalità ClearType:  
   
-|Impostazione|Descrizione|  
+|Impostazione|DESCRIZIONE|  
 |-------------|-----------------|  
 |Livello ClearType|Descrive il livello di chiarezza dei colori ClearType.|  
 |Livello di gamma|Descrive il livello della componente cromatica del pixel per un dispositivo di visualizzazione.|  
@@ -80,7 +80,7 @@ In questo argomento viene fornita una panoramica [!INCLUDE[TLA2#tla_winclient](.
 ## <a name="pixel-structure"></a>Struttura del pixel  
  La struttura del pixel descrive il tipo di pixel alla base di un dispositivo di visualizzazione. La struttura del pixel è definita come uno di tre tipi:  
   
-|Type|Valore|Descrizione|  
+|Type|Valore|DESCRIZIONE|  
 |----------|-----------|-----------------|  
 |Semplice|0|Il dispositivo di visualizzazione non ha struttura del pixel. In questo caso le sorgenti di luce per ogni colore sono distribuite in modo uniforme nell'area dei pixel, condizione nota come rendering in scala di grigi. Questo è il funzionamento di un dispositivo di visualizzazione standard. ClearType non viene mai applicato al testo sottoposto a rendering.|  
 |RGB|1|Il dispositivo di visualizzazione dispone di pixel costituiti da tre strisce nell'ordine seguente: rosso, verde e blu. ClearType viene applicato al testo sottoposto a rendering.|  

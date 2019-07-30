@@ -1,17 +1,17 @@
 ---
 title: Celle di riferimento
-description: Informazioni su come F# celle di riferimento sono posizioni di archiviazione che consentono di creare valori modificabili con semantica di riferimento.
+description: Informazioni su F# come le celle di riferimento sono posizioni di archiviazione che consentono di creare valori modificabili con la semantica di riferimento.
 ms.date: 05/16/2016
-ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: faaa4a6b54ff0366163b6821edff7fa4cb2f5a88
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795401"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627244"
 ---
 # <a name="reference-cells"></a>Celle di riferimento
 
-*Fare riferimento alle celle* sono posizioni di archiviazione che consentono di creare valori modificabili con semantica di riferimento.
+*Le celle di riferimento* sono posizioni di archiviazione che consentono di creare valori modificabili con semantica di riferimento.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,7 +29,7 @@ Una cella di riferimento contiene un valore effettivo e non solo un indirizzo. Q
 
 Nell'esempio di codice seguente vengono illustrati la dichiarazione e l'utilizzo di celle di riferimento.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2201.fs)]
 
 L'output è `50`.
 
@@ -50,19 +50,19 @@ let ref x = { contents = x }
 
 Nella tabella seguente sono indicate le funzionalità disponibili nella cella di riferimento.
 
-|Operatore, membro o campo|Descrizione|Tipo|Definizione|
+|Operatore, membro o campo|Descrizione|Type|Definizione|
 |--------------------------|-----------|----|----------|
 |`!` (operatore di dereferenziazione)|Restituisce il valore sottostante.|`'a ref -> 'a`|`let (!) r = r.contents`|
 |`:=` (operatore di assegnazione)|Modifica il valore sottostante.|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
-|`ref` (operatore)|Incapsula un valore in una nuova cella di riferimento.|`'a -> 'a ref`|`let ref x = { contents = x }`|
-|`Value` (proprietà)|Ottiene o imposta il valore sottostante.|`unit -> 'a`|`member x.Value = x.contents`|
+|`ref`operatore|Incapsula un valore in una nuova cella di riferimento.|`'a -> 'a ref`|`let ref x = { contents = x }`|
+|`Value`Proprietà|Ottiene o imposta il valore sottostante.|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents` (campo del record)|Ottiene o imposta il valore sottostante.|`'a`|`let ref x = { contents = x }`|
 
 È possibile accedere al valore sottostante in diversi modi. Il valore restituito dall'operatore di dereferenziazione (`!`) non è un valore assegnabile. Se pertanto si modifica il valore sottostante, è necessario utilizzare l'operatore di assegnazione (`:=`).
 
 Sia la proprietà `Value` che il campo `contents` sono valori assegnabili e possono pertanto essere utilizzati per accedere al valore sottostante o per modificare tale valore, come illustrato nel codice seguente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2203.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2203.fs)]
 
 L'output è indicato di seguito.
 
@@ -75,13 +75,13 @@ L'output è indicato di seguito.
 
 Il campo `contents` viene fornito per garantire compatibilità con altre versioni di ML e comporta la generazione di un avviso durante la compilazione. Per disabilitare l'avviso, utilizzare l'opzione del compilatore `--mlcompatibility`. Per altre informazioni, vedere [Opzioni del compilatore](compiler-options.md).
 
-C#i programmatori devono sapere che `ref` in C# non è la stessa funzione illustrata in `ref` in F#. Costruisce l'equivalente F# vengono [zkratka](byrefs.md), che sono un concetto diverso dalle celle di riferimento.
+C#i programmatori devono tenere `ref` presente C# che in non è la stessa cosa F# `ref` di. I costrutti equivalenti F# in sono [ByRef](byrefs.md), che sono un concetto diverso dalle celle di riferimento.
 
-I valori contrassegnati come `mutable`può essere automaticamente promossa a `'a ref` acquisiti da una chiusura dei tag, vedere [valori](values/index.md).
+I valori contrassegnati `mutable`come possono essere promossi `'a ref` automaticamente a se acquisiti da una chiusura; vedere [valori](./values/index.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per il linguaggio F#](index.md)
 - [Parametri e argomenti](parameters-and-arguments.md)
-- [Riferimenti per simboli e operatori](symbol-and-operator-reference/index.md)
-- [Valori](values/index.md)
+- [Riferimenti per simboli e operatori](./symbol-and-operator-reference/index.md)
+- [Valori](./values/index.md)

@@ -1,64 +1,64 @@
 ---
 title: Generalizzazione automatica
-description: Informazioni su come F# generalizza automaticamente gli argomenti e i tipi di funzioni in modo che funzionano con più tipi, laddove possibile.
+description: Informazioni su F# come generalizza automaticamente gli argomenti e i tipi di funzioni in modo che funzionino con più tipi, quando possibile.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8fc61b5e0c227474a5e913b37f4c0dad9b235a6f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 501749a190d9770cbcd9848e3d528cba32fe6762
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641877"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630631"
 ---
 # <a name="automatic-generalization"></a>Generalizzazione automatica
 
-F#utilizza l'inferenza per valutare i tipi di funzioni ed espressioni. Questo argomento viene descritto come F# generalizza automaticamente gli argomenti e i tipi di funzioni in modo che funzionano con più tipi quando possibile.
+F#Usa l'inferenza del tipo per valutare i tipi di funzioni ed espressioni. In questo argomento viene F# descritto come generalizzare automaticamente gli argomenti e i tipi di funzioni in modo che funzionino con più tipi quando possibile.
 
 ## <a name="automatic-generalization"></a>Generalizzazione automatica
 
-Il F# compilatore, quando esegue l'inferenza del tipo in una funzione, determina se un determinato parametro può essere generico. Il compilatore esamina ogni parametro e determina se la funzione ha una dipendenza dal tipo specifico di tale parametro. Se non esiste, il tipo viene dedotto come generici.
+Il F# compilatore, quando esegue l'inferenza del tipo in una funzione, determina se un determinato parametro può essere generico. Il compilatore esamina ogni parametro e determina se la funzione ha una dipendenza dal tipo specifico di tale parametro. In caso contrario, il tipo viene dedotto come generico.
 
-Esempio di codice seguente viene illustrata una funzione che il compilatore deduce automaticamente per essere generica.
+Nell'esempio di codice seguente viene illustrata una funzione che il compilatore deduce da generica.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet101.fs)]
 
-Il tipo viene dedotto per essere `'a -> 'a -> 'a`.
+Il tipo viene dedotto come `'a -> 'a -> 'a`.
 
-Il tipo indica che si tratta di una funzione che accetta due argomenti dello stesso tipo sconosciuto e restituisce un valore dello stesso tipo. Uno dei motivi per cui la funzione precedente può essere generica è che il maggiore-operatore (`>`) è a sua volta generico. Maggiore-di operatore ha la firma `'a -> 'a -> bool`. Non tutti gli operatori sono generici e se il codice in una funzione Usa un tipo di parametro insieme a una funzione non generico o un operatore, tale tipo di parametro non può essere generalizzato.
+Il tipo indica che si tratta di una funzione che accetta due argomenti dello stesso tipo sconosciuto e restituisce un valore dello stesso tipo. Uno dei motivi per cui la funzione precedente può essere generica è che l'operatore Greater-`>`than () è generico. L'operatore Greater-than dispone della `'a -> 'a -> bool`firma. Non tutti gli operatori sono generici e se il codice in una funzione utilizza un tipo di parametro insieme a una funzione o a un operatore non generico, il tipo di parametro non può essere generalizzato.
 
-In quanto `max` è generico e può essere utilizzato con i tipi, ad esempio `int`, `float`e così via, come illustrato negli esempi seguenti.
+Poiché `max` è generico, può essere usato con tipi `int`come, `float`e così via, come illustrato negli esempi seguenti.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet102.fs)]
 
-Tuttavia, i due argomenti devono essere dello stesso tipo. La firma viene `'a -> 'a -> 'a`, non `'a -> 'b -> 'a`. Pertanto, il codice seguente genera un errore perché i tipi non corrispondono.
+Tuttavia, i due argomenti devono essere dello stesso tipo. La firma è `'a -> 'a -> 'a`, non `'a -> 'b -> 'a`. Pertanto, il codice seguente genera un errore perché i tipi non corrispondono.
 
 ```fsharp
 // Error: type mismatch.
 let biggestIntFloat = max 2.0 3
 ```
 
-Il `max` funzione funziona anche con qualsiasi tipo che supporta il valore maggiore: operatore di maggioranza. Pertanto, si può anche usarlo in una stringa, come illustrato nel codice seguente.
+La `max` funzione funziona anche con qualsiasi tipo che supporta l'operatore Greater-than. Pertanto, è possibile utilizzarlo anche in una stringa, come illustrato nel codice seguente.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet104.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet104.fs)]
 
-## <a name="value-restriction"></a>Limitazione dei valori
+## <a name="value-restriction"></a>Restrizione valore
 
-Il compilatore esegue generalizzazione automatica solo nelle definizioni di funzione completa che includono argomenti espliciti e sul semplici valori non modificabili.
+Il compilatore esegue la generalizzazione automatica solo per le definizioni di funzione complete con argomenti espliciti e su valori non modificabili semplici.
 
-Ciò significa che il compilatore genera un errore se si prova a compilare il codice che non è sufficientemente vincolato a un tipo specifico, ma anche non generalizzabile. Il messaggio di errore per questo problema è relativo a questa limitazione per la generalizzazione automatica per i valori come il *limitazione valore*.
+Questo significa che il compilatore genera un errore se si tenta di compilare codice non sufficientemente vincolato per essere un tipo specifico, ma anche non generalizzabile. Il messaggio di errore per questo problema si riferisce a questa restrizione sulla generalizzazione automatica per i valori come restrizione del *valore*.
 
-L'errore di limitazione valore si verifica in genere, quando si desidera un costrutto per essere generico, ma il compilatore dispone di informazioni sufficienti per generalizzarla o quando si omette involontariamente sufficienti informazioni sul tipo in un costrutto non generico. La soluzione per l'errore di limitazione valore consiste nel fornire informazioni più esplicite per comprenderle appieno limitare il problema di inferenza del tipo, in uno dei modi seguenti:
+In genere, l'errore di restrizione del valore si verifica quando si vuole che un costrutto sia generico, ma il compilatore non dispone di informazioni sufficienti per generalizzarlo o quando si omette involontariamente informazioni sul tipo sufficienti in un costrutto non generico. La soluzione per l'errore di restrizione del valore consiste nel fornire informazioni più esplicite per limitare completamente il problema di inferenza del tipo, in uno dei modi seguenti:
 
-- Vincolare un tipo può essere non generica aggiungendo un'annotazione di tipo esplicito a un parametro o valore.
+- Vincolare un tipo come non generico aggiungendo un'annotazione di tipo esplicita a un valore o a un parametro.
 
-- Se il problema sta usando un costrutto non generalizzabile per definire una funzione generica, ad esempio una composizione di funzione o in modo incompleto applicati gli argomenti della funzione sottoposti a currying, provare a riscrivere la funzione come una definizione di funzione ordinaria.
+- Se il problema sta usando un costrutto non generalizzabile per definire una funzione generica, ad esempio una composizione della funzione o gli argomenti della funzione sottoposta a currying, provare a riscrivere la funzione come definizione di funzione ordinaria.
 
-- Se il problema è un'espressione troppo complessa per procedere alla generalizzazione, trasformarlo in una funzione mediante l'aggiunta di un parametro aggiuntivo e non usato.
+- Se il problema è un'espressione troppo complessa da generalizzare, impostarla in una funzione aggiungendo un parametro aggiuntivo inutilizzato.
 
-- Aggiungere parametri di tipo generico esplicita. Questa opzione viene utilizzata raramente.
+- Aggiungere parametri di tipo generico espliciti. Questa opzione viene utilizzata raramente.
 
-- Gli esempi di codice seguente viene illustrato ognuno di questi scenari.
+- Gli esempi di codice seguenti illustrano ognuno di questi scenari.
 
-Caso 1: Espressione troppo complessa. In questo esempio, nell'elenco `counter` è destinato a essere `int option ref`, ma non è definito come un semplice valore non modificabile.
+Caso 1: Espressione troppo complessa. In questo esempio, l'elenco `counter` è pensato `int option ref`come, ma non è definito come valore non modificabile semplice.
 
 ```fsharp
 let counter = ref None
@@ -66,7 +66,7 @@ let counter = ref None
 let counter : int option ref = ref None
 ```
 
-Caso 2: Per definire una funzione generica, utilizzando un costrutto non generalizzabile. In questo esempio, il costrutto è non generalizzabile dal momento che implica l'applicazione parziale degli argomenti della funzione.
+Caso 2: Utilizzo di un costrutto non generalizzabile per definire una funzione generica. In questo esempio il costrutto è non generalizzabile perché comporta l'applicazione parziale degli argomenti della funzione.
 
 ```fsharp
 let maxhash = max << hash
@@ -74,7 +74,7 @@ let maxhash = max << hash
 let maxhash obj = (max << hash) obj
 ```
 
-Caso 3: Aggiunta di un parametro aggiuntivo e non usato. Poiché questa espressione non è abbastanza semplice per la generalizzazione, il compilatore genera l'errore di limitazione valore.
+Caso 3: Aggiunta di un parametro aggiuntivo non utilizzato. Poiché questa espressione non è abbastanza semplice da generalizzare, il compilatore genera l'errore di restrizione del valore.
 
 ```fsharp
 let emptyList10 = Array.create 10 []
@@ -90,7 +90,7 @@ let arrayOf10Lists = Array.create 10 []
 let arrayOf10Lists<'T> = Array.create 10 ([]:'T list)
 ```
 
-Nell'ultimo caso, il valore diventa una funzione di tipo, che può essere utilizzata per creare valori di molti tipi diversi, ad esempio come indicato di seguito:
+Nell'ultimo caso, il valore diventa una funzione di tipo, che può essere usata per creare valori di molti tipi diversi, ad esempio come segue:
 
 ```fsharp
 let intLists = arrayOf10Lists<int>

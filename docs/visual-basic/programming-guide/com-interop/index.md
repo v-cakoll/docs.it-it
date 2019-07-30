@@ -5,25 +5,25 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bcfba25c86c46f986c061241a5d09f9aaa6d248
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022415"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627078"
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilità COM (Visual Basic)
-Il modello COM (Component Object Model) consente a un oggetto di esporre la relativa funzionalità agli altri componenti e alle applicazioni host. La maggior parte del software in uso oggi include oggetti COM. Anche se gli assembly .NET sono la scelta migliore per le nuove applicazioni, in alcuni casi può essere necessario usare oggetti COM. Questa sezione descrive alcuni dei problemi associati alla creazione e utilizzo degli oggetti COM con Visual Basic.  
+Il modello COM (Component Object Model) consente a un oggetto di esporre la relativa funzionalità agli altri componenti e alle applicazioni host. La maggior parte del software in uso oggi include oggetti COM. Anche se gli assembly .NET sono la scelta migliore per le nuove applicazioni, in alcuni casi può essere necessario usare oggetti COM. In questa sezione vengono illustrati alcuni dei problemi associati alla creazione e all'utilizzo di oggetti COM con Visual Basic.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Introduzione all'interoperabilità COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  Offre una panoramica dell'interoperabilità COM.  
   
- [Procedura: Oggetti di riferimento COM da Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ [Procedura: Fare riferimento a oggetti COM da Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
  Spiega come aggiungere riferimenti agli oggetti COM con librerie dei tipi.  
   
  [Procedura: Utilizzare i controlli ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Viene illustrato come utilizzare i controlli ActiveX esistenti per aggiungere funzionalità a Visual Studio Toolbox.  
+ Viene illustrato come utilizzare i controlli ActiveX esistenti per aggiungere funzionalità alla casella degli strumenti di Visual Studio.  
   
  [Procedura dettagliata: Chiamata delle API di Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Descrive i passaggi della procedura di chiamata delle API che fanno parte del sistema operativo Windows.  
@@ -56,5 +56,5 @@ Il modello COM (Component Object Model) consente a un oggetto di esporre la rela
  [Esposizione di componenti .NET Framework a COM](../../../framework/interop/exposing-dotnet-components-to-com.md)  
  Descrive la preparazione e l'uso dei tipi gestiti da COM.  
   
- [Applicazione di attributi di interoperabilità](../../../framework/interop/applying-interop-attributes.md)  
+ [Applicazione di attributi di interoperabilità](../../../standard/native-interop/apply-interop-attributes.md)  
  Descrive gli attributi che è possibile usare quando si lavora con codice non gestito.

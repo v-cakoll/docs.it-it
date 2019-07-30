@@ -1,17 +1,17 @@
 ---
-title: 'Espressioni condizionali: if... then... else'
-description: Informazioni su come scrivere espressioni condizionali F# per l'esecuzione di diversi rami del codice.
+title: 'Espressioni condizionali: If... quindi... altro'
+description: Informazioni su come scrivere espressioni condizionali F# in per eseguire rami di codice diversi.
 ms.date: 05/16/2016
-ms.openlocfilehash: db2d5ce5b75ecda171f2623c986878dcee1cf4d9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 825149bf296eded3cc2b4d8847ba4d82bea40cdc
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641982"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630387"
 ---
-# <a name="conditional-expressions-ifthenelse"></a>Espressioni condizionali: `if...then...else`
+# <a name="conditional-expressions-ifthenelse"></a>Espressioni condizionali:`if...then...else`
 
-Il `if...then...else` espressione esegue diversi rami del codice e restituisce un valore diverso in base all'espressione booleana specificata.
+L' `if...then...else` espressione esegue diversi rami di codice e restituisce anche un valore diverso a seconda dell'espressione booleana specificata.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -21,15 +21,15 @@ if boolean-expression then expression1 [ else expression2 ]
 
 ## <a name="remarks"></a>Note
 
-Nella sintassi precedente *expression1* viene eseguita quando l'espressione booleana restituisce `true`; in caso contrario, *expression2* viene eseguito.
+Nella sintassi precedente, *expression1* viene eseguito quando l'espressione booleana restituisce `true`. in caso contrario, viene eseguito *expression2* .
 
-A differenza di altri linguaggi, la `if...then...else` costrutto è un'espressione, non un'istruzione. Ciò significa che produce un valore, ovvero il valore dell'ultima espressione nel ramo che esegue. I tipi di valori prodotti in ogni ramo devono corrispondere. Se è presente non espliciti `else` branch, il tipo è `unit`. Pertanto, se il tipo del `then` ramo è qualsiasi tipo diverso da `unit`, deve essere presente un `else` ramo con lo stesso tipo restituito. Quando si concatenano `if...then...else` le espressioni, è possibile usare la parola chiave `elif` invece di `else if`; sono equivalenti.
+Diversamente da altri linguaggi, il `if...then...else` costrutto è un'espressione, non un'istruzione. Ciò significa che produce un valore, ovvero il valore dell'ultima espressione nel ramo eseguito. I tipi dei valori prodotti in ogni ramo devono corrispondere. Se non è presente alcun `else` ramo esplicito, il `unit`relativo tipo è. Pertanto, se il tipo del `then` ramo è un tipo diverso da `unit`, deve essere presente un `else` ramo con lo stesso tipo restituito. Quando si concatenano `if...then...else` espressioni, è possibile usare la `elif` parola chiave `else if`invece di. sono equivalenti.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `if...then...else` espressione.
+Nell'esempio seguente viene illustrato come utilizzare l' `if...then...else` espressione.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
 
 ```
 10 is less than 20

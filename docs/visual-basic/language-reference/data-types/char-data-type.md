@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: ca40e6c8dcba3da29bdb68b29c91c852e477f8f7
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 8313c2282a3b4b7b035f9f3b685a786c4471f53a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512782"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630149"
 ---
 # <a name="char-data-type-visual-basic"></a>Tipo di dati Char (Visual Basic)
 
@@ -37,16 +37,22 @@ I primi 128 punti di codice (0-127) di Unicode corrispondono a lettere e simboli
 
 Visual Basic non esegue la conversione direttamente `Char` tra e i tipi numerici. È possibile utilizzare la <xref:Microsoft.VisualBasic.Strings.Asc%2A> funzione <xref:Microsoft.VisualBasic.Strings.AscW%2A> o per convertire un `Char` valore in un `Integer` oggetto che rappresenta il punto di codice. È possibile usare la <xref:Microsoft.VisualBasic.Strings.Chr%2A> funzione <xref:Microsoft.VisualBasic.Strings.ChrW%2A> o per convertire un `Integer` valore in un `Char` oggetto con tale punto di codice.
 
-Se l'opzione di controllo del tipo ([Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)) è impostata su on, è necessario aggiungere il carattere di tipo letterale a un valore letterale stringa `Char` a carattere singolo per identificarlo come tipo di dati. Questa condizione è illustrata nell'esempio seguente.
+Se l'opzione di controllo del tipo (l' [istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)) è impostata su on, è necessario aggiungere il carattere di tipo letterale a un valore letterale stringa `Char` a carattere singolo per identificarlo come tipo di dati. Questa condizione è illustrata nell'esempio seguente. La prima assegnazione alla `charVar` variabile genera l'errore del compilatore [BC30512](../../misc/bc30512.md) perché `Option Strict` è on. Il secondo compila correttamente perché il `c` carattere `Char` di tipo letterale identifica il valore letterale come valore.
 
 ```vb
 Option Strict On
-Dim charVar As Char
-' The following statement attempts to convert a String literal to Char.
-' Because Option Strict is On, it generates a compiler error.
-charVar = "Z"
-' The following statement succeeds because it specifies a Char literal.
-charVar = "Z"C
+
+Module CharType
+    Public Sub Main()
+        Dim charVar As Char
+
+        ' This statement generates compiler error BC30512 because Option Strict is On.  
+        charVar = "Z"  
+
+        ' The following statement succeeds because it specifies a Char literal.  
+        charVar = "Z"c
+    End Sub
+End Module
 ```
 
 ## <a name="programming-tips"></a>Suggerimenti per la programmazione
@@ -55,7 +61,7 @@ charVar = "Z"C
 
 - **Considerazioni sull'interoperabilità.** Se si interfaccia con componenti non scritti per il .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi di carattere hanno una larghezza dati diversa (8 bit) in altri ambienti. Se si passa un argomento a 8 bit a tale componente, dichiararlo come `Byte` `Char` anziché nel nuovo codice Visual Basic.
 
-- **Conversioni.** Il `Char` tipo di dati viene ampliato a `String`. Ciò significa che è possibile `Char` eseguire `String` la conversione in e non <xref:System.OverflowException?displayProperty=nameWithType> si verificherà un errore.
+- **Conversioni.** Il `Char` tipo di dati viene ampliato a `String`. Ciò significa che è possibile `Char` convertire `String` in e non si verificherà un oggetto <xref:System.OverflowException?displayProperty=nameWithType>.
 
 - **Digitare i caratteri.** L'aggiunta del carattere `C` di tipo letterale a un valore letterale stringa a carattere singolo lo impone `Char` al tipo di dati. `Char`non ha un carattere di tipo identificatore.
 

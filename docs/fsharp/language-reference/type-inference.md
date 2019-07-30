@@ -1,57 +1,57 @@
 ---
 title: Inferenza di tipi
-description: Informazioni su come il F# compilatore deduce i tipi di valori, le variabili, parametri e valori restituiti.
+description: Informazioni sul modo F# in cui il compilatore deduce i tipi di valori, variabili, parametri e valori restituiti.
 ms.date: 05/16/2016
-ms.openlocfilehash: ab1a4aa8df4312287df749d5d6d0ea2858091152
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4b18c1a67a8b7ddadb4fb334ea4736e9fd29feb0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641682"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630191"
 ---
 # <a name="type-inference"></a>Inferenza di tipi
 
-Questo argomento viene descritto come il F# compilatore deduce i tipi di valori, le variabili, parametri e valori restituiti.
+In questo argomento viene descritto F# il modo in cui il compilatore deduce i tipi di valori, variabili, parametri e valori restituiti.
 
-## <a name="type-inference-in-general"></a>L'inferenza del tipo in generale
+## <a name="type-inference-in-general"></a>Inferenza del tipo in generale
 
-L'idea di inferenza del tipo è che non è necessario specificare i tipi di F# costrutti, ad eccezione di quando il compilatore conseguenze lampanti non è possibile dedurre il tipo. L'omissione di informazioni sui tipi espliciti non significa che F# è un linguaggio tipizzato in modo dinamico o che i valori F# sono debolmente tipizzata. F#è un linguaggio tipizzato in modo statico, il che significa che il compilatore deduce un tipo esatto di ogni costrutto durante la compilazione. Se non esiste informazioni sufficienti per consentire al compilatore di dedurre i tipi di ogni costrutto, è necessario fornire informazioni aggiuntive sui tipi, in genere mediante l'aggiunta di annotazioni del tipo esplicito in una posizione nel codice.
+Il concetto di inferenza del tipo è che non è necessario specificare i tipi di F# costrutti tranne quando il compilatore non può dedurre definitivamente il tipo. Omettendo le informazioni sul tipo esplicito non significa F# che è un linguaggio tipizzato in modo dinamico o F# che i valori in sono debolmente tipizzati. F#è un linguaggio tipizzato in modo statico, ovvero il compilatore deduce un tipo esatto per ogni costrutto durante la compilazione. Se non sono disponibili informazioni sufficienti per consentire al compilatore di dedurre i tipi di ogni costrutto, è necessario fornire informazioni sui tipi aggiuntive, in genere aggiungendo annotazioni di tipo esplicite in un punto qualsiasi del codice.
 
-## <a name="inference-of-parameter-and-return-types"></a>Inferenza di tipi restituiti e parametri
+## <a name="inference-of-parameter-and-return-types"></a>Inferenza dei tipi Parameter e Return
 
-In un elenco di parametri, non è necessario specificare il tipo di ogni parametro. E ancora, F# è un linguaggio tipizzato in modo statico e pertanto ogni valore e l'espressione ha un tipo definito in fase di compilazione. Per i tipi che non si specifica in modo esplicito, il compilatore deduce il tipo in base al contesto. Se il tipo non è in caso contrario specificato, si viene dedotto come generici. Se il codice Usa un valore in modo incoerente, in modo che non è disponibile un unico tipo derivato che soddisfi tutti gli usi di un valore, che il compilatore segnala un errore.
+In un elenco di parametri non è necessario specificare il tipo di ogni parametro. F# È ancora un linguaggio tipizzato in modo statico, pertanto ogni valore ed espressione ha un tipo definito in fase di compilazione. Per i tipi non specificati in modo esplicito, il compilatore deduce il tipo in base al contesto. Se il tipo non è specificato diversamente, viene dedotto come generico. Se il codice usa un valore in modo incoerente, in modo che non esistano singoli tipi dedotti che soddisfino tutti gli usi di un valore, il compilatore segnala un errore.
 
 Il tipo restituito di una funzione è determinato dal tipo dell'ultima espressione nella funzione.
 
-Ad esempio, nel codice seguente, i tipi di parametro `a` e `b` e il tipo restituito vengono tutti considerati `int` perché il valore letterale `100` JE typu `int`.
+Nel codice seguente, ad `a` esempio, i tipi di `int` parametro e `b` e il tipo restituito sono tutti dedotti perché il valore letterale `100` è di tipo `int`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet301.fs)]
 
-È possibile influenzare l'inferenza del tipo modificando i valori letterali. Se si apportano le `100` una `uint32` aggiungendo il suffisso `u`, i tipi di `a`, `b`, e il valore restituito sono considerati come `uint32`.
+È possibile influenzare l'inferenza del tipo modificando i valori letterali. Se si imposta l' `100` oggetto `uint32` accodando il suffisso `u`, i tipi di `a`, `b`e il valore restituito vengono dedotti come `uint32`.
 
-È anche possibile influenzare l'inferenza del tipo tramite altri costrutti che implicano le restrizioni sul tipo, ad esempio le funzioni e metodi che funzionano con solo un determinato tipo.
+È anche possibile influenzare l'inferenza del tipo usando altri costrutti che implicano restrizioni sul tipo, ad esempio funzioni e metodi che funzionano solo con un determinato tipo.
 
-Inoltre, è possibile applicare le annotazioni di tipo espliciti per i parametri di metodo o una funzione o per le variabili nelle espressioni, come illustrato negli esempi seguenti. Se si verificano conflitti tra i diversi vincoli generati errori.
+Inoltre, è possibile applicare annotazioni di tipo esplicito a parametri di funzione o di metodo o a variabili nelle espressioni, come illustrato negli esempi seguenti. Gli errori risultano se si verificano conflitti tra vincoli diversi.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet302.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet302.fs)]
 
-È possibile specificare il valore restituito di una funzione in modo esplicito fornendo un'annotazione di tipo dopo che tutti i parametri.
+È anche possibile specificare in modo esplicito il valore restituito di una funzione fornendo un'annotazione di tipo dopo tutti i parametri.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet303.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet303.fs)]
 
-Un caso comune in cui è utile in un parametro di un'annotazione di tipo è quando il parametro è un tipo di oggetto e si vuole usare un membro.
+Un caso comune in cui un'annotazione del tipo è utile per un parametro è quando il parametro è un tipo di oggetto e si vuole usare un membro.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet304.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet304.fs)]
 
 ## <a name="automatic-generalization"></a>Generalizzazione automatica
 
-Se il codice della funzione non dipende dal tipo di un parametro, il compilatore considera il parametro generico. Questa operazione viene definita *generalizzazione automatica*, e può essere molto utile per la scrittura di codice generico senza aumentare la complessità.
+Se il codice della funzione non dipende dal tipo di un parametro, il compilatore considera il parametro come generico. Questa operazione è detta *generalizzazione automatica*e può essere un potente strumento per scrivere codice generico senza aumentare la complessità.
 
-Ad esempio, la funzione seguente combina due parametri di qualsiasi tipo in una tupla.
+La funzione seguente, ad esempio, combina due parametri di qualsiasi tipo in una tupla.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet305.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet305.fs)]
 
-Il tipo viene dedotto per essere
+Il tipo viene dedotto come
 
 ```fsharp
 'a -> 'b -> 'a * 'b
@@ -59,8 +59,8 @@ Il tipo viene dedotto per essere
 
 ## <a name="additional-information"></a>Informazioni aggiuntive
 
-L'inferenza del tipo è descritto più dettagliatamente il F# specifica del linguaggio.
+L'inferenza del tipo è descritta più dettagliatamente nella specifica del F# linguaggio.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Generalizzazione automatica](generics/automatic-generalization.md)
+- [Generalizzazione automatica](./generics/automatic-generalization.md)

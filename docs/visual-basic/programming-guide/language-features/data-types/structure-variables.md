@@ -7,51 +7,54 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: 9a6e542e297a17f44d929235530ae6058cf13a36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a86a60def9ac1b8140194ecb6f5e784c62a0e101
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663388"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630962"
 ---
 # <a name="structure-variables-visual-basic"></a>Variabili di struttura (Visual Basic)
-Dopo aver creato una struttura, è possibile dichiarare le variabili a livello di routine e a livello di modulo di quel tipo. Ad esempio, è possibile creare una struttura di registrare le informazioni sul sistema. Nell'esempio che segue viene illustrato quanto descritto.  
-  
-```  
-Public Structure systemInfo  
-    Public cPU As String  
-    Public memory As Long  
-    Public purchaseDate As Date  
-End Structure  
-```  
-  
- È ora possibile dichiarare variabili di quel tipo. Questa condizione è illustrata la dichiarazione seguente.  
-  
-```  
-Dim mySystem, yourSystem As systemInfo  
-```  
-  
+
+Dopo aver creato una struttura, è possibile dichiarare le variabili a livello di procedura e a livello di modulo come quel tipo. Ad esempio, è possibile creare una struttura che registra le informazioni relative a un sistema di computer. Nell'esempio che segue viene illustrato quanto descritto.
+
+```vb
+Public Structure systemInfo
+    Public cPU As String
+    Public memory As Long
+    Public purchaseDate As Date
+End Structure
+```
+
+È ora possibile dichiarare variabili di quel tipo. Questa operazione viene illustrata nella dichiarazione seguente.
+
+```vb
+Dim mySystem, yourSystem As systemInfo
+```
+
 > [!NOTE]
->  Nelle classi e moduli, strutture dichiarate utilizzando il [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) predefinito per l'accesso pubblico. Se si intende una struttura a essere private, assicurarsi di dichiarare usando il [privato](../../../../visual-basic/language-reference/modifiers/private.md) (parola chiave).  
-  
-## <a name="access-to-structure-values"></a>Accesso ai valori di struttura  
- Per assegnare e recuperare i valori dagli elementi di una variabile di struttura, utilizzare la stessa sintassi utilizzata per impostare e ottenere le proprietà su un oggetto. Si inserisce l'operatore di accesso ai membri (`.`) tra il nome di variabile di struttura e il nome dell'elemento. Nell'esempio seguente accede agli elementi delle variabili dichiarate in precedenza come tipo `systemInfo`.  
-  
-```  
-mySystem.cPU = "486"  
-Dim tooOld As Boolean  
-If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True  
-```  
-  
-## <a name="assigning-structure-variables"></a>Assegnazione di variabili di struttura  
- È anche possibile assegnare una variabile a un altro se entrambi sono dello stesso tipo struttura. Questa copia tutti gli elementi di una struttura per gli elementi corrispondenti in altra. Questa condizione è illustrata la dichiarazione seguente.  
-  
-```  
-yourSystem = mySystem  
-```  
-  
- Se un elemento di struttura è un tipo riferimento, ad esempio un `String`, `Object`, o matrice, il puntatore ai dati viene copiato. Nell'esempio precedente, se `systemInfo` fosse stata inclusa una variabile oggetto, quindi l'esempio precedente sarebbe stato copiato il puntatore dal `mySystem` a `yourSystem`, e una modifica ai dati dell'oggetto tramite una sola struttura sarebbe attivo quando si accede tramite la struttura.  
-  
+> Nelle classi e nei moduli, le strutture dichiarate con l' [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) sono predefinite per l'accesso pubblico. Se si vuole che una struttura sia privata, assicurarsi di dichiararla usando la parola chiave [private](../../../../visual-basic/language-reference/modifiers/private.md) .
+
+## <a name="access-to-structure-values"></a>Accesso ai valori della struttura
+
+Per assegnare e recuperare valori dagli elementi di una variabile di struttura, è possibile utilizzare la stessa sintassi utilizzata per impostare e ottenere le proprietà di un oggetto. Si inserisce l'operatore di accesso ai`.`membri () tra il nome della variabile di struttura e il nome dell'elemento. Nell'esempio seguente viene eseguito l'accesso agli elementi delle variabili dichiarate in precedenza come tipo `systemInfo`.
+
+```vb
+mySystem.cPU = "486"
+Dim tooOld As Boolean
+If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True
+```
+
+## <a name="assigning-structure-variables"></a>Assegnazione di variabili di struttura
+
+È anche possibile assegnare una variabile a un'altra se entrambe sono dello stesso tipo di struttura. In questo modo tutti gli elementi di una struttura vengono copiati negli elementi corrispondenti dell'altro. Questa operazione viene illustrata nella dichiarazione seguente.
+
+```vb
+yourSystem = mySystem
+```
+
+Se un elemento della struttura è un tipo di riferimento, ad `String`esempio `Object`una matrice, o, viene copiato il puntatore ai dati. Nell'esempio precedente, se `systemInfo` era inclusa una variabile oggetto, l'esempio precedente avrebbe copiato il puntatore da `mySystem` a `yourSystem`e una modifica ai dati dell'oggetto tramite una struttura sarebbe attiva al momento dell'accesso tramite l'altra struttura.
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

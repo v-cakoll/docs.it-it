@@ -1,17 +1,17 @@
 ---
 title: 'Eccezioni: Espressione try...finally'
-description: Informazioni su come il F# ' try... finally' espressione consente di eseguire il codice di pulitura, anche se un blocco di codice genera un'eccezione.
+description: Scopri in che F# modo ' try... Infine, l'espressione consente di eseguire il codice di pulizia anche se un blocco di codice genera un'eccezione.
 ms.date: 05/16/2016
-ms.openlocfilehash: d246bce52b5f30d5e8d7e3c36e9f7d7c48627913
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 03fbda1ef5d55560232f0217f603fc04c0af0eb4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645457"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630280"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>Eccezioni: Espressione try...finally
 
-Il `try...finally` espressione consente di eseguire il codice di pulitura, anche se un blocco di codice genera un'eccezione.
+L' `try...finally` espressione consente di eseguire il codice di pulizia anche se un blocco di codice genera un'eccezione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,30 +24,30 @@ finally
 
 ## <a name="remarks"></a>Note
 
-Il `try...finally` espressione può essere utilizzata per eseguire il codice nel *expression2* nella sintassi precedente, indipendentemente dal fatto che viene generata un'eccezione durante l'esecuzione del *expression1*.
+L' `try...finally` espressione può essere usata per eseguire il codice in *expression2* nella sintassi precedente, indipendentemente dal fatto che venga generata un'eccezione durante l'esecuzione di *expression1*.
 
-Il tipo della *expression2* non viene utilizzato il valore dell'espressione intera; il tipo restituito quando non si verifica un'eccezione è l'ultimo valore nella *expression1*. Quando si verifica un'eccezione, viene restituito alcun valore e trasferisce il flusso di controllo per il gestore di eccezioni corrispondente successivo lo stack di chiamate. Se non viene trovato alcun gestore di eccezioni, il programma termina. Prima viene eseguito il codice in un gestore corrispondente o il programma termina, il codice nel `finally` ramo viene eseguito.
+Il tipo di *expression2* non contribuisce al valore dell'intera espressione. il tipo restituito quando non si verifica un'eccezione è l'ultimo valore in *expression1*. Quando si verifica un'eccezione, non viene restituito alcun valore e il flusso di controllo viene trasferito al gestore di eccezioni corrispondente successivo fino allo stack di chiamate. Se non viene trovato alcun gestore di eccezioni, il programma termina. Prima di eseguire il codice in un gestore corrispondente o il programma termina, viene eseguito il codice nel `finally` ramo.
 
-Il codice seguente illustra l'uso del `try...finally` espressione.
+Nel codice seguente viene illustrato l'utilizzo dell' `try...finally` espressione.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5701.fs)]
 
-L'output nella console è come indicato di seguito.
+Di seguito è riportato l'output della console.
 
 ```
 Closing stream
 Exception handled.
 ```
 
-Come si vede dall'output, il flusso è stato chiuso prima che venisse gestita l'eccezione esterno e il file `test.txt` contiene il testo `test1`, indica che i buffer sono stati scaricati e scritti sul disco anche se l'eccezione trasferita controllo al gestore dell'eccezione esterna.
+Come si può notare dall'output, il flusso è stato chiuso prima che venisse gestita l'eccezione esterna e il file `test.txt` contiene il testo `test1`, che indica che i buffer sono stati scaricati e scritti su disco anche se l'eccezione è stata trasferita controllo al gestore di eccezioni esterno.
 
-Si noti che il `try...with` costrutto è distinto dal costrutto di `try...finally` costruire. Pertanto, se il codice richiede sia una `with` blocco e una `finally` blocco, è necessario annidare i due costrutti, come nell'esempio di codice seguente.
+Si noti che `try...with` il costrutto è un costrutto `try...finally` separato dal costrutto. Pertanto, se il codice richiede un `with` blocco e un `finally` blocco, è necessario annidare i due costrutti, come nell'esempio di codice seguente.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
 
-Nel contesto delle espressioni di calcolo, tra cui espressioni di sequenza e flussi di lavoro asincroni **try... finally** espressioni possono avere un'implementazione personalizzata. Per altre informazioni, vedere [espressioni di calcolo](../computation-expressions.md).
+Nel contesto delle espressioni di calcolo, incluse le espressioni di sequenza e i flussi di lavoro asincroni, **provare...** le espressioni finally possono avere un'implementazione personalizzata. Per altre informazioni, vedere [espressioni di calcolo](../computation-expressions.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Gestione delle eccezioni](index.md)
-- [Eccezioni: Il `try...with` espressione](the-try-with-expression.md)
+- [Eccezioni: `try...with` Espressione](the-try-with-expression.md)

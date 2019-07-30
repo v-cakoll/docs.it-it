@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: ee260d58cdb4dc971fc32ca5c889b459b6a48489
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 10bdeae8fe46f78e60d278fdbe93883a1c6bd356
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484732"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629890"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>Hosting di contenuto Win32 in WPF
 
@@ -48,11 +48,11 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 
 Ma si supponga [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] che il codice non sia abbastanza indipendente? In tal caso, è possibile creare [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] una finestra di dialogo e incorporarne il contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in un'applicazione di dimensioni maggiori. Nell'esempio viene illustrato questo [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] in C++e, sebbene sia anche possibile eseguire questa operazione in un linguaggio diverso o nella riga di comando.
 
-Iniziare con una semplice finestra di dialogo, compilata C++ [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] in un progetto.
+Iniziare con una semplice finestra di dialogo, compilata C++ in un progetto DLL.
 
 Successivamente, introdurre la finestra di dialogo nell' [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione più grande:
 
-- Compila come gestito (`/clr`) [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]
+- Compila la DLL come gestita (`/clr`)
 
 - Trasformare la finestra di dialogo in un controllo
 
@@ -120,7 +120,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }
 ```
 
-Qui viene usato `CreateDialog` per creare la finestra di dialogo che è effettivamente un controllo. Poiché si tratta di uno dei primi metodi chiamati all'interno [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]di, è necessario eseguire anche un' [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] inizializzazione standard chiamando una funzione che verrà definita in seguito `InitializeGlobals()`, denominata:
+Qui viene usato `CreateDialog` per creare la finestra di dialogo che è effettivamente un controllo. Poiché si tratta di uno dei primi metodi chiamati all'interno della dll, è necessario eseguire anche un' [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] inizializzazione standard chiamando una funzione che verrà definita in seguito `InitializeGlobals()`, denominata:
 
 ```cpp
 bool initialized = false;

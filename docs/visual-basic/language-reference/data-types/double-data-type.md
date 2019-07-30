@@ -19,42 +19,44 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 6273f6c9e71f286bdbebc3fe1953988b43de3101
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92adb26702d94dee08e51decd845d019c797e195
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663211"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630088"
 ---
 # <a name="double-data-type-visual-basic"></a>Tipo di dati Double (Visual Basic)
-Contiene segno IEEE a 64 bit (8 byte) e con precisione doppia numeri a virgola mobile che intervallo compreso tra - 1, 79769313486231570E + 308 a - fino a 4.94065645841246544-324 per i valori negativi e tra fino a 4.94065645841246544-324 e 1.79769313486231570 e + 308 per valori positivi. Numeri a precisione doppia contengono un'approssimazione di un numero reale.  
-  
-## <a name="remarks"></a>Note  
- Il `Double` tipo di dati fornisce la grandezza più grande e più piccolo possibile per un numero.  
-  
- Il valore predefinito di `Double` è 0.  
-  
-## <a name="programming-tips"></a>Suggerimenti per la programmazione  
-  
-- **Precisione.** Quando si lavora con numeri a virgola mobile, tenere presente che non sempre hanno una rappresentazione esatta in memoria. Ciò potrebbe provocare risultati imprevisti da determinate operazioni, ad esempio il confronto dei valori e `Mod` operatore. Per altre informazioni, vedere [tipi di dati di risoluzione dei problemi](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
-  
-- **Zeri finali.** I tipi di dati a virgola mobile non è qualsiasi rappresentazione interna di zeri finali. Ad esempio, essi non viene fatta distinzione tra 4,2000 e 4.2. Di conseguenza, gli zeri finali non vengono visualizzati quando si visualizza o stampa valori a virgola mobile.  
-  
-- **Caratteri tipo.** Aggiungendo il carattere di tipo letterale `R` a un valore letterale, se ne determina la conversione nel tipo di dati `Double`. Ad esempio, se un valore intero è seguito da `R`, il valore viene modificato in un `Double`.  
-  
-    ```  
-    ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
-    Dim dub As Double = 4.0R  
-    ```  
-  
-     Aggiungendo il carattere identificatore di tipo `#` a qualsiasi identificatore, se ne determina la conversione al tipo di dati `Double`. Nell'esempio seguente, la variabile `num` tipizzata come una `Double`:  
-  
-    ```  
-    Dim num# = 3  
-    ```  
-  
-- **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Double?displayProperty=nameWithType>.  
-  
+
+Include numeri a virgola mobile a precisione doppia a IEEE 64 bit (8 byte) che variano in base al valore da-1.79769313486231570 E + 308 a-4.94065645841246544 E-324 per i valori negativi e da 4.94065645841246544 E-324 a 1.79769313486231570 E + 308 per valori positivi. I numeri a precisione doppia archiviano un'approssimazione di un numero reale.
+
+## <a name="remarks"></a>Note
+
+Il `Double` tipo di dati fornisce le Magnitude più grandi e minime possibili per un numero.
+
+Il valore predefinito di `Double` è 0.
+
+## <a name="programming-tips"></a>Suggerimenti per la programmazione
+
+- **Precisione.** Quando si utilizzano numeri a virgola mobile, tenere presente che non sempre hanno una rappresentazione precisa in memoria. Questo può causare risultati imprevisti di determinate operazioni, ad esempio il confronto dei valori `Mod` e l'operatore. Per ulteriori informazioni, vedere [risoluzione dei problemi](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)relativi ai tipi di dati.
+
+- **Zeri finali.** I tipi di dati a virgola mobile non hanno alcuna rappresentazione interna di caratteri zero finali. Ad esempio, non si distinguono tra 4,2000 e 4,2. Di conseguenza, i caratteri zero finali non vengono visualizzati quando si visualizzano o stampano valori a virgola mobile.
+
+- **Digitare i caratteri.** Aggiungendo il carattere di tipo letterale `R` a un valore letterale, se ne determina la conversione nel tipo di dati `Double`. Se, ad esempio, un valore integer è seguito `R`da, il valore viene modificato in `Double`un oggetto.
+
+  ```vb
+  ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:
+  Dim dub As Double = 4.0R
+  ```
+
+  Aggiungendo il carattere identificatore di tipo `#` a qualsiasi identificatore, se ne determina la conversione al tipo di dati `Double`. Nell'esempio seguente la variabile `num` è tipizzata `Double`come:
+
+  ```vb
+  Dim num# = 3
+  ```
+
+- **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Double?displayProperty=nameWithType>.
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Double?displayProperty=nameWithType>

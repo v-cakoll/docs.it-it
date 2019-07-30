@@ -1,17 +1,17 @@
 ---
 title: Unità di misura
-description: Informazioni su virgola come mobile e interi con segno F# possono essere associate unità di misura, che sono in genere usata per indicare lunghezza, volume e massa.
+description: Informazioni sul modo in cui i valori a virgola mobile e Signed Integer in F# possono avere unità di misura associate, che in genere vengono usate per indicare la lunghezza, il volume e la massa.
 ms.date: 05/16/2016
-ms.openlocfilehash: 217ef67912625c0a4b187a7ee13a739de811cfcb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f97eac9984f934c55aff8cf9f287afbc3aa098f3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641640"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630154"
 ---
 # <a name="units-of-measure"></a>Unità di misura
 
-A virgola mobile e interi con segno F# possono essere associate unità di misura, che sono in genere usata per indicare lunghezza, volume, massa e così via. Con le quantità con unità, è consentire al compilatore di verificare che le relazioni aritmetiche dispongono di unità corretta, che consente di evitare gli errori di programmazione.
+I valori a virgola mobile e F# Signed Integer in possono avere unità di misura associate, che in genere vengono usate per indicare lunghezza, volume, massa e così via. Utilizzando quantità con unità, è possibile abilitare il compilatore per verificare che le relazioni aritmetiche dispongano delle unità corrette, evitando così errori di programmazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -21,65 +21,65 @@ A virgola mobile e interi con segno F# possono essere associate unità di misura
 
 ## <a name="remarks"></a>Note
 
-La sintassi precedente definisce *-nome dell'unità* come un'unità di misura. La parte facoltativa consente di definire una nuova misura in termini di unità definita in precedenza. Ad esempio, la riga seguente definisce la misura `cm` (centimetri).
+La sintassi precedente definisce *nome-unità* come unità di misura. La parte facoltativa viene usata per definire una nuova misura in termini di unità definite in precedenza. La riga seguente, ad esempio, definisce la `cm` misura (centimetri).
 
 ```fsharp
 [<Measure>] type cm
 ```
 
-La riga seguente definisce la misura `ml` (millimetro) come un centimetro (`cm^3`).
+La riga seguente definisce la misura `ml` (millilitro) come centimetro cubico (`cm^3`).
 
 ```fsharp
 [<Measure>] type ml = cm^3
 ```
 
-Nella sintassi precedente *misura* è una formula che utilizza l'unità. Nelle formule che comportano l'unità, sono supportate le potenze di integrale (positivi e negativi), gli spazi tra le unità di indicano un prodotto di due unità, `*` indica un prodotto di unità, e `/` indica un quoziente di unità. Per un'unità reciproca, è possibile usare una potenza di numero intero negativo oppure un `/` che indica una separazione tra il numeratore e del denominatore di una formula di unità. Più unità nel denominatore devono essere racchiusi tra parentesi. Unità di misura separati da spazi dopo una `/` vengono interpretati come parte del denominatore, ma qualsiasi unità che segue un `*` vengono interpretati come parte del numeratore.
+Nella sintassi precedente, *Measure* è una formula che include unità. Nelle formule che coinvolgono unità, i poteri integrali sono supportati (positivi e negativi), spazi tra unità indicano un prodotto delle due unità, `*` indica anche un prodotto di unità e `/` indica un quoziente di unità. Per un'unità reciproca, è possibile usare una potenza di tipo integer `/` negativa o un che indica una separazione tra il numeratore e il denominatore di una formula di unità. Più unità nel denominatore devono essere racchiuse tra parentesi. Le unità separate da spazi dopo `/` un oggetto vengono interpretate come parte del denominatore, ma tutte le `*` unità successive a vengono interpretate come parte del numeratore.
 
-È possibile usare 1 nelle espressioni di unità, da solo per indicare una quantità senza, o insieme alle altre unità, ad esempio il numeratore. Ad esempio, viene scritto come le unità per una tariffa `1/s`, dove `s` indica i secondi. Parentesi non vengono utilizzate nelle formule di unità. Non si specifica le costanti di conversione numeriche nelle formule; unit Tuttavia, è possibile definire le costanti di conversione con unità separatamente e usati in calcoli unità controllata.
+È possibile usare 1 nelle espressioni Unit, solo per indicare una quantità senza dimensione o insieme ad altre unità, ad esempio nel numeratore. Ad esempio, le unità per una frequenza verranno scritte come `1/s`, dove `s` indica i secondi. Le parentesi non vengono utilizzate nelle formule di unità. Nelle formule di unità non vengono specificate costanti di conversione numerica. Tuttavia, è possibile definire le costanti di conversione con le unità separatamente e usarle nei calcoli controllati dall'unità.
 
-Le formule di unità con lo stesso significano possono essere scritti in vari modi equivalenti. Pertanto, il compilatore converte le formule di unità in un formato coerente, che converte potenze negative reciproci, raggruppando le unità in un singolo numeratore e del denominatore e dispone in ordine alfabetico le unità nel numeratore e del denominatore.
+Le formule Unit che comportano la stessa operazione possono essere scritte in diversi modi equivalenti. Pertanto, il compilatore converte le formule di unità in un formato coerente, che converte i poteri negativi in reciproci, raggruppa le unità in un numeratore singolo e un denominatore e dispone le unità nel numeratore e nel denominatore.
 
-Ad esempio, le formule unit `kg m s^-2` e `m /s s * kg` vengono convertiti in `kg m/s^2`.
+Ad esempio, le formule `kg m s^-2` unit e `m /s s * kg` sono entrambe convertite in. `kg m/s^2`
 
-Si utilizzano unità di misura in espressioni a virgola mobile. L'uso di numeri a virgola mobile insieme a associate unità di misura aggiunge un ulteriore livello di indipendenza dai tipi e consente di evitare gli errori di mancata corrispondenza di unità che possono verificarsi nelle formule quando si usano tipizzazione debole numeri a virgola mobile. Se si scrivono mobile espressione punto che usa le unità, l'unità nell'espressione devono corrispondere.
+Le unità di misura vengono usate nelle espressioni a virgola mobile. L'utilizzo di numeri a virgola mobile insieme a unità di misura associate aggiunge un altro livello di indipendenza dai tipi e consente di evitare gli errori di mancata corrispondenza tra le unità che possono verificarsi nelle formule quando si utilizzano numeri a virgola mobile con tipizzazione debole. Se si scrive un'espressione a virgola mobile che usa unità, le unità nell'espressione devono corrispondere.
 
-È possibile annotare i valori letterali con una formula unit parentesi acute, come illustrato negli esempi seguenti.
+È possibile annotare i valori letterali con una formula di unità tra parentesi acute, come illustrato negli esempi seguenti.
 
 ```fsharp
 1.0<cm>
 55.0<miles/hour>
 ```
 
-Non inserire uno spazio tra il numero e la parentesi angolare di; Tuttavia, è possibile includere un suffisso letterale, ad esempio `f`, come illustrato nell'esempio seguente.
+Non viene inserito uno spazio tra il numero e la parentesi angolare; Tuttavia, è possibile includere un suffisso letterale `f`, ad esempio, come nell'esempio seguente.
 
 ```fsharp
 // The f indicates single-precision floating point.
 55.0f<miles/hour>
 ```
 
-Tale annotazione viene modificato il tipo del valore letterale dal relativo tipo primitivo (ad esempio `float`) a un tipo con dimensioni, ad esempio `float<cm>` o, in questo caso, `float<miles/hour>`. Un'annotazione di unità di `<1>` indica una quantità senza e il relativo tipo è equivalente al tipo primitivo senza un parametro dell'unità.
+Tale annotazione consente di modificare il tipo del valore letterale dal tipo primitivo (ad esempio `float`) a un tipo dimensionato, `float<cm>` ad esempio o `float<miles/hour>`, in questo caso. Un'annotazione `<1>` unità di indica una quantità senza dimensione e il relativo tipo è equivalente al tipo primitivo senza un parametro di unità.
 
-Il tipo di un'unità di misura è a virgola mobile o un tipo integrale con un'annotazione unità aggiuntiva, indicato tra parentesi quadre firmato. Di conseguenza, quando si scrive il tipo di una conversione da `g` (g) a `kg` (kg), si descrivono i tipi come indicato di seguito.
+Il tipo di unità di misura è un tipo a virgola mobile o integrale con segno insieme a un'annotazione unità aggiuntiva, indicata tra parentesi quadre. Pertanto, quando si scrive il tipo di una conversione da `g` (grammi) a `kg` (chilogrammi), si descrivono i tipi come segue.
 
 ```fsharp
 let convertg2kg (x : float<g>) = x / 1000.0<g/kg>
 ```
 
-Unità di misura vengono usate per il controllo dell'unità in fase di compilazione ma non vengono mantenute nell'ambiente di runtime. Pertanto, non influiscono sulle prestazioni.
+Le unità di misura vengono utilizzate per il controllo delle unità in fase di compilazione ma non vengono rese permanente nell'ambiente di Runtime. Pertanto, non influiscono sulle prestazioni.
 
-Unità di misura possono essere applicate a qualsiasi tipo, non solo tipi a virgola mobile; solo tipi a virgola mobile, firmato, tuttavia, i tipi integrali e tipi decimali supporto dimensionata quantità. Pertanto, è solo vantaggioso usare unità di misura aggregati che contengono questi tipi primitivi e tipi primitivi.
+Le unità di misura possono essere applicate a qualsiasi tipo, non solo ai tipi a virgola mobile. Tuttavia, solo i tipi a virgola mobile, i tipi integrali con segno e i tipi decimali supportano le quantità dimensionate. Pertanto, è opportuno usare unità di misura sui tipi primitivi e sulle aggregazioni che contengono questi tipi primitivi.
 
 Nell'esempio seguente viene illustrato l'utilizzo di unità di misura.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
 
-Esempio di codice seguente viene illustrato come convertire un numero a virgola mobile senza un valore a virgola mobile. Sufficiente moltiplicare per 1,0, applicare le dimensioni per la 1.0. È possibile astrarre questo in una funzione, ad esempio `degreesFahrenheit`.
+Nell'esempio di codice riportato di seguito viene illustrato come eseguire la conversione da un numero a virgola mobile non dimensionato a un valore a virgola mobile a dimensione. È sufficiente moltiplicare per 1,0, applicando le dimensioni al 1,0. È possibile astrarre questo oggetto in una `degreesFahrenheit`funzione come.
 
-Inoltre, quando si passano valori con dimensioni per le funzioni che si aspettano di numeri a virgola mobile senza dimensioni, è necessario annullare questa operazione le unità o eseguire il cast `float` utilizzando il `float` operatore. In questo esempio, si divide per `1.0<degC>` per gli argomenti `printf` perché `printf` prevede quantità senza dimensioni.
+Inoltre, quando si passano valori dimensionati a funzioni che prevedono numeri a virgola mobile senza dimensione, è necessario annullare le unità `float` o eseguire il `float` cast a utilizzando l'operatore. In questo esempio si divide `1.0<degC>` per per gli argomenti in `printf` perché `printf` prevede quantità di dimensioni.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6902.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6902.fs)]
 
-La sessione di esempio seguente mostra l'output da e input per questo codice.
+Nella sessione di esempio seguente vengono mostrati gli output di e gli input di questo codice.
 
 ```
 Enter a temperature in degrees Fahrenheit.
@@ -87,35 +87,35 @@ Enter a temperature in degrees Fahrenheit.
 That temperature in degrees Celsius is    32.22.
 ```
 
-## <a name="using-generic-units"></a>Utilizzo unità di misura generici
+## <a name="using-generic-units"></a>Uso di unità generiche
 
-È possibile scrivere funzioni generiche che operano sui dati che sono associata un'unità di misura. Eseguire questa operazione specificando un tipo di insieme a un'unità generica come parametro di tipo, come illustrato nell'esempio di codice seguente.
+È possibile scrivere funzioni generiche che operano su dati a cui è associata un'unità di misura. A tale scopo, specificare un tipo insieme a un'unità generica come parametro di tipo, come illustrato nell'esempio di codice seguente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
 
-## <a name="creating-aggregate-types-with-generic-units"></a>Creazione di tipi di aggregazione con unità di misura generici
+## <a name="creating-aggregate-types-with-generic-units"></a>Creazione di tipi aggregati con unità generiche
 
-Il codice seguente viene illustrato come creare un tipo di aggregazione che è costituito da singoli valori a virgola mobile con unità di misura generici. In questo modo un solo tipo da creare che funziona con un'ampia gamma di unità. Unità di misura generici conservano anche, indipendenza dai tipi garantendo che un tipo generico che ha un set di unità è un tipo diverso dallo stesso tipo generico con un set diverso di unità. Alla base di questa tecnica è che il `Measure` attributo può essere applicato al parametro di tipo.
+Nel codice seguente viene illustrato come creare un tipo di aggregazione costituito da singoli valori a virgola mobile con unità generiche. In questo modo è possibile creare un singolo tipo che funzioni con un'ampia gamma di unità. Inoltre, le unità generiche conservano l'indipendenza dai tipi assicurando che un tipo generico con un set di unità sia un tipo diverso da quello dello stesso tipo generico con un set di unità diverso. La base di questa tecnica è che l' `Measure` attributo può essere applicato al parametro di tipo.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
 
 ## <a name="units-at-runtime"></a>Unità in fase di esecuzione
 
-Unità di misura sono usate per il controllo dei tipi statici. Se i valori a virgola mobile vengono compilati, vengono eliminate le unità di misura, in modo che le unità vengono perse in fase di esecuzione. Pertanto, qualsiasi tentativo di implementare funzionalità che dipende dal controllo delle unità in fase di esecuzione non è possibile. Ad esempio possibile implementare un `ToString` funzione per stampare le unità non è possibile.
+Le unità di misura vengono usate per il controllo dei tipi statici. Quando vengono compilati i valori a virgola mobile, le unità di misura vengono eliminate, quindi le unità vengono perse in fase di esecuzione. Pertanto, qualsiasi tentativo di implementare le funzionalità che dipendono dal controllo delle unità in fase di esecuzione non è possibile. Ad esempio, l'implementazione `ToString` di una funzione per stampare le unità non è possibile.
 
 ## <a name="conversions"></a>Conversioni
 
-Per convertire un tipo che dispone di unità (ad esempio, `float<'u>`) a un tipo che non dispone di unità, è possibile usare la funzione di conversione standard. Ad esempio, è possibile usare `float` da convertire in un `float` valore che non dispone di unità, come illustrato nel codice seguente.
+Per convertire un tipo che dispone di unità (ad esempio `float<'u>`,) in un tipo che non dispone di unità, è possibile utilizzare la funzione di conversione standard. Ad esempio, è possibile usare `float` per eseguire la conversione `float` in un valore che non dispone di unità, come illustrato nel codice seguente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
 
-Per convertire un valore senza unità su un valore che dispone di unità, è possibile moltiplicare per valore 1 o 1.0 annotato con le unità appropriate. Tuttavia, per la scrittura di livelli di interoperabilità, esistono anche alcune funzioni esplicite che è possibile utilizzare per convertire i valori senza unità per i valori con le unità. Si tratta nel [LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3) modulo. Ad esempio, per eseguire la conversione da un valore `float` a un `float<cm>`, usare [FloatWithMeasure](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9), come illustrato nel codice seguente.
+Per convertire un valore senza unità in un valore con unità, è possibile moltiplicare per un valore 1 o 1,0 annotato con le unità appropriate. Tuttavia, per la scrittura di livelli di interoperabilità, sono disponibili anche alcune funzioni esplicite che è possibile usare per convertire i valori senza unità in valori con unità. Si trovano nel modulo [Microsoft. FSharp. Core. LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3) . Ad esempio, per eseguire la conversione da un `float` elemento a `float<cm>`un oggetto, usare [FloatWithMeasure](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9), come illustrato nel codice seguente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
 
-## <a name="units-of-measure-in-the-f-core-library"></a>Unità di misura in di F# libreria di base
+## <a name="units-of-measure-in-the-f-core-library"></a>Unità di misura nella libreria F# principale
 
-È disponibile in una libreria unit di `FSharp.Data.UnitSystems.SI` dello spazio dei nomi. Include le unità di sistema internazionale di misura in entrambi i form di simboli (, ad esempio `m` contatore) nel `UnitSymbols` sub-spazio dei nomi e il relativo nome completo (, ad esempio `meter` contatore) nel `UnitNames` spazio dei nomi secondario.
+Una libreria di unità è disponibile nello `FSharp.Data.UnitSystems.SI` spazio dei nomi. Sono incluse le unità si sia nella forma dei simboli ( `m` ad esempio per il `UnitSymbols` contatore) nello spazio dei nomi, sia nel nome completo `meter` (ad esempio per il `UnitNames` contatore) nello spazio dei nomi secondario.
 
 ## <a name="see-also"></a>Vedere anche
 

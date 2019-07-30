@@ -1,13 +1,13 @@
 ---
-title: File delle firme
-description: Informazioni su come usare F# per contenere le informazioni sulle firme pubbliche di un set di file di firma F# elementi, quali tipi, gli spazi dei nomi e i moduli del programma.
+title: File di firma
+description: Informazioni su come usare F# i file di firma per conservare informazioni sulle firme pubbliche di un set F# di elementi di programma, ad esempio tipi, spazi dei nomi e moduli.
 ms.date: 06/15/2018
-ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c04ac8bf4ee360a2caa15be8f2bbea41105bd160
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770448"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627161"
 ---
 # <a name="signatures"></a>Firme
 
@@ -19,7 +19,7 @@ Per ogni file di codice F# è disponibile un *file della firma*, ossia un file c
 
 Un file della firma descrive gli spazi dei nomi, i moduli, i tipi e i membri nel file di implementazione corrispondente. Le informazioni in un file della firma vengono usate per specificare le parti di codice nel file di implementazione corrispondente a cui è possibile accedere dal codice esterno al file di implementazione e le parti interne al file di implementazione. Gli spazi dei nomi, i moduli e i tipi inclusi nel file della firma devono essere un subset degli spazi dei nomi, dei moduli e dei tipi inclusi nel file di implementazione. Con le eccezioni descritte più avanti in questo argomento, gli elementi del linguaggio non elencati nel file della firma vengono considerati privati per il file di implementazione. Se non vengono trovati file della firma nel progetto o nella riga di comando, viene usata l'opzione di accessibilità predefinita.
 
-Per altre informazioni sull'accessibilità predefinita, vedere [controllo di accesso](access-control.md).
+Per ulteriori informazioni sull'accessibilità predefinita, vedere [controllo di accesso](access-control.md).
 
 In un file della firma non ripetere la definizione dei tipi e le implementazioni di ogni metodo o funzione. Usare invece la firma per ogni metodo e funzione, che consente di specificare in modo completo le funzionalità implementate da un modulo o da un frammento dello spazio dei nomi. La sintassi per una firma di tipo è uguale a quella usata nelle dichiarazioni del metodo astratto nelle interfacce e nelle classi astratte e viene anche mostrata da IntelliSense e dall'interprete F# fsi.exe quando visualizza correttamente l'input compilato.
 
@@ -56,15 +56,15 @@ Le regole per le firme di valore sono le seguenti:
 
 - Il modello dei parametri (anche noto come *grado*) delle firme e delle implementazioni deve essere coerente.
 
-- Se i nomi dei parametri in un file di firma sono diversi dai file di implementazione corrispondente, il nome nel file della firma da utilizzare in alternativa, che potrebbe causare problemi durante il debug o di profilatura. Se si vuole ricevere una notifica di tali mancate corrispondenze, Abilita avviso 3218 nel file di progetto o quando si richiama il compilatore (vedere `--warnon` sotto [le opzioni del compilatore](compiler-options.md)).
+- Se i nomi dei parametri in un file di firma sono diversi dal file di implementazione corrispondente, verrà usato il nome nel file di firma, che può causare problemi durante il debug o la profilatura. Se si desidera ricevere notifiche relative a tali mancate corrispondenze, abilitare l'avviso 3218 nel file di progetto o quando si richiama il compilatore `--warnon` (vedere in [Opzioni del compilatore](compiler-options.md)).
 
 L'esempio di codice seguente mostra un esempio di file della firma che contiene lo spazio dei nomi, il modulo, il valore di funzione e le firme di tipo, oltre agli attributi appropriati. Mostra anche il file di implementazione corrispondente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/fssignatures/snippet9002.fs)]
 
 Il codice seguente mostra il file di implementazione.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/fssignatures/snippet9001.fs)]
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 68bb3b8cd080e5b454776433e65027b7d18e7c3b
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 749ba2dd9318976289d9d4140cfadd711e0548d4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331562"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629868"
 ---
 # <a name="how-to-localize-an-application"></a>Procedura: Localizzare un'applicazione
 Questa esercitazione spiega come creare un'applicazione localizzata usando lo strumento LocBaml.  
@@ -66,7 +66,7 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>Creare l'assembly satellite per le risorse della lingua di sistema  
  Dopo aver configurato l'applicazione per generare un assembly satellite per le risorse della lingua di sistema, è necessario compilare l'applicazione. Viene generato l'assembly principale dell'applicazione, nonché l'assembly satellite per le risorse della lingua di sistema richiesto da LocBaml per la localizzazione. Per compilare l'applicazione:  
   
-1. Compilare HelloApp per creare [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
+1. Compilare HelloApp per creare una libreria di collegamento dinamico (DLL):  
   
      **msbuild helloapp.csproj**  
   
@@ -91,7 +91,7 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
 4. Le opzioni che è possibile specificare quando si esegue LocBaml sono le seguenti:  
   
-    - **analizza** o **-p:** Analizza il BAML, le risorse o [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] i file per generare un file CSV o txt.  
+    - **analizza** o **-p:** Analizza il BAML, le risorse o i file DLL per generare un file CSV o txt.  
   
     - **generate** o **-g:** Genera un file binario localizzato utilizzando un file convertito.  
   
@@ -165,7 +165,7 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
 <a name="merge_translations"></a>   
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>Usare LocBaml per generare un nuovo file resources.dll  
- Il contenuto identificato analizzando HelloApp.resources.dll con LocBaml è stato convertito e deve essere reinserito nell'applicazione originale. Usare l'  opzione generate o **-g** per generare un nuovo file resources. dll.  
+ Il contenuto identificato analizzando HelloApp.resources.dll con LocBaml è stato convertito e deve essere reinserito nell'applicazione originale. Usare l' opzione generate o **-g** per generare un nuovo file resources. dll.  
   
 1. Usare la sintassi seguente per generare un nuovo file HelloApp.resources.dll. Contrassegnare le impostazioni cultura come en-US (/cul:en-US).  
   

@@ -1,68 +1,68 @@
 ---
 title: Operatori aritmetici
-description: Scopri gli operatori aritmetici che sono disponibili in di F# linguaggio di programmazione.
+description: Informazioni sugli operatori aritmetici disponibili nel linguaggio di F# programmazione.
 ms.date: 04/04/2018
-ms.openlocfilehash: 74ab813a7ca5018b6bd084aea10627e4afd62015
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b783a0134541f11f06dde83af97676699b797da1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641651"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630787"
 ---
 # <a name="arithmetic-operators"></a>Operatori aritmetici
 
-In questo argomento descrive gli operatori aritmetici che sono disponibili in di F# linguaggio.
+In questo argomento vengono descritti gli operatori aritmetici disponibili F# nel linguaggio.
 
 ## <a name="summary-of-binary-arithmetic-operators"></a>Riepilogo degli operatori aritmetici binari
 
-Nella tabella seguente sono riepilogati gli operatori aritmetici binari che sono disponibili per tipi a virgola mobile e integrali unboxed.
+Nella tabella seguente sono riepilogati gli operatori aritmetici binari disponibili per i tipi integrali e a virgola mobile unboxed.
 
 |Operatore binario|Note|
 |---------------|-----|
-|`+` (addizione, oltre a)|Unchecked. Condizione di overflow possibili quando vengono sommati i numeri e la somma supera il valore assoluto massimo supportato dal tipo.|
-|`-` (sottrazione meno)|Unchecked. Possibili underflow condizione quando vengono sottratti tipi senza segno o quando sono troppo piccoli per essere rappresentato dal tipo di valori a virgola mobile.|
-|`*` (moltiplicazione, tempi)|Unchecked. Condizione di overflow possibili quando i numeri vengono moltiplicati e il prodotto supera il valore assoluto massimo supportato dal tipo.|
-|`/` (divisione, divisa per)|Divisione per zero causa un <xref:System.DivideByZeroException> per i tipi integrali. Per i tipi a virgola mobile, divisione per zero consente i valori a virgola mobile speciali `+Infinity` o `-Infinity`. È inoltre disponibile una condizione di possibili underflow quando un numero a virgola mobile è troppo piccolo per essere rappresentato dal tipo.|
-|`%` (parte rimanente, rem)|Restituisce il resto di un'operazione di divisione. Il segno del risultato è uguale a quello del primo operando.|
-|`**` (l'elevamento a potenza, alla potenza di)|Possibile condizione di overflow quando il risultato supera il valore massimo assoluto per il tipo.<br /><br />L'operatore di elevamento a potenza funziona solo con tipi a virgola mobile.|
+|`+`(addizione, più)|Deselezionata. Possibile condizione di overflow quando i numeri vengono aggiunti insieme e la somma supera il valore assoluto massimo supportato dal tipo.|
+|`-`(sottrazione, meno)|Deselezionata. Possibile condizione di underflow quando i tipi non firmati vengono sottratti o quando i valori a virgola mobile sono troppo piccoli per essere rappresentati dal tipo.|
+|`*`(moltiplicazione, ore)|Deselezionata. Possibile condizione di overflow quando i numeri vengono moltiplicati e il prodotto supera il valore assoluto massimo supportato dal tipo.|
+|`/`(divisione, divisa per)|La divisione per zero causa <xref:System.DivideByZeroException> un per i tipi integrali. Per i tipi a virgola mobile, la divisione per zero fornisce i valori `+Infinity` a virgola mobile speciali o. `-Infinity` È inoltre possibile che si verifichi una condizione di underflow quando un numero a virgola mobile è troppo piccolo per essere rappresentato dal tipo.|
+|`%`(resto, REM)|Restituisce il resto di un'operazione di divisione. Il segno del risultato è uguale al segno del primo operando.|
+|`**`(elevamento a potenza, alla potenza di)|Possibile condizione di overflow quando il risultato supera il valore assoluto massimo per il tipo.<br /><br />L'operatore di elevamento a potenza funziona solo con i tipi a virgola mobile.|
 
 ## <a name="summary-of-unary-arithmetic-operators"></a>Riepilogo degli operatori aritmetici unari
 
-Nella tabella seguente sono riepilogati gli operatori aritmetici unari che sono disponibili per i tipi integrali e a virgola mobile.
+Nella tabella seguente sono riepilogati gli operatori aritmetici unari disponibili per i tipi integrali e a virgola mobile.
 
 |Operatore unario|Note|
 |--------------|-----|
-|`+` (positivo)|Può essere applicato a qualsiasi espressione aritmetica. Non modifica il segno del valore.|
-|`-` (negazione, negativa)|Può essere applicato a qualsiasi espressione aritmetica. Modifica il segno del valore.|
+|`+`positivo|Può essere applicato a qualsiasi espressione aritmetica. Non modifica il segno del valore.|
+|`-`(negazione, negativo)|Può essere applicato a qualsiasi espressione aritmetica. Modifica il segno del valore.|
 
-Il comportamento in caso di overflow o underflow per i tipi integrali prevede il wrapping. In questo modo un risultato errato. Overflow numero intero rappresenta un problema potenzialmente grave che può contribuire a problemi di sicurezza quando software non viene scritto in modo da poterlo gestire. Se si tratta di un problema per l'applicazione, è consigliabile usare gli operatori di selezionati `Microsoft.FSharp.Core.Operators.Checked`.
+Il comportamento in fase di overflow o di underflow per i tipi integrali consiste nell'eseguire il wrapping. Questo causa un risultato errato. Un overflow di interi rappresenta un problema potenzialmente grave che può contribuire a problemi di sicurezza quando il software non viene scritto per conto dell'utente. Se questo è un problema per l'applicazione, è consigliabile usare gli operatori selezionati `Microsoft.FSharp.Core.Operators.Checked`in.
 
-## <a name="summary-of-binary-comparison-operators"></a>Riepilogo degli operatori di confronto binarie
+## <a name="summary-of-binary-comparison-operators"></a>Riepilogo degli operatori di confronto binario
 
-La tabella seguente illustra gli operatori di confronto binarie che sono disponibili per i tipi integrali e a virgola mobile. Questi operatori restituiscono valori di tipo `bool`.
+Nella tabella seguente vengono illustrati gli operatori di confronto binari disponibili per i tipi integrali e a virgola mobile. Questi operatori restituiscono valori di `bool`tipo.
 
-Numeri a virgola mobile non devono essere mai confrontati direttamente per verificarne l'uguaglianza, poiché la rappresentazione a virgola mobile IEEE non supporta un'operazione di uguaglianza esatta. Due numeri che è possibile verificare facilmente sarà uguale esaminando il codice potrebbero avere rappresentazioni in bit diverse.
+I numeri a virgola mobile non devono mai essere confrontati direttamente per verificarne l'uguaglianza, perché la rappresentazione a virgola mobile IEEE non supporta un'operazione di uguaglianza esatta. Due numeri che è possibile verificare in modo semplice per essere uguali controllando che il codice possa avere effettivamente diverse rappresentazioni di bit.
 
-|Operatore|Note|
+|Operator|Note|
 |--------|-----|
-|`=` (uguaglianza, uguale a)|Questo non è un operatore di assegnazione. Viene utilizzato solo per il confronto. Si tratta di un operatore generico.|
-|`>` (maggiore di)|Si tratta di un operatore generico.|
-|`<` (minore di)|Si tratta di un operatore generico.|
-|`>=` (maggiore o uguale a)|Si tratta di un operatore generico.|
-|`<=` (minore o uguale a)|Si tratta di un operatore generico.|
-|`<>` (non uguale)|Si tratta di un operatore generico.|
+|`=`(uguaglianza, uguale a)|Non si tratta di un operatore di assegnazione. Viene usato solo per il confronto. Si tratta di un operatore generico.|
+|`>`(maggiore di)|Si tratta di un operatore generico.|
+|`<`(minore di)|Si tratta di un operatore generico.|
+|`>=`(maggiore o uguale a)|Si tratta di un operatore generico.|
+|`<=`(minore o uguale a)|Si tratta di un operatore generico.|
+|`<>`(diverso da)|Si tratta di un operatore generico.|
 
-## <a name="overloaded-and-generic-operators"></a>Operatori di overload e generici
+## <a name="overloaded-and-generic-operators"></a>Operatori generici e di overload
 
-Tutti gli operatori descritti in questo argomento vengono definiti nel **FSharp** dello spazio dei nomi. Gli operatori di vengono definiti tramite i parametri di tipo risolti staticamente. Ciò significa che sono presenti definizioni singoli per ogni tipo specifico che funziona con tale operatore. Tutti gli unario e binari operatori aritmetici e bit per bit sono in questa categoria. Gli operatori di confronto sono generici e di conseguenza funzionano con qualsiasi tipo, non appena aritmetici tipi primitivi. Unione discriminata e tipi di record hanno le proprie implementazioni personalizzate che vengono generate dal F# compilatore. Tipi di classe usano il metodo <xref:System.Object.Equals%2A>.
+Tutti gli operatori descritti in questo argomento sono definiti nello spazio dei nomi **Microsoft. FSharp. Core. Operators** . Alcuni operatori vengono definiti utilizzando parametri di tipo risolti staticamente. Ciò significa che esistono singole definizioni per ogni tipo specifico che funziona con l'operatore. In questa categoria sono inclusi tutti gli operatori aritmetici, binari e bit per bit. Gli operatori di confronto sono generici e pertanto funzionano con qualsiasi tipo e non solo con tipi aritmetici primitivi. I F# tipi di record e Unione discriminati hanno implementazioni personalizzate generate dal compilatore. I tipi di classe usano <xref:System.Object.Equals%2A>il metodo.
 
-Gli operatori generici sono personalizzabili. Per personalizzare le funzioni di confronto, eseguire l'override <xref:System.Object.Equals%2A> per fornire il proprio confronto di uguaglianza personalizzati e quindi implementare <xref:System.IComparable>. Il <xref:System.IComparable?displayProperty=nameWithType> interfaccia dispone di un singolo metodo, il <xref:System.IComparable.CompareTo%2A> (metodo).
+Gli operatori generici sono personalizzabili. Per personalizzare le funzioni di confronto, <xref:System.Object.Equals%2A> eseguire l'override di per fornire un confronto di uguaglianza personalizzato <xref:System.IComparable>, quindi implementare. L' <xref:System.IComparable?displayProperty=nameWithType> interfaccia ha un solo metodo, ovvero <xref:System.IComparable.CompareTo%2A> il metodo.
 
-## <a name="operators-and-type-inference"></a>Gli operatori e l'inferenza del tipo
+## <a name="operators-and-type-inference"></a>Operatori e inferenza del tipo
 
-L'uso di un operatore in un'espressione vincola l'inferenza del tipo in tale operatore. Inoltre, l'utilizzo degli operatori impedisce la generalizzazione automatica, in quanto l'utilizzo degli operatori implica un tipo aritmetico. In assenza di qualsiasi altra informazione, il F# viene dedotto dal compilatore `int` come tipo di espressioni aritmetiche. È possibile eseguire l'override di questo comportamento specificando un altro tipo. In questo modo i tipi di argomento e tipo restituito `function1` nel codice seguente vengono considerati `int`, ma i tipi per `function2` vengono considerati `float`.
+L'utilizzo di un operatore in un'espressione vincola l'inferenza del tipo per l'operatore. Inoltre, l'utilizzo degli operatori impedisce la generalizzazione automatica, perché l'utilizzo di operatori implica un tipo aritmetico. In assenza di altre informazioni, il F# compilatore deduce `int` come il tipo di espressioni aritmetiche. È possibile eseguire l'override di questo comportamento specificando un altro tipo. Pertanto `int`, i tipi di argomento e il `function1` tipo restituito di nel codice seguente vengono dedotti come, ma i tipi per `function2` vengono dedotti `float`come.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3501.fs)]
 
 ## <a name="see-also"></a>Vedere anche
 

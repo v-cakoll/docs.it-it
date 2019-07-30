@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: fd99d97d677ef588c3f7e2a178190377d72c74ce
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 099d6b94f9094ac9baed25e5060d8a166e27573b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400632"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629920"
 ---
 # <a name="globalization-for-wpf"></a>Globalizzazione per WPF
 In questo argomento vengono introdotti i problemi che è necessario conoscere [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] quando si scrivono applicazioni per il mercato globale. Gli elementi di programmazione della globalizzazione sono [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] definiti `System.Globalization`in in.
@@ -127,7 +127,7 @@ Nell'esempio seguente viene illustrato un riferimento a un carattere esadecimale
 
  [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]i tipi di carattere consentono la gestione di set [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] di glifi di grandi dimensioni tramite la codifica. Tale codifica consente un esteso supporto internazionale, oltre alle varianti dei glifi tipografici.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]il rendering del testo è [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] basato sulla tecnologia dei sottopixel che supporta l'indipendenza della risoluzione. Questo migliora considerevolmente la leggibilità e consente di supportare documenti in stile rivista di qualità elevata per tutti gli script.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]il rendering del testo è basato sulla tecnologia Microsoft ClearType dei sottopixel che supporta l'indipendenza della risoluzione. Questo migliora considerevolmente la leggibilità e consente di supportare documenti in stile rivista di qualità elevata per tutti gli script.
 
 <a name="intl_layout"></a>
 ### <a name="international-layout"></a>Layout internazionale

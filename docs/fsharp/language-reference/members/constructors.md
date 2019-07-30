@@ -2,12 +2,12 @@
 title: Costruttori
 description: Informazioni su come definire e utilizzare i costruttori in F# per creare e inizializzare oggetti classe e struttura.
 ms.date: 05/16/2016
-ms.openlocfilehash: ef5dc134ad98179b6a365c4c34a9eca22fe5f7f6
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364366"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627604"
 ---
 # <a name="constructors"></a>Costruttori
 
@@ -23,7 +23,7 @@ Indipendentemente dal fatto che il costruttore che si vuole chiamare sia un cost
 
 Nel codice seguente viene illustrata una classe che dispone di un costruttore e diversi modi per creare oggetti.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
 L'output è indicato di seguito.
 
@@ -40,7 +40,7 @@ Le strutture seguono tutte le regole delle classi. Pertanto, è possibile avere 
 
 Inoltre, le strutture hanno spesso campi creati usando la `val` parola chiave. le classi possono anche avere questi campi. Le strutture e le classi con campi definiti tramite la `val` parola chiave possono essere inizializzate anche in costruttori aggiuntivi tramite espressioni di record, come illustrato nel codice seguente.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
 Per ulteriori informazioni, vedere [campi espliciti: `val` Parola chiave](explicit-fields-the-val-keyword.md).
 
@@ -48,7 +48,7 @@ Per ulteriori informazioni, vedere [campi espliciti: `val` Parola chiave](explic
 
 Un costruttore primario in una classe può eseguire codice in un' `do` associazione. Tuttavia, cosa accade se è necessario eseguire codice in un costruttore aggiuntivo, senza un' `do` associazione? A tale scopo, usare la `then` parola chiave.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
 
 Gli effetti collaterali del costruttore primario continuano a essere eseguiti. Di conseguenza, l'output è il seguente.
 
@@ -62,11 +62,11 @@ Created an invalid person object.
 
 Gli altri membri forniscono un nome per l'oggetto corrente nella definizione di ogni membro. È anche possibile inserire l'identificatore automatico nella prima riga della definizione della classe usando la `as` parola chiave immediatamente dopo i parametri del costruttore. Nell'esempio seguente viene illustrata questa sintassi.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
 In costruttori aggiuntivi è inoltre possibile definire un identificatore autonomo inserendo la `as` clausola subito dopo i parametri del costruttore. Nell'esempio seguente viene illustrata questa sintassi.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
 Possono verificarsi problemi quando si tenta di utilizzare un oggetto prima che sia completamente definito. Pertanto, gli utilizzi dell'identificatore automatico possono causare la generazione di un avviso da parte del compilatore e l'inserimento di controlli aggiuntivi per garantire che i membri di un oggetto non accedano prima che l'oggetto venga inizializzato. È consigliabile usare solo l'identificatore automatico nei `do` binding del costruttore primario o dopo la `then` parola chiave in costruttori aggiuntivi.
 
@@ -76,11 +76,11 @@ Il nome dell'identificatore auto non deve essere `this`. Può essere qualsiasi i
 
 È possibile assegnare valori alle proprietà di un oggetto classe nel codice di inizializzazione aggiungendo un elenco di assegnazioni del form `property = value` all'elenco di argomenti per un costruttore. Queste operazioni sono illustrate nell'esempio di codice riportato di seguito.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
 Nella versione seguente del codice precedente viene illustrata la combinazione di argomenti ordinari, argomenti facoltativi e impostazioni delle proprietà in una chiamata al costruttore.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 
 ## <a name="constructors-in-inherited-class"></a>Costruttori nella classe ereditata
 

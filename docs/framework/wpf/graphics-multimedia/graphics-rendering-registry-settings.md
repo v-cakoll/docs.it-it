@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: b1c61aa333c428e5cb811a5d19469516cbb813e3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c3544769480a45068be0ca64e90f91253daf3e16
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663163"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629784"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Impostazioni del Registro di sistema per il rendering della grafica
 Questo argomento fornisce una panoramica delle impostazioni del Registro di sistema per il rendering della grafica di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che influiscono sulle applicazioni di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -33,7 +33,7 @@ Questo argomento fornisce una panoramica delle impostazioni del Registro di sist
 |Impostazione|Descrizione|  
 |-------------|-----------------|  
 |**Opzione di disabilitazione dell'accelerazione hardware**|Specifica se l'accelerazione hardware deve essere abilitata.|  
-|**Valore massimo di multicampionamento**|Specifica il grado di multicampionamento del contenuto 3D anti-aliasing.|  
+|**Valore massimo di multicampionamento**|Specifica il grado di campionamento multiplo per l'anti-aliasing del contenuto 3D.|  
 |**Impostazione Data driver video necessaria**|Specifica se il sistema disabilita l'accelerazione hardware per i driver rilasciati prima di novembre 2004.|  
 |**Opzione per l'uso di unità di rasterizzazione dei riferimenti**|Specifica se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deve usare l'unità di rasterizzazione dei riferimenti.|  
   
@@ -57,9 +57,9 @@ Questo argomento fornisce una panoramica delle impostazioni del Registro di sist
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- Il **valore massimo di multicampionamento** consente di regolare la quantità massima di anti-aliasing del contenuto 3D. Usare questo livello per disabilitare l'anti-aliasing 3D nel [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] o abilitarlo in [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
+ Il **valore di multisample massimo** consente di regolare la quantità massima di anti-aliasing del contenuto 3D. Utilizzare questo livello per disabilitare l'anti-aliasing 3D in [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] o abilitarlo in [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
   
- Il **valore massimo di multicampionamento** è un valore DWORD che va da 0 a 16. Il valore 0 specifica che deve essere disabilitato l'anti-aliasing di multicampionamento del contenuto 3D, e un valore pari a 16 tenterà di usare fino a 16x dell'anti-aliasing di multicampionamento, se supportato dalla scheda video. Tenere presente che l'impostazione di un valore di questa chiave del Registro di sistema nei computer mediante driver XPDM causerà errori nelle applicazioni di utilizzare una grande quantità di memoria video aggiuntiva, riducendo le prestazioni di rendering 3D, e ha la possibilità di introdurre la stabilità e gli errori di rendering problemi.  
+ Il **valore massimo di multicampionamento** è un valore DWORD che va da 0 a 16. Il valore 0 specifica che deve essere disabilitato l'anti-aliasing di multicampionamento del contenuto 3D, e un valore pari a 16 tenterà di usare fino a 16x dell'anti-aliasing di multicampionamento, se supportato dalla scheda video. Tenere presente che l'impostazione di questo valore della chiave del registro di sistema nei computer che usano driver XPDM provocherà l'uso di una grande quantità di memoria video aggiuntiva da parte delle applicazioni, riducendo le prestazioni del rendering 3D e presentando la possibilità di introdurre errori e stabilità di rendering problemi.  
   
  Quando questa chiave del Registro di sistema non è impostata, il valore predefinito di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è 0 per i driver XPDM e 4 per i driver WDDM.  
   
@@ -89,7 +89,7 @@ Questo argomento fornisce una panoramica delle impostazioni del Registro di sist
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|DWORD|  
   
- L'**opzione per l'uso di unità di rasterizzazione dei riferimenti** consente di forzare [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in una modalità di rendering dell'hardware simulato per il debug: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] entra in modalità hardware, ma usa l'unità di rasterizzazione software dei riferimenti [!INCLUDE[TLA#tla_d3d](../../../../includes/tlasharptla-d3d-md.md)], d3dref9. dll, invece di un dispositivo hardware effettivo.  
+ L' **opzione Usa rasterizzazione dei riferimenti** consente di forzare [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] la modalità di rendering hardware simulato per il debug: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] passa alla modalità hardware, ma usa l'rasterizzatore software di riferimento Microsoft Direct3D, d3dref9. dll, anziché un dispositivo hardware effettivo.  
   
  L'unità di rasterizzazione dei riferimenti è molto lenta, ma ignora il driver video per evitare eventuali problemi di rendering causati da problemi del driver. Per questo motivo, usare l'unità di rasterizzazione dei riferimenti per determinare se i problemi di rendering sono causati dal driver video. Il file d3dref9. dll deve essere in una posizione a cui l'applicazione può accedere, ad esempio una posizione qualsiasi nel percorso di sistema o nella directory locale dell'applicazione.  
   

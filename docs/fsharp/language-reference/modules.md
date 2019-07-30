@@ -1,17 +1,17 @@
 ---
 title: Moduli
-description: Informazioni su come un F# modulo è un raggruppamento di F# codice, ad esempio i valori, tipi e valori di funzioni, in un F# programma.
+description: Informazioni su come F# un modulo è un raggruppamento di F# codice, ad esempio valori, tipi e valori di funzione, in un F# programma.
 ms.date: 04/24/2017
-ms.openlocfilehash: 07ea1eb9ed06988a780fd3c5acccbc8383a4dc55
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 685ab638e7e1b6c8d47d1a316483abcc18e40199
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641788"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627434"
 ---
 # <a name="modules"></a>Moduli
 
-Nel contesto del F# linguaggio, un *module* è un raggruppamento di F# codice, ad esempio i valori, tipi e valori di funzioni, in un F# programma. Il codice di raggruppamento nei moduli consente di tenere insieme il codice correlato e consente di evitare conflitti di nome nel programma.
+Nel contesto della F# lingua, un *modulo* è un raggruppamento di F# codice, ad esempio valori, tipi e valori di funzione, in un F# programma. Il codice di raggruppamento nei moduli consente di tenere insieme il codice correlato e consente di evitare conflitti di nome nel programma.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,69 +26,69 @@ module [accessibility-modifier] module-name =
 
 ## <a name="remarks"></a>Note
 
-Un F# modulo è un raggruppamento di F# costruisce codice, ad esempio i tipi, i valori, valori di funzione e codice nel `do` associazioni. Viene implementato come una classe common language runtime (CLR) che includa solo membri statici. Esistono due tipi di dichiarazioni di modulo, a seconda del fatto che l'intero file è incluso nel modulo: una dichiarazione di modulo di primo livello e una dichiarazione di modulo locale. Una dichiarazione di modulo di livello principale include l'intero file nel modulo. Una dichiarazione di modulo di primo livello può apparire solo come la prima dichiarazione in un file.
+Un F# modulo è un raggruppamento di costrutti di F# codice, ad esempio tipi, valori, valori di funzione e codice `do` nelle associazioni. Viene implementato come una classe Common Language Runtime (CLR) che dispone solo di membri statici. Esistono due tipi di dichiarazioni di modulo, a seconda che l'intero file sia incluso nel modulo: una dichiarazione di modulo di primo livello e una dichiarazione di modulo locale. Una dichiarazione di modulo di primo livello include l'intero file nel modulo. Una dichiarazione di modulo di primo livello può essere visualizzata solo come prima dichiarazione in un file.
 
-La sintassi per la dichiarazione di modulo di primo livello, l'opzione facoltativa *qualificato-spazio dei nomi* è la sequenza di nomi di spazio dei nomi annidato che contiene il modulo. Lo spazio dei nomi qualificato non deve essere dichiarato in precedenza.
+Nella sintassi per la dichiarazione di modulo di primo livello, lo *spazio dei nomi Qualified* facoltativo è la sequenza dei nomi di spazio dei nomi annidati che contiene il modulo. Non è necessario dichiarare in precedenza lo spazio dei nomi qualificato.
 
-Non è necessario impostare un rientro delle dichiarazioni in un modulo di primo livello. È necessario impostare un rientro a tutte le dichiarazioni nei moduli locale. In una dichiarazione di modulo locale, solo le dichiarazioni vengono rientrate sotto tale dichiarazione di modulo fanno parte del modulo.
+Non è necessario rientrare nelle dichiarazioni in un modulo di primo livello. È necessario rientrare in tutte le dichiarazioni nei moduli locali. In una dichiarazione di modulo locale, solo le dichiarazioni rientrate sotto tale dichiarazione del modulo fanno parte del modulo.
 
-Se un file di codice non inizia con una dichiarazione di modulo di primo livello o una dichiarazione dello spazio dei nomi, l'intero contenuto del file, inclusi tutti i moduli locali, diventa parte di un modulo di primo livello creato in modo implicito con lo stesso nome del file, senza l'estensione, con la prima lettera convertita in caratteri maiuscoli. Ad esempio, si consideri il seguente file.
+Se un file di codice non inizia con una dichiarazione di modulo di primo livello o con una dichiarazione dello spazio dei nomi, l'intero contenuto del file, inclusi i moduli locali, diventa parte di un modulo di primo livello creato in modo implicito con lo stesso nome del file, senza l'estensione, con la prima lettera convertita in maiuscolo. Si consideri, ad esempio, il file seguente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6601.fs)]
 
-Questo file potrebbe essere compilato come se fosse scritto in questo modo:
+Questo file verrà compilato come se fosse stato scritto in questo modo:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6602.fs)]
 
-Se si dispone di più moduli in un file, è necessario usare una dichiarazione di modulo locale per ogni modulo. Se viene dichiarato uno spazio dei nomi che lo contiene, questi moduli sono parte dello spazio dei nomi che lo contiene. Se non viene dichiarato uno spazio dei nomi che lo contiene, i moduli diventano parte del modulo di primo livello creato in modo implicito. Esempio di codice seguente illustra un file di codice che contiene più moduli. Il compilatore crea in modo implicito un modulo di primo livello denominato `Multiplemodules`, e `MyModule1` e `MyModule2` sono annidate in ogni modulo di primo livello.
+Se sono presenti più moduli in un file, è necessario usare una dichiarazione di modulo locale per ogni modulo. Se viene dichiarato uno spazio dei nomi che lo contiene, questi moduli fanno parte dello spazio dei nomi che lo contiene. Se uno spazio dei nomi che lo contiene non è dichiarato, i moduli diventano parte del modulo di primo livello creato in modo implicito. Nell'esempio di codice riportato di seguito viene illustrato un file di codice contenente più moduli. Il compilatore crea in modo implicito un modulo di primo `Multiplemodules`livello denominato `MyModule1` e `MyModule2` e sono annidati in tale modulo di primo livello.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6603.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6603.fs)]
 
-Se si hanno più file in un progetto o in un'unica compilazione o se si sta creando una libreria, è necessario includere una dichiarazione di modulo nella parte superiore del file o una dichiarazione dello spazio dei nomi. Il F# compilatore determina solo un nome di modulo in modo implicito quando è presente un solo file in una riga di comando di compilazione o di progetto e si sta creando un'applicazione.
+Se si dispone di più file in un progetto o in una singola compilazione o se si compila una libreria, è necessario includere una dichiarazione dello spazio dei nomi o una dichiarazione di modulo nella parte superiore del file. Il F# compilatore determina il nome del modulo in modo implicito solo quando è presente un solo file in un progetto o in una riga di comando di compilazione e si crea un'applicazione.
 
-Il *modificatore di accessibilità* può essere uno dei seguenti: `public`, `private`, `internal`. Per altre informazioni, vedere [Controllo di accesso](access-control.md). L'impostazione predefinita è public.
+Il *modificatore* di accessibilità può essere uno dei seguenti `public`: `private`, `internal`,. Per altre informazioni, vedere [Controllo di accesso](access-control.md). L'impostazione predefinita è public.
 
-## <a name="referencing-code-in-modules"></a>Riferimenti al codice nei moduli
+## <a name="referencing-code-in-modules"></a>Riferimento al codice nei moduli
 
-Quando si fa riferimento a funzioni, tipi e valori da un altro modulo, è necessario usare un nome completo o aprire il modulo. Se si usa un nome completo, è necessario specificare gli spazi dei nomi, il modulo e l'identificatore per l'elemento del programma desiderato. È separare ogni parte del percorso completo con un punto (.), come indicato di seguito.
+Quando si fa riferimento a funzioni, tipi e valori di un altro modulo, è necessario usare un nome completo o aprire il modulo. Se si usa un nome completo, è necessario specificare gli spazi dei nomi, il modulo e l'identificatore per l'elemento del programma desiderato. Si separa ogni parte del percorso completo con un punto (.), come indicato di seguito.
 
 `Namespace1.Namespace2.ModuleName.Identifier`
 
-È possibile aprire il modulo o uno o più degli spazi dei nomi per semplificare il codice. Per altre informazioni sull'apertura degli spazi dei nomi e i moduli, vedere [dichiarazioni di importazione: Il `open` parola chiave](import-declarations-the-open-keyword.md).
+Per semplificare il codice, è possibile aprire il modulo o uno o più spazi dei nomi. Per ulteriori informazioni sull'apertura di spazi dei nomi e moduli [, vedere dichiarazioni di importazione: `open` Parola chiave](import-declarations-the-open-keyword.md).
 
-Esempio di codice seguente mostra un modulo di primo livello che contiene tutto il codice fino alla fine del file.
+L'esempio di codice seguente mostra un modulo di primo livello che contiene tutto il codice fino alla fine del file.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6604.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6604.fs)]
 
-Per usare questo codice da un altro file nello stesso progetto, è possibile utilizzare nomi completi o si apre il modulo prima di usare le funzioni, come illustrato negli esempi seguenti.
+Per usare questo codice da un altro file nello stesso progetto, è possibile usare nomi completi o aprire il modulo prima di usare le funzioni, come illustrato negli esempi seguenti.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6605.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6605.fs)]
 
 ## <a name="nested-modules"></a>Moduli annidati
 
-I moduli possono essere annidati. Moduli interni devono essere applicato un rientro per quanto riguarda le dichiarazioni di modulo esterno per indicare che sono moduli interni, non nuovi moduli. Ad esempio, confrontare i due esempi seguenti. Modulo `Z` è un modulo interno nel codice seguente.
+I moduli possono essere annidati. Per indicare che si tratta di moduli interni e non nuovi moduli, è necessario rientrare nei moduli interni per quanto riguarda le dichiarazioni del modulo esterno. Confrontare, ad esempio, i due esempi seguenti. Il `Z` modulo è un modulo interno nel codice riportato di seguito.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6607.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6607.fs)]
 
-Ma modulo `Z` è di pari livello al modulo `Y` nel codice seguente.
+Tuttavia, `Z` il modulo è un elemento `Y` di pari livello nel codice riportato di seguito.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6608.fs)]
-Modulo `Z` è anche un modulo di pari livello nel codice seguente, in quanto non viene applicato un rientro per quanto riguarda le altre dichiarazioni di modulo `Y`.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6608.fs)]
+Il `Z` modulo è anche un modulo di pari livello nel codice seguente, perché non è rientrato per quanto riguarda le altre dichiarazioni `Y`nel modulo.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6609.fs)]
-Infine, se il modulo esterno non dispone di alcun dichiarazioni ed è seguito immediatamente da un'altra dichiarazione di modulo, la nuova dichiarazione di modulo viene considerato come un modulo interno, ma il compilatore avverte l'utente se la seconda definizione del modulo non verrà rientrata rispetto a farther il primo.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6609.fs)]
+Infine, se il modulo esterno non ha dichiarazioni e viene seguito immediatamente da un'altra dichiarazione di modulo, si presuppone che la nuova dichiarazione del modulo sia un modulo interno, ma il compilatore avvisa l'utente se la definizione del secondo modulo non è rientrata oltre prima.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6610.fs)]
-Per eliminare l'avviso, impostare un rientro del modulo interno.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6610.fs)]
+Per eliminare l'avviso, rientrare nel modulo interno.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6611.fs)]
-Se si vuole che tutto il codice in un file in un singolo modulo esterno e si vuole moduli interni, il modulo esterno non richiede il segno di uguale e le dichiarazioni, incluse le dichiarazioni di modulo interno, che entreranno nel modulo esterno non sono necessario impostare un rientro. Le dichiarazioni all'interno delle dichiarazioni di modulo interno deve essere rientrata. Il codice seguente viene illustrato in questo caso.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6611.fs)]
+Se si vuole che tutto il codice in un file si trovi in un unico modulo esterno e si desideri che i moduli interni non richiedano il segno di uguale e le dichiarazioni, incluse le dichiarazioni dei moduli interni, che andranno nel modulo esterno non devono essere rientrate. È necessario rientrare le dichiarazioni all'interno delle dichiarazioni dei moduli interni. Il codice seguente illustra questo caso.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6612.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6612.fs)]
 
-## <a name="recursive-modules"></a>Moduli ricorsiva
+## <a name="recursive-modules"></a>Moduli ricorsivi
 
-F#4.1 introduce la nozione di moduli che consentono di tutto il codice indipendente si escludono a vicenda sono ricorsivi.  Questa operazione viene eseguita tramite `module rec`.  Uso di `module rec` possibile tentare di risolvere alcune aree problematiche in cui non riesca a scrivere il codice si escludono a vicenda referenziali tra i tipi e i moduli.  Di seguito è riportato un esempio:
+F#4,1 introduce la nozione di moduli che consentono a tutto il codice contenuto di essere ricorsivo a vicenda.  Questa operazione viene eseguita `module rec`tramite.  L'uso `module rec` di può alleviare alcune problematiche nella mancata possibilità di scrivere codice reciprocamente referenziale tra tipi e moduli.  Di seguito è riportato un esempio:
 
 ```fsharp
 module rec RecursiveModule =
@@ -128,12 +128,12 @@ module rec RecursiveModule =
             | Down -> b |> peelSides
 ```
 
-Si noti che l'eccezione `DontSqueezeTheBananaException` e la classe `Banana` entrambe fanno riferimento reciproco.  Inoltre, il modulo `BananaHelpers` e la classe `Banana` riferimento anche a altro.  Ciò non sarebbe possibile esprimere F# se è stato rimosso il `rec` parola chiave dal `RecursiveModule` modulo.
+Si noti che l' `DontSqueezeTheBananaException` eccezione e la `Banana` classe fanno riferimento l'una all'altra.  Inoltre, il modulo `BananaHelpers` e la classe `Banana` fanno riferimento l'uno all'altro.  Non sarebbe possibile esprimere in F# se la `rec` parola chiave è stata rimossa dal `RecursiveModule` modulo.
 
-Questa funzionalità è anche possibile nelle [spazi dei nomi](namespaces.md) con F# 4.1.
+Questa funzionalità è inoltre possibile negli [spazi dei nomi](namespaces.md) con F# 4,1.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per il linguaggio F#](index.md)
 - [Spazi dei nomi](namespaces.md)
-- [F#RFC FS-1009 - Consenti moduli e tipi referenziali si escludono a vicenda su ambiti più ampi all'interno dei file](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F#RFC FS-1009-Consenti i tipi e i moduli referenziali reciprocamente su ambiti più ampi nei file](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

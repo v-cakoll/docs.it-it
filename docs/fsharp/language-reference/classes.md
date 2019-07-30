@@ -1,13 +1,13 @@
 ---
 title: Classi
-description: Informazioni su come F# le classi sono tipi che rappresentano oggetti che possono avere proprietà, metodi ed eventi.
+description: Informazioni sul F# modo in cui le classi sono tipi che rappresentano oggetti che possono avere proprietà, metodi ed eventi.
 ms.date: 05/16/2016
-ms.openlocfilehash: a233fea538274216db3c6751f6fbabbf70cc2841
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5c012d028bc1f89e3e9f5969b3461faab9aad3a0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645522"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630449"
 ---
 # <a name="classes"></a>Classi
 
@@ -33,51 +33,51 @@ and [access-modifier] type-name2 ...
 
 ## <a name="remarks"></a>Note
 
-Le classi rappresentano la descrizione fondamentale dei tipi di oggetto .NET. la classe è il concetto di tipo primario che supporta la programmazione orientata agli oggetti in F#.
+Le classi rappresentano la descrizione fondamentale dei tipi di oggetto .NET; la classe è il concetto di tipo principale che supporta la programmazione orientata F#a oggetti in.
 
-Nella sintassi precedente, il `type-name` qualsiasi identificatore valido. Il `type-params` vengono descritti i parametri di tipo generico facoltativo. È costituito da nomi di parametro di tipo e vincoli racchiuso tra parentesi angolari (`<` e `>`). Per altre informazioni, vedere [Generics](generics/index.md) e [vincoli](generics/constraints.md). Il `parameter-list` vengono descritti i parametri del costruttore. Il modificatore di accesso prima si riferisce il tipo. il secondo riguarda il costruttore primario. In entrambi i casi, il valore predefinito è `public`.
+Nella sintassi precedente, `type-name` è qualsiasi identificatore valido. Descrive `type-params` i parametri facoltativi di tipo generico. È costituito da nomi di parametri di tipo e vincoli racchiusi tra`<` parentesi `>`angolari (e). Per altre informazioni, vedere [generics](./generics/index.md) and [Constraints](./generics/constraints.md). Descrive `parameter-list` i parametri del costruttore. Il primo modificatore di accesso è relativo al tipo. il secondo riguarda il costruttore primario. In entrambi i casi, il valore `public`predefinito è.
 
-Specificare la classe base per una classe usando la `inherit` (parola chiave). È necessario fornire argomenti, racchiusi tra parentesi, per il costruttore di classe di base.
+È possibile specificare la classe di base per una classe usando `inherit` la parola chiave. È necessario fornire argomenti, tra parentesi, per il costruttore della classe base.
 
-Si dichiara i campi o che sono locali rispetto alla classe con valori di funzione `let` associazioni ed è necessario seguire le regole generali per `let` associazioni. Il `do-bindings` sezione include il codice da eseguire durante la costruzione di oggetti.
+Si dichiarano i campi o i valori delle funzioni locali alla classe `let` utilizzando le associazioni ed è necessario seguire le regole generali per `let` le associazioni. La `do-bindings` sezione include il codice da eseguire alla costruzione dell'oggetto.
 
-Il `member-list` include costruttori aggiuntivi, istanza e le dichiarazioni di metodo statico, le dichiarazioni di interfaccia, associazioni astratte e dichiarazioni di proprietà ed eventi. Questi elementi sono descritti [membri](members/index.md).
+`member-list` È costituito da costruttori aggiuntivi, dichiarazioni di metodi e istanze statiche, dichiarazioni di interfaccia, associazioni astratte e dichiarazioni di proprietà e eventi. Questi sono descritti in [membri](./members/index.md).
 
-Il `identifier` che viene usato con l'opzione facoltativa `as` (parola chiave) fornisce un nome per la variabile di istanza oppure autoidentificatore, che può essere utilizzato nella definizione del tipo per fare riferimento all'istanza del tipo. Per altre informazioni, vedere la sezione autoidentificatori più avanti in questo argomento.
+L' `identifier` oggetto utilizzato con la parola chiave `as` optional assegna un nome alla variabile di istanza o a un identificatore automatico che può essere utilizzato nella definizione del tipo per fare riferimento all'istanza del tipo. Per ulteriori informazioni, vedere la sezione identificatori autonomi più avanti in questo argomento.
 
-Le parole chiave `class` e `end` che contrassegna l'inizio e fine della definizione sono facoltativi.
+Le parole `class` chiave `end` e che contrassegnano l'inizio e la fine della definizione sono facoltative.
 
-Si escludono a vicenda tipi ricorsiva, che sono tipi che fanno riferimento a altro, vengono uniti dall'operatore di `and` (parola chiave) come funzioni ricorsive reciproche. Per un esempio, vedere la sezione si escludono a vicenda tipi ricorsiva.
+I tipi ricorsivamente ricorsivi, ovvero i tipi che fanno riferimento l'uno all'altro, vengono `and` Uniti insieme alla parola chiave come le funzioni ricorsive reciproche. Per un esempio, vedere la sezione tipi ricorsivamente ricorsivi.
 
 ## <a name="constructors"></a>Costruttori
 
-Il costruttore è codice che crea un'istanza del tipo di classe. Costruttori di classi funzionano in modo diverso in F# rispetto ai colleghi in altri linguaggi .NET. In un F# classe, è sempre presente un costruttore primario i cui argomenti sono descritti nel `parameter-list` che segue il nome del tipo e il cui corpo è costituito il `let` (e `let rec`) associazioni all'inizio della dichiarazione di classe e il `do` associazioni che seguono. Gli argomenti del costruttore primario sono nell'ambito della dichiarazione di classe.
+Il costruttore è un codice che crea un'istanza del tipo di classe. I costruttori per le classi funzionano in modo F# diverso in rispetto a quanto avviene in altri linguaggi .NET. In una F# classe è sempre presente un costruttore primario i cui argomenti sono descritti in `parameter-list` che seguono il nome del tipo e il cui `let` corpo è costituito dalle associazioni `let rec`(e) all'inizio della dichiarazione di classe e `do` associazioni che seguono. Gli argomenti del costruttore primario rientrano nell'ambito della dichiarazione di classe.
 
-È possibile aggiungere costruttori aggiuntivi utilizzando la `new` (parola chiave) per aggiungere un membro, come indicato di seguito:
+È possibile aggiungere ulteriori costruttori utilizzando la `new` parola chiave per aggiungere un membro, come indicato di seguito:
 
 `new`(`argument-list`) = `constructor-body`
 
-Il corpo del costruttore della nuova deve richiamare il costruttore primario specificato nella parte superiore della dichiarazione di classe.
+Il corpo del nuovo costruttore deve richiamare il costruttore primario specificato all'inizio della dichiarazione di classe.
 
-Nell'esempio seguente illustra questo concetto. Nel codice seguente, `MyClass` dispone di due costruttori, un costruttore primario che accetta due argomenti e un altro costruttore che non accetta argomenti.
+Nell'esempio seguente viene illustrato questo concetto. Nel codice seguente, `MyClass` dispone di due costruttori, un costruttore primario che accetta due argomenti e un altro costruttore che non accetta argomenti.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2401.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2401.fs)]
 
-## <a name="let-and-do-bindings"></a>Let e associazioni do
+## <a name="let-and-do-bindings"></a>Associazioni let and do
 
-Il `let` e `do` associazioni in una definizione di classe costituiscono il corpo del costruttore della classe primaria e pertanto vengono eseguiti ogni volta che viene creata un'istanza della classe. Se un `let` associazione è una funzione, quindi viene compilato in un membro. Se il `let` binding è un valore che non viene usato in qualsiasi funzione o un membro, quindi viene compilato in una variabile locale per il costruttore. In caso contrario, viene compilato in un campo della classe. Il `do` espressioni che seguono vengono compilate nel costruttore primario ed eseguire il codice di inizializzazione per ogni istanza. Poiché i costruttori aggiuntivi sempre chiamare il costruttore principale, il `let` associazioni e `do` vengono sempre eseguite, indipendentemente da quale costruttore viene chiamato.
+Le `let` associazioni `do` e in una definizione di classe formano il corpo del costruttore della classe primaria, quindi vengono eseguite ogni volta che viene creata un'istanza della classe. Se un' `let` associazione è una funzione, viene compilata in un membro. Se l' `let` associazione è un valore che non viene usato in alcuna funzione o membro, viene compilato in una variabile locale del costruttore. In caso contrario, viene compilato in un campo della classe. Le `do` espressioni che seguono vengono compilate nel costruttore primario ed eseguono il codice di inizializzazione per ogni istanza. Poiché tutti i costruttori aggiuntivi chiamano sempre il costruttore primario, le `let` associazioni e `do` le associazioni vengono sempre eseguite indipendentemente dal costruttore chiamato.
 
-I campi che vengono creati da `let` associazioni sono accessibili nel corso dei metodi e proprietà della classe; tuttavia, non è accessibile da metodi statici, anche se i metodi statici accettare una variabile di istanza come parametro. Essi non è accessibile tramite l'autoidentificatore, se presente.
+È possibile accedere ai campi `let` creati dalle associazioni in tutti i metodi e le proprietà della classe. Tuttavia, non è possibile accedervi dai metodi statici, anche se i metodi statici accettano una variabile di istanza come parametro. Non è possibile accedervi usando l'identificatore automatico, se disponibile.
 
-## <a name="self-identifiers"></a>Autoidentificatori
+## <a name="self-identifiers"></a>Identificatori autonomi
 
-Oggetto *autoidentificatore* è un nome che rappresenta l'istanza corrente. Sono simili a autoidentificatori il `this` parola chiave in c# o C++ o `Me` in Visual Basic. È possibile definire un identificatore automatico in due modi diversi, a seconda che si voglia l'autoidentificatore nell'ambito per l'intera definizione di classe o solo per un singolo metodo.
+Un *identificatore auto* è un nome che rappresenta l'istanza corrente. Gli identificatori autonomi assomigliano `this` alla parola `Me` chiave in C# o C++ o in Visual Basic. È possibile definire un identificatore autonomo in due modi diversi, a seconda che si desideri che l'autoidentificatore sia nell'ambito per la definizione di classe intera o solo per un singolo metodo.
 
-Per definire un identificatore automatico per l'intera classe, usare il `as` (parola chiave) dopo la parentesi di chiusura del parametro del costruttore elencare e specificare il nome dell'identificatore.
+Per definire un identificatore automatico per l'intera classe, usare la `as` parola chiave dopo le parentesi di chiusura dell'elenco di parametri del costruttore e specificare il nome dell'identificatore.
 
-Per definire un identificatore automatico per un solo metodo, fornire l'autoidentificatore nella dichiarazione del membro, appena prima del nome del metodo e un punto (.) come separatore.
+Per definire un identificatore automatico per un solo metodo, specificare l'identificatore automatico nella dichiarazione del membro, immediatamente prima del nome del metodo e un punto (.) come separatore.
 
-Esempio di codice seguente illustra due modi per creare un identificatore utente. Nella prima riga, il `as` parola chiave viene usata per definire l'autoidentificatore. Nella quinta riga, l'identificatore `this` viene usato per definire un identificatore utente il cui ambito è limitato al metodo `PrintMessage`.
+Nell'esempio di codice riportato di seguito vengono illustrati i due modi per creare un identificatore automatico. Nella prima riga, la `as` parola chiave viene usata per definire l'identificatore automatico. Nella quinta riga, l'identificatore `this` viene usato per definire un identificatore autonomo il cui ambito è limitato al metodo. `PrintMessage`
 
 ```fsharp
 type MyClass2(dataIn) as self =
@@ -88,53 +88,53 @@ type MyClass2(dataIn) as self =
         printf "Creating MyClass2 with Data %d" data
 ```
 
-A differenza di altri linguaggi .NET, è possibile denominare l'autoidentificatore come preferisci; non è limitato ai nomi, ad esempio `self`, `Me`, o `this`.
+Diversamente da altri linguaggi .NET, è possibile assegnare un nome all'identificatore automatico, non si è limitati a nomi `self`come, `Me`o `this`.
 
-Stesso identificatore dichiarato con la `as` parola chiave non viene inizializzata finché dopo il `let` associazioni vengono eseguite. Pertanto, non può essere usato nel `let` associazioni. È possibile usare l'autoidentificatore nel `do` sezione delle associazioni.
+L'identificatore autonomo dichiarato con la `as` parola chiave non viene inizializzato finché non vengono eseguite le `let` associazioni. Pertanto, non può essere utilizzato nelle `let` associazioni. È possibile usare l'identificatore automatico nella `do` sezione Bindings.
 
 ## <a name="generic-type-parameters"></a>Parametri di tipo generico
 
-Parametri di tipo generico specificati parentesi angolari (`<` e `>`), sotto forma di una virgoletta singola, seguita da un identificatore. Più parametri di tipo generico sono separati da virgole. Il parametro di tipo generico è nell'ambito della dichiarazione. Esempio di codice seguente viene illustrato come specificare i parametri di tipo generico.
+I parametri di tipo generico sono specificati tra parentesi angolari (`<` e `>`), sotto forma di virgolette singole seguite da un identificatore. Più parametri di tipo generico sono separati da virgole. Il parametro di tipo generico è nell'ambito dell'intera dichiarazione. Nell'esempio di codice seguente viene illustrato come specificare parametri di tipo generico.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2403.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2403.fs)]
 
-Gli argomenti di tipo vengono dedotti quando viene utilizzato il tipo. Nel codice seguente, il tipo dedotto è una sequenza di tuple.
+Gli argomenti di tipo vengono dedotti quando viene usato il tipo. Nel codice seguente, il tipo dedotto è una sequenza di Tuple.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet24031.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet24031.fs)]
 
-## <a name="specifying-inheritance"></a>Impostazione dell'ereditarietà
+## <a name="specifying-inheritance"></a>Specifica dell'ereditarietà
 
-Il `inherit` clausola identifica la classe di base diretta, se presente. In F#, solo uno diretto della classe base è consentita. Interfacce implementate da una classe non vengono considerate classi base. Le interfacce vengono discussi nel [interfacce](Interfaces.md) argomento.
+La `inherit` clausola identifica la classe di base diretta, se ne esiste una. In F#è consentita una sola classe di base diretta. Le interfacce implementate da una classe non sono considerate classi di base. Le interfacce sono descritte nell'argomento [interfacce](Interfaces.md) .
 
-È possibile accedere i metodi e le proprietà della classe base dalla classe derivata usando la parola chiave del linguaggio `base` come identificatore, seguito da un punto (.) e il nome del membro.
+È possibile accedere ai metodi e alle proprietà della classe di base dalla classe derivata usando la parola chiave `base` del linguaggio come identificatore, seguito da un punto (.) e dal nome del membro.
 
 Per altre informazioni, vedere [Ereditarietà](inheritance.md).
 
-## <a name="members-section"></a>Sezione membri
+## <a name="members-section"></a>Sezione Members
 
-È possibile definire statico o i metodi di istanza, le proprietà, le implementazioni dell'interfaccia, i membri astratti, le dichiarazioni di eventi e costruttori aggiuntivi in questa sezione. Let ed effettuare associazioni non può trovarsi in questa sezione. Poiché è possibile aggiungere membri a una varietà di F# tipi oltre alle classi, vengono descritti in un argomento separato [membri](members/index.md).
+In questa sezione è possibile definire metodi statici o di istanza, proprietà, implementazioni di interfacce, membri astratti, dichiarazioni di eventi e costruttori aggiuntivi. Le associazioni let e do non possono essere visualizzate in questa sezione. Poiché i membri possono essere aggiunti a un'ampia F# gamma di tipi, oltre alle classi, vengono illustrati in un argomento separato, ovvero [membri](./members/index.md).
 
-## <a name="mutually-recursive-types"></a>Si escludono a vicenda tipi ricorsiva
+## <a name="mutually-recursive-types"></a>Tipi ricorsivi reciproci
 
-Quando si definiscono i tipi che fanno riferimento a altro in modo circolare, è unire le definizioni dei tipi tramite la `and` (parola chiave). Il `and` parola chiave sostituisce il `type` la parola chiave nel tutto eccetto la prima definizione, come indicato di seguito.
+Quando si definiscono i tipi che fanno riferimento l'uno all'altro in modo circolare, è possibile stringere le definizioni `and` dei tipi usando la parola chiave. La `and` parola chiave sostituisce `type` la parola chiave su All eccetto la prima definizione, come indicato di seguito.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2404.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2404.fs)]
 
 L'output è un elenco di tutti i file nella directory corrente.
 
-## <a name="when-to-use-classes-unions-records-and-structures"></a>Quando usare le classi, unioni discriminate, record e strutture
+## <a name="when-to-use-classes-unions-records-and-structures"></a>Quando utilizzare classi, unioni, record e strutture
 
-Data la varietà di tipi tra cui scegliere, è necessario avere una buona conoscenza di ciò che è progettato per ogni tipo per selezionare il tipo appropriato per una determinata situazione. Classi sono progettate per l'uso in contesti di programmazione orientata agli oggetti. La programmazione orientata agli oggetti è il paradigma principale usato dalle applicazioni che sono destinate a .NET Framework. Se il F# dispone di codice lavorare a stretto contatto con .NET Framework o a un'altra libreria orientate a oggetti e soprattutto se è necessario estendere da un sistema di tipi orientate a oggetti, ad esempio una libreria dell'interfaccia utente, le classi sono probabilmente appropriate.
+Data la varietà di tipi tra cui scegliere, è necessario avere una conoscenza approfondita di ciò che ciascun tipo è progettato per selezionare il tipo appropriato per una particolare situazione. Le classi sono progettate per essere usate nei contesti di programmazione orientata a oggetti. La programmazione orientata a oggetti è il paradigma principale utilizzato nelle applicazioni scritte per il .NET Framework. Se il F# codice deve collaborare strettamente con la .NET Framework o un'altra libreria orientata a oggetti e, soprattutto se è necessario estendere da un sistema di tipi orientato a oggetti, ad esempio una libreria dell'interfaccia utente, le classi sono probabilmente appropriate.
 
-Se non si interagisce strettamente con il codice orientate a oggetti o se si sta scrivendo codice che è indipendente e pertanto protetti contro il frequente interazione con codice orientate a oggetti, è consigliabile usare record e unioni discriminate. Un singolo, anche pensiero – out unione discriminata, insieme a codice, corrispondenza dei appropriato può spesso essere utilizzato come un'alternativa più semplice per una gerarchia di oggetti. Per altre informazioni sulle unioni discriminate, vedere [unioni discriminate](discriminated-unions.md).
+Se non si interagisce strettamente con il codice orientato a oggetti o se si sta scrivendo codice indipendente e pertanto protetto da interazioni frequenti con codice orientato a oggetti, è consigliabile utilizzare record e unioni discriminate. Un'unione discriminata unica, ben concepita, insieme al codice appropriato per i criteri di ricerca, può essere spesso utilizzata come alternativa più semplice a una gerarchia di oggetti. Per altre informazioni sulle unioni discriminate, vedere [unioni discriminate](discriminated-unions.md).
 
-I record hanno il vantaggio di essere più semplice rispetto alle classi, ma non sono appropriati quando le richieste di un tipo di superare i risultati ottenuti con la loro semplicità. I record sono fondamentalmente aggregazioni semplici di valori, senza costruttori separati che possono eseguire azioni personalizzate, senza campi nascosti e senza alcuna implementazione dell'ereditarietà o interfaccia. Anche se i membri, ad esempio proprietà e metodi possono essere aggiunti ai record per rendere il proprio comportamento più complesso, i campi archiviati in un record sono comunque una semplice aggregazione di valori. Per altre informazioni sui record, vedere [record](records.md).
+I record hanno il vantaggio di essere più semplici delle classi, ma i record non sono appropriati quando le richieste di un tipo superano ciò che può essere ottenuto con la loro semplicità. I record sono essenzialmente semplici aggregazioni di valori, senza costruttori distinti che possono eseguire azioni personalizzate, senza campi nascosti e senza implementazioni di ereditarietà o di interfaccia. Sebbene i membri come proprietà e metodi possano essere aggiunti ai record per rendere il loro comportamento più complesso, i campi archiviati in un record sono ancora una semplice aggregazione di valori. Per ulteriori informazioni sui record, vedere [record](records.md).
 
-Le strutture sono utili anche per piccole aggregazioni di dati, ma si differenziano dalle classi e i record in quanto sono tipi di valore .NET. Classi e i record sono i tipi di riferimento .NET. La semantica dei tipi di valore e tipi di riferimento è diversa in quanto i tipi di valore vengono passati per valore. Ciò significa che vengono copiati in bit per bit quando vengono passati come parametro o restituiti da una funzione. Vengono inoltre archiviate nello stack o, se vengono usati come un campo, incorporato all'interno dell'oggetto padre anziché archiviati nel proprio percorso separato nell'heap. Pertanto, le strutture sono appropriate per i dati utilizzati di frequente quando il sovraccarico dovuto all'accesso l'heap è un problema. Per altre informazioni sulle strutture, vedere [strutture](structures.md).
+Le strutture sono utili anche per piccole aggregazioni di dati, ma si differenziano dalle classi e dai record in quanto sono tipi di valore .NET. Le classi e i record sono tipi di riferimento .NET. La semantica dei tipi di valore e i tipi di riferimento sono diversi in quanto i tipi di valore vengono passati per valore. Ciò significa che vengono copiati bit per bit quando vengono passati come parametro o restituiti da una funzione. Vengono inoltre archiviati nello stack o, se vengono utilizzati come campo, incorporati all'interno dell'oggetto padre anziché archiviati nella propria posizione separata nell'heap. Pertanto, le strutture sono appropriate per i dati a cui si accede di frequente quando l'overhead di accesso all'heap costituisce un problema. Per ulteriori informazioni sulle strutture, vedere [strutture](structures.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per il linguaggio F#](index.md)
-- [Membri](members/index.md)
+- [Membri](./members/index.md)
 - [Ereditarietà](inheritance.md)
 - [Interfacce](interfaces.md)

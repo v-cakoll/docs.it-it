@@ -1,13 +1,13 @@
 ---
 title: Funzioni
-description: Altre informazioni sulle funzioni in F# e in che modo F# supporta i costrutti di programmazione funzionale comuni.
+description: Informazioni sulle funzioni in F# e su F# come supporta costrutti comuni di programmazione funzionale.
 ms.date: 05/16/2016
-ms.openlocfilehash: f68a36de7af2bdb803b0b633929aa472806f61aa
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6f65ce692169b71abe8d2eff7ef07b66975d478b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645394"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630710"
 ---
 # <a name="functions"></a>Funzioni
 
@@ -42,11 +42,11 @@ Le funzioni possono essere contrassegnate `inline`. Per informazioni su `inline`
 
 A qualsiasi livello di ambito diverso dall'ambito del modulo, non è un errore riusare un nome di funzione o un valore. Se si riusa un nome, il nome dichiarato successivamente sostituisce il nome dichiarato in precedenza. Tuttavia, nell'ambito di livello superiore in un modulo, i nomi devono essere univoci. Ad esempio, il codice seguente genera un errore quando viene visualizzato nell'ambito del modulo, ma non quando viene visualizzato all'interno di una funzione:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
 
 Ma il codice seguente è accettabile a qualsiasi livello di ambito:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
 
 ### <a name="parameters"></a>Parametri
 
@@ -74,7 +74,7 @@ La funzione crea una tupla da un argomento di qualsiasi tipo. Poiché il tipo no
 
 Un corpo di funzione può contenere definizioni di funzioni e variabili locali. Tali funzioni e variabili rientrano nell'ambito del corpo della funzione corrente ma non al suo esterno. Dopo aver abilitato l'opzione di sintassi leggera, è necessario usare un rientro per indicare che una definizione è in un corpo della funzione, come illustrato nell'esempio seguente:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
 Per altre informazioni, vedere [Code Formatting Guidelines](../code-formatting-guidelines.md) (Linee guida per la formattazione del codice) e [Verbose Syntax](../verbose-syntax.md) (Sintassi dettagliata).
 
@@ -84,7 +84,7 @@ Il compilatore usa l'espressione finale in un corpo di funzione per determinare 
 
 Per specificare in modo esplicito il valore restituito, scrivere il codice nel modo seguente:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
 
 Analogamente al codice scritto in precedenza, il compilatore applica **float** all'intera funzione; se si vuole applicarlo anche ai tipi di parametro, usare il codice seguente:
 
@@ -104,17 +104,17 @@ let vol = cylinderVolume 2.0 3.0
 
 Se si specifica un numero di argomenti inferiore al numero specificato, si crea una nuova funzione che prevedere gli argomenti rimanenti. Questo metodo di gestione degli argomenti è detto *currying* ed è una caratteristica dei linguaggi di programmazione funzionale come F#. Ad esempio, si supponga di usare due dimensioni per un tubo: una ha un raggio di **2** e l'altra ha un raggio di **3**. È possibile creare funzioni che determinano il volume del tubo nel modo seguente:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
 
 Verrà quindi specificato l'argomento aggiuntivo necessario per varie lunghezze del tubo delle due dimensioni diverse:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
 
 ## <a name="recursive-functions"></a>Funzioni ricorsive
 
-Le *funzioni ricorsive* sono funzioni che chiamano se stesse. Richiedono di specificare la parola chiave **rec** seguita dalla parola chiave **let**. È possibile richiamare la funzione ricorsiva dall'interno del corpo della funzione esattamente come si richiama qualsiasi chiamata di funzione. La funzione ricorsiva seguente calcola la *n*<sup>th</sup> numero di Fibonacci. La sequenza dei numeri di Fibonacci è nota dall'antichità ed è una sequenza in cui ogni numero successivo è la somma di due numeri precedenti nella sequenza.
+Le *funzioni ricorsive* sono funzioni che chiamano se stesse. Richiedono di specificare la parola chiave **rec** seguita dalla parola chiave **let**. È possibile richiamare la funzione ricorsiva dall'interno del corpo della funzione esattamente come si richiama qualsiasi chiamata di funzione. La funzione ricorsiva seguente calcola il numero *di Fibonacci*<sup></sup> . La sequenza dei numeri di Fibonacci è nota dall'antichità ed è una sequenza in cui ogni numero successivo è la somma di due numeri precedenti nella sequenza.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
 Alcune funzioni ricorsive potrebbero includere un overflow dello stack di programma o risultare inefficienti se non vengono scritte con cura e con tecniche speciali, come l'uso di accumulatori e continuazioni.
 
@@ -122,17 +122,17 @@ Alcune funzioni ricorsive potrebbero includere un overflow dello stack di progra
 
 In F#, tutte le funzioni sono considerate valori, e infatti sono note come *valori di funzione*. Poiché le funzioni sono valori, possono essere usate come argomenti per altre funzioni o in altri contesti in cui vengono usati valori. Di seguito è incluso un esempio di una funzione che accetta un valore di funzione come argomento:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
 Il tipo di valore di una funzione viene specificato usando il token `->`. Sul lato sinistro di questo token si trova il tipo dell'argomento e sul lato destro si trova il valore restituito. Nell'esempio precedente, `apply1` è una funzione che accetta una funzione `transform` come argomento, in cui `transform` è una funzione che accetta un numero intero e restituisce un altro numero intero. L'esempio di codice seguente illustra come usare `apply1`:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
 
 Il valore di `result` sarà 101 dopo l'esecuzione del codice precedente.
 
 Più argomenti sono separati da token `->` successivi, come illustrato nell'esempio seguente:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
 
 Il risultato è 200.
 
@@ -140,15 +140,15 @@ Il risultato è 200.
 
 Un'*espressione lambda* è una funzione senza nome. Negli esempi precedenti, invece di definire le funzioni denominate **increment** e **mul**, è possibile usare espressioni lambda nel modo seguente:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Le espressioni lambda vengono definite usando la parola chiave `fun`. Un'espressione lambda è simile a una definizione di funzione, con la differenza che al posto del token `=`, viene usato il token `->` per separare l'elenco di argomenti dal corpo della funzione. Analogamente a una definizione di funzione regolare, i tipi di argomenti possono essere dedotti o specificati in modo esplicito e il tipo restituito dell'espressione lambda viene dedotto dal tipo dell'ultima espressione nel corpo. Per altre informazioni, vedere [espressioni Lambda: Il `fun` parola chiave](../functions/lambda-expressions-the-fun-keyword.md).
+Le espressioni lambda vengono definite usando la parola chiave `fun`. Un'espressione lambda è simile a una definizione di funzione, con la differenza che al posto del token `=`, viene usato il token `->` per separare l'elenco di argomenti dal corpo della funzione. Analogamente a una definizione di funzione regolare, i tipi di argomenti possono essere dedotti o specificati in modo esplicito e il tipo restituito dell'espressione lambda viene dedotto dal tipo dell'ultima espressione nel corpo. Per ulteriori informazioni, vedere [espressioni lambda: `fun` Parola chiave](../functions/lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>Composizione di funzioni e pipelining
 
 Le funzioni in F# possono essere composte da altre funzioni. La composizione di due funzioni, **funzione1** e **funzione2**, è un'altra funzione che rappresenta l'applicazione di **funzione1** seguita dall'applicazione di **funzione2**:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
 
 Il risultato è 202.
 

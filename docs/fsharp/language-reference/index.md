@@ -1,26 +1,26 @@
 ---
 title: Riferimenti per il linguaggio F#
-description: Trovare F# informazioni sulle funzionalità di linguaggio da questo riferimento al token delle lingue, i concetti, tipi, le espressioni e gli argomenti supportati dal compilatore costrutto.
+description: Trovare F# le informazioni sulle funzionalità del linguaggio da questo riferimento a token di lingua, concetti, tipi, espressioni e costrutti supportati dal compilatore.
 ms.date: 05/16/2016
-ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b37f9ddcd4fbf6939631f283be95ebf08cf072d6
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666443"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630690"
 ---
 # <a name="f-language-reference"></a>Riferimenti per il linguaggio F#
 
-In questa sezione è un riferimento per il F# lingua, un linguaggio di programmazione multi-paradigmatico destinato a .NET. Il linguaggio F# supporta modelli di programmazione funzionali, orientati a oggetti e imperativi.
+Questa sezione è un riferimento al F# linguaggio, un linguaggio di programmazione multiparadigma destinato a .NET. Il linguaggio F# supporta modelli di programmazione funzionali, orientati a oggetti e imperativi.
 
 ## <a name="f-tokens"></a>Token F#
 
 La tabella seguente illustra gli argomenti di riferimento che includono tabelle di parole chiave, simboli e i valori letterali usati come token in F#.
 
-|Titolo|Descrizione|
+|Titolo|DESCRIZIONE|
 |-----|-----------|
 |[Riferimento per parole chiave](keyword-reference.md)|Contiene collegamenti a informazioni su tutte le parole chiave del linguaggio F#.|
-|[Riferimenti per simboli e operatori](symbol-and-operator-reference/index.md)|Include una tabella di simboli e operatori usati nel linguaggio F#.|
+|[Riferimenti per simboli e operatori](./symbol-and-operator-reference/index.md)|Include una tabella di simboli e operatori usati nel linguaggio F#.|
 |[Valori letterali](literals.md)|Illustra la sintassi per i valori letterali in F# e come specificare informazioni sul tipo per i valori letterali F#.|
 
 ## <a name="f-language-concepts"></a>Concetti del linguaggio F#
@@ -29,12 +29,12 @@ La tabella seguente illustra gli argomenti di riferimento disponibili che descri
 
 |Titolo|Descrizione|
 |-----|-----------|
-|[Funzioni](functions/index.md)|Le funzioni sono l'unità fondamentale di esecuzione di un programma in qualsiasi linguaggio di programmazione. Come negli altri linguaggi, una funzione F# ha un nome, può avere parametri e accettare argomenti e ha un corpo. F# supporta anche i costrutti di programmazione funzionale, ad esempio l'uso di funzioni come valori, l'uso di funzioni senza nome nelle espressioni, composizione di funzioni per creare nuove funzioni, funzioni sottoposte a currying e la definizione implicita di funzioni attraverso l'applicazione parziale di argomenti di funzioni.|
+|[Funzioni](./functions/index.md)|Le funzioni sono l'unità fondamentale di esecuzione di un programma in qualsiasi linguaggio di programmazione. Come negli altri linguaggi, una funzione F# ha un nome, può avere parametri e accettare argomenti e ha un corpo. F# supporta anche i costrutti di programmazione funzionale, ad esempio l'uso di funzioni come valori, l'uso di funzioni senza nome nelle espressioni, composizione di funzioni per creare nuove funzioni, funzioni sottoposte a currying e la definizione implicita di funzioni attraverso l'applicazione parziale di argomenti di funzioni.|
 |[Tipi F#](fsharp-types.md)|Descrive i tipi usati in F# e come sono denominati e descritti i tipi F#.|
 |[Inferenza di tipi](type-inference.md)|Descrive come il compilatore F# deduce i tipi di valori, le variabili, i parametri e i valori restituiti.|
-|[Generalizzazione automatica](generics/automatic-generalization.md)|Descrive costrutti generici in F#.|
+|[Generalizzazione automatica](./generics/automatic-generalization.md)|Descrive costrutti generici in F#.|
 |[Ereditarietà](inheritance.md)|Descrive l'ereditarietà usata per modellare la relazione "is-a", o la definizione dei sottotipi nella programmazione orientata agli oggetti.|
-|[Membri](members/index.md)|Descrive i membri dei tipi di oggetto F#.|
+|[Membri](./members/index.md)|Descrive i membri dei tipi di oggetto F#.|
 |[Parametri e argomenti](Parameters-and-Arguments.md)|Descrive il supporto di linguaggio per la definizione dei parametri e il passaggio di argomenti a funzioni, metodi e proprietà. Include informazioni su come passare valori in base al riferimento.|
 |[Overload degli operatori](operator-overloading.md)|Descrive come eseguire l'overload di operatori aritmetici in una classe o in un tipo di record e a livello globale.|
 |[Cast e conversioni](casting-and-conversions.md)|Descrive il supporto per le conversioni di tipo in F#.|
@@ -42,7 +42,7 @@ La tabella seguente illustra gli argomenti di riferimento disponibili che descri
 |[Criteri di ricerca](pattern-matching.md)|Descrive i modelli, che rappresentano le regole per la trasformazione dei dati di input usati nel linguaggio F# per estrarre i dati di confronto con un modello, decomporre i dati nelle parti costituenti o estrarre informazioni dai dati in vari modi.|
 |[Criteri attivi](active-patterns.md)|Descrive i modelli attivi. I modelli attivi consentono di definire partizioni denominate che suddividono i dati di input. È possibile usare i criteri attivi per decomporre i dati in modo personalizzato per ogni partizione.|
 |[Asserzioni](assertions.md)|Descrive l'espressione `assert`, che è una funzionalità di debug che è possibile usare per verificare un'espressione. In caso di errore in modalità Debug, un'asserzione genera una finestra di dialogo di errore di sistema.|
-|[Gestione delle eccezioni](exception-handling/index.md)|Contiene informazioni sul supporto di gestione delle eccezioni nel linguaggio F#.|
+|[Gestione delle eccezioni](/.exception-handling/index.md)|Contiene informazioni sul supporto di gestione delle eccezioni nel linguaggio F#.|
 |[Attributi](attributes.md)|Descrive gli attributi, che abilitano i metadati da applicare a un costrutto di programmazione.|
 |[Gestione delle risorse: Parola chiave `use`](resource-management-the-use-keyword.md)|Descrive le parole chiave `use` e `using`, che possono controllare l'inizializzazione e il rilascio delle risorse.|
 |[Spazi dei nomi](namespaces.md)|Descrive il supporto degli spazi dei nomi in F#. Uno spazio dei nomi consente di organizzare il codice in aree di funzionalità correlate perché consente di collegare un nome a un raggruppamento di elementi di programma.|
@@ -58,8 +58,8 @@ La tabella seguente illustra gli argomenti di riferimento disponibili che descri
 
 |Titolo|Descrizione|
 |-----|-----------|
-|[Valori](values/index.md)|Descrive i valori, ovvero quantità non modificabili che hanno un tipo specifico. I valori possono essere numeri interi o a virgola mobile, caratteri o testo, elenchi, sequenze, matrici, tuple, unioni discriminate, record, tipi di classe o valori di funzioni.|
-|[Tipi di base](basic-types.md)|Vengono descritti i tipi di base fondamentali utilizzati in di F# linguaggio. Specifica anche i tipi .NET corrispondenti e i valori minimi e massimi per ogni tipo.|
+|[Valori](./values/index.md)|Descrive i valori, ovvero quantità non modificabili che hanno un tipo specifico. I valori possono essere numeri interi o a virgola mobile, caratteri o testo, elenchi, sequenze, matrici, tuple, unioni discriminate, record, tipi di classe o valori di funzioni.|
+|[Tipi di base](basic-types.md)|Vengono descritti i tipi di base fondamentali utilizzati nel F# linguaggio. Specifica anche i tipi .NET corrispondenti e i valori minimi e massimi per ogni tipo.|
 |[Tipo di unità](unit-type.md)|Descrive il tipo `unit`, ovvero un tipo che indica l'assenza di un valore specifico. Il tipo `unit` ha un solo valore, che funge da segnaposto quando nessun altro valore è presente o necessario.|
 |[Stringhe](strings.md)|Descrive le stringhe in F#. Il tipo `string` rappresenta un testo non modificabile come sequenza di caratteri Unicode. `string` è un alias per `System.String` in .NET Framework.|
 |[Tuple](tuples.md)|Descrive le tuple, ovvero un raggruppamento di valori senza nome, ma ordinati, di tipi potenzialmente diversi.|
@@ -91,11 +91,11 @@ La tabella seguente elenca gli argomenti che descrivono le espressioni F#.
 |-----|-----------|
 |[Espressioni condizionali: `if...then...else`](conditional-expressions-if-then-else.md)|Descrive l'espressione `if...then...else`, che esegue diversi rami di codice e restituisce un valore diverso in base all'espressione booleana specificata.|
 |[Espressioni match](match-expressions.md)|Descrive l'espressione `match`, che consente il controllo del branching basato sul confronto di un'espressione con un set di modelli.|
-|[Cicli: `for...to` Expression](loops-for-to-expression.md)|Descrive l'espressione `for...to`, che viene usata per eseguire l'iterazione di un ciclo sopra un intervallo di valori di una variabile di ciclo.|
-|[Cicli: `for...in` Expression](loops-for-in-expression.md)|Descrive l'espressione `for...in`, un costrutto di ciclo usato per eseguire l'iterazione sopra le corrispondenze di un modello in una raccolta enumerabile, ad esempio un'espressione di intervallo, una sequenza, un elenco, una matrice o un altro costrutto che supporta l'enumerazione.|
-|[Cicli: `while...do` Expression](loops-while-do-expression.md)|Descrive l'espressione `while...do`, usata per l'esecuzione iterativa (ciclo) quando una specifica condizione di verifica è true.|
+|[Cicli `for...to`Espressione](loops-for-to-expression.md)|Descrive l'espressione `for...to`, che viene usata per eseguire l'iterazione di un ciclo sopra un intervallo di valori di una variabile di ciclo.|
+|[Cicli `for...in`Espressione](loops-for-in-expression.md)|Descrive l'espressione `for...in`, un costrutto di ciclo usato per eseguire l'iterazione sopra le corrispondenze di un modello in una raccolta enumerabile, ad esempio un'espressione di intervallo, una sequenza, un elenco, una matrice o un altro costrutto che supporta l'enumerazione.|
+|[Cicli `while...do`Espressione](loops-while-do-expression.md)|Descrive l'espressione `while...do`, usata per l'esecuzione iterativa (ciclo) quando una specifica condizione di verifica è true.|
 |[Espressioni di oggetto](object-expressions.md)|Descrive le espressioni di oggetto, ovvero le espressioni che creano nuove istanze di un tipo di oggetto creato dinamicamente, di un tipo di oggetto anonimo basato su un tipo di base, un'interfaccia o un set di interfacce esistenti.|
-|[Espressioni lazy](lazy-expressions.md)|Descrive le espressioni lazy, ovvero calcoli che non vengono eseguiti immediatamente, ma solo quando il risultato è effettivamente necessario.|
+|[Espressioni lazy](lazy-expressions.md)|Vengono descritte le espressioni Lazy, ovvero i calcoli che non vengono valutati immediatamente, ma che vengono invece valutati quando il risultato è effettivamente necessario.|
 |[Espressioni di calcolo](computation-expressions.md)|Descrive le espressioni di calcolo in F#, che specificano una sintassi efficiente per la scrittura di calcoli che possono essere ordinati in sequenza e combinati tramite costrutti di flusso di controllo e associazioni. Possono essere usati per specificare una sintassi efficiente per *monads*, ovvero una funzionalità di programmazione funzionale che può essere usata per gestire i dati, il controllo e gli effetti collaterali nei programmi funzionali. Un solo tipo di espressione di calcolo, ovvero il flusso di lavoro asincrono, offre supporto per i calcoli paralleli e asincroni. Per altre informazioni, vedere [Flussi di lavoro asincroni](asynchronous-workflows.md).|
 |[Flussi di lavoro asincroni](asynchronous-workflows.md)|Descrive i flussi di lavoro asincroni, una funzionalità del linguaggio che consente di scrivere codice asincrono in modo molto simile a quello normale in cui si scrive codice sincrono.|
 |[Citazioni di codice](code-quotations.md)|Descrive le citazioni di codice, una funzionalità del linguaggio che consente di generare e usare espressioni di codice F# a livello di codice.|

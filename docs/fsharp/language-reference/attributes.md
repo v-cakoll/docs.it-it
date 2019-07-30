@@ -1,17 +1,17 @@
 ---
 title: Attributi
-description: Informazioni su come F# attributi abilitano i metadati da applicare a un costrutto di programmazione.
+description: Informazioni su F# come gli attributi consentono l'applicazione dei metadati a un costrutto di programmazione.
 ms.date: 05/16/2016
-ms.openlocfilehash: fed4c549b95d6d3701ab81cf5d62add411c16038
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3f3c3469192c09aa51f31ef3f00aca0196e3c382
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642032"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630082"
 ---
 # <a name="attributes"></a>Attributi
 
-Gli attributi abilitano i metadati da applicare a un costrutto di programmazione.
+Gli attributi consentono di applicare i metadati a un costrutto di programmazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -21,51 +21,51 @@ Gli attributi abilitano i metadati da applicare a un costrutto di programmazione
 
 ## <a name="remarks"></a>Note
 
-Nella sintassi precedente, il *destinazione* è facoltativo e, se presente, specifica il tipo di entità del programma a cui si applica l'attributo. I valori validi per *destinazione* vengono visualizzati nella tabella riportata più avanti in questo documento.
+Nella sintassi precedente, la *destinazione* è facoltativa e, se presente, specifica il tipo di entità programma a cui si applica l'attributo. I valori validi per la *destinazione* sono illustrati nella tabella riportata più avanti in questo documento.
 
-Il *-nome dell'attributo* fa riferimento al nome (possibilmente qualificato con spazi dei nomi) di un tipo di attributo valido, con o senza il suffisso `Attribute` che in genere viene usato nei nomi di tipo di attributo. Ad esempio, il tipo `ObsoleteAttribute` può essere abbreviato semplicemente `Obsolete` in questo contesto.
+Il *nome dell'attributo* fa riferimento al nome (possibilmente qualificato con gli spazi dei nomi) di un tipo di attributo valido, con `Attribute` o senza il suffisso che viene in genere usato nei nomi di tipo di attributo. Ad esempio, il tipo `ObsoleteAttribute` può essere abbreviato in `Obsolete` solo in questo contesto.
 
-Il *argomenti* include gli argomenti del costruttore per il tipo di attributo. Se un attributo ha un costruttore predefinito, è possono omettere l'elenco di argomenti e le parentesi. Gli attributi supportano entrambi gli argomenti posizionali e gli argomenti denominati. *Gli argomenti posizionali* sono argomenti che vengono usati nell'ordine in cui vengono visualizzati. Argomenti denominati possono essere utilizzati se l'attributo ha le proprietà pubbliche. È possibile impostare tali informazioni tramite la sintassi seguente nell'elenco di argomenti.
+Gli *argomenti* sono gli argomenti del costruttore per il tipo di attributo. Se un attributo dispone di un costruttore predefinito, è possibile omettere l'elenco di argomenti e le parentesi. Gli attributi supportano sia gli argomenti posizionali che gli argomenti denominati. Gli *argomenti posizionali* sono argomenti utilizzati nell'ordine in cui sono visualizzati. Gli argomenti denominati possono essere utilizzati se l'attributo dispone di proprietà pubbliche. È possibile impostarle usando la sintassi seguente nell'elenco di argomenti.
 
 ```
 *property-name* = *property-value*
 ```
 
-Le inizializzazioni tali proprietà possono essere in qualsiasi ordine, ma devono seguire gli argomenti posizionali. Ecco un esempio di un attributo che usa argomenti posizionali e inizializzazioni delle proprietà.
+Tali inizializzazioni di proprietà possono essere in qualsiasi ordine, ma devono seguire qualsiasi argomento posizionale. Di seguito è riportato un esempio di un attributo che usa gli argomenti posizionali e le inizializzazioni delle proprietà.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
 
-In questo esempio, l'attributo è `DllImportAttribute`, qui utilizzato nella sua forma abbreviata. Il primo argomento è un parametro posizionale e la seconda è una proprietà.
+In questo esempio, l'attributo è `DllImportAttribute`, qui usato in forma abbreviata. Il primo argomento è un parametro posizionale e il secondo è una proprietà.
 
-Gli attributi sono un costrutto di programmazione .NET che consente a un oggetto noto come un *attributo* da associare a un tipo o altro elemento del programma. L'elemento del programma a cui viene applicato un attributo è noto come il *destinazione dell'attributo*. L'attributo contiene in genere i metadati relativi al valore di destinazione. In questo contesto, i metadati può essere tutti i dati sul tipo diverso da relativi campi e i membri.
+Gli attributi sono un costrutto di programmazione .NET che consente a un oggetto noto come *attributo* di essere associato a un tipo o a un altro elemento del programma. L'elemento Program a cui è applicato un attributo è noto come *destinazione dell'attributo*. L'attributo contiene in genere i metadati sulla relativa destinazione. In questo contesto, i metadati possono essere di qualsiasi tipo, ad eccezione dei relativi campi e membri.
 
-Gli attributi F# può essere applicato a costrutti di programmazione seguenti: funzioni, metodi, assembly, moduli, tipi (classi, record, strutture, interfacce, delegati, enumerazioni, unioni e così via), costruttori, proprietà, campi, i parametri, parametri di tipo e i valori restituiti. Atributy nejsou povolené. su `let` associazioni all'interno di classi, le espressioni o espressioni del flusso di lavoro.
+Gli attributi F# in possono essere applicati ai seguenti costrutti di programmazione: funzioni, metodi, assembly, moduli, tipi (classi, record, strutture, interfacce, delegati, enumerazioni, unioni e così via), costruttori, proprietà, campi, parametri, parametri di tipo e valori restituiti. Gli attributi non sono consentiti su binding all'interno di classi, espressioni o espressioni del flusso di `let` lavoro.
 
-In genere, la dichiarazione di attributo viene visualizzata direttamente prima della dichiarazione dell'attributo di destinazione. Più dichiarazioni di attributo sono utilizzabile tra loro, come indicato di seguito.
+In genere, la dichiarazione di attributo viene visualizzata direttamente prima della dichiarazione della destinazione dell'attributo. È possibile utilizzare contemporaneamente più dichiarazioni di attributo, come indicato di seguito.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
 
-È possibile eseguire una query degli attributi in fase di esecuzione usando la reflection .NET.
+È possibile eseguire query sugli attributi in fase di esecuzione usando la reflection .NET.
 
-È possibile dichiarare più attributi singolarmente, come nell'esempio di codice precedente, oppure è possibile dichiararli in un set di parentesi, se si usa un punto e virgola per separare i singoli attributi e i costruttori, come illustrato di seguito.
+È possibile dichiarare più attributi singolarmente, come nell'esempio di codice precedente, oppure è possibile dichiararli in un set di parentesi quadre se si usa un punto e virgola per separare i singoli attributi e costruttori, come illustrato di seguito.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
 
-In genere, gli attributi includono il `Obsolete` attributo, gli attributi per considerazioni sulla sicurezza, gli attributi per il supporto COM, gli attributi relativi alla proprietà del codice e gli attributi che indica se un tipo può essere serializzato. Nell'esempio seguente viene illustrato l'utilizzo del `Obsolete` attributo.
+Gli attributi rilevati `Obsolete` in genere includono l'attributo, gli attributi per considerazioni sulla sicurezza, gli attributi per il supporto com, gli attributi correlati alla proprietà del codice e gli attributi che indicano se un tipo può essere serializzato. Nell'esempio seguente viene illustrato l'utilizzo dell' `Obsolete` attributo.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
 
-Per le destinazioni degli attributi `assembly` e `module`, applicare gli attributi a un livello superiore `do` binding dell'assembly. È possibile includere la parola `assembly` o `module` nella dichiarazione di attributo, come indicato di seguito.
+Per le destinazioni `assembly` degli attributi `module`e, gli attributi vengono applicati a un'associazione di `do` primo livello nell'assembly. È possibile includere la parola `assembly` o `module` nella dichiarazione di attributo, come indicato di seguito.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
-Se si omette l'attributo di destinazione per un attributo applicato a un `do` binding, il F# compilatore prova a determinare l'attributo di destinazione appropriato per quell'attributo. Molte classi di attributo dispongono di un attributo di tipo `System.AttributeUsageAttribute` che include informazioni sulle possibili destinazioni supportate per l'attributo. Se il `System.AttributeUsageAttribute` indica che l'attributo supporta le funzioni come destinazione, l'attributo proviene da applicare al punto di ingresso principale del programma. Se il `System.AttributeUsageAttribute` indica che l'attributo supporta gli assembly come destinazioni, il compilatore prende l'attributo da applicare all'assembly. La maggior parte degli attributi non si applicano a entrambe le funzioni e assembly, ma in casi in cui avviene l'attributo non viene eseguito da applicare alla funzione principale del programma. Se l'attributo di destinazione viene specificato in modo esplicito, l'attributo viene applicato alla destinazione specificata.
+Se si omette la destinazione dell'attributo per un attributo applicato a `do` un'associazione, F# il compilatore tenta di determinare la destinazione dell'attributo che risulta utile per tale attributo. Molte classi Attribute hanno un attributo di tipo `System.AttributeUsageAttribute` che include informazioni sulle possibili destinazioni supportate per tale attributo. Se il `System.AttributeUsageAttribute` indica che l'attributo supporta funzioni come destinazioni, l'attributo viene accettato per essere applicato al punto di ingresso principale del programma. `System.AttributeUsageAttribute` Se indica che l'attributo supporta gli assembly come destinazioni, il compilatore accetta l'attributo da applicare all'assembly. La maggior parte degli attributi non si applica sia alle funzioni che agli assembly, ma nei casi in cui lo fanno, l'attributo viene accettato per essere applicato alla funzione principale del programma. Se la destinazione dell'attributo viene specificata in modo esplicito, l'attributo viene applicato alla destinazione specificata.
 
-Sebbene non sia in genere necessario specificare l'attributo di destinazione in modo esplicito, i valori validi per *destinazione* in un attributo vengono visualizzate nella tabella seguente, insieme a esempi di utilizzo.
+Anche se in genere non è necessario specificare la destinazione dell'attributo in modo esplicito, nella tabella seguente sono riportati i valori validi per la *destinazione* in un attributo, insieme ad esempi di utilizzo.
 
 <table>
   <tr>
-    <th>Attributo di destinazione</td>
+    <th>Destinazione attributo</td>
     <th>Esempio</td> 
   </tr>
   <tr>
@@ -89,7 +89,7 @@ Sebbene non sia in genere necessario specificare l'attributo di destinazione in 
     <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10<code></pre></td> 
   </tr>
   <tr>
-    <td>tipo</td>
+    <td>type</td>
     <td>
         <pre lang="fsharp"><code>
         [&lt;type: StructLayout(Sequential)&gt;] 

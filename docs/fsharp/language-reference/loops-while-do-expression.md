@@ -1,17 +1,17 @@
 ---
 title: 'Espressione Loops: while...do'
-description: Vedere come while... tale espressione viene usata per l'esecuzione iterativa (ciclo) quando viene soddisfatta una condizione di test specificato.
+description: Scopri come... l'espressione do viene utilizzata per eseguire l'esecuzione iterativa (ciclo) mentre una condizione di test specificata è true.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5823ace27348ff4d4397a726bf2254f8fa0ee09b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f05bdd9f8f4b9446d59f68e1231fb75e18e9b526
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641828"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630763"
 ---
 # <a name="loops-whiledo-expression"></a>Espressione Loops: while...do
 
-Il `while...do` espressione viene usata per l'esecuzione iterativa (ciclo) quando viene soddisfatta una condizione di test specificato.
+L' `while...do` espressione viene utilizzata per eseguire l'esecuzione iterativa (ciclo), mentre una condizione di test specificata è true.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -22,13 +22,13 @@ while test-expression do
 
 ## <a name="remarks"></a>Note
 
-Il *test-expression* viene valutata; in caso `true`, il *espressione corpo* viene eseguita e l'espressione di test viene valutata nuovamente. Il *corpo-expression* deve avere tipo `unit`. Se l'espressione di test è `false`, le entità finali dell'iterazione.
+*Test-Expression* viene valutato. in caso contrario ,l'espressioneBodyvieneeseguitael'espressioneditestvienenuovamentevalutata`true`. *Body-Expression* deve essere di tipo `unit`. Se l'espressione di test `false`è, termina l'iterazione.
 
-Nell'esempio seguente viene illustrato l'utilizzo del `while...do` espressione.
+Nell'esempio seguente viene illustrato l'utilizzo dell' `while...do` espressione.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5301.fs)]
 
-L'output del codice precedente è un flusso di numeri casuale compreso tra 1 e 20, l'ultimo dei quali è 10.
+L'output del codice precedente è un flusso di numeri casuali compresi tra 1 e 20, l'ultimo dei quali è 10.
 
 ```
 13 19 8 18 16 2 10
@@ -36,10 +36,10 @@ Found a 10!
 ```
 
 > [!NOTE]
-> È possibile usare `while...do` nelle espressioni di sequenza e altre espressioni di calcolo, nel qual caso una versione personalizzata del `while...do` espressione viene usata. Per altre informazioni, vedere [sequenze](sequences.md), [flussi di lavoro asincroni](asynchronous-workflows.md), e [espressioni di calcolo](computation-expressions.md).
+> È possibile utilizzare `while...do` nelle espressioni di sequenza e in altre espressioni `while...do` di calcolo, nel qual caso viene utilizzata una versione personalizzata dell'espressione. Per altre informazioni, vedere [sequenze](sequences.md), [flussi di lavoro asincroni](asynchronous-workflows.md)ed [espressioni di calcolo](computation-expressions.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per il linguaggio F#](index.md)
-- [Cicli: `for...in` Expression](loops-for-in-expression.md)
-- [Cicli: `for...to` Expression](loops-for-to-expression.md)
+- [Cicli `for...in`Espressione](loops-for-in-expression.md)
+- [Cicli `for...to`Espressione](loops-for-to-expression.md)

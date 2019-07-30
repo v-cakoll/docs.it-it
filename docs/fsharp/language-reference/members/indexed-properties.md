@@ -1,17 +1,17 @@
 ---
 title: Proprietà indicizzate
-description: Altre informazioni sulle proprietà indicizzata in F#, che consentono l'accesso di tipo matrice ai dati ordinati.
+description: Informazioni sulle proprietà indicizzate in F#, che consentono l'accesso di tipo matrice ai dati ordinati.
 ms.date: 10/17/2018
-ms.openlocfilehash: 7fc8f46e029255c6ed985a43b92c8f7c2908c428
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 379417e31b8e178d8c939e5b23dc144bfb17e562
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489485"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627561"
 ---
 # <a name="indexed-properties"></a>Proprietà indicizzate
 
-Quando si definisce una classe che consente di astrarre dati ordinati, può talvolta essere utile fornire l'accesso indicizzato per i dati senza esporre l'implementazione sottostante. Questa operazione viene eseguita con il `Item` membro.
+Quando si definisce una classe che astrae i dati ordinati, a volte può essere utile fornire l'accesso indicizzato a tali dati senza esporre l'implementazione sottostante. Questa operazione viene eseguita con `Item` il membro.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,19 +36,19 @@ member self-identifier.Item
 
 ## <a name="remarks"></a>Note
 
-Le forme di sintassi precedente viene illustrato come definire le proprietà indicizzate che hanno entrambi un `get` e un `set` (metodo), hanno un `get` solo, metodo o dispone di un `set` solo metodo. È anche possibile combinare entrambi la sintassi illustrata per solo get e la sintassi illustrata solo per set e produrre una proprietà con get e set. Questo modulo di quest'ultimo consente di copiare gli attributi e modificatori di accessibilità diversa su get e set di metodi.
+Nei form della sintassi precedente viene illustrato come definire le proprietà indicizzate che dispongono sia di `get` un `set` metodo che di un metodo `get` , solo un metodo o solo `set` un metodo. È anche possibile combinare la sintassi mostrata solo per Get e la sintassi mostrata solo per set e produrre una proprietà con Get e set. Quest'ultimo formato consente di inserire modificatori e attributi di accessibilità diversi nei metodi get e set.
 
-Utilizzando il nome `Item`, il compilatore considera la proprietà come una proprietà indicizzata predefinita. Oggetto *proprietà indicizzata predefinita* è una proprietà che è possibile accedere usando la sintassi di tipo matrice sull'istanza dell'oggetto. Ad esempio, se `o` è un oggetto del tipo che definisce questa proprietà, la sintassi `o.[index]` viene utilizzato per accedere alla proprietà.
+Utilizzando il nome `Item`, il compilatore considera la proprietà come una proprietà indicizzata predefinita. Una *proprietà indicizzata predefinita* è una proprietà a cui è possibile accedere utilizzando la sintassi di tipo matrice nell'istanza dell'oggetto. Se `o` , ad esempio, è un oggetto del tipo che definisce questa proprietà, viene utilizzata `o.[index]` la sintassi per accedere alla proprietà.
 
-La sintassi per l'accesso a una proprietà indicizzata non predefinito è fornire il nome della proprietà e l'indice tra parentesi, proprio come un membro regolare. Ad esempio, se la proprietà sul `o` viene chiamato `Ordinal`, si scrive `o.Ordinal(index)` per accedervi.
+La sintassi per l'accesso a una proprietà indicizzata non predefinita consiste nel fornire il nome della proprietà e l'indice tra parentesi, come un membro normale. Se, ad esempio, viene chiamata `o` `Ordinal`la proprietà su, si `o.Ordinal(index)` scrive per accedervi.
 
-Indipendentemente dalla forma utilizzata, è sempre necessario utilizzare il modulo sottoposti a currying per il metodo set su una proprietà indicizzata. Per informazioni sulle funzioni sottoposte a currying, vedere [funzioni](../functions/index.md).
+Indipendentemente dal formato utilizzato, è consigliabile utilizzare sempre il modulo sottoposto a currying per il metodo set su una proprietà indicizzata. Per informazioni sulle funzioni sottoposte a currying, vedere [funzioni](../functions/index.md).
 
 ## <a name="example"></a>Esempio
 
-Esempio di codice seguente illustra la definizione e utilizzo predefinita e la proprietà indicizzata non predefinite con get e set di metodi.
+Nell'esempio di codice riportato di seguito viene illustrata la definizione e l'utilizzo di proprietà indicizzate predefinite e non predefinite con metodi get e set.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
 
 ## <a name="output"></a>Output
 
@@ -60,7 +60,7 @@ seven seventh eight eighth nine ninth ten tenth
 
 ## <a name="indexed-properties-with-multiple-index-values"></a>Proprietà indicizzate con più valori di indice
 
-Proprietà indicizzate possono avere più di un valore di indice. In tal caso, i valori sono separati da virgole quando la proprietà viene utilizzata. Il metodo set in tale proprietà deve avere due argomenti sottoposti a currying, la prima delle quali è una tupla contenente le chiavi e il secondo dei quali è il valore da impostare.
+Le proprietà indicizzate possono avere più di un valore di indice. In tal caso, i valori sono separati da virgole quando si usa la proprietà. Il metodo set in tale proprietà deve avere due argomenti sottoposti a currying, il primo dei quali è una tupla contenente le chiavi e il secondo oggetto è il valore da impostare.
 
 Il codice seguente illustra l'uso di una proprietà indicizzata con più valori di indice.
 

@@ -6,47 +6,48 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: f59e00d80d28fc4bf24874d25b5c12643649c834
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b17be4ef5a7dabfc4779ab6f5675cc2baec9c3c
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769070"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626562"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Procedura: Determinare se due oggetti sono correlati (Visual Basic)
-È possibile confrontare due oggetti per stabilire la relazione, se presente, tra le classi da cui vengono creati. Il <xref:System.Type.IsInstanceOfType%2A> metodo per il <xref:System.Type?displayProperty=nameWithType> classe restituisce `True` se la classe specificata eredita dalla classe corrente o se il tipo corrente è un'interfaccia supportata dalla classe specificata.  
-  
-### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>Per determinare se un oggetto eredita da un altro oggetto classe o interfaccia  
-  
-1. Per l'oggetto si ritiene che potrebbero essere del tipo di base, richiamare il <xref:System.Object.GetType%2A> (metodo).  
-  
-2. Nel <xref:System.Type?displayProperty=nameWithType> oggetto restituito da <xref:System.Object.GetType%2A>, richiamare il <xref:System.Type.IsInstanceOfType%2A> (metodo).  
-  
-3. Nell'elenco di argomenti per <xref:System.Type.IsInstanceOfType%2A>, specificare l'oggetto si ritiene che potrebbe essere del tipo derivato.  
-  
-     <xref:System.Type.IsInstanceOfType%2A> Restituisce `True` se il tipo di argomento eredita dal <xref:System.Type?displayProperty=nameWithType> tipo di oggetto.  
-  
-## <a name="example"></a>Esempio  
- Nell'esempio seguente determina se un oggetto rappresenta una classe derivata dalla classe dell'oggetto.  
-  
-```  
-Public Class baseClass  
-End Class  
-Public Class derivedClass : Inherits baseClass  
-End Class  
-Public Class testTheseClasses  
-    Public Sub seeIfRelated()  
-        Dim baseObj As Object = New baseClass()  
-        Dim derivedObj As Object = New derivedClass()  
-        Dim related As Boolean  
-        related = baseObj.GetType().IsInstanceOfType(derivedObj)  
-        MsgBox(CStr(related))  
-    End Sub  
-End Class  
-```  
-  
- Si noti la posizione di due variabili oggetto nella chiamata a imprevisto <xref:System.Type.IsInstanceOfType%2A>. Il tipo base previsto è utilizzato per generare il <xref:System.Type?displayProperty=nameWithType> classe e il tipo derivato previsto viene passata come argomento per il <xref:System.Type.IsInstanceOfType%2A> (metodo).  
-  
+
+È possibile confrontare due oggetti per determinare la relazione, se presente, tra le classi da cui vengono create. Il <xref:System.Type.IsInstanceOfType%2A> metodo `True` della classe restituisce se la classe specificata eredita dalla classe corrente o se il tipo corrente è un'interfaccia supportata dalla classe specificata. <xref:System.Type?displayProperty=nameWithType>
+
+### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>Per determinare se un oggetto eredita dalla classe o dall'interfaccia di un altro oggetto
+
+1. Nell'oggetto che si ritiene possa essere del tipo di base, richiamare il <xref:System.Object.GetType%2A> metodo.
+
+2. Per l' <xref:System.Type?displayProperty=nameWithType> oggetto restituito da <xref:System.Object.GetType%2A>, richiamare il <xref:System.Type.IsInstanceOfType%2A> metodo.
+
+3. Nell'elenco di argomenti per <xref:System.Type.IsInstanceOfType%2A>specificare l'oggetto che si ritiene possa essere del tipo derivato.
+
+    <xref:System.Type.IsInstanceOfType%2A>restituisce `True` se il tipo <xref:System.Type?displayProperty=nameWithType> di argomento eredita dal tipo di oggetto.
+
+## <a name="example"></a>Esempio
+ Nell'esempio seguente viene determinato se un oggetto rappresenta una classe derivata dalla classe di un altro oggetto.
+
+```vb
+Public Class baseClass
+End Class
+Public Class derivedClass : Inherits baseClass
+End Class
+Public Class testTheseClasses
+    Public Sub seeIfRelated()
+        Dim baseObj As Object = New baseClass()
+        Dim derivedObj As Object = New derivedClass()
+        Dim related As Boolean
+        related = baseObj.GetType().IsInstanceOfType(derivedObj)
+        MsgBox(CStr(related))
+    End Sub
+End Class
+```
+
+Si noti il posizionamento imprevisto delle due variabili oggetto nella chiamata a <xref:System.Type.IsInstanceOfType%2A>. Il tipo di base supposto viene usato per <xref:System.Type?displayProperty=nameWithType> generare la classe e il tipo derivato supposto viene passato come argomento <xref:System.Type.IsInstanceOfType%2A> al metodo.
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Object.GetType%2A>

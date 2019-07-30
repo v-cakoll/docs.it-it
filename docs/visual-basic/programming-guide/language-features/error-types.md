@@ -10,28 +10,28 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: 07db963ac3cf9d1c0d17c420480189d362cdaf2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 030986111a50ab59c605a1d683fedc118d10b260
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973173"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626607"
 ---
 # <a name="error-types-visual-basic"></a>Tipi di errore (Visual Basic)
-In Visual Basic, gli errori (chiamato anche *eccezioni*) possono essere suddivise in tre categorie: errori di sintassi, gli errori di runtime ed errori per la logica.  
-  
-## <a name="syntax-errors"></a>Errori di sintassi  
- *Errori di sintassi* sono quelli che vengono visualizzati durante la scrittura di codice. Visual Basic controlla il codice durante la digitazione nel **Editor di codice** finestra e genera avvisi se si commette un errore, ad esempio ortografia errata di una parola o utilizzo improprio di un elemento di linguaggio. Errori di sintassi sono il tipo più comune degli errori. È possibile correggerli con facilità nell'ambiente di codifica, non appena si verificano.  
-  
+In Visual Basic gli errori rientrano in una delle tre categorie seguenti: errori di sintassi, errori di run-time ed errori logici.
+
+## <a name="syntax-errors"></a>Errori di sintassi
+ Gli *errori di sintassi* sono quelli visualizzati durante la scrittura del codice. Se si usa Visual Studio, Visual Basic controlla il codice durante la digitazione nella finestra dell' **Editor del codice** e avvisa l'utente se si commette un errore, ad esempio l'ortografia di una parola o l'uso errato di un elemento di linguaggio. Se si esegue la compilazione dalla riga di comando, Visual Basic Visualizza un errore del compilatore con informazioni sull'errore di sintassi. Gli errori di sintassi sono il tipo più comune di errori. È possibile correggerli facilmente nell'ambiente di codifica non appena si verificano.
+
 > [!NOTE]
->  Il `Option Explicit` istruzione è consente di evitare errori di sintassi. Viene forzato, è possibile dichiarare in anticipo, tutte le variabili da utilizzare nell'applicazione. Pertanto, quando tali variabili vengono usate nel codice, gli errori di digitazione vengono rilevati immediatamente e possono essere corretti.  
+>  L' `Option Explicit` istruzione è un modo per evitare errori di sintassi. Impone di dichiarare in anticipo tutte le variabili da usare nell'applicazione. Pertanto, quando tali variabili vengono utilizzate nel codice, eventuali errori tipografici vengono rilevati immediatamente e possono essere corretti.
+
+## <a name="run-time-errors"></a>Errori di run-time
+ Gli *errori di run-time* sono quelli visualizzati solo dopo la compilazione e l'esecuzione del codice. Queste implicano il codice che potrebbe sembrare corretto in quanto non presenta errori di sintassi, ma che non verrà eseguito. Ad esempio, è possibile scrivere correttamente una riga di codice per aprire un file. Tuttavia, se il file non esiste, l'applicazione non è in grado di aprire il file e viene generata un'eccezione. È possibile correggere la maggior parte degli errori di run-time riscrivendo il codice difettoso o utilizzando la [gestione delle eccezioni](../../language-reference/statements/try-catch-finally-statement.md), quindi ricompilando e rieseguendo il codice.
   
-## <a name="run-time-errors"></a>Errori di Run-Time  
- *Errori di run-time* sono quelli che vengono visualizzate solo dopo che viene compilato ed eseguito il codice. Queste comprendono il codice che può sembrare corretto che non siano presenti errori di sintassi, ma che non verranno eseguiti. Ad esempio, si potrebbe scrivere correttamente una riga di codice per aprire un file. Ma se il file è danneggiato, l'applicazione non è possibile eseguire il `Open` funzione e interrompe l'esecuzione. Per risolvere la maggior parte degli errori di runtime, riscrivere il codice non corretto, quindi ricompilare ed eseguirla nuovamente.  
-  
-## <a name="logic-errors"></a>Errori di logica  
- *Errori di logica* vengono visualizzati una volta che l'applicazione è in uso. Sono la maggior parte dei risultati indesiderati o imprevisti in risposta alle azioni dell'utente. Ad esempio, una chiave digitata incorrettamente o altri determini potrebbero causare l'applicazione per smettere di funzionare nei parametri previsti o completamente. Gli errori per la logica sono in genere il tipo più difficile da risolvere, poiché non è sempre chiaro dove provengono.  
-  
+## <a name="logic-errors"></a>Errori di logica
+ Gli *errori logici* sono quelli che vengono visualizzati una volta che l'applicazione è in uso. Spesso si tratta di presupposti difettosi creati dallo sviluppatore o risultati indesiderati o imprevisti in risposta alle azioni dell'utente. Una chiave tipizzata in modo errato, ad esempio, può fornire informazioni non corrette a un metodo oppure si presuppone che un valore valido venga sempre fornito a un metodo in caso contrario. Anche se gli errori logici possono essere gestiti tramite la [gestione delle eccezioni](../../language-reference/statements/try-catch-finally-statement.md) (ad esempio, verificando `Nothing` se un argomento <xref:System.ArgumentNullException>è e generando un), in genere devono essere risolti correggendo l'errore nella logica e ricompilando applicazione.
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

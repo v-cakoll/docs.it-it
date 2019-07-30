@@ -1,13 +1,13 @@
 ---
 title: Valori
-description: Informazioni su come i valori di F# sono quantità che hanno un tipo specifico.
+description: Informazioni sul modo in F# cui i valori in sono quantità che hanno un tipo specifico.
 ms.date: 05/16/2016
-ms.openlocfilehash: fe87bb568591b862737456ff92ba202ba7795e3d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ed7a5b069a5a47aacf0cce4cfa754ded46f6e84a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641623"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630791"
 ---
 # <a name="values"></a>Valori
 
@@ -17,11 +17,11 @@ I valori in F# sono quantità che hanno un tipo specifico. I valori possono esse
 
 Il termine *associazione* indica il processo di associare, ovvero collegare, un nome a una definizione. La parola chiave `let` associa un valore, come illustrato negli esempi seguenti:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
 
 Il tipo di valore viene dedotto dalla definizione. Per un tipo primitivo, ad esempio un numero intero o a virgola mobile, il tipo è determinato dal tipo di valore letterale. Nell'esempio precedente il compilatore deduce quindi il tipo di `b` come `unsigned int`, mentre il tipo di `a` come `int`. Il tipo di valore di una funzione è determinato dal valore restituito nel corpo della funzione. Per altre informazioni sui tipi di valori delle funzioni, vedere [Funzioni](../functions/index.md). Per altre informazioni sui tipi di valori letterali, vedere [Valori letterali](../literals.md).
 
-Il compilatore non genera diagnostica sulle associazioni inutilizzate per impostazione predefinita. Per ricevere questi messaggi, Abilita avviso 1182 nel file di progetto o se l'utilizzo del compilatore (vedere `--warnon` sotto [le opzioni del compilatore](../compiler-options.md)).
+Per impostazione predefinita, il compilatore non rilascia la diagnostica sulle associazioni inutilizzate. Per ricevere questi messaggi, abilitare l'avviso 1182 nel file di progetto o quando si richiama il compilatore ( `--warnon` vedere in [Opzioni del compilatore](../compiler-options.md)).
 
 ## <a name="why-immutable"></a>Valori non modificabili
 
@@ -37,15 +37,15 @@ F# non è un linguaggio funzionale puro, ma supporta completamente la programmaz
 
 È possibile assegnare un valore iniziale a una variabile modificabile tramite la parola chiave `let` nello stesso modo in cui si definisce un valore. La differenza tuttavia è che successivamente è possibile assegnare nuovi valori alle variabili modificabili tramite l'operatore `<-`, come illustrato nell'esempio seguente.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
 
-I valori contrassegnati `mutable` può essere automaticamente promossa a `'a ref` se acquisiti da una chiusura, tra cui moduli che creano chiusure, ad esempio `seq` generatori. Se si vuole ricevere una notifica in questo caso, attivare l'avviso 3180 nel file di progetto o quando si richiama il compilatore.
+I valori `mutable` contrassegnati possono essere promossi `'a ref` automaticamente a se acquisiti da una chiusura, inclusi i form che creano le `seq` chiusure, ad esempio i generatori. Se si desidera ricevere una notifica quando si verifica questa situazione, abilitare l'avviso 3180 nel file di progetto o quando si richiama il compilatore.
 
 ## <a name="related-topics"></a>Argomenti correlati
 
 |Titolo|Descrizione|
 |-----|-----------|
-|[Associazioni let](../functions/let-bindings.md)|Fornisce informazioni sull'uso di `let` parola chiave da associare nomi a valori e le funzioni.|
+|[Associazioni let](../functions/let-bindings.md)|Vengono fornite informazioni sull'utilizzo `let` della parola chiave per associare nomi a valori e funzioni.|
 |[Funzioni](../functions/index.md)|Include una panoramica delle funzioni in F#.|
 
 ## <a name="see-also"></a>Vedere anche

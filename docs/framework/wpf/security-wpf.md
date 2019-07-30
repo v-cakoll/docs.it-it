@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 8d01e018e570a1ab530f476368d80f4082a73bda
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ec026fd9273e99c88ec2e30cf46c3147419ace94
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400787"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629805"
 ---
 # <a name="security-wpf"></a>Sicurezza (WPF)
 <a name="introduction"></a>Quando si sviluppano applicazioni autonome e ospitate nel browser di Windows Presentation Foundation (WPF), è necessario prendere in considerazione il modello di sicurezza. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]le applicazioni autonome vengono eseguite con autorizzazioni senza restrizioni (set di autorizzazioni CAS**FullTrust** ), se distribuite mediante Windows Installer (MSI), XCOPY o ClickOnce. Non è supportata la distribuzione di applicazioni WPF autonome e parzialmente attendibili con ClickOnce. Tuttavia, un'applicazione host con attendibilità totale può creare un'attendibilità <xref:System.AppDomain> parziale usando il .NET Framework modello di componente aggiuntivo. Per altre informazioni, vedere [Cenni preliminari sui componenti](./app-development/wpf-add-ins-overview.md)aggiuntivi di WPF.  
@@ -57,7 +57,7 @@ ms.locfileid: "68400787"
 ### <a name="application-navigation-security"></a>Sicurezza della navigazione tramite applicazione  
  La navigazione dell'applicazione è considerata sicura se può essere identificata con [!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)]un pacchetto, che supporta quattro tipi di contenuto:  
   
-|Tipo di contenuto|DESCRIZIONE|Esempio di URI|  
+|Tipo di contenuto|Descrizione|Esempio di URI|  
 |------------------|-----------------|-----------------|  
 |Risorsa|File aggiunti a un progetto con un tipo di compilazione **risorsa**.|`pack://application:,,,/MyResourceFile.xaml`|  
 |Content|File aggiunti a un progetto con un tipo di compilazione di **contenuto**.|`pack://application:,,,/MyContentFile.xaml`|  
@@ -216,9 +216,9 @@ ms.locfileid: "68400787"
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>Disabilitazione degli assembly APTCA per le applicazioni client parzialmente attendibili  
- Quando gli assembly gestiti sono installati in [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)], diventano completamente attendibili perché l'utente deve fornire autorizzazioni esplicite per installarli. Dal momento che sono completamente attendibili, possono essere usati solo dalle applicazioni client gestite completamente attendibili. Per consentire alle applicazioni parzialmente attendibili di utilizzarle, è necessario contrassegnarle <xref:System.Security.AllowPartiallyTrustedCallersAttribute> con (APTCA). Solo gli assembly per cui il test di sicurezza per l'esecuzione ha dato come esito un'attendibilità parziale possono essere contrassegnati con questo attributo.  
+ Quando gli assembly gestiti vengono installati nel Global Assembly Cache (GAC), diventano completamente attendibili perché l'utente deve fornire autorizzazioni esplicite per installarli. Dal momento che sono completamente attendibili, possono essere usati solo dalle applicazioni client gestite completamente attendibili. Per consentire alle applicazioni parzialmente attendibili di utilizzarle, è necessario contrassegnarle <xref:System.Security.AllowPartiallyTrustedCallersAttribute> con (APTCA). Solo gli assembly per cui il test di sicurezza per l'esecuzione ha dato come esito un'attendibilità parziale possono essere contrassegnati con questo attributo.  
   
- Tuttavia, un assembly APTCA può presentare un difetto di sicurezza dopo l' [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]installazione in. Quando viene individuato un difetto nel sistema di sicurezza, gli editori dell'assembly possono creare un aggiornamento della sicurezza per risolvere il problema nelle installazioni esistenti e per proteggere le installazioni eseguite dopo l'individuazione del problema. Un'opzione per l'aggiornamento è la disinstallazione dell'assembly, anche se in questo modo può essere compromessa la funzionalità di altre applicazioni client completamente attendibili che usano l'assembly.  
+ Tuttavia, un assembly APTCA può presentare un difetto di sicurezza dopo l'installazione nella GAC. Quando viene individuato un difetto nel sistema di sicurezza, gli editori dell'assembly possono creare un aggiornamento della sicurezza per risolvere il problema nelle installazioni esistenti e per proteggere le installazioni eseguite dopo l'individuazione del problema. Un'opzione per l'aggiornamento è la disinstallazione dell'assembly, anche se in questo modo può essere compromessa la funzionalità di altre applicazioni client completamente attendibili che usano l'assembly.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]fornisce un meccanismo mediante il quale è possibile disabilitare un assembly APTCA per l' [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] attendibilità parziale senza disinstallare l'assembly APTCA.  
   

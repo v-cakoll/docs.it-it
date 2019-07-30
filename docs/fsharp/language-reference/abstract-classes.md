@@ -1,17 +1,17 @@
 ---
 title: Classi astratte
-description: Informazioni su F# classi, che lascia alcuni o tutti i membri non implementati astratte e rappresenta funzionalità comuni a diversi set di tipi di oggetto.
+description: Informazioni sulle F# classi astratte, che lasciano alcuni o tutti i membri non implementati e rappresentano funzionalità comuni di un set diversificato di tipi di oggetti.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8251d481c9056d40a0b13ae3c89353406986c116
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a6bbfc23b858d5f3833f3f52b6dca46753080f03
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645556"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629674"
 ---
 # <a name="abstract-classes"></a>Classi astratte
 
-*Classi astratte* sono classi che lasciano alcuni o tutti i membri non implementati, in modo che le implementazioni possono essere fornite dalle classi derivate.
+*Le classi astratte* sono classi che lasciano inimplementati alcuni o tutti i membri, in modo che le implementazioni possano essere fornite dalle classi derivate.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,23 +28,23 @@ abstract member member-name : type-signature
 
 ## <a name="remarks"></a>Note
 
-Nella programmazione orientata agli oggetti, una classe astratta viene usata come classe di base di una gerarchia e rappresenta funzionalità comuni a diversi set di tipi di oggetto. Come il nome "abstract" implica, classi astratte spesso non corrispondono direttamente a entità concrete nel dominio del problema. Tuttavia, rappresentano cosa molte entità concreta diverse hanno in comune.
+Nella programmazione orientata a oggetti, una classe astratta viene utilizzata come classe di base di una gerarchia e rappresenta la funzionalità comune di un diverso set di tipi di oggetti. Come suggerisce il nome "abstract", le classi astratte spesso non corrispondono direttamente a entità concrete nel dominio del problema. Tuttavia, rappresentano il numero di entità concrete diverse in comune.
 
-Classi astratte devono avere la `AbstractClass` attributo. Possono avere implementato e non implementati i membri. L'uso del periodo di validità *astratto* quando viene applicato a una classe è analogo a quello in altri linguaggi .NET; tuttavia, l'utilizzo del termine *astratta* quando applicato a metodi (e proprietà) è lievemente differente in F# dal relativo utilizzo in altri linguaggi .NET. In F#, quando un metodo è contrassegnato con il `abstract` (parola chiave), significa che un membro dispone di una voce, nota come un *slot di distribuzione virtuale*, nella tabella interna di funzioni virtuali per quel tipo. In altre parole, il metodo è virtuale, anche se il `virtual` parola chiave non viene usato nel F# lingua. La parola chiave `abstract` viene usato nei metodi virtuali, indipendentemente dal fatto che il metodo è implementato. La dichiarazione di uno slot di distribuzione virtuale è separata dalla definizione di un metodo per tale slot di distribuzione. Pertanto, il F# equivalente di una dichiarazione di metodo virtuale e una definizione in un altro linguaggio .NET è una combinazione di una dichiarazione di metodo astratto e una definizione separata, con il `default` parola chiave o il `override` (parola chiave). Per altre informazioni ed esempi, vedere [metodi](members/methods.md).
+Le classi astratte devono `AbstractClass` avere l'attributo. Possono avere membri implementati e non implementati. L'utilizzo del termine *abstract* quando viene applicato a una classe è uguale a quello di altri linguaggi .NET; Tuttavia, l'uso del termine *abstract* quando viene applicato ai metodi e alle proprietà è leggermente diverso in F# dal suo uso in altri linguaggi .NET. In F#, quando un metodo è contrassegnato con la `abstract` parola chiave, questo indica che un membro dispone di una voce, nota come *slot di invio virtuale*, nella tabella interna delle funzioni virtuali per quel tipo. In altre parole, il metodo è virtuale, anche se `virtual` la parola chiave non viene usata F# nel linguaggio. La parola `abstract` chiave viene usata nei metodi virtuali indipendentemente dal fatto che il metodo venga implementato. La dichiarazione di uno slot di invio virtuale è separata dalla definizione di un metodo per lo slot di distribuzione. Pertanto, l' F# equivalente di una dichiarazione di metodo virtuale e di una definizione in un altro linguaggio .NET è costituito da una combinazione di una dichiarazione di metodo astratto e `default` di una definizione `override` separata, con la parola chiave o la parola chiave. Per ulteriori informazioni ed esempi, vedere [Metodi](./members/methods.md).
 
-Una classe verrà considerata astratta solo se sono presenti metodi astratti che vengono dichiarati ma non definiti. Di conseguenza, le classi con metodi astratti non sono necessariamente classi astratte. A meno che una classe ha definito i metodi astratti, non usare la **AbstractClass** attributo.
+Una classe viene considerata astratta solo se sono presenti metodi astratti dichiarati ma non definiti. Pertanto, le classi con metodi astratti non sono necessariamente classi astratte. A meno che una classe non disponga di metodi astratti non definiti, non usare l'attributo **AbstractClass** .
 
-Nella sintassi precedente *modificatore di accessibilità* può essere `public`, `private` o `internal`. Per altre informazioni, vedere [Controllo di accesso](access-control.md).
+Nella sintassi precedente, il *modificatore* di accessibilità `public`può `private` essere `internal`, o. Per altre informazioni, vedere [Controllo di accesso](access-control.md).
 
-Come con gli altri tipi di classi astratte possono avere una classe di base e uno o più interfacce di base. Ogni classe di base o interfaccia viene visualizzato in una riga separata con il `inherit` (parola chiave).
+Come per gli altri tipi, le classi astratte possono avere una classe di base e una o più interfacce di base. Ogni classe o interfaccia di base viene visualizzata in una riga distinta `inherit` insieme alla parola chiave.
 
-La definizione del tipo di una classe astratta può contenere membri completamente definiti, ma può anche contenere membri astratti. La sintassi per i membri astratti viene visualizzata separatamente nella sintassi precedente. In questa sintassi, il *firma del tipo* di un membro è un elenco che contiene i tipi di parametro in ordine e i tipi restituiti, separato da `->` i token e/o `*` token come appropriato per sottoposte a currying e in forma di tupla parametri. La sintassi per le firme del tipo di membro astratto è analoghi a quelli utilizzati nei file di firma visualizzata da IntelliSense nell'Editor di codice di Visual Studio.
+La definizione del tipo di una classe astratta può contenere membri completamente definiti, ma può contenere anche membri astratti. La sintassi per i membri astratti viene mostrata separatamente nella sintassi precedente. In questa sintassi, la *firma del tipo* di un membro è un elenco che contiene i tipi di parametro nell'ordine e i tipi restituiti, `->` separati dai token e/ `*` o dai token come appropriato per i parametri sottoposti a currying e con tupla. La sintassi per le firme dei tipi di membro abstract è identica a quella utilizzata nei file di firma e mostrata da IntelliSense nell'editor di Visual Studio Code.
 
-Il codice seguente illustra una classe astratta, forma, che dispone di due classi non astratte derivate, Square e Circle. Nell'esempio viene illustrato come utilizzare le proprietà, metodi e classi astratte. Nell'esempio, la forma classe astratta rappresenta gli elementi comuni del cerchio entità concreta e quadrato. Le funzionalità comuni di tutte le forme (in un sistema di coordinate bidimensionale) vengono estratte nella classe Shape: la posizione della griglia, l'angolo di rotazione e le proprietà di area e perimetro. Questi può essere sottoposto a override, ad eccezione di posizione, il comportamento di cui non è possibile modificare le singole forme.
+Nel codice seguente viene illustrata una forma di classe astratta, che presenta due classi derivate non astratte, Square e Circle. Nell'esempio viene illustrato come utilizzare le classi, i metodi e le proprietà astratte. Nell'esempio la forma della classe astratta rappresenta gli elementi comuni del cerchio e del quadrato delle entità concrete. Le funzionalità comuni di tutte le forme (in un sistema di coordinate bidimensionali) vengono ricavate nella classe Shape: la posizione sulla griglia, un angolo di rotazione e le proprietà area e perimetrale. È possibile eseguirne l'override, ad eccezione della posizione, il comportamento del quale le singole forme non possono essere modificate.
 
-Il metodo di rotazione può eseguire l'override, come la classe cerchio, ovvero la rotazione invariante a causa della sua simmetria. Quindi, nella classe Circle, il metodo di rotazione viene sostituito da un metodo che non esegue alcuna operazione.
+Il metodo di rotazione può essere sottoposto a override, come nella classe Circle, che è invariante di rotazione a causa della relativa simmetria. Quindi, nella classe Circle, il metodo di rotazione viene sostituito da un metodo che non esegue alcuna operazione.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2901.fs)]
 
 **Output:**
 
@@ -58,6 +58,6 @@ Area of Circle: 78.539816
 ## <a name="see-also"></a>Vedere anche
 
 - [Classi](classes.md)
-- [Membri](members/index.md)
-- [Metodi](members/methods.md)
-- [Proprietà](members/Properties.md)
+- [Membri](./members/index.md)
+- [Metodi](./members/methods.md)
+- [Proprietà](./members/Properties.md)

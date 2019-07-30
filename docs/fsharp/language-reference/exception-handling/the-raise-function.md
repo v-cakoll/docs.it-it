@@ -1,17 +1,17 @@
 ---
 title: 'Eccezioni: funzione raise'
-description: Informazioni su come il F# 'raise' funzione viene utilizzata per indicare che si è verificato un errore o condizione eccezionale.
+description: Informazioni sul modo F# in cui viene usata la funzione ' raise ' per indicare che si è verificato un errore o una condizione eccezionale.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9e2515ad7b85c1025bc3aa0aa2a6929a8d35436d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e0cc8da8310203c537b8081af8a225671bd8c6a3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641957"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630293"
 ---
 # <a name="exceptions-the-raise-function"></a>Eccezioni: funzione raise
 
-Il `raise` funzione viene utilizzata per indicare che si è verificato un errore o condizione eccezionale. Informazioni sull'errore vengono acquisite in un oggetto eccezione.
+La `raise` funzione viene usata per indicare che si è verificato un errore o una condizione eccezionale. Le informazioni sull'errore vengono acquisite in un oggetto eccezione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -21,23 +21,23 @@ raise (expression)
 
 ## <a name="remarks"></a>Note
 
-Il `raise` funzione genera un oggetto eccezione e avvia un processo di rimozione dello stack. Il processo di rimozione dello stack viene gestito da common language runtime (CLR), quindi il comportamento di questo processo è lo stesso perché si trova in qualsiasi altro linguaggio .NET. Il processo di rimozione dello stack è una ricerca per un gestore di eccezioni che corrisponde all'eccezione generata. Viene avviata la ricerca nell'attuale `try...with` espressione, se presente. I modelli di `with` blocco è selezionato, nell'ordine. Quando viene trovato un gestore eccezioni corrispondente, l'eccezione viene considerata come gestito; in caso contrario, lo stack viene rimosso e `with` blocchi la catena di chiamate vengono controllati fino a quando non viene trovato un gestore corrispondente. Qualsiasi `finally` blocchi che si verificano nella catena di chiamate vengono anche eseguiti in sequenza come lo stack viene rimosso.
+La `raise` funzione genera un oggetto eccezione e avvia un processo di rimozione dello stack. Il processo di rimozione dello stack è gestito dal Common Language Runtime (CLR), quindi il comportamento di questo processo è identico a quello in qualsiasi altro linguaggio .NET. Il processo di rimozione dello stack è una ricerca di un gestore di eccezioni che corrisponde all'eccezione generata. La ricerca inizia nell'espressione corrente `try...with` , se ne esiste una. Ogni modello nel `with` blocco è selezionato, in ordine. Quando viene trovato un gestore di eccezioni corrispondente, l'eccezione viene considerata gestita; in caso contrario, lo stack viene rimosso `with` e il blocco della catena di chiamate viene verificato fino a quando non viene trovato un gestore corrispondente. Tutti `finally` i blocchi rilevati nella catena di chiamate vengono eseguiti anche in sequenza come rimozione dello stack.
 
-Il `raise` funzione equivale a `throw` in c# o C++. Usare `reraise` in un gestore catch per propagare la stessa eccezione fino alla catena di chiamata.
+La `raise` funzione è l'equivalente di `throw` in C# o C++. Utilizzare `reraise` in un gestore catch per propagare la stessa eccezione fino alla catena di chiamate.
 
-Gli esempi di codice seguenti illustrano l'uso del `raise` funzione per generare un'eccezione.
+Negli esempi di codice seguenti viene illustrato l'utilizzo della `raise` funzione per generare un'eccezione.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5801.fs)]
 
-Il `raise` funzione può essere usata anche per la generazione di eccezioni .NET, come illustrato nell'esempio seguente.
+La `raise` funzione può essere utilizzata anche per generare eccezioni .NET, come illustrato nell'esempio seguente.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5802.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5802.fs)]
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Gestione delle eccezioni](index.md)
 - [Tipi di eccezione](exception-types.md)
-- [Eccezioni: Il `try...with` espressione](the-try-with-expression.md)
-- [Eccezioni: Il `try...finally` espressione](the-try-finally-expression.md)
-- [Eccezioni: Il `failwith` (funzione)](the-failwith-function.md)
-- [Eccezioni: Il `invalidArg` (funzione)](the-invalidArg-function.md)
+- [Eccezioni: `try...with` Espressione](the-try-with-expression.md)
+- [Eccezioni: `try...finally` Espressione](the-try-finally-expression.md)
+- [Eccezioni: `failwith` Funzione](the-failwith-function.md)
+- [Eccezioni: `invalidArg` Funzione](the-invalidArg-function.md)
