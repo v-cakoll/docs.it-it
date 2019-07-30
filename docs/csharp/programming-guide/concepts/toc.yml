@@ -1,8 +1,24 @@
 - name: Concetti di programmazione
   href: index.md
   items:
-    - name: Assembly e Global Assembly Cache
-      href: assemblies-gac/
+    - name: Assembly
+      items:
+        - name: Assembly Friend
+          items:
+            - name: 'Procedura: Creare assembly Friend non firmati'
+              href: assemblies-gac/how-to-create-unsigned-friend-assemblies.md
+            - name: 'Procedura: Creare assembly Friend firmati'
+              href: assemblies-gac/how-to-create-signed-friend-assemblies.md
+        - name: 'Procedura: Creare e usare assembly dalla riga di comando'
+          href: assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
+        - name: 'Procedura: Determinare se un file è un assembly'
+          href: assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
+        - name: 'Procedura: Caricare e scaricare gli assembly'
+          href: assemblies-gac/how-to-load-and-unload-assemblies.md
+        - name: 'Procedura: Condividere un assembly con altre applicazioni'
+          href: assemblies-gac/how-to-share-an-assembly-with-other-applications.md
+        - name: 'Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio'
+          href: assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md
     - name: Programmazione asincrona con async e await
       href: async/
     - name: Attributi
