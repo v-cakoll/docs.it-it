@@ -14,46 +14,39 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 2494eac2f61f112f3ba6321ada7404f8cd618049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6d10982cf199e9285334e0d72e6622275d51b4d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766636"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626203"
 ---
-# <a name="throw-statement-visual-basic"></a><span data-ttu-id="b13af-102">Istruzione Throw (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b13af-102">Throw Statement (Visual Basic)</span></span>
-<span data-ttu-id="b13af-103">Genera un'eccezione all'interno di una routine.</span><span class="sxs-lookup"><span data-stu-id="b13af-103">Throws an exception within a procedure.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="b13af-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b13af-104">Syntax</span></span>  
-  
-```  
-Throw [ expression ]  
-```  
-  
-## <a name="part"></a><span data-ttu-id="b13af-105">Parte</span><span class="sxs-lookup"><span data-stu-id="b13af-105">Part</span></span>  
- `expression`  
- <span data-ttu-id="b13af-106">Vengono fornite informazioni sull'eccezione generata.</span><span class="sxs-lookup"><span data-stu-id="b13af-106">Provides information about the exception to be thrown.</span></span> <span data-ttu-id="b13af-107">Facoltativo quando che risiedono un `Catch` istruzione, in caso contrario, è necessario.</span><span class="sxs-lookup"><span data-stu-id="b13af-107">Optional when residing in a `Catch` statement, otherwise required.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="b13af-108">Note</span><span class="sxs-lookup"><span data-stu-id="b13af-108">Remarks</span></span>  
- <span data-ttu-id="b13af-109">Il `Throw` istruzione genera un'eccezione che è possibile gestire con un codice di gestione delle eccezioni strutturata (`Try`... `Catch`... `Finally`) o il codice di gestione delle eccezioni non strutturato (`On Error GoTo`).</span><span class="sxs-lookup"><span data-stu-id="b13af-109">The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`).</span></span> <span data-ttu-id="b13af-110">È possibile usare il `Throw` istruzione per intercettare gli errori all'interno del codice perché Visual Basic sposta verso l'alto nello stack di chiamate fino a individuare il codice di gestione delle eccezioni appropriato.</span><span class="sxs-lookup"><span data-stu-id="b13af-110">You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.</span></span>  
-  
- <span data-ttu-id="b13af-111">Oggetto `Throw` istruzione senza un'espressione può essere usata solo un `Catch` istruzione, in cui l'istruzione case genera nuovamente l'eccezione attualmente gestita dal `Catch` istruzione.</span><span class="sxs-lookup"><span data-stu-id="b13af-111">A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.</span></span>  
-  
- <span data-ttu-id="b13af-112">Il `Throw` istruzione Reimposta lo stack di chiamate per il `expression` eccezione.</span><span class="sxs-lookup"><span data-stu-id="b13af-112">The `Throw` statement resets the call stack for the `expression` exception.</span></span> <span data-ttu-id="b13af-113">Se `expression` non viene specificato, lo stack di chiamate viene lasciata invariata.</span><span class="sxs-lookup"><span data-stu-id="b13af-113">If `expression` is not provided, the call stack is left unchanged.</span></span> <span data-ttu-id="b13af-114">È possibile accedere lo stack di chiamate dell'eccezione mediante il <xref:System.Exception.StackTrace%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="b13af-114">You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="b13af-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="b13af-115">Example</span></span>  
- <span data-ttu-id="b13af-116">Il codice seguente usa il `Throw` istruzione per generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="b13af-116">The following code uses the `Throw` statement to throw an exception:</span></span>  
-  
- [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]  
-  
-## <a name="requirements"></a><span data-ttu-id="b13af-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b13af-117">Requirements</span></span>  
- <span data-ttu-id="b13af-118">**Spazio dei nomi:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="b13af-118">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
-  
- <span data-ttu-id="b13af-119">**Modulo:** `Interaction`</span><span class="sxs-lookup"><span data-stu-id="b13af-119">**Module:** `Interaction`</span></span>  
-  
- <span data-ttu-id="b13af-120">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="b13af-120">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="b13af-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b13af-121">See also</span></span>
+# <a name="throw-statement-visual-basic"></a><span data-ttu-id="05ad4-102">Istruzione Throw (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="05ad4-102">Throw Statement (Visual Basic)</span></span>
+<span data-ttu-id="05ad4-103">Genera un'eccezione all'interno di una routine.</span><span class="sxs-lookup"><span data-stu-id="05ad4-103">Throws an exception within a procedure.</span></span>
 
-- [<span data-ttu-id="b13af-122">Istruzione Try...Catch...Finally</span><span class="sxs-lookup"><span data-stu-id="b13af-122">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [<span data-ttu-id="b13af-123">Istruzione On Error</span><span class="sxs-lookup"><span data-stu-id="b13af-123">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="syntax"></a><span data-ttu-id="05ad4-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="05ad4-104">Syntax</span></span>
+
+```vb
+Throw [ expression ]
+```
+
+## <a name="part"></a><span data-ttu-id="05ad4-105">Parte</span><span class="sxs-lookup"><span data-stu-id="05ad4-105">Part</span></span>
+ <span data-ttu-id="05ad4-106">`expression`Fornisce informazioni sull'eccezione da generare.</span><span class="sxs-lookup"><span data-stu-id="05ad4-106">`expression` Provides information about the exception to be thrown.</span></span> <span data-ttu-id="05ad4-107">Facoltativo quando si trova in un' `Catch` istruzione, in caso contrario obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="05ad4-107">Optional when residing in a `Catch` statement, otherwise required.</span></span>
+  
+## <a name="remarks"></a><span data-ttu-id="05ad4-108">Note</span><span class="sxs-lookup"><span data-stu-id="05ad4-108">Remarks</span></span>
+ <span data-ttu-id="05ad4-109">L' `Throw` istruzione genera un'eccezione che può essere gestita con codice di gestione delle eccezioni strutturato (`Try`... `Catch`... ) o codice di gestione delle eccezioni non strutturato`On Error GoTo`(). `Finally`</span><span class="sxs-lookup"><span data-stu-id="05ad4-109">The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`).</span></span> <span data-ttu-id="05ad4-110">È possibile usare l' `Throw` istruzione per intercettare gli errori all'interno del codice perché Visual Basic sposta lo stack di chiamate fino a trovare il codice di gestione delle eccezioni appropriato.</span><span class="sxs-lookup"><span data-stu-id="05ad4-110">You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.</span></span>
+ 
+ <span data-ttu-id="05ad4-111">Un' `Throw` istruzione senza espressione può essere utilizzata solo in un' `Catch` istruzione, nel qual caso l'istruzione genera nuovamente l'eccezione `Catch` attualmente gestita dall'istruzione.</span><span class="sxs-lookup"><span data-stu-id="05ad4-111">A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.</span></span>
+
+ <span data-ttu-id="05ad4-112">L' `Throw` istruzione Reimposta lo stack di chiamate per l' `expression` eccezione.</span><span class="sxs-lookup"><span data-stu-id="05ad4-112">The `Throw` statement resets the call stack for the `expression` exception.</span></span> <span data-ttu-id="05ad4-113">Se `expression` non viene specificato, lo stack di chiamate viene lasciato invariato.</span><span class="sxs-lookup"><span data-stu-id="05ad4-113">If `expression` is not provided, the call stack is left unchanged.</span></span> <span data-ttu-id="05ad4-114">È possibile accedere allo stack di chiamate per l'eccezione tramite <xref:System.Exception.StackTrace%2A> la proprietà.</span><span class="sxs-lookup"><span data-stu-id="05ad4-114">You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.</span></span>
+
+## <a name="example"></a><span data-ttu-id="05ad4-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="05ad4-115">Example</span></span>
+ <span data-ttu-id="05ad4-116">Nel codice seguente viene utilizzata `Throw` l'istruzione per generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="05ad4-116">The following code uses the `Throw` statement to throw an exception:</span></span>
+ 
+ [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
+
+  
+## <a name="see-also"></a><span data-ttu-id="05ad4-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="05ad4-117">See also</span></span>
+
+- [<span data-ttu-id="05ad4-118">Istruzione Try...Catch...Finally</span><span class="sxs-lookup"><span data-stu-id="05ad4-118">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [<span data-ttu-id="05ad4-119">Istruzione On Error</span><span class="sxs-lookup"><span data-stu-id="05ad4-119">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)
