@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: c9d86cadd5f2115d0214d9a1b1dce7e6682341e0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 405d06a8da8ec5c428c1565bcd08236de0f1fa88
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629734"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672050"
 ---
 # <a name="cleartype-overview"></a>Cenni preliminari su ClearType
 In questo argomento viene fornita una panoramica della tecnologia Microsoft ClearType disponibile nella [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -19,11 +19,11 @@ In questo argomento viene fornita una panoramica della tecnologia Microsoft Clea
 ## <a name="technology-overview"></a>Informazioni generali sulla tecnologia  
  ClearType è una tecnologia software sviluppata da [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] che consente di migliorare la leggibilità del testo sugli schermi LCD (Liquid Crystal Display), ad esempio schermi portatili, schermi Pocket PC e monitor Flat Panel.  ClearType funziona tramite l'accesso ai singoli elementi stripe dei colori verticali in ogni pixel di uno schermo LCD. Prima di ClearType, il livello di dettaglio più basso che un computer poteva visualizzare era un singolo pixel, ma con ClearType in esecuzione su un monitor LCD, ora è possibile visualizzare le funzionalità del testo di piccole dimensioni come una frazione di un pixel in larghezza. La risoluzione aggiuntiva aumenta la nitidezza dei piccoli dettagli nella visualizzazione del testo, rendendone più facile la lettura per periodi prolungati.  
   
- ClearType disponibile in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] è la generazione più recente di ClearType che presenta diversi miglioramenti rispetto alla versione disponibile [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]in.  
+ ClearType disponibile in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] è la generazione più recente di ClearType con diversi miglioramenti rispetto alla versione disponibile in Microsoft Windows Graphics Device Interface (GDI).  
   
 <a name="sub-pixel_positioning"></a>   
 ## <a name="sub-pixel-positioning"></a>Posizionamento dei subpixel  
- Un miglioramento significativo rispetto alla versione precedente di ClearType è l'utilizzo del posizionamento dei subpixel. A differenza dell'implementazione di ClearType disponibile [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]in, il ClearType trovato [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in consente l'avvio dei glifi all'interno del pixel e non solo del limite iniziale del pixel. Grazie a questa risoluzione aggiuntiva nel posizionamento dei glifi, la spaziatura e le proporzioni dei glifi risultano più precise e coerenti.  
+ Un miglioramento significativo rispetto alla versione precedente di ClearType è l'utilizzo del posizionamento dei subpixel. A differenza dell'implementazione di ClearType presente in GDI, il ClearType trovato [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in consente l'avvio dei glifi all'interno del pixel e non solo del limite iniziale del pixel. Grazie a questa risoluzione aggiuntiva nel posizionamento dei glifi, la spaziatura e le proporzioni dei glifi risultano più precise e coerenti.  
   
  Nei due esempi seguenti viene mostrato come è possibile inserire i glifi su qualsiasi limite del subpixel se si usa il posizionamento dei subpixel. Nell'esempio a sinistra viene eseguito il rendering utilizzando la versione precedente del renderer ClearType, che non utilizza il posizionamento dei subpixel. L'esempio a destra viene sottoposto a rendering usando la nuova versione del renderer ClearType, usando il posizionamento dei subpixel. Notare che il rendering dei caratteri **e** e **l** nell'immagine a destra è leggermente diverso in quanto ognuno inizia in corrispondenza di un subpixel diverso. Quando il testo viene visualizzato sullo schermo con le dimensioni normali, questa differenza non è ben visibile a causa dell'elevato contrasto dell'immagine del glifo Questa operazione è possibile solo grazie a un sofisticato filtro dei colori incorporato in ClearType.  
   
@@ -37,7 +37,7 @@ Confronto tra il testo visualizzato con la versione precedente di ClearType e qu
   
 <a name="y-direction_antialiasing"></a>   
 ## <a name="y-direction-antialiasing"></a>Anti-aliasing della direzione Y  
- Un altro miglioramento di ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in è l'anti-aliasing della direzione y. ClearType in [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] senza anti-aliasing della direzione y offre una risoluzione migliore sull'asse x, ma non sull'asse y. Nelle parti superiori e inferiori delle curve poco pronunciate, i bordi frastagliati riducono la leggibilità.  
+ Un altro miglioramento di ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in è l'anti-aliasing della direzione y. ClearType in GDI senza anti-aliasing della direzione y offre una risoluzione migliore sull'asse x, ma non sull'asse y. Nelle parti superiori e inferiori delle curve poco pronunciate, i bordi frastagliati riducono la leggibilità.  
   
  L'esempio seguente mostra l'effetto dell'assenza di anti-aliasing della direzione y. In questo caso, i bordi frastagliati nella parte superiore e inferiore della lettera sono chiaramente visibili.  
   

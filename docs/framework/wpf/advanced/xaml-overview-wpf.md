@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 4f3d8a9f275a41b96b6518d63552ce9873cca0fb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ee5318b8ba1284f2805b80b3e41fab3ae739158c
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400812"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672002"
 ---
 # <a name="xaml-overview-wpf"></a>Cenni preliminari su XAML (WPF)
+
 Questo argomento descrive le funzionalità del linguaggio XAML e ne illustra l'uso per la scrittura di applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. In particolare descrive il linguaggio XAML implementato in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Il linguaggio XAML in quanto tale, tuttavia, rappresenta un concetto di linguaggio più ampio rispetto a quello implementato in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>Definizione di XAML  
- XAML è un linguaggio di markup dichiarativo. Come applicato al modello di programmazione .NET Framework, XAML semplifica la creazione di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] un per un'applicazione .NET Framework. È possibile creare elementi di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] visibili nel markup XAML dichiarativo, quindi separare la definizione di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dalla logica di runtime usando file code-behind, uniti al markup tramite definizioni di classe parziali. XAML rappresenta in modo diretto la creazione di istanze di oggetti in un set specifico di tipi di supporto definiti in assembly. In ciò si differenzia dalla maggior parte degli altri linguaggi di markup, che sono in genere linguaggi interpretati senza un legame diretto con il sistema di tipi di supporto. XAML consente un flusso di lavoro in cui parti distinte possono operare nella [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] e nella logica di un'applicazione, usando strumenti potenzialmente diversi.  
+ XAML è un linguaggio di markup dichiarativo. Come applicato al modello di programmazione .NET Framework, XAML semplifica la creazione di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] un per un'applicazione .NET Framework. È possibile creare elementi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] visibili nel markup XAML dichiarativo, quindi separare la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] definizione dalla logica di runtime utilizzando file code-behind uniti al markup tramite definizioni di classe parziali. XAML rappresenta in modo diretto la creazione di istanze di oggetti in un set specifico di tipi di supporto definiti in assembly. In ciò si differenzia dalla maggior parte degli altri linguaggi di markup, che sono in genere linguaggi interpretati senza un legame diretto con il sistema di tipi di supporto. XAML consente un flusso di lavoro in cui parti distinte possono operare nella [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] e nella logica di un'applicazione, usando strumenti potenzialmente diversi.  
   
  Se rappresentati come testo, i file XAML sono file XML, in genere con estensione `.xaml`. I file possono essere codificati tramite qualsiasi codifica XML, tuttavia la codifica tipica è UTF-8.  
   
@@ -104,7 +105,7 @@ Questo argomento descrive le funzionalità del linguaggio XAML e ne illustra l'u
   
  Secondo le regole del linguaggio XAML, il valore di una proprietà di contenuto XAML deve essere specificato completamente prima o completamente dopo qualsiasi altro elemento proprietà nell'elemento oggetto. Ad esempio, il markup seguente non viene compilato:  
   
-```  
+```xaml
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -188,7 +189,7 @@ Questo argomento descrive le funzionalità del linguaggio XAML e ne illustra l'u
  [!code-xaml[XAMLOvwSupport#MarginVerbose](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
   
 > [!NOTE]
->  Esiste anche un numero limitato di oggetti in cui la conversione del tipo è l'unico modo pubblico per impostare una proprietà su tale tipo senza coinvolgere una sottoclasse, perché il tipo stesso non ha un costruttore senza parametri. Un esempio è <xref:System.Windows.Input.Cursor>.  
+> Esiste anche un numero limitato di oggetti in cui la conversione del tipo è l'unico modo pubblico per impostare una proprietà su tale tipo senza coinvolgere una sottoclasse, perché il tipo stesso non ha un costruttore senza parametri. Un esempio è <xref:System.Windows.Input.Cursor>.  
   
  Per altre informazioni sul supporto della conversione dei tipi e del relativo uso per la sintassi per attributi, vedere [TypeConverter e XAML](typeconverters-and-xaml.md).  
   
@@ -228,7 +229,7 @@ Questo argomento descrive le funzionalità del linguaggio XAML e ne illustra l'u
   
  Di seguito viene riportato un esempio molto semplice del funzionamento dei prefissi personalizzati nel markup XAML. Il prefisso `custom` è definito nel tag dell'elemento radice e viene mappato a un assembly specifico compresso e disponibile con l'applicazione. Questo assembly contiene un tipo `NumericUpDown`, implementato per supportare l'uso generale di XAML, nonché l'uso di un'ereditarietà delle classi che ne consenta l'inserimento in questo punto specifico in un modello di contenuto XAML WPF. Un'istanza di questo controllo `NumericUpDown` viene dichiarata come elemento oggetto, usando il prefisso in modo tale che un parser XAML sia in grado di riconoscere lo spazio dei nomi XAML contenente il tipo e pertanto la posizione dell'assembly di supporto che contiene la definizione del tipo.  
   
-```  
+```xaml
 <Page  
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"   
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"   

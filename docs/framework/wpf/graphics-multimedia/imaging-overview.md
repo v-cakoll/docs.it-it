@@ -21,25 +21,25 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: d1fcf15db750167a93344ff8efd5957933bed6c0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b6fb530bbc4132b09cc17ad692e6e9e23cd75598
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629853"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671846"
 ---
 # <a name="imaging-overview"></a>Cenni preliminari sulla creazione dell'immagine
 Questo argomento offre un'introduzione a [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] consente agli sviluppatori di visualizzare, trasformare e formattare le immagini.  
 
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF Imaging Component  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] offre miglioramenti significativi nelle funzionalità di creazione delle immagini all'interno di [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Le funzionalità di creazione delle immagini, ad esempio la visualizzazione di una bitmap o l'uso di un'immagine in un controllo comune, si basavano in precedenza sulle librerie [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] o [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)]. Queste API offrono funzionalità di imaging di base, ma non dispongono di funzionalità come il supporto per l'estendibilità dei codec e il supporto per immagini ad alta fedeltà. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]è progettato per superare le carenze di [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] e [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] e offrire un nuovo set di API per visualizzare e usare le immagini all'interno delle applicazioni.  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] offre miglioramenti significativi nelle funzionalità di creazione delle immagini all'interno di [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Le funzionalità di creazione di immagini, ad esempio la visualizzazione di una bitmap o l'uso di un'immagine in un controllo comune, dipendono in precedenza dalle librerie Microsoft Windows Graphics Device Interface (GDI) o GDI+ di Microsoft Windows. Queste API offrono funzionalità di imaging di base, ma non dispongono di funzionalità come il supporto per l'estendibilità dei codec e il supporto per immagini ad alta fedeltà. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]è progettato per superare le carenze di GDI e GDI+ e offrire un nuovo set di API per visualizzare e usare le immagini all'interno delle applicazioni.  
   
  Esistono due modi per accedere all' [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] API, un componente gestito e un componente non gestito. Il componente non gestito fornisce le funzionalità riportate di seguito.  
   
 - Modello di estendibilità per formati di immagine nuovi o proprietari.  
   
-- Miglioramento delle prestazioni e della sicurezza nei formati di immagini native, tra cui [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]bitmap ( [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]BMP [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]) [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)], [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)],,,, e icona (. ico).  
+- Miglioramento delle prestazioni e della sicurezza nei formati di immagini native, tra cui [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]bitmap ( [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]BMP [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]),, [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)],,, Graphics Interchange Format (gif) e Icon (. ico).  
   
 - Conservazione dei dati di immagini con intensità fino a 8 bit per canale (32 bit per pixel).  
   
@@ -57,11 +57,11 @@ Questo argomento offre un'introduzione a [!INCLUDE[TLA#tla_wic](../../../../incl
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>Formati di immagini WPF  
- Viene usato un codec per decodificare o codificare un formato multimediale specifico. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]include un codec per i formati [!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]di [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]immagine [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]BMP [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)],,,, e. Ognuno di questi codec consente alle applicazioni di decodificare e, ad eccezione di ICON, codificare i rispettivi formati di immagine.  
+ Viene usato un codec per decodificare o codificare un formato multimediale specifico. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]include un codec per i formati [!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]di immagine [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]BMP [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)],, [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)],,, gif e Icon. Ognuno di questi codec consente alle applicazioni di decodificare e, ad eccezione di ICON, codificare i rispettivi formati di immagine.  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>è una classe importante utilizzata per la decodifica e la codifica delle immagini. Si tratta del blocco predefinito di base della pipeline di [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] e rappresenta un set unico e costante di pixel a una specifica dimensione e risoluzione. Un <xref:System.Windows.Media.Imaging.BitmapSource> può essere un singolo frame di un'immagine a più frame oppure il risultato di una trasformazione eseguita su un oggetto <xref:System.Windows.Media.Imaging.BitmapSource>. È l'elemento padre di molte delle classi primarie utilizzate nella [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] creazione di immagini <xref:System.Windows.Media.Imaging.BitmapFrame>, ad esempio.  
   
- Un <xref:System.Windows.Media.Imaging.BitmapFrame> oggetto viene utilizzato per archiviare i dati bitmap effettivi di un formato di immagine. Molti formati di immagine supportano solo un <xref:System.Windows.Media.Imaging.BitmapFrame>singolo, anche se i [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] formati [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] come e supportano più frame per ogni immagine. I fotogrammi vengono usati dai decodificatori come dati di input e vengono passati ai codificatori per creare file di immagine.  
+ Un <xref:System.Windows.Media.Imaging.BitmapFrame> oggetto viene utilizzato per archiviare i dati bitmap effettivi di un formato di immagine. Molti formati di immagine supportano solo un <xref:System.Windows.Media.Imaging.BitmapFrame>singolo, anche se formati come gif [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] e supportano più frame per ogni immagine. I fotogrammi vengono usati dai decodificatori come dati di input e vengono passati ai codificatori per creare file di immagine.  
   
  Nell'esempio seguente viene illustrato come <xref:System.Windows.Media.Imaging.BitmapFrame> creare un oggetto da <xref:System.Windows.Media.Imaging.BitmapSource> un oggetto e quindi aggiungerlo a un' [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] immagine.  
   

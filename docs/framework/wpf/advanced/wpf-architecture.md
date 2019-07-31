@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 440a6d76e5295613d2887c0a77d9a49e870e580b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 39cf4b60262afb1e3745a82c734391385669f5d3
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629827"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671913"
 ---
 # <a name="wpf-architecture"></a>Architettura WPF
 In questo argomento viene fornita una presentazione guidata della gerarchia di classi Windows Presentation Foundation (WPF). Viene illustrata la maggior parte dei sottosistemi principali di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]e ne vengono descritte le modalità di interazione. Vengono inoltre forniti i dettagli relativi ad alcune scelte effettuate dagli architetti di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -76,9 +76,9 @@ In questo argomento viene fornita una presentazione guidata della gerarchia di c
   
  Un altro dettaglio importante, non facilmente individuabile nel diagramma, è il modo in cui il sistema esegue effettivamente la composizione.  
   
- In User32 e [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] il sistema funziona in base a un sistema di ritaglio in modalità immediata. Quando è necessario eseguire il rendering di un componente, il sistema stabilisce un limite di ritaglio al di fuori del quale il componente non può toccare i pixel; successivamente, viene chiesto al componente di disegnare i pixel in tale casella. Questo sistema funziona molto bene nei sistemi con memoria limitata poiché quando vengono apportate modifiche basta intervenire solo sul componente interessato. Non sono mai richiesti due componenti per il colore di un singolo pixel.  
+ In User32 e GDI il sistema funziona in un sistema di ritaglio in modalità immediata. Quando è necessario eseguire il rendering di un componente, il sistema stabilisce un limite di ritaglio al di fuori del quale il componente non può toccare i pixel; successivamente, viene chiesto al componente di disegnare i pixel in tale casella. Questo sistema funziona molto bene nei sistemi con memoria limitata poiché quando vengono apportate modifiche basta intervenire solo sul componente interessato. Non sono mai richiesti due componenti per il colore di un singolo pixel.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] utilizza un modello di disegno denominato "algoritmo del pittore". Ciò significa che anziché ritagliare ogni componente, viene richiesto il rendering di ciascun componente dallo sfondo al primo piano della visualizzazione. In tal modo ciascun componente viene disegnato sulla visualizzazione del componente precedente. Il vantaggio di questo modello è la possibilità di avere forme complesse, parzialmente trasparenti. L'hardware grafico moderno rende questo modello relativamente veloce, a differenza di quando sono stati creati User32 e [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)].  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] utilizza un modello di disegno denominato "algoritmo del pittore". Ciò significa che anziché ritagliare ogni componente, viene richiesto il rendering di ciascun componente dallo sfondo al primo piano della visualizzazione. In tal modo ciascun componente viene disegnato sulla visualizzazione del componente precedente. Il vantaggio di questo modello è la possibilità di avere forme complesse, parzialmente trasparenti. Con l'attuale hardware grafico moderno, questo modello è relativamente veloce, che non era il caso in cui User32/GDI fosse stato creato.  
   
  Come accennato in precedenza, uno degli scopi principali di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] è di passare a un modello di programmazione più dichiarativo, basato sulle proprietà. Nel sistema visuale questo è evidente in un paio di punti interessanti.  
   

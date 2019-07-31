@@ -5,22 +5,22 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 637911b3-0c78-4493-a4fb-91db56d767cd
-ms.openlocfilehash: 9a1d1974320a07614c9ff80e010425df056e1080
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 5d2380db3b8d2c5c41d04a34f9b86a97eb7b27b1
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860079"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672024"
 ---
 # <a name="printing-and-print-system-management"></a>Stampa e gestione di sistemi di stampa
-[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] e Microsoft .NET Framework si introduce un nuovo percorso di stampa — un'alternativa al [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] stampa e un set di API di gestione del sistema di stampa notevolmente ampliato.  
+[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]e Microsoft .NET Framework introducono un nuovo percorso di stampa, ovvero un'alternativa alla stampa di Microsoft Windows Graphics Device Interface (GDI), e un set di API di gestione del sistema di stampa notevolmente ampliato.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica della stampa](printing-overview.md)  
- Una discussione sul nuovo percorso di stampa e le API.  
+ Descrizione del nuovo percorso di stampa e delle API.  
   
  [Procedure relative alle proprietà](printing-how-to-topics.md)  
- Un set di articoli che illustrano come usare le API e il nuovo percorso di stampa.  
+ Una serie di articoli che illustrano come usare il nuovo percorso di stampa e le API.  
   
 ## <a name="see-also"></a>Vedere anche
 

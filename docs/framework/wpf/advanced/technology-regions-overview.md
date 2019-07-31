@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: e2c93f4471db2d72851a5d5bd8806b59a3e5ee28
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629858"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671828"
 ---
 # <a name="technology-regions-overview"></a>Cenni preliminari sulle aree di tecnologia
 Se in un'applicazione si usano più tecnologie di presentazione, ad esempio WPF, Win32 o DirectX, queste devono condividere le aree di rendering all'interno di una finestra comune di primo livello. Questo argomento descrive i problemi che potrebbero influire sulla presentazione e l'input per l'applicazione di interoperatività WPF.  
@@ -52,13 +52,13 @@ Se in un'applicazione si usano più tecnologie di presentazione, ad esempio WPF,
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]supporta HRGNs; non sono tuttavia disponibili API gestite per questa funzionalità. È possibile usare Platform Invoke e <xref:System.Windows.Interop.HwndSource> per chiamare le API [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pertinenti. Per altre informazioni, vedere [Chiamata di funzioni native da codice gestito](/cpp/dotnet/calling-native-functions-from-managed-code).  
   
- Le finestre sovrapposte di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hanno funzionalità diverse in sistemi operativi diversi. Questo perché [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa DirectX per eseguire il rendering e le finestre sovrapposte sono state progettate [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] principalmente per il rendering, non per il rendering DirectX.  
+ Le finestre sovrapposte di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hanno funzionalità diverse in sistemi operativi diversi. Questo perché [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa DirectX per eseguire il rendering e le finestre sovrapposte sono state progettate principalmente per il rendering GDI, non per il rendering DirectX.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] supporta le finestre sovrapposte con accelerazione hardware in [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] e versioni successive. Le finestre sovrapposte con accelerazione hardware [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] in richiedono supporto da Microsoft DirectX, quindi le funzionalità dipendono dalla versione di Microsoft DirectX nel computer.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non supporta chiavi di colore trasparenza in quanto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non può garantire di eseguire il rendering del colore esatto richiesto, in particolare quando il rendering usa l'accelerazione hardware.  
   
-- Se l'applicazione è in esecuzione [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]in, le finestre sovrapposte sulla superficie DirectX si sfarfallano quando viene eseguito il rendering dell'applicazione DirectX.  (La sequenza di rendering effettiva è [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] che nasconde la finestra sovrapposta, quindi disegna DirectX, quindi [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] inserisce la finestra su più livelli).  Anche le finestre sovrapposte non [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono soggette a questa limitazione.  
+- Se l'applicazione è in esecuzione [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]in, le finestre sovrapposte sulla superficie DirectX si sfarfallano quando viene eseguito il rendering dell'applicazione DirectX.  La sequenza di rendering effettiva è che Microsoft Windows Graphics Device Interface (GDI) nasconde la finestra sovrapposta, quindi disegna DirectX, quindi Microsoft Windows Graphics Device Interface (GDI) inserisce la finestra sovrapposta.  Anche le finestre sovrapposte non [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono soggette a questa limitazione.  
   
 ## <a name="see-also"></a>Vedere anche
 
