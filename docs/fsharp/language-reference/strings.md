@@ -1,24 +1,24 @@
 ---
 title: Stringhe
-description: Informazioni su come il F# di tipo 'stringa' rappresenta il testo non modificabile come sequenza di caratteri Unicode.
+description: Informazioni sul modo F# in cui il tipo ' String ' rappresenta il testo non modificabile come sequenza di caratteri Unicode.
 ms.date: 07/05/2019
-ms.openlocfilehash: ec895723cc6d21a701a27b5d70d053bb681ce2b3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 284de939c90c4d9d4ea064fb4db1fb90a37038e2
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660604"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627098"
 ---
 # <a name="strings"></a>Stringhe
 
 > [!NOTE]
 > I collegamenti di riferimento all'API in questo articolo portano a MSDN.  Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.
 
-Il `string` tipo rappresenta il testo non modificabile come sequenza di caratteri Unicode. `string` è un alias per `System.String` in .NET Framework.
+Il `string` tipo rappresenta un testo non modificabile sotto forma di sequenza di caratteri Unicode. `string` è un alias per `System.String` in .NET Framework.
 
 ## <a name="remarks"></a>Note
 
-Valori letterali stringa sono delimitati dal carattere di virgolette doppie ("). Il carattere barra rovesciata ( \\ ) viene usato per codificare alcuni caratteri speciali. La barra rovesciata e il carattere successivo insieme sono note come un *sequenza di escape*. Supportato in sequenze di escape F# valori letterali stringa vengono visualizzati nella tabella seguente.
+I valori letterali stringa sono delimitati dal carattere virgolette ("). Il carattere barra rovesciata ( \\ ) viene usato per codificare alcuni caratteri speciali. La barra rovesciata e il carattere successivo insieme sono noti come *sequenza di escape*. Le sequenze di escape supportate F# nei valori letterali stringa sono illustrate nella tabella seguente.
 
 |Carattere|Sequenza di escape|
 |---------|---------------|
@@ -30,22 +30,22 @@ Valori letterali stringa sono delimitati dal carattere di virgolette doppie (").
 |Scheda|`\t`|
 |Tabulazione verticale|`\v`|
 |Barra rovesciata|`\\`|
-|Virgoletta|`\"`|
+|Virgolette|`\"`|
 |Apostrofo|`\'`|
-|Carattere Unicode|`\DDD` (dove `D` indica un valore decimal digit; intervallo di 000 - 255, ad esempio `\231` = "ç")|
-|Carattere Unicode|`\xHH` (dove `H` indica una cifra esadecimale; intervallo 00 - FF; ad esempio, `\xE7` = "ç")|
-|Carattere Unicode|`\uHHHH` (UTF-16) (in cui `H` indica una cifra esadecimale; intervallo di 0000 - FFFF.  ad esempio, `\u00E7` = "ç")|
-|Carattere Unicode|`\U00HHHHHH` (UTF-32) (in cui `H` indica una cifra esadecimale; intervallo di 000000 - 10FFFF;  ad esempio, `\U0001F47D` = "👽")|
+|Carattere Unicode|`\DDD`(dove `D` indica una cifra decimale, ovvero un intervallo di 000-255 `\231` , ad esempio = "ç")|
+|Carattere Unicode|`\xHH`(dove `H` indica una cifra esadecimale, ovvero un intervallo di 00-FF, `\xE7` ad esempio = "ç")|
+|Carattere Unicode|`\uHHHH`(UTF-16) (dove `H` indica una cifra esadecimale, ovvero un intervallo di 0000-ffff;  ad esempio, `\u00E7` = "ç")|
+|Carattere Unicode|`\U00HHHHHH`(UTF-32) (dove `H` indica una cifra esadecimale, ovvero un intervallo di 000000-10FFFF;  ad esempio, `\U0001F47D` = "👽")|
 
 > [!IMPORTANT]
-> Il `\DDD` sequenza di escape è la notazione decimale, notazione non ottale, ad esempio la maggior parte degli altri linguaggi. Pertanto, cifre `8` e `9` siano valide e una sequenza di `\032` rappresenta uno spazio (u+0020), mentre tale stesso punto di codice in notazione ottale sarebbe `\040`.
+> La `\DDD` sequenza di escape è la notazione decimale, non la notazione ottale come nella maggior parte degli altri linguaggi. Pertanto, le `8` cifre `9` e sono valide e una sequenza di `\032` rappresenta uno spazio (U + 0020), mentre lo stesso punto di codice nella notazione ottale `\040`sarà.
 
 > [!NOTE]
-> Che è vincolato a un intervallo pari a 0 - 255 (0xFF), il `\DDD` e `\x` sequenze di escape sono effettivamente il [ISO-8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1#Code_page_layout) set di caratteri e poiché i primi 256 punti di codice Unicode corrispondente.
+> Essendo vincolato a un intervallo di 0-255 (0xFF), le `\DDD` sequenze di escape e `\x` sono in effetti il set di caratteri [ISO-8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1#Code_page_layout) , perché corrisponde ai primi 256 punti di codice Unicode.
 
-Se è preceduto dal simbolo @, il valore letterale è una stringa verbatim. Ciò significa che tutte le sequenze di escape vengono ignorate, ad eccezione del fatto che i due caratteri segno di virgolette doppie vengono interpretate come carattere un segno di virgolette.
+Se preceduto dal simbolo @, il valore letterale è una stringa Verbatim. Ciò significa che tutte le sequenze di escape vengono ignorate, ad eccezione del fatto che due caratteri di virgolette sono interpretati come un carattere di virgolette.
 
-Inoltre, una stringa può essere racchiusi tra virgolette triple. In questo caso, vengono ignorate tutte le sequenze di escape, inclusi i caratteri di virgoletta doppia. Per specificare una stringa che contiene un embedded stringa tra virgolette, è possibile utilizzare una stringa verbatim o una stringa racchiusa tra virgolette triple. Se si usa una stringa verbatim, è necessario specificare due caratteri segno di virgolette per indicare un carattere di virgoletta singola. Se si usa una stringa racchiusa tra virgolette triple, è possibile utilizzare i caratteri di virgoletta singola senza di essi in fase di analisi come la fine della stringa. Questa tecnica può essere utile quando si lavora con XML o altre strutture contenenti virgolette incorporate.
+Inoltre, una stringa può essere racchiusa tra virgolette triple. In questo caso, tutte le sequenze di escape vengono ignorate, incluse le virgolette doppie. Per specificare una stringa che contiene una stringa racchiusa tra virgolette, è possibile usare una stringa Verbatim o una stringa racchiusa tra virgolette triple. Se si utilizza una stringa Verbatim, è necessario specificare due virgolette per indicare un carattere virgoletta singola. Se si usa una stringa racchiusa tra virgolette triple, è possibile usare i caratteri delle virgolette singole senza che vengano analizzati come estremità della stringa. Questa tecnica può essere utile quando si lavora con XML o altre strutture che includono virgolette incorporate.
 
 ```fsharp
 // Using a verbatim string
@@ -55,19 +55,19 @@ let xmlFragment1 = @"<book author=""Milton, John"" title=""Paradise Lost"">"
 let xmlFragment2 = """<book author="Milton, John" title="Paradise Lost">"""
 ```
 
-Nel codice, vengono accettate le stringhe con interruzioni di riga e le interruzioni di riga vengono interpretate letteralmente come caratteri di nuova riga, a meno che un carattere di barra rovesciata è l'ultimo carattere prima dell'interruzione di riga. Lo spazio vuoto iniziale nella riga successiva viene ignorato quando viene utilizzato il carattere barra rovesciata. Il codice seguente produce una stringa `str1` con valore `"abc\ndef"` e una stringa `str2` con valore `"abcdef"`.
+Nel codice sono accettate stringhe con interruzioni di riga e le interruzioni di riga vengono interpretate letteralmente come nuove righe, a meno che un carattere barra rovesciata non sia l'ultimo carattere prima dell'interruzione di riga. Gli spazi vuoti iniziali nella riga successiva vengono ignorati quando si usa il carattere barra rovesciata. Il codice seguente produce una stringa `str1` con un valore `"abc\ndef"` e una stringa `str2` con valore `"abcdef"`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1001.fs)]
 
-È possibile accedere a singoli caratteri in una stringa usando la sintassi di tipo matrice, come indicato di seguito.
+È possibile accedere ai singoli caratteri di una stringa usando la sintassi di tipo matrice, come indicato di seguito.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1002.fs)]
 
 L'output è `b`.
 
-Oppure è possibile estrarre le sottostringhe utilizzando la sintassi di sezione di matrice, come illustrato nel codice seguente.
+In alternativa, è possibile estrarre le sottostringhe usando la sintassi della sezione della matrice, come illustrato nel codice seguente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1003.fs)]
 
 L'output è indicato di seguito.
 
@@ -76,29 +76,29 @@ abc
 def
 ```
 
-È possibile rappresentare le stringhe ASCII da matrici di byte senza segno, tipo `byte[]`. Si aggiunge il suffisso `B` a una valore letterale stringa per indicare che si tratta di una stringa ASCII. Valori letterali di stringa ASCII usati con le matrici di byte supportano le sequenze di escape stessa sotto forma di stringhe Unicode, fatta eccezione per le sequenze di escape Unicode.
+È possibile rappresentare stringhe ASCII in base a matrici di byte senza segno, digitare `byte[]`. Il suffisso `B` viene aggiunto a un valore letterale stringa per indicare che si tratta di una stringa ASCII. I valori letterali stringa ASCII utilizzati con matrici di byte supportano le stesse sequenze di escape delle stringhe Unicode, ad eccezione delle sequenze di escape Unicode.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1004.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1004.fs)]
 
 ## <a name="string-operators"></a>Operatori di stringa
 
-Esistono due modi per concatenare le stringhe: usando il `+` operatore o utilizzando il `^` operatore. Il `+` operatore mantiene la compatibilità con le funzionalità di gestione delle stringhe di .NET Framework.
+Esistono due modi per concatenare le stringhe: usando l' `+` operatore o l' `^` operatore. L' `+` operatore mantiene la compatibilità con le funzionalità di gestione delle stringhe .NET Framework.
 
-L'esempio seguente illustra la concatenazione di stringhe.
+Nell'esempio seguente viene illustrata la concatenazione di stringhe.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1006.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1006.fs)]
 
-## <a name="string-class"></a>Classe di stringa
+## <a name="string-class"></a>Classe String
 
-Dal momento che la stringa di tipo F# è effettivamente un Framework .NET `System.String` digitare, tutti i `System.String` membri sono disponibili. Ciò include la `+` operatore, che viene usato per concatenare le stringhe, il `Length` proprietà e il `Chars` proprietà, che restituisce la stringa come una matrice di caratteri Unicode. Per altre informazioni sulle stringhe, vedere `System.String`.
+Poiché il tipo di stringa F# in è effettivamente un `System.String` `System.String` tipo .NET Framework, sono disponibili tutti i membri. È incluso l' `+` operatore, usato per concatenare le stringhe, la `Length` proprietà e la `Chars` proprietà, che restituisce la stringa come matrice di caratteri Unicode. Per ulteriori informazioni sulle stringhe, vedere `System.String`.
 
-Tramite il `Chars` proprietà di `System.String`, è possibile accedere ai singoli caratteri in una stringa specificando un indice, come illustrato nel codice seguente.
+Utilizzando la `Chars` proprietà di `System.String`è possibile accedere ai singoli caratteri di una stringa specificando un indice, come illustrato nel codice seguente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1005.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1005.fs)]
 
-## <a name="string-module"></a>Modulo della stringa
+## <a name="string-module"></a>Modulo stringa
 
-Funzionalità aggiuntive per la gestione delle stringhe è incluso nel `String` modulo nel `FSharp.Core` dello spazio dei nomi. Per altre informazioni, vedere [modulo Core. String](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
+Funzionalità aggiuntive per la gestione delle stringhe sono incluse `String` nel modulo `FSharp.Core` nello spazio dei nomi. Per altre informazioni, vedere [modulo core. String](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
 
 ## <a name="see-also"></a>Vedere anche
 
