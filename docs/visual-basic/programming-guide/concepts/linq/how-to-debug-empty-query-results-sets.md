@@ -2,12 +2,12 @@
 title: 'Procedura: Debug di set di risultati di query vuoti (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 076e7109dc89294ba0c1706bf9a66120e6a0b85d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cc6a370545b9e4d8c28e0096f5cff73f4d937bd3
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630972"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710437"
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Procedura: Debug di set di risultati di query vuoti (Visual Basic)
 
@@ -17,7 +17,7 @@ Nel primo set di esempi riportati in questo argomento viene illustrato il tipico
 
 Nel secondo set di esempi sono illustrate le correzioni necessarie da effettuare per poter eseguire query su codice XML in uno spazio dei nomi.
 
-Per ulteriori informazioni, vedere [utilizzo degli spazi dei nomi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).
+Per ulteriori informazioni, vedere [Cenni preliminari sugli spazi dei nomi (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).
 
 ## <a name="example"></a>Esempio
 

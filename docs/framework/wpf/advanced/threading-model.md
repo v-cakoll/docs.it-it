@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 2667417c5d25821f2fed2101e1d485280e171eab
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6bea25fbd321eead9137caaeb212b76a9d528e88
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400653"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710389"
 ---
 # <a name="threading-model"></a>Modello di threading
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] è stato progettato per semplificare il threading. Di conseguenza, la maggior parte degli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sviluppatori non dovrà scrivere un'interfaccia che usa più di un thread. Poiché i programmi con multithreading sono complessi ed è difficile eseguirne il debug, è preferibile evitarli quando sono disponibili soluzioni a thread singolo.  
@@ -56,7 +56,7 @@ ms.locfileid: "68400653"
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>Applicazione a thread singolo con calcolo a esecuzione prolungata  
- La [!INCLUDE[TLA#tla_gui#plural](../../../../includes/tlasharptla-guisharpplural-md.md)] maggior parte del tempo rimane inattiva durante l'attesa di eventi generati in risposta alle interazioni dell'utente. Con un'attenta programmazione questo tempo di inattività può essere usato in modo costruttivo, senza influire sulla velocità di risposta di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modello di threading non consente all'input di interrompere un'operazione che [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] si verifica nel thread. Ciò significa che è necessario assicurarsi di tornare <xref:System.Windows.Threading.Dispatcher> periodicamente a per elaborare gli eventi di input in sospeso prima di essere obsoleti.  
+ La maggior parte dell'interfaccia utente grafica (GUI) dedica una grande parte del tempo di inattività durante l'attesa degli eventi generati in risposta alle interazioni dell'utente. Con un'attenta programmazione questo tempo di inattività può essere usato in modo costruttivo, senza influire sulla velocità di risposta di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modello di threading non consente all'input di interrompere un'operazione che [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] si verifica nel thread. Ciò significa che è necessario assicurarsi di tornare <xref:System.Windows.Threading.Dispatcher> periodicamente a per elaborare gli eventi di input in sospeso prima di essere obsoleti.  
   
  Si consideri l'esempio seguente:  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68400653"
   
 <a name="weather_sim"></a>   
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>Gestione di un'operazione di blocco con un thread in background  
- La gestione delle operazioni di blocco in un'applicazione grafica può essere complessa. Non è consigliabile chiamare metodi di blocco dai gestori eventi perché l'applicazione risulterebbe bloccata. È possibile usare un thread separato per gestire queste operazioni, ma al termine è necessario eseguire la sincronizzazione con il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread perché non è possibile modificare direttamente il [!INCLUDE[TLA2#tla_gui](../../../../includes/tla2sharptla-gui-md.md)] dal thread di lavoro. È possibile usare <xref:System.Windows.Threading.Dispatcher.Invoke%2A> o <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> per <xref:System.Windows.Threading.Dispatcher> inserire[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] delegati nell'oggetto del thread. Alla fine, questi delegati verranno eseguiti con l' [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] autorizzazione per la modifica degli elementi.  
+ La gestione delle operazioni di blocco in un'applicazione grafica può essere complessa. Non è consigliabile chiamare metodi di blocco dai gestori eventi perché l'applicazione risulterebbe bloccata. È possibile usare un thread separato per gestire queste operazioni, ma al termine è necessario eseguire la sincronizzazione con il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread perché non è possibile modificare direttamente l'interfaccia utente grafica dal thread di lavoro. È possibile usare <xref:System.Windows.Threading.Dispatcher.Invoke%2A> o <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> per <xref:System.Windows.Threading.Dispatcher> inserire[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] delegati nell'oggetto del thread. Alla fine, questi delegati verranno eseguiti con l' [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] autorizzazione per la modifica degli elementi.  
   
  In questo esempio viene simulata una chiamata RPC (Remote Procedure Call) che recupera i dati delle previsioni meteo. Viene usato un thread di lavoro separato per eseguire questa chiamata e si pianifica un metodo <xref:System.Windows.Threading.Dispatcher> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] di aggiornamento nell'oggetto del thread al termine dell'operazione.  
   
@@ -177,7 +177,7 @@ ms.locfileid: "68400653"
   
  `GetWeatherAsync` userebbe una delle tecniche descritte in precedenza, ad esempio la creazione di un thread in background, per eseguire le attività in modo asincrono, senza bloccare il thread chiamante.  
   
- Una delle parti più importanti di questo modello è la chiamata al  `Completed` metodo MethodName sullo stesso thread che ha chiamato il metodo *MethodName* `Async` per iniziare. È possibile eseguire questa operazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilizzando in modo abbastanza semplice <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>, archiviando, ma il componente non grafico può essere utilizzato solo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nelle applicazioni, non [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] nei programmi o ASP.NET.  
+ Una delle parti più importanti di questo modello è la chiamata al `Completed` metodo MethodName sullo stesso thread che ha chiamato il metodo *MethodName* `Async` per iniziare. È possibile eseguire questa operazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilizzando in modo abbastanza semplice <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>, archiviando, ma il componente non grafico può essere utilizzato solo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nelle applicazioni, non [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] nei programmi o ASP.NET.  
   
  La <xref:System.Windows.Threading.DispatcherSynchronizationContext> classe risponde a questa esigenza, in quanto può essere considerata come una <xref:System.Windows.Threading.Dispatcher> versione semplificata di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] che funziona anche con altri Framework.  
   

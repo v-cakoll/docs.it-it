@@ -9,18 +9,18 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 7acf5a3f48ac4987037873c63111d988ec3a4979
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a47a4aae785d817904c30fe7c865a1c033eb3cca
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629657"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709218"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Ottimizzazione delle prestazioni: Sfruttare appieno l'hardware
 L'architettura interna di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dispone di due pipeline di rendering, hardware e software. In questo argomento vengono fornite informazioni su queste pipeline di rendering che consentono di prendere decisioni in merito alle ottimizzazioni delle prestazioni delle applicazioni.  
   
 ## <a name="hardware-rendering-pipeline"></a>Pipeline di rendering hardware  
- Uno dei fattori più importanti per determinare [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le prestazioni è che è associato al rendering, maggiore è il numero di pixel di cui è necessario eseguire il rendering, maggiore è il costo delle prestazioni. Tuttavia, maggiore è il rendering che può essere ripartito [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]in, i vantaggi in termini di prestazioni che è possibile ottenere. La [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pipeline di rendering hardware dell'applicazione sfrutta appieno le funzionalità di Microsoft DirectX su hardware che supporta almeno Microsoft DirectX versione 7,0. Ulteriori ottimizzazioni possono essere ottenute con hardware che supporta le funzionalità di Microsoft DirectX versione 7,0 e PixelShader 2.0 +.  
+ Uno dei fattori più importanti per determinare [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le prestazioni è che è associato al rendering, maggiore è il numero di pixel di cui è necessario eseguire il rendering, maggiore è il costo delle prestazioni. Tuttavia, maggiore è il rendering che è possibile scaricare nell'unità di elaborazione grafica (GPU), maggiori sono i vantaggi in termini di prestazioni che è possibile ottenere. La [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pipeline di rendering hardware dell'applicazione sfrutta appieno le funzionalità di Microsoft DirectX su hardware che supporta almeno Microsoft DirectX versione 7,0. Ulteriori ottimizzazioni possono essere ottenute con hardware che supporta le funzionalità di Microsoft DirectX versione 7,0 e PixelShader 2.0 +.  
   
 ## <a name="software-rendering-pipeline"></a>Pipeline di rendering software  
  La [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pipeline di rendering software è interamente associata alla CPU. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]sfrutta i set di istruzioni SSE e SSE2 nella CPU per implementare un'rasterizzatore software ottimizzato e con funzionalità complete. Il fallback al software è facile ogni volta che non è possibile eseguire il rendering della funzionalità dell'applicazione utilizzando la pipeline di rendering hardware.  

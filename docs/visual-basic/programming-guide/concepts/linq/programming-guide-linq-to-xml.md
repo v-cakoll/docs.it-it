@@ -2,36 +2,36 @@
 title: Guida per programmatori (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-ms.openlocfilehash: cf8dbaf5991d1991267ad31125029298cffcfcd3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7c4c638c1f9901fa85e750dcfd44d016ed3d1c63
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592914"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710317"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>Guida per programmatori (LINQ to XML) (Visual Basic)
 Contenuto della sezione vengono fornite informazioni di carattere concettuale e procedurale sulla programmazione con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="who-should-read-this-documentation"></a>Destinatari  
- Questa documentazione è destinata agli sviluppatori che già conoscono alcuni aspetti di base di .NET Framework e Visual Basic.  
+ Questa documentazione è destinata agli sviluppatori che già conoscono Visual Basic e alcuni aspetti di base del .NET Framework.  
   
  L'obiettivo di questa documentazione è facilitare l'uso di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per tutti i tipi di sviluppatori. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] semplifica la programmazione XML. Non è quindi necessario essere uno sviluppatore esperto per poterlo usare.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è basato soprattutto sulle classi generiche. Pertanto, è molto importante comprendere l'uso di classi e tipi generici. Per altre informazioni, vedere [tipi generici in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è basato soprattutto sulle classi generiche. È pertanto molto importante comprendere l'uso di tipi e classi generiche. Per ulteriori informazioni, vedere [tipi generici in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
 ## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Descrizione|  
+|Argomento|DESCRIZIONE|  
 |-----------|-----------------|  
-|[LINQ to XML Panoramica della programmazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Viene fornita una panoramica sulle classi di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], nonché informazioni dettagliate sulle tre classi principali: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> e <xref:System.Xml.Linq.XDocument>.|  
-|[Creazione di alberi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)|Vengono fornite informazioni di carattere concettuale e sulle attività correlate alla creazione di alberi XML. È possibile creare alberi XML usando la costruzione funzionale oppure analizzando il testo XML di una stringa o di un file. È inoltre possibile usare un oggetto <xref:System.Xml.XmlReader> per popolare un albero XML.|  
-|[Utilizzo di spazi dei nomi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)|Vengono fornite informazioni dettagliate sulla creazione di alberi XML che usano spazi dei nomi.|  
-|[Serializzazione di alberi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)|Vengono descritti i diversi approcci disponibili per la serializzazione di un albero XML e vengono fornite istruzioni sulla scelta dell'approccio da usare.|  
+|[Panoramica della programmazione LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Viene fornita una panoramica sulle classi di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], nonché informazioni dettagliate sulle tre classi principali: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> e <xref:System.Xml.Linq.XDocument>.|  
+|[Creazione di strutture ad albero XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)|Vengono fornite informazioni di carattere concettuale e sulle attività correlate alla creazione di alberi XML. È possibile creare alberi XML usando la costruzione funzionale oppure analizzando il testo XML di una stringa o di un file. È inoltre possibile usare un oggetto <xref:System.Xml.XmlReader> per popolare un albero XML.|  
+|[Panoramica degli spazi dei nomi (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)|Vengono fornite informazioni dettagliate sulla creazione di alberi XML che usano spazi dei nomi.|  
+|[Serializzazione di strutture ad albero XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)|Vengono descritti i diversi approcci disponibili per la serializzazione di un albero XML e vengono fornite istruzioni sulla scelta dell'approccio da usare.|  
 |[Assi LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)|Enumera e descrive i metodi dell'asse di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] che è necessario conoscere prima di poter scrivere query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Query su alberi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)|Vengono forniti esempi comuni relativi all'esecuzione di query su alberi XML.|  
-|[Modifica degli alberi XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|Analogamente al modello DOM (Document Object Model), [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] consente di modificare un albero XML sul posto.|  
-|[LINQ to XML (Visual Basic) di programmazione avanzata](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|Vengono fornite informazioni su annotazioni, eventi, flusso e altri scenari avanzati.|  
-|[LINQ to XML sicurezza (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-security.md)|Vengono descritti i problemi di sicurezza associati all'utilizzo di LINQ to XML e viene fornito materiale sussidiario per ridurre l'esposizione ai rischi.|  
+|[Esecuzione di query su strutture ad albero XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)|Vengono forniti esempi comuni relativi all'esecuzione di query su alberi XML.|  
+|[Modifica di strutture ad albero XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|Analogamente al modello DOM (Document Object Model), [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] consente di modificare un albero XML sul posto.|  
+|[Programmazione LINQ to XML avanzata (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|Vengono fornite informazioni su annotazioni, eventi, flusso e altri scenari avanzati.|  
+|[Sicurezza LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-security.md)|Vengono descritti i problemi di sicurezza associati all'utilizzo di LINQ to XML e viene fornito materiale sussidiario per ridurre l'esposizione ai rischi.|  
 |[Documenti XML di esempio (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Sono contenuti i documenti XML di esempio usati nei numerosi esempi di questa documentazione.|  
   
 ## <a name="see-also"></a>Vedere anche
