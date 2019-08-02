@@ -42,7 +42,7 @@ Questo argomento offre utili suggerimenti sulle prestazioni del rendering del te
 
   - [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] come linguaggio della stampante.
 
-  - [https://login.microsoftonline.com/common/]([!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)]).
+  - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].
 
   - Driver della stampante precedenti, output delle applicazioni [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] in formato fisso.
 
