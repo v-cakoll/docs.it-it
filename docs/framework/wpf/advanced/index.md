@@ -9,27 +9,31 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942805"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710207"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>Aree avanzate (Windows Presentation Foundation)
 Questa sezione descrive alcune delle aree avanzate in WPF.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Architettura WPF](wpf-architecture.md)  
- [Elementi di base](base-elements.md)  
- [Albero degli elementi e serializzazione](element-tree-and-serialization.md)  
- [Trascinamento della selezione](drag-and-drop.md)  
- [Documenti](documents.md)  
- [Globalizzazione e localizzazione](globalization-and-localization.md)  
- [Migrazione e interoperabilità](migration-and-interoperability.md)  
- [Prestazioni](performance.md)  
- [Modello di threading](threading-model.md)  
- [Cenni preliminari sui componenti aggiuntivi di WPF](../app-development/wpf-add-ins-overview.md)  
- [Informazioni di riferimento sulle API WPF non gestite](wpf-unmanaged-api-reference.md)  
-  
-## <a name="related-sections"></a>Sezioni correlate
+## <a name="in-this-section"></a>In questa sezione
+
+[Architettura WPF](wpf-architecture.md)  
+[XAML in WPF](xaml-in-wpf.md)  
+[Classi degli elementi di base](base-elements.md)  
+[Albero degli elementi e serializzazione](element-tree-and-serialization.md)  
+[Sistema di proprietà WPF](properties-wpf.md)  
+[Eventi in WPF](events-wpf.md)  
+[Input](input-wpf.md)  
+[Trascinamento della selezione](drag-and-drop.md)  
+[Risorse](resources-wpf.md)  
+[Documenti](documents.md)  
+[Globalizzazione e localizzazione](globalization-and-localization.md)  
+[Layout](layout.md)  
+[Migrazione e interoperabilità](migration-and-interoperability.md)  
+[Prestazioni](performance.md)  
+[Modello di threading](threading-model.md)  
+[Informazioni di riferimento sulle API WPF non gestite](wpf-unmanaged-api-reference.md)  
