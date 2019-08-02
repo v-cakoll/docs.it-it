@@ -2,12 +2,12 @@
 title: Tipi F#
 description: Informazioni sui tipi usati in e sul modo F# F# in cui i tipi vengono denominati e descritti.
 ms.date: 05/16/2016
-ms.openlocfilehash: 44bd9d985e0ce1afa1bf2a8457dcd9470b13dfe1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 826bcb56aad3b50fbfcf8f807bb34e9cdcdecaf7
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630224"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733497"
 ---
 # <a name="f-types"></a>Tipi F#
 
@@ -51,7 +51,7 @@ Nella tabella seguente vengono illustrati gli aspetti della sintassi F# del tipo
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-|Argomento|Descrizione|
+|Argomento|DESCRIZIONE|
 |-----|-----------|
 |[Tipi primitivi](primitive-types.md)|Vengono descritti i tipi semplici incorporati, ad esempio i tipi integrali, il tipo booleano e i tipi di carattere.|
 |[Tipo di unità](unit-type.md)|Descrive il `unit` tipo, un tipo con un valore e indicato da (), equivalente a `void` in C# e `Nothing` in Visual Basic.|
@@ -69,4 +69,4 @@ Nella tabella seguente vengono illustrati gli aspetti della sintassi F# del tipo
 |[Delegati](delegates.md)|Descrive il tipo delegato, che rappresenta una funzione come oggetto.|
 |[Enumerazioni](enumerations.md)|Descrive i tipi di enumerazione i cui valori appartengono a un set di valori denominati.|
 |[Attributi](attributes.md)|Descrive gli attributi, che vengono usati per specificare i metadati per un altro tipo.|
-|[Tipi di eccezione](/.exception-handling/exception-types.md)|Descrive le eccezioni che specificano le informazioni sull'errore.|
+|[Tipi di eccezione](./exception-handling/exception-types.md)|Descrive le eccezioni che specificano le informazioni sull'errore.|

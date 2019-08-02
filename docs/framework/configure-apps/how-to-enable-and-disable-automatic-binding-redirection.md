@@ -1,41 +1,41 @@
 ---
-title: Abilitare o disabilitare i reindirizzamenti di associazione generato automaticamente
+title: Abilitare o disabilitare i reindirizzamenti di binding generati automaticamente
 ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: b6c9c3508c53e8a68a3f7e1cb12b6b6c95600e7b
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: d914310559403fba2f1fe8e4a60469ec3a867c24
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380094"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733444"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico
 
-Quando si compilano App in Visual Studio che hanno come destinazione .NET Framework 4.5.1 e versioni successive, i reindirizzamenti di associazione possono essere aggiunto automaticamente al file di configurazione dell'app per eseguire l'override di unificazione degli assembly. I reindirizzamenti di associazione vengono aggiunti se l'app o i relativi componenti fanno riferimento a più di una versione dello stesso assembly, anche se è possibile specificare manualmente i reindirizzamenti di associazione nel file di configurazione dell'app. La funzionalità di reindirizzamento di associazione automatico influisce sulle App desktop e App web che hanno come destinazione .NET Framework 4.5.1 o versione successiva, anche se il comportamento è leggermente diverso per un'app web. È possibile abilitare il reindirizzamento di associazione automatico se si dispongono delle App esistenti destinati a versioni precedenti di .NET Framework, o se si vuole creare manualmente i reindirizzamenti di associazione, è possibile disabilitare questa funzionalità.
+Quando si compilano app in Visual Studio destinate a .NET Framework 4.5.1 e versioni successive, i reindirizzamenti di associazione possono essere aggiunti automaticamente al file di configurazione dell'app per eseguire l'override dell'unificazione degli assembly. I reindirizzamenti di associazione vengono aggiunti se l'app o i relativi componenti fanno riferimento a più di una versione dello stesso assembly, anche se è possibile specificare manualmente i reindirizzamenti di associazione nel file di configurazione dell'app. La funzionalità di reindirizzamento automatico dell'associazione influiscono sulle app desktop e sulle app Web destinate a .NET Framework 4.5.1 o versione successiva, anche se il comportamento è leggermente diverso per un'app Web. È possibile abilitare il reindirizzamento di associazione automatico se sono presenti app destinate a versioni precedenti del .NET Framework. in alternativa, è possibile disabilitare questa funzionalità se si desidera creare manualmente i reindirizzamenti di binding.
 
-## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Disabilitare i reindirizzamenti di associazione automatici nelle App desktop
+## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Disabilitare i reindirizzamenti di binding automatici nelle app desktop
 
-Reindirizzamenti di associazione automatici sono abilitati per impostazione predefinita per le app Windows desktop destinate a .NET Framework 4.5.1 e versioni successive. I reindirizzamenti di associazione vengono aggiunti alla configurazione di output (**app. config**) del file quando l'app viene compilata ed eseguire l'override dell'unificazione degli assembly che in caso contrario, potrebbe essere eseguito. L'origine **app. config** file non viene modificato. È possibile disabilitare questa funzionalità modificando il file di progetto per l'app o deselezionando una casella di controllo nelle proprietà del progetto in Visual Studio.
+I reindirizzamenti di binding automatici sono abilitati per impostazione predefinita per le app desktop di Windows destinate a .NET Framework 4.5.1 e versioni successive. I reindirizzamenti di binding vengono aggiunti al file di configurazione di output (**app. config**) quando l'app viene compilata ed esegue l'override dell'unificazione degli assembly che altrimenti potrebbe essere eseguita. Il file **app. config** di origine non viene modificato. È possibile disabilitare questa funzionalità modificando il file di progetto per l'app o deselezionando una casella di controllo nelle proprietà del progetto in Visual Studio.
 
 ### <a name="disable-through-project-properties"></a>Disabilitare tramite le proprietà del progetto
 
-Se si dispone di Visual Studio 2017 versione 15.7 o successiva, è possibile disabilitare facilmente i reindirizzamenti di associazione generato automaticamente nelle pagine delle proprietà del progetto.
+Se si dispone di Visual Studio 2017 versione 15,7 o successiva, è possibile disabilitare facilmente i reindirizzamenti di binding generati automaticamente nelle pagine delle proprietà del progetto.
 
 1. Fare clic con il pulsante destro del mouse in **Esplora soluzioni** e scegliere **Proprietà**.
 
-2. Nel **Application** pagina, deselezionare il **genera automaticamente reindirizzamenti di binding** opzione.
+2. Nella pagina dell' **applicazione** deselezionare l'opzione per la **generazione automatica** dei reindirizzamenti di binding.
 
-3. Premere **Ctrl**+**S** per salvare le modifiche.
+3. Premere **CTRL**+**S** per salvare la modifica.
 
 ### <a name="disable-manually-in-the-project-file"></a>Disabilitare manualmente nel file di progetto
 
-1. Aprire il file di progetto per la modifica mediante uno dei metodi seguenti:
+1. Aprire il file di progetto per la modifica utilizzando uno dei metodi seguenti:
 
-   - In Visual Studio, selezionare il progetto in **Esplora soluzioni**, quindi scegliere **Apri cartella in Esplora File** dal menu di scelta rapida. In Esplora File, trovare il file di progetto (con estensione csproj o vbproj) e aprirlo con blocco note.
-   - In Visual Studio, in **Esplora soluzioni**, fare clic sul progetto e scegliere **Scarica progetto**. Fare clic nuovamente sul progetto scaricato e quindi scegliere **modifica [NomeProgetto]** .
+   - In Visual Studio selezionare il progetto in **Esplora soluzioni**, quindi scegliere **Apri cartella in Esplora file** dal menu di scelta rapida. In Esplora file trovare il file di progetto (con estensione csproj o vbproj) e aprirlo nel blocco note.
+   - In Visual Studio, in **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul progetto e scegliere **Scarica progetto**. Fare di nuovo clic con il pulsante destro del mouse sul progetto scaricato, quindi scegliere **modifica [NomeProgetto. csproj]** .
 
 2. Nel file di progetto trovare la voce di proprietà seguente:
 
@@ -49,57 +49,57 @@ Se si dispone di Visual Studio 2017 versione 15.7 o successiva, è possibile dis
    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
    ```
 
-## <a name="enable-automatic-binding-redirects-manually"></a>Abilitare manualmente reindirizzamenti di associazione automatici
+## <a name="enable-automatic-binding-redirects-manually"></a>Abilita manualmente i reindirizzamenti di binding automatici
 
-È possibile abilitare reindirizzamenti di associazione automatici nelle App esistenti che destinate alle versioni precedenti di .NET Framework o nei casi in cui viene automaticamente richiesto di aggiungere un reindirizzamento. Se si ha come destinazione una versione più recente del framework, ma non automaticamente richiesto di aggiungere un reindirizzamento, probabilmente si otterrà output di compilazione che viene suggerito di che rimappare gli assembly.
+È possibile abilitare reindirizzamenti di binding automatici nelle app esistenti destinate a versioni precedenti del .NET Framework o nei casi in cui non viene automaticamente richiesto di aggiungere un reindirizzamento. Se la destinazione è una versione più recente del Framework, ma non viene automaticamente richiesto di aggiungere un reindirizzamento, probabilmente si otterrà un output di compilazione che suggerisce di modificare il mapping degli assembly.
 
-1. Aprire il file di progetto per la modifica mediante uno dei metodi seguenti:
+1. Aprire il file di progetto per la modifica utilizzando uno dei metodi seguenti:
 
-   - In Visual Studio, selezionare il progetto in **Esplora soluzioni**, quindi scegliere **Apri cartella in Esplora File** dal menu di scelta rapida. In Esplora File, trovare il file di progetto (con estensione csproj o vbproj) e aprirlo con blocco note.
-   - In Visual Studio, in **Esplora soluzioni**, fare clic sul progetto e scegliere **Scarica progetto**. Fare clic nuovamente sul progetto scaricato e quindi scegliere **modifica [NomeProgetto]** .
+   - In Visual Studio selezionare il progetto in **Esplora soluzioni**, quindi scegliere **Apri cartella in Esplora file** dal menu di scelta rapida. In Esplora file trovare il file di progetto (con estensione csproj o vbproj) e aprirlo nel blocco note.
+   - In Visual Studio, in **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul progetto e scegliere **Scarica progetto**. Fare di nuovo clic con il pulsante destro del mouse sul progetto scaricato, quindi scegliere **modifica [NomeProgetto. csproj]** .
 
-2. Aggiungere l'elemento seguente al primo gruppo di proprietà di configurazione (sotto il \<PropertyGroup > tag):
+2. Aggiungere l'elemento seguente al primo gruppo di proprietà di configurazione (sotto \<il tag PropertyGroup >):
 
    ```xml
    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
    ```
 
-   Di seguito viene illustrato un esempio di file di progetto con l'elemento inserito:
+   Di seguito è riportato un esempio di file di progetto con l'elemento inserito:
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?>
    <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
      <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-       <PropertyGroup>
-         <Configuration Condition=" '$(Configuration)' == ''     ">Debug</Configuration>
-         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-         <ProjectGuid>{123334}</ProjectGuid>
-         ...
-         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-       </PropertyGroup>
+     <PropertyGroup>
+       <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+       <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+       <ProjectGuid>{123334}</ProjectGuid>
+       ...
+       <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+     </PropertyGroup>
      ...
    </Project>
    ```
 
 3. Compilare l'app.
 
-## <a name="enable-automatic-binding-redirects-in-web-apps"></a>Abilita reindirizzamenti di associazione automatici nelle App web
+## <a name="enable-automatic-binding-redirects-in-web-apps"></a>Abilitare i reindirizzamenti di binding automatici nelle app Web
 
-I reindirizzamenti di associazione automatici vengono implementati in modo diverso per le app Web. Poiché la configurazione dell'origine (**Web. config**) file deve essere modificato per le app web, i reindirizzamenti di associazione non vengono aggiunti automaticamente al file di configurazione. Visual Studio notifica, tuttavia, eventuali conflitti di associazione ed è possibile aggiungere reindirizzamenti di associazione per risolverli. Poiché viene sempre chiesto aggiungere reindirizzamenti di associazione, non è necessario disabilitare in modo esplicito questa funzionalità per un'app web.
+I reindirizzamenti di associazione automatici vengono implementati in modo diverso per le app Web. Poiché il file di configurazione di origine (**Web. config**) deve essere modificato per le app Web, i reindirizzamenti di binding non vengono aggiunti automaticamente al file di configurazione. Visual Studio notifica, tuttavia, eventuali conflitti di associazione ed è possibile aggiungere reindirizzamenti di associazione per risolverli. Poiché viene sempre richiesto di aggiungere reindirizzamenti di binding, non è necessario disabilitare in modo esplicito questa funzionalità per un'app Web.
 
-Per aggiungere reindirizzamenti di associazione a un **Web. config** file:
+Per aggiungere reindirizzamenti di binding a un file **Web. config** :
 
 1. In Visual Studio compilare l'app e cercare eventuali avvisi di compilazione.
 
-   ![Avviso di compilazione per conflitti di riferimenti all'assembly](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
+   ![Avviso di compilazione per conflitti di riferimento all'assembly](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
-2. In caso di conflitti di associazione a livello di assembly, viene visualizzato un avviso. Fare doppio clic su avviso oppure selezionare l'avviso e premere **invio**.
+2. In caso di conflitti di associazione a livello di assembly, viene visualizzato un avviso. Fare doppio clic sull'avviso oppure selezionare l'avviso e premere **invio**.
 
-   Finestra di dialogo che consente di aggiungere automaticamente l'associazione necessario reindirizza all'origine **Web. config** file viene visualizzato.
+   Viene visualizzata una finestra di dialogo che consente di aggiungere automaticamente i reindirizzamenti di binding necessari al file **Web. config** di origine.
 
-   ![Finestra di dialogo dell'autorizzazione reindirizzamento associazione](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
+   ![Finestra di dialogo di autorizzazione Reindirizzamento binding](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
 ## <a name="see-also"></a>Vedere anche
 
-- [\<bindingRedirect > elemento](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
+- [\<Elemento > bindingRedirect](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
 - [Reindirizzamento delle versioni di assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
