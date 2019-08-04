@@ -4,12 +4,12 @@ description: Informazioni sulle nuove funzionalità in .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 2d0f6a9faaec4d4438452054624751a40c96c8e5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f48b8e88a716df0f07a5626bdc8f66000cfaeed8
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464073"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626368"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novità di .NET Core 2.0
 
@@ -156,8 +156,8 @@ Se è necessario ricompilare un progetto per più framework di destinazione, è 
 
 Dalla pagina [.NET Application Architecture](https://www.microsoft.com/net/learn/architecture) (Architettura delle applicazioni .NET) è possibile accedere a una serie di eBook che offrono linee guida, procedure consigliate e applicazioni di esempio per l'uso di .NET per creare:
 
-- [Microservizi e contenitori Docker](../../standard/microservices-architecture/index.md)
-- [Applicazioni Web con ASP.NET](../../standard/modern-web-apps-azure-architecture/index.md)
+- [Microservizi e contenitori Docker](../../architecture/microservices/index.md)
+- [Applicazioni Web con ASP.NET](../../architecture/modern-web-apps-azure/index.md)
 - [Applicazioni per dispositivi mobili con Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index)
 - [Applicazioni distribuite nel cloud con Azure](/azure/architecture/reference-architectures/index)
 
