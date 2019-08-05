@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e10b6fd7df003de739b57bbb3e17deb46215763f
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: f4ae9710b99c85cfcbe3de2669c7ee85d0d24ef4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363998"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629350"
 ---
 # <a name="how-to-create-com-wrappers"></a>Procedura: Creare wrapper COM
 
 È possibile creare wrapper COM (Component Object Model) usando le funzionalità di Visual Studio 2005 o gli strumenti .NET Framework Tlbimp.exe e Regasm.exe. Entrambi i metodi generano due tipi di wrapper COM:
 
-- Oggetto [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) da una libreria dei tipi per l'esecuzione di un oggetto COM nel codice gestito.
+- Oggetto [Runtime Callable Wrapper](../../../docs/standard/native-interop/runtime-callable-wrapper.md) da una libreria dei tipi per l'esecuzione di un oggetto COM nel codice gestito.
 
-- Oggetto [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md) con le impostazioni del Registro di sistema richieste per l'esecuzione di un oggetto gestito in un'applicazione nativa.
+- Oggetto [COM Callable Wrapper](../../../docs/standard/native-interop/com-callable-wrapper.md) con le impostazioni del Registro di sistema richieste per l'esecuzione di un oggetto gestito in un'applicazione nativa.
 
 In Visual Studio 2005 è possibile aggiungere il wrapper COM come riferimento al progetto.
 
@@ -75,5 +75,5 @@ Questo strumento legge i metadati in un assembly e aggiunge le voci necessarie n
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md)
-- [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)
+- [Runtime Callable Wrapper](../../../docs/standard/native-interop/runtime-callable-wrapper.md)
+- [COM Callable Wrapper](../../../docs/standard/native-interop/com-callable-wrapper.md)

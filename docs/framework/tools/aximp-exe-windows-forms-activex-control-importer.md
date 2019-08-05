@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b7e9401cbd26c62f88ccb4a4b8c2caeb78768d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 69cc2459f1944c8101be9c58b1462217ee7ac78f
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119197"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629573"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (utilità di importazione di controlli ActiveX di Windows Form)
 L'utilità di importazione di controlli ActiveX converte in un controllo Windows Form le definizioni dei tipi in una libreria di tipi COM per un controllo ActiveX.  
@@ -36,11 +36,11 @@ aximp [options]{file.dll | file.ocx}
   
 ## <a name="remarks"></a>Osservazioni  
   
-|Argomento|Description|  
+|Argomento|DESCRIZIONE|  
 |--------------|-----------------|  
 |*file*|Nome del file di origine contenente il controllo ActiveX da convertire. L'argomento del file deve avere l'estensione .dll oppure .ocx.|  
   
-|Opzione|Description|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
 |`/delaysign`|Specifica ad Aximp.exe di firmare il controllo risultante utilizzando la firma ritardata. È necessario specificare questa opzione con l'opzione `/keycontainer:`, `/keyfile:` o `/publickey:`. Per altre informazioni sulla firma ritardata, vedere [Ritardo della firma di un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
 |`/help`|Visualizza la sintassi e le opzioni di comando dello strumento.|  
@@ -49,7 +49,7 @@ aximp [options]{file.dll | file.ocx}
 |`/nologo`|Evita la visualizzazione del messaggio di avvio Microsoft.|  
 |`/out:` *filename*|Specifica il nome dell'assembly da creare.|  
 |`/publickey:` *filename*|Firma il controllo risultante con un nome sicuro usando la chiave pubblica presente nel file specificato da *filename*.|  
-|`/rcw:` *filename*|Utilizza il Runtime Callable Wrapper specificato invece di generarne uno nuovo. È possibile specificare più istanze. La directory corrente viene usata per i percorsi relativi. Per altre informazioni, vedere la sezione [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) .|  
+|`/rcw:` *filename*|Utilizza il Runtime Callable Wrapper specificato invece di generarne uno nuovo. È possibile specificare più istanze. La directory corrente viene usata per i percorsi relativi. Per altre informazioni, vedere la sezione [Runtime Callable Wrapper](../../../docs/standard/native-interop/runtime-callable-wrapper.md) .|  
 |`/silent`|Evita la visualizzazione dei messaggi di operazione riuscita.|  
 |`/source`|Genera codice sorgente C# per il wrapper di Windows Form.|  
 |`/verbose`|Specifica la modalità dettagliata. Visualizza ulteriori informazioni sullo stato.|  

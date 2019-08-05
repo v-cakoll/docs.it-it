@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: d2ecd566731c3d2d472034ecb6412432af24c847
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: cfb662203216aa6ca208ceec20d55164c65163dc
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422063"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626655"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (Riferimenti per C#)
 È necessario far riferimento a due versioni di assembly che dispongono degli stessi nomi di tipo completi. Ad esempio, potrebbe essere necessario usare due o più versioni di un assembly nella stessa applicazione. Con un alias di assembly esterno, è possibile eseguire il wrapping degli spazi dei nomi di ogni assembly all'interno degli spazi dei nomi a livello radice denominati dall'alias, consentendone l'utilizzo nello stesso file.  
@@ -46,5 +46,5 @@ ms.locfileid: "66422063"
 - [Riferimenti per C#](../../../csharp/language-reference/index.md)
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
-- [:: (operatore)](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
+- [:: (operatore)](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
 - [-reference (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
