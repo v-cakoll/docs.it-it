@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: abd4c34661d96d8c3188e92dd2d76f847e17aae7
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: bf194e207262ecea0511a0b67bbafeadd8d5d31d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433526"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629502"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Utilizzo degli spazi dei nomi (Guida per programmatori C#)
 Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In primo luogo, le classi di .NET Framework usano gli spazi dei nomi per organizzare numerose classi. In secondo luogo, dichiarando i propri spazi dei nomi è possibile controllare l'ambito dei nomi di classi e metodi nei progetti di programmazione più grandi.  
@@ -93,5 +93,5 @@ Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [Spazi dei nomi](../../../csharp/programming-guide/namespaces/index.md)
 - [. (operatore)](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
-- [:: (operatore)](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
-- [extern](../../../csharp/language-reference/keywords/extern.md)
+- [:: (operatore)](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
+- [alias extern](../../../csharp/language-reference/keywords/extern-alias.md)
