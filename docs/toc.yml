@@ -595,14 +595,16 @@
       items:
         - name: 'Sistema di tipi C#'
           href: csharp/programming-guide/types/index.md
+        - name: Tipi riferimento nullable
+          href: csharp/nullable-references.md
+        - name: Descrivere le API che ammettono i valori Null usando attributi e vincoli
+          href: csharp/nullable-attributes.md
         - name: Spazi dei nomi
           href: csharp/programming-guide/namespaces/index.md
         - name: Tipi di base
           href: csharp/basic-types.md
         - name: Classi
           href: csharp/programming-guide/classes-and-structs/classes.md
-        - name: Tipi riferimento nullable
-          href: csharp/nullable-references.md
         - name: Struct
           href: csharp/structs.md
         - name: Tuple
