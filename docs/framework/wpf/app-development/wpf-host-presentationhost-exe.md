@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 16618042324387bfc15f4685f4759378c50a80b7
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 3f51f274a4cba77f6bc7b62d6e31d476625072a5
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401712"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796900"
 ---
 # <a name="wpf-host-presentationhostexe"></a>Host WPF (PresentationHost.exe)
 L'host Windows Presentation Foundation (WPF) (PresentationHost. exe) è l'applicazione che [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consente di ospitare le applicazioni in browser compatibili ( [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] inclusi e versioni successive). Per impostazione predefinita, l'host Windows Presentation Foundation (WPF) viene registrato come shell [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] e gestore per il contenuto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ospitato dal browser, che include:  
@@ -21,7 +21,7 @@ L'host Windows Presentation Foundation (WPF) (PresentationHost. exe) è l'applic
   
  Per i file di questi tipi, Windows Presentation Foundation host (WPF):  
   
-- Avvia il gestore [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] registrato per ospitare il contenuto del Windows Presentation Foundation (WPF).  
+- Avvia il gestore HTML registrato per ospitare il contenuto del Windows Presentation Foundation (WPF).  
   
 - Carica le versioni corrette degli assembly Common Language Runtime (CLR) e Windows Presentation Foundation (WPF) richiesti.  
   
@@ -34,7 +34,7 @@ L'host Windows Presentation Foundation (WPF) (PresentationHost. exe) è l'applic
   
 ## <a name="parameters"></a>Parametri  
   
-|Parametro|Descrizione|  
+|Parametro|DESCRIZIONE|  
 |---------------|-----------------|  
 |filename|Il percorso del file da attivare. Può anche essere un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].|  
 |-debug|Quando si attiva un'applicazione, non esegue il commit o non lo esegue dall'archivio. Funziona solo quando un file locale è attivato.|  

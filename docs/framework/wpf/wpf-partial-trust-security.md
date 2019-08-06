@@ -15,15 +15,15 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: b8234dcb33e9d429329c6d68900119382ff2f1cb
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 34beee309f080c53ecb16436beb0c4c6be7733e5
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629800"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796795"
 ---
 # <a name="wpf-partial-trust-security"></a>Sicurezza con attendibilità parziale in WPF
-<a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] , e i linguaggi di scripting lato client non sono in grado di accedere alle risorse di sistema critiche. Poiché le applicazioni ospitate da browser Windows Presentation Foundation (WPF) possono essere avviate dal browser, devono essere conformi a un set di restrizioni simile. Per applicare queste restrizioni, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] si basa sulla sicurezza dall'accesso di codice (CAS) e su ClickOnce (vedere [strategia di sicurezza di WPF-sicurezza della piattaforma](wpf-security-strategy-platform-security.md)). Per impostazione predefinita, le applicazioni ospitate da browser richiedono il set di autorizzazioni dell'area Internet, indipendentemente dal fatto che vengano avviate da Internet, dall'Intranet locale o dal computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  
+<a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita, i linguaggi di scripting lato client e HTML non sono in grado di accedere alle risorse di sistema critiche. Poiché le applicazioni ospitate da browser Windows Presentation Foundation (WPF) possono essere avviate dal browser, devono essere conformi a un set di restrizioni simile. Per applicare queste restrizioni, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] si basa sulla sicurezza dall'accesso di codice (CAS) e su ClickOnce (vedere [strategia di sicurezza di WPF-sicurezza della piattaforma](wpf-security-strategy-platform-security.md)). Per impostazione predefinita, le applicazioni ospitate da browser richiedono il set di autorizzazioni dell'area Internet, indipendentemente dal fatto che vengano avviate da Internet, dall'Intranet locale o dal computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]fornisce un'ampia gamma di supporto per garantire che il maggior numero possibile di funzionalità possa essere utilizzato in modo sicuro con attendibilità parziale e, insieme alle autorità di certificazione, fornisca ulteriore supporto per la programmazione parzialmente attendibile.  
   
@@ -131,22 +131,22 @@ ms.locfileid: "68629800"
 |Autorizzazioni|Attributo|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|Accesso ai server DNS|Sì|No|  
-|Variabili di ambiente|Lettura|Yes|No|  
-|Finestre di dialogo file|Apri|Sì|Sì|  
+|Variabili di ambiente|Lettura|Sì|No|  
+|Finestre di dialogo file|Apri|Yes|Yes|  
 |Finestre di dialogo file|Senza restrizioni|Sì|No|  
-|Spazio di memorizzazione isolato|Isolamento assembly in base all'utente|Sì|No|  
-|Spazio di memorizzazione isolato|Isolamento sconosciuto|Sì|Yes|  
-|Spazio di memorizzazione isolato|Quota utenti illimitata|Yes|No|  
-|Supporti|Audio, video e immagini sicuri|Yes|Sì|  
-|Stampa|Stampa predefinita|Sì|No|  
-|Stampa|Stampa sicura|Sì|Yes|  
+|Spazio di memorizzazione isolato|Isolamento assembly in base all'utente|Yes|No|  
+|Spazio di memorizzazione isolato|Isolamento sconosciuto|Yes|Sì|  
+|Spazio di memorizzazione isolato|Quota utenti illimitata|Sì|No|  
+|Supporti|Audio, video e immagini sicuri|Sì|Sì|  
+|Stampa|Stampa predefinita|Yes|No|  
+|Stampa|Stampa sicura|Sì|Sì|  
 |Reflection|Emissione|Yes|No|  
-|Security|Esecuzione del codice gestito|Sì|Sì|  
-|Security|Asserzione autorizzazioni concesse|Yes|No|  
+|Security|Esecuzione del codice gestito|Yes|Yes|  
+|Security|Asserzione autorizzazioni concesse|Sì|No|  
 |Interfaccia utente|Senza restrizioni|Yes|No|  
-|Interfaccia utente|Finestre di primo livello sicure|Sì|Yes|  
+|Interfaccia utente|Finestre di primo livello sicure|Sì|Sì|  
 |Interfaccia utente|Appunti personali|Sì|Sì|  
-|Web browser|Navigazione sicura dei frame in HTML|Sì|Sì|  
+|Web browser|Navigazione sicura dei frame in HTML|Yes|Sì|  
   
 > [!NOTE]
 >  L'operazione di taglia e incolla, se avviata dall'utente, è consentita solo con l'attendibilità parziale.  

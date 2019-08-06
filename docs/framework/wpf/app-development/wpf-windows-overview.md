@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ffb397c673333b26649a815fce7a5d4e63e5b987
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401732"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796778"
 ---
 # <a name="wpf-windows-overview"></a>Cenni preliminari sulle finestre WPF
 Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundation (WPF) tramite Windows. Lo scopo principale di una finestra è ospitare contenuto tramite cui visualizzare dati e permettere agli utenti di interagire con i dati. Le [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni autonome forniscono le proprie finestre usando <xref:System.Windows.Window> la classe. Questo argomento introduce <xref:System.Windows.Window> le nozioni di base relative alla creazione e alla gestione delle finestre in applicazioni autonome.  
@@ -167,7 +167,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
   
 - Essere ridotte a icona, ingrandite e ripristinate senza influire sull'altra.  
   
- Alcune finestre richiedono una relazione con la finestra da cui vengono aperte. Ad esempio, un' [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] applicazione può aprire finestre delle proprietà e finestre degli strumenti il cui comportamento tipico consiste nel coprire la finestra che la crea. Queste finestre devono inoltre essere chiuse, ridotte a icona, ingrandite e ripristinate insieme alla finestra da cui sono state create. Una relazione di questo tipo può essere stabilita impostando una finestra come proprietà di *un altro* e <xref:System.Windows.Window.Owner%2A> viene eseguita impostando la proprietà della *finestra di proprietà* con un riferimento alla *finestra proprietaria*. come illustrato nell'esempio riportato di seguito.  
+ Alcune finestre richiedono una relazione con la finestra da cui vengono aperte. Ad esempio, un'applicazione IDE (Integrated Development Environment) può aprire finestre delle proprietà e finestre degli strumenti il cui comportamento tipico consiste nel coprire la finestra che le crea. Queste finestre devono inoltre essere chiuse, ridotte a icona, ingrandite e ripristinate insieme alla finestra da cui sono state create. Una relazione di questo tipo può essere stabilita impostando una finestra come proprietà di un altro e <xref:System.Windows.Window.Owner%2A> viene eseguita impostando la proprietà della *finestra di proprietà* con un riferimento alla *finestra proprietaria*. come illustrato nell'esempio riportato di seguito.  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
@@ -325,11 +325,11 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
   
  Se si vuole che la larghezza e l'altezza della finestra abbiano una dimensione che corrisponda alle dimensioni del contenuto della finestra, è possibile usare la <xref:System.Windows.Window.SizeToContent%2A> proprietà, che presenta i valori seguenti:  
   
-- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.Manual>). Nessun effetto (impostazione predefinita).  
+- <xref:System.Windows.SizeToContent.Manual>. Nessun effetto (impostazione predefinita).  
   
-- [https://login.microsoftonline.com/common/](<xref:System.Windows.SizeToContent.Width>). Adattarsi alla larghezza del contenuto, che ha lo stesso effetto dell'impostazione <xref:System.Windows.FrameworkElement.MinWidth%2A> di <xref:System.Windows.FrameworkElement.MaxWidth%2A> e sulla larghezza del contenuto.  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.Width>). Adattarsi alla larghezza del contenuto, che ha lo stesso effetto dell'impostazione <xref:System.Windows.FrameworkElement.MinWidth%2A> di <xref:System.Windows.FrameworkElement.MaxWidth%2A> e sulla larghezza del contenuto.  
   
-- <xref:System.Windows.SizeToContent.Height>. Adatta all'altezza del contenuto, che ha lo stesso effetto dell'impostazione <xref:System.Windows.FrameworkElement.MinHeight%2A> di <xref:System.Windows.FrameworkElement.MaxHeight%2A> e sull'altezza del contenuto.  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.Height>). Adatta all'altezza del contenuto, che ha lo stesso effetto dell'impostazione <xref:System.Windows.FrameworkElement.MinHeight%2A> di <xref:System.Windows.FrameworkElement.MaxHeight%2A> e sull'altezza del contenuto.  
   
 - <xref:System.Windows.SizeToContent.WidthAndHeight>. Adattarsi alla larghezza e all'altezza del contenuto, che ha lo stesso effetto dell' <xref:System.Windows.FrameworkElement.MinHeight%2A> impostazione <xref:System.Windows.FrameworkElement.MaxHeight%2A> di e sull'altezza del <xref:System.Windows.FrameworkElement.MinWidth%2A> contenuto e dell'impostazione di e <xref:System.Windows.FrameworkElement.MaxWidth%2A> sulla larghezza del contenuto.  
   
@@ -374,7 +374,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
   
  Una finestra con uno stato *ridotto a icona* si comprime sul relativo pulsante della barra <xref:System.Windows.Window.ShowInTaskbar%2A> delle applicazioni se `true`è impostato su; in caso contrario, comprime le dimensioni più piccole possibili e si sposta nell'angolo inferiore sinistro del desktop. Nessuno dei due tipi di finestra ridotta a icona può essere ridimensionato tramite un bordo o un controllo di ridimensionamento, anche se una finestra ridotta a icona non visualizzata sulla barra delle applicazioni può essere trascinata sul desktop.  
   
- Una finestra con uno  stato ingrandito si espande fino alla dimensione massima che può essere, che sarà sufficiente <xref:System.Windows.FrameworkElement.MaxWidth%2A>per le proprietà, <xref:System.Windows.FrameworkElement.MaxHeight%2A>e <xref:System.Windows.Window.SizeToContent%2A> . Come per una finestra ridotta a icona, una finestra ingrandita non può essere ridimensionata tramite un controllo di ridimensionamento o trascinandone il bordo.  
+ Una finestra con uno stato ingrandito si espande fino alla dimensione massima che può essere, che sarà sufficiente <xref:System.Windows.FrameworkElement.MaxWidth%2A>per le proprietà, <xref:System.Windows.FrameworkElement.MaxHeight%2A>e <xref:System.Windows.Window.SizeToContent%2A> . Come per una finestra ridotta a icona, una finestra ingrandita non può essere ridimensionata tramite un controllo di ridimensionamento o trascinandone il bordo.  
   
 > [!NOTE]
 >  I valori delle <xref:System.Windows.Window.Top%2A>proprietà, <xref:System.Windows.Window.Left%2A>, <xref:System.Windows.FrameworkElement.Width%2A>e <xref:System.Windows.FrameworkElement.Height%2A> di una finestra rappresentano sempre i valori per lo stato normale, anche quando la finestra è attualmente ingrandita o ridotta a icona.  
