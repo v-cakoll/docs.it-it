@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796778"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817947"
 ---
 # <a name="wpf-windows-overview"></a>Cenni preliminari sulle finestre WPF
 Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundation (WPF) tramite Windows. Lo scopo principale di una finestra è ospitare contenuto tramite cui visualizzare dati e permettere agli utenti di interagire con i dati. Le [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni autonome forniscono le proprie finestre usando <xref:System.Windows.Window> la classe. Questo argomento introduce <xref:System.Windows.Window> le nozioni di base relative alla creazione e alla gestione delle finestre in applicazioni autonome.  
   
 > [!NOTE]
->  Le applicazioni ospitate [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] da browser [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] , incluse [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] le pagine separate, non forniscono finestre personalizzate. Sono invece ospitate in Windows fornite da [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Vedere [Cenni preliminari sulle applicazioni browser XAML WPF](wpf-xaml-browser-applications-overview.md).  
+>  Le applicazioni ospitate [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] da browser [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] , incluse [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] le pagine separate, non forniscono finestre personalizzate. Sono invece ospitati in Windows fornito da Windows Internet Explorer. Vedere [Cenni preliminari sulle applicazioni browser XAML WPF](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Classe Window  
@@ -325,11 +325,11 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
   
  Se si vuole che la larghezza e l'altezza della finestra abbiano una dimensione che corrisponda alle dimensioni del contenuto della finestra, è possibile usare la <xref:System.Windows.Window.SizeToContent%2A> proprietà, che presenta i valori seguenti:  
   
-- <xref:System.Windows.SizeToContent.Manual>. Nessun effetto (impostazione predefinita).  
+- [https://login.microsoftonline.com/common/](<xref:System.Windows.SizeToContent.Manual>). Nessun effetto (impostazione predefinita).  
   
-- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.Width>). Adattarsi alla larghezza del contenuto, che ha lo stesso effetto dell'impostazione <xref:System.Windows.FrameworkElement.MinWidth%2A> di <xref:System.Windows.FrameworkElement.MaxWidth%2A> e sulla larghezza del contenuto.  
+- <xref:System.Windows.SizeToContent.Width>. Adattarsi alla larghezza del contenuto, che ha lo stesso effetto dell'impostazione <xref:System.Windows.FrameworkElement.MinWidth%2A> di <xref:System.Windows.FrameworkElement.MaxWidth%2A> e sulla larghezza del contenuto.  
   
-- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.Height>). Adatta all'altezza del contenuto, che ha lo stesso effetto dell'impostazione <xref:System.Windows.FrameworkElement.MinHeight%2A> di <xref:System.Windows.FrameworkElement.MaxHeight%2A> e sull'altezza del contenuto.  
+- <xref:System.Windows.SizeToContent.Height>. Adatta all'altezza del contenuto, che ha lo stesso effetto dell'impostazione <xref:System.Windows.FrameworkElement.MinHeight%2A> di <xref:System.Windows.FrameworkElement.MaxHeight%2A> e sull'altezza del contenuto.  
   
 - <xref:System.Windows.SizeToContent.WidthAndHeight>. Adattarsi alla larghezza e all'altezza del contenuto, che ha lo stesso effetto dell' <xref:System.Windows.FrameworkElement.MinHeight%2A> impostazione <xref:System.Windows.FrameworkElement.MaxHeight%2A> di e sull'altezza del <xref:System.Windows.FrameworkElement.MinWidth%2A> contenuto e dell'impostazione di e <xref:System.Windows.FrameworkElement.MaxWidth%2A> sulla larghezza del contenuto.  
   

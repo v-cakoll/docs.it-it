@@ -2,12 +2,12 @@
 title: Controllo di accesso
 description: Informazioni su come controllare l'accesso agli elementi di programmazione, ad esempio tipi, metodi e funzioni, nel F# linguaggio di programmazione.
 ms.date: 05/16/2016
-ms.openlocfilehash: ed77a09cf87aabf9a4134276e89e84aa42abd3c3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 38f8f3fd4114c0428fbe8baca71594cd07740b2c
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629963"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817862"
 ---
 # <a name="access-control"></a>Controllo di accesso
 
@@ -40,7 +40,7 @@ Il controllo di accesso è soggetto alle regole seguenti:
 
 - L'accessibilità per i singoli casi in un'unione discriminata è determinata dall'accessibilità dell'unione discriminata. Ovvero un particolare case di Unione non è meno accessibile dell'Unione stessa.
 
-- L'accessibilità per i singoli campi di un tipo di record non può essere determinata dall'accessibilità del record stesso. Ovvero, una particolare etichetta di record non è meno accessibile del record stesso.
+- L'accessibilità per i singoli campi di un tipo di record è determinata dall'accessibilità del record stesso. Ovvero, una particolare etichetta di record non è meno accessibile del record stesso.
 
 ## <a name="example"></a>Esempio
 
