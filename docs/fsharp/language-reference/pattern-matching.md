@@ -2,12 +2,12 @@
 title: Criteri di ricerca
 description: Informazioni sul modo in F# cui vengono usati i modelli per confrontare i dati con le strutture logiche, scomporre i dati in parti costituenti o estrarre informazioni dai dati.
 ms.date: 05/16/2016
-ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627294"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733475"
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca
 
@@ -15,7 +15,7 @@ I modelli sono regole per la trasformazione dei dati di input. Vengono usati in 
 
 ## <a name="remarks"></a>Note
 
-I modelli vengono utilizzati in molti costrutti di linguaggio, ad `match` esempio l'espressione. Vengono usati quando si elaborano gli argomenti per le funzioni `let` nelle associazioni, le espressioni lambda e nei gestori di eccezioni associati `try...with` all'espressione. Per ulteriori informazioni, vedere [espressioni di corrispondenza](match-expressions.md), [associazioni let](./functions/let-bindings.md), [espressioni lambda: La `fun` parola](./functions/lambda-expressions-the-fun-keyword.md)chiave e[le eccezioni: `try...with` Espressione.](/.exception-handling/the-try-with-expression.md)
+I modelli vengono utilizzati in molti costrutti di linguaggio, ad `match` esempio l'espressione. Vengono usati quando si elaborano gli argomenti per le funzioni `let` nelle associazioni, le espressioni lambda e nei gestori di eccezioni associati `try...with` all'espressione. Per ulteriori informazioni, vedere [espressioni di corrispondenza](match-expressions.md), [associazioni let](./functions/let-bindings.md), [espressioni lambda: La `fun` parola](./functions/lambda-expressions-the-fun-keyword.md)chiave e[le eccezioni: `try...with` Espressione.](./exception-handling/the-try-with-expression.md)
 
 Nell' `match` espressione, ad esempio, il *modello* è quello che segue il simbolo della pipe.
 
@@ -29,7 +29,7 @@ Ogni modello funge da regola per trasformare in qualche modo l'input. `match` Ne
 
 Nella tabella seguente sono illustrati i modelli supportati. In fase di esecuzione, l'input viene testato rispetto a ognuno dei modelli seguenti nell'ordine elencato nella tabella e i modelli vengono applicati in modo ricorsivo, dal primo all'ultimo come appaiono nel codice e da sinistra a destra per i modelli in ogni riga.
 
-|Name|Descrizione|Esempio|
+|NOME|DESCRIZIONE|Esempio|
 |----|-----------|-------|
 |Criterio costante|Qualsiasi valore letterale stringa, numerico o carattere, una costante di enumerazione o un identificatore di valore letterale definito|`1.0`, `"test"`, `30`, `Color.Red`|
 |Modello di identificatore|Valore del case di un'unione discriminata, un'etichetta di eccezione o un case del criterio attivo|`Some(x)`<br /><br />`Failure(msg)`|
@@ -103,7 +103,7 @@ match shape with
 
 I criteri attivi consentono di definire criteri di ricerca personalizzati più complessi. Per ulteriori informazioni sui modelli attivi, vedere [modelli attivi](active-patterns.md).
 
-Il caso in cui l'identificatore è un'eccezione viene usato nei criteri di ricerca nel contesto dei gestori di eccezioni. Per informazioni sui criteri di ricerca nella gestione delle eccezioni [, vedere eccezioni: `try...with` Espressione.](/.exception-handling/the-try-with-expression.md)
+Il caso in cui l'identificatore è un'eccezione viene usato nei criteri di ricerca nel contesto dei gestori di eccezioni. Per informazioni sui criteri di ricerca nella gestione delle eccezioni [, vedere eccezioni: `try...with` Espressione.](./exception-handling/the-try-with-expression.md)
 
 ## <a name="variable-patterns"></a>Modelli variabili
 
