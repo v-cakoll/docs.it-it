@@ -1,13 +1,13 @@
 ---
-title: Contract1
+title: Contratto
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 10789f9a2940c239ae20c8fd1e9d48bca0e820ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4a21e95a6f1f1860ed36c968d17bb8ac8465dce
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963696"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868440"
 ---
 # <a name="contract"></a>Contratto
 Contratto  
@@ -32,7 +32,7 @@ class Contract
 ## <a name="methods"></a>Metodi  
  La classe Contract non definisce metodi.  
   
-## <a name="properties"></a>Proprietà  
+## <a name="properties"></a>Properties  
  La classe Contract ha le proprietà seguenti:  
   
 ### <a name="appdomainid"></a>AppDomainId  
@@ -43,13 +43,13 @@ class Contract
  ID del dominio applicazione che ospita il contratto.  
   
 ### <a name="behaviors"></a>comportamenti  
- Tipo di dati: Matrice di Behavior  
+ Tipo di dati: Matrice di comportamenti  
   
  Tipo di accesso: Sola lettura  
   
  Comportamenti associati al contratto.  
   
-### <a name="name"></a>Nome  
+### <a name="name"></a>NOME  
  Tipo di dati: stringa  
   
  Tipo di accesso: Sola lettura  
@@ -64,7 +64,7 @@ class Contract
  Spazio dei nomi dell'elemento `portType` in WSDL.  
   
 ### <a name="operations"></a>Operazioni  
- Tipo di dati: Matrice di Operation  
+ Tipo di dati: Matrice Operation  
   
  Tipo di accesso: Sola lettura  
   
@@ -91,7 +91,7 @@ class Contract
   
  Indica se il contratto richiede che l'associazione di questo contratto utilizzi le sessioni del canale.  
   
-### <a name="type"></a>Tipo  
+### <a name="type"></a>Type  
  Tipo di dati: stringa  
   
  Tipo di accesso: Sola lettura  

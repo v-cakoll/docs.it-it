@@ -1,5 +1,5 @@
 ---
-title: Enumerazione1 CorElementType
+title: Enumerazione CorElementType
 ms.date: 03/30/2017
 api_name:
 - CorElementType
@@ -16,16 +16,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d47e250a35640d15bd494d99442271a070a1dd0a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6057bd48ff4fe3f852f82de2bab972d95fef138c
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781906"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868559"
 ---
-# <a name="corelementtype-enumeration1"></a>Enumerazione1 CorElementType
+# <a name="corelementtype-enumeration"></a>Enumerazione CorElementType
 
-Specifica un common language runtime <xref:System.Type>, un modificatore di tipo o informazioni su un tipo in una firma del tipo di metadati.
+Specifica un Common Language Runtime <xref:System.Type>, un modificatore di tipo o informazioni su un tipo in una firma del tipo di metadati.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -77,74 +77,74 @@ typedef enum CorElementType {
 } CorElementType;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 |Member|Descrizione|
 |------------|-----------------|
 |`ELEMENT_TYPE_END`|Utilizzato internamente.|
-|`ELEMENT_TYPE_VOID`|Un tipo void.|
-|`ELEMENT_TYPE_BOOLEAN`|Un tipo Boolean|
+|`ELEMENT_TYPE_VOID`|Tipo void.|
+|`ELEMENT_TYPE_BOOLEAN`|Tipo booleano|
 |`ELEMENT_TYPE_CHAR`|Tipo carattere.|
-|`ELEMENT_TYPE_I1`|Un intero con segno a 1 byte.|
+|`ELEMENT_TYPE_I1`|Intero con segno a 1 byte.|
 |`ELEMENT_TYPE_U1`|Intero senza segno a 1 byte.|
-|`ELEMENT_TYPE_I2`|Un intero con segno a 2 byte.|
-|`ELEMENT_TYPE_U2`|Valore intero senza segno a 2 byte.|
-|`ELEMENT_TYPE_I4`|Un intero con segno a 4 byte.|
-|`ELEMENT_TYPE_U4`|Valore intero senza segno a 4 byte.|
-|`ELEMENT_TYPE_I8`|Un intero con segno a 8 byte.|
-|`ELEMENT_TYPE_U8`|Valore intero senza segno a 8 byte.|
-|`ELEMENT_TYPE_R4`|Virgola mobile a 4 byte.|
-|`ELEMENT_TYPE_R8`|Una virgola mobile a 8 byte.|
-|`ELEMENT_TYPE_STRING`|Un tipo System. String.|
-|`ELEMENT_TYPE_PTR`|Un modificatore di tipo puntatore.|
-|`ELEMENT_TYPE_BYREF`|Un modificatore di tipo riferimento.|
-|`ELEMENT_TYPE_VALUETYPE`|Un modificatore di tipo valore.|
-|`ELEMENT_TYPE_CLASS`|Un modificatore di tipo classe.|
-|`ELEMENT_TYPE_VAR`|Un modificatore di tipo della variabile di classe.|
-|`ELEMENT_TYPE_ARRAY`|Un modificatore di tipo matrice multidimensionale.|
-|`ELEMENT_TYPE_GENERICINST`|Un modificatore di tipo per i tipi generici.|
+|`ELEMENT_TYPE_I2`|Intero con segno a 2 byte.|
+|`ELEMENT_TYPE_U2`|Intero senza segno a 2 byte.|
+|`ELEMENT_TYPE_I4`|Intero con segno a 4 byte.|
+|`ELEMENT_TYPE_U4`|Intero senza segno a 4 byte.|
+|`ELEMENT_TYPE_I8`|Intero con segno a 8 byte.|
+|`ELEMENT_TYPE_U8`|Intero senza segno a 8 byte.|
+|`ELEMENT_TYPE_R4`|Virgola mobile A 4 byte.|
+|`ELEMENT_TYPE_R8`|Virgola mobile a 8 byte.|
+|`ELEMENT_TYPE_STRING`|Tipo System. String.|
+|`ELEMENT_TYPE_PTR`|Modificatore di tipo puntatore.|
+|`ELEMENT_TYPE_BYREF`|Modificatore di tipo riferimento.|
+|`ELEMENT_TYPE_VALUETYPE`|Modificatore di tipo di valore.|
+|`ELEMENT_TYPE_CLASS`|Modificatore del tipo di classe.|
+|`ELEMENT_TYPE_VAR`|Modificatore di tipo di variabile di classe.|
+|`ELEMENT_TYPE_ARRAY`|Modificatore di tipo matrice multidimensionale.|
+|`ELEMENT_TYPE_GENERICINST`|Modificatore di tipo per i tipi generici.|
 |`ELEMENT_TYPE_TYPEDBYREF`|Riferimento tipizzato.|
-|`ELEMENT_TYPE_I`|Dimensioni di un integer nativo.|
-|`ELEMENT_TYPE_U`|Dimensione dell'integer nativo senza segno.|
-|`ELEMENT_TYPE_FNPTR`|Un puntatore a una funzione.|
-|`ELEMENT_TYPE_OBJECT`|Un tipo System. Object.|
-|`ELEMENT_TYPE_SZARRAY`|Un singolo-dimensionale, zero modificatore di tipo matrice con limite inferiore.|
-|`ELEMENT_TYPE_MVAR`|Un modificatore di tipo di variabile (metodo).|
+|`ELEMENT_TYPE_I`|Dimensioni di un intero nativo.|
+|`ELEMENT_TYPE_U`|Dimensioni di un intero nativo senza segno.|
+|`ELEMENT_TYPE_FNPTR`|Puntatore a una funzione.|
+|`ELEMENT_TYPE_OBJECT`|Tipo System. Object.|
+|`ELEMENT_TYPE_SZARRAY`|Modificatore di tipo matrice A dimensione inferiore a zero singolo.|
+|`ELEMENT_TYPE_MVAR`|Modificatore di tipo di variabile di metodo.|
 |`ELEMENT_TYPE_CMOD_REQD`|Modificatore obbligatorio del linguaggio C.|
-|`ELEMENT_TYPE_CMOD_OPT`|Un modificatore facoltativo del linguaggio C.|
+|`ELEMENT_TYPE_CMOD_OPT`|Modificatore facoltativo del linguaggio C.|
 |`ELEMENT_TYPE_INTERNAL`|Utilizzato internamente.|
 |`ELEMENT_TYPE_MAX`|Tipo non valido.|
 |`ELEMENT_TYPE_MODIFIER`|Utilizzato internamente.|
-|`ELEMENT_TYPE_SENTINEL`|Un modificatore di tipo che è un sentinel per un elenco di un numero variabile di parametri.|
+|`ELEMENT_TYPE_SENTINEL`|Modificatore di tipo che è una sentinella per un elenco di un numero variabile di parametri.|
 |`ELEMENT_TYPE_PINNED`|Utilizzato internamente.|
 
 ## <a name="remarks"></a>Note
 
-I modificatori di tipo costituiscono la base per la rappresentazione di tipi più complessi. Oggetto `CorElementType` valore del modificatore del tipo viene applicato al valore che lo segue immediatamente nella firma del tipo. Il valore che segue il `CorElementType` valore del modificatore del tipo può essere un `CorElementType` valore di tipo semplice, un token di metadati o altro valore, come specificato nella tabella seguente.
+I modificatori di tipo costituiscono la base per la rappresentazione di tipi più complessi. Un `CorElementType` valore del modificatore di tipo viene applicato al valore che lo segue immediatamente nella firma del tipo. Il valore che segue il `CorElementType` valore del modificatore di tipo `CorElementType` può essere un valore di tipo semplice, un token di metadati o un altro valore, come specificato nella tabella seguente.
 
 > [!NOTE]
-> Tutti i numeri (*numero*, *argomento conteggio*, *token di metadati*, *rank*, *conteggio*e *associata*) vengono archiviate come numeri interi compressi. Visualizzare [Standard ECMA-335: Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) sul sito Web di ECMA per informazioni dettagliate.
+> Tutti i numeri *(numero, numero*di *argomenti*, *token di metadati*, *rango*, *conteggio*e *limite*) vengono archiviati come numeri interi compressi. Per informazioni dettagliate, vedere l' [Common Language Infrastructure standard ECMA-335-(CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) nel sito Web ECMA.
 
-|Modificatore tipo|Formato|
+|Modificatore di tipo|Formato|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<un `CorElementType` valore >|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<a `CorElementType` value>|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \< un`CorElementType` valore >|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \< un`CorElementType` valore >|
 |`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<un `mdTypeDef` token di metadati >|
 |`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<un `mdTypeDef` token di metadati >|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<number>|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<una `CorElementType` valore > \<rank > \<count1 > \<bound1 >... \<countN > \<boundN >|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<un' `mdTypeDef` token di metadati > \<argomento conteggio > \<arg1 >... \<argN >|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<firma completa per la funzione, inclusi la convenzione di chiamata >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<a `CorElementType` value>|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number>|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE _\<una `mdTypeRef` o `mdTypeDef` token di metadati >|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<una `mdTypeRef` o `mdTypeDef` token di metadati >|
+|`ELEMENT_TYPE_VAR`|Numero \<ELEMENT_TYPE_VAR >|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<un `CorElementType` valore > \<Rank > \<count1 >\<bound1 >... \<conteggio >\<> limitato|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<un `mdTypeDef` token di metadati \<> numero di \<argomenti > arg1 >... \<> argN|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<firma completa per la funzione, inclusa la convenzione di chiamata >|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \< un`CorElementType` valore >|
+|`ELEMENT_TYPE_MVAR`|Numero \<ELEMENT_TYPE_MVAR >|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<un `mdTypeRef` token `mdTypeDef` di metadati o >|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<un `mdTypeRef` token `mdTypeDef` di metadati o >|
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Intestazione:** CorHdr. H
+**Intestazione:** CorHdr. h
 
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

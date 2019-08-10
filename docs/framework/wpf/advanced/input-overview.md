@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 8fa9f2dd668efca6a3108973ff792cc17b37b410
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 5eaf83f259abe4ee574dfd4d2269dfa1e9373c94
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818035"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869067"
 ---
 # <a name="input-overview"></a>Cenni preliminari sull'input
 <a name="introduction"></a>Il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sottosistema fornisce un'API potente per ottenere input da un'ampia gamma di dispositivi, tra cui mouse, tastiera, tocco e stilo. Questo argomento descrive i servizi forniti da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e illustra l'architettura dei sistemi di input.
@@ -115,7 +115,7 @@ ms.locfileid: "68818035"
 
  Per l'input da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tastiera, invia innanzitutto <xref:System.Windows.ContentElement.KeyDown> gli eventi appropriati /. <xref:System.Windows.ContentElement.KeyUp> Se tali eventi non vengono gestiti e la chiave è testuale, anziché una chiave di controllo come frecce direzionali o tasti funzione, viene generato un <xref:System.Windows.ContentElement.TextInput> evento.  Tra <xref:System.Windows.ContentElement.KeyDown> / glieventi<xref:System.Windows.ContentElement.TextInput> e non è sempre presente un semplice mapping uno-a-uno, perché più sequenze di tasti possono generare un singolo carattere di input di testo e singole sequenze di tasti possono generare più caratteri <xref:System.Windows.ContentElement.KeyUp> stringhe.  Ciò vale soprattutto per le lingue quali il cinese, il giapponese e il coreano che usano IME (Input Method Editor) per generare le migliaia di caratteri possibili negli alfabeti corrispondenti.
 
- Quando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Invia un <xref:System.Windows.ContentElement.KeyUp> / evento,<xref:System.Windows.Input.KeyEventArgs.Key%2A> viene impostato su <xref:System.Windows.ContentElement.TextInput> se le sequenze di tasti potrebbero far parte di un evento (ad esempio, se si preme ALT + S). <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> <xref:System.Windows.ContentElement.KeyDown> Ciò consente al codice in <xref:System.Windows.ContentElement.KeyDown> un gestore eventi di <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> verificare la presenza di e, se presente, di lasciare l'elaborazione per il <xref:System.Windows.ContentElement.TextInput> gestore dell'evento generato successivamente. In questi casi, le varie proprietà dell' <xref:System.Windows.Input.TextCompositionEventArgs> argomento possono essere usate per determinare le sequenze di tasti originali. Analogamente, se [!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)] un oggetto è <xref:System.Windows.Input.Key> attivo, ha il <xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>valore di <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> e assegna la sequenza di tasti originale o le sequenze di tasti.
+ Quando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Invia un <xref:System.Windows.ContentElement.KeyUp> / evento,<xref:System.Windows.Input.KeyEventArgs.Key%2A> viene impostato su <xref:System.Windows.ContentElement.TextInput> se le sequenze di tasti potrebbero far parte di un evento (ad esempio, se si preme ALT + S). <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> <xref:System.Windows.ContentElement.KeyDown> Ciò consente al codice in <xref:System.Windows.ContentElement.KeyDown> un gestore eventi di <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> verificare la presenza di e, se presente, di lasciare l'elaborazione per il <xref:System.Windows.ContentElement.TextInput> gestore dell'evento generato successivamente. In questi casi, le varie proprietà dell' <xref:System.Windows.Input.TextCompositionEventArgs> argomento possono essere usate per determinare le sequenze di tasti originali. Analogamente, se un IME è attivo <xref:System.Windows.Input.Key> , ha il valore <xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>di e <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> assegna la sequenza di tasti originale o le sequenze di tasti.
 
  Nell'esempio seguente viene definito un gestore per <xref:System.Windows.Controls.Primitives.ButtonBase.Click> l'evento e un gestore per <xref:System.Windows.UIElement.KeyDown> l'evento.
 

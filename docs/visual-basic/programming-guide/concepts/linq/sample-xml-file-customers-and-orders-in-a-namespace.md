@@ -1,13 +1,13 @@
 ---
-title: 'File XML di esempio: Customers e Orders in uno spazio dei nomi1'
+title: 'File XML di esempio: clienti e ordini in uno spazio dei nomi'
 ms.date: 07/20/2015
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
-ms.openlocfilehash: ca12478ab81d114759c07b5d44749aee5a620bbb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63bb6cf5065e2189380bbcd67812c5ae8d6dd372
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787062"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869111"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>File XML di esempio: clienti e ordini in uno spazio dei nomi
 Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Contiene Customers e Orders. L'XML si trova in uno spazio dei nomi.  
