@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: c7d5d4ef7d812e186813cd08f9e4e2adf2ab1a58
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 96609264044e531bcc8671cb226a02fdc1b962b8
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306661"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796449"
 ---
 # <a name="lock-statement-c-reference"></a>Istruzione lock (Riferimenti per C#)
 
@@ -65,7 +65,7 @@ L'esempio seguente definisce una classe `Account` che sincronizza l'accesso al p
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Per altre informazioni, vedere la sezione [Istruzione lock](~/_csharplang/spec/statements.md#the-lock-statement) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -73,6 +73,5 @@ L'esempio seguente definisce una classe `Account` che sincronizza l'accesso al p
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
 - [Riferimenti per C#](../index.md)
-- [Parole chiave di C#](index.md)
-- [Parole chiave per le istruzioni](statement-keywords.md)
+- [Parole chiave C#](index.md)
 - [Cenni preliminari sulle primitive di sincronizzazione](../../../standard/threading/overview-of-synchronization-primitives.md)

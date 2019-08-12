@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9f911f3a2783ec538ef628e10d5c1a4f9b06d0f
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 4c0dea7950f86da3d812783abd00d69e5bc38198
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469475"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796887"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Procedura: Gestire più eventi mediante le relative proprietà
 Per utilizzare le proprietà evento è necessario definire queste proprietà nella classe tramite cui vengono generati gli eventi e, successivamente, impostarne i delegati nelle classi mediante cui vengono gestiti gli eventi. Per implementare più proprietà evento in una classe, la classe deve archiviare e mantenere internamente il delegato definito per ogni evento. Uno degli approcci più comuni consiste nell'implementare una raccolta di delegati indicizzata da una chiave evento.  
@@ -43,9 +43,6 @@ Per utilizzare le proprietà evento è necessario definire queste proprietà nel
 ## <a name="example"></a>Esempio  
  L'esempio C# seguente implementa le proprietà evento `MouseDown` e `MouseUp`, usando un oggetto <xref:System.ComponentModel.EventHandlerList> per archiviare il delegato di ogni evento. Le parole chiave dei costrutti delle proprietà evento sono riportate in grassetto.  
   
-> [!NOTE]
->  Le proprietà evento non sono supportate in Visual Basic.  
-  
  [!code-cpp[Conceptual.Events.Other#31](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.events.other/cpp/example3.cpp#31)]
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]
  [!code-vb[Conceptual.Events.Other#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.events.other/vb/example3.vb#31)]  
@@ -54,5 +51,5 @@ Per utilizzare le proprietà evento è necessario definire queste proprietà nel
 
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [Eventi](../../../docs/standard/events/index.md)
-- <xref:System.Web.UI.Control.Events%2A>
+- <xref:System.Web.UI.Control.Events%2A?displayProperty=nameWithType>
 - [Procedura: Dichiarare eventi personalizzati per proteggere la memoria](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

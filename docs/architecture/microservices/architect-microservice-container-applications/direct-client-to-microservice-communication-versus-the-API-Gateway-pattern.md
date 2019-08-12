@@ -2,12 +2,12 @@
 title: Confronto tra schema API Gateway e comunicazione diretta da client a microservizio
 description: Informazioni sulle differenze e sugli usi dello schema API Gateway e della comunicazione diretta da client a microservizio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ebd544bdc137a68f03d1ab38cf23bf0d02c420c
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673168"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892243"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Confronto tra schema API Gateway e comunicazione diretta da client a microservizio
 
@@ -128,7 +128,7 @@ Possono esserci molti altri problemi trasversali generati dai gateway API a seco
 
 [Gestione API di Azure](https://azure.microsoft.com/services/api-management/) (come illustrato nella figura 4-14) consente di risolvere le esigenze del gateway API e fornisce anche funzionalità come la raccolta di informazioni dalle API. Se si usa una soluzione per la gestione delle API, un gateway API è solo un componente della soluzione completa.
 
-![Gestione API di Azure risolve sia le esigenze di gateway API che quelle di gestione, come registrazione, sicurezza, misurazione e così via.](./media/image14.png)
+![Gestione API di Azure risolve sia le esigenze di gateway API che quelle di gestione, come registrazione, sicurezza, misurazione e così via.](./media/api-gateway-azure-api-management.png)
 
 **Figura 4-14**. Utilizzo di Gestione API di Azure per il gateway API
 

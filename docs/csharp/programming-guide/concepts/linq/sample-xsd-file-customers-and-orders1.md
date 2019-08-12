@@ -1,13 +1,13 @@
 ---
-title: 'File XSD di esempio: clienti e ordini1'
+title: 'File XSD di esempio: clienti e ordini'
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: 59b5d116d1e89267ba36066e2de644dee0bf514c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 56ebc33b0c0be3204029a49123bd56fe8da18d03
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487208"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868703"
 ---
 # <a name="sample-xsd-file-customers-and-orders"></a>File XSD di esempio: clienti e ordini
 Il file XSD seguente viene usato in vari esempi nella documentazione relativa a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Tale file contiene una definizione dello schema per [File XML di esempio: clienti e ordini (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md). Lo schema usa le funzionalità `xs:key` e `xs:keyref` di XSD per stabilire che l'attributo `CustomerID` dell'elemento `Customer` è una chiave e per stabilire una relazione tra l'elemento `CustomerID` in ogni elemento `Order` e l'attributo `CustomerID` in ogni elemento `Customer`.  

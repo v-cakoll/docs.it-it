@@ -8,17 +8,19 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: bf194e207262ecea0511a0b67bbafeadd8d5d31d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 06ebb9edfaf4753b98c3305a90b52e93ee7b4486
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629502"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796643"
 ---
-# <a name="using-namespaces-c-programming-guide"></a>Utilizzo degli spazi dei nomi (Guida per programmatori C#)
+# <a name="using-namespaces-c-programming-guide"></a>Uso degli spazi dei nomi (Guida per programmatori C#)
+
 Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In primo luogo, le classi di .NET Framework usano gli spazi dei nomi per organizzare numerose classi. In secondo luogo, dichiarando i propri spazi dei nomi è possibile controllare l'ambito dei nomi di classi e metodi nei progetti di programmazione più grandi.  
   
-## <a name="accessing-namespaces"></a>Accesso agli spazi dei nomi  
+## <a name="accessing-namespaces"></a>Accesso agli spazi dei nomi
+
  La maggior parte delle applicazioni C# iniziano con una sezione di direttive `using`. In questa sezione sono elencati gli spazi dei nomi usati di frequente dall'applicazione, evitando al programmatore di specificare un nome completo ogni volta che viene usato un metodo contenuto negli spazi dei nomi.  
   
  Ad esempio, includendo la riga:  
@@ -33,17 +35,20 @@ Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In
   
  [!code-csharp[csProgGuide#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#30)]  
   
-## <a name="namespace-aliases"></a>Alias degli spazi dei nomi  
- È anche possibile usare la [direttiva using](../../../csharp/language-reference/keywords/using-directive.md) per creare un alias per uno [spazio dei nomi](../../../csharp/language-reference/keywords/namespace.md). Se ad esempio si usa uno spazio dei nomi scritto in precedenza che contiene spazi dei nomi annidati, è consigliabile dichiarare un alias per fornire un modo abbreviato per fare riferimento a uno di essi in particolare, come nell'esempio seguente:  
+## <a name="namespace-aliases"></a>Alias degli spazi dei nomi
+
+ È anche possibile usare la [direttiva `using`](../../language-reference/keywords/using-directive.md) per creare un alias per uno spazio dei nomi. Usare il [qualificatore di alias dello spazio dei nomi `::`](../../language-reference/operators/namespace-alias-qualifier.md) per accedere ai membri dello spazio dei nomi con alias. Nell'esempio seguente viene illustrato come creare e usare un alias dello spazio dei nomi:
   
- [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
+[!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]
   
-## <a name="using-namespaces-to-control-scope"></a>Uso degli spazi dei nomi per controllare l'ambito  
+## <a name="using-namespaces-to-control-scope"></a>Uso degli spazi dei nomi per controllare l'ambito
+
  La parola chiave `namespace` viene usata per dichiarare un ambito. La possibilità di creare ambiti all'interno del progetto consente di organizzare il codice e di creare tipi univoci globali. Nell'esempio seguente, una classe denominata `SampleClass` è definita in due spazi dei nomi, uno annidato all'interno dell'altro. L'[operatore di accesso ai membri `.`](../../language-reference/operators/member-access-operators.md#member-access-operator-) viene usato per identificare il metodo da chiamare.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
-## <a name="fully-qualified-names"></a>nomi completi  
+## <a name="fully-qualified-names"></a>Nomi completi
+
  Spazi dei nomi e tipi hanno nomi univoci, descritti da nomi completi che indicano una gerarchia logica. Ad esempio, l'istruzione `A.B` implica che `A` è il nome dello spazio dei nomi o del tipo e `B` è annidato al suo interno.  
   
  Nell'esempio seguente sono presenti classi e spazi dei nomi annidati. Il nome completo è indicato come commento dopo ogni entità.  
@@ -92,6 +97,6 @@ Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In
 
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [Spazi dei nomi](../../../csharp/programming-guide/namespaces/index.md)
-- [. (operatore)](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
-- [:: (operatore)](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
+- [Operatore .](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
+- [Operatore ::](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
 - [alias extern](../../../csharp/language-reference/keywords/extern-alias.md)

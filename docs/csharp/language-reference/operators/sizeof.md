@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 4852e1166a975b1a45c5bd905123a35fc846aa28
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: c455804923f4d0e7cc8f556bb9b9df34b6332d82
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68513125"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796524"
 ---
 # <a name="sizeof-operator-c-reference"></a>Operatore sizeof (Riferimenti per C#)
 
-L'operatore `sizeof` restituisce il numero di byte occupati da una variabile di un tipo specificato. Un argomento dell'operatore `sizeof` deve essere il nome di un [tipo non gestito](../builtin-types/unmanaged-types.md) o un parametro di tipo [vincolato](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) a un tipo non gestito.
+L'operatore `sizeof` restituisce il numero di byte occupati da una variabile di un tipo specificato. L'argomento dell'operatore `sizeof` deve essere il nome di un [tipo non gestito](../builtin-types/unmanaged-types.md) o un parametro di tipo [vincolato](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) a un tipo non gestito.
 
 L'operatore `sizeof` richiede un contesto [unsafe](../keywords/unsafe.md). Tuttavia, per le espressioni presentate nella tabella seguente vengono restituiti i valori costanti corrispondenti in fase di compilazione e non è richiesto un contesto unsafe:
 

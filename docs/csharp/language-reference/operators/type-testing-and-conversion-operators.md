@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: a9e5139e6d650aa6935bff934ca25502fdc14775
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 81e7678bc21529c159b8137b06b93774af0ff434
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744079"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796493"
 ---
 # <a name="type-testing-and-conversion-operators-c-reference"></a>Operatori di conversione e di test del tipo (Riferimenti per C#)
 
@@ -119,7 +119,7 @@ Le parentesi possono essere usate anche per specificare l'ordine in cui valutare
 
 ## <a name="typeof-operator"></a>Operatore typeof
 
-L'operatore `typeof` ottiene l'istanza <xref:System.Type?displayProperty=nameWithType> per un tipo. Un argomento dell'operatore `typeof` deve essere il nome o il parametro di un tipo, come illustrato nell'esempio seguente:
+L'operatore `typeof` ottiene l'istanza <xref:System.Type?displayProperty=nameWithType> per un tipo. L'argomento dell'operatore `typeof` deve essere il nome o il parametro di un tipo, come illustrato nell'esempio seguente:
 
 [!code-csharp-interactive[typeof operator](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeOf)]
 

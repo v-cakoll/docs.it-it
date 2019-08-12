@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 27f47d74a6e0775588e40760fe54c281a7f5e233
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 1e77c994062c7ac9ee009bc0e12d39e530e8af80
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363793"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868843"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Utilizzo di delegati (Guida per programmatori C#)
 Un [delegato](../../../csharp/language-reference/keywords/delegate.md) è un tipo che incapsula in modo sicuro un metodo, simile a un puntatore a funzione in C e C++. A differenza dei puntatori a funzione, tuttavia, i delegati sono orientati a oggetti, indipendenti dai tipi e sicuri. Il tipo delegato è definito dal nome del delegato. Nell'esempio seguente viene dichiarato un delegato denominato `Del` che può incapsulare un metodo che accetta una [stringa](../../../csharp/language-reference/keywords/string.md) come argomento e restituisce [void](../../../csharp/language-reference/keywords/void.md):  
@@ -49,7 +49,7 @@ Un [delegato](../../../csharp/language-reference/keywords/delegate.md) è un tip
   
  [!code-csharp[csProgGuideDelegates#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#27)]  
   
- A questo punto `allMethodsDelegate` contiene tre metodi nel relativo elenco chiamate: `Method1`, `Method2` e `DelegateMethod`. I tre delegati originali, `d1`, `d2` e `d3`, rimangono invariati. Quando si richiama `allMethodsDelegate`, tutti e tre i metodi vengono chiamati nell'ordine. Se il delegato usa parametri per riferimento, il riferimento viene passato in sequenza a ciascuno dei tre metodi a turno e le eventuali modifiche apportate da un solo metodo saranno visibili al metodo successivo. Quando uno dei metodi genera un'eccezione non rilevata all'interno del metodo, tale eccezione viene passata al chiamante del delegato e non verrà chiamato nessun metodo successivo nell'elenco chiamate. Se il delegato ha un valore restituito e/o i parametri out, restituisce il valore restituito e i parametri dell'ultimo metodo richiamato. Per rimuovere un metodo dall'elenco chiamate, usare l'operatore di decremento o l'operatore di decremento di assegnazione ("-" o "-="'). Ad esempio:  
+ A questo punto `allMethodsDelegate` contiene tre metodi nel relativo elenco chiamate: `Method1`, `Method2` e `DelegateMethod`. I tre delegati originali, `d1`, `d2` e `d3`, rimangono invariati. Quando si richiama `allMethodsDelegate`, tutti e tre i metodi vengono chiamati nell'ordine. Se il delegato usa parametri per riferimento, il riferimento viene passato in sequenza a ciascuno dei tre metodi a turno e le eventuali modifiche apportate da un solo metodo saranno visibili al metodo successivo. Quando uno dei metodi genera un'eccezione non rilevata all'interno del metodo, tale eccezione viene passata al chiamante del delegato e non verrà chiamato nessun metodo successivo nell'elenco chiamate. Se il delegato ha un valore restituito e/o i parametri out, restituisce il valore restituito e i parametri dell'ultimo metodo richiamato. Per rimuovere un metodo dall'elenco chiamate, usare gli [operatori di assegnazione di sottrazione o sottrazione](../../language-reference/operators/subtraction-operator.md) (`-` o `-=`). Ad esempio:  
   
  [!code-csharp[csProgGuideDelegates#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#28)]  
   

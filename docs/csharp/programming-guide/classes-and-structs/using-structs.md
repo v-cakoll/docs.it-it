@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 4d1acc758f0121e7450351c63538fd47f28ef732
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 5577a5042ba77e133e3c6ee7760f7c3a4cce0537
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398056"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796588"
 ---
 # <a name="using-structs-c-programming-guide"></a>Utilizzo di struct (Guida per programmatori C#)
 Il tipo `struct` è adatto a rappresentare oggetti leggeri come `Point`, `Rectangle`e `Color`. Sebbene sia altrettanto conveniente rappresentare un punto con una [classe](../../../csharp/language-reference/keywords/class.md) con [proprietà implementate automaticamente](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), lo [struct](../../../csharp/language-reference/keywords/struct.md) potrebbe essere più efficiente in alcuni scenari. Ad esempio, se si dichiara una matrice di 1000 oggetti `Point` , verrà allocata memoria aggiuntiva per fare riferimento a ogni oggetto. In questo caso, lo struct risulterebbe meno costoso. Poiché .NET Framework contiene un oggetto denominato <xref:System.Drawing.Point>, lo struct in questo esempio è invece denominato "Coords".  
@@ -21,7 +21,7 @@ Il tipo `struct` è adatto a rappresentare oggetti leggeri come `Point`, `Rectan
   
  Quando si crea un oggetto struct mediante l'operatore [new](../../../csharp/language-reference/operators/new-operator.md), questo viene creato e viene chiamato il costruttore appropriato in base alla [firma del costruttore](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax). A differenza delle classi, è possibile creare istanze di struct senza usare l'operatore `new` . In tal caso, non vi è alcuna chiamata al costruttore, il che rende più efficiente l'allocazione. Tuttavia, i campi restano non assegnati e l'oggetto non può essere usato fino all'inizializzazione di tutti i campi. Ciò include l'impossibilità di ottenere o impostare valori tramite le proprietà.
 
- Se si crea un'istanza di un oggetto struct usando il costruttore senza parametri predefinito, tutti i membri vengono assegnati in base ai loro [valori predefiniti](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md).
+ Se si crea un'istanza di un oggetto struct usando il costruttore senza parametri predefinito, tutti i membri vengono assegnati in base ai loro [valori predefiniti](../../../csharp/language-reference/keywords/default-values-table.md).
   
  Quando si scrive un costruttore con parametri per uno struct, è necessario inizializzare in modo esplicito tutti i membri. In caso contrario, uno o più membri restano non assegnati e lo struct non può essere usato, generando l'errore CS0171 del compilatore.  
   

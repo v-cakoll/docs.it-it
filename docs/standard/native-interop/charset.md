@@ -4,12 +4,12 @@ description: Informazioni su come i diversi valori di CharSet possono modificare
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: c50c58ad639b1efb29c13e5124fe3c32e8af96fc
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: cac71c5d09514dfe1244d16224944e05826edfa9
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063328"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817844"
 ---
 # <a name="charsets-and-marshaling"></a>Set di caratteri e marshalling
 
@@ -19,7 +19,7 @@ La tabella seguente illustra il mapping tra ogni set di caratteri e la rappresen
 
 | Valore di `CharSet` | WINDOWS            | .NET Core 2.2 e versioni precedenti in Unix | .NET core 3.0 e versioni successive e Mono in Unix |
 |-----------------|--------------------|-----------------------------------|------------------------------------------|
-| Ansi            | `char` (ANSI)      | `char` (UTF-8)                    | `char` (UTF-8)                           |
+| Ansi            | `char` ([tabella codici Windows (ANSI)](/windows/win32/intl/code-pages) predefinita del sistema)      | `char` (UTF-8)                    | `char` (UTF-8)                           |
 | Unicode         | `wchar_t` (UTF-16) | `char16_t` (UTF-16)               | `char16_t` (UTF-16)                      |
 | Auto            | `wchar_t` (UTF-16) | `char16_t` (UTF-16)               | `char` (UTF-8)                           |
 

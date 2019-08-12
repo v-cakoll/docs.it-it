@@ -2,12 +2,12 @@
 title: Creazione dell'interfaccia utente composita basata su microservizi
 description: L'architettura di microservizi non è destinata solo al back-end. Di seguito se ne analizza brevemente l'uso nei contesti front-end.
 ms.date: 09/20/2018
-ms.openlocfilehash: 55cb2a8096cc8122c94cae50af4384e9392868cf
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0d1825d6183b79a0e10f70fc6cfee6ca79a837d8
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672998"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817837"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Creazione dell'interfaccia utente composita basata su microservizi
 
@@ -43,7 +43,7 @@ Per altre informazioni sull'interfaccia utente composita basata sui microservizi
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
 - **Ruben Oostinga. The Monolithic Frontend in the Microservices Architecture (Front-end monolitico nell'architettura di microservizi)**  \
-  <https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/>
+  <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
 - **Mauro Servienti. The secret of better UI composition (Il segreto per una composizione ideale dell'interfaccia utente)**  \
   <https://particular.net/blog/secret-of-better-ui-composition>

@@ -2,12 +2,12 @@
 title: Controllo delle versioni del linguaggio C# - Guida a C#
 description: Informazioni su come viene determinata la versione del linguaggio C# in base al progetto e sui diversi valori ai quali è possibile adattarlo manualmente.
 ms.date: 07/10/2019
-ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 744cec0aac21f743648cccbdc93cf2977c32d644
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236101"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796538"
 ---
 # <a name="c-language-versioning"></a>Controllo delle versioni del linguaggio C#
 
@@ -28,7 +28,7 @@ Il compilatore determina un'impostazione predefinita in base a queste regole:
 
 Quando il progetto ha come destinazione un framework in anteprima con una versione del linguaggio in anteprima corrispondente, la versione del linguaggio usata è la versione del linguaggio in anteprima. In questo modo, sarà possibile usare le funzionalità più recenti che sicuramente funzioneranno con l'anteprima in qualsiasi ambiente senza alcun effetto sui progetti che hanno come destinazione una versione rilasciata di .NET Core.
 
-## <a name="overriding-a-default"></a>Sostituzione di un'impostazione predefinita
+## <a name="override-a-default"></a>Sostituire un valore predefinito
 
 Se è necessario specificare in modo esplicito la versione di C#, è possibile farlo in diversi modi:
 
@@ -38,7 +38,7 @@ Se è necessario specificare in modo esplicito la versione di C#, è possibile f
 
 ### <a name="edit-the-project-file"></a>Modificare il file di progetto
 
-È possibile impostare la versione del linguaggio nel file di progetto. Se, ad esempio, si vuole esplicitamente l'accesso alle funzionalità di anteprima, è possibile aggiungere un elemento simile a questo:
+È possibile impostare la versione del linguaggio nel file di progetto. Ad esempio, se si vuole accedere esplicitamente alle funzionalità di anteprima, aggiungere un elemento simile a questo:
 
 ```xml
 <PropertyGroup>
@@ -46,7 +46,7 @@ Se è necessario specificare in modo esplicito la versione di C#, è possibile f
 </PropertyGroup>
 ```
 
-Il valore `preview` usa il linguaggio C# in anteprima disponibile più recente supportato dal compilatore.
+Il valore `preview` usa la versione del linguaggio C# in anteprima disponibile più recente supportata dal compilatore.
 
 ### <a name="configure-multiple-projects"></a>Configurare più progetti
 

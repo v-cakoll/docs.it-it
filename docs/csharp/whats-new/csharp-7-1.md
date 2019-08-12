@@ -2,12 +2,12 @@
 title: Novità di C# 7.1
 description: Panoramica delle nuove funzionalità in C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: a95111b6f217a2ca5c520c2d4d70efa0e23742f9
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347611"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796603"
 ---
 # <a name="whats-new-in-c-71"></a>Novità di C# 7.1
 
@@ -86,9 +86,7 @@ Func<string, bool> whereClause = default(Func<string, bool>);
 Func<string, bool> whereClause = default;
 ```
 
-Altre informazioni su questo miglioramento sono disponibili nell'articolo della Guida per programmatori C# relativo alle [espressioni con valore predefinito](../programming-guide/statements-expressions-operators/default-value-expressions.md).
-
-Questo miglioramento modifica anche alcune delle regole di analisi per la [parola chiave default](../language-reference/keywords/default.md).
+Per altre informazioni, vedere la sezione [Valore letterale predefinito](../language-reference/operators/default.md#default-literal) dell'articolo [Operatore default](../language-reference/operators/default.md).
 
 ## <a name="inferred-tuple-element-names"></a>Nomi di elemento di tupla dedotti
 
