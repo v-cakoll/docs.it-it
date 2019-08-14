@@ -4,12 +4,12 @@ description: Esplorare le diverse attività di apprendimento automatico e le att
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: bcd967c11156ca9b837631560e78722b13fc7ae0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063539"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630059"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Attività di apprendimento automatico in ML.NET
 
@@ -47,14 +47,14 @@ Per altre informazioni, vedere l'articolo relativo alla [classificazione binaria
 
 ### <a name="binary-classification-inputs-and-outputs"></a>Input e output di classificazione binaria
 
-Per ottenere risultati ottimali con la classificazione binaria, i dati di training devono essere bilanciati, vale a dire avere un numero uguale di dati di training positivi e negativi. Gli elementi mancanti e i valori devono essere gestiti prima del training.
+Per ottenere risultati ottimali con la classificazione binaria, i dati di training devono essere bilanciati, vale a dire avere un numero uguale di dati di training positivi e negativi. I valori mancanti devono essere gestiti prima del training.
 
 I dati della colonna dell'etichetta di input devono essere <xref:System.Boolean>.
 I dati della colonna delle funzionalità di input devono essere un vettore a dimensione fissa di <xref:System.Single>.
 
 Questi algoritmi di training restituiscono le colonne seguenti:
 
-| Nome colonna di output | Tipo di colonna | Description|
+| Nome colonna di output | Tipo di colonna | DESCRIZIONE|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Il punteggio non elaborato calcolato dal modello|
 | `PredictedLabel` | <xref:System.Boolean> | L'etichetta stimata, in base al segno del punteggio. Un punteggio negativo esegue il mapping a `false` e un punteggio negativo esegue il mapping a `true`.|
@@ -91,7 +91,7 @@ La colonna delle funzionalità deve essere un vettore di dimensioni fisse di <xr
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Tipo | Description|
+| Nome output | Tipo | DESCRIZIONE|
 | -- | -- | -- |
 | `Score` | Vettore di <xref:System.Single> | I punteggi di tutte le classi. Valori più alti indicano maggiori probabilità di rientrare nella classe associata. Se l'elemento i-esimo ha il valore più elevato, l'indice delle etichette stimate sarà i. Si noti che i è l'indice a base zero. |
 | `PredictedLabel` | Tipo [key](xref:Microsoft.ML.Data.KeyDataViewType) | L'indice dell'etichetta stimata. Se il valore è i, l'etichetta effettiva potrebbe essere la categoria i-esima nel tipo di etichetta di input con valori key. |
@@ -124,7 +124,7 @@ I dati della colonna dell'etichetta di input devono essere <xref:System.Single>.
 
 Gli algoritmi di training per questa attività restituiscono quanto segue:
 
-| Nome output | Tipo | Description|
+| Nome output | Tipo | DESCRIZIONE|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Il punteggio non elaborato stimato dal modello |
 
@@ -148,7 +148,7 @@ I dati delle funzionalità di input devono essere <xref:System.Single>. Non sono
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Tipo | Description|
+| Nome output | Tipo | DESCRIZIONE|
 | -- | -- | -- |
 | `Score` | vettore di <xref:System.Single> | Le distanze del punto dati specificato dai baricentri di tutti i cluster |
 | `PredictedLabel` | Tipo [key](xref:Microsoft.ML.Data.KeyDataViewType) | L'indice del cluster più vicino stimato dal modello. |
@@ -180,7 +180,7 @@ Le funzionalità di input devono essere un vettore a dimensione fissa di <xref:S
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Tipo | Description|
+| Nome output | Tipo | DESCRIZIONE|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Il punteggio non negativo, illimitato calcolato dal modello di rilevamento anomalie |
 
@@ -203,7 +203,7 @@ I dati della funzionalità devono essere un vettore di dimensioni fisse di <xref
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Tipo | Description|
+| Nome output | Tipo | DESCRIZIONE|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Il punteggio illimitato calcolato dal modello per determinare la stima |
 

@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Informazioni sul ripristino delle dipendenze e degli strumenti specifici per il progetto tramite il comando dotnet-restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 3ddb9f679cfcab972483a4cb53ffe2b075867614
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 17bbbe33e7cb7b13d6fb1c0e44bb77dd2bbe7020
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613970"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626347"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -37,19 +37,35 @@ dotnet restore [-h|--help]
 
 ---
 
-## <a name="description"></a>Description
+## <a name="description"></a>DESCRIZIONE
 
 Il comando `dotnet restore` usa NuGet per ripristinare le dipendenze e gli strumenti specifici del progetto definiti nel file di progetto. Per impostazione predefinita, il ripristino delle dipendenze e degli strumenti viene eseguito in parallelo.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Per ripristinare le dipendenze, NuGet necessita dei feed in cui si trovano i pacchetti. I feed vengono forniti in genere tramite il file di configurazione *NuGet.config*. Durante l'installazione degli strumenti dell'interfaccia della riga di comando, viene fornito un file di configurazione predefinito. È possibile specificare più feed creando un file *NuGet.config* nella directory del progetto. È inoltre possibile specificare feed aggiuntivi per ogni chiamata a un prompt dei comandi.
+Per ripristinare le dipendenze, NuGet necessita dei feed in cui si trovano i pacchetti. I feed vengono forniti in genere tramite il file di configurazione *nuget.config*. Durante l'installazione degli strumenti dell'interfaccia della riga di comando, viene fornito un file di configurazione predefinito. È possibile specificare più feed creando un file *nuget.config* nella directory del progetto. È inoltre possibile specificare feed aggiuntivi per ogni chiamata a un prompt dei comandi.
 
 Per le dipendenze è possibile specificare dove vengono inseriti i pacchetti ripristinati durante l'operazione di ripristino usando l'argomento `--packages`. Se questa destinazione non viene specificata, viene usata la cache predefinita dei pacchetti NuGet che si trova nella directory `.nuget/packages` della directory home dell'utente in tutti i sistemi operativi. Ad esempio, */home/user1* in Linux o *C:\Utenti\user1* in Windows.
 
 Per gli strumenti specifici del progetto, `dotnet restore` ripristina innanzitutto il pacchetto in cui viene compresso lo strumento e quindi ripristina le dipendenze dello strumento come specificato nel file di progetto.
 
-Il funzionamento del comando `dotnet restore` può essere modificato da alcune impostazioni del file *NuGet.Config*, se è presente. Se ad esempio si imposta `globalPackagesFolder` in *NuGet.Config* i pacchetti NuGet ripristinati vengono posizionati nella cartella specificata. Questo approccio rappresenta un'alternativa all'impostazione dell'opzione `--packages` per il comando `dotnet restore`. Per altre informazioni, vedere [NuGet.Config reference](/nuget/schema/nuget-config-file) (Informazioni di riferimento su NuGet.Config).
+### <a name="nugetconfig-differences"></a>Differenze di nuget.config
+
+Il funzionamento del comando `dotnet restore` può essere modificato dalle impostazioni del file *nuget.config*, se è presente. Se ad esempio si imposta `globalPackagesFolder` in *nuget.config*, i pacchetti NuGet ripristinati vengono posizionati nella cartella specificata. Questo approccio rappresenta un'alternativa all'impostazione dell'opzione `--packages` per il comando `dotnet restore`. Per altre informazioni, vedere [Informazioni di riferimento su nuget.config](/nuget/schema/nuget-config-file).
+
+Esistono tre impostazioni specifiche che `dotnet restore` ignora:
+
+* [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
+
+  I reindirizzamenti di binding non funzionano con elementi `<PackageReference>` e .NET Core supporta solo elementi `<PackageReference>` per i pacchetti NuGet.
+
+* [solution](/nuget/schema/nuget-config-file#solution-section)
+
+  Questa impostazione è specifica di Visual Studio e non può essere applicata a .NET Core. .NET Core non usa un file `packages.config` ma usa invece elementi `<PackageReference>` per i pacchetti NuGet.
+
+* [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
+
+  Questa impostazione non può essere applicata perché [NuGet non supporta ancora la verifica multipiattaforma](https://github.com/NuGet/Home/issues/7939) di pacchetti attendibili.
 
 ## <a name="implicit-dotnet-restore"></a>`dotnet restore` implicito
 
@@ -79,7 +95,7 @@ Percorso facoltativo del file di progetto da ripristinare.
 
 `--configfile <FILE>`
 
-File di configurazione NuGet (*NuGet.config*) da usare per l'operazione di ripristino.
+File di configurazione NuGet (*nuget.config*) da usare per l'operazione di ripristino.
 
 `--disable-parallel`
 
@@ -129,7 +145,7 @@ Consente al comando di arrestarsi e attendere l'input o l'azione dell'utente (ad
 
 `--configfile <FILE>`
 
-File di configurazione NuGet (*NuGet.config*) da usare per l'operazione di ripristino.
+File di configurazione NuGet (*nuget.config*) da usare per l'operazione di ripristino.
 
 `--disable-parallel`
 
@@ -161,7 +177,7 @@ Specifica un runtime per il ripristino dei pacchetti. Questo runtime viene usato
 
 `-s|--source <SOURCE>`
 
-Specifica un'origine dei pacchetti NuGet da usare durante l'operazione di ripristino. Questa impostazione esegue l'override di tutte le origini specificate nei file *NuGet.config*. È possibile specificare più origini, selezionando questa opzione più volte.
+Specifica un'origine dei pacchetti NuGet da usare durante l'operazione di ripristino. Questa impostazione esegue l'override di tutte le origini specificate nei file *nuget.config*. È possibile specificare più origini, selezionando questa opzione più volte.
 
 `--verbosity <LEVEL>`
 

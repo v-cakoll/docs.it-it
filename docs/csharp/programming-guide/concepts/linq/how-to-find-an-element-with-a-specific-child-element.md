@@ -2,12 +2,12 @@
 title: 'Procedura: Trovare un elemento con un elemento figlio specifico (C#)'
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: 71068774b93581fdd82a0fe57651bc7780ca1ef1
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a2ff30ebfc8936d351358f77c0655eb584e6d390
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485567"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710075"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Procedura: Trovare un elemento con un elemento figlio specifico (C#)
 In questo argomento viene illustrato come trovare un determinato elemento che include un elemento figlio con un valore specifico.  
@@ -35,7 +35,7 @@ foreach (XElement el in tests)
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per altre informazioni, vedere [Utilizzo degli spazi dei nomi XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
+ Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per altre informazioni, vedere [Panoramica degli spazi dei nomi (LINQ to XML)](namespaces-overview-linq-to-xml.md).  
   
  Nell'esempio viene usato il documento XML seguente: [File XML di esempio: configurazione di test in uno spazio dei nomi](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md).  
   

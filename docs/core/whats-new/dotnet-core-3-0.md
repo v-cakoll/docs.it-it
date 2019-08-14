@@ -6,30 +6,35 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 06/14/2019
-ms.openlocfilehash: b1dd243d754bfc3b682c084820547f6b7846f0ea
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.date: 07/25/2019
+ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484665"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733366"
 ---
-# <a name="whats-new-in-net-core-30-preview-6"></a>Novità di .NET Core 3.0 (Preview 6)
+# <a name="whats-new-in-net-core-30-preview-7"></a>Novità di .NET Core 3.0 (Preview 7)
 
-Questo articolo descrive le novità di .NET Core 3.0 (Preview 6). Uno dei principali miglioramenti è il supporto per le applicazioni desktop di Windows (solo Windows). Con il componente Windows Desktop di .NET Core 3.0 SDK, è possibile convertire le applicazioni Windows Forms e WPF (Windows Presentation Foundation). Il componente Windows Desktop è dunque supportato e incluso solo in Windows. Per altre informazioni, vedere la sezione [Desktop di Windows](#windows-desktop) più avanti in questo articolo.
+Questo articolo descrive le novità di .NET Core 3.0 (Preview 7). Uno dei principali miglioramenti è il supporto per le applicazioni desktop di Windows (solo Windows). Con il componente Windows Desktop di .NET Core 3.0 SDK, è possibile convertire le applicazioni Windows Forms e WPF (Windows Presentation Foundation). Il componente Windows Desktop è dunque supportato e incluso solo in Windows. Per altre informazioni, vedere la sezione [Desktop di Windows](#windows-desktop) più avanti in questo articolo.
 
 .NET Core 3.0 aggiunge il supporto per C# 8.0. È consigliabile usare la [versione più recente di Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) o Visual Studio Code con l'estensione OmniSharp.
 
-[Scaricare e iniziare subito a usare .NET Core 3.0 Preview 6](https://aka.ms/netcore3download) in Windows, Mac e Linux.
+[Scaricare e iniziare subito a usare .NET Core 3.0 Preview 7](https://aka.ms/netcore3download) in Windows, Mac e Linux.
 
 Per altre informazioni su ogni versione di anteprima, vedere gli annunci seguenti:
 
+- [Annuncio di .NET Core 3.0 Preview 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [Annuncio di .NET Core 3.0 Preview 6](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [Annuncio di .NET Core 3.0 Preview 5](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
 - [Annuncio di .NET Core 3.0 Preview 4](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
 - [Annuncio di .NET Core 3.0 Preview 3](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
 - [Annuncio di .NET Core 3.0 Preview 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 - [Annuncio di .NET Core 3.0 Preview 1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+
+## <a name="production-supported-preview"></a>Anteprima di produzione supportata
+
+.NET Core Preview 7 è considerato pronto per la produzione da Microsoft ed è completamente supportato. A partire dalla versione Preview 7, le nuove versioni si incentreranno sul perfezionamento di .NET Core 3.0 invece di aggiungere nuove funzionalità. Per altre informazioni sulle novità della versione Preview 7, vedere l'[annuncio della Preview 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/).
 
 ## <a name="net-core-sdk-windows-installer"></a>Programma di installazione .NET Core SDK per Windows
 
@@ -174,23 +179,23 @@ Per disabilitare completamente la compilazione a livelli, usare questa impostazi
 
 È possibile migliorare il tempo di avvio delle applicazioni .NET Core compilando gli assembly nel formato ReadyToRun (R2R). R2R è un formato di compilazione AOT (Ahead-of-time).
 
-I file binari R2R migliorano le prestazioni di avvio riducendo la quantità di lavoro che deve eseguire il compilatore JIT (Just-in-time) durante il caricamento dell'applicazione. I file binari contengono codice nativo simile a ciò che viene generato dal compilatore JIT.
+I file binari R2R migliorano le prestazioni di avvio riducendo la quantità di lavoro che deve eseguire il compilatore JIT (Just-in-time) durante il caricamento dell'applicazione. I file binari contengono codice nativo simile a ciò che viene generato dal compilatore JIT. I file binari R2R, tuttavia, sono più grandi poiché contengono sia il codice in linguaggio intermedio, che è comunque necessario per alcuni scenari, sia la versione nativa dello stesso codice. R2R è disponibile solo quando si pubblica un'app autonoma che fa riferimento ad ambienti di runtime specifici (RID), ad esempio Linux x64 o Windows x64.
 
-I file binari R2R sono più grandi poiché contengono sia il codice in linguaggio intermedio, che è comunque necessario per alcuni scenari, sia la versione nativa dello stesso codice. R2R è disponibile solo quando si pubblica un'app autonoma che fa riferimento ad ambienti di runtime specifici (RID), ad esempio Linux x64 o Windows x64.
+Per compilare il progetto come ReadyToRun, seguire questa procedura:
 
-Per compilare l'app come R2R, aggiungere l'impostazione `<PublishReadyToRun>`:
+01. Aggiungere l'impostazione `<PublishReadyToRun>` al progetto.
 
-```xml
-<PropertyGroup>
-  <PublishReadyToRun>true</PublishReadyToRun>
-</PropertyGroup>
-```
+    ```xml
+    <PropertyGroup>
+      <PublishReadyToRun>true</PublishReadyToRun>
+    </PropertyGroup>
+    ```
 
-Pubblicare un'app autonoma. Questo comando, ad esempio, crea un'app autonoma per la versione a 64 bit di Windows:
+01. Pubblicare un'app autonoma. Questo comando, ad esempio, crea un'app autonoma per la versione a 64 bit di Windows:
 
-```console
-dotnet publish -c Release -r win-x64 --self-contained true
-```
+    ```console
+    dotnet publish -c Release -r win-x64 --self-contained true
+    ```
 
 ### <a name="cross-platformarchitecture-restrictions"></a>Limitazioni per ambienti con più piattaforme o architetture
 
@@ -406,7 +411,7 @@ Di seguito è riportato un esempio di lettura di C# 8.0 tramite il file [**launc
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
-<xref:System.Text.Json.Serialization.JsonSerializer?displayProperty=nameWithType> si basa su <xref:System.Text.Json.Utf8JsonReader> e <xref:System.Text.Json.Utf8JsonWriter> per offrire un'opzione di serializzazione veloce della memoria insufficiente quando si usano documenti e frammenti JSON.
+<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> si basa su <xref:System.Text.Json.Utf8JsonReader> e <xref:System.Text.Json.Utf8JsonWriter> per offrire un'opzione di serializzazione veloce della memoria insufficiente quando si usano documenti e frammenti JSON.
 
 VEDERE: https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md per un esempio di conversione
 

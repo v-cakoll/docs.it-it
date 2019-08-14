@@ -1,15 +1,15 @@
 ---
 title: 'Esercitazione: Categorizzare i problemi di supporto - classificazione multiclasse'
 description: Informazioni su come usare ML.NET in uno scenario di classificazione multiclasse per assegnare i problemi di GitHub a un'area specifica.
-ms.date: 05/16/2019
+ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: da4f82c1b2c4ebdc8ccc8f307722c2719909cf56
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195583"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710299"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Esercitazione: Categorizzare i problemi di supporto usando la classificazione multiclasse con ML NET
 
@@ -285,6 +285,25 @@ Usare il codice seguente per visualizzare le metriche, condividere i risultati e
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DisplayMetrics)]
 
+### <a name="save-the-model-to-a-file"></a>Salvare il modello in un file
+
+Quando si è soddisfatti con il modello ottenuto, salvarlo in un file per poter effettuare stime in un secondo momento o in un'altra applicazione. Aggiungere al metodo `Evaluate` il seguente codice. 
+
+[!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
+
+Creare il metodo `SaveModelAsFile` sotto il metodo `Evaluate`.
+
+```csharp
+private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingDataViewSchema, ITransformer model)
+{
+
+}
+```
+
+Aggiungere il codice seguente al metodo `SaveModelAsFile`. Questo codice usa il metodo [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) per serializzare e archiviare il modello sottoposto a training come file ZIP.
+
+[!code-csharp[SnippetSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetSaveModel)]
+
 ## <a name="deploy-and-predict-with-a-model"></a>Eseguire distribuzione e stime con un modello
 
 Aggiungere una chiamata al nuovo metodo dal metodo `Main`, subito sotto la chiamata al metodo `Evaluate`, usando il codice seguente:
@@ -302,10 +321,15 @@ private static void PredictIssue()
 
 Il metodo `PredictIssue` esegue le attività seguenti:
 
+* Carica il modello salvato
 * Crea un singolo problema con dati di test.
 * Esegue la stima dell'Area in base ai dati di test.
 * Combina i dati di test e le stime per i report.
 * Visualizza i risultati stimati.
+
+Caricare il modello salvato nell'applicazione aggiungendo il codice seguente al metodo `PredictIssue`:
+
+[!code-csharp[SnippetLoadModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetLoadModel)]
 
 Aggiungere un problema di GitHub per testare la stima del modello sottoposto a training nel metodo `Predict` creando un'istanza di `GitHubIssue`:
 

@@ -2,17 +2,17 @@
 title: 'Procedura: Cambiare lo spazio dei nomi per un intero albero XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
-ms.openlocfilehash: d046e01798c193ee0ea459f522a5c29187c697d7
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 80ab1f3b1a6df1debc3d94e89d3e0f3a8d78de7f
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487460"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709972"
 ---
 # <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Procedura: Cambiare lo spazio dei nomi per un intero albero XML (C#)
 È talvolta necessario cambiare a livello di codice lo spazio dei nomi per un elemento o un attributo. Questa operazione è particolarmente agevole con LINQ to XML. È possibile impostare la proprietà <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType>. Non è possibile impostare la proprietà <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType>, tuttavia è possibile copiare gli attributi in un nuovo oggetto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, rimuovere gli attributi esistenti e quindi aggiungere quelli nuovi inclusi nello spazio dei nomi desiderato.  
   
- Per altre informazioni, vedere [Utilizzo degli spazi dei nomi XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
+ Per altre informazioni, vedere [Panoramica degli spazi dei nomi (LINQ to XML)](namespaces-overview-linq-to-xml.md).  
   
 ## <a name="example"></a>Esempio  
  Nel codice seguente vengono create due alberi XML in nessuno spazio dei nomi. Viene quindi cambiato lo spazio dei nomi di ognuna degli alberi in modo da combinarle in un unico albero.  

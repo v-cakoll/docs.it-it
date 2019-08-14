@@ -2,12 +2,12 @@
 title: 'Procedura: Recuperare un singolo elemento figlio (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
-ms.openlocfilehash: 609488bcb8a15218e7d058031d8ee87dbc67092f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 16b9c54365bf32c87cc38ba5a2982623786d5cbf
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486538"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709923"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Procedura: Recuperare un singolo elemento figlio (LINQ to XML) (C#)
 In questo argomento viene illustrato come recuperare un singolo elemento figlio, dato il relativo nome. Quando si conosce il nome dell'elemento figlio e si ha la certezza che ne esista solo uno con tale nome, può risultare utile recuperare un singolo elemento, anziché una raccolta.  
@@ -36,7 +36,7 @@ Console.WriteLine(e);
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato lo stesso codice per XML all'interno di uno spazio dei nomi. Per altre informazioni, vedere [Utilizzo degli spazi dei nomi XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
+ Nell'esempio seguente viene illustrato lo stesso codice per XML all'interno di uno spazio dei nomi. Per altre informazioni, vedere [Panoramica degli spazi dei nomi (LINQ to XML)](namespaces-overview-linq-to-xml.md).  
   
  Nell'esempio viene usato il documento XML seguente: [File XML di esempio: tipico ordine di acquisto in uno spazio dei nomi](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   

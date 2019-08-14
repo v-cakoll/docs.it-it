@@ -2,13 +2,14 @@
 title: Glossario dell'apprendimento automatico
 description: Glossario dei principali termini relativi all'apprendimento automatico, utili per la creazione di modelli personalizzati in ML.NET.
 ms.custom: seodec18
-ms.date: 05/09/2019
-ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.topic: reference
+ms.date: 07/31/2019
+ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557972"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710532"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossario dell'apprendimento automatico
 
@@ -109,6 +110,10 @@ Un caso di [classificazione](#classification) in cui l'[etichetta](#label) può 
 
 Uno schema di estrazione delle funzionalità per i dati di testo: qualsiasi sequenza di N parole viene trasformata in un valore di [funzionalità](#feature).
 
+## <a name="normalization"></a>Normalization
+
+La normalizzazione è il processo di ridimensionamento dei dati a virgola mobile in valori compresi tra 0 e 1. Molti degli algoritmi di training usati in ML.NET richiedono la normalizzazione dei dati della funzionalità di input. ML.NET fornisce una serie di [trasformazioni per la normalizzazione](transforms.md#normalization-and-scaling)
+
 ## <a name="numerical-feature-vector"></a>Vettore di funzionalità numerico
 
 Un vettore di [funzionalità](#feature) costituito solo da valori numerici. È simile a `double[]`.
@@ -147,6 +152,10 @@ Nell'ambito della [regressione](#regression), una metrica di valutazione costitu
 ## <a name="root-of-mean-squared-error-rmse"></a>Radice dell'errore quadratico medio (RMSE)
 
 Nell'ambito della [regressione](#regression), una metrica di valutazione costituita dalla radice quadrata della media dei quadrati degli errori.
+
+## <a name="scoring"></a>Assegnazione dei punteggi
+
+L'assegnazione dei punteggi è il processo di applicazione di nuovi dati a un modello di apprendimento automatico sottoposto a training e la successiva generazione di stime. L'assegnazione dei punteggi è nota anche come inferenza. A seconda del tipo di modello, il punteggio può essere un valore non elaborato, una probabilità o una categoria.
 
 ## <a name="supervised-machine-learning"></a>Apprendimento automatico con supervisione
 

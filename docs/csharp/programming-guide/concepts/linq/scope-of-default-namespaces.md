@@ -1,13 +1,13 @@
 ---
-title: Ambito degli spazi dei nomi predefiniti in C#1
+title: Ambito degli spazi dei nomi predefiniti in C#
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 2eee1b0c79f585710962d8e84fe584bca6b8228b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 0c5f5cccda6ba6a75a8631ed095921b90b02916b
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483606"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868867"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>Ambito degli spazi dei nomi predefiniti in C\#
 Gli spazi dei nomi rappresentati nell'albero XML non sono inclusi nell'ambito delle query. Se il codice XML è incluso in uno spazio dei nomi predefinito, è comunque necessario dichiarare una variabile <xref:System.Xml.Linq.XNamespace> e combinarla con il nome locale per creare un nome completo da usare nella query.  
@@ -90,4 +90,4 @@ End of result set
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso degli spazi dei nomi XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)
+- [Panoramica degli spazi dei nomi (LINQ to XML)](namespaces-overview-linq-to-xml.md)

@@ -1,14 +1,14 @@
 ---
 title: Caricare i dati da file e altre origini
 description: Questa procedura illustra come caricare i dati per l'elaborazione e il training in ML.NET. I dati vengono inizialmente archiviati nei file o in altre origini dati, ad esempio database, JSON, XML o raccolte in memoria.
-ms.date: 06/25/2019
+ms.date: 08/01/2019
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: fafbe3fed9e3f0b509eda4f9d8967965bde19767
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: d5f3aab14a60a8c9860dc67f1cc98f3b1b3188ed
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397740"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733360"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Caricare i dati da file e altre origini
 
@@ -55,7 +55,7 @@ Caricare le colonne come:
 - Colonne singole come `Size` e `CurrentPrices` nella classe `HousingData`.
 - Più colonne contemporaneamente sotto forma di vettore come `HistoricalPrices` nella classe `HousingData`.
 
-Se si dispone di una proprietà Vector, applicare l'attributo [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) alla proprietà nel modello di dati. È importante sottolineare che tutti gli elementi del vettore devono essere dello stesso tipo.
+Se si dispone di una proprietà Vector, applicare l'attributo [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) alla proprietà nel modello di dati. È importante sottolineare che tutti gli elementi del vettore devono essere dello stesso tipo. Mantenere separate le colonne offre vantaggi in termini di semplicità e flessibilità di progettazione delle funzionalità, ma per un elevato numero di colonne, il funzionamento delle singole colonne influisce sulla velocità di training.
 
 ML.NET opera attraverso i nomi di colonna. Se si desidera modificare il nome di una colonna cambiandolo rispetto al nome della proprietà, usare l'attributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute). Quando si creano oggetti in memoria, è ancora necessario usare il nome della proprietà. Tuttavia, per l'elaborazione dei dati e la creazione di modelli di Machine Learning, ML.NET esegue l'override e fa riferimento alla proprietà con il valore fornito nell'attributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute).
 
@@ -139,6 +139,9 @@ HousingData[] inMemoryCollection = new HousingData[]
 ```
 
 Caricare la raccolta in memoria in un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView) con il metodo [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*):
+
+> [!IMPORTANT]
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) presuppone che l'oggetto [`IEnumerable`](xref:System.Collections.IEnumerable) da cui viene caricato sia di tipo thread-safe. 
 
 ```csharp
 // Create MLContext

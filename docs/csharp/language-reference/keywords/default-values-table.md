@@ -1,49 +1,32 @@
 ---
-title: Tabella dei valori predefiniti - Riferimenti per C#
+title: Tabella dei valori predefiniti - Informazioni di riferimento per C#
 ms.custom: seodec18
-description: Informazioni sui valori predefiniti dei tipi valore C#.
-ms.date: 08/23/2018
+description: Informazioni sui valori predefiniti dei tipi C#.
+ms.date: 07/29/2019
 helpviewer_keywords:
-- constructors [C#], return values
-- keywords [C#], new
+- default [C#]
 - parameterless constructor [C#]
-- defaults [C#]
-- value types [C#], initializing
-- variables [C#], value types
-- constructors [C#], parameterless constructor
-- types [C#], parameterless constructor return values
-ms.openlocfilehash: ec5fb4681f0e0562c5aefdf336841416f96bdf98
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23fba8269670156000cb68b3aa07ae7c770eada1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661405"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627736"
 ---
-# <a name="default-values-table-c-reference"></a>Tabella dei valori predefiniti (Riferimenti per C#)
+# <a name="default-values-table-c-reference"></a>Tabella dei valori predefiniti (Informazioni di riferimento per C#)
 
-La tabella seguente mostra i valori predefiniti dei [tipi valore](value-types.md).
+La tabella seguente mostra i valori predefiniti dei tipi C#:
 
-|Tipo valore|Valore predefinito|
-|----------------|-------------------|
+|Tipo|Valore predefinito|
+|---------|------------------|
+|Qualsiasi tipo riferimento|`null`|
+|Qualsiasi [tipo numerico integrale incorporato](../builtin-types/integral-numeric-types.md)|0 (zero)|
+|Qualsiasi [tipo numerico a virgola mobile incorporato](../builtin-types/floating-point-numeric-types.md)|0 (zero)|
 |[bool](bool.md)|`false`|
-|[byte](../builtin-types/integral-numeric-types.md)|0|
-|[char](char.md)|'\0'|
-|[decimal](../builtin-types/floating-point-numeric-types.md)|0M|
-|[double](../builtin-types/floating-point-numeric-types.md)|0.0D|
+|[char](char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|Valore prodotto dall'espressione `(E)0`, dove `E` è l'identificatore di enumerazione.|
-|[float](../builtin-types/floating-point-numeric-types.md)|0.0F|
-|[int](../builtin-types/integral-numeric-types.md)|0|
-|[long](../builtin-types/integral-numeric-types.md)|0L|
-|[sbyte](../builtin-types/integral-numeric-types.md)|0|
-|[short](../builtin-types/integral-numeric-types.md)|0|
 |[struct](struct.md)|Valore prodotto impostando tutti i campi dei tipi valore sui rispettivi valori predefiniti e tutti i campi dei tipi riferimento su `null`.|
-|[uint](../builtin-types/integral-numeric-types.md)|0|
-|[ulong](../builtin-types/integral-numeric-types.md)|0|
-|[ushort](../builtin-types/integral-numeric-types.md)|0|
-
-## <a name="remarks"></a>Osservazioni
-
-Non è possibile usare le variabili non inizializzate in C#. È possibile inizializzare una variabile con il valore predefinito del relativo tipo. È anche possibile usare il valore predefinito di un tipo per specificare il valore predefinito di un [argomento facoltativo](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments) del metodo.
+|Qualsiasi [tipo valore nullable](../../programming-guide/nullable-types/index.md)|Un'istanza per la quale la proprietà <xref:System.Nullable%601.HasValue%2A> è `false` e la proprietà <xref:System.Nullable%601.Value%2A> non è definita. Il valore predefinito è noto anche come valore *null* del tipo valore nullable.|
 
 Usare l'[espressione valore predefinito](../../programming-guide/statements-expressions-operators/default-value-expressions.md) per produrre il valore predefinito di un tipo, come illustrato nell'esempio seguente:
 
@@ -57,19 +40,23 @@ A partire da C# 7.1 è possibile usare il [ valore letterale `default`](../../pr
 int a = default;
 ```
 
-È anche possibile usare il costruttore senza parametri o il costruttore senza parametri implicito per generare il valore predefinito di un tipo valore, come illustrato nell'esempio seguente. Per altre informazioni sui costruttori, vedere l'articolo [Costruttori](../../programming-guide/classes-and-structs/constructors.md).
+Per un tipo valore, anche il costruttore senza parametri implicito produce il valore predefinito del tipo, come mostrato nell'esempio seguente:
 
-```csharp
-int a = new int();
+```csharp-interactive
+var n = new System.Numerics.Complex();
+Console.WriteLine(n);  // output: (0, 0)
 ```
 
-Il valore predefinito di un qualsiasi [tipo di riferimento](reference-types.md) è `null`. Il valore predefinito di un [tipo nullable](../../programming-guide/nullable-types/index.md) è un'istanza per la quale la proprietà <xref:System.Nullable%601.HasValue%2A> è `false` e la proprietà <xref:System.Nullable%601.Value%2A> non è definita.
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
+Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguaggio C#](~/_csharplang/spec/introduction.md):
+
+- [Valori predefiniti](~/_csharplang/spec/variables.md#default-values)
+- [Costruttori predefiniti](~/_csharplang/spec/types.md#default-constructors)
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
-- [Tipi valore](value-types.md)
-- [Tabella dei tipi valore](value-types-table.md)
+- [Parole chiave C#](index.md)
 - [Tabella dei tipi incorporati](built-in-types-table.md)
+- [Costruttori](../../programming-guide/classes-and-structs/constructors.md)
