@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/01/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3e5b6b482dfbd1ff06347883a93a561944200a9f
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733403"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868717"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Esercitazione: Rilevare oggetti usando ONNX in ML.NET
 
@@ -344,7 +344,6 @@ Dopo aver creato le classi per le dimensioni e i rettangoli di selezione, è pos
     - `CELL_HEIGHT`: altezza di una cella nella griglia dell'immagine.
     - `channelStride`: posizione iniziale della cella corrente nella griglia.
 
-
     Quando il modello assegna un punteggio a un'immagine, divide l'input `416px x 416px` in una griglia di celle con dimensioni `13 x 13`. Ogni cella contenuta è `32px x 32px`. All'interno di ogni cella sono presenti 5 rettangoli di selezione, ognuno contenente 5 funzionalità (x, y, larghezza, altezza, confidenza). Inoltre, ogni rettangolo di selezione contiene la probabilità di ognuna delle classi, che in questo caso è 20. Di conseguenza, ogni cella contiene 125 informazioni (5 funzionalità + 20 probabilità delle classi). 
 
 Creare un elenco di ancoraggi sotto `channelStride` per tutti i 5 rettangoli di selezione:
@@ -654,7 +653,6 @@ Sotto questo codice usare il metodo `DrawBoundingBox` per tracciare i rettangoli
 Infine, aggiungere la logica di registrazione con il metodo `LogDetectedObjects`.
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
-
 
 Dopo l'istruzione try-catch aggiungere logica aggiuntiva per indicare che l'esecuzione del processo è stata completata.
 
