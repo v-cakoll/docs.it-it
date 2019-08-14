@@ -6,14 +6,14 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: b689bb7299d541708db7ae786bff62a1007608e5
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 32ca9658ddf4ab6e8690f29797b7ac7b09df2ca7
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557882"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012951"
 ---
-# <a name="walkthrough-style-wpf-content"></a>Procedura dettagliata: Contenuto WPF stile
+# <a name="walkthrough-style-wpf-content"></a>Procedura dettagliata: Stile contenuto WPF
 
 Questa procedura dettagliata mostra come applicare uno stile a un controllo Windows Presentation Foundation (WPF) incluso in un Windows Form.
 
@@ -23,7 +23,7 @@ Questa procedura dettagliata mostra come applicare uno stile a un controllo Wind
 
 - Creare il tipo di controllo WPF.
 
-- Applicare uno stile a control.a di WPF
+- Applicare uno stile al controllo WPF.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -31,7 +31,7 @@ Per completare la procedura dettagliata, è necessario Visual Studio.
 
 ## <a name="create-the-project"></a>Creare il progetto
 
-Aprire Visual Studio e creare un nuovo progetto Windows Forms Application in Visual Basic o l'oggetto visivo C# denominato `StylingWpfContent`.
+Aprire Visual Studio e creare un nuovo progetto di applicazione Windows Forms in Visual Basic o C# in `StylingWpfContent`un oggetto visivo denominato.
 
 > [!NOTE]
 > Con il contenuto WPF sono supportati solo progetti C# e Visual Basic.
@@ -40,15 +40,15 @@ Aprire Visual Studio e creare un nuovo progetto Windows Forms Application in Vis
 
 Dopo avere aggiunto un tipo di controllo WPF al progetto, è possibile inserirlo in un controllo <xref:System.Windows.Forms.Integration.ElementHost>.
 
-1. Aggiungere un nuovo progetto WPF <xref:System.Windows.Controls.UserControl> alla soluzione. Usare il nome predefinito per il tipo di controllo, `UserControl1.xaml`. Per altre informazioni, vedere [Procedura dettagliata: Creare nuovo contenuto WPF in Windows Form in fase di progettazione](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
+1. Aggiungere un nuovo progetto WPF <xref:System.Windows.Controls.UserControl> alla soluzione. Usare il nome predefinito per il tipo di controllo, `UserControl1.xaml`. Per altre informazioni, vedere [Procedura dettagliata: Creazione di nuovo contenuto WPF in Windows Forms in fase](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)di progettazione.
 
-2. In visualizzazione Progettazione verificare che `UserControl1` sia selezionato. Per altre informazioni, vedere [Procedura: Selezionare e spostare gli elementi nell'area di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).
+2. In visualizzazione Progettazione verificare che `UserControl1` sia selezionato. Per altre informazioni, vedere [Procedura: Consente di selezionare e spostare elementi nell'](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))area di progettazione.
 
-3. Nel **le proprietà** finestra, impostare il valore della <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> le proprietà da `200`.
+3. Nella finestra **Proprietà** impostare il valore delle <xref:System.Windows.FrameworkElement.Width%2A> proprietà e <xref:System.Windows.FrameworkElement.Height%2A> su `200`.
 
-4. Aggiungere un <xref:System.Windows.Controls.Button?displayProperty=nameWithType> il controllo al <xref:System.Windows.Controls.UserControl> e impostare il valore della <xref:System.Windows.Controls.ContentControl.Content%2A> proprietà **Annulla**.
+4. Aggiungere un <xref:System.Windows.Controls.Button?displayProperty=nameWithType> <xref:System.Windows.Controls.UserControl> controllo a e <xref:System.Windows.Controls.ContentControl.Content%2A> impostare il valore della proprietà su **Cancel**.
 
-5. Aggiungere una seconda <xref:System.Windows.Controls.Button?displayProperty=nameWithType> il controllo al <xref:System.Windows.Controls.UserControl> e impostare il valore della <xref:System.Windows.Controls.ContentControl.Content%2A> proprietà **OK**.
+5. Aggiungere un secondo <xref:System.Windows.Controls.Button?displayProperty=nameWithType> controllo <xref:System.Windows.Controls.UserControl> a e <xref:System.Windows.Controls.ContentControl.Content%2A> impostare il valore della proprietà su **OK**.
 
 6. Compilare il progetto.
 
@@ -58,11 +58,11 @@ Dopo avere aggiunto un tipo di controllo WPF al progetto, è possibile inserirlo
 
 1. Aprire `Form1` in Progettazione Windows Form.
 
-1. Nel **casella degli strumenti**, fare doppio clic su `UserControl1` per creare un'istanza di `UserControl1` nel form.
+1. Nella **casella degli strumenti**fare doppio clic `UserControl1` su per creare un'istanza `UserControl1` di nel form.
 
      L'istanza di `UserControl1` viene inclusa in un nuovo controllo <xref:System.Windows.Forms.Integration.ElementHost> denominato `elementHost1`.
 
-1. Nel pannello smart tag per `elementHost1`, fare clic su **modifica contenuto ospitato** nell'elenco a discesa.
+1. Nel pannello smart tag per `elementHost1`fare clic su **modifica contenuto ospitato** nell'elenco a discesa.
 
      `UserControl1` si apre in [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
 
@@ -124,7 +124,7 @@ Dopo avere aggiunto un tipo di controllo WPF al progetto, è possibile inserirlo
    Style="{StaticResource SimpleButton}
    ```
 
-   La dichiarazione del pulsante sarà simile di XAML seguente:
+   La dichiarazione di un pulsante sarà simile al codice XAML seguente:
 
    ```xaml
    <Button Height="23" Margin="41,52,98,0" Name="button1" VerticalAlignment="Top"
@@ -137,7 +137,7 @@ Dopo avere aggiunto un tipo di controllo WPF al progetto, è possibile inserirlo
 
 1. Il nuovo stile viene applicato al pulsante.
 
-1. Dal **Debug** dal menu **Avvia debug** per eseguire l'applicazione.
+1. Scegliere **Avvia debug** dal menu **debug** per eseguire l'applicazione.
 
 1. Fare clic sui pulsanti OK e Cancel e visualizzare le differenze.
 
