@@ -3,12 +3,12 @@ title: "Procedura: Compilare un'applicazione ASP.NET che può riconoscere attest
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
-ms.openlocfilehash: ecaf1de0b806d5568d81fac2ddb2b39b697135ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75db96a621d7863ef445efb24814111b34da6960
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792745"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971842"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Procedura: Compilare un'applicazione ASP.NET che può riconoscere attestazioni con l'autenticazione basata su moduli
 
@@ -60,7 +60,7 @@ L'autenticazione basata su form ha tratto vantaggio dall'inclusione di WIF in .N
 
 In questo passaggio si creerà una nuova applicazione Web Form ASP.NET.
 
-#### <a name="to-create-a-simple-aspnet-application"></a>Per creare un'applicazione ASP.NET semplice
+### <a name="to-create-a-simple-aspnet-application"></a>Per creare un'applicazione ASP.NET semplice
 
 1. Avviare Visual Studio e fare clic su **File**, **Nuovo** e **Progetto**.
 
@@ -72,7 +72,7 @@ In questo passaggio si creerà una nuova applicazione Web Form ASP.NET.
 
 In questo passaggio si aggiungerà una voce al file di configurazione *Web.config* e si modificherà il file *Default.aspx* per visualizzare le informazioni sulle attestazioni per un account.
 
-#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Per configurare l'applicazione ASP.NET per le attestazioni usando l'autenticazione basata su form
+### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Per configurare l'applicazione ASP.NET per le attestazioni usando l'autenticazione basata su form
 
 1. Nel file *Default.aspx* sostituire il markup esistente con il seguente:
 
@@ -126,7 +126,7 @@ In questo passaggio si aggiungerà una voce al file di configurazione *Web.confi
 
 In questo passaggio verrà testata l'applicazione Web Form ASP.NET e si verificherà che le attestazioni vengano presentate quando un utente accede con l'autenticazione basata su form.
 
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Per testare le attestazioni con l'applicazione Web Form ASP.NET usando l'autenticazione basata su form
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Per testare le attestazioni con l'applicazione Web Form ASP.NET usando l'autenticazione basata su form
 
 1. Premere **F5** per compilare ed eseguire l'applicazione. Verrà visualizzata la pagina *Default.aspx*, con i collegamenti **Register** e **Log in** nella parte superiore destra. Fare clic su **Register**.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 6e2b5eaff3ee80434d5cdf39391273685da9faf0
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 259594858e96897cb377cde4104e17b748f902c4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434082"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971814"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente
 > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "68434082"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Usata per i controlli in cui è possibile passare alternativamente tra stati, ad esempio caselle di controllo e voci di menu selezionabili.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Usata per i controlli che è possibile ridimensionare, spostare e ruotare. Il pattern di controllo Transform viene in genere usato in finestre di progettazione, moduli, editor grafici e applicazioni di disegno.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|Consente ai client di ottenere o impostare un valore per i controlli che non supportano un intervallo di valori, ad esempio, un controllo di selezione di data e ora.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Espone informazioni specifiche di Windows, un concetto fondamentale per il sistema operativo [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] . Esempi di controlli per Windows sono le finestre dell'applicazione di primo livello ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]e così via), finestre figlio [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] e le finestre di dialogo.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Espone informazioni specifiche di Windows, un concetto fondamentale per il sistema operativo [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] . Esempi di controlli Windows sono le finestre dell'applicazione di primo livello ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]e così via), le finestre figlio MDI (Multiple Document Interface) e le finestre di dialogo.|  
   
 ## <a name="see-also"></a>Vedere anche
 

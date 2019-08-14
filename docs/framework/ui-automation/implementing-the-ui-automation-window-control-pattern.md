@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: 9cab4dbbcd3302a6e74783eaefdbbd8463332224
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1d40b133beb68c14e7392139bf0753cedb67a4ef
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710248"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971827"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementazione del pattern di controllo Window di automazione interfaccia utente
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "68710248"
   
  In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IWindowProvider>, incluse le informazioni relative a proprietà, metodi ed eventi di <xref:System.Windows.Automation.WindowPattern> . Alla fine della panoramica sono elencati collegamenti ad altro materiale di riferimento.  
   
- Il <xref:System.Windows.Automation.WindowPattern> pattern di controllo viene usato per supportare i controlli che forniscono funzionalità fondamentali basate su finestra all'interno di un'interfaccia utente grafica (GUI) tradizionale. I controlli che devono implementare questo pattern di controllo sono, ad esempio, le finestre dell'applicazione di primo livello, le finestre figlio dell' [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] , i controlli riquadro ridimensionabili, le finestre di dialogo modali e le finestre fumetto della Guida.  
+ Il <xref:System.Windows.Automation.WindowPattern> pattern di controllo viene usato per supportare i controlli che forniscono funzionalità fondamentali basate su finestra all'interno di un'interfaccia utente grafica (GUI) tradizionale. Esempi di controlli che devono implementare questo pattern di controllo sono le finestre dell'applicazione di primo livello, le finestre figlio dell'interfaccia a documenti multipli (MDI), i controlli del riquadro suddiviso ridimensionabili, le finestre di dialogo modali e le finestre della guida del fumetto.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Linee guida e convenzioni di implementazione  

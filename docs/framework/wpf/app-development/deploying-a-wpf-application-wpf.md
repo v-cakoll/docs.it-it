@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 924553bf457a6668143785c78871ebac6e01efa4
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16a0436accfb031ddd0bb413e519d80e550786b4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818021"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972261"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Distribuzione di un'applicazione WPF (WPF)
 Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è necessario distribuirle. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]e i .NET Framework includono diverse tecnologie di distribuzione. che vengono usate per distribuire specifici tipi di applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Questo argomento offre una breve panoramica delle singole tecnologie di distribuzione e di come vengono usate in relazione ai requisiti di distribuzione di ogni tipo di applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -69,7 +69,7 @@ Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è ne
   
 - Applicazioni [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo markup.  
   
-- [https://login.microsoftonline.com/consumers/]([!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]).  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Distribuzione di applicazioni autonome  
@@ -114,7 +114,7 @@ Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è ne
 ## <a name="installing-the-net-framework"></a>Installazione di .NET Framework  
  Per eseguire un' [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazione, è necessario che nel client sia installato il Framework Microsoft .NET. Internet Explorer rileva automaticamente se i client vengono installati con .NET Framework [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] quando vengono visualizzate le applicazioni ospitate da browser. Se il .NET Framework non è installato, Internet Explorer richiede agli utenti di installarlo.  
   
- Per rilevare se la .NET Framework è installata, Internet Explorer include un'applicazione del programma di avvio automatico registrata come gestore [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] di fallback per i file di contenuto con le estensioni seguenti:. XAML,. XPS,. XBAP e. Application. Se si passa a questi tipi di file e il .NET Framework non è installato nel client, l'applicazione del programma di avvio automatico richiede l'autorizzazione per l'installazione. Se non viene fornita l'autorizzazione, né l'.NET Framework né l'applicazione sono installate.  
+ Per rilevare se la .NET Framework è installata, Internet Explorer include un'applicazione del programma di avvio automatico registrata come gestore di fallback Multipurpose Internet Mail Extensions (MIME) per i file di contenuto con le estensioni seguenti:. XAML,. XPS,. XBAP , e. Application. Se si passa a questi tipi di file e il .NET Framework non è installato nel client, l'applicazione del programma di avvio automatico richiede l'autorizzazione per l'installazione. Se non viene fornita l'autorizzazione, né l'.NET Framework né l'applicazione sono installate.  
   
  Se l'autorizzazione viene concessa, Internet Explorer Scarica e installa il .NET Framework utilizzando Microsoft Servizio trasferimento intelligente in background (BITS). Una volta completata l'installazione del .NET Framework, il file richiesto originariamente viene aperto in una nuova finestra del browser.  
   

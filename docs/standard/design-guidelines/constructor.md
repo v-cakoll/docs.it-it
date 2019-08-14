@@ -13,71 +13,73 @@ helpviewer_keywords:
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 author: KrzysztofCwalina
-ms.openlocfilehash: 074aa391b71257584a01171e95da7472354cdc2c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a43ec815275e58f4bc6462fb4f5cb4733267de31
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746785"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972108"
 ---
 # <a name="constructor-design"></a>Progettazione di costruttori
-Esistono due tipi di costruttori: digitare costruttori e i costruttori di istanza.  
-  
- I costruttori di tipi sono statici e vengono eseguiti da CLR prima che venga utilizzato il tipo. Costruttori di istanza eseguire quando viene creata un'istanza di un tipo.  
-  
- I costruttori di tipi non accettano alcun parametro. Costruttori di istanza possono. Costruttori di istanze che non accettano alcun parametro vengono spesso definiti costruttori senza parametri.  
-  
- I costruttori sono il modo più semplice per creare istanze di un tipo. La maggior parte degli sviluppatori saranno ricerca e provare a usare un costruttore prima che essi prendere in considerazione modi alternativi per la creazione di istanze (ad esempio, metodi factory).  
-  
- **✓ CONSIDER** fornendo semplice, in teoria predefiniti, costruttori.  
-  
- Un costruttore semplice ha un numero molto ridotto di parametri e tutti i parametri sono primitive o enum. Questi costruttori semplici aumentano l'utilizzabilità del framework.  
-  
- **✓ CONSIDER** utilizzando un metodo factory statico invece di un costruttore se la semantica dell'operazione desiderata non eseguano il mapping direttamente per la costruzione di una nuova istanza o seguendo le linee guida progettazione costruttore ritiene non naturale.  
-  
- **✓ DO** utilizzare i parametri del costruttore come tasti di scelta rapida per l'impostazione delle proprietà principali.  
-  
- Non vi sarà alcuna differenza semantica tra usando il costruttore vuoto seguito da alcuni set di proprietà e usando un costruttore con più argomenti.  
-  
- **✓ DO** utilizzare lo stesso nome per i parametri del costruttore e una proprietà, se vengono utilizzati i parametri del costruttore è sufficiente impostare la proprietà.  
-  
- L'unica differenza tra tali parametri e le proprietà debba essere maiuscole e minuscole.  
-  
- **✓ DO** lavoro minimo nel costruttore.  
-  
- I costruttori non occorre eseguire la quantità di lavoro diverso da acquisizione i parametri del costruttore. Il costo di qualsiasi altra elaborazione dovrebbe risultare ritardato fino al necessario.  
-  
- **✓ DO** generare eccezioni da costruttori di istanza, se appropriato.  
-  
- **Segno di spunta si** dichiarare in modo esplicito il costruttore pubblico senza parametri nelle classi, se tale costruttore è obbligatorio.  
-  
- Se si non dichiarare costruttori in modo esplicito su un tipo, molti linguaggi (ad esempio C#) verrà aggiunto automaticamente un costruttore pubblico senza parametri. (Le classi astratte ottenere un costruttore protetto).  
-  
- Aggiunta di un costruttore con parametri a una classe impedisce al compilatore di aggiungere il costruttore senza parametri. Ciò spesso causa modifiche di rilievo accidentale.  
-  
- **X evitare** definirne esplicitamente costruttori senza parametri in struct.  
-  
- In questo modo la creazione della matrice meno tempo, in quanto se non è definito il costruttore senza parametri, non deve essere eseguito su ogni slot nella matrice. Si noti che molti compilatori, tra cui c#, non consentano strutture possono avere costruttori senza parametri per questo motivo.  
-  
- **X AVOID** chiamare membri virtuali su un oggetto all'interno di relativo costruttore.  
-  
- La chiamata a un membro virtuale provocherà la sostituzione più derivata da chiamare, anche se il costruttore del tipo più derivato non è stato completamente eseguito ancora.  
-  
-### <a name="type-constructor-guidelines"></a>Linee guida di costruttore di tipo  
- **✓ DO** rendere privato costruttori statici.  
-  
- Un costruttore statico, denominato anche costruttore di classe, viene utilizzato per inizializzare un tipo. CLR chiama il costruttore statico prima che venga creata la prima istanza del tipo o qualsiasi membro statico sul quel tipo viene chiamati. L'utente non ha alcun controllo su quando viene chiamato il costruttore statico. Se un costruttore statico non è privato, può essere chiamata dal codice diverso da CLR. A seconda delle operazioni eseguite nel costruttore, ciò può provocare comportamenti imprevisti. Il compilatore C# forza i costruttori statici come privato.  
-  
- **X DO NOT** generare eccezioni da costruttori statici.  
-  
- Se viene generata un'eccezione da un costruttore di tipo, il tipo non è utilizzabile nel dominio dell'applicazione corrente.  
-  
- **✓ CONSIDER** inizializzando i campi statici inline anziché in modo esplicito i costruttori statici, perché il runtime è in grado di ottimizzare le prestazioni dei tipi che non dispongono di un costruttore statico definito in modo esplicito.  
-  
- *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
-  
- *Ristampato con l'autorizzazione di Pearson Education, Inc. dal [linee guida di progettazione di Framework: Convenzioni, linguaggi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
-  
+
+Esistono due tipi di costruttori: costruttori di tipi e costruttori di istanze.
+
+I costruttori di tipi sono statici e vengono eseguiti da CLR prima di utilizzare il tipo. I costruttori di istanza vengono eseguiti quando viene creata un'istanza di un tipo.
+
+I costruttori di tipi non possono assumere parametri. I costruttori di istanze possono. I costruttori di istanze che non accettano parametri sono spesso denominati costruttori senza parametri.
+
+I costruttori rappresentano il modo più naturale per creare istanze di un tipo. La maggior parte degli sviluppatori cercherà e tenterà di usare un costruttore prima di prendere in considerazione modi alternativi per creare istanze, ad esempio i metodi factory.
+
+**✓ CONSIDER** fornendo semplice, in teoria predefiniti, costruttori.
+
+Un costruttore semplice ha un numero molto ridotto di parametri e tutti i parametri sono primitivi o enumerazioni. Tali costruttori semplici aumentano l'usabilità del Framework.
+
+**✓ CONSIDER** utilizzando un metodo factory statico invece di un costruttore se la semantica dell'operazione desiderata non eseguano il mapping direttamente per la costruzione di una nuova istanza o seguendo le linee guida progettazione costruttore ritiene non naturale.
+
+**✓ DO** utilizzare i parametri del costruttore come tasti di scelta rapida per l'impostazione delle proprietà principali.
+
+Non deve esserci alcuna differenza nella semantica tra l'uso del costruttore vuoto seguito da alcuni set di proprietà e l'uso di un costruttore con più argomenti.
+
+**✓ DO** utilizzare lo stesso nome per i parametri del costruttore e una proprietà, se vengono utilizzati i parametri del costruttore è sufficiente impostare la proprietà.
+
+L'unica differenza tra tali parametri e le proprietà dovrebbe essere la combinazione di maiuscole e minuscole.
+
+**✓ DO** lavoro minimo nel costruttore.
+
+I costruttori non devono eseguire molto lavoro oltre a acquisire i parametri del costruttore. Il costo di qualsiasi altra elaborazione deve essere posticipato fino a quando richiesto.
+
+**✓ DO** generare eccezioni da costruttori di istanza, se appropriato.
+
+**✓** Dichiarare in modo esplicito il costruttore pubblico senza parametri nelle classi, se tale costruttore è obbligatorio.
+
+Se non si dichiara in modo esplicito alcun costruttore in un tipo, molti linguaggi (ad C#esempio) aggiungeranno automaticamente un costruttore pubblico senza parametri. (Le classi astratte ottengono un costruttore protetto).
+
+L'aggiunta di un costruttore con parametri a una classe impedisce al compilatore di aggiungere il costruttore senza parametri. Questo causa spesso modifiche di rilievo accidentali.
+
+**X evitare** di definire in modo esplicito costruttori senza parametri per gli struct.
+
+In questo modo la creazione di matrici risulta più veloce, perché se il costruttore senza parametri non è definito, non è necessario eseguirlo in ogni slot della matrice. Si noti che molti compilatori C#, tra cui, non consentono a struct di avere costruttori senza parametri per questo motivo.
+
+**X AVOID** chiamare membri virtuali su un oggetto all'interno di relativo costruttore.
+
+La chiamata a un membro virtuale provocherà la chiamata dell'override più derivato, anche se il costruttore del tipo più derivato non è ancora stato completamente eseguito.
+
+## <a name="type-constructor-guidelines"></a>Linee guida sui costruttori di tipi
+
+**✓ DO** rendere privato costruttori statici.
+
+Un costruttore statico, detto anche costruttore di classe, viene usato per inizializzare un tipo. CLR chiama il costruttore statico prima che venga creata la prima istanza del tipo o venga chiamato qualsiasi membro statico del tipo. L'utente non ha alcun controllo sul momento in cui viene chiamato il costruttore statico. Se un costruttore statico non è privato, può essere chiamato da codice diverso da CLR. A seconda delle operazioni eseguite nel costruttore, questo può causare un comportamento imprevisto. Il C# compilatore forza i costruttori statici come privati.
+
+**X DO NOT** generare eccezioni da costruttori statici.
+
+Se un'eccezione viene generata da un costruttore di tipo, il tipo non è utilizzabile nel dominio applicazione corrente.
+
+**✓ CONSIDER** inizializzando i campi statici inline anziché in modo esplicito i costruttori statici, perché il runtime è in grado di ottimizzare le prestazioni dei tipi che non dispongono di un costruttore statico definito in modo esplicito.
+
+*Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
+
+*Ristampato dall'autorizzazione di Pearson Education, Inc. dalle [linee guida di progettazione del Framework: Convenzioni, idiomi e modelli per le librerie .NET riutilizzabili,](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 2a edizione di Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo Microsoft Windows.*
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md)

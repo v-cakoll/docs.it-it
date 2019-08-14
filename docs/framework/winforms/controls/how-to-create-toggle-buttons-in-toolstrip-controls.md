@@ -9,32 +9,33 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
-ms.openlocfilehash: 21da5564bfeec01d448c23d3e734bdd16fc1566b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a003b91cd4db5db2790a20db97dbaa4d8925e96
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666426"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972358"
 ---
 # <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Procedura: Creare pulsanti interruttore nei controlli ToolStrip
-Quando un utente fa clic su un pulsante Mostra/Nascondi, viene visualizzato incassato e mantiene tale aspetto fino a quando l'utente fa clic sul pulsante nuovo.  
-  
-### <a name="to-create-a-toggling-toolstripbutton"></a>Per creare un ToolStripButton  
-  
-- Usare codice simile al codice seguente. Questo codice presuppone che il form contenga un <xref:System.Windows.Forms.ToolStrip> controllo e che il <xref:System.Windows.Forms.ToolStrip.Items%2A> raccolta contiene un <xref:System.Windows.Forms.ToolStripButton> chiamato `toolStripButton1`. Si presume anche che un gestore eventi chiamato `toolStripButton1_CheckedChanged`.  
-  
-    ```vb  
-    toolStripButton1.CheckOnClick = True  
-    toolStripButton1.CheckedChanged AddressOf _  
-    EventHandler(toolStripButton1_CheckedChanged);  
-    ```  
-  
-    ```csharp  
-    toolStripButton1.CheckOnClick = true;  
-    toolStripButton1.CheckedChanged += new _  
-    EventHandler(toolStripButton1_CheckedChanged);  
-    ```  
-  
+
+Quando un utente fa clic su un interruttore, viene visualizzato incassato e mantiene l'aspetto incassato fino a quando l'utente fa nuovamente clic sul pulsante.
+
+## <a name="to-create-a-toggling-toolstripbutton"></a>Per creare un elemento ToolStripButton
+
+- Usare codice come l'esempio di codice seguente. Questo codice presuppone che il form contenga <xref:System.Windows.Forms.ToolStrip> un controllo e che la <xref:System.Windows.Forms.ToolStrip.Items%2A> raccolta contenga <xref:System.Windows.Forms.ToolStripButton> un `toolStripButton1`oggetto denominato. Si presuppone inoltre che si disponga di un gestore eventi `toolStripButton1_CheckedChanged`denominato.
+
+    ```vb
+    toolStripButton1.CheckOnClick = True
+    toolStripButton1.CheckedChanged AddressOf _
+    EventHandler(toolStripButton1_CheckedChanged);
+    ```
+
+    ```csharp
+    toolStripButton1.CheckOnClick = true;
+    toolStripButton1.CheckedChanged += new _
+    EventHandler(toolStripButton1_CheckedChanged);
+    ```
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.ToolStripButton>
