@@ -8,40 +8,42 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
-ms.openlocfilehash: 73a51bd477a434b48f91406d08762fe886676b90
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 810c5b127a34fb0a35e8fd2d83ff59e00aca0ba1
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626873"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972042"
 ---
-# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a><span data-ttu-id="0f2c8-102">Procedura: Disabilitare sessioni protette in WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="0f2c8-102">How to: Disable Secure Sessions on a WSFederationHttpBinding</span></span>
-<span data-ttu-id="0f2c8-103">Alcuni servizi possono richiedere credenziali federate senza tuttavia supportare le sessioni protette.</span><span class="sxs-lookup"><span data-stu-id="0f2c8-103">Some services may require federated credentials but not support secure sessions.</span></span> <span data-ttu-id="0f2c8-104">In questo caso occorre disattivare la funzionalità di sessione protetta.</span><span class="sxs-lookup"><span data-stu-id="0f2c8-104">In that case, you must disable the secure session feature.</span></span> <span data-ttu-id="0f2c8-105">A differenza della classe <xref:System.ServiceModel.WSHttpBinding>, la classe <xref:System.ServiceModel.WSFederationHttpBinding> non fornisce alcuna modalità di disattivazione delle sessioni protette quando si comunica con un servizio.</span><span class="sxs-lookup"><span data-stu-id="0f2c8-105">Unlike the <xref:System.ServiceModel.WSHttpBinding>, the <xref:System.ServiceModel.WSFederationHttpBinding> class does not provide a way to disable secure sessions when communicating with a service.</span></span> <span data-ttu-id="0f2c8-106">È invece necessario creare un'associazione personalizzata che sostituisce le impostazioni della sessione protetta con un bootstrap.</span><span class="sxs-lookup"><span data-stu-id="0f2c8-106">Instead, you must create a custom binding that replaces the secure session settings with a bootstrap.</span></span>  
-  
- <span data-ttu-id="0f2c8-107">Questo argomento illustra come modificare gli elementi di un'associazione <xref:System.ServiceModel.WSFederationHttpBinding> per creare un'associazione personalizzata.</span><span class="sxs-lookup"><span data-stu-id="0f2c8-107">This topic demonstrates how to modify the binding elements contained within a <xref:System.ServiceModel.WSFederationHttpBinding> to create a custom binding.</span></span> <span data-ttu-id="0f2c8-108">Il risultato è un'associazione <xref:System.ServiceModel.WSFederationHttpBinding> uguale all'originale in cui tuttavia non vengono utilizzate sessioni protette.</span><span class="sxs-lookup"><span data-stu-id="0f2c8-108">The result is identical to the <xref:System.ServiceModel.WSFederationHttpBinding> except that it does not use secure sessions.</span></span>  
-  
-### <a name="to-create-a-custom-federated-binding-without-secure-session"></a><span data-ttu-id="0f2c8-109">Per creare un'associazione federata personalizzata senza sessioni protette</span><span class="sxs-lookup"><span data-stu-id="0f2c8-109">To create a custom federated binding without secure session</span></span>  
-  
-1. <span data-ttu-id="0f2c8-110">Creare un'istanza della classe <xref:System.ServiceModel.WSFederationHttpBinding> o in modo imperativo nel codice oppure caricando un'associazione di questo tipo dal file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="0f2c8-110">Create an instance of the <xref:System.ServiceModel.WSFederationHttpBinding> class either imperatively in code or by loading one from the configuration file.</span></span>  
-  
-2. <span data-ttu-id="0f2c8-111">Duplicare l'associazione <xref:System.ServiceModel.WSFederationHttpBinding> in un'associazione <xref:System.ServiceModel.Channels.CustomBinding>.</span><span class="sxs-lookup"><span data-stu-id="0f2c8-111">Clone the <xref:System.ServiceModel.WSFederationHttpBinding> into a <xref:System.ServiceModel.Channels.CustomBinding>.</span></span>  
-  
-3. <span data-ttu-id="0f2c8-112">Individuare l'elemento <xref:System.ServiceModel.Channels.SecurityBindingElement> all'interno dell'associazione <xref:System.ServiceModel.Channels.CustomBinding>.</span><span class="sxs-lookup"><span data-stu-id="0f2c8-112">Find the <xref:System.ServiceModel.Channels.SecurityBindingElement> in the <xref:System.ServiceModel.Channels.CustomBinding>.</span></span>  
-  
-4. <span data-ttu-id="0f2c8-113">Individuare l'elemento <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> all'interno dell'associazione <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="0f2c8-113">Find the <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> in the <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span></span>  
-  
-5. <span data-ttu-id="0f2c8-114">Sostituire l'elemento <xref:System.ServiceModel.Channels.SecurityBindingElement> originale con l'elemento di associazione di sicurezza bootstrap ottenuto dai parametri <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>.</span><span class="sxs-lookup"><span data-stu-id="0f2c8-114">Replace the original <xref:System.ServiceModel.Channels.SecurityBindingElement> with the bootstrap security binding element from the <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="0f2c8-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="0f2c8-115">Example</span></span>  
- <span data-ttu-id="0f2c8-116">Nell'esempio seguente viene creata un'associazione federata personalizzata senza sessioni protette.</span><span class="sxs-lookup"><span data-stu-id="0f2c8-116">This following example creates a custom federated binding without secure session.</span></span>  
-  
- [!code-csharp[c_CustomFederationBinding#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customfederationbinding/cs/c_customfederationbinding.cs#0)]
- [!code-vb[c_CustomFederationBinding#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customfederationbinding/vb/c_customfederationbinding.vb#0)]  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="0f2c8-117">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="0f2c8-117">Compiling the Code</span></span>  
-  
-- <span data-ttu-id="0f2c8-118">Per compilare l'esempio di codice, creare un progetto che fa riferimento all'assembly System.ServiceModel.dll.</span><span class="sxs-lookup"><span data-stu-id="0f2c8-118">To compile the code example, create a project that references the System.ServiceModel.dll assembly.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="0f2c8-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0f2c8-119">See also</span></span>
+# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a><span data-ttu-id="c77d0-102">Procedura: Disabilitare sessioni protette in WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="c77d0-102">How to: Disable Secure Sessions on a WSFederationHttpBinding</span></span>
 
-- [<span data-ttu-id="0f2c8-120">Associazioni e sicurezza</span><span class="sxs-lookup"><span data-stu-id="0f2c8-120">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+<span data-ttu-id="c77d0-103">Alcuni servizi possono richiedere credenziali federate senza tuttavia supportare le sessioni protette.</span><span class="sxs-lookup"><span data-stu-id="c77d0-103">Some services may require federated credentials but not support secure sessions.</span></span> <span data-ttu-id="c77d0-104">In questo caso occorre disattivare la funzionalità di sessione protetta.</span><span class="sxs-lookup"><span data-stu-id="c77d0-104">In that case, you must disable the secure session feature.</span></span> <span data-ttu-id="c77d0-105">A differenza della classe <xref:System.ServiceModel.WSHttpBinding>, la classe <xref:System.ServiceModel.WSFederationHttpBinding> non fornisce alcuna modalità di disattivazione delle sessioni protette quando si comunica con un servizio.</span><span class="sxs-lookup"><span data-stu-id="c77d0-105">Unlike the <xref:System.ServiceModel.WSHttpBinding>, the <xref:System.ServiceModel.WSFederationHttpBinding> class does not provide a way to disable secure sessions when communicating with a service.</span></span> <span data-ttu-id="c77d0-106">È invece necessario creare un'associazione personalizzata che sostituisce le impostazioni della sessione protetta con un bootstrap.</span><span class="sxs-lookup"><span data-stu-id="c77d0-106">Instead, you must create a custom binding that replaces the secure session settings with a bootstrap.</span></span>
+
+<span data-ttu-id="c77d0-107">Questo argomento illustra come modificare gli elementi di un'associazione <xref:System.ServiceModel.WSFederationHttpBinding> per creare un'associazione personalizzata.</span><span class="sxs-lookup"><span data-stu-id="c77d0-107">This topic demonstrates how to modify the binding elements contained within a <xref:System.ServiceModel.WSFederationHttpBinding> to create a custom binding.</span></span> <span data-ttu-id="c77d0-108">Il risultato è un'associazione <xref:System.ServiceModel.WSFederationHttpBinding> uguale all'originale in cui tuttavia non vengono utilizzate sessioni protette.</span><span class="sxs-lookup"><span data-stu-id="c77d0-108">The result is identical to the <xref:System.ServiceModel.WSFederationHttpBinding> except that it does not use secure sessions.</span></span>
+
+## <a name="to-create-a-custom-federated-binding-without-secure-session"></a><span data-ttu-id="c77d0-109">Per creare un'associazione federata personalizzata senza sessioni protette</span><span class="sxs-lookup"><span data-stu-id="c77d0-109">To create a custom federated binding without secure session</span></span>
+
+1. <span data-ttu-id="c77d0-110">Creare un'istanza della classe <xref:System.ServiceModel.WSFederationHttpBinding> o in modo imperativo nel codice oppure caricando un'associazione di questo tipo dal file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="c77d0-110">Create an instance of the <xref:System.ServiceModel.WSFederationHttpBinding> class either imperatively in code or by loading one from the configuration file.</span></span>
+
+2. <span data-ttu-id="c77d0-111">Duplicare l'associazione <xref:System.ServiceModel.WSFederationHttpBinding> in un'associazione <xref:System.ServiceModel.Channels.CustomBinding>.</span><span class="sxs-lookup"><span data-stu-id="c77d0-111">Clone the <xref:System.ServiceModel.WSFederationHttpBinding> into a <xref:System.ServiceModel.Channels.CustomBinding>.</span></span>
+
+3. <span data-ttu-id="c77d0-112">Individuare l'elemento <xref:System.ServiceModel.Channels.SecurityBindingElement> all'interno dell'associazione <xref:System.ServiceModel.Channels.CustomBinding>.</span><span class="sxs-lookup"><span data-stu-id="c77d0-112">Find the <xref:System.ServiceModel.Channels.SecurityBindingElement> in the <xref:System.ServiceModel.Channels.CustomBinding>.</span></span>
+
+4. <span data-ttu-id="c77d0-113">Individuare l'elemento <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> all'interno dell'associazione <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="c77d0-113">Find the <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> in the <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span></span>
+
+5. <span data-ttu-id="c77d0-114">Sostituire l'elemento <xref:System.ServiceModel.Channels.SecurityBindingElement> originale con l'elemento di associazione di sicurezza bootstrap ottenuto dai parametri <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>.</span><span class="sxs-lookup"><span data-stu-id="c77d0-114">Replace the original <xref:System.ServiceModel.Channels.SecurityBindingElement> with the bootstrap security binding element from the <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>.</span></span>
+
+## <a name="example"></a><span data-ttu-id="c77d0-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="c77d0-115">Example</span></span>
+
+<span data-ttu-id="c77d0-116">Nell'esempio seguente viene creata un'associazione federata personalizzata senza sessioni protette.</span><span class="sxs-lookup"><span data-stu-id="c77d0-116">This following example creates a custom federated binding without secure session.</span></span>
+
+[!code-csharp[c_CustomFederationBinding#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customfederationbinding/cs/c_customfederationbinding.cs#0)]
+[!code-vb[c_CustomFederationBinding#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customfederationbinding/vb/c_customfederationbinding.vb#0)]
+
+## <a name="compiling-the-code"></a><span data-ttu-id="c77d0-117">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="c77d0-117">Compiling the Code</span></span>
+
+- <span data-ttu-id="c77d0-118">Per compilare l'esempio di codice, creare un progetto che fa riferimento all'assembly System.ServiceModel.dll.</span><span class="sxs-lookup"><span data-stu-id="c77d0-118">To compile the code example, create a project that references the System.ServiceModel.dll assembly.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="c77d0-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c77d0-119">See also</span></span>
+
+- [<span data-ttu-id="c77d0-120">Associazioni e sicurezza</span><span class="sxs-lookup"><span data-stu-id="c77d0-120">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
