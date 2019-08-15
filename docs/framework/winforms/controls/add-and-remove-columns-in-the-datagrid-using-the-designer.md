@@ -7,42 +7,39 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding columns
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-ms.openlocfilehash: 80ede9b7bc5bf667e03dc0a745fbc0b5f6c2663a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d88d658b31c87e7ae89bfb4a11fe794bfbb0e848
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640477"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040101"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: Aggiungere e rimuovere colonne nel controllo DataGridView di Windows Forms usando la finestra di progettazione
-I moduli di Windows <xref:System.Windows.Forms.DataGridView> controllo deve contenere colonne per poter visualizzare i dati. Se si prevede di inserire manualmente i dati del controllo, è necessario aggiungere le colonne. In alternativa, è possibile associare il controllo a un'origine dati, che genera e compila automaticamente le colonne. Se l'origine dati contiene più colonne di quelle che si desidera visualizzare, è possibile rimuovere le colonne non desiderate.  
-  
- Nelle procedure seguenti è richiesto un **applicazione di Windows** progetto con un form contenente un <xref:System.Windows.Forms.DataGridView> controllo. Per informazioni sulla configurazione di un progetto di questo tipo, vedere [come: Creare un progetto Windows Forms application](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [come: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md).  
-  
-> [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-add-a-column-using-the-designer"></a>Per aggiungere una colonna utilizzando la finestra di progettazione  
-  
-1. Fare clic sul glifo dello smart tag (![glifo Smart Tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) nell'angolo superiore destro della <xref:System.Windows.Forms.DataGridView> controllare e quindi selezionare **Aggiungi colonna**.  
-  
-2. Nel **Aggiungi colonna** finestra di dialogo scegliere la **colonna associata ai dati** e selezionare una colonna dall'origine dati o scegliere il **colonna non associata** opzione e definire la colonna utilizzando gli appositi campi.  
-  
-3. Scegliere il **Add** pulsante per aggiungere la colonna, in modo che venga visualizzata nella finestra di progettazione se le colonne esistenti non già riempire l'area di visualizzazione del controllo.  
-  
+Il controllo <xref:System.Windows.Forms.DataGridView> Windows Forms deve contenere colonne per visualizzare i dati. Se si prevede di popolare il controllo manualmente, è necessario aggiungere manualmente le colonne. In alternativa, è possibile associare il controllo a un'origine dati che genera e popola automaticamente le colonne. Se l'origine dati contiene più colonne di quelle che si desidera visualizzare, è possibile rimuovere le colonne indesiderate.
+
+ Per le procedure riportate di seguito è necessario un progetto di <xref:System.Windows.Forms.DataGridView> **applicazione Windows** con un modulo contenente un controllo. Per informazioni sulla configurazione di un progetto di questo tipo [, vedere Procedura: Creare un progetto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) Windows Forms Application e [procedura: Aggiungere i controlli Windows Forms](how-to-add-controls-to-windows-forms.md).
+
+## <a name="to-add-a-column-using-the-designer"></a>Per aggiungere una colonna utilizzando la finestra di progettazione
+
+1. Fare clic sul glifo smart tag (![glifo smart tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) nell' <xref:System.Windows.Forms.DataGridView> angolo superiore destro del controllo, quindi selezionare **Aggiungi colonna**.
+
+2. Nella finestra di dialogo **Aggiungi colonna** scegliere l'opzione **colonna con binding** a dati e selezionare una colonna dall'origine dati oppure scegliere l'opzione **colonna non associata** e definire la colonna utilizzando i campi specificati.
+
+3. Fare clic sul pulsante **Aggiungi** per aggiungere la colonna, facendo in modo che venga visualizzata nella finestra di progettazione se le colonne esistenti non riempiono ancora l'area di visualizzazione del controllo.
+
     > [!NOTE]
-    >  È possibile modificare proprietà della colonna nella **Modifica colonne** nella finestra di dialogo è possibile accedere da smart tag del controllo.  
-  
-### <a name="to-remove-a-column-using-the-designer"></a>Per rimuovere una colonna utilizzando la finestra di progettazione  
-  
-1. Scegli **Modifica colonne** dallo smart tag del controllo.  
-  
-2. Selezionare una colonna dal **colonne selezionate** elenco.  
-  
-3. Scegliere il **rimuovere** pulsante per eliminare la colonna, facendo in modo che scompaiano dalla finestra di progettazione.  
-  
+    >  È possibile modificare le proprietà delle colonne nella finestra di dialogo **modifica colonne** , a cui è possibile accedere dallo smart tag del controllo.
+
+## <a name="to-remove-a-column-using-the-designer"></a>Per rimuovere una colonna utilizzando la finestra di progettazione
+
+1. Scegliere **modifica colonne** dallo smart tag del controllo.
+
+2. Consente di selezionare una colonna nell'elenco **colonne selezionate** .
+
+3. Fare clic sul pulsante **Rimuovi** per eliminare la colonna, causando la scomparsa dalla finestra di progettazione.
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Procedura: Creare un progetto di Windows Forms Application](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Procedura: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md)
+- [Procedura: Aggiungere controlli a Windows Forms](how-to-add-controls-to-windows-forms.md)

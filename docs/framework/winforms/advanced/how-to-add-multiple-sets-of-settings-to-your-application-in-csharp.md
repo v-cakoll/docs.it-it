@@ -5,26 +5,29 @@ helpviewer_keywords:
 - application settings [Windows Forms], multiple sets
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
-ms.openlocfilehash: 9a4913f635204aac2214d97225c7b8147c6fe9ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6842d11c04e905d42734af939f2c3f0cfeacd47
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768550"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040122"
 ---
-# <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Procedura: Aggiungere più set di impostazioni dell'applicazione in C\#
-In alcuni casi, è consigliabile avere più set di impostazioni in un'applicazione. Ad esempio, se si sviluppa un'applicazione posto di un determinato gruppo di impostazioni di cambiare frequentemente, è possibile raggrupparle tutto in un singolo file in modo che il file può essere sostituito a livello globale, lasciando inalterate le altre impostazioni. Visual Studio consente di aggiungere più set di impostazioni al progetto. Altri set di impostazioni sono accessibili tramite l'oggetto Properties. Settings.  
-  
-### <a name="to-add-an-additional-set-of-setting-to-your-application"></a>Per aggiungere un ulteriore Set di impostazioni all'applicazione  
-  
-1. Dal menu **Progetto**, scegliere **Aggiungi nuovo elemento**. Viene aperta la finestra di dialogo **Aggiungi nuovo elemento**.  
-  
-2. Nel **Aggiungi nuovo elemento** finestra di dialogo **File di impostazioni**, digitare un nome per il file e fare clic su **Add** per aggiungere un nuovo file di impostazioni per la soluzione.  
-  
-3. Nelle **Esplora soluzioni**, trascinare il nuovo file di impostazioni nel **proprietà** cartella. In questo modo le nuove impostazioni saranno disponibili nel codice.  
-  
-4. Aggiungere e usare le impostazioni in questo file come si farebbe con qualsiasi altro file di impostazioni. È possibile accedere a questo gruppo di impostazioni tramite l'oggetto Properties. Settings.  
-  
+# <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Procedura: Aggiungere più set di impostazioni all'applicazione in C\#
+
+In alcuni casi, potrebbe essere necessario disporre di più set di impostazioni in un'applicazione. Se, ad esempio, si sta sviluppando un'applicazione in cui si prevede che un determinato gruppo di impostazioni venga modificato di frequente, è consigliabile separarli tutti in un unico file, in modo che il file possa essere sostituito in modo inverso, lasciando inalterate le altre impostazioni. Visual Studio consente di aggiungere più set di impostazioni al progetto. È possibile accedere a set aggiuntivi di impostazioni tramite `Properties.Settings` l'oggetto.
+
+## <a name="add-an-additional-set-of-settings"></a>Aggiungere un set aggiuntivo di impostazioni
+
+1. In Visual Studio scegliere **Aggiungi nuovo elemento**dal menu **progetto** .
+
+   Viene aperta la finestra di dialogo **Aggiungi nuovo elemento**.
+
+2. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **file di impostazioni**, immettere un nome per il file e fare clic su **Aggiungi** per aggiungere un nuovo file di impostazioni alla soluzione.
+
+3. In **Esplora soluzioni**trascinare il nuovo file di impostazioni nella cartella **Proprietà** . In questo modo le nuove impostazioni sono disponibili nel codice.
+
+4. Aggiungere e utilizzare le impostazioni in questo file come qualsiasi altro file di impostazioni. È possibile accedere a questo gruppo di impostazioni tramite `Properties.Settings` l'oggetto.
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Uso delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)

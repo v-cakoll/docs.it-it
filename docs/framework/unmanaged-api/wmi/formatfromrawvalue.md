@@ -1,6 +1,6 @@
 ---
 title: Funzione FormatFromRawValue (riferimenti alle API non gestite)
-description: La funzione FormatFromRawValue converte i dati sulle prestazioni non elaborati in un formato specificato.
+description: La funzione FormatFromRawValue converte i dati delle prestazioni non elaborati in un formato specificato.
 ms.date: 11/21/2017
 api_name:
 - FormatFromRawValue
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47f92122eddf3cc8e6aec19d75fd2a95f76e9973
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 681d7ce42b2b8d16353e4f5b3523f1a953a49d95
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746702"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037890"
 ---
 # <a name="formatfromrawvalue-function"></a>Funzione FormatFromRawValue
 Converte un valore di dati sulle prestazioni non elaborati nel formato specificato o due valori di dati sulle prestazioni non elaborati se la conversione del formato è basata sul tempo. 
@@ -44,54 +44,54 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parametri
 
 `dwCounterType`\
-[in] Il tipo di contatore. Per un elenco di tipi di contatori, vedere [tipi di contatore delle prestazioni WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType` può essere qualsiasi tipo di contatore, ad eccezione di `PERF_LARGE_RAW_FRACTION` e `PERF_LARGE_RAW_BASE`. 
+in Tipo di contatore. Per un elenco dei tipi di contatore, vedere [tipi di contatori delle prestazioni WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType`può essere qualsiasi tipo di contatore, `PERF_LARGE_RAW_FRACTION` ad `PERF_LARGE_RAW_BASE`eccezione di e. 
 
 `dwFormat`\
-[in] Il formato nel quale convertire i dati sulle prestazioni non elaborati. Può essere uno dei valori seguenti:
+in Formato in cui convertire i dati delle prestazioni non elaborati. Può essere uno dei valori seguenti:
 
-|Costante  |Value  |Descrizione |
+|Costante  |Valore  |DESCRIZIONE |
 |---------|---------|---------|
-| `PDH_FMT_DOUBLE` |0x00000200 | Restituisce il valore calcolato come un valore a virgola mobile a precisione doppia. | 
+| `PDH_FMT_DOUBLE` |0x00000200 | Restituisce il valore calcolato come valore a virgola mobile a precisione doppia. | 
 | `PDH_FMT_LARGE` | 0x00000400 | Restituisce il valore calcolato come intero a 64 bit. |
 | `PDH_FMT_LONG` | 0x00000100 | Restituisce il valore calcolato come intero a 32 bit. |
 
-Uno dei valori precedenti può essere introdotte con uno dei flag di ridimensionamento seguenti:
+Uno dei valori precedenti può essere ORed con uno dei flag di ridimensionamento seguenti:
 
-|Costante  |Value  |Descrizione |
+|Costante  |Value  |DESCRIZIONE |
 |---------|---------|---------|
-| `PDH_FMT_NOSCALE` | 0x00001000 | Non si applicano i fattori di scala del contatore. |
-| `PDH_FMT_1000` | 0x00002000 | Moltiplicare il valore finale per 1.000. | 
+| `PDH_FMT_NOSCALE` | 0x00001000 | Non applicare i fattori di scala del contatore. |
+| `PDH_FMT_1000` | 0x00002000 | Moltiplicare il valore finale di 1.000. | 
 
 `pTimeBase`\
-[in] Puntatore alla base di tempo, se necessario per la conversione di formato. Se le informazioni di base di tempo non sono necessarie per la conversione di formato, il valore di questo parametro viene ignorato.
+in Puntatore alla base temporale, se necessario per la conversione del formato. Se le informazioni di base sull'ora non sono necessarie per la conversione del formato, il valore di questo parametro viene ignorato.
 
-`pRawValue1`\ [in] puntatore a un [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) struttura che rappresenta un valore delle prestazioni raw.
+`pRawValue1`[in] puntatore a una [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) struttura che rappresenta un valore di prestazioni non elaborate.
 
 `pRawValue2`\
-[in] Un puntatore a un [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) struttura che rappresenta un secondo valore sulle prestazioni non elaborati. Se un secondo valore delle prestazioni raw non è necessario, questo parametro deve essere `null`.
+in Puntatore a una [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) struttura che rappresenta un secondo valore di prestazioni non elaborate. Se non è necessario un secondo valore delle prestazioni non elaborate, questo `null`parametro deve essere.
 
 `pFmtValue`\
-[out] Un puntatore a un [ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) struttura che riceve il valore formattato le prestazioni.
+out Puntatore a una [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh-pdh_fmt_countervalue) struttura che riceve il valore di prestazioni formattato.
 
 ## <a name="return-value"></a>Valore restituito
 
-I valori seguenti vengono restituiti da questa funzione:
+Questa funzione restituisce i valori seguenti:
 
 |Costante  |Value  |Descrizione  |
 |---------|---------|---------|
-| `ERROR_SUCCESS` | 0 | La chiamata di funzione ha esito positivo. |
-| `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Un argomento obbligatorio è mancante o non corretto. | 
+| `ERROR_SUCCESS` | 0 | La chiamata di funzione ha avuto esito positivo. |
+| `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Argomento obbligatorio mancante o non corretto. | 
 | `PDH_INVALID_HANDLE` | 0xC0000BBC | L'handle non è un oggetto PDH valido. |
 
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata per il [FormatFromRawValue](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85)) (funzione).
+Questa funzione esegue il wrapping di una chiamata alla funzione [FormatFromRawValue](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85)) .
 
 ## <a name="requirements"></a>Requisiti
 
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
 
- **Libreria:** PerfCounter.dll
+ **Libreria** PerfCounter.dll
 
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

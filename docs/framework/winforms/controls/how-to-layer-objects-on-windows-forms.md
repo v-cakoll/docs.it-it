@@ -12,46 +12,43 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 6000adeffcc991557e046461f93fec24e1262f54
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80973e16445079876e01c89f20b5ecbdca602eb8
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651681"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039716"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Procedura: Disporre oggetti su più livelli in Windows Forms
-Quando si crea un'interfaccia utente complessa, o di lavoro con un form MDI (interfaccia), spesso si desidera sia form e controlli figlio per creare più complesse interfacce utente (UI) di livello. Per spostare e tenere traccia di controlli e finestre all'interno del contesto di un gruppo, è modificare l'ordine z. *Ordine Z* è disposizione visiva di controlli in un form lungo l'asse z del form (profondità). La finestra nella parte superiore dello z-order si sovrappone a tutte le altre finestre. Tutte le altre finestre si sovrappongono la finestra nella parte inferiore dello z-order.  
-  
+Quando si crea un'interfaccia utente complessa o si utilizza un form con interfaccia a documenti multipli (MDI), spesso si desidera eseguire il layer di entrambi i controlli e i form figlio per creare interfacce utente (UI) più complesse. Per spostare e tenere traccia dei controlli e delle finestre all'interno del contesto di un gruppo, è possibile modificare l'ordine z. L' *ordine z* è il livello visivo dei controlli in un form lungo l'asse z del form (profondità). La finestra nella parte superiore dello z-order si sovrappone a tutte le altre finestre. Tutte le altre finestre si sovrappongono alla finestra nella parte inferiore dello z-order.
+
+## <a name="to-layer-controls-at-design-time"></a>Per eseguire il livello di controlli in fase di progettazione
+
+1. Selezionare un controllo che si desidera applicare al livello.
+
+2. Scegliere **Ordina**dal menu **formato** , quindi fare clic su **porta in primo piano** o su **Invia a indietro**.
+
+## <a name="to-layer-controls-programmatically"></a>Per livelli di controlli a livello di codice
+
+- Usare i <xref:System.Windows.Forms.Control.BringToFront%2A> metodi <xref:System.Windows.Forms.Control.SendToBack%2A> e per modificare l'ordine z dei controlli.
+
+     Se, ad esempio, <xref:System.Windows.Forms.TextBox> un controllo `txtFirstName`,, è sotto un altro controllo e si desidera utilizzarlo in primo piano, utilizzare il codice seguente:
+
+    ```vb
+    txtFirstName.BringToFront()
+    ```
+
+    ```csharp
+    txtFirstName.BringToFront();
+    ```
+
+    ```cpp
+    txtFirstName->BringToFront();
+    ```
+
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-layer-controls-at-design-time"></a>Per i controlli dei livelli in fase di progettazione  
-  
-1. Selezionare un controllo che si desidera di livello.  
-  
-2. Nel **formato** dal menu **ordine**, quindi fare clic su **porta in primo piano** o **porta in secondo piano**.  
-  
-### <a name="to-layer-controls-programmatically"></a>Per i controlli dei livelli a livello di codice  
-  
-- Usare la <xref:System.Windows.Forms.Control.BringToFront%2A> e <xref:System.Windows.Forms.Control.SendToBack%2A> metodi per modificare l'ordine z dei controlli.  
-  
-     Ad esempio, se un <xref:System.Windows.Forms.TextBox> controllo `txtFirstName`, si trova di sotto di un altro controllo e si desidera venga in primo piano, usare il codice seguente:  
-  
-    ```vb  
-    txtFirstName.BringToFront()  
-    ```  
-  
-    ```csharp  
-    txtFirstName.BringToFront();  
-    ```  
-  
-    ```cpp  
-    txtFirstName->BringToFront();  
-    ```  
-  
-> [!NOTE]
->  Supporta Windows Form *contenimento di controlli*. Contenimento dei controlli prevede l'inserimento di un numero di controlli all'interno di un controllo contenitore, ad esempio un numero di <xref:System.Windows.Forms.RadioButton> controlli all'interno di un <xref:System.Windows.Forms.GroupBox> controllo. È quindi possibile livellare i controlli all'interno del controllo che lo contiene. Spostando la casella di gruppo consente di spostare i controlli, perché sono contenuti all'interno.  
-  
+>  Windows Forms supporta il contenimento del *controllo*. Il contenimento dei controlli comporta l'inserimento di un numero di controlli all'interno di un controllo contenitore <xref:System.Windows.Forms.RadioButton> , ad esempio <xref:System.Windows.Forms.GroupBox> un numero di controlli all'interno di un controllo. È quindi possibile sovrapporre i controlli all'interno del controllo che lo contiene. Spostando la casella di gruppo si spostano anche i controlli, perché sono contenuti al suo interno.
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Controlli Windows Form](index.md)

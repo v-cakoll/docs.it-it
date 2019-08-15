@@ -2,37 +2,40 @@
 title: Utilizzo degli strumenti di sviluppo WCF
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: 1ffa3be4a6b8976ab978ea995e8b2c1faaacf0ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef20d13ade41992e6babc0ebb3a985aabb686ed3
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051715"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040414"
 ---
 # <a name="using-the-wcf-development-tools"></a>Utilizzo degli strumenti di sviluppo WCF
-In questa sezione vengono descritti gli strumenti di sviluppo di Visual Studio che possono facilitare lo sviluppo del servizio WCF.  
+Questa sezione descrive gli strumenti di sviluppo di Visual Studio che possono risultare utili per lo sviluppo di WCFservice.  
   
- È possibile usare i modelli di Visual Studio come base per compilare rapidamente un servizio personalizzato, quindi utilizzare Host automatico servizio di WCF e Client di prova WCF per eseguire il debug e testare il servizio. Questi strumenti forniscono funzioni di debug e test veloci e trasparenti e precludono la necessità di eseguire il commit a un modello di hosting in fase iniziale.  
+ È possibile utilizzare i modelli di Visual Studio come base per creare rapidamente un servizio personalizzato, quindi utilizzare l'host automatico del servizio WCF e il client di prova WCF per eseguire il debug e il test del servizio. Questi strumenti forniscono funzioni di debug e test veloci e trasparenti e precludono la necessità di eseguire il commit a un modello di hosting in fase iniziale.  
+ 
+ > [!NOTE]
+ > A partire da Visual Studio 2017, gli strumenti di sviluppo WCF non sono installati per impostazione predefinita. Per usare queste funzionalità, è necessario assicurarsi che il componente Windows Communication Foundation sia selezionato nel programma di installazione di Visual Studio.
   
 ## <a name="the-wcf-developer-tools"></a>Strumenti dello sviluppatore WCF  
  [Modelli di Visual Studio WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  
   
- È possibile usare i modelli predefiniti di progetti ed elementi di Visual Studio in Visual Studio per compilare rapidamente i servizi WCF e le relative applicazioni.  
+ È possibile utilizzare i modelli di progetto e di elemento predefiniti di Visual Studio in Visual Studio per compilare rapidamente i servizi WCF e le applicazioni circostanti.  
   
  [Host del servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
   
- L'Host automatico servizio di WCF (WcfSvcHost.exe) consente di avviare il debugger di Visual Studio (F5) per ospitare e testare un servizio che è stato implementato automaticamente. È quindi possibile testare il servizio utilizzando il Client di prova WCF (wcfTestClient.exe) o il proprio client di individuare e correggere qualsiasi errore potenziale.  
+ L'host automatico del servizio WCF (WcfSvcHost. exe) consente di avviare il debugger di Visual Studio (F5) per ospitare e testare automaticamente un servizio implementato. È quindi possibile testare il servizio utilizzando il client di prova WCF (wcfTestClient. exe) o il client per individuare e correggere eventuali errori potenziali.  
   
  [Client di prova WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)  
   
- Client di prova WCF (WcfTestClient.exe) è un strumento GUI che consente di immettere parametri di tipi arbitrari, inviare tale input al servizio e visualizzare che la risposta del servizio invia di nuovo. Fornisce un servizio facile test combinazione con Host automatico servizio di WCF.  
+ Il client di prova WCF (WcfTestClient. exe) è uno strumento GUI che consente di immettere parametri di tipi arbitrari, inviare tale input al servizio e visualizzare la risposta restituita dal servizio. Offre un'esperienza di test dei servizi senza problemi in combinazione con l'host automatico del servizio WCF.  
   
  [Generazione di classi di tipi dati da XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
   
  I dati XML archiviati negli Appunti possono essere incollati in una tabella codici. Le classi definite nei dati verranno convertite in tipi di codice.  
   
 ## <a name="using-the-tools-without-administrator-privilege"></a>Utilizzo degli strumenti senza privilegio di amministratore  
- Per abilitare gli utenti senza privilegi di amministratore per lo sviluppo di servizi WCF, viene creato un ACL (Access Control List) per lo spazio dei nomi "http://+:8731/Design_Time_Addresses" durante l'installazione di Visual Studio. L'ACL viene impostato su (UI) che include tutti gli utenti interattivi che hanno eseguito l'accesso al computer. Gli amministratori possono aggiungere o possono utenti da questo ACL oppure aprire porte aggiuntive. Questo ACL aggiuntivo consente a WCF o ai modelli WF di inviare e ricevere dati nella relativa configurazione predefinita. Consente inoltre agli utenti di utilizzare Host automatico del servizio WCF (wcfSvcHost.exe) senza concedere loro privilegi di amministratore.  
+ Per consentire agli utenti senza privilegi di amministratore di sviluppare servizi WCF, viene creato un ACL (elenco di controllo di accesso)http://+:8731/Design_Time_Addresses per lo spazio dei nomi "" durante l'installazione di Visual Studio. L'ACL viene impostato su (UI) che include tutti gli utenti interattivi che hanno eseguito l'accesso al computer. Gli amministratori possono aggiungere o possono utenti da questo ACL oppure aprire porte aggiuntive. Questo ACL aggiuntivo consente a WCF o ai modelli WF di inviare e ricevere dati nella relativa configurazione predefinita. Consente inoltre agli utenti di utilizzare l'host automatico del servizio WCF (wcfSvcHost. exe) senza concedere loro privilegi di amministratore.  
   
  È inoltre possibile modificare l'accesso mediante lo strumento Netsh.exe disponibile in [!INCLUDE[wv](../../../includes/wv-md.md)] utilizzando l'account di amministratore con privilegi elevati. Di seguito è riportato un esempio di utilizzo di Netsh.exe.  
   
@@ -40,7 +43,7 @@ In questa sezione vengono descritti gli strumenti di sviluppo di Visual Studio c
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   
- Per altre informazioni sulle Netsh.exe, vedere [come usare lo strumento di Netsh.exe e opzioni della riga di comando](https://go.microsoft.com/fwlink/?LinkId=97877).  
+ Per ulteriori informazioni su Netsh. exe, vedere [come utilizzare lo strumento Netsh. exe e le opzioni della riga di comando](https://go.microsoft.com/fwlink/?LinkId=97877).  
   
 ## <a name="see-also"></a>Vedere anche
 

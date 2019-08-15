@@ -8,33 +8,30 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: 1d95d5baafa42c7dea40933ba837b684d90b7b2b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 818bc63b5b3bea6c73804f716a72ba3cd1a62b4c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972365"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039686"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Procedura: Caricare un'immagine utilizzando la finestra di progettazione (Windows Forms)
 
 Con il controllo <xref:System.Windows.Forms.PictureBox> Windows Forms è possibile caricare e visualizzare un'immagine in un form in fase di progettazione impostando la <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà su un'immagine valida. Nella tabella seguente sono elencati i tipi di file accettabili.
 
 |Type|Estensione del file|
-|----------|-------------------------|
+|---|---|
 |Bitmap|.bmp|
 |Icona|ico|
 |GIF|.gif|
 |Metafile|.wmf|
 |JPEG|.jpg|
 
-> [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
-
 ## <a name="to-display-a-picture-at-design-time"></a>Per visualizzare un'immagine in fase di progettazione
 
 1. Creare un <xref:System.Windows.Forms.PictureBox> controllo in un form.
 
-2. Nella finestra Proprietà selezionare la <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà, quindi fare clic sul pulsante con i puntini di sospensione per visualizzare la finestra di dialogo **Apri** .
+2. Nella finestra **Proprietà** selezionare la <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà, quindi fare clic sul pulsante con i puntini di sospensione per visualizzare la finestra di dialogo **Apri** .
 
 3. Se si sta cercando un tipo di file specifico, ad esempio file con estensione gif, selezionarlo nella casella **file di tipo** .
 
@@ -42,7 +39,7 @@ Con il controllo <xref:System.Windows.Forms.PictureBox> Windows Forms è possibi
 
 ## <a name="to-clear-the-picture-at-design-time"></a>Per cancellare l'immagine in fase di progettazione
 
-1. Nella finestra **Proprietà** selezionare la <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà e fare clic con il pulsante destro del mouse sull'immagine di anteprima ridotta che viene visualizzata a sinistra del nome dell'oggetto immagine. Scegliere **Reimposta**.
+1. Nella finestra **Proprietà** selezionare la <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà. Fare clic con il pulsante destro del mouse sull'immagine di anteprima ridotta che viene visualizzata a sinistra del nome dell'oggetto immagine, quindi scegliere **Reimposta**.
 
 ## <a name="see-also"></a>Vedere anche
 

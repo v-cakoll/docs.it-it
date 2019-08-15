@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: beb9a848a55c71259e4f7421658d56ae95a2f3e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c2bb6f0324c461f59bd98a70333b176e79a16a6
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741209"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039597"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>Funzione CertTimestampAuthenticodeLicense
 Aggiunge un timestamp a una licenza Authenticode XrML.  
@@ -32,13 +32,13 @@ HRESULT CertTimestampAuthenticodeLicense (
   
 ## <a name="parameters"></a>Parametri  
  `pSignedLicenseBlob`  
- [in] Licenza Authenticode XrML firmata a cui aggiungere un timestamp. Vedere le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struttura.  
+ [in] Licenza Authenticode XrML firmata a cui aggiungere un timestamp. Vedere la struttura [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
  `pwszTimestampURI`  
  [in] URI del server di timestamp.  
   
  `pTimestampSignatureBlob`  
- [out] Puntatore a CRYPT_DATA_BLOB per ricevere la firma del timestamp con codifica base64. È responsabilità del chiamante liberare `pTimestampSignatureBlob` -> `pbData` con `HepFree()` dopo l'uso. Vedere le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struttura.  
+ [out] Puntatore a CRYPT_DATA_BLOB per ricevere la firma del timestamp con codifica base64. È responsabilità del chiamante liberarsi `pTimestampSignatureBlob` -> `pbData` `HepFree()` da dopo l'uso. Vedere la struttura [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
 ## <a name="remarks"></a>Note  
  La firma del timestamp è in realtà un messaggio SignedData PKCS #7 il cui contenuto è il formato binario di SignatureValue dalla firma della licenza. Agisce fondamentalmente come controfirma della licenza.  

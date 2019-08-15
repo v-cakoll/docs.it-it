@@ -7,35 +7,32 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-ms.openlocfilehash: e87017f3698bc88a123d8a0ba0df5dbe2b7bbfd9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f40ab6fe000f9104b10d5841f52eadf102a91a6b
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939022"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040474"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Procedura: Modificare il tipo di una colonna DataGridView di Windows Forms usando la finestra di progettazione
-Talvolta si desidera modificare il tipo di una colonna che è già stato aggiunto a un controllo Windows Form <xref:System.Windows.Forms.DataGridView> controllo. Ad esempio, è possibile modificare i tipi di alcune delle colonne che vengono generate automaticamente quando si associa il controllo a un'origine dati. Ciò è utile quando la tabella visualizzata contiene le colonne che contengono chiavi esterne alle righe in una tabella correlata. In questo caso, è possibile sostituire le colonne di casella di testo che consentono di visualizzare le chiavi esterne con le colonne di casella combinata che visualizzano valori più significativi della tabella correlata.  
-  
- La procedura seguente richiede un **applicazione di Windows** progetto con un form contenente un <xref:System.Windows.Forms.DataGridView> controllo. Per informazioni sulla configurazione di un progetto di questo tipo, vedere [come: Creare un progetto Windows Forms application](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [come: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md).  
-  
-> [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-change-the-type-of-a-column-using-the-designer"></a>Per modificare il tipo di una colonna utilizzando la finestra di progettazione  
-  
-1. Fare clic sul glifo dello smart tag (![glifo Smart Tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) nell'angolo superiore destro della <xref:System.Windows.Forms.DataGridView> controllare e quindi selezionare **Modifica colonne**.  
-  
-2. Selezionare una colonna dal **colonne selezionate** elenco.  
-  
-3. Nel **le proprietà delle colonne** griglia, impostare il `ColumnType` proprietà per il nuovo tipo di colonna.  
-  
+In alcuni casi è necessario modificare il tipo di una colonna che è già stata aggiunta a un controllo <xref:System.Windows.Forms.DataGridView> Windows Forms. È ad esempio possibile che si desideri modificare i tipi di alcune colonne generate automaticamente quando si associa il controllo a un'origine dati. Questa operazione è utile quando nella tabella visualizzata sono presenti colonne contenenti chiavi esterne alle righe di una tabella correlata. In questo caso, è possibile sostituire le colonne della casella di testo in cui vengono visualizzate le chiavi esterne con le colonne della casella combinata che visualizzano valori più significativi della tabella correlata.
+
+ Per la procedura seguente è necessario un progetto di **applicazione Windows** con un <xref:System.Windows.Forms.DataGridView> modulo contenente un controllo. Per informazioni sulla configurazione di un progetto di questo tipo [, vedere Procedura: Creare un progetto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) Windows Forms Application e [procedura: Aggiungere i controlli Windows Forms](how-to-add-controls-to-windows-forms.md).
+
+### <a name="to-change-the-type-of-a-column-using-the-designer"></a>Per modificare il tipo di una colonna utilizzando la finestra di progettazione
+
+1. Fare clic sul glifo smart tag (![glifo smart tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) nell' <xref:System.Windows.Forms.DataGridView> angolo superiore destro del controllo, quindi selezionare **modifica colonne**.
+
+2. Consente di selezionare una colonna nell'elenco **colonne selezionate** .
+
+3. Nella griglia **Proprietà colonna** impostare la `ColumnType` proprietà sul nuovo tipo di colonna.
+
     > [!NOTE]
-    >  Il `ColumnType` proprietà è una proprietà solo in fase di progettazione che indica la classe che rappresenta il tipo di colonna. Non è una proprietà effettivamente definita in una classe di colonna.  
-  
+    >  La `ColumnType` proprietà è una proprietà solo in fase di progettazione che indica la classe che rappresenta il tipo di colonna. Non si tratta di una proprietà effettiva definita in una classe Column.
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
 - [Procedura: Creare un progetto di Windows Forms Application](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Procedura: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md)
+- [Procedura: Aggiungere controlli a Windows Forms](how-to-add-controls-to-windows-forms.md)

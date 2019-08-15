@@ -7,30 +7,27 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: a1da0590-755f-49f2-aca7-609fac6351bf
-ms.openlocfilehash: e0eaa90c8450888ea325470db5d4adae555f8d82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27ecb26c493232bcfb996d012f9760b7ef91e5b2
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972328"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039651"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button-using-the-designer"></a>Procedura: Designare un pulsante Windows Forms come pulsante di conferma usando la finestra di progettazione
-In qualsiasi forma di Windows, è possibile designare un <xref:System.Windows.Forms.Button> controllo pulsante di conferma, noto anche come pulsante predefinito. Ogni volta che l'utente preme il tasto INVIO, viene scelto il pulsante predefinito indipendentemente da quale altro controllo sul form ha lo stato attivo. Le eccezioni a questo si verifica se il controllo con lo stato attivo è un altro pulsante, in tal caso, verrà fatto clic sul pulsante con lo stato attivo, o una casella di testo su più righe o un controllo personalizzato che intercetta il tasto INVIO.  
-  
-> [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-designate-the-accept-button"></a>Per designare il pulsante accept  
-  
-1. Selezionare il form in cui risiede il pulsante.  
-  
-2. Nel **delle proprietà** finestra, impostare il modulo <xref:System.Windows.Forms.Form.AcceptButton%2A> proprietà per il <xref:System.Windows.Forms.Button> nome del controllo.  
-  
+In qualsiasi Windows Form è possibile designare un <xref:System.Windows.Forms.Button> controllo come pulsante di accettazione, noto anche come pulsante predefinito. Ogni volta che l'utente preme il tasto invio, viene fatto clic sul pulsante predefinito, indipendentemente da quale altro controllo nel form abbia lo stato attivo. Le eccezioni a questo si verificano quando il controllo con lo stato attivo è un altro pulsante, in tal caso verrà fatto clic sul pulsante con lo stato attivo o su una casella di testo a più righe o un controllo personalizzato che intrappola il tasto INVIO.
+
+## <a name="to-designate-the-accept-button"></a>Per impostare il pulsante accetta
+
+1. Selezionare il form in cui si trova il pulsante.
+
+2. Nella finestra **Proprietà** impostare la <xref:System.Windows.Forms.Form.AcceptButton%2A> proprietà <xref:System.Windows.Forms.Button> del modulo sul nome del controllo.
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
 - [Panoramica sul controllo Button](button-control-overview-windows-forms.md)
 - [Modalità di selezione di un controllo Button di Windows Form](ways-to-select-a-windows-forms-button-control.md)
-- [Procedura: Rispondere alle selezioni dei pulsanti di Windows Form](how-to-respond-to-windows-forms-button-clicks.md)
-- [Procedura: Designare un pulsante di Windows Form come pulsante Annulla usando la finestra di progettazione](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [Procedura: Rispondi a Windows Forms clic sui pulsanti](how-to-respond-to-windows-forms-button-clicks.md)
+- [Procedura: Designare un pulsante di Windows Forms come pulsante Annulla utilizzando la finestra di progettazione](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
 - [Controllo Button](button-control-windows-forms.md)

@@ -5,39 +5,36 @@ helpviewer_keywords:
 - ListView control [Windows Forms], populating
 - ListView control [Windows Forms], adding list items
 ms.assetid: 217611ee-fd11-4d39-9a54-a37c3e781be1
-ms.openlocfilehash: 37bbd157e0c23886d026b4523ff4a7e74bb7828d
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 62665746ea9fcd1553717b02b1f1349dc6415ab2
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959677"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040092"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a>Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Forms usando la finestra di progettazione
 
-Il processo di aggiunta di un elemento a un form Windows <xref:System.Windows.Forms.ListView> controllo consiste principalmente nella definizione dell'elemento e assegnazione di proprietà. È possibile aggiungere o rimuovere elementi elenco in qualsiasi momento.
+Il processo di aggiunta di un elemento a un <xref:System.Windows.Forms.ListView> controllo Windows Forms è costituito principalmente dalla specifica dell'elemento e dall'assegnazione di proprietà. L'aggiunta o la rimozione di elementi elenco può essere eseguita in qualsiasi momento.
 
-La procedura seguente richiede un **applicazione di Windows** progetto con un form contenente un <xref:System.Windows.Forms.ListView> controllo. Per informazioni sulla configurazione di un progetto di questo tipo, vedere [come: Creare un progetto Windows Forms application](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [come: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md).
+Per la procedura seguente è necessario un progetto di **applicazione Windows** con un <xref:System.Windows.Forms.ListView> modulo contenente un controllo. Per informazioni sulla configurazione di un progetto di questo tipo [, vedere Procedura: Creare un progetto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) Windows Forms Application e [procedura: Aggiungere i controlli Windows Forms](how-to-add-controls-to-windows-forms.md).
 
-> [!NOTE]
-> Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
-
-### <a name="to-add-or-remove-items-using-the-designer"></a>Per aggiungere o rimuovere elementi tramite la finestra di progettazione
+### <a name="to-add-or-remove-items-using-the-designer"></a>Per aggiungere o rimuovere elementi utilizzando la finestra di progettazione
 
 1. Selezionare il controllo <xref:System.Windows.Forms.ListView>.
 
-2. Nel **delle proprietà** finestra, fare clic sul **puntini di sospensione** (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)) accanto al <xref:System.Windows.Forms.ListView.Items%2A> proprietà .
+2. Nella finestra **Proprietà** fare clic sui puntini di![sospensione (il pulsante con i puntini di sospensione (...)](./media/visual-studio-ellipsis-button.png)nel pulsante finestra proprietà di Visual <xref:System.Windows.Forms.ListView.Items%2A> Studio.) accanto alla proprietà.
 
-     Il **Editor della raccolta ListViewItem** viene visualizzata.
+     Viene visualizzato l' **Editor della raccolta ListViewItem** .
 
-3. Per aggiungere un elemento, scegliere il **Add** pulsante. È quindi possibile impostare le proprietà del nuovo elemento, ad esempio la <xref:System.Windows.Forms.ListView.Text%2A> e <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> proprietà.
+3. Per aggiungere un elemento, fare clic sul pulsante **Aggiungi** . È quindi possibile impostare le proprietà del nuovo elemento, ad esempio le <xref:System.Windows.Forms.ListView.Text%2A> proprietà <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> e.
 
-4. Per rimuovere un elemento, selezionarlo e scegliere il **rimuovere** pulsante.
+4. Per rimuovere un elemento, selezionarlo e fare clic sul pulsante **Rimuovi** .
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica del controllo ListView](listview-control-overview-windows-forms.md)
-- [Procedura: Aggiungere colonne al controllo ListView Windows Form](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Procedura: Visualizzare elementi secondari nelle colonne con il controllo ListView di Windows Form](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [Procedura: Visualizzare le icone per il controllo ListView di Windows Form](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [Procedura: Raggruppare elementi in un controllo ListView di Windows Form](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [Procedura: Aggiunta di colonne al controllo Windows Forms ListView](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Procedura: Visualizzare gli elementi secondari nelle colonne con il controllo ListView Windows Forms](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [Procedura: Visualizzare le icone per il controllo ListView Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Procedura: Raggruppare elementi in un controllo ListView Windows Forms](how-to-group-items-in-a-windows-forms-listview-control.md)

@@ -15,26 +15,23 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
-ms.openlocfilehash: 410fc0134046c5fa7e05bfcd38ce6818244a0a54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01bed04483702ba2e62162b675aa1138bc1b0e01
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746864"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039514"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>Procedura: Creare tasti di scelta per i controlli Windows Forms usando la finestra di progettazione
-Un' *chiave di accesso* è un carattere di sottolineato nel testo di un menu, voce di menu o l'etichetta di un controllo, ad esempio un pulsante. Consente all'utente di "fare clic su" un pulsante premendo il tasto ALT in combinazione con la chiave di accesso predefinite. Ad esempio, se un pulsante viene eseguita una procedura per stampare un form e pertanto relativo `Text` proprietà è impostata su "Stampa", aggiungendo una e commerciale (&) prima della lettera "P", la lettera "P" per essere sottolineati nel testo del pulsante in fase di esecuzione. L'utente può eseguire il comando associato al pulsante premendo ALT + P. Non è possibile avere una chiave di accesso per un controllo che non può ricevere lo stato attivo.  
-  
-> [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-create-an-access-key-for-a-control"></a>Per creare una chiave di accesso per un controllo  
-  
-1. Nel **delle proprietà** impostare nella finestra di `Text` proprietà in una stringa che include una e commerciale (&) alla lettera che sarà la chiave di accesso. Ad esempio, per impostare la lettera "P" come chiave di accesso, digitare **conf** nella griglia.  
-  
+Una *chiave di accesso* è un carattere sottolineato nel testo di un menu, di una voce di menu o dell'etichetta di un controllo, ad esempio un pulsante. Consente all'utente di fare clic su un pulsante premendo ALT in combinazione con il tasto di accesso predefinito. Se, ad esempio, un pulsante esegue una procedura per stampare un form e pertanto la `Text` relativa proprietà è impostata su "stampa", l'aggiunta di una e commerciale (&) prima della lettera "p" causa la sottolineatura della lettera "p" nel testo del pulsante in fase di esecuzione. L'utente può eseguire il comando associato al pulsante premendo ALT + P. Non è possibile avere una chiave di accesso per un controllo che non può ricevere lo stato attivo.
+
+## <a name="to-create-an-access-key-for-a-control"></a>Per creare una chiave di accesso per un controllo
+
+1. Nella finestra **Proprietà** impostare la `Text` proprietà su una stringa che include una e commerciale (&) prima della lettera che sarà il tasto di accesso. Per impostare, ad esempio, la lettera "P" come chiave di accesso, digitare **& stampa** nella griglia.
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.Button>
-- [Procedura: Rispondere alle selezioni dei pulsanti di Windows Form](how-to-respond-to-windows-forms-button-clicks.md)
-- [Procedura: Impostare il testo visualizzato dal controllo di un Windows Form](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Procedura: Rispondi a Windows Forms clic sui pulsanti](how-to-respond-to-windows-forms-button-clicks.md)
+- [Procedura: Imposta il testo visualizzato da un controllo Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

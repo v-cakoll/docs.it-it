@@ -2,44 +2,46 @@
 title: 'Procedura: Ereditare Windows Form'
 ms.date: 03/30/2017
 dev_langs:
-- csharp
-- vb
+- CSharp
+- VB
 helpviewer_keywords:
 - inherited forms [Windows Forms], creating at run-time
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60c238430d44371bbd3859c3864fd2ef73f70098
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61722966"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037919"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Procedura: Ereditare Windows Form
-La creazione di nuovi Windows Form mediante l'ereditarietà da form di base è un modo semplice di duplicare ciò che è stato creato senza ripetere ogni volta il medesimo processo di creazione di un form.  
-  
- Per altre informazioni sull'ereditarietà di form in fase di progettazione tramite le **Selezione ereditarietà** finestra di dialogo e su come distinguere visivamente i livelli di sicurezza dei controlli ereditati, vedere [come: Ereditare form mediante la finestra di dialogo Selezione ereditarietà](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
-  
- **Nota** per ereditare da un modulo, il file o lo spazio dei nomi contenente tale form deve essere incorporato in un file eseguibile o DLL. Per compilare il progetto, scegliere **Compila** dal menu **Compila**. È necessario aggiungere un riferimento allo spazio dei nomi anche alla classe che eredita il form. Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-inherit-a-form-programmatically"></a>Per ereditare un form a livello di codice  
-  
-1. All'interno della classe aggiungere un riferimento allo spazio dei nomi che contiene il form da cui si vuole ereditare.  
-  
-2. Nella definizione della classe aggiungere un riferimento al form da cui ereditare. Il riferimento deve includere lo spazio dei nomi che contiene il form, seguito da un punto, quindi il nome del form di base.  
-  
-    ```vb  
-    Public Class Form2  
-        Inherits Namespace1.Form1  
-    ```  
-  
-    ```csharp  
-    public class Form2 : Namespace1.Form1  
-    ```  
-  
- Quando si ereditano i form, tenere presente che possono insorgere problemi relativi alla doppia chiamata a gestori eventi, perché ogni evento viene gestito sia dalla classe di base che dalla classe ereditata. Per informazioni su come evitare questo problema, vedere [Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
-  
+
+La creazione di nuovi Windows Form mediante l'ereditarietà da form di base è un modo semplice di duplicare ciò che è stato creato senza ripetere ogni volta il medesimo processo di creazione di un form.
+
+Per ulteriori informazioni sull'ereditarietà di form in fase di progettazione tramite la finestra di dialogo **Selezione ereditarietà** e su come distinguere visivamente i livelli di sicurezza dei controlli [ereditati, vedere Procedura: Ereditare i form utilizzando la finestra di](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)dialogo Selezione ereditarietà.
+
+> [!NOTE]
+> Per ereditare da un form, il file o lo spazio dei nomi contenente tale form deve essere stato compilato in un file eseguibile o in una DLL. Per compilare il progetto, scegliere **Compila** dal menu **Compila**. È necessario aggiungere un riferimento allo spazio dei nomi anche alla classe che eredita il form.
+
+## <a name="inherit-a-form-programmatically"></a>Ereditare un form a livello di codice
+
+1. All'interno della classe aggiungere un riferimento allo spazio dei nomi che contiene il form da cui si vuole ereditare.
+
+2. Nella definizione della classe aggiungere un riferimento al form da cui ereditare. Il riferimento deve includere lo spazio dei nomi che contiene il form, seguito da un punto, quindi il nome del form di base.
+
+    ```vb
+    Public Class Form2
+        Inherits Namespace1.Form1
+    ```
+
+    ```csharp
+    public class Form2 : Namespace1.Form1
+    ```
+
+ Quando si ereditano i form, tenere presente che possono insorgere problemi relativi alla doppia chiamata a gestori eventi, perché ogni evento viene gestito sia dalla classe di base che dalla classe ereditata. Per informazioni su come evitare questo problema, vedere [Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Istruzione Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)

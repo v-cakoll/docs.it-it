@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b6db8925fb966f4a8b2a213b0d6e340d0edf107
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0f274befe78e45be3e53335572fd9c1e0b401fd3
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756422"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040183"
 ---
 # <a name="resolvetypelib-method"></a>Metodo ResolveTypeLib
-Risolve il nome semplice di una libreria dei tipi, restituendo il relativo percorso completo.  
+Risolve il nome semplice di una libreria dei tipi restituendo il percorso completo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,37 +40,37 @@ HRESULT ResolveTypeLib(
   
 ## <a name="parameters"></a>Parametri  
  `bstrSimpleName`  
- [in] Oggetto [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) che contiene il nome della libreria dei tipi semplice.  
+ in [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) che contiene il nome semplice della libreria dei tipi.  
   
  `tlbid`  
- [in] GUID assegnato alla libreria dei tipi nel Registro di sistema.  
+ in GUID assegnato alla libreria dei tipi nel registro di sistema.  
   
  `lcid`  
- [in] L'ID di localizzazione della libreria dei tipi.  
+ in ID di localizzazione della libreria dei tipi.  
   
  `wMajorVersion`  
- [in] Il numero di versione principale della libreria dei tipi. Ad esempio, per la versione *x. y*, il numero di versione principale viene *x*.  
+ in Numero di versione principale della libreria dei tipi. Per la versione *x. y*, ad esempio, il numero di versione principale è *x*.  
   
  `wMinorVersion`  
- [in] Il numero di versione secondaria della libreria dei tipi. Ad esempio, per la versione *x. y*, è il numero di versione secondaria *y*.  
+ in Numero della versione secondaria della libreria dei tipi. Per la versione *x. y*, ad esempio, il numero di versione secondario è *y*.  
   
  `syskind`  
- [in] Oggetto [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) flag che identifica l'ambiente operativo. I valori comuni sono SYS_WIN32 e SYS_WIN64.  
+ in Flag [SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) che identifica l'ambiente operativo. I valori comuni sono SYS_WIN32 e SYS_WIN64.  
   
  `pbstrResolvedTlbName`  
- [out] Un puntatore a un [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) che contiene il percorso completo della libreria dei tipi denominato nel `bstrSimpleName` parametro.  
+ out Puntatore a un [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) che contiene il percorso completo della libreria dei tipi denominata nel `bstrSimpleName` parametro.  
   
 ## <a name="remarks"></a>Note  
- Il `ResolveTypeLib` metodo viene chiamato dal [LoadTypeLibWithResolver (funzione)](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) durante [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) l'elaborazione.  
+ Il `ResolveTypeLib` metodo viene chiamato dalla [funzione LoadTypeLibWithResolver](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) durante l'elaborazione di [Tlbexp. exe (utilità di esportazione della libreria dei tipi)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) .  
   
- Le implementazioni personalizzate di questa interfaccia devono restituire un [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) che contiene il percorso completo della libreria dei tipi denominato nel `bstrSimpleName` parametro.  
+ Le implementazioni personalizzate di questa interfaccia devono restituire un [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) che contiene il percorso completo della libreria dei tipi denominata nel `bstrSimpleName` parametro.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** TlbRef.idl, TlbRef.h  
+ **Intestazione:** TlbRef. idl, TlbRef. h  
   
- **Libreria:** TlbRef.lib  
+ **Libreria** TlbRef.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

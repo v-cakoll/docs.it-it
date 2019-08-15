@@ -9,99 +9,97 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: 1cdafa14d5b25d6cef92a48e4f460975a2076303
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: d6e31d55ab271376501064c3aa9a9ce38c14063d
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960189"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039733"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Procedura: Formattare il controllo DataGrid di Windows Forms usando la finestra di progettazione
 
 > [!NOTE]
 > Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
 
-Applicazione di colori diversi alle varie parti di un <xref:System.Windows.Forms.DataGrid> il controllo è utile per rendere più semplice da leggere e interpretare le informazioni in esso. Colore può essere applicato alle righe e colonne. Le righe e colonne possono anche essere nascoste o visualizzate a discrezione dell'utente.
+L'applicazione di colori diversi a diverse parti <xref:System.Windows.Forms.DataGrid> di un controllo può contribuire a rendere le informazioni più semplici da leggere e interpretare. Il colore può essere applicato a righe e colonne. Le righe e le colonne possono anche essere nascoste o visualizzate a propria discrezione.
 
-Esistono tre aspetti di base della formattazione di <xref:System.Windows.Forms.DataGrid> controllo:
+Sono disponibili tre aspetti di base per la <xref:System.Windows.Forms.DataGrid> formattazione del controllo:
 
-- È possibile impostare proprietà per definire uno stile predefinito in cui vengono visualizzati dati.
+- È possibile impostare le proprietà per stabilire uno stile predefinito in cui vengono visualizzati i dati.
 
-- Da quella base, è quindi possibile personalizzare il modo che in fase di esecuzione vengono visualizzate determinate tabelle.
+- Da tale base è quindi possibile personalizzare la modalità di visualizzazione di determinate tabelle in fase di esecuzione.
 
-- Infine, è possibile modificare le colonne da visualizzare nella griglia dei dati, nonché i colori e altro di formattazione che viene visualizzato.
+- Infine, è possibile modificare le colonne visualizzate nella griglia dei dati, nonché i colori e altre formattazioni visualizzate.
 
-Come passaggio iniziale in una griglia dei dati di formattazione, è possibile impostare le proprietà del <xref:System.Windows.Forms.DataGrid> stesso. Queste scelte di colori e il formato formano una base da cui è quindi possibile apportare modifiche a seconda delle tabelle di dati e le colonne visualizzate.
+Come passaggio iniziale per la formattazione di una griglia di dati, è possibile impostare le proprietà <xref:System.Windows.Forms.DataGrid> dell'oggetto stesso. Queste scelte di colore e formato costituiscono una base da cui è possibile apportare modifiche in base alle tabelle e alle colonne di dati visualizzate.
 
-La procedura seguente richiede un **applicazione di Windows** progetto con un form contenente un <xref:System.Windows.Forms.DataGrid> controllo. Per informazioni sulla configurazione di un progetto di questo tipo, vedere [come: Creare un progetto Windows Forms application](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [come: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md). In Visual Studio 2005, il <xref:System.Windows.Forms.DataGrid> controllo non è nel **casella degli strumenti** per impostazione predefinita. Per altre informazioni, vedere [Procedura: Aggiungere elementi alla casella degli strumenti](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).
+Per la procedura seguente è necessario un progetto di **applicazione Windows** con un <xref:System.Windows.Forms.DataGrid> modulo contenente un controllo. Per informazioni sulla configurazione di un progetto di questo tipo [, vedere Procedura: Creare un progetto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) Windows Forms Application e [procedura: Aggiungere i controlli Windows Forms](how-to-add-controls-to-windows-forms.md). Per impostazione predefinita, in Visual <xref:System.Windows.Forms.DataGrid> Studio 2005 il controllo non è presente nella **casella degli strumenti** . Per altre informazioni, vedere [Procedura: Consente di aggiungere elementi alla](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))casella degli strumenti.
 
-> [!NOTE]
-> Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>Per stabilire uno stile predefinito per il controllo DataGrid
 
 1. Selezionare il controllo <xref:System.Windows.Forms.DataGrid>.
 
-2. Nel **proprietà** finestra, impostare le proprietà seguenti, come appropriato.
+2. Nella finestra **Proprietà** impostare le proprietà seguenti, a seconda dei casi.
 
-    |Proprietà|Descrizione|
+    |Proprietà|DESCRIZIONE|
     |--------------|-----------------|
-    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|Il `BackColor` proprietà definisce il colore delle righe pari della griglia. Quando si imposta il <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> proprietà su un colore diverso, tutte le altre righe è impostata su questo nuovo colore (righe 1, 3, 5 e così via).|
+    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|La `BackColor` proprietà definisce il colore delle righe pari della griglia. Quando si imposta la <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> proprietà su un colore diverso, ogni altra riga viene impostata sul nuovo colore (righe 1, 3, 5 e così via).|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Il colore di sfondo delle righe pari della griglia (righe 0, 2, 4, 6 e così via).|
-    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Mentre il <xref:System.Windows.Forms.DataGrid.BackColor%2A> e <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> proprietà determina il colore delle righe nella griglia di <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> proprietà determina il colore dell'area all'esterno dell'area riga, che è visibile solo quando la griglia è necessario scorrere verso il basso, o se solo alcune righe siano contenuto della griglia.|
-    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|Stile del bordo della griglia, uno del <xref:System.Windows.Forms.BorderStyle> valori di enumerazione.|
-    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|Il colore di sfondo del titolo di finestra della griglia che viene visualizzato immediatamente sopra la griglia.|
+    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Mentre le <xref:System.Windows.Forms.DataGrid.BackColor%2A> proprietà <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> e determinano il colore delle righe nella griglia, la <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> proprietà determina il colore dell'area al di fuori dell'area riga, che è visibile solo quando la griglia viene spostata in basso o se solo poche righe sono contenuto nella griglia.|
+    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|Stile del bordo della griglia, uno dei valori <xref:System.Windows.Forms.BorderStyle> di enumerazione.|
+    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|Colore di sfondo della didascalia della finestra della griglia visualizzata immediatamente sopra la griglia.|
     |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|Il tipo di carattere della didascalia nella parte superiore della griglia.|
-    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|Il colore di sfondo del titolo di finestra della griglia.|
-    |<xref:System.Windows.Forms.Control.Font%2A>|Il tipo di carattere utilizzato per visualizzare il testo nella griglia.|
-    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|Colore del tipo di carattere visualizzato in base ai dati nelle righe della griglia dei dati.|
-    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|Il colore delle linee della griglia della griglia dei dati.|
-    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|Lo stile delle linee che separano le celle della griglia, uno del <xref:System.Windows.Forms.DataGridLineStyle> valori di enumerazione.|
-    |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|Il colore di sfondo delle intestazioni di riga e colonna.|
-    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|Il tipo di carattere utilizzato per le intestazioni di colonna.|
-    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|Vengono visualizzati il colore di primo piano delle intestazioni di colonna della griglia, compresi il testo dell'intestazione e il segno più (+) e segno meno (-) glifi espandere e comprimere le righe quando più tabelle correlate.|
-    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|Colore del testo di tutti i collegamenti nella griglia dei dati, inclusi i collegamenti alle tabelle figlio, il nome della relazione e così via.|
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|In una tabella figlio, questo è il colore di sfondo delle righe padre.|
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|In una tabella figlio, questo è il colore di primo piano delle righe padre.|
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|Determina se i nomi di tabella e di colonna vengono visualizzati nella riga padre, per mezzo del <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> enumerazione.|
-    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|Larghezza predefinita (in pixel) delle colonne della griglia. Impostare questa proprietà prima di reimpostare il <xref:System.Windows.Forms.DataGrid.DataSource%2A> e <xref:System.Windows.Forms.DataGrid.DataMember%2A> delle proprietà (sia separatamente, o tramite il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo), o la proprietà non avrà alcun effetto.<br /><br /> La proprietà non può essere impostata su un valore minore di 0.|
-    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|L'altezza di riga, in pixel, delle righe nella griglia. Impostare questa proprietà prima di reimpostare il <xref:System.Windows.Forms.DataGrid.DataSource%2A> e <xref:System.Windows.Forms.DataGrid.DataMember%2A> delle proprietà (sia separatamente, o tramite il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo), o la proprietà non avrà alcun effetto.<br /><br /> La proprietà non può essere impostata su un valore minore di 0.|
-    |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|La larghezza delle intestazioni di riga della griglia.|
-    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|Quando una riga o cella è selezionata, questo è il colore di sfondo.|
-    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|Quando una riga o cella è selezionata, questo è il colore primo piano.|
+    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|Colore di sfondo della didascalia della finestra della griglia.|
+    |<xref:System.Windows.Forms.Control.Font%2A>|Tipo di carattere utilizzato per visualizzare il testo nella griglia.|
+    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|Colore del tipo di carattere visualizzato dai dati nelle righe della griglia dei dati.|
+    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|Colore delle linee della griglia dei dati.|
+    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|Stile delle linee che separano le celle della griglia, uno dei valori di <xref:System.Windows.Forms.DataGridLineStyle> enumerazione.|
+    |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|Colore di sfondo delle intestazioni di riga e colonna.|
+    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|Tipo di carattere utilizzato per le intestazioni di colonna.|
+    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|Colore di primo piano delle intestazioni di colonna della griglia, compresi il testo dell'intestazione di colonna e il segno più (+) e i glifi del segno meno (-) che espandono e comprimono le righe quando vengono visualizzate più tabelle correlate.|
+    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|Colore del testo di tutti i collegamenti nella griglia dati, inclusi i collegamenti alle tabelle figlio, il nome della relazione e così via.|
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|In una tabella figlio si tratta del colore di sfondo delle righe padre.|
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|In una tabella figlio si tratta del colore di primo piano delle righe padre.|
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|Determina se i nomi della tabella e della colonna vengono visualizzati nella riga padre, per mezzo dell' <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> enumerazione.|
+    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|Larghezza predefinita (in pixel) delle colonne della griglia. Impostare questa proprietà prima di reimpostare <xref:System.Windows.Forms.DataGrid.DataSource%2A> le <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà e (separatamente o tramite il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo) oppure la proprietà non avrà alcun effetto.<br /><br /> La proprietà non può essere impostata su un valore minore di 0.|
+    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|Altezza della riga, in pixel, delle righe della griglia. Impostare questa proprietà prima di reimpostare <xref:System.Windows.Forms.DataGrid.DataSource%2A> le <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà e (separatamente o tramite il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo) oppure la proprietà non avrà alcun effetto.<br /><br /> La proprietà non può essere impostata su un valore minore di 0.|
+    |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|Larghezza delle intestazioni di riga della griglia.|
+    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|Quando si seleziona una riga o una cella, si tratta del colore di sfondo.|
+    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|Quando si seleziona una riga o una cella, questo è il colore di primo piano.|
 
     > [!NOTE]
-    > Quando si personalizzano i colori dei controlli, è possibile rendere il controllo inaccessibile a causa di scarsa colore scelto (ad esempio, rosso e verde). Utilizzare i colori disponibili nel **colori di sistema** tavolozza per evitare questo problema.
+    > Quando si personalizzano i colori dei controlli, è possibile rendere il controllo inaccessibile a causa di una scelta di colori insufficiente (ad esempio, rosso e verde). Usare i colori disponibili nella tavolozza **colori di sistema** per evitare questo problema.
 
-    La procedura seguente richiede un <xref:System.Windows.Forms.DataGrid> controllo associato a una tabella di dati. Per altre informazioni, vedere [Procedura: Associare il controllo DataGrid di Windows Form a un'origine dati](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).
+    Per la procedura seguente è <xref:System.Windows.Forms.DataGrid> necessario un controllo associato a una tabella di dati. Per altre informazioni, vedere [Procedura: Associare il controllo DataGrid Windows Forms a un'origine](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)dati.
 
-### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>Per impostare lo stile di tabella e colonna di una tabella di dati in fase di progettazione
+### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>Per impostare lo stile della tabella e della colonna di una tabella dati in fase di progettazione
 
-1. Selezionare il <xref:System.Windows.Forms.DataGrid> controllo sul form.
+1. Selezionare il <xref:System.Windows.Forms.DataGrid> controllo nel form.
 
-2. Nel **delle proprietà** finestra, seleziona il <xref:System.Windows.Forms.DataGrid.TableStyles%2A> proprietà e fare clic sul **puntini di sospensione** (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)) pulsante.
+2. Nella finestra **Proprietà** selezionare la <xref:System.Windows.Forms.DataGrid.TableStyles%2A> proprietà e fare clic sui **puntini** di![sospensione (il pulsante con i puntini di sospensione (..](./media/visual-studio-ellipsis-button.png).) nel pulsante finestra proprietà di Visual Studio).
 
-3. Nel **raccolta DataGridTableStyle** della finestra di dialogo fare clic su **Add** per aggiungere uno stile di tabella all'insieme.
+3. Nella finestra di dialogo **Editor della raccolta DataGridTableStyle** fare clic su **Aggiungi** per aggiungere uno stile tabella alla raccolta.
 
-     Con il **raccolta DataGridTableStyle**, è possibile aggiungere e rimuovere gli stili di tabella, impostare la visualizzazione e le proprietà del layout e set il nome di mapping per gli stili di tabella.
+     Con l' **Editor della raccolta DataGridTableStyle**è possibile aggiungere e rimuovere gli stili di tabella, impostare le proprietà di visualizzazione e layout e impostare il nome del mapping per gli stili di tabella.
 
-4. Impostare il <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> proprietà sul nome del mapping per ogni stile di tabella.
+4. Impostare la <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> proprietà sul nome del mapping per ogni stile di tabella.
 
-     Il nome del mapping consente di specificare quali stile di tabella deve essere usato con la tabella.
+     Il nome del mapping viene utilizzato per specificare lo stile della tabella da utilizzare con la tabella.
 
-5. Nel **raccolta DataGridTableStyle**, selezionare la <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> proprietà e fare clic sul pulsante con puntini di sospensione (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)).
+5. Nell' **Editor della raccolta DataGridTableStyle**selezionare la <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> proprietà e fare clic sul pulsante con i puntini di sospensione (![pulsante con i puntini di sospensione (..](./media/visual-studio-ellipsis-button.png).) nella finestra proprietà di Visual Studio.).
 
-6. Nel **raccolta DataGridColumnStyle** finestra di dialogo, aggiungere gli stili di colonna per lo stile di tabella è stato creato.
+6. Nella finestra di dialogo **Editor della raccolta DataGridColumnStyle** aggiungere gli stili delle colonne allo stile di tabella creato.
 
-     Con il **raccolta DataGridColumnStyle**, è possibile aggiungere e rimuovere gli stili di colonna, impostare le proprietà di visualizzazione e il layout e impostare il nome del mapping e le stringhe di formattazione per i dati di colonne.
+     Con l' **Editor della raccolta DataGridColumnStyle**è possibile aggiungere e rimuovere gli stili delle colonne, impostare le proprietà di visualizzazione e layout e impostare il nome del mapping e le stringhe di formattazione per le colonne di dati.
 
     > [!NOTE]
-    > Per altre informazioni sulle stringhe di formattazione, vedere [formattazione di tipi](../../../standard/base-types/formatting-types.md).
+    > Per ulteriori informazioni sulle stringhe di formattazione, vedere [formattazione di tipi](../../../standard/base-types/formatting-types.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [Procedura: Eliminare o nascondere colonne nel controllo DataGrid Windows Form](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Procedura: Eliminare o nascondere colonne nel controllo Windows Forms DataGrid](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [Controllo DataGrid](datagrid-control-windows-forms.md)

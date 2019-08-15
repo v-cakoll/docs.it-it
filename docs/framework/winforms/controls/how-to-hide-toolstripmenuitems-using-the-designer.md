@@ -6,34 +6,31 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], hiding menu items in designer
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
-ms.openlocfilehash: 31c597a0e2cbf41484f19c8d4179823e9fb929ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 968d34a5f79d469ef62beaa8ac96742d73391b22
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941206"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039751"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>Procedura: Nascondere ToolStripMenuItems usando la finestra di progettazione
-Se si nasconde le voci di menu è un modo per controllare l'interfaccia utente (UI) dell'applicazione e limitare i comandi dell'utente. Spesso, è consigliabile nascondere un intero menu quando tutte le voci di menu su di esso non sono disponibili. Evitare distrazioni per l'utente. Inoltre, si potrebbe voler nascondere e disabilitare il menu o la voce di menu, come nascondere da solo non impedisce all'utente di accesso a un comando di menu tramite un tasto di scelta rapida. Per altre informazioni sulla disabilitazione delle voci di menu, vedere [come: Disabilitare i ToolStripMenuItems con la finestra di progettazione](how-to-disable-toolstripmenuitems-using-the-designer.md).  
-  
+Nascondere le voci di menu consente di controllare l'interfaccia utente dell'applicazione e limitare i comandi dell'utente. Spesso è necessario nascondere un intero menu quando tutte le voci di menu non sono disponibili. Questa operazione presenta un minor numero di distrazioni per l'utente. Inoltre, potrebbe essere necessario nascondere e disabilitare il menu o la voce di menu, perché nascondersi da solo non impedisce all'utente di accedere a un comando di menu utilizzando un tasto di scelta rapida. Per ulteriori informazioni sulla disabilitazione delle voci di menu [, vedere Procedura: Disabilitare ToolStripMenuItems usando la finestra](how-to-disable-toolstripmenuitems-using-the-designer.md)di progettazione.
+
+## <a name="to-hide-a-top-level-menu-and-its-submenu-items"></a>Per nascondere un menu di primo livello e le relative voci di sottomenu
+
+1. Selezionare la voce di menu di primo livello e impostare <xref:System.Windows.Forms.ToolStripItem.Visible%2A> la <xref:System.Windows.Forms.ToolStripItem.Available%2A> relativa proprietà `false`o su.
+
+     Quando si nasconde la voce di menu di primo livello, vengono nascoste anche tutte le voci di menu all'interno di tale menu. Se si fa clic in un punto diverso <xref:System.Windows.Forms.MenuStrip> da dopo <xref:System.Windows.Forms.ToolStripItem.Visible%2A> l' `false`impostazione di su, l'intera voce di menu di primo livello e le relative voci di sottomenu scompariranno dal form, in modo da visualizzare l'effetto della fase di esecuzione dell'azione. Per visualizzare la voce di menu di primo livello nascosta in fase di progettazione, fare <xref:System.Windows.Forms.MenuStrip> clic su nella **barra dei componenti**, nella struttura del **documento**o nella parte superiore della griglia delle proprietà.
+
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-hide-a-top-level-menu-and-its-submenu-items"></a>Per nascondere un menu di primo livello e le voci di sottomenu  
-  
-1. Selezionare la voce di menu di primo livello e impostata relativi <xref:System.Windows.Forms.ToolStripItem.Visible%2A> oppure <xref:System.Windows.Forms.ToolStripItem.Available%2A> proprietà `false`.  
-  
-     Quando si nasconde la voce di menu di primo livello, sono nascoste anche tutte le voci di menu all'interno di tale menu. Se si fa clic in una posizione diversa sul <xref:System.Windows.Forms.MenuStrip> dopo l'impostazione <xref:System.Windows.Forms.ToolStripItem.Visible%2A> a `false`, la voce di menu di primo livello intera e voci dei relativi sottomenu scompaiono dal form, così che mostra l'effetto in fase di esecuzione dell'azione. Per visualizzare la voce di menu di primo livello in fase di progettazione, fare clic sui <xref:System.Windows.Forms.MenuStrip> nella **sulla barra dei componenti**, in **struttura documento**, o nella parte superiore della griglia delle proprietà.  
-  
-> [!NOTE]
->  Raramente sarà necessario nascondere un menu di tutto ad eccezione di menu figlio documenti (MDI) interfaccia multipli in uno scenario di unione.  
-  
-### <a name="to-hide-a-submenu-item"></a>Per nascondere una voce di sottomenu  
-  
-1. Selezionare la voce di sottomenu e impostare relativi <xref:System.Windows.Forms.ToolStripItem.Visible%2A> proprietà `false`.  
-  
-     Quando si nasconde una voce di sottomenu, rimane visibile sul form in fase di progettazione in modo che è possibile selezionare facilmente per la successiva elaborazione. Tale riga verrà effettivamente nascosta in fase di esecuzione.  
-  
+>  Si nasconderà raramente un intero menu eccetto i menu figlio dell'interfaccia a documenti multipli (MDI) in uno scenario di Unione.
+
+## <a name="to-hide-a-submenu-item"></a>Per nascondere una voce di sottomenu
+
+1. Selezionare la voce di sottomenu e impostare <xref:System.Windows.Forms.ToolStripItem.Visible%2A> la relativa `false`proprietà su.
+
+     Quando si nasconde una voce di sottomenu, rimane visibile nel form in fase di progettazione in modo che sia possibile selezionarla facilmente per un ulteriore lavoro. Che verrà nascosta in fase di esecuzione.
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
@@ -42,4 +39,4 @@ Se si nasconde le voci di menu è un modo per controllare l'interfaccia utente (
 - <xref:System.Windows.Forms.ToolStripItem.Available%2A>
 - <xref:System.Windows.Forms.ToolStripMenuItem.Overflow%2A>
 - [Panoramica sul controllo MenuStrip](menustrip-control-overview-windows-forms.md)
-- [Procedura: Disabilitare i ToolStripMenuItems con la finestra di progettazione](how-to-disable-toolstripmenuitems-using-the-designer.md)
+- [Procedura: Disabilitare ToolStripMenuItems usando la finestra di progettazione](how-to-disable-toolstripmenuitems-using-the-designer.md)

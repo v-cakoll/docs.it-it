@@ -1,5 +1,5 @@
 ---
-title: Funzione AxlRSAKeyValueToPublicKeyToken
+title: _AxlRSAKeyValueToPublicKeyToken (funzione)
 ms.date: 03/30/2017
 api_name:
 - _AxlRSAKeyValueToPublicKeyToken
@@ -10,14 +10,14 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f9981c4cf2e45795576024b797f93831324dbc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eca6c5fc61d4f7e80046102a560d228fc01e5292
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741261"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038420"
 ---
-# <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_Funzione AxlRSAKeyValueToPublicKeyToken
+# <a name="_axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken (funzione)
 
 Converte un elemento Modulus e un elemento Exponent in un token di chiave pubblica con nome sicuro.  
   
@@ -33,10 +33,10 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
   
 ## <a name="parameters"></a>Parametri  
  `pModulusBlob`  
- [in] Il blob dell'elemento Modulus con codifica base64 (dalla \<Modulus > elemento).  Vedere le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struttura.  
+ in Il BLOB del modulo con codifica Base64 (dall' \<elemento modulo >).  Vedere la struttura [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
  `pExponentBlob`  
- [in] Il blob di Exponent con codifica base64 (dalla \<Exponent > elemento). Vedere le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struttura.  
+ in BLOB dell'esponente con codifica Base64 (dall'elemento \<> dell'esponente). Vedere la struttura [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
  `ppwszPublicKeyToken`  
  [out] Puntatore a WCHAR * per ricevere il token di chiave pubblica con codifica esadecimale.  

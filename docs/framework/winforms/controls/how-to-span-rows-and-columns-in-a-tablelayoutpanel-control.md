@@ -10,31 +10,28 @@ helpviewer_keywords:
 - rows [Windows Forms], spanning
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-ms.openlocfilehash: 02db78b07930676235e55e535fb24f6ff618d823
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a215b2b4e05bab5c81d2779d4b67d5b9d57b6ba5
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012971"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039691"
 ---
 # <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>Procedura: Estendere un controllo su righe e colonne in un controllo TableLayoutPanel
-Controlli in un <xref:System.Windows.Forms.TableLayoutPanel> controllo può estendersi su righe e colonne adiacenti.  
-  
-> [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-span-columns-and-rows"></a>Per inserire righe e colonne  
-  
-1. Trascinare un controllo <xref:System.Windows.Forms.TableLayoutPanel> dalla **Casella degli strumenti** al form.  
-  
-2. Trascinare un <xref:System.Windows.Forms.Button> controllare dal **casella degli strumenti** alla cella superiore sinistra del <xref:System.Windows.Forms.TableLayoutPanel> controllo.  
-  
-3. Impostare il <xref:System.Windows.Forms.Button> del controllo **ColumnSpan** proprietà **2**. Si noti che il <xref:System.Windows.Forms.Button> controllo si estende la prima e seconda colonna.  
-  
-4. Impostare il <xref:System.Windows.Forms.Button> del controllo **RowSpan** proprietà **2**. Si noti che il <xref:System.Windows.Forms.Button> controllo si estende la prima e seconda riga.  
-  
-5. Impostare il <xref:System.Windows.Forms.Button> del controllo **ColumnSpan** proprietà **1**. Si noti che il <xref:System.Windows.Forms.Button> controllo si sposta nella prima colonna e si estende la prima e seconda riga.  
-  
+I controlli in <xref:System.Windows.Forms.TableLayoutPanel> un controllo possono estendersi su righe e colonne adiacenti.
+
+## <a name="to-span-columns-and-rows"></a>Per estendere le colonne e le righe
+
+1. Trascinare un controllo <xref:System.Windows.Forms.TableLayoutPanel> dalla **Casella degli strumenti** al form.
+
+2. Trascinare un <xref:System.Windows.Forms.Button> controllo dalla **casella degli strumenti** nella cella superiore <xref:System.Windows.Forms.TableLayoutPanel> sinistra del controllo.
+
+3. Impostare la <xref:System.Windows.Forms.Button> proprietà **ColumnSpan** del controllo su **2**. Si noti che <xref:System.Windows.Forms.Button> il controllo si estende sulla prima e sulla seconda colonna.
+
+4. Impostare la <xref:System.Windows.Forms.Button> proprietà **RowSpan** del controllo su **2**. Si noti che <xref:System.Windows.Forms.Button> il controllo si estende sulla prima e sulla seconda riga.
+
+5. Impostare la <xref:System.Windows.Forms.Button> proprietà **ColumnSpan** del controllo su **1**. Si noti che <xref:System.Windows.Forms.Button> il controllo viene spostato nella prima colonna e si estende alla prima e alla seconda riga.
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllo TableLayoutPanel](tablelayoutpanel-control-windows-forms.md)
