@@ -2,12 +2,12 @@
 title: Articoli sulla procedura (Guida a C#)
 description: Raccolta di suggerimenti rapidi e brevi esempi di codice evidenziati
 ms.date: 12/20/2017
-ms.openlocfilehash: 09e39e3c9bea5d4b9240039e37d2a5998fe1ebf8
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 92f7e94d8003823c0b166cc617563e63aba78027
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400744"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038011"
 ---
 # <a name="how-to-c"></a>Procedura (C#)
 
@@ -19,7 +19,6 @@ Esistono alcuni suggerimenti e consigli comuni per le procedure di sviluppo di C
 
 - [Inizializzare oggetti usando un inizializzatore di oggetto](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [Informazioni sulle differenze tra il passaggio a un metodo di uno struct e di una classe](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
-- [Risolvere conflitti di nomi di tipo tramite l'alias dello spazio dei nomi globale](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
 - [Usare l'overload degli operatori](../language-reference/operators/operator-overloading.md).
 - [Implementare e chiamare un metodo di estensione personalizzato](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
 - È possibile che i programmatori C# vogliano [usare lo spazio dei nomi `My` di VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
