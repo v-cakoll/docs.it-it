@@ -6,12 +6,12 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 23fba8269670156000cb68b3aa07ae7c770eada1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d9889ce389eed73a9af0a3f72dcca6ec476cae15
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627736"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796511"
 ---
 # <a name="default-values-table-c-reference"></a>Tabella dei valori predefiniti (Informazioni di riferimento per C#)
 
@@ -28,13 +28,13 @@ La tabella seguente mostra i valori predefiniti dei tipi C#:
 |[struct](struct.md)|Valore prodotto impostando tutti i campi dei tipi valore sui rispettivi valori predefiniti e tutti i campi dei tipi riferimento su `null`.|
 |Qualsiasi [tipo valore nullable](../../programming-guide/nullable-types/index.md)|Un'istanza per la quale la proprietà <xref:System.Nullable%601.HasValue%2A> è `false` e la proprietà <xref:System.Nullable%601.Value%2A> non è definita. Il valore predefinito è noto anche come valore *null* del tipo valore nullable.|
 
-Usare l'[espressione valore predefinito](../../programming-guide/statements-expressions-operators/default-value-expressions.md) per produrre il valore predefinito di un tipo, come illustrato nell'esempio seguente:
+Usare l'[operatore predefinito](../operators/default.md) per produrre il valore predefinito di un tipo, come illustrato nell'esempio seguente:
 
 ```csharp
 int a = default(int);
 ```
 
-A partire da C# 7.1 è possibile usare il [ valore letterale `default`](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) per inizializzare una variabile con il valore predefinito del relativo tipo:
+A partire da C# 7.1 è possibile usare il [ valore letterale `default`](../operators/default.md#default-literal) per inizializzare una variabile con il valore predefinito del relativo tipo:
 
 ```csharp
 int a = default;
