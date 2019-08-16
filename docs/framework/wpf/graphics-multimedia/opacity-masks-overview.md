@@ -6,26 +6,26 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 7554471d8b812b60e0b1aeb6dd3096b542ca44d6
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 76ec595b1d2cc732e1c8bc2dc2ca6def904bf94c
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238411"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545351"
 ---
 # <a name="opacity-masks-overview"></a>Cenni preliminari sulle maschere di opacità
-Le maschere di opacità consentono di rendere trasparenti o parzialmente trasparenti parti di un elemento o di un oggetto visivo. Per creare una maschera di opacità, applicare un <xref:System.Windows.Media.Brush> per il <xref:System.Windows.UIElement.OpacityMask%2A> proprietà di un elemento o <xref:System.Windows.Media.Visual>.  Viene eseguito il mapping del pennello all'elemento o oggetto visivo e il valore di opacità di ogni pixel del pennello viene usato per determinare l'opacità risultante di ogni pixel corrispondente dell'elemento o dell'oggetto visivo.  
+Le maschere di opacità consentono di rendere trasparenti o parzialmente trasparenti parti di un elemento o di un oggetto visivo. Per creare una maschera di opacità, applicare <xref:System.Windows.Media.Brush> un oggetto <xref:System.Windows.UIElement.OpacityMask%2A> alla proprietà di un elemento <xref:System.Windows.Media.Visual>o.  Viene eseguito il mapping del pennello all'elemento o oggetto visivo e il valore di opacità di ogni pixel del pennello viene usato per determinare l'opacità risultante di ogni pixel corrispondente dell'elemento o dell'oggetto visivo.  
   
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>Prerequisiti  
- In questo argomento si presuppone che abbia familiarità con <xref:System.Windows.Media.Brush> oggetti. Per un'introduzione all'uso dei pennelli, vedere [Cenni sul disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md). Per informazioni sulle <xref:System.Windows.Media.ImageBrush> e <xref:System.Windows.Media.DrawingBrush>, vedere [disegnare con immagini, disegni e oggetti visivi](painting-with-images-drawings-and-visuals.md).  
+ In questa panoramica si presuppone che l'utente <xref:System.Windows.Media.Brush> abbia familiarità con gli oggetti. Per un'introduzione all'uso dei pennelli, vedere [Cenni sul disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md). Per informazioni su <xref:System.Windows.Media.ImageBrush> e <xref:System.Windows.Media.DrawingBrush>, vedere [disegnare con immagini, disegni e](painting-with-images-drawings-and-visuals.md)oggetti visivi.  
   
 <a name="opacitymasks"></a>   
 ## <a name="creating-visual-effects-with-opacity-masks"></a>Creazione di effetti visivi con maschere di opacità  
  Il funzionamento delle maschere di opacità è basato sul mapping del suo contenuto all'elemento o oggetto visivo. Il canale alfa di ogni pixel del pennello viene usato per determinare l'opacità risultante dei pixel corrispondenti dell'elemento o oggetto visivo. Il colore effettivo del pennello viene ignorato. Se una parte del pennello è trasparente, la parte corrispondente dell'elemento o oggetto visivo diventa trasparente. Se una parte del pennello è opaca, l'opacità della parte corrispondente dell'elemento o oggetto visivo rimane inalterata. L'opacità specificata dalla maschera di opacità viene combinata a qualsiasi impostazione di opacità dell'elemento o oggetto visivo. Se ad esempio un elemento è opaco al 25 percento e viene applicata una maschera di opacità che crea una transizione da opacità totale a trasparenza totale, il risultato è un elemento che passa dal 25 percento di opacità a una trasparenza totale.  
   
 > [!NOTE]
->  Anche se gli esempi in questa panoramica viene illustrato l'uso delle maschere di opacità su elementi di immagine, una maschera di opacità può essere applicata a qualsiasi elemento o <xref:System.Windows.Media.Visual>, inclusi i pannelli e i controlli.  
+>  Sebbene gli esempi in questa panoramica dimostrino l'uso di maschere di opacità sugli elementi immagine, una maschera di opacità può <xref:System.Windows.Media.Visual>essere applicata a qualsiasi elemento o, inclusi i pannelli e i controlli.  
   
  Le maschere di opacità vengono usate per creare effetti visivi interessanti, ad esempio dissolvenze per immagini o pulsanti, aggiunta di trame agli elementi o combinazione di sfumature per ottenere il cosiddetto effetto cristallo. La figura seguente illustra l'uso di una maschera di opacità. Per visualizzare le parti trasparenti della maschera viene usato uno sfondo a scacchi.  
   
@@ -34,30 +34,30 @@ Esempio di maschera di opacità
   
 <a name="creatingopacitymasks"></a>   
 ## <a name="creating-an-opacity-mask"></a>Creazione di una maschera di opacità  
- Per creare una maschera di opacità, è necessario creare un <xref:System.Windows.Media.Brush> e applicarlo al <xref:System.Windows.UIElement.OpacityMask%2A> proprietà di un elemento o oggetto visivo. È possibile usare qualsiasi tipo di <xref:System.Windows.Media.Brush> come maschera di opacità.  
+ Per creare una maschera di opacità, creare <xref:System.Windows.Media.Brush> un oggetto e applicarlo <xref:System.Windows.UIElement.OpacityMask%2A> alla proprietà di un elemento o di un oggetto visivo. È possibile utilizzare qualsiasi tipo di <xref:System.Windows.Media.Brush> come maschera di opacità.  
   
-- <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Utilizzato per creare un elemento o un effetto dissolvenza visual.  
+- <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Utilizzato per rendere un elemento o una dissolvenza visiva dalla visualizzazione.  
   
-     La figura seguente mostra un <xref:System.Windows.Media.LinearGradientBrush> usato come maschera di opacità.  
+     Nell'immagine seguente viene illustrato <xref:System.Windows.Media.LinearGradientBrush> un oggetto utilizzato come maschera di opacità.  
   
-     ![Un oggetto con maschera di opacità LinearGradientBrush](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
+     ![Oggetto con maschera di opacità LinearGradientBrush](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 Esempio di maschera di opacità LinearGradientBrush  
   
-- <xref:System.Windows.Media.ImageBrush>: Utilizzato per creare trame o effetti con bordi sfumati o frastagliati.  
+- <xref:System.Windows.Media.ImageBrush>: Utilizzato per creare la trama e gli effetti di bordi morbidi o danneggiati.  
   
-     La figura seguente mostra un <xref:System.Windows.Media.ImageBrush> usato come maschera di opacità.  
+     Nell'immagine seguente viene illustrato <xref:System.Windows.Media.ImageBrush> un oggetto utilizzato come maschera di opacità.  
   
      ![Oggetto con maschera di opacità ImageBrush](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 Esempio di maschera di opacità LinearGradientBrush  
   
-- <xref:System.Windows.Media.DrawingBrush>: Consente di creare maschere di opacità complesse da pattern di forme, immagini e sfumature.  
+- <xref:System.Windows.Media.DrawingBrush>: Utilizzato per creare maschere di opacità complesse da modelli di forme, immagini e sfumature.  
   
-     La figura seguente mostra un <xref:System.Windows.Media.DrawingBrush> usato come maschera di opacità.  
+     Nell'immagine seguente viene illustrato <xref:System.Windows.Media.DrawingBrush> un oggetto utilizzato come maschera di opacità.  
   
      ![Oggetto con maschera di opacità DrawingBrush](./media/wcpsdk-drawingbrushasopacitymask-single.jpg "wcpsdk_drawingbrushasopacitymask_single")  
 Esempio di maschera di opacità DrawingBrush  
   
- I pennelli a sfumatura (<xref:System.Windows.Media.LinearGradientBrush> e <xref:System.Windows.Media.RadialGradientBrush>) sono particolarmente appropriati per l'uso come maschera di opacità. Poiché un <xref:System.Windows.Media.SolidColorBrush> riempie un'area con un colore uniforme, rendono l'opacità scarse maschera; utilizzando un <xref:System.Windows.Media.SolidColorBrush> equivale all'impostazione dell'elemento o dell'oggetto visivo <xref:System.Windows.UIElement.OpacityMask%2A> proprietà.  
+ I pennelli sfumatura <xref:System.Windows.Media.RadialGradientBrush>(<xref:System.Windows.Media.LinearGradientBrush> e) sono particolarmente adatti per essere utilizzati come maschera di opacità. Poiché un <xref:System.Windows.Media.SolidColorBrush> oggetto riempie un'area con un colore uniforme, rendono le maschere di opacità insufficienti. l'utilizzo di un oggetto <xref:System.Windows.Media.SolidColorBrush> equivale a impostare <xref:System.Windows.UIElement.OpacityMask%2A> la proprietà dell'elemento o dell'oggetto visivo.  
   
 <a name="creatingopacitymaskswithgradients"></a>   
 ## <a name="using-a-gradient-as-an-opacity-mask"></a>Uso di una sfumatura come maschera di opacità  
@@ -67,17 +67,17 @@ Esempio di maschera di opacità DrawingBrush
   
 <a name="specifyinggradientcolors"></a>   
 ## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>Definizione di cursori sfumatura per una maschera di opacità  
- Nell'esempio precedente, il colore definito dal sistema <xref:System.Windows.Media.Colors.Black%2A> viene utilizzato come il colore iniziale della sfumatura. Poiché tutti i colori nella <xref:System.Windows.Media.Colors> (classe), tranne <xref:System.Windows.Media.Colors.Transparent%2A>, sono completamente opachi, possono essere utilizzati per definire semplicemente un colore iniziale per una maschera di opacità con sfumatura.  
+ Nell'esempio precedente, il colore <xref:System.Windows.Media.Colors.Black%2A> definito dal sistema viene utilizzato come colore iniziale della sfumatura. Poiché tutti i colori <xref:System.Windows.Media.Colors> della classe, ad eccezione <xref:System.Windows.Media.Colors.Transparent%2A>di, sono completamente opachi, possono essere usati per definire semplicemente un colore iniziale per una maschera di opacità della sfumatura.  
   
- Per un controllo maggiore su valori alfa quando si definisce una maschera di opacità, è possibile specificare il canale alfa dei colori usando la notazione esadecimale ARGB nel markup o il <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> (metodo).  
+ Per un controllo aggiuntivo sui valori alfa durante la definizione di una maschera di opacità, è possibile specificare il canale alfa dei colori usando la notazione esadecimale ARGB nel markup o usando il <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> metodo.  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Specifica dell'opacità di colore in "XAML"  
- In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], si usa la notazione esadecimale ARGB per specificare l'opacità di colori singoli. La notazione esadecimale ARGB Usa la sintassi seguente:  
+ In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]è possibile usare la notazione esadecimale ARGB per specificare l'opacità dei singoli colori. La notazione esadecimale ARGB usa la sintassi seguente:  
   
  `#` **aa** *rrggbb*  
   
- *aa* nella riga precedente rappresenta un valore esadecimale a due cifre usato per specificare l'opacità del colore. *rr*, *gg* e *bb* rappresentano un valore esadecimale a due cifre usato per specificare la quantità di rosso, verde e blu nel colore. Ogni cifra esadecimale può avere un valore compreso tra 0 e 9 o tra A e F. 0 è il valore più basso, mentre F è il più elevato. Un valore alfa pari a 00 indica un colore completamente trasparente, mentre un valore alfa pari a FF indica un colore completamente opaco.  Nell'esempio seguente, la notazione esadecimale ARGB consente di specificare due colori. Il primo è completamente opaco, mentre il secondo è completamente trasparente.  
+ *aa* nella riga precedente rappresenta un valore esadecimale a due cifre usato per specificare l'opacità del colore. *rr*, *gg* e *bb* rappresentano un valore esadecimale a due cifre usato per specificare la quantità di rosso, verde e blu nel colore. Ogni cifra esadecimale può avere un valore compreso tra 0 e 9 o tra A e F. 0 è il valore più basso, mentre F è il più elevato. Un valore alfa pari a 00 indica un colore completamente trasparente, mentre un valore alfa pari a FF indica un colore completamente opaco.  Nell'esempio seguente viene usata la notazione ARGB esadecimale per specificare due colori. Il primo è completamente opaco, mentre il secondo è completamente trasparente.  
   
  [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
   
@@ -85,16 +85,16 @@ Esempio di maschera di opacità DrawingBrush
 ## <a name="using-an-image-as-an-opacity-mask"></a>Uso di un'immagine come maschera di opacità  
  È anche possibile usare le immagini come maschere di opacità. L'immagine seguente illustra un esempio. Per visualizzare le parti trasparenti della maschera viene usato uno sfondo a scacchi.  
   
- ![Un oggetto con maschera di opacità ImageBrush](./media/wcpsdk-graphicsmm-imageasopacitymask.png "wcpsdk_graphicsmm_imageasopacitymask")  
+ ![Oggetto con maschera di opacità ImageBrush](./media/wcpsdk-graphicsmm-imageasopacitymask.png "wcpsdk_graphicsmm_imageasopacitymask")  
 Esempio di maschera di opacità  
   
- Per usare un'immagine come maschera di opacità, usare un <xref:System.Windows.Media.ImageBrush> che contenga l'immagine. Quando si crea un'immagine da usare come maschera di opacità, salvarla in un formato che supporti più livelli di trasparenza, ad esempio [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]. L'esempio seguente illustra il codice usato per creare la precedente illustrazione.  
+ Per usare un'immagine come maschera di opacità, usare <xref:System.Windows.Media.ImageBrush> un oggetto per contenere l'immagine. Quando si crea un'immagine da usare come maschera di opacità, salvare l'immagine in un formato che supporta più livelli di trasparenza, ad esempio Portable Network Graphics (PNG). L'esempio seguente illustra il codice usato per creare la precedente illustrazione.  
   
  [!code-xaml[OpacityMasksSnippet#UIElementOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#uielementopacitymask)]  
   
 <a name="tilingimageopacitymask"></a>   
 ### <a name="using-a-tiled-image-as-an-opacity-mask"></a>Uso di un'immagine affiancata come maschera di opacità  
- Nell'esempio seguente viene utilizzata la stessa immagine con un altro <xref:System.Windows.Media.ImageBrush>, ma le funzionalità di visualizzazione affiancata del pennello vengono usate per produrre tessere dell'immagine 50 pixel.  
+ Nell'esempio seguente, la stessa immagine viene usata con un'altra <xref:System.Windows.Media.ImageBrush>, ma le funzionalità di affiancamento del pennello vengono usate per produrre riquadri del quadrato immagine 50 pixel.  
   
  [!code-xaml[OpacityMasksSnippet#TiledImageasOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]  
   
@@ -102,16 +102,16 @@ Esempio di maschera di opacità
 ## <a name="creating-an-opacity-mask-from-a-drawing"></a>Creazione di una maschera di opacità da un disegno  
  È possibile usare i disegni per creare maschere di opacità. Le forme contenute nel disegno possono essere riempite con sfumature, tinte unite, immagini o anche gli altri disegni. L'immagine seguente illustra un esempio di disegno usato come maschera di opacità. Per visualizzare le parti trasparenti della maschera viene usato uno sfondo a scacchi.  
   
- ![Un oggetto con maschera di opacità DrawingBrush](./media/wcpsdk-drawingbrushasopacitymask.png "wcpsdk_drawingbrushasopacitymask")  
+ ![Oggetto con maschera di opacità DrawingBrush](./media/wcpsdk-drawingbrushasopacitymask.png "wcpsdk_drawingbrushasopacitymask")  
 Esempio di maschera di opacità DrawingBrush  
   
- Per usare un disegno come maschera di opacità, usare un <xref:System.Windows.Media.DrawingBrush> che contenga il disegno. L'esempio seguente illustra il codice usato per creare la precedente illustrazione:  
+ Per usare un disegno come maschera di opacità, usare <xref:System.Windows.Media.DrawingBrush> un oggetto per contenere il disegno. L'esempio seguente illustra il codice usato per creare la precedente illustrazione:  
   
  [!code-xaml[OpacityMasksSnippet#OpacityMaskfromDrawing](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  
   
 <a name="tileddrawingbrush"></a>   
 ### <a name="using-a-tiled-drawing-as-an-opacity-mask"></a>Uso di un disegno affiancato come maschera di opacità  
- Ad esempio la <xref:System.Windows.Media.ImageBrush>, il <xref:System.Windows.Media.DrawingBrush> è possibile apportare per affiancare il relativo disegno. Nell'esempio seguente viene usato un pennello da disegno per creare una maschera di opacità affiancata.  
+ Analogamente a <xref:System.Windows.Media.DrawingBrush> ,èpossibilefareinmodocheilrelativodisegno<xref:System.Windows.Media.ImageBrush>venga affiancato. Nell'esempio seguente viene usato un pennello da disegno per creare una maschera di opacità affiancata.  
   
  [!code-xaml[OpacityMasksSnippet#TiledDrawingasOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
   

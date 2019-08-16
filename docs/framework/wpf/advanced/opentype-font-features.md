@@ -9,22 +9,22 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: df3cc6d054f431a9e187b21c20b7c5774d569a8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 580f9ce81e9b3652a9defec25dfd05f47e296d7a
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611918"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545378"
 ---
 # <a name="opentype-font-features"></a>Funzionalità dei tipi di carattere OpenType
 
-Questo argomento contiene una panoramica di alcune delle funzionalità principali della tecnologia [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+In questo argomento viene fornita una panoramica di alcune delle principali funzionalità della tecnologia OpenType per [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]i tipi di carattere in.  
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>Formato dei tipi di carattere OpenType  
- Il formato dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] è un'estensione del formato [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)], a cui è stato aggiunto il supporto per dati dei tipi di carattere PostScript. Il formato [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] è stato sviluppato da [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] e Adobe Corporation insieme. I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] e i servizi del sistema operativo che supportano i tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] offrono agli utenti un semplice strumento per installare e usare i tipi di carattere, indipendentemente dal fatto che questi contengano strutture [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] o strutture CFF (PostScript).  
+ Il formato del tipo di carattere OpenType è un' [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] estensione del formato carattere, con l'aggiunta del supporto per i dati del tipo di carattere PostScript. Il formato del tipo di carattere OpenType è stato [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] sviluppato congiuntamente da e Adobe Corporation. I tipi di carattere OpenType e i servizi del sistema operativo che supportano i tipi di carattere OpenType forniscono agli utenti un modo semplice per installare e [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] usare i tipi di carattere, indipendentemente dal fatto che i tipi di carattere contengano strutture di tipo CFF (PostScript).  
   
- Il formato [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] permette di affrontare le sfide di sviluppo seguenti:  
+ Il formato del tipo di carattere OpenType soddisfa le seguenti richieste di sviluppo:  
   
 - Supporto multipiattaforma più esteso.  
   
@@ -37,12 +37,12 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
 - Supporto più ampio per il controllo tipografico avanzato.  
   
 > [!NOTE]
->  Windows SDK contiene un set di tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] di esempio, che è possibile usare con applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Questi tipi di carattere offrono la maggior parte delle funzionalità descritte nelle altre sezioni di questo argomento. Per altre informazioni, vedere [Esempio di pacchetto di tipi di carattere OpenType](sample-opentype-font-pack.md).  
+>  Il Windows SDK contiene un set di tipi di carattere OpenType di esempio che è [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] possibile usare con le applicazioni. Questi tipi di carattere offrono la maggior parte delle funzionalità descritte nelle altre sezioni di questo argomento. Per altre informazioni, vedere [Esempio di pacchetto di tipi di carattere OpenType](sample-opentype-font-pack.md).  
   
- Vedere la [specifica OpenType](https://go.microsoft.com/fwlink/?LinkId=96731) per informazioni dettagliate sul formato [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
+ Per informazioni dettagliate sul formato dei tipi di carattere OpenType, vedere la [specifica OpenType](https://go.microsoft.com/fwlink/?LinkId=96731) .  
   
 ### <a name="advanced-typographic-extensions"></a>Estensioni tipografiche avanzate  
- Le tabelle tipografiche avanzate (tabelle dei layout [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]) estendono le funzionalità dei tipi di carattere con strutture [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] o CFF. I tipi di carattere con layout [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] contengono informazioni aggiuntive che estendono le funzionalità dei tipi di carattere per supportare la tipografia internazionale di alta qualità. La maggior parte dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] espone solo un subset delle funzionalità [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] totali disponibili. I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] offrono le funzionalità seguenti.  
+ Le tabelle tipografiche avanzate (tabelle di layout OpenType) estendono le funzionalità dei [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] tipi di carattere con le strutture o CFF. I tipi di carattere del layout OpenType contengono informazioni aggiuntive che estendono le funzionalità dei tipi di carattere per supportare la tipografia internazionale di alta qualità. La maggior parte dei tipi di carattere OpenType espone solo un subset delle funzionalità OpenType totali disponibili. I tipi di carattere OpenType forniscono le funzionalità seguenti.  
   
 - Mapping avanzato tra caratteri e glifi che supportano legature, formati posizionali, glifi alternativi e altre sostituzioni di tipi di carattere.  
   
@@ -50,75 +50,75 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
   
 - Informazioni esplicite su script e lingua contenute in un carattere, per permettere a un'applicazione di elaborazione del testo di modificare il proprio comportamento di conseguenza.  
   
- Le tabelle dei layout [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] vengono descritte più dettagliatamente nella sezione relativa alle [tabelle dei file dei tipi di carattere](https://www.microsoft.com/typography/otspec/otff.htm) della specifica [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
+ Le tabelle di layout OpenType sono descritte più dettagliatamente nella sezione ["tabelle di file dei tipi di carattere"](https://www.microsoft.com/typography/otspec/otff.htm) della specifica OpenType.  
   
- Nella parte restante di questa panoramica introduce l'ampiezza e la flessibilità di alcune della lettura dall'aspetto accattivante [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] funzionalità esposte dalle proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto. Per altre informazioni su questo oggetto, vedere [Classe Typography](#typography_class).  
+ Il resto di questa panoramica introduce l'ampiezza e la flessibilità di alcune delle funzionalità OpenType visivamente interessanti esposte dalle proprietà dell' <xref:System.Windows.Documents.Typography> oggetto. Per altre informazioni su questo oggetto, vedere [Classe Typography](#typography_class).  
   
 <a name="variants"></a>   
 ## <a name="variants"></a>Varianti  
  Le varianti vengono usate per eseguire il rendering di stili tipografici diversi, come gli apici e i pedici.  
   
 ### <a name="superscripts-and-subscripts"></a>Apici e pedici  
- Il <xref:System.Windows.Documents.Typography.Variants%2A> proprietà consente di impostare i valori in apice e pedici per un [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font.  
+ La <xref:System.Windows.Documents.Typography.Variants%2A> proprietà consente di impostare valori di apice e pedice per un tipo di carattere OpenType.  
   
  Il testo seguente mostra apici per il tipo di carattere Palatino Linotype.  
   
- ![Testo con apici OpenType](./media/opentype-font-features/opentype-superscripts.gif "testo con apici OpenType")  
+ ![Testo con apici OpenType](./media/opentype-font-features/opentype-superscripts.gif "Testo con apici OpenType")  
   
- Il markup seguente illustra come definire apici per il tipo di carattere Palatino Linotype, usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ L'esempio di markup seguente mostra come definire apici per il tipo di carattere Palatino Linotype, usando le <xref:System.Windows.Documents.Typography> proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#12](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#12)]  
   
  Il testo seguente mostra pedici per il tipo di carattere Palatino Linotype.  
   
- ![Testo con pedici OpenType](./media/opentype-font-features/opentype-subscripts.gif "testo con pedici OpenType")  
+ ![Testo con pedici OpenType](./media/opentype-font-features/opentype-subscripts.gif "Testo con pedici OpenType")  
   
- Il markup seguente illustra come definire pedici per il tipo di carattere Palatino Linotype, usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ L'esempio di markup seguente mostra come definire pedici per il tipo di carattere Palatino Linotype, usando le <xref:System.Windows.Documents.Typography> proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#13](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#13)]  
   
 ### <a name="decorative-uses-of-superscripts-and-subscripts"></a>Uso decorativo di apici e pedici  
  È anche possibile usare apici e pedici per creare effetti decorativi di testo con maiuscole e minuscole miste. Il testo seguente mostra testo in apice e pedice per il tipo di carattere Palatino Linotype. Si noti che questa formattazione non influisce sulle maiuscole.  
   
- ![Testo con pedici e apici OpenType](./media/opentype-font-features/opentype-superscripts-subscripts.gif "testo con pedici e apici OpenType")  
+ ![Testo con apici e pedici OpenType](./media/opentype-font-features/opentype-superscripts-subscripts.gif "Testo con apici e pedici OpenType")  
 
- Il markup seguente illustra come definire apici e pedici per un tipo di carattere usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ L'esempio di markup seguente mostra come definire apici e pedici per un tipo di carattere, usando le <xref:System.Windows.Documents.Typography> proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#14](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#14)]  
   
 <a name="capitals"></a>   
 ## <a name="capitals"></a>Caratteri maiuscoli  
- I caratteri maiuscoli sono un set di caratteri tipografici per il rendering del testo in glifi in stile maiuscolo. In genere, quando il testo viene visualizzato come tutto maiuscolo, la spaziatura tra le lettere può risultare insufficiente, mentre lo spessore e le proporzioni delle lettere possono apparire eccessivi. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supporta diversi formati di stile per le maiuscole, tra cui maiuscoletto, maiuscoletto ridotto, titolazione e spaziatura tra caratteri maiuscoli. Questi formati permettono di controllare l'aspetto dei caratteri maiuscoli.  
+ I caratteri maiuscoli sono un set di caratteri tipografici per il rendering del testo in glifi in stile maiuscolo. In genere, quando il testo viene visualizzato come tutto maiuscolo, la spaziatura tra le lettere può risultare insufficiente, mentre lo spessore e le proporzioni delle lettere possono apparire eccessivi. OpenType supporta diversi formati di stile per i caratteri maiuscoli, tra cui maiuscole e minuscole, maiuscole e minuscole, titoli e spaziatura dei capitali. Questi formati permettono di controllare l'aspetto dei caratteri maiuscoli.  
   
  Il testo seguente visualizza lettere maiuscole standard per il tipo di carattere Pescadero, seguite da lettere in stile "SmallCaps" e "AllSmallCaps". In questo caso, viene usata la stessa dimensione di carattere per tutte e tre le parole.  
   
- ![Testo con caratteri maiuscoli OpenType](./media/opentype-font-features/opentype-capitals.gif "testo con caratteri maiuscoli OpenType")  
+ ![Testo con caratteri maiuscoli OpenType](./media/opentype-font-features/opentype-capitals.gif "Testo con caratteri maiuscoli OpenType")  
   
- Il markup seguente illustra come definire caratteri maiuscoli per il carattere Pescadero usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto. Quando si usa il formato "SmallCaps", tutte le iniziali maiuscole vengono ignorate.  
+ L'esempio di markup seguente mostra come definire i caratteri maiuscoli per il tipo di carattere Pescadero usando <xref:System.Windows.Documents.Typography> le proprietà dell'oggetto. Quando si usa il formato "SmallCaps", tutte le iniziali maiuscole vengono ignorate.  
   
  [!code-xaml[OpenTypeFontSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
 ### <a name="titling-capitals"></a>Caratteri maiuscoli di titolazione  
  I caratteri maiuscoli di titolazione hanno spessore e proporzioni minori e sono progettati per conferire un aspetto più elegante rispetto alle lettere maiuscole normali. I caratteri maiuscoli di titolazione vengono in genere usati con dimensioni di carattere maggiori come intestazioni. Il testo seguente mostra caratteri maiuscoli normali e di titolazione per il tipo di carattere Pescadero. Notare la larghezza minore delle aste nel testo della seconda riga.  
   
- ![Testo con caratteri maiuscoli di titolazione OpenType](./media/opentype-font-features/opentype-titling-capitals.gif "testo con caratteri maiuscoli di titolazione OpenType")  
+ ![Testo con caratteri maiuscoli di titolazione OpenType](./media/opentype-font-features/opentype-titling-capitals.gif "Testo con caratteri maiuscoli di titolazione OpenType")  
   
- Il markup seguente illustra come definire caratteri maiuscoli di titolazione per il carattere Pescadero usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ L'esempio di markup seguente mostra come definire i caratteri maiuscoli di titolazione per il tipo di carattere Pescadero <xref:System.Windows.Documents.Typography> usando le proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet17](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet17)]  
   
 ### <a name="capital-spacing"></a>Spaziatura tra caratteri maiuscoli  
  La spaziatura tra caratteri maiuscoli è una funzionalità che permette di aggiungere più spazio quando si usano caratteri tutti maiuscoli nel testo. Le lettere maiuscole sono in genere progettate per essere combinate con lettere minuscole. La gradevole spaziatura tra una lettera maiuscola e una minuscola può risultare troppo ridotta quando si usano lettere tutte maiuscole. Il testo seguente mostra una spaziatura normale e una tra caratteri maiuscoli per il tipo di carattere Pescadero.  
   
- ![Testo con spaziatura tra caratteri maiuscoli OpenType](./media/opentype-font-features/opentype-capital-spacing.gif "testo con spaziatura tra caratteri maiuscoli OpenType ")  
+ ![Testo con spaziatura maiuscole OpenType](./media/opentype-font-features/opentype-capital-spacing.gif "Testo con spaziatura maiuscole OpenType")  
  
- Il markup seguente illustra come definire spaziatura tra caratteri maiuscoli per il carattere Pescadero usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ Nell'esempio di markup seguente viene illustrato come definire la spaziatura tra maiuscole e minuscole per <xref:System.Windows.Documents.Typography> il tipo di carattere Pescadero, utilizzando le proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet18](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet18)]  
   
 <a name="ligatures"></a>   
 ## <a name="ligatures"></a>Legature  
- Le legature sono due o più glifi uniti a formare un singolo glifo per creare un testo più leggibile o gradevole. I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supportano quattro tipi di legature:  
+ Le legature sono due o più glifi uniti a formare un singolo glifo per creare un testo più leggibile o gradevole. I tipi di carattere OpenType supportano quattro tipi di legature:  
   
 - **Legature standard**. Progettate per migliorare la leggibilità. Le legature standard includono "fi", "fl" e "ff".  
   
@@ -130,29 +130,29 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
   
  Il testo seguente mostra glifi con legature standard per il tipo di carattere Pericles.  
   
- ![Testo con legature standard OpenType](./media/opentype-font-features/opentype-standard-ligatures.gif "testo con legature standard OpenType")  
+ ![Testo con legature standard OpenType](./media/opentype-font-features/opentype-standard-ligatures.gif "Testo con legature standard OpenType")  
   
- Il markup seguente illustra come definire glifi con legature standard per il tipo di carattere Pericles usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ L'esempio di markup seguente mostra come definire glifi di legature standard per il tipo di carattere Pericle, usando le <xref:System.Windows.Documents.Typography> proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#4)]  
   
  Il testo seguente mostra glifi con legature discrezionali per il tipo di carattere Pericles.  
   
- ![Testo con legature discrezionali OpenType](./media/opentype-font-features/opentype-discretionary-ligatures.gif "testo con legature discrezionali OpenType")  
+ ![Testo con legature discrezionali OpenType](./media/opentype-font-features/opentype-discretionary-ligatures.gif "Testo con legature discrezionali OpenType")  
   
- Il markup seguente illustra come definire glifi con legature discrezionali per il tipo di carattere Pericles usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ L'esempio di markup seguente mostra come definire glifi di legature discrezionali per il tipo di carattere Pericle, usando le <xref:System.Windows.Documents.Typography> proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
   
- Per impostazione predefinita, i tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] permettono legature standard. Se si usa, ad esempio, il tipo di carattere Palatino Linotype, le legature standard "fi", "ff" e "fl" verranno visualizzate come glifi di caratteri combinati. Si noti che nella coppia di caratteri per ogni legatura standard i caratteri si toccano tra loro.  
+ Per impostazione predefinita, i tipi [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] di carattere OpenType in abilitano legature standard. Se si usa, ad esempio, il tipo di carattere Palatino Linotype, le legature standard "fi", "ff" e "fl" verranno visualizzate come glifi di caratteri combinati. Si noti che nella coppia di caratteri per ogni legatura standard i caratteri si toccano tra loro.  
   
- ![Testo con legature standard OpenType con Palatino Linotype](./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "testo con legature standard OpenType con Palatino Linotype")    
+ ![Testo con legature standard OpenType con Palatino Linotype](./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "Testo con legature standard OpenType con Palatino Linotype")    
    
  Tuttavia, è possibile disabilitare le funzionalità di legatura standard in modo che una legatura standard come "ff" venga visualizzata come due glifi separati invece che come glifo di caratteri combinati.  
   
- ![Testo con legature standard OpenType disabilitate](./media/opentype-font-features/disabled-opentype-standard-ligatures.gif "testo con legature standard OpenType disabilitate")  
+ ![Testo con legature standard OpenType disabilitate](./media/opentype-font-features/disabled-opentype-standard-ligatures.gif "Testo con legature standard OpenType disabilitate")  
     
- L'esempio di markup seguente mostra come disabilitare i glifi con legature standard per il tipo di carattere Palatino Linotype, usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ Nell'esempio di markup seguente viene illustrato come disabilitare i glifi di legature standard per il tipo di carattere Palatino Linotype, <xref:System.Windows.Documents.Typography> usando le proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#6](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#6)]  
   
@@ -160,42 +160,42 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
 ## <a name="swashes"></a>Glifi ornati  
  I glifi ornati sono glifi decorativi che usano ornamenti elaborati spesso associati alla calligrafia. Il testo seguente mostra glifi standard e ornati per il tipo di carattere Pescadero.  
   
- ![Testo con glifi standard e ornati OpenType](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "testo con glifi standard e ornati OpenType")  
+ ![Testo con glifi standard e ornati OpenType](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "Testo con glifi standard e ornati OpenType")  
 
  I glifi ornati vengono spesso usati come elementi decorativi in brevi frasi come gli annunci di eventi. Il testo seguente usa glifi ornati per porre in risalto le lettere maiuscole del nome dell'evento.  
   
- ![Testo con glifi ornati OpenType](./media/opentype-font-features/opentype-swashes.gif "testo con glifi ornati OpenType")  
+ ![Testo con ornati OpenType](./media/opentype-font-features/opentype-swashes.gif "Testo con ornati OpenType")  
   
- Il markup seguente illustra come definire glifi ornati per un tipo di carattere usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ L'esempio di markup seguente mostra come definire ornati per un tipo di carattere, usando le <xref:System.Windows.Documents.Typography> proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#7](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#7)]  
   
 ### <a name="contextual-swashes"></a>Glifi ornati contestuali  
  Alcune combinazioni di glifi ornati possono creare un aspetto poco gradevole, ad esempio con tratti discendenti che si sovrappongono nelle lettere adiacenti. L'uso di un glifo ornato contestuale permette di usare un glifo ornato sostitutivo che conferisce un aspetto migliore. Il testo seguente mostra la stessa parola prima e dopo l'applicazione di un glifo ornato contestuale.  
   
- ![Testo con glifi ornati contestuali OpenType](./media/opentype-font-features/opentype-contextual-swashes.gif "testo con glifi ornati contestuali OpenType")  
+ ![Testo con ornati contestuali OpenType](./media/opentype-font-features/opentype-contextual-swashes.gif "Testo con ornati contestuali OpenType")  
   
- Il markup seguente illustra come definire un glifo ornato contestuale per il carattere Pescadero usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ L'esempio di markup seguente mostra come definire un <xref:System.Windows.Documents.Typography> oggetto ornato contestuale per il tipo di carattere Pescadero usando le proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet16](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet16)]  
   
 <a name="alternates"></a>   
 ## <a name="alternates"></a>Glifi alternativi  
- I glifi alternativi possono essere usati per sostituire un glifo standard. I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], come il tipo di carattere Pericles usato negli esempi seguenti, possono contenere glifi alternativi, da usare per conferire aspetti diversi al testo. Il testo seguente mostra i glifi standard per il tipo di carattere Pericles.  
+ I glifi alternativi possono essere usati per sostituire un glifo standard. I tipi di carattere OpenType, ad esempio il tipo di carattere Pericle usato negli esempi seguenti, possono contenere glifi alternativi che è possibile usare per creare aspetti diversi per il testo. Il testo seguente mostra i glifi standard per il tipo di carattere Pericles.  
   
- ![Testo con glifi standard OpenType](./media/opentype-font-features/opentype-standard-glyphs.gif "testo con glifi standard OpenType")  
+ ![Testo con glifi standard OpenType](./media/opentype-font-features/opentype-standard-glyphs.gif "Testo con glifi standard OpenType")  
 
- Il tipo di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Pericles contiene glifi aggiuntivi che offrono alternative stilistiche al set di glifi standard. Il testo seguente mostra glifi con stile alternativo.  
+ Il tipo di carattere OpenType di Pericle contiene glifi aggiuntivi che forniscono alternative stilistiche al set di glifi standard. Il testo seguente mostra glifi con stile alternativo.  
   
- ![Testo con glifi con stile alternativo OpenType](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "testo con glifi con stile alternativo OpenType")  
+ ![Testo con glifi alternativi stilistici OpenType](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "Testo con glifi alternativi stilistici OpenType")  
   
- Il markup seguente illustra come definire glifi con stile alternativo per il tipo di carattere Pericles usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ L'esempio di markup seguente mostra come definire glifi alternativi stilistici per il tipo di carattere Pericle, usando le <xref:System.Windows.Documents.Typography> proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#2)]  
   
  Il testo seguente mostra altri glifi con stile alternativo per il tipo di carattere Pericles.  
   
- ![Testo con glifi con stile alternativo OpenType per il tipo di carattere Pericles](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "testo con glifi con stile alternativo OpenType per il tipo di carattere Pericles")
+ ![Testo con glifi alternativi stilistici OpenType per il tipo di carattere Pericle](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "Testo con glifi alternativi stilistici OpenType per il tipo di carattere Pericle")
 
  L'esempio di markup seguente mostra come definire questi altri glifi con stile alternativo.  
   
@@ -204,18 +204,18 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
 ### <a name="random-contextual-alternates"></a>Alternative contestuali casuali  
  Le alternative contestuali casuali forniscono più glifi sostitutivi per un singolo carattere. Se implementate con tipi di carattere di tipo script, questa funzionalità può simulare la scrittura manuale tramite un set di glifi scelti casualmente con differenze di aspetto minime. Il testo seguente usa alternative contestuali casuali per il tipo di carattere Lindsey. Notare come la lettera "a" varia leggermente nell'aspetto.  
   
- ![Testo con alternative contestuali casuali OpenType](./media/opentype-font-features/opentype-random-contextual-alternates.gif "testo con alternative contestuali casuali OpenType")  
+ ![Testo con alternative contestuali casuali OpenType](./media/opentype-font-features/opentype-random-contextual-alternates.gif "Testo con alternative contestuali casuali OpenType")  
   
- Il markup seguente illustra come definire alternative contestuali casuali per il tipo di carattere, relativa a Lindsey usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ L'esempio di markup seguente mostra come definire alternative contestuali casuali per il tipo di carattere Lindsey, usando le <xref:System.Windows.Documents.Typography> proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet20](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet20)]  
   
 ### <a name="historical-forms"></a>Formati di tipo storico  
  I formati di tipo storico sono convenzioni tipografiche usate comunemente in passato. Il testo seguente mostra la frase "Boston, Massachusetts" usando glifi con un formato di tipo storico per il tipo di carattere Palatino Linotype.  
   
- ![Testo con formati di tipo storico OpenType](./media/opentype-font-features/opentype-historical-forms.gif "testo con formati di tipo storico OpenType")  
+ ![Testo con form cronologici OpenType](./media/opentype-font-features/opentype-historical-forms.gif "Testo con form cronologici OpenType")  
    
- Il markup seguente illustra come definire formati di tipo storico per il tipo di carattere Palatino Linotype, usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ L'esempio di markup seguente mostra come definire i form cronologici per il tipo di carattere Palatino Linotype, <xref:System.Windows.Documents.Typography> usando le proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
   
@@ -224,60 +224,60 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
  I tipi di carattere OpenType supportano numerose funzionalità che possono essere usate con i valori numerici nel testo.  
   
 ### <a name="fractions"></a>Frazioni  
- I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supportano stili per le frazioni, tra cui frazioni con barra e frazioni sovrapposte.  
+ I tipi di carattere OpenType supportano gli stili per le frazioni, incluse le barre e le impilazioni.  
   
  Il testo seguente mostra stili di frazione per il tipo di carattere Palatino Linotype.  
   
- ![Testo con OpenType frazioni con barra e frazioni sovrapposte](./media/opentype-font-features/opentype-slashed-stacked-fractions.gif "testo con OpenType frazioni con barra e frazioni sovrapposte")  
+ ![Testo con frazioni con barra e frazioni sovrapposte OpenType](./media/opentype-font-features/opentype-slashed-stacked-fractions.gif "Testo con frazioni con barra e frazioni sovrapposte OpenType")  
    
- Il markup seguente illustra come definire stili di frazione per il tipo di carattere Palatino Linotype, usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ L'esempio di markup seguente mostra come definire gli stili di frazione per il tipo di carattere Palatino Linotype, <xref:System.Windows.Documents.Typography> usando le proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>Caratteri numerici in stile antico  
- I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supportano un formato numerico in stile antico. Questo formato è utile per visualizzare valori numerici in stili che non sono più quelli standard. Il testo seguente mostra una data del 18° secolo con formati numerici standard e in stile antico per il tipo di carattere Palatino Linotype.  
+ I tipi di carattere OpenType supportano un formato numerico obsoleto. Questo formato è utile per visualizzare valori numerici in stili che non sono più quelli standard. Il testo seguente mostra una data del 18° secolo con formati numerici standard e in stile antico per il tipo di carattere Palatino Linotype.  
   
- ![Testo con stile antico OpenType](./media/opentype-font-features/opentype-old-style-numerals.gif "testo con stile antico OpenType")  
+ ![Testo con caratteri numerici in stile antico OpenType](./media/opentype-font-features/opentype-old-style-numerals.gif "Testo con caratteri numerici in stile antico OpenType")  
     
  Il testo seguente mostra caratteri numerici standard per il tipo di carattere Palatino Linotype, seguiti da caratteri numerici in stile antico.  
   
- ![Testo con set di caratteri numerici in stile antico OpenType](./media/opentype-font-features/opentype-old-style-numeral-sets.gif "testo con set di caratteri numerici in stile antico OpenType")  
+ ![Testo con set di numeri di stile obsoleti OpenType](./media/opentype-font-features/opentype-old-style-numeral-sets.gif "Testo con set di numeri di stile obsoleti OpenType")  
   
- L'esempio di markup seguente mostra come definire stile antico per il tipo di carattere Palatino Linotype, usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ L'esempio di markup seguente mostra come definire i numeri di stile obsoleti per il tipo di carattere Palatino Linotype, <xref:System.Windows.Documents.Typography> usando le proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>Cifre proporzionali e tabulari  
- I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supportano una funzionalità per cifre proporzionali e tabulari, che permette di controllare l'allineamento delle larghezze quando si usano caratteri numerici. Le cifre proporzionali gestiscono ogni carattere numerico applicando una larghezza diversa: "1" è più stretto di "5". Le cifre tabulari vengono gestite come caratteri numerici di uguale larghezza in modo da poter essere allineate in verticale, per aumentare la leggibilità delle informazioni di tipo finanziario.  
+ I tipi di carattere OpenType supportano una funzionalità di figura proporzionale e tabulare per controllare l'allineamento delle larghezze quando si usano i numeri. Le cifre proporzionali gestiscono ogni carattere numerico applicando una larghezza diversa: "1" è più stretto di "5". Le cifre tabulari vengono gestite come caratteri numerici di uguale larghezza in modo da poter essere allineate in verticale, per aumentare la leggibilità delle informazioni di tipo finanziario.  
   
  Il testo seguente mostra due cifre proporzionali nella prima colonna usando il tipo di carattere Miramonte. Notare la differenza in larghezza tra i caratteri numerici "5" e "1". La seconda colonna mostra gli stessi valori numerici, le cui larghezze sono state modificate tramite la funzionalità per le cifre tabulari.  
   
- ![Testo con cifre proporzionali e tabulari OpenType](./media/opentype-font-features/opentype-proportional-tabular-figures.gif "testo con cifre proporzionali e tabulari OpenType")  
+ ![Testo con le cifre proporzionali & tabulare OpenType](./media/opentype-font-features/opentype-proportional-tabular-figures.gif "Testo con cifre proporzionali e tabulari OpenType")  
     
- Il markup seguente illustra come definire cifre proporzionali e tabulari per il carattere Miramonte usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ L'esempio di markup seguente mostra come definire le cifre proporzionali e tabulari per il tipo di carattere Miramonte usando <xref:System.Windows.Documents.Typography> le proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>Zero barrato  
- I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supportano un formato numerico con zero barrato per evidenziare la differenza tra la lettera "O" e il carattere numerico "0". Il carattere numerico zero barrato viene spesso usato per gli identificatori all'interno di informazioni finanziarie e aziendali.  
+ I tipi di carattere OpenType supportano un formato numerico con zero barrato per evidenziare la differenza tra la lettera "O" e il numero "0". Il carattere numerico zero barrato viene spesso usato per gli identificatori all'interno di informazioni finanziarie e aziendali.  
   
  Il testo seguente mostra un identificatore di ordine di esempio con il tipo di carattere Miramonte. La prima riga usa caratteri numerici standard. La seconda riga usa caratteri numerici con zero barrato per distinguere meglio il carattere numerico dalla lettera "O" maiuscola.  
   
- ![Testo con OpenType caratteri numerici con zero barrato](./media/opentype-font-features/opentype-slashed-zero-numerals.gif "testo con OpenType caratteri numerici con zero barrato")  
+ ![Testo con caratteri numerici con zero barrato OpenType](./media/opentype-font-features/opentype-slashed-zero-numerals.gif "Testo con caratteri numerici con zero barrato OpenType")  
     
- Il markup seguente illustra come definire caratteri numerici con zero barrato per il carattere Miramonte usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto.  
+ Nell'esempio di markup seguente viene illustrato come definire i numerali con zero barrato per il tipo di carattere Miramonte <xref:System.Windows.Documents.Typography> , utilizzando le proprietà dell'oggetto.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet15](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet15)]  
   
 <a name="typography_class"></a>   
 ## <a name="typography-class"></a>Classe Typography  
- Il <xref:System.Windows.Documents.Typography> oggetto espone il set di funzionalità che un [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supporta tipi di carattere. Impostando le proprietà del <xref:System.Windows.Documents.Typography> nel markup, è possibile creare facilmente documenti che sfruttano [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] funzionalità.  
+ L' <xref:System.Windows.Documents.Typography> oggetto espone il set di funzionalità supportate da un tipo di carattere OpenType. Impostando le proprietà di <xref:System.Windows.Documents.Typography> nel markup, è possibile creare facilmente documenti che sfruttano le funzionalità OpenType.  
   
  Il testo seguente visualizza lettere maiuscole standard per il tipo di carattere Pescadero, seguite da lettere in stile "SmallCaps" e "AllSmallCaps". In questo caso, viene usata la stessa dimensione di carattere per tutte e tre le parole.  
   
- ![Testo con caratteri maiuscoli OpenType](./media/opentype-font-features/opentype-capitals.gif "testo con caratteri maiuscoli OpenType")  
+ ![Testo con caratteri maiuscoli OpenType](./media/opentype-font-features/opentype-capitals.gif "Testo con caratteri maiuscoli OpenType")  
     
- Il markup seguente illustra come definire caratteri maiuscoli per il carattere Pescadero usando proprietà dell'oggetto di <xref:System.Windows.Documents.Typography> oggetto. Quando si usa il formato "SmallCaps", tutte le iniziali maiuscole vengono ignorate.  
+ L'esempio di markup seguente mostra come definire i caratteri maiuscoli per il tipo di carattere Pescadero usando <xref:System.Windows.Documents.Typography> le proprietà dell'oggetto. Quando si usa il formato "SmallCaps", tutte le iniziali maiuscole vengono ignorate.  
   
  [!code-xaml[OpenTypeFontSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
@@ -287,9 +287,9 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
  [!code-vb[TypographyCodeSnippets#TypographyCodeSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TypographyCodeSnippets/visualbasic/page1.xaml.vb#typographycodesnippet1)]  
   
 ### <a name="typography-class-properties"></a>Proprietà della classe Typography  
- La tabella seguente elenca le proprietà, valori e le impostazioni predefinite del <xref:System.Windows.Documents.Typography> oggetto.  
+ Nella tabella seguente sono elencate le proprietà, i valori e le impostazioni predefinite <xref:System.Windows.Documents.Typography> dell'oggetto.  
   
-|Proprietà|Valore/i|Valore predefinito|  
+|Proprietà|Valore/i|Default Value|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|Valore numerico, byte|0|  
 |<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  

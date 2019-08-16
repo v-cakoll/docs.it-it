@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 58dc070e1642773f39f9ab2a9037ca60175b27cf
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401271"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545261"
 ---
 # <a name="panels-overview"></a>Cenni preliminari sugli elementi Panel
 <xref:System.Windows.Controls.Panel>gli elementi sono componenti che controllano il rendering degli elementi, ovvero le dimensioni e le dimensioni, la posizione e la disposizione del contenuto figlio. Fornisce una serie di elementi predefiniti <xref:System.Windows.Controls.Panel> , nonché la possibilità di creare elementi personalizzati <xref:System.Windows.Controls.Panel>. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]  
@@ -66,13 +66,13 @@ ms.locfileid: "68401271"
 |------------------|---------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|Sì|Definisce un'area all'interno della <xref:System.Windows.Controls.Canvas> quale è possibile posizionare in modo esplicito gli elementi figlio in base alle coordinate relative all'area.|  
 |<xref:System.Windows.Controls.DockPanel>|Sì|Definisce un'area all'interno della quale è possibile disporre elementi figlio in orizzontale o in verticale, l'uno rispetto all'altro.|  
-|<xref:System.Windows.Controls.Grid>|Sì|Definisce un'area flessibile della griglia costituita da righe e colonne. Gli elementi figlio di <xref:System.Windows.Controls.Grid> un oggetto possono essere posizionati <xref:System.Windows.FrameworkElement.Margin%2A> con precisione utilizzando la proprietà.|  
+|<xref:System.Windows.Controls.Grid>|Yes|Definisce un'area flessibile della griglia costituita da righe e colonne. Gli elementi figlio di <xref:System.Windows.Controls.Grid> un oggetto possono essere posizionati <xref:System.Windows.FrameworkElement.Margin%2A> con precisione utilizzando la proprietà.|  
 |<xref:System.Windows.Controls.StackPanel>|Sì|Dispone gli elementi figlio su una sola riga che può essere orientata orizzontalmente o verticalmente.|  
 |<xref:System.Windows.Controls.Primitives.TabPanel>|No|Gestisce il layout dei pulsanti di tabulazione <xref:System.Windows.Controls.TabControl>in un oggetto.|  
 |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|No|Dispone il contenuto all'interno <xref:System.Windows.Controls.ToolBar> di un controllo.|  
 |<xref:System.Windows.Controls.Primitives.UniformGrid>|No|<xref:System.Windows.Controls.Primitives.UniformGrid>viene utilizzato per disporre gli elementi figlio in una griglia con tutte le dimensioni delle celle uguali.|  
 |<xref:System.Windows.Controls.VirtualizingPanel>|No|Implementa una classe di base per i pannelli in grado di virtualizzare la raccolta di elementi figlio relativa.|  
-|<xref:System.Windows.Controls.VirtualizingStackPanel>|Yes|Dispone e virtualizza il contenuto su una singola riga orientato orizzontalmente o verticalmente.|  
+|<xref:System.Windows.Controls.VirtualizingStackPanel>|Sì|Dispone e virtualizza il contenuto su una singola riga orientato orizzontalmente o verticalmente.|  
 |<xref:System.Windows.Controls.WrapPanel>|Sì|<xref:System.Windows.Controls.WrapPanel>posiziona gli elementi figlio in sequenza da sinistra a destra, suddividendo il contenuto sulla riga successiva al bordo della casella contenitore. L'ordinamento successivo avviene in sequenza dall'alto verso il basso o da destra a sinistra, a seconda del valore <xref:System.Windows.Controls.WrapPanel.Orientation%2A> della proprietà.|  
   
 <a name="Panels_main_UI_elements"></a>   
@@ -118,7 +118,7 @@ ms.locfileid: "68401271"
 ### <a name="dockpanel"></a>DockPanel  
  L' <xref:System.Windows.Controls.DockPanel> elemento usa la <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> proprietà associata come set negli elementi di contenuto figlio per posizionare il contenuto lungo i bordi di un contenitore. Quando <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> è impostato su <xref:System.Windows.Controls.Dock.Top> o <xref:System.Windows.Controls.Dock.Bottom>, posiziona gli elementi figlio sopra o sotto l'uno all'altro. Quando <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> è impostato su <xref:System.Windows.Controls.Dock.Left> o <xref:System.Windows.Controls.Dock.Right>, posiziona gli elementi figlio a sinistra o a destra. La <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> proprietà determina la posizione dell'elemento finale aggiunto come figlio di un oggetto <xref:System.Windows.Controls.DockPanel>.  
   
- È possibile utilizzare <xref:System.Windows.Controls.DockPanel> per posizionare un gruppo di controlli correlati, ad esempio un set di pulsanti. In alternativa, è possibile usarlo per creare una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] con riquadri, analoga a quella disponibile in [!INCLUDE[TLA#tla_outlook](../../../../includes/tlasharptla-outlook-md.md)].  
+ È possibile utilizzare <xref:System.Windows.Controls.DockPanel> per posizionare un gruppo di controlli correlati, ad esempio un set di pulsanti. In alternativa, è possibile usarlo per creare un "riquadri" [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], simile a quello disponibile in Microsoft Outlook.  
   
 #### <a name="sizing-to-content"></a>Ridimensionamento in base al contenuto  
  Se le <xref:System.Windows.FrameworkElement.Height%2A> proprietà <xref:System.Windows.FrameworkElement.Width%2A> e non vengono specificate, <xref:System.Windows.Controls.DockPanel> il relativo contenuto viene ridimensionato. Le dimensioni possono aumentare o diminuire a seconda delle dimensioni degli elementi figlio. Tuttavia, quando queste proprietà vengono specificate e non è più disponibile spazio per il successivo elemento figlio specificato, <xref:System.Windows.Controls.DockPanel> non visualizza tale elemento figlio né gli elementi figlio successivi e non misura gli elementi figlio successivi.  

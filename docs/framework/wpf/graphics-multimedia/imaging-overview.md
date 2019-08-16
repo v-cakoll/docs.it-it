@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: fcf5e8e68492f4d1ff75221384b08ffad2b939f3
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 6d3dce5c8a34257f8509f239ece4bae3efa02b84
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971955"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545375"
 ---
 # <a name="imaging-overview"></a>Cenni preliminari sulla creazione dell'immagine
 Questo argomento offre un'introduzione a [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] consente agli sviluppatori di visualizzare, trasformare e formattare le immagini.  
@@ -38,7 +38,7 @@ Questo argomento offre un'introduzione a [!INCLUDE[TLA#tla_wic](../../../../incl
   
 - Modello di estendibilità per formati di immagine nuovi o proprietari.  
   
-- Miglioramento delle prestazioni e della sicurezza nei formati di immagini native, tra cui bitmap (BMP), gruppo di esperti di [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]fotografica [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)](jpeg), [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)],, Graphics Interchange Format (gif) e icona (. ico).  
+- Miglioramento delle prestazioni e della sicurezza nei formati di immagini native, tra cui bitmap (BMP), gruppo di esperti di fotografica (jpeg) [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]Portable Network Graphics (png),,, Graphics Interchange Format (gif) e icona (. ico).  
   
 - Conservazione dei dati di immagini con intensità fino a 8 bit per canale (32 bit per pixel).  
   
@@ -56,7 +56,7 @@ Questo argomento offre un'introduzione a [!INCLUDE[TLA#tla_wic](../../../../incl
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>Formati di immagini WPF  
- Viene usato un codec per decodificare o codificare un formato multimediale specifico. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]include un codec per i formati di immagine [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]BMP [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]JPEG,,,, gif e Icon. Ognuno di questi codec consente alle applicazioni di decodificare e, ad eccezione di ICON, codificare i rispettivi formati di immagine.  
+ Viene usato un codec per decodificare o codificare un formato multimediale specifico. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]include un codec per i formati di immagine BMP, [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]JPEG [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], PNG,,, gif e Icon. Ognuno di questi codec consente alle applicazioni di decodificare e, ad eccezione di ICON, codificare i rispettivi formati di immagine.  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>è una classe importante utilizzata per la decodifica e la codifica delle immagini. Si tratta del blocco predefinito di base della pipeline di [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] e rappresenta un set unico e costante di pixel a una specifica dimensione e risoluzione. Un <xref:System.Windows.Media.Imaging.BitmapSource> può essere un singolo frame di un'immagine a più frame oppure il risultato di una trasformazione eseguita su un oggetto <xref:System.Windows.Media.Imaging.BitmapSource>. È l'elemento padre di molte delle classi primarie utilizzate nella [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] creazione di immagini <xref:System.Windows.Media.Imaging.BitmapFrame>, ad esempio.  
   

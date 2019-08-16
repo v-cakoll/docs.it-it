@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 099d6b94f9094ac9baed25e5060d8a166e27573b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bcd0a11aef2372cc6e5830892eb3b71fa841ba2f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629920"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545259"
 ---
 # <a name="globalization-for-wpf"></a>Globalizzazione per WPF
 In questo argomento vengono introdotti i problemi che è necessario conoscere [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] quando si scrivono applicazioni per il mercato globale. Gli elementi di programmazione della globalizzazione sono [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] definiti `System.Globalization`in in.
@@ -123,9 +123,9 @@ Nell'esempio seguente viene illustrato un riferimento a un carattere esadecimale
 
 - Singalese
 
- Tutti i motori di sistema di [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] scrittura supportano i tipi di carattere. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]i tipi di carattere [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] possono includere le tabelle di layout che consentono agli autori di tipi di carattere di progettare migliori tipi di carattere tipografici internazionali e di fascia alta. Le [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] tabelle di layout del tipo di carattere contengono informazioni sulle sostituzioni del glifo, il posizionamento dei glifi, la giustificazione e il posizionamento della linea di base, consentendo alle applicazioni di elaborazione del testo di migliorare il layout
+ Tutti i motori di sistema di scrittura supportano i tipi di carattere OpenType. I tipi di carattere OpenType possono includere le tabelle di layout OpenType che consentono agli autori di tipi di carattere di progettare migliori tipi di carattere tipografici internazionali e di fascia alta. Le tabelle di layout del tipo di carattere OpenType contengono informazioni sulle sostituzioni dei glifi, il posizionamento del glifo, la giustificazione e il posizionamento della linea di base, consentendo alle applicazioni di elaborazione del testo di migliorare il layout
 
- [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]i tipi di carattere consentono la gestione di set [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] di glifi di grandi dimensioni tramite la codifica. Tale codifica consente un esteso supporto internazionale, oltre alle varianti dei glifi tipografici.
+ I tipi di carattere OpenType consentono la gestione di set [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] di glifi di grandi dimensioni tramite la codifica. Tale codifica consente un esteso supporto internazionale, oltre alle varianti dei glifi tipografici.
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]il rendering del testo è basato sulla tecnologia Microsoft ClearType dei sottopixel che supporta l'indipendenza della risoluzione. Questo migliora considerevolmente la leggibilità e consente di supportare documenti in stile rivista di qualità elevata per tutti gli script.
 

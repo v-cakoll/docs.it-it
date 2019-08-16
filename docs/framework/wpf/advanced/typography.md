@@ -8,15 +8,15 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: 144b137550ff44a8ea4927e6cf611d4761fcb01a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bbefaba4491fca1b21b6a214048d9db1394c4bc7
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629607"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545326"
 ---
 # <a name="typography"></a>Opzioni tipografiche
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]include il supporto per la presentazione dettagliata del contenuto di testo. Il rendering [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] del testo in viene eseguito utilizzando Microsoft ClearType, che migliora la chiarezza e la leggibilità del testo. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]supporta [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] anche i [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] tipi di carattere, che offrono funzionalità aggiuntive oltre a quelle definite dal formato.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]include il supporto per la presentazione dettagliata del contenuto di testo. Il rendering [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] del testo in viene eseguito utilizzando Microsoft ClearType, che migliora la chiarezza e la leggibilità del testo. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]supporta anche i tipi di carattere OpenType, che offrono funzionalità aggiuntive oltre a [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] quelle definite dal formato.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Funzionalità tipografiche di WPF](typography-in-wpf.md)  
