@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 79b7057b1f6a9cdba2215124160b28efb9a1c0be
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cf5a7f239cf7d3cd3a6e39f31d16adb830646afc
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629525"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039499"
 ---
 # <a name="namespaces-c-programming-guide"></a>Spazi dei nomi (Guida per programmatori C#)
 
@@ -44,13 +44,12 @@ Gli spazi dei nomi hanno le proprietà riportate di seguito:
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+Per altre informazioni, vedere la sezione [Spazi dei nomi](~/_csharplang/spec/namespaces.md) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
 - [Uso degli spazi dei nomi](using-namespaces.md)
-- [Procedura: Usare l'alias dello spazio dei nomi globale](how-to-use-the-global-namespace-alias.md)
 - [Procedura: Usare lo spazio dei nomi My](how-to-use-the-my-namespace.md)
 - [Nomi di identificatore](../inside-a-program/identifier-names.md)
 - [Direttiva using](../../language-reference/keywords/using-directive.md)
