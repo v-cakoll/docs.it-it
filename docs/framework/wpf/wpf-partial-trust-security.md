@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 683d0a28fa151cf2116b4125dfb7a604605c7c4a
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: b68148b08cf6b5f980bc09e497e845558ae882fb
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972246"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567525"
 ---
 # <a name="wpf-partial-trust-security"></a>Sicurezza con attendibilità parziale in WPF
 <a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita, i linguaggi di scripting lato client e HTML non sono in grado di accedere alle risorse di sistema critiche. Poiché le applicazioni ospitate da browser Windows Presentation Foundation (WPF) possono essere avviate dal browser, devono essere conformi a un set di restrizioni simile. Per applicare queste restrizioni, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] si basa sulla sicurezza dall'accesso di codice (CAS) e su ClickOnce (vedere [strategia di sicurezza di WPF-sicurezza della piattaforma](wpf-security-strategy-platform-security.md)). Per impostazione predefinita, le applicazioni ospitate da browser richiedono il set di autorizzazioni dell'area Internet, indipendentemente dal fatto che vengano avviate da Internet, dall'Intranet locale o dal computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  
@@ -50,7 +50,7 @@ ms.locfileid: "68972246"
 |Modifica|Controllo ortografico<br /><br /> RichTextBox<br /><br /> Supporto Appunti per testo non crittografato e input penna<br /><br /> Operazione Incolla avviata dall'utente<br /><br /> Copia di contenuto selezionato|  
 |Controlli|Controlli generali|  
   
- Questa tabella illustra le [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] funzionalità di livello elevato. Per informazioni più dettagliate, Windows Software Development Kit (SDK) documenta le autorizzazioni richieste da ogni membro di [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Inoltre, per le funzionalità seguenti sono disponibili informazioni più dettagliate sull'esecuzione in situazioni di attendibilità parziale, con alcune considerazioni speciali.  
+ Questa tabella illustra le [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] funzionalità di livello elevato. Per informazioni più dettagliate, il Windows SDK documenta le autorizzazioni richieste da ogni membro [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]di. Inoltre, per le funzionalità seguenti sono disponibili informazioni più dettagliate sull'esecuzione in situazioni di attendibilità parziale, con alcune considerazioni speciali.  
   
 - [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]vedere [Cenni preliminari su XAML (WPF)](./advanced/xaml-overview-wpf.md).  
   
@@ -131,21 +131,21 @@ ms.locfileid: "68972246"
 |Autorizzazioni|Attributo|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|Accesso ai server DNS|Sì|No|  
-|Variabili di ambiente|Lettura|Yes|No|  
-|Finestre di dialogo file|Apri|Sì|Sì|  
-|Finestre di dialogo file|Senza restrizioni|Yes|No|  
+|Variabili di ambiente|Lettura|Sì|No|  
+|Finestre di dialogo file|Apri|Sì|Yes|  
+|Finestre di dialogo file|Senza restrizioni|Sì|No|  
 |Spazio di memorizzazione isolato|Isolamento assembly in base all'utente|Sì|No|  
 |Spazio di memorizzazione isolato|Isolamento sconosciuto|Sì|Sì|  
-|Spazio di memorizzazione isolato|Quota utenti illimitata|Sì|No|  
-|Supporti|Audio, video e immagini sicuri|Sì|Sì|  
+|Spazio di memorizzazione isolato|Quota utenti illimitata|Yes|No|  
+|Supporti|Audio, video e immagini sicuri|Sì|Yes|  
 |Stampa|Stampa predefinita|Yes|No|  
-|Stampa|Stampa sicura|Sì|Sì|  
-|Reflection|Emissione|Sì|No|  
-|Security|Esecuzione del codice gestito|Yes|Sì|  
-|Security|Asserzione autorizzazioni concesse|Sì|No|  
+|Stampa|Stampa sicura|Yes|Sì|  
+|Reflection|Emissione|Yes|No|  
+|Security|Esecuzione del codice gestito|Sì|Sì|  
+|Security|Asserzione autorizzazioni concesse|Yes|No|  
 |Interfaccia utente|Senza restrizioni|Sì|No|  
 |Interfaccia utente|Finestre di primo livello sicure|Sì|Yes|  
-|Interfaccia utente|Appunti personali|Yes|Sì|  
+|Interfaccia utente|Appunti personali|Sì|Yes|  
 |Web browser|Navigazione sicura dei frame in HTML|Sì|Sì|  
   
 > [!NOTE]

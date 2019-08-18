@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7214fa0342d0946044861c4e375c7797ad6a06b1
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: a31a42362e934d14b9cb66724618814e2b232c06
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833767"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567290"
 ---
 # <a name="runtime-profiling"></a>Profilatura runtime
 La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi scenario di sviluppo o distribuzione. Questa sezione è destinata agli sviluppatori e agli amministratori di sistema che vogliono raccogliere le informazioni sulle prestazioni delle applicazioni.  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>Rilevamento delle prestazioni con Performance Monitor (Perfmon.exe)  
- Il monitoraggio delle prestazioni è lo strumento più semplice da usare per profilare l'applicazione .NET Framework. Performance Monitor rappresenta graficamente i dati trovati nei contatori delle prestazioni .NET Framework installati con common language runtime e Windows Software Development Kit (SDK). Questi contatori possono essere usati per monitorare una serie di attività, dalla gestione della memoria alle prestazioni del compilatore JIT. Forniscono informazioni sulle risorse usate dall'applicazione, che indirettamente misurano le prestazioni dell'applicazione. Usare questi contatori per comprendere il funzionamento interno dell'applicazione.  
+ Performance Monitor è lo strumento più semplice da usare per profilare l'applicazione .NET Framework. Performance Monitor rappresenta graficamente i dati trovati nei contatori delle prestazioni .NET Framework installati con i Common Language Runtime e il Windows SDK. Questi contatori possono essere usati per monitorare una serie di attività, dalla gestione della memoria alle prestazioni del compilatore JIT. Forniscono informazioni sulle risorse usate dall'applicazione, che indirettamente misurano le prestazioni dell'applicazione. Usare questi contatori per comprendere il funzionamento interno dell'applicazione.  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Per eseguire Perfmon.exe in Windows Vista e versioni successive  
   
@@ -54,12 +54,12 @@ La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi 
  Per profilare un assembly esistente in un'area o in una condivisione remota, assicurarsi che l'assembly remoto sia totalmente attendibile nel computer che esegue i contatori delle prestazioni. Se l'assembly non ha l'attendibilità totale, i contatori delle prestazioni non funzioneranno. Per informazioni sulla concessione dell'attendibilità alle diverse aree, vedere [Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
 > [!NOTE]
->  Nei sistemi in cui è installato .NET Framework 4, Performance Monitor potrebbe non visualizzare i dati per i contatori delle prestazioni in alcune categorie, ad esempio **dati CLR .NET** e **.NET CLR Networking**, per applicazioni sviluppate con .NET Framework 1.1. In questo caso, è possibile configurare Performance Monitor per visualizzare questi dati aggiungendo l'elemento [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) al file di configurazione dell'applicazione.  
+>  Nei sistemi in cui è installato il .NET Framework 4, performance monitor potrebbe non visualizzare i dati per i contatori delle prestazioni in alcune categorie, ad esempio **dati CLR .NET** e **rete CLR .NET**, per le applicazioni sviluppate con .NET Framework 1,1. In questo caso, è possibile configurare Performance Monitor per visualizzare questi dati aggiungendo l'elemento [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) al file di configurazione dell'applicazione.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Lettura e creazione di contatori delle prestazioni a livello di codice  
- .NET Framework fornisce le classi che è possibile usare per accedere a livello di codice le stesse informazioni sulle prestazioni che sono disponibile nella console prestazioni. È anche possibile usare queste classi per creare contatori delle prestazioni personalizzati. Nella tabella seguente descrive alcune delle classi fornite in .NET Framework di monitoraggio delle prestazioni.  
+ Il .NET Framework fornisce le classi che è possibile utilizzare per accedere a livello di codice alle stesse informazioni sulle prestazioni disponibili nella console prestazioni. È anche possibile usare queste classi per creare contatori delle prestazioni personalizzati. Nella tabella seguente vengono descritte alcune delle classi di monitoraggio delle prestazioni fornite nel .NET Framework.  
   
-|Classe|Descrizione|  
+|Classe|DESCRIZIONE|  
 |-----------|-----------------|  
 |<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|Rappresenta un componente del contatore delle prestazioni di Windows NT. Usare questa classe per leggere i contatori predefiniti o personalizzati esistenti e pubblicare i dati sulle prestazioni (scrittura) nei contatori personalizzati.|  
 |<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|Fornisce diversi metodi per interagire con i contatori e le categorie di contatori del computer.|  
