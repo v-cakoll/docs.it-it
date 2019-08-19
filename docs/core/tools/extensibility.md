@@ -3,12 +3,12 @@ title: Modello di estendibilità dell'interfaccia della riga di comando di .NET 
 description: Informazioni sull'estendibilità degli strumenti dell'interfaccia della riga di comando (CLI).
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 784eb50dfdbc0f88050a9f727ddbf53db34d3209
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 400d47f9d5bca53a23d09eb4eb94519f9824b473
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331009"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012981"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modello di estendibilità degli strumenti CLI di .NET Core
 
@@ -79,7 +79,8 @@ Esempi più dettagliati e differenti combinazioni sono disponibili in [.NET Core
 Nello stesso archivio è possibile vedere anche l'[implementazione degli strumenti usati](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages).
 
 ## <a name="custom-targets"></a>Destinazioni personalizzate
-NuGet è in grado di [creare pacchetti di destinazioni MSBuild personalizzate e file props](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Con il passaggio all'uso di MSBuild per gli strumenti CLI di .NET Core, lo stesso meccanismo di estendibilità è ora applicabile ai progetti .NET Core. È opportuno usare questo tipo di estendibilità quando si vuole estendere il processo di compilazione, quando si vuole accedere a qualsiasi elemento di tale processo, ad esempio i file generati, quando si vuole esaminare la configurazione in cui viene chiamata la compilazione e così via.
+
+NuGet è in grado di [creare pacchetti di destinazioni MSBuild personalizzate e file props](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package). Con il passaggio all'uso di MSBuild per gli strumenti CLI di .NET Core, lo stesso meccanismo di estendibilità è ora applicabile ai progetti .NET Core. È opportuno usare questo tipo di estendibilità quando si vuole estendere il processo di compilazione, quando si vuole accedere a qualsiasi elemento di tale processo, ad esempio i file generati, quando si vuole esaminare la configurazione in cui viene chiamata la compilazione e così via.
 
 Nell'esempio seguente è possibile visualizzare il file di progetto della destinazione con la sintassi `csproj`. Il codice indica al comando [`dotnet pack`](dotnet-pack.md) quali elementi aggiungere al pacchetto, posizionando i file di destinazioni e gli assembly nella cartella *build* all'interno del pacchetto. Si noti l'elemento `<ItemGroup>` con la proprietà `Label` impostata su `dotnet pack instructions` e la destinazione definita sotto tale elemento.
 

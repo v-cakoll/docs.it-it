@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 07/25/2019
-ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: f1fce2899e9e11b1007d6c270180b27a29eaa167
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733366"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039442"
 ---
 # <a name="whats-new-in-net-core-30-preview-7"></a>Novità di .NET Core 3.0 (Preview 7)
 
@@ -159,7 +159,7 @@ Per altre informazioni sullo strumento IL Linker, vedere la [documentazione](htt
 
 Per impostazione predefinita, con .NET Core 3.0 la [compilazione a livelli](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) è attiva. Questa funzionalità consente al runtime di usare in modo più adattivo il compilatore JIT per ottenere prestazioni migliori.
 
-Il vantaggio principale della compilazione a livelli (TC) consiste nell'abilitazione di metodi di ricompilazione JIT seguendo un approccio slower-but-faster (più lento ma più rapido) o higher-quality-but-slower (di migliore qualità ma più lento) per la produzione di codice. In questo modo è possibile migliorare le prestazioni di un'applicazione nelle sue vari fasi di esecuzione, dall'avvio allo stato stabile. Ciò si differenzia dall'approccio che non usa la compilazione a livelli. In questo caso ogni metodo viene compilato in un solo modo (come per il livello alta qualità), che dà priorità allo stato stabile piuttosto che alle prestazioni all'avvio.
+Il vantaggio principale della compilazione a livelli (TC) consiste nell'abilitazione di metodi di ricompilazione JIT con un livello lower-quality-but-faster (di minore qualità ma più veloce) o higher-quality-but-slower (di migliore qualità ma più lento). In questo modo è possibile migliorare le prestazioni di un'applicazione nelle sue vari fasi di esecuzione, dall'avvio allo stato stabile. Ciò si differenzia dall'approccio che non usa la compilazione a livelli. In questo caso ogni metodo viene compilato in un solo modo (come per il livello alta qualità), che dà priorità allo stato stabile piuttosto che alle prestazioni all'avvio.
 
 Per abilitare la compilazione JIT rapida (codice JIT livello 0), usare questa impostazione nel file di progetto:
 
@@ -291,7 +291,7 @@ Il file di progetto .NET Core deve specificare i runtime supportati nella propri
 <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
 ```
 
-## <a name="winforms-highdpi"></a>HighDPI in WinForms
+## <a name="winforms-high-dpi"></a>Modalità con valori DPI alti per WinForms
 
 Le applicazioni di Windows Forms in .NET Core possono impostare la modalità con valori DPI alti usando <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType>. Il metodo `SetHighDpiMode` imposta la modalità con valori DPI alti corrispondente a meno che l'impostazione sia stata configurata in altro modo, ad esempio con `App.Manifest` o P/Invoke prima di `Application.Run`.
 
@@ -303,9 +303,9 @@ I valori possibili per `highDpiMode`, espressi dall'enumerazione <xref:System.Wi
 * `PerMonitorV2`
 * `DpiUnawareGdiScaled`
 
-Per altre informazioni sulle modalità con valori DPI alti vedere [High DPI Desktop Application Development on Windows](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows) (Sviluppo di applicazioni desktop con valori DPI alti in Windows).
+Per altre informazioni sulle modalità con valori DPI alti, vedere [Sviluppo di applicazioni desktop con valori DPI alti in Windows](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).
 
-### <a name="ranges-and-indices"></a>Gli intervalli e indici
+## <a name="ranges-and-indices"></a>Gli intervalli e indici
 
 Il nuovo tipo <xref:System.Index?displayProperty=nameWithType> può essere usato per l'indicizzazione. È possibile crearne uno da `int`, che esegue il conteggio dall'inizio, o con un operatore prefisso `^` (C#), che esegue il conteggio dalla fine:
 
@@ -324,7 +324,7 @@ var slice = a[i1..i2]; // { 3, 4, 5 }
 
 Per altre informazioni, vedere l'[esercitazione su intervalli e indici](../../csharp/tutorials/ranges-indexes.md).
 
-### <a name="async-streams"></a>Flussi asincroni
+## <a name="async-streams"></a>Flussi asincroni
 
 Il tipo <xref:System.Collections.Generic.IAsyncEnumerable%601> è una nuova versione asincrona di <xref:System.Collections.Generic.IEnumerable%601>. Il linguaggio consente di usare `await foreach` su `IAsyncEnumerable<T>` per utilizzarne gli elementi e di usare `yield return` per generare gli elementi.
 
@@ -403,17 +403,15 @@ Di seguito è riportato un esempio di lettura tramite il file [**launch.json**](
 
 Ecco un esempio di utilizzo di `JsonDocument` e `JsonElement` che può essere usato come punto di partenza:
 
-Di seguito è riportato un esempio di lettura di C# 8.0 tramite il file [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) creato da Visual Studio Code:
-
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJson)]
+
+Di seguito è riportato un esempio di lettura di C# 8.0 tramite il file [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) creato da Visual Studio Code:
 
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJsonCall)]
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
 <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> si basa su <xref:System.Text.Json.Utf8JsonReader> e <xref:System.Text.Json.Utf8JsonWriter> per offrire un'opzione di serializzazione veloce della memoria insufficiente quando si usano documenti e frammenti JSON.
-
-VEDERE: https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md per un esempio di conversione
 
 Di seguito è riportato un esempio di serializzazione di un oggetto in formato JSON:
 
