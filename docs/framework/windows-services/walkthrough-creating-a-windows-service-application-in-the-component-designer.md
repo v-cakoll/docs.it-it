@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 8d30b7b98648e36a3008ac015f9560620f77b363
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751826"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545316"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Esercitazione: Creare un'app di servizio di Windows
 
@@ -26,7 +26,7 @@ Le prime operazioni da effettuare sono la creazione del progetto e l'impostazion
 
 1. Dal menu **File** di Visual Studio scegliere **Nuovo** > **Progetto** (o premere **CTRL**+**MAIUSC**+**N**) per aprire la finestra **Nuovo progetto**.
 
-2. Cercare e selezionare il modello di progetto **Servizio di Windows (.NET Framework)**. Per trovarlo, espandere **Installati** e **Visual C#**  o **Visual Basic** e quindi selezionare **Windows Desktop**. In alternativa, immettere *Servizio di Windows* nella casella di ricerca in alto a destra e premere **Invio**.
+2. Cercare e selezionare il modello di progetto **Servizio di Windows (.NET Framework)** . Per trovarlo, espandere **Installati** e **Visual C#**  o **Visual Basic** e quindi selezionare **Windows Desktop**. In alternativa, immettere *Servizio di Windows* nella casella di ricerca in alto a destra e premere **Invio**.
 
    ![Modello Servizio Windows nella finestra di dialogo Nuovo progetto di Visual Studio](media/new-project-dialog.png)
 
@@ -37,7 +37,7 @@ Le prime operazioni da effettuare sono la creazione del progetto e l'impostazion
 
 3. Per **Nome** immettere *MyNewService* e quindi selezionare **OK**.
 
-   Verrà visualizzata la scheda **Progettazione** (**Service1.cs [Progettazione]** oppure **Service1.vb [Progettazione]**).
+   Verrà visualizzata la scheda **Progettazione** (**Service1.cs [Progettazione]** oppure **Service1.vb [Progettazione]** ).
 
    Il modello di progetto include una classe di componente denominata `Service1` che eredita dalla classe <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Include gran parte del codice del servizio di base, ad esempio il codice per avviare il servizio.
 
@@ -67,7 +67,7 @@ In questa sezione verrà aggiunto un log eventi personalizzato al servizio Windo
 
 1. Dal menu di scelta rapida per **MyNewService.cs** o **MyNewService.vb** in **Esplora soluzioni** scegliere **Visualizza finestra di progettazione**.
 
-2. Nella **Casella degli strumenti** espandere **Componenti** e quindi trascinare il componente **EventLog** nella scheda **Service1.cs [Progettazione]** o **Service1.vb [Progettazione]**.
+2. Nella **Casella degli strumenti** espandere **Componenti** e quindi trascinare il componente **EventLog** nella scheda **Service1.cs [Progettazione]** o **Service1.vb [Progettazione]** .
 
 3. Dal menu di scelta rapida per **MyNewService.cs** o **MyNewService.vb** in **Esplora soluzioni** scegliere **Visualizza codice**.
 
@@ -162,7 +162,7 @@ Per impostare un semplice meccanismo di polling, usare il componente <xref:Syste
    Private eventId As Integer = 1
    ```
 
-Invece di eseguire tutto il lavoro nel thread principale, è possibile eseguire le attività tramite thread di lavoro in background. Per ulteriori informazioni, vedere <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.
+Invece di eseguire tutto il lavoro nel thread principale, è possibile eseguire le attività tramite thread di lavoro in background. Per altre informazioni, vedere <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.
 
 ### <a name="define-what-occurs-when-the-service-is-stopped"></a>Definire quello che accade quando il servizio viene arrestato
 
@@ -249,7 +249,7 @@ I servizi segnalano il proprio stato a [Gestione controllo servizi](/windows/des
     ```
 
     > [!NOTE]
-    > Gestione controllo servizi usa i membri `dwWaitHint` e `dwCheckpoint` della [struttura SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status) per determinare il tempo di attesa per l'avvio o l'arresto di un servizio di Windows. Se l'esecuzione dei metodi `OnStart` e `OnStop` è prolungata, il servizio può richiedere più tempo chiamando di nuovo `SetServiceStatus` con un valore di `dwCheckPoint` incrementato.
+    > Gestione controllo servizi usa i membri `dwWaitHint` e `dwCheckpoint` della [struttura SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) per determinare il tempo di attesa per l'avvio o l'arresto di un servizio di Windows. Se l'esecuzione dei metodi `OnStart` e `OnStop` è prolungata, il servizio può richiedere più tempo chiamando di nuovo `SetServiceStatus` con un valore di `dwCheckPoint` incrementato.
 
 3. Nella classe `MyNewService` dichiarare la funzione [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) usando [platform invoke](../interop/consuming-unmanaged-dll-functions.md):
 
@@ -482,7 +482,7 @@ Una volta compilato il servizio Windows, è possibile installarlo. Per installar
 
     Se il servizio viene installato correttamente, il comando segnala l'esito positivo.
 
-    Se il sistema non riesce a trovare *installutil.exe*, assicurarsi che sia presente nel computer in uso. Questo strumento viene installato con .NET Framework nella cartella *%windir%\Microsoft.NET\Framework[64]\\&lt;versione framework&gt;*. Il percorso predefinito per la versione a 64 bit, ad esempio, è *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
+    Se il sistema non riesce a trovare *installutil.exe*, assicurarsi che sia presente nel computer in uso. Questo strumento viene installato con .NET Framework nella cartella *%windir%\Microsoft.NET\Framework[64]\\&lt;versione framework&gt;* . Il percorso predefinito per la versione a 64 bit, ad esempio, è *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
 
     Se il processo **installutil.exe** ha esito negativo, controllare il log di installazione per determinarne il motivo. Per impostazione predefinita, il log è nella stessa cartella del file eseguibile del servizio. L'installazione può non riuscire se:
     - La classe <xref:System.ComponentModel.RunInstallerAttribute> non è presente nella classe `ProjectInstaller`.
@@ -538,11 +538,11 @@ Se l'app del servizio di Windows non è più necessaria, è possibile rimuoverla
 
 Dopo aver creato il servizio, è possibile:
 
-- Creare un programma di installazione autonomo che gli altri utenti possono usare per installare il servizio di Windows. Usare il [set di strumenti WiX](http://wixtoolset.org/) per creare un programma di installazione per un servizio di Windows. Per altre idee, vedere [Creare un pacchetto di installazione](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
+- Creare un programma di installazione autonomo che gli altri utenti possono usare per installare il servizio di Windows. Usare il [set di strumenti WiX](https://wixtoolset.org/) per creare un programma di installazione per un servizio di Windows. Per altre idee, vedere [Creare un pacchetto di installazione](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
 - Esaminare il componente <xref:System.ServiceProcess.ServiceController>, che consente di inviare comandi al servizio installato.
 
-- Anziché creare il log eventi durante l'esecuzione dell'applicazione, crearlo durante l'installazione dell'applicazione stessa tramite il programma di installazione. Il log eventi viene eliminato dal programma di installazione quando si disinstalla l'applicazione. Per ulteriori informazioni, vedere <xref:System.Diagnostics.EventLogInstaller>.
+- Anziché creare il log eventi durante l'esecuzione dell'applicazione, crearlo durante l'installazione dell'applicazione stessa tramite il programma di installazione. Il log eventi viene eliminato dal programma di installazione quando si disinstalla l'applicazione. Per altre informazioni, vedere <xref:System.Diagnostics.EventLogInstaller>.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: cb2dd26d3f111e8de0dc9c7904837d9b053d17bb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724713"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038467"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedure consigliate per Transport Layer Security (TLS) con .NET Framework
 
@@ -242,7 +242,7 @@ Iniziare con la chiave del Registro di sistema `HKEY_LOCAL_MACHINE\SYSTEM\Curren
 Quando è abilitato (per impostazione predefinita, tramite un'opzione di `AppContext` o con il Registro di sistema Windows), .NET Framework usa il flag `SCH_USE_STRONG_CRYPTO` quando l'app richiede un protocollo di sicurezza TLS. Il flag `SCH_USE_STRONG_CRYPTO` può essere abilitato per impostazione predefinita, con l'opzione `AppContext` o con il Registro di sistema. Il sistema operativo passa il flag a `Schannel` per richiedere la disabilitazione degli algoritmi di crittografia vulnerabili noti, dei pacchetti di crittografia e delle versioni del protocollo TLS/SSL che potrebbero essere abilitati in caso contrario, per una migliore interoperabilità. Per altre informazioni, vedere:
 
 - [Canale sicuro](/windows/desktop/SecAuthN/secure-channel)
-- [Struttura SCHANNEL_CRED](/windows/desktop/api/schannel/ns-schannel-_schannel_cred)
+- [Struttura SCHANNEL_CRED](/windows/win32/api/schannel/ns-schannel-schannel_cred)
 
 Il flag `SCH_USE_STRONG_CRYPTO` viene anche passato a `Schannel` quando si usano in modo esplicito i valori enumerati `Tls` (TLS 1.0), `Tls11` o `Tls12` di <xref:System.Net.SecurityProtocolType> o <xref:System.Security.Authentication.SslProtocols>.
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 5b45a24e719a03d052c88b5afd64bbe13eb0793e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: f11137b3c13bb9e8670c4df25fedf3251724a088
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610059"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566893"
 ---
 # <a name="ref-c-reference"></a>ref (Riferimenti per C#)
 
@@ -22,7 +22,7 @@ La parola chiave `ref` indica un valore che viene passato per riferimento. Viene
 - Nella firma di un metodo e in una chiamata al metodo, per passare un argomento a un metodo per riferimento. Per altre informazioni, vedere [Passaggio di un argomento per riferimento](#passing-an-argument-by-reference).
 - Nella firma di un metodo, per restituire un valore al chiamante per riferimento. Per altre informazioni, vedere [Valori di riferimento restituiti](#reference-return-values).
 - Nel corpo di un membro, per indicare che un valore restituito di riferimento è archiviato in locale come un riferimento che il chiamante intende modificare o, in generale, che una variabile locale accede a un altro valore per riferimento. Per altre informazioni, vedere [Variabili locali ref](#ref-locals).
-- In una dichiarazione `struct` per dichiarare `ref struct` o `ref readonly struct`. Per altre informazioni, vedere [Tipi ref struct](#ref-struct-types).
+- In una dichiarazione `struct` per dichiarare `ref struct` o `readonly ref struct`. Per altre informazioni, vedere [Tipi ref struct](#ref-struct-types).
 
 ## <a name="passing-an-argument-by-reference"></a>Passaggio di un argomento per riferimento
 

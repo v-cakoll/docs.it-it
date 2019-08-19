@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 4f1d79497f255f52a87dce44f1b5b8709adfada7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 763fdb442fa0037dafd51f89badd04436e24d254
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401479"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566823"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatori di accesso ai membri (Riferimenti per C#)
 
@@ -147,7 +147,7 @@ Le parentesi si usano anche per richiamare un [costruttore](../../programming-gu
 
 È anche possibile usare le parentesi per specificare l'ordine in cui valutare le operazioni in un'espressione. Per altre informazioni, vedere la sezione [Aggiunta di parentesi](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) dell'articolo [Operatori](../../programming-guide/statements-expressions-operators/operators.md). Per l'elenco degli operatori ordinati in base al livello di precedenza, vedere [ Operatori C#](index.md).
 
-Anche le [espressioni cast](type-testing-and-conversion-operators.md#cast-operator-), che eseguono conversioni dei tipi esplicite, usano le parentesi.
+Anche le [espressioni cast](type-testing-and-cast.md#cast-operator-), che eseguono conversioni dei tipi esplicite, usano le parentesi.
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 
@@ -167,3 +167,4 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 - [Riferimenti per C#](../index.md)
 - [Operatori C#](index.md)
 - [ ?? (operatore null-coalescing)](null-coalescing-operator.md)
+- [Operatore ::](namespace-alias-qualifier.md)

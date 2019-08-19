@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 941c73f9a8b7b4c4336adfaec45775feec738f51
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 46c2e53540c3fd929ad2ad1c5e107b538edd5884
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672878"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69038116"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testare app ASP.NET Core MVC
 
@@ -33,32 +33,6 @@ Gli unit test interessano solo una singola unità di codice, senza dipendenze es
 Incapsulare il codice che interagisce con l'infrastruttura, ad esempio con database e file system, è una buona idea, ma una parte di codice di questo tipo sarà comunque presente e sarà probabilmente necessario testarla. È anche necessario verificare che i livelli del codice interagiscano nel modo previsto quando le dipendenze dell'applicazione sono completamente risolte. Questo è compito dei test di integrazione. I test di integrazione tendono a essere più lenti e più difficili da configurare rispetto agli unit test, perché spesso dipendono da dipendenze esterne e dall'infrastruttura. Di conseguenza, è consigliabile evitare di testare all'interno di test di integrazione le parti di codice che possono essere testate tramite unit test. Se è possibile testare uno scenario specifico con uno unit test, è consigliabile usare uno unit test. Se non è possibile, è consigliabile prendere in considerazione l'uso di un test di integrazione.
 
 Rispetto agli unit test, i test di integrazione prevedono una configurazione più complessa e procedure di disinstallazione più elaborate. Un test di integrazione eseguito a fronte un database, ad esempio, deve prevedere il modo di riportare il database a uno stato noto prima dell'esecuzione di ogni test. Man mano che vengono aggiunti nuovi test e lo schema del database cambia, questi script di test tendono ad aumentare di dimensioni e complessità. In molti sistemi di grandi dimensioni non è pratico eseguire gruppi completi di test di integrazione nelle workstation degli sviluppatori prima di archiviare le modifiche nel controllo del codice sorgente condiviso. In questi casi, è possibile eseguire i test di integrazione in un server di compilazione.
-
-La classe di implementazione `LocalFileImageService` implementa la logica per il recupero e la restituzione dei byte di un file di immagine da una cartella specifica, dato un ID:
-
-```csharp
-public class LocalFileImageService : IImageService
-{
-    private readonly IHostingEnvironment _env;
-    public LocalFileImageService(IHostingEnvironment env)
-    {
-        _env = env;
-    }
-    public byte[] GetImageBytesById(int id)
-    {
-        try
-        {
-            var contentRoot = _env.ContentRootPath + "//Pics";
-            var path = Path.Combine(contentRoot, id + ".png");
-            return File.ReadAllBytes(path);
-        }
-        catch (FileNotFoundException ex)
-        {
-            throw new CatalogImageMissingException(ex);
-        }
-    }
-}
-```
 
 ### <a name="functional-tests"></a>Test funzionali
 
@@ -152,7 +126,7 @@ Il testing unità di questo metodo è reso difficile dalla dipendenza diretta da
 Se non è possibile eseguire direttamente lo unit test del comportamento del file system e non è possibile testare la route, cosa è possibile testare? Dopo aver effettuato il refactoring per rendere possibile l'esecuzione di unit test, si possono individuare alcuni test case e comportamenti mancanti, ad esempio la gestione degli errori. Che cosa fa il metodo quando non trova un file? Cosa deve fare? In questo esempio, il metodo sottoposto a refactoring ha l'aspetto seguente:
 
 ```csharp
-[HttpGet("[controller]/pic/{id}")\]
+[HttpGet("[controller]/pic/{id}")]
 public IActionResult GetImage(int id)
 {
     byte[] imageBytes;

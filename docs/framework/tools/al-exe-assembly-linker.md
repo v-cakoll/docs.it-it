@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d75412394ce42f786da88f3d334853b99f266aca
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832768"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567199"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
@@ -108,7 +108,7 @@ La tabella seguente contiene l'elenco degli errori generati da *Al.exe*.
 |al1015|Impossibile trovare il file di messaggi 'alinkui.dll'<br /><br /> *Al.exe* richiede il file *Alinkui.dll*. Assicurarsi che questo file sia presente nel percorso. Se necessario, copiarlo dal CD del prodotto.|
 |al1016|Nessun file di input specificato<br /><br /> *Al.exe* richiede uno o più file di input che non includano informazioni sull'assembly.|
 |al1017|Nessun nome file di destinazione specificato<br /><br /> L'opzione **/out** obbligatoria che specifica il nome file di destinazione non è presente.|
-|al1018|Impossibile caricare il file richiesto 'file'<br /><br /> Alcuni file DLL non possono essere caricati. Reinstallare Visual Studio o Windows Software Development Kit (SDK).|
+|al1018|Impossibile caricare il file richiesto 'file'<br /><br /> Alcuni file DLL non possono essere caricati. Reinstallare Visual Studio o Windows SDK.|
 |al1019|Errore nei metadati durante la creazione dell'assembly: motivo<br /><br /> La generazione dell'assembly è stata interrotta per il motivo specificato. Questo errore si verifica, ad esempio, se non è possibile trovare un file specificato con l'opzione **/win32res**.|
 |al1020|L'assembly incluso 'file' verrà ignorato<br /><br /> È stato specificato un file di input che contiene un assembly. I file di input di *Al.exe* non possono contenere assembly.|
 |al1021|'impostazione': l'impostazione precedente verrà ignorata<br /><br /> In un modulo il valore di una determinata impostazione, possibilmente assegnato attraverso attributi personalizzati, è stato sostituito con un valore passato usando un'opzione della riga di comando di *Al.exe*.|

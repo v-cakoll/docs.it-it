@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: da36f2a703fe817c171e192b9c94e473c93447a3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 6e3dcaeb71ae32812d3b022fff2bdc4e3e0691bf
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065984"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040145"
 ---
 # <a name="customizing-structure-marshaling"></a>Personalizzazione del marshalling delle strutture
 
@@ -319,7 +319,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Personalizzazione del marshalling dei campi decimali
 
-In Windows è possibile riscontrare alcune API che usano la struttura [`CY` o `CURRENCY`](/windows/desktop/api/wtypes/ns-wtypes-tagcy) nativa. Per impostazione predefinita, il tipo .NET `decimal` effettua il marshalling nella struttura [`DECIMAL`](/windows/desktop/api/wtypes/ns-wtypes-tagdec) nativa. Tuttavia, è possibile usare un <xref:System.Runtime.InteropServices.MarshalAsAttribute> con il valore <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> per indicare al gestore di marshalling di convertire un valore `decimal` in un valore `CY` nativo.
+In Windows è possibile riscontrare alcune API che usano la struttura [`CY` o `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) nativa. Per impostazione predefinita, il tipo .NET `decimal` effettua il marshalling nella struttura [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) nativa. Tuttavia, è possibile usare un <xref:System.Runtime.InteropServices.MarshalAsAttribute> con il valore <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> per indicare al gestore di marshalling di convertire un valore `decimal` in un valore `CY` nativo.
 
 ```csharp
 public struct Currency
@@ -339,7 +339,7 @@ struct Currency
 ## <a name="marshaling-systemobjects"></a>Marshaling `System.Object`
 
 In Windows è possibile effettuare il marshalling di campi di tipo `object` in codice nativo. È possibile effettuare il marshalling di questi campi in uno di tre tipi:
-- [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
+- [`VARIANT`](/windows/win32/api/oaidl/ns-oaidl-variant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 - [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 

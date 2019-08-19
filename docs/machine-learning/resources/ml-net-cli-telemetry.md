@@ -4,12 +4,12 @@ description: Informazioni sulle funzionalità di telemetria dell'interfaccia del
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: eab1e37d7d0d47251c4f92422730b105cf2db265
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: b9f6ccf7ff76f0cf4ce806f39909b7607a20b9f6
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433788"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567487"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Raccolta di dati di telemetria dall'interfaccia della riga di comando di ML.NET
 
@@ -36,7 +36,7 @@ La funzionalità di telemetria *è abilitata* quando si esegue un [comando dell'
 
 La funzionalità di telemetria dell'interfaccia della riga di comando di ML.NET è abilitata per impostazione predefinita.
 
-Rifiutare esplicitamente la funzionalità di telemetria impostando la variabile di ambiente `DOTNET_CLI_TELEMETRY_OPTOUT` su `1` o `true`. Questa variabile di ambiente viene applicata a livello globale allo strumento dell'interfaccia della riga di comando di .NET.
+Rifiutare esplicitamente la funzionalità di telemetria impostando la variabile di ambiente `MLDOTNET_CLI_TELEMETRY_OPTOUT` su `1` o `true`. Questa variabile di ambiente viene applicata a livello globale allo strumento dell'interfaccia della riga di comando di .NET.
 
 ## <a name="data-points-collected"></a>Punti dati raccolti
 

@@ -20,10 +20,10 @@ ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "66491091"
 ---
 # <a name="standard-timespan-format-strings"></a>Stringhe di formato TimeSpan standard
@@ -41,7 +41,7 @@ ms.locfileid: "66491091"
   
 <a name="top"></a> Nella tabella seguente sono elencati gli identificatori di formato di intervallo di tempo standard.  
   
-|Identificatore di formato|nome|Description|Esempi|  
+|Identificatore di formato|nome|DESCRIZIONE|Esempi|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|Formato di costante (invariante)|Questo identificatore non è dipendente dalle impostazioni cultura. Assume il formato `[-][d'.']hh':'mm':'ss['.'fffffff]`<br /><br /> (le stringhe di formato "t" e "T" producono gli stessi risultati).<br /><br /> Altre informazioni: [Identificatore di formato di costante ("c")](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|Formato breve generale|Questo identificatore restituisce informazioni strettamente necessarie. È basato sulle impostazioni cultura e assume il formato `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Altre informazioni: [Identificatore di formato generale ("g")](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
@@ -55,7 +55,7 @@ ms.locfileid: "66491091"
   
  Gli elementi tra parentesi quadre ([e]) sono facoltativi. Il punto (.) e i due punti (:) sono simboli letterali. La tabella seguente descrive gli elementi rimanenti.  
   
-|Elemento|Description|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |*-*|Un segno negativo facoltativo, che indica un intervallo di tempo negativo.|  
 |*d*|Numero di giorni facoltativo, senza zeri iniziali.|  
@@ -84,7 +84,7 @@ ms.locfileid: "66491091"
   
  Gli elementi tra parentesi quadre ([e]) sono facoltativi. I due punti (:) sono un simbolo letterale. La tabella seguente descrive gli elementi rimanenti.  
   
-|Elemento|Description|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |*-*|Un segno negativo facoltativo, che indica un intervallo di tempo negativo.|  
 |*d*|Numero di giorni facoltativo, senza zeri iniziali.|  
@@ -111,7 +111,7 @@ ms.locfileid: "66491091"
   
  Gli elementi tra parentesi quadre ([e]) sono facoltativi. I due punti (:) sono un simbolo letterale. La tabella seguente descrive gli elementi rimanenti.  
   
-|Elemento|Description|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |*-*|Un segno negativo facoltativo, che indica un intervallo di tempo negativo.|  
 |*d*|Il numero di giorni, senza zeri iniziali.|  
