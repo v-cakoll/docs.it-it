@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: ebaa5c2f3a2e1770a50a401fb6771d8c5ad3ba63
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972233"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611481"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Panoramica delle applicazioni browser XAML di WPF
 <a name="introduction"></a>
@@ -52,7 +52,7 @@ ms.locfileid: "68972233"
 |Manifesto dell'applicazione (con estensione manifest)|Contiene i metadati associati all'applicazione e ha un'estensione manifest.|  
 |Manifesto di distribuzione (con estensione xbap)|Questo file contiene le informazioni utilizzate da ClickOnce per distribuire l'applicazione e dispone dell'estensione XBAP.|  
   
- Le applicazioni XBAP vengono distribuite in un server Web, ad esempio Microsoft [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] o versioni successive. Non è necessario installare il .NET Framework sul server Web, ma è necessario registrare i tipi di Multipurpose Internet Mail Extensions (MIME [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ) e le estensioni di file. Per ulteriori informazioni, vedere [Configurare IIS 5.0 e IIS 6.0 per distribuire applicazioni WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ Le applicazioni XBAP vengono distribuite in un server Web, ad esempio Microsoft Internet Information Services (IIS) 5,0 o versioni successive. Non è necessario installare il .NET Framework sul server Web, ma è necessario registrare i tipi di Multipurpose Internet Mail Extensions (MIME [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ) e le estensioni di file. Per ulteriori informazioni, vedere [Configurare IIS 5.0 e IIS 6.0 per distribuire applicazioni WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
   
  Per preparare l'applicazione XBAP per la distribuzione, copiare il file con estensione exe e i file manifesto associati nel server Web. Creare una pagina HTML contenente un collegamento ipertestuale per aprire il manifesto di distribuzione, ovvero il file con estensione xbap. Quando l'utente fa clic sul collegamento al file con estensione XBAP, ClickOnce gestisce automaticamente i meccanismi di download e avvio dell'applicazione. Nel codice di esempio seguente viene illustrata una pagina HTML contenente un collegamento ipertestuale che punta a un'applicazione XBAP.  
   
