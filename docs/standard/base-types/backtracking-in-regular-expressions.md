@@ -21,10 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "66378162"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking nelle espressioni regolari
@@ -164,7 +164,7 @@ ms.locfileid: "66378162"
   
  Il primo criterio di espressione regolare, `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`, è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`^`|Inizia la ricerca della corrispondenza all'inizio della stringa.|  
 |`[0-9A-Z]`|Trova la corrispondenza di un carattere alfanumerico. Poiché il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> viene richiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> , il confronto non rileva la distinzione tra maiuscole e minuscole.|  
@@ -175,7 +175,7 @@ ms.locfileid: "66378162"
   
  Il secondo criterio di espressione regolare, `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`, usa un'asserzione lookbehind positiva e viene definito come illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`^`|Inizia la ricerca della corrispondenza all'inizio della stringa.|  
 |`[0-9A-Z]`|Trova la corrispondenza di un carattere alfanumerico. Poiché il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> viene richiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> , il confronto non rileva la distinzione tra maiuscole e minuscole.|  
@@ -196,7 +196,7 @@ ms.locfileid: "66378162"
   
  Il primo criterio di espressione regolare, `^(([A-Z]\w*)+\.)*[A-Z]\w*$`, è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`^`|Inizia la ricerca della corrispondenza all'inizio della stringa.|  
 |`([A-Z]\w*)+\.`|Trova la corrispondenza di un carattere alfabetico (A-Z) seguito da zero o più caratteri alfanumerici una o più volte seguiti da un punto. Poiché il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> viene richiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> , il confronto non rileva la distinzione tra maiuscole e minuscole.|  
@@ -206,7 +206,7 @@ ms.locfileid: "66378162"
   
  Il secondo criterio di espressione regolare, `^((?=[A-Z])\w+\.)*[A-Z]\w*$`, usa un'asserzione lookahead positiva e viene definito come illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`^`|Inizia la ricerca della corrispondenza all'inizio della stringa.|  
 |`(?=[A-Z])`|Esegue la ricerca fino primo carattere e continua la ricerca della corrispondenza se si tratta di un carattere alfabetico (A-Z). Poiché il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> viene richiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> , il confronto non rileva la distinzione tra maiuscole e minuscole.|  

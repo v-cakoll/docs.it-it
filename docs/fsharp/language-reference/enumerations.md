@@ -1,17 +1,17 @@
 ---
 title: Enumerazioni
-description: Informazioni su come usare F# enumerazioni anziché valori letterali per rendere il codice più leggibile e gestibile.
+description: Informazioni su come usare F# le enumerazioni al posto dei valori letterali per rendere il codice più leggibile e gestibile.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7ff62b1c0a6ab0fda58a30de9387acbb547f6b81
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 784cd9612b199e4648bb64432d3b4422ad35f649
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645539"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630346"
 ---
 # <a name="enumerations"></a>Enumerazioni
 
-*Le enumerazioni*, noto anche come *enumerazioni*, sono tipi integrali, in cui le etichette vengono assegnate a un sottoinsieme dei valori. È possibile usarle in sostituzione ai valori letterali per rendere il codice più leggibile e gestibile.
+Le enumerazioni, note anchecome enumerazioni, sono tipi integrali in cui le etichette vengono assegnate a un subset di valori. È possibile usarle in sostituzione ai valori letterali per rendere il codice più leggibile e gestibile.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,31 +24,31 @@ type enum-name =
 
 ## <a name="remarks"></a>Note
 
-Un'enumerazione sembra molto simile a un'unione discriminata che dispone di valori semplici, ad eccezione del fatto che i valori possono essere specificati. In genere, i valori sono numeri interi che iniziano da 0 o 1, o numeri interi che rappresentano posizioni di bit. Se un'enumerazione deve rappresentare posizioni dei bit, è anche consigliabile usare la [flag](xref:System.FlagsAttribute) attributo.
+Un'enumerazione è simile a un'unione discriminata con valori semplici, ad eccezione del fatto che è possibile specificare i valori. I valori sono in genere numeri interi che iniziano da 0 o 1 oppure numeri interi che rappresentano posizioni di bit. Se un'enumerazione è progettata per rappresentare posizioni di bit, è necessario utilizzare anche l'attributo [Flags](xref:System.FlagsAttribute).
 
-Il tipo sottostante dell'enumerazione è determinato dal valore letterale che viene usato, in modo che, ad esempio, è possibile usare valori letterali con un suffisso, ad esempio `1u`, `2u`e così via, per un intero senza segno (`uint32`) tipo.
+Il tipo sottostante dell'enumerazione è determinato dal valore letterale usato, in modo che, ad esempio, è possibile usare valori letterali con un suffisso, ad `1u`esempio `2u`, e così via, per un tipo di`uint32`Unsigned Integer ().
 
-Quando si fa riferimento ai valori denominati, è necessario usare il nome del tipo di enumerazione se stesso come un qualificatore, vale a dire `enum-name.value1`e non semplicemente `value1`. Questo comportamento è diverso da quello delle unioni discriminate. Questo avviene perché le enumerazioni avere sempre la [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) attributo.
+Quando si fa riferimento ai valori denominati, è necessario usare il nome del tipo di enumerazione stesso come qualificatore, ovvero `enum-name.value1`, non solo `value1`. Questo comportamento è diverso da quello delle unioni discriminate. Questo perché le enumerazioni hanno sempre l'attributo [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) .
 
 Il codice seguente illustra la dichiarazione e l'uso di un'enumerazione.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2101.fs)]
 
-È possibile convertire facilmente enumerazioni per il tipo sottostante utilizzando l'operatore appropriato, come illustrato nel codice seguente.
+È possibile convertire facilmente le enumerazioni nel tipo sottostante usando l'operatore appropriato, come illustrato nel codice seguente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2102.fs)]
 
-I tipi enumerati possono avere uno dei seguenti tipi sottostanti: `sbyte`, `byte`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint16`, `uint64`, e `char`. I tipi di enumerazione sono rappresentati in .NET Framework come tipi dalla quale vengono ereditati `System.Enum`, che a sua volta viene ereditata dalla `System.ValueType`. In questo modo, si tratta di tipi di valore che si trovano nello stack o inline nell'oggetto che contiene e qualsiasi valore del tipo sottostante è un valore valido dell'enumerazione. Ciò è importante quando i valori di criteri di ricerca su enumerazione, in quanto è necessario specificare un modello che memorizza nella cache i valori senza nome.
+I tipi enumerati possono avere uno dei seguenti tipi sottostanti `sbyte`: `byte` `int16`,, `uint16`, `int32`, `uint32`, `int64`, `uint16`, `uint64`, e `char`. I tipi di enumerazione sono rappresentati nella .NET Framework come tipi ereditati `System.Enum`da, che a sua volta viene `System.ValueType`ereditato da. Sono pertanto tipi di valore che si trovano nello stack o inline nell'oggetto contenitore e qualsiasi valore del tipo sottostante è un valore valido dell'enumerazione. Questa operazione è significativa quando si verificano criteri di ricerca sui valori di enumerazione, perché è necessario fornire un modello che catturi i valori senza nome.
 
-Il `enum` funzionare nel F# libreria può essere utilizzata per generare un valore di enumerazione, anche un valore diverso da uno degli operatori, valori denominati. Si utilizza il `enum` funzione come indicato di seguito.
+La `enum` funzione nella F# libreria può essere usata per generare un valore di enumerazione, anche un valore diverso da uno dei valori denominati predefiniti. Usare la `enum` funzione come indicato di seguito.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
 
-Il valore predefinito `enum` funzionamento della funzione con tipo `int32`. Pertanto, non è utilizzabile con i tipi di enumerazione con altri tipi sottostante. In alternativa, usare quanto segue.
+La funzione `enum` predefinita funziona con il `int32`tipo. Pertanto, non può essere utilizzato con tipi di enumerazione con altri tipi sottostanti. Usare invece il comando seguente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
 
-I casi, inoltre, per le enumerazioni vengono sempre generate come `public`. Si tratta in modo da poter essere allineate con c# e il resto della piattaforma .NET.
+Inoltre, i case per le enumerazioni vengono sempre emessi `public`come. In questo modo si allineano C# con e il resto della piattaforma .NET.
 
 ## <a name="see-also"></a>Vedere anche
 

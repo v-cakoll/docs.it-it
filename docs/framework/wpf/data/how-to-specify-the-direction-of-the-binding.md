@@ -6,28 +6,29 @@ helpviewer_keywords:
 - binding direction [WPF]
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
-ms.openlocfilehash: 164fae937fc3935c7640a898c0c1908fd0a6b6b1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 023cd42ad5fb321e7ffa65f08673cb4145f49af4
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625337"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817905"
 ---
-# <a name="how-to-specify-the-direction-of-the-binding"></a>Procedura: Specificare la direzione del binding
+# <a name="how-to-specify-the-direction-of-the-binding"></a>Procedura: Specificare la direzione dell'associazione
+
 Questo esempio spiega come specificare se il binding aggiorna solo la proprietà della destinazione del binding (destinazione), dell'origine del binding (origine) o entrambe.  
   
 ## <a name="example"></a>Esempio  
- Si utilizza il <xref:System.Windows.Data.Binding.Mode%2A> proprietà per specificare la direzione dell'associazione. L'elenco di enumerazione seguente mostra le opzioni disponibili per gli aggiornamenti di binding:  
+ Utilizzare la <xref:System.Windows.Data.Binding.Mode%2A?displayProperty=nameWithType> proprietà per specificare la direzione del binding. Di seguito sono riportate le opzioni disponibili per gli aggiornamenti di binding:  
   
-- <xref:System.Windows.Data.BindingMode.TwoWay> Aggiorna la proprietà di destinazione o la proprietà ogni volta che cambia la proprietà di destinazione o la proprietà di origine.  
+- <xref:System.Windows.Data.BindingMode.TwoWay?displayProperty=nameWithType>Aggiorna la proprietà di destinazione o la proprietà ogni volta che la proprietà di destinazione o la proprietà di origine viene modificata.  
   
-- <xref:System.Windows.Data.BindingMode.OneWay> Aggiorna la proprietà di destinazione solo quando la proprietà di origine viene modificata.  
+- <xref:System.Windows.Data.BindingMode.OneWay?displayProperty=nameWithType>Aggiorna la proprietà di destinazione solo quando la proprietà di origine viene modificata.  
   
-- <xref:System.Windows.Data.BindingMode.OneTime> Aggiorna la proprietà di destinazione solo all'avvio dell'applicazione o quando il <xref:System.Windows.FrameworkElement.DataContext%2A> subisce una modifica.  
+- <xref:System.Windows.Data.BindingMode.OneTime?displayProperty=nameWithType>Aggiorna la proprietà di destinazione solo quando l'applicazione viene avviata <xref:System.Windows.FrameworkElement.DataContext%2A> o quando subisce una modifica.  
   
-- <xref:System.Windows.Data.BindingMode.OneWayToSource> Aggiorna la proprietà di origine quando cambia la proprietà di destinazione.  
+- <xref:System.Windows.Data.BindingMode.OneWayToSource?displayProperty=nameWithType>Aggiorna la proprietà di origine quando viene modificata la proprietà di destinazione.  
   
-- <xref:System.Windows.Data.BindingMode.Default> fa sì che il valore predefinito <xref:System.Windows.Data.Binding.Mode%2A> valore della proprietà di destinazione da usare.  
+- <xref:System.Windows.Data.BindingMode.Default?displayProperty=nameWithType>determina l'utilizzo <xref:System.Windows.Data.Binding.Mode%2A> del valore predefinito della proprietà target.  
   
  Per altre informazioni, vedere l'enumerazione <xref:System.Windows.Data.BindingMode>.  
   
@@ -35,9 +36,9 @@ Questo esempio spiega come specificare se il binding aggiorna solo la proprietà
   
  [!code-xaml[DirectionalBinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#4)]  
   
- Per rilevare le modifiche di origine (applicabile per <xref:System.Windows.Data.BindingMode.OneWay> e <xref:System.Windows.Data.BindingMode.TwoWay> associazioni), l'origine deve implementare un meccanismo di notifica di modifica proprietà appropriato, ad esempio <xref:System.ComponentModel.INotifyPropertyChanged>. Visualizzare [implementare la notifica di modifica proprietà](how-to-implement-property-change-notification.md) per un esempio di un <xref:System.ComponentModel.INotifyPropertyChanged> implementazione.  
+ Per rilevare le modifiche apportate <xref:System.Windows.Data.BindingMode.OneWay> all' <xref:System.Windows.Data.BindingMode.TwoWay> origine (applicabili alle associazioni e), l'origine deve implementare un meccanismo appropriato di <xref:System.ComponentModel.INotifyPropertyChanged>notifica delle modifiche alle proprietà, ad esempio. Per un esempio di implementazione di <xref:System.ComponentModel.INotifyPropertyChanged>, vedere [implementare una notifica di modifica delle proprietà](how-to-implement-property-change-notification.md).  
   
- Per la <xref:System.Windows.Data.BindingMode.TwoWay> oppure <xref:System.Windows.Data.BindingMode.OneWayToSource> associazioni, è possibile controllare la tempistica degli aggiornamenti di origine, impostando il <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> proprietà. Per altre informazioni, vedere <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
+ Per <xref:System.Windows.Data.BindingMode.TwoWay> le <xref:System.Windows.Data.BindingMode.OneWayToSource> associazioni o, è possibile controllare l'intervallo degli aggiornamenti di origine impostando la <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> proprietà. Per altre informazioni, vedere <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
   
 ## <a name="see-also"></a>Vedere anche
 

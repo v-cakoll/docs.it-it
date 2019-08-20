@@ -14,10 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
 ms.openlocfilehash: c782ab0ce5886a95c8c914930d80d66b4839b9b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "64634711"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedure consigliate per le espressioni regolari in .NET
@@ -117,7 +117,7 @@ ms.locfileid: "64634711"
   
  L'espressione regolare `\p{Sc}+\s*\d+` usata in questo esempio verifica che la stringa di input sia costituita da un simbolo di valuta e da almeno una cifra decimale. Il modello viene definito come illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\p{Sc}+`|Trova la corrispondenza di uno o più caratteri nella categoria Unicode Symbol, Currency.|  
 |`\s*`|Trovare la corrispondenza di zero o più spazi vuoti.|  
@@ -138,7 +138,7 @@ ms.locfileid: "64634711"
   
  Il criterio di espressione regolare usato nell'esempio, `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]`, è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
@@ -183,7 +183,7 @@ ms.locfileid: "64634711"
   
  L'utilizzo del backtracking comporta spesso una riduzione delle prestazioni delle applicazioni sebbene il backtracking non sia essenziale per una corrispondenza. Ad esempio, l'espressione regolare `\b\p{Lu}\w*\b` cerca una corrispondenza di tutte le parole che iniziano con un carattere maiuscolo, come illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-|-|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\p{Lu}`|Trova la corrispondenza di un carattere maiuscolo.|  
@@ -206,7 +206,7 @@ ms.locfileid: "64634711"
   
  In questi casi, è possibile ottimizzare le prestazioni dell'espressione regolare rimuovendo i quantificatori annidati e sostituendo la sottoespressione esterna con un'asserzione lookahead o lookbehind di larghezza zero. Le asserzioni lookahead e lookbehind sono ancoraggi; non spostano il puntatore nella stringa di input, ma eseguono il lookahead e lookbehind per verificare se è stata soddisfatta una condizione specificata. Ad esempio, l'espressione regolare del numero parte può essere riscritta come `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Tale modello di espressione regolare viene definito come illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`[0-9A-Z]`|Trova la corrispondenza di un carattere alfanumerico. Il numero parte deve essere costituito da almeno uno di questi caratteri.|  
@@ -222,7 +222,7 @@ ms.locfileid: "64634711"
   
  Il linguaggio delle espressioni regolari in .NET include i seguenti elementi che è possibile usare per eliminare i quantificatori annidati. Per altre informazioni, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
-|Elemento di linguaggio|Description|  
+|Elemento di linguaggio|DESCRIZIONE|  
 |----------------------|-----------------|  
 |`(?=` `subexpression` `)`|Asserzione lookahead positiva di larghezza zero. Lookahead della posizione corrente per determinare se `subexpression` corrisponde alla stringa di input.|  
 |`(?!` `subexpression` `)`|Asserzione lookahead negativa di larghezza zero. Lookahead della posizione corrente per determinare se `subexpression` non corrisponde alla stringa di input.|  
@@ -260,7 +260,7 @@ ms.locfileid: "64634711"
   
  I costrutti di raggruppamento spesso vengono utilizzati solo in un'espressione regolare in modo tale che sia possibile applicarvi i quantificatori e che i gruppi acquisiti da queste sottoespressioni non vengano utilizzati successivamente. Ad esempio, l'espressione regolare `\b(\w+[;,]?\s?)+[.?!]` è progettata per acquisire un'intera frase. Nella tabella seguente vengono descritti gli elementi del linguaggio di tale modello di espressione regolare e il relativo effetto sulle raccolte <xref:System.Text.RegularExpressions.Match> e <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> dell'oggetto <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
@@ -294,7 +294,7 @@ ms.locfileid: "64634711"
 <a name="RelatedTopics"></a>   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Description|  
+|Titolo|DESCRIZIONE|  
 |-----------|-----------------|  
 |[Dettagli sul comportamento delle espressioni regolari](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Viene esaminata l'implementazione del motore delle espressioni regolari in .NET. L'argomento è incentrato sulla flessibilità delle espressioni regolari e sulla responsabilità dello sviluppatore al fine di garantire un funzionamento efficace e affidabile del motore delle espressioni regolari.|  
 |[Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Viene illustrato il backtracking e il modo in cui influisce sulle prestazioni delle espressioni regolari e vengono esaminati gli elementi del linguaggio che forniscono le alternative al backtracking.|  
