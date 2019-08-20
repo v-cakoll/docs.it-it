@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e820a4d08e938aaf21e4f57db63e6b4f1b5225a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744260"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608289"
 ---
 # <a name="c-guide"></a>Guida a C#
 
@@ -52,16 +52,16 @@ La Guida a C# è organizzata in varie sezioni. È possibile leggere le sezioni n
   * The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end-to-end scenarios, and links to other libraries with more examples using these APIs.
 -->
 
-* [Guida per programmatori C#](../csharp/programming-guide/index.md)
+* [Guida per programmatori C#](./programming-guide/index.md)
   * Vengono forniti esempi pratici e informazioni sull'utilizzo dei costrutti del linguaggio C#.
 
-* [Procedure dettagliate](../csharp/walkthroughs.md)
+* [Procedure dettagliate](./walkthroughs.md)
   * Vengono forniti collegamenti alle procedure dettagliate di programmazione che usano C# e a una breve descrizione di ciascuna procedura dettagliata.
 
 * [Riferimenti per il linguaggio](language-reference/index.md)
   * Questa sezione contiene materiale di riferimento su C# che consente di comprendere la sintassi e la semantica di questo linguaggio. Vengono forniti anche materiali di riferimento per i tipi, gli operatori, gli attributi, le direttive del preprocessore, le opzioni del compilatore, nonché per errori e avvisi generati dal compilatore.
 
-* [Specifiche del linguaggio C#](../csharp/language-reference/language-specification/index.md)
+* [Specifiche del linguaggio C#](./language-reference/language-specification/index.md)
   * Collegamenti alle versioni più recenti della specifica del linguaggio C#.
 
 ## <a name="see-also"></a>Vedere anche

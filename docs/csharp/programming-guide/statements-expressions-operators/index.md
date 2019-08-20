@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 7073ddc50b47ff239e8b310c0a5a1fbd84504133
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 29d8b11cb82fe795c332afadeda8215cc660abd5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743886"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588677"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Istruzioni, espressioni e operatori (Guida per programmatori C#)
 
@@ -41,5 +41,5 @@ Il codice C# di un'applicazione è costituito da istruzioni che contengono parol
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Cast e conversioni di tipi](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+- [Guida per programmatori C#](../index.md)
+- [Cast e conversioni di tipi](../types/casting-and-type-conversions.md)

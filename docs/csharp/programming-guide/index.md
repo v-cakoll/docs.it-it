@@ -9,83 +9,83 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: a31b1dc01fe1f9d9dd97775ae3c65f762b167079
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f41129b33b717efad5f1b1f59e40f95169e31bf8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635271"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589483"
 ---
 # <a name="c-programming-guide"></a>Guida per programmatori C#
 Questa sezione include informazioni dettagliate sulle principali funzionalità del linguaggio C# e sulle funzionalità accessibili a C# tramite .NET Framework.  
   
  La maggior parte di questa sezione presuppone che siano già noti i concetti principali relativi a C# e alla programmazione in generale. I principianti che non hanno alcuna dimestichezza con la programmazione o con C# possono visitare le [esercitazioni di introduzione a C#](../tutorials/intro-to-csharp/index.md) o l'esercitazione interattiva [Getting Started with C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) (Introduzione a C#), in cui non è richiesta alcuna conoscenza di programmazione.  
   
- Per informazioni su parole chiave, operatori e direttive per il preprocessore specifici, vedere [Riferimenti per C#](../../csharp/language-reference/index.md). Per informazioni sulla specifica del linguaggio C++, vedere [Specifiche del linguaggio C#](../../csharp/language-reference/language-specification/index.md).  
+ Per informazioni su parole chiave, operatori e direttive per il preprocessore specifici, vedere [Riferimenti per C#](../language-reference/index.md). Per informazioni sulla specifica del linguaggio C++, vedere [Specifiche del linguaggio C#](../language-reference/language-specification/index.md).  
   
 ## <a name="program-sections"></a>Sezioni relative al programma
 
-[Contenuto di un programma C#](../../csharp/programming-guide/inside-a-program/index.md)  
+[Contenuto di un programma C#](./inside-a-program/index.md)  
   
-[Main() e argomenti della riga di comando](../../csharp/programming-guide/main-and-command-args/index.md)  
+[Main() e argomenti della riga di comando](./main-and-command-args/index.md)  
  
 ## <a name="language-sections"></a>Sezioni relative al linguaggio  
-[Istruzioni, espressioni e operatori](../../csharp/programming-guide/statements-expressions-operators/index.md)  
+[Istruzioni, espressioni e operatori](./statements-expressions-operators/index.md)  
 
- [Tipi](../../csharp/programming-guide/types/index.md)  
+ [Tipi](./types/index.md)  
 
- [Classi e struct](../../csharp/programming-guide/classes-and-structs/index.md)  
+ [Classi e struct](./classes-and-structs/index.md)  
   
- [Interfacce](../../csharp/programming-guide/interfaces/index.md)  
+ [Interfacce](./interfaces/index.md)  
 
- [Tipi di enumerazione](../../csharp/programming-guide/enumeration-types.md)  
+ [Tipi di enumerazione](./enumeration-types.md)  
   
- [Delegati](../../csharp/programming-guide/delegates/index.md)  
+ [Delegati](./delegates/index.md)  
  
- [Matrici](../../csharp/programming-guide/arrays/index.md)  
+ [Matrici](./arrays/index.md)  
   
- [Stringhe](../../csharp/programming-guide/strings/index.md)  
+ [Stringhe](./strings/index.md)  
   
- [Proprietà](../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [Proprietà](./classes-and-structs/properties.md)  
   
- [Indicizzatori](../../csharp/programming-guide/indexers/index.md)  
+ [Indicizzatori](./indexers/index.md)  
   
- [Eventi](../../csharp/programming-guide/events/index.md)  
+ [Eventi](./events/index.md)  
   
- [Generics](../../csharp/programming-guide/generics/index.md)  
+ [Generics](./generics/index.md)  
   
- [Iteratori](../../csharp/programming-guide/concepts/iterators.md)
+ [Iteratori](./concepts/iterators.md)
   
- [Espressioni di query LINQ](../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [Espressioni di query LINQ](./linq-query-expressions/index.md)  
   
- [Espressioni lambda](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [Espressioni lambda](./statements-expressions-operators/lambda-expressions.md)  
   
- [Spazi dei nomi](../../csharp/programming-guide/namespaces/index.md)  
+ [Spazi dei nomi](./namespaces/index.md)  
   
- [Tipi nullable](../../csharp/programming-guide/nullable-types/index.md)  
+ [Tipi nullable](./nullable-types/index.md)  
   
- [Codice unsafe e puntatori](../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [Codice unsafe e puntatori](./unsafe-code-pointers/index.md)  
   
- [Commenti relativi alla documentazione XML](../../csharp/programming-guide/xmldoc/index.md)  
+ [Commenti relativi alla documentazione XML](./xmldoc/index.md)  
   
 ## <a name="platform-sections"></a>Sezioni relative alla piattaforma  
  [Domini dell'applicazione](../../framework/app-domains/application-domains.md)  
   
  [Assembly in .NET](../../standard/assembly/index.md)  
   
- [Attributi](../../csharp/programming-guide/concepts/attributes/index.md)  
+ [Attributi](./concepts/attributes/index.md)  
   
- [Raccolte](../../csharp/programming-guide/concepts/collections.md)  
+ [Raccolte](./concepts/collections.md)  
   
- [Eccezioni e gestione delle eccezioni](../../csharp/programming-guide/exceptions/index.md)  
+ [Eccezioni e gestione delle eccezioni](./exceptions/index.md)  
   
- [File system e Registro di sistema (Guida per programmatori C#)](../../csharp/programming-guide/file-system/index.md)  
+ [File system e Registro di sistema (Guida per programmatori C#)](./file-system/index.md)  
   
- [Interoperabilità](../../csharp/programming-guide/interop/index.md)  
+ [Interoperabilità](./interop/index.md)  
   
- [Reflection](../../csharp/programming-guide/concepts/reflection.md)  
+ [Reflection](./concepts/reflection.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../csharp/language-reference/index.md)
-- [C#](../../csharp/index.md)
+- [Riferimenti per C#](../language-reference/index.md)
+- [C#](../index.md)

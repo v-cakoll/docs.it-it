@@ -8,23 +8,23 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 43cc051eda8c3458d3dc5c529b52104bcd9b807a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 130cc68906be433afc906cfb22759f4ae3dba447
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596116"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589454"
 ---
 # <a name="indexers-c-programming-guide"></a>Indicizzatori (Guida per programmatori C#)
 
-Gli indicizzatori consentono di indicizzare le istanze di una classe o struct esattamente come le matrici. Il valore indicizzato può essere impostato o recuperato senza specificare in modo esplicito un membro di istanza o tipo. Gli indicizzatori sono analoghi alle [proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md), con la differenza che le relative funzioni di accesso accettano i parametri.  
+Gli indicizzatori consentono di indicizzare le istanze di una classe o struct esattamente come le matrici. Il valore indicizzato può essere impostato o recuperato senza specificare in modo esplicito un membro di istanza o tipo. Gli indicizzatori sono analoghi alle [proprietà](../classes-and-structs/properties.md), con la differenza che le relative funzioni di accesso accettano i parametri.  
  
- Nell'esempio seguente viene definita una classe generica con i semplici metodi delle funzioni di accesso [get](../../../csharp/language-reference/keywords/get.md) e [set](../../../csharp/language-reference/keywords/set.md) per assegnare e recuperare i valori. La classe `Program` crea un'istanza di questa classe per archiviare le stringhe.  
+ Nell'esempio seguente viene definita una classe generica con i semplici metodi delle funzioni di accesso [get](../../language-reference/keywords/get.md) e [set](../../language-reference/keywords/set.md) per assegnare e recuperare i valori. La classe `Program` crea un'istanza di questa classe per archiviare le stringhe.  
   
  [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
 > [!NOTE]
->  Per altri esempi, vedere [Sezioni correlate](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections).  
+>  Per altri esempi, vedere [Sezioni correlate](./index.md#BKMK_RelatedSections).  
   
 ## <a name="expression-body-definitions"></a>Definizioni del corpo dell'espressione  
  
@@ -44,9 +44,9 @@ A partire da C# 7.0, le funzioni di accesso get e set possono essere implementat
   
 - Una funzione di accesso `get` restituisce un valore. Una funzione di accesso `set` assegna un valore.  
   
-- La parola chiave [this](../../../csharp/language-reference/keywords/this.md) viene usata per definire gli indicizzatori.  
+- La parola chiave [this](../../language-reference/keywords/this.md) viene usata per definire gli indicizzatori.  
   
-- La parola chiave [value](../../../csharp/language-reference/keywords/value.md) viene usata per definire il valore assegnato dall'indicizzatore `set`.  
+- La parola chiave [value](../../language-reference/keywords/value.md) viene usata per definire il valore assegnato dall'indicizzatore `set`.  
   
 - Non è necessario che gli indicizzatori vengano indicizzati da un valore Integer, perché la definizione del meccanismo di ricerca specifico dipende dall'utente.  
   
@@ -56,13 +56,13 @@ A partire da C# 7.0, le funzioni di accesso get e set possono essere implementat
   
 ## <a name="BKMK_RelatedSections"></a> Sezioni correlate  
   
-- [Uso degli indicizzatori](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [Uso degli indicizzatori](./using-indexers.md)  
   
-- [Indicizzatori nelle interfacce](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [Indicizzatori nelle interfacce](./indexers-in-interfaces.md)  
   
-- [Confronto tra proprietà e indicizzatori](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Confronto tra proprietà e indicizzatori](./comparison-between-properties-and-indexers.md)  
   
-- [Limitazione dell'accessibilità delle funzioni di accesso](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Limitazione dell'accessibilità delle funzioni di accesso](../classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
@@ -70,5 +70,5 @@ Per altre informazioni, vedere [Indicizzatori](~/_csharplang/spec/classes.md#ind
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Guida per programmatori C#](../index.md)
+- [Proprietà](../classes-and-structs/properties.md)

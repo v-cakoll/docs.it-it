@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: e32eb7c60e01ca72824ffb3a1e1269cf34650f5a
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7d212aeaa7d7a8c3f152f8610a7ef3fe5de0fe23
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423395"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589600"
 ---
 # <a name="generics-c-programming-guide"></a>Generics (Guida per programmatori C#)
 I generics sono stati aggiunti alla versione 2.0 del linguaggio C# e di Common Language Runtime (CLR). I generics introducono in .NET Framework il concetto dei parametri di tipo, che consentono di progettare classi e metodi che rinviano la specifica di uno o più tipi finché non si dichiara la classe o il metodo e si crea un'istanza dal codice client. Ad esempio, usando un parametro di tipo generico T è possibile scrivere un'unica classe che altro codice client può usare senza rischiare cast di runtime o operazioni di boxing, come illustrato di seguito:  
@@ -53,23 +53,23 @@ Le classi e i metodi generici sono riutilizzabili, indipendenti dai tipi e molto
 ## <a name="related-sections"></a>Sezioni correlate  
  Per ulteriori informazioni:  
   
-- [Parametri di tipo generico](../../../csharp/programming-guide/generics/generic-type-parameters.md)  
+- [Parametri di tipo generico](./generic-type-parameters.md)  
   
-- [Vincoli sui parametri di tipo](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
+- [Vincoli sui parametri di tipo](./constraints-on-type-parameters.md)  
   
-- [Classi generiche](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [Classi generiche](./generic-classes.md)  
   
-- [Interfacce generiche](../../../csharp/programming-guide/generics/generic-interfaces.md)  
+- [Interfacce generiche](./generic-interfaces.md)  
   
-- [Metodi generici](../../../csharp/programming-guide/generics/generic-methods.md)  
+- [Metodi generici](./generic-methods.md)  
   
-- [Delegati generici](../../../csharp/programming-guide/generics/generic-delegates.md)  
+- [Delegati generici](./generic-delegates.md)  
   
-- [Differenze tra modelli C++ e generics C#](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)  
+- [Differenze tra modelli C++ e generics C#](./differences-between-cpp-templates-and-csharp-generics.md)  
   
-- [Generics e reflection](../../../csharp/programming-guide/generics/generics-and-reflection.md)  
+- [Generics e reflection](./generics-and-reflection.md)  
   
-- [Generics in fase di esecuzione](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
+- [Generics in fase di esecuzione](./generics-in-the-run-time.md)  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  Per altre informazioni, vedere la [specifica del linguaggio C#](~/_csharplang/spec/types.md#constructed-types).  
@@ -77,8 +77,8 @@ Le classi e i metodi generici sono riutilizzabili, indipendenti dai tipi e molto
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Collections.Generic>
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Tipi](../../../csharp/programming-guide/types/index.md)
-- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)
-- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)
+- [Guida per programmatori C#](../index.md)
+- [Tipi](../types/index.md)
+- [\<typeparam>](../xmldoc/typeparam.md)
+- [\<typeparamref>](../xmldoc/typeparamref.md)
 - [Generics in .NET](../../../standard/generics/index.md)

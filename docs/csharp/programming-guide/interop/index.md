@@ -8,12 +8,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: b568bdc149123b490f3b058afc668aabcf558d55
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 896f89304289fd90c10da9aaa7ea15ada35ef8f7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585473"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589088"
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilità (Guida per programmatori C#)
 L'interoperabilità consente di preservare e sfruttare appieno gli investimenti effettuati in codice non gestito. Il codice eseguito sotto il controllo del Common Language Runtime (CLR) è detto *codice gestito*, mentre quello eseguito all'esterno è detto *codice non gestito*. Esempi di codice non gestito sono i componenti COM, COM+, C++, i componenti ActiveX e le API Microsoft Windows.  
@@ -21,22 +21,22 @@ L'interoperabilità consente di preservare e sfruttare appieno gli investimenti 
  .NET Framework consente l'interoperabilità con il codice non gestito tramite i servizi platform invoke, lo spazio dei nomi <xref:System.Runtime.InteropServices>, l'interoperabilità C++ e l'interoperabilità COM.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Cenni preliminari sull'interoperabilità](../../../csharp/programming-guide/interop/interoperability-overview.md)  
+ [Cenni preliminari sull'interoperabilità](./interoperability-overview.md)  
  Vengono descritti i metodi per l'interoperabilità tra codice C# gestito e non gestito.  
   
- [Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)  
+ [Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C#](./how-to-access-office-onterop-objects.md)  
  Vengono descritte le funzionalità introdotte in Visual C# per facilitare la programmazione di Office.  
   
- [Procedura: Usare proprietà indicizzate nella programmazione dell'interoperabilità COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+ [Procedura: Usare proprietà indicizzate nella programmazione dell'interoperabilità COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)  
  Viene illustrato come usare le proprietà indicizzate per accedere alle proprietà COM con parametri.  
   
- [Procedura: Usare platform invoke per riprodurre un file audio](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)  
+ [Procedura: Usare platform invoke per riprodurre un file audio](./how-to-use-platform-invoke-to-play-a-wave-file.md)  
  Viene descritto come usare i servizi platform invoke per riprodurre un file audio con estensione wav nel sistema operativo Windows.  
   
- [Procedura dettagliata: Programmazione Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)  
+ [Procedura dettagliata: Programmazione Office](./walkthrough-office-programming.md)  
  Viene illustrato come creare una cartella di lavoro di Excel o un documento di Word contenente un collegamento alla cartella di lavoro.  
   
- [Esempio di classe COM](../../../csharp/programming-guide/interop/example-com-class.md)  
+ [Esempio di classe COM](./example-com-class.md)  
  Viene illustrato come esporre una classe C# come oggetto COM.  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
@@ -46,6 +46,6 @@ Per altre informazioni, vedere [Concetti di base](~/_csharplang/spec/unsafe-code
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Interoperabilità con codice non gestito](../../../../docs/framework/interop/index.md)
-- [Procedura dettagliata: Programmazione Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
+- [Guida per programmatori C#](../index.md)
+- [Interoperabilità con codice non gestito](../../../framework/interop/index.md)
+- [Procedura dettagliata: Programmazione Office](./walkthrough-office-programming.md)

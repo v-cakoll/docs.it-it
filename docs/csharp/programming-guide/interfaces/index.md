@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 330e4e8b36f03b028786920422cd325b31d814e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 30c44b9f98bcc61d54b8103b6b40d14fd35715f4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61711200"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589188"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfacce (Guida per programmatori C#)
 
@@ -31,7 +31,7 @@ La definizione di `IEquatable<T>` non fornisce un'implementazione per `Equals`. 
   
 Per altre informazioni sulle classi astratte, vedere [Classi e membri delle classi astratte e sealed](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
-Le interfacce possono contenere metodi, proprietà, eventi, indicizzatori o qualsiasi combinazione di questi quattro membri. Per collegamenti a esempi, vedere [Sezioni correlate](../interfaces/index.md#BKMK_RelatedSections). Un'interfaccia non può contenere costanti, campi, operatori, costruttori di istanze, finalizzatori o tipi. I membri di interfaccia sono automaticamente pubblici e non possono includere modificatori di accesso. I membri non possono nemmeno essere [statici](../../language-reference/keywords/static.md).  
+Le interfacce possono contenere metodi, proprietà, eventi, indicizzatori o qualsiasi combinazione di questi quattro membri. Per collegamenti a esempi, vedere [Sezioni correlate](./index.md#BKMK_RelatedSections). Un'interfaccia non può contenere costanti, campi, operatori, costruttori di istanze, finalizzatori o tipi. I membri di interfaccia sono automaticamente pubblici e non possono includere modificatori di accesso. I membri non possono nemmeno essere [statici](../../language-reference/keywords/static.md).  
   
 Per implementare un membro di interfaccia, il corrispondente membro della classe di implementazione deve essere pubblico e non statico e avere lo stesso nome e la stessa firma del membro di interfaccia.  
   

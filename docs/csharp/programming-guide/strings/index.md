@@ -6,27 +6,27 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 1b80082d10ad9ee760a184f496793ad5c69202da
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "67802307"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588474"
 ---
 # <a name="strings-c-programming-guide"></a>Stringhe (Guida per programmatori C#)
 Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. Internamente il testo viene archiviato come una raccolta di sola lettura sequenziale di oggetti <xref:System.Char>. Le stringhe C# non presentano un carattere di terminazione null alla fine, pertanto una stringa C# può contenere qualsiasi numero di caratteri null incorporati ('\0'). La proprietà <xref:System.String.Length%2A> di una stringa rappresenta il numero di oggetti `Char` in essa contenuti e non il numero di caratteri Unicode. Per accedere ai singoli punti di codice Unicode in una stringa usare l'oggetto <xref:System.Globalization.StringInfo>.  
   
 ## <a name="string-vs-systemstring"></a>string e System.String  
- In Visual Basic la parola chiave `string` è un alias per <xref:System.String>. `String` e `string` sono pertanto equivalenti ed è possibile usare la convenzione di denominazione che si preferisce. La classe `String` fornisce molti metodi per creare, modificare e confrontare stringhe in modo sicuro. Inoltre, il linguaggio C# esegue l'overload di alcuni operatori per semplificare le operazioni comuni sulle stringhe. Per altre informazioni sull'uso della parola chiave, vedere [string](../../../csharp/language-reference/keywords/string.md). Per altre informazioni sul tipo e sui relativi metodi, vedere <xref:System.String>.  
+ In Visual Basic la parola chiave `string` è un alias per <xref:System.String>. `String` e `string` sono pertanto equivalenti ed è possibile usare la convenzione di denominazione che si preferisce. La classe `String` fornisce molti metodi per creare, modificare e confrontare stringhe in modo sicuro. Inoltre, il linguaggio C# esegue l'overload di alcuni operatori per semplificare le operazioni comuni sulle stringhe. Per altre informazioni sull'uso della parola chiave, vedere [string](../../language-reference/keywords/string.md). Per altre informazioni sul tipo e sui relativi metodi, vedere <xref:System.String>.  
   
 ## <a name="declaring-and-initializing-strings"></a>Dichiarazione e inizializzazione di stringhe  
  È possibile dichiarare e inizializzare stringhe in vari modi, come mostrato nell'esempio seguente:  
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- Si noti che l'operatore [new](../../../csharp/language-reference/operators/new-operator.md) non viene usato per creare un oggetto stringa tranne nel caso in cui la stringa viene inizializzata con una matrice di caratteri.  
+ Si noti che l'operatore [new](../../language-reference/operators/new-operator.md) non viene usato per creare un oggetto stringa tranne nel caso in cui la stringa viene inizializzata con una matrice di caratteri.  
   
- Inizializzare una stringa con il valore costante <xref:System.String.Empty> per creare un nuovo oggetto <xref:System.String> con stringa di lunghezza zero. La rappresentazione del valore letterale stringa di una stringa di lunghezza zero è "". L'inizializzazione di stringhe con il valore <xref:System.String.Empty> anziché con [null](../../../csharp/language-reference/keywords/null.md) riduce le probabilità di un errore <xref:System.NullReferenceException>. Usare il metodo statico <xref:System.String.IsNullOrEmpty%28System.String%29> per verificare il valore di una stringa prima di provare ad accedere alla stringa.  
+ Inizializzare una stringa con il valore costante <xref:System.String.Empty> per creare un nuovo oggetto <xref:System.String> con stringa di lunghezza zero. La rappresentazione del valore letterale stringa di una stringa di lunghezza zero è "". L'inizializzazione di stringhe con il valore <xref:System.String.Empty> anziché con [null](../../language-reference/keywords/null.md) riduce le probabilità di un errore <xref:System.NullReferenceException>. Usare il metodo statico <xref:System.String.IsNullOrEmpty%28System.String%29> per verificare il valore di una stringa prima di provare ad accedere alla stringa.  
   
 ## <a name="immutability-of-string-objects"></a>Immutabilità degli oggetti stringa  
  Gli oggetti stringa sono *immutabili*, ovvero non possono essere modificati una volta creati. Tutti i metodi <xref:System.String> e gli operatori C# che sembrano modificare una stringa in realtà restituiscono i risultati in un nuovo oggetto stringa. Nell'esempio seguente, quando il contenuto di `s1` e `s2` viene concatenato per formare un'unica stringa, le due stringhe originali restano immutate. L'operatore `+=` crea una nuova stringa che contiene il contenuto delle due stringhe combinato. Il nuovo oggetto viene assegnato alla variabile `s1` e l'oggetto originale assegnato a `s1` viene rilasciato per l'operazione di Garbage Collection perché nessun'altra variabile contiene un riferimento a tale oggetto.  
@@ -125,7 +125,7 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Stringhe, metodi di estensione e LINQ  
- Poiché il tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601> è possibile usare i metodi di estensione definiti nella classe <xref:System.Linq.Enumerable> sulle stringhe. Per evitare confusioni a livello visivo questi metodi sono esclusi da IntelliSense per il tipo <xref:System.String>, ma sono comunque disponibili. È anche possibile usare le espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sulle stringhe. Per altre informazioni, vedere [LINQ e stringhe](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  
+ Poiché il tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601> è possibile usare i metodi di estensione definiti nella classe <xref:System.Linq.Enumerable> sulle stringhe. Per evitare confusioni a livello visivo questi metodi sono esclusi da IntelliSense per il tipo <xref:System.String>, ma sono comunque disponibili. È anche possibile usare le espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sulle stringhe. Per altre informazioni, vedere [LINQ e stringhe](../concepts/linq/linq-and-strings.md).  
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
@@ -136,12 +136,12 @@ string s = String.Empty;
 |[Procedura: Concatenare più stringhe](../../how-to/concatenate-multiple-strings.md)|Illustra vari modi per unire più stringhe in una.|
 |[Procedura: Analizzare le stringhe con String.Split](../../how-to/parse-strings-using-split.md)|Esempi di codice che illustrano come usare il metodo `String.Split` per analizzare le stringhe.|  
 |[Procedura: Cercare stringhe](../../how-to/search-strings.md)|Spiega come eseguire la ricerca di testo specifico o di motivi nelle stringhe.|  
-|[Procedura: Determinare se una stringa rappresenta un valore numerico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Viene illustrato come analizzare in modo sicuro una stringa per verificare se ha un valore numerico valido.|  
+|[Procedura: Determinare se una stringa rappresenta un valore numerico](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Viene illustrato come analizzare in modo sicuro una stringa per verificare se ha un valore numerico valido.|  
 |[Interpolazione di stringhe](../../language-reference/tokens/interpolated.md)|Descrive la funzionalità di interpolazione di stringhe che offre una sintassi efficiente per formattare le stringhe.|
-|[Operazioni di base su stringhe](../../../../docs/standard/base-types/basic-string-operations.md)|Fornisce collegamenti ad argomenti che usano metodi <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> per eseguire operazioni di base sulle stringhe.|  
+|[Operazioni di base su stringhe](../../../standard/base-types/basic-string-operations.md)|Fornisce collegamenti ad argomenti che usano metodi <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> per eseguire operazioni di base sulle stringhe.|  
 |[Parsing Strings](../../../standard/base-types/parsing-strings.md)|Descrive come convertire le rappresentazioni stringa dei tipi di base .NET in istanze dei tipi corrispondenti.|  
 |[Analisi di stringhe di data e ora in .NET](../../../standard/base-types/parsing-datetime.md)|Illustra come convertire una stringa come "24/01/2008" in un oggetto <xref:System.DateTime?displayProperty=nameWithType>.|  
-|[Confronto di stringhe](../../../../docs/standard/base-types/comparing.md)|Informazioni su come confrontare le stringhe ed esempi in C# e Visual Basic.|  
+|[Confronto di stringhe](../../../standard/base-types/comparing.md)|Informazioni su come confrontare le stringhe ed esempi in C# e Visual Basic.|  
 |[Uso della classe StringBuilder](../../../standard/base-types/stringbuilder.md)|Descrive come creare e modificare oggetti stringa dinamici tramite la classe <xref:System.Text.StringBuilder>.|  
-|[LINQ e stringhe](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Informazioni su come eseguire varie operazioni sulle stringhe tramite query LINQ.|  
-|[Guida per programmatori C#](../../../csharp/programming-guide/index.md)|Collegamenti ad argomenti che spiegano i costrutti di programmazione in C#.|  
+|[LINQ e stringhe](../concepts/linq/linq-and-strings.md)|Informazioni su come eseguire varie operazioni sulle stringhe tramite query LINQ.|  
+|[Guida per programmatori C#](../index.md)|Collegamenti ad argomenti che spiegano i costrutti di programmazione in C#.|  
