@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb055285af7365536f7e1ad7c7d9290e51be50db
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: fc4ff8f914f0e049a0fdf27b5008b1e39bc40116
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832860"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566772"
 ---
 # <a name="delay-signing-an-assembly"></a>Ritardo della firma di un assembly
 È possibile che in un'organizzazione venga usata una coppia di chiavi sottoposta a una rigorosa sicurezza e quindi non accessibile giornalmente agli sviluppatori. La chiave pubblica è spesso disponibile, ma l'accesso alla chiave privata è consentito solo ad alcune persone. Quando si sviluppano assembly con nome sicuro, in ogni assembly che fa riferimento all'assembly con nome sicuro di destinazione è contenuto un token della chiave pubblica usata per assegnare un nome sicuro all'assembly di destinazione. È quindi necessario che la chiave pubblica risulti disponibile durante il processo di sviluppo.  
@@ -28,7 +28,7 @@ ms.locfileid: "66832860"
   
  I passaggi seguenti illustrano il processo che consente di ritardare la firma di un assembly:  
   
-1. Ottenere la parte pubblica della coppia di chiavi dall'organizzazione da cui verrà effettivamente apposta la firma. Tale chiave si presenta solitamente sotto forma di file con estensione snk. È possibile creare questo file tramite lo [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) disponibile in Windows Software Development Kit (SDK).  
+1. Ottenere la parte pubblica della coppia di chiavi dall'organizzazione da cui verrà effettivamente apposta la firma. Tale chiave si presenta solitamente sotto forma di file con estensione snk. È possibile creare questo file tramite lo [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) disponibile in Windows SDK.  
   
 2. Apporre annotazioni al codice sorgente per l'assembly usando due attributi personalizzati da <xref:System.Reflection>:  
   

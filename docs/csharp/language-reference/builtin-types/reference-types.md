@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: 4bc93216d74e2732870e08edd4bdb9570391cf5f
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: fcfe2dafe588dce57628bff63e3519f70d7a7725
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67872169"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566261"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Tipi di riferimento predefiniti (riferimenti per C#)
 
@@ -177,7 +177,7 @@ Nell'esempio seguente viene usato `dynamic` in diverse dichiarazioni. Il metodo 
 - [Procedure consigliate per l'uso delle stringhe](../../../standard/base-types/best-practices-strings.md)
 - [Operazioni di base su stringhe](../../../standard/base-types/basic-string-operations.md)
 - [Creazione di nuove stringhe](../../../standard/base-types/creating-new.md)
-- [Operatori di conversione e di test del tipo](../operators/type-testing-and-conversion-operators.md)
+- [Operatori di cast e di test del tipo](../operators/type-testing-and-cast.md)
 - [Procedura: Eseguire il cast sicuro con i criteri di ricerca e gli operatori as e is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [Procedura dettagliata: Creazione e utilizzo di oggetti dinamici](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
 - <xref:System.Object?displayProperty=nameWithType>

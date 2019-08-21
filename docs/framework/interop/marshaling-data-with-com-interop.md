@@ -6,17 +6,17 @@ helpviewer_keywords:
 - marshaling data, COM interop
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16f94e8b85a1bedb8b7791c2b7fcaf6d154ba1b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 279310fe7aa17a73d129edf98f3477a00fd50767
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833529"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567248"
 ---
 # <a name="marshaling-data-with-com-interop"></a>dati di marshalling con interoperabilità COM
 Grazie all'interoperabilità COM, è possibile usare oggetti COM dal codice gestito ed esporre oggetti gestiti a COM. Il supporto per effettuare il marshalling dei dati verso e da COM è estensivo e garantisce sempre il comportamento di marshalling corretto.  
   
- Windows Software Development Kit (SDK) include gli strumenti di interoperabilità COM seguenti:  
+ Windows SDK include i seguenti strumenti di interoperabilità COM:  
   
 - [Utilità di importazione della libreria dei tipi (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), che consente di convertire una libreria dei tipi COM in un assembly di interoperabilità, dal quale, con il servizio di marshalling di interoperabilità, vengono generati wrapper per il marshalling dei dati tra memoria gestita e non gestita.  
   

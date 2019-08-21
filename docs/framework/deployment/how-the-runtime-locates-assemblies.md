@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: ceae33501330719a27e2d0015c21249dca62d551
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833723"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566859"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Come il runtime individua gli assembly
 Per distribuire correttamente l'applicazione .NET Framework, è necessario comprendere in che modo Common Language Runtime individua e associa gli assembly che costituiscono l'applicazione. Per impostazione predefinita, il runtime tenta di eseguire l'associazione con la versione esatta di un assembly con cui è stata compilata l'applicazione. Questo comportamento predefinito può essere sottoposto a override dalle impostazioni del file di configurazione.  
@@ -24,7 +24,7 @@ Per distribuire correttamente l'applicazione .NET Framework, è necessario compr
  Quando si tenta di individuare un assembly e risolvere un riferimento ad assembly, Common Language Runtime esegue una serie di passaggi. Ogni passaggio è descritto nelle sezioni seguenti. Il termine "individuazione tramite probe" viene usato quando si descrive la modalità di individuazione degli assembly mediante runtime e fa riferimento al set di euristiche usato per individuare l'assembly in base al nome e alle impostazioni cultura.  
   
 > [!NOTE]
->  Per visualizzare le informazioni di associazione nel file di log, usare il [Visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), incluso in Windows Software Development Kit (SDK).  
+>  Per visualizzare le informazioni di associazione nel file di log, usare il [Visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), incluso in Windows SDK.  
   
 ## <a name="initiating-the-bind"></a>Avvio dell'associazione  
  Il processo di individuazione e associazione di un assembly inizia quando il runtime tenta di risolvere un riferimento a un altro assembly. Questo riferimento può essere statico o dinamico. I compilatore registra i riferimenti statici nei metadati del manifesto dell'assembly in fase di compilazione. I riferimenti dinamici vengono costruiti nel momento in cui vengono chiamati i diversi metodi, ad esempio <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  

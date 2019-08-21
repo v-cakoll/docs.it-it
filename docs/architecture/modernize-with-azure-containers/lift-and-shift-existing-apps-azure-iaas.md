@@ -2,12 +2,12 @@
 title: Lift-and-Shift delle app .NET esistenti in Azure IaaS (pronto per l'infrastruttura cloud)
 description: Modernizza le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows.
 ms.date: 04/28/2018
-ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e25ddbf9b6e62c264f3f4d4580d7df3553d262ea
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578394"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660745"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Lift-and-Shift delle app .NET esistenti in Azure IaaS (pronto per l'infrastruttura cloud)
 
@@ -107,4 +107,4 @@ La figura 2-3 illustra l'esecuzione di più migrazioni di macchine virtuali usan
 
 >[!div class="step-by-step"]
 >[Precedente](index.md)
->[Successivo](migrate-your-relational-databases-to-azure.md)
+>[Successivo](migrate-your-relational-databases-to-azure.md) <!-- Next Chapter -->

@@ -5,24 +5,25 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: bce8901b4fec4386462ebaa85436b52aedc3f3bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f8dc21b407e7286010b7425b835a481cc90287a
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708441"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971324"
 ---
 # <a name="contextual-keywords-c-reference"></a>Parole chiave contestuali (Riferimenti per C#)
+
 Una parola chiave contestuale viene usata per conferire un significato particolare nel codice, ma non è una parola riservata in C#. Questa sezione presenta le seguenti parole chiave contestuali:  
   
-|Parola chiave|Description|  
+|Parola chiave|DESCRIZIONE|  
 |-------------|-----------------|  
 |[add](../../../csharp/language-reference/keywords/add.md)|Definisce una funzione di accesso eventi personalizzata che viene chiamata quando il codice client esegue la sottoscrizione all'evento.|  
 |[async](../../../csharp/language-reference/keywords/async.md)|Indica che il metodo specificato, l'espressione lambda o il metodo anonimo è asincrono.|  
 |[await](../../../csharp/language-reference/keywords/await.md)|Sospende un metodo asincrono finché non viene completata un'attività attesa.|  
 |[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|Definisce un tipo di riferimento che abilita operazioni in cui il tipo appare per ignorare il controllo del tipo in fase di compilazione.|  
 |[get](../../../csharp/language-reference/keywords/get.md)|Definisce un metodo di accesso per una proprietà o un indicizzatore.|  
-|[global](../../../csharp/language-reference/keywords/global.md)|Specifica lo spazio dei nomi globale predefinito, che altrimenti non è provvisto di nome.|  
+|[global](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)|Alias dello spazio dei nomi globale, che altrimenti non è provvisto di nome.|  
 |[partial](../../../csharp/language-reference/keywords/partial-type.md)|Definisce classi, struct e interfacce parziali all'interno della stessa unità di compilazione.|  
 |[remove](../../../csharp/language-reference/keywords/remove.md)|Definisce una funzione di accesso eventi personalizzata che viene chiamata quando il codice client annulla la sottoscrizione all'evento.|  
 |[set](../../../csharp/language-reference/keywords/set.md)|Definisce un metodo di accesso per una proprietà o un indicizzatore.|  

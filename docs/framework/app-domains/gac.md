@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 858d651523ac6196aa2dcad008ea53674eb01b04
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 37c6e87ea50f3978bb896c7896a41b2faa9798bc
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832832"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566974"
 ---
 # <a name="global-assembly-cache"></a>Global Assembly Cache
 Ogni computer in cui è installato Common Language Runtime ha una cache di codice a livello di computer detta Global Assembly Cache. La Global Assembly Cache archivia gli assembly specificamente designati per essere condivisi da più applicazioni nel computer.  
@@ -31,7 +31,7 @@ Ogni computer in cui è installato Common Language Runtime ha una cache di codic
   
 - Usare un programma di installazione progettato per funzionare con la Global Assembly Cache. Questa è l'opzione preferita per l'installazione degli assembly nella Global Assembly Cache.  
   
-- Usare uno strumento per sviluppatori denominato [strumento Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) incluso in Windows Software Development Kit (SDK).  
+- Usare uno strumento per sviluppatori denominato [strumento Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), disponibile con Windows SDK.  
   
     > [!NOTE]
     >  Ai fini della distribuzione, per installare gli assembly nella Global Assembly Cache è necessario usare Windows Installer. Usare lo strumento Global Assembly Cache solo in scenari di sviluppo, poiché non prevede il conteggio dei riferimenti di assembly né altre funzionalità disponibili con il programma di installazione di Windows.  

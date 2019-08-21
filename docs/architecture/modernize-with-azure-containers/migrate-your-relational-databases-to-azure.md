@@ -2,12 +2,12 @@
 title: Eseguire la migrazione dei database relazionali in Azure
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | eseguire la migrazione dei database relazionali in Azure
 ms.date: 04/28/2018
-ms.openlocfilehash: 3d4f03e61144bb6a442a50916d7fd024d38ec611
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 982050d99aaa66cde1168a2f2fa64ed5f3e9163b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578374"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660737"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Eseguire la migrazione dei database relazionali in Azure
 
@@ -126,4 +126,4 @@ Per informazioni su come eseguire la migrazione dei database con il servizio mig
 
 > [!div class="step-by-step"]
 > [Precedente](lift-and-shift-existing-apps-azure-iaas.md)
-> [Successivo](modernize-existing-apps-to-cloud-optimized/index.md)
+> [Successivo](modernize-existing-apps-to-cloud-optimized/index.md) <!-- Next Chapter -->

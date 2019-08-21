@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4f59bdb0537ab6ce404ed0623c40f9f3b31598d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 32a4f4f3735c8952cf1458c63655eb56a82fd18f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766818"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666443"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -148,7 +148,7 @@ ms.locfileid: "67766818"
   
  Il Common Language Runtime fornisce nuovi codici operativi e prefissi per supportare i tipi generici nel linguaggio MSIL (Microsoft Intermediate Language), inclusi <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>e <xref:System.Reflection.Emit.OpCodes.Readonly>.  
   
- Visual C++, C# e Visual Basic forniscono il supporto completo per la definizione e l'utilizzo dei generics. Per altre informazioni sul supporto dei linguaggi, vedere [Tipi generici in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md), [Introduzione ai generics](~/docs/csharp/programming-guide/generics/index.md) e [Panoramica dei generics in C++](/cpp/windows/overview-of-generics-in-visual-cpp).  
+ Visual C++, C# e Visual Basic forniscono il supporto completo per la definizione e l'utilizzo dei generics. Per altre informazioni sul supporto dei linguaggi, vedere [Tipi generici in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [Introduzione ai generics](../../csharp/programming-guide/generics/index.md) e [Panoramica dei generics in C++](/cpp/windows/overview-of-generics-in-visual-cpp).  
   
  [Torna all'inizio](#top)  
   
@@ -170,8 +170,8 @@ ms.locfileid: "67766818"
 |[Tipi di raccolte comunemente utilizzate](../../../docs/standard/collections/commonly-used-collection-types.md)|Fornisce informazioni di riepilogo sulle caratteristiche e gli scenari di utilizzo dei tipi di raccolta in .NET, inclusi i tipi generici.|  
 |[Quando utilizzare raccolte generiche](../../../docs/standard/collections/when-to-use-generic-collections.md)|Vengono descritte le regole generali per determinare quando usare i tipi di raccolte generiche.|  
 |[Procedura: Definire un tipo generico tramite reflection emit](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Viene illustrato come generare assembly dinamici che includono tipi e metodi generici.|  
-|[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Viene descritta la funzionalità generics per gli utenti di Visual Basic, tra cui procedure relative all'utilizzo e alla definizione di tipi generici.|  
-|[Introduzione ai generics](~/docs/csharp/programming-guide/generics/index.md)|Viene fornita una panoramica di definizione e utilizzo di tipi generici per gli utenti di C#.|  
+|[Tipi generici in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|Viene descritta la funzionalità generics per gli utenti di Visual Basic, tra cui procedure relative all'utilizzo e alla definizione di tipi generici.|  
+|[Introduzione ai generics](../../csharp/programming-guide/generics/index.md)|Viene fornita una panoramica di definizione e utilizzo di tipi generici per gli utenti di C#.|  
 |[Panoramica di Generics in Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Viene descritta la funzionalità generics per gli utenti di C++, incluse le differenze tra generics e modelli.|  
   
 <a name="reference"></a>   

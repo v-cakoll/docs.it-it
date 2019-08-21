@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 36de7dd2d97eb532717d52bd3903d3e5acd19d2d
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833893"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567057"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Assembler IL)
 
@@ -104,7 +104,7 @@ Per fare in modo che l'utilizzo combinato di *Ildasm.exe* e *Ilasm.exe* risulti 
 > [!NOTE]
 > *Ildasm.exe* opera solo su file su disco. e non su file installati nella Global Assembly Cache.
 
-Per altre informazioni sulla grammatica di IL, vedere il file asmparse.grammar in Windows Software Development Kit (SDK).
+Per altre informazioni sulla grammatica di IL, vedere il file asmparse.grammar in Windows SDK.
 
 ## <a name="version-information"></a>Informazioni sulla versione
 
@@ -137,7 +137,7 @@ A partire da .NET Framework 4.5, è possibile specificare un BLOB (oggetto binar
         Test(object A_1) cil managed
 ```
 
-Per altre informazioni sulla grammatica di IL, vedere il file asmparse.grammar in Windows Software Development Kit (SDK).
+Per altre informazioni sulla grammatica di IL, vedere il file asmparse.grammar in Windows SDK.
 
 ## <a name="examples"></a>Esempi
 

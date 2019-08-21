@@ -15,6 +15,10 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Distribuire in Databricks
       href: tutorials/databricks-deployment.md
+- name: Guide pratiche
+  items:
+    - name: Eseguire il debug dell'applicazione
+      href: how-to-guides/debug.md
 - name: Riferimenti
   items:
     - name: Riferimento API

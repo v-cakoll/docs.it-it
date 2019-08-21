@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: a7fea9810cb02269278638ec71cd106463b029e9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 3b3a5c2e96e92271da66cbd8f1039a9ec97544fa
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025019"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971225"
 ---
 # <a name="-operator-c-reference"></a>Operatore => (Riferimenti per C#)
 
@@ -45,7 +45,7 @@ Una definizione di corpo di espressione presenta la seguente sintassi generale:
 member => expression;
 ```
 
-dove *expression* è un'espressione valida. Si noti che *expression* può essere un'*espressione di istruzione* solo se il tipo restituito del membro è `void` o se il membro è un costruttore, un finalizzatore o una funzione di accesso `set` di una proprietà.
+dove `expression` è un'espressione valida. Il tipo restituito di `expression` deve essere convertibile in modo implicito nel tipo restituito del membro. Se il tipo restituito del membro è `void` o se il membro è un costruttore, un finalizzatore o una funzione di accesso `set` di una proprietà, `expression` deve essere un'[*espressione di istruzione*](~/_csharplang/spec/statements.md#expression-statements). In tal caso, può essere di qualsiasi tipo.
 
 L'esempio seguente illustra una definizione del corpo dell'espressione per un metodo `Person.ToString`:
 

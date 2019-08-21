@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50d76aef201fead37923a65cfeead16638b09842
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3535e2979d2430fcb434a578f94d8d5b3925631
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031174"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666563"
 ---
 # <a name="asynchronous-programming-patterns"></a>Modelli di programmazione asincrona
 
 In .NET sono disponibili tre modelli per l'esecuzione di operazioni asincrone:  
 
-- **Modello asincrono basato su attività (TAP)**, che usa un unico metodo per rappresentare l'inizio e il completamento di un'operazione asincrona. Il modello TAP è stato introdotto in .NET Framework 4. **È l'approccio consigliato per la programmazione asincrona in .NET.** Le parole chiave [async](~/docs/csharp/language-reference/keywords/async.md) e [await](~/docs/csharp/language-reference/keywords/await.md) in C# e gli operatori [Async](~/docs/visual-basic/language-reference/modifiers/async.md) e [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) in Visual Basic aggiungono il supporto del linguaggio per TAP. Per altre informazioni, vedere [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md) (Modello asincrono basato su attività, TAP).  
+- **Modello asincrono basato su attività (TAP)** , che usa un unico metodo per rappresentare l'inizio e il completamento di un'operazione asincrona. Il modello TAP è stato introdotto in .NET Framework 4. **È l'approccio consigliato per la programmazione asincrona in .NET.** Le parole chiave [async](../../csharp/language-reference/keywords/async.md) e [await](../../csharp/language-reference/keywords/await.md) in C# e gli operatori [Async](../../visual-basic/language-reference/modifiers/async.md) e [Await](../../visual-basic/language-reference/operators/await-operator.md) in Visual Basic aggiungono il supporto del linguaggio per TAP. Per altre informazioni, vedere [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md) (Modello asincrono basato su attività, TAP).  
 
-- **Modello asincrono basato su eventi (EAP)**, ovvero il modello legacy basato su eventi per fornire il comportamento asincrono. Richiede un metodo con il suffisso `Async` e uno o più eventi, i tipi delegati del gestore eventi e i tipi derivati da `EventArg`. EAP è stato introdotto in .NET Framework 2.0. Questo modello non è più consigliato per i nuovi progetti di sviluppo. Per ulteriori informazioni, vedere [Event-based Asynchronous Pattern (EAP)](event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP).  
+- **Modello asincrono basato su eventi (EAP)** , ovvero il modello legacy basato su eventi per fornire il comportamento asincrono. Richiede un metodo con il suffisso `Async` e uno o più eventi, i tipi delegati del gestore eventi e i tipi derivati da `EventArg`. EAP è stato introdotto in .NET Framework 2.0. Questo modello non è più consigliato per i nuovi progetti di sviluppo. Per ulteriori informazioni, vedere [Event-based Asynchronous Pattern (EAP)](event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP).  
 
 - Il **modello di programmazione asincrona (APM)** (chiamato anche modello <xref:System.IAsyncResult>) è il modello legacy che usa l'interfaccia <xref:System.IAsyncResult> per fornire il comportamento asincrono. In questo modello, le operazioni sincrone richiedono i metodi `Begin` e `End` (ad esempio `BeginWrite` e `EndWrite` per implementare un'operazione di scrittura asincrona). Questo modello non è più consigliato per i nuovi sviluppi. Per altre informazioni, vedere [Asynchronous Programming Model (APM)](asynchronous-programming-model-apm.md) (Modello di programmazione asincrona, APM).  
   
@@ -70,6 +70,6 @@ public class MyClass
 ## <a name="see-also"></a>Vedere anche
 
 - [La programmazione asincrona in dettaglio](../async-in-depth.md)
-- [Programmazione asincrona in C#](~/docs/csharp/async.md)
-- [Programmazione asincrona in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-- [Programmazione asincrona con Async e Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [Programmazione asincrona in C#](../../csharp/async.md)
+- [Programmazione asincrona in F#](../../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [Programmazione asincrona con Async e Await (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)

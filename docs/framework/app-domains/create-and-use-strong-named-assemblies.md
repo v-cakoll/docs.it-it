@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 5dcdf6a88b12d12e67056657fd532dfa28c40299
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832875"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566821"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Creare e usare gli assembly con nome sicuro
 
@@ -38,7 +38,7 @@ Lo scenario seguente descrive il processo di firma di un assembly con un nome si
 
     - Usando un ambiente di sviluppo che supporta la creazione di nomi sicuri, come Visual Studio.
 
-    - Creando una coppia di chiavi crittografiche usando lo [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) e assegnandola all'assembly mediante un compilatore della riga di comando o [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Windows Software Development Kit (SDK)
+    - Creando una coppia di chiavi crittografiche usando lo [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) e assegnandola all'assembly mediante un compilatore della riga di comando o [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Windows SDK fornisce sia Sn.exe che Al.exe.
 
 2. L'ambiente di sviluppo o lo strumento firma l'hash del file contenente il manifesto dell'assembly con la chiave privata dello sviluppatore. La firma digitale viene archiviata nel file eseguibile portabile (PE) che contiene il manifesto dell'assembly A.
 

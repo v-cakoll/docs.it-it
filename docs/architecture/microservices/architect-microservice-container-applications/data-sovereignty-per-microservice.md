@@ -1,13 +1,13 @@
 ---
 title: Sovranità dei dati per microservizio
-description: La sovranità dei dati per microservizio è uno del punto fondamentali dei microservizi. Ogni microservizio deve essere l'unico proprietario del proprio database, che non viene condiviso con nessun altro. Naturalmente, tutte le istanze di un microservizio si connettono allo stesso database a disponibilità elevata.
+description: La sovranità dei dati per microservizio è uno dei punti chiave dei microservizi. Ogni microservizio deve essere l'unico proprietario del proprio database, che non viene condiviso con nessun altro. Naturalmente, tutte le istanze di un microservizio si connettono allo stesso database a disponibilità elevata.
 ms.date: 09/20/2018
-ms.openlocfilehash: ccb12451cd7cd44938e09d171eb29e614786f469
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cd7be23800394b231e15bdc503d15a960a25a20a
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673178"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566208"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Sovranità dei dati per microservizio
 

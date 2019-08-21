@@ -3,12 +3,12 @@ title: Classi e oggetti in C# - Panoramica del linguaggio C#
 description: Introduzione a C# Leggere questa panoramica su classi, oggetti ed ereditarietà
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 681ed03661bf54dcb1e7e70735a53a553763c95c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ff83a3198c6c9fb4c4a438d2486614a211c913ec
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750393"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971466"
 ---
 # <a name="classes-and-objects"></a>Classi e oggetti
 
@@ -256,7 +256,7 @@ Le funzioni di accesso di una proprietà possono essere virtuali. Se una dichiar
 
 ### <a name="indexers"></a>Indicizzatori
 
-Un *indicizzatore* è un membro che consente di indicizzare gli oggetti esattamente come una matrice. Un indicizzatore viene dichiarato come una proprietà, ma a differenza di questa il nome del membro è seguito da un elenco di parametri scritti tra i delimitatori `[` e `]`. I parametri sono disponibili nelle funzioni di accesso dell'indicizzatore. Analogamente alle proprietà, gli indicizzatori possono essere di lettura/scrittura, di sola lettura o di sola scrittura e le funzioni di accesso di un indicizzatore possono essere virtuali.
+Un *indicizzatore* è un membro che consente di indicizzare gli oggetti esattamente come una matrice. Un indicizzatore viene dichiarato come una proprietà, ma a differenza di questa il nome del membro è `this` seguito da un elenco di parametri scritti tra i delimitatori `[` e `]`. I parametri sono disponibili nelle funzioni di accesso dell'indicizzatore. Analogamente alle proprietà, gli indicizzatori possono essere di lettura/scrittura, di sola lettura o di sola scrittura e le funzioni di accesso di un indicizzatore possono essere virtuali.
 
 La classe `MyList<T>` dichiara un indicizzatore di lettura/scrittura che accetta un parametro `int` e consente di indicizzare istanze `MyList<T>` con valori `int`. Ad esempio:
 

@@ -1,51 +1,70 @@
 ---
 title: 'Operatore :: - Riferimenti per C#'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 08/09/2019
 f1_keywords:
 - ::_CSharpKeyword
+- global_CSharpKeyword
 helpviewer_keywords:
 - ':: operator [C#]'
-- 'namespaces [C#], :: operator'
-- namespace alias qualifier operator (::) [C#]
+- namespace alias qualifier [C#]
+- namespace [C#]
+- global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: c494e8dbb18f44ce5520b21800a21d3feb03da59
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2aceb51747708b12fb3059b097b72206c78a9d5d
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631365"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971234"
 ---
 # <a name="-operator-c-reference"></a>Operatore :: (Riferimenti per C#)
 
-Il qualificatore di alias dello spazio dei nomi (`::`) viene usato per cercare gli identificatori. Viene sempre posizionato tra due identificatori, come nell'esempio seguente:
+Usare il qualificatore di alias dello spazio dei nomi `::` per accedere ai membri di uno spazio dei nomi con alias. Il qualificatore `::` viene usato tra due identificatori. L'identificatore a sinistra può essere uno qualsiasi degli alias seguenti:
 
-[!code-csharp[csRefOperators#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#27)]
+- Un alias dello spazio dei nomi creato con la [direttiva alias using](../keywords/using-directive.md):
+  
+  ```csharp
+  using forwinforms = System.Drawing;
+  using forwpf = System.Windows;
+  
+  public class Converters
+  {
+      public static forwpf::Point Convert(forwinforms::Point point) => new forwpf::Point(point.X, point.Y);
+  }
+  ```
 
-L'operatore `::` può anche essere usato con una *direttiva using alias*:
+- Un [alias extern](../keywords/extern-alias.md).
+- L'alias `global`, ovvero l'alias dello spazio dei nomi globale. Lo spazio dei nomi globale è lo spazio dei nomi che contiene gli spazi dei nomi e i tipi non dichiarati all'interno di uno spazio dei nomi denominato. Quando viene usato con il qualificatore `::`, l'alias `global` fa sempre riferimento allo spazio dei nomi globale, anche se è presente l'alias dello spazio dei nomi `global` definito dall'utente.
+  
+  Nell'esempio seguente viene usato l'alias `global` per accedere allo spazio dei nomi .NET <xref:System>, che è un membro dello spazio dei nomi globale. Senza l'alias `global`, verrà eseguito l'accesso allo spazio dei nomi `System` definito dall'utente, che è un membro dello spazio dei nomi `MyCompany.MyProduct`:
 
-```csharp
-// using Col=System.Collections.Generic;
-var numbers = new Col::List<int> { 1, 2, 3 };
-```
+  ```csharp
+  namespace MyCompany.MyProduct.System
+  {
+      class Program
+      {
+          static void Main() => global::System.Console.WriteLine("Using global alias");
+      }
+  
+      class Console
+      {
+          string Suggestion => "Consider renaming this class";
+      }
+  }
+  ```
+  
+  > [!NOTE]
+  > La parola chiave `global` è l'alias dello spazio dei nomi globale solo quando è l'identificatore di sinistra del qualificatore `::`.
 
-## <a name="remarks"></a>Osservazioni
-
-Il qualificatore di alias dello spazio dei nomi può essere `global`. In questo modo viene richiamata una ricerca nello spazio dei nomi globale anziché in uno spazio dei nomi con alias.
-
-## <a name="for-more-information"></a>Per altre informazioni
-
-Per un esempio di utilizzo dell'operatore `::`, vedere la seguente sezione:
-
-- [Procedura: Usare l'alias dello spazio dei nomi globale](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
+È anche possibile usare l'[operatore di accesso ai membri `.`](member-access-operators.md#member-access-operator-) per accedere ai membri di uno spazio dei nomi con alias. L'operatore `.` viene tuttavia anche usato per accedere ai membri di un tipo. Il qualificatore `::` garantisce che il relativo identificatore di sinistra faccia sempre riferimento a un alias dello spazio dei nomi, anche se esiste un tipo o uno spazio dei nomi con lo stesso nome.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Per altre informazioni, vedere la sezione [Qualificatori di alias dello spazio dei nomi](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../index.md)
 - [Operatori C#](index.md)
-- [Operatore .](member-access-operators.md#member-access-operator-)
-- [alias extern](../keywords/extern-alias.md)
+- [Uso degli spazi dei nomi](../../programming-guide/namespaces/using-namespaces.md)

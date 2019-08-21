@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: df921ecc670bf12411dc8b0d828d6c19bb0a1aec
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8cc1d1461a33ab94f8ae399d6ff40f26eaf7f74a
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422750"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039457"
 ---
 # <a name="namespace-c-reference"></a>namespace (Riferimenti per C#)
 
@@ -52,24 +52,15 @@ L'esempio seguente illustra come chiamare un metodo statico in uno spazio dei no
 
 [!code-csharp[csrefKeywordsNamespace#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#3)]
 
-## <a name="related-resources"></a>Risorse correlate
-
-Per altre informazioni sull'uso degli spazi dei nomi, vedere gli argomenti seguenti:
-
-- [Spazi dei nomi](../../programming-guide/namespaces/index.md)
-
-- [Uso degli spazi dei nomi](../../programming-guide/namespaces/using-namespaces.md)
-
-- [Procedura: Usare l'alias dello spazio dei nomi globale](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
-
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Per altre informazioni, vedere la sezione [Spazi dei nomi](~/_csharplang/spec/namespaces.md) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../language-reference/index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
+- [Riferimenti per C#](../index.md)
+- [Parole chiave C#](index.md)
 - [using](using-directive.md)
 - [using static](using-static.md)
+- [Qualificatore di alias dello spazio dei nomi `::`](../operators/namespace-alias-qualifier.md)
+- [Spazi dei nomi](../../programming-guide/namespaces/index.md)

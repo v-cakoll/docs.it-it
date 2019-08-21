@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2239b73eb8418d469085ad72b8a28093146a1f6b
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025962"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567316"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Disassembler IL)
 
@@ -100,7 +100,7 @@ Il file di testo prodotto da *Ildasm.exe* può essere utilizzato come input per 
 > [!NOTE]
 > Attualmente non è possibile avvalersi di questa tecnica con file PE contenenti codice nativo incorporato, ad esempio file PE prodotti da Visual C++.  
 
-È possibile utilizzare la GUI predefinita del disassembler IL per visualizzare i metadati e il codice disassemblato di qualsiasi file PE esistente in una visualizzazione albero di tipo gerarchico. Per usare la GUI, digitare **ildasm** alla riga di comando senza specificare l'argomento *PEfilename* né alcuna opzione. Dal menu **File** è possibile passare al file di tipo PE che si vuole caricare in *Ildasm.exe*. Per salvare i metadati e il codice disassemblato visualizzati per il file PE selezionato, scegliere il comando **Dump** dal menu **File**. Per salvare solo la visualizzazione albero di tipo gerarchico, scegliere **Esegui il dump di TreeView** dal menu **File**. Per una guida dettagliata sul caricamento di un file in *Ildasm.exe* e sull'interpretazione dell'output, vedere l'esercitazione di *Ildasm.exe* disponibile nella cartella Samples inclusa in Windows Software Development Kit (SDK).
+È possibile utilizzare la GUI predefinita del disassembler IL per visualizzare i metadati e il codice disassemblato di qualsiasi file PE esistente in una visualizzazione albero di tipo gerarchico. Per usare la GUI, digitare **ildasm** alla riga di comando senza specificare l'argomento *PEfilename* né alcuna opzione. Dal menu **File** è possibile passare al file di tipo PE che si vuole caricare in *Ildasm.exe*. Per salvare i metadati e il codice disassemblato visualizzati per il file PE selezionato, scegliere il comando **Dump** dal menu **File**. Per salvare solo la visualizzazione albero di tipo gerarchico, scegliere **Esegui il dump di TreeView** dal menu **File**. Per una guida dettagliata sul caricamento di un file in *Ildasm.exe* e sull'interpretazione dell'output, vedere l'esercitazione di *Ildasm.exe*, contenuta nella cartella Samples inclusa in Windows SDK.
 
 Se si specifica per *Ildasm.exe* un argomento *PEfilename* che contiene risorse incorporate, lo strumento produrrà più file di output: un file di testo contenente codice IL e, per ogni risorsa gestita incorporata, un file con estensione resources prodotto usando il nome della risorsa dai metadati. Se in *PEfilename* è incorporata una risorsa non gestita, verrà prodotto un file con estensione res usando il nome file specificato dall'opzione **/output** per l'output IL.
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ca87d688d6802df967ea81b8297b099350f1c86
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 11777f21d34da8b529352122bbf185f1938d3eb5
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629333"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567226"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Creazione di un pacchetto di un assembly .NET Framework per COM
 
@@ -49,7 +49,7 @@ Gli sviluppatori COM possono trarre vantaggio dalle informazioni seguenti sui ti
 
 - Inclusione di una libreria dei tipi
 
-  La maggior parte dei tipi richiede una libreria dei tipi per l'uso da un'applicazione COM. È possibile generare una libreria dei tipi o delegare agli sviluppatori COM questa operazione. Windows Software Development Kit (SDK) include le opzioni seguenti per la generazione di una libreria dei tipi:
+  La maggior parte dei tipi richiede una libreria dei tipi per l'uso da un'applicazione COM. È possibile generare una libreria dei tipi o delegare agli sviluppatori COM questa operazione. Windows SDK include le opzioni seguenti per la generazione di una libreria dei tipi:
 
   - [Utilità di esportazione della libreria dei tipi](#cpconpackagingassemblyforcomanchor1)
 
