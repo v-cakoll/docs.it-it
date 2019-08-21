@@ -47,22 +47,17 @@
           href: how-to-add-activex-controls-to-windows-forms.md
         - name: Considerazioni sull'inserimento di controlli ActiveX in Windows Form
           href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
-    - name: Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida
-      href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
+    - name: Etichettare i controlli e fornire collegamenti
       items:
-        - name: 'Procedura: Creare tasti di scelta per i controlli Windows Forms'
+        - name: Panoramica
+          href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
+        - name: Creare tasti di scelta per i controlli
           href: how-to-create-access-keys-for-windows-forms-controls.md
-        - name: 'Procedura: Creare tasti di scelta per i controlli Windows Forms usando la finestra di progettazione'
-          href: how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md
-        - name: 'Procedura: Impostare il testo visualizzato da un controllo di Windows Forms'
+        - name: Impostare il testo visualizzato da un controllo
           href: how-to-set-the-text-displayed-by-a-windows-forms-control.md
-        - name: 'Procedura: Impostare il testo visualizzato da un controllo di Windows Forms usando la finestra di progettazione'
-          href: how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md
-        - name: 'Procedura: Impostare l''immagine visualizzata da un controllo di Windows Forms'
+        - name: Impostare l'immagine visualizzata da un controllo
           href: how-to-set-the-image-displayed-by-a-windows-forms-control.md
-        - name: 'Procedura: Impostare l''immagine visualizzata da un controllo di Windows Forms usando la finestra di progettazione'
-          href: how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md
-        - name: Aggiunta di informazioni per l'Accesso facilitato ai controlli in un Windows Form
+        - name: Fornire informazioni sull'accessibilità per i controlli
           href: providing-accessibility-information-for-controls-on-a-windows-form.md
     - name: Controlli da usare in Windows Form
       href: controls-to-use-on-windows-forms.md
