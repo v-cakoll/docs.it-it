@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd0611cc8a6d257192b389b023c4dcda8f1b7ec3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb43554d53051ce02a296f225c68c74352add5ed
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634418"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567478"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Dettagli sul comportamento delle espressioni regolari
 Il motore delle espressioni regolari di .NET Framework è un selettore di espressioni regolari di backtracking che incorpora un motore NFA (Nondeterministic Finite Automaton) tradizionale come quello usato da Perl, Python, Emacs e Tcl. Ciò lo distingue dai motori delle espressioni regolari puri DFA (Deterministic Finite Automaton), più veloci ma più limitati, come quelli usati in awk, egrep o lex. Lo distingue anche dai motori NFA POSIX, standardizzati ma più lenti. Nella sezione seguente vengono descritti i tre tipi di motori delle espressioni regolari e viene spiegato perché le espressioni regolari in .NET Framework vengono implementate usando un motore NFA tradizionale.  
@@ -43,9 +43,9 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
   
-     Le versioni greedy e lazy di questa espressione regolare vengono definite come illustrato nella tabella seguente.  
+     Le versioni greedy e lazy di questa espressione regolare vengono definite come illustrato nella tabella seguente:
   
-    |Modello|Description|  
+    |Modello|DESCRIZIONE|  
     |-------------|-----------------|  
     |`.+` (quantificatore greedy)|Trova almeno un'occorrenza di qualsiasi carattere. In questo modo il motore delle espressioni regolari considera soddisfatta la corrispondenza con l'intera stringa ed esegue il backtracking, necessario per verificare le corrispondenze con il resto del criterio.|  
     |`.+?` (quantificatore lazy)|Trova almeno un'occorrenza di qualsiasi carattere, ma accetta la corrispondenza con il minor numero possibile di caratteri.|  
@@ -61,7 +61,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
   
      L'espressione regolare `\b[A-Z]+\b(?=\P{P})` viene definita come illustrato nella tabella seguente.  
   
-    |Modello|Description|  
+    |Modello|DESCRIZIONE|  
     |-------------|-----------------|  
     |`\b`|Inizia la corrispondenza sul confine di parola.|  
     |`[A-Z]+`|Trova la corrispondenza con qualsiasi carattere alfabetico una o più volte. Poiché il metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> viene chiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, il confronto non rileva la distinzione tra maiuscole e minuscole.|  
@@ -77,7 +77,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
   
      Il criterio di ricerca di espressioni regolari `\b(?!non)\w+\b` è definito nel modo illustrato nella tabella seguente.  
   
-    |Modello|Description|  
+    |Modello|DESCRIZIONE|  
     |-------------|-----------------|  
     |`\b`|Inizia la corrispondenza sul confine di parola.|  
     |`(?!non)`|Esegue il lookahead per verificare che la stringa corrente non inizi con "non". In caso contrario, la corrispondenza ha esito negativo.|  
@@ -93,7 +93,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
   
      Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.  
   
-    |Modello|Description|  
+    |Modello|DESCRIZIONE|  
     |-------------|-----------------|  
     |`^`|Inizia la corrispondenza all'inizio di una riga.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Trova la corrispondenza con zero o un'occorrenza della stringa `<PRIVATE>` seguita da un carattere di spazio vuoto. Assegna la corrispondenza a un gruppo di acquisizione denominato `Pvt`.|  
@@ -129,13 +129,13 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
   
-     L'espressione regolare `^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$` è definita nel modo illustrato nella tabella seguente.  
+     L'espressione regolare ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` viene definita come illustrato nella tabella seguente.  
   
-    |Modello|Description|  
+    |Modello|DESCRIZIONE|  
     |-------------|-----------------|  
     |`^`|Inizia la ricerca della corrispondenza all'inizio della stringa.|  
     |`[A-Z0-9]`|Trova la corrispondenza con qualsiasi carattere numerico o alfanumerico. Il confronto non rileva la differenza tra maiuscole e minuscole.|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Match zero or more occurrences of any word character, or any of the following characters:  -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124;, or ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|Trova zero o più occorrenze di qualsiasi carattere alfanumerico o di uno qualsiasi dei caratteri seguenti:  -, !, #, $, %, &, ', ., \*, +, /, =, ?, ^, \`, {, }, &#124; o ~.|  
     |`(?<=[A-Z0-9])`|Esegue il lookbehind al carattere precedente, che deve essere numerico o alfanumerico. Il confronto non rileva la differenza tra maiuscole e minuscole.|  
     |`$`|Terminare la corrispondenza alla fine della stringa.|  
   
@@ -143,7 +143,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Description|  
+|Titolo|DESCRIZIONE|  
 |-----------|-----------------|  
 |[Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Informazioni su come il backtracking delle espressioni regolari si dirama per trovare corrispondenze alternative.|  
 |[Compilazione e riutilizzo](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Informazioni sulla compilazione e sul riutilizzo di espressioni regolari per ottimizzare le prestazioni.|  
