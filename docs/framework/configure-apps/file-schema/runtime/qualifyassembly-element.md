@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a4741c6a4745bdba00fdb525b39b70d0b15e005
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4aa90a378630c9aff74923d8e8600aed15a77a5e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704856"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663495"
 ---
-# <a name="qualifyassembly-element"></a>\<qualifyAssembly > elemento
+# <a name="qualifyassembly-element"></a>\<Elemento > qualifyAssembly
 Specifica il nome completo dell'assembly da caricare in modo dinamico quando viene usato un nome parziale.  
   
  \<configuration>  
@@ -42,7 +42,7 @@ Specifica il nome completo dell'assembly da caricare in modo dinamico quando vie
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |`partialName`|Attributo obbligatorio.<br /><br /> Specifica il nome parziale dell'assembly come appare nel codice.|  
-|`fullName`|Attributo obbligatorio.<br /><br /> Specifica il nome completo dell'assembly come appare nella global assembly cache.|  
+|`fullName`|Attributo obbligatorio.<br /><br /> Specifica il nome completo dell'assembly visualizzato nel Global Assembly Cache.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -56,12 +56,12 @@ Specifica il nome completo dell'assembly da caricare in modo dinamico quando vie
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- La chiamata di <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metodo usando nomi di assembly parziali fa in modo che common language runtime cercare l'assembly solo nella directory di base dell'applicazione. Usare la  **\<qualifyAssembly >** elemento nel file di configurazione dell'applicazione per fornire le informazioni sull'assembly (nome, versione, token di chiave pubblica e le impostazioni cultura) e causare common language runtime per la ricerca per l'assembly nella global assembly cache.  
+ Quando si <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> chiama il metodo utilizzando nomi di assembly parziali, il Common Language Runtime cerca l'assembly solo nella directory di base dell'applicazione. Usare l'  **\<elemento > qualifyAssembly** nel file di configurazione dell'applicazione per fornire le informazioni complete sull'assembly (nome, versione, token di chiave pubblica e impostazioni cultura) e fare in modo che il Common Language Runtime cerchi l'assembly nel Global Assembly Cache.  
   
- Il **fullName** attributo deve includere quattro campi di identità dell'assembly: nome, versione, token di chiave pubblica e le impostazioni cultura. Il **partialName** attributo parzialmente deve fare riferimento a un assembly. È necessario specificare almeno il nome dell'assembly testo (il caso più comune), ma è anche possibile includere una versione, token di chiave pubblica o le impostazioni cultura (o qualsiasi combinazione di quattro, ma non tutte e quattro). Il **partialName** deve corrispondere al nome specificato nella chiamata. Ad esempio, non è possibile specificare `"math"` come il **partialName** attributo nel file di configurazione e chiamare `Assembly.Load("math, Version=3.3.3.3")` nel codice.  
+ L'attributo **FullName** deve includere i quattro campi dell'identità dell'assembly: nome, versione, token di chiave pubblica e impostazioni cultura. L' attributo parzialname deve fare riferimento parzialmente a un assembly. È necessario specificare almeno il nome di testo dell'assembly (caso più comune), ma è anche possibile includere la versione, il token di chiave pubblica o le impostazioni cultura (o qualsiasi combinazione dei quattro, ma non tutti e quattro). Il parametro partial deve corrispondere al nome specificato nella chiamata. Ad esempio, non è possibile `"math"` specificare come attributo parzialname nel file di configurazione e chiamare `Assembly.Load("math, Version=3.3.3.3")` nel codice.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente consente in modo logico la chiamata `Assembly.Load("math")` in `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.  
+ Nell'esempio seguente viene logicamente svolta la chiamata `Assembly.Load("math")` in `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ Specifica il nome completo dell'assembly da caricare in modo dinamico quando vie
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Come il runtime individua gli assembly](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Riferimenti ad Assembly parziali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))
+- [Schema delle impostazioni di runtime](index.md)
+- [Come il runtime individua gli assembly](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [Riferimenti a assembly parziali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29932eb27bcd13876ea6982982e67341edb8e0de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c8f8744d3ef1ca30eb05a4c8c3290d8a514714b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674077"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663519"
 ---
-# <a name="publisherpolicy-element"></a>\<publisherPolicy > elemento
+# <a name="publisherpolicy-element"></a>\<Elemento > publisherPolicy apply
 Specifica se il runtime applica i criteri dell'editore.  
   
  \<configuration>  
@@ -43,12 +43,12 @@ Specifica se il runtime applica i criteri dell'editore.
 |---------------|-----------------|  
 |`apply`|Specifica se applicare i criteri dell'editore.|  
   
-## <a name="apply-attribute"></a>applicare l'attributo  
+## <a name="apply-attribute"></a>applica attributo  
   
-|Value|Descrizione|  
+|Value|DESCRIZIONE|  
 |-----------|-----------------|  
 |`yes`|Applica i criteri dell'editore. Questa è l'impostazione predefinita.|  
-|`no`|Non si applica i criteri dell'editore.|  
+|`no`|Non applica i criteri dell'editore.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -61,14 +61,14 @@ Specifica se il runtime applica i criteri dell'editore.
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- Quando un fornitore del componente rilascia una nuova versione di un assembly, il fornitore può includere un criterio server di pubblicazione in modo che le applicazioni che usano la versione precedente a questo punto usano la nuova versione. Per specificare se applicare i criteri dell'editore per un determinato assembly, inserire il  **\<publisherPolicy >** elemento il  **\<dependentAssembly >** elemento.  
+ Quando un fornitore di componenti rilascia una nuova versione di un assembly, il fornitore può includere un criterio editore, in modo che le applicazioni che usano la versione precedente usino ora la nuova versione. Per specificare se applicare i criteri dell'editore per un particolare assembly, inserire l'  **\<elemento > publisherPolicy apply** nell'elemento  **\<> di dependentAssembly** .  
   
- L'impostazione predefinita per il **si applicano** attributo **yes**. Impostando il **si applicano** dell'attributo **alcun** sostituzioni quelli precedenti **Sì** le impostazioni per un assembly.  
+ L'impostazione predefinita per l'attributo **Apply** è **Sì**. L'impostazione dell'attributo **Apply** su **No** sostituisce le impostazioni **Yes** precedenti di un assembly.  
   
- L'autorizzazione è necessaria per un'applicazione ignorare in modo esplicito server di pubblicazione dei criteri tramite il [ \<publisherPolicy applicare = "no" / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) elemento nel file di configurazione dell'applicazione. L'autorizzazione viene concessa impostando il <xref:System.Security.Permissions.SecurityPermissionFlag> flag nella <xref:System.Security.Permissions.SecurityPermission>. Per altre informazioni, vedere [autorizzazione di sicurezza per il reindirizzamento di associazione Assembly](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
+ L'autorizzazione è necessaria affinché un'applicazione ignori esplicitamente i criteri del server di pubblicazione usando l' [ \<elemento publisherPolicy apply Apply = "No"/>](publisherpolicy-element.md) nel file di configurazione dell'applicazione. L'autorizzazione viene concessa impostando <xref:System.Security.Permissions.SecurityPermissionFlag> il flag <xref:System.Security.Permissions.SecurityPermission>su. Per altre informazioni, vedere [autorizzazione di sicurezza](../../assembly-binding-redirection-security-permission.md)per il reindirizzamento dell'associazione di assembly.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente consente di disattivare i criteri dell'editore per l'assembly, `myAssembly`.  
+ Nell'esempio seguente vengono disattivati i criteri dell'editore `myAssembly`per l'assembly.  
   
 ```xml  
 <configuration>  
@@ -87,7 +87,7 @@ Specifica se il runtime applica i criteri dell'editore.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Come il runtime individua gli assembly](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Schema delle impostazioni di runtime](index.md)
+- [Schema dei file di configurazione](../index.md)
+- [Come il runtime individua gli assembly](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [Reindirizzamento delle versioni di assembly](../../redirect-assembly-versions.md)

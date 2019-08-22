@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba411114bfb853e06c83adb42713d43f1452d9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f24e9a06137744dbc97d5f34cda7ad6eab873700
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704804"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663730"
 ---
-# <a name="etwenable-element"></a>\<etwEnable > elemento
+# <a name="etwenable-element"></a>\<Elemento > etwEnable
 Specifica se abilitare Event Tracing for Windows (ETW) e gli eventi CLR (Common Language Runtime).  
   
- \<configurazione > elemento  
-\<runtime > elemento  
+ \<Configuration >-elemento  
+\<Elemento runtime >  
 \<etwEnabled>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -32,16 +32,16 @@ Specifica se abilitare Event Tracing for Windows (ETW) e gli eventi CLR (Common 
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
-|enabled|Attributo obbligatorio.<br /><br /> Specifica se devono essere abilitati ETW.|  
+|enabled|Attributo obbligatorio.<br /><br /> Specifica se ETW deve essere abilitato.|  
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|true|Abilita ETW. Questo è il valore predefinito per le versioni di Windows partire con i sistemi operativi Windows Vista e Windows Server 2008.|  
-|False|Disabilitare ETW. Questo è il valore predefinito per le versioni precedenti di Windows.|  
+|true|Abilita ETW. Si tratta dell'impostazione predefinita per le versioni di Windows che iniziano con i sistemi operativi Windows Vista e Windows Server 2008.|  
+|false|Disabilitare ETW. Si tratta dell'impostazione predefinita per le versioni precedenti di Windows.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -54,13 +54,13 @@ Specifica se abilitare Event Tracing for Windows (ETW) e gli eventi CLR (Common 
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- A partire da Windows Vista, ETW è abilitato per impostazione predefinita. Usare questo elemento consente di disabilitare ETW per un'applicazione. Nelle versioni precedenti di Windows, usare questo elemento per attivare ETW per un'applicazione.  
+ A partire da Windows Vista, ETW è abilitato per impostazione predefinita. Utilizzare questo elemento per disabilitare ETW per un'applicazione. Nelle versioni precedenti di Windows, utilizzare questo elemento per abilitare ETW per un'applicazione.  
   
 > [!NOTE]
->  ETW può essere abilitato o disabilitato a livello globale in un server usando un'impostazione del Registro di sistema. Visualizzare [controllo della registrazione di .NET Framework](../../../../../docs/framework/performance/controlling-logging.md).  
+>  ETW può essere abilitato o disabilitato a livello globale in un server tramite un'impostazione del registro di sistema. Vedere [controllo .NET Framework registrazione](../../../performance/controlling-logging.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come attivare ETW tracing per un'applicazione.  
+ Nell'esempio seguente viene illustrato come abilitare la traccia ETW per un'applicazione.  
   
 ```xml  
 <configuration>  
@@ -72,6 +72,6 @@ Specifica se abilitare Event Tracing for Windows (ETW) e gli eventi CLR (Common 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Controllo della registrazione di .NET Framework](../../../../../docs/framework/performance/controlling-logging.md)
+- [Schema delle impostazioni di runtime](index.md)
+- [Schema dei file di configurazione](../index.md)
+- [Controllo della registrazione di .NET Framework](../../../performance/controlling-logging.md)

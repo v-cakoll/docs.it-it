@@ -8,14 +8,14 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: a1733803d1f5a5bf64aeb69d0360cef3de3b3a69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12797e2f06d03aacd81700eae57d5776c1a6f354
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674415"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663991"
 ---
-# <a name="settings-element-network-settings"></a>\<Impostazioni > (impostazioni di rete)
+# <a name="settings-element-network-settings"></a>\<Elemento > Impostazioni (impostazioni di rete)
 Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?displayProperty=nameWithType>.  
   
  \<configuration>  
@@ -46,19 +46,19 @@ Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?dis
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[httpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|Consente di personalizzare i parametri usati dal <xref:System.Net.HttpListener> classe.|  
-|[httpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|Consente di personalizzare i parametri della richiesta Web.|  
-|[ipv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|Abilita protocollo Internet versione 6 (IPv6) supportano.|  
-|[\<performanceCounter > (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|I contatori delle prestazioni di rete.|  
-|[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|Consente di configurare le connessioni alle risorse di rete.|  
-|[socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Specifica se le operazioni socket usano le porte di completamento.|  
-|[\<webProxyScript > (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|Consente di configurare le caratteristiche dello script utilizzato per individuare i proxy Web.|  
+|[httpListener](httplistener-element-network-settings.md)|Personalizza i <xref:System.Net.HttpListener> parametri utilizzati dalla classe.|  
+|[httpWebRequest](httpwebrequest-element-network-settings.md)|Personalizza i parametri della richiesta Web.|  
+|[ipv6](ipv6-element-network-settings.md)|Abilita il supporto protocollo Internet versione 6 (IPv6).|  
+|[\<Elemento > performanceCounter (impostazioni di rete)](performancecounter-element-network-settings.md)|Abilita i contatori delle prestazioni di rete.|  
+|[servicePointManager](servicepointmanager-element-network-settings.md)|Configura le connessioni alle risorse di rete.|  
+|[socket](socket-element-network-settings.md)|Specifica se le operazioni socket utilizzano le porte di completamento.|  
+|[\<Elemento > webProxyScript (impostazioni di rete)](webproxyscript-element-network-settings.md)|Configura le caratteristiche dello script utilizzato per individuare i proxy Web.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.|  
+|[system.net](system-net-element-network-settings.md)|Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.|  
   
 ## <a name="remarks"></a>Note  
   
@@ -68,4 +68,4 @@ Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?dis
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Net?displayProperty=nameWithType>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

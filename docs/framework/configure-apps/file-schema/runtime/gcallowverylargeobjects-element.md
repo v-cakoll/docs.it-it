@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70c60461f3ddd6bdabd151f60c7bc81eef18e650
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6db26d250de191559fdae0479aca9f41c147502
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629464"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663703"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<Elemento > gcAllowVeryLargeObjects
 Nelle piattaforme a 64 bit, abilita le matrici con dimensione totale maggiore di 2 gigabyte (GB).  
@@ -39,7 +39,7 @@ Nelle piattaforme a 64 bit, abilita le matrici con dimensione totale maggiore di
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|DESCRIZIONE|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |`false`|Le matrici con dimensione totale più grande di 2 GB non sono abilitate. Questa è l'impostazione predefinita.|  
 |`true`|Le matrici con dimensione totale più grande di 2 GB sono abilitate nelle piattaforme a 64 bit.|  
@@ -83,5 +83,5 @@ Nelle piattaforme a 64 bit, abilita le matrici con dimensione totale maggiore di
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema delle impostazioni di runtime](index.md)
+- [Schema dei file di configurazione](../index.md)

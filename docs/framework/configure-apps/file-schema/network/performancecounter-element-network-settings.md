@@ -8,15 +8,15 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 30c5cd07c92a8fc3c340cab0ff9ae74e940c0c12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05aac6c1ed3c04bce263a45cafdb9bec906bd75b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705239"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664054"
 ---
-# <a name="performancecounter-element-network-settings"></a>\<performanceCounter > (impostazioni di rete)
-Abilita o disabilita i contatori delle prestazioni di rete.  
+# <a name="performancecounter-element-network-settings"></a>\<Elemento > performanceCounter (impostazioni di rete)
+Abilita o Disabilita i contatori delle prestazioni di rete.  
   
  \<configuration>  
 \<system.net>  
@@ -36,9 +36,9 @@ Abilita o disabilita i contatori delle prestazioni di rete.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
-|`enabled`|Specifica se sono abilitati i contatori delle prestazioni di rete. Il valore predefinito è `false`.|  
+|`enabled`|Specifica se i contatori delle prestazioni di rete sono abilitati. Il valore predefinito è `false`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -47,19 +47,19 @@ Abilita o disabilita i contatori delle prestazioni di rete.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
+|[Impostazioni](settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Note  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
- I contatori delle prestazioni della rete devono essere abilitati nel file di configurazione da usare. Tutti i contatori delle prestazioni della rete vengono abilitati o disabilitati con una singola impostazione nel file di configurazione. Non è possibile abilitare o disabilitare singoli contatori delle prestazioni della rete. Per altre informazioni sui contatori di prestazioni di rete specifico, vedere [contatori delle prestazioni della rete](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking).  
+ I contatori delle prestazioni della rete devono essere abilitati nel file di configurazione da usare. Tutti i contatori delle prestazioni della rete vengono abilitati o disabilitati con una singola impostazione nel file di configurazione. Non è possibile abilitare o disabilitare singoli contatori delle prestazioni della rete. Per ulteriori informazioni sui contatori delle prestazioni di rete specifici, vedere [contatori delle prestazioni di rete](../../../debug-trace-profile/performance-counters.md#networking).  
   
- Il valore predefinito è che le prestazioni di rete i contatori sono disabilitati.  
+ Il valore predefinito è che i contatori delle prestazioni di rete sono disabilitati.  
   
- Il <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> proprietà può essere utilizzata per ottenere il valore corrente del **abilitata** attributo dal file di configurazione applicabili.  
+ È <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> possibile utilizzare la proprietà per ottenere il valore corrente dell'attributo **Enabled** dai file di configurazione applicabili.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come configurare il <xref:System.Net> e relativi spazi dei nomi per abilitare i contatori delle prestazioni di rete.  
+ Nell'esempio seguente viene illustrato come configurare gli <xref:System.Net> spazi dei nomi e correlati per abilitare i contatori delle prestazioni di rete.  
   
 ```xml  
 <configuration>  
@@ -77,5 +77,5 @@ Abilita o disabilita i contatori delle prestazioni di rete.
 
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [I contatori delle prestazioni di rete](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)
+- [Schema delle impostazioni di rete](index.md)
+- [Contatori delle prestazioni di rete](../../../debug-trace-profile/performance-counters.md#networking)

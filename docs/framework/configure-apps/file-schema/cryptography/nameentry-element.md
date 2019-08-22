@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9270552245b3867f0f09741ded3f9da6a8b6c135
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705181"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664263"
 ---
-# <a name="nameentry-element"></a>\<nameEntry > elemento
+# <a name="nameentry-element"></a>\<Elemento > nameEntry
 Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in modo da poter associare più nomi descrittivi a una classe.  
   
  \<configuration>  
 \<mscorlib>  
-\<cryptographySettings>  
+\<> cryptographySettings  
 \<cryptoNameMapping>  
 \<nameEntry>  
   
@@ -37,8 +37,8 @@ Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in mo
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|**name**|Attributo obbligatorio.<br /><br /> Specifica il nome descrittivo dell'algoritmo che implementa la classe di crittografia.|  
-|**class**|Attributo obbligatorio.<br /><br /> Specifica il valore per il **name** attributo il [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) elemento.|  
+|**name**|Attributo obbligatorio.<br /><br /> Specifica il nome descrittivo dell'algoritmo implementato dalla classe di crittografia.|  
+|**class**|Attributo obbligatorio.<br /><br /> Specifica il valore per l'attributo **Name** nell' [ \<elemento > CryptoClass](cryptoclass-element.md) .|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -51,10 +51,10 @@ Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in mo
 |`system.web`|Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.|  
   
 ## <a name="remarks"></a>Note  
- Il **name** attributo può essere il nome di una delle classi astratte trovate nel <xref:System.Security.Cryptography> dello spazio dei nomi. Quando si chiama il **Create** metodo su una classe astratta di crittografia, il nome di classe astratta viene passato per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> (metodo). **CreateFromName** restituisce un'istanza del tipo indicato per il **classe** attributo. Se il **name** attributo è un nome breve, ad esempio RSA, è possibile usare questo nome quando si chiama il **CreateFromName** (metodo).  
+ L'attributo **Name** può essere il nome di una delle classi astratte trovate nello <xref:System.Security.Cryptography> spazio dei nomi. Quando si chiama il metodo **create** in una classe di crittografia astratta, il nome della classe astratta viene passato al <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> metodo. **CreateFromName** restituisce un'istanza del tipo indicato dall'attributo **Class** . Se l'attributo **Name** è un nome breve, ad esempio RSA, è possibile usare tale nome quando si chiama il metodo **CreateFromName** .  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il  **\<nameEntry >** elemento a cui fare riferimento a una classe di crittografia e configurare il runtime. È quindi possibile passare la stringa "RSA" per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metodo e usare il <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodo restituisca un `MyCryptoRSAClass` oggetto.  
+ Nell'esempio seguente viene illustrato come utilizzare l'  **\<elemento > nameEntry** per fare riferimento a una classe di crittografia e configurare il Runtime. È quindi possibile passare la stringa "RSA" al <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metodo e usare il <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodo per restituire un `MyCryptoRSAClass` oggetto.  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in mo
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Schema dei file di configurazione](../index.md)
+- [Schema delle impostazioni di crittografia](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [Configurazione di classi di crittografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Configurazione di classi di crittografia](../../configure-cryptography-classes.md)

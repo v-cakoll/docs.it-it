@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 7499d15f1d57887ffc3e78b83ed686c0c0f46cf4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5305d9aed09b6c4d1ad4201e5e08e007a14c7c0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674636"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664192"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<Cancella > (elemento) per bypasslist (impostazioni di rete)
-Cancella l'elenco proxy da ignorare.  
+# <a name="clear-element-for-bypasslist-network-settings"></a>\<Cancella > elemento per l'elemento bypass (impostazioni di rete)
+Cancella l'elenco di bypass del proxy.  
   
  \<configuration>  
 \<system.net>  
 \<defaultProxy>  
 \<bypasslist>  
-\<clear>  
+\<Cancella >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,16 +45,16 @@ Cancella l'elenco proxy da ignorare.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usano un proxy.|  
+|[bypasslist](bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non utilizzano un proxy.|  
   
 ## <a name="remarks"></a>Note  
- Il `clear` elemento cancella tutte le voci dell'elenco di esclusione.  
+ L' `clear` elemento Cancella tutte le voci dall'elenco di bypass.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente cancella l'elenco di esclusione e quindi aggiunge due indirizzi all'elenco di esclusione. Il primo consente di ignorare il proxy per tutti i server nel dominio contoso.com. il secondo consente di ignorare il proxy per tutti i server il cui indirizzo IP inizia con 192.168.  
+ Nell'esempio seguente viene cancellato l'elenco di bypass, quindi vengono aggiunti due indirizzi all'elenco di bypass. Il primo ignora il proxy per tutti i server nel dominio contoso.com. il secondo ignora il proxy per tutti i server il cui indirizzo IP inizia con 192,168.  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ Cancella l'elenco proxy da ignorare.
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

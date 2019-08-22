@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9402c9f28c123affb7b90fc189484bb1fd43db46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704609"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663528"
 ---
-# <a name="probing-element"></a>\<probing > elemento
-Specifica le sottodirectory di base dell'applicazione per common language runtime per la ricerca quando il caricamento degli assembly.  
+# <a name="probing-element"></a>\<Elemento > Probe
+Specifica le sottodirectory di base dell'applicazione per la ricerca del Common Language Runtime durante il caricamento degli assembly.  
   
  \<configuration>  
 \<runtime>  
 \<assemblyBinding>  
-\<probing>  
+\<sondaggio >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,21 +39,21 @@ Specifica le sottodirectory di base dell'applicazione per common language runtim
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`privatePath`|Attributo obbligatorio.<br /><br /> Specifica le sottodirectory della directory base dell'applicazione che possono contenere assembly. Consente di delimitare ogni sottodirectory con un punto e virgola.|  
+|`privatePath`|Attributo obbligatorio.<br /><br /> Specifica le sottodirectory della directory di base dell'applicazione che potrebbero contenere assembly. Delimita ogni sottodirectory con un punto e virgola.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |`assemblyBinding`|Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.|  
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come specificare le sottodirectory di base dell'applicazione che il runtime deve cercare gli assembly.  
+ Nell'esempio seguente viene illustrato come specificare le sottodirectory di base dell'applicazione in cui il runtime deve cercare gli assembly.  
   
 ```xml  
 <configuration>  
@@ -67,7 +67,7 @@ Specifica le sottodirectory di base dell'applicazione per common language runtim
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Specifica della posizione di un assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [Come il runtime individua gli assembly](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Schema delle impostazioni di runtime](index.md)
+- [Schema dei file di configurazione](../index.md)
+- [Specifica della posizione di un assembly](../../specify-assembly-location.md)
+- [Come il runtime individua gli assembly](../../../deployment/how-the-runtime-locates-assemblies.md)

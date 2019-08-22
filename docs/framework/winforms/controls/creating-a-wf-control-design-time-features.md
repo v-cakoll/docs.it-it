@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 733f22c122dd6acdad41371419375e55e977c016
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c8d04725a576c9e24a4b7d4aec1251516a8c544c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039936"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666236"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Procedura dettagliata: Creazione di un controllo di Windows Forms che usufruisca delle funzionalità offerte da Visual Studio in fase di progettazione
 
@@ -63,14 +63,13 @@ Al termine dell'operazione, il controllo personalizzato sarà simile al seguente
 
 Per il listato di codice completo [, vedere Procedura: Creare un controllo Windows Forms che sfrutta le funzionalità](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))della fase di progettazione.
 
-
 ## <a name="prerequisites"></a>Prerequisiti
 
 Per completare questa procedura dettagliata, è necessario Visual Studio.
 
 ## <a name="creating-the-project"></a>Creazione del progetto
 
-Il primo passaggio consiste nel creare il progetto di applicazione. Questo progetto verrà usato per compilare l'applicazione che ospita il controllo personalizzato.
+Il primo passaggio consiste nel creare il progetto dell'applicazione. Questo progetto verrà usato per compilare l'applicazione che ospita il controllo personalizzato.
 
 Aprire Visual Studio e creare un progetto di applicazione Windows Forms denominato "MarqueeControlTest" (**file** > **nuovo** > **progetto** > **visivo C#**  o **Visual Basic**  >  **Desktop classico** **Applicazione Windows Forms).**  > 
 

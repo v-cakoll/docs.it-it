@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 749ba2dd9318976289d9d4140cfadd711e0548d4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4d7271e792c96dd896d73a52a31ad136acc19e26
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629868"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666795"
 ---
 # <a name="how-to-localize-an-application"></a>Procedura: Localizzare un'applicazione
 Questa esercitazione spiega come creare un'applicazione localizzata usando lo strumento LocBaml.  
@@ -36,7 +36,7 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>Creare un'applicazione di esempio  
- In questo passaggio viene preparata l'applicazione per la localizzazione. Negli esempi di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] viene fornito un esempio HelloApp che verrà usato per gli esempi di codice in questa discussione. Se si vuole usare questo esempio, scaricare i [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file dall'esempio dello [strumento LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016).  
+ In questo passaggio viene preparata l'applicazione per la localizzazione. Negli esempi di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] viene fornito un esempio HelloApp che verrà usato per gli esempi di codice in questa discussione. Se si vuole usare questo esempio, scaricare i [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file dall'esempio dello [strumento LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml).  
   
 1. Sviluppare l'applicazione fino al punto in cui si vuole iniziare la localizzazione.  
   

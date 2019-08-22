@@ -7,38 +7,39 @@ helpviewer_keywords:
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-ms.openlocfilehash: 0f3367deaaec04744a3f812d7f2d08047d7eb588
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: dfe5244e0c5b61fdf6d940dd16d8c280f013b12c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211375"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666173"
 ---
-# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>Procedura: Copiare e incollare un controllo ElementHost in fase di progettazione
+# <a name="how-to-copy-and-paste-an-elementhost-control"></a>Procedura: Copiare e incollare un controllo ElementHost
 
 Questa procedura illustra come copiare un controllo Windows Presentation Foundation (WPF) in un Windows Form in Visual Studio.
 
-## <a name="copy-and-paste-an-elementhost-control-at-design-time"></a>Copiare e incollare un controllo ElementHost in fase di progettazione
+1. In Visual Studio aggiungere un nuovo WPF <xref:System.Windows.Controls.UserControl> a un progetto Windows Forms. Usare il nome predefinito per il tipo di controllo, `UserControl1.xaml`. Per altre informazioni, vedere [Procedura dettagliata: Creazione di nuovo contenuto WPF in Windows Forms in fase](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)di progettazione.
 
-1. Aggiungere un nuovo controllo WPF <xref:System.Windows.Controls.UserControl> al progetto Windows Form. Usare il nome predefinito per il tipo di controllo, `UserControl1.xaml`. Per altre informazioni, vedere [Procedura dettagliata: Creare nuovo contenuto WPF in Windows Form in fase di progettazione](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
+2. Nella finestra **Proprietà** impostare il valore delle <xref:System.Windows.FrameworkElement.Width%2A> proprietà e <xref:System.Windows.FrameworkElement.Height%2A> di `UserControl1` su **200**.
 
-2. Nel **delle proprietà** finestra, impostare il valore della <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> le proprietà di `UserControl1` per `200`.
-
-3. Impostare il valore della proprietà <xref:System.Windows.Controls.Control.Background%2A> su `Blue`.
+3. Impostare il valore della <xref:System.Windows.Controls.Control.Background%2A> proprietà su **blu**.
 
 4. Compilare il progetto.
 
 5. Aprire `Form1` in Progettazione Windows Form.
 
-6. Dal **casella degli strumenti**, trascinare un'istanza di `UserControl1` nel form.
+6. Dalla **casella degli strumenti**trascinare un'istanza di `UserControl1` nel form.
 
    L'istanza di `UserControl1` viene inclusa in un nuovo controllo <xref:System.Windows.Forms.Integration.ElementHost> denominato `elementHost1`.
 
-7. Con `elementHost1` selezionato, premere CTRL+C per copiarlo negli Appunti.
+7. Con `elementHost1` selezionata, premere **CTRL**+**C** per copiarlo negli Appunti.
 
-8. Premere CTRL + V per incollare il controllo copiato nel form.
+8. Premere **CTRL**+**V** per incollare il controllo copiato nel form.
 
-   Una nuova <xref:System.Windows.Forms.Integration.ElementHost> controllo denominato `elementHost2` viene creato nel form.
+   Nel form <xref:System.Windows.Forms.Integration.ElementHost> viene creato `elementHost2` un nuovo controllo denominato.
 
 ## <a name="see-also"></a>Vedere anche
 

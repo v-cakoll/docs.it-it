@@ -11,52 +11,54 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 79a1c80f1c7582bd0751c43dea1d35a4d4d1c661
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 00bfc9fc21ed39226fd21c4096305c254d73ee11
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68973981"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69665719"
 ---
 # <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>Metodo ICorProfilerInfo10:: RequestReJITWithInliners
-  
-ReJITs i metodi richiesti, nonché tutti gli inliner dei metodi richiesti.   
-  
-## <a name="syntax"></a>Sintassi  
-  
+
+ReJITs i metodi richiesti, nonché tutti gli inliner dei metodi richiesti.
+
+## <a name="syntax"></a>Sintassi
+
 ```cpp
 HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejitFlags,
                                   [in]                       ULONG       cFunctions,
                                   [in, size_is(cFunctions)]  ModuleID    moduleIds[],
                                   [in, size_is(cFunctions)]  mdMethodDef methodIds[]);
-```  
-  
-#### <a name="parameters"></a>Parametri  
- 
- `dwRejitFlags` \
- in Maschera di maschera di [COR_PRF_REJIT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-rejit-flags-enumeration.md).
- 
- `cFunctions`  
- [in] Numero di funzioni da ricompilare.  
-  
- `moduleIds`  
- [in] Specifica la parte `moduleId` delle coppie (`module`, `methodDef`) che identificano le funzioni da ricompilare.  
-  
- `methodIds`  
- [in] Specifica la parte `methodId` delle coppie (`module`, `methodDef`) che identificano le funzioni da ricompilare.  
+```
 
-## <a name="remarks"></a>Note  
-  [RequestReJIT](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrejit-method.md) non esegue alcun rilevamento dei metodi inline. Il profiler avrebbe dovuto bloccare l'incorporamento o tenere traccia dell'incorporamento e chiamare `RequestReJIT` tutti gli inliner per assicurarsi che tutte le istanze di un metodo reso inline siano ReJITted. Si è verificato un problema con ReJIT durante l'associazione, poiché il profiler non è presente per il monitoraggio dell'incorporamento. Questo metodo può essere chiamato per garantire che anche il set completo di inliner sarà ReJITted.  
+#### <a name="parameters"></a>Parametri
 
-## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [sistemi operativi supportati da .NET Core](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).  
-  
- **Intestazione:** CorProf. idl, CorProf. h  
-  
- **Libreria** CorGuids.lib  
-  
- **Versioni di .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
-  
+`dwRejitFlags` \
+in Maschera di maschera di [COR_PRF_REJIT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-rejit-flags-enumeration.md).
+
+`cFunctions` \
+[in] Numero di funzioni da ricompilare.
+
+`moduleIds` \
+[in] Specifica la parte `moduleId` delle coppie (`module`, `methodDef`) che identificano le funzioni da ricompilare.
+
+`methodIds` \
+[in] Specifica la parte `methodId` delle coppie (`module`, `methodDef`) che identificano le funzioni da ricompilare.
+
+## <a name="remarks"></a>Note
+
+[RequestReJIT](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrejit-method.md) non esegue alcun rilevamento dei metodi inline. Il profiler avrebbe dovuto bloccare l'incorporamento o tenere traccia dell'incorporamento e chiamare `RequestReJIT` tutti gli inliner per assicurarsi che tutte le istanze di un metodo reso inline siano ReJITted. Si è verificato un problema con ReJIT durante l'associazione, poiché il profiler non è presente per il monitoraggio dell'incorporamento. Questo metodo può essere chiamato per garantire che anche il set completo di inliner sarà ReJITted.
+
+## <a name="requirements"></a>Requisiti
+
+**Piattaforme** Vedere [sistemi operativi supportati da .NET Core](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).
+
+**Intestazione:** CorProf. idl, CorProf. h
+
+**Libreria** CorGuids.lib
+
+**Versioni di .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+
 ## <a name="see-also"></a>Vedere anche
-- [Interfaccia ICorProfilerInfo10](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
 
+- [Interfaccia ICorProfilerInfo10](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

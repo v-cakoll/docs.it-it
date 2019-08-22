@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 53faf31c8dd3be1606c491e95594c4aae5aedf98
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 6d7d867b7c9e83b68589e046565bfb0199692f5f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039665"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658509"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: Impostare formati di dati e stili di cella predefiniti per il controllo DataGridView di Windows Forms usando la finestra di progettazione
 
@@ -23,7 +23,6 @@ Per ulteriori informazioni sugli stili delle celle, vedere la pagina relativa ag
 È anche possibile impostare gli stili usando <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> la proprietà per influire su tutte le righe che verranno aggiunte al controllo. Per ulteriori informazioni sul modello di riga, vedere [procedura: Usare il modello di riga per personalizzare le righe nel controllo](use-the-row-template-to-customize-rows-in-the-datagrid.md)DataGridView Windows Forms.
 
 Per le procedure riportate di seguito è necessario un progetto di <xref:System.Windows.Forms.DataGridView> **applicazione Windows** con un modulo contenente un controllo. Per informazioni sulla configurazione di un progetto di questo tipo [, vedere Procedura: Creare un progetto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) Windows Forms Application e [procedura: Aggiungere i controlli Windows Forms](how-to-add-controls-to-windows-forms.md).
-
 
 ### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>Per impostare gli stili predefiniti per tutte le celle nel controllo
 

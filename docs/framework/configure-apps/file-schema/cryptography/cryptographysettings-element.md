@@ -8,19 +8,19 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: ec3a5a73caa901a21e22dbec7500af9153e01ef4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 572a5856c9f92f105e727df1ecd8eb2e0a92fc09
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705220"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664274"
 ---
-# <a name="cryptographysettings-element"></a>\<cryptographySettings > elemento
+# <a name="cryptographysettings-element"></a>\<Elemento > cryptographySettings
 Contiene le impostazioni di crittografia.  
   
  \<configuration>  
 \<mscorlib>  
-\<cryptographySettings>  
+\<> cryptographySettings  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,18 +39,18 @@ Contiene le impostazioni di crittografia.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|Contiene i mapping di classi e nomi descrittivi.|  
-|[\<oidMap>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Contiene mapping di identificatore (OID) ASN.1 oggetto alle classi.|  
+|[\<cryptoNameMapping>](cryptonamemapping-element.md)|Contiene i mapping di classi e nomi descrittivi.|  
+|[\<oidMap>](oidmap-element.md)|Contiene i mapping degli identificatori di oggetto (OID) ASN. 1 alle classi.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`mscorlib`|Contiene il `cryptographySettings` elemento.|  
+|`mscorlib`|Contiene l' `cryptographySettings` elemento.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il  **\<cryptographySettings >** elemento per contenere i mapping dei nomi di crittografia e i mapping di OID. In questo esempio configura il runtime in modo che <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> restituisce un `MyHashClass` oggetto e il `MyCryptoClass` classe esegue il mapping all'identificatore di oggetto 1.3.36.2.1.  
+ Nell'esempio seguente viene illustrato come utilizzare l'  **\<elemento > cryptographySettings** per contenere mapping dei nomi di crittografia e mapping OID. Questo esempio configura il runtime in modo che <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> restituisca `MyHashClass` un oggetto e `MyCryptoClass` la classe venga mappata all'identificatore di oggetto 1.3.36.2.1.  
   
 ```xml  
 <configuration>  
@@ -78,6 +78,6 @@ Contiene le impostazioni di crittografia.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Schema dei file di configurazione](../index.md)
+- [Schema delle impostazioni di crittografia](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)

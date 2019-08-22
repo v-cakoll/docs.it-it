@@ -5,14 +5,14 @@ helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-ms.openlocfilehash: 053e2776153489dfdd61547fdc039980646ae697
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9b126cee83bc8109606d915ea48549beea970c9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704726"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663480"
 ---
-# <a name="remove-element-for-namedcaches"></a>\<rimuovere > (elemento) per \<namedCaches >
+# <a name="remove-element-for-namedcaches"></a>\<Rimuovi elemento > per \<namedCaches >
 Rimuove una cache denominata dalla raccolta `namedCaches` per una cache in memoria.  
   
  \<system.runtime.caching>  
@@ -29,7 +29,7 @@ Rimuove una cache denominata dalla raccolta `namedCaches` per una cache in memor
  </namedCaches>  
 ```  
   
-## <a name="type"></a>Tipo  
+## <a name="type"></a>Type  
  `None`  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -45,11 +45,11 @@ Rimuove una cache denominata dalla raccolta `namedCaches` per una cache in memor
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Contiene una raccolta di impostazioni di configurazione per l'oggetto denominato <xref:System.Runtime.Caching.MemoryCache> istanze.|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|Contiene una raccolta di impostazioni di configurazione per le <xref:System.Runtime.Caching.MemoryCache> istanze denominate.|  
   
 ## <a name="remarks"></a>Note  
- Il `remove` elemento consente di rimuovere un `namedCache` voce dalla raccolta di cache denominata per una cache in memoria.  
+ L' `remove` elemento rimuove una `namedCache` voce dalla raccolta di cache denominata per una cache in memoria.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [\<namedCaches > (impostazioni Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<Elemento > namedCaches (impostazioni cache)](namedcaches-element-cache-settings.md)

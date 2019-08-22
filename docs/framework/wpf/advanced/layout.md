@@ -9,15 +9,15 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 1aa182ced462e5fc90b22019aaf424d400bb4fd5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629670"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666758"
 ---
 # <a name="layout"></a>Layout
-Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. La capacità di identificare correttamente i casi in cui vengono eseguiti calcoli del layout è essenziale per la creazione di interfacce utente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+In questo argomento viene descritto il sistema di layout Windows Presentation Foundation (WPF). Comprendere come e quando si verificano i calcoli di layout è essenziale per la creazione di interfacce utente in WPF.  
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
@@ -37,7 +37,7 @@ Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](.
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>Rettangoli di selezione degli elementi  
- Nel considerare il layout in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], è importante comprendere il rettangolo di selezione che circonda tutti gli elementi. Ogni <xref:System.Windows.FrameworkElement> oggetto utilizzato dal sistema di layout può essere considerato come un rettangolo con slot nel layout. La <xref:System.Windows.Controls.Primitives.LayoutInformation> classe restituisce i limiti dell'allocazione del layout di un elemento o dello slot. Le dimensioni del rettangolo vengono determinate calcolando lo spazio disponibile sullo schermo, la dimensione di tutti i vincoli, le proprietà specifiche del layout (ad esempio Margin e Padding) e il singolo comportamento dell'elemento <xref:System.Windows.Controls.Panel> padre. Elaborando questi dati, il sistema di layout è in grado di calcolare la posizione di tutti gli elementi <xref:System.Windows.Controls.Panel>figlio di un particolare. È importante ricordare che le caratteristiche di ridimensionamento definite nell'elemento padre, ad esempio <xref:System.Windows.Controls.Border>, influiscono sui relativi elementi figlio.  
+ Quando si pensa al layout in WPF, è importante comprendere il rettangolo di delimitazione che racchiude tutti gli elementi. Ogni <xref:System.Windows.FrameworkElement> oggetto utilizzato dal sistema di layout può essere considerato come un rettangolo con slot nel layout. La <xref:System.Windows.Controls.Primitives.LayoutInformation> classe restituisce i limiti dell'allocazione del layout di un elemento o dello slot. Le dimensioni del rettangolo vengono determinate calcolando lo spazio disponibile sullo schermo, la dimensione di tutti i vincoli, le proprietà specifiche del layout (ad esempio Margin e Padding) e il singolo comportamento dell'elemento <xref:System.Windows.Controls.Panel> padre. Elaborando questi dati, il sistema di layout è in grado di calcolare la posizione di tutti gli elementi <xref:System.Windows.Controls.Panel>figlio di un particolare. È importante ricordare che le caratteristiche di ridimensionamento definite nell'elemento padre, ad esempio <xref:System.Windows.Controls.Border>, influiscono sui relativi elementi figlio.  
   
  La figura seguente mostra un layout semplice.  
   
@@ -101,7 +101,7 @@ Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](.
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## <a name="panel-elements-and-custom-layout-behaviors"></a>Elementi Panel e comportamenti di layout personalizzati  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]include un gruppo di elementi che derivano <xref:System.Windows.Controls.Panel>da. Questi <xref:System.Windows.Controls.Panel> elementi abilitano molti layout complessi. Ad esempio, è possibile ottenere facilmente gli elementi di stack usando l' <xref:System.Windows.Controls.StackPanel> elemento, mentre i layout più complessi e di flusso libero sono possibili usando un. <xref:System.Windows.Controls.Canvas>  
+WPF include un gruppo di elementi che derivano <xref:System.Windows.Controls.Panel>da. Questi <xref:System.Windows.Controls.Panel> elementi abilitano molti layout complessi. Ad esempio, è possibile ottenere facilmente gli elementi di stack usando l' <xref:System.Windows.Controls.StackPanel> elemento, mentre i layout più complessi e di flusso libero sono possibili usando un. <xref:System.Windows.Controls.Canvas>  
   
  Nella tabella seguente sono riepilogati gli elementi <xref:System.Windows.Controls.Panel> di layout disponibili.  
   
@@ -114,7 +114,7 @@ Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](.
 |<xref:System.Windows.Controls.VirtualizingPanel>|Fornisce un Framework per <xref:System.Windows.Controls.Panel> gli elementi che virtualizzano la raccolta dei dati figlio. Questa è una classe abstract.|  
 |<xref:System.Windows.Controls.WrapPanel>|Posiziona gli elementi figlio in sequenza da sinistra a destra, interrompendo il contenuto al raggiungimento del bordo della casella contenitore e facendolo ripartire dalla riga successiva. L'ordinamento successivo viene eseguito in sequenza dall'alto verso il basso o da destra a sinistra, a seconda del <xref:System.Windows.Controls.WrapPanel.Orientation%2A> valore della proprietà.|  
   
- Per le applicazioni che richiedono un layout non possibile utilizzando uno degli elementi <xref:System.Windows.Controls.Panel> predefiniti, è possibile ottenere comportamenti di layout personalizzati ereditando da <xref:System.Windows.Controls.Panel> ed eseguendo l'override dei <xref:System.Windows.FrameworkElement.MeasureOverride%2A> metodi e <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> . Per un esempio, vedere l'[esempio di pannello radiale personalizzato](https://go.microsoft.com/fwlink/?LinkID=159982).  
+ Per le applicazioni che richiedono un layout non possibile utilizzando uno degli elementi <xref:System.Windows.Controls.Panel> predefiniti, è possibile ottenere comportamenti di layout personalizzati ereditando da <xref:System.Windows.Controls.Panel> ed eseguendo l'override dei <xref:System.Windows.FrameworkElement.MeasureOverride%2A> metodi e <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> .  
   
 <a name="LayoutSystem_Performance"></a>   
 ## <a name="layout-performance-considerations"></a>Considerazioni sulle prestazioni del layout  
@@ -138,7 +138,7 @@ Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](.
   
 <a name="LayoutSystem_LayoutRounding"></a>   
 ## <a name="sub-pixel-rendering-and-layout-rounding"></a>Rendering dei sub-pixel e arrotondamento del layout  
- Il sistema grafico di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa unità indipendenti dal dispositivo per assicurare l'indipendenza dalla risoluzione e dal dispositivo. Ogni Device Independent Pixel scala automaticamente con l'impostazione dpi (punti per pollice) del sistema. In questo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modo, le applicazioni vengono ridimensionate correttamente per diverse impostazioni dpi e l'applicazione è in grado di riconoscere automaticamente i dpi.  
+ Il sistema grafico WPF USA unità indipendenti dal dispositivo per abilitare la risoluzione e l'indipendenza del dispositivo. Ogni Device Independent Pixel scala automaticamente con l'impostazione dpi (punti per pollice) del sistema. In questo modo, le applicazioni WPF vengono ridimensionate correttamente per diverse impostazioni dpi e l'applicazione è in grado di riconoscere automaticamente i dpi.  
   
  Questa indipendenza dpi può tuttavia creare un rendering perimetrale irregolare a causa dell'anti-aliasing. Questi elementi, osservabili in genere come bordi sfocati o semitrasparenti, possono essere presenti quando la posizione dei bordi si trova al centro di un pixel del dispositivo invece che tra pixel del dispositivo. Il sistema di layout permette di ovviare a questo problema con l'arrotondamento del layout. L'arrotondamento del layout avviene quando il sistema di layout arrotonda valori di pixel non integrali durante il passaggio di layout.  
   
@@ -146,7 +146,7 @@ Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](.
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Argomenti successivi  
- La capacità di identificare il modo in cui gli elementi vengono misurati e disposti è il primo passaggio per la comprensione del layout. Per ulteriori informazioni sugli elementi disponibili <xref:System.Windows.Controls.Panel> , vedere [Cenni preliminari sui pannelli](../controls/panels-overview.md). Per meglio determinare le diverse proprietà di posizionamento che possono influire sul layout, vedere [Panoramica su allineamento, margini e spaziatura interna](alignment-margins-and-padding-overview.md). Per un esempio di un elemento <xref:System.Windows.Controls.Panel> personalizzato, vedere [esempio di pannello radiale personalizzato](https://go.microsoft.com/fwlink/?LinkID=159982). Quando si è pronti per riunire tutti gli elementi in un'applicazione leggera, vedere [procedura dettagliata: Prima applicazione](../getting-started/walkthrough-my-first-wpf-desktop-application.md)desktop WPF.  
+ La capacità di identificare il modo in cui gli elementi vengono misurati e disposti è il primo passaggio per la comprensione del layout. Per ulteriori informazioni sugli elementi disponibili <xref:System.Windows.Controls.Panel> , vedere [Cenni preliminari sui pannelli](../controls/panels-overview.md). Per meglio determinare le diverse proprietà di posizionamento che possono influire sul layout, vedere [Panoramica su allineamento, margini e spaziatura interna](alignment-margins-and-padding-overview.md). Quando si è pronti per riunire tutti gli elementi in un'applicazione leggera, vedere [procedura dettagliata: Prima applicazione](../getting-started/walkthrough-my-first-wpf-desktop-application.md)desktop WPF.  
   
 ## <a name="see-also"></a>Vedere anche
 

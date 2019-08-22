@@ -1,5 +1,5 @@
 ---
-title: elemento < Crst_DisableSpinWait >
+title: < elemento > Crst_DisableSpinWait
 ms.date: 04/18/2019
 f1_keywords:
 - Crst_DisableSpinWait
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f89f0558c11e229fef2ca3cd619e3c033f12c858
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a52dd671f1fbf6fda5bdc92c0935784181eb4b03
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754670"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663833"
 ---
-# <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait > elemento
+# <a name="crst_disablespinwait-element"></a>\<Elemento > Crst_DisableSpinWait
 
-Specifica se disabilitare la selezione e in attesa di una sezione critica quando conflitti.  
+Specifica se disabilitare lo spin-waiting per una sezione critica in caso di conflitto.  
   
  \<configuration>  
 \<runtime>  
-\<Crst_DisableSpinWait>  
+\<> Crst_DisableSpinWait  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,14 +36,14 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|**enabled**|Specifica se l'attesa di rotazione per sezioni critiche quando essi sono conflitti è disabilitato.|  
+|**enabled**|Specifica se la rotazione in attesa di sezioni critiche quando sono in conflitto è disabilitata.|  
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|1|Disabilitare la rotazione-attesa quando non è possibile acquisire una sezione critica.|  
-|0|Non disabilitare la rotazione-attesa quando non è possibile acquisire una sezione critica. Rappresenta il valore predefinito.|  
+|1|Disabilitare la rotazione in attesa quando non è possibile acquisire una sezione critica.|  
+|0|Non disabilitare la rotazione in attesa quando non è possibile acquisire una sezione critica. Rappresenta il valore predefinito.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -53,11 +53,11 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`runtime`|Contiene informazioni sulle diverse impostazioni di configurazione di runtime.|  
+|`runtime`|Contiene informazioni sulle varie impostazioni di configurazione del runtime.|  
   
 ## <a name="example"></a>Esempio  
 
-L'esempio seguente viene disabilitata rotazione-attesa nelle sezioni critiche quando conflitti.  
+Nell'esempio seguente viene disabilitata la rotazione in attesa nelle sezioni critiche quando è in conflitto.  
   
 ```xml  
 <configuration>  
@@ -69,5 +69,5 @@ L'esempio seguente viene disabilitata rotazione-attesa nelle sezioni critiche qu
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema delle impostazioni di runtime](index.md)
+- [Schema dei file di configurazione](../index.md)

@@ -2,12 +2,12 @@
 title: <add> di <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 1324803d7c0f127cfee9eadebff2672955780eda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3052a7570d1d93836603454817be921b37d26060
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673641"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658831"
 ---
 # <a name="add-of-entries"></a>\<aggiungere > di \<voci >
 Rappresenta una voce di routing che esegue il mapping di un filtro a un endpoint client definito in precedenza. I messaggi che corrispondono a questo filtro verranno inviati a questa destinazione.  
@@ -16,7 +16,7 @@ Rappresenta una voce di routing che esegue il mapping di un filtro a un endpoint
 \<routing>  
 \<filterTables>  
 \<filterTable>  
-\<entries>  
+\<voci >  
 \<add>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,9 +36,6 @@ Rappresenta una voce di routing che esegue il mapping di un filtro a un endpoint
 </routing>
 ```  
   
-```csharp  
-```  
-  
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
@@ -49,7 +46,7 @@ Rappresenta una voce di routing che esegue il mapping di un filtro a un endpoint
 |backupList|Stringa che specifica un riferimento a un elenco di backup di endpoint.|  
 |endpoint|Stringa che specifica un riferimento a un endpoint client che riceverà i messaggi corrispondenti al filtro specificato dall'attributo `filterName`.|  
 |filterName|Stringa che specifica un riferimento a un elemento di filtro.|  
-|priority|Integer che specifica la priorità di questa voce.<br /><br /> Le voci nella tabella di routing verranno valutate in base alla priorità, con 0 come priorità più bassa. Tutte le voci per una priorità specifica vengono valutate simultaneamente. Se non viene trovata alcuna voce corrispondente per la priorità corrente, verrà valutato il livello di priorità successivo.<br /><br /> Questo valore è facoltativo.|  
+|priorità|Integer che specifica la priorità di questa voce.<br /><br /> Le voci nella tabella di routing verranno valutate in base alla priorità, con 0 come priorità più bassa. Tutte le voci per una priorità specifica vengono valutate simultaneamente. Se non viene trovata alcuna voce corrispondente per la priorità corrente, verrà valutato il livello di priorità successivo.<br /><br /> Questo valore è facoltativo.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  

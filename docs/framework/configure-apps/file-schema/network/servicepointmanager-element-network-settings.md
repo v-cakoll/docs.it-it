@@ -8,15 +8,15 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: 407ed85de109a671030eccff8ddd92af91628014
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6a40d97bf16a3125452311e7762617e657ca384
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704986"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659151"
 ---
-# <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > (impostazioni di rete)
-Consente di configurare le connessioni alle risorse di rete.  
+# <a name="servicepointmanager-element-network-settings"></a>\<Elemento > servicePointManager (impostazioni di rete)
+Configura le connessioni alle risorse di rete.  
   
  \<configuration>  
 \<system.net>  
@@ -44,13 +44,13 @@ Consente di configurare le connessioni alle risorse di rete.
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|Specifica se il sistema deve verificare che il nome del certificato corrisponda al nome host del server prima di usare il certificato. Il valore predefinito è `true`.|  
-|`checkCertificateRevocationList`|Specifica se il sistema deve verificare se è stato revocato il certificato prima di usare il certificato. Il valore predefinito è `false`.|  
-|`dnsRefreshTimeout`|Specifica la durata del servizio DNS (Domain Name) vengono memorizzati nella cache le soluzioni in combinazione con l'opzione DNS Round Robin, in millisecondi. Il valore predefinito è 120.000 millisecondi (due minuti).|  
-|`enableDnsRoundRobin`|Specifica se le risoluzioni DNS dell'host di nomi con più indirizzi IP (Internet Protocol) restituiti tutti gli indirizzi, o solo il primo. Il valore predefinito è `false`.|  
-|`encryptionPolicy`|Specifica i criteri di crittografia applicati a una sessione SSL/TLS in un <xref:System.Net.ServicePointManager> istanza. I possibili valori sono equivalenti ai valori per il <xref:System.Net.Security.EncryptionPolicy> enumerazione. L'uso di <xref:System.Security.Authentication.CipherAlgorithmType.Null> è obbligatorio quando il criterio di crittografia è impostato su `NoEncryption`. Il valore predefinito è `RequireEncryption`.|  
-|`expect100Continue`|Specifica se i metodi POST devono prevedere di ricevere un `100-continue` risposta dal server. Il valore predefinito è `true`.|  
-|`useNagleAlgorithm`|Specifica se le connessioni controllate dal punto di Gestione servizi usano l'algoritmo Nagle. Il valore predefinito è `true`.|  
+|`checkCertificateName`|Specifica se il sistema deve verificare che il nome del certificato corrisponda al nome host del server prima di utilizzare il certificato. Il valore predefinito è `true`.|  
+|`checkCertificateRevocationList`|Specifica se il sistema deve controllare se il certificato è stato revocato prima di utilizzare il certificato. Il valore predefinito è `false`.|  
+|`dnsRefreshTimeout`|Specifica la durata della memorizzazione nella cache delle risoluzioni di Domain Name Service (DNS) in combinazione con l'opzione del round robin DNS, in millisecondi. Il valore predefinito è 120.000 millisecondi (due minuti).|  
+|`enableDnsRoundRobin`|Specifica se le risoluzioni DNS dei nomi host con più indirizzi IP (Internet Protocol) restituiscono tutti gli indirizzi oppure solo la prima. Il valore predefinito è `false`.|  
+|`encryptionPolicy`|Specifica i criteri di crittografia applicati a una sessione SSL/TLS in <xref:System.Net.ServicePointManager> un'istanza di. I valori possibili sono equivalenti ai valori per l' <xref:System.Net.Security.EncryptionPolicy> enumerazione. L'utilizzo di <xref:System.Security.Authentication.CipherAlgorithmType.Null> è obbligatorio quando il criterio di crittografia è impostato `NoEncryption`su. Il valore predefinito è `RequireEncryption`.|  
+|`expect100Continue`|Specifica se i metodi post devono prevedere la ricezione `100-continue` di una risposta dal server. Il valore predefinito è `true`.|  
+|`useNagleAlgorithm`|Specifica se le connessioni controllate da Gestione punti di servizio utilizzano l'algoritmo Nagle. Il valore predefinito è `true`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -59,7 +59,7 @@ Consente di configurare le connessioni alle risorse di rete.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[Impostazioni](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
+|[Impostazioni](settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Note  
   
@@ -70,4 +70,4 @@ Consente di configurare le connessioni alle risorse di rete.
 
 - <xref:System.Net.ServicePointManager>
 - <xref:System.Net.Security.EncryptionPolicy>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

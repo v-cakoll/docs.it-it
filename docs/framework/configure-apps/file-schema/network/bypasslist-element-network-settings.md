@@ -8,15 +8,15 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: d3d986dae478f49504dae21b9f39574b7887b4d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10d2a025096579c6bed64f82cc955deb0542717c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674623"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664198"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<BypassList > (impostazioni di rete)
-Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usano un proxy.  
+# <a name="bypasslist-element-network-settings"></a>\<Elemento > di bypass (impostazioni di rete)
+Fornisce un set di espressioni regolari che descrivono gli indirizzi che non utilizzano un proxy.  
   
  \<configuration>  
 \<system.net>  
@@ -40,28 +40,28 @@ Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usa
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|Aggiunge un indirizzo IP o nome DNS per l'elenco proxy da ignorare.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|Cancella l'elenco di esclusione.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|Rimuove un indirizzo IP o nome DNS dall'elenco di bypass del proxy.|  
+|[add](add-element-for-bypasslist-network-settings.md)|Aggiunge un indirizzo IP o un nome DNS all'elenco di bypass del proxy.|  
+|[clear](clear-element-for-bypasslist-network-settings.md)|Cancella l'elenco di bypass.|  
+|[remove](remove-element-for-bypasslist-network-settings.md)|Rimuove un indirizzo IP o un nome DNS dall'elenco di bypass del proxy.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Configura il server proxy Hypertext Transfer Protocol (HTTP).|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|Configura il server proxy Hypertext Transfer Protocol (HTTP).|  
   
 ## <a name="remarks"></a>Note  
- Elenco di esclusione contiene espressioni regolari che descrivono gli URI che <xref:System.Net.WebRequest> istanze accedere direttamente anziché tramite il server proxy.  
+ L'elenco di bypass contiene espressioni regolari che descrivono <xref:System.Net.WebRequest> gli URI a cui è possibile accedere direttamente, anziché tramite il server proxy.  
   
- È necessario prestare attenzione quando si specifica un'espressione regolare per questo elemento. L'espressione regolare "[a-z] +\\.contoso\\. com" corrisponde a qualsiasi host nel dominio contoso.com, che corrisponde anche a qualsiasi host nel dominio cpandl.com. In modo che corrisponda solo un host nel dominio contoso.com, usare un ancoraggio ("$"): "[a-z] +\\.contoso\\$. com".  
+ È necessario prestare attenzione quando si specifica un'espressione regolare per questo elemento. L'espressione regolare "[a-z] +\\. contoso\\. com" corrisponde a qualsiasi host nel dominio contoso.com, ma corrisponde anche a qualsiasi host nel dominio contoso.com.cpandl.com. Per trovare la corrispondenza solo con un host nel dominio contoso.com, usare un ancoraggio ("$"): "[a-z\\] +\\. contoso. com $".  
   
- Per altre informazioni sulle espressioni regolari, vedere. [Espressioni regolari di .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Per ulteriori informazioni sulle espressioni regolari, vedere. [.NET Framework espressioni regolari](../../../../../docs/standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente aggiunge due indirizzi all'elenco di esclusione. Il primo consente di ignorare il proxy per tutti i server nel dominio contoso.com. il secondo consente di ignorare il proxy per tutti i server iniziano con indirizzi IP 192.168.  
+ Nell'esempio seguente vengono aggiunti due indirizzi all'elenco di bypass. Il primo ignora il proxy per tutti i server nel dominio contoso.com. il secondo ignora il proxy per tutti i server i cui indirizzi IP iniziano con 192,168.  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usa
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

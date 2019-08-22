@@ -4,12 +4,12 @@ ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a467599084f01b1a48c95c5e25fb1f869156dffa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d79479d1836963fcbdaaf8d40bfc3648b88c4a3
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673888"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663403"
 ---
 # <a name="uselegacyjit-element"></a>Elemento \<useLegacyJit>
 
@@ -25,7 +25,7 @@ Determina se Common Language Runtime usa il compilatore JIT a 64 bit legacy per 
 <useLegacyJit enabled=0|1 />
 ```
 
-Il nome dell'elemento `useLegacyJit` tra maiuscole e minuscole.
+Il nome `useLegacyJit` dell'elemento fa distinzione tra maiuscole e minuscole.
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi
 
@@ -37,16 +37,16 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 | --------- | --------------------------------------------------------------------------------------------- |  
 | `enabled` | Attributo obbligatorio.<br><br>Specifica se il runtime usa il compilatore JIT a 64 bit legacy. |  
   
-### <a name="enabled-attribute"></a>attributo Enabled  
+### <a name="enabled-attribute"></a>attributo enabled  
   
 | Value | Descrizione                                                                                                         |  
 | ----- | ------------------------------------------------------------------------------------------------------------------- |  
-| 0     | Common language runtime usa il nuovo compilatore JIT a 64 bit incluso in .NET Framework 4.6 e versioni successive. |  
-| 1     | Common language runtime usa il compilatore JIT a 64 bit precedente.                                                     |  
+| 0     | Il Common Language Runtime usa il nuovo compilatore JIT a 64 bit incluso in .NET Framework 4,6 e versioni successive. |  
+| 1     | Il Common Language Runtime usa il compilatore JIT a 64 bit precedente.                                                     |  
   
 ### <a name="child-elements"></a>Elementi figlio
 
-nessuno
+Nessuna
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -57,32 +57,32 @@ nessuno
   
 ## <a name="remarks"></a>Note  
 
-A partire da .NET Framework 4.6, common language runtime usa un nuovo compilatore a 64 bit per la compilazione JIT (JIT) per impostazione predefinita. In alcuni casi, ciò potrebbe comportare una differenza nel comportamento dal codice dell'applicazione che è stato compilato tramite JIT dalla versione precedente del compilatore JIT a 64 bit. Impostando il `enabled` attributo del `<useLegacyJit>` elemento `1`, è possibile disabilitare il nuovo compilatore JIT a 64 bit e compilare invece l'app usando il compilatore JIT a 64 bit legacy.  
+A partire da .NET Framework 4,6, il Common Language Runtime usa un nuovo compilatore a 64 bit per la compilazione JIT (just-in-Time) per impostazione predefinita. In alcuni casi, questo può comportare una differenza nel comportamento del codice dell'applicazione compilato tramite JIT dalla versione precedente del compilatore JIT a 64 bit. Impostando l' `enabled` attributo `<useLegacyJit>` dell'elemento su, `1`è possibile disabilitare il nuovo compilatore JIT a 64 bit e compilare l'app usando il compilatore JIT legacy a 64 bit.  
   
 > [!NOTE]
-> Il `<useLegacyJit>` elemento interessa solo la compilazione JIT a 64 bit. La compilazione con il compilatore JIT a 32 bit non è interessata.  
+> L' `<useLegacyJit>` elemento interessa solo la compilazione JIT a 64 bit. La compilazione con il compilatore JIT a 32 bit non è interessata.  
   
-Invece di usare un file di configurazione, è possibile abilitare il compilatore JIT a 64 bit legacy in altri due modi:  
+Invece di usare un'impostazione del file di configurazione, è possibile abilitare il compilatore JIT a 64 bit legacy in altri due modi:  
   
-- L'impostazione di una variabile di ambiente
+- Impostazione di una variabile di ambiente
 
-  Impostare il `COMPLUS_useLegacyJit` variabile di ambiente a una delle due `0` (usare il nuovo compilatore JIT a 64 bit) o `1` (usare il compilatore JIT a 64 bit precedente):
+  Impostare la `COMPLUS_useLegacyJit` variabile `0` di ambiente su (usare il nuovo compilatore JIT a 64 bit) o `1` (usare il compilatore JIT a 64 bit precedente):
   
   ```  
   COMPLUS_useLegacyJit=0|1  
   ```  
   
-  La variabile di ambiente presenta *ambito globale*, vale a dire che influisce su tutte le applicazioni eseguite nel computer. Se impostato, è possibile eseguirne l'override dall'impostazione di file di configurazione dell'applicazione. Nome della variabile di ambiente non distinzione maiuscole/minuscole.
+  La variabile di ambiente ha *ambito globale*, il che significa che ha effetto su tutte le applicazioni eseguite nel computer. Se impostato, è possibile eseguire l'override dell'impostazione del file di configurazione dell'applicazione. Il nome della variabile di ambiente non distingue tra maiuscole e minuscole.
   
-- Aggiunta di una chiave del Registro di sistema
+- Aggiunta di una chiave del registro di sistema
 
-  È possibile abilitare il compilatore JIT a 64 bit legacy aggiungendo un `REG_DWORD` valore per entrambi i `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` o `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` chiave del Registro di sistema. Il valore è denominato `useLegacyJit`. Se il valore è 0, viene utilizzato il nuovo compilatore. Se il valore è 1, il compilatore JIT a 64 bit legacy è abilitato. Il nome del valore del Registro di sistema non distinzione maiuscole/minuscole.
+  È possibile abilitare il compilatore JIT a 64 bit legacy aggiungendo un `REG_DWORD` valore alla `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` chiave o `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` nel registro di sistema. Il valore è denominato `useLegacyJit`. Se il valore è 0, viene utilizzato il nuovo compilatore. Se il valore è 1, il compilatore JIT a 64 bit legacy è abilitato. Il nome del valore del registro di sistema non distingue tra maiuscole e minuscole.
   
-  Il valore per l'aggiunta di `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` chiave influisce su tutte le App in esecuzione nel computer. Il valore per l'aggiunta di `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` chiave influisce su tutte le app eseguite dall'utente corrente. Se un computer è configurato con più account utente, sono interessate solo le app eseguite dall'utente corrente, a meno che il valore viene aggiunto per le chiavi del Registro di sistema per anche altri utenti. Aggiunta di `<useLegacyJit>` elemento in un file di configurazione sostituisce le impostazioni del Registro di sistema, se sono presenti.  
+  L'aggiunta del valore alla `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` chiave influiscono su tutte le app in esecuzione nel computer. L'aggiunta del valore alla `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` chiave influiscono su tutte le app eseguite dall'utente corrente. Se un computer è configurato con più account utente, vengono interessate solo le app eseguite dall'utente corrente, a meno che il valore non venga aggiunto anche alle chiavi del registro di sistema per altri utenti. L'aggiunta `<useLegacyJit>` dell'elemento a un file di configurazione sostituisce le impostazioni del registro di sistema, se presenti.  
   
 ## <a name="example"></a>Esempio  
 
-File di configurazione seguente disabilita la compilazione con il nuovo compilatore JIT a 64 bit e Usa invece il compilatore JIT a 64 bit legacy.  
+Il file di configurazione seguente disabilita la compilazione con il nuovo compilatore JIT a 64 bit e usa invece il compilatore JIT legacy a 64 bit.  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -95,6 +95,6 @@ File di configurazione seguente disabilita la compilazione con il nuovo compilat
   
 ## <a name="see-also"></a>Vedere anche
 
-- [\<runtime > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
-- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
-- [Mitigazione: Nuovo compilatore JIT a 64 bit](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)
+- [\<Elemento runtime >](runtime-element.md)
+- [Elemento \<configuration>](../configuration-element.md)
+- [Mitigazione Nuovo compilatore JIT a 64 bit](../../../migration-guide/mitigation-new-64-bit-jit-compiler.md)

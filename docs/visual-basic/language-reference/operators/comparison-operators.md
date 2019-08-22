@@ -30,126 +30,126 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basic
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: 9014cac5e2f3933b27411dfe5681fc16f4cdde30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10558563b528ce0bae3f77f31a97a217018f455f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013582"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666831"
 ---
 # <a name="comparison-operators-visual-basic"></a>Operatori di confronto (Visual Basic)
-Di seguito è elencati gli operatori di confronto definiti in Visual Basic.  
+Di seguito sono riportati gli operatori di confronto definiti in Visual Basic.
+
+ `<`operatore
+
+ `<=`operatore
+
+ `>`operatore
+
+ `>=`operatore
+
+ `=`operatore
+
+ `<>`operatore
+
+ [Operatore Is](../../../visual-basic/language-reference/operators/is-operator.md)
+
+ [Operatore IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)
+
+ [Operatore Like](../../../visual-basic/language-reference/operators/like-operator.md)
+
+ Questi operatori confrontano due espressioni per determinare se sono uguali e, in caso contrario, come si differenziano. `Is`, `IsNot` e`Like` vengono descritti in dettaglio nelle pagine della guida separate. Gli operatori di confronto relazionali vengono descritti in dettaglio in questa pagina.
+
+## <a name="syntax"></a>Sintassi
   
- `<` Operatore  
-  
- `<=` Operatore  
-  
- `>` Operatore  
-  
- `>=` Operatore  
-  
- `=` Operatore  
-  
- `<>` Operatore  
-  
- [Operatore Is](../../../visual-basic/language-reference/operators/is-operator.md)  
-  
- [Operatore IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)  
-  
- [Operatore Like](../../../visual-basic/language-reference/operators/like-operator.md)  
-  
- Questi operatori confrontano due espressioni per determinare se sono uguali, e in caso contrario, le differenze. `Is`, `IsNot`, e `Like` vengono descritti in dettaglio nelle pagine della Guida separate. Gli operatori di confronto relazionale vengono descritti in dettaglio in questa pagina.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-      result = expression1 comparisonoperator expression2  
+```vb
+result = expression1 comparisonoperator expression2  
 result = object1 [Is | IsNot] object2  
 result = string Like pattern  
 ```  
   
-## <a name="parts"></a>Parti  
+## <a name="parts"></a>Parti
  `result`  
- Obbligatorio. Oggetto `Boolean` valore che rappresenta il risultato del confronto.  
-  
- `expression`  
- Obbligatorio. Qualsiasi espressione.  
-  
+ Richiesto. `Boolean` Valore che rappresenta il risultato del confronto.
+
+ `expression1`, `expression2`  
+ Richiesto. Qualsiasi espressione.
+
  `comparisonoperator`  
- Obbligatorio. Qualsiasi operatore di confronto relazionale.  
-  
+ Richiesto. Qualsiasi operatore di confronto relazionale.
+
  `object1`, `object2`  
- Obbligatorio. Tutti i nomi degli oggetti di riferimento.  
-  
+ Richiesto. Qualsiasi nome di oggetto di riferimento.
+
  `string`  
- Obbligatorio. Qualsiasi espressione `String` .  
-  
+ Richiesto. Qualsiasi espressione `String` .
+
  `pattern`  
- Obbligatorio. Qualsiasi `String` espressione o un intervallo di caratteri.  
-  
-## <a name="remarks"></a>Note  
- Nella tabella seguente contiene un elenco di operatori di confronto relazionale e le condizioni che determinano se `result` viene `True` o `False`.  
-  
-|Operatore|`True` se|`False` se|  
-|--------------|---------------|----------------|  
-|`<` (Minore di)|`expression1` < `expression2`|`expression1` >= `expression2`|  
-|`<=` (Minore o uguale a)|`expression1` <= `expression2`|`expression1` > `expression2`|  
-|`>` (Maggiore di)|`expression1` > `expression2`|`expression1` <= `expression2`|  
-|`>=` (Maggiore o uguale a)|`expression1` >= `expression2`|`expression1` < `expression2`|  
-|`=` (Uguale a)|`expression1` = `expression2`|`expression1` <> `expression2`|  
-|`<>` (Non uguale a)|`expression1` <> `expression2`|`expression1` = `expression2`|  
-  
+ Richiesto. Qualsiasi `String` espressione o intervallo di caratteri.
+
+## <a name="remarks"></a>Note
+ La tabella seguente contiene un elenco degli operatori di confronto relazionale e le condizioni che determinano `result` se `True` è `False`o.
+
+|Operator|`True` se|`False` se|
+|--------------|---------------|----------------|
+|`<`(Minore di)|`expression1` < `expression2`|`expression1` >= `expression2`|
+|`<=`(Minore o uguale a)|`expression1` <= `expression2`|`expression1` > `expression2`|
+|`>`(Maggiore di)|`expression1` > `expression2`|`expression1` <= `expression2`|
+|`>=`(Maggiore o uguale a)|`expression1` >= `expression2`|`expression1` < `expression2`|
+|`=`(Uguale a)|`expression1` = `expression2`|`expression1` <> `expression2`|
+|`<>`(Diverso da)|`expression1` <> `expression2`|`expression1` = `expression2`|
+
 > [!NOTE]
->  Il [= (operatore)](../../../visual-basic/language-reference/operators/assignment-operator.md) viene usato anche come operatore di assegnazione.  
-  
- Il `Is` operatore, la `IsNot` operatore e il `Like` operatore hanno le funzionalità di confronto specifiche che si differenziano dagli operatori nella tabella precedente.  
-  
-## <a name="comparing-numbers"></a>Confronto tra valori  
- Quando si confronta un'espressione di tipo `Single` a uno di tipo `Double`, il `Single` espressione viene convertita in `Double`. Questo comportamento è opposto a quello trovato in Visual Basic 6.  
-  
- Analogamente, quando si confronta un'espressione di tipo `Decimal` a un'espressione di tipo `Single` oppure `Double`, il `Decimal` espressione viene convertita in `Single` o `Double`. Per `Decimal` espressioni, qualsiasi valore minore di 1E-28 frazionari potrebbe andare perse. Potrebbero essere due valori vengono considerati uguali quando non sono di perdere i dati valore frazionario. Per questo motivo, è necessario prestare attenzione quando si usa l'uguaglianza (`=`) per confrontare due variabili a virgola mobile. È più sicuro verificare se il valore assoluto della differenza tra due numeri è minore di tolleranza minima accettabile.  
-  
-### <a name="floating-point-imprecision"></a>A virgola mobile dell'imprecisione  
- Quando si lavora con numeri a virgola mobile, tenere presente che non sempre hanno una rappresentazione esatta in memoria. Ciò potrebbe provocare risultati imprevisti da determinate operazioni, ad esempio il confronto dei valori e le [operatore Mod](../../../visual-basic/language-reference/operators/mod-operator.md). Per altre informazioni, vedere [tipi di dati di risoluzione dei problemi](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
-  
-## <a name="comparing-strings"></a>Confronto di stringhe  
- Quando si confrontano stringhe, le espressioni stringa vengono valutate in base all'ordine alfabetico, che dipende la `Option Compare` impostazione.  
-  
- `Option Compare Binary` Consente i confronti in un tipo di ordinamento derivato dalle rappresentazioni binarie interne dei caratteri di stringhe. L'ordinamento è determinato dalla tabella codici. L'esempio seguente illustra un tipico ordinamento binario.  
-  
- `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
-  
- `Option Compare Text` Consente di eseguire stringhe confronti su un criterio di ordinamento testuale, tra maiuscole e minuscole determinato dalle impostazioni locali dell'applicazione. Quando si imposta `Option Compare Text` e ordinano i caratteri nell'esempio precedente, si applica l'ordinamento di testo seguente:  
-  
- `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`  
-  
-### <a name="locale-dependence"></a>Dipendono dalle impostazioni locali  
- Quando si imposta `Option Compare Text`, il risultato di un confronto tra stringhe può dipendere dalle impostazioni locali in cui viene eseguita l'applicazione. Due caratteri potrebbe essere considerati uguali nelle impostazioni locali, ma non in un altro. Se si usa un confronto tra stringhe per prendere decisioni importanti, ad esempio se si desidera accettare un tentativo di accesso, dovrebbe essere tra maiuscole e minuscole delle impostazioni locali dell'avviso. Prendere in considerazione delle impostazioni `Option Compare Binary` o la chiamata di <xref:Microsoft.VisualBasic.Strings.StrComp%2A>, che tiene conto delle impostazioni locali.  
-  
-## <a name="typeless-programming-with-relational-comparison-operators"></a>La programmazione con gli operatori di confronto relazionale  
- L'utilizzo degli operatori di confronto relazionale con `Object` espressioni non è consentita negli `Option Strict On`. Quando `Option Strict` viene `Off`e il valore `expression1` oppure `expression2` è un `Object` espressione, i tipi in fase di esecuzione determinano la modalità di confronto. Nella tabella seguente viene illustrato come vengono confrontate le espressioni e il risultato del confronto, a seconda del tipo di runtime degli operandi.  
-  
-|Se gli operandi sono|Risultato del confronto è|  
-|---------------------|-------------------|  
-|Entrambi `String`|Confronto in base alle caratteristiche di ordinamento delle stringhe di ordinamento.|  
-|Entrambe numeriche|Gli oggetti convertiti in `Double`, confronto numerico.|  
-|Uno numerico e uno `String`|Il `String` viene convertito in un `Double` e viene eseguito un confronto numerico. Se il `String` non può essere convertito `Double`, un <xref:System.InvalidCastException> viene generata un'eccezione.|  
-|Uno o entrambi sono tipi riferimento diverso da `String`|Viene generato un tipo <xref:System.InvalidCastException>.|  
-  
- Considerano i confronti numerici `Nothing` come 0. Confronti di stringhe considerano `Nothing` come `""` (una stringa vuota).  
-  
-## <a name="overloading"></a>Overload  
- Gli operatori di confronto relazionale (`<`. `<=``>`, `>=`, `=`, `<>`) può essere *sottoposti a overload*, il che significa che una classe o struttura può ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura. Se il codice usa uno di questi operatori in una classe o una struttura, assicurarsi di che comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
-  
- Si noti che il [= (operatore)](../../../visual-basic/language-reference/operators/assignment-operator.md) può essere sottoposto a overload solo come un operatore di confronto relazionale e non come un operatore di assegnazione.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente illustra vari usi di operatori di confronto relazionale, che consente di confrontare espressioni. Gli operatori di confronto relazionale restituiscono un `Boolean` risultato che indica se l'espressione specificata è `True`. Quando si applica il `>` e `<` agli operatori di stringhe, il confronto viene eseguito utilizzando il normale di ordinamento alfabetico delle stringhe. Quest'ordine può dipendere dalle impostazioni locali. Se l'ordinamento è distinzione maiuscole/minuscole o meno dipende il [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) impostazione.  
-  
- [!code-vb[VbVbalrOperators#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#1)]  
-  
- Nell'esempio precedente, restituisce il primo confronto `False` e gli altri confronti restituiscono `True`.  
-  
+>  L' [operatore =](../../../visual-basic/language-reference/operators/assignment-operator.md) viene utilizzato anche come operatore di assegnazione.
+
+ L' `Is` operatore, l' `IsNot` operatore e l' `Like` operatore hanno funzionalità di confronto specifiche che differiscono dagli operatori della tabella precedente.
+
+## <a name="comparing-numbers"></a>Confronto di numeri
+ Quando si confronta un'espressione di tipo `Single` con una di tipo `Double`, l' `Single` espressione viene convertita `Double`in. Questo comportamento è opposto al comportamento trovato nella Visual Basic 6.
+
+ Analogamente, quando si confronta un'espressione di `Decimal` tipo con un'espressione di `Single` tipo `Double`o, `Decimal` l'espressione viene convertita `Double`in `Single` o. Per `Decimal` le espressioni, qualsiasi valore frazionario minore di 1E-28 potrebbe andare perduto. Tale perdita di valori frazionari può causare il confronto di due valori come uguali quando non lo sono. Per questo motivo, è necessario prestare attenzione quando si usa l'`=`uguaglianza () per confrontare due variabili a virgola mobile. È più sicuro verificare se il valore assoluto della differenza tra i due numeri è inferiore a una piccola tolleranza accettabile.
+
+### <a name="floating-point-imprecision"></a>Imprecisione a virgola mobile
+ Quando si utilizzano numeri a virgola mobile, tenere presente che non sempre hanno una rappresentazione precisa in memoria. Questo può causare risultati imprevisti di determinate operazioni, ad esempio il confronto dei valori e l' [operatore mod](../../../visual-basic/language-reference/operators/mod-operator.md). Per ulteriori informazioni, vedere [risoluzione dei problemi](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)relativi ai tipi di dati.
+
+## <a name="comparing-strings"></a>Confronto di stringhe
+ Quando si confrontano le stringhe, le espressioni stringa vengono valutate in base al relativo ordinamento alfabetico, `Option Compare` che dipende dall'impostazione.
+
+ `Option Compare Binary`basa i confronti tra stringhe in base a un ordinamento derivato dalle rappresentazioni binarie interne dei caratteri. Il tipo di ordinamento è determinato dalla tabella codici. Nell'esempio seguente viene illustrato un tipico ordinamento binario.
+
+ `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`
+
+ `Option Compare Text`basa i confronti tra stringhe in base a un ordinamento testuale senza distinzione tra maiuscole e minuscole determinato dalle impostazioni locali dell'applicazione. Quando si impostano `Option Compare Text` e ordinano i caratteri nell'esempio precedente, viene applicato l'ordinamento del testo seguente:
+
+ `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`
+
+### <a name="locale-dependence"></a>Dipendenza dalle impostazioni locali
+ Quando si imposta `Option Compare Text`, il risultato di un confronto tra stringhe può dipendere dalle impostazioni locali in cui l'applicazione è in esecuzione. Due caratteri possono essere paragonati come uguali in un'unica impostazione locale ma non in un'altra. Se si utilizza un confronto tra stringhe per prendere decisioni importanti, ad esempio se si desidera accettare un tentativo di accesso, è necessario ricevere un avviso per la riservatezza delle impostazioni locali. Prendere in considerazione `Option Compare Binary` l'impostazione o <xref:Microsoft.VisualBasic.Strings.StrComp%2A>la chiamata di, che prende in considerazione le impostazioni locali.
+
+## <a name="typeless-programming-with-relational-comparison-operators"></a>Programmazione senza tipo con operatori di confronto relazionali
+ L'utilizzo di operatori di confronto relazionali `Object` con espressioni non è consentito `Option Strict On`in. Quando `Option Strict` è `Off`e o`expression1` èun'`Object` espressione, i tipi in fase di esecuzione determinano il modo in cui vengono confrontati. `expression2` Nella tabella seguente viene illustrata la modalità di confronto delle espressioni e il risultato del confronto, a seconda del tipo di runtime degli operandi.
+
+|Se gli operandi sono|Il confronto è|
+|---------------------|-------------------|
+|Sia`String`|Confronto di ordinamento basato sulle caratteristiche di ordinamento delle stringhe.|
+|Entrambi numerici|Oggetti convertiti `Double`in, confronto numerico.|
+|Uno numerico e uno`String`|Viene `String` convertito in un oggetto `Double` e il confronto numerico viene eseguito. Se non è possibile convertire in `Double`, viene <xref:System.InvalidCastException> generata un'eccezione. `String`|
+|Uno o entrambi sono tipi di riferimento diversi da`String`|Viene generato un tipo <xref:System.InvalidCastException>.|
+
+ I confronti `Nothing` numerici considerano come 0. I confronti `Nothing` di `""` stringhe considerano come (una stringa vuota).
+
+## <a name="overloading"></a>Overload
+ Operatori di confronto relazionale (`<`. `<=`, `>`, `>=`, `=`, )`<>`può essere sottoposto a *Overload*, il che significa che una classe o una struttura può ridefinire il comportamento quando un operando ha il tipo della classe o della struttura. Se il codice usa uno di questi operatori in una classe o una struttura di questo tipo, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
+
+ Si noti che è possibile eseguire l'overload dell' [operatore =](../../../visual-basic/language-reference/operators/assignment-operator.md) solo come operatore di confronto relazionale, non come operatore di assegnazione.
+
+## <a name="example"></a>Esempio
+ Nell'esempio seguente vengono illustrati diversi utilizzi degli operatori di confronto relazionali, utilizzati per confrontare le espressioni. Gli operatori di `True`confronto relazionale `Boolean` restituiscono un risultato che indica se l'espressione specificata restituisce o meno. Quando si applicano `>` gli `<` operatori e alle stringhe, il confronto viene eseguito usando il normale ordinamento alfabetico delle stringhe. Questo ordine può dipendere dalle impostazioni locali. Indica se l'ordinamento fa distinzione tra maiuscole e minuscole o non dipende dall'impostazione [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) .
+
+ [!code-vb[VbVbalrOperators#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#1)]
+
+ Nell'esempio precedente, il primo confronto restituisce `False` e i restanti confronti restituiscono. `True`
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.InvalidCastException>

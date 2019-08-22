@@ -8,12 +8,12 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: af290e4b9258a08425a15e297ff538502edea916
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a3d0b182acad2351ed095934ca97c6194d344fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674428"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659129"
 ---
 # <a name="requestcaching-element-network-settings"></a>Elemento \<requestCaching> (impostazioni di rete)
 Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.  
@@ -40,41 +40,41 @@ Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |`isPrivateCache`|Specifica se la cache fornisce l'isolamento tra le informazioni di utenti diversi. Il valore predefinito è `true`. Questo valore deve essere `false` per le applicazioni di livello intermedio.|  
-|`disableAllCaching`|Specifica che la memorizzazione nella cache è disabilitata per tutte le risposte Web e non può essere sottoposto a override a livello di codice.|  
+|`disableAllCaching`|Specifica che la memorizzazione nella cache è disabilitata per tutte le risposte Web e non può essere sottoposta a override a livello di codice.|  
 |`defaultPolicyLevel`|Uno dei valori dell'enumerazione <xref:System.Net.Cache.RequestCacheLevel>. Il valore predefinito è `BypassCache`.|  
-|`unspecifiedMaximumAge`|Specifica il tempo predefinito dopo il quale contenuto viene contrassegnato come scaduto.|  
+|`unspecifiedMaximumAge`|Specifica l'ora predefinita dopo la quale il contenuto è contrassegnato come scaduto.|  
   
-## <a name="policylevel-attribute"></a>Attributo policyLevel  
+## <a name="policylevel-attribute"></a>policyLevel (attributo)  
   
-|Value|Descrizione|  
+|Value|DESCRIZIONE|  
 |-----------|-----------------|  
-|`Default`|Restituisce la risorsa memorizzata nella cache se la risorsa è aggiornata, la lunghezza del contenuto è precisa e la scadenza, modifica e gli attributi di lunghezza del contenuto sono presenti.|  
+|`Default`|Restituisce la risorsa memorizzata nella cache se la risorsa è aggiornata, la lunghezza del contenuto è precisa e sono presenti gli attributi relativi alla scadenza, alla modifica e alla lunghezza del contenuto.|  
 |`BypassCache`|Restituisce la risorsa dal server.|  
-|`CacheOnly`|Restituisce la risorsa memorizzata nella cache se la lunghezza del contenuto è presente e corrisponde alla dimensione dell'elemento.|  
-|`CacheIfAvailable`|Restituisce la risorsa memorizzata nella cache se la lunghezza del contenuto viene fornita e corrisponde alla dimensione dell'elemento; in caso contrario, la risorsa viene scaricata dal server e viene restituita al chiamante.|  
-|`Revalidate`|Restituisce la risorsa memorizzata nella cache se il timestamp della risorsa memorizzata nella cache è identico a quello della risorsa del server. in caso contrario, la risorsa viene scaricata dal server, memorizzato nella cache e viene restituita al chiamante.|  
-|`Reload`|Scarica la risorsa dal server, viene memorizzato nella cache e la risorsa viene restituito al chiamante.|  
-|`NoCacheNoStore`|Se esiste una risorsa memorizzata nella cache, viene eliminata. La risorsa viene scaricata dal server e viene restituita al chiamante.|  
-|`Revalidate`|Soddisfa una richiesta mediante la copia memorizzata nella cache della risorsa se il timestamp è identico a quello della risorsa del server. in caso contrario, la risorsa viene scaricata dal server, presentato al chiamante e viene memorizzata nella cache,|  
+|`CacheOnly`|Restituisce la risorsa memorizzata nella cache se la lunghezza del contenuto è presente e corrisponde alla dimensione della voce.|  
+|`CacheIfAvailable`|Restituisce la risorsa memorizzata nella cache se viene fornita la lunghezza del contenuto e corrisponde alla dimensione della voce. in caso contrario, la risorsa viene scaricata dal server e viene restituita al chiamante.|  
+|`Revalidate`|Restituisce la risorsa memorizzata nella cache se il timestamp della risorsa memorizzata nella cache corrisponde al timestamp della risorsa nel server. in caso contrario, la risorsa viene scaricata dal server, archiviata nella cache e viene restituita al chiamante.|  
+|`Reload`|Scarica la risorsa dal server, la archivia nella cache e restituisce la risorsa al chiamante.|  
+|`NoCacheNoStore`|Se una risorsa memorizzata nella cache esiste, viene eliminata. La risorsa viene scaricata dal server e viene restituita al chiamante.|  
+|`Revalidate`|Soddisfa una richiesta utilizzando la copia memorizzata nella cache della risorsa se il timestamp corrisponde al timestamp della risorsa nel server. in caso contrario, la risorsa viene scaricata dal server, presentata al chiamante e memorizzata nella cache.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|Elemento facoltativo.<br /><br /> Indica se la memorizzazione nella cache HTTP è attivo e ne descrive l'impostazione predefinita dei criteri di memorizzazione nella cache.|  
-|[\<defaultFtpCachePolicy > (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|Elemento facoltativo.<br /><br /> Indica se la memorizzazione nella cache FTP è attivo e ne descrive l'impostazione predefinita dei criteri di memorizzazione nella cache.|  
+|[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|Elemento facoltativo.<br /><br /> Descrive se la memorizzazione nella cache HTTP è attiva e descrive i criteri di memorizzazione nella cache predefiniti.|  
+|[\<Elemento > defaultFtpCachePolicy (impostazioni di rete)](defaultftpcachepolicy-element-network-settings.md)|Elemento facoltativo.<br /><br /> Descrive se la memorizzazione nella cache FTP è attiva e descrive i criteri di memorizzazione nella cache predefiniti.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.|  
+|[system.net](system-net-element-network-settings.md)|Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come disattivare la cache.  
+ Nell'esempio seguente viene illustrato come disabilitare tutti i Caching.  
   
 ```xml  
 <configuration>  
@@ -89,4 +89,4 @@ Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e01cdd942237141b8ef35495d3b74d6b2282a865
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705168"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664249"
 ---
-# <a name="oidmap-element"></a>\<oidMap > elemento
-Contiene mapping di identificatore (OID) ASN.1 oggetto alle classi.  
+# <a name="oidmap-element"></a>\<Elemento > oidMap
+Contiene i mapping degli identificatori di oggetto (OID) ASN. 1 alle classi.  
   
  \<configuration>  
 \<mscorlib>  
-\<cryptographySettings>  
+\<> cryptographySettings  
 \<oidMap>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -40,7 +40,7 @@ Contiene mapping di identificatore (OID) ASN.1 oggetto alle classi.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<oidEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Esegue il mapping di OID ASN.1 a un nome descrittivo.|  
+|[\<oidEntry>](oidentry-element.md)|Esegue il mapping di un OID ASN. 1 a un nome descrittivo.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -48,10 +48,10 @@ Contiene mapping di identificatore (OID) ASN.1 oggetto alle classi.
 |-------------|-----------------|  
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`cryptographySettings`|Contiene le impostazioni di crittografia.|  
-|`mscorlib`|Contiene il `cryptographySettings` elemento.|  
+|`mscorlib`|Contiene l' `cryptographySettings` elemento.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il  **\<oidMap >** elemento per contenere il mapping di un OID per l'algoritmo hash RIPEMD-160 a un'implementazione dell'algoritmo di hash.  
+ Nell'esempio seguente viene illustrato come utilizzare l'  **\<elemento > oidMap** per contenere un mapping di un OID per l'algoritmo hash RIPEMD-160 a un'implementazione di tale algoritmo hash.  
   
 ```xml  
 <configuration>  
@@ -75,8 +75,8 @@ Contiene mapping di identificatore (OID) ASN.1 oggetto alle classi.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Schema dei file di configurazione](../index.md)
+- [Schema delle impostazioni di crittografia](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [Configurazione di classi di crittografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Mapping di identificatori di oggetti ad algoritmi di crittografia](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [Configurazione di classi di crittografia](../../configure-cryptography-classes.md)
+- [Mapping di identificatori di oggetti ad algoritmi di crittografia](../../map-object-identifiers-to-cryptography-algorithms.md)

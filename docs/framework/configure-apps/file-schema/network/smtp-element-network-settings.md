@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 1b5f7406f995a86f0a192dbf3249c067dff570ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac9405fdc6123a5a1352de06f94fefb6d7d4014b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674402"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659114"
 ---
-# <a name="smtp-element-network-settings"></a>\<SMTP > (impostazioni di rete)
-Consente di configurare il formato di consegna, il metodo di recapito e dall'indirizzo per l'invio di messaggi di posta elettronica.  
+# <a name="smtp-element-network-settings"></a>\<Elemento > SMTP (impostazioni di rete)
+Configura il formato di recapito, il metodo di recapito e l'indirizzo di posta elettronica per l'invio di messaggi.  
   
  \<configuration>  
 \<system.net>  
@@ -42,25 +42,25 @@ Consente di configurare il formato di consegna, il metodo di recapito e dall'ind
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`deliveryFormat`|Specifica il formato di recapito messaggi di posta elettronica in uscita. I valori accettabili sono SevenBit e International.|  
-|`deliveryMethod`|Specifica il metodo di recapito messaggi di posta elettronica. I valori accettabili sono SpecifiedPickupDirectory, PickupDirectoryFromIis e rete.|  
-|`from`|Specifica l'indirizzo del mittente per messaggi di posta elettronica in uscita.|  
+|`deliveryFormat`|Specifica il formato di recapito per i messaggi di posta elettronica in uscita. I valori accettabili sono SevenBit e International.|  
+|`deliveryMethod`|Specifica il metodo di recapito dei messaggi di posta elettronica. I valori accettabili sono Network, PickupDirectoryFromIis e SpecifiedPickupDirectory.|  
+|`from`|Specifica l'indirizzo da per i messaggi di posta elettronica in uscita.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|Configura la directory locale per un server SMTP Simple Mail Transport Protocol ().|  
-|`network`|Consente di configurare le opzioni di rete per un server SMTP esterno.|  
+|`specifiedPickupDirectory`|Configura la directory locale per un server SMTP (Simple Mail Transport Protocol).|  
+|`network`|Configura le opzioni di rete per un server SMTP esterno.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[Elemento \<mailSettings> (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Consente di configurare le opzioni di invio della posta elettronica.|  
+|[Elemento \<mailSettings> (impostazioni di rete)](mailsettings-element-network-settings.md)|Configura le opzioni di invio della posta elettronica.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente specifica i parametri appropriati di SMTP per inviare posta elettronica usando le credenziali di rete predefinite.  
+ Nell'esempio seguente vengono specificati i parametri SMTP appropriati per inviare messaggi di posta elettronica utilizzando le credenziali di rete predefinite.  
   
 ```xml  
 <configuration>  
@@ -84,4 +84,4 @@ Consente di configurare il formato di consegna, il metodo di recapito e dall'ind
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpDeliveryFormat>
 - <xref:System.Net.Mail.SmtpDeliveryMethod>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

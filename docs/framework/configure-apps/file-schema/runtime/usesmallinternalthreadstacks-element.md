@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70113d98c5a4ab41700f6c9842dba89e2b49c297
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 74678089bb1b19295983064eb7ad54fbf0a1e361
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489324"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663382"
 ---
-# <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > elemento
-Le richieste che common language runtime (CLR) ridurre la memoria usano specificando le dimensioni dello stack esplicite quando crea determinati thread usati internamente, invece di usare le dimensioni predefinite dello stack per tali thread.  
+# <a name="usesmallinternalthreadstacks-element"></a>\<Elemento > UseSmallInternalThreadStacks
+Richiede che i Common Language Runtime (CLR) riducano l'utilizzo della memoria specificando dimensioni dello stack esplicite quando vengono creati determinati thread utilizzati internamente, anziché utilizzare le dimensioni predefinite dello stack per quei thread.  
   
- \<configurazione > elemento  
-\<runtime > elemento  
-\<UseSmallInternalThreadStacks > elemento  
+ \<Configuration >-elemento  
+\<Elemento runtime >  
+\<Elemento > UseSmallInternalThreadStacks  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,14 +34,14 @@ Le richieste che common language runtime (CLR) ridurre la memoria usano specific
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|enabled|Attributo obbligatorio.<br /><br /> Specifica se richiedere che le dimensioni dello stack esplicita utilizzare CLR anziché le dimensioni predefinite dello stack quando crea determinati thread usati internamente. Le dimensioni dello stack esplicita sono inferiori alle dimensioni dello stack predefinito pari a 1 MB.|  
+|enabled|Attributo obbligatorio.<br /><br /> Specifica se richiedere che CLR usi dimensioni dello stack esplicite invece delle dimensioni predefinite dello stack quando crea determinati thread che usa internamente. Le dimensioni dello stack esplicite sono inferiori alle dimensioni predefinite dello stack di 1 MB.|  
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|true|Le dimensioni dello stack esplicita della richiesta.|  
-|False|Usare le dimensioni predefinite dello stack. Questo è il valore predefinito di .NET Framework 4.|  
+|true|Richiedere dimensioni dello stack esplicite.|  
+|false|Utilizzare le dimensioni predefinite dello stack. Si tratta dell'impostazione predefinita per il .NET Framework 4.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -54,15 +54,15 @@ Le richieste che common language runtime (CLR) ridurre la memoria usano specific
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- Questo elemento di configurazione viene usato per richiedere l'utilizzo ridotto della memoria virtuale in un processo, perché le dimensioni di thread espliciti usati da CLR per i thread interni, se la richiesta verrà rispettata, sono inferiori alle dimensioni predefinite.  
+ Questo elemento di configurazione viene utilizzato per richiedere un utilizzo ridotto della memoria virtuale in un processo, perché le dimensioni dei thread esplicite utilizzate da CLR per i thread interni, se la richiesta viene rispettata, sono inferiori alle dimensioni predefinite.  
   
 > [!IMPORTANT]
->  Questo elemento di configurazione è una richiesta a Common Language Runtime anziché a un requisito assoluto. In .NET Framework 4, la richiesta verrà rispettata solo per x86 architettura. Questo elemento potrebbe essere completamente ignorato nelle versioni future di CLR o sostituito da dimensioni dello stack esplicite che vengono sempre utilizzate per i thread interno selezionato.  
+>  Questo elemento di configurazione è una richiesta a CLR anziché a un requisito assoluto. Nel .NET Framework 4, la richiesta viene rispettata solo per l'architettura x86. Questo elemento potrebbe essere ignorato completamente nelle versioni future di CLR o sostituito dalle dimensioni dello stack esplicite che vengono sempre utilizzate per i thread interni selezionati.  
   
- Specifica di che questo elemento di configurazione è necessaria una affidabilità per l'utilizzo di memoria virtuale più piccolo se CLR soddisfa la richiesta, perché di dimensioni inferiori dello stack potrebbe potenzialmente stack overflow più probabile.  
+ La specifica di questo elemento di configurazione consente di compromettere l'affidabilità per un utilizzo di memoria virtuale inferiore se CLR rispetta la richiesta, perché le dimensioni dello stack più piccole potrebbero causare un overflow più probabile dello stack.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come richiedere che il CLR Usa dimensioni esplicite dello stack per determinati thread usati internamente.  
+ Nell'esempio seguente viene illustrato come richiedere che CLR utilizzi dimensioni dello stack esplicite per determinati thread utilizzati internamente.  
   
 ```xml  
 <configuration>  
@@ -74,5 +74,5 @@ Le richieste che common language runtime (CLR) ridurre la memoria usano specific
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema delle impostazioni di runtime](index.md)
+- [Schema dei file di configurazione](../index.md)

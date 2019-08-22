@@ -2,20 +2,20 @@
 title: <add> di <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 03bf1bbb8156e4722d987e171d9034747ac6bb61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53af01a519c244376b262db1f6515a438dcc554f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701203"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663376"
 ---
-# <a name="add-of-backuplist"></a>\<aggiungere > di \<backupList >
+# <a name="add-of-backuplist"></a>\<Aggiungi > di \<> di backup
 Rappresenta un elemento di configurazione che definisce un elemento dell'endpoint di backup.  
   
  \<system.serviceModel>  
 \<routing>  
-\<backupLists>  
-\<backupList>  
+\<> backupLists  
+\<> di backup  
 \<add>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -28,9 +28,6 @@ Rappresenta un elemento di configurazione che definisce un elemento dell'endpoin
     </backupList>
   </backupLists>
 </routing>
-```  
-  
-```csharp  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -49,7 +46,7 @@ Rappresenta un elemento di configurazione che definisce un elemento dell'endpoin
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Contiene un elenco di endpoint che si desidera il servizio di Routing da usare nel caso in cui non è possibile raggiungere l'endpoint primario.|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Contiene un elenco di endpoint che si desidera vengano utilizzati dal servizio di routing nel caso in cui non sia possibile raggiungere l'endpoint primario.|  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 904c8e23f7a09a975a6f3b9322ed6bc4148d9ba4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd8790efa14018817c9e51e688b17c22d31d482f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674668"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659576"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<aggiungere > (elemento) per bypasslist (impostazioni di rete)
-Aggiunge un indirizzo IP o nome DNS per l'elenco proxy da ignorare.  
+# <a name="add-element-for-bypasslist-network-settings"></a>\<Aggiungi elemento > per l'elemento bypass (impostazioni di rete)
+Aggiunge un indirizzo IP o un nome DNS all'elenco di bypass del proxy.  
   
  \<configuration>  
 \<system.net>  
@@ -41,7 +41,7 @@ Aggiunge un indirizzo IP o nome DNS per l'elenco proxy da ignorare.
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
-|**address**|Un'espressione regolare che descrive un indirizzo IP o nome DNS.|  
+|**address**|Espressione regolare che descrive un indirizzo IP o un nome DNS.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -50,22 +50,22 @@ Aggiunge un indirizzo IP o nome DNS per l'elenco proxy da ignorare.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usano un proxy.|  
+|[bypasslist](bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non utilizzano un proxy.|  
   
 ## <a name="remarks"></a>Note  
- Il `add` elemento consente di inserire le espressioni regolari che descrivono gli indirizzi IP o nomi di server DNS all'elenco di indirizzi che ignorano un server proxy.  
+ L' `add` elemento inserisce le espressioni regolari che descrivono gli indirizzi IP o i nomi dei server DNS nell'elenco degli indirizzi che ignorano un server proxy.  
   
- Il valore della `address` attributo deve essere un'espressione regolare che descrive un set di indirizzi IP o nomi host.  
+ Il valore dell' `address` attributo deve essere un'espressione regolare che descrive un set di indirizzi IP o nomi host.  
   
- È necessario prestare attenzione quando si specifica un'espressione regolare per questo elemento. L'espressione regolare "[a-z] +\\.contoso\\. com" corrisponde a qualsiasi host nel dominio contoso.com, che corrisponde anche a qualsiasi host nel dominio cpandl.com. In modo che corrisponda solo un host nel dominio contoso.com, usare un ancoraggio ("$"): "[a-z] +\\.contoso\\$. com".  
+ È necessario prestare attenzione quando si specifica un'espressione regolare per questo elemento. L'espressione regolare "[a-z] +\\. contoso\\. com" corrisponde a qualsiasi host nel dominio contoso.com, ma corrisponde anche a qualsiasi host nel dominio contoso.com.cpandl.com. Per trovare la corrispondenza solo con un host nel dominio contoso.com, usare un ancoraggio ("$"): "[a-z\\] +\\. contoso. com $".  
   
- Per altre informazioni sulle espressioni regolari, vedere. [Espressioni regolari di .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Per ulteriori informazioni sulle espressioni regolari, vedere. [.NET Framework espressioni regolari](../../../../../docs/standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente aggiunge due indirizzi all'elenco di esclusione. Il primo consente di ignorare il proxy per tutti i server nel dominio contoso.com. il secondo consente di ignorare il proxy per tutti i server il cui indirizzo IP inizia con 192.168.  
+ Nell'esempio seguente vengono aggiunti due indirizzi all'elenco di bypass. Il primo ignora il proxy per tutti i server nel dominio contoso.com. il secondo ignora il proxy per tutti i server il cui indirizzo IP inizia con 192,168.  
   
 ```xml  
 <configuration>  
@@ -83,4 +83,4 @@ Aggiunge un indirizzo IP o nome DNS per l'elenco proxy da ignorare.
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

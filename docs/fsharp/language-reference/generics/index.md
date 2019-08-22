@@ -2,12 +2,12 @@
 title: Generics
 description: Informazioni su come usare F# funzioni e tipi generici, che consentono di scrivere codice che funziona con un'ampia gamma di tipi senza ripeterne il codice.
 ms.date: 05/16/2016
-ms.openlocfilehash: 47eed0b8e074cfb591e6d8e2c382b9ea6a6e97f0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5d6e57762095e44836425f90d21a6c1dc71edaaa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630620"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666698"
 ---
 # <a name="generics"></a>Generics
 
@@ -97,6 +97,6 @@ Ci sono due tipi di parametri di tipo che possono essere usati in programmi F#. 
 - [Riferimenti per il linguaggio](../index.md)
 - [Tipi](../fsharp-types.md)
 - [Parametri di tipo risolti staticamente](statically-resolved-type-parameters.md)
-- [Generics in .NET Framework](~/docs/standard/generics/index.md)
+- [Generics](../../../standard/generics/index.md)
 - [Generalizzazione automatica](automatic-generalization.md)
 - [Vincoli](constraints.md)

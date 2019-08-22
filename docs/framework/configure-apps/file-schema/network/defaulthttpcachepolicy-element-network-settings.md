@@ -8,15 +8,15 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 20d9b92ca2bbffd6b98b8641e5cef5e567cb84cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1dd31884a072d16ed004c0b49be61e8cee399787
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705129"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664147"
 ---
-# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy > (impostazioni di rete)
-Indica se la memorizzazione nella cache HTTP è attivo e ne descrive l'impostazione predefinita dei criteri di memorizzazione nella cache.  
+# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<Elemento > defaultHttpCachePolicy (impostazioni di rete)
+Descrive se la memorizzazione nella cache HTTP è attiva e descrive i criteri di memorizzazione nella cache predefiniti.  
   
  \<configuration>  
 \<system.net>  
@@ -41,30 +41,30 @@ Indica se la memorizzazione nella cache HTTP è attivo e ne descrive l'impostazi
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`maximumAge`|Specifica l'intervallo di tempo massimo prima che un oggetto memorizzato nella cache viene contrassegnato come scaduto.|  
-|`maximumStale`|Specifica il tempo massimo oltre il tempo di validità calcolato prima che un oggetto memorizzato nella cache viene contrassegnato come scaduto.|  
-|`minimumFresh`|Specifica il tempo minimo per un oggetto memorizzato nella cache essere considerato aggiornato.|  
-|`policyLevel`|Specifica se i criteri di memorizzazione nella cache sono automatica, o se la cache viene ignorata. Il valore predefinito è `BypassCache`.|  
+|`maximumAge`|Specifica l'intervallo di tempo massimo prima che un oggetto memorizzato nella cache venga contrassegnato come scaduto.|  
+|`maximumStale`|Specifica il tempo massimo trascorso il tempo di aggiornamento calcolato prima che un oggetto memorizzato nella cache venga contrassegnato come scaduto.|  
+|`minimumFresh`|Specifica il tempo minimo per considerare aggiornato un oggetto memorizzato nella cache.|  
+|`policyLevel`|Specifica se i criteri di memorizzazione nella cache sono automatici o se la cache è stata ignorata. Il valore predefinito è `BypassCache`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuna  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.|  
+|[requestCaching](requestcaching-element-network-settings.md)|Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.|  
   
 ## <a name="remarks"></a>Note  
- Il valore per il `policyLevel` attributo è uno `BypassCache` o `Default`.  
+ Il valore `policyLevel` dell'attributo `BypassCache` è o `Default`.  
   
- I valori per il `maximumAge`, `maximumStale`, e `minimumFresh` elementi sono da un intervallo di tempo esplicito con il formato *1!d*. *hh*:*mm*:*ss* (giorni, ore, minuti e secondi), o le costanti `minValue` o `maxValue`, nel modo appropriato.  
+ I valori per `maximumAge`gli `maximumStale`elementi, `minimumFresh` e sono un intervallo di tempo esplicito con un formato *d*. *HH*:*mm*:*SS* (giorni, ore, minuti e secondi) `minValue` o costanti o `maxValue`, a seconda dei casi.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come specificare un tempo minimo fresco di sei ore, un intervallo di durata massima di due giorni e un intervallo di obsolescenza massima pari a quattro ore.  
+ Nell'esempio seguente viene illustrato come specificare un periodo di tempo minimo di sei ore, una durata massima di due giorni e un tempo di esecuzione massimo di quattro ore.  
   
 ```xml  
 <configuration>  
@@ -85,4 +85,4 @@ Indica se la memorizzazione nella cache HTTP è attivo e ne descrive l'impostazi
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)
