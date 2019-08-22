@@ -10,20 +10,20 @@ helpviewer_keywords:
 - clear element, connectionManagement
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-ms.openlocfilehash: 733c70b0575de7e2635afaab58ad48591f035fc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86a7a0ab402c8c40ec3b824402a1dba984412b68
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705243"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659439"
 ---
-# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<Cancella > (elemento) per connectionManagement (impostazioni di rete)
+# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<Cancella > elemento per connectionManagement (impostazioni di rete)
 Cancella l'elenco di gestione connessione.  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement>  
-\<clear>  
+\<> connectionManagement  
+\<Cancella >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,16 +44,16 @@ Cancella l'elenco di gestione connessione.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Specifica il numero massimo di connessioni a un host di rete.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Specifica il numero massimo di connessioni a un host di rete.|  
   
 ## <a name="remarks"></a>Note  
- Il `clear` elemento cancella tutte le voci dall'elenco di gestione connessione.  
+ L' `clear` elemento Cancella tutte le voci dall'elenco di gestione della connessione.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente cancella l'elenco di gestione connessione e vengono aggiunte nuove voci di gestione connessione per il server `www.contoso.com` e tutti gli altri host di rete.  
+ Nell'esempio seguente viene cancellato l'elenco di gestione connessione, quindi vengono aggiunte nuove voci di gestione connessione `www.contoso.com` per il server e tutti gli altri host di rete.  
   
 ```xml  
 <configuration>  
@@ -71,4 +71,4 @@ Cancella l'elenco di gestione connessione.
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

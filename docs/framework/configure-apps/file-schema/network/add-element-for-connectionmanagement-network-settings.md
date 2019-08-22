@@ -10,19 +10,19 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 3a046fd386536b29ea2dcad5660c65c08b7e4478
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 608c591b910252dd60950bf2aa7565d6df04d5fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705272"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664222"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<aggiungere > (elemento) per connectionManagement (impostazioni di rete)
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<aggiungere > elemento per connectionManagement (impostazioni di rete)
 Aggiunge un indirizzo IP o nome DNS all'elenco di gestione delle connessioni.  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement>  
+\<> connectionManagement  
 \<add>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -51,7 +51,7 @@ Aggiunge un indirizzo IP o nome DNS all'elenco di gestione delle connessioni.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Specifica il numero massimo di connessioni a un host di rete.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Specifica il numero massimo di connessioni a un host di rete.|  
   
 ## <a name="remarks"></a>Note  
  Il valore dell'attributo `address` deve essere un'espressione regolare valida o un asterisco per indicare tutte le connessioni oppure una stringa nel formato `<schema>://<idn_hostname>[:<port>]`.  
@@ -62,7 +62,7 @@ Aggiunge un indirizzo IP o nome DNS all'elenco di gestione delle connessioni.
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente consente di configurare un'applicazione di usare quattro connessioni al server `www.contoso.com` e due connessioni a tutti gli altri server.  
+ Nell'esempio seguente viene configurata un'applicazione per l'utilizzo di quattro `www.contoso.com` connessioni al server e due connessioni a tutti gli altri server.  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ Aggiunge un indirizzo IP o nome DNS all'elenco di gestione delle connessioni.
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 8df9bbf2615776c2e023f03401785da95b2226eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a183c4160c4cd55b05c5c23f7a10e3a1d1c74ea4
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674499"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659282"
 ---
-# <a name="proxy-element-network-settings"></a>\<proxy > (impostazioni di rete)
+# <a name="proxy-element-network-settings"></a>\<Elemento proxy > (impostazioni di rete)
 Definisce un server proxy.  
   
  \<configuration>  
@@ -43,10 +43,10 @@ Definisce un server proxy.
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
 |`autoDetect`|Specifica se il proxy viene rilevato automaticamente. Il valore predefinito è `unspecified`.|  
-|`bypassonlocal`|Specifica se il proxy viene ignorato per le risorse locali. Le risorse locali includono il server locale (`http://localhost`, `http://loopback`, o `http://127.0.0.1`) e un URI senza un punto (`http://webserver`). Il valore predefinito è `unspecified`.|  
-|`proxyaddress`|Specifica l'URI del proxy da usare.|  
-|`scriptLocation`|Specifica il percorso dello script di configurazione. Non usare il `bypassonlocal` attributo con questo attributo. |  
-|`usesystemdefault`|Specifica se utilizzare le impostazioni proxy di Internet Explorer. Se impostato su `true`, gli attributi successivi sostituiranno le impostazioni proxy di Internet Explorer. Il valore predefinito è `unspecified`.|  
+|`bypassonlocal`|Specifica se il proxy viene ignorato per le risorse locali. Le risorse locali includono il server locale`http://localhost`( `http://loopback`, o `http://127.0.0.1`) e un URI senza un punto (`http://webserver`). Il valore predefinito è `unspecified`.|  
+|`proxyaddress`|Specifica l'URI del proxy da utilizzare.|  
+|`scriptLocation`|Specifica il percorso dello script di configurazione. Non usare l' `bypassonlocal` attributo con questo attributo. |  
+|`usesystemdefault`|Specifica se utilizzare le impostazioni proxy di Internet Explorer. Se è impostato `true`su, gli attributi successivi sostituiranno le impostazioni proxy di Internet Explorer. Il valore predefinito è `unspecified`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -55,26 +55,26 @@ Definisce un server proxy.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Configura il server proxy Hypertext Transfer Protocol (HTTP).|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|Configura il server proxy Hypertext Transfer Protocol (HTTP).|  
   
 ## <a name="text-value"></a>Valore di testo  
   
 ## <a name="remarks"></a>Note  
- Il `proxy` elemento definisce un server proxy per un'applicazione. Se questo elemento è mancano dal file di configurazione, .NET Framework utilizzerà le impostazioni del proxy in Internet Explorer.  
+ L' `proxy` elemento definisce un server proxy per un'applicazione. Se questo elemento non è presente nel file di configurazione, il .NET Framework utilizzerà le impostazioni del proxy in Internet Explorer.  
   
- Il valore per il `proxyaddress` attributo deve essere un formato corretto indicatore URI (Uniform Resource).  
+ Il valore `proxyaddress` dell'attributo deve essere un URI (Uniform Resource Indicator) ben formato.  
   
- Il `scriptLocation` attributo fa riferimento per il rilevamento automatico proxy degli script di configurazione. Il <xref:System.Net.WebProxy> classe tenterà di individuare uno script di configurazione (in genere denominato Wpad. dat) quando il **usare script di configurazione automatica** opzione è selezionata in Internet Explorer. Se `bypassonlocal` è impostata su qualsiasi valore, `scriptLocation` viene ignorato.
+ L' `scriptLocation` attributo fa riferimento al rilevamento automatico degli script di configurazione del proxy. La <xref:System.Net.WebProxy> classe tenterà di individuare uno script di configurazione, in genere denominato wpad. dat, quando si seleziona l'opzione **Usa script di configurazione automatica** in Internet Explorer. Se `bypassonlocal` è impostato su un valore qualsiasi `scriptLocation` , viene ignorato.
   
- Usare il `usesystemdefault` attributo per applicazioni .NET Framework versione 1.1 che sta eseguendo la migrazione alla versione 2.0.  
+ Usare l' `usesystemdefault` attributo per .NET Framework versione 1,1 applicazioni che eseguono la migrazione alla versione 2,0.  
   
- Viene generata un'eccezione se il `proxyaddress` attributo specifica un proxy predefinito non è valido. La proprietà <xref:System.Exception.InnerException%2A> nell'eccezione dovrebbe contenere altre informazioni sulla causa radice dell'errore.  
+ Viene generata un'eccezione se l' `proxyaddress` attributo specifica un proxy predefinito non valido. La proprietà <xref:System.Exception.InnerException%2A> nell'eccezione dovrebbe contenere altre informazioni sulla causa radice dell'errore.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente usa le impostazioni predefinite del proxy di Internet Explorer, specifica l'indirizzo del proxy e ignora il proxy per l'accesso locale.  
+ Nell'esempio seguente vengono utilizzate le impostazioni predefinite del proxy di Internet Explorer, viene specificato l'indirizzo proxy e viene ignorato il proxy per l'accesso locale.  
   
 ```xml  
 <configuration>  
@@ -93,4 +93,4 @@ Definisce un server proxy.
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad0ae023215eeb1f42f9351369ee77d41d537b88
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: b82be30c18cde361aa412ee1b631c8368c8de1b3
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487736"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663935"
 ---
-# <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > elemento
+# <a name="appdomainresourcemonitoring-element"></a>\<Elemento > appDomainResourceMonitoring
 Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel processo per la durata del processo.  
   
  \<configuration>  
@@ -41,8 +41,8 @@ Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel 
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|`true`|Statistiche di monitoraggio delle risorse del dominio dell'applicazione vengono raccolte.|  
-|`false`|Statistiche di monitoraggio delle risorse del dominio applicazione non vengono raccolte.|  
+|`true`|Vengono raccolte le statistiche per il monitoraggio delle risorse del dominio applicazione.|  
+|`false`|Le statistiche per il monitoraggio delle risorse del dominio applicazione non vengono raccolte.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -55,14 +55,14 @@ Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel 
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- Monitoraggio delle risorse del dominio applicazione è disponibile tramite la classe di dominio di applicazione gestita, l'hosting [ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) interfaccia e event tracing for Windows (ETW). Quando il monitoraggio è abilitato, vengono raccolte statistiche per tutti i domini applicazione del processo per il ciclo di vita del processo.  
+ Il monitoraggio delle risorse del dominio applicazione è disponibile tramite la classe di dominio dell'applicazione gestita, l'interfaccia [ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) di hosting e Event Tracing for Windows (ETW). Quando il monitoraggio è abilitato, le statistiche vengono raccolte per tutti i domini applicazione nel processo per il ciclo di vita del processo.  
   
- Per abilitare il monitoraggio dal codice gestito, usare il <xref:System.AppDomain.MonitoringIsEnabled%2A> proprietà.  
+ Per abilitare il monitoraggio dal codice gestito, usare <xref:System.AppDomain.MonitoringIsEnabled%2A> la proprietà.  
   
  Questo elemento di configurazione è disponibile solo in .NET Framework 4 e versioni successive.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come abilitare Monitoraggio risorse del dominio applicazione.  
+ Nell'esempio seguente viene illustrato come abilitare il monitoraggio delle risorse del dominio applicazione.  
   
 ```xml  
 <configuration>  
@@ -75,5 +75,5 @@ Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema delle impostazioni di runtime](index.md)
+- [Schema dei file di configurazione](../index.md)

@@ -1,18 +1,18 @@
 ---
-title: Uso della varianza per i delegati generici azione (Visual Basic) e Func
+title: Uso della varianza per i delegati generici Func e Action (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: f2f45a9b6536859499f882b4cd585595176208f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce560f6246469620032ececa4afeeffe69baf407
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787270"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664353"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Uso della varianza per i delegati generici azione (Visual Basic) e Func
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Uso della varianza per i delegati generici Func e Action (Visual Basic)
 In questi esempi viene illustrato come usare la covarianza e la controvarianza nei delegati generici `Func` e `Action` per consentire il riutilizzo dei metodi e offrire maggiore flessibilità nel codice.  
   
- Per altre informazioni sulla covarianza e controvarianza, vedere [varianza nei delegati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
+ Per ulteriori informazioni sulla covarianza e la controvarianza, vedere [varianza nei delegati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>Uso dei delegati con parametri di tipo covariante  
  L'esempio seguente illustra i vantaggi del supporto di covarianza nei delegati generici `Func`. Il metodo `FindByTitle` accetta un parametro di tipo `String` e restituisce un oggetto di tipo `Employee`. Tuttavia, è possibile assegnare questo metodo al delegato `Func(Of String, Person)` perché `Employee` eredita `Person`.  
@@ -92,4 +92,4 @@ End Class
 ## <a name="see-also"></a>Vedere anche
 
 - [Covarianza e controvarianza (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
-- [Generics](~/docs/standard/generics/index.md)
+- [Generics](../../../../standard/generics/index.md)

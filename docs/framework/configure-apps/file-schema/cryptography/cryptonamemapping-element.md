@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-ms.openlocfilehash: bcf7894dba66736fcc1a30af9b5557549ef25e7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2652ac73c1d55f09a1f8511603003dc6d7291f9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674766"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659634"
 ---
-# <a name="cryptonamemapping-element"></a>\<cryptoNameMapping > elemento
+# <a name="cryptonamemapping-element"></a>\<Elemento > cryptoNameMapping
 Contiene i mapping di classi e nomi descrittivi.  
   
  \<configuration>  
 \<mscorlib>  
-\<cryptographySettings>  
+\<> cryptographySettings  
 \<cryptoNameMapping>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -38,9 +38,9 @@ Contiene i mapping di classi e nomi descrittivi.
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|`cryptoClasses`|Contiene un elenco delle classi di crittografia per le quali è stato eseguito il mapping a un nome descrittivo nell'elemento **\<nameEntry>**.|  
+|`cryptoClasses`|Contiene un elenco delle classi di crittografia per le quali è stato eseguito il mapping a un nome descrittivo nell'elemento **\<nameEntry>** .|  
 |`nameEntry`|Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in modo da poter associare più nomi descrittivi a una classe.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
@@ -50,10 +50,10 @@ Contiene i mapping di classi e nomi descrittivi.
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`cryptographySettings`|Contiene le impostazioni di crittografia.|  
 |`cryptoNameMapping`|Contiene i mapping di classi e nomi descrittivi.|  
-|`mscorlib`|Contiene il \<cryptographySettings > elemento.|  
+|`mscorlib`|Contiene l' \<elemento > cryptographySettings.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il  **\<cryptoNameMapping >** elemento a cui fare riferimento a una classe di crittografia e configurare il runtime. È quindi possibile passare la stringa "RSA" per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metodo e usare il <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodo restituisca un `MyCryptoRSAClass` oggetto.  
+ Nell'esempio seguente viene illustrato come utilizzare l'  **\<elemento > cryptoNameMapping** per fare riferimento a una classe di crittografia e configurare il Runtime. È quindi possibile passare la stringa "RSA" al <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metodo e usare il <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodo per restituire un `MyCryptoRSAClass` oggetto.  
   
 ```xml  
 <configuration>  
@@ -76,7 +76,7 @@ Contiene i mapping di classi e nomi descrittivi.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Schema dei file di configurazione](../index.md)
+- [Schema delle impostazioni di crittografia](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [Configurazione di classi di crittografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Configurazione di classi di crittografia](../../configure-cryptography-classes.md)

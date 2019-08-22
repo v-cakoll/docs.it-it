@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec411039363cfb118fee06dff88daf50bbc97a86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b42c141362d99090db922d3a6b429f05592130cd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704934"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659021"
 ---
-# <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy > elemento
+# <a name="alwaysflowimpersonationpolicy-element"></a>\<Elemento > alwaysFlowImpersonationPolicy
 Specifica che l'identità di Windows passa sempre attraverso punti asincroni, indipendentemente dalla modalità di rappresentazione.  
   
  \<configuration>  
@@ -38,14 +38,14 @@ Specifica che l'identità di Windows passa sempre attraverso punti asincroni, in
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Indica se l'identità di Windows passa attraverso punti asincroni.|  
+|`enabled`|Attributo obbligatorio.<br /><br /> Indica se l'identità di Windows scorre tra punti asincroni.|  
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|Descrizione|  
+|Valore|DESCRIZIONE|  
 |-----------|-----------------|  
-|`false`|Il Windows identità non passa attraverso punti asincroni, a meno che non viene eseguita la rappresentazione tramite, ad esempio i metodi gestiti <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>. Questa è l'impostazione predefinita.|  
-|`true`|L'identità di Windows passa sempre attraverso punti asincroni, indipendentemente dal modo in cui è stata eseguita la rappresentazione.|  
+|`false`|L'identità Windows non viene propagata tra punti asincroni, a meno che la rappresentazione non venga eseguita tramite metodi gestiti <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>, ad esempio. Questa è l'impostazione predefinita.|  
+|`true`|L'identità Windows scorre sempre tra punti asincroni, indipendentemente dal modo in cui è stata eseguita la rappresentazione.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -58,24 +58,24 @@ Specifica che l'identità di Windows passa sempre attraverso punti asincroni, in
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- Nelle versioni 1.0 e 1.1 di .NET Framework, l'identità di Windows non passa attraverso punti asincroni. In .NET Framework versione 2.0, è presente un <xref:System.Threading.ExecutionContext> oggetto che contiene informazioni relative al thread attualmente in esecuzione e passa attraverso punti asincroni all'interno di un dominio dell'applicazione. Il <xref:System.Security.Principal.WindowsIdentity> inoltre i flussi come parte delle informazioni che passano attraverso punti asincroni, purché la rappresentazione è stata ottenuta usando metodi gestiti, ad esempio <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> e non tramite altri mezzi, ad esempio platform invoke a metodi nativi. Questo elemento viene usato per specificare che l'identità di Windows passa attraverso punti asincroni, indipendentemente dal modo in cui è stata ottenuta la rappresentazione.  
+ Nelle versioni .NET Framework 1,0 e 1,1, l'identità Windows non viene propagata tra punti asincroni. In .NET Framework versione 2,0 è presente un <xref:System.Threading.ExecutionContext> oggetto che contiene informazioni sul thread attualmente in esecuzione e lo trasmette attraverso punti asincroni all'interno di un dominio dell'applicazione. Il <xref:System.Security.Principal.WindowsIdentity> flusso viene inoltre eseguito come parte delle informazioni che passano tra i punti asincroni, a condizione che la rappresentazione sia stata realizzata utilizzando metodi <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> gestiti come e non tramite altri strumenti, ad esempio Platform Invoke ai metodi nativi. Questo elemento viene utilizzato per specificare che l'identità Windows viene propagata tra punti asincroni, indipendentemente dal modo in cui è stata eseguita la rappresentazione.  
   
  È possibile modificare questo comportamento predefinito in altri due modi:  
   
-1. Nel codice gestito in un singolo thread.  
+1. Nel codice gestito in base al thread.  
   
-     È possibile eliminare il flusso di un singolo thread modificando la <xref:System.Threading.ExecutionContext> e <xref:System.Security.SecurityContext> le impostazioni tramite il <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>, o <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> (metodo).  
+     È possibile disattivare il flusso in base ai singoli thread <xref:System.Threading.ExecutionContext> modificando le impostazioni e <xref:System.Security.SecurityContext> usando il <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>metodo, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>o <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> .  
   
-2. Nella chiamata all'interfaccia di hosting non gestita a caricare common language runtime (CLR).  
+2. Nella chiamata all'interfaccia host non gestita per caricare il Common Language Runtime (CLR).  
   
-     Se un'interfaccia di hosting non gestita (anziché un semplice eseguibile gestito) consente di caricare Common Language Runtime, è possibile specificare un flag speciale nella chiamata ai [funzione CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) (funzione). Per abilitare la modalità di compatibilità per l'intero processo, impostare il `flags` parametro per [funzione CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) a `STARTUP_ALWAYSFLOW_IMPERSONATION`.  
+     Se per il caricamento di CLR viene utilizzata un'interfaccia di hosting non gestita, anziché un semplice eseguibile gestito, è possibile specificare un flag speciale nella chiamata alla funzione [funzione CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md) . Per abilitare la modalità di compatibilità per l'intero processo, impostare `flags` il parametro per la [funzione CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md) su `STARTUP_ALWAYSFLOW_IMPERSONATION`.  
   
 ## <a name="configuration-file"></a>File di configurazione  
- In un'applicazione .NET Framework, questo elemento può essere usato solo nel file di configurazione dell'applicazione.  
+ In un'applicazione .NET Framework, questo elemento può essere utilizzato solo nel file di configurazione dell'applicazione.  
   
- Per un'applicazione ASP.NET, il flusso delle rappresentazioni può essere configurato nel file ASPNET nel \<cartella Windows > \Microsoft.NET\Framework\vx.x.xxxx directory.  
+ Per un'applicazione ASP.NET, il flusso di rappresentazione può essere configurato nel file Aspnet. config presente nella \<cartella Windows > directory \Microsoft.NET\Framework\vx.x.xxxx.  
   
- Per impostazione predefinita ASP.NET così disabilitato il flusso di rappresentazione nel file Aspnet. config usando le impostazioni di configurazione seguenti:  
+ Per impostazione predefinita, ASP.NET Disabilita il flusso di rappresentazione nel file Aspnet. config usando le impostazioni di configurazione seguenti:  
   
 ```xml
 <configuration>  
@@ -86,7 +86,7 @@ Specifica che l'identità di Windows passa sempre attraverso punti asincroni, in
 </configuration>  
 ```  
   
- In ASP.NET, se si vuole consentire il flusso delle rappresentazioni in alternativa, è necessario utilizzare in modo esplicito le impostazioni di configurazione seguenti:  
+ In ASP.NET, se invece si desidera consentire il flusso di rappresentazione, è necessario utilizzare in modo esplicito le impostazioni di configurazione seguenti:  
   
 ```xml  
 <configuration>  
@@ -98,7 +98,7 @@ Specifica che l'identità di Windows passa sempre attraverso punti asincroni, in
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come specificare che l'identità di Windows passa attraverso punti asincroni, anche quando la rappresentazione viene ottenuta tramite metodi gestiti.  
+ Nell'esempio seguente viene illustrato come specificare che l'identità di Windows scorre tra punti asincroni, anche quando la rappresentazione viene eseguita tramite mezzi diversi dai metodi gestiti.  
   
 ```xml  
 <configuration>  
@@ -110,6 +110,6 @@ Specifica che l'identità di Windows passa sempre attraverso punti asincroni, in
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<legacyImpersonationPolicy > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)
+- [Schema delle impostazioni di runtime](index.md)
+- [Schema dei file di configurazione](../index.md)
+- [\<Elemento > legacyImpersonationPolicy](legacyimpersonationpolicy-element.md)

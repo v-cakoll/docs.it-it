@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: 36d174beea58ff96674bd873bfbcb8be89591669
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ff44f0251936d51b4e396c37c53322efa110227
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674558"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659414"
 ---
-# <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy > (impostazioni di rete)
-Indica se la memorizzazione nella cache FTP è attivo e ne descrive l'impostazione predefinita dei criteri di memorizzazione nella cache.  
+# <a name="defaultftpcachepolicy-element-network-settings"></a>\<Elemento > defaultFtpCachePolicy (impostazioni di rete)
+Descrive se la memorizzazione nella cache FTP è attiva e descrive i criteri di memorizzazione nella cache predefiniti.  
   
  \<configuration>  
 \<system.net>  
@@ -38,34 +38,34 @@ Indica se la memorizzazione nella cache FTP è attivo e ne descrive l'impostazio
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`policyLevel`|Specifica il protocollo FTP dei criteri di memorizzazione nella cache. Il valore predefinito è `Default`.|  
+|`policyLevel`|Specifica i criteri di memorizzazione nella cache FTP. Il valore predefinito è `Default`.|  
   
-## <a name="policylevel-attribute"></a>Attributo policyLevel  
+## <a name="policylevel-attribute"></a>policyLevel (attributo)  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|`Default`|Restituisce la risorsa memorizzata nella cache se la risorsa è aggiornata, la lunghezza del contenuto è precisa e la scadenza, modifica e gli attributi di lunghezza del contenuto sono presenti.|  
+|`Default`|Restituisce la risorsa memorizzata nella cache se la risorsa è aggiornata, la lunghezza del contenuto è precisa e sono presenti gli attributi relativi alla scadenza, alla modifica e alla lunghezza del contenuto.|  
 |`BypassCache`|Restituisce la risorsa dal server.|  
-|`CacheOnly`|Restituisce la risorsa memorizzata nella cache se la lunghezza del contenuto è presente e corrisponde alla dimensione dell'elemento.|  
-|`CacheIfAvailable`|Restituisce la risorsa memorizzata nella cache se la lunghezza del contenuto viene fornita e corrisponde alla dimensione dell'elemento; in caso contrario, la risorsa viene scaricata dal server e viene restituita al chiamante.|  
-|`Revalidate`|Restituisce la risorsa memorizzata nella cache se il timestamp della risorsa memorizzata nella cache è identico a quello della risorsa del server. in caso contrario, la risorsa viene scaricata dal server di, memorizzata nella cache e restituita al chiamante.|  
-|`Reload`|Scarica la risorsa dal server, viene memorizzato nella cache e la risorsa viene restituito al chiamante.|  
-|`NoCacheNoStore`|Se esiste una risorsa memorizzata nella cache, viene eliminata. La risorsa viene scaricata dal server e viene restituita al chiamante.|  
-|`Revalidate`|Soddisfa una richiesta mediante la copia memorizzata nella cache della risorsa se il timestamp è identico a quello della risorsa del server. in caso contrario, la risorsa viene scaricata dal server di, presentata al chiamante e memorizzata nella cache.|  
+|`CacheOnly`|Restituisce la risorsa memorizzata nella cache se la lunghezza del contenuto è presente e corrisponde alla dimensione della voce.|  
+|`CacheIfAvailable`|Restituisce la risorsa memorizzata nella cache se viene fornita la lunghezza del contenuto e corrisponde alla dimensione della voce. in caso contrario, la risorsa viene scaricata dal server e viene restituita al chiamante.|  
+|`Revalidate`|Restituisce la risorsa memorizzata nella cache se il timestamp della risorsa memorizzata nella cache corrisponde al timestamp della risorsa nel server. in caso contrario, la risorsa viene scaricata dal server, archiviata nella cache e restituita al chiamante.|  
+|`Reload`|Scarica la risorsa dal server, la archivia nella cache e restituisce la risorsa al chiamante.|  
+|`NoCacheNoStore`|Se una risorsa memorizzata nella cache esiste, viene eliminata. La risorsa viene scaricata dal server e viene restituita al chiamante.|  
+|`Revalidate`|Soddisfa una richiesta utilizzando la copia memorizzata nella cache della risorsa se il timestamp corrisponde al timestamp della risorsa nel server. in caso contrario, la risorsa viene scaricata dal server, presentata al chiamante e archiviata nella cache.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.|  
+|[requestCaching](requestcaching-element-network-settings.md)|Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.|  
   
 ## <a name="remarks"></a>Note  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come specificare un criterio della cache FTP `NoCacheNoStore`.  
+ Nell'esempio seguente viene illustrato come specificare un criterio di memorizzazione nella cache `NoCacheNoStore`FTP di.  
   
 ```xml  
 <configuration>  
@@ -84,4 +84,4 @@ Indica se la memorizzazione nella cache FTP è attivo e ne descrive l'impostazio
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9647297bf976d26a97be0da8807d607789e8a065
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 876452a0a56d10f169526138cdbbbd153572f457
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489581"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658841"
 ---
-# <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > elemento
+# <a name="throwunobservedtaskexceptions-element"></a>\<Elemento > ThrowUnobservedTaskExceptions
 Specifica se le eccezioni di attività non gestite devono comportare l'arresto di un processo in esecuzione.  
   
  \<configuration>  
@@ -42,7 +42,7 @@ Specifica se le eccezioni di attività non gestite devono comportare l'arresto d
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|Descrizione|  
+|Valore|DESCRIZIONE|  
 |-----------|-----------------|  
 |`false`|Non termina il processo in esecuzione per un'eccezione di attività non gestita. Questa è l'impostazione predefinita.|  
 |`true`|Termina il processo in esecuzione per un'eccezione di attività non gestita.|  
@@ -61,17 +61,17 @@ Specifica se le eccezioni di attività non gestite devono comportare l'arresto d
 ## <a name="remarks"></a>Note  
  Se un'eccezione associata a un oggetto <xref:System.Threading.Tasks.Task> non è stata osservata, non esiste alcuna operazione <xref:System.Threading.Tasks.Task.Wait%2A>, l'elemento padre non è associato, la proprietà <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> non è stata letta e l'eccezione di attività viene considerata non osservata.  
   
- In .NET Framework 4, per impostazione predefinita, se un <xref:System.Threading.Tasks.Task> che dispone di un non osservata eccezione è sottoposto a garbage collection, il finalizzatore viene generata un'eccezione e termina il processo. L'interruzione del processo è determinata dall'intervallo di Garbage Collection e finalizzazione.  
+ Nel .NET Framework 4, per impostazione predefinita, se un <xref:System.Threading.Tasks.Task> oggetto con un'eccezione non osservata viene sottoposta a Garbage Collection, il finalizzatore genera un'eccezione e termina il processo. L'interruzione del processo è determinata dall'intervallo di Garbage Collection e finalizzazione.  
   
- Per renderne più semplice per gli sviluppatori di scrivere codice asincrono basato su attività, .NET Framework 4.5 modifica questo comportamento predefinito per le eccezioni non osservate. Le eccezioni non osservate comportano ancora la generazione dell'evento <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>, ma, per impostazione predefinita, il processo non viene terminato. Invece, l'eccezione viene ignorata dopo la generazione dell'evento, indipendentemente dal fatto che l'eccezione venga rilevata da un gestore eventi.  
+ Per semplificare la scrittura di codice asincrono in base alle attività da parte degli sviluppatori, il .NET Framework 4,5 modifica questo comportamento predefinito per le eccezioni non osservate. Le eccezioni non osservate comportano ancora la generazione dell'evento <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>, ma, per impostazione predefinita, il processo non viene terminato. Invece, l'eccezione viene ignorata dopo la generazione dell'evento, indipendentemente dal fatto che l'eccezione venga rilevata da un gestore eventi.  
   
- In .NET Framework 4.5, è possibile usare la [ \<ThrowUnobservedTaskExceptions > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) in un file di configurazione dell'applicazione per abilitare il comportamento di .NET Framework 4 di generare un'eccezione.  
+ Nel .NET Framework 4,5, è possibile usare l' [ \<elemento ThrowUnobservedTaskExceptions >](throwunobservedtaskexceptions-element.md) in un file di configurazione dell'applicazione per abilitare il comportamento .NET Framework 4 della generazione di un'eccezione.  
   
  Il comportamento dell'eccezione può anche essere specificato in uno dei modi seguenti:  
   
 - Impostando la variabile di ambiente `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
   
-- Impostando il valore DWORD del Registro di sistema valore ThrowUnobservedTaskExceptions = 1 in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Chiave NETFramework.  
+- Impostando il valore DWORD del registro di sistema ThrowUnobservedTaskExceptions = 1\\in HKEY_LOCAL_MACHINE\Software\Microsoft. Chiave di NETFramework.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come abilitare la generazione di eccezioni nelle attività tramite un file di configurazione dell'applicazione.  
@@ -92,5 +92,5 @@ Specifica se le eccezioni di attività non gestite devono comportare l'arresto d
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema delle impostazioni di runtime](index.md)
+- [Schema dei file di configurazione](../index.md)

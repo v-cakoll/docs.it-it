@@ -8,15 +8,15 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: 54fb68ab0bf8aa2665d70391350c626131ccb4bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8ea08cbd76e60a3665703bc50924dd94500cd87
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674506"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659327"
 ---
-# <a name="mailsettings-element-network-settings"></a>\<mailSettings > (impostazioni di rete)
-Consente di configurare le opzioni di invio della posta elettronica.  
+# <a name="mailsettings-element-network-settings"></a>\<Elemento > mailSettings (impostazioni di rete)
+Configura le opzioni di invio della posta elettronica.  
 
 \<configuration>  
 \<system.net>  
@@ -38,18 +38,18 @@ Consente di configurare le opzioni di invio della posta elettronica.
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
-|[\<SMTP > (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Configura le opzioni Simple Mail Transport Protocol.|  
+|[\<Elemento > SMTP (impostazioni di rete)](smtp-element-network-settings.md)|Configura le opzioni del protocollo di trasporto di posta elettronica semplice.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[Elemento \<system.Net> (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.|  
+|[Elemento \<system.Net> (impostazioni di rete)](system-net-element-network-settings.md)|Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente specifica i parametri appropriati di SMTP per inviare posta elettronica usando le credenziali di rete predefinite.  
+ Nell'esempio seguente vengono specificati i parametri SMTP appropriati per inviare messaggi di posta elettronica utilizzando le credenziali di rete predefinite.  
   
 ```xml  
 <configuration>  
@@ -70,4 +70,4 @@ Consente di configurare le opzioni di invio della posta elettronica.
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Net.Mail.SmtpClient>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

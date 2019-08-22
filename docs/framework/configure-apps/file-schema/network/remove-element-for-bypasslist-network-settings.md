@@ -10,21 +10,21 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: a04cca3e57af5cc422776c5b2444a140e86f98b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fd8de9af00aa861d92c8c201ef89545e108c790
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674467"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659231"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<rimuovere > (elemento) per bypasslist (impostazioni di rete)
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<Rimuovi elemento > per l'elemento bypass (impostazioni di rete)
 
-Rimuove un indirizzo IP o nome DNS dall'elenco di bypass del proxy.
+Rimuove un indirizzo IP o un nome DNS dall'elenco di bypass del proxy.
 
-\<configuration>\
-\<system.net>\
+\<> di configurazione \
+\<System. net > \
 \<defaultProxy>\
-\<bypasslist>\
+\<> di bypass \
 \<remove>
 
 ## <a name="syntax"></a>Sintassi
@@ -43,7 +43,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 |**Attributo**|**Descrizione**|
 |-------------------|---------------------|
-|`address`|Un'espressione regolare che descrive un indirizzo IP o nome DNS.|
+|`address`|Espressione regolare che descrive un indirizzo IP o un nome DNS.|
 
 ### <a name="child-elements"></a>Elementi figlio
 
@@ -53,15 +53,15 @@ Nessuno.
 
 |**Elemento**|**Descrizione**|
 |-----------------|---------------------|
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usano un proxy.|
+|[bypasslist](bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non utilizzano un proxy.|
 
 ## <a name="remarks"></a>Note
 
-Il `remove` elemento rimuove le espressioni regolari che descrivono gli indirizzi IP o nomi di server DNS nell'elenco di indirizzi che ignorano un server proxy. Gli indirizzi sono stati definiti in precedenza nel file di configurazione o a un livello superiore nella gerarchia di configurazione.
+L' `remove` elemento rimuove le espressioni regolari che descrivono gli indirizzi IP o i nomi dei server DNS dall'elenco di indirizzi che ignorano un server proxy. Gli indirizzi sono stati definiti in precedenza nel file di configurazione o a un livello superiore nella gerarchia di configurazione.
 
-Il valore per il `address` attributo deve essere un'espressione regolare che descrive un set di indirizzi IP o nomi host.
+Il valore `address` dell'attributo deve essere un'espressione regolare che descrive un set di indirizzi IP o nomi host.
 
-Per altre informazioni sulle espressioni regolari, vedere. [Espressioni regolari di .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).
+Per ulteriori informazioni sulle espressioni regolari, vedere. [.NET Framework espressioni regolari](../../../../../docs/standard/base-types/regular-expressions.md).
 
 ## <a name="configuration-files"></a>File di configurazione
 
@@ -69,7 +69,7 @@ Questo elemento può essere usato nel file di configurazione dell'applicazione o
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente rimuove le definizioni precedenti per il dominio Adventure-Works.com e quindi aggiunge il dominio contoso.com all'elenco di esclusione.
+Nell'esempio seguente viene rimossa qualsiasi definizione precedente per il dominio adventure-works.com, quindi viene aggiunto il dominio contoso.com all'elenco di bypass.
 
 ```xml
 <configuration>
@@ -87,4 +87,4 @@ Nell'esempio seguente rimuove le definizioni precedenti per il dominio Adventure
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

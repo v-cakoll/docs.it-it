@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c2ed46e1d26d829fbe832e44efb40844ae7d56f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba74907e2f6fc2ca14e12a24113fa7654c9b967e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592718"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663805"
 ---
-# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > elemento
-Specifica se disabilitare la memorizzazione nella cache degli errori che si verificano perché l'assembly non è stato trovato il sondaggio di associazione.  
+# <a name="disablecachingbindingfailures-element"></a>\<Elemento > disableCachingBindingFailures
+Specifica se disabilitare la memorizzazione nella cache degli errori di associazione che si verificano perché l'assembly non è stato trovato da Probe.  
   
- \<configurazione > elemento  
-\<runtime > elemento  
+ \<Configuration >-elemento  
+\<Elemento runtime >  
 \<disableCachingBindingFailures>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -37,16 +37,16 @@ Specifica se disabilitare la memorizzazione nella cache degli errori che si veri
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
-|enabled|Attributo obbligatorio.<br /><br /> Specifica se disabilitare la memorizzazione nella cache degli errori che si verificano perché l'assembly non è stato trovato il sondaggio di associazione.|  
+|enabled|Attributo obbligatorio.<br /><br /> Specifica se disabilitare la memorizzazione nella cache degli errori di associazione che si verificano perché l'assembly non è stato trovato da Probe.|  
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|0|Non disabilitare la memorizzazione nella cache degli errori che si verificano perché l'assembly non è stato trovato il sondaggio di associazione. Questo è il comportamento predefinito dell'associazione a partire da .NET Framework versione 2.0.|  
-|1|Disabilitare la memorizzazione nella cache degli errori che si verificano perché l'assembly non è stato trovato il sondaggio di associazione. Questa impostazione consente di ripristinare il comportamento di associazione di .NET Framework versione 1.1.|  
+|0|Non disabilitare la memorizzazione nella cache degli errori di associazione che si verificano perché l'assembly non è stato trovato da Probe. Questo è il comportamento di binding predefinito a partire dalla versione .NET Framework 2,0.|  
+|1|Disabilitare la memorizzazione nella cache degli errori di associazione che si verificano perché l'assembly non è stato trovato da Probe. Questa impostazione ripristina il comportamento di associazione della .NET Framework versione 1,1.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -59,18 +59,18 @@ Specifica se disabilitare la memorizzazione nella cache degli errori che si veri
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- A partire da .NET Framework versione 2.0, il comportamento predefinito per il caricamento degli assembly è per memorizzare nella cache tutti i binding e gli errori di caricamento. Vale a dire, se non riesce un tentativo di caricare un assembly, le successive richieste per caricare l'assembly stesso immediatamente esito negativo, senza tentare di individuare l'assembly. Questo elemento consente di disattivare il comportamento predefinito per gli errori che si verificano perché l'assembly non è stato trovato nel percorso di sondaggio di associazione. Questi errori generano <xref:System.IO.FileNotFoundException>.  
+ A partire dalla versione di .NET Framework 2,0, il comportamento predefinito per il caricamento degli assembly consiste nel memorizzare nella cache tutti gli errori di binding e caricamento. Ovvero, se il tentativo di caricamento di un assembly ha esito negativo, le successive richieste di caricamento dello stesso assembly hanno esito negativo, senza alcun tentativo di individuazione dell'assembly. Questo elemento Disabilita il comportamento predefinito per gli errori di associazione che si verificano perché l'assembly non è stato trovato nel percorso di probe. Questi errori generano <xref:System.IO.FileNotFoundException>.  
   
- Associazione di alcuni errori di caricamento non sono interessati da questo elemento e vengono sempre memorizzati nella cache. Questi errori si verificano perché l'assembly è stato trovato ma non può essere caricato. Generano <xref:System.BadImageFormatException> o <xref:System.IO.FileLoadException>. Nell'elenco seguente sono riportati alcuni esempi di tali errori.  
+ Alcuni errori di binding e caricamento non sono interessati da questo elemento e vengono sempre memorizzati nella cache. Questi errori si verificano perché l'assembly è stato trovato ma non è stato possibile caricarlo. Generano <xref:System.BadImageFormatException> o <xref:System.IO.FileLoadException>. Nell'elenco seguente sono inclusi alcuni esempi di tali errori.  
   
-- Se si tenta di caricare un file non è un assembly valido, i tentativi successivi per caricare l'assembly avrà esito negativo anche se il file non valido viene sostituito con l'assembly corretto.  
+- Se si tenta di caricare un file non è un assembly valido, i tentativi successivi di caricamento dell'assembly avranno esito negativo anche se il file danneggiato viene sostituito con l'assembly corretto.  
   
-- Se si tenta di caricare un assembly che è stato bloccato dal file system, i tentativi successivi per caricare l'assembly avrà esito negativo anche dopo che l'assembly viene rilasciata dal file system.  
+- Se si tenta di caricare un assembly bloccato dal file system, i tentativi successivi di caricamento dell'assembly avranno esito negativo anche dopo che l'assembly verrà rilasciato dal file system.  
   
-- Se uno o più versioni dell'assembly che si sta tentando di caricare è nel percorso di sondaggio, ma la versione specifica di che richiesta non è tra di essi, i tentativi successivi di caricare tale versione avrà esito negativo anche se la versione corretta verrà spostata nel percorso di sondaggio.  
+- Se una o più versioni dell'assembly che si sta tentando di caricare si trovano nel percorso di sondaggio, ma la versione specifica richiesta non è tra di esse, i successivi tentativi di caricamento della versione avranno esito negativo anche se la versione corretta viene spostata nel percorso di sondaggio.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come disabilitare la memorizzazione nella cache di errori di associazione di assembly che si verificano perché l'assembly non è stato trovato il sondaggio.  
+ Nell'esempio seguente viene illustrato come disabilitare la memorizzazione nella cache degli errori di associazione degli assembly che si verificano perché l'assembly non è stato trovato da Probe.  
   
 ```xml  
 <configuration>  
@@ -82,6 +82,6 @@ Specifica se disabilitare la memorizzazione nella cache degli errori che si veri
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Come il runtime individua gli assembly](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Schema delle impostazioni di runtime](index.md)
+- [Schema dei file di configurazione](../index.md)
+- [Come il runtime individua gli assembly](../../../deployment/how-the-runtime-locates-assemblies.md)

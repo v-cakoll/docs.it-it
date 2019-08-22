@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: a46e6af97f37974805812fb0d19801d618eee4d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d72371921a85ff5a68dd9017f0fe8cf5d28557dd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705155"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664243"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<aggiungere > (elemento) per authenticationModules (impostazioni di rete)
+# <a name="add-element-for-authenticationmodules-network-settings"></a>\<aggiungere > elemento per authenticationModules (impostazioni di rete)
 Aggiunge un modulo di autenticazione all'applicazione.  
   
  \<configuration>  
@@ -40,7 +40,7 @@ Aggiunge un modulo di autenticazione all'applicazione.
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
-|`type`|Il nome completo del tipo (indicato dal <xref:System.Type.FullName%2A> proprietà) e il nome dell'assembly (indicato dal <xref:System.Reflection.Assembly.FullName%2A> proprietà), separati da una virgola.|  
+|`type`|Il nome completo del tipo (indicato dalla <xref:System.Type.FullName%2A> proprietà) e il nome dell'assembly (indicato <xref:System.Reflection.Assembly.FullName%2A> dalla proprietà), separati da una virgola.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -49,18 +49,18 @@ Aggiunge un modulo di autenticazione all'applicazione.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Specifica i moduli usati per autenticare le richieste di rete.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Specifica i moduli usati per autenticare le richieste di rete.|  
   
 ## <a name="remarks"></a>Note  
  Con l'elemento `add` viene aggiunto un modulo di autenticazione alla fine dell'elenco dei moduli di autenticazione registrati. I moduli di autenticazione vengono chiamati nell'ordine in cui sono stati aggiunti all'elenco.  
   
- Il valore per il `type` attributo deve essere un nome di tipo valido e il corrispondente nome dell'assembly, separati da una virgola.  
+ Il valore `type` dell'attributo deve essere un nome di tipo valido e un nome di assembly corrispondente, separati da una virgola.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente Abilita i moduli di autenticazione predefinito. È necessario sostituire i valori per la versione e PublicKeyToken con i valori corretti per il modulo specificato.  
+ Nell'esempio seguente vengono abilitati i moduli di autenticazione predefiniti. È necessario sostituire i valori per Version e PublicKeyToken con i valori corretti per il modulo specificato.  
   
 ```xml  
 <configuration>  
@@ -85,4 +85,4 @@ Aggiunge un modulo di autenticazione all'applicazione.
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

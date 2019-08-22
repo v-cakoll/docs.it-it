@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7c7f866cdbcd39194d61a3db821bf973b4e057e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704765"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663812"
 ---
-# <a name="developmentmode-element"></a>\<developmentMode > elemento
+# <a name="developmentmode-element"></a>\<Elemento > developmentMode
 Specifica se il runtime cerca gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.  
   
  \<configuration>  
 \<runtime>  
-\<developmentMode >  
+\<> developmentMode  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +45,7 @@ Specifica se il runtime cerca gli assembly nelle directory specificate dalla var
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**true**|Cerca gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.|  
-|**false**|Non esegue la ricerca per gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH. Questo è il valore predefinito|  
+|**false**|Non cerca gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH. Questa è l'impostazione predefinita|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -58,10 +58,10 @@ Specifica se il runtime cerca gli assembly nelle directory specificate dalla var
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- Usare questa impostazione solo in fase di sviluppo. Il runtime non verifica se le versioni di assembly con nome sicuro trovato nel DEVPATH. Utilizza semplicemente il primo assembly individuato.  
+ Usare questa impostazione solo in fase di sviluppo. Il runtime non controlla le versioni in assembly con nome sicuro presenti in DEVPATH. Usa semplicemente il primo assembly trovato.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come parte del runtime cercare gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.  
+ Nell'esempio seguente viene illustrato come fare in modo che il runtime cerchi gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,6 @@ Specifica se il runtime cerca gli assembly nelle directory specificate dalla var
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Procedura: Individuare assembly mediante DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [Schema delle impostazioni di runtime](index.md)
+- [Schema dei file di configurazione](../index.md)
+- [Procedura: Individuare gli assembly usando DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)

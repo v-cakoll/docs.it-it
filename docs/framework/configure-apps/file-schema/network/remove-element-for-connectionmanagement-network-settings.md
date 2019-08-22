@@ -10,19 +10,19 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: d9c584fb2faa971e7ce1ca287a94c8c6129820fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ab7a43fbb3e8df5bb0c99b5947f2fafb362399a
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705194"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664036"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<rimuovere > (elemento) per connectionManagement (impostazioni di rete)
-Rimuove un indirizzo IP o nome DNS dall'elenco di gestione connessione.  
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<rimuovere > elemento per connectionManagement (impostazioni di rete)
+Rimuove un indirizzo IP o un nome DNS dall'elenco di gestione della connessione.  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement>  
+\<> connectionManagement  
 \<remove>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -40,7 +40,7 @@ Rimuove un indirizzo IP o nome DNS dall'elenco di gestione connessione.
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
-|`address`|Un indirizzo IP o nome DNS.|  
+|`address`|Un indirizzo IP o un nome DNS.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -49,18 +49,18 @@ Rimuove un indirizzo IP o nome DNS dall'elenco di gestione connessione.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Specifica il numero massimo di connessioni a un host di rete.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Specifica il numero massimo di connessioni a un host di rete.|  
   
 ## <a name="remarks"></a>Note  
- Il `remove` elemento rimuove la voce di elenco di gestione connessione per il server specificato.  
+ L' `remove` elemento rimuove la voce dell'elenco di gestione connessione per il server specificato.  
   
- Il valore della `address` attributo deve essere un nome host o indirizzo IP valido.  
+ Il valore dell' `address` attributo deve essere un indirizzo IP o un nome host valido.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente rimuove tutte le voci di elenco di gestione connessione per il server `www.adventure-works.com` e quindi configura un'applicazione di usare quattro connessioni al server `www.contoso.com` e due connessioni a tutti gli altri server.  
+ Nell'esempio seguente vengono rimosse tutte le voci dell'elenco di `www.adventure-works.com` gestione connessione per il server e quindi viene configurata un'applicazione `www.contoso.com` per l'utilizzo di quattro connessioni al server e due connessioni a tutti gli altri server.  
   
 ```xml  
 <configuration>  
@@ -78,4 +78,4 @@ Rimuove un indirizzo IP o nome DNS dall'elenco di gestione connessione.
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

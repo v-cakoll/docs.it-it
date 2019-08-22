@@ -10,15 +10,15 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: 4c1116c088c12ad3859714c8d75704d0156c12f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f99c5b0dc7eab57d4e3e86f49dbbb3228c7b7d8b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705142"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664212"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>\<aggiungere > (elemento) per webRequestModules (impostazioni di rete)
-Aggiunge un modulo di richiesta Web personalizzato per l'applicazione.  
+# <a name="add-element-for-webrequestmodules-network-settings"></a>\<aggiungere > elemento per webRequestModules (impostazioni di rete)
+Aggiunge un modulo di richiesta Web personalizzato all'applicazione.  
   
  \<configuration>  
 \<system.net>  
@@ -41,8 +41,8 @@ Aggiunge un modulo di richiesta Web personalizzato per l'applicazione.
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
-|`prefix`|Il prefisso URI per le richieste gestite da questo modulo di richiesta Web.|  
-|`type`|Il nome completo del tipo (indicato dal <xref:System.Type.FullName%2A> proprietà) e il nome dell'assembly (indicato dal <xref:System.Reflection.Assembly.FullName%2A> proprietà), separati da una virgola, che implementa questo modulo di richiesta Web.|  
+|`prefix`|Prefisso URI per le richieste gestite da questo modulo di richiesta Web.|  
+|`type`|Il nome completo del tipo (indicato dalla <xref:System.Type.FullName%2A> proprietà) e il nome dell'assembly (indicato <xref:System.Reflection.Assembly.FullName%2A> dalla proprietà), separati da una virgola, che implementa questo modulo di richiesta Web.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -51,22 +51,22 @@ Aggiunge un modulo di richiesta Web personalizzato per l'applicazione.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Specifica i moduli da utilizzare per richiedere informazioni da host di rete.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Specifica i moduli da usare per richiedere informazioni dagli host di rete.|  
   
 ## <a name="remarks"></a>Note  
- Il `prefix` attributo definisce il prefisso URI che usa il modulo di richiesta Web specificato. Moduli di richiesta Web sono in genere registrati per gestire un protocollo specifico, ad esempio HTTP o FTP, ma possono essere registrati per gestire una richiesta a un server specifico o un percorso in un server.  
+ L' `prefix` attributo definisce il prefisso URI che usa il modulo di richiesta Web specificato. I moduli di richiesta Web vengono in genere registrati per gestire un protocollo specifico, ad esempio HTTP o FTP, ma possono essere registrati per gestire una richiesta a un server o a un percorso specifico in un server.  
   
- Il modulo di richiesta Web viene creato quando viene passato un prefisso corrispondente a un URI per il <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> (metodo).  
+ Il modulo della richiesta Web viene creato quando un prefisso corrispondente URI viene passato al <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> metodo.  
   
- Il valore per il `prefix` attributo deve corrispondere ai caratteri iniziali di un URI valido. Ad esempio, `http` o `http://www.contoso.com`.
+ Il valore `prefix` dell'attributo deve essere costituito dai caratteri iniziali di un URI valido. Ad esempio, `http` o `http://www.contoso.com`.
   
- Il valore per il `type` attributo deve essere un nome di tipo valido e il corrispondente nome dell'assembly, separati da una virgola.
+ Il valore `type` dell'attributo deve essere un nome di tipo valido e un nome di assembly corrispondente, separati da una virgola.
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente registra un modulo di richiesta Web personalizzato per il protocollo HTTP. È necessario sostituire i valori per la versione e PublicKeyToken con i valori corretti per il modulo specificato.  
+ Nell'esempio seguente viene registrato un modulo di richiesta Web personalizzato per HTTP. È necessario sostituire i valori per Version e PublicKeyToken con i valori corretti per il modulo specificato.  
   
 ```xml  
 <configuration>  
@@ -84,4 +84,4 @@ Aggiunge un modulo di richiesta Web personalizzato per l'applicazione.
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Net.WebRequest>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

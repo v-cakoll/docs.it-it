@@ -8,15 +8,15 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: a459fee557285935c383dcfaf512c8a8a9aea570
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2e31dee4f5aff2bf6cedf5c4e9ca235695b0a53
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674370"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659089"
 ---
-# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory > (impostazioni di rete)
-Configura la directory locale per un server SMTP Simple Mail Transport Protocol ().  
+# <a name="specifiedpickupdirectory-element-network-settings"></a>\<Elemento > specifiedPickupDirectory (impostazioni di rete)
+Configura la directory locale per un server SMTP (Simple Mail Transport Protocol).  
   
  \<configuration>  
 \<system.net>  
@@ -39,7 +39,7 @@ Configura la directory locale per un server SMTP Simple Mail Transport Protocol 
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|La directory in cui le applicazioni salvano i messaggio di posta elettronica per l'elaborazione successiva con il server SMTP.|  
+|`pickupDirectoryLocation`|Directory in cui le applicazioni salvano i messaggi di posta elettronica per l'elaborazione successiva da parte del server SMTP.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -48,13 +48,13 @@ Configura la directory locale per un server SMTP Simple Mail Transport Protocol 
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<SMTP > (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Consente di configurare le opzioni di invio della posta elettronica SMTP Simple Mail Transport Protocol ().|  
+|[\<Elemento > SMTP (impostazioni di rete)](smtp-element-network-settings.md)|Configura le opzioni di invio di posta elettronica SMTP (Simple Mail Transport Protocol).|  
   
 ## <a name="remarks"></a>Note  
  Con l'attributo `specifiedPickupDirectory` viene impostata la directory in cui nelle applicazioni vengono salvati i messaggi di posta elettronica da elaborare mediante il server SMTP.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente specifica c:\maildrop come la directory di prelievo della posta.  
+ Nell'esempio seguente viene specificato c:\maildrop come la directory di prelievo della posta elettronica.  
   
 ```xml  
 <configuration>  
@@ -75,4 +75,4 @@ Configura la directory locale per un server SMTP Simple Mail Transport Protocol 
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)

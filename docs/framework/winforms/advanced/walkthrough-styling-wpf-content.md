@@ -6,24 +6,19 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 32ca9658ddf4ab6e8690f29797b7ac7b09df2ca7
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 287ed08db8a4266e5044a81d47a697949257e113
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012951"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658478"
 ---
 # <a name="walkthrough-style-wpf-content"></a>Procedura dettagliata: Stile contenuto WPF
 
-Questa procedura dettagliata mostra come applicare uno stile a un controllo Windows Presentation Foundation (WPF) incluso in un Windows Form.
-
- Questa procedura dettagliata prevede l'esecuzione delle attività seguenti:
-
-- Creare il progetto.
-
-- Creare il tipo di controllo WPF.
-
-- Applicare uno stile al controllo WPF.
+Questo articolo illustra come applicare lo stile a un controllo Windows Presentation Foundation (WPF) ospitato in un Windows Form.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -42,9 +37,9 @@ Dopo avere aggiunto un tipo di controllo WPF al progetto, è possibile inserirlo
 
 1. Aggiungere un nuovo progetto WPF <xref:System.Windows.Controls.UserControl> alla soluzione. Usare il nome predefinito per il tipo di controllo, `UserControl1.xaml`. Per altre informazioni, vedere [Procedura dettagliata: Creazione di nuovo contenuto WPF in Windows Forms in fase](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)di progettazione.
 
-2. In visualizzazione Progettazione verificare che `UserControl1` sia selezionato. Per altre informazioni, vedere [Procedura: Consente di selezionare e spostare elementi nell'](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))area di progettazione.
+2. In visualizzazione Progettazione verificare che `UserControl1` sia selezionato.
 
-3. Nella finestra **Proprietà** impostare il valore delle <xref:System.Windows.FrameworkElement.Width%2A> proprietà e <xref:System.Windows.FrameworkElement.Height%2A> su `200`.
+3. Nella finestra **Proprietà** impostare il valore delle <xref:System.Windows.FrameworkElement.Width%2A> proprietà e <xref:System.Windows.FrameworkElement.Height%2A> su **200**.
 
 4. Aggiungere un <xref:System.Windows.Controls.Button?displayProperty=nameWithType> <xref:System.Windows.Controls.UserControl> controllo a e <xref:System.Windows.Controls.ContentControl.Content%2A> impostare il valore della proprietà su **Cancel**.
 
@@ -60,15 +55,13 @@ Dopo avere aggiunto un tipo di controllo WPF al progetto, è possibile inserirlo
 
 1. Nella **casella degli strumenti**fare doppio clic `UserControl1` su per creare un'istanza `UserControl1` di nel form.
 
-     L'istanza di `UserControl1` viene inclusa in un nuovo controllo <xref:System.Windows.Forms.Integration.ElementHost> denominato `elementHost1`.
+   L'istanza di `UserControl1` viene inclusa in un nuovo controllo <xref:System.Windows.Forms.Integration.ElementHost> denominato `elementHost1`.
 
 1. Nel pannello smart tag per `elementHost1`fare clic su **modifica contenuto ospitato** nell'elenco a discesa.
 
-     `UserControl1` si apre in [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
+   `UserControl1`viene aperto in WPF Designer.
 
-1. Nella visualizzazione XAML inserire il seguente codice XAML dopo il tag di apertura `<UserControl>`.
-
-     Questo codice XAML crea una sfumatura con un bordo sfumato a contrasto. Quando si fa clic sul controllo, le sfumature vengono modificate per generare l'aspetto di un pulsante premuto. Per altre informazioni, vedere [Applicazione di stili e modelli](../../wpf/controls/styling-and-templating.md).
+1. Nella visualizzazione XAML inserire il seguente codice XAML dopo il tag di apertura `<UserControl>`. Questo codice XAML crea una sfumatura con un bordo sfumato a contrasto. Quando si fa clic sul controllo, le sfumature vengono modificate per generare l'aspetto di un pulsante premuto. Per altre informazioni, vedere [Applicazione di stili e modelli](../../wpf/controls/styling-and-templating.md).
 
    ```xaml
    <UserControl.Resources>
@@ -118,7 +111,7 @@ Dopo avere aggiunto un tipo di controllo WPF al progetto, è possibile inserirlo
    </UserControl.Resources>
    ```
 
-1. Applicare al pulsante Cancel lo stile `SimpleButton` definito nel passaggio precedente inserendo il seguente codice XAML nel tag `<Button>` del pulsante Cancel.
+1. Applicare lo `<Button>` stile definito nel passaggio precedente al pulsante Annulla inserendo il codice XAML seguente nel tag del pulsante **Annulla.** `SimpleButton`
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -139,7 +132,7 @@ Dopo avere aggiunto un tipo di controllo WPF al progetto, è possibile inserirlo
 
 1. Scegliere **Avvia debug** dal menu **debug** per eseguire l'applicazione.
 
-1. Fare clic sui pulsanti OK e Cancel e visualizzare le differenze.
+1. Fare clic sui pulsanti **OK** e **Annulla** e visualizzare le differenze.
 
 ## <a name="see-also"></a>Vedere anche
 

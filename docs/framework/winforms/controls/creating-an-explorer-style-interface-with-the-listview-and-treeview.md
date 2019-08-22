@@ -13,17 +13,16 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 540226dbbada0373854144ac874d2164208ad943
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d80f8e3bc729689b274af520bc37fda8417b0407
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039919"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658578"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Procedura dettagliata: Creazione di un'interfaccia di tipo Esplora risorse con i controlli ListView e TreeView usando la finestra di progettazione
 
 Uno dei vantaggi di Visual Studio è la possibilità di creare applicazioni Windows Forms professionali in un breve periodo di tempo. Uno scenario comune consiste nel creare un'interfaccia utente con <xref:System.Windows.Forms.ListView> i controlli e <xref:System.Windows.Forms.TreeView> che è simile alla funzionalità Esplora risorse dei sistemi operativi Windows. Esplora risorse Visualizza una struttura gerarchica dei file e delle cartelle nel computer di un utente.
-
 
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>Per creare il form contenente un controllo ListView e TreeView
 

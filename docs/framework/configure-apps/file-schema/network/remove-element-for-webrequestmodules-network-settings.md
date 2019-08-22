@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: c57e2849d608b1706c41beca91ff8026ebd9ca45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20a586e945a889d1fd8a8d4c5c09c8b790c56fc3
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705025"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664026"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<rimuovere > (elemento) per webRequestModules (impostazioni di rete)
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<rimuovere > elemento per webRequestModules (impostazioni di rete)
 Rimuove un modulo di richiesta Web personalizzato dall'applicazione.  
   
  \<configuration>  
@@ -40,7 +40,7 @@ Rimuove un modulo di richiesta Web personalizzato dall'applicazione.
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
-|`prefix`|Il prefisso URI per le richieste gestite da questo modulo di richiesta Web.|  
+|`prefix`|Prefisso URI per le richieste gestite da questo modulo di richiesta Web.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -49,19 +49,19 @@ Rimuove un modulo di richiesta Web personalizzato dall'applicazione.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Specifica i moduli da utilizzare per richiedere informazioni da host di rete.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Specifica i moduli da usare per richiedere informazioni dagli host di rete.|  
   
 ## <a name="remarks"></a>Note  
- Il `remove` elemento rimuove il modulo di richiesta Web registrato per il prefisso URI specificati.  
+ L' `remove` elemento rimuove il modulo di richiesta Web registrato per il prefisso URI specificato.  
   
- Il valore per il `prefix` attributo deve essere i caratteri iniziali di un URI valido, ad esempio, "`http`", o "`http://www.contoso.com`".  
+ Il valore `prefix` dell'attributo deve essere costituito dai caratteri iniziali di un URI valido, ad esempio "`http`" o "`http://www.contoso.com`".  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
 
-L'esempio seguente rimuove il modulo di richiesta Web esistente per HTTP e registra un nuovo modulo di richiesta Web personalizzato per il protocollo HTTP richiede `www.contoso.com`.
+Nell'esempio seguente viene rimosso il modulo di richiesta Web esistente per HTTP, quindi viene registrato un nuovo modulo di richiesta Web personalizzato `www.contoso.com`per le richieste HTTP a.
   
 ```xml  
 <configuration>  
@@ -80,4 +80,4 @@ L'esempio seguente rimuove il modulo di richiesta Web esistente per HTTP e regis
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Net.WebRequest>
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schema delle impostazioni di rete](index.md)
