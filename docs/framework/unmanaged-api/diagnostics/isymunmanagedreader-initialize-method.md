@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1986ed730c6f0a1ba8a2d8e3c688e6872184da9d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f2dceeb2f0b3aa9f3147157e77087dffbf2d5f85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736761"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939017"
 ---
-# <a name="isymunmanagedreaderinitialize-method"></a><span data-ttu-id="cdaf3-102">Metodo ISymUnmanagedReader::Initialize</span><span class="sxs-lookup"><span data-stu-id="cdaf3-102">ISymUnmanagedReader::Initialize Method</span></span>
-<span data-ttu-id="cdaf3-103">Inizializza il lettore di simboli con l'interfaccia dell'utilità di importazione dei metadati che verrà associato, insieme al nome file del modulo di questo lettore.</span><span class="sxs-lookup"><span data-stu-id="cdaf3-103">Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.</span></span>  
+# <a name="isymunmanagedreaderinitialize-method"></a><span data-ttu-id="f289f-102">Metodo ISymUnmanagedReader::Initialize</span><span class="sxs-lookup"><span data-stu-id="f289f-102">ISymUnmanagedReader::Initialize Method</span></span>
+<span data-ttu-id="f289f-103">Inizializza il lettore di simboli con l'interfaccia dell'utilità di importazione dei metadati a cui verrà associato questo Reader, insieme al nome file del modulo.</span><span class="sxs-lookup"><span data-stu-id="f289f-103">Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="cdaf3-104">Questo metodo può essere chiamato una sola volta e deve essere chiamato prima degli altri metodi di lettura.</span><span class="sxs-lookup"><span data-stu-id="cdaf3-104">This method can be called only once, and must be called before any other reader methods.</span></span>  
+> <span data-ttu-id="f289f-104">Questo metodo può essere chiamato una sola volta e deve essere chiamato prima di qualsiasi altro metodo Reader.</span><span class="sxs-lookup"><span data-stu-id="f289f-104">This method can be called only once, and must be called before any other reader methods.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cdaf3-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="cdaf3-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f289f-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f289f-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT Initialize (  
@@ -40,28 +40,28 @@ HRESULT Initialize (
     [in]  IStream      *pIStream);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cdaf3-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="cdaf3-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f289f-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="f289f-106">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="cdaf3-107">[in] L'interfaccia dell'utilità di importazione di metadati con cui verrà associato questo lettore.</span><span class="sxs-lookup"><span data-stu-id="cdaf3-107">[in] The metadata importer interface with which this reader will be associated.</span></span>  
+ <span data-ttu-id="f289f-107">in Interfaccia dell'utilità di importazione dei metadati a cui verrà associato il lettore.</span><span class="sxs-lookup"><span data-stu-id="f289f-107">[in] The metadata importer interface with which this reader will be associated.</span></span>  
   
  `filename`  
- <span data-ttu-id="cdaf3-108">[in] Nome file del modulo.</span><span class="sxs-lookup"><span data-stu-id="cdaf3-108">[in] The file name of the module.</span></span> <span data-ttu-id="cdaf3-109">È possibile usare il `pIStream` parametro invece.</span><span class="sxs-lookup"><span data-stu-id="cdaf3-109">You can use the `pIStream` parameter instead.</span></span>  
+ <span data-ttu-id="f289f-108">in Nome file del modulo.</span><span class="sxs-lookup"><span data-stu-id="f289f-108">[in] The file name of the module.</span></span> <span data-ttu-id="f289f-109">In alternativa, è `pIStream` possibile usare il parametro.</span><span class="sxs-lookup"><span data-stu-id="f289f-109">You can use the `pIStream` parameter instead.</span></span>  
   
  `searchPath`  
- <span data-ttu-id="cdaf3-110">[in] Il percorso di ricerca.</span><span class="sxs-lookup"><span data-stu-id="cdaf3-110">[in] The path to search.</span></span> <span data-ttu-id="cdaf3-111">Questo parametro è facoltativo.</span><span class="sxs-lookup"><span data-stu-id="cdaf3-111">This parameter is optional.</span></span>  
+ <span data-ttu-id="f289f-110">in Percorso in cui eseguire la ricerca.</span><span class="sxs-lookup"><span data-stu-id="f289f-110">[in] The path to search.</span></span> <span data-ttu-id="f289f-111">Questo parametro è facoltativo.</span><span class="sxs-lookup"><span data-stu-id="f289f-111">This parameter is optional.</span></span>  
   
  `pIStream`  
- <span data-ttu-id="cdaf3-112">[in] Il flusso di file, usato come alternativa per il parametro filename.</span><span class="sxs-lookup"><span data-stu-id="cdaf3-112">[in] The file stream, used as an alternative to the filename parameter.</span></span>  
+ <span data-ttu-id="f289f-112">in Il flusso di file, usato come alternativa al parametro filename.</span><span class="sxs-lookup"><span data-stu-id="f289f-112">[in] The file stream, used as an alternative to the filename parameter.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cdaf3-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="cdaf3-113">Return Value</span></span>  
- <span data-ttu-id="cdaf3-114">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="cdaf3-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f289f-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="f289f-113">Return Value</span></span>  
+ <span data-ttu-id="f289f-114">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="f289f-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cdaf3-115">Note</span><span class="sxs-lookup"><span data-stu-id="cdaf3-115">Remarks</span></span>  
- <span data-ttu-id="cdaf3-116">È necessario specificare solo uno dei `filename` o il `pIStream` parametri, non entrambi.</span><span class="sxs-lookup"><span data-stu-id="cdaf3-116">You need to specify only one of the `filename` or the `pIStream` parameters, not both.</span></span> <span data-ttu-id="cdaf3-117">Il parametro `searchPath` è facoltativo.</span><span class="sxs-lookup"><span data-stu-id="cdaf3-117">The `searchPath` parameter is optional.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f289f-115">Note</span><span class="sxs-lookup"><span data-stu-id="f289f-115">Remarks</span></span>  
+ <span data-ttu-id="f289f-116">È necessario specificare solo uno dei `filename` `pIStream` parametri o, non entrambi.</span><span class="sxs-lookup"><span data-stu-id="f289f-116">You need to specify only one of the `filename` or the `pIStream` parameters, not both.</span></span> <span data-ttu-id="f289f-117">Il parametro `searchPath` è facoltativo.</span><span class="sxs-lookup"><span data-stu-id="f289f-117">The `searchPath` parameter is optional.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cdaf3-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="cdaf3-118">Requirements</span></span>  
- <span data-ttu-id="cdaf3-119">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="cdaf3-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f289f-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f289f-118">Requirements</span></span>  
+ <span data-ttu-id="f289f-119">**Intestazione:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="f289f-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cdaf3-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cdaf3-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f289f-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f289f-120">See also</span></span>
 
-- [<span data-ttu-id="cdaf3-121">Interfaccia ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="cdaf3-121">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="f289f-121">Interfaccia ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="f289f-121">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
