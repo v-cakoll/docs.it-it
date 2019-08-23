@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 3ce6c250fadbb56b341d5e8dec3a9cb9d28940fe
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 8ac1ba6b8121aabea3c992ca5b943f231fc19ce2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040250"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950065"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Procedura dettagliata: Disposizione dei controlli in Windows Forms usando le guide di allineamento
 Per molte applicazioni è estremamente importante la sistemazione precisa dei controlli nel form. Il Progettazione Windows Form fornisce molti strumenti di layout a questo scopo. Uno dei più importanti è la <xref:System.Windows.Forms.Design.Behavior.SnapLine> funzionalità.
@@ -87,7 +87,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
 1. Selezionare uno dei <xref:System.Windows.Forms.Button> controlli e spostarlo vicino al bordo destro del form finché non viene visualizzata una guide di allineamento. La distanza della guide di allineamento dal bordo destro è la somma della <xref:System.Windows.Forms.Control.Margin%2A> proprietà del controllo e dei valori delle <xref:System.Windows.Forms.Control.Padding%2A> proprietà del modulo.
 
 > [!NOTE]
->  Se la <xref:System.Windows.Forms.Control.Padding%2A> proprietà del form è impostata su 0, 0, 0, 0, il progettazione Windows Form fornisce al form un <xref:System.Windows.Forms.Control.Padding%2A> valore ombreggiato pari a 9, 9, 9, 9. Per eseguire l'override di questo comportamento, assegnare un valore diverso da 0, 0, 0, 0.
+> Se la <xref:System.Windows.Forms.Control.Padding%2A> proprietà del form è impostata su 0, 0, 0, 0, il progettazione Windows Form fornisce al form un <xref:System.Windows.Forms.Control.Padding%2A> valore ombreggiato pari a 9, 9, 9, 9. Per eseguire l'override di questo comportamento, assegnare un valore diverso da 0, 0, 0, 0.
 
 1. Modificare il <xref:System.Windows.Forms.Button> valore della <xref:System.Windows.Forms.Control.Margin%2A> proprietà del controllo espandendo la <xref:System.Windows.Forms.Control.Margin%2A> voce nella finestra **Proprietà** e impostando la <xref:System.Windows.Forms.Padding.All%2A> proprietà su 0. Per informazioni dettagliate, [vedere Procedura dettagliata: Layout Windows Forms controlli con spaziatura interna, margini e la proprietà](windows-forms-controls-padding-autosize.md)AutoSize.
 

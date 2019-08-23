@@ -2,18 +2,18 @@
 title: <security> di <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: 1aff79bf5867a3a1ebe05e3f812475dac4b413e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bdd3b236c9bae198f8027c4ca0c0fa5b70d30342
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670495"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936632"
 ---
-# <a name="security-of-peertransport"></a>\<security> of \<peerTransport>
+# <a name="security-of-peertransport"></a>\<> di sicurezza \<di peerTransport >
 Contiene le impostazioni di sicurezza associate a un canale peer, compreso il tipo di autenticazione usato e la sicurezza applicata al trasporto del messaggio.  
   
  \<system.serviceModel>  
-\<le associazioni >  
+\<Binding >  
 \<customBinding>  
 \<binding>  
 \<peerTransport>  
@@ -38,7 +38,7 @@ Contiene le impostazioni di sicurezza associate a un canale peer, compreso il ti
   
 ## <a name="mode-attribute"></a>Attributo mode  
   
-|Value|Descrizione|  
+|Value|DESCRIZIONE|  
 |-----------|-----------------|  
 |`None`|La sicurezza è disabilitata.|  
 |`Transport`|La sicurezza è fornita mediante HTTPS.|  
@@ -49,23 +49,23 @@ Contiene le impostazioni di sicurezza associate a un canale peer, compreso il ti
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|Definisce un trasporto peer per un'associazione personalizzata. Questo elemento presenta un attributo `clientCredentialType` che specifica le credenziali da usare quando si interagisce con un servizio. L'attributo è di tipo <xref:System.ServiceModel.PeerTransportCredentialType>.<br /><br /> L'elemento è di tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
+|[\<transport>](transport-of-peertransport.md)|Definisce un trasporto peer per un'associazione personalizzata. Questo elemento presenta un attributo `clientCredentialType` che specifica le credenziali da usare quando si interagisce con un servizio. L'attributo è di tipo <xref:System.ServiceModel.PeerTransportCredentialType>.<br /><br /> L'elemento è di tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<peerTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|Definisce un trasporto peer per un'associazione personalizzata.|  
+|[\<peerTransport>](peertransport.md)|Definisce un trasporto peer per un'associazione personalizzata.|  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Sicurezza del trasporto](../../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [Trasporti](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Scelta di un trasporto](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Sicurezza del trasporto](../../../wcf/feature-details/transport-security.md)
+- [Trasporti](../../../wcf/feature-details/transports.md)
+- [Scelta di un trasporto](../../../wcf/feature-details/choosing-a-transport.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
+- [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a7a2475891488d1fdd60f0db4a483c144a73f0d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966914"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947850"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Procedura: Inviare dati al figlio MDI attivo
-Spesso, all'interno del contesto di [le applicazioni di interfaccia a documenti multipli (MDI)](multiple-document-interface-mdi-applications.md), si dovrà inviare dati alla finestra figlio attivi, ad esempio quando l'utente Incolla i dati dagli Appunti in un'applicazione MDI.  
+Spesso, all'interno del contesto di [applicazioni con interfaccia a documenti multipli (MDI)](multiple-document-interface-mdi-applications.md), sarà necessario inviare dati alla finestra figlio attiva, ad esempio quando l'utente incolla i dati dagli Appunti in un'applicazione MDI.  
   
 > [!NOTE]
->  Per informazioni sulla verifica della finestra figlio ha lo stato attivo e inviare il contenuto negli Appunti, vedere [determinare il figlio MDI attivo](how-to-determine-the-active-mdi-child.md).  
+> Per informazioni sulla verifica della finestra figlio con lo stato attivo e sull'invio del contenuto agli Appunti, vedere [determinazione del figlio MDI attivo](how-to-determine-the-active-mdi-child.md).  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Per inviare dati alla finestra figlio MDI attiva dagli Appunti  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Per inviare i dati alla finestra figlio MDI attiva dagli Appunti  
   
-1. All'interno di un metodo, copiare il testo negli Appunti per il controllo attivo del form figlio attivo.  
+1. All'interno di un metodo, copiare il testo negli Appunti nel controllo attivo del form figlio attivo.  
   
     > [!NOTE]
-    >  Questo esempio si presuppone esista un form padre MDI (`Form1`) che dispone di uno o più finestre figlio MDI che contiene un <xref:System.Windows.Forms.RichTextBox> controllo. Per altre informazioni, vedere [creazione di form padre MDI](how-to-create-mdi-parent-forms.md).  
+    > In questo esempio si presuppone che esista un form padre`Form1`MDI () con una o più finestre figlio MDI contenenti <xref:System.Windows.Forms.RichTextBox> un controllo. Per ulteriori informazioni, vedere [creazione di form padre MDI](how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -97,4 +97,4 @@ Spesso, all'interno del contesto di [le applicazioni di interfaccia a documenti 
 - [Procedura: Creare form padre MDI](how-to-create-mdi-parent-forms.md)
 - [Procedura: Creare form figlio MDI](how-to-create-mdi-child-forms.md)
 - [Procedura: Determinare il figlio MDI attivo](how-to-determine-the-active-mdi-child.md)
-- [Procedura: Disporre i form figlio MDI](how-to-arrange-mdi-child-forms.md)
+- [Procedura: Disponi form figlio MDI](how-to-arrange-mdi-child-forms.md)

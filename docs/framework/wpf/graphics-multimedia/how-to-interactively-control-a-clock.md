@@ -8,20 +8,20 @@ helpviewer_keywords:
 - controlling clocks interactively [WPF]
 - clocks [WPF], controlling interactively
 ms.assetid: d0b520e0-2f18-4cef-977f-2909e709548a
-ms.openlocfilehash: 05989b6a03e03fb5723a70c9c36d5e32f9117049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d18f395974750a6b85458f636a27f6101e7978f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947238"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951342"
 ---
 # <a name="how-to-interactively-control-a-clock"></a>Procedura: Controllare in modo interattivo un oggetto Clock
-Oggetto <xref:System.Windows.Media.Animation.Clock> dell'oggetto <xref:System.Windows.Media.Animation.ClockController> proprietà consente in modo interattivo avviare, sospendere, riprendere, seek, spostare l'orologio per periodo di riempimento e arrestare l'orologio. È possibile controllare in modo interattivo solo il clock radice di un albero di temporizzazione.  
+La <xref:System.Windows.Media.Animation.Clock> <xref:System.Windows.Media.Animation.ClockController> proprietà di un oggetto consente di avviare, sospendere, riprendere, cercare, far avanzare il clock al periodo di riempimento e di arrestare l'orologio in modo interattivo. Solo il clock radice di un albero temporale può essere controllato in modo interattivo.  
   
 > [!NOTE]
->  Esistono altri modi per in modo interattivo le animazioni di controllo che non richiedono di lavorare direttamente con gli orologi: è anche possibile usare gli storyboard. Gli storyboard sono supportati nel markup e nel codice. Per un esempio, vedere [animare una proprietà utilizzando uno Storyboard](how-to-animate-a-property-by-using-a-storyboard.md) o nella [Cenni preliminari sull'animazione](animation-overview.md).  
+> Esistono altri modi per controllare in modo interattivo le animazioni che non richiedono l'uso diretto degli orologi: è anche possibile usare gli storyboard. Gli storyboard sono supportati sia nel markup che nel codice. Per un esempio, vedere [animare una proprietà utilizzando uno storyboard](how-to-animate-a-property-by-using-a-storyboard.md) o [Cenni preliminari sull'animazione](animation-overview.md).  
   
- Nell'esempio seguente, diversi pulsanti consentono di controllare in modo interattivo un orologio dell'animazione.  
+ Nell'esempio seguente vengono usati diversi pulsanti per controllare in modo interattivo un clock di animazione.  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMClockControllerExample](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ClockControllerExample.cs#graphicsmmclockcontrollerexample)]

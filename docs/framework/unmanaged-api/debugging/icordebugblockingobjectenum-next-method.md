@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fd82418da26ab0cd32b007b4613d588dfa695eb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e94e4da0eea06ce9cc0110002b1def9e4dd4989
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745297"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939149"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>Metodo ICorDebugBlockingObjectEnum::Next
-Ottiene il numero specificato di [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) oggetti dall'enumerazione, iniziando in corrispondenza della posizione corrente.  
+Ottiene il numero specificato di oggetti [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) dall'enumerazione, a partire dalla posizione corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,13 +38,13 @@ HRESULT Next([in] ULONG  celt,
   
 ## <a name="parameters"></a>Parametri  
  `celt`  
- [in] Il numero di oggetti da recuperare.  
+ in Numero di oggetti da recuperare.  
   
  `values`  
- [out] Una matrice di puntatori a [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) oggetti.  
+ out Matrice di puntatori a oggetti [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) .  
   
  `pceltFetched`  
- [out] Puntatore al numero di oggetti che sono stati recuperati.  
+ out Puntatore al numero di oggetti recuperati.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli HRESULT specifici seguenti.  
@@ -57,17 +57,17 @@ HRESULT Next([in] ULONG  celt,
 ## <a name="remarks"></a>Note  
  Questo metodo funziona come un tipico enumeratore COM.  
   
- I valori della matrice di input devono essere almeno di dimensioni `celt`. La matrice verrà riempita con uno successivo `celt` i valori nell'enumerazione o con tutti gli altri valori se meno `celt` rimangono. Quando termina, questo metodo `pceltFetched` verrà riempito con il numero di valori che sono stati recuperati. Se `values` contiene i puntatori non validi o punta a un buffer di dimensioni inferiori a quelle `celt`, o se `pceltFetched` è un puntatore non valido, il risultato è indefinito.  
+ I valori della matrice di input devono essere almeno di `celt`dimensioni. La matrice verrà compilata con i valori `celt` successivi nell'enumerazione o con tutti i valori rimanenti se meno `celt` di rimangono. Quando questo metodo viene restituito `pceltFetched` , verrà compilato con il numero di valori recuperati. Se `values` contiene puntatori o punti non validi a un buffer minore di `celt`o se `pceltFetched` è un puntatore non valido, il risultato è indefinito.  
   
 > [!NOTE]
->  Anche se il [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) struttura non dovrà essere rilasciato, è necessario che l'interfaccia "ICorDebugValue" TestExecution da rilasciare.  
+> Sebbene non sia necessario rilasciare la struttura [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) , è necessario rilasciare l'interfaccia "ICorDebugValue" all'interno di essa.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

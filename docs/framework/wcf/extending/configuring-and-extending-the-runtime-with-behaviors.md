@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 297a951e4678e05da73193133bd6050360b041ff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 481e0983a40bb551d08894ea32f76f332b8fe5a3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587336"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943144"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Configurazione ed estensione del runtime con i comportamenti
-I comportamenti consentono di modificare il comportamento predefinito e aggiungere estensioni personalizzate che esaminano e convalidare la configurazione del servizio o modificano il comportamento di runtime nelle applicazioni client e il servizio Windows Communication Foundation (WCF). In questo argomento vengono descritte le interfacce di comportamento e viene illustrato come implementarle e aggiungerle alla descrizione del servizio (in un'applicazione di servizio) o all'endpoint (in un'applicazione client) a livello di codice o in un file di configurazione. Per altre informazioni sull'utilizzo dei comportamenti forniti dal sistema, vedere [che specifica il comportamento di Run-Time Service](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) e [specifica del comportamento in fase di esecuzione Client](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
+I comportamenti consentono di modificare il comportamento predefinito e di aggiungere estensioni personalizzate che controllano e convalidano la configurazione del servizio o modificano il comportamento in fase di esecuzione nelle applicazioni client e di servizio Windows Communication Foundation (WCF). In questo argomento vengono descritte le interfacce di comportamento e viene illustrato come implementarle e aggiungerle alla descrizione del servizio (in un'applicazione di servizio) o all'endpoint (in un'applicazione client) a livello di codice o in un file di configurazione. Per ulteriori informazioni sull'utilizzo dei comportamenti forniti dal sistema, vedere [specifica del comportamento](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) in fase di esecuzione del servizio e [specifica del comportamento in fase di esecuzione del client](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>comportamenti  
- Tipi di comportamento vengono aggiunti al servizio o oggetti di descrizione dell'endpoint di servizio (per il servizio o client, rispettivamente) prima che tali oggetti vengono utilizzati da Windows Communication Foundation (WCF) per creare un runtime che esegue un servizio WCF o un client WCF. Quando questi comportamenti vengono chiamati durante il processo di costruzione del runtime, saranno quindi in grado di accedere alle proprietà e ai metodi runtime che modificano il runtime costruito dal contratto, dalle associazioni e dagli indirizzi.  
+ I tipi di comportamento vengono aggiunti agli oggetti descrizione del servizio o dell'endpoint di servizio (rispettivamente sul servizio o sul client) prima che tali oggetti vengano utilizzati da Windows Communication Foundation (WCF) per creare un runtime che esegue un servizio WCF o un client WCF. Quando questi comportamenti vengono chiamati durante il processo di costruzione del runtime, saranno quindi in grado di accedere alle proprietà e ai metodi runtime che modificano il runtime costruito dal contratto, dalle associazioni e dagli indirizzi.  
   
 ### <a name="behavior-methods"></a>Metodi di comportamento  
- Tutti i comportamenti dispongono un' `AddBindingParameters` metodo, un' `ApplyDispatchBehavior` metodo, una `Validate` metodo e un `ApplyClientBehavior` metodo con una sola eccezione: In quanto <xref:System.ServiceModel.Description.IServiceBehavior> non può essere eseguito in un client, non implementa `ApplyClientBehavior`.  
+ Tutti i comportamenti hanno un `AddBindingParameters` `ApplyDispatchBehavior` metodo, un metodo, un `Validate` metodo e un `ApplyClientBehavior` metodo con un'eccezione: Poiché <xref:System.ServiceModel.Description.IServiceBehavior> non può essere eseguito in un client, non implementa `ApplyClientBehavior`.  
   
 - Utilizzare il metodo `AddBindingParameters` per modificare o aggiungere oggetti personalizzati in una raccolta a cui le associazioni personalizzate potranno accedere per utilizzarli quando viene costruito il runtime. Ad esempio, è in questo modo che vengono specificati i requisiti di protezione che influiscono sulla modalità di costruzione del canale, ma che non sono noti allo sviluppatore del canale.  
   
@@ -27,16 +27,16 @@ I comportamenti consentono di modificare il comportamento predefinito e aggiunge
 - Utilizzare i metodi `ApplyDispatchBehavior` e `ApplyClientBehavior` per esaminare la struttura di descrizione e modificare il runtime per un particolare ambito sul servizio o sul client. È inoltre possibile inserire oggetti di estensione.  
   
     > [!NOTE]
-    >  Anche se in questi tre metodi viene fornita una struttura di descrizione, essa è utilizzabile solo per attività di esame. Se un albero di descrizione viene modificato, il comportamento è indefinito.  
+    > Anche se in questi tre metodi viene fornita una struttura di descrizione, essa è utilizzabile solo per attività di esame. Se un albero di descrizione viene modificato, il comportamento è indefinito.  
   
  L'accesso alle proprietà che possono modificate e alle interfacce di personalizzazione che è possibile implementare avviene attraverso le classi runtime del servizio e del client. I tipi di servizio sono rappresentati dalle classi <xref:System.ServiceModel.Dispatcher.DispatchRuntime> e <xref:System.ServiceModel.Dispatcher.DispatchOperation>. I tipi di client sono rappresentati dalle classi <xref:System.ServiceModel.Dispatcher.ClientRuntime> e <xref:System.ServiceModel.Dispatcher.ClientOperation>. Le classi <xref:System.ServiceModel.Dispatcher.ClientRuntime> e <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sono i punti di ingresso dell'estendibilità per accedere rispettivamente alle proprietà runtime e alle raccolte di estensioni a livello di client e del servizio. Analogamente, le classi <xref:System.ServiceModel.Dispatcher.ClientOperation> e <xref:System.ServiceModel.Dispatcher.DispatchOperation> espongono rispettivamente proprietà runtime e raccolte di estensioni dell'operazione del client e del servizio. È tuttavia possibile accedere all'oggetto runtime di ambito più ampio dall'oggetto runtime dell'operazione e viceversa se necessario.  
   
 > [!NOTE]
->  Per una discussione sulle proprietà runtime e tipi di estensione che è possibile usare per modificare il comportamento di esecuzione di un client, vedere [estensione client](../../../../docs/framework/wcf/extending/extending-clients.md). Per una discussione sulle proprietà runtime e tipi di estensione che è possibile usare per modificare il comportamento di esecuzione di un dispatcher del servizio, vedere [estensione di dispatcher](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
+> Per informazioni sulle proprietà di runtime e sui tipi di estensioni che è possibile usare per modificare il comportamento di esecuzione di un client, vedere [estensione dei client](../../../../docs/framework/wcf/extending/extending-clients.md). Per informazioni sulle proprietà di runtime e sui tipi di estensioni che è possibile usare per modificare il comportamento di esecuzione di un dispatcher di servizi, vedere [estensione](../../../../docs/framework/wcf/extending/extending-dispatchers.md)di Dispatcher.  
   
- La maggior parte degli utenti WCF non interagiscono con il runtime direttamente. usano costrutti, ad esempio gli endpoint, contratti, associazioni, indirizzi e gli attributi di comportamento su classi o comportamenti nei file di configurazione del modello di programmazione core. Tali costrutti costituiscono il *albero di descrizione*, ovvero la specifica completa per la costruzione di un runtime per supportare un servizio o client descritto dall'albero di descrizione.  
+ La maggior parte degli utenti WCF non interagisce direttamente con il Runtime. usano invece costrutti di base del modello di programmazione come endpoint, contratti, Binding, indirizzi e attributi di comportamento per classi o comportamenti nei file di configurazione. Questi costrutti costituiscono la *struttura di descrizione*, ovvero la specifica completa per la costruzione di un runtime per supportare un servizio o un client descritto dalla struttura di descrizione.  
   
- Esistono quattro tipi di comportamenti di WCF:  
+ In WCF sono disponibili quattro tipi di comportamento:  
   
 - I comportamenti del servizio (tipi <xref:System.ServiceModel.Description.IServiceBehavior>) consentono la personalizzazione del runtime dell'intero servizio, incluso <xref:System.ServiceModel.ServiceHostBase>.  
   
@@ -65,12 +65,12 @@ I comportamenti consentono di modificare il comportamento predefinito e aggiunge
   
 3. Implementazione di una classe <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personalizzata che estende la configurazione. In questo modo viene consentito l'utilizzo del comportamento del servizio dai file di configurazione dell'applicazione.  
   
- Esempi di comportamenti del servizio in WCF il <xref:System.ServiceModel.ServiceBehaviorAttribute> attributo, il <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>e il <xref:System.ServiceModel.Description.ServiceMetadataBehavior> comportamento.  
+ Esempi di comportamenti del servizio in WCF includono l' <xref:System.ServiceModel.ServiceBehaviorAttribute> attributo <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>, e il <xref:System.ServiceModel.Description.ServiceMetadataBehavior> comportamento.  
   
 #### <a name="contract-behaviors"></a>Comportamenti del contratto  
  I comportamenti del contratto, che implementano l'interfaccia <xref:System.ServiceModel.Description.IContractBehavior>, vengono utilizzati per estendere il runtime del client e del servizio in un contratto.  
   
- Esistono due meccanismi per aggiungere tali comportamenti a un contratto.  Il primo consiste nella creazione di un attributo personalizzato da utilizzare sull'interfaccia del contratto. Quando un'interfaccia del contratto viene passata a un <xref:System.ServiceModel.ServiceHost> o un <xref:System.ServiceModel.ChannelFactory%601>, WCF esamina gli attributi sull'interfaccia. Se gli attributi sono implementazioni di <xref:System.ServiceModel.Description.IContractBehavior>, essi vengono aggiunti alla raccolta di comportamenti sulla classe <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> creata per tale interfaccia.  
+ Esistono due meccanismi per aggiungere tali comportamenti a un contratto.  Il primo consiste nella creazione di un attributo personalizzato da utilizzare sull'interfaccia del contratto. Quando un'interfaccia del contratto viene passata a un <xref:System.ServiceModel.ServiceHost> oggetto <xref:System.ServiceModel.ChannelFactory%601>o, WCF esamina gli attributi sull'interfaccia. Se gli attributi sono implementazioni di <xref:System.ServiceModel.Description.IContractBehavior>, essi vengono aggiunti alla raccolta di comportamenti sulla classe <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> creata per tale interfaccia.  
   
  È inoltre possibile implementare l'interfaccia <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType> sull'attributo del comportamento del contratto personalizzato. In questo caso, il comportamento è il seguente quando applicato a:  
   
@@ -82,7 +82,7 @@ I comportamenti consentono di modificare il comportamento predefinito e aggiunge
   
  Il secondo meccanismo consiste nell'aggiunta del comportamento alla raccolta di comportamenti su una classe <xref:System.ServiceModel.Description.ContractDescription>.  
   
- Esempi di comportamenti del contratto in WCF il <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> attributo. Per ulteriori informazioni e per un esempio, vedere l'argomento di riferimento.  
+ Esempi di comportamenti del contratto in WCF includono l' <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> attributo. Per ulteriori informazioni e per un esempio, vedere l'argomento di riferimento.  
   
 #### <a name="endpoint-behaviors"></a>Comportamenti dell'endpoint  
  I comportamenti dell'endpoint, che implementano l'interfaccia <xref:System.ServiceModel.Description.IEndpointBehavior>, costituiscono il meccanismo principale attraverso cui è possibile modificare il runtime dell'intero servizio o del client per un endpoint specifico.  
@@ -98,11 +98,11 @@ I comportamenti consentono di modificare il comportamento predefinito e aggiunge
 #### <a name="operation-behaviors"></a>Comportamenti dell'operazione  
  I comportamenti dell'operazione, che implementano l'interfaccia <xref:System.ServiceModel.Description.IOperationBehavior>, vengono utilizzati per estendere il runtime del client e del servizio per ogni operazione.  
   
- Esistono due meccanismi per aggiungere tali comportamenti a un'operazione. Il primo meccanismo consiste nella creazione di un attributo personalizzato da utilizzare sul metodo che modella l'operazione. Quando un'operazione viene aggiunto a una delle due una <xref:System.ServiceModel.ServiceHost> o un <xref:System.ServiceModel.ChannelFactory>, WCF aggiunge eventuali <xref:System.ServiceModel.Description.IOperationBehavior> gli attributi alla raccolta di comportamenti il <xref:System.ServiceModel.Description.OperationDescription> creata per l'operazione.  
+ Esistono due meccanismi per aggiungere tali comportamenti a un'operazione. Il primo meccanismo consiste nella creazione di un attributo personalizzato da utilizzare sul metodo che modella l'operazione. Quando un' <xref:System.ServiceModel.ServiceHost> operazione viene aggiunta a <xref:System.ServiceModel.ChannelFactory>o a, WCF aggiunge tutti <xref:System.ServiceModel.Description.IOperationBehavior> gli attributi alla raccolta dei comportamenti nell'oggetto <xref:System.ServiceModel.Description.OperationDescription> creato per l'operazione.  
   
  Il secondo meccanismo consiste nell'aggiunta diretta del comportamento alla raccolta di comportamenti su una classe <xref:System.ServiceModel.Description.OperationDescription> costruita.  
   
- Esempi di comportamenti dell'operazione in WCF il <xref:System.ServiceModel.OperationBehaviorAttribute> e il <xref:System.ServiceModel.TransactionFlowAttribute>.  
+ Esempi di comportamenti dell'operazione in WCF includono <xref:System.ServiceModel.OperationBehaviorAttribute> <xref:System.ServiceModel.TransactionFlowAttribute>e.  
   
  Per ulteriori informazioni e per un esempio, vedere l'argomento di riferimento.  
   
@@ -110,7 +110,7 @@ I comportamenti consentono di modificare il comportamento predefinito e aggiunge
  I comportamenti del servizio, dell'endpoint e del contratto possono essere progettati in modo da essere specificati nel codice o mediante attributi; ma solo i comportamenti del servizio e dell'endpoint possono essere configurati utilizzando file di configurazione dell'applicazione o Web. L'esposizione dei comportamenti mediante attributi consente agli sviluppatori di specificare un comportamento in fase di compilazione che non può essere aggiunto, rimosso o modificato a runtime. Tale sistema è spesso adatto per comportamenti che sono sempre necessari per il corretto funzionamento del servizio, ad esempio i parametri correlati alla transazione passati all'attributo <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType>). L'esposizione dei comportamenti mediante la configurazione consente agli sviluppatori di lasciare la specifica e la configurazione di tali comportamenti a coloro che distribuiscono il servizio. Tale sistema è adatto per comportamenti che rappresentano componenti facoltativi o altra configurazione specifica della distribuzione, ad esempio se i metadati vengono esposti per il servizio o la particolare configurazione dell'autorizzazione per un servizio.  
   
 > [!NOTE]
->  È inoltre possibile utilizzare i comportamenti che supportano la configurazione per imporre criteri dell'applicazione aziendale inserendoli nel file di configurazione machine.config e bloccando tali elementi. Per una descrizione e un esempio, vedere [come: Lock Down Endpoints in the Enterprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+> È inoltre possibile utilizzare i comportamenti che supportano la configurazione per imporre criteri dell'applicazione aziendale inserendoli nel file di configurazione machine.config e bloccando tali elementi. Per una descrizione e un esempio, vedere [procedura: Bloccare gli endpoint nell'organizzazione](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
  Per esporre un comportamento mediante la configurazione, un sviluppatore deve creare una classe derivata di <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> e quindi registrare tale estensione nella configurazione.  
   
@@ -181,7 +181,7 @@ protected override object CreateBehavior()
 </configuration>  
 ```  
   
- In cui `Microsoft.WCF.Documentation.EndpointBehaviorMessageInspector` è il tipo di estensione di comportamento e `HostApplication` è il nome dell'assembly in cui tale classe è stata compilata.  
+ Dove `Microsoft.WCF.Documentation.EndpointBehaviorMessageInspector` è il tipo di estensione di `HostApplication` comportamento e è il nome dell'assembly in cui è stata compilata tale classe.  
   
 ### <a name="evaluation-order"></a>Ordine di valutazione  
  <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> e <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> sono responsabili della compilazione del runtime in base al modello di programmazione e alla descrizione. I comportamenti, come descritto in precedenza, contribuiscono a tale processo di compilazione a livello del servizio, dell'endpoint, del contratto e dell'operazione.  

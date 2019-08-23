@@ -5,20 +5,20 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 76d074d2870a2d7efa62516b5868cdd7faaacd79
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 65b4f5633e589ae02e9ed495074000181864428a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586701"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956362"
 ---
 # <a name="events-visual-basic"></a>Eventi (Visual Basic)
-Sebbene sia possibile rappresentare graficamente un progetto di Visual Studio come una serie di procedure eseguite in sequenza, in realtà, la maggior parte dei programmi sono basata su eventi, vale a dire il flusso di esecuzione è determinato da occorrenze esterne denominate *eventi*.  
+Sebbene sia possibile visualizzare un progetto di Visual Studio come una serie di procedure eseguite in una sequenza, in realtà, la maggior parte dei programmi è basata sugli eventi, ovvero il flusso di esecuzione è determinato da occorrenze esterne denominate *eventi*.  
   
  Un evento è un segnale che informa un'applicazione che si è verificato qualcosa di importante. Ad esempio, quando un utente fa clic su un controllo in un form, il form può generare un evento `Click` e chiamare una routine che gestisce l'evento. Gli eventi consentono anche le comunicazioni tra attività separate. Si supponga, ad esempio, che un'applicazione esegua un'attività di ordinamento separatamente dall'applicazione principale. Se un utente annulla l'ordinamento, l'applicazione può inviare un evento di annullamento per segnalare la necessità di interrompere il processo di ordinamento.  
   
 ## <a name="event-terms-and-concepts"></a>Termini e concetti relativi agli eventi  
- In questa sezione vengono descritti i termini e concetti usati con gli eventi in Visual Basic.  
+ In questa sezione vengono descritti i termini e i concetti utilizzati con gli eventi in Visual Basic.  
   
 ### <a name="declaring-events"></a>Dichiarazione di eventi  
  Gli eventi vengono dichiarati all'interno di classi, strutture, moduli e interfacce tramite la parola chiave `Event`, come nell'esempio seguente:  
@@ -26,7 +26,7 @@ Sebbene sia possibile rappresentare graficamente un progetto di Visual Studio co
  [!code-vb[VbVbalrEvents#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#24)]  
   
 ### <a name="raising-events"></a>Generazione di eventi  
- Un evento può essere paragonato a un messaggio che annuncia che si è verificato qualcosa di importante. L'atto di trasmettere il messaggio viene definito *generazione* dell'evento. In Visual Basic, è possibile generare gli eventi con il `RaiseEvent` istruzione, come nell'esempio seguente:  
+ Un evento può essere paragonato a un messaggio che annuncia che si è verificato qualcosa di importante. L'atto di trasmettere il messaggio viene definito *generazione* dell'evento. In Visual Basic si generano eventi con l' `RaiseEvent` istruzione, come nell'esempio seguente:  
   
  [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
   
@@ -38,10 +38,10 @@ Sebbene sia possibile rappresentare graficamente un progetto di Visual Studio co
 ### <a name="event-handlers"></a>Gestori eventi  
  I *gestori eventi* sono le routine chiamate quando si verifica un evento corrispondente. È possibile usare qualsiasi subroutine valida con una firma corrispondente come gestore eventi. Non è possibile usare una funzione come gestore eventi, tuttavia, perché non può restituire un valore all'origine di eventi.  
   
- Visual Basic Usa una convenzione di denominazione standard per i gestori di eventi che combina il nome del mittente dell'evento, un carattere di sottolineatura e il nome dell'evento. Ad esempio, il nome dell'evento `Click` per un pulsante denominato `button1` sarebbe `Sub button1_Click`.  
+ Visual Basic utilizza una convenzione di denominazione standard per i gestori eventi che combina il nome del mittente dell'evento, un carattere di sottolineatura e il nome dell'evento. Ad esempio, il nome dell'evento `Click` per un pulsante denominato `button1` sarebbe `Sub button1_Click`.  
   
 > [!NOTE]
->  È consigliabile usare questa convenzione di denominazione durante la definizione dei gestori per gli eventi personalizzati, ma non è obbligatorio. Si può usare qualsiasi nome di subroutine valido.  
+> È consigliabile usare questa convenzione di denominazione durante la definizione dei gestori per gli eventi personalizzati, ma non è obbligatorio. Si può usare qualsiasi nome di subroutine valido.  
   
 ## <a name="associating-events-with-event-handlers"></a>Associazione di eventi a gestori eventi  
  Un gestore eventi diventa utilizzabile solo dopo averlo associato a un evento mediante l'istruzione `Handles` o `AddHandler`.  
@@ -55,7 +55,7 @@ Sebbene sia possibile rappresentare graficamente un progetto di Visual Studio co
   
 - Non è possibile usare una variabile `WithEvents` come variabile oggetto, ovvero non è possibile dichiararla come `Object`, ma è necessario specificare il nome della classe quando si dichiara la variabile.  
   
-- Poiché eventi condivisi non sono associati a istanze della classe, è possibile utilizzare `WithEvents` per gestire in modo dichiarativo eventi condivisi. In modo analogo, non è possibile usare `WithEvents` o `Handles` per gestire gli eventi da `Structure`. In entrambi i casi, è possibile usare l'istruzione `AddHandler` per gestire tali eventi.  
+- Poiché gli eventi condivisi non sono associati a istanze di classe, non `WithEvents` è possibile usare per gestire gli eventi condivisi in modo dichiarativo. In modo analogo, non è possibile usare `WithEvents` o `Handles` per gestire gli eventi da `Structure`. In entrambi i casi, è possibile usare l'istruzione `AddHandler` per gestire tali eventi.  
   
 - Non è possibile creare matrici di variabili `WithEvents`.  
   
@@ -63,7 +63,7 @@ Sebbene sia possibile rappresentare graficamente un progetto di Visual Studio co
   
  Anche se la clausola `Handles` rappresenta la modalità standard per associare un evento a un gestore eventi, è limitata all'associazione di eventi a gestori eventi in fase di compilazione.  
   
- In alcuni casi, ad esempio gli eventi associati a form o controlli, Visual Basic automaticamente stub un gestore eventi vuoto e lo associa un evento. Ad esempio, quando si fa doppio clic su un pulsante di comando in un form in modalità progettazione, Visual Basic crea un gestore eventi vuoto e un `WithEvents` variabile per il pulsante di comando, come nel codice seguente:  
+ In alcuni casi, ad esempio con gli eventi associati a form o controlli, Visual Basic estrae automaticamente un gestore eventi vuoto e lo associa a un evento. Ad esempio, quando si fa doppio clic su un pulsante di comando in un form in modalità progettazione, Visual Basic crea un gestore eventi vuoto `WithEvents` e una variabile per il pulsante di comando, come nel codice seguente:  
   
  [!code-vb[VbVbalrEvents#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#26)]  
   

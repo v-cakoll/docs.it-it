@@ -1,17 +1,17 @@
 ---
-title: 'Metodo icordebugmergedassemblyrecord:: GetPublicKey'
+title: 'Metodo metodo icordebugmergedassemblyrecord:: GetPublicKey'
 ms.date: 03/30/2017
 ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7540a87b007656ad3363576f835a89846d287ed1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e08b1edcef3e93caa82be3a4342c6a0264734bea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752738"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940013"
 ---
-# <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>Metodo icordebugmergedassemblyrecord:: GetPublicKey
+# <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>Metodo metodo icordebugmergedassemblyrecord:: GetPublicKey
 Ottiene la chiave pubblica dell'assembly.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,14 +36,14 @@ HRESULT GetPublicKey(
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Questo metodo è disponibile solo con .NET Native.  
+> Questo metodo è disponibile solo con .NET Native.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

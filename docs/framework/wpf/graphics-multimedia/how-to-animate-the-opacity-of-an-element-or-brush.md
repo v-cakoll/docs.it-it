@@ -5,22 +5,22 @@ helpviewer_keywords:
 - opacity [WPF], animating
 - animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
-ms.openlocfilehash: f07138a0b68fff050133d477074571c60cd8651e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f18861eb18f81b631245d1d933b7acb1b3e0e42
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020192"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950505"
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>Procedura: Aggiungere un'animazione all'opacità di un elemento o un pennello
-Per rendere un elemento del framework di dissolvenza in entrata dalla visualizzazione, è possibile aggiungere un'animazione relativa <xref:System.Windows.UIElement.Opacity%2A> proprietà oppure è possibile aggiungere un'animazione la <xref:System.Windows.Media.Brush.Opacity%2A> proprietà del <xref:System.Windows.Media.Brush> (o i pennelli) utilizzato per disegnare lo. Animazione dell'opacità dell'elemento rende e i relativi elementi figlio dissolvenza dalla visualizzazione, ma l'animazione il pennello utilizzato per disegnare l'elemento consente di essere più selettivo le dissolvenze quale parte dell'elemento. Ad esempio, è possibile animare l'opacità di un pennello utilizzato per disegnare lo sfondo del pulsante. Questa condizione comportava lo sfondo del pulsante applicare una dissolvenza in entrata e in uscita della visualizzazione, lasciando il relativo testo completamente opaco.  
+Per fare in modo che un elemento del Framework si dissolva e non sia più visualizzato <xref:System.Windows.UIElement.Opacity%2A> , è possibile aggiungere un'animazione alla <xref:System.Windows.Media.Brush.Opacity%2A> relativa proprietà oppure <xref:System.Windows.Media.Brush> è possibile aggiungere un'animazione alla proprietà di (o pennelli) utilizzata per disegnarla. L'animazione dell'opacità dell'elemento lo rende e i relativi elementi figlio si dissolve in visualizzazione, ma l'animazione del pennello utilizzato per disegnare l'elemento consente di rendere più selettiva la porzione dell'elemento. Ad esempio, è possibile animare l'opacità di un pennello usato per disegnare lo sfondo di un pulsante. In questo modo lo sfondo del pulsante potrebbe dissolversi in visualizzazione, lasciando il testo completamente opaco.  
   
 > [!NOTE]
->  Animazione di <xref:System.Windows.Media.Brush.Opacity%2A> di un <xref:System.Windows.Media.Brush> offre vantaggi nelle prestazioni rispetto all'animazione il <xref:System.Windows.UIElement.Opacity%2A> proprietà di un elemento.  
+> L' <xref:System.Windows.Media.Brush.Opacity%2A> animazione di un oggetto <xref:System.Windows.Media.Brush> offre vantaggi in merito alle prestazioni rispetto <xref:System.Windows.UIElement.Opacity%2A> all'animazione della proprietà di un elemento.  
   
- Nell'esempio seguente, due pulsanti vengono animati, in modo che essi dissolvenza dalla visualizzazione. L'opacità del primo <xref:System.Windows.Controls.Button> viene animata da `1.0` al `0.0` tramite un <xref:System.Windows.Media.Animation.Timeline.Duration%2A> di cinque secondi. Anche il secondo pulsante è animato, ma l'opacità dell'oggetto SolidColorBrush utilizzato per disegnare il <xref:System.Windows.Controls.Control.Background%2A> viene animato piuttosto che l'opacità del pulsante di intero. Quando si esegue l'esempio, il primo pulsante si dissolve completamente dalla visualizzazione, mentre solo lo sfondo del secondo pulsante viene applicata la dissolvenza dalla visualizzazione. Il testo e il bordo rimangono completamente opachi.  
+ Nell'esempio seguente, due pulsanti sono animati in modo da dissolverli e visualizzarli. L'opacità del primo <xref:System.Windows.Controls.Button> viene animata da `1.0` a `0.0` più <xref:System.Windows.Media.Animation.Timeline.Duration%2A> di cinque secondi. Anche il secondo pulsante è animato, ma l'opacità dell'oggetto SolidColorBrush usato per <xref:System.Windows.Controls.Control.Background%2A> disegnare è animata anziché l'opacità dell'intero pulsante. Quando si esegue l'esempio, il primo pulsante dissolve completamente in entrata e in uscita, mentre solo lo sfondo del secondo pulsante si dissolve in entrata e in uscita. Il testo e il bordo rimangono completamente opachi.  
   
 ## <a name="example"></a>Esempio  
  [!code-xaml[timingbehaviors_snip#10](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/OpacityAnimationExample.xaml#10)]  
   
- Codice è stato omesso da questo esempio. L'esempio completo viene inoltre illustrato come animare l'opacità di un <xref:System.Windows.Media.Color> all'interno di un <xref:System.Windows.Media.LinearGradientBrush>.  Per un esempio completo, vedere la [animare l'opacità di un elemento](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/OpacityAnimation).
+ Il codice è stato omesso da questo esempio. Nell'esempio completo viene inoltre illustrato come animare l'opacità di <xref:System.Windows.Media.Color> un oggetto <xref:System.Windows.Media.LinearGradientBrush>all'interno di un oggetto.  Per l'esempio completo, vedere [animazione dell'esempio di opacità di un elemento](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/OpacityAnimation).

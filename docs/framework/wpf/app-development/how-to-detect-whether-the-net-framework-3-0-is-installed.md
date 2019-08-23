@@ -6,22 +6,22 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e307125a2a8de3edc4df2fc1022c6e3de1904879
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947823"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960249"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Procedura: Verificare se .NET Framework 3.0 è installato
-Prima che gli amministratori possono distribuire le applicazioni di Microsoft .NET Framework in un sistema, è necessario verificare che il runtime di .NET Framework. In questo argomento fornisce uno script scritto in HTML/JavaScript che gli amministratori possono utilizzare per determinare se è presente in un sistema di .NET Framework.  
+Prima che gli amministratori possano distribuire le applicazioni Microsoft .NET Framework in un sistema, è necessario verificare che il runtime di .NET Framework sia presente. In questo argomento viene fornito uno script scritto in HTML/JavaScript che gli amministratori possono utilizzare per determinare se il .NET Framework è presente in un sistema.  
   
 > [!NOTE]
->  Per altre informazioni sull'installazione, distribuzione e il rilevamento di Microsoft .NET Framework, vedere la discussione nella [alla distribuzione di Microsoft .NET Framework versione 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).  
+> Per informazioni più dettagliate sull'installazione, la distribuzione e il rilevamento di Microsoft .NET Framework, vedere la sezione relativa alla [distribuzione di Microsoft .NET Framework versione 3,0](https://go.microsoft.com/fwlink/?LinkId=96739).  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a>Rilevare la stringa agente utente di ".NET CLR"  
- Quando viene installato .NET Framework, il file MSI aggiunge ".NET CLR" e il numero di versione per la stringa UserAgent. Nell'esempio seguente viene illustrato uno script incorporato in una pagina HTML semplice. Lo script cerca nella stringa agente utente per determinare se è installato .NET Framework e viene visualizzato un messaggio di stato sui risultati della ricerca.  
+## <a name="detect-the-net-clr-user-agent-string"></a>Rilevare la stringa dell'agente utente ".NET CLR"  
+ Quando .NET Framework viene installato, il file MSI aggiunge ".NET CLR" e il numero di versione alla stringa UserAgent. Nell'esempio seguente viene illustrato uno script incorporato in una pagina HTML semplice. Lo script cerca la stringa UserAgent per determinare se .NET Framework è installato e visualizza un messaggio di stato sui risultati della ricerca.  
   
 ```  
 <HTML>  
@@ -113,13 +113,13 @@ Prima che gli amministratori possono distribuire le applicazioni di Microsoft .N
 </HTML>  
 ```  
   
- Se la ricerca per la versione ".NET CLR" ha esito positivo, viene visualizzato il tipo di messaggio di stato seguente:  
+ Se la ricerca della versione ".NET CLR" ha esito positivo, viene visualizzato il seguente tipo di messaggio di stato:  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- In caso contrario, viene visualizzato il tipo di messaggio di stato seguente:  
+ In caso contrario, viene visualizzato il seguente tipo di messaggio di stato:  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   

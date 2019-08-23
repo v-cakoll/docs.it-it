@@ -2,15 +2,15 @@
 title: Supporto di memorizzazione nella cache per servizi HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 6c601b19a0b3b9b3eddbd686c316ce7e2cdf7778
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: a6a03f20fa6a853f813dc9eff3a4202ab18cad90
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857662"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952661"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Supporto di memorizzazione nella cache per servizi HTTP Web WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Consente di utilizzare il meccanismo dichiarativo di memorizzazione nella cache già disponibile in ASP.NET nei servizi HTTP Web WCF. In questo modo è possibile memorizzare nella cache le risposte inviate dalle operazioni del servizio HTTP Web WCF. Se un utente invia un'operazione HTTP GET al servizio configurato per la memorizzazione nella cache, ASP.NET restituisce la risposta memorizzata nella cache e il metodo del servizio non viene chiamato. Se la cache scade, al successivo tentativo di invio di un'operazione HTTP GET da parte dell'utente, viene chiamato il metodo del servizio e la risposta viene nuovamente memorizzata nella cache. Per altre informazioni sulla memorizzazione nella cache di ASP.NET, vedere [Cenni preliminari sulla memorizzazione nella cache di ASP.NET](https://go.microsoft.com/fwlink/?LinkId=152534)  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]consente di utilizzare il meccanismo dichiarativo di memorizzazione nella cache già disponibile in ASP.NET nei servizi HTTP Web WCF. In questo modo è possibile memorizzare nella cache le risposte inviate dalle operazioni del servizio HTTP Web WCF. Se un utente invia un'operazione HTTP GET al servizio configurato per la memorizzazione nella cache, ASP.NET restituisce la risposta memorizzata nella cache e il metodo del servizio non viene chiamato. Se la cache scade, al successivo tentativo di invio di un'operazione HTTP GET da parte dell'utente, viene chiamato il metodo del servizio e la risposta viene nuovamente memorizzata nella cache. Per ulteriori informazioni sulla memorizzazione nella cache ASP.NET, vedere [Panoramica della memorizzazione nella cache ASP.NET](https://go.microsoft.com/fwlink/?LinkId=152534)  
   
 ## <a name="basic-web-http-service-caching"></a>Memorizzazione nella cache del servizio HTTP Web di base  
  Per abilitare la memorizzazione nella cache del servizio HTTP WEB, è innanzitutto necessario abilitare la compatibilità ASP.NET applicando <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> al servizio, impostando <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> su <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
@@ -42,7 +42,7 @@ public class Service
 > [!WARNING]
 >  Se la modalità di compatibilità ASP.NET non è abilitata e viene utilizzato <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, verrà generata un'eccezione.  
   
- Il nome di profilo cache specificato da <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> identifica un profilo cache aggiunto al file di configurazione Web.config. Il profilo della cache viene definito in un <`outputCacheSetting`> come illustrato nell'esempio di configurazione seguente.  
+ Il nome di profilo cache specificato da <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> identifica un profilo cache aggiunto al file di configurazione Web.config. Il profilo della cache viene definito con in un`outputCacheSetting`elemento < >, come illustrato nell'esempio di configurazione seguente.  
   
 ```xml
 <!-- ...  -->
@@ -58,10 +58,10 @@ public class Service
 </system.web>  
 ```  
   
- Si tratta dello stesso elemento di configurazione disponibile per le applicazioni ASP.NET. Per altre informazioni sui profili cache ASP.NET, vedere <xref:System.Web.Configuration.OutputCacheProfile>. Per i servizi HTTP Web, gli attributi più importanti del profilo cache sono `cacheDuration` e `varyByParam`. Entrambi gli attributi sono obbligatori. `cacheDuration` imposta la quantità di tempo in secondi necessaria per la memorizzazione nella cache di una risposta. `varyByParam` consente di specificare un parametro della stringa di query utilizzato per memorizzare risposte nella cache. Tutte le richieste effettuate con valori del parametro della stringa di query diversi vengono memorizzate nella cache separatamente. Ad esempio, una volta effettuata una richiesta iniziale a `http://MyServer/MyHttpService/MyOperation?param=10`, tutte le richieste successive effettuate con lo stesso URI verrebbe restituite la risposta memorizzata nella cache (purché non sia trascorsa la durata della cache). Le risposte per una richiesta analoga ma con valore diverso per quanto riguarda il parametro della stringa di query vengono memorizzate nella cache separatamente. Se non si desidera questo tipo di comportamento di memorizzazione nella cache, impostare `varyByParam` su "none".  
+ Si tratta dello stesso elemento di configurazione disponibile per le applicazioni ASP.NET. Per ulteriori informazioni sui profili della cache ASP.NET, <xref:System.Web.Configuration.OutputCacheProfile>vedere. Per i servizi HTTP Web, gli attributi più importanti del profilo cache sono `cacheDuration` e `varyByParam`. Entrambi gli attributi sono obbligatori. `cacheDuration` imposta la quantità di tempo in secondi necessaria per la memorizzazione nella cache di una risposta. `varyByParam` consente di specificare un parametro della stringa di query utilizzato per memorizzare risposte nella cache. Tutte le richieste effettuate con valori del parametro della stringa di query diversi vengono memorizzate nella cache separatamente. Ad esempio, una volta effettuata una richiesta iniziale a `http://MyServer/MyHttpService/MyOperation?param=10`, tutte le richieste successive effettuate con lo stesso URI verrebbero restituite dalla risposta memorizzata nella cache (purché la durata della cache non sia trascorsa). Le risposte per una richiesta analoga ma con valore diverso per quanto riguarda il parametro della stringa di query vengono memorizzate nella cache separatamente. Se non si desidera questo tipo di comportamento di memorizzazione nella cache, impostare `varyByParam` su "none".  
   
 ## <a name="sql-cache-dependency"></a>Dipendenza dalla cache SQL  
- È inoltre possibile memorizzare nella cache le risposte di un servizio HTTP Web con una dipendenza della cache SQL. Se il servizio HTTP Web WCF dipende da dati archiviati in un database SQL, potrebbe risultare opportuno memorizzare nella cache la risposta del servizio e invalidare la risposta memorizzata nella cache quando i dati nella tabella del database SQL vengono modificati. Questo comportamento viene completamente configurato all'interno del file Web.config. È necessario innanzitutto definire una stringa di connessione nel <`connectionStrings`> elemento.  
+ È inoltre possibile memorizzare nella cache le risposte di un servizio HTTP Web con una dipendenza della cache SQL. Se il servizio HTTP Web WCF dipende da dati archiviati in un database SQL, potrebbe risultare opportuno memorizzare nella cache la risposta del servizio e invalidare la risposta memorizzata nella cache quando i dati nella tabella del database SQL vengono modificati. Questo comportamento viene completamente configurato all'interno del file Web.config. È necessario innanzitutto definire una stringa di connessione nell'elemento`connectionStrings`< >.  
   
 ```xml
 <connectionStrings>
@@ -71,7 +71,7 @@ public class Service
 </connectionStrings>
 ```  
   
- È quindi necessario abilitare la dipendenza della cache SQL all'interno di un <`caching`> elemento all'interno di <`system.web`> come illustrato nell'esempio di configurazione seguente.  
+ È quindi necessario abilitare la dipendenza della cache SQL all'`caching`interno di un elemento <`system.web`> all'interno dell'elemento < >, come illustrato nell'esempio di configurazione seguente.  
   
 ```xml  
 <system.web>
@@ -87,7 +87,7 @@ public class Service
 </system.web>
 ```  
   
- In questo caso viene abilitata la dipendenza della cache SQL e viene impostato un tempo di polling di 1000 millisecondi. Ogni volta che scade il tempo di polling, viene verificata la presenza di aggiornamenti nella tabella di database. Se vengono rilevate modifiche, il contenuto della cache viene rimosso e, la volta successiva in cui l'operazione del servizio viene richiamata, viene memorizzata nella cache una nuova risposta. All'interno di <`sqlCacheDependency`> elemento aggiungere i database e fare riferimento alle stringhe di connessione all'interno di <`databases`> elemento, come illustrato nell'esempio seguente.  
+ In questo caso viene abilitata la dipendenza della cache SQL e viene impostato un tempo di polling di 1000 millisecondi. Ogni volta che scade il tempo di polling, viene verificata la presenza di aggiornamenti nella tabella di database. Se vengono rilevate modifiche, il contenuto della cache viene rimosso e, la volta successiva in cui l'operazione del servizio viene richiamata, viene memorizzata nella cache una nuova risposta. All'interno dell'`sqlCacheDependency`elemento < > aggiungere i database e fare riferimento alle stringhe di connessione`databases`all'interno dell'elemento < >, come illustrato nell'esempio seguente.  
   
 ```xml  
 <system.web>
@@ -103,7 +103,7 @@ public class Service
 </system.web>  
 ```  
   
- È quindi necessario configurare le impostazioni della cache di output all'interno di <`caching`> come illustrato nell'esempio seguente.  
+ Successivamente, è necessario configurare le impostazioni della cache di output`caching`all'interno dell'elemento < >, come illustrato nell'esempio seguente.  
   
 ```xml
 <system.web>
@@ -122,16 +122,16 @@ public class Service
  In questo caso la durata della cache è impostata su 60 secondi, `varyByParam` è impostato su none e `sqlDependency` è impostato su un elenco con valori delimitati da punti e virgola di coppie di nomi/tabelle del database separate dai due punti. Se i dati in `MyTable` vengono modificati, la risposta memorizzata nella cache per l'operazione del servizio viene rimossa e, se si richiama l'operazione, una nuova risposta viene generata, memorizzata nella cache e restituita al client.  
   
 > [!IMPORTANT]
->  Per ASP.NET di accedere a un database SQL, è necessario usare il [strumento di registrazione di SQL Server ASP.NET](https://go.microsoft.com/fwlink/?LinkId=152536). È inoltre necessario consentire l'accesso dell'account utente appropriato al database e alla tabella. Per altre informazioni, vedere [l'accesso a SQL Server da un'applicazione Web](https://go.microsoft.com/fwlink/?LinkId=178988).  
+> Per ASP.NET accedere a un database SQL, è necessario usare lo [strumento di registrazione ASP.NET SQL Server](https://go.microsoft.com/fwlink/?LinkId=152536). È inoltre necessario consentire l'accesso dell'account utente appropriato al database e alla tabella. Per ulteriori informazioni, vedere [accesso SQL Server da un'applicazione Web](https://go.microsoft.com/fwlink/?LinkId=178988).  
   
 ## <a name="conditional-http-get-based-caching"></a>Memorizzazione nella cache basata su HTTP GET condizionale  
- Negli scenari HTTP Web un'operazione HTTP GET condizionale viene spesso utilizzata dai servizi per implementare intelligente nella cache HTTP, come descritto nel [specifica HTTP](https://go.microsoft.com/fwlink/?LinkId=165800). A tale scopo, il servizio deve impostare il valore dell'intestazione ETag nella risposta HTTP. Deve inoltre verificare l'intestazione If-None-Match nella richiesta HTTP per controllare se una o più delle intestazioni ETag specificate corrisponde all'intestazione ETag corrente.  
+ Negli scenari HTTP Web un HTTP GET condizionale viene spesso usato dai servizi per implementare la memorizzazione nella cache HTTP intelligente, come descritto nella [specifica http](https://go.microsoft.com/fwlink/?LinkId=165800). A tale scopo, il servizio deve impostare il valore dell'intestazione ETag nella risposta HTTP. Deve inoltre verificare l'intestazione If-None-Match nella richiesta HTTP per controllare se una o più delle intestazioni ETag specificate corrisponde all'intestazione ETag corrente.  
   
  Per le richieste GET e HEAD, <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> utilizza un valore ETag e lo verifica rispetto all'intestazione If-None-Match della richiesta. Se l'intestazione è presente e viene individuata una corrispondenza, viene generata un'eccezione <xref:System.ServiceModel.Web.WebFaultException> con codice di stato HTTP 304 (non modificato) e viene aggiunta un'intestazione ETag alla risposta con l'intestazione ETag corrispondente.  
   
  Un overload del metodo <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> utilizza la data di un'ultima modifica e la controlla rispetto all'intestazione If-Modified-Since della richiesta. Se l'intestazione è presente e la risorsa non è stata ancora modificata, viene generata un'eccezione <xref:System.ServiceModel.Web.WebFaultException> con codice di stato HTTP 304 (non modificato).  
   
- Per le richieste PUT, POST e DELETE, <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalUpdate%2A> utilizza il valore ETag corrente di una risorsa. Se il valore ETag corrente è null, il metodo controlla che l'intestazione If-None-Match ha il valore "*".  Se il valore ETag corrente non è un valore predefinito, il metodo controlla il valore ETag corrente rispetto all'intestazione If- Match della richiesta. In entrambi i casi, il metodo genera un'eccezione <xref:System.ServiceModel.Web.WebFaultException> con codice di stato HTTP 412 (precondizione non riuscita) se l'intestazione prevista non è presente nella richiesta o il relativo valore non soddisfa il controllo condizionale e imposta l'intestazione ETag della risposta sul valore ETag corrente.  
+ Per le richieste PUT, POST e DELETE, <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalUpdate%2A> utilizza il valore ETag corrente di una risorsa. Se il valore ETag corrente è null, il metodo verifica che il valore dell'intestazione If-None-Match sia "*".  Se il valore ETag corrente non è un valore predefinito, il metodo controlla il valore ETag corrente rispetto all'intestazione If- Match della richiesta. In entrambi i casi, il metodo genera un'eccezione <xref:System.ServiceModel.Web.WebFaultException> con codice di stato HTTP 412 (precondizione non riuscita) se l'intestazione prevista non è presente nella richiesta o il relativo valore non soddisfa il controllo condizionale e imposta l'intestazione ETag della risposta sul valore ETag corrente.  
   
  Entrambi i metodi `CheckConditional` e il metodo <xref:System.ServiceModel.Web.OutgoingWebResponseContext.SetETag%2A> verificano che il valore ETag impostato nell'intestazione della risposta sia valido in base alla specifica HTTP. Ciò include la possibilità di racchiudere il valore ETag tra virgolette, se non già presenti, e di utilizzare i caratteri di escape per eventuali virgolette interne. Il confronto ETag debole non è supportato.  
   

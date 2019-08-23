@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: be82b64581ee178b463950d4b8cdae1f98949161
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 43b0ddc8f683e7069207bbb1c47af73976bc4a5a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545312"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958551"
 ---
 # <a name="printing-overview"></a>Cenni preliminari sulla stampa
 Con Microsoft .NET Framework, gli sviluppatori di applicazioni che usano Windows Presentation Foundation (WPF) dispongono di un nuovo set completo di API di gestione del sistema di stampa e stampa. Con [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], alcuni dei miglioramenti apportati al sistema di stampa sono anche disponibili agli sviluppatori che creano applicazioni [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e a quelli che usano codice non gestito. Questa nuova funzionalità è basata sul nuovo formato di file [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] e sul percorso di stampa [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
@@ -35,11 +35,11 @@ Con Microsoft .NET Framework, gli sviluppatori di applicazioni che usano Windows
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Percorso di stampa XPS  
- Il percorso di stampa XPS (XML Paper Specification) è una [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] nuova funzionalità che consente di ridefinire il modo in cui la stampa viene gestita nelle applicazioni Windows. Poiché [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] può sostituire un linguaggio di presentazione del documento, ad esempio RTF, un formato dello spooler di stampa, ad esempio WMF, e un linguaggio di descrizione della pagina, ad esempio PCL o PostScript, il nuovo percorso di stampa mantiene il formato XPS dalla pubblicazione dell'applicazione al elaborazione finale nel dispositivo o nel driver di stampa.  
+ Il percorso di stampa XPS (XML Paper Specification) è una nuova funzionalità di Windows che consente di ridefinire il modo in cui la stampa viene gestita nelle applicazioni Windows. Poiché [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] può sostituire un linguaggio di presentazione del documento, ad esempio RTF, un formato dello spooler di stampa, ad esempio WMF, e un linguaggio di descrizione della pagina, ad esempio PCL o PostScript, il nuovo percorso di stampa mantiene il formato XPS dalla pubblicazione dell'applicazione al elaborazione finale nel dispositivo o nel driver di stampa.  
   
  Il percorso di stampa XPS è basato sul modello di driver della stampante XPS (XPSDrv), che offre diversi vantaggi per gli [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] sviluppatori, ad esempio la stampa, il supporto dei colori migliorato e prestazioni di stampa significativamente migliorate. Per ulteriori informazioni su XPSDrv, vedere la [documentazione di Windows Driver Kit](/windows-hardware/drivers/).  
   
- Il funzionamento dello spooler di stampa per i documenti XPS è sostanzialmente identico a quello delle versioni precedenti di Windows. Tuttavia, è stato migliorato per supportare il percorso di stampa XPS oltre al percorso di stampa GDI esistente. Il nuovo percorso di stampa USA a livello nativo un file di spooling XPS. Mentre i driver della stampante in modalità utente scritti per le [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] versioni precedenti di continueranno a funzionare, è necessario un driver della stampante XPS (XPSDrv) per usare il percorso di stampa XPS.  
+ Il funzionamento dello spooler di stampa per i documenti XPS è sostanzialmente identico a quello delle versioni precedenti di Windows. Tuttavia, è stato migliorato per supportare il percorso di stampa XPS oltre al percorso di stampa GDI esistente. Il nuovo percorso di stampa USA a livello nativo un file di spooling XPS. Mentre i driver della stampante in modalità utente scritti per le versioni precedenti di Windows continueranno a funzionare, è necessario un driver della stampante XPS (XPSDrv) per usare il percorso di stampa XPS.  
   
  I vantaggi del percorso di stampa XPS sono significativi e includono:  
   

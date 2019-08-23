@@ -3,12 +3,12 @@ title: <identityConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
 author: BrucePerlerMS
-ms.openlocfilehash: 91d64ce0d6a5cdbf32fec4a476fb111afe9a7952
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f5e0c5ded3d750a1102492c7a506e6d5643b2d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791703"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942746"
 ---
 # <a name="identityconfiguration"></a>\<identityConfiguration>
 
@@ -37,59 +37,59 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 |Attributo|Descrizione|
 |---------------|-----------------|
-|name|Il nome della sezione di configurazione identità. È possibile usare questo nome per fare riferimento a una sezione di configurazione specifico. Se nessun `name` attributo è specificato, la sezione definisce la configurazione predefinita. Viene sempre utilizzata la configurazione predefinita per gli scenari di federazione passiva. Per altre informazioni, vedere la [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) elemento.|
-|saveBootstrapContext|Specifica se i token di bootstrap devono essere incluse nel token di sessione. Il valore può anche essere impostato su una raccolta di gestori di token impostando il `saveBootstrapContext` attributo la [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) elemento. Il valore impostato per la raccolta di gestori di token sostituisce il valore impostato nel servizio.|
-|maximumClockSkew|Oggetto <xref:System.TimeSpan> che specifica il numero massimo consentito sfasamenti di orario. Controlla il numero massimo consentito sfasamenti di orario durante l'esecuzione di operazioni di tempo, ad esempio convalida la data di scadenza di una sessione di accesso. Il valore predefinito è di 5 minuti "00: 05:00". Per altre informazioni su come specificare <xref:System.TimeSpan> valori, vedere [valori Timespan](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md). La differenza di orario massimo può essere impostato anche in una raccolta di gestori di token, impostando il `maximumClockSkew` attributo la [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) elemento. Il valore impostato per la raccolta di gestori di token sostituisce il valore impostato nel servizio.|
+|name|Nome della sezione di configurazione dell'identità. È possibile utilizzare questo nome per fare riferimento a una sezione di configurazione specifica. Se non `name` si specifica alcun attributo, la sezione definisce la configurazione predefinita. La configurazione predefinita viene sempre utilizzata per gli scenari di federazione passiva. Per ulteriori informazioni, vedere l' [ \<elemento federationConfiguration >](federationconfiguration.md) .|
+|saveBootstrapContext|Specifica se i token di bootstrap devono essere inclusi nel token di sessione. Il valore può essere impostato anche in una raccolta di gestori di token impostando l' `saveBootstrapContext` attributo [ \<sull'elemento > securityTokenHandlerConfiguration](securitytokenhandlerconfiguration.md) . Un valore impostato nella raccolta di gestori di token sostituisce il valore impostato per il servizio.|
+|maximumClockSkew|Oggetto <xref:System.TimeSpan> che specifica lo sfasamento massimo consentito del clock. Controlla lo sfasamento massimo consentito di clock quando si eseguono operazioni dipendenti dal tempo, ad esempio la convalida dell'ora di scadenza di una sessione di accesso. Il valore predefinito è 5 minuti, "00:05:00". Per ulteriori informazioni su come specificare <xref:System.TimeSpan> i valori, vedere [valori TimeSpan](../windows-workflow-foundation/index.md). Lo sfasamento di clock massimo può essere impostato anche in una raccolta di gestori di token `maximumClockSkew` impostando l'attributo [ \<sull'elemento > securityTokenHandlerConfiguration](securitytokenhandlerconfiguration.md) . Un valore impostato nella raccolta di gestori di token sostituisce il valore impostato per il servizio.|
 
 ### <a name="child-elements"></a>Elementi figlio
 
-|Elemento|Descrizione|
+|Elemento|DESCRIZIONE|
 |-------------|-----------------|
-|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra le cache usate per il rilevamento riproduzione token e i token di sessione. Può essere specificato a livello di servizio o in una raccolta di gestori di token di sicurezza. Facoltativo.|
-|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Controllare le impostazioni che utilizzano i gestori di token per convalidare i certificati. Può essere specificato a livello di servizio o in una raccolta di gestori di token di sicurezza. Facoltativo.|
-|[\<claimsAuthenticationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|Registra un gestore di autenticazione delle attestazioni per le attestazioni in ingresso. Facoltativo.|
-|[\<claimsAuthorizationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|Registra un gestore di autorizzazione delle attestazioni per le attestazioni in ingresso. Facoltativo.|
-|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Specifica il set di attestazioni necessarie per i token di sicurezza in ingresso. Facoltativo.|
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Specifica una raccolta di gestori di token di sicurezza. È possibile specificare zero o più raccolte di gestori di token di sicurezza. Facoltativo.|
-|[\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Abilita rilevamento riproduzione token e specifica l'ora di scadenza per i token. Può essere specificato a livello di servizio o in una raccolta di gestori di token di sicurezza. Facoltativo.|
+|[\<caches>](caches.md)|Registra le cache utilizzate per i token di sessione e il rilevamento della riproduzione dei token. Può essere specificato a livello di servizio o su una raccolta di gestori di token di sicurezza. facoltativo.|
+|[\<certificateValidation>](certificatevalidation.md)|Controlla le impostazioni utilizzate dai gestori di token per convalidare i certificati. Può essere specificato a livello di servizio o su una raccolta di gestori di token di sicurezza. facoltativo.|
+|[\<claimsAuthenticationManager>](claimsauthenticationmanager.md)|Registra un gestore di autenticazione delle attestazioni per le attestazioni in ingresso. facoltativo.|
+|[\<claimsAuthorizationManager>](claimsauthorizationmanager.md)|Registra un gestore autorizzazioni delle attestazioni per le attestazioni in ingresso. facoltativo.|
+|[\<claimTypeRequired>](claimtyperequired.md)|Specifica il set di attestazioni necessarie per i token di sicurezza in ingresso. facoltativo.|
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|Specifica una raccolta di gestori di token di sicurezza. È possibile specificare zero o più raccolte di gestori di token di sicurezza. facoltativo.|
+|[\<tokenReplayDetection>](tokenreplaydetection.md)|Abilita il rilevamento della riproduzione dei token e specifica l'ora di scadenza per i token. Può essere specificato a livello di servizio o su una raccolta di gestori di token di sicurezza. facoltativo.|
 
 ### <a name="parent-elements"></a>Elementi padre
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|Fornisce la configurazione per l'attivazione di opzioni di Windows Identity Foundation (WIF) nelle applicazioni.|
+|[\<system.identityModel>](system-identitymodel.md)|Fornisce la configurazione per abilitare le opzioni di Windows Identity Foundation (WIF) nelle applicazioni.|
 
 ## <a name="remarks"></a>Note
 
-Più identità è possibile definire configurazioni, ognuna con un nome univoco. Il comportamento è come segue:
+È possibile definire più configurazioni di identità, ognuna con un nome univoco. Il comportamento è il seguente:
 
-1. Se nessun `<identityConfiguration>` viene specificato alcun elemento. Una configurazione di identità predefinito viene creata in fase di esecuzione e popolata con i valori predefiniti.
+1. Se non `<identityConfiguration>` viene specificato alcun elemento. Una configurazione di identità predefinita viene creata in fase di esecuzione e popolata con i valori predefiniti.
 
-2. Se un singolo `<identityConfiguration>` viene specificato alcun elemento. Si tratta della configurazione di identità predefinito. Non è importante se si è definito o meno.
+2. Se viene specificato `<identityConfiguration>` un singolo elemento. Si tratta della configurazione predefinita dell'identità. Non è importante se è denominato o senza nome.
 
-3. Se più `<identityConfiguration>` vengono specificati gli elementi. L'elemento senza nome specifica la configurazione di identità predefinito. È consigliabile che quando si specificano più `<identityConfiguration>` elementi, uno di essi deve essere senza nome.
+3. Se vengono `<identityConfiguration>` specificati più elementi. L'elemento senza nome specifica la configurazione predefinita dell'identità. Quando si specificano più `<identityConfiguration>` elementi, è consigliabile che uno di essi sia senza nome.
 
 > [!WARNING]
-> Se si specificano più `<identityConfiguration>` elementi, uno di essi deve essere senza nome. L'elemento senza nome sarà la configurazione di identità predefinito.
+> Se si specificano `<identityConfiguration>` più elementi, è necessario che uno di essi sia senza nome. L'elemento senza nome sarà la configurazione predefinita dell'identità.
 
- Alcune delle impostazioni specificate nel `<identityConfiguration>` elemento può essere sottoposto a override dalle impostazioni in una raccolta di gestori di token di sicurezza o mediante le impostazioni di gestori di token di sicurezza.
-
-> [!IMPORTANT]
-> Quando si usa la <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o il <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe per fornire il controllo di accesso basato sulle attestazioni nel codice, la configurazione di identità che fa riferimento il `<federationConfiguration>` elemento consente di configurare il gestore di autorizzazione delle attestazioni e i criteri utilizzati per rendere decisioni di autorizzazione. Ciò è vero, anche in scenari non Web gli scenari passivi, ad esempio le applicazioni di Windows Communication Foundation (WCF) o un'applicazione che non è basata sul Web. Se l'applicazione non è un'applicazione Web passiva, il [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) elemento (e gli elementi di criteri figlio, se presente) della configurazione dell'identità cui viene fatto riferimento sono le uniche impostazioni applicate. Tutte le altre impostazioni vengono ignorate. Per altre informazioni, vedere la [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) elemento.
-
-Il `<identityConfiguration>` elemento è rappresentato dal <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> classe. Una sezione di configurazione di identità è rappresentata dal <xref:System.IdentityModel.Configuration.IdentityConfiguration> classe.
+ È possibile eseguire l'override di alcune `<identityConfiguration>` impostazioni specificate nell'elemento da impostazioni in una raccolta di gestori di token di sicurezza o da impostazioni sui singoli gestori del token di sicurezza.
 
 > [!IMPORTANT]
-> Specificare i seguenti elementi come elementi figlio del `<identityConfiguration>` elemento è stato deprecato, sebbene il comportamento è ancora supportato per la compatibilità con le versioni precedenti. Questi elementi invece dovrebbero, essere specificati sotto il [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) elemento.
+> Quando si usa <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o la <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe per fornire il controllo degli accessi in base alle attestazioni nel codice, la configurazione dell'identità a `<federationConfiguration>` cui fa riferimento l'elemento configura il gestore delle autorizzazioni delle attestazioni e i criteri usati per eseguire decisioni di autorizzazione. Questo vale anche per gli scenari che non sono scenari Web passivi, ad esempio applicazioni Windows Communication Foundation (WCF) o un'applicazione che non è basata sul Web. Se l'applicazione non è un'applicazione Web passiva, l' [ \<elemento > ClaimsAuthorizationManager](claimsauthorizationmanager.md) (e i relativi elementi figlio, se presenti) della configurazione di identità a cui si fa riferimento sono le uniche impostazioni applicate. Tutte le altre impostazioni vengono ignorate. Per ulteriori informazioni, vedere l' [ \<elemento federationConfiguration >](federationconfiguration.md) .
+
+L' `<identityConfiguration>` elemento è rappresentato <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> dalla classe. Una sezione di configurazione dell' <xref:System.IdentityModel.Configuration.IdentityConfiguration> identità è rappresentata dalla classe.
+
+> [!IMPORTANT]
+> La specifica dei seguenti elementi come elementi figlio dell' `<identityConfiguration>` elemento è stata deprecata, anche se il comportamento è ancora supportato per la compatibilità con le versioni precedenti. Questi elementi devono invece essere specificati nell' [ \<elemento securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md) .
 >
-> - [\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)
-> - [\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)
-> - [\<issuerTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)
-> - [\<serviceTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)
+> - [\<audienceUris>](audienceuris.md)
+> - [\<issuerNameRegistry>](issuernameregistry.md)
+> - [\<issuerTokenResolver>](issuertokenresolver.md)
+> - [\<serviceTokenResolver>](servicetokenresolver.md)
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente crea una configurazione di identità denominata "alternateConfiguration". La configurazione di identità specifica le impostazioni predefinite.
+Nell'esempio seguente viene creata una configurazione di identità denominata "alternateConfiguration". La configurazione dell'identità specifica le impostazioni predefinite.
 
 ```xml
 <system.identityModel>

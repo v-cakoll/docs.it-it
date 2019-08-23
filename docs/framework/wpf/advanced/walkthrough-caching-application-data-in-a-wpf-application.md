@@ -9,153 +9,153 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 4ee973eb5a81a6428ee5a5fcfc00e28425ff2a44
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 2609a54ce8ba2076c35567fe5bc1d9961f6fef3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457521"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942065"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Procedura dettagliata: Memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF
 La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido. Quando accedono nuovamente ai dati, le applicazioni possono recuperarli dalla cache anziché dall'origine. In questo modo si possono ottenere migliori prestazioni e scalabilità. Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.
 
- .NET Framework fornisce le classi che consentono di usare la memorizzazione nella cache in applicazioni .NET Framework. Queste classi si trovano nel <xref:System.Runtime.Caching> dello spazio dei nomi.
+ Il .NET Framework fornisce classi che consentono di usare la memorizzazione nella cache nelle applicazioni .NET Framework. Queste classi si trovano nello <xref:System.Runtime.Caching> spazio dei nomi.
 
 > [!NOTE]
->  Il <xref:System.Runtime.Caching> dello spazio dei nomi è stato introdotto in .NET Framework 4. Questo spazio dei nomi rende la memorizzazione nella cache è disponibile per tutte le applicazioni .NET Framework. Nelle versioni precedenti di .NET Framework, la memorizzazione nella cache è disponibile solo nel <xref:System.Web> dello spazio dei nomi e pertanto richiede una dipendenza dalle classi ASP.NET.
+> Lo <xref:System.Runtime.Caching> spazio dei nomi è nuovo nel .NET Framework 4. Questo spazio dei nomi rende disponibile la memorizzazione nella cache per tutte le applicazioni .NET Framework. Nelle versioni precedenti del .NET Framework, la memorizzazione nella cache era disponibile solo nello <xref:System.Web> spazio dei nomi e pertanto richiedeva una dipendenza dalle classi ASP.NET.
 
- Questa procedura dettagliata illustra come usare le funzionalità di memorizzazione nella cache sono disponibile in .NET Framework come parte di un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dell'applicazione. Nella procedura dettagliata, si memorizzano nella cache il contenuto di un file di testo.
+ In questa procedura dettagliata viene illustrato come utilizzare la funzionalità di memorizzazione nella cache disponibile nel .NET Framework come parte di un' [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applicazione. Nella procedura dettagliata viene memorizzato nella cache il contenuto di un file di testo.
 
  Di seguito vengono illustrate le attività incluse nella procedura dettagliata:
 
 - Creazione di un progetto di applicazione WPF.
 
-- Aggiunge un riferimento a .NET Framework 4.
+- Aggiunta di un riferimento al .NET Framework 4.
 
 - Inizializzazione di una cache.
 
 - Aggiunta di una voce della cache che contiene il contenuto di un file di testo.
 
-- Fornire un criterio di rimozione della voce della cache.
+- Fornire un criterio di rimozione per la voce della cache.
 
-- Il percorso del file memorizzato nella cache di monitoraggio e la notifica l'istanza della cache sulla modifica dell'elemento monitorato.
+- Monitoraggio del percorso del file memorizzato nella cache e notifica all'istanza della cache le modifiche apportate all'elemento monitorato.
 
 ## <a name="prerequisites"></a>Prerequisiti
  Per completare questa procedura dettagliata, è necessario:
 
 - Microsoft Visual Studio 2010
 
-- Un file di testo che contiene una piccola quantità di testo. (Si verrà visualizzato il contenuto del file di testo in una finestra di messaggio). Il codice illustrato nella procedura dettagliata si presuppone che si lavora con il file seguente:
+- Un file di testo che contiene una piccola quantità di testo. Il contenuto del file di testo viene visualizzato in una finestra di messaggio. Il codice illustrato nella procedura dettagliata presuppone che si stia utilizzando il file seguente:
 
      `c:\cache\cacheText.txt`
 
      Tuttavia, è possibile usare qualsiasi file di testo e apportare piccole modifiche al codice in questa procedura dettagliata.
 
 ## <a name="creating-a-wpf-application-project"></a>Creazione di un progetto di applicazione WPF
- Inizierà creando un progetto di applicazione WPF.
+ Si inizierà creando un progetto di applicazione WPF.
 
 #### <a name="to-create-a-wpf-application"></a>Per creare un'applicazione WPF
 
 1. Avviare Visual Studio.
 
-2. Nel **File** menu, fare clic su **New**, quindi fare clic su **nuovo progetto**.
+2. Scegliere **nuovo**dal menu **file** , quindi fare clic su **nuovo progetto**.
 
      Verrà visualizzata la finestra di dialogo **Nuovo progetto**.
 
-3. Sotto **modelli installati**, selezionare il linguaggio di programmazione da usare (**Visual Basic** oppure **Visual c#** ).
+3. In **modelli installati**selezionare il linguaggio di programmazione che si desidera utilizzare (**Visual Basic** o **oggetto C#visivo** ).
 
-4. Nel **nuovo progetto** finestra di dialogo **applicazione WPF**.
+4. Nella finestra di dialogo **nuovo progetto** selezionare **applicazione WPF**.
 
     > [!NOTE]
-    >  Se non viene visualizzato il **WPF Application** modello, assicurarsi che si intende utilizzare una versione di .NET Framework che supporta WPF. Nel **nuovo progetto** della finestra di dialogo selezionare .NET Framework 4 nell'elenco.
+    > Se il modello **applicazione WPF** non è visibile, assicurarsi che la destinazione sia una versione del .NET Framework che supporta WPF. Nella finestra di dialogo **nuovo progetto** selezionare .NET Framework 4 nell'elenco.
 
-5. Nel **nome** testo casella, immettere un nome per il progetto. Ad esempio, è possibile immettere **WPFCaching**.
+5. Nella casella di testo **nome** immettere un nome per il progetto. Ad esempio, è possibile immettere **WPFCaching**.
 
 6. Selezionare la casella di controllo **Crea directory per soluzione**.
 
 7. Fare clic su **OK**.
 
-     Viene aperta WPF **progettazione** consente di visualizzare e visualizza il file MainWindow. Xaml. Visual Studio crea il **My Project** cartella, il file Application. XAML e il file MainWindow. Xaml.
+     WPF Designer viene aperto in visualizzazione **progettazione** e visualizza il file MainWindow. XAML. Visual Studio crea la cartella del **progetto** , il file Application. XAML e il file MainWindow. XAML.
 
-## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Sviluppare per .NET Framework e aggiungere un riferimento all'assembly di memorizzazione nella cache
- Per impostazione predefinita, sono destinate le applicazioni WPF di [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Usare la <xref:System.Runtime.Caching> dello spazio dei nomi in un'applicazione WPF, l'applicazione deve avere come destinazione .NET Framework 4 (non il [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) e deve includere un riferimento allo spazio dei nomi.
+## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Destinazione della .NET Framework e aggiunta di un riferimento agli assembly di memorizzazione nella cache
+ Per impostazione predefinita, le applicazioni WPF [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]sono destinate a. Per utilizzare lo <xref:System.Runtime.Caching> spazio dei nomi in un'applicazione WPF, è necessario che l'applicazione sia destinata [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]a .NET Framework 4 (non a) e deve includere un riferimento allo spazio dei nomi.
 
- Pertanto, il passaggio successivo è modificare la destinazione di .NET Framework e aggiungere un riferimento al <xref:System.Runtime.Caching> dello spazio dei nomi.
+ Il passaggio successivo consiste quindi nel modificare la destinazione .NET Framework e aggiungere un riferimento allo <xref:System.Runtime.Caching> spazio dei nomi.
 
 > [!NOTE]
->  La procedura per la modifica della destinazione di .NET Framework è diversa in un progetto Visual Basic e in un progetto Visual c#.
+> La procedura per la modifica della destinazione .NET Framework è diversa in un progetto Visual Basic e in un C# progetto visuale.
 
-#### <a name="to-change-the-target-net-framework-in-visual-basic"></a>Per modificare la destinazione di .NET Framework in Visual Basic
+#### <a name="to-change-the-target-net-framework-in-visual-basic"></a>Per modificare la .NET Framework di destinazione in Visual Basic
 
-1. Nelle **Esplora soluzioni**, fare clic sul nome del progetto e quindi fare clic su **proprietà**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto, quindi scegliere **Proprietà**.
 
-     Viene visualizzata la finestra delle proprietà per l'applicazione.
+     Verrà visualizzata la finestra proprietà per l'applicazione.
 
 2. Fare clic sulla scheda **Compila**.
 
-3. Nella parte inferiore della finestra, fare clic su **opzioni di compilazione avanzate...** .
+3. Nella parte inferiore della finestra fare clic su **Opzioni di compilazione avanzate**.
 
-     Il **impostazioni del compilatore avanzate** verrà visualizzata la finestra di dialogo.
+     Viene visualizzata la finestra di dialogo **impostazioni del compilatore avanzate** .
 
-4. Nel **framework di destinazione (tutte le configurazioni)** selezionare .NET Framework 4. (Non selezionare [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
+4. Nell'elenco **Framework di destinazione (tutte le configurazioni)** selezionare .NET Framework 4. (Non selezionare [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]).
 
 5. Fare clic su **OK**.
 
      Viene visualizzata la finestra di dialogo **Modifica del framework di destinazione**.
 
-6. Nel **modifica Framework di destinazione** finestra di dialogo, fare clic su **Yes**.
+6. Nella finestra di dialogo **modifica Framework di destinazione** fare clic su **Sì**.
 
-     Il progetto viene chiuso e riaperto.
+     Il progetto viene chiuso e quindi riaperto.
 
-7. Aggiungere un riferimento all'assembly di memorizzazione nella cache, seguire questi passaggi:
+7. Aggiungere un riferimento all'assembly di Caching attenendosi alla procedura seguente:
 
-    1. Nelle **Esplora soluzioni**, fare doppio clic il nome del progetto e quindi fare clic su **Aggiungi riferimento**.
+    1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto, quindi scegliere **Aggiungi riferimento**.
 
-    2. Selezionare il **.NET** scheda, seleziona `System.Runtime.Caching`, quindi fare clic su **OK**.
+    2. Selezionare la scheda **.NET** , selezionare `System.Runtime.Caching`, quindi fare clic su **OK**.
 
-#### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>Per modificare la destinazione di .NET Framework in un progetto Visual c#
+#### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>Per modificare la .NET Framework di destinazione in un C# progetto Visual
 
-1. Nelle **Esplora soluzioni**, fare clic sul nome del progetto e quindi fare clic su **proprietà**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto, quindi scegliere **Proprietà**.
 
-     Viene visualizzata la finestra delle proprietà per l'applicazione.
+     Verrà visualizzata la finestra proprietà per l'applicazione.
 
 2. Fare clic sulla scheda **Applicazione** .
 
-3. Nel **framework di destinazione** selezionare .NET Framework 4. (Non si seleziona **.NET Framework 4 Client Profile**.)
+3. Nell'elenco **Framework di destinazione** selezionare .NET Framework 4. (Non selezionare **.NET Framework 4 profilo client**).
 
-4. Aggiungere un riferimento all'assembly di memorizzazione nella cache, seguire questi passaggi:
+4. Aggiungere un riferimento all'assembly di Caching attenendosi alla procedura seguente:
 
-    1. Fare doppio clic il **riferimenti** cartella e quindi fare clic su **Aggiungi riferimento**.
+    1. Fare clic con il pulsante destro del mouse sulla cartella **riferimenti** , quindi scegliere **Aggiungi riferimento**.
 
-    2. Selezionare il **.NET** scheda, seleziona `System.Runtime.Caching`, quindi fare clic su **OK**.
+    2. Selezionare la scheda **.NET** , selezionare `System.Runtime.Caching`, quindi fare clic su **OK**.
 
-## <a name="adding-a-button-to-the-wpf-window"></a>Aggiunta di un pulsante nella finestra di WPF
- Quindi si verrà aggiunto un pulsante e creare un gestore eventi per il pulsante `Click` evento. In seguito si aggiungerà codice a in modo che quando si fa clic sul pulsante, il contenuto del file di testo è memorizzati nella cache e visualizzato.
+## <a name="adding-a-button-to-the-wpf-window"></a>Aggiunta di un pulsante alla finestra WPF
+ Successivamente, si aggiungerà un controllo Button e si creerà un gestore eventi per l' `Click` evento del pulsante. Successivamente, quando si fa clic sul pulsante viene aggiunto il codice, il contenuto del file di testo viene memorizzato nella cache e visualizzato.
 
-#### <a name="to-add-a-button-control"></a>Per aggiungere un controllo pulsante
+#### <a name="to-add-a-button-control"></a>Per aggiungere un controllo Button
 
-1. Nelle **Esplora soluzioni**, fare doppio clic sul file MainWindow. XAML per aprirlo.
+1. In **Esplora soluzioni**fare doppio clic sul file MainWindow. XAML per aprirlo.
 
-2. Dal **casella degli strumenti**, in **controlli WPF comuni**, trascinare un' `Button` il controllo al `MainWindow` finestra.
+2. Dalla **casella degli strumenti**, sotto **controlli WPF comuni**, trascinare `Button` un controllo `MainWindow` nella finestra.
 
-3. Nel **proprietà** impostare nella finestra di `Content` proprietà del `Button` il controllo a **Ottieni Cache**.
+3. Nella finestra **Proprietà** impostare la `Content` proprietà del `Button` controllo su **Get cache**.
 
-## <a name="initializing-the-cache-and-caching-an-entry"></a>Inizializzazione della Cache e la memorizzazione nella cache una voce
- Successivamente, si aggiungerà il codice per eseguire le attività seguenti:
+## <a name="initializing-the-cache-and-caching-an-entry"></a>Inizializzazione della cache e memorizzazione nella cache di una voce
+ Successivamente, verrà aggiunto il codice per eseguire le attività seguenti:
 
-- Creare un'istanza della classe della cache, vale a dire, si creerà un nuovo <xref:System.Runtime.Caching.MemoryCache> oggetto.
+- Creare un'istanza della classe cache, ovvero si creerà un'istanza di un nuovo <xref:System.Runtime.Caching.MemoryCache> oggetto.
 
-- Specificare che la cache utilizza un <xref:System.Runtime.Caching.HostFileChangeMonitor> oggetto per monitorare le modifiche nel file di testo.
+- Consente di specificare che la cache <xref:System.Runtime.Caching.HostFileChangeMonitor> utilizza un oggetto per monitorare le modifiche nel file di testo.
 
-- Leggere il file di testo e il contenuto memorizzato nella cache come una voce della cache.
+- Leggere il file di testo e memorizzare nella cache il relativo contenuto come voce della cache.
 
-- Visualizzare il contenuto del file di testo memorizzato nella cache.
+- Visualizza il contenuto del file di testo memorizzato nella cache.
 
-#### <a name="to-create-the-cache-object"></a>Per creare l'oggetto della cache
+#### <a name="to-create-the-cache-object"></a>Per creare l'oggetto cache
 
-1. Fare doppio clic sul pulsante che appena aggiunta per poter creare un gestore eventi nel file XAML. vb o MainWindow.xaml.cs.
+1. Fare doppio clic sul pulsante appena aggiunto per creare un gestore eventi nel file MainWindow.xaml.cs o MainWindow. XAML. vb.
 
-2. Nella parte superiore del file (prima della dichiarazione di classe), aggiungere quanto segue `Imports` (Visual Basic) o `using` istruzioni (c#):
+2. Aggiungere le istruzioni (Visual Basic) o `Imports` `using` (C#) seguenti all'inizio del file (prima della dichiarazione di classe):
 
     ```csharp
     using System.Runtime.Caching;
@@ -167,7 +167,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
     Imports System.IO
     ```
 
-3. Nel gestore dell'evento, aggiungere il codice seguente per creare un'istanza di oggetto della cache:
+3. Nel gestore eventi aggiungere il codice seguente per creare un'istanza dell'oggetto cache:
 
     ```csharp
     ObjectCache cache = MemoryCache.Default;
@@ -177,9 +177,9 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
     Dim cache As ObjectCache = MemoryCache.Default
     ```
 
-     Il <xref:System.Runtime.Caching.ObjectCache> classe è una classe incorporata che fornisce una cache oggetti in memoria.
+     La <xref:System.Runtime.Caching.ObjectCache> classe è una classe incorporata che fornisce una cache di oggetti in memoria.
 
-4. Aggiungere il codice seguente per leggere il contenuto di una voce della cache denominata `filecontents`:
+4. Aggiungere il codice seguente per leggere il contenuto di una voce della cache `filecontents`denominata:
 
     ```vb
     Dim fileContents As String = TryCast(cache("filecontents"), String)
@@ -189,7 +189,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
     string fileContents = cache["filecontents"] as string;
     ```
 
-5. Aggiungere il codice seguente per verificare se la voce della cache denominata `filecontents` esiste:
+5. Aggiungere il codice seguente per verificare se la voce della cache `filecontents` denominata esiste:
 
     ```vb
     If fileContents Is Nothing Then
@@ -204,9 +204,9 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
     }
     ```
 
-     Se la voce della cache specificata non esiste, è necessario leggere il file di testo e aggiungerlo come una voce della cache nella cache.
+     Se la voce della cache specificata non esiste, è necessario leggere il file di testo e aggiungerlo come voce della cache alla cache.
 
-6. Nel `if/then` blocco, aggiungere il codice seguente per creare un nuovo <xref:System.Runtime.Caching.CacheItemPolicy> oggetto che specifica che la voce della cache scade dopo 10 secondi.
+6. Nel blocco aggiungere il codice seguente per creare un nuovo <xref:System.Runtime.Caching.CacheItemPolicy> oggetto che specifichi che la voce della cache scade dopo 10 secondi. `if/then`
 
     ```vb
     Dim policy As New CacheItemPolicy()
@@ -218,9 +218,9 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     Se viene fornita alcuna informazione di eliminazione o scadenza, il valore predefinito è <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, ovvero le voci della cache senza scadenza in base solo in un tempo assoluto. Al contrario, le voci della cache scadono solo quando sono presenti richieste di memoria. Come procedura consigliata, è necessario fornire sempre in modo esplicito assoluto o su una scadenza.
+     Se non viene fornita alcuna informazione di rimozione o scadenza, il <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>valore predefinito è, il che significa che le voci della cache non scadono mai in base a un tempo assoluto. Al contrario, le voci della cache scadono solo quando si verifica un numero eccessivo di richieste di memoria. Come procedura consigliata, è consigliabile specificare sempre in modo esplicito una scadenza assoluta o variabile.
 
-7. All'interno di `if/then` in blocchi e dopo il codice aggiunto nel passaggio precedente, aggiungere il codice seguente per creare una raccolta per i percorsi dei file che si desidera monitorare e aggiungere il percorso del file di testo nella raccolta:
+7. All'interno `if/then` del blocco e dopo il codice aggiunto nel passaggio precedente, aggiungere il codice seguente per creare una raccolta per i percorsi di file che si desidera monitorare e per aggiungere il percorso del file di testo alla raccolta:
 
     ```vb
     Dim filePaths As New List(Of String)()
@@ -233,9 +233,9 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
     ```
 
     > [!NOTE]
-    >  Se si desidera utilizzare il file di testo non `c:\cache\cacheText.txt`, specificare il percorso in cui il file di testo è che si desidera utilizzare.
+    > Se il file di testo che si desidera utilizzare non `c:\cache\cacheText.txt`è, specificare il percorso in cui si desidera utilizzare il file di testo.
 
-8. Dopo il codice aggiunto nel passaggio precedente, aggiungere il codice seguente per aggiungere un nuovo <xref:System.Runtime.Caching.HostFileChangeMonitor> oggetto alla raccolta di modifiche consente di monitorare la voce della cache:
+8. Dopo il codice aggiunto nel passaggio precedente, aggiungere il codice seguente per aggiungere un nuovo <xref:System.Runtime.Caching.HostFileChangeMonitor> oggetto alla raccolta di monitoraggi delle modifiche per la voce della cache:
 
     ```vb
     policy.ChangeMonitors.Add(New HostFileChangeMonitor(filePaths))
@@ -245,7 +245,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
     policy.ChangeMonitors.Add(new HostFileChangeMonitor(filePaths));
     ```
 
-     Il <xref:System.Runtime.Caching.HostFileChangeMonitor> oggetto consente di monitorare il percorso del file di testo e invia una notifica della cache se si verificano cambiamenti. In questo esempio, la voce della cache scadrà se il contenuto del file viene modificato.
+     L' <xref:System.Runtime.Caching.HostFileChangeMonitor> oggetto monitora il percorso del file di testo e invia una notifica alla cache se si verificano modifiche. In questo esempio, la voce della cache scadrà se il contenuto del file viene modificato.
 
 9. Dopo il codice aggiunto nel passaggio precedente, aggiungere il codice seguente per leggere il contenuto del file di testo:
 
@@ -257,9 +257,9 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
     fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now;
     ```
 
-     Il timestamp di data e ora viene aggiunto in modo che sarà in grado di vedere quando scade la voce della cache.
+     Viene aggiunto il timestamp di data e ora in modo che sia possibile visualizzare la scadenza della voce della cache.
 
-10. Dopo il codice aggiunto nel passaggio precedente, aggiungere il codice seguente per inserire il contenuto del file in oggetto cache come un <xref:System.Runtime.Caching.CacheItem> istanza:
+10. Dopo il codice aggiunto nel passaggio precedente, aggiungere il codice seguente per inserire il contenuto del file nell'oggetto cache come <xref:System.Runtime.Caching.CacheItem> istanza:
 
     ```vb
     cache.Set("filecontents", fileContents, policy)
@@ -269,7 +269,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
     cache.Set("filecontents", fileContents, policy);
     ```
 
-     Specificare le informazioni sulle modalità di eliminazione della voce della cache passando il <xref:System.Runtime.Caching.CacheItemPolicy> oggetto creato in precedenza come parametro.
+     Specificare le informazioni sulla modalità di eliminazione della voce della cache passando l' <xref:System.Runtime.Caching.CacheItemPolicy> oggetto creato in precedenza come parametro.
 
 11. Dopo il `if/then` blocco, aggiungere il codice seguente per visualizzare il contenuto del file memorizzato nella cache in una finestra di messaggio:
 
@@ -281,46 +281,46 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
     MessageBox.Show(fileContents);
     ```
 
-12. Nel **compilare** menu, fare clic su **compilare WPFCaching** per compilare il progetto.
+12. Scegliere **Compila WPFCaching** dal menu **Compila** per compilare il progetto.
 
-## <a name="testing-caching-in-the-wpf-application"></a>Test di memorizzazione nella cache nell'applicazione WPF
+## <a name="testing-caching-in-the-wpf-application"></a>Test della memorizzazione nella cache nell'applicazione WPF
  È ora possibile testare l'applicazione.
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>Per testare la memorizzazione nella cache nell'applicazione WPF
 
 1. Premere CTRL+F5 per eseguire l'applicazione.
 
-     Il `MainWindow` viene visualizzata la finestra.
+     Viene `MainWindow` visualizzata la finestra.
 
-2. Fare clic su **ottenere Cache**.
+2. Fare clic su **Ottieni cache**.
 
-     Il contenuto memorizzato nella cache dal file di testo viene visualizzato in una finestra di messaggio. Si noti che il timestamp sul file.
+     Il contenuto memorizzato nella cache del file di testo viene visualizzato in una finestra di messaggio. Si noti il timestamp del file.
 
-3. Chiudere la finestra di messaggio e quindi fare clic su **Ottieni Cache** nuovamente.
+3. Chiudere la finestra di messaggio e quindi fare di nuovo clic su **Get cache** .
 
-     Il timestamp è invariato. Ciò indica che viene visualizzato il contenuto memorizzato nella cache.
+     Il timestamp è invariato. Indica che viene visualizzato il contenuto memorizzato nella cache.
 
-4. Attendere almeno 10 secondi e quindi fare clic su **Ottieni Cache** nuovamente.
+4. Attendere 10 secondi o più, quindi fare di nuovo clic su **Ottieni cache** .
 
-     Questo tempo viene visualizzato un nuovo timestamp. Ciò indica che i criteri consentono la voce della cache scadono e che venga visualizzato nuovo contenuto memorizzato nella cache.
+     Questa volta viene visualizzato un nuovo timestamp. Ciò indica che i criteri consentono la scadenza della voce della cache e che viene visualizzato il nuovo contenuto memorizzato nella cache.
 
-5. In un editor di testo aprire il file di testo che è stato creato. Non apportare eventuali modifiche ancora.
+5. In un editor di testo aprire il file di testo creato. Non apportare alcuna modifica.
 
-6. Chiudere la finestra di messaggio e quindi fare clic su **Ottieni Cache** nuovamente.
+6. Chiudere la finestra di messaggio e quindi fare di nuovo clic su **Get cache** .
 
-     Si noti che il timestamp nuovamente.
+     Si noti di nuovo il timestamp.
 
 7. Apportare una modifica al file di testo e quindi salvare il file.
 
-8. Chiudere la finestra di messaggio e quindi fare clic su **Ottieni Cache** nuovamente.
+8. Chiudere la finestra di messaggio e quindi fare di nuovo clic su **Get cache** .
 
-     Questa finestra di messaggio contiene il contenuto aggiornato dai file di testo e un nuovo timestamp. Ciò indica che il monitoraggio delle modifiche file host rimosso la voce della cache immediatamente quando si modifica il file, anche se il periodo di timeout assoluto non era scaduto.
+     Questa finestra di messaggio contiene il contenuto aggiornato del file di testo e un nuovo timestamp. Ciò indica che il monitoraggio delle modifiche del file host ha rimosso la voce della cache immediatamente quando è stato modificato il file, anche se il periodo di timeout assoluto non è scaduto.
 
     > [!NOTE]
-    >  È possibile aumentare il tempo di eliminazione per almeno 20 secondi per dare più tempo per poter apportare una modifica nel file.
+    > È possibile aumentare il tempo di rimozione a 20 secondi o più per consentire più tempo per apportare modifiche al file.
 
 ## <a name="code-example"></a>Esempio di codice
- Dopo aver completato questa procedura dettagliata, il codice per il progetto creato sarà simile all'esempio seguente.
+ Al termine di questa procedura dettagliata, il codice per il progetto creato sarà simile all'esempio seguente.
 
  [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 27ac9de488a92d838df06d4a501a9148e87b9c9f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e6039feb68d18ff5ce16b7a0532710d672c296e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742727"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946956"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>Procedura dettagliata: Modifica dei dati (Visual Basic)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'aggiunta, la modifica e l'eliminazione dei dati in un database. Si utilizzerà una copia del database di esempio Northwind per aggiungere un cliente, modificare il nome di un cliente ed eliminare un ordine.  
@@ -25,11 +25,11 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 - Il database di esempio Northwind.  
   
-     Se questo database non è disponibile nel computer di sviluppo, è possibile scaricarlo dal sito di download Microsoft. Per istruzioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Dopo avere scaricato il database, copiare il file northwnd.mdf nella cartella c:\linqtest2.  
+     Se questo database non è disponibile nel computer di sviluppo, è possibile scaricarlo dal sito di download Microsoft. Per istruzioni, vedere [download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Dopo avere scaricato il database, copiare il file northwnd.mdf nella cartella c:\linqtest2.  
   
 - Un file di codice Visual Basic generato dal database Northwind.  
   
-     È possibile generare questo file tramite lo strumento SQLMetal o Progettazione relazionale oggetti. Questa procedura dettagliata è stata scritta usando lo strumento SQLMetal con la riga di comando seguente:  
+     È possibile generare questo file usando il Object Relational Designer o lo strumento SQLMetal. Questa procedura dettagliata è stata scritta usando lo strumento SQLMetal con la riga di comando seguente:  
   
      **sqlmetal /code:"c:\linqtest2\northwind.vb" /language:vb "C:\linqtest2\northwnd.mdf" /pluralize**  
   
@@ -38,7 +38,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 ## <a name="overview"></a>Panoramica  
  La procedura dettagliata è costituita da sei attività principali:  
   
-- Creazione di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] soluzione in Visual Studio.  
+- Creazione della [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] soluzione in Visual Studio.  
   
 - Aggiunta del file di codice del database al progetto.  
   
@@ -51,32 +51,32 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 - Invio delle modifiche al database Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Creazione di una soluzione LINQ to SQL  
- In questa prima attività, si crea una soluzione di Visual Studio che contiene i riferimenti necessari per compilare ed eseguire un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetto.  
+ In questa prima attività viene creata una soluzione di Visual Studio che contiene i riferimenti necessari per compilare ed eseguire un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetto.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Per creare una soluzione LINQ to SQL  
   
 1. Scegliere **Nuovo progetto** dal menu **File**di Visual Studio.  
   
-2. Nel **tipi di progetto** nel riquadro le **nuovo progetto** nella finestra di dialogo fare clic su **Visual Basic**.  
+2. Nel riquadro **Tipi progetto** della finestra di dialogo **nuovo progetto** fare clic su **Visual Basic**.  
   
 3. Nel riquadro **Modelli** fare clic su **Applicazione console**.  
   
-4. Nel **Name** , digitare **LinqDataManipulationApp**.  
+4. Nella casella **nome** digitare **LinqDataManipulationApp**.  
   
 5. Fare clic su **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Aggiunta di riferimenti e direttive LINQ  
- In questa procedura dettagliata vengono usati assembly che potrebbero non essere installati per impostazione predefinita nel progetto. Se `System.Data.Linq` non è elencato come riferimento nel progetto (fare clic su **Mostra tutti i file** nelle **Esplora soluzioni** ed espandere la **riferimenti** nodo), aggiungerlo come spiegato nella la procedura seguente.  
+ In questa procedura dettagliata vengono usati assembly che potrebbero non essere installati per impostazione predefinita nel progetto. Se `System.Data.Linq` non è elencato come riferimento nel progetto (fare clic su **Mostra tutti i file** in **Esplora soluzioni** ed espandere il nodo **riferimenti** ), aggiungerlo, come illustrato nei passaggi seguenti.  
   
 #### <a name="to-add-systemdatalinq"></a>Per aggiungere System.Data.Linq  
   
-1. Nelle **Esplora soluzioni**, fare doppio clic su **riferimenti**, quindi fare clic su **Aggiungi riferimento**.  
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **riferimenti**, quindi scegliere **Aggiungi riferimento**.  
   
-2. Nel **Aggiungi riferimento** finestra di dialogo, fare clic su **.NET**, fare clic sull'assembly e quindi fare clic su **OK**.  
+2. Nella finestra di dialogo **Aggiungi riferimento** fare clic su **.NET**, selezionare l'assembly System. Data. Linq, quindi fare clic su **OK**.  
   
      L'assembly verrà aggiunto al progetto.  
   
-3. Nell'editor del codice, aggiungere la seguente direttiva sopra **Module1**:  
+3. Nell'editor di codice aggiungere le direttive seguenti sopra **Module1**:  
   
      [!code-vb[DLinqWalk3VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#1)]  
   
@@ -85,9 +85,9 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>Per aggiungere il file di codice di Northwind al progetto  
   
-1. Nel **Project** menu, fare clic su **Aggiungi elemento esistente**.  
+1. Scegliere **Aggiungi elemento esistente**dal menu **progetto** .  
   
-2. Nel **Aggiungi elemento esistente** finestra di dialogo, passare a c:\linqtest2\northwind.vb e quindi fare clic su **Add**.  
+2. Nella finestra di dialogo **Aggiungi elemento esistente** passare a c:\linqtest2\northwind.vb e quindi fare clic su **Aggiungi**.  
   
      Il file northwind.vb viene aggiunto al progetto.  
   
@@ -102,9 +102,9 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 2. A questo punto premere F5 per eseguire il test dell'applicazione.  
   
-     Oggetto **Console** verrà visualizzata la finestra.  
+     Viene visualizzata una finestra della **console** .  
   
-     Chiudere l'applicazione premendo INVIO nella **Console** finestra, oppure facendo clic **arresta debug** in Visual Studio **Debug** menu.  
+     Chiudere l'applicazione premendo INVIO nella finestra della **console** oppure facendo clic su **Interrompi debug** nel menu **debug** di Visual Studio.  
   
 ## <a name="creating-a-new-entity"></a>Creazione di una nuova entità  
  La creazione di una nuova entità è un processo semplice. È possibile creare oggetti, ad esempio `Customer`, usando la parola chiave `New`.  
@@ -129,7 +129,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
      Notare che la nuova riga non è visualizzata nei risultati. I nuovi dati non sono ancora stati inviati al database.  
   
-3. Premere INVIO nella **Console** finestra per arrestare il debug.  
+3. Premere INVIO nella finestra della **console** per arrestare il debug.  
   
 ## <a name="updating-an-entity"></a>Aggiornamento di un'entità  
  Nei passaggi seguenti si recupererà un oggetto `Customer` e si modificherà una delle relative proprietà.  
@@ -181,10 +181,10 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
     Customer ID: RICAR  
     ```  
   
-4. Premere INVIO nella **Console** finestra per arrestare il debug.  
+4. Premere INVIO nella finestra della **console** per arrestare il debug.  
   
 > [!NOTE]
->  Dopo avere aggiunto il nuovo oggetto Customer mediante l'invio delle modifiche, non sarà possibile eseguire nuovamente questa soluzione così com'è, poiché non è possibile aggiungere di nuovo lo stesso oggetto Customer. Per eseguire nuovamente la soluzione, modificare il valore dell'ID dell'oggetto Customer da aggiungere.  
+> Dopo avere aggiunto il nuovo oggetto Customer mediante l'invio delle modifiche, non sarà possibile eseguire nuovamente questa soluzione così com'è, poiché non è possibile aggiungere di nuovo lo stesso oggetto Customer. Per eseguire nuovamente la soluzione, modificare il valore dell'ID dell'oggetto Customer da aggiungere.  
   
 ## <a name="see-also"></a>Vedere anche
 

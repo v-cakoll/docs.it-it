@@ -4,45 +4,45 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 2939110de77718baf32e2a0d8f1aa52dba997cf3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c866f3d03d26bd882d5a6596d40d1dc639da011
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907088"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934774"
 ---
 # <a name="constants-overview-visual-basic"></a>Cenni preliminari sulle costanti (Visual Basic)
-Una costante è un nome significativo che prende il posto di un numero o una stringa che non cambia. Costanti di archiviano i valori, come suggerisce il nome, rimangono invariati durante l'esecuzione di un'applicazione. È notevolmente possibile migliorare la leggibilità del codice e semplificare la manutenzione mediante l'utilizzo delle costanti. Usarli nel codice che contiene valori utilizzati più volte o che dipende da alcuni numeri che sono difficili da ricordare o non hanno alcun significato ovvia.  
+Una costante è un nome significativo che prende il posto di un numero o di una stringa che non cambia. Le costanti archiviano i valori che, come implica il nome, rimangono invariati durante l'esecuzione di un'applicazione. È possibile migliorare notevolmente la leggibilità del codice e renderlo più semplice da gestire usando le costanti. Usarli nel codice che contiene i valori che vengono nuovamente visualizzati o che dipendono da determinati numeri difficili da ricordare o che non hanno un significato ovvio.  
   
-## <a name="how-to-create-and-use-constants"></a>Come creare e utilizzare le costanti  
- Visual Basic contiene un numero di costanti predefinite, utilizzate principalmente per la stampa e visualizzazione. È anche possibile creare costanti personalizzate con il `Const` istruzione, utilizzando le stesse linee guida si farebbe per la creazione di un nome di variabile. Se `Option Strict` è `On`, è necessario dichiarare in modo esplicito il tipo di costante.  
+## <a name="how-to-create-and-use-constants"></a>Come creare e usare le costanti  
+ Visual Basic contiene una serie di costanti predefinite, utilizzate principalmente per la stampa e la visualizzazione. È anche possibile creare costanti personalizzate con l' `Const` istruzione, usando le stesse linee guida per la creazione di un nome di variabile. Se `Option Strict` è`On`, è necessario dichiarare in modo esplicito il tipo di costante.  
   
- Ambito di una costante, ovvero il set di tutto il codice che può fare riferimento ad esso senza qualificare il nome, è uguale a quello di una variabile dichiarata nello stesso percorso. Per creare una costante che esiste all'interno dell'ambito di una particolare procedura, dichiararlo all'interno di tale procedura. Per creare una costante che sia disponibile in tutta l'applicazione, dichiarare usando il `Public` parola chiave nella sezione delle dichiarazioni della classe.  
+ L'ambito di una costante, ovvero il set di tutto il codice che può farvi riferimento senza qualificare il nome, è uguale a quello di una variabile dichiarata nella stessa posizione. Per creare una costante esistente nell'ambito di una determinata procedura, dichiararla all'interno di tale procedura. Per creare una costante disponibile in un'applicazione, dichiararla usando la `Public` parola chiave nella sezione delle dichiarazioni della classe.  
   
 > [!NOTE]
->  Sebbene le costanti sono piuttosto simili a variabili, è non è possibile modificarli o assegnare nuovi valori ad essi, come per le variabili.  
+> Sebbene le costanti siano simili alle variabili, non è possibile modificarle o assegnarvi nuovi valori come si può fare per le variabili.  
   
- Le costanti utilizzate nel codice possono essere definite dal modello a oggetti per i controlli o si lavora con i componenti, oppure possono essere definite dall'utente (vale a dire, ovvero personalizzate).  
+ Le costanti utilizzate nel codice possono essere definite dal modello a oggetti per i controlli o i componenti che si utilizzano oppure possono essere definiti dall'utente, ovvero quelli creati personalmente.  
   
-## <a name="compile-time-and-run-time-constants"></a>Costanti in fase di compilazione e Runtime  
- Una costante in fase di compilazione viene calcolata al momento che il codice viene compilato, mentre è possibile calcolare una costante di runtime solo mentre l'applicazione è in esecuzione. Una costante in fase di compilazione avrà lo stesso valore ogni volta che viene eseguita un'applicazione, mentre una costante di runtime può cambiare ogni volta. Le costanti in fase di compilazione sono necessarie per i casi, ad esempio i limiti della matrice, le espressioni case o gli inizializzatori di enumeratore.  
+## <a name="compile-time-and-run-time-constants"></a>Costanti in fase di compilazione e in fase di esecuzione  
+ Una costante in fase di compilazione viene calcolata al momento della compilazione del codice, mentre una costante in fase di esecuzione può essere calcolata solo mentre l'applicazione è in esecuzione. Una costante in fase di compilazione avrà lo stesso valore ogni volta che viene eseguita un'applicazione, mentre una costante in fase di esecuzione può cambiare ogni volta. Le costanti in fase di compilazione sono necessarie per casi quali i limiti della matrice, le espressioni del case o gli inizializzatori di enumeratori.  
   
 ## <a name="in-this-section"></a>In questa sezione  
   
 |Definizione|Termine|  
 |---|---|  
-|[Procedura: Dichiarare una costante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Viene illustrato come utilizzare il `Const` istruzione per dichiarare una costante e impostarne il valore; dichiarando una costante, si assegna un nome significativo al valore.|  
-|[Costanti definite dall'utente](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Viene descritto come creare costanti personalizzate, incluse le informazioni sulla definizione dell'ambito e come evitare riferimenti circolari.|  
-|[Tipi di dati costanti e letterali](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Vengono fornite informazioni sul modo in cui il compilatore Visual Basic consente di inizializzare le costanti quando `Option Explicit` è disattivata.|  
-|[Procedura: Raggruppare i valori costanti correlate](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Viene illustrato come raggruppare i valori costanti che sono correlati.|  
+|[Procedura: Dichiarare una costante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Viene illustrato come utilizzare l' `Const` istruzione per dichiarare una costante e impostarne il valore; dichiarando una costante, si assegna un nome significativo al valore.|  
+|[Costanti definite dall'utente](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Viene descritto come creare costanti personalizzate, incluse informazioni sull'ambito e come evitare riferimenti circolari.|  
+|[Tipi di dati costanti e letterali](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Vengono fornite informazioni sul modo in cui il compilatore di Visual Basic `Option Explicit` Inizializza le costanti quando è disattivato.|  
+|[Procedura: Raggruppare i valori delle costanti correlate](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Viene illustrato come raggruppare i valori costanti correlati.|  
   
 ## <a name="reference"></a>Riferimenti  
   
 |Definizione|Termine|  
 |---|---|  
-|[Costanti ed enumerazioni](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Vengono elencate le costanti predefinite di Visual Basic.|  
-|[Istruzione Const](../../../../visual-basic/language-reference/statements/const-statement.md)|Viene descritto il `Const` istruzione e sul relativo uso.|  
-|[Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Viene descritto il `Option Strict` istruzione e sul relativo uso.|  
+|[Costanti ed enumerazioni](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Elenca le costanti predefinite da Visual Basic.|  
+|[Istruzione Const](../../../../visual-basic/language-reference/statements/const-statement.md)|Descrive l' `Const` istruzione e il relativo utilizzo.|  
+|[Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Descrive l' `Option Strict` istruzione e il relativo utilizzo.|  
   
 ## <a name="see-also"></a>Vedere anche
 

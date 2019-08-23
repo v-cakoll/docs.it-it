@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32a4f4f3735c8952cf1458c63655eb56a82fd18f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5c9f15a7ff30d5647338bf1954aca441b47281b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666443"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948746"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -128,7 +128,7 @@ ms.locfileid: "69666443"
 - In Visual Basic, C# e C++ non è possibile creare un'istanza di un tipo annidato in un tipo generico a meno che non siano stati assegnati i tipi ai parametri di tipo di tutti i tipi di inclusione. In altre parole, in una reflection un tipo annidato che viene definito con questi linguaggi contiene i parametri di tutti i relativi tipi di inclusione. Ciò consente di usare i parametri di tipo dei tipi in inclusione nelle definizioni di membro di un tipo annidato. Per altre informazioni, vedere "Tipi annidati" in <xref:System.Type.MakeGenericType%2A>.  
   
     > [!NOTE]
-    >  Un tipo annidato definito con la creazione di codice in un assembly dinamico o usando [Ilasm.exe (Assembler IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) non deve includere i parametri di tipo dei relativi tipi di inclusione. Tuttavia, se non li include, i parametri di tipo non saranno nell'ambito della classe annidata.  
+    > Un tipo annidato definito con la creazione di codice in un assembly dinamico o usando [Ilasm.exe (Assembler IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) non deve includere i parametri di tipo dei relativi tipi di inclusione. Tuttavia, se non li include, i parametri di tipo non saranno nell'ambito della classe annidata.  
   
      Per altre informazioni, vedere "Tipi annidati" in <xref:System.Type.MakeGenericType%2A>.  
   

@@ -2,20 +2,20 @@
 title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 54a9833f56927568af711a103bd3831b767711e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a99edd3a62a40c2efbc63a166b8c0b0d124e8a72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788414"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936280"
 ---
 # <a name="servicediscovery"></a>\<serviceDiscovery>
 Specifica l'individuabilità degli endpoint del servizio.  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<comportamenti >  
 \<serviceBehaviors>  
-\<behavior>  
+\<comportamento >  
 \<serviceDiscovery>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -49,17 +49,17 @@ Specifica l'individuabilità degli endpoint del servizio.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|Raccolta di endpoint per agli annunci. Usare questa sezione per specificare gli endpoint da usare per l'invio di messaggi di annuncio.|  
-|[\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|Raccolta di endpoint di individuazione. Usare questa sezione per specificare gli endpoint sui quali stare in ascolto dei messaggi di individuazione.|  
+|[\<announcementEndpoint>](announcementendpoint.md)|Raccolta di endpoint per agli annunci. Usare questa sezione per specificare gli endpoint da usare per l'invio di messaggi di annuncio.|  
+|[\<discoveryEndpoint>](discoveryendpoint.md)|Raccolta di endpoint di individuazione. Usare questa sezione per specificare gli endpoint sui quali stare in ascolto dei messaggi di individuazione.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
   
 ## <a name="remarks"></a>Note  
- Quando viene aggiunto alla configurazione del comportamento di un servizio, questo elemento di configurazione rende individuabili tutti gli endpoint di tale servizio. È possibile configurare ulteriormente le funzionalità di individuazione di tali endpoint usando il [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) oppure [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) gli elementi figlio. Usare la [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) sezione per configurare gli annunci specificando la configurazione dell'endpoint da usare per inviare annunci di servizio (online/Hello e offline/Bye). Usare la [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) sezione per specificare manualmente l'endpoint su cui rimanere in ascolto dei messaggi di individuazione.  
+ Quando viene aggiunto alla configurazione del comportamento di un servizio, questo elemento di configurazione rende individuabili tutti gli endpoint di tale servizio. È possibile configurare ulteriormente le funzionalità di individuazione di tali endpoint usando gli [ \<elementi figlio DiscoveryEndpoint >](discoveryendpoint.md) o [ \<announcementEndpoint >](announcementendpoint.md) . Utilizzare la [ \<sezione announcementEndpoint >](announcementendpoint.md) per configurare gli annunci specificando la configurazione dell'endpoint da utilizzare per inviare annunci di servizio (online/Hello e offline/Bye). Utilizzare la [ \<sezione DiscoveryEndpoint >](discoveryendpoint.md) per specificare manualmente l'endpoint sul quale restare in ascolto dei messaggi di individuazione.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio di configurazione seguente viene specificato che CalculatorService è individuabile e viene specificato facoltativamente l'endpoint per gli annunci da usare.  

@@ -2,28 +2,28 @@
 title: Mapping esterno
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 0b6ced31f5534bd040917ecc5d241d54d9bee95f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70372473eb2de5d3c4751e237e7beb66315b690e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619718"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950321"
 ---
 # <a name="external-mapping"></a>Mapping esterno
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta *mapping esterno*, un processo mediante il quale è possibile utilizzare un file XML separato per specificare il mapping tra il modello di dati del database e il modello a oggetti. I vantaggi dell'uso di un file di mapping esterno sono:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]supporta il *mapping esterno*, un processo mediante il quale si utilizza un file XML separato per specificare il mapping tra il modello di dati del database e il modello a oggetti. I vantaggi dell'uso di un file di mapping esterno sono:  
   
 - È possibile evitare di includere il codice di mapping nel codice dell'applicazione. Questo approccio evita confusione nel codice dell'applicazione.  
   
 - Un file di mapping esterno è simile a un file di configurazione. Ad esempio, è possibile aggiornare il modo in cui l'applicazione si comporta dopo avere fornito i file binari semplicemente eseguendo lo swapping del file di mapping esterno.  
   
 ## <a name="requirements"></a>Requisiti  
- Il file di mapping deve essere un file XML e di essere convalidato in base un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] file schema definition (XSD).  
+ Il file di mapping deve essere un file XML e il file deve essere convalidato in base a un file di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] definizione dello schema (con estensione XSD).  
   
  È necessario attenersi alle regole che seguono:  
   
 - Il file di mapping deve essere un file XML.  
   
-- Il file di mapping XML deve essere convalidato in base al file di definizione di XML Schema. Per altre informazioni, vedere [Procedura: Convalidare i file di Mapping esterni e DBML](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+- Il file di mapping XML deve essere convalidato in base al file di definizione di XML Schema. Per altre informazioni, vedere [Procedura: Convalidare file](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)di mapping esterni e dbml.  
   
 - Il mapping esterno esegue l'override del mapping basato sugli attributi. In altre parole, quando si usa un'origine del mapping esterna per creare un oggetto <xref:System.Data.Linq.DataContext>, <xref:System.Data.Linq.DataContext> ignora tutti gli attributi di mapping creati nelle classi. Questo comportamento si verifica se la classe è inclusa nel file di mapping esterno.  
   
@@ -32,10 +32,10 @@ ms.locfileid: "64619718"
 ## <a name="xml-schema-definition-file"></a>File di definizione di XML Schema  
  Il mapping esterno in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] deve essere convalidato in base alla seguente definizione di XML Schema.  
   
- È necessario distinguere questo file di definizione dello schema dal file di definizione dello schema usato per convalidare un file DBML. Per altre informazioni, vedere [generazione di codice in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
+ È necessario distinguere questo file di definizione dello schema dal file di definizione dello schema usato per convalidare un file DBML. Per ulteriori informazioni, vedere [generazione di codice in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
->  Gli utenti di Visual Studio verranno anche trovare questo file XSD nella finestra di dialogo XML Schema come "LinqToSqlMapping". Per usare correttamente questo file per la convalida di un file di mapping esterno, vedere [come: Convalidare i file di Mapping esterni e DBML](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+> Gli utenti di Visual Studio troveranno inoltre questo file XSD nella finestra di dialogo XML Schema come "LinqToSqlMapping. xsd". Per usare questo file correttamente per la convalida di un file di mapping [esterno, vedere Procedura: Convalidare file](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)di mapping esterni e dbml.  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -145,4 +145,4 @@ elementFormDefault="qualified" >
 
 - [Generazione di codice in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Procedura: Generare il modello a oggetti come File esterno](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Procedura: Generare il modello a oggetti come file esterno](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

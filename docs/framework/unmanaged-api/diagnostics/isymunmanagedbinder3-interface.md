@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fdfd8e8fc419809a3a490639ada1c533f286fe8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6f514cc070a0a38eb09a5387efc8611100765b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939997"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944102"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>Interfaccia ISymUnmanagedBinder3
-Estende l'interfaccia dello strumento di associazione di simboli. Ottenere questa interfaccia chiamando `QueryInterface` su un oggetto che implementa il `ISymUnmanagedBinder` interfaccia.  
+Estende l'interfaccia del gestore di associazione dei simboli. Ottenere questa interfaccia chiamando `QueryInterface` su un oggetto che implementa l' `ISymUnmanagedBinder` interfaccia.  
   
 > [!IMPORTANT]
->  È un rischio per la sicurezza per aprire un file di programma (PDB) del database da un'origine non attendibile.  
+> L'apertura di un file di database di programma (PDB) da un'origine non attendibile costituisce un rischio per la sicurezza.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|Consente di implementare o fornire mediante callback un' `IID_IDiaReadExeAtRVACallback` o `IID_IDiaReadExeAtOffsetCallback` per ottenere le informazioni di directory di Debug dalla memoria|  
+|[Metodo GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|Consente all'utente di implementare o fornire tramite callback `IID_IDiaReadExeAtRVACallback` `IID_IDiaReadExeAtOffsetCallback` o per ottenere le informazioni della directory di debug dalla memoria|  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

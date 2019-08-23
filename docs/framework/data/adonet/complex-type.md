@@ -2,34 +2,34 @@
 title: tipo complesso
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-ms.openlocfilehash: a6a7190a144280930d67f179373f29f6b19e98cc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fac25ace69938e1245200e10285f4460ac216780
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583667"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948722"
 ---
 # <a name="complex-type"></a>tipo complesso
-Oggetto *tipo complesso* è un modello per la definizione di proprietà dettagliate e strutturate sul [tipi di entità](../../../../docs/framework/data/adonet/entity-type.md) o su altri tipi complessi. Ogni modello contiene quanto segue:  
+Un *tipo complesso* è un modello per la definizione di proprietà ricche e strutturate sui [tipi di entità](../../../../docs/framework/data/adonet/entity-type.md) o su altri tipi complessi. Ogni modello contiene quanto segue:  
   
 - Un nome univoco. (obbligatorio).  
   
     > [!NOTE]
-    >  Il nome di un tipo complesso non può coincidere con il nome di un tipo di entità all'interno dello stesso spazio dei nomi.  
+    > Il nome di un tipo complesso non può coincidere con il nome di un tipo di entità all'interno dello stesso spazio dei nomi.  
   
-- Dati sotto forma di uno o più [proprietà](../../../../docs/framework/data/adonet/property.md). (Facoltative)  
+- Dati sotto forma di una o più [Proprietà](../../../../docs/framework/data/adonet/property.md). (Facoltative)  
   
     > [!NOTE]
-    >  Una proprietà di un tipo complesso può essere un altro tipo complesso.  
+    > Una proprietà di un tipo complesso può essere un altro tipo complesso.  
   
  Un tipo complesso è analogo a un tipo di entità in cui un tipo complesso può contenere un payload di dati sotto forma di proprietà di tipo primitivo o di altri tipi complessi. Tuttavia esistono alcune differenze importanti tra i tipi complessi e i tipi di entità:  
   
 - I tipi complessi non dispongono di identità e pertanto non possono esistere indipendentemente. I tipi complessi possono esistere solo come proprietà in tipi di entità o altri tipi complessi.  
   
-- I tipi complessi non possono partecipare [associazioni](../../../../docs/framework/data/adonet/association-type.md). Le entità finali di un'associazione possono essere un tipo complesso e pertanto [le proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md) non è possibile definire i tipi complessi.  
+- I tipi complessi non possono partecipare alle [associazioni](../../../../docs/framework/data/adonet/association-type.md). Nessuna entità finale di un'associazione può essere un tipo complesso e pertanto non è possibile definire [proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md) su tipi complessi.  
   
 ## <a name="example"></a>Esempio  
- Il [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) Usa un linguaggio specifico di dominio (DSL) denominato conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Nel linguaggio CSDL seguente viene definito un tipo complesso, Address, con le proprietà di tipo primitivo `StreetAddress`, `City`, `StateOrProvince`, `Country` e `PostalCode`.  
+ Il [Entity Framework ADO.NET](../../../../docs/framework/data/adonet/ef/index.md) utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Nel linguaggio CSDL seguente viene definito un tipo complesso, Address, con le proprietà di tipo primitivo `StreetAddress`, `City`, `StateOrProvince`, `Country` e `PostalCode`.  
   
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  
   

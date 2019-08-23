@@ -2,23 +2,23 @@
 title: Processo di acquisto aziendale
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d019c1915e691fcba00fa8f1b0884a898ce02fab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876176"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951518"
 ---
 # <a name="corporate-purchase-process"></a>Processo di acquisto aziendale
 In questo esempio viene illustrato come creare un semplice processo di acquisto basato su richieste di proposte (RDP) con la selezione automatica della proposta migliore. Vengono combinati gli oggetti <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> e <xref:System.Activities.Statements.ForEach%601>, nonché un'attività personalizzata per creare un flusso di lavoro che rappresenta il processo.
 
- In questo esempio contiene un'applicazione client ASP.NET che consente l'interazione con il processo come partecipanti diversi (come il richiedente originale o un particolare fornitore).
+ Questo esempio contiene un'applicazione client ASP.NET che consente di interagire con il processo come partecipanti diversi (come il richiedente originale o un particolare fornitore).
 
 ## <a name="requirements"></a>Requisiti
 
 - Visual Studio 2012.
 
-- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+- [https://login.microsoftonline.com/common/]([!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]).
 
 ## <a name="demonstrates"></a>Dimostrazione
 
@@ -36,19 +36,19 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 
 - Rilevamento.
 
-- Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in client diversi (applicazioni Windows Form e applicazioni Web ASP.NET).
+- Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in client diversi (applicazioni Web ASP.NET e applicazioni WinForms).
 
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>Descrizione del processo  
- In questo esempio viene illustrata un'implementazione di un programma di Windows Workflow Foundation (WF) per raccogliere le proposte dei fornitori per una società generica.  
+ In questo esempio viene illustrata un'implementazione di un programma Windows Workflow Foundation (WF) per raccogliere proposte dai fornitori di una società generica.  
   
 1. Un dipendente della società X crea una richiesta di proposta (RDP).  
   
@@ -78,17 +78,17 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 ## <a name="projects-in-this-sample"></a>Progetti di questo esempio  
  In questo esempio sono contenuti i progetti seguenti.  
   
-|Progetto|Descrizione|  
+|Progetto|DESCRIZIONE|  
 |-------------|-----------------|  
-|Comuni|Oggetti entità usati all'interno del processo (Richiesta di proposta, Fornitore e Proposta del fornitore).|  
+|Comune|Oggetti entità usati all'interno del processo (Richiesta di proposta, Fornitore e Proposta del fornitore).|  
 |WfDefinition|Definizione del processo (come programma [!INCLUDE[wf1](../../../../includes/wf1-md.md)]) e dell'host (`PurchaseProcessHost`) usati dalle applicazioni client per la creazione e l'uso di istanze del flusso di lavoro del processo di acquisto.|  
-|WebClient|Un'applicazione client ASP.NET che consente agli utenti di creare e partecipare alle istanze del processo di acquisto. Viene usato un host creato in modo personalizzato per interagire con il motore del flusso di lavoro.|  
+|WebClient|Applicazione client ASP.NET che consente agli utenti di creare e partecipare alle istanze del processo di acquisto. Viene usato un host creato in modo personalizzato per interagire con il motore del flusso di lavoro.|  
 |WinFormsClient|Applicazione client Windows Form che consente agli utenti di creare e partecipare alle istanze del processo di acquisto. Viene usato un host creato in modo personalizzato per interagire con il motore del flusso di lavoro.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  
  Nella tabella seguente è contenuta una descrizione dei file più importanti del progetto WfDefinition.  
   
-|File|Descrizione|  
+|File|DESCRIZIONE|  
 |----------|-----------------|  
 |IPurchaseProcessHost.cs|Interfaccia per l'host del flusso di lavoro.|  
 |PurchaseProcessHost.cs|Implementazione di un host per il flusso di lavoro. L'host estrae i dettagli dell'esecuzione del flusso di lavoro e viene usato in tutte le applicazioni client per caricare, eseguire e interagire con le istanze del flusso di lavoro `PurchaseProcess`.|  
@@ -99,7 +99,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 |XmlPersistenceParticipant.cs|Oggetto <xref:System.Activities.Persistence.PersistenceParticipant> personalizzato che salva un'istanza di richiesta di proposta in un file XML.|  
 |AsyncResult.cs/CompletedAsyncResult.cs|Classi di supporto per l'implementazione del modello asincrono nei componenti della persistenza.|  
   
-### <a name="common"></a>Comuni  
+### <a name="common"></a>Comune  
  Nella tabella seguente è contenuta una descrizione delle classi più importanti del progetto Common.  
   
 |Classe|Descrizione|  
@@ -114,7 +114,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 ### <a name="web-client"></a>Client Web  
  Nella tabella seguente è contenuta una descrizione delle pagine Web più importanti del progetto WebClient.  
   
-|File|Descrizione|  
+|File|DESCRIZIONE|  
 |-|-|  
 |CreateRfp.aspx|Crea e invia una nuova richiesta di proposte.|  
 |Default.aspx|Mostra tutte le richieste di proposte attive e completate.|  
@@ -127,14 +127,14 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 |Form|Descrizione|  
 |-|-|  
 |NewRfp|Crea e invia una nuova richiesta di proposte.|  
-|ShowProposals|Mostra tutte le richieste di proposte attive e completate. **Nota:**  Potrebbe essere necessario scegliere il **Aggiorna** pulsante nell'interfaccia utente per visualizzare le modifiche in tale schermata dopo aver creato o modificato una richiesta di proposta.|  
+|ShowProposals|Mostra tutte le richieste di proposte attive e completate. **Nota:**  Potrebbe essere necessario fare clic sul pulsante **Aggiorna** nell'interfaccia utente per visualizzare le modifiche apportate alla schermata dopo la creazione o la modifica di una richiesta di proposta.|  
 |SubmitProposal|Ottiene una proposta da un fornitore in una richiesta di proposte concreta. Questa finestra viene usata solo dai fornitori.|  
 |ViewRfp|Mostra tutte le informazioni relative a una richiesta di proposte (proposte ricevute, date, valori e altre informazioni). Questa finestra viene usata solo dall'autore della richiesta di proposte.|  
   
 ### <a name="persistence-files"></a>File di persistenza  
  Nella tabella seguente vengono mostrati i file generati dal provider di persistenza (`XmlPersistenceProvider`) che si trovano nel percorso della cartella temporanea del sistema corrente (tramite il metodo <xref:System.IO.Path.GetTempPath%2A>). Il file di traccia viene creato nel percorso di esecuzione corrente.  
   
-|Nome file|Descrizione|Path|  
+|Nome file|Descrizione|`Path`|  
 |-|-|-|  
 |rfps.xml|File XML con tutte le richieste di proposte attive e completate.|<xref:System.IO.Path.GetTempPath%2A>|  
 |[instanceid]|In questo file sono contenute tutte le informazioni su un'istanza del flusso di lavoro.<br /><br /> Questo file viene generato dall'implementazione della persistenza schematizzata (PersistenceParticipant in XmlPersistenceProvider).|<xref:System.IO.Path.GetTempPath%2A>|  
@@ -143,11 +143,11 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
-1. Con Visual Studio 2010, aprire il file della soluzione Purchaseprocess.  
+1. Con Visual Studio 2010 aprire il file della soluzione PurchaseProcess. sln.  
   
-2. Per eseguire il progetto WebClient, aprire **Esplora soluzioni** e fare doppio clic il **Client Web** progetto. Selezionare **imposta come progetto di avvio**.  
+2. Per eseguire il progetto client Web, aprire **Esplora soluzioni** e fare clic con il pulsante destro del mouse sul progetto **client Web** . Selezionare **Imposta come progetto di avvio**.  
   
-3. Per eseguire il progetto Winformsclient, aprire **Esplora soluzioni** e fare doppio clic il **Winformsclient** progetto. Selezionare **imposta come progetto di avvio**.  
+3. Per eseguire il progetto client WinForms, aprire **Esplora soluzioni** e fare clic con il pulsante destro del mouse sul progetto **client Windows** form. Selezionare **Imposta come progetto di avvio**.  
   
 4. Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
@@ -155,20 +155,20 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
   
 ### <a name="web-client-options"></a>Opzioni del progetto WebClient  
   
-- **Crea nuova RDP**: Crea una nuova richiesta di proposte (RDP) e avvia un flusso di lavoro del processo di acquisto.  
+- **Creare una nuova RDP**: Crea una nuova richiesta di proposte (RDP) e avvia un flusso di lavoro del processo di acquisto.  
   
-- **Aggiorna**: Aggiorna l'elenco di RDP attive e completate nella finestra principale.  
+- **Aggiornamento**: Aggiorna l'elenco di RFP attivi e finiti nella finestra principale.  
   
 - **Visualizza**: Mostra il contenuto di una RDP esistente. I fornitori possono inviare le proposte (se invitati o se la RDP non è completata).  
   
-- Visualizza come: L'utente può accedere alla RDP tramite diverse identità selezionando il partecipante desiderato nella **Visualizza come** casella combinata in griglia di RDP attive.  
+- Visualizza come: L'utente può accedere alla RDP usando identità diverse selezionando il partecipante desiderato nella casella combinata **Visualizza come** nella griglia di RFP attive.  
   
 ### <a name="winforms-client-options"></a>Opzioni del progetto WinFormsClient  
   
 - **Crea RDP**: Crea una nuova richiesta di proposte (RDP) e avvia un flusso di lavoro del processo di acquisto.  
   
-- **Aggiorna**: Aggiorna l'elenco di RDP attive e completate nella finestra principale.  
+- **Aggiornamento**: Aggiorna l'elenco di RFP attivi e finiti nella finestra principale.  
   
 - **Visualizza RDP**: Mostra il contenuto di una RDP esistente. I fornitori possono inviare le proposte (se invitati o se la RDP non è completata)  
   
-- **Connettersi come**: L'utente può accedere alla RDP tramite diverse identità selezionando il partecipante desiderato nella **Visualizza come** casella combinata in griglia di RDP attive.
+- **Connetti come**: L'utente può accedere alla RDP usando identità diverse selezionando il partecipante desiderato nella casella combinata **Visualizza come** nella griglia di RFP attive.

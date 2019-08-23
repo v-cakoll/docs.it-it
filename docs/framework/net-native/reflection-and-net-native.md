@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f328221263840528fff54e00b873ec62cee2bb0b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 8594d29aab7f07dce150671493bbf70f9832fb44
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051982"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935163"
 ---
 # <a name="reflection-and-net-native"></a>Reflection e .NET Native
 In .NET Framework, lo sviluppo gestito supporta la metaprogrammazione attraverso l'API di reflection. La reflection consente di controllare gli oggetti in un'applicazione, chiamare metodi su oggetti individuati tramite ispezione, generare nuovi tipi in fase di esecuzione e supporta molti altri scenari di codice dinamico. Supporta anche la serializzazione e la deserializzazione, che consente di mantenere e successivamente ripristinare i valori dei campi di un oggetto. Tutti questi scenari richiedono che il compilatore JIT just-in-time di .NET Framework generi codice nativo basato sui metadati disponibili.  
@@ -21,9 +21,9 @@ In .NET Framework, lo sviluppo gestito supporta la metaprogrammazione attraverso
 - Lo [strumento di risoluzione dei problemi MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) per i metodi.  
   
 > [!NOTE]
->  Per una panoramica del processo di compilazione di .NET Native e informazioni di base sui motivi per cui è necessario un file di direttive di runtime, vedere [Compilazione e .NET Native](../../../docs/framework/net-native/net-native-and-compilation.md).  
+> Per una panoramica del processo di compilazione di .NET Native e informazioni di base sui motivi per cui è necessario un file di direttive di runtime, vedere [Compilazione e .NET Native](../../../docs/framework/net-native/net-native-and-compilation.md).  
   
- Inoltre, .NET Native non consentono di effettuare la reflection di membri privati della libreria di classi .NET Framework. Ad esempio, una chiamata alla proprietà <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> per recuperare i campi di un tipo libreria di classi di .NET Framework restituisce solo campi pubblici o protetti.  
+ Inoltre, .NET Native non consente di riflettere i membri privati della libreria di classi .NET Framework. Ad esempio, una chiamata alla proprietà <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> per recuperare i campi di un tipo libreria di classi di .NET Framework restituisce solo campi pubblici o protetti.  
   
  Negli argomenti seguenti sono riportate le nozioni e la documentazione necessarie a supportare la reflection e la serializzazione nelle applicazioni di riferimento:  
   

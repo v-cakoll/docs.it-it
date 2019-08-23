@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a878ccf94fb4f6d67daa3a4dd42fcf98faf34a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95b463b23c230d620d746e48da49d75238ef2cb7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748635"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955366"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
 [Supportata in .NET Framework 4.6.1 e versioni successive]  
@@ -38,37 +38,37 @@ HRESULT ReadInMemorySymbols(
   
 ## <a name="parameters"></a>Parametri  
  `moduleId`  
- [in] L'identificatore del modulo contenente il flusso in memoria.  
+ in Identificatore del modulo contenente il flusso in memoria.  
   
  `symbolsReadOffset`  
- [in] L'offset all'interno del flusso in memoria in corrispondenza del quale iniziare la lettura dei byte.  
+ in Offset all'interno del flusso in memoria da cui iniziare la lettura dei byte.  
   
  `pSymbolBytes`  
- [out] Un puntatore al buffer in cui verranno copiati i dati. Il buffer deve avere `countSymbolBytes` di spazio disponibile.  
+ out Puntatore al buffer in cui verranno copiati i dati. Lo spazio del buffer `countSymbolBytes` deve essere disponibile.  
   
  `countSymbolBytes`  
- [in] Il numero di byte da copiare.  
+ in Numero di byte da copiare.  
   
  `pCountSymbolBytesRead`  
- [out] Quando il metodo viene restituito, contiene il numero effettivo di byte letti.  
+ out Quando il metodo viene restituito, contiene il numero effettivo di byte letti.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK`, se un numero diverso da zero di byte letti.  
+ `S_OK`Se è stato letto un numero di byte diverso da zero.  
   
- `CORPROF_E_MODULE_IS_DYNAMIC`, se il modulo è stato creato usando <xref:System.Reflection.Emit>.  
+ `CORPROF_E_MODULE_IS_DYNAMIC`Se il modulo è stato creato usando <xref:System.Reflection.Emit>.  
   
 ## <a name="remarks"></a>Note  
- Il `ReadInMemorySymbols` metodo tenta di leggere `countSymbolBytes` dei dati a partire dall'offset `symbolsReadOffset` all'interno del flusso in memoria. I dati vengono copiati `pSymbolBytes`, che deve disporre di `countSymbolBytes` dello spazio disponibile.     `pCountSymbolsBytesRead` contiene il numero effettivo di byte letti, che può essere inferiore rispetto a `countSymbolBytes` se viene raggiunta la fine del flusso.  
+ Il `ReadInMemorySymbols` metodo tenta di leggere `countSymbolBytes` i dati a partire dall' `symbolsReadOffset` offset all'interno del flusso in memoria. I dati vengono copiati `pSymbolBytes`in, che dovrebbe avere `countSymbolBytes` spazio disponibile.     `pCountSymbolsBytesRead`contiene il numero effettivo di byte letti, che può essere minore di `countSymbolBytes` se viene raggiunta la fine del flusso.  
   
 > [!NOTE]
->  L'implementazione corrente non supporta Reflection. Emit. Se il modulo è stato creato tramite Reflection. Emit, il metodo restituisce `CORPROF_E_MODULE_IS_DYNAMIC`.  
+> L'implementazione corrente non supporta Reflection. Emit. Se il modulo è stato creato usando Reflection. Emit, il metodo restituisce `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorProf.idl, CorProf.h  
+ **Intestazione:** CorProf. idl, CorProf. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

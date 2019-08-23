@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 525ec4828fb942aeb447940ea68a523cd7c69140
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8721f7c30061fbfd4a761bed090b761762c3c13c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736733"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939029"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>Metodo ISymUnmanagedReader::ReplaceSymbolStore
-Sostituisce l'archivio dei simboli esistente con un archivio dei simboli delta. Questo metodo è simile al [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) metodo, ad eccezione del fatto che il valore delta specificato funziona come una sostituzione completa anziché un aggiornamento.  
+Sostituisce l'archivio dei simboli esistente con un archivio dei simboli delta. Questo metodo è simile al metodo [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) , ad eccezione del fatto che il delta specificato funge da sostituzione completa anziché da un aggiornamento.  
   
 > [!NOTE]
->  È necessario specificare solo una delle `filename` o `pIStream` parametri, non entrambi. Se `filename` viene specificato, l'archivio dei simboli verrà aggiornato con i simboli in tale file. Se `pIStream` viene specificato, l'archivio verrà aggiornato con i dati di <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> È necessario specificare solo uno dei `filename` parametri o `pIStream` , non entrambi. Se `filename` si specifica, l'archivio dei simboli verrà aggiornato con i simboli presenti in tale file. Se `pIStream` si specifica, l'archivio verrà aggiornato con i dati <xref:System.Runtime.InteropServices.ComTypes.IStream>del.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,16 +40,16 @@ HRESULT ReplaceSymbolStore (
   
 ## <a name="parameters"></a>Parametri  
  `filename`  
- [in] Il nome del file contenente l'archivio dei simboli.  
+ in Nome del file contenente l'archivio dei simboli.  
   
  `pIStream`  
- [in] Il flusso di file, usato come alternativa per il `filename` parametro.  
+ in Flusso di file, usato come alternativa al `filename` parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

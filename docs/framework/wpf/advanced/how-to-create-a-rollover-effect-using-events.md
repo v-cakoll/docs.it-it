@@ -9,27 +9,27 @@ helpviewer_keywords:
 - rollover effect [WPF]
 - element colors [WPF], changing
 ms.assetid: 3b20d028-6f1c-4b25-95d2-fa68cefbdb4c
-ms.openlocfilehash: 87740a215136863199d962a2704cf691f27fc3bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3996a3b9bb976dd5f2e5b675de3894bbaba7d9d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776649"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960379"
 ---
 # <a name="how-to-create-a-rollover-effect-using-events"></a>Procedura: Creare un effetto di attivazione usando gli eventi
-In questo esempio viene illustrato come modificare il colore di un elemento quando il puntatore del mouse entra o esce dall'area occupata dall'elemento.  
+Questo esempio Mostra come modificare il colore di un elemento quando il puntatore del mouse entra e lascia l'area occupata dall'elemento.  
   
- In questo esempio è costituito un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file e un file code-behind.  
+ Questo esempio è costituito [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] da un file e da un file code-behind.  
   
 > [!NOTE]
->  In questo esempio viene illustrato come utilizzare gli eventi, ma il modo consigliato per ottenere lo stesso effetto è usare un <xref:System.Windows.Trigger> in uno stile. Per altre informazioni, vedere [Applicazione di stili e modelli](../controls/styling-and-templating.md).  
+> Questo esempio illustra come usare gli eventi, ma la modalità consigliata per ottenere questo risultato consiste nell'usare un <xref:System.Windows.Trigger> oggetto in uno stile. Per altre informazioni, vedere [Applicazione di stili e modelli](../controls/styling-and-templating.md).  
   
 ## <a name="example"></a>Esempio  
- Quanto segue [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] crea l'interfaccia utente, che è costituito <xref:System.Windows.Controls.Border> intorno a un <xref:System.Windows.Controls.TextBlock>e associa il <xref:System.Windows.Input.Mouse.MouseEnter> e <xref:System.Windows.UIElement.MouseLeave> gestori eventi per il <xref:System.Windows.Controls.Border>.  
+ Nell'esempio [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] seguente viene creata l'interfaccia utente che <xref:System.Windows.Controls.Border> è costituita <xref:System.Windows.Controls.TextBlock>da un oggetto e i <xref:System.Windows.Input.Mouse.MouseEnter> gestori <xref:System.Windows.UIElement.MouseLeave> eventi e vengono collegati a <xref:System.Windows.Controls.Border>.  
   
  [!code-xaml[mouseenterMouseleave#MouseEnterLeaveSampleXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/mouseenterMouseleave/CSharp/Window1.xaml#mouseenterleavesamplexaml)]  
   
- Il codice seguente crea il <xref:System.Windows.UIElement.MouseEnter> e <xref:System.Windows.UIElement.MouseLeave> gestori eventi.  Quando il puntatore del mouse entra la <xref:System.Windows.Controls.Border>, lo sfondo del <xref:System.Windows.Controls.Border> viene modificato e impostato su rosso.  Quando il puntatore del mouse lascia il <xref:System.Windows.Controls.Border>, lo sfondo del <xref:System.Windows.Controls.Border> viene nuovamente impostato su bianco.  
+ Il codice sottostante seguente consente di <xref:System.Windows.UIElement.MouseEnter> creare <xref:System.Windows.UIElement.MouseLeave> i gestori eventi e.  Quando il puntatore del mouse entra <xref:System.Windows.Controls.Border>in, lo sfondo <xref:System.Windows.Controls.Border> di viene modificato in rosso.  Quando il puntatore del mouse esce <xref:System.Windows.Controls.Border>dall'oggetto, lo sfondo <xref:System.Windows.Controls.Border> di viene modificato di nuovo in bianco.  
   
  [!code-csharp[mouseenterMouseleave#MouseEnterLeaveSampleEventHandlers](~/samples/snippets/csharp/VS_Snippets_Wpf/mouseenterMouseleave/CSharp/Window1.xaml.cs#mouseenterleavesampleeventhandlers)]
  [!code-vb[mouseenterMouseleave#MouseEnterLeaveSampleEventHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/mouseenterMouseleave/VisualBasic/Window1.xaml.vb#mouseenterleavesampleeventhandlers)]

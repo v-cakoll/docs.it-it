@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f559bf603605873f1b9155e9a96cb367e5420343
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907992"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941679"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Strutture di controllo annidate (Visual Basic)
-È possibile inserire le istruzioni di controllo all'interno di altre istruzioni di controllo, ad esempio un `If...Then...Else` blocchi all'interno di un `For...Next` ciclo. Un'istruzione di controllo posizionata all'interno di un'altra istruzione di controllo viene detto *nidificata*.  
+È possibile inserire istruzioni di controllo all'interno di altre istruzioni di controllo `If...Then...Else` , ad esempio `For...Next` un blocco all'interno di un ciclo. Un'istruzione di controllo posizionata all'interno di un'altra istruzionedi controllo è detta annidata.  
   
 ## <a name="nesting-levels"></a>Livelli di annidamento  
- Strutture di controllo in Visual Basic possono essere annidate a tutti i livelli desiderato. È pratica comune per rendere più leggibile strutture annidate rientrando il corpo della ognuno di essi. L'editor di sviluppo integrato (IDE) di ambiente automaticamente esegue questa operazione.  
+ Le strutture di controllo in Visual Basic possono essere nidificate a tutti i livelli desiderati. Per rendere più leggibili le strutture annidate, è consigliabile rientrare nel corpo di ognuna di esse. Questa operazione viene eseguita automaticamente dall'editor Integrated Development Environment (IDE).  
   
- Nell'esempio seguente, la procedura `sumRows` somma tra gli elementi positivi di ogni riga della matrice.  
+ Nell'esempio seguente la procedura `sumRows` aggiunge insieme gli elementi positivi di ogni riga della matrice.  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- Nell'esempio precedente, il primo `Next` istruzione chiude interna `For` ciclo e l'ultima `Next` istruzione chiude esterna `For` ciclo.  
+ Nell'esempio precedente `Next` , la prima istruzione chiude il ciclo interno `For` e l'ultima `Next` istruzione chiude il ciclo esterno `For` .  
   
- Allo stesso modo, in annidati `If` (istruzioni), il `End If` istruzioni si applicano automaticamente per il più vicino prima `If` istruzione. Annidato `Do` cicli funzionano in modo analogo, con più interna `Loop` istruzione corrispondente più interna `Do` istruzione.  
+ Analogamente, nelle `If` istruzioni nidificate `End If` , le istruzioni si applicano automaticamente `If` all'istruzione precedente più vicina. I `Do` cicli annidati funzionano in modo simile, con l' `Loop` istruzione più interna che `Do` corrisponde all'istruzione più interna.  
   
 > [!NOTE]
->  Per molte strutture di controllo, quando si fa clic su una parola chiave, sono evidenziate tutte le parole chiave nella struttura. Ad esempio, quando fa clic su `If` in un `If...Then...Else` costruzione, tutte le istanze di `If`, `Then`, `ElseIf`, `Else`, e `End If` nella costruzione di strutture vengono evidenziati. Per spostare alla parola chiave evidenziata successiva o precedente, premere CTRL + MAIUSC + freccia giù o CTRL + MAIUSC + freccia su.  
+> Per molte strutture di controllo, quando si fa clic su una parola chiave, vengono evidenziate tutte le parole chiave nella struttura. Ad esempio, quando si fa `If` clic in `If...Then...Else` una costruzione, vengono evidenziate `Then`tutte `ElseIf`le `Else`istanze di `End If` `If`,,, e nella costruzione. Per passare alla parola chiave evidenziata successiva o precedente, premere CTRL + MAIUSC + freccia giù o CTRL + MAIUSC + freccia su.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Nidificazione di diversi tipi di strutture di controllo  
- È possibile annidare un tipo di struttura di controllo all'interno di un altro tipo. L'esempio seguente usa una `With` blocchi all'interno di un `For Each` ciclo e nidificate `If` blocca all'interno del `With` blocco.  
+## <a name="nesting-different-kinds-of-control-structures"></a>Annidamento di tipi diversi di strutture di controllo  
+ È possibile annidare un tipo di struttura di controllo all'interno di un altro tipo. Nell'esempio seguente viene utilizzato `With` un blocco all' `For Each` interno di un `If` ciclo e blocchi `With` annidati all'interno del blocco.  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -64,12 +64,12 @@ For Each ctl As System.Windows.Forms.Control In Me.Controls
 Next ctl  
 ```  
   
-## <a name="overlapping-control-structures"></a>La sovrapposizione di strutture di controllo  
- Non è possibile sovrapporre le strutture di controllo. Ciò significa che qualsiasi struttura annidata debba essere completamente contenuta all'interno della successiva struttura più interna. Ad esempio, la disposizione seguente non è valida perché il `For` ciclo termina prima del `With` blocco termina.  
+## <a name="overlapping-control-structures"></a>Strutture di controllo sovrapposte  
+ Non è possibile sovrapporre strutture di controllo. Ciò significa che qualsiasi struttura annidata deve essere completamente contenuta nella successiva struttura più interna. La disposizione seguente, ad esempio, non è valida `For` perché il ciclo termina prima del `With` termine del blocco interno.  
   
- ![Diagramma che mostra un esempio di annidamento non valida.](./media/nested-control-structures/example-invalid-nesting.gif) 
+ ![Diagramma che mostra un esempio di annidamento non valido.](./media/nested-control-structures/example-invalid-nesting.gif) 
   
- Il compilatore Visual Basic rileva le strutture di controllo sovrapposte e segnala un errore in fase di compilazione.  
+ Il compilatore Visual Basic rileva tali strutture di controllo sovrapposte e segnala un errore in fase di compilazione.  
   
 ## <a name="see-also"></a>Vedere anche
 

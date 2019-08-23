@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: 2f9de32eb8637e58c17aba2309eed33dcfdd42a7
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d9dd9306980b80f7845c10e8c0ccb59f29821245
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400764"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940832"
 ---
 # <a name="dependency-property-security"></a>Sicurezza delle proprietà di dipendenza
 Le proprietà di dipendenza in genere devono essere considerate come proprietà pubbliche. A causa della natura stessa del sistema di proprietà di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], è impossibile avere delle garanzie di sicurezza sul valore di una proprietà di dipendenza.  
@@ -29,7 +29,7 @@ Le proprietà di dipendenza in genere devono essere considerate come proprietà 
  Per una proprietà di dipendenza personalizzata, è possibile registrare la proprietà come proprietà di dipendenza di sola lettura e questo fornisce un metodo efficace per impedire che una proprietà venga impostata da chiunque che non contenga un riferimento a per <xref:System.Windows.DependencyPropertyKey> la proprietà. Per altre informazioni, vedere [Proprietà di dipendenza di sola lettura](read-only-dependency-properties.md).  
   
 > [!NOTE]
->  La dichiarazione di <xref:System.Windows.DependencyProperty> un campo identificatore privato non è consentita e può essere usata per ridurre lo spazio dei nomi esposto immediatamente di una classe personalizzata, ma tale proprietà non deve essere considerata "privata" nello stesso senso del linguaggio comune le definizioni del linguaggio Runtime (CLR) definiscono il livello di accesso per i motivi descritti nella sezione successiva.  
+> La dichiarazione di <xref:System.Windows.DependencyProperty> un campo identificatore privato non è consentita e può essere usata per ridurre lo spazio dei nomi esposto immediatamente di una classe personalizzata, ma tale proprietà non deve essere considerata "privata" nello stesso senso del linguaggio comune le definizioni del linguaggio Runtime (CLR) definiscono il livello di accesso per i motivi descritti nella sezione successiva.  
   
 <a name="PropertySystemExposure"></a>   
 ## <a name="property-system-exposure-of-dependency-properties"></a>Esposizione di proprietà di dipendenza del sistema di proprietà  

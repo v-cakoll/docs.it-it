@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: abfb91c61ef72bfc1626b4cc4dcea42b75e2ab35
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: cb54ef372e6da551b95f1edf61e3844b9dcba4c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040248"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950047"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Procedura dettagliata: Creazione di un controllo composito con Visual Basic
 I controlli compositi consentono di creare e riutilizzare interfacce grafiche personalizzate. Un controllo composito è sostanzialmente un componente con rappresentazione visiva. Può essere composto da uno o più controlli per Windows Forms, componenti o blocchi di codice in grado di estenderne le funzionalità convalidando l'input dell'utente, modificando le proprietà della visualizzazione o effettuando altre attività richieste dall'autore. I controlli compositi possono essere inseriti in Windows Forms al pari degli altri controlli. Nella prima parte di questa procedura verrà creato un controllo composito semplice denominato `ctlClock`. Nella seconda parte, le funzionalità di `ctlClock` verranno estese mediante ereditarietà.
@@ -37,7 +37,7 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
 3. In Esplora soluzioni fare clic con il pulsante destro del mouse su **UserControl1.vb**, quindi fare clic su **Rinomina**. Modificare il nome file in `ctlClock.vb`. Scegliere il pulsante **Sì** quando richiesto per rinominare tutti i riferimenti all'elemento di codice "UserControl1".
 
     > [!NOTE]
-    >  Per impostazione predefinita, un controllo composito eredita <xref:System.Windows.Forms.UserControl> dalla classe fornita dal sistema. La <xref:System.Windows.Forms.UserControl> classe fornisce la funzionalità richiesta da tutti i controlli compositi e implementa i metodi e le proprietà standard.
+    > Per impostazione predefinita, un controllo composito eredita <xref:System.Windows.Forms.UserControl> dalla classe fornita dal sistema. La <xref:System.Windows.Forms.UserControl> classe fornisce la funzionalità richiesta da tutti i controlli compositi e implementa i metodi e le proprietà standard.
 
 4. Scegliere **Salva tutto** dal menu **File** per salvare il progetto.
 
@@ -184,7 +184,7 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
 5. In Esplora soluzioni scorrere i progetti correnti.
 
     > [!NOTE]
-    >  Nel progetto corrente è stato aggiunto il file denominato **ctlAlarmClock.vb**.
+    > Nel progetto corrente è stato aggiunto il file denominato **ctlAlarmClock.vb**.
 
 ### <a name="adding-the-alarm-properties"></a>Aggiunta delle proprietà per l'allarme
  Le modalità di aggiunta delle proprietà a un controllo ereditato sono analoghe a quelle utilizzate per i controlli compositi. Mediante la sintassi di dichiarazione delle proprietà si aggiungeranno ora al controllo due proprietà: `AlarmTime`, in cui viene memorizzato il valore della data e dell'ora in cui l'allarme deve essere disattivato, e `AlarmSet`, che indica se l'allarme è impostato o meno.
@@ -230,10 +230,10 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
 2. Fare clic su `lblDisplay` (parte visualizzata del controllo) e osservare la finestra Proprietà.
 
     > [!NOTE]
-    >  Tutte le proprietà sono presenti ma inattive, ossia visualizzate in grigio. Ciò indica che le proprietà sono native di `lblDisplay` e non è possibile accedervi né modificarle nella finestra Proprietà. Per impostazione predefinita i controlli contenuti in un controllo composito sono `Private` e le relative proprietà non sono accessibili.
+    > Tutte le proprietà sono presenti ma inattive, ossia visualizzate in grigio. Ciò indica che le proprietà sono native di `lblDisplay` e non è possibile accedervi né modificarle nella finestra Proprietà. Per impostazione predefinita i controlli contenuti in un controllo composito sono `Private` e le relative proprietà non sono accessibili.
 
     > [!NOTE]
-    >  Se si desidera che gli utenti successivi del controllo composito abbiano accesso ai relativi controlli interni, dichiararli come `Public` o `Protected`. Sarà così possibile impostare e modificare le proprietà dei controlli contenuti nel controllo composito mediante il codice appropriato.
+    > Se si desidera che gli utenti successivi del controllo composito abbiano accesso ai relativi controlli interni, dichiararli come `Public` o `Protected`. Sarà così possibile impostare e modificare le proprietà dei controlli contenuti nel controllo composito mediante il codice appropriato.
 
 3. Aggiungere un <xref:System.Windows.Forms.Label> controllo al controllo composito.
 
@@ -298,7 +298,7 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
      Il codice appena aggiunto ha diverse funzioni. Se si utilizza l'istruzione `Overrides`, il controllo utilizzerà questo metodo anziché il metodo ereditato dal controllo di base. Una volta chiamato, questo metodo chiamerà il metodo di cui esegue l'override utilizzando l'istruzione `MyBase.Timer1_Tick` e assicurando che tutte le funzionalità incorporate nel controllo originale vengano riprodotte in questo controllo. Verrà quindi eseguito il codice aggiuntivo per incorporare la funzionalità di allarme. Quando l'allarme viene attivato, viene visualizzato un controllo etichetta lampeggiante e viene emesso un segnale acustico.
 
     > [!NOTE]
-    >  Poiché si esegue l'override di un gestore eventi ereditato, non è necessario specificare l'evento tramite la parola chiave `Handles`. L'evento risulta già associato. L'override riguarda l'implementazione del gestore.
+    > Poiché si esegue l'override di un gestore eventi ereditato, non è necessario specificare l'evento tramite la parola chiave `Handles`. L'evento risulta già associato. L'override riguarda l'implementazione del gestore.
 
      Il controllo dell'allarme è quasi completo. L'unica operazione rimasta è l'implementazione di un sistema di disattivazione. A tal fine, è necessario aggiungere codice al metodo `lblAlarm_Click`.
 

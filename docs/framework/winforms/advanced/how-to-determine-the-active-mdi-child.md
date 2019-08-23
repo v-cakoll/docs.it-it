@@ -11,26 +11,26 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91100b37e4cae9041479b209e40034efe376df5b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937553"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946224"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Procedura: Determinare il figlio MDI attivo
-In alcuni casi, è opportuno fornire un comando che opera sul controllo con lo stato attivo del form figlio attualmente attivo. Si supponga, ad esempio, che si vuole copiare negli Appunti il testo selezionato dalla casella di testo del form figlio. È necessario creare una routine che copia il testo selezionato negli Appunti mediante il <xref:System.Windows.Forms.Control.Click> evento della voce di menu copia il menu di modifica standard.  
+In alcuni casi, sarà necessario fornire un comando che opera sul controllo che ha lo stato attivo sul form figlio attualmente attivo. Si supponga, ad esempio, di voler copiare negli Appunti il testo selezionato dalla casella di testo del form figlio. Si creerebbe una procedura che consente di copiare il testo selezionato negli Appunti <xref:System.Windows.Forms.Control.Click> utilizzando l'evento della voce di menu copia nel menu modifica standard.  
   
- Poiché un'applicazione MDI può avere molte istanze dello stesso modulo figlio, la procedura deve conoscere il modulo da utilizzare. Per specificare il formato corretto, usare il <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> proprietà, che restituisce la forma figlio che ha lo stato attivo o che è stata attiva più di recente.  
+ Poiché un'applicazione MDI può avere più istanze dello stesso form figlio, è necessario che la procedura conosca il formato da utilizzare. Per specificare il formato corretto, utilizzare la <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> proprietà, che restituisce il form figlio con lo stato attivo o che è stato attivato più di recente.  
   
- Quando si dispone di diversi controlli in un form, è anche necessario specificare quale controllo è attivo. Ad esempio la <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> proprietà, il <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> proprietà restituisce il controllo con lo stato attivo del form figlio attivo. La procedura seguente illustra una procedura di copia che può essere chiamata da un menu di form figlio, un pulsante sul form MDI o un pulsante della barra degli strumenti.  
+ Quando si dispone di più controlli in un form, è necessario specificare anche il controllo attivo. Analogamente <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> alla proprietà, <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> la proprietà restituisce il controllo con lo stato attivo sul form figlio attivo. Nella procedura riportata di seguito viene illustrata una procedura di copia che può essere chiamata da un menu form figlio, da un menu nel form MDI o da un pulsante della barra degli strumenti.  
   
 ### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>Per determinare il figlio MDI attivo (per copiare il testo negli Appunti)  
   
 1. All'interno di un metodo, copiare il testo del controllo attivo del form figlio attivo negli Appunti.  
   
     > [!NOTE]
-    >  Questo esempio si presuppone esista un form padre MDI (`Form1`) che dispone di uno o più finestre figlio MDI che contiene un <xref:System.Windows.Forms.RichTextBox> controllo. Per altre informazioni, vedere [creazione di form padre MDI](how-to-create-mdi-parent-forms.md).  
+    > In questo esempio si presuppone che esista un form padre`Form1`MDI () con una o più finestre figlio MDI contenenti <xref:System.Windows.Forms.RichTextBox> un controllo. Per ulteriori informazioni, vedere [creazione di form padre MDI](how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -88,5 +88,5 @@ In alcuni casi, è opportuno fornire un comando che opera sul controllo con lo s
 - [Applicazioni MDI (Interfaccia a documenti multipli, Multiple-Document Interface)](multiple-document-interface-mdi-applications.md)
 - [Procedura: Creare form padre MDI](how-to-create-mdi-parent-forms.md)
 - [Procedura: Creare form figlio MDI](how-to-create-mdi-child-forms.md)
-- [Procedura: Inviare dati al figlio MDI attivo](how-to-send-data-to-the-active-mdi-child.md)
-- [Procedura: Disporre i form figlio MDI](how-to-arrange-mdi-child-forms.md)
+- [Procedura: Invia dati al figlio MDI attivo](how-to-send-data-to-the-active-mdi-child.md)
+- [Procedura: Disponi form figlio MDI](how-to-arrange-mdi-child-forms.md)

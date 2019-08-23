@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80d82e26fe54c5422d1140bba84830879f0b5c2d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 238a5f19bd8cbd89a5537b2b9297bfa9e1f54613
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781282"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952880"
 ---
 # <a name="functionleave-function"></a>Funzione FunctionLeave
-Notifica al profiler che una funzione sta per restituire al chiamante.  
+Notifica al profiler che una funzione sta per tornare al chiamante.  
   
 > [!NOTE]
->  Il `FunctionLeave` funzione è obsoleta in .NET Framework 2.0. Continuerà a funzionare, ma comporta una riduzione delle prestazioni. Usare la [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) funzione.  
+> La `FunctionLeave` funzione è deprecata nel .NET Framework 2,0. Continuerà a funzionare, ma comporterà una riduzione delle prestazioni. Usare invece la funzione [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,29 +39,29 @@ void __stdcall FunctionLeave (
   
 ## <a name="parameters"></a>Parametri  
  `funcID`  
- [in] L'identificatore della funzione che restituisce.  
+ in Identificatore della funzione che restituisce.  
   
 ## <a name="remarks"></a>Note  
- Il `FunctionLeave` funzione è un callback, è necessario implementarla. L'implementazione deve utilizzare il `__declspec`(`naked`) attributo della classe di archiviazione.  
+ La `FunctionLeave` funzione è un callback. è necessario implementarla. L'implementazione deve usare l' `__declspec`attributo`naked`della classe di archiviazione ().  
   
- Il motore di esecuzione non viene salvato alcun registro prima di chiamare questa funzione.  
+ Il motore di esecuzione non salva i registri prima di chiamare questa funzione.  
   
-- In ingresso, è necessario salvare tutti i registri che usi, tra cui quelle in unità a virgola mobile (FPU).  
+- In ingresso è necessario salvare tutti i registri utilizzati, inclusi quelli nell'unità a virgola mobile (FPU).  
   
-- In uscita, è necessario ripristinare lo stack recuperando tutti i parametri che sono stati inseriti dal relativo chiamante.  
+- All'uscita è necessario ripristinare lo stack scegliendo tutti i parametri di cui è stato eseguito il push dal chiamante.  
   
- L'implementazione di `FunctionLeave` non devono bloccare perché ritarderà l'operazione di garbage collection. L'implementazione non deve tentare una garbage collection perché lo stack potrebbe non essere in uno stato di garbage collection adatto. Se si tenta un'operazione di garbage collection, il runtime si bloccherà fino a `FunctionLeave` restituisce.  
+ L'implementazione di `FunctionLeave` non deve essere bloccata perché ritarderà Garbage Collection. L'implementazione non deve tentare un Garbage Collection perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si `FunctionLeave` bloccherà fino a quando non viene restituito.  
   
- Inoltre, il `FunctionLeave` funzione non deve chiamare codice gestito o causare in alcun modo un'allocazione di memoria gestita.  
+ Inoltre, la `FunctionLeave` funzione non deve chiamare nel codice gestito o in alcun modo causare un'allocazione managed memory.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
- **Versioni di .NET framework:** 1.1, 1.0  
+ **Versioni .NET Framework:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Vedere anche
 

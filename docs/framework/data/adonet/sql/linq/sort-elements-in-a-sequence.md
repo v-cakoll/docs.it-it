@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 8f645232d2ae9d9bad8c26a5b9fec2243c6cf9d0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f6f112a63dd976a1d6ae91f2fafd6678a9f40846
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380017"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945082"
 ---
 # <a name="sort-elements-in-a-sequence"></a>Ordinare elementi in una sequenza
 Usare l'operatore <xref:System.Linq.Enumerable.OrderBy%2A> per ordinare una sequenza in base a una o più chiavi.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è progettato per supportare l'ordinamento in base a semplici tipi primitivi, ad esempio `string`, `int`e così via. Non supporta invece l'ordinamento per classi multivalore complesse, ad esempio i tipi anonimi. Non supporta inoltre i tipi di dati `byte`.  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]è progettato per supportare l'ordinamento in base a tipi primitivi `string`semplici `int`, ad esempio, e così via. Non supporta invece l'ordinamento per classi multivalore complesse, ad esempio i tipi anonimi. Non supporta inoltre i tipi di dati `byte`.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono ordinati `Employees` in base alla data di assunzione.  
@@ -43,7 +43,7 @@ Usare l'operatore <xref:System.Linq.Enumerable.OrderBy%2A> per ordinare una sequ
  [!code-vb[DLinqQueryExamples#24](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#24)]  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente vengono ordinati gli ordini dal `EmployeeID 1` da `ShipCountry`e quindi dal più alto al più basso costo di spedizione.  
+ Nell'esempio seguente vengono ordinati gli `EmployeeID 1` ordini `ShipCountry`da per e quindi dal trasporto più alto a quello più basso.  
   
  [!code-csharp[DLinqQueryExamples#25](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#25)]
  [!code-vb[DLinqQueryExamples#25](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#25)]  

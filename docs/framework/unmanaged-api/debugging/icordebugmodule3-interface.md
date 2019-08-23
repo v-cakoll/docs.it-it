@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37041764ad37221ea80cefa12adfb214287d8248
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e51ff64115ce3417087eee6845aa802ad64f2a72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763997"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961002"
 ---
 # <a name="icordebugmodule3-interface"></a>Interfaccia ICorDebugModule3
 Crea un lettore di simboli per un modulo dinamico.  
@@ -43,22 +43,22 @@ interface ICorDebugModule3 : IUnknown
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo ICorDebugModule3::CreateReaderForInMemorySymbols](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|Crea un lettore di simboli (in genere [interfaccia di ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) per un modulo dinamico.|  
+|[Metodo ICorDebugModule3::CreateReaderForInMemorySymbols](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|Crea un lettore di simboli (in genere [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) per un modulo dinamico.|  
   
 ## <a name="remarks"></a>Note  
  Questa interfaccia estende logicamente le interfacce "ICorDebugModule" e "ICorDebugModule2".  
   
 > [!NOTE]
->  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
+> Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
- **Versioni di .NET framework:** 4.5, 4, 3.5 SP1
+ **Versioni .NET Framework:** 4,5, 4, 3,5 SP1
   
 ## <a name="see-also"></a>Vedere anche
 

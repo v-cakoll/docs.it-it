@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a83b3e68365cccc96cfe7eaa4baaabf8c991c98f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611481"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956041"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Panoramica delle applicazioni browser XAML di WPF
 <a name="introduction"></a>
@@ -40,13 +40,13 @@ ms.locfileid: "69611481"
  Quando viene eseguito, il progetto XBAP viene aperto in una finestra del browser anziché in una finestra autonoma. Quando si esegue il debug dell'applicazione XBAP da Visual Studio, l'applicazione viene eseguita con l'autorizzazione dell'area Internet e quindi genera eccezioni di sicurezza se tali autorizzazioni vengono superate. Per ulteriori informazioni, vedere [Sicurezza](../security-wpf.md) e [Sicurezza con attendibilità parziale in WPF](../wpf-partial-trust-security.md).  
   
 > [!NOTE]
->  Se non si sta sviluppando con Visual Studio o si desidera ottenere ulteriori informazioni sui file di progetto, vedere [compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md).  
+> Se non si sta sviluppando con Visual Studio o si desidera ottenere ulteriori informazioni sui file di progetto, vedere [compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md).  
   
 <a name="deploying_a_xbap"></a>   
 ## <a name="deploying-an-xbap"></a>Distribuzione di un'applicazione XBAP  
  Quando si compila un'applicazione XBAP, nell'output sono inclusi i tre file seguenti:  
   
-|File|Descrizione|  
+|File|DESCRIZIONE|  
 |----------|-----------------|  
 |Eseguibile (con estensione exe)|Contiene il codice compilato e ha un'estensione exe.|  
 |Manifesto dell'applicazione (con estensione manifest)|Contiene i metadati associati all'applicazione e ha un'estensione manifest.|  
@@ -174,7 +174,7 @@ ms.locfileid: "69611481"
 |Internet|Esito negativo con "Attendibilità non concessa"|Firma dell'applicazione XBAP con un certificato.|  
   
 > [!NOTE]
->  Il comportamento descritto nella tabella precedente è relativo alle applicazioni XBAP con attendibilità totale che non seguono il modello di distribuzione attendibile di ClickOnce.  
+> Il comportamento descritto nella tabella precedente è relativo alle applicazioni XBAP con attendibilità totale che non seguono il modello di distribuzione attendibile di ClickOnce.  
   
  Per la distribuzione di un'applicazione XBAP con attendibilità totale, si consiglia di utilizzare il modello di distribuzione attendibile di ClickOnce. Quando si utilizza questo modello, all'applicazione XBAP viene concessa automaticamente l'attendibilità totale indipendentemente dall'area di sicurezza e all'utente non viene visualizzata alcuna richiesta. Come parte di questo modello, è necessario firmare l'applicazione con un certificato di un editore attendibile. Per altre informazioni, vedere [Cenni preliminari sulla distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview) e [Introduzione alla firma del codice](https://go.microsoft.com/fwlink/?LinkId=166327).  
   

@@ -1,24 +1,24 @@
 ---
-title: 'Procedura: Analizzare una stringa (Visual Basic)'
+title: 'Procedura: Analizza una stringa (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: 815e94b3b41c2c0cc1d18d598307ab292919bea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b97ce93c1018ec48649ab8b259d5f1a07109b9fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942597"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956370"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>Procedura: Analizzare una stringa (Visual Basic)
-In questo argomento viene illustrato come creare un albero XML in C#.  
+# <a name="how-to-parse-a-string-visual-basic"></a>Procedura: Analizza una stringa (Visual Basic)
+In questo argomento viene illustrato come creare un albero XML C#in.  
   
 ## <a name="example"></a>Esempio  
- È possibile analizzare una stringa in Visual Basic usando il `XElement.Parse` (metodo). Tuttavia, è più efficiente usare valori letterali XML, come illustrato nel codice seguente, perché i valori letterali XML non sono soggetti a stessi problemi di prestazioni come l'analisi XML da una stringa.  
+ È possibile analizzare una stringa in Visual Basic usando il `XElement.Parse` metodo. Tuttavia, è più efficiente usare i valori letterali XML, come illustrato nel codice seguente, perché i valori letterali XML non risentono delle stesse sanzioni delle prestazioni dell'analisi di codice XML da una stringa.  
   
- Usando i valori letterali XML, è possibile solo copiare e incollare nel codice XML nel programma Visual Basic.  
+ Usando i valori letterali XML, è possibile copiare e incollare il codice XML nel programma Visual Basic.  
   
 > [!NOTE]
->  L'analisi di testo o il caricamento di un documento XML da un file di testo è un processo meno efficiente della costruzione funzionale. Se si inizializza un albero XML dal codice, il tempo CPU richiesto per la costruzione funzionale è inferiore rispetto all'analisi di testo.  
+> L'analisi di testo o il caricamento di un documento XML da un file di testo è un processo meno efficiente della costruzione funzionale. Se si inizializza un albero XML dal codice, il tempo CPU richiesto per la costruzione funzionale è inferiore rispetto all'analisi di testo.  
   
 ```vb  
 Dim contacts as XElement = _  
@@ -51,4 +51,4 @@ Dim contacts as XElement = _
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Analisi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Analisi di XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

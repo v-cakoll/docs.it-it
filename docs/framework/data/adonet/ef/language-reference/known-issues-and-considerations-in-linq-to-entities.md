@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 66af3395d7ba7271323ad6461e8e1fb8c823a1c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662141"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913907"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Problemi noti e considerazioni in LINQ to Entities
-Questa sezione vengono fornite informazioni sui problemi noti con LINQ alle query di entità.  
+In questa sezione vengono fornite informazioni sui problemi noti relativi alle query LINQ to Entities.  
   
-- [Query LINQ che non possono essere memorizzati nella cache](#LINQQueriesThatAreNotCached)  
+- [Query LINQ che non possono essere memorizzate nella cache](#LINQQueriesThatAreNotCached)  
   
-- [Perdita di informazioni di ordinamento](#OrderingInfoLost)  
+- [Perdita delle informazioni di ordinamento](#OrderingInfoLost)  
   
-- [Interi senza segno non è supportati](#UnsignedIntsUnsupported)  
+- [Integer senza segno non supportati](#UnsignedIntsUnsupported)  
   
-- [Errori di conversione tipo](#TypeConversionErrors)  
+- [Errori di conversione del tipo](#TypeConversionErrors)  
   
-- [Riferimento alle variabili Non scalari non supportate](#RefNonScalarClosures)  
+- [Riferimento a variabili non scalari non supportato](#RefNonScalarClosures)  
   
-- [Query nidificata potrebbe non riuscire con SQL Server 2000](#NestedQueriesSQL2000)  
+- [Le query annidate potrebbero non riuscire con SQL Server 2000](#NestedQueriesSQL2000)  
   
-- [Proiezione di un tipo anonimo](#ProjectToAnonymousType)  
+- [Proiezione in un tipo anonimo](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>Query LINQ che non possono essere memorizzate nella cache  
@@ -35,14 +35,14 @@ Questa sezione vengono fornite informazioni sui problemi noti con LINQ alle quer
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>Perdita delle informazioni di ordinamento  
- Proiezione di colonne in un tipo anonimo causerà informazioni di ordinamento andranno persi in alcune query eseguite su un database di SQL Server 2005 impostato su un livello di compatibilità pari a "80".  Questo avviene quando un nome di colonna nell'elenco di ordinamento corrisponde a un nome di colonna nel selettore, come illustrato nell'esempio seguente:  
+ Se si proiettano colonne in un tipo anonimo, le informazioni relative all'ordine andranno perse in alcune query eseguite su un database SQL Server 2005 impostato sul livello di compatibilità "80".  Questo avviene quando un nome di colonna nell'elenco di ordinamento corrisponde a un nome di colonna nel selettore, come illustrato nell'esempio seguente:  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>Mancato supporto degli Unsigned Integer  
- Specificare un tipo unsigned integer in una query LINQ to Entities non è supportata perché il [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] non supporta interi senza segno. Se si specifica un unsigned integer, un <xref:System.ArgumentException> verrà generata l'eccezione durante la conversione di espressioni di query, come illustrato nell'esempio seguente. In questo esempio viene eseguita una query per un ordine con ID 48000.  
+ La [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] specifica di un tipo di Unsigned Integer in una query di LINQ to Entities non è supportata perché non supporta interi senza segno. Se si specifica una Unsigned Integer, viene <xref:System.ArgumentException> generata un'eccezione durante la conversione dell'espressione di query, come illustrato nell'esempio seguente. In questo esempio viene eseguita una query per un ordine con ID 48000.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
@@ -58,7 +58,7 @@ Questa sezione vengono fornite informazioni sui problemi noti con LINQ alle quer
  Il riferimento in una query a variabili non scalari, ad esempio un'entità, non è supportato. Durante l'esecuzione di una query di questo tipo, viene generata un'eccezione <xref:System.NotSupportedException>, seguita dal messaggio "Impossibile creare un valore di costante di tipo `EntityType`. In questo contesto solo supportati solo i tipi primitivi ('ad esempio Int32, String e GUID')".  
   
 > [!NOTE]
->  Il riferimento a una raccolta di variabili scalari supportato.  
+> Il riferimento a una raccolta di variabili scalari supportato.  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt555877)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt555877)]  

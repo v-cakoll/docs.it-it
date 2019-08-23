@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46e2e1c327a683782b68069ace2ad6c40bbc856e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb5727bab8e06decde6ccff8b84515f82c3d491a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868992"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910698"
 ---
 # <a name="security-and-remoting-considerations"></a>Considerazioni sulla sicurezza e sui servizi remoti
 I servizi remoti consentono di impostare chiamate trasparenti tra domini applicazione, processi o computer. Lo stack di sicurezza per l'accesso di codice, tuttavia, non può superare i limiti del processo o del computer (viene applicato tra domini applicazione dello stesso processo).  
   
  Tutte le classi utilizzabili in remoto (derivate da una classe <xref:System.MarshalByRefObject>) devono assumersi la responsabilità della sicurezza. Il codice deve essere usato solo in ambienti chiusi in cui il codice chiamante può essere considerato attendibile in modo implicito oppure le chiamate remote devono essere progettate in modo da non esporre il codice protetto a immissioni esterne che potrebbero essere usate da utenti malintenzionati.  
   
- In generale, non si devono mai esporre metodi, proprietà o eventi che sono protetti da dichiarativa [LinkDemand](../../../docs/framework/misc/link-demands.md) e <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> controlli di sicurezza. Con i servizi remoti, questi controlli non vengono applicati. Altri controlli di sicurezza, ad esempio <xref:System.Security.Permissions.SecurityAction.Demand>, [Assert](../../../docs/framework/misc/using-the-assert-method.md)e così via, funzionano tra i domini dell'applicazione all'interno di un processo, ma non funzionano in scenari tra processi o tra computer.  
+ In genere, è consigliabile non esporre mai metodi, proprietà o eventi protetti da [LinkDemand](../../../docs/framework/misc/link-demands.md) dichiarativo <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> e controlli di sicurezza. Con i servizi remoti, questi controlli non vengono applicati. Altri controlli di sicurezza, ad <xref:System.Security.Permissions.SecurityAction.Demand>esempio, [Assert](../../../docs/framework/misc/using-the-assert-method.md)e così via, funzionano tra i domini dell'applicazione all'interno di un processo, ma non funzionano negli scenari tra processi o tra computer.  
   
 ## <a name="protected-objects"></a>Oggetti protetti  
  Alcuni oggetti includono internamente lo stato di sicurezza. Questi oggetti non devono essere passati a codice non attendibile, che potrebbe acquisire autorizzazioni di sicurezza più elevate delle proprie.  
   
  Un esempio riguarda la creazione di un oggetto <xref:System.IO.FileStream>. <xref:System.Security.Permissions.FileIOPermission> viene richiesto al momento della creazione e, se riesce, viene restituito l'oggetto file. Tuttavia, se il riferimento all'oggetto viene passato al codice senza le autorizzazioni del file, l'oggetto sarà in grado di leggere e scrivere nel file specificato.  
   
- La più semplice per un oggetto di questo tipo consiste nel richiedere lo stesso **FileIOPermission** di qualsiasi codice che tenta di ottenere il riferimento all'oggetto tramite un elemento API pubblico.  
+ La difesa più semplice per questo tipo di oggetto è richiedere lo stesso **FileIOPermission** di qualsiasi codice che cerca di ottenere il riferimento all'oggetto tramite un elemento API pubblico.  
   
 ## <a name="application-domain-crossing-issues"></a>Problemi relativi a diversi domini applicazioni  
  Per isolare il codice in ambienti host gestiti, di solito si generano più domini applicazione figlio con criteri espliciti che consentono di ridurre i livelli di autorizzazione per i vari assembly. Tuttavia, i criteri per questi assembly rimangono invariati nel dominio applicazione predefinito. Se uno dei domini applicazione figlio riesce a forzare il dominio applicazione predefinito per caricare un assembly, l'effetto dell'isolamento del codice si perde e i tipi nell'assembly caricato forzatamente potranno eseguire il codice con un livello di attendibilità superiore.  
@@ -39,4 +39,4 @@ I servizi remoti consentono di impostare chiamate trasparenti tra domini applica
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Linee guida per la generazione di codice sicuro](../../standard/security/secure-coding-guidelines.md)

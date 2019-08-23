@@ -2,18 +2,18 @@
 title: Utilizzo di un'attività personalizzata
 ms.date: 03/30/2017
 ms.assetid: 8f356419-681a-4175-ae93-878eee970249
-ms.openlocfilehash: 47ddd42168445aa23eaaded6fd19ffe4698e4117
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ca67ef7a8c4330d0182e960fc3fdcce656976a4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669576"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962218"
 ---
 # <a name="using-a-custom-activity"></a>Utilizzo di un'attività personalizzata
 Le attività che derivano da <xref:System.Activities.Activity> o le relative sottoclassi possono essere composte in flussi di lavoro più grandi o create direttamente nel codice. In questo argomento viene descritto come usare le attività personalizzate nei flussi di lavoro creati nel codice o nella finestra di progettazione.  
   
 > [!NOTE]
->  Attività personalizzate possono essere usate nello stesso progetto in cui sono definite, purché sia l'attività personalizzata e le attività che la Usa vengono compilate (vale a dire caricati da un tipo di creazione di un'istanza generato dal processo di compilazione) se l'attività di riferimento viene caricato in modo dinamico (ad esempio, usando ActivityXAMLServices), quindi l'assembly di riferimento deve essere inserito in un progetto diverso o il XAML generato da progettazione deve essere modificato manualmente per abilitare questa opzione.  
+> È possibile utilizzare attività personalizzate nello stesso progetto in cui sono definite, purché sia l'attività personalizzata che l'attività che lo utilizza vengano compilate, ad esempio caricate da un tipo di creazione di istanze generato dal processo di compilazione, se l'attività di riferimento viene caricata. in modo dinamico (ad esempio, usando ActivityXAMLServices), l'assembly a cui si fa riferimento deve essere inserito in un progetto diverso o il codice XAML generato dalla finestra di progettazione deve essere modificato manualmente per abilitare questa operazione.  
   
 #### <a name="using-a-custom-activity-to-a-workflow-project"></a>Uso di un'attività personalizzata per un progetto di flusso di lavoro  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034307"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953261"
 ---
 # <a name="handling-datatable-events"></a>Gestione di eventi DataTable
 Nell'oggetto <xref:System.Data.DataTable> sono disponibili diversi eventi che possono essere elaborati da un'applicazione. Nella tabella seguente vengono descritti gli eventi di `DataTable`.  
@@ -30,7 +30,7 @@ Nell'oggetto <xref:System.Data.DataTable> sono disponibili diversi eventi che po
 |<xref:System.ComponentModel.MarshalByValueComponent.Disposed>|Viene generato quando `DataTable` è `Disposed`. La proprietà viene ereditata da <xref:System.ComponentModel.MarshalByValueComponent>.|  
   
 > [!NOTE]
->  La maggior parte delle operazioni che aggiungono o eliminano righe non generano gli eventi `ColumnChanged` e `ColumnChanging`. Tuttavia, il metodo `ReadXml` genera gli eventi `ColumnChanged` e `ColumnChanging`, a meno che `XmlReadMode` non sia impostato su `DiffGram` o su `Auto` quando il documento XML da leggere è un `DiffGram`.  
+> La maggior parte delle operazioni che aggiungono o eliminano righe non generano gli eventi `ColumnChanged` e `ColumnChanging`. Tuttavia, il metodo `ReadXml` genera gli eventi `ColumnChanged` e `ColumnChanging`, a meno che `XmlReadMode` non sia impostato su `DiffGram` o su `Auto` quando il documento XML da leggere è un `DiffGram`.  
   
 > [!WARNING]
 >  I dati possono venire danneggiati se vengono modificati in un oggetto `DataSet` da cui viene generato l'evento `RowChanged`. In caso di danneggiamento dei dati, non viene generata alcuna eccezione.  
@@ -68,7 +68,7 @@ Nell'oggetto <xref:System.Data.DataTable> sono disponibili diversi eventi che po
 10. Verificare i vincoli per le colonne espressioni.  
   
 > [!NOTE]
->  Le modifiche alle colonne espressioni non generano mai eventi `DataTable`, ma generano solo eventi `DataView` e `DataRowView`, Le colonne espressioni possono avere dipendenze su molte altre colonne e possono essere valutate più volte durante una singola operazione `DataRow`. Ogni valutazione di espressione genera eventi e una singola operazione `DataRow` può generare più eventi `ListChanged` e `PropertyChanged` quando sono interessate colonne espressioni, magari con più eventi per la stessa colonna espressioni.  
+> Le modifiche alle colonne espressioni non generano mai eventi `DataTable`, ma generano solo eventi `DataView` e `DataRowView`, Le colonne espressioni possono avere dipendenze su molte altre colonne e possono essere valutate più volte durante una singola operazione `DataRow`. Ogni valutazione di espressione genera eventi e una singola operazione `DataRow` può generare più eventi `ListChanged` e `PropertyChanged` quando sono interessate colonne espressioni, magari con più eventi per la stessa colonna espressioni.  
   
 > [!WARNING]
 >  Non generare un'eccezione <xref:System.NullReferenceException> all'interno del gestore eventi `RowChanged`. Se viene generata un'eccezione <xref:System.NullReferenceException> all'interno dell'evento `RowChanged` di un oggetto `DataTable`, allora il `DataTable` sarà danneggiato.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: e00cb8579ba2692acdfbf3fd349e08bb8647e2d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61dc57b2e44e7b98fbce85e81491c76736c7ad78
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801557"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959958"
 ---
 # <a name="keywords-visual-basic"></a>Parole chiave (Visual Basic)
 Le tabelle seguenti elencano tutte le parole chiave del linguaggio Visual Basic.  
@@ -24,7 +24,7 @@ Le tabelle seguenti elencano tutte le parole chiave del linguaggio Visual Basic.
  Le parole chiave seguenti sono *riservate*, ovvero non possono essere usate come nomi di elementi di programmazione, ad esempio variabili o procedure. È possibile ignorare questa restrizione racchiudendo il nome tra parentesi quadre (`[]`). Per altre informazioni, vedere "Escaped Names" (Nomi con caratteri di escape) in [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) (Nomi di elementi dichiarati).  
   
 > [!NOTE]
->  Si consiglia di non usare nomi con caratteri di escape poiché possono rendere il codice di difficile lettura e causare errori difficili da rilevare.  
+> Si consiglia di non usare nomi con caratteri di escape poiché possono rendere il codice di difficile lettura e causare errori difficili da rilevare.  
   
 |||||  
 |---|---|---|---|  
@@ -55,7 +55,7 @@ Le tabelle seguenti elencano tutte le parole chiave del linguaggio Visual Basic.
 |[Vincolo New](../../../visual-basic/language-reference/statements/type-list.md)|[Operatore New](../../../visual-basic/language-reference/operators/new-operator.md)|[avanti](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Next (in Resume)](../../../visual-basic/language-reference/statements/resume-statement.md)|  
 |[Not](../../../visual-basic/language-reference/operators/not-operator.md)|[Nothing](../../../visual-basic/language-reference/nothing.md)|[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|  
 |[Oggetto](../../../visual-basic/language-reference/data-types/object-data-type.md)|[Of](../../../visual-basic/language-reference/statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
-|[Opzione](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Optional](../../../visual-basic/language-reference/modifiers/optional.md)|[Or](../../../visual-basic/language-reference/operators/or-operator.md)|[OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)|  
+|[Opzione](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Facoltativo](../../../visual-basic/language-reference/modifiers/optional.md)|[Or](../../../visual-basic/language-reference/operators/or-operator.md)|[OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)|  
 |[Out (modificatore generico)](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)|[Overload](../../../visual-basic/language-reference/modifiers/overloads.md)|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|  
 |[ParamArray](../../../visual-basic/language-reference/modifiers/paramarray.md)|[Partial](../../../visual-basic/language-reference/modifiers/partial.md)|[Private](../../../visual-basic/language-reference/modifiers/private.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|  
 |[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|[Public](../../../visual-basic/language-reference/modifiers/public.md)|[RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)|[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)|  
@@ -64,7 +64,7 @@ Le tabelle seguenti elencano tutte le parole chiave del linguaggio Visual Basic.
 |[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|[Shared](../../../visual-basic/language-reference/modifiers/shared.md)|[Short](../../../visual-basic/language-reference/data-types/short-data-type.md)|[Single](../../../visual-basic/language-reference/data-types/single-data-type.md)|  
 |[Static](../../../visual-basic/language-reference/modifiers/static.md)|[Step](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|[String](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
 |[Vincolo Structure](../../../visual-basic/language-reference/statements/type-list.md)|[Istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md)|[Sub](../../../visual-basic/language-reference/statements/sub-statement.md)|[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)|  
-|[Then](../../../visual-basic/language-reference/statements/then-statement.md)|[Throw](../../../visual-basic/language-reference/statements/throw-statement.md)|[Per](../../../visual-basic/language-reference/statements/for-next-statement.md)|[True](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|  
+|[Then](../../../visual-basic/language-reference/statements/then-statement.md)|[Throw](../../../visual-basic/language-reference/statements/throw-statement.md)|[To](../../../visual-basic/language-reference/statements/for-next-statement.md)|[True](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|  
 |[Try](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md)|[TypeOf…Is](../../../visual-basic/language-reference/operators/typeof-operator.md)|[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|  
 |[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|[UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|[Using](../../../visual-basic/language-reference/statements/using-statement.md)|`Variant`|  
 |`Wend`|[When](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)|[Widening](../../../visual-basic/language-reference/modifiers/widening.md)|  
@@ -77,7 +77,7 @@ Le tabelle seguenti elencano tutte le parole chiave del linguaggio Visual Basic.
 |[Operatore >>](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[Operatore >>=](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`, `GoSub`, `Variant`, e `Wend` vengono mantenute come parole chiave riservate, anche se non sono più utilizzate in Visual Basic. Il significato della parola chiave `Let` è stato modificato. `Let` viene ora usata nelle query LINQ. Per altre informazioni, vedere [Clausola let](../../../visual-basic/language-reference/queries/let-clause.md).  
+> `EndIf`, `GoSub`, e`Wend` vengono mantenuti come parole chiave riservate, anche se non vengono più utilizzate in Visual Basic. `Variant` Il significato della parola chiave `Let` è stato modificato. `Let` viene ora usata nelle query LINQ. Per altre informazioni, vedere [Clausola let](../../../visual-basic/language-reference/queries/let-clause.md).  
   
 ## <a name="unreserved-keywords"></a>Parole chiave non riservate  
  Le parole chiave seguenti non sono riservate, ovvero possono essere usate come nomi degli elementi di programmazione. Si consiglia tuttavia di non eseguire questa operazione poiché potrebbe rendere il codice di difficile lettura e causare errori difficili da rilevare.  
@@ -97,7 +97,7 @@ Le tabelle seguenti elencano tutte le parole chiave del linguaggio Visual Basic.
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Descrizione|  
+|Titolo|DESCRIZIONE|  
 |-----------|-----------------|  
 |[Riepilogo delle matrici](../../../visual-basic/language-reference/keywords/arrays-summary.md)|Elenca gli elementi di linguaggio che consentono di creare, definire e usare le matrici.|  
 |[Riepilogo dell'oggetto Collection](../../../visual-basic/language-reference/keywords/collection-object-summary.md)|Elenca gli elementi del linguaggio usati per le raccolte.|  

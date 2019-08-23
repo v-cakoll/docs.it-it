@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c947dcd3fa3a71d5bbfdf742b106bf56d8444fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b1575d484c58afa3558d9f5b446473b4c89bc51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596739"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948002"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procedura: Creare, inizializzare e configurare opzioni di traccia
 Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output di traccia.  
@@ -62,10 +62,10 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
   
  Quando si crea un'istanza di un'opzione, la si inizializza anche specificando due argomenti: un argomento *displayName* e un argomento *description*. L'argomento *displayName* del costruttore imposta la proprietà <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> dell'istanza della classe <xref:System.Diagnostics.Switch>. L'argomento *displayName* rappresenta il nome usato per configurare l'opzione nel file CONFIG, mentre l'argomento *description* restituisce una breve descrizione dell'opzione e dei messaggi che controlla.  
   
- Oltre a specificare il nome di un'opzione da configurare, è necessario specificare un valore per l'opzione.  Tale valore deve essere Integer. Per <xref:System.Diagnostics.BooleanSwitch>, un valore pari a 0 corrisponde a **Off**, mentre un valore diverso da 0 corrisponde a **On**. Per la classe <xref:System.Diagnostics.TraceSwitch>, 0,1,2,3 e 4 corrispondono rispettivamente a **Off**, **Error**, **Warning**, **Info** e **Verbose**. Tutti i numeri maggiori di 4 vengono considerati come **Verbose**, tutti i numeri minori di zero vengono considerati **Off**.  
+ Oltre a specificare il nome di un'opzione da configurare, è necessario specificare un valore per l'opzione. Tale valore deve essere Integer. Per <xref:System.Diagnostics.BooleanSwitch>, un valore pari a 0 corrisponde a **Off**, mentre un valore diverso da 0 corrisponde a **On**. Per la classe <xref:System.Diagnostics.TraceSwitch>, 0,1,2,3 e 4 corrispondono rispettivamente a **Off**, **Error**, **Warning**, **Info** e **Verbose**. Tutti i numeri maggiori di 4 vengono considerati come **Verbose**, tutti i numeri minori di zero vengono considerati **Off**.  
   
 > [!NOTE]
->  In .NET Framework versione 2.0 è possibile usare testo per specificare il valore di un'opzione, ad esempio `true` per la classe <xref:System.Diagnostics.BooleanSwitch> o il testo che rappresenta un valore di enumerazione, come `Error` per la classe <xref:System.Diagnostics.TraceSwitch>. La riga `<add name="myTraceSwitch" value="Error" />` equivale a `<add name="myTraceSwitch" value="1" />`.  
+> In .NET Framework versione 2.0 è possibile usare testo per specificare il valore di un'opzione, ad esempio `true` per la classe <xref:System.Diagnostics.BooleanSwitch> o il testo che rappresenta un valore di enumerazione, come `Error` per la classe <xref:System.Diagnostics.TraceSwitch>. La riga `<add name="myTraceSwitch" value="Error" />` equivale a `<add name="myTraceSwitch" value="1" />`.  
   
  Per consentire all'utente finale di configurare un'opzione di traccia di un'applicazione, è necessario fornire una documentazione dettagliata delle opzioni nell'applicazione. Devono essere descritte in dettaglio le opzioni, ciò che controllano e le modalità di attivazione e disattivazione. È inoltre necessario fornire all'utente finale un file CONFIG dotato di una Guida adeguata nei commenti.  
   
@@ -75,11 +75,11 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
   
 2. Se il progetto non contiene un file di configurazione (app.config o Web.config), scegliere **Aggiungi nuovo elemento** dal menu **Progetto**.  
   
-    - **Visual Basic:** Nel **Aggiungi nuovo elemento** finestra di dialogo, scegliere **File di configurazione dell'applicazione**.  
+    - **Visual Basic:** Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **file di configurazione dell'applicazione**.  
   
          Verrà creato e aperto il file di configurazione dell'applicazione. Si tratta di un documento XML il cui elemento radice è `<configuration>.`  
   
-    - **Visual C#:** Nel **Aggiungi nuovo elemento** finestra di dialogo, scegliere **File XML**. Denominare il file **app.config**. Nell'editor XML, dopo la dichiarazione XML, aggiungere il codice XML seguente:  
+    - **Oggetti C#visivi:** Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **file XML**. Denominare il file **app.config**. Nell'editor XML, dopo la dichiarazione XML, aggiungere il codice XML seguente:  
   
         ```xml  
         <configuration>  

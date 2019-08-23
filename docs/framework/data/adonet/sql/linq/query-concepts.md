@@ -2,12 +2,12 @@
 title: Concetti relatici alle query
 ms.date: 03/30/2017
 ms.assetid: 9a125749-ccb5-49d5-999d-d2db7171d74d
-ms.openlocfilehash: 62af37399cda5220c429fae2d9ab619989050b00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be564ae6fe6dc887b77ea4ae213d56d11f309369
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767520"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938566"
 ---
 # <a name="query-concepts"></a>Concetti relatici alle query
 Contenuto della sezione vengono descritti i concetti fondamentali per la progettazione di query [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -32,5 +32,5 @@ Contenuto della sezione vengono descritti i concetti fondamentali per la progett
  [Identità degli oggetti](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  Viene descritto il concetto di identità dell'oggetto in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Introduzione alle query LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ [Introduzione alle query LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  Viene fornita un'introduzione alle operazioni di query in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].

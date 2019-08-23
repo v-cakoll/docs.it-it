@@ -9,18 +9,18 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: 86e42b5d2fcd5bcb23489bd03a6daf8255d0725f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a52e330147b07f26136380821c392d27eec60fae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457534"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935247"
 ---
 # <a name="bitmap-effects"></a>Effetti bitmap
-Negli argomenti di questa sezione viene descritto come applicare effetti visivi alle immagini bitmap tramite [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+Negli argomenti di questa sezione viene descritto come applicare effetti visivi alle immagini bitmap [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]utilizzando.  
   
 > [!IMPORTANT]
->  In .NET Framework 4 o versioni successive, il <xref:System.Windows.Media.Effects.BitmapEffect> classe è obsoleta. Se si prova a usare il <xref:System.Windows.Media.Effects.BitmapEffect> (classe), si otterrà un'eccezione obsoleta. L'alternativa non obsoleta per le <xref:System.Windows.Media.Effects.BitmapEffect> classe è il <xref:System.Windows.Media.Effects.Effect> classe. Nella maggior parte dei casi, il <xref:System.Windows.Media.Effects.Effect> classe è notevolmente più veloce.  
+> In .NET Framework 4 o versione successiva, la <xref:System.Windows.Media.Effects.BitmapEffect> classe è obsoleta. Se si tenta di utilizzare la <xref:System.Windows.Media.Effects.BitmapEffect> classe, si otterrà un'eccezione obsoleta. L'alternativa non obsoleta alla <xref:System.Windows.Media.Effects.BitmapEffect> classe è la <xref:System.Windows.Media.Effects.Effect> classe. Nella maggior parte dei casi <xref:System.Windows.Media.Effects.Effect> , la classe è notevolmente più veloce.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sugli effetti bitmap](bitmap-effects-overview.md)  

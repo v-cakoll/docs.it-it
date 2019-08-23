@@ -2,22 +2,22 @@
 title: <transport> di <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 157637615abafbd5913e4d90b702bb0224d5f121
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837d01540fa63579877ab4085bd8034c78f2fbe0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788323"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915569"
 ---
-# <a name="transport-of-netpeertcpbinding"></a>\<transport> of \<netPeerTcpBinding>
-Specifica le impostazioni per la sicurezza a livello di trasporto quando si usa la [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).  
+# <a name="transport-of-netpeertcpbinding"></a>\<> di trasporto \<di NetPeerTcpBinding >
+Specifica le impostazioni per la [ \<](netpeertcpbinding.md)sicurezza a livello di trasporto quando si utilizza NetPeerTcpBinding >.  
   
  \<system.ServiceModel>  
-\<le associazioni >  
+\<Binding >  
 \<netPeerTcpBinding>  
 \<binding>  
 \<security>  
-\<transport>  
+\<> di trasporto  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,23 +38,23 @@ Specifica le impostazioni per la sicurezza a livello di trasporto quando si usa 
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|credentialType|Facoltativo. Specifica il tipo di credenziali usate per verificare messaggi inviati con il trasporto peer. L'attributo è di tipo <xref:System.ServiceModel.PeerTransportCredentialType>.|  
+|credentialType|facoltativo. Specifica il tipo di credenziali usate per verificare messaggi inviati con il trasporto peer. L'attributo è di tipo <xref:System.ServiceModel.PeerTransportCredentialType>.|  
   
 ## <a name="credentialtype-attribute"></a>Attributo credentialType  
   
-|Value|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Certificato|L'autenticazione del trasporto del canale peer richiede un certificato X509.|  
 |Password|L'autenticazione del trasporto del canale peer richiede una password corretta.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuna  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|Definisce le impostazioni di sicurezza per il [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
+|[\<security>](security-of-netpeerbinding.md)|Definisce le impostazioni di sicurezza per la [ \<> di NetPeerTcpBinding](netpeertcpbinding.md).|  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -62,8 +62,8 @@ Specifica le impostazioni per la sicurezza a livello di trasporto quando si usa 
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
-- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Protezione di servizi e client](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

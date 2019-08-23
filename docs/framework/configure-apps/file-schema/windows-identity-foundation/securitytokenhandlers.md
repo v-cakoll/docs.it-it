@@ -3,15 +3,15 @@ title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 678e5c705181c55257b1ddb853690ada60ecd17a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793835"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942465"
 ---
 # <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
-Specifica una raccolta di gestori di token di sicurezza che sono registrati con l'endpoint.  
+Specifica una raccolta di gestori di token di sicurezza registrati con l'endpoint.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -35,26 +35,26 @@ Specifica una raccolta di gestori di token di sicurezza che sono registrati con 
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|name|Specifica il nome di una raccolta di gestori di token. Gli unici valori riconosciuti dal framework sono "ActAs" e "OnBehalfOf". Se le raccolte di gestori di token vengono specificate con uno di questi nomi, la raccolta verrà utilizzata durante l'elaborazione ActAs o OnBehalfOf token rispettivamente.|  
+|name|Specifica il nome di una raccolta di gestori di token. Gli unici valori riconosciuti dal Framework sono "ActAs" e "OnBehalfOf". Se le raccolte di gestori di token vengono specificate con uno di questi nomi, l'insieme verrà usato per l'elaborazione rispettivamente dei token ActAs o OnBehalfOf.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Aggiunge un gestore di token di sicurezza per la raccolta di gestori di token.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|Cancella tutti i gestori di token di sicurezza dalla raccolta di gestori di token.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)|Rimuove un gestore di token di sicurezza dalla raccolta di gestori di token.|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornisce la configurazione per la raccolta di gestori di token.|  
+|[\<add>](add.md)|Aggiunge un gestore del token di sicurezza alla raccolta di gestori di token.|  
+|[\<clear>](clear.md)|Cancella tutti i gestori dei token di sicurezza dalla raccolta di gestori di token.|  
+|[\<remove>](remove.md)|Rimuove un gestore del token di sicurezza dalla raccolta di gestori di token.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Fornisce la configurazione per la raccolta di gestori di token.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Specifica le impostazioni di identità a livello di servizio.|  
+|[\<identityConfiguration>](identityconfiguration.md)|Specifica le impostazioni di identità a livello di servizio.|  
   
 ## <a name="remarks"></a>Note  
- È possibile specificare uno o più raccolte denominate di gestori di token di sicurezza in una configurazione del servizio. È possibile specificare un nome per una raccolta usando il `name` attributo. Gli unici nomi che gestisce il framework sono "ActAs" e "OnBehalfOf". Se presenti dei gestori in tali raccolte, verranno utilizzate da un servizio token di sicurezza (STS) anziché i gestori predefiniti quando si elaborano `ActAs` e `OnBehalfOf` i token.  
+ È possibile specificare una o più raccolte denominate di gestori di token di sicurezza in una configurazione del servizio. È possibile specificare un nome per una raccolta usando l' `name` attributo. Gli unici nomi gestiti dal Framework sono "ActAs" e "OnBehalfOf". Se i gestori sono presenti in queste raccolte, vengono utilizzati da un servizio token di sicurezza (STS) invece dei gestori predefiniti durante l'elaborazione `ActAs` e `OnBehalfOf` i token.  
   
- Per impostazione predefinita, la raccolta viene popolata con i seguenti tipi di gestore: <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, e <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>. È possibile modificare la raccolta usando il `<add>`, `<remove>`, e `<clear>` elementi. È necessario assicurarsi che solo un singolo gestore di qualsiasi tipo specifico è presente nella raccolta. Ad esempio, se si deriva un gestore dal <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe, ovvero il gestore o <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> può essere configurato in una singola raccolta, ma non entrambi.  
+ Per impostazione predefinita, la raccolta viene popolata con i tipi di <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>gestore <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>seguenti <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>: <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>,, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>,, <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler> <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>, e. È possibile modificare la raccolta usando gli `<add>`elementi, `<remove>`e. `<clear>` È necessario assicurarsi che nella raccolta sia presente solo un singolo gestore di un determinato tipo. Se, ad esempio, si deriva un gestore dalla <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe, il gestore o l'oggetto può essere configurato in una singola raccolta, ma non in entrambi i <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> casi.  
   
- Uso di `<securityTokenHandlerConfiguration>` elemento per specificare le impostazioni di configurazione per i gestori nella raccolta. Le impostazioni specificate tramite questo elemento sostituiscono quelle specificate nel servizio tramite il [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento. Alcuni gestori (compresi alcuni dei tipi di gestore predefinito) possono supportare altre configurazione tramite un elemento figlio del `<add>` elemento. Le impostazioni specificate in un gestore sostituiscono le impostazioni equivalenti specificate nella raccolta o il servizio.
+ Utilizzare l' `<securityTokenHandlerConfiguration>` elemento per specificare le impostazioni di configurazione per i gestori nella raccolta. Le impostazioni specificate tramite questo elemento eseguono l'override di quelle specificate nel servizio tramite l' [ \<elemento IdentityConfiguration >](identityconfiguration.md) . Alcuni gestori (inclusi diversi tipi di gestori incorporati) possono supportare una configurazione aggiuntiva tramite un elemento figlio dell' `<add>` elemento. Le impostazioni specificate in un gestore eseguono l'override delle impostazioni equivalenti specificate nella raccolta o nel servizio.

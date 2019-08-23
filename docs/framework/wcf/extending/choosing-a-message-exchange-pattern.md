@@ -2,22 +2,22 @@
 title: Scelta di un modello di scambio dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 2d39164944207d73fdfe418a30326fb40462db72
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 518a21ef34d52ef4b70871ba8bad7876374dd319
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664915"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951867"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Scelta di un modello di scambio dei messaggi
-Il primo passaggio nella scrittura di un trasporto personalizzato deve decidere quale *modelli di scambio dei messaggi* (o MEP, Message) sono necessari per il canale si sta sviluppando. In questo argomento vengono descritte le opzioni disponibili e vengono illustrati i vari requisiti. Si tratta della prima attività nell'elenco attività di sviluppo channel descritto nella [emergenti canali](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Il primo passaggio per scrivere un trasporto personalizzato consiste nel decidere quali *modelli di scambio dei messaggi* (o MEP) sono necessari per il canale che si sta sviluppando. In questo argomento vengono descritte le opzioni disponibili e vengono illustrati i vari requisiti. Questa è la prima attività nell'elenco delle attività di sviluppo del canale descritta in [sviluppo di canali](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
 ## <a name="six-message-exchange-patterns"></a>Sei modelli di scambio dei messaggi  
  Sono disponibili tre modelli di scambio dei messaggi:  
   
 - Datagramma (<xref:System.ServiceModel.Channels.IInputChannel> e <xref:System.ServiceModel.Channels.IOutputChannel>)  
   
-     Quando si usa un modello di scambio di datagramma, un client invia un messaggio utilizzando un *generato automaticamente* exchange. Tale scambio richiede una conferma fuori banda di recapito con esito positivo. Il messaggio potrebbe infatti andare perso durante il transito e non raggiungere mai il servizio. Se l'operazione di invio viene completata correttamente sul lato client, non c'è garanzia che l'endpoint remoto abbia ricevuto il messaggio. Il datagramma è un componente fondamentale per i messaggi, poiché sulla sua base è possibile compilare protocolli propri, tra cui protocolli affidabili e protocolli sicuri. I canali del datagramma del client implementano l'interfaccia <xref:System.ServiceModel.Channels.IOutputChannel>, mentre i canali del datagramma del servizio implementano l'interfaccia <xref:System.ServiceModel.Channels.IInputChannel>.  
+     Quando si utilizza un MEP del datagramma, un client invia un messaggio utilizzando un messaggio di stato *Fire and Forget* . Tale scambio richiede una conferma fuori banda di recapito con esito positivo. Il messaggio potrebbe infatti andare perso durante il transito e non raggiungere mai il servizio. Se l'operazione di invio viene completata correttamente sul lato client, non c'è garanzia che l'endpoint remoto abbia ricevuto il messaggio. Il datagramma è un componente fondamentale per i messaggi, poiché sulla sua base è possibile compilare protocolli propri, tra cui protocolli affidabili e protocolli sicuri. I canali del datagramma del client implementano l'interfaccia <xref:System.ServiceModel.Channels.IOutputChannel>, mentre i canali del datagramma del servizio implementano l'interfaccia <xref:System.ServiceModel.Channels.IInputChannel>.  
   
 - Richiesta-risposta (<xref:System.ServiceModel.Channels.IRequestChannel> e <xref:System.ServiceModel.Channels.IReplyChannel>)  
   
@@ -30,7 +30,7 @@ Il primo passaggio nella scrittura di un trasporto personalizzato deve decidere 
  ![Scelta di un modello di scambio di messaggi](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
 I tre modelli di scambio dei messaggi di base. Dall'alto verso il basso: datagramma, richiesta-risposta e duplex.  
   
- Ognuno di questi modelli può inoltre supportare *sessioni*. Una sessione (e un'implementazione di <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> di tipo <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) mette in correlazione tutti i messaggi inviati e ricevuti su un canale. Il modello richiesta-risposta è una sessione autonoma a due messaggi, poiché la richiesta e la risposta sono correlate. Il modello richiesta-risposta che supporta sessioni implica invece che tutte le coppie richiesta/risposta sul canale siano correlate le une con le altre. È quindi possibile scegliere fra un totale di sei modelli di scambio dei messaggi:  
+ Ognuno di questi MEP può inoltre supportare le *sessioni*. Una sessione (e un'implementazione di <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> di tipo <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) mette in correlazione tutti i messaggi inviati e ricevuti su un canale. Il modello richiesta-risposta è una sessione autonoma a due messaggi, poiché la richiesta e la risposta sono correlate. Il modello richiesta-risposta che supporta sessioni implica invece che tutte le coppie richiesta/risposta sul canale siano correlate le une con le altre. È quindi possibile scegliere fra un totale di sei modelli di scambio dei messaggi:  
   
 - Datagram  
   
@@ -45,10 +45,10 @@ I tre modelli di scambio dei messaggi di base. Dall'alto verso il basso: datagra
 - Duplex con sessioni  
   
 > [!NOTE]
->  Per il trasporto UDP, l'unico modello di scambio dei messaggi supportato è il datagramma, poiché il protocollo UPD è di tipo fire and forget.  
+> Per il trasporto UDP, l'unico modello di scambio dei messaggi supportato è il datagramma, poiché il protocollo UPD è di tipo fire and forget.  
   
 ## <a name="sessions-and-sessionful-channels"></a>Sessioni e canali con sessione  
- Nel campo delle reti, esistono protocolli orientati alla connessione, ad esempio il protocollo TCP, e protocolli senza connessione, ad esempio il protocollo UPD. WCF Usa il termine sessione per indicare un'astrazione logica simile a connessione. I protocolli WCF con sessione sono simili ai protocolli di rete orientati alla connessione, mentre i protocolli WCF senza sessione sono simili ai protocolli di rete senza connessione.  
+ Nel campo delle reti, esistono protocolli orientati alla connessione, ad esempio il protocollo TCP, e protocolli senza connessione, ad esempio il protocollo UPD. WCF utilizza il termine Session per indicare un'astrazione logica simile a una connessione. I protocolli WCF con sessione sono simili ai protocolli di rete orientati alla connessione, mentre i protocolli WCF senza sessione sono simili ai protocolli di rete senza connessione.  
   
  Nel modello a oggetti dei canali, ogni sessione logica si manifesta come un'istanza di un canale con sessione. Ogni nuova sessione creata dal client e accettata nel servizio corrisponde pertanto a un nuovo canale con sessione su ciascun lato. Nel diagramma seguente viene illustrata, nella parte superiore, la struttura dei canali senza sessione e, nella parte inferiore, la struttura dei canali con sessione.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: fa59621aaf73922af957961af5401170c2872aa9
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9da519f8d258673498f45a425c13863437cac597
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972351"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937525"
 ---
 # <a name="graphics-rendering-tiers"></a>Livelli di rendering della grafica
 Un livello di rendering definisce un livello di prestazioni e funzionalità hardware grafiche per un dispositivo che esegue un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -48,7 +48,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
 ### <a name="rendering-tier-1-and-rendering-tier-2"></a>Livello di rendering 1 e livello di rendering 2  
   
 > [!NOTE]
->  A partire da .NET Framework 4, il livello di rendering 1 è stato ridefinito in modo da includere solo hardware grafico che supporta DirectX 9,0 o versione successiva. L'hardware grafico che supporta DirectX 7 o 8 è ora definito come livello di rendering 0.  
+> A partire da .NET Framework 4, il livello di rendering 1 è stato ridefinito in modo da includere solo hardware grafico che supporta DirectX 9,0 o versione successiva. L'hardware grafico che supporta DirectX 7 o 8 è ora definito come livello di rendering 0.  
   
  Il valore 1 o 2 del livello di rendering indica che la maggior parte delle funzionalità grafiche di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] userà l'accelerazione hardware se le risorse di sistema necessarie sono disponibili e non sono state esaurite. Corrisponde a una versione di DirectX maggiore o uguale a 9,0.  
   
@@ -98,14 +98,14 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
 ### <a name="graphics-rendering-registry-settings"></a>Impostazioni del Registro di sistema per il rendering della grafica  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce quattro impostazioni del Registro di sistema per controllare il rendering [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
-|Impostazione|DESCRIZIONE|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |**Opzione di disabilitazione dell'accelerazione hardware**|Specifica se l'accelerazione hardware deve essere abilitata.|  
 |**Valore massimo di multicampionamento**|Specifica il grado di campionamento multiplo per l'anti-aliasing del contenuto 3D.|  
 |**Impostazione Data driver video necessaria**|Specifica se il sistema disabilita l'accelerazione hardware per i driver rilasciati prima di novembre 2004.|  
 |**Opzione per l'uso di unità di rasterizzazione dei riferimenti**|Specifica se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deve usare l'unità di rasterizzazione dei riferimenti.|  
   
- A queste impostazioni è possibile accedere tramite qualsiasi utilità di configurazione esterna che possa fare riferimento alle impostazioni del Registro di sistema di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Per creare o modificare queste impostazioni, è possibile accedere ai valori direttamente usando l'editor del Registro di sistema di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Per altre informazioni, vedere [Impostazioni del Registro di sistema per il rendering della grafica](../graphics-multimedia/graphics-rendering-registry-settings.md).  
+ A queste impostazioni è possibile accedere tramite qualsiasi utilità di configurazione esterna che possa fare riferimento alle impostazioni del Registro di sistema di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. È possibile creare o modificare queste impostazioni anche accedendo direttamente ai valori usando l'editor del registro di sistema di Windows. Per altre informazioni, vedere [Impostazioni del Registro di sistema per il rendering della grafica](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>Strumenti per la profilatura delle prestazioni WPF  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include una suite di strumenti per la profilatura delle prestazioni che consentono di analizzare il comportamento dell'applicazione in fase di esecuzione e di determinare i tipi di ottimizzazioni delle prestazioni che è possibile applicare. Nella tabella seguente sono elencati gli strumenti di profilatura delle prestazioni inclusi nello strumento Windows SDK, WPF Performance Suite:  

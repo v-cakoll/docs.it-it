@@ -2,26 +2,26 @@
 title: Provider di appartenenza e di ruoli
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: c172402f95b137117941381fd4803b8b6e4a5d61
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 894fcef0cbb25f85043aa6f5c55c45bae5161546
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876736"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948543"
 ---
 # <a name="membership-and-role-provider"></a>Provider di appartenenza e di ruoli
-Nell'esempio di Provider di appartenenza e ruoli viene illustrato come un servizio può usare il provider di ruoli e appartenenza ASP.NET per autenticare e autorizzare i client.  
+Nell'esempio relativo a appartenenza e provider di ruoli viene illustrato come un servizio può utilizzare i provider di appartenenze e ruoli di ASP.NET per autenticare e autorizzare i client.  
   
  In questo esempio, il client è un'applicazione console (.exe) e il servizio è ospitato da Internet Information Services (IIS).  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
+> La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
  In questo esempio viene illustrato come eseguire le seguenti operazioni:  
   
 - Un client può eseguire l'autenticazione utilizzando una combinazione nome utente-password.  
   
-- Il server può convalidare le credenziali del client con il provider di appartenenze ASP.NET.  
+- Il server può convalidare le credenziali client rispetto al provider di appartenenze ASP.NET.  
   
 - Il server può essere autenticato tramite il certificato X.509 del server.  
   
@@ -69,7 +69,7 @@ Nell'esempio di Provider di appartenenza e ruoli viene illustrato come un serviz
 </system.web>  
 ```  
   
- Il servizio espone un solo endpoint per la comunicazione con il servizio, che viene definito mediante il file di configurazione Web.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione viene configurata con una classe standard `wsHttpBinding`, per la quale è impostata l'autenticazione Windows come predefinita. In questo esempio viene impostata la classe `wsHttpBinding` standard per utilizzare l'autenticazione del nome utente. Il comportamento specifica che il certificato server deve essere utilizzato per autenticare il servizio. Il certificato del server deve contenere lo stesso valore per il `SubjectName` come il `findValue` attributo il [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento di configurazione. Il comportamento specifica inoltre che l'autenticazione di coppie di nome utente-password viene eseguita dal provider di appartenenze ASP.NET e mapping del ruolo viene eseguito dal provider di ruoli ASP.NET, specificando i nomi definiti per i due provider.  
+ Il servizio espone un solo endpoint per la comunicazione con il servizio, che viene definito mediante il file di configurazione Web.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione viene configurata con una classe standard `wsHttpBinding`, per la quale è impostata l'autenticazione Windows come predefinita. In questo esempio viene impostata la classe `wsHttpBinding` standard per utilizzare l'autenticazione del nome utente. Il comportamento specifica che il certificato server deve essere utilizzato per autenticare il servizio. Il certificato server deve contenere lo stesso valore per l' `SubjectName` `findValue` attributo nell'elemento di [ \<configurazione serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) . Il comportamento specifica inoltre che l'autenticazione delle coppie nome utente-password viene eseguita dal provider di appartenenze ASP.NET e il mapping dei ruoli viene eseguito dal provider di ruoli ASP.NET specificando i nomi definiti per i due provider.  
   
 ```xml  
 <system.serviceModel>  
@@ -114,19 +114,19 @@ Nell'esempio di Provider di appartenenza e ruoli viene illustrato come un serviz
 </system.serviceModel>  
 ```  
   
- Quando si esegue l'esempio, il client chiama le varie operazioni del servizio in tre diversi account utente: Alice, Bob e Charlie. Le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Tutte le 4 chiamate eseguite con l'account utente "Alice" hanno esito positivo. L'utente "Bob" ottiene un errore di accesso negato nel tentativo di chiamare il metodo Divide. L'utente "Charlie" ottiene un errore di accesso negato nel tentativo di chiamare il metodo Multiply. Premere INVIO nella finestra del client per arrestare il client.  
+ Quando si esegue l'esempio, il client chiama le varie operazioni del servizio con tre account utente diversi: Alice, Bob e Charlie. Le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Tutte le 4 chiamate eseguite con l'account utente "Alice" hanno esito positivo. L'utente "Bob" ottiene un errore di accesso negato nel tentativo di chiamare il metodo Divide. L'utente "Charlie" ottiene un errore di accesso negato nel tentativo di chiamare il metodo Multiply. Premere INVIO nella finestra del client per arrestare il client.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Per compilare l'edizione c# o Visual Basic .NET della soluzione, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+1. Per compilare l' C# edizione o Visual Basic .NET della soluzione, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-2. Assicurarsi di aver configurato il [ASP.NET Application Services Database](https://go.microsoft.com/fwlink/?LinkId=94997).  
-  
-    > [!NOTE]
-    >  Se si sta eseguendo SQL Server Express Edition, il nome del server è .\SQLEXPRESS. Questo server deve essere utilizzato quando si configura l'applicazione Database dei servizi ASP.NET anche come stringa di connessione di Web. config.  
+2. Assicurarsi di aver configurato il [Database servizi per le applicazioni di ASP.NET](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
-    >  L'account di processo di lavoro ASP.NET necessario disporre delle autorizzazioni nel database di cui viene creato in questo passaggio. Utilizzare l'utilità sqlcmd o SQL Server Management Studio per questo scopo.  
+    >  Se si sta eseguendo SQL Server Express Edition, il nome del server è .\SQLEXPRESS. Questo server deve essere utilizzato durante la configurazione del database di Servizi per le applicazioni ASP.NET e nella stringa di connessione di Web. config.  
+  
+    > [!NOTE]
+    >  L'account del processo di lavoro di ASP.NET deve disporre delle autorizzazioni per il database creato in questo passaggio. Utilizzare l'utilità sqlcmd o SQL Server Management Studio per questo scopo.  
   
 3. Per eseguire l'esempio su un solo computer o tra computer diversi, seguire le istruzioni indicate di seguito.  
   
@@ -134,11 +134,11 @@ Nell'esempio di Provider di appartenenza e ruoli viene illustrato come un serviz
   
 1. Verificare che il percorso includa la cartella in cui si trova Makecert.exe.  
   
-2. Eseguire Setup. bat dalla cartella di installazione dell'esempio in un prompt dei comandi di per gli sviluppatori per Visual Studio eseguire con privilegi di amministratore. In questo modo vengono installati i certificati dei servizi necessari per l'esecuzione dell'esempio.  
+2. Eseguire Setup. bat dalla cartella di installazione dell'esempio in un Prompt dei comandi per gli sviluppatori per l'esecuzione di Visual Studio con privilegi di amministratore. In questo modo vengono installati i certificati dei servizi necessari per l'esecuzione dell'esempio.  
   
 3. Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-4. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Se il client e il servizio non sono in grado di comunicare, vedere [Suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer  
   
@@ -150,24 +150,24 @@ Nell'esempio di Provider di appartenenza e ruoli viene illustrato come un serviz
   
 4. Copiare i file di programma del client nella directory del client sul computer relativo e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.  
   
-5. Nel server, aprire un prompt dei comandi per gli sviluppatori per Visual Studio con privilegi amministrativi ed eseguire `setup.bat service`. In esecuzione `setup.bat` con il `service` argomento consente di creare un certificato di servizio con il nome di dominio completo del computer ed esportare il certificato di servizio in un file denominato CER.  
+5. Sul server aprire un Prompt dei comandi per gli sviluppatori per Visual Studio con privilegi amministrativi ed eseguire `setup.bat service`. Quando `setup.bat` si esegue `service` con l'argomento viene creato un certificato del servizio con il nome di dominio completo del computer e il certificato del servizio viene esportato in un file denominato Service. cer.  
   
-6. Modificare Web. config per riflettere il nuovo nome del certificato (nelle `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), che corrisponde al nome di dominio completo del computer.  
+6. Modificare Web. config per riflettere il nuovo nome del certificato (nell' `findValue` attributo [ \<in serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), che corrisponde al nome di dominio completo del computer.  
   
 7. Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
   
 8. Nel file Client.exe.config presente nel computer client modificare il valore dell'indirizzo della definizione dell'endpoint in base al nuovo indirizzo del servizio.  
   
-9. Sul client, aprire un prompt dei comandi per gli sviluppatori per Visual Studio con privilegi amministrativi ed eseguire Importservicecert. In questo modo viene importato il certificato del servizio dal file Service.cer nell'archivio CurrentUser - TrustedPeople.  
+9. Sul client aprire un Prompt dei comandi per gli sviluppatori per Visual Studio con privilegi amministrativi ed eseguire ImportServiceCert. bat. In questo modo viene importato il certificato del servizio dal file Service.cer nell'archivio CurrentUser - TrustedPeople.  
   
-10. Sul computer client avviare Client.exe da un prompt dei comandi. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. Sul computer client avviare Client.exe da un prompt dei comandi. Se il client e il servizio non sono in grado di comunicare, vedere [Suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   
 - Eseguire Cleanup.bat nella cartella degli esempi dopo che l'esempio è stato completato.  
   
 > [!NOTE]
->  Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer. Se è stato eseguito gli esempi di Windows Communication Foundation (WCF) che utilizzano certificati in più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. A tale scopo, usare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+> Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer. Se sono stati eseguiti esempi Windows Communication Foundation (WCF) che usano certificati tra computer, assicurarsi di cancellare i certificati del servizio installati nell'archivio CurrentUser-TrustedPeople. A tale scopo, utilizzare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="the-setup-batch-file"></a>File batch di installazione  
  Il file batch Setup.bat incluso in questo esempio consente di configurare il server con i certificati attinenti per eseguire un'applicazione indipendente che richiede la sicurezza server basata su certificato. Questo file batch deve essere modificato per funzionare tra computer diversi o nel caso in cui non sia ospitato.  

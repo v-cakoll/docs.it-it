@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ccc45482f691d9950c641ef126a657052a280e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05900f55885f8f3a4c470d6842c42d0fc3e0171e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987701"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957449"
 ---
 # <a name="icordebugprocess3-interface"></a>Interfaccia ICorDebugProcess3
 Controlla le notifiche di debugger personalizzate.  
@@ -30,20 +30,20 @@ Controlla le notifiche di debugger personalizzate.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Abilita e disabilita le notifiche di debugger personalizzati del tipo specificato.|  
+|[Metodo SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Abilita e Disabilita le notifiche personalizzate del debugger del tipo specificato.|  
   
 ## <a name="remarks"></a>Note  
  Questa interfaccia estende logicamente le interfacce ICorDebugProcess e ICorDebugProcess2.  
   
 > [!NOTE]
->  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
+> Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

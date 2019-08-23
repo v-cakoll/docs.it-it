@@ -2,15 +2,15 @@
 title: 'Trasporto: interoperabilità WSE 3.0 TCP'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 5ad1f2e55bf0dab2736bbc95933d12be43dddd76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b73f9ef93ebfabf2b1c39363bd64785e2892956
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617335"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941029"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Trasporto: interoperabilità WSE 3.0 TCP
-L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una sessione duplex TCP come trasporto personalizzato Windows Communication Foundation (WCF). Illustra anche come utilizzare l'estendibilità del livello del canale per connettersi via cavo con sistemi distribuiti esistenti. La procedura seguente illustra come compilare questo trasporto personalizzato WCF:  
+Nell'esempio di trasporto di interoperabilità TCP WSE 3,0 viene illustrato come implementare una sessione duplex TCP come trasporto WCF (Custom Windows Communication Foundation). Illustra anche come utilizzare l'estendibilità del livello del canale per connettersi via cavo con sistemi distribuiti esistenti. Nei passaggi seguenti viene illustrato come compilare il trasporto WCF personalizzato:  
   
 1. A partire da un socket TCP, creare client e implementazioni server di <xref:System.ServiceModel.Channels.IDuplexSessionChannel> che utilizzano framing DIME per delineare i limiti del messaggio.  
   
@@ -20,10 +20,10 @@ L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una
   
 4. Assicurarsi che eventuali eccezioni specifiche della rete vengano normalizzate nella classe derivata appropriata di <xref:System.ServiceModel.CommunicationException>.  
   
-5. Inserire un elemento di associazione che aggiunge il trasporto personalizzato a uno stack di canali. Per altre informazioni, vedere [aggiunta di un elemento di associazione].  
+5. Inserire un elemento di associazione che aggiunge il trasporto personalizzato a uno stack di canali. Per ulteriori informazioni, vedere [aggiunta di un elemento di associazione].  
   
 ## <a name="creating-iduplexsessionchannel"></a>Creazione di IDuplexSessionChannel  
- Il primo passaggio per scrivere il trasporto interoperabilità WSE 3.0 TCP consiste nel creare un'implementazione di <xref:System.ServiceModel.Channels.IDuplexSessionChannel> su <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` deriva da <xref:System.ServiceModel.Channels.ChannelBase>. La logica di inviare un messaggio è costituito da due parti principali: (1) codifica del messaggio in byte e (2) framing dei byte e invio via cavo.  
+ Il primo passaggio per scrivere il trasporto interoperabilità WSE 3.0 TCP consiste nel creare un'implementazione di <xref:System.ServiceModel.Channels.IDuplexSessionChannel> su <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` deriva da <xref:System.ServiceModel.Channels.ChannelBase>. La logica di invio di un messaggio è costituita da due parti principali: (1) codificare il messaggio in byte e (2) incorniciare i byte e inviarli in transito.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -37,7 +37,7 @@ L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- Dopo essere stata codificata in byte, la classe <xref:System.ServiceModel.Channels.Message> deve essere trasmessa via cavo. Ciò richiede un sistema per la definizione dei limiti del messaggio. WSE 3.0 utilizza una versione di [DIME](https://go.microsoft.com/fwlink/?LinkId=94999) come protocollo di framing. `WriteData` contiene la logica di framing per eseguire il wrapping di un byte[] in un set di record DIME.  
+ Dopo essere stata codificata in byte, la classe <xref:System.ServiceModel.Channels.Message> deve essere trasmessa via cavo. Ciò richiede un sistema per la definizione dei limiti del messaggio. WSE 3,0 utilizza una versione di [dime](https://go.microsoft.com/fwlink/?LinkId=94999) come protocollo di framing. `WriteData` contiene la logica di framing per eseguire il wrapping di un byte[] in un set di record DIME.  
   
  La logica alla base della ricezione dei messaggi è molto simile. Il problema più complesso sta nel gestite il fatto che la lettura di un socket può restituire meno byte di quanto richiesto. Per ricevere un messaggio, `WseTcpDuplexSessionChannel` legge i byte via cavo, decodifica il framing DIME e utilizza <xref:System.ServiceModel.Channels.MessageEncoder> per tradurre i byte [] in una classe <xref:System.ServiceModel.Channels.Message>.  
   
@@ -52,7 +52,7 @@ L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una
 ## <a name="channel-factory"></a>Channel Factory  
  Il passaggio successivo per scrivere un trasporto TCP consiste nel creare un'implementazione di <xref:System.ServiceModel.Channels.IChannelFactory> per i canali client.  
   
-- `WseTcpChannelFactory` deriva da <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. È una factory che esegue l'override di `OnCreateChannel` per produrre canali client.  
+- `WseTcpChannelFactory`deriva da <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. È una factory che esegue l'override di `OnCreateChannel` per produrre canali client.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -62,7 +62,7 @@ L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una
   
  `}`  
   
-- `ClientWseTcpDuplexSessionChannel` Aggiunge la logica alla base `WseTcpDuplexSessionChannel` per connettersi a un server TCP al `channel.Open` ora. Il nome host viene innanzitutto risolto in un indirizzo IP, come illustrato nel codice seguente.  
+- `ClientWseTcpDuplexSessionChannel`aggiunge la logica alla base `WseTcpDuplexSessionChannel` per la connessione a un server TCP `channel.Open` al momento. Il nome host viene innanzitutto risolto in un indirizzo IP, come illustrato nel codice seguente.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
@@ -79,7 +79,7 @@ L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una
 ## <a name="channel-listener"></a>Channel Listener  
  Il passaggio successivo per scrivere un trasporto TCP consiste nel creare un'implementazione di <xref:System.ServiceModel.Channels.IChannelListener> per accettare canali server.  
   
-- `WseTcpChannelListener` deriva da <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > e sostituzioni [Begin] Open e On [Begin] Close per controllano la durata del socket di ascolto. In OnOpen, un socket viene creato per ascoltare su IP_ANY. Implementazioni più avanzate possono creare un secondo socket per ascoltare anche su IPv6. Possono consentire anche che l'indirizzo IP sia specificato nel nome host.  
+- `WseTcpChannelListener`deriva da <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > e le sostituzioni in [begin] Open e on [begin] Close per controllare la durata del socket di ascolto. In OnOpen, un socket viene creato per ascoltare su IP_ANY. Implementazioni più avanzate possono creare un secondo socket per ascoltare anche su IPv6. Possono consentire anche che l'indirizzo IP sia specificato nel nome host.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -129,7 +129,7 @@ L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- È costituito da due test. Il primo imposta un client tipizzato utilizzando codice generato da WSE 3.0 WSDL. Il secondo test Usa WCF come il server sia nel client inviando direttamente messaggi sul canale API.  
+ È costituito da due test. Il primo imposta un client tipizzato utilizzando codice generato da WSE 3.0 WSDL. Il secondo test USA WCF come client e server inviando messaggi direttamente sulle API del canale.  
   
  Quando si esegue l'esempio, viene visualizzato l'output seguente:  
   
@@ -172,10 +172,10 @@ Symbols:
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Per eseguire l'esempio è necessario avere installato WSE 3.0 e l'esempio `TcpSyncStockService` WSE. È possibile scaricare [WSE 3.0 da MSDN](https://go.microsoft.com/fwlink/?LinkId=95000).  
+1. Per eseguire l'esempio è necessario avere installato WSE 3.0 e l'esempio `TcpSyncStockService` WSE. È possibile scaricare [WSE 3,0 da MSDN](https://go.microsoft.com/fwlink/?LinkId=95000).  
   
 > [!NOTE]
->  Poiché WSE 3.0 non è supportato su [!INCLUDE[lserver](../../../../includes/lserver-md.md)], non è possibile installare o eseguire l'esempio `TcpSyncStockService` in tale sistema operativo.  
+> Poiché WSE 3.0 non è supportato su [!INCLUDE[lserver](../../../../includes/lserver-md.md)], non è possibile installare o eseguire l'esempio `TcpSyncStockService` in tale sistema operativo.  
   
 1. Dopo aver installato l'esempio `TcpSyncStockService`, eseguire le operazioni seguenti:  
   
@@ -183,7 +183,7 @@ Symbols:
   
     2. Impostare StockService come progetto di avvio.  
   
-    3. Aprire StockService.cs nel progetto StockService e impostare come commento l'attributo [Policy] sulla classe `StockService`. Ciò disabilita la sicurezza dell'esempio. Sebbene WCF possono interoperare con endpoint sicuri di WSE 3.0, sicurezza è disabilitata per mantenere l'esempio sia focalizzato sul trasporto TCP personalizzato.  
+    3. Aprire StockService.cs nel progetto StockService e impostare come commento l'attributo [Policy] sulla classe `StockService`. Ciò disabilita la sicurezza dell'esempio. Mentre WCF è in grado di interagire con gli endpoint sicuri di WSE 3,0, la sicurezza è disabilitata per evitare che questo esempio si concentri sul trasporto TCP personalizzato.  
   
     4. Premere F5 per avviare `TcpSyncStockService`. Il servizio si avvia in una nuova finestra della console.  
   

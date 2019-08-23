@@ -2,15 +2,15 @@
 title: funzione dichiarata dal modello
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: a0bea36693122c77d9c1abdf4484ee8e68627a0c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73e716f1c42dfbbb91dc6456212de2a331d7c4ef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645864"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943919"
 ---
 # <a name="model-declared-function"></a>funzione dichiarata dal modello
-Oggetto *funzione dichiarata dal modello* è una funzione che viene dichiarata in un modello concettuale, ma non è definita nel modello concettuale. La funzione può essere definita nell'ambiente host o di archiviazione. È possibile, ad esempio, eseguire il mapping di una funzione dichiarata dal modello a una funzione definita in un database, esponendo in tal modo la funzionalità lato server nel modello concettuale.  
+Una *funzione* dichiarata dal modello è una funzione dichiarata in un modello concettuale, ma non è definita nel modello concettuale. La funzione può essere definita nell'ambiente host o di archiviazione. È possibile, ad esempio, eseguire il mapping di una funzione dichiarata dal modello a una funzione definita in un database, esponendo in tal modo la funzionalità lato server nel modello concettuale.  
   
  La dichiarazione di una funzione dichiarata dal modello contiene le informazioni seguenti:  
   
@@ -19,12 +19,12 @@ Oggetto *funzione dichiarata dal modello* è una funzione che viene dichiarata i
 - Il tipo del valore restituito (facoltativo)  
   
     > [!NOTE]
-    >  Se non viene specificato alcun valore restituito, il tipo restituito sarà void.  
+    > Se non viene specificato alcun valore restituito, il tipo restituito sarà void.  
   
 - Informazioni sul parametro, inclusi il nome e il tipo del parametro (facoltativo)  
   
 ## <a name="example"></a>Esempio  
- Il [ADO.NET Entity Framework](./ef/index.md) Usa un linguaggio specifico di dominio (DSL) denominato conceptual schema definition language ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) per definire i modelli concettuali. In CSDL, un'implementazione di una funzione dichiarata dal modello è un oggetto function import (usando il [elemento FunctionImport](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#functionimport-element-csdl)). Il seguente linguaggio CSDL definisce un contenitore di entità con una definizione di importazione di funzioni. Si noti che il tipo restituito per la funzione è void perché non è specificato alcun tipo restituito.  
+ Il [Entity Framework ADO.NET](./ef/index.md) utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) per definire i modelli concettuali. In CSDL, un'implementazione di una funzione dichiarata dal modello è un'importazione di funzioni (mediante l' [elemento FunctionImport](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#functionimport-element-csdl)). Il seguente linguaggio CSDL definisce un contenitore di entità con una definizione di importazione di funzioni. Si noti che il tipo restituito per la funzione è void perché non è specificato alcun tipo restituito.  
   
  [!code-xml[EDM_Example_Model#FunctionImport](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#functionimport)]  
   

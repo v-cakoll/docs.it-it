@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c4e7213ddcffdb026d3d6e6b339bfc91b3c27c6
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400782"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958795"
 ---
 # <a name="xaml-syntax-in-detail"></a>Descrizione dettagliata della sintassi XAML
 In questo argomento vengono definiti i termini utilizzati per descrivere gli elementi della sintassi XAML. Questi termini vengono usati di frequente nel resto della documentazione, sia per la documentazione di WPF in particolare che per gli altri Framework che usano XAML o i concetti di base di XAML abilitati dal supporto del linguaggio XAML a livello di System. XAML. In questo argomento viene illustrata la terminologia di base introdotta nell'argomento [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md).  
@@ -86,7 +86,7 @@ In questo argomento vengono definiti i termini utilizzati per descrivere gli ele
  La sintassi dell'attributo è la sintassi di markup XAML che imposta un valore per una proprietà dichiarando un attributo in un elemento oggetto esistente. Il nome dell'attributo deve corrispondere al nome del membro CLR della proprietà della classe che esegue il backup dell'elemento oggetto pertinente. Il nome dell'attributo è seguito da un operatore di assegnazione (=). Il valore dell'attributo deve essere una stringa racchiusa tra virgolette.  
   
 > [!NOTE]
->  È possibile utilizzare le virgolette alternative per inserire una virgoletta letterale all'interno di un attributo. Ad esempio, è possibile usare le virgolette singole come mezzo per dichiarare una stringa che contiene un carattere virgolette doppie al suo interno. Se si utilizzano virgolette singole o doppie, è necessario utilizzare una coppia corrispondente per l'apertura e la chiusura della stringa del valore dell'attributo. Sono disponibili anche sequenze di escape o altre tecniche per aggirare le restrizioni relative ai caratteri imposte da una particolare sintassi XAML. Vedere [entità carattere XML e XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
+> È possibile utilizzare le virgolette alternative per inserire una virgoletta letterale all'interno di un attributo. Ad esempio, è possibile usare le virgolette singole come mezzo per dichiarare una stringa che contiene un carattere virgolette doppie al suo interno. Se si utilizzano virgolette singole o doppie, è necessario utilizzare una coppia corrispondente per l'apertura e la chiusura della stringa del valore dell'attributo. Sono disponibili anche sequenze di escape o altre tecniche per aggirare le restrizioni relative ai caratteri imposte da una particolare sintassi XAML. Vedere [entità carattere XML e XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
   
  Per poter essere impostato tramite la sintassi dell'attributo, una proprietà deve essere pubblica e deve essere scrivibile. Il valore della proprietà nel sistema di tipi di supporto deve essere un tipo di valore o deve essere un tipo di riferimento di cui è possibile creare un'istanza o a cui fa riferimento un processore XAML durante l'accesso al tipo di supporto pertinente.  
   
@@ -169,7 +169,7 @@ In questo argomento vengono definiti i termini utilizzati per descrivere gli ele
  Un elemento della raccolta implicita crea un membro nella rappresentazione ad albero logico, anche se non viene visualizzato nel markup come elemento. In genere, il costruttore del tipo padre esegue la creazione di un'istanza per la raccolta che è una delle relative proprietà e la raccolta inizialmente vuota diventa parte dell'albero degli oggetti.  
   
 > [!NOTE]
->  Le interfacce elenco e dizionario generico (<xref:System.Collections.Generic.IList%601> e <xref:System.Collections.Generic.IDictionary%602>) non sono supportate per il rilevamento della raccolta. Tuttavia, è possibile usare la <xref:System.Collections.Generic.List%601> classe come classe di base, perché implementa <xref:System.Collections.IList> direttamente o <xref:System.Collections.Generic.Dictionary%602> come classe di base, perché implementa <xref:System.Collections.IDictionary> direttamente.  
+> Le interfacce elenco e dizionario generico (<xref:System.Collections.Generic.IList%601> e <xref:System.Collections.Generic.IDictionary%602>) non sono supportate per il rilevamento della raccolta. Tuttavia, è possibile usare la <xref:System.Collections.Generic.List%601> classe come classe di base, perché implementa <xref:System.Collections.IList> direttamente o <xref:System.Collections.Generic.Dictionary%602> come classe di base, perché implementa <xref:System.Collections.IDictionary> direttamente.  
   
  Nelle pagine di riferimento .NET per i tipi di raccolta, questa sintassi con l'omissione intenzionale dell'elemento oggetto per una raccolta viene occasionalmente indicata nelle sezioni della sintassi XAML come sintassi di raccolta implicita.  
   
@@ -270,7 +270,7 @@ In questo argomento vengono definiti i termini utilizzati per descrivere gli ele
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>Eventi associati  
- Gli eventi associati sono un altro concetto di programmazione introdotto in XAML in cui gli eventi possono essere definiti da un tipo specifico, ma i gestori possono essere collegati a qualsiasi elemento oggetto. Nell'implementazione di WOF, spesso il tipo che definisce un evento associato è un tipo statico che definisce un servizio e talvolta gli eventi collegati vengono esposti da un alias di evento indirizzato nei tipi che espongono il servizio. I gestori per gli eventi associati vengono specificati tramite la sintassi dell'attributo. Come per gli eventi associati, la sintassi dell'attributo viene espansa per gli eventi associati per consentire un *typeName*.  utilizzo di EventName, *dove TypeName* è la classe `Add` `Remove` che fornisce le funzioni di accesso del gestore eventi per l'infrastruttura di eventi collegati e *EventName* è il nome dell'evento.  
+ Gli eventi associati sono un altro concetto di programmazione introdotto in XAML in cui gli eventi possono essere definiti da un tipo specifico, ma i gestori possono essere collegati a qualsiasi elemento oggetto. Nell'implementazione di WOF, spesso il tipo che definisce un evento associato è un tipo statico che definisce un servizio e talvolta gli eventi collegati vengono esposti da un alias di evento indirizzato nei tipi che espongono il servizio. I gestori per gli eventi associati vengono specificati tramite la sintassi dell'attributo. Come per gli eventi associati, la sintassi dell'attributo viene espansa per gli eventi associati per consentire un *typeName*. utilizzo di EventName, *dove TypeName* è la classe `Add` `Remove` che fornisce le funzioni di accesso del gestore eventi per l'infrastruttura di eventi collegati e *EventName* è il nome dell'evento.  
   
 <a name="anatomy_of_a_xaml_page_root_element"></a>   
 ## <a name="anatomy-of-a-xaml-root-element"></a>Anatomia di un elemento radice XAML  
@@ -292,20 +292,20 @@ In questo argomento vengono definiti i termini utilizzati per descrivere gli ele
  Gli utilizzi facoltativi degli elementi proprietà includono la scrittura esplicita delle proprietà del contenuto dell'elemento che il processore XAML considera implicite. Ad esempio, quando si dichiara il contenuto di un <xref:System.Windows.Controls.Menu>, è possibile scegliere di dichiarare in modo esplicito la <xref:System.Windows.Controls.MenuItem> `<Menu.Items>` <xref:System.Windows.Controls.ItemsControl.Items%2A> raccolta <xref:System.Windows.Controls.Menu> di come tag dell'elemento proprietà e inserire ogni elemento `<Menu.Items>`all'interno di, anziché rispetto all'utilizzo del comportamento del processore XAML implicito <xref:System.Windows.Controls.Menu> <xref:System.Windows.Controls.ItemsControl.Items%2A> , tutti gli elementi figlio di <xref:System.Windows.Controls.MenuItem> un oggetto devono essere un oggetto e vengono inseriti nella raccolta. Talvolta gli utilizzi facoltativi possono aiutare a chiarire visivamente la struttura dell'oggetto come rappresentata nel markup. O a volte un utilizzo esplicito dell'elemento proprietà può evitare markup tecnicamente funzionale, ma visivamente confuso, ad esempio estensioni di markup annidate all'interno di un valore di attributo.  
   
 ### <a name="full-typenamemembername-qualified-attributes"></a>Attributi completi typeName. MemberName  
- *TypeName*.  il formato MemberName per un attributo funziona in modo più universale rispetto al solo caso di evento indirizzato. In altre situazioni, tuttavia, il form è superfluo ed è consigliabile evitarlo, se solo per motivi di stile di markup e leggibilità. Nell'esempio seguente ognuno dei tre riferimenti all' <xref:System.Windows.Controls.Control.Background%2A> attributo è completamente equivalente:  
+ *TypeName*. il formato MemberName per un attributo funziona in modo più universale rispetto al solo caso di evento indirizzato. In altre situazioni, tuttavia, il form è superfluo ed è consigliabile evitarlo, se solo per motivi di stile di markup e leggibilità. Nell'esempio seguente ognuno dei tre riferimenti all' <xref:System.Windows.Controls.Control.Background%2A> attributo è completamente equivalente:  
   
  [!code-xaml[XAMLOvwSupport#TypeNameProp](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
   
  `Button.Background`funziona perché la ricerca qualificata per la proprietà <xref:System.Windows.Controls.Button> in ha esito positivo (<xref:System.Windows.Controls.Control.Background%2A> è stata ereditata dal controllo) ed <xref:System.Windows.Controls.Button> è la classe dell'elemento oggetto o di una classe di base. `Control.Background`funziona perché la <xref:System.Windows.Controls.Control> classe definisce <xref:System.Windows.Controls.Control.Background%2A> effettivamente ed <xref:System.Windows.Controls.Control> è una <xref:System.Windows.Controls.Button> classe di base.  
   
- Tuttavia, il *typeName*seguente.  l'esempio di form MemberName non funziona e viene quindi visualizzato come commento:  
+ Tuttavia, il *typeName*seguente. l'esempio di form MemberName non funziona e viene quindi visualizzato come commento:  
   
  [!code-xaml[XAMLOvwSupport#TypeNameBadProp](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
   
  <xref:System.Windows.Controls.Label>è un'altra classe derivata <xref:System.Windows.Controls.Control>di e, se è stato `Label.Background` specificato all' <xref:System.Windows.Controls.Label> interno di un elemento oggetto, l'utilizzo avrebbe avuto esito positivo. Tuttavia, poiché <xref:System.Windows.Controls.Label> non è la classe o la classe di <xref:System.Windows.Controls.Button>base di, il comportamento del processore XAML specificato consiste `Label.Background` nell'elaborare come proprietà associata. `Label.Background`non è una proprietà associata disponibile e questo utilizzo non riesce.  
   
 ### <a name="basetypenamemembername-property-elements"></a>Elementi della proprietà nomeTipoBase. MemberName  
- In modo analogo a come il *typeName*.  il form membroname funziona per la sintassi degli attributi, un *nomeTipoBase*.  la sintassi MemberName funziona per la sintassi dell'elemento Property. Ad esempio, la sintassi seguente funziona:  
+ In modo analogo a come il *typeName*. il form membroname funziona per la sintassi degli attributi, un *nomeTipoBase*. la sintassi MemberName funziona per la sintassi dell'elemento Property. Ad esempio, la sintassi seguente funziona:  
   
  [!code-xaml[XAMLOvwSupport#GoofyPE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#goofype)]  
   

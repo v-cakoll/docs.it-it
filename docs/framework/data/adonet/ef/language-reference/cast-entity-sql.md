@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 743c90cd9bc77a89051c59a217befa4275b28572
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 253dcf092deadd1049d0556af4ea0630602110d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489952"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935820"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 Consente di convertire un'espressione da un tipo di dati a un altro.  
@@ -29,7 +29,7 @@ CAST ( expression AS data_type )
  Restituisce lo stesso valore di `data_type`.  
   
 ## <a name="remarks"></a>Note  
- L'espressione cast ha una semantica simile all'espressione di conversione di Transact-SQL. L'espressione CAST viene usata per convertire un valore di un tipo in un valore di un altro tipo.  
+ La semantica dell'espressione cast è simile a quella dell'espressione Transact-SQL CONVERT. L'espressione CAST viene usata per convertire un valore di un tipo in un valore di un altro tipo.  
   
 ```  
 CAST( e as T )  
@@ -48,12 +48,12 @@ CAST( e as T )
  L'utilizzo di un'espressione CAST è considerato una conversione esplicita. Le conversioni esplicite possono comportare il troncamento dei dati o la perdita di precisione.  
   
 > [!NOTE]
->  L'operatore CAST è supportato solo per tipi primitivi e tipi di membro di enumerazione.  
+> L'operatore CAST è supportato solo per tipi primitivi e tipi di membro di enumerazione.  
   
 ## <a name="example"></a>Esempio  
  Nella query [!INCLUDE[esql](../../../../../../includes/esql-md.md)] seguente viene usato l'operatore CAST per eseguire il cast di un'espressione da un tipo di dati a un altro. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura di [come: Eseguire una Query che restituisce risultati PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)di PrimitiveType.  
   
 2. Passare la query seguente come argomento al metodo `ExecutePrimitiveTypeQuery` :  
   

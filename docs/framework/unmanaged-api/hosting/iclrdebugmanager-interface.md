@@ -16,42 +16,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22c3a480e2b68377e300df1083b3178ee4e2d2a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a408995793caf879f8d5624ab727102c4859195
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969858"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959618"
 ---
 # <a name="iclrdebugmanager-interface"></a>Interfaccia ICLRDebugManager
-Fornisce metodi che consentono a un host associare un set di attività a un identificatore e un nome descrittivo.  
+Fornisce metodi che consentono a un host di associare un set di attività con un identificatore e un nome descrittivo.  
   
 ## <a name="methods"></a>Metodi  
   
-|Metodo|Descrizione|  
+|Metodo|DESCRIZIONE|  
 |------------|-----------------|  
 |[Metodo BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)|Stabilisce una nuova connessione tra l'host e il debugger per associare le attività a un identificatore e un nome descrittivo.|  
 |[Metodo EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)|Rimuove l'associazione tra un elenco di attività e un identificatore e un nome descrittivo.|  
 |[Metodo GetDacl](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-getdacl-method.md)|Questo metodo non è implementato.|  
 |[Metodo IsDebuggerAttached](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-isdebuggerattached-method.md)|Ottiene un valore che indica se un debugger è collegato al processo.|  
-|[Metodo SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|Associa un elenco delle [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) istanze con un identificatore e un nome descrittivo.|  
+|[Metodo SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|Associa un elenco di istanze di [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) a un identificatore e a un nome descrittivo.|  
 |[Metodo SetDacl](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setdacl-method.md)|Questo metodo non è implementato.|  
-|[Metodo SetSymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|Imposta i criteri per la lettura dei file di programma (PDB) del database. Il criterio determina se le informazioni sui file e i numeri di riga viene inclusa negli stack di chiamate.|  
+|[Metodo SetSymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|Imposta i criteri per la lettura dei file di database di programma (PDB). Il criterio determina se le informazioni sui numeri di riga e sui file sono incluse negli stack di chiamate.|  
   
 ## <a name="remarks"></a>Note  
- Negli scenari di debug, un host potrebbe voler raggruppare le attività in base alla propria logica di programmazione. Ad esempio, un raggruppamento consente agli sviluppatori di visualizzare solo le attività necessarie per le API per gli sviluppatori, invece di visualizzare tutte le attività in esecuzione nel processo. `ICLRDebugManager` consente all'host implementare questo tipo di raggruppamento.  
+ Negli scenari di debug, un host potrebbe voler raggruppare le attività in base alla propria logica di programmazione. Un raggruppamento, ad esempio, consente a uno sviluppatore di visualizzare solo le attività richieste dalle API dello sviluppatore, anziché visualizzare tutte le attività in esecuzione nel processo. `ICLRDebugManager`consente all'host di implementare questo tipo di raggruppamento.  
   
 > [!IMPORTANT]
->  Tre `ICLRDebugManager` metodi `BeginConnection`, `SetConnectionTasks` e `EndConnection`, dipendono da altro. Devono essere chiamati nell'ordine indicato per funzionare come previsto.  
+> Tre `ICLRDebugManager` metodi, `BeginConnection`, `SetConnectionTasks` e`EndConnection`, dipendono l'uno dall'altro. Devono essere chiamati nell'ordine specificato per funzionare come previsto.  
   
- Il raggruppamento e gli identificatori e nomi descrittivi che l'host viene assegnato al raggruppamento, non hanno alcun significato per common language runtime (CLR). CLR passa semplicemente le informazioni insieme al debugger.  
+ Il raggruppamento e gli identificatori e i nomi descrittivi assegnati dall'host al raggruppamento non hanno significato per il Common Language Runtime (CLR). CLR passa semplicemente le informazioni insieme al debugger.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

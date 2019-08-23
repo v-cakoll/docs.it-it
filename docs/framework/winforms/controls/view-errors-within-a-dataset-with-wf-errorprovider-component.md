@@ -9,22 +9,22 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 15fbf4a3cebef1485f0c54ace36ab88f3d4289e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dbd2ccca607869a6f28bc5b3bd1c9f0769db9f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962578"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950075"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Procedura: Visualizzare gli errori all'interno di un set di dati con il componente ErrorProvider di Windows Forms
-È possibile usare i moduli di Windows <xref:System.Windows.Forms.ErrorProvider> componente e visualizzare gli errori di colonna all'interno di un set di dati o un'altra origine dati. Per un <xref:System.Windows.Forms.ErrorProvider> componente per visualizzare gli errori dei dati in un form, non deve essere associato direttamente a un controllo. Dopo che è associato a un'origine dati, è possibile visualizzare un'icona di errore accanto a qualsiasi controllo associato alla stessa origine dati.  
+È possibile utilizzare il componente <xref:System.Windows.Forms.ErrorProvider> Windows Forms per visualizzare gli errori di colonna all'interno di un set di dati o di un'altra origine dati. Per visualizzare <xref:System.Windows.Forms.ErrorProvider> gli errori relativi ai dati in un form, un componente non deve essere direttamente associato a un controllo. Una volta associato a un'origine dati, è possibile che venga visualizzata un'icona di errore accanto a qualsiasi controllo associato alla stessa origine dati.  
   
 > [!NOTE]
->  Se si modifica il provider di errore <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> e <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> delle proprietà in fase di esecuzione, è consigliabile usare il <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> metodo per evitare conflitti.  
+> Se si modificano le proprietà <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> e <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> del provider di errori in fase di esecuzione, è <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> necessario utilizzare il metodo per evitare conflitti.  
   
-### <a name="to-display-data-errors"></a>Per visualizzare gli errori di dati  
+### <a name="to-display-data-errors"></a>Per visualizzare gli errori relativi ai dati  
   
-1. Associare il componente a una colonna specifica all'interno di una tabella di dati.  
+1. Associare il componente a una colonna specifica in una tabella di dati.  
   
     ```vb  
     ' Assumes existence of DataSet1, DataTable1  
@@ -40,7 +40,7 @@ ms.locfileid: "61962578"
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2. Impostare il <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> proprietà nel form.  
+2. Impostare la <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> proprietà sul form.  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -50,7 +50,7 @@ ms.locfileid: "61962578"
     errorProvider1.ContainerControl = this;  
     ```  
   
-3. Impostare la posizione del record corrente in una riga che contiene un errore di colonna.  
+3. Consente di impostare la posizione del record corrente su una riga contenente un errore di colonna.  
   
     ```vb  
     DataTable1.Rows(5).SetColumnError("Name", "Bad data in this row.")  
@@ -65,4 +65,4 @@ ms.locfileid: "61962578"
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica sul componente ErrorProvider](errorprovider-component-overview-windows-forms.md)
-- [Procedura: Visualizzare le icone di errore per la convalida dei Form con il componente ErrorProvider di Windows Form](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [Procedura: Visualizza le icone di errore per la convalida dei form con il componente Windows Forms ErrorProvider](display-error-icons-for-form-validation-with-wf-errorprovider.md)

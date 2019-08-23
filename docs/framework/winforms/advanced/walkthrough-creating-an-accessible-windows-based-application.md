@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 7dec86c724479fde78fcb2e2881dce40b1bf747a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877109"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957186"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Procedura dettagliata: Creazione di un'applicazione Windows ad accesso facilitato
 
@@ -43,7 +43,7 @@ In questa procedura dettagliata l'elemento importante non è il codice per un si
 
 #### <a name="to-begin-making-the-application"></a>Per iniziare a creare l'applicazione
 
-- Creare una nuova applicazione Windows in Visual Basic o l'oggetto visivo C#. Assegnare il nome **PizzaOrder** al progetto. Per i dettagli, vedere [Creazione di nuove soluzioni e progetti](/visualstudio/ide/creating-solutions-and-projects).
+- Creare una nuova applicazione Windows in Visual Basic o Visual C#. Assegnare il nome **PizzaOrder** al progetto. Per i dettagli, vedere [Creazione di nuove soluzioni e progetti](/visualstudio/ide/creating-solutions-and-projects).
 
 ## <a name="adding-the-controls-to-the-form"></a>Aggiunta dei controlli al form
 
@@ -58,9 +58,9 @@ Quando si aggiungono i controlli a un form, tenere presenti le linee guida segue
 
 - Assicurarsi che tutti i controlli etichetta che descrivono un controllo TextBox precedano immediatamente il controllo TextBox nell'ordine di tabulazione.
 
-- Aggiungere una chiave di accesso, usando il carattere "&", al <xref:System.Windows.Forms.Control.Text%2A> proprietà di qualsiasi controllo potrebbe essere necessario l'utente a cui passare.
+- Aggiungere una chiave di accesso, usando il carattere "&", alla <xref:System.Windows.Forms.Control.Text%2A> proprietà di qualsiasi controllo a cui l'utente potrebbe voler accedere.
 
-- Aggiungere una chiave di accesso, usando il carattere "&", al <xref:System.Windows.Forms.Control.Text%2A> proprietà dell'etichetta che precede un controllo che l'utente desidera spostarsi. Impostare la proprietà <xref:System.Windows.Forms.Label.UseMnemonic%2A> delle etichette su `true`, in modo che lo stato attivo venga impostato sul controllo successivo nell'ordine di tabulazione quando l'utente preme il tasto di scelta.
+- Aggiungere una chiave di accesso, usando il carattere "&", alla <xref:System.Windows.Forms.Control.Text%2A> proprietà dell'etichetta che precede un controllo a cui l'utente potrebbe voler accedere. Impostare la proprietà <xref:System.Windows.Forms.Label.UseMnemonic%2A> delle etichette su `true`, in modo che lo stato attivo venga impostato sul controllo successivo nell'ordine di tabulazione quando l'utente preme il tasto di scelta.
 
 - Aggiungere tasti di scelta a tutte le voci di menu.
 
@@ -73,80 +73,80 @@ Quando si aggiungono i controlli a un form, tenere presenti le linee guida segue
    |Form1|AccessibleDescription|Order form|
    ||AccessibleName|Order form|
    ||Dimensione carattere|10|
-   ||Testo|Pizza Order Form|
-   |PictureBox|Nome|logo|
+   ||Text|Pizza Order Form|
+   |PictureBox|Name|logo|
    ||AccessibleDescription|A slice of pizza|
    ||AccessibleName|Company logo|
    ||Image|Un'icona o una bitmap|
-   |Label|Nome|companyLabel|
-   ||Testo|Good Pizza|
+   |Label|NOME|companyLabel|
+   ||Text|Good Pizza|
    ||TabIndex|1|
    ||AccessibleDescription|Company name|
    ||AccessibleName|Company name|
    ||Backcolor|Blu|
    ||Forecolor|Giallo|
    ||Dimensione carattere|18|
-   |Label|Nome|customerLabel|
-   ||Testo|&Name|
+   |Label|Name|customerLabel|
+   ||Text|&Name|
    ||TabIndex|2|
    ||AccessibleDescription|Customer name label|
    ||AccessibleName|Customer name label|
    ||UseMnemonic|True|
-   |TextBox|Nome|customerName|
-   ||Testo|(nessuno)|
+   |TextBox|Name|customerName|
+   ||Text|(nessuno)|
    ||TabIndex|3|
    ||AccessibleDescription|Customer name|
    ||AccessibleName|Customer name|
-   |GroupBox|Nome|sizeOptions|
+   |GroupBox|Name|sizeOptions|
    ||AccessibleDescription|Pizza size options|
    ||AccessibleName|Pizza size options|
-   ||Testo|Pizza size|
+   ||Text|Pizza size|
    ||TabIndex|4|
-   |RadioButton|Nome|smallPizza|
-   ||Testo|&Small $6.00|
+   |RadioButton|Name|smallPizza|
+   ||Text|&Small $6.00|
    ||Selezionato|True|
    ||TabIndex|0|
    ||AccessibleDescription|Small pizza|
    ||AccessibleName|Small pizza|
-   |RadioButton|Nome|largePizza|
-   ||Testo|&Large $10.00|
+   |RadioButton|Name|largePizza|
+   ||Text|&Large $10.00|
    ||TabIndex|1|
    ||AccessibleDescription|Large pizza|
    ||AccessibleName|Large pizza|
-   |Label|Nome|toppingsLabel|
-   ||Testo|&Toppings ($0.75 each)|
+   |Label|NOME|toppingsLabel|
+   ||Text|&Toppings ($0.75 each)|
    ||TabIndex|5|
    ||AccessibleDescription|Toppings label|
    ||AccessibleName|Toppings label|
    ||UseMnemonic|True|
-   |CheckedListBox|Nome|toppings|
+   |CheckedListBox|Name|toppings|
    ||TabIndex|6|
    ||AccessibleDescription|Available toppings|
    ||AccessibleName|Available toppings|
    ||Elementi|Pepperoni, Sausage, Mushrooms|
-   |Button|Nome|order|
-   ||Testo|&Ordina|
+   |Button|NOME|order|
+   ||Text|&Ordina|
    ||TabIndex|7|
    ||AccessibleDescription|Total the order|
    ||AccessibleName|Total order|
-   |Button|Nome|cancel|
-   ||Testo|An&nulla|
+   |Button|Name|cancel|
+   ||Text|An&nulla|
    ||TabIndex|8|
    ||AccessibleDescription|Cancel the order|
    ||AccessibleName|Cancel order|
-   |MainMenu|Nome|theMainMenu|
-   |MenuItem|Nome|fileCommands|
-   ||Testo|&File|
-   |MenuItem|Nome|exitApp|
-   ||Testo|&Esci|
+   |MainMenu|Name|theMainMenu|
+   |MenuItem|Name|fileCommands|
+   ||Text|&File|
+   |MenuItem|NOME|exitApp|
+   ||Text|&Esci|
 
-   Il modulo avrà un aspetto simile al seguente:
+   Il form sarà simile all'immagine seguente:
 
-   ![Il modulo d'ordine pizza con una selezione nella casella di testo, dimensioni e condimenti nome.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
+   ![Il form dell'ordine della pizza con una casella di testo del nome e la selezione delle dimensioni e dei ping.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
 
 ## <a name="supporting-high-contrast-mode"></a>Supporto della modalità contrasto elevato
 
-La modalità contrasto elevato è un'impostazione di sistema di Windows che migliora la leggibilità usando colori a contrasto e dimensioni del carattere che agevolano gli utenti con problemi di vista. Il <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> proprietà viene fornita per determinare se è impostata la modalità contrasto elevato.
+La modalità contrasto elevato è un'impostazione di sistema di Windows che migliora la leggibilità usando colori a contrasto e dimensioni del carattere che agevolano gli utenti con problemi di vista. La <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> proprietà viene fornita per determinare se è impostata la modalità contrasto elevato.
 
 Se SystemInformation.HighContrast è `true`, l'applicazione dovrebbe:
 
@@ -158,7 +158,7 @@ Se SystemInformation.HighContrast è `true`, l'applicazione dovrebbe:
 
 All'avvio l'applicazione dovrebbe controllare l'impostazione di <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> e rispondere all'evento di sistema <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>. L'evento <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> viene generato ogni volta che il valore di <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> cambia.
 
-Nell'applicazione l'unico elemento che non usa le impostazioni di sistema per il colore è `lblCompanyName`. Il <xref:System.Drawing.SystemColors> classe viene utilizzata per modificare le impostazioni colore dell'etichetta con i colori di sistema selezionati dall'utente.
+Nell'applicazione l'unico elemento che non usa le impostazioni di sistema per il colore è `lblCompanyName`. La <xref:System.Drawing.SystemColors> classe viene utilizzata per modificare le impostazioni relative ai colori dell'etichetta nei colori di sistema selezionati dall'utente.
 
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>Per abilitare la modalità contrasto elevato in modo efficace
 
@@ -303,7 +303,7 @@ In questa applicazione, nessuna informazione viene comunicata solo mediante segn
 
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>Per fornire informazioni con mezzi diversi dai segnali acustici
 
-1. Far lampeggiare la barra del titolo usando la funzione FlashWindow dell'API Windows. Per un esempio di come chiamare funzioni API Windows, vedere [procedura dettagliata: Chiamata delle API di Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
+1. Far lampeggiare la barra del titolo usando la funzione FlashWindow dell'API Windows. Per un esempio di come chiamare le funzioni dell'API Windows, [vedere Procedura dettagliata: Chiamata di API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)Windows.
 
     > [!NOTE]
     > L'utente potrebbe aver abilitato il servizio Segnali visivi di Windows, che farà lampeggiare la finestra anche quando i suoni di sistema vengono riprodotti tramite l'altoparlante predefinito del computer.

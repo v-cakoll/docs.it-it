@@ -9,19 +9,19 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], formatting values
 - up-down controls [Windows Forms], formatting numeric values
 ms.assetid: fa7c5557-6bfb-45b2-975d-8887b23b0ba0
-ms.openlocfilehash: a5d8de6db8a0d6f62a082fc381a7b855eb948514
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6db7a1b2aeb7282c3ac827cb8319706ed348fc22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630582"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949156"
 ---
 # <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>Procedura: Impostare il formato per il controllo NumericUpDown di Windows Forms
-È possibile configurare come valori vengono visualizzati nei moduli di Windows <xref:System.Windows.Forms.NumericUpDown> controllo. Il <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> proprietà determina il numero di cifre visualizzate dopo il separatore decimale; il valore predefinito è 0. Il <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> proprietà determina se inserire un separatore tra ogni tre cifre decimali; il valore predefinito è `false`. Il controllo può visualizzare i valori in formato esadecimale invece di formato decimale, se il <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> è impostata su `true`; il valore predefinito è `false`.  
+È possibile configurare la modalità di visualizzazione dei valori nel <xref:System.Windows.Forms.NumericUpDown> controllo Windows Forms. La <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> proprietà determina il numero di numeri visualizzati dopo il separatore decimale. il valore predefinito è 0. La <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> proprietà determina se un separatore verrà inserito tra tre cifre decimali. il valore `false`predefinito è. Il controllo può visualizzare i valori in formato esadecimale anziché decimale <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> , se la proprietà `true`è impostata su. `false`il valore predefinito è.  
   
 ### <a name="to-format-the-numeric-value"></a>Per formattare il valore numerico  
   
-- Visualizzare un valore decimale impostando il <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> proprietà a un numero intero e impostare il <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> proprietà `true` o `false`.  
+- Visualizzare un valore decimale <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> impostando la proprietà su un intero e impostando la `false` <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> proprietà su `true` o.  
   
     ```vb  
     NumericUpDown1.DecimalPlaces = 2  
@@ -40,7 +40,7 @@ ms.locfileid: "64630582"
   
      -oppure-  
   
-- Visualizzare un valore esadecimale, impostando il <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> proprietà `true`.  
+- Per visualizzare un valore esadecimale, <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> impostare la `true`proprietà su.  
   
     ```vb  
     NumericUpDown1.Hexadecimal = True  
@@ -55,7 +55,7 @@ ms.locfileid: "64630582"
     ```  
   
     > [!NOTE]
-    >  Anche se il valore viene visualizzato nel form come cifre esadecimali, eventuali test eseguito sul <xref:System.Windows.Forms.NumericUpDown.Value%2A> proprietà verrà testato il valore decimale.  
+    > Anche se il valore viene visualizzato nel formato esadecimale, i test eseguiti sulla <xref:System.Windows.Forms.NumericUpDown.Value%2A> proprietà ne verificheranno il valore decimale.  
   
 ## <a name="see-also"></a>Vedere anche
 

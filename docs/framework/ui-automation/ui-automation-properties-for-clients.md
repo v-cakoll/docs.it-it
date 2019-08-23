@@ -8,16 +8,16 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: e687533d618cef3fcc59b3ecd2b205b80b13b97d
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 6f02a4825206da0dd4949083cc54f555a8ae40b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796668"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914450"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Proprietà di automazione interfaccia utente per i client
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.  
   
  In questa panoramica sono presentate le proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] così come vengono esposte nelle applicazioni client di automazione interfaccia utente.  
   
@@ -29,13 +29,11 @@ ms.locfileid: "68796668"
   
  Per migliorare le prestazioni, è possibile memorizzare nella cache i valori di proprietà di controlli e pattern di controllo quando vengono recuperati oggetti <xref:System.Windows.Automation.AutomationElement> . Per altre informazioni, vedere [Caching nei client di automazione interfaccia utente](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
   
-<a name="Property_IDs"></a>   
 ## <a name="property-ids"></a>ID di proprietà  
  Gli identificatori di proprietà (ID) sono valori univoci e costanti incapsulati negli <xref:System.Windows.Automation.AutomationProperty> oggetti. Le applicazioni client di automazione interfaccia utente ottengono questi <xref:System.Windows.Automation.AutomationElement> ID dalla classe o dalla classe di pattern di controllo appropriata <xref:System.Windows.Automation.ScrollPattern>, ad esempio. I provider di automazione interfaccia utente li ottengono da <xref:System.Windows.Automation.AutomationElementIdentifiers> o da una delle classi di identificatori di pattern di controllo, ad esempio <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
   
  La proprietà <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> numerica di un oggetto <xref:System.Windows.Automation.AutomationProperty> viene usata dai provider per identificare le proprietà sulle quali vengono eseguite query nel metodo <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> . In genere, non è necessario che le applicazioni client esaminino la proprietà <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>. La proprietà <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> viene usata solo a scopi di debug e diagnostica.  
   
-<a name="Property_Conditions"></a>   
 ## <a name="property-conditions"></a>Condizioni della proprietà  
  Gli ID di proprietà vengono usati nella costruzione <xref:System.Windows.Automation.PropertyCondition> di oggetti utilizzati per <xref:System.Windows.Automation.AutomationElement> trovare oggetti. Ad esempio, può essere necessario trovare un oggetto <xref:System.Windows.Automation.AutomationElement> con un determinato nome o tutti i controlli abilitati. Ogni <xref:System.Windows.Automation.PropertyCondition> specifica un identificatore <xref:System.Windows.Automation.AutomationProperty> e il valore a cui deve corrispondere la proprietà.  
   
@@ -47,7 +45,6 @@ ms.locfileid: "68796668"
   
 - <xref:System.Windows.Automation.TreeWalker.Condition%2A>  
   
-<a name="Retrieving_Properties"></a>   
 ## <a name="retrieving-properties"></a>Recupero di proprietà  
  Alcune proprietà di <xref:System.Windows.Automation.AutomationElement> e tutte le proprietà di una classe di pattern di controllo sono esposte come proprietà annidate della proprietà `Current` o `Cached` dell'oggetto <xref:System.Windows.Automation.AutomationElement> o dell'oggetto del pattern di controllo.  
   
@@ -73,7 +70,6 @@ ms.locfileid: "68796668"
   
  I metodi `Get` restituiscono un oggetto <xref:System.Object>. L'applicazione deve eseguire il cast dell'oggetto restituito al tipo corretto prima di usare il valore.  
   
-<a name="_Default_Property_Values"></a>   
 ## <a name="default-property-values"></a>Valori di proprietà predefiniti  
  Se un provider di automazione interfaccia utente non implementa una proprietà, il sistema di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è in grado di fornire un valore predefinito. Ad esempio, se il provider per un controllo non supporta la proprietà identificata da <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] restituisce una stringa vuota. Analogamente, se il provider non supporta la proprietà identificata da <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] restituisce `false`.  
   
@@ -86,13 +82,11 @@ ms.locfileid: "68796668"
   
  Per individuare le proprietà supportate da un elemento, usare il metodo <xref:System.Windows.Automation.AutomationElement.GetSupportedProperties%2A>. Restituisce una matrice di identificatori <xref:System.Windows.Automation.AutomationProperty> .  
   
-<a name="Property_changed_Events"></a>   
 ## <a name="property-changed-events"></a>Eventi di modifica delle proprietà  
  Quando viene modificato un valore di proprietà su un oggetto <xref:System.Windows.Automation.AutomationElement> o un pattern di controllo, viene generato un evento. Un'applicazione può sottoscrivere tali eventi chiamando il metodo <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>, fornendo una matrice di identificatori <xref:System.Windows.Automation.AutomationProperty> come ultimo parametro per specificare le proprietà di interesse.  
   
  Nell'oggetto <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>, è possibile identificare la proprietà modificata controllando il membro <xref:System.Windows.Automation.AutomationPropertyChangedEventArgs.Property%2A> degli argomenti dell'evento. Gli argomenti contengono anche i valori obsoleti e nuovi della proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] modificata. Questi valori sono di tipo <xref:System.Object> ed è necessario eseguirne il cast al tipo corretto prima di usarli.  
   
-<a name="Additional_AutomationElement_Properties"></a>   
 ## <a name="additional-automationelement-properties"></a>Proprietà AutomationElement aggiuntiva  
  Oltre alle strutture delle proprietà <xref:System.Windows.Automation.AutomationElement.Current%2A> e <xref:System.Windows.Automation.AutomationElement.Cached%2A> , l'oggetto <xref:System.Windows.Automation.AutomationElement> ha le proprietà seguenti, recuperate tramite semplici funzioni di accesso della proprietà.  
   

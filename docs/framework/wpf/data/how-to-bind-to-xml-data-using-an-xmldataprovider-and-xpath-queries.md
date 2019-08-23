@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: dc4fb2d5f0c48c077d2ff7ca5e5269ce5cba71e5
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 4833e024fcd352094a2163f11df8572aa4c241f8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400493"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944641"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Procedura: Eseguire il binding ai dati XML usando un oggetto XMLDataProvider e le query XPath
 In questo esempio viene illustrato come eseguire [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] l'associazione ai <xref:System.Windows.Data.XmlDataProvider>dati utilizzando un oggetto.  
@@ -22,13 +22,13 @@ In questo esempio viene illustrato come eseguire [!INCLUDE[TLA#tla_xml](../../..
  Nell'esempio seguente i dati vengono incorporati direttamente come un' [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] *isola di dati* all'interno <xref:System.Windows.FrameworkElement.Resources%2A> della sezione. Un' isola di dati [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] deve essere racchiusa tra tag `<x:XData>` e disporre di un unico nodo radice, in questo esempio, *inventario*.  
   
 > [!NOTE]
->  Il nodo radice dei dati [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ha un attributo **xmlns** che imposta lo spazio dei nomi [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] su una stringa vuota. Questo è di un requisito per l'applicazione di query XPath a un'isola di dati incorporata nella pagina [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. In questo caso inline, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], e quindi l'isola di dati, eredita lo <xref:System.Windows> spazio dei nomi. Per questo motivo, è necessario impostare lo spazio dei nomi vuoto per evitare che le <xref:System.Windows> query XPath siano qualificate dallo spazio dei nomi, il che potrebbe indirizzare le query in modo non valido.  
+> Il nodo radice dei dati [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ha un attributo **xmlns** che imposta lo spazio dei nomi [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] su una stringa vuota. Questo è di un requisito per l'applicazione di query XPath a un'isola di dati incorporata nella pagina [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. In questo caso inline, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], e quindi l'isola di dati, eredita lo <xref:System.Windows> spazio dei nomi. Per questo motivo, è necessario impostare lo spazio dei nomi vuoto per evitare che le <xref:System.Windows> query XPath siano qualificate dallo spazio dei nomi, il che potrebbe indirizzare le query in modo non valido.  
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
  Come illustrato in questo esempio, per creare la stessa dichiarazione di associazione nella sintassi dell'attributo è necessario usare correttamente i caratteri di escape per i caratteri speciali. Per altre informazioni, vedere [Entità carattere XML e XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
   
- Quando <xref:System.Windows.Controls.ListBox> viene eseguito questo esempio, l'oggetto visualizzerà gli elementi seguenti. Questi sono gli elementi *Title* di tutti gli altri elementi in *Books* con un valore *Stock* di "*out*" o un valore *Number* di 3 o maggiore o uguale a 8. Si noti che  non viene restituito alcun elemento CD <xref:System.Windows.Data.XmlDataProvider.XPath%2A> perché il <xref:System.Windows.Data.XmlDataProvider> valore impostato in indica che devono essere esposti solo gli elementi *books* (essenzialmente impostando un filtro).  
+ Quando <xref:System.Windows.Controls.ListBox> viene eseguito questo esempio, l'oggetto visualizzerà gli elementi seguenti. Questi sono gli elementi *Title* di tutti gli altri elementi in *Books* con un valore *Stock* di "*out*" o un valore *Number* di 3 o maggiore o uguale a 8. Si noti che non viene restituito alcun elemento CD <xref:System.Windows.Data.XmlDataProvider.XPath%2A> perché il <xref:System.Windows.Data.XmlDataProvider> valore impostato in indica che devono essere esposti solo gli elementi *books* (essenzialmente impostando un filtro).  
   
  ![Screenshot dell'esempio XPath che mostra il titolo di quattro libri.](./media/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries/xpath-example-listbox-details.png)  
   

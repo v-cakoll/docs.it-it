@@ -2,12 +2,12 @@
 title: Ruoli server e database in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97ad04b1d081e5635104bdadb2d1a54402ffcca2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645968"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961089"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Ruoli server e database in SQL Server
 In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che consente di assegnare le autorizzazioni a un ruolo, ovvero un gruppo di utenti, anziché ai singoli utenti. Ai ruoli predefiniti del server e del database è assegnato un set predefinito di autorizzazioni.  
@@ -16,9 +16,9 @@ In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che con
  I ruoli predefiniti del server hanno un set fisso di autorizzazioni e un ambito a livello di server. Sono destinati a essere usati per l'amministrazione di SQL Server e non è possibile modificare le autorizzazioni ad essi assegnate. È possibile assegnare account di accesso ai ruoli predefiniti del server senza avere un account utente in un database.  
   
 > [!IMPORTANT]
->  Il ruolo predefinito del server `sysadmin` incorpora tutti gli altri ruoli e ha un ambito illimitato. Non aggiungere entità a questo ruolo a meno che non siano considerate estremamente attendibili. I membri del ruolo `sysadmin` dispongono di privilegi amministrativi irrevocabili su tutti i database e le risorse del server.  
+> Il ruolo predefinito del server `sysadmin` incorpora tutti gli altri ruoli e ha un ambito illimitato. Non aggiungere entità a questo ruolo a meno che non siano considerate estremamente attendibili. I membri del ruolo `sysadmin` dispongono di privilegi amministrativi irrevocabili su tutti i database e le risorse del server.  
   
- È necessario aggiungere in modo selettivo gli utenti ai ruoli predefiniti del server. Ad esempio, il ruolo `bulkadmin` consente agli utenti di inserire il contenuto di qualsiasi file locale in una tabella, il che potrebbe compromettere l'integrità dei dati. Per l'elenco completo dei ruoli predefiniti del server e le autorizzazioni, vedere la documentazione Online di SQL Server.  
+ È necessario aggiungere in modo selettivo gli utenti ai ruoli predefiniti del server. Ad esempio, il ruolo `bulkadmin` consente agli utenti di inserire il contenuto di qualsiasi file locale in una tabella, il che potrebbe compromettere l'integrità dei dati. Vedere documentazione online di SQL Server per l'elenco completo di autorizzazioni e ruoli predefiniti del server.  
   
 ## <a name="fixed-database-roles"></a>Ruoli predefiniti del database  
  I ruoli predefiniti del database includono un set di autorizzazioni predefinito progettato per semplificare la gestione di gruppi di autorizzazioni. I membri del ruolo `db_owner` possono eseguire tutte le attività di configurazione e di manutenzione nel database.  
@@ -27,7 +27,7 @@ In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che con
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Ruoli a livello di server](/sql/relational-databases/security/authentication-access/server-level-roles)|Descrive le autorizzazioni associate in SQL Server e ruoli predefiniti del server.|  
+|[Ruoli a livello di server](/sql/relational-databases/security/authentication-access/server-level-roles)|Vengono descritti i ruoli predefiniti del server e le autorizzazioni associate in SQL Server.|  
 |[Ruoli a livello di database](/sql/relational-databases/security/authentication-access/database-level-roles)|Vengono descritti i ruoli predefiniti del database e le autorizzazioni associate.|  
   
 ## <a name="database-roles-and-users"></a>Ruoli e utenti del database  
@@ -42,7 +42,7 @@ In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che con
  L'utente `dbo`, o proprietario del database, è un account utente che dispone di autorizzazioni implicite per l'esecuzione di tutte le attività nel database. I membri del ruolo predefinito del server `sysadmin` vengono automaticamente mappati a `dbo`.  
   
 > [!NOTE]
->  `dbo` è anche il nome di uno schema, come descritto [la proprietà e separazione tra schemi e utenti in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
+> `dbo`è anche il nome di uno schema, come descritto in [proprietà e separazione dello schema utente in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
   
  L'account utente `dbo` viene spesso confuso con il ruolo predefinito del database `db_owner`. L'ambito di `db_owner` è un database, mentre quello di `sysadmin` corrisponde all'intero server. L'appartenenza al ruolo `db_owner` non conferisce i privilegi dell'utente `dbo`.  
   
@@ -52,13 +52,13 @@ In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che con
  L'account `guest` è un account incorporato in tutte le versioni di SQL Server. Per impostazione predefinita, è disabilitato nei nuovi database. Se viene abilitato, è possibile disabilitarlo revocando la relativa autorizzazione CONNECT tramite l'esecuzione dell'istruzione Transact-SQL REVOKE CONNECT FROM GUEST.  
   
 > [!IMPORTANT]
->  Evitare di usare l'account `guest`; tutti gli account di accesso senza autorizzazioni per il database ottengono le autorizzazioni concesse a questo account. Se è necessario usarlo, concedere le autorizzazioni minime all'account `guest`.  
+> Evitare di usare l'account `guest`; tutti gli account di accesso senza autorizzazioni per il database ottengono le autorizzazioni concesse a questo account. Se è necessario usarlo, concedere le autorizzazioni minime all'account `guest`.  
   
  Per altre informazioni su account di accesso, utenti e ruoli di SQL Server, vedere le risorse seguenti.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Introduzione alle autorizzazioni del motore di Database](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Contiene collegamenti ad argomenti in cui vengono descritti entità, ruoli, credenziali, entità a protezione diretta e autorizzazioni.|  
+|[Introduzione con autorizzazioni di motore di database](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Contiene collegamenti ad argomenti in cui vengono descritti entità, ruoli, credenziali, entità a protezione diretta e autorizzazioni.|  
 |[Entità](/sql/relational-databases/security/authentication-access/principals-database-engine)|Contiene una descrizione delle entità e collegamenti ad argomenti in cui sono illustrati i ruoli del server e del database.|  
   
 ## <a name="see-also"></a>Vedere anche

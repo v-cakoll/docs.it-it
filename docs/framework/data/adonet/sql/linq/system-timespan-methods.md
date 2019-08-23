@@ -2,12 +2,12 @@
 title: Metodi System.TimeSpan
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: dd693a64550293d6894e1d2abc3f651a53fc17fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec27f8f17a6709efef1a8230b521778095ae1257
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917436"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947095"
 ---
 # <a name="systemtimespan-methods"></a>Metodi System.TimeSpan
 Il supporto dei membri per <xref:System.TimeSpan?displayProperty=nameWithType> dipende molto dalle versioni di .NET Framework e di Microsoft SQL Server in uso.  
@@ -17,7 +17,7 @@ Il supporto dei membri per <xref:System.TimeSpan?displayProperty=nameWithType> d
 ## <a name="previous-limitations"></a>Limitazioni precedenti  
  Quando si usa LINQ to SQL con versioni di .NET Framework precedenti a .NET Framework 3.5 SP1, non è possibile eseguire il mapping di campi dei database di SQL Server a <xref:System.TimeSpan?displayProperty=nameWithType>. Sono tuttavia supportate operazioni su <xref:System.TimeSpan>, in quanto è possibile che i valori <xref:System.TimeSpan> vengano restituiti da una sottrazione <xref:System.DateTime> o vengano introdotti in un'espressione come un valore letterale o una variabile associata.  
   
-## <a name="supported-systemtimespan-member-support"></a>Supporto per membri System. TimeSpan supportato
+## <a name="supported-systemtimespan-member-support"></a>Supporto del membro System. TimeSpan supportato
 
  I metodi, le proprietà e gli operatori seguenti supportati da LINQ to SQL sono disponibili per l'uso nelle query LINQ to SQL. Una volta eseguito il mapping nel modello a oggetti o nel file di mapping esterno, LINQ to SQL consente di chiamare numerosi membri <xref:System.TimeSpan?displayProperty=nameWithType> nelle query LINQ to SQL.  
   
@@ -31,10 +31,10 @@ Il supporto dei membri per <xref:System.TimeSpan?displayProperty=nameWithType> d
 ||<xref:System.TimeSpan.op_LessThanOrEqual%2A>|<xref:System.TimeSpan.MinValue>|  
   
 > [!NOTE]
->  Per eseguire il mapping di <xref:System.TimeSpan?displayProperty=nameWithType> a una colonna `TIME` SQL con LINQ to SQL è necessario disporre di .NET Framework 3.5 SP1 o versione successiva. Il tipo di dati `TIME` SQL è disponibile solo in Microsoft SQL Server 2008 e versioni successive.  
+> Per eseguire il mapping di <xref:System.TimeSpan?displayProperty=nameWithType> a una colonna `TIME` SQL con LINQ to SQL è necessario disporre di .NET Framework 3.5 SP1 o versione successiva. Il tipo di dati `TIME` SQL è disponibile solo in Microsoft SQL Server 2008 e versioni successive.  
   
 ### <a name="addition-and-subtraction"></a>Aggiunta e sottrazione  
- Sebbene il tipo <xref:System.TimeSpan?displayProperty=nameWithType> CLR supporti l'aggiunta e la sottrazione, il tipo `TIME` SQL non supporta queste operazioni. Per questo motivo, le query LINQ to SQL genereranno errori se viene eseguito un tentativo di aggiunta e sottrazione quando sono mappate al tipo `TIME` SQL. È possibile trovare altre considerazioni per l'utilizzo di tipi date e time SQL nel [Mapping dei tipi SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ Sebbene il tipo <xref:System.TimeSpan?displayProperty=nameWithType> CLR supporti l'aggiunta e la sottrazione, il tipo `TIME` SQL non supporta queste operazioni. Per questo motivo, le query LINQ to SQL genereranno errori se viene eseguito un tentativo di aggiunta e sottrazione quando sono mappate al tipo `TIME` SQL. È possibile trovare altre considerazioni per l'utilizzo di tipi di data e ora SQL nel mapping dei tipi [SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

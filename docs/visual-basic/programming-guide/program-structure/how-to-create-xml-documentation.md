@@ -1,38 +1,38 @@
 ---
-title: 'Procedura: Creare documentazione XML in Visual Basic'
+title: 'Procedura: Creazione di documentazione XML in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 95f6c5b23deadc16eb1e81f274e2cc5149598fb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9380c23ab6cfdbecd519926229b45ed863f07f9e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050434"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947708"
 ---
-# <a name="how-to-create-xml-documentation-in-visual-basic"></a>Procedura: Creare documentazione XML in Visual Basic
-In questo esempio viene illustrato come aggiungere commenti in formato documentazione XML nel codice.  
+# <a name="how-to-create-xml-documentation-in-visual-basic"></a>Procedura: Creazione di documentazione XML in Visual Basic
+Questo esempio illustra come aggiungere commenti alla documentazione XML al codice.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-xml-documentation-for-a-type-or-member"></a>Per creare documentazione XML per un tipo o membro  
+### <a name="to-create-xml-documentation-for-a-type-or-member"></a>Per creare la documentazione XML per un tipo o un membro  
   
-1. Nel **Editor di codice**, posizionare il cursore sulla riga sopra il tipo o membro per cui si desidera creare la documentazione.  
+1. Nell' **editor di codice**posizionare il cursore sulla riga al di sopra del tipo o del membro per il quale si desidera creare la documentazione.  
   
-2. Tipo `'''` (tre virgolette singole).  
+2. Digitare `'''` (tre virgolette singole).  
   
-     Viene aggiunto uno scheletro XML per il tipo o membro di **Editor di codice**.  
+     Un'ossatura XML per il tipo o il membro viene aggiunta nell' **editor di codice**.  
   
 3. Aggiungere informazioni descrittive tra i tag appropriati.  
   
     > [!NOTE]
-    >  Se si aggiungono altre righe all'interno del blocco di documentazione XML, ogni riga deve iniziare con `'''`.  
+    > Se si aggiungono righe aggiuntive all'interno del blocco di documentazione XML, ogni riga `'''`deve iniziare con.  
   
-4. Aggiungere altro codice che usa il tipo o membro con i nuovi commenti della documentazione XML.  
+4. Aggiungere codice aggiuntivo che utilizza il tipo o il membro con i nuovi commenti della documentazione XML.  
   
-     IntelliSense visualizza il testo dal \<riepilogo > tag per il tipo o membro.  
+     IntelliSense consente di visualizzare il testo \<del Tag > di riepilogo per il tipo o il membro.  
   
 5. Compilare il codice per generare un file XML contenente i commenti della documentazione. Per altre informazioni, vedere [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: '#If... Then... #Else direttive (Visual Basic)'
+title: '#Se... Direttive then... #Else (Visual Basic)'
 ms.date: 04/11/2018
 f1_keywords:
 - vb.#EndIf
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: 8c0aece749edf144fdd5c8ede9ec7e2e4c96ad54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 697521276e2d5a8d0a4aaae38789a21b7aa87fcb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746741"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940765"
 ---
 # <a name="ifthenelse-directives"></a>Direttive #If...Then...#Else
-Viene compilata in modo condizionale selezionati blocchi di codice Visual Basic.  
+Compila in modo condizionale i blocchi selezionati del codice Visual Basic.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,25 +45,25 @@ Viene compilata in modo condizionale selezionati blocchi di codice Visual Basic.
   
 ## <a name="parts"></a>Parti  
  `expression`  
- Obbligatorio per `#If` e `#ElseIf` istruzioni facoltative in un' posizione. Qualsiasi espressione, costituito esclusivamente da uno o più costanti del compilatore condizionale, i valori letterali e gli operatori, che restituisce `True` o `False`.  
+ Obbligatorio per `#If` le `#ElseIf` istruzioni e, facoltativo altrove. Qualsiasi espressione, costituita esclusivamente da una o più costanti del compilatore condizionali, valori letterali e operatori, che restituiscono `True` o `False`.  
   
  `statements`  
- Obbligatorio per `#If` istruzione blocco, facoltativo in un' posizione. Righe programma Visual Basic o le direttive del compilatore che vengono compilate se l'espressione associata viene valutata `True`.  
+ Obbligatorio per `#If` il blocco di istruzioni, facoltativo altrove. Visual Basic linee di `True`programma o direttive del compilatore compilate se l'espressione associata restituisce.  
   
  `#End If`  
- Termina il `#If` blocco di istruzioni.  
+ Termina il blocco `#If` di istruzioni.  
   
 ## <a name="remarks"></a>Note  
- Nell'area di, il comportamento dei `#If...Then...#Else` direttive viene visualizzato lo stesso del `If...Then...Else` istruzioni. Tuttavia, il `#If...Then...#Else` direttive valutano ciò che viene compilato dal compilatore, mentre il `If...Then...Else` le istruzioni vengono valutate le condizioni in fase di esecuzione.  
+ Nell'area, il comportamento delle `#If...Then...#Else` direttive appare come quello `If...Then...Else` delle istruzioni. Tuttavia, le `#If...Then...#Else` direttive valutano gli elementi compilati dal compilatore, `If...Then...Else` mentre le istruzioni valutano le condizioni in fase di esecuzione.  
   
- Compilazione condizionale viene in genere utilizzata per la compilazione del programma stesso per le diverse piattaforme. Viene inoltre usato per impedire il debug del codice venga visualizzato in un file eseguibile. Codice escluso durante la compilazione condizionale viene omesso completamente dal file eseguibile finale, in modo che non ha alcun effetto sulla dimensione o delle prestazioni.  
+ La compilazione condizionale viene in genere utilizzata per compilare lo stesso programma per piattaforme diverse. Viene inoltre usato per impedire che il codice di debug venga visualizzato in un file eseguibile. Il codice escluso durante la compilazione condizionale viene omesso completamente dal file eseguibile finale, quindi non ha alcun effetto sulle dimensioni o sulle prestazioni.  
   
- Indipendentemente dal risultato di qualsiasi valutazione, tutte le espressioni vengono valutate usando `Option Compare Binary`. Il `Option Compare` istruzione non ha effetto sulle espressioni nelle `#If` e `#ElseIf` istruzioni.  
+ Indipendentemente dal risultato di una valutazione, tutte le espressioni vengono valutate `Option Compare Binary`mediante. L' `Option Compare` istruzione non influisce sulle espressioni `#If` nelle `#ElseIf` istruzioni e.  
   
 > [!NOTE]
->  Nessun formato a riga singola del `#If`, `#Else`, `#ElseIf`, e `#End If` direttive esiste. Nessun altro codice può apparire sulla stessa riga come una delle direttive. 
+> Non esiste alcuna forma a riga singola `#If`delle `#Else`direttive, `#End If` , `#ElseIf`e. Non è possibile visualizzare altro codice nella stessa riga delle direttive. 
 
-Le istruzioni all'interno di un blocco di compilazione condizionale devono includere istruzioni logiche completate. Ad esempio, non è possibile compilare in modo condizionale solo gli attributi di una funzione, ma è possibile dichiarare in modo condizionale la funzione insieme ai relativi attributi:
+Le istruzioni all'interno di un blocco di compilazione condizionale devono essere istruzioni logiche complete. Ad esempio, non è possibile compilare in modo condizionale solo gli attributi di una funzione, ma è possibile dichiarare la funzione in modo condizionale insieme ai relativi attributi:
 
 ```vb
    #If DEBUG Then
@@ -76,7 +76,7 @@ Le istruzioni all'interno di un blocco di compilazione condizionale devono inclu
 ```
 
 ## <a name="example"></a>Esempio
- Questo esempio viene usato il `#If...Then...#Else` costrutto per determinare se si desidera compilare alcune istruzioni.  
+ Questo esempio usa il `#If...Then...#Else` costrutto per determinare se compilare determinate istruzioni.  
   
  [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]  
   
